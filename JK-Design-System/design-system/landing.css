@@ -1,0 +1,176 @@
+/* ============================================================
+   JK Accounting Group — paid-traffic landing page extensions.
+   Composed 100% from Atlas tokens (see assets/css/styles.css /
+   jk-brand-showcase.html). No new colors, no new fonts.
+   Loaded AFTER styles.css on /consultation/ pages only.
+   ============================================================ */
+
+/* ---- Minimal app bar: no nav links, nothing to leak to ---- */
+.appbar--lp .wrap{justify-content:space-between;}
+.appbar--lp .nav-right{gap:12px;}
+/* Comfortable tap target for the language pills (≥36px) on touch LPs. */
+.appbar--lp .lang-toggle a{padding-top:9px; padding-bottom:9px;}
+@media (max-width:560px){
+  .appbar--lp .brandmark b{display:none;} /* medallion only; keep the bar light */
+  .appbar--lp .nav-cta{padding:9px 13px; font-size:13px;}
+}
+
+/* ---- Hero refinements for the landing context ---- */
+.hero--lp{padding-block:clamp(48px,9vw,96px);}
+.hero--lp .hero-logo{width:min(120px,24vw); margin-bottom:clamp(20px,3vw,32px);}
+.hero--lp .hero-trust{margin-top:26px; display:flex; flex-wrap:wrap; gap:8px 0; align-items:center;}
+.hero--lp .hero-trust .sep{margin-inline:10px; color:var(--bronze-300);}
+
+/* Founder chip: the real face above the fold on mobile,
+   where the desktop portrait column is hidden. */
+.founder-chip{display:flex; align-items:center; gap:12px; margin-top:26px;}
+.founder-chip img{width:46px; height:46px; border-radius:50%; object-fit:cover; outline:2px solid rgba(236,230,218,0.35); outline-offset:1px;}
+.founder-chip .t{font-size:13.5px; line-height:1.4; color:var(--text-on-dark); opacity:.92;}
+.founder-chip .t b{display:block; font-weight:600;}
+@media (min-width:960px){.founder-chip{display:none;}} /* portrait column takes over */
+
+/* ---- Identification ("nod") list ---- */
+.nod-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(32px,6vw,72px); align-items:start;}
+@media (max-width:800px){.nod-grid{grid-template-columns:1fr; gap:30px;}}
+.nod-grid h2{font-size:clamp(28px,4.6vw,42px); line-height:1.1;}
+.nod-grid .intro{margin-top:18px; font-size:clamp(16px,2.2vw,18px); line-height:1.65; color:var(--text-muted); max-width:46ch;}
+.nod-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--border-subtle);}
+.nod-list li{display:flex; gap:14px; align-items:flex-start; padding:16px 0; border-bottom:1px solid var(--border-subtle); font-size:16px; line-height:1.55; color:var(--text-body);}
+.nod-list li svg{flex:0 0 auto; width:21px; height:21px; color:var(--bronze-500); margin-top:3px;}
+.nod-close{margin-top:22px; font-family:var(--serif); font-size:clamp(18px,2.6vw,21px); line-height:1.45; color:var(--text-primary);}
+.nod-close .accent{color:var(--accent);}
+
+/* ---- Stat band on light backgrounds (Why JK) ---- */
+.statband-light{margin-top:clamp(36px,5vw,52px); padding-top:28px; border-top:1px solid var(--border-subtle); display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+.statband-light .fig{font-family:var(--serif); font-size:clamp(26px,3.6vw,40px); font-weight:600; color:var(--teal-800); line-height:1; letter-spacing:-0.02em;}
+.statband-light .fig sup{color:var(--bronze-500); font-size:0.5em; vertical-align:super;}
+.statband-light .lbl{margin-top:9px; font-size:13px; color:var(--text-muted); line-height:1.4;}
+@media (max-width:640px){.statband-light{grid-template-columns:repeat(2,1fr); gap:20px;}}
+
+/* ---- Featured service card (Tax planning) ---- */
+.svc-feature{background:var(--paper); border:1px solid var(--bronze-300); border-radius:16px; padding:clamp(26px,4vw,38px); box-shadow:var(--shadow-md); display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr); gap:clamp(22px,4vw,44px); align-items:center; margin-bottom:20px;}
+@media (max-width:760px){.svc-feature{grid-template-columns:1fr;}}
+.svc-feature .feat-tag{align-self:flex-start;}
+.svc-feature h3{font-size:clamp(22px,3vw,28px); margin:14px 0 10px;}
+.svc-feature p{font-size:16px; line-height:1.65; color:var(--text-body); max-width:56ch;}
+.svc-feature .aside{border-left:0; background:var(--surface); border:1px solid var(--border-subtle); border-radius:12px; padding:20px 22px;}
+.svc-feature .aside .q{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--text-primary); line-height:1.45;}
+.svc-feature .aside .a{margin-top:10px; font-size:14px; color:var(--text-muted); line-height:1.55;}
+.card-grid--four{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+@media (max-width:560px){.card-grid--four{grid-template-columns:1fr;}}
+
+/* ---- Responsive modifiers (replace inline overrides so the
+   design-system mobile breakpoints still win) ---- */
+.team-grid--two{grid-template-columns:repeat(2,1fr);}
+@media (max-width:560px){.team-grid--two{grid-template-columns:1fr;}}
+.steps--three{grid-template-columns:repeat(3,1fr);}
+@media (max-width:680px){.steps--three{grid-template-columns:1fr; gap:24px;}}
+.proof-grid--mt{margin-top:clamp(36px,5vw,52px);}
+
+/* ---- Founder feature + team ---- */
+.founder-feature{display:grid; grid-template-columns:clamp(240px,28vw,320px) minmax(0,1fr); gap:clamp(26px,5vw,56px); align-items:center; margin-bottom:clamp(40px,6vw,56px);}
+@media (max-width:720px){.founder-feature{grid-template-columns:1fr; max-width:440px;}}
+.founder-feature .ph img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:18px; box-shadow:var(--shadow-lg);}
+.founder-feature h3{font-size:clamp(24px,3.4vw,32px);}
+.founder-feature .role{color:var(--text-gold); font-size:15px; margin:6px 0 10px;}
+.founder-feature .langs{font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted);}
+.founder-feature .bio{margin-top:16px; font-size:16.5px; line-height:1.68; color:var(--text-body); max-width:54ch;}
+
+/* ---- Repeated inline CTA ---- */
+.cta-inline{margin-top:clamp(34px,5vw,48px); display:flex; gap:10px 20px; align-items:center; justify-content:center; flex-wrap:wrap; text-align:center;}
+.cta-inline .note{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); width:100%;}
+.on-dark .cta-inline .note{color:var(--text-on-dark-muted);}
+
+/* ---- Sticky mobile CTA bar (paid traffic is mostly mobile) ---- */
+.sticky-cta{display:none;}
+@media (max-width:760px){
+  .sticky-cta{display:block; position:fixed; left:0; right:0; bottom:0; z-index:var(--z-appbar); background:rgba(13,42,49,0.95); backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px); border-top:1px solid rgba(236,230,218,0.14); padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));}
+  .sticky-cta .btn{width:100%;}
+  body.has-sticky-cta{padding-bottom:76px;}
+  html.js .sticky-cta{transition:transform .3s var(--ease-out);}
+  html.js .sticky-cta.is-hidden{transform:translateY(110%);}
+  @media (prefers-reduced-motion:reduce){html.js .sticky-cta{transition:none;}}
+}
+
+/* ---- Form niceties ---- */
+.form-card .btn[type="submit"]{min-width:min(100%,320px);}
+@media (max-width:560px){.form-card .form-grid{grid-template-columns:1fr;} .form-card .field{grid-column:auto;}}
+.field input:user-invalid,.field textarea:user-invalid{border-color:var(--error);}
+
+/* ---- Thank-you page ---- */
+.thanks{min-height:calc(100vh - var(--appbar-h)); display:grid; place-items:center; text-align:center; padding-block:clamp(60px,10vw,120px);}
+.thanks .mk{width:clamp(80px,14vw,104px); margin:0 auto 26px;}
+.thanks h1{font-size:clamp(30px,5.4vw,48px); line-height:1.1;}
+.thanks .body{margin:20px auto 0; max-width:52ch; font-size:clamp(16px,2.3vw,18.5px); line-height:1.65; color:var(--text-muted);}
+.thanks .sub{margin-top:14px; font-size:15px; color:var(--text-muted);}
+.thanks .sub a{color:var(--teal-700); font-weight:600;}
+
+/* ============================================================
+   Scroll reveal — SAFE override of the showcase pattern.
+   styles.css gates .reveal at opacity:0 until JS adds .in; in a
+   non-scrolling renderer (bots, Googlebot, AI crawlers) the
+   IntersectionObserver never fires for below-fold sections, so
+   they ship blank. Here content is ALWAYS visible; .in plays a
+   one-shot rise. No persistent hidden state, nothing to ship blank.
+   ============================================================ */
+@media (prefers-reduced-motion:no-preference){
+  html.js .reveal{opacity:1; transform:none; transition:none;}
+  html.js .reveal.in{animation:lp-rise .6s var(--ease-out) both;}
+}
+@keyframes lp-rise{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;}}
+
+/* ---- Minimal landing footer ---- */
+.lp-footer{background:var(--bg-inverse-deep); color:var(--text-on-dark-muted); padding-block:clamp(34px,5vw,48px); text-align:center;}
+.lp-footer img{height:44px; width:auto; margin:0 auto 14px;}
+.lp-footer p{font-size:13.5px; line-height:1.6;}
+.lp-footer a{color:var(--text-on-dark); text-decoration:none;}
+.lp-footer a:hover{color:var(--bronze-300);}
+.lp-footer .ll{margin-top:14px; font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;}
+
+/* ============================================================
+   WhatsApp channel (secondary contact). Brand-green glyph used
+   deliberately for instant recognition — the one sanctioned
+   off-system color, scoped to the WhatsApp affordance only.
+   ============================================================ */
+.wa-alt{margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:14px; color:var(--text-muted);}
+.wa-alt a{display:inline-flex; align-items:center; gap:7px; font-weight:600; color:var(--teal-700); text-decoration:none;}
+.wa-alt a:hover{color:var(--teal-900);}
+.wa-alt .wa-ic{display:inline-flex; width:18px; height:18px; color:#25D366; flex:0 0 auto;}
+.wa-alt .wa-ic svg{width:100%; height:100%;}
+
+@media (max-width:760px){
+  .sticky-cta{display:flex; gap:10px; align-items:stretch;}
+  .sticky-cta .btn.cta{flex:1; width:auto;}
+  .sticky-wa{flex:0 0 auto; width:52px; display:inline-flex; align-items:center; justify-content:center; background:#25D366; border-radius:10px; color:#fff;}
+  .sticky-wa svg{width:26px; height:26px;}
+  .sticky-wa:active{transform:translateY(1px);}
+}
+
+/* ============================================================
+   Real reviews (Facebook). Light cards on the why-us band, with
+   on-brand initials avatars + Facebook source badge. Facebook
+   blue (#1877F2) scoped to the source glyph only, for recognition.
+   ============================================================ */
+.reviews-head{text-align:center; margin-bottom:clamp(26px,4vw,38px);}
+.reviews-head .stars{color:var(--bronze-500); letter-spacing:4px; font-size:18px;}
+.reviews-head .reviews-trust{margin-top:8px; font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);}
+.reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+@media (max-width:880px){.reviews-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.reviews-grid{grid-template-columns:1fr;}}
+.review-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column;}
+.review-card .rc-top{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+.review-card .rc-avatar{flex:0 0 auto; width:44px; height:44px; border-radius:50%; background:var(--teal-700); color:var(--text-on-dark); display:grid; place-items:center; font-family:var(--mono); font-size:14px; font-weight:600; letter-spacing:0.02em;}
+.review-card .rc-id{min-width:0;}
+.review-card .rc-name{display:block; font-weight:600; font-size:15px; color:var(--text-primary); line-height:1.2;}
+.review-card .rc-src{display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--text-muted); margin-top:3px;}
+.review-card .rc-src .fb{width:14px; height:14px; color:#1877F2; flex:0 0 auto;}
+.review-card .rc-src .rc-stars{color:var(--bronze-500); letter-spacing:1px;}
+.review-card blockquote{margin:0; font-size:14.5px; line-height:1.6; color:var(--text-body);}
+
+/* <picture> wrappers must not interfere with existing img sizing rules. */
+picture{display:contents;}
+
+/* "Read all reviews" verifiable link under the reviews grid. */
+.reviews-more{text-align:center; margin-top:22px;}
+.reviews-more a{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14.5px; color:var(--teal-700); text-decoration:none;}
+.reviews-more a:hover{color:var(--teal-900); text-decoration:underline;}
