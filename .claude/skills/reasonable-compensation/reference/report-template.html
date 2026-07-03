@@ -1,0 +1,413 @@
+<!doctype html>
+<!--
+  Reasonable Compensation report template. Fill every {{PLACEHOLDER}}.
+  Repeat blocks are marked "REPEAT". Keep the JK branding and structure intact.
+  A fully worked example lives at reasonable-comp/solux-media-2025.html — mirror it.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasonable Compensation Analysis — {{CLIENT_NAME}} — {{TAX_YEAR}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --success:#2F8F5E; --warning:#B8841C; --error:#B23A3A; --info:#2F5E8C;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:840px;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;scroll-behavior:smooth;}
+  body{margin:0;background:
+      radial-gradient(1200px 600px at 100% -10%, #efeadf 0%, transparent 60%),
+      var(--ivory);
+    color:var(--text-body);font-family:var(--sans);font-size:16px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:32px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 18px 50px rgba(9,31,36,.12);
+    border-radius:16px;overflow:hidden;position:relative;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;
+    font-size:11px;font-weight:600;color:var(--bronze-ink);}
+  h1,h2,h3{font-family:var(--serif);letter-spacing:-0.014em;
+    color:var(--text-primary);text-wrap:balance;margin:0;font-weight:600;}
+  a{color:var(--teal);text-underline-offset:2px;}
+  strong{font-weight:600;color:var(--text-primary);}
+
+  .hero{background:
+      radial-gradient(700px 340px at 88% -30%, rgba(207,162,104,.20) 0%, transparent 62%),
+      linear-gradient(160deg,#164049 0%, var(--teal) 42%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:46px 52px 44px;position:relative;}
+  .brandrow{display:flex;align-items:center;gap:13px;
+    border-bottom:1px solid rgba(236,230,218,.16);padding-bottom:18px;margin-bottom:26px;}
+  .medallion{width:38px;height:38px;flex:none;}
+  .brandrow .firm-name{font-family:var(--serif);font-weight:600;font-size:17px;color:#fff;letter-spacing:.01em;line-height:1.1;}
+  .brandrow .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;font-size:9.5px;color:var(--on-dark-muted);margin-top:3px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:33px;line-height:1.08;margin:11px 0 5px;}
+  .hero .sub{color:var(--on-dark-muted);font-size:13.5px;font-family:var(--mono);letter-spacing:.04em;}
+  .figure-card{margin-top:30px;background:linear-gradient(150deg, rgba(13,42,49,.55), rgba(9,31,36,.75));
+    border:1px solid rgba(207,162,104,.30);border-radius:16px;padding:24px 28px;display:flex;flex-wrap:wrap;
+    align-items:flex-end;justify-content:space-between;gap:18px;box-shadow:inset 0 1px 0 rgba(236,230,218,.06);}
+  .figure-card .label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;font-size:10.5px;color:var(--on-dark-muted);}
+  .figure-card .amount{font-family:var(--serif);font-weight:700;font-size:52px;line-height:1;color:#fff;margin:8px 0 3px;letter-spacing:-0.02em;}
+  .figure-card .amount .accent{color:var(--bronze-light);}
+  .figure-card .range{font-size:13px;color:var(--on-dark-muted);}
+  .figure-card .meta{text-align:right;font-size:12px;color:var(--on-dark-muted);line-height:1.7;}
+  .figure-card .meta b{color:var(--on-dark);font-weight:600;}
+
+  .body{padding:40px 52px 20px;}
+  section{margin-bottom:40px;scroll-margin-top:20px;}
+  section h2{font-size:22px;margin:6px 0 4px;}
+  section > .kicker{display:block;margin-bottom:1px;}
+  p{margin:.55em 0;max-width:70ch;}
+  .lead{font-size:17px;color:var(--text-body);}
+
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hairline);
+    border:1px solid var(--hairline);border-radius:13px;overflow:hidden;margin:16px 0;}
+  .facts.three{grid-template-columns:1fr 1fr 1fr;}
+  .facts .cell{background:var(--paper);padding:13px 17px;}
+  .facts .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:9.5px;color:var(--text-muted);}
+  .facts .v{font-size:15px;color:var(--text-primary);font-weight:500;margin-top:3px;}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;}
+  thead th{font-family:var(--mono);text-transform:uppercase;letter-spacing:.07em;font-size:9.5px;color:var(--text-muted);
+    text-align:left;font-weight:600;padding:9px 11px;border-bottom:2px solid var(--border);}
+  tbody td{padding:10px 11px;border-bottom:1px solid var(--hairline);vertical-align:top;color:var(--text-body);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  tfoot td{padding:12px 11px;border-top:2px solid var(--border);font-weight:600;color:var(--text-primary);font-size:15px;background:var(--paper);}
+  .src{font-size:11px;color:var(--text-muted);line-height:1.5;}
+  .socnote{font-family:var(--mono);font-size:10px;color:var(--text-muted);letter-spacing:.03em;margin-top:2px;}
+  .role-lead{color:var(--teal);font-weight:600;}
+  .fct.dim{color:var(--text-muted);}
+  .grp td{background:var(--paper);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:10px;
+    color:var(--teal);font-weight:600;padding:8px 11px;border-bottom:1px solid var(--hairline);}
+  .anchor td:first-child{color:var(--warning);font-weight:600;}
+  .pick td{background:#f4f7f2;}
+  .pick td:first-child{color:var(--success);font-weight:600;}
+  .wtd td{background:var(--teal);color:#fff;}
+  .wtd td:first-child{color:#fff;font-weight:600;}
+  .wtd td .socnote{color:var(--on-dark-muted);}
+  .pill{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;padding:2px 7px;border-radius:999px;vertical-align:middle;}
+  .pill.high{background:#fbf1de;color:var(--warning);}
+  .pill.drop{background:#f3eeee;color:var(--text-muted);text-decoration:line-through;}
+  .pill.scaled{background:#e7eff0;color:var(--teal);}
+
+  .callout{border-radius:13px;padding:17px 20px;margin:16px 0;font-size:14.5px;border:1px solid;position:relative;}
+  .callout .tag{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:600;display:block;margin-bottom:5px;}
+  .callout p{margin:.3em 0;max-width:none;}
+  .callout.info{background:#eef3f7;border-color:#bcd0df;color:#294b63;}
+  .callout.info .tag{color:var(--info);}
+  .callout.under{background:#fbeeee;border-color:#e3b7b7;color:#7d2b2b;}
+  .callout.under .tag{color:var(--error);}
+  .callout.ok{background:#eaf5ee;border-color:#b6dcc4;color:#215c3d;}
+  .callout.ok .tag{color:var(--success);}
+
+  .factor{padding:13px 0;border-bottom:1px solid var(--hairline);display:grid;grid-template-columns:26px 1fr;gap:12px;}
+  .factor:last-child{border-bottom:none;}
+  .factor .n{font-family:var(--mono);font-size:12px;color:var(--bronze-ink);font-weight:600;padding-top:1px;}
+  .factor .f-name{font-weight:600;color:var(--text-primary);font-size:14.5px;}
+  .factor .f-body{font-size:14px;margin-top:2px;color:var(--text-body);max-width:66ch;}
+  .factor .np{color:var(--text-muted);font-style:italic;}
+
+  .taxbox{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--hairline);
+    border:1px solid var(--hairline);border-radius:13px;overflow:hidden;margin:16px 0;}
+  .taxbox.four{grid-template-columns:1fr 1fr 1fr 1fr;}
+  .taxbox .cell{background:var(--white);padding:16px 18px;}
+  .taxbox .cell.hi{background:var(--teal);}
+  .taxbox .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.09em;font-size:9.5px;color:var(--text-muted);}
+  .taxbox .cell.hi .k{color:var(--bronze-light);}
+  .taxbox .v{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--text-primary);margin-top:5px;letter-spacing:-0.01em;}
+  .taxbox .cell.hi .v{color:#fff;}
+  .taxbox .cap{font-size:11.5px;color:var(--text-muted);margin-top:3px;}
+  .taxbox .cell.hi .cap{color:var(--on-dark-muted);}
+
+  .certify{border:1px solid var(--border);border-radius:13px;padding:22px 24px;margin:16px 0;background:var(--paper);}
+  .certify p{font-size:13.5px;max-width:none;color:var(--text-body);}
+  .sigrow{display:flex;flex-wrap:wrap;gap:28px;margin-top:20px;padding-top:18px;border-top:1px solid var(--hairline);}
+  .sigrow .sig{flex:1 1 200px;}
+  .sigrow .line{border-bottom:1.5px solid var(--text-primary);height:30px;margin-bottom:6px;}
+  .sigrow .cap{font-family:var(--mono);text-transform:uppercase;letter-spacing:.09em;font-size:9.5px;color:var(--text-muted);}
+
+  .appendix{font-size:12.5px;color:var(--text-muted);line-height:1.6;}
+  .appendix li{margin:4px 0;}
+  .fineprint{background:var(--paper);border:1px solid var(--hairline);border-radius:13px;padding:18px 20px;
+    font-size:12.5px;color:var(--text-muted);line-height:1.58;}
+  .fineprint p{max-width:none;margin:.5em 0;}
+  .fineprint strong{color:var(--text-body);}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:26px 52px;font-size:12px;
+    display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;color:var(--on-dark);font-size:10.5px;margin-bottom:4px;}
+  .foot a{color:var(--bronze-light);}
+
+  @media (prefers-reduced-motion:no-preference){
+    .body section{animation:rise .7s var(--ease) both;}
+    .body section:nth-child(2){animation-delay:.04s}
+    .body section:nth-child(3){animation-delay:.08s}
+    .body section:nth-child(4){animation-delay:.12s}
+    @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+    section{page-break-inside:avoid;}
+  }
+  @media (max-width:680px){
+    .hero,.body,.foot{padding-left:24px;padding-right:24px;}
+    .facts,.facts.three,.taxbox,.taxbox.four{grid-template-columns:1fr;}
+    .figure-card .amount{font-size:42px;}.figure-card .meta{text-align:left;}
+    .sheet{margin:12px;border-radius:12px;}table{font-size:12.5px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">Miami · Fort Lauderdale · Online</div></div>
+    </div>
+    <span class="kicker">Reasonable Compensation Analysis · S-Corporation</span>
+    <h1>{{CLIENT_NAME}}</h1>
+    <div class="sub">Tax year {{TAX_YEAR}} · Prepared {{PREPARED_DATE}} · {{PREPARER}}</div>
+    <div class="figure-card">
+      <div>
+        <div class="label">Reconciled reasonable compensation</div>
+        <div class="amount"><span class="accent">{{RECOMMENDED_SALARY}}</span></div>
+        <div class="range">Defensible range {{RANGE_LOW}} – {{RANGE_HIGH}} · reconciled from three approaches</div>
+      </div>
+      <div class="meta"><div><b>3</b> approaches</div><div><b>{{ANNUAL_HOURS}}</b> annual hours · {{HAT_COUNT}} roles</div><div><b>{{DATAPOINT_COUNT}}</b> wage data points</div></div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section>
+      <span class="kicker">Executive summary</span>
+      <h2>The bottom line</h2>
+      <p class="lead">{{SUMMARY_PARAGRAPH}}</p>
+    </section>
+
+    <!-- PROFILE -->
+    <section>
+      <span class="kicker">Client &amp; business profile</span>
+      <h2>The facts we used</h2>
+      <div class="facts">
+        <div class="cell"><div class="k">Business</div><div class="v">{{BUSINESS_NAME}} · S-corporation</div></div>
+        <div class="cell"><div class="k">Industry</div><div class="v">{{INDUSTRY}}</div></div>
+        <div class="cell"><div class="k">Location</div><div class="v">{{LOCATION}}</div></div>
+        <div class="cell"><div class="k">Ownership</div><div class="v">{{OWNERSHIP}}</div></div>
+        <div class="cell"><div class="k">Gross revenue</div><div class="v">{{GROSS_REVENUE}}</div></div>
+        <div class="cell"><div class="k">Net income (before owner comp)</div><div class="v">{{NET_INCOME}}</div></div>
+        <div class="cell"><div class="k">Company size</div><div class="v">{{COMPANY_SIZE}}</div></div>
+        <div class="cell"><div class="k">Shareholder equity</div><div class="v">{{EQUITY}}</div></div>
+        <div class="cell"><div class="k">Current W-2 salary</div><div class="v">{{CURRENT_SALARY}}</div></div>
+        <div class="cell"><div class="k">Distributions taken</div><div class="v">{{DISTRIBUTIONS}}</div></div>
+        <div class="cell"><div class="k">Hours worked</div><div class="v">{{HOURS}}</div></div>
+        <div class="cell"><div class="k">Experience / credentials</div><div class="v">{{EXPERIENCE}}</div></div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section>
+      <span class="kicker">Methodology</span>
+      <h2>How we reached the number</h2>
+      <p>{{METHODOLOGY_PARAGRAPH}}</p>
+    </section>
+
+    <!-- APPROACH 1: COST BUILD-UP WITH SCALING -->
+    <section>
+      <span class="kicker">Approach 1 · Cost (many-hats) with size scaling</span>
+      <h2>What it would cost to replace each role</h2>
+      <table>
+        <thead><tr><th>Role / hat</th><th class="num">Hours</th><th class="num">Mkt rate</th><th class="num">Size ×</th><th class="num">Adj. rate</th><th class="num">Weighted</th></tr></thead>
+        <tbody>
+          <!-- REPEAT one <tr> per hat. Add <span class="pill scaled">scaled</span> in .socnote when size factor ≠ 1.00 -->
+          {{HAT_ROWS}}
+        </tbody>
+        <tfoot><tr><td>Cost-approach value</td><td class="num">{{TOTAL_HOURS}}</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">{{COST_VALUE}}</td></tr></tfoot>
+      </table>
+      <p class="src">{{SCALING_NOTE}}</p>
+    </section>
+
+    <!-- WAGE EVIDENCE -->
+    <section>
+      <span class="kicker">Wage evidence · triangulation</span>
+      <h2>The data behind each rate</h2>
+      <p>{{TRIANGULATION_PARAGRAPH}}</p>
+      <table>
+        <thead><tr><th>Source</th><th>Geography</th><th class="num">Figure</th></tr></thead>
+        <tbody>
+          <!-- REPEAT per role: one .grp header row, then one <tr> per source (BLS anchor row = class="anchor"; dropped outlier gets <span class="pill drop">outlier</span>), then a class="pick" reconciled row -->
+          {{EVIDENCE_ROWS}}
+        </tbody>
+      </table>
+      <div class="callout info">
+        <span class="tag">Why the number is lower than a BLS-only report</span>
+        <p>{{BLS_DIVERGENCE_NOTE}}</p>
+      </div>
+      <p class="src">Market figures via web search of public salary listings on the preparation date. Cite sources and dates.</p>
+    </section>
+
+    <!-- APPROACHES 2 & 3 + RECONCILIATION -->
+    <section>
+      <span class="kicker">Approaches 2 &amp; 3 · Market and income</span>
+      <h2>Two more methods, then reconciliation</h2>
+      <p><strong>Market approach.</strong> {{MARKET_PARAGRAPH}}</p>
+      <p><strong>Income approach — Independent Investor Test.</strong> {{INVESTOR_PARAGRAPH}}</p>
+      <div class="taxbox four">
+        <div class="cell"><div class="k">Shareholder equity</div><div class="v">{{EQUITY_SHORT}}</div><div class="cap">book value</div></div>
+        <div class="cell"><div class="k">Required return</div><div class="v">{{REQUIRED_RETURN}}</div><div class="cap">{{REQUIRED_RETURN_CAP}}</div></div>
+        <div class="cell"><div class="k">Return after comp</div><div class="v">{{RETURN_AFTER}}</div><div class="cap">{{RETURN_AFTER_CAP}}</div></div>
+        <div class="cell hi"><div class="k">Post-comp ROE</div><div class="v">{{POST_COMP_ROE}}</div><div class="cap">{{ROE_CAP}}</div></div>
+      </div>
+      <p class="src">{{INVESTOR_NOTE}}</p>
+      <h3 style="font-size:16px;margin-top:24px;">Reconciliation</h3>
+      <table>
+        <thead><tr><th>Approach</th><th class="num">Indicated value</th><th class="num">Emphasis</th><th>Role in the conclusion</th></tr></thead>
+        <!-- REPEAT one <tr> per approach (cost / market / income). Use QUALITATIVE emphasis words
+             (Primary / Corroborating / Ceiling · check) in the Emphasis column — do NOT put numeric
+             percentage weights here: they read as a weighted average and won't tie to a defensible-low
+             conclusion. The reconciliation is professional judgment, not arithmetic. -->
+        <tbody>{{APPROACHES_ROWS}}</tbody>
+        <tfoot><tr class="wtd"><td>Reconciled reasonable compensation</td><td class="num">{{RECOMMENDED_SALARY}}</td><td class="num"></td><td>Defensible-low within the band</td></tr></tfoot>
+      </table>
+      <!-- {{RECONCILE_NOTE}}: state that this is a judgment reconciliation (not a mechanical average),
+           greatest weight to the primary approach, and that the concluded figure is the defensible low
+           of the corroborated band. -->
+      <p class="src">{{RECONCILE_NOTE}}</p>
+    </section>
+
+    <!-- TOTAL COMPENSATION -->
+    <section>
+      <span class="kicker">Total compensation</span>
+      <h2>The full package, cash separated from benefits</h2>
+      <div class="taxbox four">
+        <div class="cell hi"><div class="k">Cash W-2 salary</div><div class="v">{{RECOMMENDED_SALARY}}</div><div class="cap">the reasonable salary · payroll-taxable</div></div>
+        <div class="cell"><div class="k">Employer retirement</div><div class="v">{{RETIREMENT}}</div><div class="cap">SEP / 401(k)</div></div>
+        <div class="cell"><div class="k">Health insurance</div><div class="v">{{HEALTH}}</div><div class="cap">&gt;2% shareholder</div></div>
+        <div class="cell"><div class="k">Total package</div><div class="v">{{TOTAL_PACKAGE}}</div><div class="cap">cash + benefits</div></div>
+      </div>
+      <p class="src">{{TOTALCOMP_NOTE}}</p>
+    </section>
+
+    <!-- CROSS-CHECK -->
+    <section>
+      <span class="kicker">Reasonableness cross-check</span>
+      <h2>Current salary vs. recommended</h2>
+      <!-- {{RISK_CLASS}} = under | ok | over -->
+      <div class="callout {{RISK_CLASS}}">
+        <span class="tag">{{RISK_LABEL}}</span>
+        <p>{{RISK_PARAGRAPH}}</p>
+      </div>
+    </section>
+
+    <!-- MULTI-YEAR HISTORY -->
+    <section>
+      <span class="kicker">Multi-year context</span>
+      <h2>Compensation &amp; distribution history</h2>
+      <table>
+        <thead><tr><th>Year</th><th class="num">W-2 salary</th><th class="num">Distributions</th><th class="num">Salary % of cash</th><th class="num">Net income (pre-comp)</th></tr></thead>
+        <tbody>
+          <!-- REPEAT one <tr> per year; final recommended year uses class="wtd". If unavailable, replace with a single row noting "Not provided". -->
+          {{HISTORY_ROWS}}
+        </tbody>
+      </table>
+      <p class="src">{{HISTORY_NOTE}}</p>
+    </section>
+
+    <!-- PAYROLL TAX -->
+    <section>
+      <span class="kicker">Payroll-tax impact</span>
+      <h2>What the change costs — and protects</h2>
+      <div class="taxbox">
+        <div class="cell"><div class="k">Added wage base</div><div class="v">{{ADDED_WAGE}}</div><div class="cap">{{ADDED_WAGE_CAP}}</div></div>
+        <div class="cell"><div class="k">Added payroll tax ≈</div><div class="v">{{ADDED_TAX}}</div><div class="cap">≈ 15.3% combined FICA/Medicare</div></div>
+        <div class="cell hi"><div class="k">Saved vs. BLS-only</div><div class="v">{{TAX_SAVED}}</div><div class="cap">lower wage base, per year</div></div>
+      </div>
+      <p class="src">{{TAX_NOTE}}</p>
+    </section>
+
+    <!-- IRS FACTORS -->
+    <section>
+      <span class="kicker">IRS factor analysis</span>
+      <h2>Why this figure is defensible</h2>
+      <p>The IRS weighs reasonable compensation against recognized factors (IRS Fact Sheet FS-2008-25; <em>Watson v. United States</em>, 8th Cir. 2012; <em>Mayson Mfg.</em>, 6th Cir. 1949). Each is addressed below.</p>
+      <div>
+        <!-- REPEAT one .factor per IRS factor (all nine). Use <span class="np">Not provided.</span> where data is missing. -->
+        {{FACTOR_ROWS}}
+      </div>
+    </section>
+
+    <!-- CERTIFICATION -->
+    <section>
+      <span class="kicker">Analyst certification</span>
+      <h2>Preparer's statement</h2>
+      <div class="certify">
+        <p>{{CERTIFICATION}}</p>
+        <div class="sigrow">
+          <div class="sig"><div class="line"></div><div class="cap">Preparer signature</div></div>
+          <div class="sig"><div class="line"></div><div class="cap">Date</div></div>
+          <div class="sig">
+            <div style="font-family:var(--serif);font-size:15px;color:var(--text-primary);font-weight:600;">{{PREPARER}}</div>
+            <div class="cap" style="margin-top:4px;">Prepared {{PREPARED_DATE}} · {{PREPARER_EMAIL}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIMITATIONS + APPENDIX -->
+    <section>
+      <span class="kicker">Assumptions, limitations &amp; sources</span>
+      <h2>What this analysis assumes</h2>
+      <div class="fineprint">
+        <p>{{ASSUMPTIONS}}</p>
+        <p><strong>Nature of this report.</strong> A documented professional estimate of reasonable
+        compensation using three recognized approaches and public wage data. It is <strong>not</strong>
+        a legal opinion, a formal valuation, or a guarantee of any audit outcome. For contested
+        matters or large exposures, a formal third-party study is recommended in addition.</p>
+        <p><strong>Source appendix.</strong></p>
+        <ul class="appendix">
+          <!-- REPEAT one <li> per source used (BLS, each job platform with retrieval date, market comparables, authority/cases). -->
+          {{APPENDIX_ROWS}}
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div>
+      <div class="firm">JK Accounting Group</div>
+      <div>Prepared by {{PREPARER}} · {{PREPARED_DATE}}</div>
+      <div><a href="mailto:{{PREPARER_EMAIL}}">{{PREPARER_EMAIL}}</a></div>
+    </div>
+    <div style="text-align:right;color:var(--on-dark-muted)">Reasonable Compensation Analysis<br>{{CLIENT_NAME}} · Tax year {{TAX_YEAR}}</div>
+  </footer>
+
+</div>
+</body>
+</html>
