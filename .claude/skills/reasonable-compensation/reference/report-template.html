@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasonable Compensation Analysis — {{CLIENT_NAME}} — {{TAX_YEAR}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --success:#2F8F5E; --warning:#B8841C; --error:#B23A3A; --info:#2F5E8C;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:820px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:16px;line-height:1.6;}
+  .sheet{max-width:var(--maxw);margin:0 auto;background:var(--white);
+    box-shadow:0 10px 40px rgba(9,31,36,.10);}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;
+    font-size:11px;font-weight:600;color:var(--bronze-ink);}
+  h1,h2,h3{font-family:var(--serif);letter-spacing:-0.012em;
+    color:var(--text-primary);text-wrap:balance;margin:0;}
+  a{color:var(--teal);}
+
+  /* Hero */
+  .hero{background:var(--teal);color:var(--on-dark);padding:44px 48px 40px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:var(--white);font-size:30px;font-weight:600;margin:10px 0 4px;}
+  .hero .sub{color:var(--on-dark-muted);font-size:14px;margin-top:2px;}
+  .brandrow{display:flex;align-items:center;gap:12px;
+    border-bottom:1px solid rgba(236,230,218,.18);padding-bottom:16px;margin-bottom:22px;}
+  .brandrow .mark{font-family:var(--serif);font-weight:700;font-size:19px;
+    color:var(--white);letter-spacing:.02em;}
+  .brandrow .firm{font-family:var(--mono);text-transform:uppercase;
+    letter-spacing:.14em;font-size:10.5px;color:var(--on-dark-muted);}
+
+  /* The headline number */
+  .figure-card{margin-top:26px;background:var(--teal-deep);
+    border:1px solid rgba(207,162,104,.28);border-radius:16px;padding:24px 26px;}
+  .figure-card .label{font-family:var(--mono);text-transform:uppercase;
+    letter-spacing:.12em;font-size:11px;color:var(--on-dark-muted);}
+  .figure-card .amount{font-family:var(--serif);font-weight:700;
+    font-size:46px;line-height:1.05;color:var(--white);margin:6px 0 2px;}
+  .figure-card .amount .accent{color:var(--bronze-light);}
+  .figure-card .range{font-size:13.5px;color:var(--on-dark-muted);}
+
+  /* Body sections */
+  .body{padding:36px 48px 12px;}
+  section{margin-bottom:34px;}
+  section h2{font-size:21px;margin-bottom:6px;padding-top:6px;}
+  section > .kicker{display:block;margin-bottom:2px;}
+  p{margin:.5em 0;}
+  .lead{font-size:16.5px;color:var(--text-body);}
+
+  /* Data grid */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--hairline);border:1px solid var(--hairline);
+    border-radius:12px;overflow:hidden;margin:14px 0;}
+  .facts .cell{background:var(--paper);padding:12px 16px;}
+  .facts .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:10px;color:var(--text-muted);}
+  .facts .v{font-size:15px;color:var(--text-primary);font-weight:500;margin-top:2px;}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;}
+  thead th{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;
+    font-size:10px;color:var(--text-muted);text-align:left;font-weight:600;
+    padding:8px 10px;border-bottom:2px solid var(--border);}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--hairline);
+    vertical-align:top;color:var(--text-body);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  tfoot td{padding:11px 10px;border-top:2px solid var(--border);font-weight:600;
+    color:var(--text-primary);font-size:15px;}
+  .src{font-size:11px;color:var(--text-muted);}
+
+  /* Factor list */
+  .factor{padding:12px 0;border-bottom:1px solid var(--hairline);}
+  .factor:last-child{border-bottom:none;}
+  .factor .f-name{font-weight:600;color:var(--text-primary);font-size:14.5px;}
+  .factor .f-body{font-size:14px;margin-top:2px;}
+
+  /* Risk callout */
+  .callout{border-radius:12px;padding:16px 18px;margin:14px 0;font-size:14.5px;
+    border:1px solid;}
+  .callout .tag{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:10px;font-weight:600;display:block;margin-bottom:4px;}
+  .callout.under{background:#fbeeee;border-color:#e3b7b7;color:#7d2b2b;}
+  .callout.under .tag{color:var(--error);}
+  .callout.ok{background:#eaf5ee;border-color:#b6dcc4;color:#215c3d;}
+  .callout.ok .tag{color:var(--success);}
+  .callout.over{background:#fbf3e2;border-color:#e6d3a6;color:#6e5212;}
+  .callout.over .tag{color:var(--warning);}
+
+  /* Limitations */
+  .fineprint{background:var(--paper);border:1px solid var(--hairline);
+    border-radius:12px;padding:16px 18px;font-size:12.5px;color:var(--text-muted);line-height:1.55;}
+  .fineprint strong{color:var(--text-body);}
+
+  /* Footer */
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);
+    padding:22px 48px;font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;
+    color:var(--on-dark);font-size:10.5px;}
+
+  @media print{
+    body{background:var(--white);}
+    .sheet{box-shadow:none;max-width:none;}
+    section{page-break-inside:avoid;}
+  }
+  @media (max-width:640px){
+    .hero,.body,.foot{padding-left:24px;padding-right:24px;}
+    .facts{grid-template-columns:1fr;}
+    .figure-card .amount{font-size:38px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="brandrow">
+      <span class="mark">JK</span>
+      <span class="firm">JK Accounting Group</span>
+    </div>
+    <span class="kicker">Reasonable Compensation Analysis · S-Corporation</span>
+    <h1>{{CLIENT_NAME}}</h1>
+    <div class="sub">Tax year {{TAX_YEAR}} · Prepared {{PREPARED_DATE}} · {{PREPARER}}</div>
+
+    <div class="figure-card">
+      <div class="label">Recommended reasonable compensation</div>
+      <div class="amount"><span class="accent">{{RECOMMENDED_SALARY}}</span></div>
+      <div class="range">Defensible range: {{RANGE_LOW}} – {{RANGE_HIGH}} · based on {{ANNUAL_HOURS}} annual hours across {{HAT_COUNT}} roles</div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- ============ SUMMARY ============ -->
+    <section>
+      <span class="kicker">Executive summary</span>
+      <h2>The bottom line</h2>
+      <p class="lead">{{SUMMARY_PARAGRAPH}}</p>
+    </section>
+
+    <!-- ============ CLIENT PROFILE ============ -->
+    <section>
+      <span class="kicker">Client & business profile</span>
+      <h2>The facts we used</h2>
+      <div class="facts">
+        <div class="cell"><div class="k">Business</div><div class="v">{{BUSINESS_NAME}}</div></div>
+        <div class="cell"><div class="k">Industry / NAICS</div><div class="v">{{INDUSTRY}}</div></div>
+        <div class="cell"><div class="k">Location</div><div class="v">{{LOCATION}}</div></div>
+        <div class="cell"><div class="k">Ownership</div><div class="v">{{OWNERSHIP}}</div></div>
+        <div class="cell"><div class="k">Gross revenue</div><div class="v">{{GROSS_REVENUE}}</div></div>
+        <div class="cell"><div class="k">Net income (before owner comp)</div><div class="v">{{NET_INCOME}}</div></div>
+        <div class="cell"><div class="k">Current W-2 salary</div><div class="v">{{CURRENT_SALARY}}</div></div>
+        <div class="cell"><div class="k">Distributions taken</div><div class="v">{{DISTRIBUTIONS}}</div></div>
+        <div class="cell"><div class="k">Hours worked</div><div class="v">{{HOURS}}</div></div>
+        <div class="cell"><div class="k">Experience / credentials</div><div class="v">{{EXPERIENCE}}</div></div>
+      </div>
+    </section>
+
+    <!-- ============ METHODOLOGY ============ -->
+    <section>
+      <span class="kicker">Methodology</span>
+      <h2>How we reached the number</h2>
+      <p>{{METHODOLOGY_PARAGRAPH}}</p>
+    </section>
+
+    <!-- ============ HAT BUILD-UP ============ -->
+    <section>
+      <span class="kicker">Role-by-role wage build-up</span>
+      <h2>What it would cost to replace each role</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Role / hat</th>
+            <th>Occupation (SOC)</th>
+            <th class="num">Hours/yr</th>
+            <th class="num">Rate/hr</th>
+            <th class="num">Weighted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- REPEAT one <tr> per hat -->
+          {{HAT_ROWS}}
+          <!-- Example row:
+          <tr>
+            <td>Executive / management</td>
+            <td>Gen. &amp; Operations Mgr (11-1021)<div class="src">BLS OEWS May 2024 · FL · 50th pct</div></td>
+            <td class="num">520</td>
+            <td class="num">$58.00</td>
+            <td class="num">$30,160</td>
+          </tr>
+          -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total reasonable compensation</td>
+            <td class="num">{{TOTAL_HOURS}}</td>
+            <td class="num"></td>
+            <td class="num">{{RECOMMENDED_SALARY}}</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="src">Rates from U.S. Bureau of Labor Statistics OEWS unless otherwise noted. Percentile selected per role for experience and skill; see notes per line.</p>
+    </section>
+
+    <!-- ============ RISK / CROSS-CHECK ============ -->
+    <section>
+      <span class="kicker">Reasonableness cross-check</span>
+      <h2>Current salary vs. recommended</h2>
+      <!-- Use ONE callout class: under | ok | over -->
+      <div class="callout {{RISK_CLASS}}">
+        <span class="tag">{{RISK_LABEL}}</span>
+        {{RISK_PARAGRAPH}}
+      </div>
+      <p>{{CROSSCHECK_PARAGRAPH}}</p>
+    </section>
+
+    <!-- ============ IRS FACTOR ANALYSIS ============ -->
+    <section>
+      <span class="kicker">IRS factor analysis</span>
+      <h2>Why this figure is defensible</h2>
+      <p>The IRS evaluates reasonable compensation against recognized factors (IRS Fact Sheet FS-2008-25; <em>Watson v. United States</em>, 8th Cir. 2012). Each is addressed below.</p>
+      <div>
+        <!-- REPEAT one .factor per factor -->
+        {{FACTOR_ROWS}}
+        <!-- Example:
+        <div class="factor">
+          <div class="f-name">1. Training and experience</div>
+          <div class="f-body">15 years in trade; licensed. Supports a wage above median for the technical role.</div>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- ============ ASSUMPTIONS & LIMITATIONS ============ -->
+    <section>
+      <span class="kicker">Assumptions & limitations</span>
+      <h2>What this analysis assumes</h2>
+      <div class="fineprint">
+        {{ASSUMPTIONS}}
+        <p><strong>Nature of this report.</strong> This is a documented professional estimate of
+        reasonable compensation prepared for {{CLIENT_NAME}} using the cost (replacement-wage)
+        approach and publicly available wage data. It supports the figure with occupational
+        benchmarks and the IRS's recognized factors, but it is <strong>not</strong> a legal
+        opinion, a formal business valuation, or a guarantee of any particular audit outcome.
+        Figures depend on the accuracy of information the client provided. For contested matters
+        or large exposures, a formal third-party compensation study is recommended.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div>
+      <div class="firm">JK Accounting Group</div>
+      <div>Prepared by {{PREPARER}} · {{PREPARED_DATE}}</div>
+    </div>
+    <div>Reasonable Compensation Analysis · {{CLIENT_NAME}} · Tax year {{TAX_YEAR}}</div>
+  </footer>
+
+</div>
+</body>
+</html>
