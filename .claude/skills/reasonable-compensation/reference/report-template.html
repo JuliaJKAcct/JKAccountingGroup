@@ -216,7 +216,40 @@
           </tr>
         </tfoot>
       </table>
-      <p class="src">Rates from U.S. Bureau of Labor Statistics OEWS unless otherwise noted. Percentile selected per role for experience and skill; see notes per line.</p>
+      <p class="src">Each role's rate is triangulated across several independent sources (see wage evidence below), then set per the firm's defensible-low posture. Percentile selected per role for experience and skill.</p>
+    </section>
+
+    <!-- ============ WAGE EVIDENCE / TRIANGULATION ============ -->
+    <section>
+      <span class="kicker">Wage evidence · triangulation</span>
+      <h2>The data behind each rate</h2>
+      <p>{{TRIANGULATION_PARAGRAPH}}</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Source</th>
+            <th>Geography</th>
+            <th class="num">Date</th>
+            <th class="num">Figure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- REPEAT one <tr> per (role x source) data point -->
+          {{EVIDENCE_ROWS}}
+          <!-- Example rows:
+          <tr>
+            <td rowspan="4">Bookkeeping</td>
+            <td>BLS OEWS (anchor)</td><td>FL state</td>
+            <td class="num">May 2024</td><td class="num">$27.10/hr</td>
+          </tr>
+          <tr><td>Indeed</td><td>Miami, FL</td><td class="num">2026</td><td class="num">$22.98/hr</td></tr>
+          <tr><td>Glassdoor</td><td>Miami, FL</td><td class="num">Jun 2026</td><td class="num">$55,644/yr</td></tr>
+          <tr><td>Salary.com</td><td>Miami, FL</td><td class="num">2026</td><td class="num">$52,300/yr</td></tr>
+          -->
+        </tbody>
+      </table>
+      <p class="src">Market figures gathered from public salary listings via web search on the preparation date; government anchor from BLS OEWS. Reconciled rate = defensible low of the corroborated cluster (never below it), requiring at least three agreeing sources to sit below the BLS median.</p>
     </section>
 
     <!-- ============ RISK / CROSS-CHECK ============ -->

@@ -1,72 +1,86 @@
-# Wage Data — Sourcing & Adjusting Market Wages
+# Wage Data — Multi-Source Triangulation
 
-Each "hat" in the Cost-approach build-up must be priced at a **market wage** for the
-matching occupation, adjusted for geography and skill. The authoritative free source is the
-**U.S. Bureau of Labor Statistics Occupational Employment & Wage Statistics (OEWS)**.
+Each "hat" in the build-up is priced by **triangulating several independent wage sources**,
+not by trusting a single number. This matters because the government/BLS wage for a given
+occupation often runs **higher** than what the open market actually pays (BLS skews toward
+larger, established employers), while any single job-board figure can be a noisy outlier.
+Triangulation pins down the *true market rate* — frequently lower than BLS — and, just as
+importantly, **documents** that it is lower with corroborating evidence. A lower figure that
+five sources agree on is defensible; a lone lowball is not.
 
-## Primary source: BLS OEWS
+## Default posture: **Defensible low**
 
-- **What it is:** annual wage estimates by occupation (SOC code), available nationally, by
-  **state**, and by **metropolitan area (MSA)**, at the 10th / 25th / 50th (median) /
-  75th / 90th percentiles, as both hourly and annual figures.
-- **Where:** https://www.bls.gov/oes/ (data.bls.gov/oes). If web access is available in the
-  session, look up current figures for the specific SOC + geography and **cite the release
-  year and geography** in the report. If web access is not available, ask the client for
-  known local wage figures, or use the analyst's best documented estimate and **clearly
-  label it as an estimate** with the basis stated. Never present an estimate as a BLS quote.
+Set the recommended rate near the **bottom of the corroborated cluster** (≈ the market 25th
+percentile) **whenever at least 3 independent sources support it**. This minimizes the
+client's payroll tax while staying fully documented. Guardrails (never break these):
+- **Never go below the corroborated cluster.** The point estimate must sit at or above the
+  lowest *credible, clustered* data — never below the minimum, never below a single outlier.
+- **Require ≥3 corroborating sources** to use a figure below the BLS median. With fewer, fall
+  back toward the median of what you have and note the thin evidence as a limitation.
+- **Show every data point** (source, geography, date, URL, value) in the report's wage-evidence
+  table. Transparency is what makes "lower" hold up.
 
-## Choosing the occupation (SOC) for each hat
+## The sources (aim for 4–6 per role)
 
-Match each hat to the **most specific occupation that reflects the actual work.** Common map:
+| Tier | Source | How to get it |
+|---|---|---|
+| Anchor | **BLS OEWS** (bls.gov/oes) | Government, authoritative; state/metro + percentiles. The high-side anchor. |
+| Market | **Indeed** | via `WebSearch` — publishes avg + range by role & metro |
+| Market | **Glassdoor** | via `WebSearch` — avg + 25th/75th, employee-reported |
+| Market | **Salary.com** | via `WebSearch` — percentile bands |
+| Market | **Payscale** | via `WebSearch` — hourly & experience-adjusted |
+| Market | **ZipRecruiter** | via `WebSearch` — postings-based |
+
+> **Do not scrape these sites directly.** Indeed/Glassdoor/LinkedIn return `403` to automated
+> fetches and their ToS forbids scraping. Use **`WebSearch`** — it surfaces their published
+> figures compliantly. A query like `"<role> salary <city> <state> 2026 Indeed Glassdoor"`
+> returns numbers from several platforms at once. If web access is unavailable in the session,
+> ask the analyst to paste figures they looked up manually, or use a clearly-labeled estimate.
+> **Never present an estimate or a remembered number as a sourced quote.**
+
+## Step-by-step per role
+
+1. **Pick the occupation (SOC).** Most specific match to the actual work (map below). Role
+   definition matters enormously — e.g. "bookkeeper" (~$48–55k Miami) vs. "full-charge
+   bookkeeper" (~$79k Miami) are different jobs. Choose the one that fits the real duties.
+2. **Anchor with BLS** — median + 25th/75th for the SOC and geography.
+3. **Gather market points** — one `WebSearch` per role/geography; capture each platform's
+   figure (convert annual↔hourly as needed; note if it's an average vs. a percentile).
+4. **Build the evidence table** — every point with source, geography, date, value, URL.
+5. **Reconcile** to a triangulated rate:
+   - Drop obvious outliers (a point far outside the cluster with no explanation).
+   - Compute the **median or trimmed mean** of the remaining points (robust to noise).
+   - Apply the **posture**: for *defensible low*, take the low end of the corroborated cluster
+     (≈ market 25th pct) when ≥3 sources support it; otherwise the cluster median.
+   - **Flag divergence:** when BLS sits well above the market cluster, state it plainly — this
+     is the "government rate exceeds market" case, and the market figure governs.
+6. **Adjust for skill/experience** within the range: move up for deep experience, credentials,
+   supervision, high-cost metro; down for nominal/occasional performance. State the reason.
+
+## Occupation (SOC) quick map
 
 | Hat / function | SOC | Occupation |
 |---|---|---|
 | Owner / executive leadership | 11-1011 | Chief Executives |
 | General management / operations | 11-1021 | General & Operations Managers |
-| Bookkeeping / accounting | 43-3031 | Bookkeeping, Accounting & Auditing Clerks |
+| Bookkeeping | 43-3031 | Bookkeeping, Accounting & Auditing Clerks |
 | Accountant / tax prep (credentialed) | 13-2011 | Accountants & Auditors |
 | Sales management | 11-2022 | Sales Managers |
-| Sales representative | 41-4012 / 41-3091 | Sales Reps |
+| Sales representative | 41-4012 | Sales Representatives |
 | Marketing management | 11-2021 | Marketing Managers |
 | Administrative assistant | 43-6014 | Secretaries & Admin Assistants |
 | Office clerk (general) | 43-9061 | Office Clerks, General |
 | Customer service | 43-4051 | Customer Service Representatives |
 | Human resources | 13-1071 | HR Specialists |
-| Industry-specific technician/trade | (varies) | e.g. 47-2111 Electricians, 35-1011 Chefs, 29-xxxx health |
+| Industry technician/trade | (varies) | e.g. 47-2111 Electricians, 35-1011 Chefs |
 
-> Caution on the "Chief Executive" wage: it is high and pulls the total up fast. Only
-> allocate hours to it for genuine strategic leadership. Routine management is usually
-> better matched to *General & Operations Managers*, and hands-on work to its own SOC.
+> The "Chief Executive" wage is high and pulls totals up fast — reserve it for genuine
+> strategic leadership; route routine management to *General & Operations Managers* and
+> hands-on work to its own SOC.
 
-## Percentile selection (skill/experience adjustment)
+## Documentation requirements (per role, in the report)
 
-Default to the **median (50th percentile)**. Adjust with documented reasons:
-
-| Move toward… | When… |
-|---|---|
-| 75th–90th | Deep experience, credentials/licenses, strong performance, supervising others, high cost-of-living metro, specialized expertise |
-| 50th (median) | Typical, competent, mid-career performance of the function |
-| 10th–25th | Green/entry involvement, nominal or occasional performance of that hat |
-
-State the chosen percentile **per hat** (different hats can use different percentiles) and
-the reason. This directly supports IRS factor 1 (training/experience) and factor 7
-(comparable pay).
-
-## Geography
-
-Use the client's **state or metro** figures when available (wages for the same occupation
-vary widely by location — a bookkeeper in Miami ≠ national average). Record which geography
-was used. If only national data is available, say so and note it as a limitation.
-
-## Building the range
-
-Compute three totals so the report can present a defensible band, not a brittle point:
-- **Low** — sum at the 25th percentile (or one step below each chosen percentile).
-- **Point** — sum at the chosen percentiles (the recommended figure).
-- **High** — sum at the 75th/90th percentile.
-
-## Documentation requirements (per hat, in the report)
-
-For each hat record: occupation + SOC · geography · percentile · hourly wage · source
-(e.g. "BLS OEWS May 2024, FL state, 50th pct" or "analyst estimate — basis: …") · allocated
-hours · weighted amount. Full transparency is what makes the number hold up under review.
+Record for each role: occupation + SOC · geography · **every source with its figure, date, and
+URL** · the outliers dropped and why · the reconciled rate + posture applied · the
+experience/percentile adjustment. If BLS diverged high from market, say so in words. This
+evidence table is the backbone of defensibility.

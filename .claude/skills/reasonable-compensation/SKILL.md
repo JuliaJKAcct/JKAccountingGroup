@@ -1,6 +1,6 @@
 ---
 name: reasonable-compensation
-description: Calculate and document a defensible reasonable-compensation (reasonable salary) figure for an S-corporation shareholder-employee. Use when the user asks to determine, calculate, justify, or produce a report on reasonable comp / reasonable salary / owner salary for an S-corp owner. Runs an interactive intake, applies the cost ("many-hats") replacement-wage method anchored to BLS occupational wage data, cross-checks against the IRS reasonableness factors, and outputs a branded, print-ready HTML report.
+description: Calculate and document a defensible reasonable-compensation (reasonable salary) figure for an S-corporation shareholder-employee. Use when the user asks to determine, calculate, justify, or produce a report on reasonable comp / reasonable salary / owner salary for an S-corp owner. Runs an interactive intake, applies the cost ("many-hats") replacement-wage method, triangulates each role's wage across BLS plus live market sources (Indeed, Glassdoor, Salary.com, Payscale, ZipRecruiter) to find a defensible-low market rate, cross-checks against the IRS reasonableness factors, and outputs a branded, print-ready HTML report.
 ---
 
 # Reasonable Compensation Analysis (S-Corp)
@@ -56,19 +56,31 @@ hats. Collect:
 If the user says "I don't know" for a financial figure, proceed and mark it *Not provided*;
 note any limitation it creates (e.g. can't run the ability-to-pay check).
 
-### Step 2 — Map hats → occupations & wages
+### Step 2 — Map hats → occupations & triangulate wages
 For each hat: pick the most specific SOC (see `wage-data.md`), choose geography (state/metro),
-and choose a percentile (default median; justify moves up/down per that file). Get the hourly
-wage from **BLS OEWS** — if web access is available, look up current figures and record the
-release year + geography + percentile; otherwise ask the user for known local rates or use a
-clearly-labeled documented estimate. Never present an estimate as a BLS quote.
+then **triangulate 4–6 independent sources** rather than trusting one number:
+- **BLS OEWS** as the high-side anchor, **plus** market figures from Indeed, Glassdoor,
+  Salary.com, Payscale, and ZipRecruiter gathered via **`WebSearch`** (one query per role, e.g.
+  `"<role> salary <city> <state> 2026 Indeed Glassdoor"`). **Do not scrape those sites** — they
+  return 403 and it violates ToS; WebSearch surfaces their published figures compliantly.
+- Capture **every data point** (source, geography, date, value, URL) — this becomes the report's
+  wage-evidence table.
+- **Reconcile:** drop unexplained outliers → median/trimmed mean of the cluster → apply the
+  **defensible-low posture** (land near the low end of the corroborated cluster, ≈ market 25th
+  pct, when ≥3 sources support it; else the cluster median). **Never go below the corroborated
+  cluster**, and **require ≥3 sources** to price a role below the BLS median.
+- **Flag divergence:** BLS often runs higher than the open market — when it does, the market
+  cluster governs and the report says so.
+- If web access is unavailable, ask the user to paste figures they looked up, or use a
+  clearly-labeled estimate. **Never present an estimate or a remembered number as a sourced quote.**
 
 ### Step 3 — Compute
 1. Annual hours = hours/wk × weeks/yr.
 2. Allocate annual hours across hats (from hours or from % × annual hours).
 3. Weighted wage per hat = allocated hours × hourly rate.
-4. **Recommended salary = Σ weighted wages** (point estimate at chosen percentiles).
-5. **Range** = recompute the sum at one step lower (low) and one step higher (high) percentile.
+4. **Recommended salary = Σ weighted wages** using each role's triangulated defensible-low rate.
+5. **Range** = recompute the sum at the market low (bottom of clusters) and market high (≈75th pct)
+   so the client sees the band, not just a point.
 6. Run the cross-checks from `methodology.md`: ability to pay (cap near net income if lower),
    salary-vs-distribution ratio, and current-vs-recommended → set risk = **under / in-range / over**.
 
@@ -78,6 +90,9 @@ Show the build-up table so every dollar traces to an occupation + rate.
 Copy `reference/report-template.html` and fill **every** `{{PLACEHOLDER}}`:
 - Money formatted like `$92,500`; percentiles/geography noted per hat line.
 - `{{HAT_ROWS}}` — one `<tr>` per hat (role, occupation+SOC with source note, hours, rate, weighted).
+- `{{EVIDENCE_ROWS}}` — the **wage-evidence table**: one `<tr>` per (role × source) data point with
+  the platform, geography, date, and figure, so the triangulation is fully auditable. Note in
+  `{{TRIANGULATION_PARAGRAPH}}` where BLS diverged high from the market cluster and how you reconciled.
 - `{{FACTOR_ROWS}}` — one `.factor` block per IRS factor, answered from intake; *Not provided* where data is missing.
 - Risk callout: set `{{RISK_CLASS}}` to `under` | `ok` | `over` and write `{{RISK_LABEL}}` / `{{RISK_PARAGRAPH}}` to match.
 - Keep the limitations block intact.

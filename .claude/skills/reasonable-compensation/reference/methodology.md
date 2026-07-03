@@ -48,13 +48,21 @@ Split the annual hours across the hats. Two acceptable inputs:
 
 Document the source of the allocation (client interview, time study, estimate).
 
-### 4. Price each hat at a market wage
-For each hat, pull the appropriate **hourly wage** from BLS OEWS, adjusted for:
-- **Geography** — use state or metro (MSA) data, not just national, when available.
-- **Experience / skill (percentile)** — default to the **median (50th percentile)**.
-  Move toward the 75th/90th percentile for owners with deep experience, credentials,
-  strong performance, or supervisory responsibility; move toward the 25th/10th for
-  green or nominal involvement. Always state which percentile and why.
+### 4. Price each hat at a market wage (triangulate)
+Don't trust one number. For each hat, **triangulate 4–6 independent sources** — BLS OEWS as
+the high-side anchor plus market data from Indeed, Glassdoor, Salary.com, Payscale, and
+ZipRecruiter (gathered via `WebSearch`; see `wage-data.md` for the full procedure and
+guardrails). Then:
+- **Geography** — use state or metro (MSA) figures, not national, when available.
+- **Reconcile** — drop unexplained outliers, take the median/trimmed mean of the cluster, and
+  apply the **defensible-low posture**: land near the low end of the corroborated cluster
+  (≈ market 25th percentile) when ≥3 sources support it, else the cluster median. Never go
+  below the corroborated cluster.
+- **Flag divergence** — BLS often runs *higher* than the open market; when it does, the market
+  cluster governs and the report says so explicitly.
+- **Experience / skill** — adjust within the range: up for deep experience, credentials,
+  supervision, high-cost metro; down for nominal involvement. Always state the reason.
+Record every source (figure, date, URL) so the reconciled rate is auditable.
 
 Weighted wage per hat = `allocated hours × hourly wage`.
 
