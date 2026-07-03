@@ -36,7 +36,7 @@ the US.
 |---|---|
 | Colors, fonts, logo, voice, design tokens | [`brand/`](./brand/) — `JK-Brand-Guide.md` is the authority |
 | Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/`](./projects/marketing/) |
-| S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/) |
+| S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | Marketing video | [`projects/video-generation/`](./projects/video-generation/) (planning) |
 | Firm procedures / how-we-do-X | [`projects/sops/`](./projects/sops/) (planning) |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
