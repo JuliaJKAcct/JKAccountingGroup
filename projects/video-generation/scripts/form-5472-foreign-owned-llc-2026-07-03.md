@@ -28,7 +28,7 @@ in the CTA beat and in the post caption.)*
   - Needs an **EIN**; **can't be e-filed** (mail/fax only).
   - Due with the 1120 (~April 15 calendar-year), 6-month extension via **Form 7004**.
   - **Penalty $25,000** for failure to timely file / keep records; additional **$25,000 per 30 days**
-    after IRS notice; raised from $10,000 by the TCJA (tax years after 2017). **Reasonable-cause**
+    if the failure continues beyond 90 days after IRS notice; raised from $10,000 by the TCJA (tax years after 2017). **Reasonable-cause**
     relief exists (facts-and-circumstances, not guaranteed).
 - **Hook angle chosen:** cold-open on the sourced number, tied to the *penalty for skipping* (not
   the filing itself).
