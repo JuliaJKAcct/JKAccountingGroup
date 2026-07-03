@@ -84,7 +84,7 @@ if anything is unverified** — the fix is applied and this role re-runs before 
 ## 6. Brand-guardian
 **Job:** Sounds and looks like JK — calm, plain, premium, bicultural.
 **Receives:** the current script + any visual direction.
-**Does:** check voice against [`brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md):
+**Does:** check voice against [`brand/JK-Brand-Guide.md`](../../../../brand/JK-Brand-Guide.md):
 no fear, no hype, no jargon walls, no corporate-sterile tone; plain and warm. Check that any
 visual direction in the brief stays on-palette (petrol teal / ivory / rare bronze), on-type
 (Source Serif 4 + IBM Plex Sans + mono kicker), uses the **approved avatar as the only face**
