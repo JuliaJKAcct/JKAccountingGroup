@@ -22,11 +22,12 @@ the US.
 │   ├── _template/                 copy this to start a new project
 │   ├── marketing/                 on-brand marketing collateral (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
-│   ├── video-generation/          on-brand marketing video (Planning)
+│   ├── video-generation/          on-brand marketing video (Active)
 │   └── sops/                      firm standard operating procedures (Planning)
 └── .claude/
     └── skills/    reusable Claude workflows (the "engines")
         ├── reasonable-compensation/   drives the reasonable-comp project
+        ├── video-script-pipeline/     drives the video-generation project
         └── impeccable/                general UI/design skill
 ```
 
@@ -37,7 +38,7 @@ the US.
 | Colors, fonts, logo, voice, design tokens | [`brand/`](./brand/) — `JK-Brand-Guide.md` is the authority |
 | Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/`](./projects/marketing/) |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
-| Marketing video | [`projects/video-generation/`](./projects/video-generation/) (planning) |
+| Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
 | Firm procedures / how-we-do-X | [`projects/sops/`](./projects/sops/) (planning) |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
