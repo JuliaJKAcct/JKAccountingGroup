@@ -286,10 +286,17 @@
       <p class="src">{{INVESTOR_NOTE}}</p>
       <h3 style="font-size:16px;margin-top:24px;">Reconciliation</h3>
       <table>
-        <thead><tr><th>Approach</th><th class="num">Indicated value</th><th class="num">Weight</th><th>Role</th></tr></thead>
+        <thead><tr><th>Approach</th><th class="num">Indicated value</th><th class="num">Emphasis</th><th>Role in the conclusion</th></tr></thead>
+        <!-- REPEAT one <tr> per approach (cost / market / income). Use QUALITATIVE emphasis words
+             (Primary / Corroborating / Ceiling · check) in the Emphasis column — do NOT put numeric
+             percentage weights here: they read as a weighted average and won't tie to a defensible-low
+             conclusion. The reconciliation is professional judgment, not arithmetic. -->
         <tbody>{{APPROACHES_ROWS}}</tbody>
-        <tfoot><tr class="wtd"><td>Reconciled reasonable compensation</td><td class="num">{{RECOMMENDED_SALARY}}</td><td class="num"></td><td>Defensible-low within band</td></tr></tfoot>
+        <tfoot><tr class="wtd"><td>Reconciled reasonable compensation</td><td class="num">{{RECOMMENDED_SALARY}}</td><td class="num"></td><td>Defensible-low within the band</td></tr></tfoot>
       </table>
+      <!-- {{RECONCILE_NOTE}}: state that this is a judgment reconciliation (not a mechanical average),
+           greatest weight to the primary approach, and that the concluded figure is the defensible low
+           of the corroborated band. -->
       <p class="src">{{RECONCILE_NOTE}}</p>
     </section>
 

@@ -55,22 +55,28 @@ number *up* for a service business, but it is powerful evidence that a figure is
 
 ## Reconciliation — one figure from three
 
-Do not average blindly. **Weight by relevance to this client** and explain the weighting:
+This is a **professional reconciliation, like an appraiser's — not a mechanical weighted
+average.** Give the approaches *emphasis* by relevance to this client, then conclude a single
+figure by judgment. The relevance guidance below is about which approach to lean on, **not
+percentages to multiply and sum**:
 
-| Client type | Cost | Market | Income |
+| Client type | Lean on | Corroborate with | Ceiling / check |
 |---|---|---|---|
-| Hands-on owner-operator / service S-corp (typical) | High (≈60–70%) | Moderate (≈20–30%) | Check/ceiling (≈10%) |
-| Capital-intensive or product company | Moderate | Moderate–High | Higher |
-| High-profit relative to owner labor | Moderate | Moderate | Higher (ceiling binds) |
+| Hands-on owner-operator / service S-corp (typical) | Cost (primary) | Market total | Income (investor test) |
+| Capital-intensive or product company | Market | Cost | Income (often binds) |
+| High-profit relative to owner labor | Market / Cost | — | Income (ceiling binds) |
 
 Steps:
 1. State each approach's indicated value and range.
 2. Note convergence or divergence and why.
-3. Apply weights (with rationale) → **reconciled reasonable compensation**.
+3. **Conclude by judgment**, giving greatest weight to the primary approach → **reconciled
+   reasonable compensation**. In the report table, show emphasis **qualitatively** (Primary /
+   Corroborating / Ceiling·check), *not* as numeric percentages — displayed percentages read as a
+   weighted average and will not tie to a defensible-low conclusion, which invites a challenge.
 4. Confirm the reconciled figure passes the Independent Investor Test (post-comp return still
    acceptable) and sits within the cost-approach range.
-5. Keep the firm's **defensible-low posture**: within the reconciled range, land low where the
-   data corroborates it.
+5. Keep the firm's **defensible-low posture**: conclude at the low end of the corroborated band,
+   near the primary approach's indication, and say so explicitly.
 
 Document the whole reconciliation in the report's "Reconciliation" section so the single number
 is visibly the product of three methods, not one.

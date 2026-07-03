@@ -124,9 +124,12 @@ Copy `reference/report-template.html` and fill **every** `{{PLACEHOLDER}}`:
 - `{{HAT_ROWS}}` — one `<tr>` per hat (role, SOC, hours, pre-scaling rate, size factor, post-scaling rate, weighted).
 - `{{EVIDENCE_ROWS}}` — the **wage-evidence table**: one `<tr>` per (role × source) data point with
   platform, geography, date, figure. Note in `{{TRIANGULATION_PARAGRAPH}}` where BLS diverged high.
-- `{{APPROACHES_ROWS}}` — the three-approach reconciliation table (each approach's value, weight, note)
-  and `{{INVESTOR_TEST}}` — the Independent Investor Test numbers (equity, required vs. post-comp return).
-- `{{TOTALCOMP_ROWS}}` — cash salary + retirement + health = total package.
+- `{{APPROACHES_ROWS}}` — the three-approach reconciliation rows (each approach's value, **qualitative
+  emphasis** — Primary/Corroborating/Ceiling·check, not a numeric weight — and role); plus the Independent
+  Investor Test cells `{{EQUITY_SHORT}}`, `{{REQUIRED_RETURN}}`, `{{RETURN_AFTER}}`, `{{POST_COMP_ROE}}`
+  (and their `*_CAP` captions). `{{RECONCILE_NOTE}}` must say the figure is a judgment reconciliation
+  landed at the defensible low, not a mechanical average.
+- Total-compensation cells `{{RETIREMENT}}`, `{{HEALTH}}`, `{{TOTAL_PACKAGE}}` — cash salary + retirement + health.
 - `{{HISTORY_ROWS}}` — the multi-year salary / distribution / net-income trend (or *Not provided*).
 - `{{FACTOR_ROWS}}` — one `.factor` block per IRS factor; *Not provided* where data is missing.
 - `{{CERTIFICATION}}` — the analyst certification & signature block (preparer, firm, date, sources, method).

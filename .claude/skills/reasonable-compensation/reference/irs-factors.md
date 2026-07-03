@@ -43,8 +43,11 @@ Drawn from **IRS Fact Sheet FS-2008-25** and the case law below. Address each in
   himself $24,000 salary while taking ~$200,000 in distributions; courts upheld
   recharacterization to a ~$91,044 reasonable salary. The leading modern case; it
   validates the replacement-cost / expert-build-up methodology.
-- **Fleischer v. Commissioner**, T.C. Memo 2016-238 — reinforced substance-over-form on
-  who earned the income and the need for reasonable comp.
+- **Fleischer v. Commissioner**, T.C. Memo 2016-238 — an *assignment-of-income /
+  substance-over-form* case (commissions routed through an S-corp). Related authority on economic
+  substance; **not** itself a low-salary/large-distribution recharacterization case — cite it as
+  background, not as an on-point reasonable-comp case. The on-point ones are *Watson*, *Radtke*,
+  and *Spicer*.
 - **Spicer Accounting, Inc. v. United States**, 918 F.2d 90 (9th Cir. 1990) — services
   rendered by an owner cannot be disguised entirely as distributions to avoid tax.
 - **Radtke v. United States**, 895 F.2d 1196 (7th Cir. 1990) — sole shareholder-employee's
