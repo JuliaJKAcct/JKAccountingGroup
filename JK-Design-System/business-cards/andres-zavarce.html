@@ -1,0 +1,396 @@
+<!--
+  JK Accounting Group — Business Card
+  Andres Zavarce
+  Built strictly from JK-Brand-Guide.md (Atlas system).
+  US size 3.5 x 2 in, 300dpi, 0.125in bleed (3.75 x 2.25 in trim box).
+  Colors: Petrol Teal #123841 / Soft Ivory #F6F3EC / Warm Bronze accent used once.
+  Type: Source Serif 4 (headings) · IBM Plex Sans (body) · IBM Plex Mono (kickers).
+-->
+<title>JK Accounting Group — Business Card · Andres Zavarce</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --teal:#123841;
+    --teal-deep:#0D2A31;
+    --teal-darkest:#091F24;
+    --bronze:#9C6A39;
+    --bronze-light:#CFA268;
+    --bronze-ink:#7E5430;
+    --ivory:#F6F3EC;
+    --paper:#FBF8F2;
+    --ivory-ink:#ECE6DA;
+    --text-primary:#0D2A31;
+    --text-body:#22201A;
+    --text-muted:#6F6857;
+    --on-dark:#ECE6DA;
+    --on-dark-muted:#9FB3B6;
+    --hair:#C5BEAD;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    background:
+      radial-gradient(120% 120% at 50% 0%, #efeadd 0%, var(--ivory) 55%);
+    color:var(--text-body);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:34px;
+    padding:56px 24px 72px;
+    min-height:100vh;
+  }
+
+  .doc-head{
+    text-align:center;
+    max-width:640px;
+  }
+  .doc-head .kicker{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:11px;
+    color:var(--bronze-ink);
+    font-weight:500;
+  }
+  .doc-head h1{
+    font-family:var(--serif);
+    font-weight:600;
+    letter-spacing:-0.012em;
+    color:var(--text-primary);
+    font-size:26px;
+    margin-top:8px;
+  }
+  .doc-head p{
+    color:var(--text-muted);
+    font-size:14px;
+    line-height:1.6;
+    margin-top:8px;
+  }
+
+  .cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    align-items:flex-start;
+  }
+
+  .card-wrap{ display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .card-wrap .face-label{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:10px;
+    color:var(--text-muted);
+  }
+
+  /* Card surface: 3.5 x 2 in shown at 2x (1050 x 600 px) for a crisp preview.
+     Trim size; bleed is documented in print CSS below. */
+  .card{
+    width:525px;
+    height:300px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 1px 2px rgba(13,42,49,.10),
+               0 18px 40px -18px rgba(13,42,49,.45);
+  }
+
+  /* ---------------- FRONT ---------------- */
+  .front{
+    background:
+      radial-gradient(130% 100% at 50% -10%, #17454f 0%, var(--teal) 46%, var(--teal-deep) 100%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+  }
+  .front::after{
+    /* subtle inner keyline, does NOT box the mark — sits at the card edge */
+    content:"";
+    position:absolute;
+    inset:14px;
+    border:1px solid rgba(207,162,104,.28);
+    border-radius:9px;
+    pointer-events:none;
+  }
+  .front .medallion{ width:150px; height:150px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.28)); }
+  .front .front-tag{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.34em;
+    font-size:11px;
+    color:var(--on-dark-muted);
+    padding-left:.34em;
+  }
+
+  /* ---------------- BACK ---------------- */
+  .back{
+    background:var(--ivory);
+    display:grid;
+    grid-template-columns:150px 1fr;
+  }
+  .back .rail{
+    background:
+      linear-gradient(180deg, var(--teal) 0%, var(--teal-deep) 100%);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    padding:26px 16px;
+  }
+  .back .rail .emblem{ width:78px; height:78px; }
+  .back .rail .rail-name{
+    font-family:var(--serif);
+    color:var(--on-dark);
+    font-weight:600;
+    font-size:18px;
+    line-height:1.15;
+    text-align:center;
+    letter-spacing:-0.01em;
+  }
+  .back .rail .rail-tag{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:8.5px;
+    color:var(--bronze-light);
+    text-align:center;
+  }
+
+  .back .info{
+    padding:30px 30px 26px 32px;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .back .name-block{ margin-bottom:4px; }
+  .back .name-row{ display:flex; align-items:center; gap:10px; }
+  .back .name{
+    font-family:var(--serif);
+    font-weight:600;
+    letter-spacing:-0.012em;
+    color:var(--text-primary);
+    font-size:27px;
+    line-height:1.05;
+  }
+  /* the single bronze accent on the card */
+  .back .diamond{
+    width:9px;height:9px;flex:0 0 auto;
+    background:var(--bronze);
+    transform:rotate(45deg);
+    border-radius:1px;
+  }
+  .back .title{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:10.5px;
+    color:var(--bronze-ink);
+    font-weight:500;
+    margin-top:9px;
+  }
+
+  .back .rule{
+    height:1px;
+    background:linear-gradient(90deg,var(--hair),rgba(197,190,173,0));
+    margin:15px 0 14px;
+  }
+
+  .back .contact{ display:flex; flex-direction:column; gap:8px; }
+  .back .row{ display:grid; grid-template-columns:64px 1fr; align-items:baseline; gap:12px; }
+  .back .row .lbl{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.13em;
+    font-size:8.5px;
+    color:var(--text-muted);
+    padding-top:1px;
+  }
+  .back .row .val{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:500;
+    color:var(--text-body);
+    line-height:1.35;
+  }
+  .back .row .val .ph{ color:#9a9382; font-weight:500; } /* placeholder styling */
+
+  .back .foot{
+    margin-top:auto;
+    padding-top:14px;
+    border-top:1px solid rgba(197,190,173,.55);
+  }
+  .back .bilingual{
+    font-family:var(--sans);
+    font-size:10.5px;
+    line-height:1.5;
+    color:var(--text-muted);
+  }
+  .back .bilingual .en{ color:var(--text-primary); font-weight:500; }
+  .back .bilingual .ru{ display:block; margin-top:2px; }
+
+  /* placeholder flag chip in preview only (hidden on print) */
+  .legend{
+    max-width:640px;
+    background:var(--paper);
+    border:1px solid var(--hair);
+    border-radius:14px;
+    padding:16px 20px;
+    font-size:13px;
+    line-height:1.6;
+    color:var(--text-body);
+  }
+  .legend b{ color:var(--text-primary); font-family:var(--serif); font-weight:600; }
+  .legend code{
+    font-family:var(--mono);
+    font-size:12px;
+    background:#efeadd;
+    padding:1px 6px;
+    border-radius:5px;
+    color:var(--bronze-ink);
+  }
+  .legend ul{ margin:8px 0 0 18px; }
+  .legend li{ margin:3px 0; }
+
+  /* ---------------- PRINT: true size + bleed ---------------- */
+  @media print{
+    @page{ size:3.75in 2.25in; margin:0; }   /* trim 3.5x2 + 0.125 bleed all sides */
+    body{ background:#fff; padding:0; gap:0; display:block; }
+    .doc-head,.legend,.card-wrap .face-label{ display:none; }
+    .cards{ display:block; gap:0; }
+    .card-wrap{ page-break-after:always; gap:0; }
+    .card{
+      width:3.75in; height:2.25in;         /* fill the bleed box */
+      border-radius:0; box-shadow:none;
+    }
+    .front::after{ inset:.32in; }           /* keep keyline within safe area */
+  }
+</style>
+
+<div class="doc-head">
+  <div class="kicker">JK Accounting Group · Business Card</div>
+  <h1>Andres Zavarce</h1>
+  <p>US business-card size (3.5 × 2 in), 300 dpi, 0.125 in bleed. Front &amp; back below — print double-sided, flip on long edge.</p>
+</div>
+
+<div class="cards">
+
+  <!-- FRONT -->
+  <div class="card-wrap">
+    <div class="card front">
+      <svg class="medallion" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="arcTop" d="M20.9 51.7 A40 40 0 0 1 99.1 51.7" fill="none"></path>
+          <path id="arcBot" d="M20.9 68.3 A40 40 0 0 0 99.1 68.3" fill="none"></path>
+        </defs>
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
+        <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1"></circle>
+        <text font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.6" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">JK ACCOUNTING GROUP</textPath></text>
+        <text font-family="'IBM Plex Mono',monospace" font-size="5" letter-spacing="1.4" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcBot" startOffset="50%">TAX · BOOKKEEPING · CFO</textPath></text>
+        <g fill="#CFA268">
+          <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+          <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+        </g>
+        <g transform="translate(60,60) scale(0.44) translate(-59,-56)">
+          <g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+            <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+            <path d="M70 26 L70 86"></path>
+            <path d="M70 56 L92 26"></path>
+            <path d="M70 56 L95 86"></path>
+          </g>
+        </g>
+      </svg>
+      <div class="front-tag">Miami · Fort Lauderdale · Online</div>
+    </div>
+    <div class="face-label">Front</div>
+  </div>
+
+  <!-- BACK -->
+  <div class="card-wrap">
+    <div class="card back">
+      <div class="rail">
+        <svg class="emblem" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3.5"></circle>
+          <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.6"></circle>
+          <g fill="#CFA268">
+            <path d="M7 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"></path>
+            <path d="M113 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"></path>
+          </g>
+          <g transform="translate(60,60) scale(0.62) translate(-59,-56)">
+            <g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+              <path d="M70 26 L70 86"></path>
+              <path d="M70 56 L92 26"></path>
+              <path d="M70 56 L95 86"></path>
+            </g>
+          </g>
+        </svg>
+        <div>
+          <div class="rail-name">JK Accounting<br>Group</div>
+          <div class="rail-tag" style="margin-top:6px">Est. Miami</div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="name-block">
+          <div class="name-row">
+            <span class="name">Andres Zavarce</span>
+            <span class="diamond" aria-hidden="true"></span>
+          </div>
+          <div class="title" data-placeholder>Accountant <span style="opacity:.55">&nbsp;· confirm title</span></div>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="contact">
+          <div class="row">
+            <span class="lbl">Direct</span>
+            <span class="val"><span class="ph">+1 (___) ___-____</span></span>
+          </div>
+          <div class="row">
+            <span class="lbl">Email</span>
+            <span class="val"><span class="ph">andres@jkaccountinggroup.com</span></span>
+          </div>
+          <div class="row">
+            <span class="lbl">Web</span>
+            <span class="val">jkaccountinggroup.com</span>
+          </div>
+          <div class="row">
+            <span class="lbl">Office</span>
+            <span class="val">Miami · Fort Lauderdale · Online</span>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="bilingual">
+            <span class="en">Senior US accounting — explained plainly, in your language.</span>
+            <span class="ru">Профессиональный учёт в США — понятно и на вашем языке.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="face-label">Back</div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <b>Placeholders to confirm before printing</b>
+  <ul>
+    <li><b>Title</b> — shown as <code>Accountant</code>. Tell me his real role (e.g. Tax Associate, Senior Accountant, Bookkeeper).</li>
+    <li><b>Direct phone</b> — currently blank <code>+1 (___) ___-____</code>. The firm's other lines use the Miami <code>786</code> area code.</li>
+    <li><b>Email</b> — <code>andres@jkaccountinggroup.com</code> is a guess from the firm's pattern; Maria's is <code>mariaf@</code>, so his may differ. Confirm the exact address.</li>
+  </ul>
+  Everything else — colors, fonts, logo, bilingual line, layout — is locked to the JK brand guide.
+</div>
