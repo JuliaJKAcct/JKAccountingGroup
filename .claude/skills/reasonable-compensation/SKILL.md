@@ -136,10 +136,10 @@ Copy `reference/report-template.html` and fill **every** `{{PLACEHOLDER}}`:
 - Risk callout: set `{{RISK_CLASS}}` to `under` | `ok` | `over` and match `{{RISK_LABEL}}` / `{{RISK_PARAGRAPH}}`.
 - Keep the limitations block intact. Voice = JK brand: calm, plain, senior-advisor. No fear, no hype.
 
-**Save to:** `JK-Design-System/../reasonable-comp/<client-slug>-<tax-year>.html`
-(create a top-level `reasonable-comp/` folder if it doesn't exist; slug = lowercase, hyphenated
-client name). Then tell the user the path and offer to open/preview it. Do **not** commit or push
-unless the user asks.
+**Save to:** `projects/reasonable-compensation/reports/<client-slug>-<tax-year>.html`
+(create the `projects/reasonable-compensation/reports/` folder if it doesn't exist; slug = lowercase,
+hyphenated client name). Then tell the user the path and offer to open/preview it. Do **not** commit or
+push unless the user asks.
 
 ### Step 6 — Summarize in chat
 Give the headline reconciled number + range, how the three approaches converged, the risk verdict
