@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reasonable Compensation Analysis — Solux Media Corp — 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --success:#2F8F5E; --warning:#B8841C; --error:#B23A3A; --info:#2F5E8C;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:840px;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;scroll-behavior:smooth;}
+  body{margin:0;background:
+      radial-gradient(1200px 600px at 100% -10%, #efeadf 0%, transparent 60%),
+      var(--ivory);
+    color:var(--text-body);font-family:var(--sans);font-size:16px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:32px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 18px 50px rgba(9,31,36,.12);
+    border-radius:16px;overflow:hidden;position:relative;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;
+    font-size:11px;font-weight:600;color:var(--bronze-ink);}
+  h1,h2,h3{font-family:var(--serif);letter-spacing:-0.014em;
+    color:var(--text-primary);text-wrap:balance;margin:0;font-weight:600;}
+  a{color:var(--teal);text-underline-offset:2px;}
+  strong{font-weight:600;color:var(--text-primary);}
+
+  /* Sample ribbon */
+  .ribbon{position:absolute;top:20px;right:-46px;transform:rotate(45deg);
+    background:var(--bronze);color:#fff;font-family:var(--mono);font-size:10px;
+    letter-spacing:.16em;font-weight:600;padding:6px 60px;text-transform:uppercase;
+    box-shadow:0 4px 14px rgba(9,31,36,.28);z-index:5;}
+
+  /* ============ HERO ============ */
+  .hero{background:
+      radial-gradient(700px 340px at 88% -30%, rgba(207,162,104,.20) 0%, transparent 62%),
+      linear-gradient(160deg,#164049 0%, var(--teal) 42%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:46px 52px 44px;position:relative;}
+  .brandrow{display:flex;align-items:center;gap:13px;
+    border-bottom:1px solid rgba(236,230,218,.16);padding-bottom:18px;margin-bottom:26px;}
+  .medallion{width:38px;height:38px;flex:none;}
+  .brandrow .firm-name{font-family:var(--serif);font-weight:600;font-size:17px;
+    color:#fff;letter-spacing:.01em;line-height:1.1;}
+  .brandrow .firm-sub{font-family:var(--mono);text-transform:uppercase;
+    letter-spacing:.15em;font-size:9.5px;color:var(--on-dark-muted);margin-top:3px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:33px;line-height:1.08;margin:11px 0 5px;}
+  .hero .sub{color:var(--on-dark-muted);font-size:13.5px;
+    font-family:var(--mono);letter-spacing:.04em;}
+
+  .figure-card{margin-top:30px;
+    background:linear-gradient(150deg, rgba(13,42,49,.55), rgba(9,31,36,.75));
+    border:1px solid rgba(207,162,104,.30);border-radius:16px;
+    padding:24px 28px;display:flex;flex-wrap:wrap;align-items:flex-end;
+    justify-content:space-between;gap:18px;
+    box-shadow:inset 0 1px 0 rgba(236,230,218,.06);}
+  .figure-card .label{font-family:var(--mono);text-transform:uppercase;
+    letter-spacing:.13em;font-size:10.5px;color:var(--on-dark-muted);}
+  .figure-card .amount{font-family:var(--serif);font-weight:700;
+    font-size:52px;line-height:1;color:#fff;margin:8px 0 3px;letter-spacing:-0.02em;}
+  .figure-card .amount .accent{color:var(--bronze-light);}
+  .figure-card .range{font-size:13px;color:var(--on-dark-muted);}
+  .figure-card .meta{text-align:right;font-size:12px;color:var(--on-dark-muted);
+    line-height:1.7;}
+  .figure-card .meta b{color:var(--on-dark);font-weight:600;}
+
+  /* ============ BODY ============ */
+  .body{padding:40px 52px 20px;}
+  section{margin-bottom:40px;scroll-margin-top:20px;}
+  section h2{font-size:22px;margin:6px 0 4px;}
+  section > .kicker{display:block;margin-bottom:1px;}
+  p{margin:.55em 0;max-width:70ch;}
+  .lead{font-size:17px;color:var(--text-body);}
+
+  /* facts grid */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--hairline);border:1px solid var(--hairline);
+    border-radius:13px;overflow:hidden;margin:16px 0;}
+  .facts .cell{background:var(--paper);padding:13px 17px;}
+  .facts .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:9.5px;color:var(--text-muted);}
+  .facts .v{font-size:15px;color:var(--text-primary);font-weight:500;margin-top:3px;}
+
+  /* tables */
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;}
+  thead th{font-family:var(--mono);text-transform:uppercase;letter-spacing:.07em;
+    font-size:9.5px;color:var(--text-muted);text-align:left;font-weight:600;
+    padding:9px 11px;border-bottom:2px solid var(--border);}
+  tbody td{padding:10px 11px;border-bottom:1px solid var(--hairline);
+    vertical-align:top;color:var(--text-body);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  tfoot td{padding:12px 11px;border-top:2px solid var(--border);font-weight:600;
+    color:var(--text-primary);font-size:15px;background:var(--paper);}
+  .src{font-size:11px;color:var(--text-muted);line-height:1.5;}
+  .socnote{font-family:var(--mono);font-size:10px;color:var(--text-muted);
+    letter-spacing:.03em;margin-top:2px;}
+  .role-lead{color:var(--teal);font-weight:600;}
+  .grp td{background:var(--paper);font-family:var(--mono);text-transform:uppercase;
+    letter-spacing:.08em;font-size:10px;color:var(--teal);font-weight:600;
+    padding:8px 11px;border-bottom:1px solid var(--hairline);}
+  .anchor td:first-child{color:var(--warning);font-weight:600;}
+  .pick td{background:#f4f7f2;}
+  .pick td:first-child{color:var(--success);font-weight:600;}
+  .pill{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:999px;
+    vertical-align:middle;}
+  .pill.high{background:#fbf1de;color:var(--warning);}
+  .pill.low{background:#e9f4ee;color:var(--success);}
+  .pill.drop{background:#f3eeee;color:var(--text-muted);text-decoration:line-through;}
+
+  /* divergence callout */
+  .callout{border-radius:13px;padding:17px 20px;margin:16px 0;font-size:14.5px;
+    border:1px solid;position:relative;}
+  .callout .tag{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:10px;font-weight:600;display:block;margin-bottom:5px;}
+  .callout p{margin:.3em 0;max-width:none;}
+  .callout.info{background:#eef3f7;border-color:#bcd0df;color:#294b63;}
+  .callout.info .tag{color:var(--info);}
+  .callout.under{background:#fbeeee;border-color:#e3b7b7;color:#7d2b2b;}
+  .callout.under .tag{color:var(--error);}
+  .callout.ok{background:#eaf5ee;border-color:#b6dcc4;color:#215c3d;}
+  .callout.ok .tag{color:var(--success);}
+
+  /* factors */
+  .factor{padding:13px 0;border-bottom:1px solid var(--hairline);
+    display:grid;grid-template-columns:26px 1fr;gap:12px;}
+  .factor:last-child{border-bottom:none;}
+  .factor .n{font-family:var(--mono);font-size:12px;color:var(--bronze-ink);
+    font-weight:600;padding-top:1px;}
+  .factor .f-name{font-weight:600;color:var(--text-primary);font-size:14.5px;}
+  .factor .f-body{font-size:14px;margin-top:2px;color:var(--text-body);max-width:66ch;}
+  .factor .np{color:var(--text-muted);font-style:italic;}
+
+  /* tax note */
+  .taxbox{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;
+    background:var(--hairline);border:1px solid var(--hairline);
+    border-radius:13px;overflow:hidden;margin:16px 0;}
+  .taxbox .cell{background:var(--white);padding:16px 18px;}
+  .taxbox .cell.hi{background:var(--teal);}
+  .taxbox .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:.09em;
+    font-size:9.5px;color:var(--text-muted);}
+  .taxbox .cell.hi .k{color:var(--bronze-light);}
+  .taxbox .v{font-family:var(--serif);font-size:26px;font-weight:600;
+    color:var(--text-primary);margin-top:5px;letter-spacing:-0.01em;}
+  .taxbox .cell.hi .v{color:#fff;}
+  .taxbox .cap{font-size:11.5px;color:var(--text-muted);margin-top:3px;}
+  .taxbox .cell.hi .cap{color:var(--on-dark-muted);}
+
+  /* fineprint */
+  .fineprint{background:var(--paper);border:1px solid var(--hairline);
+    border-radius:13px;padding:18px 20px;font-size:12.5px;color:var(--text-muted);
+    line-height:1.58;}
+  .fineprint p{max-width:none;margin:.5em 0;}
+  .fineprint strong{color:var(--text-body);}
+
+  /* footer */
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);
+    padding:26px 52px;font-size:12px;display:flex;justify-content:space-between;
+    gap:20px;flex-wrap:wrap;align-items:flex-end;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;
+    color:var(--on-dark);font-size:10.5px;margin-bottom:4px;}
+  .foot a{color:var(--bronze-light);}
+
+  /* entrance motion — enhances already-visible content */
+  @media (prefers-reduced-motion:no-preference){
+    .body section{animation:rise .7s var(--ease) both;}
+    .body section:nth-child(2){animation-delay:.04s}
+    .body section:nth-child(3){animation-delay:.08s}
+    .body section:nth-child(4){animation-delay:.12s}
+    @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+    section{page-break-inside:avoid;}
+    .hero{-webkit-print-color-adjust:exact;}
+  }
+  @media (max-width:680px){
+    .hero,.body,.foot{padding-left:24px;padding-right:24px;}
+    .facts,.taxbox{grid-template-columns:1fr;}
+    .figure-card .amount{font-size:42px;}
+    .figure-card .meta{text-align:left;}
+    .sheet{margin:12px;border-radius:12px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="ribbon">Illustrative sample</div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif"
+          font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div>
+        <div class="firm-name">JK Accounting Group</div>
+        <div class="firm-sub">Miami · Fort Lauderdale · Online</div>
+      </div>
+    </div>
+
+    <span class="kicker">Reasonable Compensation Analysis · S-Corporation</span>
+    <h1>Solux Media Corp</h1>
+    <div class="sub">Tax year 2025 · Prepared July 3, 2026 · JK Accounting Group</div>
+
+    <div class="figure-card">
+      <div>
+        <div class="label">Recommended reasonable compensation</div>
+        <div class="amount"><span class="accent">$65,900</span></div>
+        <div class="range">Defensible range $61,000 – $85,000 · set at the market-low of the corroborated data</div>
+      </div>
+      <div class="meta">
+        <div><b>2,200</b> annual hours</div>
+        <div><b>5</b> roles priced</div>
+        <div><b>18</b> wage data points</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- SUMMARY -->
+    <section>
+      <span class="kicker">Executive summary</span>
+      <h2>The bottom line</h2>
+      <p class="lead">A reasonable W-2 salary for the owner of Solux Media Corp for 2025 is
+      <strong>$65,900</strong>, with a defensible range of $61,000–$85,000. The figure is built
+      from what the Miami market would actually pay to replace each of the five roles the owner
+      performs — priced at the low, well-corroborated end of live market data. The owner's
+      current salary of <strong>$42,000</strong> sits below this range while distributions of
+      $128,000 run well above it: the pattern the IRS most often challenges. We recommend
+      raising the salary to roughly $65,900.</p>
+    </section>
+
+    <!-- PROFILE -->
+    <section>
+      <span class="kicker">Client &amp; business profile</span>
+      <h2>The facts we used</h2>
+      <div class="facts">
+        <div class="cell"><div class="k">Business</div><div class="v">Solux Media Corp · S-corporation</div></div>
+        <div class="cell"><div class="k">Industry</div><div class="v">Digital marketing agency (NAICS 541810)</div></div>
+        <div class="cell"><div class="k">Location</div><div class="v">Miami, FL</div></div>
+        <div class="cell"><div class="k">Ownership</div><div class="v">100% single shareholder-employee</div></div>
+        <div class="cell"><div class="k">Gross revenue</div><div class="v">$520,000</div></div>
+        <div class="cell"><div class="k">Net income (before owner comp)</div><div class="v">$185,000</div></div>
+        <div class="cell"><div class="k">Current W-2 salary</div><div class="v">$42,000</div></div>
+        <div class="cell"><div class="k">Distributions taken</div><div class="v">$128,000</div></div>
+        <div class="cell"><div class="k">Hours worked</div><div class="v">≈ 45 hrs/wk × 49 wks = 2,200 hrs/yr</div></div>
+        <div class="cell"><div class="k">Experience / credentials</div><div class="v">12 yrs digital marketing · B.A. · no CPA</div></div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section>
+      <span class="kicker">Methodology</span>
+      <h2>How we reached the number</h2>
+      <p>We used the <strong>cost, or "many-hats," approach</strong>: an owner-operator rarely
+      does one job, so reasonable pay is what it would cost the open market to replace each
+      function they perform. We split the owner's 2,200 annual hours across the roles they
+      actually fill, priced each role by <strong>triangulating several independent wage
+      sources</strong>, and summed the weighted result. Each rate is set at the
+      <strong>low end of the corroborated market cluster</strong> — never below it, and only
+      below the government (BLS) figure where at least three market sources agree.</p>
+    </section>
+
+    <!-- BUILD-UP -->
+    <section>
+      <span class="kicker">Role-by-role wage build-up</span>
+      <h2>What it would cost to replace each role</h2>
+      <table>
+        <thead>
+          <tr><th>Role / hat</th><th class="num">Hours/yr</th><th class="num">Rate/hr</th><th class="num">Weighted</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="role-lead">Marketing management</span><div class="socnote">Marketing Managers · SOC 11-2021</div></td>
+            <td class="num">770</td><td class="num">$36.00</td><td class="num">$27,720</td>
+          </tr>
+          <tr>
+            <td><span class="role-lead">Executive / operations</span><div class="socnote">General &amp; Operations Managers · SOC 11-1021</div></td>
+            <td class="num">440</td><td class="num">$29.80</td><td class="num">$13,112</td>
+          </tr>
+          <tr>
+            <td><span class="role-lead">Sales / business development</span><div class="socnote">Sales Representatives · SOC 41-4012</div></td>
+            <td class="num">440</td><td class="num">$31.00</td><td class="num">$13,640</td>
+          </tr>
+          <tr>
+            <td><span class="role-lead">Bookkeeping</span><div class="socnote">Bookkeeping &amp; Accounting Clerks · SOC 43-3031</div></td>
+            <td class="num">220</td><td class="num">$22.50</td><td class="num">$4,950</td>
+          </tr>
+          <tr>
+            <td><span class="role-lead">Administrative</span><div class="socnote">Secretaries &amp; Admin Assistants · SOC 43-6014</div></td>
+            <td class="num">330</td><td class="num">$19.75</td><td class="num">$6,518</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Total reasonable compensation</td><td class="num">2,200</td><td class="num"></td><td class="num">$65,940</td></tr>
+        </tfoot>
+      </table>
+      <p class="src">Recommended figure rounded to $65,900. Hours allocated from the owner
+      interview; rates reconciled from the wage evidence below and set per the firm's
+      defensible-low posture, adjusted within each role's range for the owner's experience.</p>
+    </section>
+
+    <!-- WAGE EVIDENCE -->
+    <section>
+      <span class="kicker">Wage evidence · triangulation</span>
+      <h2>The data behind each rate</h2>
+      <p>Every rate above is triangulated across independent sources, gathered from public
+      salary listings on <strong>July 3, 2026</strong> for the Miami, FL market. The government
+      (BLS) figure is the high-side anchor; the market cluster governs. Obvious outliers are
+      dropped and noted.</p>
+      <table>
+        <thead>
+          <tr><th>Source</th><th>Geography</th><th class="num">Figure</th></tr>
+        </thead>
+        <tbody>
+          <tr class="grp"><td colspan="3">Marketing management → reconciled $36.00/hr (~$75,000/yr)</td></tr>
+          <tr class="anchor"><td>BLS OEWS <span class="pill high">runs high</span></td><td>National (approx.)</td><td class="num">≈ $157,600/yr</td></tr>
+          <tr><td>Indeed</td><td>Miami, FL</td><td class="num">$76,146/yr</td></tr>
+          <tr><td>PayScale</td><td>Miami, FL</td><td class="num">$74,203/yr</td></tr>
+          <tr><td>Glassdoor (25th pct)</td><td>Miami-Ft. Lauderdale</td><td class="num">$75,211/yr</td></tr>
+          <tr><td>ZipRecruiter</td><td>Miami, FL</td><td class="num">$79,852/yr</td></tr>
+          <tr><td>Salary.com</td><td>Miami, FL</td><td class="num">$116,888/yr</td></tr>
+          <tr class="pick"><td>Reconciled (defensible low)</td><td>Miami market cluster</td><td class="num">$36.00/hr</td></tr>
+
+          <tr class="grp"><td colspan="3">Executive / operations → reconciled $29.80/hr (~$62,000/yr)</td></tr>
+          <tr class="anchor"><td>BLS OEWS <span class="pill high">runs high</span></td><td>National (approx.)</td><td class="num">≈ $101,300/yr</td></tr>
+          <tr><td>Indeed (Operations Mgr)</td><td>Miami, FL</td><td class="num">$70,241/yr</td></tr>
+          <tr><td>ZipRecruiter (25th pct)</td><td>Miami, FL</td><td class="num">$60,700/yr</td></tr>
+          <tr><td>Glassdoor (low)</td><td>Miami, FL</td><td class="num">$78,686/yr</td></tr>
+          <tr><td>Salary.com</td><td>Miami, FL</td><td class="num">$102,468/yr</td></tr>
+          <tr class="pick"><td>Reconciled (defensible low)</td><td>Miami market cluster</td><td class="num">$29.80/hr</td></tr>
+
+          <tr class="grp"><td colspan="3">Sales / business development → reconciled $31.00/hr (~$65,000/yr)</td></tr>
+          <tr><td>Indeed</td><td>Miami, FL</td><td class="num">$81,661/yr</td></tr>
+          <tr><td>Indeed (entry level)</td><td>Miami, FL</td><td class="num">$63,116/yr</td></tr>
+          <tr><td>Glassdoor (retail sales rep)</td><td>Miami-Ft. Lauderdale</td><td class="num">$84,483/yr</td></tr>
+          <tr><td>Glassdoor (commission-loaded) <span class="pill drop">outlier</span></td><td>Miami, FL</td><td class="num">$119,653/yr</td></tr>
+          <tr class="pick"><td>Reconciled (defensible low)</td><td>Non-commission cluster</td><td class="num">$31.00/hr</td></tr>
+
+          <tr class="grp"><td colspan="3">Bookkeeping → reconciled $22.50/hr (~$46,800/yr)</td></tr>
+          <tr class="anchor"><td>BLS OEWS</td><td>National (approx.)</td><td class="num">≈ $46,000/yr</td></tr>
+          <tr><td>Indeed</td><td>Miami, FL</td><td class="num">$22.98/hr</td></tr>
+          <tr><td>Glassdoor (avg)</td><td>Miami, FL</td><td class="num">$55,644/yr</td></tr>
+          <tr><td>Glassdoor (25th pct)</td><td>Miami, FL</td><td class="num">$45,172/yr</td></tr>
+          <tr class="pick"><td>Reconciled (defensible low)</td><td>Miami market cluster</td><td class="num">$22.50/hr</td></tr>
+
+          <tr class="grp"><td colspan="3">Administrative → reconciled $19.75/hr (~$41,100/yr)</td></tr>
+          <tr class="anchor"><td>BLS OEWS</td><td>National (approx.)</td><td class="num">≈ $46,000/yr</td></tr>
+          <tr><td>Indeed</td><td>Miami, FL</td><td class="num">$19.93/hr</td></tr>
+          <tr><td>Glassdoor (avg)</td><td>Miami, FL</td><td class="num">$49,870/yr</td></tr>
+          <tr><td>Glassdoor (25th pct)</td><td>Miami, FL</td><td class="num">$41,089/yr</td></tr>
+          <tr class="pick"><td>Reconciled (defensible low)</td><td>Miami market cluster</td><td class="num">$19.75/hr</td></tr>
+        </tbody>
+      </table>
+      <p class="src">Market figures gathered via web search of public salary listings
+      (Indeed, Glassdoor, PayScale, ZipRecruiter, Salary.com) on the preparation date. BLS
+      anchors shown as approximate in this illustrative sample; a live analysis pulls the exact
+      OEWS release for the state/metro and percentile.</p>
+
+      <div class="callout info">
+        <span class="tag">Why the number is lower than a BLS-only report</span>
+        <p>For the two manager roles, the government/BLS wage runs far above what Miami employers
+        actually pay — roughly $157k vs a ~$75k market for marketing managers, and ~$101k vs a
+        ~$62k market for operations managers. A BLS-only build-up would have produced a salary
+        near <strong>$92,000</strong>. Triangulating to the corroborated market low lands at
+        <strong>$65,900</strong> — about $26,000 less wage base — while remaining defensible
+        because multiple independent sources support each figure.</p>
+      </div>
+    </section>
+
+    <!-- CROSS-CHECK -->
+    <section>
+      <span class="kicker">Reasonableness cross-check</span>
+      <h2>Current salary vs. recommended</h2>
+      <div class="callout under">
+        <span class="tag">● Under-compensated — increase recommended</span>
+        <p>The current $42,000 salary is only <strong>25%</strong> of the owner's total cash
+        ($42k salary + $128k distributions = $170k) and sits below the reasonable range. A low
+        salary paired with large distributions is the exact fact pattern the IRS recharacterizes
+        (<em>Watson</em>, <em>Fleischer</em>). We recommend raising the salary to $65,900. The
+        business can support it: net income before owner comp is $185,000, leaving roughly
+        $119,000 available for distributions after the recommended wage.</p>
+      </div>
+    </section>
+
+    <!-- TAX IMPACT -->
+    <section>
+      <span class="kicker">Payroll-tax impact</span>
+      <h2>What the change costs — and protects</h2>
+      <div class="taxbox">
+        <div class="cell"><div class="k">Added wage base</div><div class="v">$23,900</div><div class="cap">$42,000 → $65,900</div></div>
+        <div class="cell"><div class="k">Added payroll tax ≈</div><div class="v">$3,657</div><div class="cap">≈ 15.3% combined FICA/Medicare</div></div>
+        <div class="cell hi"><div class="k">Saved vs. BLS-only</div><div class="v">≈ $4,100</div><div class="cap">lower wage base, per year</div></div>
+      </div>
+      <p class="src">Illustrative, before any Additional Medicare or state considerations. The
+      ~$3,657 of added payroll tax is the cost of moving the salary into a defensible range and
+      protecting the $128,000 of distributions from recharacterization; the triangulated
+      approach keeps that added cost roughly $4,100/yr below a BLS-only figure.</p>
+    </section>
+
+    <!-- IRS FACTORS -->
+    <section>
+      <span class="kicker">IRS factor analysis</span>
+      <h2>Why this figure is defensible</h2>
+      <p>The IRS weighs reasonable compensation against recognized factors (IRS Fact Sheet
+      FS-2008-25; <em>Watson v. United States</em>, 8th Cir. 2012). Each is addressed below.</p>
+      <div>
+        <div class="factor"><div class="n">1</div><div><div class="f-name">Training and experience</div><div class="f-body">12 years in digital marketing; bachelor's degree; no CPA. Supports a market-level marketing rate, not a premium executive rate.</div></div></div>
+        <div class="factor"><div class="n">2</div><div><div class="f-name">Duties and responsibilities</div><div class="f-body">Five distinct roles, weighted toward marketing (35% of hours) with management, sales, bookkeeping and admin. Basis of the build-up.</div></div></div>
+        <div class="factor"><div class="n">3</div><div><div class="f-name">Time and effort devoted</div><div class="f-body">Full-time — approximately 45 hours/week, 49 weeks (~2,200 hours/year).</div></div></div>
+        <div class="factor"><div class="n">4</div><div><div class="f-name">Dividend / distribution history</div><div class="f-body">$128,000 in distributions against a $42,000 salary — the imbalance driving this review and the recommendation to rebalance.</div></div></div>
+        <div class="factor"><div class="n">5</div><div><div class="f-name">Payments to non-shareholder employees</div><div class="f-body"><span class="np">Not provided for this sample.</span> A live analysis records what the company pays other staff for comparable work and checks the owner's rates for consistency.</div></div></div>
+        <div class="factor"><div class="n">6</div><div><div class="f-name">Timing and manner of bonuses</div><div class="f-body">No bonus arrangements reported.</div></div></div>
+        <div class="factor"><div class="n">7</div><div><div class="f-name">Comparable pay for similar services</div><div class="f-body">Supplied by the triangulated market data above — multiple independent Miami sources per role.</div></div></div>
+        <div class="factor"><div class="n">8</div><div><div class="f-name">Compensation agreements</div><div class="f-body">None on file. We recommend documenting a compensation agreement referencing this analysis.</div></div></div>
+        <div class="factor"><div class="n">9</div><div><div class="f-name">Use of a formula</div><div class="f-body">Yes — this documented many-hats, market-triangulated method, applied consistently and reproducibly.</div></div></div>
+      </div>
+    </section>
+
+    <!-- LIMITATIONS -->
+    <section>
+      <span class="kicker">Assumptions &amp; limitations</span>
+      <h2>What this analysis assumes</h2>
+      <div class="fineprint">
+        <p>Figures depend on the accuracy of the hours, roles, and financials provided by the
+        client. Hours are allocated from the owner interview; market wages reflect public
+        listings on the preparation date and will move over time. BLS anchors are shown as
+        approximate in this illustrative sample.</p>
+        <p><strong>Nature of this report.</strong> This is a documented professional estimate of
+        reasonable compensation prepared for Solux Media Corp using the cost (replacement-wage)
+        approach and publicly available wage data. It supports the figure with occupational
+        benchmarks and the IRS's recognized factors, but it is <strong>not</strong> a legal
+        opinion, a formal business valuation, or a guarantee of any particular audit outcome.
+        For contested matters or large exposures, a formal third-party compensation study is
+        recommended in addition to this analysis.</p>
+        <p><strong>Sample notice.</strong> Solux Media Corp and all figures here are illustrative,
+        created to demonstrate the analysis format. They do not represent a real client.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div>
+      <div class="firm">JK Accounting Group</div>
+      <div>Prepared by JK Accounting Group · July 3, 2026</div>
+      <div><a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></div>
+    </div>
+    <div style="text-align:right;color:var(--on-dark-muted)">
+      Reasonable Compensation Analysis<br>Solux Media Corp · Tax year 2025
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
