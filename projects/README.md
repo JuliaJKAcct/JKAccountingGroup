@@ -1,0 +1,47 @@
+# Projects
+
+Each subfolder here is one **project** — a self-contained initiative for JK
+Accounting Group. Marketing is one project; it is not the purpose of the repo.
+Projects share the firm's [`brand/`](../brand/) foundation and the skills in
+[`.claude/skills/`](../.claude/skills/).
+
+## Index
+
+| Project | What it is | Status |
+|---|---|---|
+| [`marketing/`](./marketing/) | Generate on-brand marketing collateral (cards, posts, flyers, copy) with Claude. | Active |
+| [`reasonable-compensation/`](./reasonable-compensation/) | Determine & document a defensible S-corp owner salary; outputs branded HTML reports. | Active |
+| [`video-generation/`](./video-generation/) | Produce on-brand marketing videos. | Planning |
+| [`sops/`](./sops/) | The firm's standard operating procedures. | Planning |
+
+> Keep this table current — it's the fastest map of the repo. `_template/` is not
+> a project; it's the starter you copy.
+
+## The project standard
+
+Every project follows the same shape so the repo stays predictable:
+
+1. **Location & name** — lives at `projects/<name>/`. Use a lowercase,
+   hyphenated name that describes the *outcome* (`video-generation`, not
+   `videos`; `reasonable-compensation`, not `rc`).
+2. **A `README.md`** using the standard sections from
+   [`_template/README.md`](./_template/README.md): title + status line, Purpose,
+   What's here, Brand & design, Skills & tooling, Outputs, Working on this.
+3. **Brand comes from `brand/`** — never copy logos or redefine colors inside a
+   project. Reference `../../brand/` instead.
+4. **Outputs live in the project** — in an obviously-named folder (`reports/`,
+   `videos/`, `output/`). Note in the README whether they're committed.
+5. **Reusable engines are skills** — if a project has a repeatable Claude
+   workflow, it belongs in [`.claude/skills/`](../.claude/skills/) and the
+   project README links to it.
+
+## Adding a new project
+
+```bash
+cp -r projects/_template projects/<new-name>
+```
+
+Then fill in `projects/<new-name>/README.md`, add a row to the **Index** table
+above, and add the project to the map in the root [`CLAUDE.md`](../CLAUDE.md).
+That's it — Claude is instructed (in `CLAUDE.md`) to follow exactly these steps
+when you ask it to create a new project, so everything stays consistent.
