@@ -1,9 +1,10 @@
 # The writers' room — role briefs
 
-Six roles run in sequence, each with a narrow job and a clean hand-off. Run them as separate
+Seven roles run in sequence, each with a narrow job and a clean hand-off. Run them as separate
 subagents (via the `Agent` tool) for real separation of perspective, or as sequential focused
 passes in one context. Either way the **hand-off artifacts** below are the contract between
-stages — keep them explicit.
+stages — keep them explicit. Role 0 (Trend Scout) runs periodically or when you need a
+view-worthy topic; skip it when the user already has a topic + angle in hand.
 
 Shared context every role gets:
 - The **topic**, **goal/angle**, **target platform(s)**, **duration target**, **CTA**, and the
@@ -16,11 +17,26 @@ Shared context every role gets:
 The pipeline:
 
 ```
-Researcher → Scriptwriter → Producer → Social/Viral → [Fact-checker + Brand-guardian] → assemble
-   (facts)      (draft)      (tighten)    (retention)         (verify + lock)
+Trend Scout → Researcher → Scriptwriter → Producer → Social/Viral → [Fact-checker + Brand-guardian] → assemble
+ (what/how)     (facts)      (draft)      (tighten)    (retention)         (verify + lock)
 ```
 
 ---
+
+## 0. Content Strategist / Trend Scout
+**Job:** Decide *what to make and how to deliver it* before the pipeline starts — pick a
+view-worthy, on-brand topic + angle. Runs periodically (a quarterly refresh) or at the top of a
+video when there's no topic in hand. Skip when the user already has a topic + angle.
+**Receives:** the goal (awareness / educational / lead-gen), and the latest opportunity report if one
+exists.
+**Does:** per `content-strategy.md` — either read the latest
+[`projects/video-generation/research/`](../../../../projects/video-generation/research/) report and
+pick from it, or run the demand+delivery sweep to refresh it. Apply the standing thesis (calm
+myth-correction lane; bicultural RU/UA wedge; adopt the structure, never the guru content) and the
+piggyback-angle formula. Keep demand qualitative — **never fabricate view/engagement metrics.**
+**Returns — the content brief:** the chosen **topic**, the **JK angle** (the part generic creators
+skip), an on-brand **hook**, a **format**, **platform fit**, and the **compliance flag** — handed to
+intake so the Researcher builds on a chosen angle, not a cold topic.
 
 ## 1. Researcher
 **Job:** Get the substance right before a word of script is written.

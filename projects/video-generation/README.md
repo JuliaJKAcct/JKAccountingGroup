@@ -21,8 +21,14 @@ video itself is rendered in **ElevenCreative Flows** (a UI canvas — see below)
 ```
 video-generation/
 ├── README.md          ← you are here
+├── research/          ← content-opportunity reports: what to make + how (demand/trend research)
 └── scripts/           ← generated output: <topic-slug>-<YYYY-MM-DD>.md (script + Flows brief)
 ```
+
+The workflow has two layers: a **Trend Scout** front layer decides *what to make and how to deliver
+it* (output → `research/`), then the writers'-room pipeline turns a chosen topic + angle into a
+script + Flows brief (output → `scripts/`). Start from the latest report in
+[`research/`](./research/) to pick a view-worthy, on-brand topic.
 
 ## Brand & design
 
@@ -33,9 +39,11 @@ existing **avatar** is the only on-screen face (no stock/AI people).
 
 ## Skills & tooling
 
-- **[`video-script-pipeline`](../../.claude/skills/video-script-pipeline/)** — the engine. Takes a
-  topic → Researcher → Scriptwriter → Producer → Social/Viral editor → Fact-check + Brand-guardian
-  → a locked script and an ElevenLabs Flows production brief.
+- **[`video-script-pipeline`](../../.claude/skills/video-script-pipeline/)** — the engine. **Trend
+  Scout** (picks a view-worthy, on-brand topic + angle) → Researcher → Scriptwriter → Producer →
+  Social/Viral editor → Fact-check + Brand-guardian → a locked script and an ElevenLabs Flows
+  production brief. The Trend Scout method is in the skill's `reference/content-strategy.md`; its
+  output reports land in [`research/`](./research/).
 
 **On ElevenLabs:** the video (avatar lip-sync, SFX, music, visuals, export) is built in
 **ElevenCreative Flows**, a node-based UI canvas — there is **no general API** to run a Flow yet

@@ -23,7 +23,10 @@ hype.** "Viral" here means *clear, useful, and shareable*, not clickbait. Hold t
 through every pass.
 
 ## Read these first
-- `reference/agent-roles.md` — the writers'-room roles (Researcher, Scriptwriter, Producer, Social/Viral, Fact-checker, Brand-guardian): what each receives, does, and returns.
+- `reference/content-strategy.md` — the **Trend Scout** front layer: how to pick a view-worthy,
+  on-brand topic + angle (demand + delivery research); the latest opportunity report lives in
+  `projects/video-generation/research/`.
+- `reference/agent-roles.md` — the writers'-room roles (Trend Scout, Researcher, Scriptwriter, Producer, Social/Viral, Fact-checker, Brand-guardian): what each receives, does, and returns.
 - `reference/script-frameworks.md` — hook, structure, pacing, CTA, and word-count-for-duration patterns for calm short-form finance explainers.
 - `reference/compliance-and-brand.md` — the line-by-line guardrails the Fact-checker and Brand-guardian enforce (tax-content compliance + JK brand voice for video).
 - `reference/flows-production-brief.md` — what ElevenLabs Flows is, its verified node chain, and how each brief field maps to a Flows node.
@@ -50,8 +53,17 @@ through every pass.
 
 ## Workflow
 
+### Step 0 — Content strategy (pick a topic + angle) — *optional / periodic*
+Run the **Trend Scout** (`content-strategy.md`) when there's no topic in hand, or when the user
+wants a view-worthy idea. Read the latest report in `projects/video-generation/research/` and pick
+an opportunity, **or** refresh it with the demand+delivery sweep. Hand the pipeline a **content
+brief**: the topic, the JK angle (the part generic creators skip), an on-brand hook, a format,
+platform fit, and the compliance flag. **Skip this step if the user already has a topic + angle** —
+go straight to intake. The compliance flag from here becomes a required check for the Fact-checker.
+
 ### Step 1 — Intake
-Confirm the topic and gather the few parameters that steer the script. Use `AskUserQuestion`
+Confirm the topic and gather the few parameters that steer the script. (If Step 0 ran, the topic +
+angle + hook + format + platform are already chosen — just confirm and fill any gaps.) Use `AskUserQuestion`
 for the choices; accept plain answers for the rest. Collect:
 - **Topic** (required) — e.g. "Structuring income for better tax-bracket planning."
 - **Goal/angle** — awareness / educational / lead-gen (drives the CTA).
