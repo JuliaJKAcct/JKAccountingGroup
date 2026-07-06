@@ -4,12 +4,14 @@
 
 The complete, self-contained procedure for getting a Florida Business Tax
 Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
-County)** — intake questions, the two filings, every link, and the caveats.
-Everything for this task lives here.
+County)** — intake questions, the two filings, both applications screen-by-
+screen, every link, and the caveats. Everything for this task lives here.
 
-> **Per-client filings** (a real business's name, address, EIN, figures) are
-> kept out of this repo. Use the intake template and local `clients/` folder in
-> [`client-services/business-tax-receipts/`](../client-services/business-tax-receipts/).
+> **Where client data goes:** a real business's name, address, EIN, folio, and
+> the filled-in forms are **sensitive** and belong in **your client systems**
+> (Google Drive / Double / QuickBooks) — **not** in this repo. Copy the blank
+> intake at the bottom into the client's folder there and fill it in. This repo
+> keeps only the reusable procedure + the blank template.
 
 ---
 
@@ -22,14 +24,14 @@ whether the business is even allowed at the address):
 2. Operating under a **DBA** (a name different from the legal entity name)?
 3. Already registered on **Sunbiz**? Has an **EIN**?
 4. **Exact activity / primary function of the business?** ← drives the
-   classification *and* which regulator (see the 13 questions in §3).
+   classification *and* which regulator (see the 13 questions in §3A).
 5. **Physical address** in Hollywood?
 6. **Will the owner RESIDE at that address?** ← the zoning gate (see §1). This is
    the single most important question — ask it early.
 7. Is it a **commercial space** or the **owner's home**?
 8. **Number of employees**, including the owner?
 9. Is it a **regulated profession**? (salon, contractor, restaurant, real
-   estate, financial services, healthcare, etc. — see §3, Q4–Q13)
+   estate, financial services, healthcare, etc. — see §3A, Q4–Q13)
 10. **Tangible property** (furniture/equipment) worth **≥ $25,000**? → triggers a
     TPP return (DR-405) to the Property Appraiser by April 1.
 11. Any **existing** city or county receipt, or starting from zero?
@@ -58,8 +60,10 @@ whether the business is even allowed at the address):
 > the specific parcel before doing anything else.
 >
 > ✅ The single-family exemption removes the CU *paperwork*; it does **not** by
-> itself confirm the use is allowed. When in doubt, verify the parcel's zoning at
-> `bcpa.net` and with Planning.
+> itself confirm the use is allowed. The City's own certification (see §3B) says
+> issuing a BTR does **not** mean the use of the location is lawful — so the
+> receipt is never a substitute for zoning approval. Verify the parcel at
+> `bcpa.net` and with Planning when in doubt.
 
 ---
 
@@ -72,7 +76,7 @@ Collector account** as supporting documentation, so do the **county** first.
 Apply online: <https://broward.county-taxes.com/btexpress>
 (start page: <https://broward.county-taxes.com/tcb/app/btexpress/main/start_page>)
 Processing: **24–48 hours** after you click the emailed confirmation link.
-See §3 for the screen-by-screen questions.
+Screens: see §3A.
 
 ### Step B — City of Hollywood (LBTR)
 Apply online: <https://apps.hollywoodfl.org/LbtrOnline/>
@@ -81,7 +85,7 @@ Needs: the active county account (Step A), Sunbiz entity/DBA docs, proof of the
 location (lease/deed/tax bill/utility bill), state license if regulated, CU
 (unless single-family/condo & genuinely home-based — see §1), and the **$25
 non-refundable** processing fee **+ the local business tax** (amount set at
-submission). Receipt is mailed in ~1 week.
+submission). Receipt is mailed in ~1 week. Screens: see §3B.
 
 ### Step C — After issuance
 Post the receipt(s) at the place of business and **calendar the Sept 30
@@ -90,7 +94,9 @@ Apr 1 pays only **50%** of the annual tax).
 
 ---
 
-## 3. BTExpress question reference (Broward County, screen-by-screen)
+## 3. Application screen references
+
+### 3A. Broward County BTExpress (screen-by-screen)
 
 Verified by walking through a real application. Screens in order:
 
@@ -129,9 +135,54 @@ triggers a specific license requirement to upload:
 12. Regulated by the **Broward County Health Department** — tanning, tattoo, body piercing?
 13. Regulated by **any other state agency** not listed above?
 
-**Screens not yet captured** (fill in as we confirm them): document **upload**,
-**fee calculation / payment**, and the **email-confirmation** step. The flow does
-**not** end at the questionnaire.
+*Still to capture on the county side: the document **upload**, **fee/payment**,
+and **email-confirmation** screens — the flow does not end at the questionnaire.*
+
+### 3B. City of Hollywood LBTR (screen-by-screen)
+
+Verified while applying. The site first looks up the **parcel** — the **Site
+Address** and **Folio Number** auto-fill from the address you enter.
+
+**Screen 1 — Business Category, Classification & Tax Basis** (this is where the
+**fee is set**):
+- **Business Category** (dropdown — e.g. "Service/Other Business")
+- **Business Classification** (e.g. "Broker/Service") — a **"Show All
+  Classifications"** button lists every option if you're unsure which fits
+- **Tax Classification** (worker/size tiers, e.g. "0–1 Worker")
+- **Tax Basis Units** (required)
+- **Number of Employees** (including the owner)
+
+**Screen 2 — About Your Business + Contact Information:**
+- **Homebased?** (Y/N)
+- **Company Type** (dropdown — LLC, Partnership, Corp, etc.)
+- **Business Name**; **Business DBA**
+- **Mailing Address** (checkboxes: "Same as Site Address?", "Non-US Mailing?") + lines / city / state / zip
+- **Phone**, **Cell Phone**, **Email**
+- **ID Type: Social Security # or Federal EIN** (required by state law) + the EIN/SSN field
+- **Describe your business in detail** (be specific — products/goods/services)
+- **Website**; **Garbage Service** (dropdown)
+- **Contact Information:** Contact Name (First / MI / Last), Contact Title, and
+  contact address/phone/cell/email (checkbox "Same as Business Info?")
+
+**Screen 3 — Documentation + Certification:**
+- **Upload — proof of location:** signed lease **or** proof of ownership
+  (property tax bill, warranty deed, bill of sale, insurance certificate, or
+  utility bill). *PDF only, ≤ 10 MB.*
+- **Upload — entity proof:** Articles of Incorporation **or** Fictitious Name
+  Registration (from Sunbiz). *PDF only, ≤ 10 MB.*
+- **Certification** (read + sign): you affirm all information is true and correct
+  and accept penalties for false information; you acknowledge the **$25 fee is
+  non-refundable**; and — important —
+  > *"issuance of a local business tax receipt by the City of Hollywood does not
+  > mean that the City has determined that the existing or proposed use of a
+  > location is lawful… [it] does not legalize or condone the nature of the
+  > business being conducted if contrary to any local, state or federal laws."*
+
+  👉 In other words, **getting the BTR is not zoning approval** — it doesn't make
+  an unpermitted use legal. This is exactly why §1 (the zoning gate) comes first.
+- **Applicant's Name**; **Applicant's Title**
+
+**Then → Make a Payment** ($25 processing + the local business tax from Screen 1).
 
 ---
 
@@ -154,8 +205,8 @@ triggers a specific license requirement to upload:
   it exact at intake.
 - **Regulated activity without the matching license.** Won't issue until the
   license/competency is in hand and the **name + address match** the application.
-- **Assuming a residential address works** for a non-resident commercial use —
-  see §1.
+- **Treating the BTR as zoning approval.** It isn't (see §3B certification) —
+  don't file for a non-resident commercial use of a residential parcel (see §1).
 - **Missing the Sept 30 renewal.**
 
 ---
@@ -173,6 +224,46 @@ triggers a specific license requirement to upload:
 | FL Office of Financial Regulation | Money services, lending, investment advisers, collections | <https://flofr.gov> |
 | FL Department of Revenue | Sales tax (DR-1) / reemployment tax | <https://floridarevenue.com> |
 | Broward County Property Appraiser | Tangible property (DR-405) / zoning lookup | <https://bcpa.net> |
+
+---
+
+## Appendix — Blank intake (copy into the client's file in YOUR system)
+
+> Copy this block into the client's folder in Drive/Double/QuickBooks and fill it
+> there. **Keep filled-in client data out of this repo.**
+
+```
+BTR Intake — <business name>
+
+Business identity
+- Legal name:
+- Entity type:  ☐ LLC  ☐ Corp/S-corp  ☐ Sole proprietor  ☐ Partnership  ☐ Other:
+- Trade name / DBA (if different):
+- Registered on Sunbiz?  ☐ Yes  ☐ No   — Document #:
+- Federal EIN:
+- Owner name(s) & contact:
+
+Activity & location  (these drive the fee and any state license)
+- What the business actually does (activity):
+- NAICS / classification (if known):
+- Physical address in Hollywood:
+- Location type:  ☐ Commercial/leased  ☐ Owned  ☐ Home-based
+- Will the owner RESIDE at this address?  ☐ Yes  ☐ No   ← zoning gate (§1); if No and residential parcel, call Planning first
+- # of employees / seats / units:
+
+Regulated-activity check
+- Needs a state/professional license?  ☐ No  ☐ Yes — which:
+- License / Competency # in hand?  ☐ Yes  ☐ No — status:
+
+Status
+- ☐ Broward County receipt (BTExpress) — status:
+- ☐ City of Hollywood Certificate of Use — status:
+- ☐ City of Hollywood BTR — status:
+- ☐ FL sales-tax (DR-1) needed?  ☐ Yes  ☐ No
+- ☐ Tangible property ≥ $25,000? (DR-405)  ☐ Yes  ☐ No
+
+Notes / open questions:
+```
 
 _Sources: City of Hollywood LBTR application & info pages; Broward County Tax
 Collector (browardtax.org) + BTExpress screens verified directly by Julia; Sunbiz;
