@@ -12,7 +12,8 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`marketing/`](./marketing/) | Generate on-brand marketing collateral (cards, posts, flyers, copy) with Claude. | Active |
 | [`reasonable-compensation/`](./reasonable-compensation/) | Determine & document a defensible S-corp owner salary; outputs branded HTML reports. | Active |
 | [`video-generation/`](./video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
-| [`sops/`](./sops/) | The firm's standard operating procedures. | Planning |
+| [`client-services/`](./client-services/) | Day-to-day client accounting/bookkeeping/tax tasks — an umbrella that grows one task type at a time (first: Business Tax Receipts). | Active |
+| [`sops/`](./sops/) | The firm's standard operating procedures. | Active |
 
 > Keep this table current — it's the fastest map of the repo. `_template/` is not
 > a project; it's the starter you copy.
