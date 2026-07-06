@@ -23,6 +23,7 @@ the US.
 │   ├── marketing/                 on-brand marketing collateral (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── video-generation/          on-brand marketing video (Active)
+│   ├── client-services/           day-to-day client accounting/bookkeeping/tax tasks (Active)
 │   └── sops/                      firm standard operating procedures (Planning)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
@@ -40,6 +41,7 @@ the US.
 | Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/`](./projects/marketing/) |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
+| Day-to-day client work (bookkeeping, a business-license / Business Tax Receipt filing, sales-tax registration, etc.) | [`projects/client-services/`](./projects/client-services/) |
 | Firm procedures / how-we-do-X | [`projects/sops/`](./projects/sops/) (planning) |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
