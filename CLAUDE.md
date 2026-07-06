@@ -24,11 +24,12 @@ the US.
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── video-generation/          on-brand marketing video (Active)
 │   └── sops/                      firm standard operating procedures (Planning)
-└── .claude/
-    └── skills/    reusable Claude workflows (the "engines")
-        ├── reasonable-compensation/   drives the reasonable-comp project
-        ├── video-script-pipeline/     drives the video-generation project
-        └── impeccable/                general UI/design skill
+├── .claude/
+│   └── skills/    reusable Claude workflows (the "engines")
+│       ├── reasonable-compensation/   drives the reasonable-comp project
+│       ├── video-script-pipeline/     drives the video-generation project
+│       └── impeccable/                general UI/design skill
+└── .mcp.json      MCP integrations available to Claude (see README → Integrations)
 ```
 
 ## Where to start for a given request
