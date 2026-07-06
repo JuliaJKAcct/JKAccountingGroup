@@ -93,14 +93,34 @@ applications are not accepted, so assemble everything first.
   the CU paperwork; it does **not** confirm the use is allowed there. Confirm the
   **parcel's zoning** permits the commercial use (check `bcpa.net` and City of
   Hollywood zoning) *before* relying on the exemption.
+- 📞 **Confirmed by phone with City of Hollywood Planning & Urban Design**
+  (954-921-3471, opt. 2): a residential-zoned single-family lot used **100% for
+  business with no one residing there** is **not permitted** — the zone's
+  residential requirements are strict and **no variance/special exception path**
+  was offered. Whether that's specific to the activity or a blanket rule for the
+  zone wasn't clarified; treat any purely-commercial single-family address as
+  blocked until Planning confirms otherwise for that parcel.
+- ✅ **Resolved for this client:** the owner will **reside** at the property, which
+  makes this a genuine home occupation (Escenario A) — the CU exemption
+  legitimately applies and Fla. Stat. § 559.955 protects the use. This is what
+  unblocked the filing. **Lesson for future intake:** always ask upfront "will the
+  owner live at this address?" — it's the fork between "proceed normally" and
+  "call Planning before doing anything else."
 
 **⚠️ VERIFY (City of Hollywood):**
 - The **local business tax** amount for the specific classification (the $25
   processing fee is fixed; the tax is set at submission).
-- Whether the specific address/zoning permits the intended use (see CU note).
-- **Where:** City of Hollywood — Local Business Tax Receipt portal on
-  `hollywoodfl.org` (Business → Local Business Tax Receipt) · City Hall, 2600
-  Hollywood Blvd, Hollywood, FL 33020.
+- Whether the specific address/zoning permits the intended use (see CU note) —
+  call Planning & Urban Design **before** relying on the single-family exemption.
+
+**Where to apply:**
+- **Online application:** <https://apps.hollywoodfl.org/LbtrOnline/>
+- **Renewals:** <https://apps.hollywoodfl.org/LBTRrenewals/>
+- **Info page:** <https://hollywoodfl.org/218/Local-Business-Tax>
+- **Commercial-location paper application (PDF):** <https://www.hollywoodfl.org/DocumentCenter/View/12443/Business-Tax-Receipt-Commercial-Location-Application>
+- **Planning & Urban Design** (zoning questions): 954-921-3471, option 2
+- **In person:** City Hall, 2600 Hollywood Blvd, Room 103, Hollywood, FL 33020 ·
+  Mon–Thu 7am–6pm, closed Fridays
 
 ---
 
@@ -108,15 +128,54 @@ applications are not accepted, so assemble everything first.
 
 **What it is:** the county-level receipt, required in addition to the city's. A
 **separate receipt is required for each location and each category of business**
-you conduct.
+you conduct. Apply online via **BTExpress**:
+<https://broward.county-taxes.com/btexpress> (start page:
+<https://broward.county-taxes.com/tcb/app/btexpress/main/start_page>).
+Processing time is **24–48 hours** after you confirm via the emailed link.
 
-**How to apply:** online via **BTExpress** —
-`broward.county-taxes.com/btexpress`. Processing time is **24–48 hours**.
+### BTExpress screen-by-screen (verified by walking through a real application)
 
-**Requirements (from Broward County Tax Collector):**
-- For regulated businesses, present a current **state license, Certificate of
-  Competency, registration, FL Seller of Travel License, or exemption letter** —
-  the names/info must match the application.
+1. **Required Documentation (overview)** — a preview of what to gather, e.g.
+   *"Must Submit corporate documents and/or Fictitious Name Registration"* and
+   *"Need State Certification from [the matching state agency]"* — this list is
+   **generated dynamically** from your answers on screen 4 below, so don't take
+   the exact wording literally until you've answered those questions.
+2. **Fictitious (DBA) Name** — to comply with Fla. Stat. **§ 865.09**, choose one:
+   - *"This business has registered a fictitious name with the Florida Department
+     of State Division of Corporations"* — have the DBA on hand from Sunbiz, **or**
+   - *"This business does not require a registered fictitious name"* — pick a
+     reason, e.g. **"I am doing business under my full legal name"** (this is the
+     right answer when an LLC/Corp operates under its own registered entity name —
+     the entity's Sunbiz name *is* its legal name, so no separate DBA is needed).
+3. **Occupation Information** — free-text *"Describe the type of business or
+   primary function of the business"* (be specific — this drives classification),
+   plus yes/no: hotel/motel/lodging?, restaurant/bar/eating establishment?,
+   **number of employees including the owner** (required field), vending
+   machines?
+4. **Required Documentation (questionnaire)** — 13 yes/no questions that
+   determine the *actual* document list. Answer honestly; a "Yes" anywhere
+   triggers a specific state/county license requirement:
+   1. Located in *unincorporated* Broward? (No for any incorporated city, incl. Hollywood)
+   2. Is this a FL corporation/LLC/LP/LLP, or a business using a DBA?
+   3. Located within the **City of West Park**? (that city requires its own license first)
+   4. Regulated by **DBPR** — contractors, professionals, real estate, hotels, restaurants, salons?
+   5. Construction/contractor requiring a **Certificate of Competency** (Broward Permitting, Licensing & Consumer Protection)?
+   6. Regulated by **FL Dept. of Agriculture & Consumer Services** — auto repair, travel agency, telemarketing, exercise studio, pest control, grocery/convenience store, etc.?
+   7. Regulated by **FL Dept. of Financial Services** — insurance adjusters, bail bonds, funeral homes, fire protection/fireworks/explosives?
+   8. Regulated by **FL Office of Financial Regulation** ("Dept. of Financial Regulation" in the UI) — collection agency, loan originators/brokers/lenders, money services business, investment adviser, financial institutions, title loan lenders?
+   9. Regulated by the **FL Agency for Healthcare Administration** — adult day care, assisted living, clinical labs, home health?
+   10. Auto body/repair, limo, or moving company regulated by Broward County?
+   11. Attorney-at-law (current FL Bar number required)?
+   12. Regulated by **Broward County Health Department** — tanning, tattoo, body piercing?
+   13. Regulated by any **other** state agency not listed above?
+5. *(Screens not yet captured — fill in as we go: document upload, fee
+   calculation/payment, and the email-confirmation step. Don't assume the flow
+   ends at the questionnaire — there's at least an upload + payment step after.)*
+
+**Requirements (from Broward County Tax Collector's general page):**
+- For regulated businesses, the state license/Certificate of Competency/
+  registration/exemption letter must have **matching name/address info** to the
+  application, and the license must be **current within the fiscal year**.
 - **Tangible Personal Property Tax:** if the business has furniture, equipment,
   or other tangible items valued at **$25,000 or more**, a TPP return (form
   DR-405) is due to the Broward County Property Appraiser by **April 1**.
@@ -124,6 +183,21 @@ you conduct.
   Certificate of Use from Building Code Services first — **not applicable here**,
   because Hollywood is an incorporated city (its CU, if any, comes from the city
   step above).
+
+**⚠️ VERIFY / open question for this client:** the application tripped **"Yes"**
+on question 8 (Office of Financial Regulation) — confirm the **exact** activity
+(money services business? loan originator/broker? collection agency? investment
+adviser?) so we upload the correct license type from OFR, not DBPR.
+
+**Links:**
+- BTExpress (apply): <https://broward.county-taxes.com/btexpress>
+- Broward County Tax Collector — Business Tax Receipt info: <https://browardtax.org/business-tax-receipt/>
+- Sunbiz — corporation/LLC search: <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName>
+- Sunbiz — fictitious name search: <https://dos.sunbiz.org/ficinam.html>
+- Sunbiz — fictitious name registration: <https://efile.sunbiz.org/ficreg01.html>
+- DBPR licensing (Div. of Hotels & Restaurants, cosmetology, construction, etc.): <https://www.myfloridalicense.com>
+- Florida Office of Financial Regulation (money services, lending, investment advisers, etc.): <https://flofr.gov> · online services: <https://flofr.gov/regulation/online-services>
+- Broward County Property Appraiser (TPP / zoning lookup): <https://bcpa.net>
 
 **Contact:** Broward County Tax Collector — Local Business Tax, **954-357-4829**.
 
@@ -177,20 +251,25 @@ Not every business needs all of these — the **activity** determines it:
 
 ## Contacts & links
 
-| Who | For | Contact |
+| Who | For | Contact / link |
 |---|---|---|
-| City of Hollywood — Business Tax / Certificate of Use | Step 1 (city BTR + CU) | City Hall, 2600 Hollywood Blvd · `hollywoodfl.org` · confirm desk phone |
-| Broward County Tax Collector — Local Business Tax | Step 2 (county receipt) | `broward.county-taxes.com/btexpress` · 954-357-4829 |
-| FL Division of Corporations (Sunbiz) | Entity / DBA | `sunbiz.org` |
-| FL Department of Revenue | Sales tax (DR-1) / reemployment tax | `floridarevenue.com` |
-| Broward County Property Appraiser | Tangible property (DR-405) | `bcpa.net` |
+| City of Hollywood — Local Business Tax Receipt | City BTR application | <https://apps.hollywoodfl.org/LbtrOnline/> · City Hall, 2600 Hollywood Blvd, Room 103 |
+| City of Hollywood — Planning & Urban Design | Zoning / CU questions | 954-921-3471, opt. 2 |
+| Broward County Tax Collector — Local Business Tax | County BTR (BTExpress) | <https://broward.county-taxes.com/btexpress> · 954-357-4829 |
+| FL Division of Corporations (Sunbiz) | Entity / DBA | <https://sunbiz.org> |
+| FL DBPR | Regulated professions (salons, contractors, restaurants, real estate, etc.) | <https://www.myfloridalicense.com> |
+| FL Office of Financial Regulation | Money services, lending, investment advisers, collections | <https://flofr.gov> |
+| FL Department of Revenue | Sales tax (DR-1) / reemployment tax | <https://floridarevenue.com> |
+| Broward County Property Appraiser | Tangible property (DR-405) / zoning lookup | <https://bcpa.net> |
 
 ## Sources
 
-- City of Hollywood — Local Business Tax Receipt application page (`hollywoodfl.org` → Business → Local Business Tax Receipt): required-docs list, $25 processing fee, single-family/condo CU exemption, Oct 1–Sep 30 tax year, 50% after Apr 1.
+- City of Hollywood — Local Business Tax Receipt application: <https://apps.hollywoodfl.org/LbtrOnline/>; info page <https://hollywoodfl.org/218/Local-Business-Tax>: required-docs list, $25 processing fee, single-family/condo CU exemption, Oct 1–Sep 30 tax year, 50% after Apr 1.
 - Broward County Tax Collector — Business Tax Receipt: <https://browardtax.org/business-tax-receipt/>
 - Broward County — Local Business Taxes: <https://www.broward.org/RecordsTaxesTreasury/taxcollector/Pages/LocalBusinessTaxes.aspx>
-- BTExpress online application: <https://broward.county-taxes.com/btexpress>
+- BTExpress online application (screens verified directly by Julia while applying): <https://broward.county-taxes.com/btexpress>
+- Florida Office of Financial Regulation: <https://flofr.gov>
+- Sunbiz (Division of Corporations): <https://sunbiz.org>
 
 _Last reviewed: 2026-07-06. Verify the ⚠️ items against the official source
 before filing._

@@ -1,6 +1,6 @@
 # SOPs — Standard Operating Procedures
 
-> **Status:** Planning · **Owner:** Julia · **Started:** 2026
+> **Status:** Active · **Owner:** Julia · **Started:** 2026
 
 The firm's **standard operating procedures** — the documented, repeatable way JK
 Accounting Group does its work.
@@ -16,12 +16,20 @@ team (and for Claude when it assists with those workflows).
 
 ```
 sops/
-└── README.md          ← you are here (project not started yet)
+├── README.md                                    ← you are here (index)
+└── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ```
 
-_Scaffold only. Suggested structure once it starts: one Markdown file per
-procedure, optionally grouped by area (e.g. `onboarding/`, `bookkeeping/`,
-`tax/`), plus an index in this README._
+_One Markdown file per procedure — a quick runbook with links, pointing to the
+originating project for the deeper research/caveats when there is one. Group
+into subfolders by area (e.g. `onboarding/`, `bookkeeping/`, `tax/`) once there
+are enough to warrant it._
+
+## Index
+
+| SOP | What it covers |
+|---|---|
+| [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 
 ## Brand & design
 
