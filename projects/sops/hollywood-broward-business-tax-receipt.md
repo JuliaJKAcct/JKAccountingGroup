@@ -86,11 +86,25 @@ location (lease/deed/tax bill/utility bill), state license if regulated, CU
 (unless single-family/condo & genuinely home-based — see §1), and the **$25
 non-refundable** processing fee **+ the local business tax** (amount set at
 submission). Receipt is mailed in ~1 week. Screens: see §3B.
+Paper alternative (commercial locations):
+<https://www.hollywoodfl.org/DocumentCenter/View/12443/Business-Tax-Receipt-Commercial-Location-Application>.
 
 ### Step C — After issuance
 Post the receipt(s) at the place of business and **calendar the Sept 30
 renewal** (tax year runs Oct 1–Sep 30; a first-time receipt issued on/after
 Apr 1 pays only **50%** of the annual tax).
+
+### Also — state & federal registrations (only what the activity requires)
+Not part of the BTR itself, but frequently needed alongside it:
+- **Entity on Sunbiz** — LLC/Corp registered, or a **Fictitious Name / DBA**
+  (Fla. Stat. § 865.09) if operating under a name other than the legal one.
+- **Federal EIN** — from the IRS.
+- **FL sales & use tax** — register with the FL Dept. of Revenue (**Form DR-1**)
+  if selling/renting taxable goods or certain services; add **Reemployment Tax**
+  if there are employees.
+- **Professional / industry license** — per the activity: **DBPR** (salons,
+  contractors, restaurants, real estate…), **DCF** (childcare), **DOH/AHCA**
+  (health), etc. See the §3A Q4–Q13 triggers.
 
 ---
 
@@ -146,8 +160,9 @@ Address** and **Folio Number** auto-fill from the address you enter.
 **Screen 1 — Business Category, Classification & Tax Basis** (this is where the
 **fee is set**):
 - **Business Category** (dropdown — e.g. "Service/Other Business")
-- **Business Classification** (e.g. "Broker/Service") — a **"Show All
-  Classifications"** button lists every option if you're unsure which fits
+- **Business Classification** (the specific line of business, e.g. "Consultant",
+  "Retail Merchant") — a **"Show All Classifications"** button lists every option
+  if you're unsure which fits
 - **Tax Classification** (worker/size tiers, e.g. "0–1 Worker")
 - **Tax Basis Units** (required)
 - **Number of Employees** (including the owner)
@@ -215,7 +230,7 @@ Address** and **Folio Number** auto-fill from the address you enter.
 
 | Who | For | Link / phone |
 |---|---|---|
-| City of Hollywood — LBTR application | City BTR | <https://apps.hollywoodfl.org/LbtrOnline/> · City Hall, 2600 Hollywood Blvd, Room 103 |
+| City of Hollywood — LBTR application | City BTR | <https://apps.hollywoodfl.org/LbtrOnline/> · City Hall, 2600 Hollywood Blvd, Room 103 (Mon–Thu 7am–6pm, closed Fri) |
 | City of Hollywood — LBTR renewals | Renewals | <https://apps.hollywoodfl.org/LBTRrenewals/> |
 | City of Hollywood — Planning & Urban Design | Zoning / CU questions | **954-921-3471, opt. 2** |
 | Broward County Tax Collector | County BTR (BTExpress) | <https://broward.county-taxes.com/btexpress> · **954-357-4829** |
