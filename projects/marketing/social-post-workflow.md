@@ -61,7 +61,7 @@ regla:
 > *dentro* de una imagen.** Las IA de imagen escriben mal el texto e inventan
 > datos. Los datos correctos los pone Claude/Julia en **texto verificado**, en el
 > acabado final. (Coincide con el brand guide: *"real facts only — if a number
-> can't be verified, omit it."*)
+> or quote can't be verified, omit it."*)
 
 **En la práctica casi siempre es una combinación:** NotebookLM/Gemini aporta la
 riqueza visual o la ilustración → **Claude** pone la capa de marca + el texto
