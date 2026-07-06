@@ -1,4 +1,0 @@
-# Per-client BTR working files are sensitive (names, addresses, EINs, figures).
-# Keep this folder in git, but never commit its contents.
-*
-!.gitignore
