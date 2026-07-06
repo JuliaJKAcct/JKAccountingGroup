@@ -46,9 +46,9 @@ Claude in this repo can connect to external tools through **MCP servers**,
 declared in [`.mcp.json`](./.mcp.json). Open a Claude Code session here and
 approve the server when prompted.
 
-| Server | What it gives Claude | Package |
+| Server | What it gives Claude | Package (pinned) |
 |---|---|---|
-| `notebooklm` | Ask questions against your [NotebookLM](https://notebooklm.google.com) notebooks, add sources, and generate audio overviews. | [`notebooklm-mcp`](https://github.com/PleasePrompto/notebooklm-mcp) |
+| `notebooklm` | Ask questions against your [NotebookLM](https://notebooklm.google.com) notebooks, add sources, and generate audio overviews. | [`notebooklm-mcp@2.0.0`](https://github.com/PleasePrompto/notebooklm-mcp) |
 
 **One-time NotebookLM login.** The first time you use it, ask Claude to run the
 `setup_auth` tool. It opens a **visible Chrome window** so you can sign in to
@@ -56,6 +56,17 @@ your Google account once; the login is then remembered for future sessions. Do
 this in **desktop Claude Code** (where a browser can open) rather than the web
 app — a headless/remote session has no screen for the login window. No API keys
 or passwords are stored in this repo.
+
+**Version is pinned on purpose.** `.mcp.json` pins `notebooklm-mcp@2.0.0` (a
+reviewed release) instead of `@latest`, so the code never changes underneath us.
+To update: ask Claude to check for a newer version, review it for safety, and
+only then bump the pin — never auto-update a package that touches Google login
+and client-adjacent data.
+
+**Handle client data with care.** Anything sent to NotebookLM goes to Google.
+Use a **dedicated** Google account (not the firm's primary one), and don't put
+identifiable client data into NotebookLM without a Workspace/Enterprise plan and
+the appropriate data agreement.
 
 ## Adding a new project
 
