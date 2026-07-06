@@ -16,6 +16,7 @@
 - **NAICS / classification (if known):** 
 - **Physical address in Hollywood:** 
 - **Location type:** ☐ Commercial/leased ☐ Owned ☐ **Home-based**
+- **Will the owner RESIDE at this address?** ☐ Yes ☐ No — ← *zoning gate: if No and it's a residential parcel, call Planning before filing*
 - **# of employees / seats / units (if fee scales on it):** 
 
 ## Regulated-activity check

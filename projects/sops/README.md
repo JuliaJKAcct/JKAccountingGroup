@@ -20,10 +20,10 @@ sops/
 └── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ```
 
-_One Markdown file per procedure — a quick runbook with links, pointing to the
-originating project for the deeper research/caveats when there is one. Group
-into subfolders by area (e.g. `onboarding/`, `bookkeeping/`, `tax/`) once there
-are enough to warrant it._
+_One Markdown file per procedure — self-contained where it helps, and
+cross-referencing the originating project for deeper research/caveats when there
+is one. Group into subfolders by area (e.g. `onboarding/`, `bookkeeping/`,
+`tax/`) once there are enough to warrant it._
 
 ## Index
 

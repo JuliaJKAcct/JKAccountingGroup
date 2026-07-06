@@ -100,12 +100,12 @@ applications are not accepted, so assemble everything first.
   was offered. Whether that's specific to the activity or a blanket rule for the
   zone wasn't clarified; treat any purely-commercial single-family address as
   blocked until Planning confirms otherwise for that parcel.
-- ✅ **Resolved for this client:** the owner will **reside** at the property, which
-  makes this a genuine home occupation (Escenario A) — the CU exemption
-  legitimately applies and Fla. Stat. § 559.955 protects the use. This is what
-  unblocked the filing. **Lesson for future intake:** always ask upfront "will the
-  owner live at this address?" — it's the fork between "proceed normally" and
-  "call Planning before doing anything else."
+- ✅ **The usual fix when this blocks a filing:** if the owner will **reside** at
+  the property, it becomes a genuine home occupation (Escenario A) — the CU
+  exemption legitimately applies and Fla. Stat. § 559.955 protects the use.
+  **Lesson for intake:** always ask upfront "will the owner live at this
+  address?" — it's the fork between "proceed normally" and "call Planning before
+  doing anything else."
 
 **⚠️ VERIFY (City of Hollywood):**
 - The **local business tax** amount for the specific classification (the $25
@@ -184,10 +184,10 @@ Processing time is **24–48 hours** after you confirm via the emailed link.
   because Hollywood is an incorporated city (its CU, if any, comes from the city
   step above).
 
-**⚠️ VERIFY / open question for this client:** the application tripped **"Yes"**
-on question 8 (Office of Financial Regulation) — confirm the **exact** activity
-(money services business? loan originator/broker? collection agency? investment
-adviser?) so we upload the correct license type from OFR, not DBPR.
+**⚠️ If the questionnaire trips "Yes" on question 8 (Office of Financial
+Regulation):** confirm the **exact** activity (money services business? loan
+originator/broker? collection agency? investment adviser?) so you upload the
+correct OFR license type, not a DBPR one.
 
 **Links:**
 - BTExpress (apply): <https://broward.county-taxes.com/btexpress>

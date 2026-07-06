@@ -15,8 +15,8 @@ First jurisdiction covered: **City of Hollywood + Broward County.**
    state license is required).
 2. **Follow the guide** — [`hollywood-broward-btr-guide.md`](./hollywood-broward-btr-guide.md)
    is the step-by-step: order of operations, documents, fees, deadlines,
-   contacts. A condensed, links-only runbook version of this same procedure also
-   lives in the firm's SOP index:
+   contacts. The same procedure, written as a self-contained runbook, also lives
+   in the firm's SOP index:
    [`sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
 3. **Verify current fees/forms** for the exact classification before filing
    (the guide flags what to confirm and gives the phone numbers).
