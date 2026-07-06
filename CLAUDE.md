@@ -59,6 +59,10 @@ in that folder.
   the project README links to the skill that powers it.
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks.
+- **Every PR gets an independent review before merge.** When you open a pull
+  request, run an independent review against it first — spawn a review agent, run
+  `/code-review`, or rely on the GitHub Action if one is configured — address any
+  blocking findings, then merge. Never merge an unreviewed PR.
 
 ## Creating a new project (do this exactly, every time)
 
