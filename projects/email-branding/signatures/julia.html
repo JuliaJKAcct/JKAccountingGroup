@@ -3,107 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JK Accounting Group — Email signature · Julia</title>
+<title>JK Accounting Group — Email signature · Julia Kononova</title>
 </head>
 <!--
   ===========================================================================
-  JK ACCOUNTING GROUP — EMAIL SIGNATURE  ·  Julia
+  JK ACCOUNTING GROUP — EMAIL SIGNATURE  ·  Julia Kononova
   ---------------------------------------------------------------------------
-  Built on the firm Design System (brand/JK-Brand-Guide.md). Email-safe:
-  table layout + inline CSS only, so it survives Gmail / Outlook / Apple Mail.
+  Recreates the firm's old email card on the Design System. Email-safe and
+  hardened for real inboxes: table + inline CSS only, an explicit light card
+  surface so the dark-teal palette stays legible even in dark mode, and
+  Outlook/Word-engine fixes (mso-* hints, bulletproof bronze button).
 
-  LAYOUT: portrait photo (left) · details (center) · Medallion seal (right).
-  Both the photo AND the logo need to be hosted at public HTTPS URLs — email
-  can't show local files or SVG. See ../INSTALL-GMAIL.md.
+  Composition: portrait photo (left) · details (center) · Medallion seal (right).
+  Bronze is used exactly once — the booking button. Fonts fall back to Georgia
+  + Arial + Courier in Gmail/Outlook; the brand is carried by color, layout,
+  photo and logo, which all hold.
 
-  FILL THESE IN (search & replace):
-    {{LAST_NAME}}    Julia's last name                e.g. Kovalenko
-    {{TITLE}}        Role / credentials               e.g. Founder, CPA
-    {{PHONE}}        Display phone                     e.g. +1 (305) 555-0142
-    {{PHONE_TEL}}    Same number, digits only, +1      e.g. +13055550142
-    {{WEBSITE}}      Domain, no https://               e.g. jkaccountinggroup.com
-    {{BOOKING_URL}}  Full booking link                 e.g. https://calendly.com/jkacct
-    {{PHOTO_URL}}    Public HTTPS URL of the portrait  (cropped 4:5, warm grade,
-                                                        ~168x210px for retina)
-    {{LOGO_URL}}     Public HTTPS URL of the seal PNG   (see INSTALL-GMAIL.md)
+  FILL THESE IN (search for "{{" to be sure none remain):
+    {{PHOTO_URL}}    Public HTTPS URL of Julia's portrait — cropped 4:5, warm
+                     grade (~160x200 for retina). NO PHOTO YET? drop in the
+                     hosted teal "JK" monogram PNG instead — never a stock/AI
+                     face. (If left empty, the cell already shows a teal panel.)
+    {{LOGO_URL}}     Public HTTPS URL of the Medallion PNG (hosted). Use
+                     brand/logo/png/JK-medallion-primary-512.png — the PRIMARY
+                     (teal) seal, NOT the reversed one (the card is light).
+                     Never the .svg (email can't render SVG).
+    {{BOOKING_URL}}  Full booking link (e.g. https://calendly.com/jkacct/intro).
+                     IMPORTANT: bronze is the one accent — do not ship this live
+                     pointing at an empty placeholder. Until Julia supplies the
+                     real link, either fill it or repoint the button at
+                     mailto:julia@jkaccountinggroup.com so it never dead-ends.
 
-  If there's no photo yet, swap the photo <img> for the teal monogram panel
-  shown in the comment block below the signature. Bronze is used exactly once
-  (the booking button). Fonts fall back to Georgia + Arial in Gmail — the brand
-  is carried by color, layout, photo and logo, which all hold.
+  Install steps: ../INSTALL-GMAIL.md. Make-every-email-on-brand: ../GMAIL-DEFAULTS.md.
   ===========================================================================
 -->
 <body style="margin:0; padding:24px; background:#F6F3EC;">
 
 <!-- ======================= SIGNATURE (copy from here) ======================= -->
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:transparent;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" bgcolor="#FBF8F2" style="border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#FBF8F2; border:1px solid #DAD4C6; border-radius:14px;">
   <tr>
+    <td bgcolor="#FBF8F2" style="padding:20px 22px; background-color:#FBF8F2;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+        <tr>
 
-    <!-- Photo (portrait, pre-cropped 4:5) -->
-    <td valign="top" style="padding:2px 24px 0 0;">
-      <img src="{{PHOTO_URL}}" alt="Julia {{LAST_NAME}}" width="84" height="105" style="display:block; width:84px; height:105px; border-radius:10px; border:0; outline:none;">
+          <!-- Photo — teal panel shows through if the image is blocked or absent (brand fallback, never a stock face) -->
+          <td width="80" valign="top" style="width:80px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+              <tr>
+                <td width="80" height="100" bgcolor="#123841" align="center" valign="middle" style="width:80px; height:100px; background:#123841; border-radius:8px; font-size:0; line-height:0;">
+                  <img src="{{PHOTO_URL}}" alt="Julia Kononova, CEO of JK Accounting Group" width="80" height="100" style="display:block; width:80px; height:100px; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border-radius:8px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <!-- Details -->
+          <td valign="top" style="border-left:1px solid #DAD4C6; padding:1px 20px 0 22px; mso-line-height-rule:exactly;">
+
+            <!-- Name + credentials (serif, with an engraved post-nominal step) -->
+            <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">Julia&nbsp;Kononova<span style="font-size:14px; font-weight:400; letter-spacing:0;">,&nbsp;MBA,&nbsp;EA</span></div>
+
+            <!-- Role (mono kicker — literal caps + text-transform belt-and-suspenders) -->
+            <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; padding-top:6px;">CEO&nbsp;&middot;&nbsp;CHIEF&nbsp;ACCOUNTANT</div>
+
+            <!-- Contact — each field on its own line, like the old card. Phone leads (bold, tap-to-call); email + website are the teal links. -->
+            <div style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1.7; color:#22201A; padding-top:14px;">
+              <a href="tel:+17863181505" style="color:#22201A; text-decoration:none; font-weight:600;">(786)&nbsp;318-1505</a><br>
+              <a href="mailto:julia@jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
+              <a href="https://www.jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">www.jkaccountinggroup.com</a><br>
+              <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
+            </div>
+
+            <!-- Bicultural line — the promise, in the mono family (Arial fallback carries the Cyrillic) -->
+            <div style="font-family:'IBM Plex Mono','Courier New',Arial,monospace; font-size:10px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:#5F5849; padding-top:10px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
+
+            <!-- CTA — the single bronze accent, bulletproof for Outlook (mso-padding-alt + cell bgcolor) -->
+            <div style="padding-top:14px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                <tr>
+                  <td bgcolor="#9C6A39" style="background-color:#9C6A39; border-radius:8px; mso-padding-alt:11px 22px 11px 22px;">
+                    <a href="{{BOOKING_URL}}" target="_blank" style="display:inline-block; padding:11px 22px; font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1; font-weight:bold; color:#FFFFFF; text-decoration:none; mso-line-height-rule:exactly;">Book a consultation&nbsp;&#8594;</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </td>
+
+          <!-- Medallion seal (primary, teal — the light card keeps it legible) -->
+          <td width="72" valign="middle" align="right" style="width:72px; padding:0 0 0 22px; font-size:0; line-height:0;">
+            <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="72" height="72" style="display:block; width:72px; height:72px; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic;">
+          </td>
+
+        </tr>
+      </table>
     </td>
-
-    <!-- Details -->
-    <td valign="top" style="padding:0 26px 0 24px; border-left:1px solid #DAD4C6;">
-
-      <!-- Name (serif) -->
-      <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">
-        Julia&nbsp;{{LAST_NAME}}
-      </div>
-
-      <!-- Title (mono kicker — the brand's signature label device) -->
-      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">
-        {{TITLE}}
-      </div>
-
-      <!-- Hairline -->
-      <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:12px 0; width:230px;">&nbsp;</div>
-
-      <!-- Contact -->
-      <div style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1.75; color:#22201A;">
-        <a href="mailto:julia@jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
-        <a href="tel:{{PHONE_TEL}}" style="color:#22201A; text-decoration:none;">{{PHONE}}</a>
-        <span style="color:#C5BEAD;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
-        <a href="https://{{WEBSITE}}" style="color:#123841; text-decoration:none; font-weight:600;">{{WEBSITE}}</a><br>
-        <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
-      </div>
-
-      <!-- Bicultural line — reinforces the promise: we speak your language -->
-      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:10px;">
-        ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА
-      </div>
-
-      <!-- CTA — the single bronze accent -->
-      <div style="margin-top:14px;">
-        <a href="{{BOOKING_URL}}" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">
-          Book&nbsp;a&nbsp;consultation&nbsp;&rarr;
-        </a>
-      </div>
-
-    </td>
-
-    <!-- Medallion seal (brand anchor) -->
-    <td valign="middle" style="padding:0 0 0 26px;">
-      <a href="https://{{WEBSITE}}" style="text-decoration:none;">
-        <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="76" height="76" style="display:block; width:76px; height:76px; border:0; outline:none;">
-      </a>
-    </td>
-
   </tr>
 </table>
 <!-- ======================== SIGNATURE (copy to here) ======================== -->
-
-<!--
-  NO PHOTO YET? Replace the photo <td> above with this teal monogram panel
-  (brand-approved fallback: "clean teal field with the logo" — never a stock face):
-
-  <td valign="top" style="padding:2px 24px 0 0;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
-      <tr><td width="84" height="105" align="center" valign="middle" style="width:84px; height:105px; background:#123841; border-radius:10px; font-family:'Source Serif 4',Georgia,serif; font-size:30px; font-weight:600; color:#ECE6DA;">JK</td></tr>
-    </table>
-  </td>
--->
 
 </body>
 </html>

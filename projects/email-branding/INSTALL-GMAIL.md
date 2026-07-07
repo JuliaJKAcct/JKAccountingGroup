@@ -35,27 +35,31 @@ everyone** — one hosted file, reused.
 
 ## Step 2 — Fill in the signature
 
-Open `signatures/julia.html` (or copy `_template.html` to
-`signatures/<firstname>.html` for a teammate) and replace every `{{PLACEHOLDER}}`:
+**Julia's file (`signatures/julia.html`)** already has her name, role, phone,
+email and website baked in. Only three placeholders remain:
 
-| Placeholder | Example |
+| Placeholder | What to put |
 |---|---|
-| `{{LAST_NAME}}` | Kovalenko |
-| `{{TITLE}}` | Founder, CPA |
-| `{{PHONE}}` | +1 (305) 555‑0142 |
-| `{{PHONE_TEL}}` | +13055550142 |
-| `{{WEBSITE}}` | jkaccountinggroup.com |
-| `{{BOOKING_URL}}` | https://calendly.com/jkacct/intro |
-| `{{PHOTO_URL}}` | the portrait URL from Step 1b (or use the teal `JK` fallback) |
+| `{{PHOTO_URL}}` | the portrait URL from Step 1b (leave empty to show the teal `JK` panel) |
 | `{{LOGO_URL}}` | the logo URL from Step 1a |
+| `{{BOOKING_URL}}` | the real booking link. **Don't ship the bronze button pointing at an empty placeholder** — until there's a real link, either fill it or repoint it at `mailto:julia@jkaccountinggroup.com`. |
+
+**A teammate (copy `_template.html` → `signatures/<firstname>.html`)** also fills:
+`{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}` (e.g. `, CPA`), `{{ROLE_CAPS}}`
+(e.g. `SENIOR ACCOUNTANT`), `{{EMAIL}}`, `{{PHONE}}` (e.g. `(954) 555-0110`), and
+`{{PHONE_TEL}}` (e.g. `+19545550110`).
 
 Search the file for `{{` to be sure none are left.
+
+> **Making *every* email on-brand, not just the signature?** See
+> [`GMAIL-DEFAULTS.md`](./GMAIL-DEFAULTS.md) — how to set Gmail's default text
+> style and signature defaults, with an honest account of what Gmail can and can't do.
 
 ## Step 3 — Copy the rendered signature
 
 1. Open the filled‑in `.html` file in a web browser (double‑click it).
-2. Click just before the logo, drag to just after the button to select the whole
-   signature block.
+2. Select the whole signature card — click just above the photo (top‑left) and drag
+   to just past the seal (bottom‑right) so the entire card is highlighted.
 3. Copy (⌘C / Ctrl‑C). You're copying the *rendered* signature, not the code.
 
 ## Step 4 — Paste into Gmail

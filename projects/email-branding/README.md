@@ -23,10 +23,11 @@ Julia's signature; the same template rolls out to the rest of the team.
 email-branding/
 ├── README.md              ← you are here
 ├── EMAIL-STYLE-GUIDE.md   ← the rules: fonts + fallbacks, color, layout, dark mode
-├── INSTALL-GMAIL.md       ← host the logo, fill in, paste into Gmail
+├── GMAIL-DEFAULTS.md      ← make EVERY email on-brand by default (honest Gmail recipe)
+├── INSTALL-GMAIL.md       ← host the images, fill in, paste into Gmail
 ├── preview.html           ← open in a browser to see it all (local paths, sample data)
 ├── signatures/
-│   ├── julia.html         ← Julia's paste-ready signature (fill the {{placeholders}})
+│   ├── julia.html         ← Julia's paste-ready signature (photo + seal; 3 URLs to fill)
 │   └── _template.html     ← copy per teammate → signatures/<firstname>.html
 └── templates/
     └── branded-email.html ← full branded email layout (onboarding, newsletters)
@@ -72,6 +73,16 @@ phone / booking link are filled into their own file when they're rolled out.
   email (the CTA).
 - Design for the **fallback fonts** — if it only looks right with the brand webfont,
   it's broken (Gmail won't load the webfont).
-- The logo must be a **hosted PNG**; SVG doesn't render in email.
+- The logo must be a **hosted PNG**; SVG doesn't render in email. Both the logo
+  **and** each person's portrait are hosted at public HTTPS URLs.
+- **Bronze is the one accent — never ship the booking button pointing at an empty
+  `{{BOOKING_URL}}`.** Fill it with a real link, or repoint it at `mailto:` until
+  there is one. A dead accent is worse than none.
+- The signature sits on an explicit **Paper `#FBF8F2` card** on purpose: it keeps
+  the dark-teal palette legible in dark-mode clients. Keep the **primary** (teal)
+  Medallion on it, not the reversed one.
+- The design was built and pressure-tested with the `impeccable` skill via a design
+  workflow (3 directions → judge → adversarial verify for email-safety, contrast,
+  brand rules). See `EMAIL-STYLE-GUIDE.md` for the resulting rules.
 - "Done" for a rollout = the person's file has no `{{placeholders}}` left, the logo
   loads from a public URL, and it's been tested on Gmail desktop + mobile.
