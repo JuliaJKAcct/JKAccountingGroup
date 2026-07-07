@@ -18,6 +18,7 @@ brand/        Shared brand foundation — logo, brand guide, design system.
               Used by every project.
 projects/     One folder per initiative (marketing, reasonable-compensation, …).
 .claude/      Reusable Claude skills that power the projects.
+BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 .mcp.json     MCP integrations available to Claude in this repo (see below).
 ```
 
