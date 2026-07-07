@@ -204,7 +204,8 @@ question set from the skill's intake and brand it via `brand/`.
 
 **Capability check:** fully buildable now — the skill defines the required inputs,
 and we can render a branded organizer. Delivery could be Gamma (document/social),
-a branded HTML form, or Google Docs/Forms via Drive.
+a branded HTML form, or a Google Doc via Drive. (A Google *Form* would be Julia's
+to set up — the Drive connector creates Docs, not Forms.)
 
 **Priority:** Medium · **Status:** Not started
 
