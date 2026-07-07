@@ -28,6 +28,7 @@ projects/     One folder per initiative (marketing, reasonable-compensation, …
 | [Marketing](./projects/marketing/) | On-brand marketing collateral generated with Claude. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Video Generation](./projects/video-generation/) | On-brand marketing video. | Planning |
+| [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Planning |
 
 See [`projects/README.md`](./projects/README.md) for the full index and the
