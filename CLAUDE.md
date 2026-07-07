@@ -16,6 +16,7 @@ the US.
 /
 ├── README.md      human-facing overview + project index
 ├── CLAUDE.md      you are here — the navigation map
+├── BACKLOG.md     firm idea parking lot — captured ideas we'll build later
 ├── brand/         SHARED foundation: logo, brand guide, design system.
 │                  Used by every project. Never duplicate this into a project.
 ├── projects/      one folder per initiative (see projects/README.md)
@@ -44,6 +45,7 @@ the US.
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
+| Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
 Each project has its own `README.md` with the specifics; read it before working
