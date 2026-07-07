@@ -10,31 +10,21 @@
   JK ACCOUNTING GROUP — EMAIL SIGNATURE  ·  Julia Kononova
   ---------------------------------------------------------------------------
   Recreates the firm's old email card on the Design System. Email-safe and
-  hardened for real inboxes: table + inline CSS only, an explicit light card
-  surface so the dark-teal palette stays legible even in dark mode, and
-  Outlook/Word-engine fixes (mso-* hints, bulletproof bronze button).
+  hardened for real inboxes (dark-mode-safe light card, Outlook/Word fixes).
 
-  Composition: portrait photo (left) · details (center) · Medallion seal (right).
-  Bronze is used exactly once — the booking button. Fonts fall back to Georgia
-  + Arial + Courier in Gmail/Outlook; the brand is carried by color, layout,
-  photo and logo, which all hold.
+  READY TO INSTALL — see ../INSTALL-GMAIL.md. No website needed:
+    • The ONLY image is the Medallion seal (right). When you install, you UPLOAD
+      it in Gmail's signature editor (Insert image → Upload) and Google hosts it
+      for you — no public URL to set up. The file to upload is
+      ../../../brand/logo/png/JK-medallion-primary-512.png
+    • The photo slot is a teal "JK" panel by default (needs no image at all).
+      To use your real portrait, upload it in Gmail in place of that panel
+      (ideally cropped to a 4:5 / portrait shape so it isn't squished).
+    • The bronze "Book a consultation" button opens an email to you for now
+      (mailto). Swap it for a real booking link once the website is live.
 
-  FILL THESE IN (search for "{{" to be sure none remain):
-    {{PHOTO_URL}}    Public HTTPS URL of Julia's portrait — cropped 4:5, warm
-                     grade (~160x200 for retina). NO PHOTO YET? drop in the
-                     hosted teal "JK" monogram PNG instead — never a stock/AI
-                     face. (If left empty, the cell already shows a teal panel.)
-    {{LOGO_URL}}     Public HTTPS URL of the Medallion PNG (hosted). Use
-                     brand/logo/png/JK-medallion-primary-512.png — the PRIMARY
-                     (teal) seal, NOT the reversed one (the card is light).
-                     Never the .svg (email can't render SVG).
-    {{BOOKING_URL}}  Full booking link (e.g. https://calendly.com/jkacct/intro).
-                     IMPORTANT: bronze is the one accent — do not ship this live
-                     pointing at an empty placeholder. Until Julia supplies the
-                     real link, either fill it or repoint the button at
-                     mailto:julia@jkaccountinggroup.com so it never dead-ends.
-
-  Install steps: ../INSTALL-GMAIL.md. Make-every-email-on-brand: ../GMAIL-DEFAULTS.md.
+  Fonts fall back to Georgia + Arial + Courier in Gmail; the brand is carried by
+  color, layout, the panel and the seal, which all hold. Bronze is used once.
   ===========================================================================
 -->
 <body style="margin:0; padding:24px; background:#F6F3EC;">
@@ -46,13 +36,13 @@
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
         <tr>
 
-          <!-- Photo — teal panel shows through if the image is blocked or absent (brand fallback, never a stock face) -->
+          <!-- Photo slot: teal "JK" panel by default (no image / no hosting).
+               To use Julia's real portrait, upload it here in Gmail (Insert image
+               → Upload) so it replaces this panel. -->
           <td width="80" valign="top" style="width:80px;">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
               <tr>
-                <td width="80" height="100" bgcolor="#123841" align="center" valign="middle" style="width:80px; height:100px; background:#123841; border-radius:8px; font-size:0; line-height:0;">
-                  <img src="{{PHOTO_URL}}" alt="Julia Kononova, CEO of JK Accounting Group" width="80" height="100" style="display:block; width:80px; height:100px; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; border-radius:8px;">
-                </td>
+                <td width="80" height="100" bgcolor="#123841" align="center" valign="middle" style="width:80px; height:100px; background:#123841; border-radius:8px; font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:28px; font-weight:600; color:#ECE6DA;">JK</td>
               </tr>
             </table>
           </td>
@@ -77,12 +67,12 @@
             <!-- Bicultural line — the promise, in the mono family (Arial fallback carries the Cyrillic) -->
             <div style="font-family:'IBM Plex Mono','Courier New',Arial,monospace; font-size:10px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:#5F5849; padding-top:10px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
 
-            <!-- CTA — the single bronze accent, bulletproof for Outlook (mso-padding-alt + cell bgcolor) -->
+            <!-- CTA — the single bronze accent. Opens an email for now; swap the href for a real booking link when the site is live. -->
             <div style="padding-top:14px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                 <tr>
                   <td bgcolor="#9C6A39" style="background-color:#9C6A39; border-radius:8px; mso-padding-alt:11px 22px 11px 22px;">
-                    <a href="{{BOOKING_URL}}" target="_blank" style="display:inline-block; padding:11px 22px; font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1; font-weight:bold; color:#FFFFFF; text-decoration:none; mso-line-height-rule:exactly;">Book a consultation&nbsp;&#8594;</a>
+                    <a href="mailto:julia@jkaccountinggroup.com?subject=Consultation%20request" style="display:inline-block; padding:11px 22px; font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1; font-weight:bold; color:#FFFFFF; text-decoration:none; mso-line-height-rule:exactly;">Book a consultation&nbsp;&#8594;</a>
                   </td>
                 </tr>
               </table>
@@ -90,9 +80,11 @@
 
           </td>
 
-          <!-- Medallion seal (primary, teal — the light card keeps it legible) -->
+          <!-- Medallion seal. LOCAL path here just so this file previews correctly.
+               To install: upload this file in Gmail (Insert image → Upload) — Google
+               hosts it, no website needed. (Or set a hosted https URL once live.) -->
           <td width="72" valign="middle" align="right" style="width:72px; padding:0 0 0 22px; font-size:0; line-height:0;">
-            <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="72" height="72" style="display:block; width:72px; height:72px; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic;">
+            <img src="../../../brand/logo/png/JK-medallion-primary-512.png" alt="JK Accounting Group" width="72" height="72" style="display:block; width:72px; height:72px; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic;">
           </td>
 
         </tr>

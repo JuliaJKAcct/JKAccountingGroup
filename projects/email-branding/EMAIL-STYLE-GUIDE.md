@@ -39,10 +39,14 @@ rules follow from it, and every file here obeys them:
    Design so it looks right in the *fallback*. If it only works with the brand
    font, it's broken. (See `preview.html` — that render uses the fallbacks and
    still reads as JK.)
-3. **Images are hosted PNGs, not SVGs, not local files.** Email can't render SVG or
-   show a file from your computer. Both the **logo** and the **portrait photo** must
-   live at a **public HTTPS URL** that any inbox can fetch. See
-   [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md) for the how.
+3. **Images are PNGs, not SVGs, not local files.** Email can't render SVG or show a
+   file from your computer, so any image must be stored somewhere an inbox can reach.
+   The simplest path needs **no website**: Gmail's signature editor **uploads and
+   hosts** the image for you (Insert image → Upload). To keep every teammate's
+   pixel-identical once the site is live, host it at a **public HTTPS URL** instead.
+   Either way — see [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). (The signature keeps
+   images to a minimum: the photo slot is a teal panel by default, so the only image
+   is the Medallion seal.)
 
 ## The signature composition
 

@@ -65,8 +65,9 @@ mono-kicker → sans-body rhythm, and the one bronze booking button. Paste-ready
 2. **Fill the placeholders**, open the file in a browser, and **copy the rendered
    signature** (not the source).
 3. **Paste into Gmail** → Settings → General → **Signature** → **Create new**, name
-   it "JK", paste. If the logo/photo drop out, re-add them with the toolbar
-   **Insert image → Web address (URL)**.
+   it "JK", paste. If the seal shows as a broken image, click it and use the toolbar
+   **Insert image → Upload** to add it from your computer (Google hosts it — no
+   website needed), or **Web address (URL)** if you've hosted it.
 4. **Set it as default** — under *Signature defaults* choose "JK" for **both** "For
    new emails use" **and** "On reply/forward use", and tick **"Insert signature
    before quoted text in replies."** Save Changes.
