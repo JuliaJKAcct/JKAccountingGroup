@@ -23,11 +23,13 @@ the US.
 │   ├── marketing/                 on-brand marketing collateral (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── video-generation/          on-brand marketing video (Active)
+│   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
 │       ├── video-script-pipeline/     drives the video-generation project
+│       ├── recurring-expense-monitoring/  drives the recurring-expense-monitoring project
 │       └── impeccable/                general UI/design skill
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
 ```
@@ -41,6 +43,7 @@ the US.
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo |
+| Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
 Each project has its own `README.md` with the specifics; read it before working
@@ -57,8 +60,16 @@ in that folder.
   project in an obviously-named folder.
 - **Repeatable workflows are skills** in [`.claude/skills/`](./.claude/skills/);
   the project README links to the skill that powers it.
+- **Repo artifacts are written in English.** Everything committed — skills, SOPs,
+  project docs, templates — is in English so anyone on the team using Claude Code can
+  read it, whatever language the chat is in.
 - **Client data is sensitive.** Reports and anything with client-specific
-  figures are committed/pushed only when the user explicitly asks.
+  figures are committed/pushed only when the user explicitly asks. Client watchlists,
+  vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
+  QuickBooks), not this repo.
+- **Before you finish, check structure and indexes.** Confirm files landed in the
+  right folders and that the index tables (this file's Layout + "Where to start", and
+  `projects/README.md`) reflect the change.
 - **Every PR gets an independent review before merge.** When you open a pull
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
