@@ -22,6 +22,7 @@ the US.
 ├── projects/      one folder per initiative (see projects/README.md)
 │   ├── _template/                 copy this to start a new project
 │   ├── marketing/                 on-brand marketing collateral (Active)
+│   ├── email-branding/            team email on the Design System — signatures + email layout (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── video-generation/          on-brand marketing video (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
@@ -41,6 +42,7 @@ the US.
 |---|---|
 | Colors, fonts, logo, voice, design tokens | [`brand/`](./brand/) — `JK-Brand-Guide.md` is the authority |
 | Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/`](./projects/marketing/) |
+| Email signatures, or the on-brand look of outbound email (the whole team) | [`projects/email-branding/`](./projects/email-branding/) — see its `INSTALL-GMAIL.md` to roll one out |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo |

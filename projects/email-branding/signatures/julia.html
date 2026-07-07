@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JK Accounting Group — Email signature · Julia</title>
+</head>
+<!--
+  ===========================================================================
+  JK ACCOUNTING GROUP — EMAIL SIGNATURE  ·  Julia
+  ---------------------------------------------------------------------------
+  Built on the firm Design System (brand/JK-Brand-Guide.md). Email-safe:
+  table layout + inline CSS only, so it survives Gmail / Outlook / Apple Mail.
+
+  TO INSTALL: see ../INSTALL-GMAIL.md. In short — host the logo PNG at a public
+  URL, fill the {{PLACEHOLDERS}} below, then copy the rendered signature (open
+  this file in a browser, select the block, copy) into Gmail → Settings →
+  Signature.
+
+  FILL THESE IN (search & replace):
+    {{LAST_NAME}}    Julia's last name                e.g. Kovalenko
+    {{TITLE}}        Role / credentials               e.g. Founder, CPA
+    {{PHONE}}        Display phone                     e.g. +1 (305) 555-0142
+    {{PHONE_TEL}}    Same number, digits only, +1      e.g. +13055550142
+    {{WEBSITE}}      Domain, no https://               e.g. jkaccountinggroup.com
+    {{BOOKING_URL}}  Full booking link                 e.g. https://calendly.com/jkacct
+    {{LOGO_URL}}     Public HTTPS URL of the logo PNG   (see INSTALL-GMAIL.md)
+
+  Fonts fall back gracefully: Gmail/Outlook render Georgia + Arial instead of
+  Source Serif 4 / IBM Plex — the brand is carried by color, layout and logo,
+  which all hold. Bronze is used exactly once, on the booking button.
+  ===========================================================================
+-->
+<body style="margin:0; padding:24px; background:#F6F3EC;">
+
+<!-- ======================= SIGNATURE (copy from here) ======================= -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:transparent;">
+  <tr>
+    <!-- Logo -->
+    <td valign="top" style="padding:2px 24px 0 0;">
+      <a href="https://{{WEBSITE}}" style="text-decoration:none;">
+        <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="80" height="80" style="display:block; width:80px; height:80px; border:0; outline:none;">
+      </a>
+    </td>
+
+    <!-- Details -->
+    <td valign="top" style="padding:0 0 0 24px; border-left:1px solid #DAD4C6;">
+
+      <!-- Name (serif) -->
+      <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">
+        Julia&nbsp;{{LAST_NAME}}
+      </div>
+
+      <!-- Title (mono kicker — the brand's signature label device) -->
+      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">
+        {{TITLE}}&nbsp;&middot;&nbsp;JK&nbsp;Accounting&nbsp;Group
+      </div>
+
+      <!-- Hairline -->
+      <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:13px 0; width:250px;">&nbsp;</div>
+
+      <!-- Contact -->
+      <div style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1.75; color:#22201A;">
+        <a href="mailto:julia@jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
+        <a href="tel:{{PHONE_TEL}}" style="color:#22201A; text-decoration:none;">{{PHONE}}</a>
+        <span style="color:#C5BEAD;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+        <a href="https://{{WEBSITE}}" style="color:#123841; text-decoration:none; font-weight:600;">{{WEBSITE}}</a><br>
+        <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
+      </div>
+
+      <!-- Bicultural line — reinforces the promise: we speak your language -->
+      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:11px;">
+        ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА
+      </div>
+
+      <!-- CTA — the single bronze accent -->
+      <div style="margin-top:15px;">
+        <a href="{{BOOKING_URL}}" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">
+          Book&nbsp;a&nbsp;consultation&nbsp;&rarr;
+        </a>
+      </div>
+
+    </td>
+  </tr>
+</table>
+<!-- ======================== SIGNATURE (copy to here) ======================== -->
+
+<!--
+  OPTIONAL — confidentiality footer. Calm, plain-language (never fear-based).
+  Paste directly under the signature table if the firm wants it on outbound mail.
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; margin-top:16px;">
+    <tr><td style="width:504px; max-width:504px;">
+      <div style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10.5px; line-height:1.6; color:#6F6857;">
+        This message and any attachments are confidential and intended only for the addressee.
+        If you received it in error, please let us know and delete it. Nothing here is tax, legal,
+        or accounting advice unless we say so in writing.
+      </div>
+    </td></tr>
+  </table>
+-->
+
+</body>
+</html>
