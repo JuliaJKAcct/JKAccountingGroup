@@ -39,9 +39,22 @@ rules follow from it, and every file here obeys them:
    Design so it looks right in the *fallback*. If it only works with the brand
    font, it's broken. (See `preview.html` — that render uses the fallbacks and
    still reads as JK.)
-3. **The logo is a hosted PNG, not an SVG.** Email can't render SVG. Export a PNG,
-   host it at a **public HTTPS URL**, and reference that URL. See
+3. **Images are hosted PNGs, not SVGs, not local files.** Email can't render SVG or
+   show a file from your computer. Both the **logo** and the **portrait photo** must
+   live at a **public HTTPS URL** that any inbox can fetch. See
    [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md) for the how.
+
+## The signature composition
+
+Portrait photo (left) · details (center) · Medallion seal (right) — the human and
+the brand bookend the person's details.
+
+- **Photo:** a real portrait, **cropped 4:5**, warm-graded, displayed at 84×105
+  (ship it ~2× for retina). Real faces only — never stock or AI (brand rule). **No
+  photo yet?** Use the brand-approved fallback: a clean teal panel with the `JK`
+  monogram (the fallback markup is in each signature file). Never a stock face.
+- **Seal:** the primary Medallion at 76px, on a transparent field — never boxed.
+- Rounded corners on the photo/button are a bonus; Outlook squares them, which is fine.
 
 ## Color (from the Design System)
 

@@ -15,7 +15,7 @@
   *{ box-sizing:border-box; }
   body{ margin:0; background:var(--ivory); color:#22201A;
         font-family:'IBM Plex Sans', system-ui, sans-serif; padding:0 0 80px; }
-  .wrap{ max-width:820px; margin:0 auto; padding:0 24px; }
+  .wrap{ max-width:860px; margin:0 auto; padding:0 24px; }
   .top{ background:var(--deep); color:#ECE6DA; padding:40px 0 44px; margin-bottom:44px; }
   .top .wrap{ display:flex; align-items:center; gap:20px; }
   .top img{ width:64px; height:64px; }
@@ -25,7 +25,7 @@
           letter-spacing:0.14em; text-transform:uppercase; color:#CFA268; }
   .lbl{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em;
         text-transform:uppercase; color:var(--bronze); margin:0 0 6px; }
-  .desc{ font-size:14px; color:var(--muted); margin:0 0 18px; max-width:60ch; line-height:1.6; }
+  .desc{ font-size:14px; color:var(--muted); margin:0 0 18px; max-width:64ch; line-height:1.6; }
   h2{ font-family:'Source Serif 4', Georgia, serif; font-weight:600; letter-spacing:-0.012em;
       font-size:22px; color:var(--deep); margin:0 0 4px; }
   section{ margin-bottom:52px; }
@@ -36,10 +36,11 @@
   .inbox-head b{ color:#22201A; }
   .inbox-body{ padding:26px 28px 30px; font-size:15px; line-height:1.6; color:#22201A; }
   .two{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
-  @media (max-width:720px){ .two{ grid-template-columns:1fr; } }
+  @media (max-width:760px){ .two{ grid-template-columns:1fr; } }
   .tag{ display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:10px;
         letter-spacing:0.1em; text-transform:uppercase; color:#6F6857; background:#F1ECE0;
         border:1px solid #E4DECF; border-radius:999px; padding:3px 10px; margin-bottom:14px; }
+  .note{ font-size:12px; color:var(--muted); margin-top:14px; font-style:italic; }
 </style>
 </head>
 <body>
@@ -60,32 +61,39 @@
     <section>
       <p class="lbl">01 · Signature</p>
       <h2>The signature — as designed</h2>
-      <p class="desc">How it looks where custom fonts render (Apple Mail, most desktop clients).
-        Medallion seal, serif name, the mono kicker as the title, one bronze booking button.</p>
+      <p class="desc">Portrait photo (left), details (center), Medallion seal (right). The teal
+        panel is a placeholder for Julia's real portrait — brand rule: a clean teal field, never
+        a stock or AI face. One bronze accent: the booking button.</p>
       <div class="frame">
         <!-- SIGNATURE (fonts available) -->
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
           <tr>
             <td valign="top" style="padding:2px 24px 0 0;">
-              <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK Accounting Group" width="80" height="80" style="display:block; width:80px; height:80px; border:0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                <tr><td width="84" height="105" align="center" valign="middle" style="width:84px; height:105px; background:#123841; border-radius:10px; font-family:'Source Serif 4',Georgia,serif; font-size:30px; font-weight:600; color:#ECE6DA;">JK</td></tr>
+              </table>
             </td>
-            <td valign="top" style="padding:0 0 0 24px; border-left:1px solid #DAD4C6;">
+            <td valign="top" style="padding:0 26px 0 24px; border-left:1px solid #DAD4C6;">
               <div style="font-family:'Source Serif 4', Georgia, serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">Julia&nbsp;Kovalenko</div>
-              <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">Founder,&nbsp;CPA&nbsp;&middot;&nbsp;JK&nbsp;Accounting&nbsp;Group</div>
-              <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:13px 0; width:250px;">&nbsp;</div>
+              <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">Founder,&nbsp;CPA</div>
+              <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:12px 0; width:230px;">&nbsp;</div>
               <div style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:13px; line-height:1.75; color:#22201A;">
                 <a href="mailto:julia@jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
                 <a href="tel:+13055550142" style="color:#22201A; text-decoration:none;">+1 (305) 555-0142</a><span style="color:#C5BEAD;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="https://jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">jkaccountinggroup.com</a><br>
                 <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
               </div>
-              <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:11px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
-              <div style="margin-top:15px;">
+              <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:10px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
+              <div style="margin-top:14px;">
                 <a href="#" style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a>
               </div>
+            </td>
+            <td valign="middle" style="padding:0 0 0 26px;">
+              <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK Accounting Group" width="76" height="76" style="display:block; width:76px; height:76px; border:0;">
             </td>
           </tr>
         </table>
       </div>
+      <p class="note">Where the teal "JK" panel is, Julia's real portrait (cropped 4:5, warm grade) will sit.</p>
     </section>
 
     <!-- ============ SIGNATURE, TWO FONT REALITIES ============ -->
@@ -93,25 +101,25 @@
       <p class="lbl">02 · Font fallback</p>
       <h2>Same signature, two clients</h2>
       <p class="desc">Email clients strip custom fonts. Gmail and Outlook substitute Georgia + Arial —
-        but color, layout, logo and the bronze accent are identical, so it stays on-brand either way.</p>
+        but color, layout, photo, logo and the bronze accent are identical, so it stays on-brand
+        either way.</p>
       <div class="two">
         <div class="frame">
           <span class="tag">Apple Mail — brand fonts</span>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
-              <td valign="top" style="padding:2px 18px 0 0;">
-                <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK" width="64" height="64" style="display:block; width:64px; height:64px; border:0;">
+              <td valign="top" style="padding:2px 16px 0 0;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="60" height="75" align="center" valign="middle" style="width:60px; height:75px; background:#123841; border-radius:9px; font-family:'Source Serif 4',Georgia,serif; font-size:22px; font-weight:600; color:#ECE6DA;">JK</td></tr></table>
               </td>
-              <td valign="top" style="padding:0 0 0 18px; border-left:1px solid #DAD4C6;">
-                <div style="font-family:'Source Serif 4', Georgia, serif; font-size:17px; font-weight:600; color:#0D2A31; line-height:1.2;">Julia&nbsp;Kovalenko</div>
+              <td valign="top" style="padding:0 0 0 16px; border-left:1px solid #DAD4C6;">
+                <div style="font-family:'Source Serif 4', Georgia, serif; font-size:16px; font-weight:600; color:#0D2A31; line-height:1.2;">Julia&nbsp;Kovalenko</div>
                 <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:5px;">Founder,&nbsp;CPA</div>
-                <div style="height:1px; font-size:0; background:#DAD4C6; margin:10px 0; width:180px;">&nbsp;</div>
-                <div style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:12px; line-height:1.7; color:#22201A;">
+                <div style="height:1px; font-size:0; background:#DAD4C6; margin:9px 0; width:160px;">&nbsp;</div>
+                <div style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:12px; line-height:1.65; color:#22201A;">
                   <a href="#" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
-                  <span>+1 (305) 555-0142</span><br>
-                  <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale</span>
+                  <span>+1 (305) 555-0142</span>
                 </div>
-                <div style="margin-top:12px;"><a href="#" style="font-family:'IBM Plex Sans',Arial,sans-serif; font-size:11.5px; font-weight:600; color:#fff; background:#9C6A39; text-decoration:none; padding:8px 16px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
+                <div style="margin-top:11px;"><a href="#" style="font-family:'IBM Plex Sans',Arial,sans-serif; font-size:11.5px; font-weight:600; color:#fff; background:#9C6A39; text-decoration:none; padding:8px 15px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
               </td>
             </tr>
           </table>
@@ -120,19 +128,18 @@
           <span class="tag">Gmail — system fonts</span>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
-              <td valign="top" style="padding:2px 18px 0 0;">
-                <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK" width="64" height="64" style="display:block; width:64px; height:64px; border:0;">
+              <td valign="top" style="padding:2px 16px 0 0;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="60" height="75" align="center" valign="middle" style="width:60px; height:75px; background:#123841; border-radius:9px; font-family:Georgia,serif; font-size:22px; font-weight:600; color:#ECE6DA;">JK</td></tr></table>
               </td>
-              <td valign="top" style="padding:0 0 0 18px; border-left:1px solid #DAD4C6;">
-                <div style="font-family:Georgia,'Times New Roman',serif; font-size:17px; font-weight:600; color:#0D2A31; line-height:1.2;">Julia&nbsp;Kovalenko</div>
+              <td valign="top" style="padding:0 0 0 16px; border-left:1px solid #DAD4C6;">
+                <div style="font-family:Georgia,'Times New Roman',serif; font-size:16px; font-weight:600; color:#0D2A31; line-height:1.2;">Julia&nbsp;Kovalenko</div>
                 <div style="font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:5px;">Founder,&nbsp;CPA</div>
-                <div style="height:1px; font-size:0; background:#DAD4C6; margin:10px 0; width:180px;">&nbsp;</div>
-                <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.7; color:#22201A;">
+                <div style="height:1px; font-size:0; background:#DAD4C6; margin:9px 0; width:160px;">&nbsp;</div>
+                <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.65; color:#22201A;">
                   <a href="#" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
-                  <span>+1 (305) 555-0142</span><br>
-                  <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale</span>
+                  <span>+1 (305) 555-0142</span>
                 </div>
-                <div style="margin-top:12px;"><a href="#" style="font-family:Arial,sans-serif; font-size:11.5px; font-weight:600; color:#fff; background:#9C6A39; text-decoration:none; padding:8px 16px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
+                <div style="margin-top:11px;"><a href="#" style="font-family:Arial,sans-serif; font-size:11.5px; font-weight:600; color:#fff; background:#9C6A39; text-decoration:none; padding:8px 15px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
               </td>
             </tr>
           </table>
@@ -154,19 +161,22 @@
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
             <tr>
               <td valign="top" style="padding:2px 24px 0 0;">
-                <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK Accounting Group" width="80" height="80" style="display:block; width:80px; height:80px; border:0;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="84" height="105" align="center" valign="middle" style="width:84px; height:105px; background:#123841; border-radius:10px; font-family:'Source Serif 4',Georgia,serif; font-size:30px; font-weight:600; color:#ECE6DA;">JK</td></tr></table>
               </td>
-              <td valign="top" style="padding:0 0 0 24px; border-left:1px solid #DAD4C6;">
+              <td valign="top" style="padding:0 26px 0 24px; border-left:1px solid #DAD4C6;">
                 <div style="font-family:'Source Serif 4', Georgia, serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">Julia&nbsp;Kovalenko</div>
-                <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">Founder,&nbsp;CPA&nbsp;&middot;&nbsp;JK&nbsp;Accounting&nbsp;Group</div>
-                <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:13px 0; width:250px;">&nbsp;</div>
+                <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">Founder,&nbsp;CPA</div>
+                <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:12px 0; width:230px;">&nbsp;</div>
                 <div style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:13px; line-height:1.75; color:#22201A;">
                   <a href="#" style="color:#123841; text-decoration:none; font-weight:600;">julia@jkaccountinggroup.com</a><br>
                   <span>+1 (305) 555-0142</span><span style="color:#C5BEAD;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="#" style="color:#123841; text-decoration:none; font-weight:600;">jkaccountinggroup.com</a><br>
                   <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
                 </div>
-                <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:11px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
-                <div style="margin-top:15px;"><a href="#" style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
+                <div style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:10px;">ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА</div>
+                <div style="margin-top:14px;"><a href="#" style="font-family:'IBM Plex Sans', Arial, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">Book&nbsp;a&nbsp;consultation&nbsp;&rarr;</a></div>
+              </td>
+              <td valign="middle" style="padding:0 0 0 26px;">
+                <img src="../../brand/logo/png/JK-medallion-primary-512.png" alt="JK Accounting Group" width="76" height="76" style="display:block; width:76px; height:76px; border:0;">
               </td>
             </tr>
           </table>

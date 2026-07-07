@@ -3,16 +3,24 @@
 Ten minutes, once per person. The only real prerequisite is **hosting the logo**,
 because email can't show a logo that lives on your computer.
 
-## Step 1 — Host the logo (do this once for the whole firm)
+## Step 1 — Host the images (do this once for the whole firm)
 
-Email clients only display images they can fetch from a public web address. So the
-logo PNG has to live at a stable **HTTPS URL** that anyone's inbox can reach.
+Email clients only display images they can fetch from a public web address. The
+signature uses **two** images, so both have to live at stable **HTTPS URLs** that
+anyone's inbox can reach:
 
-**Which file:** use the primary Medallion, exported for retina. Take
+**a) The logo (`{{LOGO_URL}}`) — one file, shared by everyone.** Use the primary
+Medallion, exported for retina:
 [`brand/logo/png/JK-medallion-primary-512.png`](../../brand/logo/png/JK-medallion-primary-512.png)
-(it displays at 80px but ships at 2× so it stays crisp). For the branded email
+(it displays at 76px but ships at 2× so it stays crisp). For the branded email
 header you'll also want the white lockup,
 [`brand/logo/png/JK-lockup-horizontal-reversed-2048.png`](../../brand/logo/png/JK-lockup-horizontal-reversed-2048.png).
+
+**b) The portrait (`{{PHOTO_URL}}`) — one per person.** A real photo, **cropped 4:5**
+(e.g. 168×210 for retina), warm-graded. Real faces only — never stock or AI. **No
+photo yet?** Skip this and use the teal `JK` panel instead (the fallback markup is
+in the signature file, in the comment right under the signature). Then you don't
+need a `{{PHOTO_URL}}` at all.
 
 **Where to host it (pick one):**
 - **The firm website** — best. Upload to something like
@@ -38,7 +46,8 @@ Open `signatures/julia.html` (or copy `_template.html` to
 | `{{PHONE_TEL}}` | +13055550142 |
 | `{{WEBSITE}}` | jkaccountinggroup.com |
 | `{{BOOKING_URL}}` | https://calendly.com/jkacct/intro |
-| `{{LOGO_URL}}` | the URL from Step 1 |
+| `{{PHOTO_URL}}` | the portrait URL from Step 1b (or use the teal `JK` fallback) |
+| `{{LOGO_URL}}` | the logo URL from Step 1a |
 
 Search the file for `{{` to be sure none are left.
 

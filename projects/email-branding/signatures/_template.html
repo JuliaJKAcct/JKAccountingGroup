@@ -13,6 +13,9 @@
   every {{PLACEHOLDER}}. Keep the structure, colors and fonts EXACTLY — the
   whole point is that everyone's signature is identical but for their details.
 
+  LAYOUT: portrait photo (left) · details (center) · Medallion seal (right).
+  Both the photo AND the logo must be hosted at public HTTPS URLs.
+
   FILL THESE IN (search & replace):
     {{FIRST_NAME}}   e.g. Lilian
     {{LAST_NAME}}    e.g. Marchenko
@@ -22,8 +25,10 @@
     {{PHONE_TEL}}    digits only w/ +1, e.g. +19545550110
     {{WEBSITE}}      domain only, e.g. jkaccountinggroup.com
     {{BOOKING_URL}}  full link, or delete the CTA block if this person has none
-    {{LOGO_URL}}     public HTTPS URL of the logo PNG (see ../INSTALL-GMAIL.md)
+    {{PHOTO_URL}}    public HTTPS URL of the portrait (cropped 4:5, warm grade)
+    {{LOGO_URL}}     public HTTPS URL of the seal PNG (see ../INSTALL-GMAIL.md)
 
+  No photo yet? Use the teal monogram panel from the comment below the signature.
   Rules: bronze appears ONCE (the button). Never recolor, box, or swap the logo.
   Never add web fonts, background images, or extra colors — see ../EMAIL-STYLE-GUIDE.md.
   ===========================================================================
@@ -33,25 +38,24 @@
 <!-- ======================= SIGNATURE (copy from here) ======================= -->
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:transparent;">
   <tr>
-    <!-- Logo -->
+
+    <!-- Photo (portrait, pre-cropped 4:5) -->
     <td valign="top" style="padding:2px 24px 0 0;">
-      <a href="https://{{WEBSITE}}" style="text-decoration:none;">
-        <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="80" height="80" style="display:block; width:80px; height:80px; border:0; outline:none;">
-      </a>
+      <img src="{{PHOTO_URL}}" alt="{{FIRST_NAME}} {{LAST_NAME}}" width="84" height="105" style="display:block; width:84px; height:105px; border-radius:10px; border:0; outline:none;">
     </td>
 
     <!-- Details -->
-    <td valign="top" style="padding:0 0 0 24px; border-left:1px solid #DAD4C6;">
+    <td valign="top" style="padding:0 26px 0 24px; border-left:1px solid #DAD4C6;">
 
       <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:19px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">
         {{FIRST_NAME}}&nbsp;{{LAST_NAME}}
       </div>
 
       <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:11px; font-weight:500; letter-spacing:0.11em; text-transform:uppercase; color:#245C66; margin-top:6px;">
-        {{TITLE}}&nbsp;&middot;&nbsp;JK&nbsp;Accounting&nbsp;Group
+        {{TITLE}}
       </div>
 
-      <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:13px 0; width:250px;">&nbsp;</div>
+      <div style="height:1px; line-height:1px; font-size:0; background:#DAD4C6; margin:12px 0; width:230px;">&nbsp;</div>
 
       <div style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:13px; line-height:1.75; color:#22201A;">
         <a href="mailto:{{EMAIL}}" style="color:#123841; text-decoration:none; font-weight:600;">{{EMAIL}}</a><br>
@@ -61,21 +65,40 @@
         <span style="color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</span>
       </div>
 
-      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:11px;">
+      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:10px; letter-spacing:0.09em; color:#5F5849; margin-top:10px;">
         ENGLISH&nbsp;&middot;&nbsp;РУССКИЙ&nbsp;&middot;&nbsp;УКРАЇНСЬКА
       </div>
 
       <!-- CTA — the single bronze accent. Delete this whole block if no booking link. -->
-      <div style="margin-top:15px;">
+      <div style="margin-top:14px;">
         <a href="{{BOOKING_URL}}" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:12.5px; font-weight:600; color:#FFFFFF; background:#9C6A39; text-decoration:none; padding:10px 20px; border-radius:8px; display:inline-block;">
           Book&nbsp;a&nbsp;consultation&nbsp;&rarr;
         </a>
       </div>
 
     </td>
+
+    <!-- Medallion seal (brand anchor) -->
+    <td valign="middle" style="padding:0 0 0 26px;">
+      <a href="https://{{WEBSITE}}" style="text-decoration:none;">
+        <img src="{{LOGO_URL}}" alt="JK Accounting Group" width="76" height="76" style="display:block; width:76px; height:76px; border:0; outline:none;">
+      </a>
+    </td>
+
   </tr>
 </table>
 <!-- ======================== SIGNATURE (copy to here) ======================== -->
+
+<!--
+  NO PHOTO YET? Replace the photo <td> above with this teal monogram panel
+  (brand-approved fallback — a clean teal field with the monogram, never a stock face):
+
+  <td valign="top" style="padding:2px 24px 0 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+      <tr><td width="84" height="105" align="center" valign="middle" style="width:84px; height:105px; background:#123841; border-radius:10px; font-family:'Source Serif 4',Georgia,serif; font-size:30px; font-weight:600; color:#ECE6DA;">JK</td></tr>
+    </table>
+  </td>
+-->
 
 </body>
 </html>
