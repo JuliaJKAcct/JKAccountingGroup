@@ -68,12 +68,14 @@ short exception report to the responsible staff member.
   amount, cadence, expected day/window, item **type**, per-item threshold, notes).
 - If no watchlist exists for the client, stop and report that (nothing to monitor).
 
-### Step 3 — Pull this period's transactions
+### Step 3 — Pull this period's transactions (plus a short lookback)
 - Load Double schemas, `list_clients` to confirm the `clientId`, then
-  `get_transactions` for the target month (start of month → today), sorted by date.
+  `get_transactions` for the target month **and the prior ~2 months** (a trailing
+  window), sorted by date. The prior months give context you need: each item's
+  typical amount, whether it posted last month (for the catch-up check below), and
+  whether a newly-seen charge actually recurs.
 - Read the **line `description` field** — it holds the raw bank text **and** any memo
-  a bookkeeper appended (often a sentence after the bank text). Page through if the
-  count exceeds one page.
+  a bookkeeper appended (often a sentence after the bank text). Page through all pages.
 
 ### Step 4 — Evaluate each watched item
 For every item on the watchlist, by its **type**:
@@ -82,7 +84,16 @@ For every item on the watchlist, by its **type**:
   - **Not found this period** and we are past its expected day/window → candidate
     **missing payment**.
   - **Found but amount deviates** beyond the threshold (default ±25%) → candidate
-    **abnormal amount**. Also flag obvious **duplicates** (same vendor+amount twice).
+    **abnormal amount**.
+  - **Two charges this month → catch-up vs. duplicate.** First, two **identical
+    same-day entries with the same bank reference** read as a **possible duplicate**
+    regardless of prior months (usually one transaction booked twice). Otherwise, look
+    at the prior month (from the lookback): if the item did **not** post last month,
+    treat the second charge as a likely **catch-up for last month's missed/late
+    payment** — say so ("two charges this month: likely last month + this month after a
+    failed payment"), *not* a duplicate. If instead it posted every prior month with no
+    gap, a second same-month charge reads as a **possible duplicate**. With no memo,
+    state which it looks like and ask the bookkeeper to confirm.
   - **Match by the item's match text**, which may be a vendor name OR a memo/pattern
     (e.g. some fees post as "Zelle to <person>" — use the match text from the
     watchlist, not just the vendor field).
@@ -107,6 +118,13 @@ Scan this period's transactions for charges that **look recurring** (a vendor/am
 that also appears in recent prior months) but are **not on the watchlist**. Surface
 them as "Possible new recurring charge — add to watchlist?" Do not add them yourself;
 the team curates the watchlist.
+- **Don't suggest things that aren't automatic recurring charges:** one-off supplier
+  or vendor payments, and amounts the **firm itself calculates and submits** (e.g. a
+  sales-tax remittance to a state department of revenue) — those are manual filings on
+  our side, not charges that auto-post, so they don't belong on this watchlist.
+- If only one month of history is available (a short-history client), a "new" charge
+  can't be confirmed as recurring — label such items as candidates to verify against
+  prior months before adding.
 
 ### Step 6 — Compose the report (English, sectioned — never one mixed table)
 Order by priority; the urgent things first, the reassurance last:
@@ -117,6 +135,8 @@ Recurring-Expense Report — <Client> — <Month Year>  (<mid-month|end-of-month
 🔴 Needs attention
   - Missing: <item> (~$<typical>) has not posted this month.
   - Abnormal amount: <item> posted $<actual> vs ~$<typical> (<±%>).
+  - Two charges: <item> posted twice — likely a catch-up for last month's missed
+    payment (or a possible duplicate — confirm).
   (omit the section if empty; say "Nothing needs attention." )
 
 🆕 Possible new recurring charges
