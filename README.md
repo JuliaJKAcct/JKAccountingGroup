@@ -27,6 +27,7 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 | Project | What it is | Status |
 |---|---|---|
 | [Marketing](./projects/marketing/) | On-brand marketing collateral generated with Claude. | Active |
+| [Email Branding](./projects/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Video Generation](./projects/video-generation/) | On-brand marketing video. | Planning |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |

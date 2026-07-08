@@ -29,7 +29,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-01](#idea-01--client-by-client-accounting--bookkeeping-sops) | Client-by-client accounting & bookkeeping SOPs (with blanks for sensitive data) | `projects/sops/` | Medium | Not started |
 | [IDEA-02](#idea-02--text-message-alerts-to-julia) | Text-message / phone alerts to Julia for important notifications | Firm ops / tooling | Low (needs decision) | Researching |
 | [IDEA-03](#idea-03--social-media-posts-with-the-notebooklm-strategy) | Restart social media with the NotebookLM content strategy | `projects/marketing/` | **High** | Not started (blocked on inputs) |
-| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | `brand/` → new project | Medium | Not started |
+| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/email-branding/`](./projects/email-branding/) | Medium | **Started** — Julia's signature + email system built |
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
 
@@ -157,21 +157,28 @@ so outbound email is on-brand across everyone.
 **Why it matters:** email is a daily, high-volume touchpoint; inconsistent or
 outdated signatures quietly erode the brand.
 
-**Where it fits:** built on [`brand/`](./brand/) (logo + design system are the
-source of truth). Likely a small new project (e.g. `projects/email-signatures/`)
-that outputs ready-to-paste HTML signature templates — one per team member — plus
-a short "how to install it in Gmail" guide.
+**Where it fits:** now a project —
+[`projects/email-branding/`](./projects/email-branding/), built on
+[`brand/`](./brand/) (logo + design system are the source of truth). It outputs
+ready-to-paste HTML signatures (one per team member), a full branded email
+template, and a "how to install it in Gmail" guide.
 
-**What we need to start:** the team roster (names, titles, phones, booking links,
-which office), the current logo asset to use from `brand/`, and any legal/footer
-text Julia wants (confidentiality line, addresses). No sensitive data — this is
-public-facing contact info.
+**What we've done:** built the email system on the Design System — Julia's
+paste-ready signature (`signatures/julia.html`), a reusable per-teammate template,
+a branded email layout, an email style guide (fonts + fallbacks, color, dark mode),
+and Gmail install steps. Uses email-safe technique (tables, inline CSS, hosted PNG
+logo, font fallbacks) so it survives Gmail / Outlook / Apple Mail.
 
-**Capability check:** we can produce the branded HTML signatures now. Actually
-*installing* them into each person's Gmail is manual (paste into Gmail settings)
-unless/until the Gmail connector is authorized and supports signature updates.
+**What's left to finish Julia's:** her real details (last name, exact title,
+phone, booking link) and the hosted logo URL dropped into `signatures/julia.html`;
+then roll out to the rest of the team by copying the template.
 
-**Priority:** Medium · **Status:** Not started
+**Capability check:** the branded HTML is done. Actually *installing* into each
+person's Gmail is manual (paste into Gmail settings) — the Gmail connector can
+read/label/draft but doesn't set account signatures.
+
+**Priority:** Medium · **Status:** **Started** — system built; awaiting Julia's real
+contact details + hosted logo URL to finalize hers, then team rollout
 
 ---
 
