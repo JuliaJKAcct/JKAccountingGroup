@@ -50,28 +50,28 @@ rules follow from it, and every file here obeys them:
 
 ## The signature composition
 
-Portrait photo (left) · details (center) · Medallion seal (right) — the human and
-the brand bookend the person's details.
+The firm's **business-card grammar**, translated to email: a two-panel card.
 
-- **Card surface.** The signature sits on an explicit **Paper `#FBF8F2`** card with
-  a 1px `#DAD4C6` hairline and soft radius — set via *both* a `bgcolor` attribute
-  and inline `background-color`. This isn't decoration: our palette mandates
-  dark-teal text, which a **dark-mode** client would render invisible on a
-  transparent ground. Giving the card its own light surface is the only
-  inline-only, media-query-free way to keep the mandated colors legible everywhere.
-- **Photo:** a real portrait, **cropped 4:5**, warm-graded, ~80×100 (ship ~2× for
-  retina). Real faces only — never stock or AI (brand rule). The photo cell has a
-  **teal `#123841` backstop**, so a blocked or empty image shows a clean teal panel,
-  never a broken-image box. Best "no photo yet" option: drop the hosted teal `JK`
-  monogram PNG into `{{PHOTO_URL}}`.
-- **Contacts** stack one per line (phone, email, website, office) like the old card;
-  phone leads (bold, tap-to-call), email + website are the teal links.
-- **Seal:** the **primary** (teal) Medallion at 72px — never the reversed one on
-  this light card, and never boxed.
+- **Panel A — petrol teal (`#123841`).** The emblem, the serif wordmark
+  "JK Accounting Group", and "EST. MIAMI" in mono. The panel color is set to
+  `#123841` on purpose — it matches the emblem PNG's baked-in tile exactly, so the
+  mark sits seamlessly with **no visible box** (the logo is never boxed).
+- **Panel B — ivory (`#FBF8F2`).** The details: the name + credentials with a
+  bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
+  WEB / OFFICE label rows** (mono uppercase labels in mid-teal, values in sans —
+  this label-row device is what gives it the card's finish), a hairline, the
+  bilingual line, and the one bronze CTA.
+- **Card surface.** Both panels carry an explicit `bgcolor` + inline
+  `background-color` (teal and paper), and the card has a 1px `#DAD4C6` hairline
+  and soft radius. The explicit surfaces are the dark-mode fix: our palette
+  mandates dark-teal text, which a dark-mode client would render invisible on a
+  transparent ground — the fixed panel colors keep everything legible everywhere.
+- **One image only:** the reversed emblem (`JK-emblem-reversed-512.png`) in Panel A.
+  Everything else is live text, so the signature reads fully even before the image
+  loads (or if a client blocks it).
 - **Outlook hardening.** The bronze button is a nested `bgcolor` cell with
   `mso-padding-alt` (real padding in Word's engine); tables carry
-  `mso-table-lspace/rspace:0`; image cells use `font-size:0` to kill the img gap;
-  the divider is a full-height cell border, never a fragile empty spacer `<div>`.
+  `mso-table-lspace/rspace:0`; `mso-line-height-rule:exactly` on text panels.
 - Rounded corners are a bonus; Outlook squares them, which is fine.
 
 ## Color (from the Design System)

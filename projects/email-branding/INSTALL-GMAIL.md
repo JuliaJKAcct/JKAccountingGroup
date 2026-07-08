@@ -14,26 +14,24 @@ comes up at all.
 **Insert image → Upload** button: you pick a file from your computer, and Google
 stores and serves it for you, automatically.
 
-The signature has just **one** image, plus an optional photo:
+The signature has just **one** image — the emblem in the teal panel:
 
-- **Seal (required):** the file to upload is
-  [`brand/logo/png/JK-medallion-primary-512.png`](../../brand/logo/png/JK-medallion-primary-512.png).
-  Everyone uses the same file.
-- **Photo (optional):** the signature shows a calm teal **"JK"** panel by default,
-  which needs no image at all. To use your real portrait, upload it the same way in
-  place of that panel — crop it to a **portrait / 4:5** shape first so it isn't
-  squished.
+- **Emblem (the only image):** the file to upload is
+  [`brand/logo/png/JK-emblem-reversed-512.png`](../../brand/logo/png/JK-emblem-reversed-512.png).
+  Everyone uses the same file. Everything else — the wordmark, the name, the label
+  rows — is live text, so it always shows even before the image loads.
 
-> *Later, once the firm website is live, you can instead host these at a public URL
+> *Later, once the firm website is live, you can instead host this at a public URL
 > (e.g. `https://www.jkaccountinggroup.com/assets/email/…`) and point the signature
 > there, so every teammate's is pixel-identical. Google Drive share links don't work
 > for this. Until then, Gmail's upload is the simplest path.*
 
 ## Step 2 — Julia's file is ready
 
-`signatures/julia.html` is already filled in — name, role, phone, email, website,
-the (email‑linked) booking button, and the teal photo panel. **Nothing to edit.**
-Just install it (Steps 3–5); add your real photo or a booking link whenever you like.
+`signatures/julia.html` is already filled in — name, credentials, role, the
+DIRECT / EMAIL / WEB / OFFICE rows, the bilingual line, and the (email‑linked)
+booking button. **Nothing to edit.** Just install it (Steps 3–5); swap the button
+for a real booking link whenever you like.
 
 **Adding a teammate?** Copy `_template.html` → `signatures/<firstname>.html` and fill
 its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
@@ -44,21 +42,19 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
 
 1. Open `signatures/julia.html` in a web browser (double‑click it).
 2. Select the whole signature card — click just above the teal panel (top‑left) and
-   drag to just past the seal (bottom‑right) so the entire card is highlighted.
+   drag to just past the last line (bottom‑right) so the entire card is highlighted.
 3. Copy (⌘C / Ctrl‑C). You're copying the *rendered* signature, not the code.
 
-## Step 4 — Paste into Gmail and add the seal image
+## Step 4 — Paste into Gmail and add the emblem
 
 1. Gmail → **Settings** (gear) → **See all settings** → **General** tab.
 2. Scroll to **Signature** → **Create new** → name it "JK".
 3. Click into the signature box and **paste** (⌘V / Ctrl‑V). The text, colors and
-   layout come across; the **seal** on the right may show as a small broken image —
-   that's expected, we fix it next.
-4. Click the broken seal image once to select it (or click where it should be), then
-   in the signature toolbar choose **Insert image → Upload**, and upload
-   `JK-medallion-primary-512.png`. Gmail stores it and drops it in.
-5. *(Optional)* To use your real photo, click the teal "JK" panel and, the same way,
-   **Insert image → Upload** your portrait in its place.
+   layout come across; the **emblem** in the teal panel may show as a small broken
+   image — that's expected, we fix it next.
+4. Click the broken emblem once to select it (or click where it should be), then in
+   the signature toolbar choose **Insert image → Upload**, and upload
+   `JK-emblem-reversed-512.png`. Gmail stores it and drops it in.
 
 ## Step 5 — Make it the default and test
 
@@ -66,7 +62,7 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    **and** *replies/forwards*, and tick **"Insert signature before quoted text."**
 2. Scroll down and **Save Changes**.
 3. **Test:** email yourself and open it on Gmail desktop **and** your phone. Confirm
-   the seal shows and the email / phone / website / booking links work. The fonts
+   the emblem shows and the email / phone / website / booking links work. The fonts
    will look like Georgia + Arial — that's expected and on‑brand (color, layout,
    panel and seal carry it).
 

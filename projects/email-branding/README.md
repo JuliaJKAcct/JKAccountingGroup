@@ -27,7 +27,7 @@ email-branding/
 ├── INSTALL-GMAIL.md       ← host the images, fill in, paste into Gmail
 ├── preview.html           ← open in a browser to see it all (local paths, sample data)
 ├── signatures/
-│   ├── julia.html         ← Julia's paste-ready signature (photo + seal; 3 URLs to fill)
+│   ├── julia.html         ← Julia's paste-ready signature (business-card grammar; ready)
 │   └── _template.html     ← copy per teammate → signatures/<firstname>.html
 └── templates/
     └── branded-email.html ← full branded email layout (onboarding, newsletters)
@@ -78,9 +78,10 @@ phone / booking link are filled into their own file when they're rolled out.
 - **Bronze is the one accent — never ship the booking button pointing at an empty
   `{{BOOKING_URL}}`.** Fill it with a real link, or repoint it at `mailto:` until
   there is one. A dead accent is worse than none.
-- The signature sits on an explicit **Paper `#FBF8F2` card** on purpose: it keeps
-  the dark-teal palette legible in dark-mode clients. Keep the **primary** (teal)
-  Medallion on it, not the reversed one.
+- The signature follows the firm's **business-card grammar**: a petrol-teal panel
+  (emblem + wordmark) beside an ivory details panel with the bronze diamond and the
+  DIRECT / EMAIL / WEB / OFFICE label rows. Panel color is `#123841` to match the
+  emblem tile (no box). Both panels carry explicit `bgcolor` for dark-mode safety.
 - The design was built and pressure-tested with the `impeccable` skill via a design
   workflow (3 directions → judge → adversarial verify for email-safety, contrast,
   brand rules). See `EMAIL-STYLE-GUIDE.md` for the resulting rules.
