@@ -142,6 +142,7 @@ account.
 | **Brand fonts** (Source Serif 4 / IBM Plex) render for recipients | **No** | Email strips web fonts; recipients see Georgia / Arial / Courier fallbacks. |
 | **Brand-matched default body font** I type | **Partial** | No IBM Plex / Source Serif in Gmail's fixed list; "Sans Serif" (Arial) is the honest closest — same as our fallback. |
 | **Exact brand body color/size** I type | **Partial** | Sizes are Small/Normal/Large/Huge only; color is a fixed swatch grid with no hex — `#123841` / `#22201A` unavailable. |
+| **Colored (ivory) background on every email** by default | **No** | Gmail has no setting for an outbound background color. The ivory canvas exists only inside the branded template (a manual Templates insert). Gmail *themes* recolor **your own inbox view only** — recipients never see them. By design we keep routine replies on a white body anyway: an all-over colored background reads as marketing, hurts readability, and can nudge spam filters; the brand color travels in the signature card. |
 | **Fully designed teal-header emails** from Gmail | **Partial** | Templates or paste-from-browser, but a manual insert; compose keeps inline tables only. |
 | **Automatic firm-wide rollout** | **Partial** | Settings are per-user (~10 min each); a Workspace admin footer appends but can't carry each person's name/layout. |
 
