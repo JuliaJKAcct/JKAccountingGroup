@@ -122,7 +122,12 @@ line, when used, is matter-of-fact — never a wall of legal dread.
 ## Accessibility
 
 - Body text ≥ 4.5:1 against its background (checked for every token above).
-- Every logo `<img>` has real `alt` text (`alt="JK Accounting Group"`), never empty.
+- Logo `<img>` `alt` follows its role. The signature's Medallion is **decorative**
+  (`alt=""`) because the live-text wordmark beside it already names the firm — an empty
+  `alt` there prevents a blocked image from duplicating the name or showing a broken-name
+  box. A standalone logo image with no live-text equivalent (e.g. the branded-email
+  lockup) gets real `alt` (`alt="JK Accounting Group"`). Never leave a meaningful image
+  with no `alt`.
 - Don't put meaning only in color; links are also bold/underlined where it matters.
 - The layout reflows on a phone (single column, ~600px max) — most email is read
   on mobile first.

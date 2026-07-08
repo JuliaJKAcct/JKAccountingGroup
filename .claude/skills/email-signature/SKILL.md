@@ -96,14 +96,18 @@ recipient to display it. Learned the hard way:
 2. Fill every placeholder: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    (post-nominals incl. leading comma, or delete the span), `{{ROLE_CAPS}}`, `{{EMAIL}}`,
    `{{PHONE}}`, `{{PHONE_TEL}}` (digits with +1), `{{BOOKING_URL}}` (or their `mailto:`).
-   Search `{{` to be sure none remain.
+   Also delete the template's instructional `<!-- … -->` comment block (the shipped
+   signatures, e.g. `julia.html`, carry no comment). Then `grep "{{"` the finished file
+   to be sure none remain — with the comment gone, any match is a real leftover.
 3. Render + screenshot to verify it matches the others exactly.
 4. Point them to `INSTALL-GMAIL.md` for the ~10-minute Gmail install (paste → upload the
    Medallion → set as default for new + replies).
 
 ## Verify (always do this before saying "done")
 Render the HTML headless and screenshot it — this is the real check, not a Gmail draft.
-Playwright + Chromium are preinstalled. Import the global module as a CommonJS default:
+Playwright + Chromium are preinstalled. Save this as an **ES module** (`.mjs`, or a
+`.js` in a `type:module` package) — it uses top-level `await` and pulls in the global
+Playwright (a CommonJS package) via a default import:
 ```js
 import pkg from '/opt/node22/lib/node_modules/playwright/index.js';
 const { chromium } = pkg;
