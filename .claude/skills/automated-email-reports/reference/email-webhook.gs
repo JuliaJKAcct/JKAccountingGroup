@@ -45,6 +45,7 @@ function doPost(e) {
   if (!data || data.secret !== SECRET) {
     return reply({ ok: false, error: "unauthorized" });
   }
+  if (!data.to) { return reply({ ok: false, error: "missing_to" }); }
 
   // De-dupe: ignore an identical email (same to+subject+body) sent in the last
   // 10 minutes. This is the backstop for a Routine that loops or retries.
@@ -53,7 +54,6 @@ function doPost(e) {
   var key = "sent_" + Utilities.base64EncodeWebSafe(digest);
   var cache = CacheService.getScriptCache();
   if (cache.get(key)) { return reply({ ok: true, deduped: true }); }
-  cache.put(key, "1", 600); // 600s = 10 min
 
   var options = { to: data.to, subject: data.subject || "Automated report" };
   if (data.html) {
@@ -63,6 +63,10 @@ function doPost(e) {
     options.body = data.text || "";
   }
   MailApp.sendEmail(options);
+
+  // Cache the fingerprint only AFTER a successful send, so a failed send is not
+  // wrongly reported as already-sent when the routine's single retry comes in.
+  cache.put(key, "1", 600); // 600s = 10 min
 
   return reply({ ok: true });
 }
