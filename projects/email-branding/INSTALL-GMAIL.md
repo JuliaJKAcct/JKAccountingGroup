@@ -64,7 +64,7 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
 3. **Test:** email yourself and open it on Gmail desktop **and** your phone. Confirm
    the emblem shows and the email / phone / website / booking links work. The fonts
    will look like Georgia + Arial — that's expected and on‑brand (color, layout,
-   panel and seal carry it).
+   panel and emblem carry it).
 
 ## Other clients (quick notes)
 

@@ -45,8 +45,8 @@ rules follow from it, and every file here obeys them:
    hosts** the image for you (Insert image → Upload). To keep every teammate's
    pixel-identical once the site is live, host it at a **public HTTPS URL** instead.
    Either way — see [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). (The signature keeps
-   images to a minimum: the photo slot is a teal panel by default, so the only image
-   is the Medallion seal.)
+   images to a minimum: the only image is the reversed emblem in the teal panel;
+   everything else is live text.)
 
 ## The signature composition
 
@@ -90,9 +90,11 @@ Same palette as everything else, same 60/32/8 discipline — teal / ivory / bron
 | Muted | `#5F5849` | Secondary lines (location, disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
 | Hairline | `#DAD4C6` | Dividers, card borders |
 
-**Bronze is used exactly once per email** — the primary action. In the signature
-that's the booking button; in the branded template it's the CTA (plus the 3px seam
-under the header). Never a background, never decoration.
+**Bronze stays rare** — reserved for the one action (the booking button, or the
+branded email's CTA), plus the small fixed brand marks: the diamond **◆** beside the
+name and the 3px seam under the branded-email header. Never a background, never
+filler — it holds roughly the 8% of the 60/32/8 balance. (`EST. MIAMI` and the
+emblem's diamonds use bronze-*light* `#CFA268`, a distinct token.)
 
 ## Type rhythm
 
@@ -100,12 +102,14 @@ The brand's fingerprint — **mono kicker → serif headline → sans body** —
 same in email:
 
 - **Name / headline:** serif, 600 weight, tight tracking (`-0.012em`).
-- **Title line:** the mono uppercase kicker, tracked `0.11em`. This is where the
-  role + firm name live. Don't multiply the kicker; one per block.
-- **Body & contact:** sans, ~13px in signatures, ~16px in the branded email, line
+- **Title line:** the mono uppercase kicker, tracked `0.11em` — the role
+  (`CEO · CHIEF ACCOUNTANT`); the firm name sits in the teal-panel wordmark. Also
+  the `DIRECT / EMAIL / WEB / OFFICE` labels. Don't multiply the kicker style.
+- **Body & contact:** sans, ~12.5px in signatures, ~16px in the branded email, line
   height ≥1.6.
-- **Bicultural line** (`ENGLISH · РУССКИЙ · УКРАЇНСЬКА`): a small mono line that
-  quietly states the promise. Cyrillic renders in the Arial fallback, so it's safe.
+- **Bilingual line:** a short two-line promise — English
+  (`Senior US accounting — in your language.`) over its native Russian. Cyrillic
+  renders in the Arial fallback, so it's safe.
 
 ## Voice
 
@@ -123,13 +127,16 @@ line, when used, is matter-of-fact — never a wall of legal dread.
 
 ## Dark mode (the known caveat)
 
-Some clients (Apple Mail, Outlook dark mode) recolor light emails. Our mitigations:
+Some clients (Apple Mail, Outlook dark mode) recolor light emails. This design is
+built dark-safe from the start:
 - The branded email's header/footer are *already* deep teal, so they're stable.
-- The signature logo is the **primary** (teal) medallion on a transparent field.
-  On an inverted dark background it can look muted. This is an accepted email
-  limitation for v1; if it becomes a problem we ship a dark-aware version using the
-  **reversed** (white) medallion. On any intentionally dark surface, always use the
-  reversed logo (`JK-medallion-reversed` / `JK-lockup-horizontal-reversed`).
+- The signature sits on **fixed panel colors** — teal `#123841` and paper `#FBF8F2`,
+  both set via `bgcolor` *and* inline `background-color` — and uses the **reversed
+  (white) emblem** on the teal panel. So the mandated dark-teal text keeps its light
+  ground and the emblem keeps its dark ground whatever the client does; nothing
+  relies on a transparent field that a dark client could repaint.
+- On any intentionally dark surface, always use a reversed mark
+  (`JK-emblem-reversed` / `JK-lockup-horizontal-reversed`).
 
 ## Do / Don't
 
