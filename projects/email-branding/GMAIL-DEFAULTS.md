@@ -52,13 +52,13 @@ and readable," not "make it on-brand." The brand lands in the signature.
 ## 2. The signature — the real brand vehicle
 
 The only surface Gmail auto-inserts on **every** email, so it carries the identity:
-the emblem, the petrol-teal / bronze / ivory palette, the serif-name → mono-kicker →
+the Medallion, the petrol-teal / bronze / ivory palette, the serif-name → mono-kicker →
 sans-body rhythm, the DIRECT / EMAIL / WEB / OFFICE label rows, and the one bronze
 button. Paste-ready file: [`signatures/julia.html`](./signatures/julia.html). Full
 walkthrough: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). In brief:
 
-1. **One image only** — the reversed emblem
-   ([`JK-emblem-reversed-512.png`](../../brand/logo/png/JK-emblem-reversed-512.png),
+1. **One image only** — the reversed Medallion
+   ([`JK-medallion-reversed-512.png`](../../brand/logo/png/JK-medallion-reversed-512.png),
    shared by everyone). Everything else is live text. You don't need to host it:
    Gmail's signature editor uploads and stores it for you (next step). *(If you do
    host it once the site is live, use a public HTTPS URL — Google Drive share links
@@ -66,7 +66,7 @@ walkthrough: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). In brief:
 2. **Open the file in a browser** and **copy the rendered signature** (not the
    source). Julia's file is already filled in; teammates fill their `_template.html`.
 3. **Paste into Gmail** → Settings → General → **Signature** → **Create new**, name
-   it "JK", paste. If the emblem shows as a broken image, click it and use the toolbar
+   it "JK", paste. If the Medallion shows as a broken image, click it and use the toolbar
    **Insert image → Upload** to add it from your computer (Google hosts it — no
    website needed), or **Web address (URL)** if you've hosted it.
 4. **Set it as default** — under *Signature defaults* choose "JK" for **both** "For
@@ -79,9 +79,9 @@ as one system.
 
 **Honest limits.**
 - **Fonts fall back.** Recipients see Georgia + Arial + Courier, not our web fonts.
-  Color, layout and the emblem carry the brand.
+  Color, layout and the Medallion carry the brand.
 - **Remote images can be blocked** until the recipient clicks "display images." The
-  emblem keeps real `alt` text, and because the wordmark, name and all contacts are
+  Medallion keeps real `alt` text, and because the wordmark, name and all contacts are
   live text, the signature still reads fully even with the image off.
 - **Outlook squares** the rounded corners — acceptable, the color still reads.
 - **Length cap.** Gmail limits a signature to roughly 10,000 characters; our table
@@ -138,7 +138,7 @@ account.
 |---|---|---|
 | **Signature auto-inserted** (new / reply / forward) | **Yes** | The one thing Gmail brands automatically once set as default for both. |
 | **Exact brand colors** in the signature (`#123841`, `#9C6A39`, ivory) | **Yes** | Our own inline-CSS HTML; color survives in email even where fonts don't. |
-| **The emblem** in the signature | **Partial** | Yes as one PNG (uploaded in Gmail or hosted), but images can be blocked until the recipient enables them; the rest is live text so it always shows. |
+| **The Medallion** in the signature | **Partial** | Yes as one PNG (uploaded in Gmail or hosted), but images can be blocked until the recipient enables them; the rest is live text so it always shows. |
 | **Brand fonts** (Source Serif 4 / IBM Plex) render for recipients | **No** | Email strips web fonts; recipients see Georgia / Arial / Courier fallbacks. |
 | **Brand-matched default body font** I type | **Partial** | No IBM Plex / Source Serif in Gmail's fixed list; "Sans Serif" (Arial) is the honest closest — same as our fallback. |
 | **Exact brand body color/size** I type | **Partial** | Sizes are Small/Normal/Large/Huge only; color is a fixed swatch grid with no hex — `#123841` / `#22201A` unavailable. |
@@ -154,5 +154,5 @@ palette, logo and layout on every message we send. Set **Default text style** to
 understanding it's a menu, not a brand tool. Keep the **teal-header template** for
 the handful of emails we design on purpose. What Gmail can't do — deliver our web
 fonts, or accept arbitrary hex in the body — we don't pretend it can; the brand is
-carried by color, layout and the emblem, which all hold in the fallback. Calm,
+carried by color, layout and the Medallion, which all hold in the fallback. Calm,
 consistent, honest.

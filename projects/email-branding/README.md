@@ -10,7 +10,7 @@ consistent across the whole team.
 
 Email is a daily, high-volume touchpoint, and an outdated or inconsistent signature
 quietly erodes the brand. This project makes outbound email carry the same identity
-as everything else JK produces — the emblem, the petrol-teal / bronze / ivory
+as everything else JK produces — the Medallion, the petrol-teal / bronze / ivory
 palette, the serif-headline / mono-kicker / sans-body rhythm — using **email-safe**
 HTML so it survives Gmail, Outlook and Apple Mail.
 
@@ -69,20 +69,20 @@ phone / booking link are filled into their own file when they're rolled out.
 
 - Keep every signature **structurally identical** — only the person's details change.
   Consistency is the entire point.
-- Never redefine color or type here; pull from `brand/`. Bronze appears **once** per
-  email (the CTA).
+- Never redefine color or type here; pull from `brand/`. Bronze stays **rare** — the
+  small diamond ◆ and the booking link, nothing else.
 - Design for the **fallback fonts** — if it only looks right with the brand webfont,
   it's broken (Gmail won't load the webfont).
-- The one image (the reversed emblem) is a **PNG**; SVG doesn't render in email.
+- The one image (the reversed Medallion) is a **PNG**; SVG doesn't render in email.
   It's uploaded in Gmail (Google hosts it) or, once the site is live, hosted at a
   public HTTPS URL. Everything else in the signature is live text.
 - **Bronze is the one accent — never ship the booking button pointing at an empty
   `{{BOOKING_URL}}`.** Fill it with a real link, or repoint it at `mailto:` until
   there is one. A dead accent is worse than none.
 - The signature follows the firm's **business-card grammar**: a petrol-teal panel
-  (emblem + wordmark) beside an ivory details panel with the bronze diamond and the
+  (Medallion + wordmark) beside an ivory details panel with the bronze diamond and the
   DIRECT / EMAIL / WEB / OFFICE label rows. Panel color is `#123841` to match the
-  emblem tile (no box). Both panels carry explicit `bgcolor` for dark-mode safety.
+  Medallion tile (no box). Both panels carry explicit `bgcolor` for dark-mode safety.
 - The design was built and pressure-tested with the `impeccable` skill via a design
   workflow (3 directions → judge → adversarial verify for email-safety, contrast,
   brand rules). See `EMAIL-STYLE-GUIDE.md` for the resulting rules.

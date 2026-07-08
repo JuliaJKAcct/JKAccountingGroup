@@ -14,10 +14,10 @@ comes up at all.
 **Insert image → Upload** button: you pick a file from your computer, and Google
 stores and serves it for you, automatically.
 
-The signature has just **one** image — the emblem in the teal panel:
+The signature has just **one** image — the Medallion in the teal panel:
 
-- **Emblem (the only image):** the file to upload is
-  [`brand/logo/png/JK-emblem-reversed-512.png`](../../brand/logo/png/JK-emblem-reversed-512.png).
+- **Medallion (the only image):** the file to upload is
+  [`brand/logo/png/JK-medallion-reversed-512.png`](../../brand/logo/png/JK-medallion-reversed-512.png).
   Everyone uses the same file. Everything else — the wordmark, the name, the label
   rows — is live text, so it always shows even before the image loads.
 
@@ -29,9 +29,9 @@ The signature has just **one** image — the emblem in the teal panel:
 ## Step 2 — Julia's file is ready
 
 `signatures/julia.html` is already filled in — name, credentials, role, the
-DIRECT / EMAIL / WEB / OFFICE rows, the bilingual line, and the (email‑linked)
-booking button. **Nothing to edit.** Just install it (Steps 3–5); swap the button
-for a real booking link whenever you like.
+DIRECT / EMAIL / WEB / OFFICE rows, and the (email‑linked) booking link.
+**Nothing to edit.** Just install it (Steps 3–5); swap the booking link for a real
+booking URL whenever you like.
 
 **Adding a teammate?** Copy `_template.html` → `signatures/<firstname>.html` and fill
 its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
@@ -45,16 +45,16 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    drag to just past the last line (bottom‑right) so the entire card is highlighted.
 3. Copy (⌘C / Ctrl‑C). You're copying the *rendered* signature, not the code.
 
-## Step 4 — Paste into Gmail and add the emblem
+## Step 4 — Paste into Gmail and add the Medallion
 
 1. Gmail → **Settings** (gear) → **See all settings** → **General** tab.
 2. Scroll to **Signature** → **Create new** → name it "JK".
 3. Click into the signature box and **paste** (⌘V / Ctrl‑V). The text, colors and
-   layout come across; the **emblem** in the teal panel may show as a small broken
+   layout come across; the **Medallion** in the teal panel may show as a small broken
    image — that's expected, we fix it next.
-4. Click the broken emblem once to select it (or click where it should be), then in
+4. Click the broken Medallion once to select it (or click where it should be), then in
    the signature toolbar choose **Insert image → Upload**, and upload
-   `JK-emblem-reversed-512.png`. Gmail stores it and drops it in.
+   `JK-medallion-reversed-512.png`. Gmail stores it and drops it in.
 
 ## Step 5 — Make it the default and test
 
@@ -62,9 +62,9 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    **and** *replies/forwards*, and tick **"Insert signature before quoted text."**
 2. Scroll down and **Save Changes**.
 3. **Test:** email yourself and open it on Gmail desktop **and** your phone. Confirm
-   the emblem shows and the email / phone / website / booking links work. The fonts
+   the Medallion shows and the email / phone / website / booking links work. The fonts
    will look like Georgia + Arial — that's expected and on‑brand (color, layout,
-   panel and emblem carry it).
+   panel and Medallion carry it).
 
 ## Other clients (quick notes)
 

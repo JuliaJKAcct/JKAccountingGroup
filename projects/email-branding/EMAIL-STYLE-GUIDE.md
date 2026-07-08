@@ -45,16 +45,16 @@ rules follow from it, and every file here obeys them:
    hosts** the image for you (Insert image → Upload). To keep every teammate's
    pixel-identical once the site is live, host it at a **public HTTPS URL** instead.
    Either way — see [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). (The signature keeps
-   images to a minimum: the only image is the reversed emblem in the teal panel;
+   images to a minimum: the only image is the reversed Medallion in the teal panel;
    everything else is live text.)
 
 ## The signature composition
 
 The firm's **business-card grammar**, translated to email: a two-panel card.
 
-- **Panel A — petrol teal (`#123841`).** The emblem, the serif wordmark
+- **Panel A — petrol teal (`#123841`).** The Medallion, the serif wordmark
   "JK Accounting Group", and "EST. MIAMI" in mono. The panel color is set to
-  `#123841` on purpose — it matches the emblem PNG's baked-in tile exactly, so the
+  `#123841` on purpose — it matches the Medallion PNG's baked-in tile exactly, so the
   mark sits seamlessly with **no visible box** (the logo is never boxed).
 - **Panel B — ivory (`#FBF8F2`).** The details: the name + credentials with a
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
@@ -67,7 +67,7 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
   and soft radius. The explicit surfaces are the dark-mode fix: our palette
   mandates dark-teal text, which a dark-mode client would render invisible on a
   transparent ground — the fixed panel colors keep everything legible everywhere.
-- **One image only:** the reversed emblem (`JK-emblem-reversed-512.png`) in Panel A.
+- **One image only:** the reversed Medallion (`JK-medallion-reversed-512.png`) in Panel A.
   Everything else is live text, so the signature reads fully even before the image
   loads (or if a client blocks it).
 - **Outlook hardening.** The bronze button is a nested `bgcolor` cell with
@@ -95,7 +95,7 @@ Same palette as everything else, same 60/32/8 discipline — teal / ivory / bron
 or the branded email's CTA button), plus the small fixed brand marks: the diamond
 **◆** beside the name and the 3px seam under the branded-email header. Never a
 background, never filler — it holds roughly the 8% of the 60/32/8 balance.
-(`EST. MIAMI` and the emblem's diamonds use bronze-*light* `#CFA268`, a distinct token.)
+(`EST. MIAMI` and the Medallion's diamonds use bronze-*light* `#CFA268`, a distinct token.)
 
 ## Type rhythm
 
@@ -134,11 +134,11 @@ built dark-safe from the start:
 - The branded email's header/footer are *already* deep teal, so they're stable.
 - The signature sits on **fixed panel colors** — teal `#123841` and paper `#FBF8F2`,
   both set via `bgcolor` *and* inline `background-color` — and uses the **reversed
-  (white) emblem** on the teal panel. So the mandated dark-teal text keeps its light
-  ground and the emblem keeps its dark ground whatever the client does; nothing
+  (white) Medallion** on the teal panel. So the mandated dark-teal text keeps its light
+  ground and the Medallion keeps its dark ground whatever the client does; nothing
   relies on a transparent field that a dark client could repaint.
 - On any intentionally dark surface, always use a reversed mark
-  (`JK-emblem-reversed` / `JK-lockup-horizontal-reversed`).
+  (`JK-medallion-reversed` / `JK-lockup-horizontal-reversed`).
 
 ## Do / Don't
 
