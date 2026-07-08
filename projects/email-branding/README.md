@@ -47,11 +47,16 @@ documented in [`EMAIL-STYLE-GUIDE.md`](./EMAIL-STYLE-GUIDE.md).
 
 ## Skills & tooling
 
+- [`email-signature`](../../.claude/skills/email-signature/) — the engine for this
+  project. Use it to modify a signature (resize, add/remove a line, swap the booking
+  link), add a teammate, or edit the branded-email template. It encodes the email-safe
+  rules and the Gmail image lessons so a change is quick and never breaks in a real inbox.
 - [`impeccable`](../../.claude/skills/impeccable/) — the firm's UI/design skill,
-  used to design and pressure-test the signature and email layout on the brand.
+  used (via `email-signature`) to design and pressure-test the signature and email
+  layout on the brand.
 
-No dedicated skill of its own — adding a teammate is a copy-and-fill of
-`signatures/_template.html`, described in `INSTALL-GMAIL.md`.
+Adding a teammate is a copy-and-fill of `signatures/_template.html`; the
+`email-signature` skill drives it and `INSTALL-GMAIL.md` covers the Gmail install.
 
 > **Gmail install is manual.** Actually pasting a signature into each person's Gmail
 > is a manual step today. The Gmail connector in this repo can read/label/draft mail
