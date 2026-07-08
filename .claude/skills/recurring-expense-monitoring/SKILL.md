@@ -42,7 +42,9 @@ short exception report to the responsible staff member.
   Double *expenses-by-vendor* report is accrual and can miss items paid from
   unlinked accounts or booked as bills — do not rely on it for presence.)
 - **Report delivery → email** to the staff member named in the watchlist
-  (default `lilian@jkaccountinggroup.com`) via the Gmail integration.
+  (default `lilian@jkaccountinggroup.com`). The on-brand, email-safe layout is
+  `reference/email-template.html` (see Step 6). Unattended runs send it via the
+  firm's email webhook, whose URL/secret live in the routine config, not the repo.
 
 ## Tools
 - Google Drive MCP — locate and read the client's watchlist file.
@@ -127,17 +129,16 @@ the team curates the watchlist.
   prior months before adding.
 
 ### Step 6 — Compose the report (English, sectioned — never one mixed table)
-Order by priority; the urgent things first, the reassurance last:
+Send **one combined email** covering all monitored clients (not one email per
+client). Order by priority; the urgent things first, the reassurance last. Within
+each client, use these sections and **omit any that are empty**:
 
 ```
-Recurring-Expense Report — <Client> — <Month Year>  (<mid-month|end-of-month> check)
-
 🔴 Needs attention
   - Missing: <item> (~$<typical>) has not posted this month.
   - Abnormal amount: <item> posted $<actual> vs ~$<typical> (<±%>).
   - Two charges: <item> posted twice — likely a catch-up for last month's missed
     payment (or a possible duplicate — confirm).
-  (omit the section if empty; say "Nothing needs attention." )
 
 🆕 Possible new recurring charges
   - <vendor> $<amt> — seen <months>; not on the watchlist. Add?
@@ -153,12 +154,27 @@ Recurring-Expense Report — <Client> — <Month Year>  (<mid-month|end-of-month
   - <item> $<amt> ✓ · <item> $<amt> ✓ …
 ```
 
+**Build the email from the branded template**, not ad-hoc HTML:
+`reference/email-template.html` is the on-brand, email-safe (Gmail-proof) layout —
+deep-teal masthead, "at a glance" client roster, per-client sectioned blocks,
+teal footer. Copy its exact table structure and inline styles and fill in the real
+data; keep the header comment's rules (table layout, inline styles, Georgia/Arial/
+Courier fallbacks, no SVG, no side-stripes). Also compose a **plain-text version**
+using the sectioned outline above so clients that don't render HTML still read
+cleanly. The template's sample names/figures are fictional — replace them all.
+
 ### Step 7 — Deliver
-- Email the report to the responsible staff member (default
-  `lilian@jkaccountinggroup.com`) via Gmail. Subject like
-  `Recurring-expense check — <Client> — <Month> (<run type>)`.
-- If email sending isn't available in the run, save a draft and note it.
-- Keep a one-line log of what ran (client, date, run type, counts).
+- Send the report to the responsible staff member (default
+  `lilian@jkaccountinggroup.com`). Subject like
+  `Recurring-expense check — <Month> (<run type>)`.
+- **Delivery is one email, exactly once.** In an unattended run, Gmail is
+  draft-only (no send tool), so the scheduled job POSTs the composed HTML + text
+  to the firm's email webhook a **single time** for the whole report; a
+  `{"ok":true}` response means done — do not retry or loop per client. If neither
+  send path is available, save a Gmail draft and say so — never a silent no-send.
+- The webhook URL and secret live **only** in the routine's own configuration,
+  never in this repo.
+- Keep a one-line log of what ran (clients, date, run type, counts).
 
 ## Running it for all monitored clients
 The scheduled job iterates every client that has a watchlist file in the Drive

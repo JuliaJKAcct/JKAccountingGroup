@@ -33,9 +33,12 @@ Drive**, not this repo — see below.
 
 ## Brand & design
 
-Not applicable — the output is a plain-text/HTML email report, not branded
-collateral. (If it ever becomes a client-facing document, apply the shared
-[`../../brand/`](../../brand/).)
+The emailed report is **on-brand**. Its HTML uses the shared
+[`../../brand/`](../../brand/) system (petrol teal + bronze on ivory, Source Serif 4 /
+Georgia headings, the mono service-line kicker) via an email-safe template —
+[`../../.claude/skills/recurring-expense-monitoring/reference/email-template.html`](../../.claude/skills/recurring-expense-monitoring/reference/email-template.html).
+"Email-safe" means table layout + inline styles + web-safe font fallbacks and no
+SVG, so it survives Gmail while still looking like JK.
 
 ## Skills & tooling
 
