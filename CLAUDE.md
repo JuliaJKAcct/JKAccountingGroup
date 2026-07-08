@@ -62,8 +62,14 @@ in that folder.
 - **Projects are self-contained** and follow one standard shape — see
   [`projects/README.md`](./projects/README.md). Outputs live inside their
   project in an obviously-named folder.
-- **Repeatable workflows are skills** in [`.claude/skills/`](./.claude/skills/);
-  the project README links to the skill that powers it.
+- **Repeatable workflows are skills — and flag skill-worthy work unprompted.**
+  Repeatable workflows live as skills in [`.claude/skills/`](./.claude/skills/), and
+  the project README links to the skill that powers it. When a task looks like it will
+  recur — a new automation, a multi-step setup we fought through, a process we might
+  repeat — **proactively propose capturing it as a skill; don't wait to be asked.** The
+  person you're helping may not know a skill is even possible, so naming the opportunity
+  is part of the job. Build the skill only once there's a real second use in sight —
+  suggest, don't manufacture skills speculatively.
 - **Repo artifacts are written in English.** Everything committed — skills, SOPs,
   project docs, templates — is in English so anyone on the team using Claude Code can
   read it, whatever language the chat is in.
