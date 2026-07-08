@@ -59,8 +59,9 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
 - **Panel B — ivory (`#FBF8F2`).** The details: the name + credentials with a
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
   WEB / OFFICE label rows** (mono uppercase labels in mid-teal, values in sans —
-  this label-row device is what gives it the card's finish), a hairline, the
-  bilingual line, and the one bronze CTA.
+  this label-row device is what gives it the card's finish), and one light bronze
+  **booking link** — a text link, not a button, to keep the signature low. Kept
+  deliberately short (no tagline block) so it reads as a signature, not a card.
 - **Card surface.** Both panels carry an explicit `bgcolor` + inline
   `background-color` (teal and paper), and the card has a 1px `#DAD4C6` hairline
   and soft radius. The explicit surfaces are the dark-mode fix: our palette
@@ -90,11 +91,11 @@ Same palette as everything else, same 60/32/8 discipline — teal / ivory / bron
 | Muted | `#5F5849` | Secondary lines (location, disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
 | Hairline | `#DAD4C6` | Dividers, card borders |
 
-**Bronze stays rare** — reserved for the one action (the booking button, or the
-branded email's CTA), plus the small fixed brand marks: the diamond **◆** beside the
-name and the 3px seam under the branded-email header. Never a background, never
-filler — it holds roughly the 8% of the 60/32/8 balance. (`EST. MIAMI` and the
-emblem's diamonds use bronze-*light* `#CFA268`, a distinct token.)
+**Bronze stays rare** — reserved for the one action (the signature's booking *link*,
+or the branded email's CTA button), plus the small fixed brand marks: the diamond
+**◆** beside the name and the 3px seam under the branded-email header. Never a
+background, never filler — it holds roughly the 8% of the 60/32/8 balance.
+(`EST. MIAMI` and the emblem's diamonds use bronze-*light* `#CFA268`, a distinct token.)
 
 ## Type rhythm
 
@@ -107,9 +108,10 @@ same in email:
   the `DIRECT / EMAIL / WEB / OFFICE` labels. Don't multiply the kicker style.
 - **Body & contact:** sans, ~12.5px in signatures, ~16px in the branded email, line
   height ≥1.6.
-- **Bilingual line:** a short two-line promise — English
-  (`Senior US accounting — in your language.`) over its native Russian. Cyrillic
-  renders in the Arial fallback, so it's safe.
+- **Bilingual line (branded email, not the signature):** a short two-line promise —
+  English (`Senior US accounting — in your language.`) over its native Russian.
+  The compact signature omits it to stay low; use it in the branded email's body or
+  footer when a bilingual note fits. Cyrillic renders in the Arial fallback, safely.
 
 ## Voice
 
