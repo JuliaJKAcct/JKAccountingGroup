@@ -32,6 +32,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/email-branding/`](./projects/email-branding/) | Medium | **Started** — Julia's signature + email system built |
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
+| [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -177,6 +178,11 @@ then roll out to the rest of the team by copying the template.
 person's Gmail is manual (paste into Gmail settings) — the Gmail connector can
 read/label/draft but doesn't set account signatures.
 
+**Related:** this is the email-specific slice of
+[IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) — the
+firm-wide system to put *every* generated document on the Design System.
+`email-branding` is its first concrete instance.
+
 **Priority:** Medium · **Status:** **Started** — system built; awaiting Julia's real
 contact details + hosted logo URL to finalize hers, then team rollout
 
@@ -238,6 +244,66 @@ Claude can't see or touch the mailboxes.
 
 **Priority:** Low · **Status:** Parked — **do not start yet** (Julia's explicit
 instruction)
+
+---
+
+## IDEA-07 — A system so every document follows the Design System
+
+**What Julia wants:** a real *system* so that **every document the firm generates**
+— proposals, letters, reports, client organizers, memos, one-pagers, slide decks —
+follows our Design System automatically, instead of being styled by hand each time.
+Julia wants to figure out the *best* way to run this: e.g. write the content first
+and then hand it to Claude to apply the Design System, start from branded
+templates, or some mix.
+
+**Why it matters:** consistency *is* the brand. Today, on-brand styling depends on
+whoever makes the document remembering to apply it; a system makes "on-brand" the
+default and removes manual rework — everything the firm sends out looks like it
+came from the same place.
+
+**Where it fits:** built on [`brand/`](./brand/) — the design system
+([`brand/design-system/`](./brand/design-system/)) and
+[`JK-Brand-Guide.md`](./brand/JK-Brand-Guide.md) are the single source of truth.
+The engine would most naturally be a **reusable Claude skill** in
+[`.claude/skills/`](./.claude/skills/) (an "apply-the-brand" pass, in the spirit of
+the existing `impeccable` design skill), likely paired with a small project that
+holds branded templates. This **generalizes** what
+[IDEA-04](#idea-04--brand-every-team-members-email-signature) already did for email:
+the [`email-branding`](./projects/email-branding/) project is the first concrete
+instance (email is one document type), and IDEA-07 extends the same approach to
+every document the firm produces.
+
+**Approaches to weigh** (this is the "what's the best way?" part, to settle when we
+pick it up):
+
+1. **Branded templates up front** — a set of starter templates (Google Doc / Gamma
+   / HTML) with the brand already baked in; people write inside them, so the output
+   is on-brand by construction. Best for recurring, predictable documents. (This is
+   what `email-branding` did for signatures.)
+2. **Post-hoc "brand this" pass** (Julia's instinct) — the author writes the content
+   plainly, then hands it to Claude / a skill that restyles it to the Design System.
+   Best for one-offs and documents that already exist.
+3. **One branding engine + a format renderer** — a single skill that reads the
+   content plus the brand tokens and emits the branded document in the right format:
+   Gamma for decks/social/docs, branded HTML→PDF for print/reports (the
+   reasonable-comp report is a proven branded-HTML pattern), etc. Likely the
+   endgame — templates for the common cases *and* an on-demand pass for everything
+   else.
+
+**What we need to decide to start:** (a) which document types are in scope and their
+priority; (b) which output formats matter (Google Docs, PDF, HTML, Gamma decks);
+(c) whether we go templates-first, pass-first, or both. Then we design the skill
+and/or template set against `brand/design-system/`.
+
+**Capability check:** the building blocks exist — `brand/design-system/`
+(tokens/CSS), the `impeccable` design skill, Gamma (themed docs/decks/social), a
+working branded-HTML example (the reasonable-comp report), and now `email-branding`
+as a proven template-based instance. A caveat on formats: HTML/PDF and Gamma are
+straightforward to brand automatically; matching the exact brand *inside* a live
+Google Doc or Word file is more limited, so those may lean on templates rather than
+an automated restyle.
+
+**Priority:** Medium · **Status:** Not started — parked for a design discussion
 
 ---
 
