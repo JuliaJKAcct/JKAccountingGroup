@@ -115,7 +115,10 @@ in that folder.
   [`BACKLOG.md`](./BACKLOG.md) internally consistent too (every quick-view row has a
   matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
   missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
-  Julia rather than leaving it.
+  Julia rather than leaving it. A **weekly scheduled audit** (a Claude Routine,
+  Monday mornings) sweeps the entire repo for this drift and can also be run on
+  demand ("audit the repo") — so a working session only needs to keep the indexes
+  right for what it touched, not re-audit the whole repo every time.
 - **Session identity is provenance, not a wall.** The whole firm shares one Claude
   Code account, so git alone can't tell whose hands did what. It's one firm with one
   goal — **never partition the repo or the work by person**; Julia and Lilian split
