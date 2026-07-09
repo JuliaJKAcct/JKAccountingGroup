@@ -60,39 +60,62 @@ the US get caught between two failures:
 - Real financial upside (the $1M+ saved stat lives here)
 - A relationship they can actually lean on
 
-## One-line pitch
+## The pitch
+
+The conversational pitch — pain first, then us as the answer to it. Written to
+be **said, not read**: something Julia can repeat across a table to many people
+without it sounding scripted.
 
 **English:**
-> Look, if you're a foreign business owner coming to the US, here's what we
-> actually do for you: we become your financial partner and take care of
-> everything on that side — the bookkeeping, the taxes, keeping you compliant
-> with the IRS. You don't need to know all the rules here, that's what we're
-> for. And whenever something comes up, you're not waiting days for an
-> answer — you just message us on WhatsApp, and you've got an advisor who
-> actually knows your business and speaks your language.
+> Honestly, the hardest part for a foreign business owner coming to the US is
+> that you don't know the rules yet — and that's exactly where we come in. We
+> basically become your finance department: bookkeeping, taxes, staying
+> compliant with the IRS. You focus on the business, we've got the rest. And
+> when you need us, you're not waiting days for a reply — one message on
+> WhatsApp and you've got an advisor who knows your business and speaks your
+> language.
 
 **Russian:**
-> Смотрите: если вы иностранный предприниматель и начинаете своё дело здесь,
-> в США, — вот что мы для вас делаем. Мы становимся вашим финансовым
-> партнёром и берём на себя всю эту сторону: бухгалтерию, налоги, чтобы с IRS
-> всё было чисто. Вам не нужно разбираться во всех здешних правилах, для этого
-> есть мы. А если что-то возникает, вам не нужно днями ждать ответа — вы
-> просто пишете нам в WhatsApp, и рядом ваш советник, который по-настоящему
-> знает ваш бизнес и говорит на вашем языке.
+> Честно говоря, когда вы иностранный предприниматель и только приезжаете в
+> США, самое сложное — это то, что вы ещё не знаете здешних правил. Вот тут и
+> подключаемся мы. Мы, по сути, становимся вашим финансовым отделом:
+> бухгалтерия, налоги, соответствие требованиям IRS. Вы занимаетесь бизнесом —
+> остальное на нас. А когда мы вам нужны, не нужно днями ждать ответа: одно
+> сообщение в WhatsApp — и рядом советник, который знает ваш бизнес и говорит
+> на вашем языке.
 
-Written to be **said, not read** — a conversational pitch Julia can repeat to
-many people without it sounding scripted. It names the audience out loud
-("foreign business owner coming to the US") so the right person hears *this is
-about me*, and keeps the three relationship words that make it land —
-**partner**, **advisor**, and **foreign business owner** — inside plain spoken
-sentences rather than ad copy. Same three moves in both languages: *we become
-your partner and take the whole financial side off your plate (bookkeeping,
-taxes, IRS compliance) → you don't need to become the expert → when something
-comes up, you're not waiting days — you reach your advisor fast on WhatsApp, a
-real person who knows you and speaks your language.* Per the brand guide's
-bilingual rule — each language written natively (RU opens with «Смотрите:»,
-"advisor" → «советник», "partner" → «партнёр»), match quality not
-word-for-word. The responsiveness line stays honest and on-voice — it signals
-fast access (WhatsApp, the channel this audience already lives in) without
-promising 24/7, consistent with the firm's "within 1 business day" standard.
-Stakes stay implicit — no fear, no immigration claims.
+## Answering "What do you do?"
+
+Not a pitch — a natural, casual answer for when someone asks what the firm
+does. Same DNA (lead with the pain, then the fix), but told *about* clients
+rather than sold *to* the listener. Short and to the point.
+
+**English:**
+> Foreign business owners come to the US and don't know how the local rules and
+> regulations work — so we become their finance department: bookkeeping, taxes,
+> IRS compliance, all in their own language.
+
+**Russian:**
+> Иностранные предприниматели приезжают в США и не знают здешних правил и
+> порядков — поэтому мы становимся их финансовым отделом: бухгалтерия, налоги,
+> соответствие требованиям IRS, и всё это на их родном языке.
+
+**Notes on the copy.** Both pieces lead with the pain (you don't know the rules
+here) and land on the firm as the answer. Key term choices, deliberate:
+- **"finance department,"** not "financial partner" — "partner" can read as an
+  investor/backer and "financial" drifts toward wealth management; "finance
+  department" is the firm's own reframe in
+  [`../referral-offer-strategy/strategy.md`](../referral-offer-strategy/strategy.md)
+  ("outsourced finance department"), signals more than a bookkeeper, and clearly
+  means support *inside* your company. RU: «финансовый отдел».
+- **"advisor"** (RU «советник») keeps the senior, personal relationship — a
+  real person you reach, not a call center.
+- The responsiveness line signals fast access (WhatsApp, the channel this
+  audience already uses) **without** promising 24/7 — consistent with the
+  firm's "within 1 business day" standard in the strategy doc.
+- Stakes stay implicit and on-voice — no fear, no immigration claims.
+
+Per the brand guide's bilingual rule, RU is written natively, not
+machine-translated (e.g. the "what do you do" pain broadens to «здешних правил
+и порядков» — the local rules *and how things are done here* — matching quality
+not word-for-word).
