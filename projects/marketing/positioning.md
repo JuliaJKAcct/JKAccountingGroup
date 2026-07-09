@@ -91,13 +91,15 @@ does. Same DNA (lead with the pain, then the fix), but told *about* clients
 rather than sold *to* the listener. Short and to the point.
 
 **English:**
-> Foreign business owners come to the US and don't know how the local rules and
-> regulations work — so we become their finance department: bookkeeping, taxes,
-> IRS compliance, all in their own language.
+> Foreign business owners come to the US and don't know how things work here —
+> the tax rules especially, but also the local regulations and standards — so
+> we become their finance department: bookkeeping, taxes, IRS compliance, all
+> in their own language.
 
 **Russian:**
-> Иностранные предприниматели приезжают в США и не знают здешних правил и
-> порядков — поэтому мы становимся их финансовым отделом: бухгалтерия, налоги,
+> Иностранные предприниматели приезжают в США и не знают, как здесь всё
+> устроено — прежде всего налоговые правила, но и местные нормы и стандарты, —
+> поэтому мы становимся их финансовым отделом: бухгалтерия, налоги,
 > соответствие требованиям IRS, и всё это на их родном языке.
 
 **Notes on the copy.** Both pieces lead with the pain (you don't know the rules
@@ -115,7 +117,10 @@ here) and land on the firm as the answer. Key term choices, deliberate:
   firm's "within 1 business day" standard in the strategy doc.
 - Stakes stay implicit and on-voice — no fear, no immigration claims.
 
-Per the brand guide's bilingual rule, RU is written natively, not
-machine-translated (e.g. the "what do you do" pain broadens to «здешних правил
-и порядков» — the local rules *and how things are done here* — matching quality
-not word-for-word).
+The "what do you do?" pain keeps **tax rules** as the headline reason (the
+biggest, most relatable one) and widens from there to the local regulations and
+standards — it's not *only* taxes, it's how everything is done here. Per the
+brand guide's bilingual rule, RU is written natively, not machine-translated
+(«прежде всего налоговые правила, но и местные нормы и стандарты» — "first and
+foremost the tax rules, but also the local norms and standards" — matching
+quality, not word-for-word).
