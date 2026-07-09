@@ -126,7 +126,8 @@ in that folder.
   `Worked-by: Lilian` trailer to that session's commits, and note it on PRs the
   session opens. The point is diagnosis: when parallel sessions unknowingly touch
   the same files and changes contradict each other, the trail shows where each side
-  originated so the clash can be untangled quickly. When you open a pull
+  originated so the clash can be untangled quickly.
+- **Every PR gets an independent review before merge.** When you open a pull
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
   blocking findings, then merge. Never merge an unreviewed PR.
