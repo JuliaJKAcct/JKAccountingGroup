@@ -15,6 +15,7 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`video-generation/`](./video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
 | [`recurring-expense-monitoring/`](./recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report, via the `recurring-expense-monitoring` skill. Watchlists live in Google Drive, not the repo. | Active |
 | [`sops/`](./sops/) | The firm's standard operating procedures and day-to-day client-task runbooks (e.g. Business Tax Receipt filings). Client-specific data stays in the firm's client systems, not the repo. | Active |
+| [`referral-offer-strategy/`](./referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic assessment, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
 
 > Keep this table current — it's the fastest map of the repo. `_template/` is not
 > a project; it's the starter you copy.
