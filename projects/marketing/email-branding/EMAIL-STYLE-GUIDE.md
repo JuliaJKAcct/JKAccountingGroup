@@ -106,8 +106,8 @@ same in email:
 - **Title line:** the mono uppercase kicker, tracked `0.11em` — the role
   (`CEO · CHIEF ACCOUNTANT`); the firm name sits in the teal-panel wordmark. Also
   the `DIRECT / EMAIL / WEB / OFFICE` labels. Don't multiply the kicker style.
-- **Body & contact:** sans, ~12.5px in signatures, ~16px in the branded email, line
-  height ≥1.6.
+- **Body & contact:** sans, ~10px in the compact signature, ~16px in the branded
+  email, line height ≥1.6.
 - **Bilingual line (branded email, not the signature):** a short two-line promise —
   English (`Senior US accounting — in your language.`) over its native Russian.
   The compact signature omits it to stay low; use it in the branded email's body or
