@@ -107,14 +107,15 @@ in that folder.
   history); when a push is rejected or a merge conflicts, resolve by rebasing
   **without clobbering the other person's work** (force-push only history that's
   already merged). **Before you finish, re-check that the navigation maps still
-  match reality** — the actual folders under [`projects/`](./projects/), the skills
-  in [`.claude/skills/`](./.claude/skills/), and the index tables (this file's
-  Layout + "Where to start"; [`README.md`](./README.md);
-  [`projects/README.md`](./projects/README.md);
-  [`projects/marketing/README.md`](./projects/marketing/README.md); and
-  [`BACKLOG.md`](./BACKLOG.md)) must all agree. Fix broken links, orphaned folders,
-  duplicate or missing entries, and status mismatches — or, when a clash is
-  ambiguous, flag it to Julia rather than leaving it.
+  match reality** — the actual folders under [`projects/`](./projects/) and the
+  skills in [`.claude/skills/`](./.claude/skills/) must agree with the index tables
+  that describe them: this file's Layout + "Where to start",
+  [`README.md`](./README.md), [`projects/README.md`](./projects/README.md), and
+  [`projects/marketing/README.md`](./projects/marketing/README.md). Keep
+  [`BACKLOG.md`](./BACKLOG.md) internally consistent too (every quick-view row has a
+  matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
+  missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
+  Julia rather than leaving it.
 - **Every PR gets an independent review before merge.** When you open a pull
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
