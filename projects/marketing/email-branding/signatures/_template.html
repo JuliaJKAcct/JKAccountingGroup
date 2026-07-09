@@ -15,7 +15,7 @@
 
   Business-card grammar, COMPACT (~320px, kept low): petrol-teal panel
   (Medallion + wordmark + EST. MIAMI) beside an ivory panel with the bronze
-  diamond, the DIRECT / EMAIL / WEB / OFFICE label rows, and one bronze "Book a
+  diamond, the DIRECT / EMAIL / WEB label rows, and one bronze "Book a
   consultation" text link (no big button, no tagline). Email-safe (tables +
   inline CSS), dark-mode-safe, Outlook/Word hardened.
 
@@ -45,42 +45,38 @@
     <!-- Panel A — petrol teal. Medallion seal + wordmark. The wordmark is also
          the image-blocked fallback, so the panel is never empty. The medallion
          PNG's baked tile is #123841, matching the panel (never boxed). -->
-    <td width="90" valign="middle" align="center" bgcolor="#123841" style="width:90px; background-color:#123841; border-radius:11px 0 0 11px; padding:12px 9px;">
+    <td width="94" valign="middle" align="center" bgcolor="#123841" style="width:94px; background-color:#123841; border-radius:11px 0 0 11px; padding:18px 13px;">
       <img src="../../../../brand/logo/png/JK-medallion-reversed-512.png" alt="" width="50" height="50" style="display:block; margin:0 auto; width:50px; height:50px; border:0; outline:none; -ms-interpolation-mode:bicubic;">
       <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:9px; font-weight:600; line-height:1.25; letter-spacing:-0.01em; color:#ECE6DA; padding-top:7px;">JK&nbsp;Accounting<br>Group</div>
       <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:5.5px; font-weight:500; letter-spacing:0.16em; color:#CFA268; padding-top:3px;">EST.&nbsp;MIAMI</div>
     </td>
 
     <!-- Panel B — ivory: the details -->
-    <td valign="middle" bgcolor="#FBF8F2" style="background-color:#FBF8F2; border-radius:0 11px 11px 0; padding:11px 14px; mso-line-height-rule:exactly;">
+    <td valign="middle" bgcolor="#FBF8F2" style="background-color:#FBF8F2; border-radius:0 11px 11px 0; padding:18px 22px; mso-line-height-rule:exactly;">
 
       <div style="font-family:'Source Serif 4', Georgia, 'Times New Roman', serif; font-size:13px; font-weight:600; letter-spacing:-0.01em; line-height:1.2; color:#0D2A31;">{{FIRST_NAME}}&nbsp;{{LAST_NAME}}<span style="font-size:10px; font-weight:400; letter-spacing:0;">{{CREDENTIALS}}</span><span style="color:#9C6A39; font-size:8px; padding-left:4px;">&#9670;</span></div>
 
-      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:#245C66; padding-top:3px;">{{ROLE_CAPS}}</div>
+      <div style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:#245C66; padding-top:5px;">{{ROLE_CAPS}}</div>
 
-      <div style="height:1px; line-height:1px; font-size:0; background:#E4DECF; margin:6px 0;">&nbsp;</div>
+      <div style="height:1px; line-height:1px; font-size:0; background:#E4DECF; margin:11px 0;">&nbsp;</div>
 
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
-          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 9px 3px 0; white-space:nowrap;">Direct</td>
-          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.2; padding:0 0 3px 0;"><a href="tel:{{PHONE_TEL}}" style="color:#22201A; text-decoration:none; font-weight:600;">{{PHONE}}</a></td>
+          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 13px 8px 0; white-space:nowrap;">Direct</td>
+          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.35; padding:0 0 8px 0;"><a href="tel:{{PHONE_TEL}}" style="color:#22201A; text-decoration:none; font-weight:500;">{{PHONE}}</a></td>
         </tr>
         <tr>
-          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 9px 3px 0; white-space:nowrap;">Email</td>
-          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.2; padding:0 0 3px 0;"><a href="mailto:{{EMAIL}}" style="color:#123841; text-decoration:none; font-weight:600;">{{EMAIL}}</a></td>
+          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 13px 8px 0; white-space:nowrap;">Email</td>
+          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.35; padding:0 0 8px 0;"><a href="mailto:{{EMAIL}}" style="color:#123841; text-decoration:none; font-weight:500;">{{EMAIL}}</a></td>
         </tr>
         <tr>
-          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 9px 3px 0; white-space:nowrap;">Web</td>
-          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.2; padding:0 0 3px 0;"><a href="https://www.jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:600;">www.jkaccountinggroup.com</a></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 9px 0 0; white-space:nowrap;">Office</td>
-          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.2; color:#5F5849;">Miami&nbsp;&middot;&nbsp;Fort&nbsp;Lauderdale&nbsp;&middot;&nbsp;Online</td>
+          <td valign="top" style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:7.5px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#245C66; padding:0 13px 0 0; white-space:nowrap;">Web</td>
+          <td valign="top" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.35; padding:0;"><a href="https://www.jkaccountinggroup.com" style="color:#123841; text-decoration:none; font-weight:500;">www.jkaccountinggroup.com</a></td>
         </tr>
       </table>
 
       <!-- Booking — a light bronze text link (the single action). Point at mailto:{{EMAIL}} if no booking link. -->
-      <div style="padding-top:7px;">
+      <div style="padding-top:13px;">
         <a href="{{BOOKING_URL}}" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.02em; color:#9C6A39; text-decoration:none;">Book a consultation&nbsp;&#8594;</a>
       </div>
 

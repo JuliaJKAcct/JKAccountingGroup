@@ -58,7 +58,7 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
   mark sits seamlessly with **no visible box** (the logo is never boxed).
 - **Panel B — ivory (`#FBF8F2`).** The details: the name + credentials with a
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
-  WEB / OFFICE label rows** (mono uppercase labels in mid-teal, values in sans —
+  WEB label rows** (mono uppercase labels in mid-teal, values in sans —
   this label-row device is what gives it the card's finish), and one light bronze
   **booking link** — a text link, not a button, to keep the signature low. Kept
   deliberately short (no tagline block) so it reads as a signature, not a card.
@@ -88,7 +88,7 @@ Same palette as everything else, same 60/32/8 discipline — teal / ivory / bron
 | Soft Ivory | `#F6F3EC` | Page background behind the email |
 | Paper | `#FBF8F2` | Email card surface |
 | Body ink | `#22201A` | Body text |
-| Muted | `#5F5849` | Secondary lines (location, disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
+| Muted | `#5F5849` | Secondary / fine-print lines (e.g. a disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
 | Hairline | `#DAD4C6` | Dividers, card borders |
 
 **Bronze stays rare** — reserved for the one action (the signature's booking *link*,
@@ -105,9 +105,10 @@ same in email:
 - **Name / headline:** serif, 600 weight, tight tracking (`-0.012em`).
 - **Title line:** the mono uppercase kicker, tracked `0.11em` — the role
   (`CEO · CHIEF ACCOUNTANT`); the firm name sits in the teal-panel wordmark. Also
-  the `DIRECT / EMAIL / WEB / OFFICE` labels. Don't multiply the kicker style.
+  the `DIRECT / EMAIL / WEB` labels. Don't multiply the kicker style.
 - **Body & contact:** sans, ~10px in the compact signature, ~16px in the branded
-  email, line height ≥1.6.
+  email, line height ≥1.6. In the signature the contact values sit at medium (500)
+  weight — bold enough to anchor, light enough that the card breathes.
 - **Bilingual line (branded email, not the signature):** a short two-line promise —
   English (`Senior US accounting — in your language.`) over its native Russian.
   The compact signature omits it to stay low; use it in the branded email's body or

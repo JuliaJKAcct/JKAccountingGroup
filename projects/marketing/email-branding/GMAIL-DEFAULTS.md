@@ -53,7 +53,7 @@ and readable," not "make it on-brand." The brand lands in the signature.
 
 The only surface Gmail auto-inserts on **every** email, so it carries the identity:
 the Medallion, the petrol-teal / bronze / ivory palette, the serif-name → mono-kicker →
-sans-body rhythm, the DIRECT / EMAIL / WEB / OFFICE label rows, and the one bronze
+sans-body rhythm, the DIRECT / EMAIL / WEB label rows, and the one bronze
 button. Paste-ready file: [`signatures/julia.html`](./signatures/julia.html). Full
 walkthrough: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). In brief:
 
