@@ -29,10 +29,11 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-01](#idea-01--client-by-client-accounting--bookkeeping-sops) | Client-by-client accounting & bookkeeping SOPs (with blanks for sensitive data) | `projects/sops/` | Medium | Not started |
 | [IDEA-02](#idea-02--text-message-alerts-to-julia) | Text-message / phone alerts to Julia for important notifications | Firm ops / tooling | Low (needs decision) | Researching |
 | [IDEA-03](#idea-03--social-media-posts-with-the-notebooklm-strategy) | Restart social media with the NotebookLM content strategy | `projects/marketing/collateral/` | **High** | Not started (blocked on inputs) |
-| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | **Started** — Julia's signature + email system built |
+| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | **Started** — Julia's signature finalized (Medallion); skill built; team rollout pending |
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
+| [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Parked — waiting on the booking URL + a proper headshot |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -168,11 +169,21 @@ template, and a "how to install it in Gmail" guide.
 paste-ready signature (`signatures/julia.html`), a reusable per-teammate template,
 a branded email layout, an email style guide (fonts + fallbacks, color, dark mode),
 and Gmail install steps. Uses email-safe technique (tables, inline CSS, hosted PNG
-logo, font fallbacks) so it survives Gmail / Outlook / Apple Mail.
+logo, font fallbacks) so it survives Gmail / Outlook / Apple Mail. **Julia's
+signature is finalized** as the compact *business-card grammar* card (teal Medallion
+panel + ivory details with the DIRECT / EMAIL / WEB / OFFICE rows), with her real
+details (Julia Kononova, MBA, EA · CEO · Chief Accountant · 786-318-1505). We also
+built the [`email-signature` skill](./.claude/skills/email-signature/) as the
+reusable engine, with **two documented install paths** — a public hosted-image URL
+(the Medallion appears on paste) or uploading the image in Gmail. *(We explored
+adding Julia's photo — circular seal, photo panels — but her current lifestyle photo
+isn't the right raw material for a small avatar; that improvement is parked in
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo).)*
 
-**What's left to finish Julia's:** her real details (last name, exact title,
-phone, booking link) and the hosted logo URL dropped into `signatures/julia.html`;
-then roll out to the rest of the team by copying the template.
+**What's left:** roll out to the rest of the team by copying the template, and the
+two signature improvements now tracked in
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the real
+booking link + a proper headshot photo).
 
 **Capability check:** the branded HTML is done. Actually *installing* into each
 person's Gmail is manual (paste into Gmail settings) — the Gmail connector can
@@ -183,8 +194,10 @@ read/label/draft but doesn't set account signatures.
 firm-wide system to put *every* generated document on the Design System.
 `email-branding` is its first concrete instance.
 
-**Priority:** Medium · **Status:** **Started** — system built; awaiting Julia's real
-contact details + hosted logo URL to finalize hers, then team rollout
+**Priority:** Medium · **Status:** **Started** — system + `email-signature` skill
+built; Julia's signature finalized (Medallion); team rollout pending.
+Signature-specific improvements tracked in
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo).
 
 ---
 
@@ -304,6 +317,47 @@ Google Doc or Word file is more limited, so those may lean on templates rather t
 an automated restyle.
 
 **Priority:** Medium · **Status:** Not started — parked for a design discussion
+
+---
+
+## IDEA-08 — Improve Julia's email signature: booking link + photo
+
+**What Julia wants:** two concrete improvements to her now-finalized signature.
+
+1. **The real "Book a consultation" link.** Today the signature's one call-to-action
+   points at a `mailto:` placeholder (opens an email pre-filled with subject
+   "Consultation request"), because the firm's booking page / website isn't live
+   yet. **When the real booking URL exists, swap the `mailto:` for it** in
+   `projects/marketing/email-branding/signatures/julia.html` (and use it for the
+   template's `{{BOOKING_URL}}`). This is Julia's explicit follow-up: update the link
+   in the signature as soon as it's ready.
+2. **An elegant photo / headshot.** We explored adding Julia's photo (small circular
+   seal, big circle, photo panels, full-height photo column). The honest conclusion:
+   her current photo is a *lifestyle / environmental* shot (full-body, seated, styled
+   set with a plant and pouf) — lovely for a website "About", but the wrong raw
+   material for a small, crisp signature avatar, so every treatment read as "a photo
+   placed without care." To do it elegantly we need a **proper headshot**: tight
+   head-and-shoulders, plain/neutral (or brand-color) background, even lighting. With
+   that, a small circular seal that echoes the Medallion looks impeccable.
+
+**Why it matters:** the booking link is the signature's only CTA — a placeholder
+link wastes it; and a tasteful founder headshot builds trust for a boutique,
+founder-led firm.
+
+**Where it fits:** [`projects/marketing/email-branding/`](./projects/marketing/email-branding/),
+applied via the [`email-signature` skill](./.claude/skills/email-signature/) (the
+engine is already built — this is a fill-in, not new construction).
+
+**What we need to start:** (1) the real booking URL; (2) a purpose-shot headshot on
+a plain background (a quick studio/phone headshot, or an AI-headshot generated from a
+selfie). Either input can move independently — the link swap needs nothing but the URL.
+
+**Capability check:** trivial to apply once the inputs exist — the skill, template,
+and install paths are done. The link swap is a one-line edit; the photo is a
+drop-in once a suitable headshot is in hand.
+
+**Priority:** Medium · **Status:** Parked — waiting on the booking URL and/or a
+proper headshot. (The signature ships now with the Medallion; these are enhancements.)
 
 ---
 
