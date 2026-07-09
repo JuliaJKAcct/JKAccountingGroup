@@ -60,21 +60,67 @@ the US get caught between two failures:
 - Real financial upside (the $1M+ saved stat lives here)
 - A relationship they can actually lean on
 
-## One-line pitch
+## The pitch
+
+The conversational pitch — pain first, then us as the answer to it. Written to
+be **said, not read**: something Julia can repeat across a table to many people
+without it sounding scripted.
 
 **English:**
-> We're the accounting partner for foreign business owners building in the
-> US — so you're never scrambling at year-end, never guessing on IRS rules,
-> and never stuck without someone who actually understands your business when
-> you need an answer.
+> Honestly, the hardest part for a foreign business owner coming to the US is
+> that you don't know the rules yet — and that's exactly where we come in. We
+> basically become your finance department: bookkeeping, taxes, staying
+> compliant with the IRS. You focus on the business, we've got the rest. And
+> when you need us, you're not waiting days for a reply — one message on
+> WhatsApp and you've got an advisor who knows your business and speaks your
+> language.
 
-**Russian:** not yet drafted. See Open item below.
+**Russian:**
+> Честно говоря, когда вы иностранный предприниматель и только приезжаете в
+> США, самое сложное — это то, что вы ещё не знаете здешних правил. Вот тут и
+> подключаемся мы. Мы, по сути, становимся вашим финансовым отделом:
+> бухгалтерия, налоги, соответствие требованиям IRS. Вы занимаетесь бизнесом —
+> остальное на нас. А если понадобимся — не придётся днями ждать ответа: одно
+> сообщение в WhatsApp, и рядом советник, который знает ваш бизнес и говорит
+> на вашем языке.
 
-## Open item
+## Answering "What do you do?"
 
-Translate the one-line pitch (and, as needed, the positioning above) into
-Russian — natively, preserving the emotional weight, not a literal
-translation. Per the brand guide's bilingual rule, RU must read as if written
-by a native speaker, not machine-translated. Julia flagged this is harder to
-get right in her own second-pass writing than in English, since tone/nuance
-doesn't map directly — worth a dedicated pass rather than a quick translation.
+Not a pitch — a natural, casual answer for when someone asks what the firm
+does. Same DNA (lead with the pain, then the fix), but told *about* clients
+rather than sold *to* the listener. Short and to the point.
+
+**English:**
+> Foreign business owners come to the US and don't know how things work here —
+> the tax rules especially, but also the local regulations and standards — so
+> we become their finance department: bookkeeping, taxes, IRS compliance, all
+> in their own language.
+
+**Russian:**
+> Иностранные предприниматели приезжают в США и не знают, как здесь всё
+> устроено — прежде всего налоговые правила, но и местные нормы и стандарты, —
+> поэтому мы становимся их финансовым отделом: бухгалтерия, налоги,
+> соответствие требованиям IRS, и всё это на их родном языке.
+
+**Notes on the copy.** Both pieces lead with the pain (you don't know the rules
+here) and land on the firm as the answer. Key term choices, deliberate:
+- **"finance department,"** not "financial partner" — "partner" can read as an
+  investor/backer and "financial" drifts toward wealth management; "finance
+  department" is the firm's own reframe in
+  [`../referral-offer-strategy/strategy.md`](../referral-offer-strategy/strategy.md)
+  ("outsourced finance department"), signals more than a bookkeeper, and clearly
+  means support *inside* your company. RU: «финансовый отдел».
+- **"advisor"** (RU «советник») keeps the senior, personal relationship — a
+  real person you reach, not a call center.
+- The responsiveness line signals fast access (WhatsApp, the channel this
+  audience already uses) **without** promising 24/7 — consistent with the
+  firm's "within 1 business day" standard in the strategy doc.
+- Stakes stay implicit and on-voice — no fear, no immigration claims.
+
+The "what do you do?" pain keeps **tax rules** as the headline reason (the
+biggest, most relatable one) and widens from there to the local regulations and
+standards — it's not *only* taxes, it's how everything is done here. Per the
+brand guide's bilingual rule, RU is written natively, not machine-translated
+(«прежде всего налоговые правила, но и местные нормы и стандарты» — "first and
+foremost the tax rules, but also the local norms and standards" — matching
+quality, not word-for-word).
