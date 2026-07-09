@@ -100,9 +100,22 @@ in that folder.
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
   QuickBooks), not this repo.
-- **Before you finish, check structure and indexes.** Confirm files landed in the
-  right folders and that the index tables (this file's Layout + "Where to start", and
-  `projects/README.md`) reflect the change.
+- **Two people work here in parallel — keep `main` and the indexes coherent.**
+  Julia and Lilian both drive this repo through Claude, often in separate sessions
+  at the same time, so branches and edits collide. Every session: **start from the
+  latest `origin/main`** and rebase onto it before pushing (never stack on stale
+  history); when a push is rejected or a merge conflicts, resolve by rebasing
+  **without clobbering the other person's work** (force-push only history that's
+  already merged). **Before you finish, re-check that the navigation maps still
+  match reality** — the actual folders under [`projects/`](./projects/) and the
+  skills in [`.claude/skills/`](./.claude/skills/) must agree with the index tables
+  that describe them: this file's Layout + "Where to start",
+  [`README.md`](./README.md), [`projects/README.md`](./projects/README.md), and
+  [`projects/marketing/README.md`](./projects/marketing/README.md). Keep
+  [`BACKLOG.md`](./BACKLOG.md) internally consistent too (every quick-view row has a
+  matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
+  missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
+  Julia rather than leaving it.
 - **Every PR gets an independent review before merge.** When you open a pull
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
