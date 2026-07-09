@@ -34,6 +34,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Parked — waiting on the booking URL + a proper headshot |
+| [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -358,6 +359,56 @@ drop-in once a suitable headshot is in hand.
 
 **Priority:** Medium · **Status:** Parked — waiting on the booking URL and/or a
 proper headshot. (The signature ships now with the Medallion; these are enhancements.)
+
+---
+
+## IDEA-09 — Build our own GoProposal alternative
+
+**What Julia wants:** build the firm's own in-house version of **GoProposal** (the
+proposal / pricing / engagement-letter tool for accountants) so the firm can **stop
+paying the subscription**. Julia will provide screenshots of the entire GoProposal
+questionnaire plus all the information needed; from that, Claude builds an
+equivalent: a guided questionnaire → a pricing engine that encodes the firm's fee
+rules → a branded, client-ready proposal (and, if wanted, an engagement letter).
+
+**Why it matters:** kills a recurring SaaS cost, and — because we own it — the
+questionnaire, the pricing logic, and the proposal design all live on our Design
+System and can be changed instantly, with no vendor limits or per-seat fees.
+
+**Where it fits:** its own new project (e.g. `projects/proposal-tool/`), most likely
+a self-contained HTML/JS app — questionnaire + pricing calculator — that outputs a
+branded proposal. It leans directly on
+[IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) (the
+on-brand document system) for the proposal's look, and reuses the intake pattern
+from [IDEA-05](#idea-05--reasonable-compensation-client-organizer) (the
+reasonable-comp organizer). The fee schedule / pricing rules are firm data — kept in
+the firm's control, not exposed publicly.
+
+**What we need to start (from Julia):**
+1. **Screenshots of the entire GoProposal questionnaire** — every question, field,
+   and option, in order.
+2. **The pricing logic** — the services offered and how price is calculated (tiers,
+   multipliers, minimums, add-ons, monthly vs. annual), plus any rules ("if X then
+   Y").
+3. **The proposal + engagement-letter wording** the firm uses or wants, and what the
+   client ultimately sees/receives.
+4. **The acceptance step** — does the client need to e-sign / accept online, and
+   what do you use for that today?
+
+**Capability check:** the core is very buildable and fully ownable — a questionnaire
++ pricing calculator + branded proposal is exactly the kind of self-contained
+HTML/JS + Design System artifact we can host ourselves, with no subscription. Two
+pieces need a *decision*, not just a build:
+
+- **E-signature / online acceptance** — there's no dedicated e-sign connector today,
+  so options are (a) generate the branded proposal/PDF and collect acceptance more
+  simply (reply-to-accept, a checkbox + timestamp, or a signing tool the firm
+  already has), or (b) add an e-sign integration later.
+- **Hosting / how the client opens it** — a shareable link vs. a PDF vs. a hosted
+  page. To settle in the design discussion.
+
+**Priority:** Medium · **Status:** Not started — waiting on Julia's screenshots +
+pricing logic
 
 ---
 
