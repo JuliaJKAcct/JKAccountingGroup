@@ -172,7 +172,7 @@ a branded email layout, an email style guide (fonts + fallbacks, color, dark mod
 and Gmail install steps. Uses email-safe technique (tables, inline CSS, hosted PNG
 logo, font fallbacks) so it survives Gmail / Outlook / Apple Mail. **Julia's
 signature is finalized** as the compact *business-card grammar* card (teal Medallion
-panel + ivory details with the DIRECT / EMAIL / WEB / OFFICE rows), with her real
+panel + ivory details with the DIRECT / EMAIL / WEB rows), with her real
 details (Julia Kononova, MBA, EA · CEO · Chief Accountant · 786-318-1505). We also
 built the [`email-signature` skill](./.claude/skills/email-signature/) as the
 reusable engine, with **two documented install paths** — a public hosted-image URL

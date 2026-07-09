@@ -87,7 +87,7 @@ phone / booking link are filled into their own file when they're rolled out.
   there is one. A dead accent is worse than none.
 - The signature follows the firm's **business-card grammar**: a petrol-teal panel
   (Medallion + wordmark) beside an ivory details panel with the bronze diamond and the
-  DIRECT / EMAIL / WEB / OFFICE label rows. Panel color is `#123841` to match the
+  DIRECT / EMAIL / WEB label rows. Panel color is `#123841` to match the
   Medallion tile (no box). Both panels carry explicit `bgcolor` for dark-mode safety.
 - The design was built and pressure-tested with the `impeccable` skill via a design
   workflow (3 directions → judge → adversarial verify for email-safety, contrast,

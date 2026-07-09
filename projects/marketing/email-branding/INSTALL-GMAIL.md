@@ -43,7 +43,7 @@ the Medallion is hosted — pick the one that matches your method from Step 1:
 - **`signatures/julia.html`** — the canonical file; the Medallion is a **local
   reference**, so you paste it and then **upload** the Medallion in Gmail (**Method B**).
 
-Both are already filled in (name, credentials, role, the DIRECT / EMAIL / WEB / OFFICE
+Both are already filled in (name, credentials, role, the DIRECT / EMAIL / WEB
 rows, and the email‑linked booking link) — **nothing to edit**; swap the booking link
 for a real booking URL whenever you like.
 

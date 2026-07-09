@@ -50,7 +50,8 @@ These are why a "simple" tweak can silently break for a recipient. Keep all of t
   vanishes. Never remove these.
 - **Panel color = `#123841`** to match the Medallion PNG's baked-in tile exactly, so the
   mark sits seamlessly with no visible box. Never recolor / box / stretch the logo.
-- **Bronze stays rare** (`#9C6A39`) — only the small diamond ◆ and the one booking link.
+- **Bronze stays rare** — only the small diamond ◆ (`#9C6A39`) and the one booking link
+  (Bronze *ink* `#7E5430`, the darker step so the 9.5px link clears 4.5:1 contrast).
   Never a second accent, background, or third font. Never ship the booking link pointing
   at an empty `{{BOOKING_URL}}` — fill it or point it at `mailto:`.
 - **Outlook/Word hardening stays:** `mso-table-lspace/rspace:0`, `mso-line-height-rule:exactly`,

@@ -52,13 +52,13 @@ rules follow from it, and every file here obeys them:
 
 The firm's **business-card grammar**, translated to email: a two-panel card.
 
-- **Panel A — petrol teal (`#123841`).** The Medallion, the serif wordmark
-  "JK Accounting Group", and "EST. MIAMI" in mono. The panel color is set to
+- **Panel A — petrol teal (`#123841`).** The Medallion and the serif wordmark
+  "JK Accounting Group". The panel color is set to
   `#123841` on purpose — it matches the Medallion PNG's baked-in tile exactly, so the
   mark sits seamlessly with **no visible box** (the logo is never boxed).
 - **Panel B — ivory (`#FBF8F2`).** The details: the name + credentials with a
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
-  WEB / OFFICE label rows** (mono uppercase labels in mid-teal, values in sans —
+  WEB label rows** (mono uppercase labels in mid-teal, values in sans —
   this label-row device is what gives it the card's finish), and one light bronze
   **booking link** — a text link, not a button, to keep the signature low. Kept
   deliberately short (no tagline block) so it reads as a signature, not a card.
@@ -70,9 +70,9 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
 - **One image only:** the reversed Medallion (`JK-medallion-reversed-512.png`) in Panel A.
   Everything else is live text, so the signature reads fully even before the image
   loads (or if a client blocks it).
-- **Outlook hardening.** The bronze button is a nested `bgcolor` cell with
-  `mso-padding-alt` (real padding in Word's engine); tables carry
-  `mso-table-lspace/rspace:0`; `mso-line-height-rule:exactly` on text panels.
+- **Outlook hardening.** Tables carry `mso-table-lspace/rspace:0`;
+  `mso-line-height-rule:exactly` on text panels. (There is no button to harden —
+  the booking action is a plain text link.)
 - Rounded corners are a bonus; Outlook squares them, which is fine.
 
 ## Color (from the Design System)
@@ -84,30 +84,36 @@ Same palette as everything else, same 60/32/8 discipline — teal / ivory / bron
 | Petrol Teal | `#123841` | Links, header band, primary brand color |
 | Deep Teal | `#0D2A31` | Names/headings, email footer band |
 | Mid Teal | `#245C66` | The mono kicker (title line) |
-| Warm Bronze | `#9C6A39` | **The one accent** — the single CTA button, and the header seam. Nothing else. |
+| Warm Bronze | `#9C6A39` | **The one accent** — the diamond ◆ beside the name; the branded email's CTA button and header seam. Nothing else. |
+| Bronze ink | `#7E5430` | The signature's booking link — bronze darkened (`--bronze-600`) so small text clears 4.5:1 contrast |
 | Soft Ivory | `#F6F3EC` | Page background behind the email |
 | Paper | `#FBF8F2` | Email card surface |
 | Body ink | `#22201A` | Body text |
-| Muted | `#5F5849` | Secondary lines (location, disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
+| Muted | `#5F5849` | Secondary / fine-print lines (e.g. a disclaimer) — darkened from the brand `#6F6857` so small text clears 4.5:1 contrast |
 | Hairline | `#DAD4C6` | Dividers, card borders |
 
 **Bronze stays rare** — reserved for the one action (the signature's booking *link*,
 or the branded email's CTA button), plus the small fixed brand marks: the diamond
 **◆** beside the name and the 3px seam under the branded-email header. Never a
 background, never filler — it holds roughly the 8% of the 60/32/8 balance.
-(`EST. MIAMI` and the Medallion's diamonds use bronze-*light* `#CFA268`, a distinct token.)
+The signature's booking link sits in Bronze *ink* `#7E5430` (small text needs the
+darker step for 4.5:1); the diamond stays Warm Bronze `#9C6A39`.
+(The Medallion's diamonds use bronze-*light* `#CFA268`, a distinct token.)
 
 ## Type rhythm
 
 The brand's fingerprint — **mono kicker → serif headline → sans body** — is the
 same in email:
 
-- **Name / headline:** serif, 600 weight, tight tracking (`-0.012em`).
-- **Title line:** the mono uppercase kicker, tracked `0.11em` — the role
+- **Name / headline:** serif, 600 weight, tight tracking (`-0.01em`).
+- **Title line:** the mono uppercase kicker, tracked `0.1em` (the DIRECT / EMAIL /
+  WEB labels sit slightly tighter at `0.08em`) — the role
   (`CEO · CHIEF ACCOUNTANT`); the firm name sits in the teal-panel wordmark. Also
-  the `DIRECT / EMAIL / WEB / OFFICE` labels. Don't multiply the kicker style.
+  the `DIRECT / EMAIL / WEB` labels. Don't multiply the kicker style.
 - **Body & contact:** sans, ~10px in the compact signature, ~16px in the branded
-  email, line height ≥1.6.
+  email; line height ≥1.6 in the branded email, ~1.35 in the compact signature. In
+  the signature the contact values sit at medium (500) weight — bold enough to
+  anchor, light enough that the card breathes.
 - **Bilingual line (branded email, not the signature):** a short two-line promise —
   English (`Senior US accounting — in your language.`) over its native Russian.
   The compact signature omits it to stay low; use it in the branded email's body or
