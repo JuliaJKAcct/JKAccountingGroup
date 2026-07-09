@@ -32,7 +32,7 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 | [Marketing · Referral & Offer Strategy](./projects/marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
-| [SOPs](./projects/sops/) | The firm's standard operating procedures. | Planning |
+| [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
 
 The four **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
