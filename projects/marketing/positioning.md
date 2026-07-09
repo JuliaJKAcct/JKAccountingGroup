@@ -63,28 +63,32 @@ the US get caught between two failures:
 ## One-line pitch
 
 **English:**
-> You run the business — we take care of everything on the financial side:
-> the bookkeeping, the taxes, keeping you right with the IRS. You don't need
-> to know all the rules here, that's what we're for. And whenever something
-> comes up, you're not stuck with a call center — you call us, and you're
-> talking to someone who actually knows your business and speaks your
+> Look, if you're a foreign business owner coming to the US, here's what we
+> actually do for you: we become your financial partner and take care of
+> everything on that side — the bookkeeping, the taxes, keeping you compliant
+> with the IRS. You don't need to know all the rules here, that's what we're
+> for. And whenever something comes up, you're not stuck with a call center —
+> you've got an advisor who actually knows your business and speaks your
 > language.
 
 **Russian:**
-> Смотрите: вы занимаетесь бизнесом, а всю финансовую сторону мы берём на
-> себя — бухгалтерию, налоги, чтобы с IRS всё было чисто. Вам не нужно
-> разбираться во всех здешних правилах, для этого есть мы. А если что-то
-> возникает, вы не висите на линии кол-центра — вы звоните нам и говорите с
-> человеком, который по-настоящему знает ваш бизнес и говорит на вашем языке.
+> Смотрите: если вы иностранный предприниматель и начинаете своё дело здесь,
+> в США, — вот что мы для вас делаем. Мы становимся вашим финансовым
+> партнёром и берём на себя всю эту сторону: бухгалтерию, налоги, чтобы с IRS
+> всё было чисто. Вам не нужно разбираться во всех здешних правилах, для этого
+> есть мы. А если что-то возникает, вы не звоните в кол-центр — рядом ваш
+> советник, который по-настоящему знает ваш бизнес и говорит на вашем языке.
 
 Written to be **said, not read** — a conversational pitch Julia can repeat to
-many people without it sounding scripted. Same content as before (we handle
-the full financial side; you don't have to learn the rules; a real person who
-knows you and speaks your language), just in plain spoken register instead of
-polished ad copy. Both languages carry the same three moves: *we take it off
-your plate → you don't need to become the expert → when something comes up,
-you reach a real person, not a call center.* Per the brand guide's bilingual
-rule — each language written natively (the RU opens with «Смотрите:», the way
-you'd actually start the sentence, not a translation of "Look"), match quality
-not word-for-word. Stakes stay implicit and on-voice — no fear, no immigration
-claims.
+many people without it sounding scripted. It names the audience out loud
+("foreign business owner coming to the US") so the right person hears *this is
+about me*, and keeps the three relationship words that make it land —
+**partner**, **advisor**, and **foreign business owner** — inside plain spoken
+sentences rather than ad copy. Same three moves in both languages: *we become
+your partner and take the whole financial side off your plate (bookkeeping,
+taxes, IRS compliance) → you don't need to become the expert → when something
+comes up, you reach your advisor, a real person who knows you and speaks your
+language, not a call center.* Per the brand guide's bilingual rule — each
+language written natively (RU opens with «Смотрите:», "advisor" → «советник»,
+"partner" → «партнёр»), match quality not word-for-word. Stakes stay implicit
+and on-voice — no fear, no immigration claims.
