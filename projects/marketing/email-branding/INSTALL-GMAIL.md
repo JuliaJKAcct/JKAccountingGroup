@@ -17,7 +17,7 @@ stores and serves it for you, automatically.
 The signature has just **one** image — the Medallion in the teal panel:
 
 - **Medallion (the only image):** the file to upload is
-  [`brand/logo/png/JK-medallion-reversed-512.png`](../../brand/logo/png/JK-medallion-reversed-512.png).
+  [`brand/logo/png/JK-medallion-reversed-512.png`](../../../brand/logo/png/JK-medallion-reversed-512.png).
   Everyone uses the same file. Everything else — the wordmark, the name, the label
   rows — is live text, so it always shows even before the image loads.
 

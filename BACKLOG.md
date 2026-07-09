@@ -28,8 +28,8 @@ ready to work, we open this file, pick one from the table, and go.
 |---|---|---|---|---|
 | [IDEA-01](#idea-01--client-by-client-accounting--bookkeeping-sops) | Client-by-client accounting & bookkeeping SOPs (with blanks for sensitive data) | `projects/sops/` | Medium | Not started |
 | [IDEA-02](#idea-02--text-message-alerts-to-julia) | Text-message / phone alerts to Julia for important notifications | Firm ops / tooling | Low (needs decision) | Researching |
-| [IDEA-03](#idea-03--social-media-posts-with-the-notebooklm-strategy) | Restart social media with the NotebookLM content strategy | `projects/marketing/` | **High** | Not started (blocked on inputs) |
-| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/email-branding/`](./projects/email-branding/) | Medium | **Started** — Julia's signature + email system built |
+| [IDEA-03](#idea-03--social-media-posts-with-the-notebooklm-strategy) | Restart social media with the NotebookLM content strategy | `projects/marketing/collateral/` | **High** | Not started (blocked on inputs) |
+| [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | **Started** — Julia's signature + email system built |
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
@@ -121,7 +121,7 @@ priorities.**
 **Why it matters:** the firm has gone quiet on social and needs to be visibly
 active again; this is top of the list to restart.
 
-**Where it fits:** [`projects/marketing/`](./projects/marketing/), using the
+**Where it fits:** [`projects/marketing/collateral/`](./projects/marketing/collateral/), using the
 NotebookLM MCP connector and the content-strategy work already in the repo (the
 Trend Scout / social-post material under the video pipeline). Posts stay on-brand
 via [`brand/`](./brand/).
@@ -159,7 +159,7 @@ so outbound email is on-brand across everyone.
 outdated signatures quietly erode the brand.
 
 **Where it fits:** now a project —
-[`projects/email-branding/`](./projects/email-branding/), built on
+[`projects/marketing/email-branding/`](./projects/marketing/email-branding/), built on
 [`brand/`](./brand/) (logo + design system are the source of truth). It outputs
 ready-to-paste HTML signatures (one per team member), a full branded email
 template, and a "how to install it in Gmail" guide.
@@ -269,7 +269,7 @@ The engine would most naturally be a **reusable Claude skill** in
 the existing `impeccable` design skill), likely paired with a small project that
 holds branded templates. This **generalizes** what
 [IDEA-04](#idea-04--brand-every-team-members-email-signature) already did for email:
-the [`email-branding`](./projects/email-branding/) project is the first concrete
+the [`email-branding`](./projects/marketing/email-branding/) project is the first concrete
 instance (email is one document type), and IDEA-07 extends the same approach to
 every document the firm produces.
 

@@ -10,7 +10,7 @@ This is the **front** of the pipeline. It answers a different question than the 
 Its output is a **Content Opportunity Brief** — a ranked set of topics, each with a JK-specific
 angle, an on-brand hook, a format, platform fit, and a compliance flag — from which you pick the
 next video. The latest full report lives in
-[`projects/video-generation/research/`](../../../../projects/video-generation/research/); read the
+[`projects/marketing/video-generation/research/`](../../../../projects/marketing/video-generation/research/); read the
 most recent one before scouting fresh, and refresh it roughly **quarterly and before each filing
 season.**
 
@@ -66,7 +66,7 @@ Then a calm hook (10–14 words, no fear), a format, and the sourced figure to a
 
 ## Workflow sketch (for a full refresh)
 Fan out the 5 sweep angles in parallel → dedupe candidate topics → verify each in parallel (drop
-*avoid*) → synthesize a ranked report → save to `projects/video-generation/research/<date>-content-opportunity-report.md`.
+*avoid*) → synthesize a ranked report → save to `projects/marketing/video-generation/research/<date>-content-opportunity-report.md`.
 Keep agents grounded with the JK context (audience, calm voice, platforms) and the integrity rules
 above. (The 2026-07-03 report was produced exactly this way.)
 

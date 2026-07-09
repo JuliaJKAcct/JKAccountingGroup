@@ -1,6 +1,6 @@
 <!--
   VIDEO SCRIPT + FLOWS PRODUCTION BRIEF — output template.
-  Copy this file to projects/video-generation/scripts/<topic-slug>-<YYYY-MM-DD>.md and fill every
+  Copy this file to projects/marketing/video-generation/scripts/<topic-slug>-<YYYY-MM-DD>.md and fill every
   {{PLACEHOLDER}}. Delete this comment and any unused optional rows when done. Keep the section
   order — it mirrors the pipeline hand-offs.
 -->

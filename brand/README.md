@@ -30,7 +30,7 @@ brand/
 ## Using it
 
 - **Marketing / any visual asset:** start from `JK-Brand-Guide.md`; see
-  [`projects/marketing/`](../projects/marketing/) for the prompt workflow.
+  [`projects/marketing/collateral/`](../projects/marketing/collateral/) for the prompt workflow.
 - **Branded documents (e.g. reports):** the design tokens in
   `design-system/styles.css` define the exact palette — Petrol Teal `#123841`,
   Warm Bronze `#9C6A39` (used once), Soft Ivory `#F6F3EC`, Source Serif 4 / IBM

@@ -32,14 +32,14 @@ referral-offer-strategy/
 
 No visual output yet. Once any of this strategy turns into a landing page,
 worksheet template, or scorecard deliverable, that output should follow
-[`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md) like every
+[`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) like every
 other client-facing asset.
 
 ## Skills & tooling
 
 None yet. If the worksheet templates or the free top-of-funnel quiz get
 built as a repeatable generation workflow, that's a candidate for a new
-skill in [`.claude/skills/`](../../.claude/skills/) — flag it when we get
+skill in [`.claude/skills/`](../../../.claude/skills/) — flag it when we get
 there.
 
 ## Outputs
@@ -56,7 +56,7 @@ folder (e.g. `templates/`, `landing-page/`) and update this section.
 
 This is a live strategy doc, not a finished spec — treat `strategy.md`'s
 "Open questions" section as the actual backlog for this project. Related
-work: [`../marketing/positioning.md`](../marketing/positioning.md) covers
+work: [`../positioning.md`](../positioning.md) covers
 the firm's core value-prop messaging (the two of these should stay
 consistent with each other); the IG video script brief lives in
-[`../marketing/`](../marketing/), not here.
+[`../video-generation/`](../video-generation/), not here.

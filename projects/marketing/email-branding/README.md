@@ -14,7 +14,7 @@ as everything else JK produces — the Medallion, the petrol-teal / bronze / ivo
 palette, the serif-headline / mono-kicker / sans-body rhythm — using **email-safe**
 HTML so it survives Gmail, Outlook and Apple Mail.
 
-It graduated from [`BACKLOG.md` → IDEA-04](../../BACKLOG.md). We started with
+It graduated from [`BACKLOG.md` → IDEA-04](../../../BACKLOG.md). We started with
 Julia's signature; the same template rolls out to the rest of the team.
 
 ## What's here
@@ -37,9 +37,9 @@ email-branding/
 
 Fully brand-driven; nothing is redefined here. Source of truth:
 
-- Rules & voice: [`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md)
-- Design tokens / CSS: [`../../brand/design-system/`](../../brand/design-system/)
-- Logos: [`../../brand/logo/`](../../brand/logo/)
+- Rules & voice: [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md)
+- Design tokens / CSS: [`../../../brand/design-system/`](../../../brand/design-system/)
+- Logos: [`../../../brand/logo/`](../../../brand/logo/)
 
 The one thing this project *adds* is the translation of the system into
 **email-safe** technique (tables, inline CSS, hosted PNG logo, font fallbacks) —
@@ -47,11 +47,11 @@ documented in [`EMAIL-STYLE-GUIDE.md`](./EMAIL-STYLE-GUIDE.md).
 
 ## Skills & tooling
 
-- [`email-signature`](../../.claude/skills/email-signature/) — the engine for this
+- [`email-signature`](../../../.claude/skills/email-signature/) — the engine for this
   project. Use it to modify a signature (resize, add/remove a line, swap the booking
   link), add a teammate, or edit the branded-email template. It encodes the email-safe
   rules and the Gmail image lessons so a change is quick and never breaks in a real inbox.
-- [`impeccable`](../../.claude/skills/impeccable/) — the firm's UI/design skill,
+- [`impeccable`](../../../.claude/skills/impeccable/) — the firm's UI/design skill,
   used (via `email-signature`) to design and pressure-test the signature and email
   layout on the brand.
 

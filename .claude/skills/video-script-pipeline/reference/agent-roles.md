@@ -30,7 +30,7 @@ video when there's no topic in hand. Skip when the user already has a topic + an
 **Receives:** the goal (awareness / educational / lead-gen), and the latest opportunity report if one
 exists.
 **Does:** per `content-strategy.md` — either read the latest
-[`projects/video-generation/research/`](../../../../projects/video-generation/research/) report and
+[`projects/marketing/video-generation/research/`](../../../../projects/marketing/video-generation/research/) report and
 pick from it, or run the demand+delivery sweep to refresh it. Apply the standing thesis (calm
 myth-correction lane; bicultural RU/UA wedge; adopt the structure, never the guru content) and the
 piggyback-angle formula. Keep demand qualitative — **never fabricate view/engagement metrics.**

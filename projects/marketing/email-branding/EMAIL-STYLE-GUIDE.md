@@ -2,7 +2,7 @@
 
 How outbound email looks when it's on the Design System. This guide is the rules;
 the files in `signatures/` and `templates/` are the rules made real. When anything
-here conflicts with [`brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md), the
+here conflicts with [`brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md), the
 brand guide wins.
 
 ## Two surfaces, one system

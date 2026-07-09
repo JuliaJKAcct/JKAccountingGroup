@@ -27,7 +27,7 @@ experiences, language barrier navigating the US system.
 **outsourced finance department for growing businesses**, not "bookkeepers
 who also do tax." The monthly service isn't bookkeeping — it's proactive
 financial management, with bookkeeping as one deliverable among several. (See
-[`../marketing/positioning.md`](../marketing/positioning.md) for the related
+[`../positioning.md`](../positioning.md) for the related
 year-round-partnership positioning work.)
 
 ## 2. The core funnel logic
@@ -226,5 +226,5 @@ Readiness Assessment → Ongoing advisory (Option 2 close)
 - **IG video scripts:** the original marketing project brief calls for
   15–30 sec Instagram scripts (hook + timed breakdown + CTA to book free
   consult) — tracked in
-  [`../marketing/`](../marketing/) / the `video-script-pipeline` skill, not
+  [`../video-generation/`](../video-generation/) / the `video-script-pipeline` skill, not
   here

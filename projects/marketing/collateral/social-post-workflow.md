@@ -79,7 +79,7 @@ sea nuestra marca".
 ## Marca
 
 No repetimos aquí colores ni tipografías (para no desincronizar). La fuente única
-es **[`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md)** — paleta,
+es **[`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md)** — paleta,
 tipografías, logo y voz. Claude aplica ese guide en cada acabado.
 
 ## Mejora continua

@@ -1,53 +1,53 @@
 # Marketing
 
-> **Status:** Active · **Owner:** Julia · **Started:** 2025
+> **Status:** Active · The firm's marketing work, grouped.
 
-Generate on-brand marketing collateral for JK Accounting Group with Claude —
-business cards, Instagram posts, graphics, flyers, and the copy on them,
-bilingual EN/RU (UA when asked).
-
-## Purpose
-
-Give the firm a fast, repeatable way to produce marketing material that is
-exactly on-brand without a designer in the loop each time. The brand rules live
-in [`brand/`](../../brand/); this project is the *instructions and prompts* that
-turn those rules into finished pieces.
+This folder groups the firm's **marketing projects** so they share one home, one
+operating persona ([`CLAUDE.md`](./CLAUDE.md) — a senior accounting-industry
+marketing strategist), and one shared offer positioning
+([`positioning.md`](./positioning.md)). Marketing is one part of the firm's
+work, not the purpose of the repo.
 
 ## What's here
 
 ```
 marketing/
-├── README.md                       ← you are here
-├── START-HERE.md                   ← the 5-minute setup, read this first
-├── claude-project-instructions.md  ← paste into a Claude Project's custom instructions
-├── starter-prompts.md              ← ready-made prompts for common assets
-├── positioning.md                  ← the offer: core value prop / messaging, EN (RU pending)
-└── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
+├── CLAUDE.md                  ← operating persona for all marketing work
+├── positioning.md             ← shared offer positioning: the pitch + "what do you do?" (EN/RU)
+├── collateral/                ← on-brand marketing collateral (cards, posts, flyers, copy)
+├── email-branding/            ← team email on the Design System — signatures + branded email
+├── video-generation/          ← on-brand marketing video (scripts + Flows briefs)
+└── referral-offer-strategy/   ← front-offer / referral-partner funnel strategy
 ```
+
+## Sub-projects
+
+| Project | What it is | Status |
+|---|---|---|
+| [`collateral/`](./collateral/) | On-brand marketing collateral generated with Claude. | Active |
+| [`email-branding/`](./email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
+| [`video-generation/`](./video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
+| [`referral-offer-strategy/`](./referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
+
+## Shared across the group
+
+- **[`positioning.md`](./positioning.md)** — the firm's core value prop and
+  messaging (the pitch and the "what do you do?" answer, EN/RU). Every marketing
+  project draws on it; keep it consistent with
+  [`referral-offer-strategy/strategy.md`](./referral-offer-strategy/strategy.md).
+- **[`CLAUDE.md`](./CLAUDE.md)** — the marketing operating persona, applied
+  automatically to any work in this subtree.
 
 ## Brand & design
 
-This project is fully brand-driven. Source of truth:
+All marketing output pulls from the shared [`brand/`](../../brand/) foundation —
+never redefine colors, type, or the logo here; reference `brand/` instead.
 
-- Rules & voice: [`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md)
-- Logos: [`../../brand/logo/`](../../brand/logo/)
-- Tokens / showcase: [`../../brand/design-system/`](../../brand/design-system/)
+## Working on this
 
-## Skills & tooling
-
-- [`impeccable`](../../.claude/skills/impeccable/) — general UI/design skill,
-  available for polishing any HTML/visual output.
-
-## Outputs
-
-Generated assets are produced in Claude (or a Claude Project) from the prompts
-here. Save finished pieces you want to keep into this folder (e.g. an
-`assets/` subfolder) so they're versioned with the project.
-
-## Working on this / notes for AI
-
-Read `START-HERE.md` first. Never invent colors, fonts, stats, or an alternative
-logo — defer to `brand/JK-Brand-Guide.md`. Copy that guide's rules into the
-prompt context rather than restating them from memory. For *what* the offer is
-(problem, solution, payoff, one-line pitch), defer to `positioning.md` rather
-than restating the value prop from scratch each time.
+Each sub-project has its own `README.md` with the specifics — read it before
+working in that folder. Starting a new marketing project? Copy
+[`../_template`](../_template/) to `marketing/<new-name>/`, fill in its README,
+and add a row to the sub-projects table above (and to the indexes in the root
+[`README.md`](../../README.md), [`../README.md`](../README.md), and
+[`CLAUDE.md`](../../CLAUDE.md)).
