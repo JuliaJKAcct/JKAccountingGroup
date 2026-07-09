@@ -32,6 +32,7 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 | [Video Generation](./projects/video-generation/) | On-brand marketing video. | Planning |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Planning |
+| [Referral & Offer Strategy](./projects/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
 
 See [`projects/README.md`](./projects/README.md) for the full index and the
 standard every project follows.
