@@ -3,28 +3,34 @@
 About ten minutes, once per person. **You do not need a website** — Gmail can store
 the one image for you.
 
-## Step 1 — The images (the easy way: let Gmail host them)
+## Step 1 — The one image (the Medallion) needs a home online
 
 An email you send lives on the *recipient's* screen, so any picture in it has to be
 stored somewhere on the internet their email app can reach — a file that lives only
-on your computer shows up as a broken box. That's the only reason "a public address"
-comes up at all.
+on your computer shows up as a broken box. The signature has just **one** image — the
+Medallion in the teal panel; everything else (wordmark, name, label rows) is live text
+that always shows. There are **two ways** to give the Medallion a home:
 
-**You don't need to set any of that up.** Gmail's signature editor has an
-**Insert image → Upload** button: you pick a file from your computer, and Google
-stores and serves it for you, automatically.
+**Method A — point it at a public web address (the smoothest — recommended).**
+The Medallion already lives at a public URL in the firm's repo:
+`https://raw.githubusercontent.com/JuliaJKAcct/JKAccountingGroup/main/brand/logo/png/JK-medallion-reversed-512.png`.
+When the signature's `<img src>` points there, the Medallion **appears the moment you
+paste** — no upload, nothing to place. **Julia's signature is already set up this way**
+(the `julia-hosted.html` build). This is the method that worked cleanly; use it unless
+you have a reason not to.
 
-The signature has just **one** image — the Medallion in the teal panel:
+**Method B — let Gmail host it (upload).** Gmail's signature editor has an
+**Insert image → Upload** button: pick the file
+[`brand/logo/png/JK-medallion-reversed-512.png`](../../../brand/logo/png/JK-medallion-reversed-512.png)
+and Google stores it. Rock-solid display and no dependency on the repo — **but** placing
+the uploaded image into the teal panel is fiddly (Gmail drops it at the cursor, and the
+broken-image box is hard to select). Use this only if Method A isn't an option, or for a
+**personal photo** you'd rather not host in a public repo.
 
-- **Medallion (the only image):** the file to upload is
-  [`brand/logo/png/JK-medallion-reversed-512.png`](../../../brand/logo/png/JK-medallion-reversed-512.png).
-  Everyone uses the same file. Everything else — the wordmark, the name, the label
-  rows — is live text, so it always shows even before the image loads.
-
-> *Later, once the firm website is live, you can instead host this at a public URL
-> (e.g. `https://www.jkaccountinggroup.com/assets/email/…`) and point the signature
-> there, so every teammate's is pixel-identical. Google Drive share links don't work
-> for this. Until then, Gmail's upload is the simplest path.*
+> *Method A depends on that repo file staying publicly reachable. Later, once the firm
+> website is live, host the Medallion at a stable URL (e.g.
+> `https://www.jkaccountinggroup.com/assets/email/…`) and point the signature there so
+> every teammate's is pixel-identical. Google Drive share links don't work for this.*
 
 ## Step 2 — Julia's file is ready
 
@@ -45,16 +51,19 @@ its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    drag to just past the last line (bottom‑right) so the entire card is highlighted.
 3. Copy (⌘C / Ctrl‑C). You're copying the *rendered* signature, not the code.
 
-## Step 4 — Paste into Gmail and add the Medallion
+## Step 4 — Paste into Gmail
 
 1. Gmail → **Settings** (gear) → **See all settings** → **General** tab.
 2. Scroll to **Signature** → **Create new** → name it "JK".
-3. Click into the signature box and **paste** (⌘V / Ctrl‑V). The text, colors and
-   layout come across; the **Medallion** in the teal panel may show as a small broken
-   image — that's expected, we fix it next.
-4. Click the broken Medallion once to select it (or click where it should be), then in
-   the signature toolbar choose **Insert image → Upload**, and upload
-   `JK-medallion-reversed-512.png`. Gmail stores it and drops it in.
+3. Click into the signature box and **paste** (⌘V / Ctrl‑V). The text, colors, layout
+   and links come across.
+4. **The Medallion:**
+   - **Method A (hosted URL — Julia's setup):** it appears **right away**, already in the
+     teal panel. Nothing to do — skip to Step 5.
+   - **Method B (upload):** the Medallion shows as a small broken box. Click where it
+     should be, choose **Insert image → Upload** in the signature toolbar, and upload
+     `JK-medallion-reversed-512.png`. (Heads-up: Gmail inserts at the cursor, so it can
+     land in the wrong spot — this is why Method A is smoother.)
 
 ## Step 5 — Make it the default and test
 

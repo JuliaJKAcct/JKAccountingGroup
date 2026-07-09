@@ -60,20 +60,51 @@ These are why a "simple" tweak can silently break for a recipient. Keep all of t
   one-off a single person.
 
 ## The Gmail image reality (the biggest lesson — do not relitigate it)
-You **cannot preview the Medallion showing** in a Gmail draft, and you cannot force a
-recipient to display it. Learned the hard way:
-- Gmail proxies external images through `googleusercontent.com`. A `cid:` attachment, a
-  raw GitHub URL, and a jsDelivr URL **all fail** to render in a Gmail draft/received
-  message. Don't burn time trying to make a draft show the image — it won't.
-- The **only reliable way** the Medallion shows is uploading it once inside Gmail's
-  signature editor (**Insert image → Upload**); Google then hosts it on
-  `googleusercontent` and serves it to recipients. That's what `INSTALL-GMAIL.md`
-  documents, and it's a **manual** step (the Gmail connector can't set account signatures).
-- So: **verify the design by rendering the HTML locally and screenshotting** (below), not
-  by sending a Gmail draft. Reserve Gmail for the actual install/test on the account.
-- If asked "why can't recipients see it / can we force it," the honest answer is: image
-  display is the recipient's setting; we make the signature read fully **without** the
-  image (live text + teal panel), and the upload path is what makes it show for most.
+The one image (the Medallion) has to be **hosted somewhere the inbox can reach** — email
+never carries a local file. There are **two ways** to get it there; knowing which to use
+saves the most time. (Both are a **manual** install step — the Gmail connector can't set
+account signatures.)
+
+**Method 1 — a public HTTPS URL in the `src` (smoothest; use when the image is public).**
+Point the Medallion `<img src>` at a genuinely public URL — e.g. the reversed Medallion in
+the firm's public repo:
+`https://raw.githubusercontent.com/<owner>/<repo>/main/brand/logo/png/JK-medallion-reversed-512.png`.
+When the signature is pasted into Gmail's settings editor, the browser loads that URL
+directly, so **the Medallion appears immediately, already in the right cell** — no upload,
+no fighting the broken-image box. Gmail proxies it in received mail too. Verify the URL is
+truly public first: `curl -sSI <url>` must return `200` + `content-type: image/*`.
+(Confirmed working for Julia's signature — this is now the recommended install.)
+
+**Method 2 — upload in Gmail (Google-hosted; most bulletproof, no repo dependency).**
+Insert image → Upload; Google hosts it on `googleusercontent`. Display is rock-solid and
+survives the repo going private — **but placing the uploaded image is fiddly**: Gmail drops
+it at the text caret, not into the teal panel, and the pasted broken-image placeholder is
+nearly impossible to select (users get stuck here — the image lands anywhere but the cell).
+Reach for this only when a public URL isn't available, or for a **personal photo** you don't
+want in a public repo (see the privacy note).
+
+**What actually fails** (don't repeat these): `cid:` attachments; a URL that isn't really
+reachable (a private repo/branch → Gmail's proxy 404s); images in programmatically-created
+drafts. The earlier "raw GitHub URL never shows" conclusion was wrong — the URL just wasn't
+public yet. If "it didn't show," check the URL is public, don't assume URLs never work.
+
+**You still can't force a blocked image to appear** — display is the recipient's setting.
+That's why the teal panel + live-text wordmark carry the brand with no image at all. Still
+**verify the design by rendering locally and screenshotting** (below); a local browser here
+may fail to fetch the URL through the proxy even when it's public (an env artifact — trust
+the `curl` check).
+
+**Privacy note:** the firm Medallion/logo is fine to host publicly. A **personal photo** on a
+public repo is a judgment call — prefer Method 2 (Gmail upload) for a personal photo so the
+image isn't published in the repo.
+
+## Signature variants (Medallion vs. photo)
+The default left panel is the **Medallion** — one shared logo, structurally identical for
+everyone (the safe default). A **personal-photo** variant — a circular headshot in the teal
+panel instead of the Medallion — is a supported alternative when someone prefers it; keep the
+rest of the card identical. A photo is a per-person image: host it per Method 2 or a public
+URL, mind the privacy note, and crop it to a circle (`border-radius:50%`) sized to the panel.
+If the firm adopts photos team-wide, fold it into the template so everyone stays consistent.
 
 ## Workflow A — modify an existing signature
 1. **Understand the ask** and read the target file + the style guide. If it's a visual
@@ -100,8 +131,9 @@ recipient to display it. Learned the hard way:
    signatures, e.g. `julia.html`, carry no comment). Then `grep "{{"` the finished file
    to be sure none remain — with the comment gone, any match is a real leftover.
 3. Render + screenshot to verify it matches the others exactly.
-4. Point them to `INSTALL-GMAIL.md` for the ~10-minute Gmail install (paste → upload the
-   Medallion → set as default for new + replies).
+4. Point them to `INSTALL-GMAIL.md` for the ~10-minute Gmail install (paste the signature —
+   with the Medallion hosted via a public URL, or uploaded in Gmail — then set as default
+   for new + replies).
 
 ## Verify (always do this before saying "done")
 Render the HTML headless and screenshot it — this is the real check, not a Gmail draft.
@@ -135,4 +167,5 @@ Preview the fallback fonts (the render uses them) — that's what recipients see
 - Bronze appears once; only Design-System colors used.
 - Rendered + screenshotted and eyeballed in the fallback fonts — reads as a footer.
 - Template and docs still in sync; structurally identical to the other signatures.
-- Install path is clear (upload the Medallion in Gmail; that's the only way it shows).
+- Install path is clear — the Medallion is hosted (a public URL in the `src`, or uploaded
+  in Gmail); the live-text panel still covers anyone who blocks images.
