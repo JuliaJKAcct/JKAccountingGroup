@@ -32,21 +32,33 @@ broken-image box is hard to select). Use this only if Method A isn't an option, 
 > `https://www.jkaccountinggroup.com/assets/email/…`) and point the signature there so
 > every teammate's is pixel-identical. Google Drive share links don't work for this.*
 
-## Step 2 — Julia's file is ready
+## Step 2 — Julia's files are ready
 
-`signatures/julia.html` is already filled in — name, credentials, role, the
-DIRECT / EMAIL / WEB / OFFICE rows, and the (email‑linked) booking link.
-**Nothing to edit.** Just install it (Steps 3–5); swap the booking link for a real
-booking URL whenever you like.
+There are **two** paste-ready versions of Julia's signature, identical except for how
+the Medallion is hosted — pick the one that matches your method from Step 1:
+
+- **`signatures/julia-hosted.html`** — the Medallion `src` points at the **public URL**
+  (**Method A**). Paste it and the Medallion shows immediately; nothing to upload. This
+  is the paste-and-go file, and the one Julia uses.
+- **`signatures/julia.html`** — the canonical file; the Medallion is a **local
+  reference**, so you paste it and then **upload** the Medallion in Gmail (**Method B**).
+
+Both are already filled in (name, credentials, role, the DIRECT / EMAIL / WEB / OFFICE
+rows, and the email‑linked booking link) — **nothing to edit**; swap the booking link
+for a real booking URL whenever you like.
 
 **Adding a teammate?** Copy `_template.html` → `signatures/<firstname>.html` and fill
 its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
 (e.g. `, CPA`), `{{ROLE_CAPS}}`, `{{EMAIL}}`, `{{PHONE}}`, `{{PHONE_TEL}}`, and
 `{{BOOKING_URL}}` (or point it at their email). Search for `{{` to be sure none remain.
+For a Method‑A install, also point the Medallion `src` at the public URL (as
+`julia-hosted.html` does) — or just use Method B (upload) with the local-reference file.
 
 ## Step 3 — Copy the rendered signature
 
-1. Open `signatures/julia.html` in a web browser (double‑click it).
+1. Open the file for **your method** in a web browser (double‑click it):
+   - **Method A** → `signatures/julia-hosted.html` (the Medallion loads from the web).
+   - **Method B** → `signatures/julia.html`.
 2. Select the whole signature card — click just above the teal panel (top‑left) and
    drag to just past the last line (bottom‑right) so the entire card is highlighted.
 3. Copy (⌘C / Ctrl‑C). You're copying the *rendered* signature, not the code.

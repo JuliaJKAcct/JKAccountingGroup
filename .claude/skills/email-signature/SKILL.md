@@ -73,7 +73,9 @@ When the signature is pasted into Gmail's settings editor, the browser loads tha
 directly, so **the Medallion appears immediately, already in the right cell** — no upload,
 no fighting the broken-image box. Gmail proxies it in received mail too. Verify the URL is
 truly public first: `curl -sSI <url>` must return `200` + `content-type: image/*`.
-(Confirmed working for Julia's signature — this is now the recommended install.)
+(Confirmed working — the repo ships `signatures/julia-hosted.html` with this URL baked
+into the `src` as the paste-and-go build, while `signatures/julia.html` keeps a local
+reference; this is the recommended install.)
 
 **Method 2 — upload in Gmail (Google-hosted; most bulletproof, no repo dependency).**
 Insert image → Upload; Google hosts it on `googleusercontent`. Display is rock-solid and
