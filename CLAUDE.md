@@ -107,7 +107,8 @@ in that folder.
   history); when a push is rejected or a merge conflicts, resolve by rebasing
   **without clobbering the other person's work** (force-push only history that's
   already merged). **Before you finish, re-check that the navigation maps still
-  match reality** — the actual folders under [`projects/`](./projects/) and the
+  match reality for anything your session touched** — the actual folders under
+  [`projects/`](./projects/) and the
   skills in [`.claude/skills/`](./.claude/skills/) must agree with the index tables
   that describe them: this file's Layout + "Where to start",
   [`README.md`](./README.md), [`projects/README.md`](./projects/README.md), and
@@ -115,7 +116,10 @@ in that folder.
   [`BACKLOG.md`](./BACKLOG.md) internally consistent too (every quick-view row has a
   matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
   missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
-  Julia rather than leaving it.
+  Julia rather than leaving it. A **weekly scheduled audit** (a Claude Routine,
+  Monday mornings) sweeps the entire repo for this drift and can also be run on
+  demand ("audit the repo") — so a working session only needs to keep the indexes
+  right for what it touched, not re-audit the whole repo every time.
 - **Session identity is provenance, not a wall.** The whole firm shares one Claude
   Code account, so git alone can't tell whose hands did what. It's one firm with one
   goal — **never partition the repo or the work by person**; Julia and Lilian split
