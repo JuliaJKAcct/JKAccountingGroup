@@ -107,7 +107,8 @@ in that folder.
   history); when a push is rejected or a merge conflicts, resolve by rebasing
   **without clobbering the other person's work** (force-push only history that's
   already merged). **Before you finish, re-check that the navigation maps still
-  match reality** — the actual folders under [`projects/`](./projects/) and the
+  match reality for anything your session touched** — the actual folders under
+  [`projects/`](./projects/) and the
   skills in [`.claude/skills/`](./.claude/skills/) must agree with the index tables
   that describe them: this file's Layout + "Where to start",
   [`README.md`](./README.md), [`projects/README.md`](./projects/README.md), and
