@@ -21,6 +21,7 @@ marketing/
 ├── START-HERE.md                   ← the 5-minute setup, read this first
 ├── claude-project-instructions.md  ← paste into a Claude Project's custom instructions
 ├── starter-prompts.md              ← ready-made prompts for common assets
+├── positioning.md                  ← the offer: core value prop / messaging, EN (RU pending)
 └── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
 ```
 
@@ -47,4 +48,6 @@ here. Save finished pieces you want to keep into this folder (e.g. an
 
 Read `START-HERE.md` first. Never invent colors, fonts, stats, or an alternative
 logo — defer to `brand/JK-Brand-Guide.md`. Copy that guide's rules into the
-prompt context rather than restating them from memory.
+prompt context rather than restating them from memory. For *what* the offer is
+(problem, solution, payoff, one-line pitch), defer to `positioning.md` rather
+than restating the value prop from scratch each time.
