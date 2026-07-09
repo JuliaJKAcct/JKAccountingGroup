@@ -63,29 +63,28 @@ the US get caught between two failures:
 ## One-line pitch
 
 **English:**
-> We're the accounting partner for foreign business owners building in the
-> US — we handle the entire financial side of the business, from bookkeeping
-> and taxes to full IRS compliance, so you're never scrambling at year-end,
-> never guessing at rules you were never taught, and never lying awake
-> wondering what might have slipped through. Just the quiet confidence that
-> someone who knows this system is in your corner, protecting everything
-> you're building here.
+> You run the business — we take care of everything on the financial side:
+> the bookkeeping, the taxes, keeping you right with the IRS. You don't need
+> to know all the rules here, that's what we're for. And whenever something
+> comes up, you're not stuck with a call center — you call us, and you're
+> talking to someone who actually knows your business and speaks your
+> language.
 
 **Russian:**
-> Мы — бухгалтерский партнёр иностранных предпринимателей, которые строят
-> бизнес в США. Мы берём на себя всю финансовую сторону дела — от бухгалтерии
-> и налогов до полного соответствия требованиям IRS, — чтобы вы не готовили
-> отчётность в панике перед закрытием года, не гадали о правилах, которым вас
-> никто не учил, и не лежали без сна, думая, не упустили ли что-то важное.
-> Только спокойная уверенность: рядом всегда тот, кто знает эту систему, стоит
-> на вашей стороне и оберегает всё, что вы здесь строите.
+> Смотрите: вы занимаетесь бизнесом, а всю финансовую сторону мы берём на
+> себя — бухгалтерию, налоги, чтобы с IRS всё было чисто. Вам не нужно
+> разбираться во всех здешних правилах, для этого есть мы. А если что-то
+> возникает, вы не висите на линии кол-центра — вы звоните нам и говорите с
+> человеком, который по-настоящему знает ваш бизнес и говорит на вашем языке.
 
-Native rendering, not a literal translation. Both languages carry the same
-structure: full-scope framing (we handle bookkeeping, taxes, IRS compliance)
-→ the triad of anxieties it removes (scrambling → guessing → lying awake over
-what slipped through) → the peace-of-mind payoff (someone who knows the
-system is on your side, protecting what you're building here). Per the brand
-guide's bilingual rule — write each language natively, match quality not
-word-for-word. The stakes are kept implicit ("everything you're building
-here") rather than claiming tax compliance protects immigration status, to
-stay honest and on-voice (no fear, real facts only).
+Written to be **said, not read** — a conversational pitch Julia can repeat to
+many people without it sounding scripted. Same content as before (we handle
+the full financial side; you don't have to learn the rules; a real person who
+knows you and speaks your language), just in plain spoken register instead of
+polished ad copy. Both languages carry the same three moves: *we take it off
+your plate → you don't need to become the expert → when something comes up,
+you reach a real person, not a call center.* Per the brand guide's bilingual
+rule — each language written natively (the RU opens with «Смотрите:», the way
+you'd actually start the sentence, not a translation of "Look"), match quality
+not word-for-word. Stakes stay implicit and on-voice — no fear, no immigration
+claims.
