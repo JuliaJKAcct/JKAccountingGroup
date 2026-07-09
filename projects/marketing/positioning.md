@@ -64,17 +64,28 @@ the US get caught between two failures:
 
 **English:**
 > We're the accounting partner for foreign business owners building in the
-> US — so you're never scrambling at year-end, never guessing on IRS rules,
-> and never stuck without someone who actually understands your business when
-> you need an answer.
+> US — we handle the entire financial side of the business, from bookkeeping
+> and taxes to full IRS compliance, so you're never scrambling at year-end,
+> never guessing at rules you were never taught, and never lying awake
+> wondering what might have slipped through. Just the quiet confidence that
+> someone who knows this system is in your corner, protecting everything
+> you're building here.
 
 **Russian:**
-> Мы — бухгалтерский партнёр иностранных предпринимателей, строящих бизнес в
-> США: с нами вы никогда не паникуете перед закрытием года, никогда не
-> гадаете, чего ждать от IRS, и никогда не остаётесь один на один с
-> вопросом — рядом всегда тот, кто по-настоящему понимает ваш бизнес.
+> Мы — бухгалтерский партнёр иностранных предпринимателей, которые строят
+> бизнес в США. Мы берём на себя всю финансовую сторону дела — от бухгалтерии
+> и налогов до полного соответствия требованиям IRS, — чтобы вы не готовили
+> отчётность в панике перед закрытием года, не гадали о правилах, которым вас
+> никто не учил, и не лежали без сна, думая, не упустили ли что-то важное.
+> Только спокойная уверенность: рядом всегда тот, кто знает эту систему, стоит
+> на вашей стороне и оберегает всё, что вы здесь строите.
 
-Native rendering, not a literal translation — same triadic emotional beat
-(scrambling → guessing → stuck alone) resolving on the same payoff (someone
-who understands your business), per the brand guide's bilingual rule (write
-each language natively, match quality not word-for-word).
+Native rendering, not a literal translation. Both languages carry the same
+structure: full-scope framing (we handle bookkeeping, taxes, IRS compliance)
+→ the triad of anxieties it removes (scrambling → guessing → lying awake over
+what slipped through) → the peace-of-mind payoff (someone who knows the
+system is on your side, protecting what you're building here). Per the brand
+guide's bilingual rule — write each language natively, match quality not
+word-for-word. The stakes are kept implicit ("everything you're building
+here") rather than claiming tax compliance protects immigration status, to
+stay honest and on-voice (no fear, real facts only).
