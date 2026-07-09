@@ -67,17 +67,18 @@ the US get caught between two failures:
 > actually do for you: we become your financial partner and take care of
 > everything on that side — the bookkeeping, the taxes, keeping you compliant
 > with the IRS. You don't need to know all the rules here, that's what we're
-> for. And whenever something comes up, you're not stuck with a call center —
-> you've got an advisor who actually knows your business and speaks your
-> language.
+> for. And whenever something comes up, you're not waiting days for an
+> answer — you just message us on WhatsApp, and you've got an advisor who
+> actually knows your business and speaks your language.
 
 **Russian:**
 > Смотрите: если вы иностранный предприниматель и начинаете своё дело здесь,
 > в США, — вот что мы для вас делаем. Мы становимся вашим финансовым
 > партнёром и берём на себя всю эту сторону: бухгалтерию, налоги, чтобы с IRS
 > всё было чисто. Вам не нужно разбираться во всех здешних правилах, для этого
-> есть мы. А если что-то возникает, вы не звоните в кол-центр — рядом ваш
-> советник, который по-настоящему знает ваш бизнес и говорит на вашем языке.
+> есть мы. А если что-то возникает, вам не нужно днями ждать ответа — вы
+> просто пишете нам в WhatsApp, и рядом ваш советник, который по-настоящему
+> знает ваш бизнес и говорит на вашем языке.
 
 Written to be **said, not read** — a conversational pitch Julia can repeat to
 many people without it sounding scripted. It names the audience out loud
@@ -87,8 +88,11 @@ about me*, and keeps the three relationship words that make it land —
 sentences rather than ad copy. Same three moves in both languages: *we become
 your partner and take the whole financial side off your plate (bookkeeping,
 taxes, IRS compliance) → you don't need to become the expert → when something
-comes up, you reach your advisor, a real person who knows you and speaks your
-language, not a call center.* Per the brand guide's bilingual rule — each
-language written natively (RU opens with «Смотрите:», "advisor" → «советник»,
-"partner" → «партнёр»), match quality not word-for-word. Stakes stay implicit
-and on-voice — no fear, no immigration claims.
+comes up, you're not waiting days — you reach your advisor fast on WhatsApp, a
+real person who knows you and speaks your language.* Per the brand guide's
+bilingual rule — each language written natively (RU opens with «Смотрите:»,
+"advisor" → «советник», "partner" → «партнёр»), match quality not
+word-for-word. The responsiveness line stays honest and on-voice — it signals
+fast access (WhatsApp, the channel this audience already lives in) without
+promising 24/7, consistent with the firm's "within 1 business day" standard.
+Stakes stay implicit — no fear, no immigration claims.
