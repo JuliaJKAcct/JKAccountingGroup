@@ -9,7 +9,7 @@ finished narration script and a build-ready **ElevenLabs Flows** production brie
 
 Extend the firm's marketing output from static assets into short-form video (social clips,
 explainers, promos) while keeping everything on-brand and, eventually, bilingual EN/RU. Sister
-project to [`marketing/`](../marketing/), focused on motion.
+project to [`collateral/`](../collateral/), focused on motion.
 
 The hard part of video isn't rendering — it's getting a **tight, accurate, on-brand script** and a
 clear plan for the visuals. This project's engine (the `video-script-pipeline` skill) runs a
@@ -32,14 +32,14 @@ script + Flows brief (output → `scripts/`). Start from the latest report in
 
 ## Brand & design
 
-Follows the shared brand: [`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md) (colors,
+Follows the shared brand: [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) (colors,
 type, logo, voice). Motion should feel **calm and premium — no hype, no fear.** The voice is a calm
 senior advisor; "viral" here means clear and useful enough to share, never clickbait. The firm's
 existing **avatar** is the only on-screen face (no stock/AI people).
 
 ## Skills & tooling
 
-- **[`video-script-pipeline`](../../.claude/skills/video-script-pipeline/)** — the engine. **Trend
+- **[`video-script-pipeline`](../../../.claude/skills/video-script-pipeline/)** — the engine. **Trend
   Scout** (picks a view-worthy, on-brand topic + angle) → Researcher → Scriptwriter → Producer →
   Social/Viral editor → Fact-check + Brand-guardian → a locked script and an ElevenLabs Flows
   production brief. The Trend Scout method is in the skill's `reference/content-strategy.md`; its
@@ -61,7 +61,7 @@ keep them in ElevenLabs / local storage and note the link in the script file if 
 
 ## Working on this / notes for AI
 
-- Start from the [`video-script-pipeline` skill](../../.claude/skills/video-script-pipeline/) — read
+- Start from the [`video-script-pipeline` skill](../../../.claude/skills/video-script-pipeline/) — read
   its `SKILL.md` before producing anything.
 - **One idea per video.** If a topic has three points, that's three videos.
 - **Real facts only** — every tax figure needs a source + tax year; no invented stats. The

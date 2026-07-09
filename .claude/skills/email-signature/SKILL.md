@@ -5,7 +5,7 @@ description: Create, modify, or roll out a JK Accounting Group on-brand email si
 
 # Email Signature — JK Accounting Group
 
-The engine behind the [`email-branding`](../../../projects/email-branding/) project.
+The engine behind the [`email-branding`](../../../projects/marketing/email-branding/) project.
 It puts outbound email on the firm Design System: the **signature card** at the foot
 of every message (the day-to-day workhorse) and the **branded-email template** for
 designed sends. This skill exists so that changing a signature — or adding a
@@ -23,8 +23,8 @@ It also covers edits to the branded-email template (`templates/branded-email.htm
 ## Source of truth — read these first, don't duplicate them
 The design spec already lives in the project. This skill is the *process*; those are
 the *rules*. Before editing, read:
-- [`projects/email-branding/EMAIL-STYLE-GUIDE.md`](../../../projects/email-branding/EMAIL-STYLE-GUIDE.md) — the email-safe rules: fonts + fallbacks, color, composition, dark mode.
-- [`projects/email-branding/README.md`](../../../projects/email-branding/README.md) — project shape and "notes for AI."
+- [`projects/marketing/email-branding/EMAIL-STYLE-GUIDE.md`](../../../projects/marketing/email-branding/EMAIL-STYLE-GUIDE.md) — the email-safe rules: fonts + fallbacks, color, composition, dark mode.
+- [`projects/marketing/email-branding/README.md`](../../../projects/marketing/email-branding/README.md) — project shape and "notes for AI."
 - [`brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) — the brand authority. When anything here conflicts with it, the brand guide wins.
 - The files being changed: `signatures/_template.html`, `signatures/<name>.html`, `templates/branded-email.html`.
 
@@ -91,7 +91,7 @@ recipient to display it. Learned the hard way:
    (`mailto:`, `tel:`, web, booking).
 
 ## Workflow B — add a teammate
-1. `cp projects/email-branding/signatures/_template.html projects/email-branding/signatures/<firstname>.html`
+1. `cp projects/marketing/email-branding/signatures/_template.html projects/marketing/email-branding/signatures/<firstname>.html`
    (lowercase first name).
 2. Fill every placeholder: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    (post-nominals incl. leading comma, or delete the span), `{{ROLE_CAPS}}`, `{{EMAIL}}`,
@@ -120,7 +120,7 @@ await b.close();
 Then **look** at the screenshot: proportions (footer, not billboard), the Medallion sits
 unboxed on the teal panel, bronze appears exactly once, contrast holds, nothing clipped.
 Preview the fallback fonts (the render uses them) — that's what recipients see.
-`projects/email-branding/preview.html` shows all three surfaces together.
+`projects/marketing/email-branding/preview.html` shows all three surfaces together.
 
 ## Keep it in sync (leave the project consistent)
 - A structural change to a signature → mirror it in `_template.html`.

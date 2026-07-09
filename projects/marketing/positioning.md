@@ -107,7 +107,7 @@ here) and land on the firm as the answer. Key term choices, deliberate:
 - **"finance department,"** not "financial partner" — "partner" can read as an
   investor/backer and "financial" drifts toward wealth management; "finance
   department" is the firm's own reframe in
-  [`../referral-offer-strategy/strategy.md`](../referral-offer-strategy/strategy.md)
+  [`./referral-offer-strategy/strategy.md`](./referral-offer-strategy/strategy.md)
   ("outsourced finance department"), signals more than a bookkeeper, and clearly
   means support *inside* your company. RU: «финансовый отдел».
 - **"advisor"** (RU «советник») keeps the senior, personal relationship — a

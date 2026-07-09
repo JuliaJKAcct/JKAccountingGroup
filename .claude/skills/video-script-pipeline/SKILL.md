@@ -25,7 +25,7 @@ through every pass.
 ## Read these first
 - `reference/content-strategy.md` — the **Trend Scout** front layer: how to pick a view-worthy,
   on-brand topic + angle (demand + delivery research); the latest opportunity report lives in
-  `projects/video-generation/research/`.
+  `projects/marketing/video-generation/research/`.
 - `reference/agent-roles.md` — the writers'-room roles (Trend Scout, Researcher, Scriptwriter, Producer, Social/Viral, Fact-checker, Brand-guardian): what each receives, does, and returns.
 - `reference/script-frameworks.md` — hook, structure, pacing, CTA, and word-count-for-duration patterns for calm short-form finance explainers.
 - `reference/compliance-and-brand.md` — the line-by-line guardrails the Fact-checker and Brand-guardian enforce (tax-content compliance + JK brand voice for video).
@@ -55,7 +55,7 @@ through every pass.
 
 ### Step 0 — Content strategy (pick a topic + angle) — *optional / periodic*
 Run the **Trend Scout** (`content-strategy.md`) when there's no topic in hand, or when the user
-wants a view-worthy idea. Read the latest report in `projects/video-generation/research/` and pick
+wants a view-worthy idea. Read the latest report in `projects/marketing/video-generation/research/` and pick
 an opportunity, **or** refresh it with the demand+delivery sweep. Hand the pipeline a **content
 brief**: the topic, the JK angle (the part generic creators skip), an on-brand hook, a format,
 platform fit, and the compliance flag. **Skip this step if the user already has a topic + angle** —
@@ -119,7 +119,7 @@ Copy `reference/script-template.md` and fill it out:
 - **Social copy** — caption, on-screen hook text, hashtags, and the educational-not-advice line.
 
 ### Step 8 — Save the output
-Save to `projects/video-generation/scripts/<topic-slug>-<YYYY-MM-DD>.md` (slug = lowercase,
+Save to `projects/marketing/video-generation/scripts/<topic-slug>-<YYYY-MM-DD>.md` (slug = lowercase,
 hyphenated topic; create the folder if missing). Tell the user the path. **Don't commit or
 push unless the user asks** — scripts are working output, like the reasonable-comp reports.
 

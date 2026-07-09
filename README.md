@@ -26,15 +26,18 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 
 | Project | What it is | Status |
 |---|---|---|
-| [Marketing](./projects/marketing/) | On-brand marketing collateral generated with Claude. | Active |
-| [Email Branding](./projects/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
+| [Marketing · Collateral](./projects/marketing/collateral/) | On-brand marketing collateral generated with Claude. | Active |
+| [Marketing · Email Branding](./projects/marketing/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
+| [Marketing · Video Generation](./projects/marketing/video-generation/) | On-brand marketing video. | Active |
+| [Marketing · Referral & Offer Strategy](./projects/marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
-| [Video Generation](./projects/video-generation/) | On-brand marketing video. | Planning |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Planning |
-| [Referral & Offer Strategy](./projects/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
 
-See [`projects/README.md`](./projects/README.md) for the full index and the
+The four **Marketing** rows are one group under
+[`projects/marketing/`](./projects/marketing/), which also holds the firm's
+shared offer positioning and the marketing operating-persona for Claude. See
+[`projects/README.md`](./projects/README.md) for the full index and the
 standard every project follows.
 
 ## The brand

@@ -21,13 +21,16 @@ the US.
 │                  Used by every project. Never duplicate this into a project.
 ├── projects/      one folder per initiative (see projects/README.md)
 │   ├── _template/                 copy this to start a new project
-│   ├── marketing/                 on-brand marketing collateral (Active)
-│   ├── email-branding/            team email on the Design System — signatures + email layout (Active)
+│   ├── marketing/                 GROUP of the firm's marketing projects — has its own CLAUDE.md persona
+│   │   ├── CLAUDE.md              marketing operating-persona (auto-applies to everything below)
+│   │   ├── positioning.md         shared offer positioning — the pitch + "what do you do?" (EN/RU)
+│   │   ├── collateral/            on-brand marketing collateral (Active)
+│   │   ├── email-branding/        team email on the Design System — signatures + email layout (Active)
+│   │   ├── video-generation/      on-brand marketing video (Active)
+│   │   └── referral-offer-strategy/  front-offer + referral-partner funnel strategy (Planning)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
-│   ├── video-generation/          on-brand marketing video (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
-│   ├── sops/                      firm standard operating procedures + client-task runbooks (Active)
-│   └── referral-offer-strategy/   front-offer + referral-partner funnel strategy (Planning)
+│   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
@@ -44,14 +47,15 @@ the US.
 | The request is about… | Go to |
 |---|---|
 | Colors, fonts, logo, voice, design tokens | [`brand/`](./brand/) — `JK-Brand-Guide.md` is the authority |
-| Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/`](./projects/marketing/) |
-| Email signatures, or the on-brand look of outbound email (the whole team) — change a signature, add a teammate, edit the branded email | the [`email-signature` skill](./.claude/skills/email-signature/) → [`projects/email-branding/`](./projects/email-branding/); see its `INSTALL-GMAIL.md` to roll one out |
+| Any **marketing** work — positioning, offers, campaigns, growth (the marketing operating-persona + the firm's pitch) | [`projects/marketing/`](./projects/marketing/) — [`CLAUDE.md`](./projects/marketing/CLAUDE.md) sets the persona, [`positioning.md`](./projects/marketing/positioning.md) holds the pitch + "what do you do?" |
+| Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/collateral/`](./projects/marketing/collateral/) |
+| Email signatures, or the on-brand look of outbound email (the whole team) — change a signature, add a teammate, edit the branded email | the [`email-signature` skill](./.claude/skills/email-signature/) → [`projects/marketing/email-branding/`](./projects/marketing/email-branding/); see its `INSTALL-GMAIL.md` to roll one out |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
-| Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/video-generation/scripts/`](./projects/video-generation/scripts/) |
+| Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/marketing/video-generation/scripts/`](./projects/marketing/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
-| Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/referral-offer-strategy/`](./projects/referral-offer-strategy/) |
+| Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
@@ -67,6 +71,13 @@ in that folder.
 - **Projects are self-contained** and follow one standard shape — see
   [`projects/README.md`](./projects/README.md). Outputs live inside their
   project in an obviously-named folder.
+- **Marketing work has an operating persona.** The firm's marketing projects
+  are grouped under [`projects/marketing/`](./projects/marketing/); anything in
+  that folder carries a senior accounting-industry marketing-strategist persona
+  defined in [`projects/marketing/CLAUDE.md`](./projects/marketing/CLAUDE.md),
+  which auto-loads for that subtree. The shared offer positioning — the pitch
+  and "what do you do?" answer — lives at
+  [`projects/marketing/positioning.md`](./projects/marketing/positioning.md).
 - **Repeatable workflows are skills — and flag skill-worthy work unprompted.**
   Repeatable workflows live as skills in [`.claude/skills/`](./.claude/skills/), and
   the project README links to the skill that powers it. When a task looks like it will
@@ -96,7 +107,9 @@ When asked to add a new project, keep the repo consistent by following these
 steps:
 
 1. `cp -r projects/_template projects/<new-name>` (lowercase, hyphenated,
-   named for the outcome).
+   named for the outcome). A **marketing** project goes under
+   `projects/marketing/<new-name>/` instead, so it inherits the marketing
+   persona; everything else lives at `projects/<new-name>/`.
 2. Fill in `projects/<new-name>/README.md` using the template's standard
    sections (Status line, Purpose, What's here, Brand & design, Skills &
    tooling, Outputs, Working on this).

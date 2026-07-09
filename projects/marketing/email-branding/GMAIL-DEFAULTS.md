@@ -5,7 +5,7 @@
 > close to our fonts as Gmail allows. It is deliberately straight about what Gmail
 > **can** and **cannot** do, so no one is surprised later.
 >
-> Design authority: [`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md).
+> Design authority: [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md).
 > Email-safe technique: [`EMAIL-STYLE-GUIDE.md`](./EMAIL-STYLE-GUIDE.md).
 > Step-by-step signature install: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md).
 
@@ -58,7 +58,7 @@ button. Paste-ready file: [`signatures/julia.html`](./signatures/julia.html). Fu
 walkthrough: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). In brief:
 
 1. **One image only** — the reversed Medallion
-   ([`JK-medallion-reversed-512.png`](../../brand/logo/png/JK-medallion-reversed-512.png),
+   ([`JK-medallion-reversed-512.png`](../../../brand/logo/png/JK-medallion-reversed-512.png),
    shared by everyone). Everything else is live text. You don't need to host it:
    Gmail's signature editor uploads and stores it for you (next step). *(If you do
    host it once the site is live, use a public HTTPS URL — Google Drive share links

@@ -5,7 +5,7 @@ Accounting Group — business cards, Instagram posts, graphics, flyers, social
 copy — that matches the firm exactly.
 
 The visual raw material (colors, fonts, logo, voice) is **not** stored here. It
-lives once, for the whole repo, in the shared **[`brand/`](../../brand/)**
+lives once, for the whole repo, in the shared **[`brand/`](../../../brand/)**
 folder. This project is the *instructions and prompts* for turning that brand
 into finished marketing pieces.
 
@@ -18,12 +18,12 @@ starter-prompts.md                ← ready-made prompts for common assets
 
 ## The brand lives in `brand/` (shared)
 ```
-../../brand/JK-Brand-Guide.md     ← the brand brain: colors, fonts, logo, voice
-../../brand/logo/                 ← the ENTIRE logo pack (all formats & variants)
+../../../brand/JK-Brand-Guide.md     ← the brand brain: colors, fonts, logo, voice
+../../../brand/logo/                 ← the ENTIRE logo pack (all formats & variants)
     svg/         vector masters (best quality, scalable)
     png/         ready-rendered images, multiple sizes
     favicon/     app/site icons
-../../brand/design-system/
+../../../brand/design-system/
     DESIGN.md                     full design tokens & components reference
     jk-brand-showcase.html        OPEN IN A BROWSER to see the whole system live
     styles.css                    production stylesheet (exact colors/spacing)

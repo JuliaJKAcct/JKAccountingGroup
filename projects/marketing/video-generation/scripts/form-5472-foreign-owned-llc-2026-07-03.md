@@ -55,7 +55,7 @@ in the CTA beat and in the post caption.)*
 ## 3. Flows production brief
 Avatar-led throughout (the approved avatar is the only face). Carry 9:16 · 1080×1920 into every
 node. Keep SFX subtle and music low/warm — this is the calm brand. See
-[`flows-production-brief.md`](../../../.claude/skills/video-script-pipeline/reference/flows-production-brief.md)
+[`flows-production-brief.md`](../../../../.claude/skills/video-script-pipeline/reference/flows-production-brief.md)
 for how each field maps to a node.
 
 | Beat | Type | Voice / Avatar | On-screen visual + overlay | SFX | Music | Dur |

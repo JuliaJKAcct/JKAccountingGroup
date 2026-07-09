@@ -5,7 +5,7 @@
 > **Method:** 5-angle research sweep → per-topic verification → synthesis (see *Method & confidence* at the end).
 
 This report answers *"what should we make, and how should we deliver it, to actually get views —
-on-brand?"* It feeds the front of the [`video-script-pipeline`](../../../.claude/skills/video-script-pipeline/)
+on-brand?"* It feeds the front of the [`video-script-pipeline`](../../../../.claude/skills/video-script-pipeline/)
 skill: pick a topic + angle here, then run the pipeline to produce the script and Flows brief.
 
 ---
@@ -428,7 +428,7 @@ foreign-contractor W-8BEN/1042-S track is separate.
 ## 7. How this feeds the pipeline
 
 This report is the **content-strategy layer** that sits in front of the
-[`video-script-pipeline`](../../../.claude/skills/video-script-pipeline/) skill. To make a video:
+[`video-script-pipeline`](../../../../.claude/skills/video-script-pipeline/) skill. To make a video:
 pick a ranked opportunity (or a niche/series idea) above, take its **JK angle + hook + format +
 compliance flag** as the brief, and run the pipeline — the Researcher verifies the specific figures,
 then Scriptwriter → Producer → Social/Viral → Fact-check + Brand-guardian produce the locked script
@@ -436,7 +436,7 @@ and the Flows production brief. The compliance flags here map directly to what t
 Fact-checker must enforce.
 
 The reusable method behind this report lives in the skill's
-[`reference/content-strategy.md`](../../../.claude/skills/video-script-pipeline/reference/content-strategy.md)
+[`reference/content-strategy.md`](../../../../.claude/skills/video-script-pipeline/reference/content-strategy.md)
 (the "Trend Scout" stage) so it can be re-run each quarter to refresh the opportunity list.
 
 ## 8. Method & confidence
