@@ -111,8 +111,9 @@ same in email:
   (`CEO · CHIEF ACCOUNTANT`); the firm name sits in the teal-panel wordmark. Also
   the `DIRECT / EMAIL / WEB` labels. Don't multiply the kicker style.
 - **Body & contact:** sans, ~10px in the compact signature, ~16px in the branded
-  email, line height ≥1.6. In the signature the contact values sit at medium (500)
-  weight — bold enough to anchor, light enough that the card breathes.
+  email; line height ≥1.6 in the branded email, ~1.35 in the compact signature. In
+  the signature the contact values sit at medium (500) weight — bold enough to
+  anchor, light enough that the card breathes.
 - **Bilingual line (branded email, not the signature):** a short two-line promise —
   English (`Senior US accounting — in your language.`) over its native Russian.
   The compact signature omits it to stay low; use it in the branded email's body or
