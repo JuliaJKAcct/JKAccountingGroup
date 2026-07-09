@@ -68,6 +68,13 @@ in that folder.
   [`brand/`](./brand/). Never copy logos or redefine the palette inside a
   project — reference `brand/` instead. When output conflicts with the brand
   guide, follow the guide and say what changed.
+- **Design & aesthetics run through the `impeccable` skill — by default, unprompted.**
+  Any task where how it *looks* matters — signatures, collateral, reports, slides, web
+  pages, diagrams, logos-in-context, layout, typography, color, polish — is done with the
+  [`impeccable`](./.claude/skills/impeccable/) skill together with the Design System and
+  [`brand/`](./brand/). Don't wait to be asked and don't freehand it; if the work is
+  visual/aesthetic, load `impeccable` first. (This is a standing rule so it never has to
+  be repeated per task.)
 - **Projects are self-contained** and follow one standard shape — see
   [`projects/README.md`](./projects/README.md). Outputs live inside their
   project in an obviously-named folder.
