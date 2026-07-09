@@ -53,8 +53,8 @@ and readable," not "make it on-brand." The brand lands in the signature.
 
 The only surface Gmail auto-inserts on **every** email, so it carries the identity:
 the Medallion, the petrol-teal / bronze / ivory palette, the serif-name → mono-kicker →
-sans-body rhythm, the DIRECT / EMAIL / WEB label rows, and the one bronze
-button. Paste-ready file: [`signatures/julia.html`](./signatures/julia.html). Full
+sans-body rhythm, the DIRECT / EMAIL / WEB label rows, and the one light bronze
+booking link. Paste-ready file: [`signatures/julia.html`](./signatures/julia.html). Full
 walkthrough: [`INSTALL-GMAIL.md`](./INSTALL-GMAIL.md). In brief:
 
 1. **One image only** — the reversed Medallion
@@ -81,8 +81,8 @@ as one system.
 - **Fonts fall back.** Recipients see Georgia + Arial + Courier, not our web fonts.
   Color, layout and the Medallion carry the brand.
 - **Remote images can be blocked** until the recipient clicks "display images." The
-  Medallion keeps real `alt` text, and because the wordmark, name and all contacts are
-  live text, the signature still reads fully even with the image off.
+  Medallion is decorative (`alt=""`) because the live-text wordmark beside it already
+  names the firm — so the signature still reads fully even with the image off.
 - **Outlook squares** the rounded corners — acceptable, the color still reads.
 - **Length cap.** Gmail limits a signature to roughly 10,000 characters; our table
   fits comfortably.
