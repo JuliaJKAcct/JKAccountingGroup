@@ -23,9 +23,9 @@ doesn't live only in chat history.
 
 ```
 referral-offer-strategy/
-├── README.md      ← you are here
-└── strategy.md     ← the full strategy: funnel logic, partner positioning,
-                       Growth Accelerator Series, scorecard design, open questions
+├── README.md     ← you are here
+└── strategy.md   ← the full strategy: funnel logic, partner positioning,
+                     Growth Accelerator Series, scorecard design, open questions
 ```
 
 ## Brand & design
