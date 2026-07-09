@@ -116,6 +116,17 @@ in that folder.
   matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
   missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
   Julia rather than leaving it.
+- **Session identity is provenance, not a wall.** The whole firm shares one Claude
+  Code account, so git alone can't tell whose hands did what. It's one firm with one
+  goal — **never partition the repo or the work by person**; Julia and Lilian split
+  tasks, not territory. Do track *where work came from*: **Lilian identifies herself
+  at the start of her sessions ("I'm Lilian"); Julia doesn't have to** — an
+  unidentified session is simply firm work (in practice, usually Julia). When a
+  session is Lilian's: address her (not Julia) in conversation, add a
+  `Worked-by: Lilian` trailer to that session's commits, and note it on PRs the
+  session opens. The point is diagnosis: when parallel sessions unknowingly touch
+  the same files and changes contradict each other, the trail shows where each side
+  originated so the clash can be untangled quickly.
 - **Every PR gets an independent review before merge.** When you open a pull
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
