@@ -68,13 +68,13 @@ the US get caught between two failures:
 > and never stuck without someone who actually understands your business when
 > you need an answer.
 
-**Russian:** not yet drafted. See Open item below.
+**Russian:**
+> Мы — бухгалтерский партнёр иностранных предпринимателей, строящих бизнес в
+> США: с нами вы никогда не паникуете перед закрытием года, никогда не
+> гадаете, чего ждать от IRS, и никогда не остаётесь один на один с
+> вопросом — рядом всегда тот, кто по-настоящему понимает ваш бизнес.
 
-## Open item
-
-Translate the one-line pitch (and, as needed, the positioning above) into
-Russian — natively, preserving the emotional weight, not a literal
-translation. Per the brand guide's bilingual rule, RU must read as if written
-by a native speaker, not machine-translated. Julia flagged this is harder to
-get right in her own second-pass writing than in English, since tone/nuance
-doesn't map directly — worth a dedicated pass rather than a quick translation.
+Native rendering, not a literal translation — same triadic emotional beat
+(scrambling → guessing → stuck alone) resolving on the same payoff (someone
+who understands your business), per the brand guide's bilingual rule (write
+each language natively, match quality not word-for-word).
