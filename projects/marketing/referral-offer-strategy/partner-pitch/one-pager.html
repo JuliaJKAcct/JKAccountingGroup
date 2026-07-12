@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Referral Partnership — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ivory); color:var(--body);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+
+  /* ---- Sheet ---- */
+  .sheet{
+    max-width:820px; margin:28px auto 56px; background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06), 0 24px 60px -28px rgba(9,31,36,.34);
+    overflow:hidden; border-radius:4px;
+    animation:rise .7s var(--ease) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ---- Masthead ---- */
+  .masthead{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:26px clamp(26px,5vw,44px) 22px; background:var(--paper);
+    border-bottom:1px solid var(--ivory-stroke);
+  }
+  .masthead svg{display:block; width:238px; height:auto; max-width:56vw}
+  .tag{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--bronze-700); text-align:right; line-height:1.7; white-space:nowrap;
+  }
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.13em}
+
+  /* ---- Hero (teal moment panel) ---- */
+  .hero{
+    background:
+      radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),
+      linear-gradient(160deg, var(--teal-800), var(--teal-900) 70%, var(--teal-950));
+    color:var(--on-dark); padding:clamp(34px,5.2vw,52px) clamp(26px,5vw,48px) clamp(30px,4.6vw,44px);
+  }
+  .kicker{
+    font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--bronze-300); margin:0 0 16px;
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:600; letter-spacing:-0.016em; line-height:1.12;
+    font-size:clamp(28px,4.4vw,42px); margin:0 0 16px; color:#fff; text-wrap:balance;
+    max-width:20ch;
+  }
+  .hero h1 em{font-style:italic; color:var(--bronze-300)}
+  .hero p{
+    margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.62; color:var(--on-dark);
+    max-width:60ch;
+  }
+  .hero .who{color:#fff; font-weight:600}
+
+  /* ---- Content ---- */
+  .body{padding:clamp(30px,4.6vw,46px) clamp(26px,5vw,48px) clamp(20px,3vw,28px)}
+  section{margin:0 0 clamp(30px,4vw,40px)}
+  h2{
+    font-family:var(--serif); font-weight:600; letter-spacing:-0.012em; color:var(--ink);
+    font-size:clamp(21px,3vw,27px); line-height:1.2; margin:0 0 6px; text-wrap:balance;
+  }
+  .lede{color:var(--muted); font-size:15.5px; margin:0 0 22px; max-width:64ch}
+  p{max-width:68ch}
+
+  /* diamond divider (echoes the medallion) */
+  .rule{display:flex; align-items:center; gap:14px; margin:0 0 22px; color:var(--border)}
+  .rule::before,.rule::after{content:""; height:1px; flex:1; background:var(--border-soft)}
+  .rule i{width:7px; height:7px; background:var(--bronze-500); transform:rotate(45deg); flex:none}
+
+  /* ---- The ladder (a connected progression, not a card grid) ---- */
+  .ladder{list-style:none; margin:0; padding:0; display:grid; gap:14px}
+  .step{
+    position:relative; display:grid; grid-template-columns:auto 1fr auto; align-items:start;
+    gap:18px; padding:20px 22px; border:1px solid var(--border-soft); border-radius:14px;
+    background:var(--white);
+  }
+  .step.mid{background:var(--paper); border-color:var(--bronze-500)}
+  .step.end{background:linear-gradient(180deg,#F3F6F5,#EDF2F1); border-color:#CBDBD8}
+  .step .n{
+    font-family:var(--mono); font-size:13px; font-weight:600; color:var(--teal-800);
+    width:30px; height:30px; border-radius:50%; border:1.5px solid var(--teal-800);
+    display:grid; place-items:center; margin-top:2px;
+  }
+  .step.mid .n{color:var(--bronze-700); border-color:var(--bronze-500)}
+  .step h3{
+    font-family:var(--serif); font-weight:600; font-size:18px; color:var(--ink);
+    margin:0 0 3px; letter-spacing:-0.01em;
+  }
+  .step p{margin:0; font-size:14.5px; color:var(--body); line-height:1.5}
+  .price{
+    text-align:right; white-space:nowrap; font-family:var(--mono); font-size:12px;
+    letter-spacing:.04em; color:var(--muted); text-transform:uppercase; margin-top:3px;
+  }
+  .price b{display:block; font-size:15px; color:var(--ink); letter-spacing:0}
+  .step.mid .price b{color:var(--bronze-700)}
+  .credit{display:block; white-space:normal; font-family:var(--sans); font-size:11.5px; letter-spacing:0;
+    text-transform:none; color:var(--bronze-700); margin-top:3px; margin-left:auto; max-width:15ch}
+
+  /* ---- Two ways ---- */
+  .ways{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .way{padding:22px 22px 20px; border:1px solid var(--border-soft); border-radius:14px; background:var(--paper)}
+  .way .lbl{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--bronze-700); margin:0 0 8px;
+  }
+  .way h3{font-family:var(--serif); font-weight:600; font-size:17.5px; color:var(--ink); margin:0 0 7px; letter-spacing:-0.01em}
+  .way p{margin:0; font-size:14px; line-height:1.5; color:var(--body)}
+  .way ul{margin:9px 0 0; padding:0; list-style:none; font-size:13px; color:var(--muted)}
+  .way ul li{padding:3px 0 3px 16px; position:relative; line-height:1.4}
+  .way ul li::before{content:""; position:absolute; left:2px; top:11px; width:5px; height:5px; background:var(--bronze-500); transform:rotate(45deg)}
+
+  /* ---- Partner benefits (nod list) ---- */
+  .nod{display:grid; grid-template-columns:1fr 1fr; gap:12px 30px; margin:0; padding:0; list-style:none}
+  .nod li{position:relative; padding:2px 0 2px 30px; font-size:15px; color:var(--body); line-height:1.45}
+  .nod li b{color:var(--ink); font-weight:600}
+  .nod li::before{
+    content:""; position:absolute; left:0; top:3px; width:19px; height:19px; border-radius:50%;
+    background:var(--teal-800);
+    -webkit-mask:no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    mask:no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  }
+
+  /* ---- CTA band ---- */
+  .cta{
+    background:linear-gradient(160deg,var(--teal-800),var(--teal-900) 80%);
+    color:var(--on-dark); padding:clamp(28px,4vw,38px) clamp(26px,5vw,48px);
+    display:flex; align-items:center; justify-content:space-between; gap:26px; flex-wrap:wrap;
+  }
+  .cta h2{color:#fff; margin:0 0 6px; font-size:clamp(20px,2.6vw,25px)}
+  .cta p{color:var(--on-dark); margin:0; font-size:14.5px; max-width:42ch}
+  .btn{
+    font-family:var(--sans); font-weight:600; font-size:15px; color:var(--teal-950);
+    background:var(--bronze-300); background-image:linear-gradient(180deg,#DBB27C,#C79A5E);
+    padding:14px 24px; border-radius:10px; text-decoration:none; white-space:nowrap;
+    box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 10px 22px -10px rgba(156,106,57,.7);
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 16px 30px -12px rgba(156,106,57,.8)}
+  .btn small{display:block; font-weight:400; font-size:11px; opacity:.8; margin-top:1px}
+
+  /* ---- Footer ---- */
+  .foot{
+    padding:22px clamp(26px,5vw,48px); background:var(--paper); border-top:1px solid var(--ivory-stroke);
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .foot .who{font-size:14px; color:var(--body)}
+  .foot .who b{color:var(--ink); font-family:var(--serif); font-weight:600; font-size:15px}
+  .foot .who span{color:var(--muted)}
+  .foot a{color:var(--teal-800); text-decoration:none; font-weight:500}
+  .proof{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--muted);
+    text-transform:uppercase; text-align:right; line-height:1.9;
+  }
+
+  /* ---- Print helper (screen only) ---- */
+  .printbar{
+    position:fixed; top:16px; right:16px; z-index:10; display:flex; gap:8px;
+  }
+  .printbar button{
+    font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer;
+    background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px;
+    box-shadow:0 8px 20px -8px rgba(9,31,36,.5);
+  }
+  .printbar button:hover{background:var(--teal-900)}
+
+  @media (max-width:640px){
+    .ways,.nod{grid-template-columns:1fr}
+    .step{grid-template-columns:auto 1fr; }
+    .price{grid-column:2; text-align:left; margin-top:8px}
+    .masthead{flex-direction:column; align-items:flex-start; gap:14px}
+    .tag{text-align:left}
+  }
+
+  @media print{
+    @page{ size:Letter; margin:0 }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.cta,.step.mid,.step.end,.way,.masthead,.foot{
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    }
+    section{break-inside:avoid}
+    .step,.way{break-inside:avoid}
+    .cta{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sheet{animation:none}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="printbar">
+  <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<article class="sheet">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group — Tax, Bookkeeping, CFO">
+      <g transform="translate(6,5)">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle>
+        <circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle>
+        <g fill="#9C6A39">
+          <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+          <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+        </g>
+        <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
+          <g fill="none" stroke="#123841" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+            <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+            <path d="M70 26 L70 86"></path>
+            <path d="M70 56 L92 26"></path>
+            <path d="M70 56 L95 86"></path>
+          </g>
+        </g>
+      </g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">
+      Prepared for
+      <b>[Partner Firm]</b>
+      A referral partnership
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="kicker">A partnership proposal</p>
+    <h1>Your clients are about to spend on growth. Let's make sure the business <em>keeps</em> what it creates.</h1>
+    <p>A simple partnership between <span class="who">[Partner Firm]</span> and JK Accounting Group: before your clients pour money into marketing, we make sure the business underneath can hold the weight — the right structure, clean books, no tax surprise — so the returns you generate actually stick.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- Why -->
+    <section>
+      <h2>Why it matters to your clients</h2>
+      <div class="rule"><i></i></div>
+      <p>Marketing can do everything right and the client can still end up worse off — if the foundation isn't built to keep the profit. The wrong entity, books that are months behind, a tax bill nobody planned for: these quietly eat the returns your campaigns create, and the client feels it as <em>"the marketing didn't pay off."</em> When the finances are solid, your results stick — and your clients stay long enough to become case studies.</p>
+    </section>
+
+    <!-- The ladder -->
+    <section>
+      <h2>What your clients get</h2>
+      <p class="lede">One simple path, from a free first step to a finance department in their corner. Nobody is pushed; each step earns the next.</p>
+      <ol class="ladder">
+        <li class="step">
+          <span class="n">1</span>
+          <div>
+            <h3>Growth Readiness Check</h3>
+            <p>A 5-minute financial check every client fills out before they scale — it shows where profit could leak once they spend. Runs as a standard step in your onboarding, co-branded to your firm.</p>
+          </div>
+          <div class="price"><b>Free</b>your value-add</div>
+        </li>
+        <li class="step mid">
+          <span class="n">2</span>
+          <div>
+            <h3>Financial Health Check</h3>
+            <p>An evidence-based deep dive into their real numbers, with a written action plan and a clear read on risk and opportunity — for the clients who want the full picture before they grow.</p>
+          </div>
+          <div class="price"><b>$500</b><span class="credit">fully credited to their first month with us</span></div>
+        </li>
+        <li class="step end">
+          <span class="n">3</span>
+          <div>
+            <h3>Their finance department</h3>
+            <p>Ongoing bookkeeping, monitoring, and quarterly tax planning — senior-led, in their own language. Where a referral quietly becomes a long-term client.</p>
+          </div>
+          <div class="price"><b>Monthly</b>the destination</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Two ways -->
+    <section>
+      <h2>Two ways we work together</h2>
+      <div class="rule"><i></i></div>
+      <div class="ways">
+        <div class="way">
+          <p class="lbl">New clients, at onboarding</p>
+          <h3>Before the growth engine turns on</h3>
+          <p>The Readiness Check becomes part of how you onboard — so the business can take the weight of what you're about to build for it, and nothing you do gets undone at tax time.</p>
+          <ul>
+            <li>The right structure before they scale</li>
+            <li>Books clean and current, not year-end</li>
+            <li>Sales tax &amp; payroll handled ahead of time</li>
+          </ul>
+        </div>
+        <div class="way">
+          <p class="lbl">Your existing clients</p>
+          <h3>A co-hosted Growth Series</h3>
+          <p>Four short sessions, each pairing one marketing lever with one money lever — real value for your whole client base, and a warm room for both of us.</p>
+          <ul>
+            <li>Is your business ready to scale?</li>
+            <li>What your marketing is actually making you</li>
+            <li>Growing without running out of cash</li>
+            <li>Keeping more of what you earn</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner benefits -->
+    <section>
+      <h2>What's in it for you</h2>
+      <p class="lede">This isn't a favor you do us. It's a channel we both feed.</p>
+      <ul class="nod">
+        <li><b>A differentiated onboarding you can market</b> — "we partner with a bilingual accounting firm for every client."</li>
+        <li><b>Clients who keep more and stay longer</b> — better retention, better results to point to.</li>
+        <li><b>Reciprocal referrals</b> — your clients need us; our clients need great marketing.</li>
+        <li><b>No cost to you, co-branded to your firm</b> — you look thorough; we do the work.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <h2>A simple place to start</h2>
+      <p>Pick five clients, and we'll run the Readiness Check with them. You'll see the value before we ever talk about the rest.</p>
+    </div>
+    <a class="btn" href="mailto:julia@jkaccountinggroup.com?subject=Growth%20partnership">Let's map it to your onboarding<small>julia@jkaccountinggroup.com</small></a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="who">
+      <b>Julia Kononova</b> &nbsp;<span>Founder &amp; Chief Accountant · JK Accounting Group</span><br>
+      <span>Miami · Fort Lauderdale · Online &nbsp;·&nbsp;</span><a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+    </div>
+    <div class="proof">
+      7 years · 50+ founders served · $1M+ saved in taxes<br>
+      English · Русский · Українська
+    </div>
+  </footer>
+
+</article>
+
+</body>
+</html>

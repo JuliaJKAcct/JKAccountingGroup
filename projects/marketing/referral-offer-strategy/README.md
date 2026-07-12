@@ -23,9 +23,13 @@ doesn't live only in chat history.
 
 ```
 referral-offer-strategy/
-├── README.md     ← you are here
-└── strategy.md   ← the full strategy: funnel logic, partner positioning,
-                     Growth Accelerator Series, scorecard design, open questions
+├── README.md        ← you are here
+├── strategy.md      ← the full strategy: funnel logic, partner positioning,
+│                       Growth Accelerator Series, scorecard design, open questions
+└── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
+    ├── one-pager.html   on-brand handout (free → $500 credited → monthly ladder,
+    │                     the two channels, partner benefits) — print/PDF ready
+    └── talk-track.md    plain-language script for walking a partner through it
 ```
 
 ## Brand & design
@@ -44,13 +48,20 @@ there.
 
 ## Outputs
 
-Nothing built yet — `strategy.md` is a decisions-and-open-questions document,
-not a deliverable. Per `strategy.md` §6, still open: scoring rubric
-thresholds, the document/access checklist for the paid assessment, Growth
-Accelerator Series logistics (landing page, promo copy, list ownership),
-the four worksheet templates, and pricing for the assessment/implementation
-phases. When any of these get built, add them here in an obviously-named
-folder (e.g. `templates/`, `landing-page/`) and update this section.
+- **`partner-pitch/`** — the first built deliverable: an on-brand one-pager
+  handout plus a talk-track script for the marketing-agency partner
+  conversation. Encodes the decided front-offer (a $500 Financial Health Check,
+  fully credited into the first month of service), the free → paid → monthly
+  ladder, the two partner channels (new-client onboarding + existing-client
+  Growth Series), and the partner-benefit framing.
+
+`strategy.md` remains the decisions-and-open-questions document. Per its §6,
+still open: scoring rubric thresholds, the document/access checklist for the
+paid assessment, Growth Accelerator Series logistics (landing page, promo copy,
+list ownership), the four worksheet templates, and pricing for the
+implementation phase. When any of these get built, add them here in an
+obviously-named folder (e.g. `templates/`, `landing-page/`) and update this
+section.
 
 ## Working on this / notes for AI
 
