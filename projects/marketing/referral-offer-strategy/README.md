@@ -27,10 +27,15 @@ referral-offer-strategy/
 ├── strategy.md      ← the full strategy: funnel logic, partner positioning,
 │                       Growth Accelerator Series, scorecard design, open questions
 └── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
-    ├── one-pager.html   on-brand handout (free → $500 credited → monthly ladder,
-    │                     the two channels, partner benefits) — print/PDF ready
-    └── talk-track.md    plain-language script for walking a partner through it
+    ├── one-pager.html      on-brand EN handout (free → $500 credited → monthly
+    │                        ladder, two channels, partner benefits) — print/PDF ready
+    ├── one-pager-ru.html   native-Russian version of the handout
+    └── talk-track.md       plain-language script for walking a partner through it
 ```
+
+> First partner personalized for **Boris · Candramas LLC**; the Growth Series
+> on the handout lists the three sessions decided for this project (readiness →
+> true margin → keep-more).
 
 ## Brand & design
 
