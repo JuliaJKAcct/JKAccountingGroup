@@ -27,15 +27,18 @@ referral-offer-strategy/
 ├── strategy.md      ← the full strategy: funnel logic, partner positioning,
 │                       Growth Accelerator Series, scorecard design, open questions
 └── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
-    ├── one-pager.html      on-brand EN handout (free → $500 credited → monthly
-    │                        ladder, two channels, partner benefits) — print/PDF ready
-    ├── one-pager-ru.html   native-Russian version of the handout
-    └── talk-track.md       plain-language script for walking a partner through it
+    ├── one-pager.html         on-brand EN handout (free → $500 credited → monthly
+    │                           ladder, two channels, partner benefits) — print/PDF
+    ├── one-pager-ru.html      native-Russian version of the handout
+    ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
+    │                           Series sessions (themes, take-homes, series close)
+    └── talk-track.md          plain-language script + Readiness Check timing
 ```
 
-> First partner personalized for **Boris · Candramas LLC**; the Growth Series
-> on the handout lists the three sessions decided for this project (readiness →
-> true margin → keep-more).
+> First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
+> three sessions decided for this project (readiness → true margin → keep-more);
+> the Readiness Check timing is fixed in `talk-track.md` (client fills in ~5 min,
+> the live finance block is ~15 min).
 
 ## Brand & design
 
@@ -53,12 +56,13 @@ there.
 
 ## Outputs
 
-- **`partner-pitch/`** — the first built deliverable: an on-brand one-pager
-  handout plus a talk-track script for the marketing-agency partner
-  conversation. Encodes the decided front-offer (a $500 Financial Health Check,
-  fully credited into the first month of service), the free → paid → monthly
-  ladder, the two partner channels (new-client onboarding + existing-client
-  Growth Series), and the partner-benefit framing.
+- **`partner-pitch/`** — the first built deliverables, for the marketing-agency
+  partner (Candramas LLC): an on-brand partner handout in English and native
+  Russian, a native-Russian Growth Series one-pager (the three co-hosted
+  sessions), and a talk-track script. Encodes the decided front-offer (a $500
+  Financial Health Check, fully credited into the first month of service), the
+  free → paid → monthly ladder, the two partner channels (new-client onboarding
+  + existing-client Growth Series), and the partner-benefit framing.
 
 `strategy.md` remains the decisions-and-open-questions document. Per its §6,
 still open: scoring rubric thresholds, the document/access checklist for the

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Серия встреч о росте — JK Accounting Group × Candramas LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ivory); color:var(--body);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .sheet{
+    max-width:820px; margin:28px auto 56px; background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06), 0 24px 60px -28px rgba(9,31,36,.34);
+    overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:26px clamp(26px,5vw,44px) 22px; background:var(--paper);
+    border-bottom:1px solid var(--ivory-stroke);
+  }
+  .masthead svg{display:block; width:238px; height:auto; max-width:56vw}
+  .tag{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bronze-700); text-align:right; line-height:1.7; white-space:nowrap;
+  }
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.1em}
+
+  .hero{
+    background:
+      radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),
+      linear-gradient(160deg, var(--teal-800), var(--teal-900) 70%, var(--teal-950));
+    color:var(--on-dark); padding:clamp(34px,5.2vw,52px) clamp(26px,5vw,48px) clamp(28px,4.4vw,40px);
+  }
+  .kicker{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--bronze-300); margin:0 0 16px;
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:600; letter-spacing:-0.016em; line-height:1.12;
+    font-size:clamp(30px,4.6vw,46px); margin:0 0 14px; color:#fff; text-wrap:balance; max-width:18ch;
+  }
+  .hero p{margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.62; color:var(--on-dark); max-width:62ch}
+
+  /* format meta row */
+  .meta{
+    display:flex; flex-wrap:wrap; gap:10px 26px; margin:20px 0 0; padding-top:18px;
+    border-top:1px solid rgba(236,230,218,.16);
+  }
+  .meta div{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--on-dark-muted); text-transform:uppercase}
+  .meta b{display:block; font-family:var(--sans); font-size:14px; letter-spacing:0; text-transform:none; color:#fff; font-weight:600; margin-top:2px}
+
+  .body{padding:clamp(30px,4.6vw,44px) clamp(26px,5vw,48px) clamp(18px,3vw,26px)}
+  .intro{font-size:16px; color:var(--body); max-width:68ch; margin:0 0 clamp(26px,4vw,34px)}
+  .intro b{color:var(--ink)}
+
+  /* ---- Session blocks (a numbered program, not a card grid) ---- */
+  .session{
+    border:1px solid var(--border-soft); border-radius:16px; overflow:hidden;
+    margin:0 0 18px; background:var(--white);
+  }
+  .session-head{
+    display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start;
+    padding:20px 22px 16px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke);
+  }
+  .session-head .n{
+    font-family:var(--mono); font-size:14px; font-weight:600; color:var(--teal-800);
+    width:34px; height:34px; border-radius:50%; border:1.5px solid var(--teal-800);
+    display:grid; place-items:center;
+  }
+  .session-head h2{
+    font-family:var(--serif); font-weight:600; font-size:clamp(19px,2.6vw,23px); color:var(--ink);
+    margin:2px 0 6px; letter-spacing:-0.012em; line-height:1.18; text-wrap:balance;
+  }
+  .hook{margin:0; font-size:14.5px; color:var(--bronze-700); font-style:italic; line-height:1.45; max-width:60ch}
+
+  .halves{display:grid; grid-template-columns:1fr 1fr; gap:0}
+  .half{padding:18px 22px 20px}
+  .half + .half{border-left:1px solid var(--ivory-stroke)}
+  .half .lbl{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; margin:0 0 8px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .half.mk .lbl{color:var(--bronze-700)}
+  .half.fn .lbl{color:var(--teal-800)}
+  .half .lbl::before{content:""; width:7px; height:7px; transform:rotate(45deg); flex:none}
+  .half.mk .lbl::before{background:var(--bronze-500)}
+  .half.fn .lbl::before{background:var(--teal-800)}
+  .half p{margin:0; font-size:14px; line-height:1.52; color:var(--body)}
+
+  .takehome{
+    padding:16px 22px; background:linear-gradient(180deg,#F3F6F5,#EDF2F1);
+    border-top:1px solid #D5E1DE; font-size:13.5px; line-height:1.5; color:var(--body);
+  }
+  .takehome b{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--teal-900); display:inline-block; margin-right:8px;
+  }
+  .takehome .w{font-family:var(--serif); font-weight:600; color:var(--ink); font-style:normal}
+
+  /* series close */
+  .close{
+    background:linear-gradient(160deg,var(--teal-800),var(--teal-900) 80%); color:var(--on-dark);
+    padding:clamp(26px,4vw,36px) clamp(26px,5vw,48px);
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .close h2{font-family:var(--serif); font-weight:600; color:#fff; margin:0 0 6px; font-size:clamp(20px,2.6vw,25px); letter-spacing:-0.012em}
+  .close p{margin:0; color:var(--on-dark); font-size:14.5px; max-width:46ch}
+  .close .pill{
+    font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--teal-950);
+    background:var(--bronze-300); background-image:linear-gradient(180deg,#DBB27C,#C79A5E);
+    padding:12px 20px; border-radius:999px; white-space:nowrap; font-weight:600;
+    box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 10px 22px -10px rgba(156,106,57,.7);
+  }
+  .close .pill b{display:block; font-family:var(--sans); font-size:13px; letter-spacing:0; text-transform:none; font-weight:400; opacity:.85; margin-top:1px}
+
+  .foot{
+    padding:22px clamp(26px,5vw,48px); background:var(--paper); border-top:1px solid var(--ivory-stroke);
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .foot .who{font-size:14px; color:var(--body)}
+  .foot .who b{color:var(--ink); font-family:var(--serif); font-weight:600; font-size:15px}
+  .foot .who span{color:var(--muted)}
+  .foot a{color:var(--teal-800); text-decoration:none; font-weight:500}
+  .proof{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; text-align:right; line-height:1.9}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{
+    font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer;
+    background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5);
+  }
+  .printbar button:hover{background:var(--teal-900)}
+
+  @media (max-width:640px){
+    .halves{grid-template-columns:1fr}
+    .half + .half{border-left:none; border-top:1px solid var(--ivory-stroke)}
+    .masthead{flex-direction:column; align-items:flex-start; gap:14px}
+    .tag{text-align:left}
+    .meta{gap:12px 20px}
+  }
+  @media print{
+    @page{ size:Letter; margin:0 }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.close,.session-head,.takehome,.foot{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .session,.close{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle>
+        <circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle>
+        <g fill="#9C6A39">
+          <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+          <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+        </g>
+        <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
+          <g fill="none" stroke="#123841" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+            <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+            <path d="M70 26 L70 86"></path>
+            <path d="M70 56 L92 26"></path>
+            <path d="M70 56 L95 86"></path>
+          </g>
+        </g>
+      </g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">
+      Пример программы
+      <b>Серия встреч о росте</b>
+      JK Accounting Group × Candramas LLC
+    </div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Совместная программа для ваших клиентов</p>
+    <h1>Серия встреч о росте</h1>
+    <p>Три коротких встречи, где маркетинг и финансы идут рядом. Каждую ведём вместе — JK Accounting Group и Candramas LLC: один маркетинговый рычаг и один финансовый на встречу. Участники уходят с рабочим листом, который реально полезен — и при этом честно показывает, где нужен профессионал.</p>
+    <div class="meta">
+      <div>Формат<b>3 встречи</b></div>
+      <div>Длительность<b>~50 минут</b></div>
+      <div>Ритм<b>раз в 2 недели</b></div>
+      <div>Где<b>вживую в Zoom</b></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p class="intro">Смысл серии простой: дать вашим клиентам настоящую пользу и по ходу показать, где их финансы не готовы к росту. Ниже — <b>тематика трёх встреч как пример</b>: о чём говорим, что участник забирает с собой и почему это естественно ведёт к платному разбору.</p>
+
+    <!-- Session 1 -->
+    <section class="session">
+      <div class="session-head">
+        <span class="n">1</span>
+        <div>
+          <h2>Готов ли ваш бизнес к масштабированию?</h2>
+          <p class="hook">Прежде чем вложить в маркетинг ещё доллар — проверьте, превратит ли бизнес эти вложения в прибыль или просто потеряет их.</p>
+        </div>
+      </div>
+      <div class="halves">
+        <div class="half mk">
+          <p class="lbl">Маркетинг</p>
+          <p>Какие 3–4 сигнала говорят, что пора масштабироваться: канал, который стабильно приводит клиентов, реальный спрос, воронка, которой можно доверять. Главная мысль — не подливать топливо в то, что ещё не конвертит.</p>
+        </div>
+        <div class="half fn">
+          <p class="lbl">Финансы</p>
+          <p>Разбираем «Проверку готовности к росту» вживую — четыре категории, которые решают всё при масштабировании: юнит-экономика, запас по деньгам, порядок в учёте и форма бизнеса.</p>
+        </div>
+      </div>
+      <div class="takehome"><b>С собой</b> <span class="w">Проверка готовности к росту.</span> Честный снимок бизнеса — но строится на том, во что вы верите. На вопросе «какая у вас реальная прибыль с клиента?» становится ясно, что точной цифры под рукой нет. Этот разрыв и есть повод для платного разбора.</div>
+    </section>
+
+    <!-- Session 2 -->
+    <section class="session">
+      <div class="session-head">
+        <span class="n">2</span>
+        <div>
+          <h2>Что на самом деле приносит ваш маркетинг?</h2>
+          <p class="hook">Рекламный кабинет говорит, что вы в плюсе. Банковский счёт — что нет. Найдём настоящую цифру.</p>
+        </div>
+      </div>
+      <div class="halves">
+        <div class="half mk">
+          <p class="lbl">Маркетинг</p>
+          <p>Реальная стоимость привлечения клиента: CAC по каналам и общий, задержка между расходами и деньгами и почему ROAS обманывает. Как измерять то, что клиент действительно стоит.</p>
+        </div>
+        <div class="half fn">
+          <p class="lbl">Финансы</p>
+          <p>Число, которого нет в маркетинг-отчёте, — маржа после налогов и накладных. Настоящая стоимость клиента это не «реклама ÷ клиенты», а плюс исполнение, накладные и налог на прибыль. То самое «дырявое ведро».</p>
+        </div>
+      </div>
+      <div class="takehome"><b>С собой</b> <span class="w">Калькулятор настоящей маржи.</span> Вводите выручку и стоимость рекламы — он считает маржу. Но он не знает вашу форму бизнеса, квартальные налоги и реальное распределение накладных, поэтому цифра ощущается неполной. Так и задумано.</div>
+    </section>
+
+    <!-- Session 3 -->
+    <section class="session">
+      <div class="session-head">
+        <span class="n">3</span>
+        <div>
+          <h2>Как оставлять себе больше заработанного</h2>
+          <p class="hook">Самое трудное вы уже сделали — заработали. Теперь разберёмся, как перестать так много отдавать обратно.</p>
+        </div>
+      </div>
+      <div class="halves">
+        <div class="half mk">
+          <p class="lbl">Маркетинг</p>
+          <p>Цена и позиционирование ради маржи: как поднять цену без потери клиентов, структура оффера, LTV. Рычаги, которые растят прибыль, а не только объём.</p>
+        </div>
+        <div class="half fn">
+          <p class="lbl">Финансы</p>
+          <p>Структурные рычаги: сроки перехода на S-corp, квартальное планирование, вычеты, разумная зарплата собственника. Позитивная сторона, без страха: как бизнес оставляет себе больше по мере роста.</p>
+        </div>
+      </div>
+      <div class="takehome"><b>С собой</b> <span class="w">Чек-лист «оставить больше».</span> Самооценка по форме бизнеса — но скоринг вскрывает реальные дедлайны, окна для выбора формы и расчёт разумной зарплаты, то есть то, что рискованно делать самому.</div>
+    </section>
+
+  </div>
+
+  <div class="close">
+    <div>
+      <h2>Финал серии</h2>
+      <p>Приносите все три листа — скоринг, калькулятор маржи и чек-лист — на Проверку финансового здоровья, и мы превратим их в один план действий.</p>
+    </div>
+    <div class="pill">$500<b>в счёт первого месяца работы с нами</b></div>
+  </div>
+
+  <footer class="foot">
+    <div class="who">
+      <b>Юлия Кононова</b> &nbsp;<span>Основатель и главный бухгалтер · JK Accounting Group</span><br>
+      <span>Майами · Форт-Лодердейл · Онлайн &nbsp;·&nbsp;</span><a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+    </div>
+    <div class="proof">
+      7 лет · 50+ предпринимателей · сэкономлено $1M+ на налогах<br>
+      English · Русский · Українська
+    </div>
+  </footer>
+
+</article>
+
+</body>
+</html>

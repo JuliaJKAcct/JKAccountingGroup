@@ -24,6 +24,24 @@
 
 ---
 
+## How the Readiness Check runs (timing)
+
+Two different clocks — keep them straight and you can answer "how long is this?"
+cleanly:
+
+- **The client spends ~5 minutes** filling out the Readiness Check. Deliberately
+  short — the whole point of a free check is that people actually finish it. (Don't
+  let it drift to 15 minutes of filling; completion drops.)
+- **You spend ~15 minutes** live: you join the last ~15 minutes of the client's
+  onboarding call and walk them through their answers — enough to react, show where
+  profit could leak, and point them to the paid deep-dive. Five minutes is too short
+  to add real value; fifteen is the sweet spot.
+
+So: **client fills in ~5 min, your live finance block is ~15 min.** One doesn't
+compete with the other.
+
+---
+
 ## The opener
 
 > "I've been thinking about how we could actually help each other's clients — not
@@ -88,7 +106,7 @@ One clear, tiny next step. Then stop talking and let him respond.
 | "What does it cost me?" | "Nothing. It's co-branded to you, I do the work." |
 | "Will you hard-sell my clients?" | "The opposite of how I work. The free check just shows them what's there — if they want more, they ask. I'd rather keep your trust than get one pushy referral." |
 | "So what's in it for you?" | "The clients who want ongoing help become mine. That's it. The free part is just how they get to know me." |
-| "How much of my time is this?" | "For new clients, almost none — you just include the check in onboarding. For the Zoom series, four short sessions we plan together, and I do the heavy lifting on content." |
+| "How much of my time is this?" | "For new clients, almost none — the check goes into your onboarding, your client spends ~5 minutes on it, and I spend ~15 with them on your call. For the Zoom series, three short sessions we plan together, and I do the heavy lifting on content." |
 | "My clients aren't your Russian/Ukrainian audience." | "Doesn't matter for this — the check and the sessions work for any owner. The bilingual part is just a bonus for the ones who need it." |
 | "Can I see the check first?" | "Of course — I'll send it over. Fill it out yourself, takes five minutes." |
 
