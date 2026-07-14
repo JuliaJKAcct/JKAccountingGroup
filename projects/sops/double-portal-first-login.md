@@ -54,14 +54,16 @@ Ready-to-send versions of these instructions live in
 | [`double-first-login-whatsapp-en.md`](./client-guides/double-first-login-whatsapp-en.md) | Short WhatsApp-ready text, English |
 | [`double-first-login-whatsapp-ru.md`](./client-guides/double-first-login-whatsapp-ru.md) | Short WhatsApp-ready text, Russian |
 
-**On screenshots:** the email templates use `{{STEP*_IMG_URL}}` placeholders
-for the four portal screenshots (sign-in page → password screen → forgot-
-password screen → reset-link screen). Host the four images (e.g. a public
-Google Drive/Drive-hosted link, same pattern as the logo in
-[`../marketing/email-branding/`](../marketing/email-branding/)) and fill in the
-URLs before sending. For WhatsApp, send the text message first, then attach
-the four screenshots as separate images **in the order listed** — WhatsApp
-doesn't need them inline, just in sequence right after the text.
+**On screenshots:** the email templates use three `{{STEP*_IMG_URL}}`
+placeholders for the three client-facing portal screenshots (sign-in page →
+password screen with "Forgot your password?" → reset-link screen). Host the
+three images (e.g. a public Google Drive/Drive-hosted link, same pattern as the
+logo in [`../marketing/email-branding/`](../marketing/email-branding/)) and fill
+in the URLs before sending. For WhatsApp, send the text message first, then
+attach those same three screenshots as separate images **in the order listed** —
+WhatsApp doesn't need them inline, just in sequence right after the text. (The
+Portal Settings manual-reset screenshot is firm-internal only — it's not sent to
+clients in either channel.)
 
 ## Notes
 

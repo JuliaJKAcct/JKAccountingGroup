@@ -15,12 +15,12 @@
   Fill in before sending:
     {{FIRST_NAME}}          — client's first name
     {{PORTAL_URL}}          — this client's Client Portal sign-in link
-    {{STEP1_IMG_URL}} … {{STEP4_IMG_URL}} — hosted screenshots, in order:
+    {{STEP1_IMG_URL}} … {{STEP3_IMG_URL}} — hosted screenshots, in order:
         1 = sign-in page (magic link + "Sign in with password")
         2 = password screen ("Forgot your password?")
         3 = "Reset your password" screen (email + "Get reset link")
-        4 = Portal Settings manual-reset path (optional, for firm reference —
-            omit this block if sending to a client)
+      (The Portal Settings manual-reset screenshot is firm-internal only —
+       not embedded here, not sent to clients.)
     {{LOGO_REVERSED_URL}}   — see ../../marketing/email-branding/INSTALL-GMAIL.md
   ===========================================================================
 -->
@@ -85,7 +85,7 @@
                   </td>
                 </tr>
               </table>
-              <img src="{{STEP1_IMG_URL}}" alt="Client Portal sign-in page with 'Sign in with password' highlighted" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
+              <img src="{{STEP1_IMG_URL}}" alt="Страница входа в Клиентский портал с выделенной кнопкой «Sign in with password»" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
 
               <!-- Step 2 -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0 0 0;">
@@ -103,11 +103,11 @@
                   <td style="font-family:'IBM Plex Mono','Courier New',monospace; font-size:13px; font-weight:600; color:#9C6A39; vertical-align:top; width:28px;">03</td>
                   <td style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:15.5px; line-height:1.6; color:#22201A;">
                     На экране пароля нажмите <strong>«Forgot your password?»</strong>
-                    (справа от поля пароля).
+                    (справа сверху, рядом с полем пароля).
                   </td>
                 </tr>
               </table>
-              <img src="{{STEP2_IMG_URL}}" alt="Password sign-in screen with 'Forgot your password?' highlighted" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
+              <img src="{{STEP2_IMG_URL}}" alt="Экран входа по паролю с выделенной ссылкой «Forgot your password?»" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
 
               <!-- Step 4 -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0 0 0;">
@@ -120,7 +120,7 @@
                   </td>
                 </tr>
               </table>
-              <img src="{{STEP3_IMG_URL}}" alt="Reset your password screen with 'Get reset link' button" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
+              <img src="{{STEP3_IMG_URL}}" alt="Экран «Reset your password» с кнопкой «Get reset link»" width="480" style="display:block; width:100%; max-width:480px; margin:12px 0 0 36px; border:1px solid #E4DECF; border-radius:8px;">
 
               <!-- Step 5 -->
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0 0 0;">

@@ -1,11 +1,13 @@
 <!--
   WhatsApp-ready message, English.
-  Send this text as one message, then attach the 4 screenshots right after
-  it as separate images, IN THIS ORDER (WhatsApp doesn't need them inline):
+  Send this text as one message, then attach the 3 client-facing screenshots
+  right after it as separate images, IN THIS ORDER (WhatsApp doesn't need them
+  inline):
     1. Sign-in page (magic link box + "Sign in with password")
     2. Password screen ("Forgot your password?")
     3. "Reset your password" screen ("Get reset link")
-    4. (optional, internal use) Portal Settings manual-reset path
+  (The Portal Settings manual-reset screenshot is firm-internal only — don't
+  send it to clients.)
   Fill in {{FIRST_NAME}} and {{PORTAL_URL}} before sending.
 -->
 
