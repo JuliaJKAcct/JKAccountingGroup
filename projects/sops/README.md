@@ -23,6 +23,7 @@ blank template to copy out; the filled-in copy stays in those systems.
 ```
 sops/
 ├── README.md                                    ← you are here (index)
+├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
 └── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ```
 
@@ -35,6 +36,7 @@ enough to warrant it._
 
 | SOP | What it covers |
 |---|---|
+| [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) | Per-client runbook: Ecoorganic's monthly bookkeeping categorization rules (checks/deposits, gas threshold, COGS, owner-personal patterns), COA conventions, reviewer checklist, and open-decisions log. Rules only — client figures stay in client systems. |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 
 ## Brand & design
