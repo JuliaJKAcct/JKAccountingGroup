@@ -31,6 +31,8 @@ email-branding/
 │   ├── julia-hosted.html   ← same, but Medallion points at the public URL — paste-and-go install
 │   ├── lilian.html         ← Lilian's signature, canonical (no booking link)
 │   ├── lilian-hosted.html  ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── liudmyla.html       ← Liudmyla's signature, canonical (no booking link)
+│   ├── liudmyla-hosted.html ← same, but Medallion points at the public URL — paste-and-go install
 │   └── _template.html      ← copy per teammate → signatures/<firstname>.html
 └── templates/
     └── branded-email.html ← full branded email layout (onboarding, newsletters)
