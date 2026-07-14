@@ -13,16 +13,21 @@ runbooks** (e.g. a Business Tax Receipt filing) — as clear, versioned procedur
 so work is consistent, delegable, and auditable. A living internal reference for
 the team (and for Claude when it assists with those workflows).
 
-Each procedure here is **reusable firm knowledge**, safe to commit. A specific
-client's data (names, addresses, EINs, filled-in forms) is **not** — that lives
-in the firm's client systems (Drive / Double / QuickBooks). Procedures include a
-blank template to copy out; the filled-in copy stays in those systems.
+Each procedure here is **reusable firm knowledge**, safe to commit. Sensitive
+client data (dollar figures, EINs, addresses, full account numbers, filled-in
+forms, private individuals' names) is **not** — that lives in the firm's client
+systems (Drive / Double / QuickBooks). A **per-client runbook** may name the
+client business and the operational facts the work requires (e.g. bank accounts
+by last-4), but its working papers and figures stay in the client systems.
+Where a procedure involves filled-in copies, include a blank template to copy
+out; the filled-in copy stays in those systems.
 
 ## What's here
 
 ```
 sops/
 ├── README.md                                    ← you are here (index)
+├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
 └── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ```
 
@@ -35,6 +40,7 @@ enough to warrant it._
 
 | SOP | What it covers |
 |---|---|
+| [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) | Per-client runbook: Ecoorganic's monthly bookkeeping categorization rules (checks/deposits, gas threshold, COGS, owner-personal patterns), COA conventions, reviewer checklist, and open-decisions log. Rules only — client figures stay in client systems. |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 
 ## Brand & design
@@ -58,6 +64,9 @@ source of truth.
 
 When adding an SOP: keep it concrete and step-by-step, make it **one
 self-contained file** (no separate summary/detailed pair), and list it in the
-index above. **Never** put client-specific data (names, addresses, EINs, dollar
-figures, filled-in forms) in a procedure — that belongs in the firm's client
-systems, not the repo. Include a blank template inside the SOP for copying out.
+index above. **Never** put sensitive client data (dollar figures, EINs,
+addresses, full account numbers, filled-in forms, private individuals' names)
+in a procedure — that belongs in the firm's client systems, not the repo. A
+per-client runbook may name the client business and the operational facts the
+work requires. Where the procedure involves filled-in copies, include a blank
+template inside the SOP for copying out.
