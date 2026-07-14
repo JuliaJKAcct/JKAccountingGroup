@@ -33,10 +33,11 @@ blindly.
 2. **Gas-station threshold:** a charge **≥ $30** at a gas station (Sunoco,
    Shell, Gulf, Citgo, Exxon, Mobil, Wawa, …) is fuel → Auto: Gas & Fuel. Under
    $30 it is most likely food/snacks → falls under the meals policy (rule 3).
-3. **Meals policy: PENDING (Julia + Lilian).** Until defined, park food /
-   restaurant / grocery charges (or post to the Meals holding account and
-   redistribute once the policy lands — Lilian's call, made per batch). Expected
-   split: client meals (50%) / crew–jobsite meals / owner personal → equity.
+3. **Meals policy: PENDING (Julia + Lilian).** Until defined, post food /
+   restaurant / grocery charges to the **Meals holding account** and
+   redistribute in one batch once the policy lands. Never leave them in the
+   triage accounts — those must still be $0 at close (rule 11). Expected split:
+   client meals (50% deductible) / crew–jobsite meals / owner personal → equity.
 4. **Every transaction gets a vendor/payee**, except owner draws, owner
    contributions, and transfers. Unknown bank descriptors: identify the business
    online first (this works — e.g. CWPM LLC resolved to a CT waste hauler);
@@ -76,6 +77,9 @@ blindly.
   activity (create a new account and reclassify 2026 into it).
 - People and companies are **vendors, not accounts** — no more person-named
   expense sub-accounts.
+- Overdraft/NSF bank fees post to their **own sub-account under Bank Fees**
+  (kept separate from ordinary service charges) so the running total is visible
+  for the cash-management conversation with the client.
 
 ## Monthly review checklist (what the reviewer verifies)
 
@@ -100,7 +104,7 @@ blindly.
 | 1 | Meals policy (client / crew / personal split) | Julia + Lilian | Pending |
 | 2 | Hyundai Motor Finance & Ally: lease vs loan vs personal | Client | Pending |
 | 3 | Which disconnected bank/card accounts are closed | Client | Pending |
-| 4 | Identity/role of recurring payee "Maria Eugenia Jara" | Client | Pending |
+| 4 | Identity/role of a recurring individual payee (name on file in the firm's client systems) | Client | Pending |
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's Pay & Personal | Client | Proposed |
 
