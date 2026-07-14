@@ -33,7 +33,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
-| [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Parked — waiting on the booking URL + a proper headshot |
+| [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
@@ -182,9 +182,9 @@ isn't the right raw material for a small avatar; that improvement is parked in
 [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo).)*
 
 **What's left:** roll out to the rest of the team by copying the template, and the
-two signature improvements now tracked in
-[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the real
-booking link + a proper headshot photo).
+headshot improvement now tracked in
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the booking
+link shipped Jul 2026; a proper headshot is still parked).
 
 **Capability check:** the branded HTML is done. Actually *installing* into each
 person's Gmail is manual (paste into Gmail settings) — the Gmail connector can
@@ -325,13 +325,12 @@ an automated restyle.
 
 **What Julia wants:** two concrete improvements to her now-finalized signature.
 
-1. **The real "Book a consultation" link.** Today the signature's one call-to-action
-   points at a `mailto:` placeholder (opens an email pre-filled with subject
-   "Consultation request"), because the firm's booking page / website isn't live
-   yet. **When the real booking URL exists, swap the `mailto:` for it** in
-   `projects/marketing/email-branding/signatures/julia.html` (and use it for the
-   template's `{{BOOKING_URL}}`). This is Julia's explicit follow-up: update the link
-   in the signature as soon as it's ready.
+1. **The real "Book a consultation" link.** ✅ **Done (Jul 2026).** The signature's
+   call-to-action now points at the firm's contact page
+   (`https://www.jkaccountinggroup.com/contactus`) in both `julia.html` and
+   `julia-hosted.html`, and it's the pre-set default in the template and the
+   `email-signature` skill — so every future signature ships with a working link.
+   *(Confirm the contact page resolves before wide rollout — a dead CTA is worse than none.)*
 2. **An elegant photo / headshot.** We explored adding Julia's photo (small circular
    seal, big circle, photo panels, full-height photo column). The honest conclusion:
    her current photo is a *lifestyle / environmental* shot (full-body, seated, styled
@@ -349,16 +348,16 @@ founder-led firm.
 applied via the [`email-signature` skill](./.claude/skills/email-signature/) (the
 engine is already built — this is a fill-in, not new construction).
 
-**What we need to start:** (1) the real booking URL; (2) a purpose-shot headshot on
-a plain background (a quick studio/phone headshot, or an AI-headshot generated from a
-selfie). Either input can move independently — the link swap needs nothing but the URL.
+**What we need to start:** a purpose-shot headshot on a plain background (a quick
+studio/phone headshot, or an AI-headshot generated from a selfie). *(The booking link
+is done — see item 1.)*
 
-**Capability check:** trivial to apply once the inputs exist — the skill, template,
-and install paths are done. The link swap is a one-line edit; the photo is a
-drop-in once a suitable headshot is in hand.
+**Capability check:** trivial to apply — the skill, template, and install paths are
+done. The photo is a drop-in once a suitable headshot is in hand.
 
-**Priority:** Medium · **Status:** Parked — waiting on the booking URL and/or a
-proper headshot. (The signature ships now with the Medallion; these are enhancements.)
+**Priority:** Medium · **Status:** Booking link **done (Jul 2026)**; headshot still
+parked — waiting on a proper studio/phone headshot. (The signature ships now with the
+Medallion; the photo is an enhancement.)
 
 ---
 

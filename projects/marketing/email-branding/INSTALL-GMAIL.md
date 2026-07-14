@@ -44,13 +44,15 @@ the Medallion is hosted — pick the one that matches your method from Step 1:
   reference**, so you paste it and then **upload** the Medallion in Gmail (**Method B**).
 
 Both are already filled in (name, credentials, role, the DIRECT / EMAIL / WEB
-rows, and the email‑linked booking link) — **nothing to edit**; swap the booking link
-for a real booking URL whenever you like.
+rows, and the booking link — which points to the firm's contact page,
+`https://www.jkaccountinggroup.com/contactus`) — **nothing to edit**; swap the booking
+link for a personal booking URL (Calendly, etc.) only if you have one.
 
 **Adding a teammate?** Copy `_template.html` → `signatures/<firstname>.html` and fill
 its `{{PLACEHOLDERS}}`: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
-(e.g. `, CPA`), `{{ROLE_CAPS}}`, `{{EMAIL}}`, `{{PHONE}}`, `{{PHONE_TEL}}`, and
-`{{BOOKING_URL}}` (or point it at their email). Search for `{{` to be sure none remain.
+(e.g. `, CPA`), `{{ROLE_CAPS}}`, `{{EMAIL}}`, `{{PHONE}}`, and `{{PHONE_TEL}}`. The
+booking link ships pre-set to the firm contact page — leave it unless they have a
+personal booking link. Search for `{{` to be sure none remain.
 For a Method‑A install, also point the Medallion `src` at the public URL (as
 `julia-hosted.html` does) — or just use Method B (upload) with the local-reference file.
 

@@ -60,7 +60,9 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
   WEB label rows** (mono uppercase labels in mid-teal, values in sans —
   this label-row device is what gives it the card's finish), and one light bronze
-  **booking link** — a text link, not a button, to keep the signature low. Kept
+  **booking link** — a text link, not a button, to keep the signature low. It points to
+  the firm's contact page (`https://www.jkaccountinggroup.com/contactus`) by default —
+  the firm-wide destination — unless a teammate has a personal booking link. Kept
   deliberately short (no tagline block) so it reads as a signature, not a card.
 - **Card surface.** Both panels carry an explicit `bgcolor` + inline
   `background-color` (teal and paper), and the card has a 1px `#DAD4C6` hairline
