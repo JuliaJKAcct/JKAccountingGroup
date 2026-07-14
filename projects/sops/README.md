@@ -28,7 +28,9 @@ out; the filled-in copy stays in those systems.
 sops/
 ├── README.md                                    ← you are here (index)
 ├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
-└── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
+├── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
+├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
+└── client-guides/                               ← ready-to-send client templates (branded email + WhatsApp, EN/RU)
 ```
 
 _**One self-contained Markdown file per procedure** — the single source of truth
@@ -42,6 +44,7 @@ enough to warrant it._
 |---|---|
 | [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) | Per-client runbook: Ecoorganic's monthly bookkeeping categorization rules (checks/deposits, gas threshold, COGS, owner-personal patterns), COA conventions, reviewer checklist, and open-decisions log. Rules only — client figures stay in client systems. |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
+| [`double-portal-first-login.md`](./double-portal-first-login.md) | Double Client Portal has no sign-up step and its default magic-link/Google sign-in are unreliable — the working password-reset workaround, plus ready-to-send client templates (branded email + WhatsApp, EN/RU) in [`client-guides/`](./client-guides/). |
 
 ## Brand & design
 
