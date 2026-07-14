@@ -30,6 +30,7 @@ sops/
 ├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
 ├── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
+├── double-portal-branding.md                    ← Double Client Portal on-brand branding (colors + logo)
 └── client-guides/                               ← ready-to-send client templates (branded email + WhatsApp, EN/RU)
 ```
 
@@ -45,6 +46,7 @@ enough to warrant it._
 | [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) | Per-client runbook: Ecoorganic's monthly bookkeeping categorization rules (checks/deposits, gas threshold, COGS, owner-personal patterns), COA conventions, reviewer checklist, and open-decisions log. Rules only — client figures stay in client systems. |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 | [`double-portal-first-login.md`](./double-portal-first-login.md) | Double Client Portal has no sign-up step and its default magic-link/Google sign-in are unreliable — the working password-reset workaround, plus ready-to-send client templates (branded email + WhatsApp, EN/RU) in [`client-guides/`](./client-guides/). |
+| [`double-portal-branding.md`](./double-portal-branding.md) | The firm's official on-brand branding for the Double Client Portal — exact Brand/Button/Background hex values (mapped to Design System tokens), logo/favicon assets, and why the combination works. Replaces Double's off-brand defaults. |
 
 ## Brand & design
 
