@@ -49,21 +49,41 @@ Ready-to-send versions of these instructions live in
 
 | File | Use |
 |---|---|
-| [`double-first-login-email-en.html`](./client-guides/double-first-login-email-en.html) | Branded HTML email, English |
-| [`double-first-login-email-ru.html`](./client-guides/double-first-login-email-ru.html) | Branded HTML email, Russian |
+| [`double-first-login-guide-en.html`](./client-guides/double-first-login-guide-en.html) | **Visual one-page guide, English — recommended.** Self-contained; nothing to host. |
+| [`double-first-login-guide-ru.html`](./client-guides/double-first-login-guide-ru.html) | **Visual one-page guide, Russian — recommended.** Self-contained; nothing to host. |
+| [`double-first-login-email-en.html`](./client-guides/double-first-login-email-en.html) | Branded HTML email, English (uses hosted-screenshot placeholders) |
+| [`double-first-login-email-ru.html`](./client-guides/double-first-login-email-ru.html) | Branded HTML email, Russian (uses hosted-screenshot placeholders) |
 | [`double-first-login-whatsapp-en.md`](./client-guides/double-first-login-whatsapp-en.md) | Short WhatsApp-ready text, English |
 | [`double-first-login-whatsapp-ru.md`](./client-guides/double-first-login-whatsapp-ru.md) | Short WhatsApp-ready text, Russian |
 
-**On screenshots:** the email templates use three `{{STEP*_IMG_URL}}`
-placeholders for the three client-facing portal screenshots (sign-in page →
-password screen with "Forgot your password?" → reset-link screen). Host the
-three images (e.g. a public Google Drive/Drive-hosted link, same pattern as the
-logo in [`../marketing/email-branding/`](../marketing/email-branding/)) and fill
-in the URLs before sending. For WhatsApp, send the text message first, then
-attach those same three screenshots as separate images **in the order listed** —
-WhatsApp doesn't need them inline, just in sequence right after the text. (The
-Portal Settings manual-reset screenshot is firm-internal only — it's not sent to
-clients in either channel.)
+**Recommended: the visual one-page guide.** The `…-guide-*.html` files are the
+easiest thing to send. The three Double portal screens (magic-link mode →
+password mode → reset screen) are **faithfully recreated in HTML/CSS**, not
+screenshots — the correct button on each screen is spotlighted in bronze with a
+"click this" pointer, and the magic-link/Google buttons are marked "skip." The
+files are **fully self-contained** (only the JK medallion is embedded, as a data
+URI): nothing to host, works offline. To send:
+
+- **Email** — attach the `.html`, or open it and export to PDF and attach that.
+- **WhatsApp** — open in a browser and export to PDF (send as a document), or
+  save a full-page screenshot and send as an image. One file, no separate
+  screenshots to attach in order.
+
+Before sending, personalize the greeting/portal link if you're pasting into an
+email body (the guide file itself carries no per-client fields — the email
+templates below do). This is why the visual guide is the default: no image
+hosting, no placeholders to fill, no ordering to get right.
+
+**Alternative — branded email + hosted screenshots:** the `…-email-*.html`
+templates use three `{{STEP*_IMG_URL}}` placeholders for the three client-facing
+portal screenshots (sign-in page → password screen with "Forgot your password?"
+→ reset-link screen). Host the three images (e.g. a public Google Drive link,
+same pattern as the logo in
+[`../marketing/email-branding/`](../marketing/email-branding/)) and fill in the
+URLs, plus `{{FIRST_NAME}}` / `{{PORTAL_URL}}`, before sending. For the WhatsApp
+text version, send the message first, then attach those same three screenshots
+as separate images **in the order listed**. (The Portal Settings manual-reset
+screenshot is firm-internal only — it's not sent to clients in either channel.)
 
 ## Notes
 
