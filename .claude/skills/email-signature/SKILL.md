@@ -119,8 +119,9 @@ costs ~29px of height at the same width, which leaves the card noticeably more *
 (the first pass was 2.70:1 vs the standard card's ~2.15:1) — don't ship that squished version.
 Restore the height as intentional vertical rhythm so it still reads as a matched business card.
 The recipe that lands it at **~148px tall / ~2.2:1** (matching the standard card): ivory-panel
-padding `11px 16px` → `18px 18px`, hairline margin `8px 0` → `12px 0`, and the DIRECT/EMAIL/WEB
-row gaps `5px` → `8px` (label cells' right padding `13px` → `14px`). Also delete the person's
+padding `11px 16px` → `18px 18px`, hairline margin `8px 0` → `12px 0`, the role kicker's
+`padding-top` `4px` → `5px`, and the DIRECT/EMAIL/WEB row gaps `5px` → `8px` (label cells'
+right padding `13px` → `14px`). Also delete the person's
 post-nominal `{{CREDENTIALS}}` span if they have none — but keep the bronze diamond ◆, so bronze
 still appears exactly once. `signatures/lilian.html` is the reference build; a spacing change like
 this is a visual judgment, so run it through the **impeccable** skill and verify by rendering
