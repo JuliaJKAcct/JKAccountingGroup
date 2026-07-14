@@ -27,11 +27,13 @@ email-branding/
 ├── INSTALL-GMAIL.md       ← host the images, fill in, paste into Gmail
 ├── preview.html           ← open in a browser to see it all (local paths, sample data)
 ├── signatures/
-│   ├── julia.html          ← Julia's signature, canonical (Medallion via local path; upload it in Gmail)
-│   ├── julia-hosted.html   ← same, but Medallion points at the public URL — paste-and-go install
-│   ├── lilian.html         ← Lilian's signature, canonical (no booking link)
-│   ├── lilian-hosted.html  ← same, but Medallion points at the public URL — paste-and-go install
-│   └── _template.html      ← copy per teammate → signatures/<firstname>.html
+│   ├── julia.html           ← Julia's signature, canonical (Medallion via local path; upload it in Gmail)
+│   ├── julia-hosted.html    ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── lilian.html          ← Lilian's signature, canonical (no booking link)
+│   ├── lilian-hosted.html   ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── liudmyla.html        ← Liudmyla's signature, canonical (no booking link)
+│   ├── liudmyla-hosted.html ← same, but Medallion points at the public URL — paste-and-go install
+│   └── _template.html       ← copy per teammate → signatures/<firstname>.html
 └── templates/
     └── branded-email.html ← full branded email layout (onboarding, newsletters)
 ```
