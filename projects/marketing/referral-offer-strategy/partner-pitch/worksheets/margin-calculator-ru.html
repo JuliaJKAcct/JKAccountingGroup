@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор настоящей маржи — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:760px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,40px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:210px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(28px,4.6vw,42px) clamp(24px,5vw,44px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 14px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.14; font-size:clamp(25px,3.8vw,36px); margin:0 0 12px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15px; line-height:1.6; color:var(--on-dark); max-width:60ch}
+
+  .body{padding:clamp(26px,4.4vw,40px) clamp(24px,5vw,44px) clamp(20px,3vw,28px)}
+  .name-row{display:flex; flex-wrap:wrap; gap:16px 22px; margin:0 0 26px; padding-bottom:22px; border-bottom:1px solid var(--ivory-stroke)}
+  .name-row label{flex:1 1 200px; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .name-row input{display:block; width:100%; margin-top:6px; font-family:var(--sans); font-size:15px; color:var(--ink); border:none; border-bottom:1.5px solid var(--border); background:transparent; padding:6px 2px}
+  .name-row input:focus{outline:none; border-color:var(--teal-800)}
+
+  h2.sec{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--ink); letter-spacing:-0.012em; margin:0 0 4px}
+  .sec-note{color:var(--muted); font-size:14px; margin:0 0 18px}
+
+  .fields{display:grid; gap:12px}
+  .field{display:grid; grid-template-columns:1fr auto; align-items:center; gap:14px; padding:14px 16px; border:1px solid var(--border-soft); border-radius:12px; background:var(--paper)}
+  .field .lab{font-size:14.5px; color:var(--body)}
+  .field .lab small{display:block; color:var(--muted); font-size:12.5px; margin-top:1px}
+  .money{display:flex; align-items:center; gap:2px; background:var(--white); border:1.5px solid var(--border); border-radius:9px; padding:2px 10px; transition:border-color .15s var(--ease)}
+  .money:focus-within{border-color:var(--teal-800)}
+  .money span{color:var(--muted); font-family:var(--mono); font-size:14px}
+  .money input{width:90px; border:none; background:transparent; text-align:right; font-family:var(--mono); font-size:16px; color:var(--ink); padding:8px 0}
+  .money input:focus{outline:none}
+
+  .out{margin:24px 0 0; border-radius:16px; overflow:hidden; border:1px solid var(--border-soft)}
+  .out-top{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); color:var(--on-dark); padding:22px 24px; display:flex; flex-wrap:wrap; gap:18px 30px; align-items:flex-end}
+  .out-top .blk{flex:1 1 160px}
+  .out-top .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--on-dark-muted); margin:0 0 6px}
+  .out-top .v{font-family:var(--serif); font-weight:600; font-size:clamp(28px,5vw,40px); color:#fff; line-height:1; letter-spacing:-0.02em}
+  .out-top .v.small{font-size:clamp(22px,4vw,30px)}
+  .out-top .v .u{font-size:.5em; color:var(--bronze-300); font-family:var(--sans); font-weight:500; margin-left:2px}
+
+  .caveat{background:var(--paper); padding:20px 24px 22px}
+  .caveat h3{font-family:var(--serif); font-weight:600; font-size:16.5px; color:var(--ink); margin:0 0 4px; letter-spacing:-0.01em}
+  .caveat .sub{color:var(--muted); font-size:13.5px; margin:0 0 14px}
+  .caveat ul{list-style:none; margin:0 0 16px; padding:0; display:grid; gap:9px}
+  .caveat li{position:relative; padding-left:20px; font-size:14px; line-height:1.45; color:var(--body)}
+  .caveat li::before{content:""; position:absolute; left:2px; top:8px; width:6px; height:6px; background:var(--bronze-500); transform:rotate(45deg)}
+  .caveat li b{color:var(--ink)}
+  .after{display:flex; align-items:baseline; gap:12px; padding:14px 16px; background:var(--white); border:1px dashed var(--border); border-radius:12px}
+  .after .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--bronze-700)}
+  .after .v{font-family:var(--serif); font-weight:600; font-size:22px; color:var(--ink)}
+  .after .n{font-size:12.5px; color:var(--muted); margin-left:auto; text-align:right; max-width:22ch; line-height:1.35}
+
+  .cta{background:linear-gradient(160deg,var(--teal-800),var(--teal-900) 80%); color:var(--on-dark); padding:24px clamp(24px,5vw,44px); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-top:4px}
+  .cta h2{font-family:var(--serif); font-weight:600; color:#fff; margin:0 0 4px; font-size:19px; letter-spacing:-0.01em}
+  .cta p{margin:0; color:var(--on-dark); font-size:13.5px; max-width:44ch}
+  .cta .pill{font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--teal-950); background:linear-gradient(180deg,#DBB27C,#C79A5E); padding:12px 20px; border-radius:999px; white-space:nowrap; font-weight:600}
+  .cta .pill b{display:block; font-family:var(--sans); font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; opacity:.85; margin-top:1px}
+
+  .foot{padding:18px clamp(24px,5vw,44px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} .after{flex-wrap:wrap} .after .n{margin-left:0} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.cta,.out-top,.caveat{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .out,.cta{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Рабочий лист · встреча 2<b>Серия встреч о росте</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Калькулятор настоящей маржи</p>
+    <h1>Что на самом деле приносит вам один клиент?</h1>
+    <p>Введите четыре цифры — калькулятор посчитает прибыль и маржу с клиента. А потом покажет, чего в этой цифре не хватает: именно там обычно и прячется «дырявое ведро».</p>
+  </div>
+
+  <div class="body">
+    <div class="name-row">
+      <label>Бизнес<input type="text" autocomplete="off"></label>
+      <label>Дата<input type="text" autocomplete="off" placeholder="дд.мм.гггг"></label>
+    </div>
+
+    <h2 class="sec">Ваши цифры на одного клиента</h2>
+    <p class="sec-note">Примерно — на среднего клиента за сделку или за месяц. Оставьте ноль там, где неприменимо.</p>
+
+    <div class="fields">
+      <div class="field">
+        <div class="lab">Выручка с клиента<small>сколько платит средний клиент</small></div>
+        <div class="money"><span>$</span><input type="number" id="rev" min="0" step="1" inputmode="decimal" placeholder="0"></div>
+      </div>
+      <div class="field">
+        <div class="lab">Стоимость привлечения (реклама/маркетинг)<small>рекламные расходы ÷ число клиентов</small></div>
+        <div class="money"><span>$</span><input type="number" id="cac" min="0" step="1" inputmode="decimal" placeholder="0"></div>
+      </div>
+      <div class="field">
+        <div class="lab">Себестоимость / исполнение<small>товар, доставка, подрядчики на этого клиента</small></div>
+        <div class="money"><span>$</span><input type="number" id="cogs" min="0" step="1" inputmode="decimal" placeholder="0"></div>
+      </div>
+      <div class="field">
+        <div class="lab">Прочие переменные расходы<small>комиссии платёжных систем, оплата за софт и т.п.</small></div>
+        <div class="money"><span>$</span><input type="number" id="other" min="0" step="1" inputmode="decimal" placeholder="0"></div>
+      </div>
+    </div>
+
+    <div class="out">
+      <div class="out-top">
+        <div class="blk">
+          <p class="k">Прибыль с клиента</p>
+          <p class="v" id="profit">—</p>
+        </div>
+        <div class="blk">
+          <p class="k">Маржа</p>
+          <p class="v small" id="margin">—<span class="u"></span></p>
+        </div>
+      </div>
+      <div class="caveat">
+        <h3>Почему это ещё не настоящая цифра</h3>
+        <p class="sub">Число выше — оптимистичное. Оно не учитывает три вещи, которые видны только по вашим книгам:</p>
+        <ul>
+          <li><b>Накладные расходы.</b> Аренда, зарплаты, софт, ваше собственное время — их нужно распределить на каждого клиента, а здесь их нет.</li>
+          <li><b>Форма бизнеса.</b> LLC, S-corp или C-corp — от этого напрямую зависит, сколько уходит на налоги с той же прибыли.</li>
+          <li><b>Налоги.</b> С прибыли ещё предстоит заплатить — федеральные, штата, self-employment. «Прибыль» выше — это до них.</li>
+        </ul>
+        <div class="after">
+          <div>
+            <span class="k">Грубо, если отложить ~28% на налоги</span><br>
+            <span class="v" id="aftertax">—</span>
+          </div>
+          <span class="n">Только иллюстрация. Реальная ставка зависит от вашей формы бизнеса и ситуации — и накладные сюда ещё не входят.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h2>Хотите настоящую цифру по вашим книгам?</h2>
+      <p>На Проверке финансового здоровья мы считаем маржу по вашим реальным данным — с накладными, формой бизнеса и налогами.</p>
+    </div>
+    <div class="pill">$500<b>в счёт первого месяца работы с нами</b></div>
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => "$" + Math.round(n).toLocaleString("ru-RU");
+  function num(id){ const v = parseFloat($(id).value); return isNaN(v)||v<0 ? 0 : v; }
+
+  function update(){
+    const rev = num('rev'), cac = num('cac'), cogs = num('cogs'), other = num('other');
+    const profit = rev - cac - cogs - other;
+    if(rev<=0){
+      $('profit').textContent = "—";
+      $('margin').innerHTML = '—<span class="u"></span>';
+      $('aftertax').textContent = "—";
+      return;
+    }
+    $('profit').textContent = fmt(profit);
+    const margin = profit/rev*100;
+    $('margin').innerHTML = Math.round(margin) + '<span class="u">%</span>';
+    const afterTax = profit>0 ? profit*0.72 : profit;
+    $('aftertax').textContent = fmt(afterTax);
+  }
+  ['rev','cac','cogs','other'].forEach(id => $(id).addEventListener('input', update));
+  update();
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чек-лист «оставить больше» — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --sage:#4F7A5B;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:760px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,40px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:210px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(28px,4.6vw,42px) clamp(24px,5vw,44px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 14px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.14; font-size:clamp(25px,3.8vw,36px); margin:0 0 12px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15px; line-height:1.6; color:var(--on-dark); max-width:60ch}
+
+  .body{padding:clamp(26px,4.4vw,40px) clamp(24px,5vw,44px) clamp(20px,3vw,28px)}
+  .name-row{display:flex; flex-wrap:wrap; gap:16px 22px; margin:0 0 26px; padding-bottom:22px; border-bottom:1px solid var(--ivory-stroke)}
+  .name-row label{flex:1 1 200px; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .name-row input{display:block; width:100%; margin-top:6px; font-family:var(--sans); font-size:15px; color:var(--ink); border:none; border-bottom:1.5px solid var(--border); background:transparent; padding:6px 2px}
+  .name-row input:focus{outline:none; border-color:var(--teal-800)}
+
+  .intro{font-size:14.5px; color:var(--body); margin:0 0 22px; max-width:66ch}
+  .intro b{color:var(--ink)}
+
+  .list{display:grid; gap:10px}
+  .item{display:flex; align-items:flex-start; gap:13px; padding:14px 16px; border:1px solid var(--border-soft); border-radius:12px; cursor:pointer; transition:border-color .15s var(--ease), background .15s var(--ease)}
+  .item:hover{border-color:var(--bronze-300); background:var(--paper)}
+  .item:has(input:checked){border-color:var(--sage); background:#EFF4F0}
+  .item input{appearance:none; -webkit-appearance:none; margin:1px 0 0; width:22px; height:22px; border:1.5px solid var(--border); border-radius:7px; flex:none; position:relative; cursor:pointer; transition:border-color .15s, background .15s}
+  .item input:checked{border-color:var(--sage); background:var(--sage)}
+  .item input:checked::after{content:""; position:absolute; left:7px; top:3px; width:6px; height:11px; border:solid #fff; border-width:0 2.4px 2.4px 0; transform:rotate(43deg)}
+  .item .txt{flex:1}
+  .item .t{display:block; font-family:var(--serif); font-weight:600; font-size:15.5px; color:var(--ink); letter-spacing:-0.005em; line-height:1.32}
+  .item .n{display:block; font-size:13px; color:var(--muted); margin-top:3px; line-height:1.45}
+
+  .tally{margin:24px 0 0; border:1px solid var(--border-soft); border-radius:16px; overflow:hidden; background:var(--paper)}
+  .tally .t-top{display:flex; align-items:center; gap:18px; padding:20px 24px; border-bottom:1px solid var(--ivory-stroke)}
+  .meter{width:52px; height:52px; border-radius:50%; flex:none; display:grid; place-items:center; font-family:var(--mono); font-weight:600; font-size:15px; color:#fff; background:var(--muted); transition:background .25s var(--ease)}
+  .meter small{font-size:10px; opacity:.8}
+  .t-band{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--ink); margin:0; letter-spacing:-0.01em}
+  .t-sub{font-family:var(--mono); font-size:11.5px; color:var(--muted); letter-spacing:.03em; margin:3px 0 0}
+  .t-body{padding:16px 24px 20px; font-size:14px; line-height:1.55; color:var(--body)}
+
+  .disclaimer{margin:20px 0 0; font-size:12.5px; color:var(--muted); line-height:1.5; max-width:64ch}
+
+  .cta{background:linear-gradient(160deg,var(--teal-800),var(--teal-900) 80%); color:var(--on-dark); padding:24px clamp(24px,5vw,44px); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap}
+  .cta h2{font-family:var(--serif); font-weight:600; color:#fff; margin:0 0 4px; font-size:19px; letter-spacing:-0.01em}
+  .cta p{margin:0; color:var(--on-dark); font-size:13.5px; max-width:44ch}
+  .cta .pill{font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--teal-950); background:linear-gradient(180deg,#DBB27C,#C79A5E); padding:12px 20px; border-radius:999px; white-space:nowrap; font-weight:600}
+  .cta .pill b{display:block; font-family:var(--sans); font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; opacity:.85; margin-top:1px}
+
+  .foot{padding:18px clamp(24px,5vw,44px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.cta,.tally .t-top,.meter,.item:has(input:checked){-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .item,.tally,.cta{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Рабочий лист · встреча 3<b>Серия встреч о росте</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Чек-лист «оставить больше»</p>
+    <h1>Сколько вы отдаёте лишнего?</h1>
+    <p>Восемь структурных рычагов, которые решают, сколько прибыли остаётся у вас, а не уходит в налоги. Отметьте то, что уже настроено. Чем меньше галочек — тем больше вы, скорее всего, отдаёте зря.</p>
+  </div>
+
+  <div class="body">
+    <div class="name-row">
+      <label>Бизнес<input type="text" autocomplete="off"></label>
+      <label>Дата<input type="text" autocomplete="off" placeholder="дд.мм.гггг"></label>
+    </div>
+
+    <p class="intro">Отметьте пункт, только если он <b>реально</b> настроен и вы можете это подтвердить — не «вроде бы». Пустые галочки и есть карта того, где стоит начать.</p>
+
+    <div class="list" id="list">
+      <!-- items injected -->
+    </div>
+
+    <div class="tally" id="tally">
+      <div class="t-top">
+        <div class="meter" id="meter">0<small>/8</small></div>
+        <div><p class="t-band" id="band">Отметьте, что уже настроено</p><p class="t-sub" id="sub">закрыто 0 из 8</p></div>
+      </div>
+      <div class="t-body" id="tbody">Каждый незакрытый пункт с реальным дедлайном, расчётом или выбором формы — это повод для разбора: как раз то, что рискованно и хлопотно делать самому.</div>
+    </div>
+
+    <p class="disclaimer">Это самооценка для ориентировки, а не налоговая консультация. Подходящая структура зависит от вашей конкретной ситуации — сроков, дохода, штата и планов. Точный расчёт делается по вашим данным.</p>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h2>Закроем пустые пункты по вашей ситуации?</h2>
+      <p>На Проверке финансового здоровья мы считаем, какие рычаги дадут вам больше всего — с реальными сроками и суммами.</p>
+    </div>
+    <div class="pill">$500<b>в счёт первого месяца работы с нами</b></div>
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+
+<script>
+  const ITEMS = [
+    ["Форма бизнеса проверена под текущую выручку","LLC, S-corp или C-corp — с расчётом, а не на глаз. С ростом дохода выгодная форма меняется."],
+    ["Если S-corp — владельцу назначена разумная зарплата (reasonable comp)","И она обоснована: это одна из первых вещей, которые проверяет IRS."],
+    ["Квартальные авансовые налоги считаются по плану","А не «сколько-то на глаз» — иначе штрафы и сюрприз в апреле."],
+    ["Все доступные вычеты отслеживаются","Домашний офис, авто, оборудование, обучение, поездки — то, что часто теряется."],
+    ["Настроен пенсионный план для владельца","SEP-IRA или Solo 401(k) — законный способ отложить и снизить налог."],
+    ["Личные и бизнес-расходы разделены","Отдельный счёт и карта; ничего не смешивается и не теряется при подсчёте."],
+    ["Сроки под контролем","Окно для выбора S-corp, подача деклараций, дедлайны штата — известны и не пропущены."],
+    ["Налоговое планирование идёт весь год","Решения принимаются заранее, а не постфактум в момент отчёта."],
+  ];
+  const N = ITEMS.length;
+  const list = document.getElementById('list');
+  ITEMS.forEach((it,i)=>{
+    const l = document.createElement('label');
+    l.className = 'item';
+    l.innerHTML = `<input type="checkbox" data-i="${i}"><span class="txt"><span class="t">${it[0]}</span><span class="n">${it[1]}</span></span>`;
+    list.appendChild(l);
+  });
+
+  const meter = document.getElementById('meter');
+  const band = document.getElementById('band');
+  const sub = document.getElementById('sub');
+  const tbody = document.getElementById('tbody');
+
+  function bandFor(c){
+    if(c>=7) return {t:"Хорошая структура", col:"var(--sage)", d:"Почти все рычаги работают на вас. Разбор подтвердит настройки и поищет, где ещё можно выиграть."};
+    if(c>=4) return {t:"Кое-что настроено", col:"var(--bronze-500)", d:"Часть рычагов уже работает, но несколько простаивают — и каждый из них стоит вам денег каждый год."};
+    return {t:"Скорее всего, отдаёте лишнее", col:"var(--bronze-700)", d:"Большинство рычагов не задействованы. Обычно это самая дорогая, но и самая быстро исправляемая часть."};
+  }
+
+  function update(){
+    const c = list.querySelectorAll('input:checked').length;
+    meter.innerHTML = c + '<small>/'+N+'</small>';
+    sub.textContent = `закрыто ${c} из ${N}`;
+    if(c===0){
+      meter.style.background = "var(--muted)";
+      band.textContent = "Отметьте, что уже настроено";
+      tbody.textContent = "Каждый незакрытый пункт с реальным дедлайном, расчётом или выбором формы — это повод для разбора: как раз то, что рискованно и хлопотно делать самому.";
+      return;
+    }
+    const b = bandFor(c);
+    meter.style.background = b.col;
+    band.textContent = b.t;
+    tbody.textContent = b.d + (c<N ? " Незакрытые пункты — ваша карта, с чего начать." : "");
+  }
+  list.addEventListener('change', update);
+  update();
+</script>
+</body>
+</html>

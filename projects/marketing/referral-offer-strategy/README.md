@@ -32,7 +32,11 @@ referral-offer-strategy/
     ├── one-pager-ru.html      native-Russian version of the handout
     ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
     │                           Series sessions (themes, take-homes, series close)
-    └── talk-track.md          plain-language script + Readiness Check timing
+    ├── talk-track.md          plain-language script + Readiness Check timing
+    └── worksheets/            fillable RU session take-homes (interactive + print)
+        ├── readiness-check-ru.html     session 1 — self-scored readiness quiz
+        ├── margin-calculator-ru.html   session 2 — true-margin calculator
+        └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
 ```
 
 > First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
@@ -42,10 +46,11 @@ referral-offer-strategy/
 
 ## Brand & design
 
-No visual output yet. Once any of this strategy turns into a landing page,
-worksheet template, or scorecard deliverable, that output should follow
-[`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) like every
-other client-facing asset.
+The `partner-pitch/` deliverables are built on the Atlas design system
+(teal/bronze/ivory, Source Serif 4 + IBM Plex, the Medallion lockup) via the
+`impeccable` skill — see [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md).
+Any further client-facing asset (landing page, additional worksheets) should
+follow the same system.
 
 ## Skills & tooling
 
@@ -63,11 +68,15 @@ there.
   Financial Health Check, fully credited into the first month of service), the
   free → paid → monthly ladder, the two partner channels (new-client onboarding
   + existing-client Growth Series), and the partner-benefit framing.
+- **`partner-pitch/worksheets/`** — the three Growth Series take-homes, built as
+  interactive, print-ready native-Russian files: a self-scored readiness quiz, a
+  true-margin calculator, and a tax-efficiency checklist. Each is useful on its
+  own but reveals where a professional is needed, closing toward the $500 check.
 
 `strategy.md` remains the decisions-and-open-questions document. Per its §6,
 still open: scoring rubric thresholds, the document/access checklist for the
 paid assessment, Growth Accelerator Series logistics (landing page, promo copy,
-list ownership), the four worksheet templates, and pricing for the
+list ownership), English versions of the three worksheets, and pricing for the
 implementation phase. When any of these get built, add them here in an
 obviously-named folder (e.g. `templates/`, `landing-page/`) and update this
 section.
