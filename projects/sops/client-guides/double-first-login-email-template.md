@@ -49,7 +49,9 @@ Here's the whole thing:
 2. On the sign-in screen, click **"Forgot your password?"** (just above the
    password box, on the right).
 3. Make sure your email is shown, then click **"Get reset link."**
-4. Open the email from Double (check spam/promotions too) and choose a password.
+4. Look for an email from **noreply@accountingclientportal.com**, subject
+   **"Reset Client Portal Password"** (it won't mention "Double" — that's
+   normal; check spam/promotions too). Open it and choose a password.
 5. That's it — from now on, sign in on the same page with your email and this
    password (in the **Password** box).
 
@@ -85,7 +87,9 @@ JK Accounting Group
 2. На странице входа нажмите **«Forgot your password?»** (сразу над полем пароля,
    справа).
 3. Проверьте, что указан ваш email, и нажмите **«Get reset link»**.
-4. Откройте письмо от Double (проверьте и папки «Спам»/«Промоакции») и придумайте
+4. Найдите письмо от **noreply@accountingclientportal.com** с темой
+   **«Reset Client Portal Password»** (упоминания «Double» в нём не будет — это
+   нормально; проверьте и папки «Спам»/«Промоакции»). Откройте его и придумайте
    пароль.
 5. Готово — дальше входите на той же странице по своему email и этому паролю
    (в поле **Password**).

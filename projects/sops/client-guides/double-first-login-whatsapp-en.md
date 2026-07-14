@@ -13,7 +13,7 @@ Hi {{FIRST_NAME}}! Here's how to log in to your Client Portal for the first time
 1️⃣ Open the sign-in page: {{PORTAL_URL}}
 2️⃣ Tap *"Forgot your password?"* (above the password box, on the right)
 3️⃣ Confirm your email and tap *"Get reset link"*
-4️⃣ Check your inbox (and spam) for the email from Double, and follow the link to set your password
+4️⃣ Check your inbox (and spam) for an email from *noreply@accountingclientportal.com*, subject *"Reset Client Portal Password"* — it won't say "Double," that's normal. Follow the link to set your password
 5️⃣ From now on, sign in on the same page — your email + this password
 
 A couple of notes:
