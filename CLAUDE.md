@@ -98,6 +98,11 @@ in that folder.
 - **Repo artifacts are written in English.** Everything committed — skills, SOPs,
   project docs, templates — is in English so anyone on the team using Claude Code can
   read it, whatever language the chat is in.
+- **Reply in the language you're addressed in.** Match the conversation to the
+  language of the user's message — Spanish → Spanish, English → English, Russian →
+  Russian — and keep using it until they switch or explicitly ask for another
+  language. This governs the *chat* only; committed repo artifacts stay in English
+  per the rule above.
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
