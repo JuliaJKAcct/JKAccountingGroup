@@ -57,12 +57,14 @@ Ready-to-send versions of these instructions live in
 | [`double-first-login-whatsapp-ru.md`](./client-guides/double-first-login-whatsapp-ru.md) | Short WhatsApp-ready text, Russian |
 
 **Recommended: the visual one-page guide.** The `…-guide-*.html` files are the
-easiest thing to send. The three Double portal screens (magic-link mode →
-password mode → reset screen) are **faithfully recreated in HTML/CSS**, not
-screenshots — the correct button on each screen is spotlighted in bronze with a
-"click this" pointer, and the magic-link/Google buttons are marked "skip." The
-files are **fully self-contained** (only the JK medallion is embedded, as a data
-URI): nothing to host, works offline. To send:
+easiest thing to send — a single page, four steps in a 2×2 grid. The three
+Double portal screens (magic-link mode → password mode → reset screen) are
+**faithfully recreated in HTML/CSS**, not screenshots — the correct button on
+each screen is spotlighted in bronze with a "click this" pointer, and the
+magic-link/Google buttons are marked "skip"; the fourth cell shows the reset
+email and how you'll sign in from then on. The files are **fully self-contained**
+(only the JK medallion is embedded, as a data URI): nothing to host, works
+offline, and exports to exactly one PDF page. To send:
 
 - **Email** — attach the `.html`, or open it and export to PDF and attach that.
 - **WhatsApp** — open in a browser and export to PDF (send as a document), or
