@@ -31,11 +31,10 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-03](#idea-03--social-media-posts-with-the-notebooklm-strategy) | Restart social media with the NotebookLM content strategy | `projects/marketing/collateral/` | **High** | Not started (blocked on inputs) |
 | [IDEA-04](#idea-04--brand-every-team-members-email-signature) | Put every team email on the Design System (logo + signatures) | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | **Started** — Julia's signature finalized (Medallion); skill built; team rollout pending |
 | [IDEA-05](#idea-05--reasonable-compensation-client-organizer) | Reasonable-comp client organizer (intake questionnaire) | `projects/reasonable-compensation/` | Medium | Not started |
-| [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization for Julia & Lilian (labels/filters) | Firm ops / tooling | Low (parked) | Parked — do not start yet |
+| [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization + the tag/label system for Julia & Lilian (labels/filters; Lilian has specific tag deficiencies on Julia's inbox to fix) | Firm ops / tooling | Low (parked) | Parked — capture only (Lilian to detail the tag deficiencies) |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
-| [IDEA-10](#idea-10--improve-the-tag-system-on-julias-email) | Improve the tag/label system on Julia's email — fix identified deficiencies | Firm ops / tooling (concrete slice of [IDEA-06](#idea-06--email-organization-for-julia--lilian)) | TBD | Parked — capture only (Lilian to detail the deficiencies) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -242,28 +241,40 @@ to set up — the Drive connector creates Docs, not Forms.)
 ## IDEA-06 — Email organization for Julia & Lilian
 
 **What Julia wants:** help keeping her inbox and Lilian's better organized. There
-are already automatic labels, but some things could be improved. **Explicitly: do
-nothing yet — just capture it as pending.**
+are already automatic labels, but some things could be improved. Julia's framing
+when she raised it: **do nothing yet — just capture it as pending.**
 
-**Why it matters:** less time lost to inbox triage; important client mail doesn't
-slip through.
+**What Lilian wants (the tag-system slice):** improve the **tag/label system on
+Julia's mailbox specifically**. Lilian has been working in that inbox and has
+**found specific deficiencies** in how the current tags behave — things like
+mislabeled, overlapping, missing, or not-auto-applying tags — and will walk Claude
+through each one when we sit down to fix it. This started as its own entry
+(IDEA-10) but was **folded in here**, since Gmail labels *are* tags and it's the
+same body of work.
 
-**Where it fits:** firm ops / tooling. When we start, it means auditing the
-current labels/filters and proposing an improved scheme (and possibly automating
-it if Gmail supports it through the connector).
+**Why it matters:** tags/labels are how mail gets triaged and found again — less
+time lost to triage, and important client mail doesn't slip through. When the
+tagging is off, surfacing the right mail gets harder for whoever is in the inbox.
 
-**Capability check / dependency:** the **Gmail connector is not yet authorized**
-in this environment. Before any email work (this idea or IDEA-04's install step),
-Julia needs to authorize Gmail from her Claude connector settings. Until then,
-Claude can't see or touch the mailboxes.
+**Where it fits:** firm ops / tooling. When we start, it means auditing the current
+labels/filters — Julia's and Lilian's — and proposing an improved scheme (and
+possibly automating it via the Gmail connector). **Lilian's identified tag
+deficiencies on Julia's mailbox are the concrete starting point.**
 
-**Related:** [IDEA-10](#idea-10--improve-the-tag-system-on-julias-email) is the
-concrete, Lilian-driven slice of this — improving the **tag/label** system on
-**Julia's** mailbox specifically, with deficiencies Lilian has already spotted.
-IDEA-06 stays the broader "both mailboxes, labels + filters" parking spot.
+**What we need to start:** Lilian narrates the specific tag deficiencies she's
+found (what's mislabeled, missing, overlapping, or not applying automatically) and
+what the ideal tagging scheme should look like; then we audit the live
+labels/filters and propose the fix.
 
-**Priority:** Low · **Status:** Parked — **do not start yet** (Julia's explicit
-instruction)
+**Capability check / dependency:** the Gmail connector exposes label tools
+(list / create / apply labels on messages and threads), so reworking the tag scheme
+is technically in reach — but **access to the actual mailboxes must be confirmed
+first** (the connector has to be authorized for these inboxes; this was the
+blocker noted when Julia first raised it). Confirm access and capture the current
+label setup when we start. (Same dependency gates IDEA-04's Gmail install step.)
+
+**Priority:** Low (parked) · **Status:** Parked — capture only. Julia asked to hold
+when she raised it; Lilian to detail the tag deficiencies before any work begins.
 
 ---
 
@@ -414,42 +425,6 @@ pieces need a *decision*, not just a build:
 
 **Priority:** Medium · **Status:** Not started — waiting on Julia's screenshots +
 pricing logic
-
----
-
-## IDEA-10 — Improve the tag system on Julia's email
-
-**What Lilian wants:** improve the **tag/label system on Julia's email**. Lilian
-has been working in that mailbox and has **found specific deficiencies** in how the
-current tags behave — she'll walk Claude through each one when we sit down to fix
-it. **For now: capture only, no work started.**
-
-**Why it matters:** tags/labels are how mail gets triaged and found again; when the
-tagging is off — mislabeled, overlapping, missing, or not auto-applying — important
-client mail is harder to surface and triage takes longer. Getting the tags right is
-a daily-workflow win for whoever is in that inbox.
-
-**Where it fits:** firm ops / tooling — the **concrete, Lilian-driven slice** of
-[IDEA-06](#idea-06--email-organization-for-julia--lilian). IDEA-06 is the broad
-"email organization for Julia *and* Lilian (labels/filters)" parking spot (parked
-on Julia's instruction); IDEA-10 narrows to **Julia's mailbox, the tag system
-specifically**, driven by deficiencies Lilian already has in hand. Kept separate so
-Lilian's specific initiative has a clear home, but linked both ways so they don't
-drift into duplicates. *(If we'd rather fold this back into IDEA-06 when we start,
-that's an easy merge.)*
-
-**What we need to start:** Lilian narrates the specific deficiencies she's found in
-the current tag system — what's mislabeled, missing, overlapping, or not applying
-automatically — and what the ideal tagging scheme should look like. Then we audit
-the live labels/filters and propose the fix.
-
-**Capability check:** the Gmail connector exposes label tools (list/create/apply
-labels on messages and threads), so reworking the tag scheme is technically in
-reach — to confirm access and the exact current label setup when we start. (Same
-Gmail-connector dependency noted in IDEA-06.)
-
-**Priority:** TBD (Lilian/Julia's call) · **Status:** Parked — captured only;
-waiting on Lilian to detail the deficiencies before any work begins.
 
 ---
 
