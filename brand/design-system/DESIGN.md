@@ -1,6 +1,6 @@
 # Design — "Atlas" system
 
-Source of truth: `jk-brand-showcase.html` (component + token showcase) and `assets/css/styles.css` (production styles lifted verbatim). Do not invent colors or fonts. New components must be composed from existing tokens.
+Source of truth: `jk-brand-showcase.html` (component + token showcase) and `styles.css` (production styles lifted verbatim). Do not invent colors or fonts. New components must be composed from existing tokens.
 
 ## Theme
 
@@ -37,9 +37,9 @@ Petrol teal + warm bronze on soft ivory. Proportions ≈ 60/32/8 (teal/ivory/bro
 
 ## Imagery
 
-Real team photography only (4:5, warm grade) — never stock faces or AI faces. Logo system: Medallion (primary/reversed SVG), horizontal/stacked lockups, monogram; favicons in `assets/logo/favicon/`. Alt text written in the brand voice, localized per page language.
+Real team photography only (4:5, warm grade) — never stock faces or AI faces. Logo system: Medallion (primary/reversed SVG), horizontal/stacked lockups, monogram; favicons in `../logo/favicon/`. Alt text written in the brand voice, localized per page language.
 
-## Landing-page extensions (composed from tokens, defined in `assets/css/landing.css`)
+## Landing-page extensions (composed from tokens, defined in `landing.css`)
 
 - Minimal appbar variant (logo + language toggle + CTA only — no nav links on paid-traffic pages).
 - Sticky mobile CTA bar (bronze `.btn.cta` in a teal glass bar, mobile only).
