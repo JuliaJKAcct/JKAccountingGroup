@@ -69,6 +69,10 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
   and soft radius. The explicit surfaces are the dark-mode fix: our palette
   mandates dark-teal text, which a dark-mode client would render invisible on a
   transparent ground — the fixed panel colors keep everything legible everywhere.
+- **Proportion.** The standard card sits at roughly `320×148px` (~2.15:1), reading as a
+  business card. If a role drops the booking link (support / admin), rebalance the vertical
+  spacing so the card holds ~148px / ~2.2:1 — don't ship the squished ~2.7:1 version. See the
+  [`email-signature` skill](../../../.claude/skills/email-signature/)'s "no-booking-link variant."
 - **One image only:** the reversed Medallion (`JK-medallion-reversed-512.png`) in Panel A.
   Everything else is live text, so the signature reads fully even before the image
   loads (or if a client blocks it).

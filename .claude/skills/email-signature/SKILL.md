@@ -104,13 +104,29 @@ the `curl` check).
 public repo is a judgment call — prefer Method 2 (Gmail upload) for a personal photo so the
 image isn't published in the repo.
 
-## Signature variants (Medallion vs. photo)
+## Signature variants
 The default left panel is the **Medallion** — one shared logo, structurally identical for
 everyone (the safe default). A **personal-photo** variant — a circular headshot in the teal
 panel instead of the Medallion — is a supported alternative when someone prefers it; keep the
 rest of the card identical. A photo is a per-person image: host it per Method 2 or a public
 URL, mind the privacy note, and crop it to a circle (`border-radius:50%`) sized to the panel.
 If the firm adopts photos team-wide, fold it into the template so everyone stays consistent.
+
+**No-booking-link variant (support / admin roles).** The "Book a consultation →" link is the
+card's one CTA and the default, but some roles don't take consultations (e.g. an administrative
+assistant), so the link is dropped. Watch the proportion when you do: removing the booking block
+costs ~29px of height at the same width, which leaves the card noticeably more **rectangular**
+(the first pass was 2.70:1 vs the standard card's ~2.15:1) — don't ship that squished version.
+Restore the height as intentional vertical rhythm so it still reads as a matched business card.
+The recipe that lands it at **~148px tall / ~2.2:1** (matching the standard card): ivory-panel
+padding `11px 16px` → `18px 18px`, hairline margin `8px 0` → `12px 0`, the role kicker's
+`padding-top` `4px` → `5px`, and the DIRECT/EMAIL/WEB row gaps `5px` → `8px` (label cells'
+right padding `13px` → `14px`). Also delete the person's
+post-nominal `{{CREDENTIALS}}` span if they have none — but keep the bronze diamond ◆, so bronze
+still appears exactly once. `signatures/lilian.html` is the reference build; a spacing change like
+this is a visual judgment, so run it through the **impeccable** skill and verify by rendering
+(measure width×height, not just eyeball it). If several teammates end up CTA-less, fold this
+variant into the template so it stays consistent.
 
 ## Workflow A — modify an existing signature
 1. **Understand the ask** and read the target file + the style guide. If it's a visual
