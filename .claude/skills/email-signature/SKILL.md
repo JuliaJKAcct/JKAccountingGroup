@@ -52,8 +52,11 @@ These are why a "simple" tweak can silently break for a recipient. Keep all of t
   mark sits seamlessly with no visible box. Never recolor / box / stretch the logo.
 - **Bronze stays rare** — only the small diamond ◆ (`#9C6A39`) and the one booking link
   (Bronze *ink* `#7E5430`, the darker step so the 9.5px link clears 4.5:1 contrast).
-  Never a second accent, background, or third font. Never ship the booking link pointing
-  at an empty `{{BOOKING_URL}}` — fill it or point it at `mailto:`.
+  Never a second accent, background, or third font. Never ship the booking link empty:
+  the firm-wide default destination is the **contact page**
+  (`https://www.jkaccountinggroup.com/contactus`) — the template ships pre-set to it, and
+  it's the right default for everyone. Swap it for a personal booking link (Calendly, etc.)
+  only when a teammate actually has one.
 - **Outlook/Word hardening stays:** `mso-table-lspace/rspace:0`, `mso-line-height-rule:exactly`,
   `mso-padding-alt` on any button cell, `font-size:0` on image cells.
 - **Keep every teammate's signature structurally identical** — only the person's details
@@ -129,8 +132,10 @@ If the firm adopts photos team-wide, fold it into the template so everyone stays
    (lowercase first name).
 2. Fill every placeholder: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    (post-nominals incl. leading comma, or delete the span), `{{ROLE_CAPS}}`, `{{EMAIL}}`,
-   `{{PHONE}}`, `{{PHONE_TEL}}` (digits with +1), `{{BOOKING_URL}}` (or their `mailto:`).
-   Also delete the template's instructional `<!-- … -->` comment block (the shipped
+   `{{PHONE}}`, `{{PHONE_TEL}}` (digits with +1). The booking link ships pre-set to the
+   firm contact page (`https://www.jkaccountinggroup.com/contactus`) — leave it unless the
+   teammate has a personal booking link. Also delete the template's instructional
+   `<!-- … -->` comment block (the shipped
    signatures, e.g. `julia.html`, carry no comment). Then `grep "{{"` the finished file
    to be sure none remain — with the comment gone, any match is a real leftover.
 3. Render + screenshot to verify it matches the others exactly.

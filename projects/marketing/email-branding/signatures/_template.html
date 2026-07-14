@@ -27,7 +27,11 @@
     {{EMAIL}}        e.g. lilian@jkaccountinggroup.com
     {{PHONE}}        display phone — e.g. (954) 555-0110
     {{PHONE_TEL}}    digits only w/ +1 — e.g. +19545550110
-    {{BOOKING_URL}}  full booking link, or point it at mailto:<email> if none.
+
+  The booking link is PRE-SET to the firm's contact page
+  (https://www.jkaccountinggroup.com/contactus) — the firm-wide default that
+  works for everyone. Swap it for a personal booking link (Calendly, etc.) only
+  if this teammate has one; never leave it empty.
 
   ONE image only — the Medallion in the teal panel. To install, UPLOAD it in Gmail
   (Insert image → Upload) — Google hosts it, no website needed — or point its src at
@@ -74,9 +78,10 @@
         </tr>
       </table>
 
-      <!-- Booking — a light bronze text link (the single action). Point at mailto:{{EMAIL}} if no booking link. -->
+      <!-- Booking — a light bronze text link (the single action). Defaults to the firm
+           contact page; swap for a personal booking link only if the teammate has one. -->
       <div style="padding-top:10px;">
-        <a href="{{BOOKING_URL}}" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.02em; color:#7E5430; text-decoration:none;">Book a consultation&nbsp;&#8594;</a>
+        <a href="https://www.jkaccountinggroup.com/contactus" style="font-family:'IBM Plex Sans', Arial, Helvetica, sans-serif; font-size:9.5px; font-weight:700; letter-spacing:0.02em; color:#7E5430; text-decoration:none;">Book a consultation&nbsp;&#8594;</a>
       </div>
 
     </td>
