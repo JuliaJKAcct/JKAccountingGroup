@@ -34,7 +34,10 @@ logo are configured per [`double-portal-branding.md`](./double-portal-branding.m
    them (the one we used to set up their Double account). If it's blank, they
    type it in themselves.
 4. Click **"Get reset link."** Allow a few minutes for the email to arrive.
-5. They open the email from Double and follow the link to set a password.
+5. They open the reset email and follow the link to set a password. **Note the
+   sender is `noreply@accountingclientportal.com` and the subject is "Reset
+   Client Portal Password" — the email does *not* mention "Double,"** so tell
+   clients not to look for that (a common point of confusion).
 6. From then on, they return to the same sign-in page and log in with their
    email + the password they just set (in the **Password** box).
 
