@@ -1,7 +1,7 @@
 # Installing the consultation-booking flow in Odoo
 
 Everything here is done **inside the firm's Odoo admin** — no API key or Claude↔Odoo
-connection required. Two pieces:
+connection required. Three pieces:
 
 - **Part A** — create the two Appointments calendars (new-client vs existing-client).
 - **Part B** — put the chooser page (`booking-chooser.odoo.html`) on the site and link it to the calendars.
@@ -51,11 +51,13 @@ Julia runs her consultations in **Zoom**, and the firm's AI notetaker
    **invite link** (it never changes). In the room's settings, enable the
    **Waiting Room** — everyone gets the same link, so this stops the next client
    from walking in while the previous call is still running.
-2. **In each appointment type** (both calendars): leave the **Videoconference
-   link** field **empty** and paste the Zoom URL into the **Location** field —
-   it then appears in the booking confirmation and in the calendar invite the
-   client receives. Optionally repeat the link in the confirmation message so
-   it's impossible to miss.
+2. **In each appointment type** (both calendars): set the **Videoconference /
+   Video Link** field to **None** (or leave it empty) and paste the Zoom URL
+   into the **Location** field — it then appears in the booking confirmation
+   and in the calendar invite the client receives. On some Odoo versions
+   Location is a picker rather than free text; if so, put the Zoom link in the
+   **confirmation message** instead. Either way, also repeating the link in the
+   confirmation message makes it impossible to miss.
 3. **Keep bookings from touching:** if your Odoo version offers extra
    time/padding between meetings, set ~15 min; otherwise shape each
    availability window so back-to-back bookings can't collide.
