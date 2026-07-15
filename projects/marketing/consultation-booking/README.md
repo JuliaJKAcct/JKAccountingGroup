@@ -20,7 +20,8 @@ consultation is **online** — a video link is emailed on booking.
 The firm's site already runs on **Odoo (Standard plan)**, so Appointments is
 **included at no extra cost** and lives natively inside the site. It supports two
 appointment types with independent availability, automatic online video links
-(Odoo Discuss or Google Meet), and a booking page that inherits the site's EN/RU
+(natively Odoo Discuss or Google Meet — the firm instead uses a fixed Zoom room
+link; see the notes below), and a booking page that inherits the site's EN/RU
 language switch. Google Calendar's "Appointment Scheduling" was evaluated first
 and **ruled out** — it is a paid add-on on the firm's Google Workspace plan.
 
@@ -79,8 +80,12 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   draft, not yet live** on the site — a decision is pending on whether/when to
   apply it to the Odoo site and on any copy changes.
 - **Locked decisions:** Odoo Standard → Appointments included ($0 extra);
-  online-only; EN/RU; recommended video = **Odoo Discuss** (no external
-  dependency).
+  online-only; EN/RU; video = **Zoom via Julia's fixed Personal Meeting Room
+  link** (Julia works in Zoom, and the firm's AI notetaker *Ping Assistant*
+  joins Zoom calls — see `INSTALL-ODOO.md` § "Video: Zoom"). Native Zoom
+  integration is impossible on Odoo Online (third-party modules can't be
+  installed), so the fixed-room link goes in each appointment type's
+  *Location* field. Fallback if Zoom is ever dropped: **Odoo Discuss**.
 - **Placeholders to resolve before go-live** (the go-live artifact is
   `booking-chooser.odoo.html`; see `INSTALL-ODOO.md`):
   - the two CTA links (`ODOO_NEW_CLIENT_LINK` / `ODOO_EXISTING_CLIENT_LINK`)
@@ -92,6 +97,7 @@ follows the landing-page pattern used for the site's `/consultation/` pages
 - **Inputs still needed from the firm:** exact availability (days/hours) per
   calendar; consult durations; whether the new-client consult is a **free intro**
   (add a "Free" badge if so); who hosts (Julia / +Lilian); booking-form intake
-  questions.
+  questions; how **Ping Assistant** joins meetings (calendar-watch vs manual
+  invite — decides whether to enable Odoo ↔ Google Calendar sync for Julia).
 - **On go-live:** point the website "Book a Consultation" button and the
   [email signatures](../email-branding/) at this page's URL.

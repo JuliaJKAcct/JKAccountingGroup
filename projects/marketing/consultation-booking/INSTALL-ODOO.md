@@ -26,7 +26,7 @@ Open **Appointments** → **New**, then set:
 | **Schedule / front-end display** | **Users** → add **Julia** as the bookable person |
 | **Duration** | `30 min` *(placeholder — change when decided)* |
 | **Availability / Schedule tab** | The days + time windows this type is bookable. Use a **temporary** window for now, e.g. *Tue & Thu, 10:00–13:00*. |
-| **Location / Videoconference** | **Online**, video link = **Odoo Discuss** (auto-generates a meeting link per booking; no external account) |
+| **Location / Videoconference** | **Online**, via **Julia's Zoom room** — see [**"Video: Zoom"**](#3-video-zoom-the-firms-choice) below (leave Odoo's *Videoconference link* empty and put the Zoom URL in *Location*) |
 | **Schedule from / to** *(optional)* | e.g. min 24 h notice; up to 60 days ahead |
 | **Questions tab** *(optional)* | Name / email / phone are built in; add intake questions later |
 
@@ -35,11 +35,47 @@ Open **Appointments** → **New**, then set:
 
 ### 2. Existing-client calendar
 **New** again → `Existing Client Session`, its **own different** availability
-(e.g. *Mon/Wed/Fri, 14:00–17:00*), same Online + Discuss setup. **Publish** and
+(e.g. *Mon/Wed/Fri, 14:00–17:00*), same Online + Zoom setup. **Publish** and
 **copy its URL** → this is `ODOO_EXISTING_CLIENT_LINK`.
 
 > Odoo auto-checks Julia's calendar for conflicts, so only genuinely-free slots
 > inside those windows are offered.
+
+### 3. Video: Zoom (the firm's choice)
+
+Julia runs her consultations in **Zoom**, and the firm's AI notetaker
+(**Ping Assistant**) joins Zoom calls to take notes — so both calendars use
+**Julia's fixed Zoom Personal Meeting Room** instead of Odoo's built-in video:
+
+1. **In Zoom** (Julia's account): **Meetings → Personal Room** → copy the
+   **invite link** (it never changes). In the room's settings, enable the
+   **Waiting Room** — everyone gets the same link, so this stops the next client
+   from walking in while the previous call is still running.
+2. **In each appointment type** (both calendars): leave the **Videoconference
+   link** field **empty** and paste the Zoom URL into the **Location** field —
+   it then appears in the booking confirmation and in the calendar invite the
+   client receives. Optionally repeat the link in the confirmation message so
+   it's impossible to miss.
+3. **Keep bookings from touching:** if your Odoo version offers extra
+   time/padding between meetings, set ~15 min; otherwise shape each
+   availability window so back-to-back bookings can't collide.
+
+**Why not a "real" Zoom integration?** Odoo Appointments natively offers only
+**Odoo Discuss** and **Google Meet** as auto-generated video links. Zoom
+connectors exist on the Odoo Apps Store, but they are **third-party modules,
+and Odoo Online — the hosting behind the firm's Standard plan — cannot install
+third-party modules** (that requires Odoo.sh or self-hosting). The fixed-room
+approach costs nothing and works today. If a unique Zoom link *per booking* is
+ever truly needed, that's a later automation (Zapier/Make) — don't start there.
+
+**Ping Assistant:** notetakers usually auto-join by watching a calendar. Enable
+Odoo ↔ **Google Calendar sync** for Julia (**Settings → Integrations → Google
+Calendar**) so every booking lands in her Google Calendar with the Zoom link in
+it — then confirm with Julia how Ping Assistant picks up meetings (from the
+calendar, or by manual invite).
+
+**Fallback (no Zoom):** set **Videoconference link = Odoo Discuss** — free,
+built-in, generates a browser-based link per booking, nothing to install.
 
 ---
 
