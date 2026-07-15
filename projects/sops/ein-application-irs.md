@@ -33,6 +33,14 @@ The whole application is answerable from these. Get them all first; the online
 tool **times out after 15 minutes of inactivity and cannot be saved** (see §2),
 so you do not want to be hunting for an answer mid-flow.
 
+> **Where the answers come from — the client's Business Intake Form.** The firm
+> sends every new client a **Business Intake Form** up front, and its answers feed
+> this application. Pull the values from the client's **completed** intake form
+> rather than re-interviewing; the working sheet in the appendix is just to
+> transcribe the few fields this filing needs. If the form is missing something
+> this filing requires (e.g. the responsible party's SSN/ITIN), that is the one
+> thing to go back to the client for.
+
 1. **Exact legal name** of the entity — spelled **exactly** as it appears on
    Sunbiz (including "LLC" / "Inc." / "Corp."). The IRS name must match Sunbiz.
 2. **Sunbiz document number** and **formation/effective date** (this is the
@@ -377,8 +385,8 @@ If JK completes and submits the application **on the client's behalf**:
 ## Appendix — Blank intake (copy into the client's file in YOUR system)
 
 > Copy this block into the client's folder in Drive/Double/QuickBooks and fill it
-> there. **Keep filled-in client data — SSN/ITIN, addresses, the EIN — out of
-> this repo.**
+> there **from the client's completed Business Intake Form**. **Keep filled-in
+> client data — SSN/ITIN, addresses, the EIN — out of this repo.**
 
 ```
 EIN Intake — <legal entity name>

@@ -32,6 +32,14 @@ which is the immediate next step.
 
 The filing is one uninterrupted online form; gather everything first.
 
+> **Where the answers come from — the client's Business Intake Form.** The firm
+> sends every new client a **Business Intake Form** up front, and its answers feed
+> this filing (and Part 2, the EIN). Pull the values from the client's
+> **completed** intake form rather than re-interviewing; the working sheet in the
+> appendix is just to transcribe the fields this filing needs. If the form is
+> missing something this filing requires, that is the one thing to go back to the
+> client for.
+
 1. **Entity type** — **LLC** or **Profit Corporation (Inc./Corp.)**? → drives the
    whole form. See §1. (Tie to whether the client will elect **S-corp** — that
    changes nothing on the state filing but sets up Part 2 + Form 2553.)
@@ -286,8 +294,9 @@ promote this from a stub to a full screen-by-screen like §3.*
 ## Appendix — Blank intake (copy into the client's file in YOUR system)
 
 > Copy this block into the client's folder in Drive/Double/QuickBooks and fill it
-> there. **Keep filled-in client data — names, addresses, share counts, the
-> document number — out of this repo.**
+> there **from the client's completed Business Intake Form**. **Keep filled-in
+> client data — names, addresses, share counts, the document number — out of this
+> repo.**
 
 ```
 FL Formation Intake — <proposed entity name>
