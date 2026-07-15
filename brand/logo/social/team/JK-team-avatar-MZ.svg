@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <!-- JK team avatar — MZ. Square 1:1, circular-crop safe.
+       Initials in the medallion-monogram letter style; name in IBM Plex Mono. -->
+  <defs><style>@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&amp;display=swap');</style></defs>
+  <rect x="-40" y="-40" width="1080" height="1080" fill="#F6F3EC"/>
+  <circle cx="500" cy="500" r="468" fill="none" stroke="#123841" stroke-width="6"/>
+  <g transform="translate(500,425) scale(3.5833) translate(-42.50,-56)"><path d="M4.5 86 L4.5 26 L22 63 L39.5 26 L39.5 86 M53.5 30.5 L83.5 30.5 L53.5 81.5 L83.5 81.5" fill="none" stroke="#123841" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"/></g>
+  <rect x="466" y="572" width="68" height="4" rx="2" fill="#9C6A39"/>
+  <text x="500" y="652" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="40" letter-spacing="4" fill="#123841">JK ACCOUNTING GROUP</text>
+  <path fill="#9C6A39" d="M186 640 L200 654 L186 668 L172 654 Z"/>
+  <path fill="#9C6A39" d="M814 640 L828 654 L814 668 L800 654 Z"/>
+</svg>
