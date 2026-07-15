@@ -35,6 +35,9 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
+| [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
+| [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
+| [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -63,7 +66,9 @@ onboarding of new staff, auditability.
 its whole purpose is exactly this (client-task runbooks + firm procedures), and it
 already documents the "one self-contained file per procedure, never commit client
 data, include a blank template" convention. One SOP file per client (or per
-client-task), grouped into a subfolder once there are a few.
+client-task), grouped into a subfolder once there are a few. These SOPs surface in
+the central, clickable SOP hub tracked in
+[IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop).
 
 **What we need to start:** Julia narrates one client's monthly bookkeeping/close
 flow end to end (which accounts, where statements come from, categorization
@@ -248,9 +253,9 @@ when she raised it: **do nothing yet — just capture it as pending.**
 Julia's mailbox specifically**. Lilian has been working in that inbox and has
 **found specific deficiencies** in how the current tags behave — things like
 mislabeled, overlapping, missing, or not-auto-applying tags — and will walk Claude
-through each one when we sit down to fix it. This started as its own entry
-(IDEA-10) but was **folded in here**, since Gmail labels *are* tags and it's the
-same body of work.
+through each one when we sit down to fix it. This was briefly captured as its own
+separate entry but was **folded in here**, since Gmail labels *are* tags and it's
+the same body of work.
 
 **Why it matters:** tags/labels are how mail gets triaged and found again — less
 time lost to triage, and important client mail doesn't slip through. When the
@@ -425,6 +430,148 @@ pieces need a *decision*, not just a build:
 
 **Priority:** Medium · **Status:** Not started — waiting on Julia's screenshots +
 pricing logic
+
+---
+
+## IDEA-10 — Website scheduling calendar for clients and prospects
+
+**What Lilian wants:** a working **scheduling / booking calendar on the firm's
+website** (jkaccountinggroup.com) that fits how the firm actually works — with **two
+distinct audiences**: people who are **already clients** and people who are **not yet
+clients (prospects)**. Each should get the right booking experience (a prospect
+booking an intro / consultation vs. an existing client scheduling a working meeting).
+Lilian has **specific ideas** for how it should work that she'll share when we build
+it. She flags this as **one of the most important** things to do.
+
+**Why it matters:** the calendar is a front door for the firm — a self-serve booking
+flow turns website visitors into booked consultations (prospects) and gives existing
+clients a friction-free way to grab time, cutting the email back-and-forth. It's the
+natural home for the "Book a consultation" CTA already shipped in the email signature
+(see [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo)) and it
+feeds the front-offer / consultation funnel in the marketing work.
+
+**Where it fits:** firm ops / website — most likely its **own new project** when it
+graduates (e.g. `projects/website-scheduling/`), touching the website, Google
+Calendar, and the marketing consultation funnel. Ties to
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the
+signature's booking link should point here once it exists) and to
+[`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/)
+(the prospect / diagnostic front-offer flow). The leads these bookings create are
+managed and measured in
+[IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm).
+
+**What we need to start:** Lilian shares her ideas, and we settle: the two audiences'
+flows (what a prospect books vs. what a client books), meeting types & durations, what
+to collect up front, routing (Julia vs. Lilian vs. round-robin), where it lives on the
+site, whether it writes to the firm's Google Calendar, and language(s) (ES / EN / RU).
+
+**Capability check:** the back-end piece is feasible — the firm's **Google Calendar
+connector** is among our integrations (read / create / update events, suggest times),
+so booked slots can sync to the real calendar. The website piece is a
+**build / decision**: either embed an off-the-shelf scheduler (e.g. Calendly / Cal.com /
+Google Appointment Schedule / Acuity) or build a branded booking page on the Design
+System. Which path — and how to embed it — depends on **what platform the site runs
+on** (to confirm when we start). *(Connector availability can vary session to session;
+we'll confirm live calendar access at build time.)*
+
+**Priority:** **High** (Lilian: one of the most important) · **Status:** Not started —
+captured; waiting on Lilian's ideas to kick off.
+
+---
+
+## IDEA-11 — Lead management & conversion stats in Odoo (CRM)
+
+**What Lilian wants:** understand how **lead management works in Odoo**, and set it up
+so Odoo becomes the firm's **single place to manage every lead and measure the
+funnel**. Two parts: **(1) Intake** — website visitors create inquiries / consultation
+requests that land in Odoo as leads, and *all* leads from every source (referrals,
+email, walk-ins) funnel into the same place; **(2) Reporting** — the statistics that
+matter: **conversion rate** (of the people who contact us, how many become clients),
+how many we win, how many reject / are lost, and similar pipeline metrics. Lilian isn't
+yet sure how to administer this inside Odoo and wants help figuring out the model.
+
+**Why it matters:** today there's no single, measured view of the funnel. Centralizing
+leads gives the firm a real conversion number, shows where prospects drop off, and turns
+"are we growing?" into data. It's the measurement layer under all the firm's growth
+work.
+
+**Where it fits:** firm ops / CRM — likely its **own new project** when it starts.
+**Tightly linked to [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects):**
+the website consultation calendar is the intake that *creates* the leads this system
+measures (book a consultation → a lead in Odoo). It also connects to the marketing
+front-offer funnel ([`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/))
+and downstream to [IDEA-09](#idea-09--build-our-own-goproposal-alternative) (a won lead
+→ a proposal). The through-line: **website intake (IDEA-10) → lead in Odoo (IDEA-11) →
+proposal (IDEA-09)**, with conversion measured across the whole path.
+
+**What we need to start:** a short discovery — (a) confirm the firm is standardizing on
+**Odoo CRM** and which Odoo edition/modules are active; (b) map the current lead sources
+and the stages a prospect moves through (e.g. New → Contacted → Consultation booked →
+Proposal sent → Won / Lost); (c) decide which metrics matter (conversion %, win/loss
+reasons, time-to-close, source attribution). Then I explain how Odoo's
+Leads / Opportunities + pipeline stages + reporting model those, and we design the
+website→Odoo intake.
+
+**Capability check (honest):** **there is no Odoo connector in the firm's integrations
+today** — the connected systems are QuickBooks, Double, Gmail, Google Calendar, Drive,
+Canva, Gamma, Shopify, NotebookLM and GitHub. So Claude can't read or write your Odoo
+directly right now. What I *can* do now: help you understand Odoo's CRM model, design
+the pipeline / stages, and plan the website→lead flow and the reports. Getting the
+website to actually create Odoo leads is a real integration (Odoo supports web-form /
+"Contact Us" → CRM lead and an API); wiring Claude into Odoo would need an Odoo MCP
+connector or API access added later. We'll scope that connector question when we pick
+this up.
+
+**Priority:** **High** (same funnel as IDEA-10) · **Status:** Not started — captured;
+next step is the short discovery above, whenever we pick it up.
+
+---
+
+## IDEA-12 — Central SOP index: a clickable hub for every SOP
+
+**What Lilian wants:** two linked things. **(1)** Keep building **SOPs for every
+day-to-day task** so every procedure the firm runs is written down and registered —
+the ongoing mission of the sops project. **(2)** — the new piece — a **single central,
+clickable index / map** where the whole team can see the full list of the company's
+SOPs and click straight through to open any one. A centralized hub, not procedures
+scattered across folders that people have to hunt for.
+
+**Why it matters:** SOPs are only useful if people can find them fast. A central
+clickable map turns the growing SOP library into a real reference — someone covering a
+task during PTO opens the hub, finds the SOP, clicks, done — and it makes gaps visible
+(what still isn't documented). It's continuity and delegability made navigable.
+
+**Where it fits:** the existing [`projects/sops/`](./projects/sops/) project — this is
+its **navigation layer**. A **seed already exists**: `projects/sops/README.md` has an
+"Index" table that's clickable in GitHub. This idea grows that into the real central map
+as the library expands. Formats to decide when we start:
+1. **Curated Markdown index** in the sops README, grouped by area (onboarding /
+   bookkeeping / tax / client-guides …) — simplest, already clickable in GitHub, zero
+   build.
+2. **A branded HTML "SOP directory" page** on the Design System — a visual, grouped,
+   optionally searchable hub you open in a browser (built via the
+   [`impeccable`](./.claude/skills/impeccable/) skill + [`brand/`](./brand/)) — the
+   concrete first internal-docs instance of
+   [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system).
+
+Related: [IDEA-01](#idea-01--client-by-client-accounting--bookkeeping-sops) (the
+client-by-client SOP content that populates the library) and
+[IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) (the
+firm-wide design-system-document system — a branded SOP hub is one instance).
+
+**What we need to start:** decide the hub format (Markdown index vs. branded HTML page),
+the grouping/taxonomy (by area? client-specific vs. firm-process?), and whether it needs
+search. Then, as each new day-to-day SOP is written, it lands in the index. No new
+content is required to begin — we can shape the hub around the SOPs already in
+`projects/sops/`.
+
+**Capability check:** fully buildable now. The Markdown index already works; a branded
+HTML hub is exactly the kind of Design-System artifact we already produce (the
+reasonable-comp report, the branded client guides), driven by the `impeccable` skill +
+`brand/`. No external dependency.
+
+**Priority:** Medium · **Status:** Not started — index seed exists in the sops README;
+waiting to decide the hub format + taxonomy.
 
 ---
 
