@@ -136,7 +136,7 @@ of truth, PNGs are exports for tools that can't place SVG):
 | Small, **no room for text** | Emblem (rings + monogram) | `JK-emblem.svg` (`-reversed` on dark) |
 | Tiny placements / inline | Monogram (bare J&K) | `JK-monogram-teal.svg` (`-reversed` / `-black` / `-white`) |
 | App icon / favicon (the one tiled exception) | files in `favicon/` | — |
-| Round social avatar (WhatsApp, Telegram, Google…) — square, safe for circular crop | Emblem on a teal field | files in `logo/social/` |
+| Round social avatar (WhatsApp, Telegram, Google…) — square, safe for circular crop | Medallion (reversed) on a teal field, sized inside the circular safe zone | files in `logo/social/` |
 
 **Size step-down:** below ~64px, drop from **badge → emblem → monogram**. Never
 shrink the full badge until the ring text is illegible.

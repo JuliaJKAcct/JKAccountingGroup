@@ -16,7 +16,7 @@ in petrol teal `#123841` + warm bronze `#9C6A39` on soft ivory `#F6F3EC`.
   apple-touch-icon-180.png, maskable-512.png, app-icon-512.png
   (256/512 = crisp square monogram tiles for platform favicon fields, e.g. Odoo Website)
 - `social/` — round-avatar profile images (WhatsApp, Telegram, Google, etc.): the
-  emblem on a teal field, square 1:1, sized to survive a circular crop
+  full medallion on a teal field, square 1:1, sized to survive a circular crop
 
 ## svg/ contents
 medallion: primary · reversed · onecolor-teal · black · white
