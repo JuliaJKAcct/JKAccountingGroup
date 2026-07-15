@@ -102,9 +102,10 @@ else.
 
 **Know these rules of the tool before you start:**
 
-- **Availability:** weekdays only, roughly **7 a.m.–10 p.m. Eastern** (verify the
-  current window on the page — the IRS occasionally changes it). Not available
-  overnight or on weekends.
+- **Availability:** the EIN Assistant is only open on a published schedule
+  (Eastern time), **not 24/7** — recent hours run roughly **Mon–Fri early morning
+  to after midnight, with more limited weekend hours**. Check the current window
+  on the IRS page before you sit down to file; the IRS changes it periodically.
 - **One session, no saving:** it **times out after 15 minutes of inactivity**
   and cannot be resumed. Have every §0 answer in front of you.
 - **One EIN per responsible party per day** — online, phone, fax, or mail. If
