@@ -21,7 +21,9 @@ collateral/
 ├── START-HERE.md                   ← the 5-minute setup, read this first
 ├── claude-project-instructions.md  ← paste into a Claude Project's custom instructions
 ├── starter-prompts.md              ← ready-made prompts for common assets
-└── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
+├── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
+└── assets/                         ← finished, versioned pieces
+    └── facebook-cover/             ← Facebook Page cover (HTML source + PNG exports)
 ```
 
 > The firm's offer positioning lives one level up at
