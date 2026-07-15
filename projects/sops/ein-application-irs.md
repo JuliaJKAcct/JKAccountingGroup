@@ -101,28 +101,98 @@ else.
   then — this is the client's proof of EIN and you may not get another copy
   easily.
 
-**The interview, in order (categories — exact screens vary):**
+### The wizard, screen by screen (verified 2026-07)
 
-1. **Identify the entity type.** Pick the entity's **legal** form as filed on
-   Sunbiz: **Limited Liability Company**, or **Corporation**. (See §4A for the
-   LLC/S-corp nuance — do **not** try to make an S-election here.)
-   - **LLC** → it asks the **number of members** and the **state** (Florida).
-     For a single-member LLC it explains the default (disregarded entity); for
-     multi-member, partnership. This is just the federal **default** tax
-     treatment — the S-election, if any, happens later on Form 2553 (§4B).
-   - **Corporation** → it asks the income-tax form the corp will file (**1120**
-     for a C-corp). An S-corp still files Form 2553 separately (§4B).
-2. **Reason for applying** → "Started a new business."
-3. **Responsible party** → the individual's **name and SSN/ITIN**, and whether
-   they are an owner/member. (See §4C.)
-4. **Addresses** → mailing + physical, with county.
-5. **Business details** → legal name (match Sunbiz exactly), Sunbiz county/state,
-   start date (formation date), **closing month** (December), **number of
-   employees** expected and whether/when wages start, and **principal activity /
-   line of business**.
-6. **How to receive the letter** → choose to **receive online** so you can
-   download the confirmation PDF immediately (also mailed).
-7. **Review → Submit.** EIN issued on screen. **Save the PDF now** (§5).
+The tool is a **6-step wizard** with a progress bar at the top:
+**1 Legal Structure → 2 Identity → 3 Addresses → 4 Additional Details →
+5 Review & Submit → 6 EIN Assignment.** All required fields are marked `*`. A
+language selector sits in the top-right header, but treat the tool as
+English-only.
+
+**Step 1 — Legal Structure.**
+- *"What type of legal structure is applying for an EIN?"* — choose the entity's
+  **legal** form as filed on Sunbiz: **Limited Liability Company (LLC)** or
+  **Corporations** (this option's help text notes it "includes S corporations…").
+  A confirm box explains the choice. → **Do not try to make the S-election here**
+  (see §4A/§4B).
+- **LLC path** → *"How many member(s) are in the LLC?"* + *"state/territory where
+  the business is physically located"* (**Florida (FL)**).
+  - A confirm box states the default: **single-member = disregarded entity**;
+    **multi-member = partnership**. It explicitly points to **Form 8832**
+    (corporate status) or **Form 2553** (S-corp status) if you want to change it
+    — confirming that the EIN app itself does **not** elect S-corp (§4B).
+- *"Why is the … requesting an EIN?"* → **Started a new business** (other options:
+  Hired employees, Banking purposes, Changed type of organization, Purchased
+  active business).
+
+**Step 2 — Identity.** *"Please tell us about the Responsible Party"* —
+*"Must match IRS records or this application cannot be processed."*
+- **SSN/ITIN** (required), **First / Middle / Last name**, Suffix.
+- **Your role:** *"I am one of the owners, members, or the managing member"* **or**
+  *"I am a third party applying for an EIN on behalf of this LLC."* → pick the
+  third-party option when the firm is filing for the client (§4D).
+
+**Step 3 — Addresses.** Mailing + physical business address (with county/state).
+
+**Step 4 — Additional Details (two screens).**
+
+*Screen 4a — "Tell us about the LLC":*
+- **Legal name** (must match articles of organization). ⚠️ For an LLC the field
+  **may not contain the endings "Corp" or "Inc"**; only `-` and `&` are allowed.
+- **Trade name / DBA** (only if different) — may not contain "LLC", "LC", "PLLC",
+  "PA", "Corp", or "Inc".
+- **County** and **State/Territory** where the LLC is located.
+- **State/Territory where the articles of organization are (or will be) filed**
+  (Florida).
+- **Start date** (Month / Year) = the Sunbiz formation date.
+- Then five yes/no triggers — for a typical small company all are **No**:
+  1. Own a **highway motor vehicle ≥ 55,000 lbs** taxable gross weight?
+  2. Involve **gambling / wagering**?
+  3. Need to file **Form 720** (Quarterly Federal Excise Tax)?
+  4. **Sell or manufacture alcohol, tobacco, or firearms**?
+  5. **Have, or expect to have, employees who will receive Forms W-2 in the next
+     12 months?** ← answer **Yes** only if there will be payroll; it flags the
+     Form 941/940 obligations.
+
+*Screen 4b — "Provided Business Activity and Services":* pick the one **category**
+that best fits, then answer its **follow-up** (see the matrix below). Most JK
+service clients land on **Other → Consulting** or **Other → Service**.
+
+| Category | Follow-up question / options |
+|---|---|
+| Accommodations | Casino hotel / Hotel / Motel / Other |
+| Construction | "Do you focus on a single construction trade (concrete, framing, roofing, electrical, plumbing, HVAC, flooring, etc.)?" Yes/No |
+| Finance | Commodities broker / Credit card issuing / Investment advice / Investment club / Investment holding / Mortgage broker / Mortgage company / Portfolio management / Sales financing / Securities broker / Trust administration / Venture capital / Other |
+| Food Service | Bar / Bar and restaurant / Catering / Coffee shop / Fast food / Full service restaurant / Ice cream shop / Mobile food service / Other |
+| Health Care | "Does your establishment include medical practitioners with an M.D. or D.O. degree?" Yes/No |
+| Insurance | Insurance carrier / Insurance agent or broker / Other |
+| Manufacturing | Free text: "specify the type of goods you manufacture and the primary materials used (e.g. 'wood furniture')" |
+| Real Estate | Rent/lease property I own / Use capital to build property / Sell property for others / Manage real estate for others / Other |
+| Rental & Leasing | Rent/lease/sell real estate / Rent or lease goods (+ specify goods) / Manage real estate for others |
+| Retail | Internet-only / Storefront / Direct sales / Auction house / Other |
+| Social Assistance | Nursing home / Shelter / Youth services / Other |
+| Transportation | "Do you primarily transport cargo or passengers?" Cargo / Passengers / Support activity |
+| Warehousing | (selecting it advances to the next step) |
+| Wholesale | "Do you own or take title to the goods you sell?" Yes/No |
+| **Other** | **Consulting / Manufacturing / Organization (religious, environmental, social/civic, athletic…) / Rental / Repair / Sell goods / Service / Other (+ specify)** |
+
+**Step 5 — Review & Submit.** A read-only summary of every answer —
+*"if any of the information below is incorrect, you will need to start a new
+application"* (there is no going back to edit after submit). Also choose:
+- **"How would you like to receive your EIN Confirmation Letter?"**
+  - ✅ **"Receive letter digitally in the next step"** — view/print/**save the PDF
+    immediately** (requires a PDF reader; not mailed). **Always pick this.**
+  - "Receive letter by mail (allow up to 4 weeks)" — mailed to the address given.
+- Click **Submit EIN Request**.
+
+**Step 6 — EIN Assignment.** *"Congratulations! Your EIN has been successfully
+assigned."* The screen shows **Your EIN Details** — the **EIN assigned**, **Legal
+name**, **Name control** — and a **Download EIN confirmation Letter [PDF]** button
+plus **Print Page**.
+- 👉 **Download the PDF and Print/Save the page now** — this CP 575-equivalent
+  letter is the client's official proof of EIN and is not easily re-issued (a
+  147C by phone is the only replacement). Store it in the client's system, not
+  this repo (§5).
 
 ---
 
