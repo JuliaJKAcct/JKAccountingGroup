@@ -81,7 +81,8 @@ Collector account** as supporting documentation, so do the **county** first.
 > on the application. If the client's email is used, all of that lands in the
 > client's inbox and stalls the filing while you chase them to find it and
 > forward it. Keeping the firm email on the application keeps the whole thread
-> with the team so we can respond the same day.
+> with the team so we can respond the same day. (For the exact emails you'll
+> receive and where to check status, see §7.)
 
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
@@ -255,6 +256,63 @@ Address** and **Folio Number** auto-fill from the address you enter.
 | FL Office of Financial Regulation | Money services, lending, investment advisers, collections | <https://flofr.gov> |
 | FL Department of Revenue | Sales tax (DR-1) / reemployment tax | <https://floridarevenue.com> |
 | Broward County Property Appraiser | Tangible property (DR-405) / zoning lookup | <https://bcpa.net> |
+
+---
+
+## 7. What you'll receive — emails & where to check status
+
+Every confirmation, status update, and request lands by **email — to whatever
+address was entered on the application** (so always use the firm's, see §2).
+Keep all of them. Here is each email to expect, what it means, and where to
+check status.
+
+### County (Broward) — from `no-reply@grantstreet.com`
+1. **"Broward County — Confirmation Required for Submitted BTExpress™
+   Application"** — arrives right after you submit. Confirms the submission and
+   shows the application info. **This is an acknowledgment, not an approval.**
+2. **"Broward County — Your BTExpress™ Application"** — the **approval**
+   (*"…has been approved"*). ⚠️ Approval is **not** the last step: it also states
+   **the full balance must be paid** to issue the receipt. Pay online (the
+   *"review the details of your account"* / *"submit payment"* links), then use
+   **"Print Business Tax Receipt."**
+
+**Check county status / pay:** the links in the approval email
+(`county-taxes.net/broward/business-tax`), or the Broward Tax Collector
+business-tax search at <https://broward.county-taxes.com>.
+
+### City (Hollywood) — from `paybusinesstaxreceipt@hollywoodfl.org`
+1. **"Track Your Local Business Tax Receipt Application #\<ID> for \<BUSINESS>"**
+   — arrives right after you submit the city application. *"Thank you for
+   submitting… **Please keep this email**."* Shows the **Application ID, Folio,
+   Business Name, Street Address, and Application Status** (e.g. *"Initiated"*),
+   with three links: **Check Status · Make a Payment · Upload a Document**. This
+   is *the* email to keep for tracking.
+2. **"Status Update for Local Business Tax Receipt Application #\<ID> for
+   \<BUSINESS>"** — arrives as the status changes (*"…will be reviewed by City
+   staff"*). Same three links.
+
+**Check city status / pay / upload:** the **Check Status / Make a Payment /
+Upload a Document** links in those emails, or the city's **"Check Application
+Status"** page at <https://apps.hollywoodfl.org/LbtrOnline/> (needs the
+Application ID / Folio).
+
+### City follow-up — only if something needs fixing — from `BusinessTax@hollywoodfl.org`
+- **"BUSINESS TAX APPLICATION #\<ID> - \<ADDRESS> - \<BUSINESS>"** — a
+  **personal** email from a staff member (may cc a reviewer, e.g.
+  `tlloyd@hollywoodfl.org`), sent **only if there's an issue**: wrong category, a
+  state license they need you to provide, or a pay-the-difference balance. Reply
+  with exactly what they ask (e.g. the state license PDF) to move forward.
+
+### Payment receipt
+The **city fee is paid by card through PayPal**, so the payment receipt is a
+**PayPal "Order Confirmation"** email (`noreply@paypal.com`). Save it with the
+application.
+
+> ⚠️ **These emails follow the email on the application.** If the client's email
+> was entered, the firm never receives the Track / Status emails and **cannot
+> check status** — exactly what happened on a city application where the client's
+> email was used (no tracking email reached the firm inbox). Use the firm's email
+> every time (see §2).
 
 ---
 
