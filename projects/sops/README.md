@@ -27,6 +27,7 @@ out; the filled-in copy stays in those systems.
 ```
 sops/
 ├── README.md                                    ← you are here (index)
+├── ein-application-irs.md                       ← Federal EIN (IRS Form SS-4) after the entity is Active on Sunbiz
 ├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
 ├── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
@@ -43,6 +44,7 @@ enough to warrant it._
 
 | SOP | What it covers |
 |---|---|
+| [`ein-application-irs.md`](./ein-application-irs.md) | Getting a business's federal **EIN** (IRS Form SS-4) once the entity is **Active on Sunbiz** — the go/no-go decision (responsible party has SSN/ITIN → apply online same-day; has neither → SS-4 by fax "Foreign", ~4 business days), both paths screen-/line-by-line, the LLC-classification and "S-corp election is a separate Form 2553" traps, Third-Party Designee, and after-steps. The federal step of the firm's Florida company-formation flow (state incorporation SOP still to come). |
 | [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) | Per-client runbook: Ecoorganic's monthly bookkeeping categorization rules (checks/deposits, gas threshold, COGS, owner-personal patterns), COA conventions, reviewer checklist, and open-decisions log. Rules only — client figures stay in client systems. |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 | [`double-portal-first-login.md`](./double-portal-first-login.md) | Double Client Portal has no sign-up step and its default magic-link/Google sign-in are unreliable — the working password-reset workaround (portal opens on the password screen → "Forgot your password?"), plus ready-to-send client guides (self-contained visual guide + PDF, email/message template, WhatsApp; EN/RU) in [`client-guides/`](./client-guides/). |
