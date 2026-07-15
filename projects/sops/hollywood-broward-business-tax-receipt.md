@@ -87,8 +87,10 @@ Collector account** as supporting documentation, so do the **county** first.
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
 (start page: <https://broward.county-taxes.com/tcb/app/btexpress/main/start_page>)
-Processing: **24–48 hours** after you click the emailed confirmation link.
-Screens: see §3A.
+After you submit, you must **click the confirmation link** in the first email;
+then, ~**24–48 hours** later, a **second email tells you to pay** — submitting
+the form is *not* the end (see §7 for the full email flow, and note the payment
+email can hide in Gmail's **"Updates" tab**). Screens: see §3A.
 
 ### Step B — City of Hollywood (LBTR)
 Apply online: <https://apps.hollywoodfl.org/LbtrOnline/>
@@ -267,18 +269,27 @@ Keep all of them. Here is each email to expect, what it means, and where to
 check status.
 
 ### County (Broward) — from `no-reply@grantstreet.com`
+> **The county is a two-email process with a wait in between — submitting the
+> form is NOT the end.** One email to *confirm* the submission, then (a few days
+> later) a *second* email telling you to **pay**. Watch for both.
+
 1. **"Broward County — Confirmation Required for Submitted BTExpress™
-   Application"** — arrives right after you submit. Confirms the submission and
-   shows the application info. **This is an acknowledgment, not an approval.**
-2. **"Broward County — Your BTExpress™ Application"** — the **approval**
-   (*"…has been approved"*). ⚠️ Approval is **not** the last step: it also states
-   **the full balance must be paid** to issue the receipt. Pay online (the
-   *"review the details of your account"* / *"submit payment"* links), then use
-   **"Print Business Tax Receipt."**
+   Application"** — arrives right after you submit. It contains a **link you must
+   click to confirm the submission** — the application is not actually sent for
+   processing until you click it. This is a submission step, **not** an approval.
+2. **"Broward County — Your BTExpress™ Application"** — arrives **a few days
+   later** (~24–48 h after you confirm). This is the **approval — and the email
+   that tells you to pay** (*"…has been approved… the full balance must be
+   paid"*). ⚠️ **This email can land in Gmail's "Updates" tab, not the Primary
+   inbox**, so it's easy to miss and assume you're done — you are not done until
+   you pay. Pay online (the *"review the details of your account"* / *"submit
+   payment"* links), then use **"Print Business Tax Receipt."**
 
 **Check county status / pay:** the links in the approval email
 (`county-taxes.net/broward/business-tax`), or the Broward Tax Collector
-business-tax search at <https://broward.county-taxes.com>.
+business-tax search at <https://broward.county-taxes.com>. If you don't see the
+payment email a few days after confirming, **check the Gmail "Updates" tab** and
+search `from:no-reply@grantstreet.com`.
 
 ### City (Hollywood) — from `paybusinesstaxreceipt@hollywoodfl.org`
 1. **"Track Your Local Business Tax Receipt Application #\<ID> for \<BUSINESS>"**
