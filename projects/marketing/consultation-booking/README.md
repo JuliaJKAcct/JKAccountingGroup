@@ -81,12 +81,14 @@ follows the landing-page pattern used for the site's `/consultation/` pages
 - **Locked decisions:** Odoo Standard → Appointments included ($0 extra);
   online-only; EN/RU; recommended video = **Odoo Discuss** (no external
   dependency).
-- **Placeholders in `booking-chooser.html`** (must be resolved before go-live):
-  - the two CTA buttons (`href="#new-client-calendar"` /
-    `href="#existing-client-calendar"`) point at the two real Odoo Appointments
-    URLs;
+- **Placeholders to resolve before go-live** (the go-live artifact is
+  `booking-chooser.odoo.html`; see `INSTALL-ODOO.md`):
+  - the two CTA links (`ODOO_NEW_CLIENT_LINK` / `ODOO_EXISTING_CLIENT_LINK`)
+    point at the two real Odoo Appointments URLs;
   - `30 min` durations are tentative;
-  - the corner **"Design preview"** badge is removed in production.
+  - (`booking-chooser.html`, the standalone reference, additionally carries
+    `#new-client-calendar`-style anchors and a "Design preview" badge — that file
+    never ships as-is.)
 - **Inputs still needed from the firm:** exact availability (days/hours) per
   calendar; consult durations; whether the new-client consult is a **free intro**
   (add a "Free" badge if so); who hosts (Julia / +Lilian); booking-form intake

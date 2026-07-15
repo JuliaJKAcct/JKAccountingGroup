@@ -59,6 +59,11 @@ Open **Appointments** → **New**, then set:
 The block is fully self-contained: styles are scoped under `.jkcb` (they won't touch
 the rest of the theme), and the **EN/RU switch is built in and needs no JavaScript**.
 
+> **Fonts note:** the snippet loads the three brand fonts from Google Fonts via a CSS
+> `@import`. If the block ever renders with different (system) fonts, that import was
+> blocked by the site's settings — everything still works, but tell Claude and we'll
+> switch the fonts to load the way the rest of the site loads them.
+
 ### Option 2 — the fastest, plain version
 Skip the custom page: with both appointment types **published**, Odoo already shows a
 built-in "pick your appointment" page at `…/appointment` that lists the two as cards.
