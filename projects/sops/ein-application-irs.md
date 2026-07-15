@@ -89,10 +89,18 @@ else.
 
 ## 2. Path A — Apply online (responsible party has SSN/ITIN)
 
-**Where:** IRS EIN Assistant —
-<https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online>
+### ▶ Start here — exactly where to go and what to click
 
-**Before you click "Begin application," know the rules of the tool:**
+1. **Open the IRS EIN page:**
+   <https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online>
+   *(if that link ever changes, search **"IRS apply for an EIN online"** — it's the
+   official IRS.gov page; never use a paid look-alike site.)*
+2. Click the **"Apply Online Now"** button → it launches the **EIN Assistant** in a
+   new window (allow pop-ups).
+3. On the assistant's intro screen, click **"Begin application"** → you land on
+   **Step 1 · Legal Structure**, the wizard documented below.
+
+**Know these rules of the tool before you start:**
 
 - **Availability:** weekdays only, roughly **7 a.m.–10 p.m. Eastern** (verify the
   current window on the page — the IRS occasionally changes it). Not available
