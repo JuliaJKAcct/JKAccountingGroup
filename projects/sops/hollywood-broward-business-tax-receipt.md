@@ -1,6 +1,6 @@
 # SOP: Business Tax Receipt — City of Hollywood + Broward County
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-06
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-15
 
 The complete, self-contained procedure for getting a Florida Business Tax
 Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
@@ -71,6 +71,17 @@ whether the business is even allowed at the address):
 
 The City of Hollywood application **requires an active Broward County Tax
 Collector account** as supporting documentation, so do the **county** first.
+
+> 📧 **Use the firm's own email as the applicant/contact email — never the
+> client's.** On **both** applications (county BTExpress and city LBTR), put the
+> firm's email address (e.g. Julia's firm address) in the email / contact-email
+> field. Every confirmation *and* every follow-up the agency sends — a wrong
+> category, a "provide your state license", pay-the-difference instructions, and
+> the "Track Your Application" status links — is emailed to whatever address is
+> on the application. If the client's email is used, all of that lands in the
+> client's inbox and stalls the filing while you chase them to find it and
+> forward it. Keeping the firm email on the application keeps the whole thread
+> with the team so we can respond the same day.
 
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
@@ -172,12 +183,13 @@ Address** and **Folio Number** auto-fill from the address you enter.
 - **Company Type** (dropdown — LLC, Partnership, Corp, etc.)
 - **Business Name**; **Business DBA**
 - **Mailing Address** (checkboxes: "Same as Site Address?", "Non-US Mailing?") + lines / city / state / zip
-- **Phone**, **Cell Phone**, **Email**
+- **Phone**, **Cell Phone**, **Email** ← put the **firm's email** here, not the client's (see §2)
 - **ID Type: Social Security # or Federal EIN** (required by state law) + the EIN/SSN field
 - **Describe your business in detail** (be specific — products/goods/services)
 - **Website**; **Garbage Service** (dropdown)
 - **Contact Information:** Contact Name (First / MI / Last), Contact Title, and
-  contact address/phone/cell/email (checkbox "Same as Business Info?")
+  contact address/phone/cell/email (checkbox "Same as Business Info?") — again,
+  use the **firm's email** for the contact email (see §2)
 
 **Screen 3 — Documentation + Certification:**
 - **Upload — proof of location:** signed lease **or** proof of ownership
@@ -220,6 +232,10 @@ Address** and **Folio Number** auto-fill from the address you enter.
   it exact at intake.
 - **Regulated activity without the matching license.** Won't issue until the
   license/competency is in hand and the **name + address match** the application.
+- **Putting the client's email on the application.** Use the **firm's email** in
+  the applicant/contact-email field (see §2) so confirmations and the agency's
+  follow-up requests come straight to the team — not stuck in the client's inbox.
+  Chasing a client to find and forward a city/county email stalls the whole filing.
 - **Treating the BTR as zoning approval.** It isn't (see §3B certification) —
   don't file for a non-resident commercial use of a residential parcel (see §1).
 - **Missing the Sept 30 renewal.**
