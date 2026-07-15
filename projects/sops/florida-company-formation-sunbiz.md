@@ -228,7 +228,7 @@ promote this from a stub to a full screen-by-screen like §3.*
 | Item | Profit Corporation | LLC *(verify)* |
 |---|---|---|
 | **Formation filing** | **$70.00** | **$125.00** |
-| Certificate of Status (optional) | $8.75 | $30.00 |
+| Certificate of Status (optional) | $8.75 | $5.00 |
 | Certified Copy (optional) | $8.75 | $30.00 |
 | **Annual Report** (due **Jan 1–May 1**) | **$150.00** | **$138.75** |
 | Annual Report **late fee** (after May 1) | **$400.00** | **$400.00** |
