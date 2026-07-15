@@ -130,6 +130,7 @@ of truth, PNGs are exports for tools that can't place SVG):
 |---|---|---|
 | Full badge, **≥ 64px**, on light | Medallion primary | `JK-medallion-primary.svg` |
 | Full badge on **dark / teal** | Medallion reversed | `JK-medallion-reversed.svg` |
+| Full badge on a **photo / colored background** (self-contained round seal) | Medallion solid-teal | `JK-medallion-solid-teal.svg` |
 | Single-color / print limits | one-color / black / white | `JK-medallion-onecolor-teal.svg`, `-black.svg`, `-white.svg` |
 | Logo **with the wordmark** (headers, cards) | Horizontal lock-up | `JK-lockup-horizontal.svg` (`-reversed` on dark) |
 | Wordmark **stacked** (tall/centered) | Stacked lock-up | `JK-lockup-stacked.svg` (`-reversed` on dark) |
