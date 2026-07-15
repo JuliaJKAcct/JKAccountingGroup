@@ -4,9 +4,9 @@
 
 The complete, self-contained procedure for getting a **federal EIN** (Employer
 Identification Number) from the IRS for a company that is **already formed and
-active on Sunbiz**. This is the federal step of the firm's Florida
-company-formation flow — the state incorporation SOP (the Sunbiz filing itself)
-is a separate document, still to be written.
+active on Sunbiz**. This is **Part 2** (the federal step) of the firm's Florida
+company-formation flow — **Part 1**, the Sunbiz filing itself, is
+[`florida-company-formation-sunbiz.md`](./florida-company-formation-sunbiz.md).
 
 > **Scope note:** starts the moment the entity shows **Active** on Sunbiz and you
 > have its exact legal name and formation date. Everything to obtain the EIN
