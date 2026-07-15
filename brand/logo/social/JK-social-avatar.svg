@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <!-- JK Accounting Group — round social avatar (WhatsApp, etc.)
+       The FULL Medallion (reversed, with ring text), identical to
+       JK-medallion-reversed.svg, on a flat brand-teal field (#123841).
+       Square 1:1; the medallion is sized to ~80% so its outer ring + diamonds
+       sit inside WhatsApp's circular safe zone and nothing is clipped. -->
+  <rect x="-40" y="-40" width="1080" height="1080" fill="#123841"/>
+  <g transform="translate(500,500) scale(7.01754) translate(-60,-60)">
+    <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap');</style>
+      <path id="arcTop" d="M20.9 51.7 A40 40 0 0 1 99.1 51.7" fill="none"></path>
+      <path id="arcBot" d="M20.9 68.3 A40 40 0 0 0 99.1 68.3" fill="none"></path>
+    </defs>
+    <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
+    <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1"></circle>
+    <text font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.6" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">JK ACCOUNTING GROUP</textPath></text>
+    <text font-family="'IBM Plex Mono',monospace" font-size="5" letter-spacing="1.4" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcBot" startOffset="50%">TAX · BOOKKEEPING · CFO</textPath></text>
+    <g fill="#CFA268">
+      <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+      <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
+    </g>
+    <g transform="translate(60,60) scale(0.44) translate(-59,-56)">
+      <g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+        <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
+        <path d="M70 26 L70 86"></path>
+        <path d="M70 56 L92 26"></path>
+        <path d="M70 56 L95 86"></path>
+      </g>
+    </g>
+  </g>
+</svg>
