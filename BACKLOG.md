@@ -37,6 +37,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
 | [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
+| [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -65,7 +66,9 @@ onboarding of new staff, auditability.
 its whole purpose is exactly this (client-task runbooks + firm procedures), and it
 already documents the "one self-contained file per procedure, never commit client
 data, include a blank template" convention. One SOP file per client (or per
-client-task), grouped into a subfolder once there are a few.
+client-task), grouped into a subfolder once there are a few. These SOPs surface in
+the central, clickable SOP hub tracked in
+[IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop).
 
 **What we need to start:** Julia narrates one client's monthly bookkeeping/close
 flow end to end (which accounts, where statements come from, categorization
@@ -521,6 +524,54 @@ this up.
 
 **Priority:** **High** (same funnel as IDEA-10) · **Status:** Not started — captured;
 next step is the short discovery above, whenever we pick it up.
+
+---
+
+## IDEA-12 — Central SOP index: a clickable hub for every SOP
+
+**What Lilian wants:** two linked things. **(1)** Keep building **SOPs for every
+day-to-day task** so every procedure the firm runs is written down and registered —
+the ongoing mission of the sops project. **(2)** — the new piece — a **single central,
+clickable index / map** where the whole team can see the full list of the company's
+SOPs and click straight through to open any one. A centralized hub, not procedures
+scattered across folders that people have to hunt for.
+
+**Why it matters:** SOPs are only useful if people can find them fast. A central
+clickable map turns the growing SOP library into a real reference — someone covering a
+task during PTO opens the hub, finds the SOP, clicks, done — and it makes gaps visible
+(what still isn't documented). It's continuity and delegability made navigable.
+
+**Where it fits:** the existing [`projects/sops/`](./projects/sops/) project — this is
+its **navigation layer**. A **seed already exists**: `projects/sops/README.md` has an
+"Index" table that's clickable in GitHub. This idea grows that into the real central map
+as the library expands. Formats to decide when we start:
+1. **Curated Markdown index** in the sops README, grouped by area (onboarding /
+   bookkeeping / tax / client-guides …) — simplest, already clickable in GitHub, zero
+   build.
+2. **A branded HTML "SOP directory" page** on the Design System — a visual, grouped,
+   optionally searchable hub you open in a browser (built via the
+   [`impeccable`](./.claude/skills/impeccable/) skill + [`brand/`](./brand/)) — the
+   concrete first internal-docs instance of
+   [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system).
+
+Related: [IDEA-01](#idea-01--client-by-client-accounting--bookkeeping-sops) (the
+client-by-client SOP content that populates the library) and
+[IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) (the
+firm-wide design-system-document system — a branded SOP hub is one instance).
+
+**What we need to start:** decide the hub format (Markdown index vs. branded HTML page),
+the grouping/taxonomy (by area? client-specific vs. firm-process?), and whether it needs
+search. Then, as each new day-to-day SOP is written, it lands in the index. No new
+content is required to begin — we can shape the hub around the SOPs already in
+`projects/sops/`.
+
+**Capability check:** fully buildable now. The Markdown index already works; a branded
+HTML hub is exactly the kind of Design-System artifact we already produce (the
+reasonable-comp report, the branded client guides), driven by the `impeccable` skill +
+`brand/`. No external dependency.
+
+**Priority:** Medium · **Status:** Not started — index seed exists in the sops README;
+waiting to decide the hub format + taxonomy.
 
 ---
 
