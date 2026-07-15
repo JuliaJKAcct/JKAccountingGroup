@@ -125,9 +125,18 @@ Both are formed on Sunbiz; the state form differs (§3 vs §4).
 
 ## 3. Path A — Florida Profit Corporation (Articles of Incorporation)
 
-Verified screen by screen, 2026-07. Entry: Sunbiz → **Start a Business → Start
-E-Filing → Profit Corporation** → *"File or Correct Florida Profit Articles of
-Incorporation."*
+Verified screen by screen, 2026-07.
+
+### ▶ Start here — exactly where to go and what to click
+
+1. **Open the Sunbiz start page:** <https://dos.fl.gov/sunbiz/start-business/>
+2. Click **"Start E-Filing."**
+3. Under **Start E-Filing**, choose the entity type — **"Profit Corporation"**
+   *(for an LLC, choose **"Limited Liability Company"** and follow §4 instead).*
+4. On the Profit Corporation page, click the **"File or Correct Florida Profit
+   Articles of Incorporation"** button.
+5. That opens the **disclaimer screen** (§3.0) → accept it → **"Start New Filing"**
+   → the filing form (§3.1 onward).
 
 ### 3.0 Disclaimer screen
 "This form creates a Florida Profit Corporation **OR** corrects your rejected
