@@ -6,6 +6,11 @@ and the site URL — built entirely from the [brand design system](../../../../.
 
 ![Facebook cover](./jk-facebook-cover-1640x624.png)
 
+> **Redesign in review:** a photo-led version featuring Julia with the headline
+> *"Your US Finance Department"* is staged in [`julia-redesign/`](./julia-redesign/)
+> (three options, pending Julia's pick). It's built to survive Facebook's mobile crop
+> and will supersede this cover once an option is chosen.
+
 ## Files
 
 | File | What it is |
