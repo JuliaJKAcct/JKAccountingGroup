@@ -14,11 +14,12 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`marketing/email-branding/`](./marketing/email-branding/) | Put every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [`marketing/video-generation/`](./marketing/video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
 | [`marketing/referral-offer-strategy/`](./marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic assessment, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
+| [`marketing/consultation-booking/`](./marketing/consultation-booking/) | The "Book a Consultation" front door — routes new/prospective vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [`reasonable-compensation/`](./reasonable-compensation/) | Determine & document a defensible S-corp owner salary; outputs branded HTML reports. | Active |
 | [`recurring-expense-monitoring/`](./recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report, via the `recurring-expense-monitoring` skill. Watchlists live in Google Drive, not the repo. | Active |
 | [`sops/`](./sops/) | The firm's standard operating procedures and day-to-day client-task runbooks (e.g. Business Tax Receipt filings). Client-specific data stays in the firm's client systems, not the repo. | Active |
 
-> The first four rows are the **marketing group** — they live under
+> The first five rows are the **marketing group** — they live under
 > [`marketing/`](./marketing/), which also holds the firm's shared offer
 > [`positioning.md`](./marketing/positioning.md) and a
 > [`CLAUDE.md`](./marketing/CLAUDE.md) that gives Claude a marketing-strategist

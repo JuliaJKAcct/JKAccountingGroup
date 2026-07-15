@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Consultation — JK Accounting Group</title>
+<meta name="description" content="Book a consultation with JK Accounting Group. Choose new-client or existing-client scheduling. Online, in English and Russian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal-50:#EAF1F2; --teal-500:#245C66; --teal-600:#1A4C55; --teal-700:#163F47;
+  --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+  --bronze-200:#E1C195; --bronze-300:#CFA268; --bronze-400:#B98545; --bronze-500:#9C6A39; --bronze-600:#7E5430;
+  --greige-100:#EDE9DF; --greige-300:#C5BEAD;
+  --bg-page:#F6F3EC; --surface:#FFFFFF; --paper:#FBF8F2; --bg-inverse-deep:#0D2A31;
+  --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+  --text-on-dark:#ECE6DA; --text-on-dark-muted:#9FB3B6; --text-gold:#7E5430;
+  --accent:#9C6A39; --border:#C5BEAD; --border-subtle:#DAD4C6;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --shadow-sm:0 1px 2px rgba(9,38,44,0.07), 0 2px 6px rgba(9,38,44,0.06);
+  --shadow-md:0 2px 4px rgba(9,38,44,0.06), 0 6px 16px rgba(9,38,44,0.09);
+  --shadow-lg:0 4px 8px rgba(9,38,44,0.07), 0 14px 32px rgba(9,38,44,0.11);
+  --shadow-xl:0 8px 16px rgba(9,38,44,0.09), 0 28px 56px rgba(9,38,44,0.15);
+  --maxw:1080px; --gutter:clamp(20px,5vw,40px); --appbar-h:64px;
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;}}
+body{margin:0; background:var(--bg-page); color:var(--text-body); font-family:var(--sans); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; padding-top:var(--appbar-h);}
+h1,h2,h3{font-family:var(--serif); font-weight:600; color:var(--text-primary); margin:0; text-wrap:balance; letter-spacing:-0.012em;}
+p{margin:0; text-wrap:pretty;}
+img,svg{display:block; max-width:100%; height:auto;}
+::selection{background:var(--bronze-200); color:var(--teal-900);}
+a:focus-visible,button:focus-visible{outline:2px solid var(--bronze-400); outline-offset:3px; border-radius:6px;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding-inline:var(--gutter);}
+
+/* i18n: EN default, RU on html.lang-ru */
+.t-ru{display:none;}
+html.lang-ru .t-en{display:none;}
+html.lang-ru .t-ru{display:revert;}
+
+.skip{position:absolute; left:-9999px; top:0; z-index:400; background:var(--teal-800); color:var(--text-on-dark); font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:12px 18px; border-radius:0 0 10px 0;}
+.skip:focus{left:0;}
+
+/* ---- App bar (landing: no nav links) ---- */
+.appbar{position:fixed; top:0; left:0; right:0; height:var(--appbar-h); z-index:100; background:rgba(18,56,65,0.92); backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid rgba(236,230,218,0.12);}
+.appbar .wrap{height:100%; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.brandmark{display:flex; align-items:center; text-decoration:none; flex:0 0 auto;}
+.brandmark svg{height:34px; width:auto;}
+.lang-toggle{display:inline-flex; align-items:center; font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; border:1px solid rgba(236,230,218,0.28); border-radius:999px; overflow:hidden;}
+.lang-toggle a{padding:7px 13px; color:var(--text-on-dark-muted); text-decoration:none; cursor:pointer; transition:background .18s, color .18s;}
+.lang-toggle a[aria-current="true"]{background:rgba(236,230,218,0.14); color:var(--text-on-dark);}
+.lang-toggle a:hover{color:var(--text-on-dark);}
+
+/* ---- Buttons ---- */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; font-family:var(--sans); font-size:15px; font-weight:600; border-radius:11px; padding:13px 22px; border:1px solid transparent; cursor:pointer; text-decoration:none; transition:background .18s, border-color .18s, transform .12s;}
+.btn:active{transform:translateY(1px);}
+.btn.cta{background:var(--accent); color:#fff;} .btn.cta:hover{background:var(--bronze-600);}
+.btn.ivory{background:var(--text-on-dark); color:var(--teal-800);} .btn.ivory:hover{background:#fff;}
+.btn .arw{transition:transform .18s var(--ease-out);}
+.btn:hover .arw{transform:translateX(3px);}
+
+/* ---- Choose hero ---- */
+.choose-hero{position:relative; overflow:hidden; color:var(--text-on-dark);
+  background:radial-gradient(1200px 620px at 82% -12%, rgba(62,125,110,0.30), transparent 60%),
+             radial-gradient(900px 520px at 2% 116%, rgba(156,106,57,0.18), transparent 55%),
+             linear-gradient(158deg,#143b44 0%,#102f37 48%,#0c252b 100%);
+  padding-block:clamp(46px,8vw,88px);}
+.choose-hero .intro{max-width:640px; margin-inline:auto; text-align:center;}
+.kicker{font-family:var(--mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 20px;}
+.choose-hero h1{color:var(--text-on-dark); font-size:clamp(32px,5.6vw,54px); line-height:1.06; letter-spacing:-0.02em; font-weight:600;}
+.choose-hero .lede{margin:22px auto 0; max-width:56ch; font-size:clamp(16px,2.2vw,19px); line-height:1.62; color:var(--text-on-dark); opacity:.9;}
+
+/* ---- The two paths ---- */
+.choose-grid{margin-top:clamp(36px,5vw,54px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(18px,2.6vw,26px); align-items:stretch;}
+@media (max-width:760px){.choose-grid{grid-template-columns:1fr; max-width:460px; margin-inline:auto;}}
+.path{border-radius:20px; padding:clamp(26px,3.4vw,38px); display:flex; flex-direction:column; text-align:left; min-width:0;}
+.path--new{background:var(--paper); border:1px solid var(--bronze-300); box-shadow:var(--shadow-lg);}
+.path--existing{background:linear-gradient(162deg,#17414a,#0d272e); border:1px solid rgba(236,230,218,0.18); box-shadow:var(--shadow-lg);}
+.path-label{display:inline-flex; align-self:flex-start; align-items:center; gap:7px; font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; padding:6px 12px; border-radius:999px; margin-bottom:20px;}
+.path--new .path-label{background:var(--bronze-50,#F7F0E6); color:var(--bronze-600);}
+.path--existing .path-label{background:rgba(236,230,218,0.12); color:var(--bronze-300);}
+.path-label .dot{width:6px; height:6px; border-radius:50%; background:currentColor;}
+.path h2{font-size:clamp(22px,2.9vw,27px); line-height:1.16;}
+.path--existing h2{color:var(--text-on-dark);}
+.path-desc{margin-top:12px; font-size:16px; line-height:1.6; max-width:40ch;}
+.path--new .path-desc{color:var(--text-body);}
+.path--existing .path-desc{color:#c9dadb;}
+.path-meta{margin-top:18px; display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase;}
+.path--new .path-meta{color:var(--text-muted);}
+.path--existing .path-meta{color:var(--text-on-dark-muted);}
+.path-meta .sep{opacity:.5;}
+.path .btn{margin-top:26px; align-self:flex-start;}
+@media (max-width:460px){.path .btn{align-self:stretch; width:100%;}}
+
+/* ---- How it works ---- */
+.how{padding-block:clamp(52px,7vw,88px);}
+.how .head{text-align:center; max-width:640px; margin:0 auto clamp(34px,5vw,48px);}
+.how .head h2{font-size:clamp(26px,4vw,38px); line-height:1.1;}
+.how .head .ledger{height:2px; width:44px; background:var(--accent); border:0; border-radius:2px; margin:0 auto 22px;}
+.how-steps{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(22px,4vw,40px); counter-reset:step;}
+@media (max-width:680px){.how-steps{grid-template-columns:1fr; max-width:400px; margin-inline:auto; gap:26px;}}
+.how-steps li{counter-increment:step;}
+.how-steps .n{font-family:var(--serif); font-size:30px; font-weight:600; color:var(--bronze-400); line-height:1;}
+.how-steps .bar{height:2px; background:var(--border-subtle); margin:14px 0 16px; position:relative;}
+.how-steps .bar::before{content:""; position:absolute; left:0; top:0; height:2px; width:28px; background:var(--accent);}
+.how-steps h3{font-size:18px; margin-bottom:7px;}
+.how-steps p{font-size:14.5px; color:var(--text-muted); line-height:1.58; max-width:34ch;}
+.how-note{margin-top:clamp(34px,5vw,46px); text-align:center; font-size:15px; color:var(--text-muted);}
+.how-note b{color:var(--teal-700); font-weight:600;}
+
+/* ---- Footer ---- */
+.lp-footer{background:var(--bg-inverse-deep); color:var(--text-on-dark-muted); padding-block:clamp(40px,6vw,56px); text-align:center;}
+.lp-footer svg{height:46px; width:auto; margin:0 auto 16px;}
+.lp-footer p{font-size:13.5px; line-height:1.6;}
+.lp-footer .ll{margin-top:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-on-dark-muted);}
+
+/* ---- Preview badge (removed in production) ---- */
+.preview-badge{position:fixed; right:14px; bottom:14px; z-index:200; font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-on-dark-muted); background:rgba(13,42,49,0.88); border:1px dashed rgba(236,230,218,0.35); border-radius:999px; padding:7px 13px; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); pointer-events:none;}
+
+@media (prefers-reduced-motion:no-preference){
+  .path{animation:rise .6s var(--ease-out) both;}
+  .path--existing{animation-delay:.09s;}
+  @keyframes rise{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;}}
+}
+</style>
+</head>
+<body>
+<a class="skip t-en" href="#choose">Skip to booking options</a>
+<a class="skip t-ru" lang="ru" href="#choose">Перейти к записи</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="#" aria-label="JK Accounting Group">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><defs><style>text{font-family:'Source Serif 4',Georgia,serif;}</style></defs><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <div class="lang-toggle" role="group" aria-label="Language / Язык">
+      <a data-lang="en" aria-current="true" role="button" tabindex="0">EN</a>
+      <a data-lang="ru" aria-current="false" role="button" tabindex="0">RU</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="choose-hero" id="choose">
+    <div class="wrap">
+      <div class="intro">
+        <p class="kicker"><span class="t-en">Book a consultation</span><span class="t-ru" lang="ru">Запись на консультацию</span></p>
+        <h1>
+          <span class="t-en">First, tell us who you are</span>
+          <span class="t-ru" lang="ru">Для начала подскажите, кто вы</span>
+        </h1>
+        <p class="lede">
+          <span class="t-en">We keep separate times for new and existing clients, so you always reach us when we can give you our full attention. Choose the option that fits you.</span>
+          <span class="t-ru" lang="ru">У нас разное время приёма для новых и действующих клиентов — так мы всегда можем уделить вам всё внимание. Выберите подходящий вариант.</span>
+        </p>
+      </div>
+
+      <div class="choose-grid">
+        <article class="path path--new">
+          <span class="path-label"><span class="dot" aria-hidden="true"></span><span class="t-en">New here</span><span class="t-ru" lang="ru">Вы впервые</span></span>
+          <h2>
+            <span class="t-en">I'm a new or prospective client</span>
+            <span class="t-ru" lang="ru">Я новый или потенциальный клиент</span>
+          </h2>
+          <p class="path-desc">
+            <span class="t-en">Book an introductory consultation to talk through your situation and see how we can help.</span>
+            <span class="t-ru" lang="ru">Запишитесь на ознакомительную консультацию: обсудим вашу ситуацию и чем мы можем помочь.</span>
+          </p>
+          <p class="path-meta">
+            <span class="t-en">Online</span><span class="t-ru" lang="ru">Онлайн</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span class="t-en">30 min</span><span class="t-ru" lang="ru">30 мин</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>EN / RU</span>
+          </p>
+          <a class="btn cta" href="#new-client-calendar">
+            <span class="t-en">Book a new-client consultation</span>
+            <span class="t-ru" lang="ru">Записаться как новый клиент</span>
+            <span class="arw" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="path path--existing">
+          <span class="path-label"><span class="dot" aria-hidden="true"></span><span class="t-en">Already a client</span><span class="t-ru" lang="ru">Уже клиент</span></span>
+          <h2>
+            <span class="t-en">I'm already a client</span>
+            <span class="t-ru" lang="ru">Я уже клиент</span>
+          </h2>
+          <p class="path-desc">
+            <span class="t-en">Book a working session with your team — questions, planning, or a review of where things stand.</span>
+            <span class="t-ru" lang="ru">Запишитесь на рабочую встречу с вашей командой: вопросы, планирование или обзор текущих дел.</span>
+          </p>
+          <p class="path-meta">
+            <span class="t-en">Online</span><span class="t-ru" lang="ru">Онлайн</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span class="t-en">30 min</span><span class="t-ru" lang="ru">30 мин</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>EN / RU</span>
+          </p>
+          <a class="btn ivory" href="#existing-client-calendar">
+            <span class="t-en">Book a client session</span>
+            <span class="t-ru" lang="ru">Записаться на встречу</span>
+            <span class="arw" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="head">
+        <hr class="ledger">
+        <h2><span class="t-en">How it works</span><span class="t-ru" lang="ru">Как это работает</span></h2>
+      </div>
+      <ol class="how-steps">
+        <li>
+          <div class="n">1</div><div class="bar"></div>
+          <h3><span class="t-en">Tell us who you are</span><span class="t-ru" lang="ru">Расскажите, кто вы</span></h3>
+          <p><span class="t-en">Choose new or existing above — each opens its own calendar.</span><span class="t-ru" lang="ru">Выберите вариант выше — у каждого свой календарь.</span></p>
+        </li>
+        <li>
+          <div class="n">2</div><div class="bar"></div>
+          <h3><span class="t-en">Choose a time</span><span class="t-ru" lang="ru">Выберите время</span></h3>
+          <p><span class="t-en">See real-time availability and pick the slot that suits you.</span><span class="t-ru" lang="ru">Смотрите свободное время и выбирайте удобный слот.</span></p>
+        </li>
+        <li>
+          <div class="n">3</div><div class="bar"></div>
+          <h3><span class="t-en">Meet online</span><span class="t-ru" lang="ru">Встреча онлайн</span></h3>
+          <p><span class="t-en">We email you a private video link — nothing to install.</span><span class="t-ru" lang="ru">Мы пришлём ссылку на видеовстречу — ничего устанавливать не нужно.</span></p>
+        </li>
+      </ol>
+      <p class="how-note">
+        <span class="t-en">All consultations are <b>online</b>, in <b>English and Russian</b>. A calendar invite with your video link arrives by email the moment you book.</span>
+        <span class="t-ru" lang="ru">Все консультации проходят <b>онлайн</b>, на <b>английском и русском</b>. Приглашение в календарь со ссылкой на встречу придёт на почту сразу после записи.</span>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>
+      <span class="t-en">Miami · Fort Lauderdale · Online</span>
+      <span class="t-ru" lang="ru">Майами · Форт-Лодердейл · Онлайн</span>
+    </p>
+    <p class="ll">
+      <span class="t-en">Consultations in English &amp; Russian</span>
+      <span class="t-ru" lang="ru">Консультации на английском и русском</span>
+    </p>
+  </div>
+</footer>
+
+<div class="preview-badge">Design preview</div>
+
+<script>
+  document.documentElement.classList.add('js');
+  var links = document.querySelectorAll('.lang-toggle a[data-lang]');
+  function setLang(lang){
+    document.documentElement.classList.toggle('lang-ru', lang === 'ru');
+    document.documentElement.setAttribute('lang', lang);
+    links.forEach(function(x){ x.setAttribute('aria-current', x.dataset.lang === lang ? 'true' : 'false'); });
+  }
+  links.forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); setLang(a.dataset.lang); });
+    a.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); setLang(a.dataset.lang); } });
+  });
+</script>
+</body>
+</html>

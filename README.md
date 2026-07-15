@@ -30,11 +30,12 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 | [Marketing · Email Branding](./projects/marketing/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [Marketing · Video Generation](./projects/marketing/video-generation/) | On-brand marketing video. | Active |
 | [Marketing · Referral & Offer Strategy](./projects/marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
+| [Marketing · Consultation Booking](./projects/marketing/consultation-booking/) | The "Book a Consultation" front door — routes new vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
 
-The four **Marketing** rows are one group under
+The five **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
 shared offer positioning and the marketing operating-persona for Claude. See
 [`projects/README.md`](./projects/README.md) for the full index and the
