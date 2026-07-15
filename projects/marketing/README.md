@@ -17,7 +17,8 @@ marketing/
 ├── collateral/                ← on-brand marketing collateral (cards, posts, flyers, copy)
 ├── email-branding/            ← team email on the Design System — signatures + branded email
 ├── video-generation/          ← on-brand marketing video (scripts + Flows briefs)
-└── referral-offer-strategy/   ← front-offer / referral-partner funnel strategy
+├── referral-offer-strategy/   ← front-offer / referral-partner funnel strategy
+└── consultation-booking/      ← "Book a Consultation" front door (new vs existing → two Odoo calendars)
 ```
 
 ## Sub-projects
@@ -28,6 +29,7 @@ marketing/
 | [`email-branding/`](./email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [`video-generation/`](./video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
 | [`referral-offer-strategy/`](./referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
+| [`consultation-booking/`](./consultation-booking/) | The "Book a Consultation" front door — one page routing new/prospective vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 
 ## Shared across the group
 

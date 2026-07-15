@@ -27,7 +27,8 @@ the US.
 │   │   ├── collateral/            on-brand marketing collateral (Active)
 │   │   ├── email-branding/        team email on the Design System — signatures + email layout (Active)
 │   │   ├── video-generation/      on-brand marketing video (Active)
-│   │   └── referral-offer-strategy/  front-offer + referral-partner funnel strategy (Planning)
+│   │   ├── referral-offer-strategy/  front-offer + referral-partner funnel strategy (Planning)
+│   │   └── consultation-booking/  "Book a Consultation" front door — routes new vs existing clients to two Odoo calendars (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
@@ -58,6 +59,7 @@ the US.
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
+| A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
