@@ -36,6 +36,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
 | [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
+| [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -452,7 +453,9 @@ Calendar, and the marketing consultation funnel. Ties to
 [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the
 signature's booking link should point here once it exists) and to
 [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/)
-(the prospect / diagnostic front-offer flow).
+(the prospect / diagnostic front-offer flow). The leads these bookings create are
+managed and measured in
+[IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm).
 
 **What we need to start:** Lilian shares her ideas, and we settle: the two audiences'
 flows (what a prospect books vs. what a client books), meeting types & durations, what
@@ -470,6 +473,54 @@ we'll confirm live calendar access at build time.)*
 
 **Priority:** **High** (Lilian: one of the most important) · **Status:** Not started —
 captured; waiting on Lilian's ideas to kick off.
+
+---
+
+## IDEA-11 — Lead management & conversion stats in Odoo (CRM)
+
+**What Lilian wants:** understand how **lead management works in Odoo**, and set it up
+so Odoo becomes the firm's **single place to manage every lead and measure the
+funnel**. Two parts: **(1) Intake** — website visitors create inquiries / consultation
+requests that land in Odoo as leads, and *all* leads from every source (referrals,
+email, walk-ins) funnel into the same place; **(2) Reporting** — the statistics that
+matter: **conversion rate** (of the people who contact us, how many become clients),
+how many we win, how many reject / are lost, and similar pipeline metrics. Lilian isn't
+yet sure how to administer this inside Odoo and wants help figuring out the model.
+
+**Why it matters:** today there's no single, measured view of the funnel. Centralizing
+leads gives the firm a real conversion number, shows where prospects drop off, and turns
+"are we growing?" into data. It's the measurement layer under all the firm's growth
+work.
+
+**Where it fits:** firm ops / CRM — likely its **own new project** when it starts.
+**Tightly linked to [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects):**
+the website consultation calendar is the intake that *creates* the leads this system
+measures (book a consultation → a lead in Odoo). It also connects to the marketing
+front-offer funnel ([`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/))
+and downstream to [IDEA-09](#idea-09--build-our-own-goproposal-alternative) (a won lead
+→ a proposal). The through-line: **website intake (IDEA-10) → lead in Odoo (IDEA-11) →
+proposal (IDEA-09)**, with conversion measured across the whole path.
+
+**What we need to start:** a short discovery — (a) confirm the firm is standardizing on
+**Odoo CRM** and which Odoo edition/modules are active; (b) map the current lead sources
+and the stages a prospect moves through (e.g. New → Contacted → Consultation booked →
+Proposal sent → Won / Lost); (c) decide which metrics matter (conversion %, win/loss
+reasons, time-to-close, source attribution). Then I explain how Odoo's
+Leads / Opportunities + pipeline stages + reporting model those, and we design the
+website→Odoo intake.
+
+**Capability check (honest):** **there is no Odoo connector in the firm's integrations
+today** — the connected systems are QuickBooks, Double, Gmail, Google Calendar, Drive,
+Canva, Gamma, Shopify, NotebookLM and GitHub. So Claude can't read or write your Odoo
+directly right now. What I *can* do now: help you understand Odoo's CRM model, design
+the pipeline / stages, and plan the website→lead flow and the reports. Getting the
+website to actually create Odoo leads is a real integration (Odoo supports web-form /
+"Contact Us" → CRM lead and an API); wiring Claude into Odoo would need an Odoo MCP
+connector or API access added later. We'll scope that connector question when we pick
+this up.
+
+**Priority:** **High** (same funnel as IDEA-10) · **Status:** Not started — captured;
+next step is the short discovery above, whenever we pick it up.
 
 ---
 
