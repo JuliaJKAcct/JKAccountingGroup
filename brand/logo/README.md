@@ -12,8 +12,9 @@ in petrol teal `#123841` + warm bronze `#9C6A39` on soft ivory `#F6F3EC`.
 ## Folders
 - `svg/` — master vectors (scalable, editable, primary source of truth)
 - `png/` — raster exports (transparent; reversed/white variants on teal)
-- `favicon/` — favicon.svg, favicon-16/32/48.png, favicon.ico (16/32/48),
+- `favicon/` — favicon.svg, favicon-16/32/48/256/512.png, favicon.ico (16/32/48),
   apple-touch-icon-180.png, maskable-512.png, app-icon-512.png
+  (256/512 = crisp square monogram tiles for platform favicon fields, e.g. Odoo Website)
 
 ## svg/ contents
 medallion: primary · reversed · onecolor-teal · black · white
