@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <!-- JK Accounting Group — round social avatar (WhatsApp, etc.)
+       Square canvas; the reversed emblem sits inside the circular safe zone
+       so it survives WhatsApp's circular crop. Do not enlarge the emblem past
+       ~78% or the ring/diamonds risk clipping. Colors: brand teal + ivory + bronze. -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%"   stop-color="#164450"/>
+      <stop offset="60%"  stop-color="#123841"/>
+      <stop offset="100%" stop-color="#0C272E"/>
+    </radialGradient>
+  </defs>
+  <rect x="-40" y="-40" width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- reversed emblem (ivory rings + bronze inner ring + gold diamonds + ivory monogram),
+       centered, scaled so the outer ring is ~78% of the canvas width -->
+  <g transform="translate(500,500) scale(6.8421) translate(-60,-60)">
+    <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3.5"/>
+    <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.6"/>
+    <g fill="#CFA268">
+      <path d="M7 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"/>
+      <path d="M113 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"/>
+    </g>
+    <g transform="translate(60,60) scale(0.62) translate(-59,-56)">
+      <g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+        <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/>
+        <path d="M70 26 L70 86"/>
+        <path d="M70 56 L92 26"/>
+        <path d="M70 56 L95 86"/>
+      </g>
+    </g>
+  </g>
+</svg>
