@@ -28,9 +28,11 @@ and **ruled out** — it is a paid add-on on the firm's Google Workspace plan.
 
 ```
 consultation-booking/
-├── README.md              ← you are here
-├── booking-chooser.html   ← the bilingual (EN/RU) "are you a client?" chooser page
-└── preview/               ← reference screenshots of the design
+├── README.md                 ← you are here
+├── INSTALL-ODOO.md           ← step-by-step: create the two calendars + place the page in Odoo
+├── booking-chooser.html      ← the bilingual (EN/RU) chooser page — full-page design reference
+├── booking-chooser.odoo.html ← the SAME page as a paste-in snippet for Odoo (scoped CSS, no-JS EN/RU toggle)
+└── preview/                  ← reference screenshots of the design
     ├── chooser-en.png
     └── chooser-ru.png
 ```
@@ -62,9 +64,13 @@ follows the landing-page pattern used for the site's `/consultation/` pages
 
 ## Outputs
 
-- **`booking-chooser.html`** — committed design source. It is a self-contained,
-  responsive, bilingual page. The **live** page is rebuilt/embedded inside Odoo
-  (this file is the blueprint + the copy, EN and RU).
+- **`booking-chooser.odoo.html`** — the paste-in snippet that actually goes live
+  inside Odoo: styles scoped under `.jkcb`, a built-in EN/RU toggle that needs no
+  JavaScript, and two placeholder links (`ODOO_NEW_CLIENT_LINK` /
+  `ODOO_EXISTING_CLIENT_LINK`).
+- **`booking-chooser.html`** — the same design as a standalone full page (design
+  reference / preview).
+- **`INSTALL-ODOO.md`** — how to create the two calendars and place the page.
 - **`preview/`** — reference screenshots; not the source of truth.
 
 ## Working on this / notes for AI
@@ -75,12 +81,14 @@ follows the landing-page pattern used for the site's `/consultation/` pages
 - **Locked decisions:** Odoo Standard → Appointments included ($0 extra);
   online-only; EN/RU; recommended video = **Odoo Discuss** (no external
   dependency).
-- **Placeholders in `booking-chooser.html`** (must be resolved before go-live):
-  - the two CTA buttons (`href="#new-client-calendar"` /
-    `href="#existing-client-calendar"`) point at the two real Odoo Appointments
-    URLs;
+- **Placeholders to resolve before go-live** (the go-live artifact is
+  `booking-chooser.odoo.html`; see `INSTALL-ODOO.md`):
+  - the two CTA links (`ODOO_NEW_CLIENT_LINK` / `ODOO_EXISTING_CLIENT_LINK`)
+    point at the two real Odoo Appointments URLs;
   - `30 min` durations are tentative;
-  - the corner **"Design preview"** badge is removed in production.
+  - (`booking-chooser.html`, the standalone reference, additionally carries
+    `#new-client-calendar`-style anchors and a "Design preview" badge — that file
+    never ships as-is.)
 - **Inputs still needed from the firm:** exact availability (days/hours) per
   calendar; consult durations; whether the new-client consult is a **free intro**
   (add a "Free" badge if so); who hosts (Julia / +Lilian); booking-form intake
