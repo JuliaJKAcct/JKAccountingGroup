@@ -15,6 +15,29 @@ screen, every link, and the caveats. Everything for this task lives here.
 
 ---
 
+## The process at a glance
+
+Two receipts, in order — **county first, then city** — each with a wait and a
+payment. The map below is the whole flow; the numbered sections after it are the
+detail.
+
+```mermaid
+flowchart TD
+  A["Intake + zoning gate (§0–§1)"] --> B["① COUNTY — apply on BTExpress (§2 · Step A)"]
+  B --> C["Click the confirm link in the 1st email"]
+  C --> D["Wait ~24–48h → 2nd email: pay the county balance"]
+  D --> E["Pay county → print the County BTR ✓"]
+  E --> F["② CITY — apply on LBTR · needs the active county account (§2 · Step B)"]
+  F --> G["Pay city: $25 + classification tax (PayPal)"]
+  G --> H{"City review"}
+  H -->|"needs fixing: category / license / difference"| I["Send docs or pay the difference"]
+  I --> J["City issues + mails the BTR ✓"]
+  H -->|"looks good"| J
+  J --> K["Post both receipts · calendar the Sept 30 renewal"]
+```
+
+---
+
 ## 0. Intake — ask the client these first
 
 These answers drive everything (classification, fees, which licenses, and
@@ -76,20 +99,23 @@ Collector account** as supporting documentation, so do the **county** first.
 > business needs **two** Business Tax Receipts, issued by **two different
 > governments**, and **each charges its own fee — paying one does not cover the
 > other**:
-> - **City of Hollywood (LBTR):** a **$25 non-refundable** application fee
->   **plus** the local business tax set by your classification (§3B Screen 1). For
->   a small licensed business (0–1 worker) this is roughly **$120 total** (e.g.
->   $25 + ~$95 tax) — the exact tax depends on the category. Paid by card (PayPal)
->   at submission.
-> - **Broward County (BTExpress):** a **separate** county business tax paid to the
->   Broward County Tax Collector — usually **much smaller** (often a few tens of
->   dollars, e.g. ~$30–$45). It is billed **after** the county approves (the
->   second `no-reply@grantstreet.com` email) and must be paid before the county
->   receipt is issued (see §7).
-> - **Bottom line:** to be fully covered you make **two separate payments** in
->   **two separate systems** — neither replaces the other, and the 50% first-year
->   rule (§4) can apply to each. Amounts here are approximate and depend on
->   classification/year; always verify the exact amount shown at submission.
+>
+> **1. City of Hollywood (LBTR)** — a **$25 non-refundable** application fee
+> **plus** the local business tax set by your classification (§3B Screen 1). For a
+> small licensed business (0–1 worker) this is roughly **$120 total** (e.g. $25 +
+> ~$95 tax) — the exact tax depends on the category. Paid by card (PayPal) at
+> submission.
+>
+> **2. Broward County (BTExpress)** — a **separate** county business tax paid to
+> the Broward County Tax Collector, usually **much smaller** (often a few tens of
+> dollars, e.g. ~$30–$45). It is billed **after** the county approves (the second
+> `no-reply@grantstreet.com` email) and must be paid before the county receipt is
+> issued (see §7).
+>
+> **Bottom line:** to be fully covered you make **two separate payments** in **two
+> separate systems** — neither replaces the other, and the 50% first-year rule
+> (§4) can apply to each. Amounts here are approximate and depend on
+> classification/year; always verify the exact amount shown at submission.
 
 > 📧 **Use the firm's own email as the applicant/contact email — never the
 > client's.** On **both** applications (county BTExpress and city LBTR), put the
@@ -103,6 +129,27 @@ Collector account** as supporting documentation, so do the **county** first.
 > with the team so we can respond the same day. (For the exact emails you'll
 > receive and where to check status, see §7.)
 
+### Documents to have ready (uploads)
+
+Have these as **PDFs** before you start — you upload them *inside* the
+applications. **Both** applications ask for documents:
+
+**County (BTExpress) uploads:**
+- **Entity proof** — Articles of Organization/Incorporation, **or** the Fictitious
+  Name (DBA) Registration from Sunbiz.
+- **State license / certification** — only if the activity is regulated (the
+  13-question Screen-4 questionnaire, §3A, tells you which agency's license to attach).
+
+**City (Hollywood LBTR) uploads** *(PDF only, ≤ 10 MB each)*:
+- **Proof of location** — a signed lease **or** proof of ownership (property tax
+  bill, warranty deed, bill of sale, insurance certificate, or utility bill).
+- **Entity proof** — Articles of Incorporation **or** Fictitious Name Registration.
+- **State license** — if the activity is regulated.
+
+> The **city** always requires proof-of-location + entity proof; the **county's**
+> uploads depend on your Screen-4 answers (a regulated activity attaches its state
+> license). Screen-by-screen detail is in §3.
+
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
 (start page: <https://broward.county-taxes.com/tcb/app/btexpress/main/start_page>)
@@ -114,18 +161,27 @@ email can hide in Gmail's **"Updates" tab**). Screens: see §3A.
 ### Step B — City of Hollywood (LBTR)
 Apply online: <https://apps.hollywoodfl.org/LbtrOnline/>
 Info page: <https://hollywoodfl.org/218/Local-Business-Tax>
-Needs: the active county account (Step A), Sunbiz entity/DBA docs, proof of the
-location (lease/deed/tax bill/utility bill), state license if regulated, CU
-(unless single-family/condo & genuinely home-based — see §1), and the **$25
-non-refundable** processing fee **+ the local business tax** (amount set at
-submission). Receipt is mailed in ~1 week. Screens: see §3B.
-Paper alternative (commercial locations):
+
+**You need, in hand:**
+- The **active county account** (from Step A)
+- **Sunbiz** entity / DBA documents
+- **Proof of the location** (signed lease, deed, tax bill, or utility bill)
+- **State license**, if the activity is regulated
+- **Certificate of Use (CU)** — unless single-family/condo & genuinely home-based (see §1)
+- The **$25 non-refundable** processing fee **+ the local business tax** (amount set at submission)
+
+The receipt is mailed in ~1 week. Screens: see §3B. Paper alternative (commercial
+locations):
 <https://www.hollywoodfl.org/DocumentCenter/View/12443/Business-Tax-Receipt-Commercial-Location-Application>.
 
-### Step C — After issuance
-Post the receipt(s) at the place of business and **calendar the Sept 30
-renewal** (tax year runs Oct 1–Sep 30; a first-time receipt issued on/after
-Apr 1 pays only **50%** of the annual tax).
+### Step C — Once you have the receipt(s) in hand
+
+"Issuance" just means the city and county have **granted** the receipt(s). Once
+you have each one:
+- **Post the receipt at the place of business** — Florida requires it to be displayed.
+- **Calendar the Sept 30 renewal.** The tax year runs **Oct 1 – Sep 30**, so every
+  receipt expires Sept 30 and must be renewed each year. (A first-time receipt
+  issued on/after Apr 1 pays only **50%** of the annual tax — see §4.)
 
 ### Also — state & federal registrations (only what the activity requires)
 Not part of the BTR itself, but frequently needed alongside it:
