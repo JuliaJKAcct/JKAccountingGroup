@@ -19,6 +19,7 @@ brand/
 │   ├── svg/               vector masters (scalable — prefer these)
 │   ├── png/               rendered images, multiple sizes
 │   ├── favicon/           app/site icons
+│   ├── social/            round profile avatars (WhatsApp, etc.)
 │   └── README.md          logo usage notes
 └── design-system/         ← the "Atlas" production system
     ├── DESIGN.md          full design tokens & component reference
