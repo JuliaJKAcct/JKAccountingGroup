@@ -72,6 +72,25 @@ whether the business is even allowed at the address):
 The City of Hollywood application **requires an active Broward County Tax
 Collector account** as supporting documentation, so do the **county** first.
 
+> 💵 **What you pay — two separate receipts, two separate fees.** A Hollywood
+> business needs **two** Business Tax Receipts, issued by **two different
+> governments**, and **each charges its own fee — paying one does not cover the
+> other**:
+> - **City of Hollywood (LBTR):** a **$25 non-refundable** application fee
+>   **plus** the local business tax set by your classification (§3B Screen 1). For
+>   a small licensed business (0–1 worker) this is roughly **$120 total** (e.g.
+>   $25 + ~$95 tax) — the exact tax depends on the category. Paid by card (PayPal)
+>   at submission.
+> - **Broward County (BTExpress):** a **separate** county business tax paid to the
+>   Broward County Tax Collector — usually **much smaller** (often a few tens of
+>   dollars, e.g. ~$30–$45). It is billed **after** the county approves (the
+>   second `no-reply@grantstreet.com` email) and must be paid before the county
+>   receipt is issued (see §7).
+> - **Bottom line:** to be fully covered you make **two separate payments** in
+>   **two separate systems** — neither replaces the other, and the 50% first-year
+>   rule (§4) can apply to each. Amounts here are approximate and depend on
+>   classification/year; always verify the exact amount shown at submission.
+
 > 📧 **Use the firm's own email as the applicant/contact email — never the
 > client's.** On **both** applications (county BTExpress and city LBTR), put the
 > firm's email address (e.g. Julia's firm address) in the email / contact-email
@@ -163,8 +182,9 @@ triggers a specific license requirement to upload:
 12. Regulated by the **Broward County Health Department** — tanning, tattoo, body piercing?
 13. Regulated by **any other state agency** not listed above?
 
-*Still to capture on the county side: the document **upload**, **fee/payment**,
-and **email-confirmation** screens — the flow does not end at the questionnaire.*
+*Still to capture on the county side: the in-app document **upload** and
+**fee/payment** screens (the emailed confirmation + payment flow is now
+documented in §7) — the flow does not end at the questionnaire.*
 
 ### 3B. City of Hollywood LBTR (screen-by-screen)
 
@@ -221,7 +241,8 @@ Address** and **Folio Number** auto-fill from the address you enter.
 - **Tax year:** Oct 1 – Sep 30. Receipts **expire Sept 30**; renew before then.
 - **50% rule:** a **first-time** receipt issued **on/after April 1** pays half the
   annual tax (Fla. Stat. § 205.0535 / § 205.053).
-- **Per receipt:** the fee applies **city and county**, one per location/category.
+- **Per receipt:** the fee applies **city and county** — two separate fees, one
+  per location/category (see the "what you pay" box in §2 for what each costs).
 - City processing fee: **$25 non-refundable** + the classification-based tax.
 - Late renewals carry escalating statutory penalties (Fla. Stat. § 205.053) —
   verify the current schedule if filing late.
