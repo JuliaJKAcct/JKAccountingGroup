@@ -81,7 +81,8 @@ Collector account** as supporting documentation, so do the **county** first.
 > on the application. If the client's email is used, all of that lands in the
 > client's inbox and stalls the filing while you chase them to find it and
 > forward it. Keeping the firm email on the application keeps the whole thread
-> with the team so we can respond the same day.
+> with the team so we can respond the same day. (For the exact emails you'll
+> receive and where to check status, see §7.)
 
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
