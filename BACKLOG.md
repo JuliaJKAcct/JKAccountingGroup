@@ -253,9 +253,9 @@ when she raised it: **do nothing yet — just capture it as pending.**
 Julia's mailbox specifically**. Lilian has been working in that inbox and has
 **found specific deficiencies** in how the current tags behave — things like
 mislabeled, overlapping, missing, or not-auto-applying tags — and will walk Claude
-through each one when we sit down to fix it. This started as its own entry
-(IDEA-10) but was **folded in here**, since Gmail labels *are* tags and it's the
-same body of work.
+through each one when we sit down to fix it. This was briefly captured as its own
+separate entry but was **folded in here**, since Gmail labels *are* tags and it's
+the same body of work.
 
 **Why it matters:** tags/labels are how mail gets triaged and found again — less
 time lost to triage, and important client mail doesn't slip through. When the
