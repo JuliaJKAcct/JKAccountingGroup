@@ -35,6 +35,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
 | [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
+| [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -425,6 +426,50 @@ pieces need a *decision*, not just a build:
 
 **Priority:** Medium · **Status:** Not started — waiting on Julia's screenshots +
 pricing logic
+
+---
+
+## IDEA-10 — Website scheduling calendar for clients and prospects
+
+**What Lilian wants:** a working **scheduling / booking calendar on the firm's
+website** (jkaccountinggroup.com) that fits how the firm actually works — with **two
+distinct audiences**: people who are **already clients** and people who are **not yet
+clients (prospects)**. Each should get the right booking experience (a prospect
+booking an intro / consultation vs. an existing client scheduling a working meeting).
+Lilian has **specific ideas** for how it should work that she'll share when we build
+it. She flags this as **one of the most important** things to do.
+
+**Why it matters:** the calendar is a front door for the firm — a self-serve booking
+flow turns website visitors into booked consultations (prospects) and gives existing
+clients a friction-free way to grab time, cutting the email back-and-forth. It's the
+natural home for the "Book a consultation" CTA already shipped in the email signature
+(see [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo)) and it
+feeds the front-offer / consultation funnel in the marketing work.
+
+**Where it fits:** firm ops / website — most likely its **own new project** when it
+graduates (e.g. `projects/website-scheduling/`), touching the website, Google
+Calendar, and the marketing consultation funnel. Ties to
+[IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) (the
+signature's booking link should point here once it exists) and to
+[`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/)
+(the prospect / diagnostic front-offer flow).
+
+**What we need to start:** Lilian shares her ideas, and we settle: the two audiences'
+flows (what a prospect books vs. what a client books), meeting types & durations, what
+to collect up front, routing (Julia vs. Lilian vs. round-robin), where it lives on the
+site, whether it writes to the firm's Google Calendar, and language(s) (ES / EN / RU).
+
+**Capability check:** the back-end piece is feasible — the firm's **Google Calendar
+connector** is among our integrations (read / create / update events, suggest times),
+so booked slots can sync to the real calendar. The website piece is a
+**build / decision**: either embed an off-the-shelf scheduler (e.g. Calendly / Cal.com /
+Google Appointment Schedule / Acuity) or build a branded booking page on the Design
+System. Which path — and how to embed it — depends on **what platform the site runs
+on** (to confirm when we start). *(Connector availability can vary session to session;
+we'll confirm live calendar access at build time.)*
+
+**Priority:** **High** (Lilian: one of the most important) · **Status:** Not started —
+captured; waiting on Lilian's ideas to kick off.
 
 ---
 
