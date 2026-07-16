@@ -31,6 +31,7 @@ sops/
 ├── ein-application-irs.md                       ← Part 2: Federal EIN (IRS Form SS-4) after the entity is Active on Sunbiz
 ├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
 ├── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
+├── hollywood-broward-business-tax-receipt.html  ← ↑ Atlas design-system render of the BTR SOP (print/PDF-ready; the .md stays source of truth)
 ├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
 ├── double-portal-branding.md                    ← Double Client Portal on-brand branding (colors + logo)
 └── client-guides/                               ← ready-to-send client templates (visual guide + PDF, email/message template, WhatsApp, EN/RU)
@@ -57,6 +58,16 @@ enough to warrant it._
 Mostly internal text documents — brand styling optional. If any SOP becomes a
 client-facing or presented document, apply the shared brand
 ([`../../brand/`](../../brand/)).
+
+The **BTR SOP** has a fully designed companion render,
+[`hollywood-broward-business-tax-receipt.html`](./hollywood-broward-business-tax-receipt.html)
+— the [`sop-authoring` skill](../../.claude/skills/sop-authoring/)'s **Atlas
+design-system pass** (petrol teal + bronze on ivory; Source Serif 4 / IBM Plex
+Sans / IBM Plex Mono), built with the [`impeccable`](../../.claude/skills/impeccable/)
+skill. It is **self-contained** (fonts embedded, no external requests), ships
+**light + dark themes** and a **print stylesheet**, so it can be opened offline,
+printed to PDF, or saved to the firm's Google Drive. The Markdown is the source
+of truth; the HTML is a view — re-render it when the `.md` changes.
 
 ## Skills & tooling
 
