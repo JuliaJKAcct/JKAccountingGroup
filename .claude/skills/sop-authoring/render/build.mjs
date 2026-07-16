@@ -50,10 +50,12 @@ const fonts = readFileSync(resolve(repoRoot, 'brand/design-system/fonts-embedded
 const body  = readFileSync(resolve(bodyPath), 'utf8');
 
 const style = fonts.trimEnd() + '\n\n' + atlas.trimEnd() + '\n';
+// Function replacers so `$` sequences in content ($$, $&, $', $1…) are inserted
+// literally — String.replace treats `$…` specially only in a string replacement.
 const filled = shell
-  .replace('{{TITLE}}', title)
-  .replace('{{STYLE}}', style)
-  .replace('{{BODY}}', body.trim());
+  .replace('{{TITLE}}', () => title)
+  .replace('{{STYLE}}', () => style)
+  .replace('{{BODY}}', () => body.trim());
 
 // --- Artifact fragment (body-only; the Artifact tool supplies <head>/<body>) ---
 if (fragPath) writeFileSync(resolve(fragPath), filled);
