@@ -72,7 +72,21 @@ Plex Mono) is **kept**.
 All `website_id=1`, `is_published=false` (draft). View keys are
 `jk_lead_magnets.<segment>`.
 
-<!-- VIEW-PAGE-TABLE -->
+| Page URL | View key (`jk_lead_magnets.…`) | View id | Page id | Source file |
+|---|---|---|---|---|
+| `/free-tools` | `free_tools` | 3483 | 21 | `index.html` |
+| `/free-tools/llc-or-s-corp` | `llc_or_s_corp` | 3484 | 22 | `calculators/llc-or-s-corp.html` |
+| `/free-tools/s-corp-salary` | `s_corp_salary` | 3487 | 23 | `calculators/s-corp-salary.html` |
+| `/free-tools/surprise-tax-bill` | `surprise_tax_bill` | 3490 | 24 | `calculators/surprise-tax-bill.html` |
+| `/free-tools/tax-residency` | `tax_residency` | 3485 | 25 | `calculators/tax-residency.html` |
+| `/free-tools/foreign-owned-company-fine` | `foreign_owned_company_fine` | 3488 | 26 | `calculators/foreign-owned-company-fine.html` |
+| `/free-tools/business-license` | `business_license` | 3491 | 27 | `calculators/business-license.html` |
+| `/free-tools/bookkeeping-ready` | `bookkeeping_ready` | 3486 | 28 | `assessments/bookkeeping-ready.html` |
+| `/free-tools/employee-or-contractor` | `employee_or_contractor` | 3489 | 29 | `assessments/employee-or-contractor.html` |
+| `/free-tools/report-money-back-home` | `report_money_back_home` | 3492 | 30 | `assessments/report-money-back-home.html` |
+
+To flip a page live, publish its **Page id** (see "How to flip live"). All page
+ids are contiguous: 21–30.
 
 ---
 
@@ -183,10 +197,39 @@ the B title and split traffic.
 
 ---
 
-## Verification
+## Verification (done this session)
 
-One page was temporarily published, driven with Playwright
-([`odoo-deploy/verify_page.mjs`](./odoo-deploy/verify_page.mjs)) — calculator
-math, brand fonts, no Odoo chrome, booking/WhatsApp links, and the lead-form →
-`crm.lead` round-trip (incl. csrf + thank-you swap) — then set back to draft.
-**All 10 pages end unpublished.** See the results section at the bottom.
+The LLC-or-S-Corp page (page 22) was temporarily published, verified, then set
+back to draft. Browser-through-proxy (Playwright/Chromium) isn't supported by
+this environment's egress proxy — the CONNECT is reset — so verification was
+done deterministically with `curl` + Node instead of a live browser click-test.
+Results:
+
+- **No Odoo theme chrome** — the rendered page has no `o_main_navbar` / theme
+  header/footer; the page's own `.appbar` header + `.lp-footer` are present
+  (the `<t t-name>` arch doesn't call `website.layout`). ✓
+- **Assets load** — the shared CSS (`/web/content/3546`, served `text/css`),
+  shared JS (`/web/content/3547`), both founder photos, and the Google Fonts
+  `<link>` are all wired and resolve. ✓
+- **QWeb directives render** — `t-att-value="request.csrf_token()"` produced a
+  real `csrf_token` value; the hidden `name` / `tool_source` / `tool_page`
+  fields rendered with their values. ✓
+- **Calculator is intact** — the live inline `<script>` is byte-identical to the
+  repo source (all tax constants `184500`, `0.9235`, `.124`, `.029`, the
+  `seTaxOnProfit`/`ficaOnSalary` formulas, and the `savings >= 1500` branch),
+  the CDATA markers were stripped by QWeb leaving harmless `//` lines, and the
+  IIFE passes `node --check`. Profit 120,000 / salary 70,000 ⇒ the source
+  formula yields LLC **$16,955**, S-Corp **$10,710**, savings **$6,245**. ✓
+- **Lead form → `crm.lead` works end-to-end** — a `curl` POST to
+  `/website/form/crm.lead` (fresh session cookie + rendered csrf_token) returned
+  `{"id": …}`; the created lead had `contact_name`, `email_from`, `phone`, the
+  subject as `name`, and its **description carried `tool_source`, `tool_page`,
+  and `language`** so the team sees which tool + language produced it. The test
+  lead was then deleted. ✓
+- **All 10 pages are draft** — confirmed via `website.page` (`is_published =
+  false` for ids 21–30) and a cache-busted anonymous GET returning **404**.
+
+> **Odoo caches published pages.** The brief publish of page 22 left a short-
+> lived anonymous cache entry (a plain GET returned 200 for a moment after
+> unpublish); a cache-busted GET correctly 404s. When you flip pages live,
+> allow a moment for the cache, and hard-refresh when spot-checking.

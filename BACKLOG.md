@@ -40,6 +40,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 | [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
+| [IDEA-15](#idea-15--odoo-website-publish-skill-html-pages--chrome-less-odoo-pages) | Skill for publishing self-contained HTML pages to the Odoo Website as chrome-less QWeb pages (assets → public attachments, placeholders wired to `crm.lead` / booking, draft-first) | `.claude/skills/` (new) · first used by `lead-magnets` | Medium | **Proposed** — flow proven once (lead-magnets → Odoo, Jul 2026); build on 2nd real use |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -696,6 +697,42 @@ standard, reproducible deliverable. No external dependency.
 **Priority:** Medium · **Status:** **Built (v1, Jul 2026)** — update the skill
 after Lilian's final BTR SOP review (and after each future review round that
 establishes a new preference; the skill is the memory of "how we like SOPs").
+
+---
+
+## IDEA-15 — Odoo Website publish skill (HTML pages → chrome-less Odoo pages)
+
+**What Julia wants:** a repeatable way to take the firm's finished, on-brand
+HTML (lead magnets today; landing pages, campaign pages, tools tomorrow) and get
+it onto the Odoo Website **faithfully** — same design, no Odoo theme header/
+footer — without re-solving the plumbing each time.
+
+**Why it matters:** the first time (lead-magnets → Odoo, Jul 2026) took real
+figuring-out: uploading assets as public `ir.attachment`s (and the `text/css`
+mimetype gotcha under `nosniff`), rendering each page as a standalone `<t
+t-name>` QWeb view that skips `website.layout`, making the markup XML-valid
+(self-closing void tags, escaping stray `&`, wrapping inline JS in CDATA),
+wiring placeholders (lead form → `crm.lead` with a QWeb `csrf_token` +
+progressive-enhancement fetch, Book-a-call → the appointment, WhatsApp), and
+publishing **draft-first**. The generator (`projects/marketing/lead-magnets/
+odoo-deploy/build_arch.py`) and the record of how it was done
+(`…/DEPLOY-ODOO.md`) already capture most of it.
+
+**Where it fits:** a new skill in [`.claude/skills/`](./.claude/skills/), pulling
+the generator + the deploy playbook out of the lead-magnets project so any page
+can reuse it. Related to IDEA-11 (leads into Odoo CRM — the lead-form wiring is
+the front end of that) and IDEA-10 (website scheduling).
+
+**What we need to start:** a **second real use** (the repo convention: don't
+build a skill speculatively — suggest, then build once a second use is in sight).
+Until then the lead-magnets `odoo-deploy/` is the reference.
+
+**Capability check:** proven end-to-end via the `JK_Acc_Odoo_MCP` integration
+(Odoo free tier ~50 MCP calls/day — batch writes, verify with WebFetch/curl).
+No new dependency.
+
+**Priority:** Medium · **Status:** **Proposed** — flow proven once; capture as a
+skill on the 2nd real use.
 
 ---
 

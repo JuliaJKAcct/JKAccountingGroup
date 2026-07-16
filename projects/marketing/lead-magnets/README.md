@@ -23,10 +23,12 @@ lead-magnets/
 ├── README.md                    ← you are here
 ├── PRODUCT.md                   ← design/product brief (for the impeccable skill)
 ├── TAX-FIGURES-TO-VERIFY.md     ← every tax number used — pending Julia's sign-off
+├── DEPLOY-ODOO.md               ← Odoo Website publish record (URLs, ids, wiring, how to flip live)
 ├── index.html                   ← menu of all tools
 ├── assets/img/                  ← Julia photos (transparent cutouts)
 ├── calculators/                 ← the 6 calculators (self-contained HTML)
-└── assessments/                 ← the 3 assessments (self-contained HTML)
+├── assessments/                 ← the 3 assessments (self-contained HTML)
+└── odoo-deploy/                 ← generator + generated QWeb archs for the Odoo pages
 ```
 
 ## The tools
@@ -64,9 +66,15 @@ Pages reuse the production CSS and page pattern; no new colors/fonts.
 ## Outputs
 
 Self-contained HTML tools in `calculators/` and `assessments/`, committed to the
-repo (marketing assets, no client data). **Not yet publish-ready:** tax figures
-need sign-off (`TAX-FIGURES-TO-VERIFY.md`), and two things must be wired before
-launch — see below.
+repo (marketing assets, no client data). These are the **design source of
+truth** and keep their `#REPLACE-WITH-*` placeholders.
+
+**Published to Odoo Website** (all 10 pages **draft/unpublished**) under
+`/free-tools*` — see [`DEPLOY-ODOO.md`](./DEPLOY-ODOO.md) for the URLs, view/page
+ids, the live wiring (Book-a-call → Discovery Call, WhatsApp, lead form →
+`crm.lead`), and how to flip live. **Do not publish live** until the tax figures
+are signed off (`TAX-FIGURES-TO-VERIFY.md`). The generator that builds the Odoo
+archs is `odoo-deploy/build_arch.py`.
 
 ## Working on this / notes for AI
 
@@ -74,8 +82,10 @@ launch — see below.
   the worry then the fix, no jargon. The audience may not speak English well.
 - **English first.** Session scope is EN; RU (and possibly a third language) is a
   planned follow-up. Don't ship half-translated pages.
-- **Not wired yet** (needs a human): (1) the lead-capture form submission
-  endpoint — currently `action="#REPLACE-WITH-ENDPOINT"`; (2) the real Odoo
-  "Book a Consultation" URL — currently a placeholder anchor.
+- **Placeholders in the repo source stay as-is** (they're the design source).
+  The live wiring lives in Odoo (see `DEPLOY-ODOO.md`): the lead form posts to
+  `crm.lead`, and every "Book a call" CTA points at the Discovery Call
+  appointment. The two-calendar new-vs-existing chooser (`consultation-booking/`)
+  isn't built yet — all booking CTAs use the single Discovery Call for now.
 - **Every tool shows a disclaimer** and gives an estimate, never advice.
 - Screenshots for QA are taken at 390px (mobile) and 1280px (desktop).

@@ -6,14 +6,17 @@ const require = createRequire('/opt/node22/lib/node_modules/index.js');
 const { chromium } = require('playwright');
 
 const url = process.argv[2] || 'https://jkaccountinggroup.odoo.com/free-tools/llc-or-s-corp';
-const browser = await chromium.launch();
+const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
+const browser = await chromium.launch(proxy ? { proxy: { server: proxy } } : {});
 const page = await browser.newPage();
 const out = {};
 const errors = [];
 page.on('console', m => { if (m.type() === 'error') errors.push('console: ' + m.text()); });
 page.on('pageerror', e => errors.push('pageerror: ' + e.message));
 
-await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await page.waitForSelector('.brandmark', { timeout: 15000 });
+try { await page.evaluate(() => document.fonts.ready); } catch (e) {}
 
 // 1. No Odoo theme chrome; our own chrome present
 out.hasOdooTopMenu = await page.locator('header#top, #o_main_nav, .o_main_navbar').count();
