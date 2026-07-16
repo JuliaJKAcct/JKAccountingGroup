@@ -38,7 +38,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
-| [IDEA-13](#idea-13--per-client-memory-claude-can-read-across-sessions--ping-assistant) | Per-client "memory" Claude can read across sessions (Double notes as the system of record) + evaluate the "Ping Assistant" tool Lilian mentioned | Firm ops / tooling (Double today) | Medium | **Started** — Double-notes practice in use; "Ping Assistant" blocked on the exact product name |
+| [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/`](./.claude/skills/) + [`projects/sops/`](./projects/sops/) | Medium | Not started — build after Lilian signs off on the BTR SOP (the reference pattern) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
@@ -577,41 +577,70 @@ waiting to decide the hub format + taxonomy.
 
 ---
 
-## IDEA-13 — Per-client "memory" Claude can read across sessions + "Ping Assistant"
+## IDEA-13 — Per-client memory: Ping Assistant Client Intelligence, connected to Claude
 
-**What Lilian wants:** two linked things. **(1)** A durable **per-client memory** so
-that in any future session she can ask Claude "what happened with client X, what did
-we do?" and get the answer — without depending on the chat where the work happened.
-(Chat sessions don't carry over: a new session only knows what's written in durable
-systems — the repo, Double, Drive, Gmail.) **(2)** Evaluate feeding that memory into
-**"Ping Assistant"** — a tool Lilian mentioned wanting to connect; she is asking its
-customer support about an integration.
+**What Lilian wants:** a durable, *queryable* per-client memory she can ask in plain
+language — "what happened with client X, what did we do?" — and get an answer in any
+future session, independent of the chat where the work happened. (Chat sessions don't
+carry over: a new session only knows what's written in durable systems.) Her preferred
+engine is **Ping Assistant's "Client Intelligence"**: an AI chat *inside Ping* that
+answers any question about a client by searching the client's accumulated memory, which
+Ping aggregates from many sources (meetings, emails, connected systems). The goal is to
+**connect that Client Intelligence directly to Claude** — Lilian asks Claude, Claude
+queries Ping's memory live. One place to ask, many sources behind it.
 
-**Why it matters:** this bit us in practice — a rich working session (BTR filings for
-two clients) existed only in chat; a parallel session knew nothing about parts that
-weren't written down. Client work must be reconstructable from the firm's systems,
-not from anyone's memory of a conversation.
+**Why static Double notes aren't the primary answer (Lilian's call):** we first tried
+Double client notes as the memory. Lilian's objection: notes become **fixed text** she'd
+have to dig through file by file — not the fluid, ask-anything experience she wants. So
+Double is demoted to a **fallback bridge**, not the primary plan.
 
-**Where it fits:** firm ops / tooling. **The working solution today is Double client
-notes** — during the BTR work (Jul 2026) we started the practice: a status note on
-the client's record in Double after each significant step (what was filed, paid,
-pending, and the identifiers), plus a `Recorded during <person>'s session` line for
-provenance. Future sessions answer "what happened with X?" by reading the client's
-notes in Double.
+**Why it matters:** this bit us in practice — a rich working session existed only in chat,
+and a parallel session knew nothing about the parts that weren't written down. Client work
+must be reconstructable from the firm's systems, on demand, without hunting.
 
-**What we need to start (the Ping Assistant slice):** the **exact product name /
-link** — a web search (2026-07) found no product matching "Ping Assistant" (only
-Pingram email/SMS, PingAura SEO, Ping Identity — none a client-memory assistant).
-Lilian is asking the vendor's customer support whether an integration (MCP/API)
-exists; with the real name we can check for a connector.
+**Ping Assistant — identified (Jul 2026):** the product is real —
+[pingassistant.com](https://www.pingassistant.com/), *"the AI assistant for accounting and
+advisory firms,"* building Client Context from meetings, emails and systems (meeting
+summaries, action items → tasks, meeting prep, auto follow-ups). Notably it **already
+integrates with Double** (plus Karbon, Zoom, Google Meet, Teams, Dialpad) — see its
+[integrations](https://www.pingassistant.com/integrations) and
+[Double integration](https://www.pingassistant.com/integrations/double) pages. (The earlier
+"no such product found" note was a search miss, now corrected.)
 
-**Capability check:** the Double-notes practice works **now** (notes created for two
-clients as the first instances). The Ping Assistant connection is **blocked on
-identifying the product**; whether Claude can feed it depends on it having an
-MCP connector or API.
+**The two paths (in priority order):**
 
-**Priority:** Medium · **Status:** **Started** — Double-notes practice in use;
-Ping Assistant evaluation blocked on the product name (Lilian → vendor support).
+1. **Plan A — direct Claude ↔ Ping (preferred).** Claude queries Ping's Client Intelligence
+   in real time, so Lilian asks Claude and gets Ping's cross-source answer. **Depends on Ping
+   exposing an external interface — a public API, webhooks, or ideally an MCP connector.** A
+   2026-07 search found **no public API / MCP** for Ping Assistant (results for "Ping API" are
+   *Ping Identity*, an unrelated company), and the site blocks automated reads, so it can't be
+   confirmed from outside. **Lilian has emailed Ping's support/developers** to ask whether such
+   an integration exists — this is the blocker.
+2. **Plan B — Double as a bridge (fallback, only if A is impossible).** Configure Ping to write
+   everything into **Double client notes**; Claude then reads those notes and appends what we do
+   each session (a status note after each significant step — what was filed, paid, pending, and
+   the identifiers — plus a `Recorded during <person>'s session` provenance line). Workable
+   because Claude already reads/writes Double, but it's the static-text experience Lilian would
+   rather avoid — accepted only if Ping has no direct-access path.
+
+**Where it fits:** firm ops / tooling. Primary engine = Ping Assistant (external product);
+Double is the fallback substrate. Plan A would be a new integration to scope (a Ping API/MCP
+bridge); Plan B is a Ping-config + Claude-reads-Double workflow.
+
+**What we need to start:** the **answer from Ping's developers/support** on whether an external
+integration exists (API / webhooks / MCP) and how data can leave Ping. A "yes" → scope the
+direct Claude↔Ping connection (Plan A). A "no" → design the Ping→Double→Claude bridge (Plan B):
+how Ping writes complete client notes into Double, and how Claude appends ongoing work.
+
+**Capability check:** Plan A is **blocked on the vendor answer** — no public Ping API/MCP found
+today, unconfirmed either way. Plan B is **feasible now** — Claude already reads and writes
+Double; it only needs Ping configured to deposit its memory there. The per-client memory content
+itself (including this week's BTR work for two clients) lives in the firm's systems — Double /
+Drive — never in this repo.
+
+**Priority:** Medium · **Status:** **Blocked / waiting on vendor** — Ping Assistant identified and
+confirmed to integrate with Double; awaiting Ping developer/support reply on a direct API/MCP so we
+can choose Plan A (direct) vs. Plan B (Double bridge).
 
 ---
 
