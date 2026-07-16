@@ -17,6 +17,7 @@ the US.
 ├── README.md      human-facing overview + project index
 ├── CLAUDE.md      you are here — the navigation map
 ├── BACKLOG.md     firm idea parking lot — captured ideas we'll build later
+├── FOLLOW-UPS.md  open loops — started work waiting for a second pass (on-demand, per-person; NOT future ideas)
 ├── brand/         SHARED foundation: logo, brand guide, design system.
 │                  Used by every project. Never duplicate this into a project.
 ├── projects/      one folder per initiative (see projects/README.md)
@@ -62,6 +63,7 @@ the US.
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
+| Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian"; an unidentified session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
 Each project has its own `README.md` with the specifics; read it before working
