@@ -60,7 +60,15 @@ client-facing or presented document, apply the shared brand
 
 ## Skills & tooling
 
-None yet. Well-written SOPs here can later become Claude skills in
+- [`sop-authoring`](../../.claude/skills/sop-authoring/) — **the house way to
+  write, restructure, or review an SOP**: the required structure (process
+  flowchart first, book-index hierarchy, numbered lists, uploads checklist,
+  email map…), the PR → independent-review → merge workflow, and the Atlas
+  design-system render for review copies. Use it for every new SOP or major
+  restructure. Reference pattern:
+  [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md).
+
+Well-written SOPs here can also become their own Claude skills in
 [`.claude/skills/`](../../.claude/skills/) when a procedure is repeatable enough
 to automate.
 
