@@ -1,6 +1,11 @@
 # SOP: Business Tax Receipt — City of Hollywood + Broward County
 
 > **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-15
+>
+> 🔍 **In review (Jul 2026):** Lilian is doing a final detailed read-through after a
+> major restructuring round (flowchart, two-fees box, uploads checklist, email map).
+> Her structure preferences from that round are being captured as a planned
+> `sop-authoring` skill — see BACKLOG IDEA-14. Remove this note when she signs off.
 
 The complete, self-contained procedure for getting a Florida Business Tax
 Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
