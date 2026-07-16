@@ -58,6 +58,38 @@ the relevant project (e.g. `referral-offer-strategy/`, `consultation-booking/`)
 rather than living here — this project is the source of the ideas, not where
 they get executed.
 
+## Writing principles for these assets
+
+Established while workshopping Track 4's lead magnet/assessment shortlist —
+applies to any actual copy written for this audience, not just one video's
+digest:
+
+1. **Bulletproof simple English.** Short sentences. No idioms, no wordplay, no
+   compound phrases that require inferring meaning (e.g. "home-country
+   bookkeeper" failed this test). Many readers are not fluent English
+   speakers — every sentence has to survive a literal reading.
+2. **Concept clarity, independent of language.** A title has to be understood
+   on its own, without reading the body copy, by someone who isn't an
+   accountant — jargon and acronyms fail even if the English is grammatically
+   simple (e.g. "BTR" meant nothing until reframed as "a license to run your
+   business here").
+3. **Name the exact worry, then the fix — no buzzwords.** A useful reference
+   pattern (an unrelated AI-agency landing page Julia shared): name the
+   reader's exact anxiety in plain terms before explaining anything, define
+   any unavoidable term in one plain sentence, use concrete recognizable
+   before/after scenarios instead of abstract benefit claims, and answer
+   objections in the reader's own voice.
+4. **The worry must be real and specific to this niche.** Candidates come from
+   mapping actual daily fears of foreign-owned business founders in the US
+   (per [`positioning.md`](../positioning.md)) to something JK can solve — not
+   from generic small-business accounting topics. The strongest ones are
+   worries generic US-owner content would never touch (e.g. reporting money
+   held back home).
+5. **Watch what the concept signals about the avatar.** A lead magnet can
+   accidentally screen in the wrong client — e.g. "cost of hiring your first
+   employee" implied a business too small/early to be a good fit, so it was
+   dropped even though the calculator itself was sound.
+
 ## Working on this / notes for AI
 
 - One markdown file per video. Never store the full transcript — extract the

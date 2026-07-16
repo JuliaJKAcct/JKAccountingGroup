@@ -47,32 +47,40 @@ traffic; broad and generic = unqualified traffic.
 3. **Build the funnel around it** — VSL, landing page, email sequencing (the
    pieces from Video 1).
 
-## Relevance to JK — candidate lead magnets (for discussion, not built yet)
+## Relevance to JK — candidate lead magnets (shortlist, none built yet)
 
-A few ideas worth workshopping together, each narrow-problem +
-specific-avatar per the video's rule, and each tied to something JK already
-has domain expertise (or tooling) for:
+JK's actual niche is narrower than "small business owners": per
+[`positioning.md`](../../../positioning.md) it's **foreign-owned business
+founders in the US**, whose core fear is "I don't know the rules here" (tax,
+compliance, local regulations), often compounded by a failed attempt to
+bridge the gap with a home-country bookkeeper who doesn't understand the US
+system. The shortlist below was built by mapping specific daily worries this
+avatar has — that JK can actually solve — to a tool, not by picking generic
+accounting topics. See "Writing principles for these assets" in the project
+[`README.md`](../../README.md) before drafting real copy for any of these.
 
-- **S-corp reasonable-salary quick estimator** (calculator) — "Am I paying
-  myself enough (or too much) as an S-corp owner?" Directly reuses the logic
-  in the existing `reasonable-compensation` skill/project. Avatar: S-corp
-  owners, which is a lot of JK's client base. Strong synergy since the
-  methodology already exists — just needs a simplified, lighter public-facing
-  version.
-- **LLC vs. S-corp tax-savings estimator** (calculator) — plug in net profit,
-  see estimated self-employment tax savings from an S-corp election. Avatar:
-  Florida LLC owners deciding whether/when to elect S-corp status.
-- **Miami-Dade/Broward Business Tax Receipt cost & deadline calculator**
-  (calculator) — pulls from the existing BTR SOPs; avatar: new or relocating
-  local business owners navigating city + county BTR fees.
-- **"Is my bookkeeping firm-ready?" assessment** — a short quiz that scores
-  how close a business's books are to being tax/loan/audit ready, routing to
-  a personalized result + book-a-call CTA. Higher effort, but matches the
-  assessment model's strength (paid ads, high personalization).
+### Calculators
 
-None of these are built — just candidates to pressure-test against the
-firm's actual traffic sources and ideal client before picking one to build,
-per the video's own recommendation to start with a calculator.
+| # | Name | Worry it solves |
+|---|---|---|
+| 1 | Am I Paying Myself the Right Salary? | S-corp owner unsure their own salary is set correctly. Reuses the logic in the existing `reasonable-compensation` skill — just needs a simplified, lighter public-facing version. |
+| 2 | LLC or S-Corp — Which Saves You More Money? | Deciding which business structure costs less in tax. |
+| 3 | Do I Need a License to Run My Business Here? | Not knowing a local business license/fee applies to them at all (the plain-language reframe of a "Business Tax Receipt" calculator — pulls from the existing BTR SOPs). |
+| 4 | Will You Owe the IRS a Surprise Bill? | No employer withholds tax for a business owner — real risk of an unexpected bill from not making quarterly estimated payments, a concept many arrive with no exposure to. |
+| 5 | Do You File US Taxes as a Resident? | Confusion over resident vs. non-resident tax filing status (IRS substantial-presence-test day counting) — the safe, purely-tax angle on an immigration-adjacent worry; not immigration/visa advice. |
+| 6 | Could Your Foreign-Owned Company Owe a $25,000 Fine? *(A/B against the statement version: "Your Foreign-Owned Company Could Owe a $25,000 Fine")* | Most foreign owners have never heard of Form 5472 or its flat penalty for foreign-owned US companies. **Verify the exact penalty figure and filing rules before this goes anywhere public.** There's already a draft video script on this exact topic: `../../video-generation/scripts/form-5472-foreign-owned-llc-2026-07-03.md`. |
+
+### Assessments
+
+| # | Name | Worry it solves |
+|---|---|---|
+| 1 | Tax Season Isn't Here Yet. Are Your Books Ready? | Dread of being unprepared / scrambling at tax time (the reframed, plain-language version of a generic "books health check"). |
+| 2 | Is This Worker an Employee (W-2) or a Contractor (1099)? | Risk of misclassifying someone who works for them — W-2/1099 are used as-is because they're widely recognized terms even for non-experts. |
+| 3 | Do You Need to Report Money You Have Back Home? | Unaware that foreign bank accounts/assets may need to be reported to the US — a worry specific to this exact audience, not generic small-business content. |
+
+None of these are built yet — this is the shortlist to choose from, not a
+build queue. Next step is picking which one(s) to actually build, starting
+with a calculator per the video's own recommendation.
 
 ## Open question for the funnel decision
 
