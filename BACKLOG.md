@@ -664,8 +664,12 @@ BTR SOP (Jul 2026):
 - **An email map** — every email the process sends, what each means, where to
   check status.
 - **Plain-language explanations of jargon** (e.g. what "issuance" means).
-- **Rendered review copies use the firm Design System** (Atlas) — hierarchy via
-  the brand's type/color system.
+- **Every SOP ships with a firm Design System (Atlas) render** — hierarchy via
+  the brand's type/color system. Now a **standard deliverable**, not optional:
+  a committed, deterministic render engine
+  ([`.claude/skills/sop-authoring/render/`](./.claude/skills/sop-authoring/render/))
+  produces the same on-brand, self-contained, print/PDF/Drive-ready HTML for any
+  session/author (built Jul 2026, with the `impeccable` skill; PDF on request only).
 
 **Why it matters:** SOPs are the firm's continuity layer; if each one needs a
 personal explanation of how to read it, the writing was wasted. Encoding the
@@ -685,7 +689,9 @@ refine it after her final read-through. **v1 is built:**
 [`projects/sops/README.md`](./projects/sops/README.md) and the CLAUDE.md maps.
 
 **Capability check:** built — a documentation skill (structure rules + the
-reference example + the Atlas render pattern). No external dependency.
+reference example) **plus a committed render engine** (`render/atlas.css`,
+`shell.html`, `build.mjs`, embedded brand fonts) that makes the Atlas render a
+standard, reproducible deliverable. No external dependency.
 
 **Priority:** Medium · **Status:** **Built (v1, Jul 2026)** — update the skill
 after Lilian's final BTR SOP review (and after each future review round that
