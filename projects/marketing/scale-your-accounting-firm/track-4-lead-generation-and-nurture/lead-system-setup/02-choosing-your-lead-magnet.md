@@ -61,26 +61,26 @@ accounting topics. See "Writing principles for these assets" in the project
 
 ### Calculators
 
-| # | Name | Worry it solves |
+| # | Name (locked) | Worry it solves |
 |---|---|---|
-| 1 | Am I Paying Myself the Right Salary? | S-corp owner unsure their own salary is set correctly. Reuses the logic in the existing `reasonable-compensation` skill — just needs a simplified, lighter public-facing version. |
+| 1 | I Have an S-Corp. Am I Paying Myself the Right Salary? | S-corp owner unsure their own salary is set correctly. Reuses the logic in the existing `reasonable-compensation` skill — just needs a simplified, lighter public-facing version. |
 | 2 | LLC or S-Corp — Which Saves You More Money? | Deciding which business structure costs less in tax. |
-| 3 | Do I Need a License to Run My Business Here? | Not knowing a local business license/fee applies to them at all (the plain-language reframe of a "Business Tax Receipt" calculator — pulls from the existing BTR SOPs). |
-| 4 | Will You Owe the IRS a Surprise Bill? | No employer withholds tax for a business owner — real risk of an unexpected bill from not making quarterly estimated payments, a concept many arrive with no exposure to. |
+| 3 | Do I Need a License to Run My Business Here in the USA? | Not knowing a local business license/fee applies to them at all (the plain-language reframe of a "Business Tax Receipt" calculator — pulls from the existing BTR SOPs). |
+| 4 | Will You Owe the IRS a Surprise Tax Bill? | No employer withholds tax for a business owner — real risk of an unexpected bill from not making quarterly estimated payments, a concept many arrive with no exposure to. |
 | 5 | Do You File US Taxes as a Resident? | Confusion over resident vs. non-resident tax filing status (IRS substantial-presence-test day counting) — the safe, purely-tax angle on an immigration-adjacent worry; not immigration/visa advice. |
 | 6 | Could Your Foreign-Owned Company Owe a $25,000 Fine? *(A/B against the statement version: "Your Foreign-Owned Company Could Owe a $25,000 Fine")* | Most foreign owners have never heard of Form 5472 or its flat penalty for foreign-owned US companies. **Verify the exact penalty figure and filing rules before this goes anywhere public.** There's already a draft video script on this exact topic: `../../video-generation/scripts/form-5472-foreign-owned-llc-2026-07-03.md`. |
 
 ### Assessments
 
-| # | Name | Worry it solves |
+| # | Name (locked) | Worry it solves |
 |---|---|---|
-| 1 | Tax Season Isn't Here Yet. Are Your Books Ready? | Dread of being unprepared / scrambling at tax time (the reframed, plain-language version of a generic "books health check"). |
+| 1 | I Have a Business. Is My Bookkeeping Ready for Tax Season? | Dread of being unprepared / scrambling at tax time. Rewritten from an earlier draft ("Tax Season Isn't Here Yet. Are Your Books Ready?") that read poorly — the negation ("isn't here yet") and the ambiguous word "books" both got dropped. |
 | 2 | Is This Worker an Employee (W-2) or a Contractor (1099)? | Risk of misclassifying someone who works for them — W-2/1099 are used as-is because they're widely recognized terms even for non-experts. |
 | 3 | Do You Need to Report Money You Have Back Home? | Unaware that foreign bank accounts/assets may need to be reported to the US — a worry specific to this exact audience, not generic small-business content. |
 
-None of these are built yet — this is the shortlist to choose from, not a
-build queue. Next step is picking which one(s) to actually build, starting
-with a calculator per the video's own recommendation.
+**Titles are locked as of 2026-07-16.** This is still a shortlist to choose
+from, not a build queue — next step is picking which one(s) to actually
+build, starting with a calculator per the video's own recommendation.
 
 ## Open question for the funnel decision
 
