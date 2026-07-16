@@ -95,7 +95,9 @@ be usable, the writing failed.
 When the SOP is reviewed by a person, publish a **rendered copy** as an Artifact
 styled with the firm's **Atlas design system** (`brand/design-system/DESIGN.md` —
 petrol teal + bronze on ivory; Source Serif 4 headings, IBM Plex Sans body, IBM
-Plex Mono kickers/labels; both light & dark themes):
+Plex Mono kickers/labels). Render **both light and dark themes** — DESIGN.md
+defines the light palette, so derive the dark variant from its deep-teal on-dark
+tokens (`#0D2A31` ground, `#ECE6DA` text):
 
 - Section chips (§N) + a serif H2 per section; 3A/3B-style sub-headers as
   **highlighted bars** (mono tag + serif title) with their children indented
