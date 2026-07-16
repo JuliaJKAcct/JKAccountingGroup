@@ -2,136 +2,125 @@
 
 > **Purpose.** The document alone doesn't work — a realtor handed a PDF with
 > no script and no timing either forgets it or fumbles the moment. This is
-> what to brief the realtor on: **when** to bring it up, **what to say**,
-> and the **hand-off** that gets JKA into the loop. Pairs with the checklist
-> in this folder (`new-business-launch-checklist-en.html` / `-ru.html`) —
-> see `../strategy.md` § "Standardized front-offer chassis" and § "Real
-> estate affiliate channel" for the strategy behind this.
+> what to brief the realtor on: **when** to bring it up (there's more than
+> one right moment), **what to say**, and the **hand-off** that gets JKA
+> into the loop. Pairs with the checklist in this folder
+> (`new-business-launch-checklist-en.html` / `-ru.html`) — see
+> `../strategy.md` § "Standardized front-offer chassis" and § "Real estate
+> affiliate channel" for the strategy behind this.
 
-## The 3 things the realtor needs, in order
+## Channel: text/WhatsApp, not email
 
-1. **When** — the moment to bring it up
-2. **What to say** — a script short enough to say without notes
-3. **What to do after** — the hand-off, so it's not left to the client to follow through
+This audience doesn't run on email. **Text or WhatsApp is the default
+channel for everything below** — sending the checklist, and the hand-off to
+Julia. Treat email as a rare exception (a client who specifically prefers
+it), not the fallback. Every script below is written to be said out loud or
+sent as a short text — nothing here should read like a formal email.
 
-Most lease signings happen **in person** — that's the primary path below.
-Email/text is the fallback for remote or phone-only closings.
+## The 3 things the realtor needs
 
-## 1. When
+1. **When** — realtors don't all hit the same moment in the same
+   conversation, so pick whichever fits rather than forcing a script into
+   the wrong spot.
+2. **What to say** — short enough to say from memory.
+3. **What to do after** — the hand-off, same day, by text/WhatsApp.
 
-At the **lease signing appointment itself**, right after the paperwork is
-done — not a follow-up email days later. That's the moment the tenant is
-already thinking "okay, now what" and the realtor is still in the room to
-hand something over. Waiting until later makes it feel like an unrelated
-sales pitch instead of part of closing the deal.
+## 1. When — four moments, pick what fits
 
-Skip it (or shorten it to just leaving the checklist behind) if the client
-is clearly stressed, rushed, or the signing ran long — don't force the
-moment.
+Not every deal reaches "lease signing" as a clean, separate moment — some
+close over a few conversations, some finish on-site with keys handed over
+right away. Use whichever of these actually happens in the realtor's own
+process:
 
-## 2. What to say (in person — the primary path)
+**A — During the search, the moment the client mentions they're starting a
+business** (often the earliest and most natural — a client says "this
+would be my first location" or "I'm just getting set up here"). No need to
+wait for signing; planting it early means it lands before they're
+overwhelmed with move-in logistics.
 
-A script short enough to say from memory, not read off a card:
+**B — Right at lease signing / keys handover** (the most common single
+moment — the deal is done, the client is in front of them).
 
+**C — When the client asks a logistics/licensing/permit question the
+realtor can't fully answer** (a natural pivot, not a forced pitch — "that's
+actually more of an accounting question" is a genuine, honest handoff, not
+a sales move).
+
+**D — A short follow-up text a few days after keys, if none of the above
+came up** ("hope the space is coming together — sending that checklist I
+mentioned").
+
+The realtor should use **one** of these, whichever the conversation
+actually offers — not force all four into a single meeting.
+
+## 2. What to say — one script per moment
+
+Casual, spoken, no notes needed:
+
+**A — Mid-search, business just mentioned:**
+> "Oh nice, exciting! Once you're getting close to opening, it's worth
+> having your books and business setup right from day one — I know a good
+> bilingual accounting firm if that'd help, no rush at all."
+
+**B — At signing / keys handover:**
 > "Congrats on the space! One more thing before you go — I work with an
 > accounting firm, JK Accounting Group, that put together a quick checklist
 > for new business owners: the financial stuff worth having in place before
 > you open. No cost, no pitch — just take a look. If anything on it looks
-> unfamiliar, they'll do a free 30-minute call to walk through it with you."
+> unfamiliar, they'll do a free 30-minute call to walk you through it."
 
-Then hand over the printed checklist (or pull it up and email it on the
-spot). That's the whole ask — **the realtor doesn't need to explain any of
-the accounting content**, understand entity structures, or answer
-follow-up questions. Their job stops at handing it over and saying "they'll
-walk you through it" — the checklist and the call do the rest.
+**C — Client asks a question the realtor can't fully answer:**
+> "Honestly, that's more of an accounting/compliance question than a real
+> estate one — I know someone who handles exactly that for new businesses.
+> Want me to connect you?"
 
-If the client asks a question the realtor can't answer: *"Good question —
-that's exactly what the call is for, I'll make sure they reach out to you."*
+**D — Short follow-up text, a few days after keys:**
+> "Hope the space is coming together! Sending over that quick financial
+> checklist I mentioned — no cost, no pressure, just worth a look before
+> things get busy."
+
+Whichever moment it is, the ask is the same: hand over or text the
+checklist, and say a version of "they'll walk you through it if anything's
+unclear." **The realtor never has to explain the accounting content
+itself** — their job stops at the hand-over.
 
 ## 3. The hand-off (this is the step that's usually skipped)
 
-Right after the meeting — same day, not batched at week's end — the realtor
-sends the client's name, contact info, and language preference (EN/RU) to
-Julia. A one-line text or email is enough:
+Same day, by text/WhatsApp, not batched or left to an email thread:
 
-> "New referral: {{CLIENT_NAME}}, {{PHONE_OR_EMAIL}}, prefers {{EN/RU}} —
-> just signed a lease at {{PROPERTY}}."
+> "New referral: {{CLIENT_NAME}}, {{PHONE}}, prefers {{EN/RU}} — just
+> starting a business at {{PROPERTY}}."
 
-**Why this step can't be optional:** without it, the referral depends on
-the client remembering to reach out on their own — and this audience is
-busy right after signing and won't. JKA reaching out first, within 1
-business day (the firm's standing response time), is what actually converts
-the hand-off into a call. This is the single point where "gave them a
-checklist" turns into an actual referral — skip it and the whole chassis
-does nothing.
+**Why this can't be optional:** without it, the referral depends on the
+client reaching out on their own — and this audience won't, especially by
+email. JKA reaching out first, within 1 business day, is what actually
+turns a hand-over into a call. This is the point where "gave them a
+checklist" becomes an actual referral — skip it and nothing downstream
+happens.
 
-## Fallback: remote/phone-only closings (email or text)
+## Sending the checklist itself
 
-When there's no in-person moment, send this instead of the verbal script:
-
-### Email template (English)
-
-> Subject: A quick checklist before you open your doors
->
-> Hi {{CLIENT_FIRST_NAME}},
->
-> Congratulations on the lease! Before you get going, I wanted to pass along
-> a short checklist from JK Accounting Group — a bilingual accounting firm I
-> work with — covering the financial basics worth having in place before day
-> one (entity setup, bookkeeping, sales tax, that kind of thing).
->
-> It's attached, no cost and no obligation. If anything on it looks
-> unfamiliar, they offer a free 30-minute call to walk through it together —
-> I've passed your info along, so expect to hear from them shortly, or feel
-> free to reach out directly: julia@jkaccountinggroup.com.
->
-> Excited to see the space up and running!
->
-> {{REALTOR_NAME}}
-
-### Text/SMS version (English, shorter)
-
-> Congrats on the lease! Attaching a quick financial checklist from my
-> accounting-firm contact (JK Accounting Group) — worth a look before you
-> open. Free 30-min call available if anything's unclear — I passed your
-> info along, so they'll reach out, or you can email
-> julia@jkaccountinggroup.com directly.
-
-### Email template (Russian — for clients who prefer Russian/Ukrainian)
-
-> Тема: Небольшой чек-лист перед открытием
->
-> {{CLIENT_FIRST_NAME}}, здравствуйте!
->
-> Поздравляю с подписанием договора аренды! Пока вы готовитесь к открытию,
-> хочу передать короткий чек-лист от JK Accounting Group — бухгалтерской
-> фирмы, с которой я сотрудничаю. В нём — базовые финансовые вещи, которые
-> стоит иметь в порядке до первого дня работы (оформление бизнеса,
-> бухгалтерия, налог с продаж и т.д.).
->
-> Чек-лист во вложении, бесплатно и ни к чему не обязывает. Если что-то
-> покажется непонятным, у них есть бесплатный 30-минутный звонок, чтобы всё
-> разобрать вместе — я уже передал(а) им ваши контакты, так что они скоро
-> свяжутся, либо можете написать напрямую: julia@jkaccountinggroup.com.
->
-> Успехов с открытием!
->
-> {{REALTOR_NAME}}
-
-Even by email, the hand-off step still applies: CC Julia, or forward the
-thread right after sending — don't rely on the client replying to the
-attachment on their own.
+- **In person:** hand over a printed copy if one's on hand — cleanest, most
+  natural, no extra step.
+- **By text/WhatsApp:** share the PDF/link directly. A one-line message is
+  enough — don't write a formal note to go with it:
+  > "Here's that checklist — [file]. Free 30-min call if anything's
+  > unclear, just let me know and I'll connect you."
+  > (RU: «Вот тот чек-лист — [файл]. Если что-то будет непонятно, есть
+  > бесплатный 30-минутный звонок — скажите, и я вас свяжу.»)
+- **Email:** only if the client has specifically indicated they prefer it —
+  don't default to it.
 
 ## Notes for whoever briefs the realtor (Julia/team)
 
 - This playbook is the thing to walk the realtor through once, in person or
-  on a short call — not something to email them cold and hope they read.
-  Two minutes of "here's when, here's what to say, here's how to send me
-  the contact" is the actual onboarding.
-- Pick the EN or RU checklist attachment to match the language the realtor
-  used with the client; don't send both by default.
+  on a short call — not something to send cold and hope they read. Two
+  minutes of "here's the moments to watch for, here's what to say, here's
+  how to text me the contact" is the actual onboarding.
+- Pick the EN or RU checklist file to match the language the realtor used
+  with the client.
 - When the referred contact comes in, treat it like any other lead: reach
-  out within 1 business day, and the call itself walks through the attached
+  out within 1 business day, and the call itself walks through the
   checklist live rather than asking the client to have filled it out.
 - Referral fee is owed only if the free call converts into a paying
   engagement (flat fee, not a percentage) — see `../strategy.md`.
