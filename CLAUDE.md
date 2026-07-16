@@ -29,7 +29,8 @@ the US.
 │   │   ├── email-branding/        team email on the Design System — signatures + email layout (Active)
 │   │   ├── video-generation/      on-brand marketing video (Active)
 │   │   ├── referral-offer-strategy/  front-offer + referral-partner funnel strategy (Planning)
-│   │   └── consultation-booking/  "Book a Consultation" front door — routes new vs existing clients to two Odoo calendars (Active)
+│   │   ├── consultation-booking/  "Book a Consultation" front door — routes new vs existing clients to two Odoo calendars (Active)
+│   │   └── scale-your-accounting-firm/  digested notes from the "Scale Your Accounting Firm" course, by track/module/video (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
@@ -62,6 +63,7 @@ the US.
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
+| Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian"; an unidentified session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
