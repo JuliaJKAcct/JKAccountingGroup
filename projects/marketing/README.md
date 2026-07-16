@@ -19,7 +19,8 @@ marketing/
 ├── video-generation/          ← on-brand marketing video (scripts + Flows briefs)
 ├── referral-offer-strategy/   ← front-offer / referral-partner funnel strategy
 ├── consultation-booking/      ← "Book a Consultation" front door (new vs existing → two Odoo calendars)
-└── scale-your-accounting-firm/  ← digested notes from the "Scale Your Accounting Firm" course
+├── scale-your-accounting-firm/  ← digested notes from the "Scale Your Accounting Firm" course
+└── lead-magnets/              ← free interactive calculators + assessments (funnel entry point)
 ```
 
 ## Sub-projects
@@ -32,6 +33,7 @@ marketing/
 | [`referral-offer-strategy/`](./referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
 | [`consultation-booking/`](./consultation-booking/) | The "Book a Consultation" front door — one page routing new/prospective vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [`scale-your-accounting-firm/`](./scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
+| [`lead-magnets/`](./lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the funnel's entry point. On-brand HTML tools; draft, pending tax-figure sign-off. | Active |
 
 ## Shared across the group
 

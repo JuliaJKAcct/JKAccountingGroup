@@ -256,6 +256,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
   @media (prefers-reduced-motion:reduce){html.js .sticky-cta{transition:none;}}
 }
 
+/* ---------- Index page: tool tiles ---------- */
+.tiles-group + .tiles-group{margin-top:clamp(38px,6vw,60px);}
+.tiles-head{margin:0 0 clamp(18px,3vw,24px); display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;}
+.tiles-head h2{font-size:clamp(22px,3.4vw,30px); line-height:1.1;}
+.tiles-head .count{font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);}
+.tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+@media (max-width:860px){.tiles{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.tiles{grid-template-columns:1fr;}}
+.tile{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out), border-color .2s;}
+.tile:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--bronze-300);}
+.tile .ti{width:44px; height:44px; border-radius:11px; background:var(--teal-50); color:var(--teal-700); display:grid; place-items:center; margin-bottom:16px;}
+.tile .ti svg{width:23px; height:23px;}
+.tile h3{font-size:17.5px; line-height:1.28; margin-bottom:9px;}
+.tile p{font-size:14px; color:var(--text-muted); line-height:1.55; margin-bottom:18px;}
+.tile .lk{margin-top:auto; font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:7px;}
+.tile:hover .lk .arw{transform:translateX(3px);}
+.tile .lk .arw{transition:transform .18s var(--ease-out);}
+
 /* ---------- Scroll reveal — SAFE pattern (never hidden) ----------
    Content is ALWAYS visible. .in only plays a one-shot rise, so a
    non-scrolling renderer (bots, headless, AI crawlers) never ships a

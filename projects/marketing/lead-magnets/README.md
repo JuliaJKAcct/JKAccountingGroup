@@ -31,17 +31,21 @@ lead-magnets/
 
 ## The tools
 
-| Tool | Type | Status |
+All 9 tools are **built (draft)** and QA'd on desktop + mobile. Files:
+
+| Tool | Type | File |
 |---|---|---|
-| LLC or S-Corp — Which Saves You More Money? | Calculator | ⬜ building |
-| I Have an S-Corp. Am I Paying Myself the Right Salary? | Calculator | ⬜ |
-| Will You Owe the IRS a Surprise Tax Bill? | Calculator | ⬜ |
-| Do You File US Taxes as a Resident? | Calculator | ⬜ |
-| Could Your Foreign-Owned Company Owe a $25,000 Fine? | Calculator | ⬜ |
-| Do I Need a License to Run My Business Here in the USA? | Calculator | ⬜ |
-| I Have a Business. Is My Bookkeeping Ready for Tax Season? | Assessment | ⬜ |
-| Is This Worker an Employee (W-2) or a Contractor (1099)? | Assessment | ⬜ |
-| Do You Need to Report Money You Have Back Home? | Assessment | ⬜ |
+| LLC or S-Corp — Which Saves You More Money? | Calculator | [`calculators/llc-or-s-corp.html`](./calculators/llc-or-s-corp.html) |
+| I Have an S-Corp. Am I Paying Myself the Right Salary? | Calculator | [`calculators/s-corp-salary.html`](./calculators/s-corp-salary.html) |
+| Will You Owe the IRS a Surprise Tax Bill? | Calculator | [`calculators/surprise-tax-bill.html`](./calculators/surprise-tax-bill.html) |
+| Do You File US Taxes as a Resident? | Calculator | [`calculators/tax-residency.html`](./calculators/tax-residency.html) |
+| Could Your Foreign-Owned Company Owe a $25,000 Fine? *(A/B titles)* | Calculator | [`calculators/foreign-owned-company-fine.html`](./calculators/foreign-owned-company-fine.html) |
+| Do I Need a License to Run My Business Here in the USA? | Calculator | [`calculators/business-license.html`](./calculators/business-license.html) |
+| I Have a Business. Is My Bookkeeping Ready for Tax Season? | Assessment | [`assessments/bookkeeping-ready.html`](./assessments/bookkeeping-ready.html) |
+| Is This Worker an Employee (W-2) or a Contractor (1099)? | Assessment | [`assessments/employee-or-contractor.html`](./assessments/employee-or-contractor.html) |
+| Do You Need to Report Money You Have Back Home? | Assessment | [`assessments/report-money-back-home.html`](./assessments/report-money-back-home.html) |
+
+The [`index.html`](./index.html) menu links to all nine.
 
 ## Brand & design
 
