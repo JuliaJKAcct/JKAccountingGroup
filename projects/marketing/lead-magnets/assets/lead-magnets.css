@@ -109,6 +109,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 
 .tool-fields{display:grid; gap:clamp(16px,2.5vw,22px); grid-template-columns:1fr 1fr;}
 @media (max-width:620px){.tool-fields{grid-template-columns:1fr;}}
+.tool-fields--three{grid-template-columns:repeat(3,1fr);}
+@media (max-width:620px){.tool-fields--three{grid-template-columns:1fr;}}
 .tool-field{margin:0;}
 .tool-field.full{grid-column:1 / -1;}
 .tool-field label{display:block; font-family:var(--sans); font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:8px; line-height:1.35;}
