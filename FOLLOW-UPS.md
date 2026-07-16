@@ -31,6 +31,7 @@ sessions.
   - On a **yes** → delete the row (git history keeps the trail).
   - If it **advanced but isn't done** → update its **Next action** (and date) and
     leave it on the list.
+
   This is the safety net: nothing we worked on is silently left open, and nothing
   resolved lingers. Keep this list short — it's the live plate, not an archive.
 
