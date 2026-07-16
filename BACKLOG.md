@@ -39,7 +39,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 | [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
-| [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/`](./.claude/skills/) + [`projects/sops/`](./projects/sops/) | Medium | Not started — build after Lilian signs off on the BTR SOP (the reference pattern) |
+| [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -678,16 +678,18 @@ written. The **BTR SOP**
 ([`hollywood-broward-business-tax-receipt.md`](./projects/sops/hollywood-broward-business-tax-receipt.md))
 is the reference pattern.
 
-**What we need to start:** Lilian's final sign-off on the BTR SOP (in review as
-of Jul 2026 — see the note in that file's header). Once she approves the
-structure, the skill encodes it.
+**What we need to start:** ~~Lilian's final sign-off on the BTR SOP~~ — Lilian
+asked to **build the skill now** with what the Jul 2026 round established, and
+refine it after her final read-through. **v1 is built:**
+[`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/), linked from
+[`projects/sops/README.md`](./projects/sops/README.md) and the CLAUDE.md maps.
 
-**Capability check:** fully buildable — it's a documentation skill (structure
-rules + the reference example + the Atlas render pattern). No external
-dependency.
+**Capability check:** built — a documentation skill (structure rules + the
+reference example + the Atlas render pattern). No external dependency.
 
-**Priority:** Medium · **Status:** Not started — build after Lilian signs off on
-the BTR SOP.
+**Priority:** Medium · **Status:** **Built (v1, Jul 2026)** — update the skill
+after Lilian's final BTR SOP review (and after each future review round that
+establishes a new preference; the skill is the memory of "how we like SOPs").
 
 ---
 
