@@ -1,0 +1,162 @@
+<!doctype html>
+<!--
+  New Business Launch Checklist — Pre-Launch variant of the standardized
+  front-offer chassis (see ../strategy.md, "Standardized front-offer chassis").
+  One-page, print-ready (US Letter). Handed by a referral partner (realtor,
+  attorney, banker, agency) to a client about to start operating — not
+  co-branded per partner; the partner's name lives in the send email
+  (see realtor-referral-email-template.md), not in this artifact, so the
+  same file works across every partner without a redesign.
+  Fill {{PARTNER_CONTEXT_LINE}} only if you want a one-line "why you're
+  getting this" note; leave the default if sending generically.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Business Launch Checklist — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:15px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:24px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 14px 40px rgba(9,31,36,.10);
+    border-radius:14px;overflow:hidden;}
+  h1,h2{font-family:var(--serif);letter-spacing:-0.012em;color:var(--text-primary);
+    text-wrap:balance;margin:0;font-weight:600;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;
+    font-size:10.5px;font-weight:600;}
+
+  .hero{background:linear-gradient(160deg,#164049 0%, var(--teal) 45%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:30px 36px 26px;}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+  .medallion{width:32px;height:32px;flex:none;}
+  .firm-name{font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;line-height:1.15;}
+  .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:8.5px;color:var(--on-dark-muted);margin-top:2px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:25px;line-height:1.14;margin:9px 0 6px;}
+  .hero p{color:var(--on-dark-muted);font-size:13.5px;margin:0;max-width:56ch;}
+
+  .body{padding:26px 36px 8px;}
+  .list{border:1px solid var(--hairline);border-radius:12px;overflow:hidden;background:var(--paper);}
+  .item{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--hairline);}
+  .item:last-child{border-bottom:none;}
+  .box{width:17px;height:17px;border:1.6px solid var(--bronze-ink);border-radius:4px;margin-top:2px;flex:none;}
+  .item .cat{font-weight:600;color:var(--text-primary);font-size:14px;}
+  .item .cat .n{font-family:var(--mono);color:var(--bronze-ink);font-size:11px;margin-right:6px;}
+  .item p{margin:2px 0 0;font-size:13px;color:var(--text-body);max-width:60ch;}
+  .item .sub{color:var(--text-muted);font-size:12px;margin-top:3px;}
+
+  .cta{margin:22px 0 4px;background:var(--paper);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .cta .txt{max-width:44ch;}
+  .cta .txt .kicker{color:var(--bronze-ink);display:block;margin-bottom:4px;}
+  .cta .txt p{margin:0;font-size:13.5px;color:var(--text-body);}
+  .cta .btn{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;
+    font-weight:600;color:#fff;background:var(--bronze);border-radius:999px;padding:11px 20px;
+    white-space:nowrap;text-decoration:none;display:inline-block;}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:16px 36px;font-size:11.5px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark);font-size:9.5px;}
+  .foot a{color:var(--bronze-light);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+  }
+  @media (max-width:600px){
+    .hero,.body,.foot{padding-left:20px;padding-right:20px;}
+    .cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">Miami · Fort Lauderdale · Online</div></div>
+    </div>
+    <span class="kicker">Before you open your doors</span>
+    <h1>Starting Your Business Right — A Financial Readiness Checklist</h1>
+    <p>You just committed to a space — congratulations. Before day one, walk through this list. Nothing here needs to be perfect yet; it just needs to be on your radar.</p>
+  </header>
+
+  <div class="body">
+    <div class="list">
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">01</span>Entity &amp; structure</div>
+        <p>Is your business formed as the right entity for how you'll operate (LLC, S-Corp, etc.)? If you elected S-Corp status, was it filed on time?</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">02</span>EIN &amp; local registrations</div>
+        <p>Federal EIN in hand, plus any state and local filings for this location — including a city/county Business Tax Receipt.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">03</span>Business bank account</div>
+        <p>A dedicated business account, kept separate from personal funds from day one.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">04</span>Bookkeeping</div>
+        <p>A system in place before the first transaction hits — and someone who'll actually keep it current, not reconstruct it later.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">05</span>Sales tax <span class="sub">(if applicable)</span></div>
+        <p>Registered to collect and remit before the first taxable sale, not after.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">06</span>Payroll <span class="sub">(if hiring at launch)</span></div>
+        <p>Set up correctly before the first pay run — worker classification, filings, the basics.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">07</span>Estimated taxes</div>
+        <p>Know that quarterly payments may apply to you now, and when they're due — before the first one is missed.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">08</span>Set up to grow</div>
+        <p>Books structured to show what actually matters for this business — not one lump "Sales" account you'll have to untangle later.</p>
+      </div></div>
+    </div>
+
+    <div class="cta">
+      <div class="txt">
+        <span class="kicker">Free 30-minute launch call</span>
+        <p>Not sure about any of these? We'll walk through this list together — no cost, no obligation, no pressure.</p>
+      </div>
+      <a class="btn" href="mailto:julia@jkaccountinggroup.com?subject=Free%2030-min%20launch%20call">Book your call</a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="firm">JK Accounting Group</div>
+    <div><a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a> &nbsp;·&nbsp; WhatsApp available &nbsp;·&nbsp; Reply within 1 business day</div>
+  </footer>
+
+</div>
+</body>
+</html>

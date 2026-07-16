@@ -24,8 +24,10 @@ doesn't live only in chat history.
 ```
 referral-offer-strategy/
 ├── README.md     ← you are here
-└── strategy.md   ← the full strategy: funnel logic, partner positioning,
-                     Growth Accelerator Series, scorecard design, open questions
+├── strategy.md   ← the full strategy: funnel logic, partner positioning,
+│                    standardized front-offer chassis, Growth Accelerator
+│                    Series, scorecard design, open questions
+└── templates/    ← built deliverables (see Outputs below)
 ```
 
 ## Brand & design
@@ -44,13 +46,21 @@ there.
 
 ## Outputs
 
-Nothing built yet — `strategy.md` is a decisions-and-open-questions document,
-not a deliverable. Per `strategy.md` §6, still open: scoring rubric
-thresholds, the document/access checklist for the paid assessment, Growth
-Accelerator Series logistics (landing page, promo copy, list ownership),
-the four worksheet templates, and pricing for the assessment/implementation
-phases. When any of these get built, add them here in an obviously-named
-folder (e.g. `templates/`, `landing-page/`) and update this section.
+- **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
+  one-page, print-ready Pre-Launch checklist artifact (the standardized
+  chassis's leave-behind), on brand, no partner-specific redesign needed.
+- **`templates/realtor-referral-email-template.md`** — the email/text copy a
+  referral partner sends with the checklist, plus the 2-step hand-off
+  (partner sends checklist → partner forwards contact info to JKA, who
+  reaches out within 1 business day) rather than a self-serve booking form.
+
+Still open per `strategy.md` §6: scoring rubric thresholds, the
+document/access checklist for the *paid* assessment, Growth Accelerator
+Series logistics (landing page, promo copy, list ownership), the four
+workshop worksheet templates, and pricing for the assessment/implementation
+phases. An **Operating**-variant checklist (for already-running businesses,
+e.g. the marketing-agency onboarding channel) hasn't been built yet — same
+chassis, see `strategy.md`'s two-variant table — flag if that's needed next.
 
 ## Working on this / notes for AI
 
