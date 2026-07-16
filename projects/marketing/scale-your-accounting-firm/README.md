@@ -21,7 +21,7 @@ scale-your-accounting-firm/
 └── track-4-lead-generation-and-nurture/    ← Track 4 of the course
     └── lead-system-setup/                 ← first module/stage in Track 4
         ├── 01-what-is-a-marketing-funnel.md
-        ├── 02-{{video-2-title}}.md
+        ├── 02-choosing-your-lead-magnet.md
         ├── 03-{{video-3-title}}.md
         └── 04-{{video-4-title}}.md
 ```
@@ -36,7 +36,7 @@ course.
 | Track | Module | Video | Digested | Actionable items pulled |
 |---|---|---|---|---|
 | 4 — Lead Generation & Nurture | Lead System Setup | 1. What Is a Marketing Funnel? | ✅ | N/A (overview video) |
-| 4 — Lead Generation & Nurture | Lead System Setup | 2. *(pending)* | ⬜ | ⬜ |
+| 4 — Lead Generation & Nurture | Lead System Setup | 2. Choosing Your Lead Magnet | ✅ | ✅ (candidates listed, none built — pending a decision) |
 | 4 — Lead Generation & Nurture | Lead System Setup | 3. *(pending)* | ⬜ | ⬜ |
 | 4 — Lead Generation & Nurture | Lead System Setup | 4. *(pending)* | ⬜ | ⬜ |
 
