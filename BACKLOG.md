@@ -38,6 +38,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
+| [IDEA-13](#idea-13--per-client-memory-claude-can-read-across-sessions--ping-assistant) | Per-client "memory" Claude can read across sessions (Double notes as the system of record) + evaluate the "Ping Assistant" tool Lilian mentioned | Firm ops / tooling (Double today) | Medium | **Started** — Double-notes practice in use; "Ping Assistant" blocked on the exact product name |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -572,6 +573,44 @@ reasonable-comp report, the branded client guides), driven by the `impeccable` s
 
 **Priority:** Medium · **Status:** Not started — index seed exists in the sops README;
 waiting to decide the hub format + taxonomy.
+
+---
+
+## IDEA-13 — Per-client "memory" Claude can read across sessions + "Ping Assistant"
+
+**What Lilian wants:** two linked things. **(1)** A durable **per-client memory** so
+that in any future session she can ask Claude "what happened with client X, what did
+we do?" and get the answer — without depending on the chat where the work happened.
+(Chat sessions don't carry over: a new session only knows what's written in durable
+systems — the repo, Double, Drive, Gmail.) **(2)** Evaluate feeding that memory into
+**"Ping Assistant"** — a tool Lilian mentioned wanting to connect; she is asking its
+customer support about an integration.
+
+**Why it matters:** this bit us in practice — a rich working session (BTR filings for
+two clients) existed only in chat; a parallel session knew nothing about parts that
+weren't written down. Client work must be reconstructable from the firm's systems,
+not from anyone's memory of a conversation.
+
+**Where it fits:** firm ops / tooling. **The working solution today is Double client
+notes** — during the BTR work (Jul 2026) we started the practice: a status note on
+the client's record in Double after each significant step (what was filed, paid,
+pending, and the identifiers), plus a `Recorded during <person>'s session` line for
+provenance. Future sessions answer "what happened with X?" by reading the client's
+notes in Double.
+
+**What we need to start (the Ping Assistant slice):** the **exact product name /
+link** — a web search (2026-07) found no product matching "Ping Assistant" (only
+Pingram email/SMS, PingAura SEO, Ping Identity — none a client-memory assistant).
+Lilian is asking the vendor's customer support whether an integration (MCP/API)
+exists; with the real name we can check for a connector.
+
+**Capability check:** the Double-notes practice works **now** (notes created for two
+clients as the first instances). The Ping Assistant connection is **blocked on
+identifying the product**; whether Claude can feed it depends on it having an
+MCP connector or API.
+
+**Priority:** Medium · **Status:** **Started** — Double-notes practice in use;
+Ping Assistant evaluation blocked on the product name (Lilian → vendor support).
 
 ---
 
