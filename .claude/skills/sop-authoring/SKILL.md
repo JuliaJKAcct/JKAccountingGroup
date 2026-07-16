@@ -1,6 +1,6 @@
 ---
 name: sop-authoring
-description: Write, restructure, or review a JK Accounting Group SOP the house way — the structure Lilian established while reworking the BTR SOP (Jul 2026). Use when creating a new SOP in projects/sops/, doing a major restructure of an existing one, or rendering an SOP for team review. Encodes the required shape (process flowchart first, book-index hierarchy, numbered lists over prose, bullet checklists, an uploads/have-ready checklist, an email map with where to check status, plain-language jargon, explicit who-pays-what), the review workflow (PR → independent review → merge; in-review header notes; durable registration of pending states), and the Atlas design-system render for review copies. The reference example is projects/sops/hollywood-broward-business-tax-receipt.md.
+description: Write, restructure, or review a JK Accounting Group SOP the house way — the structure Lilian established while reworking the BTR SOP (Jul 2026). Use when creating a new SOP in projects/sops/, doing a major restructure of an existing one, or rendering an SOP for team review. Encodes the required shape (process flowchart first, book-index hierarchy, numbered lists over prose, bullet checklists, an uploads/have-ready checklist, an email map with where to check status, plain-language jargon, explicit who-pays-what), the review workflow (PR → independent review → merge; in-review header notes; durable registration of pending states), and the STANDARD Atlas design-system render every SOP ships with — a committed, deterministic render engine (render/) built with the impeccable skill + the firm's Design System, so any session produces the same on-brand, print/PDF/Drive-ready HTML. The reference example is projects/sops/hollywood-broward-business-tax-receipt.md (Markdown source) rendered to hollywood-broward-business-tax-receipt.html.
 ---
 
 # SOP authoring — the house structure
@@ -90,28 +90,55 @@ be usable, the writing failed.
    for a real client) are recorded as **notes on the client in Double**, with a
    `Recorded during <person>'s session` provenance line — never in the repo.
 
-## Rendering for review (the Atlas pass)
+## The Atlas render — a standard deliverable (not optional)
 
-When the SOP is reviewed by a person, publish a **rendered copy** as an Artifact
-styled with the firm's **Atlas design system** (`brand/design-system/DESIGN.md` —
-petrol teal + bronze on ivory; Source Serif 4 headings, IBM Plex Sans body, IBM
-Plex Mono kickers/labels). Render **both light and dark themes** — DESIGN.md
-defines the light palette, so derive the dark variant from its deep-teal on-dark
-tokens (`#0D2A31` ground, `#ECE6DA` text):
+**Every SOP carries the firm's seal.** A SOP is not "done" as a bare Markdown
+file — it ships with a designed HTML render on the **Atlas design system**
+(`brand/design-system/DESIGN.md` — petrol teal + bronze on ivory; Source Serif 4
+headings, IBM Plex Sans body, IBM Plex Mono labels), built with the
+[`impeccable`](../impeccable/) skill. This is the default whenever anyone
+(Julia, Lilian, a future teammate) asks to create, restructure, or produce a
+SOP — not something they have to request. The result must look professional,
+calm, and educational: our seal, never a plain document.
 
-- Section chips (§N) + a serif H2 per section; 3A/3B-style sub-headers as
-  **highlighted bars** (mono tag + serif title) with their children indented
-  under a left rule; screen labels as small mono kickers — hierarchy readable
-  from ten feet away.
-- The flowchart rendered (Mermaid), the "what you pay" box in **bronze** (the
-  money accent), email flows as cards, callouts on the semantic tokens
-  (info/warning/error).
-- The Markdown in the repo stays the **source of truth**; the artifact is a view.
-  Keep the same artifact URL across review rounds (republish the same file).
+**Do not hand-improvise the styling — use the committed engine.** The render is
+deterministic because the stylesheet and fonts are shared, committed assets;
+only the per-SOP content changes, so the look is identical across sessions and
+authors. The engine and full authoring guide live in
+[`render/`](./render/README.md):
+
+- [`render/atlas.css`](./render/atlas.css) — tokens + components, **light + dark
+  themes**, and a **print stylesheet** (clean PDF). Shared; never fork per SOP.
+- [`render/build.mjs`](./render/build.mjs) — assembles a per-SOP **body fragment**
+  + the shell + `atlas.css` + embedded brand fonts into a **self-contained**
+  standalone `.html` (works offline, in Drive, printed, and as an Artifact —
+  zero external requests) and an optional Artifact fragment.
+- [`render/examples/btr-body.html`](./render/examples/btr-body.html) — the
+  reference body; copy its structure. Class-by-class map is in
+  [`render/README.md`](./render/README.md).
+- Brand fonts: [`brand/design-system/fonts-embedded.css`](../../../brand/design-system/fonts-embedded.css)
+  (regenerate with `fetch-fonts.mjs`).
+
+Flow: author the body fragment (a hand-laid view of the `.md` — §N chips + serif
+H2 per section; 3A/3B sub-headers as highlighted **bars** above indented
+children; screen labels as mono kickers; the flowchart hand-built; the "what you
+pay" box in **bronze**; email flows as cards; callouts on the semantic tokens) →
+`build.mjs` → publish the fragment with the **Artifact** tool (favicon `🧾`) for
+a shareable light/dark review link → commit the standalone next to the `.md` and
+list it in `projects/sops/README.md`.
+
+- The Markdown stays the **source of truth**; the HTML is a view — re-run
+  `build.mjs` when the `.md` changes. Keep the **same Artifact file path** across
+  review rounds so the URL is stable.
+- **PDF is on request only.** The render has a Print / PDF button + print
+  stylesheet, so a PDF is one click for anyone. Don't generate or send a PDF
+  unless asked; the Artifact link is how a render is reviewed in chat.
 
 ## Reference
 
-- **Pattern:** [`projects/sops/hollywood-broward-business-tax-receipt.md`](../../../projects/sops/hollywood-broward-business-tax-receipt.md)
+- **Pattern (Markdown source):** [`projects/sops/hollywood-broward-business-tax-receipt.md`](../../../projects/sops/hollywood-broward-business-tax-receipt.md)
+- **Pattern (Atlas render):** [`projects/sops/hollywood-broward-business-tax-receipt.html`](../../../projects/sops/hollywood-broward-business-tax-receipt.html) — built from [`render/examples/btr-body.html`](./render/examples/btr-body.html)
+- **Render engine + authoring guide:** [`render/README.md`](./render/README.md)
 - **Conventions:** [`projects/sops/README.md`](../../../projects/sops/README.md)
 - **Backlog:** IDEA-14 tracks refinements to this skill after each review round.
 

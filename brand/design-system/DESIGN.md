@@ -21,6 +21,7 @@ Petrol teal + warm bronze on soft ivory. Proportions ≈ 60/32/8 (teal/ivory/bro
 - **Body:** IBM Plex Sans 400/500/600, 17px base, lh 1.6.
 - **Labels/figures/kickers:** IBM Plex Mono, uppercase, tracked (0.08–0.16em).
 - All faces loaded with Cyrillic subsets (Google Fonts). Hero H1 `clamp(34px,6vw,62px)`; section H2 `clamp(30px,5vw,46px)`.
+- **Self-contained renders:** for artifacts that must work offline / in Drive / when printed / inside a CSP-restricted Artifact (e.g. SOP renders), inline `fonts-embedded.css` (Latin-subset woff2 as data URIs) instead of the Google Fonts `<link>`. Regenerate it with `fetch-fonts.mjs`.
 - The mono uppercase kicker (`.sec-eyebrow`, `.kicker`) is a committed, named brand system carried over from production — keep it consistent, don't multiply it.
 
 ## Components (production classes)
