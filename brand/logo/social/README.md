@@ -3,9 +3,16 @@
 The profile image for apps that crop avatars to a **circle**: WhatsApp, Telegram,
 Google, Instagram/Facebook profile photo, etc.
 
+**This folder holds the company account's avatar** (the dark seal). **Team
+members' personal work avatars** — light, with each person's initials in the
+monogram letter style — live in [`team/`](./team/); dark = company, light =
+person, so the firm reads as one family in a chat list while each account stays
+distinguishable.
+
 ## Files
 - `JK-social-avatar.svg` — master (square, 1000×1000 viewBox). Edit / re-export here.
 - `JK-social-avatar-1000.png` — ready-to-upload raster, 1000×1000.
+- `team/` — per-person team avatars + the generator (`new-team-avatar.mjs`) and roster.
 
 ## What it is
 The **full Medallion** (reversed variant, with the ring text “JK ACCOUNTING GROUP ·

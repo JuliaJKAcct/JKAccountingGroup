@@ -25,7 +25,9 @@ perfect circle — no square, no box around it — so you can place it on any ba
   apple-touch-icon-180.png, maskable-512.png, app-icon-512.png
   (256/512 = crisp square monogram tiles for platform favicon fields, e.g. Odoo Website)
 - `social/` — round-avatar profile images (WhatsApp, Telegram, Google, etc.): the
-  full medallion on a teal field, square 1:1, sized to survive a circular crop
+  full medallion on a teal field, square 1:1, sized to survive a circular crop;
+  `social/team/` holds the per-person team avatars (light, initials in the
+  monogram letter style) + their generator
 
 ## svg/ contents
 medallion: primary · reversed · onecolor-teal · black · white · solid-teal (round seal on a solid petrol-teal face — for photos/colored backgrounds; PNGs at 2048/1024/512)

@@ -138,6 +138,7 @@ of truth, PNGs are exports for tools that can't place SVG):
 | Tiny placements / inline | Monogram (bare J&K) | `JK-monogram-teal.svg` (`-reversed` / `-black` / `-white`) |
 | App icon / favicon (the one tiled exception) | files in `favicon/` | — |
 | Round social avatar (WhatsApp, Telegram, Google…) — square, safe for circular crop | Medallion (reversed) on a teal field, sized inside the circular safe zone | files in `logo/social/` |
+| **Team member** round avatar (personal work WhatsApp) — light so it never competes with the company seal | Person's initials in the monogram letter style on ivory + firm name | files in `logo/social/team/` (generator included) |
 
 **Size step-down:** below ~64px, drop from **badge → emblem → monogram**. Never
 shrink the full badge until the ring text is illegible.
