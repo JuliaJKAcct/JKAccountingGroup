@@ -5,7 +5,9 @@
 > 🔍 **In review (Jul 2026):** Lilian is doing a final detailed read-through after a
 > major restructuring round (flowchart, two-fees box, uploads checklist, email map).
 > Her structure preferences from that round are being captured as a planned
-> `sop-authoring` skill — see BACKLOG IDEA-14. Remove this note when she signs off.
+> `sop-authoring` skill — see
+> [BACKLOG IDEA-14](../../BACKLOG.md#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured).
+> Remove this note when she signs off.
 
 The complete, self-contained procedure for getting a Florida Business Tax
 Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
