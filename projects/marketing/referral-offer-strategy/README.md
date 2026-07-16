@@ -49,10 +49,12 @@ there.
 - **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
   one-page, print-ready Pre-Launch checklist artifact (the standardized
   chassis's leave-behind), on brand, no partner-specific redesign needed.
-- **`templates/realtor-referral-email-template.md`** — the email/text copy a
-  referral partner sends with the checklist, plus the 2-step hand-off
-  (partner sends checklist → partner forwards contact info to JKA, who
-  reaches out within 1 business day) rather than a self-serve booking form.
+- **`templates/realtor-referral-playbook.md`** — how the partner actually
+  delivers the checklist: when to bring it up, a verbatim in-person script
+  (the primary path — most lease signings are face-to-face), email/text as
+  the remote-closing fallback, and the same-day hand-off of the client's
+  contact info to JKA (the step that turns "gave them a PDF" into an actual
+  referral) rather than a self-serve booking form.
 
 Still open per `strategy.md` §6: scoring rubric thresholds, the
 document/access checklist for the *paid* assessment, Growth Accelerator
