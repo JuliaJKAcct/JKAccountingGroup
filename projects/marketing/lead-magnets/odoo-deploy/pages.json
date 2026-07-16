@@ -1,0 +1,82 @@
+[
+  {
+    "src": "index.html",
+    "slug": "free-tools",
+    "url": "/free-tools",
+    "key": "jk_lead_magnets.free_tools",
+    "title": "Free Tools index",
+    "bytes": 17464
+  },
+  {
+    "src": "calculators/llc-or-s-corp.html",
+    "slug": "llc-or-s-corp",
+    "url": "/free-tools/llc-or-s-corp",
+    "key": "jk_lead_magnets.llc_or_s_corp",
+    "title": "LLC or S-Corp",
+    "bytes": 19736
+  },
+  {
+    "src": "calculators/s-corp-salary.html",
+    "slug": "s-corp-salary",
+    "url": "/free-tools/s-corp-salary",
+    "key": "jk_lead_magnets.s_corp_salary",
+    "title": "S-Corp salary",
+    "bytes": 19788
+  },
+  {
+    "src": "calculators/surprise-tax-bill.html",
+    "slug": "surprise-tax-bill",
+    "url": "/free-tools/surprise-tax-bill",
+    "key": "jk_lead_magnets.surprise_tax_bill",
+    "title": "Surprise tax bill",
+    "bytes": 20103
+  },
+  {
+    "src": "calculators/tax-residency.html",
+    "slug": "tax-residency",
+    "url": "/free-tools/tax-residency",
+    "key": "jk_lead_magnets.tax_residency",
+    "title": "Tax residency",
+    "bytes": 18650
+  },
+  {
+    "src": "calculators/foreign-owned-company-fine.html",
+    "slug": "foreign-owned-company-fine",
+    "url": "/free-tools/foreign-owned-company-fine",
+    "key": "jk_lead_magnets.foreign_owned_company_fine",
+    "title": "Foreign-owned company fine",
+    "bytes": 20700
+  },
+  {
+    "src": "calculators/business-license.html",
+    "slug": "business-license",
+    "url": "/free-tools/business-license",
+    "key": "jk_lead_magnets.business_license",
+    "title": "Business license",
+    "bytes": 19753
+  },
+  {
+    "src": "assessments/bookkeeping-ready.html",
+    "slug": "bookkeeping-ready",
+    "url": "/free-tools/bookkeeping-ready",
+    "key": "jk_lead_magnets.bookkeeping_ready",
+    "title": "Bookkeeping ready",
+    "bytes": 21909
+  },
+  {
+    "src": "assessments/employee-or-contractor.html",
+    "slug": "employee-or-contractor",
+    "url": "/free-tools/employee-or-contractor",
+    "key": "jk_lead_magnets.employee_or_contractor",
+    "title": "Employee or contractor",
+    "bytes": 22085
+  },
+  {
+    "src": "assessments/report-money-back-home.html",
+    "slug": "report-money-back-home",
+    "url": "/free-tools/report-money-back-home",
+    "key": "jk_lead_magnets.report_money_back_home",
+    "title": "Report money back home",
+    "bytes": 22978
+  }
+]

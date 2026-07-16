@@ -1,0 +1,332 @@
+<t t-name="jk_lead_magnets.foreign_owned_company_fine">&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Could Your Foreign-Owned Company Owe a $25,000 Fine? | JK Accounting Group</title>
+<meta name="description" content="A free 1-minute check for foreign owners of US companies. There is a US filing (Form 5472) most owners never hear about — and missing it costs $25,000 a year. See your risk."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/web/content/3546/lead-magnets.css"/>
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the check</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="/free-tools" aria-label="JK Accounting Group — all tools">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free check · 1 minute</p>
+          <h1>Could your foreign‑owned company owe a <span class="em">$25,000 fine?</span></h1>
+          <p class="lede">There is a US filing most foreign owners never hear about — Form 5472. It can be due even if your company made no money. Missing it costs $25,000 a year. Check your risk.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>For foreign owners of US companies</span>
+          </p>
+          <div class="founder-chip">
+            <img src="/web/content/3544/julia-ivory.png" alt="Julia, founder of JK Accounting Group"/>
+            <p class="t"><b>Built with Julia</b>Founder · speaks your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="/web/content/3544/julia-ivory.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="tool-card reveal">
+        <div class="tool-head">
+          <h2>Check your company</h2>
+          <p>Three quick questions. Nothing is saved and no email is needed.</p>
+        </div>
+
+        <form id="calc" novalidate="">
+          <div class="tool-fields">
+            <div class="tool-field full" id="f-owner">
+              <label for="owner">Is at least 25% of your US company owned by a person or company outside the US?</label>
+              <select id="owner" name="owner">
+                <option value="">Choose one…</option>
+                <option value="yes">Yes</option>
+                <option value="no">No — it is fully US-owned</option>
+                <option value="unsure">I am not sure</option>
+              </select>
+              <p class="help">This includes you, if you live outside the US, or any owner or parent company abroad.</p>
+              <p class="err">Please choose one.</p>
+            </div>
+
+            <div class="tool-field" id="f-years">
+              <label for="years">How many years has the company been open?</label>
+              <input type="text" inputmode="numeric" id="years" name="years" placeholder="3" autocomplete="off"/>
+              <p class="err">Please enter the number of years (1 or more).</p>
+            </div>
+
+            <div class="tool-field" id="f-filed">
+              <label for="filed">For how many of those years was Form 5472 filed?</label>
+              <input type="text" inputmode="numeric" id="filed" name="filed" placeholder="0" autocomplete="off"/>
+              <p class="help">If you have never heard of it, the answer is probably 0.</p>
+              <p class="err">Please enter a number (it cannot be more than the years open).</p>
+            </div>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn cta lg">Check my risk</button>
+            <span class="hint">Takes about a minute.</span>
+          </div>
+        </form>
+
+        <div class="tool-result" id="result" hidden="" aria-live="polite">
+          <p class="result-badge">Your result</p>
+          <p class="result-headline" id="r-headline"/>
+          <p class="result-explain" id="r-explain"/>
+          <div class="result-compare" id="r-compare">
+            <div class="rc">
+              <div class="rc-lbl">Years that may be missing</div>
+              <div class="rc-fig" id="r-missed"/>
+              <div class="rc-sub">Years the form may not have been filed.</div>
+            </div>
+            <div class="rc">
+              <div class="rc-lbl">Fine per missing year</div>
+              <div class="rc-fig">$25,000</div>
+              <div class="rc-sub">The set penalty for each year missed.</div>
+            </div>
+          </div>
+          <div class="result-note" id="r-note"/>
+          <div class="result-cta">
+            <a class="btn cta" href="#book">Get this checked and fixed — book a free call <span class="arw" aria-hidden="true">→</span></a>
+            <span class="note">A 20‑minute call. No cost, no pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goodto">
+    <div class="wrap">
+      <div class="goodto-grid">
+        <div class="reveal">
+          <hr class="ledger"/>
+          <h2>Why this is easy to miss</h2>
+          <p class="intro">In plain words, so you know if it is you.</p>
+        </div>
+        <ul class="nod-list reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>"My company made no money, so I have nothing to file." </b>Not true here. This form is about the money that moves between you and your company — even the money you put in to start it counts.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>It applies to a normal single-owner LLC too.</b> If a foreign person owns a US LLC, the IRS treats it as a company for this one filing. Most owners have never heard of it.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>The good news: the form itself is free.</b> It is just information. Filing it correctly and on time is all it takes to avoid the $25,000. If past years were missed, there is often a way to fix it.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="/web/content/3545/julia-navy.png" alt="Julia, founder of JK Accounting Group"/>
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">I have seen this catch many good people who did everything else right. They set up a US company from abroad, made no money yet, and had no idea this form existed.</p>
+          <p class="bio">If it applies to you, we file it correctly and — if past years were missed — help you fix it the right way. Let's check together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Not sure if this is you?</h2>
+          <p class="lede">Send us your details and we will check it for you — in English, Russian, or Ukrainian. Or book a free 20‑minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We tell you clearly if the form applies to you.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We file it correctly and on time.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>If past years were missed, we help you fix it.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="https://wa.me/17863181505">Message us here</a>
+          </p>
+        </div>
+
+        
+        <form class="form-card" action="/website/form/crm.lead" method="post"><input type="hidden" name="name" value="New free-tool lead — Foreign-owned company fine"/><input type="hidden" name="tool_source" value="foreign-owned-company-fine"/><input type="hidden" name="tool_page" value="Foreign-owned company fine"/><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="contact_name" required="" autocomplete="name"/>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email_from" required="" autocomplete="email"/>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="https://jkaccountinggroup.odoo.com/appointment/1">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></svg>
+      <h2>Do not let a form you never heard of cost you $25,000.</h2>
+      <p class="tag">We will check if it applies to you and handle it the right way — clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn secondary lg" href="/free-tools">See our other free tools</a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax advice.</b> This check is a simple guide, not a legal answer. Whether Form 5472 applies, and any penalty, depends on your full situation. The $25,000 figure is the IRS penalty per form per year. Please talk to us before you act.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  <a class="sticky-wa" href="https://wa.me/17863181505" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="/web/content/3547/lead-magnets.js"></script>
+<script>//<![CDATA[
+(function () {
+  "use strict";
+  var FINE = 25000; // Form 5472 penalty per year — see TAX-FIGURES-TO-VERIFY.md
+  var form = document.getElementById("calc");
+  var result = document.getElementById("result");
+  var fOwner = document.getElementById("f-owner");
+  var fYears = document.getElementById("f-years");
+  var fFiled = document.getElementById("f-filed");
+  var compare = document.getElementById("r-compare");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var owner = document.getElementById("owner").value;
+    var years = LM.num(document.getElementById("years").value);
+    var filed = LM.num(document.getElementById("filed").value);
+
+    fOwner.classList.remove("invalid");
+    fYears.classList.remove("invalid");
+    fFiled.classList.remove("invalid");
+
+    if (!owner) { fOwner.classList.add("invalid"); result.hidden = true; return; }
+
+    var headline = document.getElementById("r-headline");
+    var explain = document.getElementById("r-explain");
+    var note = document.getElementById("r-note");
+    headline.classList.remove("warn");
+
+    if (owner === "no") {
+      compare.style.display = "none";
+      headline.innerHTML = "This filing probably does not apply to you.";
+      explain.textContent = "Form 5472 is for US companies that are at least 25% owned from outside the US. You told us yours is fully US-owned, so it usually does not apply.";
+      note.innerHTML = "<b>If that ever changes</b> — a new owner or parent company from abroad — this can start to apply. Good to keep in mind.";
+      LM.showResult(result);
+      return;
+    }
+
+    if (owner === "unsure") {
+      compare.style.display = "none";
+      headline.classList.add("warn");
+      headline.innerHTML = "This one is worth checking now.";
+      explain.textContent = "If 25% or more of your US company is owned from outside the US, this filing very likely applies to you — and missing it is expensive. It is a quick thing for us to confirm.";
+      note.innerHTML = "<b>The safe move:</b> let us look at who owns the company. Two minutes for us, and it takes the worry off your mind.";
+      LM.showResult(result);
+      return;
+    }
+
+    // owner === "yes" → need years + filed
+    var ok = true;
+    if (!(years >= 1)) { fYears.classList.add("invalid"); ok = false; }
+    if (isNaN(filed) || filed < 0 || (years >= 1 && filed > years)) { fFiled.classList.add("invalid"); ok = false; }
+    if (!ok) { result.hidden = true; return; }
+
+    var missed = Math.max(0, Math.round(years) - Math.round(filed));
+    compare.style.display = "";
+    document.getElementById("r-missed").textContent = missed + (missed === 1 ? " year" : " years");
+
+    if (missed <= 0) {
+      compare.style.display = "none";
+      headline.innerHTML = "Good — it sounds like you have been filing.";
+      explain.textContent = "You told us Form 5472 was filed for every year the company has been open. That is exactly right. Keep filing it correctly and on time each year.";
+      note.innerHTML = "<b>Keep it up.</b> We can take this off your plate each year so it is never missed — and never a worry.";
+    } else {
+      headline.classList.add("warn");
+      headline.innerHTML = 'You could owe as much as <span class="big">' + LM.money(missed * FINE) + '</span> in fines.';
+      explain.textContent = "The IRS charges $25,000 for each year a foreign-owned US company does not file Form 5472 — even a company with no income. Based on your answers, " + missed + (missed === 1 ? " year" : " years") + " may be missing.";
+      note.innerHTML = "<b>Do not panic.</b> This is the worst case, and there is often a way to fix missed years and ask for relief. The important thing is to act now, before the IRS contacts you. We can help.";
+    }
+
+    LM.showResult(result);
+  });
+})();
+//]]></script>
+</body>
+</html>
+</t>

@@ -1,0 +1,295 @@
+<t t-name="jk_lead_magnets.tax_residency">&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Do You File US Taxes as a Resident? | JK Accounting Group</title>
+<meta name="description" content="A free 1-minute tool. The IRS counts your days in the US to decide if you file taxes as a resident or a non-resident. Count yours here. About taxes only — not your visa."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/web/content/3546/lead-magnets.css"/>
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the calculator</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="/free-tools" aria-label="JK Accounting Group — all tools">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free tool · 1 minute</p>
+          <h1>Do you file US taxes <span class="em">as a resident?</span></h1>
+          <p class="lede">The IRS counts your days in the US to decide. It changes which income you report and which forms you file. Count your days here.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>About taxes only — not your visa</span>
+          </p>
+          <div class="founder-chip">
+            <img src="/web/content/3544/julia-ivory.png" alt="Julia, founder of JK Accounting Group"/>
+            <p class="t"><b>Built with Julia</b>Founder · speaks your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="/web/content/3544/julia-ivory.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="tool-card reveal">
+        <div class="tool-head">
+          <h2>Count your days in the US</h2>
+          <p>Enter how many days you were in the United States in each year. Nothing is saved and no email is needed.</p>
+        </div>
+
+        <form id="calc" novalidate="">
+          <div class="tool-fields tool-fields--three">
+            <div class="tool-field" id="f-y0">
+              <label for="y0">Days in the US this year (2026)</label>
+              <input type="text" inputmode="numeric" id="y0" name="y0" placeholder="200" autocomplete="off"/>
+              <p class="err">Enter a number of days (0–366).</p>
+            </div>
+            <div class="tool-field" id="f-y1">
+              <label for="y1">Days last year (2025)</label>
+              <input type="text" inputmode="numeric" id="y1" name="y1" placeholder="180" autocomplete="off"/>
+              <p class="err">Enter a number of days (0–366).</p>
+            </div>
+            <div class="tool-field" id="f-y2">
+              <label for="y2">Days the year before (2024)</label>
+              <input type="text" inputmode="numeric" id="y2" name="y2" placeholder="150" autocomplete="off"/>
+              <p class="err">Enter a number of days (0–366).</p>
+            </div>
+          </div>
+          <p class="help" style="margin-top:14px; font-size:13px; color:var(--text-muted);">A "day" means any day you were physically in the US, even part of a day.</p>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn cta lg">Check my status</button>
+            <span class="hint">Takes about a minute.</span>
+          </div>
+        </form>
+
+        <div class="tool-result" id="result" hidden="" aria-live="polite">
+          <p class="result-badge">Your estimate</p>
+          <p class="result-headline" id="r-headline"/>
+          <p class="result-explain" id="r-explain"/>
+          <div class="result-compare" id="r-compare">
+            <div class="rc">
+              <div class="rc-lbl">Your counted days</div>
+              <div class="rc-fig" id="r-count"/>
+              <div class="rc-sub">This year, plus part of the last two years.</div>
+            </div>
+            <div class="rc">
+              <div class="rc-lbl">The line for residency</div>
+              <div class="rc-fig">183</div>
+              <div class="rc-sub">Reach it (and 31+ days this year) and you usually count as a resident.</div>
+            </div>
+          </div>
+          <div class="result-note" id="r-note"/>
+          <div class="result-cta">
+            <a class="btn cta" href="#book">Make sure you file the right way — book a free call <span class="arw" aria-hidden="true">→</span></a>
+            <span class="note">A 20‑minute call. No cost, no pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goodto">
+    <div class="wrap">
+      <div class="goodto-grid">
+        <div class="reveal">
+          <hr class="ledger"/>
+          <h2>What this means</h2>
+          <p class="intro">In plain words — and what it does not mean.</p>
+        </div>
+        <ul class="nod-list reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>The IRS uses a day count.</b> All of this year's days, plus one third of last year's, plus one sixth of the year before. Reach 183 (and at least 31 days this year) and you usually file as a resident.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>It changes what you report.</b> A tax resident reports income from the whole world to the IRS. A non-resident usually reports only US income. Getting this wrong is a common and costly mistake.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>This is about taxes, not your visa.</b> It does not change your immigration status or your green card. And some visas, and treaties between countries, can change the answer.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="/web/content/3545/julia-navy.png" alt="Julia, founder of JK Accounting Group"/>
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">"Am I a resident for taxes?" is one of the first questions people ask me when they move to the US. It sounds simple, but the details matter — and special visas and treaties can change everything.</p>
+          <p class="bio">This tool gives you the quick answer. When it counts, I would be glad to check your exact case with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Want to be sure you file the right way?</h2>
+          <p class="lede">Send us your details and we will check your exact situation — in English, Russian, or Ukrainian. Or book a free 20‑minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We check the visa and treaty rules that apply to you.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We file the right forms, the right way.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A real person who speaks your language.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="https://wa.me/17863181505">Message us here</a>
+          </p>
+        </div>
+
+        
+        <form class="form-card" action="/website/form/crm.lead" method="post"><input type="hidden" name="name" value="New free-tool lead — Tax residency"/><input type="hidden" name="tool_source" value="tax-residency"/><input type="hidden" name="tool_page" value="Tax residency"/><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="contact_name" required="" autocomplete="name"/>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email_from" required="" autocomplete="email"/>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="https://jkaccountinggroup.odoo.com/appointment/1">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></svg>
+      <h2>File with confidence, from day one.</h2>
+      <p class="tag">We check your status, apply the right rules, and file correctly — clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn secondary lg" href="/free-tools">See our other free tools</a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax advice.</b> This tool uses the IRS day-count test only. Special visas, exempt days, and tax treaties can change the answer, and this is about taxes — not your immigration status. Please talk to us about your situation.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  <a class="sticky-wa" href="https://wa.me/17863181505" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="/web/content/3547/lead-magnets.js"></script>
+<script>//<![CDATA[
+(function () {
+  "use strict";
+  var form = document.getElementById("calc");
+  var result = document.getElementById("result");
+  var fields = { y0: document.getElementById("f-y0"), y1: document.getElementById("f-y1"), y2: document.getElementById("f-y2") };
+
+  function readDay(id, fEl) {
+    var v = LM.num(document.getElementById(id).value);
+    fEl.classList.remove("invalid");
+    if (isNaN(v) || v < 0 || v > 366) { fEl.classList.add("invalid"); return null; }
+    return v;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d0 = readDay("y0", fields.y0);
+    var d1 = readDay("y1", fields.y1);
+    var d2 = readDay("y2", fields.y2);
+    if (d0 === null || d1 === null || d2 === null) { result.hidden = true; return; }
+
+    var counted = d0 + d1 / 3 + d2 / 6;
+    var meets = d0 >= 31 && counted >= 183;
+
+    document.getElementById("r-count").textContent = Math.round(counted) + " days";
+
+    var headline = document.getElementById("r-headline");
+    var explain = document.getElementById("r-explain");
+    var note = document.getElementById("r-note");
+    headline.classList.remove("warn");
+
+    if (meets) {
+      headline.innerHTML = 'For taxes, you are likely a <span class="big">US resident.</span>';
+      explain.textContent = "Your day count reaches the line the IRS uses. A tax resident usually reports income from the whole world to the IRS — not just US income. This is about taxes only, not your visa.";
+      note.innerHTML = "<b>Important:</b> some visas, exempt days, and treaties between countries can change this. It is worth confirming your exact case before you file.";
+    } else {
+      headline.innerHTML = 'For taxes, you are likely a <span class="big">non&#8209;resident.</span>';
+      explain.textContent = "Your day count is below the line the IRS uses. A non-resident usually reports only US income. This is about taxes only, not your visa.";
+      note.innerHTML = "<b>Good to check:</b> the day count is only the first test. Your visa or a treaty can still change how you file. A quick review makes sure you get it right.";
+    }
+
+    LM.showResult(result);
+  });
+})();
+//]]></script>
+</body>
+</html>
+</t>

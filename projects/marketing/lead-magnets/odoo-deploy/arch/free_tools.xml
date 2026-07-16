@@ -1,0 +1,239 @@
+<t t-name="jk_lead_magnets.free_tools">&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Free Tools for Business Owners in the US | JK Accounting Group</title>
+<meta name="description" content="Free, simple calculators and checks for business owners who are new to the US — S-Corp savings, surprise tax bills, licenses, foreign accounts, and more. Plain English, one minute each."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/web/content/3546/lead-magnets.css"/>
+</head>
+<body>
+<a class="skip" href="#tools">Skip to the tools</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="/free-tools" aria-label="JK Accounting Group">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free tools · Plain English</p>
+          <h1>Simple answers to the money questions <span class="em">every new US business owner has.</span></h1>
+          <p class="lede">You came here to build a business, not to learn a whole new tax system. These free tools give you quick, clear answers — in about a minute each. No sign-up, no cost.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>Miami · Fort Lauderdale · Online</span>
+          </p>
+          <div class="founder-chip">
+            <img src="/web/content/3544/julia-ivory.png" alt="Julia, founder of JK Accounting Group"/>
+            <p class="t"><b>Made by Julia &amp; the JK team</b>We speak your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="/web/content/3544/julia-ivory.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tools">
+    <div class="wrap">
+      <div class="tiles-group reveal">
+        <div class="tiles-head">
+          <h2>Calculators</h2>
+          <span class="count">Put in your numbers, get an answer</span>
+        </div>
+        <div class="tiles">
+          <a class="tile" href="/free-tools/llc-or-s-corp">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 7l2 13h12l2-13M9 11v5M15 11v5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>LLC or S-Corp — which saves you more money?</h3>
+            <p>See which setup lowers your tax, and by how much.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/s-corp-salary">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M8 7h5.5a2.5 2.5 0 010 5H8m0 0h6.5a2.5 2.5 0 010 5H7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>I have an S-Corp. Am I paying myself the right salary?</h3>
+            <p>See a fair salary range — the one the IRS expects.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/surprise-tax-bill">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l10 18H2L12 2z" stroke-linejoin="round"/><path d="M12 9v5M12 17.5v.01" stroke-linecap="round"/></svg></span>
+            <h3>Will you owe the IRS a surprise tax bill?</h3>
+            <p>See what you may owe — before tax time surprises you.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/tax-residency">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-linecap="round"/></svg></span>
+            <h3>Do you file US taxes as a resident?</h3>
+            <p>Count your days and see how the IRS sees you.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/foreign-owned-company-fine">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M12 16v.01" stroke-linecap="round"/></svg></span>
+            <h3>Could your foreign-owned company owe a $25,000 fine?</h3>
+            <p>Check a US filing most foreign owners never hear about.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/business-license">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke-linecap="round"/></svg></span>
+            <h3>Do I need a license to run my business here in the USA?</h3>
+            <p>See if you need one, what it costs, and when it is due.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="tiles-group reveal">
+        <div class="tiles-head">
+          <h2>Quick checks</h2>
+          <span class="count">Answer a few questions, get a clear result</span>
+        </div>
+        <div class="tiles">
+          <a class="tile" href="/free-tools/bookkeeping-ready">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>
+            <h3>I have a business. Is my bookkeeping ready for tax season?</h3>
+            <p>Seven questions, a clear score, and what to fix.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/employee-or-contractor">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 19c0-2 1-3.4 2.8-3.7" stroke-linecap="round"/></svg></span>
+            <h3>Is this worker an employee (W-2) or a contractor (1099)?</h3>
+            <p>Answer seven questions and see which one — and why.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+          <a class="tile" href="/free-tools/report-money-back-home">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-linecap="round"/></svg></span>
+            <h3>Do you need to report money you have back home?</h3>
+            <p>Still have accounts abroad? See if the US needs to know.</p>
+            <span class="lk">Open <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="/web/content/3545/julia-navy.png" alt="Julia, founder of JK Accounting Group"/>
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">I built these tools for the people I help every day — business owners who came to the US and had to learn a whole new set of rules, fast.</p>
+          <p class="bio">Use them freely. And when you want a real person to look at your numbers, we are here — we become your finance team, in your language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Want us to look at your situation?</h2>
+          <p class="lede">Send us your details and we will get back to you — in English, Russian, or Ukrainian. Or book a free 20‑minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We become your finance team — books, taxes, IRS.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A real person who speaks your language.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>No cost and no pressure to start.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="https://wa.me/17863181505">Message us here</a>
+          </p>
+        </div>
+
+        
+        <form class="form-card" action="/website/form/crm.lead" method="post"><input type="hidden" name="name" value="New free-tool lead — Free Tools index"/><input type="hidden" name="tool_source" value="free-tools"/><input type="hidden" name="tool_page" value="Free Tools index"/><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="contact_name" required="" autocomplete="name"/>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email_from" required="" autocomplete="email"/>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="https://jkaccountinggroup.odoo.com/appointment/1">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></svg>
+      <h2>You focus on the business. We handle the rest.</h2>
+      <p class="tag">Bookkeeping, taxes, and staying right with the IRS — clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">→</span></a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax or legal advice.</b> These free tools give simple estimates to help you understand your situation. They do not replace advice for your specific case. Please talk to us before you make a decision.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  <a class="sticky-wa" href="https://wa.me/17863181505" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="/web/content/3547/lead-magnets.js"></script>
+</body>
+</html>
+</t>

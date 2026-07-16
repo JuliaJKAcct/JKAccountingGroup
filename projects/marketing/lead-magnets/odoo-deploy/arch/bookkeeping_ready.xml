@@ -1,0 +1,362 @@
+<t t-name="jk_lead_magnets.bookkeeping_ready">&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>I Have a Business. Is My Bookkeeping Ready for Tax Season? | JK Accounting Group</title>
+<meta name="description" content="A free 2-minute check for business owners in the US. Answer 7 simple questions and see if your bookkeeping is ready for tax season — and exactly what to fix."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/web/content/3546/lead-magnets.css"/>
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the check</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="/free-tools" aria-label="JK Accounting Group — all tools">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free check · 2 minutes</p>
+          <h1>I have a business. <span class="em">Is my bookkeeping ready for tax season?</span></h1>
+          <p class="lede">Answer seven simple yes-or-no questions. You will get a clear score and a short list of exactly what to fix — so tax time is calm, not a scramble.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>For business owners in the US</span>
+          </p>
+          <div class="founder-chip">
+            <img src="/web/content/3544/julia-ivory.png" alt="Julia, founder of JK Accounting Group"/>
+            <p class="t"><b>Built with Julia</b>Founder · speaks your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="/web/content/3544/julia-ivory.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="tool-card reveal">
+        <div class="tool-head">
+          <h2>Answer these seven questions</h2>
+          <p>Just say yes or no. Nothing is saved and no email is needed.</p>
+        </div>
+
+        <form id="quiz" novalidate="">
+          <div class="quiz" id="questions">
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">1.</span> Do you have a separate bank account just for your business?</p>
+              <p class="q-help">Not mixed together with your personal money.</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q1" value="yes"/> Yes</label>
+                <label><input type="radio" name="q1" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">2.</span> Are your business records up to date within the last month?</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q2" value="yes"/> Yes</label>
+                <label><input type="radio" name="q2" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">3.</span> Do you keep your receipts and bills, on paper or on your computer?</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q3" value="yes"/> Yes</label>
+                <label><input type="radio" name="q3" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">4.</span> Is every business cost sorted into a type (like rent, supplies, travel)?</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q4" value="yes"/> Yes</label>
+                <label><input type="radio" name="q4" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">5.</span> Do your records match your bank statements each month?</p>
+              <p class="q-help">This is called reconciling — checking your books against the bank.</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q5" value="yes"/> Yes</label>
+                <label><input type="radio" name="q5" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">6.</span> Did you file last year's taxes on time?</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q6" value="yes"/> Yes</label>
+                <label><input type="radio" name="q6" value="no"/> No</label>
+              </div>
+            </div>
+            <div class="quiz-q" data-q="">
+              <p class="q-t"><span class="q-n">7.</span> Do you know your profit for this year so far?</p>
+              <div class="quiz-opts">
+                <label><input type="radio" name="q7" value="yes"/> Yes</label>
+                <label><input type="radio" name="q7" value="no"/> No</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn cta lg">See my score</button>
+            <span class="hint" id="quiz-hint">Answer all seven to see your score.</span>
+          </div>
+        </form>
+
+        <div class="tool-result" id="result" hidden="" aria-live="polite">
+          <p class="result-badge">Your result</p>
+          <p class="result-headline" id="r-headline"/>
+          <div class="result-meter"><div class="fill" id="r-fill" style="width:0"/></div>
+          <p class="result-explain" id="r-explain"/>
+          <ul class="result-list" id="r-list"/>
+          <div class="result-note" id="r-note"/>
+          <div class="result-cta">
+            <a class="btn cta" href="#book">Get your books ready — book a free call <span class="arw" aria-hidden="true">→</span></a>
+            <span class="note">A 20‑minute call. No cost, no pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goodto">
+    <div class="wrap">
+      <div class="goodto-grid">
+        <div class="reveal">
+          <hr class="ledger"/>
+          <h2>Why this matters</h2>
+          <p class="intro">In plain words, so tax time never catches you out.</p>
+        </div>
+        <ul class="nod-list reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>Good books save you money.</b> When every cost is recorded, you claim everything you are allowed to — and pay less tax. Messy books mean missed deductions.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>They keep you safe.</b> If the IRS ever asks a question, clean records are your answer. They also matter if you ever apply for a loan.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>They make tax time calm.</b> When the books are ready all year, there is no last-minute rush and no surprise. That is the whole point of doing it as you go.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="/web/content/3545/julia-navy.png" alt="Julia, founder of JK Accounting Group"/>
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">Most people do not enjoy bookkeeping — and that is fine. It is what we are here for. We keep your books right all year, so tax time is just another calm week.</p>
+          <p class="bio">This check shows you where you stand today. Whatever your score, we can help you get to ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Want your books handled for you?</h2>
+          <p class="lede">Send us your details and we will take bookkeeping off your plate — in English, Russian, or Ukrainian. Or book a free 20‑minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>We fix the gaps and keep it right all year.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>You claim everything you are allowed to.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A real person who speaks your language.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="https://wa.me/17863181505">Message us here</a>
+          </p>
+        </div>
+
+        
+        <form class="form-card" action="/website/form/crm.lead" method="post"><input type="hidden" name="name" value="New free-tool lead — Bookkeeping ready"/><input type="hidden" name="tool_source" value="bookkeeping-ready"/><input type="hidden" name="tool_page" value="Bookkeeping ready"/><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="contact_name" required="" autocomplete="name"/>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email_from" required="" autocomplete="email"/>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="https://jkaccountinggroup.odoo.com/appointment/1">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></svg>
+      <h2>Ready books, calm tax season.</h2>
+      <p class="tag">We keep your books right all year, so nothing is a scramble in April. Clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn secondary lg" href="/free-tools">See our other free tools</a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax advice.</b> This check is a simple guide to common bookkeeping basics, not a full review of your business. Please talk to us for advice on your situation.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  <a class="sticky-wa" href="https://wa.me/17863181505" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="/web/content/3547/lead-magnets.js"></script>
+<script>//<![CDATA[
+(function () {
+  "use strict";
+  var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var DOT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>';
+
+  // good = the answer that means "you are ready"; gap = what to do if not.
+  var QUESTIONS = [
+    { name: "q1", good: "yes", gap: "Open a separate bank account just for your business." },
+    { name: "q2", good: "yes", gap: "Bring your records up to date — aim for once a month." },
+    { name: "q3", good: "yes", gap: "Start keeping your receipts and bills, on paper or on your computer." },
+    { name: "q4", good: "yes", gap: "Sort each cost into a type, so nothing is missed at tax time." },
+    { name: "q5", good: "yes", gap: "Check your records against your bank statement each month." },
+    { name: "q6", good: "yes", gap: "Get last year's taxes filed — we can help you catch up." },
+    { name: "q7", good: "yes", gap: "Set up your books so you can see your profit any time." }
+  ];
+
+  var form = document.getElementById("quiz");
+  var result = document.getElementById("result");
+  var hint = document.getElementById("quiz-hint");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var answered = 0, good = 0, gaps = [];
+    QUESTIONS.forEach(function (q) {
+      var sel = form.querySelector('input[name="' + q.name + '"]:checked');
+      if (sel) {
+        answered++;
+        if (sel.value === q.good) good++;
+        else gaps.push(q.gap);
+      }
+    });
+    if (answered < QUESTIONS.length) {
+      hint.textContent = "Please answer all seven questions.";
+      hint.style.color = "var(--error-text)";
+      result.hidden = true;
+      return;
+    }
+    hint.style.color = "";
+
+    var pct = Math.round((good / QUESTIONS.length) * 100);
+    var fill = document.getElementById("r-fill");
+    var headline = document.getElementById("r-headline");
+    var explain = document.getElementById("r-explain");
+    var list = document.getElementById("r-list");
+    var note = document.getElementById("r-note");
+    headline.classList.remove("warn");
+    fill.className = "fill";
+
+    if (good >= 6) {
+      headline.innerHTML = 'Your books look <span class="big">ready.</span>';
+      explain.textContent = "You have the basics in good shape. A few small things may still be worth a check, but you are in a strong spot for tax season.";
+      fill.classList.add("good");
+      note.innerHTML = "<b>Nice work.</b> We can do a quick review to make sure nothing slips, and keep it this way all year.";
+    } else if (good >= 3) {
+      headline.innerHTML = 'You are <span class="big">close, with a few gaps.</span>';
+      explain.textContent = "You are part of the way there. Fixing the items below will get your books ready and save you money and stress at tax time.";
+      fill.classList.add("mid");
+      note.innerHTML = "<b>Good news:</b> these are all fixable, and quickly. We can close these gaps for you.";
+    } else {
+      headline.classList.add("warn");
+      headline.innerHTML = 'Your books need some <span class="big">work.</span>';
+      explain.textContent = "There are a few important gaps. That is very common for a busy owner — and it is exactly the kind of thing we take off your plate. Here is where to start.";
+      fill.classList.add("low");
+      note.innerHTML = "<b>Do not worry.</b> This is normal and fixable. We can get your books in order and keep them that way.";
+    }
+    fill.style.width = pct + "%";
+
+    list.innerHTML = "";
+    if (gaps.length === 0) {
+      var li = document.createElement("li");
+      li.className = "ok";
+      li.innerHTML = CHECK + "<span>Every basic is in place. You are ready for tax season.</span>";
+      list.appendChild(li);
+    } else {
+      gaps.forEach(function (g) {
+        var li = document.createElement("li");
+        li.className = "gap";
+        li.innerHTML = DOT + "<span>" + g + "</span>";
+        list.appendChild(li);
+      });
+    }
+
+    LM.showResult(result);
+  });
+})();
+//]]></script>
+</body>
+</html>
+</t>

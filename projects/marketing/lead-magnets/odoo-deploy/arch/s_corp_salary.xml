@@ -1,0 +1,318 @@
+<t t-name="jk_lead_magnets.s_corp_salary">&lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>I Have an S-Corp. Am I Paying Myself the Right Salary? | JK Accounting Group</title>
+<meta name="description" content="A free tool for S-Corp owners in the US. See a fair salary range for your role — the salary the IRS expects you to pay yourself — in about a minute."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/web/content/3546/lead-magnets.css"/>
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the calculator</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="/free-tools" aria-label="JK Accounting Group — all tools">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free calculator · 1 minute</p>
+          <h1>I have an S‑Corp. <span class="em">Am I paying myself the right salary?</span></h1>
+          <p class="lede">The IRS says an S‑Corp owner must take a fair salary. Pay too little and you can get a penalty. See a fair range for your work in about a minute.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>For S‑Corp owners in the US</span>
+          </p>
+          <div class="founder-chip">
+            <img src="/web/content/3544/julia-ivory.png" alt="Julia, founder of JK Accounting Group"/>
+            <p class="t"><b>Built with Julia</b>Founder · speaks your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="/web/content/3544/julia-ivory.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="tool-card reveal">
+        <div class="tool-head">
+          <h2>Try it with your numbers</h2>
+          <p>Nothing is saved and no email is needed. You will see your answer right away.</p>
+        </div>
+
+        <form id="calc" novalidate="">
+          <div class="tool-fields">
+            <div class="tool-field" id="f-role">
+              <label for="role">What is your main job in the business?</label>
+              <select id="role" name="role">
+                <option value="">Choose the closest one…</option>
+                <option value="owner_operator">Owner / general manager</option>
+                <option value="consultant">Consultant / professional services</option>
+                <option value="trade">Skilled trade (contractor, builder, repair)</option>
+                <option value="retail_food">Store or restaurant manager</option>
+                <option value="ecommerce">Online / ecommerce business</option>
+                <option value="real_estate">Real estate / property</option>
+                <option value="other">Something else / not sure</option>
+              </select>
+              <p class="help">Pick the work you spend the most time doing.</p>
+              <p class="err">Please choose your main job.</p>
+            </div>
+
+            <div class="tool-field" id="f-profit">
+              <label for="profit">What does your business earn in a year?</label>
+              <div class="money">
+                <span class="cur" aria-hidden="true">$</span>
+                <input type="text" inputmode="numeric" id="profit" name="profit" placeholder="150,000" autocomplete="off"/>
+              </div>
+              <p class="help">After your business costs, before you pay yourself.</p>
+              <p class="err">Please enter how much your business earns.</p>
+            </div>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn cta lg">Show a fair salary</button>
+            <span class="hint">Takes about a minute.</span>
+          </div>
+        </form>
+
+        <div class="tool-result" id="result" hidden="" aria-live="polite">
+          <p class="result-badge">Your estimate</p>
+          <p class="result-headline" id="r-headline"/>
+          <p class="result-explain" id="r-explain"/>
+          <div class="result-compare" id="r-compare">
+            <div class="rc">
+              <div class="rc-lbl">Fair salary range for your role</div>
+              <div class="rc-fig" id="r-range"/>
+              <div class="rc-sub">A full-time year, for this kind of work.</div>
+            </div>
+            <div class="rc">
+              <div class="rc-lbl">A reasonable starting point</div>
+              <div class="rc-fig" id="r-suggest"/>
+              <div class="rc-sub">A middle figure to talk through with us.</div>
+            </div>
+          </div>
+          <div class="result-note" id="r-note"/>
+          <div class="result-cta">
+            <a class="btn cta" href="#book">Get a salary you can defend — book a free call <span class="arw" aria-hidden="true">→</span></a>
+            <span class="note">A 20‑minute call. No cost, no pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goodto">
+    <div class="wrap">
+      <div class="goodto-grid">
+        <div class="reveal">
+          <hr class="ledger"/>
+          <h2>Why this matters</h2>
+          <p class="intro">In plain words, so you know what is at stake.</p>
+        </div>
+        <ul class="nod-list reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>An S‑Corp owner must take a salary.</b> The rest of your money can be business profit. But the salary has to come first, and it has to be fair.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>"Fair" means the market value of your work.</b> It is roughly what you would pay someone else to do your job. Not too high, not too low.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>Pay too little and the IRS can charge back taxes and a penalty.</b> This is one of the first things they check on an S‑Corp. A figure you can show your work on keeps you safe.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="/web/content/3545/julia-navy.png" alt="Julia, founder of JK Accounting Group"/>
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">Setting your own salary is one of the trickiest parts of owning an S‑Corp. Too low is risky; too high costs you money.</p>
+          <p class="bio">We build a salary figure you can back up with real numbers — the kind that holds if the IRS ever asks. This tool is the quick version; I would be glad to do the full one with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Want a salary figure you can defend?</h2>
+          <p class="lede">Send us your details and we will build a fair, defensible salary for you — in English, Russian, or Ukrainian. Or book a free 20‑minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A number backed by real market data.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A short report you can keep on file.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A real person who speaks your language.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="https://wa.me/17863181505">Message us here</a>
+          </p>
+        </div>
+
+        
+        <form class="form-card" action="/website/form/crm.lead" method="post"><input type="hidden" name="name" value="New free-tool lead — S-Corp salary"/><input type="hidden" name="tool_source" value="s-corp-salary"/><input type="hidden" name="tool_page" value="S-Corp salary"/><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="contact_name" required="" autocomplete="name"/>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email_from" required="" autocomplete="email"/>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"/>
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="https://jkaccountinggroup.odoo.com/appointment/1">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></svg>
+      <h2>Set your salary with confidence.</h2>
+      <p class="tag">We will give you a fair figure you can back up — and keep you safe with the IRS. Clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn secondary lg" href="/free-tools">See our other free tools</a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax advice.</b> This tool shows a rough salary range for guidance only. A salary you can defend to the IRS needs a proper review of your business. Please talk to us before you set or change your salary.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"/><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"/><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"/></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="https://jkaccountinggroup.odoo.com/appointment/1">Book a free call</a>
+  <a class="sticky-wa" href="https://wa.me/17863181505" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="/web/content/3547/lead-magnets.js"></script>
+<script>//<![CDATA[
+(function () {
+  "use strict";
+  // Illustrative full-time salary ranges by role — see TAX-FIGURES-TO-VERIFY.md
+  var ROLES = {
+    owner_operator: [60000, 110000],
+    consultant:     [70000, 130000],
+    trade:          [55000, 95000],
+    retail_food:    [45000, 75000],
+    ecommerce:      [55000, 100000],
+    real_estate:    [55000, 100000],
+    other:          [50000, 100000]
+  };
+  var form = document.getElementById("calc");
+  var result = document.getElementById("result");
+  var fRole = document.getElementById("f-role");
+  var fProfit = document.getElementById("f-profit");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var role = document.getElementById("role").value;
+    var profit = LM.num(document.getElementById("profit").value);
+    var ok = true;
+    fRole.classList.remove("invalid");
+    fProfit.classList.remove("invalid");
+    if (!role || !ROLES[role]) { fRole.classList.add("invalid"); ok = false; }
+    if (!(profit > 0)) { fProfit.classList.add("invalid"); ok = false; }
+    if (!ok) { result.hidden = true; return; }
+
+    var lo = ROLES[role][0], hi = ROLES[role][1];
+    var mid = Math.round((lo + hi) / 2);
+    var headline = document.getElementById("r-headline");
+    var explain = document.getElementById("r-explain");
+    var note = document.getElementById("r-note");
+    var rangeEl = document.getElementById("r-range");
+    var suggestEl = document.getElementById("r-suggest");
+    headline.classList.remove("warn");
+
+    rangeEl.textContent = LM.money(lo) + " – " + LM.money(hi);
+
+    if (profit < lo) {
+      // Profit lower than a typical salary for the role
+      headline.classList.add("warn");
+      headline.innerHTML = 'Your profit is lower than a normal salary for this work.';
+      explain.textContent = "For your role, a fair full-time salary is usually in the range shown. Your business earns less than that right now. That is common early on — you still take a fair salary first, even if little is left over.";
+      suggestEl.textContent = LM.money(Math.round(profit));
+      note.innerHTML = "<b>This needs a closer look.</b> When profit is tight, the right salary depends on your hours and your situation. Let's work it out together so you stay safe with the IRS.";
+    } else {
+      var suggest = Math.min(mid, Math.round(profit));
+      suggestEl.textContent = LM.money(suggest);
+      headline.innerHTML = 'A fair salary for your work is usually about <span class="big">' + LM.money(lo) + ' – ' + LM.money(hi) + ' a year.</span>';
+      explain.textContent = "The IRS wants your salary to match the market value of your work — about what you would pay someone else to do your job. For your role, that is usually this range.";
+      note.innerHTML = "<b>This is a guide, not a final number.</b> A salary you can defend needs a proper review of your hours, your industry, and live market data. That is exactly what we build for you.";
+    }
+
+    LM.showResult(result);
+  });
+})();
+//]]></script>
+</body>
+</html>
+</t>
