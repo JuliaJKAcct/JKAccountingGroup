@@ -24,8 +24,16 @@ sessions.
 - **Capturing:** when we leave something half-done, add a row — Owner, where it
   lives, the next concrete action, and the date. Do this whenever time runs out
   mid-task, so the thread survives the session.
-- **Closing:** when a follow-up is finished, **delete its row** (the repo history
-  keeps the trail). Keep this list short — it's the live plate, not an archive.
+- **Working a follow-up → always confirm before closing.** When a session
+  actually works on one of these, at the **end of that work Claude asks the
+  owner**: *"is this resolved — should I take it off the open loops, or are we
+  continuing it?"* **Claude never deletes a row on its own.**
+  - On a **yes** → delete the row (git history keeps the trail).
+  - If it **advanced but isn't done** → update its **Next action** (and date) and
+    leave it on the list.
+
+  This is the safety net: nothing we worked on is silently left open, and nothing
+  resolved lingers. Keep this list short — it's the live plate, not an archive.
 
 ## Open loops
 
