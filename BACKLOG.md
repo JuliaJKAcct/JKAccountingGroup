@@ -39,6 +39,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 | [IDEA-13](#idea-13--per-client-memory-claude-can-read-across-sessions--ping-assistant) | Per-client "memory" Claude can read across sessions (Double notes as the system of record) + evaluate the "Ping Assistant" tool Lilian mentioned | Firm ops / tooling (Double today) | Medium | **Started** — Double-notes practice in use; "Ping Assistant" blocked on the exact product name |
+| [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/`](./.claude/skills/) + [`projects/sops/`](./projects/sops/) | Medium | Not started — build after Lilian signs off on the BTR SOP (the reference pattern) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -611,6 +612,53 @@ MCP connector or API.
 
 **Priority:** Medium · **Status:** **Started** — Double-notes practice in use;
 Ping Assistant evaluation blocked on the product name (Lilian → vendor support).
+
+---
+
+## IDEA-14 — `sop-authoring` skill: how Lilian wants SOPs structured
+
+**What Lilian wants:** capture as a **reusable skill** the way she wants every SOP
+written and presented, so future SOPs come out right the first time without
+re-explaining. The preferences were established hands-on while restructuring the
+BTR SOP (Jul 2026):
+
+- **A flowchart / "process at a glance" first** — the general map before the long
+  detail, so you never dive in blind.
+- **Book-index hierarchy** — numbered sections; sub-parts (3A/3B, Step A/B/C)
+  visually *above* their children (screens, fields); sizes/colors that make the
+  levels obvious.
+- **Numbered lists over prose** — when items are a sequence or a set (e.g. "two
+  fees" numbered 1/2 with the takeaway pulled out separately).
+- **Bullet checklists over run-on sentences** — requirements and documents as
+  scannable lists.
+- **An "uploads / have-ready" checklist** per application, before the screens.
+- **An email map** — every email the process sends, what each means, where to
+  check status.
+- **Plain-language explanations of jargon** (e.g. what "issuance" means).
+- **Rendered review copies use the firm Design System** (Atlas) — hierarchy via
+  the brand's type/color system.
+
+**Why it matters:** SOPs are the firm's continuity layer; if each one needs a
+personal explanation of how to read it, the writing was wasted. Encoding the
+house structure makes every future SOP consistent and immediately usable.
+
+**Where it fits:** a new skill in [`.claude/skills/`](./.claude/skills/) (e.g.
+`sop-authoring`), referenced from
+[`projects/sops/README.md`](./projects/sops/README.md) as the way SOPs get
+written. The **BTR SOP**
+([`hollywood-broward-business-tax-receipt.md`](./projects/sops/hollywood-broward-business-tax-receipt.md))
+is the reference pattern.
+
+**What we need to start:** Lilian's final sign-off on the BTR SOP (in review as
+of Jul 2026 — see the note in that file's header). Once she approves the
+structure, the skill encodes it.
+
+**Capability check:** fully buildable — it's a documentation skill (structure
+rules + the reference example + the Atlas render pattern). No external
+dependency.
+
+**Priority:** Medium · **Status:** Not started — build after Lilian signs off on
+the BTR SOP.
 
 ---
 
