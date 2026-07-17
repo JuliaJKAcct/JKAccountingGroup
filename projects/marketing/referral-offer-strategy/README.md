@@ -24,16 +24,19 @@ doesn't live only in chat history.
 ```
 referral-offer-strategy/
 ├── README.md     ← you are here
-└── strategy.md   ← the full strategy: funnel logic, partner positioning,
-                     Growth Accelerator Series, scorecard design, open questions
+├── strategy.md   ← the full strategy: funnel logic, partner positioning,
+│                    standardized front-offer chassis, Growth Accelerator
+│                    Series, scorecard design, open questions
+└── templates/    ← built deliverables (see Outputs below)
 ```
 
 ## Brand & design
 
-No visual output yet. Once any of this strategy turns into a landing page,
-worksheet template, or scorecard deliverable, that output should follow
+The built checklist templates (see Outputs below) follow
 [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) like every
-other client-facing asset.
+other client-facing asset. Anything else this strategy turns into — a landing
+page, worksheet template, or scorecard deliverable — should follow the same
+guide.
 
 ## Skills & tooling
 
@@ -44,13 +47,24 @@ there.
 
 ## Outputs
 
-Nothing built yet — `strategy.md` is a decisions-and-open-questions document,
-not a deliverable. Per `strategy.md` §6, still open: scoring rubric
-thresholds, the document/access checklist for the paid assessment, Growth
-Accelerator Series logistics (landing page, promo copy, list ownership),
-the four worksheet templates, and pricing for the assessment/implementation
-phases. When any of these get built, add them here in an obviously-named
-folder (e.g. `templates/`, `landing-page/`) and update this section.
+- **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
+  one-page, print-ready Pre-Launch checklist artifact (the standardized
+  chassis's leave-behind), on brand, no partner-specific redesign needed.
+- **`templates/realtor-referral-playbook.md`** / **`-ru.md`** (native
+  Russian, not machine-translated) — how the partner actually delivers the
+  checklist: four natural trigger moments to pick from (not one rigid
+  script), WhatsApp/text as the default channel (this audience doesn't run
+  on email), and the same-day hand-off of the client's contact info to JKA
+  (the step that turns "gave them a PDF" into an actual referral) rather
+  than a self-serve booking form.
+
+Still open per `strategy.md` §6: scoring rubric thresholds, the
+document/access checklist for the *paid* assessment, Growth Accelerator
+Series logistics (landing page, promo copy, list ownership), the four
+workshop worksheet templates, and pricing for the assessment/implementation
+phases. An **Operating**-variant checklist (for already-running businesses,
+e.g. the marketing-agency onboarding channel) hasn't been built yet — same
+chassis, see `strategy.md`'s two-variant table — flag if that's needed next.
 
 ## Working on this / notes for AI
 
