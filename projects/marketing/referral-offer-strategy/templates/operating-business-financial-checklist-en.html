@@ -1,0 +1,185 @@
+<!doctype html>
+<!--
+  Business Financial Gut-Check — OPERATING variant of the standardized
+  front-offer chassis (see ../strategy.md, "Standardized front-offer chassis",
+  the two-variant table). For a business that is ALREADY RUNNING — the person a
+  commercial realtor actually meets (relocating/expanding), or a marketing
+  agency's existing client. Its Pre-Launch sibling
+  (new-business-launch-checklist-en.html / -ru.html) is for someone about to
+  START a business; keep both — they serve different moments.
+
+  Channel-neutral by design: not co-branded per partner, and the hero leads with
+  growth/"a new space, a bigger team" rather than a single lease moment, so the
+  same file works for the realtor AND the agency channel. The delivery script and
+  partner attribution live in realtor-referral-playbook.md, not in this artifact.
+
+  Keeps the full 8-category Operating spine, including "compliance & open items"
+  as a real category (per strategy.md's note that the Operating variant keeps
+  compliance risk rather than the Pre-Launch EIN/bank split).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Financial Gut-Check — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:15px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:24px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 14px 40px rgba(9,31,36,.10);
+    border-radius:14px;overflow:hidden;}
+  h1,h2{font-family:var(--serif);letter-spacing:-0.012em;color:var(--text-primary);
+    text-wrap:balance;margin:0;font-weight:600;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;
+    font-size:10.5px;font-weight:600;}
+
+  .hero{background:linear-gradient(160deg,#164049 0%, var(--teal) 45%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:30px 36px 26px;}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+  .medallion{width:32px;height:32px;flex:none;}
+  .firm-name{font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;line-height:1.15;}
+  .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:8.5px;color:var(--on-dark-muted);margin-top:2px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:25px;line-height:1.14;margin:9px 0 6px;}
+  .hero p{color:var(--on-dark-muted);font-size:13.5px;margin:0;max-width:60ch;}
+
+  .body{padding:26px 36px 8px;}
+  .list{border:1px solid var(--hairline);border-radius:12px;overflow:hidden;background:var(--paper);}
+  .item{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--hairline);}
+  .item:last-child{border-bottom:none;}
+  .box{width:17px;height:17px;border:1.6px solid var(--bronze-ink);border-radius:4px;margin-top:2px;flex:none;}
+  .item .cat{font-weight:600;color:var(--text-primary);font-size:14px;}
+  .item .cat .n{font-family:var(--mono);color:var(--bronze-ink);font-size:11px;margin-right:6px;}
+  .item p{margin:2px 0 0;font-size:13px;color:var(--text-body);max-width:64ch;}
+  .item .sub{color:var(--text-muted);font-size:12px;margin-top:3px;}
+
+  .cta{margin:22px 0 4px;background:var(--paper);border:1px solid var(--border);border-radius:12px;
+    padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .cta .txt{max-width:40ch;flex:1 1 260px;}
+  .cta .txt .kicker{color:var(--bronze-ink);display:block;margin-bottom:4px;}
+  .cta .txt p{margin:0;font-size:13.5px;color:var(--text-body);}
+  .cta .btn{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;
+    font-weight:600;color:#fff;background:var(--bronze);border-radius:999px;padding:11px 20px;
+    white-space:nowrap;text-decoration:none;display:inline-block;margin-top:13px;}
+  .scan{display:flex;flex-direction:column;align-items:center;gap:7px;flex:none;}
+  .qr{width:106px;height:106px;display:block;}
+  .scan-cap{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:9px;
+    color:var(--bronze-ink);font-weight:600;text-align:center;line-height:1.3;}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:16px 36px;font-size:11.5px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark);font-size:9.5px;}
+  .foot a{color:var(--bronze-light);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+  }
+  @media (max-width:600px){
+    .hero,.body,.foot{padding-left:20px;padding-right:20px;}
+    .cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">Miami · Fort Lauderdale · Online</div></div>
+    </div>
+    <span class="kicker">Congratulations on the new space</span>
+    <h1>Now — Is the Financial Side Ready for It?</h1>
+    <p>A bigger space, a growing team, more moving parts. The setup that got you here isn't always the one that carries you forward. Run through this quick gut-check — if it's all squared away, great. If anything gives you pause, that's worth a conversation.</p>
+  </header>
+
+  <div class="body">
+    <div class="list">
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">01</span>Entity &amp; tax structure</div>
+        <p>You may have set up as an LLC years ago. Now that the business is bigger, is that still the most tax-efficient structure — or are you leaving money on the table because an S-Corp election was never made?</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">02</span>Bookkeeping</div>
+        <p>Are your books actually current and accurate — or is there a backlog you keep meaning to catch up on? Clean books are the difference between real decisions and educated guesses.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">03</span>Registrations &amp; licenses</div>
+        <p>Are your registrations still current — federal, state, and local? A new location often means a new city/county Business Tax Receipt, even for an established business.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">04</span>Sales tax <span class="sub">(if applicable)</span></div>
+        <p>If you collect sales tax, is it being remitted correctly and on time? A new location — or a new kind of sale — can change what you owe and where you owe it.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">05</span>Payroll</div>
+        <p>Is your payroll compliant — people classified correctly (W-2 vs. 1099), filings current? Bringing on staff for a new space is a common place this quietly slips.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">06</span>Estimated taxes</div>
+        <p>Are your quarterly payments actually being made, in the right amount? A bigger footprint and new fixed costs like rent change the math more than people expect.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">07</span>Compliance &amp; open items</div>
+        <p>Any IRS or state letters sitting unanswered, filings missed, or deadlines you're not fully sure about? These are the things that don't get smaller by waiting.</p>
+      </div></div>
+      <div class="item"><div class="box"></div><div>
+        <div class="cat"><span class="n">08</span>Reporting to grow</div>
+        <p>Can you see, month to month, whether the business — and this new space — is actually making money? Or is it one lump number you can't really steer by?</p>
+      </div></div>
+    </div>
+
+    <div class="cta">
+      <div class="txt">
+        <span class="kicker">Free 30-minute financial review</span>
+        <p>Anything on this list you're not fully sure about? We'll go through it together — no cost, no obligation.</p>
+        <a class="btn" href="https://wa.me/17863181505?text=Checklist">Text or WhatsApp us</a>
+      </div>
+      <div class="scan">
+        <svg class="qr" viewBox="-4 -4 45 45" role="img" aria-label="Scan to message JK Accounting Group on WhatsApp">
+          <rect x="-4" y="-4" width="45" height="45" rx="3" fill="#FFFFFF" stroke="#DAD4C6" stroke-width="0.4"/>
+          <path shape-rendering="crispEdges" fill="#0D2A31" d="M0 0h7v1h-7zM11 0h7v1h-7zM20 0h5v1h-5zM27 0h1v1h-1zM30 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM11 1h2v1h-2zM14 1h3v1h-3zM19 1h3v1h-3zM24 1h3v1h-3zM30 1h1v1h-1zM36 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h2v1h-2zM12 2h1v1h-1zM16 2h4v1h-4zM23 2h2v1h-2zM30 2h1v1h-1zM32 2h3v1h-3zM36 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h2v1h-2zM14 3h1v1h-1zM17 3h2v1h-2zM20 3h2v1h-2zM25 3h4v1h-4zM30 3h1v1h-1zM32 3h3v1h-3zM36 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h1v1h-1zM11 4h1v1h-1zM15 4h2v1h-2zM21 4h1v1h-1zM23 4h1v1h-1zM25 4h1v1h-1zM27 4h1v1h-1zM30 4h1v1h-1zM32 4h3v1h-3zM36 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h2v1h-2zM11 5h1v1h-1zM14 5h2v1h-2zM17 5h1v1h-1zM19 5h1v1h-1zM22 5h2v1h-2zM25 5h2v1h-2zM28 5h1v1h-1zM30 5h1v1h-1zM36 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h7v1h-7zM8 7h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM16 7h2v1h-2zM20 7h1v1h-1zM22 7h1v1h-1zM24 7h1v1h-1zM4 8h4v1h-4zM9 8h2v1h-2zM13 8h2v1h-2zM17 8h4v1h-4zM22 8h1v1h-1zM24 8h4v1h-4zM30 8h2v1h-2zM35 8h1v1h-1zM1 9h4v1h-4zM7 9h3v1h-3zM12 9h1v1h-1zM16 9h1v1h-1zM19 9h4v1h-4zM24 9h1v1h-1zM26 9h1v1h-1zM32 9h2v1h-2zM35 9h1v1h-1zM1 10h1v1h-1zM3 10h5v1h-5zM9 10h6v1h-6zM16 10h2v1h-2zM20 10h4v1h-4zM25 10h5v1h-5zM34 10h2v1h-2zM1 11h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM11 11h1v1h-1zM13 11h2v1h-2zM16 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h1v1h-1zM26 11h2v1h-2zM29 11h1v1h-1zM31 11h2v1h-2zM34 11h1v1h-1zM0 12h1v1h-1zM5 12h3v1h-3zM9 12h3v1h-3zM13 12h3v1h-3zM19 12h6v1h-6zM28 12h3v1h-3zM34 12h1v1h-1zM36 12h1v1h-1zM1 13h1v1h-1zM3 13h1v1h-1zM8 13h1v1h-1zM10 13h4v1h-4zM15 13h5v1h-5zM21 13h3v1h-3zM25 13h1v1h-1zM27 13h3v1h-3zM31 13h2v1h-2zM34 13h1v1h-1zM1 14h4v1h-4zM6 14h3v1h-3zM10 14h1v1h-1zM12 14h5v1h-5zM18 14h5v1h-5zM25 14h1v1h-1zM27 14h1v1h-1zM29 14h1v1h-1zM31 14h1v1h-1zM33 14h2v1h-2zM0 15h6v1h-6zM9 15h1v1h-1zM11 15h2v1h-2zM14 15h2v1h-2zM19 15h1v1h-1zM21 15h3v1h-3zM26 15h2v1h-2zM31 15h1v1h-1zM34 15h3v1h-3zM1 16h1v1h-1zM4 16h1v1h-1zM6 16h1v1h-1zM8 16h3v1h-3zM13 16h1v1h-1zM15 16h1v1h-1zM17 16h4v1h-4zM23 16h2v1h-2zM26 16h1v1h-1zM28 16h1v1h-1zM30 16h1v1h-1zM33 16h3v1h-3zM1 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM10 17h1v1h-1zM14 17h2v1h-2zM18 17h1v1h-1zM22 17h4v1h-4zM27 17h1v1h-1zM29 17h1v1h-1zM31 17h4v1h-4zM1 18h2v1h-2zM5 18h2v1h-2zM8 18h2v1h-2zM11 18h7v1h-7zM21 18h3v1h-3zM26 18h3v1h-3zM30 18h3v1h-3zM34 18h1v1h-1zM0 19h1v1h-1zM3 19h2v1h-2zM7 19h4v1h-4zM13 19h3v1h-3zM17 19h4v1h-4zM23 19h2v1h-2zM27 19h2v1h-2zM30 19h3v1h-3zM34 19h2v1h-2zM0 20h2v1h-2zM6 20h1v1h-1zM9 20h2v1h-2zM13 20h3v1h-3zM18 20h1v1h-1zM20 20h2v1h-2zM23 20h2v1h-2zM26 20h2v1h-2zM29 20h2v1h-2zM34 20h1v1h-1zM0 21h4v1h-4zM7 21h1v1h-1zM9 21h1v1h-1zM11 21h4v1h-4zM18 21h1v1h-1zM20 21h3v1h-3zM24 21h1v1h-1zM27 21h1v1h-1zM29 21h1v1h-1zM32 21h2v1h-2zM1 22h4v1h-4zM6 22h3v1h-3zM10 22h2v1h-2zM13 22h2v1h-2zM16 22h2v1h-2zM20 22h1v1h-1zM23 22h8v1h-8zM34 22h1v1h-1zM0 23h1v1h-1zM2 23h1v1h-1zM5 23h1v1h-1zM8 23h2v1h-2zM12 23h1v1h-1zM16 23h4v1h-4zM23 23h3v1h-3zM28 23h1v1h-1zM31 23h1v1h-1zM33 23h3v1h-3zM0 24h1v1h-1zM3 24h1v1h-1zM5 24h4v1h-4zM10 24h1v1h-1zM15 24h3v1h-3zM20 24h3v1h-3zM24 24h2v1h-2zM27 24h5v1h-5zM33 24h2v1h-2zM0 25h1v1h-1zM3 25h3v1h-3zM10 25h5v1h-5zM19 25h3v1h-3zM25 25h5v1h-5zM32 25h1v1h-1zM35 25h1v1h-1zM2 26h5v1h-5zM8 26h2v1h-2zM12 26h1v1h-1zM17 26h1v1h-1zM20 26h3v1h-3zM25 26h3v1h-3zM29 26h1v1h-1zM31 26h2v1h-2zM35 26h1v1h-1zM2 27h1v1h-1zM4 27h2v1h-2zM7 27h11v1h-11zM19 27h2v1h-2zM22 27h1v1h-1zM24 27h1v1h-1zM26 27h1v1h-1zM28 27h1v1h-1zM30 27h1v1h-1zM32 27h1v1h-1zM34 27h2v1h-2zM0 28h2v1h-2zM6 28h2v1h-2zM9 28h2v1h-2zM15 28h2v1h-2zM18 28h4v1h-4zM23 28h2v1h-2zM28 28h5v1h-5zM34 28h1v1h-1zM8 29h1v1h-1zM10 29h1v1h-1zM13 29h2v1h-2zM17 29h1v1h-1zM19 29h1v1h-1zM21 29h3v1h-3zM25 29h2v1h-2zM28 29h1v1h-1zM32 29h2v1h-2zM0 30h7v1h-7zM8 30h2v1h-2zM14 30h1v1h-1zM18 30h1v1h-1zM20 30h1v1h-1zM23 30h2v1h-2zM28 30h1v1h-1zM30 30h1v1h-1zM32 30h4v1h-4zM0 31h1v1h-1zM6 31h1v1h-1zM8 31h1v1h-1zM10 31h2v1h-2zM13 31h2v1h-2zM16 31h3v1h-3zM21 31h1v1h-1zM26 31h1v1h-1zM28 31h1v1h-1zM32 31h1v1h-1zM34 31h1v1h-1zM0 32h1v1h-1zM2 32h3v1h-3zM6 32h1v1h-1zM8 32h2v1h-2zM11 32h1v1h-1zM18 32h3v1h-3zM22 32h1v1h-1zM26 32h1v1h-1zM28 32h7v1h-7zM36 32h1v1h-1zM0 33h1v1h-1zM2 33h3v1h-3zM6 33h1v1h-1zM9 33h2v1h-2zM13 33h4v1h-4zM19 33h2v1h-2zM22 33h1v1h-1zM24 33h1v1h-1zM30 33h1v1h-1zM33 33h1v1h-1zM0 34h1v1h-1zM2 34h3v1h-3zM6 34h1v1h-1zM12 34h1v1h-1zM15 34h1v1h-1zM18 34h1v1h-1zM20 34h2v1h-2zM23 34h2v1h-2zM26 34h1v1h-1zM28 34h1v1h-1zM30 34h1v1h-1zM34 34h2v1h-2zM0 35h1v1h-1zM6 35h1v1h-1zM9 35h1v1h-1zM11 35h1v1h-1zM13 35h3v1h-3zM17 35h1v1h-1zM20 35h1v1h-1zM22 35h2v1h-2zM26 35h1v1h-1zM33 35h3v1h-3zM0 36h7v1h-7zM9 36h1v1h-1zM14 36h3v1h-3zM18 36h1v1h-1zM24 36h2v1h-2zM29 36h1v1h-1zM31 36h2v1h-2zM34 36h3v1h-3z"/>
+          <rect x="13" y="13" width="11" height="11" rx="2.4" fill="#FFFFFF"/>
+          <svg x="14" y="14" width="9" height="9" viewBox="0 0 24 24">
+            <rect width="24" height="24" rx="5" fill="#25D366"/>
+            <path fill="#FFFFFF" d="M12.04 3.5c-4.7 0-8.52 3.82-8.52 8.52 0 1.5.39 2.96 1.14 4.25L3.5 20.5l4.35-1.14a8.5 8.5 0 0 0 4.19 1.07h.01c4.7 0 8.52-3.82 8.52-8.52a8.47 8.47 0 0 0-2.5-6.02 8.46 8.46 0 0 0-6.03-2.39m0 1.44c1.89 0 3.66.74 5 2.07a7.02 7.02 0 0 1 2.07 5c0 3.9-3.17 7.07-7.08 7.07a7.05 7.05 0 0 1-3.6-.99l-.26-.15-2.67.7.71-2.6-.17-.27a7.04 7.04 0 0 1-1.08-3.76c0-3.9 3.18-7.07 7.08-7.07m-3.87 4.2c-.13 0-.34.05-.52.24-.18.19-.69.68-.69 1.65s.71 1.91.81 2.05c.1.13 1.38 2.11 3.35 2.96.47.2.83.32 1.11.42.47.15.9.13 1.23.08.38-.06 1.15-.47 1.31-.92.16-.46.16-.85.11-.93-.05-.08-.17-.13-.36-.22-.19-.1-1.15-.57-1.32-.63-.18-.07-.31-.1-.44.1-.13.19-.5.62-.61.75-.11.13-.23.15-.42.05-.19-.1-.81-.3-1.54-.95-.57-.51-.95-1.13-1.07-1.32-.11-.19-.01-.3.09-.39.09-.09.19-.23.29-.34.09-.12.13-.2.19-.33.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33z"/>
+          </svg>
+        </svg>
+        <span class="scan-cap">Scan for WhatsApp</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="firm">JK Accounting Group</div>
+    <div><a href="https://wa.me/17863181505">WhatsApp / Call (786) 318-1505</a> &nbsp;·&nbsp; <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a> &nbsp;·&nbsp; Reply within 1 business day</div>
+  </footer>
+
+</div>
+</body>
+</html>
