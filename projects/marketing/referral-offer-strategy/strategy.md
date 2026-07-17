@@ -127,8 +127,11 @@ Pre-Launch artifact (`templates/new-business-launch-checklist-en.html` /
 `-ru.html`): since "compliance risk" is N/A before a business has any
 history, that box is dropped and replaced with a second box splitting "EIN"
 from "bank account" — two distinct day-one setup tasks worth checking
-separately. The not-yet-built Operating variant should keep compliance risk
-as a real scored category instead of that split.
+separately. The Operating variant
+(`templates/operating-business-financial-checklist-en.html` / `-ru.html`,
+built Jul 2026) keeps compliance risk as a real category instead of that
+split, and reframes every box from "is this set up?" to "is this still right
+/ actually current?" — a gut-check for a running business.
 
 **Referral mechanics (applies to the free-call chassis generally):** flat
 fee paid to the partner only if the free call converts into a paying
@@ -139,16 +142,21 @@ engagement — no fee for the call itself, no percentage of ongoing revenue.
 Two distinct triggers, not one — realtor referrals split by what actually
 happened in the deal:
 
-- **Leasing a space to start operating (the common case):** the business is
-  about to go live, not buying property. Use the **standard chassis, free
-  call + Pre-Launch checklist** — "you just committed to a space, let's make
-  sure the business side is ready too." Delivery isn't limited to the lease
-  signing itself: `templates/realtor-referral-playbook.md` defines four
+- **Leasing a space (the common case):** the business is signing a
+  commercial lease — and in practice that's usually a business *already
+  running* (relocating or expanding), not a first-timer starting from zero.
+  Use the **standard chassis, free call + checklist**, defaulting to the
+  **Operating variant** (`operating-business-financial-checklist-*.html`) —
+  "congrats on the new space, let's make sure the financial side is ready for
+  it" — and falling back to the **Pre-Launch** checklist only for a client
+  who's genuinely opening their first business. Delivery isn't limited to the
+  lease signing itself: `templates/realtor-referral-playbook.md` defines four
   natural trigger moments the realtor can use (during the property search,
   at signing/keys handover, when a question comes up the realtor can't
-  answer, or a short follow-up after), plus WhatsApp/text as the default
-  channel for this audience. Referral fee: flat, paid only on conversion to
-  a paying engagement (per the chassis mechanic above).
+  answer, or a short follow-up after), WhatsApp/text as the default channel
+  for this audience, and a scan-to-WhatsApp QR on the checklist itself so a
+  printout is still actionable. Referral fee: flat, paid only on conversion
+  to a paying engagement (per the chassis mechanic above).
 - **Buying property (the rarer case):** the existing paid, one-time **"New
   Entity Compliance Check"** stays as-is — flat fee ($150–$300 range),
   delivered within days of closing.

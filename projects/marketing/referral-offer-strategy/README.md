@@ -47,9 +47,17 @@ there.
 
 ## Outputs
 
+- **`templates/operating-business-financial-checklist-en.html` / `-ru.html`**
+  — the one-page **Operating**-variant checklist: a "is your business set up
+  the way it should be?" gut-check for a business that already exists (the
+  realtor's typical client, moving into a new space; also the agency channel).
+  Opens with "congratulations on the new space," reframes all 8 boxes to
+  "still right / actually current?", and carries a scannable WhatsApp QR so a
+  printout is actionable. This is the realtor channel's default leave-behind.
 - **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
-  one-page, print-ready Pre-Launch checklist artifact (the standardized
-  chassis's leave-behind), on brand, no partner-specific redesign needed.
+  one-page, print-ready **Pre-Launch** checklist artifact (same chassis), for
+  the rarer client genuinely *starting* their first business, on brand, no
+  partner-specific redesign needed.
 - **`templates/realtor-referral-playbook.md`** / **`-ru.md`** (native
   Russian, not machine-translated) — how the partner actually delivers the
   checklist: four natural trigger moments to pick from (not one rigid
@@ -62,9 +70,9 @@ Still open per `strategy.md` §6: scoring rubric thresholds, the
 document/access checklist for the *paid* assessment, Growth Accelerator
 Series logistics (landing page, promo copy, list ownership), the four
 workshop worksheet templates, and pricing for the assessment/implementation
-phases. An **Operating**-variant checklist (for already-running businesses,
-e.g. the marketing-agency onboarding channel) hasn't been built yet — same
-chassis, see `strategy.md`'s two-variant table — flag if that's needed next.
+phases. Both checklist variants (Pre-Launch and Operating) are now built on
+the shared chassis; the marketing-agency onboarding channel can reuse the
+Operating one as-is.
 
 ## Working on this / notes for AI
 
