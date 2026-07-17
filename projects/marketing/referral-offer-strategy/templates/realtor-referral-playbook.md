@@ -109,7 +109,20 @@ happens.
   > (RU: «Вот тот чек-лист — [файл]. Если что-то будет непонятно, есть
   > бесплатный 30-минутный звонок — скажите, и я вас свяжу.»)
 - **Email:** only if the client has specifically indicated they prefer it —
-  don't default to it.
+  don't default to it. Keep it just as short as the text version, no formal
+  letter:
+  > Subject: A quick checklist before you open your doors
+  >
+  > Hi {{CLIENT_FIRST_NAME}} — attaching a quick financial checklist from my
+  > accounting contact, JK Accounting Group. Worth a look before you open.
+  > Free 30-min call if anything's unclear — I've passed your info along,
+  > or reach out directly: julia@jkaccountinggroup.com.
+  >
+  > (RU subject: «Небольшой чек-лист перед открытием») Hi {{CLIENT_FIRST_NAME}}
+  > — короткий чек-лист от моего бухгалтерского партнёра, JK Accounting
+  > Group. Стоит посмотреть перед открытием. Бесплатный 30-минутный звонок,
+  > если что-то непонятно — я передал(а) ваши контакты, либо пишите
+  > напрямую: julia@jkaccountinggroup.com.
 
 ## Notes for whoever briefs the realtor (Julia/team)
 

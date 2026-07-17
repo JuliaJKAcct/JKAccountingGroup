@@ -82,7 +82,7 @@ every referral partner can pitch differently:
 | Partner | Their framing |
 |---|---|
 | Marketing agency | "Before you invest in growth, make sure your finances are ready." |
-| Commercial realtor | "You just signed a lease — let's make sure the business side is ready too." |
+| Commercial realtor | Leasing (common): "You just signed a lease — let's make sure the business side is ready too." Buying (rarer): "Before you close on a property, understand the financial and tax impact." |
 | Attorney | "Before you finalize your entity, confirm it's the right tax structure." |
 | Banker | "Before you apply for financing, make sure your financial foundation is solid." |
 
@@ -97,8 +97,10 @@ every time a new referral source comes up.
   a new offer) — a diagnostic conversation, never free implementation work.
   Actually setting up bookkeeping/QBO is always paid (Phase 2, or the
   ongoing retainer) — the free call only assesses and produces a punch list.
-- A **one-page checklist artifact**, walking the same 8 categories used by
-  the paid diagnostic scorecard (§5): entity structure, bookkeeping, bank
+- A **one-page checklist artifact**, adapted from the paid diagnostic
+  scorecard's 8 categories (§5) — swapping "cash flow management" (not
+  assessable before a business has any transaction history) for "bank
+  account/EIN & registrations": entity structure, bookkeeping, bank
   account/EIN & registrations, sales tax, payroll, estimated tax, compliance
   risk, growth readiness.
 
@@ -118,9 +120,15 @@ the referred business has operating history yet:
 
 Pre-Launch is a **readiness checklist** (yes/no, is this set up) — lighter
 and faster than Operating, which is a genuine **scored assessment** against
-history. Same 8 boxes either way, so the artifact never needs to be
-redesigned per partner — only the variant and the one-line trigger framing
-change (see table above).
+history. Both variants share the same 8-category spine, so the artifact
+never needs to be redesigned per partner — only the variant and the one-line
+trigger framing change (see table above). One adjustment in the shipped
+Pre-Launch artifact (`templates/new-business-launch-checklist-en.html` /
+`-ru.html`): since "compliance risk" is N/A before a business has any
+history, that box is dropped and replaced with a second box splitting "EIN"
+from "bank account" — two distinct day-one setup tasks worth checking
+separately. The not-yet-built Operating variant should keep compliance risk
+as a real scored category instead of that split.
 
 **Referral mechanics (applies to the free-call chassis generally):** flat
 fee paid to the partner only if the free call converts into a paying
@@ -133,10 +141,14 @@ happened in the deal:
 
 - **Leasing a space to start operating (the common case):** the business is
   about to go live, not buying property. Use the **standard chassis, free
-  call + Pre-Launch checklist**, introduced by the realtor at lease signing
-  — "you just committed to a space, let's make sure the business side is
-  ready too." Referral fee: flat, paid only on conversion to a paying
-  engagement (per the chassis mechanic above).
+  call + Pre-Launch checklist** — "you just committed to a space, let's make
+  sure the business side is ready too." Delivery isn't limited to the lease
+  signing itself: `templates/realtor-referral-playbook.md` defines four
+  natural trigger moments the realtor can use (during the property search,
+  at signing/keys handover, when a question comes up the realtor can't
+  answer, or a short follow-up after), plus WhatsApp/text as the default
+  channel for this audience. Referral fee: flat, paid only on conversion to
+  a paying engagement (per the chassis mechanic above).
 - **Buying property (the rarer case):** the existing paid, one-time **"New
   Entity Compliance Check"** stays as-is — flat fee ($150–$300 range),
   delivered within days of closing.

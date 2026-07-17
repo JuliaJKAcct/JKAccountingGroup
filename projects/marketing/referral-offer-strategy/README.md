@@ -32,10 +32,11 @@ referral-offer-strategy/
 
 ## Brand & design
 
-No visual output yet. Once any of this strategy turns into a landing page,
-worksheet template, or scorecard deliverable, that output should follow
+The built checklist templates (see Outputs below) follow
 [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md) like every
-other client-facing asset.
+other client-facing asset. Anything else this strategy turns into — a landing
+page, worksheet template, or scorecard deliverable — should follow the same
+guide.
 
 ## Skills & tooling
 
