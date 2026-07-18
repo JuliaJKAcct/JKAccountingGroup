@@ -44,6 +44,7 @@ the US.
 │       ├── email-signature/           drives the email-branding project (signatures + branded email)
 │       ├── expenses-report-tie-out/   clean a QB Transaction Detail into an Expenses report that ties to the P&L
 │       ├── sop-authoring/             the house way to write/restructure/review an SOP (structure + review workflow + Atlas render)
+│       ├── odoo-mcp/                  operating guide for the Odoo MCP — 50-call/day budget, chatter audit log, write-safety rules
 │       └── impeccable/                general UI/design skill
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
 ```
@@ -62,6 +63,7 @@ the US.
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
+| Reading or writing anything **in Odoo** through the Odoo MCP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports, CRM leads, appointments | the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) — **load it before the first Odoo MCP call.** The free plan allows only **50 tool calls/day**; plan the whole sequence first, batch every multi-record write, and log changes to the record's chatter |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
@@ -116,6 +118,15 @@ in that folder.
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
   QuickBooks), not this repo.
+- **The Odoo MCP has a hard 50-call/day budget — load the `odoo-mcp` skill before using it.**
+  The firm's Odoo ERP is reachable through the `Odoo_JK_Accounting_Group` MCP connector on a
+  **free plan capped at 50 tool calls per 24 hours, shared across the whole firm.** Before the
+  first Odoo MCP call in a session, load the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) and
+  follow it: plan and count the whole call sequence up front, batch every multi-record write
+  (`create_records`/`update_records`, never a loop of single-record calls), reuse looked-up
+  IDs, and post a batched chatter note on the affected record for any change. This is a
+  standing rule so the budget is respected every time — running out mid-task leaves the
+  database half-changed.
 - **Two people work here in parallel — keep `main` and the indexes coherent.**
   Julia and Lilian both drive this repo through Claude, often in separate sessions
   at the same time, so branches and edits collide. Every session: **start from the
