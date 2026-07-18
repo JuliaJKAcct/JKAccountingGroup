@@ -141,9 +141,8 @@ or `<p>` tags for line breaks rather than `\n`.
   changing, and the old-to-new values before executing.
 - **Check the lock date** before writing to any period. Odoo enforces this, but a failed
   write still costs a call.
-- **Multi-company:** this instance has multiple companies. Always confirm which
-  `company_id` a record belongs to before writing. Cross-company contamination is painful
-  to unwind.
+- **Single-company instance:** this is a one-company database (JK Accounting Group only), so
+  there is no cross-company routing to get wrong — no need to check `company_id` on writes.
 - **Never write to `res.users`, `res.groups`, `ir.model.access`, or `ir.rule`.** Permission
   changes go through the Odoo UI by a human.
 - Prefer reversal over deletion, and draft over posted, whenever there's a choice.
