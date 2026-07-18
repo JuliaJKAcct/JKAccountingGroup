@@ -60,6 +60,15 @@ approve the server when prompted.
 | Server | What it gives Claude | Package (pinned) |
 |---|---|---|
 | `notebooklm` | Ask questions against your [NotebookLM](https://notebooklm.google.com) notebooks, add sources, and generate audio overviews. | [`notebooklm-mcp@2.0.0`](https://github.com/PleasePrompto/notebooklm-mcp) |
+| `Odoo_JK_Accounting_Group` | Read/write the firm's Odoo ERP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports. | **Account connector** — not in `.mcp.json` |
+
+**The Odoo connector is account-level, and rationed.** It's connected through Claude's
+connectors (shared across the firm's one account), not declared in `.mcp.json`, so it won't
+appear in a `.mcp.json` review. The free plan is capped at **50 tool calls per 24 hours,
+shared by everyone.** Anyone using it should follow the [`odoo-mcp`
+skill](./.claude/skills/odoo-mcp/) — Claude loads it when it recognizes Odoo work, and the
+always-on standing rule in [`CLAUDE.md`](./CLAUDE.md) enforces the budget regardless — which
+covers the call budget, the chatter audit-log convention, and the write-safety rules.
 
 **One-time NotebookLM login.** The first time you use it, ask Claude to run the
 `setup_auth` tool. It opens a **visible Chrome window** so you can sign in to
