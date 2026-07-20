@@ -16,7 +16,9 @@ For the scoped clients, once per week:
 
 1. **Sweep** the connected sources for what's **new since the last run** — Ping
    Assistant (meetings, emails, calls, action items), Double (notes, tasks,
-   activity), QuickBooks — non-sensitive facts only.
+   activity), Gmail (**incoming and sent**), QuickBooks — non-sensitive facts only.
+   Search by **both the business name and each owner's name** (see *Search
+   completeness* below).
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). Commit to a branch `weekend-ci-sweep`, push. **Never** touches
@@ -30,6 +32,31 @@ For the scoped clients, once per week:
 **Guardrails:** non-sensitive only (secrets/PII stay in Double/Drive, referenced by
 link); source every fact; scope to the client list below (tool budgets — e.g. Odoo is
 50 calls/day, so it is *not* used here); read-only on the books.
+
+## Search completeness (important — why we search by owner AND business)
+
+A client can be **missed** if you only search one way. In Ping, a business's meetings
+are often indexed **under the owner's individual contact**, not the business name (this
+is exactly why the first Atman Parts sweep found nothing). And **one meeting can cover
+several topics** — an owner with multiple businesses may discuss any of them in a call
+titled with their personal name. So for every client, search **all of these**:
+
+- **Business name** — e.g. "Atman Parts".
+- **Each owner / principal name** — resolve them from the Double/Ping contacts, then
+  search meetings and emails under each.
+- **Known contact emails / domains** — for the Gmail pass.
+
+Concretely: Ping — `resolve_person` on each owner, `search_contacts` for the business
+and owners, then **`search_meetings` (org-wide, semantic) for BOTH the business name
+and each owner name**, plus `list_client_meetings`. Gmail — search **`in:inbox` and
+`in:sent`** by business name, owner names and contact emails, and keep whatever relates
+to the client. Double — `get_client`, `list_notes`, `list_contacts` (roles),
+`list_activity_log`. Never assume "not found" from a single business-name lookup.
+
+Transcripts are auto-transcribed from mixed Russian/Ukrainian/Spanish and are often
+**garbled** — use whatever is legible, tag it **low confidence** with its source, and
+**discard** anything that doesn't make sense (we can't verify it; only Julia knows what
+was said). Better a sourced, low-confidence note than nothing.
 
 ## Scope — clients (start set)
 
@@ -81,7 +108,11 @@ CLIENTS (name -> Double id):
 - Pro Title Agency -> 706716
 
 FOR EACH CLIENT:
-1. Sweep for what is NEW since the file's last update: Ping Assistant (get_client_details, list/search_client_meetings, search_client_emails), Double (get_client, list_notes, list_contacts for ROLES only, list_activity_log), QuickBooks if useful. Keep it bounded (~8-12 calls/client).
+1. Sweep for what is NEW since the file's last update, searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
+   - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
+   - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
+   - Double: get_client, list_notes, list_contacts (ROLES only), list_activity_log. QuickBooks if useful.
+   Keep it bounded (~10-15 calls/client).
 2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, EINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. Update "Last updated".
 3. Do NOT modify anything under projects/sops/. Instead, for clients with a SOP, note which new Operating-zone facts the SOP does not yet reflect -- these are PROPOSALS for Lilian.
 

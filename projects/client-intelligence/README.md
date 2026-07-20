@@ -121,10 +121,13 @@ rebuilt from scratch at every question.
 
 - **Primary — a weekend Claude Routine.** On a schedule (weekends), Claude sweeps the
   connected sources for what's **new since the last run** — Ping Assistant (meetings,
-  emails, calls, action items), Double (notes, tasks, activity), QuickBooks — and
-  updates each client's CI file with the **durable, non-sensitive** facts (secrets /
-  PII stay in Double / Drive, linked). Every auto-added item notes its **source and
-  date**, and git makes it reversible.
+  emails, calls, action items), Double (notes, tasks, activity), Gmail (**incoming and
+  sent**), QuickBooks — and updates each client's CI file with the **durable,
+  non-sensitive** facts (secrets / PII stay in Double / Drive, linked). It searches by
+  **both the business name and each owner's name** (an owner can have several
+  businesses, and a meeting titled with a person's name may discuss the business), so a
+  client is never missed. Every auto-added item notes its **source and date**, and git
+  makes it reversible.
 - **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
   **emails Lilian a report**: what's new in each client's CI, and the items
   **proposed for the SOP**. SOP changes are never applied without her approval.

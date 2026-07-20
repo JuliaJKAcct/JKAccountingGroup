@@ -13,7 +13,7 @@
 - **Business name:** Atman Parts
 - **Entity type:** _(pending)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
+- **Industry / what they do:** _(pending — possibly online **parts sales / e-commerce**; "eBay" and "Business PayPal" came up in the 2026-07-20 call, **low confidence** from a rough transcript — verify)_
 - **Primary language:** _(pending)_
 - **Our engagement (services we provide):** _(pending)_
 - **Fiscal year-end:** _(pending)_
@@ -39,6 +39,9 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| Business PayPal | Payments | _(pending — Drive link)_ | _(mentioned in the 2026-07-20 call — low confidence)_ |
+| eBay (marketplace) | Possible sales channel | _(pending)_ | _(mentioned in the 2026-07-20 call — low confidence, verify)_ |
 | Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
 
 ## 4. Obligations & recurring processes
@@ -46,14 +49,14 @@ link). Never write the credential itself here.
 Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ### Sales tax
-- **Applies?** _(pending — Lilian to detail)_
-- **Jurisdiction(s):** _(pending)_
+- **Applies?** Discussed in the 2026-07-20 onboarding call — **likely yes**, but the specifics were not legible in the transcript.
+- **Jurisdiction(s):** _(pending — the state was not clear in the transcript)_
 - **Frequency & due date:** _(pending)_
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
 - **Our role:** _(pending)_
 - **Current status:** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** The 2026-07-20 call also touched **franchise tax** and **annual reports** as obligations — specifics not legible; **verify with Lilian/Julia**. _(Ping meeting 2026-07-20, auto-transcribed, low confidence)_
 
 ### Payroll
 - **Applies?** _(pending)_
@@ -77,7 +80,7 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 - 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
   (QuickBooks Online). Sales-tax details to come from Lilian.
 - 2026-07-20 — Sweep: no Double notes yet.
-- 2026-07-20 — Correction: Atman **is** in Ping, indexed under the **owner's individual contact** (not the business name "Atman Parts") — that is why the first search missed it. To find it in Ping, search by the owner (see the Double/Ping contact), not "Atman Parts". Found a client meeting **"Vitaliy Atman Follow Up" (2026-07-20)** with Julia. The auto-transcript is rough/multilingual (mentions sales tax), so the concrete sales-tax details still need a clean capture — from Lilian, or a careful read of that meeting.
+- 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the client meeting **"Vitaliy Atman Follow Up" (2026-07-20)** with Julia. The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
 
 ### Information still needed
 - [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)
