@@ -715,7 +715,17 @@ stays identical for every client **without depending on anyone's memory**. Two j
 2. **Consistency + gap audit** — scan all of `clients/`, verify every file has the
    full template section set (nothing dropped or renamed), and report each client's
    `_(pending)_` fields and "Information still needed" list, so we always know what
-   to gather next per client. Later, run it on a schedule.
+   to gather next per client.
+3. **CI ↔ SOP sync (no drift)** — for a client that has a SOP, compare the CI file's
+   **Operating** zone against the SOP and flag drift both ways (a fact changed in CI
+   but stale in the SOP; a fact in the SOP not backed by CI), and confirm no
+   **CI-only** content (outstanding tasks, meeting notes) leaked into the SOP. It
+   **proposes** the edits; a person approves (what belongs in the SOP is a judgment).
+
+Runs on demand in any session; the scheduled version is a **weekly Claude Routine**
+(like the repo-audit Routine) that runs the gap audit + the CI↔SOP sync and reports
+drift — the automation Lilian asked for so info never sits in one place and not the
+other.
 
 **Why it matters:** Lilian explicitly asked Claude — not the human — to guarantee
 consistency across a client base that grows over months; no one can watch every

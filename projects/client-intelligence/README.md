@@ -75,6 +75,41 @@ scheduled, automatically** — Claude runs a **completeness audit** across
 
 This makes "every client has the same structure" a checkable rule, not a hope.
 
+## Client Intelligence ↔ the client SOP (staying linked, no drift)
+
+Client Intelligence and a client's **SOP** are two documents with two jobs, built
+from **one source of truth** so they never quietly disagree:
+
+- **This CI file is the master record** of everything we know about the client.
+- **The client SOP** (in [`../sops/`](../sops/)) is the **curated operating view** —
+  everything a covering bookkeeper needs to run the client day-to-day (accounts,
+  where credentials live [links], how to file sales tax, how to renew the company,
+  categorization quirks). It is built from this file's **Operating** zone, links back
+  here, and this file lists it under §7 Links.
+
+**What goes where** — the boundary that keeps the wrong info out of the SOP:
+
+| Zone in the CI file | Feeds the SOP? | Examples |
+|---|---|---|
+| **Operating** — §1–5, §7 | **Yes** | entity, systems + credential links, sales-tax / renewal / bookkeeping process, standing quirks |
+| **Working context** — §6 | **No — CI-only** | history log, open questions, **outstanding tasks from Julia's last meeting** (live in Double / Ping, linked) |
+
+So volatile things — the latest meeting follow-ups, outstanding tasks — stay in the
+CI-only zone and **never** reach the SOP.
+
+**Sources feed the CI file.** What you tell Claude, and what Claude finds in **Ping
+Assistant** (emails, phone / Zoom calls, action items) or Double, flows **into this
+file**: durable facts go to the Operating zone (and are then proposed for the SOP);
+live tasks stay as a pointer to Double / Ping.
+
+**Staying in sync — the guardrail.** The planned `client-intelligence` skill
+(IDEA-15 in [`../../BACKLOG.md`](../../BACKLOG.md)) runs a **CI ↔ SOP sync check**: it
+compares this file's Operating zone against the SOP and flags drift both ways, and
+checks that no CI-only content leaked into the SOP. It **detects and proposes**; a
+person approves what actually moves — because "does this belong in the SOP?" is a
+judgment call. Run it on demand ("is client X in sync?") and, later, as a weekly
+Claude Routine, so nothing ends up in one place and not the other.
+
 ## What's here
 
 ```

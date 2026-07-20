@@ -18,6 +18,18 @@
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
 
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
 ## 1. Snapshot
 
 - **Business name:** _(pending)_
@@ -104,11 +116,19 @@ watch-outs, one-off arrangements, history that affects the work.
 - _(pending)_
 
 ## 6. History & open questions
+<!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 A running, dated record as we build this profile.
 
 - _(YYYY-MM-DD)_ — _(pending)_
+
+### Outstanding items (CI-only — never in the SOP)
+Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
+tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
+it here; these never go into the client SOP.
+
+- _(pending — or a pointer to the live list in Double / Ping)_
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
