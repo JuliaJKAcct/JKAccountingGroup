@@ -81,6 +81,11 @@ with placeholders for anything sensitive.
 filled-in copies), and the `sops/` project + conventions already exist. This is
 also the theme of the current working branch.
 
+**Related (Jul 2026):** the per-client **accumulation layer** that feeds these SOPs
+now exists — [`projects/client-intelligence/`](./projects/client-intelligence/), one
+file per client (obligations, systems, processes), built up gradually as the raw
+material for the runbooks here.
+
 **Priority:** Medium · **Status:** Not started (waiting on Julia's narration)
 
 ---
