@@ -34,7 +34,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-06](#idea-06--email-organization-for-julia--lilian) | Improve email organization + the tag/label system for Julia & Lilian (labels/filters; Lilian has specific tag deficiencies on Julia's inbox to fix) | Firm ops / tooling | Low (parked) | Parked — capture only (Lilian to detail the tag deficiencies) |
 | [IDEA-07](#idea-07--a-system-so-every-document-follows-the-design-system) | Company-wide system so every generated document follows the Design System | `brand/` → new skill (+ templates) | Medium | Not started (parked) |
 | [IDEA-08](#idea-08--improve-julias-email-signature-booking-link--photo) | Improve Julia's email signature — real "Book a consultation" link + an elegant photo/headshot | [`projects/marketing/email-branding/`](./projects/marketing/email-branding/) | Medium | Booking link done (Jul 2026); headshot parked |
-| [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | New project (proposal + pricing tool) | Medium | Not started (needs inputs) |
+| [IDEA-09](#idea-09--build-our-own-goproposal-alternative) | Build our own GoProposal alternative — questionnaire + pricing engine + branded proposal, to drop the subscription | [`projects/proposal-tool/`](./projects/proposal-tool/) | Medium | ✅ Built (Jul 2026) — now [`projects/proposal-tool/`](./projects/proposal-tool/) |
 | [IDEA-10](#idea-10--website-scheduling-calendar-for-clients-and-prospects) | Website scheduling/booking calendar — separate flows for existing clients and for prospects | Firm ops / website (likely a new project) | **High** | Not started (Lilian to share her ideas) |
 | [IDEA-11](#idea-11--lead-management--conversion-stats-in-odoo-crm) | Manage all leads in Odoo (CRM) — website inquiries flow in; track conversion rate / wins / rejections / pipeline stats | Firm ops / CRM (new project when it starts) | **High** | Not started (learn Odoo + design the flow) |
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
@@ -386,6 +386,13 @@ Medallion; the photo is an enhancement.)
 ---
 
 ## IDEA-09 — Build our own GoProposal alternative
+
+> **✅ Built (Jul 2026).** Shipped as [`projects/proposal-tool/`](./projects/proposal-tool/) —
+> a Node (docx-js) + Python engine that generates on-brand monthly-engagement
+> proposals, tax-prep engagement letters, and a T&C addendum from the firm's real
+> pricing logic. The notes below are the original idea, kept for history. Remaining
+> open items (real e-signature via DocuSign; hosting / online acceptance) are tracked
+> in the project's README.
 
 **What Julia wants:** build the firm's own in-house version of **GoProposal** (the
 proposal / pricing / engagement-letter tool for accountants) so the firm can **stop

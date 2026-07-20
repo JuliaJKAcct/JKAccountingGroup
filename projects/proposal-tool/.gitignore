@@ -1,0 +1,8 @@
+# Local generation artifacts — never commit these.
+# The canonical blank templates live in templates/; regenerate as needed.
+generator-scripts/node_modules/
+generator-scripts/package-lock.json
+generator-scripts/output/
+generator-scripts/*.docx
+generator-scripts/*.pdf
+/tmp/pricing_wip.xlsx

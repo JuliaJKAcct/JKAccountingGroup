@@ -36,6 +36,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Marketing · Lead Magnets](./projects/marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
+| [Proposal & Engagement-Letter Tool](./projects/proposal-tool/) | In-house GoProposal replacement — generates on-brand monthly proposals, tax-prep engagement letters, and a T&C addendum from the firm's pricing logic. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
 
 The seven **Marketing** rows are one group under

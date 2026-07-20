@@ -34,6 +34,7 @@ the US.
 │   │   └── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
+│   ├── proposal-tool/             in-house GoProposal alternative — branded proposals + engagement letters (Active)
 │   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
@@ -58,6 +59,7 @@ the US.
 | Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/collateral/`](./projects/marketing/collateral/) |
 | Email signatures, or the on-brand look of outbound email (the whole team) — change a signature, add a teammate, edit the branded email | the [`email-signature` skill](./.claude/skills/email-signature/) → [`projects/marketing/email-branding/`](./projects/marketing/email-branding/); see its `INSTALL-GMAIL.md` to roll one out |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
+| A client **proposal** or **engagement letter** — a monthly-retainer proposal, a tax-prep engagement letter, or the T&C addendum (the in-house GoProposal replacement) | [`projects/proposal-tool/`](./projects/proposal-tool/) — read its [`docs/methodology.md`](./projects/proposal-tool/docs/methodology.md) first; client figures stay out of the repo |
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/marketing/video-generation/scripts/`](./projects/marketing/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo. **Writing or restructuring an SOP** goes through the [`sop-authoring` skill](./.claude/skills/sop-authoring/) (the house structure + review workflow) |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |

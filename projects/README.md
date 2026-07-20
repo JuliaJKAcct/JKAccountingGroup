@@ -19,6 +19,7 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`marketing/lead-magnets/`](./marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. On-brand self-contained HTML tools. | Active |
 | [`reasonable-compensation/`](./reasonable-compensation/) | Determine & document a defensible S-corp owner salary; outputs branded HTML reports. | Active |
 | [`recurring-expense-monitoring/`](./recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report, via the `recurring-expense-monitoring` skill. Watchlists live in Google Drive, not the repo. | Active |
+| [`proposal-tool/`](./proposal-tool/) | In-house GoProposal replacement — generates on-brand monthly-engagement proposals, tax-prep engagement letters, and a T&C addendum from the firm's pricing logic (Node docx-js + Python engine). Client data stays out of the repo. | Active |
 | [`sops/`](./sops/) | The firm's standard operating procedures and day-to-day client-task runbooks (e.g. Business Tax Receipt filings), written and reviewed via the [`sop-authoring`](../.claude/skills/sop-authoring/) skill. Client-specific data stays in the firm's client systems, not the repo. | Active |
 
 > The first seven rows are the **marketing group** — they live under
