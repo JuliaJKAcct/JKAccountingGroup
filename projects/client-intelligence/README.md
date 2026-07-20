@@ -107,8 +107,40 @@ live tasks stay as a pointer to Double / Ping.
 compares this file's Operating zone against the SOP and flags drift both ways, and
 checks that no CI-only content leaked into the SOP. It **detects and proposes**; a
 person approves what actually moves — because "does this belong in the SOP?" is a
-judgment call. Run it on demand ("is client X in sync?") and, later, as a weekly
+judgment call. Run it on demand ("is client X in sync?") and, later, as a weekend
 Claude Routine, so nothing ends up in one place and not the other.
+
+**Decided:** the CI file and the SOP are **two separate, interlinked documents** (so
+the SOP stays clean), and **no change is ever added to a SOP without Lilian's
+approval** — Claude proposes, Lilian decides.
+
+## Keeping Client Intelligence fresh (periodic auto-enrichment)
+
+Decided approach: **the repo is kept warm by a periodic automatic sweep**, not
+rebuilt from scratch at every question.
+
+- **Primary — a weekend Claude Routine.** On a schedule (weekends), Claude sweeps the
+  connected sources for what's **new since the last run** — Ping Assistant (meetings,
+  emails, calls, action items), Double (notes, tasks, activity), QuickBooks — and
+  updates each client's CI file with the **durable, non-sensitive** facts (secrets /
+  PII stay in Double / Drive, linked). Every auto-added item notes its **source and
+  date**, and git makes it reversible.
+- **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
+  **emails Lilian a report**: what's new in each client's CI, and the items
+  **proposed for the SOP**. SOP changes are never applied without her approval.
+- **Complement — a freshness check at query time.** When someone asks about a client,
+  Claude can still do a quick "anything new since the last sweep?" top-up, so answers
+  are current between runs.
+
+**Guardrails.** Scope the sweep to **active clients** (those with CI files / a
+priority list), not the whole book, to respect tool budgets (e.g. Odoo's 50 calls /
+day). Never commit sensitive data. Note the source of each fact. **Past Claude chat
+sessions are not a sweepable source** — only what's written to the repo / Double /
+Ping / QuickBooks persists; that is why this file exists.
+
+Built as the scheduled form of the `client-intelligence` skill (IDEA-15), using the
+[`automated-email-reports`](../../.claude/skills/automated-email-reports/) playbook
+for the email.
 
 ## What's here
 

@@ -722,10 +722,17 @@ stays identical for every client **without depending on anyone's memory**. Two j
    **CI-only** content (outstanding tasks, meeting notes) leaked into the SOP. It
    **proposes** the edits; a person approves (what belongs in the SOP is a judgment).
 
-Runs on demand in any session; the scheduled version is a **weekly Claude Routine**
-(like the repo-audit Routine) that runs the gap audit + the CI↔SOP sync and reports
-drift — the automation Lilian asked for so info never sits in one place and not the
-other.
+Runs on demand in any session; the scheduled version is a **weekend Claude Routine**
+that (a) **sweeps Ping / Double / QuickBooks** for what's new and auto-enriches each
+active client's CI file (durable, non-sensitive, sourced facts), (b) runs the gap
+audit + the CI↔SOP sync, and (c) **emails Lilian a report** of what's new plus the
+items **proposed for the SOP** — SOP changes are applied only with her approval. Uses
+the [`automated-email-reports`](./.claude/skills/automated-email-reports/) playbook.
+Scope the sweep to active clients to respect tool budgets (e.g. Odoo's 50 calls/day).
+
+**Decided with Lilian (Jul 2026):** CI and SOP are two separate interlinked docs (SOP
+stays clean); **no SOP change without Lilian's approval**; freshness is a **periodic
+weekend sweep into the repo** (primary) + a query-time top-up (complement).
 
 **Why it matters:** Lilian explicitly asked Claude — not the human — to guarantee
 consistency across a client base that grows over months; no one can watch every
