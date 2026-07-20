@@ -76,7 +76,8 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 ### Log
 - 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
   (QuickBooks Online). Sales-tax details to come from Lilian.
-- 2026-07-20 — Sweep: **no Double notes yet, and no record in Ping Assistant** for "Atman Parts" (no meetings/emails indexed). Nothing new to add — the sales-tax details need to come from Lilian.
+- 2026-07-20 — Sweep: no Double notes yet.
+- 2026-07-20 — Correction: Atman **is** in Ping, indexed under the **owner's individual contact** (not the business name "Atman Parts") — that is why the first search missed it. To find it in Ping, search by the owner (see the Double/Ping contact), not "Atman Parts". Found a client meeting **"Vitaliy Atman Follow Up" (2026-07-20)** with Julia. The auto-transcript is rough/multilingual (mentions sales tax), so the concrete sales-tax details still need a clean capture — from Lilian, or a careful read of that meeting.
 
 ### Information still needed
 - [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)

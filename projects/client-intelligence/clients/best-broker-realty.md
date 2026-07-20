@@ -55,17 +55,16 @@ the actual details.
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood.
 - **What & when:** Local business-license receipt; renewed annually.
 - **Our role:** The firm handled the filing.
-- **Current status:** In progress, **blocked on the DBPR license** — _(Double note, 2026-07-15)_:
-  - **Broward County side is complete** (received 2026-07-15). The **City of Hollywood** application is in "Applied For".
-  - The city is **correcting the tax category** to **Broker/Real Estate** (an additional fee applies) and **requires Best Broker's DBPR real-estate license** — the brokerage **CQ** license (ideally also the qualifying broker's **BK**) — before proceeding.
-  - **Do not pay the category difference** until the city sends payment instructions.
-  - The **DBPR license was not in the firm's Drive** as of 2026-07-15 — obtain from the client or print from myfloridalicense.com (verify Active; name + business address must match).
+- **Current status:** In progress — **DBPR license sent; awaiting the city's payment instructions** _(Double note 2026-07-15; Gmail 2026-07-16)_:
+  - **Broward County side is complete** (received 2026-07-15). The **City of Hollywood** application (in "Applied For") is being **re-categorized to Broker/Real Estate** (an additional fee applies).
+  - The client provided the **DBPR real-estate license** (brokerage **CQ**; the qualifying broker's **BK**), and the firm **emailed it to the City of Hollywood on 2026-07-16** (reply to the city's category-correction email).
+  - **Next:** wait for the city's **payment instructions** for the corrected category, then pay the difference — do not pay before they send instructions.
   - Application number, folio and amounts are in the Double note.
 - **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
 
 ## 5. Key facts & quirks
 
-- As a real estate brokerage, the City of Hollywood BTR requires a **DBPR real-estate license** (brokerage **CQ**, ideally the qualifying broker's **BK**) — confirm the business holds one before paying any category difference.
+- As a real estate brokerage, the City of Hollywood BTR requires a **DBPR real-estate license** (brokerage **CQ**, ideally the qualifying broker's **BK**). The client provided it; the firm sent it to the city on **2026-07-16**.
 - Best Broker is the **master tenant** at its Hollywood, FL business location; **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
 
 ## 6. History & open questions
@@ -73,11 +72,12 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the BTR work (FOLLOW-UPS) and the Double record (BEST BROKER REALTY LLC, QBO).
 - 2026-07-20 — Sweep: enriched the City of Hollywood BTR status from the Double note (2026-07-15). No Ping meetings indexed; a contact is on file in Double/Ping.
+- 2026-07-20 — Update (Lilian): the DBPR license was obtained from the client and emailed to the city. **Confirmed in Gmail** — julia@ → BusinessTax@hollywoodfl.org, **2026-07-16**, "Please see attached the license" (application #40663). Now awaiting the city's payment instructions.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
 - [ ] Which recurring services we provide (bookkeeping? sales tax? payroll? income tax?)
-- [ ] Resolve the DBPR state-license question and finish the Hollywood BTR
+- [ ] Finish the Hollywood BTR — await the city's payment instructions, then pay the category difference
 - [ ] Where credentials live (Drive vault link)
 
 ## 7. Links
