@@ -89,7 +89,11 @@ client-intelligence/
 
 | Client | File | Owner | Status |
 |---|---|---|---|
-| Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | In progress |
+| Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | In progress — sales tax next |
+| BEST BROKER REALTY LLC | [`clients/best-broker-realty.md`](./clients/best-broker-realty.md) | Lilian | In progress — BTR captured |
+| ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP |
+| Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | In progress — skeleton only |
+| Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
 
 ## Brand & design
 
@@ -108,7 +112,7 @@ profile is ever turned into a presented document, apply the shared
 - **Proposed engine (not built yet):** a `client-intelligence` skill that (a)
   creates a new client from the template and (b) runs the consistency + gap audit
   the same way in any session. Build it once we have a second client to prove the
-  workflow (see [`../../BACKLOG.md`](../../BACKLOG.md)).
+  workflow (tracked as **IDEA-15** in [`../../BACKLOG.md`](../../BACKLOG.md)).
 
 ## Outputs
 

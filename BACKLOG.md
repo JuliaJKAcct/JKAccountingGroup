@@ -40,6 +40,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 | [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
+| [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/`](./.claude/skills/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | Not started — **Lilian wants this**; build when working the 2nd client (trigger now met) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -701,6 +702,42 @@ standard, reproducible deliverable. No external dependency.
 **Priority:** Medium · **Status:** **Built (v1, Jul 2026)** — update the skill
 after Lilian's final BTR SOP review (and after each future review round that
 establishes a new preference; the skill is the memory of "how we like SOPs").
+
+---
+
+## IDEA-15 — `client-intelligence` skill (create-from-template + gap audit)
+
+**What Lilian wants:** the reusable **engine** behind the
+[`client-intelligence`](./projects/client-intelligence/) project, so the structure
+stays identical for every client **without depending on anyone's memory**. Two jobs:
+1. **Create a client** — copy `_client-template.md` to `clients/<slug>.md`, fill the
+   header from Double (name, platform, deep link), add the Clients-index row.
+2. **Consistency + gap audit** — scan all of `clients/`, verify every file has the
+   full template section set (nothing dropped or renamed), and report each client's
+   `_(pending)_` fields and "Information still needed" list, so we always know what
+   to gather next per client. Later, run it on a schedule.
+
+**Why it matters:** Lilian explicitly asked Claude — not the human — to guarantee
+consistency across a client base that grows over months; no one can watch every
+client at once. A skill makes "same structure for everyone, gaps visible" a
+repeatable, any-session behavior instead of a per-chat effort.
+
+**Where it fits:** a new skill in [`.claude/skills/`](./.claude/skills/), referenced
+from [`projects/client-intelligence/README.md`](./projects/client-intelligence/README.md).
+Sibling to [`sop-authoring`](./.claude/skills/sop-authoring/): client intelligence is
+the *facts* layer, SOPs are the *procedure* layer it feeds.
+
+**What we need to start:** nothing external — the project, template, and first client
+files already exist. Lilian asked to **build it when we work the second client**; that
+trigger is now met (Atman Parts + Best Broker Realty + Ecoorganic + Kolo Florida + Pro
+Title Agency all have files). Build once we confirm the template shape is stable.
+
+**Capability check:** fully buildable now — a documentation skill (the canonical
+structure + the audit procedure) plus optional Double lookups to seed each header.
+No external dependency.
+
+**Priority:** Medium · **Status:** Not started — **remember to build this** when
+working the next client (Lilian's standing request).
 
 ---
 
