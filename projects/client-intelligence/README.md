@@ -140,7 +140,8 @@ Ping / QuickBooks persists; that is why this file exists.
 
 Built as the scheduled form of the `client-intelligence` skill (IDEA-15), using the
 [`automated-email-reports`](../../.claude/skills/automated-email-reports/) playbook
-for the email.
+for the email. The exact routine prompt + web-UI setup steps live in
+[`automation/weekend-ci-sweep.md`](./automation/weekend-ci-sweep.md).
 
 ## What's here
 
@@ -148,8 +149,14 @@ for the email.
 client-intelligence/
 ├── README.md              ← you are here (rules + Clients index)
 ├── _client-template.md    ← the canonical structure — copy it to start a client
-└── clients/
-    └── atman-parts.md      ← first client (in progress)
+├── automation/
+│   └── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
+└── clients/               ← one file per client (see the Clients index above)
+    ├── atman-parts.md
+    ├── best-broker-realty.md
+    ├── ecoorganic-usa.md
+    ├── kolo-florida.md
+    └── pro-title-agency.md
 ```
 
 ## Clients
