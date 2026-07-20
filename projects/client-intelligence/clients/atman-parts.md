@@ -76,6 +76,7 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 ### Log
 - 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
   (QuickBooks Online). Sales-tax details to come from Lilian.
+- 2026-07-20 — Sweep: **no Double notes yet, and no record in Ping Assistant** for "Atman Parts" (no meetings/emails indexed). Nothing new to add — the sales-tax details need to come from Lilian.
 
 ### Information still needed
 - [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)

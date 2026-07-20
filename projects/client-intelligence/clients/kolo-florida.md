@@ -62,6 +62,7 @@ the actual details.
 
 ### Log
 - 2026-07-20 — Profile started from the Double record (Kolo Florida Inc, QBO). Confirmed by Lilian as the client she referred to as "Colo". Almost everything still to gather.
+- 2026-07-20 — Sweep: no Double notes and **no indexed Ping meetings**; one primary contact is on file in Double/Ping. Still almost everything to gather.
 
 ### Information still needed
 - [ ] Industry / what they do

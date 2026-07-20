@@ -74,6 +74,7 @@ the actual details.
 
 ### Log
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
+- 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
