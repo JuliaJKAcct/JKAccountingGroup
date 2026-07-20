@@ -118,7 +118,7 @@ FOR EACH CLIENT:
 
 THEN:
 - Commit the client-intelligence changes to a branch named weekend-ci-sweep (create or reset from main), with a clear message, and push it. Nothing else.
-- Compose ONE email using the committed email template and POST it exactly once to the webhook:
+- Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design) and POST it exactly once to the webhook:
   URL: <WEBHOOK_URL>   SECRET: <WEBHOOK_SECRET>   TO: lilian@jkaccountinggroup.com
   Subject: "Client Intelligence — weekly sweep <run date>"
   Body per client: what's new in CI (with sources) + items PROPOSED for the SOP (approve/reject). Include the weekend-ci-sweep branch name.
@@ -127,12 +127,18 @@ THEN:
 If a source/connector is unavailable, say so in the report rather than guessing.
 ```
 
-## Still to build (before first live run)
+## The email template (built)
 
-- **Email template** — an email-safe, on-brand HTML template for this report (copy
-  the shape of
-  [`../../recurring-expense-monitoring/reference/email-template.html`](../../recurring-expense-monitoring/reference/email-template.html)).
-  Commit it and have the prompt fill it. Until then, the run can send a plain
-  structured HTML report as a stopgap for the test.
+[`email-template.html`](./email-template.html) — the on-brand, email-safe template
+the routine fills (built Jul 2026 with the `impeccable` skill on the Atlas design
+system, following the shape of the proven
+[`recurring-expense-monitoring` template](../../recurring-expense-monitoring/reference/email-template.html)).
+Per-client section order: **Proposed for the SOP** (bronze — the action;
+reply-to-approve) → **New in CI — saved** (blue, source-tagged) → **Still needed**
+(amber list) → **Nothing new** (green one-liner). Sample content is fictional; the
+run replaces it with the real swept clients.
+
+## Still to build
+
 - Eventually, fold the sweep logic into the `client-intelligence` skill (IDEA-15) so
   the prompt just says "follow the client-intelligence skill."
