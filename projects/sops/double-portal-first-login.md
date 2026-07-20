@@ -59,6 +59,7 @@ Ready-to-send versions of these instructions live in
 | [`double-first-login-guide-en.html`](./client-guides/double-first-login-guide-en.html) | **Visual one-page guide, English — recommended.** Self-contained; nothing to host. |
 | [`double-first-login-guide-ru.html`](./client-guides/double-first-login-guide-ru.html) | **Visual one-page guide, Russian — recommended.** Self-contained; nothing to host. |
 | [`double-first-login-en.pdf`](./client-guides/double-first-login-en.pdf) · [`…-ru.pdf`](./client-guides/double-first-login-ru.pdf) | The visual guide exported to a single PDF page — the file you attach to an email or send on WhatsApp. Regenerate from the `…-guide-*.html` if the guide changes. |
+| [`double-first-login-en.png`](./client-guides/double-first-login-en.png) · [`…-ru.png`](./client-guides/double-first-login-ru.png) | The visual guide as a single **high-resolution image** (2581 px wide) — the WhatsApp-ready form, sent as a photo rather than a document. Rasterized from the matching PDF (so the fonts and layout are identical); regenerate whenever the PDF changes. |
 | [`double-first-login-email-template.md`](./client-guides/double-first-login-email-template.md) | **Saved email / Double message-template copy (EN + RU)** — subject + body to keep as a canned response and send whenever a client asks; attach the PDF above. |
 | [`double-first-login-whatsapp-en.md`](./client-guides/double-first-login-whatsapp-en.md) | Short WhatsApp-ready text, English |
 | [`double-first-login-whatsapp-ru.md`](./client-guides/double-first-login-whatsapp-ru.md) | Short WhatsApp-ready text, Russian |
@@ -78,8 +79,9 @@ nothing to host, works offline, and export to exactly one PDF page. To send:
   (`double-first-login-en.pdf` / `-ru.pdf`). Send it whenever a client asks. The
   body text stands on its own, and the PDF carries the visual — no image hosting,
   because email clients strip inline `data:`-URI images.
-- **WhatsApp** — send the PDF as a document, or save a full-page screenshot and
-  send as an image. One file, no separate screenshots to attach in order.
+- **WhatsApp** — send the ready-made one-page **image**
+  (`double-first-login-en.png` / `-ru.png`) as a photo, or the PDF as a document.
+  One file, no separate screenshots to attach in order.
 
 The visual guide itself carries no per-client fields; personalize the greeting
 and portal link in the email/message body (`double-first-login-email-template.md`
