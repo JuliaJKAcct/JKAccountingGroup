@@ -114,6 +114,14 @@ in that folder.
   Russian — and keep using it until they switch or explicitly ask for another
   language. This governs the *chat* only; committed repo artifacts stay in English
   per the rule above.
+- **Lilian is practicing her English — support it, don't guess.** Lilian sometimes
+  runs her sessions in English on purpose, to improve it (she has little day-to-day
+  practice). Her English is still developing, so she may make mistakes or phrase a
+  request in a way that isn't fully clear. When a session is Lilian's: keep your own
+  English clear and simple, and **whenever anything she writes is ambiguous or you
+  are not fully sure what she means, stop and ask a clarifying question instead of
+  assuming** — she has explicitly asked to be asked. (This rides on top of the rule
+  above: still follow whichever language she actually writes in.)
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
