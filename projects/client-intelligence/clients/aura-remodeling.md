@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** AURA REMODELING LLC
-- **Entity type:** LLC _(Double; tax-return type not set)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** Remodeling / construction _(from the business name — confirm)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A; income tax **not** handled by us _(Double: Income Tax = no)_. **Assigned bookkeeper: Lilian.** _(Double properties, 2026-07-20)_
+- **Entity type:** LLC — appears to be a **two-owner LLC**, so likely **partnership (Form 1065)** by default _(inference, medium confidence; tax-return type not set in Double)_.
+- **Home state:** Likely **Illinois** _(low-medium confidence — owner's IL area code + an IL attorney for a related family company; not documented — verify)_.
+- **Industry / what they do:** **Remodeling / construction contractor** (residential + commercial) — confirmed by the 1099-to-subcontractor + customer-project pattern. _(Gmail — high confidence)_
+- **Primary language:** **Ukrainian** (client writes in Ukrainian; firm also uses Russian). _(Gmail)_
+- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **1099 preparation** (subcontractors); annual-report filing. Sales tax N/A; payroll N/A; **income tax NOT our service** per Double. **Bookkeeper transitioned to Lilian effective May 1, 2026** (prior bookkeeper reportedly stayed on as tax preparer). _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -61,7 +61,7 @@ the actual details.
 - **Applies?** Yes — **quarterly** _(Double)_
 
 ### Income tax
-- **Applies?** **Not by us** — Income Tax = no _(Double)_. (Confirm who files their return.)
+- **Applies?** Double marks it **not our service** _(Income Tax = no)_. The prior bookkeeper reportedly **stayed on as tax preparer** after the May-2026 handoff — **confirm who actually files the return** and the entity's tax classification (partnership 1065 inferred).
 
 ### Licenses & other filings
 - **Annual report:** Yes — we handle it _(Double)_
@@ -69,22 +69,31 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- The firm's chart-of-accounts grammar is described as "Masciave/**Aura**-style" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)).
+- The firm's chart-of-accounts grammar is described as "Masciave/**Aura**-style" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/SOP knowledge)_
 - As a **remodeling/construction** business, expect **subcontractors** → 1099 tracking (W-9s) and job-costing.
+- **Two principals** (co-owners) run the account; both receive the quarterly financials.
+- **Heavy personal / business commingling — the main bookkeeping challenge:** an Amex and Bank of America activity appear in the books but aren't connected accounts; a personal checking account is used for business transfers — ongoing need to reclassify personal items to owner's draw / distributions.
+- **Bank-feed instability:** a connected Chase credit card stopped syncing (statements missing since late 2025); a newer Chase card isn't connected (likely a card replacement to confirm). Only a Chase debit + one Chase credit card are connected in QBO.
+- **Books run late** — Q1 2026 was significantly behind; the mid-July 2026 recurring-expense check flagged QuickBooks as late again.
+- The owner is linked to a **related family entity** (Double) — the family has other companies.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; quarterly bookkeeping; 1099 prep; income tax not handled by us). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties. Ping / Gmail history **not yet swept** — the Saturday routine will do the first full pass.
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; quarterly bookkeeping; 1099 prep; income tax not handled by us). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
+- 2026-07-20 — **Gmail enrichment sweep:** established the remodeling / construction profile, likely IL (low confidence), Ukrainian language, two-owner LLC, the commingling / bank-feed / late-books challenges, and the May-2026 bookkeeper handoff. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.
+- Confirm the older **Chase credit card** was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync.
+- Resolve an **invoice-to-deposit mismatch** with a customer and chase a **customer invoice unpaid since January 2026**.
+- **QuickBooks flagged behind** in the July 2026 recurring-expense review — bookkeeping catch-up needed.
 
 ### Information still needed
-- [ ] Confirm industry; home state; primary language; fiscal year-end
-- [ ] Who prepares the income-tax return (not us); entity/tax classification
-- [ ] Contacts by role; credentials Drive link; Ping / Gmail context (first sweep pending)
+- [ ] Confirm home state (IL inferred); fiscal year-end
+- [ ] Who prepares the income-tax return; confirm entity / tax classification (1065 inferred)
+- [ ] Credentials Drive link
 
 ## 7. Links
 

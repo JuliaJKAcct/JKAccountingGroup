@@ -39,12 +39,12 @@ list grows.
 | ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
 | Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
 | Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
-| NEVER GIVE UP KK LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
-| YES TEAM CORP | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
-| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | Ping + Gmail + Double-notes history not yet swept (built from Double properties only) |
-| iKids Group LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
-| Deep Tech Development LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
-| AURA REMODELING LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
+| NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
+| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| iKids Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
+| Deep Tech Development LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
+| AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 
 _Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
 for all five;
