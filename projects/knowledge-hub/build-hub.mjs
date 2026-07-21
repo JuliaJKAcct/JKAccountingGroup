@@ -741,7 +741,7 @@ const BODY = `
   // Chart-of-Accounts tool: edit numbers/names, untick accounts, download a QuickBooks CSV.
   var coaDL = document.getElementById('coaDL');
   if(coaDL){
-    function cf(s){ s=(s==null?'':''+s); return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }
+    function cf(s){ s=(s==null?'':''+s); return /[",\\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }
     function buildCsv(){
       var out=['Account Number,Account Name,Type,Detail Type,Description'];
       [].forEach.call(document.querySelectorAll('.coa-row'), function(tr){
@@ -750,7 +750,7 @@ const BODY = `
         var name=(tr.querySelector('.coa-namein')||{}).value||'';
         out.push([num.trim(),name.trim(),tr.getAttribute('data-type'),tr.getAttribute('data-detail'),tr.getAttribute('data-desc')].map(cf).join(','));
       });
-      coaDL.setAttribute('href','data:text/csv;charset=utf-8,'+encodeURIComponent(out.join('\r\n')));
+      coaDL.setAttribute('href','data:text/csv;charset=utf-8,'+encodeURIComponent(out.join('\\r\\n')));
     }
     // rebuild the CSV href right before the click, and whenever the tables change
     coaDL.addEventListener('pointerdown', buildCsv);
