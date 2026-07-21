@@ -207,6 +207,25 @@ html.reader-open{overflow:hidden;}
 .flow .mermaid{background:var(--surface); border:1px solid var(--border-subtle); border-radius:14px;
   padding:18px; margin:8px 0; overflow-x:auto; text-align:center;}
 
+/* client-guide images shown inline in the reader, with PNG/PDF downloads */
+.guides{display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:18px; margin:20px 0 8px;}
+.guide{margin:0; background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px;
+  overflow:hidden; box-shadow:var(--shadow-sm);}
+.guide-hd{display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding:11px 14px; border-bottom:1px solid var(--border-subtle); background:var(--paper);}
+.guide-lang{font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+  font-weight:600; color:var(--accent-2);}
+.guide-dl{display:inline-flex; gap:7px;}
+.dlbtn{display:inline-flex; align-items:center; gap:6px; text-decoration:none;
+  font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:0.05em;
+  color:#fff; background:var(--teal-800); border-radius:8px; padding:7px 12px;
+  transition:background .16s var(--ease-out), transform .16s var(--ease-out);}
+.dlbtn:hover{background:var(--teal-600); color:#fff; transform:translateY(-1px);}
+.dlbtn svg{width:13px; height:13px;}
+:root[data-theme="dark"] .dlbtn{background:var(--accent); color:#0D2A31;}
+:root[data-theme="dark"] .dlbtn:hover{background:var(--accent-2); color:#0D2A31;}
+.guide-img{display:block; width:100%; height:auto; background:#fff;}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}

@@ -123,6 +123,7 @@ const IC = {
   people: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><circle cx="10" cy="8" r="3.2"/><path d="M20 20v-1.5a3.5 3.5 0 0 0-2.6-3.4M15 5.2a3.2 3.2 0 0 1 0 5.6"/></svg>',
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
 };
 
 /* ---------------- SOP → Atlas reader (open the designed page INSIDE the Hub) ----------------
@@ -218,6 +219,32 @@ function readerMeta(owner, updated){
     + (owner ? '<span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>'+esc(owner)+'</b></span>' : '')
     + (updated ? '<span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>'+esc(updated)+'</b></span>' : '');
 }
+// embed a binary asset as a data URI (self-contained: works offline / in the Artifact)
+function dataUri(mime, relPath){
+  return 'data:' + mime + ';base64,' + readFileSync(resolve(repoRoot, relPath)).toString('base64');
+}
+// a "send this to your client" block: the visual guide images shown inline + PNG/PDF downloads.
+// Team-facing — no repo/GitHub links, everything embedded.
+function guidesBlock(guides){
+  const cards = guides.map((g) => {
+    const base = 'projects/sops/client-guides/';
+    const png = dataUri('image/png', base + g.png);
+    const pdf = dataUri('application/pdf', base + g.pdf);
+    return `<figure class="guide">
+      <figcaption class="guide-hd">
+        <span class="guide-lang">${esc(g.lang)}</span>
+        <span class="guide-dl">
+          <a class="dlbtn" href="${pdf}" download="${esc(g.pdf)}">${IC.dl}PDF</a>
+          <a class="dlbtn" href="${png}" download="${esc(g.png)}">${IC.dl}PNG</a>
+        </span>
+      </figcaption>
+      <img class="guide-img" src="${png}" alt="Client sign-in guide (${esc(g.lang)})" loading="lazy">
+    </figure>`;
+  }).join('');
+  return `<div class="shead"><span class="schip">✦</span><h2>Send this to your client</h2></div>`
+    + `<p class="prose">The ready-to-send one-page guide. It shows here, and you can <b>download it as PDF or PNG</b> to send by email or WhatsApp.</p>`
+    + `<div class="guides">${cards}</div>`;
+}
 // BTR: reuse the hand-laid render's masthead+main (the premium designed page)
 function btrReaderInner(){
   try{
@@ -258,7 +285,13 @@ const SOP_GROUPS = [
     name: 'Client portal (Double)', note: 'Getting clients into the portal, on-brand',
     items: [
       { file: 'double-portal-first-login.md', title: 'Double Portal — First-Time Sign-In',
-        blurb: 'The reliable password-reset workaround for the Double client portal, plus ready-to-send client guides (visual guide + PDF, email, WhatsApp — EN & RU).' },
+        blurb: 'The reliable password-reset workaround for the Double client portal, plus ready-to-send client guides (visual guide + PDF, email, WhatsApp — EN & RU).',
+        // team page: cut the internal file table + "recommended" notes, show the guide images instead
+        truncateAt: 'Client-ready templates',
+        guides: [
+          { lang: 'English', png: 'double-first-login-en.png', pdf: 'double-first-login-en.pdf' },
+          { lang: 'Russian', png: 'double-first-login-ru.png', pdf: 'double-first-login-ru.pdf' },
+        ] },
       { file: 'double-portal-branding.md', title: 'Double Portal — Branding Setup',
         blurb: 'The firm’s on-brand configuration of the Double client portal — exact brand / button / background hex mapped to the design system, plus logo & favicon assets.' },
     ],
@@ -284,17 +317,27 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     const text = [it.title, it.blurb, grp.name, owner, it.tag, it.perClient ? 'per-client runbook' : '']
       .join(' ').toLowerCase();
 
-    // build the reader doc: BTR uses its premium hand-laid render; others auto-render
-    const btr = /business-tax-receipt/.test(it.file) ? btrReaderInner() : null;
-    const inner = btr || (
-      `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
-      + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
-      + `<div class="page">${mdToAtlas(md)}</div>`
-    );
+    // build the reader doc: BTR uses its premium hand-laid render; others auto-render (curated)
+    let inner;
+    if (/business-tax-receipt/.test(it.file)) {
+      inner = btrReaderInner();
+    } else {
+      let md2 = md;
+      if (it.truncateAt) {                      // drop internal-only sections from the team page
+        const re = new RegExp('\\n#{2}\\s+' + it.truncateAt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+        const cut = md2.search(re);
+        if (cut !== -1) md2 = md2.slice(0, cut);
+      }
+      let bodyHtml = mdToAtlas(md2);
+      if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
+      inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
+        + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+        + `<div class="page">${bodyHtml}</div>`;
+    }
     readerDocs.push(`<div class="rdoc" data-doc="${id}" hidden>${inner}</div>`);
 
     return `
-      <a class="hcard doc-card" href="${esc(blob(rel))}" data-open-doc="${id}" data-doc-name="${esc(it.title)}"
+      <a class="hcard doc-card" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(it.title)}"
          data-card data-type="sop" data-owner="${ok}" data-text="${esc(text)}">
         ${IC.arrow}
         <div class="khead">
@@ -397,7 +440,7 @@ const BODY = `
     <div class="lead">
       <p class="t">How this works</p>
       <p>This is the <b>review Hub</b> — it shows <b>everything in the repo</b>, including work still in progress. It’s where the team reviews what we’ve built. When a document is approved and marked <b>ready</b>, we publish just that one to the team site.</p>
-      <p>The repo stays the single source of truth; this page is generated from it. Every card opens the real file on GitHub.</p>
+      <p>The repo stays the single source of truth; this page is generated from it. Procedures open as designed pages right here; client cards expand in place.</p>
     </div>
     <div class="legend">
       <p class="t">How to use it</p>
@@ -573,7 +616,9 @@ const BODY = `
   }
   function closeDoc(){ reader.hidden = true; root.classList.remove('reader-open'); }
   [].forEach.call(document.querySelectorAll('[data-open-doc]'), function(a){
-    a.addEventListener('click', function(e){ e.preventDefault(); openDoc(a.getAttribute('data-open-doc'), a.getAttribute('data-doc-name')); });
+    function go(e){ e.preventDefault(); openDoc(a.getAttribute('data-open-doc'), a.getAttribute('data-doc-name')); }
+    a.addEventListener('click', go);
+    a.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' ') go(e); });
   });
   var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
   var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
