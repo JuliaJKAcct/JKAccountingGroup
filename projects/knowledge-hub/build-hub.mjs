@@ -356,6 +356,55 @@ function ecoorganicReaderInner(owner, updated){
     + `</div>`;
 }
 
+/* ---- Chart of Accounts — firm standard (rendered from the master, generated JSON) ---- */
+const COA = (() => { try { return JSON.parse(read(resolve(here, 'coa-standard.json'))); } catch (e) { return []; } })();
+function coaReaderInner(owner, updated){
+  const ORDER = ['Assets','Liabilities','Equity','Income','Cost of Goods Sold','Operating Expenses','Other Income','Other Expense','Triage & holding'];
+  const RANGE = {'Assets':'100–199','Liabilities':'200–299','Equity':'300–399','Income':'400–499','Cost of Goods Sold':'500–599','Operating Expenses':'600–799','Other Income':'800–899','Other Expense':'900–989','Triage & holding':'990–999'};
+  const byClass = {}; COA.forEach(a => { (byClass[a.class] = byClass[a.class] || []).push(a); });
+  const classes = ORDER.filter(c => byClass[c]);
+
+  const rangeTable = `<div class="tablewrap"><table class="links"><thead><tr><th>Range</th><th>Class</th><th>Accounts</th></tr></thead><tbody>`
+    + classes.map(c => `<tr><td class="coa-num">${esc(RANGE[c])}</td><td>${esc(c)}</td><td>${byClass[c].length}</td></tr>`).join('')
+    + `</tbody></table></div>`;
+
+  const rules = `<ol class="qlist">`
+    + `<li><b>One backbone, many niches.</b> The ranges above are fixed for every client — adapt <em>within</em> them, don't invent a parallel scheme.</li>`
+    + `<li><b>Parent categories hold nothing.</b> An account tagged <span class="coa-tag">parent</span> is grouping-only — always post to a sub-account.</li>`
+    + `<li><b>Sub-accounts use decimals + <code>Parent:Child</code> names</b> (e.g. <code>605.2 Advertising:Website</code>). Add the next free decimal.</li>`
+    + `<li><b>Leave gaps</b> (605, 610, 612 …) so a new account slots in without renumbering.</li>`
+    + `<li><b>Keep each account's QBO Type &amp; Detail Type</b> — that mapping drives the tax return.</li>`
+    + `<li><b>Adapt, don't reinvent:</b> revenue → sub-accounts under 400 Net Sales · job costs → 500 COGS · niche costs → the closest 600–799 parent. New number only if nothing fits.</li>`
+    + `<li><b>Triage discipline:</b> 998 (review for capitalization) and 999 (uncategorized) clear to <b>$0 at close</b>.</li>`
+    + `</ol>`;
+
+  const classAcc = classes.map((c, idx) => {
+    const rows = byClass[c].map(a => {
+      const indent = a.depth > 0 ? `<span class="coa-in" style="--d:${a.depth}"></span>` : '';
+      const nameCell = a.parent
+        ? `<b>${esc(a.leaf || a.name)}</b> <span class="coa-tag">parent · use sub-accounts</span>`
+        : `${indent}${esc(a.leaf || a.name)}`;
+      return `<tr class="${a.parent ? 'coa-parent' : ''}"><td class="coa-num">${esc(a.num)}</td><td>${nameCell}</td><td class="coa-desc">${esc(a.desc)}</td></tr>`;
+    }).join('');
+    const body = `<div class="tablewrap"><table class="links coa-tbl"><thead><tr><th>#</th><th>Account</th><th>What it's for</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    return acc(RANGE[c].split('–')[0], esc(c), byClass[c].length + ' accounts', body, false);
+  }).join('');
+
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Bookkeeping standard · firm-wide</p>`
+    + `<h1>Chart of Accounts<span class="loc">One numbering system, adapted per client</span></h1>`
+    + `<p class="lede">We don't force one chart on every client — but we keep the same <b>skeleton</b> so any bookkeeper can read any client's books and the tax mapping stays consistent. What changes per client is which accounts are active and the niche sub-accounts you add.</p>`
+    + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+    + `<div class="page">`
+    + `<div class="shead"><span class="schip">1</span><h2>The system — number ranges</h2></div>`
+    + `<p class="slede">Each account's class is its number range. The range and its meaning never change.</p>` + rangeTable
+    + `<div class="shead"><span class="schip">2</span><h2>The rules that keep it organized</h2></div>` + rules
+    + `<div class="callout note"><div class="cx"><div class="cl">Adapting for a client</div><p>Import the master, <b>activate</b> what the client uses &amp; <b>deactivate</b> the rest (don't delete — keeps numbering stable), <b>rename</b> the flagged accounts, and <b>add niche sub-accounts</b> under the right parent. Client-specific quirks go in that client's bookkeeping SOP, not here.</p></div></div>`
+    + `<div class="shead"><span class="schip">3</span><h2>The full account list</h2></div>`
+    + `<p class="slede">The firm master — ${COA.length} accounts. Open a class to see its accounts; parents are grouping-only.</p>` + classAcc
+    + `</div>`;
+}
+
 /* ---------------- SOP catalog (categories + curated short titles/blurbs) ---------------- */
 const SOP_GROUPS = [
   {
@@ -375,8 +424,10 @@ const SOP_GROUPS = [
     ],
   },
   {
-    name: 'Bookkeeping', note: 'Monthly close & review',
+    name: 'Bookkeeping', note: 'The standard, then per-client runbooks',
     items: [
+      { file: 'chart-of-accounts-standard.md', title: 'Chart of Accounts — Firm Standard', coa: true,
+        blurb: 'The firm’s one numbering system for every client — the ranges (100 assets … 999 triage), the rules that keep it organized, and the full 125-account master. Adapt per niche, don’t reinvent.' },
       { file: 'ecoorganic-bookkeeping-review.md', title: 'Ecoorganic — Monthly Bookkeeping & Review', perClient: true,
         blurb: 'Ecoorganic’s monthly categorization rules, chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. A per-client runbook.' },
     ],
@@ -420,7 +471,9 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     // build the reader doc: BTR uses its premium hand-laid render; Ecoorganic uses the
     // dynamic bookkeeping pilot layout; the rest auto-render (curated) from Markdown.
     let inner;
-    if (/business-tax-receipt/.test(it.file)) {
+    if (it.coa) {
+      inner = coaReaderInner(owner, updated);
+    } else if (/business-tax-receipt/.test(it.file)) {
       inner = btrReaderInner();
     } else if (/ecoorganic/.test(it.file)) {
       inner = ecoorganicReaderInner(owner, updated);

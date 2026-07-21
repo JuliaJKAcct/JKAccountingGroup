@@ -272,6 +272,19 @@ html.reader-open{overflow:hidden;}
 .stpill.w{color:var(--warn-text); background:var(--warn-bg); border:1px solid var(--warn-bd);}
 .stpill.i{color:var(--info-text); background:var(--info-bg); border:1px solid var(--info-bd);}
 
+/* Chart-of-accounts tables */
+.coa-num{font-family:var(--mono); font-size:12px; color:var(--accent-2); white-space:nowrap; font-weight:600;}
+.coa-tbl td{font-size:13px; vertical-align:top;}
+.coa-tbl td:first-child{white-space:nowrap;}
+.coa-tbl .coa-desc{color:var(--muted); font-size:12px; line-height:1.45;}
+.coa-tbl tr.coa-parent td{background:var(--paper);}
+.coa-tbl tr.coa-parent td:nth-child(2){color:var(--ink); font-weight:600;}
+.coa-in{display:inline-block; width:calc(var(--d,0) * 15px);}
+.coa-tag{display:inline-block; font-family:var(--mono); font-size:8.5px; letter-spacing:0.06em; text-transform:uppercase;
+  font-weight:600; color:var(--muted); background:var(--greige-100); border:1px solid var(--border-subtle);
+  border-radius:999px; padding:2px 6px; margin-left:6px; white-space:nowrap; vertical-align:1px;}
+:root[data-theme="dark"] .coa-tag{background:rgba(236,230,218,0.06);}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}
