@@ -27,13 +27,16 @@ For the scoped clients, once per week:
    the assigned staff — clean and non-sensitive (skip EIN / Tax ID).
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
-   source + date). Commit to a branch `weekend-ci-sweep`, push. **Never** touches
+   source + date). Commit to the run's working branch and push. **Never** touches
    anything under `projects/sops/`.
-3. **CI ↔ SOP sync** — for clients that have a SOP, list what changed in the CI
-   Operating zone that the SOP doesn't yet reflect. **Proposals only.**
-4. **Email Lilian one report** — per client: what's new in CI, and the items
-   **proposed for the SOP** to approve/reject. SOP changes are applied only after
-   Lilian approves, in a normal session.
+3. **CI → SOP proposals** — for clients that have a SOP, append the new Operating-zone
+   facts the SOP doesn't yet reflect to the queue
+   [`sop-proposals.md`](../sop-proposals.md) as **Pending** (with IDs; dedup — never
+   queue the same candidate twice). **Never** writes an SOP.
+4. **Email Lilian one report** — per client: what's new in CI, and the **Pending SOP
+   proposals** (with their IDs) to approve/reject. She approves by ID in a normal
+   session; Claude then applies the approved ones (via `sop-authoring`: PR → review →
+   merge) and marks the queue. See [`sop-proposals.md`](../sop-proposals.md) for the loop.
 
 **Guardrails:** non-sensitive only (secrets/PII stay in Double/Drive, referenced by
 link); source every fact; scope to the client list below (tool budgets — e.g. Odoo is
@@ -173,15 +176,20 @@ FOR EACH CLIENT:
    - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
    Keep it bounded (~10-15 calls/client).
 2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, EINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. Update "Last updated".
-3. Do NOT modify anything under projects/sops/. Instead, for clients with a SOP, note which new Operating-zone facts the SOP does not yet reflect -- these are PROPOSALS for Lilian.
+3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
 
 THEN:
-- Commit the client-intelligence changes to a branch named weekend-ci-sweep (create or reset from main), with a clear message, and push it. Nothing else.
-- Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design) and POST it exactly once to the webhook:
-  URL: <WEBHOOK_URL>   SECRET: <WEBHOOK_SECRET>   TO: lilian@jkaccountinggroup.com
-  Subject: "Client Intelligence — weekly sweep <run date>"
-  Body per client: what's new in CI (with sources) + items PROPOSED for the SOP (approve/reject). Include the weekend-ci-sweep branch name.
-- EXACTLY ONCE: one POST, one recipient. Stop when the webhook returns {"ok":true}. Do not retry on success.
+- Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) to your working branch and push. Do NOT merge to main and do NOT touch projects/sops/. (A human reviews/merges the branch and applies approved proposals in a normal session.)
+- Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
+  Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
+  Body per client: what's new in CI (with sources) + the Pending SOP proposals with their IDs (approve/reject). Include the working branch name.
+- SEND through the webhook EXACTLY ONCE — one POST, one recipient. Build payload.json with python3 (json.dump; keys "secret","to","subject","html","text"), then:
+    code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
+  IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):
+  * HTTP 302 (redirect to script.googleusercontent.com) OR 200 with {"ok":true} = the email WAS SENT. STOP — do not POST again (a retry sends a duplicate).
+  * A "Page Not Found" / 405 you get from FOLLOWING the redirect is NORMAL and does NOT mean failure — that is why we do not use -L.
+  * Only 401 / 403 / 5xx is a real failure — then retry ONCE.
+  Report the exact HTTP status code you got.
 
 If a source/connector is unavailable, say so in the report rather than guessing.
 ```

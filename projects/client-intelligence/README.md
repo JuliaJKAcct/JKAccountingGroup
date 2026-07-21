@@ -158,6 +158,7 @@ for the email. The exact routine prompt + web-UI setup steps live in
 client-intelligence/
 ├── README.md              ← you are here (rules + Clients index)
 ├── _client-template.md    ← the canonical structure — copy it to start a client
+├── sop-proposals.md       ← the CI→SOP approval queue (Pending → Approved/Applied or Rejected)
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)

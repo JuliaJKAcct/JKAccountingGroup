@@ -41,6 +41,29 @@ Read the project's own docs alongside this skill — they are the authority on c
    Lilian's explicit approval** (the weekend routine only *proposes* SOP changes; it
    never writes to `projects/sops/`).
 
+## CI → SOP proposals (the approval loop)
+
+CI captures everything non-sensitive automatically. A client's **SOP** never changes
+without Lilian's approval, so the bridge runs through a durable queue —
+[`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md):
+
+1. **Propose.** When enrichment finds an **Operating-zone** fact a client's SOP doesn't
+   reflect (only for clients that *have* an SOP), append it to `sop-proposals.md` as
+   **Pending** with an ID (`SOP-YYYY-MM-DD-NN`), client, target SOP, the change, and its
+   source. **Dedup:** never add a candidate already listed in any status. Never queue
+   CI-only §6 content (outstanding tasks, meeting follow-ups).
+2. **Notify.** The weekend email lists the **Pending** items with their IDs.
+3. **Decide.** Lilian tells Claude by ID — *"approve SOP-…-01 and -02, reject -03"* (or
+   *"approve all the Ecoorganic ones"*). She never edits a file.
+4. **Apply.** For each **Approved** item, edit the target SOP via the
+   [`sop-authoring`](../sop-authoring/) skill (PR → independent review → merge), then set
+   the row to **Applied** with the PR link. **Rejected** rows stay recorded (with the
+   reason) so nothing is re-proposed.
+
+The queue is the source of truth; the email is just the notice. See
+[`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md) for the
+format and full rules.
+
 ## Creating a client file
 
 1. `cp projects/client-intelligence/_client-template.md projects/client-intelligence/clients/<slug>.md`
