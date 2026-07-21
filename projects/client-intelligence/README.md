@@ -162,7 +162,7 @@ client-intelligence/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (11 so far — see the Clients index below)
+└── clients/               ← one file per client (19 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -180,6 +180,14 @@ client-intelligence/
 | iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail) |
 | Deep Tech Development LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — enriched (Double + Gmail) |
 | AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — enriched (Double + Gmail) |
+| Beemold USA LLC | [`clients/beemold-usa.md`](./clients/beemold-usa.md) | Maria | In progress — enriched |
+| Sunoma Inc | [`clients/sunoma-inc.md`](./clients/sunoma-inc.md) | Maria | In progress — enriched |
+| SENSUSTECH LLC | [`clients/sensustech.md`](./clients/sensustech.md) | Maria | In progress — enriched |
+| Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — enriched |
+| Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — enriched |
+| MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — enriched |
+| LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
+| Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 
 ## Brand & design
 
