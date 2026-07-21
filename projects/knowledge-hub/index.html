@@ -681,12 +681,54 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
 /* Masthead bold must stay light on the dark teal band (base b/strong uses --ink). */
 .mast .lede b{color:#F3EEE4;}
 
+/* ---------- In-page SOP reader (designed pages open here — works in the sandbox) ---------- */
+html.reader-open{overflow:hidden;}
+.reader{position:fixed; inset:0; z-index:200; background:var(--bg); display:flex; flex-direction:column;}
+.reader[hidden]{display:none;}
+.reader-bar{flex:0 0 auto; height:56px; display:flex; align-items:center; gap:14px; padding:0 var(--gutter);
+  background:color-mix(in srgb, var(--teal-800) 92%, transparent);
+  backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid rgba(236,230,218,0.14);}
+.reader-close{display:inline-flex; align-items:center; gap:7px; height:36px; padding:0 14px 0 9px;
+  font-family:var(--sans); font-size:13.5px; font-weight:600; color:#ECE6DA; cursor:pointer;
+  background:rgba(236,230,218,0.10); border:1px solid rgba(236,230,218,0.22); border-radius:9px;
+  transition:background .16s, border-color .16s;}
+.reader-close:hover{background:rgba(236,230,218,0.18); border-color:rgba(236,230,218,0.4);}
+.reader-close svg{width:16px; height:16px;}
+.reader-title{font-family:var(--serif); font-size:15px; color:#ECE6DA; font-weight:600;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;}
+.reader-print{margin-left:auto; flex:0 0 auto; width:36px; height:36px; display:grid; place-items:center;
+  color:#ECE6DA; background:rgba(236,230,218,0.08); border:1px solid rgba(236,230,218,0.20);
+  border-radius:9px; cursor:pointer; transition:background .16s;}
+.reader-print:hover{background:rgba(236,230,218,0.16);}
+.reader-print svg{width:16px; height:16px;}
+.reader-scroll{flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch;}
+.reader-scroll .mast .in{max-width:var(--maxw); margin:0 auto;}
+.reader-scroll .page{max-width:880px; margin:0 auto; padding:clamp(26px,5vw,46px) var(--gutter) 64px;}
+.reader-scroll .page .prose{margin:0 0 13px; max-width:70ch;}
+.reader-scroll .page > .shead:first-child{margin-top:6px;}
+.reader-scroll .page .shead{margin-top:clamp(30px,4vw,44px);}
+.reader-scroll .page .rh4{font-size:16px; margin:20px 0 6px; color:var(--ink);}
+.reader-scroll .page .subbar{margin:26px 0 10px;}
+.reader-scroll .page > *:first-child{margin-top:0;}
+/* code / non-link markers used by the auto-render */
+.codeblock{background:var(--paper); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:14px 16px; overflow-x:auto; margin:16px 0; font-family:var(--mono); font-size:12.5px;
+  line-height:1.6; color:var(--body);}
+.codeblock code{font-family:var(--mono); font-size:inherit;}
+.ln{color:var(--accent-2); font-weight:500;}
+.flow .mermaid{background:var(--surface); border:1px solid var(--border-subtle); border-radius:14px;
+  padding:18px; margin:8px 0; overflow-x:auto; text-align:center;}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}
   .hcard{break-inside:avoid; box-shadow:none; border:1px solid var(--border);}
   .dgrid, .cgrid{gap:10px;}
   a.hcard .arrow{display:none;}
+  .reader-bar{display:none !important;}
+  html.reader-open{overflow:visible;}
+  .reader{position:static;}
 }
 
 
@@ -930,7 +972,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
         <span class="gnote">Standing up a new entity, start to finish</span>
       </div>
       <div class="dgrid">
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/florida-company-formation-sunbiz.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/florida-company-formation-sunbiz.md" data-open-doc="florida-company-formation-sunbiz" data-doc-name="Florida Company Formation (Sunbiz)"
          data-card data-type="sop" data-owner="julia" data-text="florida company formation (sunbiz) form the company with the state of florida on sunbiz — entity choice (llc vs corp, the s-corp angle), shared prerequisites, the articles screen by screen, fees and the annual-report cadence. company formation julia part 1 ">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -943,10 +985,10 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av julia">J</span>Julia</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>2026-07-15</span>
           
-          
+          <span class="tagm">Designed page</span>
         </div>
       </a>
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/ein-application-irs.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/ein-application-irs.md" data-open-doc="ein-application-irs" data-doc-name="Federal EIN Application (SS-4)"
          data-card data-type="sop" data-owner="julia" data-text="federal ein application (ss-4) get the business’s federal ein once it’s active on sunbiz — the ssn/itin online path vs the fax “foreign” path, the llc-classification traps, and the after-steps. company formation julia part 2 ">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -959,7 +1001,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av julia">J</span>Julia</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>2026-07-15</span>
           
-          
+          <span class="tagm">Designed page</span>
         </div>
       </a></div>
     </div>
@@ -970,7 +1012,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
         <span class="gnote">City / county receipts and permits</span>
       </div>
       <div class="dgrid">
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/hollywood-broward-business-tax-receipt.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/hollywood-broward-business-tax-receipt.md" data-open-doc="hollywood-broward-business-tax-receipt" data-doc-name="Business Tax Receipt — Hollywood + Broward"
          data-card data-type="sop" data-owner="julia" data-text="business tax receipt — hollywood + broward file a business tax receipt for a business in hollywood, fl — the home-occupation zoning gate first, then the city + county filings, with every link and the email map. licensing &amp; local tax julia  ">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -983,7 +1025,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av julia">J</span>Julia</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>2026-07-15</span>
           
-          <span class="tagm">Atlas render</span>
+          <span class="tagm">Designed page</span>
         </div>
       </a></div>
     </div>
@@ -994,7 +1036,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
         <span class="gnote">Monthly close &amp; review</span>
       </div>
       <div class="dgrid">
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/ecoorganic-bookkeeping-review.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/ecoorganic-bookkeeping-review.md" data-open-doc="ecoorganic-bookkeeping-review" data-doc-name="Ecoorganic — Monthly Bookkeeping &amp; Review"
          data-card data-type="sop" data-owner="lilian" data-text="ecoorganic — monthly bookkeeping &amp; review ecoorganic’s monthly categorization rules, chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. a per-client runbook. bookkeeping lilian  per-client runbook">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -1007,7 +1049,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av lilian">L</span>Lilian</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>Jul 2026</span>
           <span class="tagm">Per-client</span>
-          
+          <span class="tagm">Designed page</span>
         </div>
       </a></div>
     </div>
@@ -1018,7 +1060,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
         <span class="gnote">Getting clients into the portal, on-brand</span>
       </div>
       <div class="dgrid">
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/double-portal-first-login.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/double-portal-first-login.md" data-open-doc="double-portal-first-login" data-doc-name="Double Portal — First-Time Sign-In"
          data-card data-type="sop" data-owner="julia" data-text="double portal — first-time sign-in the reliable password-reset workaround for the double client portal, plus ready-to-send client guides (visual guide + pdf, email, whatsapp — en &amp; ru). client portal (double) julia  ">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -1031,10 +1073,10 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av julia">J</span>Julia</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>2026-07</span>
           
-          
+          <span class="tagm">Designed page</span>
         </div>
       </a>
-      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/double-portal-branding.md" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/sops/double-portal-branding.md" data-open-doc="double-portal-branding" data-doc-name="Double Portal — Branding Setup"
          data-card data-type="sop" data-owner="julia" data-text="double portal — branding setup the firm’s on-brand configuration of the double client portal — exact brand / button / background hex mapped to the design system, plus logo &amp; favicon assets. client portal (double) julia  ">
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         <div class="khead">
@@ -1047,7 +1089,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
           <span class="owner"><span class="av julia">J</span>Julia</span>
           <span class="metf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>2026-07</span>
           
-          
+          <span class="tagm">Designed page</span>
         </div>
       </a></div>
     </div>
@@ -1627,7 +1669,7 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
       <svg viewBox="18 20 82 72" class="jkmark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></svg>
       <div>
         <b>JK Accounting Group — Knowledge Hub</b>
-        <p>Generated from the repository (<code>projects/sops</code> + <code>projects/client-intelligence</code>). The repo is the source of truth; this page is a view of it. Re-run <code>build-hub.mjs</code> to refresh. Every card opens the real file on GitHub.</p>
+        <p>Generated from the repository (<code>projects/sops</code> + <code>projects/client-intelligence</code>). The repo is the source of truth; this page is a view of it. Re-run <code>build-hub.mjs</code> to refresh. Procedures open a designed page in the reader; client cards expand in place.</p>
       </div>
     </div>
     <div class="bottom">
@@ -1636,6 +1678,811 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
     </div>
   </div>
 </footer>
+
+<!-- ============================ SOP READER (in-page, designed pages) ============================ -->
+<div class="reader" id="reader" hidden aria-modal="true" role="dialog" aria-label="Document reader">
+  <div class="reader-bar">
+    <button class="reader-close" id="readerClose" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      Back to Hub
+    </button>
+    <span class="reader-title" id="readerTitle"></span>
+    <button class="reader-print" id="readerPrint" type="button" aria-label="Print / PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
+    </button>
+  </div>
+  <div class="reader-scroll" id="readerScroll"><div class="rdoc" data-doc="florida-company-formation-sunbiz" hidden><section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p><h1>Florida Company Formation (Sunbiz)</h1><div class="meta"><span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span><span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Julia</b></span><span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>2026-07-15</b></span></div></div></section><div class="page"><div class="callout note"><div class="cx"><p><strong>Status:</strong> Active · <strong>Owner:</strong> Julia · <strong>Last updated:</strong> 2026-07-15</p></div></div>
+<p class="prose">The procedure for <strong>forming a company with the State of Florida</strong> on Sunbiz (Division of Corporations) — the <strong>first</strong> step of the firm's end-to-end company setup. This is <strong>Part 1</strong>; once the entity shows <strong>Active</strong> on Sunbiz, hand off to <span class="ln"><code>ein-application-irs.md</code></span> (Part 2 — the federal EIN), which is the immediate next step.</p>
+<div class="callout note"><div class="cx"><p><strong>Coverage note:</strong> the <strong>Florida Profit Corporation</strong> path (Articles of Incorporation) is documented <strong>screen by screen, verified from a real filing</strong> (§3). The <strong>LLC</strong> path (Articles of Organization) is a <strong>framework stub</strong> (§4) — file one and capture the screens to complete it.</p></div></div>
+<div class="callout note"><div class="cx"><p><strong>Where client data goes:</strong> the client's real corporate name, addresses, registered-agent details, officer/director/member names, share count, and the assigned document number are <strong>sensitive</strong> and belong in <strong>your client systems</strong> (Google Drive / Double / QuickBooks) — <strong>not</strong> in this repo. Copy the blank intake at the bottom into the client's folder there and fill it in. This repo keeps only the reusable procedure + the blank template.</p></div></div>
+<div class="callout note"><div class="cx"><p>🏛️ <strong>File directly on the official state site.</strong> Start at &lt;https://dos.fl.gov/sunbiz/start-business/&gt;. Skip third-party &quot;formation services&quot; that mark up the state fee and insert a middleman between the client and their own filing. The only money that should change hands is the state fee (§5), paid to Florida.</p></div></div>
+<hr class="rule">
+<div class="shead"><span class="schip">0</span><h2>Intake — decide and gather before filing</h2></div>
+<p class="prose">The filing is one uninterrupted online form; gather everything first.</p>
+<div class="callout note"><div class="cx"><p><strong>Where the answers come from — the client's Business Intake Form.</strong> The firm sends every new client a <strong>Business Intake Form</strong> up front, and its answers feed this filing (and Part 2, the EIN). Pull the values from the client's <strong>completed</strong> intake form rather than re-interviewing; the working sheet in the appendix is just to transcribe the fields this filing needs. If the form is missing something this filing requires, that is the one thing to go back to the client for.</p></div></div>
+<ol class="qlist"><li><strong>Entity type</strong> — <strong>LLC</strong> or <strong>Profit Corporation (Inc./Corp.)</strong>? → drives the whole form. See §1. (Tie to whether the client will elect <strong>S-corp</strong> — that changes nothing on the state filing but sets up Part 2 + Form 2553.)</li><li><strong>Proposed name</strong> — <strong>checked for availability</strong> on Sunbiz (must be <em>distinguishable</em>; §2) and carrying the right <strong>suffix</strong> (Corp/Inc. for a corporation).</li><li><strong>Registered agent (RA)</strong> — an individual <strong>or</strong> a company (not the entity itself) with a <strong>Florida street address</strong> (no PO box) who will <strong>sign</strong>.</li><li><strong>Principal place of business</strong> — a <strong>street</strong> address (no PO box) — and a <strong>mailing address</strong> (may be the same).</li><li><strong>Correspondence email</strong> — where the filing receipt and <strong>every future annual- report notice</strong> will go. Choose a monitored inbox (often the firm's).</li><li><strong>Incorporator / organizer</strong> — the person submitting the filing (name + address).</li><li><strong>Corporation only:</strong> number of <strong>authorized shares</strong> (cannot be zero), <strong>officers/directors</strong> (list now — see §3), and <strong>corporate purpose</strong> (usually &quot;any and all lawful business&quot;).</li><li><strong>LLC only:</strong> <strong>members</strong> and whether <strong>member-managed or manager-managed</strong>; the <strong>managers/authorized representatives</strong> (§4).</li><li><strong>Effective date</strong> preference — immediate, or a chosen date (see the <strong>Jan 1</strong> tax tip in §2).</li><li><strong>Payment</strong> — credit card, debit (Visa/MC only), or a prepaid Sunbiz E-File account (§5).</li></ol>
+<hr class="rule">
+<div class="shead"><span class="schip">1</span><h2>Entity choice — LLC vs Profit Corporation</h2></div>
+<p class="prose">Both are formed on Sunbiz; the state form differs (§3 vs §4).</p>
+<ul class="dots"><li><strong>LLC</strong> — the firm's most common default: flexible, member/manager-managed, no shares, no stated corporate purpose required. Files <strong>Articles of Organization</strong>.</li><li><strong>Profit Corporation</strong> — shares, a board of directors + officers, a stated purpose. Files <strong>Articles of Incorporation</strong>. Used when the client wants/needs a corporate structure (investors, specific governance, certain professional setups).</li><li><strong>S-corp is a tax election, not an entity type.</strong> Either an LLC <strong>or</strong> a Corporation can elect S-corp — that happens <strong>after</strong> formation and <strong>after</strong> the EIN, on <strong>Form 2553</strong> (see the EIN SOP §4B and the <span class="ln"><code>reasonable-compensation</code></span> skill, which the S-corp owner-salary work depends on). Nothing about the S-election appears on the Sunbiz filing.</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">2</span><h2>Before you file — shared prerequisites &amp; rules</h2></div>
+<ul class="dots"><li><strong>Name availability.</strong> Search Sunbiz first — the name must be <strong>distinguishable</strong> from existing entities: &lt;https://search.sunbiz.org/Inquiry/CorporationSearch/ByName&gt;. A <strong>corporation</strong> name must include a suffix (<strong>&quot;Corp&quot;, &quot;Inc.&quot;, &quot;Incorporated&quot;, &quot;Co.&quot;,</strong> etc.). An <strong>LLC</strong> name must include <strong>&quot;LLC&quot; / &quot;L.L.C.&quot;</strong></li><li><strong>Registered agent rules.</strong> The RA needs a <strong>Florida street address</strong> (PO box not accepted). The RA <strong>types their name to sign</strong>; the signature <strong>must be an individual</strong> (if a company serves as RA, a person signs for it). <strong>An entity cannot be its own RA.</strong> A false signature is <strong>forgery under Fla. Stat. §831.06</strong>.</li><li><strong>Effective date (optional).</strong> You may set an effective date — Florida allows up to <strong>5 business days before</strong> or <strong>90 days after</strong> the filing date.</li><li>🗓️ <strong>Jan 1 tax tip:</strong> for an entity formed <strong>late in the year</strong>, specifying a <strong>January 1 effective date</strong> starts the entity's first tax year clean on Jan 1 and avoids a stub/short first-year return. Decide this with the tax treatment in mind before filing.</li><li><strong>Payment processor.</strong> Card payments run through <strong>NIC Services, LLC dba Tyler Payment Services</strong>. The receipt comes from <strong>noreply@finit.tylertech.com</strong>; the bank statement shows <strong>&quot;NIC DOS DIVISION OF CORP.&quot;</strong> <strong>Keep the receipt</strong> — it helps locate/reconcile the filing.</li><li><strong>Supported browsers:</strong> Chrome, Edge, Firefox, Safari, Opera.</li><li><strong>⛔ Submissions are final.</strong> Per the disclaimer: once submitted, the Articles <strong>cannot be changed, removed, canceled, or refunded</strong> — review everything first. If a filing is <strong>rejected</strong>, you get a <strong>Tracking Number + PIN</strong> by email; use the <strong>&quot;Correct …&quot;</strong> path (§3) to fix and resubmit.</li><li><strong>Beneficial Ownership (BOI / FinCEN) — federal, not part of Sunbiz.</strong> Sunbiz only posts a <em>notice</em> of the requirement. <strong>Current status (verify — still being finalized):</strong> under FinCEN's <strong>March 2025 interim final rule</strong>, entities <strong>formed in the US (&quot;domestic reporting companies&quot;) and US persons are EXEMPT</strong> from BOI reporting; only <strong>foreign reporting companies</strong> (formed abroad, then registered to do business in a US state) must report, and they don't report US persons. → A company <strong>formed in Florida is domestic</strong>, so it is currently exempt <strong>even if foreign-owned</strong>. Re-check <strong>fincen.gov/boi</strong> before advising a client, since this rule is not yet final.</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">3</span><h2>Path A — Florida Profit Corporation (Articles of Incorporation)</h2></div>
+<p class="prose">Verified screen by screen, 2026-07.</p>
+<div class="subbar"><h3>▶ Start here — exactly where to go and what to click</h3></div>
+<ol class="qlist"><li><strong>Open the Sunbiz start page:</strong> &lt;https://dos.fl.gov/sunbiz/start-business/&gt;</li><li>Click <strong>&quot;Start E-Filing.&quot;</strong></li><li>Under <strong>Start E-Filing</strong>, choose the entity type — <strong>&quot;Profit Corporation&quot;</strong> <em>(for an LLC, choose <strong>&quot;Limited Liability Company&quot;</strong> and follow §4 instead).</em></li><li>On the Profit Corporation page, click the <strong>&quot;File or Correct Florida Profit Articles of Incorporation&quot;</strong> button.</li><li>That opens the <strong>disclaimer screen</strong> (§3.0) → accept it → <strong>&quot;Start New Filing&quot;</strong> → the filing form (§3.1 onward).</li></ol>
+<div class="subbar"><h3>3.0 Disclaimer screen</h3></div>
+<p class="prose">&quot;This form creates a Florida Profit Corporation <strong>OR</strong> corrects your rejected online filing.&quot; Two sides:</p>
+<ul class="dots"><li><strong>File Articles of Incorporation</strong> → check <strong>&quot;I have read and accept the terms of this disclaimer…&quot;</strong> → <strong>Start New Filing</strong>.</li><li><strong>Correct Articles of Incorporation</strong> → enter the <strong>Tracking Number + PIN</strong> from the rejection email → <strong>Update Filing</strong>. <em>(Use this only to fix a rejected filing.)</em></li></ul>
+<div class="subbar"><h3>3.1 Filing Information</h3></div>
+<ul class="dots"><li><strong>Effective date</strong> (optional, MM/DD/YYYY) — see the §2 Jan 1 tip.</li><li><strong>Required filing fee: $70.00.</strong> Options: <strong>Certificate of Status +$8.75</strong>, <strong>Certified Copy +$8.75</strong> (both optional — see §5).</li><li><strong>Corporate Name</strong> — <em>must include a suffix</em> (&quot;Corp&quot;, &quot;Inc.&quot;, &quot;Incorporated&quot;, etc.). Confirm availability first (§2).</li><li><strong>Corporate Stock Shares</strong> — the number of authorized shares. <strong>Cannot be zero</strong> (a common default is a round number such as <strong>100</strong> or <strong>1,000</strong>; Florida does not require a par value on this form).</li></ul>
+<div class="subbar"><h3>3.2 Principal Place of Business</h3></div>
+<p class="prose">A <strong>street</strong> address (Address / Suite / City / State / Zip / Country).</p>
+<div class="subbar"><h3>3.3 Mailing Address</h3></div>
+<p class="prose">Check <strong>&quot;Mailing address same as principal address&quot;</strong> or enter a separate one.</p>
+<div class="subbar"><h3>3.4 Registered Agent</h3></div>
+<ul class="dots"><li><strong>Name</strong> (Last / First / Initial / Title) <strong>— OR — a Business to serve as RA</strong> (must be <strong>different</strong> from the entity being filed).</li><li><strong>Address</strong> in <strong>FL</strong> (<strong>PO box not acceptable</strong>), Suite, City, Zip.</li><li><strong>Registered Agent Signature</strong> — the RA <strong>types their name</strong> to sign; must be an <strong>individual</strong> name and made with the individual's full knowledge/permission (or it is <strong>forgery, §831.06</strong>). Do not enter the new entity's name as its own RA.</li></ul>
+<div class="subbar"><h3>3.5 Corporate Purpose</h3></div>
+<ul class="dots"><li>Check <strong>&quot;Corporate purpose is 'Any and all lawful business'&quot;</strong> for the usual case. <strong>Do not</strong> check it for a <strong>Professional Association</strong> — instead list the specific purpose (max <strong>240 characters</strong>).</li></ul>
+<div class="subbar"><h3>3.6 Correspondence Name and E-mail Address</h3></div>
+<ul class="dots"><li><strong>Name</strong>, <strong>E-mail</strong>, <strong>Re-enter E-mail.</strong> ⚠️ This is where <strong>this filing's receipt and all future annual-report notices</strong> are sent — enter it carefully and use a monitored inbox.</li></ul>
+<div class="subbar"><h3>3.7 Officer / Director Name and Address</h3></div>
+<div class="callout note"><div class="cx"><p><strong>List every officer/director now.</strong> This is <strong>required to open most bank accounts and to obtain a workers'-comp exemption.</strong> After filing, <strong>any change requires an amendment that cannot be filed online and costs an extra $35.00</strong> — so get this right the first time.</p></div></div>
+<ul class="dots"><li>Per person: <strong>Title</strong> (P, VP, etc.), <strong>Name</strong> (Last / First / Initial / suffix) <strong>— OR — a Business Name to serve as Officer</strong>; <strong>Street Address / City / State / Zip / Country.</strong> Repeat for each officer/director.</li></ul>
+<div class="subbar"><h3>3.8 Incorporator Name and Address</h3></div>
+<ul class="dots"><li><strong>Name / Address / Suite / City-State-Zip.</strong></li><li><strong>Electronic Signature of Incorporator</strong> — affirms the facts are true; <strong>false information is a third-degree felony under Fla. Stat. §817.155</strong>; acknowledges the annual-report requirement.</li></ul>
+<div class="subbar"><h3>3.9 Notice of Annual Report (read + acknowledge)</h3></div>
+<p class="prose">The corporation must file an <strong>Annual Report between Jan 1 and May 1 every year</strong> to stay <strong>Active</strong>; the <strong>first</strong> report is due Jan 1–May 1 of the <strong>year after formation</strong>; <strong>$150</strong> fee, <strong>$400 late fee</strong> after May 1; reminders go to the §3.6 email. See §5.</p>
+<div class="subbar"><h3>3.10 Payment → Submit → Confirmation <em>(screens pending)</em></h3></div>
+<p class="prose">Pay by card (NIC/Tyler) or prepaid account, review, and submit. <strong>Once submitted it cannot be changed or refunded (§2).</strong> <em>Capture the payment, submission, and confirmation screens on the next filing to finish this section.</em> On success the entity posts to Sunbiz with a <strong>document number</strong> (and the receipt from noreply@finit.tylertech.com).</p>
+<hr class="rule">
+<div class="shead"><span class="schip">4</span><h2>Path B — Florida LLC (Articles of Organization) — framework (screens pending)</h2></div>
+<p class="prose">Entry: Sunbiz → <strong>Start a Business → Start E-Filing → Limited Liability Company</strong>. The flow mirrors §3 (disclaimer → form → payment) but the form differs — capture it on the next LLC filing. <strong>Key differences from the Corporation form:</strong></p>
+<ul class="dots"><li><strong>No shares</strong> and <strong>no required corporate purpose.</strong></li><li>Instead of officers/directors, list <strong>members and/or managers</strong> and indicate <strong>member-managed vs manager-managed</strong> (the &quot;Authorized Person(s)&quot; / managers).</li><li>Name must include <strong>&quot;LLC&quot; / &quot;L.L.C.&quot;</strong> (not Corp/Inc.).</li><li><strong>Fees differ</strong> (verify on Sunbiz at filing): LLC formation is <strong>$125.00</strong> and the <strong>LLC Annual Report is $138.75</strong> (vs. $70 / $150 for a profit corporation).</li><li>Registered agent, principal/mailing address, correspondence email, effective date, the &quot;cannot be changed after submit&quot; rule, and the annual-report cadence all work the <strong>same</strong> as the corporation (§2–§3).</li></ul>
+<p class="prose"><em>To finish: file one LLC and capture the Articles of Organization screens, then promote this from a stub to a full screen-by-screen like §3.</em></p>
+<hr class="rule">
+<div class="shead"><span class="schip">5</span><h2>Fees &amp; annual upkeep</h2></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>Item</th><th>Profit Corporation</th><th>LLC <em>(verify)</em></th></tr></thead><tbody><tr><td><strong>Formation filing</strong></td><td><strong>$70.00</strong></td><td><strong>$125.00</strong></td></tr><tr><td>Certificate of Status (optional)</td><td>$8.75</td><td>$5.00</td></tr><tr><td>Certified Copy (optional)</td><td>$8.75</td><td>$30.00</td></tr><tr><td><strong>Annual Report</strong> (due <strong>Jan 1–May 1</strong>)</td><td><strong>$150.00</strong></td><td><strong>$138.75</strong></td></tr><tr><td>Annual Report <strong>late fee</strong> (after May 1)</td><td><strong>$400.00</strong></td><td><strong>$400.00</strong></td></tr><tr><td>Officer/Director/member change after filing</td><td>$35.00 amendment (not online)</td><td>(amendment fee — verify)</td></tr></tbody></table></div>
+<ul class="dots"><li><strong>Annual report is how the entity stays Active</strong> — miss the May 1 deadline and the <strong>$400 late fee</strong> applies; keep missing it and the state <strong>administratively dissolves</strong> the entity. <strong>Calendar it the moment the entity is formed.</strong></li><li>The first annual report is due the <strong>year after</strong> formation (Jan 1–May 1).</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">6</span><h2>After filing → next steps</h2></div>
+<ol class="qlist"><li><strong>Save the confirmation + payment receipt</strong> and the <strong>filed Articles / document number</strong> in the client's system (not this repo).</li><li><strong>Confirm the entity is Active</strong> on Sunbiz (search by name).</li><li><strong>Calendar the annual report</strong> (Jan 1–May 1 every year; first one the year after formation).</li><li><strong>→ Part 2: get the federal EIN</strong> — <span class="ln"><code>ein-application-irs.md</code></span> (do this once Active).</li><li>Then, as the activity requires: <strong>Form 2553</strong> if electing S-corp, <strong>business bank account</strong>, <strong>FL DOR</strong> (sales/reemployment tax, DR-1), <strong>Local Business Tax Receipt</strong> (see <span class="ln"><code>hollywood-broward-business-tax-receipt.md</code></span>), and <strong>payroll</strong>.</li></ol>
+<hr class="rule">
+<div class="shead"><span class="schip">7</span><h2>Common pitfalls</h2></div>
+<ul class="dots"><li><strong>Name not distinguishable / missing suffix</strong> → rejection. Search first; include Corp/Inc. (corp) or LLC (LLC).</li><li><strong>PO box for the RA or principal address</strong> → not accepted; use a street address.</li><li><strong>Entity listed as its own registered agent</strong> → not allowed.</li><li><strong>Wrong/again-unmonitored correspondence email</strong> → the client misses annual- report notices and drifts toward the $400 late fee / dissolution.</li><li><strong>Zero shares</strong> on a corporation → the form rejects it.</li><li><strong>Forgetting officers/directors</strong> → a later $35 amendment that can't be filed online. List them now.</li><li><strong>Submitting with an error</strong> → no edits/refunds; you must re-file. Review the whole form before paying.</li><li><strong>Assuming a Florida-formed, foreign-owned company must file BOI</strong> → currently it does <strong>not</strong> (domestic entity; §2) — but verify the current FinCEN rule.</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">8</span><h2>Contacts &amp; links</h2></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>Who</th><th>For</th><th>Link</th></tr></thead><tbody><tr><td>Sunbiz — Start a Business</td><td>Entry point for all filings</td><td>&lt;https://dos.fl.gov/sunbiz/start-business/&gt;</td></tr><tr><td>Sunbiz — Corporation name search</td><td>Check name is distinguishable</td><td>&lt;https://search.sunbiz.org/Inquiry/CorporationSearch/ByName&gt;</td></tr><tr><td>Sunbiz — Profit Corporation e-file</td><td>Articles of Incorporation</td><td>Start E-Filing → <strong>Profit Corporation</strong></td></tr><tr><td>Sunbiz — LLC e-file</td><td>Articles of Organization</td><td>Start E-Filing → <strong>Limited Liability Company</strong></td></tr><tr><td>Sunbiz — Fictitious Name (DBA)</td><td>Operating under a different name (Fla. Stat. §865.09)</td><td>Start E-Filing → <strong>Fictitious Name Registration</strong></td></tr><tr><td>Sunbiz — Annual Report</td><td>Keep entity Active (Jan 1–May 1)</td><td>&lt;https://dos.fl.gov/sunbiz/manage-business/&gt;</td></tr><tr><td>FinCEN — Beneficial Ownership (BOI)</td><td>Verify current reporting rule</td><td>&lt;https://www.fincen.gov/boi&gt;</td></tr><tr><td>IRS EIN (Part 2)</td><td>Federal EIN after Active</td><td><span class="ln"><code>ein-application-irs.md</code></span></td></tr></tbody></table></div>
+<hr class="rule">
+<div class="shead"><h2>Appendix — Blank intake (copy into the client's file in YOUR system)</h2></div>
+<div class="callout note"><div class="cx"><p>Copy this block into the client's folder in Drive/Double/QuickBooks and fill it there <strong>from the client's completed Business Intake Form</strong>. <strong>Keep filled-in client data — names, addresses, share counts, the document number — out of this repo.</strong></p></div></div>
+<pre class="codeblock"><code>FL Formation Intake — &lt;proposed entity name&gt;
+
+Decision
+- Entity type:  ☐ LLC (Articles of Organization)  ☐ Profit Corporation (Articles of Incorporation)
+- Will elect S-corp later?  ☐ No  ☐ Yes → Form 2553 after EIN (see EIN SOP §4B)
+
+Name
+- Proposed name (with suffix — LLC / Inc. / Corp.):
+- Distinguishable on Sunbiz search?  ☐ Yes  ☐ No — alt name:
+
+Addresses
+- Principal place of business (STREET, no PO box):
+- Mailing address:  ☐ Same as principal  ☐ Other:
+
+Registered Agent
+- RA name (individual) OR business:
+- RA Florida street address (no PO box):
+- RA will sign (individual)?  ☐ Yes
+
+People
+- Incorporator / organizer (name + address):
+- Corp: officers/directors (Title + name + address, each):
+- Corp: authorized shares (not zero):
+- Corp: purpose  ☐ Any and all lawful business  ☐ Specific: ____
+- LLC: members / managers; management  ☐ Member-managed  ☐ Manager-managed:
+
+Filing details
+- Correspondence email (annual-report notices — monitored inbox):
+- Effective date:  ☐ Immediate  ☐ Date: ____  (Jan 1 tip if formed late in the year)
+- Payment:  ☐ Credit card  ☐ Debit (Visa/MC)  ☐ Prepaid Sunbiz account
+
+Result  (store in client system, NOT the repo)
+- Filed / Active date:
+- Sunbiz document number:
+- Receipt saved?  ☐ Yes  Location: ____
+- Annual report calendared (Jan 1–May 1, year after formation)?  ☐ Yes
+- Next: ☐ EIN (Part 2)  ☐ Form 2553  ☐ Bank account  ☐ FL DOR  ☐ Local BTR
+
+Notes / open questions:</code></pre>
+<p class="prose">_Sources: Sunbiz (Florida Division of Corporations) — Start a Business, Profit Corporation Articles of Incorporation e-file screens verified directly by Julia; Fla. Stat. §831.06 (RA signature) and §817.155 (false filing); FinCEN BOI interim final rule (Mar 2025). Verify fees, forms, and the current FinCEN rule against the official sources before filing._</p></div></div>
+<div class="rdoc" data-doc="ein-application-irs" hidden><section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p><h1>Federal EIN Application (SS-4)</h1><div class="meta"><span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span><span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Julia</b></span><span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>2026-07-15</b></span></div></div></section><div class="page"><div class="callout note"><div class="cx"><p><strong>Status:</strong> Active · <strong>Owner:</strong> Julia · <strong>Last updated:</strong> 2026-07-15</p></div></div>
+<p class="prose">The complete, self-contained procedure for getting a <strong>federal EIN</strong> (Employer Identification Number) from the IRS for a company that is <strong>already formed and active on Sunbiz</strong>. This is <strong>Part 2</strong> (the federal step) of the firm's Florida company-formation flow — <strong>Part 1</strong>, the Sunbiz filing itself, is <span class="ln"><code>florida-company-formation-sunbiz.md</code></span>.</p>
+<div class="callout note"><div class="cx"><p><strong>Scope note:</strong> starts the moment the entity shows <strong>Active</strong> on Sunbiz and you have its exact legal name and formation date. Everything to obtain the EIN lives here — the go/no-go decision, both application paths, the answers people get wrong, and the after-steps.</p></div></div>
+<div class="callout note"><div class="cx"><p><strong>Where client data goes:</strong> the client's real legal name, address, the responsible party's SSN/ITIN, the filled-in SS-4, and the assigned EIN are <strong>sensitive</strong> and belong in <strong>your client systems</strong> (Google Drive / Double / QuickBooks) — <strong>not</strong> in this repo. Copy the blank intake at the bottom into the client's folder there and fill it in. This repo keeps only the reusable procedure + the blank template.</p></div></div>
+<div class="callout note"><div class="cx"><p>💵 <strong>The EIN is free, direct from the IRS.</strong> Never use a paid &quot;EIN filing&quot; site — they charge for a free government service and become an unnecessary middleman holding the client's data. Apply only through IRS.gov, fax, mail, or the IRS phone line below.</p></div></div>
+<hr class="rule">
+<div class="shead"><span class="schip">0</span><h2>Intake — gather these before you touch the application</h2></div>
+<p class="prose">The whole application is answerable from these. Get them all first; the online tool <strong>times out after 15 minutes of inactivity and cannot be saved</strong> (see §2), so you do not want to be hunting for an answer mid-flow.</p>
+<div class="callout note"><div class="cx"><p><strong>Where the answers come from — the client's Business Intake Form.</strong> The firm sends every new client a <strong>Business Intake Form</strong> up front, and its answers feed this application. Pull the values from the client's <strong>completed</strong> intake form rather than re-interviewing; the working sheet in the appendix is just to transcribe the few fields this filing needs. If the form is missing something this filing requires (e.g. the responsible party's SSN/ITIN), that is the one thing to go back to the client for.</p></div></div>
+<ol class="qlist"><li><strong>Exact legal name</strong> of the entity — spelled <strong>exactly</strong> as it appears on Sunbiz (including &quot;LLC&quot; / &quot;Inc.&quot; / &quot;Corp.&quot;). The IRS name must match Sunbiz.</li><li><strong>Sunbiz document number</strong> and <strong>formation/effective date</strong> (this is the &quot;date the business started,&quot; line 11).</li><li><strong>Entity type</strong> as formed on Sunbiz: <strong>LLC</strong> (single- or multi-member) or <strong>Corporation</strong> (Inc./Corp.). → drives §4A.</li><li><strong>Number of LLC members</strong> (if an LLC).</li><li><strong>Will this entity elect S-corp?</strong> (very common here) → does <strong>not</strong> change the EIN application, but flags the separate Form 2553 step (see §4B).</li><li><strong>Responsible party</strong>: the one individual who owns/controls the entity, plus their <strong>SSN or ITIN</strong> (or the fact that they have <strong>neither</strong>). → this is the go/no-go decision in §1. See §4C for who qualifies.</li><li><strong>US mailing address</strong> and <strong>physical (principal business) address</strong>, with <strong>county</strong> and state.</li><li><strong>Reason for applying</strong> — for a new FL company this is &quot;Started a new business.&quot;</li><li><strong>Expected employees in the next 12 months</strong> (0 is a valid answer) and, if any, the <strong>first date wages will be paid</strong>.</li><li><strong>Principal activity / line of business</strong> (what the company actually does).</li><li><strong>Closing month of the accounting year</strong> — almost always <strong>December</strong>.</li><li><strong>Is the firm filing on the client's behalf?</strong> → if yes, you'll name the firm as <strong>Third-Party Designee</strong> (see §4D); the client must authorize it.</li></ol>
+<hr class="rule">
+<div class="shead"><span class="schip">1</span><h2>The go/no-go decision — does the responsible party have an SSN or ITIN?</h2></div>
+<p class="prose">This single fact decides which path you take. Resolve it <strong>before</strong> anything else.</p>
+<ul class="dots"><li><strong>✅ Responsible party HAS a valid SSN or ITIN</strong> → <strong>Path A: apply online</strong> (§2). EIN issued <strong>immediately</strong>, on screen, same session. This is the default and by far the fastest.</li><li><strong>❌ Responsible party has NEITHER an SSN nor an ITIN</strong> (common for a foreign owner) → you <strong>cannot use the online tool</strong>. Use <strong>Path B: Form SS-4 by fax, mail, or the international phone line</strong> (§3). Fax turnaround is ~4 business days; phone can be same-call for international applicants.</li></ul>
+<div class="callout note"><div class="cx"><p><strong>Frequent JK situation — foreign owner, no SSN/ITIN.</strong> You do <strong>not</strong> need to wait for the owner to get an ITIN before the company can get its EIN. File <strong>Form SS-4 by fax</strong> with <strong>&quot;Foreign&quot;</strong> on line 7b (see §3). Getting an ITIN (Form W-7) is a separate, slower track and is <strong>not</strong> a prerequisite for the EIN.</p></div></div>
+<hr class="rule">
+<div class="shead"><span class="schip">2</span><h2>Path A — Apply online (responsible party has SSN/ITIN)</h2></div>
+<div class="subbar"><h3>▶ Start here — exactly where to go and what to click</h3></div>
+<ol class="qlist"><li><strong>Open the IRS EIN page:</strong> &lt;https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online&gt; <em>(if that link ever changes, search <strong>&quot;IRS apply for an EIN online&quot;</strong> — it's the official IRS.gov page; never use a paid look-alike site.)</em></li><li>Click the <strong>&quot;Apply Online Now&quot;</strong> button → it launches the <strong>EIN Assistant</strong> in a new window (allow pop-ups).</li><li>On the assistant's intro screen, click <strong>&quot;Begin application&quot;</strong> → you land on <strong>Step 1 · Legal Structure</strong>, the wizard documented below.</li></ol>
+<p class="prose"><strong>Know these rules of the tool before you start:</strong></p>
+<ul class="dots"><li><strong>Availability:</strong> the EIN Assistant is only open on a published schedule (Eastern time), <strong>not 24/7</strong> — recent hours run roughly <strong>Mon–Fri early morning to after midnight, with more limited weekend hours</strong>. Check the current window on the IRS page before you sit down to file; the IRS changes it periodically.</li><li><strong>One session, no saving:</strong> it <strong>times out after 15 minutes of inactivity</strong> and cannot be resumed. Have every §0 answer in front of you.</li><li><strong>One EIN per responsible party per day</strong> — online, phone, fax, or mail. If you're setting up several entities for the same person, you can only get one per calendar day.</li><li><strong>Principal business must be in the US or a US territory</strong>, and the responsible party must have a valid <strong>SSN, ITIN, or EIN</strong>.</li><li><strong>Result:</strong> the EIN appears <strong>on screen immediately</strong>. <strong>Download and save the EIN Confirmation Notice PDF</strong> (the online equivalent of the <strong>CP 575</strong>) right then — this is the client's proof of EIN and you may not get another copy easily.</li></ul>
+<div class="subbar"><h3>The wizard, screen by screen (verified 2026-07)</h3></div>
+<p class="prose">The tool is a <strong>6-step wizard</strong> with a progress bar at the top: <strong>1 Legal Structure → 2 Identity → 3 Addresses → 4 Additional Details → 5 Review &amp; Submit → 6 EIN Assignment.</strong> All required fields are marked <code>*</code>. A language selector sits in the top-right header, but treat the tool as English-only.</p>
+<p class="prose"><strong>Step 1 — Legal Structure.</strong></p>
+<ul class="dots"><li><em>&quot;What type of legal structure is applying for an EIN?&quot;</em> — choose the entity's <strong>legal</strong> form as filed on Sunbiz: <strong>Limited Liability Company (LLC)</strong> or <strong>Corporations</strong> (this option's help text notes it &quot;includes S corporations…&quot;). A confirm box explains the choice. → <strong>Do not try to make the S-election here</strong> (see §4A/§4B).</li><li><strong>LLC path</strong> → <em>&quot;How many member(s) are in the LLC?&quot;</em> + <em>&quot;state/territory where the business is physically located&quot;</em> (<strong>Florida (FL)</strong>).</li><li>A confirm box states the default: <strong>single-member = disregarded entity</strong>; <strong>multi-member = partnership</strong>. It explicitly points to <strong>Form 8832</strong> (corporate status) or <strong>Form 2553</strong> (S-corp status) if you want to change it — confirming that the EIN app itself does <strong>not</strong> elect S-corp (§4B).</li><li><em>&quot;Why is the … requesting an EIN?&quot;</em> → <strong>Started a new business</strong> (other options: Hired employees, Banking purposes, Changed type of organization, Purchased active business).</li></ul>
+<p class="prose"><strong>Step 2 — Identity.</strong> <em>&quot;Please tell us about the Responsible Party&quot;</em> — <em>&quot;Must match IRS records or this application cannot be processed.&quot;</em></p>
+<ul class="dots"><li><strong>SSN/ITIN</strong> (required), <strong>First / Middle / Last name</strong>, Suffix.</li><li><strong>Your role:</strong> <em>&quot;I am one of the owners, members, or the managing member&quot;</em> <strong>or</strong> <em>&quot;I am a third party applying for an EIN on behalf of this LLC.&quot;</em> → pick the third-party option when the firm is filing for the client (§4D).</li></ul>
+<p class="prose"><strong>Step 3 — Addresses.</strong> Mailing + physical business address (with county/state).</p>
+<p class="prose"><strong>Step 4 — Additional Details (two screens).</strong></p>
+<p class="prose"><em>Screen 4a — &quot;Tell us about the LLC&quot;:</em></p>
+<ul class="dots"><li><strong>Legal name</strong> (must match articles of organization). ⚠️ For an LLC the field <strong>may not contain the endings &quot;Corp&quot; or &quot;Inc&quot;</strong>; only <code>-</code> and <code>&amp;</code> are allowed.</li><li><strong>Trade name / DBA</strong> (only if different) — may not contain &quot;LLC&quot;, &quot;LC&quot;, &quot;PLLC&quot;, &quot;PA&quot;, &quot;Corp&quot;, or &quot;Inc&quot;.</li><li><strong>County</strong> and <strong>State/Territory</strong> where the LLC is located.</li><li><strong>State/Territory where the articles of organization are (or will be) filed</strong> (Florida).</li><li><strong>Start date</strong> (Month / Year) = the Sunbiz formation date.</li><li>Then five yes/no triggers — for a typical small company all are <strong>No</strong>:</li></ul>
+<ol class="qlist"><li>Own a <strong>highway motor vehicle ≥ 55,000 lbs</strong> taxable gross weight?</li><li>Involve <strong>gambling / wagering</strong>?</li><li>Need to file <strong>Form 720</strong> (Quarterly Federal Excise Tax)?</li><li><strong>Sell or manufacture alcohol, tobacco, or firearms</strong>?</li><li><strong>Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?</strong> ← answer <strong>Yes</strong> only if there will be payroll; it flags the Form 941/940 obligations.</li></ol>
+<p class="prose"><em>Screen 4b — &quot;Provided Business Activity and Services&quot;:</em> pick the one <strong>category</strong> that best fits, then answer its <strong>follow-up</strong> (see the matrix below). Most JK service clients land on <strong>Other → Consulting</strong> or <strong>Other → Service</strong>.</p>
+<div class="tablewrap"><table class="links"><thead><tr><th>Category</th><th>Follow-up question / options</th></tr></thead><tbody><tr><td>Accommodations</td><td>Casino hotel / Hotel / Motel / Other</td></tr><tr><td>Construction</td><td>&quot;Do you focus on a single construction trade (concrete, framing, roofing, electrical, plumbing, HVAC, flooring, etc.)?&quot; Yes/No</td></tr><tr><td>Finance</td><td>Commodities broker / Credit card issuing / Investment advice / Investment club / Investment holding / Mortgage broker / Mortgage company / Portfolio management / Sales financing / Securities broker / Trust administration / Venture capital / Other</td></tr><tr><td>Food Service</td><td>Bar / Bar and restaurant / Catering / Coffee shop / Fast food / Full service restaurant / Ice cream shop / Mobile food service / Other</td></tr><tr><td>Health Care</td><td>&quot;Does your establishment include medical practitioners with an M.D. or D.O. degree?&quot; Yes/No</td></tr><tr><td>Insurance</td><td>Insurance carrier / Insurance agent or broker / Other</td></tr><tr><td>Manufacturing</td><td>Free text: &quot;specify the type of goods you manufacture and the primary materials used (e.g. 'wood furniture')&quot;</td></tr><tr><td>Real Estate</td><td>Rent/lease property I own / Use capital to build property / Sell property for others / Manage real estate for others / Other</td></tr><tr><td>Rental &amp; Leasing</td><td>Rent/lease/sell real estate / Rent or lease goods (+ specify goods) / Manage real estate for others</td></tr><tr><td>Retail</td><td>Internet-only / Storefront / Direct sales / Auction house / Other</td></tr><tr><td>Social Assistance</td><td>Nursing home / Shelter / Youth services / Other</td></tr><tr><td>Transportation</td><td>&quot;Do you primarily transport cargo or passengers?&quot; Cargo / Passengers / Support activity</td></tr><tr><td>Warehousing</td><td>(selecting it advances to the next step)</td></tr><tr><td>Wholesale</td><td>&quot;Do you own or take title to the goods you sell?&quot; Yes/No</td></tr><tr><td><strong>Other</strong></td><td><strong>Consulting / Manufacturing / Organization (religious, environmental, social/civic, athletic…) / Rental / Repair / Sell goods / Service / Other (+ specify)</strong></td></tr></tbody></table></div>
+<p class="prose"><strong>Step 5 — Review &amp; Submit.</strong> A read-only summary of every answer — <em>&quot;if any of the information below is incorrect, you will need to start a new application&quot;</em> (there is no going back to edit after submit). Also choose:</p>
+<ul class="dots"><li><strong>&quot;How would you like to receive your EIN Confirmation Letter?&quot;</strong></li><li>✅ <strong>&quot;Receive letter digitally in the next step&quot;</strong> — view/print/<strong>save the PDF immediately</strong> (requires a PDF reader; not mailed). <strong>Always pick this.</strong></li><li>&quot;Receive letter by mail (allow up to 4 weeks)&quot; — mailed to the address given.</li><li>Click <strong>Submit EIN Request</strong>.</li></ul>
+<p class="prose"><strong>Step 6 — EIN Assignment.</strong> <em>&quot;Congratulations! Your EIN has been successfully assigned.&quot;</em> The screen shows <strong>Your EIN Details</strong> — the <strong>EIN assigned</strong>, <strong>Legal name</strong>, <strong>Name control</strong> — and a <strong>Download EIN confirmation Letter [PDF]</strong> button plus <strong>Print Page</strong>.</p>
+<ul class="dots"><li>👉 <strong>Download the PDF and Print/Save the page now</strong> — this CP 575-equivalent letter is the client's official proof of EIN and is not easily re-issued (a 147C by phone is the only replacement). Store it in the client's system, not this repo (§5).</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">3</span><h2>Path B — Form SS-4 by fax / mail / phone (no SSN or ITIN)</h2></div>
+<p class="prose">Use this when the responsible party has <strong>neither an SSN nor an ITIN</strong>. Complete <strong>Form SS-4</strong> (Rev. December 2025 or later):</p>
+<ul class="dots"><li>Form: &lt;https://www.irs.gov/pub/irs-pdf/fss4.pdf&gt;</li><li>Instructions: &lt;https://www.irs.gov/instructions/iss4&gt;</li></ul>
+<div class="subbar"><h3>SS-4 line-by-line (the lines that matter)</h3></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>Line</th><th>What to put</th></tr></thead><tbody><tr><td><strong>1</strong></td><td>Legal name of the entity — <strong>exactly</strong> as on Sunbiz</td></tr><tr><td><strong>2</strong></td><td>Trade name / DBA (only if operating under a fictitious name)</td></tr><tr><td><strong>4a/4b</strong></td><td>Mailing address</td></tr><tr><td><strong>5a/5b</strong></td><td>Street address (if different from mailing)</td></tr><tr><td><strong>6</strong></td><td><strong>County and state</strong> where the principal business is located</td></tr><tr><td><strong>7a</strong></td><td>Responsible party's <strong>name</strong></td></tr><tr><td><strong>7b</strong></td><td><strong>&quot;Foreign&quot;</strong> — when the responsible party has no SSN/ITIN and isn't required to have one <em>(some filers write &quot;N/A&quot;; &quot;Foreign&quot; is the accepted convention for a foreign responsible party)</em></td></tr><tr><td><strong>8a–8c</strong></td><td>Is it an LLC? number of members? organized in the US?</td></tr><tr><td><strong>9a</strong></td><td>Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's <strong>taxed</strong> (see §4A)</td></tr><tr><td><strong>10</strong></td><td>Reason for applying → &quot;Started new business&quot;</td></tr><tr><td><strong>11</strong></td><td>Date business started = <strong>Sunbiz formation date</strong></td></tr><tr><td><strong>12</strong></td><td>Closing month of accounting year → <strong>December</strong> (usual)</td></tr><tr><td><strong>13</strong></td><td>Highest number of employees expected next 12 months (0 is fine)</td></tr><tr><td><strong>14</strong></td><td>Check the box to file <strong>Form 944</strong> annually instead of 941 quarterly only if you expect ≤ <strong>$1,000</strong> in annual payroll tax (usually leave unchecked)</td></tr><tr><td><strong>15</strong></td><td>First date wages were/will be paid (blank if no payroll yet)</td></tr><tr><td><strong>16</strong></td><td>Principal activity</td></tr><tr><td><strong>17</strong></td><td>Principal line of merchandise/services</td></tr><tr><td><strong>18</strong></td><td>Has this entity ever applied for an EIN before? (No, for a new entity)</td></tr><tr><td><strong>Third-Party Designee</strong></td><td>If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the <strong>client signs</strong> the form (see §4D)</td></tr></tbody></table></div>
+<div class="subbar"><h3>Where to send it</h3></div>
+<p class="prose"><strong>Applicant is inside the 50 states or DC</strong> (the responsible party lives in the US but has no SSN/ITIN):</p>
+<ul class="dots"><li><strong>Fax:</strong> <strong>855-641-6935</strong> — include your <strong>return fax number</strong> and the IRS faxes the EIN back, generally within <strong>~4 business days</strong>.</li><li><strong>Mail:</strong> Internal Revenue Service, <strong>Attn: EIN Operation, Cincinnati, OH 45999</strong> — allow <strong>~4–5 weeks</strong>.</li></ul>
+<p class="prose"><strong>Applicant has no legal residence / principal place of business / office in any state</strong> (international applicant):</p>
+<ul class="dots"><li><strong>Fax:</strong> <strong>855-215-1627</strong> (from within the US) or <strong>304-707-9471</strong> (from outside the US). Return fax → EIN generally within <strong>~4 business days</strong>.</li><li><strong>Mail:</strong> Internal Revenue Service, <strong>Attn: EIN International Operation, Cincinnati, OH 45999</strong>.</li><li><strong>Phone (international applicants only):</strong> <strong>267-941-1099</strong> (not toll-free), <strong>Mon–Fri, 6 a.m.–11 p.m. Eastern</strong>. The caller must be authorized and able to answer every SS-4 line — <strong>fill out the SS-4 first</strong>, then call; the EIN can be issued on the call.</li></ul>
+<div class="callout note"><div class="cx"><p><strong>Fax is the practical default for a no-SSN owner living in Florida:</strong> ~4 business days vs. ~4–5 weeks by mail, and you keep a paper trail.</p></div></div>
+<hr class="rule">
+<div class="shead"><span class="schip">4</span><h2>The answers people get wrong</h2></div>
+<div class="subbar"><h3>4A. LLC classification — what the &quot;entity type&quot; answer really means</h3></div>
+<p class="prose">For an <strong>LLC</strong>, the EIN application is <strong>not</strong> where you choose how the company is taxed for real — it only records the <strong>default</strong>:</p>
+<ul class="dots"><li><strong>Single-member LLC</strong> → default <strong>disregarded entity</strong> (owner reports the activity on their own return).</li><li><strong>Multi-member LLC</strong> → default <strong>partnership</strong> (Form 1065).</li></ul>
+<p class="prose">Technically a single-member LLC with <strong>no employees and no excise tax</strong> isn't <em>required</em> to have its own EIN — but <strong>always get one anyway</strong>: you need it for a business bank account, to elect S-corp, to issue/receive 1099s, and to keep the owner's SSN off vendor paperwork.</p>
+<div class="subbar"><h3>4B. S-corp election is a SEPARATE step — the EIN app never makes it</h3></div>
+<p class="prose">This matters for almost every S-corp client (and everything the reasonable-compensation work depends on):</p>
+<ul class="dots"><li><strong>Obtaining the EIN does not make the entity an S-corp.</strong> Selecting &quot;S Corporation&quot; (or &quot;Corporation&quot;) in the online interview does <strong>not</strong> create the election — the IRS will still expect <strong>Form 2553</strong>.</li><li><strong>Sequence:</strong> form on Sunbiz → <strong>get the EIN (this SOP)</strong> → <strong>file Form 2553</strong> to elect S-corp status.</li><li><strong>2553 deadline:</strong> generally within <strong>2 months and 15 days</strong> of the entity's formation/effective date (or the start of the tax year the election is to take effect). Missed it? <strong>Rev. Proc. 2013-30</strong> late-election relief is usually available — file 2553 with the reasonable-cause statement. Track this deadline the moment the EIN is in hand.</li><li>An <strong>LLC electing S-corp</strong> does this via Form 2553 alone (it's treated as also electing corporate classification); you do <strong>not</strong> pick &quot;S corporation&quot; as the entity type when getting the EIN — record it as the LLC it is.</li></ul>
+<div class="subbar"><h3>4C. Who the &quot;responsible party&quot; is</h3></div>
+<ul class="dots"><li>Must be a <strong>natural person</strong> (an individual), not another company — the one who <strong>ultimately owns or controls</strong> the entity and directs its funds and assets (the true principal owner/officer/member, general partner, grantor, or trustor).</li><li><strong>Only one</strong> responsible party per EIN. Use <strong>their</strong> SSN/ITIN (or &quot;Foreign&quot; on paper if they have neither).</li><li>For a multi-owner entity, pick the individual who genuinely controls it; the IRS expects the real principal, not a nominee.</li></ul>
+<div class="subbar"><h3>4D. Third-Party Designee — when the firm applies for the client</h3></div>
+<p class="prose">If JK completes and submits the application <strong>on the client's behalf</strong>:</p>
+<ul class="dots"><li><strong>Paper SS-4:</strong> fill in the <strong>Third-Party Designee</strong> block (firm name, address, phone/fax) so the IRS releases the EIN to the firm — and the <strong>client (the responsible party) signs</strong> the form.</li><li><strong>Online:</strong> the tool is meant to be completed by someone authorized to receive the EIN for the entity; enter the client's responsible-party info with the client's authorization.</li><li>The designee's authority to receive the EIN <strong>ends once the EIN is assigned</strong> — it is not ongoing power of attorney.</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">5</span><h2>After you have the EIN</h2></div>
+<ol class="qlist"><li><strong>Save the confirmation</strong> in the client's system:</li></ol>
+<ul class="dots"><li>Online → the downloaded <strong>EIN Confirmation Notice PDF</strong> (CP 575 equivalent).</li><li>Fax → the <strong>fax-back</strong> page from the IRS.</li><li>Keep it in the client's Drive/Double folder — the client will need it for the bank, and the mailed <strong>CP 575</strong> is hard to replace (an EIN verification letter, <strong>147C</strong>, is the only re-issue and must be requested by phone).</li></ul>
+<ol class="qlist"><li><strong>Record the EIN</strong> in the client record (Double / QuickBooks / Drive) — never in this repo.</li><li><strong>Trigger the next steps</strong> the EIN unlocks (all outside this SOP):</li></ol>
+<ul class="dots"><li><strong>Form 2553</strong> if electing S-corp (§4B) — mind the deadline.</li><li><strong>Business bank account.</strong></li><li><strong>FL Dept. of Revenue</strong> registration (sales &amp; use tax / reemployment tax) if the activity requires it.</li><li><strong>Local Business Tax Receipt</strong> (see <span class="ln"><code>hollywood-broward-business-tax-receipt.md</code></span> for the Hollywood/Broward version).</li><li><strong>Payroll setup</strong> if there will be employees.</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">6</span><h2>Common pitfalls</h2></div>
+<ul class="dots"><li><strong>Name mismatch with Sunbiz.</strong> Even a punctuation difference causes downstream headaches — copy the legal name <strong>exactly</strong>.</li><li><strong>Applying before Sunbiz is Active.</strong> Get the entity formed and the formation date first; the IRS asks for it.</li><li><strong>Assuming a foreign owner needs an ITIN first.</strong> They don't — fax the SS-4 with <strong>&quot;Foreign&quot;</strong> on line 7b (§3). The ITIN track is separate and slower.</li><li><strong>Thinking the EIN made the S-election.</strong> It didn't — <strong>file Form 2553</strong> (§4B).</li><li><strong>The 15-minute online timeout.</strong> Have all §0 answers ready; you can't save and return.</li><li><strong>One EIN per responsible party per day</strong> — plan multi-entity days accordingly.</li><li><strong>Not saving the confirmation letter.</strong> Download/keep it immediately; replacement is a phone-only <strong>147C</strong>.</li><li><strong>Paying a third-party &quot;EIN service.&quot;</strong> It's free from the IRS (see top).</li></ul>
+<hr class="rule">
+<div class="shead"><span class="schip">7</span><h2>Contacts &amp; links</h2></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>Who</th><th>For</th><th>Link / number</th></tr></thead><tbody><tr><td>IRS — Apply for an EIN online</td><td>Path A (SSN/ITIN)</td><td>&lt;https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online&gt;</td></tr><tr><td>IRS — Form SS-4 (PDF)</td><td>Path B form</td><td>&lt;https://www.irs.gov/pub/irs-pdf/fss4.pdf&gt;</td></tr><tr><td>IRS — Instructions for Form SS-4</td><td>Line-by-line</td><td>&lt;https://www.irs.gov/instructions/iss4&gt;</td></tr><tr><td>IRS — Where to file SS-4</td><td>Fax/mail addresses</td><td>&lt;https://www.irs.gov/filing/where-to-file-your-taxes-for-form-ss-4&gt;</td></tr><tr><td>IRS — SS-4 fax (50 states + DC)</td><td>Domestic fax</td><td><strong>855-641-6935</strong></td></tr><tr><td>IRS — SS-4 fax (international)</td><td>No US residence</td><td><strong>855-215-1627</strong> (in US) · <strong>304-707-9471</strong> (outside US)</td></tr><tr><td>IRS — EIN by phone (international only)</td><td>No-SSN/ITIN international applicant</td><td><strong>267-941-1099</strong>, Mon–Fri 6 a.m.–11 p.m. ET (not toll-free)</td></tr><tr><td>IRS — Business &amp; Specialty Tax Line</td><td>147C re-issue, EIN questions</td><td><strong>800-829-4933</strong>, Mon–Fri 7 a.m.–7 p.m. local</td></tr><tr><td>IRS — mail (domestic)</td><td>Domestic SS-4 by mail</td><td>Internal Revenue Service, Attn: EIN Operation, Cincinnati, OH 45999</td></tr><tr><td>IRS — mail (international)</td><td>International SS-4 by mail</td><td>Internal Revenue Service, Attn: EIN International Operation, Cincinnati, OH 45999</td></tr><tr><td>Sunbiz (Division of Corporations)</td><td>Confirm the entity is Active + exact legal name</td><td>&lt;https://search.sunbiz.org/Inquiry/CorporationSearch/ByName&gt;</td></tr></tbody></table></div>
+<hr class="rule">
+<div class="shead"><h2>Appendix — Blank intake (copy into the client's file in YOUR system)</h2></div>
+<div class="callout note"><div class="cx"><p>Copy this block into the client's folder in Drive/Double/QuickBooks and fill it there <strong>from the client's completed Business Intake Form</strong>. <strong>Keep filled-in client data — SSN/ITIN, addresses, the EIN — out of this repo.</strong></p></div></div>
+<pre class="codeblock"><code>EIN Intake — &lt;legal entity name&gt;
+
+Entity (must match Sunbiz)
+- Exact legal name (as on Sunbiz):
+- Sunbiz document #:
+- Sunbiz status:  ☐ Active   (must be Active before applying)
+- Formation / effective date (= &quot;business start date&quot;):
+- Entity type:  ☐ Single-member LLC  ☐ Multi-member LLC (# members: ___)  ☐ Corporation (Inc./Corp.)
+- Will elect S-corp?  ☐ No  ☐ Yes → file Form 2553 after EIN (deadline: 2mo 15d from formation)
+
+Responsible party  (the individual who owns/controls the entity)
+- Name:
+- SSN / ITIN:  ☐ Has SSN  ☐ Has ITIN  ☐ Has NEITHER  → determines path:
+      • Has SSN/ITIN → PATH A: apply online (same-day EIN)
+      • Has neither  → PATH B: SS-4 by fax &quot;Foreign&quot; on line 7b (~4 business days)
+
+Addresses
+- Mailing address:
+- Physical / principal business address (+ COUNTY):
+
+Business details
+- Reason for applying:  ☐ Started a new business  ☐ Other: ____
+- Principal activity / line of business:
+- Employees expected next 12 months:  ___   First wage date (if any): ____
+- Closing month of accounting year:  ☐ December  ☐ Other: ____
+
+Filing
+- Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
+- Path used:  ☐ A online   ☐ B fax (domestic 855-641-6935 / intl 855-215-1627)   ☐ B mail   ☐ B phone (intl 267-941-1099)
+
+Result  (store in client system, NOT the repo)
+- EIN assigned:
+- Date assigned:
+- Confirmation saved?  ☐ Online PDF (CP 575 equiv.)  ☐ Fax-back page   Location: ____
+- Next: ☐ Form 2553 (if S-corp)  ☐ Bank account  ☐ FL DOR (sales/reemployment)  ☐ Local BTR  ☐ Payroll
+
+Notes / open questions:</code></pre>
+<p class="prose">_Sources: IRS &quot;How to apply for an EIN,&quot; &quot;Apply for an EIN online,&quot; Instructions for Form SS-4 (Rev. Dec 2025), and &quot;Where to file your taxes for Form SS-4&quot;; IRS EIN telephone guidance for international applicants. Verify fax numbers, hours, and mailing addresses against the official IRS pages before filing — the IRS changes them periodically._</p></div></div>
+<div class="rdoc" data-doc="hollywood-broward-business-tax-receipt" hidden><section class="mast">
+  <div class="in">
+    <svg class="medallion" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group medallion">
+      <defs>
+        <path id="arcTop" d="M20.9 51.7 A40 40 0 0 1 99.1 51.7" fill="none"></path>
+        <path id="arcBot" d="M20.9 68.3 A40 40 0 0 0 99.1 68.3" fill="none"></path>
+      </defs>
+      <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
+      <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1"></circle>
+      <text font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.6" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">JK ACCOUNTING GROUP</textPath></text>
+      <text font-family="'IBM Plex Mono',monospace" font-size="5" letter-spacing="1.4" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcBot" startOffset="50%">TAX · BOOKKEEPING · CFO</textPath></text>
+      <g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g>
+      <g transform="translate(60,60) scale(0.44) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g>
+    </svg>
+    <p class="kick">Standard Operating Procedure</p>
+    <h1>Business Tax Receipt<span class="loc">City of Hollywood · Broward County, Florida</span></h1>
+    <p class="lede">The complete, self-contained procedure for getting a Florida Business Tax Receipt (BTR) for a business physically located in Hollywood, FL — intake questions, the two filings, both applications screen&#8209;by&#8209;screen, every link, and the caveats. Everything for this task lives here.</p>
+    <div class="meta">
+      <span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span>
+      <span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Julia</b></span>
+      <span class="chipm"><span class="dot"></span>Last&nbsp;updated:&nbsp;<b>2026-07-15</b></span>
+      <span class="chipm"><span class="dot"></span>Two&nbsp;receipts&nbsp;·&nbsp;<b>County&nbsp;→&nbsp;City</b></span>
+    </div>
+  </div>
+</section>
+
+<main class="page">
+
+  <!-- in-review + data callouts -->
+  <div class="callout info reveal" role="note">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5.6A6.5 6.5 0 1 1 6.5 17"/><path d="M3 8l3-2 1 3.4"/><circle cx="12" cy="12" r="0.6" fill="currentColor" stroke="none"/><path d="M12 11v4.5M12 8.4v.1"/></svg></span>
+    <div class="cx">
+      <div class="cl">In review · Jul 2026</div>
+      <p>Lilian is doing a final detailed read-through after a major restructuring round (flowchart, two-fees box, uploads checklist, email map). Her structure preferences from that round are captured in the <b>sop-authoring skill</b>. Remove this note when she signs off.</p>
+    </div>
+  </div>
+
+  <div class="callout warn reveal" role="note">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+    <div class="cx">
+      <div class="cl">Where client data goes</div>
+      <p>A real business's name, address, EIN, folio, and the filled-in forms are <b>sensitive</b> and belong in <b>your client systems</b> (Google Drive / Double / QuickBooks) — <b>not</b> in this repo. Copy the blank intake at the bottom into the client's folder there and fill it in. This repo keeps only the reusable procedure and the blank template.</p>
+    </div>
+  </div>
+
+  <!-- ==================== AT A GLANCE ==================== -->
+  <section class="doc" id="glance">
+    <div class="shead big reveal"><span class="schip">◆</span><h2>The process at a glance</h2></div>
+    <p class="slede reveal">Two receipts, in order — <b>county first, then city</b> — each with a wait and a payment. The map below is the whole flow; the numbered sections after it are the detail.</p>
+
+    <figure class="flow reveal" aria-label="Business Tax Receipt process flow, county first then city">
+      <div class="fnode gate">
+        <b>Intake + zoning gate</b> — confirm the business is even allowed at the address before filing anything <span class="fref">§0–§1</span>
+      </div>
+      <div class="fconn" aria-hidden="true"></div>
+
+      <section class="fphase">
+        <div class="fphase-h"><span class="pn">1</span><b>County</b><span class="fref">Broward · BTExpress · §2 Step A</span></div>
+        <div class="fnode">Apply on <b>BTExpress</b> and submit the application</div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode">Click the <b>confirmation link</b> in the 1st email <span class="fref">not the end</span></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode wait"><span class="pill">Wait ~24–48h</span>2nd email arrives: <b>pay the county balance</b></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode pay"><span class="pill">Pay</span>Pay the county → <b>print the County BTR</b> <span class="ckmark" aria-label="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span></div>
+      </section>
+
+      <div class="fconn" aria-hidden="true"></div>
+
+      <section class="fphase">
+        <div class="fphase-h"><span class="pn">2</span><b>City</b><span class="fref">Hollywood · LBTR · §2 Step B</span></div>
+        <div class="fnode">Apply on <b>LBTR</b> — requires the <b>active county account</b> from Phase 1</div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode pay"><span class="pill">Pay</span>Pay the city: <b>$25 + classification tax</b> (card / PayPal)</div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fdecide">
+          <div class="dh"><span class="dt">City review</span><span class="dq">Does the application check out?</span></div>
+          <div class="fbranch">
+            <div class="branch fix"><span class="bl">Needs fixing</span>Wrong category, missing state license, or a balance — <b>send docs or pay the difference</b>, then it proceeds</div>
+            <div class="branch good"><span class="bl">Looks good</span><span class="arw">Proceeds straight to issuance ↓</span></div>
+          </div>
+        </div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode"><b>City issues + mails the BTR</b> <span class="ckmark" aria-label="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span></div>
+      </section>
+
+      <div class="fconn" aria-hidden="true"></div>
+      <div class="fnode done"><span class="pill">Done</span><b>Post both receipts</b> at the place of business · <b>calendar the Sept 30 renewal</b></div>
+    </figure>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §0 INTAKE ==================== -->
+  <section class="doc" id="s0">
+    <div class="shead reveal"><span class="schip">§0</span><h2>Intake — ask the client these first</h2></div>
+    <p class="slede reveal">These answers drive everything — the classification, the fees, which licenses apply, and whether the business is even allowed at the address.</p>
+    <ol class="qlist reveal">
+      <li><b>Legal name</b> and <b>entity type</b>? (LLC / Corp / sole proprietor / LP / LLP)</li>
+      <li>Operating under a <b>DBA</b> — a name different from the legal entity name?</li>
+      <li>Already registered on <b>Sunbiz</b>? Has an <b>EIN</b>?</li>
+      <li><b>Exact activity / primary function of the business?</b> — drives the classification <em>and</em> which regulator (see the 13 questions in §3A).</li>
+      <li><b>Physical address</b> in Hollywood?</li>
+      <li><b>Will the owner RESIDE at that address?</b> — the zoning gate (see §1). This is the single most important question; ask it early.</li>
+      <li>Is it a <b>commercial space</b> or the <b>owner's home</b>?</li>
+      <li><b>Number of employees</b>, including the owner?</li>
+      <li>Is it a <b>regulated profession</b>? (salon, contractor, restaurant, real estate, financial services, healthcare, etc. — see §3A, Q4–Q13)</li>
+      <li><b>Tangible property</b> (furniture / equipment) worth <b>≥ $25,000</b>? → triggers a TPP return (DR-405) to the Property Appraiser by April 1.</li>
+      <li>Any <b>existing</b> city or county receipt, or starting from zero?</li>
+    </ol>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §1 ZONING GATE ==================== -->
+  <section class="doc" id="s1">
+    <div class="shead reveal"><span class="schip">§1</span><h2>The zoning gate — resolve BEFORE filing anything</h2></div>
+    <p class="slede reveal"><b>Will the owner reside at the business address?</b> The answer decides whether you can proceed at all.</p>
+
+    <div class="subbar reveal"><span class="tag">Yes</span><h3>Genuine home occupation — proceed</h3></div>
+    <div class="indent reveal">
+      <p class="prose">The Certificate of Use (CU) exemption for single-family / condo applies legitimately, and Fla. Stat. <b>§ 559.955</b> (Home-Based Business Act) protects the use — subject to reasonable standards (parking, signage, no external evidence of the business, no heavy customer traffic).</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">No</span><h3>100% commercial use of a residential address — STOP</h3></div>
+    <div class="indent reveal">
+      <p class="prose"><b>Call City of Hollywood Planning &amp; Urban Design first: 954-921-3471, opt. 2.</b> Ask:</p>
+      <div class="callout note" role="note" style="margin-top:12px">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H8l1.5 4-2 1.3a12 12 0 0 0 5.2 5.2l1.3-2 4 1.5v2.5c0 .8-.7 1.5-1.5 1.5A15 15 0 0 1 4 5.5Z"/></svg></span>
+        <div class="cx"><p class="quote">“I have a property zoned single-family residential at [address], where no one will reside — it will be used solely for a business. Am I permitted to operate this business there as-is, or do I need some kind of permit or approval first?”</p></div>
+      </div>
+
+      <div class="callout err reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
+        <div class="cx">
+          <div class="cl">Confirmed 2026-07 · Hollywood Planning</div>
+          <p>A residential-zoned single-family lot used <b>100% for business with no resident is not permitted</b>; the residential requirements are strict, and <b>no variance / special-exception path</b> was offered. Don't assume it can be worked around — get confirmation for the specific parcel before doing anything else.</p>
+        </div>
+      </div>
+
+      <div class="callout ok reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></svg></span>
+        <div class="cx">
+          <div class="cl">The exemption removes paperwork, not the zoning question</div>
+          <p>The single-family exemption removes the CU <em>paperwork</em>; it does <b>not</b> by itself confirm the use is allowed. The City's own certification (see §3B) says issuing a BTR does <b>not</b> mean the use of the location is lawful — so the receipt is never a substitute for zoning approval. Verify the parcel at <a href="https://bcpa.net">bcpa.net</a> and with Planning when in doubt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §2 THE TWO FILINGS ==================== -->
+  <section class="doc" id="s2">
+    <div class="shead reveal"><span class="schip">§2</span><h2>The two filings — order matters (county first)</h2></div>
+    <p class="slede reveal">The City of Hollywood application <b>requires an active Broward County Tax Collector account</b> as supporting documentation, so do the <b>county</b> first.</p>
+
+    <div class="paybox reveal">
+      <div class="ph"><span class="coin" aria-hidden="true">$</span><b>What you pay</b><span class="sub">two receipts · two governments · two fees</span></div>
+      <p class="prose" style="font-size:14.5px;color:var(--body)">A Hollywood business needs <b>two</b> Business Tax Receipts, issued by <b>two different governments</b>, and <b>each charges its own fee — paying one does not cover the other</b>:</p>
+      <ol class="pay-items">
+        <li><div><p><b>City of Hollywood (LBTR)</b> — a <b>$25 non-refundable</b> application fee <b>plus</b> the local business tax set by your classification (§3B, Screen 1). For a small licensed business (0–1 worker) this is roughly <span class="amt">~$120 total</span> (e.g. $25 + ~$95 tax) — the exact tax depends on the category. Paid by card (PayPal) at submission.</p></div></li>
+        <li><div><p><b>Broward County (BTExpress)</b> — a <b>separate</b> county business tax paid to the Broward County Tax Collector, usually <b>much smaller</b> (<span class="amt">~$30–$45</span>). It is billed <b>after</b> the county approves (the second <code>no-reply@grantstreet.com</code> email) and must be paid before the county receipt is issued (see §7).</p></div></li>
+      </ol>
+      <div class="bottomline"><b>Bottom line:</b> to be fully covered you make <b>two separate payments</b> in <b>two separate systems</b> — neither replaces the other, and the 50% first-year rule (§4) can apply to each. Amounts here are approximate and depend on classification / year; always verify the exact amount shown at submission.</div>
+    </div>
+
+    <div class="callout info reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></span>
+      <div class="cx">
+        <div class="cl">Use the firm's own email — never the client's</div>
+        <p>On <b>both</b> applications (county BTExpress and city LBTR), put the <b>firm's email address</b> in the email / contact-email field. Every confirmation <em>and</em> every follow-up — a wrong category, a "provide your state license", pay-the-difference instructions, the "Track Your Application" status links — is emailed to whatever address is on the application. If the client's email is used, all of that lands in the client's inbox and stalls the filing while you chase them to find it and forward it. The firm email keeps the whole thread with the team so we respond the same day. (Exact emails and where to check status: see §7.)</p>
+      </div>
+    </div>
+
+    <div class="panel reveal">
+      <div class="ph">Documents to have ready · uploads</div>
+      <h4>Gather these as PDFs before you start — you upload them <em>inside</em> the applications</h4>
+      <div class="grp">
+        <h5>County (BTExpress) uploads</h5>
+        <ul class="checks">
+          <li><b>Entity proof</b> — Articles of Organization / Incorporation, <b>or</b> the Fictitious Name (DBA) Registration from Sunbiz.</li>
+          <li><b>State license / certification</b> — only if the activity is regulated (the 13-question Screen-4 questionnaire, §3A, tells you which agency's license to attach).</li>
+        </ul>
+      </div>
+      <div class="grp">
+        <h5>City (Hollywood LBTR) uploads <span style="font-weight:400;color:var(--muted)">— PDF only, ≤ 10 MB each</span></h5>
+        <ul class="checks">
+          <li><b>Proof of location</b> — a signed lease <b>or</b> proof of ownership (property tax bill, warranty deed, bill of sale, insurance certificate, or utility bill).</li>
+          <li><b>Entity proof</b> — Articles of Incorporation <b>or</b> Fictitious Name Registration.</li>
+          <li><b>State license</b> — if the activity is regulated.</li>
+        </ul>
+      </div>
+      <p style="margin-top:16px;font-size:13.5px;color:var(--muted);line-height:1.55">The <b>city</b> always requires proof-of-location + entity proof; the <b>county's</b> uploads depend on your Screen-4 answers (a regulated activity attaches its state license). Screen-by-screen detail is in §3.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">Step A</span><h3>Broward County (BTExpress)</h3><span class="rt">County first</span></div>
+    <div class="indent reveal">
+      <p class="prose">Apply online: <a href="https://broward.county-taxes.com/btexpress">broward.county-taxes.com/btexpress</a> (start page: <a href="https://broward.county-taxes.com/tcb/app/btexpress/main/start_page">/btexpress/main/start_page</a>).</p>
+      <p class="prose" style="margin-top:10px">After you submit, you must <b>click the confirmation link</b> in the first email; then, ~<b>24–48 hours</b> later, a <b>second email tells you to pay</b> — submitting the form is <em>not</em> the end (see §7 for the full email flow; note the payment email can hide in Gmail's <b>"Updates" tab</b>). Screens: see §3A.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">Step B</span><h3>City of Hollywood (LBTR)</h3><span class="rt">Needs the county account</span></div>
+    <div class="indent reveal">
+      <p class="prose">Apply online: <a href="https://apps.hollywoodfl.org/LbtrOnline/">apps.hollywoodfl.org/LbtrOnline</a> · Info page: <a href="https://hollywoodfl.org/218/Local-Business-Tax">hollywoodfl.org/218/Local-Business-Tax</a></p>
+      <p class="prose" style="margin-top:12px;margin-bottom:6px"><b>You need, in hand:</b></p>
+      <ul class="checks">
+        <li>The <b>active county account</b> (from Step A)</li>
+        <li><b>Sunbiz</b> entity / DBA documents</li>
+        <li><b>Proof of the location</b> (signed lease, deed, tax bill, or utility bill)</li>
+        <li><b>State license</b>, if the activity is regulated</li>
+        <li><b>Certificate of Use (CU)</b> — unless single-family / condo &amp; genuinely home-based (see §1)</li>
+        <li>The <b>$25 non-refundable</b> processing fee <b>+ the local business tax</b> (amount set at submission)</li>
+      </ul>
+      <p class="prose" style="margin-top:12px">The receipt is mailed in ~1 week. Screens: see §3B. Paper alternative (commercial locations): <a href="https://www.hollywoodfl.org/DocumentCenter/View/12443/Business-Tax-Receipt-Commercial-Location-Application">Commercial-Location Application (PDF)</a>.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">Step C</span><h3>Once you have the receipt(s) in hand</h3></div>
+    <div class="indent reveal">
+      <p class="prose">"Issuance" just means the city and county have <b>granted</b> the receipt(s). Once you have each one:</p>
+      <ul class="checks">
+        <li><b>Post the receipt at the place of business</b> — Florida requires it to be displayed.</li>
+        <li><b>Calendar the Sept 30 renewal.</b> The tax year runs <b>Oct 1 – Sep 30</b>, so every receipt expires Sept 30 and must be renewed each year. (A first-time receipt issued on/after Apr 1 pays only <b>50%</b> of the annual tax — see §4.)</li>
+      </ul>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">Also</span><h3>State &amp; federal registrations — only what the activity requires</h3></div>
+    <div class="indent reveal">
+      <p class="prose">Not part of the BTR itself, but frequently needed alongside it:</p>
+      <ul class="dots">
+        <li><b>Entity on Sunbiz</b> — LLC / Corp registered, or a <b>Fictitious Name / DBA</b> (Fla. Stat. § 865.09) if operating under a name other than the legal one.</li>
+        <li><b>Federal EIN</b> — from the IRS.</li>
+        <li><b>FL sales &amp; use tax</b> — register with the FL Dept. of Revenue (<b>Form DR-1</b>) if selling / renting taxable goods or certain services; add <b>Reemployment Tax</b> if there are employees.</li>
+        <li><b>Professional / industry license</b> — per the activity: <b>DBPR</b> (salons, contractors, restaurants, real estate…), <b>DCF</b> (childcare), <b>DOH / AHCA</b> (health), etc. See the §3A Q4–Q13 triggers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §3 SCREEN REFERENCES ==================== -->
+  <section class="doc" id="s3">
+    <div class="shead reveal"><span class="schip">§3</span><h2>Application screen references</h2></div>
+
+    <div class="subbar reveal"><span class="tag">3A</span><h3>Broward County BTExpress — screen by screen</h3></div>
+    <div class="indent reveal">
+      <p class="prose" style="margin-bottom:6px">Verified by walking through a real application. Screens in order:</p>
+
+      <div class="screen">
+        <div class="lab">Screen 1 <span class="t">Required Documentation (preview)</span></div>
+        <p>A summary of what to gather (e.g. <em>"corporate documents and/or Fictitious Name Registration"</em>, <em>"State Certification from [the matching agency]"</em>). This list is <b>generated from your answers below</b>, so don't take the exact wording literally yet.</p>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Screen 2 <span class="t">Fictitious (DBA) Name</span></div>
+        <p>Fla. Stat. § 865.09. Choose one:</p>
+        <ul class="sublist">
+          <li><em>"This business has registered a fictitious name…"</em> — have the DBA from Sunbiz, <b>or</b></li>
+          <li><em>"This business does not require a registered fictitious name"</em> + a reason, e.g. <b>"I am doing business under my full legal name."</b> (Correct when an LLC / Corp operates under its own registered entity name — the Sunbiz name <em>is</em> the legal name, so no separate DBA.)</li>
+        </ul>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Screen 3 <span class="t">Occupation Information</span></div>
+        <ul class="sublist">
+          <li><b>Describe the type of business / primary function</b> (free text — be specific; drives classification)</li>
+          <li>Hotel / motel / lodging? (Y/N)</li>
+          <li>Restaurant / bar / eating establishment? (Y/N)</li>
+          <li><b>Number of employees including the owner</b> (required)</li>
+          <li>Vending machines? (Y/N)</li>
+        </ul>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Screen 4 <span class="t">Required Documentation questionnaire — 13 yes/no</span></div>
+        <p>Each "Yes" triggers a specific license requirement to upload:</p>
+        <ol class="qlist" style="margin-top:12px">
+          <li>Located in the <b>unincorporated</b> area of Broward? <span style="color:var(--muted)">(No for any city, incl. Hollywood)</span></li>
+          <li>A FL <b>corporation / LLC / LP / LLP</b>, or a business using a <b>DBA</b>?</li>
+          <li>Located within the <b>City of West Park</b>? <span style="color:var(--muted)">(that city requires its own license first)</span></li>
+          <li>Regulated by <b>DBPR</b> — contractors, professionals, real estate, hotels, restaurants, salons?</li>
+          <li>Construction / contractor needing a <b>Certificate of Competency</b> (Broward Permitting, Licensing &amp; Consumer Protection)?</li>
+          <li>Regulated by <b>FL Dept. of Agriculture &amp; Consumer Services</b> — auto repair, travel agency, telemarketing, exercise studio, pest control, grocery / convenience, etc.?</li>
+          <li>Regulated by <b>FL Dept. of Financial Services</b> — insurance adjusters, bail bonds, funeral homes, fire protection / fireworks / explosives?</li>
+          <li>Regulated by the <b>FL Office of Financial Regulation</b> — collection agency, loan originators / brokers / lenders, money services business, investment adviser, financial institutions, title loan lenders?</li>
+          <li>Regulated by the <b>FL Agency for Healthcare Administration</b> — adult day care, assisted living, clinical labs, home health?</li>
+          <li><b>Auto body / repair, limo, or moving company</b> regulated by Broward County?</li>
+          <li><b>Attorney-at-law</b>? <span style="color:var(--muted)">(current FL Bar number required)</span></li>
+          <li>Regulated by the <b>Broward County Health Department</b> — tanning, tattoo, body piercing?</li>
+          <li>Regulated by <b>any other state agency</b> not listed above?</li>
+        </ol>
+        <div class="callout note" role="note">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
+          <div class="cx"><p><b>Still to capture on the county side:</b> the in-app document <b>upload</b> and <b>fee / payment</b> screens (the emailed confirmation + payment flow is documented in §7) — the flow does not end at the questionnaire.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">3B</span><h3>City of Hollywood LBTR — screen by screen</h3></div>
+    <div class="indent reveal">
+      <p class="prose" style="margin-bottom:6px">Verified while applying. The site first looks up the <b>parcel</b> — the <b>Site Address</b> and <b>Folio Number</b> auto-fill from the address you enter.</p>
+
+      <div class="screen">
+        <div class="lab">Screen 1 <span class="t">Business Category, Classification &amp; Tax Basis</span></div>
+        <p style="margin-bottom:8px">This is where the <b>fee is set</b>:</p>
+        <ul class="sublist">
+          <li><b>Business Category</b> (dropdown — e.g. "Service/Other Business")</li>
+          <li><b>Business Classification</b> (the specific line of business, e.g. "Consultant", "Retail Merchant") — a <b>"Show All Classifications"</b> button lists every option if you're unsure which fits</li>
+          <li><b>Tax Classification</b> (worker / size tiers, e.g. "0–1 Worker")</li>
+          <li><b>Tax Basis Units</b> (required)</li>
+          <li><b>Number of Employees</b> (including the owner)</li>
+        </ul>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Screen 2 <span class="t">About Your Business + Contact Information</span></div>
+        <ul class="sublist">
+          <li><b>Homebased?</b> (Y/N)</li>
+          <li><b>Company Type</b> (dropdown — LLC, Partnership, Corp, etc.)</li>
+          <li><b>Business Name</b>; <b>Business DBA</b></li>
+          <li><b>Mailing Address</b> (checkboxes: "Same as Site Address?", "Non-US Mailing?") + lines / city / state / zip</li>
+          <li><b>Phone</b>, <b>Cell Phone</b>, <b>Email</b> ← put the <b>firm's email</b> here, not the client's (see §2)</li>
+          <li><b>ID Type: Social Security # or Federal EIN</b> (required by state law) + the EIN / SSN field</li>
+          <li><b>Describe your business in detail</b> (be specific — products / goods / services)</li>
+          <li><b>Website</b>; <b>Garbage Service</b> (dropdown)</li>
+          <li><b>Contact Information:</b> Contact Name (First / MI / Last), Contact Title, and contact address / phone / cell / email (checkbox "Same as Business Info?") — again, use the <b>firm's email</b> for the contact email (see §2)</li>
+        </ul>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Screen 3 <span class="t">Documentation + Certification</span></div>
+        <ul class="sublist">
+          <li><b>Upload — proof of location:</b> signed lease <b>or</b> proof of ownership (property tax bill, warranty deed, bill of sale, insurance certificate, or utility bill). <em>PDF only, ≤ 10 MB.</em></li>
+          <li><b>Upload — entity proof:</b> Articles of Incorporation <b>or</b> Fictitious Name Registration (from Sunbiz). <em>PDF only, ≤ 10 MB.</em></li>
+        </ul>
+        <div class="callout warn" role="note" style="margin-top:14px">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+          <div class="cx">
+            <div class="cl">Certification — read + sign</div>
+            <p>You affirm all information is true and correct and accept penalties for false information; you acknowledge the <b>$25 fee is non-refundable</b>; and — important —</p>
+            <p class="quote">“issuance of a local business tax receipt by the City of Hollywood does not mean that the City has determined that the existing or proposed use of a location is lawful… [it] does not legalize or condone the nature of the business being conducted if contrary to any local, state or federal laws.”</p>
+            <p>👉 In other words, <b>getting the BTR is not zoning approval</b> — it doesn't make an unpermitted use legal. This is exactly why §1 (the zoning gate) comes first.</p>
+          </div>
+        </div>
+        <ul class="sublist" style="margin-top:12px">
+          <li><b>Applicant's Name</b>; <b>Applicant's Title</b></li>
+        </ul>
+      </div>
+
+      <div class="screen">
+        <div class="lab">Then <span class="t">→ Make a Payment</span></div>
+        <p>$25 processing + the local business tax from Screen 1.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §4 FEES ==================== -->
+  <section class="doc" id="s4">
+    <div class="shead reveal"><span class="schip">§4</span><h2>Fees, renewals &amp; deadlines</h2></div>
+    <ul class="dots reveal">
+      <li><b>Tax year:</b> Oct 1 – Sep 30. Receipts <b>expire Sept 30</b>; renew before then.</li>
+      <li><b>50% rule:</b> a <b>first-time</b> receipt issued <b>on/after April 1</b> pays half the annual tax (Fla. Stat. § 205.0535 / § 205.053).</li>
+      <li><b>Per receipt:</b> the fee applies <b>city and county</b> — two separate fees, one per location / category (see the "what you pay" box in §2 for what each costs).</li>
+      <li><b>City processing fee:</b> <b>$25 non-refundable</b> + the classification-based tax.</li>
+      <li><b>Late renewals</b> carry escalating statutory penalties (Fla. Stat. § 205.053) — verify the current schedule if filing late.</li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §5 PITFALLS ==================== -->
+  <section class="doc" id="s5">
+    <div class="shead reveal"><span class="schip">§5</span><h2>Common pitfalls</h2></div>
+    <p class="slede reveal">Each of these is a lesson learned the hard way — check them before and during every filing.</p>
+    <ul class="dots reveal">
+      <li><b>Skipping a tier.</b> Both the city <b>and</b> county receipts are required.</li>
+      <li><b>Wrong classification.</b> The activity drives the fee and which license — get it exact at intake.</li>
+      <li><b>Regulated activity without the matching license.</b> Won't issue until the license / competency is in hand and the <b>name + address match</b> the application.</li>
+      <li><b>Putting the client's email on the application.</b> Use the <b>firm's email</b> in the applicant / contact-email field (see §2) so confirmations and the agency's follow-up requests come straight to the team — not stuck in the client's inbox. Chasing a client to find and forward a city / county email stalls the whole filing.</li>
+      <li><b>Treating the BTR as zoning approval.</b> It isn't (see §3B certification) — don't file for a non-resident commercial use of a residential parcel (see §1).</li>
+      <li><b>Missing the Sept 30 renewal.</b></li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §6 CONTACTS ==================== -->
+  <section class="doc" id="s6">
+    <div class="shead reveal"><span class="schip">§6</span><h2>Contacts &amp; links</h2></div>
+    <p class="slede reveal">Every URL and phone number in one place. Links also appear inline exactly where the step uses them.</p>
+    <div class="tablewrap reveal">
+      <table class="links">
+        <thead><tr><th>Who</th><th>For</th><th>Link / phone</th></tr></thead>
+        <tbody>
+          <tr><td>City of Hollywood — LBTR application</td><td><span class="for">City BTR</span></td><td><a href="https://apps.hollywoodfl.org/LbtrOnline/">apps.hollywoodfl.org/LbtrOnline</a> · City Hall, 2600 Hollywood Blvd, Room 103 (Mon–Thu 7am–6pm, closed Fri)</td></tr>
+          <tr><td>City of Hollywood — LBTR renewals</td><td><span class="for">Renewals</span></td><td><a href="https://apps.hollywoodfl.org/LBTRrenewals/">apps.hollywoodfl.org/LBTRrenewals</a></td></tr>
+          <tr><td>City of Hollywood — Planning &amp; Urban Design</td><td><span class="for">Zoning / CU</span></td><td><span class="ph">954-921-3471, opt. 2</span></td></tr>
+          <tr><td>Broward County Tax Collector</td><td><span class="for">County BTR · BTExpress</span></td><td><a href="https://broward.county-taxes.com/btexpress">broward.county-taxes.com/btexpress</a> · <span class="ph">954-357-4829</span></td></tr>
+          <tr><td>Sunbiz (Division of Corporations)</td><td><span class="for">Entity / DBA</span></td><td>corp search <a href="https://search.sunbiz.org/Inquiry/CorporationSearch/ByName">search.sunbiz.org</a> · fictitious search <a href="https://dos.sunbiz.org/ficinam.html">dos.sunbiz.org/ficinam</a> · file DBA <a href="https://efile.sunbiz.org/ficreg01.html">efile.sunbiz.org/ficreg01</a></td></tr>
+          <tr><td>FL DBPR</td><td><span class="for">Regulated professions</span></td><td><a href="https://www.myfloridalicense.com">myfloridalicense.com</a> — salons, contractors, restaurants, real estate…</td></tr>
+          <tr><td>FL Office of Financial Regulation</td><td><span class="for">Money services / lending</span></td><td><a href="https://flofr.gov">flofr.gov</a> — money services, lending, investment advisers, collections</td></tr>
+          <tr><td>FL Department of Revenue</td><td><span class="for">Sales tax / DR-1</span></td><td><a href="https://floridarevenue.com">floridarevenue.com</a> — sales tax (DR-1) / reemployment tax</td></tr>
+          <tr><td>Broward County Property Appraiser</td><td><span class="for">TPP / zoning lookup</span></td><td><a href="https://bcpa.net">bcpa.net</a> — tangible property (DR-405) / zoning lookup</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== §7 EMAILS ==================== -->
+  <section class="doc" id="s7">
+    <div class="shead reveal"><span class="schip">§7</span><h2>What you'll receive — emails &amp; where to check status</h2></div>
+    <p class="slede reveal">Every confirmation, status update, and request lands by <b>email — to whatever address was entered on the application</b> (so always use the firm's, see §2). Keep all of them. Here is each email to expect, what it means, and where to check status.</p>
+
+    <div class="emailgrp reveal">
+      <div class="eh"><span class="from">no-reply@grantstreet.com</span><span class="lbl">County · Broward</span></div>
+      <div class="callout warn" role="note" style="margin-bottom:14px">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx"><p>The county is a <b>two-email process with a wait in between</b> — submitting the form is <b>NOT</b> the end. One email to <em>confirm</em> the submission, then (a few days later) a <em>second</em> email telling you to <b>pay</b>. Watch for both.</p></div>
+      </div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Email 1</span><span class="etag ack">Confirm submission</span></div>
+        <div class="subj">“Broward County — Confirmation Required for Submitted BTExpress™ Application”</div>
+        <p>Arrives right after you submit. It contains a <b>link you must click to confirm the submission</b> — the application is not actually sent for processing until you click it. This is a submission step, <b>not</b> an approval.</p>
+      </div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Email 2</span><span class="etag approve">Approval</span><span class="etag pay">Pay now</span></div>
+        <div class="subj">“Broward County — Your BTExpress™ Application”</div>
+        <p>Arrives <b>a few days later</b> (~24–48h after you confirm). This is the <b>approval — and the email that tells you to pay</b> (<em>"…has been approved… the full balance must be paid"</em>). ⚠️ It <b>can land in Gmail's "Updates" tab</b>, not Primary — easy to miss and assume you're done. You are not done until you pay. Pay online (the <em>"review the details of your account" / "submit payment"</em> links), then use <b>"Print Business Tax Receipt."</b></p>
+      </div>
+      <div class="callout info" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <div class="cx"><div class="cl">Check county status / pay</div><p>The links in the approval email (<code>county-taxes.net/broward/business-tax</code>), or the Broward Tax Collector business-tax search at <a href="https://broward.county-taxes.com">broward.county-taxes.com</a>. If you don't see the payment email a few days after confirming, check the Gmail <b>"Updates" tab</b> and search <code>from:no-reply@grantstreet.com</code>.</p></div>
+      </div>
+    </div>
+
+    <div class="emailgrp reveal">
+      <div class="eh"><span class="from">paybusinesstaxreceipt@hollywoodfl.org</span><span class="lbl">City · Hollywood</span></div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Email 1</span><span class="etag ack">Tracking — keep this</span></div>
+        <div class="subj">“Track Your Local Business Tax Receipt Application #&lt;ID&gt; for &lt;BUSINESS&gt;”</div>
+        <p>Arrives right after you submit the city application. <em>"Thank you for submitting… Please keep this email."</em> Shows the <b>Application ID, Folio, Business Name, Street Address, and Application Status</b> (e.g. <em>"Initiated"</em>), with three links: <b>Check Status · Make a Payment · Upload a Document</b>. This is <em>the</em> email to keep for tracking.</p>
+      </div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Email 2</span><span class="etag ack">Status update</span></div>
+        <div class="subj">“Status Update for Local Business Tax Receipt Application #&lt;ID&gt; for &lt;BUSINESS&gt;”</div>
+        <p>Arrives as the status changes (<em>"…will be reviewed by City staff"</em>). Same three links.</p>
+      </div>
+      <div class="callout info" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <div class="cx"><div class="cl">Check city status / pay / upload</div><p>The <b>Check Status / Make a Payment / Upload a Document</b> links in those emails, or the city's <b>"Check Application Status"</b> page at <a href="https://apps.hollywoodfl.org/LbtrOnline/">apps.hollywoodfl.org/LbtrOnline</a> (needs the Application ID / Folio).</p></div>
+      </div>
+    </div>
+
+    <div class="emailgrp reveal">
+      <div class="eh"><span class="from">BusinessTax@hollywoodfl.org</span><span class="lbl">City follow-up · only if something needs fixing</span></div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Personal</span><span class="etag action">Action needed</span></div>
+        <div class="subj">“BUSINESS TAX APPLICATION #&lt;ID&gt; - &lt;ADDRESS&gt; - &lt;BUSINESS&gt;”</div>
+        <p>A <b>personal</b> email from a staff member (may cc a reviewer, e.g. <code>tlloyd@hollywoodfl.org</code>), sent <b>only if there's an issue</b>: wrong category, a state license they need you to provide, or a pay-the-difference balance. Reply with exactly what they ask (e.g. the state license PDF) to move forward.</p>
+      </div>
+    </div>
+
+    <div class="emailgrp reveal">
+      <div class="eh"><span class="from">noreply@paypal.com</span><span class="lbl">Payment receipt</span></div>
+      <div class="emailcard">
+        <div class="top"><span class="step">Receipt</span><span class="etag approve">Save with the file</span></div>
+        <div class="subj">PayPal “Order Confirmation”</div>
+        <p>The <b>city fee is paid by card through PayPal</b>, so the payment receipt is a PayPal "Order Confirmation" email. Save it with the application.</p>
+      </div>
+    </div>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx"><div class="cl">These emails follow the email on the application</div><p>If the client's email was entered, the firm never receives the Track / Status emails and <b>cannot check status</b> — exactly what happened on a city application where the client's email was used (no tracking email reached the firm inbox). Use the firm's email every time (see §2).</p></div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================== APPENDIX ==================== -->
+  <section class="doc" id="appendix">
+    <div class="shead reveal"><span class="schip">＋</span><h2>Appendix — blank intake</h2></div>
+    <p class="slede reveal">Copy this block into the client's folder in Drive / Double / QuickBooks and fill it there. <b>Keep filled-in client data out of this repo.</b></p>
+    <div class="intake reveal">
+<pre><span class="grp">BTR Intake — &lt;business name&gt;</span>
+
+<span class="grp">Business identity</span>
+- Legal name:
+- Entity type:  ☐ LLC  ☐ Corp/S-corp  ☐ Sole proprietor  ☐ Partnership  ☐ Other:
+- Trade name / DBA (if different):
+- Registered on Sunbiz?  ☐ Yes  ☐ No   — Document #:
+- Federal EIN:
+- Owner name(s) &amp; contact:
+
+<span class="grp">Activity &amp; location  (these drive the fee and any state license)</span>
+- What the business actually does (activity):
+- NAICS / classification (if known):
+- Physical address in Hollywood:
+- Location type:  ☐ Commercial/leased  ☐ Owned  ☐ Home-based
+- Will the owner RESIDE at this address?  ☐ Yes  ☐ No   ← zoning gate (§1); if No and residential parcel, call Planning first
+- # of employees / seats / units:
+
+<span class="grp">Regulated-activity check</span>
+- Needs a state/professional license?  ☐ No  ☐ Yes — which:
+- License / Competency # in hand?  ☐ Yes  ☐ No — status:
+
+<span class="grp">Status</span>
+- ☐ Broward County receipt (BTExpress) — status:
+- ☐ City of Hollywood Certificate of Use — status:
+- ☐ City of Hollywood BTR — status:
+- ☐ FL sales-tax (DR-1) needed?  ☐ Yes  ☐ No
+- ☐ Tangible property ≥ $25,000? (DR-405)  ☐ Yes  ☐ No
+
+Notes / open questions:</pre>
+    </div>
+    <p class="source">Sources: City of Hollywood LBTR application &amp; info pages; Broward County Tax Collector (browardtax.org) + BTExpress screens verified directly by Julia; Sunbiz; flofr.gov. Verify fees / forms against the official source before filing.</p>
+  </section>
+
+</main></div>
+<div class="rdoc" data-doc="ecoorganic-bookkeeping-review" hidden><section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p><h1>Ecoorganic — Monthly Bookkeeping &amp; Review</h1><div class="meta"><span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span><span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Lilian</b></span><span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>Jul 2026</b></span></div></div></section><div class="page"><div class="callout note"><div class="cx"><p><strong>Status:</strong> Active · <strong>Client:</strong> ECOORGANIC USA LLC (QBO) · <strong>Owner of SOP:</strong> Lilian · <strong>Started:</strong> Jul 2026  Born from the July 2026 cleanup of the client's books. A staff bookkeeper does the monthly work; Claude acts as the <strong>independent reviewer</strong> using the rules below. This file holds the <em>procedure and rules only</em> — working papers with client figures (audit workbooks, categorization sheets, reconciliations) live in the firm's client systems (Drive / Double / QuickBooks), never in this repo.</p></div></div>
+<div class="shead"><h2>Client snapshot (operational, non-financial)</h2></div>
+<ul class="dots"><li>Spray-foam insulation contractor, Connecticut. Owner: Artem Markarian.</li><li>Books in QuickBooks Online, managed through Double.</li><li><strong>Only one live bank feed: Chase checking (…8310).</strong> All other bank and card accounts are disconnected; which of them are actually closed is <strong>pending client confirmation</strong> — until then they are frozen (rename-only, no new postings, no cleanup).</li><li>Check- and cash-heavy business; many Zelle payments to subcontractors.</li><li>Owner's personal Chase checking is <strong>…2935</strong> — transfers with it are equity moves, never income or cost (rule 6).</li></ul>
+<div class="shead"><h2>Categorization rules</h2></div>
+<p class="prose">These override any QuickBooks auto-suggestion. During the cleanup we verified QBO's suggestions are frequently wrong for this client — never accept them blindly.</p>
+<ol class="qlist"><li><strong>Checks and deposits are never assumed.</strong> Download the check/deposit image from the bank; the payee and memo decide the category. Every deposit must carry a customer (or the owner, for contributions) — <strong>no nameless postings to Sales</strong>.</li><li><strong>Gas-station threshold:</strong> a charge <strong>≥ $30</strong> at a gas station (Sunoco, Shell, Gulf, Citgo, Exxon, Mobil, Wawa, …) is fuel → Auto: Gas &amp; Fuel. Under $30 it is most likely food/snacks → falls under the meals policy (rule 3).</li><li><strong>Meals policy: PENDING (Julia + Lilian).</strong> Until defined, post food / restaurant / grocery charges to the <strong>Meals holding account</strong> and redistribute in one batch once the policy lands. Never leave them in the triage accounts — those must still be $0 at close (rule 11). Expected split: client meals (50% deductible) / crew–jobsite meals / owner personal → equity.</li><li><strong>Every transaction gets a vendor/payee</strong>, except owner draws, owner contributions, and transfers. Unknown bank descriptors: identify the business online first (this works — e.g. CWPM LLC resolved to a CT waste hauler); check the QBO vendor list; propose creating the vendor if missing. Never guess — an unidentifiable descriptor goes to <em>Ask My Accountant</em> (triage).</li><li><strong>Cash withdrawals default to owner draws</strong> (consistent 2025 precedent), <em>unless</em> there is evidence cash paid workers — then stop and ask the client (1099 exposure).</li><li><strong>Transfers with the owner's personal account (…2935):</strong> money in → Owner's Contribution; money out → Owner's Pay &amp; Personal Expenses. Never Sales, never COGS (a recurring 2026 error this rule exists to prevent).</li><li><strong>Personal ACH pulls named to the owner</strong> (e.g. his personal Capital One card autopay) → Owner's Pay &amp; Personal Expenses.</li><li><strong>IRS <code>USATAXPYMT</code> pulls under the owner's name</strong> are his personal federal tax → Owner's Pay &amp; Personal Expenses, never a business tax expense.</li><li><strong>Job costs go to COGS, not opex:</strong> foam/spray materials (Foam Pro, Spray Alliance, Everchem, IDI, The Spray Market) → COGS Materials; installation subcontractors (paid by Zelle/check/wire) → COGS Subcontractor Labor — collect a W-9 from every new one and keep the 1099 list current; job-site disposal (CWPM, BPM Recycling) → COGS Job Disposal.</li><li><strong>Vehicle financing (Hyundai Motor Finance, Ally): PENDING</strong> the client's lease-vs-loan answer (the HMF account is under the owner's personal name — it may not be a business vehicle at all). Do not expense installments blindly; park in triage until resolved.</li><li><strong>Parent accounts never receive postings</strong>, and the triage/uncategorized accounts (997 / 998 / 999 family) must be <strong>$0 at every month-end close</strong>.</li></ol>
+<div class="shead"><h2>Chart of accounts conventions</h2></div>
+<ul class="dots"><li>Masciave/Aura-style grammar: number prefixes in the account <em>name</em> — 100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s opex · 800s other income · 901 depreciation · 997/998/999 triage.</li><li>Parents are grouping-only; transactions post to sub-accounts.</li><li><strong>2025 is closed.</strong> Safety rules: renames/renumbers only (retroactive and harmless); <strong>never merge</strong> accounts that have 2025 activity (reclassify 2026 and deactivate instead); <strong>never change the type</strong> of an account with 2025 activity (create a new account and reclassify 2026 into it).</li><li>People and companies are <strong>vendors, not accounts</strong> — no more person-named expense sub-accounts.</li><li>Overdraft/NSF bank fees post to their <strong>own sub-account under Bank Fees</strong> (kept separate from ordinary service charges) so the running total is visible for the cash-management conversation with the client.</li></ul>
+<div class="shead"><h2>Monthly review checklist (what the reviewer verifies)</h2></div>
+<ol class="qlist"><li>Bank feed fully processed; book balance ties to the bank statement.</li><li>Triage accounts (997/998/999 family) at $0.</li><li>No postings to parent accounts.</li><li>Every transaction has a payee, except draws/contributions/transfers.</li><li>Checks and deposits carry evidence (image reviewed; customer assigned).</li><li>Vendor→account consistency: one vendor, one account, unless the split is explained (e.g. the gas threshold).</li><li>Meals and sub-$30 gas-station charges handled per the (pending) policy.</li><li>New recurring vendors/subscriptions flagged; new payees have W-9s if they are subcontractors.</li><li>Overdraft/NSF fees tracked in their own sub-account and totalled for the client conversation.</li><li>No new activity in frozen accounts; any exception is escalated.</li></ol>
+<div class="shead"><h2>Open decisions log</h2></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>#</th><th>Decision</th><th>Owner</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>Meals policy (client / crew / personal split)</td><td>Julia + Lilian</td><td>Pending</td></tr><tr><td>2</td><td>Hyundai Motor Finance &amp; Ally: lease vs loan vs personal</td><td>Client</td><td>Pending</td></tr><tr><td>3</td><td>Which disconnected bank/card accounts are closed</td><td>Client</td><td>Pending</td></tr><tr><td>4</td><td>Identity/role of a recurring individual payee (name on file in the firm's client systems)</td><td>Client</td><td>Pending</td></tr><tr><td>5</td><td>What &quot;Laundry&quot; purchases are (workwear vs personal)</td><td>Client</td><td>Pending</td></tr><tr><td>6</td><td>Blanket rule: obvious personal retail → Owner's Pay &amp; Personal</td><td>Client</td><td>Proposed</td></tr></tbody></table></div>
+<p class="prose">When a decision lands, update the rule above, note the date, and reclassify the parked transactions in one batch.</p></div></div>
+<div class="rdoc" data-doc="double-portal-first-login" hidden><section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p><h1>Double Portal — First-Time Sign-In</h1><div class="meta"><span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span><span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Julia</b></span><span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>2026-07</b></span></div></div></section><div class="page"><div class="callout note"><div class="cx"><p><strong>Status:</strong> Active · <strong>Owner:</strong> Julia · <strong>Started:</strong> 2026-07</p></div></div>
+<div class="shead"><h2>Why this exists</h2></div>
+<p class="prose">Double's Client Portal has no &quot;sign up&quot; step. A newly-invited client only sees <strong>&quot;Sign in&quot;</strong> — they have no password yet, and the two no-password options fail for our clients:</p>
+<ul class="dots"><li><strong>Magic link</strong> — the email often doesn't arrive, and even when it does, the link <strong>expires</strong>, so the client has to request a new one <em>every single time</em> they want to log in. Not workable for recurring portal use.</li><li><strong>Sign in with Google</strong> — does not work for our portal setup.</li></ul>
+<p class="prose">The one path that has worked consistently (confirmed with Double support) is to use <strong>&quot;Forgot your password?&quot;</strong> to set a password via a reset-link email. That reset email has been reliable, and once the password is set the client signs in normally (email + password) from then on — no more expiring links.</p>
+<p class="prose"><strong>Portal now opens on the password screen.</strong> We've set the portal so it opens <strong>directly on the password sign-in screen</strong> (not the magic-link box), which removes a step — the client no longer has to pick &quot;Sign in with password&quot; first, they go straight to &quot;Forgot your password?&quot;. (The portal's on-brand colors and logo are configured per <span class="ln"><code>double-portal-branding.md</code></span>.)</p>
+<div class="shead"><h2>The procedure (what the client does)</h2></div>
+<ol class="qlist"><li>Open the Client Portal sign-in page (the link we send them) — it opens on the password sign-in screen.</li><li>Click <strong>&quot;Forgot your password?&quot;</strong> (just above the password field, on the right).</li><li>Confirm the email field shows their email — the one Double has on file for them (the one we used to set up their Double account). If it's blank, they type it in themselves.</li><li>Click <strong>&quot;Get reset link.&quot;</strong> Allow a few minutes for the email to arrive.</li><li>They open the reset email and follow the link to set a password. <strong>Note the sender is <code>noreply@accountingclientportal.com</code> and the subject is &quot;Reset Client Portal Password&quot; — the email does <em>not</em> mention &quot;Double,&quot;</strong> so tell clients not to look for that (a common point of confusion).</li><li>From then on, they return to the same sign-in page and log in with their email + the password they just set (in the <strong>Password</strong> box).</li></ol>
+<p class="prose">Clients should <strong>not</strong> use &quot;Sign in with magic link&quot; or &quot;Sign in with Google&quot; (both still appear lower on the screen) — neither works reliably for our portal.</p>
+<p class="prose">Firm-side alternative: a teammate can also trigger this manually from <strong>Portal Settings → Contacts tab → Actions (⋯) → &quot;Send password reset link&quot;</strong> for a specific contact, without the client needing to click through the sign-in page themselves first.</p>
+<div class="shead"><h2>Client-ready templates</h2></div>
+<p class="prose">Ready-to-send versions of these instructions live in <span class="ln"><code>client-guides/</code></span>:</p>
+<div class="tablewrap"><table class="links"><thead><tr><th>File</th><th>Use</th></tr></thead><tbody><tr><td><span class="ln"><code>double-first-login-guide-en.html</code></span></td><td><strong>Visual one-page guide, English — recommended.</strong> Self-contained; nothing to host.</td></tr><tr><td><span class="ln"><code>double-first-login-guide-ru.html</code></span></td><td><strong>Visual one-page guide, Russian — recommended.</strong> Self-contained; nothing to host.</td></tr><tr><td><span class="ln"><code>double-first-login-en.pdf</code></span> · <span class="ln"><code>…-ru.pdf</code></span></td><td>The visual guide exported to a single PDF page — the file you attach to an email or send on WhatsApp. Regenerate from the <code>…-guide-*.html</code> if the guide changes.</td></tr><tr><td><span class="ln"><code>double-first-login-en.png</code></span> · <span class="ln"><code>…-ru.png</code></span></td><td>The visual guide as a single <strong>high-resolution image</strong> (2581 px wide) — the WhatsApp-ready form, sent as a photo rather than a document. Rasterized from the matching PDF (so the fonts and layout are identical); regenerate whenever the PDF changes.</td></tr><tr><td><span class="ln"><code>double-first-login-email-template.md</code></span></td><td><strong>Saved email / Double message-template copy (EN + RU)</strong> — subject + body to keep as a canned response and send whenever a client asks; attach the PDF above.</td></tr><tr><td><span class="ln"><code>double-first-login-whatsapp-en.md</code></span></td><td>Short WhatsApp-ready text, English</td></tr><tr><td><span class="ln"><code>double-first-login-whatsapp-ru.md</code></span></td><td>Short WhatsApp-ready text, Russian</td></tr></tbody></table></div>
+<p class="prose"><strong>Recommended: the visual one-page guide.</strong> The <code>…-guide-*.html</code> files are the easiest thing to send — a single page, three steps. The two Double portal screens (password sign-in → reset screen) are <strong>faithfully recreated in HTML/CSS</strong>, not screenshots — the correct control on each screen is spotlighted with a &quot;click this&quot; pointer, and the magic-link/Google buttons are marked &quot;skip&quot;; the third step shows the reset email and how you'll sign in from then on. The files are <strong>fully self-contained</strong> (only the JK medallion is embedded, as a data URI): nothing to host, works offline, and export to exactly one PDF page. To send:</p>
+<ul class="dots"><li><strong>Email / Double message</strong> — save the copy in <span class="ln"><code>client-guides/double-first-login-email-template.md</code></span> as a canned response / template (EN + RU), and <strong>attach the one-page PDF</strong> (<code>double-first-login-en.pdf</code> / <code>-ru.pdf</code>). Send it whenever a client asks. The body text stands on its own, and the PDF carries the visual — no image hosting, because email clients strip inline <code>data:</code>-URI images.</li><li><strong>WhatsApp</strong> — send the ready-made one-page <strong>image</strong> (<code>double-first-login-en.png</code> / <code>-ru.png</code>) as a photo, or the PDF as a document. One file, no separate screenshots to attach in order.</li></ul>
+<p class="prose">The visual guide itself carries no per-client fields; personalize the greeting and portal link in the email/message body (<code>double-first-login-email-template.md</code> has <code>{{FIRST_NAME}}</code> / <code>{{PORTAL_URL}}</code>). This is why the visual guide is the default: no image hosting, no placeholders to fill, no ordering to get right.</p>
+<div class="shead"><h2>Notes</h2></div>
+<ul class="dots"><li>This is generic Double-portal UI guidance, not client-specific — safe to reuse for every client we onboard to the portal.</li><li>If a client's reset email never arrives (checked spam/promotions too), use the Portal Settings manual-reset path above instead of troubleshooting their inbox further.</li></ul></div></div>
+<div class="rdoc" data-doc="double-portal-branding" hidden><section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p><h1>Double Portal — Branding Setup</h1><div class="meta"><span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span><span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Julia</b></span><span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>2026-07</b></span></div></div></section><div class="page"><div class="callout note"><div class="cx"><p><strong>Status:</strong> Active · <strong>Owner:</strong> Julia · <strong>Started:</strong> 2026-07</p></div></div>
+<div class="shead"><h2>Why this exists</h2></div>
+<p class="prose">Double's Client Portal ships with <strong>default colors that are off-brand</strong> — a purple button (<code>#332B98</code>) and a bright lime background (<code>#F2F996</code>). Left as-is the portal doesn't look like JK Accounting Group, and the lime clashes badly with our teal. This SOP records the firm's <strong>official on-brand branding</strong> for the portal so anyone configuring it (or retouching it later) enters the same combination and never drifts back to the Double defaults.</p>
+<p class="prose">All values map to the shared Design System — the authority is <span class="ln"><code>../../brand/</code></span> (<code>JK-Brand-Guide.md</code> + <code>design-system/</code>). Don't invent new colors here; if the brand tokens change, update this file to match.</p>
+<div class="shead"><h2>Where to set it</h2></div>
+<p class="prose">Double → <strong>Settings → Practice Settings → Client Portal → Branding → Customize</strong> → &quot;Customize your Client Portal&quot;. Enter the hex values <strong>without</strong> the leading <code>#</code> (Double's fields already show the <code>#</code>). Click <strong>Save branding</strong> when done.</p>
+<div class="shead"><h2>The official values</h2></div>
+<div class="tablewrap"><table class="links"><thead><tr><th>Field</th><th>Value</th><th>Brand token</th><th>Role</th></tr></thead><tbody><tr><td><strong>Brand color</strong></td><td><code>123841</code></td><td>Petrol Teal — <code>--teal-800</code></td><td>Portal header / brand chrome</td></tr><tr><td><strong>Button color</strong></td><td><code>9C6A39</code></td><td>Warm Bronze — <code>--bronze-500</code> (<code>--accent</code>)</td><td>Action buttons (upload, submit…)</td></tr><tr><td><strong>Background Color</strong></td><td><code>F6F3EC</code></td><td>Greige ivory — <code>--greige-50</code> (<code>--bg-page</code>)</td><td>Page canvas behind the white content cards</td></tr></tbody></table></div>
+<p class="prose"><strong>Logo &amp; favicon</strong> — upload the JK medallion (the reversed/light medallion reads cleanly on the dark teal header). Source files: <span class="ln"><code>../../brand/logo/</code></span> — e.g. <code>png/JK-medallion-reversed-512.png</code> for the Practice Logo and <code>favicon/favicon.svg</code> (or <code>favicon-32.png</code>) for the Favicon.</p>
+<div class="shead"><h2>Why this combination</h2></div>
+<p class="prose">It's the Design System's core recipe applied to the portal — <strong>teal carries the chrome, bronze is the single action accent, ivory is the calm canvas</strong> (the brand's ≈60/32/8 teal/ivory/bronze proportion). The bronze buttons make &quot;do this&quot; actions pop against the teal header instead of disappearing into it (this mirrors our <code>.btn.cta</code> money button), and the greige/ivory background is warm and quiet — replacing Double's harsh default lime. White content cards sit on the ivory exactly as surfaces sit on <code>--bg-page</code> in the Design System.</p>
+<div class="shead"><h2>Notes</h2></div>
+<ul class="dots"><li><strong>Do not</strong> keep Double's defaults (purple button <code>#332B98</code>, lime background <code>#F2F996</code>) — they're off-brand.</li><li>After saving, check <strong>both</strong> Preview tabs (top-right of the Preview panel): <strong>Client Portal</strong> and <strong>Client Login</strong> — confirm the logo is crisp on the dark header and the bronze buttons contrast well on both screens. Verifying as an actual client (via the sign-in flow) is the final check.</li><li><strong>&quot;Default client login&quot;</strong> (magic link vs. email + password) on this same screen is a <em>sign-in</em> setting, not a branding decision — see <span class="ln"><code>double-portal-first-login.md</code></span> for the password-reset workaround we send clients.</li><li>Generic firm configuration, not client-specific — safe to reuse and commit.</li></ul></div></div></div>
+</div>
 
 <script>
 (function(){
@@ -1712,6 +2559,25 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
   });
   // expand every client detail before printing so PDFs are complete
   window.addEventListener('beforeprint', function(){ [].forEach.call(document.querySelectorAll('details.cx-more'), function(d){ d.open=true; }); });
+
+  // In-page SOP reader — open the designed page without leaving the Hub (works in the sandbox)
+  var reader = document.getElementById('reader');
+  var readerScroll = document.getElementById('readerScroll');
+  var readerTitle = document.getElementById('readerTitle');
+  var rdocs = [].slice.call(document.querySelectorAll('.rdoc'));
+  function openDoc(id, name){
+    rdocs.forEach(function(d){ d.hidden = d.getAttribute('data-doc') !== id; });
+    readerTitle.textContent = name || '';
+    reader.hidden = false; root.classList.add('reader-open'); readerScroll.scrollTop = 0;
+    var rc = document.getElementById('readerClose'); if(rc) rc.focus();
+  }
+  function closeDoc(){ reader.hidden = true; root.classList.remove('reader-open'); }
+  [].forEach.call(document.querySelectorAll('[data-open-doc]'), function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openDoc(a.getAttribute('data-open-doc'), a.getAttribute('data-doc-name')); });
+  });
+  var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
+  var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
 })();
 </script>
 </body>

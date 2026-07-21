@@ -125,6 +125,110 @@ const IC = {
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
 };
 
+/* ---------------- SOP → Atlas reader (open the designed page INSIDE the Hub) ----------------
+   The Hub is viewed as a sandboxed link, where opening external pages (GitHub) is blocked.
+   So each procedure's designed page is embedded and opened in an in-page reader overlay —
+   no navigation. BTR uses its hand-laid render; the rest are auto-rendered from Markdown
+   onto the Atlas classes (headings, lists, tables, callouts, code, mermaid flowchart). */
+function mdInlineHub(s){
+  let out = esc(s);
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(m, t, u){
+    return /^https?:\/\//.test(u)
+      ? '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>'
+      : '<span class="ln">' + t + '</span>';   // relative links can't open in the sandbox
+  });
+  out = out.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');   // non-greedy so bold can wrap italics
+  out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
+  out = out.replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>');
+  return out;
+}
+function mdToAtlas(md){
+  const lines = md.replace(/^#\s+.*$/m, '').split('\n');
+  const html = [];
+  const inl = mdInlineHub;
+  let i = 0;
+  while(i < lines.length){
+    const line = lines[i];
+    if(/^\s*$/.test(line)){ i++; continue; }
+    const fence = line.match(/^```\s*(\w+)?/);
+    if(fence){
+      const lang = (fence[1]||'').toLowerCase(); const buf = []; i++;
+      while(i<lines.length && !/^```/.test(lines[i])){ buf.push(lines[i]); i++; }
+      i++;
+      html.push(lang==='mermaid'
+        ? '<figure class="flow"><pre class="mermaid">'+esc(buf.join('\n'))+'</pre></figure>'
+        : '<pre class="codeblock"><code>'+esc(buf.join('\n'))+'</code></pre>');
+      continue;
+    }
+    const h = line.match(/^(#{2,4})\s+(.*)$/);
+    if(h){
+      const lvl = h[1].length, txt = h[2].trim();
+      if(lvl===2){
+        const chip = txt.match(/^(§?\d+[A-Za-z]?)[.)]?\s+(.*)$/);
+        html.push(chip
+          ? '<div class="shead"><span class="schip">'+esc(chip[1].replace('§',''))+'</span><h2>'+inl(chip[2])+'</h2></div>'
+          : '<div class="shead"><h2>'+inl(txt)+'</h2></div>');
+      } else if(lvl===3){ html.push('<div class="subbar"><h3>'+inl(txt)+'</h3></div>'); }
+      else { html.push('<h4 class="rh4">'+inl(txt)+'</h4>'); }
+      i++; continue;
+    }
+    if(/^(-{3,}|\*{3,})\s*$/.test(line)){ html.push('<hr class="rule">'); i++; continue; }
+    if(/^\s*\|.*\|\s*$/.test(line) && i+1<lines.length && /^\s*\|?[\s:|-]+\|?\s*$/.test(lines[i+1])){
+      const head = line.trim().replace(/^\||\|$/g,'').split('|').map(s=>s.trim());
+      i += 2; const rows = [];
+      while(i<lines.length && /^\s*\|.*\|\s*$/.test(lines[i])){ rows.push(lines[i].trim().replace(/^\||\|$/g,'').split('|').map(s=>s.trim())); i++; }
+      html.push('<div class="tablewrap"><table class="links"><thead><tr>'+head.map(c=>'<th>'+inl(c)+'</th>').join('')
+        +'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inl(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>');
+      continue;
+    }
+    if(/^\s*>/.test(line)){
+      const buf = [];
+      while(i<lines.length && /^\s*>/.test(lines[i])){ buf.push(lines[i].replace(/^\s*>\s?/,'')); i++; }
+      html.push('<div class="callout note"><div class="cx"><p>'+inl(buf.join(' ').trim())+'</p></div></div>');
+      continue;
+    }
+    if(/^\s*\d+[.)]\s+/.test(line)){
+      const buf = [];
+      while(i<lines.length && /^\s*\d+[.)]\s+/.test(lines[i])){
+        buf.push(lines[i].replace(/^\s*\d+[.)]\s+/,'')); i++;
+        while(i<lines.length && /^\s{2,}\S/.test(lines[i]) && !/^\s*\d+[.)]\s+/.test(lines[i]) && !/^\s*[-*]\s+/.test(lines[i])){ buf[buf.length-1]+=' '+lines[i].trim(); i++; }
+      }
+      html.push('<ol class="qlist">'+buf.map(x=>'<li>'+inl(x)+'</li>').join('')+'</ol>');
+      continue;
+    }
+    if(/^\s*[-*]\s+/.test(line)){
+      const isCheck = /^\s*[-*]\s+\[[ xX]\]/.test(line); const buf = [];
+      while(i<lines.length && /^\s*[-*]\s+/.test(lines[i])){
+        let it = lines[i].replace(/^\s*[-*]\s+/,''); if(isCheck) it = it.replace(/^\[[ xX]\]\s*/,'');
+        buf.push(it); i++;
+        while(i<lines.length && /^\s{2,}\S/.test(lines[i]) && !/^\s*[-*]\s+/.test(lines[i]) && !/^\s*\d+[.)]\s+/.test(lines[i])){ buf[buf.length-1]+=' '+lines[i].trim(); i++; }
+      }
+      html.push('<ul class="'+(isCheck?'checks':'dots')+'">'+buf.map(x=>'<li>'+inl(x)+'</li>').join('')+'</ul>');
+      continue;
+    }
+    const buf = [line]; i++;
+    while(i<lines.length && !/^\s*$/.test(lines[i]) && !/^\s*(#{2,4}\s|>|[-*]\s|\d+[.)]\s|\|)/.test(lines[i]) && !/^```/.test(lines[i]) && !/^(-{3,})\s*$/.test(lines[i])){ buf.push(lines[i]); i++; }
+    html.push('<p class="prose">'+inl(buf.join(' '))+'</p>');
+  }
+  return html.join('\n');
+}
+// masthead meta chips for a reader doc
+function readerMeta(owner, updated){
+  return '<span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span>'
+    + (owner ? '<span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>'+esc(owner)+'</b></span>' : '')
+    + (updated ? '<span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>'+esc(updated)+'</b></span>' : '');
+}
+// BTR: reuse the hand-laid render's masthead+main (the premium designed page)
+function btrReaderInner(){
+  try{
+    const raw = read(resolve(repoRoot, '.claude/skills/sop-authoring/render/examples/btr-body.html'));
+    const a = raw.indexOf('<section class="mast">');
+    const b = raw.indexOf('</main>');
+    if(a !== -1 && b !== -1) return raw.slice(a, b + '</main>'.length);
+  }catch(e){}
+  return null;
+}
+
 /* ---------------- SOP catalog (categories + curated short titles/blurbs) ---------------- */
 const SOP_GROUPS = [
   {
@@ -164,6 +268,7 @@ const SOP_GROUPS = [
 /* ---------------- build SOP cards ---------------- */
 let sopCount = 0;
 const sopOwnerKeys = [];
+const readerDocs = [];   // collected designed pages, opened in the in-Hub reader
 const sopGroupsHtml = SOP_GROUPS.map((grp) => {
   const cards = grp.items.map((it) => {
     const rel = 'projects/sops/' + it.file;
@@ -174,13 +279,22 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     const ok = ownerKey(owner);
     sopOwnerKeys.push(ok);
     const updated = headerVal(md, 'Last updated') || headerVal(md, 'Started') || '';
-    const renderRel = rel.replace(/\.md$/, '.html');
-    const hasRender = existsSync(resolve(repoRoot, renderRel));
+    const id = basename(it.file, '.md');
     sopCount++;
     const text = [it.title, it.blurb, grp.name, owner, it.tag, it.perClient ? 'per-client runbook' : '']
       .join(' ').toLowerCase();
+
+    // build the reader doc: BTR uses its premium hand-laid render; others auto-render
+    const btr = /business-tax-receipt/.test(it.file) ? btrReaderInner() : null;
+    const inner = btr || (
+      `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
+      + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+      + `<div class="page">${mdToAtlas(md)}</div>`
+    );
+    readerDocs.push(`<div class="rdoc" data-doc="${id}" hidden>${inner}</div>`);
+
     return `
-      <a class="hcard doc-card" href="${esc(blob(rel))}" target="_blank" rel="noopener"
+      <a class="hcard doc-card" href="${esc(blob(rel))}" data-open-doc="${id}" data-doc-name="${esc(it.title)}"
          data-card data-type="sop" data-owner="${ok}" data-text="${esc(text)}">
         ${IC.arrow}
         <div class="khead">
@@ -193,7 +307,7 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
           <span class="owner"><span class="av ${ok}">${esc(ownerName(ok)[0])}</span>${esc(ownerName(ok))}</span>
           ${updated ? `<span class="metf">${IC.cal}${esc(updated)}</span>` : ''}
           ${it.perClient ? '<span class="tagm">Per-client</span>' : ''}
-          ${hasRender ? '<span class="tagm">Atlas render</span>' : ''}
+          <span class="tagm">Designed page</span>
         </div>
       </a>`;
   }).join('');
@@ -345,7 +459,7 @@ const BODY = `
       <svg viewBox="18 20 82 72" class="jkmark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></svg>
       <div>
         <b>JK Accounting Group — Knowledge Hub</b>
-        <p>Generated from the repository (<code>projects/sops</code> + <code>projects/client-intelligence</code>). The repo is the source of truth; this page is a view of it. Re-run <code>build-hub.mjs</code> to refresh. Every card opens the real file on GitHub.</p>
+        <p>Generated from the repository (<code>projects/sops</code> + <code>projects/client-intelligence</code>). The repo is the source of truth; this page is a view of it. Re-run <code>build-hub.mjs</code> to refresh. Procedures open a designed page in the reader; client cards expand in place.</p>
       </div>
     </div>
     <div class="bottom">
@@ -354,6 +468,21 @@ const BODY = `
     </div>
   </div>
 </footer>
+
+<!-- ============================ SOP READER (in-page, designed pages) ============================ -->
+<div class="reader" id="reader" hidden aria-modal="true" role="dialog" aria-label="Document reader">
+  <div class="reader-bar">
+    <button class="reader-close" id="readerClose" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      Back to Hub
+    </button>
+    <span class="reader-title" id="readerTitle"></span>
+    <button class="reader-print" id="readerPrint" type="button" aria-label="Print / PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
+    </button>
+  </div>
+  <div class="reader-scroll" id="readerScroll">${readerDocs.join('\n')}</div>
+</div>
 
 <script>
 (function(){
@@ -430,6 +559,25 @@ const BODY = `
   });
   // expand every client detail before printing so PDFs are complete
   window.addEventListener('beforeprint', function(){ [].forEach.call(document.querySelectorAll('details.cx-more'), function(d){ d.open=true; }); });
+
+  // In-page SOP reader — open the designed page without leaving the Hub (works in the sandbox)
+  var reader = document.getElementById('reader');
+  var readerScroll = document.getElementById('readerScroll');
+  var readerTitle = document.getElementById('readerTitle');
+  var rdocs = [].slice.call(document.querySelectorAll('.rdoc'));
+  function openDoc(id, name){
+    rdocs.forEach(function(d){ d.hidden = d.getAttribute('data-doc') !== id; });
+    readerTitle.textContent = name || '';
+    reader.hidden = false; root.classList.add('reader-open'); readerScroll.scrollTop = 0;
+    var rc = document.getElementById('readerClose'); if(rc) rc.focus();
+  }
+  function closeDoc(){ reader.hidden = true; root.classList.remove('reader-open'); }
+  [].forEach.call(document.querySelectorAll('[data-open-doc]'), function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openDoc(a.getAttribute('data-open-doc'), a.getAttribute('data-doc-name')); });
+  });
+  var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
+  var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
 })();
 </script>
 `;
