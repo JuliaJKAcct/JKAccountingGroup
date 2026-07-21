@@ -132,7 +132,7 @@ If a source/connector is unavailable, say so in the report rather than guessing.
 [`email-template.html`](./email-template.html) — the on-brand, email-safe template
 the routine fills (built Jul 2026 with the `impeccable` skill on the Atlas design
 system, following the shape of the proven
-[`recurring-expense-monitoring` template](../../recurring-expense-monitoring/reference/email-template.html)).
+[`recurring-expense-monitoring` template](../../../.claude/skills/recurring-expense-monitoring/reference/email-template.html)).
 Per-client section order: **Proposed for the SOP** (bronze — the action;
 reply-to-approve) → **New in CI — saved** (blue, source-tagged) → **Still needed**
 (amber list) → **Nothing new** (green one-liner). Sample content is fictional; the

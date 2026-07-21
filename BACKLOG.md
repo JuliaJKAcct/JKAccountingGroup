@@ -709,7 +709,7 @@ establishes a new preference; the skill is the memory of "how we like SOPs").
 
 **What Lilian wants:** the reusable **engine** behind the
 [`client-intelligence`](./projects/client-intelligence/) project, so the structure
-stays identical for every client **without depending on anyone's memory**. Two jobs:
+stays identical for every client **without depending on anyone's memory**. Three jobs:
 1. **Create a client** — copy `_client-template.md` to `clients/<slug>.md`, fill the
    header from Double (name, platform, deep link), add the Clients-index row.
 2. **Consistency + gap audit** — scan all of `clients/`, verify every file has the

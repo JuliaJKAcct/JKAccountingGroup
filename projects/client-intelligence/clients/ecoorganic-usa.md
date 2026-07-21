@@ -8,6 +8,18 @@
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
 
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
 ## 1. Snapshot
 
 - **Business name:** ECOORGANIC USA LLC
@@ -75,6 +87,9 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
+
+### Outstanding items (CI-only — never in the SOP)
+- Open categorization decisions (meals policy, vehicle finance lease-vs-loan, which disconnected accounts are closed) — tracked in the SOP's **Open decisions log**; live status in Double.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

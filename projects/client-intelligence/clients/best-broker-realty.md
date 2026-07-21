@@ -8,6 +8,18 @@
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
 
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
 ## 1. Snapshot
 
 - **Business name:** BEST BROKER REALTY LLC
@@ -72,7 +84,10 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the BTR work (FOLLOW-UPS) and the Double record (BEST BROKER REALTY LLC, QBO).
 - 2026-07-20 — Sweep: enriched the City of Hollywood BTR status from the Double note (2026-07-15). No Ping meetings indexed; a contact is on file in Double/Ping.
-- 2026-07-20 — Update (Lilian): the DBPR license was obtained from the client and emailed to the city. **Confirmed in Gmail** — julia@ → BusinessTax@hollywoodfl.org, **2026-07-16**, "Please see attached the license" (application #40663). Now awaiting the city's payment instructions.
+- 2026-07-20 — Update (Lilian): the DBPR license was obtained from the client and emailed to the city. **Confirmed in Gmail** — julia@ → BusinessTax@hollywoodfl.org, **2026-07-16**, "Please see attached the license" (the city's category-correction thread; identifiers in the Double note). Now awaiting the city's payment instructions.
+
+### Outstanding items (CI-only — never in the SOP)
+- **Watch for the city's payment instructions** for the corrected Broker/Real Estate category — then pay the difference (never before). _(Double note 2026-07-15; license sent 2026-07-16)_
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

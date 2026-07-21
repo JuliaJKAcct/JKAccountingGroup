@@ -153,8 +153,9 @@ client-intelligence/
 ├── README.md              ← you are here (rules + Clients index)
 ├── _client-template.md    ← the canonical structure — copy it to start a client
 ├── automation/
-│   └── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
-└── clients/               ← one file per client (see the Clients index above)
+│   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
+│   └── email-template.html  ← the on-brand, email-safe report template the routine fills
+└── clients/               ← one file per client (see the Clients index below)
     ├── atman-parts.md
     ├── best-broker-realty.md
     ├── ecoorganic-usa.md

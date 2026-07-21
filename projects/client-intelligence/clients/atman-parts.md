@@ -8,6 +8,18 @@
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
 
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
 ## 1. Snapshot
 
 - **Business name:** Atman Parts
@@ -80,7 +92,10 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 - 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
   (QuickBooks Online). Sales-tax details to come from Lilian.
 - 2026-07-20 — Sweep: no Double notes yet.
-- 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the client meeting **"Vitaliy Atman Follow Up" (2026-07-20)** with Julia. The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
+- 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
+
+### Outstanding items (CI-only — never in the SOP)
+- _(none captured yet — live tasks live in Double / Ping)_
 
 ### Information still needed
 - [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)
