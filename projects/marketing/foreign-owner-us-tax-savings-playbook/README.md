@@ -29,9 +29,12 @@ The funnel:
    tax, the everyday deductions people miss, Section 179 + 100% bonus
    depreciation, the permanent 20% QBI deduction, retirement (SEP / Solo 401k),
    efficient repatriation + treaties, timing, credits, why clean books *are* the
-   strategy, quarterly planning, and the "smart, not aggressive" line. Sticky
-   TOC, reading progress, an interactive **"what am I leaving on the table?"**
-   self-check (localStorage).
+   strategy, quarterly planning, and the "smart, not aggressive" line. It reads
+   as a **menu-driven reader — one chapter at a time** (a Contents menu on
+   desktop, a slide-in drawer on mobile, prev/next, and a "3 / 17" position) so
+   the long guide feels light; with JS off it falls back to a normal scroll.
+   Also an interactive **"what am I leaving on the table?"** self-check
+   (localStorage).
 3. **The bridge to a call** — the guide ends in a **"where are you most likely
    overpaying?"** quiz. Its logic is deliberately airtight for this offer: *we
    can't put a number on your savings without your actual books — that's exactly

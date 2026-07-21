@@ -137,3 +137,136 @@
     }
   };
 })();
+
+/* ============================================================
+   Guide reader — menu-driven, one chapter at a time.
+   Turns a long guide into a light, paged experience. Builds its
+   menu from the existing .toc (source of truth for order + parts),
+   so no per-page markup is needed. No-JS pages keep the full scroll.
+   ============================================================ */
+(function () {
+  "use strict";
+  var content = document.querySelector(".guide-content");
+  var shell = document.querySelector(".guide-shell");
+  if (!content || !shell) return;
+  var panels = Array.prototype.slice.call(content.children).filter(function (el) {
+    return el.classList && el.classList.contains("chapter");
+  });
+  if (panels.length < 3) return;
+  var reduceR = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false;
+  var toc = document.querySelector(".toc");
+  var byId = {};
+  panels.forEach(function (p) { if (p.id) byId[p.id] = p; });
+
+  // Order + titles + part labels from the TOC, limited to chapter panels.
+  var model = [];
+  if (toc) {
+    var part = "";
+    Array.prototype.slice.call(toc.children).forEach(function (node) {
+      if (node.classList && node.classList.contains("toc-part")) { part = node.textContent.trim(); return; }
+      if (node.tagName === "A") {
+        var href = node.getAttribute("href") || "";
+        if (href.charAt(0) === "#" && byId[href.slice(1)]) {
+          model.push({ id: href.slice(1), title: node.textContent.trim(), part: part, el: byId[href.slice(1)] });
+        }
+      }
+    });
+  }
+  if (model.length !== panels.length) {
+    model = panels.map(function (p) {
+      var h = p.querySelector("h3"), num = p.querySelector(".ch-num");
+      return { id: p.id, title: h ? h.textContent.trim() : (p.id || ""), part: num ? num.textContent.trim() : "", el: p };
+    });
+  }
+
+  document.documentElement.classList.add("reader");
+  Array.prototype.slice.call(content.querySelectorAll(".part-divider")).forEach(function (d) { d.classList.add("reader-hide"); });
+
+  var head = document.createElement("div");
+  head.className = "reader-head";
+  head.innerHTML = '<button type="button" class="rh-menu" aria-label="Open contents"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg> Contents</button><span class="rh-part"></span><span class="rh-count"></span>';
+  content.insertBefore(head, content.firstChild);
+
+  var nav = document.createElement("div");
+  nav.className = "reader-nav";
+  nav.innerHTML = '<a class="rn-btn prev" href="#" rel="prev"><span class="rn-dir">← Previous</span><span class="rn-title"></span></a><a class="rn-btn next" href="#" rel="next"><span class="rn-dir">Next →</span><span class="rn-title"></span></a>';
+  content.appendChild(nav);
+  var prevBtn = nav.querySelector(".prev"), nextBtn = nav.querySelector(".next");
+
+  var drawer = document.createElement("div");
+  drawer.className = "reader-drawer";
+  drawer.hidden = true;
+  var linksHtml = "", lastPart = null;
+  model.forEach(function (m, i) {
+    if (m.part && m.part !== lastPart) { linksHtml += '<p class="rd-part">' + m.part + "</p>"; lastPart = m.part; }
+    linksHtml += '<a class="rd-link" href="#' + m.id + '" data-i="' + i + '">' + m.title + "</a>";
+  });
+  drawer.innerHTML = '<div class="rd-panel" role="dialog" aria-modal="true" aria-label="Guide contents"><div class="rd-top"><span class="rd-title">In this guide</span><button type="button" class="rd-close" aria-label="Close contents">✕</button></div>' + linksHtml + "</div>";
+  document.body.appendChild(drawer);
+  var bridge = document.getElementById("next");
+
+  var cur = -1;
+  function render() {
+    var m = model[cur];
+    model.forEach(function (mm, i) { mm.el.hidden = (i !== cur); });
+    head.querySelector(".rh-part").textContent = m.part || "";
+    head.querySelector(".rh-count").textContent = (cur + 1) + " / " + model.length;
+    if (cur > 0) { prevBtn.hidden = false; prevBtn.querySelector(".rn-title").textContent = model[cur - 1].title; }
+    else prevBtn.hidden = true;
+    if (cur < model.length - 1) {
+      nextBtn.hidden = false; nextBtn.setAttribute("data-mode", "panel");
+      nextBtn.querySelector(".rn-dir").textContent = "Next →";
+      nextBtn.querySelector(".rn-title").textContent = model[cur + 1].title;
+    } else if (bridge) {
+      nextBtn.hidden = false; nextBtn.setAttribute("data-mode", "bridge");
+      nextBtn.querySelector(".rn-dir").textContent = "Finish →";
+      nextBtn.querySelector(".rn-title").textContent = "See your next step";
+    } else nextBtn.hidden = true;
+    if (toc) Array.prototype.slice.call(toc.querySelectorAll("a")).forEach(function (a) {
+      a.classList.toggle("active", a.getAttribute("href") === "#" + m.id);
+    });
+    Array.prototype.slice.call(drawer.querySelectorAll(".rd-link")).forEach(function (a, i) {
+      a.classList.toggle("active", i === cur);
+    });
+  }
+  function closeDrawer() { drawer.classList.remove("open"); drawer.hidden = true; }
+  function scrollTop() {
+    var top = shell.getBoundingClientRect().top + window.scrollY - 74;
+    window.scrollTo({ top: Math.max(0, top), behavior: reduceR ? "auto" : "smooth" });
+  }
+  function goTo(i, scroll) {
+    var n = Math.max(0, Math.min(model.length - 1, i));
+    if (n === cur) { if (scroll) scrollTop(); return; }
+    cur = n; render();
+    if (scroll) {
+      scrollTop();
+      var h = model[cur].el.querySelector("h3");
+      if (h) { h.setAttribute("tabindex", "-1"); try { h.focus({ preventScroll: true }); } catch (e) {} }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    var a = (t && t.closest) ? t.closest('a[href^="#"], .rh-menu, .rd-close') : null;
+    if (!a) return;
+    if (a.classList.contains("rh-menu")) { e.preventDefault(); drawer.hidden = false; drawer.classList.add("open"); return; }
+    if (a.classList.contains("rd-close")) { e.preventDefault(); closeDrawer(); return; }
+    if (a === prevBtn) { e.preventDefault(); e.stopImmediatePropagation(); goTo(cur - 1, true); return; }
+    if (a === nextBtn) {
+      e.preventDefault(); e.stopImmediatePropagation();
+      if (nextBtn.getAttribute("data-mode") === "bridge" && bridge) bridge.scrollIntoView({ behavior: reduceR ? "auto" : "smooth", block: "start" });
+      else goTo(cur + 1, true);
+      return;
+    }
+    var href = a.getAttribute("href") || "";
+    if (href.length < 2) return;
+    var id = href.slice(1), idx = -1;
+    for (var i = 0; i < model.length; i++) { if (model[i].id === id) { idx = i; break; } }
+    if (idx >= 0) { e.preventDefault(); e.stopImmediatePropagation(); closeDrawer(); goTo(idx, true); }
+  }, true);
+
+  drawer.addEventListener("click", function (e) { if (e.target === drawer) closeDrawer(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && drawer.classList.contains("open")) closeDrawer(); });
+
+  goTo(0, false);
+})();

@@ -500,3 +500,53 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   html.js .reveal.in{animation:lm-rise .6s var(--ease-out) both;}
 }
 @keyframes lm-rise{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;}}
+
+/* ============================================================
+   GUIDE READER — menu-driven, one chapter at a time.
+   Makes a long guide feel short. Progressive enhancement:
+   without JS every chapter is visible (normal scroll); with JS
+   the menu switches a single visible chapter panel.
+   ============================================================ */
+html.reader .read-progress{display:none;}
+html.reader .part-divider.reader-hide{display:none;}
+html.reader .guide-content > .chapter[hidden]{display:none;}
+@media (prefers-reduced-motion:no-preference){
+  html.reader .guide-content > .chapter:not([hidden]){animation:lm-rise .3s var(--ease-out) both;}
+}
+/* Reader head: part label + counter (+ mobile Contents button) */
+.reader-head{display:flex; align-items:center; gap:12px; margin:0 0 22px; padding-bottom:15px; border-bottom:1px solid var(--border-subtle);}
+.reader-head .rh-part{font-family:var(--mono); font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); line-height:1.3; min-width:0;}
+.reader-head .rh-count{margin-left:auto; font-family:var(--mono); font-size:11.5px; letter-spacing:0.06em; color:var(--text-muted); flex:0 0 auto;}
+.reader-head .rh-menu{display:none;}
+/* Prev / next */
+.reader-nav{display:flex; gap:12px; align-items:stretch; margin-top:34px; padding-top:22px; border-top:1px solid var(--border-subtle);}
+.reader-nav .rn-btn{display:inline-flex; flex-direction:column; gap:3px; text-decoration:none; border:1px solid var(--border); border-radius:12px; padding:12px 18px; background:var(--surface); flex:1 1 0; min-width:0; transition:border-color .18s, background .18s, transform .12s;}
+.reader-nav .rn-btn:hover{border-color:var(--bronze-300); background:var(--paper);}
+.reader-nav .rn-btn:active{transform:translateY(1px);}
+.reader-nav .rn-btn .rn-dir{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);}
+.reader-nav .rn-btn .rn-title{font-size:14.5px; font-weight:600; color:var(--text-primary); line-height:1.3; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.reader-nav .rn-btn.prev{align-items:flex-start;}
+.reader-nav .rn-btn.next{align-items:flex-end; text-align:right;}
+.reader-nav .rn-btn[hidden]{display:none;}
+/* Mobile: Contents button + slide-in drawer */
+@media (max-width:999px){
+  .reader-head .rh-menu{display:inline-flex; align-items:center; gap:7px; font-family:var(--sans); font-size:13px; font-weight:600; color:var(--teal-800); background:var(--surface); border:1px solid var(--border); border-radius:9px; padding:8px 13px; cursor:pointer;}
+  .reader-head .rh-menu:hover{border-color:var(--bronze-300);}
+  .reader-head .rh-menu svg{flex:0 0 auto;}
+}
+@media (max-width:560px){.reader-head .rh-part{display:none;}}
+.reader-drawer{position:fixed; inset:0; z-index:300; background:rgba(9,31,36,0.55); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);}
+.reader-drawer[hidden]{display:none;}
+.reader-drawer .rd-panel{position:absolute; top:0; left:0; bottom:0; width:min(86vw,340px); background:var(--surface); box-shadow:var(--shadow-xl); overflow-y:auto; padding:18px 18px 30px; display:flex; flex-direction:column; gap:1px;}
+@media (prefers-reduced-motion:no-preference){.reader-drawer.open .rd-panel{animation:rd-in .28s var(--ease-out) both;}}
+@keyframes rd-in{from{transform:translateX(-100%);} to{transform:none;}}
+.reader-drawer .rd-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; position:sticky; top:0; background:var(--surface); padding-bottom:6px;}
+.reader-drawer .rd-title{font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted);}
+.reader-drawer .rd-close{background:none; border:0; font-size:19px; line-height:1; color:var(--text-muted); cursor:pointer; padding:4px 8px; border-radius:8px;}
+.reader-drawer .rd-close:hover{background:var(--greige-100); color:var(--text-primary);}
+.reader-drawer .rd-part{font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--bronze-500); margin:14px 0 4px;}
+.reader-drawer .rd-link{display:block; font-size:15px; line-height:1.35; color:var(--text-body); text-decoration:none; padding:9px 11px; border-radius:8px;}
+.reader-drawer .rd-link:hover{background:var(--teal-50);}
+.reader-drawer .rd-link.active{background:var(--teal-50); color:var(--teal-900); font-weight:600;}
+/* In reader mode the desktop TOC becomes the live menu (active = current chapter) */
+html.reader .toc a.active{color:var(--teal-800); border-left-color:var(--bronze-400); font-weight:600;}

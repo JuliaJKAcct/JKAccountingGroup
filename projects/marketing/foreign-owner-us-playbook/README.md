@@ -31,7 +31,11 @@ The funnel is deliberate:
 2. **The guide** (`guide.html`) — the deliverable. 14 short chapters across 4
    parts (decide → set up → file → stay safe), colored plain-language callouts,
    a company-type comparison table, a yearly compliance calendar, and an
-   **interactive first-year checklist** (progress saved in `localStorage`).
+   **interactive first-year checklist** (progress saved in `localStorage`). It
+   reads as a **menu-driven reader — one chapter at a time** (a Contents menu on
+   desktop, a slide-in drawer on mobile, plus prev/next and a "3 / 17"
+   position), so the long guide feels light instead of endless. Progressive
+   enhancement: with JS off, it falls back to a normal single-page scroll.
 3. **The bridge to a call** — the guide ends in a **"What's your next step?"**
    mini-quiz. It deliberately shows where the *general* guide stops and the
    reader's *specific* situation begins (their entity, treaty, states, how they
