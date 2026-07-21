@@ -112,10 +112,13 @@ and the exact decision-flow gates. Don't hard-code one client's numbers as a fir
 The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered by
 `build-hub.mjs`) has two kinds of content:
 
-- **Generic section renderers — automatic from the `.md`** (already reusable): rule cards,
+- **Generic section renderers** (structure-driven, client-agnostic *functions*): rule cards,
   status-pill decisions table, numbered check items, the number-range strip, and the
   **book-mode PDF** (a cover page + a Contents/index page + one section per page, via the
-  "Save as PDF manual" button) plus a plain-text download.
+  "Save as PDF manual" button) plus a plain-text download. They read from any runbook `.md`
+  with the structure above — but see *Current state* below: today they're only **wired**
+  through Ecoorganic's reader, so a new client's sections don't render until that client
+  gets a reader/catalog entry.
 - **Curated visuals — hand-built per client** (like the BTR hand-laid page), because they
   encode *that client's* specific logic:
   - a **signature banner** — "the one rule to hold in your head";
@@ -128,12 +131,15 @@ The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered 
 another client's name** in a client's view (the pilot swaps `Masciave/Aura-style grammar` →
 `Number-prefix grammar`); no GitHub/repo links — everything opens designed, inside the Hub.
 
-**Current state / next work:** the curated visuals are implemented for **Ecoorganic** (the
-pilot) in `ecoorganicReaderInner`. The generic section renderers already work from any
-runbook `.md` with the structure above. Generalizing the curated visuals so *any*
-bookkeeping client gets a hand-built signature/flow/decision-flow (driven by a catalog flag
-rather than a client-named function) is the tracked next step — do it through the
-`knowledge-hub` skill and its **verify-before-publish gate**.
+**Current state / next work:** today the **entire** Ecoorganic Hub view — the generic
+section renderers *and* the curated visuals — is wired through the single client-named
+`ecoorganicReaderInner`, which is the only caller of those renderers. So a new
+`<client>-bookkeeping-review.md` does **not** render for free: it needs a reader/catalog
+entry first. The tracked next step is to split that into (a) a **reusable** per-client
+bookkeeping reader that applies the generic section renderers to any runbook with the
+structure above (driven by a catalog flag, not a client-named function), and (b) the
+**hand-built curated visuals** per client. Do this through the [`knowledge-hub`](../knowledge-hub/)
+skill and its **verify-before-publish gate**.
 
 ## Workflow
 
