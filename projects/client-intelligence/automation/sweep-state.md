@@ -34,28 +34,31 @@ list grows.
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
-| Atman Parts | 2026-07-20 | Gmail history not yet fully swept |
-| BEST BROKER REALTY LLC | 2026-07-20 | Gmail history not yet fully swept (only the BTR threads were searched) |
-| ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
-| Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
-| Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
-| NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| iKids Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Deep Tech Development LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Beemold USA LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Sunoma Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| SENSUSTECH LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Mobilesource Corp | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Margate Plumbing Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| MAGNUM 152, INC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| LUMETRO LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Ecom Beavers LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Atman Parts | 2026-07-21 | — (Gmail full-history catch-up done 2026-07-21) |
+| BEST BROKER REALTY LLC | 2026-07-21 | — (Gmail full-history catch-up done 2026-07-21) |
+| ECOORGANIC USA LLC | 2026-07-21 | — (Gmail full-history catch-up done 2026-07-21) |
+| Kolo Florida Inc | 2026-07-21 | — (Gmail full-history catch-up done 2026-07-21) |
+| Pro Title Agency | 2026-07-21 | — (Gmail full-history catch-up done 2026-07-21) |
+| NEVER GIVE UP KK LLC | 2026-07-21 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| YES TEAM CORP | 2026-07-21 | — (enriched from Gmail; Ping had no indexed meetings) |
+| MASCIAVE DESIGN STUDIO LLC | 2026-07-21 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| iKids Group LLC | 2026-07-21 | — (enriched from Gmail; Ping had no indexed meetings) |
+| Deep Tech Development LLC | 2026-07-21 | — (enriched from Gmail; Ping had no indexed meetings) |
+| AURA REMODELING LLC | 2026-07-21 | — (enriched from Gmail; Ping had no indexed meetings) |
+| Beemold USA LLC | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Sunoma Inc | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| SENSUSTECH LLC | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Mobilesource Corp | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Margate Plumbing Inc | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| MAGNUM 152, INC | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| LUMETRO LLC | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Ecom Beavers LLC | 2026-07-21 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 
-_Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
-for all five;
-Gmail was only searched topically, around Best Broker's BTR — hence every client
-owes a one-time full Gmail pass). That catch-up run may exceed the steady-state
-per-client call bound once; that's expected._
+_Baselines set 2026-07-20, advanced to 2026-07-21 by the 2026-07-21 weekend sweep
+(a TEST run). All five clients that owed a one-time full Gmail history pass
+(Atman Parts, Best Broker Realty, Ecoorganic USA, Kolo Florida, Pro Title Agency)
+had that catch-up completed this run — coverage gaps cleared. `search_meetings`
+timed out intermittently across the run (Ping-Assistant, 60s) but succeeded on
+retry or via org-wide fallback in every case; `list_client_meetings` is unusable
+as exposed (no `clientId` param) — `search_meetings` with an explicit `clientId`
+was used instead throughout._
