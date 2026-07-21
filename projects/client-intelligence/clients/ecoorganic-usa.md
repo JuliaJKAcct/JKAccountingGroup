@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -62,9 +62,11 @@ the actual details.
 - **Applies?** Yes — this is the core engagement.
 - **Cadence:** Monthly.
 - **Categorization rules / quirks:** Detailed, client-specific rules already
-  documented — check/deposit evidence required, gas-station $30 threshold, meals
-  holding (policy pending), owner-personal transfers as equity, job costs to COGS,
-  triage accounts to $0 at close. See the SOP.
+  documented — check/deposit evidence required, gas-station **$25** threshold
+  (small charges → distributions), meals holding for genuine meals (policy
+  pending), owner-personal transfers as equity, cash-out **investigated** (not
+  blanket owner draws — may be subcontractor cash, 1099 exposure), job costs to
+  COGS *(to verify)*, holding accounts to $0 at close. See the SOP.
 - **Our role:** Staff bookkeeper does the work; Claude is the independent reviewer.
 - **Process notes (→ SOP):** **Already has a full SOP** —
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
@@ -87,6 +89,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
+- 2026-07-21 — Firm recently took this client over; active cleanup in progress. Working session refined the SOP as understanding builds: gas-station threshold moved $30 → **$25** with small charges now → distributions (not meals holding); cash-out withdrawals changed from blanket owner-draws to an **investigate-first** procedure (ATM vs transfer; known contractor vs personal account; 1099 exposure); COGS-vs-opex rule flagged **to verify** (provenance unconfirmed); Double noted as the vendor/1099/W-9 tracking tool; COA renumbering reframed as a later, incremental step (classify first). SOP rules now tagged provisional until validated against the client's history.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Open categorization decisions (meals policy, vehicle finance lease-vs-loan, which disconnected accounts are closed) — tracked in the SOP's **Open decisions log**; live status in Double.
