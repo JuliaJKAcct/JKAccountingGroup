@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,10 +24,10 @@
 
 - **Business name:** Beemold USA LLC
 - **Entity type:** LLC — files on the owner's **Schedule C** _(Double)_
-- **Home state:** **Florida** _(low-medium confidence — the sister entity Margate Plumbing is in Broward FL; FL correspondents)_
-- **Industry / what they do:** **Low-activity entity** — light operations; some construction / roofing-materials adjacency (owner described payments as "dumpster rentals from US Shingle and Metals"). _(Gmail — low confidence)_
+- **Home state:** **Florida** _(low-medium confidence — sister entity Margate Plumbing is in Broward FL)_
+- **Industry / what they do:** Maria's guide categorizes it as **"plumbing"** — the **sister/quieter entity to Margate Plumbing** under the same owner (some months have no activity; prior sweep also saw construction/roofing-materials adjacency). _(Maria's doc guide, Gmail)_
 - **Primary language:** English (all correspondence). _(Gmail; owner name is Moldovan/Romanian — native language not assumed)_
-- **Our engagement (services we provide):** Monthly bookkeeping; annual-report filing. Income tax **not our service** _(Double: Income Tax = no)_; sales tax N/A; payroll N/A. **Assigned bookkeeper: Maria.** _(Double + Gmail, 2026-07-20)_
+- **Our engagement (services we provide):** Monthly bookkeeping; annual-report filing. Income tax **not our service** _(Double: Income Tax = no)_; sales tax N/A; payroll N/A. **Assigned bookkeeper: Maria.** _(Double + Gmail + Maria's doc guide, 2026-07-21)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -44,10 +44,13 @@ here. Open the Double client to get the actual details.
 
 ## 3. Systems & access
 
+Credentials for the banks below live in **Maria's doc guide** in Drive (§7) —
+never copied here.
+
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | see Drive folder (§7) | Managed through Double |
-| Bank | Reconciliation | see Drive folder (§7) | **Mercury** (incl. a Mercury IO card) + **Wells Fargo** |
+| QuickBooks Online (via Double) | Bookkeeping ledger | Maria's doc guide (§7) | Managed through Double |
+| Bank & cards | Reconciliation | Maria's doc guide (§7) | **Mercury** checking (8192) + savings (4245) + credit card, **Bank of America** (8023) — *(refines the earlier "Mercury + Wells Fargo" note; Maria's guide lists BoA for Beemold)* |
 
 ## 4. Obligations & recurring processes
 
@@ -59,6 +62,10 @@ here. Open the Double client to get the actual details.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_. Reports are delivered **bundled with the sister entity** as "Margate and Beemold" reports (Balance Sheet always; P&L when there's activity).
+- **Process notes (→ future SOP):**
+  1. **Bank-feed sync has been broken since Feb 2025** → transactions are **uploaded manually** (could be weekly; Maria does it at month-end). See the "Add Mercury and BoA transactions manually" step folder in §7.
+  2. **Review the intercompany loan balance between Beemold and Margate** at month-end (sister companies, same owner) and keep the two sides in agreement.
+  3. **Bank reconciliation** of every feed (Mercury checking + savings + CC, BoA).
 
 ### Income tax
 - **Applies?** **Not our service** _(Double: Income Tax = no)_.
@@ -68,27 +75,31 @@ here. Open the Double client to get the actual details.
 
 ## 5. Key facts & quirks
 
-- **Construction owner-group (with Margate Plumbing Inc):** same owner runs both; the two are managed together and reported jointly. Beemold is the **quieter** of the pair (some months no activity). Keep the entities' books distinct. _(Gmail)_
-- The owner's **Mercury IO** card account is **repeatedly frozen for insufficient cash balance** — a standing cash-flow quirk to watch. _(Gmail)_
+- **Bank-feed sync broken since Feb 2025** → **manual transaction upload** (Mercury + BoA); resolving the connection is an open item.
+- **Construction owner-group (with Margate Plumbing Inc):** same owner; managed together and **reported jointly ("Margate and Beemold")**; **review the intercompany loan** each month. Beemold is the **quieter** of the pair (some months no activity). Keep the entities' books distinct. _(Maria's doc guide, Gmail)_
+- The owner's **Mercury IO** card account has been **repeatedly frozen for insufficient cash balance** — a standing cash-flow quirk to watch. _(Gmail)_
 - The owner corresponds from multiple mailboxes (kept in Double).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 6. Beemold*): the manual-upload-since-Feb-2025 process, the intercompany-loan review with Margate, and the corrected bank-feed map (Mercury + BoA) captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
+- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **QBO bank-feed reconnection** pending — an Amex + a credit card need reconnecting to QBO (owner's code required). _(Gmail, 2026-05)_
+- **QBO bank-feed reconnection** pending — resolve the Mercury + BoA connection so manual upload can stop. _(Maria's doc guide, Gmail)_
 - Owner requested an **accountant letter for a personal remortgage** — a personal / related-party ask, not a Beemold service. _(Gmail)_
 
 ### Information still needed
 - [ ] Confirm home state; fiscal year-end; what Beemold actually does (low activity)
-- [ ] Which Drive folder is canonical (dedicated vs combined); credentials location
+- [ ] Which Drive folder is canonical (dedicated vs combined)
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=709445](https://app.doublehq.com/close?cid=709445)
 - **Google Drive folder (sensitive vault):** [Beemold folder](https://drive.google.com/drive/folders/1Pq3AJR1vhne4t6hxJgAscmITj8cbCc5F) · also filed in the combined [Margate/Beemold folder](https://drive.google.com/drive/folders/1tsllCHw6faD_mtL7sjdlxMXPZiuVGCnn)
+- **Maria's process guide (Drive):** [Beemold doc guide](https://docs.google.com/document/d/1n2SuSEym5am-TwORAG66YxCQSXLwsd1YYzLJLm_3Sco/edit) — process + all credentials (sensitive; do not copy into repo)
+- **Process step folders (Drive):** [Beemold Tutorials](https://drive.google.com/drive/folders/1PEr77hUK8pkldk32yk1Q39X0Zq51Qi2d) — Bookkeeping, "Add Mercury and BoA transactions manually"
 - **Related client:** [`margate-plumbing.md`](./margate-plumbing.md) (sister entity, same owner)
-- **Related SOPs:** _(pending)_
+- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
