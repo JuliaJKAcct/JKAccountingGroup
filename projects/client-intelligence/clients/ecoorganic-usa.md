@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21 (Gmail full-history catch-up)
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -25,11 +25,12 @@
 - **Business name:** ECOORGANIC USA LLC
 - **Entity type:** LLC
 - **Home state:** Connecticut
-- **Industry / what they do:** Spray-foam insulation contractor
+- **Industry / what they do:** Spray-foam insulation contractor; trades as **"EcoFoam"** (Google Drive credential-doc metadata + Gmail domain theecofoam.com, 2026-07-21)
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper does the work; Claude acts as the **independent reviewer**. (Other services: _(pending)_)
+- **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper does the work; Claude acts as the **independent reviewer**. Also: income tax (**Form 1120-S**, S-corp), **1099 preparation**, **sales tax (Monthly)**, **Annual Report** (Double property, 2026-07-21).
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
+- **Entity history:** re-domesticated from Florida to Connecticut — the Florida LLC was dissolved and a Connecticut LLC formed in its place (Gmail, Jan 2025 correspondence "Florida Dissolution & CT Incorporation") — explains the Connecticut home state.
 
 ## 2. Contacts
 
@@ -48,15 +49,25 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
-| Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
+| Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen — the frozen accounts include **TD Bank** (checking + savings) and **Bank of America**, plus a **business PayPal** (Google Drive credential-doc metadata only — not contents, 2026-07-21) |
+| Payroll | Payroll processing | _(pending — Drive link)_ | **Gusto** — the firm was removed as a Gusto admin on this account 2026-07-15 (Gmail); confirm current scope of payroll involvement |
+| Credentials (all systems) | Logins reference | ["Ecoorganic Passwords" doc](https://docs.google.com/document/d/16K4bfS7HpXNFfcdoJ4Q3FkueoKxL6yS3F7IJzlafGYM/edit) (Google Drive) | **Link only — never copy contents into this file** |
+| CT sales tax | Filing (myconneCT) | _(pending — Drive link)_ | Portal: myconneCT (CT Dept. of Revenue Services) |
+| CT annual report | State filing | _(pending — Drive link)_ | Portal: service.ct.gov |
+| Business insurance | General Liability + Workers' Comp | _(pending — Drive link)_ | Policy via JMG Insurance Corp / Atlantic Casualty Ins Co; subject to periodic GL audits (Gmail, 2026-07-21) |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Monthly** (Double property, 2026-07-21).
+- **Jurisdiction(s):** Connecticut.
+- **Frequency & due date:** Monthly (Form **OS-114** Sales and Use Tax return, via **myconneCT**); internal task recurrence set to the **5th** of the month (Double activity log, 2026-07-20).
+- **Agency & portal:** CT Department of Revenue Services (DRS) — myconneCT.
+- **Form:** OS-114.
+- **Our role:** We file (Julia, per myconneCT correspondence).
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** Likely yes — client uses **Gusto**; the firm was removed as a Gusto admin 2026-07-15 (Gmail) — **confirm current scope with Lilian/Julia** (CT-941 / CT-W3 withholding filings also correspond to payroll).
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — this is the core engagement.
