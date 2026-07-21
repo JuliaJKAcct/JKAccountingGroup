@@ -25,19 +25,16 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
+// Reuse the client-intelligence dashboard engine (PR #77) — the SAME parser and the
+// SAME expandable client cards, so the Hub's client section is identical to the
+// standalone dashboard and there is one implementation, no drift.
+import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-intelligence/render/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
 const REPO = 'JuliaJKAcct/JKAccountingGroup';
 const BRANCH = 'main';
 const blob = (relPath) => `https://github.com/${REPO}/blob/${BRANCH}/${relPath}`;
-const tree = (relPath) => `https://github.com/${REPO}/tree/${BRANCH}/${relPath}`;
-
-// The DEEP per-client view is the client-intelligence skill's review dashboard
-// (owner-grouped, service pills, systems & sources). It is regenerated on demand and
-// published as a shareable Artifact link. Set that Artifact URL here once it's published
-// so the Hub links straight to the live dashboard; until then, point at the CI project.
-const CI_DASHBOARD_URL = tree('projects/client-intelligence');
 
 /* ---------------- tiny helpers ---------------- */
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -166,6 +163,7 @@ const SOP_GROUPS = [
 
 /* ---------------- build SOP cards ---------------- */
 let sopCount = 0;
+const sopOwnerKeys = [];
 const sopGroupsHtml = SOP_GROUPS.map((grp) => {
   const cards = grp.items.map((it) => {
     const rel = 'projects/sops/' + it.file;
@@ -174,6 +172,7 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     const md = read(abs);
     const owner = headerVal(md, 'Owner of SOP') || headerVal(md, 'Owner') || 'Firm';
     const ok = ownerKey(owner);
+    sopOwnerKeys.push(ok);
     const updated = headerVal(md, 'Last updated') || headerVal(md, 'Started') || '';
     const renderRel = rel.replace(/\.md$/, '.html');
     const hasRender = existsSync(resolve(repoRoot, renderRel));
@@ -209,46 +208,17 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     </div>`;
 }).join('');
 
-/* ---------------- build client cards ---------------- */
-const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
-const clientFiles = readdirSync(clientsDir).filter((f) => f.endsWith('.md')).sort();
-const clients = clientFiles.map((f) => {
-  const md = read(resolve(clientsDir, f));
-  const name = firstHeading(md) || basename(f, '.md');
-  const owner = headerVal(md, 'Owner') || 'Firm';
-  const ok = ownerKey(owner);
-  const entity = shortEntity(field(md, 'Entity type'));
-  const industry = shortIndustry(field(md, 'Industry / what they do'));
-  const engagement = shortEngagement(field(md, 'Our engagement (services we provide)'));
-  const pend = (md.match(/_\(pending/gi) || []).length;
-  const comp = completeness(pend);
-  return { file: f, name, owner: ok, entity, industry, engagement, comp };
-}).sort((a, b) => a.name.localeCompare(b.name));
+/* ---------------- build client cards (reuse the CI dashboard engine) ---------------- */
+// loadClients() + clientCard() come from the client-intelligence render engine: the
+// SAME parse + the SAME expandable cards as the standalone dashboard. Clicking a card
+// expands services / systems / open items / sources INLINE — no navigation.
+const clients = loadClients(repoRoot);
+const clientCards = clients.map(clientCard).join('');
+const clientOwnerKeys = clients.map((c) => ownerKey(c.owner));
 
-const clientCards = clients.map((c) => {
-  const rel = 'projects/client-intelligence/clients/' + c.file;
-  const text = [c.name, c.entity.label, c.industry, c.engagement, ownerName(c.owner)].join(' ').toLowerCase();
-  return `
-    <a class="hcard client-card" href="${esc(blob(rel))}" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="${c.owner}" data-text="${esc(text)}">
-      ${IC.arrow}
-      <div class="cname">${esc(c.name)}</div>
-      <div class="crow">
-        <span class="epill">${esc(c.entity.label)}</span>
-        ${c.industry ? `<span class="ind">${esc(c.industry)}</span>` : ''}
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av ${c.owner}">${esc(ownerName(c.owner)[0])}</span>${esc(ownerName(c.owner))}</span>
-      </div>
-    </a>`;
-}).join('');
-
-/* owner filter chips (distinct owners across everything) */
-const ownersPresent = Array.from(new Set([
-  ...clients.map((c) => c.owner),
-  'julia', 'lilian',
-])).filter((o) => ['julia', 'lilian', 'maria'].includes(o));
-const orderedOwners = ['julia', 'lilian', 'maria'].filter((o) => ownersPresent.includes(o));
+/* owner filter chips (distinct owners across SOPs + clients) */
+const ownersPresent = new Set([...sopOwnerKeys, ...clientOwnerKeys]);
+const orderedOwners = ['julia', 'lilian', 'maria'].filter((o) => ownersPresent.has(o));
 const ownerChips = ['<button class="ochip" data-owner-filter="all" aria-pressed="true">Everyone</button>']
   .concat(orderedOwners.map((o) => `<button class="ochip" data-owner-filter="${o}" aria-pressed="false">${esc(ownerName(o))}</button>`))
   .join('');
@@ -317,9 +287,9 @@ const BODY = `
     </div>
     <div class="legend">
       <p class="t">How to use it</p>
-      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> open the SOP file on GitHub.</span></div>
-      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — a card opens that client's file; the <b>owner badge</b> (L / M / J) shows who owns it.</span></div>
-      <div class="legrow"><span class="sw building"></span><span>For a client's <b>services, systems & sources</b>, open the <b>Client Review Dashboard</b>.</span></div>
+      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> — open the full SOP document.</span></div>
+      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — click a card to expand its <b>services, systems, open items &amp; sources</b>, right here.</span></div>
+      <div class="legrow"><span class="sw building"></span><span><b>Search &amp; filters</b> up top work across both — name, entity, service, owner.</span></div>
     </div>
   </div>
 </div>
@@ -359,17 +329,8 @@ const BODY = `
     <h2>Client intelligence</h2>
     <span class="ct">${clientCount}</span>
   </div>
-  <p class="hsec-sub">A quick directory to <b>find any client and open its file</b>. For the full operational view of a client, open the Client Review Dashboard.</p>
-  <div class="ci-cta">
-    <div class="txt">
-      <p class="t">Deep client review</p>
-      <p class="d">Each client’s <b>services, systems, open items and sources</b> live in the <b>Client Review Dashboard</b> — the detailed, owner-grouped review view (generated by the <code>client-intelligence</code> skill). The directory below is the fast way to find and open a single client’s file.</p>
-    </div>
-    <a class="ci-btn" href="${esc(CI_DASHBOARD_URL)}" target="_blank" rel="noopener">Open the Client Review Dashboard
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
-  </div>
-  <div class="cgrid">${clientCards}</div>
+  <p class="hsec-sub"><b>Click any client</b> to open its details right here — services, systems, open items and sources. These are the same cards as the standalone Client Review Dashboard (one engine). Sensitive data stays in Drive / Double, linked from each card.</p>
+  <div class="cx-grid">${clientCards}</div>
 </section>
 
 <!-- ============================ NO RESULTS ============================ -->
@@ -408,7 +369,9 @@ const BODY = `
   if(pb) pb.addEventListener('click', function(){ window.print(); });
 
   // Filtering: search + type segment + owner
-  var cards = [].slice.call(document.querySelectorAll('[data-card]'));
+  // SOP cards are [data-card]; client cards are the CI engine's .cx-card. Handle both.
+  var SEL = '[data-card], .cx-card';
+  var cards = [].slice.call(document.querySelectorAll(SEL));
   var groups = [].slice.call(document.querySelectorAll('[data-group]'));
   var sections = [].slice.call(document.querySelectorAll('[data-section]'));
   var noRes = document.getElementById('noresults');
@@ -417,22 +380,27 @@ const BODY = `
   var clr = document.getElementById('clr');
   var state = { q:'', type:'all', owner:'all' };
 
+  // Content must never depend on a JS reveal: show any reveal-gated card immediately.
+  [].forEach.call(document.querySelectorAll('.reveal'), function(el){ el.classList.add('in'); });
+  function cardType(c){ return c.classList.contains('cx-card') ? 'client' : c.getAttribute('data-type'); }
+  function cardOwner(c){ return (c.getAttribute('data-owner')||'').toLowerCase(); }
+
   function apply(){
     var q = state.q.trim().toLowerCase();
     var shown = 0;
     cards.forEach(function(c){
-      var ok = (state.type==='all' || c.getAttribute('data-type')===state.type)
-            && (state.owner==='all' || c.getAttribute('data-owner')===state.owner)
-            && (q==='' || c.getAttribute('data-text').indexOf(q) !== -1);
+      var ok = (state.type==='all' || cardType(c)===state.type)
+            && (state.owner==='all' || cardOwner(c)===state.owner)
+            && (q==='' || (c.getAttribute('data-text')||'').indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
       if(ok) shown++;
     });
     groups.forEach(function(g){
-      var any = [].some.call(g.querySelectorAll('[data-card]'), function(c){ return c.style.display!=='none'; });
+      var any = [].some.call(g.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
       g.hidden = !any;
     });
     sections.forEach(function(s){
-      var any = [].some.call(s.querySelectorAll('[data-card]'), function(c){ return c.style.display!=='none'; });
+      var any = [].some.call(s.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
       s.hidden = !any;
     });
     noRes.classList.toggle('on', shown===0);
@@ -460,6 +428,8 @@ const BODY = `
     if(e.key==='/' && document.activeElement!==qEl){ e.preventDefault(); qEl.focus(); }
     if(e.key==='Escape' && document.activeElement===qEl){ qEl.value=''; state.q=''; hs.classList.remove('has-value'); apply(); }
   });
+  // expand every client detail before printing so PDFs are complete
+  window.addEventListener('beforeprint', function(){ [].forEach.call(document.querySelectorAll('details.cx-more'), function(d){ d.open=true; }); });
 })();
 </script>
 `;
@@ -468,7 +438,9 @@ const BODY = `
 const fonts = read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'));
 const atlas = read(resolve(repoRoot, '.claude/skills/sop-authoring/render/atlas.css'));
 const hubcss = read(resolve(here, 'hub.css'));
-const style = [fonts.trimEnd(), atlas.trimEnd(), hubcss.trimEnd()].join('\n\n') + '\n';
+// fonts + atlas (shared) + hub.css (Hub components) + DASH_CSS (the CI dashboard's
+// client-card styles, reused verbatim so the cards look identical to the dashboard).
+const style = [fonts.trimEnd(), atlas.trimEnd(), hubcss.trimEnd(), DASH_CSS().trimEnd()].join('\n\n') + '\n';
 
 const faviconSvg = read(resolve(repoRoot, 'brand/logo/favicon/favicon.svg'));
 const favicon = 'data:image/svg+xml;base64,' + Buffer.from(faviconSvg).toString('base64');

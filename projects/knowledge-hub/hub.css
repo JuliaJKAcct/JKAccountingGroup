@@ -157,26 +157,6 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
 .owner .av.julia{background:var(--teal-800);}
 .owner .av.firm{background:var(--greige-500);}
 
-/* ---------- Client Review Dashboard hand-off ----------
-   The Hub is the index; the DEEP per-client view is the client-intelligence
-   skill's dashboard. This panel defers to it instead of duplicating it. */
-.ci-cta{display:flex; align-items:center; gap:16px 24px; flex-wrap:wrap; justify-content:space-between;
-  background:var(--paper); border:1px solid var(--border); border-radius:16px;
-  padding:18px 22px; box-shadow:var(--shadow-sm); margin-bottom:20px;}
-.ci-cta .txt{min-width:0; flex:1 1 360px;}
-.ci-cta .t{font-family:var(--mono); font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase;
-  color:var(--accent); font-weight:600; margin:0 0 6px;}
-.ci-cta .d{font-size:13.5px; line-height:1.55; color:var(--body); max-width:72ch;}
-.ci-cta .d b{color:var(--ink);}
-.ci-btn{flex:0 0 auto; display:inline-flex; align-items:center; gap:9px; text-decoration:none;
-  font-family:var(--sans); font-size:14px; font-weight:600; color:#F1ECE1;
-  background:var(--teal-800); border:1px solid var(--teal-700); border-radius:10px; padding:12px 18px;
-  box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out), background .18s;}
-.ci-btn:hover{transform:translateY(-2px); box-shadow:var(--shadow-md); background:var(--teal-700); color:#fff;}
-.ci-btn svg{width:16px; height:16px;}
-:root[data-theme="dark"] .ci-btn{background:var(--raise); border-color:var(--border); color:var(--ink);}
-:root[data-theme="dark"] .ci-btn:hover{background:var(--teal-600);}
-
 /* ---------- Empty / no-results ---------- */
 .noresults{max-width:var(--maxw); margin:40px auto; padding:0 var(--gutter); text-align:center; display:none;}
 .noresults.on{display:block;}

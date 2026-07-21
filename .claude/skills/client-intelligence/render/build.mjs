@@ -15,27 +15,31 @@
   Output is an ARTIFACT FRAGMENT (<title> + <style> + markup + <script>) — the
   Artifact tool supplies <!doctype>/<head>/<body>.
 
-  Usage: node build.mjs <repoRoot> <outFile>
+  Usage (standalone dashboard):  node build.mjs <repoRoot> <outFile> [as-of-date]
+
+  REUSED BY: projects/knowledge-hub/build-hub.mjs imports loadClients/clientCard/
+  DASH_CSS from here to render the SAME client cards inside the firm Knowledge Hub.
+  Keep those three exports stable.
+
+  ALSO REUSABLE: exports loadClients(repoRoot) → parsed clients, clientCard(c) →
+  one client card's HTML, and DASH_CSS() → the dashboard card CSS, so the
+  Knowledge Hub (projects/knowledge-hub) renders the SAME client cards from the
+  SAME engine — one implementation, no drift. Importing this module has no side
+  effects; the standalone render below only runs when the file is invoked directly.
 */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
-
-const repoRoot = resolve(process.argv[2] || '.');
-const outFile  = resolve(process.argv[3] || 'ci-review-dashboard.html');
-const asOf     = process.argv[4] || '2026-07-21';       // passed in (no Date.now in some envs)
-
-const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
-const fonts = readFileSync(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'), 'utf8');
-const atlas = readFileSync(resolve(repoRoot, '.claude/skills/sop-authoring/render/atlas.css'), 'utf8');
+import { fileURLToPath } from 'node:url';
 
 /* ---------------- parsing helpers ---------------- */
 const esc = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
 function mdInline(s){
   if(!s) return '';
-  let out = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,t,u)=>`A${u}${t}B`);
-  out = esc(out);
-  out = out.replace(/A([^]+)([^]+)B/g, (m,u,t)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`);
+  // Escape first (so text/URLs are HTML-safe), THEN convert markdown inline — no
+  // sentinel characters, so text containing any letter is safe.
+  let out = esc(s);
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`);
   out = out.replace(/_\(([^)]*)\)_/g,'<span class="src">($1)</span>');
   out = out.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   out = out.replace(/`([^`]+)`/g,'<code>$1</code>');
@@ -144,72 +148,78 @@ const SYS = [
   ['Wells Fargo', /wells fargo/i], ['Amex', /amex|american express/i],
 ];
 
-/* ---------------- load + parse all clients ---------------- */
-const files = readdirSync(clientsDir).filter(f=>f.endsWith('.md')).sort();
-const clients = files.map(f=>{
-  const slug = f.replace(/\.md$/,'');
-  const md = readFileSync(resolve(clientsDir,f),'utf8');
-  const title = (md.match(/^#\s+(.+)/m)||[])[1]?.trim() || slug;
-  const st = md.match(/\*\*Status:\*\*\s*(.+?)\s*·\s*\*\*Owner:\*\*\s*(.+?)\s*·\s*\*\*Last updated:\*\*\s*([0-9-]+)/) || [];
-  const status = st[1]||'Active', owner = st[2]||'Firm', updated = st[3]||'';
-  const S = sectionMap(md);
-  const snap = kv(getSec(S,'1'));
-  const obl = subMap(getSec(S,'4'));
-  const lic = kv(obl['Licenses & other filings']||'');
-  const hist = subMap(getSec(S,'6'));
+/* ---------------- load + parse all clients (reusable) ---------------- */
+let bySlug = {};   // module-level; set by loadClients(), read by card()
 
-  const svc = {
-    Bookkeeping: classifySvc(obl['Bookkeeping & monthly close']),
-    'Income tax': classifySvc(obl['Income tax']),
-    'Sales tax': classifySvc(obl['Sales tax']),
-    Payroll: classifySvc(obl['Payroll']),
-  };
-  const flags = [];
-  if(/1099 preparation/i.test(md)) flags.push('1099');
-  if(/^Yes/i.test(lic['Annual report']||'')) flags.push('Annual report');
-  if(/licens|insurance|WC|workers.?.?comp|FFL/i.test(obl['Licenses & other filings']||'')) flags.push('Licensing');
+export function loadClients(repoRoot){
+  const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
+  const files = readdirSync(clientsDir).filter(f=>f.endsWith('.md')).sort();
+  const clients = files.map(f=>{
+    const slug = f.replace(/\.md$/,'');
+    const md = readFileSync(resolve(clientsDir,f),'utf8');
+    const title = (md.match(/^#\s+(.+)/m)||[])[1]?.trim() || slug;
+    const st = md.match(/\*\*Status:\*\*\s*(.+?)\s*·\s*\*\*Owner:\*\*\s*(.+?)\s*·\s*\*\*Last updated:\*\*\s*([0-9-]+)/) || [];
+    const status = st[1]||'Active', owner = st[2]||'Firm', updated = st[3]||'';
+    const S = sectionMap(md);
+    const snap = kv(getSec(S,'1'));
+    const obl = subMap(getSec(S,'4'));
+    const lic = kv(obl['Licenses & other filings']||'');
+    const hist = subMap(getSec(S,'6'));
 
-  const systems = SYS.filter(([,re])=>re.test(md)).map(([n])=>n);
+    const svc = {
+      Bookkeeping: classifySvc(obl['Bookkeeping & monthly close']),
+      'Income tax': classifySvc(obl['Income tax']),
+      'Sales tax': classifySvc(obl['Sales tax']),
+      Payroll: classifySvc(obl['Payroll']),
+    };
+    const flags = [];
+    if(/1099 preparation/i.test(md)) flags.push('1099');
+    if(/^Yes/i.test(lic['Annual report']||'')) flags.push('Annual report');
+    if(/licens|insurance|WC|workers.?.?comp|FFL/i.test(obl['Licenses & other filings']||'')) flags.push('Licensing');
 
-  const links = getSec(S,'7');
-  const dbl = (links.match(/\*\*Double client:\*\*[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
-  const drv = (links.match(/Google Drive folder[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
-  const related = [...links.matchAll(/\[`([a-z0-9-]+)\.md`\]/g)].map(m=>m[1]);
-  const sopLine = links.split('\n').find(l=>/Related SOPs?/i.test(l)) || '';
-  const sops = [...sopLine.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(m=>({t:m[1],u:m[2]}));
+    const systems = SYS.filter(([,re])=>re.test(md)).map(([n])=>n);
 
-  const industry = stripSrc(snap['Industry / what they do']||'').replace(/\*\*/g,'');
-  const quirks = bullets(getSec(S,'5')).slice(0,4);
-  const open = bullets(hist['Outstanding items (CI-only — never in the SOP)']||'').slice(0,4);
-  const needed = checkboxes(hist['Information still needed']||'');
+    const links = getSec(S,'7');
+    const dbl = (links.match(/\*\*Double client:\*\*[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
+    const drv = (links.match(/Google Drive folder[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
+    const related = [...links.matchAll(/\[`([a-z0-9-]+)\.md`\]/g)].map(m=>m[1]);
+    const sopLine = links.split('\n').find(l=>/Related SOPs?/i.test(l)) || '';
+    const sops = [...sopLine.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(m=>({t:m[1],u:m[2]}));
 
-  return {
-    slug, title, status, owner, updated,
-    entity: entityTag(snap['Entity type']||''),
-    state: stateTag(snap['Home state']||''),
-    lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
-    industry, platform: stripSrc(snap['Accounting platform']||''),
-    fye: stripSrc(snap['Fiscal year-end']||''),
-    svc, flags, systems, dbl, drv, related, sops, quirks, open, needed,
-  };
-});
+    const industry = stripSrc(snap['Industry / what they do']||'').replace(/\*\*/g,'');
+    const quirks = bullets(getSec(S,'5')).slice(0,4);
+    const open = bullets(hist['Outstanding items (CI-only — never in the SOP)']||'').slice(0,4);
+    const needed = checkboxes(hist['Information still needed']||'');
 
-/* ---------------- owner-group graph ---------------- */
-const bySlug = Object.fromEntries(clients.map(c=>[c.slug,c]));
-const seen = new Set();
-for(const c of clients){
-  if(seen.has(c.slug)) continue;
-  const comp = []; const stack=[c.slug];
-  while(stack.length){
-    const s = stack.pop(); if(seen.has(s)||!bySlug[s]) continue;
-    seen.add(s); comp.push(s);
-    for(const r of bySlug[s].related) if(!seen.has(r)) stack.push(r);
+    return {
+      slug, title, status, owner, updated,
+      entity: entityTag(snap['Entity type']||''),
+      state: stateTag(snap['Home state']||''),
+      lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
+      industry, platform: stripSrc(snap['Accounting platform']||''),
+      fye: stripSrc(snap['Fiscal year-end']||''),
+      svc, flags, systems, dbl, drv, related, sops, quirks, open, needed,
+    };
+  });
+
+  // owner-group graph
+  bySlug = Object.fromEntries(clients.map(c=>[c.slug,c]));
+  const seen = new Set();
+  for(const c of clients){
+    if(seen.has(c.slug)) continue;
+    const comp = []; const stack=[c.slug];
+    while(stack.length){
+      const s = stack.pop(); if(seen.has(s)||!bySlug[s]) continue;
+      seen.add(s); comp.push(s);
+      for(const r of bySlug[s].related) if(!seen.has(r)) stack.push(r);
+    }
+    const lab = comp.length>1 ? label(comp) : null;
+    comp.forEach(s=>{ if(bySlug[s]) bySlug[s].group = lab; });
   }
-  const lab = comp.length>1 ? label(comp) : null;
-  comp.forEach(s=>{ if(bySlug[s]) bySlug[s].group = lab; });
+  return clients;
 }
 
-/* ---------------- render ---------------- */
+/* ---------------- render (reusable card + helpers) ---------------- */
 const JKMARK = `<svg viewBox="0 0 64 64" class="jkmark" aria-hidden="true"><path d="M29 18 L29 38 Q29 47 21.5 47 Q15.5 47 14.2 41.5"/><path d="M37 18 L37 47"/><path d="M37 32.5 L48 18"/><path d="M37 32.5 L49.5 47"/></svg>`;
 const ICON = {
   sun:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>`,
@@ -235,7 +245,7 @@ function blk(title, arr){
   const li = arr.map(x=>`<li>${mdInline(x)}</li>`).join('');
   return `<div class="cx-blk"><h4>${title}</h4><ul>${li}</ul></div>`;
 }
-function card(c){
+export function clientCard(c){
   const searchText = esc([c.title,c.industry,c.slug,c.group,c.state,c.entity,...c.systems,...c.quirks].join(' ').toLowerCase());
   const tags = [
     pill('entity', c.entity),
@@ -284,29 +294,40 @@ function card(c){
 </article>`;
 }
 
-const owners = [...new Set(clients.map(c=>c.owner))];
-const ownerOrder = ['Lilian','Maria','Julia','Firm'].filter(o=>owners.includes(o)).concat(owners.filter(o=>!['Lilian','Maria','Julia','Firm'].includes(o)));
-const groupRank = c => c.group ? c.group : 'zzz';
+/* ---------------- standalone dashboard (runs only when invoked directly) ---------------- */
+function main(){
+  const repoRoot = resolve(process.argv[2] || '.');
+  const outFile  = resolve(process.argv[3] || 'ci-review-dashboard.html');
+  const asOf     = process.argv[4] || '2026-07-21';       // passed in (no Date.now in some envs)
 
-function ownerSection(o){
-  const list = clients.filter(c=>c.owner===o).sort((a,b)=> groupRank(a).localeCompare(groupRank(b)) || a.title.localeCompare(b.title));
-  return `
+  const fonts = readFileSync(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'), 'utf8');
+  const atlas = readFileSync(resolve(repoRoot, '.claude/skills/sop-authoring/render/atlas.css'), 'utf8');
+
+  const clients = loadClients(repoRoot);
+
+  const owners = [...new Set(clients.map(c=>c.owner))];
+  const ownerOrder = ['Lilian','Maria','Julia','Firm'].filter(o=>owners.includes(o)).concat(owners.filter(o=>!['Lilian','Maria','Julia','Firm'].includes(o)));
+  const groupRank = c => c.group ? c.group : 'zzz';
+
+  function ownerSection(o){
+    const list = clients.filter(c=>c.owner===o).sort((a,b)=> groupRank(a).localeCompare(groupRank(b)) || a.title.localeCompare(b.title));
+    return `
 <section class="cx-sec" data-ownersec="${esc(o)}">
   <div class="cx-sechead">
     <span class="k">${esc(o)}'s book</span>
     <h2>${list.length} client${list.length>1?'s':''}</h2>
     <span class="cx-line"></span>
   </div>
-  <div class="cx-grid">${list.map(card).join('')}</div>
+  <div class="cx-grid">${list.map(clientCard).join('')}</div>
 </section>`;
-}
+  }
 
-const ownerCounts = Object.fromEntries(ownerOrder.map(o=>[o, clients.filter(c=>c.owner===o).length]));
-const groups = [...new Set(clients.map(c=>c.group).filter(Boolean))];
+  const ownerCounts = Object.fromEntries(ownerOrder.map(o=>[o, clients.filter(c=>c.owner===o).length]));
+  const groups = [...new Set(clients.map(c=>c.group).filter(Boolean))];
 
-const style = fonts.trimEnd() + '\n\n' + atlas.trimEnd() + '\n\n' + DASH_CSS();
+  const style = fonts.trimEnd() + '\n\n' + atlas.trimEnd() + '\n\n' + DASH_CSS();
 
-const body = `
+  const body = `
 <div class="bar">
   <div class="in">
     <div class="lhs">${JKMARK}<b>JK Accounting Group</b><span class="sep"></span><span class="k">Client Intelligence</span></div>
@@ -356,7 +377,7 @@ const body = `
   </div>
 </footer>`;
 
-const script = `
+  const script = `
 <script>
 (function(){
   var root=document.documentElement; root.classList.add('js');
@@ -398,7 +419,7 @@ const script = `
 })();
 </script>`;
 
-const fragment = `<title>Client Intelligence — review · JK Accounting Group</title>
+  const fragment = `<title>Client Intelligence — review · JK Accounting Group</title>
 <style>
 ${style}
 </style>
@@ -406,11 +427,12 @@ ${style}
 ${body}
 ${script}
 `;
-writeFileSync(outFile, fragment);
-console.error(`fragment → ${outFile} (${(fragment.length/1024).toFixed(0)}KB) · ${clients.length} clients`);
+  writeFileSync(outFile, fragment);
+  console.error(`fragment → ${outFile} (${(fragment.length/1024).toFixed(0)}KB) · ${clients.length} clients`);
+}
 
 /* ---------------- dashboard-only CSS (composed from Atlas tokens) ---------------- */
-function DASH_CSS(){ return `
+export function DASH_CSS(){ return `
 /* ===== Client-Intelligence dashboard (composed from Atlas tokens) ===== */
 /* Widen the canvas: atlas.css sets --maxw:880 for an SOP reading column;
    a scan-and-compare dashboard wants a broader frame for a 2-up card grid. */
@@ -553,3 +575,6 @@ details.cx-more[open] > summary .cx-sum-b{display:inline;}
   .cx-card,.pill,.svc,.chip{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
 }
 `; }
+
+const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) main();

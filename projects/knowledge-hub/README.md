@@ -57,6 +57,13 @@ Drive, printed to PDF, and inside a CSP-restricted Artifact.
 
 - [`impeccable`](../../.claude/skills/impeccable/) — the design skill the Hub is
   built and battle-tested with (light/dark/mobile screenshots).
+- [`client-intelligence`](../../.claude/skills/client-intelligence/) — the Hub's
+  **Client intelligence** section is rendered by **reusing that skill's engine**:
+  `build-hub.mjs` imports `loadClients()` + `clientCard()` + `DASH_CSS()` from
+  [`render/build.mjs`](../../.claude/skills/client-intelligence/render/build.mjs),
+  so the Hub's client cards are **the same expandable cards** (service pills,
+  systems, open items, sources) as the standalone review dashboard — **one engine,
+  no drift**. Click a client card and its detail expands *inline*.
 - Sources it indexes: [`../sops/`](../sops/) (procedures) and
   [`../client-intelligence/`](../client-intelligence/) (clients). Adding an SOP or
   a client and re-running the build is all it takes to update the Hub.
@@ -70,8 +77,10 @@ sources change:
 node projects/knowledge-hub/build-hub.mjs
 ```
 
-The "Open" button on each card points at the real file on **GitHub** (the repo is
-the home; the Hub is the index). A **shareable link** for the team is produced by
+Each **procedure** card links to its SOP document (on GitHub for now; a designed
+Atlas page once SOPs are rendered and hosted). Each **client** card **expands
+inline** to its detail — no navigation — because those cards come from the
+client-intelligence engine. A **shareable link** for the team is produced by
 publishing `scratch/hub.artifact.html` with the Artifact tool — same file path
 each time, so the URL is stable (send it once; it updates in place on re-publish).
 
@@ -80,9 +89,10 @@ each time, so the URL is stable (send it once; it updates in place on re-publish
 - **The repo is the source of truth; the Hub is a view.** Never hand-edit
   `index.html` — change the sources (or the generator/CSS) and re-run
   `build-hub.mjs`.
-- **`hub.css` composes from Atlas tokens only** — no new colors/fonts. Card
-  footer classes are namespaced (`.dmeta`, `.cfoot`) to avoid colliding with
-  atlas.css's page `.foot`.
+- **`hub.css` composes from Atlas tokens only** — no new colors/fonts. The SOP
+  card footer is namespaced (`.dmeta`) to avoid colliding with atlas.css's page
+  `.foot`. Client-card styles come from the client-intelligence engine's
+  `DASH_CSS()` (the `.cx-*` classes) — don't fork them here.
 - **No client data leaves its home.** The Hub only surfaces the non-sensitive
   facts already committed to the client-intelligence files (entity, industry, the
   services we run) — secrets/PII stay in Drive/Double, linked from those files.

@@ -670,26 +670,6 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
 .owner .av.julia{background:var(--teal-800);}
 .owner .av.firm{background:var(--greige-500);}
 
-/* ---------- Client Review Dashboard hand-off ----------
-   The Hub is the index; the DEEP per-client view is the client-intelligence
-   skill's dashboard. This panel defers to it instead of duplicating it. */
-.ci-cta{display:flex; align-items:center; gap:16px 24px; flex-wrap:wrap; justify-content:space-between;
-  background:var(--paper); border:1px solid var(--border); border-radius:16px;
-  padding:18px 22px; box-shadow:var(--shadow-sm); margin-bottom:20px;}
-.ci-cta .txt{min-width:0; flex:1 1 360px;}
-.ci-cta .t{font-family:var(--mono); font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase;
-  color:var(--accent); font-weight:600; margin:0 0 6px;}
-.ci-cta .d{font-size:13.5px; line-height:1.55; color:var(--body); max-width:72ch;}
-.ci-cta .d b{color:var(--ink);}
-.ci-btn{flex:0 0 auto; display:inline-flex; align-items:center; gap:9px; text-decoration:none;
-  font-family:var(--sans); font-size:14px; font-weight:600; color:#F1ECE1;
-  background:var(--teal-800); border:1px solid var(--teal-700); border-radius:10px; padding:12px 18px;
-  box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out), background .18s;}
-.ci-btn:hover{transform:translateY(-2px); box-shadow:var(--shadow-md); background:var(--teal-700); color:#fff;}
-.ci-btn svg{width:16px; height:16px;}
-:root[data-theme="dark"] .ci-btn{background:var(--raise); border-color:var(--border); color:var(--ink);}
-:root[data-theme="dark"] .ci-btn:hover{background:var(--teal-600);}
-
 /* ---------- Empty / no-results ---------- */
 .noresults{max-width:var(--maxw); margin:40px auto; padding:0 var(--gutter); text-align:center; display:none;}
 .noresults.on{display:block;}
@@ -707,6 +687,149 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
   .hcard{break-inside:avoid; box-shadow:none; border:1px solid var(--border);}
   .dgrid, .cgrid{gap:10px;}
   a.hcard .arrow{display:none;}
+}
+
+
+/* ===== Client-Intelligence dashboard (composed from Atlas tokens) ===== */
+/* Widen the canvas: atlas.css sets --maxw:880 for an SOP reading column;
+   a scan-and-compare dashboard wants a broader frame for a 2-up card grid. */
+:root{--maxw:1180px;}
+.mast .in{padding-bottom:clamp(28px,4vw,44px);}
+.cx-filter{position:sticky; top:56px; z-index:90;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--border-subtle);}
+.cx-filter .in{max-width:var(--maxw); margin:0 auto; padding:11px var(--gutter);
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.cx-search{display:flex; align-items:center; gap:9px; flex:1 1 260px; min-width:200px;
+  background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0 12px; height:40px;}
+.cx-search svg{width:16px; height:16px; color:var(--muted); flex:0 0 auto;}
+.cx-search input{border:0; background:transparent; outline:0; width:100%; height:100%;
+  font-family:var(--sans); font-size:14.5px; color:var(--body);}
+.cx-owners{display:flex; gap:6px; flex:0 0 auto;}
+.cx-of{font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;
+  color:var(--muted); background:transparent; border:1px solid var(--border); border-radius:999px;
+  padding:8px 14px; cursor:pointer; transition:all .16s var(--ease-out);}
+.cx-of:hover{color:var(--ink); border-color:var(--border);}
+.cx-of.active{color:#fff; background:var(--teal-800); border-color:var(--teal-800);}
+:root[data-theme="dark"] .cx-of.active{background:var(--accent); border-color:var(--accent); color:#0D2A31;}
+.cx-count{margin-left:auto; font-family:var(--mono); font-size:11px; letter-spacing:0.06em;
+  text-transform:uppercase; color:var(--muted); flex:0 0 auto;}
+
+.cx-main{max-width:var(--maxw); margin:0 auto; padding:clamp(20px,4vw,40px) var(--gutter) 10px;}
+.cx-sec{margin-top:clamp(30px,5vw,48px);}
+.cx-sec:first-child{margin-top:clamp(14px,3vw,26px);}
+.cx-sechead{display:flex; align-items:baseline; gap:16px; margin-bottom:20px;}
+.cx-sechead .k{font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; flex:0 0 auto;}
+.cx-sechead h2{font-size:clamp(20px,3vw,26px); flex:0 0 auto; color:var(--ink);}
+.cx-sechead .cx-line{flex:1 1 auto; height:1px; background:var(--border-subtle); align-self:center;}
+
+.cx-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 430px), 1fr)); gap:18px; align-items:start;}
+.cx-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px;
+  padding:20px 21px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:12px;
+  scroll-margin-top:120px; transition:box-shadow .2s var(--ease-out), border-color .2s var(--ease-out);}
+.cx-card:hover{box-shadow:var(--shadow-md); border-color:var(--border);}
+.cx-card:target{border-color:var(--accent); box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 24%,transparent), var(--shadow-md);}
+.cx-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px;}
+.cx-head h3{font-size:19.5px; line-height:1.15; color:var(--ink);}
+.cx-upd{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--muted); white-space:nowrap; flex:0 0 auto; display:flex; align-items:center; gap:7px;}
+.cx-upd .dot{width:3px; height:3px; border-radius:50%; background:var(--border);}
+
+.cx-tags{display:flex; flex-wrap:wrap; gap:6px;}
+.pill{display:inline-flex; align-items:center; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:0.04em; border-radius:999px; padding:4px 10px; white-space:nowrap;}
+.pill.entity{background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+.pill.state{background:var(--greige-100); color:var(--muted); border:1px solid var(--border-subtle);}
+:root[data-theme="dark"] .pill.state{background:rgba(236,230,218,0.06); color:var(--body);}
+.pill.group{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink);}
+
+.cx-ind{font-size:14px; line-height:1.5; color:var(--body); margin:0;}
+.cx-ind .src{color:var(--muted); font-style:italic;}
+
+.svcs{display:flex; flex-wrap:wrap; gap:6px;}
+.svc{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:0.02em; border-radius:7px; padding:4px 9px; border:1px solid transparent;}
+.svc i{font-style:normal; font-weight:500; opacity:.72; text-transform:lowercase; letter-spacing:0;}
+.svc.on{background:var(--ok-bg); color:var(--ok-text); border-color:var(--ok-bd);}
+.svc.off{background:transparent; color:var(--muted); border-color:var(--border-subtle);}
+.svc.quirk{background:var(--warn-bg); color:var(--warn-text); border-color:var(--warn-bd);}
+.svc.neutral{background:var(--note-bg); color:var(--note-text); border-color:var(--note-bd);}
+.svc.flag{background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+
+.chips{display:flex; flex-wrap:wrap; gap:5px;}
+.chip{font-family:var(--sans); font-size:11.5px; font-weight:500; color:var(--muted);
+  background:var(--paper); border:1px solid var(--border-subtle); border-radius:6px; padding:2px 8px;}
+
+.cx-cols{display:grid; grid-template-columns:1fr; gap:14px; margin-top:2px;}
+@media (min-width:520px){ .cx-card .cx-cols{grid-template-columns:1fr 1fr;} }
+.cx-blk h4{font-family:var(--mono); font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; margin:0 0 7px;}
+.cx-blk ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px;}
+.cx-blk li{position:relative; padding-left:14px; font-size:12.8px; line-height:1.48; color:var(--body);}
+.cx-blk li::before{content:""; position:absolute; left:2px; top:7px; width:5px; height:5px; border-radius:50%;
+  background:var(--border);}
+.cx-blk li .src{color:var(--muted); font-style:italic; font-size:11.5px;}
+.cx-blk code{font-size:0.85em; background:var(--paper); border:1px solid var(--border-subtle);
+  border-radius:4px; padding:0 4px;}
+
+.cx-need{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--warn-ic); display:inline-flex; align-items:center; gap:7px; align-self:flex-start;}
+.cx-need::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--warn-ic);}
+
+.cx-links{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:auto; padding-top:12px;
+  border-top:1px solid var(--border-subtle); font-family:var(--mono); font-size:11px; letter-spacing:0.03em;}
+.cx-links a{display:inline-flex; align-items:center; gap:5px; color:var(--accent-2); text-decoration:none;}
+.cx-links a:hover{color:var(--accent);}
+.cx-links a svg{width:11px; height:11px;}
+.cx-links .dv{color:var(--border);}
+.cx-links .rel{color:var(--muted); text-transform:none; letter-spacing:0; font-family:var(--sans); font-size:12px;}
+.cx-links .rel a{font-family:var(--sans);}
+
+/* expand/collapse controls */
+.cx-exp{display:flex; gap:6px; flex:0 0 auto;}
+.cx-xb{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; font-weight:600;
+  color:var(--muted); background:transparent; border:1px solid var(--border-subtle); border-radius:8px;
+  padding:7px 11px; cursor:pointer; transition:color .15s var(--ease-out), border-color .15s var(--ease-out);}
+.cx-xb:hover{color:var(--ink); border-color:var(--border);}
+@media (max-width:680px){ .cx-exp{display:none;} }
+
+/* collapsible per-client detail */
+details.cx-more{margin-top:2px;}
+details.cx-more > summary{list-style:none; cursor:pointer; display:flex; align-items:center;
+  justify-content:space-between; gap:10px; padding:9px 13px; border-radius:10px;
+  background:var(--paper); border:1px solid var(--border-subtle);
+  font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;
+  color:var(--accent-2); transition:background .16s var(--ease-out), border-color .16s var(--ease-out); user-select:none;}
+details.cx-more > summary::-webkit-details-marker{display:none;}
+details.cx-more > summary:hover{background:var(--pill-teal-bg); border-color:var(--border);}
+details.cx-more > summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.cx-caret{width:15px; height:15px; flex:0 0 auto; color:var(--muted);
+  transition:transform .22s var(--ease-out);}
+details.cx-more[open] > summary .cx-caret{transform:rotate(180deg);}
+.cx-sum-b{display:none;}
+details.cx-more[open] > summary .cx-sum-a{display:none;}
+details.cx-more[open] > summary .cx-sum-b{display:inline;}
+.cx-more-body{display:flex; flex-direction:column; gap:14px; padding:15px 3px 3px;}
+.cx-sources .cx-srcline{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:9px;
+  font-family:var(--mono); font-size:11.5px; letter-spacing:0.03em;}
+.cx-sources .cx-srcline a{display:inline-flex; align-items:center; gap:5px; color:var(--accent-2); text-decoration:none;}
+.cx-sources .cx-srcline a:hover{color:var(--accent);}
+.cx-sources .cx-srcline a svg{width:12px; height:12px;}
+.cx-sources .rel{font-family:var(--sans); font-size:12px; color:var(--muted); text-transform:none; letter-spacing:0;}
+.cx-hint{font-size:12.5px; line-height:1.5; color:var(--muted); margin:0;}
+.cx-hint b{color:var(--body);}
+.cx-hint a{color:var(--accent-2);}
+.cx-none{color:var(--muted); font-style:italic;}
+
+.cx-empty{text-align:center; color:var(--muted); font-size:15px; padding:60px 0;}
+
+@media print{
+  .bar,.cx-filter{display:none !important;}
+  .cx-grid{grid-template-columns:1fr 1fr;}
+  .cx-card{break-inside:avoid; box-shadow:none;}
+  .cx-card,.pill,.svc,.chip{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
 }
 </style>
 </head>
@@ -767,9 +890,9 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
     </div>
     <div class="legend">
       <p class="t">How to use it</p>
-      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> open the SOP file on GitHub.</span></div>
-      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — a card opens that client's file; the <b>owner badge</b> (L / M / J) shows who owns it.</span></div>
-      <div class="legrow"><span class="sw building"></span><span>For a client's <b>services, systems & sources</b>, open the <b>Client Review Dashboard</b>.</span></div>
+      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> — open the full SOP document.</span></div>
+      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — click a card to expand its <b>services, systems, open items &amp; sources</b>, right here.</span></div>
+      <div class="legrow"><span class="sw building"></span><span><b>Search &amp; filters</b> up top work across both — name, entity, service, owner.</span></div>
     </div>
   </div>
 </div>
@@ -937,245 +1060,559 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
     <h2>Client intelligence</h2>
     <span class="ct">19</span>
   </div>
-  <p class="hsec-sub">A quick directory to <b>find any client and open its file</b>. For the full operational view of a client, open the Client Review Dashboard.</p>
-  <div class="ci-cta">
-    <div class="txt">
-      <p class="t">Deep client review</p>
-      <p class="d">Each client’s <b>services, systems, open items and sources</b> live in the <b>Client Review Dashboard</b> — the detailed, owner-grouped review view (generated by the <code>client-intelligence</code> skill). The directory below is the fast way to find and open a single client’s file.</p>
-    </div>
-    <a class="ci-btn" href="https://github.com/JuliaJKAcct/JKAccountingGroup/tree/main/projects/client-intelligence" target="_blank" rel="noopener">Open the Client Review Dashboard
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+  <p class="hsec-sub"><b>Click any client</b> to open its details right here — services, systems, open items and sources. These are the same cards as the standalone Client Review Dashboard (one engine). Sensitive data stays in Drive / Double, linked from each card.</p>
+  <div class="cx-grid">
+<article class="cx-card reveal" id="atman-parts" data-owner="Lilian" data-text="atman parts  atman-parts    quickbooks online ebay _(pending)_">
+  <div class="cx-head">
+    <h3>Atman Parts</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
   </div>
-  <div class="cgrid">
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/atman-parts.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="atman parts entity tbd   lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Atman Parts</div>
-      <div class="crow">
-        <span class="epill">Entity TBD</span>
-        
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/aura-remodeling.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="aura remodeling llc partnership remodeling / construction contractor (residential + commercial) bookkeeping (quarterly) · 1099 preparation (subcontractors) lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">AURA REMODELING LLC</div>
-      <div class="crow">
-        <span class="epill">Partnership</span>
-        <span class="ind">Remodeling / construction contractor (residential + commercial)</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/beemold-usa.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="beemold usa llc llc · sch c low-activity entity monthly bookkeeping · annual-report filing maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Beemold USA LLC</div>
-      <div class="crow">
-        <span class="epill">LLC · Sch C</span>
-        <span class="ind">Low-activity entity</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/best-broker-realty.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="best broker realty llc llc real estate brokerage business tax receipt (btr) filing handled lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">BEST BROKER REALTY LLC</div>
-      <div class="crow">
-        <span class="epill">LLC</span>
-        <span class="ind">Real estate brokerage</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/deep-tech-development.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="deep tech development llc llc · sch c e-commerce (shopify) bookkeeping (monthly) · income tax on the owner's schedule c lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Deep Tech Development LLC</div>
-      <div class="crow">
-        <span class="epill">LLC · Sch C</span>
-        <span class="ind">E-commerce (Shopify)</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ecom-beavers.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="ecom beavers llc c-corp multi-brand e-commerce / dtc seller of physical products monthly bookkeeping · income tax (form 1120) maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Ecom Beavers LLC</div>
-      <div class="crow">
-        <span class="epill">C-Corp</span>
-        <span class="ind">Multi-brand e-commerce / DTC seller of physical products</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ecoorganic-usa.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="ecoorganic usa llc llc spray-foam insulation contractor monthly bookkeeping lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">ECOORGANIC USA LLC</div>
-      <div class="crow">
-        <span class="epill">LLC</span>
-        <span class="ind">Spray-foam insulation contractor</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ikids-group.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="ikids group llc partnership children's indoor play park / family-entertainment venue (&quot;ikidspark&quot;),… bookkeeping (monthly) · income tax (form 1065 partnership → k-1s) lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">iKids Group LLC</div>
-      <div class="crow">
-        <span class="epill">Partnership</span>
-        <span class="ind">Children's indoor play park / family-entertainment venue (&quot;iKidsPark&quot;),…</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/kolo-florida.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="kolo florida inc corporation   lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Kolo Florida Inc</div>
-      <div class="crow">
-        <span class="epill">Corporation</span>
-        
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/lumetro.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="lumetro llc llc · sch c the digital-advertising / ad-spend vehicle within the owner's tech group monthly bookkeeping (the monthly deliverable is an &quot;ad breakdown… maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">LUMETRO LLC</div>
-      <div class="crow">
-        <span class="epill">LLC · Sch C</span>
-        <span class="ind">The digital-advertising / ad-spend vehicle within the owner's tech group</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/magnum-152.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="magnum 152, inc s-corp pawn shop / jewelry retail monthly bookkeeping · income tax (form 1120-s) maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">MAGNUM 152, INC</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Pawn shop / jewelry retail</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/margate-plumbing.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="margate plumbing inc s-corp licensed plumbing contractor (construction trade) monthly bookkeeping · income tax (form 1120-s) maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Margate Plumbing Inc</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Licensed plumbing contractor (construction trade)</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/masciave-design-studio.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="masciave design studio llc s-corp interior design studio (commercial + residential; the owner holds iida ·… bookkeeping (quarterly) · income tax (form 1120-s) lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">MASCIAVE DESIGN STUDIO LLC</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Interior design studio (commercial + residential; the owner holds IIDA ·…</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/mobilesource-corp.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="mobilesource corp s-corp mobile-device / consumer-electronics buyback &amp; resale monthly bookkeeping (client keeps its own books · jk reviews &amp;… maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Mobilesource Corp</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Mobile-device / consumer-electronics buyback &amp; resale</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/never-give-up-kk.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="never give up kk llc s-corp trade of thermal-imaging optics bookkeeping (quarterly) · income tax on the owner's schedule c (for now) lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">NEVER GIVE UP KK LLC</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Trade of thermal-imaging optics</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/pro-title-agency.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="pro title agency llc · sch c licensed title insurance agency (florida dfs-licensed under the… btr filing handled · income tax on the owner's schedule c lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Pro Title Agency</div>
-      <div class="crow">
-        <span class="epill">LLC · Sch C</span>
-        <span class="ind">Licensed title insurance agency (Florida DFS-licensed under the…</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/sensustech.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="sensustech llc c-corp mobile app / mobile-game development (sensustech.com). the owner… monthly bookkeeping · income tax (form 1120) maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">SENSUSTECH LLC</div>
-      <div class="crow">
-        <span class="epill">C-Corp</span>
-        <span class="ind">Mobile app / mobile-game development (sensustech.com). The owner…</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/sunoma-inc.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="maria" data-text="sunoma inc s-corp pawn shop + jewelry retail monthly bookkeeping · income tax (form 1120-s) maria">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">Sunoma Inc</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">Pawn shop + jewelry retail</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av maria">M</span>Maria</span>
-      </div>
-    </a>
-    <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/yes-team-corp.md" target="_blank" rel="noopener"
-       data-card data-type="client" data-owner="lilian" data-text="yes team corp s-corp one-owner marketing s-corp bookkeeping (quarterly) · income tax (form 1120-s) lilian">
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      <div class="cname">YES TEAM CORP</div>
-      <div class="crow">
-        <span class="epill">S-Corp</span>
-        <span class="ind">One-owner marketing S-corp</span>
-      </div>
-      <div class="cfoot">
-        <span class="owner"><span class="av lilian">L</span>Lilian</span>
-      </div>
-    </a></div>
+  <div class="cx-tags"></div>
+  
+  <div class="svcs"><span class="svc neutral">Bookkeeping</span><span class="svc neutral">Income tax</span><span class="svc on">Sales tax</span><span class="svc neutral">Payroll</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">eBay</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><span class="src">(pending)</span></li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><span class="src">(none captured yet — live tasks live in Double / Ping)</span></li></ul></div></div>
+      <div class="cx-need">5 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=763909" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="aura-remodeling" data-owner="Lilian" data-text="aura remodeling llc remodeling / construction contractor (residential + commercial) — confirmed by the 1099-to-subcontractor + customer-project pattern. aura-remodeling  likely illinois llc quickbooks online chase amex the firm's chart-of-accounts grammar is described as &quot;masciave/**aura**-style&quot; (number-prefixed account names) — this client is a reference for that coa convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/sop knowledge)_ as a **remodeling/construction** business, expect **subcontractors** → 1099 tracking (w-9s) and job-costing. **two principals** (co-owners) run the account; both receive the quarterly financials. **heavy personal / business commingling — the main bookkeeping challenge:** an amex and bank of america activity appear in the books but aren't connected accounts; a personal checking account is used for business transfers — ongoing need to reclassify personal items to owner's draw / distributions.">
+  <div class="cx-head">
+    <h3>AURA REMODELING LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC</span><span class="pill state">Likely Illinois</span></div>
+  <p class="cx-ind">Remodeling / construction contractor (residential + commercial) — confirmed by the 1099-to-subcontractor + customer-project pattern.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>quarterly</i></span><span class="svc off">Income tax<i>n/a</i></span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Chase</span><span class="chip">Amex</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li>The firm's chart-of-accounts grammar is described as &quot;Masciave/<strong>Aura</strong>-style&quot; (number-prefixed account names) — this client is a reference for that COA convention (see <a href="../../sops/ecoorganic-bookkeeping-review.md" target="_blank" rel="noopener"><code>../../sops/ecoorganic-bookkeeping-review.md</code></a>). <span class="src">(firm/SOP knowledge)</span></li><li>As a <strong>remodeling/construction</strong> business, expect <strong>subcontractors</strong> → 1099 tracking (W-9s) and job-costing.</li><li><strong>Two principals</strong> (co-owners) run the account; both receive the quarterly financials.</li><li><strong>Heavy personal / business commingling — the main bookkeeping challenge:</strong> an Amex and Bank of America activity appear in the books but aren't connected accounts; a personal checking account is used for business transfers — ongoing need to reclassify personal items to owner's draw / distributions.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li>Confirm whether the <strong>Amex and Bank of America</strong> activity is personal or business; reclassify personal items to owner's draw.</li><li>Confirm the older <strong>Chase credit card</strong> was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync.</li><li>Resolve an <strong>invoice-to-deposit mismatch</strong> with a customer and chase a <strong>customer invoice unpaid since January 2026</strong>.</li><li><strong>QuickBooks flagged behind</strong> in the July 2026 recurring-expense review — bookkeeping catch-up needed.</li></ul></div></div>
+      <div class="cx-need">3 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706679" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="beemold-usa" data-owner="Maria" data-text="beemold usa llc low-activity entity — light operations; some construction / roofing-materials adjacency (owner described payments as &quot;dumpster rentals from us shingle and metals&quot;). beemold-usa construction fl · broward llc · sch c quickbooks online mercury wells fargo amex **construction owner-group (with margate plumbing inc):** same owner runs both; the two are managed together and reported jointly. beemold is the **quieter** of the pair (some months no activity). keep the entities' books distinct. _(gmail)_ the owner's **mercury io** card account is **repeatedly frozen for insufficient cash balance** — a standing cash-flow quirk to watch. _(gmail)_ the owner corresponds from multiple mailboxes (kept in double).">
+  <div class="cx-head">
+    <h3>Beemold USA LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC · Sch C</span><span class="pill state">FL · Broward</span><span class="pill group">Construction</span></div>
+  <p class="cx-ind">Low-activity entity — light operations; some construction / roofing-materials adjacency (owner described payments as &quot;dumpster rentals from US Shingle and Metals&quot;).</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc off">Income tax<i>n/a</i></span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Mercury</span><span class="chip">Wells Fargo</span><span class="chip">Amex</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Construction owner-group (with Margate Plumbing Inc):</strong> same owner runs both; the two are managed together and reported jointly. Beemold is the <strong>quieter</strong> of the pair (some months no activity). Keep the entities' books distinct. <span class="src">(Gmail)</span></li><li>The owner's <strong>Mercury IO</strong> card account is <strong>repeatedly frozen for insufficient cash balance</strong> — a standing cash-flow quirk to watch. <span class="src">(Gmail)</span></li><li>The owner corresponds from multiple mailboxes (kept in Double).</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>QBO bank-feed reconnection</strong> pending — an Amex + a credit card need reconnecting to QBO (owner's code required). <span class="src">(Gmail, 2026-05)</span></li><li>Owner requested an <strong>accountant letter for a personal remortgage</strong> — a personal / related-party ask, not a Beemold service. <span class="src">(Gmail)</span></li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=709445" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#margate-plumbing">Margate Plumbing Inc</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="best-broker-realty" data-owner="Lilian" data-text="best broker realty llc real estate brokerage best-broker-realty  fl · broward llc quickbooks online as a real estate brokerage, the city of hollywood btr requires a **dbpr real-estate license** (brokerage **cq**, ideally the qualifying broker's **bk**). the client provided it; the firm sent it to the city on **2026-07-16**. best broker is the **master tenant** at its hollywood, fl business location; **pro title agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(double note, 2026-07-15)_">
+  <div class="cx-head">
+    <h3>BEST BROKER REALTY LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC</span><span class="pill state">FL · Broward</span></div>
+  <p class="cx-ind">Real estate brokerage</p>
+  <div class="svcs"><span class="svc neutral">Bookkeeping</span><span class="svc neutral">Income tax</span><span class="svc neutral">Sales tax</span><span class="svc neutral">Payroll</span><span class="svc flag">Licensing</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li>As a real estate brokerage, the City of Hollywood BTR requires a <strong>DBPR real-estate license</strong> (brokerage <strong>CQ</strong>, ideally the qualifying broker's <strong>BK</strong>). The client provided it; the firm sent it to the city on <strong>2026-07-16</strong>.</li><li>Best Broker is the <strong>master tenant</strong> at its Hollywood, FL business location; <strong>Pro Title Agency subleases</strong> space from it, and the two clients <strong>share a principal</strong> — see <a href="./pro-title-agency.md" target="_blank" rel="noopener"><code>pro-title-agency.md</code></a>. <span class="src">(Double note, 2026-07-15)</span></li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Watch for the city's payment instructions</strong> for the corrected Broker/Real Estate category — then pay the difference (never before). <span class="src">(Double note 2026-07-15; license sent 2026-07-16)</span></li></ul></div></div>
+      <div class="cx-need">4 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706712" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <a href="../../sops/hollywood-broward-business-tax-receipt.md" target="_blank" rel="noopener">`../../sops/hollywood-broward-business-tax-receipt.md`</a></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="deep-tech-development" data-owner="Lilian" data-text="deep tech development llc e-commerce (shopify) — operating brand &quot;go robots&quot; (tech / robotics products), with a physical-delivery component (a commercial cargo van, fl-insured). reads as shopify retail + local delivery, not software-only. deep-tech-development  fl · broward llc · sch c quickbooks online gusto shopify **multi-entity owner / naming ambiguity (important).** a sister entity **&quot;deep tech development group llc&quot;** is the one that runs **gusto payroll (biweekly)**, holds the **shopify store**, the &quot;go robots&quot; ap mailbox, and the vehicle policy. this file (706685) is the **schedule c, single-member, payroll-n/a** entity. automated emails (gusto, quickbooks, shopify, insurance) blur the two names — **attribute payroll / van / shopify to the group entity** until confirmed. **external ukrainian finance team:** the owner uses an outside ukrainian bookkeeping / tax group that shares documents and handles the owner's **personal ukrainian tax declaration**; jk coordinates hand-offs via google drive. **ownership (corrected by lilian, 2026-07-20):** the owner is a **different individual** from never give up kk's owner — never give up's owner was a **former employee** of deep tech, not an owner. separately, the sister entity &quot;deep tech development group llc&quot; (above) is a distinct company.">
+  <div class="cx-head">
+    <h3>Deep Tech Development LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC · Sch C</span><span class="pill state">FL · Broward</span></div>
+  <p class="cx-ind">E-commerce (Shopify) — operating brand &quot;Go Robots&quot; (tech / robotics products), with a physical-delivery component (a commercial cargo van, FL-insured). Reads as Shopify retail + local delivery, not software-only.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc on">Sales tax<i>quarterly</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span><span class="chip">Shopify</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Multi-entity owner / naming ambiguity (important).</strong> A sister entity <strong>&quot;Deep Tech Development GROUP LLC&quot;</strong> is the one that runs <strong>Gusto payroll (biweekly)</strong>, holds the <strong>Shopify store</strong>, the &quot;Go Robots&quot; AP mailbox, and the vehicle policy. This file (706685) is the <strong>Schedule C, single-member, payroll-N/A</strong> entity. Automated emails (Gusto, QuickBooks, Shopify, insurance) blur the two names — <strong>attribute payroll / van / Shopify to the GROUP entity</strong> until confirmed.</li><li><strong>External Ukrainian finance team:</strong> the owner uses an outside Ukrainian bookkeeping / tax group that shares documents and handles the owner's <strong>personal Ukrainian tax declaration</strong>; JK coordinates hand-offs via Google Drive.</li><li><strong>Ownership (corrected by Lilian, 2026-07-20):</strong> the owner is a <strong>different individual</strong> from Never Give Up KK's owner — Never Give Up's owner was a <strong>former employee</strong> of Deep Tech, not an owner. Separately, the sister entity &quot;Deep Tech Development GROUP LLC&quot; (above) is a distinct company.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Reconcile the two entities:</strong> confirm which legal entity (LLC vs GROUP LLC) maps to Double 706685 vs the owner's other IDs, and reconcile the payroll-N/A flag against the active Gusto payroll under &quot;Deep Tech Development GROUP LLC.&quot;</li><li>Confirm the <strong>sales-tax state / registration</strong> and what's taxed (Shopify goods) for this entity specifically.</li><li><strong>State Farm UM form</strong> requires a wet signature from the business (mid-July 2026) — hand-off in progress.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706685" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="ecom-beavers" data-owner="Maria" data-text="ecom beavers llc multi-brand e-commerce / dtc seller of physical products — sells on amazon (marketplace + likely fba) and runs multiple shopify stores (brands somma, bonex, honex); warehouse/inventory operations. ecom-beavers   c-corp · 1120 quickbooks online amazon shopify mercury **foreign-owned us llc (non-resident owner)** → the **c-corp** election fits the foreign-owner structure; cross-border tax (treaty, itin, withholding, repatriation) is central to the engagement. _(ping consult)_ **multi-brand e-commerce** across amazon + several shopify stores; **mercury** banking. new client (first consult 2026-07-09).">
+  <div class="cx-head">
+    <h3>Ecom Beavers LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">C-corp · 1120</span></div>
+  <p class="cx-ind">Multi-brand e-commerce / DTC seller of physical products — sells on Amazon (marketplace + likely FBA) and runs multiple Shopify stores (brands Somma, BoneX, Honex); warehouse/inventory operations.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Amazon</span><span class="chip">Shopify</span><span class="chip">Mercury</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Foreign-owned US LLC (non-resident owner)</strong> → the <strong>C-corp</strong> election fits the foreign-owner structure; cross-border tax (treaty, ITIN, withholding, repatriation) is central to the engagement. <span class="src">(Ping consult)</span></li><li><strong>Multi-brand e-commerce</strong> across Amazon + several Shopify stores; <strong>Mercury</strong> banking. New client (first consult 2026-07-09).</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Post-consult deliverables</strong> Julia committed to (2026-07-09): entity-options summary with tax implications; <strong>treaty-application guidance + required certificates</strong>; a deductible-expenses / reimbursement / home-office checklist; meeting minutes. <strong>ITIN &amp; treaty-certificate</strong> needs open. <span class="src">(Ping consult note)</span></li><li><strong>Payment-reliability watch:</strong> a firm invoice hit a <strong>bank-transfer / ACH failure</strong> in early July (later resolved). <span class="src">(Gmail)</span></li><li>Confirm <strong>home state</strong> and revisit the <strong>sales-tax nexus</strong> question.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706686" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="ecoorganic-usa" data-owner="Lilian" data-text="ecoorganic usa llc spray-foam insulation contractor ecoorganic-usa  connecticut llc quickbooks online chase check- and cash-heavy business; many zelle payments to subcontractors (w-9 / 1099 tracking matters). only **one live bank feed** (chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed. **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity. several open categorization decisions (meals policy, vehicle finance lease-vs-loan, etc.) tracked in the sop's open decisions log.">
+  <div class="cx-head">
+    <h3>ECOORGANIC USA LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC</span><span class="pill state">Connecticut</span></div>
+  <p class="cx-ind">Spray-foam insulation contractor</p>
+  <div class="svcs"><span class="svc on">Bookkeeping</span><span class="svc neutral">Income tax</span><span class="svc neutral">Sales tax</span><span class="svc neutral">Payroll</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Chase</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li>Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).</li><li>Only <strong>one live bank feed</strong> (Chase business checking); other bank/card accounts are disconnected and <strong>frozen</strong> pending client confirmation of which are closed.</li><li><strong>2025 books are closed</strong> — renames/renumbers only; never merge/retype accounts with 2025 activity.</li><li>Several open categorization decisions (meals policy, vehicle finance lease-vs-loan, etc.) tracked in the SOP's Open decisions log.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li>Open categorization decisions (meals policy, vehicle finance lease-vs-loan, which disconnected accounts are closed) — tracked in the SOP's <strong>Open decisions log</strong>; live status in Double.</li></ul></div></div>
+      <div class="cx-need">5 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=719473" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <a href="../../sops/ecoorganic-bookkeeping-review.md" target="_blank" rel="noopener">`../../sops/ecoorganic-bookkeeping-review.md`</a></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="ikids-group" data-owner="Lilian" data-text="ikids group llc children's indoor play park / family-entertainment venue (&quot;ikidspark&quot;), being built out at a commercial site in fort lauderdale, fl. pre-operational (construction / build-out phase; not yet generating revenue). ikids-group  fl llc quickbooks online **pre-operational — startup-cost treatment is the central bookkeeping issue:** expenses are **capitalized as startup costs** until the park &quot;begins operations&quot;; pinning the operations-commencement date is a live judgment call tied to the opening. _(gmail — julia's bookkeeping instructions)_ **heavier than standard bookkeeping — hands-on ap:** the firm **pays vendors** from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated ap inbox. **multi-member llc / partnership** — issues **k-1s**; includes **nonresident / foreign partner(s)** → a 1040-nr + k-1 and an **itin application (caa)** were run. likely 3–4 partners _(count low confidence)_. **part of a related group** of llcs under the same owners — e.g. **rest invest kids llc** (activated alongside ikids); ikids appears to be the us **operating** llc.">
+  <div class="cx-head">
+    <h3>iKids Group LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC</span><span class="pill state">FL</span></div>
+  <p class="cx-ind">Children's indoor play park / family-entertainment venue (&quot;iKidsPark&quot;), being built out at a commercial site in Fort Lauderdale, FL. Pre-operational (construction / build-out phase; not yet generating revenue).</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Pre-operational — startup-cost treatment is the central bookkeeping issue:</strong> expenses are <strong>capitalized as startup costs</strong> until the park &quot;begins operations&quot;; pinning the operations-commencement date is a live judgment call tied to the opening. <span class="src">(Gmail — Julia's bookkeeping instructions)</span></li><li><strong>Heavier than standard bookkeeping — hands-on AP:</strong> the firm <strong>pays vendors</strong> from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated AP inbox.</li><li><strong>Multi-member LLC / partnership</strong> — issues <strong>K-1s</strong>; includes <strong>nonresident / foreign partner(s)</strong> → a 1040-NR + K-1 and an <strong>ITIN application (CAA)</strong> were run. Likely 3–4 partners <span class="src">(count low confidence)</span>.</li><li><strong>Part of a related group</strong> of LLCs under the same owners — e.g. <strong>Rest Invest Kids LLC</strong> (activated alongside iKids); iKids appears to be the US <strong>operating</strong> LLC.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Second nonresident partner's ITIN / info was pending</strong> (as of Apr 2026) — confirm resolved.</li><li>A <strong>1065 extension</strong> appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.</li><li><strong>Pin the &quot;operations begin&quot; date</strong> so startup-cost capitalization stops and normal expensing / depreciation starts.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706689" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="kolo-florida" data-owner="Lilian" data-text="kolo florida inc  kolo-florida  fl corporation (inc) quickbooks online _(pending)_">
+  <div class="cx-head">
+    <h3>Kolo Florida Inc</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">Corporation (Inc)</span><span class="pill state">FL</span></div>
+  
+  <div class="svcs"><span class="svc neutral">Bookkeeping</span><span class="svc neutral">Income tax</span><span class="svc neutral">Sales tax</span><span class="svc neutral">Payroll</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><span class="src">(pending)</span></li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><span class="src">(none captured yet — live tasks live in Double / Ping)</span></li></ul></div></div>
+      <div class="cx-need">4 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706626" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="lumetro" data-owner="Maria" data-text="lumetro llc the digital-advertising / ad-spend vehicle within the owner's tech group — runs google ads spend that is allocated/billed to the affiliated operating company sensustech llc. not a standalone operating business. lumetro tech group  llc · sch c quickbooks online google ads chase **tech owner-group (with sensustech, mobilesource, sensus games):** same owner (styles himself &quot;ceo @ sensustech llc&quot;); lumetro is described as smaller than sensustech. the owner is linked in double across ~5 entities. _(gmail, double)_ **intercompany accounting:** lumetro **fronts the ad spend and bills/loans it to sensustech** — a journal entry moves advertising into sensustech; on lumetro's side it hits **accounts payable / an intercompany loan** account. central to how the books work. _(gmail)_">
+  <div class="cx-head">
+    <h3>LUMETRO LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC · Sch C</span><span class="pill group">Tech group</span></div>
+  <p class="cx-ind">The digital-advertising / ad-spend vehicle within the owner's tech group — runs Google Ads spend that is allocated/billed to the affiliated operating company SensusTech LLC. Not a standalone operating business.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc quirk">Income tax<i>review</i></span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Google Ads</span><span class="chip">Chase</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Tech owner-group (with SensusTech, Mobilesource, Sensus Games):</strong> same owner (styles himself &quot;CEO @ SensusTech LLC&quot;); Lumetro is described as smaller than SensusTech. The owner is linked in Double across ~5 entities. <span class="src">(Gmail, Double)</span></li><li><strong>Intercompany accounting:</strong> Lumetro <strong>fronts the ad spend and bills/loans it to SensusTech</strong> — a journal entry moves advertising into SensusTech; on Lumetro's side it hits <strong>Accounts Payable / an intercompany Loan</strong> account. Central to how the books work. <span class="src">(Gmail)</span></li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Reconcile the tax-filing treatment</strong> — proposal says Lumetro won't file separately (consolidated into SensusTech) vs. Double's Schedule C / income-tax-yes flags. <span class="src">(Gmail)</span></li><li>Confirm <strong>home state / state of formation</strong>. <span class="src">(unknown)</span></li><li>Drive has <strong>duplicate &quot;Lumetro LLC&quot; folders</strong> — worth consolidating.</li></ul></div></div>
+      <div class="cx-need">1 field still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706691" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#sensustech">SENSUSTECH LLC</a> · <a href="#mobilesource-corp">Mobilesource Corp</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="magnum-152" data-owner="Maria" data-text="magnum 152, inc pawn shop / jewelry retail — one entity in a small group of pawn/jewelry stores (trade names us pawn, lucky pawn, auto pawn); vendor statements from a firearms/jewelry wholesaler suggest they also carry firearms/jewelry inventory. magnum-152 pawn &amp; jewelry fl · broward s-corp · 1120-s quickbooks online adp bravo pos saasant td bank **pawn/jewelry owner-group (with sunoma inc):** same owner — drive has &quot;sunoma/magnum&quot; and &quot;magnum &amp; sunoma&quot; folders; the owner is linked in double to **706704 (sunoma)** and **710635**. managed together; keep books distinct. _(double, drive)_ store pos on **bravo**; **td bank** banking; **saasant** for qbo imports (recurring saas cost on jk's side).">
+  <div class="cx-head">
+    <h3>MAGNUM 152, INC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL · Broward</span><span class="pill group">Pawn &amp; jewelry</span></div>
+  <p class="cx-ind">Pawn shop / jewelry retail — one entity in a small group of pawn/jewelry stores (trade names US Pawn, Lucky Pawn, Auto Pawn); vendor statements from a firearms/jewelry wholesaler suggest they also carry firearms/jewelry inventory.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span><span class="svc flag">Licensing</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">ADP</span><span class="chip">Bravo POS</span><span class="chip">SaasAnt</span><span class="chip">TD Bank</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Pawn/jewelry owner-group (with Sunoma Inc):</strong> same owner — Drive has &quot;Sunoma/Magnum&quot; and &quot;Magnum &amp; Sunoma&quot; folders; the owner is linked in Double to <strong>706704 (Sunoma)</strong> and <strong>710635</strong>. Managed together; keep books distinct. <span class="src">(Double, Drive)</span></li><li>Store POS on <strong>Bravo</strong>; <strong>TD Bank</strong> banking; <strong>SaasAnt</strong> for QBO imports (recurring SaaS cost on JK's side).</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Legal matter (resolved ~Jul 19–21):</strong> owner requested TD Bank statements to trace wire transfers to an outside attorney's firm; JK located and delivered them. <span class="src">(Gmail)</span></li><li><strong>Inventory-donation tax treatment</strong> (old-but-working inventory &quot;donated&quot;) — JK advised on the deduction at fair market value (~Jul 10–13; essentially resolved). <span class="src">(Gmail)</span></li><li>A missing prior-period (<strong>Apr 2024</strong>) expense report for the sibling <strong>Auto Pawn</strong> entity — confirm received. <span class="src">(Gmail)</span></li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706693" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#sunoma-inc">Sunoma Inc</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="margate-plumbing" data-owner="Maria" data-text="margate plumbing inc licensed plumbing contractor (construction trade) — project-based work, subcontracting with builders/gcs and invoicing customers directly (cois / certificate-holder requests typical of a sub). site `margate.plumbing`. margate-plumbing construction fl · broward s-corp · 1120-s quickbooks online gusto mercury wells fargo amex **construction owner-group (with beemold usa llc):** same owner(s); books kept for both and reported jointly. beemold is largely dormant. _(gmail, double)_ **business downturn in 1h 2026** — reduced staff, lower turnover; **fee-sensitive** (pushed back on a proposed monthly-fee increase). _(gmail — figures omitted)_ owner is hands-on and detail-oriented on invoices / ar.">
+  <div class="cx-head">
+    <h3>Margate Plumbing Inc</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL · Broward</span><span class="pill group">Construction</span></div>
+  <p class="cx-ind">Licensed plumbing contractor (construction trade) — project-based work, subcontracting with builders/GCs and invoicing customers directly (COIs / certificate-holder requests typical of a sub). Site <code>margate.plumbing</code>.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc on">Payroll<i>weekly</i></span><span class="svc flag">1099</span><span class="svc flag">Licensing</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span><span class="chip">Mercury</span><span class="chip">Wells Fargo</span><span class="chip">Amex</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Construction owner-group (with Beemold USA LLC):</strong> same owner(s); books kept for both and reported jointly. Beemold is largely dormant. <span class="src">(Gmail, Double)</span></li><li><strong>Business downturn in 1H 2026</strong> — reduced staff, lower turnover; <strong>fee-sensitive</strong> (pushed back on a proposed monthly-fee increase). <span class="src">(Gmail — figures omitted)</span></li><li>Owner is hands-on and detail-oriented on invoices / AR.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Workers' comp audit open</strong> — owner disputes prior-year WC as overcharged/misclassified; complicated by the <strong>pre-Gusto payroll access gap</strong>. <span class="src">(Gmail)</span></li><li><strong>General liability (GL) audit</strong> also in progress. <span class="src">(Gmail)</span></li><li><strong>Accountant / CPA letter</strong> for the owners' remortgage pending (needs closing amount/date). <span class="src">(Gmail)</span></li><li><strong>QBO bank-feed reconnection</strong> (Amex + a credit card) repeatedly pending — reports issued &quot;preliminary&quot; until connected. <span class="src">(Gmail)</span></li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706694" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#beemold-usa">Beemold USA LLC</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="masciave-design-studio" data-owner="Lilian" data-text="masciave design studio llc interior design studio (commercial + residential; the owner holds iida · asid · cpted credentials). work runs as numbered design projects, some for commercial / government reit clients. masciave-design-studio  fl · broward s-corp · 1120-s quickbooks online gusto fl dor portal **two-basis reporting (double &quot;reporting &amp; tax basis&quot; note, confirmed 2026-07-20):** client-facing statements are on the **accrual** basis (so the owner sees a/r, a/p and customer deposits), but the **tax return is filed on the cash** basis — the studio invoices heavily and collects slowly, so accrual shows true monthly performance while cash defers tax on invoices not yet collected. **project-based / work-in-progress:** deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. owner supplies monthly receipts / cc statements + per-project descriptions. pays **subcontractors** (e.g. structural engineers) and collects w-9s → drives the 1099 work. **no qbo timesheet integration** (owner decided manual per-project entry wasn't worth it for a one-person shop).">
+  <div class="cx-head">
+    <h3>MASCIAVE DESIGN STUDIO LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL · Broward</span></div>
+  <p class="cx-ind">Interior design studio (commercial + residential; the owner holds IIDA · ASID · CPTED credentials). Work runs as numbered design projects, some for commercial / government REIT clients.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>quarterly</i></span><span class="svc on">Income tax</span><span class="svc on">Sales tax<i>quarterly</i></span><span class="svc on">Payroll</span><span class="svc flag">1099</span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span><span class="chip">FL DOR portal</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Two-basis reporting (Double &quot;Reporting &amp; Tax Basis&quot; note, confirmed 2026-07-20):</strong> client-facing statements are on the <strong>accrual</strong> basis (so the owner sees A/R, A/P and customer deposits), but the <strong>tax return is filed on the cash</strong> basis — the studio invoices heavily and collects slowly, so accrual shows true monthly performance while cash defers tax on invoices not yet collected.</li><li><strong>Project-based / work-in-progress:</strong> deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. Owner supplies monthly receipts / CC statements + per-project descriptions.</li><li>Pays <strong>subcontractors</strong> (e.g. structural engineers) and collects W-9s → drives the 1099 work.</li><li><strong>No QBO timesheet integration</strong> (owner decided manual per-project entry wasn't worth it for a one-person shop).</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Abnormal Comcast charge</strong> flagged in the July 2026 mid-month recurring-expense review — verify. <span class="src">(recurring-expense review)</span></li><li>Confirm the <strong>Double bank-feed connection</strong> was fully resolved after a June 2026 support ticket (feeds were unstable).</li><li>Confirm the exact <strong>FL sales-tax county / registration</strong>.</li><li>Clarify the <strong>linked personal client (Double 710615)</strong> — presumed the owner's individual 1040 engagement.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706696" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="mobilesource-corp" data-owner="Maria" data-text="mobilesource corp mobile-device / consumer-electronics buyback &amp; resale — runs a formal &quot;buyback&quot; workflow and sells through ebay (plus occasional wholesale orders). mobilesource-corp tech group fl s-corp · 1120-s quickbooks online gusto ebay fl dor portal **buyback workflow** — a buyback clearing account is zeroed with a matching bill + invoice per the client's buyback process document. **buyback transactions repeatedly land in &quot;uncategorized expenses&quot;** and must be re-mapped — a recurring pain point and a strong **sop candidate**. _(gmail)_ **part of the tech owner-group** (shares a principal with sensustech / the ~5-entity group). _(double, gmail)_ owner is hands-on on payroll details; mfa is not enabled on the portal contacts (a security note).">
+  <div class="cx-head">
+    <h3>Mobilesource Corp</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL</span><span class="pill group">Tech group</span></div>
+  <p class="cx-ind">Mobile-device / consumer-electronics buyback &amp; resale — runs a formal &quot;buyback&quot; workflow and sells through eBay (plus occasional wholesale orders).</p>
+  <div class="svcs"><span class="svc quirk">Bookkeeping<i>review</i></span><span class="svc on">Income tax</span><span class="svc on">Sales tax<i>monthly</i></span><span class="svc on">Payroll<i>biweekly</i></span><span class="svc flag">1099</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span><span class="chip">eBay</span><span class="chip">FL DOR portal</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Buyback workflow</strong> — a buyback clearing account is zeroed with a matching Bill + Invoice per the client's Buyback Process Document. <strong>Buyback transactions repeatedly land in &quot;Uncategorized expenses&quot;</strong> and must be re-mapped — a recurring pain point and a strong <strong>SOP candidate</strong>. <span class="src">(Gmail)</span></li><li><strong>Part of the tech owner-group</strong> (shares a principal with SensusTech / the ~5-entity group). <span class="src">(Double, Gmail)</span></li><li>Owner is hands-on on payroll details; MFA is not enabled on the portal contacts (a security note).</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>June 2026 reports blocked</strong> pending the client fixing miscategorized <strong>buyback</strong> transactions; the client owed Maria several email responses (~Jul 20). <span class="src">(Gmail)</span></li><li><strong>2025 business income-tax prep in progress</strong> — reconcile the client-portal organizer state (one was posted then removed). <span class="src">(Gmail)</span></li><li>A mid-2026 <strong>encrypted exchange with a FL DOR agent</strong> re: Mobilesource — possible account/notice matter to watch. <span class="src">(Gmail)</span></li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706697" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#sensustech">SENSUSTECH LLC</a> · <a href="#lumetro">LUMETRO LLC</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="never-give-up-kk" data-owner="Lilian" data-text="never give up kk llc trade of thermal-imaging optics — thermal riflescopes / sights and thermal monoculars (night-vision). new us venture; a multi-year export contract to indonesia is in the works. classified as commerce / trade of goods (not consulting). never-give-up-kk  fl s-corp · 1120-s quickbooks online **owner is a serial entrepreneur** with several jk-serviced entities. the owner was **formerly an employee of deep tech development** (not its owner) — that employment is the only link between the two clients; the two do **not** share ownership. _(corrected by lilian, 2026-07-20.)_ **e-2 investor-visa considerations** shape the engagement — business-operations documentation and **us tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(gmail)_ **cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(gmail)_ client communication runs through a **shared whatsapp group** set up at onboarding.">
+  <div class="cx-head">
+    <h3>NEVER GIVE UP KK LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL</span></div>
+  <p class="cx-ind">Trade of thermal-imaging optics — thermal riflescopes / sights and thermal monoculars (night-vision). New US venture; a multi-year export contract to Indonesia is in the works. Classified as commerce / trade of goods (not consulting).</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>quarterly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">Annual report</span><span class="svc flag">Licensing</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Owner is a serial entrepreneur</strong> with several JK-serviced entities. The owner was <strong>formerly an employee of Deep Tech Development</strong> (not its owner) — that employment is the only link between the two clients; the two do <strong>not</strong> share ownership. <span class="src">(Corrected by Lilian, 2026-07-20.)</span></li><li><strong>E-2 investor-visa considerations</strong> shape the engagement — business-operations documentation and <strong>US tax nexus / residency</strong> are recurring themes that bear on the entity-structure decision. <span class="src">(Gmail)</span></li><li><strong>Cash-heavy</strong> — repeated emphasis on documenting cash income and receipts properly. <span class="src">(Gmail)</span></li><li>Client communication runs through a <strong>shared WhatsApp group</strong> set up at onboarding.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Entity-structure recommendation</strong> (LLC vs S-corp vs C-corp) — Julia to deliver. <span class="src">(Double note 2026-07-14)</span></li><li><strong>Sales-tax nexus / registration analysis</strong> pending (despite Double &quot;N/A&quot;). <span class="src">(Double note 2026-07-14)</span></li><li><strong>BOI report</strong> to be filed. <span class="src">(Double note 2026-07-14)</span></li><li><strong>Business-licensing / export-control</strong> determination for the optics trade. <span class="src">(Gmail)</span></li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=742803" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="pro-title-agency" data-owner="Lilian" data-text="pro title agency licensed title insurance agency (florida dfs-licensed under the insurance code) pro-title-agency  fl · broward llc · sch c quickbooks online on the city of hollywood btr, the **client's own email** was used on the application — a tracking gap to resolve (see obligation above). **subleases** its hollywood, fl location from **best broker realty llc** (month-to-month, effective 03/2026) and **shares a principal** with it — see [`best-broker-realty.md`](./best-broker-realty.md). _(double note, 2026-07-15)_ as a fl **title insurance agency** it is licensed by **dfs** (insurance code), not dbpr — relevant to how the btr category is chosen.">
+  <div class="cx-head">
+    <h3>Pro Title Agency</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">LLC · Sch C</span><span class="pill state">FL · Broward</span></div>
+  <p class="cx-ind">Licensed title insurance agency (Florida DFS-licensed under the Insurance Code)</p>
+  <div class="svcs"><span class="svc neutral">Bookkeeping</span><span class="svc neutral">Income tax</span><span class="svc neutral">Sales tax</span><span class="svc neutral">Payroll</span><span class="svc flag">Licensing</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li>On the City of Hollywood BTR, the <strong>client's own email</strong> was used on the application — a tracking gap to resolve (see obligation above).</li><li><strong>Subleases</strong> its Hollywood, FL location from <strong>Best Broker Realty LLC</strong> (month-to-month, effective 03/2026) and <strong>shares a principal</strong> with it — see <a href="./best-broker-realty.md" target="_blank" rel="noopener"><code>best-broker-realty.md</code></a>. <span class="src">(Double note, 2026-07-15)</span></li><li>As a FL <strong>title insurance agency</strong> it is licensed by <strong>DFS</strong> (Insurance Code), not DBPR — relevant to how the BTR category is chosen.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Watch for the city's &quot;Track Your Application&quot; email</strong> — the city may request the DFS state license (as it did for Best Broker Realty).</li><li><strong>Address change pending:</strong> on 2026-07-14 the client asked to move the address to <strong>Coral Springs</strong> (on the DFS license + Sunbiz). If it proceeds, a <strong>BTR address update/transfer</strong> will be needed later.</li><li><strong>IRS filing-requirement mismatch:</strong> the EIN letter (CP575) shows a <strong>Form 1065 (partnership)</strong> requirement, but the entity is a <strong>disregarded single-member LLC</strong> reported on Schedule C — reconcile with the IRS so they don't expect a partnership return.</li></ul></div></div>
+      <div class="cx-need">4 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706716" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <a href="../../sops/hollywood-broward-business-tax-receipt.md" target="_blank" rel="noopener">`../../sops/hollywood-broward-business-tax-receipt.md`</a></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="sensustech" data-owner="Maria" data-text="sensustech llc mobile app / mobile-game development (sensustech.com). the owner describes revenue as &quot;income from mobile apps&quot;; sibling entity &quot;sensus games llc&quot; reinforces the apps/games line. sensustech tech group  c-corp · 1120 quickbooks online gusto taxdome **tech owner-group:** part of a group under the same owner/ceo — **lumetro llc** (ad-spend entity), **mobilesource** (electronics buyback), **sensus games llc** (files its own return). reports bundled with lumetro; the owner is linked in double across the group (706697, 706691, 710596, 710660). keep books distinct. _(double, gmail)_ **crypto / usdt exposure:** part of revenue/balances are tracked in **usdt** (stablecoin) — recurring usdt-balance reconciliations. a bookkeeping quirk to standardize. _(gmail)_ uses **taxdome** for documents; some partner-side categorization is handled externally.">
+  <div class="cx-head">
+    <h3>SENSUSTECH LLC</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">C-corp · 1120</span><span class="pill group">Tech group</span></div>
+  <p class="cx-ind">Mobile app / mobile-game development (sensustech.com). The owner describes revenue as &quot;income from mobile apps&quot;; sibling entity &quot;Sensus Games LLC&quot; reinforces the apps/games line.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc on">Payroll<i>semimonthly</i></span><span class="svc flag">1099</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span><span class="chip">TaxDome</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Tech owner-group:</strong> part of a group under the same owner/CEO — <strong>Lumetro LLC</strong> (ad-spend entity), <strong>Mobilesource</strong> (electronics buyback), <strong>Sensus Games LLC</strong> (files its own return). Reports bundled with Lumetro; the owner is linked in Double across the group (706697, 706691, 710596, 710660). Keep books distinct. <span class="src">(Double, Gmail)</span></li><li><strong>Crypto / USDT exposure:</strong> part of revenue/balances are tracked in <strong>USDT</strong> (stablecoin) — recurring USDT-balance reconciliations. A bookkeeping quirk to standardize. <span class="src">(Gmail)</span></li><li>Uses <strong>TaxDome</strong> for documents; some partner-side categorization is handled externally.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>External financial audit in progress (mid-2026):</strong> an outside auditor requested financials; the owner opted to provide tax returns in lieu of audited financials — <strong>handle related requests discreetly</strong>. <span class="src">(Gmail)</span></li><li><strong>June reports pending</strong> final expense categorization (external categorizer). <span class="src">(Gmail, 2026-07)</span></li><li>Confirm <strong>home state</strong> and a definitive primary language (a <code>get_client</code> / engagement-letter check would settle both).</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706699" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#lumetro">LUMETRO LLC</a> · <a href="#mobilesource-corp">Mobilesource Corp</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="sunoma-inc" data-owner="Maria" data-text="sunoma inc pawn shop + jewelry retail — operates under the store brands lucky pawn and auto pawn (buys / sells / lends against merchandise; jewelry + general pawn inventory). sunoma-inc pawn &amp; jewelry fl · broward s-corp · 1120-s quickbooks online bravo pos taxdome td bank **two store brands under one entity** — lucky pawn (lp) + auto pawn (ap), tracked separately each month. **pawn/jewelry owner-group (with magnum 152, inc):** same owner group — drive has &quot;sunoma/magnum&quot; and &quot;magnum &amp; sunoma&quot; folders; the owner is linked in double to **706693 (magnum 152)** and **710635**. managed together; keep books distinct. _(double, drive)_ store inventory/pos on **bravo**; **td bank** banking.">
+  <div class="cx-head">
+    <h3>Sunoma Inc</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Maria</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL · Broward</span><span class="pill group">Pawn &amp; jewelry</span></div>
+  <p class="cx-ind">Pawn shop + jewelry retail — operates under the store brands Lucky Pawn and Auto Pawn (buys / sells / lends against merchandise; jewelry + general pawn inventory).</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>monthly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc off">Payroll<i>n/a</i></span><span class="svc flag">1099</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Bravo POS</span><span class="chip">TaxDome</span><span class="chip">TD Bank</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Two store brands under one entity</strong> — Lucky Pawn (LP) + Auto Pawn (AP), tracked separately each month.</li><li><strong>Pawn/jewelry owner-group (with MAGNUM 152, INC):</strong> same owner group — Drive has &quot;Sunoma/Magnum&quot; and &quot;Magnum &amp; Sunoma&quot; folders; the owner is linked in Double to <strong>706693 (Magnum 152)</strong> and <strong>710635</strong>. Managed together; keep books distinct. <span class="src">(Double, Drive)</span></li><li>Store inventory/POS on <strong>Bravo</strong>; <strong>TD Bank</strong> banking.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li><strong>Recurring Bravo access/license problems</strong> — the firm keeps losing access (the person who managed it left); asked for its own login. <span class="src">(Gmail, 2026-07)</span></li><li><strong>Legal matter (in progress):</strong> compiling TD Bank statements to trace wire transfers to an outside attorney, at the owner's request. <span class="src">(Gmail)</span></li><li>A missing <strong>Auto Pawn April-2024 expense report</strong> was requested from the owner — confirm received.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706704" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      <span class="rel">Linked: <a href="#magnum-152">MAGNUM 152, INC</a></span>
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article>
+<article class="cx-card reveal" id="yes-team-corp" data-owner="Lilian" data-text="yes team corp one-owner marketing s-corp — the owner provides marketing services billed through this entity (recurring monthly service invoices to alirm llc and to mellanni, an e-commerce home-textiles brand). effectively a solo consultant invoicing through his s-corp. yes-team-corp  fl s-corp · 1120-s quickbooks online gusto **newly formed entity; s-election (form 2553) filed jan 2026** — 2026 is effectively the first full operating / tax year. _(gmail)_ appears in older email as &quot;yes team **llc**&quot;, now &quot;yes team **corp**&quot; — an llc taxed as s-corp. as an **s-corp**, watch reasonable-compensation / owner-payroll at year-end. **family cluster at the firm:** the owner's parents are also clients (a fl llc for partnership tax prep) and another fl entity was being formed for the family — the firm cross-refers within this family; keep each entity's books separate.">
+  <div class="cx-head">
+    <h3>YES TEAM CORP</h3>
+    <div class="cx-upd">2026-07-20<span class="dot"></span>Lilian</div>
+  </div>
+  <div class="cx-tags"><span class="pill entity">S-corp · 1120-S</span><span class="pill state">FL</span></div>
+  <p class="cx-ind">One-owner marketing S-corp — the owner provides marketing services billed through this entity (recurring monthly service invoices to Alirm LLC and to Mellanni, an e-commerce home-textiles brand). Effectively a solo consultant invoicing through his S-corp.</p>
+  <div class="svcs"><span class="svc on">Bookkeeping<i>quarterly</i></span><span class="svc on">Income tax</span><span class="svc off">Sales tax<i>n/a</i></span><span class="svc on">Payroll</span><span class="svc flag">1099</span><span class="svc flag">Annual report</span></div>
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      <div class="cx-blk"><h4>Systems</h4><div class="chips"><span class="chip">QuickBooks Online</span><span class="chip">Gusto</span></div></div>
+      <div class="cx-cols"><div class="cx-blk"><h4>Watch &amp; quirks</h4><ul><li><strong>Newly formed entity; S-election (Form 2553) filed Jan 2026</strong> — 2026 is effectively the first full operating / tax year. <span class="src">(Gmail)</span></li><li>Appears in older email as &quot;Yes Team <strong>LLC</strong>&quot;, now &quot;Yes Team <strong>CORP</strong>&quot; — an LLC taxed as S-corp.</li><li>As an <strong>S-corp</strong>, watch reasonable-compensation / owner-payroll at year-end.</li><li><strong>Family cluster at the firm:</strong> the owner's parents are also clients (a FL LLC for partnership tax prep) and another FL entity was being formed for the family — the firm cross-refers within this family; keep each entity's books separate.</li></ul></div><div class="cx-blk"><h4>Open items — last agreed / pending</h4><ul><li>Confirm the <strong>registered home state</strong> definitively (strongly inferred FL, not documented).</li><li><strong>Retirement plan</strong> — proposals were presented (Feb 2026) by an external TPA; decision / status unknown.</li><li><strong>Mellanni invoice format</strong> — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names; verify resolved and the template fixed.</li><li>Clarify the <strong>second linked entity (Double 710636)</strong> and whether it needs its own CI file.</li></ul></div></div>
+      <div class="cx-need">2 fields still to confirm</div>
+      <div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      <a href="https://app.doublehq.com/close?cid=706718" target="_blank" rel="noopener">Double <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg></a>
+      
+      
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — <span class="cx-none">none yet</span></p></div>
+    </div>
+  </details>
+</article></div>
 </section>
 
 <!-- ============================ NO RESULTS ============================ -->
@@ -1214,7 +1651,9 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
   if(pb) pb.addEventListener('click', function(){ window.print(); });
 
   // Filtering: search + type segment + owner
-  var cards = [].slice.call(document.querySelectorAll('[data-card]'));
+  // SOP cards are [data-card]; client cards are the CI engine's .cx-card. Handle both.
+  var SEL = '[data-card], .cx-card';
+  var cards = [].slice.call(document.querySelectorAll(SEL));
   var groups = [].slice.call(document.querySelectorAll('[data-group]'));
   var sections = [].slice.call(document.querySelectorAll('[data-section]'));
   var noRes = document.getElementById('noresults');
@@ -1223,22 +1662,27 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
   var clr = document.getElementById('clr');
   var state = { q:'', type:'all', owner:'all' };
 
+  // Content must never depend on a JS reveal: show any reveal-gated card immediately.
+  [].forEach.call(document.querySelectorAll('.reveal'), function(el){ el.classList.add('in'); });
+  function cardType(c){ return c.classList.contains('cx-card') ? 'client' : c.getAttribute('data-type'); }
+  function cardOwner(c){ return (c.getAttribute('data-owner')||'').toLowerCase(); }
+
   function apply(){
     var q = state.q.trim().toLowerCase();
     var shown = 0;
     cards.forEach(function(c){
-      var ok = (state.type==='all' || c.getAttribute('data-type')===state.type)
-            && (state.owner==='all' || c.getAttribute('data-owner')===state.owner)
-            && (q==='' || c.getAttribute('data-text').indexOf(q) !== -1);
+      var ok = (state.type==='all' || cardType(c)===state.type)
+            && (state.owner==='all' || cardOwner(c)===state.owner)
+            && (q==='' || (c.getAttribute('data-text')||'').indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
       if(ok) shown++;
     });
     groups.forEach(function(g){
-      var any = [].some.call(g.querySelectorAll('[data-card]'), function(c){ return c.style.display!=='none'; });
+      var any = [].some.call(g.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
       g.hidden = !any;
     });
     sections.forEach(function(s){
-      var any = [].some.call(s.querySelectorAll('[data-card]'), function(c){ return c.style.display!=='none'; });
+      var any = [].some.call(s.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
       s.hidden = !any;
     });
     noRes.classList.toggle('on', shown===0);
@@ -1266,6 +1710,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
     if(e.key==='/' && document.activeElement!==qEl){ e.preventDefault(); qEl.focus(); }
     if(e.key==='Escape' && document.activeElement===qEl){ qEl.value=''; state.q=''; hs.classList.remove('has-value'); apply(); }
   });
+  // expand every client detail before printing so PDFs are complete
+  window.addEventListener('beforeprint', function(){ [].forEach.call(document.querySelectorAll('details.cx-more'), function(d){ d.open=true; }); });
 })();
 </script>
 </body>
