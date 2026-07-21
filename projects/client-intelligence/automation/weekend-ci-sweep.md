@@ -79,6 +79,14 @@ was said). Better a sourced, low-confidence note than nothing.
 | iKids Group LLC | 706689 |
 | Deep Tech Development LLC | 706685 |
 | AURA REMODELING LLC | 706679 |
+| Beemold USA LLC | 709445 |
+| Sunoma Inc | 706704 |
+| SENSUSTECH LLC | 706699 |
+| Mobilesource Corp | 706697 |
+| Margate Plumbing Inc | 706694 |
+| MAGNUM 152, INC | 706693 |
+| LUMETRO LLC | 706691 |
+| Ecom Beavers LLC | 706686 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -126,6 +134,14 @@ CLIENTS (name -> Double id):
 - iKids Group LLC -> 706689
 - Deep Tech Development LLC -> 706685
 - AURA REMODELING LLC -> 706679
+- Beemold USA LLC -> 709445
+- Sunoma Inc -> 706704
+- SENSUSTECH LLC -> 706699
+- Mobilesource Corp -> 706697
+- Margate Plumbing Inc -> 706694
+- MAGNUM 152, INC -> 706693
+- LUMETRO LLC -> 706691
+- Ecom Beavers LLC -> 706686
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
