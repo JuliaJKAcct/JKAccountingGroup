@@ -56,14 +56,16 @@ blindly.
      some sub-$25 fuel to **Gas & Fuel**, and a few to the **Auto Expenses
      parent**. Applying this rule means reclassifying those to distributions, so
      check Meals and the Auto Expenses parent — not just Gas & Fuel.
-3. **Meals policy: PENDING (Julia + Lilian)** — this covers **genuine restaurant
-   / meal charges**, not the small gas-station charges, which rule 2 now sends
-   straight to distributions. Until the policy is defined, post restaurant / meal
-   charges to the **Meals** account — which today doubles as the holding bucket
-   (there is no separate holding account) — and redistribute in one batch once
-   the policy lands. Never leave them in the holding/uncategorized accounts —
-   those must still be $0 at close (rule 11). Expected split: client meals (50%
-   deductible) / crew–jobsite meals / owner personal → distributions.
+3. **Food & meals → Distributions (RESOLVED 2026-07-21, per Julia).** There is
+   **no** client / crew / personal meals split — for now **none of this is a
+   deductible business expense.** Any restaurant, fast-food, coffee shop, or food
+   / convenience charge that is **not** gas-station fuel → **Owner's
+   distribution**, regardless of amount. Gas stations follow the $25 line in
+   rule 2 (≥ $25 → fuel; < $25 → distribution); every other food-related charge
+   is a distribution. Grocery / food-store food purchases follow the same
+   food-is-personal logic → distributions. **Consequence:** the **Meals** account
+   should trend to ~$0 — any charge still sitting in Meals is a flag to move to
+   distributions. *"For now" — revisit if the client's facts change.*
 4. **Every transaction gets a vendor/payee**, except owner draws, owner
    contributions, and transfers. Unknown bank descriptors: identify the business
    online first (this works — e.g. CWPM LLC resolved to a CT waste hauler);
@@ -178,8 +180,9 @@ Double is the working tool for the vendor side of these rules — lean on it:
 5. Checks and deposits carry evidence (image reviewed; customer assigned).
 6. Vendor→account consistency: one vendor, one account, unless the split is
    explained (e.g. the gas threshold).
-7. Sub-$25 gas-station charges routed to distributions (rule 2); genuine
-   restaurant/meal charges handled per the (pending) meals policy.
+7. Food/restaurant/fast-food/convenience charges → distributions
+   (non-deductible, rule 3); gas < $25 → distributions, gas ≥ $25 → fuel
+   (rule 2). Any charge still sitting in **Meals** is a flag to reclassify.
 8. New recurring vendors/subscriptions flagged; **every individual/LLC paid
    ≥ $2,000 (across Outside services, Contract labor, Auto repair, and Zelle) has
    a W-9 on file and is queued for a 1099.**
@@ -191,7 +194,7 @@ Double is the working tool for the vendor side of these rules — lean on it:
 
 | # | Decision | Owner | Status |
 |---|---|---|---|
-| 1 | Meals policy for **genuine restaurant/meal** charges (client / crew / personal split) — small gas-station charges already resolved to distributions, rule 2 | Julia + Lilian | Pending |
+| 1 | **RESOLVED 2026-07-21 (per Julia):** no client/crew/personal meals split — all food/restaurant/fast-food/convenience → distributions (non-deductible); gas ≥ $25 → fuel, < $25 → distributions. See rules 2–3. | Julia + Lilian | Resolved |
 | 2 | Hyundai Motor Finance & Ally: lease vs loan vs personal | Client | Pending |
 | 3 | Which disconnected bank/card accounts are closed | Client | Pending |
 | 4 | Identity/role of a recurring individual payee (name on file in the firm's client systems) | Client | Pending |

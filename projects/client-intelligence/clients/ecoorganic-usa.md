@@ -63,8 +63,9 @@ the actual details.
 - **Cadence:** Monthly.
 - **Categorization rules / quirks:** Detailed, client-specific rules already
   documented — check/deposit evidence required, gas-station **$25** threshold
-  (small charges → distributions), meals holding for genuine meals (policy
-  pending), owner-personal transfers as equity, cash-out **investigated** (not
+  (< $25 → distributions, ≥ $25 → fuel), **all food/restaurant/convenience →
+  distributions** (non-deductible; no client/crew/personal split), owner-personal
+  transfers as equity, cash-out **investigated** (not
   blanket owner draws — may be subcontractor cash, 1099 exposure), job costs to
   COGS *(to verify)*, holding accounts to $0 at close. See the SOP.
 - **Our role:** Staff bookkeeper does the work; Claude is the independent reviewer.
@@ -91,6 +92,7 @@ the actual details.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
 - 2026-07-21 — Firm recently took this client over (from the prior bookkeeper); active cleanup in progress. Working session refined the SOP as understanding builds: gas-station threshold moved $30 → **$25** with small charges now → distributions (not meals holding); cash-out withdrawals changed from blanket owner-draws to an **investigate-first** procedure (ATM vs transfer; known contractor vs personal account; 1099 exposure); COGS-vs-opex rule flagged **to verify** (provenance unconfirmed); Double noted as the vendor/1099/W-9 tracking tool; COA renumbering reframed as a later, incremental step (classify first). SOP rules now tagged provisional until validated against the client's history.
 - 2026-07-21 — Reviewed the only connected feed (Chase checking 8310), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some …2935 owner transfers hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
+- 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Open categorization decisions (meals policy, vehicle finance lease-vs-loan, which disconnected accounts are closed) — tracked in the SOP's **Open decisions log**; live status in Double.
