@@ -16,7 +16,7 @@ For the scoped clients, once per week:
 
 1. **Sweep** the connected sources for what's **new since the last run** — Ping
    Assistant (meetings, emails, calls, action items), Double (notes, tasks,
-   activity), Gmail (**incoming and sent**), QuickBooks — non-sensitive facts only.
+   activity, **client properties**), Gmail (**incoming and sent**), **Google Drive** (each client's folder), QuickBooks, and **the repo itself** (existing SOPs / FOLLOW-UPS / BACKLOG about the client) — non-sensitive facts only.
    Search by **both the business name and each owner's name** (see *Search
    completeness* below). **Incremental:** every search is bounded by the client's
    baseline date in [`sweep-state.md`](./sweep-state.md) — history already swept is
@@ -93,7 +93,7 @@ per-tool call limits._
 
 1. **Repository:** this repo. **Schedule:** `0 10 * * 6`.
 2. **Connectors (trap #1 — do it here):** attach **Double**, **Ping Assistant**,
-   **QuickBooks**, and **GitHub** (to push the branch). If a connector isn't
+   **Gmail**, **Google Drive**, **QuickBooks**, and **GitHub** (to push the branch). If a connector isn't
    available in the routines UI, the sweep uses whatever is attached and notes the
    gap in the report.
 3. **Environment / network (trap #4):** a **Custom** allowlist that permits the email
@@ -132,6 +132,8 @@ FOR EACH CLIENT:
    - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
    - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
    - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — but SKIP the "EIN / Tax ID" property, it is sensitive); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
+   - Google Drive: search for the client's folder (usually one per client, under the firm's shared drive) and put its LINK in the file's §7 "Google Drive folder"; do NOT copy sensitive file contents into the repo.
+   - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
    Keep it bounded (~10-15 calls/client).
 2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, EINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. Update "Last updated".
 3. Do NOT modify anything under projects/sops/. Instead, for clients with a SOP, note which new Operating-zone facts the SOP does not yet reflect -- these are PROPOSALS for Lilian.

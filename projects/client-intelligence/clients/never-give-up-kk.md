@@ -73,7 +73,7 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- **Owner is a serial entrepreneur** with several JK-serviced entities beyond this one. The exact related-entity cluster — and any overlap with **Deep Tech Development**'s ownership — is **not confirmed** (the enrichment sources conflicted); do not assume shared ownership without verifying (see Outstanding items).
+- **Owner is a serial entrepreneur** with several JK-serviced entities. He was **formerly an employee of Deep Tech Development** (not its owner) — that employment is the only link between the two clients; they do **not** share ownership. _(Corrected by Lilian, 2026-07-20.)_
 - **E-2 investor-visa considerations** shape the engagement — business-operations documentation and **US tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(Gmail)_
 - **Cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(Gmail)_
 - Client communication runs through a **shared WhatsApp group** set up at onboarding.
@@ -90,15 +90,14 @@ the actual details.
 - **Sales-tax nexus / registration analysis** pending (despite Double "N/A"). _(Double note 2026-07-14)_
 - **BOI report** to be filed. _(Double note 2026-07-14)_
 - **Business-licensing / export-control** determination for the optics trade. _(Gmail)_
-- Verify the owner's **related-entity cluster** and whether any overlaps Deep Tech Development (sources conflicted).
 - Client **document upload** requested for tax review; **payroll provider** shortlist for the future; **vehicle-into-company** decision pending advice.
 
 ### Information still needed
 - [ ] Fiscal year-end; final entity structure (once Julia recommends)
-- [ ] Credentials Drive link; resolve the related-entity / Deep Tech ownership question
+- [ ] Credentials location within the Drive folder (now linked)
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=742803](https://app.doublehq.com/close?cid=742803)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1Xy9x6ClYVmjZ207i4YwTUf-NJKuojbeY)
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

@@ -98,5 +98,5 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706679](https://app.doublehq.com/close?cid=706679)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1cuXd0k1804IckB9VMG1PHWt1Hkn1j9Wt)
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
