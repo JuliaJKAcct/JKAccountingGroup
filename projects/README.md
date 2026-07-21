@@ -21,6 +21,7 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`recurring-expense-monitoring/`](./recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report, via the `recurring-expense-monitoring` skill. Watchlists live in Google Drive, not the repo. | Active |
 | [`sops/`](./sops/) | The firm's standard operating procedures and day-to-day client-task runbooks (e.g. Business Tax Receipt filings), written and reviewed via the [`sop-authoring`](../.claude/skills/sop-authoring/) skill. Client-specific data stays in the firm's client systems, not the repo. | Active |
 | [`client-intelligence/`](./client-intelligence/) | A durable, per-client knowledge base (one file per client) — obligations, systems, and processes we build up gradually, in the repo, as the raw material for each client's SOPs. Same structure for every client; secrets and personal data stay in Drive/Double and are referenced by link. | Active |
+| [`knowledge-hub/`](./knowledge-hub/) | One on-brand, searchable **index page** for the whole firm — every SOP and every client in one place, generated straight from `sops/` + `client-intelligence/` so it never drifts. A "review Hub" (shows everything, with status badges) that later publishes only the *ready* documents to the Odoo team site. Built on Atlas with the `impeccable` skill. | Active |
 
 > The first seven rows are the **marketing group** — they live under
 > [`marketing/`](./marketing/), which also holds the firm's shared offer
