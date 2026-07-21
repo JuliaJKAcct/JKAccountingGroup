@@ -84,7 +84,7 @@ an external fetch.
    ```bash
    # (a) syntax: extract the last <script>…</script> from index.html and node --check it
    node -e "const h=require('fs').readFileSync('projects/knowledge-hub/index.html','utf8'); \
-     require('fs').writeFileSync('/tmp/hub.js', h.match(/<script>([\s\S]*)<\/script>/g).pop().replace(/<\/?script>/g,''))"
+     require('fs').writeFileSync('/tmp/hub.js', h.match(/<script>([\s\S]*?)<\/script>/g).pop().replace(/<\/?script>/g,''))"
    node --check /tmp/hub.js    # must pass
    ```
    ```

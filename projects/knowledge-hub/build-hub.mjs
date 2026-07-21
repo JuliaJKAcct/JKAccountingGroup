@@ -455,8 +455,8 @@ function ecoChecklist(body){
   const cut = body.search(/^\d+\.\s/m);
   const intro = cut > 0 ? mdToAtlas(body.slice(0, cut)) : '';
   const list = cut >= 0 ? body.slice(cut) : body;
-  const items = olItems(list).map((it, i) =>
-    `<li class="eck"><span class="eck-n">${i + 1}</span><div class="eck-x">${mdInlineHub(it.text.replace(/\n+/g, ' '))}</div></li>`).join('');
+  const items = olItems(list).map((it) =>
+    `<li class="eck"><span class="eck-n">${esc(it.n)}</span><div class="eck-x">${mdInlineHub(it.text.replace(/\n+/g, ' '))}</div></li>`).join('');
   return intro + `<ol class="echecks">${items}</ol>`;
 }
 // Chart-of-accounts conventions → a colored number-range strip + the remaining bullets
