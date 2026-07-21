@@ -7,6 +7,12 @@ for foreign business owners setting up in the US, plus a high-converting opt-in
 **landing page** that captures the visitor's email in exchange for the guide,
 then routes them toward booking a consultation.
 
+> **Companion:** this is the **setup** playbook (for newcomers). Owners who are
+> already up and running get the
+> [**tax-savings playbook**](../foreign-owner-us-tax-savings-playbook/) — same
+> niche, later funnel stage (*"am I overpaying?"* rather than *"how do I set
+> up?"*).
+
 ## Purpose
 
 This is the firm's "big" lead magnet — the wide front door for the whole niche

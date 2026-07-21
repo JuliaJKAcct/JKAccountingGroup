@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- =========================================================================
+     LANDING PAGE — "The Foreign Owner's US Tax-Savings Playbook" (free guide)
+     Companion to the setup playbook, for the ESTABLISHED foreign owner.
+     Layout mirrors a high-converting opt-in page, in the JK Atlas system and
+     the firm's calm, plain-English voice. Primary conversion: capture email
+     -> deliver guide.html. Key objection handled: "I already have an accountant."
+     A/B TITLE VARIANTS for the hero <h1> (swap to test):
+       A · question : "Are you keeping as much of your US profit as you legally can?"
+       B · benefit  : "You built the business. Keep more of the profit."
+       C · loss      : "Most established foreign owners are overpaying US tax. Are you?"
+     Ships variant A.
+     ========================================================================= -->
+<title>Free Guide: The Foreign Owner's US Tax-Savings Playbook | JK Accounting Group</title>
+<meta name="description" content="A free, plain-English guide for foreign owners who already run a US business: the legitimate ways to keep more of your profit — structure, the 20% QBI deduction, retirement, depreciation, how you pay yourself, treaties — and how to tell which fit you. From JK Accounting Group.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/playbook.css">
+</head>
+<body>
+<a class="skip" href="#get">Skip to the guide</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="landing.html" aria-label="JK Accounting Group">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="#get">Get the free guide</a>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== HERO + OPT-IN ===================== -->
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid has-optin">
+        <div class="hero-content">
+          <p class="kicker">Free guide · For established foreign owners</p>
+          <h1>Are you keeping as much of your US profit as <span class="em">you legally can?</span></h1>
+          <p class="lede">You survived the setup and built a real business. The question now isn't "how do I start?" — it's "am I overpaying?" This free guide is the calm, honest list of the legitimate ways established foreign owners lower their US tax. No tricks.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>Miami · Fort Lauderdale · Online</span>
+          </p>
+          <div class="hero-cred">
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg> Legitimate strategies only</span>
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18M3 12h18M3 19h18" stroke-linecap="round"/></svg> English · Russian · Ukrainian</span>
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> Plans, doesn't just file</span>
+          </div>
+          <div class="founder-chip">
+            <img src="assets/img/julia-ivory.png" alt="Julia, founder of JK Accounting Group">
+            <p class="t"><b>Written by Julia &amp; the JK team</b>We speak your language</p>
+          </div>
+        </div>
+
+        <!-- Opt-in card (primary capture) -->
+        <div class="hero-optin reveal">
+          <h2>Send me the free guide</h2>
+          <p class="sub">14 chapters of legitimate tax-saving levers, plus a "what am I leaving on the table?" self-check. About 25 minutes.</p>
+          <form class="form-mini" data-optin action="#REPLACE-WITH-ENDPOINT" method="post">
+            <input type="text" name="name" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name" required>
+            <input type="email" name="email" placeholder="Your best email" autocomplete="email" aria-label="Your email" required>
+            <button type="submit" class="btn cta lg block">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></button>
+          </form>
+          <p class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg> Instant access. No cost, no spam — just the guide and the occasional useful tip. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFFER: what's inside ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">In this free guide, you'll learn</p>
+        <h2>The levers your year-end accountant never had time to mention</h2>
+      </div>
+      <div class="offer-wrap reveal">
+        <ul class="offer-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The one structure change</b> that can cut your tax as your profit grows — and whether you've outgrown your setup.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The 20% profit deduction</b> — now permanent — and whether you're actually getting all of it.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Up to $72,000 into your own retirement</b>, before tax — the lever most profitable owners never switch on.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Deduct equipment the same year you buy it</b> — the 100% write-off is back and permanent.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>How to pay yourself</b> so you stop leaking payroll tax you don't owe.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The treaty form</b> that cuts the flat 30% held back on money you send home.</span></li>
+        </ul>
+        <div class="offer-bonus">
+          <span class="ob-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>
+          <div class="ob-t"><b>Plus: a "what am I leaving on the table?" self-check</b>Tick the situations that sound like you and see, in a minute, which levers are probably yours.</div>
+          <span class="ob-tag">Included free</span>
+        </div>
+        <div class="center" style="margin-top:26px;">
+          <a class="btn cta lg" href="#get">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg></span>
+          <p class="tt-t"><b>Legitimate, not aggressive</b>Real planning that keeps you compliant while you save — no schemes.</p>
+        </div>
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18" stroke-linecap="round"/><path d="M7 14l4-4 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="tt-t"><b>Current for 2026</b>Reflects the new permanent 20% deduction and 100% write-off rules.</p>
+        </div>
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="tt-t"><b>Written for foreign owners</b>By a bicultural firm that plans with owners like you every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM / REFRAME ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Why this matters</p>
+        <h2>Most of the money is saved before the year ends — not in April.</h2>
+        <p>By the time your accountant sees your numbers, the year is closed. They can only report what already happened. Every real saving was a decision made earlier — while there was still time to act. If the only time you talk taxes is at filing, you're not doing anything wrong. You're just missing the part where the money is actually saved.</p>
+      </div>
+
+      <!-- Before / after -->
+      <div class="contrast-grid reveal">
+        <div class="contrast-col before">
+          <p class="cc-tag"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01" stroke-linecap="round"/></svg> Report-only</p>
+          <h3>You find out your tax in April</h3>
+          <ul class="contrast-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>The structure you set up years ago, never revisited.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>No retirement plan, so profit is fully taxed.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Deductions missed because the books didn't capture them.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Nothing left to do but pay the number.</span></li>
+          </ul>
+        </div>
+        <div class="contrast-col after">
+          <p class="cc-tag"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> Plan-ahead</p>
+          <h3>You decide the number during the year</h3>
+          <ul class="contrast-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The right structure for the profit you make now.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Profit moved into retirement, pre-tax, on purpose.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every legitimate deduction captured, because the books are clean.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A smaller bill you saw coming.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREVIEW: 3 columns ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">What you get</p>
+        <h2>A guide you'll actually use — then a way to find your own number</h2>
+      </div>
+      <div class="preview-cols reveal">
+        <div class="preview-card">
+          <h3>What's inside</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>14 short, plain-language chapters</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every lever explained, with the catch</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A structure comparison table</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The line between smart and aggressive</span></li>
+          </ul>
+        </div>
+        <div class="preview-card">
+          <h3>What you'll spot</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Whether you've outgrown your structure</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The 20% and retirement levers you may be missing</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Deductions your books aren't capturing</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Where you overpay state tax</span></li>
+          </ul>
+        </div>
+        <div class="preview-card">
+          <h3>What you'll walk away with</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A self-check you can tick off</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The specific questions to bring to a review</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A clear sense of your biggest lever</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Six free tools to check yourself</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TOPIC GRID ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">What the guide covers</p>
+        <h2>Every lever, in one place</h2>
+      </div>
+      <div class="uc-grid reveal">
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 7l2 13h12l2-13M9 11v5M15 11v5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapters 1–3</p>
+          <h3>Your structure &amp; state tax</h3>
+          <p>Whether you've outgrown your setup, how you pay yourself, and where states tax you.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapter 6</p>
+          <h3>The 20% profit deduction</h3>
+          <p>Now permanent — and whether your books let you claim all of it.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapter 7</p>
+          <h3>Retirement, pre-tax</h3>
+          <p>Move up to $72,000 of profit into your own retirement and deduct it now.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18" stroke-linecap="round"/></svg></span>
+          <p class="uc-n">Chapter 5</p>
+          <h3>Deduct big purchases now</h3>
+          <p>Section 179 and the 100% write-off — full deduction the year you buy.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-linecap="round"/></svg></span>
+          <p class="uc-n">Chapter 8</p>
+          <h3>Sending profit home</h3>
+          <p>Cut the flat 30% withholding with your country's treaty and one form.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16M9 15l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapters 11–14</p>
+          <h3>The system &amp; the traps</h3>
+          <p>Clean books, quarterly planning, staying safe, and 10 ways owners overpay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THIS IS FOR YOU IF ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Is this for you?</p>
+        <h2>This guide is for you if…</h2>
+      </div>
+      <div class="foryou reveal">
+        <ul class="nod-list two">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You've run your <b>US business for a year or more</b> and it's profitable.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You <b>only really talk taxes at filing time</b>, once a year.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You <b>suspect you're overpaying</b> but can't point to why.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You set up your company quickly and <b>never revisited it</b>.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You <b>send profit to your home country</b>.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You want to <b>plan and keep more</b>, not just file and hope.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AUTHORITY ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="assets/img/julia-navy.png" alt="Julia, founder of JK Accounting Group">
+        </div>
+        <div>
+          <h3>Why this comes from us</h3>
+          <p class="role">Julia · Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">We're a boutique US firm that plans <em>with</em> foreign owners through the year — not a service you only hear from in April. When we review an established business, we almost always find something a year-end-only process couldn't.</p>
+          <p class="bio">That's the whole difference: an advisor who changes what happens next, not just a preparer who records what already did.</p>
+          <p class="credo">"You focus on the business. We handle the rest."</p>
+          <div class="cred-bar">
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg> Boutique, founder-led firm</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Miami · Fort Lauderdale · Online</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> Plans year-round, not just April</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Replies within one business day</span>
+            <!-- TODO (Julia — add REAL proof, do not invent): professional credential
+                 (CPA / IRS Enrolled Agent), years in business, a real Google rating, and — if
+                 approved and substantiated — the firm's tax-saved track record. -->
+          </div>
+        </div>
+      </div>
+      <!-- TODO (Julia): add 2–3 REAL client results/testimonials (name + city + real photo)
+           once permission exists. Brand rule: never fabricate quotes, names, numbers, faces. -->
+    </div>
+  </section>
+
+  <!-- ===================== FAQ (objection handling) ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Before you enter your email</p>
+        <h2>Straight answers to the fair questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>I already have an accountant. Why do I need you? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">Most accountants are <b>preparers</b> — they file what already happened. A lot of foreign owners have never had someone <b>plan</b> with them during the year, which is where the savings actually live. The guide is free, and a second look costs you nothing. If your current setup is already optimal, we'll tell you — that's a good outcome too.</p>
+        </details>
+        <details>
+          <summary>Is this "aggressive"? Will it get me in trouble? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a"><b>No.</b> Everything here is ordinary, legitimate planning — the rules used the way they're meant to be used. We keep you compliant <em>while</em> we save (the foreign-owner form, sales tax, worker rules still matter). We don't do schemes. If a strategy only works when no one looks closely, it isn't one we'd suggest.</p>
+        </details>
+        <details>
+          <summary>Will it actually save ME money? How can you know? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">Honestly, we can't promise a number from a guide — your savings live in <em>your</em> real books, not a quiz. That's exactly what the free review is for: we look at your actual numbers and give you the specific figure and the levers behind it. If there's nothing to save, we'll say so.</p>
+        </details>
+        <details>
+          <summary>Is it really free? Will you spam me? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">The guide and the review are both free. We send the guide right away and only the occasional useful tip after — we never sell or share your email, and one click unsubscribes you. You only pay if you choose ongoing service later.</p>
+        </details>
+        <details>
+          <summary>What happens on the review call? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">A focused 20 minutes with a <b>senior advisor — not a salesperson</b> — in English, Russian, or Ukrainian. You share your basics, we point to the levers most likely worth real money for you, and you leave with clarity. No cost, no pressure to switch.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN CAPTURE ===================== -->
+  <section class="section tint" id="get">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Get the free guide now</h2>
+          <p class="lede">Enter your name and email and we'll send you the full playbook right away — 14 chapters and the "what am I leaving on the table?" self-check.</p>
+          <ul class="lead-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Instant access — read it on any device.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plain English, written for non-native speakers.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No cost, no spam. Unsubscribe anytime.</span></li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="#REPLACE-WITH-WHATSAPP">Message us here</a>
+          </p>
+        </div>
+
+        <!-- NOTE: form submission endpoint not wired yet — replace action + method.
+             On success, deliver/redirect to guide.html. -->
+        <form class="form-card" data-optin action="#REPLACE-WITH-ENDPOINT" method="post">
+          <div class="fc-head">
+            <h3>Send me the playbook</h3>
+            <p>We'll email it right away and send the occasional useful tip. That's it.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your first name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field full">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></button>
+              <span class="fine">Instant access. We never share your email, and you can unsubscribe in one click. <a href="#REPLACE-WITH-PRIVACY-URL" style="color:var(--teal-700); font-weight:600;">Privacy</a>.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g></svg>
+      <h2>You built the profit. Keep more of it.</h2>
+      <p class="tag">Get the guide free — it might save you the most expensive habit in business: only looking at your taxes when it's too late to change them.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#get">Send me the free guide <span class="arw" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax or legal advice.</b> This guide explains US tax strategies for foreign owners in simple terms to help you understand your options. It is not advice for your specific situation, and rules, limits, and amounts change. Every strategy has eligibility rules that depend on your entity and residency. Please talk to us (or a qualified advisor) before you act.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg class="fmk" viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="#get">Get the free guide</a>
+  <a class="sticky-wa" href="#REPLACE-WITH-WHATSAPP" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="assets/playbook.js"></script>
+<script>
+/* ---- Opt-in demo behavior ----
+   The lead endpoint is not wired yet (action="#REPLACE-WITH-ENDPOINT").
+   Until it is, this makes the page a working prototype: it captures the entry
+   locally and takes the visitor straight to the guide, so the funnel can be
+   experienced and reviewed. Replace with a real POST that stores the lead and
+   then redirects to guide.html. -->
+(function () {
+  "use strict";
+  var forms = document.querySelectorAll('form[data-optin]');
+  Array.prototype.forEach.call(forms, function (f) {
+    f.addEventListener("submit", function (e) {
+      var action = f.getAttribute("action") || "";
+      if (action.indexOf("#REPLACE") !== 0) return;
+      e.preventDefault();
+      var email = (f.querySelector('input[type=email]') || {}).value || "";
+      var name = (f.querySelector('input[name=name]') || {}).value || "";
+      try { localStorage.setItem("jk-taxsavings-lead", JSON.stringify({ name: name, email: email, at: new Date().toISOString() })); } catch (err) {}
+      window.location.href = "guide.html?from=landing";
+    });
+  });
+})();
+</script>
+</body>
+</html>

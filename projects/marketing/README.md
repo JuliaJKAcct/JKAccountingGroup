@@ -21,7 +21,8 @@ marketing/
 ├── consultation-booking/      ← "Book a Consultation" front door (new vs existing → two Odoo calendars)
 ├── scale-your-accounting-firm/  ← digested notes from the "Scale Your Accounting Firm" course
 ├── lead-magnets/              ← free interactive calculators + assessments (funnel entry point)
-└── foreign-owner-us-playbook/  ← flagship lead magnet: full setup guide + opt-in landing page
+├── foreign-owner-us-playbook/  ← flagship lead magnet: full setup guide + opt-in landing page
+└── foreign-owner-us-tax-savings-playbook/  ← companion magnet: tax-savings guide + landing (established owners)
 ```
 
 ## Sub-projects
@@ -36,6 +37,7 @@ marketing/
 | [`scale-your-accounting-firm/`](./scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
 | [`lead-magnets/`](./lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the funnel's entry point. On-brand HTML tools; draft, pending tax-figure sign-off. | Active |
 | [`foreign-owner-us-playbook/`](./foreign-owner-us-playbook/) | Flagship lead magnet: a comprehensive plain-English guide for foreign owners starting a US business + a high-converting opt-in landing page (email → guide → book a call). On-brand self-contained HTML; draft, pending endpoint wiring + tax-figure sign-off. | Active |
+| [`foreign-owner-us-tax-savings-playbook/`](./foreign-owner-us-tax-savings-playbook/) | Companion flagship magnet for owners who **already run** a US business: a tax-savings guide (keep more profit) + opt-in landing page (email → guide → book a free tax-savings review). Same niche, later funnel stage. On-brand self-contained HTML; draft, pending endpoint wiring + tax-figure sign-off. | Active |
 
 ## Shared across the group
 
