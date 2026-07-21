@@ -129,9 +129,10 @@ rebuilt from scratch at every question.
   client is never missed. Every auto-added item notes its **source and date**, and git
   makes it reversible. The sweep is **incremental**: a committed ledger
   ([`automation/sweep-state.md`](./automation/sweep-state.md)) records the date each
-  client is already swept through, and every search is bounded to what came after —
-  history is never re-read, so the cost per run stays flat as the client list grows
-  (a newly added client gets one full historical pass, then joins the ledger).
+  client is already swept through, and every search is bounded to the baseline date
+  and later — history is never re-read, so each weekly run costs only the new days
+  per client, however much history accumulates (a newly added client gets one full
+  historical pass, then joins the ledger).
 - **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
   **emails Lilian a report**: what's new in each client's CI, and the items
   **proposed for the SOP**. SOP changes are never applied without her approval.
