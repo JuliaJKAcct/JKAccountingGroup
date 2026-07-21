@@ -62,8 +62,14 @@ blindly.
    / convenience charge that is **not** gas-station fuel → **Owner's
    distribution**, regardless of amount. Gas stations follow the $25 line in
    rule 2 (≥ $25 → fuel; < $25 → distribution); every other food-related charge
-   is a distribution. Grocery / food-store food purchases follow the same
-   food-is-personal logic → distributions. **Consequence:** the **Meals** account
+   is a distribution. Grocery / food-store purchases follow the same
+   food-is-personal logic → distributions. **Exception — supply/materials stores
+   are business, not food:** Home Depot and any hardware / work-parts / job-supply
+   store (e.g. Decker Rental, Compass Hardware) → **Supplies & Materials** (or
+   COGS per rule 9), *not* distributions — treat a store by what it is *for*, so a
+   supply house stays business even though anything can be bought there. The
+   food-is-personal rule is about groceries, restaurants, and convenience — not
+   supply houses. **Consequence:** the **Meals** account
    should trend to ~$0 — any charge still sitting in Meals is a flag to move to
    distributions. *"For now" — revisit if the client's facts change.*
 4. **Every transaction gets a vendor/payee**, except owner draws, owner
@@ -113,10 +119,13 @@ blindly.
    e.g. Home Depot and other hardware/big-box). Confirm whether that
    COGS-vs-opex split is intentional before building sub-accounts or
    reclassifying.
-10. **Vehicle financing (Hyundai Motor Finance, Ally): PENDING** the client's
-    lease-vs-loan answer (the HMF account is under the owner's personal name —
-    it may not be a business vehicle at all). Do not expense installments
-    blindly; park in triage until resolved.
+10. **Vehicle financing: PENDING (open — to study).** Don't expense installments
+    blindly; park in triage until resolved. _(Discrepancy noted 2026-07-21, not
+    yet resolved: the SOP names "Hyundai Motor Finance / Ally," but this client's
+    actual chart shows **RAM truck loans** — "Car Loan 2022 RAM 1500", "2017 RAM
+    Loan" — and no Hyundai/Ally accounts, so the lender names here are probably
+    inherited from another client. Leaving it as an open question until the
+    client confirms the vehicles and financing; treatment unchanged for now.)_
 11. **Parent accounts never receive postings.** And the **holding /
     "uncategorized" accounts** — today that's *Ask My Accountant*, *Uncategorized
     Income*, *Uncategorized Expense* (and, once we renumber the chart, the
@@ -195,7 +204,7 @@ Double is the working tool for the vendor side of these rules — lean on it:
 | # | Decision | Owner | Status |
 |---|---|---|---|
 | 1 | **RESOLVED 2026-07-21 (per Julia):** no client/crew/personal meals split — all food/restaurant/fast-food/convenience → distributions (non-deductible); gas ≥ $25 → fuel, < $25 → distributions. See rules 2–3. | Julia + Lilian | Resolved |
-| 2 | Hyundai Motor Finance & Ally: lease vs loan vs personal | Client | Pending |
+| 2 | Vehicle financing: lease vs loan vs personal — **and** reconcile the SOP's "Hyundai Motor Finance/Ally" against the actual **RAM truck loans** in the chart (open, to study) | Client | Pending |
 | 3 | Which disconnected bank/card accounts are closed | Client | Pending |
 | 4 | Identity/role of a recurring individual payee (name on file in the firm's client systems) | Client | Pending |
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
