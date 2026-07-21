@@ -43,8 +43,9 @@ emitted script silently broke *every* click.
    arrows, tables, expandable sections — *not* walls of text. The full detail stays in the
    `.md` (maximise the info there); the Hub view is the **curated visual view**, plus a
    **"download the full runbook (PDF / text)"** option for anyone who wants to read it in
-   full. (The bookkeeping-SOP visual *format* itself lives in the bookkeeping-SOP skill;
-   this skill just says the Hub renders it.)
+   full. (The bookkeeping-SOP `.md` structure, the firm's categorization framework, and the
+   visual *format* live in the [`bookkeeping-sop`](../bookkeeping-sop/) skill; this skill
+   owns how the Hub renders it.)
 7. **Rendered pages stay in sync with their source.** Prefer rendering an SOP page **from
    its `.md`** (so an edit upstream can't leave the Hub stale). A hand-laid page is only
    for a flagship (BTR) or a curated visual **summary** (a "process at a glance"

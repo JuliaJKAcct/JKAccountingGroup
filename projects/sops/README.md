@@ -81,6 +81,14 @@ of truth; the HTML is a view — re-render it when the `.md` changes.
   design-system render for review copies. Use it for every new SOP or major
   restructure. Reference pattern:
   [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md).
+- [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/) — **the house way for
+  per-client monthly-bookkeeping runbooks** (`*-bookkeeping-review.md`): the two-layer
+  rule (the `.md` keeps the maximum detail; the Hub is the curated visual view), the
+  required `.md` structure (bold-led numbered rules, a Status-column decisions table, the
+  number-range grammar line, a numbered checklist), the firm's categorization framework +
+  color model (owner/equity · business/P&L · investigate · triage), and how it renders in
+  the Hub. Use it for every bookkeeping-client SOP. Reference pilot:
+  [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md).
 
 Well-written SOPs here can also become their own Claude skills in
 [`.claude/skills/`](../../.claude/skills/) when a procedure is repeatable enough
