@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -80,11 +80,13 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email/document flow was the richest source. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (bounded to 2026-07-20+): Maria requested the June reports + cash-on-hand for both stores from the owner (routine monthly ask). The attorney wire-tracing matter progressed — see Outstanding items. Ping search_meetings returned no legible Sunoma-specific content (org-wide semantic search noise only); Double had no new notes/activity; Drive folder links reconfirmed unchanged. _(Ping, Double, Gmail, Drive, 2026-07-21)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Recurring Bravo access/license problems** — the firm keeps losing access (the person who managed it left); asked for its own login. _(Gmail, 2026-07)_
-- **Legal matter (in progress):** compiling TD Bank statements to trace wire transfers to an outside attorney, at the owner's request. _(Gmail)_
+- **Legal matter (in progress):** compiling TD Bank statements to trace wire transfers to an outside attorney, at the owner's request. **Update:** the firm compiled and sent the relevant TD Bank statements to the owner on 2026-07-20. _(Gmail, 2026-07-20)_
 - A missing **Auto Pawn April-2024 expense report** was requested from the owner — confirm received.
+- **June 2026 reports + cash-on-hand (both stores)** requested from the owner 2026-07-21 — awaiting reply. _(Gmail, 2026-07-21)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group relationship (Sunoma / Magnum / 710635)

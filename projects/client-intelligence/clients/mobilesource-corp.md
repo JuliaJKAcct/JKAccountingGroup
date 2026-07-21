@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,6 +72,7 @@ here. Open the Double client to get the actual details.
 ## 5. Key facts & quirks
 
 - **Buyback workflow** — a buyback clearing account is zeroed with a matching Bill + Invoice per the client's Buyback Process Document. **Buyback transactions repeatedly land in "Uncategorized expenses"** and must be re-mapped — a recurring pain point and a strong **SOP candidate**. _(Gmail)_
+- **Root-cause note (2026-07):** at least one round of buyback miscategorization was traced to QuickBooks duplicating payments when deposits are paid to customers — worth checking for during the buyback categorization pass, and a useful detail for the eventual SOP. _(Gmail, 2026-07-21)_
 - **Part of the tech owner-group** (shares a principal with SensusTech / the ~5-entity group). _(Double, Gmail)_
 - Owner is hands-on on payroll details; MFA is not enabled on the portal contacts (a security note).
 
@@ -80,9 +81,10 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (bounded to 2026-07-20+): the "BuyBack 2026" email thread continued — the client-side admin worked through the flagged buyback transactions 2026-07-20/21, with most re-categorized by 2026-07-21 (2 remained in "Uncategorized expenses"). The blocked June-2026 report also moved forward — an updated categorization pass was sent 2026-07-21. Double's activity log shows the firm's standard June-close checklist (dedupe customers/vendors, newly-added accounts, 1099 prep, sales-tax checklist, Gusto payroll checklist) completed 2026-07-20/21. Ping search_meetings (business name + owner names) returned no legible Mobilesource-specific content. _(Double activity log, Gmail, Ping, 2026-07-21)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- **June 2026 reports blocked** pending the client fixing miscategorized **buyback** transactions; the client owed Maria several email responses (~Jul 20). _(Gmail)_
+- **June 2026 reports** — was blocked pending the client fixing miscategorized **buyback** transactions; as of 2026-07-21 mostly resolved (2 transactions still uncategorized) and an updated categorization was sent — confirm final report issued. _(Gmail, 2026-07-21)_
 - **2025 business income-tax prep in progress** — reconcile the client-portal organizer state (one was posted then removed). _(Gmail)_
 - A mid-2026 **encrypted exchange with a FL DOR agent** re: Mobilesource — possible account/notice matter to watch. _(Gmail)_
 

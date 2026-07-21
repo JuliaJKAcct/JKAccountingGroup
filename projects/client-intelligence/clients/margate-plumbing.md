@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -81,12 +81,14 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no relevant indexed meetings**; Double has no notes yet — email was the richest source. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (bounded to 2026-07-20+): a new **Intuit QuickBooks Payments dispute** surfaced (customer payment dispute triggering a "balance owed" notice on the account) — the owner is disputing it, and the firm advised on next steps (see Outstanding items). The GL/WC insurance-audit thread also had a new update from the broker. Ping search_meetings (business name + both owners) returned no legible Margate-specific content; Double had no new notes/activity; Drive folder link reconfirmed unchanged. _(Gmail, Ping, Double, Drive, 2026-07-21)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Workers' comp audit open** — owner disputes prior-year WC as overcharged/misclassified; complicated by the **pre-Gusto payroll access gap**. _(Gmail)_
-- **General liability (GL) audit** also in progress. _(Gmail)_
+- **General liability (GL) audit** also in progress — the broker confirmed 2026-07-20 that the audit invoice for the **2025–2026 policy term remains outstanding**; a payment the owner made was applied to the *current* policy instead, causing confusion between the two. _(Gmail, 2026-07-20)_
 - **Accountant / CPA letter** for the owners' remortgage pending (needs closing amount/date). _(Gmail)_
 - **QBO bank-feed reconnection** (Amex + a credit card) repeatedly pending — reports issued "preliminary" until connected. _(Gmail)_
+- **New — Intuit QuickBooks Payments dispute (2026-07-21):** the owner received a "Your Business Owes a Balance on its Intuit QuickBooks Payments Account" notice tied to a disputed customer payment; the owner is contesting it with Intuit and separately with the customer. Julia advised the owner to (1) contact the customer directly since disputes are sometimes automatic when a bank declines a payment, and (2) uncheck the QBO online-payment option on future invoices if he doesn't want to accept payments through QBO Payments, and to contact Merchant Services support for the formal dispute process. Open as of 2026-07-21. _(Gmail)_
 
 ### Information still needed
 - [ ] Fiscal year-end; credentials location
