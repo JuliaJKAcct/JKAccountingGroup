@@ -116,4 +116,4 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **Maria's process guide (Drive):** [Magnum doc guide](https://docs.google.com/document/d/1XGUch-7eAhLEGBFM4e5ashmp8Wz8q-j1bwwWnlnJkpg/edit) — full month-end process + all credentials (sensitive; do not copy into repo)
 - **Process step folders / tutorials (Drive):** [Magnum Tutorials](https://drive.google.com/drive/folders/1ejnEIkjPrR1aU4aV36DbP7w1RsLwpESt) (numbered step folders: bank feed, reconciliation, Bravo, JEs, vendor recon, performance report, ADP, reclass, monthly checklist)
 - **Related client:** [`sunoma-inc.md`](./sunoma-inc.md) (same pawn/jewelry owner group)
-- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
+- **Related SOPs:** [`../../sops/magnum-152-bookkeeping-close.md`](../../sops/magnum-152-bookkeeping-close.md) — Monthly Bookkeeping & Close runbook (in review)
