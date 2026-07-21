@@ -40,7 +40,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-12](#idea-12--central-sop-index-a-clickable-hub-for-every-sop) | Central, clickable index/map of every company SOP — one place to see all SOPs and open them | [`projects/sops/`](./projects/sops/) | Medium | Not started (index seed already in the sops README) |
 | [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
-| [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/`](./.claude/skills/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | Not started — **Lilian wants this**; build when working the 2nd client (trigger now met) |
+| [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | **Built (v1, Jul 2026)** — create/enrich/audit + CI↔SOP sync + owner-level sweep rule + Atlas review-dashboard render; improve over time |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -753,8 +753,13 @@ Title Agency all have files). Build once we confirm the template shape is stable
 structure + the audit procedure) plus optional Double lookups to seed each header.
 No external dependency.
 
-**Priority:** Medium · **Status:** Not started — **remember to build this** when
-working the next client (Lilian's standing request).
+**Priority:** Medium · **Status:** **Built (v1, Jul 2026)** —
+[`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/): the
+create/enrich/audit + CI↔SOP-sync methodology, the owner-with-several-businesses sweep
+rule (sweep by owner, assign by company/person), and an Atlas review-dashboard render
+engine ([`render/`](./.claude/skills/client-intelligence/render/), built with
+`impeccable`). Improve over time: fold the weekend-sweep prompt into the skill, add a
+per-owner index, and add service→SOP deep-linking as SOPs get written.
 
 ---
 
