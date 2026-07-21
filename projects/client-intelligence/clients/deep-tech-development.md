@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** Deep Tech Development LLC
-- **Entity type:** LLC — files on the owner's **Schedule C** (single-member / disregarded) _(Double)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** Technology development _(from the business name — confirm)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** Bookkeeping (**monthly**); income tax on the owner's **Schedule C**; **sales tax (quarterly)**; **1099 preparation**; annual-report filing. Payroll N/A. **Assigned bookkeeper: Lilian.** _(Double properties, 2026-07-20)_
+- **Entity type:** LLC — files on the owner's **Schedule C** (single-member / disregarded) _(Double)_. **Note:** a **sister entity "Deep Tech Development GROUP LLC"** exists — see §5; don't conflate the two.
+- **Home state:** **Florida** (Broward area) _(Gmail — high confidence for FL operations)_
+- **Industry / what they do:** **E-commerce (Shopify)** — operating brand "**Go Robots**" (tech / robotics products), with a physical-delivery component (a commercial cargo van, FL-insured). Reads as Shopify retail + local delivery, not software-only. _(Gmail — medium confidence on product line)_
+- **Primary language:** **Russian** (Ukrainian ties). _(Gmail)_
+- **Our engagement (services we provide):** Bookkeeping (**monthly**); income tax on the owner's **Schedule C**; **sales tax (quarterly — likely FL DR-15)**; **1099 preparation**; annual-report filing. Payroll N/A **for this entity** (the GROUP entity runs the payroll — see §5). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -54,7 +54,7 @@ the actual details.
 
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
-- **Jurisdiction(s):** _(pending)_
+- **Jurisdiction(s):** Likely **Florida (DR-15)** — FL operations + Shopify sale of tangible goods _(inferred, medium confidence; not seen filed for this entity directly)_.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
@@ -72,21 +72,25 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- **Multi-entity owner / naming ambiguity (important).** A sister entity **"Deep Tech Development GROUP LLC"** is the one that runs **Gusto payroll (biweekly)**, holds the **Shopify store**, the "Go Robots" AP mailbox, and the vehicle policy. This file (706685) is the **Schedule C, single-member, payroll-N/A** entity. Automated emails (Gusto, QuickBooks, Shopify, insurance) blur the two names — **attribute payroll / van / Shopify to the GROUP entity** until confirmed.
+- **External Ukrainian finance team:** the owner uses an outside Ukrainian bookkeeping / tax group that shares documents and handles the owner's **personal Ukrainian tax declaration**; JK coordinates hand-offs via Google Drive.
+- **Disambiguation:** do **not** conflate this owner with the "Goshakes / Boost You" owner or with Never Give Up KK — the enrichment sources disagreed on those linkages.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; Schedule C; monthly bookkeeping; quarterly sales tax). Ping / Gmail history **not yet swept** — the Saturday routine will do the first full pass.
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; Schedule C; monthly bookkeeping; quarterly sales tax).
+- 2026-07-20 — **Gmail enrichment sweep:** established the Shopify e-commerce ("Go Robots") profile, FL (Broward), RU language, and the important sister-entity (GROUP LLC) ambiguity. Ping had **no indexed meetings**; facts from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- **Reconcile the two entities:** confirm which legal entity (LLC vs GROUP LLC) maps to Double 706685 vs the owner's other IDs, and reconcile the payroll-N/A flag against the active Gusto payroll under "Deep Tech Development GROUP LLC."
+- Confirm the **sales-tax state / registration** and what's taxed (Shopify goods) for this entity specifically.
+- **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 
 ### Information still needed
-- [ ] Confirm industry; home state; primary language; fiscal year-end
-- [ ] Sales-tax jurisdiction; contacts by role; credentials Drive link
-- [ ] Ping / Gmail context (first sweep pending)
+- [ ] Fiscal year-end; confirm sales-tax state / registration
+- [ ] Credentials Drive link; resolve the LLC-vs-GROUP-LLC entity mapping
 
 ## 7. Links
 

@@ -24,10 +24,10 @@
 
 - **Business name:** MASCIAVE DESIGN STUDIO LLC
 - **Entity type:** LLC — **S-corp** (files Form **1120-S**) _(Double)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** Design studio _(from the business name — confirm)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; **sales tax (quarterly)**; payroll (**automatic**); **1099 preparation**; annual-report filing. **Assigned bookkeeper: Lilian.** _(Double properties, 2026-07-20)_
+- **Home state:** **Florida** (Broward / Fort Lauderdale area) _(Gmail — high confidence)_
+- **Industry / what they do:** **Interior design studio** (commercial + residential; the owner holds IIDA · ASID · CPTED credentials). Work runs as numbered design **projects**, some for commercial / government REIT clients. _(Gmail)_
+- **Primary language:** **English** (all business correspondence). _(Gmail)_
+- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; **sales tax (quarterly, FL DOR)**; **payroll via Gusto (automatic)**; **1099 preparation**; annual-report filing. The firm also prepares the **owner's personal return** (a linked individual client in Double). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -74,23 +74,29 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- The firm's chart-of-accounts grammar is described as "**Masciave/Aura-style**" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)).
+- **Two-basis reporting (Double "Reporting & Tax Basis" note, confirmed 2026-07-20):** client-facing statements are on the **accrual** basis (so the owner sees A/R, A/P and customer deposits), but the **tax return is filed on the cash** basis — the studio invoices heavily and collects slowly, so accrual shows true monthly performance while cash defers tax on invoices not yet collected.
+- **Project-based / work-in-progress:** deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. Owner supplies monthly receipts / CC statements + per-project descriptions.
+- Pays **subcontractors** (e.g. structural engineers) and collects W-9s → drives the 1099 work.
+- **No QBO timesheet integration** (owner decided manual per-project entry wasn't worth it for a one-person shop).
+- The firm's chart-of-accounts grammar is described as "**Masciave/Aura-style**" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/SOP knowledge)_
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
-- A Double note on **Reporting & Tax Basis** may exist for this client _(per the firm's client-intelligence notes)_ — the routine's Double sweep will surface it.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping, sales tax and design-studio profile). The COA-grammar note and the "Reporting & Tax Basis" Double-note hint in §5 come from **firm/SOP knowledge**, not the Double properties. Ping / Gmail / Double-notes history **not yet swept** — the Saturday routine will do the first full pass.
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping, sales tax and design-studio profile). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
+- 2026-07-20 — **Ping / Gmail / Double-note enrichment sweep:** established the interior-design profile (IIDA/ASID/CPTED), FL (Broward) location, Gusto payroll, FL DOR quarterly sales tax, and confirmed the accrual-books / cash-tax reporting basis from the Double note. Ping had **no indexed meetings**; facts are from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — verify. _(recurring-expense review)_
+- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket (feeds were unstable).
+- Confirm the exact **FL sales-tax county / registration**.
+- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement.
 
 ### Information still needed
-- [ ] Confirm industry; home state; primary language; fiscal year-end
-- [ ] Sales-tax jurisdiction; payroll provider; contacts by role; credentials Drive link
-- [ ] Ping / Gmail / Double-notes context (first sweep pending)
+- [ ] Fiscal year-end; exact FL sales-tax county / registration
+- [ ] Credentials Drive link
 
 ## 7. Links
 

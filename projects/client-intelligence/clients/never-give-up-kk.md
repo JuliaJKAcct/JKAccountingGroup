@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** NEVER GIVE UP KK LLC
-- **Entity type:** LLC — files on the owner's **Schedule C** (single-member / disregarded) _(Double)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** Bookkeeping (**quarterly**); income tax on the owner's Schedule C; annual-report filing. Sales tax N/A; payroll N/A. **Assigned bookkeeper: Lilian.** _(Double properties, 2026-07-20)_
+- **Entity type:** LLC — currently files on the owner's **Schedule C**, but the **structure is under review** (LLC vs S-corp vs C-corp; Julia to recommend). _(Double + Gmail)_
+- **Home state:** **Florida** (South Florida) _(Gmail — explicit)_
+- **Industry / what they do:** **Trade of thermal-imaging optics** — thermal riflescopes / sights and thermal monoculars (night-vision). New US venture; a multi-year **export contract to Indonesia** is in the works. Classified as **commerce / trade of goods** (not consulting). _(Gmail, Jun 2026)_
+- **Primary language:** **Russian** (Ukrainian owner). _(Gmail)_
+- **Our engagement (services we provide):** Bookkeeping (**quarterly**); income tax on the owner's Schedule C (for now); annual-report filing. Sales tax N/A per Double (but **nexus review pending** — see §4); payroll N/A. **New client onboarded June 2026.** **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -52,7 +52,7 @@ the actual details.
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** No — **N/A** _(Double)_
+- **Applies?** Double lists **N/A**, but a **nexus / registration analysis is pending** — they sell physical goods in FL and export across jurisdictions, so this is worth revisiting. _(Double note 2026-07-14)_
 
 ### Payroll
 - **Applies?** No — **N/A** _(Double)_
@@ -68,25 +68,34 @@ the actual details.
 
 ### Licenses & other filings
 - **Annual report:** Yes — we handle it _(Double)_
-- **Other filings:** _(pending)_
+- **BOI (beneficial-ownership) report:** flagged as a to-do. _(Double note 2026-07-14)_
+- **Business licensing / export control:** the thermal-optics trade + overseas contract raise **ITAR/EAR** and licensing questions — raised, unresolved (context). _(Gmail)_
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- **Owner is a serial entrepreneur** with several JK-serviced entities beyond this one. The exact related-entity cluster — and any overlap with **Deep Tech Development**'s ownership — is **not confirmed** (the enrichment sources conflicted); do not assume shared ownership without verifying (see Outstanding items).
+- **E-2 investor-visa considerations** shape the engagement — business-operations documentation and **US tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(Gmail)_
+- **Cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(Gmail)_
+- Client communication runs through a **shared WhatsApp group** set up at onboarding.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies). Ping / Gmail history **not yet swept** — the Saturday routine will do the first full pass.
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies).
+- 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. _(Double note 2026-07-14)_
+- **Sales-tax nexus / registration analysis** pending (despite Double "N/A"). _(Double note 2026-07-14)_
+- **BOI report** to be filed. _(Double note 2026-07-14)_
+- **Business-licensing / export-control** determination for the optics trade. _(Gmail)_
+- Verify the owner's **related-entity cluster** and whether any overlaps Deep Tech Development (sources conflicted).
+- Client **document upload** requested for tax review; **payroll provider** shortlist for the future; **vehicle-into-company** decision pending advice.
 
 ### Information still needed
-- [ ] Industry / what they do; home state; primary language; fiscal year-end
-- [ ] Contacts by role (from Double); credentials Drive link
-- [ ] Ping / Gmail context (first sweep pending)
+- [ ] Fiscal year-end; final entity structure (once Julia recommends)
+- [ ] Credentials Drive link; resolve the related-entity / Deep Tech ownership question
 
 ## 7. Links
 

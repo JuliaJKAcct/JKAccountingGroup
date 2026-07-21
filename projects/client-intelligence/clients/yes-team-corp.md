@@ -24,10 +24,10 @@
 
 - **Business name:** YES TEAM CORP
 - **Entity type:** Corporation — **S-corp** (files Form **1120-S**) _(Double)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; payroll (**automatic**); annual-report filing. Sales tax N/A; 1099 prep not required. **Assigned bookkeeper: Lilian.** _(Double properties, 2026-07-20)_
+- **Home state:** **Florida** _(strong inference — the firm was forming the FL entity in Dec 2025; not documented outright)_
+- **Industry / what they do:** One-owner **marketing** S-corp — the owner provides marketing services billed through this entity (recurring monthly service invoices to **Alirm LLC** and to **Mellanni**, an e-commerce home-textiles brand). Effectively a **solo consultant** invoicing through his S-corp. _(Gmail)_
+- **Primary language:** **Russian** (client Zoom recaps and family correspondence in Russian). _(Gmail)_
+- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; **payroll via Gusto (AutoPilot, monthly)**; annual-report filing. Sales tax N/A; 1099 prep not required. **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -48,7 +48,7 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
-| Payroll (automatic) | Payroll | _(pending — Drive link)_ | Provider _(pending)_ |
+| Gusto payroll (AutoPilot) | Monthly single-shareholder payroll; Gusto auto-files quarterly returns | _(pending — Drive link)_ | Gusto invoice auto-debited from the corp account |
 
 ## 4. Obligations & recurring processes
 
@@ -57,7 +57,8 @@ the actual details.
 
 ### Payroll
 - **Applies?** Yes — **automatic** _(Double)_
-- **Provider / frequency:** _(pending — confirm provider)_
+- **Provider / frequency:** **Gusto**, on AutoPilot — monthly single-shareholder run; Gusto auto-files the quarterly payroll returns. _(Gmail)_
+- **Off-cycle runs:** used to **reimburse the owner** for business expenses paid on his personal card — treated as **non-taxable reimbursements (accountable-plan style)**, not W-2 wages. Recurring each quarter. _(Gmail)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
@@ -72,21 +73,28 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- As an **S-corp**, watch reasonable-compensation / owner-payroll (S-corp owner salary) at year-end.
+- **Newly formed entity; S-election (Form 2553) filed Jan 2026** — 2026 is effectively the first full operating / tax year. _(Gmail)_
+- Appears in older email as "Yes Team **LLC**", now "Yes Team **CORP**" — an LLC taxed as S-corp.
+- As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
+- **Family cluster at the firm:** the owner's parents are also clients (a FL LLC for partnership tax prep) and another FL entity was being formed for the family — the firm cross-refers within this family; keep each entity's books separate.
+- The owner is linked to a **second Double client (id 710636)** — a related entity; scope not yet documented.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll). Ping / Gmail history **not yet swept** — the Saturday routine will do the first full pass.
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll).
+- 2026-07-20 — **Gmail enrichment sweep:** established the marketing-services profile (customers Alirm / Mellanni), RU language, FL (inferred), Gusto AutoPilot payroll + accountable-plan reimbursements, and the Jan-2026 S-election. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- Confirm the **registered home state** definitively (strongly inferred FL, not documented).
+- **Retirement plan** — proposals were presented (Feb 2026) by an external TPA; decision / status unknown.
+- **Mellanni invoice format** — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names; verify resolved and the template fixed.
+- Clarify the **second linked entity (Double 710636)** and whether it needs its own CI file.
 
 ### Information still needed
-- [ ] Industry / what they do; home state; primary language; fiscal year-end
-- [ ] Payroll provider; contacts by role; credentials Drive link
-- [ ] Ping / Gmail context (first sweep pending)
+- [ ] Confirm registered home state; fiscal year-end
+- [ ] Credentials Drive link; the second linked entity (710636)
 
 ## 7. Links
 
