@@ -59,6 +59,27 @@ and each owner name**, plus `list_client_meetings`. Gmail — search **`in:inbox
 to the client. Double — `get_client`, `list_notes`, `list_contacts` (roles),
 `list_activity_log`. Never assume "not found" from a single business-name lookup.
 
+### Owners with several businesses — sweep by owner, assign by company (and person)
+
+Many of the firm's clients **own several companies**, so facts arrive mixed. Two rules,
+both mandatory:
+
+1. **Sweep at the owner level, then route by company.** Under one owner's name a source
+   (an email, a meeting, a Drive folder) can carry topics about **any** of their
+   companies, and inside one company's thread the owner may mention **another** company.
+   Build the **owner → [companies + individual profile]** map first, gather everything
+   under the owner across all sources, then **assign each fact to the specific company
+   file it belongs to** — never let one company's file absorb another company's facts.
+   (The per-file "Related clients" cross-links are how an owner-group is recorded.)
+2. **Double individual profile vs. company record.** When an owner has an **individual**
+   contact/profile in Double, that profile is the **owner's individual tax work (1040)**;
+   the **company** record carries the company's work (sales tax, the company return,
+   1099s). Facts arrive mixed under one owner — check **all** of that owner's companies
+   **and** their individual profile, then place each fact where it belongs: a **personal
+   / 1040** fact → the owner's individual context (not a company file); a
+   **company-operations** fact → that company's file. Personal data still never lands in
+   the repo — it stays in Double/Drive, referenced by link.
+
 Transcripts are auto-transcribed from mixed Russian/Ukrainian/Spanish and are often
 **garbled** — use whatever is legible, tag it **low confidence** with its source, and
 **discard** anything that doesn't make sense (we can't verify it; only Julia knows what
@@ -144,7 +165,7 @@ CLIENTS (name -> Double id):
 - Ecom Beavers LLC -> 706686
 
 FOR EACH CLIENT:
-1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
+1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:
    - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
    - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
    - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — but SKIP the "EIN / Tax ID" property, it is sensitive); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
