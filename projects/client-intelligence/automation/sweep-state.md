@@ -3,8 +3,8 @@
 The incremental-sweep ledger. Each row records the date **through which** a
 client's ledgered sources (Ping, Double, Gmail — QuickBooks is an as-needed
 source and isn't ledgered) have already been reviewed, so
-the next sweep only looks at what came **after** — never re-reading history that
-was already processed. This is what keeps the Saturday routine cheap as the client
+the next sweep only looks at what's new **from the baseline day on** — never
+re-reading history that was already processed. This is what keeps the Saturday routine cheap as the client
 list grows.
 
 **Rules (for the routine and for any manual sweep):**
