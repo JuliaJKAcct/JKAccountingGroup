@@ -21,8 +21,8 @@
   **MS2 (Miami)**; MS3 was sold in 2024 and MS4 in 2025 (legacy MS4 costs still surface).
 - **Entity / tax:** S-corp, files **Form 1120-S**; **1099 preparation** is part of the
   engagement; **sales tax N/A**; annual report **no**.
-- **Owner group:** same owner (and administrative assistant) as **Sunoma Inc** — managed
-  together, books kept **distinct**.
+- **Owner group:** same owner (and administrative assistant) as a **sister company in the
+  same pawn group** — managed together, books kept **distinct**.
 - **Bank & card feeds** (reconcile every one; last-4 only): **PayPal 1015** (sync broken →
   monthly JE, not a live feed), **TD Bank ×5** (5100, US1 2873, US2 5093, US3 5085,
   US4 3178), **Amex** CC, **Chase ×2** (2054, 2055), **Capital One ×2** (4850, 1395).
@@ -77,7 +77,7 @@ walkthrough (or the working file) in Drive — the sensitive detail lives there,
 - **Insurance** — from the insurance documents in Drive.
 - **Kabbage loan** — loan activity (uses the Amex login).
 - **ADP payroll JEs** — reconciled + renamed.
-- _(On hold: one "Alla Trost" JE, pending information — do not book until Julia confirms.)_
+- *(On hold: one "Alla Trost" JE, pending information — do not book until Julia confirms.)*
 
 ## Categorization rules
 

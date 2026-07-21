@@ -595,7 +595,7 @@ function magnumResList(body){
     if(!m) return '';
     const label = m[1].replace(/\*\*/g, '');
     const url = m[2];
-    const after = item.slice(item.indexOf(m[0]) + m[0].length).replace(/^[\s—–:-]+/, '').replace(/\*\*/g, '').trim();
+    const after = item.slice(item.indexOf(m[0]) + m[0].length).replace(/\*\*/g, '').replace(/^[\s—–:-]+/, '').trim();
     const kind = (/spreadsheets/.test(url) || /\/document\//.test(url)) ? ' doc' : '';
     return `<a class="resrow${kind}" href="${url}" target="_blank" rel="noopener">`
       + `<span class="rico">${matIcon(url)}</span>`
