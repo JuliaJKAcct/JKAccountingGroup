@@ -18,7 +18,9 @@ For the scoped clients, once per week:
    Assistant (meetings, emails, calls, action items), Double (notes, tasks,
    activity), Gmail (**incoming and sent**), QuickBooks — non-sensitive facts only.
    Search by **both the business name and each owner's name** (see *Search
-   completeness* below).
+   completeness* below). **Incremental:** every search is bounded by the client's
+   baseline date in [`sweep-state.md`](./sweep-state.md) — history already swept is
+   never re-read, which is what keeps the run cheap as the client list grows.
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). Commit to a branch `weekend-ci-sweep`, push. **Never** touches
@@ -98,7 +100,9 @@ per-tool call limits._
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
 
-READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, projects/client-intelligence/automation/sweep-state.md (the incremental ledger), and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+
+INCREMENTAL SWEEP (token discipline — this is a hard rule): sweep-state.md records the date each client is already swept through. Bound EVERY search to after that client's baseline: Gmail with after:YYYY/MM/DD, Ping meetings dated after the baseline (skip older ones — do not re-read them), Double notes/activity created after it. Exceptions: (a) a client whose row lists a Coverage gap owes that source a one-time full historical pass — do it, then clear the note; (b) a client in the list with NO row in sweep-state.md gets a one-time full historical sweep, then a row. At the end, update sweep-state.md baselines (run date) for every client fully swept, IN THE SAME COMMIT as the client-file updates; if the run fails partway, only advance the clients you finished.
 
 CLIENTS (name -> Double id):
 - Atman Parts -> 763909
