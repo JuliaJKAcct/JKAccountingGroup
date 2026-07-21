@@ -24,7 +24,7 @@
 
 - **Business name:** LUMETRO LLC
 - **Entity type:** LLC — Double flags Schedule C / income-tax-yes, **but see the tax quirk in §4** (the firm's note says Lumetro won't file its own return). _(Double + Gmail)_
-- **Home state:** _(pending — not established; owner's cell is a 415/SF area code, low confidence)_
+- **Home state:** _(pending — not established in the sources)_
 - **Industry / what they do:** The **digital-advertising / ad-spend vehicle** within the owner's tech group — runs **Google Ads** spend that is allocated/billed to the affiliated operating company **SensusTech LLC**. Not a standalone operating business. _(Gmail)_
 - **Primary language:** English (all correspondence). _(Gmail; owner RU/UA heritage — low confidence)_
 - **Our engagement (services we provide):** Monthly bookkeeping (the monthly deliverable is an **"Ad breakdown Lumetro/Sensustech"**); **1099 preparation**. Sales tax N/A; payroll N/A; annual report **no**. Income tax — **see quirk**. **Assigned bookkeeper: Maria.** _(Double + Gmail, 2026-07-20)_

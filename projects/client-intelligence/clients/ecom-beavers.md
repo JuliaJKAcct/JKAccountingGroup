@@ -26,7 +26,7 @@
 - **Entity type:** LLC taxed as a **C-corporation** (files Form **1120**) — a foreign-owner-friendly structure. _(Double)_
 - **Home state:** _(pending — not established in the sources)_
 - **Industry / what they do:** **Multi-brand e-commerce / DTC** seller of physical products — sells on **Amazon** (marketplace + likely FBA) and runs **multiple Shopify stores** (brands **Somma, BoneX, Honex**); warehouse/inventory operations. _(Gmail, Ping consult note)_
-- **Primary language:** **Russian** (consult recap in Russian; owner has a Ukraine phone). _(Gmail)_
+- **Primary language:** **Russian** (consult recap in Russian). _(Gmail)_
 - **Our engagement (services we provide):** Monthly bookkeeping; **income tax (Form 1120)**. Sales tax N/A **(nexus review flagged — see §4)**; payroll N/A; annual report **no**. **New client (onboarded ~May 2026).** **Assigned bookkeeper: Maria.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)

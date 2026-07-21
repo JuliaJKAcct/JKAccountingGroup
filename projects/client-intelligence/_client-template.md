@@ -10,7 +10,7 @@
 
 # {{Client business name}}
 
-> **Status:** {{Prospect | Active | Paused | Former}} · **Owner:** {{Lilian | Julia | Firm}} · **Last updated:** {{YYYY-MM-DD}}
+> **Status:** {{Prospect | Active | Paused | Former}} · **Owner:** {{assigned staff, e.g. Lilian / Julia / Maria | Firm}} · **Last updated:** {{YYYY-MM-DD}}
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
