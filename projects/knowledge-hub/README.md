@@ -55,8 +55,15 @@ Drive, printed to PDF, and inside a CSP-restricted Artifact.
 
 ## Skills & tooling
 
+- [`knowledge-hub`](../../.claude/skills/knowledge-hub/) — **the house way to build,
+  extend, or fix this Hub.** Holds the standing preferences (team-facing = designed,
+  never GitHub/repo-file links; SOPs open inside the Hub; reuse the client-intelligence
+  engine; bookkeeping SOPs are visual/dynamic via impeccable), the curation rules, the
+  self-contained/portable-to-Odoo constraint, and the **verify-before-publish gate**
+  (`node --check` the emitted script + a runtime click test). Read it first.
 - [`impeccable`](../../.claude/skills/impeccable/) — the design skill the Hub is
-  built and battle-tested with (light/dark/mobile screenshots).
+  built and battle-tested with (light/dark/mobile screenshots). **Every visual change
+  here goes through it + the Atlas Design System, by default.**
 - [`client-intelligence`](../../.claude/skills/client-intelligence/) — the Hub's
   **Client intelligence** section is rendered by **reusing that skill's engine**:
   `build-hub.mjs` imports `loadClients()` + `clientCard()` + `DASH_CSS()` from
