@@ -96,8 +96,11 @@ and JS all embedded — CSP-safe, work offline) are committed under
   the landing page includes a **demo fallback** that stores the entry in
   `localStorage` and jumps to `guide.html` so the funnel can be experienced
   end-to-end until the real POST is wired (on success it should redirect to
-  `guide.html`). Also the WhatsApp link (`#REPLACE-WITH-WHATSAPP`) and the Odoo
-  booking URL (`#REPLACE-WITH-BOOKING-URL`).
+  `guide.html`). Still to wire: the Odoo booking URL (`#REPLACE-WITH-BOOKING-URL`)
+  and the privacy link (`#REPLACE-WITH-PRIVACY-URL`). **WhatsApp is already wired**
+  to the firm's real number (`wa.me/17863181505`) — present as a CTA on every page
+  (app bar, hero, final CTA, sticky mobile bar) since it's the audience's preferred
+  channel.
 - **Every tax figure is general information, not advice**, and pending Julia's
   sign-off. Figures reused from
   [`../lead-magnets/TAX-FIGURES-TO-VERIFY.md`](../lead-magnets/TAX-FIGURES-TO-VERIFY.md)

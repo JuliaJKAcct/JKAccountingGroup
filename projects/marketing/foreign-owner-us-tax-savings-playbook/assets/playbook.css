@@ -76,6 +76,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .on-dark .btn.secondary{color:var(--text-on-dark); border-color:rgba(236,230,218,0.45);}
 .on-dark .btn.secondary:hover{background:rgba(236,230,218,0.08); border-color:rgba(236,230,218,0.7);}
 
+/* ---------- WhatsApp — the audience's preferred channel, present everywhere ---------- */
+.btn.wa{background:#25D366; color:#0b2e1a;}
+.btn.wa:hover{background:#1EBE5A;}
+.btn.wa svg{width:18px; height:18px; flex:0 0 auto;}
+.appbar .actions{display:flex; align-items:center; gap:10px;}
+.appbar .nav-wa{display:inline-flex; align-items:center; gap:7px; font-family:var(--sans); font-size:13.5px; font-weight:600; color:var(--text-on-dark); text-decoration:none; padding:8px 13px; border-radius:9px; border:1px solid rgba(236,230,218,0.28); transition:background .18s, border-color .18s; white-space:nowrap;}
+.appbar .nav-wa:hover{background:rgba(236,230,218,0.08); border-color:rgba(236,230,218,0.55);}
+.appbar .nav-wa svg{width:16px; height:16px; color:#25D366; flex:0 0 auto;}
+@media (max-width:600px){.appbar .nav-wa{display:none;}}  /* mobile: covered by the sticky WhatsApp bar */
+.optin-or{margin-top:13px; display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-muted);}
+.optin-or::before,.optin-or::after{content:""; height:1px; flex:1; background:var(--border-subtle);}
+.optin-or a{display:inline-flex; align-items:center; gap:6px; font-weight:600; color:#149a44; text-decoration:none; white-space:nowrap;}
+.optin-or a:hover{color:#0d7a34;}
+.optin-or a svg{width:15px; height:15px; color:#25D366; flex:0 0 auto;}
+
 .kicker{font-family:var(--mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 20px;}
 .sec-eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .ledger{height:2px; width:46px; background:var(--accent); border:0; border-radius:2px; margin:0 0 22px;}

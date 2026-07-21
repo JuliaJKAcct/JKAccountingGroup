@@ -85,10 +85,12 @@ and JS all embedded — CSP-safe, work offline) are committed under
 ## Working on this / notes for AI
 
 - **Not publish-ready.** A human must wire the lead endpoint
-  (`#REPLACE-WITH-ENDPOINT`), the WhatsApp link, the Odoo booking URL, and the
-  privacy link; and fill the real-proof credibility placeholders (credential,
-  years, rating). The landing includes a demo fallback (stores the entry in
-  `localStorage` and jumps to `guide.html`) until the real POST is wired.
+  (`#REPLACE-WITH-ENDPOINT`), the Odoo booking URL, and the privacy link; and fill
+  the real-proof credibility placeholders (credential, years, rating). The landing
+  includes a demo fallback (stores the entry in `localStorage` and jumps to
+  `guide.html`) until the real POST is wired. **WhatsApp is already wired** to the
+  firm's real number (`wa.me/17863181505`) and is a CTA on every page (app bar,
+  hero, final CTA, sticky mobile bar) — the audience's preferred channel.
 - **Tax figures are 2026 general information, not advice**, pending Julia's
   sign-off. Load-bearing facts verified against public sources 2026-07: the 20%
   QBI deduction made **permanent** (OBBBA, July 2025) and available to
