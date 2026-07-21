@@ -457,6 +457,53 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
 :root[data-theme="dark"] .rgchip{border-color:rgba(111,157,164,0.30);}
 :root[data-theme="dark"] .rgchip b{color:var(--teal-100);}
 
+/* ---------- Bookkeeping runbook: close steps with Drive material buttons ---------- */
+.msteps{list-style:none; margin:8px 0 4px; padding:0; display:flex; flex-direction:column; gap:10px;}
+.mstep{display:grid; grid-template-columns:auto 1fr; gap:13px; align-items:start;
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:13px;
+  padding:13px 15px; box-shadow:var(--shadow-sm);}
+.mstep-n{flex:0 0 auto; width:27px; height:27px; border-radius:8px; display:grid; place-items:center;
+  font-family:var(--mono); font-size:12.5px; font-weight:600; background:var(--teal-800); color:#F1ECE1;}
+:root[data-theme="dark"] .mstep-n{background:var(--raise); color:var(--ink); border:1px solid var(--border);}
+.mstep-x{min-width:0;}
+.mstep-t{font-family:var(--serif); font-size:15.5px; font-weight:600; color:var(--ink); line-height:1.3;}
+.mstep-d{font-size:13.5px; line-height:1.55; color:var(--body); margin-top:4px; max-width:64ch;}
+.mstep-d b{color:var(--ink);}
+
+/* inline material buttons (open the Drive folder / sheet / doc for this step) */
+.matrow{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:11px;}
+.matrow .ml{font-family:var(--mono); font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--muted); margin-right:1px;}
+.matlink{display:inline-flex; align-items:center; gap:7px; text-decoration:none; white-space:nowrap;
+  font-family:var(--sans); font-size:12px; font-weight:600; line-height:1; color:var(--pill-bronze-ink);
+  background:var(--pill-bronze-bg); border:1px solid var(--bronze-300); border-radius:999px; padding:7px 12px;
+  transition:background .16s, border-color .16s, transform .16s, box-shadow .16s;}
+.matlink:hover{background:var(--bronze-100); border-color:var(--bronze-400); color:var(--pill-bronze-ink);
+  transform:translateY(-1px); box-shadow:var(--shadow-sm);}
+:root[data-theme="dark"] .matlink:hover{background:rgba(207,162,104,0.26);}
+.matlink .mi{width:15px; height:15px; flex:0 0 auto;}
+.matlink .mi svg{width:15px; height:15px;}
+.matlink .arw{opacity:.55; font-weight:400;}
+
+/* ---------- Reference material → resource list ---------- */
+.reslist{display:flex; flex-direction:column; gap:9px; margin:14px 0 4px;}
+.resrow{display:flex; align-items:center; gap:14px; padding:12px 15px; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:13px; box-shadow:var(--shadow-sm);
+  transition:border-color .16s, transform .16s, box-shadow .16s;}
+.resrow:hover{border-color:var(--bronze-300); transform:translateY(-1px); box-shadow:var(--shadow-md);}
+.resrow .rico{width:38px; height:38px; flex:0 0 auto; border-radius:10px; display:grid; place-items:center;
+  background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+.resrow.doc .rico{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink);}
+.resrow .rico svg{width:19px; height:19px;}
+.resrow .rbody{min-width:0; flex:1 1 auto;}
+.resrow .rt{font-family:var(--serif); font-size:15px; font-weight:600; color:var(--ink); line-height:1.25;}
+.resrow .rc{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:0.03em; color:var(--muted); margin-top:3px;}
+.resrow .rgo{flex:0 0 auto; display:inline-flex; align-items:center; gap:6px; font-family:var(--sans);
+  font-size:12.5px; font-weight:600; color:var(--accent-2);}
+.resrow .rgo svg{width:14px; height:14px; transition:transform .16s;}
+.resrow:hover .rgo svg{transform:translateX(3px);}
+@media (max-width:560px){ .resrow .rgo span{display:none;} }
+
 /* ---------- Print book: cover + table of contents (screen-hidden) ---------- */
 .pbook{display:none;}
 
@@ -471,7 +518,8 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
   .reader{position:static;}
   /* when a document is open, print only that document — not the Hub behind it */
   html.reader-open body > *:not(.reader){display:none !important;}
-  .acc[open], .dgate, .estep, .eco-sig, .rcard, .eck{break-inside:avoid;}
+  .acc[open], .dgate, .estep, .eco-sig, .rcard, .eck, .mstep, .resrow{break-inside:avoid;}
+  .matlink, .resrow .rico, .mstep-n{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .eco-actions{display:none !important;}
 
   /* book front matter */
