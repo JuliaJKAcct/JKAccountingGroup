@@ -43,8 +43,11 @@ blindly.
 2. **Gas-station threshold — $25 (updated 2026-07-21).** At a gas station /
    convenience store (Sunoco, Shell, Gulf, Citgo, Exxon, Pilot, Cumberland
    Farms, 7-Eleven, …):
-   - **≥ $25** → fuel → *Auto Expenses: Vehicle gas and fuel* (a real business
-     fill-up).
+   - **≥ $25** → fuel → *Auto Expenses: Vehicle gas and fuel* (treated as a real
+     business fill-up). The $25 line is a **proxy** for "fuel vs. snack": if a
+     charge is clearly *not* fuel — an obvious food/snack run at a
+     convenience-store counter — it follows rule 3 → distribution regardless of
+     amount.
    - **< $25** → **Owner's distribution** — *not* a business expense. **Why:** a
      small charge at a gas station is almost always a snack, drink, or quick food
      run — not a tank of fuel — so it doesn't qualify as a business gas expense;
@@ -83,14 +86,15 @@ blindly.
    must not miss. First tell the two cases apart:
    - **ATM / over-the-counter cash withdrawal:** ask the owner what the cash was
      used for. It may be personal (→ distributions) *or* cash paid to a worker
-     (→ Subcontractor Labor — see rule 9 — with 1099 exposure, get a W-9). Don't
-     guess.
+     (→ the labor account per rule 9 — today booked to *Outside services* — with
+     1099 exposure, get a W-9). Don't guess.
    - **Transfer to another bank account:** check whether we recognize the
      destination account — pull how prior transfers to that *same* account were
      categorized (Double history / `get_similar_transactions`). A known
-     **contractor's** account → subcontractor labor (1099); the owner's
-     **personal** account (…2935) → distributions (rule 6). If the account is
-     unknown, ask the client before posting.
+     **contractor's** account → the labor account (rule 9; today *Outside
+     services*), with 1099 exposure; the owner's **personal** account (…2935) →
+     distributions (rule 6). If the account is unknown, ask the client before
+     posting.
 6. **Transfers with the owner's personal account (…2935):** money **in** →
    **Owner's contribution**; money **out** → **Owner's distribution**. Post to
    those two specific equity accounts — **not** the *Owner's Equity* parent

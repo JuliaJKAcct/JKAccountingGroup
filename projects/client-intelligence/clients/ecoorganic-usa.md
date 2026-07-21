@@ -83,7 +83,7 @@ the actual details.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
 - Only **one live bank feed** (Chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed.
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
-- Several open categorization decisions (meals policy, vehicle finance lease-vs-loan, etc.) tracked in the SOP's Open decisions log.
+- Several open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex) tracked in the SOP's Open decisions log. *(Meals/gas policy is now resolved — see the log.)*
 
 ## 6. History & open questions
 
@@ -95,14 +95,14 @@ the actual details.
 - 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed. Grocery/food stores → distributions, **except** supply/materials stores (Home Depot, hardware, work-parts, rental/supply houses) → Supplies & Materials/COGS. Vehicle financing left as an **open question** (SOP's "Hyundai/Ally" doesn't match the actual RAM truck loans — to reconcile later). Lilian notes she's "flying blind" on this new client and will study it piece by piece.
 
 ### Outstanding items (CI-only — never in the SOP)
-- Open categorization decisions (meals policy, vehicle finance lease-vs-loan, which disconnected accounts are closed) — tracked in the SOP's **Open decisions log**; live status in Double.
+- Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
 - [ ] Sales tax / payroll / income tax applicability and who prepares each
 - [ ] Any business licenses / annual filings
 - [ ] Where credentials live (Drive vault link)
-- [ ] Resolve the SOP's open decisions (meals policy, HMF/Ally, closed accounts)
+- [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
 ## 7. Links
 
