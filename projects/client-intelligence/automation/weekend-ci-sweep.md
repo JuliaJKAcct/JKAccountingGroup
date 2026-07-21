@@ -21,6 +21,10 @@ For the scoped clients, once per week:
    completeness* below). **Incremental:** every search is bounded by the client's
    baseline date in [`sweep-state.md`](./sweep-state.md) — history already swept is
    never re-read, which is what keeps the run cheap as the client list grows.
+   Double's **custom client properties** (`list_client_properties`) are the primary
+   structured input for a client's Operating zone — service frequencies (bookkeeping,
+   sales tax, payroll), tax-return type / entity, 1099 and annual-report flags, and
+   the assigned staff — clean and non-sensitive (skip EIN / Tax ID).
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). Commit to a branch `weekend-ci-sweep`, push. **Never** touches
@@ -69,6 +73,12 @@ was said). Better a sourced, low-confidence note than nothing.
 | ECOORGANIC USA LLC | 719473 |
 | Kolo Florida Inc | 706626 |
 | Pro Title Agency | 706716 |
+| NEVER GIVE UP KK LLC | 742803 |
+| YES TEAM CORP | 706718 |
+| MASCIAVE DESIGN STUDIO LLC | 706696 |
+| iKids Group LLC | 706689 |
+| Deep Tech Development LLC | 706685 |
+| AURA REMODELING LLC | 706679 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -110,12 +120,18 @@ CLIENTS (name -> Double id):
 - ECOORGANIC USA LLC -> 719473
 - Kolo Florida Inc -> 706626
 - Pro Title Agency -> 706716
+- NEVER GIVE UP KK LLC -> 742803
+- YES TEAM CORP -> 706718
+- MASCIAVE DESIGN STUDIO LLC -> 706696
+- iKids Group LLC -> 706689
+- Deep Tech Development LLC -> 706685
+- AURA REMODELING LLC -> 706679
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
    - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
    - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
-   - Double: get_client, list_notes, list_contacts (ROLES only), list_activity_log. QuickBooks if useful.
+   - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — but SKIP the "EIN / Tax ID" property, it is sensitive); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
    Keep it bounded (~10-15 calls/client).
 2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, EINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. Update "Last updated".
 3. Do NOT modify anything under projects/sops/. Instead, for clients with a SOP, note which new Operating-zone facts the SOP does not yet reflect -- these are PROPOSALS for Lilian.

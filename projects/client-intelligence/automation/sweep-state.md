@@ -25,6 +25,12 @@ list grows.
    to the run date for every client actually swept.
 5. If a sweep fails partway, only advance the baselines of the clients that were
    fully processed.
+6. **Cap the catch-up work per run.** A first-time or coverage-gap **full historical
+   pass** is expensive, so do **at most ~6 of them per run** (priority order:
+   QuickBooks / active clients first, then the rest); the remaining catch-ups wait
+   for the next run. This keeps any single Saturday within budget no matter how many
+   clients get added. The cheap **incremental** (post-baseline) passes on
+   already-covered clients still run for **all** of them every time.
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
@@ -33,8 +39,15 @@ list grows.
 | ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
 | Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
 | Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
+| NEVER GIVE UP KK LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
+| YES TEAM CORP | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
+| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | Ping + Gmail + Double-notes history not yet swept (built from Double properties only) |
+| iKids Group LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
+| Deep Tech Development LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
+| AURA REMODELING LLC | 2026-07-20 | Ping + Gmail history not yet swept (built from Double properties only) |
 
-_Baselines set 2026-07-20 from the first manual sweep (Ping + Double for all five;
+_Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
+for all five;
 Gmail was only searched topically, around Best Broker's BTR — hence every client
 owes a one-time full Gmail pass). That catch-up run may exceed the steady-state
 per-client call bound once; that's expected._

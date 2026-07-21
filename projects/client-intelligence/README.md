@@ -161,12 +161,7 @@ client-intelligence/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (see the Clients index below)
-    ├── atman-parts.md
-    ├── best-broker-realty.md
-    ├── ecoorganic-usa.md
-    ├── kolo-florida.md
-    └── pro-title-agency.md
+└── clients/               ← one file per client (11 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -178,6 +173,12 @@ client-intelligence/
 | ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP |
 | Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | In progress — skeleton only |
 | Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
+| NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — from Double properties |
+| YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — from Double properties |
+| MASCIAVE DESIGN STUDIO LLC | [`clients/masciave-design-studio.md`](./clients/masciave-design-studio.md) | Lilian | In progress — from Double properties |
+| iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — from Double properties |
+| Deep Tech Development LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — from Double properties |
+| AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — from Double properties |
 
 ## Brand & design
 
