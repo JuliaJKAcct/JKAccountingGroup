@@ -1,6 +1,6 @@
 # NEVER GIVE UP KK LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -73,7 +73,7 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- **Owner is a serial entrepreneur** with several JK-serviced entities. The owner was **formerly an employee of Deep Tech Development** (not its owner) — that employment is the only link between the two clients; the two do **not** share ownership. _(Corrected by Lilian, 2026-07-20.)_
+- **Owner is a serial entrepreneur** with several JK-serviced entities. The owner was **formerly an employee of Deep Tech Development** (not its owner) — that employment is the only *ownership* link between the two clients; the two do **not** share ownership. _(Corrected by Lilian, 2026-07-20.)_ **Update 2026-07-21:** a Drive record shows Never Give Up KK LLC has also **invoiced Deep Tech Development Group LLC for consulting services** (Sep 2025) — so beyond the past employment, there is also a business/consulting relationship between the two entities. Flagged as a cross-link for Deep Tech Development's own CI file (out of this sweep's scope). _(Drive, 2026-07-21)_
 - **E-2 investor-visa considerations** shape the engagement — business-operations documentation and **US tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(Gmail)_
 - **Cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(Gmail)_
 - Client communication runs through a **shared WhatsApp group** set up at onboarding.
@@ -84,6 +84,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies).
 - 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Incremental sweep (baseline 2026-07-20, inclusive):** no new Ping meetings, Gmail threads (in:inbox / in:sent, `after:2026/07/20`), or Double notes/activity within the window. Drive: confirmed the client folder link (§7) and found a consulting invoice to Deep Tech Development Group LLC nuancing the owner-employment note in §5 (see above). Repo: no SOP file exists yet for this client; no FOLLOW-UPS/BACKLOG mentions found.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. _(Double note 2026-07-14)_

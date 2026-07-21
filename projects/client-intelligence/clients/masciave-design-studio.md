@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -49,18 +49,18 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Sales-tax portal | Filing sales tax (quarterly) | _(pending — Drive link)_ | _(jurisdiction pending)_ |
-| Payroll (automatic) | Payroll | _(pending — Drive link)_ | Provider _(pending)_ |
+| Payroll (automatic) | Payroll | _(pending — Drive link)_ | **Gusto (AutoPilot)** — confirmed via a 2026-07-21 payroll-run notification _(Gmail, 2026-07-21)_ |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Jurisdiction(s):** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** The internal Double filing-task recurrence was changed from the **1st** to the **5th** day of the filing month on 2026-07-20 — confirm this still lines up with the actual FL DOR due date. _(Double activity log, 2026-07-20)_
 
 ### Payroll
 - **Applies?** Yes — **automatic** _(Double)_
-- **Provider / frequency:** _(pending — confirm provider)_
+- **Provider / frequency:** **Gusto, AutoPilot** — biweekly pay periods (e.g. Jul 6–Jul 19 run confirmed 2026-07-21). _(Gmail, 2026-07-21)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
@@ -87,12 +87,14 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping, sales tax and design-studio profile). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Ping / Gmail / Double-note enrichment sweep:** established the interior-design profile (IIDA/ASID/CPTED), FL (Broward) location, Gusto payroll, FL DOR quarterly sales tax, and confirmed the accrual-books / cash-tax reporting basis from the Double note. Ping had **no indexed meetings**; facts are from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Incremental sweep (baseline 2026-07-20, inclusive):** confirmed Gusto AutoPilot as the payroll provider (Gmail payroll-run notice) and a Double task-recurrence change on the Sales Tax filing task (1st → 5th day). Q2 financials were delivered to the client 2026-07-20 (Gmail, routine). Double's month-end-close tasks (Balance Sheet, P&L, Uncategorized Transactions, bank reconciliation) were marked Done for "06-2026" on 2026-07-20 — **note:** this close cadence looks monthly in Double's task system even though the "Bookkeeping" client property is set to Quarterly; flagged below to clarify. No new Ping meetings. Repo: no dedicated SOP file exists for Masciave (its §5 COA note only *references* a different client's SOP as an analogy); no FOLLOW-UPS/BACKLOG mentions found.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — verify. _(recurring-expense review)_
 - Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket (feeds were unstable).
 - Confirm the exact **FL sales-tax county / registration**.
-- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement.
+- **Confirmed 2026-07-21:** the **linked personal client (Double 710615)** is the owner's (Alejandra Pallisso) individual profile (platform: none) — presumed her individual 1040 engagement, not a separate business. _(Double, 2026-07-21)_
+- Clarify whether the **monthly Double close-task cadence** (Balance Sheet/P&L/Uncategorized Transactions marked Done for "06-2026") matches the **quarterly** Bookkeeping property, or whether the property needs updating to Monthly.
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration

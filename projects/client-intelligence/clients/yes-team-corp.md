@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,7 +77,7 @@ the actual details.
 - Appears in older email as "Yes Team **LLC**", now "Yes Team **CORP**" — an LLC taxed as S-corp.
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
 - **Family cluster at the firm:** the owner's parents are also clients (a FL LLC for partnership tax prep) and another FL entity was being formed for the family — the firm cross-refers within this family; keep each entity's books separate.
-- The owner is linked to a **second Double client (id 710636)** — a related entity; scope not yet documented.
+- The owner is linked to a **second Double client (id 710636)** — **resolved 2026-07-21: this is the owner's (Igor Poluyko) individual profile** (platform: none), i.e. his personal side, not a second operating business. Presumed to be his individual 1040 engagement; not yet a separate CI file (personal, not company-operations). _(Double, 2026-07-21)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -85,16 +85,16 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll).
 - 2026-07-20 — **Gmail enrichment sweep:** established the marketing-services profile (customers Alirm / Mellanni), RU language, FL (inferred), Gusto AutoPilot payroll + accountable-plan reimbursements, and the Jan-2026 S-election. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Incremental sweep (baseline 2026-07-20, inclusive):** no new Ping meetings or Gmail threads (in:inbox / in:sent, `after:2026/07/20`); Double notes/activity log empty for the window. Resolved the second-linked-entity pending item (see §5). Drive folder link reconfirmed. Repo: no SOP file exists yet for this client; no FOLLOW-UPS/BACKLOG mentions found.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm the **registered home state** definitively (strongly inferred FL, not documented).
 - **Retirement plan** — proposals were presented (Feb 2026) by an external TPA; decision / status unknown.
 - **Mellanni invoice format** — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names; verify resolved and the template fixed.
-- Clarify the **second linked entity (Double 710636)** and whether it needs its own CI file.
 
 ### Information still needed
 - [ ] Confirm registered home state; fiscal year-end
-- [ ] Credentials Drive link; the second linked entity (710636)
+- [ ] Credentials Drive link
 
 ## 7. Links
 
