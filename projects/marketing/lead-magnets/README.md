@@ -7,6 +7,12 @@ the firm's marketing funnel: each gives a foreign-owned business founder a quick
 answer to one real worry, captures their contact info, and routes them to book a
 consultation.
 
+> **Related — the big/flagship magnet:** these tools answer *one* narrow worry
+> each. The comprehensive *guide* + opt-in landing page for the whole first-year
+> setup question lives in
+> [`../foreign-owner-us-playbook/`](../foreign-owner-us-playbook/) (which links
+> back to several of the calculators below). Keep the two coherent.
+
 ## Purpose
 
 These are the firm's **lead magnets** (the funnel entry point from the "Scale

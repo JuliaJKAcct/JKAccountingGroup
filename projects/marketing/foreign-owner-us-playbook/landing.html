@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- =========================================================================
+     LANDING PAGE — "The Foreign Owner's US Business Playbook" (free guide)
+     Layout mirrors a high-converting opt-in page (hero + offer + proof +
+     before/after + preview + who-it's-for + authority + capture + final CTA),
+     rebuilt in the JK Atlas system and the firm's calm, plain-English voice.
+     Primary conversion: capture email -> deliver guide.html.
+     A/B TITLE VARIANTS for the hero <h1> (swap to test):
+       A · map      : "Everything a foreign owner needs to start a US business — the right way."
+       B · mistake  : "Start your US business without the mistakes that cost foreign owners the most."
+       C · question : "Opening a business in the US? Here's the whole map — before you commit."
+     Ships variant A.
+     ========================================================================= -->
+<title>Free Guide: The Foreign Owner's US Business Playbook | JK Accounting Group</title>
+<meta name="description" content="A free, plain-English guide for foreign owners starting a business in the US: which company to open, the $25,000 form nobody explains, EIN with no SSN, sales tax, and the yearly filings — plus a setup checklist. From JK Accounting Group.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/playbook.css">
+</head>
+<body>
+<a class="skip" href="#get">Skip to the guide</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="landing.html" aria-label="JK Accounting Group">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="#get">Get the free guide</a>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== HERO + OPT-IN ===================== -->
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid has-optin">
+        <div class="hero-content">
+          <p class="kicker">Free guide · For foreign business owners</p>
+          <h1>Everything a foreign owner needs to start a US business — <span class="em">the right way.</span></h1>
+          <p class="lede">You came to build a business, not to learn a new tax system. This free guide is the whole map: which company to open, the filings that surprise foreign owners, and the mistakes that cost the most — in plain language, no fear. <strong>Selling physical products or holding stock in US warehouses? It's especially for you.</strong></p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>Miami · Fort Lauderdale · Online</span>
+          </p>
+          <div class="hero-cred">
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg> Boutique &amp; founder-led</span>
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18M3 12h18M3 19h18" stroke-linecap="round"/></svg> English · Russian · Ukrainian</span>
+            <span class="hc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> A real advisor, not a call center</span>
+          </div>
+          <div class="founder-chip">
+            <img src="assets/img/julia-ivory.png" alt="Julia, founder of JK Accounting Group">
+            <p class="t"><b>Written by Julia &amp; the JK team</b>We speak your language</p>
+          </div>
+        </div>
+
+        <!-- Opt-in card (primary capture) -->
+        <div class="hero-optin reveal">
+          <h2>Send me the free guide</h2>
+          <p class="sub">14 short chapters, a setup checklist, and a yearly calendar. Read it in about 25 minutes.</p>
+          <form class="form-mini" data-optin action="#REPLACE-WITH-ENDPOINT" method="post">
+            <input type="text" name="name" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name" required>
+            <input type="email" name="email" placeholder="Your best email" autocomplete="email" aria-label="Your email" required>
+            <button type="submit" class="btn cta lg block">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></button>
+          </form>
+          <p class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg> Instant access. No cost, no spam — just the guide and the occasional useful tip. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFFER: what's inside ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">In this free guide, you'll learn</p>
+        <h2>The rules foreign owners wish someone had told them first</h2>
+      </div>
+      <div class="offer-wrap reveal">
+        <ul class="offer-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Which US company to open as a foreigner</b> — and the popular one you legally <em>cannot</em> have if you live abroad.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The $25,000 form</b> most foreign owners never hear about — and how to make sure it never touches you.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>How to get your EIN</b> (your company's tax ID) with <em>no</em> US social security number.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>When you must collect US sales tax</b> — including the warehouse trap that catches online sellers.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>How to take profit home</b> without losing a flat 30% — and the one form that lowers it.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The "days in the US" line</b> that can quietly turn you into a US taxpayer on your worldwide income.</span></li>
+        </ul>
+        <div class="offer-bonus">
+          <span class="ob-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>
+          <div class="ob-t"><b>Plus: your setup checklist &amp; 6 free tools</b>A first-year checklist you can tick off, a yearly filing calendar, and six 1-minute tools to check your own risk.</div>
+          <span class="ob-tag">Included free</span>
+        </div>
+        <div class="center" style="margin-top:26px;">
+          <a class="btn cta lg" href="#get">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg></span>
+          <p class="tt-t"><b>Built for foreign owners</b>By a bicultural US accounting firm that works with newcomers every day.</p>
+        </div>
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-linecap="round"/></svg></span>
+          <p class="tt-t"><b>Federal + every state</b>The IRS rules that apply anywhere, plus how state and local pieces fit in.</p>
+        </div>
+        <div class="trust-item">
+          <span class="tt-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="tt-t"><b>From real situations</b>Written from the questions real owners ask us — in English, Russian &amp; Ukrainian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM / REFRAME ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Why this matters</p>
+        <h2>It's almost never the business that trips people up. It's the paperwork nobody warned them about.</h2>
+        <p>You can be great at what you do and still walk into a $25,000 fine — simply because a rule existed that no one told you about. That's not your fault. The US system is just genuinely different, and most of it is invisible until it's a problem. This guide makes it visible while it's still easy to handle.</p>
+      </div>
+
+      <!-- Before / after -->
+      <div class="contrast-grid reveal">
+        <div class="contrast-col before">
+          <p class="cc-tag"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01" stroke-linecap="round"/></svg> Without the map</p>
+          <h3>Guessing, and finding out at tax time</h3>
+          <ul class="contrast-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Copying what a friend did — whose situation was different from yours.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Registering in the wrong state and paying twice.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Learning about Form 5472 from an IRS notice, not a guide.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg><span>Losing 30% on money sent home because a form was missed.</span></li>
+          </ul>
+        </div>
+        <div class="contrast-col after">
+          <p class="cc-tag"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> With the map</p>
+          <h3>Knowing the rules before you commit</h3>
+          <ul class="contrast-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Choosing the right company type for <em>your</em> plan and country.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Registering once, in the state that actually fits.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every filing on a calendar, handled before it's late.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Keeping more of what you earn, on purpose.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREVIEW: 3 columns ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">What you get</p>
+        <h2>A guide you'll actually use — not another PDF you never open</h2>
+      </div>
+      <div class="preview-cols reveal">
+        <div class="preview-card">
+          <h3>What's inside</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>14 short, plain-language chapters</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every tax word defined in one line</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The traps marked clearly, in advance</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A simple company-type comparison table</span></li>
+          </ul>
+        </div>
+        <div class="preview-card">
+          <h3>What you'll set up</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Your company — the right type and state</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Your EIN and ITIN, in the right order</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Your US bank account</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Your filings, on a calendar</span></li>
+          </ul>
+        </div>
+        <div class="preview-card">
+          <h3>What you'll walk away with</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A first-year checklist you can tick off</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A year-at-a-glance filing calendar</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The exact questions worth asking an advisor</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Six free tools to check your own risk</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TOPIC GRID ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">What the guide covers</p>
+        <h2>The whole first year, in one place</h2>
+      </div>
+      <div class="uc-grid reveal">
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 7l2 13h12l2-13M9 11v5M15 11v5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapters 1–3</p>
+          <h3>The right company &amp; state</h3>
+          <p>How you'll be taxed, LLC vs C-Corp, the S-Corp trap, and the Delaware myth.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4" stroke-linecap="round"/></svg></span>
+          <p class="uc-n">Chapters 4–6</p>
+          <h3>EIN, ITIN &amp; your bank</h3>
+          <p>Get your numbers with no SSN, and open a US account as a foreigner.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5M12 16v.01" stroke-linecap="round"/></svg></span>
+          <p class="uc-n">Chapter 7</p>
+          <h3>The $25,000 form</h3>
+          <p>Form 5472 in plain words — who must file, and how to never miss it.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18" stroke-linecap="round"/><path d="M7 14l4-4 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapters 8–9</p>
+          <h3>Income &amp; sales tax</h3>
+          <p>Quarterly payments, and when you must collect sales tax in a state.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 19c0-2 1-3.4 2.8-3.7" stroke-linecap="round"/></svg></span>
+          <p class="uc-n">Chapters 10–11</p>
+          <h3>Workers &amp; taking money out</h3>
+          <p>Employee vs contractor, and the treaty that cuts the 30% withholding.</p>
+        </div>
+        <div class="uc-card">
+          <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16M9 15l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="uc-n">Chapters 12–14</p>
+          <h3>Your calendar &amp; the traps</h3>
+          <p>A year at a glance, the "days in the US" trap, and 10 costly mistakes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THIS IS FOR YOU IF ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Is this for you?</p>
+        <h2>This guide is for you if…</h2>
+      </div>
+      <div class="foryou reveal">
+        <ul class="nod-list two">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You're <b>planning or just started</b> a US company from another country.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You keep getting <b>conflicting advice online</b> and don't know who to trust.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>English isn't your first language</b> and the tax words feel like a wall.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You'd rather <b>avoid an expensive mistake</b> than pay to fix one later.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You <b>sell to US customers</b>, or plan to soon.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You want to <b>understand the rules</b>, not just hand everything off blindly.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AUTHORITY ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="assets/img/julia-navy.png" alt="Julia, founder of JK Accounting Group">
+        </div>
+        <div>
+          <h3>Why this comes from us</h3>
+          <p class="role">Julia · Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">We're a boutique US accounting firm built for one kind of client: the foreign owner making it work in America. We answer these exact questions every week — which is why this guide is plain, specific, and honest about what needs a real conversation.</p>
+          <p class="bio">When you want more than a guide, we become your finance department in the US: bookkeeping, taxes, and staying right with the IRS — done as you go, in your own language.</p>
+          <p class="credo">"You focus on the business. We handle the rest."</p>
+          <!-- Credibility bar: only TRUE, supportable anchors (brand rule: no invented numbers). -->
+          <div class="cred-bar">
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3l-4.8 2.5.9-5.4L4.2 12.6l5.4-.8z" stroke-linejoin="round"/></svg> Boutique, founder-led firm</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Miami · Fort Lauderdale · Online</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg> Built for foreign owners</span>
+            <span class="cb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> We reply within one business day</span>
+            <!-- TODO (Julia — add REAL proof, do not invent): professional credential
+                 (e.g. licensed CPA / IRS Enrolled Agent), years in business,
+                 clients helped, and a real Google rating/review count once available.
+                 Add each as another <span class="cb">…</span> chip. -->
+          </div>
+        </div>
+      </div>
+      <!-- TODO (Julia): once we have permission, add 2–3 REAL client testimonials
+           (name + city + real photo) here. Brand rule: never fabricate quotes,
+           names, numbers, or faces. Leaving this out until they're real. -->
+    </div>
+  </section>
+
+  <!-- ===================== FAQ (objection handling) ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Before you enter your email</p>
+        <h2>Straight answers to the fair questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Is it really free? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">Yes — the whole guide is free. No cost, no credit card, nothing to buy. We share it because the owners we help usually had no place to learn this in plain language. If you later want us to handle your books and taxes, that's a paid service you choose — never a catch here.</p>
+        </details>
+        <details>
+          <summary>Will you spam me or sell my email? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a"><b>No.</b> We send you the guide right away, then only the occasional useful tip. We never sell or share your email. One click unsubscribes you, and we won't chase you.</p>
+        </details>
+        <details>
+          <summary>I sell physical products and store stock in the US. Is this for me? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a"><b>Especially you.</b> Selling products and holding inventory in US warehouses brings its own rules — sales tax in many states at once, and, if you bring goods in from abroad, customs and import duties. The guide covers the sales-tax side, and the final step points you to the import questions that are worth a quick conversation.</p>
+        </details>
+        <details>
+          <summary>I haven't opened my US company yet. Is it too early? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">This is the best time. The whole point is to read it <em>before</em> you set up — so you choose the right company type and state the first time, instead of paying to fix it later.</p>
+        </details>
+        <details>
+          <summary>What happens if I book a call? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <p class="fq-a">A free 20-minute call with a <b>senior advisor — not a salesperson</b> — in English, Russian, or Ukrainian. You bring your situation, we tell you the two or three things that matter most for you. No cost, and no pressure to become a client.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN CAPTURE ===================== -->
+  <section class="section tint" id="get">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Get the free guide now</h2>
+          <p class="lede">Enter your name and email and we'll send you the full playbook right away — 14 chapters, the setup checklist, and the yearly calendar.</p>
+          <ul class="lead-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Instant access — read it on any device.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plain English, written for non-native speakers.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No cost, no spam. Unsubscribe anytime.</span></li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="#REPLACE-WITH-WHATSAPP">Message us here</a>
+          </p>
+        </div>
+
+        <!-- NOTE: form submission endpoint not wired yet — replace action + method.
+             On success, deliver/redirect to guide.html. -->
+        <form class="form-card" data-optin action="#REPLACE-WITH-ENDPOINT" method="post">
+          <div class="fc-head">
+            <h3>Send me the playbook</h3>
+            <p>We'll email it right away and send the occasional useful tip. That's it.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your first name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field full">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send me the guide <span class="arw" aria-hidden="true">&rarr;</span></button>
+              <span class="fine">Instant access. We never share your email, and you can unsubscribe in one click. <a href="#REPLACE-WITH-PRIVACY-URL" style="color:var(--teal-700); font-weight:600;">Privacy</a>.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g></svg>
+      <h2>Start your US business on solid ground.</h2>
+      <p class="tag">Get the map first. The whole guide is free — and it might save you the most expensive lesson of your first year.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#get">Send me the free guide <span class="arw" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax or legal advice.</b> This guide explains US rules for foreign owners in simple terms to help you understand your situation. It is not advice for your specific case, and rules and amounts change. Please talk to us (or a qualified advisor) before you make a decision.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg class="fmk" viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="#get">Get the free guide</a>
+  <a class="sticky-wa" href="#REPLACE-WITH-WHATSAPP" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="assets/playbook.js"></script>
+<script>
+/* ---- Opt-in demo behavior ----
+   The lead endpoint is not wired yet (action="#REPLACE-WITH-ENDPOINT").
+   Until it is, this makes the page a working prototype: it captures the
+   entry locally and takes the visitor straight to the guide, so the whole
+   funnel can be experienced and reviewed. Replace with a real POST that
+   stores the lead and then redirects to guide.html. -->
+(function () {
+  "use strict";
+  var forms = document.querySelectorAll('form[data-optin]');
+  Array.prototype.forEach.call(forms, function (f) {
+    f.addEventListener("submit", function (e) {
+      var action = f.getAttribute("action") || "";
+      if (action.indexOf("#REPLACE") !== 0) return; // real endpoint set -> submit normally
+      e.preventDefault();
+      var email = (f.querySelector('input[type=email]') || {}).value || "";
+      var name = (f.querySelector('input[name=name]') || {}).value || "";
+      try {
+        localStorage.setItem("jk-playbook-lead", JSON.stringify({ name: name, email: email, at: new Date().toISOString() }));
+      } catch (err) {}
+      window.location.href = "guide.html?from=landing";
+    });
+  });
+})();
+</script>
+</body>
+</html>

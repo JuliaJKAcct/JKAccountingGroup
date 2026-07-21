@@ -17,6 +17,7 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`marketing/consultation-booking/`](./marketing/consultation-booking/) | The "Book a Consultation" front door — routes new/prospective vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [`marketing/scale-your-accounting-firm/`](./marketing/scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
 | [`marketing/lead-magnets/`](./marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. On-brand self-contained HTML tools. | Active |
+| [`marketing/foreign-owner-us-playbook/`](./marketing/foreign-owner-us-playbook/) | Flagship lead magnet: a comprehensive plain-English guide for foreign owners setting up a US business, plus a high-converting opt-in landing page (email → guide → book a call). On-brand self-contained HTML; draft, pending endpoint wiring + tax-figure sign-off. | Active |
 | [`reasonable-compensation/`](./reasonable-compensation/) | Determine & document a defensible S-corp owner salary; outputs branded HTML reports. | Active |
 | [`recurring-expense-monitoring/`](./recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report, via the `recurring-expense-monitoring` skill. Watchlists live in Google Drive, not the repo. | Active |
 | [`sops/`](./sops/) | The firm's standard operating procedures and day-to-day client-task runbooks (e.g. Business Tax Receipt filings), written and reviewed via the [`sop-authoring`](../.claude/skills/sop-authoring/) skill. Client-specific data stays in the firm's client systems, not the repo. | Active |
@@ -24,7 +25,7 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 | [`knowledge-hub/`](./knowledge-hub/) | One on-brand, searchable **index page** for the whole firm — every SOP and every client in one place, generated straight from `sops/` + `client-intelligence/` so it never drifts. A "review Hub" (shows everything, with status badges) that later publishes only the *ready* documents to the Odoo team site. Built on Atlas with the `impeccable` skill. | Active |
 | [`bookkeeping-kpis/`](./bookkeeping-kpis/) | On-brand, dynamic **bookkeeping-performance dashboards** — one per client — that read a client's live QuickBooks/Double financials at a glance (health score, ranked signals & alerts, expense + revenue-vs-net charts, balance-sheet snapshot), heading toward one board listing every bookkeeping client. Built via the [`bookkeeping-kpis`](../.claude/skills/bookkeeping-kpis/) skill + `impeccable`. Only the sample-data template is committed — real client figures ship as artifacts, never in the repo. | Active |
 
-> The first seven rows are the **marketing group** — they live under
+> The first eight rows are the **marketing group** — they live under
 > [`marketing/`](./marketing/), which also holds the firm's shared offer
 > [`positioning.md`](./marketing/positioning.md) and a
 > [`CLAUDE.md`](./marketing/CLAUDE.md) that gives Claude a marketing-strategist

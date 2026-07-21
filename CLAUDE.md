@@ -31,7 +31,8 @@ the US.
 │   │   ├── referral-offer-strategy/  front-offer + referral-partner funnel strategy (Planning)
 │   │   ├── consultation-booking/  "Book a Consultation" front door — routes new vs existing clients to two Odoo calendars (Active)
 │   │   ├── scale-your-accounting-firm/  digested notes from the "Scale Your Accounting Firm" course, by track/module/video (Active)
-│   │   └── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
+│   │   ├── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
+│   │   └── foreign-owner-us-playbook/  flagship lead magnet — full setup guide + opt-in landing page for foreign owners starting a US business (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   ├── sops/                      firm standard operating procedures + client-task runbooks (Active)
@@ -80,6 +81,7 @@ the US.
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | A **lead magnet** — a free calculator or assessment/quiz for the top of the funnel (S-corp savings, surprise tax bill, license check, foreign-account check…), or the on-brand HTML tool that powers one | [`projects/marketing/lead-magnets/`](./projects/marketing/lead-magnets/) |
+| The **big/flagship lead magnet** — a comprehensive *guide* (not a quick calculator) for foreign owners starting a US business, plus its opt-in **landing page** (capture email → deliver guide → book a call), mimicking a high-converting funnel layout | [`projects/marketing/foreign-owner-us-playbook/`](./projects/marketing/foreign-owner-us-playbook/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian" **or writes in Spanish**; an unidentified non-Spanish session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |

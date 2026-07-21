@@ -34,6 +34,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Marketing · Consultation Booking](./projects/marketing/consultation-booking/) | The "Book a Consultation" front door — routes new vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [Marketing · Scale Your Accounting Firm](./projects/marketing/scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
 | [Marketing · Lead Magnets](./projects/marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. | Active |
+| [Marketing · Foreign Owner's US Playbook](./projects/marketing/foreign-owner-us-playbook/) | Flagship lead magnet — a comprehensive plain-English guide for foreign owners starting a US business, plus a high-converting opt-in landing page (email → guide → book a call). | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
@@ -41,7 +42,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Knowledge Hub](./projects/knowledge-hub/) | One on-brand, searchable index page for the whole firm — every SOP and every client in one place, generated from `sops/` + `client-intelligence/` so it never drifts. Browse, filter, open any document. | Active |
 | [Bookkeeping KPIs](./projects/bookkeeping-kpis/) | On-brand, dynamic bookkeeping-performance dashboards — one per client — that read a client's live QuickBooks/Double financials at a glance (health score, ranked signals & alerts, charts, balance-sheet snapshot), heading toward one board listing every bookkeeping client. Only the sample-data template is committed; real client figures ship as artifacts. | Active |
 
-The seven **Marketing** rows are one group under
+The eight **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
 shared offer positioning and the marketing operating-persona for Claude. See
 [`projects/README.md`](./projects/README.md) for the full index and the
