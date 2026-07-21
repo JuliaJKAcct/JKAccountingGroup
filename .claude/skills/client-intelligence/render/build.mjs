@@ -301,8 +301,7 @@ function ownerSection(o){
 </section>`;
 }
 
-const nL = clients.filter(c=>c.owner==='Lilian').length;
-const nM = clients.filter(c=>c.owner==='Maria').length;
+const ownerCounts = Object.fromEntries(ownerOrder.map(o=>[o, clients.filter(c=>c.owner===o).length]));
 const groups = [...new Set(clients.map(c=>c.group).filter(Boolean))];
 
 const style = fonts.trimEnd() + '\n\n' + atlas.trimEnd() + '\n\n' + DASH_CSS();
@@ -325,8 +324,7 @@ const body = `
     <p class="lede">A living snapshot, generated straight from the client-intelligence files. Skim your book, check the facts, and flag anything wrong, missing, or out of date — tell Claude and it edits the client's file and re-publishes this page.</p>
     <div class="meta">
       <span class="chipm live"><span class="dot"></span><b>${clients.length}</b> clients</span>
-      <span class="chipm"><span class="dot"></span><b>${nL}</b> Lilian</span>
-      <span class="chipm"><span class="dot"></span><b>${nM}</b> Maria</span>
+      ${ownerOrder.map(o=>`<span class="chipm"><span class="dot"></span><b>${ownerCounts[o]}</b> ${esc(o)}</span>`).join('')}
       <span class="chipm"><span class="dot"></span><b>${groups.length}</b> owner-groups</span>
       <span class="chipm"><span class="dot"></span>as of <b>${esc(asOf)}</b></span>
     </div>
@@ -339,8 +337,7 @@ const body = `
       <input id="q" type="search" placeholder="Search clients, industry, systems…" autocomplete="off"></label>
     <div class="cx-owners" id="owners">
       <button class="cx-of active" data-o="all">All</button>
-      <button class="cx-of" data-o="Lilian">Lilian</button>
-      <button class="cx-of" data-o="Maria">Maria</button>
+      ${ownerOrder.map(o=>`<button class="cx-of" data-o="${esc(o)}">${esc(o)}</button>`).join('')}
     </div>
     <div class="cx-exp"><button class="cx-xb" id="expAll">Expand all</button><button class="cx-xb" id="colAll">Collapse all</button></div>
     <span class="cx-count" id="count"></span>
