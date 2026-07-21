@@ -32,10 +32,11 @@ The funnel is deliberate:
    parts (decide → set up → file → stay safe), colored plain-language callouts,
    a company-type comparison table, a yearly compliance calendar, and an
    **interactive first-year checklist** (progress saved in `localStorage`). It
-   reads as a **menu-driven reader — one chapter at a time** (a Contents menu on
-   desktop, a slide-in drawer on mobile, plus prev/next and a "3 / 17"
-   position), so the long guide feels light instead of endless. Progressive
-   enhancement: with JS off, it falls back to a normal single-page scroll.
+   reads through a **sticky numbered tab bar** (mirroring the reference funnel):
+   the guide's four Parts become ~6 tabs across the top (01…06), one section
+   shown at a time, with prev/next between sections — so a 14-chapter guide reads
+   like a light, six-tab doc instead of one endless scroll. Progressive
+   enhancement: with JS off it falls back to a normal single-page scroll.
 3. **The bridge to a call** — the guide ends in a **"What's your next step?"**
    mini-quiz. It deliberately shows where the *general* guide stops and the
    reader's *specific* situation begins (their entity, treaty, states, how they

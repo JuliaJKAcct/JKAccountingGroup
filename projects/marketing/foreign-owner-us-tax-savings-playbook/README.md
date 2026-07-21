@@ -30,11 +30,11 @@ The funnel:
    depreciation, the permanent 20% QBI deduction, retirement (SEP / Solo 401k),
    efficient repatriation + treaties, timing, credits, why clean books *are* the
    strategy, quarterly planning, and the "smart, not aggressive" line. It reads
-   as a **menu-driven reader — one chapter at a time** (a Contents menu on
-   desktop, a slide-in drawer on mobile, prev/next, and a "3 / 17" position) so
-   the long guide feels light; with JS off it falls back to a normal scroll.
-   Also an interactive **"what am I leaving on the table?"** self-check
-   (localStorage).
+   through a **sticky numbered tab bar** (mirroring the reference funnel): the
+   four Parts become ~6 tabs across the top (01…06), one section shown at a time,
+   with prev/next between sections — so the guide reads light instead of endless;
+   with JS off it falls back to a normal scroll. Also an interactive **"what am I
+   leaving on the table?"** self-check (localStorage).
 3. **The bridge to a call** — the guide ends in a **"where are you most likely
    overpaying?"** quiz. Its logic is deliberately airtight for this offer: *we
    can't put a number on your savings without your actual books — that's exactly
