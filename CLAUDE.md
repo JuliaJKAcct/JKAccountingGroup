@@ -34,7 +34,8 @@ the US.
 │   │   └── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
-│   └── sops/                      firm standard operating procedures + client-task runbooks (Active)
+│   ├── sops/                      firm standard operating procedures + client-task runbooks (Active)
+│   └── client-intelligence/       per-client knowledge base (one file per client) — the raw material for each client's SOPs (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
@@ -60,6 +61,7 @@ the US.
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | Marketing video / a video script | the [`video-script-pipeline` skill](./.claude/skills/video-script-pipeline/) → outputs to [`projects/marketing/video-generation/scripts/`](./projects/marketing/video-generation/scripts/) |
 | Firm procedures / how-we-do-X, and day-to-day client-task runbooks (client onboarding, a Business Tax Receipt filing, sales-tax registration, bookkeeping close…) | [`projects/sops/`](./projects/sops/) — client-specific data stays in your client systems, not the repo. **Writing or restructuring an SOP** goes through the [`sop-authoring` skill](./.claude/skills/sop-authoring/) (the house structure + review workflow) |
+| Building up what we know about a **specific client** before (or while) writing their SOPs — their obligations, systems, recurring processes, "client intelligence" — captured gradually, one file per client | [`projects/client-intelligence/`](./projects/client-intelligence/) — same structure for every client; non-sensitive knowledge lives in the repo, secrets and personal data stay in Drive/Double and are referenced by link. Feeds [`projects/sops/`](./projects/sops/) |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |

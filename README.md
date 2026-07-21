@@ -37,6 +37,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
+| [Client Intelligence](./projects/client-intelligence/) | A durable, per-client knowledge base — obligations, systems, and processes built up gradually as the raw material for each client's SOPs. Secrets and personal data stay in Drive/Double and are referenced by link. | Active |
 
 The seven **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
