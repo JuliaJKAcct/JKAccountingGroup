@@ -18,7 +18,9 @@ For the scoped clients, once per week:
    Assistant (meetings, emails, calls, action items), Double (notes, tasks,
    activity), Gmail (**incoming and sent**), QuickBooks — non-sensitive facts only.
    Search by **both the business name and each owner's name** (see *Search
-   completeness* below).
+   completeness* below). **Incremental:** every search is bounded by the client's
+   baseline date in [`sweep-state.md`](./sweep-state.md) — history already swept is
+   never re-read, which is what keeps the run cheap as the client list grows.
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). Commit to a branch `weekend-ci-sweep`, push. **Never** touches
@@ -98,7 +100,9 @@ per-tool call limits._
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
 
-READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, projects/client-intelligence/automation/sweep-state.md (the incremental ledger), and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+
+INCREMENTAL SWEEP (token discipline — this is a hard rule): sweep-state.md records the date each client is already swept through. Bound EVERY search to that client's baseline date AND LATER, INCLUSIVE of the baseline day itself (items can land later the same day a sweep ran; the one-day overlap is deliberate and duplicates are prevented because you read the client file first and only add what's new): Gmail with after:YYYY/MM/DD (inclusive of that day), Ping meetings dated on-or-after the baseline, Double notes/activity created on-or-after it. Never re-read anything from BEFORE the baseline date. Exceptions: (a) a client whose row lists a Coverage gap owes that source a one-time full historical pass — do it, then clear the note (that pass may exceed the per-client call bound once; expected); (b) a client in the list with NO row in sweep-state.md gets a one-time full historical sweep, then a row. At the end, update sweep-state.md baselines (run date) for every client fully swept, IN THE SAME COMMIT as the client-file updates; if the run fails partway, only advance the clients you finished.
 
 CLIENTS (name -> Double id):
 - Atman Parts -> 763909
@@ -108,7 +112,7 @@ CLIENTS (name -> Double id):
 - Pro Title Agency -> 706716
 
 FOR EACH CLIENT:
-1. Sweep for what is NEW since the file's last update, searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
+1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business):
    - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
    - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
    - Double: get_client, list_notes, list_contacts (ROLES only), list_activity_log. QuickBooks if useful.

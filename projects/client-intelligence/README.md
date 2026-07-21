@@ -127,7 +127,12 @@ rebuilt from scratch at every question.
   **both the business name and each owner's name** (an owner can have several
   businesses, and a meeting titled with a person's name may discuss the business), so a
   client is never missed. Every auto-added item notes its **source and date**, and git
-  makes it reversible.
+  makes it reversible. The sweep is **incremental**: a committed ledger
+  ([`automation/sweep-state.md`](./automation/sweep-state.md)) records the date each
+  client is already swept through, and every search is bounded to the baseline date
+  and later — history is never re-read, so each weekly run costs only the new days
+  per client, however much history accumulates (a newly added client gets one full
+  historical pass, then joins the ledger).
 - **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
   **emails Lilian a report**: what's new in each client's CI, and the items
   **proposed for the SOP**. SOP changes are never applied without her approval.
@@ -154,6 +159,7 @@ client-intelligence/
 ├── _client-template.md    ← the canonical structure — copy it to start a client
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
+│   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
 └── clients/               ← one file per client (see the Clients index below)
     ├── atman-parts.md
