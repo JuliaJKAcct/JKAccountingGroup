@@ -74,7 +74,7 @@ the actual details.
 
 - **Multi-entity owner / naming ambiguity (important).** A sister entity **"Deep Tech Development GROUP LLC"** is the one that runs **Gusto payroll (biweekly)**, holds the **Shopify store**, the "Go Robots" AP mailbox, and the vehicle policy. This file (706685) is the **Schedule C, single-member, payroll-N/A** entity. Automated emails (Gusto, QuickBooks, Shopify, insurance) blur the two names — **attribute payroll / van / Shopify to the GROUP entity** until confirmed.
 - **External Ukrainian finance team:** the owner uses an outside Ukrainian bookkeeping / tax group that shares documents and handles the owner's **personal Ukrainian tax declaration**; JK coordinates hand-offs via Google Drive.
-- **Disambiguation:** do **not** conflate this owner with the "Goshakes / Boost You" owner or with Never Give Up KK — the enrichment sources disagreed on those linkages.
+- **Ownership (corrected by Lilian, 2026-07-20):** the owner is a **different individual** from Never Give Up KK's owner — Never Give Up's owner was a **former employee** of Deep Tech, not an owner. Separately, the sister entity "Deep Tech Development GROUP LLC" (above) is a distinct company.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -95,5 +95,5 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706685](https://app.doublehq.com/close?cid=706685)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/19OZXViieW60GsVtKUbqta0a2mM2VMZK1) — note: the sister **GROUP LLC** has its own separate Drive folder(s).
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

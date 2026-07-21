@@ -121,8 +121,9 @@ rebuilt from scratch at every question.
 
 - **Primary — a weekend Claude Routine.** On a schedule (weekends), Claude sweeps the
   connected sources for what's **new since the last run** — Ping Assistant (meetings,
-  emails, calls, action items), Double (notes, tasks, activity), Gmail (**incoming and
-  sent**), QuickBooks — and updates each client's CI file with the **durable,
+  emails, calls, action items), Double (notes, tasks, activity, properties), Gmail
+  (**incoming and sent**), **Google Drive** (each client's folder), QuickBooks, and the
+  repo itself — and updates each client's CI file with the **durable,
   non-sensitive** facts (secrets / PII stay in Double / Drive, linked). It searches by
   **both the business name and each owner's name** (an owner can have several
   businesses, and a meeting titled with a person's name may discuss the business), so a
