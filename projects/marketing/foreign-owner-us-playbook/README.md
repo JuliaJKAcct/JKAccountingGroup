@@ -84,7 +84,10 @@ jargon, no fear.
 ## Outputs
 
 Self-contained HTML (`landing.html` + `guide.html`), committed to the repo
-(marketing assets, no client data). Deployable as a folder unit.
+(marketing assets, no client data). Deployable as a folder unit. For **team
+feedback**, single-file, fully-inlined copies (brand fonts, Julia photos, CSS,
+and JS all embedded — CSP-safe, work offline) are committed under
+[`share/`](./share/) — see its README.
 
 ## Working on this / notes for AI
 
