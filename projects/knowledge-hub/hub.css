@@ -311,6 +311,109 @@ html.reader-open{overflow:hidden;}
 tr.coa-off{opacity:.42;}
 tr.coa-off .coa-e{text-decoration:line-through;}
 
+/* ---------- Bookkeeping runbook: page actions (Save as PDF / download) ---------- */
+.eco-actions{display:flex; flex-wrap:wrap; gap:10px; margin:2px 0 24px;}
+.dlbtn.ghost{background:transparent; border:1px solid var(--border); color:var(--body);}
+.dlbtn.ghost:hover{background:var(--paper); color:var(--ink); border-color:var(--accent); transform:translateY(-1px);}
+:root[data-theme="dark"] .dlbtn.ghost{background:transparent; border-color:var(--border); color:var(--body);}
+:root[data-theme="dark"] .dlbtn.ghost:hover{background:var(--raise); color:var(--ink);}
+button.dlbtn{cursor:pointer; font-family:var(--sans);}
+
+/* ---------- "One rule to remember" signature banner ---------- */
+.eco-sig{display:grid; grid-template-columns:auto 1fr; gap:15px; align-items:start;
+  background:linear-gradient(180deg, color-mix(in srgb, var(--teal-800) 96%, #000), var(--teal-900));
+  border:1px solid var(--teal-700); border-radius:16px; padding:18px 20px; margin:0 0 6px;
+  box-shadow:var(--shadow-sm);}
+.eco-sig-ic{width:38px; height:38px; border-radius:10px; display:grid; place-items:center; flex:0 0 auto;
+  background:rgba(207,162,104,0.16); border:1px solid rgba(207,162,104,0.34); color:var(--bronze-200);}
+.eco-sig-ic svg{width:21px; height:21px;}
+.eco-sig-t{font-family:var(--mono); font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--bronze-300); font-weight:600; margin:2px 0 6px;}
+.eco-sig-d{font-size:14.5px; line-height:1.62; color:#DCE6E4; max-width:70ch;}
+.eco-sig-d b{color:#F3EEE4; font-weight:600;}
+
+/* ---------- Monthly-process ribbon ---------- */
+.eflow{list-style:none; margin:6px 0 8px; padding:0; display:flex; flex-wrap:wrap; gap:9px;}
+.estep{position:relative; flex:1 1 150px; min-width:148px; display:flex; align-items:flex-start; gap:10px;
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:12px; padding:12px 13px;
+  box-shadow:var(--shadow-sm);}
+.estep-n{flex:0 0 auto; width:22px; height:22px; border-radius:7px; display:grid; place-items:center;
+  font-family:var(--mono); font-size:11px; font-weight:600; background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+.estep-b{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.estep-t{font-family:var(--serif); font-size:13.5px; font-weight:600; color:var(--ink); line-height:1.2;}
+.estep-d{font-size:11.5px; line-height:1.35; color:var(--muted);}
+/* chevron between steps (hidden on wrap via the flex gap) */
+.estep::after{content:""; position:absolute; right:-8px; top:50%; width:8px; height:8px; z-index:1;
+  border-top:2px solid var(--border); border-right:2px solid var(--border); transform:translateY(-50%) rotate(45deg);}
+.estep:last-child::after{display:none;}
+.estep.gate{border-color:var(--warn-bd); background:var(--warn-bg);}
+.estep.gate .estep-n{background:var(--warn-ic); color:#fff;}
+.estep.gate .estep-t{color:var(--warn-text);}
+.estep.gate .estep-d{color:var(--warn-text); opacity:.85;}
+.estep.flag .estep-n{background:var(--bronze-400); color:#fff;}
+.estep.done{border-color:var(--ok-bd); background:var(--ok-bg);}
+.estep.done .estep-n{background:var(--ok-ic); color:#fff;}
+.estep.done .estep-t{color:var(--ok-text);}
+.estep.done .estep-d{color:var(--ok-text); opacity:.85;}
+@media (max-width:640px){ .estep{flex:1 1 100%;} .estep::after{display:none;} }
+
+/* ---------- Transaction decision-flow (the memorable ladder) ---------- */
+.dlegend{display:flex; flex-wrap:wrap; gap:8px 16px; margin:0 0 16px;}
+.dleg{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:10.5px;
+  letter-spacing:0.05em; text-transform:uppercase; font-weight:600; color:var(--muted);}
+.dleg .dot{width:10px; height:10px; border-radius:50%; flex:0 0 auto;}
+.dleg.own .dot{background:var(--bronze-400);}
+.dleg.biz .dot{background:var(--teal-400);}
+.dleg.inv .dot{background:var(--info-ic);}
+.dleg.tri .dot{background:var(--warn-ic);}
+
+.dgates{list-style:none; margin:0; padding:0;}
+.dgate{display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:stretch;}
+.dgate-rail{position:relative; display:flex; justify-content:center; flex:0 0 auto; width:34px;}
+.dgate-n{position:relative; z-index:1; width:34px; height:34px; border-radius:50%; flex:0 0 auto;
+  display:grid; place-items:center; font-family:var(--mono); font-size:14px; font-weight:600;
+  background:var(--teal-800); color:#F1ECE1; box-shadow:0 0 0 4px var(--bg);}
+:root[data-theme="dark"] .dgate-n{background:var(--raise); color:var(--ink); border:1px solid var(--border);}
+/* the spine connecting the gates */
+.dgate:not(:last-child) .dgate-rail::after{content:""; position:absolute; top:34px; bottom:-16px;
+  left:50%; transform:translateX(-50%); width:2px; background:var(--border);}
+.dgate-card{margin-bottom:16px; background:var(--surface); border:1px solid var(--border-subtle);
+  border-radius:14px; padding:14px 16px; box-shadow:var(--shadow-sm);}
+.dgate:last-child .dgate-card{margin-bottom:0;}
+.dgate-q{font-family:var(--serif); font-size:16px; font-weight:600; color:var(--ink); line-height:1.3;}
+.dgate-q code{font-family:var(--mono); font-size:0.86em; background:var(--paper); border:1px solid var(--border-subtle);
+  border-radius:5px; padding:1px 5px; color:var(--accent-2);}
+.dgate-eg{display:block; font-family:var(--sans); font-size:11.5px; font-weight:400; color:var(--muted);
+  letter-spacing:0; margin-top:3px; line-height:1.4;}
+.dgate-outs{display:flex; flex-wrap:wrap; gap:8px; margin:11px 0 0;}
+.dgate-note{font-size:12.5px; line-height:1.5; color:var(--muted); margin:10px 0 0;}
+.dgate-note b{color:var(--body);}
+.dprov{display:inline-block; font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em;
+  color:var(--warn-text); background:var(--warn-bg); border:1px solid var(--warn-bd);
+  border-radius:999px; padding:1px 8px; margin-left:2px;}
+
+/* destination chips — color IS the mental model */
+.dchip{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; line-height:1.25;
+  border-radius:9px; padding:6px 11px; border:1px solid transparent;}
+.dchip-k{font-family:var(--mono); font-size:9.5px; letter-spacing:0.06em; font-weight:700;
+  padding:2px 6px; border-radius:5px; white-space:nowrap; background:rgba(0,0,0,0.06);}
+:root[data-theme="dark"] .dchip-k{background:rgba(255,255,255,0.10);}
+.dchip-l b{font-weight:700;}
+.dchip.own{background:var(--pill-bronze-bg); border-color:var(--bronze-200); color:var(--bronze-700);}
+:root[data-theme="dark"] .dchip.own{color:var(--bronze-100); border-color:rgba(207,162,104,0.34);}
+.dchip.own .dchip-l b{color:var(--bronze-700);}
+:root[data-theme="dark"] .dchip.own .dchip-l b{color:var(--bronze-100);}
+.dchip.biz{background:var(--pill-teal-bg); border-color:var(--teal-200); color:var(--teal-600);}
+:root[data-theme="dark"] .dchip.biz{color:var(--teal-100); border-color:rgba(111,157,164,0.30);}
+.dchip.biz .dchip-l b{color:var(--teal-700);}
+:root[data-theme="dark"] .dchip.biz .dchip-l b{color:#DDECEA;}
+.dchip.inv{background:var(--info-bg); border-color:var(--info-bd); color:var(--info-text);}
+.dchip.inv .dchip-l b{color:var(--info-text);}
+.dchip.tri{background:var(--warn-bg); border-color:var(--warn-bd); color:var(--warn-text);}
+.dchip.tri .dchip-l b{color:var(--warn-text);}
+.f1099{font-family:var(--mono); font-size:9px; letter-spacing:0.05em; font-weight:700; text-transform:uppercase;
+  color:#fff; background:var(--bronze-500); border-radius:999px; padding:2px 6px;}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}
@@ -320,5 +423,8 @@ tr.coa-off .coa-e{text-decoration:line-through;}
   .reader-bar{display:none !important;}
   html.reader-open{overflow:visible;}
   .reader{position:static;}
-  .acc[open]{break-inside:avoid;}
+  /* when a document is open, print only that document — not the Hub behind it */
+  html.reader-open body > *:not(.reader){display:none !important;}
+  .acc[open], .dgate, .estep, .eco-sig{break-inside:avoid;}
+  .eco-actions{display:none !important;}
 }

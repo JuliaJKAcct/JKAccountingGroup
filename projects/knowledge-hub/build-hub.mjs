@@ -280,20 +280,150 @@ function mdSections(md){
   });
   return { preamble, sections };
 }
-// Ecoorganic bookkeeping runbook — rendered FROM the .md (always in sync), each
-// ## section as an expandable accordion. Team page: no other-client names.
+/* --- Ecoorganic curated visuals (hand-maintained "at a glance" overviews) ---
+   These are the memorable summary a bookkeeper taking over the account needs:
+   the monthly workflow and the transaction decision-flow. The FULL, authoritative
+   rules stay rendered from the .md as accordions below, so substance can't drift —
+   these two visuals are the deliberate curated overview the skill allows. */
+
+// the monthly workflow, as a stepped ribbon. `gate` = the $0 close gate; `done` = closed.
+function ecoMonthlyFlow(){
+  const steps = [
+    { t: 'Process the feed', d: 'Only Chase&nbsp;…8310 is live' },
+    { t: 'Categorize', d: 'Work the gates · override QBO' },
+    { t: 'Reconcile', d: 'Book balance ties to the statement' },
+    { t: 'Clear triage → $0', d: 'The close gate', k: 'gate' },
+    { t: '1099 sweep', d: 'Every payee ≥&nbsp;$2,000 has a W-9', k: 'flag' },
+    { t: 'Reviewer check', d: 'Verified against these rules' },
+    { t: 'Books closed', d: 'Month delivered', k: 'done' },
+  ];
+  const li = steps.map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}">`
+    + `<span class="estep-n">${i + 1}</span>`
+    + `<span class="estep-b"><span class="estep-t">${s.t}</span><span class="estep-d">${s.d}</span></span>`
+    + `</li>`).join('');
+  return `<div class="shead"><span class="schip">✦</span><h2>How each month runs</h2></div>`
+    + `<p class="slede">The same seven moves every month. Two are non-negotiable gates: the triage account must hit <b>$0</b> before close, and every payee over <b>$2,000</b> must have a W-9.</p>`
+    + `<ol class="eflow">${li}</ol>`;
+}
+
+// one destination chip (owner=equity · biz=P&L · inv=investigate · tri=triage). label is trusted HTML.
+function dchip(cls, kicker, label, flag){
+  return `<span class="dchip ${cls}">`
+    + (kicker ? `<span class="dchip-k">${esc(kicker)}</span>` : '')
+    + `<span class="dchip-l">${label}</span>`
+    + (flag ? `<span class="f1099">1099</span>` : '')
+    + `</span>`;
+}
+// one gate in the ladder: a numbered question, its outcome chips, and a note.
+function ecoGate(n, q, eg, outs, note){
+  return `<li class="dgate">`
+    + `<div class="dgate-rail"><span class="dgate-n">${n}</span></div>`
+    + `<div class="dgate-card">`
+    +   `<p class="dgate-q">${q}${eg ? `<span class="dgate-eg">${eg}</span>` : ''}</p>`
+    +   `<div class="dgate-outs">${outs}</div>`
+    +   (note ? `<p class="dgate-note">${note}</p>` : '')
+    + `</div></li>`;
+}
+// The transaction decision-flow — the heart of the runbook, built to be memorized.
+// Ask the gates in order; the first YES decides. Colors teach the mental model:
+// bronze = the owner (equity) · teal = the business (P&L) · blue = investigate · amber = triage.
+function ecoDecisionFlow(){
+  const legend = `<div class="dlegend">`
+    + `<span class="dleg own"><span class="dot"></span>Owner · equity</span>`
+    + `<span class="dleg biz"><span class="dot"></span>Business · P&amp;L</span>`
+    + `<span class="dleg inv"><span class="dot"></span>Investigate first</span>`
+    + `<span class="dleg tri"><span class="dot"></span>Triage → $0</span>`
+    + `</div>`;
+
+  const gates = [
+    ecoGate(1,
+      `Transfer with the owner's personal account <code>…2935</code>?`,
+      `the only account that <em>is</em> the owner himself`,
+      dchip('own', 'MONEY IN', `Owner's <b>Contribution</b>`) + dchip('own', 'MONEY OUT', `Owner's <b>Distribution</b>`),
+      `Equity — post to the two equity accounts, <b>never</b> Sales or COGS.`),
+    ecoGate(2,
+      `Named to the owner personally?`,
+      `his card autopay · IRS <code>USATAXPYMT</code> in his name`,
+      dchip('own', '', `Owner's <b>Distribution</b>`),
+      `His personal spending that happens to run through the business account.`),
+    ecoGate(3,
+      `A gas-station / convenience-store stop?`,
+      `Sunoco · Shell · Gulf · Citgo · Cumberland Farms · 7-Eleven`,
+      dchip('biz', '≥ $25', `Auto — <b>Gas &amp; Fuel</b>`) + dchip('own', '< $25', `Owner's <b>Distribution</b>`),
+      `The $25 line is a fuel-vs-snack proxy — an obvious snack run is a distribution at <em>any</em> amount.`),
+    ecoGate(4,
+      `Food, restaurant, groceries or convenience?`,
+      `any meal, coffee, fast food, or grocery run`,
+      dchip('own', '', `Owner's <b>Distribution</b>`) + dchip('biz', 'EXCEPT', `supply / hardware / job store → <b>Supplies</b> or <b>COGS</b>`),
+      `<b>Meals should trend to $0.</b> Judge a store by what it's <em>for</em> — Home Depot, Decker Rental, Compass Hardware stay business.`),
+    ecoGate(5,
+      `A job cost?`,
+      `foam &amp; spray materials · installation subs · job-site disposal`,
+      dchip('biz', 'MATERIALS', `<b>COGS</b>`) + dchip('biz', 'SUBS', `<b>COGS</b> — labor`, true) + dchip('biz', 'DISPOSAL', `<b>COGS</b>`),
+      `Every new sub needs a <b>W-9</b>; anyone paid <b>≥ $2,000</b> gets a 1099. <span class="dprov">Rule under review vs. the client's own history.</span>`),
+    ecoGate(6,
+      `Cash out, a check, or a deposit?`,
+      `ATM cash · Zelle · a written check · a bank deposit`,
+      dchip('inv', '', `Investigate — <b>never assume</b>`),
+      `Pull the image; ask the owner about cash. Personal → <b>Distribution</b> · paid a worker → <b>Labor +1099</b> · every deposit needs a <b>customer</b>.`),
+    ecoGate(7,
+      `Still can't identify it?`,
+      `an unresolvable bank descriptor`,
+      dchip('tri', '', `<b>Ask My Accountant</b> · triage`),
+      `The "not sorted yet" parking spot. It — and every holding account — must read <b>$0 before the month is closed</b>.`),
+  ].join('');
+
+  return `<div class="shead"><span class="schip">✦</span><h2>Where every transaction goes</h2></div>`
+    + `<p class="slede">Ask these in order. The <b>first YES decides</b> — you rarely reach the bottom. These override every QuickBooks auto-suggestion.</p>`
+    + legend
+    + `<ol class="dgates">${gates}</ol>`;
+}
+
+// the "one rule to remember" banner — the signature insight for this client
+function ecoSignature(){
+  return `<div class="eco-sig">`
+    + `<span class="eco-sig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.6L5.7 20.3 8 13.3 2 8.9h7.6z"/></svg></span>`
+    + `<div><p class="eco-sig-t">The one rule to hold in your head</p>`
+    + `<p class="eco-sig-d">On this account the <b>default is personal</b>. If a charge isn't a clear business cost, it's the owner's — a <b>distribution</b>. Food is personal. Small gas is personal. Transfers with his personal account are <b>equity</b>. Never take QuickBooks' guess.</p></div></div>`;
+}
+
+// a plain-text export of the runbook (team-facing: drop the internal provenance blockquote)
+function ecoRunbookText(md){
+  let t = md.replace(/Masciave\/Aura-style grammar/g, 'Number-prefix grammar');
+  const firstSec = t.search(/\n## /);
+  if (firstSec !== -1){
+    const head = t.slice(0, firstSec).replace(/^>.*$/gm, '').replace(/\n{3,}/g, '\n\n');
+    t = head.trimEnd() + '\n\n' + t.slice(firstSec + 1);
+  }
+  return t.trim() + '\n';
+}
+
+// Ecoorganic bookkeeping runbook — a curated visual overview (signature rule · monthly
+// flow · decision-flow) over the FULL rules rendered from the .md as accordions (always
+// in sync). Team page: no other-client names, no internal "born from a cleanup" preamble.
 function ecoorganicReaderInner(md, owner, updated){
   md = md.replace(/Masciave\/Aura-style grammar/g, 'Number-prefix grammar');
-  const { preamble, sections } = mdSections(md);
-  const preClean = preamble.replace(/^#\s+.*$/m, '').replace(/^>\s*\*\*Status:\*\*.*$/mi, '');
-  const pre = mdToAtlas(preClean);
-  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', mdToAtlas(s.body), i === 0)).join('');
+  const { sections } = mdSections(md);   // preamble (H1 + provenance blockquote) intentionally dropped
+  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', mdToAtlas(s.body), false)).join('');
+  const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
+  const actions = `<div class="eco-actions">`
+    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF</button>`
+    + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download runbook (text)</a>`
+    + `</div>`;
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>Ecoorganic<span class="loc">Monthly bookkeeping &amp; independent review</span></h1>`
-    + `<p class="lede">How this client's books are kept and reviewed each month — generated from the runbook, so it stays in sync. Open a section to expand it.</p>`
+    + `<p class="lede">Everything a bookkeeper taking over this account needs — the workflow, the categorization decision-flow, then the full rules. Built from the runbook, so it stays in sync.</p>`
     + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
-    + `<div class="page">${pre}${secs}</div>`;
+    + `<div class="page">`
+    + actions
+    + ecoSignature()
+    + ecoMonthlyFlow()
+    + ecoDecisionFlow()
+    + `<div class="shead"><span class="schip">§</span><h2>The full rules &amp; checklist</h2></div>`
+    + `<p class="slede">The authoritative detail behind the visuals above — the exact rules, the vendor/1099 process, the chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. Open a section.</p>`
+    + secs
+    + `</div>`;
 }
 
 /* ---- Chart of Accounts — firm standard (rendered from the master, generated JSON) ---- */
@@ -714,8 +844,14 @@ const BODY = `
     if(e.key==='/' && document.activeElement!==qEl){ e.preventDefault(); qEl.focus(); }
     if(e.key==='Escape' && document.activeElement===qEl){ qEl.value=''; state.q=''; hs.classList.remove('has-value'); apply(); }
   });
-  // expand every client detail before printing so PDFs are complete
-  window.addEventListener('beforeprint', function(){ [].forEach.call(document.querySelectorAll('details.cx-more'), function(d){ d.open=true; }); });
+  // expand every collapsible before printing so PDFs are complete (client details + SOP accordions)
+  window.addEventListener('beforeprint', function(){
+    [].forEach.call(document.querySelectorAll('details.cx-more, details.acc'), function(d){ d.open=true; });
+  });
+  // any [data-print] button triggers the browser's print / save-as-PDF
+  [].forEach.call(document.querySelectorAll('[data-print]'), function(b){
+    b.addEventListener('click', function(){ window.print(); });
+  });
 
   // In-page SOP reader — open the designed page without leaving the Hub (works in the sandbox)
   var reader = document.getElementById('reader');
