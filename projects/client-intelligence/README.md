@@ -181,12 +181,12 @@ client-intelligence/
 | iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail) |
 | Deep Tech Development LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — enriched (Double + Gmail) |
 | AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — enriched (Double + Gmail) |
-| Beemold USA LLC | [`clients/beemold-usa.md`](./clients/beemold-usa.md) | Maria | In progress — enriched |
-| Sunoma Inc | [`clients/sunoma-inc.md`](./clients/sunoma-inc.md) | Maria | In progress — enriched |
-| SENSUSTECH LLC | [`clients/sensustech.md`](./clients/sensustech.md) | Maria | In progress — enriched |
-| Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — enriched |
-| Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — enriched |
-| MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — enriched |
+| Beemold USA LLC | [`clients/beemold-usa.md`](./clients/beemold-usa.md) | Maria | In progress — Maria's process guide integrated |
+| Sunoma Inc | [`clients/sunoma-inc.md`](./clients/sunoma-inc.md) | Maria | In progress — Maria's process guide integrated |
+| SENSUSTECH LLC | [`clients/sensustech.md`](./clients/sensustech.md) | Maria | In progress — Maria's process guide integrated |
+| Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — Maria's process guide integrated |
+| Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — Maria's process guide integrated |
+| MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — Maria's process guide integrated |
 | LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 

@@ -535,6 +535,141 @@ function ecoorganicReaderInner(md, owner, updated){
     + `</div>`;
 }
 
+/* ---- Magnum 152 bookkeeping runbook (process-style; the exemplar for Maria's clients) ----
+   Same two-layer idea as the Ecoorganic pilot, but Maria's material is a month-end CLOSE
+   PROCESS, so the curated visual is: the one-rule banner · the monthly-flow ribbon · the
+   close step-by-step with a Drive material button per step (the sensitive detail — logins,
+   statements, Maria's screen recordings — stays in Drive; the button opens it). The FULL
+   .md renders as accordions below, so nothing drifts. Team-facing: provenance stripped. */
+const MIC = {
+  folder: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h3.2a2 2 0 0 1 1.6.8l1 1.2H18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>',
+  sheet:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg>',
+  docg:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>',
+  arrow:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  star:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.6L5.7 20.3 8 13.3 2 8.9h7.6z"/></svg>',
+};
+function matIcon(url){ return /spreadsheets/.test(url) ? MIC.sheet : /\/document\//.test(url) ? MIC.docg : MIC.folder; }
+function matLinksFrom(text){
+  const links = []; const re = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g; let m;
+  while((m = re.exec(text))) links.push({ label: m[1], url: m[2] });
+  return links;
+}
+function matRow(links, label){
+  if(!links.length) return '';
+  return `<div class="matrow"><span class="ml">${esc(label || 'Material')}</span>`
+    + links.map((l) => `<a class="matlink" href="${l.url}" target="_blank" rel="noopener">`
+        + `<span class="mi">${matIcon(l.url)}</span>${esc(l.label)}<span class="arw">↗</span></a>`).join('')
+    + `</div>`;
+}
+// "Monthly close process" → numbered step cards, each with its Drive material buttons.
+// The link(s) live in the .md as a trailing "Reference: [..](..)" on each step, so the
+// buttons are sourced from the source-of-truth, not hand-coded.
+function magnumSteps(body){
+  const h3i = body.search(/^###\s/m);
+  const head = h3i >= 0 ? body.slice(0, h3i) : body;
+  const tail = h3i >= 0 ? body.slice(h3i) : '';
+  const cut = head.search(/^\d+\.\s/m);
+  const intro = cut > 0 ? mdToAtlas(head.slice(0, cut)) : '';
+  const items = olItems(cut >= 0 ? head.slice(cut) : head);
+  const cards = items.map((it) => {
+    const t = it.text.match(/^\*\*([\s\S]+?)\*\*\s*/);
+    const title = t ? t[1] : ('Step ' + it.n);
+    const rest = t ? it.text.slice(t[0].length) : it.text;
+    const refI = rest.search(/Reference:/i);
+    const links = matLinksFrom(refI >= 0 ? rest.slice(refI) : '');
+    const desc = (refI >= 0 ? rest.slice(0, refI) : rest).replace(/^[\s:,;.—-]+/, '').replace(/\s+/g, ' ').trim();
+    return `<li class="mstep"><span class="mstep-n">${esc(it.n)}</span>`
+      + `<div class="mstep-x"><p class="mstep-t">${mdInlineHub(title)}</p>`
+      + (desc ? `<p class="mstep-d">${mdInlineHub(desc)}</p>` : '')
+      + matRow(links) + `</div></li>`;
+  }).join('');
+  return intro + `<ol class="msteps">${cards}</ol>` + (tail ? mdToAtlas(tail) : '');
+}
+// "Reference material" → a resource list (icon · title · caption · Open)
+function magnumResList(body){
+  const bi = body.search(/^\s*[-*]\s+/m);
+  const intro = bi > 0 ? mdToAtlas(body.slice(0, bi)) : '';
+  const rows = body.split('\n').filter((l) => /^\s*[-*]\s+/.test(l)).map((l) => {
+    const item = l.replace(/^\s*[-*]\s+/, '');
+    const m = item.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/);
+    if(!m) return '';
+    const label = m[1].replace(/\*\*/g, '');
+    const url = m[2];
+    const after = item.slice(item.indexOf(m[0]) + m[0].length).replace(/\*\*/g, '').replace(/^[\s—–:-]+/, '').trim();
+    const kind = (/spreadsheets/.test(url) || /\/document\//.test(url)) ? ' doc' : '';
+    return `<a class="resrow${kind}" href="${url}" target="_blank" rel="noopener">`
+      + `<span class="rico">${matIcon(url)}</span>`
+      + `<span class="rbody"><span class="rt">${esc(label)}</span>${after ? `<span class="rc">${esc(after)}</span>` : ''}</span>`
+      + `<span class="rgo"><span>Open</span>${MIC.arrow}</span></a>`;
+  }).join('');
+  return intro + `<div class="reslist">${rows}</div>`;
+}
+function magnumSignature(){
+  return `<div class="eco-sig"><span class="eco-sig-ic">${MIC.star}</span>`
+    + `<div><p class="eco-sig-t">The one thing to hold in your head</p>`
+    + `<p class="eco-sig-d">Reports go out <b>quarterly, not monthly</b>. <b>PayPal 1015 has no live feed</b> — it's a monthly journal entry. Payroll is <b>run by the owner in ADP</b> — you only reconcile it and rename the JEs. And the month isn't closed until <b>triage reads $0</b>.</p></div></div>`;
+}
+function magnumFlow(){
+  const steps = [
+    { t: 'Gather', d: 'Bravo reports + statements → Drive' },
+    { t: 'Reconcile', d: 'Every feed · PayPal via JE' },
+    { t: 'Per-store JEs', d: 'MS1 Griffin · MS2 Miami' },
+    { t: 'Consolidate', d: 'GL via SaasAnt' },
+    { t: 'Other JEs', d: 'Cash · inventory · insurance · Kabbage' },
+    { t: 'Vendor + ADP', d: 'Merch/US&nbsp;Pawn/Scrap · reconcile ADP' },
+    { t: 'Reclass', d: 'Utilities · store splits · ADMIN' },
+    { t: 'Performance vs QBO', d: 'The tie-out' },
+    { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+    { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
+  ];
+  const li = steps.map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
+    + `<span class="estep-b"><span class="estep-t">${s.t}</span><span class="estep-d">${s.d}</span></span></li>`).join('');
+  return `<div class="shead"><span class="schip">✦</span><h2>How each month runs</h2></div>`
+    + `<p class="slede">The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.</p>`
+    + `<ol class="eflow">${li}</ol>`;
+}
+function magnumSectionBody(title, body){
+  if(/close process/i.test(title)) return magnumSteps(body);
+  if(/categorization rules/i.test(title)) return ecoRuleCards(body);
+  if(/review checklist/i.test(title)) return ecoChecklist(body);
+  if(/open items|open decisions/i.test(title)) return ecoDecisionsTable(body);
+  if(/reference material/i.test(title)) return magnumResList(body);
+  return mdToAtlas(body);
+}
+function magnumPrintFrontMatter(sections, owner, updated){
+  const toc = sections.map((s, i) => `<li><span class="ptoc-n">${i + 1}</span><span class="ptoc-t">${esc(s.title)}</span></li>`).join('');
+  return `<div class="pbook pcover">${JK_MARK}`
+    + `<p class="pc-kick">Bookkeeping Runbook · Per Client</p>`
+    + `<h1 class="pc-h">Magnum 152</h1>`
+    + `<p class="pc-sub">Monthly Bookkeeping &amp; Close</p>`
+    + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}<br>JK Accounting Group — internal reference</p></div>`
+    + `<div class="pbook ptoc"><h2>Contents</h2>`
+    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; the monthly flow</span></li>${toc}</ol></div>`;
+}
+function magnumReaderInner(md, owner, updated){
+  const { sections } = mdSections(md);   // preamble (H1 + provenance blockquote) dropped
+  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', magnumSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
+  const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
+  const actions = `<div class="eco-actions">`
+    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
+    + `<a class="dlbtn ghost" download="Magnum-152-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
+    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every step — as a printable PDF.</span></div>`;
+  return magnumPrintFrontMatter(sections, owner, updated)
+    + `<section class="mast"><div class="in">`
+    + `<p class="kick">Bookkeeping runbook · per client</p>`
+    + `<h1>Magnum 152<span class="loc">Monthly bookkeeping &amp; close · multi-store pawn</span></h1>`
+    + `<p class="lede">Everything a bookkeeper needs to run Magnum's month-end close — the one rule, the monthly flow, then the close step by step with a button straight to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.</p>`
+    + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+    + `<div class="page">`
+    + actions
+    + magnumSignature()
+    + magnumFlow()
+    + `<div class="shead"><span class="schip">§</span><h2>The full runbook</h2></div>`
+    + `<p class="slede">The authoritative detail — the client snapshot, the close process (with the Drive material for each step), the categorization rules, the reviewer checklist, and the open items. Open a section.</p>`
+    + secs
+    + `</div>`;
+}
+
 /* ---- Chart of Accounts — firm standard (rendered from the master, generated JSON) ---- */
 const COA = (() => { try { return JSON.parse(read(resolve(here, 'coa-standard.json'))); } catch (e) { return []; } })();
 function coaReaderInner(owner, updated){
@@ -627,6 +762,8 @@ const SOP_GROUPS = [
         blurb: 'The firm’s one numbering system for every client — the ranges (100 assets … 999 triage), the rules that keep it organized, and the full 125-account master. Adapt per niche, don’t reinvent.' },
       { file: 'ecoorganic-bookkeeping-review.md', title: 'Ecoorganic — Monthly Bookkeeping & Review', perClient: true,
         blurb: 'Ecoorganic’s monthly categorization rules, chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. A per-client runbook.' },
+      { file: 'magnum-152-bookkeeping-review.md', title: 'Magnum 152 — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Magnum 152’s monthly close — a multi-store pawn/jewelry business. The month-end process with a Drive walkthrough button for every step, the categorization rules, the reviewer checklist, and the open-items log. A per-client runbook.' },
     ],
   },
   {
@@ -674,6 +811,8 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
       inner = btrReaderInner();
     } else if (/ecoorganic/.test(it.file)) {
       inner = ecoorganicReaderInner(md, owner, updated);
+    } else if (/magnum/.test(it.file)) {
+      inner = magnumReaderInner(md, owner, updated);
     } else {
       let md2 = md;
       if (it.truncateAt) {                      // drop internal-only sections from the team page
