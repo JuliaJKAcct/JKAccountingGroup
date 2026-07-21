@@ -1,6 +1,6 @@
 # Deep Tech Development LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -55,7 +55,7 @@ the actual details.
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Jurisdiction(s):** Likely **Florida (DR-15)** — FL operations + Shopify sale of tangible goods _(inferred, medium confidence; not seen filed for this entity directly)_.
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** The internal recurring "Sales Tax" task cadence was changed from due the **1st** of the quarter-end month to due the **5th** _(Double activity log — changed by Lilian, 2026-07-20)_.
 
 ### Payroll
 - **Applies?** No — **N/A** _(Double)_
@@ -75,6 +75,7 @@ the actual details.
 - **Multi-entity owner / naming ambiguity (important).** A sister entity **"Deep Tech Development GROUP LLC"** is the one that runs **Gusto payroll (biweekly)**, holds the **Shopify store**, the "Go Robots" AP mailbox, and the vehicle policy. This file (706685) is the **Schedule C, single-member, payroll-N/A** entity. Automated emails (Gusto, QuickBooks, Shopify, insurance) blur the two names — **attribute payroll / van / Shopify to the GROUP entity** until confirmed.
 - **External Ukrainian finance team:** the owner uses an outside Ukrainian bookkeeping / tax group that shares documents and handles the owner's **personal Ukrainian tax declaration**; JK coordinates hand-offs via Google Drive.
 - **Ownership (corrected by Lilian, 2026-07-20):** the owner is a **different individual** from Never Give Up KK's owner — Never Give Up's owner was a **former employee** of Deep Tech, not an owner. Separately, the sister entity "Deep Tech Development GROUP LLC" (above) is a distinct company.
+- **Accounting-platform connection disconnected (2026-07-21):** Double's client record shows the QuickBooks Online connection for **this entity (706685)** as disconnected (`platform: none`), and the Double activity log records a `client_disconnected` action by Julia the same day. Not yet clear if this is an intentional cleanup (e.g., consolidating onto the GROUP entity) or needs reconnecting — verify before the next bookkeeping close. _(Double, 2026-07-21)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -82,11 +83,13 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; Schedule C; monthly bookkeeping; quarterly sales tax).
 - 2026-07-20 — **Gmail enrichment sweep:** established the Shopify e-commerce ("Go Robots") profile, FL (Broward), RU language, and the important sister-entity (GROUP LLC) ambiguity. Ping had **no indexed meetings**; facts from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Weekend CI incremental sweep** (baseline 2026-07-20): Double activity log showed two changes — the Sales Tax recurring-task due-date shift (1st → 5th, by Lilian, 2026-07-20) and a `client_disconnected` action on the QBO connection (by Julia, 2026-07-21); both added above. Double notes still empty. Ping (client-scoped + org-wide search for "Deep Tech Development" / "Go Robots") found no new indexed meetings — org-wide semantic hits were unrelated/pre-baseline noise, discarded. Gmail (in:inbox + in:sent, business name + owner emails, after:2026/07/20) returned no client-specific new threads. Drive folder link reconfirmed, unchanged.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Reconcile the two entities:** confirm which legal entity (LLC vs GROUP LLC) maps to Double 706685 vs the owner's other IDs, and reconcile the payroll-N/A flag against the active Gusto payroll under "Deep Tech Development GROUP LLC."
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods) for this entity specifically.
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
+- **Confirm the 2026-07-21 QBO disconnection** was intentional; reconnect if not, before the next bookkeeping close.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration

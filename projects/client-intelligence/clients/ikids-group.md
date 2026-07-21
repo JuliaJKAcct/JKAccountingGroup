@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -80,6 +80,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; partnership / 1065; monthly bookkeeping).
 - 2026-07-20 — **Gmail enrichment sweep:** established the iKidsPark play-park profile, Fort Lauderdale FL, RU/UA language, pre-operational startup-cost treatment, hands-on AP, and the related-entity group. Ping had **no indexed meetings**; facts are from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Weekend CI incremental sweep** (baseline 2026-07-20): Double (properties unchanged, notes still empty, no activity-log entries in range), Ping (resolved both owners; client-scoped and org-wide `search_meetings` for the business and each owner name found no new indexed meetings — org-wide semantic hits were unrelated/pre-baseline noise, discarded), Gmail (in:inbox + in:sent, business name + owner emails, after:2026/07/20 — no client-specific new threads), Drive folder link reconfirmed. No new durable facts.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Second nonresident partner's ITIN / info was pending** (as of Apr 2026) — confirm resolved.

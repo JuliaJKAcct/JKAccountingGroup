@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -83,6 +83,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; quarterly bookkeeping; 1099 prep; income tax not handled by us). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Gmail enrichment sweep:** established the remodeling / construction profile, likely IL (low confidence), Ukrainian language, two-owner LLC, the commingling / bank-feed / late-books challenges, and the May-2026 bookkeeper handoff. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
+- 2026-07-21 — **Weekend CI incremental sweep** (baseline 2026-07-20): Double (properties unchanged, notes still empty, no activity-log entries in range), Ping (resolved the owner; client-scoped and org-wide `search_meetings` for "Aura Remodeling" / "remodeling contractor" / owner name found no new indexed meetings — org-wide semantic hits were unrelated/pre-baseline noise, discarded), Gmail (in:inbox + in:sent, business name + owner emails, after:2026/07/20 — the one sent match was the firm's own July 2026 recurring-expense-check email to Lilian, already reflected in the "books run late" note above, not new), Drive folder link reconfirmed. No new durable facts.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.

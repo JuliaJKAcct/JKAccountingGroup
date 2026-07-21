@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,6 +77,7 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — **Weekend CI incremental sweep** (baseline 2026-07-20): Double (properties unchanged, notes still empty, no activity-log entries in range), Ping (resolved the owner; client-scoped and org-wide `search_meetings` for "Beemold USA" found no new indexed meetings — org-wide hits were unrelated noise, discarded), Gmail (in:inbox + in:sent, business name + owner email, after:2026/07/20) turned up an active thread on **beemold@icloud.com** ("...Margate Plumbing Inc., 13719-Audit Inv. and Worksheet", latest 2026-07-20) — but the thread is entirely about the **sister entity Margate Plumbing Inc.'s** insurance-policy audit, not a Beemold-USA fact; routed to `margate-plumbing.md` instead (out of this sweep's scope) rather than recorded here. Confirms the owner uses the same mailbox for both entities. No new durable facts for **this** file. Drive folder links reconfirmed.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **QBO bank-feed reconnection** pending — an Amex + a credit card need reconnecting to QBO (owner's code required). _(Gmail, 2026-05)_
