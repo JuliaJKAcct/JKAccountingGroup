@@ -268,92 +268,32 @@ function acc(n, title, count, bodyHtml, open){
     + `<svg class="acc-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`
     + `</summary><div class="acc-body">${bodyHtml}</div></details>`;
 }
-function ruleItem(lead, body, pending){
-  return `<div class="rulei"><div class="rk">${pending?'<span class="pend">Pending</span>':'<span class="rd"></span>'}</div>`
-    + `<div class="rx"><b>${lead}</b> ${body}</div></div>`;
+// split Markdown into a preamble + top-level (##) sections
+function mdSections(md){
+  const parts = md.split(/\n(?=## )/);
+  let preamble = '';
+  const sections = [];
+  parts.forEach((p, i) => {
+    const m = p.match(/^## (.+)/);
+    if (m) sections.push({ title: m[1].trim(), body: p.slice(p.indexOf('\n') + 1) });
+    else if (i === 0) preamble = p;
+  });
+  return { preamble, sections };
 }
-function ecoorganicReaderInner(owner, updated){
-  const coaRows = [
-    ['100s', 'Assets'], ['200s', 'Liabilities'], ['300s', 'Equity'], ['400s', 'Income'],
-    ['500s', 'COGS (job costs)'], ['600s', 'Operating expenses'], ['800s', 'Other income'],
-    ['901', 'Depreciation'], ['997 · 998 · 999', 'Triage / uncategorized — must be $0 at close'],
-  ];
-  const coaTable = `<div class="tablewrap"><table class="links"><thead><tr><th>Number range</th><th>What it holds</th></tr></thead><tbody>`
-    + coaRows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join('') + `</tbody></table></div>`;
-
-  const snapshot = `<div class="panel"><div class="ph">Client snapshot</div>`
-    + `<ul class="dots">`
-    + `<li><b>Spray-foam insulation contractor</b> (Connecticut). Books in <b>QuickBooks Online</b>, managed through Double.</li>`
-    + `<li><b>One live bank feed:</b> Chase checking (…8310). All other bank/card accounts are frozen (rename-only) until the client confirms which are closed.</li>`
-    + `<li><b>Owner's personal Chase (…2935):</b> transfers with it are equity moves — never income or cost.</li>`
-    + `<li>Check- and cash-heavy; many <b>Zelle payments to subcontractors</b> (W-9 / 1099 tracking matters).</li>`
-    + `</ul></div>`;
-
-  const coaBody = coaTable
-    + `<div class="callout note"><div class="cx"><div class="cl">Conventions</div>`
-    + `<p>Number prefix lives in the account <b>name</b>. <b>Parent accounts are grouping-only</b> — transactions post to sub-accounts. People &amp; companies are <b>vendors, not accounts</b>. Overdraft / NSF fees get their <b>own sub-account under Bank Fees</b>.</p></div></div>`
-    + `<div class="callout warn"><div class="cx"><div class="cl">2025 is closed</div>`
-    + `<p>Renames / renumbers only. <b>Never merge</b> accounts with 2025 activity (reclassify 2026 &amp; deactivate). <b>Never change an account's type</b> if it has 2025 activity (make a new one &amp; reclassify 2026 into it).</p></div></div>`;
-
-  const rulesBody =
-    acc('A', 'Deposits, checks &amp; payees', '2 rules',
-      ruleItem('Checks &amp; deposits are never assumed.', 'Pull the check/deposit image from the bank; payee &amp; memo decide the category. Every deposit carries a customer (or the owner, for contributions) — no nameless postings to Sales.')
-      + ruleItem('Every transaction gets a vendor / payee', '(except draws, contributions, transfers). Unknown descriptor → identify the business online, check the QBO vendor list, propose creating it. Never guess — unidentifiable → <em>Ask My Accountant</em> (triage).'), true)
-    + acc('B', 'Fuel &amp; meals', '2 rules',
-      ruleItem('Gas station ≥ $30 → Auto: Gas &amp; Fuel.', 'Under $30 it is most likely food/snacks → the meals policy.')
-      + ruleItem('Meals policy is not set yet.', 'Until Julia + Lilian define it, post food / restaurant / grocery to the <b>Meals holding account</b> and redistribute in one batch later. Never leave them in triage.', true))
-    + acc('C', 'Owner: personal vs business', '4 rules',
-      ruleItem('Cash withdrawals → owner draws', '(2025 precedent) — unless there is evidence cash paid workers, then stop and ask (1099 exposure).')
-      + ruleItem('Transfers with the personal account (…2935):', 'money in → Owner\'s Contribution; money out → Owner\'s Pay &amp; Personal. Never Sales, never COGS.')
-      + ruleItem('Personal ACH pulls named to the owner', '(e.g. his personal Capital One autopay) → Owner\'s Pay &amp; Personal.')
-      + ruleItem('IRS <code>USATAXPYMT</code> under the owner\'s name', '→ his personal federal tax → Owner\'s Pay &amp; Personal, never a business tax expense.'))
-    + acc('D', 'Job costs → COGS', '1 rule',
-      ruleItem('Job costs go to COGS, not opex.', 'Foam / spray materials → COGS Materials · installation subcontractors (Zelle/check/wire) → COGS Subcontractor Labor (collect a W-9, keep the 1099 list current) · job-site disposal → COGS Job Disposal.'))
-    + acc('E', 'Park in triage (pending answers)', '1 rule',
-      ruleItem('Vehicle financing (Hyundai Motor Finance, Ally):', 'awaiting the client\'s lease-vs-loan answer (the HMF account is under the owner\'s personal name — may not be a business vehicle). Don\'t expense installments blindly; park in triage.', true))
-    + acc('F', 'Account hygiene', '1 rule',
-      ruleItem('Parents never receive postings,', 'and the triage accounts (997 / 998 / 999 family) must be <b>$0 at every month-end close</b>.'));
-
-  const checklist = `<ul class="checks">`
-    + ['Bank feed fully processed; book balance ties to the statement.',
-       'Triage accounts (997/998/999) at $0.',
-       'No postings to parent accounts.',
-       'Every transaction has a payee (except draws / contributions / transfers).',
-       'Checks &amp; deposits carry evidence (image reviewed; customer assigned).',
-       'One vendor → one account, unless the split is explained (e.g. the gas threshold).',
-       'Meals &amp; sub-$30 gas handled per the (pending) policy.',
-       'New recurring vendors flagged; new subcontractors have W-9s.',
-       'Overdraft / NSF fees in their own sub-account and totalled for the client.',
-       'No new activity in frozen accounts; exceptions escalated.'].map(x=>`<li>${x}</li>`).join('')
-    + `</ul>`;
-
-  const decisions = [
-    ['Meals policy (client / crew / personal split)', 'Julia + Lilian', 'Pending'],
-    ['Hyundai Motor Finance &amp; Ally: lease vs loan vs personal', 'Client', 'Pending'],
-    ['Which disconnected bank / card accounts are closed', 'Client', 'Pending'],
-    ['Identity / role of a recurring individual payee', 'Client', 'Pending'],
-    ['What "Laundry" purchases are (workwear vs personal)', 'Client', 'Pending'],
-    ['Blanket rule: obvious personal retail → Owner\'s Pay', 'Client', 'Proposed'],
-  ];
-  const decTable = `<div class="tablewrap"><table class="links"><thead><tr><th>Decision</th><th>Owner</th><th>Status</th></tr></thead><tbody>`
-    + decisions.map(d=>`<tr><td>${d[0]}</td><td>${esc(d[1])}</td><td><span class="stpill ${d[2]==='Pending'?'w':'i'}">${esc(d[2])}</span></td></tr>`).join('')
-    + `</tbody></table></div>`;
-
+// Ecoorganic bookkeeping runbook — rendered FROM the .md (always in sync), each
+// ## section as an expandable accordion. Team page: no other-client names.
+function ecoorganicReaderInner(md, owner, updated){
+  md = md.replace(/Masciave\/Aura-style grammar/g, 'Number-prefix grammar');
+  const { preamble, sections } = mdSections(md);
+  const preClean = preamble.replace(/^#\s+.*$/m, '').replace(/^>\s*\*\*Status:\*\*.*$/mi, '');
+  const pre = mdToAtlas(preClean);
+  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', mdToAtlas(s.body), i === 0)).join('');
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>Ecoorganic<span class="loc">Monthly bookkeeping &amp; independent review</span></h1>`
-    + `<p class="lede">How this client's books are kept and reviewed each month — the rules that override QuickBooks, the chart-of-accounts map, the review checklist, and the open decisions.</p>`
+    + `<p class="lede">How this client's books are kept and reviewed each month — generated from the runbook, so it stays in sync. Open a section to expand it.</p>`
     + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
-    + `<div class="page">`
-    + snapshot
-    + `<div class="shead"><span class="schip">1</span><h2>Chart of accounts</h2></div>`
-    + `<p class="slede">The account-number map. Ranges are the same for every client on this system.</p>` + coaBody
-    + `<div class="shead"><span class="schip">2</span><h2>Categorization rules</h2></div>`
-    + `<p class="slede">These override any QuickBooks auto-suggestion — QBO is frequently wrong for this client. Open a group to see its rules.</p>` + rulesBody
-    + `<div class="shead"><span class="schip">3</span><h2>Monthly review checklist</h2></div>` + checklist
-    + `<div class="shead"><span class="schip">4</span><h2>Open decisions</h2></div>`
-    + `<p class="slede">When a decision lands, update the rule, note the date, and reclassify the parked transactions in one batch.</p>` + decTable
-    + `</div>`;
+    + `<div class="page">${pre}${secs}</div>`;
 }
 
 /* ---- Chart of Accounts — firm standard (rendered from the master, generated JSON) ---- */
@@ -494,7 +434,7 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     } else if (/business-tax-receipt/.test(it.file)) {
       inner = btrReaderInner();
     } else if (/ecoorganic/.test(it.file)) {
-      inner = ecoorganicReaderInner(owner, updated);
+      inner = ecoorganicReaderInner(md, owner, updated);
     } else {
       let md2 = md;
       if (it.truncateAt) {                      // drop internal-only sections from the team page
