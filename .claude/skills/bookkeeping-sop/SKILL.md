@@ -1,19 +1,28 @@
 ---
 name: bookkeeping-sop
-description: Write, update, or review a JK Accounting Group per-client BOOKKEEPING runbook SOP — the monthly categorization + independent-review procedure for one bookkeeping client (e.g. projects/sops/ecoorganic-bookkeeping-review.md). Use when creating or editing a client's monthly-bookkeeping SOP, adding/changing a categorization rule, the 1099 process, the chart-of-accounts conventions, the review checklist, or the open-decisions log — and to know how that runbook must be presented in the Knowledge Hub. Encodes the two-layer rule (the .md keeps MAXIMUM detail as source of truth; the Hub shows the curated visual view), the required .md structure that drives the Hub render (bold-led numbered rules → rule cards, a Status-column decisions table → status pills, a number-range grammar line → range strip, a numbered checklist → check items), the firm's categorization framework + the color mental model (owner/equity = bronze · business/P&L = teal · investigate = blue · triage = amber), the firm-wide bookkeeping principles vs. what's client-specific, and the team-facing curation rules. Builds on the sop-authoring skill (house structure) and feeds the knowledge-hub skill (the Hub render). Ecoorganic is the reference pilot.
+description: Write, update, or review a JK Accounting Group per-client BOOKKEEPING runbook SOP — the monthly categorization + independent-review procedure for one bookkeeping client (e.g. projects/sops/ecoorganic-bookkeeping-review.md). Use when creating or editing a client's monthly-bookkeeping SOP, adding/changing a categorization rule, the 1099 process, the chart-of-accounts conventions, the review checklist, or the open-decisions log — and to know how that runbook must be presented in the Knowledge Hub. Encodes the two-layer rule (the .md keeps MAXIMUM detail as source of truth; the Hub shows the curated visual view), the required .md structure that drives the Hub render (bold-led numbered rules → rule cards, a Status-column decisions table → status pills, a number-range grammar line → range strip, a numbered checklist → check items), the firm's categorization framework + the color mental model (owner/equity = bronze · business/P&L = teal · investigate = blue · triage = amber), the firm-wide bookkeeping principles vs. what's client-specific, and the team-facing curation rules. Two shapes are supported — a categorization-rules runbook (Ecoorganic pilot) and a month-end close-process runbook (Magnum 152 pilot) whose steps each carry a Drive "material" button to the source material. Builds on the sop-authoring skill (house structure) and feeds the knowledge-hub skill (the Hub render).
 ---
 
 # Bookkeeping-client SOP — the house way
 
 A **bookkeeping runbook** is a per-client SOP: how *one* client's books are kept and
-reviewed **every month** — the categorization rules, the chart-of-accounts conventions,
-the 1099 process, the reviewer checklist, and the open-decisions log. One file per client
-in [`projects/sops/`](../../../projects/sops/), named `<client>-bookkeeping-review.md`.
+reviewed **every month**. One file per client in
+[`projects/sops/`](../../../projects/sops/), named `<client>-bookkeeping-review.md`.
 
-The reference pilot (keep it as the living pattern):
-[`projects/sops/ecoorganic-bookkeeping-review.md`](../../../projects/sops/ecoorganic-bookkeeping-review.md),
-presented in the Hub via `ecoorganicReaderInner` in
-[`projects/knowledge-hub/build-hub.mjs`](../../../projects/knowledge-hub/build-hub.mjs).
+**Two shapes** — pick what the client's work actually is (a runbook can also blend both):
+
+- **Categorization-rules** — how transactions get coded + reviewed: the categorization
+  rules, chart-of-accounts conventions, the 1099 process, the reviewer checklist, and the
+  open-decisions log.
+- **Month-end close-process** — a step-by-step monthly close (pull reports → journal
+  entries → consolidate → reconcile → reclass → close gate), where **each step carries a
+  Drive "material" button** to the exact working file / walkthrough.
+
+Two reference pilots (keep them as the living patterns), both rendered in
+[`build-hub.mjs`](../../../projects/knowledge-hub/build-hub.mjs):
+
+- **Categorization-rules:** [`ecoorganic-bookkeeping-review.md`](../../../projects/sops/ecoorganic-bookkeeping-review.md) → `ecoorganicReaderInner`.
+- **Close-process:** [`magnum-152-bookkeeping-review.md`](../../../projects/sops/magnum-152-bookkeeping-review.md) → `magnumReaderInner`.
 
 This skill is the memory of the rules Lilian established while building the Ecoorganic
 runbook and its Hub view, so any session updating **these clients' SOPs follows the same
@@ -63,6 +72,31 @@ shape is what makes the visual view work automatically:
 
 Section **titles matter** — the Hub dispatches on the keywords *categorization rules*,
 *open decisions*, *review checklist*, *chart of accounts*. Keep them.
+
+### The month-end close-process shape (Magnum) — steps with Drive material buttons
+
+When a client's bookkeeping is a **close process** rather than a categorization ruleset,
+use these sections (in place of, or alongside, the rules sections). The Hub dispatches on
+*close process* and *reference material*:
+
+- **`## Monthly close process`** — an intro line, then a **numbered list of steps**, each
+  opening with a **bold lead-in** (the step title). **End each step with
+  `Reference: [label](drive-url) · [label](drive-url)`** — one or more Drive links (a
+  folder, a Google Sheet, a walkthrough recording). The Hub renders each step as a **step
+  card** and turns those trailing links into **Drive "material" buttons** next to the step.
+  This is the pattern Lilian approved: the sensitive detail (logins, statements, Maria's
+  screen recordings) **stays in Drive**, and the button opens exactly the right thing for
+  that step. A trailing `### <subsection>` after the steps (e.g. the recurring-JE set)
+  renders normally.
+- **`## Reference material`** — a bulleted list of `- [label](drive-url) — caption` lines
+  (put the master sheet / doc guide in **bold**). The Hub renders it as a **resource list**
+  (icon · title · caption · Open) — one tidy place for all of the client's Drive
+  step-folders and key files.
+
+**The buttons are sourced from the `.md`** (the `Reference:` links), so they can't drift —
+never hand-code a step's links in the reader. **Drive links are the one allowed outbound
+link in a team view** (they open the working material the bookkeeper needs); repo/GitHub
+links are still never allowed.
 
 ## The firm's categorization framework (firm-wide — reuse for every client)
 
@@ -125,21 +159,27 @@ The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered 
   - a **monthly-process flow** (a stepped ribbon) with the `$0` close gate and the `≥$2,000`
     1099 sweep called out;
   - the **categorization decision-flow** — a numbered **"first YES wins" gate ladder**,
-    color-coded to the four destinations above.
+    color-coded to the four destinations above (rules-shape runbooks);
+  - **close-process step cards** — each step of a month-end close with a **Drive material
+    button** per step, plus a **resource list** for the reference material (close-process
+    runbooks; Magnum). The buttons/list come from the `.md`'s `Reference:` links and the
+    `## Reference material` section, so they stay in sync.
 
 **Team-facing curation (always):** strip the internal provenance blockquote; **never show
 another client's name** in a client's view (the pilot swaps `Masciave/Aura-style grammar` →
 `Number-prefix grammar`); no GitHub/repo links — everything opens designed, inside the Hub.
 
-**Current state / next work:** today the **entire** Ecoorganic Hub view — the generic
-section renderers *and* the curated visuals — is wired through the single client-named
-`ecoorganicReaderInner`, which is the only caller of those renderers. So a new
-`<client>-bookkeeping-review.md` does **not** render for free: it needs a reader/catalog
-entry first. The tracked next step is to split that into (a) a **reusable** per-client
-bookkeeping reader that applies the generic section renderers to any runbook with the
-structure above (driven by a catalog flag, not a client-named function), and (b) the
-**hand-built curated visuals** per client. Do this through the [`knowledge-hub`](../knowledge-hub/)
-skill and its **verify-before-publish gate**.
+**Current state / next work:** today there are **two** hand-built readers —
+`ecoorganicReaderInner` (rules shape) and `magnumReaderInner` (close-process shape) — each a
+client-named function that composes the shared renderers (`ecoRuleCards`, `ecoChecklist`,
+`ecoDecisionsTable`, `magnumSteps`, `magnumResList`, …). So a new
+`<client>-bookkeeping-review.md` still does **not** render for free: it needs its own
+reader + catalog entry + a `/…/.test(it.file)` dispatch line. The tracked next step is to
+split this into (a) a **reusable** per-client bookkeeping reader driven by a catalog flag
+(shape: rules | close-process) instead of a client-named function, and (b) any truly
+bespoke curated visual per client. Until then, copy the closest pilot's reader and swap the
+content. Do this through the [`knowledge-hub`](../knowledge-hub/) skill and its
+**verify-before-publish gate**.
 
 ## Workflow
 
@@ -155,12 +195,17 @@ skill and its **verify-before-publish gate**.
 ## Files
 
 - `projects/sops/<client>-bookkeeping-review.md` — the runbook (source of truth).
-- `projects/sops/ecoorganic-bookkeeping-review.md` — the reference pilot.
-- `projects/knowledge-hub/build-hub.mjs` — `ecoorganicReaderInner` + the generic section
-  renderers (`ecoRuleCards`, `ecoDecisionsTable`, `ecoChecklist`, `ecoCoaConventions`) and
-  the curated visuals (`ecoSignature`, `ecoMonthlyFlow`, `ecoDecisionFlow`) and the print
-  book (`ecoPrintFrontMatter`).
-- `projects/knowledge-hub/hub.css` — the components, composed only from Atlas tokens.
+- `projects/sops/ecoorganic-bookkeeping-review.md` — the rules-shape pilot.
+- `projects/sops/magnum-152-bookkeeping-review.md` — the close-process-shape pilot.
+- `projects/knowledge-hub/build-hub.mjs` — the readers `ecoorganicReaderInner` and
+  `magnumReaderInner`; the generic section renderers (`ecoRuleCards`, `ecoDecisionsTable`,
+  `ecoChecklist`, `ecoCoaConventions`); the curated visuals (`ecoSignature`,
+  `ecoMonthlyFlow`, `ecoDecisionFlow`); the close-process renderers (`magnumSteps` with
+  `matRow` / `matLinksFrom` / `matIcon`, `magnumResList`, `magnumFlow`, `magnumSignature`);
+  and the print book.
+- `projects/knowledge-hub/hub.css` — the components (rule cards, status pills, the flow
+  ribbon, the close-process **step cards** `.mstep`, the **material buttons** `.matlink`,
+  the **resource list** `.resrow`), composed only from Atlas tokens.
 
 *Update this skill whenever a round with Lilian establishes a new bookkeeping-SOP rule,
 convention, or presentation preference — it is the memory of how these client runbooks are
