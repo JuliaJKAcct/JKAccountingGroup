@@ -183,7 +183,7 @@ THEN:
 - Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
   Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
   Body per client: what's new in CI (with sources) + the Pending SOP proposals with their IDs (approve/reject). Include the working branch name.
-- SEND through the webhook EXACTLY ONCE — one POST, one recipient. Build payload.json with python3 (json.dump; keys "secret","to","subject","html","text"), then:
+- SEND through the webhook EXACTLY ONCE — one POST, one recipient. Use `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` — the real values go in **this routine's prompt only**, never in the repo. Build payload.json with python3 (json.dump; keys `"secret"=<WEBHOOK_SECRET>`, `"to"`, `"subject"`, `"html"`, `"text"`), then:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
   IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):
   * HTTP 302 (redirect to script.googleusercontent.com) OR 200 with {"ok":true} = the email WAS SENT. STOP — do not POST again (a retry sends a duplicate).
@@ -200,8 +200,9 @@ If a source/connector is unavailable, say so in the report rather than guessing.
 the routine fills (built Jul 2026 with the `impeccable` skill on the Atlas design
 system, following the shape of the proven
 [`recurring-expense-monitoring` template](../../../.claude/skills/recurring-expense-monitoring/reference/email-template.html)).
-Per-client section order: **Proposed for the SOP** (bronze — the action;
-reply-to-approve) → **New in CI — saved** (blue, source-tagged) → **Still needed**
+Per-client section order: **Proposed for the SOP** (bronze — the Pending proposals,
+each with its ID; approve by ID in a session, not by replying to the email) → **New in
+CI — saved** (blue, source-tagged) → **Still needed**
 (amber list) → **Nothing new** (green one-liner). Sample content is fictional; the
 run replaces it with the real swept clients.
 
