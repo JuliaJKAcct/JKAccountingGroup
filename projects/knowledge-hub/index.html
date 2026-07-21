@@ -659,8 +659,6 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
 .epill{font-family:var(--mono); font-size:10px; letter-spacing:0.05em; font-weight:600; text-transform:uppercase;
   color:var(--pill-teal-ink); background:var(--pill-teal-bg); border-radius:6px; padding:3px 8px; white-space:nowrap;}
 .ind{font-size:12.5px; line-height:1.4; color:var(--body); min-width:0;}
-.client-card .eng{font-size:12px; line-height:1.45; color:var(--muted); margin-bottom:12px;}
-.client-card .eng b{color:var(--body); font-weight:600;}
 .client-card .cfoot{display:flex; align-items:center; gap:10px; margin-top:auto;
   padding-top:11px; border-top:1px solid var(--border-subtle);}
 .owner{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:10px;
@@ -672,14 +670,25 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
 .owner .av.julia{background:var(--teal-800);}
 .owner .av.firm{background:var(--greige-500);}
 
-/* completeness meter */
-.meter{display:inline-flex; align-items:center; gap:7px; margin-left:auto;}
-.meter .bars{display:inline-flex; gap:2.5px;}
-.meter .bars i{width:5px; height:12px; border-radius:2px; background:var(--border);}
-.meter.rich .bars i:nth-child(-n+3){background:var(--ok-ic);}
-.meter.building .bars i:nth-child(-n+2){background:var(--warn-ic);}
-.meter.early .bars i:nth-child(-n+1){background:var(--muted);}
-.meter .lv{font-family:var(--mono); font-size:9.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted);}
+/* ---------- Client Review Dashboard hand-off ----------
+   The Hub is the index; the DEEP per-client view is the client-intelligence
+   skill's dashboard. This panel defers to it instead of duplicating it. */
+.ci-cta{display:flex; align-items:center; gap:16px 24px; flex-wrap:wrap; justify-content:space-between;
+  background:var(--paper); border:1px solid var(--border); border-radius:16px;
+  padding:18px 22px; box-shadow:var(--shadow-sm); margin-bottom:20px;}
+.ci-cta .txt{min-width:0; flex:1 1 360px;}
+.ci-cta .t{font-family:var(--mono); font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; margin:0 0 6px;}
+.ci-cta .d{font-size:13.5px; line-height:1.55; color:var(--body); max-width:72ch;}
+.ci-cta .d b{color:var(--ink);}
+.ci-btn{flex:0 0 auto; display:inline-flex; align-items:center; gap:9px; text-decoration:none;
+  font-family:var(--sans); font-size:14px; font-weight:600; color:#F1ECE1;
+  background:var(--teal-800); border:1px solid var(--teal-700); border-radius:10px; padding:12px 18px;
+  box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out), background .18s;}
+.ci-btn:hover{transform:translateY(-2px); box-shadow:var(--shadow-md); background:var(--teal-700); color:#fff;}
+.ci-btn svg{width:16px; height:16px;}
+:root[data-theme="dark"] .ci-btn{background:var(--raise); border-color:var(--border); color:var(--ink);}
+:root[data-theme="dark"] .ci-btn:hover{background:var(--teal-600);}
 
 /* ---------- Empty / no-results ---------- */
 .noresults{max-width:var(--maxw); margin:40px auto; padding:0 var(--gutter); text-align:center; display:none;}
@@ -757,11 +766,10 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
       <p>The repo stays the single source of truth; this page is generated from it. Every card opens the real file on GitHub.</p>
     </div>
     <div class="legend">
-      <p class="t">Reading the cards</p>
-      <div class="legrow"><span class="sw active"></span><span><b>Active</b> — a live, in-use procedure.</span></div>
-      <div class="legrow"><span class="sw rich"></span><span><b>Rich</b> — client profile well filled in.</span></div>
-      <div class="legrow"><span class="sw building"></span><span><b>Building</b> — profile taking shape.</span></div>
-      <div class="legrow"><span class="sw early"></span><span><b>Early</b> — skeleton; more to gather.</span></div>
+      <p class="t">How to use it</p>
+      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> open the SOP file on GitHub.</span></div>
+      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — a card opens that client's file; the <b>owner badge</b> (L / M / J) shows who owns it.</span></div>
+      <div class="legrow"><span class="sw building"></span><span>For a client's <b>services, systems & sources</b>, open the <b>Client Review Dashboard</b>.</span></div>
     </div>
   </div>
 </div>
@@ -929,7 +937,16 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
     <h2>Client intelligence</h2>
     <span class="ct">19</span>
   </div>
-  <p class="hsec-sub">What we know about each account — entity, industry, and the services we run — the raw material for each client’s SOPs. Sensitive data stays in Drive / Double; these are non-sensitive facts and links.</p>
+  <p class="hsec-sub">A quick directory to <b>find any client and open its file</b>. For the full operational view of a client, open the Client Review Dashboard.</p>
+  <div class="ci-cta">
+    <div class="txt">
+      <p class="t">Deep client review</p>
+      <p class="d">Each client’s <b>services, systems, open items and sources</b> live in the <b>Client Review Dashboard</b> — the detailed, owner-grouped review view (generated by the <code>client-intelligence</code> skill). The directory below is the fast way to find and open a single client’s file.</p>
+    </div>
+    <a class="ci-btn" href="https://github.com/JuliaJKAcct/JKAccountingGroup/tree/main/projects/client-intelligence" target="_blank" rel="noopener">Open the Client Review Dashboard
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
   <div class="cgrid">
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/atman-parts.md" target="_blank" rel="noopener"
        data-card data-type="client" data-owner="lilian" data-text="atman parts entity tbd   lilian">
@@ -939,12 +956,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">Entity TBD</span>
         
       </div>
-      <p class="eng"><b>We do:</b> to confirm</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter early" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Early</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/aura-remodeling.md" target="_blank" rel="noopener"
@@ -955,12 +968,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">Partnership</span>
         <span class="ind">Remodeling / construction contractor (residential + commercial)</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (quarterly) · 1099 preparation (subcontractors)</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/beemold-usa.md" target="_blank" rel="noopener"
@@ -971,12 +980,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC · Sch C</span>
         <span class="ind">Low-activity entity</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · annual-report filing</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/best-broker-realty.md" target="_blank" rel="noopener"
@@ -987,12 +992,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC</span>
         <span class="ind">Real estate brokerage</span>
       </div>
-      <p class="eng"><b>We do:</b> Business Tax Receipt (BTR) filing handled</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter building" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Building</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/deep-tech-development.md" target="_blank" rel="noopener"
@@ -1003,12 +1004,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC · Sch C</span>
         <span class="ind">E-commerce (Shopify)</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (monthly) · income tax on the owner's Schedule C</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ecom-beavers.md" target="_blank" rel="noopener"
@@ -1019,12 +1016,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">C-Corp</span>
         <span class="ind">Multi-brand e-commerce / DTC seller of physical products</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · income tax (Form 1120)</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ecoorganic-usa.md" target="_blank" rel="noopener"
@@ -1035,12 +1028,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC</span>
         <span class="ind">Spray-foam insulation contractor</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter building" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Building</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/ikids-group.md" target="_blank" rel="noopener"
@@ -1051,12 +1040,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">Partnership</span>
         <span class="ind">Children's indoor play park / family-entertainment venue (&quot;iKidsPark&quot;),…</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (monthly) · income tax (Form 1065 partnership → K-1s)</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/kolo-florida.md" target="_blank" rel="noopener"
@@ -1067,12 +1052,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">Corporation</span>
         
       </div>
-      <p class="eng"><b>We do:</b> to confirm</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter early" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Early</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/lumetro.md" target="_blank" rel="noopener"
@@ -1083,12 +1064,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC · Sch C</span>
         <span class="ind">The digital-advertising / ad-spend vehicle within the owner's tech group</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping (the monthly deliverable is an &quot;Ad breakdown…</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/magnum-152.md" target="_blank" rel="noopener"
@@ -1099,12 +1076,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Pawn shop / jewelry retail</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · income tax (Form 1120-S)</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/margate-plumbing.md" target="_blank" rel="noopener"
@@ -1115,12 +1088,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Licensed plumbing contractor (construction trade)</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · income tax (Form 1120-S)</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/masciave-design-studio.md" target="_blank" rel="noopener"
@@ -1131,12 +1100,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Interior design studio (commercial + residential; the owner holds IIDA ·…</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (quarterly) · income tax (Form 1120-S)</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter building" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Building</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/mobilesource-corp.md" target="_blank" rel="noopener"
@@ -1147,12 +1112,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Mobile-device / consumer-electronics buyback &amp; resale</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping (client keeps its own books · JK reviews &amp;…</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/never-give-up-kk.md" target="_blank" rel="noopener"
@@ -1163,12 +1124,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Trade of thermal-imaging optics</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (quarterly) · income tax on the owner's Schedule C (for now)</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/pro-title-agency.md" target="_blank" rel="noopener"
@@ -1179,12 +1136,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">LLC · Sch C</span>
         <span class="ind">Licensed title insurance agency (Florida DFS-licensed under the…</span>
       </div>
-      <p class="eng"><b>We do:</b> BTR filing handled · income tax on the owner's Schedule C</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter building" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Building</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/sensustech.md" target="_blank" rel="noopener"
@@ -1195,12 +1148,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">C-Corp</span>
         <span class="ind">Mobile app / mobile-game development (sensustech.com). The owner…</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · income tax (Form 1120)</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/sunoma-inc.md" target="_blank" rel="noopener"
@@ -1211,12 +1160,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">Pawn shop + jewelry retail</span>
       </div>
-      <p class="eng"><b>We do:</b> Monthly bookkeeping · income tax (Form 1120-S)</p>
       <div class="cfoot">
         <span class="owner"><span class="av maria">M</span>Maria</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a>
     <a class="hcard client-card" href="https://github.com/JuliaJKAcct/JKAccountingGroup/blob/main/projects/client-intelligence/clients/yes-team-corp.md" target="_blank" rel="noopener"
@@ -1227,12 +1172,8 @@ a.hcard:hover .arrow{opacity:1; transform:none; color:var(--accent);}
         <span class="epill">S-Corp</span>
         <span class="ind">One-owner marketing S-corp</span>
       </div>
-      <p class="eng"><b>We do:</b> Bookkeeping (quarterly) · income tax (Form 1120-S)</p>
       <div class="cfoot">
         <span class="owner"><span class="av lilian">L</span>Lilian</span>
-        <span class="meter rich" title="Knowledge captured so far">
-          <span class="bars"><i></i><i></i><i></i></span><span class="lv">Rich</span>
-        </span>
       </div>
     </a></div>
 </section>
