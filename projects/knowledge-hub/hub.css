@@ -226,6 +226,52 @@ html.reader-open{overflow:hidden;}
 :root[data-theme="dark"] .dlbtn:hover{background:var(--accent-2); color:#0D2A31;}
 .guide-img{display:block; width:100%; height:auto; background:#fff;}
 
+/* ---------- Send-to-client guide block (embedded images + downloads) ---------- */
+.guides{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:18px; margin:16px 0 4px;}
+.guide{margin:0; background:var(--surface); border:1px solid var(--border-subtle); border-radius:14px;
+  overflow:hidden; box-shadow:var(--shadow-sm);}
+.guide-hd{display:flex; align-items:center; gap:10px; padding:11px 14px; border-bottom:1px solid var(--border-subtle);}
+.guide-lang{font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  font-weight:600; color:var(--accent);}
+.guide-dl{margin-left:auto; display:flex; gap:7px;}
+.dlbtn{display:inline-flex; align-items:center; gap:6px; text-decoration:none;
+  font-family:var(--mono); font-size:11px; letter-spacing:0.04em; font-weight:600; color:#F1ECE1;
+  background:var(--teal-800); border:1px solid var(--teal-700); border-radius:8px; padding:6px 11px;
+  transition:background .16s;}
+.dlbtn:hover{background:var(--teal-700); color:#fff;}
+.dlbtn svg{width:13px; height:13px;}
+:root[data-theme="dark"] .dlbtn{background:var(--raise); border-color:var(--border); color:var(--ink);}
+.guide-img{display:block; width:100%; height:auto; background:var(--paper);}
+
+/* ---------- Bookkeeping-SOP pilot: accordions, rules, status pills ---------- */
+.acc{border:1px solid var(--border-subtle); border-radius:13px; background:var(--surface);
+  margin:11px 0; overflow:hidden; box-shadow:var(--shadow-sm);}
+.acc > summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:13px; padding:14px 17px; user-select:none;}
+.acc > summary::-webkit-details-marker{display:none;}
+.acc > summary:hover{background:var(--paper);}
+.acc > summary:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+.acc-n{flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center;
+  background:var(--pill-teal-bg); color:var(--pill-teal-ink); font-family:var(--mono); font-size:12px; font-weight:600;}
+.acc-t{font-family:var(--serif); font-size:16.5px; font-weight:600; color:var(--ink); letter-spacing:-0.006em;}
+.acc-ct{margin-left:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:0.04em; color:var(--muted);}
+.acc-caret{width:16px; height:16px; flex:0 0 auto; color:var(--muted); transition:transform .22s var(--ease-out); margin-left:12px;}
+.acc[open] > summary .acc-caret{transform:rotate(180deg);}
+.acc[open] > summary{border-bottom:1px solid var(--border-subtle);}
+.acc-body{padding:6px 18px 14px;}
+.rulei{display:grid; grid-template-columns:auto 1fr; gap:13px; align-items:start; padding:12px 0; border-bottom:1px solid var(--border-subtle);}
+.rulei:last-child{border-bottom:0;}
+.rk{padding-top:3px;}
+.rd{display:block; width:8px; height:8px; border-radius:50%; background:var(--teal-400); margin:5px 6px 0;}
+.rx{font-size:14px; line-height:1.55; color:var(--body);}
+.rx b{color:var(--ink);}
+.pend{display:inline-block; font-family:var(--mono); font-size:9px; letter-spacing:0.06em; text-transform:uppercase;
+  font-weight:600; color:var(--warn-text); background:var(--warn-bg); border:1px solid var(--warn-bd);
+  border-radius:999px; padding:3px 7px; white-space:nowrap;}
+.stpill{display:inline-block; font-family:var(--mono); font-size:9.5px; letter-spacing:0.05em; text-transform:uppercase;
+  font-weight:600; border-radius:999px; padding:3px 9px; white-space:nowrap;}
+.stpill.w{color:var(--warn-text); background:var(--warn-bg); border:1px solid var(--warn-bd);}
+.stpill.i{color:var(--info-text); background:var(--info-bg); border:1px solid var(--info-bd);}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}
@@ -235,4 +281,5 @@ html.reader-open{overflow:hidden;}
   .reader-bar{display:none !important;}
   html.reader-open{overflow:visible;}
   .reader{position:static;}
+  .acc[open]{break-inside:avoid;}
 }
