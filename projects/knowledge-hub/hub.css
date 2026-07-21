@@ -414,6 +414,52 @@ button.dlbtn{cursor:pointer; font-family:var(--sans);}
 .f1099{font-family:var(--mono); font-size:9px; letter-spacing:0.05em; font-weight:700; text-transform:uppercase;
   color:#fff; background:var(--bronze-500); border-radius:999px; padding:2px 6px;}
 
+.eco-actions-note{align-self:center; font-size:12px; color:var(--muted); line-height:1.4; max-width:34ch;}
+
+/* ---------- Full-section visual treatments (still sourced from the .md) ---------- */
+/* Categorization rules → numbered rule cards */
+.rcards{display:flex; flex-direction:column; gap:11px; margin:6px 0 4px;}
+.rcard{background:var(--surface); border:1px solid var(--border-subtle); border-radius:13px;
+  padding:14px 16px 6px; box-shadow:var(--shadow-sm);}
+.rcard-h{display:flex; align-items:flex-start; gap:11px; margin-bottom:4px;}
+.rcard-n{flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center;
+  font-family:var(--mono); font-size:12.5px; font-weight:600; background:var(--teal-800); color:#F1ECE1;}
+:root[data-theme="dark"] .rcard-n{background:var(--raise); color:var(--ink); border:1px solid var(--border);}
+.rcard-h h4{font-family:var(--serif); font-size:16px; font-weight:600; color:var(--ink); line-height:1.32; padding-top:2px;}
+.rcard-b{padding-left:37px;}
+.rcard-b .prose{font-size:14px; line-height:1.55; margin:0 0 8px; max-width:64ch;}
+.rcard-b ul.dots, .rcard-b ul.checks{margin:2px 0 10px;}
+.rcard-b ul.dots>li, .rcard-b ul.checks>li{font-size:13.5px; line-height:1.5;}
+.rcard-b .callout{margin:8px 0 10px;}
+@media (max-width:560px){ .rcard-b{padding-left:0;} }
+
+/* Open decisions log → status pills */
+.stpill.g{color:var(--ok-text); background:var(--ok-bg); border:1px solid var(--ok-bd);}
+table.edec td{font-size:13px; vertical-align:top;}
+table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-weight:600; width:26px;}
+
+/* Monthly review checklist → numbered check items */
+.echecks{list-style:none; margin:8px 0 4px; padding:0; display:flex; flex-direction:column; gap:8px;}
+.eck{display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start;
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:11px; padding:11px 14px;}
+.eck-n{flex:0 0 auto; width:23px; height:23px; border-radius:50%; display:grid; place-items:center;
+  font-family:var(--mono); font-size:11px; font-weight:600; background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+.eck-x{font-size:13.5px; line-height:1.55; color:var(--body);}
+.eck-x b{color:var(--ink);}
+
+/* Chart-of-accounts conventions → number-range strip */
+.rglabel{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; margin:2px 0 9px;}
+.rgstrip{display:flex; flex-wrap:wrap; gap:7px; margin:0 0 16px;}
+.rgchip{font-family:var(--sans); font-size:12px; color:var(--body); background:var(--pill-teal-bg);
+  border:1px solid var(--teal-200); border-radius:8px; padding:5px 10px;}
+.rgchip b{font-family:var(--mono); font-weight:600; color:var(--teal-600); margin-right:3px;}
+:root[data-theme="dark"] .rgchip{border-color:rgba(111,157,164,0.30);}
+:root[data-theme="dark"] .rgchip b{color:var(--teal-100);}
+
+/* ---------- Print book: cover + table of contents (screen-hidden) ---------- */
+.pbook{display:none;}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}
@@ -425,6 +471,34 @@ button.dlbtn{cursor:pointer; font-family:var(--sans);}
   .reader{position:static;}
   /* when a document is open, print only that document — not the Hub behind it */
   html.reader-open body > *:not(.reader){display:none !important;}
-  .acc[open], .dgate, .estep, .eco-sig{break-inside:avoid;}
+  .acc[open], .dgate, .estep, .eco-sig, .rcard, .eck{break-inside:avoid;}
   .eco-actions{display:none !important;}
+
+  /* book front matter */
+  .pbook{display:block; color:var(--ink);}
+  .pcover{min-height:82vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; break-after:page;}
+  .pc-mark{width:64px; height:56px; color:var(--teal-800); margin-bottom:22px;}
+  .pc-kick{font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent);}
+  .pc-h{font-family:var(--serif); font-size:52px; font-weight:600; margin:14px 0 6px;}
+  .pc-sub{font-family:var(--serif); font-size:20px; font-style:italic; color:var(--muted);}
+  .pc-meta{font-family:var(--mono); font-size:11px; letter-spacing:0.04em; color:var(--muted); margin-top:26px; line-height:1.8;}
+  .ptoc{break-after:page; padding-top:8px;}
+  .ptoc h2{font-family:var(--serif); font-size:26px; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid var(--border);}
+  .ptoc-l{list-style:none; margin:0; padding:0;}
+  .ptoc-l li{display:flex; align-items:baseline; gap:14px; padding:10px 0; border-bottom:1px solid var(--border-subtle); font-size:15px;}
+  .ptoc-n{font-family:var(--mono); font-size:12px; color:var(--accent); min-width:20px;}
+  .ptoc-t{font-family:var(--serif); color:var(--ink);}
+
+  /* book body: page-per-section, quieter chrome */
+  .reader-scroll .mast{background:none !important; padding:0 !important;}
+  .reader-scroll .mast .kick{color:var(--accent) !important;}
+  .reader-scroll .mast h1, .reader-scroll .mast .loc, .reader-scroll .mast .lede{color:var(--ink) !important;}
+  .reader-scroll .mast .lede b{color:var(--ink) !important;}
+  .reader-scroll .mast .meta{filter:none;}
+  .reader-scroll .page > .shead{break-before:page;}
+  .reader-scroll .acc{break-before:page; border:0; box-shadow:none;}
+  .reader-scroll .acc > summary{padding-left:0;}
+  .rcard, .eck, .eflow .estep{box-shadow:none;}
+  a[href^="data:"]{display:none !important;}
 }

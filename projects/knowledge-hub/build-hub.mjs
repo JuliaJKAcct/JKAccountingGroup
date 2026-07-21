@@ -398,19 +398,128 @@ function ecoRunbookText(md){
   return t.trim() + '\n';
 }
 
+/* --- Rich rendering of the FULL sections (still sourced from the .md, so in sync) ---
+   Lilian's note: the detailed sections below the visuals must be as designed as the
+   decision-flow, not a wall of text. Each section gets a treatment that keeps its
+   content from the .md but structures it visually. */
+
+// split a Markdown ordered-list block into top-level items, dedenting nested content one level
+function olItems(block){
+  const lines = block.split('\n'); const items = []; let cur = null;
+  for(const ln of lines){
+    const m = ln.match(/^(\d+)\.\s+(.*)$/);
+    if(m){ cur = { n: m[1], body: [m[2]] }; items.push(cur); }
+    else if(cur){ cur.body.push(ln.replace(/^ {3}/, '')); }
+  }
+  return items.map((it) => ({ n: it.n, text: it.body.join('\n').trim() }));
+}
+// Categorization rules → numbered rule cards (bold lead-in becomes the card title; the
+// rest — sub-bullets, callouts — rendered from the .md so nothing is lost).
+function ecoRuleCards(body){
+  const cut = body.search(/^\d+\.\s/m);
+  const intro = cut > 0 ? mdToAtlas(body.slice(0, cut)) : '';
+  const list = cut >= 0 ? body.slice(cut) : body;
+  const cards = olItems(list).map((it) => {
+    const t = it.text.match(/^\*\*([\s\S]+?)\*\*\s*/);
+    const title = t ? t[1] : ('Rule ' + it.n);
+    const rest = t ? it.text.slice(t[0].length).replace(/^[\s:,;.—-]+/, '') : it.text;
+    return `<div class="rcard"><div class="rcard-h"><span class="rcard-n">${esc(it.n)}</span>`
+      + `<h4>${mdInlineHub(title)}</h4></div>`
+      + `<div class="rcard-b">${mdToAtlas(rest)}</div></div>`;
+  }).join('');
+  return intro + `<div class="rcards">${cards}</div>`;
+}
+// Open decisions log → the table with color-coded status pills
+function ecoDecisionsTable(body){
+  const rows = body.split('\n').filter((l) => /^\s*\|/.test(l));
+  if(rows.length < 2) return mdToAtlas(body);
+  const cells = (r) => r.trim().replace(/^\||\|$/g, '').split('|').map((s) => s.trim());
+  const head = cells(rows[0]);
+  const statusIdx = head.findIndex((h) => /status/i.test(h));
+  const pill = (s) => {
+    const v = s.toLowerCase();
+    const cls = /resolv/.test(v) ? 'g' : /pending/.test(v) ? 'w' : 'i';
+    return `<span class="stpill ${cls}">${esc(s)}</span>`;
+  };
+  const thead = '<tr>' + head.map((h) => `<th>${mdInlineHub(h)}</th>`).join('') + '</tr>';
+  const tb = rows.slice(2).map(cells).map((r) => '<tr>'
+    + r.map((c, i) => i === statusIdx ? `<td>${pill(c)}</td>` : `<td>${mdInlineHub(c)}</td>`).join('')
+    + '</tr>').join('');
+  const last = rows[rows.length - 1];
+  const after = body.slice(body.lastIndexOf(last) + last.length);
+  return `<div class="tablewrap"><table class="links edec"><thead>${thead}</thead><tbody>${tb}</tbody></table></div>`
+    + mdToAtlas(after);
+}
+// Monthly review checklist → real check items
+function ecoChecklist(body){
+  const cut = body.search(/^\d+\.\s/m);
+  const intro = cut > 0 ? mdToAtlas(body.slice(0, cut)) : '';
+  const list = cut >= 0 ? body.slice(cut) : body;
+  const items = olItems(list).map((it, i) =>
+    `<li class="eck"><span class="eck-n">${i + 1}</span><div class="eck-x">${mdInlineHub(it.text.replace(/\n+/g, ' '))}</div></li>`).join('');
+  return intro + `<ol class="echecks">${items}</ol>`;
+}
+// Chart-of-accounts conventions → a colored number-range strip + the remaining bullets
+function ecoCoaConventions(body){
+  // pre-join each wrapped bullet into one line so a multi-line bullet parses whole
+  const raw = body.split('\n'); const lines = []; let inBullet = false;
+  for(const ln of raw){
+    if(/^\s*[-*]\s+/.test(ln)){ lines.push(ln); inBullet = true; }
+    else if(inBullet && /^\s{2,}\S/.test(ln)){ lines[lines.length - 1] += ' ' + ln.trim(); }
+    else { lines.push(ln); inBullet = false; }
+  }
+  const gi = lines.findIndex((l) => /100s?\s+assets/i.test(l));
+  let strip = '';
+  if(gi !== -1){
+    const seg = lines[gi].replace(/^[\s\S]*?name\*?\s*[—-]\s*/i, '');
+    const chips = seg.split('·').map((s) => s.trim()).filter(Boolean).map((s) => {
+      const m = s.match(/^([\d/]+s?)\s+(.*)$/);
+      return m ? `<span class="rgchip"><b>${esc(m[1])}</b> ${esc(m[2].replace(/\.$/, ''))}</span>` : '';
+    }).join('');
+    strip = `<p class="rglabel">Number-prefix grammar (the target)</p><div class="rgstrip">${chips}</div>`;
+    lines.splice(gi, 1);
+  }
+  return strip + mdToAtlas(lines.join('\n'));
+}
+// dispatch each ## section to its visual treatment (fallback: the standard Markdown render)
+function ecoSectionBody(title, body){
+  if(/categorization rules/i.test(title)) return ecoRuleCards(body);
+  if(/open decisions/i.test(title)) return ecoDecisionsTable(body);
+  if(/review checklist/i.test(title)) return ecoChecklist(body);
+  if(/chart of accounts/i.test(title)) return ecoCoaConventions(body);
+  return mdToAtlas(body);
+}
+// small JK monogram (for the print cover)
+const JK_MARK = '<svg viewBox="18 20 82 72" class="pc-mark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5" fill="none" stroke="currentColor" stroke-width="7"/><path d="M70 26 L70 86" fill="none" stroke="currentColor" stroke-width="7"/><path d="M70 56 L92 26" fill="none" stroke="currentColor" stroke-width="7"/><path d="M70 56 L95 86" fill="none" stroke="currentColor" stroke-width="7"/></svg>';
+// print-only book front matter: a cover page + a table of contents (the "índice")
+function ecoPrintFrontMatter(sections, owner, updated){
+  const toc = sections.map((s, i) =>
+    `<li><span class="ptoc-n">${i + 1}</span><span class="ptoc-t">${esc(s.title)}</span></li>`).join('');
+  return `<div class="pbook pcover">${JK_MARK}`
+    + `<p class="pc-kick">Bookkeeping Runbook · Per Client</p>`
+    + `<h1 class="pc-h">Ecoorganic</h1>`
+    + `<p class="pc-sub">Monthly Bookkeeping &amp; Independent Review</p>`
+    + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}<br>JK Accounting Group — internal reference</p></div>`
+    + `<div class="pbook ptoc"><h2>Contents</h2>`
+    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">How each month runs &amp; where every transaction goes</span></li>${toc}</ol></div>`;
+}
+
 // Ecoorganic bookkeeping runbook — a curated visual overview (signature rule · monthly
-// flow · decision-flow) over the FULL rules rendered from the .md as accordions (always
-// in sync). Team page: no other-client names, no internal "born from a cleanup" preamble.
+// flow · decision-flow) over the FULL rules rendered from the .md (always in sync), each
+// section given its own visual treatment. Team page: no other-client names, no internal
+// "born from a cleanup" preamble. Prints as a book (cover + contents + page-per-section).
 function ecoorganicReaderInner(md, owner, updated){
   md = md.replace(/Masciave\/Aura-style grammar/g, 'Number-prefix grammar');
   const { sections } = mdSections(md);   // preamble (H1 + provenance blockquote) intentionally dropped
-  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', mdToAtlas(s.body), false)).join('');
+  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', ecoSectionBody(s.title, s.body), false)).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
-    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF</button>`
-    + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download runbook (text)</a>`
+    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
+    + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
+    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every rule — as a printable PDF.</span>`
     + `</div>`;
-  return `<section class="mast"><div class="in">`
+  return ecoPrintFrontMatter(sections, owner, updated)
+    + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>Ecoorganic<span class="loc">Monthly bookkeeping &amp; independent review</span></h1>`
     + `<p class="lede">Everything a bookkeeper taking over this account needs — the workflow, the categorization decision-flow, then the full rules. Built from the runbook, so it stays in sync.</p>`
