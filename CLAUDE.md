@@ -39,6 +39,7 @@ the US.
 │   └── knowledge-hub/             one on-brand, searchable index page over all SOPs + clients, generated from the repo (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
+│       ├── README.md                  the SKILLS INDEX — the canonical list of every skill ("do we already have one for this?")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
 │       ├── video-script-pipeline/     drives the video-generation project
 │       ├── recurring-expense-monitoring/  drives the recurring-expense-monitoring project
@@ -114,6 +115,17 @@ in that folder.
   person you're helping may not know a skill is even possible, so naming the opportunity
   is part of the job. Build the skill only once there's a real second use in sight —
   suggest, don't manufacture skills speculatively.
+- **Know the skills we already have — check first, enrich instead of duplicate.**
+  The canonical catalog of every skill is [`.claude/skills/README.md`](./.claude/skills/README.md)
+  (the skills index). **Nobody remembers all of them**, so it's your job to: (a) answer
+  "do we have a skill for X?" from that index; (b) **before proposing or creating a new
+  skill, check the index** — if one already covers the topic, say so plainly ("we already
+  have a skill for that") and **feed the new information into the existing skill** rather
+  than build a parallel one; and (c) when a conversation surfaces a rule, preference, or
+  lesson that belongs in an existing skill, **point it out unprompted** and offer to update
+  that skill (each skill ends with an "update this skill when…" note). Keep the index in
+  sync whenever a skill is added, renamed, or removed (it's part of the coherence check
+  below).
 - **Repo artifacts are written in English.** Everything committed — skills, SOPs,
   project docs, templates — is in English so anyone on the team using Claude Code can
   read it, whatever language the chat is in.
@@ -154,8 +166,10 @@ in that folder.
   [`projects/`](./projects/) and the
   skills in [`.claude/skills/`](./.claude/skills/) must agree with the index tables
   that describe them: this file's Layout + "Where to start",
-  [`README.md`](./README.md), [`projects/README.md`](./projects/README.md), and
-  [`projects/marketing/README.md`](./projects/marketing/README.md). Keep
+  [`README.md`](./README.md), [`projects/README.md`](./projects/README.md),
+  [`projects/marketing/README.md`](./projects/marketing/README.md), and the skills
+  index [`.claude/skills/README.md`](./.claude/skills/README.md) (every skill folder
+  has a row, no stale rows). Keep
   [`BACKLOG.md`](./BACKLOG.md) internally consistent too (every quick-view row has a
   matching section, IDs unique). Fix broken links, orphaned folders, duplicate or
   missing entries, and status mismatches — or, when a clash is ambiguous, flag it to
