@@ -32,9 +32,11 @@ The funnel:
    strategy, quarterly planning, and the "smart, not aggressive" line. It reads
    through a **sticky numbered tab bar** (mirroring the reference funnel): the
    four Parts become ~6 tabs across the top (01…06), one section shown at a time,
-   with prev/next between sections — so the guide reads light instead of endless;
-   with JS off it falls back to a normal scroll. Also an interactive **"what am I
-   leaving on the table?"** self-check (localStorage).
+   with prev/next between sections — so the guide reads light instead of endless.
+   The tab bar is real HTML, so the **menu works even with JavaScript off** (as
+   section jump-links over a full scroll — some file previews don't run scripts);
+   JS upgrades it to the one-section-at-a-time reader. Also an interactive **"what
+   am I leaving on the table?"** self-check (localStorage).
 3. **The bridge to a call** — the guide ends in a **"where are you most likely
    overpaying?"** quiz. Its logic is deliberately airtight for this offer: *we
    can't put a number on your savings without your actual books — that's exactly

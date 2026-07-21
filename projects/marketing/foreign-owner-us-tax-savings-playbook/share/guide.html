@@ -403,12 +403,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .guide-meta .gm svg{width:17px; height:17px; color:var(--bronze-300);}
 
 /* Guide shell: sticky TOC + content */
-.guide-shell{display:grid; grid-template-columns:1fr; gap:clamp(28px,4vw,56px); padding-block:clamp(32px,5vw,56px); align-items:start;}
-@media (min-width:1000px){.guide-shell{grid-template-columns:246px minmax(0,1fr);}}
+.guide-shell{display:grid; grid-template-columns:minmax(0,1fr); gap:0; padding-block:clamp(28px,5vw,48px); align-items:start;}
+/* Single column at all widths — the sticky top tab bar is the menu (no sidebar). */
 .toc{display:none;}
-@media (min-width:1000px){
-  .toc{display:block; position:sticky; top:calc(var(--appbar-h) + 22px); align-self:start; max-height:calc(100vh - var(--appbar-h) - 44px); overflow-y:auto; padding-right:8px;}
-}
+/* The sidebar TOC stays display:none; it is kept in the DOM only as section
+   data the reader reads to group chapters. */
 .toc .toc-title{font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;}
 .toc ol{list-style:none; margin:0 0 18px; padding:0; counter-reset:toc;}
 .toc .toc-part{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--bronze-500); margin:16px 0 8px;}
@@ -431,7 +430,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .toc-mobile .toc-part{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--bronze-500); margin:14px 0 4px 12px;}
 
 /* Guide content */
-.guide-content{max-width:760px;}
+.guide-content{max-width:760px; min-width:0;}
 .guide-content > .intro-lede{font-size:clamp(17px,2.2vw,20px); line-height:1.65; color:var(--text-body);}
 .guide-content > .intro-lede + .intro-lede{margin-top:16px;}
 
@@ -639,7 +638,7 @@ html.reader .toc a.active{color:var(--teal-800); border-left-color:var(--bronze-
 /* ---- Tabbed reader: sticky, numbered, horizontally-scrollable tab bar
    (matches the reference funnel). One Part-section shows per tab. The
    sidebar/drawer rules above are superseded here. ---- */
-html.reader.tabbed .guide-shell{grid-template-columns:1fr; gap:0;}
+html.reader.tabbed .guide-shell{grid-template-columns:minmax(0,1fr); gap:0;}
 html.reader.tabbed .toc{display:none;}
 html.reader.tabbed .guide-content{max-width:820px; margin-inline:auto; width:100%;}
 html.reader .part-divider[hidden]{display:none;}
@@ -647,7 +646,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
 .guide-tabs{position:sticky; top:var(--appbar-h); z-index:50; background:var(--bg-page); margin:0 calc(-1 * var(--gutter)) clamp(18px,3vw,28px); padding:0 var(--gutter); border-bottom:1px solid var(--border-subtle);}
 .guide-tabs .gt-scroll{display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;}
 .guide-tabs .gt-scroll::-webkit-scrollbar{display:none;}
-.guide-tabs .gt-tab{flex:0 0 auto; background:none; border:0; border-bottom:2px solid transparent; cursor:pointer; padding:14px 18px 12px; display:inline-flex; flex-direction:column; align-items:center; gap:5px; white-space:nowrap; transition:border-color .18s;}
+.guide-tabs .gt-tab{flex:0 0 auto; background:none; border:0; border-bottom:2px solid transparent; cursor:pointer; padding:14px 18px 12px; display:inline-flex; flex-direction:column; align-items:center; gap:5px; white-space:nowrap; text-decoration:none; color:inherit; transition:border-color .18s;}
 .guide-tabs .gt-tab .gt-n{font-family:var(--mono); font-size:11px; letter-spacing:0.14em; color:var(--bronze-400); transition:color .18s;}
 .guide-tabs .gt-tab .gt-l{font-family:var(--sans); font-size:14.5px; font-weight:500; color:var(--text-muted); transition:color .18s;}
 .guide-tabs .gt-tab:hover .gt-l{color:var(--text-primary);}
@@ -693,6 +692,18 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
   </section>
 
   <div class="wrap">
+    <!-- Section menu — works as jump-links with no JS; the reader upgrades it to
+         a one-section-at-a-time tab bar when JS runs. -->
+    <nav class="guide-tabs" aria-label="Guide sections">
+      <div class="gt-scroll" role="tablist">
+        <a class="gt-tab" href="#start" data-g="0"><span class="gt-n">01</span><span class="gt-l">Start here</span></a>
+        <a class="gt-tab" href="#entity" data-g="1"><span class="gt-n">02</span><span class="gt-l">Your structure</span></a>
+        <a class="gt-tab" href="#everyday" data-g="2"><span class="gt-n">03</span><span class="gt-l">Deductions</span></a>
+        <a class="gt-tab" href="#take-out" data-g="3"><span class="gt-n">04</span><span class="gt-l">Moving money</span></a>
+        <a class="gt-tab" href="#books" data-g="4"><span class="gt-n">05</span><span class="gt-l">The system</span></a>
+        <a class="gt-tab" href="#checklist" data-g="5"><span class="gt-n">06</span><span class="gt-l">Self-check</span></a>
+      </div>
+    </nav>
     <div class="guide-shell">
       <!-- ===================== TABLE OF CONTENTS ===================== -->
       <nav class="toc" aria-label="Guide contents">
@@ -1497,15 +1508,20 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
 
   document.documentElement.classList.add("reader", "tabbed");
 
-  var bar = document.createElement("div");
-  bar.className = "guide-tabs";
-  var html = '<div class="gt-scroll" role="tablist" aria-label="Guide sections">';
-  groups.forEach(function (g, i) {
-    var n = (i + 1 < 10 ? "0" : "") + (i + 1);
-    html += '<button type="button" class="gt-tab" role="tab" aria-selected="false" data-g="' + i + '"><span class="gt-n">' + n + '</span><span class="gt-l">' + g.label + '</span></button>';
-  });
-  bar.innerHTML = html + "</div>";
-  wrap.insertBefore(bar, shell);
+  // Use the static tab bar already in the HTML (it works as jump-links with no
+  // JS); build one only as a fallback if the markup is missing.
+  var bar = document.querySelector(".guide-tabs");
+  if (!bar) {
+    bar = document.createElement("div");
+    bar.className = "guide-tabs";
+    var html = '<div class="gt-scroll" role="tablist" aria-label="Guide sections">';
+    groups.forEach(function (g, i) {
+      var n = (i + 1 < 10 ? "0" : "") + (i + 1);
+      html += '<a class="gt-tab" role="tab" href="#' + g.ids[0] + '" aria-selected="false" data-g="' + i + '"><span class="gt-n">' + n + '</span><span class="gt-l">' + g.label + '</span></a>';
+    });
+    bar.innerHTML = html + "</div>";
+    wrap.insertBefore(bar, shell);
+  }
   var tabEls = Array.prototype.slice.call(bar.querySelectorAll(".gt-tab"));
 
   var snav = document.createElement("div");
@@ -1547,10 +1563,8 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
     }
   }
 
-  bar.addEventListener("click", function (e) {
-    var t = e.target.closest ? e.target.closest(".gt-tab") : null;
-    if (t) goTo(parseInt(t.getAttribute("data-g"), 10) || 0, true);
-  });
+  // Tab clicks are handled by the capturing document listener below (it maps a
+  // tab's href — the section's first chapter — to that section).
   document.addEventListener("click", function (e) {
     var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
     if (!a) return;

@@ -35,8 +35,10 @@ The funnel is deliberate:
    reads through a **sticky numbered tab bar** (mirroring the reference funnel):
    the guide's four Parts become ~6 tabs across the top (01…06), one section
    shown at a time, with prev/next between sections — so a 14-chapter guide reads
-   like a light, six-tab doc instead of one endless scroll. Progressive
-   enhancement: with JS off it falls back to a normal single-page scroll.
+   like a light, six-tab doc instead of one endless scroll. The tab bar is real
+   HTML, so the **menu works even with JavaScript off** (as section jump-links
+   over a full scroll — important because some file previews don't run scripts);
+   JS upgrades it to the one-section-at-a-time reader.
 3. **The bridge to a call** — the guide ends in a **"What's your next step?"**
    mini-quiz. It deliberately shows where the *general* guide stops and the
    reader's *specific* situation begins (their entity, treaty, states, how they

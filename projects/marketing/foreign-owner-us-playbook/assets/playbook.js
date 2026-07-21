@@ -191,15 +191,20 @@
 
   document.documentElement.classList.add("reader", "tabbed");
 
-  var bar = document.createElement("div");
-  bar.className = "guide-tabs";
-  var html = '<div class="gt-scroll" role="tablist" aria-label="Guide sections">';
-  groups.forEach(function (g, i) {
-    var n = (i + 1 < 10 ? "0" : "") + (i + 1);
-    html += '<button type="button" class="gt-tab" role="tab" aria-selected="false" data-g="' + i + '"><span class="gt-n">' + n + '</span><span class="gt-l">' + g.label + '</span></button>';
-  });
-  bar.innerHTML = html + "</div>";
-  wrap.insertBefore(bar, shell);
+  // Use the static tab bar already in the HTML (it works as jump-links with no
+  // JS); build one only as a fallback if the markup is missing.
+  var bar = document.querySelector(".guide-tabs");
+  if (!bar) {
+    bar = document.createElement("div");
+    bar.className = "guide-tabs";
+    var html = '<div class="gt-scroll" role="tablist" aria-label="Guide sections">';
+    groups.forEach(function (g, i) {
+      var n = (i + 1 < 10 ? "0" : "") + (i + 1);
+      html += '<a class="gt-tab" role="tab" href="#' + g.ids[0] + '" aria-selected="false" data-g="' + i + '"><span class="gt-n">' + n + '</span><span class="gt-l">' + g.label + '</span></a>';
+    });
+    bar.innerHTML = html + "</div>";
+    wrap.insertBefore(bar, shell);
+  }
   var tabEls = Array.prototype.slice.call(bar.querySelectorAll(".gt-tab"));
 
   var snav = document.createElement("div");
@@ -241,10 +246,8 @@
     }
   }
 
-  bar.addEventListener("click", function (e) {
-    var t = e.target.closest ? e.target.closest(".gt-tab") : null;
-    if (t) goTo(parseInt(t.getAttribute("data-g"), 10) || 0, true);
-  });
+  // Tab clicks are handled by the capturing document listener below (it maps a
+  // tab's href — the section's first chapter — to that section).
   document.addEventListener("click", function (e) {
     var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
     if (!a) return;
