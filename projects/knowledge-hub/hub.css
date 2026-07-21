@@ -285,6 +285,32 @@ html.reader-open{overflow:hidden;}
   border-radius:999px; padding:2px 6px; margin-left:6px; white-space:nowrap; vertical-align:1px;}
 :root[data-theme="dark"] .coa-tag{background:rgba(236,230,218,0.06);}
 
+/* COA CSV download + editable table */
+.coa-tool{display:flex; justify-content:space-between; align-items:center; gap:14px 20px; flex-wrap:wrap;
+  background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px 18px; margin:6px 0 16px; box-shadow:var(--shadow-sm);}
+.coa-tool-x{flex:1 1 320px; min-width:0;}
+.coa-tool-t{font-family:var(--serif); font-size:16px; font-weight:600; color:var(--ink); margin:0 0 4px;}
+.coa-tool-d{font-size:13px; line-height:1.5; color:var(--muted); max-width:66ch;}
+.coa-tool-d b{color:var(--body);}
+.coa-tool-b{flex:0 0 auto; display:flex; align-items:center; gap:9px;}
+.dlbtn.big{font-family:var(--sans); font-size:14px; letter-spacing:0; text-transform:none; padding:11px 17px;}
+.dlbtn.big svg{width:16px; height:16px;}
+.coa-reset{background:transparent; border:1px solid var(--border); color:var(--muted); cursor:pointer;
+  font-family:var(--mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; border-radius:8px; padding:10px 13px;}
+.coa-reset:hover{color:var(--ink); border-color:var(--accent);}
+.coa-tbl th.coa-inc, .coa-tbl td.coa-inc{width:32px; text-align:center; padding-left:10px; padding-right:4px;}
+.coa-tbl td.coa-inc input{cursor:pointer; accent-color:var(--teal-600); width:15px; height:15px;}
+.coa-tbl td.coa-numc{width:100px;}
+.coa-namec{display:flex; align-items:center; gap:5px;}
+.coa-e{font:inherit; font-size:13px; color:var(--body); background:transparent; border:1px solid transparent;
+  border-radius:6px; padding:3px 6px; width:100%; min-width:0; transition:border-color .14s, background .14s;}
+.coa-e:hover{border-color:var(--border-subtle);}
+.coa-e:focus{outline:none; border-color:var(--accent); background:var(--paper);}
+.coa-numin{font-family:var(--mono); font-weight:600; color:var(--accent-2); max-width:88px;}
+.coa-namein{flex:1 1 auto;}
+tr.coa-off{opacity:.42;}
+tr.coa-off .coa-e{text-decoration:line-through;}
+
 /* ---------- Print ---------- */
 @media print{
   .hubctl{display:none !important;}

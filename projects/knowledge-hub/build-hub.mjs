@@ -378,17 +378,34 @@ function coaReaderInner(owner, updated){
     + `<li><b>Triage discipline:</b> 998 (review for capitalization) and 999 (uncategorized) clear to <b>$0 at close</b>.</li>`
     + `</ol>`;
 
-  const classAcc = classes.map((c, idx) => {
+  // build-time master CSV (QuickBooks columns) — the initial download, works even without JS
+  const csvField = (s) => { s = String(s == null ? '' : s); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const masterCsv = ['Account Number,Account Name,Type,Detail Type,Description']
+    .concat(COA.map(a => [a.num, a.name, a.type, a.detail, a.desc].map(csvField).join(','))).join('\r\n');
+  const masterHref = 'data:text/csv;charset=utf-8,' + encodeURIComponent(masterCsv);
+
+  const classAcc = classes.map((c) => {
     const rows = byClass[c].map(a => {
       const indent = a.depth > 0 ? `<span class="coa-in" style="--d:${a.depth}"></span>` : '';
-      const nameCell = a.parent
-        ? `<b>${esc(a.leaf || a.name)}</b> <span class="coa-tag">parent · use sub-accounts</span>`
-        : `${indent}${esc(a.leaf || a.name)}`;
-      return `<tr class="${a.parent ? 'coa-parent' : ''}"><td class="coa-num">${esc(a.num)}</td><td>${nameCell}</td><td class="coa-desc">${esc(a.desc)}</td></tr>`;
+      const tag = a.parent ? ` <span class="coa-tag">parent</span>` : '';
+      return `<tr class="coa-row${a.parent ? ' coa-parent' : ''}" data-type="${esc(a.type)}" data-detail="${esc(a.detail)}" data-desc="${esc(a.desc)}">`
+        + `<td class="coa-inc"><input type="checkbox" checked aria-label="include ${esc(a.num)}"></td>`
+        + `<td class="coa-numc"><input class="coa-e coa-numin" value="${esc(a.num)}" data-orig="${esc(a.num)}" spellcheck="false" aria-label="number"></td>`
+        + `<td class="coa-namec">${indent}<input class="coa-e coa-namein" value="${esc(a.name)}" data-orig="${esc(a.name)}" spellcheck="false" aria-label="name">${tag}</td>`
+        + `<td class="coa-desc">${esc(a.desc)}</td></tr>`;
     }).join('');
-    const body = `<div class="tablewrap"><table class="links coa-tbl"><thead><tr><th>#</th><th>Account</th><th>What it's for</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    const body = `<div class="tablewrap"><table class="links coa-tbl"><thead><tr><th class="coa-inc">✓</th><th>#</th><th>Account name</th><th>What it's for</th></tr></thead><tbody>${rows}</tbody></table></div>`;
     return acc(RANGE[c].split('–')[0], esc(c), byClass[c].length + ' accounts', body, false);
   }).join('');
+
+  const csvTool = `<div class="coa-tool">
+    <div class="coa-tool-x"><p class="coa-tool-t">Build your import file</p>
+      <p class="coa-tool-d">Download the full template as-is, or first <b>untick</b> accounts you don't need and <b>edit</b> a number or name in the tables below — then download a <b>QuickBooks-ready CSV</b> and import it.</p></div>
+    <div class="coa-tool-b">
+      <a class="dlbtn big" id="coaDL" download="JK-Chart-of-Accounts.csv" href="${masterHref}">${IC.dl}Download CSV for QuickBooks</a>
+      <button class="coa-reset" id="coaReset" type="button">Reset</button>
+    </div>
+  </div>`;
 
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping standard · firm-wide</p>`
@@ -400,8 +417,9 @@ function coaReaderInner(owner, updated){
     + `<p class="slede">Each account's class is its number range. The range and its meaning never change.</p>` + rangeTable
     + `<div class="shead"><span class="schip">2</span><h2>The rules that keep it organized</h2></div>` + rules
     + `<div class="callout note"><div class="cx"><div class="cl">Adapting for a client</div><p>Import the master, <b>activate</b> what the client uses &amp; <b>deactivate</b> the rest (don't delete — keeps numbering stable), <b>rename</b> the flagged accounts, and <b>add niche sub-accounts</b> under the right parent. Client-specific quirks go in that client's bookkeeping SOP, not here.</p></div></div>`
-    + `<div class="shead"><span class="schip">3</span><h2>The full account list</h2></div>`
-    + `<p class="slede">The firm master — ${COA.length} accounts. Open a class to see its accounts; parents are grouping-only.</p>` + classAcc
+    + `<div class="shead"><span class="schip">3</span><h2>The full list — download or customize</h2></div>`
+    + `<p class="slede">The firm master — ${COA.length} accounts. Download it as a QuickBooks CSV, or tailor it first (untick / edit numbers &amp; names), then download.</p>`
+    + csvTool + classAcc
     + `</div>`;
 }
 
@@ -779,6 +797,38 @@ const BODY = `
   var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
   var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
+
+  // Chart-of-Accounts tool: edit numbers/names, untick accounts, download a QuickBooks CSV.
+  var coaDL = document.getElementById('coaDL');
+  if(coaDL){
+    function cf(s){ s=(s==null?'':''+s); return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }
+    function buildCsv(){
+      var out=['Account Number,Account Name,Type,Detail Type,Description'];
+      [].forEach.call(document.querySelectorAll('.coa-row'), function(tr){
+        var inc=tr.querySelector('.coa-inc input'); if(inc && !inc.checked) return;
+        var num=(tr.querySelector('.coa-numin')||{}).value||'';
+        var name=(tr.querySelector('.coa-namein')||{}).value||'';
+        out.push([num.trim(),name.trim(),tr.getAttribute('data-type'),tr.getAttribute('data-detail'),tr.getAttribute('data-desc')].map(cf).join(','));
+      });
+      coaDL.setAttribute('href','data:text/csv;charset=utf-8,'+encodeURIComponent(out.join('\r\n')));
+    }
+    // rebuild the CSV href right before the click, and whenever the tables change
+    coaDL.addEventListener('pointerdown', buildCsv);
+    coaDL.addEventListener('mousedown', buildCsv);
+    document.addEventListener('input', function(e){ if(e.target.closest && e.target.closest('.coa-tbl')) buildCsv(); });
+    document.addEventListener('change', function(e){
+      var t=e.target; if(!t.closest || !t.closest('.coa-tbl')) return;
+      if(t.matches && t.matches('.coa-inc input')){ var tr=t.closest('.coa-row'); if(tr) tr.classList.toggle('coa-off', !t.checked); }
+      buildCsv();
+    });
+    var coaReset=document.getElementById('coaReset');
+    if(coaReset) coaReset.addEventListener('click', function(){
+      [].forEach.call(document.querySelectorAll('.coa-e'), function(i){ i.value=i.getAttribute('data-orig'); });
+      [].forEach.call(document.querySelectorAll('.coa-inc input'), function(c){ c.checked=true; });
+      [].forEach.call(document.querySelectorAll('.coa-row'), function(tr){ tr.classList.remove('coa-off'); });
+      buildCsv();
+    });
+  }
 })();
 </script>
 `;
