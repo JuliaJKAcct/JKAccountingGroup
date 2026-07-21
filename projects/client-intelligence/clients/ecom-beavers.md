@@ -1,6 +1,6 @@
 # Ecom Beavers LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -65,6 +65,7 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120** (C-corp) _(Double)_. **Cross-border:** the July-2026 consult covered entity selection, **tax-treaty relief**, **ITIN**, dividend withholding, and profit repatriation for the foreign owner.
+- **Organizer status:** Not Started _(Double, 2026-07-21)_.
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -79,6 +80,7 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had a **consult note (via Double note)** — the 2026-07-09 consultation. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (baseline 2026-07-20 and later). No new Double notes/activity-log/client-property changes except **Organizer Status = Not Started** (added above); no new Gmail threads (in:inbox/in:sent, business + owner + known contact emails); the only on/after-baseline-adjacent Ping meeting hit for "Oleh Kocherzhuk"/"Ecom Beavers" was the same 2026-07-09 consult already captured (pre-baseline) — no genuinely new meeting. Nothing else new.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Post-consult deliverables** Julia committed to (2026-07-09): entity-options summary with tax implications; **treaty-application guidance + required certificates**; a deductible-expenses / reimbursement / home-office checklist; meeting minutes. **ITIN & treaty-certificate** needs open. _(Ping consult note)_

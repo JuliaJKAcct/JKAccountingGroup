@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -64,6 +64,7 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
+- **Organizer status:** Sent _(Double, 2026-07-21)_.
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -79,6 +80,7 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (baseline 2026-07-20 and later). No new Double notes/activity-log/client-property changes except **Organizer Status = Sent** (added above); no new Gmail threads (in:inbox/in:sent, business + owner + known contact emails); no legible on/after-baseline Ping meeting hits (org-wide searches for "Igor Melomed"/pawn-shop returned only garbled, off-topic snippets — discarded). Nothing else new.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Legal matter (resolved ~Jul 19–21):** owner requested TD Bank statements to trace wire transfers to an outside attorney's firm; JK located and delivered them. _(Gmail)_

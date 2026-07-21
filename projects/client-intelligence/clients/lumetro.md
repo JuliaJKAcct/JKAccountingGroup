@@ -1,6 +1,6 @@
 # LUMETRO LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -63,6 +63,7 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **⚠️ Quirk to reconcile:** the firm's own proposal note says **Lumetro "won't file its own tax return"** — its results are **consolidated into SensusTech** (to avoid revising the SensusTech proposal). This **conflicts** with Double's "income tax = yes / Schedule C" flags. **Resolve which is correct.** _(Gmail: "New Proposal For LUMETRO LLC")_
+- **Organizer status:** Double lists it as **"N/A (SCH-C)"** — consistent with the Schedule-C flag, but doesn't by itself resolve the quirk above (still unclear whether an organizer/return is prepared standalone or folded into SensusTech). _(Double, 2026-07-21)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -77,6 +78,7 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Engaged 22 Jan 2026 (LoE via GoProposal). Ping had **no indexed meetings**; Double has no notes yet. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-07-21 — Incremental sweep (baseline 2026-07-20 and later). No new Double notes/activity-log/client-property changes except **Organizer Status = "N/A (SCH-C)"** (added above); no new Gmail threads (in:inbox/in:sent, business + owner + known contact emails); no legible on/after-baseline Ping meeting hits (org-wide searches for "Stanislav Fedorov"/Lumetro returned only garbled, off-topic snippets — discarded). Nothing else new.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Reconcile the tax-filing treatment** — proposal says Lumetro won't file separately (consolidated into SensusTech) vs. Double's Schedule C / income-tax-yes flags. _(Gmail)_
