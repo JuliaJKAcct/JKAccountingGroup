@@ -16,6 +16,30 @@ so the general picture comes before the detail, hierarchy must be visible at a
 glance, and jargon must be explained. If an SOP needs a personal walkthrough to
 be usable, the writing failed.
 
+## Non-negotiable — what EVERY SOP is built with
+
+By default and unprompted, every SOP uses **both**:
+
+1. **The [`impeccable`](../impeccable/) skill** — for every visual/design decision.
+2. **The Atlas Design System** ([`brand/design-system/`](../../../brand/design-system/) +
+   [`render/atlas.css`](./render/atlas.css)) — compose only from its tokens; never invent
+   colors or fonts.
+
+Two rules that follow from this and apply to every SOP:
+
+- **The "process at a glance" flowchart is a designed, dynamic diagram — never a bare
+  Mermaid block in the team view.** The `.md` keeps a Mermaid/textual flow as
+  source-of-truth, but in the **Knowledge Hub** it renders as a hand-built diagram on Atlas
+  tokens with **purposeful motion** (visible without JS; static under
+  `prefers-reduced-motion`). A client-task SOP uses the `taskProcessReader` engine; see the
+  [`knowledge-hub`](../knowledge-hub/) skill for the render.
+- **Confidential Drive materials get a designed button — always.** Whenever a step needs an
+  extra document, file, video, or login that lives in **Google Drive** and can't be shown
+  explicitly on the (team-facing) website for confidentiality, surface it as a **designed
+  Drive-link button** with a short hover tooltip + a visible caption saying what it is —
+  never a bare URL, a raw repo path, or the secret itself. Same pattern as the bookkeeping
+  SOPs' Drive "material" buttons (Maria's clients) and the Deep Tech password-vault button.
+
 ## The required shape (in order)
 
 1. **Header block** — Status · Owner · Last updated, then the "where client data
@@ -42,7 +66,9 @@ be usable, the writing failed.
    before the screen-by-screen detail, so everything is gathered up front
    (formats and size limits included, e.g. "PDF only, ≤ 10 MB").
 8. **Screen-by-screen references** — one subsection per application, each screen
-   as a small labeled unit with its fields as bullets.
+   as a small labeled unit with its fields as bullets. **Only when the process is
+   complex enough to warrant it** — skip it for simple tasks (a two-field login +
+   pay, like the Penn Credit toll portal, doesn't need a screen-by-screen section).
 9. **Fees / renewals / deadlines** — the calendar facts.
 10. **Common pitfalls** — each one a bolded lesson learned the hard way.
 11. **Contacts & links table** — every URL and phone in one place; links also
