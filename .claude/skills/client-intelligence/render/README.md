@@ -60,10 +60,20 @@ no per-client code.
 ## Reusable exports (for the Knowledge Hub)
 
 `build.mjs` also exports `loadClients` / `clientCard` / `DASH_CSS` so the Knowledge Hub
-renders the *same* client cards (one engine, no drift). Each parsed client carries, among
-others: `entity` (display label), **`entityCls`** (normalized structure key — `scorp` ·
-`ccorp` · `partnership` · `schc` · `llc` · `corp`, from `classifyEntity()`, which detects
-Partnership/1065 and ignores "under review (A vs B)" option-lists), and **`svcKeys`** (the
-services we actually provide — `bookkeeping` · `payroll` · `salestax` · `incometax`, i.e.
-the `on`/`quirk` services). `clientCard` emits these as `data-entity` / `data-svc` on the
-card, which is what the Hub's Structure/Service facet filters read.
+renders the *same* client cards (one engine, no drift). Entity is parsed into **two
+independent dimensions** (they're different questions — an LLC can be taxed as an S-corp, a
+partnership, or disregarded), each parsed client carrying, among others:
+
+- `entity` — display label, `legal · tax` (e.g. `LLC · S-corp`, `Corp · S-corp`,
+  `LLC · Disregarded`).
+- **`legalCls`** — legal structure key (`llc` · `corp` · `partnership` · `soleprop`), from
+  `classifyLegal()` (the state-law entity noun; LLC/Corp win over a bare "partnership").
+- **`taxCls`** — tax classification key (`scorp` · `ccorp` · `partnership` · `disregarded` ·
+  `soleprop`), from `classifyTax()` (ignores "under review (A vs B)" option-lists so a
+  *mention* of another treatment can't mis-bucket; Schedule-C → `disregarded` if there's an
+  LLC, else `soleprop`).
+- **`svcKeys`** — services we actually provide (`bookkeeping` · `payroll` · `salestax` ·
+  `incometax`, i.e. the `on`/`quirk` services).
+
+`clientCard` emits these as `data-legal` / `data-tax` / `data-svc` on the card, which is
+what the Hub's Structure (Legal|Tax toggle) and Service facet filters read.

@@ -95,29 +95,47 @@ function checkboxes(text){
   return out;
 }
 
-// Entity classification — ONE ordered rule list drives both the display pill and the
-// filter token (key), so the facet a client is filed under always matches the pill it
-// shows. Partnership / Form 1065 was previously missing, so multi-member LLCs fell
-// through to a bare "LLC"; it now gets its own bucket (Julia filters by structure).
-const ENTITY_RULES = [
-  [/1120-S|S-?corp\b|S-?corporation/i,                 'scorp',       'S-corp · 1120-S'],
-  [/\b1065\b|partnership/i,                            'partnership', 'Partnership · 1065'],
-  [/\b1120\b|C-?corp\b|C-?corporation/i,               'ccorp',       'C-corp · 1120'],
-  [/Schedule C|Sch\.? C|disregarded|single-?member/i,  'schc',        'LLC · Sch C'],
-  [/\bLLC\b/i,                                         'llc',         'LLC'],
-  [/\bInc\b|Corporation/i,                             'corp',        'Corp'],
-];
-function classifyEntity(s){
-  // Drop "under review / A vs B vs C" option-lists first, so a mention of another
-  // structure inside a parenthetical (e.g. "files Schedule C … under review (LLC vs
-  // S-corp vs C-corp)") can't outrank the CURRENT filing.
-  const cleaned = String(s||'')
+// Entity has TWO independent dimensions the firm cares about, and the CI files pack both
+// into one "Entity type" line: the LEGAL structure (how it's formed under state law) and
+// the TAX classification (how the IRS taxes it). They're different questions — an LLC can
+// be taxed as an S-corp, a partnership, or a disregarded entity — so we derive each on its
+// own. The Hub filters them separately (Lilian's ask); mixing them in one list was wrong.
+
+// LEGAL structure — the state-law entity noun. A multi-member LLC taxed as a partnership
+// is still legally an LLC, so LLC / Corporation are matched before the partnership branch
+// (a bare "partnership" only wins when there's no LLC/Corp, i.e. a real GP/LP/LLP).
+function classifyLegal(s){
+  const t = String(s||'');
+  if(/sole prop|no LLC|not formed|without an entity|no entity/i.test(t)) return { key:'soleprop', label:'Sole prop' };
+  if(/\bLLC\b/i.test(t))                        return { key:'llc',         label:'LLC' };
+  if(/Corporation|\bInc\b|\bCorp\b/i.test(t))   return { key:'corp',        label:'Corp' };
+  if(/\bLP\b|\bLLP\b|partnership/i.test(t))     return { key:'partnership', label:'Partnership' };
+  return { key:'', label:null };
+}
+
+// TAX classification — how it's taxed federally. "Under review (A vs B vs C)" option-lists
+// are stripped first so a *mention* of another treatment can't outrank the current filing.
+// A Schedule-C filer is a disregarded entity when there's an LLC, else a sole proprietor.
+function classifyTax(s){
+  const t = String(s||'')
     .replace(/\([^)]*\bvs\b[^)]*\)/gi, ' ')
     .replace(/\bunder review\b/gi, ' ');
-  for(const [re,key,label] of ENTITY_RULES) if(re.test(cleaned)) return { key, label };
-  const c = stripSrc(cleaned); return { key:'', label: c ? c.slice(0,22) : null };
+  if(/1120-S|S-?corp\b|S-?corporation/i.test(t))    return { key:'scorp',       label:'S-corp' };
+  if(/\b1065\b|partnership/i.test(t))               return { key:'partnership', label:'Partnership' };
+  if(/\b1120\b|C-?corp\b|C-?corporation/i.test(t))  return { key:'ccorp',        label:'C-corp' };
+  if(/Schedule C|Sch\.? C|disregarded|single-?member/i.test(t))
+    return /\bLLC\b/i.test(t) ? { key:'disregarded', label:'Disregarded' } : { key:'soleprop', label:'Sole prop' };
+  return { key:'', label:null };
 }
-function entityTag(s){ return classifyEntity(s).label; }
+
+// Compact pill label — legal · tax (e.g. "LLC · S-corp", "Corp · S-corp",
+// "LLC · Disregarded"); falls back to a trimmed snippet, else nothing.
+function entityTag(s){
+  const combo = [classifyLegal(s).label, classifyTax(s).label].filter(Boolean).join(' · ');
+  if(combo) return combo;
+  const c = stripSrc(String(s||'')).replace(/\*\*/g,'');
+  return c && !/pending/i.test(c) ? c.slice(0,22) : null;
+}
 
 // Which services we actually provide — used for the Hub's "Service" facet. A service
 // counts as active when we do it (state 'on') or do it with a reconcile note ('quirk');
@@ -219,7 +237,8 @@ export function loadClients(repoRoot){
     return {
       slug, title, status, owner, updated,
       entity: entityTag(snap['Entity type']||''),
-      entityCls: classifyEntity(snap['Entity type']||'').key,
+      legalCls: classifyLegal(snap['Entity type']||'').key,
+      taxCls: classifyTax(snap['Entity type']||'').key,
       svcKeys: activeSvcKeys(svc),
       state: stateTag(snap['Home state']||''),
       lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
@@ -298,7 +317,7 @@ export function clientCard(c){
     <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
     <p class="cx-hint"><b>Related SOP</b> — ${sopLinks}</p></div>`;
   return `
-<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-entity="${esc(c.entityCls||'')}" data-svc="${esc((c.svcKeys||[]).join(' '))}" data-text="${searchText}">
+<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-legal="${esc(c.legalCls||'')}" data-tax="${esc(c.taxCls||'')}" data-svc="${esc((c.svcKeys||[]).join(' '))}" data-text="${searchText}">
   <div class="cx-head">
     <h3>${esc(c.title)}</h3>
     <div class="cx-upd">${esc(c.updated)}<span class="dot"></span>${esc(c.owner)}</div>
