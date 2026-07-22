@@ -514,9 +514,9 @@ function ecoorganicReaderInner(md, owner, updated){
   const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', ecoSectionBody(s.title, s.body), false)).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
-    + `<button class="dlbtn big" type="button" data-print><span class="pl-print">${IC.dl}Save as PDF manual</span><span class="pl-save" hidden>${IC.dl}Download manual (.md)</span></button>`
+    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note"><span class="pl-print">Saves the full runbook — cover, contents, every rule — as a printable PDF.</span><span class="pl-save" hidden>Downloads the full runbook — cover, contents, every rule — as a Markdown manual you can print from anywhere.</span></span>`
+    + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every rule) as a PDF.</span>`
     + `</div>`;
   return ecoPrintFrontMatter(sections, owner, updated)
     + `<section class="mast"><div class="in">`
@@ -648,9 +648,9 @@ function closeProcessReader(cfg, md, owner, updated){
   const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', closeSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
-    + `<button class="dlbtn big" type="button" data-print><span class="pl-print">${IC.dl}Save as PDF manual</span><span class="pl-save" hidden>${IC.dl}Download manual (.md)</span></button>`
+    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note"><span class="pl-print">Saves the full runbook — cover, contents, every step — as a printable PDF.</span><span class="pl-save" hidden>Downloads the full runbook — cover, contents, every step — as a Markdown manual you can print from anywhere.</span></span></div>`;
+    + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every step) as a PDF.</span></div>`;
   return closePrintFrontMatter(cfg.name, 'Monthly Bookkeeping & Close', sections, owner, updated)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
@@ -1255,28 +1255,35 @@ const BODY = `
   window.addEventListener('beforeprint', function(){
     [].forEach.call(document.querySelectorAll('details.cx-more, details.acc'), function(d){ d.open=true; });
   });
-  // "Save as PDF manual" ([data-print]). Real host: browser print → PDF. Sandbox:
-  // print() is blocked and the allowlist has no .pdf, so deliver the same runbook
-  // as a Markdown manual (.md) instead, reusing the sibling "Download as text" data.
+  // "Save as PDF manual" ([data-print]) and the reader-bar printer icon call the
+  // browser's NATIVE print → PDF. That renders the design-system "book" layout
+  // (@media print: cover + Contents + a page per section, chrome quieted) — the
+  // studyable PDF. It works on the real host (Odoo) and any normal browser.
+  // The claude.ai Artifact sandbox blocks window.print() and offers no capability
+  // to enable it, so there we surface a short, honest note instead of a dead click;
+  // "Download as text" stays as the preview's working file export.
+  function previewPrintNote(){
+    if(!CAP) return;
+    var t = document.getElementById('printtoast');
+    if(!t){
+      t = document.createElement('div'); t.id = 'printtoast'; t.className = 'printtoast'; t.setAttribute('role', 'status');
+      t.textContent = 'PDF & print open in your browser on the published Hub. In this preview, use “Download as text”.';
+      document.body.appendChild(t);
+    }
+    t.classList.remove('show'); void t.offsetWidth; t.classList.add('show');
+    clearTimeout(previewPrintNote._t);
+    previewPrintNote._t = setTimeout(function(){ t.classList.remove('show'); }, 4600);
+  }
+  function doPrint(){ try{ window.print(); }catch(e){} previewPrintNote(); }
+  // In the sandbox, rewrite each button's own note up-front so it's honest before any click.
   if(CAP){
-    // relabel the button + note from "…PDF" to "…(.md)" so it tells the truth
-    [].forEach.call(document.querySelectorAll('.pl-print'), function(s){ s.hidden = true; });
-    [].forEach.call(document.querySelectorAll('.pl-save'), function(s){ s.hidden = false; });
+    [].forEach.call(document.querySelectorAll('[data-print-note]'), function(n){
+      n.textContent = 'On the published Hub this opens your browser’s print dialog to save a PDF. In this preview, use “Download as text”.';
+      n.classList.add('is-preview');
+    });
   }
   [].forEach.call(document.querySelectorAll('[data-print]'), function(b){
-    b.addEventListener('click', function(){
-      if(!CAP){ window.print(); return; }
-      var box = b.closest('.eco-actions') || b.parentNode;
-      var link = box && box.querySelector('a[download][href^="data:"]');
-      var base = 'bookkeeping-runbook';
-      if(link){
-        base = (link.getAttribute('download') || base).replace(/\\.[a-z0-9]+$/i, '');
-        var parsed = dataUri(link.getAttribute('href') || '');
-        if(parsed){ saveFile(base + '.md', parsed.text != null ? parsed.text : parsed.blob, 'text/markdown'); return; }
-      }
-      var rc = document.getElementById('readerScroll');
-      saveFile(base + '.md', rc ? (rc.innerText || rc.textContent || '') : '', 'text/markdown');
-    });
+    b.addEventListener('click', doPrint);
   });
 
   // Downloads: "<a download href=data:>" is blocked in the sandbox (and silently on
@@ -1311,14 +1318,7 @@ const BODY = `
   });
   var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
   var rPrint = document.getElementById('readerPrint');
-  if(rPrint) rPrint.addEventListener('click', function(){
-    if(!CAP){ window.print(); return; }
-    // sandbox: print() is blocked — hand over the open document's visible text as .txt
-    var name = (readerTitle && readerTitle.textContent ? readerTitle.textContent : 'document')
-      .trim().replace(/[^\\w.-]+/g, '-').replace(/^-+|-+$/g, '') || 'document';
-    var txt = readerScroll ? (readerScroll.innerText || readerScroll.textContent || '') : '';
-    saveFile(name + '.txt', txt, 'text/plain');
-  });
+  if(rPrint) rPrint.addEventListener('click', doPrint);
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
 
   // Chart-of-Accounts tool: edit numbers/names, untick accounts, download a QuickBooks CSV.

@@ -72,26 +72,34 @@ inside a CSP-restricted Artifact, and **move to the firm's Odoo website with not
 ### Downloads & print behave differently in the Artifact sandbox vs the real host
 
 The claude.ai Artifact sandbox **silently blocks BOTH `<a download>` (every scheme —
-`data:` *and* `blob:`) AND `window.print()`.** A button that "downloads a file" or "saves a
-PDF" does *nothing* there unless it goes through the **`downloads` runtime capability**. On
-the real Odoo host those APIs work normally, so the Hub is built to do both:
+`data:` *and* `blob:`) AND `window.print()`.** A button that "downloads a file" does
+*nothing* there unless it goes through the **`downloads` runtime capability**, and there is
+**no capability for printing** — `window.print()` simply cannot be enabled in the sandbox.
+On the real Odoo host (and any normal browser) both APIs work. **The Hub's design target is
+the real host; the Artifact is a preview** — so the buttons are built for the real host and
+degrade honestly in the preview:
 
-- **`window.claude.downloads.save({filename, data})`** when `window.claude.downloads`
-  exists (the sandbox), else a **Blob download** on the real host. One helper (`saveFile` in
-  the emitted script) picks the path; presence of `window.claude.downloads` is the "we're in
-  the sandbox" signal. Every `<a download href="data:…">` and the runbook "Download as text"
-  route through it.
+- **PDF / print — native `window.print()`, not a download.** "Save as PDF manual" and the
+  reader-bar printer icon call `window.print()`, which renders the **design-system book
+  layout** (`@media print` in `hub.css`: a cover page + a Contents page + one section per
+  page, chrome quieted, action bar and data-URI links hidden). That IS the studyable PDF —
+  the user picks "Save as PDF" in the browser's print dialog. **Do not fabricate a PDF or
+  substitute a `.md`/`.txt` "manual"** — Lilian explicitly rejected the `.md` fallback ("no
+  cumple ningún objetivo"). In the sandbox, where `window.print()` is a no-op, the button
+  keeps its honest label ("Save as PDF manual"), rewrites its own note, and pops a short
+  toast — *"PDF & print open in your browser on the published Hub; here, use Download as
+  text"* — instead of a dead click. The whole-Hub print button is hidden in the sandbox.
+- **File downloads — the `downloads` capability, else Blob.** `saveFile` in the emitted
+  script uses `window.claude.downloads.save({filename, data})` when `window.claude.downloads`
+  exists (the sandbox signal), else a **Blob download** on the real host. Only genuine file
+  exports route through it: the runbook **"Download as text"** (`.txt`) and the CoA CSV.
 - **Filename extension allowlist** for the capability is **`gif png jpg jpeg webp mp4 webm
-  txt json md`** — **no `pdf`, `csv`, or `html`.** Text under a disallowed extension (e.g.
-  a `.csv`) is saved as `.txt`; binary can only fall back to the (blocked) Blob path.
-- **`window.print()` has no capability** — it cannot be enabled in the sandbox. So
-  "Save as PDF manual" and the reader-bar printer icon **print on the real host** but, in the
-  sandbox, **download the runbook as a `.md` manual** (allowlisted) / the open doc's text as
-  `.txt` instead, and relabel themselves so the label doesn't lie. The whole-Hub print button
-  is hidden in the sandbox (no per-file equivalent).
+  txt json md`** — **no `pdf`, `csv`, or `html`.** This is *why* PDF can't be a sandbox
+  download and print is the only PDF path. Text under a disallowed extension (e.g. a `.csv`)
+  is saved as `.txt`.
 
-**Publishing the Artifact therefore REQUIRES `capabilities: {downloads: true}`** — without
-it, `window.claude.downloads` is absent and every download/print button is dead again. Load
+**Publishing the Artifact still REQUIRES `capabilities: {downloads: true}`** — without
+it, `window.claude.downloads` is absent and even "Download as text" is dead. Load
 the `artifact-capabilities` skill before publishing; the `downloads.d.ts` it points to is the
 authoritative contract (error codes, 16 MiB cap, the allowlist above).
 
@@ -117,9 +125,11 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
    #     in a copy, screenshot it, and confirm the reader opens.
    ```
    For any **download / print** change, also run the click test both ways in headless
-   Chromium: once with a stubbed `window.claude.downloads.save` (asserts the sandbox path
-   saves allowlisted filenames and never calls `window.print()`), once without it (asserts
-   the real-host Blob/`window.print()` path). Chromium is at
+   Chromium: stub `window.print` (a counter) and `window.claude.downloads.save`. With the
+   capability present (sandbox), assert the **print buttons call `window.print()` but save
+   NO file** and pop the preview toast, while **"Download as text" saves exactly one `.txt`**;
+   without the capability (real host), assert the print buttons call `window.print()`, no
+   toast, and downloads take the Blob path. Chromium is at
    `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, Playwright at
    `/opt/node22/lib/node_modules/playwright`.
 5. **Publish / update the shareable link** with the **Artifact** tool, using the **same

@@ -148,13 +148,16 @@ The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered 
 
 - **Generic section renderers** (structure-driven, client-agnostic *functions*): rule cards,
   status-pill decisions table, numbered check items, the number-range strip, and the
-  **book-mode PDF** (a cover page + a Contents/index page + one section per page, via the
-  "Save as PDF manual" button) plus a plain-text download. **In the claude.ai Artifact
-  sandbox both `<a download>` and `window.print()` are blocked** — the buttons route through
-  the Hub's capability-aware `saveFile` (`.md`/`.txt` via `window.claude.downloads`), so the
-  Artifact must be published with `capabilities: {downloads: true}`; on the real Odoo host
-  they print / download natively. See the `knowledge-hub` skill's downloads section. They
-  read from any runbook `.md`
+  **book-mode PDF** (a cover page + a Contents/index page + one section per page). The
+  "Save as PDF manual" button and the reader-bar printer icon call **native `window.print()`**
+  — that renders the `@media print` book layout, and the user saves it as PDF from the browser
+  dialog. **Never substitute a `.md`/`.txt` "manual"** for the PDF — Lilian rejected that; the
+  PDF is the print output. A separate **"Download as text"** button exports `.txt`. **In the
+  claude.ai Artifact sandbox both `<a download>` and `window.print()` are blocked**, so there
+  the print buttons show an honest note/toast (PDF/print live on the published site) and only
+  "Download as text" works (via `window.claude.downloads`) — the Artifact must be published
+  with `capabilities: {downloads: true}`. On the real Odoo host / any browser everything works
+  natively. See the `knowledge-hub` skill's downloads section. They read from any runbook `.md`
   with the structure above — but see *Current state* below: today they're only **wired**
   through Ecoorganic's reader, so a new client's sections don't render until that client
   gets a reader/catalog entry.
