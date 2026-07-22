@@ -1,0 +1,226 @@
+<!doctype html>
+<!--
+  Partner Program one-sheet for commercial realtors — RU (source content
+  supplied by Julia). This is the master overview document to introduce a
+  new realtor partner to the program: one simple ask (a 15-20 min
+  introductory call, explicitly not a sales pitch), no checklist artifact.
+  Distinct from realtor-quick-guide-*.html (the moment-by-moment script
+  card) and realtor-referral-playbook.md (internal briefing notes) — see
+  ../strategy.md for how these reconcile.
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Партнёрская программа JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:720px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:14px;line-height:1.58;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:26px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 16px 44px rgba(9,31,36,.11);
+    border-radius:16px;overflow:hidden;}
+  h1,h2{font-family:var(--serif);letter-spacing:-0.012em;color:var(--text-primary);
+    text-wrap:balance;margin:0;font-weight:600;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;
+    font-size:10.5px;font-weight:600;}
+
+  .hero{background:linear-gradient(160deg,#164049 0%, var(--teal) 45%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:36px 40px 30px;}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:20px;}
+  .medallion{width:34px;height:34px;flex:none;}
+  .firm-name{font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;line-height:1.15;}
+  .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:8.5px;color:var(--on-dark-muted);margin-top:2px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:26px;line-height:1.22;margin:8px 0 8px;}
+  .hero p{color:var(--on-dark-muted);font-size:14.5px;margin:0;max-width:58ch;}
+
+  .body{padding:32px 40px 6px;}
+  section{margin-bottom:28px;}
+  section:last-of-type{margin-bottom:8px;}
+  h2{font-size:16px;margin:0 0 10px;}
+  p{margin:.5em 0;max-width:64ch;}
+  strong{color:var(--text-primary);font-weight:600;}
+
+  .qlist{list-style:none;margin:10px 0 0;padding:0;display:grid;
+    grid-template-columns:1fr;gap:0;border:1px solid var(--hairline);
+    border-radius:12px;overflow:hidden;background:var(--paper);}
+  .qlist li{padding:9px 16px;font-size:13.5px;border-bottom:1px solid var(--hairline);}
+  .qlist li:last-child{border-bottom:none;}
+
+  .lead{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--text-primary);
+    margin:14px 0 0;}
+
+  .note{background:var(--paper);border:1px solid var(--border);border-radius:12px;
+    padding:16px 20px;margin-top:12px;}
+  .note p{margin:.35em 0;font-size:13.5px;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hairline);
+    border:1px solid var(--hairline);border-radius:12px;overflow:hidden;margin-top:10px;}
+  .grid2 .cell{background:var(--paper);padding:10px 15px;font-size:13.5px;}
+  @media (max-width:560px){ .grid2{grid-template-columns:1fr;} }
+
+  .script{background:var(--paper);border:1px solid var(--border);border-radius:13px;
+    padding:20px 24px;margin-top:10px;}
+  .script p{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.55;
+    color:var(--text-primary);margin:0;max-width:none;}
+  .script p::before{content:"\00AB";color:var(--bronze-light);}
+  .script p::after{content:"\00BB";color:var(--bronze-light);}
+  .script .after{font-family:var(--sans);font-style:normal;font-size:13px;
+    color:var(--text-muted);margin-top:10px;}
+
+  .steps{list-style:none;margin:10px 0 0;padding:0;counter-reset:step;}
+  .steps li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:6px 0;font-size:13.5px;}
+  .steps li::before{counter-increment:step;content:counter(step);
+    width:20px;height:20px;border-radius:50%;background:var(--paper);
+    border:1.4px solid var(--bronze-ink);color:var(--bronze-ink);
+    font-family:var(--mono);font-size:11px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;}
+
+  .benefits{margin:10px 0 0;padding:0;list-style:none;}
+  .benefits li{position:relative;padding:5px 0 5px 20px;font-size:13.5px;}
+  .benefits li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;
+    border-radius:50%;background:var(--bronze);}
+
+  .signoff{margin-top:26px;padding-top:20px;border-top:1px solid var(--hairline);}
+  .signoff .name{font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--text-primary);}
+  .signoff .cred{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:9.5px;color:var(--bronze-ink);margin-top:2px;}
+  .signoff .tag{font-size:13px;color:var(--text-muted);margin-top:8px;max-width:56ch;}
+  .signoff .contact{margin-top:10px;font-size:13.5px;}
+  .signoff .contact a{color:var(--teal);text-decoration:none;font-weight:500;}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:18px 40px;font-size:11.5px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;margin-top:24px;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark);font-size:9.5px;}
+  .foot a{color:var(--bronze-light);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+    section{break-inside:avoid;}
+  }
+  @media (max-width:600px){
+    .hero,.body,.foot{padding-left:22px;padding-right:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">Партнёрская программа</div></div>
+    </div>
+    <span class="kicker">Для наших партнёров-риелторов</span>
+    <h1>Дополнительная ценность для ваших клиентов</h1>
+    <p>Покупка или аренда коммерческой недвижимости — это не только выбор помещения. В этот момент у владельца бизнеса обычно возникает множество вопросов.</p>
+  </header>
+
+  <div class="body">
+
+    <section>
+      <ul class="qlist">
+        <li>Нужно ли менять структуру компании?</li>
+        <li>Стоит ли переходить на S Corporation?</li>
+        <li>Как правильно организовать бухгалтерию?</li>
+        <li>Когда регистрироваться по Sales Tax?</li>
+        <li>Как оформить сотрудников?</li>
+        <li>Какие расходы можно учитывать?</li>
+        <li>Как подготовиться к налогам?</li>
+      </ul>
+      <p class="lead">Большинство этих вопросов выходят за рамки компетенции риелтора. Именно здесь мы можем помочь.</p>
+    </section>
+
+    <section>
+      <h2>Как это работает</h2>
+      <p>Если во время сделки у вашего клиента возникают вопросы по бухгалтерии, налогам или финансовой организации бизнеса — просто познакомьте его с нами.</p>
+      <p>Мы готовы провести <strong>15–20-минутный ознакомительный разговор</strong>, ответить на общие вопросы и подсказать правильное направление.</p>
+      <div class="note">
+        <p><strong>Это не продажа услуг и не полноценная налоговая консультация.</strong> Цель такого разговора — помочь владельцу бизнеса понять, какие вопросы важно учесть именно сейчас.</p>
+        <p>Если после разговора клиенту потребуется более глубокий анализ, налоговое планирование или бухгалтерское сопровождение — мы отдельно обсудим возможный формат сотрудничества.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Когда стоит нас рекомендовать</h2>
+      <div class="grid2">
+        <div class="cell">Открытие первого помещения</div>
+        <div class="cell">Переезд бизнеса</div>
+        <div class="cell">Открытие второй или третьей точки</div>
+        <div class="cell">Покупка коммерческой недвижимости</div>
+        <div class="cell">Расширение компании</div>
+        <div class="cell">Вопросы по налогам или бухгалтерии</div>
+        <div class="cell">Вопросы по оформлению сотрудников</div>
+        <div class="cell">Выбор структуры бизнеса</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Что можно сказать клиенту</h2>
+      <div class="script">
+        <p>Я сотрудничаю с бухгалтерской компанией, которая специализируется на сопровождении малого бизнеса. Если у вас есть вопросы по налогам, бухгалтерии или организации финансовой части бизнеса, они готовы уделить вам 15–20 минут, чтобы ответить на общие вопросы и подсказать, на что обратить внимание.</p>
+        <p class="after">Этого вполне достаточно. Мы возьмём дальнейшую коммуникацию на себя.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Как познакомить нас</h2>
+      <p>Самый простой вариант — создать общий чат или отправить нам:</p>
+      <ol class="steps">
+        <li>Имя клиента</li>
+        <li>Номер телефона</li>
+        <li>Предпочтительный язык общения</li>
+      </ol>
+      <p style="margin-top:12px;">Мы самостоятельно свяжемся с клиентом и договоримся о времени разговора.</p>
+    </section>
+
+    <section>
+      <h2>Почему это удобно для вас</h2>
+      <ul class="benefits">
+        <li>Вы не берёте на себя ответственность отвечать на бухгалтерские или налоговые вопросы.</li>
+        <li>При этом ваш клиент получает доступ к проверенному специалисту.</li>
+        <li>Это помогает вам предоставить более высокий уровень сервиса и укрепляет доверие клиентов.</li>
+      </ul>
+    </section>
+
+    <div class="signoff">
+      <div class="name">Julia Kononova, EA</div>
+      <div class="cred">JK Accounting Group</div>
+      <div class="tag">Комплексное бухгалтерское сопровождение и налоговое консультирование малого бизнеса в США.</div>
+      <div class="contact"><a href="https://wa.me/17863181505">786-318-1505</a> &nbsp;·&nbsp; <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="firm">JK Accounting Group</div>
+    <div>Майами · Форт-Лодердейл · Онлайн</div>
+  </footer>
+
+</div>
+</body>
+</html>

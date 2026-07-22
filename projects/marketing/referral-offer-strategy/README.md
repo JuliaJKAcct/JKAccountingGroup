@@ -70,6 +70,22 @@ there.
   card with just the 4 moments and scripts a realtor needs, no internal
   notes or file-path references. This is what actually gets handed or sent
   to the realtor; the playbook `.md` is the source material behind it.
+- **`templates/realtor-partner-program-en.html`** / **`-ru.html`** (content
+  supplied by Julia; EN is a native translation) — a simpler, alternate
+  model for the realtor channel: one Partner Program overview one-sheet, a
+  single script (not 4 moment-specific ones), a bounded "15–20 minute
+  introductory call — not a sales pitch, not a full consultation," and
+  **no checklist artifact at all** — the realtor just sends a name/phone/
+  language and JKA calls directly. **Not yet reconciled** with the
+  checklist-handoff model above (the two chassis/quick-guide/playbook
+  entries) — see the note below.
+
+**Open fork, not yet resolved:** this project now has two different
+mechanics for the realtor channel — the checklist-handoff chassis (above)
+and this simpler Partner Program overview with no checklist. `strategy.md`
+still only describes the former. Decide which is the actual program (or
+how they combine) and update `strategy.md` + this list accordingly next
+time this project is worked on.
 
 Still open per `strategy.md` §6: scoring rubric thresholds, the
 document/access checklist for the *paid* assessment, Growth Accelerator
