@@ -1,0 +1,169 @@
+<!doctype html>
+<!--
+  Realtor Quick-Guide — RU. Mirror of realtor-quick-guide-en.html. Written
+  natively, not machine-translated. Partner-facing only — internal notes
+  stay in realtor-referral-playbook-ru.md.
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как делиться чек-листом — краткое руководство для вас</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:720px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:14.5px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:26px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 16px 44px rgba(9,31,36,.11);
+    border-radius:16px;overflow:hidden;}
+  h1,h2{font-family:var(--serif);letter-spacing:-0.012em;color:var(--text-primary);
+    text-wrap:balance;margin:0;font-weight:600;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;
+    font-size:10.5px;font-weight:600;}
+
+  .hero{background:linear-gradient(160deg,#164049 0%, var(--teal) 45%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:34px 40px 30px;}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:18px;}
+  .medallion{width:32px;height:32px;flex:none;}
+  .firm-name{font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;line-height:1.15;}
+  .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:8.5px;color:var(--on-dark-muted);margin-top:2px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:24px;line-height:1.22;margin:10px 0 8px;}
+  .hero p{color:var(--on-dark-muted);font-size:14px;margin:0;max-width:58ch;}
+
+  .body{padding:32px 40px 10px;}
+  .moment{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:22px 0;
+    border-bottom:1px solid var(--hairline);}
+  .moment:first-child{padding-top:2px;}
+  .moment:last-child{border-bottom:none;}
+  .badge{width:34px;height:34px;border-radius:50%;background:var(--paper);
+    border:1.5px solid var(--bronze-ink);color:var(--bronze-ink);
+    font-family:var(--serif);font-weight:600;font-size:15px;
+    display:flex;align-items:center;justify-content:center;flex:none;}
+  .moment .when{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:10.5px;color:var(--teal);font-weight:600;margin-bottom:6px;}
+  .moment .script{font-family:var(--serif);font-style:italic;font-size:16.5px;
+    line-height:1.5;color:var(--text-primary);margin:0;max-width:60ch;}
+  .moment .script::before{content:"\00AB";color:var(--bronze-light);}
+  .moment .script::after{content:"\00BB";color:var(--bronze-light);}
+
+  .rule{margin:26px 0 24px;background:var(--paper);border:1px solid var(--border);
+    border-radius:13px;padding:20px 24px;}
+  .rule .kicker{color:var(--bronze-ink);display:block;margin-bottom:6px;}
+  .rule p{margin:.35em 0;font-size:14px;color:var(--text-body);max-width:64ch;}
+  .rule .tmpl{font-family:var(--serif);font-style:italic;color:var(--text-primary);
+    display:block;margin:8px 0;}
+
+  .cta{margin:6px 0 6px;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;padding:22px 0 2px;}
+  .cta p{margin:0;font-size:13.5px;color:var(--text-muted);max-width:42ch;}
+  .cta .btn{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;
+    font-weight:600;color:#fff;background:var(--bronze);border-radius:999px;padding:12px 22px;
+    white-space:nowrap;text-decoration:none;display:inline-block;}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:18px 40px;font-size:11.5px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;margin-top:22px;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark);font-size:9.5px;}
+  .foot a{color:var(--bronze-light);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+    .moment{break-inside:avoid;}
+  }
+  @media (max-width:600px){
+    .hero,.body,.foot{padding-left:22px;padding-right:22px;}
+    .cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">Для наших партнёров по рекомендациям</div></div>
+    </div>
+    <span class="kicker">Краткое руководство для вас</span>
+    <h1>Как заговорить о чек-листе с клиентом</h1>
+    <p>Четыре момента, куда это естественно вписывается — используйте тот, что реально возникнет в разговоре. Вам не нужно объяснять бухгалтерскую часть — просто передайте чек-лист и скажите, что дальше мы всё разберём сами.</p>
+  </header>
+
+  <div class="body">
+
+    <div class="moment">
+      <div class="badge">1</div>
+      <div>
+        <div class="when">Пока клиент ещё в поиске</div>
+        <p class="script">О, здорово, поздравляю с переездом. Слушайте, когда будете обживаться на новом месте — у меня есть небольшой чек-лист, я его собрал(а) вместе с бухгалтерской фирмой, с которой работаю. Многим моим клиентам он реально помог — просто финансовая сторона, на которую стоит взглянуть при переезде. Отправлю вам, без спешки.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">2</div>
+      <div>
+        <div class="when">Прямо на подписании / при передаче ключей</div>
+        <p class="script">Поздравляю с новым помещением! Пока не забыл(а) — посмотрите вот этот чек-лист. Я собрал(а) его вместе с бухгалтерской фирмой, с которой работаю, и многим моим клиентам он реально пригодился. По сути, это финансовые вещи, которые стоит перепроверить при переезде на новое место. Если что-то покажется незнакомым — позвоните им, у них бесплатная консультация.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">3</div>
+      <div>
+        <div class="when">Когда клиент спрашивает то, на что вы не можете ответить полностью</div>
+        <p class="script">Если честно, это больше вопрос к бухгалтеру, чем ко мне — но я работаю с фирмой, которая как раз этим занимается для моих клиентов. Связать вас? У них бесплатная консультация.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">4</div>
+      <div>
+        <div class="when">Короткое сообщение через пару дней</div>
+        <p class="script">Как дела с новым помещением? Хотел(а) отправить вам вот это — короткий финансовый чек-лист, я собрал(а) его с бухгалтерской фирмой, с которой работаю. Многим моим клиентам он помог. Бесплатная консультация, если что-то покажется незнакомым.</p>
+      </div>
+    </div>
+
+    <div class="rule">
+      <span class="kicker">И ещё один момент</span>
+      <p>В тот же день напишите Julia в WhatsApp или СМС имя клиента, номер телефона, удобный язык и адрес помещения — именно это превращает передачу в настоящую рекомендацию:</p>
+      <span class="tmpl">«Новый контакт: [имя], [телефон], удобнее EN/RU — переезжает в новое помещение по адресу [адрес].»</span>
+    </div>
+
+    <div class="cta">
+      <p>Есть вопросы, или хотите отправить контакт прямо сейчас?</p>
+      <a class="btn" href="https://wa.me/17863181505?text=%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%3A%20">Написать Julia</a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="firm">JK Accounting Group</div>
+    <div><a href="https://wa.me/17863181505">WhatsApp / звонок (786) 318-1505</a> &nbsp;·&nbsp; <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></div>
+  </footer>
+
+</div>
+</body>
+</html>

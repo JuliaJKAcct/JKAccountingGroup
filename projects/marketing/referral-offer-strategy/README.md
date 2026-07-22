@@ -59,12 +59,17 @@ there.
   the rarer client genuinely *starting* their first business, on brand, no
   partner-specific redesign needed.
 - **`templates/realtor-referral-playbook.md`** / **`-ru.md`** (native
-  Russian, not machine-translated) — how the partner actually delivers the
-  checklist: four natural trigger moments to pick from (not one rigid
-  script), WhatsApp/text as the default channel (this audience doesn't run
-  on email), and the same-day hand-off of the client's contact info to JKA
-  (the step that turns "gave them a PDF" into an actual referral) rather
-  than a self-serve booking form.
+  Russian, not machine-translated) — the **internal** briefing doc: four
+  natural trigger moments to pick from (not one rigid script), WhatsApp/text
+  as the default channel (this audience doesn't run on email), which
+  checklist variant to hand over, and the same-day hand-off of the client's
+  contact info to JKA. For Julia/team use when briefing a partner — not
+  something to hand the partner directly.
+- **`templates/realtor-quick-guide-en.html`** / **`-ru.html`** — the
+  **partner-facing** half of the above: a one-page, branded quick-reference
+  card with just the 4 moments and scripts a realtor needs, no internal
+  notes or file-path references. This is what actually gets handed or sent
+  to the realtor; the playbook `.md` is the source material behind it.
 
 Still open per `strategy.md` §6: scoring rubric thresholds, the
 document/access checklist for the *paid* assessment, Growth Accelerator

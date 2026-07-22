@@ -1,0 +1,173 @@
+<!doctype html>
+<!--
+  Realtor Quick-Guide — the PARTNER-FACING half of realtor-referral-playbook.md.
+  Everything internal-only (the "why", the file-path references, the
+  "Notes for Julia/team" section) stays in the .md; this is only what the
+  realtor themselves should ever see: the 4 moments + scripts + hand-off.
+  Built through the impeccable skill against the Atlas design system
+  (brand/design-system/DESIGN.md) — no side-stripe borders (banned), scripts
+  are set as pull-quotes, not code-style callout boxes.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sharing the Checklist — A Quick Guide for You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#123841; --teal-deep:#0D2A31; --teal-darkest:#091F24;
+    --bronze:#9C6A39; --bronze-light:#CFA268; --bronze-ink:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --text-primary:#0D2A31; --text-body:#22201A; --text-muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --hairline:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:720px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{margin:0;background:var(--ivory);color:var(--text-body);
+    font-family:var(--sans);font-size:14.5px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .sheet{max-width:var(--maxw);margin:26px auto;background:var(--white);
+    box-shadow:0 1px 2px rgba(9,31,36,.06),0 16px 44px rgba(9,31,36,.11);
+    border-radius:16px;overflow:hidden;}
+  h1,h2{font-family:var(--serif);letter-spacing:-0.012em;color:var(--text-primary);
+    text-wrap:balance;margin:0;font-weight:600;}
+  .kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.15em;
+    font-size:10.5px;font-weight:600;}
+
+  .hero{background:linear-gradient(160deg,#164049 0%, var(--teal) 45%, var(--teal-deep) 100%);
+    color:var(--on-dark);padding:34px 40px 30px;}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:18px;}
+  .medallion{width:32px;height:32px;flex:none;}
+  .firm-name{font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;line-height:1.15;}
+  .firm-sub{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:8.5px;color:var(--on-dark-muted);margin-top:2px;}
+  .hero .kicker{color:var(--bronze-light);}
+  .hero h1{color:#fff;font-size:26px;line-height:1.2;margin:10px 0 8px;}
+  .hero p{color:var(--on-dark-muted);font-size:14px;margin:0;max-width:56ch;}
+
+  .body{padding:32px 40px 10px;}
+  .moment{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:22px 0;
+    border-bottom:1px solid var(--hairline);}
+  .moment:first-child{padding-top:2px;}
+  .moment:last-child{border-bottom:none;}
+  .badge{width:34px;height:34px;border-radius:50%;background:var(--paper);
+    border:1.5px solid var(--bronze-ink);color:var(--bronze-ink);
+    font-family:var(--serif);font-weight:600;font-size:15px;
+    display:flex;align-items:center;justify-content:center;flex:none;}
+  .moment .when{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:10.5px;color:var(--teal);font-weight:600;margin-bottom:6px;}
+  .moment .script{font-family:var(--serif);font-style:italic;font-size:16.5px;
+    line-height:1.5;color:var(--text-primary);margin:0;max-width:60ch;}
+  .moment .script::before{content:"\201C";color:var(--bronze-light);}
+  .moment .script::after{content:"\201D";color:var(--bronze-light);}
+
+  .rule{margin:26px 0 24px;background:var(--paper);border:1px solid var(--border);
+    border-radius:13px;padding:20px 24px;}
+  .rule .kicker{color:var(--bronze-ink);display:block;margin-bottom:6px;}
+  .rule p{margin:.35em 0;font-size:14px;color:var(--text-body);max-width:64ch;}
+  .rule .tmpl{font-family:var(--serif);font-style:italic;color:var(--text-primary);
+    display:block;margin:8px 0;}
+
+  .cta{margin:6px 0 6px;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;padding:22px 0 2px;}
+  .cta p{margin:0;font-size:13.5px;color:var(--text-muted);max-width:40ch;}
+  .cta .btn{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;
+    font-weight:600;color:#fff;background:var(--bronze);border-radius:999px;padding:12px 22px;
+    white-space:nowrap;text-decoration:none;display:inline-block;}
+
+  .foot{background:var(--teal-deep);color:var(--on-dark-muted);padding:18px 40px;font-size:11.5px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;margin-top:22px;}
+  .foot .firm{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark);font-size:9.5px;}
+  .foot a{color:var(--bronze-light);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;border-radius:0;}
+    .moment{break-inside:avoid;}
+  }
+  @media (max-width:600px){
+    .hero,.body,.foot{padding-left:22px;padding-right:22px;}
+    .cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <svg class="medallion" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#CFA268" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#ECE6DA" stroke-width="1"/>
+        <rect x="46.5" y="1.6" width="7" height="7" transform="rotate(45 50 5)" fill="#CFA268"/>
+        <rect x="46.5" y="91.4" width="7" height="7" transform="rotate(45 50 95)" fill="#CFA268"/>
+        <text x="50" y="63" text-anchor="middle" font-family="Source Serif 4, serif" font-size="34" font-weight="600" fill="#ECE6DA" letter-spacing="-1">JK</text>
+      </svg>
+      <div><div class="firm-name">JK Accounting Group</div><div class="firm-sub">A note for our referral partners</div></div>
+    </div>
+    <span class="kicker">A quick guide, just for you</span>
+    <h1>Bringing Up the Checklist With a Client</h1>
+    <p>Four moments where this naturally fits — use whichever one shows up in the conversation. You never need to explain the accounting side; just hand it over and say we'll take it from there.</p>
+  </header>
+
+  <div class="body">
+
+    <div class="moment">
+      <div class="badge">1</div>
+      <div>
+        <div class="when">While they're still looking</div>
+        <p class="script">Oh nice, congrats on the move. You know, whenever you're settling into the new place, I've got a little checklist I put together with an accounting firm I work with — a lot of my clients found it really helpful, just the financial side worth a quick look when you're moving. I'll send it over, no rush.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">2</div>
+      <div>
+        <div class="when">Right at signing / handing over keys</div>
+        <p class="script">Congrats on the new space! Before I forget — take a look at this checklist. I put it together with an accounting firm I work with, and a lot of my clients have found it really helpful. It's basically the financial stuff worth double-checking when you're moving into a new place. If anything on it looks unfamiliar, give them a call — they do a free consultation.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">3</div>
+      <div>
+        <div class="when">When they ask something you can't fully answer</div>
+        <p class="script">Honestly, that's more of an accounting question than a real estate one — but I work with a firm that handles exactly this for my clients. Want me to connect you? They do a free consultation.</p>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="badge">4</div>
+      <div>
+        <div class="when">A quick follow-up, a few days later</div>
+        <p class="script">Hope the new space is coming together! Meant to send you this — a quick financial checklist I put together with an accounting firm I work with. A lot of my clients found it helpful. Free consultation if anything looks unfamiliar.</p>
+      </div>
+    </div>
+
+    <div class="rule">
+      <span class="kicker">One more thing</span>
+      <p>Text or WhatsApp Julia the same day with the client's name, number, language, and the property — that's what actually turns a hand-off into a referral:</p>
+      <span class="tmpl">"New referral: [name], [phone], prefers EN/RU — moving into a new space at [property]."</span>
+    </div>
+
+    <div class="cta">
+      <p>Questions about any of this, or want to send a referral right now?</p>
+      <a class="btn" href="https://wa.me/17863181505?text=New%20referral%3A%20">Text Julia</a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="firm">JK Accounting Group</div>
+    <div><a href="https://wa.me/17863181505">WhatsApp / Call (786) 318-1505</a> &nbsp;·&nbsp; <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
