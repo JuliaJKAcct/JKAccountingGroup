@@ -514,9 +514,9 @@ function ecoorganicReaderInner(md, owner, updated){
   const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', ecoSectionBody(s.title, s.body), false)).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
-    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
+    + `<button class="dlbtn big" type="button" data-print><span class="pl-print">${IC.dl}Save as PDF manual</span><span class="pl-save" hidden>${IC.dl}Download manual (.md)</span></button>`
     + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every rule — as a printable PDF.</span>`
+    + `<span class="eco-actions-note"><span class="pl-print">Saves the full runbook — cover, contents, every rule — as a printable PDF.</span><span class="pl-save" hidden>Downloads the full runbook — cover, contents, every rule — as a Markdown manual you can print from anywhere.</span></span>`
     + `</div>`;
   return ecoPrintFrontMatter(sections, owner, updated)
     + `<section class="mast"><div class="in">`
@@ -648,9 +648,9 @@ function closeProcessReader(cfg, md, owner, updated){
   const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', closeSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
-    + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
+    + `<button class="dlbtn big" type="button" data-print><span class="pl-print">${IC.dl}Save as PDF manual</span><span class="pl-save" hidden>${IC.dl}Download manual (.md)</span></button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every step — as a printable PDF.</span></div>`;
+    + `<span class="eco-actions-note"><span class="pl-print">Saves the full runbook — cover, contents, every step — as a printable PDF.</span><span class="pl-save" hidden>Downloads the full runbook — cover, contents, every step — as a Markdown manual you can print from anywhere.</span></span></div>`;
   return closePrintFrontMatter(cfg.name, 'Monthly Bookkeeping & Close', sections, owner, updated)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
@@ -1126,13 +1126,70 @@ const BODY = `
   var root = document.documentElement;
   root.classList.add('js');
 
+  // ---- File delivery -------------------------------------------------------
+  // The claude.ai Artifact sandbox blocks BOTH "<a download>" (data: and blob:)
+  // AND window.print(). The only sanctioned path there is the downloads
+  // capability: window.claude.downloads.save({filename,data}). On the real host
+  // that capability is absent, so we fall back to a Blob download (works there).
+  // Presence of window.claude.downloads is our "we're in the sandbox" signal.
+  var CAP = !!(window.claude && window.claude.downloads);
+  // capability filename allowlist (extension → MIME comes from the extension)
+  var ALLOW = { gif:1, png:1, jpg:1, jpeg:1, webp:1, mp4:1, webm:1, txt:1, json:1, md:1 };
+  function extOf(name){ var m = /\\.([a-z0-9]+)$/i.exec(name || ''); return m ? m[1].toLowerCase() : ''; }
+  function blobFallback(filename, data, mime){
+    try{
+      var blob = (data instanceof Blob) ? data : new Blob([data], { type: mime || 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var t = document.createElement('a');
+      t.href = url; t.download = filename || 'download';
+      document.body.appendChild(t); t.click(); t.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+    }catch(e){ /* nothing more we can do */ }
+  }
+  // Hand a file to the viewer. data: string (UTF-8) or Blob.
+  function saveFile(filename, data, mime){
+    if(CAP){
+      var name = filename, ext = extOf(filename);
+      if(!ALLOW[ext]){
+        // capability rejects csv/pdf/html; keep text under .txt, but never
+        // relabel binary (would mislabel bytes) — let those use the blob path.
+        if(typeof data === 'string'){ name = filename.replace(/\\.[a-z0-9]+$/i, '') + '.txt'; }
+        else { return blobFallback(filename, data, mime); }
+      }
+      try{
+        var p = window.claude.downloads.save({ filename: name, data: data });
+        if(p && p.catch) p.catch(function(err){
+          if(err && err.code === 'declined') return;   // viewer said no — respect it
+          blobFallback(filename, data, mime);
+        });
+        return;
+      }catch(e){ /* fall through to blob */ }
+    }
+    blobFallback(filename, data, mime);
+  }
+  // decode a data: URI to { text } (percent-encoded) or { blob } (base64/binary)
+  function dataUri(uri){
+    var comma = uri.indexOf(','); if(uri.indexOf('data:') !== 0 || comma < 0) return null;
+    var meta = uri.slice(5, comma), payload = uri.slice(comma + 1);
+    var mime = (meta.split(';')[0]) || 'application/octet-stream';
+    if(/;base64/i.test(meta)){
+      var bin = atob(payload), arr = new Uint8Array(bin.length);
+      for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      return { mime: mime, blob: new Blob([arr], { type: mime }) };
+    }
+    try{ return { mime: mime, text: decodeURIComponent(payload) }; }
+    catch(e){ return { mime: mime, text: payload }; }
+  }
+
   // Theme toggle
   function isDark(){ var t=root.getAttribute('data-theme'); if(t) return t==='dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
   var tb=document.getElementById('themeBtn');
   if(tb) tb.addEventListener('click', function(){ root.setAttribute('data-theme', isDark()?'light':'dark'); });
   var pb=document.getElementById('printBtn');
-  if(pb) pb.addEventListener('click', function(){ window.print(); });
+  // window.print() is blocked in the Artifact sandbox and there's no whole-Hub
+  // file equivalent — hide this control there rather than leave it dead.
+  if(pb){ if(CAP) pb.hidden = true; else pb.addEventListener('click', function(){ window.print(); }); }
 
   // Filtering: search + type segment + owner
   // SOP cards are [data-card]; client cards are the CI engine's .cx-card. Handle both.
@@ -1198,39 +1255,40 @@ const BODY = `
   window.addEventListener('beforeprint', function(){
     [].forEach.call(document.querySelectorAll('details.cx-more, details.acc'), function(d){ d.open=true; });
   });
-  // any [data-print] button triggers the browser's print / save-as-PDF
+  // "Save as PDF manual" ([data-print]). Real host: browser print → PDF. Sandbox:
+  // print() is blocked and the allowlist has no .pdf, so deliver the same runbook
+  // as a Markdown manual (.md) instead, reusing the sibling "Download as text" data.
+  if(CAP){
+    // relabel the button + note from "…PDF" to "…(.md)" so it tells the truth
+    [].forEach.call(document.querySelectorAll('.pl-print'), function(s){ s.hidden = true; });
+    [].forEach.call(document.querySelectorAll('.pl-save'), function(s){ s.hidden = false; });
+  }
   [].forEach.call(document.querySelectorAll('[data-print]'), function(b){
-    b.addEventListener('click', function(){ window.print(); });
+    b.addEventListener('click', function(){
+      if(!CAP){ window.print(); return; }
+      var box = b.closest('.eco-actions') || b.parentNode;
+      var link = box && box.querySelector('a[download][href^="data:"]');
+      var base = 'bookkeeping-runbook';
+      if(link){
+        base = (link.getAttribute('download') || base).replace(/\\.[a-z0-9]+$/i, '');
+        var parsed = dataUri(link.getAttribute('href') || '');
+        if(parsed){ saveFile(base + '.md', parsed.text != null ? parsed.text : parsed.blob, 'text/markdown'); return; }
+      }
+      var rc = document.getElementById('readerScroll');
+      saveFile(base + '.md', rc ? (rc.innerText || rc.textContent || '') : '', 'text/markdown');
+    });
   });
 
-  // Reliable downloads: many sandboxed/host browsers silently block "<a download>" on a
-  // data: URI (the runbook text, the CoA CSV, the guide PDFs/PNGs). Intercept the click and
-  // download from a Blob instead — which works where data: downloads are blocked. The plain
-  // "<a download href=data:>" stays as the no-JS fallback for the real host.
-  function dataUriToBlob(uri){
-    var comma = uri.indexOf(',');
-    var meta = uri.slice(5, comma);
-    var data = uri.slice(comma + 1);
-    var mime = (meta.split(';')[0]) || 'application/octet-stream';
-    if(/;base64/i.test(meta)){
-      var bin = atob(data), arr = new Uint8Array(bin.length);
-      for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-      return new Blob([arr], { type: mime });
-    }
-    return new Blob([decodeURIComponent(data)], { type: mime });
-  }
+  // Downloads: "<a download href=data:>" is blocked in the sandbox (and silently on
+  // some hosts). Intercept the click and route through saveFile — the downloads
+  // capability in the sandbox, a Blob download on the real host. The plain anchor
+  // stays as the no-JS fallback.
   [].forEach.call(document.querySelectorAll('a[download][href^="data:"]'), function(a){
     a.addEventListener('click', function(e){
-      var href = a.getAttribute('href') || '';
-      if(href.indexOf('data:') !== 0 || href.indexOf(',') < 0) return;
-      try{
-        var url = URL.createObjectURL(dataUriToBlob(href));
-        var t = document.createElement('a');
-        t.href = url; t.download = a.getAttribute('download') || 'download';
-        document.body.appendChild(t); t.click(); t.remove();
-        setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
-        e.preventDefault();
-      }catch(err){ /* fall back to the native data: download */ }
+      var parsed = dataUri(a.getAttribute('href') || '');
+      if(!parsed) return;
+      e.preventDefault();
+      saveFile(a.getAttribute('download') || 'download', parsed.text != null ? parsed.text : parsed.blob, parsed.mime);
     });
   });
 
@@ -1252,7 +1310,15 @@ const BODY = `
     a.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' ') go(e); });
   });
   var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
-  var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
+  var rPrint = document.getElementById('readerPrint');
+  if(rPrint) rPrint.addEventListener('click', function(){
+    if(!CAP){ window.print(); return; }
+    // sandbox: print() is blocked — hand over the open document's visible text as .txt
+    var name = (readerTitle && readerTitle.textContent ? readerTitle.textContent : 'document')
+      .trim().replace(/[^\\w.-]+/g, '-').replace(/^-+|-+$/g, '') || 'document';
+    var txt = readerScroll ? (readerScroll.innerText || readerScroll.textContent || '') : '';
+    saveFile(name + '.txt', txt, 'text/plain');
+  });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
 
   // Chart-of-Accounts tool: edit numbers/names, untick accounts, download a QuickBooks CSV.

@@ -149,7 +149,12 @@ The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered 
 - **Generic section renderers** (structure-driven, client-agnostic *functions*): rule cards,
   status-pill decisions table, numbered check items, the number-range strip, and the
   **book-mode PDF** (a cover page + a Contents/index page + one section per page, via the
-  "Save as PDF manual" button) plus a plain-text download. They read from any runbook `.md`
+  "Save as PDF manual" button) plus a plain-text download. **In the claude.ai Artifact
+  sandbox both `<a download>` and `window.print()` are blocked** — the buttons route through
+  the Hub's capability-aware `saveFile` (`.md`/`.txt` via `window.claude.downloads`), so the
+  Artifact must be published with `capabilities: {downloads: true}`; on the real Odoo host
+  they print / download natively. See the `knowledge-hub` skill's downloads section. They
+  read from any runbook `.md`
   with the structure above — but see *Current state* below: today they're only **wired**
   through Ecoorganic's reader, so a new client's sections don't render until that client
   gets a reader/catalog entry.
