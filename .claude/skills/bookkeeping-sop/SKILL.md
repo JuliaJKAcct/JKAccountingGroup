@@ -22,7 +22,7 @@ Two reference pilots (keep them as the living patterns), both rendered in
 [`build-hub.mjs`](../../../projects/knowledge-hub/build-hub.mjs):
 
 - **Categorization-rules:** [`ecoorganic-bookkeeping-review.md`](../../../projects/sops/ecoorganic-bookkeeping-review.md) → `ecoorganicReaderInner`.
-- **Close-process:** [`magnum-152-bookkeeping-review.md`](../../../projects/sops/magnum-152-bookkeeping-review.md) → `magnumReaderInner`.
+- **Close-process:** [`magnum-152-bookkeeping-review.md`](../../../projects/sops/magnum-152-bookkeeping-review.md) (+ Sunoma, Mobilesource, Sensustech, Margate, Beemold) → the **reusable** `closeProcessReader`, driven by a per-client `close` config in the SOP catalog.
 
 This skill is the memory of the rules Lilian established while building the Ecoorganic
 runbook and its Hub view, so any session updating **these clients' SOPs follows the same
@@ -169,17 +169,16 @@ The Hub view (owned by the [`knowledge-hub`](../knowledge-hub/) skill; rendered 
 another client's name** in a client's view (the pilot swaps `Masciave/Aura-style grammar` →
 `Number-prefix grammar`); no GitHub/repo links — everything opens designed, inside the Hub.
 
-**Current state / next work:** today there are **two** hand-built readers —
-`ecoorganicReaderInner` (rules shape) and `magnumReaderInner` (close-process shape) — each a
-client-named function that composes the shared renderers (`ecoRuleCards`, `ecoChecklist`,
-`ecoDecisionsTable`, `magnumSteps`, `magnumResList`, …). So a new
-`<client>-bookkeeping-review.md` still does **not** render for free: it needs its own
-reader + catalog entry + a `/…/.test(it.file)` dispatch line. The tracked next step is to
-split this into (a) a **reusable** per-client bookkeeping reader driven by a catalog flag
-(shape: rules | close-process) instead of a client-named function, and (b) any truly
-bespoke curated visual per client. Until then, copy the closest pilot's reader and swap the
-content. Do this through the [`knowledge-hub`](../knowledge-hub/) skill and its
-**verify-before-publish gate**.
+**Current state:** the close-process shape now renders through **one reusable reader** —
+`closeProcessReader(cfg, md, owner, updated)` — driven by a per-client **`close` config** in
+the SOP catalog (`{ name, loc, lede, oneRule, flow }`). All six Maria clients (Magnum,
+Sunoma, Mobilesource, Sensustech, Margate, Beemold) use it, so **a new close-process client
+is just a `.md` + a catalog item with a `close` object — no new function.** The shared
+renderers do the sections: `closeSteps` (step cards + per-step material buttons), `closeResList`
+(reference resource list), and the rules-shape renderers (`ecoRuleCards`, `ecoChecklist`,
+`ecoDecisionsTable`). The **rules shape** (Ecoorganic) still has its own `ecoorganicReaderInner`;
+generalizing that one the same way is the remaining next step. Do all Hub work through the
+[`knowledge-hub`](../knowledge-hub/) skill and its **verify-before-publish gate**.
 
 ## Workflow
 
@@ -197,12 +196,12 @@ content. Do this through the [`knowledge-hub`](../knowledge-hub/) skill and its
 - `projects/sops/<client>-bookkeeping-review.md` — the runbook (source of truth).
 - `projects/sops/ecoorganic-bookkeeping-review.md` — the rules-shape pilot.
 - `projects/sops/magnum-152-bookkeeping-review.md` — the close-process-shape pilot.
-- `projects/knowledge-hub/build-hub.mjs` — the readers `ecoorganicReaderInner` and
-  `magnumReaderInner`; the generic section renderers (`ecoRuleCards`, `ecoDecisionsTable`,
-  `ecoChecklist`, `ecoCoaConventions`); the curated visuals (`ecoSignature`,
-  `ecoMonthlyFlow`, `ecoDecisionFlow`); the close-process renderers (`magnumSteps` with
-  `matRow` / `matLinksFrom` / `matIcon`, `magnumResList`, `magnumFlow`, `magnumSignature`);
-  and the print book.
+- `projects/knowledge-hub/build-hub.mjs` — the rules-shape reader `ecoorganicReaderInner` and
+  the **reusable close-process reader `closeProcessReader`** (driven by the catalog `close`
+  config); the section renderers (`ecoRuleCards`, `ecoDecisionsTable`, `ecoChecklist`,
+  `ecoCoaConventions`, `closeSteps`, `closeResList`, `closeSectionBody`); the curated visuals
+  (`ecoSignature`, `ecoMonthlyFlow`, `ecoDecisionFlow`, `closeSignature`, `closeFlow`); the
+  material-button helpers (`matRow` / `matLinksFrom` / `matIcon`); and the print book.
 - `projects/knowledge-hub/hub.css` — the components (rule cards, status pills, the flow
   ribbon, the close-process **step cards** `.mstep`, the **material buttons** `.matlink`,
   the **resource list** `.resrow`), composed only from Atlas tokens.

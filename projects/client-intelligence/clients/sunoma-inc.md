@@ -112,4 +112,4 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **Maria's process guide (Drive):** [Sunoma doc guide](https://docs.google.com/document/d/1zlez24vW48nMw0Cr4Fw_bqPl19Sdp6QN3tLoIhSokG4/edit) — full month-end process + all credentials (sensitive; do not copy into repo)
 - **Process step folders / tutorials (Drive):** [Sunoma Tutorials](https://drive.google.com/drive/folders/1AkNDeqDSwB1o59VkCatRvOZ_HkGBuEng) (numbered step folders: bank feed, reconciliation, Merch/PaymentsHub dates, ADP, monthly JEs, save reports/cash-on-hand)
 - **Related client:** [`magnum-152.md`](./magnum-152.md) (same pawn/jewelry owner group)
-- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
+- **Related SOPs:** [`../../sops/sunoma-bookkeeping-review.md`](../../sops/sunoma-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)
