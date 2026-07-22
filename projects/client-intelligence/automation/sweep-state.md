@@ -43,7 +43,7 @@ list grows.
 | YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
 | iKids Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Deep Tech Development LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
+| Deep Tech Development Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | Beemold USA LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 | Sunoma Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |

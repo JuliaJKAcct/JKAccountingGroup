@@ -101,7 +101,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | YES TEAM CORP | 706718 |
 | MASCIAVE DESIGN STUDIO LLC | 706696 |
 | iKids Group LLC | 706689 |
-| Deep Tech Development LLC | 706685 |
+| Deep Tech Development Group LLC | 706685 |
 | AURA REMODELING LLC | 706679 |
 | Beemold USA LLC | 709445 |
 | Sunoma Inc | 706704 |
@@ -156,7 +156,7 @@ CLIENTS (name -> Double id):
 - YES TEAM CORP -> 706718
 - MASCIAVE DESIGN STUDIO LLC -> 706696
 - iKids Group LLC -> 706689
-- Deep Tech Development LLC -> 706685
+- Deep Tech Development Group LLC -> 706685
 - AURA REMODELING LLC -> 706679
 - Beemold USA LLC -> 709445
 - Sunoma Inc -> 706704

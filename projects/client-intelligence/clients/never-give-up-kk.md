@@ -73,7 +73,7 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- **Owner is a serial entrepreneur** with several JK-serviced entities. The owner was **formerly an employee of Deep Tech Development** (not its owner) — that employment is the only link between the two clients; the two do **not** share ownership. _(Corrected by Lilian, 2026-07-20.)_
+- **Owner is a serial entrepreneur** with several JK-serviced entities. The owner was **formerly an employee of Deep Tech Development Group** (not its owner) — that employment is the only link between the two clients; the two do **not** share ownership. _(Corrected by Lilian, 2026-07-20.)_
 - **E-2 investor-visa considerations** shape the engagement — business-operations documentation and **US tax nexus / residency** are recurring themes that bear on the entity-structure decision. _(Gmail)_
 - **Cash-heavy** — repeated emphasis on documenting cash income and receipts properly. _(Gmail)_
 - Client communication runs through a **shared WhatsApp group** set up at onboarding.
