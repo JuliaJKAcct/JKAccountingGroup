@@ -954,15 +954,16 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
 // expands services / systems / open items / sources INLINE — no navigation.
 const clients = loadClients(repoRoot);
 // Team-facing rule: NO repo/GitHub links in the Hub. The CI engine renders a client's
-// "Related SOP" as a repo `.md` link (correct for the repo, wrong for the Hub) — rewrite
-// each into an in-Hub reader trigger (opens the designed SOP page) when the SOP is a Hub
-// doc, else drop the link to plain text.
+// "Related SOP"/sibling refs as repo `.md` links (correct for the repo, wrong for the Hub).
+// Rewrite each: a Hub SOP → an in-Hub reader trigger (data-open-doc); a client slug → its
+// in-page card (#slug); anything else → plain text. (Assumes `href` is the anchor's first
+// attribute — how the CI render engine emits it.)
+const clientBySlug = new Map(clients.map((c) => [c.slug, c.title]));
 const clientCards = clients.map(clientCard).join('')
   .replace(/<a href="[^"]*\/([a-z0-9-]+)\.md"[^>]*>.*?<\/a>/g, (m, id) => {
-    const title = hubSopTitles[id];
-    return title
-      ? `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(title)}">${esc(title)} →</a>`
-      : '<span class="cx-none">in the repo</span>';
+    if (hubSopTitles[id]) return `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(hubSopTitles[id])}">${esc(hubSopTitles[id])} →</a>`;
+    if (clientBySlug.has(id)) return `<a class="cx-soplink" href="#${id}">${esc(clientBySlug.get(id))} ↓</a>`;
+    return '<span class="cx-none">in the repo</span>';
   });
 const clientOwnerKeys = clients.map((c) => ownerKey(c.owner));
 
