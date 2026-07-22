@@ -1078,6 +1078,12 @@ const generalGroups = SOP_GROUPS
 const clientGroupMap = new Map();
 for (const it of SOP_GROUPS.flatMap((grp) => grp.items)) {
   if (!it.client) continue;
+  // Loud build warning on a typo'd slug: the group still renders, but its "Client
+  // intelligence ↓" link would silently vanish. Rule 9 has authors hand-type the slug.
+  if (!clientBySlug.has(it.client.slug))
+    console.warn(`⚠ SOP "${it.file}" has client.slug="${it.client.slug}", which matches no `
+      + `client-intelligence file — its "Client intelligence" link will be missing. `
+      + `Check the slug against projects/client-intelligence/clients/.`);
   if (!clientGroupMap.has(it.client.slug))
     clientGroupMap.set(it.client.slug, { name: it.client.name, clientSlug: it.client.slug, items: [] });
   clientGroupMap.get(it.client.slug).items.push(it);
