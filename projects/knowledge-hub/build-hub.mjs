@@ -1203,6 +1203,37 @@ const BODY = `
     b.addEventListener('click', function(){ window.print(); });
   });
 
+  // Reliable downloads: many sandboxed/host browsers silently block "<a download>" on a
+  // data: URI (the runbook text, the CoA CSV, the guide PDFs/PNGs). Intercept the click and
+  // download from a Blob instead — which works where data: downloads are blocked. The plain
+  // "<a download href=data:>" stays as the no-JS fallback for the real host.
+  function dataUriToBlob(uri){
+    var comma = uri.indexOf(',');
+    var meta = uri.slice(5, comma);
+    var data = uri.slice(comma + 1);
+    var mime = (meta.split(';')[0]) || 'application/octet-stream';
+    if(/;base64/i.test(meta)){
+      var bin = atob(data), arr = new Uint8Array(bin.length);
+      for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      return new Blob([arr], { type: mime });
+    }
+    return new Blob([decodeURIComponent(data)], { type: mime });
+  }
+  [].forEach.call(document.querySelectorAll('a[download][href^="data:"]'), function(a){
+    a.addEventListener('click', function(e){
+      var href = a.getAttribute('href') || '';
+      if(href.indexOf('data:') !== 0 || href.indexOf(',') < 0) return;
+      try{
+        var url = URL.createObjectURL(dataUriToBlob(href));
+        var t = document.createElement('a');
+        t.href = url; t.download = a.getAttribute('download') || 'download';
+        document.body.appendChild(t); t.click(); t.remove();
+        setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+        e.preventDefault();
+      }catch(err){ /* fall back to the native data: download */ }
+    });
+  });
+
   // In-page SOP reader — open the designed page without leaving the Hub (works in the sandbox)
   var reader = document.getElementById('reader');
   var readerScroll = document.getElementById('readerScroll');
