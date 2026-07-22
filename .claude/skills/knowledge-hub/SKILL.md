@@ -167,7 +167,9 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
    download/print buttons work (see the downloads section above). Publish only with the
    user's go-ahead.
 6. **Commit → PR → independent review → merge** (never merge unreviewed — CLAUDE.md).
-   Small PRs per improvement round.
+   Small PRs per improvement round. **Commit only the SOURCES** (`build-hub.mjs`, `hub.css`,
+   `coa-standard.json`, the SOP `.md`s) — **never `index.html`** (it's a gitignored build
+   artifact; committing it caused the parallel-session collisions that lost Hub features).
 
 ## Files
 
@@ -175,7 +177,12 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
   the Markdown→Atlas renderer `mdToAtlas`, section accordions, the COA tool + CSV export).
 - `projects/knowledge-hub/hub.css` — Hub components, composed only from Atlas tokens.
 - `projects/knowledge-hub/coa-standard.json` — COA data, derived from the master `.xlsx`.
-- `projects/knowledge-hub/index.html` — generated deliverable (never hand-edit).
+- `projects/knowledge-hub/index.html` — **generated build artifact, `.gitignore`d, never
+  committed** (never hand-edit either). It's ~5MB; when it was committed, two parallel
+  sessions both regenerated it and collided — a stale rebuild silently reverted the other's
+  Hub features (the Legal/Tax filters were lost this way against PR #91). The SOURCE
+  (`build-hub.mjs`) is the single source of truth; rebuild the page on demand and publish it
+  as an Artifact. If you ever see `index.html` staged for commit, something is wrong.
 - `.claude/skills/client-intelligence/render/build.mjs` — the reused client-card engine.
 
 *Update this skill whenever a round with Lilian establishes a new Hub preference — it is
