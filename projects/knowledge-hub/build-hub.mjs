@@ -870,6 +870,13 @@ const SOP_GROUPS = [
       // note (kept in the repo), not something the team needs in the Hub.
     ],
   },
+  {
+    name: 'Client tasks', note: 'One-off and recurring client-specific procedures',
+    items: [
+      { file: 'deep-tech-penn-credit-tolls.md', title: 'Deep Tech — FDOT Toll Debts (Penn Credit)',
+        blurb: 'Clear Deep Tech’s unpaid FDOT tolls that were sent to the Penn Credit collection agency — the ID-number + ZIP login, the pay-down steps, and the recurring watch (new toll items keep reappearing).' },
+    ],
+  },
 ];
 
 /* ---------------- build SOP cards ---------------- */

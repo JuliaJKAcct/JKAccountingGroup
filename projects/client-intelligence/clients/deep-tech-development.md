@@ -114,4 +114,4 @@ the actual details.
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/19OZXViieW60GsVtKUbqta0a2mM2VMZK1)
 - **Client password vault (Google Doc):** [all client logins — incl. the Penn Credit account/ID number + ZIP](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) — sensitive values live here, never in this file.
 - **Penn Credit collection portal:** [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) — pay down the FDOT toll debts here.
-- **Related SOPs:** _(pending — links into ../sops/ once written)_
+- **Related SOPs:** [Deep Tech — FDOT Toll Debts (Penn Credit)](../../sops/deep-tech-penn-credit-tolls.md) — the pay-down runbook (draft).
