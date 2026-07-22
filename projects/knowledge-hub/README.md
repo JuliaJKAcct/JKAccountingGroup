@@ -36,7 +36,7 @@ knowledge-hub/
 ├── README.md         ← you are here
 ├── build-hub.mjs     ← the generator: reads projects/sops + projects/client-intelligence → index.html
 ├── hub.css           ← Hub-only components (search, cards, meters), composed ONLY from Atlas tokens
-├── index.html        ← the generated Hub — self-contained, on-brand, print/PDF-ready (the deliverable)
+├── index.html        ← the generated Hub — self-contained, on-brand (a BUILD ARTIFACT: gitignored, never committed; rebuild on demand, publish as an Artifact)
 └── scratch/          ← local build artifacts (Artifact fragment, screenshots) — not the deliverable
 ```
 
@@ -77,8 +77,10 @@ Drive, printed to PDF, and inside a CSP-restricted Artifact.
 
 ## Outputs
 
-`index.html` — the committed, self-contained Hub. Regenerate it any time the
-sources change:
+`index.html` — the self-contained Hub. It is a **build artifact: gitignored and never
+committed** (a 5MB generated file that two parallel sessions kept colliding on, silently
+reverting each other's Hub features). Regenerate it any time the sources change, and
+publish it as an Artifact — the sources are the source of truth:
 
 ```bash
 node projects/knowledge-hub/build-hub.mjs
