@@ -415,6 +415,21 @@ button.dlbtn{cursor:pointer; font-family:var(--sans);}
   color:#fff; background:var(--bronze-500); border-radius:999px; padding:2px 6px;}
 
 .eco-actions-note{align-self:center; font-size:12px; color:var(--muted); line-height:1.4; max-width:34ch;}
+/* sandbox-only variant of the note: PDF/print is a published-Hub feature */
+.eco-actions-note.is-preview{align-self:center; color:var(--body); background:var(--paper);
+  border:1px solid var(--border); border-radius:10px; padding:8px 12px; max-width:40ch;}
+:root[data-theme="dark"] .eco-actions-note.is-preview{background:var(--raise);}
+
+/* Toast shown when a print/PDF action is used inside the claude.ai preview (print is
+   blocked there). Lives above the reader (z 200); auto-dismisses. */
+.printtoast{position:fixed; left:50%; bottom:24px; transform:translate(-50%, 14px);
+  z-index:300; max-width:min(92vw, 460px); padding:12px 16px; border-radius:12px;
+  background:var(--teal-900); color:var(--sand, #ECE6DA); border:1px solid var(--teal-700);
+  box-shadow:var(--shadow-lg, 0 12px 34px rgba(0,0,0,0.28)); font-size:13px; line-height:1.45;
+  text-align:center; opacity:0; pointer-events:none; transition:opacity .28s ease, transform .28s cubic-bezier(.22,1,.36,1);}
+.printtoast.show{opacity:1; transform:translate(-50%, 0);}
+@media (prefers-reduced-motion: reduce){ .printtoast{transition:opacity .2s ease;} .printtoast.show{transform:translate(-50%,0);} }
+@media print{ .printtoast{display:none !important;} }
 
 /* ---------- Full-section visual treatments (still sourced from the .md) ---------- */
 /* Categorization rules → numbered rule cards */

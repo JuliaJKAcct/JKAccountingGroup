@@ -516,7 +516,7 @@ function ecoorganicReaderInner(md, owner, updated){
   const actions = `<div class="eco-actions">`
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="Ecoorganic-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every rule — as a printable PDF.</span>`
+    + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every rule) as a PDF.</span>`
     + `</div>`;
   return ecoPrintFrontMatter(sections, owner, updated)
     + `<section class="mast"><div class="in">`
@@ -650,7 +650,7 @@ function closeProcessReader(cfg, md, owner, updated){
   const actions = `<div class="eco-actions">`
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
-    + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every step — as a printable PDF.</span></div>`;
+    + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every step) as a PDF.</span></div>`;
   return closePrintFrontMatter(cfg.name, 'Monthly Bookkeeping & Close', sections, owner, updated)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
@@ -1126,13 +1126,70 @@ const BODY = `
   var root = document.documentElement;
   root.classList.add('js');
 
+  // ---- File delivery -------------------------------------------------------
+  // The claude.ai Artifact sandbox blocks BOTH "<a download>" (data: and blob:)
+  // AND window.print(). The only sanctioned path there is the downloads
+  // capability: window.claude.downloads.save({filename,data}). On the real host
+  // that capability is absent, so we fall back to a Blob download (works there).
+  // Presence of window.claude.downloads is our "we're in the sandbox" signal.
+  var CAP = !!(window.claude && window.claude.downloads);
+  // capability filename allowlist (extension → MIME comes from the extension)
+  var ALLOW = { gif:1, png:1, jpg:1, jpeg:1, webp:1, mp4:1, webm:1, txt:1, json:1, md:1 };
+  function extOf(name){ var m = /\\.([a-z0-9]+)$/i.exec(name || ''); return m ? m[1].toLowerCase() : ''; }
+  function blobFallback(filename, data, mime){
+    try{
+      var blob = (data instanceof Blob) ? data : new Blob([data], { type: mime || 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var t = document.createElement('a');
+      t.href = url; t.download = filename || 'download';
+      document.body.appendChild(t); t.click(); t.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+    }catch(e){ /* nothing more we can do */ }
+  }
+  // Hand a file to the viewer. data: string (UTF-8) or Blob.
+  function saveFile(filename, data, mime){
+    if(CAP){
+      var name = filename, ext = extOf(filename);
+      if(!ALLOW[ext]){
+        // capability rejects csv/pdf/html; keep text under .txt, but never
+        // relabel binary (would mislabel bytes) — let those use the blob path.
+        if(typeof data === 'string'){ name = filename.replace(/\\.[a-z0-9]+$/i, '') + '.txt'; }
+        else { return blobFallback(filename, data, mime); }
+      }
+      try{
+        var p = window.claude.downloads.save({ filename: name, data: data });
+        if(p && p.catch) p.catch(function(err){
+          if(err && err.code === 'declined') return;   // viewer said no — respect it
+          blobFallback(filename, data, mime);
+        });
+        return;
+      }catch(e){ /* fall through to blob */ }
+    }
+    blobFallback(filename, data, mime);
+  }
+  // decode a data: URI to { text } (percent-encoded) or { blob } (base64/binary)
+  function dataUri(uri){
+    var comma = uri.indexOf(','); if(uri.indexOf('data:') !== 0 || comma < 0) return null;
+    var meta = uri.slice(5, comma), payload = uri.slice(comma + 1);
+    var mime = (meta.split(';')[0]) || 'application/octet-stream';
+    if(/;base64/i.test(meta)){
+      var bin = atob(payload), arr = new Uint8Array(bin.length);
+      for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      return { mime: mime, blob: new Blob([arr], { type: mime }) };
+    }
+    try{ return { mime: mime, text: decodeURIComponent(payload) }; }
+    catch(e){ return { mime: mime, text: payload }; }
+  }
+
   // Theme toggle
   function isDark(){ var t=root.getAttribute('data-theme'); if(t) return t==='dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
   var tb=document.getElementById('themeBtn');
   if(tb) tb.addEventListener('click', function(){ root.setAttribute('data-theme', isDark()?'light':'dark'); });
   var pb=document.getElementById('printBtn');
-  if(pb) pb.addEventListener('click', function(){ window.print(); });
+  // window.print() is blocked in the Artifact sandbox and there's no whole-Hub
+  // file equivalent — hide this control there rather than leave it dead.
+  if(pb){ if(CAP) pb.hidden = true; else pb.addEventListener('click', function(){ window.print(); }); }
 
   // Filtering: search + type segment + owner
   // SOP cards are [data-card]; client cards are the CI engine's .cx-card. Handle both.
@@ -1198,39 +1255,47 @@ const BODY = `
   window.addEventListener('beforeprint', function(){
     [].forEach.call(document.querySelectorAll('details.cx-more, details.acc'), function(d){ d.open=true; });
   });
-  // any [data-print] button triggers the browser's print / save-as-PDF
+  // "Save as PDF manual" ([data-print]) and the reader-bar printer icon call the
+  // browser's NATIVE print → PDF. That renders the design-system "book" layout
+  // (@media print: cover + Contents + a page per section, chrome quieted) — the
+  // studyable PDF. It works on the real host (Odoo) and any normal browser.
+  // The claude.ai Artifact sandbox blocks window.print() and offers no capability
+  // to enable it, so there we surface a short, honest note instead of a dead click;
+  // "Download as text" stays as the preview's working file export.
+  function previewPrintNote(){
+    if(!CAP) return;
+    var t = document.getElementById('printtoast');
+    if(!t){
+      t = document.createElement('div'); t.id = 'printtoast'; t.className = 'printtoast'; t.setAttribute('role', 'status');
+      t.textContent = 'PDF & print open in your browser on the published Hub. In this preview, use “Download as text”.';
+      document.body.appendChild(t);
+    }
+    t.classList.remove('show'); void t.offsetWidth; t.classList.add('show');
+    clearTimeout(previewPrintNote._t);
+    previewPrintNote._t = setTimeout(function(){ t.classList.remove('show'); }, 4600);
+  }
+  function doPrint(){ try{ window.print(); }catch(e){} previewPrintNote(); }
+  // In the sandbox, rewrite each button's own note up-front so it's honest before any click.
+  if(CAP){
+    [].forEach.call(document.querySelectorAll('[data-print-note]'), function(n){
+      n.textContent = 'On the published Hub this opens your browser’s print dialog to save a PDF. In this preview, use “Download as text”.';
+      n.classList.add('is-preview');
+    });
+  }
   [].forEach.call(document.querySelectorAll('[data-print]'), function(b){
-    b.addEventListener('click', function(){ window.print(); });
+    b.addEventListener('click', doPrint);
   });
 
-  // Reliable downloads: many sandboxed/host browsers silently block "<a download>" on a
-  // data: URI (the runbook text, the CoA CSV, the guide PDFs/PNGs). Intercept the click and
-  // download from a Blob instead — which works where data: downloads are blocked. The plain
-  // "<a download href=data:>" stays as the no-JS fallback for the real host.
-  function dataUriToBlob(uri){
-    var comma = uri.indexOf(',');
-    var meta = uri.slice(5, comma);
-    var data = uri.slice(comma + 1);
-    var mime = (meta.split(';')[0]) || 'application/octet-stream';
-    if(/;base64/i.test(meta)){
-      var bin = atob(data), arr = new Uint8Array(bin.length);
-      for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-      return new Blob([arr], { type: mime });
-    }
-    return new Blob([decodeURIComponent(data)], { type: mime });
-  }
+  // Downloads: "<a download href=data:>" is blocked in the sandbox (and silently on
+  // some hosts). Intercept the click and route through saveFile — the downloads
+  // capability in the sandbox, a Blob download on the real host. The plain anchor
+  // stays as the no-JS fallback.
   [].forEach.call(document.querySelectorAll('a[download][href^="data:"]'), function(a){
     a.addEventListener('click', function(e){
-      var href = a.getAttribute('href') || '';
-      if(href.indexOf('data:') !== 0 || href.indexOf(',') < 0) return;
-      try{
-        var url = URL.createObjectURL(dataUriToBlob(href));
-        var t = document.createElement('a');
-        t.href = url; t.download = a.getAttribute('download') || 'download';
-        document.body.appendChild(t); t.click(); t.remove();
-        setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
-        e.preventDefault();
-      }catch(err){ /* fall back to the native data: download */ }
+      var parsed = dataUri(a.getAttribute('href') || '');
+      if(!parsed) return;
+      e.preventDefault();
+      saveFile(a.getAttribute('download') || 'download', parsed.text != null ? parsed.text : parsed.blob, parsed.mime);
     });
   });
 
@@ -1252,7 +1317,8 @@ const BODY = `
     a.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' ') go(e); });
   });
   var rClose = document.getElementById('readerClose'); if(rClose) rClose.addEventListener('click', closeDoc);
-  var rPrint = document.getElementById('readerPrint'); if(rPrint) rPrint.addEventListener('click', function(){ window.print(); });
+  var rPrint = document.getElementById('readerPrint');
+  if(rPrint) rPrint.addEventListener('click', doPrint);
   document.addEventListener('keydown', function(e){ if(e.key==='Escape' && reader && !reader.hidden) closeDoc(); });
 
   // Chart-of-Accounts tool: edit numbers/names, untick accounts, download a QuickBooks CSV.
