@@ -39,6 +39,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
 | [Client Intelligence](./projects/client-intelligence/) | A durable, per-client knowledge base — obligations, systems, and processes built up gradually as the raw material for each client's SOPs. Secrets and personal data stay in Drive/Double and are referenced by link. | Active |
 | [Knowledge Hub](./projects/knowledge-hub/) | One on-brand, searchable index page for the whole firm — every SOP and every client in one place, generated from `sops/` + `client-intelligence/` so it never drifts. Browse, filter, open any document. | Active |
+| [Bookkeeping KPIs](./projects/bookkeeping-kpis/) | On-brand, dynamic bookkeeping-performance dashboards — one per client — that read a client's live QuickBooks/Double financials at a glance (health score, ranked signals & alerts, charts, balance-sheet snapshot), heading toward one board listing every bookkeeping client. Only the sample-data template is committed; real client figures ship as artifacts. | Active |
 
 The seven **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
