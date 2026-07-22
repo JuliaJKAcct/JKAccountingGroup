@@ -20,17 +20,40 @@ reference is
 
 ## Design is not optional — impeccable + the Design System, always
 
-**Every one of these pages goes through the [`impeccable`](../impeccable/) skill and the
-Atlas Design System — by default, unprompted.** This is Lilian's explicit standing
-instruction for this work; it rides on the repo-wide rule in
-[`CLAUDE.md`](../../../CLAUDE.md). Compose only from Atlas tokens
-(`brand/design-system/`); never invent colors or fonts.
+**HARD RULE (Lilian, standing — Jul 2026): every artifact in this project — every client
+dashboard, the all-clients board, and every edit to them, however small — is built and
+changed through the [`impeccable`](../impeccable/) skill together with the Atlas Design
+System. No exceptions.** Load the `impeccable` skill *first*, before touching the markup;
+don't freehand it and don't "just tweak" a color or a header by hand. This is Lilian's
+explicit instruction for this work and rides on the repo-wide rule in
+[`CLAUDE.md`](../../../CLAUDE.md). Compose only from Atlas tokens + `brand/`; never invent
+colors or fonts, and pull the logo/lockup from `brand/logo/`.
 
 **These pages are dynamic and visual — that is a requirement, not a flourish** (Lilian):
 animated count-ups, a health **ring**, scroll-reveal sections, bar/column charts, a
 sparkline, hover titles — the feel of the Ecoorganic pilot. Reach for diagrams, charts,
 and motion over walls of text. Battle-test with browser screenshots (**light, dark,
 mobile**) before shipping.
+
+### Brand lockup & contrast — captured lessons (Jul 2026)
+
+- **Header lockup = the brand EMBLEM + the serif wordmark**, never the bare monogram.
+  The firm's official horizontal lockup ([`brand/logo/`](../../../brand/logo/), see its
+  `README.md`) is the **emblem** (the double-ring seal with the J&K monogram *inside* it +
+  the two bronze diamonds) beside the **"JK Accounting Group"** serif wordmark. Do **not**
+  drop the bare monogram strokes next to the wordmark — the bare "JK" reads as the name's
+  initials repeated right before "JK Accounting Group" (Lilian flagged exactly this). The
+  ringed emblem reads as a seal, not repeated letters.
+- **The wordmark must set its own explicit light color on the teal bar.** The header bar is
+  `--teal-800` (`#123841`) in both themes; the wordmark must be soft ivory (`#ECE6DA`) via
+  its **own class** (e.g. `.bp-brand`). Do **not** render it as a bare `<b>`/`<strong>` —
+  the Atlas base rule `strong,b{color:var(--ink)}` makes it `--ink`, which is dark
+  (`#0D2A31`) in **light** mode → dark-on-dark, effectively invisible (the real bug behind
+  Lilian's "el nombre no se ve"). It only looked fine in dark mode, where `--ink` flips to
+  ivory.
+- **Verify text contrast in-browser, don't eyeball it.** Read the computed color vs its
+  background and check the WCAG ratio (≥4.5:1 body, ≥3:1 large) as part of every impeccable
+  pass — light *and* dark. The fixed header measures ~10:1.
 
 ## Self-contained & portable to Odoo (do not break this)
 
