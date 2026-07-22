@@ -95,13 +95,56 @@ function checkboxes(text){
   return out;
 }
 
+// Entity has TWO independent dimensions the firm cares about, and the CI files pack both
+// into one "Entity type" line: the LEGAL structure (how it's formed under state law) and
+// the TAX classification (how the IRS taxes it). They're different questions — an LLC can
+// be taxed as an S-corp, a partnership, or a disregarded entity — so we derive each on its
+// own. The Hub filters them separately (Lilian's ask); mixing them in one list was wrong.
+
+// LEGAL structure — the state-law entity noun. A multi-member LLC taxed as a partnership
+// is still legally an LLC, so LLC / Corporation are matched before the partnership branch
+// (a bare "partnership" only wins when there's no LLC/Corp, i.e. a real GP/LP/LLP).
+function classifyLegal(s){
+  const t = String(s||'');
+  if(/sole prop|no LLC|not formed|without an entity|no entity/i.test(t)) return { key:'soleprop', label:'Sole prop' };
+  if(/\bLLC\b/i.test(t))                        return { key:'llc',         label:'LLC' };
+  if(/Corporation|\bInc\b|\bCorp\b/i.test(t))   return { key:'corp',        label:'Corp' };
+  if(/\bLP\b|\bLLP\b|partnership/i.test(t))     return { key:'partnership', label:'Partnership' };
+  return { key:'', label:null };
+}
+
+// TAX classification — how it's taxed federally. "Under review (A vs B vs C)" option-lists
+// are stripped first so a *mention* of another treatment can't outrank the current filing.
+// A Schedule-C filer is a disregarded entity when there's an LLC, else a sole proprietor.
+function classifyTax(s){
+  const t = String(s||'')
+    .replace(/\([^)]*\bvs\b[^)]*\)/gi, ' ')
+    .replace(/\bunder review\b/gi, ' ');
+  if(/1120-S|S-?corp\b|S-?corporation/i.test(t))    return { key:'scorp',       label:'S-corp' };
+  if(/\b1065\b|partnership/i.test(t))               return { key:'partnership', label:'Partnership' };
+  if(/\b1120\b|C-?corp\b|C-?corporation/i.test(t))  return { key:'ccorp',        label:'C-corp' };
+  if(/Schedule C|Sch\.? C|disregarded|single-?member/i.test(t))
+    return /\bLLC\b/i.test(t) ? { key:'disregarded', label:'Disregarded' } : { key:'soleprop', label:'Sole prop' };
+  return { key:'', label:null };
+}
+
+// Compact pill label — legal · tax (e.g. "LLC · S-corp", "Corp · S-corp",
+// "LLC · Disregarded"); falls back to a trimmed snippet, else nothing.
 function entityTag(s){
-  if(/1120-S|S-corp|S-corporation/i.test(s)) return 'S-corp · 1120-S';
-  if(/1120\b|C-corp|C-corporation/i.test(s)) return 'C-corp · 1120';
-  if(/Schedule C/i.test(s)) return 'LLC · Sch C';
-  if(/1120/i.test(s)) return 'Corp · 1120';
-  if(/LLC/i.test(s)) return 'LLC';
-  const c = stripSrc(s); return c ? c.slice(0,22) : null;
+  const combo = [classifyLegal(s).label, classifyTax(s).label].filter(Boolean).join(' · ');
+  if(combo) return combo;
+  const c = stripSrc(String(s||'')).replace(/\*\*/g,'');
+  return c && !/pending/i.test(c) ? c.slice(0,22) : null;
+}
+
+// Which services we actually provide — used for the Hub's "Service" facet. A service
+// counts as active when we do it (state 'on') or do it with a reconcile note ('quirk');
+// 'off' = not our service, 'neutral' = pending/unknown (not claimed).
+const SVC_KEY = { Bookkeeping:'bookkeeping', 'Income tax':'incometax', 'Sales tax':'salestax', Payroll:'payroll' };
+function activeSvcKeys(svc){
+  return Object.entries(svc)
+    .filter(([,v]) => v.state==='on' || v.state==='quirk')
+    .map(([k]) => SVC_KEY[k]);
 }
 function stateTag(s){
   if(/florida|(^|[^a-z])FL([^a-z]|$)/i.test(s)){
@@ -194,6 +237,9 @@ export function loadClients(repoRoot){
     return {
       slug, title, status, owner, updated,
       entity: entityTag(snap['Entity type']||''),
+      legalCls: classifyLegal(snap['Entity type']||'').key,
+      taxCls: classifyTax(snap['Entity type']||'').key,
+      svcKeys: activeSvcKeys(svc),
       state: stateTag(snap['Home state']||''),
       lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
       industry, platform: stripSrc(snap['Accounting platform']||''),
@@ -271,7 +317,7 @@ export function clientCard(c){
     <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
     <p class="cx-hint"><b>Related SOP</b> — ${sopLinks}</p></div>`;
   return `
-<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-text="${searchText}">
+<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-legal="${esc(c.legalCls||'')}" data-tax="${esc(c.taxCls||'')}" data-svc="${esc((c.svcKeys||[]).join(' '))}" data-text="${searchText}">
   <div class="cx-head">
     <h3>${esc(c.title)}</h3>
     <div class="cx-upd">${esc(c.updated)}<span class="dot"></span>${esc(c.owner)}</div>

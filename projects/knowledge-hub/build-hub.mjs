@@ -974,6 +974,33 @@ const ownerChips = ['<button class="ochip" data-owner-filter="all" aria-pressed=
   .concat(orderedOwners.map((o) => `<button class="ochip" data-owner-filter="${o}" aria-pressed="false">${esc(ownerName(o))}</button>`))
   .join('');
 
+/* client facets — Structure (Legal vs Tax) + Service. All come straight off the CI
+   engine's parsed fields (c.legalCls / c.taxCls / c.svcKeys). Entity has TWO distinct
+   dimensions — LEGAL structure (LLC · Corporation…) and TAX classification (S-corp ·
+   C-corp · Partnership · Disregarded…) — so the Structure filter is a Legal|Tax toggle
+   that swaps which chip set shows, instead of one conflated list. We render only the
+   buckets that actually have clients, each with a live count. SOP cards carry none of
+   these attributes, so picking any chip naturally narrows to matching clients. */
+function facetChips(kind, order, labels) {
+  const pick = { legal: (c) => [c.legalCls], tax: (c) => [c.taxCls], svc: (c) => c.svcKeys || [] }[kind];
+  const counts = {};
+  clients.forEach((c) => pick(c).filter(Boolean).forEach((k) => { counts[k] = (counts[k] || 0) + 1; }));
+  const attr = `data-${kind}-filter`;
+  return [`<button class="ochip" ${attr}="all" aria-pressed="true">All</button>`]
+    .concat(order.filter((k) => counts[k]).map((k) =>
+      `<button class="ochip" ${attr}="${k}" aria-pressed="false">${esc(labels[k])} <span class="cn">${counts[k]}</span></button>`))
+    .join('');
+}
+const legalChips = facetChips('legal',
+  ['llc', 'corp', 'partnership', 'soleprop'],
+  { llc: 'LLC', corp: 'Corporation', partnership: 'Partnership', soleprop: 'Sole prop' });
+const taxChips = facetChips('tax',
+  ['scorp', 'ccorp', 'partnership', 'disregarded', 'soleprop'],
+  { scorp: 'S-corp', ccorp: 'C-corp', partnership: 'Partnership', disregarded: 'Disregarded', soleprop: 'Sole prop' });
+const serviceChips = facetChips('svc',
+  ['bookkeeping', 'payroll', 'salestax', 'incometax'],
+  { bookkeeping: 'Bookkeeping', payroll: 'Payroll', salestax: 'Sales tax', incometax: 'Income tax' });
+
 const clientCount = clients.length;
 const totalCount = sopCount + clientCount;
 const today = new Date().toISOString().slice(0, 10);
@@ -1040,7 +1067,7 @@ const BODY = `
       <p class="t">How to use it</p>
       <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> — open the full SOP document.</span></div>
       <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — click a card to expand its <b>services, systems, open items &amp; sources</b>, right here.</span></div>
-      <div class="legrow"><span class="sw building"></span><span><b>Search &amp; filters</b> up top work across both — name, entity, service, owner.</span></div>
+      <div class="legrow"><span class="sw building"></span><span><b>Search</b> by name or industry; <b>filter</b> clients by <b>owner</b>, <b>structure</b> — toggle <b>Legal</b> (LLC, Corporation…) vs <b>Tax</b> (S-corp, C-corp, partnership, disregarded) — or <b>service</b> (who we do bookkeeping for).</span></div>
     </div>
   </div>
 </div>
@@ -1058,7 +1085,19 @@ const BODY = `
       <button role="tab" aria-selected="false" data-seg="sop">Procedures <span class="n">${sopCount}</span></button>
       <button role="tab" aria-selected="false" data-seg="client">Clients <span class="n">${clientCount}</span></button>
     </div>
-    <div class="ochips"><span class="ol">Owner</span>${ownerChips}</div>
+    <div class="hubfilters">
+      <div class="ochips"><span class="ol">Owner</span>${ownerChips}</div>
+      <div class="ochips struct">
+        <span class="ol">Structure</span>
+        <span class="modeseg" role="group" aria-label="Filter by legal or tax structure">
+          <button class="modebtn" type="button" data-structmode="legal" aria-pressed="false" title="Legal structure — the state-law entity">Legal</button>
+          <button class="modebtn" type="button" data-structmode="tax" aria-pressed="true" title="Tax classification — how the IRS taxes it">Tax</button>
+        </span>
+        <span class="structchips" data-structgroup="legal" hidden>${legalChips}</span>
+        <span class="structchips" data-structgroup="tax">${taxChips}</span>
+      </div>
+      <div class="ochips"><span class="ol">Service</span>${serviceChips}</div>
+    </div>
   </div>
 </div>
 
@@ -1201,12 +1240,14 @@ const BODY = `
   var qEl = document.getElementById('q');
   var hs = document.getElementById('hsearch');
   var clr = document.getElementById('clr');
-  var state = { q:'', type:'all', owner:'all' };
+  var state = { q:'', type:'all', owner:'all', structMode:'tax', legal:'all', tax:'all', svc:'all' };
 
   // Content must never depend on a JS reveal: show any reveal-gated card immediately.
   [].forEach.call(document.querySelectorAll('.reveal'), function(el){ el.classList.add('in'); });
   function cardType(c){ return c.classList.contains('cx-card') ? 'client' : c.getAttribute('data-type'); }
   function cardOwner(c){ return (c.getAttribute('data-owner')||'').toLowerCase(); }
+  function cardAttr(c, name){ return c.getAttribute(name)||''; }
+  function cardSvc(c){ return ' ' + (c.getAttribute('data-svc')||'') + ' '; }
 
   function apply(){
     var q = state.q.trim().toLowerCase();
@@ -1214,6 +1255,9 @@ const BODY = `
     cards.forEach(function(c){
       var ok = (state.type==='all' || cardType(c)===state.type)
             && (state.owner==='all' || cardOwner(c)===state.owner)
+            && (state.legal==='all' || cardAttr(c,'data-legal')===state.legal)
+            && (state.tax==='all' || cardAttr(c,'data-tax')===state.tax)
+            && (state.svc==='all' || cardSvc(c).indexOf(' '+state.svc+' ') !== -1)
             && (q==='' || (c.getAttribute('data-text')||'').indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
       if(ok) shown++;
@@ -1243,6 +1287,37 @@ const BODY = `
     b.addEventListener('click', function(){
       state.owner=b.getAttribute('data-owner-filter');
       [].forEach.call(document.querySelectorAll('[data-owner-filter]'), function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      apply();
+    });
+  });
+  // Client facets: Structure (Legal / Tax) + Service — each a single-select chip group.
+  function bindFacet(attr, key){
+    var sel = '[data-'+attr+'-filter]';
+    [].forEach.call(document.querySelectorAll(sel), function(b){
+      b.addEventListener('click', function(){
+        state[key]=b.getAttribute('data-'+attr+'-filter');
+        [].forEach.call(document.querySelectorAll(sel), function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+        apply();
+      });
+    });
+  }
+  function resetFacet(attr, key){
+    state[key]='all';
+    [].forEach.call(document.querySelectorAll('[data-'+attr+'-filter]'), function(x){
+      x.setAttribute('aria-pressed', x.getAttribute('data-'+attr+'-filter')==='all' ? 'true':'false');
+    });
+  }
+  bindFacet('legal','legal'); bindFacet('tax','tax'); bindFacet('svc','svc');
+
+  // Structure Legal|Tax toggle: swap which chip set shows and clear the other dimension,
+  // so only one structure filter is ever active — keeps it clean, not a stack of chips.
+  [].forEach.call(document.querySelectorAll('[data-structmode]'), function(b){
+    b.addEventListener('click', function(){
+      var mode=b.getAttribute('data-structmode');
+      state.structMode=mode;
+      [].forEach.call(document.querySelectorAll('[data-structmode]'), function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      [].forEach.call(document.querySelectorAll('[data-structgroup]'), function(g){ g.hidden = g.getAttribute('data-structgroup')!==mode; });
+      resetFacet(mode==='legal' ? 'tax' : 'legal', mode==='legal' ? 'tax' : 'legal');
       apply();
     });
   });

@@ -25,7 +25,25 @@ emitted script silently broke *every* click.
    reader) or **downloads a real file** (PDF / PNG / CSV) — never a repo/GitHub link. The
    repo internals are for Julia & Lilian only.
 2. **Two areas:** Procedures (SOPs) and Client intelligence. A search box + type/owner
-   filters over both.
+   filters over both, plus two **client facets** — **Structure** and **Service**
+   (Bookkeeping · Payroll · Sales tax · Income tax). Structure is deliberately **two
+   dimensions, not one list**: a **Legal | Tax toggle** (Lilian, Jul 2026) swaps which chip
+   set shows — **Legal** structure (LLC · Corporation · Partnership · Sole prop, the
+   state-law entity) vs **Tax** classification (S-corp · C-corp · Partnership · Disregarded
+   · Sole prop, how the IRS taxes it). They're different questions — an LLC can be taxed as
+   an S-corp, a partnership, or disregarded — so they must never be conflated. Switching the
+   toggle clears the other dimension, so only one structure filter is ever active (keeps it
+   clean). The facets read `data-legal` / `data-tax` / `data-svc`, which the CI card engine
+   emits from each client's parsed `legalCls` / `taxCls` / `svcKeys` (`clientCard` in
+   `../client-intelligence/render/build.mjs`); `facetChips()` in `build-hub.mjs` renders
+   only the buckets that have clients, each with a live count. SOP cards carry none of
+   these, so picking any chip naturally narrows to matching clients (the Procedures section
+   auto-hides). Classification lives in the CI engine's `classifyLegal()` / `classifyTax()`
+   — tax ignores "under review (A vs B)" option-lists so a *mention* of another treatment
+   can't mis-bucket a client, and a Schedule-C filer is Disregarded when there's an LLC else
+   Sole prop. Adding/adjusting a facet = extend those classifiers + the chip label maps +
+   the `state`/`apply()`/`bindFacet` wiring in the Hub script; keep the pill (legal · tax)
+   and the filter buckets in sync (all derive from the two classifiers).
 3. **SOPs open in the in-page reader** (an overlay), because it works even inside the
    sandboxed shared link (no navigation). BTR uses its hand-laid Atlas render; others are
    rendered from their `.md`.
