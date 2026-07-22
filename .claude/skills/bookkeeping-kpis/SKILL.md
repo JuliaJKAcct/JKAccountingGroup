@@ -130,15 +130,20 @@ Two decisions to settle **with Lilian** before building it:
    shared zero line), and the balance-sheet cells.
 2. **Design with impeccable.** Screenshot the page **light + dark + mobile**; force the
    scroll-reveal sections visible for the shot (add the `in` class to
-   `.bp-reveal, .bp-alerts, .bp-ring, .bp-mplot, .bp-ebar, .bp-spark-l`). Chromium at
-   `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, Playwright at
-   `/opt/node22/lib/node_modules/playwright` (CommonJS: `import pw from '…'; const {chromium}=pw`).
+   `.bp-reveal, .bp-alerts, .bp-ring, .bp-mplot, .bp-ebar, .bp-spark-l`). Chromium is
+   pre-installed — find it under `$PLAYWRIGHT_BROWSERS_PATH` (e.g.
+   `/opt/pw-browsers/chromium-*/chrome-linux/chrome`; the version folder changes, so glob
+   it rather than hardcoding); Playwright is available to Node and is CommonJS
+   (`import pw from 'playwright'; const {chromium} = pw`).
 3. **Verify before shipping:** page has **zero external requests** (no `http(s)` `src`/`href`
    outside `data:`); the inline `<script>` passes `node --check`; count-ups, ring, charts,
    and the theme toggle all render. For a real client, **grep the file to confirm no other
    client's data leaked in** from the template you copied.
 4. **Publish as an artifact** (real client) or update the template (repo). Publish only
-   with the user's go-ahead; reuse the same URL to keep links stable.
+   with the user's go-ahead; reuse the same URL to keep links stable. Note: the **Artifact
+   tool wraps your file in its own `<head>`/`<body>` skeleton**, so when publishing a real
+   client's page hand it the page **body content**, not a full `<!doctype html>` document —
+   the standalone whole-document form is for the repo template and the Odoo embed.
 5. **Repo changes: commit → PR → independent review → merge** (never merge unreviewed —
    CLAUDE.md). Keep the nav-map indexes in sync (skills index, projects index, root README,
    CLAUDE.md).
