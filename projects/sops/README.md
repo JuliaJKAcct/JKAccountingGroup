@@ -42,6 +42,7 @@ sops/
 ├── hollywood-broward-business-tax-receipt.html  ← ↑ Atlas design-system render of the BTR SOP (print/PDF-ready; the .md stays source of truth)
 ├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
 ├── double-portal-branding.md                    ← Double Client Portal on-brand branding (colors + logo)
+├── deep-tech-penn-credit-tolls.md               ← Deep Tech FDOT toll debts in collection (Penn Credit) — client-task pay-down runbook (draft; Hub-rendered)
 └── client-guides/                               ← ready-to-send client templates (visual guide + PDF, email/message template, WhatsApp, EN/RU)
 ```
 
@@ -67,6 +68,7 @@ enough to warrant it._
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 | [`double-portal-first-login.md`](./double-portal-first-login.md) | Double Client Portal has no sign-up step and its default magic-link/Google sign-in are unreliable — the working password-reset workaround (portal opens on the password screen → "Forgot your password?"), plus ready-to-send client guides (self-contained visual guide + PDF, email/message template, WhatsApp; EN/RU) in [`client-guides/`](./client-guides/). |
 | [`double-portal-branding.md`](./double-portal-branding.md) | The firm's official on-brand branding for the Double Client Portal — exact Brand/Button/Background hex values (mapped to Design System tokens), logo/favicon assets, and why the combination works. Replaces Double's off-brand defaults. |
+| [`deep-tech-penn-credit-tolls.md`](./deep-tech-penn-credit-tolls.md) | **Draft** client-task runbook: clearing **Deep Tech Development Group LLC**'s unpaid **FDOT tolls** that went to the **Penn Credit** collection agency — the ID-number + ZIP login (not user/password), the pay-down steps, and the recurring watch (new toll items keep reappearing). Login values stay in the client's vault. Feeds from [`../client-intelligence/clients/deep-tech-development.md`](../client-intelligence/clients/deep-tech-development.md). Hub-rendered. |
 
 ## Brand & design
 

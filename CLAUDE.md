@@ -78,7 +78,7 @@ the US.
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | A **lead magnet** — a free calculator or assessment/quiz for the top of the funnel (S-corp savings, surprise tax bill, license check, foreign-account check…), or the on-brand HTML tool that powers one | [`projects/marketing/lead-magnets/`](./projects/marketing/lead-magnets/) |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
-| Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian"; an unidentified session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
+| Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian" **or writes in Spanish**; an unidentified non-Spanish session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
 
 Each project has its own `README.md` with the specifics; read it before working
@@ -181,10 +181,13 @@ in that folder.
   Code account, so git alone can't tell whose hands did what. It's one firm with one
   goal — **never partition the repo or the work by person**; Julia and Lilian split
   tasks, not territory. Do track *where work came from*: **Lilian identifies herself
-  at the start of her sessions ("I'm Lilian"); Julia doesn't have to** — an
+  at the start of her sessions ("I'm Lilian" / "soy Lilian"); Julia doesn't have to** — an
   unidentified session is simply firm work (in practice, usually Julia). **Spanish is
   always Lilian.** Julia doesn't speak Spanish, so *any* session conducted in Spanish is
-  Lilian's — treat it as hers even if she never says so (address her, not Julia). When a
+  Lilian's — treat it as hers even if she never says so (address her, not Julia).
+  (English or Russian alone does *not* identify her — Lilian also runs sessions in English
+  on purpose to practice, so there she still says "I'm Lilian"; when in doubt in a
+  non-Spanish session, it's firm/Julia.) When a
   session is Lilian's (identified, or Spanish): address her in conversation, add a
   `Worked-by: Lilian` trailer to that session's commits, and note it on PRs the session
   opens. Keep the provenance trail **detailed** — who did each change — because that's the

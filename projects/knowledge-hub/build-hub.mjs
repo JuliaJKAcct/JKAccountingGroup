@@ -667,6 +667,77 @@ function closeProcessReader(cfg, md, owner, updated){
     + `</div>`;
 }
 
+/* ---------------- Client-task reader (impeccable): animated process flow + Drive material button ----------------
+   For simple, client-specific task SOPs (e.g. Deep Tech's Penn Credit toll pay-down), driven by a
+   `task` config in the SOP catalog. The hero is a DESIGNED, animated flow on Atlas tokens (CSS motion,
+   reduced-motion safe, visible without JS) — never a bare Mermaid block. Confidential Drive materials
+   (here, the client's password vault) surface as a designed button with a hover tooltip + a visible
+   caption — the same principle as the bookkeeping SOPs' Drive buttons. The full .md renders below, so
+   nothing drifts (the .md's own "process at a glance" section is dropped — the animated flow replaces it). */
+const TIC = {
+  mail:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  key:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.2-8.2M17 5l2 2M15 7l2 2"/></svg>',
+  globe:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+  pay:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/></svg>',
+  check:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>',
+  refresh:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg>',
+  dot:    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/></svg>',
+};
+function taskFlow(cfg){
+  const nodes = (cfg.flow || []).map((s, i) => {
+    const cls = s.k ? ' ' + s.k : '';
+    const ic = TIC[s.ic] || TIC.dot;
+    return `<li class="pcnode${cls}" style="--i:${i}">`
+      + `<span class="pcnode-ic">${ic}</span>`
+      + `<span class="pcnode-x"><span class="pcnode-t">${esc(s.t)}</span>`
+      + `<span class="pcnode-d">${esc(s.d)}</span></span></li>`;
+  }).join('');
+  const loop = cfg.loop
+    ? `<div class="pcloop"><span class="pcloop-ic" aria-hidden="true">${TIC.refresh}</span>`
+      + `<span class="pcloop-x"><span class="pcloop-t">It recurs — not one-and-done</span>`
+      + `<span class="pcloop-d">${esc(cfg.loop)}</span></span></div>`
+    : '';
+  return `<div class="pcflow"><span class="pcspine" aria-hidden="true"><span class="pcspine-pulse"></span></span>`
+    + `<ol class="pcnodes">${nodes}</ol></div>${loop}`;
+}
+function vaultButton(v){
+  if(!v || !v.url) return '';
+  return `<div class="vault">`
+    + `<a class="vault-btn" href="${v.url}" target="_blank" rel="noopener" aria-describedby="vault-tip">`
+    + `<span class="vault-ic" aria-hidden="true">${TIC.key}</span>`
+    + `<span class="vault-x"><span class="vault-t">${esc(v.label || 'Open the client password vault')}</span>`
+    + `<span class="vault-s">Google Doc · opens in Google Drive</span></span>`
+    + `<span class="vault-go" aria-hidden="true">${MIC.arrow}</span>`
+    + `<span class="vault-tip" role="tooltip" id="vault-tip">${esc(v.tip)}</span></a>`
+    + `<p class="vault-note"><span class="vault-lock" aria-hidden="true">🔒</span><span>${esc(v.note || v.tip)}</span></p>`
+    + `</div>`;
+}
+function taskHead(title){
+  const m = title.match(/^§\s*(\S+?)\.\s+(.*)$/);
+  return `<div class="shead"><span class="schip">${esc(m ? m[1] : '§')}</span><h2>${esc(m ? m[2] : title)}</h2></div>`;
+}
+function taskSectionBody(title, body, cfg){
+  if(cfg.vault && /where things live|links/i.test(title)) return vaultButton(cfg.vault) + mdToAtlas(body);
+  return mdToAtlas(body);
+}
+function taskProcessReader(cfg, md, owner, updated){
+  const { sections } = mdSections(md);
+  const secs = sections.filter((s) => !/process at a glance/i.test(s.title))
+    .map((s) => taskHead(s.title) + taskSectionBody(s.title, s.body, cfg)).join('');
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Client task · runbook</p>`
+    + `<h1>${esc(cfg.name)}<span class="loc">${esc(cfg.loc)}</span></h1>`
+    + `<p class="lede">${cfg.lede}</p>`
+    + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+    + `<div class="page">`
+    + `<div class="shead"><span class="schip">✦</span><h2>The process at a glance</h2></div>`
+    + (cfg.flowLede ? `<p class="slede">${esc(cfg.flowLede)}</p>` : '')
+    + taskFlow(cfg)
+    + secs
+    + `</div>`;
+}
+
 /* ---- Chart of Accounts — firm standard (rendered from the master, generated JSON) ---- */
 const COA = (() => { try { return JSON.parse(read(resolve(here, 'coa-standard.json'))); } catch (e) { return []; } })();
 function coaReaderInner(owner, updated){
@@ -870,6 +941,33 @@ const SOP_GROUPS = [
       // note (kept in the repo), not something the team needs in the Hub.
     ],
   },
+  {
+    name: 'Client tasks', note: 'One-off and recurring client-specific procedures',
+    items: [
+      { file: 'deep-tech-penn-credit-tolls.md', title: 'Deep Tech — FDOT Toll Debts (Penn Credit)',
+        blurb: 'Clear Deep Tech’s unpaid FDOT tolls that were sent to the Penn Credit collection agency — the ID-number + ZIP login, the pay-down steps, and the recurring watch (new toll items keep reappearing).',
+        task: {
+          name: 'Deep Tech Development Group LLC', loc: 'FDOT toll debts in collection · Penn Credit',
+          lede: 'When a Penn Credit collection letter arrives for Deep Tech’s unpaid FDOT tolls, this is how JK logs in and pays the balance down so the letters stop — and why it has to be re-checked each time.',
+          flowLede: 'A collection letter arrives → log in with the ID number + ZIP → clear the balance → confirm $0. It loops: a new toll can surface later, so each new letter restarts it.',
+          flow: [
+            { t: 'Letter arrives', d: 'Penn Credit collection notice — unpaid FDOT tolls', ic: 'mail' },
+            { t: 'Get the login', d: 'From the client vault: account/ID number + ZIP code', ic: 'key' },
+            { t: 'Log in', d: 'account.penncredit.com/myaccount', ic: 'globe' },
+            { t: 'Review the balance', d: 'Read the outstanding toll item(s)', ic: 'search' },
+            { t: 'Pay it down', d: 'Clear the balance through the portal', ic: 'pay' },
+            { t: 'Confirm $0 · save receipt', d: 'Save the confirmation to the client’s Drive', ic: 'check', k: 'gate' },
+          ],
+          loop: 'Paying one balance to $0 has not stopped new toll amounts from reappearing — treat every new letter as a fresh pay-down.',
+          vault: {
+            url: 'https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit',
+            label: 'Open the client password vault',
+            tip: 'This one Google Doc holds ALL of Deep Tech’s logins. Open it and search inside for the Penn Credit entry — the account/ID number + ZIP code. It is not a file that opens straight to that one password.',
+            note: 'All of this client’s logins live in this one Doc — search inside it for the Penn Credit entry (account/ID number + ZIP). It’s not a single-password file.',
+          },
+        } },
+    ],
+  },
 ];
 
 /* ---------------- build SOP cards ---------------- */
@@ -904,6 +1002,8 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
       inner = ecoorganicReaderInner(md, owner, updated);
     } else if (it.close) {
       inner = closeProcessReader(it.close, md, owner, updated);
+    } else if (it.task) {
+      inner = taskProcessReader(it.task, md, owner, updated);
     } else {
       let md2 = md;
       if (it.truncateAt) {                      // drop internal-only sections from the team page

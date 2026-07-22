@@ -69,6 +69,17 @@ emitted script silently broke *every* click.
    for a flagship (BTR) or a curated visual **summary** (a "process at a glance"
    flowchart) that a human deliberately maintains — never silently duplicate the whole
    `.md` in code.
+8. **Client-task SOPs are visual too — an animated flow + a Drive material button.** A simple
+   client-specific task SOP (e.g. Deep Tech's Penn Credit toll pay-down) renders through the
+   `taskProcessReader` engine in `build-hub.mjs`: a **designed, animated process flow** on Atlas
+   tokens (`.pcflow` — a spine + step nodes + a "gate" node + a recurring-loop banner; motion is
+   enhancement-only, visible without JS and static under `prefers-reduced-motion`) — **never a bare
+   Mermaid block** — plus, for any confidential Drive material (here the client **password vault**),
+   a **designed button** (`.vault`) with a hover tooltip + a visible caption. It's driven by a
+   `task` config on the SOP's catalog item (`name · loc · lede · flowLede · flow · loop · vault`),
+   analogous to `closeProcessReader` for bookkeeping; the `.md`'s own "process at a glance" section
+   is dropped in the render (the animated flow replaces it). This is the standing way to show a
+   client-task SOP — build it with the [`impeccable`](../impeccable/) skill + the Design System.
 
 ## Design is not optional — impeccable + the Design System, always
 
