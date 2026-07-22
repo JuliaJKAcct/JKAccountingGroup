@@ -824,13 +824,13 @@ const SOP_GROUPS = [
     ],
   },
   {
-    name: 'Bookkeeping', note: 'The standard, then per-client runbooks',
+    name: 'Bookkeeping', note: 'The firm-wide numbering standard',
     items: [
       { file: 'chart-of-accounts-standard.md', title: 'Chart of Accounts — Firm Standard', coa: true,
         blurb: 'The firm’s one numbering system for every client — the ranges (100 assets … 999 triage), the rules that keep it organized, and the full 125-account master. Adapt per niche, don’t reinvent.' },
-      { file: 'ecoorganic-bookkeeping-review.md', title: 'Ecoorganic — Monthly Bookkeeping & Review', perClient: true,
+      { file: 'ecoorganic-bookkeeping-review.md', title: 'Ecoorganic — Monthly Bookkeeping & Review', perClient: true, client: { slug: 'ecoorganic-usa', name: 'Ecoorganic' },
         blurb: 'Ecoorganic’s monthly categorization rules, chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. A per-client runbook.' },
-      { file: 'magnum-152-bookkeeping-review.md', title: 'Magnum 152 — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'magnum-152-bookkeeping-review.md', title: 'Magnum 152 — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'magnum-152', name: 'Magnum 152' },
         blurb: 'Magnum 152’s monthly close — a multi-store pawn/jewelry business. The month-end process with a Drive walkthrough button for every step, the categorization rules, the reviewer checklist, and the open-items log. A per-client runbook.',
         close: {
           name: 'Magnum 152', loc: 'Monthly bookkeeping & close · multi-store pawn', dl: 'Magnum-152-bookkeeping-runbook',
@@ -849,7 +849,7 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
           ],
         } },
-      { file: 'sunoma-bookkeeping-review.md', title: 'Sunoma Inc — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'sunoma-bookkeeping-review.md', title: 'Sunoma Inc — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'sunoma-inc', name: 'Sunoma' },
         blurb: 'Sunoma’s monthly close — a two-store pawn business (Lucky Pawn & Auto Pawn). Per-store journal entries, PaymentsHub date fixes, ADP, and the close, with a Drive walkthrough button for every step. A per-client runbook.',
         close: {
           name: 'Sunoma Inc', loc: 'Monthly bookkeeping & close · two-store pawn (LP / AP)', dl: 'Sunoma-bookkeeping-runbook',
@@ -865,7 +865,7 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
           ],
         } },
-      { file: 'mobilesource-bookkeeping-review.md', title: 'Mobilesource Corp — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'mobilesource-bookkeeping-review.md', title: 'Mobilesource Corp — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'mobilesource-corp', name: 'Mobilesource' },
         blurb: 'Mobilesource’s monthly close — phone sales & repairs. The client keeps its own books (JK reconciles), monthly FL DOR sales tax (recalculated), and biweekly Gusto payroll, with a Drive walkthrough button for every step. A per-client runbook.',
         close: {
           name: 'Mobilesource Corp', loc: 'Monthly bookkeeping & close · phone sales & repairs', dl: 'Mobilesource-bookkeeping-runbook',
@@ -880,7 +880,7 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'Monthly', k: 'done' },
           ],
         } },
-      { file: 'sensustech-bookkeeping-review.md', title: 'SENSUSTECH LLC — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'sensustech-bookkeeping-review.md', title: 'SENSUSTECH LLC — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'sensustech', name: 'Sensustech' },
         blurb: 'Sensustech’s monthly close — software / app development. The signature task is the monthly Brokerage JE from statements (via TaxDome); sub-CC 4800 is entered manually. A per-client runbook with a Drive walkthrough button per step.',
         close: {
           name: 'SENSUSTECH LLC', loc: 'Monthly bookkeeping & close · software / apps', dl: 'Sensustech-bookkeeping-runbook',
@@ -894,7 +894,7 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'Monthly (bundled)', k: 'done' },
           ],
         } },
-      { file: 'margate-plumbing-bookkeeping-review.md', title: 'Margate Plumbing — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'margate-plumbing-bookkeeping-review.md', title: 'Margate Plumbing — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'margate-plumbing', name: 'Margate Plumbing' },
         blurb: 'Margate’s monthly close — a plumbing contractor. AR is owner-managed and needs care (weekly meeting with Julia); review the intercompany loan and adjust off-Gusto payments. A per-client runbook with a Drive walkthrough button per step.',
         close: {
           name: 'Margate Plumbing Inc', loc: 'Monthly bookkeeping & close · plumbing contractor', dl: 'Margate-bookkeeping-runbook',
@@ -910,7 +910,7 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'With the sister entity', k: 'done' },
           ],
         } },
-      { file: 'beemold-usa-bookkeeping-review.md', title: 'Beemold USA — Monthly Bookkeeping & Close', perClient: true,
+      { file: 'beemold-usa-bookkeeping-review.md', title: 'Beemold USA — Monthly Bookkeeping & Close', perClient: true, client: { slug: 'beemold-usa', name: 'Beemold' },
         blurb: 'Beemold’s monthly close — the quieter sister plumbing entity. Bank-feed sync has been broken since Feb 2025, so transactions are uploaded manually; review the intercompany loan each month. A per-client runbook with a Drive walkthrough button per step.',
         close: {
           name: 'Beemold USA LLC', loc: 'Monthly bookkeeping & close · plumbing (sister entity)', dl: 'Beemold-bookkeeping-runbook',
@@ -944,7 +944,7 @@ const SOP_GROUPS = [
   {
     name: 'Client tasks', note: 'One-off and recurring client-specific procedures',
     items: [
-      { file: 'deep-tech-penn-credit-tolls.md', title: 'Deep Tech — FDOT Toll Debts (Penn Credit)',
+      { file: 'deep-tech-penn-credit-tolls.md', title: 'Deep Tech — FDOT Toll Debts (Penn Credit)', client: { slug: 'deep-tech-development', name: 'Deep Tech' },
         blurb: 'Clear Deep Tech’s unpaid FDOT tolls that were sent to the Penn Credit collection agency — the ID-number + ZIP login, the pay-down steps, and the recurring watch (new toll items keep reappearing).',
         task: {
           name: 'Deep Tech Development Group LLC', loc: 'FDOT toll debts in collection · Penn Credit',
@@ -971,55 +971,66 @@ const SOP_GROUPS = [
 ];
 
 /* ---------------- build SOP cards ---------------- */
+// Load the clients up-front (reuse the CI dashboard engine) so the per-client SOP groups
+// can link straight down to each client's intelligence card (#slug). Used again below to
+// render the client cards themselves.
+const clients = loadClients(repoRoot);
+const clientBySlug = new Map(clients.map((c) => [c.slug, c.title]));
+
 let sopCount = 0;
 const hubSopTitles = {};   // id → title, so client-card "Related SOP" links open the in-Hub reader (never a repo link)
 const sopOwnerKeys = [];
 const readerDocs = [];   // collected designed pages, opened in the in-Hub reader
-const sopGroupsHtml = SOP_GROUPS.map((grp) => {
-  const cards = grp.items.map((it) => {
-    const rel = 'projects/sops/' + it.file;
-    const abs = resolve(repoRoot, rel);
-    if (!existsSync(abs)) return '';
-    const md = read(abs);
-    const owner = headerVal(md, 'Owner of SOP') || headerVal(md, 'Owner') || 'Firm';
-    const ok = ownerKey(owner);
-    sopOwnerKeys.push(ok);
-    const updated = headerVal(md, 'Last updated') || headerVal(md, 'Started') || '';
-    const id = basename(it.file, '.md');
-    hubSopTitles[id] = it.title;
-    sopCount++;
-    const text = [it.title, it.blurb, grp.name, owner, it.tag, it.perClient ? 'per-client runbook' : '']
-      .join(' ').toLowerCase();
 
-    // build the reader doc: BTR uses its premium hand-laid render; Ecoorganic uses the
-    // dynamic bookkeeping pilot layout; the rest auto-render (curated) from Markdown.
-    let inner;
-    if (it.coa) {
-      inner = coaReaderInner(owner, updated);
-    } else if (/business-tax-receipt/.test(it.file)) {
-      inner = btrReaderInner();
-    } else if (/ecoorganic/.test(it.file)) {
-      inner = ecoorganicReaderInner(md, owner, updated);
-    } else if (it.close) {
-      inner = closeProcessReader(it.close, md, owner, updated);
-    } else if (it.task) {
-      inner = taskProcessReader(it.task, md, owner, updated);
-    } else {
-      let md2 = md;
-      if (it.truncateAt) {                      // drop internal-only sections from the team page
-        const re = new RegExp('\\n#{2}\\s+' + it.truncateAt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
-        const cut = md2.search(re);
-        if (cut !== -1) md2 = md2.slice(0, cut);
-      }
-      let bodyHtml = mdToAtlas(md2);
-      if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
-      inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
-        + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
-        + `<div class="page">${bodyHtml}</div>`;
+// One SOP → its designed card, and (as a side effect) its reader doc pushed to readerDocs.
+// grpName only feeds the card's search text.
+function renderSopItem(it, grpName) {
+  const rel = 'projects/sops/' + it.file;
+  const abs = resolve(repoRoot, rel);
+  if (!existsSync(abs)) return '';
+  const md = read(abs);
+  const owner = headerVal(md, 'Owner of SOP') || headerVal(md, 'Owner') || 'Firm';
+  const ok = ownerKey(owner);
+  sopOwnerKeys.push(ok);
+  const updated = headerVal(md, 'Last updated') || headerVal(md, 'Started') || '';
+  const id = basename(it.file, '.md');
+  hubSopTitles[id] = it.title;
+  sopCount++;
+  // include the client's short + legal name so a search on either finds the card
+  const text = [it.title, it.blurb, grpName, owner, it.tag, it.perClient ? 'per-client runbook' : '',
+      it.client ? it.client.name : '',
+      it.client && clientBySlug.has(it.client.slug) ? clientBySlug.get(it.client.slug) : '']
+    .join(' ').toLowerCase();
+
+  // build the reader doc: BTR uses its premium hand-laid render; Ecoorganic uses the
+  // dynamic bookkeeping pilot layout; the rest auto-render (curated) from Markdown.
+  let inner;
+  if (it.coa) {
+    inner = coaReaderInner(owner, updated);
+  } else if (/business-tax-receipt/.test(it.file)) {
+    inner = btrReaderInner();
+  } else if (/ecoorganic/.test(it.file)) {
+    inner = ecoorganicReaderInner(md, owner, updated);
+  } else if (it.close) {
+    inner = closeProcessReader(it.close, md, owner, updated);
+  } else if (it.task) {
+    inner = taskProcessReader(it.task, md, owner, updated);
+  } else {
+    let md2 = md;
+    if (it.truncateAt) {                      // drop internal-only sections from the team page
+      const re = new RegExp('\\n#{2}\\s+' + it.truncateAt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      const cut = md2.search(re);
+      if (cut !== -1) md2 = md2.slice(0, cut);
     }
-    readerDocs.push(`<div class="rdoc" data-doc="${id}" hidden>${inner}</div>`);
+    let bodyHtml = mdToAtlas(md2);
+    if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
+    inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
+      + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+      + `<div class="page">${bodyHtml}</div>`;
+  }
+  readerDocs.push(`<div class="rdoc" data-doc="${id}" hidden>${inner}</div>`);
 
-    return `
+  return `
       <a class="hcard doc-card" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(it.title)}"
          data-card data-type="sop" data-owner="${ok}" data-text="${esc(text)}">
         ${IC.arrow}
@@ -1036,29 +1047,57 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
           <span class="tagm">Designed page</span>
         </div>
       </a>`;
-  }).join('');
+}
+
+// One group (a firm-wide topic, or a client) → its titled block of cards. A client group
+// carries a `clientSlug`, which adds a header link down to that client's intelligence card.
+function renderGroup(grp) {
+  const cards = grp.items.map((it) => renderSopItem(it, grp.name)).join('');
+  const link = grp.clientSlug && clientBySlug.has(grp.clientSlug)
+    ? `<a class="ghd-link" href="#${grp.clientSlug}">Client intelligence &darr;</a>` : '';
   return `
     <div class="hgroup" data-group>
       <div class="hgroup-hd">
         <h3>${esc(grp.name)}</h3>
         <span class="gct">${grp.items.length}</span>
         ${grp.note ? `<span class="gnote">${esc(grp.note)}</span>` : ''}
+        ${link}
       </div>
       <div class="dgrid">${cards}</div>
     </div>`;
-}).join('');
+}
+
+// Split the catalog by NATURE. Firm-wide procedures keep their topic groups; every
+// client-specific SOP (tagged with `client`) is pulled out of its topic group and
+// REGROUPED BY CLIENT (alpha by name), so a client's bookkeeping, sales-tax, collections
+// and one-off tasks all sit together under their name. Empty topic groups drop out.
+const generalGroups = SOP_GROUPS
+  .map((grp) => ({ ...grp, items: grp.items.filter((it) => !it.client) }))
+  .filter((grp) => grp.items.length);
+
+const clientGroupMap = new Map();
+for (const it of SOP_GROUPS.flatMap((grp) => grp.items)) {
+  if (!it.client) continue;
+  if (!clientGroupMap.has(it.client.slug))
+    clientGroupMap.set(it.client.slug, { name: it.client.name, clientSlug: it.client.slug, items: [] });
+  clientGroupMap.get(it.client.slug).items.push(it);
+}
+const clientGroups = [...clientGroupMap.values()].sort((a, b) => a.name.localeCompare(b.name));
+
+const generalGroupsHtml = generalGroups.map(renderGroup).join('');
+const clientGroupsHtml = clientGroups.map(renderGroup).join('');
 
 /* ---------------- build client cards (reuse the CI dashboard engine) ---------------- */
 // loadClients() + clientCard() come from the client-intelligence render engine: the
 // SAME parse + the SAME expandable cards as the standalone dashboard. Clicking a card
-// expands services / systems / open items / sources INLINE — no navigation.
-const clients = loadClients(repoRoot);
+// expands services / systems / open items / sources INLINE — no navigation. `clients` /
+// `clientBySlug` are loaded up in the SOP-cards section (the per-client SOP groups need them).
+//
 // Team-facing rule: NO repo/GitHub links in the Hub. The CI engine renders a client's
 // "Related SOP"/sibling refs as repo `.md` links (correct for the repo, wrong for the Hub).
 // Rewrite each: a Hub SOP → an in-Hub reader trigger (data-open-doc); a client slug → its
 // in-page card (#slug); anything else → plain text. (Assumes `href` is the anchor's first
 // attribute — how the CI render engine emits it.)
-const clientBySlug = new Map(clients.map((c) => [c.slug, c.title]));
 const clientCards = clients.map(clientCard).join('')
   .replace(/<a href="[^"]*\/([a-z0-9-]+)\.md"[^>]*>.*?<\/a>/g, (m, id) => {
     if (hubSopTitles[id]) return `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(hubSopTitles[id])}">${esc(hubSopTitles[id])} →</a>`;
@@ -1208,8 +1247,17 @@ const BODY = `
     <h2>Procedures &amp; runbooks</h2>
     <span class="ct">${sopCount}</span>
   </div>
-  <p class="hsec-sub">How the firm does its work — formation, licensing, bookkeeping and the client portal. Written to be picked up cold, months later.</p>
-  ${sopGroupsHtml}
+  <p class="hsec-sub">How the firm does its work. <b>Firm-wide</b> procedures that fit any client come first; <b>client-specific</b> procedures are grouped under each client, so everything the firm does for one client sits together. Written to be picked up cold, months later.</p>
+  ${generalGroups.length ? `
+  <div class="hband" data-section>
+    <div class="hband-hd"><h3>Firm-wide</h3><p>Procedures that apply to any client — company formation, licensing, the bookkeeping standard and the client portal.</p></div>
+    ${generalGroupsHtml}
+  </div>` : ''}
+  ${clientGroups.length ? `
+  <div class="hband" data-section>
+    <div class="hband-hd"><h3>By client</h3><p>Everything specific to one client, grouped together — bookkeeping, sales tax, collections, one-off tasks. As a client accumulates procedures, they all live under their name here.</p></div>
+    ${clientGroupsHtml}
+  </div>` : ''}
 </section>
 
 <!-- ============================ CLIENTS ============================ -->

@@ -80,6 +80,24 @@ emitted script silently broke *every* click.
    analogous to `closeProcessReader` for bookkeeping; the `.md`'s own "process at a glance" section
    is dropped in the render (the animated flow replaces it). This is the standing way to show a
    client-task SOP — build it with the [`impeccable`](../impeccable/) skill + the Design System.
+9. **Procedures split by nature — firm-wide by topic, client-specific by client.** The
+   Procedures area has **two bands**: **Firm-wide** — procedures that fit any client (company
+   formation, licensing, the Chart-of-Accounts standard, the Double portal), grouped by topic —
+   and **By client** — everything specific to one client — grouped **by client**, one group per
+   client, **alphabetical**. A client's bookkeeping runbook, its sales-tax procedure, a
+   collection-agency pay-down, any one-off task all sit together under that client's name, so as
+   a client accumulates procedures they never scatter across topic buckets. This is Lilian's
+   explicit instruction (Jul 2026): the Hub will grow large and a newcomer must find everything
+   done for one client in one place. Mechanics in `build-hub.mjs`: a client-specific SOP is
+   tagged with a `client: { slug, name }` field on its catalog item; the build filters those out
+   of their topic group and regroups them by `client.slug`, and each client group's header links
+   down to that client's intelligence card (`#slug`) — the same slug the CI engine emits.
+   Firm-wide SOPs carry **no** `client` field and keep their topic group; a topic group that ends
+   up empty drops out. **To file a new client procedure: give its catalog item the `client`
+   field** (short display name + the CI slug) — it lands in that client's group automatically,
+   creating the group if it's that client's first. The two `.hband`s are `data-section`, so the
+   owner/search/service filters hide a whole band when nothing in it matches (e.g. filtering to
+   Maria hides the Firm-wide band, since none of the firm-wide SOPs are hers).
 
 ## Design is not optional — impeccable + the Design System, always
 
