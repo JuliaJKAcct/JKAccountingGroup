@@ -18,9 +18,9 @@ and at the **right size** for each network — combining the best of each tool.
   size (a publish-ready PNG). Verifies the facts.
 - **Nano Banana / Gemini or NotebookLM** (Google apps, in the browser): generate
   the **illustration or infographic** when a post needs an AI-created image. This
-  is what Julia already pays for.
-- **Julia:** decides topics and approves; generates the images in the Google apps;
-  publishes.
+  is a tool the firm already pays for.
+- **Lilian:** owns marketing — decides topics and approves; generates the images
+  in the Google apps; publishes.
 
 ## The workflow, step by step
 
@@ -34,9 +34,9 @@ and at the **right size** for each network — combining the best of each tool.
      NotebookLM).
 3. **Visual route (decide).** See the decision guide below. Three routes: Claude
    directly · Gemini (prompt) · NotebookLM (grounded).
-4. **Generate the visual.** Julia generates it in the chosen app (or Claude does
+4. **Generate the visual.** Lilian generates it in the chosen app (or Claude does
    it directly if it's a diagram).
-5. **Brand finish (Claude).** Julia brings the visual; Claude produces the final
+5. **Brand finish (Claude).** Lilian brings the visual; Claude produces the final
    version: brand (colors/type/logo from the brand guide), **exact and legible
    text and numbers**, and the **exact size** for the network → PNG.
 6. **Review and publish.** Checklist: on-brand? facts verified? bilingual correct?
@@ -57,7 +57,7 @@ usually better** than a loose prompt in Gemini. Here's why, and the rule:
 
 > **Never publish numbers, figures, or terms read from text the AI wrote *inside*
 > an image.** Image AIs spell text badly and invent data. The correct data is
-> placed by Claude/Julia as **verified text** in the final finish. (This matches
+> placed by Claude/Lilian as **verified text** in the final finish. (This matches
 > the brand guide: *"real facts only — if a number or quote can't be verified,
 > omit it."*)
 
@@ -84,6 +84,6 @@ palette, type, logo, and voice. Claude applies that guide on every finish.
 
 This process will evolve. We note what we learn here:
 
-- **Julia's Nano Banana examples:** *(pending)* — Julia will share images she's
+- **Lilian's Nano Banana examples:** *(pending)* — Lilian will share images she's
   already created, so Claude understands her style/usage and sharpens the briefs.
 - **Learnings / adjustments:** *(add as we go)*
