@@ -56,3 +56,14 @@ Relies on the canonical template shape (status line, `## 1.`–`## 7.` sections,
 `### Log / Outstanding items / Information still needed`). Keep new client files on the
 template (that's the `client-intelligence` skill's job) and the engine keeps working with
 no per-client code.
+
+## Reusable exports (for the Knowledge Hub)
+
+`build.mjs` also exports `loadClients` / `clientCard` / `DASH_CSS` so the Knowledge Hub
+renders the *same* client cards (one engine, no drift). Each parsed client carries, among
+others: `entity` (display label), **`entityCls`** (normalized structure key — `scorp` ·
+`ccorp` · `partnership` · `schc` · `llc` · `corp`, from `classifyEntity()`, which detects
+Partnership/1065 and ignores "under review (A vs B)" option-lists), and **`svcKeys`** (the
+services we actually provide — `bookkeeping` · `payroll` · `salestax` · `incometax`, i.e.
+the `on`/`quirk` services). `clientCard` emits these as `data-entity` / `data-svc` on the
+card, which is what the Hub's Structure/Service facet filters read.

@@ -25,7 +25,19 @@ emitted script silently broke *every* click.
    reader) or **downloads a real file** (PDF / PNG / CSV) — never a repo/GitHub link. The
    repo internals are for Julia & Lilian only.
 2. **Two areas:** Procedures (SOPs) and Client intelligence. A search box + type/owner
-   filters over both.
+   filters over both, plus two **client facets** — **Structure** (entity type: S-corp ·
+   C-corp · Partnership · Sch C · LLC · Corp) and **Service** (which services we provide:
+   Bookkeeping · Payroll · Sales tax · Income tax). The facets read `data-entity` /
+   `data-svc`, which the CI card engine emits from each client's parsed `entityCls` /
+   `svcKeys` (`clientCard` in `../client-intelligence/render/build.mjs`); `facetChips()` in
+   `build-hub.mjs` renders only the buckets that have clients, each with a live count.
+   SOP cards carry neither attribute, so picking a Structure/Service chip naturally narrows
+   to matching clients (the Procedures section auto-hides). Entity classification lives in
+   the CI engine's `classifyEntity()` — it detects Partnership/1065 and ignores "under
+   review (A vs B)" option-lists so a *mention* of another structure can't mis-bucket a
+   client. Adding a facet = extend those lists + the `state`/`apply()` wiring in the Hub
+   script; keep the pill label and the filter bucket in sync (both derive from one rule
+   list).
 3. **SOPs open in the in-page reader** (an overlay), because it works even inside the
    sandboxed shared link (no navigation). BTR uses its hand-laid Atlas render; others are
    rendered from their `.md`.

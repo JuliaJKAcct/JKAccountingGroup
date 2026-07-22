@@ -95,13 +95,38 @@ function checkboxes(text){
   return out;
 }
 
-function entityTag(s){
-  if(/1120-S|S-corp|S-corporation/i.test(s)) return 'S-corp · 1120-S';
-  if(/1120\b|C-corp|C-corporation/i.test(s)) return 'C-corp · 1120';
-  if(/Schedule C/i.test(s)) return 'LLC · Sch C';
-  if(/1120/i.test(s)) return 'Corp · 1120';
-  if(/LLC/i.test(s)) return 'LLC';
-  const c = stripSrc(s); return c ? c.slice(0,22) : null;
+// Entity classification — ONE ordered rule list drives both the display pill and the
+// filter token (key), so the facet a client is filed under always matches the pill it
+// shows. Partnership / Form 1065 was previously missing, so multi-member LLCs fell
+// through to a bare "LLC"; it now gets its own bucket (Julia filters by structure).
+const ENTITY_RULES = [
+  [/1120-S|S-?corp\b|S-?corporation/i,                 'scorp',       'S-corp · 1120-S'],
+  [/\b1065\b|partnership/i,                            'partnership', 'Partnership · 1065'],
+  [/\b1120\b|C-?corp\b|C-?corporation/i,               'ccorp',       'C-corp · 1120'],
+  [/Schedule C|Sch\.? C|disregarded|single-?member/i,  'schc',        'LLC · Sch C'],
+  [/\bLLC\b/i,                                         'llc',         'LLC'],
+  [/\bInc\b|Corporation/i,                             'corp',        'Corp'],
+];
+function classifyEntity(s){
+  // Drop "under review / A vs B vs C" option-lists first, so a mention of another
+  // structure inside a parenthetical (e.g. "files Schedule C … under review (LLC vs
+  // S-corp vs C-corp)") can't outrank the CURRENT filing.
+  const cleaned = String(s||'')
+    .replace(/\([^)]*\bvs\b[^)]*\)/gi, ' ')
+    .replace(/\bunder review\b/gi, ' ');
+  for(const [re,key,label] of ENTITY_RULES) if(re.test(cleaned)) return { key, label };
+  const c = stripSrc(cleaned); return { key:'', label: c ? c.slice(0,22) : null };
+}
+function entityTag(s){ return classifyEntity(s).label; }
+
+// Which services we actually provide — used for the Hub's "Service" facet. A service
+// counts as active when we do it (state 'on') or do it with a reconcile note ('quirk');
+// 'off' = not our service, 'neutral' = pending/unknown (not claimed).
+const SVC_KEY = { Bookkeeping:'bookkeeping', 'Income tax':'incometax', 'Sales tax':'salestax', Payroll:'payroll' };
+function activeSvcKeys(svc){
+  return Object.entries(svc)
+    .filter(([,v]) => v.state==='on' || v.state==='quirk')
+    .map(([k]) => SVC_KEY[k]);
 }
 function stateTag(s){
   if(/florida|(^|[^a-z])FL([^a-z]|$)/i.test(s)){
@@ -194,6 +219,8 @@ export function loadClients(repoRoot){
     return {
       slug, title, status, owner, updated,
       entity: entityTag(snap['Entity type']||''),
+      entityCls: classifyEntity(snap['Entity type']||'').key,
+      svcKeys: activeSvcKeys(svc),
       state: stateTag(snap['Home state']||''),
       lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
       industry, platform: stripSrc(snap['Accounting platform']||''),
@@ -271,7 +298,7 @@ export function clientCard(c){
     <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
     <p class="cx-hint"><b>Related SOP</b> — ${sopLinks}</p></div>`;
   return `
-<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-text="${searchText}">
+<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-entity="${esc(c.entityCls||'')}" data-svc="${esc((c.svcKeys||[]).join(' '))}" data-text="${searchText}">
   <div class="cx-head">
     <h3>${esc(c.title)}</h3>
     <div class="cx-upd">${esc(c.updated)}<span class="dot"></span>${esc(c.owner)}</div>
