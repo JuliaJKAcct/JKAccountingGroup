@@ -535,20 +535,27 @@ function ecoorganicReaderInner(md, owner, updated){
     + `</div>`;
 }
 
-/* ---- Magnum 152 bookkeeping runbook (process-style; the exemplar for Maria's clients) ----
-   Same two-layer idea as the Ecoorganic pilot, but Maria's material is a month-end CLOSE
-   PROCESS, so the curated visual is: the one-rule banner · the monthly-flow ribbon · the
-   close step-by-step with a Drive material button per step (the sensitive detail — logins,
-   statements, Maria's screen recordings — stays in Drive; the button opens it). The FULL
-   .md renders as accordions below, so nothing drifts. Team-facing: provenance stripped. */
+/* ---- Close-process bookkeeping runbook (Magnum pilot; reused for all of Maria's clients) --
+   Maria's clients are a month-end CLOSE PROCESS, so the curated visual is: the one-rule
+   banner · the monthly-flow ribbon · the close step-by-step with a Drive material button per
+   step (the sensitive detail — logins, statements, Maria's screen recordings — stays in
+   Drive; the button opens it). The FULL .md renders as accordions below, so nothing drifts.
+   Team-facing: provenance stripped. ONE reusable reader (`closeProcessReader`), driven by a
+   per-client `close` config in the SOP catalog (name · loc · lede · oneRule · flow). */
 const MIC = {
   folder: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h3.2a2 2 0 0 1 1.6.8l1 1.2H18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>',
   sheet:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg>',
   docg:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>',
+  play:   '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.28-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14z"/></svg>',
   arrow:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   star:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.6L5.7 20.3 8 13.3 2 8.9h7.6z"/></svg>',
 };
-function matIcon(url){ return /spreadsheets/.test(url) ? MIC.sheet : /\/document\//.test(url) ? MIC.docg : MIC.folder; }
+function matIcon(url){
+  if(/\/file\/d\//.test(url)) return MIC.play;              // a Drive video
+  if(/spreadsheets/.test(url)) return MIC.sheet;
+  if(/\/document\//.test(url)) return MIC.docg;
+  return MIC.folder;
+}
 function matLinksFrom(text){
   const links = []; const re = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g; let m;
   while((m = re.exec(text))) links.push({ label: m[1], url: m[2] });
@@ -564,7 +571,7 @@ function matRow(links, label){
 // "Monthly close process" → numbered step cards, each with its Drive material buttons.
 // The link(s) live in the .md as a trailing "Reference: [..](..)" on each step, so the
 // buttons are sourced from the source-of-truth, not hand-coded.
-function magnumSteps(body){
+function closeSteps(body){
   const h3i = body.search(/^###\s/m);
   const head = h3i >= 0 ? body.slice(0, h3i) : body;
   const tail = h3i >= 0 ? body.slice(h3i) : '';
@@ -586,7 +593,7 @@ function magnumSteps(body){
   return intro + `<ol class="msteps">${cards}</ol>` + (tail ? mdToAtlas(tail) : '');
 }
 // "Reference material" → a resource list (icon · title · caption · Open)
-function magnumResList(body){
+function closeResList(body){
   const bi = body.search(/^\s*[-*]\s+/m);
   const intro = bi > 0 ? mdToAtlas(body.slice(0, bi)) : '';
   const rows = body.split('\n').filter((l) => /^\s*[-*]\s+/.test(l)).map((l) => {
@@ -604,66 +611,56 @@ function magnumResList(body){
   }).join('');
   return intro + `<div class="reslist">${rows}</div>`;
 }
-function magnumSignature(){
+function closeSignature(oneRule){
   return `<div class="eco-sig"><span class="eco-sig-ic">${MIC.star}</span>`
     + `<div><p class="eco-sig-t">The one thing to hold in your head</p>`
-    + `<p class="eco-sig-d">Reports go out <b>quarterly, not monthly</b>. <b>PayPal 1015 has no live feed</b> — it's a monthly journal entry. Payroll is <b>run by the owner in ADP</b> — you only reconcile it and rename the JEs. And the month isn't closed until <b>triage reads $0</b>.</p></div></div>`;
+    + `<p class="eco-sig-d">${oneRule}</p></div></div>`;
 }
-function magnumFlow(){
-  const steps = [
-    { t: 'Gather', d: 'Bravo reports + statements → Drive' },
-    { t: 'Reconcile', d: 'Every feed · PayPal via JE' },
-    { t: 'Per-store JEs', d: 'MS1 Griffin · MS2 Miami' },
-    { t: 'Consolidate', d: 'GL via SaasAnt' },
-    { t: 'Other JEs', d: 'Cash · inventory · insurance · Kabbage' },
-    { t: 'Vendor + ADP', d: 'Merch/US&nbsp;Pawn/Scrap · reconcile ADP' },
-    { t: 'Reclass', d: 'Utilities · store splits · ADMIN' },
-    { t: 'Performance vs QBO', d: 'The tie-out' },
-    { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
-    { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
-  ];
-  const li = steps.map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
+function closeFlow(steps){
+  const li = (steps || []).map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
     + `<span class="estep-b"><span class="estep-t">${s.t}</span><span class="estep-d">${s.d}</span></span></li>`).join('');
   return `<div class="shead"><span class="schip">✦</span><h2>How each month runs</h2></div>`
     + `<p class="slede">The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.</p>`
     + `<ol class="eflow">${li}</ol>`;
 }
-function magnumSectionBody(title, body){
-  if(/close process/i.test(title)) return magnumSteps(body);
+function closeSectionBody(title, body){
+  if(/close process/i.test(title)) return closeSteps(body);
   if(/categorization rules/i.test(title)) return ecoRuleCards(body);
   if(/review checklist/i.test(title)) return ecoChecklist(body);
   if(/open items|open decisions/i.test(title)) return ecoDecisionsTable(body);
-  if(/reference material/i.test(title)) return magnumResList(body);
+  if(/reference material/i.test(title)) return closeResList(body);
   return mdToAtlas(body);
 }
-function magnumPrintFrontMatter(sections, owner, updated){
+function closePrintFrontMatter(name, sub, sections, owner, updated){
   const toc = sections.map((s, i) => `<li><span class="ptoc-n">${i + 1}</span><span class="ptoc-t">${esc(s.title)}</span></li>`).join('');
   return `<div class="pbook pcover">${JK_MARK}`
     + `<p class="pc-kick">Bookkeeping Runbook · Per Client</p>`
-    + `<h1 class="pc-h">Magnum 152</h1>`
-    + `<p class="pc-sub">Monthly Bookkeeping &amp; Close</p>`
+    + `<h1 class="pc-h">${esc(name)}</h1>`
+    + `<p class="pc-sub">${esc(sub)}</p>`
     + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}<br>JK Accounting Group — internal reference</p></div>`
     + `<div class="pbook ptoc"><h2>Contents</h2>`
     + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; the monthly flow</span></li>${toc}</ol></div>`;
 }
-function magnumReaderInner(md, owner, updated){
+// The ONE reusable close-process reader. cfg = { name, loc, lede, oneRule, flow, dl } from
+// the SOP catalog's `close` field; every section renders generically from the .md.
+function closeProcessReader(cfg, md, owner, updated){
   const { sections } = mdSections(md);   // preamble (H1 + provenance blockquote) dropped
-  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', magnumSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
+  const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', closeSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
   const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
-    + `<a class="dlbtn ghost" download="Magnum-152-bookkeeping-runbook.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
+    + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
     + `<span class="eco-actions-note">Saves the full runbook — cover, contents, every step — as a printable PDF.</span></div>`;
-  return magnumPrintFrontMatter(sections, owner, updated)
+  return closePrintFrontMatter(cfg.name, 'Monthly Bookkeeping & Close', sections, owner, updated)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
-    + `<h1>Magnum 152<span class="loc">Monthly bookkeeping &amp; close · multi-store pawn</span></h1>`
-    + `<p class="lede">Everything a bookkeeper needs to run Magnum's month-end close — the one rule, the monthly flow, then the close step by step with a button straight to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.</p>`
+    + `<h1>${esc(cfg.name)}<span class="loc">${esc(cfg.loc)}</span></h1>`
+    + `<p class="lede">${cfg.lede}</p>`
     + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
     + `<div class="page">`
     + actions
-    + magnumSignature()
-    + magnumFlow()
+    + closeSignature(cfg.oneRule)
+    + closeFlow(cfg.flow)
     + `<div class="shead"><span class="schip">§</span><h2>The full runbook</h2></div>`
     + `<p class="slede">The authoritative detail — the client snapshot, the close process (with the Drive material for each step), the categorization rules, the reviewer checklist, and the open items. Open a section.</p>`
     + secs
@@ -763,7 +760,99 @@ const SOP_GROUPS = [
       { file: 'ecoorganic-bookkeeping-review.md', title: 'Ecoorganic — Monthly Bookkeeping & Review', perClient: true,
         blurb: 'Ecoorganic’s monthly categorization rules, chart-of-accounts conventions, the reviewer checklist, and the open-decisions log. A per-client runbook.' },
       { file: 'magnum-152-bookkeeping-review.md', title: 'Magnum 152 — Monthly Bookkeeping & Close', perClient: true,
-        blurb: 'Magnum 152’s monthly close — a multi-store pawn/jewelry business. The month-end process with a Drive walkthrough button for every step, the categorization rules, the reviewer checklist, and the open-items log. A per-client runbook.' },
+        blurb: 'Magnum 152’s monthly close — a multi-store pawn/jewelry business. The month-end process with a Drive walkthrough button for every step, the categorization rules, the reviewer checklist, and the open-items log. A per-client runbook.',
+        close: {
+          name: 'Magnum 152', loc: 'Monthly bookkeeping & close · multi-store pawn', dl: 'Magnum-152-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Magnum's month-end close — the one rule, the monthly flow, then the close step by step with a button straight to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "Reports go out <b>quarterly, not monthly</b>. <b>PayPal 1015 has no live feed</b> — it's a monthly journal entry. Payroll is <b>run by the owner in ADP</b> — you only reconcile it and rename the JEs. And the month isn't closed until <b>triage reads $0</b>.",
+          flow: [
+            { t: 'Gather', d: 'Bravo reports + statements → Drive' },
+            { t: 'Reconcile', d: 'Every feed · PayPal via JE' },
+            { t: 'Per-store JEs', d: 'MS1 Griffin · MS2 Miami' },
+            { t: 'Consolidate', d: 'GL via SaasAnt' },
+            { t: 'Other JEs', d: 'Cash · inventory · insurance · Kabbage' },
+            { t: 'Vendor + ADP', d: 'Merch/US&nbsp;Pawn/Scrap · reconcile ADP' },
+            { t: 'Reclass', d: 'Utilities · store splits · ADMIN' },
+            { t: 'Performance vs QBO', d: 'The tie-out' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+            { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
+          ],
+        } },
+      { file: 'sunoma-bookkeeping-review.md', title: 'Sunoma Inc — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Sunoma’s monthly close — a two-store pawn business (Lucky Pawn & Auto Pawn). Per-store journal entries, PaymentsHub date fixes, ADP, and the close, with a Drive walkthrough button for every step. A per-client runbook.',
+        close: {
+          name: 'Sunoma Inc', loc: 'Monthly bookkeeping & close · two-store pawn (LP / AP)', dl: 'Sunoma-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Sunoma's month-end close — the one rule, the monthly flow, then the close step by step with a button to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "Everything is <b>per store</b> — Lucky Pawn (LP) and Auto Pawn (AP) are journalized <b>separately</b>. The close can't finish until the owner sends the month-end reports <b>via TaxDome</b>, so nudge the pipeline early. Reports go out <b>quarterly / on request</b>.",
+          flow: [
+            { t: 'Gather', d: 'Owner sends reports via TaxDome (LP/AP)' },
+            { t: 'Reconcile', d: 'Truist ×2 · Chase · Visa · PayPal' },
+            { t: 'Merch dates', d: 'Fix PaymentsHub deposit/fee dates' },
+            { t: 'ADP', d: 'Rename JEs + reconcile' },
+            { t: 'Monthly JEs', d: 'Per store — LP & AP' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+            { t: 'Delivered', d: 'Quarterly / on request', k: 'done' },
+          ],
+        } },
+      { file: 'mobilesource-bookkeeping-review.md', title: 'Mobilesource Corp — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Mobilesource’s monthly close — phone sales & repairs. The client keeps its own books (JK reconciles), monthly FL DOR sales tax (recalculated), and biweekly Gusto payroll, with a Drive walkthrough button for every step. A per-client runbook.',
+        close: {
+          name: 'Mobilesource Corp', loc: 'Monthly bookkeeping & close · phone sales & repairs', dl: 'Mobilesource-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Mobilesource's month-end close — the one rule, the monthly flow, then the close step by step with a button to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "The client keeps its own books — the <b>GM categorizes ~everything</b>; JK reconciles and reviews. The FL DOR <b>sales-tax report is never right out of the box</b> — always recalculate. And payroll gets <b>one consolidated Tuesday email (CC Julia)</b> before you run it.",
+          flow: [
+            { t: 'Reconcile', d: 'GM categorizes · JK reconciles' },
+            { t: 'AP / AR review', d: 'Send for write-off review' },
+            { t: 'Sales tax', d: 'FL DOR · recalculate the report' },
+            { t: 'Payroll', d: 'Gusto (Tue) + Simple IRA roster' },
+            { t: 'Triage → $0', d: 'Buyback out of Uncat', k: 'gate' },
+            { t: 'Delivered', d: 'Monthly', k: 'done' },
+          ],
+        } },
+      { file: 'sensustech-bookkeeping-review.md', title: 'SENSUSTECH LLC — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Sensustech’s monthly close — software / app development. The signature task is the monthly Brokerage JE from statements (via TaxDome); sub-CC 4800 is entered manually. A per-client runbook with a Drive walkthrough button per step.',
+        close: {
+          name: 'SENSUSTECH LLC', loc: 'Monthly bookkeeping & close · software / apps', dl: 'Sensustech-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Sensustech's month-end close — the one rule, the monthly flow, then the close step by step with a button to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "Most activity is transfers + card expenses (ads, software, subscriptions, travel, meals) + sales + labor. The signature monthly task is the <b>Brokerage JE from the managed-brokerage statements</b> (no direct access — request via TaxDome). <b>Sub-CC 4800 is entered manually</b>. When unsure, send it to <b>Uncategorized</b> — the owner clears it fast.",
+          flow: [
+            { t: 'Reconcile', d: 'Chase feeds · sub-CC 4800 manual' },
+            { t: 'Brokerage JE', d: 'From statements (via TaxDome)' },
+            { t: 'Uncat → owner', d: 'Owner clears fast' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+            { t: 'Delivered', d: 'Monthly (bundled)', k: 'done' },
+          ],
+        } },
+      { file: 'margate-plumbing-bookkeeping-review.md', title: 'Margate Plumbing — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Margate’s monthly close — a plumbing contractor. AR is owner-managed and needs care (weekly meeting with Julia); review the intercompany loan and adjust off-Gusto payments. A per-client runbook with a Drive walkthrough button per step.',
+        close: {
+          name: 'Margate Plumbing Inc', loc: 'Monthly bookkeeping & close · plumbing contractor', dl: 'Margate-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Margate's month-end close — the one rule, the monthly flow, then the close step by step with a button to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "<b>AR is managed by the owner and is not accurate</b> (wrong dates, wrong invoices, wrong accounts), so payment reconciliation is the hard part — bring it to the <b>weekly meeting with Julia</b>. <b>Review the intercompany loan</b> with the sister company each month, and adjust any employee payments made <b>outside Gusto</b>.",
+          flow: [
+            { t: 'Bank feed', d: 'Categorize the feed' },
+            { t: 'Reconcile', d: 'WF · Mercury · BoA · Amex' },
+            { t: 'Intercompany loan', d: 'Agree with the sister co.' },
+            { t: 'AR corrections', d: 'Weekly meeting with Julia' },
+            { t: 'Outside-Gusto adj', d: 'Book payments sent off-Gusto' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+            { t: 'Delivered', d: 'With the sister entity', k: 'done' },
+          ],
+        } },
+      { file: 'beemold-usa-bookkeeping-review.md', title: 'Beemold USA — Monthly Bookkeeping & Close', perClient: true,
+        blurb: 'Beemold’s monthly close — the quieter sister plumbing entity. Bank-feed sync has been broken since Feb 2025, so transactions are uploaded manually; review the intercompany loan each month. A per-client runbook with a Drive walkthrough button per step.',
+        close: {
+          name: 'Beemold USA LLC', loc: 'Monthly bookkeeping & close · plumbing (sister entity)', dl: 'Beemold-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run Beemold's month-end close — the one rule, the monthly flow, then the close step by step with a button to Maria's Drive walkthrough for each one. Built from the runbook, so it stays in sync.",
+          oneRule: "The bank-feed <b>sync has been broken since Feb 2025</b> — upload the Mercury + BoA transactions <b>manually</b>. <b>Review the intercompany loan</b> with the sister company each month. Beemold is the <b>quieter</b> of the pair — some months have no activity.",
+          flow: [
+            { t: 'Manual upload', d: 'Mercury + BoA (sync broken)' },
+            { t: 'Reconcile', d: 'Mercury ×2 + CC · BoA' },
+            { t: 'Intercompany loan', d: 'Agree with the sister co.' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+            { t: 'Delivered', d: 'With the sister entity', k: 'done' },
+          ],
+        } },
     ],
   },
   {
@@ -785,6 +874,7 @@ const SOP_GROUPS = [
 
 /* ---------------- build SOP cards ---------------- */
 let sopCount = 0;
+const hubSopTitles = {};   // id → title, so client-card "Related SOP" links open the in-Hub reader (never a repo link)
 const sopOwnerKeys = [];
 const readerDocs = [];   // collected designed pages, opened in the in-Hub reader
 const sopGroupsHtml = SOP_GROUPS.map((grp) => {
@@ -798,6 +888,7 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
     sopOwnerKeys.push(ok);
     const updated = headerVal(md, 'Last updated') || headerVal(md, 'Started') || '';
     const id = basename(it.file, '.md');
+    hubSopTitles[id] = it.title;
     sopCount++;
     const text = [it.title, it.blurb, grp.name, owner, it.tag, it.perClient ? 'per-client runbook' : '']
       .join(' ').toLowerCase();
@@ -811,8 +902,8 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
       inner = btrReaderInner();
     } else if (/ecoorganic/.test(it.file)) {
       inner = ecoorganicReaderInner(md, owner, updated);
-    } else if (/magnum/.test(it.file)) {
-      inner = magnumReaderInner(md, owner, updated);
+    } else if (it.close) {
+      inner = closeProcessReader(it.close, md, owner, updated);
     } else {
       let md2 = md;
       if (it.truncateAt) {                      // drop internal-only sections from the team page
@@ -862,7 +953,17 @@ const sopGroupsHtml = SOP_GROUPS.map((grp) => {
 // SAME parse + the SAME expandable cards as the standalone dashboard. Clicking a card
 // expands services / systems / open items / sources INLINE — no navigation.
 const clients = loadClients(repoRoot);
-const clientCards = clients.map(clientCard).join('');
+// Team-facing rule: NO repo/GitHub links in the Hub. The CI engine renders a client's
+// "Related SOP" as a repo `.md` link (correct for the repo, wrong for the Hub) — rewrite
+// each into an in-Hub reader trigger (opens the designed SOP page) when the SOP is a Hub
+// doc, else drop the link to plain text.
+const clientCards = clients.map(clientCard).join('')
+  .replace(/<a href="[^"]*\/([a-z0-9-]+)\.md"[^>]*>.*?<\/a>/g, (m, id) => {
+    const title = hubSopTitles[id];
+    return title
+      ? `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(title)}">${esc(title)} →</a>`
+      : '<span class="cx-none">in the repo</span>';
+  });
 const clientOwnerKeys = clients.map((c) => ownerKey(c.owner));
 
 /* owner filter chips (distinct owners across SOPs + clients) */

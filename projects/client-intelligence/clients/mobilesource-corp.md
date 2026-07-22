@@ -110,4 +110,4 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - **Maria's process guide (Drive):** [Mobilesource doc guide](https://docs.google.com/document/d/1XfMfe3pMxG9OjoawnrPuK2Hf3Hlqvz3i-Q98weTI9j0/edit) — full process + all credentials (sensitive; do not copy into repo)
 - **Video tutorials (Drive):** [Mobilesource Tutorials](https://drive.google.com/drive/folders/16zt0UzLITu53M2FF0kgCfeRMqFdhRaMu) — Bookkeeping (part 1–3), Sales Taxes, Payroll (screen recordings by Maria)
 - **Related clients:** [`sensustech.md`](./sensustech.md), [`lumetro.md`](./lumetro.md) (same tech owner group)
-- **Related SOPs:** _(pending — buyback categorization + sales-tax recalc are candidates)_
+- **Related SOPs:** [`../../sops/mobilesource-bookkeeping-review.md`](../../sops/mobilesource-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)

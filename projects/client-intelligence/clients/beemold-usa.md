@@ -102,4 +102,4 @@ never copied here.
 - **Maria's process guide (Drive):** [Beemold doc guide](https://docs.google.com/document/d/1n2SuSEym5am-TwORAG66YxCQSXLwsd1YYzLJLm_3Sco/edit) — process + all credentials (sensitive; do not copy into repo)
 - **Process step folders (Drive):** [Beemold Tutorials](https://drive.google.com/drive/folders/1PEr77hUK8pkldk32yk1Q39X0Zq51Qi2d) — Bookkeeping, "Add Mercury and BoA transactions manually"
 - **Related client:** [`margate-plumbing.md`](./margate-plumbing.md) (sister entity, same owner)
-- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
+- **Related SOPs:** [`../../sops/beemold-usa-bookkeeping-review.md`](../../sops/beemold-usa-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)

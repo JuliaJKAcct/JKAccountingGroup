@@ -111,4 +111,4 @@ Drive (§7) — never copied here.
 - **Maria's process guide (Drive):** [Margate doc guide](https://docs.google.com/document/d/1zs5KoJAHtRpe5lTIEXTLJipt-FOaJLPm7fKynUpeE9I/edit) — process + all credentials (sensitive; do not copy into repo)
 - **Video tutorials (Drive):** [Margate Tutorials](https://drive.google.com/drive/folders/1uQjuY_k9z583IqO0Laq7aNNHdJHz37Be) — Bank Feed, Reconciliation (part 1–2)
 - **Related client:** [`beemold-usa.md`](./beemold-usa.md) (sister entity, same owner)
-- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
+- **Related SOPs:** [`../../sops/margate-plumbing-bookkeeping-review.md`](../../sops/margate-plumbing-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)

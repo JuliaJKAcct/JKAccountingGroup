@@ -504,6 +504,12 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
 .resrow:hover .rgo svg{transform:translateX(3px);}
 @media (max-width:560px){ .resrow .rgo span{display:none;} }
 
+/* client-card "Related SOP" → opens the in-Hub reader (not a repo link) */
+.cx-soplink{cursor:pointer; color:var(--accent-2); font-weight:600; text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb, var(--accent) 40%, transparent);}
+.cx-soplink:hover{color:var(--accent); border-bottom-color:var(--accent);}
+.cx-soplink:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px;}
+
 /* ---------- Print book: cover + table of contents (screen-hidden) ---------- */
 .pbook{display:none;}
 

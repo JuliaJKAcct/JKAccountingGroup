@@ -108,4 +108,4 @@ doc guide** in Drive (§7) — never copied here.
 - **Maria's process guide (Drive):** [Sensustech doc guide](https://docs.google.com/document/d/1aSKtLpHRerNcdo40S4deymcYrO7QNBujez2LMGKbPkQ/edit) — full process + all credentials (sensitive; do not copy into repo)
 - **Video tutorials (Drive):** [Sensustech Tutorials](https://drive.google.com/drive/folders/1sj_uJXfeHGCT20mGrP36daIXar5JeB0k) — Bookkeeping Part 1, Bookkeeping Part 2 (Brokerage JE)
 - **Related clients:** [`lumetro.md`](./lumetro.md), [`mobilesource-corp.md`](./mobilesource-corp.md) (same tech owner group)
-- **Related SOPs:** _(pending — bookkeeping / month-end close SOP in progress)_
+- **Related SOPs:** [`../../sops/sensustech-bookkeeping-review.md`](../../sops/sensustech-bookkeeping-review.md) — Monthly Bookkeeping & Close runbook (bookkeeping-sop skill; rendered in the Hub; in review)
