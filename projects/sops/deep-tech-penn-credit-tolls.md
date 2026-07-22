@@ -3,10 +3,10 @@
 > **Status:** Draft · **Owner:** Lilian · **Last updated:** 2026-07-22
 >
 > 🔍 **Draft / in progress (Jul 2026):** started from what we know so far — the
-> login method, the portal, and the recurring pay-down pattern. The screen-by-
-> screen detail, who funds the payment, and how status is checked are still to be
-> captured on the next real run (see §6). Remove this note once the process has
-> been run end-to-end and confirmed.
+> login method, the portal, and the recurring pay-down pattern. Who funds the
+> payment and how status is checked are still to be captured on the next real
+> run (see §6). Remove this note once the process has been run end-to-end and
+> confirmed.
 
 The procedure for clearing **Deep Tech Development Group LLC**'s unpaid **Florida
 Department of Transportation (FDOT) toll** charges that were referred to the
@@ -82,23 +82,25 @@ You need, in hand:
 
 ## §4. What you pay
 
-- **Whose funds pay the toll?** _(pending — confirm whether the firm pays on the
-  client's behalf or the client funds it, and by what method.)_
+- **Whose funds pay the toll?** To confirm — whether the firm pays on the
+  client's behalf or the client funds it, and by what method.
 - **Amount:** varies per letter — read it **live** in the portal; never write a
   figure into this file (it's sensitive and it changes).
 
 ## §5. Where things live — links
 
+The login values (**account/ID number + ZIP code**) are in the client's
+**password vault** — use the button above. It's a Google Doc holding **all** of
+this client's logins, so **search inside it** for the **Penn Credit** entry; it
+isn't a file that opens straight to that one password.
+
 | What | Where |
 |---|---|
 | Penn Credit portal | [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) |
-| Login values (ID number + ZIP code) | The client's **password vault** (Google Doc), kept with the client's records |
 | Payment receipts | The client's **Google Drive** folder |
 
 ## §6. Still to capture (next real run)
 
-- [ ] The **screen-by-screen** portal flow (the login screen, where the balance
-  shows, the payment screen).
 - [ ] **Who funds** the payment, and the method used.
 - [ ] Whether Penn Credit sends any **email confirmation** (or only physical
   letters), and whether status can be checked online.
