@@ -35,4 +35,4 @@ twice.
 
 | ID | Client | Target SOP | Proposed change | Source | Status | Resolved (date · note / PR) |
 |---|---|---|---|---|---|---|
-| _(none yet — the next sweep, or a manual enrichment, will populate this)_ | | | | | | |
+| SOP-2026-07-23-01 | Best Broker Realty | `hollywood-broward-business-tax-receipt.md` | How a **category-change pay-the-difference** actually completes: pay the balance through the City's online payment center (a "City of Hollywood Treasury Department" reference-number confirmation — a different channel from the PayPal submission fee), then **reply to the reviewer to confirm** so they email the receipt. Added to §7 + a §5 pitfall. | Best Broker Realty City of Hollywood BTR thread (Jul 2026); Lilian's session | Applied | 2026-07-23 · Lilian approved in-session · PR #TBD |

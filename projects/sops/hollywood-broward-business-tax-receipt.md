@@ -1,6 +1,6 @@
 # SOP: Business Tax Receipt — City of Hollywood + Broward County
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-15
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-23
 >
 > 🔍 **In review (Jul 2026):** Lilian is doing a final detailed read-through after a
 > major restructuring round (flowchart, two-fees box, uploads checklist, email map).
@@ -326,6 +326,10 @@ Address** and **Folio Number** auto-fill from the address you enter.
   Chasing a client to find and forward a city/county email stalls the whole filing.
 - **Treating the BTR as zoning approval.** It isn't (see §3B certification) —
   don't file for a non-resident commercial use of a residential parcel (see §1).
+- **Paying a category-difference balance and stopping.** When the city corrects
+  the classification and bills the difference by email, paying it is **not** the
+  last step — the reviewer issues and mails the receipt only **after you reply to
+  confirm the payment**. Pay, then notify them, or the receipt never comes (see §7).
 - **Missing the Sept 30 renewal.**
 
 ---
@@ -392,17 +396,34 @@ Upload a Document** links in those emails, or the city's **"Check Application
 Status"** page at <https://apps.hollywoodfl.org/LbtrOnline/> (needs the
 Application ID / Folio).
 
-### City follow-up — only if something needs fixing — from `BusinessTax@hollywoodfl.org`
+### City follow-up — only if something needs fixing — from `BusinessTax@hollywoodfl.org` (or a Treasury reviewer directly, e.g. `tlloyd@hollywoodfl.org`)
 - **"BUSINESS TAX APPLICATION #\<ID> - \<ADDRESS> - \<BUSINESS>"** — a
-  **personal** email from a staff member (may cc a reviewer, e.g.
-  `tlloyd@hollywoodfl.org`), sent **only if there's an issue**: wrong category, a
-  state license they need you to provide, or a pay-the-difference balance. Reply
-  with exactly what they ask (e.g. the state license PDF) to move forward.
+  **personal** email from a staff member (may cc, or come **directly from**, a
+  Treasury revenue analyst, e.g. `tlloyd@hollywoodfl.org`), sent **only if there's
+  an issue**: wrong category, a state license they need you to provide, or a
+  pay-the-difference balance. Reply with exactly what they ask (e.g. the state
+  license PDF) to move forward.
+- **Pay-the-difference for a category change — how it actually completes.** After
+  you send a missing license and the city **re-categorizes** the business, the
+  reviewer emails a **due balance for the corrected category** with a **payment
+  link** ("Renew Local Business Tax") and the **business-tax account number**. Two
+  things to know:
+  1. **Pay this balance through the City's online payment center** (a card payment
+     on the city's site — the "Renew Local Business Tax" link) — a **different
+     channel from the PayPal fee at submission**. The confirmation is a **"City of
+     Hollywood Treasury Department"** page/email with a **reference number** — save
+     it with the file.
+  2. **The receipt is not issued automatically.** **Reply to the reviewer to
+     confirm you paid** — they then **email the tax receipt**. If you pay but never
+     notify them, the receipt won't come.
 
 ### Payment receipt
-The **city fee is paid by card through PayPal**, so the payment receipt is a
-**PayPal "Order Confirmation"** email (`noreply@paypal.com`). Save it with the
-application.
+The **city application fee (at submission) is paid by card through PayPal**, so
+that receipt is a **PayPal "Order Confirmation"** email (`noreply@paypal.com`). A
+**later category-difference balance** (see the follow-up above) is instead paid
+through the **City's online payment center**, and its receipt is a **"City of
+Hollywood Treasury Department"** confirmation with a **reference number**. Save
+whichever you get with the application.
 
 > ⚠️ **These emails follow the email on the application.** If the client's email
 > was entered, the firm never receives the Track / Status emails and **cannot
