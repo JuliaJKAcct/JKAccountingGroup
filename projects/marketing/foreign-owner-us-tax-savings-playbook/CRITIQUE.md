@@ -82,3 +82,34 @@ optimal, we'll tell you… no pressure to switch"*).
 **Remaining before publish (human):** wire the lead endpoint, WhatsApp, and Odoo
 booking URL; fill the real-proof credibility placeholders; Julia's sign-off on
 the tax figures and strategy framing.
+
+---
+
+## ROUND 3 — independent verification audit (2026-07-23)
+
+Trigger: Julia spotted the landing selling "14 chapters" while the guide's
+visible menu presents **6 numbered sections**. An independent auditor agent
+swept landing + guide (15 findings). All fixed:
+
+- **One structure story everywhere.** Landing + guide cover now sell **"six
+  short parts"**; the topic grid is relabeled by the real menu parts ("Part 03
+  · Deductions" …), reordered ascending, and its heading no longer claims
+  "every lever" (three chapters aren't carded); visible part dividers
+  renumbered to match the tabs (Part 02–05).
+- **Eligibility honesty on the landing:** the structure-change and
+  pay-yourself bullets no longer promise resident-only levers unconditionally;
+  the treaty bullet + card now say "if your country has a treaty."
+- **Dead links killed:** "book a call" placeholder → working WhatsApp deep
+  link (TODO marks the Odoo swap); dead "Privacy" link removed.
+- **Cross-reference fixed:** the QBI chapter no longer cites "Chapter 1 of our
+  setup guide" (wrong target, no link) — plain-words definition instead.
+- **The review is "a focused 20 minutes" on both pages** (the guide never
+  stated a length; the landing FAQ did).
+- **Quiz integrity:** requires ≥1 answer before rendering a result (novalidate
+  no longer yields a "result" from an untouched form); authorship aligned
+  ("with the JK team"); skip-link and opt-in copy corrected; cover now states
+  the reading time.
+
+Verified clean by the auditor: all dollar figures consistent ($72k / $2.56M /
+21% / 20% / 30%), six tool files exist, wa.me number correct everywhere, all
+other anchors resolve, quiz "six questions" = 6, self-check "0 of 9" = 9.

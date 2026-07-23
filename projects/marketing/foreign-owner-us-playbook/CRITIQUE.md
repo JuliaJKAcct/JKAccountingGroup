@@ -113,3 +113,40 @@ bridge, Andrés's read:
 
 **Remaining before publish (human):** wire the lead endpoint, WhatsApp, and Odoo
 booking URL; fill the real-proof placeholders; Julia's sign-off on tax figures.
+
+---
+
+## ROUND 3 — independent verification audit (2026-07-23)
+
+Trigger: Julia spotted a real inconsistency — the landing sold "14 short
+chapters" while the guide's visible menu presents **6 numbered sections**. An
+independent auditor agent then swept landing + guide for every claim-vs-reality
+gap (17 findings). All fixed:
+
+- **One structure story everywhere.** Landing + guide cover now sell **"six
+  short parts"** (matching the 01–06 menu); the topic cards are labeled with the
+  real menu part names ("Part 02 · Before you set up" …); the visible part
+  dividers renumbered to match the tabs (Part 02–05, no more off-by-one against
+  the tab numbers); the roadmap points to parts, not chapter ranges. The
+  "Chapter 1–14" eyebrows remain as in-part signposts (a part contains
+  chapters), but no page claims a chapter count anymore.
+- **Reading time honest:** "about 30 minutes, one part at a time" (measured
+  ~5.3k words; the old "25 minutes" was the optimistic floor for the declared
+  non-native audience).
+- **Dead links killed:** the "book a call" button pointed at a placeholder
+  anchor (#REPLACE-WITH-BOOKING-URL) — now a working WhatsApp deep link (the
+  live appointment page 500s; TODO comment marks the Odoo swap). The dead
+  "Privacy" link removed until a real page exists.
+- **Content contradictions fixed:** the "LLC or S-Corp" tool card no longer
+  invites nonresidents into the exact comparison Chapter 2 forbids; "pro-forma
+  return" defined in plain words (table + Ch. 7); Jun 15/Sep 15 estimated
+  payments added to the calendar (it claimed four, showed two); FBAR aside added
+  to Ch. 13 so the sixth tool maps to a chapter; checklist gained the calendar
+  step (13 items) and stopped claiming to be "the whole guide."
+- **Small honesty fixes:** quiz card no longer implies answers can be "sent";
+  quiz requires ≥1 answer before showing a result; authorship aligned ("with
+  the JK team"); skip-link, appbar CTA target, and opt-in copy corrected.
+
+Verified clean by the auditor: all dollar/percent/day figures consistent across
+both pages, all six tool files exist, wa.me number correct everywhere, all
+other anchors resolve.
