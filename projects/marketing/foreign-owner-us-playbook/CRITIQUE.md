@@ -185,3 +185,39 @@ no-cost offer. What held him back → fixed where honesty allows:
 - Tab bar gains a right-edge fade so the scrollable menu reads as scrollable.
 
 Round 2 of the avatar loop re-tests with fresh eyes after these fixes.
+
+---
+
+## ROUND 5 — avatar loop, round 2 verdicts + fixes (2026-07-23)
+
+Fresh-eyes "Mateo" after round-1 fixes: **usefulness 7→8**, clarity 8, email
+still YES_WITH_HESITATION — but now "I would give my real name and my real
+email"; booking MAYBE. His remaining blockers, fixed where honesty allows:
+
+- **"The page tells me six times it is not for people like me"** (EN/RU/UK
+  repetition reads as a community wall) → trust strip now says "From any
+  country"; new FAQ *"I'm not from a Russian-speaking country. Is this still
+  for me?"* (any country; clear, simple English at your pace; RU/UK if easier);
+  "bicultural" dropped.
+- **Verifiable anchors** → footer now carries the real phone + a link to
+  jkaccountinggroup.com; the authority block links the IRS preparer directory
+  to verify the EA credential; founder chip spells out "IRS Enrolled Agent."
+- **"Book a call" button led to a question form** → the #book form is now
+  titled "Book your free call — or just ask," promises a confirmed time within
+  one business day, and states calls are in clear, simple English at your pace.
+- **3PL/marketplace precision** → the marketplace callout now says the
+  marketplace collects on marketplace orders even when shipped from a 3PL;
+  own-website orders are yours; inventory presence can still mean registering.
+- **Opt-in contradiction** ("instant access" vs "we'll email it") → "Read it
+  right away in your browser — we also email you your copy."
+- **WhatsApp can deliver the guide** → opt-in alternative now reads "get it on
+  WhatsApp" with a prefilled "please send me the free US Business Playbook."
+- **12 more ESL fixes** (the "for years they didn't know" sentence, "sold a
+  single $100,000," "default rates stand," the 200-sales sentence split, the
+  pro-forma semicolon, "economics of," "touch the US most," ECI gloss, "on
+  top," "Say your," "pass $10,000," "shape of the year," "entity"→"company
+  type") + hidden TOC renumbered Part 02–05 so no numbering system disagrees.
+
+Remaining to ABSOLUTE_YES / WOULD_BOOK (human, brand-locked): real
+testimonials (ideally one e-commerce seller), a Google rating link, a street
+address, and a real booking calendar.

@@ -150,3 +150,37 @@ fixed where honesty allows:
   conditioning).
 
 Round 2 of the avatar loop re-tests with fresh eyes after these fixes.
+
+---
+
+## ROUND 5 — avatar loop, round 2 verdicts + fixes (2026-07-23)
+
+Fresh-eyes "Oksana" after round-1 fixes: **usefulness 8/10** ("half of it is
+literally about me"), clarity 7, email YES_WITH_HESITATION (real name + real
+email, after the FAQ), booking MAYBE via WhatsApp. Her remaining blockers,
+fixed where honesty allows:
+
+- **"For established foreign owners" pushed away the green-card resident** →
+  kicker now reads *"For foreign-born owners — on a green card or abroad"*;
+  hero grammar knot ("list of the legitimate ways established…") simplified.
+- **EA was two letters of fog at first mention** → founder chip now says "IRS
+  Enrolled Agent"; authority block links the IRS preparer directory to verify.
+- **Email was the only door** → the WhatsApp alternative now delivers the
+  guide ("get it on WhatsApp," prefilled "please send me the free Tax-Savings
+  Playbook").
+- **Ch. 13 frightened residents about Form 5472** → it now says in place that
+  a resident who fully owns their company usually doesn't have this form —
+  plus the subcontractor line she missed (W-9s on file, 1099s each January).
+- **Cost silence** → the S-Corp example now names the running costs
+  (~$1,500–$3,000/yr payroll service + S-Corp return); the review promises "no
+  documents needed before the call — come as you are."
+- **17 ESL fixes** ("levers" glossed at first use, "on the table" reworded,
+  "Plans, doesn't just file" → "We plan ahead — not just file," both dense
+  table cells, "kept, before," "small science," phase-out in plain words, ECI
+  gloss, "switched off," "Small, boring," "bringing forward," "a state
+  letter," "pin down," "progress saves," hidden TOC renumbered Part 02–05) +
+  footer phone/site added.
+
+Remaining to ABSOLUTE_YES / WOULD_BOOK (human, brand-locked): 2–3 real client
+stories (RU/UA names, one trades business), a Google rating, a street address,
+a real booking calendar.
