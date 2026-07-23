@@ -204,3 +204,30 @@ idiom replaced; the Ch. 13 resident reassurance rewritten to leave zero doubt
 names, one trades business), a Google rating link, a street address, a privacy
 page, the live Odoo booking calendar, the real lead endpoint, and sign-off on
 tax figures.
+
+---
+
+## ROUND 7 — external ChatGPT review, triaged by Julia (2026-07-23)
+
+Julia ran the funnel past ChatGPT and directed which recommendations to take.
+Implemented:
+
+- **Real social proof found and added** — the firm's website already carries
+  named five-star reviews; the landing now has a "Real reviews" section
+  (Marko Zivanovic, Prime Road Carriers — the planning-differentiator quote —
+  + Edward Kissel, Mobilesource Corp), verbatim (trimmed with ellipses),
+  linked to jkaccountinggroup.com as the verifiable source. No placeholders.
+- **"Probably not for you if…"** qualifier added (not operating yet → pointed
+  to the setup playbook; not yet profitable; aggressive-scheme seekers).
+- **The free-review promise softened** (ChatGPT's top new issue, approved):
+  no more "specific figure" in 20 minutes — the FAQ, the #book lede, and the
+  quiz note now promise identified levers + an estimated range + exactly
+  what's needed to calculate the real number (return in hand → more specific
+  first estimate).
+- **W-8BEN scoped to dividends** on the landing bullet and topic card.
+- **C-Corp table cell** no longer sells the "legal wall" as a tax
+  differentiator ("may bring in outside investors" instead).
+- **One repeated CTA removed** from the guide's final band.
+
+Rejected by Julia: umbrella-terminology rework (#5), broader technical
+hedging (#6 beyond the two above), 25→35 minutes (#7).

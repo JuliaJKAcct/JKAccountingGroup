@@ -288,6 +288,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .uc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
 @media (max-width:860px){.uc-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:540px){.uc-grid{grid-template-columns:1fr;}}
+
+/* ---- Testimonials (real reviews from jkaccountinggroup.com) ---- */
+.tsm-grid{display:grid; gap:16px; grid-template-columns:1fr; max-width:900px; margin:0 auto;}
+@media (min-width:760px){ .tsm-grid{grid-template-columns:1fr 1fr;} }
+.tsm-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:clamp(22px,3vw,28px); box-shadow:var(--shadow-sm);}
+.tsm-stars{font-size:13px; letter-spacing:3px; color:var(--bronze-500,#B58045); margin:0 0 10px;}
+.tsm-card blockquote{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.6; color:var(--text-primary);}
+.tsm-card cite{display:block; margin-top:14px; font-style:normal; font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-700);}
+.tsm-note{margin:14px auto 0; max-width:900px; text-align:center; font-size:13px; color:var(--text-muted);}
+.tsm-note a{color:var(--teal-700); font-weight:600;}
+/* ---- "Probably not for you" qualifier ---- */
+.notfor{max-width:760px; margin:22px auto 0; padding:14px 20px; border-left:3px solid var(--border-subtle); color:var(--text-muted); font-size:14.5px; line-height:1.55;}
+.notfor b{color:var(--text-primary);}
+
 .uc-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out), border-color .2s;}
 .uc-card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--bronze-300);}
 .uc-card .uc-ic{width:44px; height:44px; border-radius:11px; background:var(--teal-50); color:var(--teal-700); display:grid; place-items:center; margin-bottom:16px;}
@@ -731,7 +745,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Up to $72,000 into your own retirement</b>, before tax — that's the 2026 legal maximum; most owners put in less, and it still pays.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Deduct equipment the same year you buy it</b> — the 100% write-off is back and permanent.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>How to pay yourself</b> without losing extra payroll tax — one clear path for residents, one for nonresidents.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The treaty form</b> that can cut the flat 30% held back on money you send home — if your country has a treaty.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>The treaty form</b> that can cut the flat 30% held back on dividends you send home — if your country has a treaty.</span></li>
         </ul>
         <div class="offer-bonus">
           <span class="ob-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>
@@ -875,7 +889,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
           <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-linecap="round"/></svg></span>
           <p class="uc-n">Part 04 · Moving money</p>
           <h3>Sending profit home</h3>
-          <p>If your country has a tax treaty, one short form can cut the flat 30% withholding.</p>
+          <p>If your country has a tax treaty, one short form can cut the flat 30% withheld from dividends.</p>
         </div>
         <div class="uc-card">
           <span class="uc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16M9 15l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -903,6 +917,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You <b>moved to the US</b> and run your business here — for residents, even more levers open up.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>You want to <b>plan and keep more</b>, not just file and hope.</span></li>
         </ul>
+        <p class="notfor"><b>Probably not for you if:</b> you haven't started operating in the US yet (begin with our setup guide, "The Foreign Owner's US Business Playbook"); your business isn't profitable yet; or you're looking for aggressive schemes rather than compliant planning.</p>
       </div>
     </div>
   </section>
@@ -937,6 +952,29 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
     </div>
   </section>
 
+  <!-- ===================== TESTIMONIALS (real, from the firm's website) ===================== -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-eyebrow" style="justify-content:center;">Real reviews</p>
+        <h2>What established owners say after the switch</h2>
+      </div>
+      <div class="tsm-grid">
+        <div class="tsm-card reveal">
+          <p class="tsm-stars" aria-label="Five stars">★★★★★</p>
+          <blockquote>&ldquo;Every single meeting they propose new procedures and processes that would save time and make everyone's work more efficient. That is exactly what makes them different from any other adviser that I've worked with.&rdquo;</blockquote>
+          <cite>Marko Zivanovic &middot; Owner, Prime Road Carriers INC</cite>
+        </div>
+        <div class="tsm-card reveal">
+          <p class="tsm-stars" aria-label="Five stars">★★★★★</p>
+          <blockquote>&ldquo;Finally an accounting firm who cares&hellip; All the other companies we had used did the least amount of work and gave no advice&hellip; They become part of the team!&rdquo;</blockquote>
+          <cite>Edward Kissel &middot; Owner, Mobilesource Corp</cite>
+        </div>
+      </div>
+      <p class="tsm-note">Real client reviews, as published on <a href="https://www.jkaccountinggroup.com" target="_blank" rel="noopener">jkaccountinggroup.com</a>.</p>
+    </div>
+  </section>
+
   <!-- ===================== FAQ (objection handling) ===================== -->
   <section class="section">
     <div class="wrap">
@@ -955,7 +993,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
         </details>
         <details>
           <summary>Will it actually save ME money? How can you know? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-          <p class="fq-a">Honestly, we can't promise a number from a guide — your savings live in <em>your</em> real books, not a quiz. That's exactly what the free review is for: we look at your actual numbers and give you the specific figure and the levers behind it. If there's nothing to save, we'll say so.</p>
+          <p class="fq-a">Honestly, we can't promise a number from a guide — your savings live in <em>your</em> real books, not a quiz. That's exactly what the free review is for: we identify the levers most likely to matter for you, estimate the range they could be worth, and tell you exactly what we'd need to calculate your real number. Bring last year's return and the first estimate gets specific. If there's nothing to save, we'll say so.</p>
         </details>
         <details>
           <summary>Is it really free? Will you spam me? <svg class="fq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>

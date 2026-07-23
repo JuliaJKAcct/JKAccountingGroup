@@ -288,6 +288,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .uc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
 @media (max-width:860px){.uc-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:540px){.uc-grid{grid-template-columns:1fr;}}
+
+/* ---- Testimonials (real reviews from jkaccountinggroup.com) ---- */
+.tsm-grid{display:grid; gap:16px; grid-template-columns:1fr; max-width:900px; margin:0 auto;}
+@media (min-width:760px){ .tsm-grid{grid-template-columns:1fr 1fr;} }
+.tsm-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:clamp(22px,3vw,28px); box-shadow:var(--shadow-sm);}
+.tsm-stars{font-size:13px; letter-spacing:3px; color:var(--bronze-500,#B58045); margin:0 0 10px;}
+.tsm-card blockquote{margin:0; font-family:var(--serif); font-size:16.5px; line-height:1.6; color:var(--text-primary);}
+.tsm-card cite{display:block; margin-top:14px; font-style:normal; font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-700);}
+.tsm-note{margin:14px auto 0; max-width:900px; text-align:center; font-size:13px; color:var(--text-muted);}
+.tsm-note a{color:var(--teal-700); font-weight:600;}
+/* ---- "Probably not for you" qualifier ---- */
+.notfor{max-width:760px; margin:22px auto 0; padding:14px 20px; border-left:3px solid var(--border-subtle); color:var(--text-muted); font-size:14.5px; line-height:1.55;}
+.notfor b{color:var(--text-primary);}
+
 .uc-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out), border-color .2s;}
 .uc-card:hover{transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--bronze-300);}
 .uc-card .uc-ic{width:44px; height:44px; border-radius:11px; background:var(--teal-50); color:var(--teal-700); display:grid; place-items:center; margin-bottom:16px;}
@@ -827,7 +841,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
                 <tr><th scope="row">Can a foreigner abroad own it?</th><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No — not if you live abroad</td></tr>
                 <tr><th scope="row">How the profit is taxed</th><td>Passes through to you — you file and pay on the profit</td><td>The company pays 21% first; then tax again when profit is paid out to you</td><td>—</td></tr>
                 <tr><th scope="row">Main US filing</th><td>Form 5472, attached to a "pro-forma" return — a mostly-blank cover page (see Ch. 7)</td><td>Corporate return (Form 1120) + Form 5472</td><td>—</td></tr>
-                <tr><th scope="row">Often a good fit when…</th><td>You run an active business and want to keep it simple</td><td>You'll raise money, keep profit in the US, or want a clear wall between you and the company</td><td>—</td></tr>
+                <tr><th scope="row">Often a good fit when…</th><td>You run an active business and want to keep it simple</td><td>You'll raise money, keep profit in the US to grow, or want investor-ready shares</td><td>—</td></tr>
               </tbody>
             </table>
           </div>
@@ -1075,7 +1089,7 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
             <li><b>Ignoring quarterly taxes</b> and getting a penalty on top of the bill.</li>
             <li><b>Forgetting sales tax</b> until a state sends a letter with years of back tax owed.</li>
             <li><b>Calling employees "contractors"</b> to save paperwork — then owing the back taxes yourself.</li>
-            <li><b>Paying the full 30%</b> on money sent home because no one filed the treaty form (W-8BEN).</li>
+            <li><b>Paying the full 30%</b> on dividends sent home because no one filed the treaty form (W-8BEN).</li>
             <li><b>Spending too many days in the US</b> and becoming a worldwide-income taxpayer by accident.</li>
             <li><b>Waiting until tax season</b> to look at any of this. By then you can only report — it's too late to plan.</li>
           </ol>
@@ -1323,7 +1337,6 @@ html.reader.tabbed .part-divider{margin-top:0; padding-top:0; border-top:0;}
       <div class="actions">
         <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">&rarr;</span></a>
         <a class="btn wa lg" href="https://wa.me/17863181505?text=Hi%20JK%2C%20I%20have%20a%20question%20about%20starting%20my%20US%20business" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg> WhatsApp us</a>
-        <a class="btn secondary lg" href="#next">See my next steps</a>
       </div>
       <p class="loc">Miami · Fort Lauderdale · Online</p>
     </div>

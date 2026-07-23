@@ -241,3 +241,29 @@ and…" now read as conditions, not commands; "staying right with the IRS" and
 **Open for Julia (the whole remaining gap):** 2–3 real testimonials (one
 e-commerce/FBA), a Google rating link, a street address, a privacy page, the
 live Odoo booking calendar, the real lead endpoint, and sign-off on tax figures.
+
+---
+
+## ROUND 7 — external ChatGPT review, triaged by Julia (2026-07-23)
+
+Julia ran the funnel past ChatGPT (landing 9/10 visual, ~8.5/10 messaging;
+guide "very strong as a lead magnet") and directed which recommendations to
+take. Implemented:
+
+- **Real social proof found and added** — the firm's own website already
+  carries three named five-star reviews; the landing now has a "Real reviews"
+  section (Michael Zavyalov, e-commerce CEO + Edward Kissel, Mobilesource
+  Corp), quoted verbatim (trimmed with ellipses) and linked back to
+  jkaccountinggroup.com as the verifiable source. No placeholders needed.
+- **"Probably not for you if…"** three-line qualifier added under the
+  for-you list (aggressive-tricks seekers, zero-tax promises, no US sales).
+- **W-8BEN accuracy** (judged important): the 30%-withholding claims are now
+  scoped to **dividends** on the landing bullets, contrast list, and mistakes
+  list — the treaty form is no longer implied to cover any "money sent home."
+- **C-Corp table cell** no longer sells liability protection as a C-Corp tax
+  differentiator ("investor-ready shares" instead).
+- **One repeated CTA removed** from the guide's final band ("See my next
+  steps" — the reader just left the quiz).
+
+Rejected by Julia: umbrella-terminology rework (#5), the broader technical
+hedging pass (#6 beyond the two above), 25→35-minute copy (#7).
