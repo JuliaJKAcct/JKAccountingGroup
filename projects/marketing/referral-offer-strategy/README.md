@@ -54,6 +54,13 @@ there.
   Opens with "congratulations on the new space," reframes all 8 boxes to
   "still right / actually current?", and carries a scannable WhatsApp QR so a
   printout is actionable. This is the realtor channel's default leave-behind.
+- **`templates/operating-business-financial-checklist-general-en.html` /
+  `-ru.html`** — a **partner-agnostic** sibling of the Operating checklist
+  above, for referral partners who aren't real estate at all (credit repair
+  specialists, hard money lenders, brokers, etc.). Same 8 categories and
+  same design, but the hero and any item text that referenced "a new
+  space"/moving locations is genericized to a plain "is your business set
+  up the way it should be?" framing that fits any referring professional.
 - **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
   one-page, print-ready **Pre-Launch** checklist artifact (same chassis), for
   the rarer client genuinely *starting* their first business, on brand, no
