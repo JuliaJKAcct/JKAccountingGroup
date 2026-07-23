@@ -221,3 +221,23 @@ email"; booking MAYBE. His remaining blockers, fixed where honesty allows:
 Remaining to ABSOLUTE_YES / WOULD_BOOK (human, brand-locked): real
 testimonials (ideally one e-commerce seller), a Google rating link, a street
 address, and a real booking calendar.
+
+---
+
+## ROUND 6 — final verdicts (2026-07-23)
+
+Fresh-eyes "Mateo," final pass: **EMAIL: yes with his real name and main email**
+("my ritual finally works — a name to Google, a license I can check, a real
+phone, a WhatsApp escape"); **BOOKING: WOULD_BOOK** ("I tap it"). His verdict on
+the remaining gap: *"Nothing fixable-on-page is blocking. Apart from real
+proof, the page is done."* With 2–3 real client stories (one FBA seller) + a
+Google rating, email becomes an unconditional yes and the booking happens
+same-day. Last catches fixed after his read: the quiz no longer tells
+no-treaty countries to "use your country's treaty" (now "check whether a
+treaty — or timing — can cut the 30%"); "Miss that form and…"/"Cross the line
+and…" now read as conditions, not commands; "staying right with the IRS" and
+"in your corner" idioms replaced.
+
+**Open for Julia (the whole remaining gap):** 2–3 real testimonials (one
+e-commerce/FBA), a Google rating link, a street address, a privacy page, the
+live Odoo booking calendar, the real lead endpoint, and sign-off on tax figures.

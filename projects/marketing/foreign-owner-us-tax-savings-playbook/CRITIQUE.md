@@ -184,3 +184,23 @@ fixed where honesty allows:
 Remaining to ABSOLUTE_YES / WOULD_BOOK (human, brand-locked): 2–3 real client
 stories (RU/UA names, one trades business), a Google rating, a street address,
 a real booking calendar.
+
+---
+
+## ROUND 6 — final verdicts (2026-07-23)
+
+Fresh-eyes "Oksana," final pass: **EMAIL: yes** (WhatsApp first, real email
+after — "a tax page that subtracts its own costs lowered my guard more than
+any promise"); **BOOKING: WOULD_BOOK** ("free, 20 minutes, in Ukrainian — I
+send it, probably late at night"). Her verdict on the remaining gap: *"Nothing
+on-page is blocking… apart from real proof, the page is done."* With real
+client stories (one RU/UA trades owner) + a Google rating, email becomes an
+unconditional yes and she arrives at the review ready to act. Last stumbles
+fixed after her read: the triple-dash "levers" sentence split; "any old way"
+idiom replaced; the Ch. 13 resident reassurance rewritten to leave zero doubt
+("you usually do not need to file it").
+
+**Open for Julia (the whole remaining gap):** 2–3 real testimonials (RU/UA
+names, one trades business), a Google rating link, a street address, a privacy
+page, the live Odoo booking calendar, the real lead endpoint, and sign-off on
+tax figures.
