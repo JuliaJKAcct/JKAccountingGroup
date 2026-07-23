@@ -150,3 +150,38 @@ gap (17 findings). All fixed:
 Verified clean by the auditor: all dollar/percent/day figures consistent across
 both pages, all six tool files exist, wa.me number correct everywhere, all
 other anchors resolve.
+
+---
+
+## ROUND 4 — avatar "Mateo" (Colombian FBA e-commerce owner), 2026-07-23
+
+Verdicts: email **YES_WITH_HESITATION** (his newsletter email, not his real one) ·
+booking **MAYBE** (would WhatsApp-text, not book). What pulled: the hero naming
+his exact case (products + US warehouses), WhatsApp everywhere, the finite
+no-cost offer. What held him back → fixed where honesty allows:
+
+- **"We speak your language" un-recruited him** (page promises "your language,"
+  then offers EN/RU/UK only) → chip now reads *"Plain English · Russian ·
+  Ukrainian"*; every "in your language" line now names the three languages;
+  WhatsApp lines say "write in English, Russian, or Ukrainian."
+- **No verifiable anchor** → the page now carries the founder's real,
+  checkable identity: **Julia Kononova, MBA, EA (IRS Enrolled Agent)** — name in
+  the founder chip + authority blocks, "Led by an IRS Enrolled Agent (EA)" chip
+  (sourced from the firm's own email signature; no invented proof). Remaining:
+  real testimonials/Google rating — human task, placeholders marked.
+- **His two biggest content gaps closed:** Ch. 9 gains the **marketplace
+  facilitator** callout (Amazon collects for marketplace sales; your own-site/3PL
+  sales stay yours; inventory can still mean registering) and Ch. 3 answers
+  **"which state if I live abroad and my inventory is everywhere"** (one state,
+  not one per warehouse) + a **registered agent / US address** explainer + an
+  honest **"what does setup cost"** ranges callout.
+- **Treaty how-to-check** (IRS list; what if no treaty) added to Ch. 1.
+- **Fear dial turned down:** the third $25,000 repetition on the landing
+  reworded; the two that remain carry the form's name.
+- **12 ESL stumbles fixed** (pro-forma sentence, "foreign to that state,"
+  "carries real duties," "dropping that count," ⅓/⅙ worked example, bank
+  sentence, "Your capstone," "all-states view," "dates before deadlines,"
+  "from home" quiz option, FDAP label, quiz-card copy).
+- Tab bar gains a right-edge fade so the scrollable menu reads as scrollable.
+
+Round 2 of the avatar loop re-tests with fresh eyes after these fixes.

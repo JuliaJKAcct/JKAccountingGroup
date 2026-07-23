@@ -113,3 +113,40 @@ swept landing + guide (15 findings). All fixed:
 Verified clean by the auditor: all dollar figures consistent ($72k / $2.56M /
 21% / 20% / 30%), six tool files exist, wa.me number correct everywhere, all
 other anchors resolve, quiz "six questions" = 6, self-check "0 of 9" = 9.
+
+---
+
+## ROUND 4 — avatar "Oksana" (Ukrainian remodeling-LLC owner, FL, green card), 2026-07-23
+
+Verdicts: email **YES_WITH_HESITATION** · booking **MAYBE** (would WhatsApp
+first). What pulled: the EN/RU/UK languages, "If your current setup is already
+optimal, we'll tell you," the self-check mirroring her habits. Held back →
+fixed where honesty allows:
+
+- **No proof of who they are** → real, checkable credential now on the page:
+  **Julia Kononova, MBA, EA (IRS Enrolled Agent)** in the founder chip, the
+  authority block, and a cred-bar chip (from the firm's own signature — nothing
+  invented). Testimonials/Google rating stay a human TODO.
+- **"Foreign owner" read as "people living abroad"** → hero now says green-card
+  residents are covered ("Living here on a green card, or running it from
+  abroad — both paths are covered"), and a "for you if" bullet claims the owner
+  who moved here ("for residents, even more levers open up").
+- **"$72,000" felt like a rich-people number** → qualified as the 2026 legal
+  maximum; "most owners put in less, and it still pays."
+- **"I already have an accountant" now fully answered:** keep your preparer for
+  filing, use us for planning — plus the price-transparency line ("on the
+  review we'll tell you plainly what ongoing service costs… before you decide").
+- **Worked S-Corp example added to Ch. 2** ($150k profit / $70k fair salary →
+  roughly $10–12k/yr payroll tax kept, before costs — with the "fair salary"
+  caveat).
+- **Contractor materials vs inventory** clarified in the inventory callout; the
+  $25k tool card now says who it applies to (foreign non-resident owners) so it
+  informs instead of frightens.
+- **15 ESL fixes** (quiz "answers stay on your device," "both marked,"
+  "firewall," "save you the habit," "records what already did," "parts of
+  levers" hero grammar, QBI spelled as "the 20% profit deduction," phase-out
+  explained, cash-vs-accrual explained, "salary move"→"strategy," shoebox idiom,
+  SEP/Solo split, four-ways-to-take-money-out split, "with the catch," treaty
+  conditioning).
+
+Round 2 of the avatar loop re-tests with fresh eyes after these fixes.
