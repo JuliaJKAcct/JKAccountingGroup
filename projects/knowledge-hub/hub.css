@@ -673,3 +673,132 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
   .pcnode, .pcloop, .vault-btn{break-inside:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .vault-tip{display:none;}
 }
+
+/* ============================================================
+   APP SHELL — sticky left index + content, two switchable views
+   (Procedures | Client intelligence). Added Jul 2026 (Lilian):
+   an index you can click, the client area separated from the
+   procedures, a fixed brand lockup, and more life/motion.
+   ============================================================ */
+
+/* --- header lockup: brand emblem replaces the redundant "JK" monogram --- */
+.bar .lhs .hbadge{width:30px; height:30px;}
+.bar .lhs .navtoggle{display:none;}   /* shown only on mobile (see drawer rules) */
+
+/* --- two-column shell --- */
+:root{ --hnav-w:256px; }
+.hshell{max-width:var(--maxw); margin:clamp(20px,3vw,32px) auto 0; padding:0 var(--gutter);
+  display:grid; grid-template-columns:var(--hnav-w) minmax(0,1fr); gap:clamp(26px,3.4vw,44px); align-items:start;}
+.hmain{min-width:0;}
+
+/* --- left index (sticky column on desktop) --- */
+.hnav{position:sticky; top:72px; align-self:start; max-height:calc(100vh - 88px);
+  overflow-y:auto; overscroll-behavior:contain; padding:2px 12px 22px 0;}
+.hnav-in{display:flex; flex-direction:column; gap:16px;}
+
+/* view switch */
+.viewseg{display:flex; flex-direction:column; gap:6px; background:var(--surface);
+  border:1px solid var(--border); border-radius:14px; padding:6px; box-shadow:var(--shadow-sm);}
+.viewbtn{display:flex; align-items:center; gap:10px; width:100%; text-align:left; appearance:none; cursor:pointer;
+  border:0; background:transparent; color:var(--body); font-family:var(--sans); font-size:13.5px; font-weight:600;
+  padding:9px 11px; border-radius:9px; transition:background .18s var(--ease-out), color .18s var(--ease-out);}
+.viewbtn svg{width:17px; height:17px; flex:0 0 auto; color:var(--muted); transition:color .18s var(--ease-out);}
+.viewbtn .vb-l{flex:1 1 auto; min-width:0;}
+.viewbtn .vb-n{font-family:var(--mono); font-size:11px; color:var(--muted); background:var(--bg); border-radius:999px; padding:2px 8px;}
+.viewbtn:hover{background:var(--pill-teal-bg);}
+.viewbtn[aria-selected="true"]{background:var(--teal-800); color:#F1ECE1;}
+.viewbtn[aria-selected="true"] svg{color:var(--bronze-200);}
+.viewbtn[aria-selected="true"] .vb-n{background:rgba(236,230,218,0.16); color:#ECE6DA;}
+:root[data-theme="dark"] .viewbtn[aria-selected="true"]{background:var(--raise); color:var(--ink);}
+:root[data-theme="dark"] .viewbtn[aria-selected="true"] svg{color:var(--accent-2);}
+:root[data-theme="dark"] .viewbtn[aria-selected="true"] .vb-n{background:rgba(0,0,0,0.16); color:var(--ink);}
+
+/* search in the sidebar → full width */
+.hnav .hsearch{flex:none; width:100%;}
+.hnav .hsearch input{height:40px; font-size:13.5px;}
+
+/* filters, stacked */
+.hnav-filters{display:flex; flex-direction:column; gap:13px; padding:2px;}
+.hnav-filters .ochips{gap:6px 7px;}
+.hnav-filters .ochips.struct{flex-wrap:wrap;}
+.hnav-filters .ol{width:100%; margin-bottom:1px;}
+
+/* the clickable index (scrollspy), a left-rail table of contents */
+.hix{display:flex; flex-direction:column; gap:1px; border-left:1px solid var(--border-subtle);}
+.hix-t{font-family:var(--mono); font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:var(--muted);
+  margin:14px 0 5px; padding-left:12px; display:flex; align-items:baseline; gap:7px;}
+.hix-t:first-child{margin-top:2px;}
+.hix-tn{font-family:var(--mono); font-size:9.5px; opacity:.6;}
+.hix-a{display:flex; align-items:baseline; gap:8px; text-decoration:none; color:var(--muted);
+  font-size:12.5px; line-height:1.3; padding:6px 10px 6px 12px; margin-left:-1px;
+  border-left:2px solid transparent; transition:color .15s var(--ease-out), border-color .15s var(--ease-out);}
+.hix-a:hover{color:var(--ink);}
+.hix-a .hix-n{margin-left:auto; font-family:var(--mono); font-size:10px; opacity:.55;}
+.hix-a.on{color:var(--ink); border-left-color:var(--accent); font-weight:600;}
+
+/* help disclosure */
+.hnav-help{border-top:1px solid var(--border-subtle); padding-top:13px; margin-top:2px;}
+.hnav-help summary{cursor:pointer; font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--muted); list-style:none; display:flex; align-items:center;}
+.hnav-help summary::-webkit-details-marker{display:none;}
+.hnav-help summary::before{content:"+"; margin-right:8px; color:var(--accent); font-size:13px; width:10px;}
+.hnav-help[open] summary::before{content:"\2212";}
+.hnav-help-b{margin-top:10px;}
+.hnav-help-b p{font-size:12.5px; line-height:1.55; color:var(--body); margin:0 0 8px;}
+.hnav-help-b p:last-child{margin-bottom:0;}
+.hnav-help-b b{color:var(--ink);}
+
+/* --- content: the two views --- */
+.hview[hidden]{display:none;}
+/* Elements given a flex/grid display ignore the bare [hidden] attribute (author style
+   beats the UA rule), so make hiding explicit for the view-scoped index + filter blocks. */
+.hix[hidden], .hnav-filters .ochips[hidden]{display:none !important;}
+.hview-hd{margin-bottom:8px;}
+.hview-t{display:flex; align-items:center; gap:11px;}
+.hview-t h2{font-family:var(--serif); font-size:clamp(21px,2.7vw,27px); line-height:1.08; letter-spacing:-0.015em;}
+.hview-t .ct{font-family:var(--mono); font-size:12px; font-weight:600; color:var(--accent-2);
+  background:var(--pill-bronze-bg); border-radius:999px; padding:3px 11px;}
+.hview-sub{color:var(--muted); font-size:14px; line-height:1.6; max-width:78ch; margin:8px 0 0;}
+.hview-sub b{color:var(--body);}
+
+/* view crossfade */
+@keyframes viewIn{ from{opacity:0; transform:translateY(7px);} to{opacity:1; transform:none;} }
+.hview.view-in{animation:viewIn .34s var(--ease-out);}
+
+/* a jumped-to client card gets a brief bronze ring */
+@keyframes cxFlash{ 0%{box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 60%, transparent);} 100%{box-shadow:0 0 0 3px transparent;} }
+.cx-flash{animation:cxFlash 1.2s var(--ease-out);}
+
+/* smooth in-page jumps, clearing the sticky bar */
+html{scroll-behavior:smooth;}
+.hgroup[id], .cx-card[id]{scroll-margin-top:82px;}
+
+/* --- mobile: the index becomes a slide-in drawer --- */
+.hnav-scrim{display:none;}
+@media (max-width:1000px){
+  .bar .lhs .navtoggle{display:inline-grid; place-items:center; width:34px; height:34px; margin-right:2px; flex:0 0 auto;
+    border:1px solid rgba(236,230,218,0.22); background:rgba(236,230,218,0.08); border-radius:8px; color:#ECE6DA; cursor:pointer;}
+  .bar .lhs .navtoggle svg{width:18px; height:18px;}
+  .hshell{grid-template-columns:minmax(0,1fr);}
+  .hnav{position:fixed; top:0; left:0; bottom:0; width:min(324px,86vw); max-height:none; z-index:120;
+    background:var(--bg); border-right:1px solid var(--border); box-shadow:var(--shadow-lg);
+    padding:18px 16px 26px; transform:translateX(-102%);
+    transition:transform .3s var(--ease-out);}
+  .nav-open .hnav{transform:none;}
+  .nav-open .hnav-scrim{display:block; position:fixed; inset:0; z-index:110; background:rgba(8,20,24,0.44);
+    -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); opacity:0; animation:scrimIn .22s var(--ease-out) forwards;}
+  @keyframes scrimIn{ to{opacity:1;} }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .hview.view-in, .cx-flash{animation:none;}
+  .hnav{transition:none;}
+  .hnav-scrim{animation:none; opacity:1;}
+}
+
+@media print{
+  .hnav, .hnav-scrim, .bar .lhs .navtoggle{display:none !important;}
+  .hshell{display:block;}
+  .hview[hidden]{display:block !important;}   /* print both areas */
+}

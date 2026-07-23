@@ -24,9 +24,12 @@ emitted script silently broke *every* click.
    If they need to open something, it opens as a **designed page inside the Hub** (the
    reader) or **downloads a real file** (PDF / PNG / CSV) — never a repo/GitHub link. The
    repo internals are for Julia & Lilian only.
-2. **Two areas:** Procedures (SOPs) and Client intelligence. A search box + type/owner
-   filters over both, plus two **client facets** — **Structure** and **Service**
-   (Bookkeeping · Payroll · Sales tax · Income tax). Structure is deliberately **two
+2. **Two areas, now two separate VIEWS in a left-index app shell (see rule 10):**
+   Procedures (SOPs) and Client intelligence. You see **one at a time** — the left index
+   switches between them. Filters are **contextual**: a search box + **Owner** filter are
+   shared; the two **client facets** — **Structure** and **Service** (Bookkeeping · Payroll ·
+   Sales tax · Income tax) — appear **only in the Client view** (they have no meaning for
+   SOPs, and are cleared when you leave it). Structure is deliberately **two
    dimensions, not one list**: a **Legal | Tax toggle** (Lilian, Jul 2026) swaps which chip
    set shows — **Legal** structure (LLC · Corporation · Partnership · Sole prop, the
    state-law entity) vs **Tax** classification (S-corp · C-corp · Partnership · Disregarded
@@ -36,9 +39,8 @@ emitted script silently broke *every* click.
    clean). The facets read `data-legal` / `data-tax` / `data-svc`, which the CI card engine
    emits from each client's parsed `legalCls` / `taxCls` / `svcKeys` (`clientCard` in
    `../client-intelligence/render/build.mjs`); `facetChips()` in `build-hub.mjs` renders
-   only the buckets that have clients, each with a live count. SOP cards carry none of
-   these, so picking any chip naturally narrows to matching clients (the Procedures section
-   auto-hides). Classification lives in the CI engine's `classifyLegal()` / `classifyTax()`
+   only the buckets that have clients, each with a live count. The facets live only in the
+   Client view, so they always narrow clients. Classification lives in the CI engine's `classifyLegal()` / `classifyTax()`
    — tax ignores "under review (A vs B)" option-lists so a *mention* of another treatment
    can't mis-bucket a client, and a Schedule-C filer is Disregarded when there's an LLC else
    Sole prop. Adding/adjusting a facet = extend those classifiers + the chip label maps +
@@ -96,8 +98,33 @@ emitted script silently broke *every* click.
    up empty drops out. **To file a new client procedure: give its catalog item the `client`
    field** (short display name + the CI slug) — it lands in that client's group automatically,
    creating the group if it's that client's first. The two `.hband`s are `data-section`, so the
-   owner/search/service filters hide a whole band when nothing in it matches (e.g. filtering to
+   owner/search filters hide a whole band when nothing in it matches (e.g. filtering to
    Maria hides the Firm-wide band, since none of the firm-wide SOPs are hers).
+10. **The Hub is a two-column APP SHELL — a sticky left index + one content view at a time.**
+    (Lilian, Jul 2026 — "make it easy to navigate; it was a list of things thrown together.")
+    Below the branded masthead, a `.hshell` grid splits into a **sticky left index** (`.hnav`)
+    and the **content** (`.hmain`). The index holds, top to bottom: a **view switch**
+    (`.viewseg` → Procedures | Client intelligence, `data-view-btn`), the **search** box, the
+    **contextual filters** (Owner always; Structure + Service only in the Client view, tagged
+    `data-filters-view="client"`), and a **clickable table of contents** (`.hix`, one per view
+    via `data-index-view`) whose links (`.hix-a[data-spy]`) **scroll-spy** — an
+    IntersectionObserver marks the entry for the topmost section on screen `.on`. **Procedures
+    and Client intelligence are two separate VIEWS** (`.hview[data-view]`), shown one at a time —
+    `setView()` toggles view visibility + the matching index + the matching filters; the Client
+    view groups its cards **by owner** (Julia · Lilian · Maria). Cross-links between views
+    (`data-goclient`) switch to the Client view and scroll+flash the target card. On mobile the
+    index becomes a **slide-in drawer** (`#navToggle` in the bar, a scrim, `.nav-open`).
+    **Watch the `[hidden]` gotcha:** an element with `display:flex/grid/inline-flex` ignores the
+    bare `hidden` attribute (author style beats the UA rule), so view-scoped index/filter blocks
+    need an explicit `…[hidden]{display:none !important}` (this bit us on the scrim + the
+    client-only filters). **Header lockup:** the top bar uses the **brand emblem**
+    (`brand/logo/svg/JK-emblem-reversed.svg`, inlined as `emblem`/`.hbadge`) beside the serif
+    wordmark — NOT the bare "JK" monogram, which read as the name's initials repeated before "JK
+    Accounting Group" (the fix established in PR #95, applied here). **Motion (Lilian wants it
+    dynamic):** count-up on the hero stats, a view crossfade (`viewIn`), the scroll-spy rail, a
+    jumped-to-card flash (`cxFlash`), CSS smooth-scroll with `scroll-margin-top` for the sticky
+    bar, and the drawer slide — **all gated behind `prefers-reduced-motion`**, and no content is
+    ever hidden waiting on a JS reveal (impeccable rule).
 
 ## Design is not optional — impeccable + the Design System, always
 

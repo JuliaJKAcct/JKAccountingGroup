@@ -124,6 +124,8 @@ const IC = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
   dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
+  menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  wrench: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.1-.5-.5-2.1z"/></svg>',
 };
 
 /* ---------------- SOP → Atlas reader (open the designed page INSIDE the Hub) ----------------
@@ -1053,10 +1055,13 @@ function renderSopItem(it, grpName) {
 // carries a `clientSlug`, which adds a header link down to that client's intelligence card.
 function renderGroup(grp) {
   const cards = grp.items.map((it) => renderSopItem(it, grp.name)).join('');
+  // The cross-link lives in the Procedures view but targets a card in the Client view;
+  // data-goclient tells the script to switch views first, then scroll to the card.
   const link = grp.clientSlug && clientBySlug.has(grp.clientSlug)
-    ? `<a class="ghd-link" href="#${grp.clientSlug}">Client intelligence &darr;</a>` : '';
+    ? `<a class="ghd-link" data-goclient="${grp.clientSlug}" href="#${grp.clientSlug}">Client intelligence &rarr;</a>` : '';
+  const id = grp.domId ? ` id="${grp.domId}"` : '';
   return `
-    <div class="hgroup" data-group>
+    <div class="hgroup" data-group${id}>
       <div class="hgroup-hd">
         <h3>${esc(grp.name)}</h3>
         <span class="gct">${grp.items.length}</span>
@@ -1071,9 +1076,11 @@ function renderGroup(grp) {
 // client-specific SOP (tagged with `client`) is pulled out of its topic group and
 // REGROUPED BY CLIENT (alpha by name), so a client's bookkeeping, sales-tax, collections
 // and one-off tasks all sit together under their name. Empty topic groups drop out.
+const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 const generalGroups = SOP_GROUPS
   .map((grp) => ({ ...grp, items: grp.items.filter((it) => !it.client) }))
-  .filter((grp) => grp.items.length);
+  .filter((grp) => grp.items.length)
+  .map((grp) => ({ ...grp, domId: 'grp-' + slugify(grp.name) }));
 
 const clientGroupMap = new Map();
 for (const it of SOP_GROUPS.flatMap((grp) => grp.items)) {
@@ -1088,7 +1095,9 @@ for (const it of SOP_GROUPS.flatMap((grp) => grp.items)) {
     clientGroupMap.set(it.client.slug, { name: it.client.name, clientSlug: it.client.slug, items: [] });
   clientGroupMap.get(it.client.slug).items.push(it);
 }
-const clientGroups = [...clientGroupMap.values()].sort((a, b) => a.name.localeCompare(b.name));
+const clientGroups = [...clientGroupMap.values()]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((g) => ({ ...g, domId: 'sopgrp-' + g.clientSlug }));
 
 const generalGroupsHtml = generalGroups.map(renderGroup).join('');
 const clientGroupsHtml = clientGroups.map(renderGroup).join('');
@@ -1104,13 +1113,48 @@ const clientGroupsHtml = clientGroups.map(renderGroup).join('');
 // Rewrite each: a Hub SOP → an in-Hub reader trigger (data-open-doc); a client slug → its
 // in-page card (#slug); anything else → plain text. (Assumes `href` is the anchor's first
 // attribute — how the CI render engine emits it.)
-const clientCards = clients.map(clientCard).join('')
-  .replace(/<a href="[^"]*\/([a-z0-9-]+)\.md"[^>]*>.*?<\/a>/g, (m, id) => {
-    if (hubSopTitles[id]) return `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(hubSopTitles[id])}">${esc(hubSopTitles[id])} →</a>`;
-    if (clientBySlug.has(id)) return `<a class="cx-soplink" href="#${id}">${esc(clientBySlug.get(id))} ↓</a>`;
-    return '<span class="cx-none">in the repo</span>';
-  });
+const rewriteCx = (html) => html.replace(/<a href="[^"]*\/([a-z0-9-]+)\.md"[^>]*>.*?<\/a>/g, (m, id) => {
+  if (hubSopTitles[id]) return `<a class="cx-soplink" role="button" tabindex="0" data-open-doc="${id}" data-doc-name="${esc(hubSopTitles[id])}">${esc(hubSopTitles[id])} →</a>`;
+  if (clientBySlug.has(id)) return `<a class="cx-soplink" data-goclient="${id}" href="#${id}">${esc(clientBySlug.get(id))} →</a>`;
+  return '<span class="cx-none">in the repo</span>';
+});
 const clientOwnerKeys = clients.map((c) => ownerKey(c.owner));
+
+// Client view = the CI cards, GROUPED BY OWNER (Julia · Lilian · Maria) so the client area
+// reads as an organized roster, not a flat dump — and gives the sidebar real jump targets.
+const OWNER_ORDER = ['julia', 'lilian', 'maria'];
+const clientsByOwner = new Map();
+clients.forEach((c) => {
+  const k = ownerKey(c.owner);
+  if (!clientsByOwner.has(k)) clientsByOwner.set(k, []);
+  clientsByOwner.get(k).push(c);
+});
+const orderedClientOwners = OWNER_ORDER.filter((o) => clientsByOwner.has(o))
+  .concat([...clientsByOwner.keys()].filter((o) => !OWNER_ORDER.includes(o)));
+const clientOwnerGroupsHtml = orderedClientOwners.map((o) => {
+  const cs = clientsByOwner.get(o);
+  const cards = cs.map((c) => rewriteCx(clientCard(c))).join('');
+  return `
+    <div class="hgroup" data-group id="clients-${o}">
+      <div class="hgroup-hd">
+        <h3>${esc(ownerName(o))}</h3>
+        <span class="gct">${cs.length}</span>
+        <span class="gnote">${esc(ownerName(o))}’s clients</span>
+      </div>
+      <div class="cx-grid">${cards}</div>
+    </div>`;
+}).join('');
+
+/* ---------------- sidebar index (the clickable table of contents, scrollspy targets) --- */
+const sopIndexHtml =
+  (generalGroups.length ? `<p class="hix-t">Firm-wide</p>`
+    + generalGroups.map((g) => `<a class="hix-a" href="#${g.domId}" data-spy="${g.domId}">${esc(g.name)}<span class="hix-n">${g.items.length}</span></a>`).join('') : '')
+  + (clientGroups.length ? `<p class="hix-t">By client</p>`
+    + clientGroups.map((g) => `<a class="hix-a" href="#${g.domId}" data-spy="${g.domId}">${esc(g.name)}<span class="hix-n">${g.items.length}</span></a>`).join('') : '');
+const clientIndexHtml = orderedClientOwners.map((o) =>
+  `<p class="hix-t">${esc(ownerName(o))}<span class="hix-tn">${clientsByOwner.get(o).length}</span></p>`
+  + clientsByOwner.get(o).map((c) => `<a class="hix-a" href="#${c.slug}" data-spy="${c.slug}">${esc(c.title)}</a>`).join('')
+).join('');
 
 /* owner filter chips (distinct owners across SOPs + clients) */
 const ownersPresent = new Set([...sopOwnerKeys, ...clientOwnerKeys]);
@@ -1161,13 +1205,20 @@ const medallion = `<svg class="medallion" viewBox="0 0 120 120" role="img" aria-
   <g transform="translate(60,60) scale(0.44) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g>
 </svg>`;
 
+// The brand EMBLEM (reversed) for the teal top bar — the double-ring seal + J&K monogram
+// + bronze diamonds (brand/logo/svg/JK-emblem-reversed.svg). Replaces the bare "JK"
+// monogram that read as the name's initials repeated before "JK Accounting Group"
+// (the header-lockup fix established in PR #95, applied here per Lilian's request).
+const emblem = `<svg class="hbadge" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group emblem"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3.5"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.6"></circle><g fill="#CFA268"><path d="M7 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"></path><path d="M113 55.5 l4.5 4.5 -4.5 4.5 -4.5 -4.5 z"></path></g><g transform="translate(60,60) scale(0.62) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></svg>`;
+
 const BODY = `
 <!-- ============================ TOOLBAR ============================ -->
 <header class="bar">
   <div class="in">
     <div class="lhs">
-      <svg viewBox="18 20 82 72" class="jkmark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></svg>
-      <b>JK Accounting Group</b>
+      <button class="navtoggle" id="navToggle" type="button" aria-label="Open the index" aria-expanded="false" aria-controls="hnav">${IC.menu}</button>
+      ${emblem}
+      <b class="bp-brand">JK Accounting Group</b>
       <span class="sep"></span>
       <span class="k">Knowledge Hub</span>
     </div>
@@ -1192,94 +1243,96 @@ const BODY = `
     <h1>Firm Knowledge Hub<span class="loc">Our procedures and every client, organized to find in seconds</span></h1>
     <p class="lede">The front door to the firm’s know-how: the <b>procedures</b> we follow (SOPs and runbooks) and the <b>client intelligence</b> we’ve gathered on each account. Search it, filter it, open any document. Built straight from the repo, so it never goes out of date.</p>
     <div class="meta">
-      <span class="chipm live"><span class="dot"></span><b>${totalCount}</b>&nbsp;documents</span>
-      <span class="chipm"><span class="dot"></span><b>${sopCount}</b>&nbsp;procedures</span>
-      <span class="chipm"><span class="dot"></span><b>${clientCount}</b>&nbsp;clients</span>
+      <span class="chipm live"><span class="dot"></span><b data-count="${totalCount}">${totalCount}</b>&nbsp;documents</span>
+      <span class="chipm"><span class="dot"></span><b data-count="${sopCount}">${sopCount}</b>&nbsp;procedures</span>
+      <span class="chipm"><span class="dot"></span><b data-count="${clientCount}">${clientCount}</b>&nbsp;clients</span>
       <span class="chipm"><span class="dot"></span>Generated&nbsp;<b>${today}</b></span>
     </div>
   </div>
 </section>
 
-<!-- ============================ INTRO / HOW IT WORKS ============================ -->
-<div class="hubintro">
-  <div class="box">
-    <div class="lead">
-      <p class="t">How this works</p>
-      <p>This is the <b>review Hub</b> — it shows <b>everything in the repo</b>, including work still in progress. It’s where the team reviews what we’ve built. When a document is approved and marked <b>ready</b>, we publish just that one to the team site.</p>
-      <p>The repo stays the single source of truth; this page is generated from it. Procedures open as designed pages right here; client cards expand in place.</p>
-    </div>
-    <div class="legend">
-      <p class="t">How to use it</p>
-      <div class="legrow"><span class="sw active"></span><span><b>Procedures</b> — open the full SOP document.</span></div>
-      <div class="legrow"><span class="sw rich"></span><span><b>Clients</b> — click a card to expand its <b>services, systems, open items &amp; sources</b>, right here.</span></div>
-      <div class="legrow"><span class="sw building"></span><span><b>Search</b> by name or industry; <b>filter</b> clients by <b>owner</b>, <b>structure</b> — toggle <b>Legal</b> (LLC, Corporation…) vs <b>Tax</b> (S-corp, C-corp, partnership, disregarded) — or <b>service</b> (who we do bookkeeping for).</span></div>
-    </div>
-  </div>
-</div>
+<!-- ============================ APP SHELL: left index + content ============================ -->
+<div class="hshell">
+  <div class="hnav-scrim" id="hnavScrim" hidden></div>
 
-<!-- ============================ CONTROLS ============================ -->
-<div class="hubctl">
-  <div class="in">
-    <div class="hsearch" id="hsearch">
-      ${IC.search}
-      <input type="search" id="q" placeholder="Search procedures & clients… (name, entity, industry, service)" autocomplete="off" aria-label="Search the hub">
-      <button class="clr" id="clr" type="button" aria-label="Clear search">${IC.x}</button>
-    </div>
-    <div class="segs" role="tablist" aria-label="Filter by type">
-      <button role="tab" aria-selected="true" data-seg="all">All <span class="n">${totalCount}</span></button>
-      <button role="tab" aria-selected="false" data-seg="sop">Procedures <span class="n">${sopCount}</span></button>
-      <button role="tab" aria-selected="false" data-seg="client">Clients <span class="n">${clientCount}</span></button>
-    </div>
-    <div class="hubfilters">
-      <div class="ochips"><span class="ol">Owner</span>${ownerChips}</div>
-      <div class="ochips struct">
-        <span class="ol">Structure</span>
-        <span class="modeseg" role="group" aria-label="Filter by legal or tax structure">
-          <button class="modebtn" type="button" data-structmode="legal" aria-pressed="false" title="Legal structure — the state-law entity">Legal</button>
-          <button class="modebtn" type="button" data-structmode="tax" aria-pressed="true" title="Tax classification — how the IRS taxes it">Tax</button>
-        </span>
-        <span class="structchips" data-structgroup="legal" hidden>${legalChips}</span>
-        <span class="structchips" data-structgroup="tax">${taxChips}</span>
+  <!-- LEFT INDEX (sticky on desktop, a drawer on mobile) -->
+  <aside class="hnav" id="hnav" aria-label="Hub index">
+    <div class="hnav-in">
+      <!-- the two areas -->
+      <div class="viewseg" role="tablist" aria-label="Choose an area">
+        <button class="viewbtn" role="tab" type="button" data-view-btn="sop" aria-selected="true">${IC.doc}<span class="vb-l">Procedures</span><span class="vb-n">${sopCount}</span></button>
+        <button class="viewbtn" role="tab" type="button" data-view-btn="client" aria-selected="false">${IC.people}<span class="vb-l">Client intelligence</span><span class="vb-n">${clientCount}</span></button>
       </div>
-      <div class="ochips"><span class="ol">Service</span>${serviceChips}</div>
+
+      <!-- search -->
+      <div class="hsearch" id="hsearch">
+        ${IC.search}
+        <input type="search" id="q" placeholder="Search…" autocomplete="off" aria-label="Search the hub">
+        <button class="clr" id="clr" type="button" aria-label="Clear search">${IC.x}</button>
+      </div>
+
+      <!-- filters: owner is shared; structure + service are client-only -->
+      <div class="hnav-filters">
+        <div class="ochips"><span class="ol">Owner</span>${ownerChips}</div>
+        <div class="ochips struct" data-filters-view="client" hidden>
+          <span class="ol">Structure</span>
+          <span class="modeseg" role="group" aria-label="Filter by legal or tax structure">
+            <button class="modebtn" type="button" data-structmode="legal" aria-pressed="false" title="Legal structure — the state-law entity">Legal</button>
+            <button class="modebtn" type="button" data-structmode="tax" aria-pressed="true" title="Tax classification — how the IRS taxes it">Tax</button>
+          </span>
+          <span class="structchips" data-structgroup="legal" hidden>${legalChips}</span>
+          <span class="structchips" data-structgroup="tax">${taxChips}</span>
+        </div>
+        <div class="ochips" data-filters-view="client" hidden><span class="ol">Service</span>${serviceChips}</div>
+      </div>
+
+      <!-- the clickable index (scrollspy) -->
+      <nav class="hix" data-index-view="sop" aria-label="Procedures index">${sopIndexHtml}</nav>
+      <nav class="hix" data-index-view="client" aria-label="Client index" hidden>${clientIndexHtml}</nav>
+
+      <details class="hnav-help">
+        <summary>How to use this Hub</summary>
+        <div class="hnav-help-b">
+          <p>This is the <b>review Hub</b> — everything in the repo, including work in progress. When a document is approved, we publish just that one to the team site.</p>
+          <p><b>Procedures</b> open as a designed page right here; <b>client</b> cards expand in place. Search or filter, then jump from this index.</p>
+        </div>
+      </details>
     </div>
-  </div>
-</div>
+  </aside>
 
-<!-- ============================ PROCEDURES ============================ -->
-<section class="hsec" id="sec-sop" data-section>
-  <div class="hsec-hd">
-    <span class="tile">${IC.doc}</span>
-    <h2>Procedures &amp; runbooks</h2>
-    <span class="ct">${sopCount}</span>
-  </div>
-  <p class="hsec-sub">How the firm does its work. <b>Firm-wide</b> procedures that fit any client come first; <b>client-specific</b> procedures are grouped under each client, so everything the firm does for one client sits together. Written to be picked up cold, months later.</p>
-  ${generalGroups.length ? `
-  <div class="hband" data-section>
-    <div class="hband-hd"><h3>Firm-wide</h3><p>Procedures that apply to any client — company formation, licensing, the bookkeeping standard and the client portal.</p></div>
-    ${generalGroupsHtml}
-  </div>` : ''}
-  ${clientGroups.length ? `
-  <div class="hband" data-section>
-    <div class="hband-hd"><h3>By client</h3><p>Everything specific to one client, grouped together — bookkeeping, sales tax, collections, one-off tasks. As a client accumulates procedures, they all live under their name here.</p></div>
-    ${clientGroupsHtml}
-  </div>` : ''}
-</section>
+  <!-- CONTENT -->
+  <main class="hmain" id="hmain">
+    <!-- ===== PROCEDURES VIEW ===== -->
+    <section class="hview" data-view="sop">
+      <div class="hview-hd">
+        <div class="hview-t"><h2>Procedures &amp; runbooks</h2><span class="ct">${sopCount}</span></div>
+        <p class="hview-sub">How the firm does its work. <b>Firm-wide</b> procedures that fit any client come first; <b>client-specific</b> ones are grouped under each client, so everything the firm does for one client sits together.</p>
+      </div>
+      ${generalGroups.length ? `
+      <div class="hband" data-section>
+        <div class="hband-hd"><h3>Firm-wide</h3><p>Procedures that apply to any client — company formation, licensing, the bookkeeping standard and the client portal.</p></div>
+        ${generalGroupsHtml}
+      </div>` : ''}
+      ${clientGroups.length ? `
+      <div class="hband" data-section>
+        <div class="hband-hd"><h3>By client</h3><p>Everything specific to one client, grouped together — bookkeeping, sales tax, collections, one-off tasks. As a client accumulates procedures, they all live under their name here.</p></div>
+        ${clientGroupsHtml}
+      </div>` : ''}
+    </section>
 
-<!-- ============================ CLIENTS ============================ -->
-<section class="hsec" id="sec-client" data-section>
-  <div class="hsec-hd">
-    <span class="tile">${IC.people}</span>
-    <h2>Client intelligence</h2>
-    <span class="ct">${clientCount}</span>
-  </div>
-  <p class="hsec-sub"><b>Click any client</b> to open its details right here — services, systems, open items and sources. These are the same cards as the standalone Client Review Dashboard (one engine). Sensitive data stays in Drive / Double, linked from each card.</p>
-  <div class="cx-grid">${clientCards}</div>
-</section>
+    <!-- ===== CLIENT INTELLIGENCE VIEW ===== -->
+    <section class="hview" data-view="client" hidden>
+      <div class="hview-hd">
+        <div class="hview-t"><h2>Client intelligence</h2><span class="ct">${clientCount}</span></div>
+        <p class="hview-sub"><b>Click any client</b> to expand its services, systems, open items and sources, right here. Grouped by who owns the relationship. Sensitive data stays in Drive / Double, linked from each card.</p>
+      </div>
+      ${clientOwnerGroupsHtml}
+    </section>
 
-<!-- ============================ NO RESULTS ============================ -->
-<div class="noresults" id="noresults">
-  <div class="box"><h3>No matches</h3><p>Nothing matches your search and filters. Try a different word, or reset the filters.</p></div>
+    <div class="noresults" id="noresults">
+      <div class="box"><h3>No matches</h3><p>Nothing here matches your search and filters. Try a different word, or reset the filters.</p></div>
+    </div>
+  </main>
 </div>
 
 <!-- ============================ FOOTER ============================ -->
@@ -1394,27 +1447,27 @@ const BODY = `
   var qEl = document.getElementById('q');
   var hs = document.getElementById('hsearch');
   var clr = document.getElementById('clr');
-  var state = { q:'', type:'all', owner:'all', structMode:'tax', legal:'all', tax:'all', svc:'all' };
+  var state = { q:'', view:'sop', owner:'all', structMode:'tax', legal:'all', tax:'all', svc:'all' };
+  function prefersReduced(){ return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
 
   // Content must never depend on a JS reveal: show any reveal-gated card immediately.
   [].forEach.call(document.querySelectorAll('.reveal'), function(el){ el.classList.add('in'); });
-  function cardType(c){ return c.classList.contains('cx-card') ? 'client' : c.getAttribute('data-type'); }
   function cardOwner(c){ return (c.getAttribute('data-owner')||'').toLowerCase(); }
   function cardAttr(c, name){ return c.getAttribute(name)||''; }
   function cardSvc(c){ return ' ' + (c.getAttribute('data-svc')||'') + ' '; }
 
+  var views = [].slice.call(document.querySelectorAll('.hview'));
+  function activeView(){ return document.querySelector('.hview[data-view="'+state.view+'"]'); }
+
   function apply(){
     var q = state.q.trim().toLowerCase();
-    var shown = 0;
     cards.forEach(function(c){
-      var ok = (state.type==='all' || cardType(c)===state.type)
-            && (state.owner==='all' || cardOwner(c)===state.owner)
+      var ok = (state.owner==='all' || cardOwner(c)===state.owner)
             && (state.legal==='all' || cardAttr(c,'data-legal')===state.legal)
             && (state.tax==='all' || cardAttr(c,'data-tax')===state.tax)
             && (state.svc==='all' || cardSvc(c).indexOf(' '+state.svc+' ') !== -1)
             && (q==='' || (c.getAttribute('data-text')||'').indexOf(q) !== -1);
       c.style.display = ok ? '' : 'none';
-      if(ok) shown++;
     });
     groups.forEach(function(g){
       var any = [].some.call(g.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
@@ -1424,19 +1477,28 @@ const BODY = `
       var any = [].some.call(s.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; });
       s.hidden = !any;
     });
+    var av = activeView();
+    var shown = av ? [].filter.call(av.querySelectorAll(SEL), function(c){ return c.style.display!=='none'; }).length : 0;
     noRes.classList.toggle('on', shown===0);
+  }
+
+  // ---- The two areas: Procedures | Client intelligence (separate views, one at a time) ----
+  function setView(v, silent){
+    state.view = v;
+    views.forEach(function(s){ s.hidden = s.getAttribute('data-view')!==v; });
+    [].forEach.call(document.querySelectorAll('[data-view-btn]'), function(b){ b.setAttribute('aria-selected', b.getAttribute('data-view-btn')===v ? 'true':'false'); });
+    [].forEach.call(document.querySelectorAll('[data-index-view]'), function(n){ n.hidden = n.getAttribute('data-index-view')!==v; });
+    [].forEach.call(document.querySelectorAll('[data-filters-view]'), function(n){ n.hidden = n.getAttribute('data-filters-view')!==v; });
+    // structure / service filters have no meaning outside the Client view — clear them
+    if(v!=='client'){ resetFacet('legal','legal'); resetFacet('tax','tax'); resetFacet('svc','svc'); }
+    apply();
+    var av = activeView();
+    if(av && !silent && !prefersReduced()){ av.classList.remove('view-in'); void av.offsetWidth; av.classList.add('view-in'); }
   }
 
   qEl.addEventListener('input', function(){ state.q=qEl.value; hs.classList.toggle('has-value', qEl.value.length>0); apply(); });
   clr.addEventListener('click', function(){ qEl.value=''; state.q=''; hs.classList.remove('has-value'); qEl.focus(); apply(); });
 
-  [].forEach.call(document.querySelectorAll('[data-seg]'), function(b){
-    b.addEventListener('click', function(){
-      state.type=b.getAttribute('data-seg');
-      [].forEach.call(document.querySelectorAll('[data-seg]'), function(x){ x.setAttribute('aria-selected', x===b ? 'true':'false'); });
-      apply();
-    });
-  });
   [].forEach.call(document.querySelectorAll('[data-owner-filter]'), function(b){
     b.addEventListener('click', function(){
       state.owner=b.getAttribute('data-owner-filter');
@@ -1475,6 +1537,72 @@ const BODY = `
       apply();
     });
   });
+
+  // ---- Mobile index drawer ----
+  var navToggle = document.getElementById('navToggle');
+  var navScrim = document.getElementById('hnavScrim');
+  function openNav(){ root.classList.add('nav-open'); if(navScrim) navScrim.hidden=false; if(navToggle) navToggle.setAttribute('aria-expanded','true'); }
+  function closeNav(){ root.classList.remove('nav-open'); if(navScrim) navScrim.hidden=true; if(navToggle) navToggle.setAttribute('aria-expanded','false'); }
+  if(navToggle) navToggle.addEventListener('click', function(){ root.classList.contains('nav-open') ? closeNav() : openNav(); });
+  if(navScrim) navScrim.addEventListener('click', closeNav);
+
+  // view buttons switch the area (and close the drawer on mobile)
+  [].forEach.call(document.querySelectorAll('[data-view-btn]'), function(b){
+    b.addEventListener('click', function(){ setView(b.getAttribute('data-view-btn')); closeNav(); });
+  });
+
+  // A "Client intelligence" cross-link (in a Procedures group, or between client cards)
+  // jumps to the Client view and scrolls to that client's card, with a brief highlight.
+  [].forEach.call(document.querySelectorAll('[data-goclient]'), function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      setView('client'); closeNav();
+      var t = document.getElementById(a.getAttribute('data-goclient'));
+      if(t){
+        if(t.scrollIntoView) t.scrollIntoView({ behavior: prefersReduced() ? 'auto' : 'smooth', block: 'start' });
+        t.classList.remove('cx-flash'); void t.offsetWidth; t.classList.add('cx-flash');
+      }
+    });
+  });
+
+  // ---- Sidebar index scrollspy: highlight the entry for the topmost section on screen ----
+  var spyLinks = [].slice.call(document.querySelectorAll('.hix-a[data-spy]'));
+  var spyTargets = spyLinks.map(function(a){ return document.getElementById(a.getAttribute('data-spy')); }).filter(Boolean);
+  var visSet = {};
+  function refreshSpy(){
+    var activeId = null;
+    for(var i=0;i<spyTargets.length;i++){ if(visSet[spyTargets[i].id]){ activeId = spyTargets[i].id; break; } }
+    spyLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('data-spy')===activeId); });
+  }
+  if('IntersectionObserver' in window && spyTargets.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) visSet[en.target.id]=1; else delete visSet[en.target.id]; });
+      refreshSpy();
+    }, { rootMargin:'-84px 0px -60% 0px', threshold:0 });
+    spyTargets.forEach(function(t){ io.observe(t); });
+  }
+  // clicking any index link closes the mobile drawer (native anchor + CSS smooth-scroll does the move)
+  [].forEach.call(document.querySelectorAll('.hix-a'), function(a){ a.addEventListener('click', closeNav); });
+
+  // ---- Count-up on the hero stats (reduced-motion: leave the final number as-is) ----
+  if(!prefersReduced()){
+    [].forEach.call(document.querySelectorAll('[data-count]'), function(el){
+      var target = parseInt(el.getAttribute('data-count'),10) || 0;
+      if(target<=0) return;
+      var start=null, dur=900;
+      el.textContent='0';
+      function step(ts){
+        if(start===null) start=ts;
+        var p = Math.min(1,(ts-start)/dur);
+        el.textContent = String(Math.round((1-Math.pow(1-p,3))*target));
+        if(p<1) requestAnimationFrame(step); else el.textContent = String(target);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  // initialize view state + filtering
+  setView('sop', true);
   // keyboard: "/" focuses search
   document.addEventListener('keydown', function(e){
     if(e.key==='/' && document.activeElement!==qEl){ e.preventDefault(); qEl.focus(); }
