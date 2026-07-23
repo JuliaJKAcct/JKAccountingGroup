@@ -328,7 +328,7 @@ Address** and **Folio Number** auto-fill from the address you enter.
   don't file for a non-resident commercial use of a residential parcel (see §1).
 - **Paying a category-difference balance and stopping.** When the city corrects
   the classification and bills the difference by email, paying it is **not** the
-  last step — the reviewer issues and mails the receipt only **after you reply to
+  last step — the reviewer issues and sends the receipt only **after you reply to
   confirm the payment**. Pay, then notify them, or the receipt never comes (see §7).
 - **Missing the Sept 30 renewal.**
 
