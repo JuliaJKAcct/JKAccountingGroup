@@ -67,12 +67,12 @@ the actual details.
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood.
 - **What & when:** Local business-license receipt; renewed annually.
 - **Our role:** The firm handled the filing.
-- **Current status:** In progress — **corrected-category balance paid; awaiting the tax receipt** _(Double note 2026-07-15; Gmail 2026-07-16; payment 2026-07-23)_:
-  - **Broward County side is complete** (received 2026-07-15). The **City of Hollywood** application was **re-categorized to Broker/Real Estate** (an additional fee applied).
-  - The client provided the **DBPR real-estate license** (brokerage **CQ**; the qualifying broker's **BK**), and the firm **emailed it to the City of Hollywood on 2026-07-16** (reply to the city's category-correction email).
-  - **2026-07-23:** the city (Treasury) emailed the **pay-the-difference instructions** — a due balance for the corrected category, with a payment link. **Lilian paid the balance** through the city's online payment center and **replied to the city's revenue analyst with the payment confirmation**, as they asked before issuing the receipt.
-  - **Next:** await the city's **tax receipt (BTR)**; when it arrives, save it, post it at the place of business, and calendar the Sept 30 renewal.
-  - Account number, folio, amounts and the payment reference are in the Double note.
+- **Current status:** ✅ **Complete — City of Hollywood LBTR issued (Approved / Active)** as of 2026-07-23 _(Double note 2026-07-23; verified on the city's Check Application Status page)_:
+  - **Broward County side is complete** (received 2026-07-15). The **City of Hollywood** application was **re-categorized to Broker/Real Estate**; the category-difference balance was **paid 2026-07-23** and the payment confirmation was sent to the city's revenue analyst.
+  - The client provided the **DBPR real-estate license** (brokerage **CQ**; the qualifying broker's **BK**), which the firm **emailed to the City of Hollywood on 2026-07-16**.
+  - The city's status page now shows **Application Status: Approved · LBTR Status: Active** — the receipt is issued. If the analyst's emailed PDF copy hasn't arrived yet, save it to the client's Drive folder when it does.
+  - **BTR / LBTR number, application ID, folio, business address, amounts and the payment reference are in the Double note** (2026-07-23).
+  - **Next:** calendar the **Sept 30** annual renewal (tax year Oct 1 – Sep 30).
 - **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
 
 ## 5. Key facts & quirks
@@ -86,15 +86,16 @@ the actual details.
 - 2026-07-20 — Profile started from the BTR work (FOLLOW-UPS) and the Double record (BEST BROKER REALTY LLC, QBO).
 - 2026-07-20 — Sweep: enriched the City of Hollywood BTR status from the Double note (2026-07-15). No Ping meetings indexed; a contact is on file in Double/Ping.
 - 2026-07-20 — Update (Lilian): the DBPR license was obtained from the client and emailed to the city. **Confirmed in Gmail** — julia@ → BusinessTax@hollywoodfl.org, **2026-07-16**, "Please see attached the license" (the city's category-correction thread; identifiers in the Double note). Now awaiting the city's payment instructions.
-- 2026-07-23 — Update (Lilian): the city (Treasury) sent the **pay-the-difference instructions** for the corrected Broker/Real Estate category. **Lilian paid the balance** via the city's online payment center and **replied to the city's revenue analyst with the payment confirmation** (they issue the receipt only after being notified). Now awaiting the tax receipt. Amount, account number and payment reference recorded in the Double note.
+- 2026-07-23 — Update (Lilian): the city (Treasury) sent the **pay-the-difference instructions** for the corrected Broker/Real Estate category. **Lilian paid the balance** via the city's online payment center and **replied to the city's revenue analyst with the payment confirmation** (they issue the receipt only after being notified). Amount, account number and payment reference recorded in the Double note.
+- 2026-07-23 — Update (Lilian): checked the city's **Check Application Status** page — the **City of Hollywood LBTR is Approved / Active (issued)**. Recorded the **BTR number and identifiers in a new Double note** (2026-07-23). The BTR is done; sensitive values stay in Double, the non-sensitive status is reflected here.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Await the city's tax receipt (BTR).** The corrected-category balance was paid 2026-07-23 and the payment confirmation was sent to the city's revenue analyst. When the receipt arrives: save it, post it at the place of business, and calendar the Sept 30 renewal. _(Double note; payment 2026-07-23)_
+- **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Residual only: if the analyst's emailed PDF copy of the receipt hasn't arrived, save it to the client's Drive folder when it does; then calendar the **Sept 30** annual renewal. _(Double note 2026-07-23)_
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
 - [ ] Which recurring services we provide (bookkeeping? sales tax? payroll? income tax?)
-- [ ] Finish the Hollywood BTR — await the city's tax receipt (corrected-category balance paid 2026-07-23)
+- [x] Finish the Hollywood BTR — **done: issued Approved / Active 2026-07-23** (BTR # in the Double note)
 - [ ] Where credentials live (Drive vault link)
 
 ## 7. Links
