@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-23
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -70,8 +70,8 @@ the actual details.
 - **Current status:** _(Double notes, 2026-07-15)_
   - **Broward County receipt — COMPLETE** (received / in hand 2026-07-15).
   - **City of Hollywood LBTR — submitted & paid 2026-07-15, awaiting city processing.** Classified under **"Service/Licensed Business — Insurance Agency"** (the city has no "title" category; a FL title insurance agency is DFS-licensed, so Insurance Agency is the correct fit).
-  - **Tracking gap:** the **client's own email** was used on the city application, so the firm does **not** receive the city's Track/Status emails — decide whether to switch the contact email or have the client forward them.
-  - Application number, folio, EIN, DFS license number and amounts are in the Double notes.
+  - **Tracking gap (still open, 2026-07-23):** the **client's own email** (the owner's) was used on the city application, so the firm does **not** receive the city's Track/Status emails. Approach chosen: **have the owner forward the city's tracking email** to the firm. **As of 2026-07-23 the owner has not forwarded it yet** — still following up; once he does, it lands in the firm's inbox (julia@) and status can be checked. _(Double note 2026-07-23)_
+  - Application number, folio, EIN, DFS license number, the owner's contact and amounts are in the Double notes.
 - **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
 
 ## 5. Key facts & quirks
@@ -85,10 +85,11 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the BTR work (FOLLOW-UPS) and the Double record (Pro Title Agency, QBO).
 - 2026-07-20 — Sweep: enriched entity / industry / engagement and BTR status from the Double notes (2026-07-15). No Ping meetings indexed.
+- 2026-07-23 — Update (Lilian): City of Hollywood LBTR still **not trackable by the firm** — the owner's email (not the firm's) is on the application. Chosen fix: the **owner forwards the city's tracking email** to us; **as of 2026-07-23 he hasn't forwarded it yet**. Once forwarded it'll be in Julia's inbox and we can check status. _(Double note 2026-07-23)_
 
 ### Outstanding items (CI-only — never in the SOP)
-_(Double notes, 2026-07-15 — live status lives in Double.)_
-- **Watch for the city's "Track Your Application" email** — the city may request the DFS state license (as it did for Best Broker Realty).
+_(Double notes — live status lives in Double.)_
+- **Waiting on the owner to forward the city's "Track Your Application" email** — the firm's email wasn't on the application, so status can't be checked until he forwards it (as of 2026-07-23, not yet). Then watch for the city possibly requesting the DFS state license (as it did for Best Broker Realty). _(Double note 2026-07-23)_
 - **Address change pending:** on 2026-07-14 the client asked to move the address to **Coral Springs** (on the DFS license + Sunbiz). If it proceeds, a **BTR address update/transfer** will be needed later.
 - **IRS filing-requirement mismatch:** the EIN letter (CP575) shows a **Form 1065 (partnership)** requirement, but the entity is a **disregarded single-member LLC** reported on Schedule C — reconcile with the IRS so they don't expect a partnership return.
 
