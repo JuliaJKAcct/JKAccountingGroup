@@ -40,8 +40,9 @@ referral-offer-strategy/
 └── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
     ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
     │                        moments, 4 belief shifts, self-calc — co-host inserts
-    ├── webinar-script.html  same script as a readable/printable on-brand page
-    └── announcement-ru.md   ready-to-post RU promo copy (full + short versions)
+    ├── webinar-script.html   same script as a readable/printable on-brand page
+    ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
+    └── announcement-ru.html  same announcement as a readable/printable page
 ```
 
 > First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
