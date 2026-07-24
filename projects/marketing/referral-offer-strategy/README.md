@@ -26,7 +26,7 @@ referral-offer-strategy/
 ├── README.md        ← you are here
 ├── strategy.md      ← the full strategy: funnel logic, partner positioning,
 │                       Growth Accelerator Series, scorecard design, open questions
-└── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
+├── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
     ├── one-pager.html         on-brand EN handout (free → $500 credited → monthly
     │                           ladder, two channels, partner benefits) — print/PDF
     ├── one-pager-ru.html      native-Russian version of the handout
@@ -37,6 +37,9 @@ referral-offer-strategy/
         ├── readiness-check-ru.html     session 1 — self-scored readiness quiz
         ├── margin-calculator-ru.html   session 2 — true-margin calculator
         └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
+└── webinar/          ← standalone lead-gen webinar (reuses session 1 + margin demo)
+    └── webinar-script.md   detailed RU presenter script: slide-by-slide, timings,
+                            registration + email copy — solo, with co-host inserts
 ```
 
 > First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
@@ -72,6 +75,11 @@ there.
   interactive, print-ready native-Russian files: a self-scored readiness quiz, a
   true-margin calculator, and a tax-efficiency checklist. Each is useful on its
   own but reveals where a professional is needed, closing toward the $500 check.
+- **`webinar/`** — a detailed native-Russian presenter script for a standalone
+  lead-gen webinar that repackages Growth Series session 1 (plus the true-margin
+  live demo) as Julia's own top-of-funnel event: registration + email copy,
+  slide-by-slide timings, and the $500 offer. Written solo-first with optional
+  co-host (Boris) inserts. An on-brand slide deck is the natural next build.
 
 `strategy.md` remains the decisions-and-open-questions document. Per its §6,
 still open: scoring rubric thresholds, the document/access checklist for the
