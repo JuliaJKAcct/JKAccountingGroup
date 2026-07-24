@@ -38,8 +38,9 @@ referral-offer-strategy/
         ├── margin-calculator-ru.html   session 2 — true-margin calculator
         └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
 └── webinar/          ← standalone lead-gen webinar (reuses session 1 + margin demo)
-    └── webinar-script.md   detailed RU presenter script: slide-by-slide, timings,
-                            registration + email copy — solo, with co-host inserts
+    ├── webinar-script.md    detailed RU presenter script: slide-by-slide, timings,
+    │                        registration + email copy — solo, with co-host inserts
+    └── webinar-script.html  same script as a readable/printable on-brand page
 ```
 
 > First partner: **Candramas LLC** (owner Boris). The Growth Series lists the

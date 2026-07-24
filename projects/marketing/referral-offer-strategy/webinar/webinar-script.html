@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сценарий вебинара «Готов ли ваш бизнес к росту?» — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --say-bg:#EFF4F3; --say-border:#CBDBD8; --cohost-bg:#FAF2E7;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:800px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,44px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:220px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(30px,4.6vw,46px) clamp(24px,5vw,46px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 14px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.14; font-size:clamp(26px,4vw,38px); margin:0 0 12px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15.5px; line-height:1.6; color:var(--on-dark); max-width:60ch}
+
+  .body{padding:clamp(28px,4.4vw,42px) clamp(24px,5vw,46px) clamp(20px,3vw,30px)}
+
+  table.meta{width:100%; border-collapse:collapse; margin:0 0 26px; font-size:14.5px}
+  table.meta th{text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:9px 16px 9px 0; vertical-align:top; white-space:nowrap; width:1%}
+  table.meta td{padding:9px 0; color:var(--body); border-bottom:1px solid var(--ivory-stroke)}
+  table.meta tr:last-child td, table.meta tr:last-child th{border-bottom:none}
+
+  .thread{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); color:#fff; border-radius:14px; padding:22px 24px; margin:0 0 30px}
+  .thread .l{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 8px}
+  .thread p{margin:0; font-family:var(--serif); font-size:18px; line-height:1.45; color:#fff; font-style:italic}
+
+  h2.phase{font-family:var(--serif); font-weight:600; font-size:clamp(19px,2.6vw,23px); color:var(--ink); letter-spacing:-0.012em; margin:34px 0 3px; line-height:1.2; text-wrap:balance}
+  .phase-meta{display:flex; flex-wrap:wrap; gap:8px 12px; margin:0 0 14px; align-items:center}
+  .time{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--teal-800); background:#E7EEED; padding:3px 9px; border-radius:6px}
+  .slidechip{font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:var(--bronze-700); background:var(--paper); border:1px solid var(--border-soft); padding:3px 9px; border-radius:6px}
+  .divider{height:1px; background:var(--ivory-stroke); border:none; margin:34px 0 0}
+
+  .onslide{font-size:14px; color:var(--muted); margin:0 0 14px; line-height:1.5}
+  .onslide b{color:var(--body); font-weight:600}
+
+  .say{background:var(--say-bg); border:1px solid var(--say-border); border-radius:14px; padding:18px 22px; margin:0 0 14px}
+  .say .l{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-800); margin:0 0 10px; display:flex; align-items:center; gap:8px}
+  .say .l::before{content:""; width:7px; height:7px; background:var(--teal-800); transform:rotate(45deg)}
+  .say p{margin:0 0 12px; font-size:16.5px; line-height:1.62; color:var(--ink)}
+  .say p:last-child{margin-bottom:0}
+
+  .cohost{background:var(--cohost-bg); border:1px solid #E4CDA8; border-radius:12px; padding:14px 18px; margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--body)}
+  .cohost .l{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 6px; font-weight:600}
+
+  .tip{font-size:13px; color:var(--muted); font-style:italic; margin:0 0 8px; line-height:1.5}
+  ul.qa{margin:6px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  ul.qa li{font-size:14.5px; line-height:1.5; padding-left:18px; position:relative}
+  ul.qa li::before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px; background:var(--bronze-500); transform:rotate(45deg)}
+  ul.qa b{color:var(--ink)}
+
+  .copy{background:var(--paper); border:1px solid var(--border-soft); border-radius:12px; padding:18px 20px; margin:0 0 14px; font-size:14.5px; line-height:1.55}
+  .copy h3{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--ink); margin:0 0 8px}
+  .copy p{margin:0 0 9px} .copy p:last-child{margin-bottom:0}
+  .copy .lbl{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--bronze-700)}
+
+  table.tt{width:100%; border-collapse:collapse; margin:8px 0 0; font-size:14px}
+  table.tt td{padding:7px 0; border-bottom:1px solid var(--ivory-stroke); color:var(--body)}
+  table.tt td:first-child{font-family:var(--mono); font-size:12px; color:var(--teal-800); white-space:nowrap; padding-right:18px; width:1%}
+  table.tt tr:last-child td{border-bottom:none}
+
+  ol.rules{margin:10px 0 0; padding-left:0; list-style:none; counter-reset:r; display:grid; gap:12px}
+  ol.rules li{counter-increment:r; position:relative; padding-left:40px; font-size:15px; line-height:1.5}
+  ol.rules li::before{content:counter(r); position:absolute; left:0; top:-2px; width:27px; height:27px; border-radius:50%; border:1.5px solid var(--teal-800); color:var(--teal-800); font-family:var(--mono); font-weight:600; font-size:13px; display:grid; place-items:center}
+  ol.rules b{color:var(--ink)}
+
+  .section-label{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); margin:40px 0 2px; padding-top:22px; border-top:2px solid var(--ivory-stroke)}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+  .foot{padding:20px clamp(24px,5vw,46px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.thread,.say,.cohost,.time,.copy,.masthead{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .say,.cohost,.copy,.thread{break-inside:avoid}
+    h2.phase{break-after:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Сценарий ведущего<b>Вебинар</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Детальный сценарий вебинара</p>
+    <h1>Готов ли ваш бизнес к росту?</h1>
+    <p>4 проверки, которые уберегут вашу прибыль. Слайд за слайдом: что говорить, тайминги, живые демо, оффер и тексты вокруг вебинара.</p>
+  </div>
+
+  <div class="body">
+
+    <table class="meta">
+      <tr><th>Формат</th><td>Бесплатный онлайн-вебинар, ~45–50 минут + Q&amp;A</td></tr>
+      <tr><th>Для кого</th><td>Владельцы малого и растущего бизнеса</td></tr>
+      <tr><th>Цель</th><td>Дать пользу и доверие → лид (емейл + заполненный лист) → запись на платный разбор ($500)</td></tr>
+      <tr><th>Обещание</th><td>«За 45 минут вы поймёте, готов ли ваш бизнес удержать прибыль, когда вы вложитесь в рост»</td></tr>
+      <tr><th>Подарок</th><td>Рабочий лист «Проверка готовности к росту» — за регистрацию</td></tr>
+      <tr><th>Оффер</th><td>Проверка финансового здоровья — $500, в счёт первого месяца работы</td></tr>
+    </table>
+
+    <div class="thread">
+      <p class="l">Красная нить — повторите 2–3 раза за вебинар</p>
+      <p>«Масштаб не создаёт прибыль — он усиливает то, что уже есть. Если под капотом порядок, рост умножается в прибыль. Если есть течи — рост умножает течи.»</p>
+    </div>
+
+    <!-- ДО -->
+    <p class="section-label">До вебинара</p>
+
+    <h2 class="phase">Страница регистрации</h2>
+    <div class="copy">
+      <p><span class="lbl">Заголовок</span><br>Готов ли ваш бизнес к росту?</p>
+      <p><span class="lbl">Подзаголовок</span><br>Бесплатный вебинар для владельцев бизнеса. За 45 минут вы поймёте, готов ли ваш бизнес удержать прибыль, когда вы вложитесь в рост — и получите чек-лист «Проверка готовности к росту» в подарок.</p>
+      <p><span class="lbl">Что вы узнаете</span><br>— Почему растущий бизнес может приносить <i>больше выручки и меньше денег</i><br>— 4 финансовые проверки перед тем, как вкладывать в маркетинг<br>— Как за 5 минут оценить готовность своего бизнеса</p>
+      <p><span class="lbl">Кнопка</span><br>Зарегистрироваться бесплатно</p>
+    </div>
+
+    <h2 class="phase">Письма</h2>
+    <div class="copy">
+      <p><b>Подтверждение</b> (сразу): дата, время, ссылка. «Прикладываю рабочий лист — можете заглянуть заранее, но всё разберём вместе.»</p>
+      <p><b>Напоминание</b> за день и за час: коротко, ссылка, интрига — «принесите свою примерную выручку с одного клиента, пригодится».</p>
+      <p><b>После вебинара</b>: запись + лист + оффер (полный текст ниже).</p>
+    </div>
+
+    <!-- ВО ВРЕМЯ -->
+    <p class="section-label">Во время вебинара</p>
+
+    <h2 class="phase">1 · Открытие и хук</h2>
+    <div class="phase-meta"><span class="time">0:00–0:05</span><span class="slidechip">Слайд 1 — титул</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Здравствуйте, спасибо, что нашли время. Меня зовут Юлия, я основатель JK Accounting Group. Сегодня короткий и практичный разговор — про деньги в вашем бизнесе.</p>
+      <p>Начну с неудобной правды. Можно сделать всё правильно в маркетинге — привести клиентов, поднять выручку — и всё равно в конце года остаться с пустыми руками или с налоговым счётом, которого вы не ждали. И виноват в этом обычно не маркетинг. Виноват фундамент под ним.</p>
+      <p>За следующие 45 минут вы поймёте, готов ли <i>ваш</i> бизнес удержать прибыль, когда вы вложитесь в рост. Досидите до конца — там будет короткий лист, по которому вы сами себя проверите, и он ваш.»</p>
+    </div>
+    <p class="tip">Не читайте дословно — держите мысли перед глазами и говорите своими словами.</p>
+
+    <h2 class="phase">2 · Кто я, коротко</h2>
+    <div class="phase-meta"><span class="time">0:05–0:07</span><span class="slidechip">Слайд 2</span></div>
+    <p class="onslide"><b>На слайде:</b> ваше фото, 3–4 факта: 7 лет · 50+ владельцев бизнеса · $1M+ сэкономлено на налогах · English · Русский · Українська.</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Пару слов о себе — чтобы вы понимали, почему меня стоит послушать. Семь лет я помогаю владельцам бизнеса в США — особенно тем, кто приехал и разбирается в местных правилах с нуля. За это время мы сэкономили клиентам больше миллиона долларов на налогах. Мы, по сути, становимся финансовым отделом для бизнеса — бухгалтерия, налоги, планирование. Но сегодня я не продаю — сегодня я показываю.»</p>
+    </div>
+
+    <h2 class="phase">3 · Главная идея: «дырявое ведро»</h2>
+    <div class="phase-meta"><span class="time">0:07–0:12</span><span class="slidechip">Слайд 3</span></div>
+    <p class="onslide"><b>На слайде:</b> образ «дырявого ведра» — выручка льётся сверху, вытекает через дыры. Подпись: «Масштаб усиливает то, что уже есть».</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Вот главная идея на сегодня. Представьте ведро. Сверху в него льётся вода — это ваша выручка. Маркетинг делает струю сильнее. Но если в ведре есть дыры — неправильная форма бизнеса, запущенный учёт, налоги, к которым вы не готовились, — то чем сильнее струя, тем быстрее вытекает.</p>
+      <p>Поэтому масштаб <i>не создаёт</i> прибыль. Он усиливает то, что уже есть. Если под капотом порядок — рост умножается в прибыль. Если есть течи — рост умножает течи. Сегодня посмотрим на четыре главные „дыры", которые стоит закрыть <i>до</i> того, как вы разгоните расходы.»</p>
+    </div>
+    <div class="cohost">
+      <p class="l">Со-ведущий (Борис)</p>
+      Здесь Борис на 3–5 минут даёт маркетинговую сторону: какие сигналы говорят, что канал готов к масштабированию (стабильная конверсия, реальный спрос). Логика — «Борис показал, готов ли маркетинг; я покажу, готовы ли финансы».
+    </div>
+
+    <h2 class="phase">4 · Проверка 1 — Юнит-экономика + ЖИВОЕ ДЕМО</h2>
+    <div class="phase-meta"><span class="time">0:12–0:22</span><span class="slidechip">Слайды 4–5</span></div>
+    <div class="say">
+      <p class="l">Что говорить (Слайд 4)</p>
+      <p>«Проверка номер один — и самая важная. Знаете ли вы, сколько <i>реально</i> зарабатываете с одного клиента? Не выручку — а прибыль. После рекламы, после себестоимости, после накладных и после налогов. Если этой цифры нет — то, масштабируясь, вы масштабируете неизвестность. Жмёте на газ, не зная, едете вперёд или назад.»</p>
+    </div>
+    <p class="onslide"><b>Слайд 5 — живое демо:</b> откройте «Калькулятор настоящей маржи» и заполняйте вживую.</p>
+    <div class="say">
+      <p class="l">Что говорить (вводя цифры)</p>
+      <p>«Давайте посчитаем. Клиент платит, скажем, 200 долларов. На рекламу ушло 60. Себестоимость — 45. Прочее — 15. Смотрите: прибыль 80, маржа 40%. Отлично, да?</p>
+      <p>А теперь — то, чего этот расчёт <i>не</i> видит. Он не знает ваших накладных: аренды, зарплат, вашего времени. Не знает вашу форму бизнеса. И не знает налоги — а с этой прибыли ещё предстоит заплатить. Смотрите, что остаётся после грубой прикидки на налоги: уже не 80, а 58. И это ещё <i>без</i> накладных.</p>
+      <p>Вот она, дыра в ведре. Красивая маржа на рекламном отчёте — и совсем другая цифра в вашем кармане.»</p>
+    </div>
+    <p class="tip">Это ваш главный «ага-момент». Не торопитесь — держите паузу после «58».</p>
+
+    <h2 class="phase">5 · Проверка 2 — Кэшфлоу</h2>
+    <div class="phase-meta"><span class="time">0:22–0:28</span><span class="slidechip">Слайд 6</span></div>
+    <p class="onslide"><b>На слайде:</b> шкала времени — «Расход на рекламу сегодня → деньги от клиента через 30–90 дней».</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Проверка два — деньги во времени. Когда вы вкладываете в рекламу, деньги уходят <i>сегодня</i>. А возвращаются от клиента — через недели, а то и месяцы. Пока бизнес маленький, разрыв небольшой. Но при масштабировании он растёт вместе с вами — и вот парадокс: бизнес растёт, выручка растёт, а денег на счету нет. Многие ломаются именно здесь — не потому что не зарабатывают, а потому что кончились деньги в моменте.</p>
+      <p>Вопрос себе: если выручка завтра остановится, сколько месяцев продержитесь? Если ответ „не знаю" — это уже сигнал.»</p>
+    </div>
+
+    <h2 class="phase">6 · Проверка 3 — Учёт вовремя</h2>
+    <div class="phase-meta"><span class="time">0:28–0:32</span><span class="slidechip">Слайд 7</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Проверка три — короткая, но важная. Масштабироваться можно только по цифрам, которые видно <i>вовремя</i>. Если бухгалтерия отстаёт на три месяца — вы принимаете решения, глядя в зеркало заднего вида. Особенно если учёт ведёт кто-то, кто не знает американскую систему — например, бухгалтер на родине. Правильная категоризация здесь важнее, чем кажется, и именно на ней всё ломается.»</p>
+    </div>
+
+    <h2 class="phase">7 · Проверка 4 — Форма бизнеса</h2>
+    <div class="phase-meta"><span class="time">0:32–0:37</span><span class="slidechip">Слайд 8</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«И проверка четыре — форма бизнеса. То, что было нормально на старте, с ростом дохода часто начинает стоить лишнего. Форма, которая подходила при 80 тысячах в год, нередко невыгодна при 200. Речь о вполне реальных деньгах — иногда тысячи долларов в год только на налогах. Это не то, что трогают каждый месяц, но точно стоит пересчитать <i>перед</i> выходом на новый уровень.»</p>
+    </div>
+
+    <h2 class="phase">8 · Живой скоринг</h2>
+    <div class="phase-meta"><span class="time">0:37–0:43</span><span class="slidechip">Слайд 9</span></div>
+    <p class="onslide"><b>На слайде:</b> «Оцените свой бизнес прямо сейчас» + скриншот листа «Проверка готовности к росту».</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«А теперь — то, ради чего многие остались. У вас в подарок есть короткий лист „Проверка готовности к росту". Давайте пройдём его прямо сейчас — я задаю вопрос, вы честно отмечаете. Пять минут.</p>
+      <p>И важный момент: обратите внимание на ответы „не уверен(а)". Это не провал — это карта того, что стоит проверить в первую очередь. Каждое „не уверен" — это, скорее всего, деньги, которые сейчас утекают незаметно.»</p>
+    </div>
+
+    <h2 class="phase">9 · Оффер</h2>
+    <div class="phase-meta"><span class="time">0:43–0:48</span><span class="slidechip">Слайд 10</span></div>
+    <p class="onslide"><b>На слайде:</b> «Превратите свой лист в план действий» — Проверка финансового здоровья, $500, в счёт первого месяца.</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Этот лист построен на том, как вы сами оцениваете ситуацию. Он даёт направление — но не точную цифру. Точную картину — какая на самом деле прибыль с клиента, как менялась маржа, где именно течёт — даёт только разбор по вашим реальным данным.</p>
+      <p>Для этого у нас есть Проверка финансового здоровья. Мы берём ваши реальные цифры и разбираем те же четыре проверки по-настоящему, с письменным планом. Стоит она 500 долларов — но вот что важно: если после неё вы решаете работать с нами, эти 500 полностью идут в счёт вашего первого месяца. Для того, кто настроен серьёзно, это, по сути, бесплатно.</p>
+      <p>В этом месяце я беру ограниченное число таких разборов — чтобы каждому уделить время. Хотите свой — напишите мне, и приходите с заполненным листом: сразу превратим его в план.»</p>
+    </div>
+    <p class="tip">Тон — спокойный и уверенный, без давления. Вы предлагаете помощь, а не «дожимаете».</p>
+
+    <h2 class="phase">10 · Q&amp;A и финал</h2>
+    <div class="phase-meta"><span class="time">0:48–конец</span><span class="slidechip">Слайд 11</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Отвечу на ваши вопросы. И пока думаете — задам пару, которые слышу чаще всего.»</p>
+    </div>
+    <p class="onslide"><b>Заготовленные вопросы</b> (если зал молчит):</p>
+    <ul class="qa">
+      <li><b>«С какой выручки уже пора думать про S-corp?»</b> → короткий понятный ответ + «точно считается по вашей ситуации».</li>
+      <li><b>«У меня бухгалтер уже есть — зачем разбор?»</b> → «Бухгалтер записывает прошлое. Разбор смотрит вперёд: где оптимизировать, пока не поздно.»</li>
+      <li><b>«Я только начинаю — мне рано?»</b> → «Наоборот, лучшее время — настроить фундамент до того, как поедете быстро.»</li>
+    </ul>
+    <div class="say" style="margin-top:14px">
+      <p class="l">Финал</p>
+      <p>«Спасибо, что были со мной. Пришлю запись и лист на почту. И помните: масштаб усиливает то, что уже есть — так что сначала фундамент, потом рост. Хорошего дня!»</p>
+    </div>
+
+    <!-- ПОСЛЕ -->
+    <p class="section-label">После вебинара</p>
+    <h2 class="phase">Письмо с записью</h2>
+    <div class="copy">
+      <p><span class="lbl">Тема</span><br>Ваша запись + лист «Проверка готовности к росту»</p>
+      <p>Спасибо, что были на вебинаре! Как и обещала:<br>— Запись: [ссылка]<br>— Рабочий лист «Проверка готовности к росту»: [ссылка]</p>
+      <p>Если хотите проверить свои цифры по-настоящему — Проверка финансового здоровья ($500, полностью в счёт первого месяца, если решите работать с нами). Приходите с заполненным листом, и мы превратим его в план. Записаться: [ссылка].</p>
+      <p>Юлия, JK Accounting Group</p>
+    </div>
+    <p class="tip">Отправьте в течение 24 часов, пока тепло. Через 3–4 дня — одно мягкое напоминание тем, кто открыл, но не записался.</p>
+
+    <!-- СПРАВОЧНОЕ -->
+    <p class="section-label">Шпаргалка</p>
+    <h2 class="phase">Тайминг</h2>
+    <table class="tt">
+      <tr><td>0:00–0:05</td><td>Хук</td></tr>
+      <tr><td>0:05–0:07</td><td>Кто я</td></tr>
+      <tr><td>0:07–0:12</td><td>Дырявое ведро</td></tr>
+      <tr><td>0:12–0:22</td><td>Юнит-экономика + демо калькулятора</td></tr>
+      <tr><td>0:22–0:28</td><td>Кэшфлоу</td></tr>
+      <tr><td>0:28–0:32</td><td>Учёт вовремя</td></tr>
+      <tr><td>0:32–0:37</td><td>Форма бизнеса</td></tr>
+      <tr><td>0:37–0:43</td><td>Живой скоринг</td></tr>
+      <tr><td>0:43–0:48</td><td>Оффер</td></tr>
+      <tr><td>0:48+</td><td>Q&amp;A и финал</td></tr>
+    </table>
+
+    <h2 class="phase">Три правила на весь вебинар</h2>
+    <ol class="rules">
+      <li><b>Польза раньше оффера.</b> Первые 40 минут — только ценность. Оффер прозвучит естественно.</li>
+      <li><b>Не пугать — показывать.</b> Рамка «риск и возможности», а не «вы всё делаете не так».</li>
+      <li><b>Вы не продаёте — вы показываете то, чего они не видят.</b> Доверие продаёт за вас.</li>
+    </ol>
+
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+</body>
+</html>
