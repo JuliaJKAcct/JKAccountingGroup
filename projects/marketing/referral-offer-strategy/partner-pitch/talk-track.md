@@ -67,7 +67,7 @@ That's it. Low pressure, collaborative, hands him the page.
 > just shows a client where money could leak once they scale. Most people find one
 > or two things they didn't know.
 >
-> If they want to go deeper, that's the $500 check — a real look at their actual
+> If they want to go deeper, that's the $500 Profit Leak Review — a real look at their actual
 > numbers with a written plan. And here's the part I like: if they come on with us
 > monthly, that $500 comes right back off their first month. So for a serious owner
 > it's basically risk-free."

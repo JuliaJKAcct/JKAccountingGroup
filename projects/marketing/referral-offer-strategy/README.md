@@ -37,10 +37,11 @@ referral-offer-strategy/
         ├── readiness-check-ru.html     session 1 — self-scored readiness quiz
         ├── margin-calculator-ru.html   session 2 — true-margin calculator
         └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
-└── webinar/          ← standalone lead-gen webinar (reuses session 1 + margin demo)
-    ├── webinar-script.md    detailed RU presenter script: slide-by-slide, timings,
-    │                        registration + email copy — solo, with co-host inserts
-    └── webinar-script.html  same script as a readable/printable on-brand page
+└── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
+    ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
+    │                        moments, 4 belief shifts, self-calc — co-host inserts
+    ├── webinar-script.html  same script as a readable/printable on-brand page
+    └── announcement-ru.md   ready-to-post RU promo copy (full + short versions)
 ```
 
 > First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
@@ -69,18 +70,19 @@ there.
   partner (Candramas LLC): an on-brand partner handout in English and native
   Russian, a native-Russian Growth Series one-pager (the three co-hosted
   sessions), and a talk-track script. Encodes the decided front-offer (a $500
-  Financial Health Check, fully credited into the first month of service), the
+  Profit Leak Review, fully credited into the first month of service), the
   free → paid → monthly ladder, the two partner channels (new-client onboarding
   + existing-client Growth Series), and the partner-benefit framing.
 - **`partner-pitch/worksheets/`** — the three Growth Series take-homes, built as
   interactive, print-ready native-Russian files: a self-scored readiness quiz, a
   true-margin calculator, and a tax-efficiency checklist. Each is useful on its
   own but reveals where a professional is needed, closing toward the $500 check.
-- **`webinar/`** — a detailed native-Russian presenter script for a standalone
-  lead-gen webinar that repackages Growth Series session 1 (plus the true-margin
-  live demo) as Julia's own top-of-funnel event: registration + email copy,
-  slide-by-slide timings, and the $500 offer. Written solo-first with optional
-  co-host (Boris) inserts. An on-brand slide deck is the natural next build.
+- **`webinar/`** — a diagnostic native-Russian webinar, "Почему бизнес растёт, а
+  прибыль уменьшается," as Julia's own top-of-funnel event. v2 is built around one
+  story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and a
+  self-calculated margin, closing on the Разбор утечек прибыли. Includes the
+  readable script (`.html` + `.md`) and ready-to-post announcement copy
+  (`announcement-ru.md`). An on-brand slide deck is the natural next build.
 
 `strategy.md` remains the decisions-and-open-questions document. Per its §6,
 still open: scoring rubric thresholds, the document/access checklist for the
