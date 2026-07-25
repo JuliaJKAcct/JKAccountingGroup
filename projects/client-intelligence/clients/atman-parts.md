@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -22,14 +22,14 @@
 
 ## 1. Snapshot
 
-- **Business name:** Atman Parts
-- **Entity type:** _(pending)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending — possibly online **parts sales / e-commerce**; "eBay" and "Business PayPal" came up in the 2026-07-20 call, **low confidence** from a rough transcript — verify)_
+- **Business name:** Atman Parts _(also appears as "Project ATMAN LLC" on Intuit/QuickBooks billing — naming inconsistency to reconcile; possibly a single-member LLC per the Sch C tax-return-type property below)_
+- **Entity type:** _(pending — Double's Tax Return Type = Sch C suggests sole-proprietorship/disregarded-entity income-tax treatment despite "LLC" in the name; verify)_
+- **Home state:** **Texas** — confirmed via filed Texas Sales and Use Tax returns _(Google Drive, filings dated 2026-07-16)_
+- **Industry / what they do:** Confirmed **eBay marketplace auto-parts seller** (seller handle "atman.autoparts"; firm added to the seller's eBay team 2026-03-24) _(Gmail, 2026-03-24 — upgrades prior low-confidence note)_
 - **Primary language:** _(pending)_
-- **Our engagement (services we provide):** _(pending)_
+- **Our engagement (services we provide):** Bookkeeping (Monthly, per Double), sales tax (TX, confirmed active) _(Double client properties, 2026-07-25)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online (per Double)
+- **Accounting platform:** QuickBooks Online — **Simple Start** plan; free trial began 2026-03-24, converted to paid ~2026-04-24 _(Gmail)_
 
 ## 2. Contacts
 
@@ -39,8 +39,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
-| Bookkeeping / day-to-day contact | Double client (link below) |
+| Owner / primary contact — became QBO primary admin 2026-07-20 (replacing the firm) | Double client (link below) |
+| Bookkeeping / day-to-day contact — not indexed in Ping (coverage gap) | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=763909](https://app.doublehq.com/close?cid=763909)
 
@@ -51,40 +51,43 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
-| Business PayPal | Payments | _(pending — Drive link)_ | _(mentioned in the 2026-07-20 call — low confidence)_ |
-| eBay (marketplace) | Possible sales channel | _(pending)_ | _(mentioned in the 2026-07-20 call — low confidence, verify)_ |
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger, Simple Start plan | _(pending — Drive link)_ | Managed through Double |
+| Business PayPal | Payments | _(pending — Drive link)_ | _(mentioned in the 2026-07-20 call — still unconfirmed by other sources, low confidence)_ |
+| eBay (marketplace) | Confirmed sales channel — seller "atman.autoparts" | _(pending)_ | _(Gmail, 2026-03-24 — confirmed)_ |
+| Texas Comptroller WebFile | Filing sales tax | _(pending — Drive link)_ | Confirmed active e-filing system _(Google Drive)_ |
 
 ## 4. Obligations & recurring processes
 
 Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ### Sales tax
-- **Applies?** Discussed in the 2026-07-20 onboarding call — **likely yes**, but the specifics were not legible in the transcript.
-- **Jurisdiction(s):** _(pending — the state was not clear in the transcript)_
-- **Frequency & due date:** _(pending)_
-- **Agency & portal:** _(pending)_
-- **Form:** _(pending)_
-- **Our role:** _(pending)_
-- **Current status:** _(pending)_
-- **Process notes (→ future SOP):** The 2026-07-20 call also touched **franchise tax** and **annual reports** as obligations — specifics not legible; **verify with Lilian/Julia**. _(Ping meeting 2026-07-20, auto-transcribed, low confidence)_
+- **Applies?** **Yes, confirmed** (upgraded from "likely") — actual filed returns found.
+- **Jurisdiction(s):** Texas (Texas Comptroller — Sales and Use Tax).
+- **Frequency & due date:** Monthly filing. Eight back periods (Nov 2025 – Jun 2026) were all filed the same day, **2026-07-16**, as an onboarding catch-up (not steady monthly cadence yet) — several earlier periods carried late-filing penalties, the two most recent (May, Jun 2026) did not.
+- **Agency & portal:** Texas Comptroller WebFile.
+- **Form:** Texas Sales and Use Tax return.
+- **Our role:** Firm filed the catch-up periods during onboarding.
+- **Current status:** Caught up through Jun 2026 as of 2026-07-16; steady-state monthly cadence to be confirmed going forward.
+- **Process notes (→ future SOP):** The 2026-07-20 call also touched **franchise tax** and **annual reports** as obligations — specifics still not legible/confirmed; **verify with Lilian/Julia**. _(Ping meeting 2026-07-20, auto-transcribed, low confidence)_
 
 ### Payroll
 - **Applies?** _(pending)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending)_
+- **Applies?** Yes — cadence: Monthly _(Double client properties, 2026-07-25)_. Client is mid-onboarding: a full standard onboarding/review task set (bank feed reconciliation, uncategorized transactions, duplicate vendors/customers, 1099 prep, P&L/Balance Sheet/Cash Flow/AR-AP aging reviews, plus a cleanup task) was assigned 2026-07-20 _(Double activity log)_.
 
 ### Income tax
-- **Applies?** _(pending)_
+- **Applies?** _(pending — Double's Tax Return Type = Sch C suggests sole-proprietorship treatment; verify)_
 
 ### Licenses & other filings
-- **Applies?** _(pending)_
+- **Applies?** _(pending — franchise tax/annual report status still unconfirmed, see Sales tax process notes above)_
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- Entity-naming inconsistency between "Atman Parts" and "Project ATMAN LLC" across Intuit/QuickBooks records — flag for verification with the client.
+- QBO subscription had repeated payment/renewal issues and a brief cancellation around 2026-07-21, coinciding with the Double↔QBO connection — consistent with active onboarding cleanup, not a standing problem.
+- The Google Drive client folder is filed under **"Atman Products,"** not "Atman Parts" — same client, name variant (see §7).
+- One of the two Double portal contacts is not indexed in Ping at all — a standing Ping coverage gap for this client's bookkeeping/day-to-day contact.
 
 ## 6. History & open questions
 
@@ -93,19 +96,23 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   (QuickBooks Online). Sales-tax details to come from Lilian.
 - 2026-07-20 — Sweep: no Double notes yet.
 - 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
+- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Confirmed home state (Texas), industry (eBay auto-parts seller), QBO plan/admin handoff, and a full sales-tax filing history (8 back periods filed 2026-07-16). Found the Google Drive folder under the name "Atman Products" (§7). Client is mid-onboarding per the Double activity log.
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- Entity-naming mismatch ("Atman Parts" vs. "Project ATMAN LLC" vs. Drive folder "Atman Products") — verify the correct legal name with the client.
+- Franchise tax / annual report obligation still not confirmed — needs a direct check with Lilian/Julia.
+- Bookkeeping/day-to-day contact not indexed in Ping — worth flagging to whoever manages the Ping integration.
 
 ### Information still needed
-- [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)
-- [ ] Sales tax: jurisdiction, frequency/due date, agency & portal, form, our role
+- [x] Snapshot basics — **mostly done**: state (TX), industry (eBay auto-parts), platform confirmed; entity type, primary language, FY-end still pending
+- [x] Sales tax: jurisdiction, frequency, agency & portal — **done** (see §4); steady-state cadence going forward still to confirm
 - [ ] Where the sales-tax portal credentials live (Drive link)
-- [ ] Which other obligations apply (payroll, bookkeeping, income tax, licenses)
-- [ ] Google Drive folder link (sensitive vault)
+- [ ] Franchise tax / annual report — still unconfirmed
+- [ ] Payroll — still unconfirmed
+- [x] Google Drive folder link (sensitive vault) — **done, see §7** (filed under "Atman Products")
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=763909](https://app.doublehq.com/close?cid=763909)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Atman Products folder](https://drive.google.com/drive/folders/1j28nmUpb7u18MLzVO8punGFAbXBXcxJs) _(filed under "Atman Products" — a name variant of "Atman Parts", same client)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

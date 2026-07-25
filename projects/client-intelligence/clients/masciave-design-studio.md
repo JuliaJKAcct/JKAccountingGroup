@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -60,7 +60,7 @@ the actual details.
 
 ### Payroll
 - **Applies?** Yes — **automatic** _(Double)_
-- **Provider / frequency:** _(pending — confirm provider)_
+- **Provider / frequency:** **Gusto AutoPilot**, biweekly _(Gmail, 2026-07-21 — confirmed via payroll-run notifications)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
@@ -89,14 +89,17 @@ the actual details.
 - 2026-07-20 — **Ping / Gmail / Double-note enrichment sweep:** established the interior-design profile (IIDA/ASID/CPTED), FL (Broward) location, Gusto payroll, FL DOR quarterly sales tax, and confirmed the accrual-books / cash-tax reporting basis from the Double note. Ping had **no indexed meetings**; facts are from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — verify. _(recurring-expense review)_
-- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket (feeds were unstable).
+- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — still no update this window, still open.
+- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — indirect positive signal (the Chase Credit Card reconciliation task closed as part of the June 2026 month-end close, done 2026-07-20) but no explicit confirmation yet.
 - Confirm the exact **FL sales-tax county / registration**.
-- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement.
+- ~~Clarify the **linked personal client (Double 710615)**~~ — **resolved 2026-07-25:** the owner's Double contact is confirmed linked to both client IDs 706696 (Masciave) and 710615, supporting the individual-1040-engagement assumption.
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration
 - [ ] Credentials Drive link
+
+### Log (continued)
+- 2026-07-25 — Incremental sweep: confirmed payroll provider (Gusto AutoPilot, biweekly) and the linked personal-client relationship (710615). June 2026 month-end close moved to Done (2026-07-20), including the Chase Credit Card reconciliation task. Q2 2026 financial reports sent to the client 2026-07-20 (acknowledged same day). Sales Tax task recurrence changed from the 1st to the 5th of the month.
 
 ## 7. Links
 

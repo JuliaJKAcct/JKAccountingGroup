@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -97,12 +97,14 @@ the actual details.
 - 2026-07-20 — **Gmail enrichment sweep:** established the Shopify e-commerce ("Go Robots") profile, FL (Broward), RU language, and an apparent "sister-entity (GROUP LLC)" ambiguity **(later corrected 2026-07-22 — it is one company, see below)**. Ping had **no indexed meetings**; facts from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
 - 2026-07-22 — **Client-provided (Lilian):** recorded the **FDOT tolls → Penn Credit collection** process — the portal ([account.penncredit.com/myaccount](https://account.penncredit.com/myaccount)), the ID-number+ZIP login method, and the client password-vault Google Doc. Captured the recurring pattern (a new balance appeared after the last payment cleared).
 - 2026-07-22 — **Correction (Lilian):** this client is **one company — "Deep Tech Development Group LLC"**, not two. Removed the earlier "sister GROUP LLC" two-entity split; re-attributed the Gusto payroll, Shopify store, and vehicle/tolls to the single company; corrected the display name across the CI indexes and the Hub.
+- 2026-07-25 — Incremental sweep: Double activity log shows the recurring Sales Tax task's cadence changed from the 1st to the 5th of the month (2026-07-20), and a "client disconnected" event logged 2026-07-21 (ambiguous — could be the accounting-platform connection or a Double-portal disconnect; needs a manual check). No new Penn Credit / FDOT toll activity found this window.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
 - **Reconcile the payroll flag:** Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
+- A "client disconnected" event logged in Double 2026-07-21 — meaning unclear (accounting-platform link vs. portal), worth a quick manual check.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration
