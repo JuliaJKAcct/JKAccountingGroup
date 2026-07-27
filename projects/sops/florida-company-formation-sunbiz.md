@@ -1,6 +1,6 @@
 # SOP: Florida Company Formation on Sunbiz (Articles of Incorporation / Organization)
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-15
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-27
 
 The procedure for **forming a company with the State of Florida** on Sunbiz
 (Division of Corporations) — the **first** step of the firm's end-to-end company
@@ -27,6 +27,28 @@ which is the immediate next step.
 > (§5), paid to Florida.
 
 ---
+
+## The process at a glance
+
+Forming a Florida company on Sunbiz (the firm's **Part 1**) turns on one choice —
+**LLC or Profit Corporation**. The two file different Articles, but then share the
+same core screens (registered agent, addresses, correspondence email) and the
+same finish: pay the state fee, confirm **Active**, calendar the annual report,
+and hand off to **Part 2** (the federal EIN). *S-corp is a tax election made
+later — it changes nothing on the Sunbiz filing.*
+
+```mermaid
+flowchart TD
+  A["New client forming a Florida company on Sunbiz (Part 1)"] --> B["Check the name is available + carries the right suffix"]
+  B --> C{"Need a corporate structure — shares, a board, outside investors?"}
+  C -- "Yes" --> D["Profit Corporation: Articles of Incorporation (shares, officers/directors) — $70"]
+  C -- "No — LLC (firm default)" --> E["LLC: Articles of Organization (members/managers, no shares) — $125"]
+  D --> F["Same core screens: registered agent, addresses, correspondence email, optional effective date"]
+  E --> F
+  F --> G["Pay the state fee + submit — final: no edits, cancels, or refunds"]
+  G --> H["Confirm Active, save the receipt, calendar the annual report (Jan 1 to May 1)"]
+  H --> I["Hand off to Part 2 — the federal EIN"]
+```
 
 ## 0. Intake — decide and gather before filing
 
