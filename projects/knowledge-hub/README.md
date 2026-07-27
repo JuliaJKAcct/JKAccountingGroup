@@ -3,8 +3,9 @@
 > **Status:** Active · **Owner:** Lilian · **Started:** 2026-07
 
 One on-brand, searchable index page that is the **front door to the firm's
-know-how** — every **procedure (SOP)** and every **client** we've captured, in one
-place, so anyone on the team (especially Julia) can find and open the right
+know-how** — every **procedure (SOP)**, every **client** we've captured, and the
+firm's downloadable **templates**, in one place, so anyone on the team (especially
+Julia) can find and open the right
 document in seconds.
 
 ## Purpose

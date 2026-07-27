@@ -36,7 +36,7 @@ the US.
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   ├── sops/                      firm standard operating procedures + client-task runbooks (Active)
 │   ├── client-intelligence/       per-client knowledge base (one file per client) — the raw material for each client's SOPs (Active)
-│   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs + clients, generated from the repo (Active)
+│   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients + downloadable templates, generated from the repo (Active)
 │   └── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
 ├── .claude/
 │   └── skills/    reusable Claude workflows (the "engines")
