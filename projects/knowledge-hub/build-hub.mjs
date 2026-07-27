@@ -933,6 +933,75 @@ function coaReaderInner(owner, updated){
     + `</div>`;
 }
 
+/* ---------------- Business tax engagement-letter generator (embedded tool) ----------------
+   The self-service generator (projects/proposal-tool/tools/) embedded into the reader as an
+   ISOLATED iframe. Isolation is the point: the iframe has its own CSS (can't touch the Hub's
+   Atlas styles) and its own window.print() — the tool's @media print shows ONLY the letter,
+   so "Save PDF" prints the engagement letter, never the whole Hub book layout. Built here from
+   the SAME .src.html the standalone tool uses (single source of truth), with the brand fonts
+   and logo inlined so the Hub stays fully self-contained (no external requests). */
+const ENGAGEMENT_DOC = (() => {
+  try {
+    const dir = resolve(repoRoot, 'projects/proposal-tool/tools');
+    const srcHtml = read(resolve(dir, 'business-tax-engagement-letter.src.html'));
+    const fonts = read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'));
+    const logo = readFileSync(resolve(repoRoot, 'brand/logo/png/JK-lockup-horizontal-2048.png')).toString('base64');
+    const body = srcHtml.replace('/*__FONTS__*/', fonts).replace('__LOGO__', 'data:image/png;base64,' + logo);
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+      + '<meta name="viewport" content="width=device-width,initial-scale=1">'
+      + '<title>JK Accounting Group — Business Tax Engagement Letter</title></head><body>\n'
+      + body + '\n</body></html>';
+  } catch (e) { return ''; }
+})();
+// Escape for a double-quoted srcdoc attribute: & first, then " — leaves < > literal so the
+// iframe parses them as HTML, and any pre-existing entity survives the round-trip.
+const srcdocEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+
+function engagementReaderInner(owner, updated){
+  const fieldRows = [
+    ['1', 'Letter date'],
+    ['2', 'Company (entity) name'],
+    ['3', 'Address — line 1'],
+    ['4', 'Address — line 2 (city, state, ZIP)'],
+    ['5', 'Entity type (C-Corp · S-Corp · Partnership)'],
+    ['6', 'Tax year (e.g. 2025)'],
+    ['7', 'Fee (USD)'],
+    ['8', 'Representative — name'],
+    ['9', 'Representative — title'],
+    ['10', 'Client info-needed-by date'],
+  ].map(([n, f]) => `<tr><td class="coa-num">${n}</td><td>${esc(f)}</td></tr>`).join('');
+  const fieldTable = `<div class="tablewrap"><table class="links"><thead><tr><th>#</th><th>What you fill in</th></tr></thead><tbody>${fieldRows}</tbody></table></div>`;
+
+  const derivedRows = [
+    ['Return', 'Form 1120', 'Form 1120-S', 'Form 1065'],
+    ['E-file authorization', 'Form 8879-C', 'Form 8879-S', 'Form 8879-PE'],
+    ['Original due date', 'April 15 (yr+1)', 'March 15 (yr+1)', 'March 15 (yr+1)'],
+  ].map(r => `<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join('');
+  const derivedTable = `<div class="tablewrap"><table class="links"><thead><tr><th>Derived</th><th>C-Corp</th><th>S-Corp</th><th>Partnership</th></tr></thead><tbody>${derivedRows}</tbody></table></div>`;
+
+  const tool = ENGAGEMENT_DOC
+    ? `<div class="egen"><iframe class="egen-frame" title="Business Tax Engagement Letter generator"`
+      + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
+      + ` srcdoc="${srcdocEsc(ENGAGEMENT_DOC)}"></iframe></div>`
+    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>The generator source wasn't found at build time. Rebuild the Hub from the repo root.</p></div></div>`;
+
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Tax preparation · firm-wide</p>`
+    + `<h1>Business Tax Engagement Letter<span class="loc">Fill the form — the letter builds itself</span></h1>`
+    + `<p class="lede">The firm's own way to produce a business tax-preparation engagement letter — our replacement for GoProposal. Fill a handful of client facts below and the finished, on-brand letter builds live. It <b>starts blank every time</b>, <b>won't generate with any field missing</b>, and <b>auto-derives</b> the return, e-file form, and due date from the entity type.</p>`
+    + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+    + `<div class="page">`
+    + `<div class="shead"><span class="schip">1</span><h2>What you fill in</h2></div>`
+    + `<p class="slede">Everything that changes per client — nothing else varies. The tool asks for all ten and refuses to produce the PDF until each is complete.</p>` + fieldTable
+    + `<div class="shead"><span class="schip">2</span><h2>What the tool derives for you</h2></div>`
+    + `<p class="slede">From the <b>entity type</b> alone — don't enter these.</p>` + derivedTable
+    + `<div class="callout note"><div class="cx"><div class="cl">Fixed on every letter</div><p>Signer <b>Julia Kononova, MBA, EA — Chief Accountant</b>; letterhead Pembroke Pines, FL · 786-318-1505; the attached <b>Terms &amp; Conditions Addendum</b>. Cleanup billed separately at $60/hr, advisory at $150/hr. Change only if asked.</p></div></div>`
+    + `<div class="shead"><span class="schip">3</span><h2>Prepare the letter</h2></div>`
+    + `<p class="slede">Fill the form; the letter builds on the right. Click <b>Save PDF</b> → your browser's print dialog → <b>Save as PDF</b>. <span class="egen-note">Save-as-PDF works in a normal browser and on the published Hub; it's preview-only inside this artifact sandbox.</span> Client data never enters the repo — the finished letter goes to the client.</p>`
+    + tool
+    + `</div>`;
+}
+
 /* ---------------- SOP catalog (categories + curated short titles/blurbs) ---------------- */
 const SOP_GROUPS = [
   {
@@ -1023,6 +1092,8 @@ const SOP_GROUPS = [
           ],
         },
         blurb: 'Substantiate a client’s Child and Dependent Care Credit (Form 2441) when there’s no payment trail — e.g. a cash-paid babysitter. Have the care provider complete and sign the statement (name, address, SSN/EIN, dates, amount, method); the signed copy stays in the client’s systems.' },
+      { file: 'business-tax-engagement-letter-standard.md', title: 'Business Tax Engagement Letter', engagement: true,
+        blurb: 'The firm’s in-house GoProposal replacement — an interactive generator that builds a business tax-preparation engagement letter from a few client facts. Starts blank every time, won’t generate with a field missing, and auto-derives the return (1120 / 1120-S / 1065), the Form 8879 variant, and the filing due date from the entity type. Fill the form → Save PDF. Client data never enters the repo.' },
     ],
   },
   {
@@ -1213,6 +1284,8 @@ function renderSopItem(it, grpName) {
   let inner;
   if (it.coa) {
     inner = coaReaderInner(owner, updated);
+  } else if (it.engagement) {
+    inner = engagementReaderInner(owner, updated);
   } else if (/business-tax-receipt/.test(it.file)) {
     inner = btrReaderInner();
   } else if (/ecoorganic/.test(it.file)) {
