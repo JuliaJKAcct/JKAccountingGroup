@@ -1077,7 +1077,10 @@ function renderSopItem(it, grpName) {
     // animated flow the client-task SOPs use (reduced-motion safe, visible without JS).
     let flowBlock = '';
     if (it.flow && it.flow.length) {
-      md2 = md2.replace(/\n(?:---\s*\n+)?##\s+[^\n]*process at a glance[\s\S]*?(?=\n##\s)/i, '\n');
+      // Strip the .md's Mermaid "process at a glance" (optional leading `---` + heading + lede +
+      // fence) up to the next `## ` heading OR end of file — the `|$` covers the edge case where
+      // that section is the last one (else it wouldn't strip and the guard below would flag it).
+      md2 = md2.replace(/\n(?:---\s*\n+)?##\s+[^\n]*process at a glance[\s\S]*?(?=\n##\s|$)/i, '\n');
       flowBlock = `<div class="shead"><span class="schip">✦</span><h2>The process at a glance</h2></div>`
         + (it.flowLede ? `<p class="slede">${esc(it.flowLede)}</p>` : '')
         + taskFlow({ flow: it.flow });
