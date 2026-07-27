@@ -247,6 +247,31 @@ function guidesBlock(guides){
     + `<p class="prose">The ready-to-send one-page guide. It shows here, and you can <b>download it as PDF or PNG</b> to send by email or WhatsApp.</p>`
     + `<div class="guides">${cards}</div>`;
 }
+
+// A prominent "download the blank form" block for a fill-in template. The PDF is the
+// print-ready form (works on the real host / Odoo); the PNG is the image that downloads
+// even in the Artifact sandbox, which blocks PDF downloads (pdf isn't in the capability
+// allowlist). Both are embedded as data URIs and routed through saveFile by the global
+// a[download][href^="data:"] interceptor. Rendered at the TOP of the reader so it's the
+// first thing a team member sees.
+function templateBlock(t){
+  const base = 'projects/sops/assets/';
+  const pdf = dataUri('application/pdf', base + t.pdf);
+  const png = t.png ? dataUri('image/png', base + t.png) : null;
+  return `<div class="tdl">`
+    + `<div class="tdl-ic">${IC.doc}</div>`
+    + `<div class="tdl-x">`
+    +   `<p class="tdl-k">Blank template — download to fill in</p>`
+    +   `<h3 class="tdl-t">${esc(t.name)}</h3>`
+    +   `<p class="tdl-d">Download the blank form to <b>print, fill in, or send to the care provider</b> (the babysitter). They complete and sign it; the signed copy is kept in the client's systems — never here.</p>`
+    +   `<div class="tdl-btns">`
+    +     `<a class="dlbtn big" href="${pdf}" download="${esc(t.pdf)}">${IC.dl}Download PDF</a>`
+    +     (png ? `<a class="dlbtn big ghost" href="${png}" download="${esc(t.png)}">${IC.dl}Download image (PNG)</a>` : '')
+    +   `</div>`
+    +   (png ? `<p class="tdl-note">The <b>PDF</b> is the print-ready form. In this in-browser preview the <b>PNG</b> image is the one that saves; on the firm's site both download.</p>` : '')
+    + `</div>`
+    + `</div>`;
+}
 // BTR: reuse the hand-laid render's masthead+main (the premium designed page)
 function btrReaderInner(){
   try{
@@ -829,6 +854,7 @@ const SOP_GROUPS = [
     name: 'Tax preparation', note: 'Return prep & substantiation',
     items: [
       { file: 'child-dependent-care-provider-statement.md', title: 'Child & Dependent Care — Provider Statement',
+        template: { pdf: 'child-dependent-care-provider-statement.pdf', png: 'child-dependent-care-provider-statement.png', name: 'Child and Dependent Care Provider Statement' },
         blurb: 'Substantiate a client’s Child and Dependent Care Credit (Form 2441) when there’s no payment trail — e.g. a cash-paid babysitter. Have the care provider complete and sign the statement (name, address, SSN/EIN, dates, amount, method); the signed copy stays in the client’s systems.' },
     ],
   },
@@ -1032,6 +1058,7 @@ function renderSopItem(it, grpName) {
       if (cut !== -1) md2 = md2.slice(0, cut);
     }
     let bodyHtml = mdToAtlas(md2);
+    if (it.template) bodyHtml = templateBlock(it.template) + bodyHtml;   // prominent download, top of the reader
     if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
     inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
       + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`

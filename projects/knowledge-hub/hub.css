@@ -352,6 +352,23 @@ tr.coa-off .coa-e{text-decoration:line-through;}
 :root[data-theme="dark"] .dlbtn.ghost:hover{background:var(--raise); color:var(--ink);}
 button.dlbtn{cursor:pointer; font-family:var(--sans);}
 
+/* ---------- Blank-template download block (top of a fill-in-form SOP's reader) ---------- */
+.tdl{display:flex; gap:18px; align-items:flex-start; margin:0 0 28px; padding:20px 22px;
+  border:1px solid var(--border); border-left:4px solid var(--accent);
+  border-radius:14px; background:var(--raise);}
+.tdl-ic{flex:0 0 auto; width:42px; height:42px; display:grid; place-items:center;
+  border-radius:11px; background:var(--accent); color:#0D2A31;}
+.tdl-ic svg{width:20px; height:20px;}
+.tdl-x{flex:1 1 auto; min-width:0;}
+.tdl-k{font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--accent-2); margin:0 0 5px;}
+.tdl-t{font-family:var(--serif); font-size:19px; font-weight:600; color:var(--ink); margin:0 0 8px;}
+.tdl-d{font-size:13.5px; line-height:1.55; color:var(--body); margin:0 0 15px; max-width:70ch;}
+.tdl-d b{color:var(--ink);}
+.tdl-btns{display:flex; flex-wrap:wrap; gap:10px;}
+.tdl-note{font-size:12px; line-height:1.5; color:var(--muted); margin:13px 0 0; max-width:70ch;}
+.tdl-note b{color:var(--body);}
+
 /* ---------- "One rule to remember" signature banner ---------- */
 .eco-sig{display:grid; grid-template-columns:auto 1fr; gap:15px; align-items:start;
   background:linear-gradient(180deg, color-mix(in srgb, var(--teal-800) 96%, #000), var(--teal-900));
