@@ -206,11 +206,27 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
    toast, and downloads take the Blob path. Chromium is at
    `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, Playwright at
    `/opt/node22/lib/node_modules/playwright`.
-5. **Publish / update the shareable link** with the **Artifact** tool, using the **same
-   file path** (`projects/knowledge-hub/scratch/hub.artifact.html`) so the URL is stable —
-   the team keeps one bookmark, **and pass `capabilities: {downloads: true}`** so the
-   download/print buttons work (see the downloads section above). Publish only with the
-   user's go-ahead.
+5. **Publish / update the shareable link** with the **Artifact** tool. There is **one
+   official Hub link — always update THAT one, never mint a new one:**
+
+   > **THE Hub link (the team's bookmark):**
+   > `https://claude.ai/code/artifact/b194a4e7-caf5-40c6-afb3-99741ec22f3e`
+
+   - **From ANY session, pass that URL as the Artifact tool's `url`** (with `file_path`
+     = `projects/knowledge-hub/scratch/hub.artifact.html`). Passing the same **file path**
+     alone only keeps the URL stable **within one session** — a *different* session that
+     doesn't pass `url` **mints a brand-new artifact URL**, which is exactly how the repo
+     ended up with duplicate "Knowledge Hub" artifacts (22-Jul + 23-Jul). Reuse the URL
+     above and there is never a second link. (Older duplicates can't be deleted via the
+     tool — just leave them; this one is canonical.)
+   - **Overwriting it is safe:** the Hub is a deterministic build of `main`, so a fresh
+     build from the latest `main` is a superset of any older published snapshot — nothing
+     is lost. If the tool guards with "this session hasn't viewed the latest version,"
+     `force: true` is the correct resolution here (a full rebuild from `main`), **not** a
+     heavy WebFetch of the 5 MB page.
+   - **Always pass `capabilities: {downloads: true}`** so the download/print buttons work
+     (see the downloads section above), and keep the favicon stable (📚).
+   - Publish only with the user's go-ahead.
 6. **Commit → PR → independent review → merge** (never merge unreviewed — CLAUDE.md).
    Small PRs per improvement round. **Commit only the SOURCES** (`build-hub.mjs`, `hub.css`,
    `coa-standard.json`, the SOP `.md`s) — **never `index.html`** (it's a gitignored build

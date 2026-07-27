@@ -86,12 +86,26 @@ publish it as an Artifact — the sources are the source of truth:
 node projects/knowledge-hub/build-hub.mjs
 ```
 
-Each **procedure** card links to its SOP document (on GitHub for now; a designed
-Atlas page once SOPs are rendered and hosted). Each **client** card **expands
-inline** to its detail — no navigation — because those cards come from the
-client-intelligence engine. A **shareable link** for the team is produced by
-publishing `scratch/hub.artifact.html` with the Artifact tool — same file path
-each time, so the URL is stable (send it once; it updates in place on re-publish).
+Each **procedure** card opens its SOP as a designed page **inside the Hub**
+(the in-page reader); each **client** card **expands inline** to its detail — no
+navigation — because those cards come from the client-intelligence engine.
+
+### The one official team link (don't create duplicates)
+
+The team's shareable Hub is **one** published Artifact — always update **this same
+one**, never publish a new URL:
+
+> **THE Hub link:** `https://claude.ai/code/artifact/b194a4e7-caf5-40c6-afb3-99741ec22f3e`
+
+Publish by pointing the Artifact tool at `scratch/hub.artifact.html` **and passing
+that URL as `url`**. Passing the same *file path* keeps the URL stable only **within
+one session**; a *different* session that doesn't pass the `url` **mints a new
+artifact URL** — that is how two "Knowledge Hub" links appeared (22-Jul + 23-Jul).
+Reuse the link above from every session and there's only ever one bookmark.
+Overwriting is safe (the Hub is a full rebuild from `main`, so nothing is lost).
+Full mechanics — `capabilities: {downloads: true}`, the `force:true` guard case —
+live in the [`knowledge-hub` skill](../../.claude/skills/knowledge-hub/SKILL.md)
+(build & publish flow, step 5).
 
 ## Working on this / notes for AI
 
