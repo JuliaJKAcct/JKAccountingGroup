@@ -133,12 +133,23 @@ const IC = {
    So each procedure's designed page is embedded and opened in an in-page reader overlay —
    no navigation. BTR uses its hand-laid render; the rest are auto-rendered from Markdown
    onto the Atlas classes (headings, lists, tables, callouts, code, mermaid flowchart). */
+const DOCLINK_ARROW = '<svg class="doclink-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 function mdInlineHub(s){
   let out = esc(s);
   out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(m, t, u){
-    return /^https?:\/\//.test(u)
-      ? '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>'
-      : '<span class="ln">' + t + '</span>';   // relative links can't open in the sandbox
+    if(/^https?:\/\//.test(u)) return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
+    // A relative link is NEVER shown as a repo path/filename in the team-facing Hub. A `.md`
+    // that maps to a Hub SOP becomes a designed in-Hub reader BUTTON (opens that SOP without
+    // leaving the Hub); any other relative link degrades to clean styled text (filename dropped).
+    var mdm = u.match(/([^/]+)\.md(?:[#?].*)?$/i);
+    var label = t.replace(/`/g, '').trim();   // t is already esc()'d — just drop code backticks
+    if(mdm && typeof hubSopMeta !== 'undefined' && hubSopMeta.has(mdm[1])){
+      var title = esc(hubSopMeta.get(mdm[1]));
+      if(/\.md$/i.test(label) || !label) label = title;   // author left the filename as the text → use the SOP title
+      return '<a class="doclink" role="button" tabindex="0" data-open-doc="' + mdm[1] + '" data-doc-name="' + title + '">' + label + DOCLINK_ARROW + '</a>';
+    }
+    if(/\.md$/i.test(label) || !label) label = 'the linked document';   // non-Hub .md → no filename shown
+    return '<span class="ln">' + label + '</span>';
   });
   out = out.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');   // non-greedy so bold can wrap italics
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
@@ -1160,6 +1171,10 @@ const SOP_GROUPS = [
   },
 ];
 
+// id → title for every SOP shown in the Hub, so mdInlineHub can turn a relative `.md`
+// cross-reference into an in-Hub reader BUTTON (never a filename or repo path).
+const hubSopMeta = new Map(SOP_GROUPS.flatMap((g) => g.items).map((it) => [basename(it.file, '.md'), it.title]));
+
 /* ---------------- build SOP cards ---------------- */
 // Load the clients up-front (reuse the CI dashboard engine) so the per-client SOP groups
 // can link straight down to each client's intelligence card (#slug). Used again below to
@@ -1546,7 +1561,7 @@ const BODY = `
       <svg viewBox="18 20 82 72" class="jkmark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></svg>
       <div>
         <b>JK Accounting Group — Knowledge Hub</b>
-        <p>Generated from the repository (<code>projects/sops</code> + <code>projects/client-intelligence</code>). The repo is the source of truth; this page is a view of it. Re-run <code>build-hub.mjs</code> to refresh. Procedures open a designed page in the reader; client cards expand in place.</p>
+        <p>The firm's single front door to every documented procedure and client. Procedures open as a designed page in the reader; client cards expand in place. Search or filter to find anything in seconds.</p>
       </div>
     </div>
     <div class="bottom">
