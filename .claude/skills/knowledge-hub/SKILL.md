@@ -1,6 +1,6 @@
 ---
 name: knowledge-hub
-description: Build, extend, or fix the firm's Knowledge Hub — the single on-brand page (projects/knowledge-hub/) that indexes every SOP and every client, opens each document as a designed page in an in-page reader, and carries tools like the Chart-of-Accounts CSV builder. Use when adding or changing what the Hub shows, adding/curating an SOP or a client on it, changing the reader or a tool, restyling a Hub page, or (re)publishing its shareable link. Encodes what the Hub is for and Lilian's standing preferences (team-facing = designed, never GitHub/repo-file links; SOPs open INSIDE the Hub; client cards reuse the client-intelligence engine; bookkeeping SOPs are visual/dynamic — flowcharts, schemas, tables — always via the impeccable skill + the Atlas design system), the self-contained/portable-to-Odoo constraint, and the verify-before-publish gate that prevents whole-page-JS breakage. Read before touching projects/knowledge-hub/ or its build.
+description: Build, extend, or fix the firm's Knowledge Hub — the single on-brand page (projects/knowledge-hub/) that indexes every SOP, every client, and the firm's downloadable Templates, opens each document as a designed page in an in-page reader, and carries tools like the Chart-of-Accounts CSV builder. Use when adding or changing what the Hub shows, adding/curating an SOP or a client on it, changing the reader or a tool, restyling a Hub page, or (re)publishing its shareable link. Encodes what the Hub is for and Lilian's standing preferences (team-facing = designed, never GitHub/repo-file links; SOPs open INSIDE the Hub; client cards reuse the client-intelligence engine; bookkeeping SOPs are visual/dynamic — flowcharts, schemas, tables — always via the impeccable skill + the Atlas design system), the self-contained/portable-to-Odoo constraint, and the verify-before-publish gate that prevents whole-page-JS breakage. Read before touching projects/knowledge-hub/ or its build.
 ---
 
 # Knowledge Hub — the house way
@@ -24,10 +24,10 @@ emitted script silently broke *every* click.
    If they need to open something, it opens as a **designed page inside the Hub** (the
    reader) or **downloads a real file** (PDF / PNG / CSV) — never a repo/GitHub link. The
    repo internals are for Julia & Lilian only.
-2. **Two areas, now two separate VIEWS in a left-index app shell (see rule 10):**
-   Procedures (SOPs) and Client intelligence. You see **one at a time** — the left index
+2. **Three areas, three separate VIEWS in a left-index app shell (see rule 10):**
+   Procedures (SOPs), Client intelligence, and Templates (rule 11). You see **one at a time** — the left index
    switches between them. Filters are **contextual**: a search box + **Owner** filter are
-   shared; the two **client facets** — **Structure** and **Service** (Bookkeeping · Payroll ·
+   shared across all three views; the two **client facets** — **Structure** and **Service** (Bookkeeping · Payroll ·
    Sales tax · Income tax) — appear **only in the Client view** (they have no meaning for
    SOPs, and are cleared when you leave it). Structure is deliberately **two
    dimensions, not one list**: a **Legal | Tax toggle** (Lilian, Jul 2026) swaps which chip
@@ -146,6 +146,28 @@ emitted script silently broke *every* click.
     jumped-to-card flash (`cxFlash`), CSS smooth-scroll with `scroll-margin-top` for the sticky
     bar, and the drawer slide — **all gated behind `prefers-reduced-motion`**, and no content is
     ever hidden waiting on a JS reveal (impeccable rule).
+
+11. **Templates is the third VIEW — a library to FIND and DOWNLOAD the firm's reusable files
+    (Lilian, Jul 2026).** Born because SOPs, client intelligence and *templates* shouldn't share
+    one bucket: a template is a distinct kind of asset — a file you copy/send, not a "how we do
+    X." Two bands, echoing the split-by-nature idea: **Firm templates** — standalone files that
+    belong to no single SOP (the Chart-of-Accounts master; Tax-Prep Proposals, a **reserved**
+    "coming soon" card until Lilian's other session ships them) — and **From a procedure** —
+    templates that live inside an SOP (the blank Child & Dependent Care form; the Double
+    client-sign-in guides). **The rule: a template attached to an SOP is INDEXED here, never
+    moved** — its download sits on the Templates card AND the original stays in its SOP, so each
+    SOP-attached card carries an **"Open its SOP"** `data-open-doc` link to that SOP's reader.
+    Downloads reuse the global `a[download][href^="data:"]` → `saveFile` interceptor, so they save
+    the **real file on the host** (Odoo / a normal browser) and degrade honestly in the Artifact
+    sandbox (which blocks `pdf`/`xlsx` — a documented platform limit, contract 0.1.15: base +
+    extended `docx pptx epub csv ttf html svg`, and even the extended set is off by default, so
+    the artifact preview can't save these; the real host and Odoo can). Mechanics: a `TEMPLATES`
+    array in `build-hub.mjs` — `{band, kind, name, owner, formats, downloads:[{label,file,mime,path,primary?,ghost?}], open?, reserved?}`
+    — drives `tplCardHtml`; each asset is embedded as a data URI (self-contained). Cards are
+    `<div class="hcard doc-card tcard" data-card data-type="tpl">` so they share the search +
+    Owner filter + empty-hide logic; the view has **no extra facets**. **To add a template:** add a
+    `TEMPLATES` entry (and, if it belongs to an SOP, set `open.id` to that SOP's reader id = its
+    `.md` basename). Ecoorganic-style visual polish isn't needed here — these are file cards.
 
 ## Design is not optional — impeccable + the Design System, always
 

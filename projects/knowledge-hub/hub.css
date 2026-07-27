@@ -615,6 +615,31 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
 .cx-soplink:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px;}
 .cx-none{color:var(--muted); font-style:italic;}
 
+/* ---------- Templates view: file cards with download actions (Atlas tokens only) ---------- */
+/* card reuses .hcard (container) + .doc-card (ttl/blurb/dmeta); it's a <div>, so the
+   a.hcard hover/arrow rules never apply. Only the template-specific bits live here. */
+.tcard{cursor:default;}
+.tcard .khead{align-items:flex-start;}
+.tcard .tfmts{display:inline-flex; gap:5px; margin-left:auto; flex-wrap:wrap; justify-content:flex-end;}
+.tcard .fmt{font-family:var(--mono); font-size:9px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--accent-2); background:var(--pill-teal-bg); border:1px solid var(--border);
+  border-radius:5px; padding:2px 6px; white-space:nowrap;}
+.tcard .tpl-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+.tpl-sop{display:inline-flex; align-items:center; gap:5px; margin-left:auto; cursor:pointer;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:0.02em; color:var(--accent);
+  text-decoration:none; border-radius:6px; padding:3px 4px;}
+.tpl-sop:hover{color:var(--teal-600); text-decoration:underline;}
+:root[data-theme="dark"] .tpl-sop:hover{color:var(--teal-200);}
+.tpl-sop:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.tpl-sop .tpl-arw{width:13px; height:13px; flex:0 0 auto;}
+.tcard.reserved{border-style:dashed; opacity:0.82;}
+.stat.soon{color:var(--bronze-500);}
+:root[data-theme="dark"] .stat.soon{color:var(--bronze-200);}
+.stat.soon .d{background:var(--bronze-500); box-shadow:0 0 0 3px rgba(207,162,104,0.16);}
+.tpl-soon{display:inline-flex; align-items:center; gap:8px; margin-top:14px; color:var(--muted);
+  font-family:var(--mono); font-size:11px; letter-spacing:0.02em;}
+.tpl-soon svg{width:15px; height:15px; opacity:.7;}
+
 /* ---------- Print book: cover + table of contents (screen-hidden) ---------- */
 .pbook{display:none;}
 

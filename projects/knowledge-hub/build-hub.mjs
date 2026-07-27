@@ -124,6 +124,7 @@ const IC = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
   dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
+  tpl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>',
   menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
   wrench: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.1-.5-.5-2.1z"/></svg>',
 };
@@ -1413,6 +1414,113 @@ const clientCount = clients.length;
 const totalCount = sopCount + clientCount;
 const today = new Date().toISOString().slice(0, 10);
 
+/* ---------------- Templates view (a third area) ----------------
+   One place to FIND and DOWNLOAD the firm's reusable files fast. Two bands:
+   FIRM TEMPLATES stand alone (no SOP); FROM A PROCEDURE indexes templates that
+   live inside an SOP — grab them here, or open the SOP for full context. The
+   original always stays in its SOP (we index it, we never move it).
+   Downloads reuse the global a[download][href^="data:"] → saveFile interceptor,
+   so they save the REAL file on the host (Odoo / a normal browser) and degrade
+   honestly in the Artifact sandbox (which blocks pdf/xlsx). Every asset is
+   embedded as a data URI, so the page stays self-contained. */
+const TEMPLATES = [
+  { band: 'firm', kind: 'Bookkeeping', name: 'Chart of Accounts — Firm Standard', owner: 'lilian',
+    blurb: 'The firm’s one numbering system for every client — the 125-account master. Import it into a new client’s QuickBooks, then activate, rename and add niche sub-accounts within the same ranges.',
+    formats: ['XLSX'],
+    downloads: [
+      { label: 'Download master (Excel)', file: 'S-Corp-COA-master.xlsx',
+        mime: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        path: 'projects/sops/assets/S-Corp-COA-master.xlsx', primary: true },
+    ],
+    open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
+
+  { band: 'firm', kind: 'Tax preparation', name: 'Tax Preparation Proposals', owner: 'julia', reserved: true,
+    blurb: 'The firm’s proposal templates for tax-prep engagements. Being prepared in a separate working session — this slot is reserved and will carry the downloads as soon as they’re ready.' },
+
+  { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
+    blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
+    formats: ['PDF', 'PNG'],
+    downloads: [
+      { label: 'Download blank form (PDF)', file: 'child-dependent-care-provider-statement.pdf',
+        mime: 'application/pdf', path: 'projects/sops/assets/child-dependent-care-provider-statement.pdf', primary: true },
+      { label: 'Download image (PNG)', file: 'child-dependent-care-provider-statement.png',
+        mime: 'image/png', path: 'projects/sops/assets/child-dependent-care-provider-statement.png', ghost: true },
+    ],
+    open: { id: 'child-dependent-care-provider-statement', label: 'Open its SOP' } },
+
+  { band: 'sop', kind: 'Client portal (Double)', name: 'Double Portal — Client Sign-In Guides', owner: 'julia',
+    blurb: 'The ready-to-send one-page guides that walk a client through their first sign-in to the Double portal — English & Russian. The full visual guide, plus the email and WhatsApp copy, live in the SOP.',
+    formats: ['PDF · EN', 'PDF · RU'],
+    downloads: [
+      { label: 'Guide PDF — English', file: 'double-first-login-en.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-first-login-en.pdf', primary: true },
+      { label: 'Guide PDF — Russian', file: 'double-first-login-ru.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-first-login-ru.pdf', ghost: true },
+    ],
+    open: { id: 'double-portal-first-login', label: 'Open its SOP (guide · email · WhatsApp)' } },
+];
+
+const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+// One template → a file card with download button(s) + (if it belongs to an SOP) an
+// "Open its SOP" trigger. Not an <a> wrapper (it holds interactive children); data-card /
+// data-owner / data-text wire it into the shared search + owner filter + empty-hide logic.
+function tplCardHtml(t) {
+  const ok = t.owner;
+  const text = [t.name, t.blurb, t.kind, ownerName(ok), (t.formats || []).join(' '), 'template'].join(' ').toLowerCase();
+  const badges = (t.formats || []).map((f) => `<span class="fmt">${esc(f)}</span>`).join('');
+  const actions = t.reserved
+    ? `<div class="tpl-soon">${IC.doc}<span>In preparation — coming soon</span></div>`
+    : `<div class="tpl-actions">` + (t.downloads || []).map((d) => {
+        const cls = 'dlbtn' + (d.primary ? ' big' : '') + (d.ghost ? ' ghost' : '');
+        return `<a class="${cls}" href="${dataUri(d.mime, d.path)}" download="${esc(d.file)}">${IC.dl}${esc(d.label)}</a>`;
+      }).join('') + `</div>`;
+  const open = t.open
+    ? `<a class="tpl-sop" role="button" tabindex="0" data-open-doc="${t.open.id}" data-doc-name="${esc(t.name)}">${esc(t.open.label)}${TARROW}</a>`
+    : '';
+  return `
+      <div class="hcard doc-card tcard${t.reserved ? ' reserved' : ''}" data-card data-type="tpl" data-owner="${ok}" data-text="${esc(text)}">
+        <div class="khead">
+          <span class="kkick">${esc(t.kind)}</span>
+          ${t.reserved ? '<span class="stat soon"><span class="d"></span>Coming soon</span>' : `<span class="tfmts">${badges}</span>`}
+        </div>
+        <div class="ttl">${esc(t.name)}</div>
+        <p class="blurb">${esc(t.blurb)}</p>
+        ${actions}
+        <div class="dmeta">
+          <span class="owner"><span class="av ${ok}">${esc(ownerName(ok)[0])}</span>${esc(ownerName(ok))}</span>
+          ${open}
+        </div>
+      </div>`;
+}
+
+const tplFirm = TEMPLATES.filter((t) => t.band === 'firm');
+const tplSop = TEMPLATES.filter((t) => t.band === 'sop');
+const tplCount = TEMPLATES.filter((t) => !t.reserved).length;
+function tplBandHtml(title, sub, domId, items) {
+  if (!items.length) return '';
+  return `
+      <div class="hband" data-section id="${domId}">
+        <div class="hband-hd"><h3>${esc(title)}</h3><p>${sub}</p></div>
+        <div class="hgroup" data-group>
+          <div class="dgrid">${items.map(tplCardHtml).join('')}</div>
+        </div>
+      </div>`;
+}
+const templatesViewHtml = `
+    <section class="hview" data-view="tpl" hidden>
+      <div class="hview-hd">
+        <div class="hview-t"><h2>Templates</h2><span class="ct">${tplCount}</span></div>
+        <p class="hview-sub">The firm’s reusable files in one place — <b>find and download</b> what you need. <b>Firm templates</b> stand alone; templates that belong to a procedure are indexed here too, with a link to open their SOP. The original always stays in its SOP.</p>
+      </div>
+      ${tplBandHtml('Firm templates', 'Standalone files that don’t belong to a single procedure — import, copy, or send them as-is.', 'tpl-firm', tplFirm)}
+      ${tplBandHtml('From a procedure', 'Blank forms and client-send guides that live inside an SOP — grab them here, or open the SOP for the full context.', 'tpl-sop', tplSop)}
+    </section>`;
+const tplIndexHtml =
+  `<p class="hix-t">Templates</p>`
+  + (tplFirm.length ? `<a class="hix-a" href="#tpl-firm" data-spy="tpl-firm">Firm templates<span class="hix-n">${tplFirm.filter((t) => !t.reserved).length}</span></a>` : '')
+  + (tplSop.length ? `<a class="hix-a" href="#tpl-sop" data-spy="tpl-sop">From a procedure<span class="hix-n">${tplSop.filter((t) => !t.reserved).length}</span></a>` : '');
+
 /* ---------------- assemble ---------------- */
 const medallion = `<svg class="medallion" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group medallion">
   <defs><path id="arcTop" d="M20.9 51.7 A40 40 0 0 1 99.1 51.7" fill="none"></path><path id="arcBot" d="M20.9 68.3 A40 40 0 0 0 99.1 68.3" fill="none"></path></defs>
@@ -1465,6 +1573,7 @@ const BODY = `
       <span class="chipm live"><span class="dot"></span><b data-count="${totalCount}">${totalCount}</b>&nbsp;documents</span>
       <span class="chipm"><span class="dot"></span><b data-count="${sopCount}">${sopCount}</b>&nbsp;procedures</span>
       <span class="chipm"><span class="dot"></span><b data-count="${clientCount}">${clientCount}</b>&nbsp;clients</span>
+      <span class="chipm"><span class="dot"></span><b data-count="${tplCount}">${tplCount}</b>&nbsp;templates</span>
       <span class="chipm"><span class="dot"></span>Generated&nbsp;<b>${today}</b></span>
     </div>
   </div>
@@ -1481,6 +1590,7 @@ const BODY = `
       <div class="viewseg" role="tablist" aria-label="Choose an area">
         <button class="viewbtn" role="tab" type="button" data-view-btn="sop" aria-selected="true">${IC.doc}<span class="vb-l">Procedures</span><span class="vb-n">${sopCount}</span></button>
         <button class="viewbtn" role="tab" type="button" data-view-btn="client" aria-selected="false">${IC.people}<span class="vb-l">Client intelligence</span><span class="vb-n">${clientCount}</span></button>
+        <button class="viewbtn" role="tab" type="button" data-view-btn="tpl" aria-selected="false">${IC.tpl}<span class="vb-l">Templates</span><span class="vb-n">${tplCount}</span></button>
       </div>
 
       <!-- search -->
@@ -1508,6 +1618,7 @@ const BODY = `
       <!-- the clickable index (scrollspy) -->
       <nav class="hix" data-index-view="sop" aria-label="Procedures index">${sopIndexHtml}</nav>
       <nav class="hix" data-index-view="client" aria-label="Client index" hidden>${clientIndexHtml}</nav>
+      <nav class="hix" data-index-view="tpl" aria-label="Templates index" hidden>${tplIndexHtml}</nav>
 
       <details class="hnav-help">
         <summary>How to use this Hub</summary>
@@ -1547,6 +1658,7 @@ const BODY = `
       </div>
       ${clientOwnerGroupsHtml}
     </section>
+${templatesViewHtml}
 
     <div class="noresults" id="noresults">
       <div class="box"><h3>No matches</h3><p>Nothing here matches your search and filters. Try a different word, or reset the filters.</p></div>
