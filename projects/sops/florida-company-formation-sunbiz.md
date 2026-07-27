@@ -42,7 +42,7 @@ flowchart TD
   A["New client forming a Florida company on Sunbiz (Part 1)"] --> B["Check the name is available + carries the right suffix"]
   B --> C{"Need a corporate structure — shares, a board, outside investors?"}
   C -- "Yes" --> D["Profit Corporation: Articles of Incorporation (shares, officers/directors) — $70"]
-  C -- "No — LLC (firm default)" --> E["LLC: Articles of Organization (members/managers, no shares) — $125"]
+  C -- "No — LLC (firm default)" --> E["LLC: Articles of Organization (members/managers, no shares) — $125 (verify)"]
   D --> F["Same core screens: registered agent, addresses, correspondence email, optional effective date"]
   E --> F
   F --> G["Pay the state fee + submit — final: no edits, cancels, or refunds"]

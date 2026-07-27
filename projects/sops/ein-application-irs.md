@@ -41,7 +41,7 @@ the after-steps.
 flowchart TD
   A["Entity is Active on Sunbiz — needs its federal EIN"] --> B{"Responsible party has an SSN or ITIN?"}
   B -- "Yes" --> C["Path A: apply online (IRS EIN Assistant) — EIN issued immediately"]
-  B -- "No — foreign owner" --> D["Path B: Form SS-4 by fax, 'Foreign' on line 7b — EIN faxed back in ~4 business days"]
+  B -- "No — neither SSN nor ITIN" --> D["Path B: Form SS-4 by fax, 'Foreign' on line 7b — EIN faxed back in ~4 business days"]
   C --> E["An LLC records only its default classification — the EIN never elects S-corp (that is Form 2553)"]
   D --> E
   E --> F["Save the confirmation letter (CP 575-equivalent) — record the EIN"]

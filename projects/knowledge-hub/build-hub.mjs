@@ -942,7 +942,7 @@ const SOP_GROUPS = [
           decision: {
             tag: 'Entity choice', q: `Need a corporate structure — shares, a board, outside investors?`,
             yes: { bl: `Yes — Profit Corporation`, body: `Files <b>Articles of Incorporation</b>: authorized <b>shares</b> (never zero), <b>officers/directors</b> listed now, a corporate purpose. <b>$70</b> to form &middot; <b>$150</b> annual report.` },
-            no:  { bl: `No — LLC (the firm's default)`, body: `Files <b>Articles of Organization</b>: <b>no shares</b>, no required purpose, <b>members/managers</b> + member- vs manager-managed. <b>$125</b> to form &middot; <b>$138.75</b> annual report.` },
+            no:  { bl: `No — LLC (the firm's default)`, body: `Files <b>Articles of Organization</b>: <b>no shares</b>, no required purpose, <b>members/managers</b> + member- vs manager-managed. <b>$125</b> to form &middot; <b>$138.75</b> annual report <em>(verify at filing)</em>.` },
           },
           then: [
             { t: `Both paths file the <b>same core screens</b>: a <b>registered agent</b> (FL street address, no PO box — an individual types their name to sign), principal &amp; mailing address, a <b>monitored</b> correspondence email, an optional effective date (the <b>Jan 1</b> tip), then <b>pay the state fee</b> — submission is <b>final</b>.` },
