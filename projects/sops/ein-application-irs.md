@@ -1,6 +1,6 @@
 # SOP: Federal EIN Application (IRS Form SS-4) — after the entity is active on Sunbiz
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-15
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-27
 
 The complete, self-contained procedure for getting a **federal EIN** (Employer
 Identification Number) from the IRS for a company that is **already formed and
@@ -26,6 +26,27 @@ company-formation flow — **Part 1**, the Sunbiz filing itself, is
 > the IRS phone line below.
 
 ---
+
+## The process at a glance
+
+Once the entity is **Active on Sunbiz**, getting its federal EIN forks on one
+question — does the responsible party have an **SSN or ITIN**? If yes, apply
+online and the EIN is issued on the spot; if not (a foreign owner), fax **Form
+SS-4** with **"Foreign"** on line 7b and the EIN comes back in a few days. Both
+paths end the same way: an LLC records only its default classification (the EIN
+never elects S-corp), then save the confirmation, record the EIN, and trigger
+the after-steps.
+
+```mermaid
+flowchart TD
+  A["Entity is Active on Sunbiz — needs its federal EIN"] --> B{"Responsible party has an SSN or ITIN?"}
+  B -- "Yes" --> C["Path A: apply online (IRS EIN Assistant) — EIN issued immediately"]
+  B -- "No — neither SSN nor ITIN" --> D["Path B: Form SS-4 by fax, 'Foreign' on line 7b — EIN faxed back in ~4 business days"]
+  C --> E["An LLC records only its default classification — the EIN never elects S-corp (that is Form 2553)"]
+  D --> E
+  E --> F["Save the confirmation letter (CP 575-equivalent) — record the EIN"]
+  F --> G["Trigger the after-steps: Form 2553, bank account, FL DOR, local BTR, payroll"]
+```
 
 ## 0. Intake — gather these before you touch the application
 

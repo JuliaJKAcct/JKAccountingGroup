@@ -273,12 +273,34 @@ function templateBlock(t){
     + `</div>`;
 }
 // BTR: reuse the hand-laid render's masthead+main (the premium designed page)
+// BTR keeps its premium hand-laid decision flowchart as the "Diagram" view; this is the
+// linear "Steps" companion (county first, then city) shown beside it via the toggle.
+const BTR_STEPS = [
+  { t: `Zoning check first`, d: `Home-occupation use must be allowed — the gate before any filing`, ic: 'search' },
+  { t: `County: apply on BTExpress`, d: `Submit, then click the confirmation link in the 1st email (not the end)`, ic: 'globe' },
+  { t: `County: pay the balance`, d: `2nd email (~24–48h) → pay → print the County BTR`, ic: 'pay' },
+  { t: `City: apply on LBTR`, d: `Requires the active county account from Phase 1`, ic: 'form' },
+  { t: `City: pay`, d: `$25 + classification tax (card / PayPal)`, ic: 'pay' },
+  { t: `City review → issues the BTR`, d: `Fix category / license / balance if flagged; then the city mails it`, ic: 'check' },
+  { t: `Post both receipts`, d: `Display at the business · calendar the Sept 30 renewal`, ic: 'check', k: 'done' },
+];
 function btrReaderInner(){
   try{
     const raw = read(resolve(repoRoot, '.claude/skills/sop-authoring/render/examples/btr-body.html'));
     const a = raw.indexOf('<section class="mast">');
     const b = raw.indexOf('</main>');
-    if(a !== -1 && b !== -1) return raw.slice(a, b + '</main>'.length);
+    if(a === -1 || b === -1) return null;
+    let body = raw.slice(a, b + '</main>'.length);
+    // Wrap the existing hand-laid <figure class="flow"> (its decision diagram) in the
+    // Steps/Diagram toggle and add the linear Steps pcflow, matching the other SOPs.
+    const fs = body.indexOf('<figure class="flow');
+    const fe = fs !== -1 ? body.indexOf('</figure>', fs) : -1;
+    if(fs !== -1 && fe !== -1){
+      const figure = body.slice(fs, fe + '</figure>'.length);
+      const toggle = flowViewsHtml('btr', taskFlow({ flow: BTR_STEPS }), figure);
+      body = body.slice(0, fs) + toggle + body.slice(fe + '</figure>'.length);
+    }
+    return body;
   }catch(e){}
   return null;
 }
@@ -770,9 +792,9 @@ function schemaFlow(s){
 // JS, so it works with JS off and can't break the emitted script; both are alternative views
 // of the same content (Steps is checked/visible by default). Degrades to whichever single
 // view is configured.
-function flowViews(id, cfg){
-  const steps = cfg.flow && cfg.flow.length ? taskFlow({ flow: cfg.flow }) : '';
-  const diagram = cfg.schema ? schemaFlow(cfg.schema) : '';
+// The toggle from two pre-built HTML panels (used directly by BTR, whose Diagram panel is its
+// hand-laid figure). Degrades to whichever single panel is non-empty.
+function flowViewsHtml(id, steps, diagram){
   if(steps && !diagram) return steps;
   if(diagram && !steps) return diagram;
   if(!steps && !diagram) return '';
@@ -789,6 +811,11 @@ function flowViews(id, cfg){
     + `<div class="fv-panel fv-p-steps">${steps}</div>`
     + `<div class="fv-panel fv-p-diagram">${diagram}</div>`
     + `</div>`;
+}
+function flowViews(id, cfg){
+  return flowViewsHtml(id,
+    cfg.flow && cfg.flow.length ? taskFlow({ flow: cfg.flow }) : '',
+    cfg.schema ? schemaFlow(cfg.schema) : '');
 }
 function vaultButton(v){
   if(!v || !v.url) return '';
@@ -900,8 +927,52 @@ const SOP_GROUPS = [
     name: 'Company formation', note: 'Standing up a new entity, start to finish',
     items: [
       { file: 'florida-company-formation-sunbiz.md', title: 'Florida Company Formation (Sunbiz)', tag: 'Part 1',
+        flowLede: `Forming a Florida company on Sunbiz (Part 1) turns on one choice — LLC or Profit Corporation. Different Articles, then the same core screens and the same finish: pay, confirm Active, calendar the annual report, hand off to Part 2 (the EIN).`,
+        flow: [
+          { t: `Intake & decide`, d: `Entity type, name, RA, people, payment — from the client's Business Intake Form`, ic: 'form' },
+          { t: `Check the name`, d: `Sunbiz search — distinguishable + the right suffix (LLC or Corp/Inc.)`, ic: 'search' },
+          { t: `Start E-Filing`, d: `Sunbiz start page → pick entity type → accept the disclaimer → new filing`, ic: 'globe' },
+          { t: `Complete the Articles`, d: `Filing info, addresses, RA signs, shares/members, officers, incorporator signature`, ic: 'edit' },
+          { t: `Pay the state fee & submit`, d: `Card via NIC/Tyler — submission is final: no edits, cancels, or refunds`, ic: 'pay' },
+          { t: `Confirm Active & save`, d: `Document number + receipt to the client's system — verify Active on Sunbiz`, ic: 'check' },
+          { t: `Calendar & hand off`, d: `Annual report Jan 1–May 1 (first the year after) → Part 2: the federal EIN`, ic: 'refresh', k: 'done' },
+        ],
+        schema: {
+          start: { t: `A new client is forming a <b>Florida company</b> on Sunbiz — the firm's <b>Part 1</b>. Pick the entity type first, from the client's Business Intake Form.`, d: `S-corp is a tax election — it changes nothing on the Sunbiz form` },
+          decision: {
+            tag: 'Entity choice', q: `Need a corporate structure — shares, a board, outside investors?`,
+            yes: { bl: `Yes — Profit Corporation`, body: `Files <b>Articles of Incorporation</b>: authorized <b>shares</b> (never zero), <b>officers/directors</b> listed now, a corporate purpose. <b>$70</b> to form &middot; <b>$150</b> annual report.` },
+            no:  { bl: `No — LLC (the firm's default)`, body: `Files <b>Articles of Organization</b>: <b>no shares</b>, no required purpose, <b>members/managers</b> + member- vs manager-managed. <b>$125</b> to form &middot; <b>$138.75</b> annual report <em>(verify at filing)</em>.` },
+          },
+          then: [
+            { t: `Both paths file the <b>same core screens</b>: a <b>registered agent</b> (FL street address, no PO box — an individual types their name to sign), principal &amp; mailing address, a <b>monitored</b> correspondence email, an optional effective date (the <b>Jan 1</b> tip), then <b>pay the state fee</b> — submission is <b>final</b>.` },
+            { t: `Entity posts with a <b>document number</b> → confirm <b>Active</b>, save the receipt, <b>calendar the annual report</b> (Jan 1–May 1, first one the year after formation), then hand off to <b>Part 2 — the EIN</b>.`, k: 'done', pill: 'Active' },
+          ],
+        },
         blurb: 'Form the company with the State of Florida on Sunbiz — entity choice (LLC vs Corp, the S-corp angle), shared prerequisites, the Articles screen by screen, fees and the annual-report cadence.' },
       { file: 'ein-application-irs.md', title: 'Federal EIN Application (SS-4)', tag: 'Part 2',
+        flowLede: `Once the entity is Active on Sunbiz, the EIN forks on one question — does the responsible party have an SSN or ITIN? Online (instant) if yes; fax the SS-4 as "Foreign" if not. Both paths converge on saving the letter and the after-steps.`,
+        flow: [
+          { t: `Confirm the entity is Active`, d: `Sunbiz shows Active — capture the exact legal name & formation date`, ic: 'search' },
+          { t: `Gather the intake first`, d: `Every answer ready — the online tool times out after 15 min, no save`, ic: 'form' },
+          { t: `Check the responsible party's ID`, d: `SSN/ITIN → apply online · neither → SS-4 by fax, "Foreign" on line 7b`, ic: 'key' },
+          { t: `Fill it in carefully`, d: `An LLC records only its default classification — the EIN never elects S-corp`, ic: 'edit' },
+          { t: `Submit the application`, d: `IRS EIN Assistant online (issued on screen) or Form SS-4 by fax/mail/phone`, ic: 'send' },
+          { t: `Save the confirmation letter`, d: `CP 575-equivalent PDF or fax-back → client's Drive/Double, never the repo`, ic: 'save' },
+          { t: `Record the EIN & trigger next steps`, d: `Form 2553 (S-corp), bank account, FL DOR, local BTR, payroll`, ic: 'refresh', k: 'done' },
+        ],
+        schema: {
+          start: { t: `A Florida entity is <b>Active on Sunbiz</b> and needs its federal <b>EIN</b>`, d: `exact legal name & formation date in hand` },
+          decision: {
+            tag: 'ID check', q: `Does the responsible party have an SSN or ITIN?`,
+            yes: { bl: `Yes — has SSN or ITIN`, body: `<b>Path A — apply online</b> via the IRS EIN Assistant. EIN issued <b>immediately</b> on screen, same session. <span class="arw">↓ save the letter</span>` },
+            no:  { bl: `No — foreign owner, neither`, body: `<b>Path B — Form SS-4 by fax</b> with <b>"Foreign"</b> on line 7b. EIN faxed back in <b>~4 business days</b> — no ITIN needed first.` },
+          },
+          then: [
+            { t: `Either path: an <b>LLC</b> records only its <b>default</b> classification — the EIN <b>never elects S-corp</b> (that's a separate <b>Form 2553</b>)` },
+            { t: `Save the confirmation letter (<b>CP 575</b>-equivalent / fax-back) to the client's system, record the EIN &amp; trigger the after-steps`, k: 'done', pill: 'EIN in hand' },
+          ],
+        },
         blurb: 'Get the business’s federal EIN once it’s active on Sunbiz — the SSN/ITIN online path vs the fax “Foreign” path, the LLC-classification traps, and the after-steps.' },
     ],
   },
