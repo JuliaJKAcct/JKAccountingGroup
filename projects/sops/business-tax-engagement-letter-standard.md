@@ -20,19 +20,27 @@ those are separate document types.
 ## What you fill in — the per-client fields
 
 These are **everything that changes per client** (verified against the firm's master
-template and a real filled letter — nothing else varies). The generator asks for all of
-them and won't produce the PDF until each is complete:
+template and a real filled letter — nothing else varies). The generator won't produce the
+PDF until every **required** field is complete; the two **representative** fields are
+**optional**:
 
-1. **Letter date**
-2. **Company (entity) name**
-3. **Address — line 1**
-4. **Address — line 2** (city, state, ZIP)
-5. **Entity type** — C-Corporation · S-Corporation · Partnership
-6. **Tax year** (e.g. 2025 → "December 31, 2025")
-7. **Fee (USD)**
-8. **Representative — name** (who signs for the client)
-9. **Representative — title** (Manager / Partner / Member / President …)
-10. **Client info-needed-by date**
+1. **Letter date** — required
+2. **Company (entity) name** — required
+3. **Address — line 1** — required
+4. **Address — line 2** (city, state, ZIP) — required
+5. **Entity type** — C-Corporation · S-Corporation · Partnership — required
+6. **Tax year** (e.g. 2025 → "December 31, 2025") — required
+7. **Fee (USD)** — required
+8. **Representative — name** — *optional* (who signs for the client)
+9. **Representative — title** — *optional* (Manager / Partner / Member / President …)
+10. **Client info-needed-by date** — required
+
+**The representative fields are optional.** They pre-print the person who signs *on behalf
+of* the client (the owner/manager/member/president). Leave them blank when the client
+signs personally with no separate representative — the letter then prints the blank
+signature lines for the client to fill in by hand. When entered, the name sits **on** the
+signature line and is shown as the accepting party; when blank, the company is the
+accepting party.
 
 ## What the tool derives for you (don't enter these)
 

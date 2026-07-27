@@ -41,19 +41,26 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
 ## Business tax-prep engagement letter — the fields to collect
 
 These are **everything that changes per client** (verified against the template and a
-real filled letter — nothing else varies). Ask for all of them; the tool refuses to
-generate with any missing:
+real filled letter — nothing else varies). The tool refuses to generate while any
+**required** field is missing; the two **representative** fields are **optional**:
 
-1. **Letter date**
-2. **Company (entity) name**
-3. **Address — line 1**
-4. **Address — line 2** (city, state, ZIP)
-5. **Entity type** — C-Corporation (Form 1120) / S-Corporation (Form 1120-S) / Partnership (Form 1065)
-6. **Tax year** (e.g. 2025 → "December 31, 2025")
-7. **Fee (USD)**
-8. **Representative — name** (who signs for the client)
-9. **Representative — title** (Manager / Partner / Member / President …)
-10. **Client info-needed-by date**
+1. **Letter date** — required
+2. **Company (entity) name** — required
+3. **Address — line 1** — required
+4. **Address — line 2** (city, state, ZIP) — required
+5. **Entity type** — C-Corporation (Form 1120) / S-Corporation (Form 1120-S) / Partnership (Form 1065) — required
+6. **Tax year** (e.g. 2025 → "December 31, 2025") — required
+7. **Fee (USD)** — required
+8. **Representative — name** — *optional* (who signs for the client)
+9. **Representative — title** — *optional* (Manager / Partner / Member / President …)
+10. **Client info-needed-by date** — required
+
+**The representative fields are optional** because the person who signs *for* the client
+is only pre-printed when known. Leave them blank and the letter prints the blank
+signature lines for the client to complete by hand — e.g. when the owner signs
+personally, with no separate representative. When a name is entered, it appears **on** the
+signature line (and on the "ACCEPTED" party line); when blank, the "ACCEPTED" party is the
+company itself. This matches the firm's master template exactly.
 
 **Auto-derived from the entity type** (don't ask; the tool computes them):
 - Return line (1120 / 1120-S / 1065 wording)
@@ -90,6 +97,17 @@ generate with any missing:
   fonts embedded); include **visible electronic-signature fields**.
 - **Cleanup is billed separately** ($60/hr) only if needed; advisory/planning is $150/hr
   under a separate agreement.
+- **Match Julia's master template format exactly** (Lilian, Jul 2026 — the business
+  letter is the firm's daily-use document). The letterhead is **left-aligned** (logo, mono
+  bronze kicker, address line, phone line, bronze rule — never centered); the letter body
+  is **IBM Plex Sans**, section headings **Source Serif 4 teal**, subsection labels
+  underlined (not bold); the legal text is the **full AICPA wording verbatim** (all
+  subsections — Arguable positions, Bookkeeping assistance, Prior year review, Estimated
+  tax payments, Tax planning, Government inquiries, Third-party requests, Documentation,
+  Personal expenses, State & local, Foreign investments, Foreign filing, Virtual currency,
+  Ultimate responsibility — never a condensed paraphrase). The source of truth for this
+  format is `generator-scripts/body.js` + `common.js` (the docx engine). In the signature
+  block, a filled value sits **on** the signature line, not before it.
 - **Client data never enters the repo** — names, EINs, addresses, and dollar figures live
   in the firm's systems; the finished document goes to the user.
 
