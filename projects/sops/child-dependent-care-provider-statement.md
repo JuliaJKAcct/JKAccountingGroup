@@ -5,8 +5,7 @@
 > **Where client data goes:** the **completed, signed** statement — with the
 > provider's name, address, SSN/EIN, and the dollar amount — is **sensitive**. It
 > lives in the **client's Drive / Double** folder, **never** in this repo. This
-> SOP keeps only the reusable procedure and the **blank** template
-> ([`assets/child-dependent-care-provider-statement.pdf`](./assets/child-dependent-care-provider-statement.pdf)).
+> SOP keeps only the reusable procedure and the [**blank** template PDF](./assets/child-dependent-care-provider-statement.pdf).
 
 When a Tax Return client paid for the care of a child or dependent (e.g. a
 **babysitter** for a child under 13) so the client could work, those costs may
@@ -76,8 +75,8 @@ flowchart TD
 
 You need, in hand:
 
-1. The **blank template** —
-   [`assets/child-dependent-care-provider-statement.pdf`](./assets/child-dependent-care-provider-statement.pdf).
+1. The [**blank** template PDF](./assets/child-dependent-care-provider-statement.pdf)
+   (committed alongside this SOP).
 2. The **tax year** the care applies to.
 3. A way to reach the **care provider** (the babysitter/caregiver) to have them
    complete and **sign** it — and, ideally, the amounts/dates the client says they
@@ -161,16 +160,16 @@ threshold when it comes up; don't rely on a number from memory.)
 
 | What | Where |
 |---|---|
-| Blank template (this repo) | [`assets/child-dependent-care-provider-statement.pdf`](./assets/child-dependent-care-provider-statement.pdf) |
+| Blank template (this repo) | [child-dependent-care-provider-statement.pdf](./assets/child-dependent-care-provider-statement.pdf) |
 | IRS Form 2441 (Child and Dependent Care Expenses) | [irs.gov/forms-pubs/about-form-2441](https://www.irs.gov/forms-pubs/about-form-2441) |
 | IRS Publication 503 (Child and Dependent Care Expenses) | [irs.gov/forms-pubs/about-publication-503](https://www.irs.gov/forms-pubs/about-publication-503) |
 | Completed, signed statement | The **client's Drive / Double** folder (never the repo) |
 
 ## Appendix — the blank template
 
-The blank, copy-out form is committed at
-[`assets/child-dependent-care-provider-statement.pdf`](./assets/child-dependent-care-provider-statement.pdf).
-It is a one-page statement the care **provider** completes and signs:
+The blank, copy-out form is [committed alongside this SOP](./assets/child-dependent-care-provider-statement.pdf)
+(`child-dependent-care-provider-statement.pdf`). It is a one-page statement the
+care **provider** completes and signs:
 
 - **Tax Year**
 - **Provider Information** — Provider Name · Business Name (if applicable) · Street
