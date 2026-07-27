@@ -22,7 +22,7 @@ normally (email + password) from then on — no more expiring links.
 **directly on the password sign-in screen** (not the magic-link box), which
 removes a step — the client no longer has to pick "Sign in with password" first,
 they go straight to "Forgot your password?". (The portal's on-brand colors and
-logo are configured per [`double-portal-branding.md`](./double-portal-branding.md).)
+logo are configured per [the portal branding setup](./double-portal-branding.md).)
 
 ## The procedure (what the client does)
 
