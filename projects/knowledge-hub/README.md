@@ -102,7 +102,10 @@ that URL as `url`**. Passing the same *file path* keeps the URL stable only **wi
 one session**; a *different* session that doesn't pass the `url` **mints a new
 artifact URL** — that is how two "Knowledge Hub" links appeared (22-Jul + 23-Jul).
 Reuse the link above from every session and there's only ever one bookmark.
-Overwriting is safe (the Hub is a full rebuild from `main`, so nothing is lost).
+Overwriting is safe **when the live link was last published from merged `main`**
+(the Hub is a full rebuild from `main`, so nothing is lost) — the one exception is
+a link last published from an **unmerged** branch, which a blind overwrite would
+drop; publishing *after* merge keeps that from happening.
 Full mechanics — `capabilities: {downloads: true}`, the `force:true` guard case —
 live in the [`knowledge-hub` skill](../../.claude/skills/knowledge-hub/SKILL.md)
 (build & publish flow, step 5).

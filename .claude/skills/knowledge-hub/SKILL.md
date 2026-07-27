@@ -219,11 +219,16 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
      ended up with duplicate "Knowledge Hub" artifacts (22-Jul + 23-Jul). Reuse the URL
      above and there is never a second link. (Older duplicates can't be deleted via the
      tool — just leave them; this one is canonical.)
-   - **Overwriting it is safe:** the Hub is a deterministic build of `main`, so a fresh
-     build from the latest `main` is a superset of any older published snapshot — nothing
-     is lost. If the tool guards with "this session hasn't viewed the latest version,"
-     `force: true` is the correct resolution here (a full rebuild from `main`), **not** a
-     heavy WebFetch of the 5 MB page.
+   - **Overwriting it is safe *when the live link was last published from merged `main`*:**
+     the Hub is a deterministic build of `main`, so a fresh build from the latest `main` is
+     a superset of that snapshot — nothing is lost, and if the tool guards with "this session
+     hasn't viewed the latest version," `force: true` is the correct resolution (a full
+     rebuild from `main`), **not** a heavy WebFetch of the 5 MB page. **The one exception:**
+     because publish (this step) can run *before* commit→merge (step 6), a session could have
+     published the live link from an **unmerged branch**. If you can't be sure the last
+     publish came from merged `main`, don't blind-`force` — that would drop those unmerged
+     Hub features; rebuild from `main`, and if something looks missing, reconcile the source
+     first. (Following this flow — publish *after* merge — keeps the premise true.)
    - **Always pass `capabilities: {downloads: true}`** so the download/print buttons work
      (see the downloads section above), and keep the favicon stable (📚).
    - Publish only with the user's go-ahead.
