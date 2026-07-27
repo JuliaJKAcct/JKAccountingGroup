@@ -1518,8 +1518,8 @@ const templatesViewHtml = `
     </section>`;
 const tplIndexHtml =
   `<p class="hix-t">Templates</p>`
-  + (tplFirm.length ? `<a class="hix-a" href="#tpl-firm" data-spy="tpl-firm">Firm templates<span class="hix-n">${tplFirm.length}</span></a>` : '')
-  + (tplSop.length ? `<a class="hix-a" href="#tpl-sop" data-spy="tpl-sop">From a procedure<span class="hix-n">${tplSop.length}</span></a>` : '');
+  + (tplFirm.length ? `<a class="hix-a" href="#tpl-firm" data-spy="tpl-firm">Firm templates<span class="hix-n">${tplFirm.filter((t) => !t.reserved).length}</span></a>` : '')
+  + (tplSop.length ? `<a class="hix-a" href="#tpl-sop" data-spy="tpl-sop">From a procedure<span class="hix-n">${tplSop.filter((t) => !t.reserved).length}</span></a>` : '');
 
 /* ---------------- assemble ---------------- */
 const medallion = `<svg class="medallion" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group medallion">

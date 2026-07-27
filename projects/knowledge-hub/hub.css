@@ -629,10 +629,12 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
   font-family:var(--mono); font-size:10.5px; letter-spacing:0.02em; color:var(--accent);
   text-decoration:none; border-radius:6px; padding:3px 4px;}
 .tpl-sop:hover{color:var(--teal-600); text-decoration:underline;}
+:root[data-theme="dark"] .tpl-sop:hover{color:var(--teal-200);}
 .tpl-sop:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
 .tpl-sop .tpl-arw{width:13px; height:13px; flex:0 0 auto;}
 .tcard.reserved{border-style:dashed; opacity:0.82;}
 .stat.soon{color:var(--bronze-500);}
+:root[data-theme="dark"] .stat.soon{color:var(--bronze-200);}
 .stat.soon .d{background:var(--bronze-500); box-shadow:0 0 0 3px rgba(207,162,104,0.16);}
 .tpl-soon{display:inline-flex; align-items:center; gap:8px; margin-top:14px; color:var(--muted);
   font-family:var(--mono); font-size:11px; letter-spacing:0.02em;}
