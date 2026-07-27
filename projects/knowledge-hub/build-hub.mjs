@@ -738,9 +738,11 @@ function taskFlow(cfg){
 // The "Diagram" view of a process — a DESIGNED decision flowchart that reuses the Atlas
 // .flow / .fdecide / .fbranch components (the same ones the BTR render uses), so it handles
 // a yes/no decision that re-converges. Config `schema`: { start:{t,d?}, decision:{tag, q,
-// yes:{bl,body}, no:{bl,body} }, then:[{t,d?,k?,pill?}] } — every part optional. The t/body
-// strings are author HTML (bold allowed), like the close/task ledes; `d` renders as a mono
-// .fref note. Never a bare Mermaid block.
+// yes:{bl,body}, no:{bl,body} }, then:[{t,d?,k?,pill?}] } — every part optional. Rich fields
+// (`t`, `q`, `bl`, `body`) are AUTHOR HTML inserted raw (bold allowed), like the close/task
+// `oneRule`/`lede`; short/label fields (`tag`, `d` → a mono .fref note, `pill`) are esc()'d.
+// All schema strings are firm-authored catalog config — never user/client data. Never a bare
+// Mermaid block.
 function schemaFlow(s){
   if(!s) return '';
   const conn = '<div class="fconn" aria-hidden="true"></div>';
@@ -775,10 +777,12 @@ function flowViews(id, cfg){
   if(diagram && !steps) return diagram;
   if(!steps && !diagram) return '';
   const nm = 'fv-' + id;
-  return `<div class="fviews">`
+  // role="radiogroup" on the container (it holds the two radios) — the segmented control is a
+  // labelled radio group, not a tablist (its buttons are <label>s, not role="tab" elements).
+  return `<div class="fviews" role="radiogroup" aria-label="Process view">`
     + `<input type="radio" name="${nm}" id="${nm}-steps" class="fv-r fv-r-steps" checked>`
     + `<input type="radio" name="${nm}" id="${nm}-diagram" class="fv-r fv-r-diagram">`
-    + `<div class="fv-seg" role="tablist" aria-label="Process view">`
+    + `<div class="fv-seg">`
     +   `<label for="${nm}-steps" class="fv-btn">${TIC.steps}Steps</label>`
     +   `<label for="${nm}-diagram" class="fv-btn">${TIC.diagram}Diagram</label>`
     + `</div>`
