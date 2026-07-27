@@ -715,6 +715,8 @@ const TIC = {
   sign:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17c2 .6 3.6-.4 4.6-2S8.4 11 9.4 11s1 3 2 3 1.8-2.4 3.4-2.4c1.2 0 2 .8 3.2.8"/><path d="M3 21h18"/></svg>',
   save:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h3.5l2 2H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v5M9.5 13.5 12 16l2.5-2.5"/></svg>',
   form:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M9 13h6M9 17h4"/></svg>',
+  steps:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.4" cy="6" r="1"/><circle cx="3.4" cy="12" r="1"/><circle cx="3.4" cy="18" r="1"/></svg>',
+  diagram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="5" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/><rect x="14" y="16" width="7" height="5" rx="1.5"/><path d="M12 8v3M6.5 16v-3h11v3"/></svg>',
 };
 function taskFlow(cfg){
   const nodes = (cfg.flow || []).map((s, i) => {
@@ -732,6 +734,61 @@ function taskFlow(cfg){
     : '';
   return `<div class="pcflow"><span class="pcspine" aria-hidden="true"><span class="pcspine-pulse"></span></span>`
     + `<ol class="pcnodes">${nodes}</ol></div>${loop}`;
+}
+// The "Diagram" view of a process — a DESIGNED decision flowchart that reuses the Atlas
+// .flow / .fdecide / .fbranch components (the same ones the BTR render uses), so it handles
+// a yes/no decision that re-converges. Config `schema`: { start:{t,d?}, decision:{tag, q,
+// yes:{bl,body}, no:{bl,body} }, then:[{t,d?,k?,pill?}] } — every part optional. Rich fields
+// (`t`, `q`, `bl`, `body`) are AUTHOR HTML inserted raw (bold allowed), like the close/task
+// `oneRule`/`lede`; short/label fields (`tag`, `d` → a mono .fref note, `pill`) are esc()'d.
+// All schema strings are firm-authored catalog config — never user/client data. Never a bare
+// Mermaid block.
+function schemaFlow(s){
+  if(!s) return '';
+  const conn = '<div class="fconn" aria-hidden="true"></div>';
+  const node = (n) => {
+    const v = n.k === 'done' ? ' done' : (n.k === 'gate' ? ' gate' : '');
+    const pill = (n.k === 'done' || n.k === 'gate') && n.pill ? `<span class="pill">${esc(n.pill)}</span>` : '';
+    return `<div class="fnode${v}">${pill}${n.t}${n.d ? ` <span class="fref">${esc(n.d)}</span>` : ''}</div>`;
+  };
+  let out = '';
+  if(s.start) out += node(s.start);
+  if(s.decision){
+    const d = s.decision;
+    if(out) out += conn;
+    out += `<div class="fdecide"><div class="dh"><span class="dt">${esc(d.tag || 'Decision')}</span><span class="dq">${d.q}</span></div>`
+      + `<div class="fbranch">`
+      + `<div class="branch good"><span class="bl">${d.yes.bl}</span>${d.yes.body}</div>`
+      + `<div class="branch fix"><span class="bl">${d.no.bl}</span>${d.no.body}</div>`
+      + `</div></div>`;
+  }
+  (s.then || []).forEach((n) => { out += conn + node(n); });
+  return `<figure class="flow" aria-label="Process decision flow">${out}</figure>`;
+}
+// Two switchable views of "the process at a glance": a linear Steps flow (.pcflow) and a
+// designed Diagram (decision flowchart), toggled by a CSS-ONLY radio segmented control — no
+// JS, so it works with JS off and can't break the emitted script; both are alternative views
+// of the same content (Steps is checked/visible by default). Degrades to whichever single
+// view is configured.
+function flowViews(id, cfg){
+  const steps = cfg.flow && cfg.flow.length ? taskFlow({ flow: cfg.flow }) : '';
+  const diagram = cfg.schema ? schemaFlow(cfg.schema) : '';
+  if(steps && !diagram) return steps;
+  if(diagram && !steps) return diagram;
+  if(!steps && !diagram) return '';
+  const nm = 'fv-' + id;
+  // role="radiogroup" on the container (it holds the two radios) — the segmented control is a
+  // labelled radio group, not a tablist (its buttons are <label>s, not role="tab" elements).
+  return `<div class="fviews" role="radiogroup" aria-label="Process view">`
+    + `<input type="radio" name="${nm}" id="${nm}-steps" class="fv-r fv-r-steps" checked>`
+    + `<input type="radio" name="${nm}" id="${nm}-diagram" class="fv-r fv-r-diagram">`
+    + `<div class="fv-seg">`
+    +   `<label for="${nm}-steps" class="fv-btn">${TIC.steps}Steps</label>`
+    +   `<label for="${nm}-diagram" class="fv-btn">${TIC.diagram}Diagram</label>`
+    + `</div>`
+    + `<div class="fv-panel fv-p-steps">${steps}</div>`
+    + `<div class="fv-panel fv-p-diagram">${diagram}</div>`
+    + `</div>`;
 }
 function vaultButton(v){
   if(!v || !v.url) return '';
@@ -870,6 +927,18 @@ const SOP_GROUPS = [
           { t: 'Report on Form 2441', d: 'Provider name, address, TIN and amount go on the return', ic: 'form' },
           { t: 'Keep it on file', d: 'Recordkeeping — not filed with the return', ic: 'check', k: 'done' },
         ],
+        schema: {
+          start: { t: `A client paid for a child's or dependent's care so they could <b>work</b>`, d: 'e.g. a babysitter for a child under 13' },
+          decision: {
+            tag: 'Evidence check', q: `Is there a transaction trail?`,
+            yes: { bl: `Yes — bank/card records or invoices`, body: `Use those records to substantiate the amount &amp; provider. <span class="arw">↓ straight to Form 2441</span>` },
+            no:  { bl: `No — cash-paid, no records`, body: `Get a <b>signed Provider Statement</b>: send the blank form → provider fills it in → provider <b>signs &amp; dates</b> → save the signed copy to the client's systems` },
+          },
+          then: [
+            { t: `Report the provider's <b>name, address, TIN</b> &amp; the <b>amount</b> on <b>Form 2441</b>` },
+            { t: `Keep the statement as support — <b>recordkeeping, not filed</b> with the return`, k: 'done', pill: 'On file' },
+          ],
+        },
         blurb: 'Substantiate a client’s Child and Dependent Care Credit (Form 2441) when there’s no payment trail — e.g. a cash-paid babysitter. Have the care provider complete and sign the statement (name, address, SSN/EIN, dates, amount, method); the signed copy stays in the client’s systems.' },
     ],
   },
@@ -1075,18 +1144,19 @@ function renderSopItem(it, grpName) {
     // The "process at a glance" MUST be a designed flow (impeccable + Atlas .pcflow) — never a
     // bare Mermaid block. A `flow` config replaces the .md's Mermaid section with the same
     // animated flow the client-task SOPs use (reduced-motion safe, visible without JS).
+    const hasFlow = (it.flow && it.flow.length) || it.schema;
     let flowBlock = '';
-    if (it.flow && it.flow.length) {
+    if (hasFlow) {
       // Strip the .md's Mermaid "process at a glance" (optional leading `---` + heading + lede +
       // fence) up to the next `## ` heading OR end of file — the `|$` covers the edge case where
       // that section is the last one (else it wouldn't strip and the guard below would flag it).
       md2 = md2.replace(/\n(?:---\s*\n+)?##\s+[^\n]*process at a glance[\s\S]*?(?=\n##\s|$)/i, '\n');
       flowBlock = `<div class="shead"><span class="schip">✦</span><h2>The process at a glance</h2></div>`
         + (it.flowLede ? `<p class="slede">${esc(it.flowLede)}</p>` : '')
-        + taskFlow({ flow: it.flow });
+        + flowViews(id, it);
     }
     let bodyHtml = mdToAtlas(md2);
-    if (it.flow && it.flow.length) bodyHtml = flowBlock + bodyHtml;      // designed flow, above the .md body
+    if (hasFlow) bodyHtml = flowBlock + bodyHtml;                        // designed flow(s), above the .md body
     if (it.template) bodyHtml = templateBlock(it.template) + bodyHtml;   // prominent download, top of the reader
     if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
     inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
