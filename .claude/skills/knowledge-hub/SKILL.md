@@ -92,6 +92,17 @@ emitted script silently broke *every* click.
    reader(s): …` naming any SOP whose reader still ships raw Mermaid — treat it as a must-fix
    (add a `flow` config). (Established with Lilian, Jul 2026, after the Child & Dependent Care SOP
    first shipped with a rustic default-Mermaid diagram.)
+   **Two views of the process (Steps + Diagram).** A firm-wide SOP can carry BOTH a `flow`
+   config (the linear **Steps** view, `.pcflow`) AND a `schema` config (a designed decision
+   **Diagram** — `schemaFlow()`, reusing the Atlas `.flow` / `.fdecide` / `.fbranch` decision
+   components, the same ones the BTR render uses). When both are present, `flowViews(id, cfg)`
+   renders a **CSS-only Steps/Diagram toggle** (radio inputs + `:checked ~` — no JS, works with
+   JS off, can't break the emitted script; Steps is the default) so the reader gets the
+   step-by-step pipeline *and* the yes/no decision flowchart as two views of the same process
+   — complementary, not repetitive. `schema` shape: `{ start:{t,d?}, decision:{tag, q,
+   yes:{bl,body}, no:{bl,body}}, then:[{t,d?,k?,pill?}] }` (all parts optional; `t`/`body` are
+   author HTML). With only one of the two configs, that single view renders (no toggle). Lilian
+   likes this pattern — a candidate to roll out to the other SOPs with flowcharts.
 9. **Procedures split by nature — firm-wide by topic, client-specific by client.** The
    Procedures area has **two bands**: **Firm-wide** — procedures that fit any client (company
    formation, licensing, the Chart-of-Accounts standard, the Double portal), grouped by topic —

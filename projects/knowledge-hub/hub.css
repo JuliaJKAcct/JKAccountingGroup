@@ -352,6 +352,32 @@ tr.coa-off .coa-e{text-decoration:line-through;}
 :root[data-theme="dark"] .dlbtn.ghost:hover{background:var(--raise); color:var(--ink);}
 button.dlbtn{cursor:pointer; font-family:var(--sans);}
 
+/* ---------- Process "at a glance": Steps / Diagram view toggle (CSS-only radio) ---------- */
+.fviews{margin:4px 0 6px;}
+.fv-r{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); border:0;}
+.fv-seg{display:inline-flex; gap:4px; padding:5px; margin:0 0 20px; background:var(--surface);
+  border:1px solid var(--border); border-radius:13px; box-shadow:var(--shadow-sm);}
+.fv-btn{display:inline-flex; align-items:center; gap:7px; cursor:pointer; user-select:none;
+  font-family:var(--sans); font-size:13px; font-weight:600; color:var(--body);
+  padding:8px 16px; border-radius:9px; transition:background .18s var(--ease-out), color .18s var(--ease-out);}
+.fv-btn svg{width:15px; height:15px; color:var(--muted); transition:color .18s var(--ease-out);}
+.fv-btn:hover{background:var(--pill-teal-bg);}
+.fv-r-steps:focus-visible ~ .fv-seg label[for$="-steps"],
+.fv-r-diagram:focus-visible ~ .fv-seg label[for$="-diagram"]{outline:2px solid var(--accent); outline-offset:2px;}
+.fv-r-steps:checked ~ .fv-seg label[for$="-steps"],
+.fv-r-diagram:checked ~ .fv-seg label[for$="-diagram"]{background:var(--teal-800); color:#F1ECE1;}
+.fv-r-steps:checked ~ .fv-seg label[for$="-steps"] svg,
+.fv-r-diagram:checked ~ .fv-seg label[for$="-diagram"] svg{color:var(--bronze-200);}
+:root[data-theme="dark"] .fv-r-steps:checked ~ .fv-seg label[for$="-steps"],
+:root[data-theme="dark"] .fv-r-diagram:checked ~ .fv-seg label[for$="-diagram"]{background:var(--raise); color:var(--ink);}
+:root[data-theme="dark"] .fv-r-steps:checked ~ .fv-seg label[for$="-steps"] svg,
+:root[data-theme="dark"] .fv-r-diagram:checked ~ .fv-seg label[for$="-diagram"] svg{color:var(--accent-2);}
+.fv-panel{display:none;}
+.fv-r-steps:checked ~ .fv-p-steps{display:block; animation:fvIn .34s var(--ease-out);}
+.fv-r-diagram:checked ~ .fv-p-diagram{display:block; animation:fvIn .34s var(--ease-out);}
+@keyframes fvIn{from{opacity:0; transform:translateY(7px);} to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion: reduce){ .fv-p-steps, .fv-p-diagram{animation:none !important;} }
+
 /* ---------- Blank-template download block (top of a fill-in-form SOP's reader) ---------- */
 .tdl{display:flex; gap:18px; align-items:flex-start; margin:0 0 28px; padding:20px 22px;
   border:1px solid var(--border); border-left:4px solid var(--accent);
