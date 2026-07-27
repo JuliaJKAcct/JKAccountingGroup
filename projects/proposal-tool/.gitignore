@@ -6,3 +6,6 @@ generator-scripts/output/
 generator-scripts/*.docx
 generator-scripts/*.pdf
 /tmp/pricing_wip.xlsx
+
+# Built tool artifacts (self-contained, regenerate with tools/build.mjs) — commit the .src.html, not these
+tools/business-tax-engagement-letter.html

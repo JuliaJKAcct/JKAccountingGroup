@@ -39,6 +39,12 @@ proposal-tool/
 │   ├── JKA_Monthly_Proposal_Engagement_TEMPLATE.docx / .pdf
 │   ├── JKA_Tax_Prep_Engagement_Letter_TEMPLATE.docx
 │   └── JKA_Terms_and_Conditions_Addendum.docx
+├── tools/                     ← self-service interactive generators (open in a browser)
+│   ├── business-tax-engagement-letter.src.html ← the interactive business tax-prep
+│   │                             engagement-letter generator (starts blank, validates
+│   │                             every field, auto-derives return/Form-8879/due-date)
+│   └── build.mjs               ← inlines brand fonts + logo → self-contained .html
+│                                 (the built .html is git-ignored; regenerate as needed)
 ├── generator-scripts/         ← the engine (Node docx-js + Python)
 │   ├── common.js               ← shared brand helpers (colors, fonts, logo, layout)
 │   ├── body.js / proposal_body.js / premium_proposal_body.js / gopro_proposal_body.js
@@ -75,11 +81,19 @@ the rest of the repo.
 
 ## Skills & tooling
 
-None yet — the engine currently lives as the scripts in `generator-scripts/`.
-Driving it for a new client (facts → pricing → finished document) is a clear
-**skill candidate**; capturing it as a `.claude/skills/` workflow is the natural
-next step (see "Working on this"). Uses the repo's `docx` and `xlsx` skill helpers
-for validation (`validate.py`, `recalc.py`).
+Driven by the [`proposal-generator`](../../.claude/skills/proposal-generator/) skill —
+the house way to produce any proposal or engagement letter: the exact per-client field
+list, the auto-derived return/Form-8879/due-date logic, how to produce the finished PDF,
+and the firm's standing rules (Chief-Accountant title, the "Not Included" defaults,
+bundled monthly fee + bilingual RU/EN for retainers). **Load that skill first** for any
+proposal work.
+
+The **business tax-prep engagement letter** has a self-service interactive generator in
+[`tools/`](./tools/): run `node tools/build.mjs`, open the built HTML in a normal browser,
+fill the validated form, and use "Save PDF". It starts blank every time (no stale/other-
+client data) and refuses to generate with any field missing. The docx/HTML engine still
+lives in `generator-scripts/`; validation uses the repo's `docx`/`xlsx` helpers
+(`validate.py`, `recalc.py`).
 
 ## Outputs
 
@@ -105,5 +119,7 @@ their working directory / `generator-scripts/output/`, both git-ignored. Only th
 - **Open items:** (1) real e-signature (vs. the current fillable AcroForm fields)
   needs the DocuSign connector authorized interactively by Julia; (2) the legacy
   matrix's Annual-Report-Filing duplicate-rate ambiguity is unresolved but
-  non-blocking (current work builds fresh). (3) Propose the `proposal-generator`
-  skill once the next real client proposal is in sight.
+  non-blocking (current work builds fresh). (3) The interactive generator is being
+  integrated into the **Knowledge Hub** (so the team can run it self-service behind
+  the private Odoo login); (4) the individual (1040) template variant is **paused**
+  per Lilian — resume later.

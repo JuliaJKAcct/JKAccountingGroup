@@ -1,0 +1,247 @@
+<style>/*__FONTS__*/</style>
+<style>
+  :root{
+    --teal:#123841; --deep:#0D2A31; --bronze:#9C6A39; --bronze-lt:#CFA268;
+    --ivory:#F1ECE1; --paper:#FBF8F2; --ink:#22201A; --muted:#6F6857; --hairline:#C9C1B0;
+    --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:var(--sans); color:var(--ink); background:var(--ivory); }
+  .app{ display:flex; flex-direction:column; height:100vh; }
+
+  .toolbar{ display:flex; align-items:center; gap:16px; padding:11px 20px; background:var(--deep); color:#F1ECE1; border-bottom:3px solid var(--bronze); }
+  .toolbar .brand{ font-family:var(--serif); font-weight:600; font-size:15px; }
+  .toolbar .brand small{ display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--bronze-lt); font-weight:400; margin-top:2px; }
+  .toolbar .spacer{ flex:1; }
+  .btn{ font-family:var(--sans); font-size:13px; font-weight:600; border:0; border-radius:4px; padding:9px 16px; cursor:pointer; }
+  .btn-primary{ background:var(--bronze); color:#fff; }
+  .btn-primary:hover{ background:#875a30; }
+  .btn-ghost{ background:transparent; color:#E7E0D2; border:1px solid rgba(231,224,210,.35); }
+  .btn-ghost:hover{ background:rgba(231,224,210,.12); }
+
+  .workspace{ flex:1; display:grid; grid-template-columns:380px 1fr; min-height:0; }
+  .form-panel{ overflow-y:auto; padding:20px 20px 60px; background:var(--ivory); border-right:1px solid var(--hairline); }
+  .form-panel h2{ font-family:var(--serif); color:var(--teal); font-size:18px; margin:0 0 3px; }
+  .form-panel .sub{ font-size:11.5px; color:var(--muted); margin:0 0 16px; }
+  .group{ margin-bottom:16px; }
+  .group .glabel{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); margin:0 0 8px; border-bottom:1px solid var(--hairline); padding-bottom:5px; }
+  label.field{ display:block; margin-bottom:10px; }
+  label.field .cap{ display:block; font-size:11px; color:var(--muted); margin-bottom:4px; font-weight:500; }
+  input, select{ width:100%; font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:8px 10px; }
+  input:focus, select:focus{ outline:2px solid var(--bronze-lt); border-color:var(--bronze); }
+  input.missing{ border-color:#B4472F; background:#fbeee9; }
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .derived{ background:rgba(18,56,65,.05); border:1px solid var(--hairline); border-radius:6px; padding:10px 12px; margin-top:6px; }
+  .derived .dh{ font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
+  .derived .drow{ display:flex; justify-content:space-between; gap:10px; font-size:11px; margin-bottom:4px; }
+  .derived .drow b{ color:var(--teal); font-weight:600; text-align:right; }
+
+  .preview-panel{ overflow-y:auto; padding:24px; background:#E7E0D2; }
+  .banner{ max-width:7.5in; margin:0 auto 14px; border-radius:6px; padding:10px 14px; font-size:12.5px; display:none; }
+  .banner.show{ display:block; }
+  .banner.err{ background:#fbeee9; border:1px solid #dcae9f; color:#8a3418; }
+
+  .sheet{ max-width:7.5in; margin:0 auto; background:#fff; box-shadow:0 3px 24px rgba(9,31,36,.16); padding:0.7in 0.85in 0.85in; }
+  .lh{ display:flex; flex-direction:column; align-items:center; text-align:center; border-bottom:2px solid var(--bronze); padding-bottom:12px; margin-bottom:16px; }
+  .lh img{ width:220px; max-width:60%; height:auto; margin-bottom:6px; }
+  .lh .kd{ font-family:var(--mono); font-size:8.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--bronze); }
+  .lh .meta{ font-size:9.5px; color:var(--muted); margin-top:3px; }
+  .letter{ font-family:var(--serif); font-size:10.6px; line-height:1.58; color:var(--ink); }
+  .letter h3{ font-family:var(--serif); color:var(--teal); font-size:12.5px; margin:15px 0 5px; }
+  .letter h4{ font-size:10.6px; margin:10px 0 3px; text-decoration:underline; font-weight:600; }
+  .letter p{ margin:0 0 8px; }
+  .letter .addr b{ color:var(--teal); }
+  .letter .ret{ margin:5px 0 6px 8px; font-weight:600; }
+  .letter .fee b{ color:var(--bronze); font-weight:700; }
+  .letter .sig-line{ border-bottom:1px solid var(--ink); display:inline-block; min-width:2.6in; }
+  .ph{ color:var(--bronze); font-style:italic; background:rgba(156,106,57,.09); padding:0 3px; border-radius:2px; }
+
+  @media print{
+    .toolbar, .form-panel, .banner{ display:none !important; }
+    body, .app, .workspace, .preview-panel{ display:block !important; height:auto !important; overflow:visible !important; background:#fff !important; }
+    .preview-panel{ padding:0 !important; }
+    .sheet{ box-shadow:none !important; max-width:none !important; margin:0 !important; padding:0 !important; }
+    @page{ size:Letter; margin:0.8in; }
+  }
+</style>
+
+<div class="app">
+  <div class="toolbar">
+    <div class="brand">JK Accounting Group<small>Engagement Letter · Business Tax Preparation</small></div>
+    <div class="spacer"></div>
+    <button class="btn btn-ghost" id="reset">New client</button>
+    <button class="btn btn-primary" id="save">Save PDF</button>
+  </div>
+  <div class="workspace">
+    <div class="form-panel">
+      <h2>Client details</h2>
+      <p class="sub">Fill in the fields — the letter builds on the right. Starts blank every time. "Save PDF" opens your browser's print dialog → choose "Save as PDF".</p>
+
+      <div class="group">
+        <p class="glabel">Client</p>
+        <label class="field"><span class="cap">Company (entity) name</span><input id="company" placeholder="e.g. Acme Holdings LLC"></label>
+        <label class="field"><span class="cap">Address — line 1</span><input id="addr1" placeholder="Street address"></label>
+        <label class="field"><span class="cap">Address — line 2</span><input id="addr2" placeholder="City, state, ZIP"></label>
+      </div>
+      <div class="group">
+        <p class="glabel">Return</p>
+        <label class="field"><span class="cap">Entity type</span>
+          <select id="entity">
+            <option value="">— Select —</option>
+            <option value="1120">C-Corporation — Form 1120</option>
+            <option value="1120S">S-Corporation — Form 1120-S</option>
+            <option value="1065">Partnership — Form 1065</option>
+          </select>
+        </label>
+        <div class="row2">
+          <label class="field"><span class="cap">Tax year</span><input id="year" type="number" placeholder="2025"></label>
+          <label class="field"><span class="cap">Fee (USD)</span><input id="fee" type="number" placeholder="650"></label>
+        </div>
+        <div class="derived">
+          <div class="dh">Calculated automatically</div>
+          <div class="drow"><span>Return</span><b id="d-return">—</b></div>
+          <div class="drow"><span>E-file authorization</span><b id="d-efile">—</b></div>
+          <div class="drow"><span>Original due date</span><b id="d-due">—</b></div>
+        </div>
+      </div>
+      <div class="group">
+        <p class="glabel">Client signature</p>
+        <label class="field"><span class="cap">Representative — name</span><input id="repname" placeholder="e.g. Jane Smith"></label>
+        <label class="field"><span class="cap">Representative — title</span><input id="reptitle" placeholder="Manager / Partner / Member / President" list="titles"><datalist id="titles"><option>Manager</option><option>Managing Member</option><option>Partner</option><option>Member</option><option>President</option></datalist></label>
+      </div>
+      <div class="group">
+        <p class="glabel">Dates</p>
+        <div class="row2">
+          <label class="field"><span class="cap">Letter date</span><input id="ldate" type="date"></label>
+          <label class="field"><span class="cap">Client info needed by</span><input id="infoby" type="date"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-panel">
+      <div class="banner" id="banner"></div>
+      <div class="sheet"><div class="letter" id="letter"></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const ids = ["company","addr1","addr2","entity","year","fee","repname","reptitle","ldate","infoby"];
+  const req = {company:"Company name",addr1:"Address line 1",addr2:"Address line 2",entity:"Entity type",year:"Tax year",fee:"Fee",repname:"Representative (name)",reptitle:"Representative (title)",ldate:"Letter date",infoby:"Info needed by"};
+  const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const fmtDate = iso => { if(!iso) return ""; const [y,m,d]=iso.split("-"); return `${MONTHS[+m-1]} ${+d}, ${y}`; };
+  const money = v => (v===""||v==null) ? "" : "$"+Number(v).toLocaleString("en-US");
+  const ENT = {
+    "1120":  {ret:"Form 1120 U.S. Corporation Income Tax Return", efile:"Form 8879-C, IRS e-file Signature Authorization for a Corporation", dueM:"April 15"},
+    "1120S": {ret:"Form 1120-S U.S. Income Tax Return for an S Corporation", efile:"Form 8879-S, IRS e-file Signature Authorization for an S Corporation", dueM:"March 15"},
+    "1065":  {ret:"Form 1065 U.S. Return of Partnership Income", efile:"Form 8879-PE, IRS e-file Signature Authorization for a Partnership Return", dueM:"March 15"},
+  };
+  function esc(s){ return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+  const ph = (v,label) => v ? esc(v) : `<span class="ph">‹${label}›</span>`;
+
+  function derived(){
+    const e = ENT[$("entity").value] || null;
+    const yr = $("year").value ? +$("year").value : null;
+    return { ret:e?e.ret:null, efile:e?e.efile:null, due:(e&&yr)?`${e.dueM}, ${yr+1}`:null, yearEnd:yr?`December 31, ${yr}`:null, prior:yr?(yr-1):null };
+  }
+
+  function render(){
+    const v = Object.fromEntries(ids.map(k=>[k,$(k).value.trim()]));
+    const d = derived();
+    $("d-return").textContent = d.ret || "—";
+    $("d-efile").textContent  = d.efile ? d.efile.split(",")[0] : "—";
+    $("d-due").textContent    = d.due || "—";
+
+    const co = ph(v.company,"Company name");
+    const retLine = d.ret ? esc(d.ret) : `<span class="ph">‹Entity type›</span>`;
+    const yearEnd = d.yearEnd || `<span class="ph">‹Tax year›</span>`;
+    const efile   = d.efile ? esc(d.efile) : `<span class="ph">‹E-file form›</span>`;
+    const due     = d.due || `<span class="ph">‹Due date›</span>`;
+    const prior   = d.prior || `<span class="ph">‹Prior year›</span>`;
+
+    $("letter").innerHTML = `
+      <div class="lh"><img src="__LOGO__" alt="JK Accounting Group"><div class="kd">Tax Preparation Engagement Letter</div><div class="meta">Pembroke Pines, Florida · 786-318-1505</div></div>
+
+      <p>${ph(v.ldate?fmtDate(v.ldate):"", "Date")}</p>
+      <p class="addr"><b>${co}</b><br>${ph(v.addr1,"Address line 1")}<br>${ph(v.addr2,"Address line 2")}</p>
+
+      <p>JK Accounting Group Corp (“firm,” “we,” “us,” or “our”) is pleased to provide <b>${co}</b> (“you” or “your”) with the professional services described below. This letter, and the attached <i>Terms and Conditions Addendum</i> and any other attachments incorporated herein (collectively, “Agreement”), confirm our understanding of the terms and objectives of our engagement and the nature and limitations of the services we will provide. The engagement between you and our firm will be governed by the terms of this Agreement.</p>
+
+      <h3>Engagement Objective and Scope</h3>
+      <p>We will prepare the following federal and state tax return for the year ended ${yearEnd}:</p>
+      <p class="ret">${retLine}</p>
+      <p>We will not prepare any tax returns other than those identified above, without your written request, and our written consent to do so. We will rely upon the completeness and accuracy of the information and representations you provide to us to prepare your tax returns. We have not been engaged to and will not prepare financial statements. We will not audit or otherwise verify the data you submit to us, although we may ask you to clarify certain information.</p>
+      <p>Our engagement does not include any procedures designed to detect errors, fraud, or theft. Therefore, our engagement cannot be relied upon to disclose such matters. You are responsible for developing and implementing internal controls applicable to your operations. This engagement is limited to the professional services outlined above.</p>
+
+      <h3>Firm Responsibilities</h3>
+      <p>Unless otherwise noted, we will perform our services in accordance with U.S. Treasury Department Circular 230 (“Circular 230”). It is our duty to perform services with the same standard of care that a reasonable tax return preparer would exercise in this type of engagement. JK Accounting Group Corp, in its sole professional judgment, reserves the right to refuse to take any action that could be construed as making management decisions or performing management functions on your behalf.</p>
+      <h4>Arguable positions</h4>
+      <p>We will use our professional judgment to resolve questions in your favor where a tax law is unclear, provided that we have a reasonable belief that there is substantial authority for doing so. If there are conflicting interpretations of the law, we will explain the possible positions that may be taken on your return, and we will follow the position you request provided it is consistent with our understanding of the tax reference materials. If the IRS, state or local tax authorities later contest the position you select, additional tax, penalties, and interest may be assessed; you hereby release us from any liability in that regard.</p>
+      <h4>Bookkeeping assistance</h4>
+      <p>We may deem it necessary to provide you with accounting and bookkeeping assistance (“cleanup”) solely for the purpose of preparing the tax returns identified above. In that event we will advise you in writing before the work is performed. This optional cleanup work is billed at $60/hr, separate from the tax preparation fee described below, and only if it turns out to be needed.</p>
+      <h4>Tax planning and advisory consultations</h4>
+      <p>Tax planning and advisory consultation services are not within the scope of this engagement. If you ask us to provide such services, and we agree to do so, they will be billed separately at $150/hr and confirmed in a separate agreement.</p>
+      <h4>Government inquiries &amp; third-party requests</h4>
+      <p>This engagement does not include responding to inquiries by any governmental agency or tax authority; if your return is selected for examination, our assistance would be a separate engagement. We will not respond to requests from banks, mortgage brokers, or others to verify information reported on the return, and we do not provide third parties with copies of returns.</p>
+
+      <h3>Client Responsibilities</h3>
+      <p>You will provide us with a trial balance and other supporting data necessary to prepare your tax returns. You must provide accurate and complete information. Income from all sources, including those outside of the U.S., is required.</p>
+      <h4>Documentation &amp; personal expenses</h4>
+      <p>You are responsible for maintaining adequate documentation to substantiate the accuracy and completeness of your returns, and for ensuring that personal expenses are segregated from business expenses (meals, travel, vehicle use, gifts, and related items must be supported by the records the IRS requires). You represent that you have such documentation and can produce it in response to any audit or inquiry.</p>
+      <h4>State and local filing obligations</h4>
+      <p>You are responsible for determining your filing obligations with any state or local tax authorities, including income, franchise, sales, use, property, and unclaimed-property taxes. If information that comes to our attention suggests additional filing obligations, we will notify you; preparing any other returns would be confirmed in a separate agreement.</p>
+      <h4>Foreign reporting obligations</h4>
+      <p>Based on the information you provide, you may have additional filing obligations related to foreign investments — for example ownership of certain foreign corporations (Form 5471), a foreign-owned U.S. entity (Form 5472), transfers to a foreign corporation (Form 926), foreign trusts (Forms 3520 / 3520-A), foreign partnerships (Form 8865), foreign disregarded entities (Form 8858), or specified foreign assets (Form 8938). You are responsible for informing us of all foreign assets and accounts owned directly or indirectly, regardless of amount. Failure to timely file the required forms may result in substantial civil and/or criminal penalties; we assume no liability for penalties associated with unfiled or untimely forms.</p>
+      <h4>Virtual currency</h4>
+      <p>The IRS treats virtual currency (e.g., Bitcoin) as property for federal income tax purposes. If you had virtual-currency activity during the year, you may have tax consequences and additional reporting obligations, and you agree to provide us complete and accurate information about those transactions.</p>
+      <h4>Ultimate responsibility</h4>
+      <p>You have final responsibility for the accuracy of your tax returns. We will provide you with a copy for review prior to filing, and you agree to examine them carefully for accuracy and completeness. You will be required to verify and sign a completed ${efile}, before your returns can be filed electronically.</p>
+
+      <h3>Timing of the Engagement</h3>
+      <p>We expect to begin our services upon receipt of this executed Agreement, your ${prior} year-end trial balance, and other supporting data. Our services will conclude upon the earlier of the filing and acceptance of your returns, written notification by either party that the engagement is terminated, or one (1) year from the execution date of this Agreement.</p>
+
+      <h3>Extensions of Time to File</h3>
+      <p>The original filing due date for your return is <b>${due}</b>. Due to the high volume of tax returns prepared by our firm, you must provide the information needed to prepare the return no later than <b>${ph(v.infoby?fmtDate(v.infoby):"", "Info deadline")}</b>. Failure to do so may result in the inability to complete your return by the original due date. It may become necessary to apply for an extension if there are unresolved issues or delays; applying for an extension may extend the time available for a government agency to audit your return. All taxes owed are due by the original filing due date. We will not file an extension application without your express written authorization.</p>
+
+      <h3>Penalties and Interest Charges</h3>
+      <p>Federal, state, and local tax authorities impose various penalties and interest charges for non-compliance, including failure to file, late filing, and underpayment of taxes. You, as the taxpayer, remain responsible for the payment of all tax, penalties, and interest charges imposed by the tax authorities.</p>
+
+      <h3>Professional Fee</h3>
+      <p class="fee">Our professional fee for the tax return preparation outlined above is <b>${v.fee?money(v.fee):'<span class="ph">‹Fee›</span>'}</b>. This fee is based upon the complexity of the work and our professional time, and depends upon the timely delivery, availability, quality, and completeness of the information you provide. It is invoiced upon completion of the engagement, prior to release of the completed return(s). Any bookkeeping cleanup ($60/hr) or tax-planning/advisory consultations ($150/hr) are billed separately as described above.</p>
+      <p>You agree to pay all fees and expenses incurred whether or not we prepare the returns. We require that all outstanding invoices be paid prior to releasing the completed tax returns; we do not release incomplete returns.</p>
+
+      <p>We appreciate the opportunity to be of service to <b>${co}</b>. Please date and execute this Agreement, and the attached Terms and Conditions Addendum, and return them to us to acknowledge your acceptance. We will not initiate services until we receive the executed Agreement.</p>
+
+      <p style="margin-top:14px;">Very truly yours,</p>
+      <p style="margin:2px 0;">JK Accounting Group Corp</p>
+      <p style="margin:2px 0;"><b>Julia Kononova, MBA, EA</b><br>Chief Accountant</p>
+
+      <p style="margin-top:20px;"><b>ACCEPTED:</b></p>
+      <p style="margin:2px 0;"><b><i>${co}</i></b></p>
+      <p style="margin:14px 0 2px;">Client Signature: <span class="sig-line"></span></p>
+      <p style="margin:8px 0 2px;">Client Representative: ${ph(v.repname,"Representative")} <span class="sig-line" style="min-width:1.4in;"></span></p>
+      <p style="margin:8px 0 2px;">Title of Representative: ${ph(v.reptitle,"Title")} <span class="sig-line" style="min-width:1.4in;"></span></p>
+      <p style="margin:8px 0 2px;">Date: <span class="sig-line" style="min-width:1.4in;"></span></p>
+    `;
+    ids.forEach(k=>$(k).classList.remove("missing"));
+    $("banner").className = "banner";
+  }
+
+  const missing = () => ids.filter(k => req[k] && !$(k).value.trim());
+  $("save").addEventListener("click", ()=>{
+    const m = missing();
+    if(m.length){
+      m.forEach(k=>$(k).classList.add("missing"));
+      const b=$("banner"); b.className="banner err show";
+      b.textContent = "Please complete these fields before saving the PDF: " + m.map(k=>req[k]).join(", ") + ".";
+      $(m[0]).scrollIntoView({behavior:"smooth",block:"center"}); return;
+    }
+    window.print();
+  });
+  $("reset").addEventListener("click", ()=>{ if(!confirm("Start a new letter? All fields will be cleared.")) return; ids.forEach(k=>$(k).value=""); render(); });
+  ids.forEach(k=>$(k).addEventListener("input", render));
+  render();
+</script>
