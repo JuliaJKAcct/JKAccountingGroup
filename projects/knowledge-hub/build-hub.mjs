@@ -826,6 +826,13 @@ const SOP_GROUPS = [
     ],
   },
   {
+    name: 'Tax preparation', note: 'Return prep & substantiation',
+    items: [
+      { file: 'child-dependent-care-provider-statement.md', title: 'Child & Dependent Care — Provider Statement',
+        blurb: 'Substantiate a client’s Child and Dependent Care Credit (Form 2441) when there’s no payment trail — e.g. a cash-paid babysitter. Have the care provider complete and sign the statement (name, address, SSN/EIN, dates, amount, method); the signed copy stays in the client’s systems.' },
+    ],
+  },
+  {
     name: 'Bookkeeping', note: 'The firm-wide numbering standard',
     items: [
       { file: 'chart-of-accounts-standard.md', title: 'Chart of Accounts — Firm Standard', coa: true,
