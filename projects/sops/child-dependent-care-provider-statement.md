@@ -86,7 +86,8 @@ You need, in hand:
 ## §3. Have the care provider complete the statement
 
 Send the provider the **blank** PDF and ask them to fill in every field and
-**sign**. The fields, and what each is for:
+**sign**. Starting at the top, the **Tax Year** is the year the care applies to
+(from §0 / §2). Then, field by field:
 
 **3A. Provider Information** (the person or business who was paid)
 
