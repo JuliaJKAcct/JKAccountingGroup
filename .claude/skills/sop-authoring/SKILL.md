@@ -28,11 +28,21 @@ By default and unprompted, every SOP uses **both**:
 Two rules that follow from this and apply to every SOP:
 
 - **The "process at a glance" flowchart is a designed, dynamic diagram — never a bare
-  Mermaid block in the team view.** The `.md` keeps a Mermaid/textual flow as
+  Mermaid block in the team view. This applies to EVERY SOP — firm-wide, client-task, and
+  bookkeeping alike — with no exceptions.** The `.md` keeps a Mermaid/textual flow as
   source-of-truth, but in the **Knowledge Hub** it renders as a hand-built diagram on Atlas
   tokens with **purposeful motion** (visible without JS; static under
-  `prefers-reduced-motion`). A client-task SOP uses the `taskProcessReader` engine; see the
-  [`knowledge-hub`](../knowledge-hub/) skill for the render.
+  `prefers-reduced-motion`), built with the [`impeccable`](../impeccable/) skill. A **bare
+  Mermaid block reaching the reader is a defect, not an acceptable fallback** — Mermaid's
+  default styling is off-brand and rustic, which is exactly what this rule exists to prevent.
+  How it's rendered per SOP shape: a **client-task** SOP uses the `taskProcessReader` engine;
+  a **firm-wide** SOP gives its catalog item a **`flow` config** (`flowLede` + a `flow` array
+  of `{t, d, ic, k?}` steps) which the generic reader renders through the **same `.pcflow`
+  animated flow** (dropping the `.md`'s Mermaid section); a **bookkeeping** SOP uses
+  `closeProcessReader`. **The Hub build has a guard** that prints a loud
+  `⚠️ BARE MERMAID in SOP reader(s): …` warning naming any SOP whose reader still ships raw
+  Mermaid — if you see it, add a `flow` config. See the [`knowledge-hub`](../knowledge-hub/)
+  skill for the render + the guard.
 - **Confidential Drive materials get a designed button — always.** Whenever a step needs an
   extra document, file, video, or login that lives in **Google Drive** and can't be shown
   explicitly on the (team-facing) website for confidentiality, surface it as a **designed

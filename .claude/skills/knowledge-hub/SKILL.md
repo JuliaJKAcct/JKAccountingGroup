@@ -82,6 +82,16 @@ emitted script silently broke *every* click.
    analogous to `closeProcessReader` for bookkeeping; the `.md`'s own "process at a glance" section
    is dropped in the render (the animated flow replaces it). This is the standing way to show a
    client-task SOP — build it with the [`impeccable`](../impeccable/) skill + the Design System.
+   **Firm-wide SOPs get the SAME designed flow — never a bare Mermaid block.** A firm-wide SOP
+   renders through the generic Markdown path (`mdToAtlas`), which by itself emits **raw Mermaid**
+   for a `` ```mermaid `` block — off-brand and rustic, exactly what rule-8 forbids. So give the
+   firm-wide SOP's catalog item a **`flow` config** (`flowLede` + a `flow` array of `{t, d, ic, k?}`
+   steps): the generic reader then drops the `.md`'s "process at a glance" Mermaid section and
+   renders the **same `.pcflow` animated flow** via `taskFlow()` (icons come from the `TIC` set —
+   add one if a step needs a new glyph). A **build guard** prints `⚠️ BARE MERMAID in SOP
+   reader(s): …` naming any SOP whose reader still ships raw Mermaid — treat it as a must-fix
+   (add a `flow` config). (Established with Lilian, Jul 2026, after the Child & Dependent Care SOP
+   first shipped with a rustic default-Mermaid diagram.)
 9. **Procedures split by nature — firm-wide by topic, client-specific by client.** The
    Procedures area has **two bands**: **Firm-wide** — procedures that fit any client (company
    formation, licensing, the Chart-of-Accounts standard, the Double portal), grouped by topic —
@@ -197,6 +207,12 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
    ```
    # (b) runtime: inject document.querySelector('[data-open-doc]').click() before </body>
    #     in a copy, screenshot it, and confirm the reader opens.
+   ```
+   ```bash
+   # (c) no bare Mermaid: the build must NOT print "⚠️ BARE MERMAID in SOP reader(s)".
+   #     Any SOP named there ships a rustic default-Mermaid diagram — give it a `flow`
+   #     config so its "process at a glance" renders as the designed .pcflow (rule 8).
+   node projects/knowledge-hub/build-hub.mjs 2>&1 | grep -q "BARE MERMAID" && echo "FAIL: bare mermaid" || echo "OK: no bare mermaid"
    ```
    For any **download / print** change, also run the click test both ways in headless
    Chromium: stub `window.print` (a counter) and `window.claude.downloads.save`. With the
