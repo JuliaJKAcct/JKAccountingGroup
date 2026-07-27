@@ -710,6 +710,11 @@ const TIC = {
   check:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>',
   refresh:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg>',
   dot:    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/></svg>',
+  send:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>',
+  edit:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+  sign:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17c2 .6 3.6-.4 4.6-2S8.4 11 9.4 11s1 3 2 3 1.8-2.4 3.4-2.4c1.2 0 2 .8 3.2.8"/><path d="M3 21h18"/></svg>',
+  save:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h3.5l2 2H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v5M9.5 13.5 12 16l2.5-2.5"/></svg>',
+  form:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M9 13h6M9 17h4"/></svg>',
 };
 function taskFlow(cfg){
   const nodes = (cfg.flow || []).map((s, i) => {
@@ -855,6 +860,16 @@ const SOP_GROUPS = [
     items: [
       { file: 'child-dependent-care-provider-statement.md', title: 'Child & Dependent Care — Provider Statement',
         template: { pdf: 'child-dependent-care-provider-statement.pdf', png: 'child-dependent-care-provider-statement.png', name: 'Child and Dependent Care Provider Statement' },
+        flowLede: 'When a client paid for dependent care with no transaction trail — a cash-paid babysitter, no invoices — this is how we substantiate the Child & Dependent Care Credit: from the blank form to a signed statement on file.',
+        flow: [
+          { t: 'No payment trail', d: 'Dependent-care costs with no bank or card record', ic: 'search' },
+          { t: 'Send the blank form', d: 'Give the care provider the Provider Statement', ic: 'send' },
+          { t: 'Provider fills it in', d: 'Name · address · SSN or EIN · dates · amount · method', ic: 'edit' },
+          { t: 'Provider signs & dates', d: 'The certification — the signature is what gives it weight', ic: 'sign' },
+          { t: 'Save the signed copy', d: "To the client's Drive / Double — never the repo", ic: 'save' },
+          { t: 'Report on Form 2441', d: 'Provider name, address, TIN and amount go on the return', ic: 'form' },
+          { t: 'Keep it on file', d: 'Recordkeeping — not filed with the return', ic: 'check', k: 'done' },
+        ],
         blurb: 'Substantiate a client’s Child and Dependent Care Credit (Form 2441) when there’s no payment trail — e.g. a cash-paid babysitter. Have the care provider complete and sign the statement (name, address, SSN/EIN, dates, amount, method); the signed copy stays in the client’s systems.' },
     ],
   },
@@ -1057,7 +1072,21 @@ function renderSopItem(it, grpName) {
       const cut = md2.search(re);
       if (cut !== -1) md2 = md2.slice(0, cut);
     }
+    // The "process at a glance" MUST be a designed flow (impeccable + Atlas .pcflow) — never a
+    // bare Mermaid block. A `flow` config replaces the .md's Mermaid section with the same
+    // animated flow the client-task SOPs use (reduced-motion safe, visible without JS).
+    let flowBlock = '';
+    if (it.flow && it.flow.length) {
+      // Strip the .md's Mermaid "process at a glance" (optional leading `---` + heading + lede +
+      // fence) up to the next `## ` heading OR end of file — the `|$` covers the edge case where
+      // that section is the last one (else it wouldn't strip and the guard below would flag it).
+      md2 = md2.replace(/\n(?:---\s*\n+)?##\s+[^\n]*process at a glance[\s\S]*?(?=\n##\s|$)/i, '\n');
+      flowBlock = `<div class="shead"><span class="schip">✦</span><h2>The process at a glance</h2></div>`
+        + (it.flowLede ? `<p class="slede">${esc(it.flowLede)}</p>` : '')
+        + taskFlow({ flow: it.flow });
+    }
     let bodyHtml = mdToAtlas(md2);
+    if (it.flow && it.flow.length) bodyHtml = flowBlock + bodyHtml;      // designed flow, above the .md body
     if (it.template) bodyHtml = templateBlock(it.template) + bodyHtml;   // prominent download, top of the reader
     if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
     inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
@@ -1776,6 +1805,16 @@ ${BODY.trim()}
 </body>
 </html>
 `;
+
+// GUARD: every SOP's "process at a glance" must render as a DESIGNED flow (a `flow` config
+// → .pcflow), never a bare Mermaid block (the sop-authoring + knowledge-hub house rule). If
+// this fires, give the offending SOP a `flow` config so its reader stops shipping raw Mermaid.
+const bareMermaid = readerDocs
+  .filter((d) => /class="mermaid"/.test(d))
+  .map((d) => (d.match(/data-doc="([^"]+)"/) || [])[1] || '(unknown)');
+if (bareMermaid.length) {
+  console.error(`⚠️  BARE MERMAID in SOP reader(s): ${bareMermaid.join(', ')} — the "process at a glance" must be a DESIGNED flow (a \`flow\` config → .pcflow), never raw Mermaid. See the sop-authoring + knowledge-hub skills.`);
+}
 
 const outStandalone = resolve(here, 'index.html');
 writeFileSync(outStandalone, html);
