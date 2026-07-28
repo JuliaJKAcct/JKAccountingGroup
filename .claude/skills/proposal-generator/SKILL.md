@@ -71,6 +71,8 @@ real filled letter — nothing else varies). The tool refuses to generate while 
 9. **Representative — title** — *optional* (Manager / Partner / Member / President …)
 10. **Client info-needed-by date** — required
 11. **Fee is an estimate** — *optional* toggle ("Fee basis" group); off by default
+12. **Deposit to begin** — *optional* toggle ("Deposit to begin" group); off by default
+13. **Deposit amount (USD)** — used only when the deposit toggle is on
 
 **When "Fee is an estimate" is on**, the Professional Fee line reads **"estimated at $X"**
 (instead of a fixed **"$X"**) and a good-faith-estimate sentence is appended: the final fee
@@ -80,6 +82,15 @@ fixed, final fee — nothing else in the letter changes either way. The tool's "
 panel shows the **exact** sentence it adds, so any team member can see precisely what the
 option does before selecting it (added Jul 2026, Lilian — for returns quoted as an estimate
 pending complexity, e.g. AVK Holdings).
+
+**When "Deposit to begin" is on** (with an amount), a warm one-liner is added to the **Timing
+of the Engagement** section — *"To reserve your place on our schedule and begin the work, we
+ask for a $X deposit, which is credited in full toward your final fee."* — and the Professional
+Fee closing sentence changes to *"After crediting your $X deposit, the remaining balance is
+invoiced upon completion…"* The deposit is framed as **required to begin work but credited in
+full toward the fee** (kept light, never heavy or punitive). Leave it **off** for no deposit.
+The "Deposit to begin" panel shows the exact sentence it adds (added Jul 2026, Lilian — first
+used for AVK Holdings, a $500 deposit).
 
 **The representative fields are optional** because the person who signs *for* the client
 is only pre-printed when known. Leave them blank and the letter prints the blank
@@ -92,7 +103,8 @@ company itself. This matches the firm's master template exactly.
 - Return line (1120 / 1120-S / 1065 wording)
 - Form 8879 variant — **8879-C** (C-corp) · **8879-S** (S-corp) · **8879-PE** (partnership)
 - Original due date — **April 15** (C-corp) · **March 15** (S-corp / partnership), of tax-year + 1
-- Prior year (tax-year − 1) for the trial-balance line
+- The **tax year** for the trial-balance line ("your **2025** year-end trial balance" for a 2025
+  return — the year-end you need to *prepare* the return, not the prior year; corrected Jul 2026)
 
 **Fixed** (only change if asked): cleanup **$60/hr**, advisory **$150/hr**, signer
 **Julia Kononova, MBA, EA — Chief Accountant**, letterhead **Pembroke Pines, Florida ·
