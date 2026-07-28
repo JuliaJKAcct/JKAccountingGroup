@@ -140,8 +140,8 @@
         <label class="check"><input type="checkbox" id="depreq"><span>A <b>deposit</b> is required before we begin work</span></label>
         <label class="field"><span class="cap">Deposit amount (USD)</span><input id="depamt" type="number" placeholder="500"></label>
         <div class="fx" id="fxdep"><div class="dh">What this option changes<span class="tag">active — in the letter</span></div>
-          <p>When ON, this line is added to <b>Timing of the Engagement</b>:</p>
-          <blockquote>“To reserve your place on our schedule and begin the work, we ask for a $X deposit, which is credited in full toward your final fee.”</blockquote>
+          <p>When ON, <b>Timing of the Engagement</b> spells out the sequence — documents first, then deposit, then work:</p>
+          <blockquote>“Once we have received this executed Agreement, your [year] year-end trial balance, and the other supporting data needed to begin, we will request a $X deposit. We begin our services once the deposit is received; it is credited in full toward your final fee.”</blockquote>
           <p class="off">and the Professional Fee section notes the balance — after the deposit — is invoiced on completion. Leave OFF for no deposit.</p>
         </div>
       </div>
@@ -221,7 +221,13 @@
     const dep     = $("depreq").checked;
     $("fxdep").classList.toggle("on", dep);
     const depAmt  = v.depamt ? money(v.depamt) : `<span class="ph">‹Deposit amount›</span>`;
-    const depTiming = dep ? ` To reserve your place on our schedule and begin the work, we ask for a ${depAmt} deposit, which is credited in full toward your final fee.` : ``;
+    // Deposit sequence (when on): the client first sends the documents needed to begin → we
+    // then request the deposit → we begin work once the deposit is in hand. So the whole
+    // "Timing" opening is restructured (not just appended), or it would contradict itself by
+    // saying we begin on receipt of the documents. The deposit is credited in full to the fee.
+    const timingOpen = dep
+      ? `Once we have received this executed Agreement, your ${taxYr} year-end trial balance, and the other supporting data needed to begin, we will request a ${depAmt} deposit. We begin our services once the deposit is received; it is credited in full toward your final fee.`
+      : `We expect to begin our services upon receipt of this executed Agreement, your ${taxYr} year-end trial balance, and other supporting data.`;
     const feeInvoice = dep
       ? `After crediting your ${depAmt} deposit, the remaining balance is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`
       : `This fee is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`;
@@ -285,7 +291,7 @@
       <p>In the event that you do not wish to have your tax returns filed electronically, please contact our firm. Additional procedures will apply. You will be responsible for reviewing the paper returns for accuracy, signing them, and filing them timely with the tax authorities.</p>
 
       <h3>Timing of the Engagement</h3>
-      <p>We expect to begin our services upon receipt of this executed Agreement, your ${taxYr} year-end trial balance, and other supporting data.${depTiming}</p>
+      <p>${timingOpen}</p>
       <p>Our services will conclude upon the earlier of: (a) the filing and acceptance of your tax returns by the appropriate tax authorities and mailing or delivery of non-electronically filed tax returns (if any) to you for your review and your filing with the appropriate tax authorities, (b) written notification by either party that the engagement is terminated, or (c) one (1) year from the execution date of this Agreement.</p>
 
       <h3>Extensions of Time to File Tax Returns</h3>
@@ -322,13 +328,20 @@
     $("banner").className = "banner";
   }
 
-  const missing = () => ids.filter(k => req[k] && !$(k).value.trim());
+  const LABELS = Object.assign({}, req, { depamt:"Deposit amount" });
+  const missing = () => {
+    const m = ids.filter(k => req[k] && !$(k).value.trim());
+    // The deposit amount is required only when the "deposit to begin" option is on — so a
+    // checked-but-blank deposit can never print the ‹Deposit amount› placeholder in a letter.
+    if($("depreq").checked && !$("depamt").value.trim()) m.push("depamt");
+    return m;
+  };
   $("save").addEventListener("click", ()=>{
     const m = missing();
     if(m.length){
       m.forEach(k=>$(k).classList.add("missing"));
       const b=$("banner"); b.className="banner err show";
-      b.textContent = "Please complete these fields before saving the PDF: " + m.map(k=>req[k]).join(", ") + ".";
+      b.textContent = "Please complete these fields before saving the PDF: " + m.map(k=>LABELS[k]).join(", ") + ".";
       $(m[0]).scrollIntoView({behavior:"smooth",block:"center"}); return;
     }
     window.print();
