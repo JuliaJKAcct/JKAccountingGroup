@@ -6,7 +6,7 @@ re-deriving any of it. Firm IP only — no client data lives in this repo (clien
 figures stay in Drive / QuickBooks).
 
 The firm's document conventions: address line **"Pembroke Pines, Florida"** (no
-street address), phone **786-318-1505**, signer **Julia Kononova, MBA, EA — CEO**.
+street address), phone **786-318-1505**, signer **Julia Kononova, MBA, EA — Chief Accountant**.
 Voice is calm, plain, bicultural (EN/RU), real facts only — no fear-mongering, no
 hype. All fonts (Source Serif 4 headings, IBM Plex Sans body, IBM Plex Mono kickers)
 ship with Cyrillic subsets because the firm serves bilingual clients.

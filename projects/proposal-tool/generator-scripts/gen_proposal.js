@@ -32,7 +32,7 @@ const templateOpts = {
   yearEnd: "[Year End]",
   annualRevenue: "[Annual Revenue Range]",
   signerName: "Julia Kononova, MBA, EA",
-  signerTitle: "CEO",
+  signerTitle: "Chief Accountant",
   repName: "",
   repTitle: "",
 };
