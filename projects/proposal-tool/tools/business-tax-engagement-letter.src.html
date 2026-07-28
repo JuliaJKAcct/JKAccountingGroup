@@ -226,7 +226,7 @@
     // "Timing" opening is restructured (not just appended), or it would contradict itself by
     // saying we begin on receipt of the documents. The deposit is credited in full to the fee.
     const timingOpen = dep
-      ? `Once we have received this executed Agreement, your ${taxYr} year-end trial balance, and the other supporting data needed to begin, we will request a ${depAmt} deposit. We begin our services once the deposit is received; it is credited in full toward your final fee.`
+      ? `Once we have received the documentation needed to begin, we will request a ${depAmt} deposit. We begin our services once the deposit is received; it is credited in full toward your final fee.`
       : `We expect to begin our services upon receipt of this executed Agreement, your ${taxYr} year-end trial balance, and other supporting data.`;
     const feeInvoice = dep
       ? `After crediting your ${depAmt} deposit, the remaining balance is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`
