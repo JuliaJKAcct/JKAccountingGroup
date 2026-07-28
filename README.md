@@ -36,6 +36,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Marketing · Lead Magnets](./projects/marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
+| [Proposal & Engagement-Letter Tool](./projects/proposal-tool/) | In-house GoProposal replacement — generates on-brand monthly proposals, tax-prep engagement letters, and a T&C addendum from the firm's pricing logic. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
 | [Client Intelligence](./projects/client-intelligence/) | A durable, per-client knowledge base — obligations, systems, and processes built up gradually as the raw material for each client's SOPs. Secrets and personal data stay in Drive/Double and are referenced by link. | Active |
 | [Knowledge Hub](./projects/knowledge-hub/) | One on-brand, searchable index page for the whole firm — every SOP and every client in one place, generated from `sops/` + `client-intelligence/` so it never drifts. Browse, filter, open any document. | Active |

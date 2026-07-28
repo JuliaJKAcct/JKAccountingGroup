@@ -27,6 +27,12 @@ The one-liners below are just the "when to reach for it."
 | [`expenses-report-tie-out`](./expenses-report-tie-out/) | Turning a QuickBooks **Transaction Detail into an Expenses report that ties to the P&L** (or diagnosing why two reports don't agree). |
 | [`recurring-expense-monitoring`](./recurring-expense-monitoring/) | The mid-month / month-end check that a client's **recurring monthly payments** actually posted — flagging missing, abnormal, or newly-appeared charges. |
 
+## Proposals & client documents
+
+| Skill | Reach for it when… |
+|---|---|
+| [`proposal-generator`](./proposal-generator/) | Creating a client-ready **proposal or engagement letter** — the in-house GoProposal replacement. Business tax-prep engagement letters go through the **interactive generator tool** (starts blank, validates every field); also covers the individual (1040) letter and the monthly-retainer proposal (one bundled fee, bilingual RU/EN, e-signature). *(Encodes the per-client field list + auto-derived return/Form-8879/due-date logic; client data never committed.)* |
+
 ## SOPs & firm knowledge
 
 | Skill | Reach for it when… |
