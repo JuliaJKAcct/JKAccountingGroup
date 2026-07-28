@@ -60,6 +60,16 @@ real filled letter — nothing else varies). The tool refuses to generate while 
 8. **Representative — name** — *optional* (who signs for the client)
 9. **Representative — title** — *optional* (Manager / Partner / Member / President …)
 10. **Client info-needed-by date** — required
+11. **Fee is an estimate** — *optional* toggle ("Fee basis" group); off by default
+
+**When "Fee is an estimate" is on**, the Professional Fee line reads **"estimated at $X"**
+(instead of a fixed **"$X"**) and a good-faith-estimate sentence is appended: the final fee
+may be adjusted for the return's actual complexity, and the firm will agree any material
+change with the client before proceeding (no surprise invoice). Leave it **off** for a
+fixed, final fee — nothing else in the letter changes either way. The tool's "Fee basis"
+panel shows the **exact** sentence it adds, so any team member can see precisely what the
+option does before selecting it (added Jul 2026, Lilian — for returns quoted as an estimate
+pending complexity, e.g. AVK Holdings).
 
 **The representative fields are optional** because the person who signs *for* the client
 is only pre-printed when known. Leave them blank and the letter prints the blank

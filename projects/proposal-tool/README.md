@@ -42,7 +42,8 @@ proposal-tool/
 ├── tools/                     ← self-service interactive tools (open in a browser)
 │   ├── business-tax-engagement-letter.src.html ← the interactive business tax-prep
 │   │                             engagement-letter generator (starts blank, validates
-│   │                             every field, auto-derives return/Form-8879/due-date)
+│   │                             every field, auto-derives return/Form-8879/due-date,
+│   │                             optional "fee is an estimate" toggle)
 │   ├── pricing-calculator.src.html ← internal pricing calculator — the interactive
 │   │                             front-end for the Core Pricing Matrix; enter the client's
 │   │                             service parameters → internal breakdown + one bundled

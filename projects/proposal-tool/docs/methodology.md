@@ -127,6 +127,16 @@ itemizing service lines is still forbidden. Don't conflate the two.
   hourly). Optional bookkeeping/cleanup (only if needed) is **$60/hr**; separate
   consultations/advisory outside prep scope are **$150/hr**. (The $60/hr is the
   cleanup rate, *not* the prep rate — a point clarified during the original build.)
+- **"Fee is an estimate" toggle (interactive tool):** an optional **"Fee basis"** checkbox,
+  **off by default**. Off = the fee prints as a fixed final amount ("$X"). On = it prints as
+  **"estimated at $X"** and appends a good-faith-estimate sentence — the final fee may be
+  adjusted for the return's actual complexity, and the firm agrees any material change with
+  the client before proceeding (no surprise invoice). The tool's form panel shows the **exact**
+  inserted sentence so any team member sees precisely what the option changes. The docx path can
+  reproduce it by passing `prepFee: "estimated at $X"` and **hand-adding** the same sentence to
+  the Professional Fee paragraph in the per-client output copy — the shared `body.js` engine is
+  not modified (it only bolds `prepFee`; it does not inject the estimate sentence on its own).
+  (Added Jul 2026, Lilian — for returns quoted as an estimate pending complexity.)
 
 ## Merged-document decision
 
