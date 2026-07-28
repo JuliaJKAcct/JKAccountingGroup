@@ -22,7 +22,7 @@
   .btn-primary{ background:var(--bronze); color:#fff; } .btn-primary:hover{ background:#875a30; }
   .btn-ghost{ background:transparent; color:#E7E0D2; border:1px solid rgba(231,224,210,.35); } .btn-ghost:hover{ background:rgba(231,224,210,.12); }
 
-  .workspace{ flex:1; display:grid; grid-template-columns:400px 1fr; min-height:0; }
+  .workspace{ flex:1; display:grid; grid-template-columns:360px 1fr; min-height:0; }
   .form-panel{ overflow-y:auto; padding:18px 18px 80px; background:var(--ivory); border-right:1px solid var(--hairline); }
   .step{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#fff; background:var(--teal); border-radius:4px; padding:6px 10px; margin:6px 0 12px; }
   .step.two{ background:var(--bronze); }
@@ -49,7 +49,12 @@
   .preview-panel{ overflow-y:auto; padding:22px; background:#DED7C7; }
   .langbanner{ max-width:7.6in; margin:0 auto 14px; background:#F6EEDD; border:1px solid #E4D3AE; color:#5f4a24; border-radius:6px; padding:9px 13px; font-size:12px; display:none; }
   .langbanner.show{ display:block; }
-  .ppage{ max-width:7.6in; margin:0 auto 20px; background:var(--ivory); box-shadow:0 4px 26px rgba(9,31,36,.16); padding:0.7in 0.8in 0.5in; position:relative; min-height:9.6in; display:flex; flex-direction:column; }
+  /* The page is a FIXED letter sheet (816×1056 = 8.5×11in @96dpi); #proposal is zoomed to
+     fit whatever width the preview panel has (fitPreview() in JS), so it always reads as a
+     properly-proportioned Letter page — full size in a wide window, scaled-down but never
+     squished inside the narrower Hub iframe. */
+  #proposal{ zoom:1; }
+  .ppage{ width:816px; margin:0 auto 20px; background:var(--ivory); box-shadow:0 4px 26px rgba(9,31,36,.16); padding:0.8in 0.85in 0.6in; position:relative; min-height:1056px; display:flex; flex-direction:column; }
   .ppage .pfoot{ margin-top:auto; }
   .footbar{ background:var(--deep); color:#CFC6B4; font-family:var(--mono); font-size:8.5px; letter-spacing:.12em; text-align:center; padding:6px; border-radius:2px; margin-top:24px; }
 
@@ -116,7 +121,8 @@
     .toolbar, .form-panel, .langbanner{ display:none !important; }
     body, .app, .workspace, .preview-panel{ display:block !important; height:auto !important; overflow:visible !important; background:#fff !important; }
     .preview-panel{ padding:0 !important; }
-    .ppage{ max-width:none !important; margin:0 !important; box-shadow:none !important; min-height:auto !important; padding:0.3in 0.1in; break-after:page; page-break-after:always; }
+    #proposal{ zoom:1 !important; }
+    .ppage{ width:auto !important; max-width:none !important; margin:0 !important; box-shadow:none !important; min-height:auto !important; padding:0.3in 0.1in; break-after:page; page-break-after:always; }
     .ppage:last-child{ break-after:auto; }
     @page{ size:Letter; margin:0.5in; }
   }
@@ -406,7 +412,20 @@
       </div>
     `;
     $("proposal").innerHTML = html;
+    fitPreview();
   }
+
+  // Scale the fixed 816px (8.5in) letter sheet to fit the preview panel's width, so it always
+  // reads as a proper Letter page — full size in a wide window, scaled down (never squished)
+  // inside the narrower Hub iframe. Uses CSS zoom (affects layout, so scroll stays correct).
+  function fitPreview(){
+    const panel = document.querySelector('.preview-panel');
+    if(!panel) return;
+    const avail = panel.clientWidth - 44;               // minus the panel's 22px padding
+    const z = Math.max(0.4, Math.min(1, avail / 828));  // 816px page + a little breathing room
+    $("proposal").style.zoom = String(z);
+  }
+  window.addEventListener('resize', fitPreview);
 
   $("lang").addEventListener("change", ()=>{ $("langbanner").classList.toggle("show", $("lang").value==="ru"); });
   $("save").addEventListener("click", ()=> window.print());
