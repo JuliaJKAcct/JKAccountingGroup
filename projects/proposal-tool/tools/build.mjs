@@ -19,6 +19,9 @@ const here = dirname(fileURLToPath(import.meta.url));
 const repo = resolve(here, "..", "..", "..");
 
 const fonts = readFileSync(resolve(repo, "brand/design-system/fonts-embedded.css"), "utf8");
+// Cyrillic subset — only inlined into tools that render Russian (the bilingual proposal),
+// so Latin-only tools stay small. See brand/design-system/fetch-fonts-cyrillic.mjs.
+const fontsCyrillic = readFileSync(resolve(repo, "brand/design-system/fonts-cyrillic-embedded.css"), "utf8");
 const png = (rel) => "data:image/png;base64," + readFileSync(resolve(repo, rel)).toString("base64");
 const logo         = png("brand/logo/png/JK-lockup-horizontal-2048.png");
 const medallion    = png("brand/logo/png/JK-medallion-primary-1024.png");
@@ -33,13 +36,14 @@ const pricingCore = readFileSync(resolve(here, "pricing-core.js"), "utf8");
 const TOOLS = {
   "business-tax-engagement-letter": { title: "JK Accounting Group — Business Tax Engagement Letter" },
   "pricing-calculator":             { title: "JK Accounting Group — Internal Pricing Calculator", artifact: true },
-  "monthly-proposal-generator":     { title: "JK Accounting Group — Monthly Proposal Generator" },
+  "monthly-proposal-generator":     { title: "JK Accounting Group — Monthly Proposal Generator", cyrillic: true },
 };
 
 for (const [name, cfg] of Object.entries(TOOLS)) {
   const src = readFileSync(resolve(here, name + ".src.html"), "utf8");
   const body = src
     .replaceAll("/*__FONTS__*/", fonts)
+    .replaceAll("/*__FONTS_CYRILLIC__*/", cfg.cyrillic ? fontsCyrillic : "")
     .replaceAll("__MEDALLION_REV__", medallionRev)
     .replaceAll("__MEDALLION__", medallion)
     .replaceAll("__LOGO__", logo)
