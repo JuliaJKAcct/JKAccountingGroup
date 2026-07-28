@@ -130,6 +130,23 @@ company itself. This matches the firm's master template exactly.
   builder, `premium_proposal_body.js`, the pricing scripts).
 - `projects/proposal-tool/docs/methodology.md` — pricing engine, format spec, decisions.
 
+## The pricing calculator link (the team's bookmark)
+
+The internal pricing calculator is published as **one official claude.ai Artifact** — a
+link Lilian shares with the team; it never downloads anything, so a live link (always the
+latest version) beats a stale HTML file. **Always update THAT artifact, never mint a new
+one:**
+
+> **THE Pricing Calculator link:**
+> `https://claude.ai/code/artifact/31d6167b-e86d-4df8-b19d-a57b126b0c34`
+
+To update it after any change: `node projects/proposal-tool/tools/build.mjs` (emits
+`tools/pricing-calculator.artifact.html` — the fragment with fonts inlined, **no**
+doctype/html wrapper), then republish with the **Artifact** tool passing that **URL** as
+`url` (from a session that didn't publish it) so the link stays stable. It needs **no**
+runtime capabilities (no downloads, no print). It **starts fully blank** every time — no
+default value can carry into a client's price.
+
 ## Hosting the tool for the team
 
 For now the team uses it **self-service** by opening the built HTML in a browser

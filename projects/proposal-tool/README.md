@@ -100,9 +100,12 @@ to build the self-contained HTML, then open it in a normal browser:
   field missing.
 - **Internal pricing calculator** — the interactive front-end for the Core Pricing Matrix:
   enter a client's service parameters and it computes the internal fee build-up and the
-  single bundled monthly fee. **Internal only** — the client proposal shows just the one
-  bundled fee. Mirrors `generator-scripts/build_pricing_xlsx.py` +
-  `build_client_pricing_sheet.py`.
+  single bundled monthly fee. Starts fully blank (no default can carry into a client's
+  price). **Internal only** — the client proposal shows just the one bundled fee. Mirrors
+  `generator-scripts/build_pricing_xlsx.py` + `build_client_pricing_sheet.py`. Because it
+  downloads nothing, it's shared as **one live claude.ai Artifact link** (always the latest
+  version) rather than a file — see the canonical URL + update flow in the
+  [`proposal-generator`](../../.claude/skills/proposal-generator/) skill.
 
 The docx/HTML engine still lives in `generator-scripts/`; validation uses the repo's
 `docx`/`xlsx` helpers (`validate.py`, `recalc.py`).

@@ -10,3 +10,4 @@ generator-scripts/*.pdf
 # Built tool artifacts (self-contained, regenerate with tools/build.mjs) — commit the .src.html, not these
 tools/business-tax-engagement-letter.html
 tools/pricing-calculator.html
+tools/pricing-calculator.artifact.html

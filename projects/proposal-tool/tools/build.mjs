@@ -22,21 +22,30 @@ const fonts = readFileSync(resolve(repo, "brand/design-system/fonts-embedded.css
 const logo  = "data:image/png;base64," +
   readFileSync(resolve(repo, "brand/logo/png/JK-lockup-horizontal-2048.png")).toString("base64");
 
-// tool src basename → document <title>
+// tool src basename → { title, artifact }
+//   artifact:true also emits <name>.artifact.html — the SAME fragment with fonts inlined
+//   but WITHOUT the <!doctype>/<html>/<head>/<body> wrapper, ready to publish as a
+//   claude.ai Artifact (the Artifact tool supplies its own skeleton).
 const TOOLS = {
-  "business-tax-engagement-letter": "JK Accounting Group — Business Tax Engagement Letter",
-  "pricing-calculator":             "JK Accounting Group — Internal Pricing Calculator",
+  "business-tax-engagement-letter": { title: "JK Accounting Group — Business Tax Engagement Letter" },
+  "pricing-calculator":             { title: "JK Accounting Group — Internal Pricing Calculator", artifact: true },
 };
 
-for (const [name, title] of Object.entries(TOOLS)) {
+for (const [name, cfg] of Object.entries(TOOLS)) {
   const src = readFileSync(resolve(here, name + ".src.html"), "utf8");
   const body = src.replace("/*__FONTS__*/", fonts).replace("__LOGO__", logo);
   const full =
     '<!doctype html><html lang="en"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-    `<title>${title}</title></head><body>\n` +
+    `<title>${cfg.title}</title></head><body>\n` +
     body + '\n</body></html>';
   const out = resolve(here, name + ".html");
   writeFileSync(out, full);
   console.log("built", out, Math.round(full.length / 1024) + " KB");
+
+  if (cfg.artifact) {
+    const artOut = resolve(here, name + ".artifact.html");
+    writeFileSync(artOut, body);
+    console.log("built", artOut, Math.round(body.length / 1024) + " KB (artifact body)");
+  }
 }
