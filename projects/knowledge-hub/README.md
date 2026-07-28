@@ -103,6 +103,9 @@ that URL as `url`**. Passing the same *file path* keeps the URL stable only **wi
 one session**; a *different* session that doesn't pass the `url` **mints a new
 artifact URL** — that is how two "Knowledge Hub" links appeared (22-Jul + 23-Jul).
 Reuse the link above from every session and there's only ever one bookmark.
+**Keep it current — Lilian's standing instruction (Jul 2026): refresh this link after every
+Hub change (publish from merged `main`), unprompted.** She bookmarks it and it's the source
+for the future Odoo migration, so it must always mirror the latest merged Hub.
 Overwriting is safe **when the live link was last published from merged `main`**
 (the Hub is a full rebuild from `main`, so nothing is lost) — the one exception is
 a link last published from an **unmerged** branch, which a blind overwrite would
