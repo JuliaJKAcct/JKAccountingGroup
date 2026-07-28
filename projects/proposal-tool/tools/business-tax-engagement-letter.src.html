@@ -136,6 +136,16 @@
         </div>
       </div>
       <div class="group">
+        <p class="glabel">Deposit to begin <span class="opt">optional</span></p>
+        <label class="check"><input type="checkbox" id="depreq"><span>A <b>deposit</b> is required before we begin work</span></label>
+        <label class="field"><span class="cap">Deposit amount (USD)</span><input id="depamt" type="number" placeholder="500"></label>
+        <div class="fx" id="fxdep"><div class="dh">What this option changes<span class="tag">active — in the letter</span></div>
+          <p>When ON, this line is added to <b>Timing of the Engagement</b>:</p>
+          <blockquote>“To reserve your place on our schedule and begin the work, we ask for a $X deposit, which is credited in full toward your final fee.”</blockquote>
+          <p class="off">and the Professional Fee section notes the balance — after the deposit — is invoiced on completion. Leave OFF for no deposit.</p>
+        </div>
+      </div>
+      <div class="group">
         <p class="glabel">Client signature <span class="opt">optional</span></p>
         <p class="ghint">Who signs for the client. Fill these in only to pre-print the signer on the letter; leave blank and the client writes them in by hand when signing (e.g. when the owner signs personally, with no separate representative).</p>
         <label class="field"><span class="cap">Representative — name</span><input id="repname" placeholder="e.g. Jane Smith"></label>
@@ -159,7 +169,7 @@
 
 <script>
   const $ = id => document.getElementById(id);
-  const ids = ["company","addr1","addr2","entity","year","fee","repname","reptitle","ldate","infoby"];
+  const ids = ["company","addr1","addr2","entity","year","fee","depamt","repname","reptitle","ldate","infoby"];
   // Representative name/title are OPTIONAL — left blank when the client signs personally
   // (matches Julia's template: an empty rep field just prints the blank signature line).
   const req = {company:"Company name",addr1:"Address line 1",addr2:"Address line 2",entity:"Entity type",year:"Tax year",fee:"Fee",ldate:"Letter date",infoby:"Info needed by"};
@@ -177,7 +187,7 @@
   function derived(){
     const e = ENT[$("entity").value] || null;
     const yr = $("year").value ? +$("year").value : null;
-    return { ret:e?e.ret:null, efile:e?e.efile:null, due:(e&&yr)?`${e.dueM}, ${yr+1}`:null, yearEnd:yr?`December 31, ${yr}`:null, prior:yr?(yr-1):null };
+    return { ret:e?e.ret:null, efile:e?e.efile:null, due:(e&&yr)?`${e.dueM}, ${yr+1}`:null, yearEnd:yr?`December 31, ${yr}`:null, year:yr };
   }
 
   function render(){
@@ -192,7 +202,8 @@
     const yearEnd = d.yearEnd || `<span class="ph">‹Tax year›</span>`;
     const efile   = d.efile ? esc(d.efile) : `<span class="ph">‹E-file form›</span>`;
     const due     = d.due || `<span class="ph">‹Due date›</span>`;
-    const prior   = d.prior || `<span class="ph">‹Prior year›</span>`;
+    // Trial balance needed to prepare the return is the TAX YEAR's year-end (not the prior year).
+    const taxYr   = d.year || `<span class="ph">‹Tax year›</span>`;
 
     const accepted = v.repname ? esc(v.repname) : co;
 
@@ -203,6 +214,17 @@
     const feeVal  = v.fee ? money(v.fee) : `<span class="ph">‹Fee›</span>`;
     const feeBold = est ? `estimated at ${feeVal}` : feeVal;
     const estNote = est ? ` Accordingly, the amount stated above is a good-faith estimate; the final fee may be adjusted to reflect the actual complexity of the return, and should the work require a material change from this estimate, we will review it with you and obtain your agreement before proceeding — you will not receive an unexpected invoice.` : ``;
+
+    // Deposit to begin: when on, a warm one-liner is added to "Timing of the Engagement",
+    // and the Professional Fee closing sentence notes the balance (after the deposit) is
+    // invoiced on completion. Kept light — required to start, credited in full toward the fee.
+    const dep     = $("depreq").checked;
+    $("fxdep").classList.toggle("on", dep);
+    const depAmt  = v.depamt ? money(v.depamt) : `<span class="ph">‹Deposit amount›</span>`;
+    const depTiming = dep ? ` To reserve your place on our schedule and begin the work, we ask for a ${depAmt} deposit, which is credited in full toward your final fee.` : ``;
+    const feeInvoice = dep
+      ? `After crediting your ${depAmt} deposit, the remaining balance is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`
+      : `This fee is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`;
 
     $("letter").innerHTML = `
       <div class="lh"><img src="__LOGO__" alt="JK Accounting Group"><div class="kd">Tax Preparation Engagement Letter</div><div class="meta">Pembroke Pines, Florida</div><div class="meta">786-318-1505</div></div>
@@ -263,7 +285,7 @@
       <p>In the event that you do not wish to have your tax returns filed electronically, please contact our firm. Additional procedures will apply. You will be responsible for reviewing the paper returns for accuracy, signing them, and filing them timely with the tax authorities.</p>
 
       <h3>Timing of the Engagement</h3>
-      <p>We expect to begin our services upon receipt of this executed Agreement, your ${prior} year-end trial balance, and other supporting data.</p>
+      <p>We expect to begin our services upon receipt of this executed Agreement, your ${taxYr} year-end trial balance, and other supporting data.${depTiming}</p>
       <p>Our services will conclude upon the earlier of: (a) the filing and acceptance of your tax returns by the appropriate tax authorities and mailing or delivery of non-electronically filed tax returns (if any) to you for your review and your filing with the appropriate tax authorities, (b) written notification by either party that the engagement is terminated, or (c) one (1) year from the execution date of this Agreement.</p>
 
       <h3>Extensions of Time to File Tax Returns</h3>
@@ -275,7 +297,7 @@
       <p>Federal, state, and local tax authorities impose various penalties and interest charges for non-compliance with tax laws and regulations including failure to file or late filing of returns, and underpayment of taxes. You, as the taxpayer, remain responsible for the payment of all tax, penalties, and interest charges imposed by tax authorities.</p>
 
       <h3>Professional Fee</h3>
-      <p class="fee">Our professional fee for the tax return preparation outlined above is <b>${feeBold}</b>. This fee is based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depends upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} This fee is invoiced upon completion of the engagement, prior to release of the completed tax return(s).</p>
+      <p class="fee">Our professional fee for the tax return preparation outlined above is <b>${feeBold}</b>. This fee is based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depends upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} ${feeInvoice}</p>
       <p>If bookkeeping or accounting cleanup work is needed to complete the return(s) (see Bookkeeping assistance above), that work is billed separately at $60/hr. Any tax planning or advisory consultations outside the scope of this engagement are billed separately at $150/hr under a separate agreement.</p>
       <p>You agree that you will deliver all records requested and respond to all inquiries made by our staff to complete this engagement on a timely basis. You agree to pay all fees and expenses incurred whether or not we prepare the tax returns.</p>
       <p>We require that all outstanding invoices be paid prior to releasing the completed tax returns. We do not release incomplete tax returns.</p>
@@ -311,8 +333,9 @@
     }
     window.print();
   });
-  $("reset").addEventListener("click", ()=>{ if(!confirm("Start a new letter? All fields will be cleared.")) return; ids.forEach(k=>$(k).value=""); $("estimate").checked=false; render(); });
+  $("reset").addEventListener("click", ()=>{ if(!confirm("Start a new letter? All fields will be cleared.")) return; ids.forEach(k=>$(k).value=""); $("estimate").checked=false; $("depreq").checked=false; render(); });
   ids.forEach(k=>$(k).addEventListener("input", render));
   $("estimate").addEventListener("change", render);
+  $("depreq").addEventListener("change", render);
   render();
 </script>
