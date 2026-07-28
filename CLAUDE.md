@@ -204,6 +204,16 @@ in that folder.
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
   blocking findings, then merge. Never merge an unreviewed PR.
+- **Self-contained HTML tools live in the Knowledge Hub, from source.** Any
+  self-contained HTML tool the firm builds (e.g. the proposal generator) is
+  **embedded in the [Knowledge Hub](./projects/knowledge-hub/) from its own
+  `.src.html`** and gets a card in the Hub's **"Interactive tools"** band — one
+  source of truth, never a hand-copied duplicate. **Whenever a tool's source
+  changes, rebuild and republish the Hub, unprompted** (publishing from merged
+  `main` as the last step — the one canonical Hub link, never a new one), so the
+  Hub always shows the latest and stays the single place to find every tool the firm
+  has built (Lilian, Jul 2026). The mechanics live in the
+  [`knowledge-hub` skill](./.claude/skills/knowledge-hub/) (rule 12).
 
 ## Creating a new project (do this exactly, every time)
 

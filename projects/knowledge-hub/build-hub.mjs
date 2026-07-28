@@ -1497,6 +1497,15 @@ const today = new Date().toISOString().slice(0, 10);
    honestly in the Artifact sandbox (which blocks pdf/xlsx). Every asset is
    embedded as a data URI, so the page stays self-contained. */
 const TEMPLATES = [
+  // Interactive tools — self-contained HTML tools that open and RUN inside the Hub. Each is
+  // embedded from its own .src.html at build time (single source of truth), so the Hub always
+  // shows the latest version. Adding a new HTML tool = one { band: 'tool' } entry here whose
+  // `tool.id` matches an embedded reader — see the "tools live in the Hub, from source" rule.
+  { band: 'tool', kind: 'Interactive tool', name: 'Business Tax Engagement Letter — generator', owner: 'julia',
+    blurb: 'The firm’s in-house GoProposal replacement — builds a business tax-preparation engagement letter from a few client facts, live in the browser. Starts blank every time, auto-derives the return (1120 / 1120-S / 1065), the Form 8879 variant and the due date, and carries the optional “fee is an estimate” toggle. Opens right here in the Hub; “Save PDF” works in a normal browser. Client data never enters the repo.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'business-tax-engagement-letter-standard', label: 'Open the generator' } },
+
   { band: 'firm', kind: 'Bookkeeping', name: 'Chart of Accounts — Firm Standard', owner: 'lilian',
     blurb: 'The firm’s one numbering system for every client — the 125-account master. Import it into a new client’s QuickBooks, then activate, rename and add niche sub-accounts within the same ranges.',
     formats: ['XLSX'],
@@ -1571,6 +1580,7 @@ function tplCardHtml(t) {
       </div>`;
 }
 
+const tplTool = TEMPLATES.filter((t) => t.band === 'tool');
 const tplFirm = TEMPLATES.filter((t) => t.band === 'firm');
 const tplSop = TEMPLATES.filter((t) => t.band === 'sop');
 const tplCount = TEMPLATES.filter((t) => !t.reserved).length;
@@ -1588,13 +1598,15 @@ const templatesViewHtml = `
     <section class="hview" data-view="tpl" hidden>
       <div class="hview-hd">
         <div class="hview-t"><h2>Templates</h2><span class="ct">${tplCount}</span></div>
-        <p class="hview-sub">The firm’s reusable files in one place — <b>find and download</b> what you need. <b>Firm templates</b> stand alone; templates that belong to a procedure are indexed here too, with a link to open their SOP. The original always stays in its SOP.</p>
+        <p class="hview-sub">The firm’s interactive <b>tools</b> and reusable <b>files</b> in one place. <b>Interactive tools</b> open and run right here in the Hub — always the latest version, built from each tool’s own source. <b>Firm templates</b> stand alone; templates that belong to a procedure are indexed here too, with a link to open their SOP. The original always stays in its SOP.</p>
       </div>
+      ${tplBandHtml('Interactive tools', 'Self-contained tools that open and run right here in the Hub — always the latest version, rebuilt from each tool’s source so there’s never a second copy to keep in sync.', 'tpl-tool', tplTool)}
       ${tplBandHtml('Firm templates', 'Standalone files that don’t belong to a single procedure — import, copy, or send them as-is.', 'tpl-firm', tplFirm)}
       ${tplBandHtml('From a procedure', 'Blank forms and client-send guides that live inside an SOP — grab them here, or open the SOP for the full context.', 'tpl-sop', tplSop)}
     </section>`;
 const tplIndexHtml =
   `<p class="hix-t">Templates</p>`
+  + (tplTool.length ? `<a class="hix-a" href="#tpl-tool" data-spy="tpl-tool">Interactive tools<span class="hix-n">${tplTool.filter((t) => !t.reserved).length}</span></a>` : '')
   + (tplFirm.length ? `<a class="hix-a" href="#tpl-firm" data-spy="tpl-firm">Firm templates<span class="hix-n">${tplFirm.filter((t) => !t.reserved).length}</span></a>` : '')
   + (tplSop.length ? `<a class="hix-a" href="#tpl-sop" data-spy="tpl-sop">From a procedure<span class="hix-n">${tplSop.filter((t) => !t.reserved).length}</span></a>` : '');
 
