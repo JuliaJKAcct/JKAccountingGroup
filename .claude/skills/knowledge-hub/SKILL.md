@@ -177,8 +177,9 @@ emitted script silently broke *every* click.
     drop it into the reader as an **isolated iframe** (`srcdoc`) so its own CSS + `window.print()`
     can't touch the Hub. **Never a hand-copied duplicate.** Because the Hub is a deterministic build
     of that source, there is exactly **one** version and the Hub always shows the latest. **Standing
-    rule: whenever a tool's `.src.html` changes, rebuild AND republish the Hub in the same change —
-    unprompted — so the Hub never lags the tool.** Lilian wants the Hub to be the single place she
+    rule: whenever a tool's `.src.html` changes, rebuild AND republish the Hub — unprompted — so the
+    Hub never lags the tool** (publish from merged `main` as the **last** step, per the publish flow
+    below: keep the one canonical Hub link current, never mint a new one). Lilian wants the Hub to be the single place she
     can see every tool we've built, with no scattered or divergent copies. **To add a new tool:**
     embed its `.src.html` as a reader (mirror `ENGAGEMENT_DOC` + the `it.<flag>` → `…ReaderInner`
     wiring), then add one `{ band: 'tool', …, tool:{ id, label } }` entry. The first tool is the
