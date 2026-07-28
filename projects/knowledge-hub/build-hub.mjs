@@ -1507,8 +1507,10 @@ const TEMPLATES = [
     ],
     open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
 
-  { band: 'firm', kind: 'Tax preparation', name: 'Tax Preparation Proposals', owner: 'julia', reserved: true,
-    blurb: 'The firm’s proposal templates for tax-prep engagements. Being prepared in a separate working session — this slot is reserved and will carry the downloads as soon as they’re ready.' },
+  { band: 'firm', kind: 'Tax preparation', name: 'Tax Preparation Proposals', owner: 'julia',
+    blurb: 'Produce a client proposal or engagement letter with the firm’s in-house generator (our GoProposal replacement). The Business Tax Engagement Letter builds live from a few client facts and auto-derives the return, Form 8879 and due date; monthly-retainer proposals, 1040 letters and the T&C addendum come from the same proposal-generator tool.',
+    formats: ['Generator'],
+    tool: { id: 'business-tax-engagement-letter-standard', label: 'Open the engagement-letter generator' } },
 
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
@@ -1544,7 +1546,9 @@ function tplCardHtml(t) {
   const badges = (t.formats || []).map((f) => `<span class="fmt">${esc(f)}</span>`).join('');
   const actions = t.reserved
     ? `<div class="tpl-soon">${IC.doc}<span>In preparation — coming soon</span></div>`
-    : `<div class="tpl-actions">` + (t.downloads || []).map((d) => {
+    : `<div class="tpl-actions">`
+        + (t.tool ? `<a class="dlbtn big tpl-tool" role="button" tabindex="0" data-open-doc="${t.tool.id}" data-doc-name="${esc(t.name)}">${esc(t.tool.label)}${TARROW}</a>` : '')
+        + (t.downloads || []).map((d) => {
         const cls = 'dlbtn' + (d.primary ? ' big' : '') + (d.ghost ? ' ghost' : '');
         return `<a class="${cls}" href="${dataUri(d.mime, d.path)}" download="${esc(d.file)}">${IC.dl}${esc(d.label)}</a>`;
       }).join('') + `</div>`;

@@ -151,8 +151,8 @@ emitted script silently broke *every* click.
     (Lilian, Jul 2026).** Born because SOPs, client intelligence and *templates* shouldn't share
     one bucket: a template is a distinct kind of asset — a file you copy/send, not a "how we do
     X." Two bands, echoing the split-by-nature idea: **Firm templates** — standalone files that
-    belong to no single SOP (the Chart-of-Accounts master; Tax-Prep Proposals, a **reserved**
-    "coming soon" card until Lilian's other session ships them) — and **From a procedure** —
+    belong to no single SOP (the Chart-of-Accounts master; Tax-Prep Proposals, whose card **opens
+    the engagement-letter generator** — the proposal-tool, PR #78) — and **From a procedure** —
     templates that live inside an SOP (the blank Child & Dependent Care form; the Double
     client-sign-in guides). **The rule: a template attached to an SOP is INDEXED here, never
     moved** — its download sits on the Templates card AND the original stays in its SOP, so each
@@ -162,7 +162,7 @@ emitted script silently broke *every* click.
     sandbox (which blocks `pdf`/`xlsx` — a documented platform limit, contract 0.1.15: base +
     extended `docx pptx epub csv ttf html svg`, and even the extended set is off by default, so
     the artifact preview can't save these; the real host and Odoo can). Mechanics: a `TEMPLATES`
-    array in `build-hub.mjs` — `{band, kind, name, owner, formats, downloads:[{label,file,mime,path,primary?,ghost?}], open?, reserved?}`
+    array in `build-hub.mjs` — `{band, kind, name, owner, formats, downloads:[{label,file,mime,path,primary?,ghost?}], tool?:{id,label}, open?, reserved?}` (a `tool` renders a prominent button that opens a Hub reader/generator by `data-open-doc` — how the Proposals card links to the engagement-letter generator instead of a file download)
     — drives `tplCardHtml`; each asset is embedded as a data URI (self-contained). Cards are
     `<div class="hcard doc-card tcard" data-card data-type="tpl">` so they share the search +
     Owner filter + empty-hide logic; the view has **no extra facets**. **To add a template:** add a
