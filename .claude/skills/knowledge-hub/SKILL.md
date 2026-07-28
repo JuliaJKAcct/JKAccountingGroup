@@ -280,7 +280,13 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
      first. (Following this flow — publish *after* merge — keeps the premise true.)
    - **Always pass `capabilities: {downloads: true}`** so the download/print buttons work
      (see the downloads section above), and keep the favicon stable (📚).
-   - Publish only with the user's go-ahead.
+   - **Standing instruction — keep this ONE link current after every Hub change (Lilian, Jul 2026).**
+     Lilian gave a standing go-ahead: whenever a session changes what the Hub renders, **refresh
+     this link as the last step — publish from merged `main`, without waiting to be asked.** She
+     bookmarks it and will use it as the source when we migrate the Hub to the firm's Odoo website,
+     so it must always mirror the latest merged Hub. The sandbox download limit is understood and
+     accepted — the link is for viewing + as the migration source, not for downloading. (So the
+     earlier "publish only on request" no longer applies to *this* link; still don't mint new URLs.)
 6. **Commit → PR → independent review → merge** (never merge unreviewed — CLAUDE.md).
    Small PRs per improvement round. **Commit only the SOURCES** (`build-hub.mjs`, `hub.css`,
    `coa-standard.json`, the SOP `.md`s) — **never `index.html`** (it's a gitignored build
