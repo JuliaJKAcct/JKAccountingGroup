@@ -160,10 +160,13 @@ default value can carry into a client's price.
 ## Hosting the tool for the team
 
 For now the team uses it **self-service** by opening the built HTML in a browser
-(download → Chrome → Save PDF). It is also being integrated into the **Knowledge Hub**
-(as an in-Hub tool, the house way — see the `knowledge-hub` skill); when the Hub is
-published to the private **Odoo team site**, the tool works there behind the team login,
-fully self-service. Do not put it on the public website.
+(download → Chrome → Save PDF). It is also **embedded in the [Knowledge Hub](../../../projects/knowledge-hub/)** —
+its own card in the Hub's **"Interactive tools"** band, opening the generator inside the
+Hub, built from this tool's `.src.html` (one source of truth). **When you change the tool's
+`.src.html`, rebuild AND republish the Hub in the same change, unprompted** (see the
+`knowledge-hub` skill, rule 12) so the Hub never lags the tool. When the Hub is published to
+the private **Odoo team site**, the tool works there behind the team login, fully
+self-service. Do not put it on the public website.
 
 *Update this skill when a new document type or field is added, the fee rules change, or
 Julia/Lilian set a new standard for proposals or engagement letters.*

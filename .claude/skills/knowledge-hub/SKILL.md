@@ -169,6 +169,22 @@ emitted script silently broke *every* click.
     `TEMPLATES` entry (and, if it belongs to an SOP, set `open.id` to that SOP's reader id = its
     `.md` basename). Ecoorganic-style visual polish isn't needed here — these are file cards.
 
+12. **Self-contained HTML tools live in the Hub — embedded from source, auto-tracked (Lilian,
+    Jul 2026).** Every self-contained HTML tool the firm builds gets its own space in the Hub: a
+    card in the **"Interactive tools"** band of the Templates view (`band: 'tool'` in `TEMPLATES`,
+    whose `tool.id` opens an embedded reader), and the tool is **embedded from its own `.src.html`
+    at build time** — mirror `ENGAGEMENT_DOC`: read the source, inline the brand fonts + logo, and
+    drop it into the reader as an **isolated iframe** (`srcdoc`) so its own CSS + `window.print()`
+    can't touch the Hub. **Never a hand-copied duplicate.** Because the Hub is a deterministic build
+    of that source, there is exactly **one** version and the Hub always shows the latest. **Standing
+    rule: whenever a tool's `.src.html` changes, rebuild AND republish the Hub in the same change —
+    unprompted — so the Hub never lags the tool.** Lilian wants the Hub to be the single place she
+    can see every tool we've built, with no scattered or divergent copies. **To add a new tool:**
+    embed its `.src.html` as a reader (mirror `ENGAGEMENT_DOC` + the `it.<flag>` → `…ReaderInner`
+    wiring), then add one `{ band: 'tool', …, tool:{ id, label } }` entry. The first tool is the
+    Business Tax Engagement Letter generator (reader id `business-tax-engagement-letter-standard`);
+    the internal pricing calculator can join the same band the same way when wanted.
+
 ## Design is not optional — impeccable + the Design System, always
 
 **Every visual change to the Hub or a bookkeeping SOP goes through the
