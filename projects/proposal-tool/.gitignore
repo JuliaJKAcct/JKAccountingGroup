@@ -11,3 +11,4 @@ generator-scripts/*.pdf
 tools/business-tax-engagement-letter.html
 tools/pricing-calculator.html
 tools/pricing-calculator.artifact.html
+tools/monthly-proposal-generator.html

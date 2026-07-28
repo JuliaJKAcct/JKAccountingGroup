@@ -19,8 +19,10 @@ const here = dirname(fileURLToPath(import.meta.url));
 const repo = resolve(here, "..", "..", "..");
 
 const fonts = readFileSync(resolve(repo, "brand/design-system/fonts-embedded.css"), "utf8");
-const logo  = "data:image/png;base64," +
-  readFileSync(resolve(repo, "brand/logo/png/JK-lockup-horizontal-2048.png")).toString("base64");
+const png = (rel) => "data:image/png;base64," + readFileSync(resolve(repo, rel)).toString("base64");
+const logo         = png("brand/logo/png/JK-lockup-horizontal-2048.png");
+const medallion    = png("brand/logo/png/JK-medallion-primary-1024.png");
+const medallionRev = png("brand/logo/png/JK-medallion-reversed-1024.png");
 // Shared pricing core — inlined into every tool that prices, so they can never diverge.
 const pricingCore = readFileSync(resolve(here, "pricing-core.js"), "utf8");
 
@@ -31,14 +33,17 @@ const pricingCore = readFileSync(resolve(here, "pricing-core.js"), "utf8");
 const TOOLS = {
   "business-tax-engagement-letter": { title: "JK Accounting Group — Business Tax Engagement Letter" },
   "pricing-calculator":             { title: "JK Accounting Group — Internal Pricing Calculator", artifact: true },
+  "monthly-proposal-generator":     { title: "JK Accounting Group — Monthly Proposal Generator" },
 };
 
 for (const [name, cfg] of Object.entries(TOOLS)) {
   const src = readFileSync(resolve(here, name + ".src.html"), "utf8");
   const body = src
-    .replace("/*__FONTS__*/", fonts)
-    .replace("__LOGO__", logo)
-    .replace("/*__PRICING_CORE__*/", pricingCore);
+    .replaceAll("/*__FONTS__*/", fonts)
+    .replaceAll("__MEDALLION_REV__", medallionRev)
+    .replaceAll("__MEDALLION__", medallion)
+    .replaceAll("__LOGO__", logo)
+    .replaceAll("/*__PRICING_CORE__*/", pricingCore);
   const full =
     '<!doctype html><html lang="en"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +

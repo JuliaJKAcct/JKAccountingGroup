@@ -1,0 +1,421 @@
+<style>/*__FONTS__*/</style>
+<style>
+  :root{
+    --teal:#123841; --deep:#0D2A31; --bronze:#9C6A39; --bronze-lt:#CFA268;
+    --ivory:#F1ECE1; --paper:#FBF8F2; --ink:#22201A; --muted:#6F6857; --hairline:#C9C1B0;
+    --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --amber:#8a5a18;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:var(--sans); color:var(--ink); background:var(--ivory); }
+  .app{ display:flex; flex-direction:column; height:100vh; }
+
+  .toolbar{ display:flex; align-items:center; gap:14px; padding:11px 20px; background:var(--deep); color:#F1ECE1; border-bottom:3px solid var(--bronze); }
+  .toolbar .brand{ font-family:var(--serif); font-weight:600; font-size:15px; line-height:1.1; }
+  .toolbar .brand small{ display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--bronze-lt); font-weight:400; margin-top:2px; }
+  .toolbar .spacer{ flex:1; }
+  .toolbar .langwrap{ display:flex; align-items:center; gap:7px; font-size:11px; color:#CFC6B4; }
+  .toolbar select{ font-family:var(--sans); font-size:12px; padding:6px 8px; border-radius:4px; border:1px solid rgba(231,224,210,.35); background:#0b2228; color:#F1ECE1; }
+  .btn{ font-family:var(--sans); font-size:13px; font-weight:600; border:0; border-radius:4px; padding:9px 15px; cursor:pointer; }
+  .btn-primary{ background:var(--bronze); color:#fff; } .btn-primary:hover{ background:#875a30; }
+  .btn-ghost{ background:transparent; color:#E7E0D2; border:1px solid rgba(231,224,210,.35); } .btn-ghost:hover{ background:rgba(231,224,210,.12); }
+
+  .workspace{ flex:1; display:grid; grid-template-columns:400px 1fr; min-height:0; }
+  .form-panel{ overflow-y:auto; padding:18px 18px 80px; background:var(--ivory); border-right:1px solid var(--hairline); }
+  .step{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#fff; background:var(--teal); border-radius:4px; padding:6px 10px; margin:6px 0 12px; }
+  .step.two{ background:var(--bronze); }
+  .grp{ margin-bottom:14px; }
+  .grp .gl{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); margin:14px 0 8px; border-bottom:1px solid var(--hairline); padding-bottom:5px; }
+  label.f{ display:block; margin-bottom:9px; }
+  label.f .cap{ display:block; font-size:11px; color:var(--muted); margin-bottom:3px; font-weight:500; }
+  input, select, textarea{ width:100%; font-family:var(--sans); font-size:12.5px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:7px 9px; }
+  textarea{ resize:vertical; line-height:1.45; }
+  input:focus, select:focus, textarea:focus{ outline:2px solid var(--bronze-lt); border-color:var(--bronze); }
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+  .hint{ font-size:10px; color:var(--muted); margin:3px 0 0; }
+
+  /* Step-1 live fee readout + send button */
+  .calcout{ background:rgba(18,56,65,.06); border:1px solid var(--hairline); border-radius:8px; padding:12px 14px; margin-top:6px; }
+  .calcout .cl{ font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+  .calcout .cv{ font-family:var(--serif); font-size:26px; font-weight:600; color:var(--teal); line-height:1.1; margin:2px 0 10px; }
+  .calcout .cv .per{ font-size:13px; color:var(--bronze); font-weight:400; }
+  .btn-send{ width:100%; background:var(--teal); color:#fff; font-weight:600; border:0; border-radius:5px; padding:9px; cursor:pointer; font-size:12.5px; }
+  .btn-send:hover{ background:#0e2c33; }
+  .intnote{ font-size:10px; color:var(--amber); background:#F6EEDD; border:1px solid #E4D3AE; border-radius:6px; padding:8px 10px; margin-top:8px; }
+
+  /* ---------------- Proposal preview ---------------- */
+  .preview-panel{ overflow-y:auto; padding:22px; background:#DED7C7; }
+  .langbanner{ max-width:7.6in; margin:0 auto 14px; background:#F6EEDD; border:1px solid #E4D3AE; color:#5f4a24; border-radius:6px; padding:9px 13px; font-size:12px; display:none; }
+  .langbanner.show{ display:block; }
+  .ppage{ max-width:7.6in; margin:0 auto 20px; background:var(--ivory); box-shadow:0 4px 26px rgba(9,31,36,.16); padding:0.7in 0.8in 0.5in; position:relative; min-height:9.6in; display:flex; flex-direction:column; }
+  .ppage .pfoot{ margin-top:auto; }
+  .footbar{ background:var(--deep); color:#CFC6B4; font-family:var(--mono); font-size:8.5px; letter-spacing:.12em; text-align:center; padding:6px; border-radius:2px; margin-top:24px; }
+
+  .eyebrow{ font-family:var(--mono); font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
+  .ph1{ font-family:var(--serif); font-size:27px; font-weight:700; color:var(--teal); margin:5px 0 8px; }
+  .prule{ border:0; border-top:1px solid var(--hairline); margin:0 0 16px; }
+  .ppage p{ font-size:11.5px; line-height:1.6; margin:0 0 10px; }
+  .ph{ color:var(--bronze); font-style:italic; background:rgba(156,106,57,.09); padding:0 3px; border-radius:2px; }
+
+  /* Cover */
+  .cover{ text-align:center; }
+  .cover img{ width:120px; height:120px; margin:0.5in auto 18px; display:block; }
+  .cover .ckick{ font-family:var(--mono); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
+  .cover .ctitle{ font-family:var(--serif); font-size:38px; font-weight:700; color:var(--teal); margin:8px 0 6px; line-height:1.1; }
+  .cover .csub{ font-size:13px; color:var(--muted); margin:0 0 6px; }
+  .cover .cnum{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--bronze); margin:0 0 30px; }
+  .ptable{ width:100%; border-collapse:collapse; margin-top:14px; text-align:left; }
+  .ptable th{ background:var(--teal); color:#fff; font-family:var(--sans); font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:8px 12px; width:50%; }
+  .ptable td{ border:1px solid var(--hairline); padding:7px 12px; font-size:11px; vertical-align:top; }
+
+  /* Contents */
+  .cline{ display:flex; justify-content:space-between; border-bottom:1px dotted var(--hairline); padding:9px 0; font-size:12.5px; }
+  .cline .cn{ font-family:var(--mono); color:var(--bronze); }
+
+  /* Benefits */
+  .ben{ border:1px solid var(--hairline); border-left:4px solid var(--teal); border-radius:0 6px 6px 0; padding:11px 15px; margin-bottom:12px; }
+  .ben.hl{ background:rgba(18,56,65,.045); }
+  .ben .bk{ font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
+  .ben .bt{ font-family:var(--serif); font-size:15px; font-weight:700; color:var(--ink); margin:2px 0 4px; }
+  .ben .bd{ font-size:11.5px; color:var(--ink); margin:0; line-height:1.5; }
+
+  /* Price card */
+  .pcard{ background:var(--paper); border:1px solid var(--hairline); border-radius:8px; padding:16px 20px; margin-bottom:14px; }
+  .pcard .pk{ font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
+  .pcard .pv{ font-family:var(--serif); font-size:40px; font-weight:700; color:var(--bronze); line-height:1.05; margin-top:4px; }
+  .pcard .pv .per{ font-size:17px; color:var(--muted); font-weight:400; }
+  .disc{ font-size:11.5px; margin:0 0 8px; } .disc b{ color:var(--teal); }
+  .invnote{ font-size:10.5px; color:var(--muted); font-style:italic; }
+
+  /* Included */
+  .icat{ font-family:var(--serif); font-size:14px; font-weight:700; color:var(--teal); margin:14px 0 4px; }
+  .ppage ul{ margin:0 0 8px; padding-left:20px; } .ppage li{ font-size:11.5px; line-height:1.55; margin-bottom:3px; }
+
+  /* Steps + agreement */
+  .stepline{ display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; }
+  .stepline .sn{ flex:none; width:24px; height:24px; border-radius:50%; background:var(--teal); color:#fff; font-family:var(--mono); font-size:11px; display:flex; align-items:center; justify-content:center; }
+  .stepline .sx{ font-size:11.5px; line-height:1.5; padding-top:2px; }
+  .agree h4{ font-family:var(--serif); font-size:14px; color:var(--ink); margin:18px 0 6px; }
+  .sigrow{ margin:14px 0 4px; } .sigline{ display:inline-block; min-width:2.8in; border-bottom:1px solid var(--ink); }
+  .siglabel{ font-size:10px; color:var(--muted); margin-top:2px; }
+
+  /* Closing quote (full-bleed teal) */
+  .closing{ background:var(--deep); color:var(--ivory); text-align:center; align-items:center; justify-content:center; padding:1in 0.9in; }
+  .closing img{ width:88px; height:88px; margin:0 auto 26px; display:block; }
+  .closing .q{ font-family:var(--serif); font-size:23px; font-style:italic; line-height:1.4; color:#F1ECE1; margin:0 0 22px; }
+  .closing .qn{ font-family:var(--serif); font-size:16px; font-weight:700; color:var(--bronze-lt); }
+  .closing .qs{ font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:#9aa7a3; margin-top:3px; }
+
+  /* T&C */
+  .tcsec h4{ font-family:var(--serif); font-size:12.5px; color:var(--ink); margin:12px 0 3px; }
+  .tcsec p{ font-size:10.5px; line-height:1.5; color:#3a382f; margin:0 0 8px; }
+
+  @media print{
+    .toolbar, .form-panel, .langbanner{ display:none !important; }
+    body, .app, .workspace, .preview-panel{ display:block !important; height:auto !important; overflow:visible !important; background:#fff !important; }
+    .preview-panel{ padding:0 !important; }
+    .ppage{ max-width:none !important; margin:0 !important; box-shadow:none !important; min-height:auto !important; padding:0.3in 0.1in; break-after:page; page-break-after:always; }
+    .ppage:last-child{ break-after:auto; }
+    @page{ size:Letter; margin:0.5in; }
+  }
+</style>
+
+<div class="app">
+  <div class="toolbar">
+    <div class="brand">JK Accounting Group<small>Monthly Proposal Generator</small></div>
+    <div class="spacer"></div>
+    <div class="langwrap">Language
+      <select id="lang"><option value="en">English</option><option value="ru">Bilingual (Russian + English)</option></select>
+    </div>
+    <button class="btn btn-ghost" id="reset">New</button>
+    <button class="btn btn-primary" id="save">Save PDF</button>
+  </div>
+
+  <div class="workspace">
+    <div class="form-panel">
+      <!-- STEP 1 — PRICE -->
+      <div class="step">Step 1 · Price it (internal)</div>
+      <div class="grp">
+        <p class="gl">Bookkeeping — transaction recording</p>
+        <label class="f"><span class="cap">Avg transactions / month</span><input id="tx" type="number" min="0" step="1" placeholder="e.g. 250"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Recording frequency</span><select id="freq"><option value="">— Select —</option><option>Monthly</option><option>Bi-weekly</option><option>Weekly</option></select></label>
+          <label class="f"><span class="cap">Bank feeds connected?</span><select id="bankfeed"><option value="">— Select —</option><option value="Yes">Yes</option><option value="No / manual">No / manual</option></select></label>
+        </div>
+        <label class="f"><span class="cap">Business locations</span><select id="loc"><option value="">— Select —</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+      </div>
+      <div class="grp">
+        <p class="gl">Reconciliation &amp; statements</p>
+        <label class="f"><span class="cap">Accounts to reconcile</span><input id="accounts" type="number" min="0" step="1" placeholder="e.g. 5"></label>
+        <label class="f"><span class="cap">Prepare financial statements?</span><select id="finstmt"><option value="">— Select —</option><option value="Yes">Yes — $16/mo</option><option value="No">No</option></select></label>
+      </div>
+      <div class="grp">
+        <p class="gl">Tax &amp; filings</p>
+        <div class="row2">
+          <label class="f"><span class="cap">Tax return type</span><select id="rettype"><option value="">— Select —</option><option value="1120S">S-corp — 1120-S</option><option value="1065">Partnership — 1065</option><option value="1120">C-corp — 1120</option><option value="none">No tax prep</option></select></label>
+          <label class="f"><span class="cap">Annual tax fee (USD)</span><input id="taxfee" type="number" min="0" step="10" placeholder="auto"></label>
+        </div>
+        <div class="row2">
+          <label class="f"><span class="cap">Sales tax frequency</span><select id="stfreq"><option value="">— Select —</option><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></label>
+          <label class="f"><span class="cap"># States (sales tax)</span><input id="states" type="number" min="0" step="1" placeholder="0"></label>
+        </div>
+        <label class="f"><span class="cap"># 1099 contractors</span><input id="contractors" type="number" min="0" step="1" placeholder="0"></label>
+      </div>
+      <div class="grp">
+        <p class="gl">Advisory &amp; payroll</p>
+        <label class="f"><span class="cap">Advisory tier</span><select id="advisory"><option value="">— Select —</option><option value="Small">Small — $100</option><option value="Medium">Medium — $150</option><option value="Large">Large — $200</option><option value="None">None — $0</option></select></label>
+        <label class="f"><span class="cap">Owner payroll — solo S-corp owner?</span><select id="ownerpay"><option value="">— Select —</option><option value="Yes">Yes — $0</option><option value="No">No / N/A</option></select></label>
+        <label class="f"><span class="cap">Negotiated adjustment (− discount)</span><input id="adjust" type="number" step="1" placeholder="0"></label>
+      </div>
+      <div class="calcout">
+        <div class="cl">Calculated monthly fee (internal)</div>
+        <div class="cv" id="calcFinal">$0<span class="per">/mo</span></div>
+        <button class="btn-send" id="useFee" type="button">Use this fee in the proposal →</button>
+      </div>
+      <p class="intnote">🔒 Internal: this build-up is never shown to the client — the proposal shows only the single bundled fee.</p>
+
+      <!-- STEP 2 — PROPOSAL -->
+      <div class="step two" style="margin-top:22px;">Step 2 · Build the proposal</div>
+      <div class="grp">
+        <p class="gl">Cover</p>
+        <div class="row2">
+          <label class="f"><span class="cap">Date</span><input id="pdate" type="date"></label>
+          <label class="f"><span class="cap">Proposal #</span><input id="pnumber" placeholder="JKA-0001"></label>
+        </div>
+        <label class="f"><span class="cap">Client / entity name</span><input id="pcompany" placeholder="Acme Holdings LLC"></label>
+        <label class="f"><span class="cap">One-line description</span><input id="psubtitle" placeholder="Monthly bookkeeping, payroll &amp; tax"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Client contact name</span><input id="pcontact" placeholder="Jane Smith"></label>
+          <label class="f"><span class="cap">Client email</span><input id="pemail" type="email" placeholder="jane@acme.com"></label>
+        </div>
+      </div>
+      <div class="grp">
+        <p class="gl">Introduction</p>
+        <label class="f"><span class="cap">Intro paragraphs (one per line)</span><textarea id="pintro" rows="4"></textarea></label>
+      </div>
+      <div class="grp">
+        <p class="gl">What You Get — 3 benefits</p>
+        <div class="row2"><label class="f"><span class="cap">B1 kicker</span><input id="b1k"></label><label class="f"><span class="cap">B1 title</span><input id="b1t"></label></div>
+        <label class="f"><span class="cap">B1 text</span><textarea id="b1d" rows="2"></textarea></label>
+        <div class="row2"><label class="f"><span class="cap">B2 kicker</span><input id="b2k"></label><label class="f"><span class="cap">B2 title</span><input id="b2t"></label></div>
+        <label class="f"><span class="cap">B2 text</span><textarea id="b2d" rows="2"></textarea></label>
+        <div class="row2"><label class="f"><span class="cap">B3 kicker</span><input id="b3k"></label><label class="f"><span class="cap">B3 title</span><input id="b3t"></label></div>
+        <label class="f"><span class="cap">B3 text</span><textarea id="b3d" rows="2"></textarea></label>
+      </div>
+      <div class="grp">
+        <p class="gl">Your Investment</p>
+        <label class="f"><span class="cap">Monthly fee (client-facing)</span><input id="pfee" placeholder="$0 — send from Step 1, then adjust"></label>
+        <label class="f"><span class="cap">Standard rate (optional, for a discount anchor)</span><input id="pstdrate" placeholder="e.g. $650/mo"></label>
+        <label class="f"><span class="cap">Discount text (optional)</span><input id="pdiscount" placeholder="e.g. 10% discount (–$65) for annual prepay"></label>
+        <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody" rows="2"></textarea></label>
+        <label class="f"><span class="cap">Closing note</span><input id="pinvnote"></label>
+      </div>
+      <div class="grp">
+        <p class="gl">What's Included</p>
+        <label class="f"><span class="cap">Categories &amp; bullets — a line starting with "# " is a category; other lines are bullets</span><textarea id="pincluded" rows="7"></textarea></label>
+      </div>
+      <div class="grp">
+        <p class="gl">What's Next</p>
+        <label class="f"><span class="cap">Steps (one per line)</span><textarea id="psteps" rows="4"></textarea></label>
+        <label class="f"><span class="cap">Signer for the client (name on the signature block)</span><input id="prep" placeholder="defaults to the client contact"></label>
+      </div>
+      <div class="grp">
+        <p class="gl">Closing quote</p>
+        <label class="f"><span class="cap">Quote (one line per line)</span><textarea id="pquote" rows="2"></textarea></label>
+        <div class="row2"><label class="f"><span class="cap">Attribution</span><input id="pquoteby"></label><label class="f"><span class="cap">Subtitle</span><input id="pquotesub"></label></div>
+      </div>
+    </div>
+
+    <div class="preview-panel">
+      <div class="langbanner" id="langbanner">🇷🇺 <b>Russian version:</b> the bilingual (Russian + English) layout is being added in the next update — for now the tool generates the official English proposal.</div>
+      <div id="proposal"></div>
+    </div>
+  </div>
+</div>
+
+<script>/*__PRICING_CORE__*/</script>
+<script>
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  const ph = (v,label) => (v && String(v).trim()) ? esc(v) : `<span class="ph">${esc(label)}</span>`;
+  const lines = v => String(v||"").split("\n").map(s=>s.trim()).filter(Boolean);
+
+  // ---- Step 1: pricing (shared core) ----
+  const CALC = ["tx","freq","bankfeed","loc","accounts","finstmt","rettype","taxfee","stfreq","states","contractors","advisory","ownerpay","adjust"];
+  function calcInputs(){ const o={}; CALC.forEach(k=>o[k]=$(k).value); return o; }
+  function calcFee(){ return JKPricing.computePricing(calcInputs()).final; }
+  function renderCalc(){
+    const f = calcFee();
+    $("calcFinal").innerHTML = (Number.isInteger(f)?JKPricing.money0(f):JKPricing.money(f)) + '<span class="per">/mo</span>';
+  }
+  $("rettype").addEventListener("change", ()=>{ const v=$("rettype").value; if(v in JKPricing.TAXDEFAULT) $("taxfee").value=JKPricing.TAXDEFAULT[v]; renderCalc(); });
+  CALC.forEach(id=>["input","change"].forEach(ev=>$(id).addEventListener(ev, renderCalc)));
+  $("useFee").addEventListener("click", ()=>{ const f=calcFee(); $("pfee").value = JKPricing.money0(f); render(); });
+
+  // ---- Step 2: proposal content defaults (Julia's premium template) ----
+  const DEFAULTS = {
+    pintro: "Welcome to your proposal.\n[Context paragraph — why this engagement, what's changed, what you're solving for.]\n[Closing paragraph — what this proposal covers and the outcome we're aiming for together.]",
+    b1k:"[Benefit 1 kicker]", b1t:"[Benefit 1 title]", b1d:"[Benefit 1 description]",
+    b2k:"[Benefit 2 kicker]", b2t:"[Benefit 2 title]", b2d:"[Benefit 2 description]",
+    b3k:"[Benefit 3 kicker]", b3t:"[Benefit 3 title]", b3d:"[Benefit 3 description]",
+    pinvbody:"Covers everything in the What's Included section — as a single fixed monthly payment, with nothing billed separately during the year.",
+    pinvnote:"Fee is reviewed annually for inflation. This proposal is valid for 30 days.",
+    pincluded:"# Monthly Bookkeeping\nTransaction recording & categorization\nBank, credit-card & PayPal reconciliation\n# Financial Reporting\nMonthly Profit & Loss and Balance Sheet\n# Tax & Compliance\nAnnual business tax return preparation\nYear-round tax coordination",
+    psteps:"Review this proposal and sign the agreement below.\nWe'll send your first monthly invoice via QuickBooks, payable by ACH; future invoices arrive on the 1st of each month.\nWe'll set up your accounting systems and coordinate any handoff needed.\nWe'll hold a kickoff session to align on goals and reporting.",
+    pquote:"«Knowing is not enough, we must apply.\nWilling is not enough, we must do.»",
+    pquoteby:"Bruce Lee", pquotesub:"Actor & Martial Artist",
+  };
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"];
+  function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; }
+
+  const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const fmtDate = iso => { if(!iso) return ""; const [y,m,d]=iso.split("-"); return `${MONTHS[+m-1]} ${+d}, ${y}`; };
+
+  const TC = [
+    ["1. Document Retention","We will retain our work papers and copies of your tax returns for seven (7) years from the date of filing. After seven years, our work papers and files will no longer be available. We are not responsible for any physical deterioration, data loss, or catastrophic event that may shorten the time during which our records will be available. Our working papers and files are not a substitute for your own original records. When any records are returned to you, it is your responsibility to retain and protect them for possible future use, including examination by governmental or regulatory agencies."],
+    ["2. Communication with the IRS","The IRS permits you to authorize us to discuss, on a limited basis, aspects of your return for one year after the return's due date. Your consent to such a discussion is evidenced by checking a box on the tax return. Unless you tell us otherwise, we will check that box authorizing the IRS to discuss the return with us."],
+    ["3. Accountant-Client Privilege","Internal Revenue Code §7525 provides a limited confidentiality privilege covering certain tax advice embodied in taxpayer communications with federally authorized tax practitioners in certain limited situations. These protections are limited in several important respects. For example, this privilege does not apply to your records, which you are required to keep in support of your tax return. In addition, the privilege does not apply to state tax issues, state tax proceedings, private civil litigation proceedings, or criminal proceedings. While we will cooperate with you with respect to the privilege, asserting the privilege is your responsibility. Inadvertent disclosure of otherwise privileged information may result in a waiver of the privilege. Please contact us immediately if you have any questions or need further information about this matter."],
+    ["4. Limitation of Liability","Our maximum liability to you arising for any reason relating to services rendered under this proposal and this Addendum shall be limited to the amount of fees you paid for the services giving rise to the claim. If any dispute arises between the parties, the parties agree first to try in good faith to settle the dispute through non-binding mediation. The costs of mediation shall be shared equally by the parties. The Internal Revenue Code and regulations impose preparation and disclosure standards with noncompliance penalties on both the preparer of a tax return and the taxpayer. If we determine that we would be subject to a preparer penalty for a strategy or position taken on your tax return, you agree to either adequately disclose that position on the return or change the position to one that would not subject us to penalty. If you do not choose to change your position or adequately disclose so as to eliminate, in our sole opinion, our exposure to the preparer penalty, we, in our sole discretion and at any time, may withdraw from the engagement without completing or delivering tax returns to you. Such withdrawal will complete our engagement, and you will be obligated to compensate us for all time expended and to reimburse us for all out-of-pocket expenses through the date of our withdrawal."],
+    ["5. Confidentiality","Each party agrees to maintain the confidentiality of the other party's non-public information disclosed in connection with this engagement, except as required by law, court order, or applicable professional standards, or as needed to perform the services described in this proposal."],
+    ["6. Termination of Engagement","Either party may terminate this relationship with thirty (30) days' written notice to the other, including email notification, provided that such notice has been received. During the 30-day termination period, projects in process shall be completed if possible, and no other work shall be undertaken unless the parties agree in writing to specific terms for the additional work. We further reserve the right to determine any possible refund for tax preparation services not yet completely filed because of the ongoing work and preparation that takes place for the upcoming filing."],
+    ["7. Force Majeure","Neither party shall be liable for any delay or failure to perform its obligations under this Agreement resulting from causes beyond its reasonable control, including but not limited to acts of God, natural disaster, government action, labor dispute, or failure of third-party systems or utilities."],
+    ["8. Assignment","Neither party may assign this Agreement, in whole or in part, without the prior written consent of the other party, except that we may use subcontractors or staff under our supervision to perform the services described herein."],
+    ["9. Notices","Any notice required or permitted under this Agreement shall be in writing and delivered by email, hand delivery, or certified mail to the addresses on file for each party. Notice is effective upon receipt."],
+    ["10. Electronic Signatures","The parties agree that this Agreement, this proposal, and any related documents may be executed by electronic signature (including signatures collected through DocuSign or a similar platform), and that such electronic signatures shall have the same legal effect as original handwritten signatures."],
+    ["11. Severability","If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force and effect, and the invalid or unenforceable provision shall be deemed modified to the minimum extent necessary to make it enforceable."],
+    ["12. Governing Law","Regardless of where the client is domiciled and regardless of where this proposal is physically signed, this Agreement shall be deemed to have been entered into at JK Accounting Group Corp's office located in Broward County, Florida, which shall be the exclusive jurisdiction for resolving disputes related to this Agreement. This Agreement shall be interpreted and governed in accordance with the laws of the State of Florida, without reference to its conflict-of-laws principles."],
+    ["13. Entire Agreement; Amendment","This Addendum, together with the proposal it accompanies, constitutes the entire agreement between the parties regarding the services described and supersedes all prior oral or written representations or commitments. This Agreement may be amended only by a written instrument signed by both parties. Each party states that it has read this Agreement, has had the opportunity to obtain the advice of counsel, and executes this Agreement voluntarily and with full knowledge of its legal significance."],
+  ];
+
+  function sectionHead(eyebrow, title){ return `<div class="eyebrow">${esc(eyebrow)}</div><div class="ph1">${esc(title)}</div><hr class="prule">`; }
+  function foot(n, num){ return `<div class="pfoot"><div class="footbar">Proposal #${esc(num||"[JKA####]")} · Page ${n} of 10</div></div>`; }
+
+  function includedHtml(){
+    const out=[]; let open=false;
+    lines($("pincluded").value).forEach(ln=>{
+      if(ln.startsWith("# ")){ if(open) out.push("</ul>"); out.push(`<div class="icat">${esc(ln.slice(2))}</div><ul>`); open=true; }
+      else { if(!open){ out.push("<ul>"); open=true; } out.push(`<li>${esc(ln)}</li>`); }
+    });
+    if(open) out.push("</ul>");
+    return out.join("") || `<span class="ph">[Add categories and bullets]</span>`;
+  }
+
+  function render(){
+    const num = $("pnumber").value;
+    const company = ph($("pcompany").value, "[Client / Entity Name]");
+    const date = $("pdate").value ? fmtDate($("pdate").value) : "";
+    const rep = ($("prep").value.trim() || $("pcontact").value.trim());
+    const benefit = (k,t,d,hl) => `<div class="ben${hl?' hl':''}"><div class="bk">${ph($(k).value,"[Kicker]")}</div><div class="bt">${ph($(t).value,"[Title]")}</div><p class="bd">${ph($(d).value,"[Description]")}</p></div>`;
+    const introHtml = (lines($("pintro").value).length? lines($("pintro").value): ["[Introduction]"]).map(t=>`<p>${esc(t)}</p>`).join("");
+    const stepsHtml = (lines($("psteps").value).length? lines($("psteps").value):["[Step]"]).map((s,i)=>`<div class="stepline"><span class="sn">${i+1}</span><span class="sx">${esc(s)}</span></div>`).join("");
+    const quoteHtml = (lines($("pquote").value).length? lines($("pquote").value):["[Closing quote]"]).map(t=>esc(t)).join("<br>");
+
+    const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
+      ? `<p class="disc">Standard rate ${esc($("pstdrate").value)} · includes <b>${esc($("pdiscount").value)}</b></p>` : "";
+
+    const html = `
+      <div class="ppage cover">
+        <img src="__MEDALLION__" alt="JK">
+        <div class="ckick">Proposal</div>
+        <div class="ctitle">${company}</div>
+        <div class="csub">${ph($("psubtitle").value,"[One-line description of engagement]")}</div>
+        <div class="cnum">Proposal #${ph(num,"[JKA####]")}</div>
+        <table class="ptable"><thead><tr><th>Prepared by</th><th>Prepared for</th></tr></thead><tbody>
+          <tr><td>Julia Kononova</td><td>${ph($("pcontact").value,"[Client Contact Name]")}</td></tr>
+          <tr><td>Chief Accountant, MBA, EA</td><td></td></tr>
+          <tr><td>e julia@jkaccountinggroup.com</td><td>${$("pemail").value? "e "+esc($("pemail").value):""}</td></tr>
+          <tr><td>m. 786-318-1505</td><td></td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Overview","Contents")}
+        <div class="cline"><span>Introduction</span><span class="cn">3</span></div>
+        <div class="cline"><span>What You Get</span><span class="cn">4</span></div>
+        <div class="cline"><span>Your Investment</span><span class="cn">5</span></div>
+        <div class="cline"><span>What's Included</span><span class="cn">6</span></div>
+        <div class="cline"><span>What's Next</span><span class="cn">7</span></div>
+        ${foot(2,num)}
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Welcome","Introduction")}
+        ${introHtml}
+        ${foot(3,num)}
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Why JK","What You Get")}
+        ${benefit("b1k","b1t","b1d",true)}
+        ${benefit("b2k","b2t","b2d",false)}
+        ${benefit("b3k","b3t","b3d",false)}
+        ${foot(4,num)}
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Investment","Your Investment")}
+        <div class="pcard"><div class="pk">${ph($("pinvbody")?"Monthly Investment — All Inclusive":"", "")||"Monthly Investment — All Inclusive"}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">/mo</span></div></div>
+        ${disc}
+        <p>${ph($("pinvbody").value,"[Investment body]")}</p>
+        <p class="invnote">${esc($("pinvnote").value)}</p>
+        ${foot(5,num)}
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Scope of Services","What's Included")}
+        ${includedHtml()}
+        ${foot(6,num)}
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Next Steps","What's Next")}
+        ${stepsHtml}
+        <div class="agree">
+          <h4>Agreement</h4>
+          <p>By signing below, you agree to the services and fees outlined in this proposal.</p>
+          <div class="eyebrow">On behalf of ${company}</div>
+          <div class="sigrow"><span class="sigline"></span><div class="siglabel">Signature</div></div>
+          <p style="margin:10px 0 2px;"><b>${ph(rep,"[Client signer name]")}</b></p>
+          <div class="sigrow"><span class="sigline" style="min-width:2in;"></span><div class="siglabel">Date</div></div>
+          <p class="invnote">This proposal is valid for 30 days${date? " from "+esc(date):""}.</p>
+        </div>
+        ${foot(7,num)}
+      </div>
+
+      <div class="ppage closing">
+        <div>
+          <img src="__MEDALLION_REV__" alt="JK">
+          <p class="q">${quoteHtml}</p>
+          <div class="qn">${ph($("pquoteby").value,"[Name]")}</div>
+          <div class="qs">${esc($("pquotesub").value)}</div>
+        </div>
+      </div>
+
+      <div class="ppage">
+        ${sectionHead("Legal","Terms and Conditions")}
+        <p>This section is incorporated by reference into, and forms part of, the proposal between JK Accounting Group Corp (“firm,” “we,” “us,” or “our”) and ${company} (“you” or “your”).</p>
+        <div class="tcsec">${TC.slice(0,7).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>
+        ${foot(9,num)}
+      </div>
+
+      <div class="ppage">
+        <div class="tcsec">${TC.slice(7).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>
+        ${foot(10,num)}
+      </div>
+    `;
+    $("proposal").innerHTML = html;
+  }
+
+  $("lang").addEventListener("change", ()=>{ $("langbanner").classList.toggle("show", $("lang").value==="ru"); });
+  $("save").addEventListener("click", ()=> window.print());
+  $("reset").addEventListener("click", ()=>{
+    if(!confirm("Start a new proposal? All fields will be cleared.")) return;
+    CALC.forEach(id=>$(id).value=""); CONTENT.forEach(id=>$(id).value="");
+    applyDefaults(); renderCalc(); render();
+  });
+  CONTENT.forEach(id=>["input","change"].forEach(ev=>$(id).addEventListener(ev, render)));
+
+  applyDefaults(); renderCalc(); render();
+</script>
