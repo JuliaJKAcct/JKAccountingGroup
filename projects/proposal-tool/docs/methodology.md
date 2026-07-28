@@ -132,10 +132,11 @@ itemizing service lines is still forbidden. Don't conflate the two.
   **"estimated at $X"** and appends a good-faith-estimate sentence — the final fee may be
   adjusted for the return's actual complexity, and the firm agrees any material change with
   the client before proceeding (no surprise invoice). The tool's form panel shows the **exact**
-  inserted sentence so any team member sees precisely what the option changes. The docx path
-  (`body.js`) reproduces it by passing `prepFee: "estimated at $X"` and adding the same sentence
-  to the Professional Fee paragraph. (Added Jul 2026, Lilian — for returns quoted as an estimate
-  pending complexity.)
+  inserted sentence so any team member sees precisely what the option changes. The docx path can
+  reproduce it by passing `prepFee: "estimated at $X"` and **hand-adding** the same sentence to
+  the Professional Fee paragraph in the per-client output copy — the shared `body.js` engine is
+  not modified (it only bolds `prepFee`; it does not inject the estimate sentence on its own).
+  (Added Jul 2026, Lilian — for returns quoted as an estimate pending complexity.)
 
 ## Merged-document decision
 
