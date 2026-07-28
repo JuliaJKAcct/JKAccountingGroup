@@ -231,6 +231,13 @@ html.reader-open{overflow:hidden;}
 .reader-scroll .page .rh4{font-size:16px; margin:20px 0 6px; color:var(--ink);}
 .reader-scroll .page .subbar{margin:26px 0 10px;}
 .reader-scroll .page > *:first-child{margin-top:0;}
+/* Interactive tool embeds (the generators/calculator) break OUT of the 880px reading
+   column to near-full width — the tool's form+preview needs the room, or the fixed 360px
+   form crowds the preview and it reads squished. Stays centered on the viewport regardless
+   of the .page column; capped at 1680px and 94vw so there's never a horizontal scrollbar. */
+.reader-scroll .egen{width:min(1680px,94vw); margin-left:50%; transform:translateX(-50%);}
+@media (max-width:900px){ .reader-scroll .egen{width:96vw;} }
+@media print{ .reader-scroll .egen{width:auto; margin-left:0; transform:none;} }
 /* code / non-link markers used by the auto-render */
 .codeblock{background:var(--paper); border:1px solid var(--border-subtle); border-radius:12px;
   padding:14px 16px; overflow-x:auto; margin:16px 0; font-family:var(--mono); font-size:12.5px;

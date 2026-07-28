@@ -199,6 +199,26 @@ emitted script silently broke *every* click.
     `business-tax-engagement-letter-standard`), the **Monthly Retainer Proposal** generator
     (`monthly-proposal-generator`), and the **Internal Pricing Calculator** (`pricing-calculator`).
 
+    **Tool embeds break OUT of the 880px reading column — full-width by default (Lilian,
+    Jul 2026).** The reader's `.page` is a **880px text column** (right for SOPs/prose); a
+    two-pane tool (a form + a live document preview) inside it gets *squeezed* — the fixed
+    ~360px form eats most of the width and the preview reads cramped/squished. So the tool
+    wrapper `.egen` is styled in `hub.css` to break out to **near-full width**
+    (`width:min(1680px,94vw); margin-left:50%; transform:translateX(-50%)` — centered on the
+    viewport regardless of the column; a `@media print` reset; a narrow-screen fallback), so
+    the tool reads like its full-width standalone HTML. **Any new form+preview tool inherits
+    this automatically** by using the same `.egen` wrapper (`toolIframe()` already emits it) —
+    don't wrap a wide tool in a bare `.page` and don't re-cap its width. (A text-heavy reader
+    that merely *ends* with a tool — like the engagement letter — keeps its prose in the 880px
+    column and only the `.egen` goes wide.)
+
+    **Tools that render non-Latin text need the matching font subset inlined.** The brand
+    `fonts-embedded.css` is **Latin-only**; a tool that shows Russian (the bilingual proposal)
+    must also inline `brand/design-system/fonts-cyrillic-embedded.css`, or Cyrillic falls back
+    off-brand. `inlineToolDoc(src, title, { cyrillic:true })` handles the `/*__FONTS_CYRILLIC__*/`
+    placeholder for the Hub embed; the tool's own `build.mjs` carries the same `cyrillic` flag.
+    Inline it **only** for tools that need it, so Latin-only tools stay small.
+
 ## Design is not optional — impeccable + the Design System, always
 
 **Every visual change to the Hub or a bookkeeping SOP goes through the
