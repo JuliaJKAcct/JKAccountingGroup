@@ -12,7 +12,7 @@ const {
 function buildCover(o) {
   const rows = [
     ["Julia Kononova", (o.clientContactName || "").toUpperCase()],
-    [o.signerTitle || "Chief Executive Officer, MBA, EA", ""],
+    [o.signerTitle || "Chief Accountant, MBA, EA", ""],
     [`e ${o.firmEmail || "julia@jkaccountinggroup.com"}`, `e ${o.clientEmail || ""}`],
     [`m. ${o.firmPhoneLine || ""}`, ""],
   ];

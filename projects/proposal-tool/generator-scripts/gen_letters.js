@@ -30,7 +30,7 @@ const masterOpts = {
   infoByDate: "[date]",
   prepFee: "$[amount], estimated based on the return(s) selected above",
   signerName: "Julia Kononova, MBA, EA",
-  signerTitle: "CEO",
+  signerTitle: "Chief Accountant",
 };
 
 function build(opts, outPath, title) {

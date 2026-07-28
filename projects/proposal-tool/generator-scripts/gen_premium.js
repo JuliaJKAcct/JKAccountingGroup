@@ -18,7 +18,7 @@ const templateOpts = {
   proposalNumber: "[JKA####]",
   clientContactName: "[Client Contact Name]",
   clientEmail: "[client email]",
-  signerTitle: "Chief Executive Officer, MBA, EA",
+  signerTitle: "Chief Accountant, MBA, EA",
   introParagraphs: [
     "Welcome to your proposal.",
     "[Context paragraph — why this engagement, what's changed, what you're solving for.]",

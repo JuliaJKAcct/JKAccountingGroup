@@ -31,7 +31,7 @@ const templateOpts = {
   includesYearEndPlanning: false,
   taxPrepNarrative: "We prepare your year-end business tax return ([entity type]). This fee is bundled into your monthly accounting cost to create a single, predictable expense.",
   signerName: "Julia Kononova, MBA, EA",
-  signerTitle: "CEO",
+  signerTitle: "Chief Accountant",
   repName: "",
   repTitle: "",
 };
