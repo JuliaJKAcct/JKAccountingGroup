@@ -167,9 +167,10 @@
   const TAXDEFAULT = {"1120S":750,"1065":650,"1120":780,"none":0};
   const FINSTMT = 16, RECON_RATE = 18.5, PER_1099 = 25, ST_RATE = 60;
 
-  function tierUp(n, tiers){ if(n<=0) return tiers===TX_TIERS?200:0; for(const [lo,hi,val] of tiers){ if(n>=lo && n<=hi) return val; } return tiers[tiers.length-1][2]; }
-  const money = n => "$" + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
-  const money0 = n => "$" + Math.round(n).toLocaleString("en-US");
+  function tierUp(n, tiers){ n = Math.floor(n); if(n<=0) return tiers===TX_TIERS?200:0; for(const [lo,hi,val] of tiers){ if(n>=lo && n<=hi) return val; } return tiers[tiers.length-1][2]; }
+  const fmtMoney = (n, cents) => { const neg = n < 0, v = Math.abs(n); const s = cents ? v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2}) : Math.round(v).toLocaleString("en-US"); return (neg ? "-$" : "$") + s; };
+  const money = n => fmtMoney(n, true);
+  const money0 = n => fmtMoney(n, false);
 
   // Every component is 0 until its inputs are filled — the calculator starts fully blank,
   // so no default value can quietly carry into a client's price.
@@ -205,7 +206,8 @@
       + row("Accounting advisory","flat by company size", c.advisory)
       + row("1099 filing","$25 × contractors", c.f1099);
     $("total").textContent = money(c.total);
-    $("final").innerHTML = money0(c.final) + '<span class="per">/mo</span>';
+    const finalStr = Number.isInteger(c.final) ? money0(c.final) : money(c.final);
+    $("final").innerHTML = finalStr + '<span class="per">/mo</span>';
     $("annual").textContent = "≈ " + money0(c.final*12) + " / year";
     $("ownernote").textContent = c.ownerval === "Yes"
       ? "Owner payroll: complimentary ($0) for a solo S-corp owner — shown as a benefit, not added to the fee."
