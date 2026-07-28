@@ -19,6 +19,16 @@ emitted script silently broke *every* click.
 
 ## What we want to see there — the standing rules
 
+0. **Everything the firm builds is reflected in the Hub — by default (Lilian, Jul 2026).**
+   Every tool, calculator, generator, dashboard, SOP, and client file we build belongs in
+   the Knowledge Hub so the whole team can find it in one place — this is the standing
+   default, not something to ask about each time. The **only** exception is when Lilian
+   explicitly says a given thing is too small to be worth a Hub entry; absent that, it goes
+   in. So when a session ships a new tool (e.g. an interactive generator or calculator) or
+   a new SOP, adding it to the Hub is **part of finishing the work**, and this skill runs to
+   do it. (Interactive tools embed as isolated iframes like the business
+   engagement-letter generator; SOPs/clients follow rules 1–11 below.)
+
 1. **Team-facing = always designed. Never GitHub, never a "Claude file."** Nothing a team
    member touches may link to a repo path, a raw `.md`, or a `.html` source on GitHub.
    If they need to open something, it opens as a **designed page inside the Hub** (the
