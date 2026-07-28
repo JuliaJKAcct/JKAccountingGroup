@@ -1559,20 +1559,15 @@ const TEMPLATES = [
     ],
     open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
 
-  { band: 'firm', kind: 'Tax preparation', name: 'Business Tax Engagement Letter', owner: 'julia',
-    blurb: 'The firm’s in-house engagement-letter generator (our GoProposal replacement). It builds a business tax-preparation engagement letter live from a few client facts and auto-derives the return, Form 8879 and filing due date from the entity type. Starts blank; Save PDF to send.',
-    formats: ['Generator'],
-    tool: { id: 'business-tax-engagement-letter-standard', label: 'Open the engagement-letter generator' } },
+  { band: 'tool', kind: 'Interactive tool', name: 'Monthly Retainer Proposal — generator', owner: 'julia',
+    blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client — live in the browser. Step 1 prices the client with the same pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Generates the on-brand 10-page proposal; “Save PDF” works in a normal browser. Client data never enters the repo.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
 
-  { band: 'firm', kind: 'Proposals & pricing', name: 'Monthly Retainer Proposal', owner: 'julia',
-    blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client. Step 1 prices the client with the pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and wording. Generates the on-brand 10-page proposal — Save PDF to send.',
-    formats: ['Generator'],
-    tool: { id: 'monthly-proposal-generator', label: 'Open the monthly proposal generator' } },
-
-  { band: 'firm', kind: 'Proposals & pricing', name: 'Internal Pricing Calculator', owner: 'julia',
-    blurb: 'Price a monthly client from the firm’s Core Pricing Matrix — enter the service parameters and get the internal fee build-up and the single bundled monthly fee. Internal only (the client never sees the breakdown); it also feeds the monthly proposal generator.',
-    formats: ['Calculator'],
-    tool: { id: 'pricing-calculator', label: 'Open the pricing calculator' } },
+  { band: 'tool', kind: 'Interactive tool', name: 'Internal Pricing Calculator', owner: 'julia',
+    blurb: 'Price a monthly client from the firm’s Core Pricing Matrix — enter the service parameters and get the internal fee build-up and the single bundled monthly fee, live in the browser. Internal only (the client never sees the breakdown); it also feeds the Monthly Retainer Proposal generator, using the same shared pricing core so the two never disagree.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'pricing-calculator', label: 'Open the calculator' } },
 
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
