@@ -960,12 +960,17 @@ const srcdocEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;'
 // Inline a proposal-tool browser tool (.src.html) into a self-contained doc for an in-Hub
 // iframe — generalizes ENGAGEMENT_DOC for the tools that also need the medallions + the
 // shared pricing core. Same single sources the standalone tools use, so they never drift.
-function inlineToolDoc(srcFile, title){
+function inlineToolDoc(srcFile, title, opts){
   try{
     const dir = resolve(repoRoot, 'projects/proposal-tool/tools');
     const png = (rel) => 'data:image/png;base64,' + readFileSync(resolve(repoRoot, rel)).toString('base64');
+    // Cyrillic subset only for tools that render Russian (the bilingual proposal); keep the
+    // calculator embed small. Mirrors the per-tool `cyrillic` flag in the tool's own build.mjs.
+    const cyrillic = opts && opts.cyrillic
+      ? read(resolve(repoRoot, 'brand/design-system/fonts-cyrillic-embedded.css')) : '';
     const body = read(resolve(dir, srcFile))
       .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
+      .replaceAll('/*__FONTS_CYRILLIC__*/', cyrillic)
       .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
       .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
       .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
@@ -976,7 +981,7 @@ function inlineToolDoc(srcFile, title){
   }catch(e){ return ''; }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
-const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator');
+const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator', { cyrillic: true });
 
 function toolIframe(doc, titleAttr){
   return doc
@@ -996,7 +1001,7 @@ function monthlyReaderInner(){
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Proposals &amp; pricing · firm-wide</p>`
     + `<h1>Monthly Proposal Generator<span class="loc">Price it, then build the proposal</span></h1>`
-    + `<p class="lede">The firm's premium monthly-retainer proposal — our GoProposal replacement. <b>Step 1</b> prices the client with the same calculator (identical results); <b>Step 2</b> flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. It builds the full on-brand proposal live; use <b>Save PDF</b> to download it (works in a normal browser and on the published Hub).</p>`
+    + `<p class="lede">The firm's premium monthly-retainer proposal — our GoProposal replacement. <b>Step 1</b> prices the client with the same calculator (identical results); <b>Step 2</b> flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Choose <b>English</b> or <b>Bilingual (Russian + English)</b> — the bilingual version puts the full Russian version first (Atman-style), then the official English version, with the signature &amp; binding Terms in the English part. It builds the full on-brand proposal live; use <b>Save PDF</b> to download it (works in a normal browser and on the published Hub).</p>`
     + `</div></section><div class="page">${toolIframe(MONTHLY_DOC, 'Monthly Proposal Generator')}</div>`;
 }
 
@@ -1560,7 +1565,7 @@ const TEMPLATES = [
     open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
 
   { band: 'tool', kind: 'Interactive tool', name: 'Monthly Retainer Proposal — generator', owner: 'julia',
-    blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client — live in the browser. Step 1 prices the client with the same pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Generates the on-brand 10-page proposal; “Save PDF” works in a normal browser. Client data never enters the repo.',
+    blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client — live in the browser. Step 1 prices the client with the same pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Pick English (10 pages) or Bilingual Russian + English (Russian version first, Atman-style, then the official English version with the signature &amp; binding Terms). Generates the on-brand proposal live; “Save PDF” works in a normal browser. Client data never enters the repo.',
     formats: ['In-Hub tool'],
     tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
 

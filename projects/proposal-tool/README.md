@@ -113,8 +113,12 @@ embedded in the **Knowledge Hub** (Interactive tools band):
   canonical URL + update flow in the [`proposal-generator`](../../.claude/skills/proposal-generator/) skill.
 - **Monthly Retainer Proposal generator** — the premium monthly proposal (the GoProposal
   replacement): **Step 1** prices the client with the calculator; **Step 2** flows that fee
-  into the editable 10-page proposal (cover, benefits, investment, what's-included, next
-  steps, closing quote, T&C) → **Save PDF**. English now; bilingual RU+EN is the next pass.
+  into the editable proposal (cover, benefits, investment, what's-included, next steps,
+  closing quote, T&C) → **Save PDF**. A **Language** selector offers **English** (10 pages)
+  or **Bilingual (Russian + English)** — the Russian version first (Atman-style), then the
+  official English version (15 pages), with the signature + binding T&C in the English part.
+  Cyrillic renders in the brand faces via `brand/design-system/fonts-cyrillic-embedded.css`,
+  inlined only into this tool.
 
 The calculator and the proposal generator share **`tools/pricing-core.js`** — the single
 source of the fee math — so they can never produce different numbers. The docx/HTML engine

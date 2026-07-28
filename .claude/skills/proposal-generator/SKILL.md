@@ -37,10 +37,16 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
 3. **Monthly-engagement proposal** — the **interactive Monthly Proposal generator**
    (`projects/proposal-tool/tools/monthly-proposal-generator.src.html`): Step 1 prices the
    client with the built-in calculator (shared core), Step 2 flows that fee into the
-   editable 10-page premium proposal (cover · benefits · investment · what's-included ·
-   next-steps · closing quote · T&C) → Save PDF. Single bundled fee; English now, with a
-   **bilingual RU/EN** option as the next pass. The docx engine (`generator-scripts/` +
-   `premium_proposal_body.js`) is the format's source of truth.
+   editable premium proposal (cover · benefits · investment · what's-included ·
+   next-steps · closing quote · T&C) → Save PDF. Single bundled fee. A **Language**
+   selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
+   bilingual version puts the **full Russian version first** (Atman-style), then the
+   official **English** version (15 pages); the signature + binding T&C live in the
+   English part (English governs), and the fee/dates/client name/closing quote are
+   shared across both languages. Cyrillic renders in the brand faces via
+   `brand/design-system/fonts-cyrillic-embedded.css` (inlined only into this tool). The
+   docx engine (`generator-scripts/` + `premium_proposal_body.js`) is the format's source
+   of truth.
 4. **Internal pricing calculator** — the interactive front-end for the firm's Core
    Pricing Matrix (`projects/proposal-tool/tools/pricing-calculator.src.html`). Enter a
    client's service parameters → the internal fee build-up + the single bundled monthly

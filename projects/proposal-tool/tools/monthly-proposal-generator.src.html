@@ -1,4 +1,5 @@
 <style>/*__FONTS__*/</style>
+<style>/*__FONTS_CYRILLIC__*/</style>
 <style>
   :root{
     --teal:#123841; --deep:#0D2A31; --bronze:#9C6A39; --bronze-lt:#CFA268;
@@ -26,6 +27,7 @@
   .form-panel{ overflow-y:auto; padding:18px 18px 80px; background:var(--ivory); border-right:1px solid var(--hairline); }
   .step{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#fff; background:var(--teal); border-radius:4px; padding:6px 10px; margin:6px 0 12px; }
   .step.two{ background:var(--bronze); }
+  .step.ru{ background:#6b3f7a; }
   .grp{ margin-bottom:14px; }
   .grp .gl{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); margin:14px 0 8px; border-bottom:1px solid var(--hairline); padding-bottom:5px; }
   label.f{ display:block; margin-bottom:9px; }
@@ -35,6 +37,11 @@
   input:focus, select:focus, textarea:focus{ outline:2px solid var(--bronze-lt); border-color:var(--bronze); }
   .row2{ display:grid; grid-template-columns:1fr 1fr; gap:9px; }
   .hint{ font-size:10px; color:var(--muted); margin:3px 0 0; }
+
+  /* Russian-only form block — shown only in bilingual mode */
+  #rugroup{ display:none; }
+  #rugroup.on{ display:block; }
+  #rugroup .runote{ font-size:10.5px; color:#5c3a68; background:#f3ecf6; border:1px solid #dcc9e4; border-radius:6px; padding:8px 10px; margin:0 0 12px; }
 
   /* Step-1 live fee readout + send button */
   .calcout{ background:rgba(18,56,65,.06); border:1px solid var(--hairline); border-radius:8px; padding:12px 14px; margin-top:6px; }
@@ -63,6 +70,8 @@
   .prule{ border:0; border-top:1px solid var(--hairline); margin:0 0 16px; }
   .ppage p{ font-size:11.5px; line-height:1.6; margin:0 0 10px; }
   .ph{ color:var(--bronze); font-style:italic; background:rgba(156,106,57,.09); padding:0 3px; border-radius:2px; }
+  /* a slim divider marking the start of the official English section in bilingual mode */
+  .langtag{ font-family:var(--mono); font-size:8.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze); font-weight:700; border:1px solid var(--hairline); border-radius:3px; padding:2px 7px; display:inline-block; margin-bottom:10px; }
 
   /* Cover */
   .cover{ text-align:center; }
@@ -70,7 +79,8 @@
   .cover .ckick{ font-family:var(--mono); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
   .cover .ctitle{ font-family:var(--serif); font-size:38px; font-weight:700; color:var(--teal); margin:8px 0 6px; line-height:1.1; }
   .cover .csub{ font-size:13px; color:var(--muted); margin:0 0 6px; }
-  .cover .cnum{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--bronze); margin:0 0 30px; }
+  .cover .csub.ru{ font-style:italic; color:var(--ink); }
+  .cover .cnum{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--bronze); margin:6px 0 30px; }
   .ptable{ width:100%; border-collapse:collapse; margin-top:14px; text-align:left; }
   .ptable th{ background:var(--teal); color:#fff; font-family:var(--sans); font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:8px 12px; width:50%; }
   .ptable td{ border:1px solid var(--hairline); padding:7px 12px; font-size:11px; vertical-align:top; }
@@ -105,6 +115,7 @@
   .agree h4{ font-family:var(--serif); font-size:14px; color:var(--ink); margin:18px 0 6px; }
   .sigrow{ margin:14px 0 4px; } .sigline{ display:inline-block; min-width:2.8in; border-bottom:1px solid var(--ink); }
   .siglabel{ font-size:10px; color:var(--muted); margin-top:2px; }
+  .toeng{ font-size:11px; color:#5c3a68; background:#f3ecf6; border:1px solid #dcc9e4; border-radius:6px; padding:10px 13px; margin-top:16px; line-height:1.5; }
 
   /* Closing quote (full-bleed teal) */
   .closing{ background:var(--deep); color:var(--ivory); text-align:center; align-items:center; justify-content:center; padding:1in 0.9in; }
@@ -232,10 +243,46 @@
         <label class="f"><span class="cap">Quote (one line per line)</span><textarea id="pquote" rows="2"></textarea></label>
         <div class="row2"><label class="f"><span class="cap">Attribution</span><input id="pquoteby"></label><label class="f"><span class="cap">Subtitle</span><input id="pquotesub"></label></div>
       </div>
+
+      <!-- RUSSIAN VERSION (bilingual only) -->
+      <div id="rugroup">
+        <div class="step ru" style="margin-top:22px;">Russian version · Русская версия</div>
+        <p class="runote">🇷🇺 Shown first in the proposal (before the English version), Atman-style. The number, dates, client name &amp; the closing quote are shared with the English version — you only translate the wording here. The signature &amp; the binding Terms live in the English section (English is the official version). Pre-filled with the standard Russian wording; edit freely.</p>
+        <div class="grp">
+          <p class="gl">Cover · Обложка</p>
+          <label class="f"><span class="cap">One-line description (RU)</span><input id="psubtitle_ru" placeholder="Ежемесячный бухгалтерский учёт, зарплата и налоги"></label>
+        </div>
+        <div class="grp">
+          <p class="gl">Introduction · Введение</p>
+          <label class="f"><span class="cap">Intro paragraphs (one per line)</span><textarea id="pintro_ru" rows="4"></textarea></label>
+        </div>
+        <div class="grp">
+          <p class="gl">What You Get · Что вы получаете</p>
+          <div class="row2"><label class="f"><span class="cap">B1 kicker</span><input id="b1k_ru"></label><label class="f"><span class="cap">B1 title</span><input id="b1t_ru"></label></div>
+          <label class="f"><span class="cap">B1 text</span><textarea id="b1d_ru" rows="2"></textarea></label>
+          <div class="row2"><label class="f"><span class="cap">B2 kicker</span><input id="b2k_ru"></label><label class="f"><span class="cap">B2 title</span><input id="b2t_ru"></label></div>
+          <label class="f"><span class="cap">B2 text</span><textarea id="b2d_ru" rows="2"></textarea></label>
+          <div class="row2"><label class="f"><span class="cap">B3 kicker</span><input id="b3k_ru"></label><label class="f"><span class="cap">B3 title</span><input id="b3t_ru"></label></div>
+          <label class="f"><span class="cap">B3 text</span><textarea id="b3d_ru" rows="2"></textarea></label>
+        </div>
+        <div class="grp">
+          <p class="gl">Your Investment · Ваши инвестиции</p>
+          <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody_ru" rows="2"></textarea></label>
+          <label class="f"><span class="cap">Closing note</span><input id="pinvnote_ru"></label>
+        </div>
+        <div class="grp">
+          <p class="gl">What's Included · Что включено</p>
+          <label class="f"><span class="cap">Categories &amp; bullets — "# " = category</span><textarea id="pincluded_ru" rows="7"></textarea></label>
+        </div>
+        <div class="grp">
+          <p class="gl">What's Next · Что дальше</p>
+          <label class="f"><span class="cap">Steps (one per line)</span><textarea id="psteps_ru" rows="4"></textarea></label>
+        </div>
+      </div>
     </div>
 
     <div class="preview-panel">
-      <div class="langbanner" id="langbanner">🇷🇺 <b>Russian version:</b> the bilingual (Russian + English) layout is being added in the next update — for now the tool generates the official English proposal.</div>
+      <div class="langbanner" id="langbanner">🇷🇺 <b>Bilingual mode:</b> the proposal shows the full Russian version first, then the official English version — the signature &amp; binding Terms &amp; Conditions are in the English part (English governs). Edit the Russian wording in the <b>“Russian version”</b> panel on the left.</div>
       <div id="proposal"></div>
     </div>
   </div>
@@ -273,11 +320,53 @@
     pquote:"«Knowing is not enough, we must apply.\nWilling is not enough, we must do.»",
     pquoteby:"Bruce Lee", pquotesub:"Actor & Martial Artist",
   };
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"];
-  function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; }
+  // Russian defaults — the standard wording pre-translated (edit per client). Benefits + the
+  // one-line description are client-specific, so they start as clearly-marked RU placeholders.
+  const DEFAULTS_RU = {
+    psubtitle_ru:"",
+    pintro_ru:"Добро пожаловать в ваше предложение.\n[Контекст — почему это сотрудничество, что изменилось, какую задачу мы решаем.]\n[Заключение — что охватывает это предложение и какого результата мы стремимся достичь вместе.]",
+    b1k_ru:"[Подзаголовок выгоды 1]", b1t_ru:"[Название выгоды 1]", b1d_ru:"[Описание выгоды 1]",
+    b2k_ru:"[Подзаголовок выгоды 2]", b2t_ru:"[Название выгоды 2]", b2d_ru:"[Описание выгоды 2]",
+    b3k_ru:"[Подзаголовок выгоды 3]", b3t_ru:"[Название выгоды 3]", b3d_ru:"[Описание выгоды 3]",
+    pinvbody_ru:"Покрывает всё, что указано в разделе «Что включено», — единым фиксированным ежемесячным платежом, без отдельных счетов в течение года.",
+    pinvnote_ru:"Стоимость ежегодно пересматривается с учётом инфляции. Это предложение действительно в течение 30 дней.",
+    pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
+    psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
+  };
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pinvbody_ru","pinvnote_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
   const fmtDate = iso => { if(!iso) return ""; const [y,m,d]=iso.split("-"); return `${MONTHS[+m-1]} ${+d}, ${y}`; };
+
+  // Label dictionary — the FIXED proposal scaffolding, per language.
+  const LBL = {
+    en:{ introEye:"Welcome", introTitle:"Introduction", getEye:"Why JK", getTitle:"What You Get",
+         invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo",
+         inclEye:"Scope of Services", inclTitle:"What's Included",
+         nextEye:"Next Steps", nextTitle:"What's Next",
+         overviewEye:"Overview", contentsTitle:"Contents",
+         agreeH:"Agreement", agreeB:"By signing below, you agree to the services and fees outlined in this proposal.",
+         onBehalf:"On behalf of", sig:"Signature", dateL:"Date", validFor:"This proposal is valid for 30 days", validFrom:"from",
+         page:"Page", of:"of", propHash:"Proposal #",
+         stepPh:"[Step]", introPh:"[Introduction]", invBodyPh:"[Investment body]", inclPh:"[Add categories and bullets]",
+         stdRate:"Standard rate", includes:"includes",
+         rows:["Introduction","What You Get","Your Investment","What's Included","What's Next"] },
+    ru:{ introEye:"Добро пожаловать", introTitle:"Введение", getEye:"Почему JK", getTitle:"Что вы получаете",
+         invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес",
+         inclEye:"Объём услуг", inclTitle:"Что включено",
+         nextEye:"Дальнейшие шаги", nextTitle:"Что дальше",
+         overviewEye:"Обзор", contentsTitle:"Содержание",
+         agreeH:"Соглашение", agreeB:"Подписывая ниже, вы соглашаетесь с услугами и стоимостью, изложенными в этом предложении.",
+         onBehalf:"От имени", sig:"Подпись", dateL:"Дата", validFor:"Это предложение действительно в течение 30 дней", validFrom:"с",
+         page:"Страница", of:"из", propHash:"Предложение № ",
+         stepPh:"[Шаг]", introPh:"[Введение]", invBodyPh:"[Описание инвестиций]", inclPh:"[Добавьте категории и пункты]",
+         stdRate:"Стандартная ставка", includes:"включает",
+         rows:["Введение","Что вы получаете","Ваши инвестиции","Что включено","Что дальше"] },
+  };
+  // Note that appears at the end of the Russian "What's Next" page, pointing to the English section.
+  const RU_TO_ENGLISH = "Официальная версия этого предложения, полные условия и место для подписи находятся в английском разделе далее. Английская версия является официальной и имеющей юридическую силу.";
 
   const TC = [
     ["1. Document Retention","We will retain our work papers and copies of your tax returns for seven (7) years from the date of filing. After seven years, our work papers and files will no longer be available. We are not responsible for any physical deterioration, data loss, or catastrophic event that may shorten the time during which our records will be available. Our working papers and files are not a substitute for your own original records. When any records are returned to you, it is your responsibility to retain and protect them for possible future use, including examination by governmental or regulatory agencies."],
@@ -295,123 +384,152 @@
     ["13. Entire Agreement; Amendment","This Addendum, together with the proposal it accompanies, constitutes the entire agreement between the parties regarding the services described and supersedes all prior oral or written representations or commitments. This Agreement may be amended only by a written instrument signed by both parties. Each party states that it has read this Agreement, has had the opportunity to obtain the advice of counsel, and executes this Agreement voluntarily and with full knowledge of its legal significance."],
   ];
 
-  function sectionHead(eyebrow, title){ return `<div class="eyebrow">${esc(eyebrow)}</div><div class="ph1">${esc(title)}</div><hr class="prule">`; }
-  function foot(n, num){ return `<div class="pfoot"><div class="footbar">Proposal #${esc(num||"[JKA####]")} · Page ${n} of 10</div></div>`; }
+  function sectionHead(eyebrow, title, tag){
+    return (tag?`<div class="langtag">${esc(tag)}</div>`:"") + `<div class="eyebrow">${esc(eyebrow)}</div><div class="ph1">${esc(title)}</div><hr class="prule">`;
+  }
+  function foot(n, total, num, lang){
+    const L = LBL[lang]||LBL.en;
+    return `<div class="pfoot"><div class="footbar">${esc(L.propHash)}${esc(num||"[JKA####]")} · ${esc(L.page)} ${n} ${esc(L.of)} ${total}</div></div>`;
+  }
+  // read a content field's value in the requested language ('' base for EN, '_ru' for RU)
+  function cv(base, lang){ return (lang==="ru") ? $(base+"_ru").value : $(base).value; }
 
-  function includedHtml(){
+  function includedHtml(lang){
     const out=[]; let open=false;
-    lines($("pincluded").value).forEach(ln=>{
+    lines(cv("pincluded",lang)).forEach(ln=>{
       if(ln.startsWith("# ")){ if(open) out.push("</ul>"); out.push(`<div class="icat">${esc(ln.slice(2))}</div><ul>`); open=true; }
       else { if(!open){ out.push("<ul>"); open=true; } out.push(`<li>${esc(ln)}</li>`); }
     });
     if(open) out.push("</ul>");
-    return out.join("") || `<span class="ph">[Add categories and bullets]</span>`;
+    return out.join("") || `<span class="ph">${esc(LBL[lang].inclPh)}</span>`;
+  }
+
+  // ---- page builders (each returns the inner HTML of one .ppage; foot added centrally) ----
+  function coverPage(bilingual){
+    const company = ph($("pcompany").value, "[Client / Entity Name]");
+    const num = $("pnumber").value;
+    const kicker = bilingual ? "Предложение · Proposal" : "Proposal";
+    const subRu = bilingual ? `<div class="csub ru">${ph($("psubtitle_ru").value,"[Краткое описание сотрудничества]")}</div>` : "";
+    return `
+      <img src="__MEDALLION__" alt="JK">
+      <div class="ckick">${esc(kicker)}</div>
+      <div class="ctitle">${company}</div>
+      ${subRu}
+      <div class="csub">${ph($("psubtitle").value,"[One-line description of engagement]")}</div>
+      <div class="cnum">Proposal #${ph(num,"[JKA####]")}</div>
+      <table class="ptable"><thead><tr><th>Prepared by</th><th>Prepared for</th></tr></thead><tbody>
+        <tr><td>Julia Kononova</td><td>${ph($("pcontact").value,"[Client Contact Name]")}</td></tr>
+        <tr><td>Chief Accountant, MBA, EA</td><td></td></tr>
+        <tr><td>e julia@jkaccountinggroup.com</td><td>${$("pemail").value? "e "+esc($("pemail").value):""}</td></tr>
+        <tr><td>m. 786-318-1505</td><td></td></tr>
+      </tbody></table>`;
+  }
+
+  function contentsPage(offset){
+    const L = LBL.en;
+    const start = 3 + offset;   // page number of the (English) Introduction
+    const rows = L.rows.map((r,i)=>`<div class="cline"><span>${esc(r)}</span><span class="cn">${start+i}</span></div>`).join("");
+    return sectionHead(L.overviewEye, L.contentsTitle) + rows;
+  }
+
+  function introPage(lang, tag){
+    const body = (lines(cv("pintro",lang)).length? lines(cv("pintro",lang)): [LBL[lang].introPh]).map(t=>`<p>${esc(t)}</p>`).join("");
+    return sectionHead(LBL[lang].introEye, LBL[lang].introTitle, tag) + body;
+  }
+
+  function getPage(lang, tag){
+    const benefit = (k,t,d,hl) => `<div class="ben${hl?' hl':''}"><div class="bk">${ph(cv(k,lang),"[Kicker]")}</div><div class="bt">${ph(cv(t,lang),"[Title]")}</div><p class="bd">${ph(cv(d,lang),"[Description]")}</p></div>`;
+    return sectionHead(LBL[lang].getEye, LBL[lang].getTitle, tag)
+      + benefit("b1k","b1t","b1d",true) + benefit("b2k","b2t","b2d",false) + benefit("b3k","b3t","b3d",false);
+  }
+
+  function investPage(lang, tag){
+    const L = LBL[lang];
+    const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
+      ? `<p class="disc">${esc(L.stdRate)} ${esc($("pstdrate").value)} · ${esc(L.includes)} <b>${esc($("pdiscount").value)}</b></p>` : "";
+    return sectionHead(L.invEye, L.invTitle, tag)
+      + `<div class="pcard"><div class="pk">${esc(L.invCard)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
+      + disc
+      + `<p>${ph(cv("pinvbody",lang),L.invBodyPh)}</p>`
+      + `<p class="invnote">${esc(cv("pinvnote",lang))}</p>`;
+  }
+
+  function includedPage(lang, tag){
+    return sectionHead(LBL[lang].inclEye, LBL[lang].inclTitle, tag) + includedHtml(lang);
+  }
+
+  function nextPage(lang, withSignature, tag){
+    const L = LBL[lang];
+    const stepsHtml = (lines(cv("psteps",lang)).length? lines(cv("psteps",lang)):[L.stepPh]).map((s,i)=>`<div class="stepline"><span class="sn">${i+1}</span><span class="sx">${esc(s)}</span></div>`).join("");
+    let tail;
+    if(withSignature){
+      const company = ph($("pcompany").value, "[Client / Entity Name]");
+      const rep = ($("prep").value.trim() || $("pcontact").value.trim());
+      const date = $("pdate").value ? fmtDate($("pdate").value) : "";
+      tail = `<div class="agree">
+        <h4>${esc(L.agreeH)}</h4>
+        <p>${esc(L.agreeB)}</p>
+        <div class="eyebrow">${esc(L.onBehalf)} ${company}</div>
+        <div class="sigrow"><span class="sigline"></span><div class="siglabel">${esc(L.sig)}</div></div>
+        <p style="margin:10px 0 2px;"><b>${ph(rep,"[Client signer name]")}</b></p>
+        <div class="sigrow"><span class="sigline" style="min-width:2in;"></span><div class="siglabel">${esc(L.dateL)}</div></div>
+        <p class="invnote">${esc(L.validFor)}${date? " "+esc(L.validFrom)+" "+esc(date):""}.</p>
+      </div>`;
+    } else {
+      tail = `<p class="toeng">${esc(RU_TO_ENGLISH)}</p>`;
+    }
+    return sectionHead(L.nextEye, L.nextTitle, tag) + stepsHtml + tail;
+  }
+
+  function closingPage(){
+    const quoteHtml = (lines($("pquote").value).length? lines($("pquote").value):["[Closing quote]"]).map(t=>esc(t)).join("<br>");
+    return `<div>
+      <img src="__MEDALLION_REV__" alt="JK">
+      <p class="q">${quoteHtml}</p>
+      <div class="qn">${ph($("pquoteby").value,"[Name]")}</div>
+      <div class="qs">${esc($("pquotesub").value)}</div>
+    </div>`;
+  }
+
+  function tcPage(part){
+    if(part===0){
+      const company = ph($("pcompany").value, "[Client / Entity Name]");
+      return sectionHead("Legal","Terms and Conditions")
+        + `<p>This section is incorporated by reference into, and forms part of, the proposal between JK Accounting Group Corp (“firm,” “we,” “us,” or “our”) and ${company} (“you” or “your”).</p>`
+        + `<div class="tcsec">${TC.slice(0,6).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>`;
+    }
+    return `<div class="tcsec">${TC.slice(6).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>`;
   }
 
   function render(){
+    const bilingual = $("lang").value === "ru";
+    const offset = bilingual ? 5 : 0;     // 5 extra Russian pages sit between the cover and the English contents
+    const total = 10 + offset;
     const num = $("pnumber").value;
-    const company = ph($("pcompany").value, "[Client / Entity Name]");
-    const date = $("pdate").value ? fmtDate($("pdate").value) : "";
-    const rep = ($("prep").value.trim() || $("pcontact").value.trim());
-    const benefit = (k,t,d,hl) => `<div class="ben${hl?' hl':''}"><div class="bk">${ph($(k).value,"[Kicker]")}</div><div class="bt">${ph($(t).value,"[Title]")}</div><p class="bd">${ph($(d).value,"[Description]")}</p></div>`;
-    const introHtml = (lines($("pintro").value).length? lines($("pintro").value): ["[Introduction]"]).map(t=>`<p>${esc(t)}</p>`).join("");
-    const stepsHtml = (lines($("psteps").value).length? lines($("psteps").value):["[Step]"]).map((s,i)=>`<div class="stepline"><span class="sn">${i+1}</span><span class="sx">${esc(s)}</span></div>`).join("");
-    const quoteHtml = (lines($("pquote").value).length? lines($("pquote").value):["[Closing quote]"]).map(t=>esc(t)).join("<br>");
+    const engTag = bilingual ? "English — official version" : "";
 
-    const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
-      ? `<p class="disc">Standard rate ${esc($("pstdrate").value)} · includes <b>${esc($("pdiscount").value)}</b></p>` : "";
+    const pages = [];
+    pages.push({ cls:"cover", nofoot:true, lang:"en", html: coverPage(bilingual) });
+    if(bilingual){
+      pages.push({ lang:"ru", html: introPage("ru") });
+      pages.push({ lang:"ru", html: getPage("ru") });
+      pages.push({ lang:"ru", html: investPage("ru") });
+      pages.push({ lang:"ru", html: includedPage("ru") });
+      pages.push({ lang:"ru", html: nextPage("ru", false) });
+    }
+    pages.push({ lang:"en", html: contentsPage(offset) });
+    pages.push({ lang:"en", html: introPage("en", engTag) });
+    pages.push({ lang:"en", html: getPage("en") });
+    pages.push({ lang:"en", html: investPage("en") });
+    pages.push({ lang:"en", html: includedPage("en") });
+    pages.push({ lang:"en", html: nextPage("en", true) });
+    pages.push({ cls:"closing", nofoot:true, lang:"en", html: closingPage() });
+    pages.push({ lang:"en", html: tcPage(0) });
+    pages.push({ lang:"en", html: tcPage(1) });
 
-    const html = `
-      <div class="ppage cover">
-        <img src="__MEDALLION__" alt="JK">
-        <div class="ckick">Proposal</div>
-        <div class="ctitle">${company}</div>
-        <div class="csub">${ph($("psubtitle").value,"[One-line description of engagement]")}</div>
-        <div class="cnum">Proposal #${ph(num,"[JKA####]")}</div>
-        <table class="ptable"><thead><tr><th>Prepared by</th><th>Prepared for</th></tr></thead><tbody>
-          <tr><td>Julia Kononova</td><td>${ph($("pcontact").value,"[Client Contact Name]")}</td></tr>
-          <tr><td>Chief Accountant, MBA, EA</td><td></td></tr>
-          <tr><td>e julia@jkaccountinggroup.com</td><td>${$("pemail").value? "e "+esc($("pemail").value):""}</td></tr>
-          <tr><td>m. 786-318-1505</td><td></td></tr>
-        </tbody></table>
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Overview","Contents")}
-        <div class="cline"><span>Introduction</span><span class="cn">3</span></div>
-        <div class="cline"><span>What You Get</span><span class="cn">4</span></div>
-        <div class="cline"><span>Your Investment</span><span class="cn">5</span></div>
-        <div class="cline"><span>What's Included</span><span class="cn">6</span></div>
-        <div class="cline"><span>What's Next</span><span class="cn">7</span></div>
-        ${foot(2,num)}
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Welcome","Introduction")}
-        ${introHtml}
-        ${foot(3,num)}
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Why JK","What You Get")}
-        ${benefit("b1k","b1t","b1d",true)}
-        ${benefit("b2k","b2t","b2d",false)}
-        ${benefit("b3k","b3t","b3d",false)}
-        ${foot(4,num)}
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Investment","Your Investment")}
-        <div class="pcard"><div class="pk">${ph($("pinvbody")?"Monthly Investment — All Inclusive":"", "")||"Monthly Investment — All Inclusive"}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">/mo</span></div></div>
-        ${disc}
-        <p>${ph($("pinvbody").value,"[Investment body]")}</p>
-        <p class="invnote">${esc($("pinvnote").value)}</p>
-        ${foot(5,num)}
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Scope of Services","What's Included")}
-        ${includedHtml()}
-        ${foot(6,num)}
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Next Steps","What's Next")}
-        ${stepsHtml}
-        <div class="agree">
-          <h4>Agreement</h4>
-          <p>By signing below, you agree to the services and fees outlined in this proposal.</p>
-          <div class="eyebrow">On behalf of ${company}</div>
-          <div class="sigrow"><span class="sigline"></span><div class="siglabel">Signature</div></div>
-          <p style="margin:10px 0 2px;"><b>${ph(rep,"[Client signer name]")}</b></p>
-          <div class="sigrow"><span class="sigline" style="min-width:2in;"></span><div class="siglabel">Date</div></div>
-          <p class="invnote">This proposal is valid for 30 days${date? " from "+esc(date):""}.</p>
-        </div>
-        ${foot(7,num)}
-      </div>
-
-      <div class="ppage closing">
-        <div>
-          <img src="__MEDALLION_REV__" alt="JK">
-          <p class="q">${quoteHtml}</p>
-          <div class="qn">${ph($("pquoteby").value,"[Name]")}</div>
-          <div class="qs">${esc($("pquotesub").value)}</div>
-        </div>
-      </div>
-
-      <div class="ppage">
-        ${sectionHead("Legal","Terms and Conditions")}
-        <p>This section is incorporated by reference into, and forms part of, the proposal between JK Accounting Group Corp (“firm,” “we,” “us,” or “our”) and ${company} (“you” or “your”).</p>
-        <div class="tcsec">${TC.slice(0,6).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>
-        ${foot(9,num)}
-      </div>
-
-      <div class="ppage">
-        <div class="tcsec">${TC.slice(6).map(([l,t])=>`<h4>${esc(l)}</h4><p>${esc(t)}</p>`).join("")}</div>
-        ${foot(10,num)}
-      </div>
-    `;
-    $("proposal").innerHTML = html;
+    $("proposal").innerHTML = pages.map((p,i)=>
+      `<div class="ppage ${p.cls||""}">${p.html}${p.nofoot?"":foot(i+1,total,num,p.lang)}</div>`
+    ).join("");
     fitPreview();
   }
 
@@ -427,7 +545,12 @@
   }
   window.addEventListener('resize', fitPreview);
 
-  $("lang").addEventListener("change", ()=>{ $("langbanner").classList.toggle("show", $("lang").value==="ru"); });
+  function syncLang(){
+    const bilingual = $("lang").value === "ru";
+    $("langbanner").classList.toggle("show", bilingual);
+    $("rugroup").classList.toggle("on", bilingual);
+  }
+  $("lang").addEventListener("change", ()=>{ syncLang(); render(); });
   $("save").addEventListener("click", ()=> window.print());
   $("reset").addEventListener("click", ()=>{
     if(!confirm("Start a new proposal? All fields will be cleared.")) return;
@@ -436,5 +559,5 @@
   });
   CONTENT.forEach(id=>["input","change"].forEach(ev=>$(id).addEventListener(ev, render)));
 
-  applyDefaults(); renderCalc(); render();
+  applyDefaults(); syncLang(); renderCalc(); render();
 </script>
