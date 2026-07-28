@@ -619,6 +619,7 @@ table.edec td:first-child{font-family:var(--mono); color:var(--accent-2); font-w
 /* card reuses .hcard (container) + .doc-card (ttl/blurb/dmeta); it's a <div>, so the
    a.hcard hover/arrow rules never apply. Only the template-specific bits live here. */
 .tcard{cursor:default;}
+.tpl-tool{cursor:pointer;}
 .tcard .khead{align-items:flex-start;}
 .tcard .tfmts{display:inline-flex; gap:5px; margin-left:auto; flex-wrap:wrap; justify-content:flex-end;}
 .tcard .fmt{font-family:var(--mono); font-size:9px; letter-spacing:0.08em; text-transform:uppercase;
