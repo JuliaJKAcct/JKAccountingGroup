@@ -151,43 +151,21 @@
   </div>
 </div>
 
+<script>/*__PRICING_CORE__*/</script>
 <script>
   const $ = id => document.getElementById(id);
-  const has = id => $(id).value.trim() !== "";
-  const num = v => { const n = parseFloat(v); return isFinite(n) ? n : 0; };
+  const money = JKPricing.money, money0 = JKPricing.money0;
 
-  // ---- Rate tables (from build_pricing_xlsx.py — the firm's Core Pricing Matrix) ----
-  const TX_TIERS = [[0,200,200],[201,225,225],[226,250,250],[251,275,275],[276,300,300],[301,325,325],[326,350,350],[351,375,375],[376,400,400],[401,425,425],[426,450,450],[451,500,500]];
-  const ACCT_TIERS = [[1,5,5],[6,10,10],[11,15,15],[16,25,25],[26,30,30]];
-  const FREQ = {"Monthly":1,"Bi-weekly":1.5,"Weekly":2};
-  const BANKFEED = {"Yes":1,"No / manual":2.25};
-  const LOC = {"1":1,"2":1.25,"3":1.75,"4":2,"5":2.25,"6":2.5,"7":2.75};
-  const ADV = {"Small":100,"Medium":150,"Large":200,"None":0};
-  const STDIV = {"Monthly":1,"Quarterly":3,"Annual":12};
-  const TAXDEFAULT = {"1120S":750,"1065":650,"1120":780,"none":0};
-  const FINSTMT = 16, RECON_RATE = 18.5, PER_1099 = 25, ST_RATE = 60;
-
-  function tierUp(n, tiers){ n = Math.floor(n); if(n<=0) return tiers===TX_TIERS?200:0; for(const [lo,hi,val] of tiers){ if(n>=lo && n<=hi) return val; } return tiers[tiers.length-1][2]; }
-  const fmtMoney = (n, cents) => { const neg = n < 0, v = Math.abs(n); const s = cents ? v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2}) : Math.round(v).toLocaleString("en-US"); return (neg ? "-$" : "$") + s; };
-  const money = n => fmtMoney(n, true);
-  const money0 = n => fmtMoney(n, false);
-
-  // Every component is 0 until its inputs are filled — the calculator starts fully blank,
-  // so no default value can quietly carry into a client's price.
+  // All the fee math lives in the shared pricing core (pricing-core.js) so this
+  // calculator and the Monthly Proposal generator can never disagree. This reads the
+  // form and delegates to JKPricing.computePricing — every component is 0 until filled.
   function compute(){
-    const recording = (has("tx") && has("freq") && has("bankfeed") && has("loc"))
-      ? 1 * tierUp(num($("tx").value),TX_TIERS) * FREQ[$("freq").value] * BANKFEED[$("bankfeed").value] * LOC[$("loc").value] : 0;
-    const reconcile = has("accounts") ? RECON_RATE * tierUp(num($("accounts").value),ACCT_TIERS) : 0;
-    const finstmt = $("finstmt").value === "Yes" ? FINSTMT : 0;
-    const taxprep = has("taxfee") ? num($("taxfee").value)/12 : 0;
-    const states = num($("states").value);
-    const salestax = (has("states") && states>0 && has("stfreq")) ? ST_RATE*states/STDIV[$("stfreq").value] : 0;
-    const advisory = ADV[$("advisory").value] || 0;
-    const f1099 = has("contractors") ? PER_1099 * num($("contractors").value) : 0;
-    const ownerval = $("ownerpay").value;
-    const total = recording+reconcile+finstmt+taxprep+salestax+advisory+f1099;
-    const adjust = num($("adjust").value);
-    return { recording, reconcile, finstmt, taxprep, salestax, advisory, f1099, ownerval, total, adjust, final: total+adjust };
+    return JKPricing.computePricing({
+      tx:$("tx").value, freq:$("freq").value, bankfeed:$("bankfeed").value, loc:$("loc").value,
+      accounts:$("accounts").value, finstmt:$("finstmt").value, taxfee:$("taxfee").value,
+      stfreq:$("stfreq").value, states:$("states").value, contractors:$("contractors").value,
+      advisory:$("advisory").value, ownerpay:$("ownerpay").value, adjust:$("adjust").value
+    });
   }
 
   function row(label, sub, value){
@@ -215,7 +193,7 @@
   }
 
   // return type auto-fills the default annual tax fee (still editable)
-  $("rettype").addEventListener("change", () => { const v = $("rettype").value; if (v in TAXDEFAULT) $("taxfee").value = TAXDEFAULT[v]; render(); });
+  $("rettype").addEventListener("change", () => { const v = $("rettype").value; if (v in JKPricing.TAXDEFAULT) $("taxfee").value = JKPricing.TAXDEFAULT[v]; render(); });
 
   const FIELDS = ["tx","freq","bankfeed","loc","accounts","finstmt","rettype","taxfee","stfreq","states","contractors","advisory","ownerpay","adjust"];
   $("reset").addEventListener("click", () => { FIELDS.forEach(id => { $(id).value = ""; }); render(); });

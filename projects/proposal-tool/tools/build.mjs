@@ -21,6 +21,8 @@ const repo = resolve(here, "..", "..", "..");
 const fonts = readFileSync(resolve(repo, "brand/design-system/fonts-embedded.css"), "utf8");
 const logo  = "data:image/png;base64," +
   readFileSync(resolve(repo, "brand/logo/png/JK-lockup-horizontal-2048.png")).toString("base64");
+// Shared pricing core — inlined into every tool that prices, so they can never diverge.
+const pricingCore = readFileSync(resolve(here, "pricing-core.js"), "utf8");
 
 // tool src basename → { title, artifact }
 //   artifact:true also emits <name>.artifact.html — the SAME fragment with fonts inlined
@@ -33,7 +35,10 @@ const TOOLS = {
 
 for (const [name, cfg] of Object.entries(TOOLS)) {
   const src = readFileSync(resolve(here, name + ".src.html"), "utf8");
-  const body = src.replace("/*__FONTS__*/", fonts).replace("__LOGO__", logo);
+  const body = src
+    .replace("/*__FONTS__*/", fonts)
+    .replace("__LOGO__", logo)
+    .replace("/*__PRICING_CORE__*/", pricingCore);
   const full =
     '<!doctype html><html lang="en"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
