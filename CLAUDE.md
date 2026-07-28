@@ -121,6 +121,13 @@ in that folder.
   person you're helping may not know a skill is even possible, so naming the opportunity
   is part of the job. Build the skill only once there's a real second use in sight —
   suggest, don't manufacture skills speculatively.
+- **Everything we build is reflected in the Knowledge Hub — by default.** Every tool,
+  calculator, generator, dashboard, SOP, and client file the firm builds belongs in the
+  [`knowledge-hub`](./projects/knowledge-hub/) so the team finds it all in one place. This
+  is the standing default (Lilian, Jul 2026): adding a new tool or SOP to the Hub is
+  **part of finishing it**, run via the [`knowledge-hub` skill](./.claude/skills/knowledge-hub/) —
+  not a separate ask. The only exception is when Lilian explicitly says a given thing is
+  too small to warrant a Hub entry.
 - **Know the skills we already have — check first, enrich instead of duplicate.**
   The canonical catalog of every skill is [`.claude/skills/README.md`](./.claude/skills/README.md)
   (the skills index). **Nobody remembers all of them**, so it's your job to: (a) answer

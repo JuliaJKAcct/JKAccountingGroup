@@ -957,6 +957,49 @@ const ENGAGEMENT_DOC = (() => {
 // iframe parses them as HTML, and any pre-existing entity survives the round-trip.
 const srcdocEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 
+// Inline a proposal-tool browser tool (.src.html) into a self-contained doc for an in-Hub
+// iframe — generalizes ENGAGEMENT_DOC for the tools that also need the medallions + the
+// shared pricing core. Same single sources the standalone tools use, so they never drift.
+function inlineToolDoc(srcFile, title){
+  try{
+    const dir = resolve(repoRoot, 'projects/proposal-tool/tools');
+    const png = (rel) => 'data:image/png;base64,' + readFileSync(resolve(repoRoot, rel)).toString('base64');
+    const body = read(resolve(dir, srcFile))
+      .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
+      .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
+      .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
+      .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
+      .replaceAll('/*__PRICING_CORE__*/', read(resolve(dir, 'pricing-core.js')));
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+      + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + '</title></head><body>\n'
+      + body + '\n</body></html>';
+  }catch(e){ return ''; }
+}
+const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
+const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator');
+
+function toolIframe(doc, titleAttr){
+  return doc
+    ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
+      + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
+      + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
+    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>The tool source wasn't found at build time. Rebuild the Hub from the repo root.</p></div></div>`;
+}
+function calcReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Proposals &amp; pricing · internal</p>`
+    + `<h1>Internal Pricing Calculator<span class="loc">Price a monthly client in seconds</span></h1>`
+    + `<p class="lede">The interactive front end for the firm's Core Pricing Matrix. Enter a client's service parameters and it builds the monthly fee live — the internal breakdown plus the single bundled fee. <b>Internal only:</b> the client proposal shows just the one bundled fee. It starts fully blank, so no default can carry into a client's price.</p>`
+    + `</div></section><div class="page">${toolIframe(CALC_DOC, 'Internal Pricing Calculator')}</div>`;
+}
+function monthlyReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Proposals &amp; pricing · firm-wide</p>`
+    + `<h1>Monthly Proposal Generator<span class="loc">Price it, then build the proposal</span></h1>`
+    + `<p class="lede">The firm's premium monthly-retainer proposal — our GoProposal replacement. <b>Step 1</b> prices the client with the same calculator (identical results); <b>Step 2</b> flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. It builds the full on-brand proposal live; use <b>Save PDF</b> to download it (works in a normal browser and on the published Hub).</p>`
+    + `</div></section><div class="page">${toolIframe(MONTHLY_DOC, 'Monthly Proposal Generator')}</div>`;
+}
+
 function engagementReaderInner(owner, updated){
   const fieldRows = [
     ['1', 'Letter date'],
@@ -1516,10 +1559,15 @@ const TEMPLATES = [
     ],
     open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
 
-  { band: 'firm', kind: 'Tax preparation', name: 'Tax Preparation Proposals', owner: 'julia',
-    blurb: 'Produce a client proposal or engagement letter with the firm’s in-house generator (our GoProposal replacement). The Business Tax Engagement Letter builds live from a few client facts and auto-derives the return, Form 8879 and due date; monthly-retainer proposals, 1040 letters and the T&C addendum come from the same proposal-generator tool.',
-    formats: ['Generator'],
-    tool: { id: 'business-tax-engagement-letter-standard', label: 'Open the engagement-letter generator' } },
+  { band: 'tool', kind: 'Interactive tool', name: 'Monthly Retainer Proposal — generator', owner: 'julia',
+    blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client — live in the browser. Step 1 prices the client with the same pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Generates the on-brand 10-page proposal; “Save PDF” works in a normal browser. Client data never enters the repo.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
+
+  { band: 'tool', kind: 'Interactive tool', name: 'Internal Pricing Calculator', owner: 'julia',
+    blurb: 'Price a monthly client from the firm’s Core Pricing Matrix — enter the service parameters and get the internal fee build-up and the single bundled monthly fee, live in the browser. Internal only (the client never sees the breakdown); it also feeds the Monthly Retainer Proposal generator, using the same shared pricing core so the two never disagree.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'pricing-calculator', label: 'Open the calculator' } },
 
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
@@ -1543,6 +1591,12 @@ const TEMPLATES = [
     ],
     open: { id: 'double-portal-first-login', label: 'Open its SOP (guide · email · WhatsApp)' } },
 ];
+
+// The proposals-&-pricing tools open in the in-Hub reader like the engagement letter —
+// each embeds its self-contained tool in an isolated iframe (rule 0: every tool we build
+// is reflected in the Hub). Reader ids match the Templates cards' tool.id above.
+readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 

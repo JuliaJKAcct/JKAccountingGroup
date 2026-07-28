@@ -48,8 +48,13 @@ proposal-tool/
 │   │                             front-end for the Core Pricing Matrix; enter the client's
 │   │                             service parameters → internal breakdown + one bundled
 │   │                             monthly fee (mirrors the build_*pricing*.py scripts)
-│   └── build.mjs               ← inlines brand fonts + logo → self-contained .html files
-│                                 (the built .html are git-ignored; regenerate as needed)
+│   ├── monthly-proposal-generator.src.html ← the premium monthly-retainer proposal (the
+│   │                             GoProposal replacement): Step 1 prices with the calculator,
+│   │                             Step 2 flows the fee into the editable 10-page proposal → Save PDF
+│   ├── pricing-core.js          ← SHARED fee-math core — the single source of truth inlined
+│   │                             into both the calculator and the proposal generator (never diverge)
+│   └── build.mjs               ← inlines brand fonts + logo + medallions + the pricing core →
+│                                 self-contained .html files (built .html git-ignored; regenerate)
 ├── generator-scripts/         ← the engine (Node docx-js + Python)
 │   ├── common.js               ← shared brand helpers (colors, fonts, logo, layout)
 │   ├── body.js / proposal_body.js / premium_proposal_body.js / gopro_proposal_body.js
@@ -93,8 +98,9 @@ and the firm's standing rules (Chief-Accountant title, the "Not Included" defaul
 bundled monthly fee + bilingual RU/EN for retainers). **Load that skill first** for any
 proposal work.
 
-Two self-service interactive tools live in [`tools/`](./tools/) — run `node tools/build.mjs`
-to build the self-contained HTML, then open it in a normal browser:
+Three self-service interactive tools live in [`tools/`](./tools/) — run `node tools/build.mjs`
+to build the self-contained HTML, then open it in a normal browser. All three are also
+embedded in the **Knowledge Hub** (Interactive tools band):
 
 - **Business tax-prep engagement letter** — fill the validated form and "Save PDF". Starts
   blank every time (no stale/other-client data) and refuses to generate with any required
@@ -102,14 +108,18 @@ to build the self-contained HTML, then open it in a normal browser:
 - **Internal pricing calculator** — the interactive front-end for the Core Pricing Matrix:
   enter a client's service parameters and it computes the internal fee build-up and the
   single bundled monthly fee. Starts fully blank (no default can carry into a client's
-  price). **Internal only** — the client proposal shows just the one bundled fee. Mirrors
-  `generator-scripts/build_pricing_xlsx.py` + `build_client_pricing_sheet.py`. Because it
-  downloads nothing, it's shared as **one live claude.ai Artifact link** (always the latest
-  version) rather than a file — see the canonical URL + update flow in the
-  [`proposal-generator`](../../.claude/skills/proposal-generator/) skill.
+  price). **Internal only** — the client proposal shows just the one bundled fee. Because it
+  downloads nothing, it's also shared as **one live claude.ai Artifact link** — see the
+  canonical URL + update flow in the [`proposal-generator`](../../.claude/skills/proposal-generator/) skill.
+- **Monthly Retainer Proposal generator** — the premium monthly proposal (the GoProposal
+  replacement): **Step 1** prices the client with the calculator; **Step 2** flows that fee
+  into the editable 10-page proposal (cover, benefits, investment, what's-included, next
+  steps, closing quote, T&C) → **Save PDF**. English now; bilingual RU+EN is the next pass.
 
-The docx/HTML engine still lives in `generator-scripts/`; validation uses the repo's
-`docx`/`xlsx` helpers (`validate.py`, `recalc.py`).
+The calculator and the proposal generator share **`tools/pricing-core.js`** — the single
+source of the fee math — so they can never produce different numbers. The docx/HTML engine
+still lives in `generator-scripts/`; validation uses the repo's `docx`/`xlsx` helpers
+(`validate.py`, `recalc.py`).
 
 ## Outputs
 
