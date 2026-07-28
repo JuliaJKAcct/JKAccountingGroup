@@ -39,12 +39,16 @@ proposal-tool/
 │   ├── JKA_Monthly_Proposal_Engagement_TEMPLATE.docx / .pdf
 │   ├── JKA_Tax_Prep_Engagement_Letter_TEMPLATE.docx
 │   └── JKA_Terms_and_Conditions_Addendum.docx
-├── tools/                     ← self-service interactive generators (open in a browser)
+├── tools/                     ← self-service interactive tools (open in a browser)
 │   ├── business-tax-engagement-letter.src.html ← the interactive business tax-prep
 │   │                             engagement-letter generator (starts blank, validates
 │   │                             every field, auto-derives return/Form-8879/due-date)
-│   └── build.mjs               ← inlines brand fonts + logo → self-contained .html
-│                                 (the built .html is git-ignored; regenerate as needed)
+│   ├── pricing-calculator.src.html ← internal pricing calculator — the interactive
+│   │                             front-end for the Core Pricing Matrix; enter the client's
+│   │                             service parameters → internal breakdown + one bundled
+│   │                             monthly fee (mirrors the build_*pricing*.py scripts)
+│   └── build.mjs               ← inlines brand fonts + logo → self-contained .html files
+│                                 (the built .html are git-ignored; regenerate as needed)
 ├── generator-scripts/         ← the engine (Node docx-js + Python)
 │   ├── common.js               ← shared brand helpers (colors, fonts, logo, layout)
 │   ├── body.js / proposal_body.js / premium_proposal_body.js / gopro_proposal_body.js
@@ -88,12 +92,23 @@ and the firm's standing rules (Chief-Accountant title, the "Not Included" defaul
 bundled monthly fee + bilingual RU/EN for retainers). **Load that skill first** for any
 proposal work.
 
-The **business tax-prep engagement letter** has a self-service interactive generator in
-[`tools/`](./tools/): run `node tools/build.mjs`, open the built HTML in a normal browser,
-fill the validated form, and use "Save PDF". It starts blank every time (no stale/other-
-client data) and refuses to generate with any field missing. The docx/HTML engine still
-lives in `generator-scripts/`; validation uses the repo's `docx`/`xlsx` helpers
-(`validate.py`, `recalc.py`).
+Two self-service interactive tools live in [`tools/`](./tools/) — run `node tools/build.mjs`
+to build the self-contained HTML, then open it in a normal browser:
+
+- **Business tax-prep engagement letter** — fill the validated form and "Save PDF". Starts
+  blank every time (no stale/other-client data) and refuses to generate with any required
+  field missing.
+- **Internal pricing calculator** — the interactive front-end for the Core Pricing Matrix:
+  enter a client's service parameters and it computes the internal fee build-up and the
+  single bundled monthly fee. Starts fully blank (no default can carry into a client's
+  price). **Internal only** — the client proposal shows just the one bundled fee. Mirrors
+  `generator-scripts/build_pricing_xlsx.py` + `build_client_pricing_sheet.py`. Because it
+  downloads nothing, it's shared as **one live claude.ai Artifact link** (always the latest
+  version) rather than a file — see the canonical URL + update flow in the
+  [`proposal-generator`](../../.claude/skills/proposal-generator/) skill.
+
+The docx/HTML engine still lives in `generator-scripts/`; validation uses the repo's
+`docx`/`xlsx` helpers (`validate.py`, `recalc.py`).
 
 ## Outputs
 
