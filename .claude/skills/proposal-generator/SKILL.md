@@ -37,6 +37,12 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
 3. **Monthly-engagement proposal** — premium format, single bundled fee, optional
    **bilingual RU/EN**, electronic-signature fields (`generator-scripts/` +
    `premium_proposal_body.js`).
+4. **Internal pricing calculator** — the interactive front-end for the firm's Core
+   Pricing Matrix (`projects/proposal-tool/tools/pricing-calculator.src.html`). Enter a
+   client's service parameters → the internal fee build-up + the single bundled monthly
+   fee. **Internal only** (never shown to the client); it computes the number that goes on
+   the monthly proposal. Mirrors `generator-scripts/build_pricing_xlsx.py` +
+   `build_client_pricing_sheet.py` exactly.
 
 ## Business tax-prep engagement letter — the fields to collect
 
@@ -115,6 +121,9 @@ company itself. This matches the firm's master template exactly.
 
 - `projects/proposal-tool/tools/business-tax-engagement-letter.src.html` + `build.mjs` —
   the interactive business tax-prep generator (build → open in browser → Save PDF).
+- `projects/proposal-tool/tools/pricing-calculator.src.html` (built by the same `build.mjs`)
+  — the internal pricing calculator (build → open in browser → enter inputs → bundled
+  monthly fee). Internal only; the client proposal shows just the one bundled fee.
 - `projects/proposal-tool/templates/` — blank docx masters (monthly proposal, tax-prep
   letter, T&C addendum).
 - `projects/proposal-tool/generator-scripts/` — the docx/HTML engine (`body.js` letter
