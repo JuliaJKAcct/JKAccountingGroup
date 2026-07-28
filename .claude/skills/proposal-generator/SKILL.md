@@ -34,9 +34,13 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    (`templates/JKA_Tax_Prep_Engagement_Letter_TEMPLATE.docx`) via
    `generator-scripts/gen_letters.js` + `body.js`. Business master + an individual
    (1040) variant (income-documents wording, simplified signature).
-3. **Monthly-engagement proposal** — premium format, single bundled fee, optional
-   **bilingual RU/EN**, electronic-signature fields (`generator-scripts/` +
-   `premium_proposal_body.js`).
+3. **Monthly-engagement proposal** — the **interactive Monthly Proposal generator**
+   (`projects/proposal-tool/tools/monthly-proposal-generator.src.html`): Step 1 prices the
+   client with the built-in calculator (shared core), Step 2 flows that fee into the
+   editable 10-page premium proposal (cover · benefits · investment · what's-included ·
+   next-steps · closing quote · T&C) → Save PDF. Single bundled fee; English now, with a
+   **bilingual RU/EN** option as the next pass. The docx engine (`generator-scripts/` +
+   `premium_proposal_body.js`) is the format's source of truth.
 4. **Internal pricing calculator** — the interactive front-end for the firm's Core
    Pricing Matrix (`projects/proposal-tool/tools/pricing-calculator.src.html`). Enter a
    client's service parameters → the internal fee build-up + the single bundled monthly
@@ -134,6 +138,11 @@ company itself. This matches the firm's master template exactly.
 - `projects/proposal-tool/tools/pricing-calculator.src.html` (built by the same `build.mjs`)
   — the internal pricing calculator (build → open in browser → enter inputs → bundled
   monthly fee). Internal only; the client proposal shows just the one bundled fee.
+- `projects/proposal-tool/tools/monthly-proposal-generator.src.html` — the interactive
+  Monthly Proposal generator (calculator → editable 10-page premium proposal → Save PDF).
+- `projects/proposal-tool/tools/pricing-core.js` — the SHARED fee-math core inlined (by
+  `build.mjs`) into BOTH the calculator and the proposal generator, so they never diverge.
+  **Change a rate/formula here once**; rebuild both. Mirrors the Python pricing scripts.
 - `projects/proposal-tool/templates/` — blank docx masters (monthly proposal, tax-prep
   letter, T&C addendum).
 - `projects/proposal-tool/generator-scripts/` — the docx/HTML engine (`body.js` letter

@@ -191,10 +191,13 @@ emitted script silently broke *every* click.
     Hub never lags the tool** (publish from merged `main` as the **last** step, per the publish flow
     below: keep the one canonical Hub link current, never mint a new one). Lilian wants the Hub to be the single place she
     can see every tool we've built, with no scattered or divergent copies. **To add a new tool:**
-    embed its `.src.html` as a reader (mirror `ENGAGEMENT_DOC` + the `it.<flag>` → `…ReaderInner`
-    wiring), then add one `{ band: 'tool', …, tool:{ id, label } }` entry. The first tool is the
-    Business Tax Engagement Letter generator (reader id `business-tax-engagement-letter-standard`);
-    the internal pricing calculator can join the same band the same way when wanted.
+    embed its `.src.html` as a reader — either the `it.<flag>` → `…ReaderInner` wiring (like the
+    engagement letter) or the reusable `inlineToolDoc()` + `toolIframe()` + a `readerDocs.push`
+    with a chosen `data-doc` id (like the pricing calculator / monthly proposal) — then add one
+    `{ band: 'tool', …, tool:{ id, label } }` entry pointing at that id. The band currently holds
+    three: the **Business Tax Engagement Letter** generator (reader id
+    `business-tax-engagement-letter-standard`), the **Monthly Retainer Proposal** generator
+    (`monthly-proposal-generator`), and the **Internal Pricing Calculator** (`pricing-calculator`).
 
 ## Design is not optional — impeccable + the Design System, always
 
