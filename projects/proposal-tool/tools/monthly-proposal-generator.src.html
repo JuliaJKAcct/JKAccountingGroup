@@ -130,12 +130,18 @@
 
   @media print{
     .toolbar, .form-panel, .langbanner{ display:none !important; }
-    body, .app, .workspace, .preview-panel{ display:block !important; height:auto !important; overflow:visible !important; background:#fff !important; }
+    /* Each page is a FULL ivory Letter sheet, edge to edge — no white page margin and no
+       white space below short pages (which read as a "beige card floating on white"). The
+       ivory background fills the whole sheet; content sits inside a comfortable inset that
+       matches the old effective margins, so the T&C pages still fit exactly (10/15 pages). */
+    body, .app, .workspace, .preview-panel{ display:block !important; height:auto !important; overflow:visible !important; background:var(--ivory) !important; }
     .preview-panel{ padding:0 !important; }
     #proposal{ zoom:1 !important; }
-    .ppage{ width:auto !important; max-width:none !important; margin:0 !important; box-shadow:none !important; min-height:auto !important; padding:0.3in 0.1in; break-after:page; page-break-after:always; }
+    .ppage{ width:auto !important; max-width:none !important; margin:0 !important; box-shadow:none !important;
+            min-height:100vh; padding:0.8in 0.6in !important; break-after:page; page-break-after:always; }
     .ppage:last-child{ break-after:auto; }
-    @page{ size:Letter; margin:0.5in; }
+    .ppage.closing{ padding:1in 0.9in !important; }
+    @page{ size:Letter; margin:0; }
   }
 </style>
 
