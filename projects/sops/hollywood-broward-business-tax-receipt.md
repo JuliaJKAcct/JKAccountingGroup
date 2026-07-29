@@ -353,8 +353,8 @@ Address** and **Folio Number** auto-fill from the address you enter.
     full lease) — one page, signed by the property owner, acknowledging the
     sub-tenant's occupancy — is far easier to obtain than a new lease and
     satisfies the literal wording of the requirement.
-  - *First hit: Pro Title Agency LLC (sub-tenant of Best Broker Realty LLC) at
-    1047 Buchanan St, City of Hollywood App #40698, 2026-07.*
+  - *First observed 2026-07, on a sub-tenant applicant's City of Hollywood
+    filing — see client-intelligence for the specific case.*
 - **Missing the Sept 30 renewal.**
 
 ---
