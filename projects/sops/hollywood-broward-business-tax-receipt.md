@@ -1,6 +1,6 @@
 # SOP: Business Tax Receipt — City of Hollywood + Broward County
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-23
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-29
 >
 > 🔍 **In review (Jul 2026):** Lilian is doing a final detailed read-through after a
 > major restructuring round (flowchart, two-fees box, uploads checklist, email map).
@@ -150,7 +150,9 @@ applications. **Both** applications ask for documents:
 
 **City (Hollywood LBTR) uploads** *(PDF only, ≤ 10 MB each)*:
 - **Proof of location** — a signed lease **or** proof of ownership (property tax
-  bill, warranty deed, bill of sale, insurance certificate, or utility bill).
+  bill, warranty deed, bill of sale, insurance certificate, or utility bill). If
+  the applicant is a **sub-tenant**, have the **master lease** (owner ↔ master
+  tenant) ready alongside the sublease — see the sub-tenant pitfall in §5.
 - **Entity proof** — Articles of Incorporation **or** Fictitious Name Registration.
 - **State license** — if the activity is regulated.
 
@@ -330,6 +332,29 @@ Address** and **Folio Number** auto-fill from the address you enter.
   the classification and bills the difference by email, paying it is **not** the
   last step — the reviewer issues and sends the receipt only **after you reply to
   confirm the payment**. Pay, then notify them, or the receipt never comes (see §7).
+- **Sub-tenant proof of location gets rejected — "signed agreement between
+  sublessee and the property owner."** If the applicant is a **sub-tenant**
+  (leasing from a master tenant, not directly from the property owner), a signed
+  sublease alone can still get bounced: the city's follow-up email (§7) may state,
+  as boilerplate, that *"sublessees operating a business are required to provide a
+  signed agreement between sublessee and the property owner"* — even though a
+  valid sublease was already submitted. This happens because the reviewer's
+  template assumes a direct landlord ↔ tenant relationship and doesn't anticipate
+  a master-tenant + sub-tenant chain; a document directly between the sub-tenant
+  and the property owner may genuinely not exist (the owner's only contractual
+  relationship is with the master tenant).
+  - **Resolution:** reply with **both** documents together, to show the complete
+    chain of the right to occupy: (a) the master lease between the property owner
+    and the master tenant, and (b) the sublease between the master tenant and the
+    sub-tenant applicant. Explain in the email why no direct owner-to-sub-tenant
+    lease exists.
+  - **Fallback if the city still insists** on something signed directly by the
+    property owner: a short **landlord consent / acknowledgment letter** (not a
+    full lease) — one page, signed by the property owner, acknowledging the
+    sub-tenant's occupancy — is far easier to obtain than a new lease and
+    satisfies the literal wording of the requirement.
+  - *First hit: Pro Title Agency LLC (sub-tenant of Best Broker Realty LLC) at
+    1047 Buchanan St, City of Hollywood App #40698, 2026-07.*
 - **Missing the Sept 30 renewal.**
 
 ---

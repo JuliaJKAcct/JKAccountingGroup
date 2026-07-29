@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-23
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -67,17 +67,19 @@ the actual details.
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood + Broward County.
 - **What & when:** Local business-license receipts; renewed annually.
 - **Our role:** The firm handled the filings.
-- **Current status:** _(Double notes, 2026-07-15)_
+- **Current status:** _(Double notes, 2026-07-15; Gmail, 2026-07-29)_
   - **Broward County receipt — COMPLETE** (received / in hand 2026-07-15).
-  - **City of Hollywood LBTR — submitted & paid 2026-07-15, awaiting city processing.** Classified under **"Service/Licensed Business — Insurance Agency"** (the city has no "title" category; a FL title insurance agency is DFS-licensed, so Insurance Agency is the correct fit).
-  - **Tracking gap (still open, 2026-07-23):** the **client's own email** (the owner's) was used on the city application, so the firm does **not** receive the city's Track/Status emails. Approach chosen: **have the owner forward the city's tracking email** to the firm. **As of 2026-07-23 the owner has not forwarded it yet** — still following up; once he does, it lands in the firm's inbox (julia@) and status can be checked. _(Double note 2026-07-23)_
+  - **City of Hollywood LBTR (App #40698) — under review, missing-document request as of 2026-07-28.** Classified under **"Service/Licensed Business — Insurance Agency"** (the city has no "title" category; a FL title insurance agency is DFS-licensed, so Insurance Agency is the correct fit).
+  - **Tracking gap — resolved in practice (2026-07-29):** the city contact email on the application is still the owner's, not the firm's, but the owner is now forwarding the city's correspondence to Julia's inbox as it arrives, so status can be followed.
+  - **Missing-document request (2026-07-28) — "signed lease agreement with property owner":** the city rejected the sublease that was originally filed as proof of location, stating a sublessee must provide *"a signed agreement between sublessee and the property owner, SYNERGY MOOD LLC."* The firm replied 2026-07-29 (julia@ → BusinessTax@hollywoodfl.org, cc the owner) explaining the leasing chain and attaching **both** the master lease (Synergy Mood LLC ↔ Best Broker Realty LLC) and the sublease (Best Broker Realty LLC ↔ Pro Title Agency LLC) as the combined proof of occupancy right. **Awaiting the city's response.** If the city still insists on a document signed directly by Synergy Mood LLC, the fallback is a short landlord consent/acknowledgment letter (not a full lease) — see §6.
   - Application number, folio, EIN, DFS license number, the owner's contact and amounts are in the Double notes.
-- **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
+- **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md), which now documents this sub-tenant proof-of-location pitfall (§5).
 
 ## 5. Key facts & quirks
 
-- On the City of Hollywood BTR, the **client's own email** was used on the application — a tracking gap to resolve (see obligation above).
+- On the City of Hollywood BTR, the **client's own email** was used on the application — the owner now forwards the city's correspondence to Julia's inbox as a workaround (see obligation above).
 - **Subleases** its Hollywood, FL location from **Best Broker Realty LLC** (month-to-month, effective 03/2026) and **shares a principal** with it — see [`best-broker-realty.md`](./best-broker-realty.md). _(Double note, 2026-07-15)_
+- **The actual property owner/landlord at 1047 Buchanan St is Best Broker Realty LLC's own landlord, SYNERGY MOOD LLC** — Best Broker Realty is only the **master tenant** there (it holds the primary lease directly with Synergy Mood LLC), not the property owner. Pro Title's sublease runs with Best Broker Realty as sub-landlord, **not** with Synergy Mood LLC directly — this is exactly what the City of Hollywood flagged on App #40698 (see obligation above). _(Confirmed via the city's correspondence, 2026-07-29)_
 - As a FL **title insurance agency** it is licensed by **DFS** (Insurance Code), not DBPR — relevant to how the BTR category is chosen.
 
 ## 6. History & open questions
@@ -86,10 +88,11 @@ the actual details.
 - 2026-07-20 — Profile started from the BTR work (FOLLOW-UPS) and the Double record (Pro Title Agency, QBO).
 - 2026-07-20 — Sweep: enriched entity / industry / engagement and BTR status from the Double notes (2026-07-15). No Ping meetings indexed.
 - 2026-07-23 — Update (Lilian): City of Hollywood LBTR still **not trackable by the firm** — the owner's email (not the firm's) is on the application. Chosen fix: the **owner forwards the city's tracking email** to us; **as of 2026-07-23 he hasn't forwarded it yet**. Once forwarded it'll be in Julia's inbox and we can check status. _(Double note 2026-07-23)_
+- 2026-07-29 — Update (Lilian): the owner (Sergey Karpenkov) **forwarded the city's App #40698 email** to Julia — the tracking workaround is now working in practice. The city's email stated it could not process the application because the sublease on file (Pro Title ↔ Best Broker Realty) is not *"a signed agreement between sublessee and the property owner, SYNERGY MOOD LLC."* Confirmed with the owner that no direct lease with Synergy Mood LLC exists or can exist — Synergy Mood LLC's only direct relationship at this location is with Best Broker Realty as master tenant. Julia replied to the city (2026-07-29) explaining the master-lease + sublease chain and attaching both documents. **Awaiting the city's response** — see obligation above and outstanding items below for the fallback if they push back.
 
 ### Outstanding items (CI-only — never in the SOP)
 _(Double notes — live status lives in Double.)_
-- **Waiting on the owner to forward the city's "Track Your Application" email** — the firm's email wasn't on the application, so status can't be checked until he forwards it (as of 2026-07-23, not yet). Then watch for the city possibly requesting the DFS state license (as it did for Best Broker Realty). _(Double note 2026-07-23)_
+- **Awaiting the City of Hollywood's response to the 2026-07-29 clarification** on App #40698 (master lease + sublease submitted together as proof of Pro Title's right to occupy 1047 Buchanan St). If the city still insists on a document signed directly by Synergy Mood LLC, the next step is to ask the owner to request a **short landlord consent/acknowledgment letter** from Synergy Mood LLC (not a full lease — just an acknowledgment that Pro Title operates there as Best Broker Realty's sub-tenant), which should be easier to obtain than a new lease.
 - **Address change pending:** on 2026-07-14 the client asked to move the address to **Coral Springs** (on the DFS license + Sunbiz). If it proceeds, a **BTR address update/transfer** will be needed later.
 - **IRS filing-requirement mismatch:** the EIN letter (CP575) shows a **Form 1065 (partnership)** requirement, but the entity is a **disregarded single-member LLC** reported on Schedule C — reconcile with the IRS so they don't expect a partnership return.
 

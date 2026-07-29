@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-23
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -78,7 +78,8 @@ the actual details.
 ## 5. Key facts & quirks
 
 - As a real estate brokerage, the City of Hollywood BTR requires a **DBPR real-estate license** (brokerage **CQ**, ideally the qualifying broker's **BK**). The client provided it; the firm sent it to the city on **2026-07-16**.
-- Best Broker is the **master tenant** at its Hollywood, FL business location; **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
+- Best Broker is the **master tenant** at its Hollywood, FL business location (1047 Buchanan St); **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
+- **Best Broker Realty's own landlord — the actual property owner of 1047 Buchanan St — is SYNERGY MOOD LLC.** Best Broker holds the primary/master lease directly with Synergy Mood LLC; its own City of Hollywood BTR (**Application #40663**) was filed and approved on that basis. This distinction (master tenant vs. property owner) surfaced 2026-07-29 when the city asked Pro Title Agency (Best Broker's sub-tenant) for a lease signed directly with Synergy Mood LLC — see [`pro-title-agency.md`](./pro-title-agency.md) §4/§6.
 
 ## 6. History & open questions
 
@@ -88,6 +89,7 @@ the actual details.
 - 2026-07-20 — Update (Lilian): the DBPR license was obtained from the client and emailed to the city. **Confirmed in Gmail** — julia@ → BusinessTax@hollywoodfl.org, **2026-07-16**, "Please see attached the license" (the city's category-correction thread; identifiers in the Double note). Now awaiting the city's payment instructions.
 - 2026-07-23 — Update (Lilian): the city (Treasury) sent the **pay-the-difference instructions** for the corrected Broker/Real Estate category. **Lilian paid the balance** via the city's online payment center and **replied to the city's revenue analyst with the payment confirmation** (they issue the receipt only after being notified). Amount, account number and payment reference recorded in the Double note.
 - 2026-07-23 — Update (Lilian): checked the city's **Check Application Status** page — the **City of Hollywood LBTR is Approved / Active (issued)**. Recorded the **BTR number and identifiers in a new Double note** (2026-07-23). The BTR is done; sensitive values stay in Double, the non-sensitive status is reflected here.
+- 2026-07-29 — Cross-reference (Lilian): while resolving a missing-document request on **Pro Title Agency's** BTR (App #40698, its sub-tenant at the same address), confirmed that Best Broker Realty's own landlord is **Synergy Mood LLC** — Best Broker is the master tenant, not the property owner. Noted here since it clarifies the leasing chain at 1047 Buchanan St for both clients — see [`pro-title-agency.md`](./pro-title-agency.md) §6.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Residual only: if the analyst's emailed PDF copy of the receipt hasn't arrived, save it to the client's Drive folder when it does; then calendar the **Sept 30** annual renewal. _(Double note 2026-07-23)_
