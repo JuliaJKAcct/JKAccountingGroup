@@ -95,7 +95,8 @@ not merely when the client lost money. Keep the class vocabulary (`crit`/`watch`
 
 ## Where the numbers come from
 
-- **Live financials: QuickBooks / Double.** Pull the client's P&L, balance sheet, A/R
+- **Live financials: QuickBooks / Double.** (Load the [`double-mcp`](../double-mcp/) skill before
+  the first Double call.) Pull the client's P&L, balance sheet, A/R
   aging, and expense detail for the period. (Double MCP: `get_profit_loss_report`,
   `get_balance_sheet_report`, `get_ar_aging_report`, `get_expenses_by_vendor_report`,
   `get_transactions`.) QuickBooks MCP has equivalents.

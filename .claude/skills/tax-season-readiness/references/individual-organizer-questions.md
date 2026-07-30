@@ -4,18 +4,26 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 
 > ## Provenance and coverage — read this first
 >
-> Captured **2026-07-30** from one **2023** organizer that a client had **partially completed
-> (~46%)**, supplied by Lilian because the organizer template is **not readable through the
-> Double MCP** ([`double-mcp`](../../double-mcp/) §2).
+> Captured **2026-07-30** from **one client's partially-completed organizer (~46% done)**, supplied
+> by Lilian because the organizer template is **not readable through the Double MCP**
+> ([`double-mcp`](../../double-mcp/) §2).
+>
+> **Which tax year that organizer belongs to is unresolved.** The document is *titled* as a 2023
+> organizer, yet its dependents question asks about a child "born AFTER December 31, 2024" — which
+> cannot be a 2023 question. The likeliest explanation is that Double renders the **current**
+> template text into every organizer instance regardless of year, but that is unconfirmed. Treat the
+> wording below as current-ish and the year as unknown.
 >
 > **Coverage is therefore incomplete.** Only the sections the client actually reached are
 > recorded: **General Information** and **Income** (the latter partially). Everything after that
 > point is **not captured** — see "Known gaps" at the bottom. Sections listed there are absent
 > from this file *because we haven't seen them*, not because the organizer lacks them.
 >
-> **Nothing here is inferred.** Every question below is verbatim from the source document. Do not
-> add questions from general tax knowledge — an invented question would later be read as the
-> firm's own wording. If a section is needed and isn't here, ask Lilian for a fuller organizer.
+> **Question wording is verbatim; anything else is marked.** Every question below is copied from the
+> source document. Where something is an inference or an artefact of *this client's* partly-filled
+> copy, it says so inline. Do not add questions from general tax knowledge — an invented question
+> would later be read as the firm's own wording and asked of a real client. If a section is needed
+> and isn't here, ask Lilian for a fuller organizer.
 >
 > **No client data.** The source was one client's partly-filled organizer; only the question
 > wording was taken. Answers, names, SSNs, dates of birth and phone numbers were deliberately
@@ -29,8 +37,9 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 - **Opens with:** "Welcome to your tax organizer!"
 - **Structure:** slide/page based — the wording refers to "a later slide" and "the following
   page", so questions and their document uploads sit on separate pages.
-- **Per client per year:** one organizer, e.g. the completed PDFs filed as
-  `2025 individual Tax Organizer.pdf` (see the parent skill's §4).
+- **Filed as** `{year} individual Tax Organizer.pdf` in the client's TaxDome folder (parent skill §4).
+  One organizer per year is the *intent*, but Double shows clients with **2 and 3 active organizers**
+  at once, so don't assume a single one — see the parent skill §5.
 - **A distinct answer state exists:** *"Client marked this question as not applicable"* — that is
   not the same as unanswered, and it is not the same as "No".
 
@@ -53,8 +62,10 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 
 ### Spouse
 
-The same block repeats for the spouse — **Occupation**, **Date of birth**, **Primary Phone
-Number**, **Email Address**.
+A spouse block follows, in which these fields were visible: **Occupation**, **Date of birth**,
+**Primary Phone Number**, **Email Address**. ⚠️ **The full spouse field list was not visible** — it
+is probably not identical to the taxpayer block above (no name or SSN field appeared), so treat this
+as partial rather than "the same fields again".
 
 | Question |
 |---|
@@ -71,8 +82,12 @@ Number**, **Email Address**.
 | Are you claiming a child who lived with any other adult relative for more than half of the tax year? |
 | Is any of your dependents a US citizen born AFTER December 31, 2024? |
 
-> ⚠️ That last question's date is **hardcoded to a specific year** in the 2023 organizer we saw.
-> Worth checking it is rolled forward each season rather than left stale.
+> ⚠️ That last question carries a **hardcoded date**, and it is the clue that the source document's
+> year is unresolved (see the provenance note at the top): a child born after 31 Dec 2024 is a
+> **2025** question, in a document titled as a 2023 organizer. So this is *not* evidence of a stale
+> date — more likely the template text is shared across years and was updated for a later season.
+> Two things to confirm once, with Lilian: which year this wording actually belongs to, and that the
+> date is rolled forward each season.
 
 ---
 
@@ -90,8 +105,8 @@ relevant slide."*
 
 | Option | Status |
 |---|---|
-| Self-employment (Profit&Loss And Balance Sheet) | ✅ verified in the source |
-| _(the remaining options in this checkbox list were not visible)_ | ❓ not captured |
+| Self-employment (Profit&Loss And Balance Sheet) | ⚠️ **Visible in the source — most likely because this client selected it.** The wording is the firm's; its presence is not evidence about the rest of the list |
+| _(the remaining options were not visible at all)_ | ❓ **Not captured** — the full option list is a known gap |
 
 ### Foreign income and foreign accounts
 
@@ -112,7 +127,7 @@ relevant slide."*
 |---|---|
 | Does the business have a tax registration number (EIN)? | |
 | Business structure | |
-| Who owns the business? | Verified option value: `Taxpayer` (the other options weren't visible) |
+| Who owns the business? | One option value was visible — `Taxpayer` — but ⚠️ probably because the client picked it. The **full option list is a known gap** |
 | **Profit and Loss template** — "If you own any businesses for which we do not handle the accounting, please download and complete the attached Profit & Loss template for each of those businesses. You will be asked to upload the completed template on the following page:" | → **P&L template** (link below) |
 | Did you use your car for the business during the tax year? | |
 
@@ -120,7 +135,10 @@ relevant slide."*
 
 ## Templates the organizer sends clients to
 
-Both are Google Sheets the client downloads, fills, and uploads back.
+Both are Google Sheets the client downloads, fills, and uploads back. The links are the ones the
+organizer itself hands to clients, so they should be the **firm's blank templates** — worth
+confirming once that their sharing scope is deliberate (clients must be able to open them) and that
+neither has been overwritten with a filled copy.
 
 | Template | Used for | Link |
 |---|---|---|
