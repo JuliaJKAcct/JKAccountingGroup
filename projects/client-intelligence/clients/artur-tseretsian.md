@@ -85,6 +85,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   short list of **personal** counterparties (the specific list is kept in the working
   file, not here). **Deposits** (cash / ATM / branch / check / ACH / wire) are **set
   aside for client review** — not auto-counted as income.
+- **Crypto / Zelle reporting position (Julia to review with the client).** In reality
+  most Zelle in/out are **crypto ⇄ USD exchanges — not income**. The client does **not
+  want to disclose crypto**, so he reports Zelles **received as business income** and
+  Zelles **sent as personal expense**. Recorded so Julia can discuss the position.
 - **Payments.** Zelle **sent = personal** by default; Zelle sent to **auto/transport
   companies = deductible business** (moving the cars he resells).
 - **Merchant rules.** Amazon, PlayStation, restaurants/meals, taxi/Uber/Lyft,
