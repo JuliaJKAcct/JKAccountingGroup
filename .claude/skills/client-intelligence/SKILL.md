@@ -76,7 +76,11 @@ format and full rules.
    companies of the same owner) — this is how an owner-group is recorded.
 5. **Update the indexes in the same commit** (consistency guardian):
    - the **Clients index** table + the "N so far" count in the project README,
-   - the **scope table + CLIENTS list** in `weekend-ci-sweep.md`,
+   - the **scope table + CLIENTS list** in `weekend-ci-sweep.md` — **unless the client
+     is archived in Double / `Status: Former`**, in which case it goes in that file's
+     **"Excluded — archived clients"** table instead (an archived client generates no new
+     activity, so sweeping it every Saturday is wasted budget; it keeps its CI file
+     because open matters and lessons outlive the engagement),
    - a **row in `sweep-state.md`** (new client → gets a full historical sweep once).
 
 ## Enriching — the research sweep
@@ -130,7 +134,10 @@ check, per client: every section present and in order; `_(pending)_` on unknown 
 the Double + Drive links present in §7; owner-group cross-links **bidirectional**
 (A links B ⇒ B links A); and the client present + consistent across the README index,
 `weekend-ci-sweep.md` (scope table **and** CLIENTS list), and `sweep-state.md` — slugs
-and Double ids matching. Report gaps per client; fix index drift or flag it to Julia.
+and Double ids matching. **Archived / `Status: Former` clients are the deliberate
+exception:** they belong in `weekend-ci-sweep.md`'s **"Excluded — archived clients"**
+table and **not** in the scope table or the CLIENTS list. Their absence there is intent,
+not drift — do not "fix" it by re-adding them to scope. Report gaps per client; fix index drift or flag it to Julia.
 
 ## The review dashboard (render engine)
 

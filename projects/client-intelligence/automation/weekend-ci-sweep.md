@@ -117,6 +117,14 @@ was said). Better a sourced, low-confidence note than nothing.
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
 
+**Excluded from the sweep — archived clients.** A client archived in Double gets no
+new activity, so sweeping it every Saturday wastes budget. These have a CI file and a
+README row but are deliberately **not** in the scope table above:
+
+| Client | Double id | Why it still has a file |
+|---|---|---|
+| Tsminibears LLC | 706709 | Archived 2026-06-08, but an **open Florida reemployment-tax penalty matter** and a firm-wide Gusto lesson are recorded in it |
+
 ## Schedule
 
 - **Saturday 06:00 America/New_York.** In cron (UTC): **`0 10 * * 6`** during EDT
