@@ -26,6 +26,7 @@ The one-liners below are just the "when to reach for it."
 | [`reasonable-compensation`](./reasonable-compensation/) | Determining/justifying an **S-corp owner's reasonable salary** and producing the branded, print-ready report. |
 | [`expenses-report-tie-out`](./expenses-report-tie-out/) | Turning a QuickBooks **Transaction Detail into an Expenses report that ties to the P&L** (or diagnosing why two reports don't agree). |
 | [`recurring-expense-monitoring`](./recurring-expense-monitoring/) | The mid-month / month-end check that a client's **recurring monthly payments** actually posted — flagging missing, abnormal, or newly-appeared charges. |
+| [`tax-season-readiness`](./tax-season-readiness/) | Working out **which clients we can prepare a return for and which are still pending** — reading Double's Tax Return Status / Organizer Status, the legacy TaxDome "Completed Tax organizers" folders, and linking a company to its owner's 1040. *(Read-only: those columns are hand-maintained by Lilian. The client list is delivered, never committed.)* |
 
 ## Proposals & client documents
 
