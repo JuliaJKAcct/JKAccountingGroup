@@ -54,6 +54,7 @@ list grows.
 | LUMETRO LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 | Ecom Beavers LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 | Artur Tseretsian | 2026-07-30 | Ping + Gmail history not yet swept (file seeded from Double + the 2023–2025 tax-prep engagement) |
+| Ihor Naum & Olha Levchuk | 2026-07-30 | Ping + Drive not yet swept (file seeded from Double + a targeted Gmail search around the Form 8802 filing; full Gmail history still owed) |
 
 _Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
 for all five;
