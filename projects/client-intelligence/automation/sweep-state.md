@@ -53,6 +53,7 @@ list grows.
 | MAGNUM 152, INC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 | LUMETRO LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
 | Ecom Beavers LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Artur Tseretsian | 2026-07-30 | Ping + Gmail history not yet swept (file seeded from Double + the 2023–2025 tax-prep engagement) |
 
 _Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
 for all five;
