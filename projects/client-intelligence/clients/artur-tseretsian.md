@@ -21,9 +21,10 @@
 - **Business name:** Artur Tseretsian (individual — no registered business entity is engaged with us)
 - **Entity type:** Individual / sole proprietor (Schedule C activities reported on Form 1040)
 - **Home state:** Florida (South Florida)
-- **Industry / what they do:** Two income activities — (1) **used-car reselling & auto transport** (he is linked to a car-sales business he works with, not a company of his own); (2) **online gaming** — buying and selling CS:GO / CS2 skins on the **CS Float** marketplace.
+- **Industry / what they do:** Two income activities — (1) **used-car reselling & auto transport** — income comes through **Operex LLC** (buying/selling cars); he is linked to a car-sales business he works with, not a company of his own; (2) **online gaming** — buying and selling CS:GO / CS2 skins on the **CS Float** marketplace (**2025 only**).
+- **Household / filing status:** Married — assume **Married Filing Jointly** (confirm). Spouse is a **homemaker**: **no income in 2023–2024; received a W-2 in 2025**. **Two dependent children** — the younger was **born during 2024** (first claimed in 2024); the older is school-age. One child's SSN is **pending** (card lost, client resolving at the SSA). Names, dates of birth, and SSNs are in **Double**, not here.
 - **Primary language:** _(pending — likely RU/UA)_
-- **Our engagement (services we provide):** Individual income-tax preparation — **Form 1040 with Schedule C** — for tax years **2023, 2024, 2025**.
+- **Our engagement (services we provide):** Individual income-tax **clean-up + preparation** — **Form 1040 with Schedule C** — for tax years **2023, 2024, 2025**. New client; we reconstruct from the client's bank statements.
 - **Fiscal year-end:** December 31
 - **Accounting platform:** None (no QuickBooks; personal bank accounts only)
 
@@ -65,9 +66,9 @@ link). Never write the credential itself here.
 
 ### Income tax
 - **Applies?** Yes.
-- **Return type(s) & deadlines:** Form **1040** (individual) with **Schedule C** for the business activities; tax years **2023, 2024, 2025**.
-- **Our role:** We prepare the return.
-- **Organizer status:** Sent (Double).
+- **Return type(s) & deadlines:** Form **1040** (individual, **MFJ** assumed) with **Schedule C** for the business activities; tax years **2023, 2024, 2025**.
+- **Our role:** We prepare the return (clean-up from bank statements).
+- **Organizer status:** Sent (Double). Client completed **~30% of the 2023** organizer (General Info only); 2024/2025 not started. The firm prepared **working-copy organizers for 2023, 2024, 2025** (delivered to the team; sensitive IDs kept in Double).
 - **Process notes (→ future SOP):** the core of this engagement is the **categorization method** in §5 — separating business from personal on personal bank accounts to build Schedule C.
 
 ### Licenses & other filings
@@ -84,6 +85,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   short list of **personal** counterparties (the specific list is kept in the working
   file, not here). **Deposits** (cash / ATM / branch / check / ACH / wire) are **set
   aside for client review** — not auto-counted as income.
+- **Crypto / Zelle reporting position (Julia to review with the client).** In reality
+  most Zelle in/out are **crypto ⇄ USD exchanges — not income**. The client does **not
+  want to disclose crypto**, so he reports Zelles **received as business income** and
+  Zelles **sent as personal expense**. Recorded so Julia can discuss the position.
 - **Payments.** Zelle **sent = personal** by default; Zelle sent to **auto/transport
   companies = deductible business** (moving the cars he resells).
 - **Merchant rules.** Amazon, PlayStation, restaurants/meals, taxi/Uber/Lyft,
@@ -95,8 +100,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   stated he had **very few business expenses**, so anything not identified is personal.
 - **Auto financing** (Lendbuzz, Westlake) = vehicle loans: **principal not deductible,
   interest is** (needs the amortization schedule to split).
-- **Home office** = to be computed from a worksheet (pending); home rent/utilities are
-  captured as home-office inputs, not 100% business.
+- **Home office** = client gave a **2023 rent estimate** for a home office (figure kept in
+  the working file / organizer, not here); 2024/2025 TBD. Julia to set the method
+  (Form 8829 %); not 100% business.
+- **Vehicle** = the client **bought and later sold a car** during the period —
+  purchase & sale documents pending (relevant to Schedule C / any gain on sale).
 - **Health insurance** = personal; client to provide **Form 1095-A** per year.
 - **Pass-through** = money received and, the same day, routed to an auto vendor (e.g.
   Autotrader) on a third party's behalf → **neither income nor expense** (one confirmed
@@ -120,14 +128,23 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   English Excel** (detail per card per year + per-year summaries + CS Float 2025
   reconciliation + Operex tab + deposits-to-review tab). All client figures kept out of
   the repo.
+- _(2026-07-30, Lilian)_ — Client-review facts added (married/MFJ; spouse homemaker, W-2
+  in 2025 only; two dependent children, the younger born during 2024; car bought & sold in
+  the period; a 2023 home-office rent estimate; crypto/Zelle reporting position). Prepared
+  **working-copy 1040 organizers for 2023/2024/2025** for Julia and two **Double notes**
+  (tax-prep status + categorization rules). Sensitive IDs kept in Double.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
+- **Spouse's driver's license** — not on file; Lilian to request from the client.
+- **The older child's SSN** — card lost; client resolving at the SSA and will send the number.
+- **Year-end 2024 & 2025 addresses** — client had a different address each year.
 - January 2026 statements (both accounts) to complete Dec 2025.
 - CS Float: the **purchases/expense** report, plus 2023/2024 platform reports if there was activity.
-- Home-office worksheet.
+- Home-office worksheet (2024/2025 figures).
 - Lendbuzz & Westlake **amortization schedules** (interest vs principal).
 - Form **1095-A** per year (health insurance).
+- Car **purchase & sale documents**.
 - External-card statements (Capital One, Amex, Merrick, Credit One, FPB) if that spending should be captured.
 - Client to review: **Deposits** (cash/ATM/ACH/wire), **Travel**, and the auto/transport **"Business – review"** Zelles.
 
@@ -135,7 +152,8 @@ Live list lives in Double; mirrored here for context:
 - [ ] Primary language / preferred communication.
 - [ ] Which other accounts the CS Float payouts land in.
 - [ ] The car-sales business relationship (his exact role; whether any 1099s are owed on payments he made).
-- [ ] Assigned staff / relationship owner in Double.
+- [x] Second (younger) child confirmed a dependent from **2024** (born during 2024); 2023 has one dependent.
+- [ ] Assigned staff / relationship owner in Double (Owner in this file = Lilian).
 
 ## 7. Links
 
