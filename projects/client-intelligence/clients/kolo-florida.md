@@ -89,4 +89,7 @@ the actual details.
 
 - **Double client:** [app.doublehq.com/close?cid=706626](https://app.doublehq.com/close?cid=706626)
 - **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Related clients:** [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) (one of
+  the individuals holds a Florida workers'-comp Certificate of Election to be Exempt for
+  this company), [`aura-remodeling.md`](./aura-remodeling.md) — same owner group.
 - **Related SOPs:** _(pending — none yet)_

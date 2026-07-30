@@ -112,6 +112,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | LUMETRO LLC | 706691 |
 | Ecom Beavers LLC | 706686 |
 | Artur Tseretsian | 752202 |
+| Ihor Naum & Olha Levchuk | 710637 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -168,6 +169,7 @@ CLIENTS (name -> Double id):
 - LUMETRO LLC -> 706691
 - Ecom Beavers LLC -> 706686
 - Artur Tseretsian -> 752202
+- Ihor Naum & Olha Levchuk -> 710637
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:

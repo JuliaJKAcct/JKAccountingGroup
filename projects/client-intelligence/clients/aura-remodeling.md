@@ -99,4 +99,7 @@ the actual details.
 
 - **Double client:** [app.doublehq.com/close?cid=706679](https://app.doublehq.com/close?cid=706679)
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1cuXd0k1804IckB9VMG1PHWt1Hkn1j9Wt)
+- **Related clients:** [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) (the
+  two principals' individual 1040 file), [`kolo-florida.md`](./kolo-florida.md) — same
+  owner group.
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
