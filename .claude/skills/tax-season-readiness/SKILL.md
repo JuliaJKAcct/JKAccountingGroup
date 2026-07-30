@@ -1,6 +1,6 @@
 ---
 name: tax-season-readiness
-description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, reading the firm's tracking data out of Double. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are still waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome "Completed Tax organizers" folder, or when linking a company to its owner's individual (1040) account. Encodes the two organizer generations (legacy TaxDome vs current Double), Lilian's exact hand-maintained procedure for the Organizer Status column, the readiness rule per status value, the Double property-column IDs, how to get the organizer-progress percentages the MCP cannot read (ask for the view's CSV export), the firm's individual-organizer question bank, and the standing skip-list. Read-only by default — never write these columns.
+description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, from the firm's Double data. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome organizer folders, or when linking a company to its owner's individual (1040) account. Encodes who is actually owed an organizer (bookkeeping and Schedule C clients are not) and what really gates each return — a company return runs off its books and feeds the owner's 1040 via K-1, not the reverse. Also the TaxDome-vs-Double organizer split, Lilian's hand-maintained Organizer Status procedure, how to get the progress percentages the MCP can't read, and the firm's 1040 question bank. Read-only.
 ---
 
 # Tax-season readiness — who can we file, and who are we waiting on
@@ -36,9 +36,9 @@ had *already completed* in TaxDome. Those clients were deliberately **not** aske
 new one. Their evidence is a PDF sitting in the client's Double file library, and their state
 is recorded in the **`Organizer Status`** column.
 
-**Current — Double organizers.** Only two kinds of client were sent a fresh organizer from
-Double: those who had **not** completed one in TaxDome, and those who **joined after** the
-migration. Their state is `Organizer Status = Sent`, and how far the client has actually
+**Current — Double organizers.** Among clients who are **owed** one at all (§1b — bookkeeping and
+Sch C clients are not), a fresh Double organizer went to those who had **not** completed one in
+TaxDome, and those who **joined after** the migration. Their state is `Organizer Status = Sent`, and how far the client has actually
 gotten is the separate progress-percentage column (a % — see §5; not readable through the MCP,
 but obtainable from the CSV export).
 
@@ -58,11 +58,103 @@ are not duplicates of each other.
 
 ---
 
+## 1b. Who gets an organizer, and what actually gates each return
+
+**An organizer exists to collect a P&L and supporting facts from a client whose books we do
+NOT keep.** (Lilian, Jul 2026.)
+
+| Client | Company organizer? | Why |
+|---|---|---|
+| **We do their bookkeeping** (`Bookkeeping ` = `Monthly` or `Quarterly`, and/or QuickBooks connected) | **No** | We already hold everything it would ask for |
+| **Schedule C** | **No** | There is no separate company return at all |
+| Neither | **Yes** | We need their P&L from them |
+
+> The two bookkeeping signals disagree for a handful of clients (§3) and that question is still
+> open. Until it's settled, a client matching **only one** signal goes to **review** — do not put
+> them in the "no organizer owed" bucket, because wrongly assuming we keep someone's books means
+> their real organizer gets dismissed and their P&L never collected.
+
+### What gates which return — the direction matters
+
+This is the part it is easy to get backwards. **A company return is not gated on its owner's
+organizer; the dependency runs the other way.**
+
+| Entity | Its own return? | Gated on | Feeds the owner's 1040? |
+|---|---|---|---|
+| **Schedule C** | **No** — none exists | The owner's 1040 (there is nothing else) | It *is* the owner's 1040 |
+| **1120-S** · **1065** | Yes, from the books | The **books being closed** for the tax year, plus any items being chased | Yes — via **K-1**, so the company return must be done **first** |
+| **1120** (C-corp) | Yes, from the books | The books being closed | **No** — a C-corp issues no K-1; it is independent of the owner entirely |
+
+So for a bookkeeping client the sequence is: **close the books → file the entity return → K-1 →
+the owner's 1040** (which needs the K-1 *and* the owner's personal organizer).
+
+Two consequences for any report:
+
+- **Chasing owner organizers is necessary but not sufficient.** For a 1120-S or 1065 client the
+  entity return still has to be prepared first, or the K-1 the 1040 needs won't exist. Present the
+  two as **parallel tracks**, not as one queue.
+- **A bookkeeping company's readiness is a books question, not an organizer question.** Say so
+  plainly, and see the limitation below before claiming to know the answer.
+
+### ⚠️ We cannot see whether the 2025 books are closed
+
+Double's monthly closes only begin **April 2026** (the firm migrated to Double around May 2026),
+so `list_end_closes` has **nothing for the 2025 tax year**. A session therefore **cannot** confirm
+from Double that a bookkeeping company's 2025 books are ready. Report the company side as
+*"not organizer-gated — readiness is whether the 2025 books are closed, which Double can't tell
+us"* and ask, rather than implying it's ready.
+
+### Schedule C means there is no company return
+
+Consequences a session must not misread:
+
+- **No tax project for the year is the CORRECT state**, not a gap. Such a company is absent from
+  the tax view entirely (§6) — expected, and never to be reported as a problem. *(Gotten wrong
+  once: three Sch C companies were flagged as "missing projects needing a decision".)*
+- **`N/A (SCH-C)` is carried on the COMPANY row.** All eight instances observed Jul 2026 sit on
+  `Account Type = Company` (`N/A (Nonresident)`, by contrast, sat on an Individual). Treat that as
+  the convention, not a guarantee — if you ever find it on an individual row it cannot mean
+  "look at the owner", so send it to review.
+
+### How to identify a Schedule C client — and what is NOT proof
+
+| Signal | Verdict |
+|---|---|
+| `Tax Return Type` = `Sch C` or `1040-SCH C` | ✅ **Sufficient** |
+| `Organizer Status` = `N/A (SCH-C)` | ✅ **Sufficient** |
+| `Income Tax` unchecked, on its own | ❌ **NOT sufficient — send to review** |
+
+**`Income Tax = false` does not mean Schedule C.** Read plainly it means *we don't do this
+client's income tax at all*, and §3 documents exactly that population (bookkeeping-only
+engagements with no `Tax Return Type` and `Income Tax = false`). The same fingerprint therefore
+covers two opposite situations, and guessing is dangerous in one direction: classifying a
+bookkeeping-only client as Sch C makes a session **silently drop a client that needs a return**,
+with no flag raised.
+
+There is a live example of why only a human can settle it: **Aura Remodeling** has
+`Income Tax = false` and no `Tax Return Type`, and is Schedule C — but that is known **only
+because Lilian said so**, not from anything in Double. When the two sufficient signals are absent,
+ask.
+
+### Expect stray company organizers in the data
+
+Organizers have gone out to bookkeeping companies that per the rule above shouldn't get one —
+**9 of the 19 QuickBooks-connected bookkeeping companies** in the Jul 2026 CSV export, mostly at
+0%, one still open on an already-**filed** return. That last one is good evidence they gate
+nothing.
+
+That said, ~47% is a high enough rate that the rule may simply be incomplete (perhaps organizers
+also collect non-P&L facts from some bookkeeping clients). **Confirm with Lilian before treating
+an open organizer on a bookkeeping company as ignorable**, and never let one push a company into
+a "waiting on the client" bucket without that confirmation.
+
+---
+
 ## 2. Where each fact lives in Double
 
 | Fact | Where it lives | How to read it |
 |---|---|---|
-| **Is this a bookkeeping client?** | Two independent signals — see §3 | `list_clients` → `platform` field; **and** the `Bookkeeping ` property |
+| **Is this a bookkeeping client?** | Two independent signals — see §3; it also decides whether an organizer is owed (§1b) | `list_clients` → `platform` field; **and** the `Bookkeeping ` property |
 | **Company or individual?** | Property `Account Type` | `list_client_properties` |
 | **Tax Return Status** | **NOT a property.** It is the *tax project's* status | `list_projects(clientId)` → `status`, `filedAt`, `year`, `dueDate` |
 | **Organizer Status** | Property, column `226743` | `list_client_properties` |
@@ -143,6 +235,10 @@ This is the exact process the column encodes. Know it, because it tells you what
    the year being prepared → mark **`Not Started`**.
 7. If the firm then sends that client a **Double** organizer → mark **`Sent`**.
 
+> **Scope first.** This procedure only applies to a client who is **owed** an organizer (§1b). On a
+> bookkeeping company or a Sch C client, a blank or `Not Started` here is the **expected** end
+> state — leave it alone rather than sweeping their folders.
+
 **The consequence for a session:** a `Not Started` on this column means *Lilian checked and
 found nothing* — it is settled. A **blank** means *she hasn't looked yet* — and that is
 exactly the gap a session can close, by doing steps 1–3 itself via `list_file_library` +
@@ -167,23 +263,23 @@ we need.
 | `Sent`, below 100% | ⏳ **Waiting on the client** — report the % |
 | `Sent`, **no %** and no active organizer | ❓ **Contradictory** — an organizer was probably withdrawn or never actually issued. Flag it, don't classify it |
 | `In progress` | ⏳ Waiting on the client |
-| `N/A (SCH-C)` | 🟡 **Organizer not applicable** — the business income flows to the owner's 1040 via Schedule C, so there is no organizer to wait for. This is **not** the same as being ready: readiness has to be established another way (is the bookkeeping current? is the owner's own 1040 information in hand?) |
+| `N/A (SCH-C)` | 🟡 **No company return exists.** On a *company* row (the observed convention) resolve to the **owner's 1040 status**. On an *individual* row it cannot mean that — send to review (§1b) |
 | `N/A (Nonresident)` | 🟡 **Organizer not applicable** — readiness still has to be established another way; ask Lilian what a non-resident return needs |
 | `Not Started` | 🔴 **Pending** — we don't have an organizer |
 | *(blank)* | ❓ **Unverified** — check the TaxDome folder per §4, then hand to Lilian |
 
-**"Not applicable" is not "ready."** The two `N/A` values tell you an organizer will never arrive;
-they say nothing about whether we hold the client's information. Reporting them as ✅ ready means
-reporting readiness on the basis of a *missing* input. Keep them in their own amber bucket and name
-what would actually establish readiness.
+> **Scope: this table reads an organizer, so it applies to whoever is actually owed one** — every
+> individual, and companies that are neither bookkeeping clients nor Sch C (§1b). For a
+> **bookkeeping company** none of these rows apply: no organizer is owed, so `Not Started` and a
+> blank are the **expected** states, not gaps, and a `Sent` is stray data. Its readiness is a
+> books question — see "What gates which return" in §1b.
 
-Two things this table needs that the data doesn't give you:
+**"Not applicable" is not "ready."** An `N/A` tells you no organizer will arrive; it says nothing
+about whether we hold the client's information. Never report it as ✅ ready — resolve it to the
+thing that actually determines the answer:
 
-- **Which record carries the `N/A (SCH-C)`** — the company row, the owner's individual row, or both.
-  A Schedule C company's figures come from its bookkeeping, but the return it lands on is the
-  **owner's 1040**, which has its own organizer and its own state. When a Sch C company looks
-  clear, **check the owner's row before calling the work unblocked** — the company can be fine while
-  the return it feeds is stuck at 0%.
+- **`N/A (SCH-C)` on a company row → go to the owner's 1040.** There is no company return, so the
+  owner's row *is* the status. A Sch C company can look clear while the return it feeds sits at 0%.
 - **A tax-project status of `Waiting on Client`** maps to the ⏳ bucket regardless of the organizer
   column.
 
@@ -232,18 +328,22 @@ the client list. She may not have reached every client. Treat the data according
 - **`Tax Return Status = Not Started` is ambiguous.** It can mean *genuinely not started*, or
   *Lilian hasn't opened this client in the tax software yet*. A session cannot distinguish
   these. Put them in a separate **"needs your review"** list rather than calling them pending.
-- **A blank is not a "no."** Blank means unreviewed. Resolve blanks on `Organizer Status`
-  yourself via §4; hand blanks on the return status back to Lilian.
+- **A blank is not a "no"** — *for a client who is owed an organizer*. There, blank means
+  unreviewed: resolve it yourself via §4 and hand blanks on the return status back to Lilian. On a
+  bookkeeping company or a Sch C client a blank is correct and needs nothing (§1b).
 - **Cross-check `status` against `filedAt`.** Two real contradiction shapes to flag:
   `status: notStarted` **with** a `filedAt` date (probably filed, column stale), and
   `status: filed` **with** `filedAt: null` (filed date never recorded).
 - **Missing tax projects — and the clients they make invisible.** Some clients have **no project
-  for the year at all** (common for clients onboarded mid-year), or only a *later* year's project.
-  That is not "not started" — it's a missing project, and it must be flagged as such.
+  for the year at all**, or only a *later* year's project. **First check whether they are Schedule C
+  (§1b): if so, having no project is CORRECT and must not be reported as a gap.** Otherwise it is a
+  genuinely missing project (common for clients onboarded mid-year) and should be flagged.
   **Critically, a client with no tax project does not appear in a tax view or its CSV export at
   all** (Jul 2026: an export held 139 of 142 live clients). So a report built only from the export
   will silently omit them. **Always reconcile the export against `list_clients` and name whoever
-  fell out** — an invisible client is the easiest one to forget entirely.
+  fell out** — an invisible client is the easiest one to forget entirely. Naming them is not the
+  same as flagging a problem: list a Sch C client as *expected — no company return*, and only a
+  non-Sch-C client with no project as a genuine gap.
 - **`Income Tax = false` / no `Tax Return Type`** with a tax project present → ambiguous
   engagement scope. Ask whether we file for them.
 - **`wontFileWithUs` is per-year, and it is sometimes just wrong.** Engagement starts and stops
@@ -333,14 +433,25 @@ Julia's priority order (Jul 2026):
 2. **The owners of those companies** — their individual returns, same split.
 3. **Tax-only clients** (no bookkeeping) — only after 1 and 2 are done.
 
+**Show two tracks, not one queue.** Per §1b a bookkeeping company's return runs off its books and
+produces the K-1 that the owner's 1040 needs — so the entity work comes *first* and the organizer
+chase runs alongside it. Give the companies their section (Julia asked for it) and make the
+owners' organizer states the other actionable list, but do not present either as gating the other
+in the wrong direction.
+
 Within each group, produce these buckets, not two:
 
 - ✅ **Already filed** — no action
 - 🟢 **Ready to prepare** — return open **and** the information demonstrably in hand
-- 🟡 **Organizer not applicable** — the `N/A` values. Readiness is *undetermined*, not
-  established; say what would settle it (§5)
+- 🟡 **Organizer not applicable** — `N/A (Nonresident)`, and any `N/A (SCH-C)` that couldn't be
+  resolved through an owner. Readiness is *undetermined*, not established; say what would settle it.
+  A resolvable `N/A (SCH-C)` doesn't stop here — it resolves to the owner's bucket (§5)
+- 📗 **Books, not organizers** — bookkeeping companies with their own return (1120-S / 1065 / 1120).
+  Not organizer-gated; readiness is whether the tax year's books are closed, which Double can't
+  show for 2025 (§1b). Never present these as a client-blocked queue
 - ⏳ **Waiting on the client** — organizer sent or in progress (report the %), a tax project at
-  `Waiting on Client`, or no organizer on file
+  `Waiting on Client`, or — **for a client who is actually owed an organizer (§1b)** — none on file.
+  A bookkeeping company with no organizer does **not** belong here
 - ❓ **Needs Lilian's review** — ambiguous `Not Started`, blanks, contradictions, missing
   projects
 
