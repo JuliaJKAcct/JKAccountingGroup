@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -88,6 +88,7 @@ the actual details.
 - **Ownership (corrected by Lilian, 2026-07-20):** the owner is a **different individual** from Never Give Up KK's owner — Never Give Up's owner was a **former employee** of Deep Tech Development Group, not an owner.
 - **Client password vault (one Google Doc).** Practically all of this client's logins are kept in a single Google Doc (linked in §7) — including the Penn Credit account/ID number + ZIP used to log in and pay the FDOT toll debts. It's the fast path when a task needs a credential; sensitive values stay there, never in this file.
 - **FDOT tolls are a live, recurring collections item (Penn Credit).** See §4. Paying off one balance has **not** stopped new toll amounts from reappearing at Penn Credit, so treat every new letter as a fresh pay-down rather than assuming the debt is closed.
+- **Cancelling two storage units at Safe Guard Self Storage** — requested 2026-07-30, awaiting email confirmation (see §6). Once confirmed, the recurring charge(s) should stop — don't flag the eventual absence of this charge as a missed/abnormal recurring payment.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -97,8 +98,10 @@ the actual details.
 - 2026-07-20 — **Gmail enrichment sweep:** established the Shopify e-commerce ("Go Robots") profile, FL (Broward), RU language, and an apparent "sister-entity (GROUP LLC)" ambiguity **(later corrected 2026-07-22 — it is one company, see below)**. Ping had **no indexed meetings**; facts from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
 - 2026-07-22 — **Client-provided (Lilian):** recorded the **FDOT tolls → Penn Credit collection** process — the portal ([account.penncredit.com/myaccount](https://account.penncredit.com/myaccount)), the ID-number+ZIP login method, and the client password-vault Google Doc. Captured the recurring pattern (a new balance appeared after the last payment cleared).
 - 2026-07-22 — **Correction (Lilian):** this client is **one company — "Deep Tech Development Group LLC"**, not two. Removed the earlier "sister GROUP LLC" two-entity split; re-attributed the Gusto payroll, Shopify store, and vehicle/tolls to the single company; corrected the display name across the CI indexes and the Hub.
+- 2026-07-30 — Update (Lilian): requested cancellation of the **two storage units** the client holds with **Safe Guard Self Storage**. **Awaiting confirmation by email.**
 
 ### Outstanding items (CI-only — never in the SOP)
+- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30).
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
 - **Reconcile the payroll flag:** Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
