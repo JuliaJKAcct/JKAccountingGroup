@@ -1,6 +1,6 @@
 ---
 name: tax-season-readiness
-description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, reading the firm's tracking data out of Double. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are still waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome "Completed Tax organizers" folder, or when linking a company to its owner's individual (1040) account. Encodes the two organizer generations (legacy TaxDome vs current Double), Lilian's exact hand-maintained procedure for the Organizer Status column, the readiness rule per status value, the Double property-column IDs, what the Double MCP can and cannot read (Organizer Progress is NOT exposed), and the standing skip-list. Read-only by default — never write these columns.
+description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, reading the firm's tracking data out of Double. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are still waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome "Completed Tax organizers" folder, or when linking a company to its owner's individual (1040) account. Encodes the two organizer generations (legacy TaxDome vs current Double), Lilian's exact hand-maintained procedure for the Organizer Status column, the readiness rule per status value, the Double property-column IDs, how to get the organizer-progress percentages the MCP cannot read (ask for the view's CSV export), the firm's individual-organizer question bank, and the standing skip-list. Read-only by default — never write these columns.
 ---
 
 # Tax-season readiness — who can we file, and who are we waiting on
@@ -155,21 +155,33 @@ we need.
 | `Completed` | ✅ **Ready** — client answered everything in TaxDome, we have what we need |
 | `N/A (SCH-C)` | ✅ **Ready** — no organizer applies; the business income flows to the owner's 1040 via Schedule C, so readiness comes from the **bookkeeping**, not an organizer |
 | `N/A (Nonresident)` | ✅ Organizer doesn't apply |
-| `Sent` | ⏳ **Waiting on the client** — unless `Organizer Progress` = 100% |
+| `Sent` | ⏳ **Waiting on the client** — unless `Organizer Max Progress` = 100%, then ✅ ready |
 | `In progress` | ⏳ Waiting on the client |
 | `Not Started` | 🔴 **Pending** — we don't have an organizer |
 | *(blank)* | ❓ **Unverified** — check the TaxDome folder per §4, then hand to Lilian |
 
-### The hard limitation: Organizer Progress
+Report the **percentage alongside** every `Sent` row. "Waiting on the client" spans a client who
+hasn't opened the organizer (0%) and one who is nearly done (71%), and those need different
+chasing. In Jul 2026 the overwhelming majority of `Sent` organizers sat at **0%** — when that's the
+pattern, say so: it means the bottleneck is clients not starting, not clients getting stuck.
 
-**`Organizer Progress` is not exposed through the Double MCP.** It is a native Double column,
-not a custom property, and no MCP tool returns it (`get_questions` returns client
-questions/requests, *not* organizer completion).
+### Getting Organizer Progress — ask for the CSV export
 
-So for every client at `Organizer Status = Sent`, a session **cannot tell** whether the
-client has finished. Do not guess and do not silently treat `Sent` as pending. State the gap
-plainly and ask for the percentages, or ask Lilian to read that column on screen. Everything
-else in the report can be produced without it.
+`Organizer Progress` is **not exposed through the Double MCP** (no organizer tool exists at all).
+But it is **not out of reach**: Double can export the view to CSV, and that export carries
+`Organizer Max Progress` and `Organizer Active Count`. **Ask for the export rather than reporting
+the data as unavailable** — mechanics in [`double-mcp`](../double-mcp/) §2.1.
+
+Two things the percentages taught us (Jul 2026):
+
+- **`Organizer Max Progress` is a maximum, not a single organizer's progress.** A client can have
+  **several** active organizers (`Organizer Active Count` of 2 and 3 both seen), and the column
+  reports the furthest along. A high % does not prove the *relevant* organizer is the finished one.
+- **`Completed` outranks the percentage — never override it.** Clients appear with
+  `Organizer Status = Completed` *and* a Double organizer sitting at **0%**. That is not a
+  contradiction: `Completed` means the **TaxDome** organizer is on file, so we already hold the
+  information, and whatever Double organizer is also open is redundant. Treat those as **ready**.
+  Reading the 0% as "waiting on the client" would wrongly park a client we can already file.
 
 ---
 
@@ -186,9 +198,13 @@ the client list. She may not have reached every client. Treat the data according
 - **Cross-check `status` against `filedAt`.** Two real contradiction shapes to flag:
   `status: notStarted` **with** a `filedAt` date (probably filed, column stale), and
   `status: filed` **with** `filedAt: null` (filed date never recorded).
-- **Missing tax projects.** Some clients have **no project for the year at all** (common for
-  clients onboarded mid-year), or only a *later* year's project. That is not "not started" —
-  it's a missing project. Flag it as such.
+- **Missing tax projects — and the clients they make invisible.** Some clients have **no project
+  for the year at all** (common for clients onboarded mid-year), or only a *later* year's project.
+  That is not "not started" — it's a missing project, and it must be flagged as such.
+  **Critically, a client with no tax project does not appear in a tax view or its CSV export at
+  all** (Jul 2026: an export held 139 of 142 live clients). So a report built only from the export
+  will silently omit them. **Always reconcile the export against `list_clients` and name whoever
+  fell out** — an invisible client is the easiest one to forget entirely.
 - **`Income Tax = false` / no `Tax Return Type`** with a tax project present → ambiguous
   engagement scope. Ask whether we file for them.
 - **`wontFileWithUs` is per-year, and it is sometimes just wrong.** Engagement starts and stops

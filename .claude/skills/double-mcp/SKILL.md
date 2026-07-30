@@ -69,10 +69,39 @@ Verified Jul 2026. Don't burn calls rediscovering these.
 
 | Not available | What to do instead |
 |---|---|
-| **Tax organizers** — the organizer entity, its questions, and the **`Organizer Progress` %** | No tool exists. `get_questions` returns client *questions/requests*, not organizer answers; `get_task_templates` returns only task templates (the organizer template is not among them). Ask the user to read the column on screen. The firm's organizer question bank is kept in [`tax-season-readiness/references/individual-organizer-questions.md`](../tax-season-readiness/references/individual-organizer-questions.md) precisely because it can't be pulled |
-| **Saved views** (e.g. "Tax Returns – View 2") | Can't be read. Rebuild the view's logic from properties + projects |
+| **Tax organizers** — the organizer entity and its questions | No tool exists. `get_questions` returns client *questions/requests*, not organizer answers; `get_task_templates` returns only task templates (the organizer template is not among them). The firm's organizer question bank is therefore kept in the repo: [`tax-season-readiness/references/individual-organizer-questions.md`](../tax-season-readiness/references/individual-organizer-questions.md) |
+| **Organizer progress %** and other view-only columns | **Not via MCP — but reachable: ask for a CSV export of the view.** See §2.1 |
+| **Saved views** (e.g. "Tax Returns – View 2") | The definition can't be read. Either rebuild the logic from properties + projects, or get the CSV export (§2.1) |
 | **File contents** | `get_file` returns a **download link for the user** — it does not load the file for you. See the privacy rule below |
 | Property columns with **no options defined** (`Service Tier`, `Entity Type`) | They exist but are unused — don't treat an empty value as meaningful |
+
+### 2.1 The CSV-export escape hatch — use it for view-only columns
+
+Double's UI can **export any saved view to CSV**, and that export carries columns the MCP has no
+tool for. When a task needs one of those, **ask the user to export the view rather than declaring
+the data unavailable.** (Established 2026-07-30, when the tax-readiness report was blocked on
+organizer progress.)
+
+Columns confirmed present in a "Tax Returns" view export but **absent from the MCP**:
+
+| CSV column | What it carries |
+|---|---|
+| `Organizer Active Count` | How many organizers are active for that client — can be **more than one** (2 and 3 both seen) |
+| `Organizer Max Progress` | The **highest** completion % across those active organizers — hence "Max". Blank when no Double organizer is active |
+| `Gather information` · `Financial review` · `Prepare tax return` · `File tax return` | Per-stage task progress as `n/3`, mirroring the tax pipeline sections in §4 |
+| `Client Portal` | Formatted `n/m. Q: k` — portal items done/total, plus open questions |
+| `Uploaded Files` · `Vendor Requests` · `Chat` | Counts |
+| `Tax Preparer` | **Distinct from `Assigned Staff`** — the MCP's `preparer` on the project is a third, separate field and the three don't always agree |
+
+Two traps in the export:
+
+- **The view is filtered.** A "Tax Returns" export returned **139 of 142** live clients — clients
+  with **no tax project at all** simply don't appear. Never treat the export as the full roster;
+  reconcile it against `list_clients` and report who fell out.
+- **It's a snapshot.** Statuses drift; note the export date in anything built from it.
+
+`Waiting on Client` is also a real tax-project status seen only in the export — treat the MCP's
+observed set (`notStarted`/`inProgress`/`filed`/`wontFileWithUs`) as incomplete.
 
 ### Privacy rule for documents — important
 
