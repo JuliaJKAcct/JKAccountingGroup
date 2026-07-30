@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -88,6 +88,12 @@ the actual details.
 ## 6. History & open questions
 
 ### Log
+- 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
+  (Lilian). Note the Double tracking says `Tax Return Status = Not Started` with a blank
+  `Organizer Status` — both are stale rather than accurate, so don't read this client as untouched.
+  As a bookkeeping client no company organizer is owed (see the
+  [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill §1b); the return
+  is gated on the specific items being chased, and on the owners' personal organizers.
 - 2026-07-20 — Profile started from the existing Ecoorganic bookkeeping SOP and the Double record (ECOORGANIC USA LLC, QBO). This client already has a full bookkeeping SOP; the profile mainly points to it.
 - 2026-07-20 — Sweep: no Double notes yet; Ping has the client + contacts on file but **no indexed meetings**. Nothing new beyond the bookkeeping SOP.
 - 2026-07-21 — Firm recently took this client over (from the prior bookkeeper); active cleanup in progress. Working session refined the SOP as understanding builds: gas-station threshold moved $30 → **$25** with small charges now → distributions (not meals holding); cash-out withdrawals changed from blanket owner-draws to an **investigate-first** procedure (ATM vs transfer; known contractor vs personal account; 1099 exposure); COGS-vs-opex rule flagged **to verify** (provenance unconfirmed); Double noted as the vendor/1099/W-9 tracking tool; COA renumbering reframed as a later, incremental step (classify first). SOP rules now tagged provisional until validated against the client's history.
