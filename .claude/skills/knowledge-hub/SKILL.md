@@ -274,7 +274,10 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
 
 1. **Edit the source** — `build-hub.mjs` (generator), `hub.css` (Atlas-token components),
    or the SOP `.md`. Never hand-edit `index.html`.
-2. **Build:** `node projects/knowledge-hub/build-hub.mjs`.
+2. **Build:** `node projects/knowledge-hub/build-hub.mjs`. It writes two files — `index.html`
+   (standalone, for local viewing) and `scratch/hub.artifact.html` (the body-only fragment the
+   Artifact tool wants). **Publish the fragment, not `index.html`.** Both paths are gitignored;
+   the build creates `scratch/` itself, so a fresh clone works.
 3. **Battle-test visually** (impeccable): screenshot the changed page(s) light + dark +
    mobile; force-open the reader / accordions for the states you changed.
 4. **VERIFY THE EMITTED SCRIPT BEFORE PUBLISHING — non-negotiable.** The client-side JS is

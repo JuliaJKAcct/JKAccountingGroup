@@ -22,7 +22,7 @@
   "Open" buttons point at the files on GitHub (the repo is the home; the Hub is
   the index). Adjust REPO / BRANCH below if the remote changes.
 */
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 // Reuse the client-intelligence dashboard engine (PR #77) — the SAME parser and the
@@ -2237,6 +2237,8 @@ writeFileSync(outStandalone, html);
 // Artifact fragment (body-only; the Artifact tool supplies <head>/<body>)
 const fragment = `<title>JK Accounting Group — Knowledge Hub</title>\n<style>\n${style}</style>\n\n${BODY.trim()}\n`;
 const outFrag = resolve(here, 'scratch/hub.artifact.html');
+// scratch/ is gitignored, so it is absent in a fresh clone — create it rather than throwing ENOENT
+mkdirSync(dirname(outFrag), { recursive: true });
 writeFileSync(outFrag, fragment);
 
 console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${totalCount} documents`);
