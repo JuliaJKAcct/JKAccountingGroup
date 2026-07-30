@@ -39,10 +39,19 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| Owner / primary contact | Double client (link below) — he is the contact who **also has his own individual (1040) client account** in Double |
+| Owner's staff — portal access only, **not our client** | Double client (link below) — the second portal contact; see the note below |
 | Bookkeeping / day-to-day contact | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=763909](https://app.doublehq.com/close?cid=763909)
+
+> **Two portal contacts, only one is a client.** Atman Parts has a second portal
+> contact who **works for the owner**. He was added so he can reach the documents we
+> send and use the Double portal — he is **not a client of the firm**, so he will
+> **never** have an individual client account, and his missing 1040 is not a gap to
+> chase. The owner is the contact who also appears on an `Account Type = Individual`
+> client. _(Lilian, 2026-07-30.)_ This is the general rule too — see the
+> [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill §7.
 
 ## 3. Systems & access
 
@@ -84,7 +93,10 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- **A portal contact here is not an owner.** One of the two portal contacts on this
+  client is the owner's **employee**, given access purely to receive documents and use
+  the portal. Don't read "contact on the company" as "owner," and don't expect an
+  individual return for him. (Detail in §2.)
 
 ## 6. History & open questions
 
@@ -92,6 +104,12 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 - 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
   (QuickBooks Online). Sales-tax details to come from Lilian.
 - 2026-07-20 — Sweep: no Double notes yet.
+- 2026-07-30 — Clarified the contact roles (Lilian): the second portal contact on this
+  client is the **owner's employee**, added only for document/portal access. He is not a
+  client, so he has no individual account and never will — recorded in §2/§5 so no future
+  session flags it as a missing 1040. Generalized into the
+  [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill (§7:
+  a portal contact is not necessarily an owner).
 - 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
 
 ### Outstanding items (CI-only — never in the SOP)

@@ -65,6 +65,15 @@ approve the server when prompted.
 |---|---|---|
 | `notebooklm` | Ask questions against your [NotebookLM](https://notebooklm.google.com) notebooks, add sources, and generate audio overviews. | [`notebooklm-mcp@2.0.0`](https://github.com/PleasePrompto/notebooklm-mcp) |
 | `Odoo_JK_Accounting_Group` | Read/write the firm's Odoo ERP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports. | **Account connector** — not in `.mcp.json` |
+| `Double` | The firm's practice-management platform — the client roster, our own tracking columns, tax projects, monthly closes, tasks, portal contacts, the document library, and client financials (QuickBooks sits behind it). | **Account connector** — not in `.mcp.json` |
+
+**The Double connector is account-level too, and mostly read-only in practice.** Like Odoo it's
+connected through Claude's connectors rather than `.mcp.json`, so a `.mcp.json` review won't show
+it. There's no published call cap, but a roster-wide sweep is still hundreds of calls. Anyone using
+it should follow the [`double-mcp` skill](./.claude/skills/double-mcp/) — which of the four data
+planes a fact lives in, the TaxDome folder conventions, what the MCP can't reach (tax organizers and
+their progress), and the write rules: **default-deny, and never write the columns Lilian maintains by
+hand.** Two of its tools instruct an unprompted write; the skill says to override them.
 
 **The Odoo connector is account-level, and rationed.** It's connected through Claude's
 connectors (shared across the firm's one account), not declared in `.mcp.json`, so it won't

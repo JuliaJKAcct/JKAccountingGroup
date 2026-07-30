@@ -48,9 +48,11 @@ the US.
 │       ├── automated-email-reports/   reusable playbook for scheduled email automations
 │       ├── email-signature/           drives the email-branding project (signatures + branded email)
 │       ├── expenses-report-tie-out/   clean a QB Transaction Detail into an Expenses report that ties to the P&L
+│       ├── tax-season-readiness/      which clients are ready to have taxes prepared vs still pending — reads Double's Tax Return / Organizer Status + the legacy TaxDome organizer folders (read-only)
 │       ├── sop-authoring/             the house way to write/restructure/review an SOP (structure + review workflow + Atlas render)
 │       ├── bookkeeping-sop/           per-client monthly-bookkeeping runbooks — the .md structure, the firm's categorization framework + color model, how they render in the Hub (Ecoorganic is the pilot)
 │       ├── odoo-mcp/                  operating guide for the Odoo MCP — 50-call/day budget, chatter audit log, write-safety rules
+│       ├── double-mcp/                operating guide for the Double MCP — the four data planes, TaxDome folder conventions, what it can't reach, write safety
 │       ├── client-intelligence/       creates/enriches/audits the per-client files + renders the review dashboard (Atlas); sweep by owner, assign by company
 │       ├── knowledge-hub/             builds/extends the firm Knowledge Hub (the one page indexing all SOPs + clients) — preferences, curation rules, verify-before-publish gate
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
@@ -77,7 +79,9 @@ the US.
 | A client's **bookkeeping KPIs / performance** — a dashboard of how a bookkeeping client's books look (health score, ranked signals & alerts, expense + revenue-vs-net charts, balance-sheet snapshot), or the board that lists all bookkeeping clients | the [`bookkeeping-kpis` skill](./.claude/skills/bookkeeping-kpis/) → [`projects/bookkeeping-kpis/`](./projects/bookkeeping-kpis/) — on-brand, dynamic, self-contained pages built with the [`impeccable`](./.claude/skills/impeccable/) skill + the Design System. Only the sample-data template is committed; a real client's figures ship as an artifact, never in the repo (Ecoorganic is the pilot) |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
+| **Tax season status** — which clients still haven't filed (2025 or any open year), which bookkeeping/QuickBooks clients are **ready** for us to prepare vs **pending**, who we're waiting on for a **tax organizer**, or what Double's `Tax Return Status` / `Organizer Status` / `Organizer Progress` columns and the legacy **TaxDome** organizer folders actually mean (including how to get the progress percentages the MCP can't read) | the [`tax-season-readiness` skill](./.claude/skills/tax-season-readiness/) — encodes the two organizer generations (TaxDome vs Double), Lilian's manual procedure for the Organizer column, the readiness rule per status, and the owner↔company link. **Read-only**: never write those columns; the client list is delivered, never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
+| Reading or writing anything **in Double** through the Double MCP — a client and its properties, a tax project's status, a document in a client's folders, portal contacts, transactions/reports, tasks and notes | the [`double-mcp` skill](./.claude/skills/double-mcp/) — **load it before the first Double MCP call.** Knowing which of the four data planes holds a fact (`Tax Return Status` is the tax *project*, not a property), the TaxDome folder conventions, what the MCP can't reach (organizers + their progress, saved views, file contents), and the write-safety rules — including **never** writing the hand-maintained judgment columns |
 | Reading or writing anything **in Odoo** through the Odoo MCP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports, CRM leads, appointments | the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) — **load it before the first Odoo MCP call.** The free plan allows only **50 tool calls/day**; plan the whole sequence first, batch every multi-record write, and log changes to the record's chatter |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
@@ -159,6 +163,15 @@ in that folder.
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
   QuickBooks), not this repo.
+- **Load the `double-mcp` skill before the first Double MCP call.** Double is the firm's
+  practice-management platform (clients, the firm's tracking columns, tax projects, closes, tasks,
+  the document library) reached through the account-level `Double` MCP connector — it is **not**
+  declared in this repo's `.mcp.json`, so a `.mcp.json` review won't reveal it. Before the first
+  Double call, load the [`double-mcp` skill](./.claude/skills/double-mcp/): it holds which of the
+  four data planes a fact lives in (`Tax Return Status` is the tax *project*, not a property), the
+  TaxDome folder conventions, what the MCP can't reach, and the **write rules — default-deny, and
+  never write the hand-maintained judgment columns.** Two Double tools instruct an unprompted
+  write; the skill says to override them.
 - **The Odoo MCP has a hard 50-call/day budget — load the `odoo-mcp` skill before using it.**
   The firm's Odoo ERP is reachable through the `Odoo_JK_Accounting_Group` MCP connector on a
   **free plan capped at 50 tool calls per 24 hours, shared across the whole firm.** Before the

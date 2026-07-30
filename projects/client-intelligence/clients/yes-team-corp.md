@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,12 +77,29 @@ the actual details.
 - Appears in older email as "Yes Team **LLC**", now "Yes Team **CORP**" — an LLC taxed as S-corp.
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
 - **Family cluster at the firm:** the owner's parents are also clients (a FL LLC for partnership tax prep) and another FL entity was being formed for the family — the firm cross-refers within this family; keep each entity's books separate.
-- The owner is linked to a **second Double client (id 710636)** — a related entity; scope not yet documented.
+- The owner is linked to a **second Double client (id 710636)** — this is **his own individual
+  (1040) client account**, not a related entity. _(Resolved 2026-07-30.)_
+- **Engagement timing — the owner's personal return starts with us in 2026.** He is **not**
+  filing his 2025 individual return through the firm; he **begins filing with us from 2026
+  onward**. This lines up with the entity itself (formed late 2025 / S-election Jan 2026, so
+  2026 is the first real tax year). _(Lilian, 2026-07-30.)_
+  - ⚠️ **Known bad data in Double, do not be misled:** his individual client (710636) carries a
+    **2026** tax project marked **`wontFileWithUs`**. That is a **data-entry error** — he *will*
+    file 2026 with us. Lilian has seen it and considers it minor, so it is deliberately **not**
+    on the follow-up list. Recorded here only so a future session doesn't read that flag and
+    wrongly drop him from a tax-season list.
+  - He has **no 2025 project** on the individual account, which is correct given the above.
+  - A completed **2025** organizer PDF does sit in his TaxDome folder, but since we aren't doing
+    his 2025 return it's moot; a **fresh organizer will be needed for 2026**.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-07-30 — Surfaced while building the tax-readiness list. Resolved the **710636** question
+  (it's the owner's individual 1040 account) and captured the **engagement timing** from Lilian:
+  his personal return is **not** with us for 2025 and **starts with us in 2026**. Also logged the
+  `wontFileWithUs` mislabel on his 2026 project as known-bad data to ignore — see §5.
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll).
 - 2026-07-20 — **Gmail enrichment sweep:** established the marketing-services profile (customers Alirm / Mellanni), RU language, FL (inferred), Gusto AutoPilot payroll + accountable-plan reimbursements, and the Jan-2026 S-election. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
 
@@ -90,7 +107,9 @@ the actual details.
 - Confirm the **registered home state** definitively (strongly inferred FL, not documented).
 - **Retirement plan** — proposals were presented (Feb 2026) by an external TPA; decision / status unknown.
 - **Mellanni invoice format** — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names; verify resolved and the template fixed.
-- Clarify the **second linked entity (Double 710636)** and whether it needs its own CI file.
+- ~~Clarify the **second linked entity (Double 710636)**~~ — **resolved 2026-07-30:** it is the
+  owner's own individual (1040) account, not an entity. Individuals don't get their own CI file;
+  his return details live here in §5.
 
 ### Information still needed
 - [ ] Confirm registered home state; fiscal year-end
