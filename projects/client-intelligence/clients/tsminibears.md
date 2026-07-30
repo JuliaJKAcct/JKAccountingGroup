@@ -19,9 +19,13 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> **Why this file exists even though the client is archived.** It carries an
-> **unresolved Florida reemployment-tax matter** (§4) and a firm-wide lesson about
-> how Gusto handles RT filings (§5). Archiving the client did not close either.
+> **Why this file exists even though the client is archived.** Tsminibears is
+> **no longer a client** — the record was archived because the relationship ended.
+> But the Florida reemployment-tax matter in §4 **arose during the period when it
+> WAS our client, so resolving it is the firm's responsibility** (Lilian,
+> 2026-07-30). Archiving the client closed the engagement, not this matter. The
+> file also carries a firm-wide lesson about how Gusto handles RT filings (§5) that
+> applies to every current client.
 
 ## 1. Snapshot
 
@@ -83,6 +87,7 @@ the actual details.
 - **What Gusto says to do:** call the **Florida Department of Revenue at (850) 488-6800**, explain the company has **paid no Florida wages to date**, and ask the agency to (a) **update the account's effective date** to the first quarter wages will actually be paid, or (b) advise whether the account should be **deactivated** and reactivated later. If the effective date cannot be changed, the agency can help file **$0 returns** for the earlier quarters.
 - **Penalties and interest remain the company's responsibility.** A **penalty waiver** can be requested directly from the agency.
 - **Status as of 2026-07-30:** unresolved. The client has since received **another notice** from the Florida DOR. Lilian is placing the call to the DOR.
+- **Whose problem it is:** the firm's. The penalty periods (Q2/Q3 2025) and the Gusto setup that caused them fall **inside our engagement**, so ending the relationship does not hand this to the client to sort out alone _(Lilian, 2026-07-30)_.
 
 ## 5. Key facts & quirks
 
@@ -107,6 +112,7 @@ the actual details.
 - _(2026-06-09, 14:02 UTC)_ — Gusto Tax Resolution Team: case assigned to a specialist, **"no immediate action needed on your part,"** confirmation email promised once resolved. _(Gmail)_
 - _(2026-06-09, 16:01 UTC)_ — **Jeffrey (Gusto Tax Resolution) — the substantive answer** (attachment "RT notice.jpeg"): Gusto will not file for Q2/Q3 2025 because there is no first check date; the matter must be resolved directly with the Florida DOR at (850) 488-6800. Full content captured in §4. _(Gmail)_
 - _(2026-07-30, Lilian)_ — Reviewed the whole thread. **No contact from Gusto since 2026-06-09** and no confirmation of resolution — verified across inbox, sent and archive. The promised confirmation email never came. Lilian had **not seen Jeffrey's 16:01 message** (it landed in the main inbox, two hours after the "no action needed" one), which is why the DOR call had not been made. **Lilian will now call the Florida DOR.** File created to preserve the record.
+- _(2026-07-30, Lilian)_ — Confirmed the ownership question: Tsminibears is **no longer our client**, which is why Double is archived — but the penalty arose **while it was**, so **the firm is responsible for resolving it**. This is recorded so nobody later closes the matter on the grounds that the client left.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -114,7 +120,7 @@ the actual details.
 - Request a **penalty waiver** from the agency for the assessed penalties.
 - Obtain the **new DOR notice** from the client and confirm which quarters it covers — if it names a quarter after Q3 2025, the RT account is still active and accruing.
 - Decide whether to press Gusto in writing for (a) the status of case #43016275, (b) which quarter Gusto accepts filing responsibility from, and (c) a written statement that it did not file Q2/Q3 2025 — that statement is useful evidence for the DOR penalty-waiver request.
-- Confirm who is servicing this client now, given the Jun 2026 handoff and the Double archive — and make sure the DOR matter goes with the file.
+- **Do not close this out as "not our client."** Confirmed by Lilian 2026-07-30: the relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution.
 
 ### Information still needed
 
@@ -122,7 +128,7 @@ the actual details.
 - [ ] Whether the RT account was registered by the firm or by the client, and on what date — this determines who set the Q2 2025 effective date.
 - [ ] Why an RT account was registered at all when Payroll is N/A and no wages were ever paid.
 - [ ] Where the client's Google Drive folder is (§7).
-- [ ] Whether the client is genuinely a former client or was transferred internally — Double is archived but the DOR matter is still ours to close.
+- [x] Whether the client is genuinely former — **yes**, the relationship has ended; the Double archive reflects that. The DOR matter is still the firm's to resolve because it arose during the engagement _(Lilian, 2026-07-30)_.
 
 ## 7. Links
 
