@@ -191,6 +191,17 @@ the client list. She may not have reached every client. Treat the data according
   it's a missing project. Flag it as such.
 - **`Income Tax = false` / no `Tax Return Type`** with a tax project present → ambiguous
   engagement scope. Ask whether we file for them.
+- **`wontFileWithUs` is per-year, and it is sometimes just wrong.** Engagement starts and stops
+  by tax year: a client can be *not* with us for one year and *with* us the next (common for
+  newly-formed entities whose first real tax year is the second one). So never generalize the flag
+  across years from a single project. It is also a **plain-typo risk** — there is a live case where
+  a client's 2026 project is flagged `wontFileWithUs` when he *will* file 2026 with us, and the
+  firm has chosen to leave the flag alone as a minor error. **Before excluding anyone on this
+  flag, check their [`client-intelligence`](../client-intelligence/) file** — known-bad values are
+  recorded there (see
+  [`clients/yes-team-corp.md`](../../../projects/client-intelligence/clients/yes-team-corp.md) §5)
+  — and when in doubt, ask. Excluding a real client from a readiness list is a worse error than
+  listing one extra.
 
 ---
 
