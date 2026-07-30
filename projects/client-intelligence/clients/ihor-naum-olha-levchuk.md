@@ -97,6 +97,9 @@ file's date.
 
 - **What it is:** Form **8802** applies for Form **6166**, the IRS letter certifying U.S.
   tax residency — used to claim income-tax-treaty benefits or a VAT exemption abroad.
+- **Who and what was requested:** filed in the name of **Ihor Naum as an individual —
+  NOT in a company's name** · country: **Ukraine** · certification years: **2023 and
+  2024** _(Lilian, 2026-07-30)_.
 - **Our role:** the firm prepared and transmitted the application and paid the IRS user
   fee; **the client is handling the status call to the IRS** (see §5 and §6).
 - **How it was filed (2026-05-06):** user fee paid **electronically through Pay.gov**
@@ -122,6 +125,11 @@ file's date.
 - **The couple files jointly** — the 2025 e-file authorization was signed by both spouses.
 - **Legacy TaxDome spelling.** TaxDome carries the first name as **"Ihour Naum"**; Double
   and the tax return use **"Ihor Naum"**. Search both spellings when hunting for documents.
+- **The Form 6166 is personal, not corporate.** The certification was requested for
+  **Ihor Naum as an individual**, not for any of the related companies. When following up
+  with the IRS — or when the foreign payer questions the certificate — the applicant of
+  record is the person, so the call and any Form 2848 must be for the **individual**
+  taxpayer, not for a company.
 
 ### How to check the status of the Form 8802 (the durable know-how)
 
@@ -178,6 +186,9 @@ status is established in this order:
   three revisions of the Form 8802 instructions. **Lilian sent the client, by WhatsApp,
   everything needed to prove the fax was sent with the complete documentation — the
   client will place the status call to the IRS themselves.**
+- _(2026-07-30, Lilian)_ — Confirmed the application's scope: the certification was
+  requested for **Ukraine**, tax years **2023 and 2024**, in **Ihor Naum's own name — not
+  a company's**.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -185,8 +196,9 @@ status is established in this order:
   8802 filed 2026-05-06 — **awaiting their report back.**
 - Ask the client to raise the **possible duplicate** from the two 2026-05-06
   transmissions, so the IRS processes only the complete package.
-- Confirm a **Form 2848** is on file for this taxpayer, so the firm can call directly if
-  the client's own call doesn't resolve it.
+- Confirm a **Form 2848 for Ihor Naum as an individual** is on file (a company 2848 does
+  not cover this application), so the firm can call directly if the client's own call
+  doesn't resolve it.
 - Watch for IRS mail — either the **Form 6166** itself or a letter requesting more
   information; ask the client to forward anything that arrives.
 - Archive the filing evidence in the client's Drive folder as one PDF (Pay.gov receipt +
@@ -195,7 +207,8 @@ status is established in this order:
 
 ### Information still needed
 
-- [ ] Which **country and tax year(s)** the Form 6166 was requested for.
+- [x] Which **country and tax year(s)** the Form 6166 was requested for — **Ukraine,
+      2023 and 2024**, in **Ihor Naum's own name** _(Lilian, 2026-07-30)_.
 - [ ] Home state / current mailing address on the Form 8802 (in Double — confirm it is
       current, since the IRS replies by mail).
 - [ ] Google Drive folder link for this individual client (§7).
