@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -64,7 +64,8 @@ the actual details.
 - **Applies?** _(pending — confirm)_
 
 ### Licenses & other filings
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes (at least in part) — a principal holds a Florida **workers'-compensation Certificate of Election to be Exempt** for this company. The Division of Workers' Compensation emails an **expiration notice** to the firm (one landed 2026-06-29), so the exemption has a renewal cycle to watch. _(Florida DWC notice via Gmail, 2026-07-30)_
+- **What & when:** _(pending — confirm the exemption's expiration date and who renews it, us or the client)_
 
 ## 5. Key facts & quirks
 
@@ -75,6 +76,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile started from the Double record (Kolo Florida Inc, QBO). Confirmed by Lilian as the client she referred to as "Colo". Almost everything still to gather.
 - 2026-07-20 — Sweep: no Double notes and **no indexed Ping meetings**; one primary contact is on file in Double/Ping. Still almost everything to gather.
+- 2026-07-30 — Linked into the owner group (§7) and recorded the **workers'-comp exemption** in §4, found via a Florida DWC expiration notice in Gmail. Captured while building the owner's individual file ([`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md)); no dedicated sweep of this client was run.
 
 ### Outstanding items (CI-only — never in the SOP)
 - _(none captured yet — live tasks live in Double / Ping)_

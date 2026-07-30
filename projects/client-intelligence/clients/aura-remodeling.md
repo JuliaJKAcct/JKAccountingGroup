@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -83,6 +83,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; quarterly bookkeeping; 1099 prep; income tax not handled by us). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Gmail enrichment sweep:** established the remodeling / construction profile, likely IL (low confidence), Ukrainian language, two-owner LLC, the commingling / bank-feed / late-books challenges, and the May-2026 bookkeeper handoff. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
+- 2026-07-30 — Linked into the owner group (§7): the two principals now have an individual 1040 file, [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md). **Open conflict to resolve:** that file's Schedule C activity vs. the Form 1065 inferred here — a 1065 reaches the 1040 by K-1, not Schedule C, so one of the two readings is wrong. Also note the home-state disagreement (IL inferred here, FL implied by the related entities). Captured while building the individual file; no dedicated sweep of this client was run.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.
