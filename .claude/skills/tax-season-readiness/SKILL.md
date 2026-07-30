@@ -5,6 +5,10 @@ description: Determine which JK Accounting Group clients are READY to have their
 
 # Tax-season readiness — who can we file, and who are we waiting on
 
+> **Mechanics live next door.** This skill is the *domain* layer — what the columns mean and how
+> to reason about them. For how to actually reach Double's data (the four data planes, the folder
+> conventions, call efficiency, write safety), load [`double-mcp`](../double-mcp/) alongside it.
+
 How the firm knows, at any point in tax season, **which clients we can actually prepare a
 return for** and **which are still pending** — and where every piece of that lives in
 Double.
@@ -41,6 +45,11 @@ through the MCP).
 So: `Organizer Status` is about the **TaxDome-era** organizer *plus* the fact that a Double
 one was sent. `Organizer Progress` is about the **Double-era** organizer's completion. They
 are not duplicates of each other.
+
+> **The organizer's actual questions** — what we ask an individual client — are kept in
+> [`references/individual-organizer-questions.md`](./references/individual-organizer-questions.md),
+> because the Double MCP cannot read the organizer template. **That file is currently an empty
+> intake awaiting Lilian's content** — never fill it from general knowledge.
 
 ---
 
@@ -263,16 +272,10 @@ Lilian works from to close the gaps in the tracking columns.
 
 ### Call efficiency
 
-The Double MCP has **no published daily cap** (unlike the Odoo MCP's hard 50/day — see
-[`odoo-mcp`](../odoo-mcp/)), but `list_projects` and `list_client_properties` are
-**per-client**, so a full firm sweep is a few hundred calls.
-
-- `list_clients(pageSize: 100)` gets the roster and the `platform` field in 2 calls.
-- Batch 10–15 per-client calls **in parallel** per message.
-- For a wide sweep across the whole roster, **delegate to a subagent** with an explicit
-  read-only instruction and a compact table as the return format.
-- `get_property_columns` is one call and gives every column ID and option — call it once,
-  don't hardcode assumptions about option names.
+`list_projects` and `list_client_properties` are **per-client**, so a full firm sweep is a few
+hundred calls. The patterns that keep it manageable — page the roster in 2 calls, batch 10–15
+per-client calls in parallel, delegate roster-wide sweeps to a subagent — are in
+[`double-mcp`](../double-mcp/) §5. Read that before starting a sweep.
 
 ### Client data stays out of the repo
 
@@ -297,6 +300,5 @@ structural knowledge — this skill — lives in the repo.
   email) — then it wants a project folder and probably the
   [`automated-email-reports`](../automated-email-reports/) skill, and this file should link
   to it.
-- Double-MCP mechanics grow **beyond tax season** enough to deserve their own operating guide
-  (a `double-mcp` skill, parallel to [`odoo-mcp`](../odoo-mcp/)) — then move §2's mechanics
-  there and keep the domain model here.
+- Something in §2's "where each fact lives" table moves or is renamed — and keep the general
+  Double mechanics in [`double-mcp`](../double-mcp/), not here; this file stays the domain layer.

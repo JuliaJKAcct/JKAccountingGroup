@@ -1,0 +1,231 @@
+---
+name: double-mcp
+description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, monthly closes, tasks, portal contacts, the file library, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, or creating/updating tasks and notes. Encodes the four data planes (client record vs custom properties vs tax projects vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, what the MCP does NOT expose (tax organizers and their progress, saved views, file contents), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, and the call-efficiency patterns for roster-wide sweeps.
+---
+
+# Double MCP — operating guide
+
+Instructions for working with the firm's **Double** instance via the **`Double`** MCP server.
+Double is where JK Accounting Group runs its practice: the client roster, the firm's own
+tracking columns, tax projects, monthly closes, tasks, the client portal, and the document
+library (with QuickBooks behind it for connected clients).
+
+**Load this before the first Double MCP call.** Double is an account-level connector shared by
+the whole firm.
+
+> **Tool names.** This guide uses short names (`list_clients`, `list_projects`, …). The actual
+> tools are prefixed `mcp__Double__` — e.g. `mcp__Double__list_client_properties`.
+
+> **No published call cap.** Unlike the [`odoo-mcp`](../odoo-mcp/) server's hard 50-calls/day
+> budget, Double has no documented quota. That is *not* licence to be wasteful — see §5, a
+> naive roster sweep is several hundred calls.
+
+---
+
+## 1. The four data planes — the thing to get right first
+
+A "client" in Double is not one object. The same client's information is spread across four
+planes, each reached by a **different** tool. Most wasted time comes from looking for a fact
+in the wrong plane.
+
+| Plane | What lives there | Tools |
+|---|---|---|
+| **1. Client record** | Name, `platform`, `archivedAt`, `deepLink`, phone, branch | `list_clients` · `get_client` |
+| **2. Custom properties** | The **firm's own columns** — Account Type, Tax Return Type, Organizer Status, Bookkeeping, Sales Tax, Payroll, EIN, Engagement Letter, Assigned Staff | `get_property_columns` · `list_client_properties` · `upsert_client_properties` |
+| **3. Tax projects** | One container per tax **year**, with its own `status` and `filedAt` | `list_projects` · project-task tools |
+| **4. File library** | Nested folders and documents, in two sources | `list_file_library` → `list_files` → `get_file` |
+
+### The trap: "Tax Return Status" is not a property
+
+The `Tax Return Status` column the team sees in a Double **view** is the **tax project's**
+status (plane 3), *not* a custom property (plane 2). `list_client_properties` will never return
+it. Read it with `list_projects(clientId)`, which gives:
+
+- `year` — the tax year (a client may have no project for a given year at all)
+- `status` — `notStarted` · `inProgress` · `filed` · `wontFileWithUs`
+- `filedAt` — a **separate** timestamp that can disagree with `status`; always read both
+- `preparer` / `reviewer` / `manager`, `dueDate`, `deepLink`
+
+Conversely `Organizer Status` **is** a property (plane 2, column `226743`). So a single view row
+the team reads left-to-right is assembled from three different planes.
+
+### `platform` — the QuickBooks signal
+
+On the client record, `platform: "qbo"` means **QuickBooks Online is connected**; `"none"`
+means it is not. This is what people mean by "a QuickBooks client." Note it does **not** always
+agree with the firm's `Bookkeeping` property — see
+[`tax-season-readiness`](../tax-season-readiness/) §3.
+
+### Always check `archivedAt`
+
+`list_clients` returns archived clients too. Exclude them from any live list, and say how many
+you excluded.
+
+---
+
+## 2. What the MCP does **not** expose
+
+Verified Jul 2026. Don't burn calls rediscovering these.
+
+| Not available | What to do instead |
+|---|---|
+| **Tax organizers** — the organizer entity, its questions, and the **`Organizer Progress` %** | No tool exists. `get_questions` returns client *questions/requests*, not organizer answers; `get_task_templates` returns only task templates (the organizer template is not among them). Ask the user to read the column on screen. The firm's organizer question bank is kept in [`tax-season-readiness/references/individual-organizer-questions.md`](../tax-season-readiness/references/individual-organizer-questions.md) precisely because it can't be pulled |
+| **Saved views** (e.g. "Tax Returns – View 2") | Can't be read. Rebuild the view's logic from properties + projects |
+| **File contents** | `get_file` returns a **download link for the user** — it does not load the file for you. See the privacy rule below |
+| Property columns with **no options defined** (`Service Tier`, `Entity Type`) | They exist but are unused — don't treat an empty value as meaningful |
+
+### Privacy rule for documents — important
+
+`get_file` hands back a presigned download URL. **Do not fetch client documents in order to
+read them.** Completed tax organizers, bank statements and filed returns contain personal and
+financial data, and pulling them into a session is an overreach even when technically possible.
+
+Work from **file names and folder structure** — which is almost always enough to answer the real
+question ("is there a 2025 organizer on file?"). If the user needs the document, give them the
+link.
+
+---
+
+## 3. The firm's folder conventions
+
+The file library carries real meaning — the firm tracks things *by where the file sits*. Two
+structures coexist, because of the TaxDome → Double migration.
+
+**The firm's own structure** (created in Double):
+
+```
+JK Accounting Group/
+├── 1099/               → 2022 / 2023 / 2024 / 2025
+├── Tax Return Filed/   → 2022 / 2023 / 2024 / 2025
+└── Others/             → 2022 / 2023 / 2024 / 2025
+```
+
+**The migrated TaxDome structure** (varies per client — sometimes a per-client subfolder,
+sometimes flat):
+
+```
+TaxDome/
+└── [Client Name]/
+    ├── 1. Completed Tax organizers/   ← only exists if the client completed one in TaxDome
+    ├── Client uploaded documents/
+    ├── Firm docs shared with client/
+    │   └── Bookkeeping Files/ → {year}/ → Bank Statements/ → "1. Jan" … "12. Dec"
+    ├── Taxes/ → {year}/
+    └── Private/
+```
+
+Notes that save time:
+
+- **`1. Completed Tax organizers` is load-bearing.** Its presence (and the *year* in the
+  filename) is how Organizer Status gets set — see
+  [`tax-season-readiness`](../tax-season-readiness/) §4. The name varies slightly between
+  clients, so match loosely.
+- Some migrated folders are literally named **`(Empty)`** — e.g. `TaxDome > Beemold USA LLC
+  (Empty)`. That's a migration artifact meaning nothing came across.
+- Migrated folders are littered with **`desktop.ini`** files. Ignore them.
+- Month folders are numbered for sort order (`1. Jan`, `10. Oct`) and are **not** in calendar
+  order in the API response. Sort them yourself.
+- `list_file_library` returns **folders only**. To see documents, call
+  `list_files(clientId, folderId)` — it includes the folder's subfolders too.
+
+---
+
+## 4. Practice configuration worth knowing
+
+Read once with the listed tool rather than assuming.
+
+**Tax project workflow sections** (`list_sections`, category `tax`) — the firm's tax pipeline:
+`Gather information` → `Financial review` → `Prepare tax return` → `File tax return`.
+
+**Task statuses** (`list_task_filter_options`): `notStarted` · `wip` ("In Progress") · `stuck` ·
+`waitingOnClient` · `done` · `canceled`. The last two are the "completed" group.
+
+**Question tags** (`list_question_tags`): `statements` · `tax-questions` · `w9-requests` ·
+`onboarding` · `other`.
+
+**Task tags** (`list_task_tags`): biweekly payroll · monthly payroll · monthly sales tax ·
+quarterly sales tax · tax extension · annual report · accountable plan/reimbursements · client
+request.
+
+**Portal contacts** (`list_contacts`) carry a `clientIds` array — the set of clients that person
+can reach. This is how a company links to its owner's individual account, **but a contact is
+not necessarily an owner** (some are the owner's staff with portal access only). The full rule
+is in [`tax-season-readiness`](../tax-season-readiness/) §7.
+
+**Staff/user IDs** (`list_users`) are stable — look them up once and reuse.
+
+---
+
+## 5. Call efficiency
+
+The roster is ~150 clients. Planes 2 and 3 are **per-client**, so a full sweep costs a few
+hundred calls.
+
+1. **`list_clients(pageSize: 100)`** — the whole roster in 2 calls, including `platform` and
+   `archivedAt`. Filter in memory; that's free.
+2. **`get_property_columns` once per session** — 1 call returns every column ID and every valid
+   option name. Never hardcode option names from memory; they change.
+3. **Batch 10–15 per-client calls in parallel** in a single message.
+4. **Delegate roster-wide sweeps to a subagent**, with an explicit read-only instruction and a
+   compact table as the required return format. A 120-client property sweep is one subagent, not
+   120 calls in the main thread.
+5. **Narrow with the filters the tools already have** — `list_clients(name:)`,
+   `list_files(folderId:/startDate:/source:)`, `list_tasks(clientId:/status:/projectYear:)`,
+   `get_questions(tagId:)` — instead of pulling everything and filtering after.
+6. **Cache within the session.** Client IDs, column IDs, folder IDs and user IDs are stable.
+
+---
+
+## 6. Write safety
+
+Double writes are **not** as reversible as they look, and some columns encode a person's
+judgment rather than a fact.
+
+- **Never write the hand-maintained judgment columns.** `Organizer Status` and a tax project's
+  status/`filedAt` are maintained by Lilian after checking the tax software and the client's
+  folders. A session **reports** what looks wrong or missing; it does not set them. (Full
+  reasoning in [`tax-season-readiness`](../tax-season-readiness/).)
+- **`upsert_client_properties` needs `get_property_columns` first.** Picker values must match an
+  existing option name/ID exactly. A guessed option name fails or, worse, silently creates
+  confusion.
+- **Don't reorganize the file library.** Folder placement carries meaning (§3) — renaming or
+  moving `1. Completed Tax organizers` breaks how the firm tracks organizers.
+- **The file-ID two-space trap.** `list_files` returns a `source` per file:
+  - `source: "File Library"` → ids belong to `rename_file_system_node` / `move_file_system_nodes`
+  - `source: "Uploads Inbox"` → ids belong to `rename_attachment` / `move_attachables`
+
+  Crossing them fails. Always read `source` before acting on a file id.
+- **Confirm before creating** clients, contacts, users, or tasks — duplicates are the firm's
+  recurring data-quality problem (there are already duplicate individual accounts in the
+  roster), and there is no merge tool.
+- **Uploading a file** is a two-step flow (`internal_upload_file` → `add_file_to_client`). Files
+  land hidden from the client by default in custom folders; omitting `folderId` sends them to the
+  Uploads Inbox and triggers OCR. Be deliberate about which you want, and about `isVisible`.
+- Prefer **notes and comments** (`create_note`, `add_task_comment`) for leaving a trail, the same
+  spirit as the Odoo chatter convention.
+
+---
+
+## 7. Related skills
+
+- [`tax-season-readiness`](../tax-season-readiness/) — the domain layer on top of this: what the
+  tax/organizer columns *mean* and how to turn them into a ready-vs-pending list.
+- [`client-intelligence`](../client-intelligence/) — the per-client knowledge files that Double
+  data feeds; also the place to record who's an owner vs. staff.
+- [`recurring-expense-monitoring`](../recurring-expense-monitoring/) and
+  [`bookkeeping-kpis`](../bookkeeping-kpis/) — both read client financials through Double.
+- [`odoo-mcp`](../odoo-mcp/) — the other ERP connector; note its hard call budget does **not**
+  apply here.
+
+---
+
+## 8. Update this skill when…
+
+- **An organizer tool appears** in the Double MCP — §2's biggest gap closes and
+  `tax-season-readiness` §5 simplifies.
+- A new **property column** is added or an option is renamed — §1's pointers stay valid, but
+  re-run `get_property_columns` rather than trusting any list.
+- The **TaxDome folder structure** is cleaned up or retired — §3 shrinks to the firm's own
+  structure.
+- A write pattern bites us (a bad upsert, a broken move) — record the lesson in §6 so it isn't
+  repeated.
