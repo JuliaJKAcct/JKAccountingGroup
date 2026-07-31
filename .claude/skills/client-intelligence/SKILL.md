@@ -154,14 +154,35 @@ output is an Artifact **fragment** (`<title>` + `<style>` + markup + `<script>`)
 **not committed** — it is large and fully regenerable from the files. See
 [`render/README.md`](./render/README.md).
 
-## Answering questions live (Julia/Lilian ask about a client)
+## Answering questions live (Julia/Lilian ask about a client) — ALWAYS sweep live first
 
-The file is the **index + summary + open threads**, not a transcript store. To answer a
-specific question ("what did we last agree with X?", "status of the permits?"):
-1. **Read the client file** — the summary, where things live, and §6 open items.
-2. **Pull the specifics live** from the connected systems — Ping (meetings / action
-   items), Gmail, Double notes, Drive, QuickBooks.
-You can only retrieve what exists in a connected system; say so honestly when it doesn't.
+The client file is the **index + summary + open threads** — NOT the live status, and NOT a
+transcript store. So **never answer a client question from the repo file alone.** Whenever
+Julia or Lilian asks *anything* about a client — "what's the status of X?", "what are we
+waiting for?", "what did we last agree?", "what's happening with their return / permit /
+books?" — run a **live multi-source sweep at question time**, then answer from what you find.
+This is the whole point of Client Intelligence for them: the file says *where to look and
+what's open*; the live sweep says *what's true right now*.
+
+1. **Read the client file** — the summary, where things live, and §6 open items (the map).
+2. **Then pull the live specifics from EVERY relevant connected system** — mandatory, not
+   optional; do it proactively, without being told to check email/Drive/meetings:
+   - **Gmail** — search **Julia's inbox AND sent mail** for the client + each owner/principal
+     name (recent first). This is where "waiting for X / client just sent Y" actually shows up.
+   - **Ping Assistant** — the client's **Zoom / meeting summaries, transcripts, and action
+     items** (search by business **and** owner name) — what was actually discussed with the client.
+   - **Double** — notes, client properties, questions, files, tasks (engagement status).
+   - **Google Drive** — the client's folder and documents (you WILL find real documents there —
+     organizers, statements, forms — even though you will NOT find "waiting-for" status notes).
+   - **QuickBooks** — when the question touches their books / financials.
+   - **Any other connected tool** that could hold the answer — use your full toolset.
+3. **Synthesize** the file + the live findings and answer, saying where each fact came from.
+   You can only retrieve what exists in a connected system; if a source has nothing or isn't
+   reachable, **say so honestly** rather than answering from the stale file alone.
+
+Never conclude "not found" from a single lookup — a client's thread is often filed under the
+owner's personal name, and one meeting/email can cover several of their companies (sweep by
+owner, route by company — same rule as enrichment).
 
 ### Getting sensitive data (day-to-day)
 
