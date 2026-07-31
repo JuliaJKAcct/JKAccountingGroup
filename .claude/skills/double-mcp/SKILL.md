@@ -204,6 +204,14 @@ hundred calls.
    `list_files(folderId:/startDate:/source:)`, `list_tasks(clientId:/status:/projectYear:)`,
    `get_questions(tagId:)` — instead of pulling everything and filtering after.
 6. **Cache within the session.** Client IDs, column IDs, folder IDs and user IDs are stable.
+7. **`list_contacts` takes an *optional* `clientId` — omit it to get the whole contact graph.**
+   Called without a filter it returns every contact you have access to (112 in 2 calls at
+   `pageSize: 100`, Jul 2026), and **each contact carries its full `clientIds` array**. Intersecting
+   those arrays against your company and individual sets yields every company↔owner link in one
+   sweep, instead of one `list_contacts(clientId)` call per company. Note the returned set is scoped
+   to clients *you* can see, so reconcile it against `list_clients` rather than assuming it is the
+   whole practice. The domain rules for reading those links — a portal contact is **not**
+   necessarily an owner — live in [`tax-season-readiness`](../tax-season-readiness/) §7.
 
 ---
 
