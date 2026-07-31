@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-31
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -133,10 +133,11 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   the period; a 2023 home-office rent estimate; crypto/Zelle reporting position). Prepared
   **working-copy 1040 organizers for 2023/2024/2025** for Julia and two **Double notes**
   (tax-prep status + categorization rules). Sensitive IDs kept in Double.
+- _(2026-07-31, Lilian)_ — Spouse's **driver's license received** from the client (filed in
+  Double) — removed from the outstanding list.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **Spouse's driver's license** — not on file; Lilian to request from the client.
 - **The older child's SSN** — card lost; client resolving at the SSA and will send the number.
 - **Year-end 2024 & 2025 addresses** — client had a different address each year.
 - January 2026 statements (both accounts) to complete Dec 2025.

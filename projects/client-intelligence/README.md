@@ -137,9 +137,16 @@ rebuilt from scratch at every question.
 - **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
   **emails Lilian a report**: what's new in each client's CI, and the items
   **proposed for the SOP**. SOP changes are never applied without her approval.
-- **Complement — a freshness check at query time.** When someone asks about a client,
-  Claude can still do a quick "anything new since the last sweep?" top-up, so answers
-  are current between runs.
+- **At query time — ALWAYS sweep live (mandatory; the real-time path Julia & Lilian rely on between weekend runs).**
+  When Julia or Lilian asks *anything* about a client — status, "what are we waiting for?",
+  "what did we last agree?" — Claude does **not** answer from the CI file alone. It reads the
+  file (the map), then runs a **live multi-source sweep at that moment**: Julia's **Gmail**
+  (inbox **and** sent), **Ping** (Zoom / meeting summaries + action items), **Double** (notes,
+  properties, files, tasks), **Google Drive** (the client's documents), **QuickBooks**, and any
+  other connected tool — because the *live* status lives in those systems, not in the file (the
+  file deliberately holds no "waiting-for" state). It says where each fact came from and is
+  honest when a source has nothing. See the `client-intelligence` skill → "Answering questions
+  live" for the exact, required protocol.
 
 **Guardrails.** Scope the sweep to **active clients** (those with CI files / a
 priority list), not the whole book, to respect tool budgets (e.g. Odoo's 50 calls /
