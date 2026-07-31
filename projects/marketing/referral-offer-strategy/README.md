@@ -37,18 +37,24 @@ referral-offer-strategy/
         ├── readiness-check-ru.html     session 1 — self-scored readiness quiz
         ├── margin-calculator-ru.html   session 2 — true-margin calculator
         └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
-└── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
+├── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
     ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
     │                        moments, 4 belief shifts, self-calc — co-host inserts
     ├── webinar-script.html   same script as a readable/printable on-brand page
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     └── announcement-ru.html  same announcement as a readable/printable page
+└── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
+    └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
+                                  to clients (who we are · what we do · how we help)
 ```
 
-> First partner: **Candramas LLC** (owner Boris). The Growth Series lists the
-> three sessions decided for this project (readiness → true margin → keep-more);
-> the Readiness Check timing is fixed in `talk-track.md` (client fills in ~5 min,
-> the live finance block is ~15 min).
+> **Partner 1 — Candramas LLC** (marketing agency, owner Boris): the
+> `partner-pitch/` collateral + Growth Series (readiness → true margin →
+> keep-more); Readiness Check timing is fixed in `talk-track.md` (client fills in
+> ~5 min, live finance block ~15 min).
+> **Partner 2 — Imperial Fund Asset Management** (wealth manager, Yuri Nosenko):
+> a client-facing intro sheet in `wealth-partner/`, positioned as the
+> tax/accounting complement to their investment management.
 
 ## Brand & design
 
@@ -84,6 +90,12 @@ there.
   self-calculated margin, closing on the Разбор утечек прибыли. Includes the
   readable script (`.html` + `.md`) and ready-to-post announcement copy
   (`announcement-ru.md`). An on-brand slide deck is the natural next build.
+- **`wealth-partner/`** — a client-facing EN introduction sheet for the
+  wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
+  designed to be handed to *their clients*: who JK is, what we do, how we help,
+  with an explicit lane split (the advisor grows wealth; JK keeps it
+  tax-efficient) and a complimentary-consultation CTA. RU version is a natural
+  follow-up.
 
 `strategy.md` remains the decisions-and-open-questions document. Per its §6,
 still open: scoring rubric thresholds, the document/access checklist for the
