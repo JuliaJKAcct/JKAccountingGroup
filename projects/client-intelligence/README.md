@@ -137,7 +137,7 @@ rebuilt from scratch at every question.
 - **Then it reports, it doesn't decide.** The same run produces the CI↔SOP sync and
   **emails Lilian a report**: what's new in each client's CI, and the items
   **proposed for the SOP**. SOP changes are never applied without her approval.
-- **At query time — ALWAYS sweep live (mandatory, the main way Julia & Lilian use this).**
+- **At query time — ALWAYS sweep live (mandatory; the real-time path Julia & Lilian rely on between weekend runs).**
   When Julia or Lilian asks *anything* about a client — status, "what are we waiting for?",
   "what did we last agree?" — Claude does **not** answer from the CI file alone. It reads the
   file (the map), then runs a **live multi-source sweep at that moment**: Julia's **Gmail**
