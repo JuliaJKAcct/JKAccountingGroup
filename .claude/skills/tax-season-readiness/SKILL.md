@@ -161,7 +161,7 @@ a "waiting on the client" bucket without that confirmation.
 | **Organizer progress (%)** | Native Double column (CSV header: `Organizer Max Progress`) | Not exposed by the MCP — **get it from the view's CSV export**, see §5 |
 | **How many organizers are active** | Native Double column (CSV header: `Organizer Active Count`) | Same CSV export. Matters — see §5 |
 | **Completed TaxDome organizer** | File library: `TaxDome > [Client Name] > 1. Completed Tax organizers` | `list_file_library` → then `list_files(clientId, folderId)` |
-| **Who owns this company** | Portal contacts shared between clients | `list_contacts(clientId)` → each contact carries a `clientIds` array |
+| **Who owns this company** | Portal contacts shared between clients | `list_contacts` → each contact carries a `clientIds` array. **Omit `clientId` to get the whole graph in one sweep** ([`double-mcp`](../double-mcp/) §5.7) |
 
 ### Property column IDs (stable)
 
@@ -271,7 +271,8 @@ we need.
 
 > **Scope: this table reads an organizer, so it applies to whoever is actually owed one** — every
 > individual, and companies that are neither bookkeeping clients nor Sch C (§1b). For a
-> **bookkeeping company** none of these rows apply: no organizer is owed, so `Not Started` and a
+> **bookkeeping company** none of these rows apply **except `N/A (BK client)`, which exists
+> precisely to mark this case**: no organizer is owed, so `Not Started` and a
 > blank are the **expected** states, not gaps, and a `Sent` is stray data. Its readiness is a
 > books question — see "What gates which return" in §1b.
 
@@ -301,10 +302,9 @@ hasn't opened the organizer (0%) and one who is nearly done (71%), and those nee
 chasing. In Jul 2026 the overwhelming majority of `Sent` organizers sat at **0%** — when that's the
 pattern, say so: it means the bottleneck is clients not starting, not clients getting stuck.
 
-This has held on every export so far. On **31 Jul 2026**, of the pending companies that were
-actually owed an organizer, **19 of 26 sat at 0%** and only a handful were part-done. That shape
-changes the recommendation: the fix is **one reminder campaign to the whole 0% group**, not
-per-client chasing of people stuck midway. Lead with it when it recurs.
+It held again on 31 Jul 2026 (**19 of 26** organizer-owed pending companies at 0%). When that is
+the shape, **say what to do about it**: one reminder campaign to the whole 0% group beats
+per-client chasing of the few stuck midway.
 
 ### Getting Organizer Progress — ask for the CSV export
 
@@ -358,37 +358,56 @@ the client list. She may not have reached every client. Treat the data according
   below. When in doubt, ask: excluding a real client from a readiness list is a worse error than
   listing one extra.
 
-### 6.1 `Not Started` really means six different things
+### 6.1 `Not Started` is a catch-all — decode it, don't dump it
 
-**Root cause: Double offers no "Not applicable" option for `Tax Return Status`.** Every situation
-where a return simply isn't owed has to be parked somewhere, and `Not Started` is the slot Lilian
-uses. So the value is a **catch-all, not a work state** (Lilian, 31 Jul 2026).
+**Root cause: no "Not applicable" option is available to Lilian for `Tax Return Status`** (Lilian,
+31 Jul 2026). Every situation where a return simply isn't owed has to be parked somewhere, and
+`Not Started` is the slot. So the value is a **catch-all, not a work state** — five distinct
+meanings plus a residue.
 
-Decode it in this order — the first match wins:
+**Scope:** this applies to `Tax Return Status` (the tax *project*, §2) on **any** row, company or
+individual. It has nothing to do with `Not Started` on the `Organizer Status` column, which means
+something else entirely (§4).
+
+Decode in this order — the first match wins:
 
 | # | Test | What it means | How to report it |
 |---|---|---|---|
-| 1 | The project's **year is a future one** (e.g. a 2026 project during the 2025 season) | Not this season's work at all | Exclude from the season's counts entirely |
-| 2 | `Tax Return Type` is `Sch C` / `1040-SCH C`, **or** `Organizer Status` = `N/A (SCH-C)` | The company files through the owner's 1040 and has no return of its own | **No company return exists** — resolve to the owner (§1b) |
-| 3 | **`Income Tax` is unticked** | We do not do that client's income tax at all | A **"not our income tax"** bucket — not pending work |
-| 4 | The client is **one of Julia's family members** | No organizer is sent and little information is held | Its own line; don't chase them like a normal client |
+| 1 | The project's **year is a future one** (e.g. a 2026 project during the 2025 season) | Not this season's work | Exclude the row from the season's counts — **and flag that the current year's project is missing** (§6) |
+| 2 | `Tax Return Type` is `Sch C` / `1040-SCH C`, **or** `Organizer Status` = `N/A (SCH-C)` **on a company row** | The company files through the owner's 1040 and has no return of its own | **No company return exists** — resolve to the owner (§1b). On an *individual* row `N/A (SCH-C)` cannot mean this → send to review |
+| 3 | **`Income Tax` is unticked** | *Candidate* for "we don't do their income tax at all" — **but see the warning below** | **Needs review** until Lilian confirms. Only after she confirms does it go in the 🚫 bucket |
+| 4 | The client is one of the **related-party clients Lilian and Julia maintain by hand** | No organizer is sent and little information is held | Its own line; don't chase them like a normal client |
 | 5 | The client is **brand new and has never filed with us** | Nothing has been done yet — here `Not Started` is **literal and correct** | Genuinely pending. Their organizer may still be moving — read the % |
-| 6 | None of the above | Genuinely unknown | **Ask.** This is the only residue that belongs in "needs review" |
+| 6 | None of the above | Genuinely unknown | **Ask.** |
 
-Tests 1–3 and 5 are **mechanical** — a session can apply them from the export alone. Test 4 needs
-a name list only Lilian and Julia hold, so ask for it once and record the answer.
+> **⚠️ Test 3 never excludes a client on its own.** §1b is explicit that an unticked `Income Tax`
+> is **not sufficient** to conclude anything, because the same fingerprint covers two opposite
+> situations, and §6 says to *ask* when a tax project is present — which it always is here. The
+> file's own counterexample proves it: a client with `Income Tax = false` and no `Tax Return Type`
+> turned out to be **Schedule C**, known only because Lilian said so. On top of that, `Income Tax`
+> is a **checkbox** (§2) — "unticked" and "never set" are indistinguishable, so a brand-new client
+> whose properties aren't filled in yet trips test 3 before test 5 can run. Getting this wrong
+> **silently drops a client who owes us a return**, which is the worst failure this report has.
 
-**How much this matters:** on the 31 Jul 2026 export, 21 rows carried `Not Started`. Decoding left
-**two** genuinely unknown. Reporting all 21 as pending work would have overstated the queue roughly
-tenfold.
+Tests 1 and 2 are **mechanical** — a session can apply them from the export alone. Test 3 is
+mechanical to *detect* but needs confirmation to *act on*. Test 4 needs a name list only Lilian and
+Julia hold (held outside the repo — ask once and record where it lives). Test 5 cannot be settled
+from a single season's export: "never filed with us" needs prior-year projects (`list_projects`) or
+Lilian, and note that clients with no tax project at all are missing from the export entirely (§6).
+
+**How much this matters.** On the 31 Jul 2026 export, 21 rows carried `Not Started`: 8 Schedule C,
+3 a future year, 2 unticked `Income Tax`, 1 related-party, 3 brand-new clients, 2 already moved on
+in Double since the export, and 2 genuinely unknown. So **at most 7 were pending work and only 2
+needed a question** — against 21 if the value had been read at face value.
 
 **Two traps around this value:**
 
-- **A new client's `Not Started` is not a data-quality problem.** Reasons 1–4 are bookkeeping
-  artifacts; reason 5 is real work. Don't collapse them.
+- **A new client's `Not Started` is real work, not a tracking artifact.** Tests 1–4 are reasons a
+  return isn't owed (or isn't ours yet); test 5 is a return we simply haven't started. Don't
+  collapse them.
 - **The export can lag Double.** A row read as `Not Started` may already have been moved to
-  `In Progress` after the CSV was taken. When someone says they have since updated a client,
-  the **export** is what's stale — say so rather than implying the tracking column is wrong.
+  `inProgress` after the CSV was taken. When someone says they have since updated a client, the
+  **export** is what's stale — say so rather than implying the tracking column is wrong.
 
 ### 6.2 A blank `Account Type` makes a client vanish from both lists
 
@@ -420,7 +439,8 @@ fix, and this table is the fallback.
 Julia wants the companies **and** their owners' personal returns. The link runs through
 **portal contacts**:
 
-1. `list_contacts(clientId)` on the company.
+1. `list_contacts` — **call it once with no `clientId`** and build the whole map at once
+   ([`double-mcp`](../double-mcp/) §5.7); pass a `clientId` only when you genuinely need one company.
 2. Each contact carries a `clientIds` array — every client that contact is attached to.
 3. A contact appearing on **both** the company and an `Account Type = Individual` client
    means that individual client is the **owner's personal account**.
@@ -499,11 +519,12 @@ Within each group, produce these buckets, not two:
 - ⏳ **Waiting on the client** — organizer sent or in progress (report the %), a tax project at
   `Waiting on Client`, or — **for a client who is actually owed an organizer (§1b)** — none on file.
   A bookkeeping company with no organizer does **not** belong here
-- 🚫 **Not our income tax** — `Income Tax` unticked with `Tax Return Status = Not Started` (§6.1,
-  test 3). No return is owed to us at all; keep it out of the pending counts rather than burying it
-  in "needs review"
-- ❓ **Needs Lilian's review** — ambiguous `Not Started`, blanks, contradictions, missing
-  projects
+- 🚫 **Confirmed not our income tax** — `Income Tax` unticked with `Tax Return Status = Not Started`
+  **and Lilian has confirmed** we don't do that client's income tax (§6.1, test 3). Only then does
+  it leave the pending counts. **Unconfirmed, it stays in "needs review"** — the unticked box alone
+  proves nothing (§1b)
+- ❓ **Needs Lilian's review** — a `Not Started` that survives the §6.1 decode (test 6) or is
+  awaiting her confirmation (test 3), blanks, contradictions, missing projects
 
 The last bucket is the point of the exercise as much as the first: it is the list Lilian works from
 to close the gaps in the tracking columns. Resist collapsing 🟡 into 🟢 to make the ready count look
@@ -533,12 +554,9 @@ hundred calls. The patterns that keep it manageable — page the roster in 2 cal
 per-client calls in parallel, delegate roster-wide sweeps to a subagent — are in
 [`double-mcp`](../double-mcp/) §5. Read that before starting a sweep.
 
-**Build the owner↔company map in two calls, not sixty.** `list_contacts` takes an *optional*
-`clientId`. Called **without** it, it returns the practice's entire contact list — 112 contacts in
-2 calls at `pageSize: 100` — and every contact carries its full `clientIds` array. That is the
-whole map in one sweep. Intersect each contact's `clientIds` with the set of individual clients and
-the set of company clients, and every owner link falls out. Calling `list_contacts(clientId)` once
-per company to do the same job costs ~60 calls for an identical result.
+**Build the owner↔company map in one sweep, not one call per company** — `list_contacts` without a
+`clientId` returns every contact you can see, each carrying its full `clientIds` array. Mechanics
+and the exact pattern are in [`double-mcp`](../double-mcp/) §5.
 
 ### Client data stays out of the repo
 
@@ -580,7 +598,7 @@ instead of copying it in.
 - **Double gains a real "Not applicable" option for `Tax Return Status`** — that is the root cause
   of §6.1, and the day it lands most of that section collapses to a single line. Worth asking
   Double for; it would remove a whole class of misreading.
-- **The list of Julia's family clients is written down** (§6.1, test 4) — record where it lives so
-  the next session doesn't have to ask again. As of 31 Jul 2026 only one is known to this skill.
-- A **seventh meaning of `Not Started`** surfaces — add it to §6.1's table rather than reverting to
-  "it's ambiguous".
+- **The related-party client list (§6.1, test 4) gets a home** — record *where* it lives so the
+  next session doesn't have to ask. The list itself stays out of the repo (§8).
+- **A sixth meaning of `Not Started`** surfaces — add it to §6.1's table rather than reverting to
+  "it's ambiguous". Equally, if test 3 ever becomes safe to act on unconfirmed, say what changed.
