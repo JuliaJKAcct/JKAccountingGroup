@@ -119,10 +119,49 @@ the actual details.
 - Only **one live bank feed** (Chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed.
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
 - Several open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex) tracked in the SOP's Open decisions log. *(Meals/gas policy is now resolved — see the log.)*
+- **Affiliated Ukrainian entity:** the firm periodically corresponds with the
+  Ukraine-side accountant of ТОВ «ЕКООРГАНІК» (domain ecoorganic.ua) — e.g. on
+  financial statements/certificates and a registered-capital change. Possible
+  cross-border reporting angle (foreign-entity/FBAR-type filings) — scope not
+  yet confirmed *(Gmail, Apr 2026, Cyrillic correspondence)*.
+- **Reviewer watch — a QBO-connected bank account the team didn't recognize**
+  surfaced in the 2026-07-22 review meeting (possibly the owner's personal
+  account, distinct from the single known Chase business feed) — unresolved,
+  needs client confirmation *(Ping, low-confidence/garbled transcript)*.
+- **Reviewer watch — possible personal (Turo) expenses in company books:**
+  ~$16–17K in the "Vehicle repairs & supplies" account for FY2025 may include
+  the owner's **personal Turo** (car-rental app) activity (e.g. a personal
+  Audi) rather than company costs; pending access to Turo's earnings/1099
+  report before any reclassification *(Ping meeting "Ecoorganic tax prep,"
+  2026-07-23 — legible, direct transcript)*.
+- A recurring-expense watchlist for this client exists in Drive but is
+  currently **PAUSED** (link in §7).
+- A prior bookkeeper (no longer on this engagement) sent monthly financials
+  directly to the owners through late 2025, before the 2026 handoff to the
+  current team *(Gmail, 2025)*.
 
 ## 6. History & open questions
 
 ### Log
+- 2026-08-01 — Weekly sweep (baseline 2026-07-20 → 2026-08-01), plus a **one-time
+  full Gmail history pass** (coverage gap cleared — searched `Ecoorganic` and
+  `Markarian` across the account's full history, ~150+ threads reviewed back to
+  early 2025). Key findings: (1) **ownership change** effective 2026-01-01 — the
+  second owner exited (nonresident-shareholder issue), sole owner going forward
+  from FY2026 (§2); (2) **payroll confirmed** — actual W-2 employees on Gusto
+  since Sept 2025, plus the existing 1099-tracked subcontractor labor (§4); (3)
+  **sales tax confirmed** — CT OS-114, monthly (§4); (4) **CT composite return**
+  (CT-1065/CT-1120SI) tied to the nonresident-shareholder fact (§4); (5) **Annual
+  Report** due March 31 (§4); (6) **Workers' Comp/GL insurance** with an annual
+  audit cycle (§4); (7) an **affiliated Ukrainian entity** the firm corresponds
+  with (§5); (8) two **reviewer-flagged open items** from recent meetings — an
+  unrecognized QBO-connected bank account, and possible personal-Turo expenses
+  sitting in the Vehicle repairs & supplies account (§5). Sources: Double
+  (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`,
+  `list_activity_log`), Ping (`resolve_person`, `search_contacts`,
+  `search_meetings`, full transcript reads of two meetings), Gmail (full
+  history), Google Drive (`search_files` — folder links only, no file contents
+  or credentials copied into this file). No notes yet in Double for this client.
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
   (Lilian). Two notes on the Double tracking: `Tax Return Status = Not Started` is **stale**, while
   the blank `Organizer Status` is **correct** — as a bookkeeping client no company organizer is owed
@@ -140,13 +179,18 @@ the actual details.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
-- [ ] Sales tax / payroll / income tax applicability and who prepares each
-- [ ] Any business licenses / annual filings
-- [ ] Where credentials live (Drive vault link)
+- [ ] Identify the QBO-connected bank account the reviewer didn't recognize
+      (2026-07-22 meeting) — confirm whose account it is
+- [ ] Confirm Turo/personal-vehicle expense scope once Turo earnings/1099
+      access is restored (see §5) and reclassify if needed
+- [ ] Confirm current headcount/status of the Gusto W-2 employees (still active
+      as of this sweep; admin access changed 2026-07-15)
+- [ ] Scope of the affiliated Ukrainian entity relationship (any US
+      cross-border reporting implications for Ecoorganic USA LLC itself)
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Ecoorganic USA INC](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) (primary — passwords/credentials doc lives here, values never in this repo) and [Ecoorganic USA LLC](https://drive.google.com/drive/folders/1NSBtAnwqr307dWCLRANDly4lCIp9t98g) (secondary — categorization workbooks, insurance/GL-audit files, recurring-expense watchlist)
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)
