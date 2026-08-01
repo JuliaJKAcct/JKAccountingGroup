@@ -34,27 +34,27 @@ list grows.
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
-| Atman Parts | 2026-07-20 | Gmail history not yet fully swept |
-| BEST BROKER REALTY LLC | 2026-07-20 | Gmail history not yet fully swept (only the BTR threads were searched) |
-| ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
-| Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
-| Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
-| NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| iKids Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Deep Tech Development Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Beemold USA LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Sunoma Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| SENSUSTECH LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Mobilesource Corp | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Margate Plumbing Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| MAGNUM 152, INC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| LUMETRO LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Ecom Beavers LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Artur Tseretsian | 2026-07-30 | Ping + Gmail history not yet swept (file seeded from Double + the 2023–2025 tax-prep engagement) |
-| Ihor Naum & Olha Levchuk | 2026-07-30 | Ping + Drive not yet swept (file seeded from Double + a targeted Gmail search around the Form 8802 filing; full Gmail history still owed) |
+| Atman Parts | 2026-08-01 | — (full historical Gmail pass done 2026-08-01; cleared) |
+| BEST BROKER REALTY LLC | 2026-08-01 | — (full historical Gmail pass done 2026-08-01; cleared) |
+| ECOORGANIC USA LLC | 2026-08-01 | — (full historical Gmail pass done 2026-08-01; cleared) |
+| Kolo Florida Inc | 2026-08-01 | — (full historical Gmail pass done 2026-08-01; cleared) |
+| Pro Title Agency | 2026-08-01 | — (full historical Gmail pass done 2026-08-01; cleared) |
+| NEVER GIVE UP KK LLC | 2026-08-01 | — |
+| YES TEAM CORP | 2026-08-01 | — |
+| MASCIAVE DESIGN STUDIO LLC | 2026-08-01 | — |
+| iKids Group LLC | 2026-08-01 | — |
+| Deep Tech Development Group LLC | 2026-08-01 | — |
+| AURA REMODELING LLC | 2026-08-01 | — |
+| Beemold USA LLC | 2026-08-01 | — |
+| Sunoma Inc | 2026-08-01 | — |
+| SENSUSTECH LLC | 2026-08-01 | — |
+| Mobilesource Corp | 2026-08-01 | — |
+| Margate Plumbing Inc | 2026-08-01 | — |
+| MAGNUM 152, INC | 2026-08-01 | — |
+| LUMETRO LLC | 2026-08-01 | — |
+| Ecom Beavers LLC | 2026-08-01 | — |
+| Artur Tseretsian | 2026-08-01 | Ping + Gmail history still not fully swept (this run's per-run full-pass cap was used by the 5 gap clients above; deferred to a future run) |
+| Ihor Naum & Olha Levchuk | 2026-08-01 | Ping + Drive not yet swept, full Gmail history still owed (cap used this run; deferred) |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — the file was seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) — see the "Excluded — archived clients" table in `weekend-ci-sweep.md` |
 
 _Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
@@ -62,3 +62,10 @@ for all five;
 Gmail was only searched topically, around Best Broker's BTR — hence every client
 owes a one-time full Gmail pass). That catch-up run may exceed the steady-state
 per-client call bound once; that's expected._
+
+**2026-08-01 weekend sweep.** All 21 in-scope clients swept incrementally; baselines
+advanced to 2026-08-01 for all of them. Used the run's ~6-full-pass cap on the 5
+clients still owing a full historical Gmail pass (Atman Parts, Best Broker Realty,
+Ecoorganic USA, Kolo Florida, Pro Title Agency) — all 5 cleared. Artur Tseretsian's
+and Ihor Naum & Olha Levchuk's coverage gaps (Ping/Drive/full Gmail history) were
+**not** addressed this run (cap already spent) and remain owed for a future sweep.
