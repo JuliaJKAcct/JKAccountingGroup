@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -66,7 +66,7 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 
 ### Payroll
 - **Applies?** Yes — **Gusto**, **biweekly** (processed **Tuesday**). _(Maria's doc guide)_
-- **Process notes (→ future SOP):** the GM emails notes through the pay period (commissions, Saturday shifts, extra hours). **Tuesday morning: send one consolidated email to the GM (CC Julia)** summarizing all of it and asking if anything else is pending. Standing rules: Saturday shifts pay a fixed per-employee weekend rate; PTO logged as "day without payment" is rejected in Gusto and the hours simply removed from that period; one contractor is **skipped** until the GM says to resume; one employee is hourly (time must be approved + synced); anything extra → **Other earnings → Commissions**, extra hours → **Regular Hours**. **After each payroll, submit the contribution roster to the American Funds Simple IRA.** _(Maria's doc guide)_
+- **Process notes (→ future SOP):** the GM emails notes through the pay period (commissions, Saturday shifts, extra hours). **Tuesday morning: send one consolidated email to the GM (CC Julia)** summarizing all of it and asking if anything else is pending. Standing rules: Saturday shifts pay a fixed per-employee weekend rate; PTO logged as "day without payment" is rejected in Gusto and the hours simply removed from that period; one contractor is **skipped** until the GM says to resume; one employee is hourly (time must be approved + synced); anything extra → **Other earnings → Commissions**, extra hours → **Regular Hours**. **After each payroll, submit the contribution roster to the American Funds Simple IRA.** _(Maria's doc guide)_ Off-cycle/bonus Gusto runs also occur outside the biweekly Tuesday cycle (e.g. a bonus payroll). _(Gmail, 2026-07-23)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_. **Review model:** the client's **GM categorizes ~99%** in QBO; JK owns the **reconciliations** and supports the GM on unclear transactions (all by email, with screenshots).

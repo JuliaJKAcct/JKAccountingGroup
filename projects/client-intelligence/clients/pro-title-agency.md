@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -26,9 +26,9 @@
 - **Entity type:** Single-member LLC — disregarded entity, reported on the owner's **Schedule C** _(Double note, 2026-07-15)_
 - **Home state:** Florida (Hollywood / Broward County)
 - **Industry / what they do:** Licensed **title insurance agency** (Florida **DFS**-licensed under the Insurance Code) _(Double note, 2026-07-15)_
-- **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** BTR filing handled; income tax on the owner's **Schedule C**; bookkeeping _(QBO — confirm scope)_
-- **Fiscal year-end:** _(pending)_
+- **Primary language:** Russian (inferred — the firm has corresponded with the owner in Russian on BTR matters) _(CI log, 2026-07-30; confirmed 2026-08-01)_
+- **Our engagement (services we provide):** BTR filing handled; income tax on the owner's **Schedule C**; **quarterly bookkeeping** via QBO (Double). **No sales tax, no payroll** for this entity. _(Double client properties, 2026-08-01)_
+- **Fiscal year-end:** Calendar year (Dec 31) — standard for a disregarded single-member LLC reported on the owner's Schedule C _(inferred, 2026-08-01)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
 ## 2. Contacts

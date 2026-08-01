@@ -93,18 +93,21 @@ the actual details.
 - 2026-07-23 — Update (Lilian): the city (Treasury) sent the **pay-the-difference instructions** for the corrected Broker/Real Estate category. **Lilian paid the balance** via the city's online payment center and **replied to the city's revenue analyst with the payment confirmation** (they issue the receipt only after being notified). Amount, account number and payment reference recorded in the Double note.
 - 2026-07-23 — Update (Lilian): checked the city's **Check Application Status** page — the **City of Hollywood LBTR is Approved / Active (issued)**. Recorded the **BTR number and identifiers in a new Double note** (2026-07-23). The BTR is done; sensitive values stay in Double, the non-sensitive status is reflected here.
 - 2026-07-29 — Cross-reference (Lilian): while resolving a missing-document request on **Pro Title Agency's** BTR (App #40698, its sub-tenant at the same address), confirmed that Best Broker Realty's own landlord is **Synergy Mood LLC** — Best Broker is the master tenant, not the property owner. Noted here since it clarifies the leasing chain at 1047 Buchanan St for both clients — see [`pro-title-agency.md`](./pro-title-agency.md) §6.
+- 2026-08-01 — Weekly sweep (baseline 2026-07-20 → 2026-08-01), plus the **one-time full Gmail history pass** (coverage gap — see below). Double client properties confirmed the recurring-services picture (Tax Return Type 1065, Bookkeeping Quarterly, Sales Tax/Payroll N/A, Annual Report + Income Tax applicable, Organizer Status Completed) and the assigned bookkeeper. The full Gmail pass surfaced two historical, previously-uncaptured facts: the Sunbiz formation date (2025-04-30) and a signed Letter of Engagement (2026-02-26); it also turned up a 2026-03-14 internal note about an IRS address-update task (Form 8822-B) spanning several of the owner's entities including Best Broker — status unconfirmed, added to "still needed." A Ping org-wide search surfaced one legible excerpt (Ecoorganic review meeting, 2026-07-22) describing the realtor-subcontractor 1099 workflow — added to §4. No new BTR-SOP gap found this run (the only prior gap, SOP-2026-07-23-01, is already Applied).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Residual only: if the analyst's emailed PDF copy of the receipt hasn't arrived, save it to the client's Drive folder when it does; then calendar the **Sept 30** annual renewal. _(Double note 2026-07-23)_
+- **Unconfirmed:** a 2026-03-14 internal note asked to update Best Broker's (and several sibling entities') address with the IRS via Form 8822-B as part of an entity-cleanup pass — no confirmation found yet that this was completed for Best Broker specifically. _(Gmail, found 2026-08-01)_
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
-- [ ] Which recurring services we provide (bookkeeping? sales tax? payroll? income tax?)
+- [x] Which recurring services we provide — **confirmed 2026-08-01: BTR + quarterly bookkeeping + Form 1065 income tax; no sales tax or payroll**
 - [x] Finish the Hollywood BTR — **done: issued Approved / Active 2026-07-23** (BTR # in the Double note)
-- [ ] Where credentials live (Drive vault link)
+- [ ] Where credentials live (Drive vault link) — a Drive folder now identified (§7); confirm it's the authoritative one and note where login credentials themselves live
+- [ ] Confirm whether the 2026-03-14 IRS address-update (Form 8822-B) for Best Broker was completed
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706712](https://app.doublehq.com/close?cid=706712)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder:** [BEST BROKER REALTY LLC](https://drive.google.com/drive/folders/14hsazoQbAhlTR8FLhoq2sHpSguMvOvwG) _(found via Drive search, 2026-08-01 — other folders with the same name exist under different parents; confirm this is the authoritative one)_
 - **Related SOPs:** [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md)
