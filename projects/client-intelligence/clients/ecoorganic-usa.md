@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -27,7 +27,13 @@
 - **Home state:** Connecticut
 - **Industry / what they do:** Spray-foam insulation contractor
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper does the work; Claude acts as the **independent reviewer**. (Other services: _(pending)_)
+- **Also trades as "Ecofoam"** (domain theecofoam.com) even though legally organized
+  as ECOORGANIC USA LLC — subcontractor/vendor correspondence (e.g. insurance,
+  sub-agreements) runs under the Ecofoam name (Gmail, Jun–Jul 2026).
+- **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper
+  does the work; Claude acts as the **independent reviewer**. Also confirmed via
+  Double client properties (2026-08-01): income tax prep (1120-S), 1099 preparation,
+  sales tax filing, and annual report filing.
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -40,7 +46,14 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) |
-| Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account, so the 1120-S issues **two K-1s** _(confirmed 2026-07-30)_ |
+| Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account, so the FY2025 1120-S issues **two K-1s** _(confirmed 2026-07-30)_ |
+
+- **Ownership change effective 2026-01-01:** the second owner exited company
+  ownership — driven by a US-tax-residency requirement for S-corp shareholders
+  (a nonresident shareholder is disqualifying) — leaving the primary owner as
+  **sole owner going forward**. The FY2025 return still reflects the two-owner
+  / two-K-1 split above; from FY2026 onward expect a **single K-1**. (Source:
+  Ping meeting "Ecoorganic tax prep," 2026-07-23 — legible, direct transcript.)
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 
@@ -48,16 +61,25 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
-| Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
+| QuickBooks Online (via Double) | Bookkeeping ledger | Client's Drive folder (§7) | Managed through Double |
+| Bank feed | Reconciliation | Client's Drive folder (§7) | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen. Historically-used bank/payment accounts also include TD Bank, PayPal, and Bank of America *(Drive, 2026-08-01 — names only, no values read into the repo)* |
+| Gusto | Payroll (W-2 employees) | Client's Drive folder (§7) | Onboarded Sept 2025; the company has run actual **W-2 payroll**, not just 1099 subcontractors *(Gmail, Sept 2025–Jul 2026)* |
+| Tax1099 (Zenwork) | 1099 e-filing | Client's Drive folder (§7) | Used by the firm to e-file 1099-NEC/MISC/DIV forms *(Gmail, Feb 2026)* |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — Connecticut **OS-114 Sales and Use Tax Return**, filed
+  **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
+  *(Double client properties + activity log, confirmed 2026-08-01)*.
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — the company runs **W-2 payroll through Gusto** (onboarded
+  Sept 2025; multiple employees hired/I-9'd that month), in addition to the
+  1099-tracked subcontractor labor already documented in the SOP. Connecticut
+  employer obligations recur: **CT-941** (quarterly withholding reconciliation),
+  **W-2s/CT-W3** (annual reconciliation of withholding), and a **CTDOL /
+  ReEmployCT** (unemployment) account *(Gmail, Sept 2025–Jul 2026)*.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — this is the core engagement.
@@ -74,10 +96,22 @@ the actual details.
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** _(pending — confirm return type & who prepares)_
+- **Applies?** Yes — **1120-S** (S-corp), prepared by the firm (Julia). The
+  company also files Connecticut's **CT-1065/CT-1120SI** (Pass-Through
+  Entity/Composite Income Tax Return) — a composite return that covers a
+  nonresident shareholder's CT tax *(Gmail, CT DRS correspondence, recurring
+  since at least early 2026; ties to the nonresident-shareholder fact in §2)*.
 
 ### Licenses & other filings
-- **Applies?** _(pending)_
+- **Applies?** Yes.
+  - **Connecticut Annual Report** — due **March 31** each year, filed via the
+    CT Secretary of the State; reminders arrive through a registered-agent
+    service *(Gmail + Double property "Annual Report," confirmed 2026-08-01)*.
+  - **Workers' Compensation / General Liability insurance** — Atlantic
+    Casualty Insurance Co., placed via JMG Insurance Corp; annual policy term
+    ~April 16 – April 16. Renewal triggers an **annual GL/payroll premium
+    audit** (a remote physical auditor) that requires sending a P&L and a
+    contractor list *(Gmail, Jun–Jul 2026)*.
 
 ## 5. Key facts & quirks
 
