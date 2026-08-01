@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -48,6 +48,11 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| Business bank accounts (2 — different banks) | Operating cash | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm has signer/payment access to pay vendors from the client's account _(Google Drive, 2026-08-01)_ |
+| FPL | Electric utility for the build-out site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| City of Fort Lauderdale — utility billing | Water bill for the site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| Broward County ePermits | Building-permit applications for the park build-out | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| City of Fort Lauderdale "LauderBuild" portal | Permit-fee payment portal | n/a (firm pays via portal) | Firm pays permit fees here as part of hands-on AP _(Gmail, 2026-07-28)_ |
 
 ## 4. Obligations & recurring processes
 
@@ -73,6 +78,8 @@ the actual details.
 - **Heavier than standard bookkeeping — hands-on AP:** the firm **pays vendors** from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated AP inbox.
 - **Multi-member LLC / partnership** — issues **K-1s**; includes **nonresident / foreign partner(s)** → a 1040-NR + K-1 and an **ITIN application (CAA)** were run. Likely 3–4 partners _(count low confidence)_.
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC.
+- **Named permit-expediting vendor identified:** **East of Collins Expediting** sends recurring account statements for permit-related work; the firm forwards these to the client's AP inbox for payment as part of the hands-on AP process. _(Gmail, 2026-07-23)_
+- **Named permit-fee payment channel:** the City of Fort Lauderdale's **"LauderBuild"** portal is where the firm pays the build-out's permit fees directly. _(Gmail, 2026-07-28)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->

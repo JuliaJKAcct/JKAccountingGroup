@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** BEST BROKER REALTY LLC
-- **Entity type:** LLC
-- **Home state:** Florida (Hollywood / Broward County)
+- **Entity type:** LLC — multi-member, taxed as a **partnership (Form 1065)** _(Double client properties, 2026-08-01)_
+- **Home state:** Florida (Hollywood / Broward County) — entity formed on Sunbiz **2025-04-30** _(Sunbiz filing notice via Gmail, found in the 2026-08-01 full-history pass)_
 - **Industry / what they do:** Real estate brokerage
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** Business Tax Receipt (BTR) filing handled; other services _(pending — likely bookkeeping, confirm)_
+- **Our engagement (services we provide):** Business Tax Receipt (BTR) filing handled; **plus recurring bookkeeping (quarterly) and income tax prep (Form 1065)** — confirmed via Double client properties and a signed Letter of Engagement on file (GoProposal notice, 2026-02-26) _(2026-08-01)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -52,18 +52,20 @@ the actual details.
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** No — **N/A** _(Double client properties, 2026-08-01)_
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** No — **N/A** _(Double client properties, 2026-08-01)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Quarterly** _(Double client properties, 2026-08-01)_. Assigned staff: **Liudmyla Kazannik** _(Double client properties, 2026-08-01)_.
+- **Recurring process quirk:** real-estate agents are engaged as **1099 subcontractors**, typically paid via **Zelle**. Before/alongside payment, a signed contractor agreement (with W-9) needs to be matched to the agent, and the agent's legal name + EIN entered in QuickBooks for accurate 1099 filing. A known recurring challenge is confirming whether a given realtor already has a contract on file before they're paid, and catching any new realtors paid without one. _(Ping meeting — Ecoorganic review session, 2026-07-22; legible portion of a garbled multilingual auto-transcription)_
 
 ### Income tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Form 1065** (partnership return). **Organizer Status: Completed** _(Double client properties, 2026-08-01)_.
 
 ### Licenses & other filings
+- **Florida Annual Report (Sunbiz)** — Applies? Yes, filed annually _(Double client properties, 2026-08-01)_.
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood.
 - **What & when:** Local business-license receipt; renewed annually.
 - **Our role:** The firm handled the filing.
@@ -80,6 +82,7 @@ the actual details.
 - As a real estate brokerage, the City of Hollywood BTR requires a **DBPR real-estate license** (brokerage **CQ**, ideally the qualifying broker's **BK**). The client provided it; the firm sent it to the city on **2026-07-16**.
 - Best Broker is the **master tenant** at its Hollywood, FL business location (1047 Buchanan St); **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
 - **Best Broker Realty's own landlord — the actual property owner of 1047 Buchanan St — is SYNERGY MOOD LLC.** Best Broker holds the primary/master lease directly with Synergy Mood LLC; its own City of Hollywood BTR (**Application #40663**) was filed and approved on that basis. This distinction (master tenant vs. property owner) surfaced 2026-07-29 when the city asked Pro Title Agency (Best Broker's sub-tenant) for a lease signed directly with Synergy Mood LLC — see [`pro-title-agency.md`](./pro-title-agency.md) §4/§6.
+- **The owner, Sergey Karpenko, is one of the firm's serial-entity clients** — besides Best Broker Realty, the firm manages several other companies under his ownership (e.g. Pro Title Agency LLC, which subleases and shares this location — see above). Only facts specific to Best Broker Realty itself are recorded in this file; other-entity facts belong in their own files if/when those exist. _(Double contacts + Gmail sweep, 2026-08-01)_
 
 ## 6. History & open questions
 

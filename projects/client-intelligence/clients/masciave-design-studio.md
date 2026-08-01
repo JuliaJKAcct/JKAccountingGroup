@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -49,18 +49,19 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Sales-tax portal | Filing sales tax (quarterly) | _(pending — Drive link)_ | _(jurisdiction pending)_ |
-| Payroll (automatic) | Payroll | _(pending — Drive link)_ | Provider _(pending)_ |
+| Payroll (automatic) | Payroll | _(pending — Drive link)_ | Provider: **Gusto** (AutoPilot auto-run) _(Gmail, 2026-07-21/22)_ |
+| Other recurring vendors (non-sensitive reference) | Software/services billed monthly | Recurring-expense watchlist (Drive, see §7) | Verizon (phone), Comcast/Xfinity (internet), Microsoft 365, QuickBooks Online subscription, and the owner's health plan through Florida Blue all appear on the client's recurring-payment watchlist _(Drive — Recurring Watchlist doc)_ |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Jurisdiction(s):** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** the recurring quarterly sales-tax task's due date was moved from the 1st to the **5th day** of the filing month _(Double activity log, 2026-07-20)_.
 
 ### Payroll
 - **Applies?** Yes — **automatic** _(Double)_
-- **Provider / frequency:** _(pending — confirm provider)_
+- **Provider / frequency:** **Gusto**, AutoPilot auto-run (biweekly pay periods observed) — auto-debits the client's account, no manual run needed _(Gmail, 2026-07-21/22)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
@@ -68,6 +69,7 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** (S-corporation) _(Double)_
 - **Our role:** We prepare income tax _(Double)_; **1099 preparation** included.
+- **Organizer status:** Completed _(Double client property, checked 2026-08-01)_.
 
 ### Licenses & other filings
 - **Annual report:** Yes — we handle it _(Double)_
@@ -80,6 +82,8 @@ the actual details.
 - **No QBO timesheet integration** (owner decided manual per-project entry wasn't worth it for a one-person shop).
 - The firm's chart-of-accounts grammar is described as "**Masciave/Aura-style**" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/SOP knowledge)_
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
+- **Accountable plan (S-corp status):** home-office and vehicle-mileage costs are reimbursed to the owner through a formal accountable plan rather than run as a rent/company expense — tracked in a dedicated accountable-plan workbook (Drive). _(Drive — accountable-plan workbook, 2026-07-20 sweep)_
+- Q2 2026 client-facing financial reports were delivered to the owner on schedule. _(Gmail, 2026-07-20)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -87,12 +91,14 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping, sales tax and design-studio profile). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Ping / Gmail / Double-note enrichment sweep:** established the interior-design profile (IIDA/ASID/CPTED), FL (Broward) location, Gusto payroll, FL DOR quarterly sales tax, and confirmed the accrual-books / cash-tax reporting basis from the Double note. Ping had **no indexed meetings**; facts are from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
+- 2026-08-01 — **Weekly incremental sweep (baseline 2026-07-20, inclusive):** confirmed Gusto as the payroll provider and its AutoPilot auto-run cadence from Gmail; picked up the quarterly sales-tax task's due-day change (1st → 5th) from the Double activity log; confirmed via Double's portal-contact record that the same contact is linked to both this company (706696) and the individual client (710615), resolving the prior open question about that link; found (via Drive) the client's accountable-plan workbook and recurring-expense watchlist, which name the non-sensitive recurring vendors and the accountable-plan mechanism (no dollar figures pulled in). Ping org-wide search for "Masciave" / the owner's name again returned **no legible, on-topic indexed meetings** for this client — same as the prior sweep. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — verify. _(recurring-expense review)_
 - Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket (feeds were unstable).
 - Confirm the exact **FL sales-tax county / registration**.
-- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement.
+- ~~Clarify the linked personal client (Double 710615)~~ — **resolved 2026-08-01:** Double's portal-contact record confirms the same contact carries both clientIds (706696 + 710615), i.e. it is the owner's individual 1040 engagement.
+- A **second Google Drive folder** also titled "Masciave Design Studio" (different parent folder than the one linked in §7) turned up in this sweep — confirm whether it's a duplicate/stale folder or a distinct working folder before relying on it.
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration
@@ -102,4 +108,5 @@ the actual details.
 
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1syx1fHdE1tCE0BFFsSgmPxT_QhHRdG-1)
+- **Recurring-expense watchlist (Drive):** [watchlist doc](https://docs.google.com/document/d/1zJ974hLR2p1pl1zIJT1R2WY4SwWLrX6iDguMHm4CGps/edit) — non-sensitive vendor list, no dollar figures repeated here
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

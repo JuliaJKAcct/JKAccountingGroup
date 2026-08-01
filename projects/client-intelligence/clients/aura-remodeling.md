@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,6 +84,7 @@ the actual details.
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; quarterly bookkeeping; 1099 prep; income tax not handled by us). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Gmail enrichment sweep:** established the remodeling / construction profile, likely IL (low confidence), Ukrainian language, two-owner LLC, the commingling / bank-feed / late-books challenges, and the May-2026 bookkeeper handoff. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
 - 2026-07-30 — Linked into the owner group (§7): the two principals now have an individual 1040 file, [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md). **Open conflict to resolve:** that file's Schedule C activity vs. the Form 1065 inferred here — a 1065 reaches the 1040 by K-1, not Schedule C, so one of the two readings is wrong. Also note the home-state disagreement (IL inferred here, FL implied by the related entities). Captured while building the individual file; no dedicated sweep of this client was run.
+- 2026-08-01 — **Incremental sweep (baseline 2026-07-20 → 2026-08-01), no new facts.** Double: `get_client`/`list_client_properties` unchanged from baseline; no new notes or activity-log entries on the company record since baseline; portal contacts unchanged (two "Ihor Naum" entries — a business-address contact and a personal-address one — no new contact added). Ping: no indexed meetings and no relevant semantic hits for "Aura Remodeling" or either owner name (org-wide search over 121 accessible meetings returned only unrelated noise). Gmail (`after:2026/07/20`, business name + both known addresses): only 3 internal firm-automation threads (the weekly CI-sweep email and the mid-July recurring-expense report, both already reflected here) — no direct client correspondence in the window. Drive: the client's folder link in §7 confirmed current; no new documents in the window. Owner-level check (Ihor/Olha's individual record 710637, and sibling Kolo Florida Inc 706626) turned up no notes/activity for the individual record and only Kolo-specific activity (its own tax organizer + questions) — nothing attributable to Aura. FOLLOW-UPS.md/BACKLOG.md: no Aura-specific entries beyond what's already linked. _(Ping + Double + Gmail + Drive + repo, 2026-08-01)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.
