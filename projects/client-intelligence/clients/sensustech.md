@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -78,7 +78,7 @@ doc guide** in Drive (§7) — never copied here.
 
 ## 5. Key facts & quirks
 
-- **Tech owner-group:** part of a group under the same owner/CEO — **Lumetro LLC** (ad-spend entity), **Mobilesource** (electronics), **Sensus Games LLC** (files its own return). Reports bundled with Lumetro; **keep books distinct**. _(Double, Gmail)_
+- **Tech owner-group:** part of a group under the same owner/CEO — **Lumetro LLC** (ad-spend entity), **Mobilesource** (electronics), **Sensus Games LLC** (files its own return). Reports bundled with Lumetro; **keep books distinct**. _(Double, Gmail)_ The owner also has a separate **individual (1040) Double profile** distinct from the four company records — 5 linked Double records total for the group. _(Double, 2026-08-01)_
 - **Monthly Brokerage JE** from managed-brokerage statements (via TaxDome) is the signature recurring task — JK has no live access to those accounts.
 - **Sub-CC 4800** is entered **manually** (cannot connect to QBO).
 - **Fast Uncat turnaround** — the owner resolves Uncategorized items quickly; use Uncat rather than mis-categorizing.
@@ -88,6 +88,7 @@ doc guide** in Drive (§7) — never copied here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-01 — Weekly sweep (baseline 2026-07-20, incremental). Confirmed the owner-group's 5 Double records (Sensustech, Lumetro, Mobilesource, Sensus Games + the owner's individual profile). No new Ping meetings indexed under Sensustech or the owner (still none). Gmail activity was routine Gusto AutoPilot payroll confirmations (nothing new). Found a second, newer "SENSUSTECH LLC" Drive folder (created 2026-05) alongside the original 2023 one — a duplicate to consolidate, same pattern already flagged on Lumetro. Double's activity log shows the "JK 2025 Business Tax Organizer - Sensustech" was reverted to draft by Lilian on 2026-07-31 — noted for awareness (Organizer Status property reads N/A / BK client). _(Ping, Double, Gmail, Drive)_
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 4. Sensustech*): the monthly Brokerage JE, the manual sub-CC handling, the Uncat workflow, bank-feed map, and 2 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 
@@ -96,6 +97,8 @@ doc guide** in Drive (§7) — never copied here.
 - **June reports pending** final expense categorization (external categorizer). _(Gmail, 2026-07)_
 - Confirm **home state** and a definitive primary language.
 - Reconcile the **crypto/USDT** note against the managed-brokerage statement flow.
+- **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) exists alongside the original 2023 vault folder — consolidate. _(Drive, 2026-08-01)_
+- **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft, given the Organizer Status property reads N/A (BK client). _(Double, 2026-08-01)_
 
 ### Information still needed
 - [ ] Home state; fiscal year-end
@@ -104,7 +107,7 @@ doc guide** in Drive (§7) — never copied here.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706699](https://app.doublehq.com/close?cid=706699)
-- **Google Drive folder (sensitive vault):** [SensusTech folder](https://drive.google.com/drive/folders/1w17VaDI1ylmMhbFDG6k6x-AtsskCOZaP)
+- **Google Drive folder (sensitive vault):** [SensusTech folder](https://drive.google.com/drive/folders/1w17VaDI1ylmMhbFDG6k6x-AtsskCOZaP) _(a second, newer duplicate folder also exists — see §6, to consolidate)_
 - **Maria's process guide (Drive):** [Sensustech doc guide](https://docs.google.com/document/d/1aSKtLpHRerNcdo40S4deymcYrO7QNBujez2LMGKbPkQ/edit) — full process + all credentials (sensitive; do not copy into repo)
 - **Video tutorials (Drive):** [Sensustech Tutorials](https://drive.google.com/drive/folders/1sj_uJXfeHGCT20mGrP36daIXar5JeB0k) — Bookkeeping Part 1, Bookkeeping Part 2 (Brokerage JE)
 - **Related clients:** [`lumetro.md`](./lumetro.md), [`mobilesource-corp.md`](./mobilesource-corp.md) (same tech owner group)

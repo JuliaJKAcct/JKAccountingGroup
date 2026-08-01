@@ -83,20 +83,22 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - **Split-responsibility bookkeeping** — the client's GM categorizes almost everything; JK reconciles and reviews. Communication is **email + screenshots**, not shared live work.
 - **Buyback workflow** — a buyback clearing account is zeroed with a matching Bill + Invoice; **buyback transactions repeatedly land in "Uncategorized expenses"** and must be re-mapped (a recurring pain point, strong SOP candidate). _(Gmail)_
 - **Sales-tax report is never right out of the box** — always recalculated; watch the invoice-level "see math" errors (see §4).
-- **Part of the tech owner-group** (shares a principal with SensusTech / the wider group). _(Double, Gmail)_
+- **Part of the tech owner-group** (shares a principal with SensusTech / Lumetro / **Sensus Games LLC** / the wider group). _(Double, Gmail, 2026-08-01)_
 - A **USTD deposit-tracing working file** lives in the Drive folder (large multi-month deposit-reconciliation with customer/invoice detail — sensitive; stays in Drive). _(Drive)_
+- **Crypto (USDT/stablecoin) deposits recur** and must be verified with the owner before booking — an incoming ACH/USDT deposit is sometimes not recognized by the owner and has to be traced/held pending confirmation rather than booked on receipt. Ties into the existing USDT deposit-tracing working file above. _(Gmail, 2026-07-29)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20). June 2026 close completed and reports sent (buyback miscategorizations resolved); FL DOR sales-tax audit confirmed underway (state auditor reached out, cc'd Julia); occasional off-cycle/bonus Gusto payroll runs observed; recurring USDT/crypto deposit-verification quirk confirmed; owner-group also includes **Sensus Games LLC** (Double id 710596 — no CI file yet). No new meetings found for this client in Ping for the period. _(Double, Gmail, Ping, Drive)_
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **June 2026 reports blocked** pending the client fixing miscategorized **buyback** transactions. _(Gmail)_
+- **June 2026 reports:** buyback miscategorizations were resolved and the reports were sent 2026-07-24 — this item is now closed. _(Gmail, Double activity log)_
 - **2025 business income-tax prep in progress** — reconcile the client-portal organizer state. _(Gmail)_
-- A mid-2026 **encrypted exchange with a FL DOR agent** — possible account/notice matter to watch. _(Gmail)_
+- **FL DOR sales-tax audit confirmed underway** (was: "possible account/notice matter to watch" from a mid-2026 encrypted exchange) — a Florida Dept. of Revenue tax auditor reached out (cc'ing Julia) saying they are closing prior audits and will follow up soon. Watch for further audit correspondence. _(Gmail, 2026-07-27)_
 - **Open in Maria's guide:** dispute case on file; an employee I-9 in Gusto; a credit memo; commission payments for the skipped contractor; a request to remove/adjust pending payments. _(Maria's doc guide)_
 
 ### Information still needed

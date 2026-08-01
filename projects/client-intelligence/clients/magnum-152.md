@@ -98,6 +98,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20 → 2026-08-01): Double activity log shows the **Jul-2026 monthly close checklist completed in Double** (per-account bank/CC tasks, uncategorized/duplicate-vendor checks, 1099 prep, financial reports) on 2026-07-23, and the **2025 Form 1120-S tax project moved to In Progress** with its Business Tax Organizer reverted to draft on 2026-07-31. Gmail surfaced a weekly ADP payroll cadence, a Comcast/FPL credential request to the administrative assistant, and a Davidsons (firearms/ammo distributor) vendor relationship. Ping had no legible Magnum-specific meeting content this period (org-wide semantic search returned only unrelated/garbled hits). _(Double, Gmail, Ping — 2026-08-01)_
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 1. Magnum*): full month-end process, bank-feed map, systems (Bravo / SaasAnt / ADP), store structure, and reclass checklist captured into the Operating zone (non-sensitive only; credentials/dollar figures left in Drive). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
@@ -106,6 +107,8 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **Inventory-donation tax treatment** — JK advised on the deduction at fair market value (~Jul 10–13; essentially resolved). _(Gmail)_
 - A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — confirm received. _(Gmail)_
 - **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE (waiting on info). _(Maria's doc guide)_
+- **Comcast / FPL login credentials requested** from the administrative assistant (Jul 30) so JK can verify these reclasses directly instead of relying on statements; confirm received. _(Gmail, 2026-07-30/31)_
+- **2025 Business Tax Organizer** ("JK 2025 Business Tax Organizer - Magnum 152") was reverted to draft in Double on 2026-07-31 — confirm why/whether it should be republished, since the client's Organizer Status property reads "N/A (BK client)". _(Double activity log, 2026-07-31)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group structure
