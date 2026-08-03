@@ -1,6 +1,6 @@
 # SOP: Florida Company Formation on Sunbiz (Articles of Incorporation / Organization)
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-27
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-03
 
 The procedure for **forming a company with the State of Florida** on Sunbiz
 (Division of Corporations) — the **first** step of the firm's end-to-end company
@@ -24,7 +24,55 @@ which is the immediate next step.
 > <https://dos.fl.gov/sunbiz/start-business/>. Skip third-party "formation
 > services" that mark up the state fee and insert a middleman between the client
 > and their own filing. The only money that should change hands is the state fee
-> (§5), paid to Florida.
+> (§7), paid to Florida.
+
+---
+
+## ⚠️ The name MUST carry its entity suffix — the state will never add it for you
+
+**This is the single most common reason a formation filing is rejected.** Type the
+suffix into the name field yourself, every time.
+
+| Entity | The name **must** contain | Authority |
+|---|---|---|
+| **LLC** | **"Limited Liability Company"** — or **"L.L.C."** — or **"LLC"** | [Fla. Stat. §605.0112](https://codes.findlaw.com/fl/title-xxxvi-business-organizations/fl-st-sect-605-0112/) |
+| **Profit Corporation** | **"Corporation"**, **"Company"**, **"Incorporated"** — or **Corp.** / **Co.** / **Inc.** | Fla. Stat. §607.0401 |
+
+**Sunbiz rejects a filing whose name lacks the suffix. It does not add it for you —
+and that is deliberate, not an oversight:**
+
+1. **The Articles are the organizer's signed declaration, not a document the state
+   drafts.** You sign electronically affirming the facts are true (false information
+   is a third-degree felony, Fla. Stat. §817.155). The Division **examines** what you
+   declared; it does not **author** it.
+2. **The statute allows three different spellings, and you choose which** —
+   `LLC` vs `L.L.C.` vs `Limited Liability Company`, with or without a comma
+   (*Sunshine Bakery LLC* / *Sunshine Bakery, LLC*). The state cannot guess.
+3. **The full name has to clear the distinguishability check.** Adding a suffix
+   unilaterally could collide with an entity already on file.
+
+> 🔑 **Whatever you type becomes the entity's EXACT legal name** — the string that
+> must match on the **EIN**, the **bank account**, and **every contract**. Getting it
+> right at filing is cheaper than any later fix.
+
+**If the client wants to trade under a name without the suffix** (e.g. market as
+"Sunshine Bakery"), that is legitimate — but the route is a **Fictitious Name (DBA)**
+registration under Fla. Stat. §865.09, filed *after* formation, **not** a
+suffix-less legal name. See §2.
+
+- Florida requires **publishing a legal notice in a newspaper** before registering
+  the fictitious name.
+- **A DBA gives no liability protection by itself** — it is branding. The LLC is what
+  protects. Many owners do both.
+- A fictitious name **may not end in "LLC" or "Inc."** unless it matches the actual
+  registered entity type.
+
+**Operating under a suffix-less name without a DBA is the genuinely risky case** —
+the suffix is what puts third parties on notice they are dealing with a
+limited-liability entity, so contracts signed without identifying the entity invite
+a claim that the owner contracted **personally**. Sign as the entity, always.
+
+*Rejected because of the name? Don't start over — see §5.*
 
 ---
 
@@ -46,7 +94,10 @@ flowchart TD
   D --> F["Same core screens: registered agent, addresses, correspondence email, optional effective date"]
   E --> F
   F --> G["Pay the state fee + submit — final: no edits, cancels, or refunds"]
-  G --> H["Confirm Active, save the receipt, calendar the annual report (Jan 1 to May 1)"]
+  G --> R{"Examiner accepts it? (about 2 to 5 business days)"}
+  R -- "Rejected — e.g. no LLC suffix" --> S["Correct YOUR filing: Tracking Number + PIN then 'Update Filing' — never start a new one"]
+  S --> R
+  R -- "Accepted" --> H["Confirm Active, save the receipt, calendar the annual report (Jan 1 to May 1)"]
   H --> I["Hand off to Part 2 — the federal EIN"]
 ```
 
@@ -66,8 +117,10 @@ The filing is one uninterrupted online form; gather everything first.
    whole form. See §1. (Tie to whether the client will elect **S-corp** — that
    changes nothing on the state filing but sets up Part 2 + Form 2553.)
 2. **Proposed name** — **checked for availability** on Sunbiz (must be
-   *distinguishable*; §2) and carrying the right **suffix** (Corp/Inc. for a
-   corporation).
+   *distinguishable*; §2) and **carrying the right suffix** — **LLC / L.L.C. /
+   Limited Liability Company** for an LLC, **Corp / Inc. / Incorporated / Co.** for
+   a corporation. **The state never adds it for you** (see the callout at the top);
+   decide the exact spelling now, because it becomes the entity's legal name.
 3. **Registered agent (RA)** — an individual **or** a company (not the entity
    itself) with a **Florida street address** (no PO box) who will **sign**.
 4. **Principal place of business** — a **street** address (no PO box) — and a
@@ -84,7 +137,7 @@ The filing is one uninterrupted online form; gather everything first.
 9. **Effective date** preference — immediate, or a chosen date (see the **Jan 1**
    tax tip in §2).
 10. **Payment** — credit card, debit (Visa/MC only), or a prepaid Sunbiz E-File
-    account (§5).
+    account (§7).
 
 ---
 
@@ -110,10 +163,20 @@ Both are formed on Sunbiz; the state form differs (§3 vs §4).
 
 ## 2. Before you file — shared prerequisites & rules
 
-- **Name availability.** Search Sunbiz first — the name must be **distinguishable**
-  from existing entities: <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName>.
-  A **corporation** name must include a suffix (**"Corp", "Inc.", "Incorporated",
-  "Co.",** etc.). An **LLC** name must include **"LLC" / "L.L.C."**
+- **Name availability + the suffix.** Search Sunbiz first — the name must be
+  **distinguishable** from existing entities:
+  <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName>. Search the name
+  **with the suffix already attached** ("Sunshine Bakery LLC"), because that full
+  string is what gets examined. A **corporation** name must include a suffix
+  (**"Corp", "Inc.", "Incorporated", "Co.",** etc.); an **LLC** name must include
+  **"LLC" / "L.L.C." / "Limited Liability Company"**. ⚠️ **The state never adds the
+  suffix for you** — see the callout at the top of this SOP for why, and §5 if a
+  filing was already rejected over it.
+- **Trading under a different name = a Fictitious Name (DBA), not a suffix-less
+  legal name.** Form "Sunshine Bakery LLC", then register "Sunshine Bakery" as a
+  DBA under Fla. Stat. §865.09 (a newspaper legal notice is required first). A DBA
+  is branding — it carries **no** liability protection of its own, and it may not
+  end in "LLC"/"Inc." unless it matches the real entity type. See §10 for the link.
 - **Registered agent rules.** The RA needs a **Florida street address** (PO box not
   accepted). The RA **types their name to sign**; the signature **must be an
   individual** (if a company serves as RA, a person signs for it). **An entity
@@ -132,7 +195,8 @@ Both are formed on Sunbiz; the state form differs (§3 vs §4).
 - **⛔ Submissions are final.** Per the disclaimer: once submitted, the Articles
   **cannot be changed, removed, canceled, or refunded** — review everything first.
   If a filing is **rejected**, you get a **Tracking Number + PIN** by email; use
-  the **"Correct …"** path (§3) to fix and resubmit.
+  the **"Correct …"** path to fix and resubmit **your** filing rather than starting
+  over — the full procedure is **§5**.
 - **Beneficial Ownership (BOI / FinCEN) — federal, not part of Sunbiz.** Sunbiz
   only posts a *notice* of the requirement. **Current status (verify — still being
   finalized):** under FinCEN's **March 2025 interim final rule**, entities
@@ -172,7 +236,7 @@ online filing." Two sides:
 ### 3.1 Filing Information
 - **Effective date** (optional, MM/DD/YYYY) — see the §2 Jan 1 tip.
 - **Required filing fee: $70.00.** Options: **Certificate of Status +$8.75**,
-  **Certified Copy +$8.75** (both optional — see §5).
+  **Certified Copy +$8.75** (both optional — see §7).
 - **Corporate Name** — *must include a suffix* ("Corp", "Inc.", "Incorporated",
   etc.). Confirm availability first (§2).
 - **Corporate Stock Shares** — the number of authorized shares. **Cannot be zero**
@@ -222,7 +286,7 @@ Check **"Mailing address same as principal address"** or enter a separate one.
 The corporation must file an **Annual Report between Jan 1 and May 1 every year** to
 stay **Active**; the **first** report is due Jan 1–May 1 of the **year after
 formation**; **$150** fee, **$400 late fee** after May 1; reminders go to the §3.6
-email. See §5.
+email. See §7.
 
 ### 3.10 Payment → Submit → Confirmation *(screens pending)*
 Pay by card (NIC/Tyler) or prepaid account, review, and submit. **Once submitted it
@@ -254,7 +318,113 @@ promote this from a stub to a full screen-by-screen like §3.*
 
 ---
 
-## 5. Fees & annual upkeep
+## 5. If the filing is rejected — correct it, don't start over
+
+A rejection is **not** a lost filing. Florida gives you a path back into **your own**
+submission, and using it is the difference between a small fix and paying the state
+fee a second time.
+
+> **The most common trigger is the name** — missing the `LLC` / `Corp` suffix, or a
+> name that isn't distinguishable. See the callout at the top of this SOP.
+
+### 5.1 What arrives
+
+The Division emails a **rejection notice** listing **every** reason the filing failed
+(often more than one), and it carries the two credentials you need:
+
+- **Tracking Number**
+- **PIN**
+
+⚠️ **Keep this email.** Without the Tracking Number + PIN there is no correction path
+— you would have to file from scratch and pay again.
+
+### 5.2 Your two options
+
+| Option | What it does | Cost |
+|---|---|---|
+| **A — Correct it** *(normal case)* | Reopens **your** rejected filing to fix and resubmit | See the open question in §5.5 |
+| **B — Abandon it & request a refund** | Reply to the rejection email asking for a refund, stating **to whom the check should be payable** and the **mailing address** | Refunds what you paid **minus the card processor's non-refundable convenience fee**; allow **~30 days** |
+
+### 5.3 Correcting it — the steps
+
+1. **Read the whole rejection email.** Fix **every** listed reason at once, or it
+   comes straight back.
+2. **Re-verify the corrected name on Sunbiz** — search it **with the suffix**
+   attached to confirm it is still distinguishable:
+   <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName>
+3. **Go back in through the same door:**
+   <https://dos.fl.gov/sunbiz/start-business/> → **"Start E-Filing"** → your entity
+   type (**"Limited Liability Company"** or **"Profit Corporation"**) → the
+   **"File or Correct …"** button.
+4. **⚠️ On the disclaimer screen, use the RIGHT-hand side.** This is where the
+   mistake happens — the two sides look alike and do opposite things:
+
+   | Side of the screen | What it does | Use it? |
+   |---|---|---|
+   | **File Articles …** → *Start New Filing* | A **brand-new filing from zero** — a new submission with its **own payment** | ❌ **No** |
+   | **Correct Articles …** → *Update Filing* | Reopens **your** rejected filing | ✅ **Yes** |
+
+5. **Enter the Tracking Number + PIN**, then click **"Update Filing."**
+6. **Fix the name** (add the suffix) and review the rest of the form before
+   resubmitting — submission is final again (§2).
+7. **Resubmit.**
+
+### 5.4 Don't wait
+
+Correct it promptly. Whether the Tracking Number + PIN **expire** is not documented
+on the public pages — assume the rejected filing does not wait for you indefinitely.
+
+### 5.5 ❓ Open question — verify and record here
+
+**Does resubmitting through "Correct Articles" charge the filing fee again?**
+
+- **Not confirmed.** No official Division page states it either way.
+- **Strong indication that it does not:** the Division's stated alternative to
+  correcting is to **request a refund of what you already paid**, which implies the
+  payment is held against the tracking number and applied to the corrected filing.
+  That is an inference, **not a verified fact — do not state it to a client as
+  settled.**
+- **What IS certain:** starting a **new** filing instead (the wrong side of the
+  disclaimer screen) is a new submission with its **own payment**.
+- **How to settle it:** call the Division's **Internet Access** section at
+  **850.245.6939**, or simply observe the payment screen on the next correction.
+
+> 📝 **When someone confirms this, replace this subsection with the verified answer
+> and note who confirmed it and when.**
+
+---
+
+## 6. Processing times — when the filing posts to Sunbiz
+
+- **Roughly 2–5 business days** for an online filing; most 2026 sources put it at
+  **~2–3 business days**.
+- **There is no gap between approval and visibility.** The record posts the moment an
+  examiner clears it — approved, **Active**, and searchable on Sunbiz at the same
+  time. There is no extra waiting period afterwards.
+- **Filings are worked strictly in the order received**, and **Florida offers no
+  expedited processing** for formations. There is no way to jump the line.
+- **Your "received" date is the date the card payment processed** — not the moment
+  you started filling in the form. That timestamp sets your place in the queue.
+- **Check the live queue, don't guess.** The Division publishes **daily** which
+  received-date it is currently processing, by document type:
+  → **<https://dos.fl.gov/sunbiz/document-processing-dates/>**
+  Look for **"New Florida Business Entity Filings – Submitted Online."** The gap
+  between that date and today is the real lag at that moment. *(Reference point: on
+  26 Jun 2026 it was clearing filings received 23 Jun — about 3 days.)*
+- Once approved, the **stamped Articles download free** from Sunbiz — there is no
+  return mail to wait for.
+- **An effective date overrides the approval date on the record.** If you set one
+  (the Jan 1 tip, §2), the entity posts with **that** date, not the day the examiner
+  cleared it.
+
+> ⏱️ **Tell the client the whole runway, not just this step.** Formation is 2–5
+> business days, **and then** Part 2 (the EIN) — which cannot start until the entity
+> is **Active** — adds same-day (responsible party has SSN/ITIN) or **~4 business
+> days** (fax "Foreign" path). Quote the sum.
+
+---
+
+## 7. Fees & annual upkeep
 
 | Item | Profit Corporation | LLC *(verify)* |
 |---|---|---|
@@ -272,7 +442,7 @@ promote this from a stub to a full screen-by-screen like §3.*
 
 ---
 
-## 6. After filing → next steps
+## 8. After filing → next steps
 
 1. **Save the confirmation + payment receipt** and the **filed Articles / document
    number** in the client's system (not this repo).
@@ -289,10 +459,20 @@ promote this from a stub to a full screen-by-screen like §3.*
 
 ---
 
-## 7. Common pitfalls
+## 9. Common pitfalls
 
-- **Name not distinguishable / missing suffix** → rejection. Search first; include
-  Corp/Inc. (corp) or LLC (LLC).
+- **Missing the entity suffix in the name** → **the #1 rejection reason.** The state
+  **never** adds `LLC` / `Corp` for you (see the callout at the top). Type it in
+  yourself, and search Sunbiz with the **full** name including the suffix.
+- **Assuming a rejection means starting over** → it doesn't. Keep the rejection
+  email: the **Tracking Number + PIN** reopen **your** filing (§5). Clicking *Start
+  New Filing* instead creates a second filing with its **own payment**.
+- **Fixing only one rejection reason** → the email lists them all; fix everything
+  before resubmitting or it bounces again.
+- **Promising a client a same-week company** → formation runs **~2–5 business days**
+  and the **EIN can't start until Active** (§6). Quote the combined runway.
+- **Confusing a DBA with the legal name** → a Fictitious Name is branding with **no**
+  liability protection; the entity still needs its suffix in the legal name (§2).
 - **PO box for the RA or principal address** → not accepted; use a street address.
 - **Entity listed as its own registered agent** → not allowed.
 - **Wrong/again-unmonitored correspondence email** → the client misses annual-
@@ -307,12 +487,15 @@ promote this from a stub to a full screen-by-screen like §3.*
 
 ---
 
-## 8. Contacts & links
+## 10. Contacts & links
 
 | Who | For | Link |
 |---|---|---|
 | Sunbiz — Start a Business | Entry point for all filings | <https://dos.fl.gov/sunbiz/start-business/> |
-| Sunbiz — Corporation name search | Check name is distinguishable | <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName> |
+| Sunbiz — Corporation name search | Check the **full** name (with suffix) is distinguishable | <https://search.sunbiz.org/Inquiry/CorporationSearch/ByName> |
+| **Sunbiz — Document Processing Dates** | **Which received-date the Division is clearing today** — the live queue, updated daily (§6) | <https://dos.fl.gov/sunbiz/document-processing-dates/> |
+| Division of Corporations — Internet Access | Phone support for e-filing questions (rejections, corrections, whether a correction re-charges the fee — §5.5) | **850.245.6939** |
+| Fla. Stat. §605.0112 | The statute requiring `LLC` / `L.L.C.` / `Limited Liability Company` in an LLC's name | <https://codes.findlaw.com/fl/title-xxxvi-business-organizations/fl-st-sect-605-0112/> |
 | Sunbiz — Profit Corporation e-file | Articles of Incorporation | Start E-Filing → **Profit Corporation** |
 | Sunbiz — LLC e-file | Articles of Organization | Start E-Filing → **Limited Liability Company** |
 | Sunbiz — Fictitious Name (DBA) | Operating under a different name (Fla. Stat. §865.09) | Start E-Filing → **Fictitious Name Registration** |

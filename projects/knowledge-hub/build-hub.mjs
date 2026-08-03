@@ -152,6 +152,14 @@ function mdInlineHub(s){
     if(/\.md$/i.test(label) || !label) label = 'the linked document';   // non-Hub .md → no filename shown
     return '<span class="ln">' + label + '</span>';
   });
+  // Bare autolinks — Markdown's `<https://…>` form. Without this every URL written that way
+  // (they fill the "Contacts & links" table of every SOP) reached the reader as literal
+  // "&lt;https://…&gt;" text: visible, ugly, and NOT clickable. Runs on the esc()'d string, so
+  // it can't collide with the real <a> tags the link rule above already inserted.
+  out = out.replace(/&lt;(https?:\/\/[^\s<>]+?)&gt;/g, function(m, u){
+    const href = u.replace(/&amp;/g, '&');
+    return '<a href="' + href + '" target="_blank" rel="noopener">' + u + '</a>';
+  });
   out = out.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');   // non-greedy so bold can wrap italics
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
   out = out.replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>');
@@ -203,12 +211,18 @@ function mdToAtlas(md){
       continue;
     }
     if(/^\s*\d+[.)]\s+/.test(line)){
+      // Honour the author's starting number. A table or callout between steps 4 and 5 ends the
+      // <ol> and opens a new one, which otherwise restarts the visible numbering at 1 — so a
+      // 7-step procedure reads "1,2,3,4" then "1,2,3". atlas.css numbers these with a CSS
+      // counter, so the `start` attribute alone is ignored: seed the counter inline too.
+      const startNo = parseInt(line.match(/^\s*(\d+)/)[1], 10) || 1;
       const buf = [];
       while(i<lines.length && /^\s*\d+[.)]\s+/.test(lines[i])){
         buf.push(lines[i].replace(/^\s*\d+[.)]\s+/,'')); i++;
         while(i<lines.length && /^\s{2,}\S/.test(lines[i]) && !/^\s*\d+[.)]\s+/.test(lines[i]) && !/^\s*[-*]\s+/.test(lines[i])){ buf[buf.length-1]+=' '+lines[i].trim(); i++; }
       }
-      html.push('<ol class="qlist">'+buf.map(x=>'<li>'+inl(x)+'</li>').join('')+'</ol>');
+      const att = startNo > 1 ? ' start="'+startNo+'" style="counter-reset:q '+(startNo-1)+'"' : '';
+      html.push('<ol class="qlist"'+att+'>'+buf.map(x=>'<li>'+inl(x)+'</li>').join('')+'</ol>');
       continue;
     }
     if(/^\s*[-*]\s+/.test(line)){
@@ -1059,11 +1073,12 @@ const SOP_GROUPS = [
         flowLede: `Forming a Florida company on Sunbiz (Part 1) turns on one choice — LLC or Profit Corporation. Different Articles, then the same core screens and the same finish: pay, confirm Active, calendar the annual report, hand off to Part 2 (the EIN).`,
         flow: [
           { t: `Intake & decide`, d: `Entity type, name, RA, people, payment — from the client's Business Intake Form`, ic: 'form' },
-          { t: `Check the name`, d: `Sunbiz search — distinguishable + the right suffix (LLC or Corp/Inc.)`, ic: 'search' },
+          { t: `Check the name`, d: `Sunbiz search on the FULL name — distinguishable + the suffix (LLC or Corp/Inc.) the state never adds for you`, ic: 'search' },
           { t: `Start E-Filing`, d: `Sunbiz start page → pick entity type → accept the disclaimer → new filing`, ic: 'globe' },
           { t: `Complete the Articles`, d: `Filing info, addresses, RA signs, shares/members, officers, incorporator signature`, ic: 'edit' },
           { t: `Pay the state fee & submit`, d: `Card via NIC/Tyler — submission is final: no edits, cancels, or refunds`, ic: 'pay' },
-          { t: `Confirm Active & save`, d: `Document number + receipt to the client's system — verify Active on Sunbiz`, ic: 'check' },
+          { t: `If it's rejected, correct it`, d: `Tracking Number + PIN from the email → "Update Filing" — reopen YOUR filing, never start a new one`, ic: 'refresh' },
+          { t: `Confirm Active & save`, d: `~2–5 business days, worked in order received — verify Active, save the document number + receipt`, ic: 'check' },
           { t: `Calendar & hand off`, d: `Annual report Jan 1–May 1 (first the year after) → Part 2: the federal EIN`, ic: 'refresh', k: 'done' },
         ],
         schema: {
@@ -1075,10 +1090,11 @@ const SOP_GROUPS = [
           },
           then: [
             { t: `Both paths file the <b>same core screens</b>: a <b>registered agent</b> (FL street address, no PO box — an individual types their name to sign), principal &amp; mailing address, a <b>monitored</b> correspondence email, an optional effective date (the <b>Jan 1</b> tip), then <b>pay the state fee</b> — submission is <b>final</b>.` },
+            { t: `If the Division <b>rejects</b> it — most often a name <b>missing its LLC/Corp suffix</b>, which the state never adds for you — the email carries a <b>Tracking Number + PIN</b>. Use <b>"Correct Articles"</b> to reopen <em>your</em> filing; <b>"Start New Filing"</b> is a second filing with its own payment.`, d: 'fix every listed reason at once' },
             { t: `Entity posts with a <b>document number</b> → confirm <b>Active</b>, save the receipt, <b>calendar the annual report</b> (Jan 1–May 1, first one the year after formation), then hand off to <b>Part 2 — the EIN</b>.`, k: 'done', pill: 'Active' },
           ],
         },
-        blurb: 'Form the company with the State of Florida on Sunbiz — entity choice (LLC vs Corp, the S-corp angle), shared prerequisites, the Articles screen by screen, fees and the annual-report cadence.' },
+        blurb: 'Form the company with the State of Florida on Sunbiz — the name-suffix rule the state never fills in for you, entity choice (LLC vs Corp, the S-corp angle), the Articles screen by screen, how to correct a rejected filing without starting over, processing times, fees and the annual-report cadence.' },
       { file: 'ein-application-irs.md', title: 'Federal EIN Application (SS-4)', tag: 'Part 2',
         flowLede: `Once the entity is Active on Sunbiz, the EIN forks on one question — does the responsible party have an SSN or ITIN? Online (instant) if yes; fax the SS-4 as "Foreign" if not. Both paths converge on saving the letter and the after-steps.`,
         flow: [
