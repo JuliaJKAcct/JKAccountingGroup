@@ -11,9 +11,12 @@ description: >-
   self-service browser tool, or chat), and the firm's standing rules: Julia's
   title is "Chief Accountant" (never CEO); every proposal carries a "Not Included"
   section whose defaults are personal tax preparation + historical cleanup (never
-  included); monthly proposals show ONE bundled fee and offer a bilingual RU/EN
-  layout + electronic-signature fields. Client data (names, EIN, addresses,
-  figures) is NEVER committed — the finished document is delivered to the user.
+  included); tax preparation does NOT include preparing the client's financial
+  statements (the P&L) — that is quoted separately and NEVER appears in the
+  proposal, it goes out as its own invoice with no proposal at all; monthly
+  proposals show ONE bundled fee and offer a bilingual RU/EN layout +
+  electronic-signature fields. Client data (names, EIN, addresses, figures) is
+  NEVER committed — the finished document is delivered to the user.
 ---
 
 # Proposal & Engagement-Letter Generator — the house way
@@ -128,13 +131,37 @@ company itself. This matches the firm's master template exactly.
 - **Julia's title is "Chief Accountant"** (Главный бухгалтер) — never "CEO".
 - **"Not Included" is standard on every proposal**, and its defaults are **personal tax
   preparation** and **historical cleanup / catch-up bookkeeping** — these are *never*
-  included in a proposal (Lilian, Jul 2026).
+  included in a proposal (Lilian, Jul 2026). Preparing the **financial statements** follows the
+  same logic — see the rule below — though whether it is named in the section's wording hasn't
+  been decided with Lilian yet. **Note:** none of the three generators actually renders a
+  "Not Included" section today (they carry "What's Included" only) — so this rule currently
+  lives in how we *quote*, not in the document. Raise it before relying on the section.
 - **Monthly proposals:** show **one bundled monthly fee**, never itemize bookkeeping vs.
   tax; use the premium format; offer a **bilingual RU/EN** layout (full Russian version,
   then English with the signature + binding terms in the English part, brand Cyrillic
   fonts embedded); include **visible electronic-signature fields**.
-- **Cleanup is billed separately** ($60/hr) only if needed; advisory/planning is $150/hr
-  under a separate agreement.
+- **Tax preparation does NOT include preparing the financial statements** (Lilian, Aug 2026).
+  A return runs off the company's year-end numbers — the **Profit & Loss** above all — and
+  producing those numbers is **bookkeeping, a different service**. So a tax-prep client that
+  owns a company is expected to **bring their own P&L**. When we didn't keep their books
+  during the year, the client doesn't have those numbers and neither do we.
+  - **If the client has no P&L**, the cleanup/financial-statement work is quoted **separately**,
+    at the firm's fixed cleanup rate (see **Fixed** above). _One worked example, not a default —
+    agree the cap and any advance per client:_ with Gossip Miami (Aug 2026) the client supplied
+    the bank statements and QuickBooks access, the work was capped at 10 hours, and an advance
+    invoice was issued before starting, with the balance billed against the hours actually spent.
+  - **NEVER put this quote in the tax-return proposal.** It goes out **completely separately —
+    its own invoice, and no proposal at all** for this work (Lilian, Aug 2026). Don't add it as
+    a line, an option, or an appendix to the proposal — **and don't collect the advance through
+    the letter's "Deposit to begin" toggle either**; that toggle is for the tax-prep engagement,
+    and using it would put the excluded work back inside the proposal.
+  - **A quote covers ONE entity.** If the client sends statements for **another** of their
+    entities, that entity is outside the deal quoted for the first one — outside both the P&L
+    arrangement **and** the tax-prep engagement. It needs its own quote for whatever it actually
+    needs, which is usually its own return as well as its own P&L.
+- **Cleanup is billed separately** ($60/hr) only if needed — and **never as a line inside the
+  proposal**; see the financial-statements rule above. Advisory/planning is $150/hr under a
+  separate agreement.
 - **Match Julia's master template format exactly** (Lilian, Jul 2026 — the business
   letter is the firm's daily-use document). The letterhead is **left-aligned** (logo, mono
   bronze kicker, address line, phone line, bronze rule — never centered); the letter body
@@ -196,4 +223,5 @@ the private **Odoo team site**, the tool works there behind the team login, full
 self-service. Do not put it on the public website.
 
 *Update this skill when a new document type or field is added, the fee rules change, or
-Julia/Lilian set a new standard for proposals or engagement letters.*
+Julia/Lilian set a new standard for proposals or engagement letters — including what is
+in or out of a proposal's scope, and what must be quoted outside it.*
