@@ -53,7 +53,7 @@ indexed _(2026-08-04)_.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
-| **Turo** | An income stream that likely belongs on a 2025 return — earnings and any **1099-K**. **Which return is not yet settled** (see §4) | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder**, not to us |
+| **Turo** | A **company** income stream — earnings and any **1099-K**, reported on Ecoorganic's 1120-S _(confirmed 2026-08-04)_ | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder**, not to us |
 
 ## 4. Obligations & recurring processes
 
@@ -82,14 +82,14 @@ indexed _(2026-08-04)_.
 - **Open blocker — the Turo documents (2026-08-04):** we need the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
   - **How it has to be done:** the owner calls Turo himself at the support number in §3, works through the voice menu, and asks for the **Earnings Report** and **1099-K for 2025**.
   - **Status:** Lilian called Turo 2026-08-04, established the above, and sent the owner the instructions in Russian. **Waiting on him to call and confirm he received the documents.**
-  - ⚠️ **Open question — whose account is it?** Turo would only deal with the **account holder** and refused the firm. That is ordinary identity verification and says **nothing** about whether the account is registered to ECOORGANIC USA LLC or to the owner personally — **which is still unknown.** It matters: an account and 1099-K in the owner's personal name would point at his **1040**, not the company's **1120-S**. Have him confirm the registered account name, and the name on any 1099-K, when he calls. See §6.
+  - **Whose account is it? — the company's.** The Turo account belongs to **ECOORGANIC USA LLC**, so the income and any 1099-K go on the **1120-S**, not on an owner's 1040 _(confirmed by Lilian, 2026-08-04)_. Turo's insistence on dealing with the **account holder** is identity verification of the registered user, not a statement about who owns the account — which is why the owner has to place the call even though the account is the company's.
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
 
 ## 5. Key facts & quirks
 
-- **A Turo income stream may exist alongside the insulation work** — the platform account is closed and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything about completeness in either direction until someone looks.
+- **The company has a Turo income stream alongside the insulation work** — the account is Ecoorganic's _(Lilian, 2026-08-04)_, so it belongs in the company's books and on the 1120-S. The platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks — verify before concluding the books are complete.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
 - Only **one live bank feed** (Chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed.
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
@@ -117,7 +117,7 @@ indexed _(2026-08-04)_.
   >
   > Попросите Earnings Report и форму 1099-K за 2025 год.
 
-  Note that the sent message does **not** ask Turo to email the documents to the account address — that line was in a draft and was cut — so the owner was told only to call and ask. The message-drafting lesson from the same session is now a firm-wide rule in `CLAUDE.md`. _(Source: a working session originally run in the wrong repository — `JuliaJKAcct/LilianA-T`, branch `claude/turo-artyom-message-gyvksn` — and moved here on 2026-08-04.)_
+  Lilian confirmed the same day that the **Turo account is the company's**, not the owner's personally — so the income and any 1099-K belong on Ecoorganic's 1120-S. Note that the sent message does **not** ask Turo to email the documents to the account address — that line was in a draft and was cut — so the owner was told only to call and ask. The message-drafting lesson from the same session is now a firm-wide rule in `CLAUDE.md`. _(Source: a working session originally run in the wrong repository — `JuliaJKAcct/LilianA-T`, branch `claude/turo-artyom-message-gyvksn` — and moved here on 2026-08-04.)_
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
   (Lilian). Two notes on the Double tracking: `Tax Return Status = Not Started` is **stale**, while
   the blank `Organizer Status` is **correct** — as a bookkeeping client no company organizer is owed
@@ -132,12 +132,12 @@ indexed _(2026-08-04)_.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Waiting on the owner to call Turo** (number and key sequence in §3) and confirm he received the **2025 Earnings Report and 1099-K**. Idea if he can't get through, **not yet raised with Turo**: ask what a written authorization from the account holder would let them release to us.
-- **Establish whose account it is before the documents go on any return.** Unknown today — Turo's refusal to deal with us proves only that we're not the account holder. Ask the owner for the registered account name and the name on any 1099-K; that decides 1120-S vs his 1040.
+- **Check whether the Turo payouts are already in the books.** The account is the company's, so the income belongs in Ecoorganic's ledger — but nobody has yet confirmed whether those deposits landed in the Chase feed and were categorised, or are missing entirely (§5).
 - Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
 
 ### Information still needed
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
-- [ ] Whether the **Turo account is registered to the company or to the owner personally**, and for which years it produced income — this decides which return reports it (§4)
+- [ ] For which years the Turo account produced income _(whose account it is: answered 2026-08-04 — the company's)_
 - [ ] Whether a **1099-K was actually issued** for 2025
 - [ ] Sales tax / payroll applicability and who prepares each _(income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [ ] Any business licenses / annual filings
