@@ -110,9 +110,12 @@ recorded for history and because the Florida RT matter at the end is still open.
 
 #### The DOR's recommended fix (2026-08-04)
 
+⚠️ **This WAS the plan of record until Julia's objection below (2026-08-04) — read the next
+block before acting on any of it.** What the agency recommended still stands as the agency's
+view; whether the firm takes that route is now open.
+
 Lilian called the DOR. **The agency's own recommendation supersedes Gusto's suggestion to
-file $0 returns** — this is the plan of record. **Nothing has been agreed with the agency
-yet**: this is what the representative recommended on the phone. The POA has not processed,
+file $0 returns.** **Nothing has been agreed with the agency yet**: this is what the representative recommended on the phone. The POA has not processed,
 the closure has not been requested, and the DOR has not accepted anything.
 
 - **Close the RT account retroactively, back to its inception.** Per the DOR, closing the
@@ -131,9 +134,10 @@ the closure has not been requested, and the DOR has not accepted anything.
   **request** that the account be reopened **without being issued a new number** — a right to ask,
   not an automatic reinstatement, and nothing was said about whether reopening carries a fee. So
   closing now should not cost Tsminibears its RT number if it ever hires.
-- **Do NOT simply file $0 returns.** The DOR was explicit: if the account is left open and the
-  missing quarters are just filed at zero, **penalties and fees for late filing still apply**.
-  Filing the zeros is the expensive path; closing the account is the free one.
+- **Filing the $0 returns is the more expensive route.** The DOR was explicit: if the account is
+  left open and the missing quarters are just filed at zero, **penalties and fees for late filing
+  still apply**. Closing is the free one — **but that cost is exactly what Julia now wants
+  quantified before choosing**, because cheapest is not the only criterion here (see below).
 - **Blocked on the POA.** Lilian **sent the power of attorney to the DOR on 2026-08-04**; it takes
   **3–4 days to process**. Only once it clears can she call back and request the closure — target
   callback **Fri 2026-08-07 at the earliest, or Mon 2026-08-10 if the 3–4 days are business days**
@@ -145,11 +149,31 @@ the closure has not been requested, and the DOR has not accepted anything.
   on POA processing. Still no contact from Gusto since 2026-06-09. The client reports **another
   notice** from the Florida DOR — **still not seen by the firm** _(client, via Lilian, 2026-07-30)_.
 
+#### ⚠️ Closing may be the wrong answer here — Julia's objection (2026-08-04)
+
+The DOR's recommendation is the cheapest route, but **it is not obviously the right one for this
+company, and the decision is now Julia's, not settled.**
+
+- **Tsminibears is an S-corp.** Julia's concern is keeping the **S-corp status**, which in practice
+  means being able to run **payroll** — and Florida payroll needs an RT account. _("Reasonable
+  salary" is this file's gloss on her point, not her words.)_
+- **Closing the account could block the next accountant from running payroll this year.** Reopening
+  can be *requested* for two years with the same number, but it is **not automatic** and takes time.
+  If the new accountants decide to run payroll in the current year to protect the S-corp position,
+  a closed account is in their way _(Julia, via Lilian, 2026-08-04)_.
+- **So Julia wants the price of the other route before deciding:** what would it cost to simply
+  **file the $0 returns for all the open periods** and pay the resulting penalties and fees? She
+  will weigh that against closing once she has the number. **Getting that estimate is the open
+  task** — see §6.
+- Note the tension with §5: the firm-wide lesson "close, don't file the late zeros" is about the
+  *cheapest* outcome. It does not survive contact with an entity that still needs the account.
+
 ## 5. Key facts & quirks
 
 - **The lesson to carry to other clients: registering a state RT number in Gusto does NOT get $0 returns filed.** Gusto files only from the **first check date** — the first payroll actually processed on its platform. Until then it files nothing at all, not even zero returns, even though the RT account number sits in the Gusto account. _(Basis: one Gusto Tax Resolution reply on one case, 2026-06-09 — confirm with Gusto before relying on it firm-wide, but treat any client with a registered RT account and no payroll yet as potentially exposed.)_
 - **Registering the state RT account starts the clock.** Florida sets an **effective date** at registration and expects quarterly reports from that quarter on, whether or not wages are ever paid. Register the RT account only when payroll is genuinely about to start — and once it **is** open, file the $0 returns **on time**; the obligation doesn't wait for wages, and it's *late* zeros that draw the penalty.
-- **The fix for an RT account opened too early is to CLOSE it retroactively — not to catch up on the zeros.** Per the Florida DOR _(2026-08-04)_: closing the account back to its inception **avoids all penalties and fees**, while leaving it open and filing the missed quarters at $0 **still incurs late-filing penalties and fees**. The instinct to "just file the zeros and catch up" is the expensive one. Closing is also largely **reversible** — the company can **request** reopening **with the same number** for **two years** afterwards. _(This supersedes Gusto's suggestion that the agency can help file the $0 returns — that route was never the cheap one. **Basis: one phone call with one DOR representative, 2026-08-04** — same caution as the Gusto lesson above: treat it as the working rule, but confirm on the next case rather than quoting it to a client as settled agency policy.)_
+- **The CHEAPEST fix for an RT account opened too early is to close it retroactively — but cheapest is not always right.** Per the Florida DOR _(2026-08-04)_: closing the account back to its inception **avoids all penalties and fees**, while leaving it open and filing the missed quarters at $0 **still incurs late-filing penalties and fees**. Closing is also largely **reversible** — the company can **request** reopening **with the same number** for **two years** afterwards. _(This supersedes Gusto's suggestion that the agency can help file the $0 returns. **Basis: one phone call with one DOR representative, 2026-08-04** — same caution as the Gusto lesson above: treat it as the working rule, not as settled agency policy to quote to a client.)_
+  - **Before recommending closure, ask what the client loses by not having the account.** Payroll needs an RT account, so an entity that may have to run payroll — an **S-corp** protecting its status, say — can be hurt by a closure at the wrong moment: reopening the same number is only a *request*, and registering afresh takes its own time. **Weigh the penalty against that**, and let whoever owns the relationship decide; don't optimise for the smaller invoice by default _(Julia, Aug 2026, on Tsminibears)_.
 - **Acting on a Florida DOR account needs a POA on file, and that takes 3–4 days.** The agency will not take the instruction until the power of attorney is processed. Send the POA first and build the wait into the plan — the substantive call is a **second** call, several days after the first. _(Basis: the same 2026-08-04 call.)_
 - **Watch out — Gusto sent two contradictory messages on the same day (2026-06-09).** At 14:02 UTC the Tax Resolution Team wrote that the case was assigned to a specialist, that there was "no immediate action needed on your part", and that a confirmation email would follow once resolved. At 16:01 UTC the specialist wrote the opposite — Gusto will not file, call the state yourself. **The second message is the operative one.** The first reads as a commitment and is easy to wait on forever; nothing further ever arrived.
 - **Commingling / documentation quirks from the bookkeeping years:** payments to subcontractors in Ukraine were made from business debit cards and posted as retail-store transactions (Western Union at the counter); a home-office deduction was used instead of a personal rent write-off. _(Gmail, 2025 year-end close)_
@@ -174,11 +198,17 @@ All times below are **UTC** unless marked otherwise.
 - _(2026-07-30, Lilian)_ — Reviewed the whole thread. **No contact from Gusto since 2026-06-09** and no confirmation of resolution — verified across inbox, sent and archive. The promised confirmation email never came. Lilian had **not seen Jeffrey's 16:01 message** (it landed in the main inbox two hours after the "no action needed" one), which is why the DOR call had not been made. **Lilian will now call the Florida DOR.** File created to preserve the record.
 - _(2026-07-30, Lilian)_ — Confirmed the ownership question: Tsminibears is **no longer our client**, which is why Double is archived — but the penalty arose **while it was**, so **the firm is responsible for resolving it**. Recorded so nobody later closes the matter on the grounds that the client left.
 - _(2026-08-04, Lilian)_ — **Called the Florida DOR — the agency recommended a resolution path** (recommended, not agreed: nothing has been requested or accepted yet). Its recommendation: **close the RT account retroactively to May 2025**, which **avoids all penalties and fees**; the company can then **request** reopening **without a new number** for **2 years**. The agency also warned that **leaving the account open and filing the missing $0 returns would still incur late-filing penalties and fees** — so the zero-return route Gusto pointed to was never the cheap one. Lilian **sent the POA** to the DOR the same day; it needs **3–4 days** to process before she can call back and request the closure. Reported to Julia by WhatsApp and recorded here. _(Full detail in §4; the firm-wide lesson in §5.)_
+- _(2026-08-04, Julia via Lilian)_ — **Julia is not sold on closing the account, because Tsminibears is an S-corp.** Keeping S-corp status may require running **payroll** this year, and payroll needs an **open RT account** — so a closed account could block the new accountants. She asked for **an estimate of what it would cost to file the $0 returns for all the open periods** — penalties plus fees — and will choose between the two routes once she has that number. The closure is **on hold** pending her decision. _(Detail in §4; the estimate task in Outstanding items.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
-- **NEXT ACTION — Lilian calls the Florida DOR back at (850) 488-6800 once the POA has processed** (sent 2026-08-04, 3–4 days → on or after ~2026-08-07/08) and **requests the closure of the RT account effective May 2025**, its inception. This is the whole fix; everything below is secondary.
+- **NEXT ACTION — price the "file the $0 returns" route, for Julia's decision** _(Julia, 2026-08-04)_. She needs the total penalties + fees for filing zero returns across **all** the open periods before choosing between that and closing the account. How to get it:
+  - **Ask the DOR to total it on the callback.** They can quote both scenarios, and only they know what has already been assessed. This is the authoritative number — get it from them rather than computing it.
+  - **Read the assessed amount off the notices** we already have (kept in the notices, not here), and get the **new notice** from the client, which may add quarters.
+  - **Scope the periods.** If the effective date is May 2025 and the account is still open, the delinquent quarters run from **Q2 2025 through the last closed quarter** — not just the Q2/Q3 2025 on the first notice. Confirm the list with the agency.
+  - **Mechanism (UNVERIFIED — do not quote to Julia or the client as fact):** web-search summaries of the **RT-6N** (Employer's Quarterly Report instructions) and of **s. 443.141, F.S.** describe a late-filing penalty of **$25 per report for each 30 days or fraction** it is delinquent, and interest at a floating rate on **tax due** — with zero wages there is no tax, so interest should be immaterial, though that last step is our inference. **Whether the $25 accrual is capped is unknown.** The official Florida DOR, flrules and statute pages **all blocked automated retrieval (HTTP 403) on 2026-08-04**, so nothing was read first-hand — this is search-result summary only. Verify with the agency before it reaches a decision.
+- **Then: the closure is ON HOLD until Julia decides.** Do not request it in the meantime — see §4. If she chooses closure, the next action reverts to: call **(850) 488-6800** once the POA has processed (sent 2026-08-04, 3–4 days → Fri 2026-08-07 at the earliest, Mon 2026-08-10 if business days) and request the closure effective **May 2025**.
 - **Confirm on that call that the closure clears the already-assessed penalties** for Q2 + Q3 2025, and not just future quarters. The DOR said closing from the beginning avoids all penalties and fees — get that confirmed against the existing notice specifically, and ask for written confirmation of the closure.
 - **A penalty waiver is now the fallback, not the plan.** Only pursue it if the retroactive closure turns out not to abate the assessed penalties.
 - Obtain the **new DOR notice** from the client and confirm which quarters it covers — if it names a quarter after Q3 2025, the RT account is still active and accruing, and the closure needs to sweep those quarters too.

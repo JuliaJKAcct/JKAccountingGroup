@@ -37,6 +37,7 @@ list grows.
 | Atman Parts | 2026-07-20 | Gmail history not yet fully swept |
 | BEST BROKER REALTY LLC | 2026-07-20 | Gmail history not yet fully swept (only the BTR threads were searched) |
 | ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
+| GOSSIP MIAMI LLC | 2026-08-04 | **Ping and Drive never swept, and Gmail only searched for this client's own threads.** The file was seeded from Lilian's briefing plus a targeted Gmail search; a full historical sweep is still owed |
 | Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
 | Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
 | NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
