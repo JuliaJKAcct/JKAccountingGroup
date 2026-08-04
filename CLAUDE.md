@@ -159,6 +159,24 @@ in that folder.
   are not fully sure what she means, stop and ask a clarifying question instead of
   assuming** — she has explicitly asked to be asked. (This rides on top of the rule
   above: still follow whichever language she actually writes in.)
+- **Drafting a message to a client: CORRECT the draft, don't rewrite it.** When Julia or
+  Lilian hands you a draft to fix, translate, or shorten — typically a Russian message to
+  a client — the deliverable is **their** message with the mistakes repaired: their
+  sentences, their order of ideas, minimally edited. Returning a cleaner text of your own
+  is the wrong answer even when it reads better.
+  - **"Shorter" means fewer of YOUR words, not fewer of theirs.** Cut what you added —
+    clarifications, conditionals ("if one was issued"), unsolicited advice, repetitions,
+    explanations of *why*, and context the client already knows. **Never** cut the greeting
+    and courtesy (in a client message that isn't filler, it's the relationship), the
+    sentence showing the firm **already tried** (it justifies asking the client to do the
+    work), their phrasing, or the actionable data.
+  - **Format for a phone screen:** a phone number or code goes on **its own line with a
+    label**, never inside a sentence — on a phone it's then tappable. One idea per block,
+    separated by a blank line. Keep document names in **English, capitalized** (Earnings
+    Report, 1099-K) when the client will have to say them out loud to someone.
+  - _(Lilian, Aug 2026, from the Ecoorganic/Turo message: the first "shortened" version came
+    back **longer** than the assistant's — because she had cut the assistant's additions and
+    kept her own text. The word count was never the problem.)_
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
