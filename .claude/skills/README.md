@@ -32,7 +32,7 @@ The one-liners below are just the "when to reach for it."
 
 | Skill | Reach for it when… |
 |---|---|
-| [`proposal-generator`](./proposal-generator/) | Creating a client-ready **proposal or engagement letter** — the in-house GoProposal replacement. Business tax-prep engagement letters go through the **interactive generator tool** (starts blank, validates every field); also covers the individual (1040) letter and the monthly-retainer proposal (one bundled fee, bilingual RU/EN, e-signature). *(Encodes the per-client field list + auto-derived return/Form-8879/due-date logic; client data never committed.)* |
+| [`proposal-generator`](./proposal-generator/) | Creating a client-ready **proposal or engagement letter** — the in-house GoProposal replacement. Business tax-prep engagement letters go through the **interactive generator tool** (starts blank, validates every field); also covers the individual (1040) letter and the monthly-retainer proposal (one bundled fee, bilingual RU/EN, e-signature). Also holds what a proposal's scope **excludes** — notably that preparing the client's financial statements (the P&L) is not part of tax prep and is quoted **outside** the proposal, as its own invoice. *(Encodes the per-client field list + auto-derived return/Form-8879/due-date logic; client data never committed.)* |
 
 ## SOPs & firm knowledge
 
