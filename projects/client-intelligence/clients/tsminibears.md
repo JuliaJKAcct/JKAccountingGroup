@@ -1,6 +1,6 @@
 # Tsminibears LLC
 
-> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-07-30
+> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-04
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -57,7 +57,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online | Bookkeeping ledger | _(pending — Drive link)_ | Subscription lapsed Dec 2025; client asked to restore |
 | **Gusto** | Payroll platform — the company's **Florida RT account number is registered here**, but **no payroll was ever run** | _(n/a — firm login)_ | See §4 and §5 — this is the crux of the open matter |
-| Florida DOR (reemployment tax) | RT-6 quarterly reemployment tax returns | _(pending — Drive link)_ | Agency phone **(850) 488-6800** |
+| Florida DOR (reemployment tax) | RT-6 quarterly reemployment tax returns | _(pending — Drive link)_ | Agency phone **(850) 488-6800**. A **power of attorney was sent to the DOR 2026-08-04** so the firm can act on the account — see §4 |
 | Shopify · Etsy · PayPal | Sales channels reconciled in the books | _(pending — Drive link)_ | Also Shopify Capital |
 
 ## 4. Obligations & recurring processes
@@ -105,14 +105,52 @@ recorded for history and because the Florida RT matter at the end is still open.
 - **Whose problem it is:** **the firm's.** The penalty periods and the Gusto setup that caused them fall inside our engagement, so the relationship ending does not hand this to the departed client _(Lilian, 2026-07-30)_.
 - **Why it happened (per Gusto):** the company's Florida RT account carries an **effective date of Q2 2025**, so the state expects wage reports from that quarter onward. Gusto did not file because Tsminibears **never had a "first check date"** in Gusto — no payroll was ever run — and Gusto cannot file or remit for any period before its first active tax period. _(Gusto Tax Resolution, 2026-06-09. Who registered the account and when is unconfirmed — see §6.)_
 - **Gusto's position:** this must be **resolved outside of Gusto**. Account maintenance (opening, closing, updating) is the company's responsibility; Gusto is not notified by the agency and has no legal capability to change the account.
-- **What Gusto says to do:** call the **Florida Department of Revenue at (850) 488-6800**, explain the company has **paid no Florida wages to date**, and ask the agency to (a) **update the account's effective date** to the first quarter wages will actually be paid, or (b) advise whether the account should be **deactivated** and reactivated later. If the effective date cannot be changed, the agency can help file **$0 returns** for the earlier quarters.
-- **Penalties and interest remain the company's responsibility** as far as the agency is concerned. A **penalty waiver** can be requested directly from the agency.
-- **Status as of 2026-07-30:** unresolved, and no contact from Gusto since 2026-06-09. The client reports **another notice** from the Florida DOR — **not yet seen by the firm** _(client, via Lilian, 2026-07-30)_. Lilian is placing the call to the DOR.
+- **What Gusto says to do:** call the **Florida Department of Revenue at (850) 488-6800**, explain the company has **paid no Florida wages to date**, and ask the agency to (a) **update the account's effective date** to the first quarter wages will actually be paid, or (b) advise whether the account should be **deactivated** and reactivated later. If the effective date cannot be changed, the agency can help file **$0 returns** for the earlier quarters. _(Gusto's read, 2026-06-09 — **SUPERSEDED**: the DOR's own answer was to close the account instead. See "The DOR's recommended fix" below before acting on this bullet.)_
+- **Penalties and interest remain the company's responsibility** as far as the agency is concerned. A **penalty waiver** can be requested directly from the agency. _(Gusto's read, 2026-06-09 — **SUPERSEDED as the plan**: the waiver is now only the fallback if the closure does not clear the assessed penalties. See below.)_
+
+#### The DOR's recommended fix (2026-08-04)
+
+Lilian called the DOR. **The agency's own recommendation supersedes Gusto's suggestion to
+file $0 returns** — this is the plan of record. **Nothing has been agreed with the agency
+yet**: this is what the representative recommended on the phone. The POA has not processed,
+the closure has not been requested, and the DOR has not accepted anything.
+
+- **Close the RT account retroactively, back to its inception.** Per the DOR, closing the
+  account from the beginning **avoids all penalties and fees**. This is the route the agency
+  recommended as the best solution.
+- **The closure must run back to 05.2025 — May 2025.** _(Lilian, 2026-08-04. Note: first reported
+  as 05.**2026** and corrected the same day to May 2025 — re-verify the date against the DOR's own
+  account record on the callback before instructing the closure.)_ It reconciles with the rest of
+  the record: May 2025 falls in **Q2 2025**, the effective date Gusto reported, and Q2 2025 is the
+  first of the two quarters the DOR assessed — so the closure **should** reach both penalty
+  quarters. _(That last step is the firm's own reconciliation, not something the DOR stated. The
+  DOR said closing avoids all penalties and fees; whether that abates the **already-assessed**
+  penalties on the existing notice is unconfirmed — see §6.)_ Whether May 2025 is also the date
+  the account was **registered** is inferred, not established.
+- **Reopening can be requested for 2 years.** After the closure the company has **two years** to
+  **request** that the account be reopened **without being issued a new number** — a right to ask,
+  not an automatic reinstatement, and nothing was said about whether reopening carries a fee. So
+  closing now should not cost Tsminibears its RT number if it ever hires.
+- **Do NOT simply file $0 returns.** The DOR was explicit: if the account is left open and the
+  missing quarters are just filed at zero, **penalties and fees for late filing still apply**.
+  Filing the zeros is the expensive path; closing the account is the free one.
+- **Blocked on the POA.** Lilian **sent the power of attorney to the DOR on 2026-08-04**; it takes
+  **3–4 days to process**. Only once it clears can she call back and request the closure — target
+  callback **Fri 2026-08-07 at the earliest, or Mon 2026-08-10 if the 3–4 days are business days**
+  _(derived: the DOR quoted a duration, not a date, and whether it meant calendar or business days
+  was not established. 2026-08-04 was a Tuesday, so the naive +4 lands on Saturday the 8th, when the
+  agency is closed.)_
+- **Status as of 2026-08-04:** we know what to ask for, but **nothing is resolved and nothing is
+  agreed** — the closure still has to be requested, and the agency still has to accept it. Waiting
+  on POA processing. Still no contact from Gusto since 2026-06-09. The client reports **another
+  notice** from the Florida DOR — **still not seen by the firm** _(client, via Lilian, 2026-07-30)_.
 
 ## 5. Key facts & quirks
 
 - **The lesson to carry to other clients: registering a state RT number in Gusto does NOT get $0 returns filed.** Gusto files only from the **first check date** — the first payroll actually processed on its platform. Until then it files nothing at all, not even zero returns, even though the RT account number sits in the Gusto account. _(Basis: one Gusto Tax Resolution reply on one case, 2026-06-09 — confirm with Gusto before relying on it firm-wide, but treat any client with a registered RT account and no payroll yet as potentially exposed.)_
-- **Registering the state RT account starts the clock.** Florida sets an **effective date** at registration and expects quarterly reports from that quarter on, whether or not wages are ever paid. Register the RT account only when payroll is genuinely about to start — or be ready to file $0 returns by hand.
+- **Registering the state RT account starts the clock.** Florida sets an **effective date** at registration and expects quarterly reports from that quarter on, whether or not wages are ever paid. Register the RT account only when payroll is genuinely about to start — and once it **is** open, file the $0 returns **on time**; the obligation doesn't wait for wages, and it's *late* zeros that draw the penalty.
+- **The fix for an RT account opened too early is to CLOSE it retroactively — not to catch up on the zeros.** Per the Florida DOR _(2026-08-04)_: closing the account back to its inception **avoids all penalties and fees**, while leaving it open and filing the missed quarters at $0 **still incurs late-filing penalties and fees**. The instinct to "just file the zeros and catch up" is the expensive one. Closing is also largely **reversible** — the company can **request** reopening **with the same number** for **two years** afterwards. _(This supersedes Gusto's suggestion that the agency can help file the $0 returns — that route was never the cheap one. **Basis: one phone call with one DOR representative, 2026-08-04** — same caution as the Gusto lesson above: treat it as the working rule, but confirm on the next case rather than quoting it to a client as settled agency policy.)_
+- **Acting on a Florida DOR account needs a POA on file, and that takes 3–4 days.** The agency will not take the instruction until the power of attorney is processed. Send the POA first and build the wait into the plan — the substantive call is a **second** call, several days after the first. _(Basis: the same 2026-08-04 call.)_
 - **Watch out — Gusto sent two contradictory messages on the same day (2026-06-09).** At 14:02 UTC the Tax Resolution Team wrote that the case was assigned to a specialist, that there was "no immediate action needed on your part", and that a confirmation email would follow once resolved. At 16:01 UTC the specialist wrote the opposite — Gusto will not file, call the state yourself. **The second message is the operative one.** The first reads as a commitment and is easy to wait on forever; nothing further ever arrived.
 - **Commingling / documentation quirks from the bookkeeping years:** payments to subcontractors in Ukraine were made from business debit cards and posted as retail-store transactions (Western Union at the counter); a home-office deduction was used instead of a personal rent write-off. _(Gmail, 2025 year-end close)_
 
@@ -135,19 +173,24 @@ All times below are **UTC** unless marked otherwise.
 - _(2026-06-09, 16:01)_ — **Jeffrey (Gusto Tax Resolution) — the substantive answer** (attachment "RT notice.jpeg"): Gusto will not file for Q2/Q3 2025 because there is no first check date; the matter must be resolved directly with the Florida DOR at (850) 488-6800. Full content captured in §4. _(Gmail)_
 - _(2026-07-30, Lilian)_ — Reviewed the whole thread. **No contact from Gusto since 2026-06-09** and no confirmation of resolution — verified across inbox, sent and archive. The promised confirmation email never came. Lilian had **not seen Jeffrey's 16:01 message** (it landed in the main inbox two hours after the "no action needed" one), which is why the DOR call had not been made. **Lilian will now call the Florida DOR.** File created to preserve the record.
 - _(2026-07-30, Lilian)_ — Confirmed the ownership question: Tsminibears is **no longer our client**, which is why Double is archived — but the penalty arose **while it was**, so **the firm is responsible for resolving it**. Recorded so nobody later closes the matter on the grounds that the client left.
+- _(2026-08-04, Lilian)_ — **Called the Florida DOR — the agency recommended a resolution path** (recommended, not agreed: nothing has been requested or accepted yet). Its recommendation: **close the RT account retroactively to May 2025**, which **avoids all penalties and fees**; the company can then **request** reopening **without a new number** for **2 years**. The agency also warned that **leaving the account open and filing the missing $0 returns would still incur late-filing penalties and fees** — so the zero-return route Gusto pointed to was never the cheap one. Lilian **sent the POA** to the DOR the same day; it needs **3–4 days** to process before she can call back and request the closure. Reported to Julia by WhatsApp and recorded here. _(Full detail in §4; the firm-wide lesson in §5.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
-- **Lilian to call the Florida DOR at (850) 488-6800** — explain no Florida wages have been paid; ask to correct the account's effective date or deactivate the RT account, or file $0 returns for the open quarters.
-- Request a **penalty waiver** from the agency for the assessed penalties.
-- Obtain the **new DOR notice** from the client and confirm which quarters it covers — if it names a quarter after Q3 2025, the RT account is still active and accruing.
-- Decide whether to press Gusto in writing for (a) the status of case #43016275, (b) which quarter Gusto accepts filing responsibility from, and (c) a written statement that it did not file Q2/Q3 2025 — that statement is useful evidence for the DOR penalty-waiver request.
+- **NEXT ACTION — Lilian calls the Florida DOR back at (850) 488-6800 once the POA has processed** (sent 2026-08-04, 3–4 days → on or after ~2026-08-07/08) and **requests the closure of the RT account effective May 2025**, its inception. This is the whole fix; everything below is secondary.
+- **Confirm on that call that the closure clears the already-assessed penalties** for Q2 + Q3 2025, and not just future quarters. The DOR said closing from the beginning avoids all penalties and fees — get that confirmed against the existing notice specifically, and ask for written confirmation of the closure.
+- **A penalty waiver is now the fallback, not the plan.** Only pursue it if the retroactive closure turns out not to abate the assessed penalties.
+- Obtain the **new DOR notice** from the client and confirm which quarters it covers — if it names a quarter after Q3 2025, the RT account is still active and accruing, and the closure needs to sweep those quarters too.
+- **Tell the client the account is being closed — BEFORE the closure call, not after.** Tsminibears is a former client and the firm would be acting under POA; closing the RT account is a real change to their state registrations (reopening can be *requested* for 2 years with the same number, but it is not automatic). Get their acknowledgement first.
+- Decide whether to press Gusto in writing for (a) the status of case #43016275, (b) which quarter Gusto accepts filing responsibility from, and (c) a written statement that it did not file Q2/Q3 2025 — now only worth the effort if the closure route fails and the waiver becomes necessary.
 
 ### Information still needed
 
 - [ ] Which quarters the **new** Florida DOR notice covers, and the assessed amount (kept in the notice, not here).
-- [ ] Whether the RT account was registered by the firm or by the client, and on what date — this determines who set the Q2 2025 effective date, and therefore how the penalty conversation with the agency should be framed.
+- [ ] Whether the RT account was registered by the firm or by the client, **and on what date**. May 2025 is the date the closure must run back to (§4), but that it is also the **registration** date is an inference — not established. Worth knowing so the same mistake isn't repeated.
+- [ ] **The DOR representative's name / ID and any call reference for the 2026-08-04 call.** The whole plan now rests on one verbal statement that overrides Gusto's written guidance and drives a real deregistration — capture who said it.
+- [ ] **Whether a current signed POA from the client actually covers closing the RT account** — who signed it and when. The relationship ended in June 2026; authority to act should be confirmed, not assumed.
 - [ ] Why an RT account was registered at all when Payroll is N/A and no wages were ever paid.
 - [ ] Where the client's Google Drive folder is (§7).
 
