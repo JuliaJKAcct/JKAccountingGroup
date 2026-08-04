@@ -95,6 +95,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Atman Parts | 763909 |
 | BEST BROKER REALTY LLC | 706712 |
 | ECOORGANIC USA LLC | 719473 |
+| GOSSIP MIAMI LLC | _(Double id pending)_ |
 | Kolo Florida Inc | 706626 |
 | Pro Title Agency | 706716 |
 | NEVER GIVE UP KK LLC | 742803 |
@@ -160,6 +161,7 @@ CLIENTS (name -> Double id):
 - Atman Parts -> 763909
 - BEST BROKER REALTY LLC -> 706712
 - ECOORGANIC USA LLC -> 719473
+- GOSSIP MIAMI LLC -> (Double id pending)
 - Kolo Florida Inc -> 706626
 - Pro Title Agency -> 706716
 - NEVER GIVE UP KK LLC -> 742803

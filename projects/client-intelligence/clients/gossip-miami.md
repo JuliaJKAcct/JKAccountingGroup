@@ -21,19 +21,19 @@
 
 > **This file covers a family relationship, not just one entity.** The engagement
 > spans **Gossip Miami LLC** (the business return), the owners' **joint individual
-> return**, and **Marat Boxing LLC** (a disregarded LLC reported on that joint
-> return's Schedule C). They are handled together because the returns feed each
+> return**, and **Marat Boxing LLC** (reported on a Schedule C of that return, not
+> as a return of its own). They are handled together because they feed each
 > other. Split into separate files if any of them grows its own body of process.
 
 ## 1. Snapshot
 
 - **Business name:** GOSSIP MIAMI LLC
-- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence discusses **partners and K-1s**, which fits a partnership (1065). Both produce K-1s, so the correspondence alone doesn't decide it. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
+- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
 - **Home state:** Florida
-- **Industry / what they do:** Beauty salon — Biscayne Boulevard, Miami; bookings run through **Vagaro**.
+- **Industry / what they do:** A **beauty salon** in Miami — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. The street address stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
 - **Our engagement (services we provide):** **Tax preparation only.** The firm was **not** the bookkeeper during the year. Covers the Gossip Miami business return, the owners' **joint 1040**, and the **Schedule C** for Marat Boxing LLC.
-- **Fiscal year-end:** December 31
+- **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online — the firm was **invited as a user on 2026-07-29** specifically to build the financial statements (§4), not to keep the books.
 
 ## 2. Contacts
@@ -44,11 +44,12 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Primary contact / correspondent | Double client (link below) — **the wife**; she is who writes to the firm, in Russian, and who sends the documents |
-| Second owner | Double client — **the husband**, who also owns **Marat Boxing LLC** (§4) and holds K-1 interests in outside partnerships |
-| Gossip Miami's other owner(s) | **Unresolved** — the 2024-return correspondence names owners the firm should re-check against the filed return; see §6 |
+| Primary contact / correspondent | Double client (link below) — **one of the two joint filers**; all email to the firm comes from this person, in Russian, and the documents arrive from them _(Gmail)_ |
+| Second joint filer | Double client — **the owner of Marat Boxing LLC** (§4), who also receives **K-1s from outside partnerships**. This is the person Lilian speaks with about the scope question _(Lilian, 2026-08-04)_ |
+| Gossip Miami's owners as filed | **Unresolved** — in the 2024-return correspondence the client raised a question about which names do and don't appear on the return. Re-check against the filed return; see §6 |
 
-- **Double / TaxDome:** the family carries **separate accounts** — one for the individuals and one for **Gossip Miami LLC** — activated by the client 2026-03-03.
+- **Double client:** _(pending — link)_
+- **Double / TaxDome:** the family carries **separate accounts** — one for the individuals and one for **Gossip Miami LLC** — activated by the client 2026-03-03 _(Gmail)_.
 
 ## 3. Systems & access
 
@@ -56,7 +57,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping |
 | Bank statements | The raw material for the financial statements | _(not in the repo — sent by email/portal)_ | 2025 statements supplied for **Gossip Miami** and, separately and unprompted, for **Marat Boxing** (§4) |
-| Vagaro | The salon's booking/POS platform | _(pending)_ | Source of salon revenue; not yet examined by the firm |
+| Vagaro | The salon's booking/marketing platform _(inferred from a Vagaro email sent on the salon's behalf — never seen or used by the firm)_ | _(n/a — no firm access)_ | May or may not be a revenue source the books need; **nobody has looked**. Don't go hunting for a Vagaro export on the strength of this row |
 | TaxDome portal | Organizers, document requests, signatures | _(n/a — firm platform)_ | The 2025 individual organizer runs here |
 
 ## 4. Obligations & recurring processes
@@ -64,18 +65,21 @@ the actual details.
 ### Income tax — the core engagement
 
 - **Applies?** Yes. Three returns move together:
-  - **Gossip Miami LLC** — the business return _(form to confirm, §1)_. The 2024 return was prepared and filed by the firm.
-  - **The owners' joint individual return** — married filing jointly.
-  - **Marat Boxing LLC** — a **disregarded LLC**, so it reports on **Schedule C of that joint return** _(confirmed by Lilian, 2026-08-04)_. It is not a separate return.
+  - **Gossip Miami LLC** — the business return _(form to confirm, §1)_. A **2024 return** exists and the firm handled it — the client-copy PDF was circulated by the firm in Mar 2026 _(Gmail)_.
+  - **The owners' individual return** — the two are married and filing **jointly** _(Lilian)_.
+  - **Marat Boxing LLC** — reports on a **Schedule C**, not as a separate return _(confirmed by Lilian, 2026-08-04)_. That it is a disregarded single-member LLC is the natural reading, not something stated. **Confirm whose Schedule C it lands on** if the joint filing ever changes.
 - **Our role:** prepare and file. **Tax preparation only** — see the scope rule below.
-- **Process notes (→ future SOP):** the firm's standard "Business Tax Return Process" email (engagement letter → business tax organizer → preparation → review, invoice & signature → e-file) was sent for Gossip Miami in Mar 2026 and is the shape to reuse.
+- **Process notes (→ future SOP):** the firm's standard "Business Tax Return Process" email (engagement letter → business tax organizer → preparation → review, invoice & signature → e-file) was sent for Gossip Miami in Mar 2026 and is the shape to reuse _(Gmail)_.
+
+### Bookkeeping & monthly close
+- **Applies?** **No — the firm is not this client's bookkeeper**, and that is the point the rest of this section turns on. The client keeps no books during the year.
 
 ### Financial statements — NOT part of tax preparation
 
 This is the live issue with this client and the reason the file exists.
 
 - **The rule:** tax preparation does **not** include producing the client's financial statements. A return runs off the company's year-end numbers — the **Profit & Loss** above all — and producing those is **bookkeeping**, a separate service. A tax-prep client that owns a company is expected to bring their own P&L. The firm-wide statement of this lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/); it is **never** quoted inside a tax-return proposal.
-- **Gossip Miami — the firm is doing it, quoted separately.** The client had no P&L, so they supplied **bank statements + QuickBooks access** and the firm is cleaning up the transactions and building the financial statements. Quoted at the firm's standard cleanup rate, **capped at 10 hours**, with an **advance invoice** before starting and the balance billed against the hours actually spent. **The advance was paid 2026-08-03.** _(Amounts live in the invoice / Double, not here.)_
+- **Gossip Miami — the firm is doing it, quoted separately.** The client had no P&L, so they supplied **bank statements + QuickBooks access** and the firm is cleaning up the transactions and building the financial statements. Quoted at an **hourly rate, capped at 10 hours**, with an **advance invoice** before starting and the rest billed afterwards according to the hours spent _(Lilian)_. **The advance was paid 2026-08-03** _(Gmail)_. _(Rate and amounts live in the invoice / Double, not here.)_
 - **Marat Boxing — the firm is NOT doing it.** Statements for this company arrived on 2026-08-03 without it having been discussed, which is a different entity and outside the Gossip Miami arrangement. **Resolved 2026-08-04: the client will prepare the P&L himself.** Lilian sent him the firm's **Profit & Loss** template and the **Home Office deduction** template and he agreed to fill them in. **Do not start a cleanup for Marat Boxing** — it was never engaged and is not needed.
 
 ### Sales tax
@@ -90,7 +94,7 @@ This is the live issue with this client and the reason the file exists.
 ## 5. Key facts & quirks
 
 - **Tax-prep only, and the client doesn't keep books.** This is the defining fact of the relationship: the numbers a return needs have to be built before the return can be prepared, and building them is a separately-quoted service. Expect the same conversation each year unless they take on a bookkeeper.
-- **The client did not understand why financial statements are needed at all** — asked, politely, what he needed them for _(2026-08-04)_. When explaining, lead with *what the P&L is and where the numbers come from*, then that it's a different service, and only then the cost. Don't open with the fee.
+- **The client did not understand why financial statements are needed at all** — he asked, politely, what he needed them for _(Lilian, 2026-08-04)_. When explaining, lead with *what the P&L is and where the numbers come from*, then that it's a different service, and only then the cost. Don't open with the fee.
 - **One family, several entities.** Business return, joint 1040 with a Schedule C, and outside K-1s arriving for one of the owners. Documents for one entity arrive in threads about another — check which entity a statement belongs to before filing it.
 - **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
 
@@ -99,13 +103,13 @@ This is the live issue with this client and the reason the file exists.
 
 ### Log
 
-- 2026-03-03 — Client activated their **TaxDome accounts** (individuals + Gossip Miami LLC). The firm sent the standard **Business Tax Return Process** explainer for Gossip Miami.
-- 2026-03-09 → 03-11 — Documents uploaded through the **2025 individual Tax Organizer**: driver's licence, prior-year return documents, a 1095-A, a partnership K-1, and a home-office worksheet.
-- 2026-04-12 — The last outstanding individual document request was completed.
-- 2026-07-29 — The firm was **invited to Gossip Miami's QuickBooks**; a K-1 package for one of the owners arrived the same day.
-- 2026-08-03 — **2025 bank statements sent** for Gossip Miami and, separately, a full year of statements for **Marat Boxing LLC** — the latter never discussed. The **advance for the Gossip Miami financial-statement work was paid** the same day.
-- 2026-08-04 — **Scope conversation.** The client asked what he needed financial statements for. Lilian is explaining, in Russian, that tax preparation does not include producing the P&L, that the Gossip Miami cleanup is the separately-quoted service already under way, and that Marat Boxing would need its own arrangement. **Outcome: the client will produce Marat Boxing's P&L himself** — Lilian sent him the P&L and Home Office deduction templates and he agreed. **No cleanup work for Marat Boxing.**
-- 2026-08-04 — Confirmed **Marat Boxing is a Schedule C** on the owners' joint return _(Lilian)_.
+- 2026-03-03 — Client activated their **TaxDome accounts** (individuals + Gossip Miami LLC). The firm sent the standard **Business Tax Return Process** explainer for Gossip Miami, and circulated the 2024 client-copy returns. _(Gmail)_
+- 2026-03-09 → 03-11 — Documents uploaded through the **2025 individual Tax Organizer**: driver's licence, prior-year return documents, a 1095-A, a partnership K-1, and a home-office worksheet. _(Gmail — TaxDome notifications)_
+- 2026-04-12 — The last outstanding individual document request was completed. _(Gmail — TaxDome)_
+- 2026-07-29 — The firm was **invited to Gossip Miami's QuickBooks**; a K-1 package for one of the owners arrived the same day. _(Gmail)_
+- 2026-08-03 — **2025 bank statements sent** for Gossip Miami and, separately, a full year of statements for **Marat Boxing LLC** — the latter never discussed. The **advance for the Gossip Miami financial-statement work was paid** the same day. _(Gmail)_
+- 2026-08-04 — **Scope conversation.** The client asked what he needed financial statements for. Lilian explained, in Russian, that tax preparation does not include producing the P&L, that the Gossip Miami cleanup is the separately-quoted service already under way, and that Marat Boxing would need its own arrangement. **Outcome: the client will produce Marat Boxing's P&L himself** — Lilian sent him the **Profit & Loss** and **Home Office deduction** templates by email and he agreed to fill them in. **No cleanup work for Marat Boxing.** _(Lilian)_
+- 2026-08-04 — Confirmed **Marat Boxing is a Schedule C** on the owners' return _(Lilian)_.
 
 ### Outstanding items (CI-only — never in the SOP)
 
