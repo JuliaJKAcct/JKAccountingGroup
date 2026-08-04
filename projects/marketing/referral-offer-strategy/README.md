@@ -42,7 +42,9 @@ referral-offer-strategy/
     │                        moments, 4 belief shifts, self-calc — co-host inserts
     ├── webinar-script.html   same script as a readable/printable on-brand page
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
-    └── announcement-ru.html  same announcement as a readable/printable page
+    ├── announcement-ru.html  same announcement as a readable/printable page
+    └── invite-candramas-ru.html  co-branded RU webinar invite the partner hands
+                                  to their clients (details · agenda · gift · CTA)
 └── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
