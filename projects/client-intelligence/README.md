@@ -180,7 +180,7 @@ client-intelligence/
 | Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | In progress — sales tax next |
 | Artur Tseretsian | [`clients/artur-tseretsian.md`](./clients/artur-tseretsian.md) | Lilian | In progress — 1040 Schedule C categorization (2023–2025) |
 | BEST BROKER REALTY LLC | [`clients/best-broker-realty.md`](./clients/best-broker-realty.md) | Lilian | In progress — BTR captured |
-| ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP; 2025 1120-S waiting on the Turo documents |
+| ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP; 2025 1120-S in progress, Turo documents outstanding |
 | Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | In progress — skeleton only |
 | Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |

@@ -160,23 +160,20 @@ in that folder.
   assuming** — she has explicitly asked to be asked. (This rides on top of the rule
   above: still follow whichever language she actually writes in.)
 - **Drafting a message to a client: CORRECT the draft, don't rewrite it.** When Julia or
-  Lilian hands you a draft to fix, translate, or shorten — typically a Russian message to
-  a client — the deliverable is **their** message with the mistakes repaired: their
-  sentences, their order of ideas, minimally edited. Returning a cleaner text of your own
-  is the wrong answer even when it reads better.
-  - **"Shorter" means fewer of YOUR words, not fewer of theirs.** Cut what you added —
-    clarifications, conditionals ("if one was issued"), unsolicited advice, repetitions,
-    explanations of *why*, and context the client already knows. **Never** cut the greeting
-    and courtesy (in a client message that isn't filler, it's the relationship), the
-    sentence showing the firm **already tried** (it justifies asking the client to do the
-    work), their phrasing, or the actionable data.
-  - **Format for a phone screen:** a phone number or code goes on **its own line with a
-    label**, never inside a sentence — on a phone it's then tappable. One idea per block,
-    separated by a blank line. Keep document names in **English, capitalized** (Earnings
-    Report, 1099-K) when the client will have to say them out loud to someone.
-  - _(Lilian, Aug 2026, from the Ecoorganic/Turo message: the first "shortened" version came
-    back **longer** than the assistant's — because she had cut the assistant's additions and
-    kept her own text. The word count was never the problem.)_
+  Lilian hands you a draft to fix, translate, or shorten, the deliverable is **their**
+  message with the mistakes repaired — their sentences, their order of ideas, minimally
+  edited. A cleaner text of your own is the wrong answer even when it reads better.
+  **"Shorter" means fewer of YOUR words**: cut your clarifications, conditionals,
+  unsolicited advice, repetitions and explanations of *why*. **Never** cut the greeting and
+  courtesy (in a client message that's the relationship, not filler), the sentence showing
+  the firm **already tried** (it justifies asking the client to do work), their phrasing, or
+  the actionable data. Format for a phone screen: a number or code on **its own line with a
+  label** so it's tappable, one idea per block, and document names in **English,
+  capitalized** when the client will have to say them out loud.
+  _(Ecoorganic/Turo, Aug 2026 — Lilian asked for a shorter client message; the version she
+  actually sent came out ~35% **longer** than the assistant's "shortened" one, because she
+  kept her own text and cut only what the assistant had added. The word count was never the
+  problem.)_
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
