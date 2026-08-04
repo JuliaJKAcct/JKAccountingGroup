@@ -198,6 +198,7 @@ client-intelligence/
 | LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 | Ihor Naum & Olha Levchuk | [`clients/ihor-naum-olha-levchuk.md`](./clients/ihor-naum-olha-levchuk.md) | Lilian | In progress — 1040 filed; Form 8802 pending at the IRS |
+| GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only (business return + owners' joint 1040 + a Schedule C); financial-statement cleanup quoted separately and under way |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter open — fix **recommended** by the DOR (close the account back to May 2025), not yet requested; waiting on POA processing |
 
 ## Brand & design
