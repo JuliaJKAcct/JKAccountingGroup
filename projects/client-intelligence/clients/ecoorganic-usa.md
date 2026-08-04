@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-04
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -26,7 +26,7 @@
 - **Entity type:** LLC
 - **Home state:** Connecticut
 - **Industry / what they do:** Spray-foam insulation contractor
-- **Primary language:** _(pending — confirm)_
+- **Primary language:** **Russian.** The owner corresponds in Russian and is addressed formally ("Вы") — see §5 for how to write to him _(confirmed 2026-08-04)_.
 - **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper does the work; Claude acts as the **independent reviewer**. (Other services: _(pending)_)
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
@@ -39,8 +39,11 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| Owner / primary contact | Double client (link below) — **the owner we correspond with**, in Russian (see §5) |
 | Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account, so the 1120-S issues **two K-1s** _(confirmed 2026-07-30)_ |
+
+Both owner contacts are on file in **Ping** as well as Double, with no recent meetings
+indexed _(2026-08-04)_.
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 
@@ -50,6 +53,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
+| **Turo** | An income stream that likely belongs on a 2025 return — earnings and any **1099-K**. **Which return is not yet settled** (see §4) | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder**, not to us |
 
 ## 4. Obligations & recurring processes
 
@@ -74,21 +78,46 @@ the actual details.
   [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md).
 
 ### Income tax
-- **Applies?** _(pending — confirm return type & who prepares)_
+- **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). It issues **two K-1s**, one per owner.
+- **Open blocker — the Turo documents (2026-08-04):** we need the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
+  - **How it has to be done:** the owner calls Turo himself at the support number in §3, works through the voice menu, and asks for the **Earnings Report** and **1099-K for 2025**.
+  - **Status:** Lilian called Turo 2026-08-04, established the above, and sent the owner the instructions in Russian. **Waiting on him to call and confirm he received the documents.**
+  - ⚠️ **Open question — whose account is it?** Turo would only deal with the **account holder** and refused the firm. That is ordinary identity verification and says **nothing** about whether the account is registered to ECOORGANIC USA LLC or to the owner personally — **which is still unknown.** It matters: an account and 1099-K in the owner's personal name would point at his **1040**, not the company's **1120-S**. Have him confirm the registered account name, and the name on any 1099-K, when he calls. See §6.
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
 
 ## 5. Key facts & quirks
 
+- **A Turo income stream may exist alongside the insulation work** — the platform account is closed and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything about completeness in either direction until someone looks.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
 - Only **one live bank feed** (Chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed.
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
 - Several open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex) tracked in the SOP's Open decisions log. *(Meals/gas policy is now resolved — see the log.)*
+- **Writing to this client:** messages go out in **Russian**, addressed formally ("Вы"), in simple wording — the owner reads Russian, not English. How to draft and shorten a client message at all is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md); only the language is specific to this client.
 
 ## 6. History & open questions
 
 ### Log
+- 2026-08-04 — **Turo documents chased (Lilian).** The firm had already asked for access to the client's **Turo account** earlier; the account has since been **closed**, so the earnings report and any 1099-K can't be downloaded. Lilian **called Turo support**: they confirmed they *can* produce the documents but will hand them **only to the account holder** — they refused to give them to Lilian, and refused even to email them to the address already on the account without the owner calling himself. She captured the working route through the phone tree (see §3) and **sent the owner a message in Russian** with the number, the key sequence, and what to ask for (**Earnings Report and 1099-K, 2025**). **Waiting on him to call.** The message as sent:
+  > Добрый день, Артем! Как у Вас дела?
+  >
+  > Это Лилиан.
+  >
+  > Я звонила в Turo. Они могут помочь с отчётами, но предоставить эту информацию они могут только Вам, а не мне.
+  >
+  > Я попросила, чтобы они отправили её по почте на адрес, указанный в Вашем аккаунте, но они всё равно попросили, чтобы Вы им позвонили.
+  >
+  > Вот как можно легко с ними связаться:
+  >
+  > Номер телефона:
+  > +1-415-965-4525
+  >
+  > Затем в голосовом меню нажмите: 2, 3, 3.
+  >
+  > Попросите Earnings Report и форму 1099-K за 2025 год.
+
+  Note that the sent message does **not** ask Turo to email the documents to the account address — that line was in a draft and was cut — so the owner was told only to call and ask. The message-drafting lesson from the same session is now a firm-wide rule in `CLAUDE.md`. _(Source: a working session originally run in the wrong repository — `JuliaJKAcct/LilianA-T`, branch `claude/turo-artyom-message-gyvksn` — and moved here on 2026-08-04.)_
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
   (Lilian). Two notes on the Double tracking: `Tax Return Status = Not Started` is **stale**, while
   the blank `Organizer Status` is **correct** — as a bookkeeping client no company organizer is owed
@@ -102,11 +131,15 @@ the actual details.
 - 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed. Grocery/food stores → distributions, **except** supply/materials stores (Home Depot, hardware, work-parts, rental/supply houses) → Supplies & Materials/COGS. Vehicle financing left as an **open question** (SOP's "Hyundai/Ally" doesn't match the actual RAM truck loans — to reconcile later). Lilian notes she's "flying blind" on this new client and will study it piece by piece.
 
 ### Outstanding items (CI-only — never in the SOP)
+- **Waiting on the owner to call Turo** (number and key sequence in §3) and confirm he received the **2025 Earnings Report and 1099-K**. Idea if he can't get through, **not yet raised with Turo**: ask what a written authorization from the account holder would let them release to us.
+- **Establish whose account it is before the documents go on any return.** Unknown today — Turo's refusal to deal with us proves only that we're not the account holder. Ask the owner for the registered account name and the name on any 1099-K; that decides 1120-S vs his 1040.
 - Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
 
 ### Information still needed
-- [ ] Primary language; fiscal year-end
-- [ ] Sales tax / payroll / income tax applicability and who prepares each
+- [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
+- [ ] Whether the **Turo account is registered to the company or to the owner personally**, and for which years it produced income — this decides which return reports it (§4)
+- [ ] Whether a **1099-K was actually issued** for 2025
+- [ ] Sales tax / payroll applicability and who prepares each _(income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [ ] Any business licenses / annual filings
 - [ ] Where credentials live (Drive vault link)
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
