@@ -45,8 +45,11 @@ referral-offer-strategy/
     ├── announcement-ru.html  same announcement as a readable/printable page
     ├── invite-candramas-ru.html  co-branded RU webinar invite the partner hands
     │                             to their clients (details · agenda · gift · CTA)
-    └── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
-                                  — arrow/click nav, PDF export
+    ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
+    │                             — arrow/click nav, PDF export
+    └── luma/                     Luma (lu.ma) registration setup
+        ├── cover-ru.html / .png  on-brand event cover image (3200×1800)
+        └── event-ru.md           event-page copy + Luma setup checklist
 └── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
