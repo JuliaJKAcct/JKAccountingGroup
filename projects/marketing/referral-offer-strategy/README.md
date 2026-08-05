@@ -48,8 +48,9 @@ referral-offer-strategy/
     ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
     │                             — arrow/click nav, PDF export
     └── luma/                     Luma (lu.ma) registration setup
-        ├── cover-ru.html / .png  on-brand event cover image (3200×1800)
-        └── event-ru.md           event-page copy + Luma setup checklist
+        ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
+        ├── event-ru.md              event-page copy + Luma setup checklist
+        └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
 └── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)

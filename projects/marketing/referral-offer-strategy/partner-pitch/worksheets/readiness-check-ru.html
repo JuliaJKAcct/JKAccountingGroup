@@ -85,10 +85,10 @@
   @media print{
     @page{ size:Letter; margin:14mm }
     body{background:#fff}
-    .printbar,.actions{display:none}
+    .printbar,.actions,.result{display:none}
     .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
-    .hero,.cta,.result .r-top,.dot,.opt:has(input:checked){-webkit-print-color-adjust:exact; print-color-adjust:exact}
-    .q,.result,.cta{break-inside:avoid}
+    .hero,.cta,.opt:has(input:checked){-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .q,.cta{break-inside:avoid}
   }
   @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
 </style>
