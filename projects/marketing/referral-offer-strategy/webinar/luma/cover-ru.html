@@ -7,27 +7,25 @@
   *{box-sizing:border-box; margin:0; padding:0}
   body{background:#222}
   .cover{
-    position:relative; width:1600px; height:900px; overflow:hidden;
-    background:radial-gradient(120% 130% at 84% -8%, rgba(207,162,104,.16), transparent 52%),linear-gradient(150deg,#123841,#0D2A31 70%,#091F24);
+    position:relative; width:1400px; height:1400px; overflow:hidden;
+    background:radial-gradient(115% 90% at 50% -6%, rgba(207,162,104,.16), transparent 55%),linear-gradient(158deg,#123841,#0D2A31 68%,#091F24);
     color:#ECE6DA; font-family:"IBM Plex Mono",monospace;
-    padding:92px 100px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    padding:120px 110px;
   }
-  .lockup{position:absolute; top:80px; left:100px; width:360px}
-  .wm{position:absolute; right:-90px; bottom:-120px; width:640px; opacity:.05}
-  .content{position:absolute; left:100px; top:334px; right:100px}
-  .kicker{font-family:"IBM Plex Mono",monospace; font-size:22px; letter-spacing:.22em; text-transform:uppercase; color:#CFA268; margin-bottom:34px}
-  h1{font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:104px; line-height:1.02; letter-spacing:-0.022em; color:#fff; max-width:20ch}
+  .lockup{position:absolute; top:118px; left:50%; transform:translateX(-50%); width:400px}
+  .wm{position:absolute; left:50%; top:52%; transform:translate(-50%,-50%); width:900px; opacity:.045}
+  .kicker{position:relative; font-family:"IBM Plex Mono",monospace; font-size:23px; letter-spacing:.2em; text-transform:uppercase; color:#CFA268; margin-bottom:40px; max-width:26ch}
+  h1{position:relative; font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:96px; line-height:1.06; letter-spacing:-0.02em; color:#fff; text-wrap:balance; max-width:15ch}
   h1 em{font-style:italic; color:#CFA268}
-  .sub{font-family:"IBM Plex Mono",monospace; font-size:24px; letter-spacing:.02em; color:#9FB3B6; margin-top:36px}
-  .who{position:absolute; left:100px; bottom:84px; font-family:"IBM Plex Mono",monospace; font-size:22px; letter-spacing:.04em; color:#9FB3B6}
+  .sub{position:relative; font-family:"IBM Plex Mono",monospace; font-size:25px; letter-spacing:.02em; color:#9FB3B6; margin-top:44px; max-width:34ch; line-height:1.5}
+  .who{position:absolute; bottom:120px; left:50%; transform:translateX(-50%); font-family:"IBM Plex Mono",monospace; font-size:23px; letter-spacing:.04em; color:#9FB3B6}
   .who b{color:#fff; font-family:"Source Serif 4",serif; font-weight:600}
-  .site{position:absolute; right:100px; bottom:84px; font-family:"IBM Plex Mono",monospace; font-size:20px; letter-spacing:.08em; color:#7E8F92}
 </style>
 </head>
 <body>
 <div class="cover">
 
-  <!-- reversed lockup -->
   <svg class="lockup" viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
     <g transform="translate(6,5)">
       <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
@@ -39,9 +37,7 @@
       <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
         <g fill="none" stroke="#ECE6DA" stroke-width="9">
           <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
-          <path d="M70 26 L70 86"></path>
-          <path d="M70 56 L92 26"></path>
-          <path d="M70 56 L95 86"></path>
+          <path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path>
         </g>
       </g>
     </g>
@@ -49,7 +45,6 @@
     <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text>
   </svg>
 
-  <!-- faint watermark medallion -->
   <svg class="wm" viewBox="0 0 120 120" aria-hidden="true">
     <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
     <circle cx="60" cy="60" r="50.5" fill="none" stroke="#ECE6DA" stroke-width="1.4"></circle>
@@ -61,14 +56,11 @@
     </g>
   </svg>
 
-  <div class="content">
-    <p class="kicker">Бесплатный вебинар для владельцев бизнеса</p>
-    <h1>Почему бизнес растёт,<br>а прибыль <em>уменьшается</em></h1>
-    <p class="sub">4 причины, по которым деньги утекают незаметно — и как найти их у себя</p>
-  </div>
+  <p class="kicker">Бесплатный вебинар для владельцев бизнеса</p>
+  <h1>Почему бизнес растёт, а прибыль <em>уменьшается</em></h1>
+  <p class="sub">4 причины, по которым деньги утекают незаметно — и как найти их у себя</p>
 
   <div class="who"><b>Юлия Кононова</b> · JK Accounting Group</div>
-  <div class="site">jkaccountinggroup.com</div>
 
 </div>
 </body>
