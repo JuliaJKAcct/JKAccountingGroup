@@ -3,8 +3,9 @@
 > **About this file (EN).** Ready-to-post Russian promo copy for the webinar
 > (built from Julia's own draft, sharpened to match the v2 loss-framing and
 > advisor voice). A full version for a post/email and a short version for
-> stories/quick posts. Swap the [дата], [время], [ссылка] placeholders before
-> publishing. No offer/price here on purpose — the announcement sells the free
+> stories/quick posts. Date/time/link are filled for the current event
+> (Aug 11, 11:00 ET · lu.ma/7xvh1dm3); update if the event changes. No
+> offer/price here on purpose — the announcement sells the free
 > value; the webinar sells the Разбор утечек прибыли.
 
 ---
@@ -33,8 +34,8 @@
 
 Без сложных терминов. По делу. На вашем языке.
 
-📅 [дата], [время]
-🔗 Регистрация: [ссылка]
+📅 11 августа, 11:00 ET
+🔗 Регистрация: lu.ma/7xvh1dm3
 
 *Место бесплатное, но количество ограничено — забронируйте заранее.*
 
@@ -48,13 +49,13 @@
 
 На бесплатном вебинаре покажу 4 причины — и вы за 5 минут найдёте их в своём бизнесе. Плюс рабочий лист в подарок.
 
-📅 [дата] · 🔗 Регистрация: [ссылка]
+📅 11 августа · 🔗 Регистрация: lu.ma/7xvh1dm3
 
 ---
 
 ## Совсем короткая (одна строка — для подписи, статуса, репоста)
 
-Почему бизнес растёт, а прибыль уменьшается? Бесплатный вебинар — 4 причины, по которым деньги утекают незаметно. [дата], регистрация: [ссылка]
+Почему бизнес растёт, а прибыль уменьшается? Бесплатный вебинар — 4 причины, по которым деньги утекают незаметно. 11 августа, регистрация: lu.ma/7xvh1dm3
 
 ---
 
