@@ -43,8 +43,8 @@ referral-offer-strategy/
     ├── webinar-script.html   same script as a readable/printable on-brand page
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     ├── announcement-ru.html  same announcement as a readable/printable page
-    ├── invite-candramas-ru.html  co-branded RU webinar invite the partner hands
-    │                             to their clients (details · agenda · gift · CTA)
+    ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
+    │                             partner hands to clients (details · agenda · gift)
     ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
     │                             — arrow/click nav, PDF export
     └── luma/                     Luma (lu.ma) registration setup
