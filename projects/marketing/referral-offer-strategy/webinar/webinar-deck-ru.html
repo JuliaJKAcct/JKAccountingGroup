@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Слайды · Почему бизнес растёт, а прибыль уменьшается — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6; --sage:#6E9A79;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{background:#000; color:var(--body); font-family:var(--sans); overflow:hidden}
+
+  .slide{position:fixed; inset:0; display:none; flex-direction:column; justify-content:center;
+    padding:clamp(40px,7vw,110px); opacity:0; transition:opacity .35s var(--ease)}
+  .slide.active{display:flex; opacity:1}
+  .slide.light{background:var(--ivory); color:var(--body)}
+  .slide.paper{background:var(--paper); color:var(--body)}
+  .slide.teal{background:radial-gradient(120% 120% at 82% 0%, rgba(207,162,104,.14), transparent 55%),linear-gradient(155deg,var(--teal-800),var(--teal-900) 72%,var(--teal-950)); color:var(--on-dark)}
+
+  .eyebrow{font-family:var(--mono); font-size:clamp(12px,1.5vw,16px); letter-spacing:.2em; text-transform:uppercase; color:var(--bronze-700); margin-bottom:clamp(16px,2.5vw,28px)}
+  .teal .eyebrow{color:var(--bronze-300)}
+  h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.02em; line-height:1.05; font-size:clamp(38px,7vw,104px); text-wrap:balance}
+  .teal h1{color:#fff}
+  h2{font-family:var(--serif); font-weight:600; letter-spacing:-0.016em; line-height:1.08; font-size:clamp(32px,5.4vw,74px); color:var(--ink); text-wrap:balance}
+  .teal h2{color:#fff}
+  h2 em, h1 em{font-style:italic; color:var(--bronze-500)}
+  .teal h2 em, .teal h1 em{color:var(--bronze-300)}
+  .sub{font-size:clamp(17px,2.2vw,30px); line-height:1.4; color:var(--muted); margin-top:clamp(18px,2.5vw,30px); max-width:24ch}
+  .teal .sub{color:var(--on-dark)}
+  .foot-name{position:absolute; left:clamp(40px,7vw,110px); bottom:clamp(34px,5vw,64px); font-size:clamp(14px,1.6vw,20px); color:var(--on-dark-muted)}
+  .foot-name b{color:#fff; font-family:var(--serif); font-weight:600}
+
+  .big{font-family:var(--serif); font-weight:700; letter-spacing:-0.03em; line-height:1; font-size:clamp(64px,13vw,190px); color:var(--bronze-700)}
+  .teal .big{color:var(--bronze-300)}
+
+  /* two shops */
+  .shops{display:grid; grid-template-columns:1fr 1fr; gap:clamp(18px,3vw,44px); margin-top:clamp(24px,3vw,40px)}
+  .shop{border:2px solid var(--border-soft); border-radius:18px; padding:clamp(20px,3vw,40px); background:var(--white)}
+  .shop.b{background:var(--paper); border-color:var(--bronze-500)}
+  .shop .nm{font-family:var(--mono); font-size:clamp(12px,1.5vw,18px); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:clamp(14px,2vw,24px)}
+  .shop .r{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:clamp(8px,1.2vw,14px) 0; border-top:1px solid var(--ivory-stroke)}
+  .shop .rk{font-size:clamp(14px,1.7vw,22px); color:var(--muted)}
+  .shop .rv{font-family:var(--serif); font-weight:600; font-size:clamp(28px,4.4vw,60px); color:var(--ink)}
+  .shop .rv.hi{color:var(--bronze-700)}
+  .shop .rv.hide{color:var(--border); letter-spacing:.05em}
+
+  /* breakdown */
+  .bd{margin-top:clamp(18px,2.4vw,32px); max-width:min(900px,72vw)}
+  .bd .row{display:flex; justify-content:space-between; align-items:baseline; padding:clamp(6px,0.9vw,11px) 0; border-bottom:1px solid var(--border-soft); font-size:clamp(15px,1.9vw,26px)}
+  .bd .row .m{font-family:var(--mono); color:var(--muted)}
+  .bd .tot{display:flex; justify-content:space-between; align-items:baseline; margin-top:clamp(10px,1.4vw,18px); padding-top:clamp(10px,1.4vw,18px); border-top:3px solid var(--bronze-500)}
+  .bd .tot .k{font-family:var(--mono); font-size:clamp(13px,1.6vw,20px); letter-spacing:.06em; text-transform:uppercase; color:var(--bronze-700)}
+  .bd .tot .v{font-family:var(--serif); font-weight:700; font-size:clamp(40px,6vw,82px); color:var(--bronze-700)}
+
+  ul.pts{margin-top:clamp(20px,2.6vw,34px); list-style:none; display:grid; gap:clamp(12px,1.6vw,20px)}
+  ul.pts li{position:relative; padding-left:clamp(28px,3vw,44px); font-size:clamp(18px,2.4vw,34px); line-height:1.3; color:var(--body)}
+  .teal ul.pts li{color:var(--on-dark)}
+  ul.pts li::before{content:""; position:absolute; left:0; top:.55em; width:clamp(9px,1vw,14px); height:clamp(9px,1vw,14px); background:var(--bronze-500); transform:rotate(45deg)}
+
+  .recap{list-style:none; display:grid; gap:clamp(14px,2vw,26px); margin-top:clamp(24px,3vw,40px); counter-reset:r}
+  .recap li{counter-increment:r; position:relative; padding-left:clamp(52px,6vw,86px); font-family:var(--serif); font-weight:600; font-size:clamp(20px,2.8vw,40px); line-height:1.2; color:#fff}
+  .recap li::before{content:counter(r); position:absolute; left:0; top:-.05em; width:clamp(38px,4.4vw,64px); height:clamp(38px,4.4vw,64px); border:2px solid var(--bronze-300); color:var(--bronze-300); border-radius:50%; font-family:var(--mono); font-weight:600; font-size:clamp(16px,2vw,28px); display:grid; place-items:center}
+
+  .price{font-family:var(--serif); font-weight:700; font-size:clamp(56px,10vw,150px); color:var(--bronze-300); line-height:1}
+  .credit{font-size:clamp(16px,2vw,28px); color:var(--on-dark); margin-top:8px}
+
+  .bucket{width:clamp(150px,20vw,300px); height:auto; margin-top:clamp(10px,2vw,20px)}
+
+  .contact{font-size:clamp(16px,2vw,28px); line-height:1.6; margin-top:clamp(20px,2.6vw,34px)}
+  .contact a{color:var(--teal-800); text-decoration:none; font-weight:600}
+  .teal .contact a{color:var(--bronze-300)}
+
+  /* nav */
+  .hud{position:fixed; z-index:50; font-family:var(--mono); font-size:13px; letter-spacing:.05em; color:var(--muted); pointer-events:none}
+  .hud.count{right:20px; bottom:16px}
+  .hud.hint{left:20px; bottom:16px; opacity:.6}
+  .light .hud,.paper .hud{color:var(--muted)}
+
+  @media (max-width:640px){ .shops{grid-template-columns:1fr} }
+
+  @media print{
+    @page{ size:1280px 720px; margin:0 }
+    html,body{overflow:visible; background:#fff}
+    .slide{position:relative; display:flex !important; opacity:1 !important; width:1280px; height:720px; break-after:page; inset:auto}
+    .hud{display:none}
+    .slide,.slide *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  }
+  @media (prefers-reduced-motion:reduce){ .slide{transition:none} }
+</style>
+</head>
+<body>
+
+<!-- 1 — Title -->
+<section class="slide teal">
+  <p class="eyebrow">Бесплатный вебинар для владельцев бизнеса</p>
+  <h1>Почему бизнес растёт,<br>а прибыль <em>уменьшается</em></h1>
+  <div class="foot-name"><b>Юлия Кононова</b> · JK Accounting Group</div>
+</section>
+
+<!-- 2 — Two shops, revenue only -->
+<section class="slide light">
+  <p class="eyebrow">Один вопрос для начала</p>
+  <h2>Какую кофейню вы бы предпочли иметь?</h2>
+  <div class="shops">
+    <div class="shop"><p class="nm">Кофейня A</p>
+      <div class="r"><span class="rk">Выручка</span><span class="rv">$600k</span></div>
+      <div class="r"><span class="rk">Доход владельца</span><span class="rv hide">?</span></div>
+    </div>
+    <div class="shop b"><p class="nm">Кофейня B · две точки</p>
+      <div class="r"><span class="rk">Выручка</span><span class="rv">$1.3M</span></div>
+      <div class="r"><span class="rk">Доход владельца</span><span class="rv hide">?</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 — Reveal -->
+<section class="slide paper">
+  <p class="eyebrow">А теперь — доход владельца</p>
+  <div class="shops">
+    <div class="shop"><p class="nm">Кофейня A</p>
+      <div class="r"><span class="rk">Выручка</span><span class="rv">$600k</span></div>
+      <div class="r"><span class="rk">Доход владельца</span><span class="rv hi">$90k</span></div>
+    </div>
+    <div class="shop b"><p class="nm">Кофейня B · две точки</p>
+      <div class="r"><span class="rk">Выручка</span><span class="rv">$1.3M</span></div>
+      <div class="r"><span class="rk">Доход владельца</span><span class="rv hi">$60k</span></div>
+    </div>
+  </div>
+  <p class="sub" style="max-width:40ch">Продаёт вдвое больше — а владельцу оставляет меньше.</p>
+</section>
+
+<!-- 4 — Belief 1 -->
+<section class="slide teal">
+  <p class="eyebrow">Сдвиг убеждения №1</p>
+  <h2>Больше выручки — <em>не значит</em> больше денег у вас.</h2>
+</section>
+
+<!-- 5 — Leaky bucket -->
+<section class="slide light">
+  <p class="eyebrow">Как это происходит</p>
+  <h2>Рост не создаёт прибыль.<br>Он <em>усиливает</em> то, что уже есть.</h2>
+  <svg class="bucket" viewBox="0 0 220 210" fill="none" aria-hidden="true">
+    <path d="M40 44 C70 34 150 34 180 44 L164 176 C162 188 152 194 110 194 C68 194 58 188 56 176 Z" fill="#EAF0EF" stroke="#123841" stroke-width="5"/>
+    <path d="M48 84 C78 76 142 76 172 84 L162 150 C160 160 150 164 110 164 C70 164 60 160 58 150 Z" fill="#9FB9B7" opacity="0.6"/>
+    <path d="M104 6 C104 26 116 30 116 46 C116 55 100 55 100 46 C100 32 104 26 104 6 Z" fill="#9C6A39"/>
+    <circle cx="52" cy="132" r="6" fill="#9C6A39"/><circle cx="48" cy="150" r="5" fill="#CFA268"/>
+    <circle cx="170" cy="126" r="6" fill="#9C6A39"/><circle cx="176" cy="146" r="5" fill="#CFA268"/>
+    <circle cx="150" cy="188" r="5" fill="#9C6A39"/>
+  </svg>
+</section>
+
+<!-- 6 — Belief 2 -->
+<section class="slide teal">
+  <p class="eyebrow">Сдвиг убеждения №2</p>
+  <h2>У вас не проблема с продажами.<br>У вас — <em>утечки прибыли</em>.</h2>
+</section>
+
+<!-- 7 — Leak 1: the $5,000 → $680 -->
+<section class="slide light">
+  <p class="eyebrow">Утечка 1 · маржа, которую вы не видели</p>
+  <h2>Заказ на $5 000. Сколько осталось у вас?</h2>
+  <div class="bd">
+    <div class="row"><span>Продукты и ингредиенты</span><span class="m">− $1 400</span></div>
+    <div class="row"><span>Персонал: приготовить и доставить</span><span class="m">− $900</span></div>
+    <div class="row"><span>Аренда, коммуналка, страховка, софт</span><span class="m">− $950</span></div>
+    <div class="row"><span>Ваше время, маркетинг, эквайринг</span><span class="m">− $750</span></div>
+    <div class="row"><span>Налоги с прибыли</span><span class="m">− $320</span></div>
+    <div class="tot"><span class="k">Осталось у вас</span><span class="v">$680</span></div>
+  </div>
+</section>
+
+<!-- 8 — Leak 2: cash flow -->
+<section class="slide teal">
+  <p class="eyebrow">Утечка 2 · деньги во времени</p>
+  <h2>Сколько месяцев вы продержитесь, если каждый клиент заплатит на <em>30 дней позже?</em></h2>
+</section>
+
+<!-- 9 — Belief 3 -->
+<section class="slide paper">
+  <p class="eyebrow">Сдвиг убеждения №3</p>
+  <h2>Бухгалтерия — не про налоги.<br>Она про <em>решения вовремя</em>.</h2>
+</section>
+
+<!-- 10 — Leak 3: rear-view -->
+<section class="slide light">
+  <p class="eyebrow">Утечка 3 · вы рулите, глядя назад</p>
+  <h2>Кто знает свою прибыль за прошлый месяц — <em>прямо сейчас?</em></h2>
+  <p class="sub" style="max-width:44ch">Если книги отстают на три месяца — решения приходят, когда деньги уже утекли.</p>
+</section>
+
+<!-- 11 — Leak 4: structure -->
+<section class="slide light">
+  <p class="eyebrow">Утечка 4 · структура, которая тихо вас облагает</p>
+  <h2>То, что было нормально на старте, на росте стоит тысячи.</h2>
+  <ul class="pts">
+    <li>Форма бизнеса не пересматривалась</li>
+    <li>S-corp не оформили вовремя</li>
+    <li>Налог с продаж в новом штате — мимо</li>
+    <li>…и письмо из IRS</li>
+  </ul>
+</section>
+
+<!-- 12 — Belief 4 -->
+<section class="slide teal">
+  <p class="eyebrow">Сдвиг убеждения №4</p>
+  <h2>Хороший учёт не растит бизнес.<br>Растят <em>своевременные решения</em>.</h2>
+</section>
+
+<!-- 13 — Scorecard -->
+<section class="slide paper">
+  <p class="eyebrow">Ваша очередь</p>
+  <h2>Оцените свой бизнес за 5 минут</h2>
+  <p class="sub" style="max-width:40ch">Рабочий лист «Проверка готовности к росту» — в подарок каждому. Каждое «не уверен(а)» — это, скорее всего, утечка.</p>
+</section>
+
+<!-- 14 — Offer -->
+<section class="slide teal">
+  <p class="eyebrow">Найдём ваши утечки — по реальным цифрам</p>
+  <h2>Разбор утечек прибыли</h2>
+  <p class="price">$500</p>
+  <p class="credit">…и они полностью идут в счёт первого месяца работы с нами.</p>
+</section>
+
+<!-- 15 — Recap -->
+<section class="slide teal">
+  <p class="eyebrow">Запомните эти четыре мысли</p>
+  <ol class="recap">
+    <li>Больше выручки ≠ больше денег у вас.</li>
+    <li>Это не продажи. Это утечки прибыли.</li>
+    <li>Бухгалтерия — про решения вовремя.</li>
+    <li>Растят решения, а не учёт.</li>
+  </ol>
+</section>
+
+<!-- 16 — Thank you -->
+<section class="slide light">
+  <p class="eyebrow">Спасибо, что были со мной</p>
+  <h2>Сначала закройте утечки — <em>потом</em> разгоняйте.</h2>
+  <p class="contact"><b>Юлия Кононова</b> · JK Accounting Group<br>
+  <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></p>
+</section>
+
+<div class="hud hint">← → листать</div>
+<div class="hud count" id="count">1 / 16</div>
+
+<script>
+  const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  const count = document.getElementById('count');
+  let i = 0;
+  function show(n){
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function(s, k){ s.classList.toggle('active', k === i); });
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    count.className = 'hud count ' + (slides[i].classList.contains('teal') ? 'on-teal' : '');
+    count.style.color = slides[i].classList.contains('teal') ? 'rgba(159,179,182,.8)' : '';
+  }
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { show(i + 1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { show(i - 1); e.preventDefault(); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(slides.length - 1); }
+  });
+  document.addEventListener('click', function(e){
+    if (e.target.closest('a')) return;
+    if (e.clientX > window.innerWidth * 0.5) show(i + 1); else show(i - 1);
+  });
+  show(0);
+</script>
+</body>
+</html>

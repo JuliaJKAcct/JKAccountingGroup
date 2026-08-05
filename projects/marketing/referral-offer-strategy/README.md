@@ -43,8 +43,10 @@ referral-offer-strategy/
     ├── webinar-script.html   same script as a readable/printable on-brand page
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     ├── announcement-ru.html  same announcement as a readable/printable page
-    └── invite-candramas-ru.html  co-branded RU webinar invite the partner hands
-                                  to their clients (details · agenda · gift · CTA)
+    ├── invite-candramas-ru.html  co-branded RU webinar invite the partner hands
+    │                             to their clients (details · agenda · gift · CTA)
+    └── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
+                                  — arrow/click nav, PDF export
 └── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
@@ -91,7 +93,10 @@ there.
   story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and a
   self-calculated margin, closing on the Разбор утечек прибыли. Includes the
   readable script (`.html` + `.md`) and ready-to-post announcement copy
-  (`announcement-ru.md`). An on-brand slide deck is the natural next build.
+  (`announcement-ru.md`), a co-branded partner invite (`invite-candramas-ru.html`),
+  and the on-brand 16-slide deck to screen-share (`webinar-deck-ru.html`).
+  Coffee-shop figures are grounded in real industry data (net margin 5–12%, owner
+  ~$50–65k/yr, marketing 2–5% of revenue).
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,
