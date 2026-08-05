@@ -2,53 +2,36 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,700&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box; margin:0; padding:0}
   body{background:#222}
   .cover{
     position:relative; width:1400px; height:1400px; overflow:hidden;
-    background:radial-gradient(115% 90% at 50% -6%, rgba(207,162,104,.16), transparent 55%),linear-gradient(158deg,#123841,#0D2A31 68%,#091F24);
-    color:#ECE6DA; font-family:"IBM Plex Mono",monospace;
+    background:radial-gradient(120% 95% at 50% -4%, rgba(207,162,104,.18), transparent 56%),linear-gradient(158deg,#123841,#0D2A31 66%,#091F24);
+    color:#fff; font-family:"Source Serif 4",Georgia,serif;
     display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
-    padding:120px 110px;
+    padding:110px 120px;
   }
-  .lockup{position:absolute; top:118px; left:50%; transform:translateX(-50%); width:400px}
-  .wm{position:absolute; left:50%; top:52%; transform:translate(-50%,-50%); width:900px; opacity:.045}
-  .kicker{position:relative; font-family:"IBM Plex Mono",monospace; font-size:23px; letter-spacing:.2em; text-transform:uppercase; color:#CFA268; margin-bottom:40px; max-width:26ch}
-  h1{position:relative; font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:96px; line-height:1.06; letter-spacing:-0.02em; color:#fff; text-wrap:balance; max-width:15ch}
+  .mark{width:190px; margin-bottom:56px}
+  .tag{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:40px; letter-spacing:.16em; text-transform:uppercase; color:#CFA268; margin-bottom:52px}
+  h1{font-family:"Source Serif 4",Georgia,serif; font-weight:700; font-size:132px; line-height:1.02; letter-spacing:-0.025em; color:#fff; text-wrap:balance; max-width:13ch}
   h1 em{font-style:italic; color:#CFA268}
-  .sub{position:relative; font-family:"IBM Plex Mono",monospace; font-size:25px; letter-spacing:.02em; color:#9FB3B6; margin-top:44px; max-width:34ch; line-height:1.5}
-  .who{position:absolute; bottom:120px; left:50%; transform:translateX(-50%); font-family:"IBM Plex Mono",monospace; font-size:23px; letter-spacing:.04em; color:#9FB3B6}
-  .who b{color:#fff; font-family:"Source Serif 4",serif; font-weight:600}
+  .name{position:absolute; bottom:88px; left:0; right:0; font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:34px; letter-spacing:.14em; text-transform:uppercase; color:#7E9599}
 </style>
 </head>
 <body>
 <div class="cover">
 
-  <svg class="lockup" viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
-    <g transform="translate(6,5)">
-      <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
-      <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle>
-      <g fill="#CFA268">
-        <path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
-        <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path>
-      </g>
-      <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
-        <g fill="none" stroke="#ECE6DA" stroke-width="9">
-          <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
-          <path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path>
-        </g>
-      </g>
+  <!-- JK medallion mark (reversed) -->
+  <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group">
+    <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3.4"></circle>
+    <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.6"></circle>
+    <g fill="#CFA268">
+      <path d="M7 56.5 l3.6 3.5 -3.6 3.5 -3.5 -3.5 z"></path>
+      <path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.6 -3.5 z"></path>
     </g>
-    <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#FFFFFF">JK Accounting Group</text>
-    <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text>
-  </svg>
-
-  <svg class="wm" viewBox="0 0 120 120" aria-hidden="true">
-    <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
-    <circle cx="60" cy="60" r="50.5" fill="none" stroke="#ECE6DA" stroke-width="1.4"></circle>
-    <g transform="translate(60,60) scale(0.6) translate(-59,-56)">
+    <g transform="translate(60,60) scale(0.62) translate(-59,-56)">
       <g fill="none" stroke="#ECE6DA" stroke-width="9">
         <path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path>
         <path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path>
@@ -56,11 +39,10 @@
     </g>
   </svg>
 
-  <p class="kicker">Бесплатный вебинар для владельцев бизнеса</p>
+  <p class="tag">Бесплатный вебинар</p>
   <h1>Почему бизнес растёт, а прибыль <em>уменьшается</em></h1>
-  <p class="sub">4 причины, по которым деньги утекают незаметно — и как найти их у себя</p>
 
-  <div class="who"><b>Юлия Кононова</b> · JK Accounting Group</div>
+  <div class="name">JK Accounting Group</div>
 
 </div>
 </body>
