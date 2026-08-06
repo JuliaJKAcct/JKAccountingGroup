@@ -6,7 +6,7 @@ description: Determine which JK Accounting Group clients are READY to have their
 # Tax-season readiness — who can we file, and who are we waiting on
 
 > **Mechanics live next door.** This skill is the *domain* layer — what the columns mean and how
-> to reason about them. For how to actually reach Double's data (the four data planes, the folder
+> to reason about them. For how to actually reach Double's data (the five data planes, the folder
 > conventions, call efficiency, write safety), load [`double-mcp`](../double-mcp/) alongside it.
 
 How the firm knows, at any point in tax season, **which clients we can actually prepare a

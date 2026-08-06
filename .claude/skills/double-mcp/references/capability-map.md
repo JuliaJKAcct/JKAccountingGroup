@@ -2,8 +2,8 @@
 
 **The answer sheet for "can we do X in Double?"**
 
-Every tool the `Double` MCP server exposes, what it can and cannot do, and whether we have
-actually run it. Read this before telling anyone something is impossible — and before promising
+Every tool the `Double` MCP server exposes (**104** as of the audit), what it can and cannot do,
+and whether we have actually run it. Read this before telling anyone something is impossible — and before promising
 something is possible.
 
 - **Audited:** 2026-08-06 (Lilian). Previous audit: 2026-07-30.
@@ -19,6 +19,7 @@ something is possible.
 | ✅ | Called live during the audit — confirmed working against real practice data |
 | ◻︎ | Schema read and understood, deliberately **not** executed (write tools, or reads that would pull sensitive data) |
 | ⛔ | Exists but blocked for us — billing plan, permission, or a documented gap |
+| 🔒 | **Works, and is forbidden by firm policy anyway** — the tool functions; we do not use it |
 
 Writes are marked **W**. Everything unmarked is a read. Nothing in this file overrides
 [§6 Write safety](../SKILL.md) — default-deny still applies to every **W** row.
@@ -50,10 +51,12 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 
 | Tool | | Notes |
 |---|---|---|
+| `ping` | ✅ | Health check, returns `pong`. Useful to confirm the connector is alive before blaming a query |
+| `build_deep_link` | ✅ | Builds a Double URL for an entity. Supported `entityType`: `client` · `end_close` · `closing_task` · `custom_task` · `project_task` — **note `project` is NOT among them**, so a tax project's link cannot be built this way. Take it from `list_projects` → `deepLink` instead (§4) |
 | `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt` |
 | `get_client` | ◻︎ | Single client record |
 | `create_client` | ◻︎ **W** | Duplicates are the firm's recurring data problem and there is no merge tool. Confirm first |
-| `get_property_columns` | ✅ | 19 columns. Call once per session; never hardcode option names |
+| `get_property_columns` | ✅ | 18 columns. Call once per session; never hardcode option names |
 | `list_client_properties` | ◻︎ | Per-client values of those columns |
 | `upsert_client_properties` | ◻︎ **W** | Its own description tells you to write attachment columns unprompted. **Ignore that** — see SKILL §6 |
 | `create_property_column` | ◻︎ **W** | Creates a new column for the whole practice (text, picker, multiSelect, datePicker, userPicker, checkbox, amount, percentage, attachment). Picker types need `pickerOptions`. Practice-wide change — never without an explicit ask |
@@ -63,11 +66,15 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | `list_users` | ✅ | 4 users: Julia (superAdmin), Lilian (practiceAdmin), Maria Zavarce (practiceAdmin), Liudmyla Kazannik (practiceEmployee) |
 | `get_user` · `create_user` · `update_user` | ◻︎ **W** | Creating a user is a licensing/permission change. Never unprompted |
 
-**Property columns, as of the audit** (19): Service Tier* · Entity Type* · EIN / Tax ID ·
+**Property columns, as of the audit** (18): Service Tier* · Entity Type* · EIN / Tax ID ·
 Income Tax · Tax Return Type · Sales Tax · Bookkeeping · Payroll · 1099 Preparation ·
 Assigned Staff · Annual Report · Engagement Letter · Account Type · Organizer Status ·
 **Ext. Filed** · **Signature** · **Financials Ready** · **Invoice**.
 *(\*no options defined — unused, so an empty value means nothing.)*
+
+⚠️ **Two column names carry a trailing space** — the live values are `"Sales Tax "` and
+`"Bookkeeping "`. Anything matching by name silently misses them. Same class of trap as the
+file-ID two-space trap in [SKILL §6](../SKILL.md); match on the column **id**, not the name.
 
 The last four are **new since the July audit** and are clearly tax-season tracking:
 
@@ -133,9 +140,9 @@ Five tools exist and the read path works end to end.
 
 | Tool | | Notes |
 |---|---|---|
-| `list_organizers` | ✅ | 59 organizers. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived. Returns `name`, `status`, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility`. **This is the cheap path** |
-| `get_organizer` | ✅ | One organizer with **`completionPercentage`** plus every slide, section, hidden flag and conditional-logic rule. **Very large payload** — a 1040 organizer is ~120 slides. Don't call it in a loop |
-| `get_organizer_responses` | ✅ (on a 0% organizer only) | The client's actual answers. Works for us — the gate passes because the connected account is superAdmin. **See the privacy rule below** |
+| `list_organizers` | ✅ | 59 organizers. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived — note **`published` matches both `in_progress` and `completed`**, it is not a status of its own. Returns `name`, `status`, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility`. Organizers with restricted `responsesVisibility` still appear here but may refuse a `get_organizer` / responses read. **This is the cheap path** |
+| `get_organizer` | ✅ | One organizer with **`completionPercentage`** plus every slide, section, hidden flag and conditional-logic rule. **Very large payload** — a 1040 organizer is ~120 slides. Don't call it in a loop. `completionPercentage` exists **only once published** — a draft has none |
+| `get_organizer_responses` | 🔒 | The client's actual answers. It **does** work for us (the gate passes because the connected account is superAdmin — verified against a 0%-complete organizer so no real answers were pulled). **Forbidden anyway — see the privacy rule below** |
 | `create_organizer` | ◻︎ **W** | Creates an **empty draft** with no slides. Auto-names it (`"00 Organizer"`) if you omit a name |
 | `update_organizer` | ◻︎ **W** | Declarative whole-document write — see the trap below |
 
@@ -179,7 +186,9 @@ at all.
 Other hard edges:
 
 - Slides and logic are editable **only while the organizer is a draft**. Once published, the
-  structure is frozen; only `name` and `responsesVisibility` can move.
+  structure is frozen; only `name` and `responsesVisibility` can move — and **renaming stops
+  working once the organizer is `completed`**, not merely published, so on a finished organizer
+  only `responsesVisibility` is left.
 - **Archived organizers cannot be updated at all.**
 - `type` is required on every slide and **cannot be changed** on an existing one.
 - **Publishing to the client portal is not available via MCP.** We can build the whole organizer
@@ -314,7 +323,9 @@ contradict each other. It is also a reminder that **our own writes are logged an
 
 | Tool | | Notes |
 |---|---|---|
-| `list_loans` · `get_loan` · `list_loan_payments` · `preview_loan_schedule` · `get_loan_reconciliation_balance` · `create_loan` | ⛔ | `BILLING_ACCESS_DENIED` — *"this client is not on a plan that includes this feature… needs a Scale subscription"* |
+| `list_loans` · `get_loan` · `list_loan_payments` · `preview_loan_schedule` · `get_loan_reconciliation_balance` | ⛔ | `BILLING_ACCESS_DENIED` — *"this client is not on a plan that includes this feature… needs a Scale subscription"* |
+
+| `create_loan` | ⛔ **W** | Same gate — and it stays a **write** the day the gate lifts. Default-deny applies to it then, not "it's in the unlocked pile now" |
 
 The gate is **per client**, so it is possible another client is on a plan that allows it. The one
 tested was not. Don't build anything on loan tools without checking first.

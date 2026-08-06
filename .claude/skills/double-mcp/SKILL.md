@@ -22,12 +22,17 @@ the whole firm.
 
 > ### 📋 "Can we do X in Double?" → [`references/capability-map.md`](./references/capability-map.md)
 >
-> That file is the **audited answer sheet**: every one of the ~100 tools the connector exposes,
+> That file is the **audited answer sheet**: every one of the **104** tools the connector exposes,
 > grouped by area, marked read or **write**, and marked ✅ verified live / ◻︎ schema-only / ⛔
 > blocked — with the counts and dates of the last audit. **Read it before telling anyone
 > something is impossible, and before promising something is possible.** It answers the
 > recurring ones directly: the tax-return **deadline cannot be written** from here, organizer
 > progress **now can be read**, organizer **publishing** cannot, loan tools are **billing-gated**.
+>
+> **And the one prohibition to carry before you touch anything:** never call
+> `get_organizer_responses` on a real client. It returns Social Security numbers, driver's
+> licenses and bank account numbers straight into the transcript. For progress, read
+> `completionPercentage` instead — §2.2.
 >
 > This guide stays the *how and why*; the capability map is the *what*. When Double ships new
 > tools — it does, silently — re-run the audit described at the end of that file.
@@ -154,8 +159,8 @@ the read path works end to end (verified 2026-08-06 — 59 organizers in the pra
 
 | Tool | What it gives |
 |---|---|
-| `list_organizers` | The **cheap** path. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived. Returns name, status, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility` |
-| `get_organizer` | One organizer with **`completionPercentage`** plus every slide, section, hidden flag and logic rule. **Huge payload** — a 1040 organizer is ~120 slides. Never call it in a loop |
+| `list_organizers` | The **cheap** path. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived — **`published` matches both `in_progress` and `completed`**. Returns name, status, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility` |
+| `get_organizer` | One organizer with **`completionPercentage`** (published only — a draft has none) plus every slide, section, hidden flag and logic rule. **Huge payload** — a 1040 organizer is ~120 slides. Never call it in a loop |
 | `get_organizer_responses` | The client's actual answers — see the rule below |
 | `create_organizer` **W** | Creates an **empty draft**, no slides |
 | `update_organizer` **W** | Declarative whole-document write — see the trap below |
@@ -186,7 +191,8 @@ The `slides` array you send is the **complete desired state**: any existing slid
 the payload is **deleted** (the call refuses without `confirmDeletions: true`). Logic rules work
 the same way and their deletion needs no confirmation at all. Always `get_organizer` first,
 modify that, and send it back — never author a payload from memory. Slides and logic are
-editable **only while the organizer is a draft**; archived organizers cannot be updated at all.
+editable **only while the organizer is a draft**; renaming stops working once it is **completed**
+(not merely published); archived organizers cannot be updated at all.
 
 And the ceiling: **publishing to the client portal is not available via MCP.** We can build the
 entire organizer and a human still has to press publish.
@@ -387,7 +393,9 @@ authorization from the firm.
   roster), and there is no merge tool. `create_user` is also a licensing and permission change.
 - **You cannot upload a file yourself.** `internal_upload_file` opens an **interactive picker the
   user must operate** — a session has no access to their filesystem. The `fileKey` comes back from
-  `internal_confirm_upload`, and only then can `add_file_to_client` place it. Never promise an upload
+  the picker's own response (Double's schemas call that step `internal_confirm_upload`, but **no
+  such tool is exposed to us** — don't go looking for it), and only then can `add_file_to_client`
+  place it. Never promise an upload
   you are going to perform; ask for the picker. Files land hidden from the client by default in custom
   folders; omitting `folderId` sends them to the Uploads Inbox and triggers OCR. Be deliberate about
   which you want, and about `isVisible`.
