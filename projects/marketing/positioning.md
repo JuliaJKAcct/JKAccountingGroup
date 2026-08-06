@@ -66,11 +66,19 @@ What is free is the short first conversation to see whether we're a fit. So ever
 CTA, everywhere (website, collateral, signatures, referral scripts), reads
 **"Book a free discovery call"** — never "Book a free consultation."
 
-The free discovery call is **10 minutes, by phone** (we call the number the person
-gives us), bookable on Julia's calendar every 30 minutes with 4 hours' notice —
-`jkaccountinggroup.com/book/Discovery-Call`. Keep the "10 minutes" promise in the
-copy: it is what makes the ask feel small, and it is what the calendar actually books.
-_(Lilian, Aug 2026.)_
+**Two offers, never blurred** _(Lilian, Aug 2026)_:
+
+| | **Discovery call** | **Consultation** |
+|---|---|---|
+| What it costs | Free | **$150** |
+| How long | **10 minutes** | **1 hour** |
+| How | By phone — we call the number they give us | Online |
+| Where it books | `jkaccountinggroup.com/book/Discovery-Call` | `jkaccountinggroup.com/appointment/3` |
+
+Keep the "10 minutes" promise in the discovery-call copy: it is what makes the ask feel
+small, and it is what the calendar actually books. And never write "free" next to
+*consultation* — the consultation is paid advisory work, and saying otherwise is the
+mistake this whole rule exists to prevent.
 
 ## The pitch
 

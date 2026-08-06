@@ -108,9 +108,14 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   (America/New_York). The website CTAs now read "Book a free discovery call", carry a
   "10 minutes · no obligation" micro-line on the four main pages, and link to the
   calendar.
-- **Inputs still needed from the firm:** what happens to the **Consultation Landing (EN)**
-  page, which still promises 30 minutes; whether **Ping Assistant** is needed on discovery
-  calls at all (it cannot join a phone call); and Zoom vs Google Meet for the longer paid
-  formats (Q&A Call, Consultation).
+- **The `/consultation` landing is the PAID offer (Lilian, Aug 2026).** It now sells the
+  **1-hour, $150** consultation, every CTA links to the Consultation calendar
+  (`/appointment/3`, published in the same pass), and the word "free" is gone from it.
+  A discovery call and a consultation are different products — see the comparison table in
+  [`INSTALL-ODOO.md`](./INSTALL-ODOO.md).
+- **Inputs still needed from the firm:** Julia's Zoom room URL (the consultation calendar
+  still generates an Odoo Discuss link); whether Odoo should **collect the $150** at
+  booking; whether **Ping Assistant** is needed on discovery calls at all (it cannot join a
+  phone call); and the planned page that offers **both** options side by side.
 - **On go-live:** point the website "Book a Consultation" button and the
   [email signatures](../email-branding/) at this page's URL.

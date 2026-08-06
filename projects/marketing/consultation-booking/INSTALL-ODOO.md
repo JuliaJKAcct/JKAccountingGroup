@@ -21,7 +21,7 @@ Lilian reconfigured the discovery call in **Aug 2026**. Three appointment types 
 |---|---|---|---|---|
 | 1 | **Discovery Call** | **10 min**, slots every **30 min** | Mon–Thu 09:00–12:00 and 14:00–17:00 · **Fri 10:00–12:00 and 14:00–15:30** | `/appointment/1` and `/book/Discovery-Call` — **published** |
 | 2 | Q&A Call | 30 min | Mon–Fri 09:00–12:00 and 14:00–17:00 | publish state not verified |
-| 3 | Consultation | 60 min | Mon–Fri 11:00–15:00 | publish state not verified |
+| 3 | **Consultation** — **paid, $150** | 60 min | Mon–Fri 11:00–15:00 | `/appointment/3` — **published Aug 2026** |
 
 **Discovery Call** (`appointment.type` id 1) as configured today: host = **Julia** (the
 only staff user) · **free 10-minute phone call — no video link** (Location reads "Phone
@@ -42,17 +42,41 @@ video source was cleared. Zoom vs Meet is still open for the *longer* paid forma
 (Q&A Call, Consultation), and **Ping Assistant cannot join a phone call** — if the firm
 wants the notetaker on discovery calls, that decision has to be reopened.
 
+## The two offers — keep them distinct
+
+A **discovery call** and a **consultation** are different products. Do not let copy blur
+them (Lilian, Aug 2026):
+
+| | Discovery Call | Consultation |
+|---|---|---|
+| Price | **Free** | **$150** |
+| Length | **10 minutes** | **1 hour** |
+| Channel | **Phone** — we call the number given | Online (Zoom is the intent; see below) |
+| Odoo type | id 1 · `/book/Discovery-Call` | id 3 · `/appointment/3` |
+| Availability | Mon–Thu 09:00–12:00 / 14:00–17:00 · Fri 10:00–12:00 / 14:00–15:30 | Mon–Fri 11:00–15:00 |
+| Notice / horizon | 4 h · 15 days | 12 h · 15 days |
+
+The `/consultation` landing page (`jk_landing.consultation_en`) is the **paid** one: as of
+Aug 2026 it sells the 1-hour $150 consultation, every CTA links to `/appointment/3`, and
+the word "free" no longer appears on it. Its lead form survives as a secondary path
+(button "Send my details", leads tagged `Consultation ($150) — EN landing`).
+
 **Still open after the Aug 2026 pass:**
 
-- The **Consultation Landing (EN)** page (`ir.ui.view` `jk_landing.consultation_en`)
-  advertises a **30-minute** conversation in five places and its CTAs post to its own
-  form rather than the calendar. Its buttons now say "Book a free discovery call", so
-  the duration contradicts the 10-minute calendar — decide whether that page becomes the
-  10-minute call or stays a separate longer offer.
+- **Both offers on one page.** The plan is for the entry points to present *both* options
+  side by side — free 10-min phone discovery call vs. 1-hour $150 consultation. Not built
+  yet; `booking-chooser.odoo.html` in this folder is the natural starting point.
+- **Zoom for the consultation.** Odoo type 3 currently generates an **Odoo Discuss** video
+  link, not Zoom. Needs Julia's fixed Zoom room URL to switch.
+- **Does Odoo collect the $150 at booking?** The type carries a $150 product price, but
+  whether the booking flow takes payment was not verified — check before promoting the page.
 - The Home and Pricing hero CTAs still link to `/contactus` (the email form) rather than
-  the calendar.
+  the discovery-call calendar.
 - Three **legacy** (unpublished) views still contain the old "free consultation" wording:
   `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`.
+- The **RU and UK versions** of the consultation landing (`/ru/konsultatsiya`,
+  `/ua/konsultatsiia`) were not touched — if they exist as separate views they still sell a
+  free 30-minute consultation.
 
 ---
 
