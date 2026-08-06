@@ -4,8 +4,9 @@ Julia and Lilian both drive this repo through Claude, often in **several session
 work that overlaps. These two hooks exist so a session finds out about the other sessions
 *by itself*, instead of depending on someone remembering to check.
 
-They are registered in [`../settings.json`](../settings.json) and run automatically once that file
-is on `main`.
+They are registered in [`../settings.json`](../settings.json). Hook configuration is read **at
+session start**, so they take effect from your **next** session after this lands on `main` — not in
+the session that merges it.
 
 | Hook | Fires | What it does |
 |---|---|---|
@@ -33,14 +34,24 @@ signal that was missing.
 
 ## Design rules these scripts follow
 
-- **Never block, never fail a session.** Both always `exit 0`. The drift check *warns*; the
-  judgement stays with the session, because sometimes committing anyway is right.
-- **Never hang.** Every network call is wrapped in `timeout` (20s at session start, 15s at commit),
-  and the commit-time fetch is throttled to once per 90 seconds via a marker in `.git/`.
-- **Degrade quietly.** No git repo, no network, no `python3` → the hook says so in one line, or says
-  nothing, and gets out of the way.
+- **Never block, never fail a session.** Both always `exit 0` — verified against a garbled
+  throttle marker, a missing `timeout`, a missing `python3`, no network, no repo, an empty repo,
+  a detached HEAD and a shallow clone. The drift check *warns*; the judgement stays with the
+  session, because sometimes committing anyway is right.
+- **Never hang.** Every network call is wrapped in `timeout` (20s at session start, 15s at commit)
+  — and because stock macOS has no GNU `timeout`, they fall back to `gtimeout`, then to git's own
+  `http.lowSpeedLimit` abort, rather than skipping the check. `GIT_TERMINAL_PROMPT=0` stops a
+  credential prompt from burning the whole timeout. The commit-time fetch is throttled to once per
+  90 seconds via a marker in `.git/`, and the warning itself repeats only when `origin/main` has
+  moved again — so a session that decides to commit anyway is not nagged on every commit.
+- **Degrade quietly, but never *falsely reassure*.** No git repo → silence. No network → the
+  session-start briefing says it may be stale and shows the last fetch; the drift check compares
+  against the stale `origin/main` anyway, because that still catches drift while skipping catches
+  nothing. No `python3` → plain text on **stdout** (stderr is discarded on exit 0, so a warning
+  sent there would never reach the session). No merge base (shallow clone) → says it could not
+  compute the overlap, rather than printing "no overlap".
 - **Stay short.** `session-start.sh` output is prepended to every session, so it costs tokens every
-  time. Keep it under ~25 lines.
+  time. It caps at 6 commits, 5 hot files and 5 branches — about 30 lines at its longest.
 
 ## Changing or switching them off
 

@@ -8,29 +8,36 @@
 #
 # See CLAUDE.md → "Two people work here in parallel" and "The drift check".
 #
-# Design rules: never block a session, never fail one. Every step is guarded and
-# the script always exits 0. Keep the output short — it is prepended to every
-# session.
+# Design rules: never block a session, never fail one, never hang. Every step is
+# guarded and the script always exits 0. Keep the output short — it is prepended
+# to every session.
 
 set -uo pipefail
 
 cd "${CLAUDE_PROJECT_DIR:-.}" 2>/dev/null || exit 0
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || exit 0
 
-# 20s ceiling: a slow network must not delay the session.
-if ! timeout 20 git fetch origin --prune --quiet >/dev/null 2>&1; then
-  echo "[parallel-work check] Could not reach origin. Run 'git fetch origin main' before you commit."
-  exit 0
+# `timeout` is GNU; stock macOS does not ship it. Resolve once and fall back to
+# git's own low-speed abort rather than silently skipping the whole check.
+TO=""
+if command -v timeout >/dev/null 2>&1; then TO="timeout 20"
+elif command -v gtimeout >/dev/null 2>&1; then TO="gtimeout 20"
 fi
+export GIT_TERMINAL_PROMPT=0   # a credential prompt would just burn the timeout
+
+fetch_ok=1
+$TO git -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=20 \
+   fetch origin --prune --quiet >/dev/null 2>&1 || fetch_ok=0
 
 echo "═══ Parallel-work check — other sessions may be editing the same files ═══"
+[ "$fetch_ok" -eq 0 ] && echo "(Could not reach origin — this is from the LAST fetch and may be stale.)"
 
 echo ""
 echo "Just landed on main:"
 git log -6 --format='  %h  %cr — %s' origin/main 2>/dev/null | cut -c1-120
 
 hot=$(git log --since='4 days ago' --name-only --format='' origin/main 2>/dev/null \
-      | grep -v '^[[:space:]]*$' | sort | uniq -c | sort -rn | head -6 \
+      | grep -v '^[[:space:]]*$' | sort | uniq -c | sort -rn | head -5 \
       | awk '{printf "  %2sx  %s\n", $1, $2}')
 if [ -n "$hot" ]; then
   echo ""
@@ -38,28 +45,33 @@ if [ -n "$hot" ]; then
   echo "$hot"
 fi
 
-# Branches other sessions have pushed but not yet merged. `--no-merged` keeps
-# the 60-odd finished branches out; the 3-day window keeps abandoned ones out.
+# Branches other sessions pushed but have not merged. `--no-merged` drops the
+# 60-odd finished ones; the 3-day window drops the abandoned ones.
 current=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
 unmerged=$(git branch -r --no-merged origin/main 2>/dev/null | tr -d ' ')
-inflight=$(git for-each-ref --sort=-committerdate \
-             --format='%(committerdate:unix)|%(refname:short)' refs/remotes/origin/ 2>/dev/null \
-           | awk -F'|' -v now="$(date +%s)" '$1 > now - 259200 {print $2}' \
-           | grep -E '^origin/claude/' \
-           | grep -Fx -f <(echo "$unmerged") 2>/dev/null \
-           | grep -v -F "origin/$current" \
-           | head -6)
+inflight=""
+if [ -n "$unmerged" ]; then
+  # NOTE: `-x` on the grep below is LOAD-BEARING. With an empty pattern list,
+  # `grep -Fx -f` matches nothing (correct); plain `grep -F -f` matches
+  # EVERYTHING. Do not drop the -x.
+  inflight=$(git for-each-ref --sort=-committerdate \
+               --format='%(committerdate:unix)|%(refname:short)' refs/remotes/origin/ 2>/dev/null \
+             | awk -F'|' -v now="$(date +%s)" '$1 > now - 259200 {print $2}' \
+             | grep -E '^origin/claude/' \
+             | grep -Fx -f <(echo "$unmerged") 2>/dev/null \
+             | head -5)
+  # -x here too: without it, a branch name that PREFIXES another hides it.
+  [ -n "$current" ] && inflight=$(echo "$inflight" | grep -vFx "origin/$current")
+fi
 
 if [ -n "$inflight" ]; then
   echo ""
   echo "Unmerged branches active in the last 3 days — another session may be working here NOW:"
   while IFS= read -r br; do
     [ -z "$br" ] && continue
-    subj=$(git log -1 --format='%cr — %s' "$br" 2>/dev/null | cut -c1-80)
-    echo "  ${br#origin/}"
-    echo "      $subj"
+    echo "  ${br#origin/}  ·  $(git log -1 --format='%cr — %s' "$br" 2>/dev/null | cut -c1-70)"
   done <<< "$inflight"
-  echo "  → If any of these overlaps your task, read it first (git log -p <branch>) and build on it."
+  echo "  → If any overlaps your task, read it first (git log -p <branch>) and build on it."
 fi
 
 echo ""
