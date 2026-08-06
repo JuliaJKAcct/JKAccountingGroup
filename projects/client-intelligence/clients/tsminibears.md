@@ -106,10 +106,10 @@ recorded for history and because the Florida RT matter at the end is still open.
 > - **Closing the account is OFF** — not because the agency refused it, but because **Julia wants
 >   it left open** in case the company files as an S-corp and has to run payroll _(Lilian,
 >   2026-08-06)_.
-> - **Moving the effective date is the route the firm wants to try.** The agency gates it on the
->   entity's federal filing form, and the firm **has the client's IRS CP575**, which Lilian expects
->   says the entity is **disregarded** — **not yet read, and it collides with the 1120-S actually
->   filed for 2025.** See the Option 2 block.
+> - **Moving the effective date is the route the firm wants to try.** But the agency requires **a
+>   letter from the IRS stating how the company files its taxes** — **for the closure as well as
+>   for the date change** — and that letter is the problem, because the company files **1120-S**.
+>   See "The three options".
 > - **Filing the zero returns and paying ≈$842.50 is the fallback**, and the price Julia is
 >   weighing against it.
 >
@@ -202,7 +202,14 @@ agreed with the agency.**
 > better-informed one rather than as "the agency changed its mind", **and raise the entity-type
 > question explicitly on every future call** instead of waiting for the representative to.
 
-**The agency now presents two options:**
+**There are three options on the table.**
+
+> **The letter gates two of them.** For **both** the closure **and** the effective-date change, the
+> representative said the firm has to send **a letter from the IRS stating how the company files
+> its taxes**. **She did not name a form** — that identification is the firm's own _(Lilian,
+> 2026-08-06: "ella no me dijo el nombre, yo fui la que estaba asumiendo")_. So the record here says
+> **"an IRS letter stating how the company files its taxes"**, and nothing is attributed to the
+> agency that it didn't say. Only **Option 1 needs no letter at all**.
 
 **Option 1 — file the zero returns and pay the penalties, interest and fees. Keep the account open.**
 
@@ -222,63 +229,74 @@ agreed with the agency.**
   see §6.**
 - Lilian's read: **"bastante alto"** — high, but this is the route that leaves the RT account open.
 
-**Option 2 — move the effective date. THE ROUTE THE FIRM WANTS TO TRY, and it keeps the account.**
+**Option 2 — close the RT account. Free, but Julia has already ruled it out — and it needs the letter too.**
+
+- This was the 2026-08-04 recommendation, and the second representative confirmed it is still a
+  route: closing avoids the penalties.
+- **Julia's objection stands and is the reason it is off:** Tsminibears is an **S-corp**, keeping
+  that status may mean running **payroll**, and Florida payroll needs an **open RT account**. A
+  closed account would be in the new accountants' way.
+- **New on 2026-08-06 — closing is NOT letter-free either.** The representative said the same
+  **IRS letter stating how the company files its taxes** has to be sent to close the account. So
+  the closure runs into exactly the same wall as Option 3.
+
+**Option 3 — move the effective date. THE ROUTE THE FIRM WANTS TO TRY, and it keeps the account.**
 
 - Julia's idea was to move the effective date forward to **October 2026**.
 - **Why this is the attractive one:** it is **not** a closure. The RT account survives with a later
   effective date, so the delinquent quarters go away **and** the company still has an open account
   if it runs payroll to protect its S-corp position. It answers Julia's objection without paying
   the ≈$842.50.
-- **The agency's gate:** if the company files its taxes **as a corporation**, the DOR takes it that
-  a **salary must be paid**, and on that basis will **neither close the account nor change the
-  effective date**. To move the date you must **show the company files in a form that does not
-  require payroll** — a **Schedule C** / disregarded-type entity.
-- **What the firm has:** the client's **IRS CP575** (the EIN confirmation letter). Lilian expects it
-  states the entity is **disregarded** or similar, which would be exactly what the DOR wants to see
-  — **but she had not read it yet as of 2026-08-06.** ⚠️ **Read the CP575 before anything is
-  drafted; the whole route rests on what it actually says.**
-- **⚠️ The tension nobody has resolved yet — flag it to Julia before the request goes out.** The
-  CP575 records the filing requirement **at the time the EIN was issued**. If the company later
-  elected S-corp treatment (Form **2553**, acknowledged by the IRS on a **CP261**), the CP575 can
-  truthfully say "disregarded" while the **current** filing form is 1120-S. And **the firm itself
-  filed an 1120-S for 2025** on 2026-05-25 (§4, Income tax) — so a CP575 showing a
-  disregarded entity would **not** describe how the company files today. Sending it to the DOR as
-  evidence that no payroll is required is therefore a real exposure if the agency ever matches it
-  against the 1120-S. **Establish whether a 2553/CP261 exists before deciding** — see §6.
-  _(This is the firm's own analysis, not something the DOR said.)_
-- **A framing that doesn't depend on entity type at all**, worth having ready: **no wages were ever
-  paid**, so there is no RT liability for any period to date, and the account should be effective
-  from the quarter wages actually begin. That is true regardless of how the company files, and it
+- **Same requirement as Option 2:** send **a letter from the IRS stating how the company files its
+  taxes**. Behind the requirement is the agency's reasoning: a company that files **as a
+  corporation** is presumed to pay a **salary**, and on that basis the DOR will **neither close the
+  account nor change the effective date**. What gets either one through is a filing form with **no
+  salary requirement** — a **Schedule C** / disregarded-type entity.
+- **What the firm has:** the client's **CP575** (the IRS's EIN confirmation letter). Lilian expects
+  it states the entity is **disregarded** or similar — **but she had not read it as of 2026-08-06,
+  and the DOR never asked for a CP575 by name; that identification is the firm's** _(§5)_. ⚠️
+  **Read it before anything is drafted.**
+- **⚠️ The tension nobody has resolved yet — flag it to Julia before any request goes out. It
+  applies to Option 2 and Option 3 alike, since both need the letter.** A CP575 records the filing
+  requirement **at the time the EIN was issued**. If the company later elected S-corp treatment
+  (Form **2553**, acknowledged by the IRS on a **CP261**), the CP575 can truthfully say
+  "disregarded" while the **current** filing form is 1120-S. And **the firm itself filed an 1120-S
+  for 2025** on 2026-05-25 (§4, Income tax) — so a CP575 showing a disregarded entity would **not**
+  describe how the company files today. Sending it as evidence that no payroll is required is a
+  real exposure if the agency ever matches it against the 1120-S. **Establish whether a 2553/CP261
+  exists before deciding** — see §6. _(Firm's own analysis, not something the DOR said.)_
+- **A framing that doesn't depend on the filing form at all**, worth having ready: **no wages were
+  ever paid**, so there is no RT liability for any period to date, and the account should be
+  effective from the quarter wages actually begin. True regardless of how the company files, and it
   is what the firm actually knows. Consider leading with it.
-- **How the request is made:** by **email**, attaching the **IRS letter stating which form the
-  entity files** — the **CP575**. _(Lilian refers to it as "the SS-4" because **the CP575 itself
-  cites Form SS-4** on its face; the naming is hers, the document is the CP575 — §5. A **147C** is
-  the replacement if the CP575 can't be found.)_ The email should explain the situation, state that
-  **there are no employees**, that the company **does file taxes**, that it is **not an entity type
-  requiring a mandatory salary**, and **the date to which the effective date is being requested to
-  move**.
+- **How the request is made:** by **email**, attaching that IRS letter, explaining the situation,
+  stating that **there are no employees**, that the company **does file taxes**, that it is **not an
+  entity type requiring a mandatory salary**, and **the date to which the effective date is being
+  requested to move**.
 - **Send to: `fdorspanish@floridarevenue.com`** _(the DOR's Spanish-language address — the one the
   representative gave Lilian, whose calls with the agency are in Spanish)_.
 
-**What this means for the decision.** Closing is **off** — Julia wants the account open in case the
-company files as an S-corp and has to run payroll. **The firm will try to move the effective date
-instead**, using the CP575, with **Option 1 (file the zeros, pay ≈$842.50) as the fallback**. Julia
-decides once she has all of this; Lilian is assembling it for her _(2026-08-06)_.
+**What this means for the decision.** **Option 2 is off** — Julia wants the account open in case the
+company files as an S-corp and has to run payroll. **The firm will try Option 3**, with **Option 1
+(file the zeros, pay ≈$842.50) as the fallback**. But Options 2 and 3 both need the IRS letter, so
+**what that letter actually says decides whether either is available at all.** Julia decides once
+she has all of this.
 
 ## 5. Key facts & quirks
 
 - **The lesson to carry to other clients: registering a state RT number in Gusto does NOT get $0 returns filed.** Gusto files only from the **first check date** — the first payroll actually processed on its platform. Until then it files nothing at all, not even zero returns, even though the RT account number sits in the Gusto account. _(Basis: one Gusto Tax Resolution reply on one case, 2026-06-09 — confirm with Gusto before relying on it firm-wide, but treat any client with a registered RT account and no payroll yet as potentially exposed.)_
 - **Registering the state RT account starts the clock.** Florida sets an **effective date** at registration and expects quarterly reports from that quarter on, whether or not wages are ever paid. Register the RT account only when payroll is genuinely about to start — and once it **is** open, file the $0 returns **on time**; the obligation doesn't wait for wages, and it's *late* zeros that draw the penalty.
-- **⚠️ The Florida DOR gates BOTH fixes on the entity's federal filing form.** Per the agency _(2026-08-06)_: if the company files **as a corporation**, it takes it that a **salary must be paid**, and on that basis **will neither close the account nor move the effective date**. To get either you must **show the company files in a form with no salary requirement** (a **Schedule C** / disregarded-type entity), by sending the **IRS CP575**. **So establish the entity type before promising anyone a closure or a date change — and raise it yourself on the call, because a representative may never bring it up** (the one on 2026-08-04 didn't).
+- **⚠️ The Florida DOR gates BOTH fixes on the entity's federal filing form — and asks for a letter from the IRS to prove it.** Per the agency _(2026-08-06)_: if the company files **as a corporation**, it takes it that a **salary must be paid**, and on that basis **will neither close the account nor move the effective date**. To get either you must send **a letter from the IRS stating how the company files its taxes**, showing a form with **no salary requirement** (a **Schedule C** / disregarded-type entity). **The letter is required for the closure as well as for the date change — only filing the late zeros needs no letter.** So **establish the entity type before promising anyone a closure or a date change — and raise it yourself on the call, because a representative may never bring it up** (the one on 2026-08-04 didn't).
+- **The agency asks for "a letter from the IRS", not for a named form — don't put a form number in its mouth.** The representative described the document by what it must *say*, and **never named it** _(Lilian, 2026-08-06: "ella no me dijo el nombre, yo fui la que estaba asumiendo")_. Identifying it as the **CP575** is the firm's own step, and a sound one — but record the requirement the way the agency stated it, and **confirm the document with the agency before sending**. A form number attributed to an agency that never said it is exactly the kind of detail that later reads as settled policy.
 - **Moving the effective date beats closing the account, when the client may ever run payroll.** Both fixes clear the delinquent quarters, but a **date change keeps the RT account open** — so an S-corp that later has to run payroll still has its number, with no reopening request and no waiting. **Reach for the date change first; keep closure for entities that genuinely will never have wages.** _(Tsminibears, Aug 2026 — Julia refused the closure for exactly this reason.)_
 - **Careful with the CP575: it records the filing requirement AT EIN ISSUANCE, not today.** An entity that later elected S-corp treatment (Form **2553**, acknowledged on a **CP261**) can hold a CP575 that still says *disregarded* while it actually files an **1120-S**. **Check for a 2553/CP261 before using a CP575 as evidence of how a company files** — handing a state agency a letter that contradicts the return the firm itself filed is a real exposure. _(Firm analysis on Tsminibears, Aug 2026 — not the DOR's words.)_
   - **A framing that doesn't depend on entity type:** *no wages were ever paid, so there is no RT liability to date and the account should be effective from the quarter wages actually begin.* True whatever the entity type, and it is what the firm actually knows.
-- **The house name for the CP575 is "the SS-4" — same document.** The IRS **CP575** (EIN confirmation letter) **cites Form SS-4 on its face**, which is why the firm refers to it that way. The **SS-4 itself** is the client's *application*; the **CP575** is what the IRS sends back and what states the return the entity is expected to file. A **147C** is the replacement when the CP575 is lost. _(Lilian, 2026-08-06 — recorded so the naming isn't mistaken for an error again.)_
+- **The house name for the CP575 is "the SS-4" — same document.** The IRS **CP575** (EIN confirmation letter) **cites Form SS-4 on its face**, which is why the firm refers to it that way. The **SS-4 itself** is the client's *application*; the **CP575** is what the IRS sends back and what states the return the entity is expected to file. A **147C** is the replacement when the CP575 is lost. _(Lilian, 2026-08-06 — recorded so the naming isn't mistaken for an error again. Note this is the firm's vocabulary; the DOR named no form — see the bullet above.)_
 - **The late-filing charge, as the agency states it: $25 for each month a report is late**, plus **interest and certain fees on those amounts**. _(Florida DOR, 2026-08-06 — this **confirms** what had only been an unverified reading of the RT-6N instructions. Note the agency described interest/fees on the penalty amounts, which cuts against the intuition that "zero wages → no tax → no interest".)_ Any total the agency quotes is an **estimate**: the $25 keeps accruing, so the real figure depends on the **day the returns are actually submitted**. On Tsminibears, ≈**$842.50**.
 - **The answer you get from an agency depends on who picks up — so probe, and get the decisive answer in writing.** On **2026-08-04** the DOR said closing the account retroactively would **avoid all penalties** and never mentioned entity type; on **2026-08-06** a different representative said the entity's federal filing form gates the whole thing. **Lilian's read: the second one was better prepared and clearly knew more — this is competence, not the agency changing its position** _(2026-08-06)_. Practical rules: **ask the questions the representative hasn't thought to raise**, don't treat the first answer as the agency's position, take the **representative's name/ID and a call reference every time**, and get anything a plan rests on **by email**.
   - **Historical (2026-08-04, superseded for corporations):** the first representative said closing the account back to its inception **avoids all penalties and fees**, and that reopening **with the same number** could be **requested** for **two years**. That may still hold for entities the agency doesn't expect to run payroll — but it is not what Tsminibears was told on the second call.
   - **Before recommending closure, ask what the client loses by not having the account.** Payroll needs an RT account, so an entity that may have to run payroll — an **S-corp** protecting its status, say — can be hurt by a closure at the wrong moment: reopening the same number is only a *request*, and registering afresh takes its own time. **Weigh the penalty against that**, and let whoever owns the relationship decide; don't optimise for the smaller invoice by default _(Julia, Aug 2026, on Tsminibears — and the agency reached the same conclusion independently two days later)_.
-- **The DOR takes an effective-date request by email, with an IRS letter attached.** The request explains the situation, states there are **no employees**, that the company **does file taxes**, that it is **not** an entity type requiring a mandatory salary, and **the date requested**. The address the agency gave is **`fdorspanish@floridarevenue.com`** (its Spanish-language channel). **Which IRS letter is required is NOT established** — the SS-4 is the client's EIN *application*, not an IRS letter; a **CP575** or **147C** is what actually states the return an entity files. Confirm with the agency before sending.
+- **The DOR takes an effective-date request by email, with an IRS letter attached.** The request explains the situation, states there are **no employees**, that the company **does file taxes**, that it is **not** an entity type requiring a mandatory salary, and **the date requested**. The address the agency gave is **`fdorspanish@floridarevenue.com`** (its Spanish-language channel). **Which IRS document satisfies it is NOT established** — the agency described what the letter must *say*, not which form it is. Confirm before sending.
 - **Acting on a Florida DOR account needs a POA on file, and that takes 3–4 days.** The agency will not take the instruction until the power of attorney is processed. Send the POA first and build the wait into the plan — the substantive call is a **second** call, several days after the first. _(Basis: the same 2026-08-04 call.)_
 - **Watch out — Gusto sent two contradictory messages on the same day (2026-06-09).** At 14:02 UTC the Tax Resolution Team wrote that the case was assigned to a specialist, that there was "no immediate action needed on your part", and that a confirmation email would follow once resolved. At 16:01 UTC the specialist wrote the opposite — Gusto will not file, call the state yourself. **The second message is the operative one.** The first reads as a commitment and is easy to wait on forever; nothing further ever arrived.
 - **Commingling / documentation quirks from the bookkeeping years:** payments to subcontractors in Ukraine were made from business debit cards and posted as retail-store transactions (Western Union at the counter); a home-office deduction was used instead of a personal rent write-off. _(Gmail, 2025 year-end close)_
@@ -306,17 +324,19 @@ All times below are **UTC** unless marked otherwise.
 - _(2026-08-04, Julia via Lilian)_ — **Julia is not sold on closing the account, because Tsminibears is an S-corp.** Keeping S-corp status may require running **payroll** this year, and payroll needs an **open RT account** — so a closed account could block the new accountants. She asked for **an estimate of what it would cost to file the $0 returns for all the open periods** — penalties plus fees — and will choose between the two routes once she has that number. The closure is **on hold** pending her decision. _(Detail in §4; the estimate task in Outstanding items.)_
 - _(2026-08-06, Lilian)_ — **Back-filled the case note with the full contact detail** — client contact with email and phone, the joint individual account, the firm staff who worked it, and the Gusto case and specialist. Per Lilian, a Double note carries all the information the team needs, sensitive or not, because Double is the system of record for client data; **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_.
 - _(2026-08-06, Lilian)_ — **Called the Florida DOR a second time — and the agency contradicted its own 2026-08-04 answer.** It now presents **two options**. **(1) File the zero returns and pay** — **$25 for every month a report is late**, which is what produces the figures on the notice the client received, **plus interest and certain fees on those amounts**; the representative estimated the total at **≈$842.50**, expressly an **estimate** because it depends on the exact submission date. The account stays open. **(2) Move the effective date** (Julia had suggested **October 2026**) — **but the agency will not close the account or move the effective date for a company that files as a corporation**, because it expects a **salary / payroll**. To move it you must show the company files in a form with **no salary requirement** (Schedule C-type). **Tsminibears is an S-corp, so this route appears closed to it.** The request, if it ever applies, goes by **email to `fdorspanish@floridarevenue.com`** with an **IRS letter stating which form the entity files** _(Lilian supposes the SS-4 — flagged as her supposition; see §4)_, explaining that there are no employees, that the company does file taxes, that it cannot be an entity requiring a mandatory salary, and the date requested. **Net effect: Julia's objection and the agency's own rule now point the same way — keep the account open and take route 1.** _(Full detail in §4; the firm-wide lessons in §5. Representative's name and call reference **still not captured**. **Double case note 485230 rewritten in place the same day** — same note, per the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7.)_
-- _(2026-08-06, Lilian — same day, clarifying the above)_ — **Four corrections that change the plan.** (1) The IRS letter is the **CP575**; Lilian calls it "the SS-4" because **the CP575 cites Form SS-4 on its face** — same document, not an error. (2) The two DOR answers are **a difference in the representatives' preparation, not the agency reversing itself**: the second explained it much better and knew more, and **the first never raised entity type at all**. (3) **Closing the account is off** — Julia wants it left open in case the company files as an S-corp and has to run payroll — **but moving the effective date is still on, and that is what the firm will try**, because the firm **has the client's CP575** and Lilian expects it says the entity is **disregarded** _(she had not read it yet)_. (4) Julia decides once Lilian gives her the whole picture; **Lilian will ask for a summary for Julia in a later session** — not written yet. **The firm's own flag, raised the same day and not yet resolved: a CP575 can say "disregarded" and still be out of date, because the company may have elected S-corp treatment afterwards — and the firm itself filed an 1120-S for 2025.** _(Detail in §4 Option 2; lessons in §5.)_
+- _(2026-08-06, Lilian — same day, clarifying the above)_ — **Four corrections that change the plan.** (1) The IRS letter is the **CP575**; Lilian calls it "the SS-4" because **the CP575 cites Form SS-4 on its face** — same document, not an error. (2) The two DOR answers are **a difference in the representatives' preparation, not the agency reversing itself**: the second explained it much better and knew more, and **the first never raised entity type at all**. (3) **Closing the account is off** — Julia wants it left open in case the company files as an S-corp and has to run payroll — **but moving the effective date is still on, and that is what the firm will try**, because the firm **has the client's CP575** and Lilian expects it says the entity is **disregarded** _(she had not read it yet)_. (4) Julia decides once Lilian gives her the whole picture; **Lilian will ask for a summary for Julia in a later session** — not written yet. **The firm's own flag, raised the same day and not yet resolved: a CP575 can say "disregarded" and still be out of date, because the company may have elected S-corp treatment afterwards — and the firm itself filed an 1120-S for 2025.** _(Detail in §4 Option 3; lessons in §5.)_
+- _(2026-08-06, Lilian — third pass, and it changes the shape of the choice)_ — **Two more corrections.** (1) **The agency never named the document.** She asked for **"a letter from the IRS stating how the company files its taxes"** and nothing more — *"ella no me dijo el nombre, yo fui la que estaba asumiendo con su aplicación"*. **CP575 is the firm's own identification**, so the record now states the requirement the agency's way and the CP575 only as our reading. (2) **Closing the account needs that same letter.** The representative said so explicitly — so the closure is **not** the letter-free route it looked like, and **Options 2 and 3 hit the same wall**. Only Option 1 (file the zeros and pay) needs no letter at all. **Recast §4 as three options** on this basis. Lilian asked for the summary for Julia in the same message — written and delivered to her this session, in **chat, not committed**.
 - _(2026-08-06, Lilian)_ — **Opened the Double case note for this matter** — "CASE · Florida Reemployment Tax (RT) account — OPEN (closure on hold)" (note **485230**) on the archived client record — so the whole team can read the history start to finish without digging through the Gmail thread. It carries the status, both routes with their trade-offs, the pending DOR call, and the dated timeline. **This file stays the master; the note is the team-facing mirror and gets rewritten in place — never duplicated — whenever this matter moves** _(the convention is now in the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7)_. _(The first version of the note was written before PR #138 was pulled and understated the hold; corrected the same day, and the lesson is now a rule in the skill.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
 - ✅ **ANSWERED 2026-08-06 — the price of the "file the $0 returns" route is ≈$842.50** _(FL DOR estimate; see §4)_. This was the number Julia asked for on 2026-08-04.
-- **NEXT ACTION (1) — read the client's IRS CP575.** The whole effective-date route rests on what it says about the entity's filing form. Lilian had not read it as of 2026-08-06 and expects it says **disregarded**. Nothing should be drafted for the DOR until it has been read.
-- **NEXT ACTION (2) — establish whether a Form 2553 / CP261 exists** (S-corp election and the IRS's acknowledgement of it), and **when** it was filed. This is what decides whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so something made the company an S-corp; find the paperwork.
-- **NEXT ACTION (3) — the summary for Julia.** Lilian asked for it in a **later session** _(2026-08-06)_ — it has **not** been written. It should carry: the ≈$842.50, the effective-date route and what it depends on, the CP575-vs-1120-S tension above, and that closing is off. **Julia decides.**
-- **Do NOT send anything to the DOR before the CP575 question is settled with Julia.** Presenting a CP575 that says "disregarded" while the firm has filed an 1120-S for the same company is a real exposure — see §4 Option 2.
+- ✅ **The summary for Julia was written and given to Lilian 2026-08-06** — the three options, the shared letter requirement, and the 1120-S problem, in plain language. Delivered **in chat, deliberately not committed** (it carries the client's figures). **Julia's answer is what everything now waits on.**
+- **NEXT ACTION (1) — read the client's CP575** and see what it actually says about the filing form. Lilian had not read it as of 2026-08-06 and expects **disregarded**. Nothing goes to the DOR until it has been read.
+- **NEXT ACTION (2) — establish whether a Form 2553 / CP261 exists** (the S-corp election and the IRS's acknowledgement of it), and **when** it was filed. This decides whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so something made the company an S-corp; find the paperwork.
+- **NEXT ACTION (3) — confirm with the DOR which document it will actually accept**, since the representative described the letter's content and never named a form.
+- **Do NOT send anything to the DOR before the letter question is settled with Julia.** Presenting a letter that says "disregarded" while the firm has filed an 1120-S for the same company is a real exposure — see §4 Option 3. **This applies to the closure as well as to the date change**, since both need the letter.
 - **Confirm the scope of the $842.50 before treating it as the number.** It is unclear whether the representative priced **all** the open periods (Q2 2025 → the last closed quarter) or only the periods Lilian named. And it is an **estimate** — it moves with the actual submission date. Ask the agency for a written breakdown by quarter.
 - **Confirm whether the $25 is per report or per month overall.** The agency said "$25 for each month it is late"; whether that accrues **per delinquent return** (as the RT-6N reading suggested) changes the total materially across five-plus quarters. Also ask **whether the $25 accrual is capped**, and get the **interest and fee** components itemised.
 - **Reconcile the two contradictory DOR answers with the agency itself.** 2026-08-04: close retroactively, avoids all penalties. 2026-08-06: an S-corp may not close or back-date at all. Both verbal, neither representative identified. **Get the operative answer in writing** before the firm spends money on either route.
@@ -333,10 +353,10 @@ All times below are **UTC** unless marked otherwise.
 - [ ] Whether the RT account was registered by the firm or by the client, **and on what date**. May 2025 is the date the closure must run back to (§4), but that it is also the **registration** date is an inference — not established. Worth knowing so the same mistake isn't repeated.
 - [ ] **The DOR representative's name / ID and a call reference — for BOTH calls (2026-08-04 and 2026-08-06).** Neither was captured, and the two calls contradict each other on whether the account can be closed. Take the name every time from here on.
 - [ ] **Whether the POA had actually processed by the 2026-08-06 call.** It was sent 2026-08-04 and the agency quoted 3–4 days, so on 08-06 it should not have cleared yet — but the representative discussed the account and produced a figure. Establish whether the POA is on file (and therefore whether the firm can now instruct the account), or whether this was general information given without account authority.
-- [x] **Which IRS document the DOR wants** with an effective-date request — the **CP575**, which the firm has. _(Lilian, 2026-08-06. She calls it "the SS-4" because the CP575 cites Form SS-4 on its face — same document. A **147C** is the replacement if the CP575 is lost.)_
+- [ ] **Which IRS document the DOR will actually accept.** It asked for **"a letter from the IRS stating how the company files its taxes"** and **named no form** _(Lilian, 2026-08-06)_. The firm's own reading is the **CP575** — which the firm has, and which Lilian calls "the SS-4" because the CP575 cites Form SS-4 on its face. **Confirm with the agency before sending; don't assume the CP575 satisfies it.**
 - [ ] **What the CP575 actually says** about the entity's filing requirement. Expected: disregarded. **Not yet read.**
-- [ ] **Whether a Form 2553 was ever filed and a CP261 issued**, and when — i.e. whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so the S-corp election exists somewhere. This decides whether the effective-date route is safe to pursue.
-- [ ] **Whether the DOR checks the federal return against the CP575.** If it does, a disregarded-entity CP575 alongside a filed 1120-S is a problem; if it only wants the letter on file, less so. Worth asking directly.
+- [ ] **Whether a Form 2553 was ever filed and a CP261 issued**, and when — i.e. whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so the S-corp election exists somewhere. This decides whether **either** the closure **or** the date change is safe to pursue.
+- [ ] **Whether the DOR checks the federal return against the letter.** If it does, a disregarded-entity letter alongside a filed 1120-S is a problem; if it only wants the letter on file, less so. Worth asking directly.
 - [ ] **Whether the effective-date email to `fdorspanish@floridarevenue.com` should be written in Spanish**, and whether an English-channel address exists — the client's own correspondence is in Russian and the firm's artifacts are in English.
 - [ ] **Whether a current signed POA from the client actually covers closing the RT account** — who signed it and when. The relationship ended in June 2026; authority to act should be confirmed, not assumed.
 - [ ] Why an RT account was registered at all when Payroll is N/A and no wages were ever paid.
