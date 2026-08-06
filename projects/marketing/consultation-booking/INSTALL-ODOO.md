@@ -46,8 +46,11 @@ wants the notetaker on discovery calls, that decision has to be reopened.
 
 `/appointment/1`, `/appointment/2`, `/appointment/3` and `/book/Discovery-Call` all return
 **500 Internal Server Error**. `/appointment` (the index that lists the types) renders fine.
-This predates the Aug 2026 work — appointment type 2 was never touched and fails identically —
-and it explains why no button on the site ever pointed at a calendar.
+This predates the Aug 2026 work — appointment type 2 was never touched and fails identically.
+It is why the buttons that *did* point at `/book/Discovery-Call` never opened a working
+calendar, and why Odoo records no bookings. (Do not read it as the reason nobody linked the
+calendars: several buttons did, and the Odoo default header carries a "Book an Appointment"
+link to `/appointment/1` on every page.)
 
 **Cause.** `ir.ui.view` id **2010**, key `appointment.appointment_info`, is a
 **website-specific copy** (`website_id = jkaccountinggroup`, `mode = primary`) created when
@@ -63,11 +66,17 @@ fields that no longer exist:
 
 Rendering raises on the first missing field, so every appointment detail page 500s.
 
-**Fix.** Delete (or deactivate) view 2010 so Odoo falls back to its own current template:
+**Fix — delete view 2010** so Odoo falls back to its own current template. First enable
+**developer mode** (Settings → bottom of the page → *Activate the developer mode*), then
 Settings → Technical → User Interface → **Views** → search `appointment_info` → open the row
 whose **Website** is `jkaccountinggroup` → **Delete**. Nothing of value is lost: the only
 customization is that heading, which is wrong anyway now — it says "Discovery Call" on the
 paid Consultation page too.
+
+> **Delete, don't just deactivate.** Un-ticking *Active* is the reversible first thing to
+> reach for, but for a **primary** website copy like this one Odoo resolves the template by
+> key + website, and that lookup is not reliably filtered on `active` — so deactivating may
+> leave the page still broken. Treat deactivation as a probe; if the page still 500s, delete.
 
 **Lesson for this repo:** editing an Odoo *app* page (Appointments, Portal, Blog) in the
 website editor silently forks the template and it stops receiving Odoo's updates. Prefer
@@ -103,15 +112,32 @@ the word "free" no longer appears on it. Its lead form survives as a secondary p
   whether the booking flow takes payment was not verified — check before promoting the page.
 - The Home and Pricing hero CTAs still link to `/contactus` (the email form) rather than
   the discovery-call calendar.
+- **`/pricing`'s meta description still says "Book a free consultation for a quote."** The
+  visible page was fixed, but the `description` / `og:description` / `twitter:description`
+  tags were not — so that is the wording Google and every link preview show.
+- **A live Home button reads "Schedule a Consultation" but links to `/book/Discovery-Call`.**
+  It blurs the two offers in exactly the way this project now forbids: relabel it, or point
+  it at `/appointment/3`.
 - Three **legacy** (unpublished) views still contain the old "free consultation" wording:
   `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`.
-- The **RU and UK versions** of the consultation landing (`/ru/konsultatsiya`,
-  `/ua/konsultatsiia`) were not touched — if they exist as separate views they still sell a
-  free 30-minute consultation.
+- **The Ukrainian landing still sells the old offer.** `/ua/konsultatsiia` (live) reads
+  "30 хвилин · безкоштовно" with no appointment link. The **Russian** one is already
+  converted — it lives at **`/ru-ru/consultation`** (not `/ru/konsultatsiya`, which 404s)
+  and links to `/ru-ru/appointment/3`. The EN page's own RU language-switch link points at
+  that dead `/ru/konsultatsiya` and needs fixing too.
+- **The CTA rule is not rolled out beyond the website.** `positioning.md` binds every CTA
+  everywhere, but the email signatures (`email-branding/signatures/*.html` → "Book a
+  consultation", pointing at `/contactus`), the lead-magnet calculators ("Book a free
+  20-minute call" — a third duration in play) and `realtor-referral-playbook-ru.md` still
+  carry the old wording.
 
 ---
 
-## Part A — The two calendars (Appointments app)
+## Part A — The two calendars (Appointments app) — *the original plan, superseded*
+
+> Kept for reference only. It describes calendars named "New Client Consultation" /
+> "Existing Client Session" at 30 min with Zoom in *Location* — none of which is what
+> exists. The live configuration is the "Reality check" and "two offers" tables above.
 
 ### 0. Activate the app (once)
 **Apps** → search **"Appointments"** → **Activate / Install**.
