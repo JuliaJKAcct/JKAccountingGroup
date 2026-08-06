@@ -1005,7 +1005,7 @@ function toolIframe(doc, titleAttr){
     ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
       + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
       + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
-    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>The tool source wasn't found at build time. Rebuild the Hub from the repo root.</p></div></div>`;
+    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>This tool could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
 }
 function calcReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1026,7 +1026,18 @@ function monthlyReaderInner(){
    projects/lilian-notebook (its build.mjs reads notes/*.md). Isolation matters here for the
    same reason as the tools: the notebook ships its own Atlas copy, its own sticky search bar
    and its own print stylesheet, none of which should touch the Hub's. */
-const NOTEBOOK_DOC = (() => { try { return buildNotebookDoc({ embedded: true }); } catch (e) { return ''; } })();
+// The catch keeps a bad note from taking the whole Hub build down — but it must SAY SO. A silent
+// '' shipped a Hub whose summary line looked normal while the notebook card held a callout
+// blaming a missing file, when the real cause was a parse error nobody ever saw.
+const NOTEBOOK_DOC = (() => {
+  try { return buildNotebookDoc({ embedded: true }); }
+  catch (e) {
+    console.error(`\n⚠️  Lilian's Notebook did NOT build — its card will show the unavailable callout.`);
+    console.error(`   ${e.message}`);
+    console.error(`   Fix projects/lilian-notebook/notes/ and rebuild before publishing.\n`);
+    return '';
+  }
+})();
 function notebookReaderInner(){
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Personal notebook · Lilian</p>`

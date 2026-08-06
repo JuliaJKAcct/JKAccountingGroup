@@ -2,7 +2,7 @@
 
 What things actually cost, how a job gets priced, and what is — and isn't — inside a fee.
 
-## LN-21 — Florida late reemployment-tax reports: $25 per month, per report, plus interest and fees on the penalty itself
+## LN-21 — Florida late reemployment-tax reports: "$25 for each month a report is late" — plus interest and fees on the penalty itself
 - **Tags:** florida · penalties · payroll
 - **Certainty:** Established
 - **Star:** no
@@ -12,15 +12,20 @@ What things actually cost, how a job gets priced, and what is — and isn't — 
 - **Detail:** [`tsminibears.md` §5](../../client-intelligence/clients/tsminibears.md)
 
 **What happened.** This had only been an unverified reading of the RT-6N instructions until the
-agency stated it directly. Note the part that cuts against intuition: **interest and certain fees
-accrue on the penalty amounts**, so "zero wages → no tax → no interest" is wrong. On Tsminibears
-it came to ≈$842.50 for two quarters, from a company that never paid a dollar of wages.
+agency stated it directly, in those words. The part that cuts against intuition: **interest and
+certain fees accrue on the penalty amounts themselves**, so "zero wages → no tax → no interest"
+is wrong. On Tsminibears the agency put it at ≈$842.50 — but see below; that figure carries two
+caveats and neither is settled.
 
-**The rule.** The charge is per report and per month, so **the total grows until the day the
-returns are actually submitted** — any figure quoted on a call is an estimate, and worse, that
-one came from a representative with **no POA on file**, so it was never read off the account.
-**Get the real number from the DOR website:** each delinquent return shows its own cost when you
-go to submit it, which also gives the true list of outstanding periods.
+**The rule.** The charge accrues **by month**, so **the total grows until the day the returns are
+actually submitted** — every figure quoted on a call is an estimate. Two things are **not
+established, and don't quote them as if they were:** whether the $25 accrues **per delinquent
+return or per month overall** (which changes the total materially across five-plus quarters, and
+whether it is capped is also unasked), and whether the ≈$842.50 covered **every open period or
+only the ones Lilian asked about** — a figure given, on top of that, by a representative with **no
+POA on file**, so never read off the account. **So get the number from the DOR website, not the
+phone:** each delinquent return shows its own cost when you go to submit it, which settles both
+questions at once and gives the true list of outstanding periods.
 
 ## LN-22 — When a cleanup is quoted separately: cap the hours, take an advance, then track them
 - **Tags:** pricing · scope · cleanup

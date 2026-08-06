@@ -45,16 +45,19 @@ const CATEGORIES = [
    inside the Hub, where a path into the repo would 404 (and team-facing pages
    never link at repo files). Real http(s) links stay real links. */
 function mdInline(s) {
+  // esc() runs ONCE, over the whole string, before anything else — so the code-span and href
+  // text captured below is ALREADY escaped and must be inserted verbatim. Escaping it a second
+  // time is what shows the reader a literal "a &amp; b" and turns ?a=1&b=2 into a dead link.
   let out = esc(s);
   const code = [];
   out = out.replace(/`([^`]+)`/g, (_, c) => { code.push(c); return `\u0000${code.length - 1}\u0000`; });
   out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) =>
     /^https?:\/\//i.test(href)
-      ? `<a href="${esc(href)}" target="_blank" rel="noopener">${text}</a>`
+      ? `<a href="${href}" target="_blank" rel="noopener">${text}</a>`
       : `<span class="ref">${text}</span>`);
   out = out.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
   out = out.replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<i>$2</i>');
-  out = out.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${esc(code[+i])}</code>`);
+  out = out.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${code[+i]}</code>`);
   return out;
 }
 // Same, minus the <b>/<i> wrappers — for text that already sits in a styled slot.
@@ -63,24 +66,46 @@ const mdPlain = (s) => mdInline(s).replace(/<\/?b>/g, '').replace(/<\/?i>/g, '')
 /* One body block → a <p>, or a real list when the block is one. Procedure notes are the
    reason this exists: "how you do X" is an ordered list, and rendering it as a paragraph
    runs the steps together. `pClass` styles the paragraphs of the always-visible rule block. */
-function mdBlock(block, pClass) {
-  const lines = block.split('\n');
-  const marker = /^\s*(\d+[.)]|[-*•])\s+/;
-  if (!marker.test(lines[0])) {
-    return `<p${pClass ? ` class="${pClass}"` : ''}>${mdInline(block)}</p>`;
-  }
-  const ordered = /^\s*\d/.test(lines[0]);
+const BULLET = /^\s*[-*•]\s+/;
+const NUMBERED = /^\s*\d{1,2}[.)]\s+/;
+// A list STARTS only on "1." / "1)" or a bullet. Any other number+period that opens a line is
+// prose — a year, a form number ("1099. …"), a figure — and treating it as a list item both
+// reflowed the text and silently deleted the number.
+const startsList = (line) => BULLET.test(line) || /^\s*1[.)]\s+/.test(line);
+const isItem = (line) => BULLET.test(line) || NUMBERED.test(line);
+
+function renderList(lines, pClass) {
+  const ordered = !BULLET.test(lines[0]);
   const items = [];
   for (const line of lines) {
-    if (marker.test(line)) items.push(line.replace(marker, ''));
+    if (isItem(line)) items.push(line.replace(ordered ? NUMBERED : BULLET, ''));
     else if (items.length) items[items.length - 1] += ' ' + line.trim();   // wrapped line
+    else return `<p${pClass ? ` class="${pClass}"` : ''}>${mdInline(lines.join('\n'))}</p>`;
   }
   return `<${ordered ? 'ol' : 'ul'} class="nlist">`
     + items.map((i) => `<li>${mdInline(i)}</li>`).join('')
     + `</${ordered ? 'ol' : 'ul'}>`;
 }
 
-/* -------------------------------------------------------------------- parsing */
+function mdBlock(block, pClass) {
+  const lines = block.split('\n');
+  const at = lines.findIndex(startsList);
+  if (at === -1) return `<p${pClass ? ` class="${pClass}"` : ''}>${mdInline(block)}</p>`;
+  // A lead-in line before the list is the natural way to write a procedure
+  // ("Do these in order:" / "1. …"), so split it off instead of losing the list.
+  const lead = at > 0
+    ? `<p${pClass ? ` class="${pClass}"` : ''}>${mdInline(lines.slice(0, at).join('\n'))}</p>`
+    : '';
+  return lead + renderList(lines.slice(at), pClass);
+}
+
+/* -------------------------------------------------------------------- parsing
+   The metadata contract, enforced rather than trusted. `Certainty` is the one field Lilian has
+   to be able to believe at a glance, so a free-text or misspelled value is a build failure, not
+   a pill quietly reading "Recorded" in the same green as a verified fact. */
+const META_KEYS = new Set(['tags', 'certainty', 'star', 'added', 'updated', 'came from', 'detail']);
+const CERTAINTY = new Set(['Established', 'Firm rule', 'Working assumption']);
+
 function parseCategory(cat) {
   const raw = read(resolve(projRoot, 'notes', cat.file)).replace(/\r\n/g, '\n');
   const blocks = raw.split(/\n## /);
@@ -95,15 +120,36 @@ function parseCategory(cat) {
     if (!m) throw new Error(`${cat.file}: heading is not "LN-## — Title": ${heading}`);
     const [, id, title] = m;
 
-    // Metadata: the consecutive "- **Key:** value" lines right after the heading.
+    // Metadata: the "- **Key:** value" lines directly under the heading, ending at the first
+    // BLANK LINE. Stopping on the blank line is load-bearing: the house style writes body
+    // bullets as "- **Cap the hours:** ten", which is the same shape as a metadata field, so a
+    // loop that skipped blank lines swallowed the first body block and dropped it from the page
+    // — and from the search index — without a word.
     const meta = {};
+    let inMeta = false;
     while (lines.length) {
       const line = lines[0];
-      if (!line.trim()) { lines.shift(); continue; }
+      if (!line.trim()) { if (inMeta) break; lines.shift(); continue; }
       const f = line.match(/^-\s+\*\*([^:*]+):?\*\*:?\s*(.*)$/);
       if (!f) break;
-      meta[f[1].trim().toLowerCase()] = f[2].trim();
+      const key = f[1].trim().toLowerCase();
+      if (!META_KEYS.has(key)) {
+        throw new Error(`${cat.file} / ${id}: unknown metadata field "${f[1].trim()}" — `
+          + `expected one of ${[...META_KEYS].join(', ')}. A typo here loses the field silently.`);
+      }
+      meta[key] = f[2].trim();
       lines.shift();
+      inMeta = true;
+    }
+    for (const req of ['tags', 'certainty', 'star', 'added', 'came from']) {
+      if (!meta[req]) throw new Error(`${cat.file} / ${id}: missing "- **${req}:**" — every note carries it.`);
+    }
+    if (!CERTAINTY.has(meta.certainty)) {
+      throw new Error(`${cat.file} / ${id}: Certainty is "${meta.certainty}" — it renders as a pill and must be `
+        + `exactly one of ${[...CERTAINTY].join(' | ')}. Put any nuance in the body.`);
+    }
+    if (!/^(yes|no)$/i.test(meta.star)) {
+      throw new Error(`${cat.file} / ${id}: Star is "${meta.star}" — it must be yes or no.`);
     }
 
     // Body: paragraphs, bucketed by their leading **label**. The label may carry a suffix —
@@ -153,7 +199,8 @@ function loadNotes() {
   // an ID that isn't there. Notes get pruned (Lilian curates hers hard), so check every
   // cross-reference on every build.
   for (const c of cats) for (const n of c.notes) {
-    const body = [...n.rule, ...n.story].join(' ');
+    // Metadata counts: `Detail:` and `Came from:` are where cross-references actually live.
+    const body = [...n.rule, ...n.story, n.detail, n.from].join(' ');
     for (const ref of new Set([...body.matchAll(/\bLN-\d+\b/g)].map((m) => m[0]))) {
       if (ref !== n.id && !ids.has(ref)) {
         throw new Error(`${c.file} / ${n.id} points at ${ref}, which no longer exists — rewrite the sentence or restore the note.`);
@@ -216,6 +263,11 @@ export function buildNotebookBody(opts = {}) {
   const starred = all.filter((n) => n.star).length;
   const dates = all.map((n) => n.updated || n.added).filter(Boolean).sort();
   const latest = dates[dates.length - 1] || '';
+
+  // Built from the notes that actually exist — a hand-written example ("…LN-14") kept advertising
+  // a note that had been pruned, so the page's own suggested search returned "Nothing matches".
+  const exampleTags = [...new Set(all.flatMap((n) => n.tags))].slice(0, 3);
+  const placeholder = `Search the notebook — ${[...exampleTags, all[0] ? all[0].id : ''].filter(Boolean).join(', ')}…`;
 
   const chips = [
     `<button class="fchip on" type="button" data-filter="all">All<span class="fn">${all.length}</span></button>`,
@@ -294,7 +346,7 @@ export function buildNotebookBody(opts = {}) {
   <div class="in">
     <div class="srch">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.3-4.3"/></svg>
-      <input id="q" type="search" placeholder="Search the notebook — gusto, penalty, quickbooks, LN-14…" aria-label="Search the notebook" autocomplete="off" spellcheck="false">
+      <input id="q" type="search" placeholder="${esc(placeholder)}" aria-label="Search the notebook" autocomplete="off" spellcheck="false">
       <button class="clr" id="clr" type="button" aria-label="Clear search" hidden>&times;</button>
       <kbd class="hint">/</kbd>
     </div>
@@ -542,7 +594,7 @@ const NOTEBOOK_JS = `(function(){
     else if(e.key==='Escape'&&document.activeElement===q){q.value='';apply();q.blur();}
   });
 
-  // Deep link (#LN-14): open its story so the link lands on the whole note.
+  // Deep link (#LN-10, #LN-34…): open its story so the link lands on the whole note.
   // The brand fonts are embedded and the page is long, so the document keeps reflowing
   // for a moment after the script runs — scroll once and the reader lands somewhere else
   // entirely. So re-scroll on every document-height change until it stops moving, and

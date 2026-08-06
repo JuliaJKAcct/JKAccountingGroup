@@ -94,7 +94,7 @@ the US.
 | A **booking** page, or the firm's booking calendars — the free 10-minute phone **discovery call** vs. the paid 1-hour **$150 consultation**, each with its own availability (Odoo Appointments; EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | A **lead magnet** — a free calculator or assessment/quiz for the top of the funnel (S-corp savings, surprise tax bill, license check, foreign-account check…), or the on-brand HTML tool that powers one | [`projects/marketing/lead-magnets/`](./projects/marketing/lead-magnets/) |
-| **Hard knowledge worth keeping** — "how does Gusto/QuickBooks actually behave?", "what does that penalty cost?", "how do we do this procedure again?", *"anota esto en mi libreta"* — or looking one up | the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) → [`projects/lilian-notebook/`](./projects/lilian-notebook/) — **Lilian's** personal notebook, one note per lesson written as the rule for next time, on one searchable page she has bookmarked (and a card in the Hub). **Deliberately small** — read the skill's **§0 filter** first; she cut the first 33 notes to four, and does not want process hygiene, communication advice, or repo lessons in it. A lesson is also **not** a task: tasks live in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and get deleted when they close |
+| **Hard knowledge worth keeping** — "how does Gusto/QuickBooks actually behave?", "what does that penalty cost?", "how do we do this procedure again?", *"anota esto en mi libreta"* — or looking one up | the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) → [`projects/lilian-notebook/`](./projects/lilian-notebook/) — **Lilian's** personal notebook, one note per lesson written as the rule for next time, on one searchable page she has bookmarked (and a card in the Hub). **Deliberately small** — read the skill's **§0 filter** first; she cut the first 33 notes to four (plus one she asked for), and does not want process hygiene, communication advice, or repo lessons in it. A lesson is also **not** a task: tasks live in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and get deleted when they close |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian" **or writes in Spanish**; an unidentified non-Spanish session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
@@ -296,7 +296,13 @@ in that folder.
 - **Session identity is provenance, not a wall.** The whole firm shares one Claude
   Code account, so git alone can't tell whose hands did what. It's one firm with one
   goal — **never partition the repo or the work by person**; Julia and Lilian split
-  tasks, not territory. Do track *where work came from*: **Lilian identifies herself
+  tasks, not territory. **The one deliberate exception, at Lilian's explicit direction
+  (Aug 2026), is [`projects/lilian-notebook/`](./projects/lilian-notebook/)** — her personal
+  notebook, which she alone writes in. It is not hidden and it is not a private territory
+  inside the work: firm-wide *procedure* still belongs in [`projects/sops/`](./projects/sops/),
+  firm-wide *guidance* in this file and the skills, and per-client facts in
+  [`client-intelligence/`](./projects/client-intelligence/). Don't read it as licence to
+  create a second per-person space. Do track *where work came from*: **Lilian identifies herself
   at the start of her sessions ("I'm Lilian" / "soy Lilian"); Julia doesn't have to** — an
   unidentified session is simply firm work (in practice, usually Julia). **Spanish is
   always Lilian.** Julia doesn't speak Spanish, so *any* session conducted in Spanish is

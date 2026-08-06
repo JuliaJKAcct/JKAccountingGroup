@@ -12,7 +12,7 @@ personal notebook of **lessons**, each one written as the rule to follow next ti
 
 **Why it exists, in one line:** a lesson buried in a `FOLLOW-UPS.md` row **dies when the row is
 deleted**, and a lesson buried in one client's file is invisible to the next client it applies
-to. The notebook is where the lesson outlives the case (that's note LN-29).
+to. The notebook is where the knowledge outlives the case.
 
 **Whose it is.** Lilian's, by her decision (Aug 2026) — she is the only person writing in it.
 This is the repo's one deliberate exception to *never partition by person*. It isn't hidden and
@@ -33,7 +33,7 @@ totalmente innecesarias que no tienen nada que ver con lo que quiero hacer."* So
 | | Example she kept |
 |---|---|
 | **How does this system actually behave?** | Gusto files nothing, not even $0 returns, until the first check date (LN-10) |
-| **What does this cost?** | Florida late RT reports: $25/month per report, plus interest on the penalty (LN-21) |
+| **What does this cost?** | Florida late RT reports: "$25 for each month a report is late", plus interest on the penalty (LN-21) |
 | **What's inside the fee, and how do we price this?** | Tax prep excludes preparing the financials (LN-23) · cap the hours, take an advance (LN-22) |
 | **How do I carry out this procedure?** | Moving the QuickBooks primary admin when the code goes to a phone nobody can reach (LN-34) |
 
@@ -71,7 +71,7 @@ The tell — always checked against §0's filter first — is any of these:
 - Lilian says *"esto hay que recordarlo"*, *"apunta esto"*, or explains something she's
   clearly explained before.
 
-Offer it in one line — *"¿lo anoto en tu libreta como LN-33?"* — with the title you'd give it,
+Offer it in one line — *"¿lo anoto en tu libreta?"* — with the title you'd give it,
 so she can say yes without reading a draft. **She approves; you never file one silently.** And
 if a note already covers it, say so and **enrich that note** instead of adding a second
 (§5).
@@ -86,7 +86,7 @@ Copy a block from
 the right category file. The structure is not cosmetic — `render/build.mjs` parses it.
 
 ```
-## LN-35 — The lesson, as the rule, in one line
+## LN-00 — The lesson, as the rule, in one line   (use the next real ID — see rule 4)
 - **Tags:** two to four · lowercase · dot-separated
 - **Certainty:** Established | Firm rule | Working assumption
 - **Star:** yes | no
@@ -116,13 +116,22 @@ Hard rules:
 3. **`**What happened.**` is the evidence, and it must be concrete** — names, dates, amounts,
    who said what. Two to four sentences. Enough that the rule is obviously true and the
    situation is recognisable next time.
-4. **IDs are global and never reused.** Next ID = the highest `LN-##` anywhere in `notes/`,
-   plus one. The build fails on a duplicate.
-5. **Certainty is exactly one of three short values** — they render as a pill:
-   `Established` (we verified it), `Firm rule` (Julia's or Lilian's standing decision),
-   `Working assumption` (our best reading, not confirmed). Nuance goes in the body, never in
-   the pill. **Never label something Established that a person hasn't actually confirmed** —
-   the notebook's value is that Lilian can trust the label.
+4. **IDs are global and never reused — take the next number above the highest that has EVER
+   existed**, which is not the same as the highest currently in `notes/`, because notes get
+   pruned (§5). Check `git log -p projects/lilian-notebook/notes/` if the answer isn't obvious.
+   The build fails on a duplicate but cannot catch a *reused* number, so this one is on you.
+5. **Certainty is exactly one of three values, and the build enforces it** — they render as a
+   pill: `Established` (we verified it), `Firm rule` (Julia's or Lilian's standing decision),
+   `Working assumption` (our best reading, not confirmed). Anything else fails the build. Nuance
+   goes in the body, never in the pill. **Never label something Established that a person hasn't
+   actually confirmed, and never let a note's TITLE assert more than its evidence** — if the
+   client file lists a question as open, the note has to say so too. The notebook's whole value
+   is that Lilian can trust the label. *(Aug 2026: LN-21 shipped claiming the Florida penalty
+   accrues "per report" and stamped `Established`, while `tsminibears.md` recorded
+   per-report-vs-per-month-overall as an open question. Caught in review.)*
+   ⚠️ **Every metadata field is one line, no trailing commentary, and no blank line between
+   them** — the parser stops at the first blank line, and an unknown or misspelled field name is
+   a build error rather than a silently-dropped value.
 6. **`Detail:` points at the full record; it doesn't duplicate it.** The case history stays in
    the client file, the skill, or the Double note. Keep repo-relative links in the Markdown
    (they work on GitHub); the render turns them into plain reference text on purpose, since the
@@ -185,12 +194,16 @@ first 33 notes in one pass. When she says a note is unnecessary, **delete it**; 
 it, so nothing is lost and it can be restored by name. Never delete one on your own initiative,
 and never quietly re-add one she removed.
 
-- **IDs are never reused, even after a deletion.** `LN-33` was written and then cut; the next
-  note was `LN-34`. Take the next number above the highest that has *ever* existed — check
-  `git log -p projects/lilian-notebook/notes/` if you're unsure, not just the current files.
-- **The build catches the fallout of a deletion:** it fails if any surviving note points at an
-  `LN-##` that no longer exists. Fix the sentence — usually by folding the useful half of the
-  retired note into the survivor — rather than restoring a note Lilian dropped.
+- **IDs are never reused, even after a deletion** (§2 rule 4). `LN-33` was written and then cut,
+  so the next note was `LN-34`.
+- **The build catches the fallout of a deletion inside notes:** it fails if any surviving note
+  points at an `LN-##` that no longer exists — in the body **or** in `Detail:` / `Came from:`.
+  Fix the sentence, usually by folding the useful half of the retired note into the survivor,
+  rather than restoring a note Lilian dropped.
+- ⚠️ **It cannot check prose OUTSIDE `notes/`.** After pruning, grep the repo for the retired ID
+  — this skill, the project README and `CLAUDE.md` have all cited a note by number.
+  `grep -rn "LN-##" --include=*.md .` takes a second and a dangling pointer is, in this skill's
+  own words, worse than no pointer at all.
 
 ## 6. Build, verify, publish
 

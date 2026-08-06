@@ -15,8 +15,8 @@ both lose them:
 - **Inside one client's file** — where a firm-wide lesson is invisible to the next client it
   applies to.
 - **Inside a `FOLLOW-UPS.md` row** — which is **deleted when the task resolves**, on purpose.
-  So the day a matter closes, the most expensive thing it taught us goes with it. (That's
-  LN-29, and it's why this project exists.)
+  So the day a matter closes, the most expensive thing it taught us goes with it. That is the
+  leak this project exists to plug.
 
 A task and a lesson are different objects with different lifespans. Tasks live in
 [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) and get deleted; **lessons come here and stay.**

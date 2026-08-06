@@ -209,7 +209,17 @@ emitted script silently broke *every* click.
     because the Hub's reader already supplies a masthead with that title (without it the heading
     prints twice), and it follows the Hub's theme through the same-origin `srcdoc` iframe. Keep the
     embed in a `try/catch` returning `''` so a parse error in the notebook's Markdown can't take the
-    whole Hub build down — `toolIframe()` then renders its "Tool unavailable" callout.
+    whole Hub build down — `toolIframe()` then renders its "Tool unavailable" callout — but
+    **`console.error` the real reason in the catch.** Without that the Hub prints its normal
+    "Hub built: N procedures…" summary and ships a card blaming a missing file, and nothing in the
+    verify-before-publish gate catches it.
+
+    ⚠️ **Watch the payload ceiling.** Each isolated iframe is a self-contained document, so it
+    carries **its own copy of the ~640KB `fonts-embedded.css`**. The notebook embed alone adds
+    ~690KB. As of Aug 2026 `scratch/hub.artifact.html` is ~10.2MB against the Artifact tool's
+    **16MB** limit — fine now, but **two or three more embeds of this kind will hit it.** Check the
+    printed size before adding another, and if headroom gets tight, drop the Cyrillic subset from
+    embeds that don't render Russian and consider a shared-font strategy before adding the embed.
 
     **Tool embeds break OUT of the 880px reading column — full-width by default (Lilian,
     Jul 2026).** The reader's `.page` is a **880px text column** (right for SOPs/prose); a
