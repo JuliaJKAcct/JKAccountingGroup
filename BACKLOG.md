@@ -527,15 +527,17 @@ reasons, time-to-close, source attribution). Then I explain how Odoo's
 Leads / Opportunities + pipeline stages + reporting model those, and we design the
 website→Odoo intake.
 
-**Capability check (honest):** **there is no Odoo connector in the firm's integrations
-today** — the connected systems are QuickBooks, Double, Gmail, Google Calendar, Drive,
-Canva, Gamma, Shopify, NotebookLM and GitHub. So Claude can't read or write your Odoo
-directly right now. What I *can* do now: help you understand Odoo's CRM model, design
-the pipeline / stages, and plan the website→lead flow and the reports. Getting the
-website to actually create Odoo leads is a real integration (Odoo supports web-form /
-"Contact Us" → CRM lead and an API); wiring Claude into Odoo would need an Odoo MCP
-connector or API access added later. We'll scope that connector question when we pick
-this up.
+**Capability check — superseded, updated 2026-08-06:** the original entry said there was
+no Odoo connector at all. **There is one now** — the account-level
+`Odoo_JK_Accounting_Group` MCP server that Andres set up — so Claude can read and write
+Odoo directly, `crm.lead` and `crm.stage` included. The constraint moved: that connector
+runs on a **free plan capped at 50 tool calls per 24 hours, shared by the whole firm**,
+which is nowhere near enough to build and iterate a CRM pipeline. **Whether we raise that
+plan or move to a direct Odoo API integration is an open decision** — see
+[`FOLLOW-UPS.md`](./FOLLOW-UPS.md) row 21 (Lilian, with Andres) — and it should be settled
+before this idea starts, not during it. Still true: getting the website to create leads
+by itself is its own piece of work (Odoo supports web-form / "Contact Us" → CRM lead
+natively). Anyone touching Odoo follows the [`odoo-mcp`](./.claude/skills/odoo-mcp/) skill.
 
 **Priority:** **High** (same funnel as IDEA-10) · **Status:** Not started — captured;
 next step is the short discovery above, whenever we pick it up.

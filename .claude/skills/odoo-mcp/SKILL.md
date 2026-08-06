@@ -29,6 +29,27 @@ This project uses the **free plan** of the Odoo MCP server. The quota is **50 to
 Treat the quota as a real budget, not a soft guideline. Running out mid-task leaves work
 half-finished and the database in an inconsistent state.
 
+### Where the limit comes from (it gets asked a lot)
+
+Three separate layers get confused here. The cap belongs to exactly one of them:
+
+| Layer | What it is | Source of the 50/day? |
+|---|---|---|
+| The firm's **Odoo subscription** | The ERP itself — the database, accounting, CRM, website, appointments | **No.** Odoo's own XML-RPC/JSON-RPC API has no comparable per-day call cap (anti-abuse rate limits aside — *believed, not verified first-hand*) |
+| The **Claude plan** | What the firm pays Anthropic | **No.** Claude meters messages/usage; it does not count Odoo calls |
+| The **MCP connector** (`Odoo_JK_Accounting_Group`) | The third-party bridge between Claude and Odoo, connected at account level | **Yes — this is it.** We are on its free tier |
+
+So upgrading Odoo would not raise it. The two real ways out are **paying for a higher plan
+on the connector**, or **connecting Odoo directly through its own API** with a database API
+key, which removes the middleman ceiling but is an integration to build. `pan_usage` (1 call)
+reports the current plan and remaining quota.
+
+**Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
+most of what exists there, and set up this MCP connection. Route integration questions —
+including *why the MCP connector rather than a direct API* — to him. That decision is open
+and parked with Lilian: see [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 21. Until it is
+settled, the 50/day budget stands and the rules below apply.
+
 ### What counts as a call
 
 Assume **one MCP tool invocation = one call**, regardless of how much data it moves.
