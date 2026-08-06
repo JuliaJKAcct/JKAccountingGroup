@@ -51,43 +51,40 @@ indexed _(2026-08-04)_.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double. **The primary admin is the wrong owner and the transfer is half-done — read the subsection below before touching users or the plan** |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
 
-### ⚠️ QuickBooks primary-admin transfer — IN PROGRESS, and the account is mid-change (2026-08-06)
+### ⚠️ QuickBooks access is mid-change — don't touch users or the plan (2026-08-06)
 
-The QuickBooks **primary admin** is the **second owner (the father)**, who **no longer has access
-to the phone number on that account** — so every verification code QuickBooks sends goes to a phone
-nobody can read. The **owner we correspond with (his son)** asked the firm to help move the primary
-admin over to him. **The account is deliberately in a half-changed state right now**; don't tidy it
-up without reading this.
+The QuickBooks **primary admin** is **the father of the owner we correspond with**, and he **no
+longer has access to the phone number on that account** — so every verification code QuickBooks
+sends goes to a phone nobody can read. The **owner we correspond with (the son)** asked the firm to
+move the primary admin over to him. _(Who the father is in §2's terms is **not established**:
+there are exactly two owner contacts, so he is presumably the **Second owner**, but Lilian said
+only "his father" — she never said he is an owner of the LLC. **Confirm with her**, because it
+decides whose consent is needed to delete that user. The son ↔ "owner we correspond with" half of
+the mapping **is** established — he is the one who asked, and he is the Russian-speaking owner of
+§1/§5.)_
 
-**Where it stands**
+**What a covering bookkeeper needs to know right now**
 
-- ✅ **A second user was created for the son.** He has his own QuickBooks user now.
-- ⚠️ **To create it, the QuickBooks subscription had to be UPGRADED** — the plan the client was on
-  allows only **one** user. **The upgrade is temporary and exists only to hold two users during the
-  handover** _(Lilian, 2026-08-06)_.
-- ❌ **The primary-admin transfer itself did NOT go through.** QuickBooks sends a verification code
-  to the phone on the account — the phone the father can't reach — so the in-product transfer is a
-  dead end.
-- 🔧 **QuickBooks support gave an identity-verification route instead**, and it is **partly done**:
-  the **phone on the account was changed to the son's phone**, but the remaining step is on the
-  **father personally** — he has to **scan a QR code support provided** and **upload a photo of his
-  ID**. Nothing moves until he does that. _(Support instructions, via Lilian, 2026-08-06. The QR
-  code and any support case reference are with Lilian, not in this file.)_
+- **There are two users on the account on purpose.** A user was created for the son during the
+  handover. **Don't "clean up" the duplicate.**
+- **The subscription was UPGRADED to allow it** — the plan the client was on allows only **one**
+  user. The upgrade exists to carry the handover and is meant to be reversed _(read from Lilian's
+  account of the work: she upgraded because the plan allowed one user, and will downgrade after)_.
+- **The transfer itself has NOT gone through.** QuickBooks fires a verification code to the phone
+  the father can't reach, so the in-product route is a dead end. We are on **QuickBooks support's
+  identity-verification route** instead: the **phone on the account has been changed to the son's**,
+  and the remaining step is the father's personally — **scan a QR code support provided and upload
+  a photo of his ID**. Paused there as of 2026-08-06. _(Support's instructions, via Lilian. The QR
+  code and any support case reference are with Lilian, not in this file. Note the route is
+  **unproven** — it has not completed. It is also not recorded how the phone change itself cleared
+  verification if codes go to the lost phone.)_
 
-**The plan once the father completes his verification** _(Lilian, 2026-08-06)_ — in this order:
-
-1. Make the **son** the sole **primary admin**.
-2. **Delete the father's user.**
-3. **Downgrade the QuickBooks subscription** back to the single-user plan it was on.
-
-> **Two things must not be forgotten.** (a) **The downgrade** — the client is paying for a bigger
-> plan than they need until it happens, and the reason for the upgrade disappears the moment the
-> father's user is deleted. (b) **Two users existing is expected, not a mistake** — nobody should
-> "clean up" the duplicate while the handover is open.
+**The ordered plan, the preconditions and who owes what live in §6** — one home, so a completed
+handover doesn't leave stale instructions in three places.
 
 ## 4. Obligations & recurring processes
 
@@ -128,7 +125,7 @@ up without reading this.
 
 - 🔑 **Turo will not deal with the firm unless the owner is on the call.** Every Turo call is scheduled with him — a call the firm makes alone gets nowhere _(2026-08-04)_.
 - **Any Turo income is the company's**, not an owner's personally _(per Lilian, 2026-08-04 — §4)_. Whether the account actually produced income, and in which years, is **still unknown** — the platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything in either direction until someone looks — and note that company income can still have been paid into a personal account (a distribution), so absence from the Chase feed would not disprove company ownership.
-- **A QuickBooks primary admin who has lost the phone on the account cannot hand the role over in-product.** The transfer fires a verification code to that phone, so it dead-ends. The way through is **QuickBooks support's identity check**: change the phone on the account, then the **current primary admin has to scan a QR code and upload a photo of his ID himself** — the firm cannot do that step for him. Budget for the client's own delay _(learned on this client, 2026-08-06 — §3)_.
+- **A QuickBooks primary admin who has lost the phone on the account cannot hand the role over in-product.** The transfer fires a verification code to that phone, so it dead-ends. What support tells you to do instead is an **identity check**: change the phone on the account, then the **current primary admin scans a QR code and uploads a photo of his ID** — a step it appears only he can do. **Treat this as the route support gave us, not a proven fix: as of 2026-08-06 no handover had completed this way**, and "the firm can't do it for him" is read from support's instructions rather than tested. Budget for the client's own delay _(this client, 2026-08-06 — §3)_.
 - **Adding a second QuickBooks user can force a plan upgrade.** This client's plan allowed only one user, so a second user meant paying for a bigger plan. When the upgrade exists only to carry out a handover, **write the downgrade down as a task** — it is the step that gets forgotten once the visible problem is solved _(2026-08-06 — §3)_.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
 - Only **one live bank feed** (Chase business checking); other bank/card accounts are disconnected and **frozen** pending client confirmation of which are closed.
@@ -139,7 +136,7 @@ up without reading this.
 ## 6. History & open questions
 
 ### Log
-- 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is the second owner (his father)**, who **no longer has access to the phone tied to that account**. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian.
+- 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is his father**, who **no longer has access to the phone tied to that account** _(that the father is §2's **Second owner** is our inference from there being two owner contacts — Lilian said only "his father"; unconfirmed)_. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan _(Lilian stated that outcome; the step order and its preconditions are sequenced by us — you cannot delete a primary admin — see the outstanding item)_. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian.
 - 2026-08-04 — **Turo documents chased (Lilian).** The firm had already asked for access to the client's **Turo account** earlier; the account has since been **closed**, so the earnings report and any 1099-K can't be downloaded. Lilian **called Turo support**: they confirmed they *can* produce the documents but will hand them **only to the account holder** — they refused to give them to Lilian, and refused even to email them to the address already on the account without the owner calling himself. She captured the working route through the phone tree (see §3) and **sent the owner a message in Russian** with the number, the key sequence, and what to ask for (**Earnings Report and 1099-K, 2025**). **Waiting on him to call.** The message as sent:
   > Добрый день, Артем! Как у Вас дела?
   >
@@ -174,7 +171,7 @@ up without reading this.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
-- **QuickBooks primary admin — waiting on the FATHER to scan the QR code and upload his ID.** That one step is the whole blocker (§3). Chase him through the son, who is the one we correspond with. **Then, in order:** make the son primary admin → **delete the father's user** → **downgrade the subscription** back to the single-user plan. **The downgrade is the step that gets forgotten** — the client keeps paying for the bigger plan until it's done. Meanwhile, **two users on the account is intentional**; don't let anyone "clean it up". — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
+- **QuickBooks primary admin — the whole thing is waiting on the FATHER to scan the QR code and upload a photo of his ID** (§3). Nothing else can move until he does; chase him through the son, who is the one we correspond with. **Then, in this order:** **(a)** confirm the son's primary-admin access actually works; **(b)** confirm the firm's own access survives a single-user plan — see "Information still needed", nobody has established whether the firm has access independent of the owners' users; **(c)** delete the father's user; **(d)** **downgrade the subscription** back to the single-user plan, **confirming the downgrade with the son first — it is the client's billing.** **The downgrade is the step that gets forgotten**, and the client keeps paying for the bigger plan until it's done. Meanwhile **two users on the account is intentional** — don't let anyone "clean it up".
 - **Before filing — get the registered Turo account name and the name / TIN on any 1099-K** at the next contact with Turo (§4). It corroborates the ownership answer and shows whether the 1099-K will match to the LLC's EIN or to his SSN.
 - **Check whether any Turo payouts are already in the books** — whether those deposits landed in the Chase feed and were categorised, or are missing entirely (§5). Nobody has looked yet.
 - Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
@@ -186,6 +183,7 @@ up without reading this.
 - [ ] Sales tax / payroll applicability and who prepares each _(income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [ ] Any business licenses / annual filings
 - [ ] Where credentials live (Drive vault link)
+- [ ] **What "Corganix" refers to.** Lilian's pointer for checking the two users was "if you go into QuickBooks inside **Corganix**" — the name appears nowhere in the repo or in Double. Most likely the client's **QuickBooks company name**; once confirmed, record it as the non-sensitive reference on §3's QuickBooks row, since it is how anyone verifies the account's state.
 - [ ] **Whether the firm has its own QuickBooks access to this client independent of the owners' users** — the primary-admin handover in §3 shows the access picture was never written down. Worth settling while someone is in the account.
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
