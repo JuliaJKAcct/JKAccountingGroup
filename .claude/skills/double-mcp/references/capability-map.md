@@ -288,6 +288,21 @@ open-requests section below.
 These carry real client figures. They can be read freely for the firm's own work; they are
 **never committed to this repo**.
 
+### ⚠️ Bank Feeds are NOT here
+
+Double has a **Bank Feeds** screen — the connected accounts' raw transactions, categorized inside
+Double, with the categorization flowing through to QuickBooks. **No MCP tool reaches it.**
+`get_transactions` above is the **posted ledger**: every row is already a real QBO transaction
+with both sides of the entry, and it carries **no review-state field** at all. The only traces of
+the feed in the connector are the `bankFeedTransaction` comment type (`list_comments`) and the
+`bankFeedTransactionQuestion` question type (`get_questions`) — enough to discuss an item whose id
+you already hold, not to list or categorize one.
+
+So: **a session cannot work a client's bank feed**, and cannot tell you what is left to
+categorize. The firm's own complaint about that screen — that categorized, pending and
+merely-suggested items are indistinguishable, where QuickBooks splits them into *For review* and
+*Categorized* — is raised with Double; see [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 23.
+
 ---
 
 ## 10. Metrics dashboards — QuickBooks / Xero clients only
@@ -362,6 +377,7 @@ tested was not. Don't build anything on loan tools without checking first.
 | **File contents** | `get_file` gives a link for the human |
 | **Loan tools** | Billing-gated — §13 |
 | **Merging duplicate clients** | No tool. Prevention only |
+| **Bank Feeds** — listing or categorizing a client's feed | Not exposed; the ledger endpoint shows posted entries only — §9 |
 
 ---
 
@@ -374,6 +390,7 @@ Julia and Maria in copy. Two asks in that one email. The next call with Double i
 
 | Ask | Why | Status |
 |---|---|---|
+| **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | To raise — thread or the 17–18 Aug call |
 | **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | Sent, awaiting reply |
 | **Raise or document the note size limit** | The 403 above — it caps the case notes the team relies on | Sent, awaiting reply |
 
