@@ -5,8 +5,26 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 > ## Provenance and coverage — read this first
 >
 > Captured **2026-07-30** from **one client's partially-completed organizer (~46% done)**, supplied
-> by Lilian because the organizer template is **not readable through the Double MCP**
-> ([`double-mcp`](../../double-mcp/) §2).
+> by Lilian because at the time the organizer template was not readable through the Double MCP.
+>
+> ### ⚠️ That reason expired on 2026-08-06 — the live template IS readable now
+>
+> Double's MCP gained organizer tools. **`get_organizer(organizerId)` returns every slide, section,
+> option list and conditional-logic rule** of a real organizer — the authoritative wording, current
+> for whatever year that organizer belongs to. See [`double-mcp`](../../double-mcp/) §2.2.
+>
+> So this file is no longer the *only* source, and its two big caveats below (unknown year,
+> incomplete coverage) are now **answerable rather than blocking**: read a live organizer instead of
+> asking Lilian for a PDF. What this file is still good for is being a **stable, reviewable, cheap**
+> copy — `get_organizer` is a ~120-slide payload per call, and a committed file can be diffed and
+> cited.
+>
+> Two rules that do **not** change:
+>
+> - **Structure only.** Never `get_organizer_responses` on a real client — it returns SSNs,
+>   driver's licenses, dates of birth and bank account numbers.
+> - **Never invent a question.** If wording isn't here and isn't read from a live organizer, it
+>   doesn't go in.
 >
 > **Which tax year that organizer belongs to is unresolved.** The document is *titled* as a 2023
 > organizer, yet its dependents question asks about a child "born AFTER December 31, 2024" — which
@@ -23,7 +41,8 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 > source document. Where something is an inference or an artefact of *this client's* partly-filled
 > copy, it says so inline. Do not add questions from general tax knowledge — an invented question
 > would later be read as the firm's own wording and asked of a real client. If a section is needed
-> and isn't here, ask Lilian for a fuller organizer.
+> and isn't here, read it from a live organizer with `get_organizer` (or ask Lilian) — never write
+> it from general tax knowledge.
 >
 > **No client data.** The source was one client's partly-filled organizer; only the question
 > wording was taken. Answers, names, SSNs, dates of birth and phone numbers were deliberately
@@ -151,7 +170,13 @@ neither has been overwritten with a filled copy.
 
 The source client stopped at ~46%, so nothing past "Business income" was visible. These are
 **expected** to exist but are **unverified**; do not write them into the tables above without a
-source:
+source.
+
+**These gaps are now fillable without waiting on anyone** — `get_organizer(organizerId)` returns the
+complete slide list of a live organizer, hidden slides included (see
+[`double-mcp`](../../double-mcp/) §2.2). Anyone extending this file should read a current 2025
+organizer's **structure** and record the wording verbatim, marking the date and the organizer it
+came from. Structure only — never the responses:
 
 - The full option list for the "types of income" checkbox (only self-employment was visible)
 - The remaining `Business structure` / `Who owns the business?` option values
