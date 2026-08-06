@@ -78,7 +78,7 @@ recorded for history and because the Florida RT matter at the end is still open.
 ### Payroll
 - **Applies?** No — **N/A** in Double, and the company **never paid wages**. But a **Florida reemployment tax (RT) account exists** and is registered in Gusto. That mismatch is the open matter below.
 - **Provider / frequency:** Gusto was connected but **no payroll was ever run** (no first check date).
-- **Our role:** _(pending — unclear who registered the RT account; see §6)_
+- **Our role:** **the firm registered the Florida RT account itself**, then engaged Gusto — **not knowing Gusto would not file until the first payroll ran** _(Lilian, 2026-08-06)_. The registration **date** is still not established (§6).
 - **Process notes (→ future SOP):** see §5 — the lesson about Gusto and RT filings.
 
 ### Bookkeeping & monthly close
@@ -106,10 +106,13 @@ recorded for history and because the Florida RT matter at the end is still open.
 > - **Closing the account is OFF** — not because the agency refused it, but because **Julia wants
 >   it left open** in case the company files as an S-corp and has to run payroll _(Lilian,
 >   2026-08-06)_.
-> - **Moving the effective date is the route the firm wants to try.** But the agency requires **a
->   letter from the IRS stating how the company files its taxes** — **for the closure as well as
->   for the date change** — and that letter is the problem, because the company files **1120-S**.
->   See "The three options".
+> - **Moving the effective date is OFF too** _(2026-08-06)_ — it would mean showing the DOR the
+>   company is **not** an entity requiring a salary, and it **is** an S-corp. The firm will not
+>   misrepresent it. **Nothing goes to `fdorspanish@floridarevenue.com`.**
+> - **THE PLAN IS NOW ONE THING: tell the Florida DOR the truth and ask it to waive the penalties**
+>   — no payroll was ever run, there was no money to run one, none will be run yet. **Read the two
+>   ✅ blocks at the end of this section**, including the correction to how that argument should be
+>   framed. **Filing the zero returns and paying ≈$842.50 is the floor if the waiver fails.**
 > - **Filing the zero returns and paying ≈$842.50 is the fallback**, and the price Julia is
 >   weighing against it.
 >
@@ -321,12 +324,51 @@ responsibility off the firm — which is not a lie, because we paid for that ser
    argument; it is a **goodwill / penalty-assistance and service-quality** argument, and it is worth
    running, but with that expectation. The strongest version of it is in §6's next actions.
 
+#### ✅ BOTH FLAGS RESOLVED the same day — Lilian, 2026-08-06
+
+**1. The contradiction is settled: the effective-date route is OFF, because the firm will not
+misrepresent the company.** Lilian knows the DOR wants an entity that is **not** an S-corp.
+Tsminibears **is** one, and **"no podemos mentir"** — so the only route left is to tell the agency
+the truth and ask it to understand: **no payroll was ever run, there was no money to run one, and
+none is going to be run yet.** **Track B is now the whole plan; Options 2 and 3 are dead.**
+✅ **Nothing goes to `fdorspanish@floridarevenue.com`, and the CP575 question is moot.**
+
+> ⚠️ **One correction to the argument itself — the framing matters more than the facts here.**
+> Julia's premise is that *because no payroll ran, there was no obligation to file*. **Florida does
+> not work that way, and the notice in the client's hands is the proof:** once the RT account exists
+> with an effective date, the state expects a quarterly report **every quarter, at zero**, until the
+> account is closed — which is exactly what it assessed the penalties for, and §5 already records
+> it. An argument built on *"we did not owe these returns"* will simply be corrected by the agency,
+> and the request will read as uninformed.
+>
+> **The same facts win as a reasonable-cause penalty-waiver request:** *the returns were due, they
+> were not filed, here is why, and we ask that the penalties be waived.* That concedes nothing the
+> agency does not already know, requires **no misrepresentation whatsoever**, and is the instrument
+> the DOR actually has a process for. **Firm's own reading, not the agency's words — put it to Julia
+> before anything is drafted.**
+
+**2. Track A is weaker than hoped — THE FIRM registered the RT account itself.** _(This closes what
+§6 had promoted to the most valuable unknown in the matter.)_ **Gusto did not register it.** The firm
+registered the Florida RT account and **then** engaged Gusto's service, **not knowing that Gusto
+would not begin filing until the first payroll ran** — that part was genuinely unknown to the firm.
+So Gusto did not create the obligation, and the "you opened this and then refused to file it"
+argument does not exist.
+
+- **What is left of Track A, and it is honest:** the firm **engaged a payroll service and was not
+  told at onboarding** that filing would not start until the first check date — while the account it
+  had just registered was already accruing an obligation. A **disclosure and service-quality** point,
+  not a breach.
+- **Track A's value is now evidential more than financial.** Gusto's **written 2026-06-09 refusal**
+  is a document for the Track B waiver: it shows the firm believed a paid provider was handling the
+  filings. **Get that statement in writing from Gusto whatever happens to the money question.**
+
 ## 5. Key facts & quirks
 
 - **The lesson to carry to other clients: registering a state RT number in Gusto does NOT get $0 returns filed.** Gusto files only from the **first check date** — the first payroll actually processed on its platform. Until then it files nothing at all, not even zero returns, even though the RT account number sits in the Gusto account.
   - ✅ **No longer just one support reply — this is Gusto's PUBLISHED policy.** _(Checked 2026-08-06.)_ Gusto's own Help Center states it in almost the same words as Jeffrey's email: **"We do not file any returns, including $0 returns, until you report wages and taxes in a state,"** and it gives the exact scenario — join in one quarter, first payroll the next, and **the employer files the earlier $0 returns with the agency themselves**. A second article states Gusto **only has authorization to file and pay starting the quarter of the first check date**, and that if a notice covers an earlier period **Gusto cannot help with it**. Gusto's **Payroll Service Terms** carry the same shape: the employer must **process at least one payroll** for Gusto to file, and **the company remains solely responsible to the taxing authorities** for timely filing and payment.
-  - ⚠️ **Basis, stated precisely: these are SEARCH-RESULT summaries of Gusto's pages, not text read first-hand.** `support.gusto.com` and `gusto.com/legal/terms/payroll` both **returned HTTP 403 to automated retrieval on 2026-08-06** — the same wall the Florida DOR pages threw. **Open them in a browser and screenshot the wording before quoting it to anyone**, and get the version of the terms that was in force in **2025**, not today's.
+  - ✅ **CONFIRMED FIRST-HAND — Lilian opened the pages herself on 2026-08-06 and read the same wording.** The session could not retrieve them (`support.gusto.com` and `gusto.com/legal/terms/payroll` both returned **HTTP 403** to automated retrieval, the same wall the Florida DOR pages threw), so the check was done by a person. **Treat this as established, not as a search summary.** Two things still worth doing before quoting it in a dispute: **screenshot the pages**, and get the version of the terms that was in force in **2025**, not today's.
   - **The practical rule:** treat any client with a registered state RT account and no payroll yet as **exposed**, and file the $0 returns yourself until the first check date exists.
+- **⚠️ THE GAP THAT CAUSED THIS: you register the state account, then onboard the payroll provider — and nobody owns the quarters in between.** _(Tsminibears, Aug 2026 — the firm registered the Florida RT account itself and then engaged Gusto, not knowing Gusto would not file until the first payroll ran.)_ The provider covers **from its first check date forward**. Everything between **registration** and **first payroll** is the employer's, and it is invisible precisely because a provider is in place and everyone assumes it is handling things. **Two habits that close the gap:** (1) **register the state account as late as you can** — ideally in the quarter payroll actually starts, not when the entity is set up; (2) **the moment a provider is engaged, ask it in writing which quarter it begins filing from**, and diarise the $0 returns for every quarter before that. **The firm did not know this rule and lost ≈$842.50 to it — that is what makes it worth writing down.**
 - **How to check whether a vendor's verbal/email explanation is really its policy — the method, not just this case.** _(Established on Tsminibears, Aug 2026.)_ Four places, cheapest first: **(1) the vendor's public help centre**, which is where the operational rule usually lives in plain words; **(2) the service terms** on its legal pages, for the contractual version and the liability limits; **(3) the product itself** — the client's own account often shows the rule as a setting or a status (in Gusto, the tax-setup screen and the filing start date); **(4) the billing history**, which answers the question the terms never do — *were we actually paying for this while nothing was filed?* That last one is usually where the leverage is, because a documented policy defeats a breach argument but not a service-quality one.
 - **Registering the state RT account starts the clock.** Florida sets an **effective date** at registration and expects quarterly reports from that quarter on, whether or not wages are ever paid. Register the RT account only when payroll is genuinely about to start — and once it **is** open, file the $0 returns **on time**; the obligation doesn't wait for wages, and it's *late* zeros that draw the penalty.
 - **⚠️ The Florida DOR gates BOTH fixes on the entity's federal filing form — and asks for a letter from the IRS to prove it.** Per the agency _(2026-08-06)_: if the company files **as a corporation**, it takes it that a **salary must be paid**, and on that basis **will neither close the account nor move the effective date**. To get either you must send **a letter from the IRS stating how the company files its taxes**, showing a form with **no salary requirement** (a **Schedule C** / disregarded-type entity). **The letter is required for the closure as well as for the date change — only filing the late zeros needs no letter.** So **establish the entity type before promising anyone a closure or a date change — and raise it yourself on the call, because a representative may never bring it up** (the one on 2026-08-04 didn't).
@@ -375,27 +417,31 @@ All times below are **UTC** unless marked otherwise.
 - _(2026-08-06, Julia via Lilian)_ — **THE PLAN OF RECORD: two tracks at once, not one of the three options.** Lilian briefed Julia in full and Julia decided to **(A) go back at Gusto** — challenge Jeffrey's 2026-06-09 explanation and try to win the argument there, on the premise that **the firm paid for that service** — **and (B) keep working the Florida DOR**, telling it plainly that the company **has been an S-corp since 2025**, **never ran payroll** (no money, no salary ever set, nothing ever paid), that there **was a payroll agent, Gusto**, meant to be handling it, and that the firm therefore **had no idea the reports were not being filed** until the client began receiving notices. Julia's stated objective: *tell the DOR we had no idea and take some responsibility off the firm — which is not a lie, because we paid for that service.* **Two consequences the firm recorded the same day, both flagged back to Lilian: Track B abandons the effective-date route** (it tells the agency the company *is* an S-corp, the opposite of what that request needs), so **its real instrument is a reasonable-cause penalty waiver**; and **Track A is not a breach argument**, because Gusto's published policy matches what Jeffrey wrote. _(Detail in §4; the Gusto verification in §5.)_
 - _(2026-08-06, Lilian → firm)_ — **Checked whether Gusto's explanation is actually its policy, at Lilian's request.** It is. Gusto's Help Center says **"We do not file any returns, including $0 returns, until you report wages and taxes in a state"** and puts the earlier $0 returns on the employer; another article says Gusto's authorization begins with **the quarter of the first check date** and that it **cannot help** with a notice for an earlier period; the **Payroll Service Terms** require **at least one processed payroll** before Gusto files and keep the company **solely responsible** to the taxing authorities. **⚠️ All of this is search-result summary — `support.gusto.com` and `gusto.com/legal/terms/payroll` both returned HTTP 403 to automated retrieval, so nothing was read first-hand. Open them in a browser and screenshot before quoting.** _(Links in §7; the method in §5.)_
 
+- _(2026-08-06, Lilian — closing the two flags)_ — **Two answers that reshape the plan.** (1) **THE FIRM registered the Florida RT account, not Gusto.** The firm registered it and **then** engaged Gusto's service, **not knowing Gusto would not begin filing until the first payroll ran** — that part was genuinely unknown. ✅ **This closes the "who registered it" question, and it closes it against Track A:** Gusto did not create the obligation, so there is no "you opened it and refused to file it" argument. What survives is a **disclosure / service-quality** point and, more usefully, Gusto's written refusal as **evidence for Track B**. (2) **The effective-date route is OFF — on principle.** Lilian knows the DOR wants a non-S-corp; Tsminibears is one, and **"no podemos mentir"**. So the plan is to tell the agency the truth — **no payroll was ever run, there was no money to run one, none will be run yet** — and ask it to relieve the charges. **Options 2 and 3 are dead; Track B is the whole plan.** Lilian also **verified Gusto's published policy first-hand** on its site (the session had been blocked by HTTP 403), so §5 is now confirmed rather than a search summary. **The firm's one correction, flagged for Julia and not yet answered: "no payroll ran, so nothing was due" is not how Florida works — the notice itself proves the agency disagrees — but the identical facts win as a reasonable-cause PENALTY-WAIVER request, with no misrepresentation.** _(Detail in §4; the new firm-wide lesson in §5.)_
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
 - ✅ **ANSWERED 2026-08-06 — the price of the "file the $0 returns" route is ≈$842.50** _(FL DOR estimate; see §4)_. This was the number Julia asked for on 2026-08-04.
 - ✅ **The summary for Julia was written, delivered and acted on, 2026-08-06.** She chose **two parallel tracks** instead of one of the three options — see §4, "THE PLAN OF RECORD". The next actions below are grouped by track.
 
-**TRACK A — Gusto.** _(Objective: shift some of the cost or the responsibility back to the vendor the firm was paying.)_
+**TRACK B — Florida DOR. This is now the whole plan** _(after 2026-08-06: the effective-date route is off on principle, and closing the account was already ruled out)_.
 
-- **Read the actual Gusto pages in a browser and screenshot them** before writing anything. Automated retrieval was blocked (§5), so the firm currently has a summary, not evidence. **Get the terms as they stood in 2025**, not today's.
-- **Pull the billing history — this is the strongest fact available.** Was Tsminibears **paying Gusto** through Q2 and Q3 2025 while nothing was filed and no warning was given? A published policy defeats a *breach* argument; **paying for an unused full-service payroll subscription is a service-quality and refund argument, and that one is live.**
-- **Settle who registered the Florida RT account.** ⚠️ **If Gusto's own state-registration service registered it**, then Gusto created a Q2 2025 obligation and then declined to file against it — a materially stronger position than anything else here. This is already an open question below; **Track A makes it the important one.**
-- **Ask Gusto in writing for:** the status of case **#43016275**, the quarter from which it accepts filing responsibility, a **written statement that it did not file Q2/Q3 2025**, and whether it will exercise the **penalty assistance its own terms say it may offer at its discretion**. The written statement is useful to Track B whatever Gusto does about the money.
-- **Expect a goodwill outcome at best.** Gusto's terms keep the company solely responsible to the agency. Frame the ask accordingly.
-
-**TRACK B — Florida DOR.** _(Objective: reduce or remove the penalties by explaining what actually happened.)_
-
-- ⚠️ **Decide with Julia first: Track B and the effective-date request contradict each other.** One tells the DOR the company **is** an S-corp; the other has to show it is **not** an entity requiring a salary. **Pick one.** Until that is settled, **send the IRS letter nowhere.**
-- **Run Track B as a reasonable-cause penalty-waiver request**, not an informal explanation — same facts, but the instrument the agency actually has a process for.
-- **Assemble the evidence before writing:** no wages ever paid in any period (the books support this), the company's financial position, **Gusto's written 2026-06-09 refusal**, and proof the firm was **paying** for the payroll service. The vendor story is far stronger with the vendor's own email attached.
+- ⚠️ **FIRST — settle the framing with Julia.** *"No payroll ran, so nothing was due"* is not how Florida works, and the notice proves the agency disagrees. **The same facts, presented as a reasonable-cause request to WAIVE the penalties, cost the firm nothing and require no misrepresentation.** Nothing should be drafted until Julia has seen this.
+- **Then write it as a penalty-waiver request**, in the agency's own instrument rather than as an informal explanation.
+- **Assemble the evidence before writing:**
+  - **No wages were ever paid in any period** — the books support this, and it is the heart of the request.
+  - **The company had no money to run payroll**, and none is going to be run yet. Say it plainly.
+  - **Gusto's written 2026-06-09 refusal** — it shows the firm believed a paid provider was handling the filings. **Worth chasing from Gusto in writing even though Track A is otherwise weak** (see below).
+  - **Proof the firm was paying for the payroll service** through the penalty periods.
 - **Confirm the POA is on file** before the agency will discuss the account at all.
 - **Keep Option 1 alive as the floor:** if the waiver fails, the outstanding zero returns still have to be filed and paid — **the per-return amounts are on the DOR filing screens.**
+
+**TRACK A — Gusto.** ⚠️ **Reduced in scope: the firm registered the RT account itself**, so Gusto did not create the obligation (§4). Two things still worth doing, in this order:
+
+- **Get Gusto's written statement that it did not file Q2/Q3 2025**, plus the status of case **#43016275** and the quarter from which it accepts filing responsibility. **This is now primarily evidence for the Track B waiver**, so it is worth having regardless of the money.
+- **Then, optionally, the service-quality ask:** the firm engaged a payroll service and **was not told at onboarding** that filing begins only at the first check date. Pull the **billing history** to show what was being paid for meanwhile, and ask whether Gusto will exercise the **discretionary penalty assistance its own terms mention**. **Expect goodwill at best** — its published policy is on its side and its terms keep the company solely responsible.
+- ✅ **Done:** Lilian read Gusto's published pages first-hand and they say what the support reply said (§5). **Screenshot them, and get the 2025 version of the terms**, before using any of it in a dispute.
 - **NEXT ACTION (1) — read the client's CP575** and see what it actually says about the filing form. Lilian had not read it as of 2026-08-06 and expects **disregarded**. Nothing goes to the DOR until it has been read.
 - **NEXT ACTION (2) — establish whether a Form 2553 / CP261 exists** (the S-corp election and the IRS's acknowledgement of it), and **when** it was filed. This decides whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so something made the company an S-corp; find the paperwork.
 - **NEXT ACTION (3) — confirm with the DOR which document it will actually accept**, since the representative described the letter's content and never named a form.
@@ -413,8 +459,9 @@ All times below are **UTC** unless marked otherwise.
 ### Information still needed
 
 - [ ] Which quarters the **new** Florida DOR notice covers, and the assessed amount (kept in the notice, not here).
-- [ ] **⭐ Whether the RT account was registered by the firm, by the client, or by GUSTO's own state-registration service — and on what date.** _(Promoted 2026-08-06: this is now the highest-value unknown in the matter. If Gusto registered it, Gusto created the Q2 2025 obligation and then refused to file against it — the one fact that would make Track A more than a goodwill request.)_ Also on what date.
-- [ ] **Was Tsminibears actually PAYING Gusto during Q2 and Q3 2025?** Billing history / invoices. This is what turns Track A from "your policy says no" into "we paid you for a service that produced nothing and never warned us."
+- [x] **Who registered the RT account — ✅ THE FIRM did, not Gusto.** The firm registered the Florida RT account and **then** engaged Gusto, **unaware that Gusto would not file until the first payroll ran** _(Lilian, 2026-08-06)_. This is the answer that reduced Track A to a service-quality point. **The registration DATE is still not established** — see the next item.
+- [ ] **On what date the firm registered the RT account**, and why it was registered at all with no payroll imminent. The effective date is reported as May 2025; whether that is also the registration date remains an inference.
+- [ ] **Was Tsminibears actually PAYING Gusto during Q2 and Q3 2025?** Billing history / invoices — now supporting evidence for the Track B waiver rather than the centre of a claim against Gusto.
 - [ ] **What Gusto's Payroll Service Terms said in 2025**, not what they say today. Terms change; the version in force during the penalty periods is the one that matters.
 - [ ] Whether the RT account was registered by the firm or by the client, **and on what date**. May 2025 is the date the closure must run back to (§4), but that it is also the **registration** date is an inference — not established. Worth knowing so the same mistake isn't repeated.
 - [ ] **The DOR representative's name / ID and a call reference — for BOTH calls (2026-08-04 and 2026-08-06).** Neither was captured, and the two calls contradict each other on whether the account can be closed. Take the name every time from here on.
@@ -425,7 +472,6 @@ All times below are **UTC** unless marked otherwise.
 - [ ] **Whether the DOR checks the federal return against the letter.** If it does, a disregarded-entity letter alongside a filed 1120-S is a problem; if it only wants the letter on file, less so. Worth asking directly.
 - [ ] **Whether the effective-date email to `fdorspanish@floridarevenue.com` should be written in Spanish**, and whether an English-channel address exists — the client's own correspondence is in Russian and the firm's artifacts are in English.
 - [ ] **Whether a current signed POA from the client actually covers closing the RT account** — who signed it and when. The relationship ended in June 2026; authority to act should be confirmed, not assumed.
-- [ ] Why an RT account was registered at all when Payroll is N/A and no wages were ever paid.
 - [ ] Where the client's Google Drive folder is (§7).
 
 ## 7. Links
@@ -435,7 +481,7 @@ All times below are **UTC** unless marked otherwise.
 - **Double tax project (2025):** [2025 Taxes](https://app.doublehq.com/tax-return?cid=706709&projectId=219894)
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Gusto case:** request **#43016275**, Gmail thread "Reemployment tax returns are not being filed - TS Minibears" (2026-05-28 → 2026-06-09)
-- **Gusto's published policy — the pages to open in a browser and screenshot** _(all returned HTTP 403 to automated retrieval 2026-08-06; §5)_:
+- **Gusto's published policy — ✅ read first-hand by Lilian 2026-08-06; still to be screenshotted** _(all returned HTTP 403 to automated retrieval, so a person had to open them; §5)_:
   - [Tax forms Gusto files for you](https://support.gusto.com/article/106622058100000/view-a-list-of-tax-forms-gusto-files-for-you-federal-and-state) — carries the "**no returns, including $0 returns, until you report wages**" wording
   - [Payroll tax responsibilities when switching to Gusto](https://support.gusto.com/article/250327190420853/payroll-tax-responsibilities-when-switching-to-gusto) — the first-check-date rule and "we cannot help" for earlier periods
   - [Payroll Service Terms](https://gusto.com/legal/terms/payroll) — one processed payroll required before Gusto files; company **solely responsible** to the taxing authorities. **Get the 2025 version.**
