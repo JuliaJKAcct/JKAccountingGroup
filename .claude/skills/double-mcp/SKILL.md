@@ -399,6 +399,7 @@ authorization from the firm.
   you are going to perform; ask for the picker. Files land hidden from the client by default in custom
   folders; omitting `folderId` sends them to the Uploads Inbox and triggers OCR. Be deliberate about
   which you want, and about `isVisible`.
+- **Mind the payload size on any note or comment** — bodies near 8,000 characters come back `403`, not truncated; see §7's "size wall", which applies to every `create_note`/`update_note`, not just case notes.
 - Prefer **notes and comments** (`create_note`, `add_task_comment`) for leaving a trail, the same
   spirit as the Odoo chatter convention. The firm's standard shape for that trail is §7.
 
@@ -459,26 +460,38 @@ the whole thing start to finish, instead of reconstructing it from email.
    emails, names, and so on. She asked for the three existing notes to be back-filled, which was done
    the same day, and **confirmed the same day that the restriction is the repo's alone** — "es en el
    main donde tenemos restricciones por seguridad".)_
-   - **Credentials are the one open question.** She named passwords among what belongs in a note. Two
-     things to settle with her before any go in: the firm's convention puts logins in the **Google
-     Drive vault**, so a note becomes a *second* home that nobody rotates or retires; and **whether
-     notes are visible to the client in the portal is still unconfirmed** (`FOLLOW-UPS` row 17). A
-     name or an email in the client's own record is harmless if he sees it — a password is not.
-     Until both are settled, reference where the credential lives rather than pasting it.
+   - **🔒 TAX-IDENTITY AND PAYMENT DATA IS STILL OUT — "everything" does not reach it.** No
+     **SSN/ITIN**, driver's licence, date of birth, or **full bank routing/account number**, and
+     **nothing sourced from an organizer response** (§2.2's hard rule — that payload is exactly this
+     class of data). Contact details, client IDs and figures go in; the identity block does not.
+     Rule 10 replaced a blanket "nothing sensitive", which was the only thing previously excluding
+     it — this is the exclusion that has to survive.
+   - **Credentials are undecided, so none are in yet.** She named passwords among what belongs in a
+     note. Two things to settle with her first: the firm's convention puts logins in the **Google
+     Drive vault**, so a note becomes a *second* home nobody rotates or retires; and **whether notes
+     are visible to the client in the portal is still unconfirmed** (the "Double notes — client
+     visible?" row in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md)). A client's own name or email in
+     their own record is harmless if they see it — a password is not. Until both are settled,
+     reference where the credential lives rather than pasting it.
 
-### The 8 KB wall — a long note gets blocked, not truncated
+### The size wall — a long note gets blocked, not truncated
 
-**Bodies of roughly 8,000 characters or more fail** with a `403` / `mcp_request_blocked` from the
-security layer in front of the connector, *not* a validation error from Double — so it looks like an
-outage rather than a size problem. Measured 2026-08-06: **~7,600 characters went through; ~8,000 and
-~10,400 were both blocked.** Note that `ping` keeps working, which is what makes this confusing.
+**Measured on the body string, 2026-08-06: ~7,600 characters went through; ~8,000 and ~10,400 were
+both blocked** with a `403` / `mcp_request_blocked`. So the boundary sits somewhere between 7,600 and
+8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
+request-size rule in front of the API rather than a Double product limit — **inferred, not
+documented**; and the **title and JSON escaping count toward the payload too**, so the body is not
+the whole budget. `ping` keeps working throughout, which is what makes this read as an outage.
 
 Practical rules:
 
 - **Keep a note body under ~7,500 characters.** Compose it, measure it, then send.
-- If a `403` hits, **don't retry the same payload** — it will fail identically. Cut length instead.
-- To get a long note in safely: `create_note` with a short stub, then `update_note` with the trimmed
-  full body. That also keeps the ID stable for rule 1.
+- If a `403` hits, **`list_notes(clientId)` before doing anything else.** The error does not tell you
+  whether the note was created, and a blind retry is exactly how you end up with the second note rule 1
+  forbids. Then cut length — **never resend the same payload**, it fails identically.
+- **Create a short stub first, then `update_note` with the trimmed body.** The stub does not raise the
+  cap — the body still has to fit — but the ID is stable for rule 1 and a `403` never leaves you
+  guessing whether something was created.
 - Length is a feature, not a limitation: it forces the note to stay the *readable* view. When a case
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
@@ -505,12 +518,14 @@ exception to rule 1, so it comes with discipline, or it becomes the fragmentatio
    oldest history furthest back. New information always goes into Part 1, so the split point moves
    backwards over time and Part 1 never goes stale.
 4. **Never split by topic.** Status and pending actions do not move out of Part 1, ever.
-5. **Title every part `CASE · <matter> — Part N of M`**, and when M changes, **retitle the existing
+5. **In the repo, record only the stable `CASE · <matter>` prefix and the note ID** — never the status
+   suffix, which changes every time the case moves and would go stale in the client file the same day.
+6. **Title every part `CASE · <matter> — Part N of M`**, and when M changes, **retitle the existing
    parts** so nobody reads "Part 1 of 2" and stops at a note that is now half the story.
-6. **Cross-link both ways:** Part 1 ends with *"older history continues in Part 2, note ID …"*; each
+7. **Cross-link both ways:** Part 1 ends with *"older history continues in Part 2, note ID …"*; each
    archive part opens with *"Part N of M — the live status is in Part 1, note ID …"*.
-7. **Record every part's ID** in the client file's §7, not just the first.
-8. **Update in place still applies within each part.** A new part is created only when the live one is
+8. **Record every part's ID** in the client file's §7, not just the first.
+9. **Update in place still applies within each part.** A new part is created only when the live one is
    full — never as a way to append an update.
 
 None of the three current notes needs this yet (all under 8 KB). Revisit if Double raises the limit —
@@ -544,8 +559,12 @@ the ones that outlive the engagement.
 
 **Whether Double notes are visible to the client in the portal has not been confirmed in the UI.**
 The tools expose no visibility flag, and a case note is candid by design ("Gusto never replied",
-"this was missed"). Lilian was asked to check once; until she confirms, keep case notes free of
-anything you would not want the client to read.
+"this was missed"). Lilian was asked to check once.
+
+Until she confirms, the caution is **narrow** — it is not the old "nothing sensitive" rule coming back
+in through the side door. A client's own **name, email, phone or figures are not the issue** (rule 10);
+what turns on portal visibility is **candid internal judgment**, **blame aimed at a third party**,
+**credentials**, and the **identity block** in rule 10's 🔒 bullet.
 
 ---
 
@@ -564,8 +583,10 @@ anything you would not want the client to read.
 
 ## 9. Update this skill when…
 
-- **The portal-visibility question in §7 is answered** — that's the one open item blocking case
+- **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
+- **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
+  stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
   that file carries the audit date and the ✅/◻︎/⛔ marks, and a surprise means it's stale. Double
   ships tools **silently** (organizers appeared between the July and August 2026 audits), so
