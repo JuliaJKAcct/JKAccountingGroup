@@ -78,17 +78,17 @@ helpful"), which is what actually makes a referral land:
 > lot of my clients have found it really helpful. It's basically the
 > financial stuff worth double-checking when you're moving into a new place.
 > If anything on it looks unfamiliar, give them a call — they do a free
-> consultation."
+> discovery call."
 
 **C — Client asks a question the realtor can't fully answer:**
 > "Honestly, that's more of an accounting question than a real estate one —
 > but I work with a firm that handles exactly this for my clients. Want me
-> to connect you? They do a free consultation."
+> to connect you? They do a free discovery call."
 
 **D — Short follow-up text, a few days after keys:**
 > "Hope the new space is coming together! Meant to send you this — a quick
 > financial checklist I put together with an accounting firm I work with. A
-> lot of my clients found it helpful. Free consultation if anything looks
+> lot of my clients found it helpful. Free discovery call if anything looks
 > unfamiliar."
 
 Whichever moment it is, the ask is the same: hand over or text the

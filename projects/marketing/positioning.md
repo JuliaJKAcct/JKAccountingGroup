@@ -60,6 +60,13 @@ the US get caught between two failures:
 - Real financial upside (the $1M+ saved stat lives here)
 - A relationship they can actually lean on
 
+**Naming the free first step — "discovery call," never "consultation."** The
+firm does **not** give free consultations: a consultation is paid advisory work.
+What is free is the short first conversation to see whether we're a fit. So every
+CTA, everywhere (website, collateral, signatures, referral scripts), reads
+**"Book a free discovery call"** — never "Book a free consultation."
+_(Lilian, Aug 2026.)_
+
 ## The pitch
 
 The conversational pitch — pain first, then us as the answer to it. Written to
