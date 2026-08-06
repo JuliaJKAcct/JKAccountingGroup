@@ -17,7 +17,8 @@ work, with more to come.
 brand/        Shared brand foundation — logo, brand guide, design system.
               Used by every project.
 projects/     One folder per initiative (marketing, reasonable-compensation, …).
-.claude/      Reusable Claude skills that power the projects.
+.claude/      Reusable Claude skills that power the projects, plus the hooks that
+              keep parallel sessions from colliding (see .claude/hooks/README.md).
 BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, per-person).
 .mcp.json     MCP integrations available to Claude in this repo (see below).

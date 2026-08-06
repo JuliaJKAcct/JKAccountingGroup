@@ -40,6 +40,11 @@ the US.
 │   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients + downloadable templates, generated from the repo (Active)
 │   └── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
 ├── .claude/
+│   ├── settings.json  registers the hooks below
+│   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
+│   │   ├── session-start.sh            on session start: what just landed on main + which
+│   │   │                               unmerged branches other sessions have in flight
+│   │   └── pre-commit-drift-check.sh   on `git commit`: warns if main moved under you
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── README.md                  the SKILLS INDEX — the canonical list of every skill ("do we already have one for this?")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
@@ -231,6 +236,45 @@ in that folder.
   Monday mornings) sweeps the entire repo for this drift and can also be run on
   demand ("audit the repo") — so a working session only needs to keep the indexes
   right for what it touched, not re-audit the whole repo every time.
+- **The drift check — run it right before you commit, not when you branch.**
+  _(Two hooks now do most of this for you — [`.claude/hooks/`](./.claude/hooks/). One briefs you at
+  session start on what landed on `main` and which unmerged branches are active; the other fires on
+  `git commit` and warns when `main` moved under you. They **warn, never block**, and they are a
+  safety net, not a substitute — the judgement below is still yours.)_
+  Starting from the latest `origin/main` is **not enough**: a long session can watch
+  `main` move several PRs while it works, and the stale copy in your head is the one
+  you edit. So immediately before committing:
+
+  ```
+  git fetch origin main
+  git log --oneline HEAD..origin/main      # what landed while you worked
+  ```
+
+  If that returns anything, **re-read the current version of every rule you are
+  changing** — the version on `main` now, not the one you read an hour ago — and ask
+  whether your change still makes sense beside it.
+
+  **Git only catches textual collisions. The dangerous conflict is semantic**: two
+  sessions can write flatly contradictory guidance, in different files or different
+  sections of one file, and every merge stays clean. Nothing will flag it for you.
+  _(Aug 2026 — a session spent an afternoon auditing the Double MCP while three other
+  PRs landed on that same subject. It wrote "never open a second note" into the
+  [`double-mcp`](./.claude/skills/double-mcp/) skill: the exact opposite of the
+  `Part 1 / Part 2` rule PR #143 had just established. Caught only by re-reading `main`
+  before committing.)_
+
+  Three habits that prevent the rest:
+
+  1. **Check what's in flight before starting** — open PRs (`list_pull_requests`) and
+     the last ~10 commits on `main`. If someone has work open on your topic, read it
+     first and enrich it instead of writing a parallel version.
+  2. **Say it in the PR when your change touches shared guidance.** A reviewer told
+     *"this area moved recently, check for contradictions"* finds them; one handed a
+     diff in isolation reviews the diff.
+  3. **Treat [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) as the highest-traffic shared file in
+     the repo.** A row that looks stale to you may have been updated an hour ago by the
+     other person — read it before you rewrite it, and correct a row rather than
+     replacing it.
 - **Session identity is provenance, not a wall.** The whole firm shares one Claude
   Code account, so git alone can't tell whose hands did what. It's one firm with one
   goal — **never partition the repo or the work by person**; Julia and Lilian split
