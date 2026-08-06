@@ -7,7 +7,7 @@
 > "send the Double note-size email", it has already gone out — follow up on that thread instead of
 > writing a new one.
 >
-> **What actually went out differed from the draft below in two ways:**
+> **What actually went out differed from the draft below in three ways:**
 >
 > - It carried a **second, unrelated ask** in the same message — a write on the tax project's
 >   deadline (see [`capability-map.md`](./capability-map.md) → "Open requests with Double", and
@@ -62,7 +62,7 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 
 ---
 
-## The email to send — reply to "Checking in before our 8/18 wrap-up"
+## The email as sent — a reply on "Checking in before our 8/18 wrap-up"
 
 > Hi Allison,
 >

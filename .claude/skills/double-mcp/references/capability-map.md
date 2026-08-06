@@ -253,7 +253,7 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 | Tool | | Notes |
 |---|---|---|
 | `list_notes` | ✅ (Aug) | **Always call this before writing a case note** — one note per matter, rewritten in place (SKILL §7) |
-| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ 403 above ~8,000 characters** — see below |
+| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up.** See below |
 | `list_comments` | ◻︎ | Filter by client, task, thread, `transactionExternalId`, date range, or one of 15 comment types |
 | `add_task_comment` · `add_transaction_comment` | ◻︎ **W** | |
 | `get_questions` | ◻︎ | Client **questions/requests** — not organizer answers. Types: userToContact, contactToUser, transaction, receipt, bankFeedTransaction |
