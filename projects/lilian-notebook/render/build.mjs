@@ -35,11 +35,8 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
    .md file + a row here. The h1 inside the file supplies nothing but a sanity
    check; the label below is what the page shows. */
 const CATEGORIES = [
-  { file: 'agencies.md',  slug: 'agencies',  label: 'Agencies & filings' },
   { file: 'platforms.md', slug: 'platforms', label: 'Platforms & vendors' },
-  { file: 'costs.md',     slug: 'costs',     label: 'Costs, fees & penalties' },
-  { file: 'clients.md',   slug: 'clients',   label: 'Clients & communication' },
-  { file: 'craft.md',     slug: 'craft',     label: 'How we work' },
+  { file: 'costs.md',     slug: 'costs',     label: 'Costs, fees & scope' },
 ];
 
 /* --------------------------------------------------------------- md inline
@@ -62,6 +59,26 @@ function mdInline(s) {
 }
 // Same, minus the <b>/<i> wrappers — for text that already sits in a styled slot.
 const mdPlain = (s) => mdInline(s).replace(/<\/?b>/g, '').replace(/<\/?i>/g, '');
+
+/* One body block → a <p>, or a real list when the block is one. Procedure notes are the
+   reason this exists: "how you do X" is an ordered list, and rendering it as a paragraph
+   runs the steps together. `pClass` styles the paragraphs of the always-visible rule block. */
+function mdBlock(block, pClass) {
+  const lines = block.split('\n');
+  const marker = /^\s*(\d+[.)]|[-*•])\s+/;
+  if (!marker.test(lines[0])) {
+    return `<p${pClass ? ` class="${pClass}"` : ''}>${mdInline(block)}</p>`;
+  }
+  const ordered = /^\s*\d/.test(lines[0]);
+  const items = [];
+  for (const line of lines) {
+    if (marker.test(line)) items.push(line.replace(marker, ''));
+    else if (items.length) items[items.length - 1] += ' ' + line.trim();   // wrapped line
+  }
+  return `<${ordered ? 'ol' : 'ul'} class="nlist">`
+    + items.map((i) => `<li>${mdInline(i)}</li>`).join('')
+    + `</${ordered ? 'ol' : 'ul'}>`;
+}
 
 /* -------------------------------------------------------------------- parsing */
 function parseCategory(cat) {
@@ -89,14 +106,18 @@ function parseCategory(cat) {
       lines.shift();
     }
 
-    // Body: paragraphs, bucketed by their leading **label**.
+    // Body: paragraphs, bucketed by their leading **label**. The label may carry a suffix —
+    // "**The rule — the order, and why it's that order.**" — so a procedure note can say what
+    // kind of rule it is; only the keyword picks the bucket.
+    const LABEL = /^\*\*(What happened|The rule)\b[^*]*\*\*\s*/i;
     const paras = lines.join('\n').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
     const story = [], rule = [];
     let bucket = story;
     for (const p of paras) {
-      const lab = p.match(/^\*\*(What happened|The rule)\.?\*\*\s*/i);
+      const lab = p.match(LABEL);
       if (lab) bucket = /rule/i.test(lab[1]) ? rule : story;
-      bucket.push(p.replace(/^\*\*(What happened|The rule)\.?\*\*\s*/i, ''));
+      const text = p.replace(LABEL, '');
+      if (text) bucket.push(text);
     }
     if (!rule.length) throw new Error(`${cat.file} / ${id}: no "**The rule.**" paragraph`);
 
@@ -128,6 +149,17 @@ function loadNotes() {
     if (ids.has(n.id)) throw new Error(`Duplicate ${n.id} — in ${ids.get(n.id)} and ${c.file}`);
     ids.set(n.id, c.file);
   }
+  // A note that points at a retired note is worse than no pointer at all: the reader chases
+  // an ID that isn't there. Notes get pruned (Lilian curates hers hard), so check every
+  // cross-reference on every build.
+  for (const c of cats) for (const n of c.notes) {
+    const body = [...n.rule, ...n.story].join(' ');
+    for (const ref of new Set([...body.matchAll(/\bLN-\d+\b/g)].map((m) => m[0]))) {
+      if (ref !== n.id && !ids.has(ref)) {
+        throw new Error(`${c.file} / ${n.id} points at ${ref}, which no longer exists — rewrite the sentence or restore the note.`);
+      }
+    }
+  }
   return cats;
 }
 
@@ -158,11 +190,11 @@ function noteHtml(n) {
     ${n.star ? `<span class="nstar" title="Marked important">${STAR}</span>` : ''}
     <h3>${mdPlain(n.title)}</h3>
   </div>
-  <p class="nrule">${n.rule.map(mdInline).join('</p><p class="nrule">')}</p>
+  <div class="nrule">${n.rule.map((b) => mdBlock(b, 'nr')).join('\n  ')}</div>
   <details class="nmore">
     <summary>${CHEV}<span>What happened</span><span class="nfrom">${mdPlain(n.from)}</span></summary>
     <div class="nbody">
-      ${n.story.map((p) => `<p>${mdInline(p)}</p>`).join('\n      ')}
+      ${n.story.map((b) => mdBlock(b)).join('\n      ')}
       ${n.detail ? `<p class="nsrc"><b>Full record:</b> ${mdPlain(n.detail)}</p>` : ''}
     </div>
   </details>
@@ -225,9 +257,10 @@ export function buildNotebookBody(opts = {}) {
     ${MEDALLION}
     <p class="kick">Personal notebook · Lilian</p>
     <h1>Lilian's Notebook<span class="loc">Lessons worth not learning twice</span></h1>
-    <p class="lede">The things this firm learned the hard way — what an agency actually does, where a
-    platform lets you down, what a filing really costs — each one written as the rule to follow next
-    time. The paper notebook, except searchable, and it never falls out of date.</p>
+    <p class="lede">The hard knowledge, kept deliberately small: <b>how a system actually behaves</b>,
+    <b>what something costs</b>, <b>what's inside a fee</b>, and <b>how to carry out a procedure</b> —
+    each written as the rule to follow next time. The paper notebook, except searchable, and it never
+    falls out of date.</p>
     <div class="meta">
       <span class="chipm live"><span class="dot"></span>${all.length}&nbsp;<b>notes</b></span>
       <span class="chipm"><span class="dot"></span>${starred}&nbsp;<b>starred</b></span>
@@ -292,6 +325,11 @@ ${embedded ? '' : foot}`;
    Product register: fixed rem scale, one family, restrained color, familiar
    affordances, 150–200ms transitions that convey state. */
 export const NOTEBOOK_CSS = `
+/* Bold inside the masthead lede: something upstream resolves <b> to var(--ink), which in the
+   LIGHT theme is near-black teal on the always-dark masthead — invisible. Scoped fix here
+   rather than in the shared atlas.css, which every SOP render depends on. */
+.mast .lede b{color:#FFFFFF;font-weight:650}
+
 /* ---- sticky control bar ----
    top:56px is atlas.css's .bar height — anything less and the toolbar (z 100) paints
    over the search field. Keep the two in step if .bar ever changes height. */
@@ -348,8 +386,24 @@ main{max-width:var(--maxw);margin:0 auto;padding:26px var(--gutter) 60px}
 .nstar svg{width:13px;height:13px;fill:var(--accent);stroke:none}
 .nhead h3{font:600 1.06rem/1.4 var(--sans);color:var(--ink);margin:0;letter-spacing:-.008em;
   flex:1 1 320px;min-width:0;text-wrap:pretty}
-.nrule{font:400 .95rem/1.65 var(--sans);color:var(--body);margin:9px 0 0;max-width:70ch;text-wrap:pretty}
-.nrule b{font-weight:650;color:var(--ink)}
+.nrule{margin:9px 0 0}
+.nrule .nr,.nbody p{text-wrap:pretty}
+.nrule .nr{font:400 .95rem/1.65 var(--sans);color:var(--body);margin:0 0 8px;max-width:70ch}
+.nrule .nr:last-child{margin-bottom:0}
+.nrule b,.nrule .nlist b{font-weight:650;color:var(--ink)}
+/* Procedure steps — the ordered list a "how you do X" note is made of. Counters sit in the
+   left margin so the step text keeps one clean left edge. */
+.nlist{margin:8px 0 0;padding:0;list-style:none;counter-reset:nstep;max-width:70ch}
+.nlist li{position:relative;padding-left:30px;margin:0 0 9px;font:400 .93rem/1.6 var(--sans);color:var(--body)}
+.nlist li:last-child{margin-bottom:0}
+.nlist.nlist li{counter-increment:nstep}
+ol.nlist li::before{content:counter(nstep);position:absolute;left:0;top:1px;width:20px;height:20px;
+  display:grid;place-items:center;border-radius:50%;background:var(--pill-teal-bg);color:var(--pill-teal-ink);
+  font:600 .68rem/1 var(--mono)}
+ul.nlist li::before{content:"";position:absolute;left:9px;top:.62em;width:5px;height:5px;border-radius:50%;
+  background:var(--accent)}
+.nbody .nlist li{font-size:.9rem;color:var(--muted)}
+.nbody .nlist b{color:var(--body)}
 .nrule code,.nbody code{font:500 .84em/1 var(--mono);background:var(--note-bg);border:1px solid var(--note-bd);
   border-radius:4px;padding:2px 5px;color:var(--note-text)}
 .ref{font:500 .89em/1 var(--mono);color:var(--muted)}

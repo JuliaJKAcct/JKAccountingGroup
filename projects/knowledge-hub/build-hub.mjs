@@ -1031,7 +1031,7 @@ function notebookReaderInner(){
   return `<section class="mast"><div class="in">`
     + `<p class="kick">Personal notebook · Lilian</p>`
     + `<h1>Lilian's Notebook<span class="loc">Lessons worth not learning twice</span></h1>`
-    + `<p class="lede">The things the firm learned the hard way — what an agency actually does, where a platform lets you down, what a filing really costs — each written as <b>the rule to follow next time</b>, searchable. It replaces the paper notebook Lilian used to keep: the lesson survives after the task that taught it is closed and deleted. <b>Lilian's own record</b> — she's the one who writes in it — kept here so it's never lost. Search it, filter by category, or open the ★ starred ones.</p>`
+    + `<p class="lede">The hard knowledge, kept deliberately small — <b>how a system actually behaves</b>, <b>what something costs</b>, <b>what's inside a fee</b>, and <b>how to carry out a procedure</b> — each written as the rule to follow next time. It replaces the paper notebook Lilian used to keep: it survives after the task that produced it is closed and deleted. <b>Lilian's own record</b> — she's the one who writes in it — kept here so it's never lost. Search it, filter by category, or open the ★ starred ones.</p>`
     + `</div></section><div class="page">${toolIframe(NOTEBOOK_DOC, "Lilian's Notebook")}</div>`;
 }
 
@@ -1602,7 +1602,7 @@ const TEMPLATES = [
     tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
 
   { band: 'tool', kind: 'Notebook', name: "Lilian's Notebook — lessons learned", owner: 'lilian',
-    blurb: 'The lessons this firm learned the hard way, each written as the rule to follow next time — how an agency really behaves, where a platform lets you down, what a filing actually costs. Searchable, filterable by category, with the ★ starred ones marked. Lilian’s own record (she is the one who writes it); it lives here so a lesson outlives the task that taught it. Opens right here in the Hub, always rebuilt from its source.',
+    blurb: 'The hard knowledge, kept deliberately small — how a system actually behaves, what something costs, what’s inside a fee, and how to carry out a procedure — each written as the rule to follow next time. Searchable, with the ★ starred ones marked. Lilian’s own record (she is the one who writes it); it lives here so knowledge outlives the task that produced it. Opens right here in the Hub, always rebuilt from its source.',
     formats: ['In-Hub page'],
     tool: { id: 'lilian-notebook', label: 'Open the notebook' } },
 

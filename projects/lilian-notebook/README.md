@@ -45,11 +45,8 @@ lilian-notebook/
 ├── README.md              ← you are here
 ├── notes/                 ← THE SOURCE OF TRUTH — one .md per category
 │   ├── _entry-template.md    copy a block from here to add a note
-│   ├── agencies.md           agencies & filings (IRS, FL DOR, cities, Sunbiz)
-│   ├── platforms.md          platforms & vendors (Gusto, QuickBooks, Double, Odoo, Turo…)
-│   ├── costs.md              costs, fees & penalties
-│   ├── clients.md            clients & communication
-│   └── craft.md              how we work (the repo, the record, who owns a matter)
+│   ├── platforms.md          how the systems behave + the procedures for working in them
+│   └── costs.md              what things cost, how a job is priced, what's inside a fee
 ├── render/
 │   └── build.mjs          ← the generator: notes/*.md → one self-contained page
 ├── notebook.html          ← generated, gitignored — open this locally
@@ -61,6 +58,18 @@ tags, a **certainty** label (`Established` · `Firm rule` · `Working assumption
 Lilian marked it important, where it came from, and a pointer to the **full record** — which
 stays in the client file, the skill, or the Double note. The notebook is the index of lessons,
 not a second copy of the case history.
+
+### What gets in — the filter (this is the important part)
+
+**It is deliberately small.** It shipped with 33 notes and Lilian cut it to four, plus one she
+asked for. She keeps a note when it answers one of four questions: **how does this system
+actually behave** · **what does this cost** · **what's inside the fee / how do we price this** ·
+**how do I carry out this procedure**. Everything else — process hygiene ("get it in writing"),
+how to communicate, our own repo machinery, argumentation about a live matter — she called
+*"totalmente innecesarias"* and it belongs elsewhere. The full filter, with what she kept and
+what she threw out, is **§0 of the [`lilian-notebook` skill](../../.claude/skills/lilian-notebook/)**
+— read it before adding anything. It's still being tuned, so a borderline note gets **offered**,
+not filed.
 
 ## Brand & design
 

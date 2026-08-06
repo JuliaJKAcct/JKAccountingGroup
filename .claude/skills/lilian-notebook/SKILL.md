@@ -21,17 +21,53 @@ it isn't secret; it just isn't addressed to anyone else. Don't file firm-wide pr
 
 ---
 
+## 0. What Lilian actually wants in it — the filter (learned the hard way, Aug 2026)
+
+**This is the section to get right.** The notebook shipped with 33 notes; Lilian cut it to
+**four** and named the fifth she wanted written. Her words: *"El resto de las cosas son cosas
+totalmente innecesarias que no tienen nada que ver con lo que quiero hacer."* So the default is
+**not** "capture every lesson" — it is **capture hard, reusable knowledge and nothing else.**
+
+**She keeps a note when it answers one of these four questions:**
+
+| | Example she kept |
+|---|---|
+| **How does this system actually behave?** | Gusto files nothing, not even $0 returns, until the first check date (LN-10) |
+| **What does this cost?** | Florida late RT reports: $25/month per report, plus interest on the penalty (LN-21) |
+| **What's inside the fee, and how do we price this?** | Tax prep excludes preparing the financials (LN-23) · cap the hours, take an advance (LN-22) |
+| **How do I carry out this procedure?** | Moving the QuickBooks primary admin when the code goes to a phone nobody can reach (LN-34) |
+
+**She threw out everything in these families** — do not file them here, however true they are:
+
+- **Process hygiene and professional judgement** — *take the representative's name, get it in
+  writing, verify an email address, don't rely on a verbal answer.* She knows.
+- **How to communicate** — drafting, shortening, what to say to a client or a vendor.
+- **Our own machinery** — the repo, git, parallel sessions, how the record is kept.
+- **Argumentation and nuance about a live matter** — how to frame a letter, what a presumption
+  is. That belongs in the client file, where the matter lives.
+- **A single matter's running state.** A lesson is durable and applies to the *next* client; the
+  current one's status is `FOLLOW-UPS.md` and the client file.
+
+**A procedure note is welcome even when the procedure hasn't finished** — she asked for LN-34
+explicitly while the handover was still open, *"para la próxima vez recordar cómo se hace"*.
+Write what's established, mark it `Working assumption`, and say where it's paused.
+
+**This filter is provisional and she said so** — *"tenemos que ir perfeccionándolo y que vayas
+entendiendo lo que quiero."* So when a note is borderline, **offer it and let her decide** rather
+than filing it or dropping it silently, and **update this section whenever she keeps or rejects
+something that sharpens the line.**
+
 ## 1. Rule zero — propose the note; don't wait to be asked
 
 **Whenever a session turns up something that would cost the firm again, offer to write it
 down.** Lilian's whole reason for asking for this: she will not remember to ask.
 
-The tell is any of these:
-- The firm was **surprised** by how an agency, a platform, or a vendor behaves.
-- Something **cost money or weeks** that a written rule would have prevented.
-- A **conclusion turned out to be wrong** ("raw GitHub URLs never work" — they do).
-- A method proved itself and would work again (*how* to verify a vendor's claim, not just what
-  the claim was).
+The tell — always checked against §0's filter first — is any of these:
+- The firm was **surprised by how a system actually behaves** (a platform, an agency's rule).
+- A **real number** surfaced: a rate, a fee, a penalty, a cap, a processing time.
+- A **procedure was worked out** that nobody had written down — especially one that took a
+  support call to discover.
+- A question about **what's inside a fee** got settled.
 - Lilian says *"esto hay que recordarlo"*, *"apunta esto"*, or explains something she's
   clearly explained before.
 
@@ -50,7 +86,7 @@ Copy a block from
 the right category file. The structure is not cosmetic — `render/build.mjs` parses it.
 
 ```
-## LN-33 — The lesson, as the rule, in one line
+## LN-35 — The lesson, as the rule, in one line
 - **Tags:** two to four · lowercase · dot-separated
 - **Certainty:** Established | Firm rule | Working assumption
 - **Star:** yes | no
@@ -62,6 +98,12 @@ the right category file. The structure is not cosmetic — `render/build.mjs` pa
 
 **The rule.** …
 ```
+
+**Lists are supported, and a procedure note should use one.** A block whose first line starts
+`1.` / `2.` renders as numbered steps (teal counters in the margin); `-` renders as bullets. The
+label may also carry a suffix — `**The rule — the order, and why it's that order.**` — so a
+procedure note can say what kind of rule it is; only the keyword `The rule` / `What happened`
+picks the bucket, and the whole label is stripped from the rendered text.
 
 Hard rules:
 
@@ -92,15 +134,15 @@ Hard rules:
 
 | File | Holds |
 |---|---|
-`agencies.md` | IRS, state and city agencies — how they behave, what they gate on, what to get in writing |
-`platforms.md` | Gusto, QuickBooks, Double, Odoo, Turo, Gmail — vendor and tooling traps |
-`costs.md` | What things actually cost, and where the firm's money leaks |
-`clients.md` | Writing to them, what only they can do, what needs their consent first |
-`craft.md` | The firm's own machinery — the repo, the record, who owns a matter |
+| `platforms.md` | How the systems behave — Gusto, QuickBooks, Double, Odoo — and the procedures for working in them |
+| `costs.md` | What things cost, how a job is priced, what is and isn't inside a fee |
 
-A new category is **a new `notes/*.md` + a row in `CATEGORIES`** in `render/build.mjs` — the
-build fails loudly on a notes file with no row. Don't add one for a single note; five broad
-categories she can hold in her head beat twelve precise ones she has to guess between.
+**Two, on purpose.** It started with five; the three that held process, communication and
+repo lessons were deleted with their notes when Lilian cut the notebook to what she actually
+wanted (§0). A new category is **a new `notes/*.md` + a row in `CATEGORIES`** in
+`render/build.mjs` (the build fails loudly on a notes file with no row) — but **don't create one
+speculatively.** Add it when a real note has nowhere to go, and expect `agencies.md` to come back
+the first time a note is purely about an agency's own rules rather than the cost of them.
 
 ## 4. What belongs here vs. somewhere else
 
@@ -127,17 +169,28 @@ account numbers, logins and personal contact details stay in Double / Drive / Qu
 Amounts that *are* the lesson — a published penalty rate, a fee cap — are fine. **English**,
 like every repo artifact, whatever language the session ran in.
 
-## 5. Editing an existing note
+## 5. Editing, and pruning
 
-Prefer this to adding a new one. Two lessons about the same trap, in different words, is how a
-notebook stops being worth opening.
+Prefer editing to adding. Two lessons about the same trap, in different words, is how a notebook
+stops being worth opening.
 
 - **Rewrite in place**, keep the ID, and set `- **Updated:** YYYY-MM-DD` (the page shows
   "added · updated").
 - **A superseded note gets corrected, not left standing** — someone will read it and act on
   it. If its certainty drops, say why in the body.
-- If two notes have converged, **merge into the lower ID** and delete the other; mention the
-  retired ID in the survivor so an old link isn't a mystery.
+- If two notes have converged, **merge into the lower ID** and delete the other.
+
+**Pruning is normal and it is Lilian's call.** She curates this hard (§0) — she removed 29 of the
+first 33 notes in one pass. When she says a note is unnecessary, **delete it**; git history keeps
+it, so nothing is lost and it can be restored by name. Never delete one on your own initiative,
+and never quietly re-add one she removed.
+
+- **IDs are never reused, even after a deletion.** `LN-33` was written and then cut; the next
+  note was `LN-34`. Take the next number above the highest that has *ever* existed — check
+  `git log -p projects/lilian-notebook/notes/` if you're unsure, not just the current files.
+- **The build catches the fallout of a deletion:** it fails if any surviving note points at an
+  `LN-##` that no longer exists. Fix the sentence — usually by folding the useful half of the
+  retired note into the survivor — rather than restoring a note Lilian dropped.
 
 ## 6. Build, verify, publish
 
@@ -149,9 +202,9 @@ node projects/knowledge-hub/build-hub.mjs           # the Hub embeds the same pa
 Then, before publishing — the same gate as the Hub, because one thrown parse error ships a
 blank page:
 
-1. The build printed the note count and it **matches what you expect** (it fails loudly on a
-   duplicate ID, a missing rule paragraph, or an unregistered category file — read the error,
-   don't work around it).
+1. The build printed the note count and it **matches what you expect.** It fails loudly on a
+   duplicate ID, a missing `**The rule.**` paragraph, an unregistered category file, and a
+   cross-reference to an `LN-##` that no longer exists — read the error, don't work around it.
 2. Open `notebook.html` in a browser and **click something**: type in the search box, hit a
    category chip, expand a note, follow a `#LN-##` link. Content must be visible **with JS
    off** too — the page renders every note by default and JS only filters.
@@ -167,8 +220,9 @@ notebook is worse than the paper one.
 
 ## 7. Update this skill when…
 
-- Lilian establishes a new preference about how her notebook reads, what a note must carry, or
-  what belongs in it.
+- **Lilian keeps or rejects a note in a way that sharpens the §0 filter** — that section is the
+  whole value of this skill, and she said explicitly it's still being tuned.
+- Lilian establishes a new preference about how her notebook reads or what a note must carry.
 - A category is added, renamed, or retired (update §3 **and** `CATEGORIES` in the build).
 - The entry format changes in `render/build.mjs` (§2 must match the parser, or the build breaks).
 - The publish flow changes (a new link, a new capability flag).

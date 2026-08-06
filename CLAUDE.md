@@ -94,7 +94,7 @@ the US.
 | A **booking** page, or the firm's booking calendars — the free 10-minute phone **discovery call** vs. the paid 1-hour **$150 consultation**, each with its own availability (Odoo Appointments; EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | A **lead magnet** — a free calculator or assessment/quiz for the top of the funnel (S-corp savings, surprise tax bill, license check, foreign-account check…), or the on-brand HTML tool that powers one | [`projects/marketing/lead-magnets/`](./projects/marketing/lead-magnets/) |
-| A **lesson learned the hard way** — "what did we learn from the Tsminibears penalties?", "what does an agency/platform actually do?", *"anota esto en mi libreta"* — or looking one up | the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) → [`projects/lilian-notebook/`](./projects/lilian-notebook/) — **Lilian's** personal notebook, one note per lesson written as the rule for next time, rendered as one searchable page she has bookmarked (and a card in the Hub). A lesson is **not** a task: tasks live in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and get deleted when they close, which is exactly why the lesson has to live here |
+| **Hard knowledge worth keeping** — "how does Gusto/QuickBooks actually behave?", "what does that penalty cost?", "how do we do this procedure again?", *"anota esto en mi libreta"* — or looking one up | the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) → [`projects/lilian-notebook/`](./projects/lilian-notebook/) — **Lilian's** personal notebook, one note per lesson written as the rule for next time, on one searchable page she has bookmarked (and a card in the Hub). **Deliberately small** — read the skill's **§0 filter** first; she cut the first 33 notes to four, and does not want process hygiene, communication advice, or repo lessons in it. A lesson is also **not** a task: tasks live in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and get deleted when they close |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian" **or writes in Spanish**; an unidentified non-Spanish session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
@@ -140,19 +140,21 @@ in that folder.
   **part of finishing it**, run via the [`knowledge-hub` skill](./.claude/skills/knowledge-hub/) —
   not a separate ask. The only exception is when Lilian explicitly says a given thing is
   too small to warrant a Hub entry.
-- **A lesson learned the hard way gets captured — offer it, don't wait to be asked.** When a
-  session turns up something that would cost the firm again — an agency behaving differently than
-  expected, a platform that doesn't do what everyone assumed, a conclusion that turned out to be
-  wrong, money or weeks lost to something a written rule would have prevented — **propose a note
-  in [`projects/lilian-notebook/`](./projects/lilian-notebook/) in one line**, with the title
-  you'd give it, and let Lilian say yes or no. She asked for this precisely because *she* won't
-  remember to ask (Lilian, Aug 2026). Never file one silently, and if a note already covers the
-  topic, say so and **enrich that note** rather than adding a second. The mechanics — the entry
-  structure, what belongs there vs. in a skill/SOP/client file, build + publish — are in the
-  [`lilian-notebook` skill](./.claude/skills/lilian-notebook/). **The distinction that matters:**
-  a **task** goes in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and is **deleted when it resolves**, so
-  when a matter closes, ask what it taught before the row disappears — that's the leak the
-  notebook exists to plug.
+- **Hard knowledge worth keeping gets captured — offer it, don't wait to be asked.** When a
+  session turns up **how a system actually behaves**, **what something costs**, **what's inside a
+  fee**, or **how to carry out a procedure nobody had written down**, **propose a note in
+  [`projects/lilian-notebook/`](./projects/lilian-notebook/) in one line**, with the title you'd
+  give it, and let Lilian say yes or no. She asked for this precisely because *she* won't remember
+  to ask (Lilian, Aug 2026). Never file one silently, and if a note already covers the topic, say
+  so and **enrich that note** rather than adding a second.
+  ⚠️ **The notebook is deliberately small — it is not a lesson dump.** Lilian cut its first 33
+  notes to four: she does **not** want process hygiene ("get it in writing"), advice on how to
+  communicate, lessons about our own repo machinery, or argumentation about a live matter. **Read
+  §0 of the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) before proposing one** —
+  it holds the filter, with what she kept and what she threw out — and when a note is borderline,
+  offer it rather than file it. **The other distinction that matters:** a **task** goes in
+  [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and is **deleted when it resolves**, so when a matter closes,
+  ask whether it left any durable knowledge before the row disappears.
 - **Know the skills we already have — check first, enrich instead of duplicate.**
   The canonical catalog of every skill is [`.claude/skills/README.md`](./.claude/skills/README.md)
   (the skills index). **Nobody remembers all of them**, so it's your job to: (a) answer
