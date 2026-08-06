@@ -533,11 +533,13 @@ no Odoo connector at all. **There is one now** — the account-level
 Odoo directly, `crm.lead` and `crm.stage` included. The constraint moved: that connector
 is capped at **50 tool calls per 24 hours, shared across the firm's one account**, which is
 nowhere near enough to build and iterate a CRM pipeline. **Decided Aug 2026: the firm wants
-to go direct through Odoo's own API** (Andres approved) — but that is **gated on the Odoo
-pricing plan**, since external API access needs a *Custom* plan and the firm is on
-*Standard*. See the **Odoo direct-API connection** row in
+to go direct through Odoo's own API** (Andres approved), pending a short test of whether the
+*Standard* plan permits it — Odoo documents the external API as a *Custom* feature, but the
+existing connector already makes external calls. See the **Odoo direct-API connection** row in
 [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) (Lilian, with Andres); it should be settled before this
-idea starts, not during it. Still true: getting the website to create leads
+idea starts, not during it. Note the Odoo **Custom** plan would also unlock **Studio**, which
+is the only way to add custom fields and pipeline stages on Odoo Online — very likely needed
+for this idea. Still true: getting the website to create leads
 by itself is its own piece of work (Odoo supports web-form / "Contact Us" → CRM lead
 natively). Anyone touching Odoo follows the [`odoo-mcp`](./.claude/skills/odoo-mcp/) skill.
 

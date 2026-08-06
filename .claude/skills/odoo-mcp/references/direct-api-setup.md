@@ -3,43 +3,150 @@
 The plan for replacing (or bypassing) the 50-call/day MCP connector with a direct
 connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 
-> **Status: approved in principle, BLOCKED on a pricing question, not yet built.** Lilian
-> raised it with **Andres** — who built the firm's Odoo website and set up the MCP connector
-> — and he confirmed **there is no problem connecting through the API** (Aug 2026). But see
-> **[§0, the gate](#0--gate-the-plan-question-that-decides-everything)**: Odoo only allows
-> external API access on *Custom* plans, and this repo records the firm as being on
-> *Standard*. **Settle that before creating anything.** Nothing exists yet: no user, no key,
-> no tool.
+> **Status: approved, awaiting one 5-minute test, not yet built.** Lilian raised it with
+> **Andres** — who built the firm's Odoo website and set up the MCP connector — and he
+> confirmed **there is no problem connecting through the API** (Aug 2026). Odoo's
+> documentation says otherwise for the firm's plan; **§0 explains why both can be true and how
+> to settle it in five minutes.** Nothing exists yet: no user, no key, no tool.
 
 ---
 
-## 0 · GATE — the plan question that decides everything
+## 0 · The plan question — documented policy vs. observed behaviour
 
-Odoo's own 19.0 documentation, verbatim (`developer/reference/external_api`):
+### What the documentation says
+
+Odoo's documentation, verbatim (`developer/reference/external_api`):
 
 > *"Access to data via the external API is only available on **Custom** Odoo pricing plans.
 > Access to the external API is **not available on One App Free or Standard** plans."*
 
-**And [`projects/marketing/consultation-booking/README.md`](../../../../projects/marketing/consultation-booking/README.md)
-records the firm as running "Odoo (Standard plan)".** If that is still accurate, the direct
-API is **closed** until the subscription moves to Custom — and Custom is priced **per user,
-for every user**, so it is not a small increment.
+**The firm is on Standard** — confirmed 2026-08-06 from the subscription page: *"Standard
+Plan · 1 Users"*. Read literally, the direct API is closed.
 
-**This inverts the economics that motivated the whole idea.** Paying for a higher plan on the
-MCP connector may well be cheaper than moving the firm's entire Odoo subscription to Custom.
-**That comparison is Lilian's decision, and she cannot make it without the two numbers.**
+### What is actually observed
 
-**FIRST ACTION, before anything else in this file:**
+Three facts pull the other way, and they are not weak:
 
-1. Confirm the firm's **actual current Odoo plan** — `odoo.com` → the subscription, or Andres.
-2. If it is **Standard**: get the **cost of moving to Custom** (per user × number of users),
-   and the **cost of the paid tier on the MCP connector** (`pan_usage` reports the current
-   plan; the provider is `mcp.pantalytics.com`). Compare, then decide.
-3. If it is already **Custom**: proceed to §3.
+1. **Andres says it works.** He set up the integration and reports the plan does include API
+   access. He offered to demonstrate it.
+2. **The Pantalytics MCP connector reads and writes this database from outside, today.**
+   `pan_usage` on 2026-08-06 returned workspace `Gmail`, plan `Free`, **50 of 50 calls used
+   that day**. If that connector speaks to Odoo over the external API — the normal mechanism
+   for such tools — then external API access demonstrably works on a Standard plan.
+3. **The notice is long-standing policy, not a new gate.** It appears **byte-identical** in the
+   Odoo 16, 17, 18 and 19 documentation, and closes with *"visit the pricing page or reach out
+   to your Customer Success Manager"* — the register of a commercial condition rather than an
+   enforced error path.
+   **But do not over-read this.** Age says "not new"; it does not say "not enforced". And there
+   is real counter-evidence: in 16–18 the notice sat on the XML-RPC page, while in **19 Odoo
+   carried it onto a brand-new page** (*External JSON-2 API*, `versionadded:: 19.0`). It is
+   being **actively maintained**, not left behind as boilerplate. The weight here rests on
+   facts 1 and 2; fact 3 is supporting, not decisive.
 
-Do not create a user or a key before this is answered. Creating the user first — as an earlier
-version of this guide implied — risks paying for an extra internal seat and only discovering
-at the connection test that the route was closed all along.
+The most probable reading: **Odoo states this as a licensing term but does not block it at the
+server.** "You are not entitled to use it" and "you cannot use it" are different claims; an
+earlier version of this file reported the first as if it were the second. That was a
+misjudgement — the working connector was evidence in plain sight and was under-weighted. Keep
+the distinction alive in both directions, though: what follows can settle the *technical*
+question and cannot settle the *contractual* one.
+
+### How to settle it
+
+**Step A — the free check, no credential at all. Do this one first.**
+
+Logged into Odoo in a browser, open **`https://jkaccountinggroup.odoo.com/doc`**. Odoo 19
+serves there the list of models, fields and methods available over the external API **for this
+database**. A rendered listing is strong evidence the API is open; a refusal is strong evidence
+the other way. It mints nothing and revokes nothing.
+
+**Step B — the throwaway-key test, if Step A is inconclusive.**
+
+1. On an **existing** user (no new user, no extra seat): **avatar → My Preferences → Account
+   Security → New API Key**. Description `TEST`, **shortest duration offered**.
+
+   > ⚠️ **This is an administrator key.** The firm has exactly one Odoo user, and that user is
+   > the administrator — so this key carries full admin power over the live database until it
+   > is revoked, and the shortest duration Odoo offers is still measured in days. **Do step 3
+   > in the same sitting; if anything interrupts, revoke first.**
+   >
+   > **If the *New API Key* option is not there at all**, that is itself a result: the plan is
+   > gating key creation. Stop and record it.
+
+2. One read, nothing else — the modern endpoint needs only the key:
+   ```bash
+   curl -sS -w '\n%{http_code}\n' -X POST \
+     "https://jkaccountinggroup.odoo.com/json/2/res.company/search_read" \
+     -H "Authorization: bearer $ODOO_API_KEY" -H "Content-Type: application/json" \
+     --data '{"fields": ["name"], "limit": 1}'
+   ```
+   **Who runs this matters.** §3 Step 3's rule holds here too — *never paste a key into chat*,
+   and this one is an admin key. Either **Lilian runs the curl herself** and reports back only
+   the HTTP status and the error `name` field, or the key goes into the session environment as
+   `ODOO_API_KEY` first and Claude runs it. Export it rather than typing it inline, so it does
+   not land in `~/.bash_history`. An unset `$ODOO_API_KEY` sends an empty bearer and produces a
+   401 that looks like a real answer — check it is set.
+
+3. **Control test — the step that makes the result mean something.** Repeat the identical call
+   with **one character of the key changed**. (The firm used exactly this technique on the
+   Double note-size issue, row 19: the control is what proved it was size and not content.)
+
+4. **Revoke the key** on the same screen.
+
+**Reading the result** — the failure modes are distinguishable, so distinguish them:
+
+| Outcome | What it means |
+|---|---|
+| **200 with the company name** | The API is **not blocked at the server today**. That answers the technical question, **not the contractual one** — the notice still says Standard is not entitled to it, and Odoo Online **auto-upgrades**, so this can change without the firm doing anything. Enough to proceed without spending; **not a licence**. Confirm with Andres or the Customer Success Manager before building anything the firm depends on |
+| **401, `"name": "werkzeug.exceptions.Unauthorized"` / `"Invalid apikey"`** — *and the control fails identically* | Credential-shaped, not plan-shaped. Re-check the key and the host before concluding anything |
+| **`odoo.exceptions.AccessError`** | A permissions problem on that model, not the plan |
+| **A distinct plan/subscription error**, or no *New API Key* option at all | Custom really is required; go to the numbers below |
+
+**And the free shortcut that beats both steps** — ask Andres: *"when you configured Pantalytics,
+did you give it an API key, or a username and password?"* **An API key** means the external API
+is working on this plan. **A username and password** means the connector logs in as a web
+session, which proves nothing about the API — and that is exactly the assumption fact 2 above
+rests on.
+
+### If Custom does turn out to be required — the numbers
+
+All confirmed 2026-08-06 from the two vendors' own screens:
+
+| | Price | What it gives |
+|---|---|---|
+| **Odoo Standard** (current) | **$31.10** /user/month · 1 user | All apps. No API *per Odoo's stated terms — see above*, no Studio, no multi-company |
+| **Odoo Custom** | **$61.00** /user/month | All apps **+ Studio + API / Multi-Company** |
+| **Pantalytics Free** (current) | €0 | 50 calls/day |
+| **Pantalytics Pro** | **€25** /user/month | 500 calls/day · 30-day free trial |
+| **Pantalytics Max** | €100 /user/month | 10,000 calls/day |
+
+With **one** Odoo user the comparison is unusually close:
+
+- **Pantalytics Pro:** $31.10 + ≈€25 → **≈$59/month**, 500 calls/day, middleman stays, no Studio.
+- **Odoo Custom:** **$61.00/month**, unlimited API, no middleman, **plus Studio and
+  multi-company**.
+
+*(The ≈$59 uses ≈1.12 USD/EUR as of 2026-08-06. The conclusion holds across a wide range — at
+parity it is $56, at 1.20 it is $61 and the two options tie — but re-check the rate before
+committing to either.)*
+
+Near-identical money, and **Custom buys more where it matters most**: unlimited API, Studio,
+multi-company. **The best combination is Odoo Custom with Pantalytics left on Free** — still
+$61/month total, and it keeps the connector for the one thing the direct API cannot do (Claude
+on a phone or in a browser, where no code can run). **The one thing that combination gives up**
+is connector headroom on exactly that surface: 50 calls/day instead of Pro's 500.
+
+**Read the two "per user" prices carefully — they count different things.** Odoo's is an **Odoo
+seat**; Pantalytics' is a **connector seat**, and the firm shares one Claude account, so they
+almost certainly do not grow together. Adding an Odoo seat costs **+$31.10** on Standard or
+**+$61.00** on Custom; adding connector seats is a separate question. Do not assume one implies
+the other. Pantalytics also bills in **euros**, so its dollar cost moves with the exchange rate.
+
+**Tactical note:** Pantalytics Pro carries a **30-day free trial** that would unblock the queued
+website backlog at zero cost while the plan question is settled. **But settle the workspace
+ownership first:** the workspace is named `Gmail`, suggesting it was created from a Google
+sign-in that may be **Andres's rather than the firm's**. Starting a trial that may auto-renew,
+on an account the firm does not own or control, puts both the firm's billing and its access on
+someone else's login. Check who owns it, and whether the trial requires a card.
 
 ## 1 · Why we want it
 
@@ -98,10 +205,14 @@ A wrong name simply makes the login fail. It breaks nothing.
 Never put the key on Julia's user: an API key carries **exactly the power of its user**, and a
 dedicated user can be revoked without touching anyone's account.
 
-> ⚠️ **An extra internal user usually costs money** on Odoo Enterprise per-user pricing.
-> Verify in `odoo.com` → the subscription, or with Andres, **before** creating it. If it does
-> cost: either accept it (cleanest), or put the key on an existing non-Julia user. Lilian's
-> call — surface it, do not decide for her.
+> ⚠️ **An extra internal user costs a full seat** — $31.10/month on Standard, $61.00 on
+> Custom, confirmed 2026-08-06. The firm currently has **one** user, so a dedicated
+> integration user **doubles the Odoo bill**. That is the real price of isolating the key.
+>
+> The alternative is to put the key on the existing user and accept that it carries that
+> user's full power — compensating with the [`write-safety.md`](./write-safety.md) layers and
+> a short key duration. **Lilian's call: surface both numbers, do not decide for her.**
+> (With one user, that user is the administrator, so this is not a small trade-off.)
 
 **Read Step 4 before choosing the access rights** — the connection test needs to be one this
 user can actually perform.
