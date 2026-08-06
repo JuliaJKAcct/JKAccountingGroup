@@ -46,7 +46,7 @@ the actual details.
 |---|---|
 | **Sole owner of GOSSIP MIAMI — the wife** | Double client (link below). The company is hers alone _(Lilian, 2026-08-06)_. She is a portal contact on the **joint individual account**, not on the company record |
 | **Owner of MARAT BOXING — the husband** | Double client. The other joint filer; his company reports on a **Schedule C** of the joint return (§4), and he also receives **K-1s from outside partnerships** |
-| Company-side correspondent | **One address carries everything** — all email to the firm, in Russian, and every document. Double attributes it to the husband; the Gmail display name reads as the wife's initials. **Unresolved — see the note above** |
+| Company-side correspondent | **One shared address carries everything** — all email to the firm, in Russian, and every document. Double attributes it to the husband, the Gmail display name to the wife. **Treat it as the couple's channel, not one person's — see the note above** |
 | Gossip Miami's owners as filed | **Unresolved** — in the 2024-return correspondence the client raised a question about which names do and don't appear on the return. Re-check against the filed return; see §6 |
 
 > **Who owns what — settled 2026-08-06, and it explains the single contact.** **The sole owner of
@@ -56,10 +56,13 @@ the actual details.
 > return. So the two roles below are two different people; what is *not* two people is the
 > company-side correspondence, which all runs through one address.
 >
-> ⚠️ **Still open: whose address that company-side contact actually is.** Double labels it with the
-> **husband's** name, while its Gmail display name reads as the **wife's** initials — and the owner is
-> the wife. **Settle it before addressing anyone by name or asking an owner to sign**; it also decides
-> who we chase for the outstanding documents _(noticed 2026-08-06)_.
+> **The one address is the couple's shared channel — don't try to attribute it.** Double labels the
+> company-side contact with the **husband's** name, its Gmail display name reads as the **wife's**
+> initials, and Lilian's read is that it is probably **hers** — but **the couple appear to use the same
+> email addresses to write to us, so no individual message can be reliably attributed to one of them**
+> _(Lilian, 2026-08-06)_. **This is not a question to chase.** The practical consequence: when a
+> signature or an owner-specific answer is needed, **ask in the message who is answering**, and keep in
+> mind the company is the wife's.
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577) _(Double, 2026-08-06)_
 - **Double / TaxDome:** the family carries **separate accounts** — one for the individuals and one for **Gossip Miami LLC** — activated by the client 2026-03-03 _(Gmail)_.
@@ -146,6 +149,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-05 — **Consolidated "everything we need for the 2025 return" email sent**, three hours after that delivery _(Gmail, in Russian, Julia copied)_ — it **restates** the 2026-08-04 asks and **narrows** the credit-card range to **January 2026 alone**, the 2025 months having just arrived. Still asked for: reconnect both bank accounts via "Fix now" (with a screenshot of the button), the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, and the **photos of every check the company wrote + the cash-deposit slips**.
 - 2026-08-06 — **Status per Lilian:** the piece she is actively waiting on is the client **going to the bank for the images of the checks DEPOSITED INTO the company and of the checks the company ISSUED**. **He said he would try to resolve it.** Nothing received yet. _(Lilian)_
 - 2026-08-06 — **Double case note opened for the 2025 tax preparation** — "CASE · 2025 tax preparation" (note **485291**), so Julia or anyone else can open the client and see the status in seconds. It is the team-facing mirror of this file and gets **updated in place**, never duplicated. Per Lilian the note carries the full detail — contact names, email addresses, client IDs — because Double is the system of record for client data; **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_.
+- 2026-08-06 — **The address question is closed as not-answerable (Lilian):** she believes the company-side address is the **wife's**, but **the couple appear to use the same email addresses** to write to the firm, so individual messages can't be attributed. Recorded so nobody spends time on it — when a signature or an owner-specific answer is needed, **ask in the message who is answering**. The Double note carries the same guidance; nothing else there was restructured, at her instruction.
 - 2026-08-06 — **Ownership settled (Lilian):** the **wife is the sole owner of Gossip Miami**, the **husband owns Marat Boxing**. That explains why only one portal contact sits on the company record and resolves the "are these two roles one person" question — they are two people, but one address carries all the company-side correspondence. **What remains open is whose address that is** (§2).
   - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation.
 
@@ -161,7 +165,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 ### Information still needed
 
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
-- [ ] **Whose email address the single company-side contact actually is** — Double attributes it to the husband, its Gmail display name reads as the wife's initials, and the wife is the sole owner (§2). Decides who we address and who signs
+- [x] ~~Whose email address the single company-side contact is~~ — **closed as not-answerable, 2026-08-06:** the couple appear to share addresses, so it can't be attributed per message. Ask in the message when it matters (§2)
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
 - [ ] Where the client's Google Drive folder is (§7)

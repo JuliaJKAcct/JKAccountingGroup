@@ -496,6 +496,8 @@ Practical rules:
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
 
+**A drafted support request is ready to send:** [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) — the whole situation, the measurements, the three questions to ask, and the reminder to test a long note in the **web UI** first. Update the skill when Double answers, and supersede that file.
+
 **What this is, precisely — say it this way to Double support.** The `403` comes back as *"MCP server
 returned 403 Forbidden — the request may have been blocked by a firewall or security service"*, i.e.
 the endpoint refused the POST. That reads like a **WAF / request-size rule in front of the API**, not
@@ -585,6 +587,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
+- **Double answers the note-size request** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — if the limit is raised, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
