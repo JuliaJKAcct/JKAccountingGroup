@@ -33,10 +33,11 @@ referral-offer-strategy/
     ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
     │                           Series sessions (themes, take-homes, series close)
     ├── talk-track.md          plain-language script + Readiness Check timing
-    └── worksheets/            fillable RU session take-homes (interactive + print)
+    └── worksheets/            fillable worksheets (interactive + print)
         ├── readiness-check-ru.html     self-scored readiness quiz (webinar gift)
-        ├── margin-calculator-ru.html   session 2 — true-margin calculator
-        └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
+        ├── readiness-check-en.html     English version of the readiness quiz
+        ├── margin-calculator-ru.html   true-margin calculator (standalone, kept for later)
+        └── keep-more-checklist-ru.html tax-efficiency checklist (standalone, kept for later)
 ├── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
     ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
     │                        moments, 4 belief shifts, self-calc — co-host inserts
