@@ -40,6 +40,11 @@ the US.
 │   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients + downloadable templates, generated from the repo (Active)
 │   └── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
 ├── .claude/
+│   ├── settings.json  registers the hooks below
+│   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md
+│   │   ├── session-start.sh            on session start: what just landed on main + which
+│   │   │                               unmerged branches other sessions have in flight
+│   │   └── pre-commit-drift-check.sh   on `git commit`: warns if main moved under you
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── README.md                  the SKILLS INDEX — the canonical list of every skill ("do we already have one for this?")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
@@ -232,6 +237,10 @@ in that folder.
   demand ("audit the repo") — so a working session only needs to keep the indexes
   right for what it touched, not re-audit the whole repo every time.
 - **The drift check — run it right before you commit, not when you branch.**
+  _(Two hooks now do most of this for you — [`.claude/hooks/`](./.claude/hooks/). One briefs you at
+  session start on what landed on `main` and which unmerged branches are active; the other fires on
+  `git commit` and warns when `main` moved under you. They **warn, never block**, and they are a
+  safety net, not a substitute — the judgement below is still yours.)_
   Starting from the latest `origin/main` is **not enough**: a long session can watch
   `main` move several PRs while it works, and the stale copy in your head is the one
   you edit. So immediately before committing:
