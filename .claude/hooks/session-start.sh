@@ -32,6 +32,12 @@ $TO git -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=20 \
 echo "═══ Parallel-work check — other sessions may be editing the same files ═══"
 [ "$fetch_ok" -eq 0 ] && echo "(Could not reach origin — this is from the LAST fetch and may be stale.)"
 
+if ! git rev-parse --verify --quiet origin/main >/dev/null 2>&1; then
+  echo "(No origin/main here yet — nothing to compare against.)"
+  echo "═════════════════════════════════════════════════════════════════════════"
+  exit 0
+fi
+
 echo ""
 echo "Just landed on main:"
 git log -6 --format='  %h  %cr — %s' origin/main 2>/dev/null | cut -c1-120

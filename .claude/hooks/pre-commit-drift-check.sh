@@ -49,13 +49,8 @@ fi
 behind=$(git log --oneline HEAD..origin/main 2>/dev/null | head -10)
 [ -z "$behind" ] && exit 0
 
-# Don't repeat the identical warning on every commit in a row. Re-warn only when
-# origin/main has moved again since the last time we spoke up.
 warned="$gitdir/.jk-drift-warned"
 head_main=$(git rev-parse origin/main 2>/dev/null || echo "")
-if [ -n "$head_main" ] && [ -f "$warned" ] && [ "$(cat "$warned" 2>/dev/null)" = "$head_main" ]; then
-  exit 0
-fi
 
 # Which of the files I am about to commit also moved on main since we diverged?
 # `mine` must cover committed, staged AND unstaged — `git commit -a` commits the
@@ -107,7 +102,16 @@ msg="${msg}
 
 Not a blocker — commit if you have checked. Rebase with: git fetch origin main && git rebase origin/main"
 
-[ -n "$head_main" ] && echo "$head_main" > "$warned" 2>/dev/null || true
+# Don't repeat an IDENTICAL warning on every commit in a row — but key it on the
+# ANSWER, not just origin/main's sha. Switching branch, or staging a file that
+# newly overlaps, changes the answer while origin/main stands still; keying on the
+# sha alone went silent in exactly those cases, which is worse than repeating.
+sig=$(printf '%s|%s|%s|%s' "$head_main" "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" \
+        "$no_base" "$overlap" | cksum | cut -d' ' -f1)
+if [ -f "$warned" ] && [ "$(cat "$warned" 2>/dev/null)" = "$sig" ]; then
+  exit 0
+fi
+printf '%s' "$sig" > "$warned" 2>/dev/null || true
 
 # Structured output so the session actually reads it. The plain-text fallback goes
 # to STDOUT, not stderr: on exit 0 Claude Code surfaces stdout and discards stderr.

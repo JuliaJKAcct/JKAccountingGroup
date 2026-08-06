@@ -38,20 +38,29 @@ signal that was missing.
   throttle marker, a missing `timeout`, a missing `python3`, no network, no repo, an empty repo,
   a detached HEAD and a shallow clone. The drift check *warns*; the judgement stays with the
   session, because sometimes committing anyway is right.
-- **Never hang.** Every network call is wrapped in `timeout` (20s at session start, 15s at commit)
-  — and because stock macOS has no GNU `timeout`, they fall back to `gtimeout`, then to git's own
-  `http.lowSpeedLimit` abort, rather than skipping the check. `GIT_TERMINAL_PROMPT=0` stops a
-  credential prompt from burning the whole timeout. The commit-time fetch is throttled to once per
-  90 seconds via a marker in `.git/`, and the warning itself repeats only when `origin/main` has
-  moved again — so a session that decides to commit anyway is not nagged on every commit.
+- **Bound every network call.** `timeout` (20s at session start, 15s at commit), falling back to
+  `gtimeout` — stock macOS ships neither under the first name — and then to git's own
+  `http.lowSpeedLimit` abort. **Caveat:** that last fallback is **HTTP-only**. Measured with both
+  binaries absent: an HTTPS remote that stalls aborts at ~15s, but an **SSH** remote that hangs is
+  unbounded. The firm's remote is HTTPS, so the real case is covered, and Claude Code's own 60s
+  hook budget is the outer backstop — worst case is dead air, not a hung session. If anyone ever
+  switches the remote to SSH, install coreutils or revisit this.
+  `GIT_TERMINAL_PROMPT=0` stops a credential prompt from burning the timeout. The commit-time
+  fetch is throttled to once per 90s via a marker in `.git/`, and an identical warning is not
+  repeated — see the next rule for what "identical" means.
 - **Degrade quietly, but never *falsely reassure*.** No git repo → silence. No network → the
   session-start briefing says it may be stale and shows the last fetch; the drift check compares
   against the stale `origin/main` anyway, because that still catches drift while skipping catches
   nothing. No `python3` → plain text on **stdout** (stderr is discarded on exit 0, so a warning
   sent there would never reach the session). No merge base (shallow clone) → says it could not
   compute the overlap, rather than printing "no overlap".
+- **Don't nag, but never go quiet on a CHANGED answer.** The drift warning is suppressed only when
+  it would be byte-identical — the key is a hash of `origin/main` + the current branch + the
+  computed overlap, not of `origin/main` alone. Switching branch or staging a newly-overlapping
+  file changes the answer while `origin/main` stands still; keying on the sha alone stayed silent
+  in exactly those cases, which is worse than repeating. (Caught in review, 2026-08-06.)
 - **Stay short.** `session-start.sh` output is prepended to every session, so it costs tokens every
-  time. It caps at 6 commits, 5 hot files and 5 branches — about 30 lines at its longest.
+  time. It caps at 6 commits, 5 hot files and 5 branches — about 24–30 lines at its longest.
 
 ## Changing or switching them off
 
