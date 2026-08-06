@@ -58,11 +58,13 @@ is no problem going direct. Odoo's documentation disagrees — it states the ext
 available only on *Custom* plans, "not available on One App Free or Standard", and the firm is
 on **Standard** ($31.10/user/month, 1 user; Custom is $61.00). **But the notice reads as a
 commercial condition, has been identical since Odoo 16, and the Pantalytics connector is
-demonstrably making external calls against this database today** — so the restriction may well
-not be enforced at the server. **Settle it with the throwaway-key test in
+demonstrably making external calls against this database today** — *if* that connector speaks
+the external API rather than logging in as a web session, which is the open question. So the
+restriction may well not be enforced at the server. **Settle it with the two checks in
 [`references/direct-api-setup.md` §0](./references/direct-api-setup.md) before spending
-anything** — five minutes, no cost, and it also tells you whether a plan upgrade is needed at
-all. That file carries the full step-by-step, the vendor pricing on both sides, and records
+anything** — open `/doc` in a browser (free, no credential), then a throwaway key if needed.
+Note what a pass does and does not prove: that the server does not block it **today**, not that
+the subscription entitles the firm to it — and Odoo Online auto-upgrades. That file carries the full step-by-step, the vendor pricing on both sides, and records
 that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
 instance while **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
 winter 2027**. New code targets JSON-2.

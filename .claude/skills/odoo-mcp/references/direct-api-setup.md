@@ -33,38 +33,79 @@ Three facts pull the other way, and they are not weak:
    `pan_usage` on 2026-08-06 returned workspace `Gmail`, plan `Free`, **50 of 50 calls used
    that day**. If that connector speaks to Odoo over the external API — the normal mechanism
    for such tools — then external API access demonstrably works on a Standard plan.
-3. **The restriction notice is not new and is not technical.** It appears identically in the
-   Odoo **16, 17, 18 and 19** documentation, and it closes with *"visit the pricing page or
-   reach out to your Customer Success Manager"* — the register of a **commercial condition**,
-   not an enforced error path.
+3. **The notice is long-standing policy, not a new gate.** It appears **byte-identical** in the
+   Odoo 16, 17, 18 and 19 documentation, and closes with *"visit the pricing page or reach out
+   to your Customer Success Manager"* — the register of a commercial condition rather than an
+   enforced error path.
+   **But do not over-read this.** Age says "not new"; it does not say "not enforced". And there
+   is real counter-evidence: in 16–18 the notice sat on the XML-RPC page, while in **19 Odoo
+   carried it onto a brand-new page** (*External JSON-2 API*, `versionadded:: 19.0`). It is
+   being **actively maintained**, not left behind as boilerplate. The weight here rests on
+   facts 1 and 2; fact 3 is supporting, not decisive.
 
 The most probable reading: **Odoo states this as a licensing term but does not block it at the
 server.** "You are not entitled to use it" and "you cannot use it" are different claims; an
 earlier version of this file reported the first as if it were the second. That was a
-misjudgement — the working connector was evidence in plain sight and was under-weighted.
+misjudgement — the working connector was evidence in plain sight and was under-weighted. Keep
+the distinction alive in both directions, though: what follows can settle the *technical*
+question and cannot settle the *contractual* one.
 
-### How to settle it — the throwaway-key test (5 minutes, no cost)
+### How to settle it
 
-Do not deduce it. Prove it.
+**Step A — the free check, no credential at all. Do this one first.**
+
+Logged into Odoo in a browser, open **`https://jkaccountinggroup.odoo.com/doc`**. Odoo 19
+serves there the list of models, fields and methods available over the external API **for this
+database**. A rendered listing is strong evidence the API is open; a refusal is strong evidence
+the other way. It mints nothing and revokes nothing.
+
+**Step B — the throwaway-key test, if Step A is inconclusive.**
 
 1. On an **existing** user (no new user, no extra seat): **avatar → My Preferences → Account
    Security → New API Key**. Description `TEST`, **shortest duration offered**.
+
+   > ⚠️ **This is an administrator key.** The firm has exactly one Odoo user, and that user is
+   > the administrator — so this key carries full admin power over the live database until it
+   > is revoked, and the shortest duration Odoo offers is still measured in days. **Do step 3
+   > in the same sitting; if anything interrupts, revoke first.**
+   >
+   > **If the *New API Key* option is not there at all**, that is itself a result: the plan is
+   > gating key creation. Stop and record it.
+
 2. One read, nothing else — the modern endpoint needs only the key:
    ```bash
-   curl -sS -X POST "https://jkaccountinggroup.odoo.com/json/2/res.company/search_read" \
-     -H "Authorization: bearer $KEY" -H "Content-Type: application/json" \
+   curl -sS -w '\n%{http_code}\n' -X POST \
+     "https://jkaccountinggroup.odoo.com/json/2/res.company/search_read" \
+     -H "Authorization: bearer $ODOO_API_KEY" -H "Content-Type: application/json" \
      --data '{"fields": ["name"], "limit": 1}'
    ```
-3. **Revoke the key immediately** on the same screen.
+   **Who runs this matters.** §3 Step 3's rule holds here too — *never paste a key into chat*,
+   and this one is an admin key. Either **Lilian runs the curl herself** and reports back only
+   the HTTP status and the error `name` field, or the key goes into the session environment as
+   `ODOO_API_KEY` first and Claude runs it. Export it rather than typing it inline, so it does
+   not land in `~/.bash_history`. An unset `$ODOO_API_KEY` sends an empty bearer and produces a
+   401 that looks like a real answer — check it is set.
 
-- **Returns the company name** → the external API works on this plan. No upgrade needed, and
-  §3's Step 1–2 can use an existing user.
-- **Returns a plan/authorisation error** → Custom really is required; go to the numbers below.
+3. **Control test — the step that makes the result mean something.** Repeat the identical call
+   with **one character of the key changed**. (The firm used exactly this technique on the
+   Double note-size issue, row 19: the control is what proved it was size and not content.)
 
-One more question worth asking Andres, which settles it without any test: *"when you configured
-Pantalytics, did you give it an API key, or a username and password?"* An API key means the
-external API is working on this plan; a username/password means the connector logs in as a web
-session and proves nothing about the API.
+4. **Revoke the key** on the same screen.
+
+**Reading the result** — the failure modes are distinguishable, so distinguish them:
+
+| Outcome | What it means |
+|---|---|
+| **200 with the company name** | The API is **not blocked at the server today**. That answers the technical question, **not the contractual one** — the notice still says Standard is not entitled to it, and Odoo Online **auto-upgrades**, so this can change without the firm doing anything. Enough to proceed without spending; **not a licence**. Confirm with Andres or the Customer Success Manager before building anything the firm depends on |
+| **401, `"name": "werkzeug.exceptions.Unauthorized"` / `"Invalid apikey"`** — *and the control fails identically* | Credential-shaped, not plan-shaped. Re-check the key and the host before concluding anything |
+| **`odoo.exceptions.AccessError`** | A permissions problem on that model, not the plan |
+| **A distinct plan/subscription error**, or no *New API Key* option at all | Custom really is required; go to the numbers below |
+
+**And the free shortcut that beats both steps** — ask Andres: *"when you configured Pantalytics,
+did you give it an API key, or a username and password?"* **An API key** means the external API
+is working on this plan. **A username and password** means the connector logs in as a web
+session, which proves nothing about the API — and that is exactly the assumption fact 2 above
+rests on.
 
 ### If Custom does turn out to be required — the numbers
 
@@ -72,7 +113,7 @@ All confirmed 2026-08-06 from the two vendors' own screens:
 
 | | Price | What it gives |
 |---|---|---|
-| **Odoo Standard** (current) | **$31.10** /user/month · 1 user | All apps. No API, no Studio, no multi-company |
+| **Odoo Standard** (current) | **$31.10** /user/month · 1 user | All apps. No API *per Odoo's stated terms — see above*, no Studio, no multi-company |
 | **Odoo Custom** | **$61.00** /user/month | All apps **+ Studio + API / Multi-Company** |
 | **Pantalytics Free** (current) | €0 | 50 calls/day |
 | **Pantalytics Pro** | **€25** /user/month | 500 calls/day · 30-day free trial |
@@ -84,19 +125,28 @@ With **one** Odoo user the comparison is unusually close:
 - **Odoo Custom:** **$61.00/month**, unlimited API, no middleman, **plus Studio and
   multi-company**.
 
-Near-identical money; Custom buys strictly more. **The best combination is Odoo Custom with
-Pantalytics left on Free** — still $61/month total, and it keeps the connector for the one
-thing the direct API cannot do (Claude on a phone or in a browser, where no code can run).
+*(The ≈$59 uses ≈1.12 USD/EUR as of 2026-08-06. The conclusion holds across a wide range — at
+parity it is $56, at 1.20 it is $61 and the two options tie — but re-check the rate before
+committing to either.)*
 
-Two forward-looking cautions: Custom's premium is **per user**, so the $30/month gap widens by
-$30 for every user the firm adds; and Pantalytics bills in **euros**, so the dollar cost moves
-with the exchange rate.
+Near-identical money, and **Custom buys more where it matters most**: unlimited API, Studio,
+multi-company. **The best combination is Odoo Custom with Pantalytics left on Free** — still
+$61/month total, and it keeps the connector for the one thing the direct API cannot do (Claude
+on a phone or in a browser, where no code can run). **The one thing that combination gives up**
+is connector headroom on exactly that surface: 50 calls/day instead of Pro's 500.
 
-**Tactical note:** Pantalytics Pro carries a **30-day free trial**. Starting it unblocks the
-entire queued website backlog at zero cost while the plan question is settled — worth doing
-whichever way the decision goes. Check whether it requires a card and auto-renews, and note the
-workspace is named `Gmail`, suggesting it was created from a Google sign-in that may be
-Andres's rather than the firm's.
+**Read the two "per user" prices carefully — they count different things.** Odoo's is an **Odoo
+seat**; Pantalytics' is a **connector seat**, and the firm shares one Claude account, so they
+almost certainly do not grow together. Adding an Odoo seat costs **+$31.10** on Standard or
+**+$61.00** on Custom; adding connector seats is a separate question. Do not assume one implies
+the other. Pantalytics also bills in **euros**, so its dollar cost moves with the exchange rate.
+
+**Tactical note:** Pantalytics Pro carries a **30-day free trial** that would unblock the queued
+website backlog at zero cost while the plan question is settled. **But settle the workspace
+ownership first:** the workspace is named `Gmail`, suggesting it was created from a Google
+sign-in that may be **Andres's rather than the firm's**. Starting a trial that may auto-renew,
+on an account the firm does not own or control, puts both the firm's billing and its access on
+someone else's login. Check who owns it, and whether the trial requires a card.
 
 ## 1 · Why we want it
 
