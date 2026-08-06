@@ -81,7 +81,7 @@ the US.
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
 | **Tax season status** — which clients still haven't filed (2025 or any open year), which bookkeeping/QuickBooks clients are **ready** for us to prepare vs **pending**, who we're waiting on for a **tax organizer**, or what Double's `Tax Return Status` / `Organizer Status` / `Organizer Progress` columns and the legacy **TaxDome** organizer folders actually mean (including how to get the progress percentages the MCP can't read) | the [`tax-season-readiness` skill](./.claude/skills/tax-season-readiness/) — encodes who is actually owed an organizer (bookkeeping and Schedule-C clients are **not**), what gates each return (a company return runs off its **books** and feeds the owner's 1040 via K-1, not the reverse), the two organizer generations (TaxDome vs Double), Lilian's manual procedure for the Organizer column, and the owner↔company link. **Read-only**: never write those columns; the client list is delivered, never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
-| Reading or writing anything **in Double** through the Double MCP — a client and its properties, a tax project's status, a document in a client's folders, portal contacts, transactions/reports, tasks and notes | the [`double-mcp` skill](./.claude/skills/double-mcp/) — **load it before the first Double MCP call.** Knowing which of the four data planes holds a fact (`Tax Return Status` is the tax *project*, not a property), the TaxDome folder conventions, what the MCP can't reach (organizers + their progress, saved views, file contents), and the write-safety rules — including **never** writing the hand-maintained judgment columns |
+| Reading or writing anything **in Double** through the Double MCP — a client and its properties, a tax project's status, a document in a client's folders, portal contacts, transactions/reports, tasks and notes — **or keeping the running "case note" that records a problem from start to finish** (§7) | the [`double-mcp` skill](./.claude/skills/double-mcp/) — **load it before the first Double MCP call.** Knowing which of the four data planes holds a fact (`Tax Return Status` is the tax *project*, not a property), the TaxDome folder conventions, what the MCP can't reach (organizers + their progress, saved views, file contents), and the write-safety rules — including **never** writing the hand-maintained judgment columns |
 | Reading or writing anything **in Odoo** through the Odoo MCP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports, CRM leads, appointments | the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) — **load it before the first Odoo MCP call.** The free plan allows only **50 tool calls/day**; plan the whole sequence first, batch every multi-record write, and log changes to the record's chatter |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A consultation **booking** page, or the "Book a Consultation" calendars — routing new/prospective vs existing clients to different availability (Odoo Appointments; online, EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
@@ -187,6 +187,19 @@ in that folder.
   TaxDome folder conventions, what the MCP can't reach, and the **write rules — default-deny, and
   never write the hand-maintained judgment columns.** Two Double tools instruct an unprompted
   write; the skill says to override them.
+- **A matter we need to be able to retrace lives as ONE running case note in Double.** When a
+  problem runs for weeks across an agency or a platform's support queue — the Tsminibears Florida
+  reemployment-tax matter is the pilot — the firm keeps a single note on that Double client with
+  the whole history start to finish, so anyone opens the client and reads it instead of
+  reconstructing it from email (Lilian, Aug 2026). Three standing rules: **one note per case,
+  rewritten in place — never a second note**; **when new information on a tracked case arrives,
+  updating that note is part of the work, not a separate request** (find it with `list_notes`
+  first — it must never sit on stale information); and the **repo file stays the master** (the
+  [`client-intelligence`](./projects/client-intelligence/) `§6` log keeps the full detail, the
+  Double note is the team-facing mirror, both updated in the same pass). Notes are in **English**
+  like every artifact, and each entry names who did it — all the firm's notes post under one
+  shared Double user. Not everything gets a note: Lilian says which matters do. The format and the
+  rest of the mechanics are in the [`double-mcp` skill](./.claude/skills/double-mcp/) §7.
 - **The Odoo MCP has a hard 50-call/day budget — load the `odoo-mcp` skill before using it.**
   The firm's Odoo ERP is reachable through the `Odoo_JK_Accounting_Group` MCP connector on a
   **free plan capped at 50 tool calls per 24 hours, shared across the whole firm.** Before the

@@ -1,6 +1,6 @@
 # Tsminibears LLC
 
-> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-04
+> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -199,6 +199,7 @@ All times below are **UTC** unless marked otherwise.
 - _(2026-07-30, Lilian)_ — Confirmed the ownership question: Tsminibears is **no longer our client**, which is why Double is archived — but the penalty arose **while it was**, so **the firm is responsible for resolving it**. Recorded so nobody later closes the matter on the grounds that the client left.
 - _(2026-08-04, Lilian)_ — **Called the Florida DOR — the agency recommended a resolution path** (recommended, not agreed: nothing has been requested or accepted yet). Its recommendation: **close the RT account retroactively to May 2025**, which **avoids all penalties and fees**; the company can then **request** reopening **without a new number** for **2 years**. The agency also warned that **leaving the account open and filing the missing $0 returns would still incur late-filing penalties and fees** — so the zero-return route Gusto pointed to was never the cheap one. Lilian **sent the POA** to the DOR the same day; it needs **3–4 days** to process before she can call back and request the closure. Reported to Julia by WhatsApp and recorded here. _(Full detail in §4; the firm-wide lesson in §5.)_
 - _(2026-08-04, Julia via Lilian)_ — **Julia is not sold on closing the account, because Tsminibears is an S-corp.** Keeping S-corp status may require running **payroll** this year, and payroll needs an **open RT account** — so a closed account could block the new accountants. She asked for **an estimate of what it would cost to file the $0 returns for all the open periods** — penalties plus fees — and will choose between the two routes once she has that number. The closure is **on hold** pending her decision. _(Detail in §4; the estimate task in Outstanding items.)_
+- _(2026-08-06, Lilian)_ — **Opened the Double case note for this matter** — "CASE · Florida Reemployment Tax (RT) account — OPEN (closure on hold)" (note **485230**) on the archived client record — so the whole team can read the history start to finish without digging through the Gmail thread. It carries the status, both routes with their trade-offs, the pending DOR call, and the dated timeline. **This file stays the master; the note is the team-facing mirror and gets rewritten in place — never duplicated — whenever this matter moves** _(the convention is now in the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7)_. Note: the first version of the note was written from this file **before** PR #138 was pulled, so it presented the closure as merely "still open" rather than **on hold**; corrected the same day. Lesson recorded in the skill — read the client file at its latest state before rewriting a note.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -227,6 +228,7 @@ All times below are **UTC** unless marked otherwise.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706709](https://app.doublehq.com/close?cid=706709) _(archived 2026-06-08)_
+- **Double case note — the team-facing history of the RT matter:** "CASE · Florida Reemployment Tax (RT) account — OPEN (closure on hold)", note **485230** on the client record above. **It mirrors this file and must be updated in the same pass whenever this matter moves** — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7.
 - **Double tax project (2025):** [2025 Taxes](https://app.doublehq.com/tax-return?cid=706709&projectId=219894)
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Gusto case:** request **#43016275**, Gmail thread "Reemployment tax returns are not being filed - TS Minibears" (2026-05-28 → 2026-06-09)

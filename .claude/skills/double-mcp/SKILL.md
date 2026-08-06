@@ -275,11 +275,79 @@ authorization from the firm.
   folders; omitting `folderId` sends them to the Uploads Inbox and triggers OCR. Be deliberate about
   which you want, and about `isVisible`.
 - Prefer **notes and comments** (`create_note`, `add_task_comment`) for leaving a trail, the same
-  spirit as the Odoo chatter convention.
+  spirit as the Odoo chatter convention. The firm's standard shape for that trail is §7.
 
 ---
 
-## 7. Related skills
+## 7. Case notes — the event history the team reads
+
+Lilian's convention (Aug 2026, established on the Tsminibears reemployment-tax matter). Some
+problems run for weeks across an agency, a platform's support queue and several calls. For those,
+the firm keeps **one running note on the Double client** so anyone can open the client and read
+the whole thing start to finish, instead of reconstructing it from email.
+
+### The rules
+
+1. **One note per case, never one note per event.** The note is **rewritten in place** with
+   `update_note` as things happen. A second note on the same matter splits the history and defeats
+   the point.
+2. **When new information about a tracked case arrives, updating its note is part of the work** —
+   not a separate request. Lilian's words: *"cuando te hable de esto de nuevo, tienes que ir a esa
+   nota y actualizar esa nota. No puede quedarse con la información atrasada."* Find the existing
+   note with `list_notes(clientId)` **before** writing anything.
+3. **English**, like every firm artifact, whatever language the session is in.
+4. **Not for everything.** Open a case note when the matter **spans more than a day**, involves a
+   **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk**. Routine
+   work stays as Double **tasks**. Lilian decides what gets one; don't manufacture them.
+5. **Every entry names the person who did it.** All the firm's notes post under one shared Double
+   user (`create_note` attributes to the connected account — currently "Julia Kononova"), so
+   without an inline name the trail is anonymous six months later.
+6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
+7. **The repo file stays the master.** The case's full detail — sources, inferences, what is
+   unverified — lives in [`client-intelligence`](../client-intelligence/) `§6`; the Double note is
+   the **team-facing mirror**, written to be read. One instruction from Lilian, two destinations,
+   updated in the same pass. **Read the client file before rewriting the note** — the other person's
+   session may have advanced the case since the note was last touched (this happened the first time:
+   `main` had already recorded Julia's objection and the note had to be corrected before anyone read
+   it).
+8. **Nothing sensitive.** No dollar figures from a client's books, no account numbers, no personal
+   contact details — the same line the repo draws. Agency phone numbers and public case/reference
+   numbers are fine.
+
+### The body shape
+
+`create_note` and `update_note` take **HTML** — plain text will not render. Wrap everything in
+`<p>`, `<ul>`/`<ol>`, `<strong>`, `<em>`. The house structure, in this order:
+
+| Block | What goes in it |
+|---|---|
+| **STATUS** | One line: open/closed, and what it's waiting on. First thing a reader sees. |
+| **WHAT THIS IS** | One paragraph of context for someone who has never seen the matter. |
+| **PENDING — NEXT ACTION** | The concrete next step, who owns it, and the date it's been pending since. Sub-bullets for how to actually do it. |
+| **THE OPTIONS** | Only when a decision is open — each route with its cost and its trade-off, so the reader sees why it isn't decided. |
+| **TIMELINE** | Dated entries, oldest first, each ending with who did it. |
+| **ALSO STILL OPEN** | The secondary loose ends, so they don't get lost behind the headline action. |
+| **Footer** | "This is the running case log — keep this same note updated, do not open a second note", plus `Last updated: <date> — <name>`. |
+
+Mark anything unverified **as unverified, in the note** — the team acts on these, and a
+search-result summary must never read like the agency's own answer.
+
+### Notes work on archived clients
+
+`create_note` succeeds on an **archived** client (verified 2026-08-06 on Tsminibears, `cid=706709`,
+archived 2026-06-08). This matters because the cases that need a written history are often exactly
+the ones that outlive the engagement.
+
+### Open question
+
+**Whether Double notes are visible to the client in the portal has not been confirmed in the UI.**
+The tools expose no visibility flag, and a case note is candid by design ("Gusto never replied",
+"this was missed"). Lilian was asked to check once; until she confirms, keep case notes free of
+anything you would not want the client to read.
+
+---
+
+## 8. Related skills
 
 - [`tax-season-readiness`](../tax-season-readiness/) — the domain layer on top of this: what the
   tax/organizer columns *mean* and how to turn them into a ready-vs-pending list.
@@ -292,8 +360,10 @@ authorization from the firm.
 
 ---
 
-## 8. Update this skill when…
+## 9. Update this skill when…
 
+- **The portal-visibility question in §7 is answered** — that's the one open item blocking case
+  notes from being fully trusted.
 - **An organizer tool appears** in the Double MCP — §2's biggest gap closes and
   `tax-season-readiness` §5 simplifies.
 - A new **property column** is added or an option is renamed — §1's pointers stay valid, but
