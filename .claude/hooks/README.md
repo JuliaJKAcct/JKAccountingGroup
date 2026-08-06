@@ -10,7 +10,7 @@ the session that merges it.
 
 | Hook | Fires | What it does |
 |---|---|---|
-| [`session-start.sh`](./session-start.sh) | `SessionStart` | Fetches, then prints what just landed on `main`, which files `main` has changed most in the last 4 days, and which **unmerged `claude/*` branches were active in the last 3 days** — i.e. what another session is working on right now |
+| [`session-start.sh`](./session-start.sh) | `SessionStart` | Fetches, then prints **four lines**: how far ahead `main` is, the files it changed most in the last 4 days, and which **unmerged `claude/*` branches were active in the last 3 days** — i.e. what another session is working on right now |
 | [`pre-commit-drift-check.sh`](./pre-commit-drift-check.sh) | `PreToolUse` on `Bash`, only when the command contains `git commit` | Fetches (throttled to once per 90s) and, if `main` moved since you branched, lists what landed and **which of your files also changed on `main`** |
 
 ## Why there are two, and why the second one matters more
@@ -65,8 +65,13 @@ signal that was missing.
   silence remains and is deliberate: a clean partial rebase shrinks the "landed since you branched"
   list without changing the overlap — the answer only got *smaller*, so it is not repeated. Every
   direction that makes it more alarming re-warns.
-- **Stay short.** `session-start.sh` output is prepended to every session, so it costs tokens every
-  time. It caps at 6 commits, 5 hot files and 5 branches — about 24–30 lines at its longest.
+- **Stay short — the audience is Claude, not a person.** `session-start.sh` output is prepended to
+  every session, so it costs tokens every time and it is the first thing on the user's screen.
+  It is deliberately **four dense lines**, labelled *"for Claude — no need to read this"*, because
+  Lilian's instruction (2026-08-06) was that she should not have to read it: *"si crees que puedes
+  hacerlo todo por tu cuenta y que me avises solo si hay un problema real, estaría perfecto."*
+  The first draft was 24 lines of prose and was cut to 4 with no loss of signal. **Do not let it
+  grow back** — if a new signal is worth adding, it has to earn its line, or replace one.
 
 ## Changing or switching them off
 
