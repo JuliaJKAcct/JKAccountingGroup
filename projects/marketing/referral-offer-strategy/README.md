@@ -27,26 +27,28 @@ referral-offer-strategy/
 ├── strategy.md      ← the full strategy: funnel logic, partner positioning,
 │                       Growth Accelerator Series, scorecard design, open questions
 ├── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
-    ├── one-pager.html         on-brand EN handout (free → $500 credited → monthly
+    ├── one-pager.html         on-brand EN handout (free → $250 credited → monthly
     │                           ladder, two channels, partner benefits) — print/PDF
     ├── one-pager-ru.html      native-Russian version of the handout
     ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
     │                           Series sessions (themes, take-homes, series close)
     ├── talk-track.md          plain-language script + Readiness Check timing
     └── worksheets/            fillable RU session take-homes (interactive + print)
-        ├── readiness-check-ru.html     session 1 — self-scored readiness quiz
+        ├── readiness-check-ru.html     self-scored readiness quiz (webinar gift)
         ├── margin-calculator-ru.html   session 2 — true-margin calculator
         └── keep-more-checklist-ru.html session 3 — tax-efficiency checklist
 ├── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
     ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
     │                        moments, 4 belief shifts, self-calc — co-host inserts
     ├── webinar-script.html   same script as a readable/printable on-brand page
+    ├── webinar-script-en.html  English version of the presenter script
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     ├── announcement-ru.html  same announcement as a readable/printable page
     ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
     │                             partner hands to clients (details · agenda · gift)
     ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
     │                             — arrow/click nav, PDF export
+    ├── webinar-deck-en.html      English version of the slide deck
     └── luma/                     Luma (lu.ma) registration setup
         ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
         ├── event-ru.md              event-page copy + Luma setup checklist
@@ -84,14 +86,14 @@ there.
 - **`partner-pitch/`** — the first built deliverables, for the marketing-agency
   partner (Candramas LLC): an on-brand partner handout in English and native
   Russian, a native-Russian Growth Series one-pager (the three co-hosted
-  sessions), and a talk-track script. Encodes the decided front-offer (a $500
+  sessions), and a talk-track script. Encodes the decided front-offer (a $250
   Profit Leak Review, fully credited into the first month of service), the
   free → paid → monthly ladder, the two partner channels (new-client onboarding
   + existing-client Growth Series), and the partner-benefit framing.
 - **`partner-pitch/worksheets/`** — the three Growth Series take-homes, built as
   interactive, print-ready native-Russian files: a self-scored readiness quiz, a
   true-margin calculator, and a tax-efficiency checklist. Each is useful on its
-  own but reveals where a professional is needed, closing toward the $500 check.
+  own but reveals where a professional is needed, closing toward the $250 check.
 - **`webinar/`** — a diagnostic native-Russian webinar, "Почему бизнес растёт, а
   прибыль уменьшается," as Julia's own top-of-funnel event. v2 is built around one
   story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and a

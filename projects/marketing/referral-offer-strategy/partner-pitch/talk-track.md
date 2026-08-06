@@ -17,7 +17,7 @@
   trusts; the goal of this meeting is for him to trust *this*, not to close a deal.
 - **Let him talk.** Your best line all meeting is *"where's this wrong?"* People
   buy in to what they help shape.
-- **Don't lead with money** — not the $500, not referral fees. Lead with his
+- **Don't lead with money** — not the $250, not referral fees. Lead with his
   clients winning. The money takes care of itself.
 - Have the one-pager printed (or on screen). Swap `[Partner Firm]` for his firm's
   name first — it should feel made for him.
@@ -67,9 +67,9 @@ That's it. Low pressure, collaborative, hands him the page.
 > just shows a client where money could leak once they scale. Most people find one
 > or two things they didn't know.
 >
-> If they want to go deeper, that's the $500 Profit Leak Review — a real look at their actual
+> If they want to go deeper, that's the $250 Profit Leak Review — a real look at their actual
 > numbers with a written plan. And here's the part I like: if they come on with us
-> monthly, that $500 comes right back off their first month. So for a serious owner
+> monthly, that $250 comes right back off their first month. So for a serious owner
 > it's basically risk-free."
 
 *(Let the third step — ongoing — speak for itself. Don't pitch the monthly. The
@@ -115,6 +115,6 @@ One clear, tiny next step. Then stop talking and let him respond.
 ## What NOT to do
 
 - Don't open with price or referral splits.
-- Don't pitch the monthly retainer — let the free → $500 → ongoing ladder pull.
+- Don't pitch the monthly retainer — let the free → $250 → ongoing ladder pull.
 - Don't stack three next steps. One: the five clients.
 - Don't fill silences. Ask "where's this wrong?" and let him talk.
