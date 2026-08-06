@@ -47,12 +47,19 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 
 ---
 
-## 2. Clients, properties, contacts, users
+## 2. Clients, properties, contacts, users — and the two utility tools
+
+### 2a. Utility
 
 | Tool | | Notes |
 |---|---|---|
-| `ping` | ✅ | Health check, returns `pong`. Useful to confirm the connector is alive before blaming a query |
-| `build_deep_link` | ✅ | Builds a Double URL for an entity. Supported `entityType`: `client` · `end_close` · `closing_task` · `custom_task` · `project_task` — **note `project` is NOT among them**, so a tax project's link cannot be built this way. Take it from `list_projects` → `deepLink` instead (§4) |
+| `ping` | ✅ | Health check, returns `pong`. Confirms the connector is alive before you blame a query |
+| `build_deep_link` | ◻︎ | Builds a Double URL for an entity. Supported `entityType`: `client` · `end_close` · `closing_task` · `custom_task` · `project_task` — **note `project` is NOT among them**, so a tax project's link cannot be built this way. Take it from `list_projects` → `deepLink` instead (§4) |
+
+### 2b. Clients and properties
+
+| Tool | | Notes |
+|---|---|---|
 | `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt` |
 | `get_client` | ◻︎ | Single client record |
 | `create_client` | ◻︎ **W** | Duplicates are the firm's recurring data problem and there is no merge tool. Confirm first |
@@ -324,7 +331,6 @@ contradict each other. It is also a reminder that **our own writes are logged an
 | Tool | | Notes |
 |---|---|---|
 | `list_loans` · `get_loan` · `list_loan_payments` · `preview_loan_schedule` · `get_loan_reconciliation_balance` | ⛔ | `BILLING_ACCESS_DENIED` — *"this client is not on a plan that includes this feature… needs a Scale subscription"* |
-
 | `create_loan` | ⛔ **W** | Same gate — and it stays a **write** the day the gate lifts. Default-deny applies to it then, not "it's in the unlocked pile now" |
 
 The gate is **per client**, so it is possible another client is on a plan that allows it. The one

@@ -131,7 +131,7 @@ tool for. When a task needs one of those, **ask the user to export the view rath
 the data unavailable.** (Established 2026-07-30, when the tax-readiness report was blocked on
 organizer progress.)
 
-Columns confirmed present in a "Tax Returns" view export but **absent from the MCP**:
+Columns present in a "Tax Returns" view export that are **absent from the MCP — or simply cheaper to get this way** (two of the organizer rows below became MCP-readable in Aug 2026; the export still wins for a roster-wide sweep):
 
 | CSV column | What it carries |
 |---|---|
