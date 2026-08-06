@@ -28,7 +28,7 @@
 ## 1. Snapshot
 
 - **Business name:** GOSSIP MIAMI LLC
-- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
+- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
 - **Home state:** Florida
 - **Industry / what they do:** A **beauty salon** in Miami — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. The street address stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
@@ -44,17 +44,22 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Primary contact / correspondent | Double client (link below) — **one of the two joint filers**; all email to the firm comes from this person, in Russian, and the documents arrive from them _(Gmail)_ |
-| Second joint filer | Double client — **the owner of Marat Boxing LLC** (§4), who also receives **K-1s from outside partnerships**. This is the person Lilian speaks with about the scope question _(Lilian, 2026-08-04)_ |
+| **Sole owner of GOSSIP MIAMI — the wife** | Double client (link below). The company is hers alone _(Lilian, 2026-08-06)_. She is a portal contact on the **joint individual account**, not on the company record |
+| **Owner of MARAT BOXING — the husband** | Double client. The other joint filer; his company reports on a **Schedule C** of the joint return (§4), and he also receives **K-1s from outside partnerships** |
+| Company-side correspondent | **One address carries everything** — all email to the firm, in Russian, and every document. Double attributes it to the husband; the Gmail display name reads as the wife's initials. **Unresolved — see the note above** |
 | Gossip Miami's owners as filed | **Unresolved** — in the 2024-return correspondence the client raised a question about which names do and don't appear on the return. Re-check against the filed return; see §6 |
 
-> **§2's two roles may be one person — confirm.** The table above splits "primary correspondent" from
-> "second joint filer / owner of Marat Boxing", but **every email goes to the same address**, including the
-> Marat Boxing templates and the tax-return document requests. So either the correspondent *is* the Marat
-> Boxing owner and there is only one person we deal with, or the second filer simply never appears in email.
-> **Double's contact graph says the same thing:** only **one** portal contact sits on the company
-> record; the other joint filer appears only on the joint individual account _(Double, 2026-08-06)_.
-> **Resolve it before relying on the split** _(noticed 2026-08-06 while reading the thread)_.
+> **Who owns what — settled 2026-08-06, and it explains the single contact.** **The sole owner of
+> GOSSIP MIAMI is the WIFE**, even though the couple is married and files jointly _(Lilian,
+> 2026-08-06)_ — the company is hers alone, which is why only **one** portal contact sits on the
+> company record. The **husband** owns **Marat Boxing**, so that Schedule C is his side of the joint
+> return. So the two roles below are two different people; what is *not* two people is the
+> company-side correspondence, which all runs through one address.
+>
+> ⚠️ **Still open: whose address that company-side contact actually is.** Double labels it with the
+> **husband's** name, while its Gmail display name reads as the **wife's** initials — and the owner is
+> the wife. **Settle it before addressing anyone by name or asking an owner to sign**; it also decides
+> who we chase for the outstanding documents _(noticed 2026-08-06)_.
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577) _(Double, 2026-08-06)_
 - **Double / TaxDome:** the family carries **separate accounts** — one for the individuals and one for **Gossip Miami LLC** — activated by the client 2026-03-03 _(Gmail)_.
@@ -75,7 +80,7 @@ the actual details.
 - **Applies?** Yes. Three returns move together:
   - **Gossip Miami LLC** — the business return _(form to confirm, §1)_. A **2024 return** exists and the firm handled it — the client-copy PDF was circulated by the firm in Mar 2026 _(Gmail)_.
   - **The owners' individual return** — the two are married and filing **jointly** _(Lilian)_.
-  - **Marat Boxing LLC** — reports on a **Schedule C**, not as a separate return _(confirmed by Lilian, 2026-08-04)_. That it is a disregarded single-member LLC is the natural reading, not something stated. **Confirm whose Schedule C it lands on** if the joint filing ever changes.
+  - **Marat Boxing LLC** — reports on a **Schedule C**, not as a separate return _(confirmed by Lilian, 2026-08-04)_. That it is a disregarded single-member LLC is the natural reading, not something stated. **It lands on the husband's Schedule C** — he owns Marat Boxing (§2, Lilian 2026-08-06); revisit only if the joint filing ever changes.
 - **Our role:** prepare and file. **Tax preparation only** — see the scope rule below.
 - **Process notes (→ future SOP):** the firm's standard "Business Tax Return Process" email (engagement letter → business tax organizer → preparation → review, invoice & signature → e-file) was sent for Gossip Miami in Mar 2026 and is the shape to reuse _(Gmail)_.
 
@@ -139,6 +144,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-04 — **Documents requested (Gmail, in Russian, Julia copied).** Two emails the same day: (a) reconnect **both** Gossip Miami bank accounts to QuickBooks via "Fix now" — the transactions after the disconnection never loaded — plus **all credit-card statements from January 2025 through January 2026** and the **checking statements for December 2025 and January 2026**; (b) a follow-up asking for **photos of every check the company wrote and of the cash-deposit slips**, both downloadable from his banking app. _(The client had sent "GOSSIP Statements 2025" earlier that afternoon, before these asks.)_
 - 2026-08-05 — ✅ **The client delivered the 2025 credit-card statements** — **12 monthly PDFs, statement dates 2025-01-03 → 2025-12-03**, emailed to Julia and forwarded to Maria the same day. That satisfies the 2026-08-04 "January 2025 → January 2026" credit-card ask **except the January 2026 statement**. _(Gmail.)_
 - 2026-08-05 — **Consolidated "everything we need for the 2025 return" email sent**, three hours after that delivery _(Gmail, in Russian, Julia copied)_ — it **restates** the 2026-08-04 asks and **narrows** the credit-card range to **January 2026 alone**, the 2025 months having just arrived. Still asked for: reconnect both bank accounts via "Fix now" (with a screenshot of the button), the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, and the **photos of every check the company wrote + the cash-deposit slips**.
+- 2026-08-06 — **Ownership settled (Lilian):** the **wife is the sole owner of Gossip Miami**, the **husband owns Marat Boxing**. That explains why only one portal contact sits on the company record and resolves the "are these two roles one person" question — they are two people, but one address carries all the company-side correspondence. **What remains open is whose address that is** (§2).
 - 2026-08-06 — **Double case note opened for the 2025 tax preparation** — "CASE · 2025 tax preparation" (note **485291**), so Julia or anyone else can open the client and see the status in seconds. It is the team-facing mirror of this file and gets **updated in place**, never duplicated. Per Lilian the note carries the full detail — contact names, email addresses, client IDs — because Double is the system of record for client data; **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_.
 - 2026-08-06 — **Status per Lilian:** the piece she is actively waiting on is the client **going to the bank for the images of the checks DEPOSITED INTO the company and of the checks the company ISSUED**. **He said he would try to resolve it.** Nothing received yet. _(Lilian)_
   - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation.
@@ -155,7 +161,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 ### Information still needed
 
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
-- [ ] **Whether §2's "primary correspondent" and "second joint filer / Marat Boxing owner" are the same person** — all email goes to one address (see the note in §2)
+- [ ] **Whose email address the single company-side contact actually is** — Double attributes it to the husband, its Gmail display name reads as the wife's initials, and the wife is the sole owner (§2). Decides who we address and who signs
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
 - [ ] Where the client's Google Drive folder is (§7)

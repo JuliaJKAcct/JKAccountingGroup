@@ -419,6 +419,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    on a matter, `list_notes(clientId)` and look for the note that already covers it.** _(Lilian stated
    this when the convention was created and **re-confirmed it unprompted on 2026-08-06**, when the firm
    opened its second case note — a different matter, Ecoorganic's QuickBooks handover.)_
+   **The one sanctioned exception is length, not topic:** when a matter genuinely outgrows the 8 KB wall
+   it may be split into `Part 1 / Part 2 / …` under the strict discipline below. Splitting because a
+   case has several *aspects* is still forbidden — that's the fragmentation this rule exists to prevent.
 2. **When new information about a tracked case arrives, updating its note is part of the work** —
    not a separate request. Lilian's instruction (Aug 2026): *when I tell you about this again, you
    have to go to that note and update it — it cannot be left sitting on out-of-date information.* (The lookup that makes this
@@ -452,9 +455,10 @@ the whole thing start to finish, instead of reconstructing it from email.
    the firm's system of record for client data, and a note that makes the reader go hunting for who
    "the owner" is has failed at its one job. **This does not loosen the repo rule at all**: the
    client-intelligence files stay role-only and secret-free. Same fact, two homes, two standards.
-   _(Lilian, 2026-08-06, explicitly: in Double notes include all the necessary information, sensitive
-   or not — emails, names, and so on — "en double necesita toda la información posible". She asked for
-   the three existing notes to be back-filled, which was done the same day.)_
+   _(Lilian, 2026-08-06: in Double notes include all the necessary information, sensitive or not —
+   emails, names, and so on. She asked for the three existing notes to be back-filled, which was done
+   the same day, and **confirmed the same day that the restriction is the repo's alone** — "es en el
+   main donde tenemos restricciones por seguridad".)_
    - **Credentials are the one open question.** She named passwords among what belongs in a note. Two
      things to settle with her before any go in: the firm's convention puts logins in the **Google
      Drive vault**, so a note becomes a *second* home that nobody rotates or retires; and **whether
@@ -476,8 +480,41 @@ Practical rules:
 - To get a long note in safely: `create_note` with a short stub, then `update_note` with the trimmed
   full body. That also keeps the ID stable for rule 1.
 - Length is a feature, not a limitation: it forces the note to stay the *readable* view. When a case
-  outgrows 7,500 characters, the detail belongs in the client-intelligence file (rule 7), not in more
-  note.
+  outgrows 7,500 characters, the first question is always whether the overflow belongs in the
+  client-intelligence file (rule 7) instead.
+
+**What this is, precisely — say it this way to Double support.** The `403` comes back as *"MCP server
+returned 403 Forbidden — the request may have been blocked by a firewall or security service"*, i.e.
+the endpoint refused the POST. That reads like a **WAF / request-size rule in front of the API**, not
+a documented note-length limit in the product, and it is **not proven that Double's own UI refuses a
+note that long** — nobody has tested a long paste in the browser. So don't tell support "your notes
+have an 8 KB limit"; tell them **"POSTs to the MCP endpoint with bodies at or above ~8,000 characters
+return 403 while smaller ones succeed — please raise or whitelist that"**, and test the same content
+in the UI first, because if the UI accepts it, that's the strongest evidence it's the API path alone.
+
+### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
+
+Lilian's workaround (2026-08-06), for matters that carry more than one note can hold. It is a real
+exception to rule 1, so it comes with discipline, or it becomes the fragmentation rule 1 forbids:
+
+1. **Try to avoid it first.** Trim, and move detail into the client-intelligence file. Most cases fit.
+2. **Part 1 is always the LIVE note.** It carries **STATUS**, **PENDING / NEXT ACTION**, the options if
+   a decision is open, and the **most recent** timeline entries. Whoever opens the client reads Part 1
+   and needs nothing else to know where things stand.
+3. **Later parts are the ARCHIVE, and only ever receive entries pushed OUT of Part 1** as it fills —
+   oldest history furthest back. New information always goes into Part 1, so the split point moves
+   backwards over time and Part 1 never goes stale.
+4. **Never split by topic.** Status and pending actions do not move out of Part 1, ever.
+5. **Title every part `CASE · <matter> — Part N of M`**, and when M changes, **retitle the existing
+   parts** so nobody reads "Part 1 of 2" and stops at a note that is now half the story.
+6. **Cross-link both ways:** Part 1 ends with *"older history continues in Part 2, note ID …"*; each
+   archive part opens with *"Part N of M — the live status is in Part 1, note ID …"*.
+7. **Record every part's ID** in the client file's §7, not just the first.
+8. **Update in place still applies within each part.** A new part is created only when the live one is
+   full — never as a way to append an update.
+
+None of the three current notes needs this yet (all under 8 KB). Revisit if Double raises the limit —
+then collapse the parts back into one note, which is the preferred shape.
 
 ### The body shape
 
