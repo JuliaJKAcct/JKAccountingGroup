@@ -54,6 +54,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | _(add roles as needed)_ | |
 
 - **Double client:** _(pending — link)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 
 ## 3. Systems & access
 
@@ -139,5 +140,6 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** _(pending — link)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

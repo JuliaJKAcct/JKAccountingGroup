@@ -1,6 +1,6 @@
 ---
 name: double-mcp
-description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, monthly closes, tasks, portal contacts, the file library, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, or creating/updating tasks and notes. Encodes the four data planes (client record vs custom properties vs tax projects vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, what the MCP does NOT expose (tax organizers and their progress, saved views, file contents), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, and the call-efficiency patterns for roster-wide sweeps.
+description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, monthly closes, tasks, portal contacts, the file library, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, creating/updating tasks and notes, or keeping a client matter's **running case note / case history**. Encodes the four data planes (client record vs custom properties vs tax projects vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, what the MCP does NOT expose (tax organizers and their progress, saved views, file contents), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, the call-efficiency patterns for roster-wide sweeps, and the firm's case-note convention (one running note per matter, updated in place).
 ---
 
 # Double MCP — operating guide
@@ -292,25 +292,34 @@ the whole thing start to finish, instead of reconstructing it from email.
    `update_note` as things happen. A second note on the same matter splits the history and defeats
    the point.
 2. **When new information about a tracked case arrives, updating its note is part of the work** —
-   not a separate request. Lilian's words: *"cuando te hable de esto de nuevo, tienes que ir a esa
-   nota y actualizar esa nota. No puede quedarse con la información atrasada."* Find the existing
-   note with `list_notes(clientId)` **before** writing anything.
+   not a separate request. Lilian's instruction (Aug 2026): *when I tell you about this again, you
+   have to go to that note and update it — it cannot be left sitting on out-of-date information.*
+   Find the existing note with `list_notes(clientId)` **before** writing anything.
 3. **English**, like every firm artifact, whatever language the session is in.
-4. **Not for everything.** Open a case note when the matter **spans more than a day**, involves a
-   **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk**. Routine
-   work stays as Double **tasks**. Lilian decides what gets one; don't manufacture them.
+4. **Not for everything.** A matter is a **candidate** when it **spans more than a day**, involves a
+   **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk** — but the
+   criteria only shortlist. **Lilian's say-so is what opens a note**; propose it, don't manufacture
+   it. Routine work stays as Double **tasks**.
 5. **Every entry names the person who did it.** All the firm's notes post under one shared Double
    user (`create_note` attributes to the connected account — currently "Julia Kononova"), so
    without an inline name the trail is anonymous six months later.
 6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
-7. **The repo file stays the master.** The case's full detail — sources, inferences, what is
-   unverified — lives in [`client-intelligence`](../client-intelligence/) `§6`; the Double note is
-   the **team-facing mirror**, written to be read. One instruction from Lilian, two destinations,
-   updated in the same pass. **Read the client file before rewriting the note** — the other person's
-   session may have advanced the case since the note was last touched (this happened the first time:
-   `main` had already recorded Julia's objection and the note had to be corrected before anyone read
-   it).
-8. **Nothing sensitive.** No dollar figures from a client's books, no account numbers, no personal
+7. **The repo file stays the master — and its substance is NOT only `§6`.** The case's full detail
+   lives in the [`client-intelligence`](../client-intelligence/) client file: **`§4`/`§5` carry the
+   substance** (what the agency said, the routes, the caveats, the ⚠️ header banners) and **`§6` the
+   dated log + outstanding items**. The Double note is the **team-facing mirror**, written to be read.
+   The trigger is **"the matter moved"**, not "§6 gained an entry" — mirroring a log line while `§4`
+   still says something contradictory is exactly the failure PR #138 had to repair. One instruction
+   from Lilian, two destinations, updated in the same pass.
+8. **Read the client file at its latest state before rewriting the note.** The other person's session
+   may have advanced the case (`git fetch` first). This bit on day one: `main` had already recorded
+   Julia's objection putting a closure on hold, and the freshly-written note had to be corrected the
+   same day.
+9. **Carry the master's caveats into the note, don't flatten them.** If the file says *recommended,
+   not agreed*, or *inferred, not established*, or *unverified*, the note says so too — in the block
+   a reader will act on. A case note is read with an agency on the phone; a hedge dropped there
+   becomes a statement to the state.
+10. **Nothing sensitive.** No dollar figures from a client's books, no account numbers, no personal
    contact details — the same line the repo draws. Agency phone numbers and public case/reference
    numbers are fine.
 
@@ -324,7 +333,7 @@ the whole thing start to finish, instead of reconstructing it from email.
 | **STATUS** | One line: open/closed, and what it's waiting on. First thing a reader sees. |
 | **WHAT THIS IS** | One paragraph of context for someone who has never seen the matter. |
 | **PENDING — NEXT ACTION** | The concrete next step, who owns it, and the date it's been pending since. Sub-bullets for how to actually do it. |
-| **THE OPTIONS** | Only when a decision is open — each route with its cost and its trade-off, so the reader sees why it isn't decided. |
+| **THE OPTIONS** | Only when a decision is open — each route with its cost and its trade-off, so the reader sees why it isn't decided. Label it for the actual choice when that reads better (the pilot uses "THE TWO ROUTES"). |
 | **TIMELINE** | Dated entries, oldest first, each ending with who did it. |
 | **ALSO STILL OPEN** | The secondary loose ends, so they don't get lost behind the headline action. |
 | **Footer** | "This is the running case log — keep this same note updated, do not open a second note", plus `Last updated: <date> — <name>`. |
@@ -370,5 +379,9 @@ anything you would not want the client to read.
   re-run `get_property_columns` rather than trusting any list.
 - The **TaxDome folder structure** is cleaned up or retired — §3 shrinks to the firm's own
   structure.
-- A write pattern bites us (a bad upsert, a broken move) — record the lesson in §6 so it isn't
-  repeated.
+- A write pattern bites us (a bad upsert, a broken move) — record the lesson in §6 (write safety) so
+  it isn't repeated.
+- **A section is inserted or renumbered** — fix the external `§N` citations, which live in
+  `CLAUDE.md` (Layout, Where-to-start, Core conventions), `.claude/skills/README.md`,
+  `.claude/skills/client-intelligence/SKILL.md`, `.claude/skills/tax-season-readiness/` and the
+  per-client files under `projects/client-intelligence/clients/`.

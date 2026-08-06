@@ -52,7 +52,7 @@ the US.
 │       ├── sop-authoring/             the house way to write/restructure/review an SOP (structure + review workflow + Atlas render)
 │       ├── bookkeeping-sop/           per-client monthly-bookkeeping runbooks — the .md structure, the firm's categorization framework + color model, how they render in the Hub (Ecoorganic is the pilot)
 │       ├── odoo-mcp/                  operating guide for the Odoo MCP — 50-call/day budget, chatter audit log, write-safety rules
-│       ├── double-mcp/                operating guide for the Double MCP — the four data planes, TaxDome folder conventions, what it can't reach, write safety
+│       ├── double-mcp/                operating guide for the Double MCP — the four data planes, TaxDome folder conventions, what it can't reach, write safety, the case-note convention
 │       ├── client-intelligence/       creates/enriches/audits the per-client files + renders the review dashboard (Atlas); sweep by owner, assign by company
 │       ├── knowledge-hub/             builds/extends the firm Knowledge Hub (the one page indexing all SOPs + clients) — preferences, curation rules, verify-before-publish gate
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
