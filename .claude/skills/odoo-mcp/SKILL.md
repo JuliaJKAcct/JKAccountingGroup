@@ -23,11 +23,38 @@ operate the budget and the audit trail* — read both.)
 
 ## 1. Hard constraint: 50 MCP calls per day
 
-This project uses the **free plan** of the Odoo MCP server. The quota is **50 tool calls per
-24-hour period**, shared across everything.
+This project uses the **free plan** of the Odoo MCP connector. The quota is **50 tool calls
+per 24-hour period**, shared across everything.
 
 Treat the quota as a real budget, not a soft guideline. Running out mid-task leaves work
 half-finished and the database in an inconsistent state.
+
+### Where the limit comes from (it gets asked a lot)
+
+Three separate layers get confused here. The cap belongs to exactly one of them:
+
+| Layer | What it is | Source of the 50/day? |
+|---|---|---|
+| The firm's **Odoo subscription** | The ERP itself — the database, accounting, CRM, website, appointments | **No.** Odoo's own XML-RPC/JSON-RPC API has no comparable per-day call cap (anti-abuse rate limits aside — *believed, not verified first-hand*) |
+| The **Claude plan** | What the firm pays Anthropic | **No.** Claude's plan meters overall usage (tokens/messages), and MCP calls consume that like any other work — but it sets no per-connector daily call cap, so the 50/day does not come from it |
+| The **MCP connector** (`Odoo_JK_Accounting_Group`) | The bridge between Claude and Odoo, connected at account level | **Yes — this is it.** Its plan is what caps us |
+
+So upgrading Odoo would not raise it. The two real ways out are **paying for a higher plan
+on the connector**, or **connecting Odoo directly through its own API** with a database API
+key — which *should* remove the middleman ceiling (subject to the Odoo-side check hedged
+above), but is an integration to build.
+
+**Not yet verified:** which provider the connector is, and that we are in fact on its free
+tier — the "free plan" is this repo's long-standing working assumption, not something
+checked against the service. **`pan_usage` answers both in 1 call**, returning the plan,
+calls used today, the daily limit and what remains.
+
+**Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
+most of what exists there, and set up this MCP connection. Route integration questions —
+including *why the MCP connector rather than a direct API* — to him. That decision is open
+and parked with Lilian: see the **"Odoo's 50-calls/day ceiling"** row in
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). Until it is settled, the 50/day budget stands and
+the rules below apply.
 
 ### What counts as a call
 

@@ -39,8 +39,8 @@ For the scoped clients, once per week:
    merge) and marks the queue. See [`sop-proposals.md`](../sop-proposals.md) for the loop.
 
 **Guardrails:** non-sensitive only (secrets/PII stay in Double/Drive, referenced by
-link); source every fact; scope to the client list below (tool budgets — e.g. Odoo is
-50 calls/day, so it is *not* used here); read-only on the books.
+link); source every fact; scope to the client list below (tool budgets — e.g. the Odoo
+**MCP** is 50 calls/day, so it is *not* used here); read-only on the books.
 
 ## Search completeness (important — why we search by owner AND business)
 

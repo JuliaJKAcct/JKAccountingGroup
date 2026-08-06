@@ -83,6 +83,10 @@ shared by everyone.** Anyone using it should follow the [`odoo-mcp`
 skill](./.claude/skills/odoo-mcp/) — Claude loads it when it recognizes Odoo work, and the
 always-on standing rule in [`CLAUDE.md`](./CLAUDE.md) enforces the budget regardless — which
 covers the call budget, the chatter audit-log convention, and the write-safety rules.
+That cap is the **connector's**, not Odoo's and not Claude's — the skill's §1 explains the
+three layers, and raising it (higher connector plan vs. a direct Odoo API integration) is an
+open decision parked with Lilian and Andres: the **"Odoo's 50-calls/day ceiling"** row in
+[`FOLLOW-UPS.md`](./FOLLOW-UPS.md).
 
 **One-time NotebookLM login.** The first time you use it, ask Claude to run the
 `setup_auth` tool. It opens a **visible Chrome window** so you can sign in to

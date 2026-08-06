@@ -149,8 +149,8 @@ rebuilt from scratch at every question.
   live" for the exact, required protocol.
 
 **Guardrails.** Scope the sweep to **active clients** (those with CI files / a
-priority list), not the whole book, to respect tool budgets (e.g. Odoo's 50 calls /
-day). Never commit sensitive data. Note the source of each fact. **Past Claude chat
+priority list), not the whole book, to respect tool budgets (e.g. the Odoo **MCP's**
+50 calls / day). Never commit sensitive data. Note the source of each fact. **Past Claude chat
 sessions are not a sweepable source** — only what's written to the repo / Double /
 Ping / QuickBooks persists; that is why this file exists.
 
