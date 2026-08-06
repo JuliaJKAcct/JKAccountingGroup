@@ -51,9 +51,9 @@ calendars that cannot open.
 
 | | |
 |---|---|
-| **Where** | `/ua/konsultatsiia` — **and `/ua/`, the Ukrainian home, is the same page** |
-| **Reach** | **Public.** Anonymous request returns 200 · listed twice in `sitemap.xml` · `robots.txt` blocks nothing · has `canonical` + `og:url`, no `noindex` · **linked from the English page** — the `УКР` language switch on `/consultation` points straight at it |
-| **Cost** | 0 calls in the website editor (page text + the SEO title) |
+| **Where** | `/ua/konsultatsiia` — **one page, not two**: `/ua/` 301-redirects here, so the Ukrainian "home" *is* this landing |
+| **Reach** | **Public.** Anonymous request returns 200 · listed in `sitemap.xml` · `robots.txt` blocks nothing · has `canonical` + `og:url`, no `noindex` · **linked from the English page** — the `УКР` language switch on `/consultation` points straight at it |
+| **Cost** | 0 calls in the website editor (page text + **both** SEO fields — title *and* description) |
 
 It is the **untouched twin of the pre-August English page** — useful as a reference for
 what the old wording said, and exactly why it must not stay public.
@@ -62,10 +62,12 @@ What it still says (verbatim), each needing the same treatment the English page 
 
 | Element | Ukrainian | English meaning |
 |---|---|---|
-| Page title / SEO | `Бухгалтерія і податки в США вашою мовою — безкоштовна консультація` | "…— **free consultation**" |
+| Page title (SEO) | `Бухгалтерія і податки в США вашою мовою — безкоштовна консультація` | "…— **free consultation**" |
+| Meta description (SEO) | ends `…Запишіться на безкоштовну консультацію.` | "…Book the **free** consultation." — easy to miss, it is not visible on the page |
 | Every CTA | `Записатися на безкоштовну консультацію` | "Book a **free** consultation" |
 | Offer line | `30 хвилин · безкоштовно · вашою мовою` | "**30 minutes · free** · in your language" |
-| Step 1 | `Запишіться на безкоштовну консультацію — 30 хвилин, онлайн` | "Book the **free** consultation — 30 min, online" |
+| Step 1 heading | `Запишіться на безкоштовну консультацію` | "Book the **free** consultation" |
+| Step 1 body | `30 хвилин, онлайн, вашою мовою. Оберіть зручний час.` | "30 min, online, in your language. Pick a time." |
 | FAQ question | `Консультація справді безкоштовна?` | "**Is the consultation really free?**" |
 | FAQ answer | `Так: 30 хвилин із бухгалтером (не з менеджером з продажу), онлайн, без зобов'язань` | "Yes: 30 min with an accountant, online, no obligation" |
 | Services line | `А конкретика для вашого бізнесу — це і є безкоштовна консультація` | "…the specifics are what the **free** consultation is for" |
@@ -75,18 +77,30 @@ What it still says (verbatim), each needing the same treatment the English page 
 The English equivalents now read **1 hour · $150**, and its FAQ asks *"How much does the
 consultation cost?"* — mirror that.
 
-### 2.2 The Russian landing is dead, and the language switch points at it
+### 2.2 The Ukrainian thank-you page also still says "free"
+
+`/ua/konsultatsiia/dyakuyemo` returns **200**, is in `sitemap.xml`, and both its body and
+its meta description still promise a time for the **безкоштовної консультації** (free
+consultation). It carries `noindex`, so it ranks lower than the landing — but it is public
+and it is **where every Ukrainian form submitter lands**. Fix it in the same pass.
+
+### 2.3 The Russian landing is dead, and the language switch points at it
 
 | | |
 |---|---|
 | **Where** | `/ru/konsultatsiya` → **404** |
 | **Impact** | The `РУС` switch on `/consultation` links there — a visitor who picks Russian gets a broken page |
-| **Also** | `/ru-ru/consultation` and `/ru/consultation` **do** load, but serve the **English** text ($150) — a Russian speaker gets English, not Russian |
+| **Also** | It is **still submitted in `sitemap.xml`** while 404-ing — a live error in Google Search Console. Removing the entry is part of this fix |
+| **And** | `/ru-ru/consultation` and `/ru/consultation` **do** load, but serve the **English** text ($150) — a Russian speaker gets English, not Russian |
 
 Different problem from Ukrainian: Russian is not selling a stale offer, it is **missing**.
 Decide whether to republish a Russian landing or repoint `РУС` at a URL that works.
 
-### 2.3 `/pricing` still advertises a free consultation to Google
+> **Note:** [`INSTALL-ODOO.md`](./INSTALL-ODOO.md) previously said the Russian landing was
+> "already converted" at `/ru-ru/consultation`. That was wrong and has been corrected there
+> — that URL is the English page under Odoo's `ru-ru` locale prefix.
+
+### 2.4 `/pricing` still advertises a free consultation to Google
 
 | | |
 |---|---|
@@ -107,16 +121,23 @@ field was missed, which is why it survives a visual review.
 
 Live on 2026-08-06:
 
-| Page | Button | Points at |
+| Page (live URL) | Button | Points at |
 |---|---|---|
-| Home | Odoo header "Book an Appointment" | `/appointment/1` |
-| Home | "Book a free discovery call" (top nav) | `/appointment/1` |
-| Home | "Book a Free Discovery Call" (hero) | **`/contactus`** ← still the old contact form |
-| Home | "Schedule a Consultation" | `/book/Discovery-Call` ← label says *consultation*, link goes to the *discovery call* |
-| Home | "Book a Free Discovery Call" (closing) | `/book/Discovery-Call` |
-| Pricing | "Book a free discovery call" (body) | **`/contactus`** |
-| Pricing | "Book a free discovery call" (nav) | `/appointment/1` |
-| About | "Book a Free Discovery Call" | `/book/Discovery-Call` |
+| Home `/` | Odoo header "Book an Appointment" | `/appointment/1` |
+| Home `/` | "Book a free discovery call" (top nav) | `/appointment/1` |
+| Home `/` | "Book a Free Discovery Call" (hero) | **`/contactus`** ← still the old contact form |
+| Home `/` | "Schedule a Consultation" | `/book/Discovery-Call` ← label says *consultation*, link goes to the *discovery call* |
+| Home `/` | "Book a Free Discovery Call" (closing) | `/book/Discovery-Call` |
+| Home `/` | **"Start Now" ×3** | **`/contactus`** ← a fourth path into the contact form |
+| Pricing `/pricing` | "Book a free discovery call" (body) | **`/contactus`** |
+| Pricing `/pricing` | "Book a free discovery call" (nav) | `/appointment/1` |
+| Pricing `/pricing` | **"Start Now" ×3** | **`/contactus`** |
+| About `/about-us` | "Book a Free Discovery Call" | `/book/Discovery-Call` |
+| Consultation `/consultation` | "Book a consultation" (nav) | `/appointment/3` ✅ **the one entry point already wired correctly** — use it as the reference |
+
+> **Watch the URLs.** The site also serves `/home-v2`, `/pricing-v2`, `/about-us-v2` and
+> `/our-services-v2`, which **301 to the canonical URLs above** — edit the canonical page,
+> not the redirect. (`/about` is a 404; the About page is `/about-us`.)
 
 Settle on one canonical URL per offer and make every button use it. `/appointment/1` and
 `/book/Discovery-Call` are the same calendar by two routes; `/contactus` is a different
@@ -153,14 +174,26 @@ The CTA rule was never rolled out past the site. Durations currently in play:
 | Duration | Where it is promised | Real? |
 |---|---|---|
 | **10 min, free** | The website CTAs, Odoo appointment type 1 | ✅ the actual offer |
-| **20 min, free** | Every lead-magnet calculator — *"A 20-minute call. No cost, no pressure."* and *"book a free 20-minute call"* ([`lead-magnets/calculators/`](../lead-magnets/calculators/)) | ❌ |
-| **30 min, free** | The Ukrainian landing · the referral checklists — *"Free 30-minute launch call"*, *"Free 30-minute financial review"* ([`referral-offer-strategy/templates/`](../referral-offer-strategy/templates/)) | ❌ |
+| **20 min, free** | **10 files, 19 occurrences** across [`lead-magnets/`](../lead-magnets/) — all **six calculators**, all **three assessments**, and `index.html`: *"A 20-minute call. No cost, no pressure."* and *"book a free 20-minute call"* | ❌ |
+| **30 min, free** | The Ukrainian landing · the four referral templates in [`referral-offer-strategy/templates/`](../referral-offer-strategy/templates/) — EN *"Free 30-minute launch call"* / *"Free 30-minute financial review"*, RU *"Бесплатный звонок на 30 минут"* / *"Бесплатная финансовая консультация, 30 минут"* | ❌ |
 | **60 min, $150** | `/consultation` | ✅ the paid offer |
 
-Also: **every email signature's "Book a consultation →" link points at `/contactus`**, not
-at a calendar ([`email-branding/signatures/`](../email-branding/signatures/)) — and the
-label doesn't say which of the two offers it is. The lead magnets' "Book a Consultation"
-URL is still a placeholder anchor.
+Two more, both in [`referral-offer-strategy/templates/`](../referral-offer-strategy/templates/):
+**`realtor-referral-playbook.md` and `realtor-referral-playbook-ru.md`** still sell a free
+consultation throughout.
+
+**The email signatures need a decision, not just an edit** — the split is uneven
+([`email-branding/signatures/`](../email-branding/signatures/), 9 files):
+
+- **3 files carry a "Book a consultation →" link and it points at `/contactus`**, not a
+  calendar — `julia.html`, `julia-hosted.html`, and the shared `_template.html`. The label
+  also doesn't say *which* of the two offers it is.
+- **The other 6 have no booking link at all** (Lilian, Maria, Liudmyla × hosted/non-hosted)
+  — their only link is the homepage. Decide whether they should have one, and which offer
+  it points to, before sweeping.
+
+The lead magnets' "Book a Consultation" URL is still the placeholder
+`href="#REPLACE-WITH-BOOKING-URL"`.
 
 Pick one duration per offer, then sweep every asset in one pass.
 
@@ -170,5 +203,7 @@ Pick one duration per offer, then sweep every asset in one pass.
 
 Carried from the earlier audit, still unverified — needs an Odoo session, not a crawl:
 
-- **Three legacy unpublished views** still carrying the old free-consultation wording.
+- **Three legacy unpublished views** still carrying the old free-consultation wording:
+  `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`
+  (named in [`INSTALL-ODOO.md`](./INSTALL-ODOO.md)).
 - Whether appointment type **2 (Q&A Call)** should stay published at all.
