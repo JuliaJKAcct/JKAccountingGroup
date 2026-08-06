@@ -38,7 +38,8 @@ the US.
 │   ├── sops/                      firm standard operating procedures + client-task runbooks (Active)
 │   ├── client-intelligence/       per-client knowledge base (one file per client) — the raw material for each client's SOPs (Active)
 │   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients + downloadable templates, generated from the repo (Active)
-│   └── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
+│   ├── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
+│   └── lilian-notebook/           LILIAN'S personal notebook — the firm's hard-won lessons, each written as the rule for next time; one searchable page she has bookmarked (Active)
 ├── .claude/
 │   ├── settings.json  registers the hooks below
 │   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
@@ -61,6 +62,7 @@ the US.
 │       ├── client-intelligence/       creates/enriches/audits the per-client files + renders the review dashboard (Atlas); sweep by owner, assign by company
 │       ├── knowledge-hub/             builds/extends the firm Knowledge Hub (the one page indexing all SOPs + clients) — preferences, curation rules, verify-before-publish gate
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
+│       ├── lilian-notebook/            drives Lilian's Notebook — capture a lesson (PROPOSE it unprompted), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
 │       ├── proposal-generator/         drives the proposal-tool project — client-ready proposals + engagement letters (the interactive business tax-prep generator, per-client fields, client data never committed)
 │       └── impeccable/                general UI/design skill
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
@@ -92,6 +94,7 @@ the US.
 | A **booking** page, or the firm's booking calendars — the free 10-minute phone **discovery call** vs. the paid 1-hour **$150 consultation**, each with its own availability (Odoo Appointments; EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
 | Notes from the **"Scale Your Accounting Firm"** course, digesting a video transcript, or picking up work from a course track/module | [`projects/marketing/scale-your-accounting-firm/`](./projects/marketing/scale-your-accounting-firm/) |
 | A **lead magnet** — a free calculator or assessment/quiz for the top of the funnel (S-corp savings, surprise tax bill, license check, foreign-account check…), or the on-brand HTML tool that powers one | [`projects/marketing/lead-magnets/`](./projects/marketing/lead-magnets/) |
+| A **lesson learned the hard way** — "what did we learn from the Tsminibears penalties?", "what does an agency/platform actually do?", *"anota esto en mi libreta"* — or looking one up | the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) → [`projects/lilian-notebook/`](./projects/lilian-notebook/) — **Lilian's** personal notebook, one note per lesson written as the rule for next time, rendered as one searchable page she has bookmarked (and a card in the Hub). A lesson is **not** a task: tasks live in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and get deleted when they close, which is exactly why the lesson has to live here |
 | Capturing a new idea for later, or picking what to work on next | [`BACKLOG.md`](./BACKLOG.md) — the firm's idea parking lot |
 | Remembering **what you personally started but haven't finished** — "what do I have pending?" / "¿qué me quedó pendiente?" | [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) — the firm's open loops. **Not** auto-shown; surface it **on request only**, and filter by the **Owner** the asker identifies as (Lilian says "soy Lilian" **or writes in Spanish**; an unidentified non-Spanish session = Julia/firm — the *Session identity is provenance* rule). Distinct from `BACKLOG.md` (future ideas). |
 | Something new that doesn't fit above | it's probably a **new project** — see below |
@@ -137,6 +140,19 @@ in that folder.
   **part of finishing it**, run via the [`knowledge-hub` skill](./.claude/skills/knowledge-hub/) —
   not a separate ask. The only exception is when Lilian explicitly says a given thing is
   too small to warrant a Hub entry.
+- **A lesson learned the hard way gets captured — offer it, don't wait to be asked.** When a
+  session turns up something that would cost the firm again — an agency behaving differently than
+  expected, a platform that doesn't do what everyone assumed, a conclusion that turned out to be
+  wrong, money or weeks lost to something a written rule would have prevented — **propose a note
+  in [`projects/lilian-notebook/`](./projects/lilian-notebook/) in one line**, with the title
+  you'd give it, and let Lilian say yes or no. She asked for this precisely because *she* won't
+  remember to ask (Lilian, Aug 2026). Never file one silently, and if a note already covers the
+  topic, say so and **enrich that note** rather than adding a second. The mechanics — the entry
+  structure, what belongs there vs. in a skill/SOP/client file, build + publish — are in the
+  [`lilian-notebook` skill](./.claude/skills/lilian-notebook/). **The distinction that matters:**
+  a **task** goes in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and is **deleted when it resolves**, so
+  when a matter closes, ask what it taught before the row disappears — that's the leak the
+  notebook exists to plug.
 - **Know the skills we already have — check first, enrich instead of duplicate.**
   The canonical catalog of every skill is [`.claude/skills/README.md`](./.claude/skills/README.md)
   (the skills index). **Nobody remembers all of them**, so it's your job to: (a) answer

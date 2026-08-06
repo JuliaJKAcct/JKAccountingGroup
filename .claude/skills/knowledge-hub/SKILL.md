@@ -197,7 +197,19 @@ emitted script silently broke *every* click.
     `{ band: 'tool', …, tool:{ id, label } }` entry pointing at that id. The band currently holds
     three: the **Business Tax Engagement Letter** generator (reader id
     `business-tax-engagement-letter-standard`), the **Monthly Retainer Proposal** generator
-    (`monthly-proposal-generator`), and the **Internal Pricing Calculator** (`pricing-calculator`).
+    (`monthly-proposal-generator`), the **Internal Pricing Calculator** (`pricing-calculator`), and
+    **Lilian's Notebook** (`lilian-notebook`).
+
+    **Variant — a page that has its OWN generator** (Lilian's Notebook is the first). It isn't a
+    `.src.html`, so don't inline one: `build-hub.mjs` **imports its build function** and calls it
+    (`buildNotebookDoc({ embedded: true })` from
+    [`projects/lilian-notebook/render/build.mjs`](../../../projects/lilian-notebook/render/build.mjs)),
+    exactly as the client cards import the `client-intelligence` engine — same rule, one source, no
+    second copy. Pass `embedded: true`: the page then drops its own toolbar, masthead and footer,
+    because the Hub's reader already supplies a masthead with that title (without it the heading
+    prints twice), and it follows the Hub's theme through the same-origin `srcdoc` iframe. Keep the
+    embed in a `try/catch` returning `''` so a parse error in the notebook's Markdown can't take the
+    whole Hub build down — `toolIframe()` then renders its "Tool unavailable" callout.
 
     **Tool embeds break OUT of the 880px reading column — full-width by default (Lilian,
     Jul 2026).** The reader's `.page` is a **880px text column** (right for SOPs/prose); a

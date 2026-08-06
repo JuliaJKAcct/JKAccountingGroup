@@ -29,6 +29,9 @@ import { dirname, resolve, basename } from 'node:path';
 // SAME expandable client cards, so the Hub's client section is identical to the
 // standalone dashboard and there is one implementation, no drift.
 import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-intelligence/render/build.mjs';
+// Lilian's Notebook is embedded from ITS OWN generator, so the Hub can never show a stale
+// copy — same rule as the proposal tools (one source, no second copy to keep in sync).
+import { buildNotebookDoc } from '../lilian-notebook/render/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
@@ -1019,6 +1022,19 @@ function monthlyReaderInner(){
     + `</div></section><div class="page">${toolIframe(MONTHLY_DOC, 'Monthly Proposal Generator')}</div>`;
 }
 
+/* Lilian's Notebook — the whole page, embedded in an isolated iframe straight from
+   projects/lilian-notebook (its build.mjs reads notes/*.md). Isolation matters here for the
+   same reason as the tools: the notebook ships its own Atlas copy, its own sticky search bar
+   and its own print stylesheet, none of which should touch the Hub's. */
+const NOTEBOOK_DOC = (() => { try { return buildNotebookDoc({ embedded: true }); } catch (e) { return ''; } })();
+function notebookReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Personal notebook · Lilian</p>`
+    + `<h1>Lilian's Notebook<span class="loc">Lessons worth not learning twice</span></h1>`
+    + `<p class="lede">The things the firm learned the hard way — what an agency actually does, where a platform lets you down, what a filing really costs — each written as <b>the rule to follow next time</b>, searchable. It replaces the paper notebook Lilian used to keep: the lesson survives after the task that taught it is closed and deleted. <b>Lilian's own record</b> — she's the one who writes in it — kept here so it's never lost. Search it, filter by category, or open the ★ starred ones.</p>`
+    + `</div></section><div class="page">${toolIframe(NOTEBOOK_DOC, "Lilian's Notebook")}</div>`;
+}
+
 function engagementReaderInner(owner, updated){
   const fieldRows = [
     ['1', 'Letter date'],
@@ -1585,6 +1601,11 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
 
+  { band: 'tool', kind: 'Notebook', name: "Lilian's Notebook — lessons learned", owner: 'lilian',
+    blurb: 'The lessons this firm learned the hard way, each written as the rule to follow next time — how an agency really behaves, where a platform lets you down, what a filing actually costs. Searchable, filterable by category, with the ★ starred ones marked. Lilian’s own record (she is the one who writes it); it lives here so a lesson outlives the task that taught it. Opens right here in the Hub, always rebuilt from its source.',
+    formats: ['In-Hub page'],
+    tool: { id: 'lilian-notebook', label: 'Open the notebook' } },
+
   { band: 'tool', kind: 'Interactive tool', name: 'Internal Pricing Calculator', owner: 'julia',
     blurb: 'Price a monthly client from the firm’s Core Pricing Matrix — enter the service parameters and get the internal fee build-up and the single bundled monthly fee, live in the browser. Internal only (the client never sees the breakdown); it also feeds the Monthly Retainer Proposal generator, using the same shared pricing core so the two never disagree.',
     formats: ['In-Hub tool'],
@@ -1618,6 +1639,7 @@ const TEMPLATES = [
 // is reflected in the Hub). Reader ids match the Templates cards' tool.id above.
 readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="lilian-notebook" hidden>${notebookReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
