@@ -61,7 +61,7 @@ The one-liners below are just the "when to reach for it."
 |---|---|
 | [`automated-email-reports`](./automated-email-reports/) | Setting up a **scheduled, unattended recurring email report** (no clicks) — Claude Code Routines + the firm's email webhook. |
 | [`odoo-mcp`](./odoo-mcp/) | **Any read/write in Odoo** through the MCP — load it *before the first Odoo call* (the free plan's 50-call/day budget, the chatter audit-log convention, write-safety rules). |
-| [`double-mcp`](./double-mcp/) | **Any read/write in Double** through the MCP — load it *before the first Double call*. The four data planes (client record vs properties vs tax projects vs file library), the TaxDome-migration folder conventions, what the MCP can't reach (organizers, saved views, file contents), write-safety + the file-ID two-space trap, roster-sweep efficiency, and the **case-note convention** (§7 — the one running note per case that the team reads, updated in place, never duplicated). |
+| [`double-mcp`](./double-mcp/) | **Any read/write in Double** through the MCP — load it *before the first Double call*. The five data planes (client record vs properties vs tax projects vs organizers vs file library), the TaxDome-migration folder conventions, the audited **capability map** (`references/capability-map.md`) that answers "can we do X in Double?" — including what is read-only (tax-return deadlines) and what is blocked (organizer publishing, loan tools) — the **organizer-response privacy rule**, write-safety + the file-ID two-space trap, roster-sweep efficiency, and the **case-note convention** (§7 — the one running note per case that the team reads, updated in place, never duplicated). |
 
 ---
 

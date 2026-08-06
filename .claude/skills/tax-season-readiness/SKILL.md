@@ -1,6 +1,6 @@
 ---
 name: tax-season-readiness
-description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, from the firm's Double data. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome organizer folders, or when linking a company to its owner's individual (1040) account. Encodes who is actually owed an organizer (bookkeeping and Schedule C clients are not) and what really gates each return — a company return runs off its books and feeds the owner's 1040 via K-1, not the reverse. Also the TaxDome-vs-Double organizer split, Lilian's hand-maintained Organizer Status procedure, how to get the progress percentages the MCP can't read, and the firm's 1040 question bank. Read-only.
+description: Determine which JK Accounting Group clients are READY to have their tax return prepared versus still PENDING, from the firm's Double data. Use when someone asks which clients haven't filed yet (2025 or any open year), which bookkeeping / QuickBooks clients are ready for taxes, who we are waiting on for a tax organizer, or to build the ready-vs-pending list. Also load it before interpreting Double's Tax Return Status / Organizer Status / Organizer Progress columns, before opening a client's TaxDome organizer folders, or when linking a company to its owner's individual (1040) account. Encodes who is actually owed an organizer (bookkeeping and Schedule C clients are not) and what really gates each return — a company return runs off its books and feeds the owner's 1040 via K-1, not the reverse. Also the TaxDome-vs-Double organizer split, Lilian's hand-maintained Organizer Status procedure, the two routes to the progress percentages (the organizer tools the MCP gained in Aug 2026, and the CSV export for a roster-wide sweep), and the firm's 1040 question bank. Read-only.
 ---
 
 # Tax-season readiness — who can we file, and who are we waiting on
@@ -39,8 +39,8 @@ is recorded in the **`Organizer Status`** column.
 **Current — Double organizers.** Among clients who are **owed** one at all (§1b — bookkeeping and
 Sch C clients are not), a fresh Double organizer went to those who had **not** completed one in
 TaxDome, and those who **joined after** the migration. Their state is `Organizer Status = Sent`, and how far the client has actually
-gotten is the separate progress-percentage column (a % — see §5; not readable through the MCP,
-but obtainable from the CSV export).
+gotten is the separate progress-percentage column (a % — see §5; readable through the MCP since
+Aug 2026, and still exportable to CSV for the whole roster at once).
 
 So: `Organizer Status` is about the **TaxDome-era** organizer *plus* the fact that a Double
 one was sent. The **progress percentage** is about the **Double-era** organizer's completion. They
@@ -51,10 +51,17 @@ are not duplicates of each other.
 > CSV header when referring to the data and the UI name when referring to what a person sees.
 
 > **The organizer's actual questions** — what we ask an individual client — are kept in
-> [`references/individual-organizer-questions.md`](./references/individual-organizer-questions.md),
-> because the Double MCP cannot read the organizer template. It holds the **General Information**
-> and (partial) **Income** sections captured 2026-07-30; the sections beyond that are listed there
-> as known gaps. **Never fill a gap from general knowledge** — get a fuller organizer from Lilian.
+> [`references/individual-organizer-questions.md`](./references/individual-organizer-questions.md).
+> It holds the **General Information** and (partial) **Income** sections captured 2026-07-30; the
+> sections beyond that are listed there as known gaps. **Never fill a gap from general
+> knowledge** — get a fuller organizer from Lilian.
+>
+> **Since 2026-08-06 the live organizer is also readable** — `get_organizer(organizerId)` returns
+> every slide, section and conditional-logic rule (see the
+> [`double-mcp`](../double-mcp/) skill §2.2). That is the way to answer "what exactly does the
+> 2025 organizer ask?" definitively. Two caveats: the payload is very large (~120 slides for a
+> 1040), and it is a **structure** read — never `get_organizer_responses`, which returns a real
+> client's SSNs and bank details.
 
 ---
 
@@ -158,8 +165,9 @@ a "waiting on the client" bucket without that confirmation.
 | **Company or individual?** | Property `Account Type` | `list_client_properties` |
 | **Tax Return Status** | **NOT a property.** It is the *tax project's* status | `list_projects(clientId)` → `status`, `filedAt`, `year`, `dueDate` |
 | **Organizer Status** | Property, column `226743` | `list_client_properties` |
-| **Organizer progress (%)** | Native Double column (CSV header: `Organizer Max Progress`) | Not exposed by the MCP — **get it from the view's CSV export**, see §5 |
-| **How many organizers are active** | Native Double column (CSV header: `Organizer Active Count`) | Same CSV export. Matters — see §5 |
+| **Organizer progress (%)** | The **organizer entity** (its own data plane), surfaced in the view as `Organizer Progress` / CSV `Organizer Max Progress` | **Now readable via MCP** (since 2026-08-06): `get_organizer(organizerId)` → `completionPercentage`. The CSV export still works and is cheaper for the whole roster at once — see §5 |
+| **How many organizers are active** | Same entity; CSV header `Organizer Active Count` | **Now readable via MCP**: `list_organizers(clientId)` and count the non-archived ones. Or the CSV export. Matters — see §5 |
+| **What the organizer actually asks** | The organizer's slides | `get_organizer(organizerId)` — structure only. **Never `get_organizer_responses`** on a real client ([`double-mcp`](../double-mcp/) §2.2) |
 | **Completed TaxDome organizer** | File library: `TaxDome > [Client Name] > 1. Completed Tax organizers` | `list_file_library` → then `list_files(clientId, folderId)` |
 | **Who owns this company** | Portal contacts shared between clients | `list_contacts` → each contact carries a `clientIds` array. **Omit `clientId` to get the whole graph in one sweep** ([`double-mcp`](../double-mcp/) §5.7) |
 
@@ -306,12 +314,21 @@ It held again on 31 Jul 2026 (**19 of 26** organizer-owed pending companies at 0
 the shape, **say what to do about it**: one reminder campaign to the whole 0% group beats
 per-client chasing of the few stuck midway.
 
-### Getting Organizer Progress — ask for the CSV export
+### Getting Organizer Progress — two routes since Aug 2026
 
-`Organizer Progress` is **not exposed through the Double MCP** (no organizer tool exists at all).
-But it is **not out of reach**: Double can export the view to CSV, and that export carries
-`Organizer Max Progress` and `Organizer Active Count`. **Ask for the export rather than reporting
-the data as unavailable** — mechanics in [`double-mcp`](../double-mcp/) §2.1.
+**Route 1 — the MCP (new).** Organizer tools exist as of 2026-08-06. `list_organizers` returns
+every organizer with its status; `get_organizer(organizerId)` returns `completionPercentage`.
+This is exact, live, and per-organizer — so it also dissolves the "max" ambiguity below, because
+you can see *which* organizer is at what percentage. Cost: `get_organizer` is a heavy call
+(~120 slides for a 1040), so it is one call **per organizer**, not one for the roster.
+
+**Route 2 — the CSV export (still the right tool for a roster-wide report).** Double exports the
+view with `Organizer Max Progress` and `Organizer Active Count` for everyone in one file —
+mechanics in [`double-mcp`](../double-mcp/) §2.1. For "where does the whole practice stand", this
+is still faster than 59 MCP calls.
+
+Rule of thumb: **CSV for the sweep, MCP for the specific client.** Either way, never report the
+data as unavailable.
 
 Two things the percentages taught us (Jul 2026):
 
@@ -581,8 +598,10 @@ instead of copying it in.
 
 ## 9. Update this skill when…
 
-- **`Organizer Progress` becomes readable** through the Double MCP (or a workaround is found)
-  — §5's limitation is the biggest gap in this workflow.
+- ~~**`Organizer Progress` becomes readable** through the Double MCP~~ — **done, 2026-08-06.**
+  Organizer tools shipped; §5 now documents two routes (MCP per client, CSV for the roster).
+  The follow-on to watch: whether a **roster-wide** organizer read gets cheap enough to retire
+  the CSV route entirely — today `get_organizer` is one heavy call per organizer.
 - The firm **finishes the TaxDome backlog** and the legacy/Double organizer split stops
   mattering — §1 and §4 then simplify a lot.
 - A **new `Organizer Status` option** or tax-project status appears, or a property column is

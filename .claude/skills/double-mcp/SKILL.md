@@ -1,6 +1,6 @@
 ---
 name: double-mcp
-description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, monthly closes, tasks, portal contacts, the file library, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, creating/updating tasks and notes, or keeping a client matter's **running case note / case history**. Encodes the four data planes (client record vs custom properties vs tax projects vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, what the MCP does NOT expose (tax organizers and their progress, saved views, file contents), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, the call-efficiency patterns for roster-wide sweeps, and the firm's case-note convention (one running note per matter, updated in place).
+description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, tax organizers, monthly closes, tasks, portal contacts, the file library, time tracking, the activity log, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status or deadline, reading an organizer's progress, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, creating/updating tasks and notes, or keeping a client matter's **running case note / case history**. Also load it to answer "can we do X in Double?" — the companion `references/capability-map.md` is the audited answer sheet of every tool, what is read-only, and what is blocked (tax-project deadlines cannot be written; organizer publishing cannot; loan tools are billing-gated). Encodes the five data planes (client record vs custom properties vs tax projects vs organizers vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, the hard privacy rule on organizer responses (SSNs and bank details), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, the call-efficiency patterns for roster-wide sweeps, and the firm's case-note convention (one running note per matter, updated in place).
 ---
 
 # Double MCP — operating guide
@@ -20,20 +20,33 @@ the whole firm.
 > budget, Double has no documented quota. That is *not* licence to be wasteful — see §5, a
 > naive roster sweep is several hundred calls.
 
+> ### 📋 "Can we do X in Double?" → [`references/capability-map.md`](./references/capability-map.md)
+>
+> That file is the **audited answer sheet**: every one of the ~100 tools the connector exposes,
+> grouped by area, marked read or **write**, and marked ✅ verified live / ◻︎ schema-only / ⛔
+> blocked — with the counts and dates of the last audit. **Read it before telling anyone
+> something is impossible, and before promising something is possible.** It answers the
+> recurring ones directly: the tax-return **deadline cannot be written** from here, organizer
+> progress **now can be read**, organizer **publishing** cannot, loan tools are **billing-gated**.
+>
+> This guide stays the *how and why*; the capability map is the *what*. When Double ships new
+> tools — it does, silently — re-run the audit described at the end of that file.
+
 ---
 
-## 1. The four data planes — the thing to get right first
+## 1. The five data planes — the thing to get right first
 
-A "client" in Double is not one object. The same client's information is spread across four
+A "client" in Double is not one object. The same client's information is spread across five
 planes, each reached by a **different** tool. Most wasted time comes from looking for a fact
 in the wrong plane.
 
 | Plane | What lives there | Tools |
 |---|---|---|
 | **1. Client record** | Name, `platform`, `archivedAt`, `deepLink`, phone, branch | `list_clients` · `get_client` |
-| **2. Custom properties** | The **firm's own columns** — Account Type, Tax Return Type, Organizer Status, Bookkeeping, Sales Tax, Payroll, EIN, Engagement Letter, Assigned Staff | `get_property_columns` · `list_client_properties` · `upsert_client_properties` |
-| **3. Tax projects** | One container per tax **year**, with its own `status` and `filedAt` | `list_projects` · project-task tools |
-| **4. File library** | Nested folders and documents, in two sources | `list_file_library` → `list_files`. Note `get_file` does **not** take a `list_files` id — it searches by `clientId` + **name** |
+| **2. Custom properties** | The **firm's own columns** — Account Type, Tax Return Type, Organizer Status, Bookkeeping, Sales Tax, Payroll, EIN, Engagement Letter, Assigned Staff, and the tax-season four (Ext. Filed, Signature, Financials Ready, Invoice) | `get_property_columns` · `list_client_properties` · `upsert_client_properties` |
+| **3. Tax projects** | One container per tax **year**, with its own `status`, `dueDate` and `filedAt`. **Read-only** — see below | `list_projects` · project-task tools |
+| **4. Organizers** | The client-facing questionnaire and its answers — its own entity, **not** the `Organizer Status` property | `list_organizers` · `get_organizer` · `get_organizer_responses` (§2.2) |
+| **5. File library** | Nested folders and documents, in two sources | `list_file_library` → `list_files`. Note `get_file` does **not** take a `list_files` id — it searches by `clientId` + **name** |
 
 ### The trap: "Tax Return Status" is not a property
 
@@ -48,8 +61,29 @@ it. Read it with `list_projects(clientId)`, which gives:
 - `filedAt` — a **separate** timestamp that can disagree with `status`; always read both
 - `preparer` / `reviewer` / `manager`, `dueDate`, `deepLink`
 
-Conversely `Organizer Status` **is** a property (plane 2, column `226743`). So a single view row
-the team reads left-to-right is assembled from three different planes.
+Conversely `Organizer Status` **is** a property (plane 2, column `226743`) — a hand-maintained
+summary that is *separate from* the real organizer entity in plane 4. So a single view row the
+team reads left-to-right is assembled from four different planes.
+
+### The tax project is READ-ONLY — including the deadline
+
+There is no `create_project` or `update_project` in this connector (full inventory checked
+2026-08-06). Everything on the project — **`dueDate`**, `status`, `filedAt`, preparer, reviewer,
+manager — can be **read and never written**.
+
+So when someone asks to change a Tax Return **deadline**, the honest answer is: not from here,
+it is a Double-UI edit. What helps instead:
+
+- read the current `dueDate` for the clients in question, and
+- hand over the per-project deep link
+  (`https://app.doublehq.com/tax-return?cid=<client>&projectId=<project>`) so they click straight
+  into each record rather than hunting the roster; or
+- offer to put the date on the project's **"File tax return"** task, which *is* writable via
+  `update_project_task(dueDate:)` — a different field in a different place, so offer it, never
+  substitute it silently.
+
+This happens to align with the firm's own rule: the project's status and `filedAt` are Lilian's
+judgment (§6) and would be off-limits even if the tools existed.
 
 ### `platform` — the QuickBooks signal
 
@@ -67,15 +101,23 @@ you excluded.
 
 ## 2. What the MCP does **not** expose
 
-Verified Jul 2026. Don't burn calls rediscovering these.
+Re-verified **2026-08-06**. Don't burn calls rediscovering these — and note that this list
+**shrank**: organizers moved out of it. The full per-tool detail is in
+[`references/capability-map.md`](./references/capability-map.md).
 
 | Not available | What to do instead |
 |---|---|
-| **Tax organizers** — the organizer entity and its questions | No tool exists. `get_questions` returns client *questions/requests*, not organizer answers; `get_task_templates` returned only task templates, with no organizer template among them — note its access is gated by a practice permission setting, so this is "not visible to us", not proven absent. The firm's organizer question bank is therefore kept in the repo: [`tax-season-readiness/references/individual-organizer-questions.md`](../tax-season-readiness/references/individual-organizer-questions.md) |
-| **Organizer progress %** and other view-only columns | **Not via MCP — but reachable: ask for a CSV export of the view.** See §2.1 |
+| **Writing a tax project** — deadline, status, `filedAt`, preparer | Read-only. Double UI, plus deep links from us — see §1 |
+| **Publishing an organizer** to the client portal | `create_organizer` + `update_organizer` build the draft; a human presses publish. Never promise the client will receive one — §2.2 |
+| **Editing a published organizer's** slides or logic | Frozen at publish. Only `name` and `responsesVisibility` still move |
 | **Saved views** (e.g. "Tax Returns – View 2") | The definition can't be read. Either rebuild the logic from properties + projects, or get the CSV export (§2.1) |
 | **File contents** | `get_file` returns a **download link for the user** — it does not load the file for you. See the privacy rule below |
+| **Loan tools** (`list_loans`, `get_loan`, schedules…) | ⛔ `BILLING_ACCESS_DENIED` — the client needs a Scale subscription. Gated **per client**, so check before building on them |
+| **Merging duplicate clients** | No tool, and duplicates already exist in the roster. Prevention only — confirm before `create_client` |
 | Property columns with **no options defined** (`Service Tier`, `Entity Type`) | They exist but are unused — don't treat an empty value as meaningful |
+
+**No longer on this list:** tax organizers and their progress percentage. Both are readable now —
+§2.2.
 
 ### 2.1 The CSV-export escape hatch — use it for view-only columns
 
@@ -88,8 +130,8 @@ Columns confirmed present in a "Tax Returns" view export but **absent from the M
 
 | CSV column | What it carries |
 |---|---|
-| `Organizer Active Count` | How many organizers are active for that client — can be **more than one** (2 and 3 both seen) |
-| `Organizer Max Progress` | The **highest** completion % across those active organizers — hence "Max". Blank when no Double organizer is active |
+| `Organizer Active Count` | How many organizers are active for that client — can be **more than one** (2 and 3 both seen). **Now also derivable from `list_organizers`** (§2.2) |
+| `Organizer Max Progress` | The **highest** completion % across those active organizers — hence "Max". Blank when no Double organizer is active. **No longer export-only** — `get_organizer` returns `completionPercentage` directly (§2.2) |
 | `Gather information` · `Financial review` · `Prepare tax return` · `File tax return` | Per-stage task progress as `n/3`, mirroring the tax pipeline sections in §4 |
 | `Client Portal` | Formatted `n/m. Q: k` — portal items done/total, plus open questions |
 | `Uploaded Files` · `Vendor Requests` · `Chat` | Counts |
@@ -104,6 +146,50 @@ Two traps in the export:
 
 `Waiting on Client` is also a real tax-project status seen only in the export — treat the MCP's
 observed set (`notStarted`/`inProgress`/`filed`/`wontFileWithUs`) as incomplete.
+
+### 2.2 Organizers — readable now, and the most sensitive thing in the connector
+
+**This reverses the July finding.** Organizers used to have no tools at all; five now exist and
+the read path works end to end (verified 2026-08-06 — 59 organizers in the practice).
+
+| Tool | What it gives |
+|---|---|
+| `list_organizers` | The **cheap** path. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived. Returns name, status, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility` |
+| `get_organizer` | One organizer with **`completionPercentage`** plus every slide, section, hidden flag and logic rule. **Huge payload** — a 1040 organizer is ~120 slides. Never call it in a loop |
+| `get_organizer_responses` | The client's actual answers — see the rule below |
+| `create_organizer` **W** | Creates an **empty draft**, no slides |
+| `update_organizer` **W** | Declarative whole-document write — see the trap below |
+
+Both organizer shapes are live: `JK 2025 1040 Organizer - <name>` and
+`JK 2025 Business Tax Organizer - <name>`.
+
+#### 🔒 Never read organizer responses to "check on" a client
+
+A completed 1040 organizer contains, by design: **Social Security numbers** (taxpayer, spouse
+and every dependant), **driver's licenses**, dates of birth, home address, and **bank routing
+and account numbers**.
+
+`get_organizer_responses` returns that **into the session transcript** — which makes it more
+dangerous than `get_file`, since `get_file` only ever hands back a link. The document privacy
+rule below applies here with more force, not less:
+
+- Need **progress**? → `list_organizers`, or `get_organizer.completionPercentage`. Never responses.
+- Need **one specific answer**? → ask the person to look it up, or pull that one field and use
+  only it. Don't dump the set.
+- Nothing from an organizer response is ever written to this repo.
+- The audit verified the tool against an organizer at **0% completion** on purpose, so no real
+  answers were pulled. Do that if it ever needs re-testing.
+
+#### ⚠️ `update_organizer` deletes by omission
+
+The `slides` array you send is the **complete desired state**: any existing slide missing from
+the payload is **deleted** (the call refuses without `confirmDeletions: true`). Logic rules work
+the same way and their deletion needs no confirmation at all. Always `get_organizer` first,
+modify that, and send it back — never author a payload from memory. Slides and logic are
+editable **only while the organizer is a draft**; archived organizers cannot be updated at all.
+
+And the ceiling: **publishing to the client portal is not available via MCP.** We can build the
+entire organizer and a human still has to press publish.
 
 ### Privacy rule for documents — important
 
@@ -183,7 +269,26 @@ can reach. This is how a company links to its owner's individual account, **but 
 not necessarily an owner** (some are the owner's staff with portal access only). The full rule
 is in [`tax-season-readiness`](../tax-season-readiness/) §7.
 
-**Staff/user IDs** (`list_users`) are stable — look them up once and reuse.
+**Close statuses** (`list_end_close_statuses`) — the monthly-close ladder, which is **not** the
+same as the task ladder above: `notStarted` · `In Progress` · `stuck` · `waitingOnClient` ·
+`readyForManagerReview` · `done`. No reasons are configured for any of them.
+
+**Workstreams** (`list_workstreams`) — how time is categorised. Client: Sales Tax · Annual
+Report · Admin · Payroll · Year End · Cleanup. Firm: Admin · Tax returns · **CLAUDE-CODE** ·
+Education · Meeting. Trap: timers logged against a monthly close carry a synthetic
+`workStreamId` like `close-07-2026` with a **null** name — it matches nothing in this list, and
+that is normal.
+
+**Staff/user IDs** (`list_users`) are stable — look them up once and reuse. Four users, and the
+**roles matter** because several tools are role-gated: Julia Kononova `superAdmin`, Lilian
+Gonzalez `practiceAdmin`, Maria Zavarce `practiceAdmin`, Liudmyla Kazannik `practiceEmployee`.
+The MCP connects as Julia, which is why admin-only tools (the activity log) work for us.
+
+**The activity log** (`list_activity_log`, admin-only) is the honest answer to *"who changed
+this, and when?"* — every entry names the person and their email, filterable by client, user,
+entity (Task, Client, Organizer, Transaction, File, PropertyColumn, Timer, …), action and date
+range. Reach for it when two parallel sessions disagree about a record. It cuts both ways:
+**our own writes are logged and attributed too.**
 
 ---
 
@@ -265,9 +370,21 @@ authorization from the firm.
   - `source: "Uploads Inbox"` → ids belong to `rename_attachment` / `move_attachables`
 
   Crossing them fails. Always read `source` before acting on a file id.
+- **`update_end_close` has two irreversible side effects**, both admitted in the tool's own
+  description. Changing the **due date** shifts the due dates of *every task in that close* when
+  the new date lands in a different month. Changing the **preparer / reviewer / manager**
+  reassigns *every closing and custom task for the period*, sign-offs included, and subscribes
+  the new person to the client's notification digest — the tool itself calls this irreversible.
+  Say what will happen, get a yes, then do it.
+- **`set_file_visibility` and `add_question` reach the client.** One exposes a document in the
+  portal, the other sends the client a question. These are outward-facing acts, not internal
+  edits — explicit instruction naming the file or the question, every time.
+- **`create_property_column` / `update_property_column` change the practice for everyone.** A new
+  column appears in every teammate's view of every client. Never as a tidy-up; only when asked.
+- **`update_organizer` deletes by omission** — see §2.2. And it can only touch a draft.
 - **Confirm before creating** clients, contacts, users, or tasks — duplicates are the firm's
   recurring data-quality problem (there are already duplicate individual accounts in the
-  roster), and there is no merge tool.
+  roster), and there is no merge tool. `create_user` is also a licensing and permission change.
 - **You cannot upload a file yourself.** `internal_upload_file` opens an **interactive picker the
   user must operate** — a session has no access to their filesystem. The `fileKey` comes back from
   `internal_confirm_upload`, and only then can `add_file_to_client` place it. Never promise an upload
@@ -373,10 +490,18 @@ anything you would not want the client to read.
 
 - **The portal-visibility question in §7 is answered** — that's the one open item blocking case
   notes from being fully trusted.
-- **An organizer tool appears** in the Double MCP — §2's biggest gap closes and
-  `tax-season-readiness` §5 simplifies.
+- **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
+  that file carries the audit date and the ✅/◻︎/⛔ marks, and a surprise means it's stale. Double
+  ships tools **silently** (organizers appeared between the July and August 2026 audits), so
+  re-run the audit described at the end of that file rather than patching one row.
+- **A tax-project write tool appears** (`update_project`) — the deadline answer in §1 flips, and
+  so does the top of the capability map.
+- **Organizer publishing becomes available** — §2.2's ceiling lifts and we could run the whole
+  organizer cycle end to end.
+- **The loan tools unblock** (a client moves to a Scale plan) — §2's ⛔ row and capability-map §13.
 - A new **property column** is added or an option is renamed — §1's pointers stay valid, but
-  re-run `get_property_columns` rather than trusting any list.
+  re-run `get_property_columns` rather than trusting any list. Four were added between the July
+  and August audits (Ext. Filed, Signature, Financials Ready, Invoice).
 - The **TaxDome folder structure** is cleaned up or retired — §3 shrinks to the firm's own
   structure.
 - A write pattern bites us (a bad upsert, a broken move) — record the lesson in §6 (write safety) so

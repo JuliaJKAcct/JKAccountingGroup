@@ -70,9 +70,10 @@ approve the server when prompted.
 **The Double connector is account-level too, and mostly read-only in practice.** Like Odoo it's
 connected through Claude's connectors rather than `.mcp.json`, so a `.mcp.json` review won't show
 it. There's no published call cap, but a roster-wide sweep is still hundreds of calls. Anyone using
-it should follow the [`double-mcp` skill](./.claude/skills/double-mcp/) — which of the four data
-planes a fact lives in, the TaxDome folder conventions, what the MCP can't reach (tax organizers and
-their progress), and the write rules: **default-deny, and never write the columns Lilian maintains by
+it should follow the [`double-mcp` skill](./.claude/skills/double-mcp/) — which of the five data
+planes a fact lives in, the TaxDome folder conventions, its audited capability map ("can we do X in
+Double?" — tax-return deadlines are read-only, organizers are now readable but not publishable),
+and the write rules: **default-deny, and never write the columns Lilian maintains by
 hand.** Two of its tools instruct an unprompted write; the skill says to override them.
 
 **The Odoo connector is account-level, and rationed.** It's connected through Claude's
