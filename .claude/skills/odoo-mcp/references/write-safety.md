@@ -14,8 +14,14 @@ that is what the public sees.
 > layers are aimed at that: default simulation, a snapshot before every write, and an
 > after-check that is *measured*, not eyeballed.
 
-Designed as layers — if one fails, the next still catches it. None depend on anyone
-remembering to be careful.
+Designed as layers — if one fails, the next still catches it.
+
+> **What actually enforces each layer, today.** Several of these describe code that does not
+> exist yet (`tools/odoo-api/`, see
+> [`direct-api-setup.md` §5](./direct-api-setup.md#5--what-still-has-to-be-built)). Until it
+> is built, the layers marked **[convention]** depend on the operator following them; only the
+> ones marked **[code]** are mechanically enforced. Nobody should believe there is a brake on
+> the pedal that is not connected yet. Each rule below is tagged.
 
 ---
 
@@ -31,22 +37,40 @@ not code.
 
 ## Layer 2 — Always be able to undo
 
-4. **A full Odoo backup before the first writing session** (`odoo.com` → *My Databases*).
-   This is the big red button — take it once, before any of this starts.
-5. **A snapshot of every record before touching it.** Read it, write its current contents to
-   a timestamped file, and record the exact command that puts it back. **No snapshot, no
-   write.**
-6. **Never delete first — deactivate.** If a record genuinely has to be deleted (the
-   `ir.ui.view` 2010 case), **export its full definition to a file first** so it can be
-   recreated identically.
+4. **A full Odoo backup before the first writing session** — `odoo.com` → *My Databases*
+   (signed in as the database administrator). This is the big red button; take it once,
+   before any of this starts. **[convention]**
+5. **A snapshot of every record before touching it — and of everything that points at it.**
+   Read it, write its current contents to a timestamped file, and record the exact command
+   that puts it back. **No snapshot, no write.** **[code, once the tool exists]**
+
+   The record alone is **not enough** on the website models, because Odoo cascades:
+
+   | Relation | Behaviour | Consequence |
+   |---|---|---|
+   | `website.page.view_id` → `ir.ui.view` | **cascade** | Deleting a view **silently deletes the page** pointing at it — with its URL, menu entries, published flag and SEO fields. Re-creating the view does **not** bring the page back |
+   | `ir.ui.view.inherit_id` | **restrict** | If any view inherits from the target, the delete **fails outright** — a different outcome than "it worked", and better known in advance |
+
+   So before deleting a view, also `search_read`: `ir.ui.view` where `inherit_id = <id>`,
+   `website.page` where `view_id = <id>`, `website.menu` where `page_id = …`, and the
+   `ir.model.data` row. **Snapshot the record *and its dependents*.**
+6. **Never delete as the first move — deactivate and observe.** If a record genuinely has to
+   be deleted, export its full definition (and its dependents, above) first, so it can be
+   recreated identically. **[convention]**
+
+   > **Deactivation is a probe, not the fix.** For the `ir.ui.view` 2010 case specifically,
+   > [`INSTALL-ODOO.md`](../../../../projects/marketing/consultation-booking/INSTALL-ODOO.md#-known-breakage-every-booking-page-returns-500-found-aug-2026)
+   > explains why un-ticking *Active* may leave the page still broken: a **primary**
+   > website-specific copy is resolved by key + website, and that lookup is not reliably
+   > filtered on `active`. Deactivate to learn; delete to fix.
 
 ## Layer 3 — Three verifications per change
 
 | | When | What happens |
 |---|---|---|
-| **1 — Before** | Before anything is written | Present the plan: which record, which field, **current value → new value**, and how to undo it. **The owner approves.** No approval, no execution |
-| **2 — At execution** | The moment of the change | The tool runs **in dry-run by default** — it prints what it would do without doing it. A real write requires an explicit, separate flag |
-| **3 — After** | Immediately after | Re-fetch the changed page over HTTP **and a canary set** of pages. Confirm 200 and the expected text on all of them |
+| **1 — Before** | Before anything is written | Present the plan: which record, which field, **current value → new value**, and how to undo it. **The owner approves.** No approval, no execution **[convention]** |
+| **2 — At execution** | The moment of the change | The tool runs **in dry-run by default** — it prints what it would do without doing it. A real write requires an explicit, separate flag **[code, once the tool exists — the MCP has no dry-run mode, so today this is convention]** |
+| **3 — After** | Immediately after | Re-fetch the changed page over HTTP **and a canary set** of pages, and compare against the baseline recorded before **[convention]** |
 
 **The third one is the one everybody skips.** Checking only the page you edited is not enough:
 Odoo pages share templates, so a change can break something else entirely. The canary set —
@@ -54,9 +78,15 @@ at minimum the home page, `/pricing`, `/consultation`, `/ua/konsultatsiia`, `/ap
 and `/appointment/3` — is checked **before and after**. It costs nothing (plain HTTP, not API
 calls), so repeat it as many times as it takes to be sure.
 
+**Judge it against the baseline, not against 200.** Some canaries are *currently broken* —
+`/appointment/1` and `/appointment/3` return 500 today. The test is therefore: **no page may
+get worse than its baseline**, and the pages the change was meant to fix must get better.
+
 ## Layer 4 — Hard limits inside the tool
 
-Written into the code, not left to judgment:
+To be written into the code of `tools/odoo-api/`, not left to judgment. **Until that tool
+exists these four are conventions** — say so rather than implying a guardrail that isn't
+wired up yet.
 
 7. **Model allow-list.** Only the models agreed for the task (website views and pages,
    appointment types). Everything else refuses, even if asked.
@@ -70,9 +100,17 @@ Written into the code, not left to judgment:
 
 ## Layer 5 — Leave a trail
 
-11. Every change leaves a record: **what, when, why, and how to undo it** — as a chatter note
-    on the affected record (`mail.mt_note`, never `mail.mt_comment`) and in the repo's change
-    log. If something looks wrong in a month, it must be possible to reconstruct what happened.
+11. Every change leaves a record: **what, when, why, and how to undo it.** Where that record
+    lives depends on the model, and the difference matters:
+
+    - **Models with chatter** (accounting entries, partners, CRM leads — anything inheriting
+      `mail.thread`): post a note with `mail.mt_note`, **never** `mail.mt_comment`, which
+      emails every follower. This is the convention in the skill's §2.
+    - **Website records have no chatter at all.** Neither `ir.ui.view` nor `website.page`
+      inherits `mail.thread`, so `post_message` simply fails on them. For website changes the
+      **snapshot file plus the repo change log are the only trail there is** — which raises
+      the stakes on Layer 2, it does not lower them. Never skip the snapshot on the assumption
+      that a chatter note is recording things.
 
 ## Layer 6 — Rehearse where nobody can see
 
@@ -84,9 +122,14 @@ Written into the code, not left to judgment:
 
 ## The order of work matters too
 
-Do the **reversible** things first and the irreversible last. The one known exception is the
-booking-page 500, whose fix is a deletion — which is exactly why Layer 2's "export the full
-definition first" is not optional there.
+Do the **reversible** things first and the irreversible last — *unless something irreversible
+is blocking everything else*, which is exactly the situation today.
+
+**The `ir.ui.view` 2010 deletion goes FIRST**, despite being the least reversible change on
+the list, because until it is done **nothing on the site can be booked at all** (see
+[`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 20). Being blocking outranks being reversible.
+The compensating control is Layer 2: snapshot the view **and its dependents** — the pages that
+cascade off it and any views inheriting from it — before touching it.
 
 ---
 

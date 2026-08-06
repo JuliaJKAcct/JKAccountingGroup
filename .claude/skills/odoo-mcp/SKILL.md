@@ -52,13 +52,18 @@ calls used today, the daily limit and what remains.
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
 most of what exists there, and set up this MCP connection. Route integration questions to him.
 
-**Decided (Aug 2026): the firm is going direct.** Lilian asked Andres why the MCP connector
-rather than Odoo's own API, and he confirmed **there is no problem connecting through the
-API**. The API endpoint is already reachable and answering (Odoo 19 Enterprise) — only
-credentials are missing. The whole setup, step by step, is in
-**[`references/direct-api-setup.md`](./references/direct-api-setup.md)**: where to find the
-database name, creating the dedicated user (and the subscription-cost warning that comes
-with it), generating the key, the environment variables, and the read-only-first test order.
+**Aug 2026: going direct is agreed in principle, but GATED on Odoo's pricing plan.** Lilian
+asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there is no
+problem going direct. **However — Odoo's 19.0 documentation states the external API is
+available only on *Custom* plans, "not available on One App Free or Standard" — and this repo
+records the firm as being on Standard.** If that still holds, going direct means upgrading the
+whole subscription (priced per user, for every user), which may cost more than simply paying
+for a higher tier on the MCP connector. **Settle that comparison before creating any user or
+key.** The gate, the numbers to collect, and then the full step-by-step are in
+**[`references/direct-api-setup.md`](./references/direct-api-setup.md)** — which also records
+that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
+instance and that **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
+winter 2027**. New code targets JSON-2.
 
 **Until that exists, the 50/day budget below stands.** And whichever route is in use, every
 write follows **[`references/write-safety.md`](./references/write-safety.md)** — the six
@@ -223,6 +228,10 @@ this is where most real queries live) · `account.payment` · `account.journal` 
 
 **Products and sales**
 `product.template` · `product.product` · `product.pricelist` · `crm.lead` · `crm.stage`
+
+**Website** (the firm's site runs on this instance — see
+[`write-safety.md`](./references/write-safety.md) before writing to any of these)
+`website.page` · `ir.ui.view` · `website.menu` · `website.rewrite` · `website`
 
 **Communication and scheduling**
 `mail.message` · `mail.activity` · `mail.template` · `calendar.event` ·

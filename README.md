@@ -85,9 +85,14 @@ skill](./.claude/skills/odoo-mcp/) — Claude loads it when it recognizes Odoo w
 always-on standing rule in [`CLAUDE.md`](./CLAUDE.md) enforces the budget regardless — which
 covers the call budget, the chatter audit-log convention, and the write-safety rules.
 That cap is the **connector's**, not Odoo's and not Claude's — the skill's §1 explains the
-three layers, and raising it (higher connector plan vs. a direct Odoo API integration) is an
-open decision parked with Lilian and Andres: the **"Odoo's 50-calls/day ceiling"** row in
-[`FOLLOW-UPS.md`](./FOLLOW-UPS.md).
+three layers. Andres approved connecting through **Odoo's own API** instead (Aug 2026), but it
+is **gated on the Odoo pricing plan**: Odoo allows external API access only on *Custom* plans,
+and the firm is recorded as being on *Standard*. The gate, the numbers to compare, and the
+full setup are in
+[`references/direct-api-setup.md`](./.claude/skills/odoo-mcp/references/direct-api-setup.md);
+the six rules that govern any Odoo write — whichever route — are in
+[`references/write-safety.md`](./.claude/skills/odoo-mcp/references/write-safety.md). Tracked
+as the **Odoo direct-API connection** row in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md).
 
 **One-time NotebookLM login.** The first time you use it, ask Claude to run the
 `setup_auth` tool. It opens a **visible Chrome window** so you can sign in to
