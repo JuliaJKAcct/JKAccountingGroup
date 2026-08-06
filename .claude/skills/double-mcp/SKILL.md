@@ -288,9 +288,12 @@ the whole thing start to finish, instead of reconstructing it from email.
 
 ### The rules
 
-1. **One note per case, never one note per event.** The note is **rewritten in place** with
-   `update_note` as things happen. A second note on the same matter splits the history and defeats
-   the point.
+1. **One note per case, never one note per event — this is the general rule for every case note, not
+   a habit of the pilot.** The note is **rewritten in place** with `update_note` as things happen. A
+   second note on the same matter splits the history and defeats the point. **Before writing anything
+   on a matter, `list_notes(clientId)` and look for the note that already covers it.** _(Lilian stated
+   this when the convention was created and **re-confirmed it on 2026-08-06** when the second case note
+   was opened, unprompted, as the thing she most wanted guaranteed.)_
 2. **When new information about a tracked case arrives, updating its note is part of the work** —
    not a separate request. Lilian's instruction (Aug 2026): *when I tell you about this again, you
    have to go to that note and update it — it cannot be left sitting on out-of-date information.*
