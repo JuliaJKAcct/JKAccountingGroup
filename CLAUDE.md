@@ -39,7 +39,7 @@ the US.
 │   ├── client-intelligence/       per-client knowledge base (one file per client) — the raw material for each client's SOPs (Active)
 │   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients + downloadable templates, generated from the repo (Active)
 │   ├── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
-│   └── lilian-notebook/           LILIAN'S personal notebook — the firm's hard-won lessons, each written as the rule for next time; one searchable page she has bookmarked (Active)
+│   └── lilian-notebook/           LILIAN'S personal notebook — the firm's hard knowledge (how a system behaves, what it costs, how to do a procedure), each written as the rule for next time; DELIBERATELY SMALL; one searchable page she has bookmarked (Active)
 ├── .claude/
 │   ├── settings.json  registers the hooks below
 │   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
