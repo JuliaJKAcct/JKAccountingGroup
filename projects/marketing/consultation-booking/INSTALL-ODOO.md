@@ -121,10 +121,13 @@ the word "free" no longer appears on it. Its lead form survives as a secondary p
 - Three **legacy** (unpublished) views still contain the old "free consultation" wording:
   `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`.
 - **The Ukrainian landing still sells the old offer.** `/ua/konsultatsiia` (live) reads
-  "30 хвилин · безкоштовно" with no appointment link. The **Russian** one is already
-  converted — it lives at **`/ru-ru/consultation`** (not `/ru/konsultatsiya`, which 404s)
-  and links to `/ru-ru/appointment/3`. The EN page's own RU language-switch link points at
-  that dead `/ru/konsultatsiya` and needs fixing too.
+  "30 хвилин · безкоштовно" with no appointment link.
+- **Correction (verified 2026-08-06): there is no converted Russian landing.** An earlier
+  version of this file said the Russian page "is already converted" at `/ru-ru/consultation`
+  — it is not. That URL returns the **English** page ($150) under Odoo's `ru-ru` locale
+  prefix, and `/ru-ru/appointment/3` returns 500 with the rest. The real Russian landing
+  `/ru/konsultatsiya` **404s**, the EN page's `РУС` language switch points at it, and it is
+  still submitted in `sitemap.xml`. Russian is **missing**, not done.
 - **The CTA rule is not rolled out beyond the website.** `positioning.md` binds every CTA
   everywhere, but the email signatures (`email-branding/signatures/*.html` → "Book a
   consultation", pointing at `/contactus`), the lead-magnet calculators ("Book a free

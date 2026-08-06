@@ -35,6 +35,7 @@ and **ruled out** — it is a paid add-on on the firm's Google Workspace plan.
 ```
 consultation-booking/
 ├── README.md                 ← you are here
+├── PENDING-FIXES.md          ← THE WORK LIST: everything still broken/stale on the live site, in fix order
 ├── INSTALL-ODOO.md           ← step-by-step: create the two calendars + place the page in Odoo
 ├── booking-chooser.html      ← the bilingual (EN/RU) chooser page — full-page design reference
 ├── booking-chooser.odoo.html ← the SAME page as a paste-in snippet for Odoo (scoped CSS, no-JS EN/RU toggle)
@@ -124,6 +125,16 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   a pre-existing breakage, not caused by this work. The CTAs point at the right calendars;
   the calendars themselves are down until `ir.ui.view` 2010 is deleted. Cause and fix:
   [`INSTALL-ODOO.md` → Known breakage](./INSTALL-ODOO.md#-known-breakage-every-booking-page-returns-500-found-aug-2026).
+- **The full work list is [`PENDING-FIXES.md`](./PENDING-FIXES.md)** — every remaining
+  problem on the live site in fix order, verified 2026-08-06 by crawling the public pages
+  (no Odoo calls spent). Beyond the 500 it covers the **Ukrainian landing still selling a
+  free 30-minute consultation** (public, indexed, and one click from the English page), the
+  **dead Russian landing** the `РУС` switch points at, the **`/pricing` meta description**
+  that still advertises a free consultation to Google, the **three different destinations**
+  the same CTA uses, the missing **"Book a Consultation"** button beside each discovery-call
+  button, and the **four different call durations** the firm currently promises across the
+  site, the lead magnets, the referral checklists and the email signatures. Start there
+  when the Odoo budget resets.
 - **Inputs still needed from the firm:** Julia's Zoom room URL (the consultation calendar
   still generates an Odoo Discuss link); whether Odoo should **collect the $150** at
   booking; whether **Ping Assistant** is needed on discovery calls at all (it cannot join a
