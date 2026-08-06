@@ -531,11 +531,11 @@ website→Odoo intake.
 no Odoo connector at all. **There is one now** — the account-level
 `Odoo_JK_Accounting_Group` MCP server that Andres set up — so Claude can read and write
 Odoo directly, `crm.lead` and `crm.stage` included. The constraint moved: that connector
-runs on a **free plan capped at 50 tool calls per 24 hours, shared by the whole firm**,
-which is nowhere near enough to build and iterate a CRM pipeline. **Whether we raise that
-plan or move to a direct Odoo API integration is an open decision** — see
-[`FOLLOW-UPS.md`](./FOLLOW-UPS.md) row 21 (Lilian, with Andres) — and it should be settled
-before this idea starts, not during it. Still true: getting the website to create leads
+is capped at **50 tool calls per 24 hours, shared across the firm's one account**, which is
+nowhere near enough to build and iterate a CRM pipeline. **Whether we raise that plan or
+move to a direct Odoo API integration is an open decision** — see the **"Odoo's
+50-calls/day ceiling"** row in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) (Lilian, with Andres) —
+and it should be settled before this idea starts, not during it. Still true: getting the website to create leads
 by itself is its own piece of work (Odoo supports web-form / "Contact Us" → CRM lead
 natively). Anyone touching Odoo follows the [`odoo-mcp`](./.claude/skills/odoo-mcp/) skill.
 
@@ -737,7 +737,8 @@ active client's CI file (durable, non-sensitive, sourced facts), (b) runs the ga
 audit + the CI↔SOP sync, and (c) **emails Lilian a report** of what's new plus the
 items **proposed for the SOP** — SOP changes are applied only with her approval. Uses
 the [`automated-email-reports`](./.claude/skills/automated-email-reports/) playbook.
-Scope the sweep to active clients to respect tool budgets (e.g. Odoo's 50 calls/day).
+Scope the sweep to active clients to respect tool budgets (e.g. the Odoo **MCP's** 50
+calls/day).
 
 **Decided with Lilian (Jul 2026):** CI and SOP are two separate interlinked docs (SOP
 stays clean); **no SOP change without Lilian's approval**; freshness is a **periodic
