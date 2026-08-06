@@ -53,6 +53,13 @@ Read the project's own docs alongside this skill — they are the authority on c
 > in the note too. §7 Links records the note's title and ID. Format + rules: the
 > [`double-mcp`](../double-mcp/) skill §7.
 
+> **Answered items stay, marked — they are not deleted.** In §6 "Information still needed", tick the
+> box and append the answer in plain prose on the same line (`- [x] Fiscal year-end — **December 31**
+> _(client, 2026-08-06)_`). Keeping the question visible is what stops it being re-asked, and the
+> git history alone doesn't surface that. **Don't strike the text through** — four files had drifted
+> into different styles before this was written down. If the answer is "not answerable", say that
+> and why, so nobody reopens it.
+
 ## CI → SOP proposals (the approval loop)
 
 CI captures everything non-sensitive automatically. A client's **SOP** never changes

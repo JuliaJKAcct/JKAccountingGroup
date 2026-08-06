@@ -477,8 +477,9 @@ the whole thing start to finish, instead of reconstructing it from email.
 ### The size wall — a long note gets blocked, not truncated
 
 **Measured on the body string, 2026-08-06: ~7,600 characters went through; ~8,000 and ~10,400 were
-both blocked** with a `403` / `mcp_request_blocked`. So the boundary sits somewhere between 7,600 and
-8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
+both blocked** with a `403` / `mcp_request_blocked`. **It is size, not content** — a body of ~8,200
+characters of plain repeated filler, no markup and no client data, was refused identically. So the
+boundary sits between 7,600 and 8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
 request-size rule in front of the API rather than a Double product limit — **inferred, not
 documented**; and the **title and JSON escaping count toward the payload too**, so the body is not
 the whole budget. `ping` keeps working throughout, which is what makes this read as an outage.
@@ -504,6 +505,8 @@ note that long** — nobody has tested a long paste in the browser. So don't tel
 have an 8 KB limit"; tell them **"POSTs to the MCP endpoint with bodies at or above ~8,000 characters
 return 403 while smaller ones succeed — please raise or whitelist that"**, and test the same content
 in the UI first, because if the UI accepts it, that's the strongest evidence it's the API path alone.
+
+**The request is already drafted, with the evidence:** [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
 
 ### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
 
@@ -585,6 +588,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
+- **Double answers the note-size request** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — if the limit is raised, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
