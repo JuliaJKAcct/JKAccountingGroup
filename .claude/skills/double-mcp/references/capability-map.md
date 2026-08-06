@@ -37,6 +37,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | …read what a client **answered** in their organizer? | Technically yes (`get_organizer_responses`) — but it returns SSNs, driver's licenses, dependants' details and bank account numbers. **Treat as forbidden by default.** See §5 |
 | …**build** an organizer for a client? | **Partly.** We can create a draft and author all its slides + logic. We **cannot publish it to the client portal** — Lilian does that in the UI |
 | …add a new **column** to the client list? | **Yes** — `create_property_column`. Ask first; it changes the practice for everyone |
+| …keep a long **case note** in Double? | Yes, but there is a **size wall**: note writes 403 above ~8,000 characters. The firm's answer is the `Part 1 / Part 2` split in [SKILL §7](../SKILL.md) — don't invent another. Raised with Double, answer pending — §8 |
 | …see **who did what** and when? | **Yes** — `list_activity_log` (admin-only, 5,671 entries on audit day), with per-user attribution |
 | …read the team's **time tracking**? | **Yes** — `list_timers` (410 entries), `list_workstreams` |
 | …change a **monthly close's** due date or assignees? | Yes, but both have irreversible side effects — see §7 |
@@ -252,11 +253,22 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 | Tool | | Notes |
 |---|---|---|
 | `list_notes` | ✅ (Aug) | **Always call this before writing a case note** — one note per matter, rewritten in place (SKILL §7) |
-| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients |
+| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ 403 above ~8,000 characters** — see below |
 | `list_comments` | ◻︎ | Filter by client, task, thread, `transactionExternalId`, date range, or one of 15 comment types |
 | `add_task_comment` · `add_transaction_comment` | ◻︎ **W** | |
 | `get_questions` | ◻︎ | Client **questions/requests** — not organizer answers. Types: userToContact, contactToUser, transaction, receipt, bankFeedTransaction |
 | `add_question` · `update_question` | ◻︎ **W** | A question goes to the *client*. Outward-facing — explicit instruction only |
+
+### ⚠️ The note size wall — ~8,000 characters
+
+`create_note` / `update_note` fail with **HTTP 403** (`error_code: mcp_request_blocked`) once the
+body gets large: **~7,600 characters went through; ~8,000 and ~10,400 were blocked** (measured
+2026-08-06). It is **size, not content**. Applies to every note write, not only case notes.
+
+**Do not improvise a workaround here** — [SKILL §7](../SKILL.md) already carries the full
+procedure: the measured bracket, `list_notes` first after a 403, and the `Part 1 / Part 2 / …`
+split discipline (Part 1 stays the live note; later parts are archive only). Raised with Double
+2026-08-06 — see the open-requests section below.
 
 ---
 
@@ -342,13 +354,31 @@ tested was not. Don't build anything on loan tools without checking first.
 
 | Not available | What to do instead |
 |---|---|
-| **Creating or updating a tax project** (deadline, status, `filedAt`, preparer) | Double UI. Hand over deep links — §4 |
+| **Creating or updating a tax project** (deadline, status, `filedAt`, preparer) | Double UI. Hand over deep links — §4. **Requested from Double 2026-08-06** (see below) |
 | **Publishing an organizer** to the client portal | Build the draft, then Lilian publishes — §5 |
 | **Editing a published organizer's** slides or logic | Frozen once published |
 | **Saved views** ("Tax Returns – View 2") | Rebuild from properties + projects, or ask for the CSV export (SKILL §2.1) |
 | **File contents** | `get_file` gives a link for the human |
 | **Loan tools** | Billing-gated — §13 |
 | **Merging duplicate clients** | No tool. Prevention only |
+
+---
+
+## Open requests with Double
+
+**Sent 2026-08-06** by Lilian, as one reply to **Allison Millea** (Implementation Specialist at
+Double, `allison@doublehq.com`) on her open *"Checking in before our 8/18 wrap-up"* thread —
+Julia and Maria in copy. Two asks in that one email. The next call with Double is **17–18 Aug
+2026** (her message says Aug 17, her subject line says 8/18 — the date itself is unconfirmed).
+
+| Ask | Why | Status |
+|---|---|---|
+| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | Sent, awaiting reply |
+| **Raise or document the note size limit** | The 403 above — it caps the case notes the team relies on | Sent, awaiting reply |
+
+If either lands, this file and [SKILL](../SKILL.md) both change: the first flips §4 and the
+quick-answer table; the second retires the `Part 1 / Part 2` split in SKILL §7 and the §8 warning.
+Both are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md).
 
 ---
 
