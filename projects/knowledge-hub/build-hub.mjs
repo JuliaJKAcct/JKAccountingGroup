@@ -29,6 +29,9 @@ import { dirname, resolve, basename } from 'node:path';
 // SAME expandable client cards, so the Hub's client section is identical to the
 // standalone dashboard and there is one implementation, no drift.
 import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-intelligence/render/build.mjs';
+// Lilian's Notebook is embedded from ITS OWN generator, so the Hub can never show a stale
+// copy — same rule as the proposal tools (one source, no second copy to keep in sync).
+import { buildNotebookDoc } from '../lilian-notebook/render/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
@@ -1002,7 +1005,7 @@ function toolIframe(doc, titleAttr){
     ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
       + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
       + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
-    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>The tool source wasn't found at build time. Rebuild the Hub from the repo root.</p></div></div>`;
+    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>This tool could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
 }
 function calcReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1017,6 +1020,30 @@ function monthlyReaderInner(){
     + `<h1>Monthly Proposal Generator<span class="loc">Price it, then build the proposal</span></h1>`
     + `<p class="lede">The firm's premium monthly-retainer proposal — our GoProposal replacement. <b>Step 1</b> prices the client with the same calculator (identical results); <b>Step 2</b> flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Choose <b>English</b> or <b>Bilingual (Russian + English)</b> — the bilingual version puts the full Russian version first (Atman-style), then the official English version, with the signature &amp; binding Terms in the English part. It builds the full on-brand proposal live; use <b>Save PDF</b> to download it (works in a normal browser and on the published Hub).</p>`
     + `</div></section><div class="page">${toolIframe(MONTHLY_DOC, 'Monthly Proposal Generator')}</div>`;
+}
+
+/* Lilian's Notebook — the whole page, embedded in an isolated iframe straight from
+   projects/lilian-notebook (its build.mjs reads notes/*.md). Isolation matters here for the
+   same reason as the tools: the notebook ships its own Atlas copy, its own sticky search bar
+   and its own print stylesheet, none of which should touch the Hub's. */
+// The catch keeps a bad note from taking the whole Hub build down — but it must SAY SO. A silent
+// '' shipped a Hub whose summary line looked normal while the notebook card held a callout
+// blaming a missing file, when the real cause was a parse error nobody ever saw.
+const NOTEBOOK_DOC = (() => {
+  try { return buildNotebookDoc({ embedded: true }); }
+  catch (e) {
+    console.error(`\n⚠️  Lilian's Notebook did NOT build — its card will show the unavailable callout.`);
+    console.error(`   ${e.message}`);
+    console.error(`   Fix projects/lilian-notebook/notes/ and rebuild before publishing.\n`);
+    return '';
+  }
+})();
+function notebookReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Personal notebook · Lilian</p>`
+    + `<h1>Lilian's Notebook<span class="loc">Lessons worth not learning twice</span></h1>`
+    + `<p class="lede">The hard knowledge, kept deliberately small — <b>how a system actually behaves</b>, <b>what something costs</b>, <b>what's inside a fee</b>, and <b>how to carry out a procedure</b> — each written as the rule to follow next time. It replaces the paper notebook Lilian used to keep: it survives after the task that produced it is closed and deleted. <b>Lilian's own record</b> — she's the one who writes in it — kept here so it's never lost. Search it, filter by category, or open the ★ starred ones.</p>`
+    + `</div></section><div class="page">${toolIframe(NOTEBOOK_DOC, "Lilian's Notebook")}</div>`;
 }
 
 function engagementReaderInner(owner, updated){
@@ -1585,6 +1612,11 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'monthly-proposal-generator', label: 'Open the generator' } },
 
+  { band: 'tool', kind: 'Notebook', name: "Lilian's Notebook — lessons learned", owner: 'lilian',
+    blurb: 'The hard knowledge, kept deliberately small — how a system actually behaves, what something costs, what’s inside a fee, and how to carry out a procedure — each written as the rule to follow next time. Searchable, with the ★ starred ones marked. Lilian’s own record (she is the one who writes it); it lives here so knowledge outlives the task that produced it. Opens right here in the Hub, always rebuilt from its source.',
+    formats: ['In-Hub page'],
+    tool: { id: 'lilian-notebook', label: 'Open the notebook' } },
+
   { band: 'tool', kind: 'Interactive tool', name: 'Internal Pricing Calculator', owner: 'julia',
     blurb: 'Price a monthly client from the firm’s Core Pricing Matrix — enter the service parameters and get the internal fee build-up and the single bundled monthly fee, live in the browser. Internal only (the client never sees the breakdown); it also feeds the Monthly Retainer Proposal generator, using the same shared pricing core so the two never disagree.',
     formats: ['In-Hub tool'],
@@ -1618,6 +1650,7 @@ const TEMPLATES = [
 // is reflected in the Hub). Reader ids match the Templates cards' tool.id above.
 readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="lilian-notebook" hidden>${notebookReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 

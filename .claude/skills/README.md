@@ -41,6 +41,7 @@ The one-liners below are just the "when to reach for it."
 | [`sop-authoring`](./sop-authoring/) | Writing, restructuring, or reviewing **any firm SOP** the house way — the required structure, the review workflow, and the Atlas render. |
 | [`client-intelligence`](./client-intelligence/) | Building, enriching, or auditing the **per-client knowledge files**, and rendering the client review dashboard. *(Feeds the client's SOPs.)* |
 | [`knowledge-hub`](./knowledge-hub/) | Building or extending the **firm Knowledge Hub** — the one on-brand page indexing every SOP + client, its in-page reader, and tools like the Chart-of-Accounts builder. *(Reuses the `client-intelligence` engine.)* |
+| [`lilian-notebook`](./lilian-notebook/) | Capturing or looking up a **lesson learned the hard way** in Lilian's Notebook — *"anota esto en mi libreta"*, or **proposing** the entry unprompted when a session turns one up. *(Lilian's personal record; a lesson, not a task — tasks go in `FOLLOW-UPS.md`.)* |
 
 ## Marketing & content
 

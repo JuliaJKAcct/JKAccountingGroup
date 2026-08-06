@@ -72,8 +72,13 @@ Drive, printed to PDF, and inside a CSP-restricted Artifact.
   so the Hub's client cards are **the same expandable cards** (service pills,
   systems, open items, sources) as the standalone review dashboard — **one engine,
   no drift**. Click a client card and its detail expands *inline*.
-- Sources it indexes: [`../sops/`](../sops/) (procedures) and
-  [`../client-intelligence/`](../client-intelligence/) (clients). Adding an SOP or
+- [`lilian-notebook`](../../.claude/skills/lilian-notebook/) — the Hub's **Lilian's Notebook**
+  card opens the whole notebook in the reader, embedded by **importing that project's own
+  generator** (`buildNotebookDoc({embedded:true})`) rather than copying its HTML — the same
+  one-engine rule as the client cards. Rebuild the Hub whenever a note changes.
+- Sources it indexes: [`../sops/`](../sops/) (procedures),
+  [`../client-intelligence/`](../client-intelligence/) (clients) and
+  [`../lilian-notebook/`](../lilian-notebook/) (the notebook page). Adding an SOP or
   a client and re-running the build is all it takes to update the Hub.
 
 ## Outputs
