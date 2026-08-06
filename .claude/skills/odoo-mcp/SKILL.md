@@ -1,6 +1,6 @@
 ---
 name: odoo-mcp
-description: Operating guide for ANY work through the Odoo MCP (the `Odoo_JK_Accounting_Group` server) — the firm's Odoo ERP. Load this BEFORE the first Odoo MCP call in a session. Use whenever a task will read or write Odoo data: journal entries, invoices, bills, payments, partners/contacts, reconciliation, taxes, accounting reports, CRM leads, appointments/calendars, products — anything "in Odoo." Encodes the hard 50-tool-calls-per-day budget on the free plan (and how to plan a task inside it), the chatter audit-log convention, the safety rules for write operations, the model map, and the call-efficient query patterns. Read this before planning any Odoo sequence so the budget is respected every time — running out mid-task leaves work half-finished.
+description: Operating guide for ANY work in the firm's Odoo ERP — through the `Odoo_JK_Accounting_Group` MCP connector, or through Odoo's own API. Load this BEFORE the first Odoo call in a session. Use whenever a task will read or write Odoo data: journal entries, invoices, bills, payments, partners/contacts, reconciliation, taxes, accounting reports, CRM leads, appointments/calendars, website pages and views, products — anything "in Odoo." Also load it to answer where the 50-calls-per-day limit comes from (the MCP connector's free plan — not Odoo's subscription, not the Claude plan), how to set up the direct-API connection that removes that ceiling, or what the write-safety rules are before changing anything on the website. Encodes the call budget and how to plan a task inside it, the chatter audit-log convention, the six write-safety layers, the model map, and the call-efficient query patterns.
 ---
 
 # Odoo MCP — operating guide
@@ -50,11 +50,26 @@ checked against the service. **`pan_usage` answers both in 1 call**, returning t
 calls used today, the daily limit and what remains.
 
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
-most of what exists there, and set up this MCP connection. Route integration questions —
-including *why the MCP connector rather than a direct API* — to him. That decision is open
-and parked with Lilian: see the **"Odoo's 50-calls/day ceiling"** row in
-[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). Until it is settled, the 50/day budget stands and
-the rules below apply.
+most of what exists there, and set up this MCP connection. Route integration questions to him.
+
+**Aug 2026: going direct is agreed in principle, but GATED on Odoo's pricing plan.** Lilian
+asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there is no
+problem going direct. **However — Odoo's 19.0 documentation states the external API is
+available only on *Custom* plans, "not available on One App Free or Standard" — and this repo
+records the firm as being on Standard.** If that still holds, going direct means upgrading the
+whole subscription (priced per user, for every user), which may cost more than simply paying
+for a higher tier on the MCP connector. **Settle that comparison before creating any user or
+key.** The gate, the numbers to collect, and then the full step-by-step are in
+**[`references/direct-api-setup.md`](./references/direct-api-setup.md)** — which also records
+that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
+instance and that **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
+winter 2027**. New code targets JSON-2.
+
+**Until that exists, the 50/day budget below stands.** And whichever route is in use, every
+write follows **[`references/write-safety.md`](./references/write-safety.md)** — the six
+layers agreed with Lilian. Read it before changing anything, and note *why* it matters more
+after the switch: the 50-call ceiling is currently acting as a handbrake on mistakes, and a
+direct connection removes it.
 
 ### What counts as a call
 
@@ -161,6 +176,12 @@ or `<p>` tags for line breaks rather than `\n`.
 
 ## 3. Safety rules for write operations
 
+> **The full rule set is [`references/write-safety.md`](./references/write-safety.md) — the
+> six layers agreed with Lilian (Aug 2026): limit the key's power · always be able to undo ·
+> three verifications per change · hard limits in the tool · leave a trail · rehearse
+> unpublished. Read it before any website change, and before the first write over the direct
+> API. The rules below are the accounting-specific subset and stay in force.**
+
 - **Never delete accounting records** (`account.move`, `account.move.line`,
   `account.payment`) without explicit per-operation confirmation. Posted entries generally
   should not be deleted at all — reverse them.
@@ -207,6 +228,10 @@ this is where most real queries live) · `account.payment` · `account.journal` 
 
 **Products and sales**
 `product.template` · `product.product` · `product.pricelist` · `crm.lead` · `crm.stage`
+
+**Website** (the firm's site runs on this instance — see
+[`write-safety.md`](./references/write-safety.md) before writing to any of these)
+`website.page` · `ir.ui.view` · `website.menu` · `website.rewrite` · `website`
 
 **Communication and scheduling**
 `mail.message` · `mail.activity` · `mail.template` · `calendar.event` ·

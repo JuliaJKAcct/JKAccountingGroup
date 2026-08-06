@@ -532,10 +532,12 @@ no Odoo connector at all. **There is one now** — the account-level
 `Odoo_JK_Accounting_Group` MCP server that Andres set up — so Claude can read and write
 Odoo directly, `crm.lead` and `crm.stage` included. The constraint moved: that connector
 is capped at **50 tool calls per 24 hours, shared across the firm's one account**, which is
-nowhere near enough to build and iterate a CRM pipeline. **Whether we raise that plan or
-move to a direct Odoo API integration is an open decision** — see the **"Odoo's
-50-calls/day ceiling"** row in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) (Lilian, with Andres) —
-and it should be settled before this idea starts, not during it. Still true: getting the website to create leads
+nowhere near enough to build and iterate a CRM pipeline. **Decided Aug 2026: the firm wants
+to go direct through Odoo's own API** (Andres approved) — but that is **gated on the Odoo
+pricing plan**, since external API access needs a *Custom* plan and the firm is on
+*Standard*. See the **Odoo direct-API connection** row in
+[`FOLLOW-UPS.md`](./FOLLOW-UPS.md) (Lilian, with Andres); it should be settled before this
+idea starts, not during it. Still true: getting the website to create leads
 by itself is its own piece of work (Odoo supports web-form / "Contact Us" → CRM lead
 natively). Anyone touching Odoo follows the [`odoo-mcp`](./.claude/skills/odoo-mcp/) skill.
 
