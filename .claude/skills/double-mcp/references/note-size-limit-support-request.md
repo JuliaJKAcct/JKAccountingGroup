@@ -4,52 +4,71 @@
 answer in [`../SKILL.md`](../SKILL.md) §7 ("the size wall") and delete or supersede this file.
 
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
-evidence is kept here rather than reconstructed from memory the next time it comes up — and if
-support asks for detail, or the request has to be re-sent to a different team, it's ready.
+evidence is kept here rather than reconstructed from memory the next time it comes up.
 
 ## Who this goes to, and why it is short
 
 **Allison Millea, Implementation Specialist at Double** — the firm's implementation contact, with
 recurring 30-minute calls with Lilian, Maria and Julia. **She already knows who we are and that we
 work through the Claude integration**: Lilian raised a Claude-integration limitation with her on
-2026-06-17 (building an organizer template) and Allison answered it directly.
+2026-06-17 and Allison answered directly.
 
-So **no introduction, and no formality** — the firm's existing register with her is short, direct,
-one issue per message, ending in a question. Lilian's instruction, 2026-08-06: the explanation was
+So **no introduction, and no formality** — the firm's register with her is short, direct, one issue per
+message, ending in a question and a warm close. Lilian's instruction, 2026-08-06: the explanation was
 good but too long; keep it fully understandable and cut the rest.
 
-**Send it as a reply to her open thread**, not a new email: *"Checking in before our 8/18 wrap-up"*
-(2026-08-04), where she wrote *"Are there any issues, questions, or features you'd like to dig into?
-Happy to help over email so nothing slows you down before we connect."* The next call is **August 17**,
-so an email now gets it moving beforehand — and if it isn't resolved, it's already on the agenda.
+Four things to get right when sending:
+
+1. **Send it as a reply to her open thread**, not a new email: *"Checking in before our 8/18 wrap-up"*
+   (2026-08-04), where she wrote *"Are there any issues, questions, or features you'd like to dig into?
+   Happy to help over email so nothing slows you down before we connect."*
+2. **The next call's date is unsettled** — her email body says **August 17th**, her own subject line
+   says **8/18**, and **no invite for either date is on the calendar** (the last two were Jun 17 and
+   Jul 20). Worth confirming in the same reply.
+3. **Say "MCP integration", not just "Claude".** When Lilian raised "the Claude integration" on
+   2026-06-17, Allison answered about **"the Ask Double feature"** — a different surface. `create_note`
+   and `update_note` are MCP tool names she has never seen, so name the surface explicitly.
+4. **Keep the name and the workspace in the body.** Allison's habit with technical bugs is to **forward
+   them**: on 2026-05-20 she looped in `help@doublehq.com` on a bank-feed issue, which became dev
+   ticket #102495635. Lilian's signature is an image, so in a forwarded plaintext ticket this email
+   would otherwise identify neither sender nor tenant.
+
+**If the web-UI test (below) is done before sending, replace question 3 with its result** — the answer
+is stronger evidence than the question.
+
+**If this is escalated to Support, or re-sent after the implementation window closes**, restore the
+firm introduction from git history. It was removed because *Allison* knows us — Allison's onboarding
+email (2026-05-15) describes her as the implementation contact "for the next three months", so this
+wrap-up call is the end of that window and a hand-off is a live scenario.
 
 ---
 
-## The email to send
+## The email to send — reply to "Checking in before our 8/18 wrap-up"
 
-> **Reply to:** "Checking in before our 8/18 wrap-up"
->
 > Hi Allison,
 >
-> Good afternoon, and thank you for checking in — there is one thing we could use help with.
+> Good afternoon, and thank you for checking in. Could you please help us with something?
 >
 > We have started keeping what we call a **case note** in Double: for a client matter that runs for
 > weeks, **one single note on the client** holding the whole history — the current status, what we are
 > waiting on and from whom, and a dated timeline of every call and email. Anyone on the team can open
 > the client and understand the matter in a minute. These notes get long.
 >
-> The problem: through the Claude integration, **`create_note` and `update_note` return HTTP 403 once
-> the note body reaches about 8,000 characters.** Shorter bodies save normally. Measured August 6:
+> The problem: through the **MCP integration we drive with Claude** (not Ask Double), the `create_note`
+> and `update_note` calls **return HTTP 403 once the note body reaches about 8,000 characters.**
+> Shorter bodies save normally. Measured August 6 on our workspace, JK Accounting Group:
 >
 > | Note body | Result |
 > |---|---|
-> | ~7,600 characters | saved |
+> | ~7,600 characters of real content | saved |
 > | ~8,000 characters | 403 Forbidden |
 > | ~10,400 characters | 403 Forbidden |
 > | ~8,200 characters of plain filler text — no formatting, no client data | 403 Forbidden |
 >
-> That last row tells us it is the **size of the request**, not anything in our content. Every other
-> call succeeds at the same moment, so it is not the connection either. The response is:
+> That last row tells us it is the **size of the request**, not anything in our content. It is fully
+> reproducible: the same payload fails every time, and trimming it below the threshold makes it
+> succeed. Every other call succeeds at the same moment, so it is not the connection or authentication
+> either. The response is:
 >
 > ```
 > MCP server returned 403 Forbidden — the request may have been blocked by a firewall or
@@ -57,18 +76,22 @@ so an email now gets it moving beforehand — and if it isn't resolved, it's alr
 > error_code: mcp_request_blocked
 > ```
 >
+> Client IDs: **706709**, **710577**
+> When: **2026-08-06, ~03:25–04:45 UTC**
+>
 > Three questions:
 >
 > 1. Is there a documented maximum note length for the API?
 > 2. If it is a security or request-size rule, can it be raised for our account?
 > 3. Does the web interface have the same limit?
 >
-> For now we are cutting content out of the notes to make them fit, which rather defeats the point of
-> keeping the whole history in one place. It happened on client IDs **706709** and **710577** on
-> August 6 between roughly 03:25 and 04:45 UTC, and I can send a test payload of the exact failing
-> size if that helps you trace it.
+> For now we are cutting content out of the notes to make them fit, which defeats the point of keeping
+> the whole history in one place. I can send a test payload of the exact failing size if that helps you
+> trace it.
 >
-> Thank you,
+> Thank you so much in advance for your help, and see you on our next call!
+>
+> Lilian — JK Accounting Group
 
 ---
 
