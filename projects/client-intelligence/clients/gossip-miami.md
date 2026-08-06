@@ -52,6 +52,8 @@ the actual details.
 > "second joint filer / owner of Marat Boxing", but **every email goes to the same address**, including the
 > Marat Boxing templates and the tax-return document requests. So either the correspondent *is* the Marat
 > Boxing owner and there is only one person we deal with, or the second filer simply never appears in email.
+> **Double's contact graph says the same thing:** only **one** portal contact sits on the company
+> record; the other joint filer appears only on the joint individual account _(Double, 2026-08-06)_.
 > **Resolve it before relying on the split** _(noticed 2026-08-06 while reading the thread)_.
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577) _(Double, 2026-08-06)_
@@ -137,6 +139,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-04 — **Documents requested (Gmail, in Russian, Julia copied).** Two emails the same day: (a) reconnect **both** Gossip Miami bank accounts to QuickBooks via "Fix now" — the transactions after the disconnection never loaded — plus **all credit-card statements from January 2025 through January 2026** and the **checking statements for December 2025 and January 2026**; (b) a follow-up asking for **photos of every check the company wrote and of the cash-deposit slips**, both downloadable from his banking app. _(The client had sent "GOSSIP Statements 2025" earlier that afternoon, before these asks.)_
 - 2026-08-05 — ✅ **The client delivered the 2025 credit-card statements** — **12 monthly PDFs, statement dates 2025-01-03 → 2025-12-03**, emailed to Julia and forwarded to Maria the same day. That satisfies the 2026-08-04 "January 2025 → January 2026" credit-card ask **except the January 2026 statement**. _(Gmail.)_
 - 2026-08-05 — **Consolidated "everything we need for the 2025 return" email sent**, three hours after that delivery _(Gmail, in Russian, Julia copied)_ — it **restates** the 2026-08-04 asks and **narrows** the credit-card range to **January 2026 alone**, the 2025 months having just arrived. Still asked for: reconnect both bank accounts via "Fix now" (with a screenshot of the button), the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, and the **photos of every check the company wrote + the cash-deposit slips**.
+- 2026-08-06 — **Double case note opened for the 2025 tax preparation** — "CASE · 2025 tax preparation" (note **485291**), so Julia or anyone else can open the client and see the status in seconds. It is the team-facing mirror of this file and gets **updated in place**, never duplicated. Per Lilian the note carries the full detail — contact names, email addresses, client IDs — because Double is the system of record for client data; **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_.
 - 2026-08-06 — **Status per Lilian:** the piece she is actively waiting on is the client **going to the bank for the images of the checks DEPOSITED INTO the company and of the checks the company ISSUED**. **He said he would try to resolve it.** Nothing received yet. _(Lilian)_
   - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation.
 
@@ -160,6 +163,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577)
+- **Double case note — the team-facing history of the 2025 tax preparation:** "CASE · 2025 tax preparation", note **485291** on the client record. It carries the full detail including contact names and emails (that belongs in Double, not here). **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related clients:** the owners' individual account and **Marat Boxing LLC** are part of this same relationship (see the note at the top)
 - **Related SOPs:** none yet. The scope rule this client exercised lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/)

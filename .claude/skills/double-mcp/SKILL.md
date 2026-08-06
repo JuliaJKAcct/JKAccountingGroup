@@ -447,9 +447,37 @@ the whole thing start to finish, instead of reconstructing it from email.
    not agreed*, or *inferred, not established*, or *unverified*, the note says so too — in the block
    a reader will act on. A case note is read with an agency on the phone; a hedge dropped there
    becomes a statement to the state.
-10. **Nothing sensitive.** No dollar figures from a client's books, no account numbers, no personal
-   contact details — the same line the repo draws. Agency phone numbers and public case/reference
-   numbers are fine.
+10. **The opposite of the repo rule: a Double note carries EVERYTHING the team needs.** Names, email
+   addresses, phone numbers, client IDs, figures, agency and case references — put them in. Double is
+   the firm's system of record for client data, and a note that makes the reader go hunting for who
+   "the owner" is has failed at its one job. **This does not loosen the repo rule at all**: the
+   client-intelligence files stay role-only and secret-free. Same fact, two homes, two standards.
+   _(Lilian, 2026-08-06, explicitly: in Double notes include all the necessary information, sensitive
+   or not — emails, names, and so on — "en double necesita toda la información posible". She asked for
+   the three existing notes to be back-filled, which was done the same day.)_
+   - **Credentials are the one open question.** She named passwords among what belongs in a note. Two
+     things to settle with her before any go in: the firm's convention puts logins in the **Google
+     Drive vault**, so a note becomes a *second* home that nobody rotates or retires; and **whether
+     notes are visible to the client in the portal is still unconfirmed** (`FOLLOW-UPS` row 17). A
+     name or an email in the client's own record is harmless if he sees it — a password is not.
+     Until both are settled, reference where the credential lives rather than pasting it.
+
+### The 8 KB wall — a long note gets blocked, not truncated
+
+**Bodies of roughly 8,000 characters or more fail** with a `403` / `mcp_request_blocked` from the
+security layer in front of the connector, *not* a validation error from Double — so it looks like an
+outage rather than a size problem. Measured 2026-08-06: **~7,600 characters went through; ~8,000 and
+~10,400 were both blocked.** Note that `ping` keeps working, which is what makes this confusing.
+
+Practical rules:
+
+- **Keep a note body under ~7,500 characters.** Compose it, measure it, then send.
+- If a `403` hits, **don't retry the same payload** — it will fail identically. Cut length instead.
+- To get a long note in safely: `create_note` with a short stub, then `update_note` with the trimmed
+  full body. That also keeps the ID stable for rule 1.
+- Length is a feature, not a limitation: it forces the note to stay the *readable* view. When a case
+  outgrows 7,500 characters, the detail belongs in the client-intelligence file (rule 7), not in more
+  note.
 
 ### The body shape
 
