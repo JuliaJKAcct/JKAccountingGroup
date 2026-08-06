@@ -288,13 +288,16 @@ the whole thing start to finish, instead of reconstructing it from email.
 
 ### The rules
 
-1. **One note per case, never one note per event.** The note is **rewritten in place** with
-   `update_note` as things happen. A second note on the same matter splits the history and defeats
-   the point.
+1. **One note per case, never one note per event — this is the general rule for every case note, not
+   a habit of the pilot.** The note is **rewritten in place** with `update_note` as things happen. A
+   second note on the same matter splits the history and defeats the point. **Before writing anything
+   on a matter, `list_notes(clientId)` and look for the note that already covers it.** _(Lilian stated
+   this when the convention was created and **re-confirmed it unprompted on 2026-08-06**, when the firm
+   opened its second case note — a different matter, Ecoorganic's QuickBooks handover.)_
 2. **When new information about a tracked case arrives, updating its note is part of the work** —
    not a separate request. Lilian's instruction (Aug 2026): *when I tell you about this again, you
-   have to go to that note and update it — it cannot be left sitting on out-of-date information.*
-   Find the existing note with `list_notes(clientId)` **before** writing anything.
+   have to go to that note and update it — it cannot be left sitting on out-of-date information.* (The lookup that makes this
+   possible is rule 1.)
 3. **English**, like every firm artifact, whatever language the session is in.
 4. **Not for everything.** A matter is a **candidate** when it **spans more than a day**, involves a
    **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk** — but the

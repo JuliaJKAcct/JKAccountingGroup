@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-04
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-06
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -48,14 +48,20 @@ the actual details.
 | Second joint filer | Double client — **the owner of Marat Boxing LLC** (§4), who also receives **K-1s from outside partnerships**. This is the person Lilian speaks with about the scope question _(Lilian, 2026-08-04)_ |
 | Gossip Miami's owners as filed | **Unresolved** — in the 2024-return correspondence the client raised a question about which names do and don't appear on the return. Re-check against the filed return; see §6 |
 
-- **Double client:** _(pending — link)_
+> **§2's two roles may be one person — confirm.** The table above splits "primary correspondent" from
+> "second joint filer / owner of Marat Boxing", but **every email goes to the same address**, including the
+> Marat Boxing templates and the tax-return document requests. So either the correspondent *is* the Marat
+> Boxing owner and there is only one person we deal with, or the second filer simply never appears in email.
+> **Resolve it before relying on the split** _(noticed 2026-08-06 while reading the thread)_.
+
+- **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577) _(Double, 2026-08-06)_
 - **Double / TaxDome:** the family carries **separate accounts** — one for the individuals and one for **Gossip Miami LLC** — activated by the client 2026-03-03 _(Gmail)_.
 
 ## 3. Systems & access
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping |
+| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping. ⚠️ **BOTH company bank accounts are DISCONNECTED from QuickBooks**, so the transactions since the disconnection never loaded. **Only the client can reconnect them** — the "**Fix now**" prompt in his own QuickBooks. Asked 2026-08-04 and again 2026-08-05; **no confirmation received as of 2026-08-06 — verify in QuickBooks before chasing again**, the firm has user access (§6) |
 | Bank statements | The raw material for the financial statements | _(not in the repo — sent by email/portal)_ | 2025 statements supplied for **Gossip Miami** and, separately and unprompted, for **Marat Boxing** (§4) |
 | Vagaro | The salon's booking/marketing platform _(inferred from a Vagaro email sent on the salon's behalf — never seen or used by the firm)_ | _(n/a — no firm access)_ | May or may not be a revenue source the books need; **nobody has looked**. Don't go hunting for a Vagaro export on the strength of this row |
 | TaxDome portal | Organizers, document requests, signatures | _(n/a — firm platform)_ | The 2025 individual organizer runs here |
@@ -81,6 +87,24 @@ This is the live issue with this client and the reason the file exists.
 - **The rule:** tax preparation does **not** include producing the client's financial statements. A return runs off the company's year-end numbers — the **Profit & Loss** above all — and producing those is **bookkeeping**, a separate service. A tax-prep client that owns a company is expected to bring their own P&L. The firm-wide statement of this lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/); it is **never** quoted inside a tax-return proposal.
 - **Gossip Miami — the firm is doing it, quoted separately.** The client had no P&L, so they supplied **bank statements + QuickBooks access** and the firm is cleaning up the transactions and building the financial statements. Quoted at an **hourly rate, capped at 10 hours**, with an **advance invoice** before starting and the rest billed afterwards according to the hours spent _(Lilian)_. **The advance was paid 2026-08-03** _(Gmail)_. _(Rate and amounts live in the invoice / Double, not here.)_
 - **Marat Boxing — the firm is NOT doing it.** Statements for this company arrived on 2026-08-03 without it having been discussed, which is a different entity and outside the Gossip Miami arrangement. **Resolved 2026-08-04: the client will prepare the P&L himself.** Lilian sent him the firm's **Profit & Loss** template and the **Home Office deduction** template and he agreed to fill them in. **Do not start a cleanup for Marat Boxing** — it was never engaged and is not needed.
+
+### What preparing this return needs from the client, every year
+
+Because the firm is not the bookkeeper (above), the numbers have to be assembled from the client's
+own records, and **all of it is his to produce**:
+
+- **The company's bank and credit-card statements** for the year, plus the boundary months either
+  side of it — the credit-card cycle closes on the **3rd**, so a statement dated early January
+  carries the tail of December. _(That cycle-date reading is ours, from the statement filenames —
+  not something the client or the bank confirmed.)_
+- **Images of the company's checks and its cash-deposit slips**, which he downloads from his own
+  banking app.
+- **The QuickBooks bank feeds connected.** Both company accounts have been **disconnected**, so the
+  transactions since never loaded, and **only the client can reconnect them** — the "Fix now" prompt
+  appears in his QuickBooks, not in the firm's view.
+
+**The live, dated status of each of these — asked, received, still missing — lives in §6.** Don't
+duplicate it here; a request list goes stale, this list doesn't.
 
 ### Sales tax
 - **Applies?** _(pending — confirm; a salon's services and retail product sales may differ)_
@@ -110,9 +134,17 @@ This is the live issue with this client and the reason the file exists.
 - 2026-08-03 — **2025 bank statements sent** for Gossip Miami and, separately, a full year of statements for **Marat Boxing LLC** — the latter never discussed. The **advance for the Gossip Miami financial-statement work was paid** the same day. _(Gmail)_
 - 2026-08-04 — **Scope conversation.** The client asked what he needed financial statements for. Lilian explained, in Russian, that tax preparation does not include producing the P&L, that the Gossip Miami cleanup is the separately-quoted service already under way, and that Marat Boxing would need its own arrangement. **Outcome: the client will produce Marat Boxing's P&L himself** — Lilian sent him the **Profit & Loss** and **Home Office deduction** templates by email and he agreed to fill them in. **No cleanup work for Marat Boxing.** _(Lilian)_
 - 2026-08-04 — Confirmed **Marat Boxing is a Schedule C** on the owners' return _(Lilian)_.
+- 2026-08-04 — **Documents requested (Gmail, in Russian, Julia copied).** Two emails the same day: (a) reconnect **both** Gossip Miami bank accounts to QuickBooks via "Fix now" — the transactions after the disconnection never loaded — plus **all credit-card statements from January 2025 through January 2026** and the **checking statements for December 2025 and January 2026**; (b) a follow-up asking for **photos of every check the company wrote and of the cash-deposit slips**, both downloadable from his banking app. _(The client had sent "GOSSIP Statements 2025" earlier that afternoon, before these asks.)_
+- 2026-08-05 — ✅ **The client delivered the 2025 credit-card statements** — **12 monthly PDFs, statement dates 2025-01-03 → 2025-12-03**, emailed to Julia and forwarded to Maria the same day. That satisfies the 2026-08-04 "January 2025 → January 2026" credit-card ask **except the January 2026 statement**. _(Gmail.)_
+- 2026-08-05 — **Consolidated "everything we need for the 2025 return" email sent**, three hours after that delivery _(Gmail, in Russian, Julia copied)_ — it **restates** the 2026-08-04 asks and **narrows** the credit-card range to **January 2026 alone**, the 2025 months having just arrived. Still asked for: reconnect both bank accounts via "Fix now" (with a screenshot of the button), the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, and the **photos of every check the company wrote + the cash-deposit slips**.
+- 2026-08-06 — **Status per Lilian:** the piece she is actively waiting on is the client **going to the bank for the images of the checks DEPOSITED INTO the company and of the checks the company ISSUED**. **He said he would try to resolve it.** Nothing received yet. _(Lilian)_
+  - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation.
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- **WAITING ON THE CLIENT — the remaining bank documents.** ✅ **Received 2026-08-05:** the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03). **Still missing:** the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, the **photos of the checks the company wrote + the cash-deposit slips**, and the **reconnection of both QuickBooks bank feeds** (only he can do that). Asked 2026-08-04 and restated 2026-08-05.
+- **The piece he committed to verbally: going to the bank for the check images** — deposited into the company and issued by it — and he said he would try _(Lilian, 2026-08-06)_. **The incoming-check half has never been asked for in writing** (see the log); put it in the next email so it isn't lost.
+- **So the 10-hour cap is not what's binding right now — the missing documents are.** Track the hours, but don't read a stalled clock as work left to do.
 - **Waiting on the client's own P&L for Marat Boxing** (and the completed Home Office worksheet) before the Schedule C can be prepared. He has the templates.
 - **The Gossip Miami financial-statement work is in progress** — track hours against the 10-hour cap and invoice the balance when it closes.
 - **Confirm what return Gossip Miami files** before preparing it (§1) — the record disagrees with itself.
@@ -120,13 +152,14 @@ This is the live issue with this client and the reason the file exists.
 ### Information still needed
 
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
+- [ ] **Whether §2's "primary correspondent" and "second joint filer / Marat Boxing owner" are the same person** — all email goes to one address (see the note in §2)
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
 - [ ] Where the client's Google Drive folder is (§7)
 
 ## 7. Links
 
-- **Double client:** _(pending — link)_
+- **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577)
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related clients:** the owners' individual account and **Marat Boxing LLC** are part of this same relationship (see the note at the top)
 - **Related SOPs:** none yet. The scope rule this client exercised lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/)

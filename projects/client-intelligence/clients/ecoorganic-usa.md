@@ -29,7 +29,7 @@
 - **Primary language:** **Russian.** The owner corresponds in Russian and is addressed formally ("Вы") — see §5 for how to write to him _(confirmed 2026-08-04)_.
 - **Our engagement (services we provide):** Monthly bookkeeping — a staff bookkeeper does the work; Claude acts as the **independent reviewer**. (Other services: _(pending)_)
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online (via Double)
+- **Accounting platform:** QuickBooks Online (via Double) — the QuickBooks **company name is "Corganix"**, which is what you open to reach this client's books _(confirmed by Lilian, 2026-08-06)_.
 
 ## 2. Contacts
 
@@ -51,7 +51,7 @@ indexed _(2026-08-04)_.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | **QuickBooks company name: "Corganix"** _(Lilian, 2026-08-06)_. Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
 
@@ -84,7 +84,8 @@ the mapping **is** established — he is the one who asked, and he is the Russia
   verification if codes go to the lost phone.)_
 
 **The ordered plan, the preconditions and who owes what live in §6** — one home, so a completed
-handover doesn't leave stale instructions in three places.
+handover doesn't leave stale instructions in three places. The **team-facing view is the Double case
+note** on this client (§7) — same matter, written to be read; it is **updated in place**, never duplicated.
 
 ## 4. Obligations & recurring processes
 
@@ -136,7 +137,7 @@ handover doesn't leave stale instructions in three places.
 ## 6. History & open questions
 
 ### Log
-- 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is his father**, who **no longer has access to the phone tied to that account** _(that the father is §2's **Second owner** is our inference from there being two owner contacts — Lilian said only "his father"; unconfirmed)_. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan _(Lilian stated that outcome; the step order and its preconditions are sequenced by us — you cannot delete a primary admin — see the outstanding item)_. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian.
+- 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is his father**, who **no longer has access to the phone tied to that account** _(that the father is §2's **Second owner** is our inference from there being two owner contacts — Lilian said only "his father"; unconfirmed)_. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan _(Lilian stated that outcome; the step order and its preconditions are sequenced by us — you cannot delete a primary admin — see the outstanding item)_. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian. **Also confirmed: the QuickBooks company is named "Corganix"** — that is where to look to see the two users. A **Double case note** was opened the same day so the team can follow this without the repo (note **485258**, §7); it is the mirror of this record and gets **updated in place**, never duplicated _(Lilian re-confirmed that rule 2026-08-06)_.
 - 2026-08-04 — **Turo documents chased (Lilian).** The firm had already asked for access to the client's **Turo account** earlier; the account has since been **closed**, so the earnings report and any 1099-K can't be downloaded. Lilian **called Turo support**: they confirmed they *can* produce the documents but will hand them **only to the account holder** — they refused to give them to Lilian, and refused even to email them to the address already on the account without the owner calling himself. She captured the working route through the phone tree (see §3) and **sent the owner a message in Russian** with the number, the key sequence, and what to ask for (**Earnings Report and 1099-K, 2025**). **Waiting on him to call.** The message as sent:
   > Добрый день, Артем! Как у Вас дела?
   >
@@ -183,12 +184,12 @@ handover doesn't leave stale instructions in three places.
 - [ ] Sales tax / payroll applicability and who prepares each _(income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [ ] Any business licenses / annual filings
 - [ ] Where credentials live (Drive vault link)
-- [ ] **What "Corganix" refers to.** Lilian's pointer for checking the two users was "if you go into QuickBooks inside **Corganix**" — the name appears nowhere in the repo or in Double. Most likely the client's **QuickBooks company name**; once confirmed, record it as the non-sensitive reference on §3's QuickBooks row, since it is how anyone verifies the account's state.
 - [ ] **Whether the firm has its own QuickBooks access to this client independent of the owners' users** — the primary-admin handover in §3 shows the access picture was never written down. Worth settling while someone is in the account.
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
+- **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover" (the title names the father — personal data belongs in Double, not here), note **485258** on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)

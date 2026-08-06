@@ -198,7 +198,7 @@ client-intelligence/
 | LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 | Ihor Naum & Olha Levchuk | [`clients/ihor-naum-olha-levchuk.md`](./clients/ihor-naum-olha-levchuk.md) | Lilian | In progress — 1040 filed; Form 8802 pending at the IRS |
-| GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only (business return + the owners' individual return + a Schedule C); financial-statement cleanup quoted separately and under way |
+| GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only (business return + the owners' individual return + a Schedule C); financial-statement cleanup quoted separately and under way, now **waiting on the client's remaining bank documents** — he delivered the 2025 credit-card statements 2026-08-05 (live status in §6) |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter open — **closure ON HOLD pending Julia's decision**; pricing the alternative (filing the $0 returns + penalties) first |
 
 ## Brand & design
