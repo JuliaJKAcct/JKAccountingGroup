@@ -41,6 +41,18 @@ Read the project's own docs alongside this skill — they are the authority on c
    Lilian's explicit approval** (the weekend routine only *proposes* SOP changes; it
    never writes to `projects/sops/`).
 
+> **A case being tracked in Double has a second home — keep them in step.** For a matter the firm
+> is retracing start to finish (the Tsminibears Florida RT matter is the pilot), the client file is
+> mirrored by **one running case note on the Double client**, which the team actually reads. This
+> file stays the **master** — **§4/§5 for the substance, §6 for the dated log** — and the note is the
+> readable view, **rewritten in place, never duplicated**. **Whenever the matter moves, update the
+> note in the same pass** (not just when §6 gains a line: mirroring a log entry while §4 still says
+> something contradictory is the drift PR #138 had to repair). Read this file at its latest state
+> before rewriting the note — the other person's session may have moved the case — and **carry its
+> caveats across**: "recommended, not agreed", "inferred, not established", "unverified" all belong
+> in the note too. §7 Links records the note's title and ID. Format + rules: the
+> [`double-mcp`](../double-mcp/) skill §7.
+
 ## CI → SOP proposals (the approval loop)
 
 CI captures everything non-sensitive automatically. A client's **SOP** never changes
