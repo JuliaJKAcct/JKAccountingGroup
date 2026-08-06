@@ -190,6 +190,6 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
-- **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover — OPEN (waiting on Ishkhan's ID verification)", note **485258** on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
+- **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover" (the title names the father — personal data belongs in Double, not here), note **485258** on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)
