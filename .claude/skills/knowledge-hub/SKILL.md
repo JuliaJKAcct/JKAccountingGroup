@@ -1,13 +1,13 @@
 ---
 name: knowledge-hub
-description: Build, extend, or fix the firm's Knowledge Hub — the single on-brand page (projects/knowledge-hub/) that indexes every SOP, every client, and the firm's downloadable Templates, opens each document as a designed page in an in-page reader, and carries tools like the Chart-of-Accounts CSV builder. Use when adding or changing what the Hub shows, adding/curating an SOP or a client on it, changing the reader or a tool, restyling a Hub page, or (re)publishing its shareable link. Encodes what the Hub is for and Lilian's standing preferences (team-facing = designed, never GitHub/repo-file links; SOPs open INSIDE the Hub; client cards reuse the client-intelligence engine; bookkeeping SOPs are visual/dynamic — flowcharts, schemas, tables — always via the impeccable skill + the Atlas design system), the self-contained/portable-to-Odoo constraint, and the verify-before-publish gate that prevents whole-page-JS breakage. Read before touching projects/knowledge-hub/ or its build.
+description: Build, extend, or fix the firm's Knowledge Hub — the single on-brand page (projects/knowledge-hub/) that indexes every SOP, every client, Lilian's Notebook, and the firm's downloadable Templates, opens each document as a designed page in an in-page reader, and carries tools like the Chart-of-Accounts CSV builder. Use when adding or changing what the Hub shows, adding/curating an SOP or a client on it, changing the reader or a tool, restyling a Hub page, or (re)publishing its shareable link. Encodes what the Hub is for and Lilian's standing preferences (team-facing = designed, never GitHub/repo-file links; SOPs open INSIDE the Hub; client cards reuse the client-intelligence engine; bookkeeping SOPs are visual/dynamic — flowcharts, schemas, tables — always via the impeccable skill + the Atlas design system), the self-contained/portable-to-Odoo constraint, and the verify-before-publish gate that prevents whole-page-JS breakage. Read before touching projects/knowledge-hub/ or its build.
 ---
 
 # Knowledge Hub — the house way
 
 The engine behind [`projects/knowledge-hub/`](../../../projects/knowledge-hub/): **one
 on-brand, self-contained page** that is the front door to the firm's know-how — every
-**SOP** and every **client**, searchable, each opening as a designed page **inside** the
+**SOP**, every **client** and Lilian's Notebook, searchable, each opening as a designed page **inside** the
 Hub. It is the team's day-to-day tool; the repo stays the source of truth, the Hub is the
 view. Read the project's own [`README.md`](../../../projects/knowledge-hub/README.md)
 alongside this skill.
@@ -195,7 +195,7 @@ emitted script silently broke *every* click.
     engagement letter) or the reusable `inlineToolDoc()` + `toolIframe()` + a `readerDocs.push`
     with a chosen `data-doc` id (like the pricing calculator / monthly proposal) — then add one
     `{ band: 'tool', …, tool:{ id, label } }` entry pointing at that id. The band currently holds
-    three: the **Business Tax Engagement Letter** generator (reader id
+    four: the **Business Tax Engagement Letter** generator (reader id
     `business-tax-engagement-letter-standard`), the **Monthly Retainer Proposal** generator
     (`monthly-proposal-generator`), the **Internal Pricing Calculator** (`pricing-calculator`), and
     **Lilian's Notebook** (`lilian-notebook`).
@@ -216,7 +216,7 @@ emitted script silently broke *every* click.
 
     ⚠️ **Watch the payload ceiling.** Each isolated iframe is a self-contained document, so it
     carries **its own copy of the ~640KB `fonts-embedded.css`**. The notebook embed alone adds
-    ~690KB. As of Aug 2026 `scratch/hub.artifact.html` is ~10.2MB against the Artifact tool's
+    ~690KB. As of Aug 2026 `scratch/hub.artifact.html` is ~10MB against the Artifact tool's
     **16MB** limit — fine now, but **two or three more embeds of this kind will hit it.** Check the
     printed size before adding another, and if headroom gets tight, drop the Cyrillic subset from
     embeds that don't render Russian and consider a shared-font strategy before adding the embed.
