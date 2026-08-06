@@ -52,17 +52,19 @@ calls used today, the daily limit and what remains.
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
 most of what exists there, and set up this MCP connection. Route integration questions to him.
 
-**Aug 2026: going direct is agreed in principle, but GATED on Odoo's pricing plan.** Lilian
-asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there is no
-problem going direct. **However — Odoo's 19.0 documentation states the external API is
-available only on *Custom* plans, "not available on One App Free or Standard" — and this repo
-records the firm as being on Standard.** If that still holds, going direct means upgrading the
-whole subscription (priced per user, for every user), which may cost more than simply paying
-for a higher tier on the MCP connector. **Settle that comparison before creating any user or
-key.** The gate, the numbers to collect, and then the full step-by-step are in
-**[`references/direct-api-setup.md`](./references/direct-api-setup.md)** — which also records
+**Aug 2026: going direct is agreed; one 5-minute test still has to confirm it is permitted.**
+Lilian asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there
+is no problem going direct. Odoo's documentation disagrees — it states the external API is
+available only on *Custom* plans, "not available on One App Free or Standard", and the firm is
+on **Standard** ($31.10/user/month, 1 user; Custom is $61.00). **But the notice reads as a
+commercial condition, has been identical since Odoo 16, and the Pantalytics connector is
+demonstrably making external calls against this database today** — so the restriction may well
+not be enforced at the server. **Settle it with the throwaway-key test in
+[`references/direct-api-setup.md` §0](./references/direct-api-setup.md) before spending
+anything** — five minutes, no cost, and it also tells you whether a plan upgrade is needed at
+all. That file carries the full step-by-step, the vendor pricing on both sides, and records
 that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
-instance and that **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
+instance while **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
 winter 2027**. New code targets JSON-2.
 
 **Until that exists, the 50/day budget below stands.** And whichever route is in use, every
