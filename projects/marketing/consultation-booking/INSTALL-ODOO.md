@@ -12,6 +12,37 @@ connection required. Three pieces:
 
 ---
 
+## Reality check — what already exists (audited in Odoo, Aug 2026)
+
+**Part A is largely already done.** Julia created the calendars in **Dec 2024** (last
+edited Aug 2025), so treat Part A as a verification checklist rather than a build step.
+Three appointment types exist:
+
+| # | Appointment type | Duration | Availability (America/New_York) | Public URL |
+|---|---|---|---|---|
+| 1 | **Discovery Call** | 45 min | Mon–Fri 09:00–12:00 **and** 14:00–17:00 | `/appointment/1` — **published** |
+| 2 | Q&A Call | 30 min | Mon–Fri 09:00–12:00 **and** 14:00–17:00 | publish state not verified |
+| 3 | Consultation | 60 min | Mon–Fri 11:00–15:00 | publish state not verified |
+
+Verified configuration of **Discovery Call** (`appointment.type` id 1): host = **Julia**
+(the only staff user) · auto-confirm on · minimum notice 1 h · bookable up to 15 days
+ahead · slot interval = the 45 min duration · intake questions attached · intro and
+confirmation messages already written · **creates a CRM lead on every booking** ·
+Google Calendar connector enabled.
+
+Two gaps this audit found:
+
+1. **Nothing on the website links to any of them.** Every "Book a…" CTA points at the
+   contact page (`/contactus-v2`), which is an email form — a visitor cannot reach a
+   calendar at all. This is the real blocker, not the calendars.
+2. **Video is Google Meet, not Zoom.** `event_videocall_source = google_meet` with the
+   Google connector on — which contradicts the Zoom decision recorded in
+   [§ Video: Zoom](#3-video-zoom-the-firms-choice) and in the project README (that
+   decision exists because **Ping Assistant** joins Zoom calls). Decide which one wins
+   before go-live; today a booking generates a **Google Meet** link.
+
+---
+
 ## Part A — The two calendars (Appointments app)
 
 ### 0. Activate the app (once)

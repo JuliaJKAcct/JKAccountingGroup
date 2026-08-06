@@ -94,10 +94,18 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   - (`booking-chooser.html`, the standalone reference, additionally carries
     `#new-client-calendar`-style anchors and a "Design preview" badge — that file
     never ships as-is.)
-- **Inputs still needed from the firm:** exact availability (days/hours) per
-  calendar; consult durations; whether the new-client consult is a **free intro**
-  (add a "Free" badge if so); who hosts (Julia / +Lilian); booking-form intake
-  questions; how **Ping Assistant** joins meetings (calendar-watch vs manual
-  invite — decides whether to enable Odoo ↔ Google Calendar sync for Julia).
+- **Odoo audit, Aug 2026 — the calendars already exist.** Julia built them in Dec 2024:
+  **Discovery Call** (45 min, published at `/appointment/1`), **Q&A Call** (30 min) and
+  **Consultation** (60 min), all hosted by Julia, Mon–Fri windows in America/New_York.
+  So availability, durations, host and intake questions are **answered in Odoo**, not
+  pending — see the "Reality check" table in
+  [`INSTALL-ODOO.md`](./INSTALL-ODOO.md). Two things the audit contradicts:
+  the site links to **none** of them (every CTA lands on the contact form), and the
+  video source is set to **Google Meet**, not the Zoom decision recorded above.
+- **Inputs still needed from the firm:** whether the **free discovery call** becomes a
+  **10-minute** call (Lilian, Aug 2026 — the site now advertises 10 minutes, the Odoo
+  calendar still says 45 min: these must agree) and its interval between bookings;
+  Julia's daily availability window if it changes; whether Zoom or Google Meet wins;
+  how **Ping Assistant** joins meetings (calendar-watch vs manual invite).
 - **On go-live:** point the website "Book a Consultation" button and the
   [email signatures](../email-branding/) at this page's URL.
