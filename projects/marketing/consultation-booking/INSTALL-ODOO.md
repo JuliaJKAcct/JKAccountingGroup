@@ -42,6 +42,37 @@ video source was cleared. Zoom vs Meet is still open for the *longer* paid forma
 (Q&A Call, Consultation), and **Ping Assistant cannot join a phone call** — if the firm
 wants the notetaker on discovery calls, that decision has to be reopened.
 
+## ⚠ Known breakage: every booking page returns 500 (found Aug 2026)
+
+`/appointment/1`, `/appointment/2`, `/appointment/3` and `/book/Discovery-Call` all return
+**500 Internal Server Error**. `/appointment` (the index that lists the types) renders fine.
+This predates the Aug 2026 work — appointment type 2 was never touched and fails identically —
+and it explains why no button on the site ever pointed at a calendar.
+
+**Cause.** `ir.ui.view` id **2010**, key `appointment.appointment_info`, is a
+**website-specific copy** (`website_id = jkaccountinggroup`, `mode = primary`) created when
+someone edited the booking page in the website editor — the customization is the hardcoded
+heading "Schedule Your Discovery Call". A copy like this is frozen at the Odoo version it was
+made on. The instance has since been upgraded, and the frozen template still references
+fields that no longer exist:
+
+| Template references | Reality on this instance |
+|---|---|
+| `appointment_type.assign_method` (×4) | renamed — the field is now `assignment_method` |
+| `appointment_type.resource_manage_capacity` | no longer exists |
+
+Rendering raises on the first missing field, so every appointment detail page 500s.
+
+**Fix.** Delete (or deactivate) view 2010 so Odoo falls back to its own current template:
+Settings → Technical → User Interface → **Views** → search `appointment_info` → open the row
+whose **Website** is `jkaccountinggroup` → **Delete**. Nothing of value is lost: the only
+customization is that heading, which is wrong anyway now — it says "Discovery Call" on the
+paid Consultation page too.
+
+**Lesson for this repo:** editing an Odoo *app* page (Appointments, Portal, Blog) in the
+website editor silently forks the template and it stops receiving Odoo's updates. Prefer
+configuration fields (intro message, confirmation message) over editing those templates.
+
 ## The two offers — keep them distinct
 
 A **discovery call** and a **consultation** are different products. Do not let copy blur
