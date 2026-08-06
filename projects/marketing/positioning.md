@@ -60,6 +60,31 @@ the US get caught between two failures:
 - Real financial upside (the $1M+ saved stat lives here)
 - A relationship they can actually lean on
 
+**Naming the free first step — "discovery call," never "consultation."** The
+firm does **not** give free consultations: a consultation is paid advisory work.
+What is free is the short first conversation to see whether we're a fit. So every
+CTA, everywhere (website, collateral, signatures, referral scripts), reads
+**"Book a free discovery call"** — never "Book a free consultation."
+
+**Two offers, never blurred** _(Lilian, Aug 2026)_:
+
+| | **Discovery call** | **Consultation** |
+|---|---|---|
+| What it costs | Free | **$150** |
+| How long | **10 minutes** | **1 hour** |
+| How | By phone — we call the number they give us | Online |
+| Where it books | `jkaccountinggroup.com/book/Discovery-Call` | `jkaccountinggroup.com/appointment/3` |
+
+> **⚠ Both booking URLs currently return a 500 error** (a pre-existing Odoo problem, being
+> fixed — see [`consultation-booking/INSTALL-ODOO.md`](./consultation-booking/INSTALL-ODOO.md)).
+> The wording above is settled and safe to use in copy; **verify the link works before you
+> put it in anything that goes out.**
+
+Keep the "10 minutes" promise in the discovery-call copy: it is what makes the ask feel
+small, and it is what the calendar actually books. And never write "free" next to
+*consultation* — the consultation is paid advisory work, and saying otherwise is the
+mistake this whole rule exists to prevent.
+
 ## The pitch
 
 The conversational pitch — pain first, then us as the answer to it. Written to

@@ -31,7 +31,7 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 | [Marketing · Email Branding](./projects/marketing/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [Marketing · Video Generation](./projects/marketing/video-generation/) | On-brand marketing video. | Active |
 | [Marketing · Referral & Offer Strategy](./projects/marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
-| [Marketing · Consultation Booking](./projects/marketing/consultation-booking/) | The "Book a Consultation" front door — routes new vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
+| [Marketing · Consultation Booking](./projects/marketing/consultation-booking/) | The booking front door — routes visitors to the free 10-min phone discovery call or the paid 1-hour $150 consultation, on two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [Marketing · Scale Your Accounting Firm](./projects/marketing/scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
 | [Marketing · Lead Magnets](./projects/marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |

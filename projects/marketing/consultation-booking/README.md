@@ -2,10 +2,15 @@
 
 > **Status:** Active · **Owner:** Julia · **Started:** 2026-07
 
-The public **"Book a Consultation"** front door: one landing page that routes a
-visitor to the right scheduler — a separate calendar (and separate availability)
-for **new / prospective clients** vs. **existing clients**. Online-only, in
-**English and Russian**.
+The public booking front door: one landing page that routes a visitor to the right
+scheduler. **The split changed in Aug 2026** — it is now by **offer**, not by audience:
+a **free 10-minute phone discovery call** vs. a **paid 1-hour, $150 online consultation**.
+In **English and Russian**.
+
+> **Note on everything below this line:** the Purpose and "Locked decisions" sections were
+> written for the original **new-client vs existing-client** split with Zoom on both
+> calendars, and are **superseded** on those two points. The current state is in the
+> "Working on this" notes at the end and in [`INSTALL-ODOO.md`](./INSTALL-ODOO.md).
 
 ## Purpose
 
@@ -94,10 +99,34 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   - (`booking-chooser.html`, the standalone reference, additionally carries
     `#new-client-calendar`-style anchors and a "Design preview" badge — that file
     never ships as-is.)
-- **Inputs still needed from the firm:** exact availability (days/hours) per
-  calendar; consult durations; whether the new-client consult is a **free intro**
-  (add a "Free" badge if so); who hosts (Julia / +Lilian); booking-form intake
-  questions; how **Ping Assistant** joins meetings (calendar-watch vs manual
-  invite — decides whether to enable Odoo ↔ Google Calendar sync for Julia).
+- **What the Odoo audit found (Aug 2026), *before* the changes below.** The calendars
+  already existed — Julia built them in Dec 2024: **Discovery Call** (45 min at the time,
+  published at `/appointment/1`), **Q&A Call** (30 min) and **Consultation** (60 min), all
+  hosted by Julia, Mon–Fri windows in America/New_York. So availability, durations, host and
+  intake questions were **answered in Odoo**, not pending. The audit also found that the site
+  linked almost nowhere useful — the main CTAs landed on the contact form, and the buttons
+  that did point at `/book/Discovery-Call` had no invite behind that URL — and that the
+  discovery call's video source was **Google Meet**, not the Zoom decision recorded above.
+  All three were changed in the same pass; the live configuration is the "Reality check"
+  table in [`INSTALL-ODOO.md`](./INSTALL-ODOO.md).
+- **Decided and applied (Lilian, Aug 2026):** the free discovery call is a **10-minute
+  phone call** — no video link — with **slots every 30 minutes**, **4 hours** minimum
+  notice, Mon–Thu 09:00–12:00 / 14:00–17:00 and **Fri 10:00–12:00 / 14:00–15:30**
+  (America/New_York). The website CTAs now read "Book a free discovery call", carry a
+  "10 minutes · no obligation" micro-line on the four main pages, and link to the
+  calendar.
+- **The `/consultation` landing is the PAID offer (Lilian, Aug 2026).** It now sells the
+  **1-hour, $150** consultation, every CTA links to the Consultation calendar
+  (`/appointment/3`, published in the same pass), and the word "free" is gone from it.
+  A discovery call and a consultation are different products — see the comparison table in
+  [`INSTALL-ODOO.md`](./INSTALL-ODOO.md).
+- **⚠ But nothing can actually be booked yet.** Every appointment page returns **500** —
+  a pre-existing breakage, not caused by this work. The CTAs point at the right calendars;
+  the calendars themselves are down until `ir.ui.view` 2010 is deleted. Cause and fix:
+  [`INSTALL-ODOO.md` → Known breakage](./INSTALL-ODOO.md#-known-breakage-every-booking-page-returns-500-found-aug-2026).
+- **Inputs still needed from the firm:** Julia's Zoom room URL (the consultation calendar
+  still generates an Odoo Discuss link); whether Odoo should **collect the $150** at
+  booking; whether **Ping Assistant** is needed on discovery calls at all (it cannot join a
+  phone call); and the planned page that offers **both** options side by side.
 - **On go-live:** point the website "Book a Consultation" button and the
   [email signatures](../email-branding/) at this page's URL.

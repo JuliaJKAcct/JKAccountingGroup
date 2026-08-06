@@ -18,7 +18,7 @@ marketing/
 ├── email-branding/            ← team email on the Design System — signatures + branded email
 ├── video-generation/          ← on-brand marketing video (scripts + Flows briefs)
 ├── referral-offer-strategy/   ← front-offer / referral-partner funnel strategy
-├── consultation-booking/      ← "Book a Consultation" front door (new vs existing → two Odoo calendars)
+├── consultation-booking/      ← the booking front door (free 10-min discovery call vs $150 consultation)
 ├── scale-your-accounting-firm/  ← digested notes from the "Scale Your Accounting Firm" course
 └── lead-magnets/              ← free interactive calculators + assessments (funnel entry point)
 ```
@@ -31,7 +31,7 @@ marketing/
 | [`email-branding/`](./email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [`video-generation/`](./video-generation/) | Script on-brand short-form videos and produce ElevenLabs Flows production briefs (topic → script → brief), via the `video-script-pipeline` skill. | Active |
 | [`referral-offer-strategy/`](./referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner-specific pitches, and the "Growth Accelerator Series" workshop concept. | Planning |
-| [`consultation-booking/`](./consultation-booking/) | The "Book a Consultation" front door — one page routing new/prospective vs existing clients to two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
+| [`consultation-booking/`](./consultation-booking/) | The booking front door — one page routing visitors to the free 10-min phone discovery call or the paid 1-hour $150 consultation, on two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
 | [`scale-your-accounting-firm/`](./scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
 | [`lead-magnets/`](./lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the funnel's entry point. On-brand HTML tools; draft, pending tax-figure sign-off. | Active |
 

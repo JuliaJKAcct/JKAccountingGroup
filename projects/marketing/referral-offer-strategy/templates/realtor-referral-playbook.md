@@ -78,17 +78,17 @@ helpful"), which is what actually makes a referral land:
 > lot of my clients have found it really helpful. It's basically the
 > financial stuff worth double-checking when you're moving into a new place.
 > If anything on it looks unfamiliar, give them a call — they do a free
-> consultation."
+> discovery call."
 
 **C — Client asks a question the realtor can't fully answer:**
 > "Honestly, that's more of an accounting question than a real estate one —
 > but I work with a firm that handles exactly this for my clients. Want me
-> to connect you? They do a free consultation."
+> to connect you? They do a free discovery call."
 
 **D — Short follow-up text, a few days after keys:**
 > "Hope the new space is coming together! Meant to send you this — a quick
 > financial checklist I put together with an accounting firm I work with. A
-> lot of my clients found it helpful. Free consultation if anything looks
+> lot of my clients found it helpful. Free discovery call if anything looks
 > unfamiliar."
 
 Whichever moment it is, the ask is the same: hand over or text the
@@ -122,10 +122,10 @@ a replacement for the hand-off. The hand-off is what makes JKA reach out
   printout is one tap from a conversation.
 - **By text/WhatsApp:** share the PDF/link directly. A one-line message is
   enough — don't write a formal note to go with it:
-  > "Here's that checklist — [file]. Free consultation if anything's
+  > "Here's that checklist — [file]. Free discovery call if anything's
   > unclear, just let me know and I'll connect you."
   > (RU: «Вот тот чек-лист — [файл]. Если что-то будет непонятно, есть
-  > бесплатная консультация — скажите, и я вас свяжу.»)
+  > бесплатный ознакомительный звонок — скажите, и я вас свяжу.»)
 - **Email:** only if the client has specifically indicated they prefer it —
   don't default to it. Keep it just as short as the text version, no formal
   letter:
@@ -133,7 +133,7 @@ a replacement for the hand-off. The hand-off is what makes JKA reach out
   >
   > Hi {{CLIENT_FIRST_NAME}} — attaching a quick financial checklist from my
   > accounting contact, JK Accounting Group. Worth a look as you settle into
-  > the new space. Free consultation if anything's unclear — I've passed
+  > the new space. Free discovery call if anything's unclear — I've passed
   > your info along, or reach out directly: julia@jkaccountinggroup.com.
   >
   > (RU subject: «Небольшой чек-лист для нового помещения») Hi

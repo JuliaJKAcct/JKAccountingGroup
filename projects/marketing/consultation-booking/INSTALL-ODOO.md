@@ -12,7 +12,132 @@ connection required. Three pieces:
 
 ---
 
-## Part A — The two calendars (Appointments app)
+## Reality check — what is actually live (Odoo, Aug 2026)
+
+**Part A is done — do not rebuild it.** Julia created the calendars in **Dec 2024**;
+Lilian reconfigured the discovery call in **Aug 2026**. Three appointment types exist:
+
+| # | Appointment type | Duration | Availability (America/New_York) | Public URL |
+|---|---|---|---|---|
+| 1 | **Discovery Call** | **10 min**, slots every **30 min** | Mon–Thu 09:00–12:00 and 14:00–17:00 · **Fri 10:00–12:00 and 14:00–15:30** | `/appointment/1` and `/book/Discovery-Call` — **published** |
+| 2 | Q&A Call | 30 min | Mon–Fri 09:00–12:00 and 14:00–17:00 | publish state not verified |
+| 3 | **Consultation** — **paid, $150** | 60 min | Mon–Fri 11:00–15:00 | `/appointment/3` — **published Aug 2026** |
+
+**Discovery Call** (`appointment.type` id 1) as configured today: host = **Julia** (the
+only staff user) · **free 10-minute phone call — no video link** (Location reads "Phone
+call — we call you at the number you provide") · auto-confirm on · **minimum notice
+4 h** · bookable up to 15 days ahead · intake questions attached · intro and confirmation
+messages state the phone format · **creates a CRM lead on every booking** · Google
+Calendar connector enabled.
+
+**The short link matters.** Several website buttons already pointed at
+`/book/Discovery-Call`, but no `appointment.invite` existed, so that URL resolved to
+nothing. `appointment.invite` id 2 (short code `Discovery-Call`) now backs it. If those
+buttons ever break, check that this invite still exists before editing any page.
+
+**Decision superseded — the discovery call is a phone call.** The Zoom-vs-Google-Meet
+question in [§ Video: Zoom](#3-video-zoom-the-firms-choice) no longer applies to the
+discovery call: Lilian's Aug 2026 decision is that these are **phone calls**, so the
+video source was cleared. Zoom vs Meet is still open for the *longer* paid formats
+(Q&A Call, Consultation), and **Ping Assistant cannot join a phone call** — if the firm
+wants the notetaker on discovery calls, that decision has to be reopened.
+
+## ⚠ Known breakage: every booking page returns 500 (found Aug 2026)
+
+`/appointment/1`, `/appointment/2`, `/appointment/3` and `/book/Discovery-Call` all return
+**500 Internal Server Error**. `/appointment` (the index that lists the types) renders fine.
+This predates the Aug 2026 work — appointment type 2 was never touched and fails identically.
+It is why the buttons that *did* point at `/book/Discovery-Call` never opened a working
+calendar, and why Odoo records no bookings. (Do not read it as the reason nobody linked the
+calendars: several buttons did, and the Odoo default header carries a "Book an Appointment"
+link to `/appointment/1` on every page.)
+
+**Cause.** `ir.ui.view` id **2010**, key `appointment.appointment_info`, is a
+**website-specific copy** (`website_id = jkaccountinggroup`, `mode = primary`) created when
+someone edited the booking page in the website editor — the customization is the hardcoded
+heading "Schedule Your Discovery Call". A copy like this is frozen at the Odoo version it was
+made on. The instance has since been upgraded, and the frozen template still references
+fields that no longer exist:
+
+| Template references | Reality on this instance |
+|---|---|
+| `appointment_type.assign_method` (×4) | renamed — the field is now `assignment_method` |
+| `appointment_type.resource_manage_capacity` | no longer exists |
+
+Rendering raises on the first missing field, so every appointment detail page 500s.
+
+**Fix — delete view 2010** so Odoo falls back to its own current template. First enable
+**developer mode** (Settings → bottom of the page → *Activate the developer mode*), then
+Settings → Technical → User Interface → **Views** → search `appointment_info` → open the row
+whose **Website** is `jkaccountinggroup` → **Delete**. Nothing of value is lost: the only
+customization is that heading, which is wrong anyway now — it says "Discovery Call" on the
+paid Consultation page too.
+
+> **Delete, don't just deactivate.** Un-ticking *Active* is the reversible first thing to
+> reach for, but for a **primary** website copy like this one Odoo resolves the template by
+> key + website, and that lookup is not reliably filtered on `active` — so deactivating may
+> leave the page still broken. Treat deactivation as a probe; if the page still 500s, delete.
+
+**Lesson for this repo:** editing an Odoo *app* page (Appointments, Portal, Blog) in the
+website editor silently forks the template and it stops receiving Odoo's updates. Prefer
+configuration fields (intro message, confirmation message) over editing those templates.
+
+## The two offers — keep them distinct
+
+A **discovery call** and a **consultation** are different products. Do not let copy blur
+them (Lilian, Aug 2026):
+
+| | Discovery Call | Consultation |
+|---|---|---|
+| Price | **Free** | **$150** |
+| Length | **10 minutes** | **1 hour** |
+| Channel | **Phone** — we call the number given | Online (Zoom is the intent; see below) |
+| Odoo type | id 1 · `/book/Discovery-Call` | id 3 · `/appointment/3` |
+| Availability | Mon–Thu 09:00–12:00 / 14:00–17:00 · Fri 10:00–12:00 / 14:00–15:30 | Mon–Fri 11:00–15:00 |
+| Notice / horizon | 4 h · 15 days | 12 h · 15 days |
+
+The `/consultation` landing page (`jk_landing.consultation_en`) is the **paid** one: as of
+Aug 2026 it sells the 1-hour $150 consultation, every CTA links to `/appointment/3`, and
+the word "free" no longer appears on it. Its lead form survives as a secondary path
+(button "Send my details", leads tagged `Consultation ($150) — EN landing`).
+
+**Still open after the Aug 2026 pass:**
+
+- **Both offers on one page.** The plan is for the entry points to present *both* options
+  side by side — free 10-min phone discovery call vs. 1-hour $150 consultation. Not built
+  yet; `booking-chooser.odoo.html` in this folder is the natural starting point.
+- **Zoom for the consultation.** Odoo type 3 currently generates an **Odoo Discuss** video
+  link, not Zoom. Needs Julia's fixed Zoom room URL to switch.
+- **Does Odoo collect the $150 at booking?** The type carries a $150 product price, but
+  whether the booking flow takes payment was not verified — check before promoting the page.
+- The Home and Pricing hero CTAs still link to `/contactus` (the email form) rather than
+  the discovery-call calendar.
+- **`/pricing`'s meta description still says "Book a free consultation for a quote."** The
+  visible page was fixed, but the `description` / `og:description` / `twitter:description`
+  tags were not — so that is the wording Google and every link preview show.
+- **A live Home button reads "Schedule a Consultation" but links to `/book/Discovery-Call`.**
+  It blurs the two offers in exactly the way this project now forbids: relabel it, or point
+  it at `/appointment/3`.
+- Three **legacy** (unpublished) views still contain the old "free consultation" wording:
+  `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`.
+- **The Ukrainian landing still sells the old offer.** `/ua/konsultatsiia` (live) reads
+  "30 хвилин · безкоштовно" with no appointment link. The **Russian** one is already
+  converted — it lives at **`/ru-ru/consultation`** (not `/ru/konsultatsiya`, which 404s)
+  and links to `/ru-ru/appointment/3`. The EN page's own RU language-switch link points at
+  that dead `/ru/konsultatsiya` and needs fixing too.
+- **The CTA rule is not rolled out beyond the website.** `positioning.md` binds every CTA
+  everywhere, but the email signatures (`email-branding/signatures/*.html` → "Book a
+  consultation", pointing at `/contactus`), the lead-magnet calculators ("Book a free
+  20-minute call" — a third duration in play) and `realtor-referral-playbook-ru.md` still
+  carry the old wording.
+
+---
+
+## Part A — The two calendars (Appointments app) — *the original plan, superseded*
+
+> Kept for reference only. It describes calendars named "New Client Consultation" /
+> "Existing Client Session" at 30 min with Zoom in *Location* — none of which is what
+> exists. The live configuration is the "Reality check" and "two offers" tables above.
 
 ### 0. Activate the app (once)
 **Apps** → search **"Appointments"** → **Activate / Install**.
