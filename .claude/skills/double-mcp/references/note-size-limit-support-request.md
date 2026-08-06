@@ -1,7 +1,25 @@
-# Double support — the note-size 403 (draft request, Aug 2026)
+# Double support — the note-size 403 (Aug 2026)
 
-**Status:** drafted 2026-08-06 for Lilian to send. **Not yet sent.** When Double answers, record the
-answer in [`../SKILL.md`](../SKILL.md) §7 ("the size wall") and delete or supersede this file.
+> ## ✅ SENT — do not send it again
+>
+> **Sent 2026-08-06 14:34 UTC** by Lilian, as a reply on Allison's *"Checking in before our 8/18
+> wrap-up"* thread, with Julia and Maria in copy. **Awaiting her reply.** If you were asked to
+> "send the Double note-size email", it has already gone out — follow up on that thread instead of
+> writing a new one.
+>
+> **What actually went out differed from the draft below in two ways:**
+>
+> - It carried a **second, unrelated ask** in the same message — a write on the tax project's
+>   deadline (see [`capability-map.md`](./capability-map.md) → "Open requests with Double", and
+>   [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 22).
+> - It asked **two questions, not three**: the documented-limit question and the can-it-be-raised
+>   question. **The web-UI question was dropped**, which is exactly why the web-UI test is still an
+>   open next action — running it now gives us something to follow up with.
+> - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email. It
+>   is still open.
+
+When Double answers, record the answer in [`../SKILL.md`](../SKILL.md) §7 ("the size wall") and
+delete or supersede this file.
 
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
 evidence is kept here rather than reconstructed from memory the next time it comes up.
@@ -17,7 +35,7 @@ So **no introduction, and no formality** — the firm's register with her is sho
 message, ending in a question and a warm close. Lilian's instruction, 2026-08-06: the explanation was
 good but too long; keep it fully understandable and cut the rest.
 
-Four things to get right when sending:
+Four things this email had to get right (kept as the record of why it is written the way it is — and see the header for which of them actually made it into the sent version):
 
 1. **Send it as a reply to her open thread**, not a new email: *"Checking in before our 8/18 wrap-up"*
    (2026-08-04), where she wrote *"Are there any issues, questions, or features you'd like to dig into?
@@ -33,8 +51,9 @@ Four things to get right when sending:
    ticket #102495635. Lilian's signature is an image, so in a forwarded plaintext ticket this email
    would otherwise identify neither sender nor tenant.
 
-**If the web-UI test (below) is done before sending, replace question 3 with its result** — the answer
-is stronger evidence than the question.
+**The web-UI test (below) was not done before sending, and question 3 was dropped from the sent
+version.** Running the test now is therefore the strongest thing we can add to the thread — a
+measured result beats the question we didn't ask.
 
 **If this is escalated to Support, or re-sent after the implementation window closes**, restore the
 firm introduction from git history. It was removed because *Allison* knows us — Allison's onboarding
