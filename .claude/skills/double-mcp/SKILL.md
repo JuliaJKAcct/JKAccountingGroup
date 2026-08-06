@@ -506,7 +506,7 @@ have an 8 KB limit"; tell them **"POSTs to the MCP endpoint with bodies at or ab
 return 403 while smaller ones succeed — please raise or whitelist that"**, and test the same content
 in the UI first, because if the UI accepts it, that's the strongest evidence it's the API path alone.
 
-**The request is already drafted, with the evidence:** [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
+**The request was sent 2026-08-06, and we are awaiting Double's reply** — what went out, and what it deliberately left unasked, is recorded with the evidence in [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md). **Do not send it again.**
 
 ### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
 
