@@ -12,34 +12,47 @@ connection required. Three pieces:
 
 ---
 
-## Reality check — what already exists (audited in Odoo, Aug 2026)
+## Reality check — what is actually live (Odoo, Aug 2026)
 
-**Part A is largely already done.** Julia created the calendars in **Dec 2024** (last
-edited Aug 2025), so treat Part A as a verification checklist rather than a build step.
-Three appointment types exist:
+**Part A is done — do not rebuild it.** Julia created the calendars in **Dec 2024**;
+Lilian reconfigured the discovery call in **Aug 2026**. Three appointment types exist:
 
 | # | Appointment type | Duration | Availability (America/New_York) | Public URL |
 |---|---|---|---|---|
-| 1 | **Discovery Call** | 45 min | Mon–Fri 09:00–12:00 **and** 14:00–17:00 | `/appointment/1` — **published** |
-| 2 | Q&A Call | 30 min | Mon–Fri 09:00–12:00 **and** 14:00–17:00 | publish state not verified |
+| 1 | **Discovery Call** | **10 min**, slots every **30 min** | Mon–Thu 09:00–12:00 and 14:00–17:00 · **Fri 10:00–12:00 and 14:00–15:30** | `/appointment/1` and `/book/Discovery-Call` — **published** |
+| 2 | Q&A Call | 30 min | Mon–Fri 09:00–12:00 and 14:00–17:00 | publish state not verified |
 | 3 | Consultation | 60 min | Mon–Fri 11:00–15:00 | publish state not verified |
 
-Verified configuration of **Discovery Call** (`appointment.type` id 1): host = **Julia**
-(the only staff user) · auto-confirm on · minimum notice 1 h · bookable up to 15 days
-ahead · slot interval = the 45 min duration · intake questions attached · intro and
-confirmation messages already written · **creates a CRM lead on every booking** ·
-Google Calendar connector enabled.
+**Discovery Call** (`appointment.type` id 1) as configured today: host = **Julia** (the
+only staff user) · **free 10-minute phone call — no video link** (Location reads "Phone
+call — we call you at the number you provide") · auto-confirm on · **minimum notice
+4 h** · bookable up to 15 days ahead · intake questions attached · intro and confirmation
+messages state the phone format · **creates a CRM lead on every booking** · Google
+Calendar connector enabled.
 
-Two gaps this audit found:
+**The short link matters.** Several website buttons already pointed at
+`/book/Discovery-Call`, but no `appointment.invite` existed, so that URL resolved to
+nothing. `appointment.invite` id 2 (short code `Discovery-Call`) now backs it. If those
+buttons ever break, check that this invite still exists before editing any page.
 
-1. **Nothing on the website links to any of them.** Every "Book a…" CTA points at the
-   contact page (`/contactus-v2`), which is an email form — a visitor cannot reach a
-   calendar at all. This is the real blocker, not the calendars.
-2. **Video is Google Meet, not Zoom.** `event_videocall_source = google_meet` with the
-   Google connector on — which contradicts the Zoom decision recorded in
-   [§ Video: Zoom](#3-video-zoom-the-firms-choice) and in the project README (that
-   decision exists because **Ping Assistant** joins Zoom calls). Decide which one wins
-   before go-live; today a booking generates a **Google Meet** link.
+**Decision superseded — the discovery call is a phone call.** The Zoom-vs-Google-Meet
+question in [§ Video: Zoom](#3-video-zoom-the-firms-choice) no longer applies to the
+discovery call: Lilian's Aug 2026 decision is that these are **phone calls**, so the
+video source was cleared. Zoom vs Meet is still open for the *longer* paid formats
+(Q&A Call, Consultation), and **Ping Assistant cannot join a phone call** — if the firm
+wants the notetaker on discovery calls, that decision has to be reopened.
+
+**Still open after the Aug 2026 pass:**
+
+- The **Consultation Landing (EN)** page (`ir.ui.view` `jk_landing.consultation_en`)
+  advertises a **30-minute** conversation in five places and its CTAs post to its own
+  form rather than the calendar. Its buttons now say "Book a free discovery call", so
+  the duration contradicts the 10-minute calendar — decide whether that page becomes the
+  10-minute call or stays a separate longer offer.
+- The Home and Pricing hero CTAs still link to `/contactus` (the email form) rather than
+  the calendar.
+- Three **legacy** (unpublished) views still contain the old "free consultation" wording:
+  `website.home-legacy`, `website.about-us-legacy`, `website.services-legacy`.
 
 ---
 

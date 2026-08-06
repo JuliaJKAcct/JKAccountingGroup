@@ -65,6 +65,11 @@ firm does **not** give free consultations: a consultation is paid advisory work.
 What is free is the short first conversation to see whether we're a fit. So every
 CTA, everywhere (website, collateral, signatures, referral scripts), reads
 **"Book a free discovery call"** — never "Book a free consultation."
+
+The free discovery call is **10 minutes, by phone** (we call the number the person
+gives us), bookable on Julia's calendar every 30 minutes with 4 hours' notice —
+`jkaccountinggroup.com/book/Discovery-Call`. Keep the "10 minutes" promise in the
+copy: it is what makes the ask feel small, and it is what the calendar actually books.
 _(Lilian, Aug 2026.)_
 
 ## The pitch

@@ -102,10 +102,15 @@ follows the landing-page pattern used for the site's `/consultation/` pages
   [`INSTALL-ODOO.md`](./INSTALL-ODOO.md). Two things the audit contradicts:
   the site links to **none** of them (every CTA lands on the contact form), and the
   video source is set to **Google Meet**, not the Zoom decision recorded above.
-- **Inputs still needed from the firm:** whether the **free discovery call** becomes a
-  **10-minute** call (Lilian, Aug 2026 — the site now advertises 10 minutes, the Odoo
-  calendar still says 45 min: these must agree) and its interval between bookings;
-  Julia's daily availability window if it changes; whether Zoom or Google Meet wins;
-  how **Ping Assistant** joins meetings (calendar-watch vs manual invite).
+- **Decided and applied (Lilian, Aug 2026):** the free discovery call is a **10-minute
+  phone call** — no video link — with **slots every 30 minutes**, **4 hours** minimum
+  notice, Mon–Thu 09:00–12:00 / 14:00–17:00 and **Fri 10:00–12:00 / 14:00–15:30**
+  (America/New_York). The website CTAs now read "Book a free discovery call", carry a
+  "10 minutes · no obligation" micro-line on the four main pages, and link to the
+  calendar.
+- **Inputs still needed from the firm:** what happens to the **Consultation Landing (EN)**
+  page, which still promises 30 minutes; whether **Ping Assistant** is needed on discovery
+  calls at all (it cannot join a phone call); and Zoom vs Google Meet for the longer paid
+  formats (Q&A Call, Consultation).
 - **On go-live:** point the website "Book a Consultation" button and the
   [email signatures](../email-branding/) at this page's URL.
