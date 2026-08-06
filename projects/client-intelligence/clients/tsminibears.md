@@ -106,13 +106,13 @@ recorded for history and because the Florida RT matter at the end is still open.
 > - **Closing the account is OFF** — not because the agency refused it, but because **Julia wants
 >   it left open** in case the company files as an S-corp and has to run payroll _(Lilian,
 >   2026-08-06)_.
-> - **Moving the effective date is OFF too** _(2026-08-06)_ — it would mean showing the DOR the
->   company is **not** an entity requiring a salary, and it **is** an S-corp. The firm will not
->   misrepresent it. **Nothing goes to `fdorspanish@floridarevenue.com`.**
-> - **THE PLAN IS NOW ONE THING: tell the Florida DOR the truth and ask it to waive the penalties**
->   — no payroll was ever run, there was no money to run one, none will be run yet. **Read the two
->   ✅ blocks at the end of this section**, including the correction to how that argument should be
->   framed. **Filing the zero returns and paying ≈$842.50 is the floor if the waiver fails.**
+> - **Moving the effective date is BACK ON — in an honest form** _(Lilian, 2026-08-06, latest)_. The
+>   firm will **not** claim the company is anything other than an S-corp. It will say so, and say
+>   that **no wages were ever paid in any period anyway**, and ask for the date to move on that
+>   basis. See "The honest effective-date request".
+> - **NEXT STEP: Lilian calls the DOR first, then writes.** Nothing has been drafted or sent, and
+>   **no letter work is being done until after that call** _(her decision, 2026-08-06)_.
+> - **Filing the zero returns and paying ≈$842.50 remains the floor** if neither request lands.
 > - **Filing the zero returns and paying ≈$842.50 is the fallback**, and the price Julia is
 >   weighing against it.
 >
@@ -326,12 +326,11 @@ responsibility off the firm — which is not a lie, because we paid for that ser
 
 #### ✅ BOTH FLAGS RESOLVED the same day — Lilian, 2026-08-06
 
-**1. The contradiction is settled: the effective-date route is OFF, because the firm will not
-misrepresent the company.** Lilian knows the DOR wants an entity that is **not** an S-corp.
-Tsminibears **is** one, and **"no podemos mentir"** — so the only route left is to tell the agency
-the truth and ask it to understand: **no payroll was ever run, there was no money to run one, and
-none is going to be run yet.** **Track B is now the whole plan; Options 2 and 3 are dead.**
-✅ **Nothing goes to `fdorspanish@floridarevenue.com`, and the CP575 question is moot.**
+**1. The contradiction is settled — the firm will not misrepresent the company.** Lilian knows the
+DOR wants an entity that is **not** an S-corp. Tsminibears **is** one, and **"no podemos mentir"**.
+_(Superseded in scope the same day: this ruled out **lying**, not the request itself — see "The
+honest effective-date request" below, which asks for the same thing without the misrepresentation.)_
+**Closing the account stays dead.**
 
 > ⚠️ **One correction to the argument itself — the framing matters more than the facts here.**
 > Julia's premise is that *because no payroll ran, there was no obligation to file*. **Florida does
@@ -359,8 +358,58 @@ argument does not exist.
   had just registered was already accruing an obligation. A **disclosure and service-quality** point,
   not a breach.
 - **Track A's value is now evidential more than financial.** Gusto's **written 2026-06-09 refusal**
-  is a document for the Track B waiver: it shows the firm believed a paid provider was handling the
+  is a document for the DOR request: it shows the firm believed a paid provider was handling the
   filings. **Get that statement in writing from Gusto whatever happens to the money question.**
+
+#### ✅ THE HONEST EFFECTIVE-DATE REQUEST — the current plan (Lilian, 2026-08-06)
+
+Lilian asked whether the firm could explain what happened with Gusto, explain that payroll was never
+run because there was no money, **and still ask for the effective date to be moved**. **Yes — and
+that is now the plan.** It was wrong to treat the date change as dead: what the firm ruled out was
+**misrepresenting the entity type**, not the request itself.
+
+- **The honest framing.** The DOR's gate is a **presumption** — *a company filing as a corporation is
+  assumed to pay a salary*. A presumption is rebutted with facts, not denied. So the request says:
+  **we are not telling you this is anything other than an S-corp; it is one, and no wages were ever
+  paid in any period — here is the evidence — so the account should be effective from the quarter
+  wages actually begin.** No misrepresentation anywhere in that.
+- **Ask for BOTH, in one letter, in this order.** ① **Primary — move the effective date.** Better
+  than a waiver, because it removes the returns entirely: if the account takes effect later, those
+  quarters do not exist, there is nothing to file and nothing to penalise, **and the account stays
+  open** for whenever payroll actually starts. ② **Alternative — if the date cannot be moved, waive
+  the penalties for reasonable cause** and the firm files the zero returns. Two ways for the agency
+  to say yes, at no extra cost.
+- ⚠️ **Three things that decide whether it works:**
+  1. **Never write "there was no obligation to file."** The notice proves the agency disagrees, and
+     the sentence makes the rest read as uninformed. Write: *the returns were due, they were not
+     filed, here is why.*
+  2. **Gusto goes in as CONTEXT, not as blame.** To the agency a provider is the **taxpayer's own
+     agent**, so blaming it transfers nothing — and Gusto's terms say the company is solely
+     responsible. As reasonable cause it works well: *"we had engaged and were paying a payroll
+     provider we understood to be handling these filings."* Same fact, and the accusatory version
+     gets dismissed in a line.
+  3. **Do NOT attach the CP575.** The agency wanted that letter to prove the company files in a form
+     with no salary requirement — which the firm is no longer claiming, so the letter has no
+     function. Sending one that reads "disregarded" while the firm filed an 1120-S would be the
+     misrepresentation being avoided, by omission. **If they ask for it, hand it over as it is.**
+- **What to attach instead:** evidence that **no wages were ever paid** (books / bank statements),
+  the company's financial position, and **Gusto's written 2026-06-09 refusal**.
+
+**⏳ THE CALL COMES FIRST — decided 2026-08-06, and nothing is being drafted until it happens.**
+Lilian will call the DOR before writing anything. The letter is still required (the agency itself
+said the request goes by email, and a dated written request is the only thing that leaves a trail on
+a matter open since May), but the call is what stops it being written blind. **Four things to get on
+that call:**
+
+1. **Has the POA processed?** Without it they will not discuss the account.
+2. **Is the request even considerable** for an S-corp that never paid wages? Ask it directly — the
+   answer decides whether the letter leads with the date change or with the waiver.
+3. **Exactly what documentation they want**, so the letter lands right the first time.
+4. **The representative's name and ID.** Still never captured, on either call.
+
+⚠️ **Do not try to close this on the phone.** This matter has already produced **two different
+answers from two representatives**; a third call can produce a third. **The call is for finding out,
+the letter is for requesting, and whatever they agree to has to come back in writing.**
 
 ## 5. Key facts & quirks
 
@@ -419,23 +468,24 @@ All times below are **UTC** unless marked otherwise.
 
 - _(2026-08-06, Lilian — closing the two flags)_ — **Two answers that reshape the plan.** (1) **THE FIRM registered the Florida RT account, not Gusto.** The firm registered it and **then** engaged Gusto's service, **not knowing Gusto would not begin filing until the first payroll ran** — that part was genuinely unknown. ✅ **This closes the "who registered it" question, and it closes it against Track A:** Gusto did not create the obligation, so there is no "you opened it and refused to file it" argument. What survives is a **disclosure / service-quality** point and, more usefully, Gusto's written refusal as **evidence for Track B**. (2) **The effective-date route is OFF — on principle.** Lilian knows the DOR wants a non-S-corp; Tsminibears is one, and **"no podemos mentir"**. So the plan is to tell the agency the truth — **no payroll was ever run, there was no money to run one, none will be run yet** — and ask it to relieve the charges. **Options 2 and 3 are dead; Track B is the whole plan.** Lilian also **verified Gusto's published policy first-hand** on its site (the session had been blocked by HTTP 403), so §5 is now confirmed rather than a search summary. **The firm's one correction, flagged for Julia and not yet answered: "no payroll ran, so nothing was due" is not how Florida works — the notice itself proves the agency disagrees — but the identical facts win as a reasonable-cause PENALTY-WAIVER request, with no misrepresentation.** _(Detail in §4; the new firm-wide lesson in §5.)_
 
+- _(2026-08-06, Lilian — last decision of the day)_ — **The effective-date request is BACK ON, in an honest form, and the CALL comes before the letter.** Lilian asked whether the firm could explain the Gusto situation, explain that payroll was never run for lack of money, **and still ask for the effective date to be moved**. **Yes** — what the firm ruled out earlier was *misrepresenting the entity type*, not the request. The honest version **rebuts the agency's presumption with facts instead of denying it**: *the company is an S-corp, no wages were ever paid in any period, here is the evidence, so the account should take effect from the quarter wages actually begin.* The plan is now **one letter with two asks** — primary, move the date; alternative, waive the penalties for reasonable cause — with three rules on how it is argued (never *"no obligation to file"*; **Gusto as context, not blame**; **no CP575 attached**). **But nothing is being drafted yet: Lilian will call the DOR first** and decide from what they say _(her instruction, 2026-08-06 — "no vamos a hacer nada todavía acerca de la carta")_. **The Double note was updated the same day; this file was corrected in the same pass so `main` does not carry the superseded "the date change is off" statement.** _(Full detail in §4, "The honest effective-date request".)_
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
 - ✅ **ANSWERED 2026-08-06 — the price of the "file the $0 returns" route is ≈$842.50** _(FL DOR estimate; see §4)_. This was the number Julia asked for on 2026-08-04.
 - ✅ **The summary for Julia was written, delivered and acted on, 2026-08-06.** She chose **two parallel tracks** instead of one of the three options — see §4, "THE PLAN OF RECORD". The next actions below are grouped by track.
 
-**TRACK B — Florida DOR. This is now the whole plan** _(after 2026-08-06: the effective-date route is off on principle, and closing the account was already ruled out)_.
+**TRACK B — Florida DOR. This is the whole plan** _(closing the account is dead; the effective-date request is back on in its honest form — §4)_.
 
-- ⚠️ **FIRST — settle the framing with Julia.** *"No payroll ran, so nothing was due"* is not how Florida works, and the notice proves the agency disagrees. **The same facts, presented as a reasonable-cause request to WAIVE the penalties, cost the firm nothing and require no misrepresentation.** Nothing should be drafted until Julia has seen this.
-- **Then write it as a penalty-waiver request**, in the agency's own instrument rather than as an informal explanation.
+- ⏳ **NEXT ACTION — Lilian calls the DOR. Nothing is drafted until then** _(her decision, 2026-08-06)_. On the call: **has the POA processed**, **is the request considerable** for an S-corp that never paid wages, **what documentation do they want**, and **the representative's name**. Do not try to close it on the phone — two calls have already given two different answers.
+- **Then the letter, the same day, with what they said:** ① primary, **move the effective date**; ② alternative, **waive the penalties for reasonable cause** and the firm files the zeros. Never write *"there was no obligation to file"*; put **Gusto in as context, not blame**; **do not attach the CP575** (§4).
 - **Assemble the evidence before writing:**
   - **No wages were ever paid in any period** — the books support this, and it is the heart of the request.
   - **The company had no money to run payroll**, and none is going to be run yet. Say it plainly.
   - **Gusto's written 2026-06-09 refusal** — it shows the firm believed a paid provider was handling the filings. **Worth chasing from Gusto in writing even though Track A is otherwise weak** (see below).
   - **Proof the firm was paying for the payroll service** through the penalty periods.
-- **Confirm the POA is on file** before the agency will discuss the account at all.
-- **Keep Option 1 alive as the floor:** if the waiver fails, the outstanding zero returns still have to be filed and paid — **the per-return amounts are on the DOR filing screens.**
+- **Keep Option 1 alive as the floor:** if neither request lands, the outstanding zero returns still have to be filed and paid — **the per-return amounts are on the DOR filing screens.**
 
 **TRACK A — Gusto.** ⚠️ **Reduced in scope: the firm registered the RT account itself**, so Gusto did not create the obligation (§4). Two things still worth doing, in this order:
 
