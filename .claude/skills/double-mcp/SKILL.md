@@ -477,8 +477,9 @@ the whole thing start to finish, instead of reconstructing it from email.
 ### The size wall — a long note gets blocked, not truncated
 
 **Measured on the body string, 2026-08-06: ~7,600 characters went through; ~8,000 and ~10,400 were
-both blocked** with a `403` / `mcp_request_blocked`. So the boundary sits somewhere between 7,600 and
-8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
+both blocked** with a `403` / `mcp_request_blocked`. **It is size, not content** — a body of ~8,200
+characters of plain repeated filler, no markup and no client data, was refused identically. So the
+boundary sits between 7,600 and 8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
 request-size rule in front of the API rather than a Double product limit — **inferred, not
 documented**; and the **title and JSON escaping count toward the payload too**, so the body is not
 the whole budget. `ping` keeps working throughout, which is what makes this read as an outage.
@@ -496,8 +497,6 @@ Practical rules:
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
 
-**A drafted support request is ready to send:** [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) — the whole situation, the measurements, the three questions to ask, and the reminder to test a long note in the **web UI** first. Update the skill when Double answers, and supersede that file.
-
 **What this is, precisely — say it this way to Double support.** The `403` comes back as *"MCP server
 returned 403 Forbidden — the request may have been blocked by a firewall or security service"*, i.e.
 the endpoint refused the POST. That reads like a **WAF / request-size rule in front of the API**, not
@@ -506,6 +505,8 @@ note that long** — nobody has tested a long paste in the browser. So don't tel
 have an 8 KB limit"; tell them **"POSTs to the MCP endpoint with bodies at or above ~8,000 characters
 return 403 while smaller ones succeed — please raise or whitelist that"**, and test the same content
 in the UI first, because if the UI accepts it, that's the strongest evidence it's the API path alone.
+
+**The request is already drafted, with the evidence:** [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
 
 ### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
 
