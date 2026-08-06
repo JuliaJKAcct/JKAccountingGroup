@@ -107,7 +107,13 @@ Not a blocker — commit if you have checked. Rebase with: git fetch origin main
 # newly overlaps, changes the answer while origin/main stands still; keying on the
 # sha alone went silent in exactly those cases, which is worse than repeating.
 sig=$(printf '%s|%s|%s|%s' "$head_main" "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" \
-        "$no_base" "$overlap" | cksum | cut -d' ' -f1)
+        "$no_base" "$overlap" | cksum 2>/dev/null | cut -d' ' -f1)
+# If cksum is missing, an empty sig would match itself forever: the hook would warn
+# once and then go permanently silent — the same failure class we just fixed. Fall
+# back to the raw string, which is a perfectly good key.
+if [ -z "${sig:-}" ]; then
+  sig="$head_main|$(git rev-parse --abbrev-ref HEAD 2>/dev/null)|$no_base|$overlap"
+fi
 if [ -f "$warned" ] && [ "$(cat "$warned" 2>/dev/null)" = "$sig" ]; then
   exit 0
 fi

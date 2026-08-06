@@ -5,7 +5,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh",
+            "timeout": 30
           }
         ]
       }
@@ -16,7 +17,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/pre-commit-drift-check.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/pre-commit-drift-check.sh",
+            "timeout": 30
           }
         ]
       }

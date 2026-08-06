@@ -41,10 +41,13 @@ signal that was missing.
 - **Bound every network call.** `timeout` (20s at session start, 15s at commit), falling back to
   `gtimeout` — stock macOS ships neither under the first name — and then to git's own
   `http.lowSpeedLimit` abort. **Caveat:** that last fallback is **HTTP-only**. Measured with both
-  binaries absent: an HTTPS remote that stalls aborts at ~15s, but an **SSH** remote that hangs is
-  unbounded. The firm's remote is HTTPS, so the real case is covered, and Claude Code's own 60s
-  hook budget is the outer backstop — worst case is dead air, not a hung session. If anyone ever
-  switches the remote to SSH, install coreutils or revisit this.
+  binaries absent: an HTTPS remote that stalls aborts at ~15s (~20s at session start), but an
+  **SSH** remote that hangs is unbounded. The firm's remote is HTTPS, so the real case is covered
+  — and the real backstop is the **`"timeout": 30` on each hook in
+  [`../settings.json`](../settings.json)**, which bounds them regardless of coreutils, remote
+  protocol or transport phase. **Do not remove it:** Claude Code's own default hook budget is
+  **600 seconds**, so without the per-hook cap the compound worst case is ten minutes of dead air,
+  not one.
   `GIT_TERMINAL_PROMPT=0` stops a credential prompt from burning the timeout. The commit-time
   fetch is throttled to once per 90s via a marker in `.git/`, and an identical warning is not
   repeated — see the next rule for what "identical" means.
@@ -58,7 +61,10 @@ signal that was missing.
   it would be byte-identical — the key is a hash of `origin/main` + the current branch + the
   computed overlap, not of `origin/main` alone. Switching branch or staging a newly-overlapping
   file changes the answer while `origin/main` stands still; keying on the sha alone stayed silent
-  in exactly those cases, which is worse than repeating. (Caught in review, 2026-08-06.)
+  in exactly those cases, which is worse than repeating. (Caught in review, 2026-08-06.) One
+  silence remains and is deliberate: a clean partial rebase shrinks the "landed since you branched"
+  list without changing the overlap — the answer only got *smaller*, so it is not repeated. Every
+  direction that makes it more alarming re-warns.
 - **Stay short.** `session-start.sh` output is prepended to every session, so it costs tokens every
   time. It caps at 6 commits, 5 hot files and 5 branches — about 24–30 lines at its longest.
 
