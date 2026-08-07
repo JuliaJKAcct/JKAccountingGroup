@@ -47,6 +47,10 @@ referral-offer-strategy/
     ├── announcement-ru.html  same announcement as a readable/printable page
     ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
     │                             partner hands to clients (details · agenda · gift)
+    ├── webinar-overview-candramas-ru.html  one-page RU overview (+ .pdf) FOR the
+    │                             partner (Boris) to review before we co-brand: what the
+    │                             webinar is, the 4 teaching breakdowns, why it helps his
+    │                             clients, and the soft "what's next"
     ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
     │                             — arrow/click nav, PDF export
     ├── webinar-deck-en.html      English version of the slide deck
