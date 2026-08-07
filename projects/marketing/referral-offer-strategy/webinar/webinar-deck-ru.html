@@ -82,6 +82,16 @@
   .bench b{color:var(--ink); font-weight:600}
   .teal .bench b{color:#fff}
 
+  /* tax comparison (S-corp vs LLC) */
+  .ctx{font-size:clamp(13px,1.6vw,19px); color:var(--muted); line-height:1.35; min-height:2.8em}
+  .ctx b{color:var(--ink); font-weight:600}
+  .taxbig{font-family:var(--serif); font-weight:700; font-size:clamp(40px,6vw,74px); line-height:1; color:var(--ink); margin-top:clamp(8px,1.2vw,14px)}
+  .shop.b .taxbig{color:var(--bronze-700)}
+  .taxbig small{display:block; font-family:var(--mono); font-weight:500; font-size:clamp(10px,1.2vw,14px); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:clamp(6px,0.9vw,10px)}
+  .save{margin-top:clamp(16px,2.2vw,30px); font-family:var(--serif); font-weight:600; font-size:clamp(22px,3vw,44px); color:var(--ink); line-height:1.1}
+  .save b{color:var(--bronze-700); font-weight:700}
+  .foot-note{font-family:var(--mono); font-size:clamp(11px,1.25vw,15px); color:var(--muted); margin-top:clamp(10px,1.4vw,16px); letter-spacing:.02em; line-height:1.4}
+
   ul.pts{margin-top:clamp(20px,2.6vw,34px); list-style:none; display:grid; gap:clamp(12px,1.6vw,20px)}
   ul.pts li{position:relative; padding-left:clamp(28px,3vw,44px); font-size:clamp(18px,2.4vw,34px); line-height:1.3; color:var(--body)}
   .teal ul.pts li{color:var(--on-dark)}
@@ -132,7 +142,7 @@
 <!-- 2 — Two shops, revenue only -->
 <section class="slide light">
   <p class="eyebrow">Один вопрос для начала</p>
-  <h2>Какую кофейню вы бы предпочли иметь?</h2>
+  <h2>Какую кофейню вы бы выбрали себе?</h2>
   <div class="shops">
     <div class="shop"><p class="nm">Кофейня A</p>
       <div class="r"><span class="rk">Выручка</span><span class="rv">$600k</span></div>
@@ -163,8 +173,8 @@
 
 <!-- 4 — Belief 1 -->
 <section class="slide teal">
-  <p class="eyebrow">Сдвиг убеждения №1</p>
-  <h2>Больше выручки — <em>не значит</em> больше денег у вас.</h2>
+  <p class="eyebrow">Меняем убеждение №1</p>
+  <h2>Больше выручки — <em>ещё не значит</em> больше денег в кармане.</h2>
 </section>
 
 <!-- 5 — Leaky bucket -->
@@ -183,8 +193,8 @@
 
 <!-- 6 — Belief 2 -->
 <section class="slide teal">
-  <p class="eyebrow">Сдвиг убеждения №2</p>
-  <h2>У вас не проблема с продажами.<br>У вас — <em>утечки прибыли</em>.</h2>
+  <p class="eyebrow">Меняем убеждение №2</p>
+  <h2>Проблема не в продажах.<br>Она — <em>в утечках прибыли</em>.</h2>
 </section>
 
 <!-- 7 — Leak 1: the $5,000 → $680 -->
@@ -193,7 +203,7 @@
   <h2>Заказ на $5 000. Сколько осталось у вас?</h2>
   <div class="bd">
     <div class="row"><span>Продукты и ингредиенты</span><span class="m">− $1 400</span></div>
-    <div class="row"><span>Персонал: приготовить и доставить</span><span class="m">− $900</span></div>
+    <div class="row"><span>Персонал: готовка и доставка</span><span class="m">− $900</span></div>
     <div class="row"><span>Аренда, коммуналка, страховка, софт</span><span class="m">− $950</span></div>
     <div class="row"><span>Ваше время, эквайринг, прочее</span><span class="m">− $750</span></div>
     <div class="row"><span>Налоги с прибыли</span><span class="m">− $320</span></div>
@@ -214,7 +224,7 @@
 
 <!-- 9 — Leak 2: cash flow question -->
 <section class="slide teal">
-  <p class="eyebrow">Утечка 2 · деньги во времени</p>
+  <p class="eyebrow">Утечка 2 · кассовый разрыв</p>
   <h2>Сколько месяцев вы продержитесь, если каждый клиент заплатит на <em>30 дней позже?</em></h2>
 </section>
 
@@ -225,13 +235,13 @@
   <div class="teach">
     <div class="formula"><span class="var">Подушка</span> (мес.) = Деньги на счету ÷ Средние расходы в месяц</div>
     <p class="apply">$30 000 ÷ $20 000 = <b>1,5 месяца</b></p>
-    <p class="bench">Спокойно — <b>3+ месяца</b>. Меньше одного — бизнес живёт «от платежа до платежа».</p>
+    <p class="bench">Спокойно — <b>3+ месяца</b>. Меньше одного — бизнес работает «с колёс».</p>
   </div>
 </section>
 
 <!-- 11 — Belief 3 -->
 <section class="slide teal">
-  <p class="eyebrow">Сдвиг убеждения №3</p>
+  <p class="eyebrow">Меняем убеждение №3</p>
   <h2>Бухгалтерия — не про налоги.<br>Она про <em>решения вовремя</em>.</h2>
 </section>
 
@@ -239,7 +249,7 @@
 <section class="slide light">
   <p class="eyebrow">Утечка 3 · вы рулите, глядя назад</p>
   <h2>Кто знает свою прибыль за прошлый месяц — <em>прямо сейчас?</em></h2>
-  <p class="sub" style="max-width:44ch">Если книги отстают на три месяца — решения приходят, когда деньги уже утекли.</p>
+  <p class="sub" style="max-width:44ch">Если учёт отстаёт на три месяца — решения приходят, когда деньги уже утекли.</p>
 </section>
 
 <!-- 13 — Leak 3 teaching: MONTHLY CLOSE + 3 numbers -->
@@ -258,8 +268,8 @@
 
 <!-- 14 — Leak 4: structure -->
 <section class="slide light">
-  <p class="eyebrow">Утечка 4 · структура, которая тихо вас облагает</p>
-  <h2>То, что было нормально на старте, на росте стоит тысячи.</h2>
+  <p class="eyebrow">Утечка 4 · структура, которая тихо стоит вам денег</p>
+  <h2>То, что было нормально на старте, с ростом обходится в тысячи долларов.</h2>
   <ul class="pts">
     <li>Форма бизнеса не пересматривалась</li>
     <li>S-corp не оформили вовремя</li>
@@ -268,22 +278,27 @@
   </ul>
 </section>
 
-<!-- 15 — Leak 4 teaching: S-CORP math -->
+<!-- 15 — Leak 4 teaching: S-CORP vs LLC -->
 <section class="slide paper">
   <p class="eyebrow">Что тут важно понять · структура</p>
-  <h2>S-corp: 15,3% — только на зарплату, <em>не на всю прибыль</em>.</h2>
-  <div class="bd">
-    <div class="row"><span>Прибыль за год</span><span class="m">$100 000</span></div>
-    <div class="row"><span>Разумная зарплата → налог 15,3%</span><span class="m">~$50 000</span></div>
-    <div class="row"><span>Распределение → 15,3% не платится</span><span class="m">~$50 000</span></div>
-    <div class="tot"><span class="k">Экономия в год</span><span class="v">≈ $7 500</span></div>
+  <h2>Та же прибыль $100k — а налог <em>вдвое меньше</em>.</h2>
+  <div class="shops">
+    <div class="shop"><p class="nm">LLC · по умолчанию</p>
+      <p class="ctx">15,3% со <b>всей</b> прибыли — $100 000</p>
+      <div class="taxbig">$15 300<small>налог в год</small></div>
+    </div>
+    <div class="shop b"><p class="nm">S-corp</p>
+      <p class="ctx">15,3% <b>только с зарплаты</b> — $50 000</p>
+      <div class="taxbig">$7 650<small>налог в год</small></div>
+    </div>
   </div>
-  <p class="bench" style="max-width:44ch">Одно решение о структуре — и эти деньги остаются у вас <b>каждый год</b>.</p>
+  <p class="save">Разница — <b>≈ $7 650</b> в год. Каждый год.</p>
+  <p class="foot-note">Упрощённо: 15,3% — это Social Security и Medicare. Точная сумма зависит от вашей ситуации.</p>
 </section>
 
 <!-- 16 — Belief 4 -->
 <section class="slide teal">
-  <p class="eyebrow">Сдвиг убеждения №4</p>
+  <p class="eyebrow">Меняем убеждение №4</p>
   <h2>Хороший учёт не растит бизнес.<br>Растят <em>своевременные решения</em>.</h2>
 </section>
 
@@ -306,8 +321,8 @@
 <section class="slide teal">
   <p class="eyebrow">Запомните эти четыре мысли</p>
   <ol class="recap">
-    <li>Больше выручки ≠ больше денег у вас.</li>
-    <li>Это не продажи. Это утечки прибыли.</li>
+    <li>Больше выручки ≠ больше денег в кармане.</li>
+    <li>Дело не в продажах, а в утечках прибыли.</li>
     <li>Бухгалтерия — про решения вовремя.</li>
     <li>Растят решения, а не учёт.</li>
   </ol>
