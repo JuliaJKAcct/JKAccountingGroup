@@ -27,6 +27,12 @@
   .masthead svg{display:block; width:212px; height:auto; max-width:54vw}
   .tag{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
   .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.04em}
+  .cobrand{display:flex; align-items:center; gap:13px}
+  .cobrand .bf{width:54px; height:54px; flex:none; display:block; filter:drop-shadow(0 1px 2px rgba(9,31,36,.14))}
+  .cobrand-txt{text-align:left; line-height:1.22}
+  .cobrand-txt .ct-k{font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); display:block}
+  .cobrand-txt b{font-family:var(--serif); font-weight:600; font-size:17px; color:var(--ink); display:block; letter-spacing:-0.01em}
+  .cobrand-txt .ct-s{font-family:var(--mono); font-size:8.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); display:block; margin-top:2px}
 
   .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(26px,4.4vw,40px) clamp(24px,5vw,46px) clamp(24px,3.8vw,34px)}
   .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 13px}
@@ -145,7 +151,21 @@
       <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
       <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
     </svg>
-    <div class="tag">Тема выступления · на рассмотрение<b>Подготовлено для бизнес-клуба «[название]»</b></div>
+    <div class="cobrand">
+      <svg class="bf" viewBox="0 0 120 120" role="img" aria-label="Business Family Social Club">
+        <circle cx="60" cy="60" r="60" fill="#A9C7DB"></circle>
+        <defs><path id="bfarc" d="M 30 60 A 30 30 0 0 1 90 60"></path></defs>
+        <text font-family="'IBM Plex Sans',sans-serif" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#ffffff"><textPath href="#bfarc" startOffset="50%" text-anchor="middle">SOCIAL CLUB</textPath></text>
+        <text x="60" y="75" text-anchor="middle" font-family="'Source Serif 4',Georgia,serif" font-weight="700" font-size="31" letter-spacing="1" fill="#ffffff">BF</text>
+        <circle cx="32" cy="64" r="2.4" fill="#ffffff"></circle><circle cx="88" cy="64" r="2.4" fill="#ffffff"></circle>
+        <path d="M 42 87 Q 60 100 78 87" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"></path>
+      </svg>
+      <div class="cobrand-txt">
+        <span class="ct-k">Подготовлено для</span>
+        <b>Business Family</b>
+        <span class="ct-s">Social Club · Hallandale Beach</span>
+      </div>
+    </div>
   </header>
 
   <div class="hero">
@@ -165,7 +185,7 @@
   <div class="body">
 
     <section>
-      <p class="lead">Это обзор темы, которую я, Юлия Кононова (JK Accounting Group), готова провести <b>вживую для участников клуба</b>. Всё построено вокруг одной истории (кофейня выросла вдвое, а владелец стал зарабатывать меньше) и разбирает <b>четыре места, где у растущего бизнеса тихо утекает прибыль</b> — каждое как конкретную формулу, которую можно применить к своим цифрам.</p>
+      <p class="lead">Это обзор темы, которую я, Юлия Кононова (JK Accounting Group), готова провести <b>вживую для участников Business Family</b>. Всё построено вокруг одной истории (кофейня выросла вдвое, а владелец стал зарабатывать меньше) и разбирает <b>четыре места, где у растущего бизнеса тихо утекает прибыль</b> — каждое как конкретную формулу, которую можно применить к своим цифрам.</p>
     </section>
 
     <section>
@@ -232,7 +252,7 @@
 
   <footer class="foot">
     <span>JK Accounting Group · Майами · Форт-Лодердейл · <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></span>
-    <div class="proof">Тема выступления · для бизнес-клуба</div>
+    <div class="proof">Тема выступления · для Business Family</div>
   </footer>
 
 </article>

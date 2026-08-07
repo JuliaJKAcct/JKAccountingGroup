@@ -53,9 +53,10 @@ referral-offer-strategy/
     │                             webinar is, the 4 teaching breakdowns, why it helps his
     │                             clients, and the soft "what's next"
     ├── webinar-overview-businessclub-ru.html  same one-pager re-cut (+ .pdf) as an
-    │                             IN-PERSON talk topic to pitch a business club: no
-    │                             co-brand, no "free webinar"/Luma, Date TBD · 7:00 PM ·
-    │                             in person, "prepared for the business club «[name]»"
+    │                             IN-PERSON talk topic pitched to the Business Family
+    │                             social club (Hallandale Beach) — co-branded with their
+    │                             recreated BF mark; no "free webinar"/Luma, Date TBD ·
+    │                             7:00 PM · in person
     ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
     │                             — a teaching slide (concept + formula) after each of
     │                             the 4 leaks; arrow/click nav, PDF export
