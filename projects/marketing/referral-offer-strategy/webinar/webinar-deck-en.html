@@ -6,7 +6,7 @@
 <title>Slides · Why Your Business Grows but Your Profit Shrinks — JK Accounting Group</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
@@ -59,17 +59,37 @@
   .bd .tot .k{font-family:var(--mono); font-size:clamp(13px,1.6vw,20px); letter-spacing:.06em; text-transform:uppercase; color:var(--bronze-700)}
   .bd .tot .v{font-family:var(--serif); font-weight:700; font-size:clamp(40px,6vw,82px); color:var(--bronze-700)}
 
+  /* teaching: formula + applied + benchmark */
+  .teach{margin-top:clamp(18px,2.6vw,36px); max-width:min(1040px,82vw)}
+  .formula{font-family:var(--mono); font-weight:500; font-size:clamp(16px,2.3vw,34px); line-height:1.35; color:var(--ink);
+    background:var(--white); border:1px solid var(--border-soft); border-left:5px solid var(--bronze-500); border-radius:14px;
+    padding:clamp(15px,2vw,28px) clamp(18px,2.6vw,36px)}
+  .paper .formula{background:var(--white)}
+  .teal .formula{background:rgba(255,255,255,.06); border-color:rgba(207,162,104,.42); border-left-color:var(--bronze-300); color:#fff}
+  .formula .var{color:var(--bronze-700); font-weight:600}
+  .teal .formula .var{color:var(--bronze-300)}
+  .apply{font-family:var(--serif); font-weight:600; font-size:clamp(24px,3.6vw,54px); line-height:1.12; color:var(--ink); margin-top:clamp(16px,2.1vw,30px)}
+  .teal .apply{color:#fff}
+  .apply b{color:var(--bronze-700)}
+  .teal .apply b{color:var(--bronze-300)}
+  .bench{font-size:clamp(15px,1.9vw,26px); line-height:1.4; color:var(--muted); margin-top:clamp(10px,1.4vw,18px); max-width:38ch}
+  .teal .bench{color:var(--on-dark-muted)}
+  .bench b{color:var(--ink); font-weight:600}
+  .teal .bench b{color:#fff}
+
   ul.pts{margin-top:clamp(20px,2.6vw,34px); list-style:none; display:grid; gap:clamp(12px,1.6vw,20px)}
   ul.pts li{position:relative; padding-left:clamp(28px,3vw,44px); font-size:clamp(18px,2.4vw,34px); line-height:1.3; color:var(--body)}
   .teal ul.pts li{color:var(--on-dark)}
   ul.pts li::before{content:""; position:absolute; left:0; top:.55em; width:clamp(9px,1vw,14px); height:clamp(9px,1vw,14px); background:var(--bronze-500); transform:rotate(45deg)}
+  ul.pts li b{color:var(--ink); font-weight:600}
+  .teal ul.pts li b{color:#fff}
 
   .recap{list-style:none; display:grid; gap:clamp(14px,2vw,26px); margin-top:clamp(24px,3vw,40px); counter-reset:r}
   .recap li{counter-increment:r; position:relative; padding-left:clamp(52px,6vw,86px); font-family:var(--serif); font-weight:600; font-size:clamp(20px,2.8vw,40px); line-height:1.2; color:#fff}
   .recap li::before{content:counter(r); position:absolute; left:0; top:-.05em; width:clamp(38px,4.4vw,64px); height:clamp(38px,4.4vw,64px); border:2px solid var(--bronze-300); color:var(--bronze-300); border-radius:50%; font-family:var(--mono); font-weight:600; font-size:clamp(16px,2vw,28px); display:grid; place-items:center}
 
   .price{font-family:var(--serif); font-weight:700; font-size:clamp(56px,10vw,150px); color:var(--bronze-300); line-height:1}
-  .credit{font-size:clamp(16px,2vw,28px); color:var(--on-dark); margin-top:8px}
+  .credit{font-size:clamp(16px,2vw,28px); color:var(--on-dark); margin-top:8px; max-width:32ch}
   .bucket{width:clamp(150px,20vw,300px); height:auto; margin-top:clamp(10px,2vw,20px)}
   .contact{font-size:clamp(16px,2vw,28px); line-height:1.6; margin-top:clamp(20px,2.6vw,34px)}
   .contact a{color:var(--teal-800); text-decoration:none; font-weight:600}
@@ -157,7 +177,7 @@
   <h2>You don't have a sales problem.<br>You have a <em>profit-leak problem</em>.</h2>
 </section>
 
-<!-- 7 — Leak 1 -->
+<!-- 7 — Leak 1: the $5,000 → $680 -->
 <section class="slide light">
   <p class="eyebrow">Leak 1 · the margin you never saw</p>
   <h2>A $5,000 order. How much do you actually keep?</h2>
@@ -165,32 +185,68 @@
     <div class="row"><span>Ingredients &amp; product</span><span class="m">− $1,400</span></div>
     <div class="row"><span>Staff to make &amp; deliver</span><span class="m">− $900</span></div>
     <div class="row"><span>Rent, utilities, insurance, software</span><span class="m">− $950</span></div>
-    <div class="row"><span>Your time, marketing, card fees</span><span class="m">− $750</span></div>
+    <div class="row"><span>Your time, card fees, other</span><span class="m">− $750</span></div>
     <div class="row"><span>Taxes on the profit</span><span class="m">− $320</span></div>
     <div class="tot"><span class="k">You keep</span><span class="v">$680</span></div>
   </div>
 </section>
 
-<!-- 8 — Leak 2 -->
+<!-- 8 — Leak 1 teaching: MARGIN formula -->
+<section class="slide paper">
+  <p class="eyebrow">What matters here · margin</p>
+  <h2>Margin isn't revenue.<br>It's what's <em>left</em>.</h2>
+  <div class="teach">
+    <div class="formula"><span class="var">Margin</span> = (Revenue − All costs) ÷ Revenue × 100%</div>
+    <p class="apply">$680 ÷ $5,000 = <b>13.6%</b></p>
+    <p class="bench">A healthy margin is <b>~10–15%</b>. Under 5% is an alarm — even while revenue is growing.</p>
+  </div>
+</section>
+
+<!-- 9 — Leak 2: cash flow question -->
 <section class="slide teal">
   <p class="eyebrow">Leak 2 · money over time</p>
   <h2>How many months could you survive if every customer paid <em>30 days late?</em></h2>
 </section>
 
-<!-- 9 — Belief 3 -->
-<section class="slide paper">
+<!-- 10 — Leak 2 teaching: CASH RUNWAY formula -->
+<section class="slide light">
+  <p class="eyebrow">What matters here · cash</p>
+  <h2>Profit is on paper.<br>Runway is <em>in months</em>.</h2>
+  <div class="teach">
+    <div class="formula"><span class="var">Runway</span> (months) = Cash on hand ÷ Average monthly spend</div>
+    <p class="apply">$30,000 ÷ $20,000 = <b>1.5 months</b></p>
+    <p class="bench">Comfortable is <b>3+ months</b>. Under one and the business lives paycheck to paycheck.</p>
+  </div>
+</section>
+
+<!-- 11 — Belief 3 -->
+<section class="slide teal">
   <p class="eyebrow">Belief shift #3</p>
   <h2>Accounting isn't about taxes.<br>It's about <em>timely decisions</em>.</h2>
 </section>
 
-<!-- 10 — Leak 3 -->
+<!-- 12 — Leak 3: rear-view -->
 <section class="slide light">
   <p class="eyebrow">Leak 3 · driving by the rear-view mirror</p>
   <h2>Who knows their profit from last month — <em>right now?</em></h2>
   <p class="sub" style="max-width:46ch">If your books are three months behind, decisions arrive after the money's already gone.</p>
 </section>
 
-<!-- 11 — Leak 4 -->
+<!-- 13 — Leak 3 teaching: MONTHLY CLOSE + 3 numbers -->
+<section class="slide paper">
+  <p class="eyebrow">What matters here · bookkeeping</p>
+  <h2>Three numbers to watch <em>every month</em>.</h2>
+  <div class="teach">
+    <div class="formula">Monthly close → last month's P&amp;L in your hands <span class="var">by the 10th–15th</span>.</div>
+    <ul class="pts">
+      <li><b>Revenue</b> — what came in</li>
+      <li><b>Margin</b> — what's left of it</li>
+      <li><b>Cash on hand</b> — how long it lasts</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 — Leak 4: structure -->
 <section class="slide light">
   <p class="eyebrow">Leak 4 · the structure quietly taxing you</p>
   <h2>What was fine at the start costs thousands as you grow.</h2>
@@ -202,28 +258,41 @@
   </ul>
 </section>
 
-<!-- 12 — Belief 4 -->
+<!-- 15 — Leak 4 teaching: S-CORP math -->
+<section class="slide paper">
+  <p class="eyebrow">What matters here · structure</p>
+  <h2>S-corp: 15.3% on salary only, <em>not on all profit</em>.</h2>
+  <div class="bd">
+    <div class="row"><span>Annual profit</span><span class="m">$100,000</span></div>
+    <div class="row"><span>Reasonable salary → 15.3% applies</span><span class="m">~$50,000</span></div>
+    <div class="row"><span>Distribution → 15.3% skipped</span><span class="m">~$50,000</span></div>
+    <div class="tot"><span class="k">Saved per year</span><span class="v">≈ $7,500</span></div>
+  </div>
+  <p class="bench" style="max-width:46ch">One structure decision — and this stays in your pocket <b>every year</b>.</p>
+</section>
+
+<!-- 16 — Belief 4 -->
 <section class="slide teal">
   <p class="eyebrow">Belief shift #4</p>
   <h2>Good bookkeeping doesn't grow a business.<br><em>Timely decisions</em> do.</h2>
 </section>
 
-<!-- 13 — Scorecard -->
+<!-- 17 — Scorecard -->
 <section class="slide paper">
   <p class="eyebrow">Your turn</p>
   <h2>Score your business in 5 minutes</h2>
   <p class="sub" style="max-width:42ch">The Growth Readiness Check — free for everyone here. Every "not sure" is probably a leak.</p>
 </section>
 
-<!-- 14 — Offer -->
+<!-- 18 — Offer -->
 <section class="slide teal">
-  <p class="eyebrow">Find your leaks — on your real numbers</p>
-  <h2>Profit Leak Review</h2>
+  <p class="eyebrow">The same four formulas — on your numbers</p>
+  <h2>Want me to run this <em>on your business?</em></h2>
   <p class="price">$250</p>
-  <p class="credit">…and it's fully credited to your first month with us.</p>
+  <p class="credit">The Profit Leak Review — fully credited to your first month with us.</p>
 </section>
 
-<!-- 15 — Recap -->
+<!-- 19 — Recap -->
 <section class="slide teal">
   <p class="eyebrow">Remember these four things</p>
   <ol class="recap">
@@ -234,7 +303,7 @@
   </ol>
 </section>
 
-<!-- 16 — Thank you -->
+<!-- 20 — Thank you -->
 <section class="slide light">
   <p class="eyebrow">Thank you for being here</p>
   <h2>Seal the leaks first — <em>then</em> scale.</h2>
@@ -243,7 +312,7 @@
 </section>
 
 <div class="hud hint">← → to navigate</div>
-<div class="hud count" id="count">1 / 16</div>
+<div class="hud count" id="count">1 / 20</div>
 
 <script>
   const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));

@@ -43,8 +43,7 @@ referral-offer-strategy/
     │                        moments, 4 belief shifts, self-calc, + one teaching
     │                        concept/formula per leak — co-host inserts, no "marketing"
     ├── webinar-script.html   same script as a readable/printable on-brand page
-    ├── webinar-script-en.html  English version — one-time v2 snapshot for outside
-    │                           review; RU is the maintained source (not kept in sync)
+    ├── webinar-script-en.html  English version of the presenter script (v3, in sync)
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     ├── announcement-ru.html  same announcement as a readable/printable page
     ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
@@ -56,8 +55,7 @@ referral-offer-strategy/
     ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
     │                             — a teaching slide (concept + formula) after each of
     │                             the 4 leaks; arrow/click nav, PDF export
-    ├── webinar-deck-en.html      English version — one-time v2 snapshot for outside
-    │                             review; RU is the maintained source (not kept in sync)
+    ├── webinar-deck-en.html      English version of the slide deck (20 slides, v3, in sync)
     └── luma/                     Luma (lu.ma) registration setup
         ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
         ├── event-ru.md              event-page copy + Luma setup checklist
