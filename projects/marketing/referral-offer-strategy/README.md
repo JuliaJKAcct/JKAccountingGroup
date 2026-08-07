@@ -52,6 +52,10 @@ referral-offer-strategy/
     │                             partner (Boris) to review before we co-brand: what the
     │                             webinar is, the 4 teaching breakdowns, why it helps his
     │                             clients, and the soft "what's next"
+    ├── webinar-overview-businessclub-ru.html  same one-pager re-cut (+ .pdf) as an
+    │                             IN-PERSON talk topic to pitch a business club: no
+    │                             co-brand, no "free webinar"/Luma, Date TBD · 7:00 PM ·
+    │                             in person, "prepared for the business club «[name]»"
     ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
     │                             — a teaching slide (concept + formula) after each of
     │                             the 4 leaks; arrow/click nav, PDF export
