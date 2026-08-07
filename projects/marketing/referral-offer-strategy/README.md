@@ -39,10 +39,12 @@ referral-offer-strategy/
         ├── margin-calculator-ru.html   true-margin calculator (standalone, kept for later)
         └── keep-more-checklist-ru.html tax-efficiency checklist (standalone, kept for later)
 ├── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
-    ├── webinar-script.md    RU presenter script (v2): one-story spine, ~12 aha
-    │                        moments, 4 belief shifts, self-calc — co-host inserts
+    ├── webinar-script.md    RU presenter script (v3): one-story spine, ~12 aha
+    │                        moments, 4 belief shifts, self-calc, + one teaching
+    │                        concept/formula per leak — co-host inserts, no "marketing"
     ├── webinar-script.html   same script as a readable/printable on-brand page
-    ├── webinar-script-en.html  English version of the presenter script
+    ├── webinar-script-en.html  English version — one-time v2 snapshot for outside
+    │                           review; RU is the maintained source (not kept in sync)
     ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
     ├── announcement-ru.html  same announcement as a readable/printable page
     ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
@@ -51,9 +53,11 @@ referral-offer-strategy/
     │                             partner (Boris) to review before we co-brand: what the
     │                             webinar is, the 4 teaching breakdowns, why it helps his
     │                             clients, and the soft "what's next"
-    ├── webinar-deck-ru.html      on-brand RU slide deck (16 slides) to screen-share
-    │                             — arrow/click nav, PDF export
-    ├── webinar-deck-en.html      English version of the slide deck
+    ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
+    │                             — a teaching slide (concept + formula) after each of
+    │                             the 4 leaks; arrow/click nav, PDF export
+    ├── webinar-deck-en.html      English version — one-time v2 snapshot for outside
+    │                             review; RU is the maintained source (not kept in sync)
     └── luma/                     Luma (lu.ma) registration setup
         ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
         ├── event-ru.md              event-page copy + Luma setup checklist
@@ -100,14 +104,19 @@ there.
   true-margin calculator, and a tax-efficiency checklist. Each is useful on its
   own but reveals where a professional is needed, closing toward the $250 check.
 - **`webinar/`** — a diagnostic native-Russian webinar, "Почему бизнес растёт, а
-  прибыль уменьшается," as Julia's own top-of-funnel event. v2 is built around one
-  story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and a
-  self-calculated margin, closing on the Разбор утечек прибыли. Includes the
-  readable script (`.html` + `.md`) and ready-to-post announcement copy
-  (`announcement-ru.md`), a co-branded partner invite (`invite-candramas-ru.html`),
-  and the on-brand 16-slide deck to screen-share (`webinar-deck-ru.html`).
-  Coffee-shop figures are grounded in real industry data (net margin 5–12%, owner
-  ~$50–65k/yr, marketing 2–5% of revenue).
+  прибыль уменьшается," as Julia's own top-of-funnel event. v3 keeps the one
+  story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and the
+  self-calculated margin, but now **teaches**: after each of the 4 leaks the audience
+  gets one plain concept + formula — real margin, cash cushion (in months), monthly
+  close + 3 numbers, and the S-corp math (on $100k profit ≈ $7,500/yr saved). The
+  "marketing spend" framing is gone (growth is framed as "вложения в рост"), and the
+  offer lands as a natural "want me to calc this on your numbers?" Includes the
+  readable script (`.html` + `.md`), a one-page **overview for the partner (Boris)**
+  to review before co-branding (`webinar-overview-candramas-ru.html` + `.pdf`),
+  ready-to-post announcement copy (`announcement-ru.md`), a co-branded partner invite
+  (`invite-candramas-ru.html`), and the on-brand 20-slide deck to screen-share
+  (`webinar-deck-ru.html`). Coffee-shop figures are grounded in real industry data
+  (net margin 5–12%, owner ~$50–65k/yr).
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,

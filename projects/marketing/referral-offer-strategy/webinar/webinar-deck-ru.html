@@ -64,17 +64,37 @@
   .bd .tot .k{font-family:var(--mono); font-size:clamp(13px,1.6vw,20px); letter-spacing:.06em; text-transform:uppercase; color:var(--bronze-700)}
   .bd .tot .v{font-family:var(--serif); font-weight:700; font-size:clamp(40px,6vw,82px); color:var(--bronze-700)}
 
+  /* teaching: formula + applied + benchmark */
+  .teach{margin-top:clamp(18px,2.6vw,36px); max-width:min(1040px,82vw)}
+  .formula{font-family:var(--mono); font-weight:500; font-size:clamp(16px,2.3vw,34px); line-height:1.35; color:var(--ink);
+    background:var(--white); border:1px solid var(--border-soft); border-left:5px solid var(--bronze-500); border-radius:14px;
+    padding:clamp(15px,2vw,28px) clamp(18px,2.6vw,36px)}
+  .paper .formula{background:var(--white)}
+  .teal .formula{background:rgba(255,255,255,.06); border-color:rgba(207,162,104,.42); border-left-color:var(--bronze-300); color:#fff}
+  .formula .var{color:var(--bronze-700); font-weight:600}
+  .teal .formula .var{color:var(--bronze-300)}
+  .apply{font-family:var(--serif); font-weight:600; font-size:clamp(24px,3.6vw,54px); line-height:1.12; color:var(--ink); margin-top:clamp(16px,2.1vw,30px)}
+  .teal .apply{color:#fff}
+  .apply b{color:var(--bronze-700)}
+  .teal .apply b{color:var(--bronze-300)}
+  .bench{font-size:clamp(15px,1.9vw,26px); line-height:1.4; color:var(--muted); margin-top:clamp(10px,1.4vw,18px); max-width:34ch}
+  .teal .bench{color:var(--on-dark-muted)}
+  .bench b{color:var(--ink); font-weight:600}
+  .teal .bench b{color:#fff}
+
   ul.pts{margin-top:clamp(20px,2.6vw,34px); list-style:none; display:grid; gap:clamp(12px,1.6vw,20px)}
   ul.pts li{position:relative; padding-left:clamp(28px,3vw,44px); font-size:clamp(18px,2.4vw,34px); line-height:1.3; color:var(--body)}
   .teal ul.pts li{color:var(--on-dark)}
   ul.pts li::before{content:""; position:absolute; left:0; top:.55em; width:clamp(9px,1vw,14px); height:clamp(9px,1vw,14px); background:var(--bronze-500); transform:rotate(45deg)}
+  ul.pts li b{color:var(--ink); font-weight:600}
+  .teal ul.pts li b{color:#fff}
 
   .recap{list-style:none; display:grid; gap:clamp(14px,2vw,26px); margin-top:clamp(24px,3vw,40px); counter-reset:r}
   .recap li{counter-increment:r; position:relative; padding-left:clamp(52px,6vw,86px); font-family:var(--serif); font-weight:600; font-size:clamp(20px,2.8vw,40px); line-height:1.2; color:#fff}
   .recap li::before{content:counter(r); position:absolute; left:0; top:-.05em; width:clamp(38px,4.4vw,64px); height:clamp(38px,4.4vw,64px); border:2px solid var(--bronze-300); color:var(--bronze-300); border-radius:50%; font-family:var(--mono); font-weight:600; font-size:clamp(16px,2vw,28px); display:grid; place-items:center}
 
   .price{font-family:var(--serif); font-weight:700; font-size:clamp(56px,10vw,150px); color:var(--bronze-300); line-height:1}
-  .credit{font-size:clamp(16px,2vw,28px); color:var(--on-dark); margin-top:8px}
+  .credit{font-size:clamp(16px,2vw,28px); color:var(--on-dark); margin-top:8px; max-width:30ch}
 
   .bucket{width:clamp(150px,20vw,300px); height:auto; margin-top:clamp(10px,2vw,20px)}
 
@@ -175,32 +195,68 @@
     <div class="row"><span>Продукты и ингредиенты</span><span class="m">− $1 400</span></div>
     <div class="row"><span>Персонал: приготовить и доставить</span><span class="m">− $900</span></div>
     <div class="row"><span>Аренда, коммуналка, страховка, софт</span><span class="m">− $950</span></div>
-    <div class="row"><span>Ваше время, маркетинг, эквайринг</span><span class="m">− $750</span></div>
+    <div class="row"><span>Ваше время, эквайринг, прочее</span><span class="m">− $750</span></div>
     <div class="row"><span>Налоги с прибыли</span><span class="m">− $320</span></div>
     <div class="tot"><span class="k">Осталось у вас</span><span class="v">$680</span></div>
   </div>
 </section>
 
-<!-- 8 — Leak 2: cash flow -->
+<!-- 8 — Leak 1 teaching: MARGIN formula -->
+<section class="slide paper">
+  <p class="eyebrow">Что тут важно понять · маржа</p>
+  <h2>Маржа — это не оборот.<br>Это сколько <em>осталось</em>.</h2>
+  <div class="teach">
+    <div class="formula"><span class="var">Маржа</span> = (Выручка − Все затраты) ÷ Выручка × 100%</div>
+    <p class="apply">$680 ÷ $5 000 = <b>13,6%</b></p>
+    <p class="bench">Здоровая маржа — <b>~10–15%</b>. Ниже 5% — сигнал тревоги, даже если выручка растёт.</p>
+  </div>
+</section>
+
+<!-- 9 — Leak 2: cash flow question -->
 <section class="slide teal">
   <p class="eyebrow">Утечка 2 · деньги во времени</p>
   <h2>Сколько месяцев вы продержитесь, если каждый клиент заплатит на <em>30 дней позже?</em></h2>
 </section>
 
-<!-- 9 — Belief 3 -->
-<section class="slide paper">
+<!-- 10 — Leak 2 teaching: CASH CUSHION formula -->
+<section class="slide light">
+  <p class="eyebrow">Что тут важно понять · деньги</p>
+  <h2>Прибыль — на бумаге.<br>Подушка — <em>в месяцах</em>.</h2>
+  <div class="teach">
+    <div class="formula"><span class="var">Подушка</span> (мес.) = Деньги на счету ÷ Средние расходы в месяц</div>
+    <p class="apply">$30 000 ÷ $20 000 = <b>1,5 месяца</b></p>
+    <p class="bench">Спокойно — <b>3+ месяца</b>. Меньше одного — бизнес живёт «от платежа до платежа».</p>
+  </div>
+</section>
+
+<!-- 11 — Belief 3 -->
+<section class="slide teal">
   <p class="eyebrow">Сдвиг убеждения №3</p>
   <h2>Бухгалтерия — не про налоги.<br>Она про <em>решения вовремя</em>.</h2>
 </section>
 
-<!-- 10 — Leak 3: rear-view -->
+<!-- 12 — Leak 3: rear-view -->
 <section class="slide light">
   <p class="eyebrow">Утечка 3 · вы рулите, глядя назад</p>
   <h2>Кто знает свою прибыль за прошлый месяц — <em>прямо сейчас?</em></h2>
   <p class="sub" style="max-width:44ch">Если книги отстают на три месяца — решения приходят, когда деньги уже утекли.</p>
 </section>
 
-<!-- 11 — Leak 4: structure -->
+<!-- 13 — Leak 3 teaching: MONTHLY CLOSE + 3 numbers -->
+<section class="slide paper">
+  <p class="eyebrow">Что тут важно понять · учёт</p>
+  <h2>Три числа, за которыми следят <em>каждый месяц</em>.</h2>
+  <div class="teach">
+    <div class="formula">Закрытие месяца → P&amp;L за прошлый месяц у вас на руках <span class="var">к 10–15 числу</span> текущего.</div>
+    <ul class="pts">
+      <li><b>Выручка</b> — сколько пришло</li>
+      <li><b>Маржа</b> — сколько из этого осталось</li>
+      <li><b>Деньги на счету</b> — на сколько хватит</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 — Leak 4: structure -->
 <section class="slide light">
   <p class="eyebrow">Утечка 4 · структура, которая тихо вас облагает</p>
   <h2>То, что было нормально на старте, на росте стоит тысячи.</h2>
@@ -212,28 +268,41 @@
   </ul>
 </section>
 
-<!-- 12 — Belief 4 -->
+<!-- 15 — Leak 4 teaching: S-CORP math -->
+<section class="slide paper">
+  <p class="eyebrow">Что тут важно понять · структура</p>
+  <h2>S-corp: 15,3% — только на зарплату, <em>не на всю прибыль</em>.</h2>
+  <div class="bd">
+    <div class="row"><span>Прибыль за год</span><span class="m">$100 000</span></div>
+    <div class="row"><span>Разумная зарплата → налог 15,3%</span><span class="m">~$50 000</span></div>
+    <div class="row"><span>Распределение → 15,3% не платится</span><span class="m">~$50 000</span></div>
+    <div class="tot"><span class="k">Экономия в год</span><span class="v">≈ $7 500</span></div>
+  </div>
+  <p class="bench" style="max-width:44ch">Одно решение о структуре — и эти деньги остаются у вас <b>каждый год</b>.</p>
+</section>
+
+<!-- 16 — Belief 4 -->
 <section class="slide teal">
   <p class="eyebrow">Сдвиг убеждения №4</p>
   <h2>Хороший учёт не растит бизнес.<br>Растят <em>своевременные решения</em>.</h2>
 </section>
 
-<!-- 13 — Scorecard -->
+<!-- 17 — Scorecard -->
 <section class="slide paper">
   <p class="eyebrow">Ваша очередь</p>
   <h2>Оцените свой бизнес за 5 минут</h2>
   <p class="sub" style="max-width:40ch">Рабочий лист «Проверка готовности к росту» — в подарок каждому. Каждое «не уверен(а)» — это, скорее всего, утечка.</p>
 </section>
 
-<!-- 14 — Offer -->
+<!-- 18 — Offer -->
 <section class="slide teal">
-  <p class="eyebrow">Найдём ваши утечки — по реальным цифрам</p>
-  <h2>Разбор утечек прибыли</h2>
+  <p class="eyebrow">Те же четыре формулы — на ваших цифрах</p>
+  <h2>Хотите, посчитаю это <em>по вашему бизнесу?</em></h2>
   <p class="price">$250</p>
-  <p class="credit">…и они полностью идут в счёт первого месяца работы с нами.</p>
+  <p class="credit">«Разбор утечек прибыли» — и он полностью идёт в счёт первого месяца работы с нами.</p>
 </section>
 
-<!-- 15 — Recap -->
+<!-- 19 — Recap -->
 <section class="slide teal">
   <p class="eyebrow">Запомните эти четыре мысли</p>
   <ol class="recap">
@@ -244,7 +313,7 @@
   </ol>
 </section>
 
-<!-- 16 — Thank you -->
+<!-- 20 — Thank you -->
 <section class="slide light">
   <p class="eyebrow">Спасибо, что были со мной</p>
   <h2>Сначала закройте утечки — <em>потом</em> разгоняйте.</h2>
@@ -253,7 +322,7 @@
 </section>
 
 <div class="hud hint">← → листать</div>
-<div class="hud count" id="count">1 / 16</div>
+<div class="hud count" id="count">1 / 20</div>
 
 <script>
   const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
