@@ -27,7 +27,7 @@
 - **Home state:** Florida (Hollywood / Broward County)
 - **Industry / what they do:** Licensed **title insurance agency** (Florida **DFS**-licensed under the Insurance Code) _(Double note, 2026-07-15)_
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** BTR filing handled; income tax on the owner's **Schedule C**; bookkeeping _(QBO — confirm scope)_
+- **Our engagement (services we provide):** BTR filing handled; income tax on the owner's **Schedule C**; bookkeeping _(QBO — confirm scope)_. Double's `Payroll` property lists **N/A**, but Gmail shows an **active Gusto payroll** for this company (W-2 issued, direct-deposit speed changed from 2-day to 4-day in Jan 2026) — worth reconciling. _(Gmail, Jan 2026)_ The firm also files this company's **annual report**, per a firm-wide confirmation email to the owner covering "your companies." _(Gmail, Apr 2026)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -52,18 +52,20 @@ the actual details.
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** No — **N/A** _(Double client properties, 2026-08-08)_
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** Double property says **N/A**, but Gmail shows an **active Gusto payroll** for this company — a W-2 packet was generated (Jan 2026), direct-deposit speed was changed from 2-day to 4-day (Jan 2026), and there was an overdue-balance/wire-transfer episode with Gusto around the same time. Worth reconciling which is current. _(Gmail, Jan 2026)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **quarterly** _(Double client properties, 2026-08-08)_
 
 ### Income tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — the owner's **Schedule C** (this entity is a disregarded single-member LLC) _(Double client properties, 2026-08-08)_
 
 ### Licenses & other filings
+- **Florida title insurance agency administrative surcharge** — a recurring **annual** DFS filing obligation for licensed title agencies, due each January. _(Gmail, Dec 2025 reminder)_
+- **Managing Title Agent transition (in progress, Jul 2026):** the agency's Managing Title Agent license on file with DFS is being updated to a new agent, and the **DFS DICE MyProfile** license address is being updated toward **Coral Springs** as part of the same process — this is progress on the address-change item already flagged in §6. _(Gmail, Jul 2026)_
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood + Broward County.
 - **What & when:** Local business-license receipts; renewed annually.
 - **Our role:** The firm handled the filings.
