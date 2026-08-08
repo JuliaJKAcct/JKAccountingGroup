@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,6 +84,11 @@ never copied here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log showed only
+  routine monthly-close task completions (Aug 3) — nothing new to the Operating zone. Gmail
+  surfaced a Mercury account-number discrepancy (see "Information still needed") and Margate-side
+  correspondence (WF 8477 reconnection, insurance audit dispute) that belongs to Margate's own
+  file, not Beemold's. Ping had no indexed meetings for Beemold or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 6. Beemold*): the manual-upload-since-Feb-2025 process, the intercompany-loan review with Margate, and the corrected bank-feed map (Mercury + BoA) captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 
@@ -94,6 +99,10 @@ never copied here.
 ### Information still needed
 - [ ] Confirm home state; fiscal year-end; what Beemold actually does (low activity)
 - [ ] Which Drive folder is canonical (dedicated vs combined)
+- [ ] **Mercury account discrepancy** — a Mercury "IO credit" auto-payment notice references a
+  **Checking ••3849** account, which doesn't match the checking (8192) already on file; confirm
+  whether this is an additional/renamed Mercury account or a reference quirk in Mercury's own
+  notices. _(Gmail, 2026-07-30 — low confidence)_
 
 ## 7. Links
 

@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -85,18 +85,33 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - **Sales-tax report is never right out of the box** — always recalculated; watch the invoice-level "see math" errors (see §4).
 - **Part of the tech owner-group** (shares a principal with SensusTech / the wider group). _(Double, Gmail)_
 - A **USTD deposit-tracing working file** lives in the Drive folder (large multi-month deposit-reconciliation with customer/invoice detail — sensitive; stays in Drive). _(Drive)_
+- **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-18) — same integration issue seen at SensusTech (same tech owner-group); watch whether it recurs. _(Gmail, 2026-08-04)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Gmail surfaced two developments:
+  the previously-noted FL DOR "encrypted exchange" has escalated to a **formal sales-tax audit**,
+  and the owner flagged a **Chase deposit he does not recognize** as tied to a USDT exchange —
+  both added to §6. Also found an open Gusto → QuickBooks Online account-mapping sync issue
+  (same as SensusTech, same tech owner-group) — added to §5. The buyback-categorization pattern
+  already on file is still recurring as of Jul 20–21 (already a Pending item in the SOP; no new
+  proposal needed). Ping had no indexed meetings for Mobilesource or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **June 2026 reports blocked** pending the client fixing miscategorized **buyback** transactions. _(Gmail)_
 - **2025 business income-tax prep in progress** — reconcile the client-portal organizer state. _(Gmail)_
-- A mid-2026 **encrypted exchange with a FL DOR agent** — possible account/notice matter to watch. _(Gmail)_
+- **A formal Florida DOR sales-tax audit is beginning** — this is the escalation of the mid-2026
+  "encrypted exchange" previously on watch: FL DOR notified the President directly that a prior
+  audit is being closed out and a new one will follow shortly. Watch for the audit's document
+  requests. _(Gmail, 2026-07-27)_
+- **Unrecognized USDT-linked deposit into the Chase business account** — the owner explicitly
+  said he does not recognize a deposit the GM flagged as a possible USDT exchange payout;
+  ties into the existing USDT deposit-tracing working file in Drive (§5) but is not yet resolved.
+  _(Gmail, 2026-07-29)_
 - **Open in Maria's guide:** dispute case on file; an employee I-9 in Gusto; a credit memo; commission payments for the skipped contractor; a request to remove/adjust pending payments. _(Maria's doc guide)_
 
 ### Information still needed

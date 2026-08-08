@@ -1,6 +1,6 @@
 # Ecom Beavers LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -65,6 +65,7 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120** (C-corp) _(Double)_. **Cross-border:** the July-2026 consult covered entity selection, **tax-treaty relief**, **ITIN**, dividend withholding, and profit repatriation for the foreign owner.
+- **Organizer Status:** **N/A (BK client)** in Double's tracking _(Double client properties, 2026-08-08)_.
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -78,6 +79,7 @@ here. Open the Double client to get the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log shows only a **2025 Taxes** project status change (In Progress → Not Started, Julia, 2026-08-04) — an observed status change, noted for context. No new Double notes beyond the existing 2026-07-09 consult note. Gmail turned up routine Shopify billing (Somma, BoneX domain/subscription charges) and a Mercury IO credit-limit change — confirms the multi-store setup already on file but nothing durable to add; no evidence yet that the post-consult deliverables (entity-options summary, treaty guidance, deductible checklist, minutes — see Outstanding items) have gone out. Ping had no legible new content for the client or the owner post-baseline (the only Ecom Beavers hits were the same pre-baseline 2026-07-09 consult already on file).
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had a **consult note (via Double note)** — the 2026-07-09 consultation. Ping + Gmail + Drive swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)

@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,6 +72,9 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
   2. **Change Merch (PaymentsHub) deposit / fee dates** so they land in the right period.
   3. **Change / rename the ADP JE names**, then **reconcile ADP**.
   4. **Monthly JEs, per store:** Monthly JE (LP), Monthly JE (AP), Expenses JE (LP), Expenses JE (AP), Cash-on-Hand adjustment, Inventory adjustment, Deposit-Fee (MRCH) AP, Deposit-Fee (MRCH) LP.
+  5. **Reconcile the Sunoma/Magnum intercompany loan** each month (same mechanic as the
+     Beemold/Margate owner-group) — a standing task on the Double close checklist, keep the two
+     sides in agreement. _(Double activity log, 2026-07-27 · task renamed 2026-08-03)_
 - **Categorization quirks:** _(see §5)_
 
 ### Income tax
@@ -83,7 +86,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 ## 5. Key facts & quirks
 
 - **Two store brands under one entity** — Lucky Pawn (LP) + Auto Pawn (AP), reconciled and journalized **separately** every month.
-- **Pawn/jewelry owner-group (with MAGNUM 152, INC):** same owner + same administrative assistant; managed together, **books kept distinct**. _(Double, Drive)_
+- **Pawn/jewelry owner-group (with MAGNUM 152, INC):** same owner + same administrative assistant; managed together, **books kept distinct**. **Intercompany loan reconciled monthly** between the two entities (standing Double task). _(Double, Drive; task confirmed 2026-07-27)_
 - **Reports come from the owner via TaxDome** at month-end (Ledger + Expense + Cash-on-Hand, per store) — the close can't finish until they arrive, so nudge the pipeline early in the month.
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.
@@ -93,12 +96,18 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log confirmed a
+  standing **Sunoma/Magnum intercompany-loan reconciliation** task on the monthly close checklist
+  (not previously captured — added to §4/§5; SOP candidate proposed, see sop-proposals.md).
+  Gmail identified the outside attorney in the wire-transfer-tracing matter by name (Reizenstein
+  And Associates) and showed routine Magnum-side correspondence that belongs to Magnum's own
+  file. Ping had no indexed meetings for Sunoma or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 2. Sunoma*): month-end per-store process, systems (Bravo / PaymentsHub / ADP / TaxDome), bank-feed map, and reporting cadence captured into the Operating zone (non-sensitive only). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email/document flow was the richest source.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Recurring Bravo access/license problems** — the firm keeps losing access; asked for its own login. _(Gmail, 2026-07)_
-- **Legal matter (in progress):** compiling TD/Truist bank statements to trace wire transfers to an outside attorney, at the owner's request. _(Gmail)_
+- **Legal matter (in progress):** compiling TD/Truist bank statements to trace wire transfers to an outside attorney — identified as **Reizenstein And Associates** — at the owner's request. _(Gmail, 2026-07-20/21)_
 - A missing **Auto Pawn April-2024 expense report** was requested from the owner — confirm received.
 
 ### Information still needed

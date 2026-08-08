@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,7 +72,8 @@ the actual details.
 - **Pre-operational — startup-cost treatment is the central bookkeeping issue:** expenses are **capitalized as startup costs** until the park "begins operations"; pinning the operations-commencement date is a live judgment call tied to the opening. _(Gmail — Julia's bookkeeping instructions)_
 - **Heavier than standard bookkeeping — hands-on AP:** the firm **pays vendors** from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated AP inbox.
 - **Multi-member LLC / partnership** — issues **K-1s**; includes **nonresident / foreign partner(s)** → a 1040-NR + K-1 and an **ITIN application (CAA)** were run. Likely 3–4 partners _(count low confidence)_.
-- **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC.
+- **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC. Each of the two co-owner portal contacts also has a **separate individual 1040 profile linked in Double** (useful for the tax-season/organizer sweep — see FOLLOW-UPS "resolve the two iKids Group partners"). _(Double contacts, 2026-08-08)_
+- **Build-out is ongoing:** a **City of Fort Lauderdale "LauderBuild"** (online permitting) payment posted in July 2026, and the client's AP includes a **permit-expediting vendor ("East of Collins Expediting")** — both consistent with the pre-operational construction/permit phase. _(Gmail, 2026-07-23 to 2026-07-28)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -80,11 +81,13 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; partnership / 1065; monthly bookkeeping).
 - 2026-07-20 — **Gmail enrichment sweep:** established the iKidsPark play-park profile, Fort Lauderdale FL, RU/UA language, pre-operational startup-cost treatment, hands-on AP, and the related-entity group. Ping had **no indexed meetings**; facts are from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
+- 2026-08-08 — **Weekend sweep (incremental, from 2026-07-20):** Double's **"2025 Taxes" tax project status was changed from In Progress back to Not Started** (activity log, 2026-08-04, by Julia) — worth reconciling against the "1065 extension appears filed" note below. Confirmed each co-owner also has an individual 1040 profile in Double, and found continuing LauderBuild/permit-expediter activity in Gmail (both added to §5). Ping org-wide meeting search returned no relevant/legible content for this client.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Second nonresident partner's ITIN / info was pending** (as of Apr 2026) — confirm resolved.
-- A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
+- A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status, especially given the **2025 Taxes project was reset to Not Started on 2026-08-04** (see log).
 - **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
+- Recurring **Double task-digest** emails (Aug 3–7, 2026) show a task assigned to the bookkeeper as due/overdue — confirm it's actioned.
 
 ### Information still needed
 - [ ] Fiscal year-end; exact number of partners

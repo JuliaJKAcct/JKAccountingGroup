@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -82,7 +82,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
-- **Firearms (if carried):** possible FFL / firearms-compliance angle _(low confidence — the "guns and jewelry" categorization + a firearms wholesaler's statements)_.
+- **Firearms (if carried):** possible FFL / firearms-compliance angle — **confidence raised**: the group has active vendor accounts with **Davidson's Inc** and **Lipsey's**, both firearms wholesale distributors, confirming a firearms-retail component. _(Gmail, 2026-08-03; low-to-medium confidence — not confirmed against an actual FFL license)_.
 
 ## 5. Key facts & quirks
 
@@ -96,6 +96,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log showed normal monthly-close task completions (bank feeds, Bravo JEs, reclasses, ADP reconciliation) through 2026-08-06, plus a **2025 Taxes project status toggle** (Not Started → In Progress by Lilian on 7/31, back to Not Started by Julia on 8/4) and a **"JK 2025 Business Tax Organizer - Magnum 152" reverted to draft** by Lilian on 7/31 — noted here as an observed status change only (Organizer Status property itself still reads "N/A (BK client)"). Gmail (via "US Pawn") surfaced vendor-account activity with two firearms distributors (see §5). No new Double notes. Ping had no legible new content for the client or the owner post-baseline. Drive folder link reconfirmed unchanged; a credentials spreadsheet in that folder surfaced an unsolicited content preview in the search results — none of it was used or copied anywhere (two-data-homes rule). QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 1. Magnum*): full month-end process, bank-feed map, systems (Bravo / SaasAnt / ADP), store structure, and reclass checklist captured into the Operating zone (non-sensitive only; credentials/dollar figures left in Drive). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 

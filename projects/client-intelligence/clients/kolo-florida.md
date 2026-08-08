@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** Kolo Florida Inc
-- **Entity type:** Corporation (Inc)
-- **Home state:** Florida
-- **Industry / what they do:** _(pending — confirm)_
+- **Entity type:** Corporation (Inc) — **S-corp**, files Form **1120-S** _(Double client properties, 2026-08-08)_
+- **Home state:** Florida — **Lauderhill, Broward County** _(Gmail: City of Lauderhill Commercial Certificate of Use / zoning correspondence, 2025)_
+- **Industry / what they do:** **Retail** — operates an e-commerce store, **"KOLO HOUSE"**, on **Shopify** _(Gmail: recurring Shopify billing notices, 2025–2026)_
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** _(pending — confirm)_
+- **Our engagement (services we provide):** Bookkeeping (quarterly); sales tax (monthly per Double); income tax (Form 1120-S); annual report; 1099 preparation. _(Double client properties, 2026-08-08)_ ⚠️ Double's `Payroll` property is listed **N/A**, but Gmail shows an **active weekly payroll run via Gusto** for this company (recurring "payroll due/late" notices, W-2 mentions) — worth reconciling. _(Gmail, ongoing 2025–2026)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 

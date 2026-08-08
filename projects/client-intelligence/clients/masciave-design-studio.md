@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -56,7 +56,7 @@ the actual details.
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Jurisdiction(s):** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** The recurring **Sales Tax** task in Double is set to run **every 3 months, on the 5th day** of the month following quarter-end (changed from the 1st). _(Double activity log, 2026-07-20)_
 
 ### Payroll
 - **Applies?** Yes — **automatic** _(Double)_
@@ -68,6 +68,7 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** (S-corporation) _(Double)_
 - **Our role:** We prepare income tax _(Double)_; **1099 preparation** included.
+- **Organizer Status:** **Completed** _(Double client properties, 2026-08-08)_
 
 ### Licenses & other filings
 - **Annual report:** Yes — we handle it _(Double)_
@@ -87,12 +88,13 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping, sales tax and design-studio profile). The COA-grammar note in §5 comes from **firm/SOP knowledge**, not the Double properties.
 - 2026-07-20 — **Ping / Gmail / Double-note enrichment sweep:** established the interior-design profile (IIDA/ASID/CPTED), FL (Broward) location, Gusto payroll, FL DOR quarterly sales tax, and confirmed the accrual-books / cash-tax reporting basis from the Double note. Ping had **no indexed meetings**; facts are from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
+- 2026-08-08 — **Weekend sweep (incremental, from 2026-07-20):** no new Double note since the one already on file. Double client properties confirm **Organizer Status: Completed** and the Sales Tax task recurrence change (both added to §4). Portal contacts confirm the **linked personal client (Double 710615) shares the same portal contact as this company** — the §6 open question is resolved (see below). Ping org-wide meeting search returned no relevant/legible content for this client; Gmail turned up only routine Gusto AutoPilot payroll-run notices and the already-known Q2-financials exchange from 07-20 — nothing new to record.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — verify. _(recurring-expense review)_
 - Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket (feeds were unstable).
 - Confirm the exact **FL sales-tax county / registration**.
-- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement.
+- Clarify the **linked personal client (Double 710615)** — presumed the owner's individual 1040 engagement. **Confirmed:** it shares the same portal contact as this company, i.e. it is the owner's individual 1040 engagement. _(Double contacts, 2026-08-08)_
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration

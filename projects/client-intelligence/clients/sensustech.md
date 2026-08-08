@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -68,6 +68,7 @@ doc guide** in Drive (§7) — never copied here.
   1. **Bank reconciliation** of every feed (Chase checking + savings + 3 credit cards). The **sub-credit-card 4800 can't connect to QBO** → its transactions are **added manually**.
   2. **Monthly Brokerage JE** — at the end of each month, book a **journal entry for the managed brokerage accounts from their statements** (JK has **no direct access** to the two managed-brokerage accounts; **statements are requested via TaxDome**).
   3. **Uncategorized workflow** — the owner clears "Uncategorized" quickly, so **it's fine to send anything you're unsure of to Uncat** for the owner to resolve, rather than guessing.
+  4. **Reconcile the loan from Lumetro** each month — a standing task on the Double close checklist alongside the Brokerage JE. _(Double activity log, 2026-08-07)_
 - See the two Bookkeeping video tutorials (part 2 is the Brokerage JE) in §7.
 
 ### Income tax
@@ -78,7 +79,8 @@ doc guide** in Drive (§7) — never copied here.
 
 ## 5. Key facts & quirks
 
-- **Tech owner-group:** part of a group under the same owner/CEO — **Lumetro LLC** (ad-spend entity), **Mobilesource** (electronics), **Sensus Games LLC** (files its own return). Reports bundled with Lumetro; **keep books distinct**. _(Double, Gmail)_
+- **Tech owner-group:** part of a group under the same owner/CEO — **Lumetro LLC** (ad-spend entity), **Mobilesource** (electronics), **Sensus Games LLC** (files its own return). Reports bundled with Lumetro; **keep books distinct**. **Intercompany loan from Lumetro reconciled monthly** (standing Double task). _(Double, Gmail; task confirmed 2026-08-07)_
+- **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-12) — watch whether this recurs at future closes. _(Gmail, 2026-08-08)_
 - **Monthly Brokerage JE** from managed-brokerage statements (via TaxDome) is the signature recurring task — JK has no live access to those accounts.
 - **Sub-CC 4800** is entered **manually** (cannot connect to QBO).
 - **Fast Uncat turnaround** — the owner resolves Uncategorized items quickly; use Uncat rather than mis-categorizing.
@@ -88,6 +90,12 @@ doc guide** in Drive (§7) — never copied here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log confirmed a
+  standing **loan-from-Lumetro reconciliation** task on the monthly close checklist (not
+  previously captured — added to §4/§5; SOP candidate proposed, see sop-proposals.md). Gmail
+  surfaced an open Gusto → QuickBooks Online account-mapping sync failure (due 2026-08-12) —
+  added to §5 as a quirk to watch. Ping had no indexed meetings for Sensustech or the owner in
+  this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 4. Sensustech*): the monthly Brokerage JE, the manual sub-CC handling, the Uncat workflow, bank-feed map, and 2 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 
