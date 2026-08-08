@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** Atman Parts
-- **Entity type:** _(pending)_
+- **Entity type:** _(pending — the QuickBooks/Intuit subscription notifications alternate between "Atman Parts" and "Project ATMAN LLC" as the company name on file, which may mean the legal entity name is **Project ATMAN LLC** and "Atman Parts" is a trade name, or that two related QuickBooks subscriptions exist — **unconfirmed, verify** (source: Gmail, Intuit billing emails, Mar–Aug 2026))_
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending — possibly online **parts sales / e-commerce**; "eBay" and "Business PayPal" came up in the 2026-07-20 call, **low confidence** from a rough transcript — verify)_
 - **Primary language:** _(pending)_
-- **Our engagement (services we provide):** _(pending)_
+- **Our engagement (services we provide):** **Bookkeeping — Monthly** (source: Double client properties, 2026-08-08). Tax Return Type on file is **Schedule C** (source: Double client properties, 2026-08-08) — see §4 Income tax.
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (per Double)
 
@@ -83,10 +83,10 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
 - **Applies?** _(pending)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending)_
+- **Applies?** Yes — **Monthly** (source: Double client properties, 2026-08-08).
 
 ### Income tax
-- **Applies?** _(pending)_
+- **Applies?** Yes — **Schedule C** on file as the Tax Return Type (source: Double client properties, 2026-08-08). This sits oddly with Double's `Account Type: Company` — **not yet reconciled**; verify whether this is a disregarded-entity/sole-proprietor filing situation before relying on it for planning.
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
@@ -97,6 +97,8 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   client is the owner's **employee**, given access purely to receive documents and use
   the portal. Don't read "contact on the company" as "owner," and don't expect an
   individual return for him. (Detail in §2.)
+- **Possible dual QuickBooks/entity naming — unconfirmed.** Intuit billing notifications for this client alternate between "Atman Parts" and "Project ATMAN LLC" as the company name on the same subscription thread (source: Gmail, Mar–Aug 2026). Could be a legal-name-vs-trade-name situation, or two related subscriptions — flag for Lilian/Julia to confirm before it causes confusion in QuickBooks.
+- **QuickBooks primary admin was transferred to the owner** on 2026-07-20 (Intuit notification: "The primary admin for Atman Parts changed... [owner] is the new primary admin"), consistent with the same-day onboarding call. (Source: Gmail, 2026-07-20.)
 
 ## 6. History & open questions
 
@@ -111,19 +113,20 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill (§7:
   a portal contact is not necessarily an owner).
 - 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
+- 2026-08-08 — **Full-pass sweep (gap catch-up).** Double client properties confirmed: **Tax Return Type = Schedule C**, **Bookkeeping = Monthly**, Assigned Staff = Lilian, Account Type = Company; no Double notes on file. Ping (bounded ≥2026-07-20, per the run's rules — this client's gap was Gmail, not Ping): a scoped search of the owner's Ping client record surfaced nothing beyond the same 2026-07-20 "Follow Up" call already on record — no new meetings. **Full historical Gmail pass (in:inbox + in:sent, no date bound) — gap closed.** Found: QuickBooks/Intuit subscription and billing history back to Mar 2026 (trial start, payment history, a lapsed-then-restored subscription) under both "Atman Parts" and "Project ATMAN LLC" as the company name (see §5); the QuickBooks primary-admin transfer to the owner (2026-07-20); a TaxDome account activation (2026-03-26); and a **Form 2848 (power of attorney)** faxed on 2026-03-28. Nothing on sales tax/franchise tax beyond what the 2026-07-20 call already flagged. Google Drive: located the client's folder (link in §7). QuickBooks and the repo (SOPs/FOLLOW-UPS/BACKLOG) were checked; no client-specific content found beyond the BACKLOG.md mention of this file's own existence.
 
 ### Outstanding items (CI-only — never in the SOP)
 - _(none captured yet — live tasks live in Double / Ping)_
 
 ### Information still needed
-- [ ] Snapshot basics (entity type, state, industry, language, engagement, FY-end)
+- [ ] Snapshot basics (entity type, state, industry, language, FY-end) _(engagement answered 2026-08-08: Monthly bookkeeping; entity-name ambiguity flagged in §5)_
 - [ ] Sales tax: jurisdiction, frequency/due date, agency & portal, form, our role
 - [ ] Where the sales-tax portal credentials live (Drive link)
-- [ ] Which other obligations apply (payroll, bookkeeping, income tax, licenses)
-- [ ] Google Drive folder link (sensitive vault)
+- [x] Which other obligations apply — **Bookkeeping (Monthly) and income tax (Schedule C) confirmed via Double, 2026-08-08**; payroll, sales tax and licenses still pending
+- [x] Google Drive folder link — **found, 2026-08-08** (§7)
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=763909](https://app.doublehq.com/close?cid=763909)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Atman Parts](https://drive.google.com/drive/folders/1j28nmUpb7u18MLzVO8punGFAbXBXcxJs) _(found 2026-08-08)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,7 +28,7 @@
 ## 1. Snapshot
 
 - **Business name:** GOSSIP MIAMI LLC
-- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
+- **Entity type:** LLC, taxed as an **S-corp** for federal purposes — **Tax Return Type: 1120-S** confirmed via Double client properties (source: Double, 2026-08-08). This resolves most of the earlier uncertainty: Lilian had described it as "a corp," while the 2024-return correspondence raised a question about which owners' **names appear on the return** (language that read more like a multi-owner pass-through). An S-corp does issue K-1s, so 1120-S is consistent with that correspondence and with the single-owner finding (§2). **The "which names appear" question itself is now understood to trace to a 2024 ownership change** — see §5 (share purchase) — rather than to the return type. Still not cross-checked against the actual filed 2024 return text.
 - **Home state:** Florida
 - **Industry / what they do:** A **beauty salon** in Miami — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. The street address stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
@@ -71,7 +71,7 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping. ⚠️ **BOTH company bank accounts are DISCONNECTED from QuickBooks**, so the transactions since the disconnection never loaded. **Only the client can reconnect them** — the "**Fix now**" prompt in his own QuickBooks. Asked 2026-08-04 and again 2026-08-05; **no confirmation received as of 2026-08-06 — verify in QuickBooks before chasing again**, the firm has user access (§6) |
+| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, re-granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping. **This is not the firm's first access to this client's QuickBooks** — an Accountant-level invite existed as far back as **2025-09-19/10-29**, was later removed, then the client re-invited the firm on **2026-07-29** (source: Gmail; see §6). ⚠️ **BOTH company bank accounts are DISCONNECTED from QuickBooks**, so the transactions since the disconnection never loaded. **Only the client can reconnect them** — the "**Fix now**" prompt in his own QuickBooks. Asked 2026-08-04 and again 2026-08-05; **no confirmation received as of 2026-08-06 — verify in QuickBooks before chasing again**, the firm has user access (§6) |
 | Bank statements | The raw material for the financial statements | _(not in the repo — sent by email/portal)_ | 2025 statements supplied for **Gossip Miami** and, separately and unprompted, for **Marat Boxing** (§4) |
 | Vagaro | The salon's booking/marketing platform _(inferred from a Vagaro email sent on the salon's behalf — never seen or used by the firm)_ | _(n/a — no firm access)_ | May or may not be a revenue source the books need; **nobody has looked**. Don't go hunting for a Vagaro export on the strength of this row |
 | TaxDome portal | Organizers, document requests, signatures | _(n/a — firm platform)_ | The 2025 individual organizer runs here |
@@ -117,7 +117,7 @@ own records, and **all of it is his to produce**:
 duplicate it here; a request list goes stale, this list doesn't.
 
 ### Sales tax
-- **Applies?** _(pending — confirm; a salon's services and retail product sales may differ)_
+- **Applies?** Yes — **historically filed quarterly by the firm** with the Florida Department of Revenue (a full year of quarterly reports was delivered to the client in Oct 2025, and a POA + DR-841 records request was filed with FDOR the same month). Whether this continued into 2026 under the current tax-prep-only engagement is **not confirmed — verify current status** (this may predate the "tax prep only, no bookkeeping" scope described in §4 above). _(Source: Gmail, Sept–Oct 2025.)_
 
 ### Payroll
 - **Applies?** _(pending — confirm whether the salon has employees or booth renters)_

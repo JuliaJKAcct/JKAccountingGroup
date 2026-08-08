@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -101,12 +101,14 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 _(Double notes — live status lives in Double.)_
 - **Awaiting the owner to obtain a short signed letter from Synergy Mood LLC** (the property owner) acknowledging/authorizing Pro Title Agency LLC's operation as its sub-tenant at 1047 Buchanan St — the city confirmed 2026-07-30 that this letter (not a full lease) is what will satisfy App #40698. Once received, forward it to the city to close out the application.
-- **Address change pending:** on 2026-07-14 the client asked to move the address to **Coral Springs** (on the DFS license + Sunbiz). If it proceeds, a **BTR address update/transfer** will be needed later.
+- **Address change pending:** on 2026-07-14 the client asked to move the address to **Coral Springs** (on the DFS license + Sunbiz). If it proceeds, a **BTR address update/transfer** will be needed later. **Now in progress** — the DFS DICE MyProfile license/address update is underway as of Jul 2026, alongside the Managing Title Agent transition. _(Gmail, Jul 2026)_
 - **IRS filing-requirement mismatch:** the EIN letter (CP575) shows a **Form 1065 (partnership)** requirement, but the entity is a **disregarded single-member LLC** reported on Schedule C — reconcile with the IRS so they don't expect a partnership return.
+- **Payroll discrepancy:** Double's property lists Payroll as N/A, but Gmail shows an active Gusto payroll for this company (W-2 issued, direct-deposit changes, an overdue-balance episode) — reconcile which is current.
+- **Assigned-staff discrepancy:** Double's `Assigned Staff` property is Liudmyla Kazannik; this file's status line lists Lilian as Owner — reconcile which reflects current reality.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
-- [ ] Confirm recurring services (bookkeeping? sales tax? payroll?)
+- [x] Confirm recurring services — **bookkeeping (quarterly), sales tax N/A, income tax (Schedule C)** confirmed via Double client properties; payroll status disputed, see outstanding items above _(Double client properties, 2026-08-08)_
 - [ ] Close out the City of Hollywood BTR (resolve the tracking gap)
 - [ ] Where credentials live (Drive vault link)
 

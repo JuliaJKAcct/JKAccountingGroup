@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,6 +53,8 @@ indexed _(2026-08-04)_.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | **QuickBooks company name: "Corganix"** _(Lilian, 2026-08-06)_. Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
+| **Gusto** | Payroll | _(pending — Drive link)_ | Confirmed via a Gusto admin-access-removed notification naming this client, 2026-07-15 (source: Gmail). Fills the previously-pending §4 Payroll question — **Payroll: applies, via Gusto** |
+| **Insurance — General Liability + Workers' Compensation** | Business coverage | _(pending — Drive link)_ | Carrier **Atlantic Casualty Insurance Co.**, broker **JMG Insurance Corp**; the policy is subject to a **periodic GL premium audit** (a remote physical auditor) requiring a payroll/contractor list — reinforces the SOP's W-9/1099 tracking need (source: Gmail, Jun–Jul 2026) |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
 
 ### ⚠️ QuickBooks access is mid-change — don't touch users or the plan (2026-08-06)
@@ -93,7 +95,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Applies?** _(pending — confirm)_
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — via **Gusto** (source: Gmail, 2026-07-15 — see §3). Two related recurring Connecticut filings observed in Gmail correspondence, both apparently current/being kept up (no indication of delinquency): the **CT-941 Reconciliation of Withholding** (filed via CT DRS myconneCT — recurring reminders and submission confirmations through 2026) and a **CT Department of Labor Reemployment (unemployment) tax** account (recurring CTDOL correspondence). _(Source: Gmail, Apr–Jul 2026.)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — this is the core engagement.
@@ -120,7 +122,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   - **On the next contact with Turo — the escalation email or a further call — get the registered account name and the name / TIN on any 1099-K.** That corroborates the ownership answer and, more importantly, determines whether the 1099-K will match to the LLC's EIN — if it comes out under his SSN, the return position has to be handled deliberately whoever "owns" the account.
 
 ### Licenses & other filings
-- **Applies?** _(pending)_
+- **Applies?** A **Form 8822-B** (IRS address change) was prepared and sent for review in April 2026 (source: Gmail, Lilian → Julia, 2026-04-09), and a **Connecticut Secretary of State business filing / registered-agent update** was processed around the same time, per CT SOS correspondence (source: Gmail, Apr 2026). Whether either recurs annually is **not established** — treat as a one-time cleanup unless a pattern shows up in a future sweep.
 
 ## 5. Key facts & quirks
 
@@ -133,10 +135,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
 - Several open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex) tracked in the SOP's Open decisions log. *(Meals/gas policy is now resolved — see the log.)*
 - **Writing to this client:** messages go out in **Russian**, addressed formally ("Вы"), in simple wording — the owner reads Russian, not English. How to draft and shorten a client message at all is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md); only the language is specific to this client.
+- **Operates as a subcontractor to general contractors.** Correspondence with at least one GC-side client shows this business being set up as a **sub** under a master sub-agreement (providing a Certificate of Insurance + W-9), consistent with the spray-foam/insulation trade. Business location confirmed as **Darien, CT** (moved from a prior **Wilton, CT** address — city-level only, no street address recorded here). _(Source: Gmail, Jul 2026.)_
+- **A related company in Ukraine appears connected.** Correspondence with an accounting contact at a Ukrainian company sharing the "Ecoorganic" name (domain ecoorganic.ua) periodically shares financial statements and corporate-structure updates. The exact relationship (parent, affiliate, or unrelated same-name company) is **not established** — flag for Lilian/Julia if it becomes relevant to the US entity's own filings. _(Source: Gmail, Apr 2026.)_
+- **Some corroboration on the father/son roles (still not fully resolved).** A 2026-07-01 email thread with a related subcontractor-client relationship describes the son as the company's "current principal" and the father as the one who "initially filed the business registration" — consistent with, but not a full resolution of, the open question in §3 about whether the father remains an LLC owner of record. _(Source: Gmail, 2026-07-01.)_
 
 ## 6. History & open questions
 
 ### Log
+- 2026-08-08 — **Full-pass sweep (gap catch-up: Gmail history not yet fully swept).** Double client properties confirmed: **Income Tax = true, Tax Return Type = 1120-S, 1099 Preparation = true, Sales Tax = Monthly, Bookkeeping = Monthly, Annual Report = true, Organizer Status = N/A (BK client)**, Assigned Staff = Lilian — fills several previously-pending §4 fields (see there). Double activity log: the **"2025 Taxes" project status was set to In Progress on 2026-07-30 (Lilian), then reverted to Not Started on 2026-08-04 (Julia)** — noted here as an observed fact, not a judgment call; worth checking with Julia/Lilian which is current. Ping (bounded ≥2026-07-20, per this run's rules — Gmail was this client's gap): scoped searches on both owner contacts' Ping records returned **zero meetings**, consistent with the 2026-08-04 note that this client has no meetings indexed. **Full historical Gmail pass (in:inbox + in:sent, no date bound) — gap closed.** New findings: **Payroll via Gusto**; recurring **CT-941 Reconciliation of Withholding** and **CT DOL Reemployment tax** correspondence; a **General Liability + Workers' Compensation insurance program** (carrier/broker in §3) subject to periodic audit; a **Form 8822-B** and a **CT Secretary of State filing** around Apr 2026; the **subcontractor/GC relationship and Darien, CT location**; the **related Ukrainian "Ecoorganic" company**; and the **father/son role corroboration** — all in §3–§5. Google Drive: located the client's main folder (link in §7); did not open or copy any file contents (per the document-privacy rule). Repo check (SOPs/FOLLOW-UPS/BACKLOG): nothing beyond what already feeds the bookkeeping SOP.
 - 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is his father**, who **no longer has access to the phone tied to that account** _(that the father is §2's **Second owner** is our inference from there being two owner contacts — Lilian said only "his father"; unconfirmed)_. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan _(Lilian stated that outcome; the step order and its preconditions are sequenced by us — you cannot delete a primary admin — see the outstanding item)_. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian. **Also confirmed: the QuickBooks company is named "Corganix"** — that is where to look to see the two users. A **Double case note** was opened the same day so the team can follow this without the repo (note **485258**, §7), and **back-filled with the full contact detail** — both owners with emails and phones, their individual accounts, and the QuickBooks company name — because a Double note carries all the information the team needs while **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_; it is the mirror of this record and gets **updated in place**, never duplicated _(Lilian re-confirmed that rule 2026-08-06)_.
 - 2026-08-04 — **Turo documents chased (Lilian).** The firm had already asked for access to the client's **Turo account** earlier; the account has since been **closed**, so the earnings report and any 1099-K can't be downloaded. Lilian **called Turo support**: they confirmed they *can* produce the documents but will hand them **only to the account holder** — they refused to give them to Lilian, and refused even to email them to the address already on the account without the owner calling himself. She captured the working route through the phone tree (see §3) and **sent the owner a message in Russian** with the number, the key sequence, and what to ask for (**Earnings Report and 1099-K, 2025**). **Waiting on him to call.** The message as sent:
   > Добрый день, Артем! Как у Вас дела?
@@ -181,9 +187,9 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
 - [ ] Whether the Turo account produced income at all, and for which years _(whose account it is: answered 2026-08-04 — the company's, per Lilian)_
 - [ ] Whether a **1099-K was actually issued** for 2025
-- [ ] Sales tax / payroll applicability and who prepares each _(income tax answered 2026-08-04: 1120-S, prepared by the firm)_
-- [ ] Any business licenses / annual filings
-- [ ] Where credentials live (Drive vault link)
+- [x] Payroll — **answered 2026-08-08: applies, via Gusto** _(sales tax still pending; income tax answered 2026-08-04: 1120-S, prepared by the firm)_
+- [x] Business licenses / annual filings — **partial answer 2026-08-08: a Form 8822-B and a CT SOS filing were processed around Apr 2026 (§4); whether either recurs annually is unconfirmed**
+- [x] Where credentials live (Drive vault link) — **found, 2026-08-08** (§7)
 - [ ] **Whether the firm has its own QuickBooks access to this client independent of the owners' users** — the primary-admin handover in §3 shows the access picture was never written down. Worth settling while someone is in the account.
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
@@ -191,5 +197,5 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 - **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover", note **485258** (only the stable title prefix is recorded here; the live title carries a status suffix and a name, which belong in Double) on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Ecoorganic USA INC](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) _(found 2026-08-08 — a second, newer-looking "Ecoorganic USA LLC" folder also exists under a different parent; this one looked like the main working folder)_
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)
