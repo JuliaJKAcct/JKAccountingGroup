@@ -71,26 +71,54 @@ export function compare(baselineSweep, currentSweep) {
   const before = new Map(baselineSweep.results.map((r) => [r.path, r]))
   const findings = []
 
+  // `status: 0` means the probe itself failed (DNS, timeout, reset). It is NOT a
+  // verdict about the page, and it must never be treated as one — in either
+  // direction. A failed baseline probe cannot license "it was already broken",
+  // and a failed current probe cannot license "no change".
+  const probed = (r) => r.status !== 0
+  const ok = (r) => r.status >= 200 && r.status < 400
+
   for (const now of currentSweep.results) {
     const was = before.get(now.path)
     if (!was) {
       findings.push({ path: now.path, verdict: 'new', detail: `not in baseline (HTTP ${now.status})` })
       continue
     }
-    const wasOk = was.status >= 200 && was.status < 400
-    const nowOk = now.status >= 200 && now.status < 400
 
-    if (wasOk && !nowOk) {
+    if (!probed(now)) {
       findings.push({
         path: now.path,
-        verdict: 'REGRESSION',
-        detail: `HTTP ${was.status} → ${now.status}`,
+        verdict: 'UNVERIFIED',
+        detail: `probe failed now (${now.error ?? 'no response'}) — cannot confirm this page is intact`,
       })
-    } else if (!wasOk && nowOk) {
+      continue
+    }
+    if (!probed(was)) {
+      // No trustworthy baseline. If the page is fine now, say so quietly; if it
+      // is not, escalate rather than downgrade to "changed" on a technicality.
+      findings.push({
+        path: now.path,
+        verdict: ok(now) ? 'no-baseline' : 'REGRESSION',
+        detail: `baseline probe had failed (${was.error ?? 'no response'}); now HTTP ${now.status}`,
+      })
+      continue
+    }
+
+    if (ok(was) && !ok(now)) {
+      findings.push({ path: now.path, verdict: 'REGRESSION', detail: `HTTP ${was.status} → ${now.status}` })
+    } else if (!ok(was) && ok(now)) {
       findings.push({ path: now.path, verdict: 'fixed', detail: `HTTP ${was.status} → ${now.status}` })
     } else if (was.status !== now.status) {
       findings.push({ path: now.path, verdict: 'changed', detail: `HTTP ${was.status} → ${now.status}` })
-    } else if (was.bytes && now.bytes && Math.abs(now.bytes - was.bytes) / was.bytes > 0.25) {
+    } else if (was.bytes > 0 && (now.bytes ?? 0) === 0) {
+      // A 200 with an empty body is the worst kind of break: the status says
+      // healthy and the page is gone. Never let this pass as "no change".
+      findings.push({
+        path: now.path,
+        verdict: 'REGRESSION',
+        detail: `HTTP ${now.status} but the body is now EMPTY (was ${was.bytes} bytes)`,
+      })
+    } else if (was.bytes > 0 && Math.abs(now.bytes - was.bytes) / was.bytes > 0.25) {
       // Same status, very different size — the page still answers but its content
       // moved a lot. Worth a human look rather than an automatic pass.
       findings.push({
@@ -101,6 +129,8 @@ export function compare(baselineSweep, currentSweep) {
     }
   }
 
-  const regressions = findings.filter((f) => f.verdict === 'REGRESSION')
-  return { ok: regressions.length === 0, regressions, findings }
+  // UNVERIFIED is not a pass. "We could not check" and "it is fine" are different
+  // answers, and only one of them justifies walking away from a live write.
+  const blocking = findings.filter((f) => f.verdict === 'REGRESSION' || f.verdict === 'UNVERIFIED')
+  return { ok: blocking.length === 0, regressions: blocking, findings }
 }

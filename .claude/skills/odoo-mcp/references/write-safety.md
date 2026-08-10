@@ -123,6 +123,11 @@ therefore, always: **no page may get worse than its recorded baseline**, and the
 change was meant to fix must get better. Record a fresh baseline (`odoo.mjs baseline`) rather
 than trusting any status written down here.
 
+**And "could not check" is not "fine".** If a probe itself fails — timeout, reset, no response —
+the tool reports `UNVERIFIED` and treats the run as not-clean, rather than letting a missing
+answer read as a passing one. Same for a page that returns 200 with an empty body: the status
+says healthy and the page is gone.
+
 ## Layer 4 — Hard limits inside the tool
 
 **All four are now in the code of `tools/odoo-api/lib/safety.mjs`** and were verified by

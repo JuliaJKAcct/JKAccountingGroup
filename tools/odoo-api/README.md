@@ -42,7 +42,10 @@ node tools/odoo-api/odoo.mjs write --model website.page --id 21 \
 ```
 
 A write **cannot** run without a successful snapshot first. That is not a policy, it is the
-control flow: the snapshot function throws, and the write never happens.
+control flow: the snapshot function throws, and the write never happens. **A `restore` is a write
+too** — it takes its own snapshot of the current state before rolling anything back, runs the same
+canary, and requires the same `--profile` and `--reason`. Undoing destroys the state you are
+undoing *from*, and that state may be the one you want back.
 
 ---
 
@@ -75,7 +78,7 @@ points at it*.
 ```bash
 node tools/odoo-api/odoo.mjs snapshots                 # every version, newest first
 node tools/odoo-api/odoo.mjs diff <older> <newer>      # exactly which records and fields moved
-node tools/odoo-api/odoo.mjs restore <snap> <model> <id> [--execute]
+node tools/odoo-api/odoo.mjs restore <snap> <model> <id> --profile <p> --reason "..." [--execute]
 node tools/odoo-api/odoo.mjs history                   # the append-only ledger
 ```
 

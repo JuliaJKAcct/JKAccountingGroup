@@ -65,6 +65,12 @@ const COMMITTABLE = new Set([
   'appointment.slot',
   'product.template',
   'product.product',
+  // Pure technical cross-reference rows — (module, name, model, res_id). No client
+  // content of any kind. Listed explicitly because it is a *dependent* of
+  // `ir.ui.view`, and bucketFor() sends the whole snapshot private if any model
+  // involved is missing here. Website views are exactly what we most need
+  // versioned in git, so this is deliberate rather than an oversight.
+  'ir.model.data',
 ])
 
 /** True when a snapshot of this model may live in git. */

@@ -29,6 +29,26 @@ function flag(name, fallback = undefined) {
 }
 const has = (name) => args.includes(`--${name}`)
 
+/**
+ * A flag that must carry a real value.
+ *
+ * `flag()` returns `true` for a valueless flag, and `Number(true)` is 1 — so a
+ * mistyped `--id` (value dropped) would silently target record 1. Every flag
+ * whose value matters goes through this instead.
+ */
+function required(name, { as = 'string' } = {}) {
+  const raw = flag(name)
+  if (raw === undefined || raw === true) {
+    throw new Error(`--${name} requires a value (got ${raw === true ? 'a bare flag' : 'nothing'})`)
+  }
+  if (as === 'number') {
+    const n = Number(raw)
+    if (!Number.isInteger(n)) throw new Error(`--${name} must be an integer, got "${raw}"`)
+    return n
+  }
+  return raw
+}
+
 const out = (...a) => console.log(...a)
 const json = (v) => out(JSON.stringify(v, null, 2))
 
@@ -144,17 +164,14 @@ async function cmdRead() {
 // Dry run by default. The order is fixed and not negotiable:
 //   safety gate → snapshot → canary before → [execute] → canary after → ledger
 async function cmdWrite() {
-  const model = flag('model')
-  const id = Number(flag('id'))
-  const profile = flag('profile', 'none')
-  const reason = flag('reason')
+  const model = required('model')
+  const id = required('id', { as: 'number' })
+  const profile = required('profile')
+  const reason = required('reason')
   const execute = has('execute')
-  const values = JSON.parse(flag('set', '{}'))
+  const values = JSON.parse(required('set'))
 
-  if (!model || model === true) throw new Error('write requires --model <name>')
-  if (!Number.isInteger(id)) throw new Error('write requires --id <number>')
   if (!Object.keys(values).length) throw new Error('write requires --set \'{"field": value}\'')
-  if (!reason || reason === true) throw new Error('write requires --reason "why" (it goes in the ledger)')
 
   // Layer 4 — the gate. Throws loudly rather than returning a value to ignore.
   assertWriteAllowed({ model, ids: [id], operation: 'write', profile })
@@ -164,7 +181,7 @@ async function cmdWrite() {
   if (!records.length) throw new Error(`${model}:${id} does not exist — nothing snapshotted, nothing written.`)
   const before = records[0]
   out(`Snapshot → ${path.relative(process.cwd(), dir)}`)
-  if (!isCommittable(model)) out('  (private bucket — this snapshot is gitignored and must not be committed)')
+  if (dir.includes('snapshots-private')) out('  (private bucket — gitignored, must not be committed)')
 
   // Layer 3, verification 1 — show current → new before anything happens.
   out(`\n${execute ? 'WRITING' : 'DRY RUN — nothing will be changed'}  ${model}:${id}`)
@@ -178,7 +195,7 @@ async function cmdWrite() {
 
   if (!execute) {
     out('\nNothing was written. Re-run with --execute to apply.')
-    out(`Undo would be: node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --execute`)
+    out(`Undo would be: node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --profile ${profile} --reason "undo" --execute`)
     return
   }
 
@@ -193,7 +210,7 @@ async function cmdWrite() {
   for (const f of verdict.findings) out(`  ${f.verdict.padEnd(11)} ${f.path.padEnd(22)} ${f.detail}`)
   if (!verdict.ok) {
     out('\n⚠️  REGRESSION DETECTED. Undo with:')
-    out(`    node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --execute`)
+    out(`    node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --profile ${profile} --reason "undo" --execute`)
     process.exitCode = 1
   }
 
@@ -207,7 +224,7 @@ async function cmdWrite() {
     after: values,
     snapshot: path.basename(dir),
     canary: verdict.ok ? 'clean' : 'REGRESSION',
-    undo: `node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --execute`,
+    undo: `node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --profile ${profile} --reason "undo" --execute`,
   })
 }
 
@@ -216,9 +233,16 @@ async function cmdRestore() {
   const [, snapName, model, rawId] = args
   const id = Number(rawId)
   const execute = has('execute')
-  if (!snapName || !model || !Number.isInteger(id)) {
-    throw new Error('usage: restore <snapshot-name> <model> <id> [--execute]')
+  if (!snapName || !model || !rawId || !Number.isInteger(id)) {
+    throw new Error(
+      'usage: restore <snapshot-name> <model> <id> --profile <p> --reason "why" [--execute]',
+    )
   }
+  // No default profile. `write` makes the caller declare one; an undo that
+  // silently declared "website" for itself would satisfy Layer 4's allow-list
+  // without anyone choosing it.
+  const profile = required('profile')
+  const reason = required('reason')
   const all = await store.listSnapshots()
   const snap = all.find((s) => s.name === snapName)
   if (!snap) throw new Error(`No snapshot named ${snapName}. Run \`snapshots\` to list them.`)
@@ -261,16 +285,46 @@ async function cmdRestore() {
     return
   }
 
-  assertWriteAllowed({ model, ids: [id], operation: 'write', profile: flag('profile', 'website') })
+  // A restore is a write like any other, and gets the identical treatment. It is
+  // tempting to exempt it — "we are only putting things back" — but the record's
+  // CURRENT state is what an undo destroys, and the state being restored may
+  // itself be the mistake. So: same gate, same snapshot, same canary.
+  assertWriteAllowed({ model, ids: [id], operation: 'write', profile })
+
+  const undoOfUndo = await store.snapshot({
+    model,
+    ids: [id],
+    reason: `pre-restore state, before rolling back to ${snapName}`,
+    label: `restore-${model}-${id}`,
+  })
+  out(`\nSnapshot of the CURRENT state → ${path.relative(process.cwd(), undoOfUndo.dir)}`)
+
+  const canaryBefore = await canary.sweep()
   await call(model, 'write', { ids: [id], vals: restorable })
-  out('\n✓ Restored.')
+  out('✓ Restored.')
+
+  const verdict = canary.compare(canaryBefore, await canary.sweep())
+  out('\nCanary check:')
+  if (!verdict.findings.length) out('  no change across the canary set')
+  for (const f of verdict.findings) out(`  ${f.verdict.padEnd(13)} ${f.path.padEnd(22)} ${f.detail}`)
+  if (!verdict.ok) {
+    out('\n⚠️  REGRESSION DETECTED — the restore made something worse. Roll it back with:')
+    out(`    node tools/odoo-api/odoo.mjs restore ${path.basename(undoOfUndo.dir)} ${model} ${id} --profile ${profile} --reason "undo the undo" --execute`)
+    process.exitCode = 1
+  }
+
   await store.recordHistory({
     op: 'restore',
     model,
     ids: [id],
-    reason: `restore to snapshot ${snapName}`,
-    snapshot: snapName,
+    reason,
+    profile,
+    before: Object.fromEntries(Object.keys(restorable).map((f) => [f, live[f]])),
     after: restorable,
+    snapshot: path.basename(undoOfUndo.dir),
+    restoredFrom: snapName,
+    canary: verdict.ok ? 'clean' : 'REGRESSION',
+    undo: `node tools/odoo-api/odoo.mjs restore ${path.basename(undoOfUndo.dir)} ${model} ${id} --profile ${profile} --reason "undo the undo" --execute`,
   })
 }
 
@@ -337,7 +391,7 @@ function cmdHelp() {
   baseline [--reason ...]   Full website snapshot + canary baseline. Run before a working session
   read --model <m> [--domain '[]'] [--fields '[]'] [--limit 50]
   write --model <m> --id <n> --set '{"f": v}' --profile <p> --reason "..." [--execute]
-  restore <snapshot> <model> <id> [--execute]
+  restore <snapshot> <model> <id> --profile <p> --reason "..." [--execute]
   canary                    Re-sweep the canary pages and compare against the baseline
   snapshots                 List every snapshot, newest first
   diff <snapshot-a> <snapshot-b>
@@ -345,6 +399,7 @@ function cmdHelp() {
 
 Safety profiles: ${Object.keys(PROFILES).join(', ')}
 Writes are DRY RUN unless --execute is given, and always refuse without a snapshot.
+A restore is a write: same gate, same snapshot, same canary — no exemption for "putting it back".
 Deny-listed for writes, always: res.users, res.groups, ir.model.access, ir.rule.
 Deletion of account.move / account.move.line / account.payment is refused outright.`)
 }
@@ -364,7 +419,9 @@ const COMMANDS = {
 }
 
 try {
-  const run = COMMANDS[command]
+  // hasOwn, not a bare lookup: `odoo.mjs toString` would otherwise resolve an
+  // inherited Object.prototype method, call it, and exit 0 having done nothing.
+  const run = Object.hasOwn(COMMANDS, command) ? COMMANDS[command] : undefined
   if (!run) {
     out(`Unknown command "${command}".\n`)
     cmdHelp()

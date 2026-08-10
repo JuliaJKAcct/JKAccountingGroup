@@ -28,8 +28,17 @@ export function stamp(date = new Date()) {
   return date.toISOString().replace(/:/g, '-').replace(/\..*Z$/, 'Z')
 }
 
-function bucketFor(models) {
-  return models.every((m) => isCommittable(m)) ? PUBLIC_SNAPSHOTS : PRIVATE_SNAPSHOTS
+/**
+ * Which bucket a snapshot goes to.
+ *
+ * The target model is not enough: a snapshot also writes every dependent record,
+ * so a committable target can drag a non-committable dependent into git with it.
+ * `ir.ui.view` does exactly that today — its dependents include `ir.model.data`.
+ * The whole set has to clear the bar, not just the record being changed.
+ */
+function bucketFor(model) {
+  const involved = [model, ...(DEPENDENTS[model] ?? []).map((d) => d.model)]
+  return involved.every((m) => isCommittable(m)) ? PUBLIC_SNAPSHOTS : PRIVATE_SNAPSHOTS
 }
 
 /**
@@ -78,12 +87,11 @@ export async function fetchDependents(model, id) {
   const found = {}
   for (const spec of specs) {
     const domain = [[spec.field, '=', id], ...(spec.extraDomain ?? [])]
-    try {
-      const rows = await searchRead(spec.model, domain, [])
-      if (rows.length) found[spec.model] = { via: spec.field, note: spec.note, records: rows }
-    } catch (err) {
-      found[spec.model] = { via: spec.field, error: err.message }
-    }
+    // No catch. A dependent we could not read is a snapshot that did not capture
+    // the blast radius — and "no snapshot, no write" has to mean that, not "a
+    // file exists". Let it throw so the write never happens.
+    const rows = await searchRead(spec.model, domain, [])
+    if (rows.length) found[spec.model] = { via: spec.field, note: spec.note, records: rows }
   }
   return found
 }
@@ -95,7 +103,7 @@ export async function fetchDependents(model, id) {
  * that is the mechanical form of "no snapshot, no write".
  */
 export async function snapshot({ model, ids, reason, label = 'change' }) {
-  const dir = path.join(bucketFor([model]), `${stamp()}__${label}`)
+  const dir = path.join(bucketFor(model), `${stamp()}__${label}`)
   await mkdir(path.join(dir, model), { recursive: true })
 
   const records = ids.length ? await read(model, ids, []) : []
@@ -120,7 +128,7 @@ export async function snapshot({ model, ids, reason, label = 'change' }) {
     model,
     ids,
     reason,
-    committable: isCommittable(model),
+    committable: bucketFor(model) === PUBLIC_SNAPSHOTS,
     recordCount: records.length,
     dependentModels: Object.keys(dependents[ids[0]] ?? {}),
     restoreWith: `node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} <id>`,
