@@ -250,9 +250,9 @@ in that folder.
   day for the whole firm. **Then answer what was actually asked, which is usually NOT "restart in
   `odoo-api`":** a website text/SEO/copy fix belongs in **Odoo's own web editor, by hand — zero
   calls, no limit**; a small structural change can go through the connector once its cost is
-  stated; **`odoo-api` is for heavy READS**; and a bulk or scripted **write is not available from
-  any environment yet** (`tools/odoo-api/` must exist first and does not). Sending someone to
-  restart a session for a write ends in a second refusal. **Never reply
+  stated; **`odoo-api` is for heavy READS**; and a scripted **write goes through
+  [`tools/odoo-api/`](./tools/odoo-api/)** (built 2026-08-10 — dry-run unless `--execute`, and it
+  refuses without a snapshot), which needs that environment like any direct-API work. **Never reply
   with a bare "I can't do that", and never silently fall back to the connector for work that needs
   the direct route.** _(Lilian's standing instruction, Aug 2026, with a specific reason: **Julia
   is often the one asking and does not follow this machinery** — she must never be left wondering

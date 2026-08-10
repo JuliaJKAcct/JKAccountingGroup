@@ -52,11 +52,11 @@ calls used today, the daily limit and what remains.
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
 most of what exists there, and set up this MCP connection. Route integration questions to him.
 
-**Aug 2026: the direct connection exists and reads work; writes are still gated on the tool.**
+**Aug 2026: the direct connection is proven, and writes go through the tool.**
 Lilian asked Andres why the MCP connector rather than Odoo's own API, he confirmed there is no
 problem going direct, and on **2026-08-10 he showed her how to obtain a key.** The `odoo-api`
-environment was created the same day and a session there reports the connection working — only
-the one-character control call is outstanding. Odoo's documentation disagrees — it states the external API is
+environment was created the same day; the test read **and its one-character control** both ran
+there and passed, and [`tools/odoo-api/`](../../../tools/odoo-api/) was built the same day (§7). Odoo's documentation disagrees — it states the external API is
 available only on *Custom* plans, "not available on One App Free or Standard", and the firm is
 on **Standard** ($31.10/user/month, 1 user; Custom is $61.00). **But the notice reads as a
 commercial condition, has been identical since Odoo 16, and the Pantalytics connector is
@@ -105,19 +105,21 @@ reasoning and the setup are in
 [`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md).
 
 > ⚠️ **The key is on Julia's user — the administrator — and is reported non-expiring** (Lilian,
-> 2026-08-10; persistent keys are a Settings-user option and hers is one, but no expiry date was
-> ever captured, so treat expiry as unlikely rather than impossible). It can do anything on this database, indefinitely, until someone revokes
+> 2026-08-10; **expiry confirmed absent — `expiration_date: false` read back from
+> `res.users.apikeys`, on this key and on the three others the firm holds**). It can do anything
+> on this database, indefinitely, until someone revokes
 > it (from Julia's *My Preferences → Account Security*; there is no other way to withdraw it).
 > The low-privilege user of `direct-api-setup.md` §3 Step 1 was never created, so
 > **[`write-safety.md`](./references/write-safety.md) Layer 1 is waived** — read that file before
 > any write over this connection, not just website ones, and read its Layer 1 box: with Layer 1
-> gone and Layers 2 and 4 still unbuilt code, what remains is convention plus the connector's
-> 50-call ceiling — which the direct route removes.
+> gone, Layers 2–6 are the entire defence.
 >
-> **So: READS over the direct API are unblocked. WRITES are not.**
-> [`direct-api-setup.md` §5](./references/direct-api-setup.md) requires `tools/odoo-api/` —
-> dry-run by default, the model allow-list enforced in code, snapshot-before-write, the
-> post-write canary — to exist **before the first direct-API write**. It does not exist yet.
+> **So: reads and writes are both unblocked — but every write goes through
+> [`tools/odoo-api/`](../../../tools/odoo-api/)** (built 2026-08-10, §7): dry-run unless
+> `--execute`, snapshot-before-write with dependents, deny-list and profile allow-list that
+> `--execute` cannot override, volume brake, before/after canary, append-only ledger. **A raw
+> `curl` write bypasses all of it**, and the 50-call ceiling that used to backstop mistakes does
+> not exist on this route.
 > Being in `odoo-api` is not permission to start writing to the live public website.
 
 #### The trigger is the request, not the failure
@@ -143,10 +145,11 @@ from Lilian (2026-08-10) with a specific reason: **Julia is often the one asking
 follow this machinery.** She must never be left wondering why a website change cannot be made.
 Deliver it in the language of the conversation.
 
-⚠️ **But route it correctly, or she gets refused twice.** `odoo-api` is **not** the answer to a
-write request — direct-API writes are gated on `tools/odoo-api/`, which does not exist. Sending
-someone to restart a session there for a website change wastes the restart and ends in a second
-refusal. Match the answer to what was actually asked:
+⚠️ **But route it correctly, or she gets refused twice.** `odoo-api` is rarely the answer to a
+website *content* request: a text/SEO/copy fix belongs in Odoo's own web editor, by hand, at zero
+cost. Direct-API writes do work — through [`tools/odoo-api/`](../../../tools/odoo-api/) (§7),
+which needs that environment — but sending someone to restart a session for a change they could
+make faster by hand wastes the restart. Match the answer to what was actually asked:
 
 | What was asked | The right answer today |
 |---|---|
@@ -187,13 +190,11 @@ same symptom comes from a local CLI session, a mistyped variable name, and `odoo
 archived. Never ask for the key to be pasted into the chat.
 
 **What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
-A revoked key passes this check and then fails at the call with `Invalid apikey`. *Expiry should
-be a **low**-probability hypothesis for this key, not a discarded one: it is reported as
-persistent (only a Settings user can mint such a key, and Julia's is one), but no expiry date was
-ever captured and the control call has not been run. If `Invalid apikey` ever appears, check the
-key's row in Julia's Account Security screen before assuming revocation — and record the date
-there in [`direct-api-setup.md`](./references/direct-api-setup.md)'s status header while you have
-it open.*
+A revoked key passes this check and then fails at the call with `Invalid apikey`. *Expiry can be
+**discarded** for this key: `expiration_date: false` was read back from `res.users.apikeys` on
+2026-08-10, for this key and the three others the firm holds. So `Invalid apikey` means revoked or
+mistyped — check the key's row in Julia's Account Security screen. `odoo.mjs check` distinguishes
+the failure modes for you.*
 
 **Why this check earns its place, and how to read a 401 if you skipped it.** Verified against
 the live instance 2026-08-10 — the two failures return the **same HTTP 401** and the **same
@@ -321,8 +322,9 @@ or `<p>` tags for line breaks rather than `\n`.
 > API. The rules below are the accounting-specific subset and stay in force.**
 >
 > ⚠️ **"Six" is the design, not the count in force.** Layer 1 is **waived** — the key is on
-> Julia's administrator user — and Layer 2's snapshot rule and Layer 4 are **unbuilt code**. Read
-> that file's Layer 1 box before assuming anything is scoped or mechanically enforced.
+> Julia's administrator user, so nothing is scoped. Layers 2 and 4 *are* mechanically enforced,
+> but only for writes made through [`tools/odoo-api/`](../../../tools/odoo-api/); a raw `curl`
+> bypasses them. Read that file's Layer 1 box before assuming anything is protected.
 
 - **Never delete accounting records** (`account.move`, `account.move.line`,
   `account.payment`) without explicit per-operation confirmation. Posted entries generally

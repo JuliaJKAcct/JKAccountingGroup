@@ -93,8 +93,9 @@ documents external API access as a *Custom*-plan feature and the firm is on *Sta
 that notice reads as a commercial condition and the existing connector already makes external
 calls — and **as of Aug 2026 the direct connection is built and reading**: the key lives in a
 dedicated **`odoo-api`** cloud environment, so a session started anywhere else has the connector
-and its 50-call cap. **Writes remain blocked** until the safety tool exists. The pricing question,
-the outstanding control call, and the full setup are in
+and its 50-call cap. **Writes go through [`tools/odoo-api/`](./tools/odoo-api/)** — dry-run by
+default, snapshot-before-write, deny-list in code, versioned snapshots for audit. The pricing
+question and the full setup are in
 [`references/direct-api-setup.md`](./.claude/skills/odoo-mcp/references/direct-api-setup.md);
 the six rules that govern any Odoo write — whichever route — are in
 [`references/write-safety.md`](./.claude/skills/odoo-mcp/references/write-safety.md). Tracked
