@@ -52,17 +52,24 @@ calls used today, the daily limit and what remains.
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
 most of what exists there, and set up this MCP connection. Route integration questions to him.
 
-**Aug 2026: going direct is agreed; one 5-minute test still has to confirm it is permitted.**
-Lilian asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there
-is no problem going direct. Odoo's documentation disagrees — it states the external API is
+**Aug 2026: going direct is agreed, a key exists, and one test read still has to confirm it is
+permitted.** Lilian asked Andres why the MCP connector rather than Odoo's own API, he confirmed
+there is no problem going direct, and on **2026-08-10 he showed her how to obtain a key — she
+has it.** Odoo's documentation disagrees — it states the external API is
 available only on *Custom* plans, "not available on One App Free or Standard", and the firm is
 on **Standard** ($31.10/user/month, 1 user; Custom is $61.00). **But the notice reads as a
 commercial condition, has been identical since Odoo 16, and the Pantalytics connector is
 demonstrably making external calls against this database today** — *if* that connector speaks
 the external API rather than logging in as a web session, which is the open question. So the
-restriction may well not be enforced at the server. **Settle it with the two checks in
-[`references/direct-api-setup.md` §0](./references/direct-api-setup.md) before spending
-anything** — open `/doc` in a browser (free, no credential), then a throwaway key if needed.
+restriction may well not be enforced at the server.
+
+> ⚠️ **A key already exists — do not mint another one, and do not follow any instruction to
+> revoke.** The remaining test is **[`direct-api-setup.md` §0, Step B′](./references/direct-api-setup.md)**:
+> one read plus a control, creating nothing and destroying nothing. The older *throwaway-key*
+> procedure in that section (Step A / Step B) is kept only for re-minting the key from scratch,
+> and **its last instruction is to revoke** — run it against the real key and the key is gone,
+> since Odoo never shows a key twice.
+
 Note what a pass does and does not prove: that the server does not block it **today**, not that
 the subscription entitles the firm to it — and Odoo Online auto-upgrades. That file carries the full step-by-step, the vendor pricing on both sides, and records
 that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
@@ -74,6 +81,56 @@ write follows **[`references/write-safety.md`](./references/write-safety.md)** �
 layers agreed with Lilian. Read it before changing anything, and note *why* it matters more
 after the switch: the 50-call ceiling is currently acting as a handbrake on mistakes, and a
 direct connection removes it.
+
+### The direct-API key lives in a separate environment — check it before the first call
+
+The API key is **not** in the repo and **not** in every session. It belongs in a **dedicated
+Claude Code cloud environment** (`odoo-api`), picked from the cloud icon above the message box at
+claude.ai/code. *(As of 2026-08-10 that environment is being created — until Lilian confirms it,
+expect the key to be absent everywhere, and check `FOLLOW-UPS.md` row 21 for the current state
+rather than assuming.)* The everyday `Default` environment deliberately
+does **not** carry it, so an unattended Routine at 3 a.m. never holds an administrator key over
+the live database (Lilian, Aug 2026 — the reasoning and the setup are in
+[`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md)).
+
+**So before the first direct-API call, confirm the key is present. It costs nothing — no MCP
+call, no Odoo call:**
+
+```bash
+[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — see below"
+```
+
+**If it is missing, the likeliest cause by far is the wrong environment** — the session is in
+`Default`, and an environment is chosen only when a session *starts*, so it cannot be switched
+mid-session: it needs a new session in `odoo-api`. Say that first. But **say it as the leading
+hypothesis, not as the only one** — the same symptom comes from a local CLI session (which
+never reads a cloud environment at all), from a mistyped variable name, and from `odoo-api` not
+having been created yet. Never ask for the key to be pasted into the chat.
+
+**What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
+An expired key — Odoo caps a non-Settings user's key at 90 days
+([`direct-api-setup.md` §3 Step 2](./references/direct-api-setup.md)) — passes this check and
+then fails at the call with `Invalid apikey`. The key's expiry date is not yet recorded; the
+status header of that same file tracks it.
+
+**Why this check earns its place, and how to read a 401 if you skipped it.** Verified against
+the live instance 2026-08-10 — the two failures return the **same HTTP 401** and the **same
+`name`**, and are told apart only by `message`:
+
+| What went wrong | `name` | `message` |
+|---|---|---|
+| **Variable unset** — empty bearer sent | `werkzeug.exceptions.Unauthorized` | `User not authenticated, use an API Key with a Bearer Authorization header.` |
+| **Key wrong, expired or revoked** | `werkzeug.exceptions.Unauthorized` | `Invalid apikey` |
+
+So **always capture the response body, not just the status code.** On status alone the wrong
+environment is indistinguishable from a broken credential, and the session burns its time
+debugging a key that is perfectly fine. `Invalid apikey` is the one that means the key itself is
+the problem.
+
+**The MCP connector is unaffected** — its traffic goes through Anthropic's servers rather than
+the session's network, so it works from **any** environment. Only the direct API needs
+`odoo-api`. A session in `Default` has not lost Odoo; it has lost the route that has no
+50-call ceiling.
 
 ### What counts as a call
 
@@ -286,6 +343,8 @@ Before starting:
 - [ ] Confirm how many calls have already been used today
 - [ ] Write out the planned call sequence and count it
 - [ ] Confirm the plan fits the remaining budget
+- [ ] **Direct-API work only:** `$ODOO_API_KEY` is set — if not, the likeliest cause is the
+      wrong environment (restart the session in `odoo-api`), but read §1 before concluding that
 
 While working:
 - [ ] Batch every multi-record write
