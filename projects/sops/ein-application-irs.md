@@ -1,6 +1,6 @@
 # SOP: Federal EIN Application (IRS Form SS-4) — after the entity is active on Sunbiz
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-27
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-10
 
 The complete, self-contained procedure for getting a **federal EIN** (Employer
 Identification Number) from the IRS for a company that is **already formed and
@@ -12,6 +12,13 @@ company-formation flow — **Part 1**, the Sunbiz filing itself, is
 > have its exact legal name and formation date. Everything to obtain the EIN
 > lives here — the go/no-go decision, both application paths, the answers people
 > get wrong, and the after-steps.
+
+> ⚠️ **The two paths are not the same form.** The online EIN Assistant and the
+> paper Form SS-4 ask **different questions** — the online tool asks excise
+> screening questions the paper form doesn't have, and the paper form asks for
+> things the online tool never requests (a full start date, the closing month, the
+> employee counts, a signature). **Don't fill one from the other's answers.** The
+> side-by-side is [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions).
 
 > **Where client data goes:** the client's real legal name, address, the
 > responsible party's SSN/ITIN, the filled-in SS-4, and the assigned EIN are
@@ -78,8 +85,9 @@ so you do not want to be hunting for an answer mid-flow.
    **county** and state.
 8. **Reason for applying** — for a new FL company this is "Started a new
    business."
-9. **Expected employees in the next 12 months** (0 is a valid answer) and, if
-   any, the **first date wages will be paid**.
+9. **Expected employees in the next 12 months** — `-0-` is a valid and often the
+   *correct* answer (§4E); if any, the **first date wages will be paid**. Remember
+   an **S-corp owner-employee counts as 1**.
 10. **Principal activity / line of business** (what the company actually does).
 11. **Closing month of the accounting year** — almost always **December**.
 12. **Is the firm filing on the client's behalf?** → if yes, you'll name the
@@ -105,6 +113,52 @@ else.
 > **Form SS-4 by fax** with **"Foreign"** on line 7b (see §3). Getting an ITIN
 > (Form W-7) is a separate, slower track and is **not** a prerequisite for the
 > EIN.
+
+---
+
+## 1.5. The online application and the paper SS-4 ask DIFFERENT questions
+
+Both paths get you the same EIN, but they are **not the same interview**. People
+get caught out by assuming the paper form is just "the online tool printed" — it
+isn't. Fill each one from its own source.
+
+> **How to read this table.** The **paper column is authoritative** — it's the
+> actual Form SS-4 (Rev. 12-2025) and its instructions, line by line. The
+> **online column** is our screen-by-screen record of the EIN Assistant as walked
+> in **July 2026** (§2). The IRS changes that tool without notice, so where the
+> table says a question *isn't asked online*, read it as **"not present in the
+> July-2026 walkthrough"** — confirm on screen, and update §2 when it moves.
+
+| What's asked | 🖥️ Online EIN Assistant | 📄 Paper Form SS-4 |
+|---|---|---|
+| **Responsible party's ID** | **SSN or ITIN is mandatory** — a hard stop with no alternative. This is what makes the whole path unusable for a foreign owner | **Line 7b accepts `Foreign` or `N/A`** — an entry is required, but it doesn't have to be a number |
+| **Business start date** | **Month + Year only** | **Line 11 — month, DAY, and year** (the day is not asked online) |
+| **Closing month of accounting year** | Not asked | **Line 12 — required** (usually `December`) |
+| **Employees** | A single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date). See §4E |
+| **Excise / special-activity screening** | **Four yes/no questions**: ≥55,000 lb highway vehicle · gambling/wagering · Form 720 · alcohol, tobacco or firearms *(they sit in a block of five with the employee question above)* | **None of these exist on the form.** Don't go looking for them |
+| **Business activity** | A **category dropdown + a scripted follow-up** per category (the matrix in §2) | **Line 16** — a checkbox from a short list, **plus Line 17**, free text describing the actual line of merchandise or services |
+| **Prior EIN** | Not asked | **Line 18 — required**, plus the previous EIN if there was one |
+| **"Care of" / executor / trustee** | Not asked | **Line 3** |
+| **State/country of incorporation** | Captured as the state where the articles are filed | **Line 9b** — state **or foreign country** |
+| **LLC organized in the US?** | Implicit in the state question | **Line 8c** — an explicit yes/no (added in the Dec-2025 revision) |
+| **The firm acting for the client** | A **radio button**: *"I am a third party applying for an EIN on behalf of this LLC"* | A full **Third-Party Designee block** (name, address, phone, fax) — **and the client must sign** the form. See §4D |
+| **Signature** | None — submitting is the attestation | **Required**: name, title, signature, date, applicant's phone, applicant's fax |
+| **Fixing a mistake** | **Impossible after submit** — you must start a whole new application | Just correct the paper before you send it |
+| **How the EIN arrives** | **On screen immediately** + downloadable PDF | **Fax-back in ~4 business days**, or mail in ~4–5 weeks |
+
+### The three that actually bite
+
+1. **A foreign responsible party kills the online path — full stop.** There is no
+   "Foreign" option in the tool; the SSN/ITIN field simply won't accept anything
+   else. Decide this in §1 **before** anyone opens the assistant, or you'll lose
+   the session finding out.
+2. **The paper form needs answers the online tool never asked for.** If you did an
+   online application for a sister company and are now doing a paper one, you are
+   **missing** the exact start day, the closing month, the employee counts, the
+   first wage date, and Line 17. Collect them from §0 first.
+3. **The paper form has no excise screening, and the online tool has no signature.**
+   Neither is an oversight — they're just different instruments. Don't try to
+   reconcile them.
 
 ---
 
@@ -237,7 +291,12 @@ plus **Print Page**.
 ## 3. Path B — Form SS-4 by fax / mail / phone (no SSN or ITIN)
 
 Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
-**Form SS-4** (Rev. December 2025 or later):
+**Form SS-4** (Rev. December 2025 or later).
+
+> **Before you start:** this form asks for things the online tool never does — a
+> full start **day**, the closing month, three employee counts, a first wage date,
+> and a signature. Read [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions)
+> so you collect them once instead of twice.
 
 - Form: <https://www.irs.gov/pub/irs-pdf/fss4.pdf>
 - Instructions: <https://www.irs.gov/instructions/iss4>
@@ -248,23 +307,26 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 |---|---|
 | **1** | Legal name of the entity — **exactly** as on Sunbiz |
 | **2** | Trade name / DBA (only if operating under a fictitious name) |
-| **4a/4b** | Mailing address |
-| **5a/5b** | Street address (if different from mailing) |
-| **6** | **County and state** where the principal business is located |
-| **7a** | Responsible party's **name** |
-| **7b** | **"Foreign"** — when the responsible party has no SSN/ITIN and isn't required to have one *(some filers write "N/A"; "Foreign" is the accepted convention for a foreign responsible party)* |
-| **8a–8c** | Is it an LLC? number of members? organized in the US? |
+| **3** | Executor / administrator / trustee / "care of" name — only if someone else receives the entity's tax mail. If you fill it, **lines 4a–4b become that person's address** |
+| **4a/4b** | Mailing address. If it's outside the US, give city, province/state, postal code and the **country spelled out in full** — the IRS says *don't abbreviate the country name* |
+| **5a/5b** | Physical street address — **only if different from 4a/4b**. ⚠️ **No P.O. box allowed here.** So if line 4a *is* a P.O. box, 5a/5b are **mandatory**, not optional. If they genuinely match 4a/4b, leave 5a/5b **blank** |
+| **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled**, regardless of what 4a–5b say. This is not an address line and it is never skipped |
+| **7a** | Responsible party's **name** — a **natural person**, never a company, and the one who genuinely controls the entity (see §4C). Their nationality and residence are **not** requirements |
+| **7b** | Their **SSN or ITIN** — or, when they have neither and are ineligible to obtain one, write **`Foreign`**. The Dec-2025 instructions sanction both spellings: *"Enter 'foreign' or N/A on line 7b if the responsible party doesn't have and is ineligible to obtain an SSN or ITIN. **An entry is required.**"* → **the box can never be left blank**, but it doesn't have to hold a number. If the person already has an SSN/ITIN, you must use it |
+| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** (8c is new in the Dec-2025 revision) |
 | **9a** | Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's **taxed** (see §4A) |
-| **10** | Reason for applying → "Started new business" |
-| **11** | Date business started = **Sunbiz formation date** |
-| **12** | Closing month of accounting year → **December** (usual) |
-| **13** | Highest number of employees expected next 12 months (0 is fine) |
-| **14** | Check the box to file **Form 944** annually instead of 941 quarterly only if you expect ≤ **$1,000** in annual payroll tax (usually leave unchecked) |
-| **15** | First date wages were/will be paid (blank if no payroll yet) |
-| **16** | Principal activity |
-| **17** | Principal line of merchandise/services |
-| **18** | Has this entity ever applied for an EIN before? (No, for a new entity) |
+| **9b** | If a corporation, the **state or foreign country** where incorporated |
+| **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
+| **11** | Date business started = **Sunbiz formation/effective date** — month, **day** and year. You don't need the Articles PDF in hand: the date is public and free on Sunbiz, so **look it up rather than estimate**. Never enter a date earlier than formation |
+| **12** | Closing month of accounting year. **This is a MONTH, not a date** — write `December` for a calendar-year filer. Spell the month out to avoid a bare "12" being misread. Note the entities that **can't** choose freely: partnerships (required year), personal service corporations and REMICs (calendar), most trusts (calendar) |
+| **13** | Highest number of employees expected in the next 12 months — **three separate boxes**: Agricultural / Household / **Other** (Other is where nearly every business goes). Enter **`-0-`** in the ones that don't apply. **When you don't know yet, `-0-` is the right answer** — see §4E for why inflating it costs you |
+| **14** | **Form 944 election.** Only if payroll tax will be ≤ **$1,000/year** (≈ **$5,000 or less** in total wages; $6,536 in US territories). ⚠️ **Checking it locks you in**: *"you must continue to file Form 944 … until the IRS instructs you to file Form 941."* **Usually leave unchecked.** And if line 13 is all zeros, **skip line 14 entirely** |
+| **15** | First date wages or annuities were paid. ⚠️ **If the business doesn't plan to have employees, enter `N/A`** — the instructions say so explicitly. **Don't leave it blank** |
+| **16** | Principal activity — one checkbox |
+| **17** | Principal line of merchandise/services — free text describing what the company actually does |
+| **18** | Has this entity ever applied for an EIN before? (No, for a new entity). If yes, write the previous EIN |
 | **Third-Party Designee** | If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the **client signs** the form (see §4D) |
+| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — nothing in the instructions requires a US number. Write it in full international form with the country code (`+380 44 123 4567`) so the IRS can actually dial it. For **Path B, always give a return fax number** — that's how the EIN comes back |
 
 ### Where to send it
 
@@ -351,6 +413,56 @@ If JK completes and submits the application **on the client's behalf**:
   client's authorization.
 - The designee's authority to receive the EIN **ends once the EIN is assigned** —
   it is not ongoing power of attorney.
+- ⚠️ **The matching trap.** *"If the third-party designee's address or telephone
+  number **matches** the address or telephone number of the taxpayer, the
+  application **must be mailed or faxed**."* So if you put the firm's phone in
+  **both** the applicant's signature block and the designee block, you lose the
+  online and phone options. Use the **client's own** phone in the signature block
+  and the **firm's** in the designee block.
+- **The designee block is void without a signature** — *"You must complete the
+  signature area for the authorization to be valid."*
+
+### 4E. Line 13 — the employee count, and what to do when you don't know yet
+
+This is the line people either skip or over-answer. It is **an estimate, not a
+commitment** — the instructions ask for the number *"expected by the applicant in
+the next 12 months."*
+
+**What it actually triggers.** A number greater than zero tells the IRS to open an
+**employment-tax filing requirement** on the account: it will start expecting
+**Forms 941** quarterly and **940** annually — and it sends notices when a return
+it expects doesn't arrive. That's the whole risk.
+
+**When you don't know yet → enter `-0-`.** The asymmetry decides it:
+
+| | You put a number you weren't sure about | You put `-0-` and they hire later |
+|---|---|---|
+| What happens | IRS opens the 941/940 requirement and waits for returns that don't exist | **Nothing** |
+| Consequence | Non-filing notices to chase down and resolve | They just start filing 941 when wages are actually paid |
+| Fix needed | Yes — calls and time | None |
+
+Hiring later needs **no new EIN**. The instructions say so under line 10:
+*"Don't apply if you already have an EIN and are only hiring employees."*
+
+**Two cases where `-0-` would be wrong:**
+
+1. **Payroll is genuinely imminent.** Put the honest number and give line 15 the
+   real or expected first wage date.
+2. **The entity will elect S-corp** ⚠️ — constant here. A shareholder who works in
+   the business **is an employee** and needs a reasonable salary, so the realistic
+   minimum is **1**, not zero. This is the payroll the
+   [reasonable-compensation work](../reasonable-compensation/) depends on
+   existing — see §4B for the Form 2553 sequence.
+
+**The three boxes are not interchangeable:**
+
+| Box | Who | Return it drives |
+|---|---|---|
+| **Agricultural** | Farm workers | Form 943 |
+| **Household** | Domestic workers in a private home (nanny, cleaner) | Schedule H |
+| **Other** | **Everything else — where ~99% of clients go** | Forms 941 / 940 |
+
+Fill every box; put `-0-` in the ones that don't apply.
 
 ---
 
@@ -391,6 +503,25 @@ If JK completes and submits the application **on the client's behalf**:
 - **Not saving the confirmation letter.** Download/keep it immediately;
   replacement is a phone-only **147C**.
 - **Paying a third-party "EIN service."** It's free from the IRS (see top).
+- **Filling the paper SS-4 from an online application's answers** (or the reverse).
+  They ask different questions — see [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions).
+  The paper form needs a start **day**, a closing month, employee **counts**, a
+  first wage date and a signature that the online tool never asked you for.
+- **Inflating line 13 "just in case."** It opens an employment-tax filing
+  requirement and earns non-filing notices. `-0-` when you don't know (§4E).
+- **Leaving line 15 blank when there's no payroll.** The instructions say enter
+  **`N/A`**, not nothing.
+- **Checking line 14 casually.** The Form 944 election **locks you in** until the
+  IRS releases you, and the threshold (≈$5,000 of wages) is tiny.
+- **Leaving line 6 empty because 5a/5b were skipped.** Line 6 is county + state
+  and is **always** required — it isn't part of the address comparison.
+- **Putting a P.O. box on line 5a.** Not allowed. And if line 4a is a P.O. box,
+  5a/5b stop being optional.
+- **Naming a US resident as responsible party just to have an SSN for 7b.** The
+  responsible party is a statement of fact about who controls the entity, signed
+  under penalties of perjury. Write **`Foreign`** on 7b instead (§4C).
+- **Reusing the firm's phone in both the signature block and the designee block.**
+  It forces the application to mail/fax only (§4D).
 
 ---
 
@@ -441,9 +572,14 @@ Addresses
 
 Business details
 - Reason for applying:  ☐ Started a new business  ☐ Other: ____
-- Principal activity / line of business:
-- Employees expected next 12 months:  ___   First wage date (if any): ____
-- Closing month of accounting year:  ☐ December  ☐ Other: ____
+- Principal activity (line 16 checkbox):
+- Line of merchandise / services (line 17, free text):
+- Employees expected next 12 months (line 13 — "-0-" if unknown; S-corp owner = 1):
+      Agricultural: ___   Household: ___   Other: ___
+- First wage date (line 15 — enter "N/A" if no payroll planned): ____
+- Closing month of accounting year (a MONTH):  ☐ December  ☐ Other: ____
+- Applicant's phone (foreign OK — include country code): ____
+- Return FAX number (Path B — this is how the EIN comes back): ____
 
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
@@ -458,8 +594,11 @@ Result  (store in client system, NOT the repo)
 Notes / open questions:
 ```
 
-_Sources: IRS "How to apply for an EIN," "Apply for an EIN online," Instructions
-for Form SS-4 (Rev. Dec 2025), and "Where to file your taxes for Form SS-4";
-IRS EIN telephone guidance for international applicants. Verify fax numbers,
-hours, and mailing addresses against the official IRS pages before filing — the
-IRS changes them periodically._
+_Sources: IRS "How to apply for an EIN," "Apply for an EIN online," and "Where to
+file your taxes for Form SS-4"; IRS EIN telephone guidance for international
+applicants. **The line-by-line content in §1.5, §3 and §4E is taken directly from
+Form SS-4 and its Instructions, both Rev. December 2025** (read in full,
+2026-08-10). The online-wizard walkthrough in §2 was verified on screen in July
+2026 — the IRS changes that tool without notice, so re-check it and update §2 when
+it moves. Verify fax numbers, hours, and mailing addresses against the official
+IRS pages before filing — the IRS changes them periodically._

@@ -1142,10 +1142,11 @@ const SOP_GROUPS = [
           },
           then: [
             { t: `Either path: an <b>LLC</b> records only its <b>default</b> classification — the EIN <b>never elects S-corp</b> (that's a separate <b>Form 2553</b>)` },
+            { t: `⚠️ The two paths are <b>not the same form</b> — the online tool asks excise questions the paper SS-4 doesn't have, and the paper form needs a start <b>day</b>, a closing month, three employee counts, a first wage date and a <b>signature</b> the online tool never asks for` },
             { t: `Save the confirmation letter (<b>CP 575</b>-equivalent / fax-back) to the client's system, record the EIN &amp; trigger the after-steps`, k: 'done', pill: 'EIN in hand' },
           ],
         },
-        blurb: 'Get the business’s federal EIN once it’s active on Sunbiz — the SSN/ITIN online path vs the fax “Foreign” path, the LLC-classification traps, and the after-steps.' },
+        blurb: 'Get the business’s federal EIN once it’s active on Sunbiz — the SSN/ITIN online path vs the fax “Foreign” path, what the online tool asks that the paper SS-4 doesn’t (and back), the SS-4 line by line, the employee-count trap, and the after-steps.' },
     ],
   },
   {
