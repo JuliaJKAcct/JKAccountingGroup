@@ -58,3 +58,28 @@ verification. Marked **Working assumption** because it hasn't completed yet — 
 7. **Then downgrade the subscription**, confirming with the client first because it's their
    billing. **This is the step that gets forgotten**, and the client keeps paying for the
    bigger plan until someone remembers.
+
+## LN-35 — When every member of a company is a foreign resident, the EIN goes by regular mail — the online application cannot be used
+- **Tags:** irs · ein · formation · foreign-owners
+- **Certainty:** Established
+- **Star:** no
+- **Added:** 2026-08-10
+- **Came from:** Lilian — firm practice requesting EINs for companies whose members are all non-US residents
+
+**What happened.** The IRS online EIN assistant will not issue a number unless the
+**responsible party** named on the application already has an SSN or ITIN. In a company whose
+members are all foreign residents there is nobody to name who has one, so the online route
+dead-ends: there is no way to complete it, and no workaround inside the application. The only
+route that works is the paper **Form SS-4**, sent to the IRS by regular mail.
+
+**The rule — check this before promising a date.** For a company with all-foreign membership:
+
+1. **Do not start the online application.** It cannot be finished without an SSN or ITIN for
+   the responsible party, and time spent there is time lost.
+2. **File Form SS-4 on paper and send it by regular mail.** On line 7b, where the responsible
+   party's SSN/ITIN would go, the IRS instructions say to enter **"Foreign"**.
+3. **Plan for the wait.** The online assistant returns the EIN on the spot; a mailed SS-4 does
+   not. Anything that depends on the EIN — a bank account, payroll, a registration — has to be
+   scheduled after it, not alongside it.
+4. **Tell the client the timeline when the engagement starts**, not when they ask why the
+   number hasn't arrived. This is the part that turns a normal wait into a complaint.
