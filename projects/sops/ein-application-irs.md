@@ -112,8 +112,9 @@ else.
 > ⚠️ **Two different tests — don't mix them up.** *Which path* you take depends on
 > the **responsible party's** ID (this section). *Where you send it*, and whether
 > the phone line is even available, depends on **where the ENTITY is** — not where
-> its owner lives (§3). A Florida LLC with an owner abroad is a **domestic**
-> filing: the international phone line is **not** open to it.
+> its owner lives. A Florida company that actually operates from its Florida
+> address is a **domestic** filing and the international phone line is **not** open
+> to it (§3).
 
 > **Frequent JK situation — foreign owner, no SSN/ITIN.** You do **not** need to
 > wait for the owner to get an ITIN before the company can get its EIN. File
@@ -325,10 +326,10 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **3** | Executor / administrator / trustee / "care of" name — only if someone else receives the entity's tax mail. If you fill it, **lines 4a–4b become that person's address** |
 | **4a/4b** | Mailing address. If it's outside the US, give city, province/state, postal code and the **country spelled out in full** — the IRS says *don't abbreviate the country name* |
 | **5a/5b** | Physical street address — **only if different from 4a/4b**. ⚠️ **No P.O. box allowed here.** So if line 4a *is* a P.O. box, 5a/5b are **mandatory**, not optional. If they genuinely match 4a/4b, leave 5a/5b **blank** — this is the one place the SOP departs from the instructions' general *"enter 'N/A' on the lines that don't apply"*, because line 5a's own rule is "only if different" |
-| **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled for a new business**, regardless of what 4a–5b say — it is not part of the address comparison. (The form's *Do I Need an EIN?* table drops line 6 for a few narrow applications — banking-purpose-only, pension plan, withholding agent — none of which is this SOP's scope) |
+| **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled for a new business**, regardless of what 4a–5b say — it is not part of the address comparison. (The form's *Do I Need an EIN?* table drops line 6 for a few narrow applications — e.g. banking-purpose-only, a pension-plan administrator, a withholding agent, a foreign person applying under the withholding regs, a state/local reporting agency — none of which is this SOP's scope) |
 | **7a** | Responsible party's **name** — a **natural person**, never a company, and the one who genuinely controls the entity (see §4C). Their nationality and residence are **not** requirements |
 | **7b** | Their **SSN or ITIN** — or, when they have neither and are ineligible to obtain one, write **`Foreign`**. The Dec-2025 instructions sanction both spellings: *"Enter 'foreign' or N/A on line 7b if the responsible party doesn't have and is ineligible to obtain an SSN or ITIN. **An entry is required.**"* → **the box can never be left blank**, but it doesn't have to hold a number. If the person already has an SSN/ITIN, you must use it |
-| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** For a single-member LLC owned by spouses in a community-property state and treated as disregarded, 8b is **`1`** |
+| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** **8b trap:** an LLC **owned solely by an individual and their spouse in a community-property state** who **choose** to treat it as a disregarded entity enters **`1`** on 8b, not 2 — otherwise 8b is the actual member count. (Florida is not a community-property state, so this only reaches out-of-state members) |
 | **9a** | Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's **taxed** (see §4A) |
 | **9b** | If a corporation, the **state or foreign country** where incorporated |
 | **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
@@ -346,12 +347,21 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 ### Where to send it
 
 > 🚨 **The routing test is about the ENTITY, not the responsible party.** The IRS
-> wording is *"If **you** have a legal residence, principal place of business, or
-> principal office or agency in one of the 50 states or DC…"* — "you" is the
-> **applicant entity** on line 1. **A Florida LLC formed on Sunbiz has its
-> principal place of business in Florida, so it is a DOMESTIC filing even when
-> every owner lives abroad.** Getting this backwards sends the form to the wrong
-> queue and makes people reach for a phone line they aren't eligible for.
+> wording is *"If you have a legal residence, principal place of business, or
+> principal office or agency in one of the 50 states or the District of
+> Columbia…"* — **"you" is the applicant entity on line 1**, and the test is three
+> factual questions about that entity, not about who owns it.
+>
+> **In the normal JK case a Florida company is bucket A** — it operates from a
+> Florida address, which is exactly the county and state you just wrote on
+> **line 6**. **Line 6 is the tell:** if you can honestly name the entity's Florida
+> primary physical location, it is **bucket A even when every owner lives abroad**
+> — the owner's nationality and residence never enter this test. The one case that
+> isn't bucket A is a company with **no real US presence at all**: a Sunbiz
+> registration whose only US address is the registered agent's, with the office and
+> operations abroad. There none of the three tests is met and it belongs in bucket
+> B. Decide it on the **entity's** facts, note the call in the client file, and
+> don't let the owner's residence decide it in either direction.
 
 **A. The ENTITY has a legal residence, principal place of business, or office in
 one of the 50 states or DC** — ✅ **this is the normal JK case**: a Florida
@@ -371,10 +381,15 @@ any state or DC** (a genuinely foreign entity, or one in a US territory):
   outside the US). Return fax → EIN generally within **~4 business days**.
 - **Mail:** Internal Revenue Service, **Attn: EIN International Operation,
   Cincinnati, OH 45999**.
-- **Phone (this bucket only):** **267-941-1099** (not toll-free), **Mon–Fri,
-  6 a.m.–11 p.m. Eastern**. The caller must be authorized and able to answer every
-  SS-4 line — **fill out the SS-4 first**, then call; the EIN can be issued on the
-  call.
+- **Phone: 267-941-1099** (not toll-free), **Mon–Fri, 6 a.m.–11 p.m. Eastern** —
+  but **only for the *international* half of this bucket.** ⚠️ **The phone test is
+  narrower than the fax test.** Fax bucket B is "no presence in **any state or
+  DC**"; the phone requires no presence *"in the United States **or U.S.
+  territories**."* So an entity in a **US territory** (Puerto Rico, USVI, Guam…)
+  faxes and mails as bucket B yet **cannot call** — and by that same distinction it
+  **can use the online application**, which is the faster route anyway. The caller
+  must be authorized and able to answer every SS-4 line — **fill out the SS-4
+  first**, then call; the EIN can be issued on the call.
 
 > **Fax is the practical default for a Florida company with a no-SSN owner:** ~4
 > business days vs. ~4–5 weeks by mail, and you keep a paper trail. Bucket **A**,
@@ -543,8 +558,9 @@ Fill every box; put `-0-` in the ones that don't apply.
   **`N/A`**, not nothing.
 - **Checking line 14 casually.** The Form 944 election **locks you in** until the
   IRS releases you, and the threshold (≈$5,000 of wages) is tiny.
-- **Leaving line 6 empty because 5a/5b were skipped.** Line 6 is county + state
-  and is **always** required — it isn't part of the address comparison.
+- **Leaving line 6 empty because 5a/5b were skipped.** Line 6 is county + state and
+  is **always required for a new business** — it isn't part of the address
+  comparison.
 - **Putting a P.O. box on line 5a.** Not allowed. And if line 4a is a P.O. box,
   5a/5b stop being optional.
 - **Naming a US resident as responsible party just to have an SSN for 7b.** The
@@ -566,9 +582,9 @@ Fill every box; put `-0-` in the ones that don't apply.
 | IRS — Form SS-4 (PDF) | Path B form | <https://www.irs.gov/pub/irs-pdf/fss4.pdf> |
 | IRS — Instructions for Form SS-4 | Line-by-line | <https://www.irs.gov/instructions/iss4> |
 | IRS — Where to file SS-4 | Fax/mail addresses | <https://www.irs.gov/filing/where-to-file-your-taxes-for-form-ss-4> |
-| IRS — SS-4 fax (50 states + DC) | Domestic fax — **the ENTITY has a US place of business** (a Florida LLC does, even with a foreign owner) | **855-641-6935** |
-| IRS — SS-4 fax (international) | **The ENTITY** has no US residence/place of business | **855-215-1627** (in US) · **304-707-9471** (outside US) |
-| IRS — EIN by phone (international only) | **The ENTITY** has no US presence — *not* available to a US company with a foreign owner | **267-941-1099**, Mon–Fri 6 a.m.–11 p.m. ET (not toll-free) |
+| IRS — SS-4 fax (50 states + DC) | Domestic fax — **the ENTITY** has a US place of business (a Florida company operating from its Florida address — §3) | **855-641-6935** |
+| IRS — SS-4 fax (international) | **The ENTITY** has no place of business in any state or DC (§3) | **855-215-1627** (in US) · **304-707-9471** (outside US) |
+| IRS — EIN by phone (international only) | **The ENTITY** has no presence in the US **or its territories** — *not* available to a US company with a foreign owner, nor to a US-territory entity | **267-941-1099**, Mon–Fri 6 a.m.–11 p.m. ET (not toll-free) |
 | IRS — Business & Specialty Tax Line | 147C re-issue, EIN questions | **800-829-4933**, Mon–Fri 7 a.m.–7 p.m. local |
 | IRS — mail (domestic) | Domestic SS-4 by mail | Internal Revenue Service, Attn: EIN Operation, Cincinnati, OH 45999 |
 | IRS — mail (international) | International SS-4 by mail | Internal Revenue Service, Attn: EIN International Operation, Cincinnati, OH 45999 |
@@ -616,8 +632,8 @@ Business details
 
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
-- Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company = A)  ☐ B — entity has none
-- Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B only)
+- Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company operating from its FL address = A; see §3)  ☐ B — entity has none
+- Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B, and NOT a US-territory entity)
 
 Result  (store in client system, NOT the repo)
 - EIN assigned:
