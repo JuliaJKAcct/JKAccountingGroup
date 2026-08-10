@@ -128,7 +128,10 @@ export function assertWriteAllowed({ model, ids = [], operation = 'write', profi
     )
   }
 
-  const allowed = PROFILES[profile]
+  // Object.hasOwn: a bare lookup resolves inherited members, so `--profile
+  // toString` would skip the SafetyViolation below and die on a TypeError
+  // instead — an exit code that does not say "refused".
+  const allowed = Object.hasOwn(PROFILES, profile) ? PROFILES[profile] : undefined
   if (!allowed) {
     throw new SafetyViolation(
       `Unknown safety profile "${profile}". Known profiles: ${Object.keys(PROFILES).join(', ')}.`,

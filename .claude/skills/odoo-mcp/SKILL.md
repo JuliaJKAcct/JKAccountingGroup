@@ -156,7 +156,7 @@ make faster by hand wastes the restart. Match the answer to what was actually as
 | **A website text / SEO / link / copy change** | **By hand in Odoo's own web editor — zero calls, no limit at all.** The 50-call ceiling belongs to the *connector*, not to Odoo. Most of [`PENDING-FIXES.md`](../../../projects/marketing/consultation-booking/PENDING-FIXES.md) is this. Offer it first |
 | **A small structural change** (a view, a record) | The MCP connector, from this session — say what it will cost against the 50 first |
 | **A heavy read** — roster sweep, multi-model crawl | A **new session in `odoo-api`**. This is what the direct route is actually for today |
-| **A bulk or scripted write** | **Not available yet, from any environment.** `tools/odoo-api/` (dry-run default, allow-list in code, snapshot-before-write, canary) has to be built first — [`direct-api-setup.md` §5](./references/direct-api-setup.md). Say so, and say what it would take |
+| **A bulk or scripted write** | **A new session in `odoo-api`, then [`tools/odoo-api/`](../../../tools/odoo-api/)** — dry-run unless `--execute`, allow-list in code, snapshot-before-write, before/after canary (built 2026-08-10; §7 and [`direct-api-setup.md` §5](./references/direct-api-setup.md)). ⚠️ **"Bulk" is still capped:** the volume brake allows **one** website record per operation, so a sweep is a sequence of reviewed single writes, not one command |
 
 So the message for the common case — a website change asked from `Default` — is roughly:
 

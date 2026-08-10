@@ -103,10 +103,18 @@ export async function fetchDependents(model, id) {
  * that is the mechanical form of "no snapshot, no write".
  */
 export async function snapshot({ model, ids, reason, label = 'change' }) {
+  // Read BEFORE creating anything. A missing record used to leave a git-tracked
+  // empty directory carrying a `restoreWith` command that restores nothing, which
+  // `snapshots` then listed as if it were real.
+  const records = ids.length ? await read(model, ids, []) : []
+  if (ids.length && !records.length) {
+    throw new Error(
+      `${model}:${ids.join(',')} does not exist — nothing to snapshot, so nothing may be written.`,
+    )
+  }
+
   const dir = path.join(bucketFor(model), `${stamp()}__${label}`)
   await mkdir(path.join(dir, model), { recursive: true })
-
-  const records = ids.length ? await read(model, ids, []) : []
   const dependents = {}
   for (const id of ids) dependents[id] = await fetchDependents(model, id)
 
@@ -209,12 +217,17 @@ export async function listSnapshots() {
     for (const name of await readdir(base)) {
       const manifestPath = path.join(base, name, 'manifest.json')
       if (!existsSync(manifestPath)) continue
-      out.push({
-        bucket,
-        name,
-        dir: path.join(base, name),
-        manifest: JSON.parse(await readFile(manifestPath, 'utf8')),
-      })
+      // Guarded per snapshot, like readHistory() guards per line. These manifests
+      // are committed and two sessions can snapshot in parallel, so one file with
+      // conflict markers must not take out `snapshots`, `diff` AND `restore` —
+      // least of all restore, which is the undo path.
+      let manifest
+      try {
+        manifest = JSON.parse(await readFile(manifestPath, 'utf8'))
+      } catch (err) {
+        manifest = { unreadable: true, error: err.message }
+      }
+      out.push({ bucket, name, dir: path.join(base, name), manifest })
     }
   }
   return out.sort((a, b) => b.name.localeCompare(a.name))

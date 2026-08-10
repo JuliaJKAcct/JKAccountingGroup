@@ -171,6 +171,12 @@ async function cmdWrite() {
   const execute = has('execute')
   const values = JSON.parse(required('set'))
 
+  // Object.keys("abc") is ["0","1","2"] and Object.keys(null) throws, so a length
+  // check alone lets a string through to the live write as `vals`.
+  if (values === null || typeof values !== 'object' || Array.isArray(values)) {
+    const kind = values === null ? 'null' : Array.isArray(values) ? 'an array' : typeof values
+    throw new Error(`--set must be a JSON object, got ${kind}`)
+  }
   if (!Object.keys(values).length) throw new Error('write requires --set \'{"field": value}\'')
 
   // Layer 4 — the gate. Throws loudly rather than returning a value to ignore.
@@ -191,14 +197,13 @@ async function cmdWrite() {
     out(`    new:     ${JSON.stringify(next)}`)
   }
 
-  const canaryBefore = await canary.sweep()
-
   if (!execute) {
     out('\nNothing was written. Re-run with --execute to apply.')
     out(`Undo would be: node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --profile ${profile} --reason "undo" --execute`)
     return
   }
 
+  const canaryBefore = await canary.sweep()
   await call(model, 'write', { ids: [id], vals: values })
   out('\n✓ Written.')
 
@@ -224,6 +229,10 @@ async function cmdWrite() {
     after: values,
     snapshot: path.basename(dir),
     canary: verdict.ok ? 'clean' : 'REGRESSION',
+    // Keep the findings, not just the verdict. A non-blocking `size-shift` — the
+    // home page going 36 KB → 200 bytes — would otherwise be recorded forever as
+    // "clean", with the only trace scrolled off someone's terminal.
+    canaryFindings: verdict.findings,
     undo: `node tools/odoo-api/odoo.mjs restore ${path.basename(dir)} ${model} ${id} --profile ${profile} --reason "undo" --execute`,
   })
 }
@@ -243,6 +252,13 @@ async function cmdRestore() {
   // without anyone choosing it.
   const profile = required('profile')
   const reason = required('reason')
+
+  // Layer 4 up front, exactly like cmdWrite. Gating only the --execute path meant
+  // a dry-run restore never exercised the deny-list or the allow-list, so the
+  // rehearsal did not rehearse the refusal — and the whole value of a dry run is
+  // that what it shows you is what would happen.
+  assertWriteAllowed({ model, ids: [id], operation: 'write', profile })
+
   const all = await store.listSnapshots()
   const snap = all.find((s) => s.name === snapName)
   if (!snap) throw new Error(`No snapshot named ${snapName}. Run \`snapshots\` to list them.`)
@@ -285,12 +301,10 @@ async function cmdRestore() {
     return
   }
 
-  // A restore is a write like any other, and gets the identical treatment. It is
-  // tempting to exempt it — "we are only putting things back" — but the record's
-  // CURRENT state is what an undo destroys, and the state being restored may
-  // itself be the mistake. So: same gate, same snapshot, same canary.
-  assertWriteAllowed({ model, ids: [id], operation: 'write', profile })
-
+  // A restore is a write like any other. It is tempting to exempt it — "we are
+  // only putting things back" — but the record's CURRENT state is what an undo
+  // destroys, and the state being restored may itself be the mistake. Gate ran
+  // above; snapshot and canary follow.
   const undoOfUndo = await store.snapshot({
     model,
     ids: [id],
@@ -324,6 +338,7 @@ async function cmdRestore() {
     snapshot: path.basename(undoOfUndo.dir),
     restoredFrom: snapName,
     canary: verdict.ok ? 'clean' : 'REGRESSION',
+    canaryFindings: verdict.findings,
     undo: `node tools/odoo-api/odoo.mjs restore ${path.basename(undoOfUndo.dir)} ${model} ${id} --profile ${profile} --reason "undo the undo" --execute`,
   })
 }
@@ -350,6 +365,10 @@ async function cmdSnapshots() {
   if (!all.length) return out('No snapshots yet. Run `baseline` before the first working session.')
   for (const s of all) {
     const m = s.manifest
+    if (m.unreadable) {
+      out(`${s.name}  [${s.bucket}]  ⚠ manifest unreadable — ${m.error}`)
+      continue
+    }
     out(`${s.name}  [${s.bucket}]  ${m.kind ?? m.model ?? ''} ${m.total ?? m.recordCount ?? ''}`)
     if (m.reason) out(`    ${m.reason}`)
   }
