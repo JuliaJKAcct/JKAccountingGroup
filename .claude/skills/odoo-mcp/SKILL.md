@@ -82,34 +82,68 @@ layers agreed with Lilian. Read it before changing anything, and note *why* it m
 after the switch: the 50-call ceiling is currently acting as a handbrake on mistakes, and a
 direct connection removes it.
 
-### The direct-API key lives in a separate environment — check it before the first call
+### ⚠️ Wrong-environment check — run it the moment a task involves changing Odoo
 
-The API key is **not** in the repo and **not** in every session. It belongs in a **dedicated
-Claude Code cloud environment** (`odoo-api`), picked from the cloud icon above the message box at
-claude.ai/code. **Created 2026-08-10, and a session there reports the connection working.**
+**Two routes reach Odoo, and they do not have the same power:**
+
+| Route | Works from | Ceiling |
+|---|---|---|
+| **MCP connector** | **any** environment — its traffic goes through Anthropic's servers, not the session's network | **50 calls/day**, shared by the whole firm |
+| **Direct API** (`ODOO_API_KEY`) | **only** a session started in the **`odoo-api`** environment | no daily cap |
+
+The key is **not** in the repo and **not** in every session. It lives on the dedicated
+`odoo-api` cloud environment, picked from the cloud icon above the message box at claude.ai/code
+(created 2026-08-10). The everyday `Default` environment deliberately does **not** carry it, so
+an unattended Routine at 3 a.m. never holds an administrator key over the live database — the
+reasoning and the setup are in
+[`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md).
 
 > ⚠️ **The key is on Julia's user — the administrator — and it never expires** (confirmed by
 > Lilian, 2026-08-10). It can do anything on this database, indefinitely, until someone revokes
 > it. The low-privilege user of `direct-api-setup.md` §3 Step 1 was never created, so
 > **[`references/write-safety.md`](./references/write-safety.md) is the whole guard** — read it
-> before any write over this connection, not just website ones. The everyday `Default` environment deliberately
-does **not** carry it, so an unattended Routine at 3 a.m. never holds an administrator key over
-the live database (Lilian, Aug 2026 — the reasoning and the setup are in
-[`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md)).
+> before any write over this connection, not just website ones.
 
-**So before the first direct-API call, confirm the key is present. It costs nothing — no MCP
-call, no Odoo call:**
+#### The trigger is the request, not the failure
+
+**As soon as a task involves changing anything in Odoo or on the firm's website, check the
+environment — before starting the work, not after a call fails.** It costs nothing: no MCP call,
+no Odoo call.
 
 ```bash
-[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — see below"
+[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — wrong environment"
 ```
 
-**If it is missing, the likeliest cause by far is the wrong environment** — the session is in
-`Default`, and an environment is chosen only when a session *starts*, so it cannot be switched
-mid-session: it needs a new session in `odoo-api`. Say that first. But **say it as the leading
-hypothesis, not as the only one** — the same symptom comes from a local CLI session (which
-never reads a cloud environment at all), from a mistyped variable name, and from `odoo-api` not
-having been created yet. Never ask for the key to be pasted into the chat.
+**If it is missing, say so immediately and in plain language.** This is a standing instruction
+from Lilian (2026-08-10) with a specific reason: **Julia is often the one asking, and does not
+follow this machinery.** She must never be left wondering why a website change cannot be made.
+Deliver it in the language of the conversation; the substance is:
+
+> I'm reaching Odoo through the MCP connector right now, and that route is capped at **50
+> operations a day for the whole firm** — fine for looking things up, not enough for website
+> changes. Full access runs through the **`odoo-api`** environment, and an environment can only
+> be chosen when a session **starts**, so I can't switch it from here. Open a new session, click
+> the cloud icon above the message box, choose **`odoo-api`**, and ask me again there. Nothing is
+> broken and nothing is lost — it's one click.
+
+Then let them decide. A **small** read or a one-line fix can still go through the connector — say
+what it will cost against the 50 — but the queued website work in
+[`PENDING-FIXES.md`](../../../projects/marketing/consultation-booking/PENDING-FIXES.md) does not
+fit in the budget and should wait for `odoo-api`.
+
+**Two things never to do:** silently fall back to the connector for a change that needs the
+direct route (it burns the shared budget and half-finishes the work), and reply with a bare "I
+can't do that" — the entire point of this rule is that the person asking learns **why** and
+**what to do next**.
+
+**A warning about the confusing case:** because the connector works from *any* environment, a
+small Odoo request from `Default` simply succeeds. Do not let that be read as "the environment
+doesn't matter" — it matters for the direct route only. If someone concludes that, correct it.
+
+**On a missing key, the wrong environment is the leading hypothesis, not the only one** — the
+same symptom comes from a local CLI session (which never reads a cloud environment at all), from
+a mistyped variable name, and from `odoo-api` having been archived. Never ask for the key to be
+pasted into the chat.
 
 **What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
 An expired key — Odoo caps a non-Settings user's key at 90 days

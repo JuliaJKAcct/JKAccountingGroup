@@ -232,6 +232,20 @@ in that folder.
   IDs, and post a batched chatter note on the affected record for any change. This is a
   standing rule so the budget is respected every time — running out mid-task leaves the
   database half-changed.
+- **Changing Odoo or the website? Check the environment FIRST and say so out loud.**
+  There is a second route to Odoo with **no** daily cap — the direct API — and its key lives
+  **only** in the dedicated `odoo-api` cloud environment (the cloud icon above the message box at
+  claude.ai/code). The MCP connector works from any environment; the direct API does not.
+  **So the moment a request involves changing something in Odoo or on the firm's website, run
+  `[ -n "$ODOO_API_KEY" ]` before starting the work** — it costs nothing — and if the key is
+  missing, **stop and explain, in plain language, before doing anything**: we are on the MCP
+  connector, capped at 50 operations a day for the whole firm; full access needs a **new session**
+  started in `odoo-api` (an environment can only be chosen at session start, never switched
+  mid-session). **Never reply with a bare "I can't do that", and never silently fall back to the
+  connector for work that needs the direct route.** _(Lilian's standing instruction, Aug 2026,
+  with a specific reason: **Julia is often the one asking and does not follow this machinery** —
+  she must never be left wondering why a website change cannot be made.)_ The wording to use and
+  the full reasoning are in the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) §1.
 - **Two people work here in parallel — keep `main` and the indexes coherent.**
   Julia and Lilian both drive this repo through Claude, often in separate sessions
   at the same time, so branches and edits collide. Every session: **start from the
