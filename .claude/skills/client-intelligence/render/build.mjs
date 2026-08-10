@@ -77,10 +77,28 @@ function kv(text){
   }
   return d;
 }
-// top-level bullets (not indented), joined multi-line handled loosely
-function bullets(text){
+// A long bullet in these files is ordinary Markdown, so it may be soft-wrapped across
+// several indented lines. The note here used to claim multi-line was "handled loosely";
+// it was not handled at all — the line-anchored matchers below kept the first physical
+// line and dropped the rest SILENTLY. That is not cosmetic: on one client it cut a
+// categorization rule at "…are **business income**, EXCEPT a confirmed", so the card
+// stated the opposite of the rule, and it split a bold span leaving a raw "**auto/transport"
+// on screen. Fold continuations back into their bullet before matching anything.
+function unwrap(text){
   const out = [];
   for(const line of (text||'').split('\n')){
+    if(/^\s+\S/.test(line) && out.length && /^- /.test(out[out.length-1])){
+      out[out.length-1] += ' ' + line.trim();          // continuation of the open bullet
+    } else {
+      out.push(line);
+    }
+  }
+  return out.join('\n');
+}
+// top-level bullets (not indented)
+function bullets(text){
+  const out = [];
+  for(const line of unwrap(text).split('\n')){
     const m = line.match(/^- (?!\[)(.*\S)\s*$/);       // skip "- [ ]" checkboxes
     if(m) out.push(m[1].trim());
   }
@@ -92,7 +110,7 @@ function bullets(text){
 // stops the "N fields still to confirm" badge from counting settled rows as open ones.
 function checkboxes(text){
   const out = [];
-  for(const line of (text||'').split('\n')){
+  for(const line of unwrap(text).split('\n')){
     const m = line.match(/^- \[([ xX])\] (.*\S)\s*$/);
     if(m) out.push({ done: m[1].toLowerCase() === 'x', text: m[2].trim() });
   }
@@ -233,9 +251,13 @@ export function loadClients(repoRoot){
     // Every client file writes "**Google Drive folder (sensitive vault):**", so the Drive
     // link was missing on all 23. Matching per-line also stops one bullet's label from
     // reaching into a later bullet's URL.
+    // Prefer a Markdown link's target, but fall back to a bare URL: not every file wraps
+    // one (artur-tseretsian writes "**Double client:** https://…" plain), and requiring the
+    // parens would be the same silent vanish this fix exists to remove.
     const linkOn = re => {
       const line = links.split('\n').find(l => re.test(l)) || '';
-      return (line.match(/\((https?:\/\/[^)\s]+)\)/)||[])[1];
+      const m = line.match(/\((https?:\/\/[^)\s]+)\)/) || line.match(/(https?:\/\/[^)\s<>]+)/);
+      return m ? m[1].replace(/[.,;:]+$/,'') : undefined;
     };
     const dbl = linkOn(/\*\*Double client:\*\*/);
     const drv = linkOn(/Google Drive folder/i);
