@@ -16,7 +16,7 @@ company-formation flow — **Part 1**, the Sunbiz filing itself, is
 > ⚠️ **The two paths are not the same form.** The online EIN Assistant and the
 > paper Form SS-4 ask **different questions** — the online tool asks excise
 > screening questions the paper form doesn't have, and the paper form asks for
-> things the online tool never requests (a full start date, the closing month, the
+> things the online tool never requests (the start **day**, the closing month, the
 > employee counts, a signature). **Don't fill one from the other's answers.** The
 > side-by-side is [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions).
 
@@ -76,8 +76,10 @@ so you do not want to be hunting for an answer mid-flow.
 3. **Entity type** as formed on Sunbiz: **LLC** (single- or multi-member) or
    **Corporation** (Inc./Corp.). → drives §4A.
 4. **Number of LLC members** (if an LLC).
-5. **Will this entity elect S-corp?** (very common here) → does **not** change
-   the EIN application, but flags the separate Form 2553 step (see §4B).
+5. **Will this entity elect S-corp?** (very common here) → does **not** change the
+   **entity-type** answer (§4A), and flags the separate Form 2553 step (§4B) — but
+   it **does** change **line 13**, because the owner-employee counts as an employee
+   (§4E).
 6. **Responsible party**: the one individual who owns/controls the entity, plus
    their **SSN or ITIN** (or the fact that they have **neither**). → this is the
    go/no-go decision in §1. See §4C for who qualifies.
@@ -104,15 +106,26 @@ else.
   (§2). EIN issued **immediately**, on screen, same session. This is the default
   and by far the fastest.
 - **❌ Responsible party has NEITHER an SSN nor an ITIN** (common for a foreign
-  owner) → you **cannot use the online tool**. Use **Path B: Form SS-4 by fax,
-  mail, or the international phone line** (§3). Fax turnaround is ~4 business
-  days; phone can be same-call for international applicants.
+  owner) → you **cannot use the online tool**. Use **Path B: Form SS-4 by fax or
+  mail** (§3). Fax turnaround is ~4 business days.
+
+> ⚠️ **Two different tests — don't mix them up.** *Which path* you take depends on
+> the **responsible party's** ID (this section). *Where you send it*, and whether
+> the phone line is even available, depends on **where the ENTITY is** — not where
+> its owner lives (§3). A Florida LLC with an owner abroad is a **domestic**
+> filing: the international phone line is **not** open to it.
 
 > **Frequent JK situation — foreign owner, no SSN/ITIN.** You do **not** need to
 > wait for the owner to get an ITIN before the company can get its EIN. File
 > **Form SS-4 by fax** with **"Foreign"** on line 7b (see §3). Getting an ITIN
 > (Form W-7) is a separate, slower track and is **not** a prerequisite for the
 > EIN.
+>
+> A wording note worth knowing: the instructions condition "Foreign" on the party
+> having *"and is **ineligible** to obtain"* an SSN or ITIN. In practice a foreign
+> owner with no US filing requirement can't obtain an ITIN yet, and the firm files
+> "Foreign" rather than stalling the company behind a W-7. If the person already
+> **has** an SSN or ITIN, it must be used.
 
 ---
 
@@ -131,16 +144,16 @@ isn't. Fill each one from its own source.
 
 | What's asked | 🖥️ Online EIN Assistant | 📄 Paper Form SS-4 |
 |---|---|---|
-| **Responsible party's ID** | **SSN or ITIN is mandatory** — a hard stop with no alternative. This is what makes the whole path unusable for a foreign owner | **Line 7b accepts `Foreign` or `N/A`** — an entry is required, but it doesn't have to be a number |
+| **Responsible party's ID** | **A valid SSN or ITIN is mandatory** (the instructions say *"SSN, EIN, or ITIN"* — the EIN case is for government entities, §2). No `Foreign` equivalent exists, which is what makes this path unusable for a foreign owner | **Line 7b accepts `Foreign` or `N/A`** — an entry is required, but it doesn't have to be a number |
 | **Business start date** | **Month + Year only** | **Line 11 — month, DAY, and year** (the day is not asked online) |
 | **Closing month of accounting year** | Not asked | **Line 12 — required** (usually `December`) |
-| **Employees** | A single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date). See §4E |
+| **Employees** | In the July-2026 walkthrough, a single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* — note **only the "No" branch has been walked**; a "Yes" may well open follow-ups §2 doesn't record | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date). See §4E |
 | **Excise / special-activity screening** | **Four yes/no questions**: ≥55,000 lb highway vehicle · gambling/wagering · Form 720 · alcohol, tobacco or firearms *(they sit in a block of five with the employee question above)* | **None of these exist on the form.** Don't go looking for them |
 | **Business activity** | A **category dropdown + a scripted follow-up** per category (the matrix in §2) | **Line 16** — a checkbox from a short list, **plus Line 17**, free text describing the actual line of merchandise or services |
 | **Prior EIN** | Not asked | **Line 18 — required**, plus the previous EIN if there was one |
 | **"Care of" / executor / trustee** | Not asked | **Line 3** |
 | **State/country of incorporation** | Captured as the state where the articles are filed | **Line 9b** — state **or foreign country** |
-| **LLC organized in the US?** | Implicit in the state question | **Line 8c** — an explicit yes/no (added in the Dec-2025 revision) |
+| **LLC organized in the US?** | Implicit in the state question | **Line 8c** — an explicit yes/no |
 | **The firm acting for the client** | A **radio button**: *"I am a third party applying for an EIN on behalf of this LLC"* | A full **Third-Party Designee block** (name, address, phone, fax) — **and the client must sign** the form. See §4D |
 | **Signature** | None — submitting is the attestation | **Required**: name, title, signature, date, applicant's phone, applicant's fax |
 | **Fixing a mistake** | **Impossible after submit** — you must start a whole new application | Just correct the paper before you send it |
@@ -148,10 +161,12 @@ isn't. Fill each one from its own source.
 
 ### The three that actually bite
 
-1. **A foreign responsible party kills the online path — full stop.** There is no
-   "Foreign" option in the tool; the SSN/ITIN field simply won't accept anything
-   else. Decide this in §1 **before** anyone opens the assistant, or you'll lose
-   the session finding out.
+1. **A foreign responsible party kills the online path — full stop.** The
+   instructions are explicit that the principal officer, member or owner *"must
+   have a valid taxpayer identification number (SSN, EIN, or ITIN) **in order to
+   use the online application**"*, and the tool has no "Foreign" equivalent.
+   Decide this in §1 **before** anyone opens the assistant, or you'll lose the
+   session finding out.
 2. **The paper form needs answers the online tool never asked for.** If you did an
    online application for a sister company and are now doing a paper one, you are
    **missing** the exact start day, the closing month, the employee counts, the
@@ -309,11 +324,11 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **2** | Trade name / DBA (only if operating under a fictitious name) |
 | **3** | Executor / administrator / trustee / "care of" name — only if someone else receives the entity's tax mail. If you fill it, **lines 4a–4b become that person's address** |
 | **4a/4b** | Mailing address. If it's outside the US, give city, province/state, postal code and the **country spelled out in full** — the IRS says *don't abbreviate the country name* |
-| **5a/5b** | Physical street address — **only if different from 4a/4b**. ⚠️ **No P.O. box allowed here.** So if line 4a *is* a P.O. box, 5a/5b are **mandatory**, not optional. If they genuinely match 4a/4b, leave 5a/5b **blank** |
-| **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled**, regardless of what 4a–5b say. This is not an address line and it is never skipped |
+| **5a/5b** | Physical street address — **only if different from 4a/4b**. ⚠️ **No P.O. box allowed here.** So if line 4a *is* a P.O. box, 5a/5b are **mandatory**, not optional. If they genuinely match 4a/4b, leave 5a/5b **blank** — this is the one place the SOP departs from the instructions' general *"enter 'N/A' on the lines that don't apply"*, because line 5a's own rule is "only if different" |
+| **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled for a new business**, regardless of what 4a–5b say — it is not part of the address comparison. (The form's *Do I Need an EIN?* table drops line 6 for a few narrow applications — banking-purpose-only, pension plan, withholding agent — none of which is this SOP's scope) |
 | **7a** | Responsible party's **name** — a **natural person**, never a company, and the one who genuinely controls the entity (see §4C). Their nationality and residence are **not** requirements |
 | **7b** | Their **SSN or ITIN** — or, when they have neither and are ineligible to obtain one, write **`Foreign`**. The Dec-2025 instructions sanction both spellings: *"Enter 'foreign' or N/A on line 7b if the responsible party doesn't have and is ineligible to obtain an SSN or ITIN. **An entry is required.**"* → **the box can never be left blank**, but it doesn't have to hold a number. If the person already has an SSN/ITIN, you must use it |
-| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** (8c is new in the Dec-2025 revision) |
+| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** For a single-member LLC owned by spouses in a community-property state and treated as disregarded, 8b is **`1`** |
 | **9a** | Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's **taxed** (see §4A) |
 | **9b** | If a corporation, the **state or foreign country** where incorporated |
 | **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
@@ -322,36 +337,48 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **13** | Highest number of employees expected in the next 12 months — **three separate boxes**: Agricultural / Household / **Other** (Other is where nearly every business goes). Enter **`-0-`** in the ones that don't apply. **When you don't know yet, `-0-` is the right answer** — see §4E for why inflating it costs you |
 | **14** | **Form 944 election.** Only if payroll tax will be ≤ **$1,000/year** (≈ **$5,000 or less** in total wages; $6,536 in US territories). ⚠️ **Checking it locks you in**: *"you must continue to file Form 944 … until the IRS instructs you to file Form 941."* **Usually leave unchecked.** And if line 13 is all zeros, **skip line 14 entirely** |
 | **15** | First date wages or annuities were paid. ⚠️ **If the business doesn't plan to have employees, enter `N/A`** — the instructions say so explicitly. **Don't leave it blank** |
-| **16** | Principal activity — one checkbox |
-| **17** | Principal line of merchandise/services — free text describing what the company actually does |
+| **16** | Principal activity — one checkbox. *"**You must check a box.**"* Use **Other** (and specify) if none of the listed ones fits |
+| **17** | Principal line of merchandise/services — free text describing what the company actually does, in more detail than 16. *"**An entry is required.**"* e.g. checked Construction on 16 → *"General contractor for residential buildings"* on 17 |
 | **18** | Has this entity ever applied for an EIN before? (No, for a new entity). If yes, write the previous EIN |
 | **Third-Party Designee** | If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the **client signs** the form (see §4D) |
-| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — nothing in the instructions requires a US number. Write it in full international form with the country code (`+380 44 123 4567`) so the IRS can actually dial it. For **Path B, always give a return fax number** — that's how the EIN comes back |
+| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — that's how the EIN comes back |
 
 ### Where to send it
 
-**Applicant is inside the 50 states or DC** (the responsible party lives in the
-US but has no SSN/ITIN):
+> 🚨 **The routing test is about the ENTITY, not the responsible party.** The IRS
+> wording is *"If **you** have a legal residence, principal place of business, or
+> principal office or agency in one of the 50 states or DC…"* — "you" is the
+> **applicant entity** on line 1. **A Florida LLC formed on Sunbiz has its
+> principal place of business in Florida, so it is a DOMESTIC filing even when
+> every owner lives abroad.** Getting this backwards sends the form to the wrong
+> queue and makes people reach for a phone line they aren't eligible for.
+
+**A. The ENTITY has a legal residence, principal place of business, or office in
+one of the 50 states or DC** — ✅ **this is the normal JK case**: a Florida
+company, whatever the owner's nationality or residence:
 
 - **Fax:** **855-641-6935** — include your **return fax number** and the IRS
   faxes the EIN back, generally within **~4 business days**.
 - **Mail:** Internal Revenue Service, **Attn: EIN Operation, Cincinnati, OH
   45999** — allow **~4–5 weeks**.
+- **Phone: not available.** The 267-941-1099 line is for applicants with **no** US
+  presence. A Florida company doesn't qualify, no matter where its owner lives.
 
-**Applicant has no legal residence / principal place of business / office in any
-state** (international applicant):
+**B. The ENTITY has no legal residence, principal place of business, or office in
+any state or DC** (a genuinely foreign entity, or one in a US territory):
 
 - **Fax:** **855-215-1627** (from within the US) or **304-707-9471** (from
   outside the US). Return fax → EIN generally within **~4 business days**.
 - **Mail:** Internal Revenue Service, **Attn: EIN International Operation,
   Cincinnati, OH 45999**.
-- **Phone (international applicants only):** **267-941-1099** (not toll-free),
-  **Mon–Fri, 6 a.m.–11 p.m. Eastern**. The caller must be authorized and able to
-  answer every SS-4 line — **fill out the SS-4 first**, then call; the EIN can be
-  issued on the call.
+- **Phone (this bucket only):** **267-941-1099** (not toll-free), **Mon–Fri,
+  6 a.m.–11 p.m. Eastern**. The caller must be authorized and able to answer every
+  SS-4 line — **fill out the SS-4 first**, then call; the EIN can be issued on the
+  call.
 
-> **Fax is the practical default for a no-SSN owner living in Florida:** ~4
-> business days vs. ~4–5 weeks by mail, and you keep a paper trail.
+> **Fax is the practical default for a Florida company with a no-SSN owner:** ~4
+> business days vs. ~4–5 weeks by mail, and you keep a paper trail. Bucket **A**,
+> fax **855-641-6935**.
 
 ---
 
@@ -415,10 +442,13 @@ If JK completes and submits the application **on the client's behalf**:
   it is not ongoing power of attorney.
 - ⚠️ **The matching trap.** *"If the third-party designee's address or telephone
   number **matches** the address or telephone number of the taxpayer, the
-  application **must be mailed or faxed**."* So if you put the firm's phone in
-  **both** the applicant's signature block and the designee block, you lose the
-  online and phone options. Use the **client's own** phone in the signature block
-  and the **firm's** in the designee block.
+  application **must be mailed or faxed**."* It matches on **either** the address
+  **or** the phone — and the likely collision is the firm appearing as the line-3
+  "care of" address *and* in the designee block. Use the **client's own** phone
+  and address in the taxpayer lines and the **firm's** in the designee block.
+  Practically this costs you the **phone** route (the online wizard has no
+  designee block at all — there it's the third-party radio button in §2), which
+  matters only for a bucket-**B** entity that could otherwise have called.
 - **The designee block is void without a signature** — *"You must complete the
   signature area for the authorization to be valid."*
 
@@ -520,8 +550,11 @@ Fill every box; put `-0-` in the ones that don't apply.
 - **Naming a US resident as responsible party just to have an SSN for 7b.** The
   responsible party is a statement of fact about who controls the entity, signed
   under penalties of perjury. Write **`Foreign`** on 7b instead (§4C).
-- **Reusing the firm's phone in both the signature block and the designee block.**
-  It forces the application to mail/fax only (§4D).
+- **Reusing the firm's phone or address in both the taxpayer lines and the
+  designee block.** It forces the application to mail/fax only (§4D).
+- **Routing Path B on where the OWNER lives instead of where the ENTITY is.** A
+  Florida LLC with a foreign owner is a **domestic** filing — fax **855-641-6935**,
+  and the 267-941-1099 phone line is **not** open to it (§3).
 
 ---
 
@@ -533,9 +566,9 @@ Fill every box; put `-0-` in the ones that don't apply.
 | IRS — Form SS-4 (PDF) | Path B form | <https://www.irs.gov/pub/irs-pdf/fss4.pdf> |
 | IRS — Instructions for Form SS-4 | Line-by-line | <https://www.irs.gov/instructions/iss4> |
 | IRS — Where to file SS-4 | Fax/mail addresses | <https://www.irs.gov/filing/where-to-file-your-taxes-for-form-ss-4> |
-| IRS — SS-4 fax (50 states + DC) | Domestic fax | **855-641-6935** |
-| IRS — SS-4 fax (international) | No US residence | **855-215-1627** (in US) · **304-707-9471** (outside US) |
-| IRS — EIN by phone (international only) | No-SSN/ITIN international applicant | **267-941-1099**, Mon–Fri 6 a.m.–11 p.m. ET (not toll-free) |
+| IRS — SS-4 fax (50 states + DC) | Domestic fax — **the ENTITY has a US place of business** (a Florida LLC does, even with a foreign owner) | **855-641-6935** |
+| IRS — SS-4 fax (international) | **The ENTITY** has no US residence/place of business | **855-215-1627** (in US) · **304-707-9471** (outside US) |
+| IRS — EIN by phone (international only) | **The ENTITY** has no US presence — *not* available to a US company with a foreign owner | **267-941-1099**, Mon–Fri 6 a.m.–11 p.m. ET (not toll-free) |
 | IRS — Business & Specialty Tax Line | 147C re-issue, EIN questions | **800-829-4933**, Mon–Fri 7 a.m.–7 p.m. local |
 | IRS — mail (domestic) | Domestic SS-4 by mail | Internal Revenue Service, Attn: EIN Operation, Cincinnati, OH 45999 |
 | IRS — mail (international) | International SS-4 by mail | Internal Revenue Service, Attn: EIN International Operation, Cincinnati, OH 45999 |
@@ -583,7 +616,8 @@ Business details
 
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
-- Path used:  ☐ A online   ☐ B fax (domestic 855-641-6935 / intl 855-215-1627)   ☐ B mail   ☐ B phone (intl 267-941-1099)
+- Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company = A)  ☐ B — entity has none
+- Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B only)
 
 Result  (store in client system, NOT the repo)
 - EIN assigned:
@@ -596,9 +630,14 @@ Notes / open questions:
 
 _Sources: IRS "How to apply for an EIN," "Apply for an EIN online," and "Where to
 file your taxes for Form SS-4"; IRS EIN telephone guidance for international
-applicants. **The line-by-line content in §1.5, §3 and §4E is taken directly from
-Form SS-4 and its Instructions, both Rev. December 2025** (read in full,
-2026-08-10). The online-wizard walkthrough in §2 was verified on screen in July
-2026 — the IRS changes that tool without notice, so re-check it and update §2 when
-it moves. Verify fax numbers, hours, and mailing addresses against the official
-IRS pages before filing — the IRS changes them periodically._
+applicants. **The line-by-line content in §1.5 (paper column) and §3 is taken
+directly from Form SS-4 and its Instructions, both Rev. December 2025** (read in
+full, 2026-08-10); quoted phrases come from that text. **§4E is different** — the
+line-13 wording is quoted, but its *consequences* (that a non-zero count opens the
+941/940 filing requirement and draws non-filing notices, and the
+Agricultural→943 / Household→Schedule H / Other→941+940 mapping) are **the firm's
+own operating knowledge**, not statements in the instructions. The online-wizard
+walkthrough in §2, and therefore the online column of §1.5, was verified on screen
+in **July 2026** — the IRS changes that tool without notice, so re-check it and
+update §2 when it moves. Verify fax numbers, hours, and mailing addresses against
+the official IRS pages before filing — the IRS changes them periodically._
