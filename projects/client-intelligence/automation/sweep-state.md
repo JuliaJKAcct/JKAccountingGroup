@@ -43,7 +43,7 @@ list grows.
 | NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
 | YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| iKids Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
+| iKids Group LLC | 2026-08-10 | **Ping cannot help on this client and re-checking it is wasted budget:** its two client Zoom calls are from **Jun–Jul 2025**, before Ping's index begins (~Jun 2026), so no transcript exists and none will. Use **Google Calendar** for who attended those calls — one is titled after the referring partner, not the client. Gmail + Drive + Double swept 2026-08-10 (people/ownership pass) |
 | Deep Tech Development Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
 | Beemold USA LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
