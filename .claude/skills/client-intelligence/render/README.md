@@ -57,6 +57,24 @@ Relies on the canonical template shape (status line, `## 1.`–`## 7.` sections,
 template (that's the `client-intelligence` skill's job) and the engine keeps working with
 no per-client code.
 
+Three details of that contract are easy to break by writing perfectly reasonable Markdown,
+so they are worth stating outright:
+
+- **One bullet = one physical line.** Bullets are matched line-anchored, so a soft-wrapped
+  bullet renders only its first line and the rest is dropped **silently**. Long is fine;
+  wrapped is not.
+- **§5 quirks and §6 outstanding items are capped at 4** on the card. A fifth bullet does
+  not appear anywhere — put the things a covering bookkeeper needs first.
+- **In "Information still needed", `[ ]` means open and `[x]` means settled.** The card's
+  "N fields still to confirm" badge counts only the unticked rows, which is what makes the
+  skill's "answered items stay, marked" rule safe: ticking a row retires it from the badge
+  without deleting the question from the file.
+
+§7 link parsing is per-line: the engine finds the line carrying the label (`**Double
+client:**`, `Google Drive folder`) and takes the first URL **on that line**, so a label may
+contain parentheses — `**Google Drive folder (sensitive vault):**` is the standard form —
+and one bullet can never borrow a later bullet's URL.
+
 ## Reusable exports (for the Knowledge Hub)
 
 `build.mjs` also exports `loadClients` / `clientCard` / `DASH_CSS` so the Knowledge Hub

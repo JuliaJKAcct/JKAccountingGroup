@@ -86,11 +86,15 @@ function bullets(text){
   }
   return out;
 }
+// "Information still needed" rows. The skill's rule is that an ANSWERED question stays in
+// the file with its box ticked (so it is not asked again) — so the tick is meaningful data,
+// not noise, and callers must be able to tell the two apart. Returning {done,text} is what
+// stops the "N fields still to confirm" badge from counting settled rows as open ones.
 function checkboxes(text){
   const out = [];
   for(const line of (text||'').split('\n')){
-    const m = line.match(/^- \[[ xX]\] (.*\S)\s*$/);
-    if(m) out.push(m[1].trim());
+    const m = line.match(/^- \[([ xX])\] (.*\S)\s*$/);
+    if(m) out.push({ done: m[1].toLowerCase() === 'x', text: m[2].trim() });
   }
   return out;
 }
@@ -223,8 +227,18 @@ export function loadClients(repoRoot){
     const systems = SYS.filter(([,re])=>re.test(md)).map(([n])=>n);
 
     const links = getSec(S,'7');
-    const dbl = (links.match(/\*\*Double client:\*\*[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
-    const drv = (links.match(/Google Drive folder[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
+    // Find the label's own line first, then take the first URL on it. The previous form
+    // (`label[^(]*\(`) bridged from the label to the URL across "anything but a paren", so
+    // ANY parenthesis in the label broke it and the link silently vanished from the card.
+    // Every client file writes "**Google Drive folder (sensitive vault):**", so the Drive
+    // link was missing on all 23. Matching per-line also stops one bullet's label from
+    // reaching into a later bullet's URL.
+    const linkOn = re => {
+      const line = links.split('\n').find(l => re.test(l)) || '';
+      return (line.match(/\((https?:\/\/[^)\s]+)\)/)||[])[1];
+    };
+    const dbl = linkOn(/\*\*Double client:\*\*/);
+    const drv = linkOn(/Google Drive folder/i);
     const related = [...links.matchAll(/\[`([a-z0-9-]+)\.md`\]/g)].map(m=>m[1]);
     const sopLine = links.split('\n').find(l=>/Related SOPs?/i.test(l)) || '';
     const sops = [...sopLine.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(m=>({t:m[1],u:m[2]}));
@@ -232,7 +246,9 @@ export function loadClients(repoRoot){
     const industry = stripSrc(snap['Industry / what they do']||'').replace(/\*\*/g,'');
     const quirks = bullets(getSec(S,'5')).slice(0,4);
     const open = bullets(hist['Outstanding items (CI-only — never in the SOP)']||'').slice(0,4);
-    const needed = checkboxes(hist['Information still needed']||'');
+    // Only the UNticked rows are still open. `c.needed` stays a plain string[] so the
+    // Knowledge Hub, which imports this engine, sees no API change.
+    const needed = checkboxes(hist['Information still needed']||'').filter(n=>!n.done).map(n=>n.text);
 
     return {
       slug, title, status, owner, updated,
