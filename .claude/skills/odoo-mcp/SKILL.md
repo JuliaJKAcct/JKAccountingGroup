@@ -75,6 +75,37 @@ layers agreed with Lilian. Read it before changing anything, and note *why* it m
 after the switch: the 50-call ceiling is currently acting as a handbrake on mistakes, and a
 direct connection removes it.
 
+### The direct-API key lives in a separate environment — check it before the first call
+
+The API key is **not** in the repo and **not** in every session. It is set as environment
+variables on a **dedicated Claude Code cloud environment** (`odoo-api`), picked from the cloud
+icon above the message box at claude.ai/code. The everyday `Default` environment deliberately
+does **not** carry it, so an unattended Routine at 3 a.m. never holds an administrator key over
+the live database (Lilian, Aug 2026 — the reasoning and the setup are in
+[`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md)).
+
+**So before the first direct-API call, confirm the key is present. It costs nothing — no MCP
+call, no Odoo call:**
+
+```bash
+[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — wrong environment"
+```
+
+**If it is missing, say so plainly and name the real cause:** *this session is running in the
+wrong environment; the key lives in `odoo-api`, and an environment is chosen only when a
+session starts — so it needs a new session, it cannot be switched mid-session.* Do not debug it
+as a credential problem, and never ask for the key to be pasted into the chat.
+
+**Why this check earns its place:** an unset `$ODOO_API_KEY` sends an *empty* bearer token, and
+Odoo answers `401 Invalid apikey` — byte-identical to a revoked or mistyped key. Without the
+check, the wrong environment looks exactly like a broken credential, and the session spends its
+time debugging a key that is perfectly fine.
+
+**The MCP connector is unaffected** — its traffic goes through Anthropic's servers rather than
+the session's network, so it works from **any** environment. Only the direct API needs
+`odoo-api`. A session in `Default` has not lost Odoo; it has lost the route that has no
+50-call ceiling.
+
 ### What counts as a call
 
 Assume **one MCP tool invocation = one call**, regardless of how much data it moves.
@@ -286,6 +317,8 @@ Before starting:
 - [ ] Confirm how many calls have already been used today
 - [ ] Write out the planned call sequence and count it
 - [ ] Confirm the plan fits the remaining budget
+- [ ] **Direct-API work only:** `$ODOO_API_KEY` is set — if not, it is the wrong environment,
+      not a bad key: the session must be restarted in `odoo-api` (§1)
 
 While working:
 - [ ] Batch every multi-record write

@@ -3,11 +3,20 @@
 The plan for replacing (or bypassing) the 50-call/day MCP connector with a direct
 connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 
-> **Status: approved, awaiting one 5-minute test, not yet built.** Lilian raised it with
-> **Andres** — who built the firm's Odoo website and set up the MCP connector — and he
-> confirmed **there is no problem connecting through the API** (Aug 2026). Odoo's
-> documentation says otherwise for the firm's plan; **§0 explains why both can be true and how
-> to settle it in five minutes.** Nothing exists yet: no user, no key, no tool.
+> **Status (2026-08-10): the key exists; the environment is being created; the test read is the
+> next action.** Lilian raised it with **Andres** — who built the firm's Odoo website and set up
+> the MCP connector — and he confirmed **there is no problem connecting through the API**, then
+> showed her how to obtain a key. She has it. Odoo's documentation says otherwise for the firm's
+> plan; **§0 explains why both can be true and what settles it.** Now that a key exists, §0's
+> Step B *is* the test — one read of `res.company` plus the one-character control — and it can
+> run as soon as a session starts in the `odoo-api` environment (§3 Step 3).
+>
+> **Still unrecorded: which Odoo user the key sits on.** The firm has one user and it is the
+> administrator, so assume full admin power until confirmed otherwise, and settle it before
+> granting the key any write scope (§3 Step 1, §5).
+>
+> **Still not built: the tool** (`tools/odoo-api/`, §5) — required before the first write, not
+> after.
 
 ---
 
@@ -239,22 +248,68 @@ developer mode nor 2FA.
 3. **A user may hold at most 10 keys** (`base.programmatic_api_keys_limit`); an eleventh fails
    with HTTP 422.
 
-### Step 3 — Store it as environment variables
+### Step 3 — Store it as environment variables, in a SEPARATE environment
 
 **Never in the repo. Never pasted into chat** (the conversation is stored).
 
-It goes in the **Claude Code environment's** configuration. Docs:
-`code.claude.com/docs/en/claude-code-on-the-web`.
+It goes in a **Claude Code cloud environment's** configuration. Docs:
+[`cloud-environments`](https://code.claude.com/docs/en/cloud-environments).
+
+**The screen (walked through with Lilian, 2026-08-10):**
+
+1. Open **claude.ai/code** in a browser — not inside a session.
+2. Click the **cloud icon** in the row **above the message box**, showing the current
+   environment's name. There is no settings page and no direct URL; that icon is the only way in.
+3. **Create a second environment** — *Add cloud environment* — named `odoo-api`. Hovering an
+   existing environment and clicking its ⚙️ edits that one instead.
+4. In **Environment variables**, `.env` format, one `KEY=value` per line, no quotes:
 
 ```
-ODOO_URL      = https://jkaccountinggroup.odoo.com
-ODOO_DB       = jkaccountinggroup
-ODOO_USER     = claude-api@jkaccountinggroup.com     # not needed by JSON-2, kept for reference
-ODOO_API_KEY  = (the key)
+ODOO_URL=https://jkaccountinggroup.odoo.com
+ODOO_DB=jkaccountinggroup
+ODOO_USER=claude-api@jkaccountinggroup.com     # not needed by JSON-2, kept for reference
+ODOO_API_KEY=(the key)
 ```
 
-Lilian asked to be walked through this screen live rather than handed a menu path — when she
-gets there, ask what she sees and guide from that.
+5. **Network access: leave it at `Trusted`.** Verified 2026-08-10 from a cloud session — an
+   unauthenticated `POST /json/2/res.company/search_read` returned **401**, so the session
+   network already reaches `jkaccountinggroup.odoo.com`. No custom domain list is needed.
+
+**Three things about this screen that will bite:**
+
+1. **It is not a secrets store, and the docs say so outright** — *"Anyone who uses the
+   environment can read the values, and cloud environments have no dedicated secrets store, so
+   don't add API keys or other credentials."* We are doing it anyway, knowingly, because it is
+   the only mechanism there is. That is what makes 2 and 3 below matter rather than being
+   fussiness.
+2. **A session copies the variables once, at startup.** Editing them does nothing to a session
+   already running, and an environment **cannot be switched mid-session** — a new session is the
+   only way to pick one up.
+3. **A lost key is not recoverable, only replaceable** (§6). So moving it between environments
+   later means *creating a new key*, not copying the old one. Choose the environment now.
+
+**Why a second environment rather than putting it in `Default`** (Lilian's decision,
+2026-08-10 — the reasoning, so it is not re-litigated):
+
+- **Routines are the real argument.** Scheduled, unattended runs execute *inside an
+  environment*. With the key in `Default`, every Routine the firm has — the monthly report, the
+  Monday repo audit, the armed booking-page wake-ups — starts at 3 a.m. carrying an
+  administrator key over the live database, whatever its task. Confining it means only Odoo work
+  carries it.
+- **Blast radius.** Most sessions never touch Odoo. In those, the key does not exist, so it
+  cannot leak into a log, an artifact, a pasted command, or a commit.
+- **One place to rotate, and an off switch.** Archiving `odoo-api` retires the key for every
+  future session at once — impossible for the environment used for everything.
+- **What it does NOT give:** it is not encryption. Julia and Lilian can still read the value in
+  the browser, and inside an `odoo-api` session the key has its full power. It shrinks the
+  radius, not the power.
+- **Cost:** remembering to pick the environment. Forgetting is harmless and self-announcing —
+  the calls fail with `401`. **The wrong-environment check in [`SKILL.md` §1](../SKILL.md) is
+  what turns that `401` into the right diagnosis** instead of an hour spent debugging a healthy
+  key.
+- **Checked 2026-08-10:** `Default` carries no firm-specific variables at all — everything set
+  there is Claude infrastructure. So a second environment duplicates nothing and adds no
+  maintenance.
 
 ### Step 4 — Prove the connection with a read that needs no permissions
 
