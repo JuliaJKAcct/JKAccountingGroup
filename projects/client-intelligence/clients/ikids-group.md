@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-10
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -39,9 +39,14 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| **Manager** — the LLC is manager-managed with a **single** Manager, who is also a member | Double client (portal contact) |
+| **Members / partners** — **three**; the Manager holds 33.4%, the other two 33.3% each (see §5) | Double client; Operating Agreement in Drive → `4-Corporate` |
+| **CFO** — group-level finance lead; **not** a member and **not** the Manager. He is the one who supplied the corporate documents at onboarding and attended the 2025 Zoom calls | Double client (contact, **no portal access**) |
 
 - **Double client:** [app.doublehq.com/close?cid=706689](https://app.doublehq.com/close?cid=706689)
+- **Portal-contact coverage:** two of the three members plus the CFO are registered as Double
+  contacts; the **third member is not** (no email address on file anywhere — see §6). Personal
+  names, emails, and phone numbers live in Double, never here.
 
 ## 3. Systems & access
 
@@ -63,6 +68,13 @@ the actual details.
 ### Income tax
 - **Applies?** Yes — **Form 1065** (partnership; multi-member LLC → K-1s to partners) _(Double)_
 - **Our role:** We prepare income tax _(Double)_; **1099 preparation** included.
+- **Nonresident members:** **two of the three** members were run through **1040-NR + K-1** and a
+  **W-7 / ITIN application** via an outside CAA in Apr–May 2026. **The third member's US tax status
+  is NOT established here** — no W-7 was filed for him, which may mean he already holds an SSN/ITIN
+  or is treated as a resident, but nothing on file confirms either. Do not infer residency from the
+  Operating Agreement: all three give **Ukrainian street addresses** there, and that is a 2025
+  mailing address, not a residency determination. Settle this before the next 1065 / §1446
+  withholding call — see §6.
 
 ### Licenses & other filings
 - **Annual report:** Yes — we handle it _(Double)_
@@ -71,7 +83,7 @@ the actual details.
 
 - **Pre-operational — startup-cost treatment is the central bookkeeping issue:** expenses are **capitalized as startup costs** until the park "begins operations"; pinning the operations-commencement date is a live judgment call tied to the opening. _(Gmail — Julia's bookkeeping instructions)_
 - **Heavier than standard bookkeeping — hands-on AP:** the firm **pays vendors** from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated AP inbox.
-- **Multi-member LLC / partnership** — issues **K-1s**; includes **nonresident / foreign partner(s)** → a 1040-NR + K-1 and an **ITIN application (CAA)** were run. Likely 3–4 partners _(count low confidence)_.
+- **Ownership & signing authority — exactly THREE members, and only ONE of them can bind the company:** the **Manager holds 33.4%** and the other two **33.3%** each (near-thirds, not exact — the odd 0.1% sits with the Manager). The LLC is **manager-managed with a single Manager** (himself a member) who alone has authority to bind it; the other two members have no day-to-day management or voting role. The **CFO is neither a member nor the Manager** — he does not appear in the agreement at all, so treat that title as a **group/functional role**, not a Florida-LLC office, and route anything needing a company-binding signature to the **Manager**. _(Operating Agreement dated 2025-04-18, Drive → `4-Corporate` — supersedes the earlier "likely 3–4 partners" estimate.)_
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC.
 
 ## 6. History & open questions
@@ -80,18 +92,24 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; partnership / 1065; monthly bookkeeping).
 - 2026-07-20 — **Gmail enrichment sweep:** established the iKidsPark play-park profile, Fort Lauderdale FL, RU/UA language, pre-operational startup-cost treatment, hands-on AP, and the related-entity group. Ping had **no indexed meetings**; facts are from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
+- 2026-08-10 — **Targeted people/ownership sweep** (Lilian, looking for a contact she could not find in Zoom). Read the **Operating Agreement** and settled the ownership structure: three members, equal thirds, single Manager (§5). Established that the **CFO is not a member or Manager**. Located the two **2025 Zoom calls** the CFO attended — 2025-06-20 (titled as the referrer's consultation, not iKids) and 2025-07-15 "Ikids Group LLC Setup" — which is why a Zoom search by client name finds nothing; Ping only indexes from ~Jun 2026, so **neither call has a transcript**. Registered the CFO as a Double contact **with no portal access**. Sources: Gmail, Google Calendar, Google Drive, Double. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Second nonresident partner's ITIN / info was pending** (as of Apr 2026) — confirm resolved.
+- **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client before the next 1065.
+- **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
 - A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
 - **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
 
 ### Information still needed
-- [ ] Fiscal year-end; exact number of partners
+- [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
+- [x] The third member's email address, so he can be registered in Double — **⏸ PAUSED INDEFINITELY by Lilian (2026-08-10): do NOT chase this**, in the weekend sweep or anywhere else. No email for him exists in Gmail, Drive or Double; every thread runs through Julia or the outside CAA. To reopen: get it from the client or the CFO, then register him in Double as a contact record with **no portal access**, exactly as was done for the CFO. This is the **contact record only** — the third member's **tax status** is a separate question and is still live (§4, §6 outstanding).
+- [ ] Fiscal year-end
 - [ ] Credentials Drive link; the "operations begin" date once known
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706689](https://app.doublehq.com/close?cid=706689)
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn)
+  - `4-Corporate` — Articles of Organization, EIN letter, **Operating Agreement** (the authority on
+    members, percentages, and the Manager — §5), and the members' immigration documents.
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
