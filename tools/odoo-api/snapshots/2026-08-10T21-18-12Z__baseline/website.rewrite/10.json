@@ -1,0 +1,22 @@
+{
+  "id": 10,
+  "display_name": "301 - 301 /ua/konsultatsiia/dyakuyemo/ -> no-slash",
+  "name": "301 /ua/konsultatsiia/dyakuyemo/ -> no-slash",
+  "website_id": false,
+  "active": true,
+  "url_from": "/ua/konsultatsiia/dyakuyemo/",
+  "route_id": false,
+  "url_to": "/ua/konsultatsiia/dyakuyemo",
+  "redirect_type": "301",
+  "sequence": 0,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2026-06-17 12:14:31",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-06-17 12:14:31"
+}

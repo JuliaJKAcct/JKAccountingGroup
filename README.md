@@ -17,6 +17,8 @@ work, with more to come.
 brand/        Shared brand foundation — logo, brand guide, design system.
               Used by every project.
 projects/     One folder per initiative (marketing, reasonable-compensation, …).
+tools/        Executable tooling — code that does something, as opposed to docs.
+              tools/odoo-api/ is the guarded route for changing anything in Odoo.
 .claude/      Reusable Claude skills that power the projects, plus the hooks that
               keep parallel sessions from colliding (see .claude/hooks/README.md).
 BACKLOG.md    Firm idea parking lot — ideas captured now to build later.

@@ -1,0 +1,60 @@
+{
+  "id": 1882,
+  "display_name": "Graphene s_numbers_grid",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Graphene s_numbers_grid",
+  "model": false,
+  "key": "theme_graphene.s_numbers_grid",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.s_numbers_grid\" name=\"Graphene s_numbers_grid\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 pt96 pb96\" remove=\"o_cc2 pb56 pt56\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/01_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('container')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_01_001\"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[1]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[2]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[3]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[4]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[5]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[6]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[7]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[8]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n</data>",
+  "arch_base": "<data inherit_id=\"website.s_numbers_grid\" name=\"Graphene s_numbers_grid\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 pt96 pb96\" remove=\"o_cc2 pb56 pt56\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/01_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('container')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_01_001\"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[1]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[2]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[3]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[4]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[5]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[6]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[7]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[8]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n</data>",
+  "arch_db": "<data inherit_id=\"website.s_numbers_grid\" name=\"Graphene s_numbers_grid\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 pt96 pb96\" remove=\"o_cc2 pb56 pt56\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/01_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('container')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_01_001\"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[1]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[2]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[3]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[4]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[5]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[6]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[7]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[8]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n</data>",
+  "arch_fs": "theme_graphene/views/customizations.xml",
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.s_numbers_grid\" name=\"Graphene s_numbers_grid\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 pt96 pb96\" remove=\"o_cc2 pb56 pt56\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"web_editor/Rainy/01_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('container')]\" position=\"before\">\n        <div class=\"o_we_shape o_web_editor_Rainy_01_001\"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[1]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[2]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[3]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[4]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[5]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[6]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[7]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n    <xpath expr=\"(//div[hasclass('o_grid_item')])[8]\" position=\"attributes\">\n        <attribute name=\"class\" add=\"o_cc5 bg-black-50\" remove=\"o_cc1\" separator=\" \"/>\n    </xpath>\n</data>",
+  "inherit_id": [
+    753,
+    "Numbers Grid"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-25 17:01:54",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:55",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": [
+    18,
+    "Graphene s_numbers_grid"
+  ]
+}

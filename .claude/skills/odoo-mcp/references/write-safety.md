@@ -1,17 +1,18 @@
 # Write safety — the six layers
 
 > ⚠️ **Six is the design. In force today: fewer.** Layer 1 is **waived** (the key sits on
-> Julia's administrator user — see its box), and several rules below are code that has not been
-> written. **Do not trust any summary of which — including this one. Read the `[code]` /
-> `[convention]` tag on each rule**, and the enforcement box just below.
+> Julia's administrator user — see its box). **Do not trust any summary of which rules are
+> enforced — including this one. Read the `[code]` / `[convention]` tag on each rule**, and the
+> enforcement box just below.
 
 **The standing rules for changing anything in Odoo**, whichever route is used — the MCP
-connector, or the direct API (live since Aug 2026 for reads). They apply to the website above all, because
+connector, or the direct API (reading since 2026-08-10; writing once it goes through
+[`tools/odoo-api/`](../../../../tools/odoo-api/)). They apply to the website above all, because
 that is what the public sees.
 
-> **Why they exist.** Today the 50-call/day ceiling works as a handbrake: a mistake stops
-> itself after 50 calls. **A direct API connection removes that handbrake.** A bad loop can
-> touch hundreds of records in seconds. So these stop being good habits and become the only
+> **Why they exist.** The 50-call/day ceiling used to work as a handbrake: a mistake stopped
+> itself after 50 calls. **The direct API removed that handbrake on 2026-08-10.** A bad loop can
+> now touch hundreds of records in seconds. These stopped being good habits and became the only
 > protection there is.
 >
 > **And be clear about where the risk actually sits.** Lilian approves changes that are
@@ -21,12 +22,17 @@ that is what the public sees.
 
 Designed as layers — if one fails, the next still catches it.
 
-> **What actually enforces each layer, today.** Several of these describe code that does not
-> exist yet (`tools/odoo-api/`, see
-> [`direct-api-setup.md` §5](./direct-api-setup.md#5--what-still-has-to-be-built)). Until it
-> is built, the layers marked **[convention]** depend on the operator following them; only the
-> ones marked **[code]** are mechanically enforced. Nobody should believe there is a brake on
-> the pedal that is not connected yet. Each rule below is tagged.
+> **What actually enforces each layer, today.** **`tools/odoo-api/` was built 2026-08-10**
+> ([`direct-api-setup.md` §5](./direct-api-setup.md#5--the-tool--built-2026-08-10)), so the
+> rules tagged **[code]** below are now mechanically enforced — the tool refuses, and
+> `--execute` does not override it. The ones tagged **[convention]** are still down to the
+> operator, and they are the ones to watch.
+>
+> ⚠️ **The tool is only a brake on writes that go through the tool.** A raw `curl`, or any code
+> that imports `lib/client.mjs` directly, bypasses every layer here. That is a deliberate
+> trade-off — reads have to stay cheap and unceremonious — but it means the rule "**writes go
+> through `odoo.mjs`, always**" is itself a convention, and it is the one everything else rests
+> on.
 
 ---
 
@@ -47,11 +53,13 @@ not code.
 >
 > **What follows from the waiver, stated honestly.** These layers were written as a defence
 > *behind* a scoped key. There is no scoped key, so for writes they are the front line, and the
-> count is smaller than six: Layer 1 waived, Layer 2's snapshot rule and Layer 4 are unbuilt code
-> (see the enforcement box above). What is actually operating today is **convention, plus the
-> connector's 50-call ceiling — and the direct route removes that ceiling.** That is the real
-> reason [`direct-api-setup.md` §5](./direct-api-setup.md#5--what-still-has-to-be-built) says
-> `tools/odoo-api/` must exist **before the first write over the direct API**, not after.
+> count is smaller than six: **Layer 1 is waived, leaving Layers 2–6 as the entire defence.**
+> That is why [`direct-api-setup.md` §5](./direct-api-setup.md#5--the-tool--built-2026-08-10)
+> gated the first direct-API write on `tools/odoo-api/` existing — **and as of 2026-08-10 it
+> does**, so Layer 2's snapshot rule and all of Layer 4 are now enforced in code rather than by
+> memory. **The limit of that guarantee:** it only binds writes that go through the tool. A raw
+> `curl` bypasses every layer here, and the 50-call ceiling that used to backstop mistakes does
+> not exist on the direct route.
 >
 > **And the practical consequence:** revocation is the only way to withdraw this credential —
 > Julia's *avatar → My Preferences → Account Security*. Worth knowing before it is needed in a
@@ -72,7 +80,7 @@ not code.
    before any of this starts. **[convention]**
 5. **A snapshot of every record before touching it — and of everything that points at it.**
    Read it, write its current contents to a timestamped file, and record the exact command
-   that puts it back. **No snapshot, no write.** **[code, once the tool exists]**
+   that puts it back. **No snapshot, no write.** **[code]** — `store.snapshot()`; the write refuses if it throws
 
    The record alone is **not enough** on the website models, because Odoo cascades:
 
@@ -99,8 +107,8 @@ not code.
 | | When | What happens |
 |---|---|---|
 | **1 — Before** | Before anything is written | Present the plan: which record, which field, **current value → new value**, and how to undo it. **The owner approves.** No approval, no execution **[convention]** |
-| **2 — At execution** | The moment of the change | The tool runs **in dry-run by default** — it prints what it would do without doing it. A real write requires an explicit, separate flag **[code, once the tool exists — the MCP has no dry-run mode, so today this is convention]** |
-| **3 — After** | Immediately after | Re-fetch the changed page over HTTP **and a canary set** of pages, and compare against the baseline recorded before **[convention]** |
+| **2 — At execution** | The moment of the change | The tool runs **in dry-run by default** — it prints what it would do without doing it. A real write requires an explicit, separate flag **[code]** — dry run unless `--execute` |
+| **3 — After** | Immediately after | Re-fetch the changed page over HTTP **and a canary set** of pages, and compare against the baseline recorded before **[code]** — every `--execute` sweeps before and after and exits non-zero on a regression |
 
 **The third one is the one everybody skips.** Checking only the page you edited is not enough:
 Odoo pages share templates, so a change can break something else entirely. The canary set —
@@ -108,15 +116,17 @@ at minimum the home page, `/pricing`, `/consultation`, `/ua/konsultatsiia`, `/ap
 and `/appointment/3` — is checked **before and after**. It costs nothing (plain HTTP, not API
 calls), so repeat it as many times as it takes to be sure.
 
-**Judge it against the baseline, not against 200.** Some canaries are *currently broken* —
-`/appointment/1` and `/appointment/3` return 500 today. The test is therefore: **no page may
-get worse than its baseline**, and the pages the change was meant to fix must get better.
+**Judge it against the baseline, not against 200.** The principle stands, but **the example
+it used is out of date: `/appointment/1` and `/appointment/3` return 200 as of 2026-08-10**,
+rendering "Discovery Call" and "Consultation" — they are no longer broken. The test is
+therefore, always: **no page may get worse than its recorded baseline**, and the pages the
+change was meant to fix must get better. Record a fresh baseline (`odoo.mjs baseline`) rather
+than trusting any status written down here.
 
 ## Layer 4 — Hard limits inside the tool
 
-To be written into the code of `tools/odoo-api/`, not left to judgment. **Until that tool
-exists these four are conventions** — say so rather than implying a guardrail that isn't
-wired up yet.
+**All four are now in the code of `tools/odoo-api/lib/safety.mjs`** and were verified by
+running them — each refuses with a non-zero exit code even when `--execute` is passed. **[code]**
 
 7. **Model allow-list.** Only the models agreed for the task (website views and pages,
    appointment types). Everything else refuses, even if asked.
@@ -153,13 +163,21 @@ wired up yet.
 ## The order of work matters too
 
 Do the **reversible** things first and the irreversible last — *unless something irreversible
-is blocking everything else*, which is exactly the situation today.
+is blocking everything else*.
 
-**The `ir.ui.view` 2010 deletion goes FIRST**, despite being the least reversible change on
-the list, because until it is done **nothing on the site can be booked at all** (see
-[`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 20). Being blocking outranks being reversible.
-The compensating control is Layer 2: snapshot the view **and its dependents** — the pages that
-cascade off it and any views inheriting from it — before touching it.
+> ### ⚠️ 2026-08-10 — the exception that drove this section has expired. Do not act on it.
+> This section used to say **the `ir.ui.view` 2010 deletion goes FIRST**, because until it was
+> done "nothing on the site can be booked at all".
+>
+> **Both halves are now false, verified live:** every booking page returns **HTTP 200** and
+> renders (`/appointment/1` → "Discovery Call", `/appointment/3` → "Consultation"), **and view
+> 2010 still exists and is active** — so the prescribed fix was never applied and the pages
+> recovered anyway. Whatever resolved it, deleting an active view to fix a page that works
+> would now be an unforced, irreversible change.
+>
+> **So the plain rule applies again: reversible first, irreversible last.** Before touching
+> view 2010 for any reason, re-verify the breakage still exists. See
+> [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 20.
 
 ---
 

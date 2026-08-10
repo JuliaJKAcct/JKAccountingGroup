@@ -437,3 +437,62 @@ While working:
 Before finishing:
 - [ ] Post chatter note(s) summarizing what changed, at the right granularity
 - [ ] Report total calls used and what remains
+
+---
+
+## 7. Working over the direct API (since 2026-08-10)
+
+The direct connection is live and has **no 50-call ceiling**. Two things follow, and the second
+is the one that bites.
+
+### Reads are free and safe. Writes go through the tool.
+
+Reading over the direct API costs nothing and **cannot break anything** — explore freely with
+`curl` or `tools/odoo-api/odoo.mjs read`. Writing is different: use
+**[`tools/odoo-api/`](../../../tools/odoo-api/)** and nothing else.
+
+```bash
+node tools/odoo-api/odoo.mjs check      # credentials + what the key can actually do
+node tools/odoo-api/odoo.mjs baseline   # ALWAYS before a working session
+node tools/odoo-api/odoo.mjs write --model … --id … --set '{…}' --profile … --reason "…"
+#   ^ dry run. Add --execute only after reading the dry-run output.
+```
+
+The tool enforces [`write-safety.md`](./references/write-safety.md) in code: dry-run default,
+snapshot-before-write including dependents, deny-list and profile allow-list that `--execute`
+cannot override, a volume brake, a before/after canary sweep, and an append-only ledger.
+**A raw `curl` write bypasses all of it** — that is the one rule the code cannot enforce on
+itself.
+
+⚠️ **The key is Julia's administrator key** (a dedicated user was declined on cost). It can
+write `res.users` and `ir.rule`. The tool refuses to; nothing else does.
+
+### The API gives access, not instructions — so generate the map, don't guess it
+
+An MCP connector ships described tools: Claude sees the names, parameters and purpose without
+being told. A raw API key explains nothing. **But that gap is closed by reading, not by trial
+and error on the live site** — Odoo describes itself:
+
+```bash
+node tools/odoo-api/odoo.mjs map                        # every model on this instance
+node tools/odoo-api/odoo.mjs map --model website.page   # fields, types, which are required
+```
+
+Generated from the database, so never stale; regenerated rather than committed. Use it before
+writing anything against an unfamiliar model, instead of probing a field name and seeing what
+happens.
+
+**What introspection can never tell you is the behaviour** — that deleting a view silently
+deletes the page pointing at it, that a 401 has two different meanings, that the booking pages
+recovered on their own. **That knowledge belongs here, in this skill.** When a session learns
+something the schema does not say, add it to this file or to
+[`references/`](./references/) — that is the firm's substitute for the operating knowledge the
+connector used to supply.
+
+### Which route to use
+
+| Situation | Route |
+|---|---|
+| Any write to Odoo | **`tools/odoo-api/`**, always |
+| Bulk or exploratory reads, schema questions | Direct API — free, uncapped, harmless |
+| Claude on a phone or in a browser (no shell) | The **MCP connector** — still the only option there, still 50 calls/day |

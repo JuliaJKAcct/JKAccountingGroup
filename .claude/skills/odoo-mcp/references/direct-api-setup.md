@@ -3,38 +3,47 @@
 The plan for replacing (or bypassing) the 50-call/day MCP connector with a direct
 connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 
-> **Status (2026-08-10): the key exists, the `odoo-api` environment is created, and a session
-> there reports the connection working.** Lilian raised it with **Andres** — who built the firm's
-> Odoo website and set up the MCP connector — and he confirmed **there is no problem connecting
-> through the API**, then showed her how to obtain a key. Odoo's documentation says otherwise for
-> the firm's plan; **§0 explains why both can be true and what settles it.** So the *technical*
-> question now reads as answered in the affirmative, and Andres's account is the one the evidence
-> supports. **The *contractual* one is untouched** — the terms still say Standard is not entitled
-> to the external API, and Odoo Online auto-upgrades, so this can stop working without the firm
-> doing anything. Not a licence.
+> **Status (2026-08-10): DONE — the connection is proven, and the tool that gates writes is built.**
+> Lilian raised it with **Andres** — who built the firm's Odoo website and set up the MCP
+> connector — and he confirmed **there is no problem connecting through the API**, then showed her
+> how to obtain a key. She created the dedicated `odoo-api` environment and put the key in it.
+> **Step B′ ran there the same day, control included, and passed** (§0). So the *technical*
+> question is answered in the affirmative and Andres's account is the one the evidence supports.
+> **The *contractual* one is untouched** — the terms still say Standard is not entitled to the
+> external API, and Odoo Online auto-upgrades, so this can stop working without the firm doing
+> anything. Not a licence.
 >
-> **Recorded 2026-08-10 (both were open items; Lilian answered them):**
-> - **The key sits on Julia's user — the administrator.** So the earlier "assume full admin
->   power" is no longer an assumption: **it is confirmed.** The key can do anything Julia can do,
->   which on this database is everything. The dedicated low-privilege user of §3 Step 1 was never
->   created (it costs a full Odoo seat), so **[`write-safety.md`](./write-safety.md) Layer 1 is
->   waived.** Count what is left honestly rather than saying "the other five carry it": Layer 2's
->   snapshot rule and Layer 4 are **unbuilt code** (`tools/odoo-api/`, §5). What is actually
->   operating today is **convention plus the connector's 50-call ceiling — and the direct route
->   removes that ceiling.** That is precisely why §5 gates the **first direct-API write** on the
->   tool being built. Reads are fine; writes are not, yet.
-> - **Duration: indefinite — the key never expires.** Only a Settings/system user can mint a
->   persistent key (§3 Step 2), which independently corroborates that this is an administrator
->   key. Two consequences: the 90-day rotation problem does not apply, and **revocation is now
->   the only way to withdraw this credential** — done from Julia's own *My Preferences → Account
->   Security*, which is worth knowing before it is needed in a hurry.
+> **The key, confirmed by reading `res.users` — not assumed:**
+> - **It sits on Julia's user, the administrator.** It authenticates as
+>   `julia@jkaccountinggroup.com` (uid 2), and `has_access` returns `true` for
+>   read/write/create/unlink on every model checked, **including `res.users`, `ir.model.access`
+>   and `ir.rule`**. The dedicated low-privilege user of §3 Step 1 was never created — it costs a
+>   full Odoo seat, $31.10/month, doubling the bill for a one-user firm — so
+>   **[`write-safety.md`](./write-safety.md) Layer 1 is waived.** Count what is left honestly:
+>   Layers 2–6 are the entire defence, which is exactly why the tool below stopped being optional.
+> - **Duration: indefinite — and so are the other three.** The database holds **four** API keys,
+>   all on Julia's user, all `scope: false` (unrestricted), all `expiration_date: false`:
 >
-> **Still open:** the **one-character control call** from Step B′ item 3. Without it, "it works"
-> rests on a single successful call; the control is what rules out a false positive. Cheap, so
-> do it before relying on the connection.
+>   | Key | Created | Expires |
+>   |---|---|---|
+>   | `Odoo MCP` | 2026-06-16 | never |
+>   | `Odoo MCP J Claude` | 2026-07-18 | never |
+>   | `API For Directly Claude Access - Andres` | 2026-08-09 | never |
+>   | `API For Directly Claude Access - Julia` | 2026-08-10 | never |
 >
-> **Still not built: the tool** (`tools/odoo-api/`, §5) — required before the first write, not
-> after.
+>   **This corrects §3 Step 2 of this file**, which said a key cannot be created without a
+>   duration and that only a Settings user can make a persistent one. Both halves hold — but
+>   Julia *is* a Settings user, so the *Persistent Key* option was available and every key the
+>   firm has is permanent. There is no rotation date to calendar because there is no expiry;
+>   the trade-off is that nothing ages these keys out on its own — so **revocation is the only
+>   way to withdraw any of them**, done from Julia's own *My Preferences → Account Security*.
+>   Worth knowing before it is needed in a hurry. Andres's key (2026-08-09) is **deliberately
+>   left in place — he is using it** (Lilian, 2026-08-10).
+>
+> **Built 2026-08-10: [`tools/odoo-api/`](../../../../tools/odoo-api/)** — the six layers as code
+> rather than convention. Dry-run by default, snapshot-before-write with dependents, deny-list and
+> profile allow-list that `--execute` cannot override, volume brake, before/after canary check,
+> and an append-only ledger. See §5.
 
 ---
 
@@ -106,6 +115,25 @@ Two calls. Nothing created, nothing revoked.
    `FOLLOW-UPS.md` row 21.
 
 Read the outcome with the table under Step B — it applies unchanged.
+
+> ### ✅ Ran 2026-08-10 in the `odoo-api` environment — PASSED
+>
+> | | Result |
+> |---|---|
+> | The read — `POST /json/2/res.company/search_read`, fields `["name"]` | **HTTP 200** → `[{"id": 1, "name": "jkaccountinggroup"}]` |
+> | The control — identical call, last character of the key changed | **HTTP 401**, `werkzeug.exceptions.Unauthorized`, message `Invalid apikey` |
+> | Server | `19.0+e` — Odoo 19, Enterprise |
+> | Reach | **615 models** readable; introspection (`ir.model.fields`, `fields_get`) works |
+>
+> Row 1 of the reading table: **the external API is not blocked at the server today.** That is
+> the *technical* question. It is **not** a licence — the published terms still say Standard is
+> not entitled to it, and Odoo Online auto-upgrades, so this can change without the firm doing
+> anything. Proceed without spending; confirm with Andres or the Customer Success Manager
+> before building anything the firm depends on.
+>
+> **The free shortcut below is still worth asking Andres**, because it is the one thing that
+> would settle the contractual side: did he give Pantalytics an API key, or a username and
+> password?
 
 ---
 
@@ -448,19 +476,37 @@ better reference than any general documentation.
 The old XML-RPC form (`common.authenticate` → uid → `execute_kw`) still works today and is
 fine as a fallback, but new code should not start there.
 
-## 5 · What still has to be built
+## 5 · The tool — built 2026-08-10
 
-A small tool in the repo — `tools/odoo-api/` — so no session reinvents it:
+[`tools/odoo-api/`](../../../../tools/odoo-api/) — read its
+[`README`](../../../../tools/odoo-api/README.md) before using it. Every item this section
+listed as required now exists and was verified by running it:
 
-- authenticate from the environment variables (never from arguments, never logged);
-- **dry-run by default** — a real write needs an explicit, separate flag;
-- the model allow-list and deny-list from [`write-safety.md`](./write-safety.md) enforced **in
-  code**, not by good intentions;
-- snapshot-before-write **including the record's dependents** (see write-safety Layer 2), with
-  the ready-made undo;
-- the post-write HTTP canary check against a recorded baseline.
+| Requirement | Where it lives | Verified |
+|---|---|---|
+| Authenticate from the environment, never from arguments, never logged | `lib/client.mjs` — the key is scrubbed from every error string before it can reach a screen or a log | `check` prints length only |
+| **Dry-run by default**; a real write needs a separate explicit flag | `odoo.mjs` — `--execute` | A dry run against `website.page:21` changed nothing; re-read confirmed |
+| Allow-list and deny-list **in code**, not good intentions | `lib/safety.mjs` — `DENY_WRITE`, `DENY_DELETE`, `PROFILES` | `res.users` and an out-of-profile model both refused **with `--execute` passed** |
+| Snapshot-before-write **including dependents**, with a ready-made undo | `lib/store.mjs` — `snapshot()` + `DEPENDENTS` | Snapshotting the Home page captured the `website.menu` row pointing at it |
+| Post-write canary check against a recorded baseline | `lib/canary.mjs` | Baseline recorded; `canary` reports against it, judging *worse-than-baseline*, not *not-200* |
+| Volume brake | `lib/safety.mjs` — 1 record for website models, 5 elsewhere | — |
+| Versioned history + audit | `snapshots/` committed to git, `history.jsonl` append-only, `diff` between any two versions | `baseline` captured 231 records; `diff`/`restore`/`history` exercised |
 
-Build it **before** the first write, not after.
+**Two design decisions worth knowing before changing it:**
+
+1. **Git is the version store.** Snapshots of website content are committed one file per
+   record, so the repo's own history answers "what did this look like three weeks ago?" and
+   "which change broke it?". Unchanged records serialise identically and cost nothing extra in
+   git. Anything that may carry client data goes to a gitignored `snapshots-private/` instead —
+   `safety.isCommittable()` decides, and the ledger applies the same rule to its own contents.
+2. **The baseline is not every view.** ~2,760 of the instance's ~2,940 `ir.ui.view` records ship
+   with Odoo's modules — not ours to lose, restored by a module upgrade. Capturing them would
+   bury the ~180 that *are* ours. Scope: `website_id` set or `arch_updated`, plus all pages,
+   menus and redirects.
+
+**If a safety rule changes here, change [`write-safety.md`](./write-safety.md) in the same
+commit** — otherwise the document stops describing the code and the next session trusts the
+wrong one.
 
 ## 6 · Two questions Lilian asked, answered here so they don't get re-asked
 

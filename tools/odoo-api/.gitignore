@@ -1,0 +1,8 @@
+# Snapshots of models that may hold client data, personal data, or secrets.
+# These NEVER enter git — see CLAUDE.md, "Client data is sensitive", and
+# lib/safety.mjs → isCommittable().
+snapshots-private/
+
+# The generated schema reference is rebuilt from the database on demand
+# (`odoo.mjs map`). Committing it would freeze a copy that silently goes stale.
+reference/

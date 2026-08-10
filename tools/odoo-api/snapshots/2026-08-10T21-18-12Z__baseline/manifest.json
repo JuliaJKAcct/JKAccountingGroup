@@ -1,0 +1,31 @@
+{
+  "takenAt": "2026-08-10T21:18:15.341Z",
+  "kind": "baseline",
+  "reason": "First baseline — before any write ever happens",
+  "counts": {
+    "website.page": 30,
+    "ir.ui.view": 175,
+    "website.menu": 15,
+    "website.rewrite": 11
+  },
+  "total": 231,
+  "scope": {
+    "website.page": [],
+    "ir.ui.view": [
+      "|",
+      [
+        "website_id",
+        "!=",
+        false
+      ],
+      [
+        "arch_updated",
+        "=",
+        true
+      ]
+    ],
+    "website.menu": [],
+    "website.rewrite": []
+  },
+  "excluded": "Standard Odoo module views (no website_id, never hand-edited) are not captured — they are restored by a module upgrade, not from here."
+}

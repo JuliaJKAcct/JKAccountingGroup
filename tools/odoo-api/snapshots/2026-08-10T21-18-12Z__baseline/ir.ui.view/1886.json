@@ -1,0 +1,60 @@
+{
+  "id": 1886,
+  "display_name": "s_striped_center_top",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "s_striped_center_top",
+  "model": false,
+  "key": "theme_graphene.s_striped_center_top",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.s_striped_center_top\">\n    <!-- Title -->\n    <xpath expr=\"//h1\" position=\"replace\" mode=\"inner\">\n        Robotics and Technology Driving Innovation\n    </xpath>\n    <!-- Paragraph -->\n    <xpath expr=\"//p[hasclass('lead')]\" position=\"replace\" mode=\"inner\">\n        Lead the future with cutting-edge robotics and technology solutions, designed to revolutionize your business operations.\n    </xpath>\n    <!-- Button -->\n    <xpath expr=\"//a[hasclass('btn')]/t\" position=\"replace\" mode=\"inner\">\n        Explore Our Technology\n    </xpath>\n    <!-- Figcaption -->\n    <xpath expr=\"//figcaption\" position=\"replace\" mode=\"inner\">\n        Innovation through advanced tech\n    </xpath>\n</data>",
+  "arch_base": "<data inherit_id=\"website.s_striped_center_top\">\n    <!-- Title -->\n    <xpath expr=\"//h1\" position=\"replace\" mode=\"inner\">\n        Robotics and Technology Driving Innovation\n    </xpath>\n    <!-- Paragraph -->\n    <xpath expr=\"//p[hasclass('lead')]\" position=\"replace\" mode=\"inner\">\n        Lead the future with cutting-edge robotics and technology solutions, designed to revolutionize your business operations.\n    </xpath>\n    <!-- Button -->\n    <xpath expr=\"//a[hasclass('btn')]/t\" position=\"replace\" mode=\"inner\">\n        Explore Our Technology\n    </xpath>\n    <!-- Figcaption -->\n    <xpath expr=\"//figcaption\" position=\"replace\" mode=\"inner\">\n        Innovation through advanced tech\n    </xpath>\n</data>",
+  "arch_db": "<data inherit_id=\"website.s_striped_center_top\">\n    <!-- Title -->\n    <xpath expr=\"//h1\" position=\"replace\" mode=\"inner\">\n        Robotics and Technology Driving Innovation\n    </xpath>\n    <!-- Paragraph -->\n    <xpath expr=\"//p[hasclass('lead')]\" position=\"replace\" mode=\"inner\">\n        Lead the future with cutting-edge robotics and technology solutions, designed to revolutionize your business operations.\n    </xpath>\n    <!-- Button -->\n    <xpath expr=\"//a[hasclass('btn')]/t\" position=\"replace\" mode=\"inner\">\n        Explore Our Technology\n    </xpath>\n    <!-- Figcaption -->\n    <xpath expr=\"//figcaption\" position=\"replace\" mode=\"inner\">\n        Innovation through advanced tech\n    </xpath>\n</data>",
+  "arch_fs": "theme_graphene/views/customizations.xml",
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.s_striped_center_top\">\n    <!-- Title -->\n    <xpath expr=\"//h1\" position=\"replace\" mode=\"inner\">\n        Robotics and Technology Driving Innovation\n    </xpath>\n    <!-- Paragraph -->\n    <xpath expr=\"//p[hasclass('lead')]\" position=\"replace\" mode=\"inner\">\n        Lead the future with cutting-edge robotics and technology solutions, designed to revolutionize your business operations.\n    </xpath>\n    <!-- Button -->\n    <xpath expr=\"//a[hasclass('btn')]/t\" position=\"replace\" mode=\"inner\">\n        Explore Our Technology\n    </xpath>\n    <!-- Figcaption -->\n    <xpath expr=\"//figcaption\" position=\"replace\" mode=\"inner\">\n        Innovation through advanced tech\n    </xpath>\n</data>",
+  "inherit_id": [
+    862,
+    "Striped Center Top"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-25 17:01:54",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:55",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": [
+    26,
+    "s_striped_center_top"
+  ]
+}
