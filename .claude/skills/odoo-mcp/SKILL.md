@@ -77,8 +77,10 @@ that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) i
 instance while **XML-RPC/JSON-RPC are deprecated, scheduled for removal from Odoo Online in
 winter 2027**. New code targets JSON-2.
 
-**The 50/day budget below governs every call that goes through the connector** — which is every
-Odoo call from any session not started in `odoo-api`. And whichever route is in use, every
+**The 50/day budget below governs every call that goes through the connector — including from a
+session started in `odoo-api`.** The environment decides whether the *direct* route is available;
+it does not exempt MCP calls. In practice an `odoo-api` session doing MCP work spends the shared
+budget exactly like any other. And whichever route is in use, every
 write follows **[`references/write-safety.md`](./references/write-safety.md)** — the six
 layers agreed with Lilian. Read it before changing anything, and note *why* it matters more
 on the direct route: the 50-call ceiling is acting as a handbrake on mistakes, and a
@@ -95,13 +97,16 @@ direct connection removes it.
 
 The key is **not** in the repo and **not** in every session. It lives on the dedicated
 `odoo-api` cloud environment, picked from the cloud icon above the message box at claude.ai/code
-(created 2026-08-10). The everyday `Default` environment deliberately does **not** carry it, so
+(created 2026-08-10 — **`FOLLOW-UPS.md` row 21 is the single source of truth for the current
+state**; prefer it over any status sentence in the skills, which go stale). The everyday
+`Default` environment deliberately does **not** carry it, so
 an unattended Routine at 3 a.m. never holds an administrator key over the live database — the
 reasoning and the setup are in
 [`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md).
 
-> ⚠️ **The key is on Julia's user — the administrator — and it never expires** (confirmed by
-> Lilian, 2026-08-10). It can do anything on this database, indefinitely, until someone revokes
+> ⚠️ **The key is on Julia's user — the administrator — and is reported non-expiring** (Lilian,
+> 2026-08-10; persistent keys are a Settings-user option and hers is one, but no expiry date was
+> ever captured, so treat expiry as unlikely rather than impossible). It can do anything on this database, indefinitely, until someone revokes
 > it (from Julia's *My Preferences → Account Security*; there is no other way to withdraw it).
 > The low-privilege user of `direct-api-setup.md` §3 Step 1 was never created, so
 > **[`write-safety.md`](./references/write-safety.md) Layer 1 is waived** — read that file before

@@ -48,13 +48,17 @@ echo "═══ Parallel-work check — other sessions may be editing the same f
 # Printed before the origin/main guard below, so it survives a failed fetch.
 # Two lines, per the hooks README's "stay short" rule.
 if [ -n "${ODOO_API_KEY:-}" ]; then
-  echo "Odoo: a direct-API key IS in this session — no 50/day cap on that route."
-  echo "  Reads unblocked; writes still gated. See .claude/skills/odoo-mcp §1."
-else
-  echo "Odoo: MCP connector only — 50 calls/day, shared firm-wide. No direct key."
-  echo "  Before any Odoo change or heavy read, read .claude/skills/odoo-mcp §1."
+  if [ -n "${ODOO_URL:-}" ] && [ -n "${ODOO_DB:-}" ]; then
+    echo "Odoo: direct-API credentials present in this session (URL, DB, key)."
+  else
+    echo "Odoo: ODOO_API_KEY is set but ODOO_URL/ODOO_DB are NOT — the direct route"
+    echo "  is misconfigured, and its curl will fail on an empty host, not a 401."
+  fi
+  echo "  Before using it, read .claude/skills/odoo-mcp §1 — it says what that route"
+  echo "  may and may not do today. Do not infer either from this line."
 fi
-echo ""
+# No `else` branch on purpose: connector-only is the default state, and CLAUDE.md
+# already carries it into every session. Printing it here would be a third copy.
 
 if ! git rev-parse --verify --quiet origin/main >/dev/null 2>&1; then
   echo "(No origin/main here yet — nothing to compare against.)"

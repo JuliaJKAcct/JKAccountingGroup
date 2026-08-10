@@ -1,11 +1,12 @@
 # Write safety — the six layers
 
 > ⚠️ **Six is the design. In force today: fewer.** Layer 1 is **waived** (the key sits on
-> Julia's administrator user — see its box), and Layer 2's snapshot rule and Layer 4 are code
-> that has not been written. Read the enforcement box below before relying on any of this.
+> Julia's administrator user — see its box), and several rules below are code that has not been
+> written. **Do not trust any summary of which — including this one. Read the `[code]` /
+> `[convention]` tag on each rule**, and the enforcement box just below.
 
-**The standing rules for changing anything in Odoo**, whichever route is used: the MCP
-connector today, the direct API once it exists. They apply to the website above all, because
+**The standing rules for changing anything in Odoo**, whichever route is used — the MCP
+connector, or the direct API (live since Aug 2026 for reads). They apply to the website above all, because
 that is what the public sees.
 
 > **Why they exist.** Today the 50-call/day ceiling works as a handbrake: a mistake stops

@@ -274,6 +274,11 @@ A wrong name simply makes the login fail. It breaks nothing.
 Never put the key on Julia's user: an API key carries **exactly the power of its user**, and a
 dedicated user can be revoked without touching anyone's account.
 
+> ⚠️ **Not what happened — and not to be re-litigated.** The key sits on **Julia's** user. Lilian
+> weighed the seat cost and decided (2026-08-10); the rule above is the design the firm did not
+> buy. Do not "fix" it by moving the key — that is a paid decision and hers, and a moved key is a
+> *new* key, not a copied one.
+
 > ⚠️ **An extra internal user costs a full seat** — $31.10/month on Standard, $61.00 on
 > Custom, confirmed 2026-08-06. The firm currently has **one** user, so a dedicated
 > integration user **doubles the Odoo bill**. That is the real price of isolating the key.
@@ -406,9 +411,16 @@ credentials and the plan, and a failure means what it says.
 
 ### Step 5 — Enable writing, when Lilian says so
 
-She grants the **Website** group. Now `website.page` and `ir.ui.view` become readable, and the
-first write is small and reversible, executed under every rule in
-[`write-safety.md`](./write-safety.md).
+> ⚠️ **This step is moot as written.** It assumed the low-privilege user of Step 1. The live key
+> is on Julia's **administrator** account, which already holds every group — `website.page` and
+> `ir.ui.view` are readable and writable *now*, with no grant to make and **no permission gate
+> between a session and the live public site.** Do not read this step as a brake that still has
+> to be released; there is nothing left to release.
+
+What remains of this step is the part that was never about permissions: **the first write is
+small and reversible, executed under every rule in
+[`write-safety.md`](./write-safety.md)** — and it waits for `tools/odoo-api/` (§5), which is now
+the only gate there is.
 
 ## 4 · Use JSON-2, not XML-RPC
 
