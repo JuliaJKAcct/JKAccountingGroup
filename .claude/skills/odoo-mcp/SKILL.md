@@ -86,9 +86,13 @@ direct connection removes it.
 
 The API key is **not** in the repo and **not** in every session. It belongs in a **dedicated
 Claude Code cloud environment** (`odoo-api`), picked from the cloud icon above the message box at
-claude.ai/code. *(As of 2026-08-10 that environment is being created — until Lilian confirms it,
-expect the key to be absent everywhere, and check `FOLLOW-UPS.md` row 21 for the current state
-rather than assuming.)* The everyday `Default` environment deliberately
+claude.ai/code. **Created 2026-08-10, and a session there reports the connection working.**
+
+> ⚠️ **The key is on Julia's user — the administrator — and it never expires** (confirmed by
+> Lilian, 2026-08-10). It can do anything on this database, indefinitely, until someone revokes
+> it. The low-privilege user of `direct-api-setup.md` §3 Step 1 was never created, so
+> **[`references/write-safety.md`](./references/write-safety.md) is the whole guard** — read it
+> before any write over this connection, not just website ones. The everyday `Default` environment deliberately
 does **not** carry it, so an unattended Routine at 3 a.m. never holds an administrator key over
 the live database (Lilian, Aug 2026 — the reasoning and the setup are in
 [`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md)).

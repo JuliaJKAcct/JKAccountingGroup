@@ -3,23 +3,32 @@
 The plan for replacing (or bypassing) the 50-call/day MCP connector with a direct
 connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 
-> **Status (2026-08-10): the key exists; the environment is being created; the test read is the
-> next action.** Lilian raised it with **Andres** — who built the firm's Odoo website and set up
-> the MCP connector — and he confirmed **there is no problem connecting through the API**, then
-> showed her how to obtain a key. She has it. Odoo's documentation says otherwise for the firm's
-> plan; **§0 explains why both can be true and what settles it.** Now that a key exists, the test
-> is **§0 Step B′** — one read of `res.company` plus the one-character control, minting nothing
-> and revoking nothing — and it can run as soon as a session starts in the `odoo-api` environment
-> (§3 Step 3). ⚠️ **Not the older Step B: its final instruction revokes the key.**
+> **Status (2026-08-10): the key exists, the `odoo-api` environment is created, and a session
+> there reports the connection working.** Lilian raised it with **Andres** — who built the firm's
+> Odoo website and set up the MCP connector — and he confirmed **there is no problem connecting
+> through the API**, then showed her how to obtain a key. Odoo's documentation says otherwise for
+> the firm's plan; **§0 explains why both can be true and what settles it.** So the *technical*
+> question now reads as answered in the affirmative, and Andres's account is the one the evidence
+> supports. **The *contractual* one is untouched** — the terms still say Standard is not entitled
+> to the external API, and Odoo Online auto-upgrades, so this can stop working without the firm
+> doing anything. Not a licence.
 >
-> **Still unrecorded, and both matter:**
-> - **Which Odoo user the key sits on.** The firm has one user and it is the administrator, so
->   assume full admin power until confirmed otherwise, and settle it before granting the key any
->   write scope (§3 Step 1, §5).
-> - **The key's duration / expiry date.** Odoo caps a non-Settings user's key at **90 days**
->   (§3 Step 2), and an expired key fails with `Invalid apikey` — indistinguishable from a
->   revoked or mistyped one, and *not* caught by the "is the variable set?" check. Record the
->   expiry here and put the rotation date in the calendar.
+> **Recorded 2026-08-10 (both were open items; Lilian answered them):**
+> - **The key sits on Julia's user — the administrator.** So the earlier "assume full admin
+>   power" is no longer an assumption: **it is confirmed.** The key can do anything Julia can do,
+>   which on this database is everything. The dedicated low-privilege user of §3 Step 1 was never
+>   created (it costs a full Odoo seat), so **[`write-safety.md`](./write-safety.md) is the only
+>   thing standing between a mistake and the live database** — Layer 1 ("limit the key's power")
+>   is not available to us and the other five have to carry its weight.
+> - **Duration: indefinite — the key never expires.** Only a Settings/system user can mint a
+>   persistent key (§3 Step 2), which independently corroborates that this is an administrator
+>   key. Two consequences: the 90-day rotation problem does not apply, and **revocation is now
+>   the only way to withdraw this credential** — done from Julia's own *My Preferences → Account
+>   Security*, which is worth knowing before it is needed in a hurry.
+>
+> **Still open:** the **one-character control call** from Step B′ item 3. Without it, "it works"
+> rests on a single successful call; the control is what rules out a false positive. Cheap, so
+> do it before relying on the connection.
 >
 > **Still not built: the tool** (`tools/odoo-api/`, §5) — required before the first write, not
 > after.
