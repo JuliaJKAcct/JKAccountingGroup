@@ -7,9 +7,10 @@ connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 > next action.** Lilian raised it with **Andres** — who built the firm's Odoo website and set up
 > the MCP connector — and he confirmed **there is no problem connecting through the API**, then
 > showed her how to obtain a key. She has it. Odoo's documentation says otherwise for the firm's
-> plan; **§0 explains why both can be true and what settles it.** Now that a key exists, §0's
-> Step B *is* the test — one read of `res.company` plus the one-character control — and it can
-> run as soon as a session starts in the `odoo-api` environment (§3 Step 3).
+> plan; **§0 explains why both can be true and what settles it.** Now that a key exists, the test
+> is **§0 Step B′** — one read of `res.company` plus the one-character control, minting nothing
+> and revoking nothing — and it can run as soon as a session starts in the `odoo-api` environment
+> (§3 Step 3). ⚠️ **Not the older Step B: its final instruction revokes the key.**
 >
 > **Still unrecorded, and both matter:**
 > - **Which Odoo user the key sits on.** The firm has one user and it is the administrator, so
@@ -82,8 +83,9 @@ question and cannot settle the *contractual* one.
 Two calls. Nothing created, nothing revoked.
 
 1. **Start a session in the `odoo-api` environment** (§3 Step 3) and confirm the key came
-   through: `[ -n "$ODOO_API_KEY" ] && echo present`. An unset variable sends an empty bearer
-   and returns a 401 that is *not* about the key at all — see the reading table below.
+   through: `[ -n "$ODOO_API_KEY" ] && echo present || echo "MISSING — wrong environment"`. An
+   unset variable sends an empty bearer and returns a 401 that is *not* about the key at all —
+   see the reading table below.
 2. **One read**, exactly the call in Step B item 2 below. **Capture the full response body, not
    just the HTTP status** — the status alone cannot tell the failure modes apart.
 3. **The control:** the identical call with **one character of the key changed**. This is what
@@ -124,8 +126,9 @@ throwaway-key test.**
      --data '{"fields": ["name"], "limit": 1}'
    ```
    **Who runs this matters.** §3 Step 3's rule holds here too — *never paste a key into chat*,
-   and this one is an admin key. Either **Lilian runs the curl herself** and reports back only
-   the HTTP status and the error `name` field, or the key goes into the session environment as
+   and this one is an admin key. Either **Lilian runs the curl herself** and reports back the
+   HTTP status **and the `message` field** — `name` is the same for every 401, so `message` is
+   the only discriminator (see the reading table) — or the key goes into the session environment as
    `ODOO_API_KEY` first and Claude runs it. Export it rather than typing it inline, so it does
    not land in `~/.bash_history`. An unset `$ODOO_API_KEY` sends an empty bearer and produces a
    401 that looks like a real answer — check it is set, and read `message` to be sure (table
@@ -227,8 +230,10 @@ settles §0.
 
 ## 3 · The step-by-step
 
-*(Step 1 and Step 2 describe how the key was obtained and are kept for re-minting it. Step 3
-onwards is the live procedure — the key exists.)*
+*(**Step 3 onwards is the live procedure** — the key exists. Steps 0–2 are the road not taken:
+Step 1's dedicated user was **never created**, because an extra internal user costs a full Odoo
+seat. Re-minting the key means Step 2 alone, on the existing user; taking Step 1 as well is a
+**+$31.10/month decision that is Lilian's to make**, not a routine repeat.)*
 
 ### Step 0 — Find the database name
 

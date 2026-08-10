@@ -84,9 +84,11 @@ direct connection removes it.
 
 ### The direct-API key lives in a separate environment — check it before the first call
 
-The API key is **not** in the repo and **not** in every session. It is set as environment
-variables on a **dedicated Claude Code cloud environment** (`odoo-api`), picked from the cloud
-icon above the message box at claude.ai/code. The everyday `Default` environment deliberately
+The API key is **not** in the repo and **not** in every session. It belongs in a **dedicated
+Claude Code cloud environment** (`odoo-api`), picked from the cloud icon above the message box at
+claude.ai/code. *(As of 2026-08-10 that environment is being created — until Lilian confirms it,
+expect the key to be absent everywhere, and check `FOLLOW-UPS.md` row 21 for the current state
+rather than assuming.)* The everyday `Default` environment deliberately
 does **not** carry it, so an unattended Routine at 3 a.m. never holds an administrator key over
 the live database (Lilian, Aug 2026 — the reasoning and the setup are in
 [`references/direct-api-setup.md` §3 Step 3](./references/direct-api-setup.md)).
@@ -106,8 +108,10 @@ never reads a cloud environment at all), from a mistyped variable name, and from
 having been created yet. Never ask for the key to be pasted into the chat.
 
 **What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
-An expired key — Odoo caps a non-Settings user's key at 90 days (§3 Step 2) — passes this check
-and then fails at the call. The key's expiry date is not yet recorded; see §3.
+An expired key — Odoo caps a non-Settings user's key at 90 days
+([`direct-api-setup.md` §3 Step 2](./references/direct-api-setup.md)) — passes this check and
+then fails at the call with `Invalid apikey`. The key's expiry date is not yet recorded; the
+status header of that same file tracks it.
 
 **Why this check earns its place, and how to read a 401 if you skipped it.** Verified against
 the live instance 2026-08-10 — the two failures return the **same HTTP 401** and the **same
@@ -339,8 +343,8 @@ Before starting:
 - [ ] Confirm how many calls have already been used today
 - [ ] Write out the planned call sequence and count it
 - [ ] Confirm the plan fits the remaining budget
-- [ ] **Direct-API work only:** `$ODOO_API_KEY` is set — if not, it is the wrong environment,
-      not a bad key: the session must be restarted in `odoo-api` (§1)
+- [ ] **Direct-API work only:** `$ODOO_API_KEY` is set — if not, the likeliest cause is the
+      wrong environment (restart the session in `odoo-api`), but read §1 before concluding that
 
 While working:
 - [ ] Batch every multi-record write
