@@ -77,20 +77,42 @@ function kv(text){
   }
   return d;
 }
-// top-level bullets (not indented), joined multi-line handled loosely
-function bullets(text){
+// A long bullet in these files is ordinary Markdown, so it may be soft-wrapped across
+// several indented lines. The note here used to claim multi-line was "handled loosely";
+// it was not handled at all — the line-anchored matchers below kept the first physical
+// line and dropped the rest SILENTLY. That is not cosmetic: on one client it cut a
+// categorization rule at "…are **business income**, EXCEPT a confirmed", so the card
+// stated the opposite of the rule, and it split a bold span leaving a raw "**auto/transport"
+// on screen. Fold continuations back into their bullet before matching anything.
+function unwrap(text){
   const out = [];
   for(const line of (text||'').split('\n')){
+    if(/^\s+\S/.test(line) && out.length && /^- /.test(out[out.length-1])){
+      out[out.length-1] += ' ' + line.trim();          // continuation of the open bullet
+    } else {
+      out.push(line);
+    }
+  }
+  return out.join('\n');
+}
+// top-level bullets (not indented)
+function bullets(text){
+  const out = [];
+  for(const line of unwrap(text).split('\n')){
     const m = line.match(/^- (?!\[)(.*\S)\s*$/);       // skip "- [ ]" checkboxes
     if(m) out.push(m[1].trim());
   }
   return out;
 }
+// "Information still needed" rows. The skill's rule is that an ANSWERED question stays in
+// the file with its box ticked (so it is not asked again) — so the tick is meaningful data,
+// not noise, and callers must be able to tell the two apart. Returning {done,text} is what
+// stops the "N fields still to confirm" badge from counting settled rows as open ones.
 function checkboxes(text){
   const out = [];
-  for(const line of (text||'').split('\n')){
-    const m = line.match(/^- \[[ xX]\] (.*\S)\s*$/);
-    if(m) out.push(m[1].trim());
+  for(const line of unwrap(text).split('\n')){
+    const m = line.match(/^- \[([ xX])\] (.*\S)\s*$/);
+    if(m) out.push({ done: m[1].toLowerCase() === 'x', text: m[2].trim() });
   }
   return out;
 }
@@ -223,8 +245,22 @@ export function loadClients(repoRoot){
     const systems = SYS.filter(([,re])=>re.test(md)).map(([n])=>n);
 
     const links = getSec(S,'7');
-    const dbl = (links.match(/\*\*Double client:\*\*[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
-    const drv = (links.match(/Google Drive folder[^(]*\((https?:\/\/[^)]+)\)/)||[])[1];
+    // Find the label's own line first, then take the first URL on it. The previous form
+    // (`label[^(]*\(`) bridged from the label to the URL across "anything but a paren", so
+    // ANY parenthesis in the label broke it and the link silently vanished from the card.
+    // Every client file writes "**Google Drive folder (sensitive vault):**", so the Drive
+    // link was missing on all 23. Matching per-line also stops one bullet's label from
+    // reaching into a later bullet's URL.
+    // Prefer a Markdown link's target, but fall back to a bare URL: not every file wraps
+    // one (artur-tseretsian writes "**Double client:** https://…" plain), and requiring the
+    // parens would be the same silent vanish this fix exists to remove.
+    const linkOn = re => {
+      const line = links.split('\n').find(l => re.test(l)) || '';
+      const m = line.match(/\((https?:\/\/[^)\s]+)\)/) || line.match(/(https?:\/\/[^)\s<>]+)/);
+      return m ? m[1].replace(/[.,;:]+$/,'') : undefined;
+    };
+    const dbl = linkOn(/\*\*Double client:\*\*/);
+    const drv = linkOn(/Google Drive folder/i);
     const related = [...links.matchAll(/\[`([a-z0-9-]+)\.md`\]/g)].map(m=>m[1]);
     const sopLine = links.split('\n').find(l=>/Related SOPs?/i.test(l)) || '';
     const sops = [...sopLine.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(m=>({t:m[1],u:m[2]}));
@@ -232,7 +268,9 @@ export function loadClients(repoRoot){
     const industry = stripSrc(snap['Industry / what they do']||'').replace(/\*\*/g,'');
     const quirks = bullets(getSec(S,'5')).slice(0,4);
     const open = bullets(hist['Outstanding items (CI-only — never in the SOP)']||'').slice(0,4);
-    const needed = checkboxes(hist['Information still needed']||'');
+    // Only the UNticked rows are still open. `c.needed` stays a plain string[] so the
+    // Knowledge Hub, which imports this engine, sees no API change.
+    const needed = checkboxes(hist['Information still needed']||'').filter(n=>!n.done).map(n=>n.text);
 
     return {
       slug, title, status, owner, updated,
