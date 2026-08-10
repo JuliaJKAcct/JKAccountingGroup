@@ -329,7 +329,7 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **6** | **County and state** where the principal business is located — *"the entity's primary physical location."* **Always filled for a new business**, regardless of what 4a–5b say — it is not part of the address comparison. (The form's *Do I Need an EIN?* table drops line 6 for a few narrow applications — e.g. banking-purpose-only, a pension-plan administrator, a withholding agent, a foreign person applying under the withholding regs, a state/local reporting agency — none of which is this SOP's scope) |
 | **7a** | Responsible party's **name** — a **natural person**, never a company, and the one who genuinely controls the entity (see §4C). Their nationality and residence are **not** requirements |
 | **7b** | Their **SSN or ITIN** — or, when they have neither and are ineligible to obtain one, write **`Foreign`**. The Dec-2025 instructions sanction both spellings: *"Enter 'foreign' or N/A on line 7b if the responsible party doesn't have and is ineligible to obtain an SSN or ITIN. **An entry is required.**"* → **the box can never be left blank**, but it doesn't have to hold a number. If the person already has an SSN/ITIN, you must use it |
-| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** **8b trap:** an LLC **owned solely by an individual and their spouse in a community-property state** who **choose** to treat it as a disregarded entity enters **`1`** on 8b, not 2 — otherwise 8b is the actual member count. (Florida is not a community-property state, so this only reaches out-of-state members) |
+| **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** **8b trap:** an LLC **owned solely by an individual and their spouse in a community-property state** who **choose** to treat it as a disregarded entity enters **`1`** on 8b, not 2 — otherwise 8b is the actual member count. (the test runs on the **spouses' domicile**, not the LLC's state of formation — Florida is not a community-property state, so this only reaches **spouse-members domiciled in one**) |
 | **9a** | Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's **taxed** (see §4A) |
 | **9b** | If a corporation, the **state or foreign country** where incorporated |
 | **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
@@ -354,8 +354,11 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 >
 > **In the normal JK case a Florida company is bucket A** — it operates from a
 > Florida address, which is exactly the county and state you just wrote on
-> **line 6**. **Line 6 is the tell:** if you can honestly name the entity's Florida
-> primary physical location, it is **bucket A even when every owner lives abroad**
+> **line 6**. **Line 6 is the tell** — and specifically a **50-states-or-DC**
+> location: a US-territory or foreign primary physical location answers line 6 too,
+> and those are **bucket B** (see the phone bullet). If you can honestly name the
+> entity's Florida primary physical location, it is **bucket A even when every
+> owner lives abroad**
 > — the owner's nationality and residence never enter this test. The one case that
 > isn't bucket A is a company with **no real US presence at all**: a Sunbiz
 > registration whose only US address is the registered agent's, with the office and
@@ -386,8 +389,10 @@ any state or DC** (a genuinely foreign entity, or one in a US territory):
   narrower than the fax test.** Fax bucket B is "no presence in **any state or
   DC**"; the phone requires no presence *"in the United States **or U.S.
   territories**."* So an entity in a **US territory** (Puerto Rico, USVI, Guam…)
-  faxes and mails as bucket B yet **cannot call** — and by that same distinction it
-  **can use the online application**, which is the faster route anyway. The caller
+  faxes and mails as bucket B yet **cannot call**. *(That same location test also
+  governs the online application, so a territory entity is location-eligible for
+  it — but only if its responsible party has an SSN or ITIN, which by definition
+  isn't the case if you're reading §3.)* The caller
   must be authorized and able to answer every SS-4 line — **fill out the SS-4
   first**, then call; the EIN can be issued on the call.
 
