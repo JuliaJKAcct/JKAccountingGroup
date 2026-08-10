@@ -1,0 +1,42 @@
+{
+  "id": 4,
+  "display_name": "Top Menu for Website 1",
+  "name": "Top Menu for Website 1",
+  "url": "#",
+  "page_id": false,
+  "controller_page_id": false,
+  "new_window": false,
+  "sequence": 0,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "parent_id": false,
+  "child_id": [
+    21,
+    22,
+    9,
+    7,
+    6,
+    18,
+    17,
+    20
+  ],
+  "parent_path": "4/",
+  "is_visible": true,
+  "group_ids": [],
+  "is_mega_menu": false,
+  "mega_menu_content": false,
+  "mega_menu_classes": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-24 17:38:30",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2024-12-24 17:38:30",
+  "theme_template_id": false
+}

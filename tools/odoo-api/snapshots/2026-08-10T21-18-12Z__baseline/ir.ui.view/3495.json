@@ -1,0 +1,57 @@
+{
+  "id": 3495,
+  "display_name": "JK Unified Chrome (Atlas header/footer sitewide)",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "JK Unified Chrome (Atlas header/footer sitewide)",
+  "model": false,
+  "key": "website.jk_unified_chrome",
+  "priority": 30,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.layout\" priority=\"30\">\n  <!-- Atlas header replaces the stock navbar — only when this page actually shows the standard header,\n       so pages that hide it (and render their own Atlas header in the page arch) get NO duplicate\n       #nav-toggle checkbox. -->\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.navbar']\" position=\"replace\">\n    <t t-if=\"not ('header_visible' in main_object and not main_object.sudo().header_visible)\">\n      <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n      <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\"/>\n      <t t-call=\"website.jka_header_v2\"/>\n      <div class=\"jk-appbar-spacer\" style=\"height:64px\"/>\n    </t>\n  </xpath>\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.template_header_mobile']\" position=\"replace\"/>\n  <!-- Atlas footer, same guard -->\n  <xpath expr=\"//div[@id='footer']\" position=\"replace\">\n    <div id=\"footer\" t-if=\"not no_footer\">\n      <t t-if=\"not ('footer_visible' in main_object and not main_object.sudo().footer_visible)\">\n        <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n        <t t-call=\"website.jka_footer_v2\"/>\n      </t>\n    </div>\n  </xpath>\n  <xpath expr=\"//t[@t-call='web.brand_promotion']/..\" position=\"replace\"/>\n  <xpath expr=\"//footer//span[hasclass('o_footer_copyright_name')]\" position=\"replace\"/>\n</data>",
+  "arch_base": "<data inherit_id=\"website.layout\" priority=\"30\">\n  <!-- Atlas header replaces the stock navbar — only when this page actually shows the standard header,\n       so pages that hide it (and render their own Atlas header in the page arch) get NO duplicate\n       #nav-toggle checkbox. -->\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.navbar']\" position=\"replace\">\n    <t t-if=\"not ('header_visible' in main_object and not main_object.sudo().header_visible)\">\n      <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n      <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\"/>\n      <t t-call=\"website.jka_header_v2\"/>\n      <div class=\"jk-appbar-spacer\" style=\"height:64px\"/>\n    </t>\n  </xpath>\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.template_header_mobile']\" position=\"replace\"/>\n  <!-- Atlas footer, same guard -->\n  <xpath expr=\"//div[@id='footer']\" position=\"replace\">\n    <div id=\"footer\" t-if=\"not no_footer\">\n      <t t-if=\"not ('footer_visible' in main_object and not main_object.sudo().footer_visible)\">\n        <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n        <t t-call=\"website.jka_footer_v2\"/>\n      </t>\n    </div>\n  </xpath>\n  <xpath expr=\"//t[@t-call='web.brand_promotion']/..\" position=\"replace\"/>\n  <xpath expr=\"//footer//span[hasclass('o_footer_copyright_name')]\" position=\"replace\"/>\n</data>",
+  "arch_db": "<data inherit_id=\"website.layout\" priority=\"30\">\n  <!-- Atlas header replaces the stock navbar — only when this page actually shows the standard header,\n       so pages that hide it (and render their own Atlas header in the page arch) get NO duplicate\n       #nav-toggle checkbox. -->\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.navbar']\" position=\"replace\">\n    <t t-if=\"not ('header_visible' in main_object and not main_object.sudo().header_visible)\">\n      <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n      <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\"/>\n      <t t-call=\"website.jka_header_v2\"/>\n      <div class=\"jk-appbar-spacer\" style=\"height:64px\"/>\n    </t>\n  </xpath>\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.template_header_mobile']\" position=\"replace\"/>\n  <!-- Atlas footer, same guard -->\n  <xpath expr=\"//div[@id='footer']\" position=\"replace\">\n    <div id=\"footer\" t-if=\"not no_footer\">\n      <t t-if=\"not ('footer_visible' in main_object and not main_object.sudo().footer_visible)\">\n        <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n        <t t-call=\"website.jka_footer_v2\"/>\n      </t>\n    </div>\n  </xpath>\n  <xpath expr=\"//t[@t-call='web.brand_promotion']/..\" position=\"replace\"/>\n  <xpath expr=\"//footer//span[hasclass('o_footer_copyright_name')]\" position=\"replace\"/>\n</data>",
+  "arch_fs": false,
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.layout\" priority=\"30\">\n  <!-- Atlas header replaces the stock navbar (desktop slot) -->\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.navbar']\" position=\"replace\">\n    <link rel=\"stylesheet\" href=\"/web/content/3651\"/>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\"/>\n    <t t-call=\"website.jka_header_v2\"/>\n    <div class=\"jk-appbar-spacer\" style=\"height:64px\"/>\n  </xpath>\n  <!-- drop the stock mobile offcanvas (Atlas header has its own CSS-only menu) -->\n  <xpath expr=\"//header[@id='top']//t[@t-call='website.template_header_mobile']\" position=\"replace\"/>\n  <!-- Atlas footer replaces the stock footer slot -->\n  <xpath expr=\"//div[@id='footer']\" position=\"replace\">\n    <div id=\"footer\" t-if=\"not no_footer\">\n      <t t-call=\"website.jka_footer_v2\"/>\n    </div>\n  </xpath>\n  <!-- remove \"Powered by Odoo\" -->\n  <xpath expr=\"//t[@t-call='web.brand_promotion']/..\" position=\"replace\"/>\n  <!-- Atlas footer already carries the copyright line; drop the duplicate -->\n  <xpath expr=\"//footer//span[hasclass('o_footer_copyright_name')]\" position=\"replace\"/>\n</data>",
+  "inherit_id": [
+    543,
+    "Main layout"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2026-08-10 01:36:44",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-08-10 01:49:57",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": false
+}

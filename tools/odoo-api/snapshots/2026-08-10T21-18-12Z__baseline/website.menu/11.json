@@ -1,0 +1,33 @@
+{
+  "id": 11,
+  "display_name": "Blog",
+  "name": "Blog",
+  "url": "/blog",
+  "page_id": false,
+  "controller_page_id": false,
+  "new_window": false,
+  "sequence": 40,
+  "website_id": false,
+  "parent_id": [
+    1,
+    "Default Main Menu"
+  ],
+  "child_id": [],
+  "parent_path": "1/11/",
+  "is_visible": true,
+  "group_ids": [],
+  "is_mega_menu": false,
+  "mega_menu_content": false,
+  "mega_menu_classes": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-24 17:52:01",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2024-12-24 17:52:01",
+  "theme_template_id": false
+}

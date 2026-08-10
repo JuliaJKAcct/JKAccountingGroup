@@ -1,0 +1,42 @@
+{
+  "takenAt": "2026-08-10T21:18:16.544Z",
+  "base": "https://jkaccountinggroup.odoo.com",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 36013,
+      "ms": 274
+    },
+    {
+      "path": "/pricing",
+      "status": 200,
+      "bytes": 15458,
+      "ms": 267
+    },
+    {
+      "path": "/consultation",
+      "status": 200,
+      "bytes": 33362,
+      "ms": 71
+    },
+    {
+      "path": "/ua/konsultatsiia",
+      "status": 200,
+      "bytes": 34102,
+      "ms": 74
+    },
+    {
+      "path": "/appointment/1",
+      "status": 200,
+      "bytes": 150658,
+      "ms": 362
+    },
+    {
+      "path": "/appointment/3",
+      "status": 200,
+      "bytes": 115124,
+      "ms": 154
+    }
+  ]
+}

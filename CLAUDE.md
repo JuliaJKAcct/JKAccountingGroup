@@ -40,6 +40,9 @@ the US.
 │   ├── knowledge-hub/             one on-brand, searchable index page over all SOPs, clients, Lilian's Notebook + downloadable templates, generated from the repo (Active)
 │   ├── bookkeeping-kpis/          on-brand, dynamic per-client bookkeeping-performance dashboards (KPIs) → an all-clients board; sample template committed, real client figures never (Active)
 │   └── lilian-notebook/           LILIAN'S personal notebook — the firm's hard knowledge (how a system behaves, what it costs, how to do a procedure), each written as the rule for next time; DELIBERATELY SMALL; one searchable page she has bookmarked (Active)
+├── tools/         executable tooling (not docs) — code that DOES something
+│   └── odoo-api/  safe hands for Odoo's direct API: dry-run by default, snapshot-before-write,
+│                  deny-list in code, canary check, versioned snapshots + append-only audit ledger
 ├── .claude/
 │   ├── settings.json  registers the hooks below
 │   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
@@ -90,6 +93,7 @@ the US.
 | **Tax season status** — which clients still haven't filed (2025 or any open year), which bookkeeping/QuickBooks clients are **ready** for us to prepare vs **pending**, who we're waiting on for a **tax organizer**, or what Double's `Tax Return Status` / `Organizer Status` / `Organizer Progress` columns and the legacy **TaxDome** organizer folders actually mean (including the two routes to the progress percentages — per-organizer via the MCP since Aug 2026, or the CSV export for the whole roster) | the [`tax-season-readiness` skill](./.claude/skills/tax-season-readiness/) — encodes who is actually owed an organizer (bookkeeping and Schedule-C clients are **not**), what gates each return (a company return runs off its **books** and feeds the owner's 1040 via K-1, not the reverse), the two organizer generations (TaxDome vs Double), Lilian's manual procedure for the Organizer column, and the owner↔company link. **Read-only**: never write those columns; the client list is delivered, never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
 | Reading or writing anything **in Double** through the Double MCP — a client and its properties, a tax project's status, a document in a client's folders, portal contacts, transactions/reports, tasks and notes — **or keeping the running "case note" that records a problem from start to finish** (§7) | the [`double-mcp` skill](./.claude/skills/double-mcp/) — **load it before the first Double MCP call.** Knowing which of the five data planes holds a fact (`Tax Return Status` is the tax *project*, not a property), the TaxDome folder conventions, what the MCP can't reach (tax-project deadlines/status are read-only, organizer publishing, saved views, file contents, loan tools), the audited **capability map** that answers "can we do X in Double?", and the write-safety rules — including **never** writing the hand-maintained judgment columns |
+| **Changing anything in Odoo through the direct API** — a website page, a view, a menu, an appointment type; or taking a **backup/baseline** of the site, **undoing** a change, or auditing **when** something broke | [`tools/odoo-api/`](./tools/odoo-api/) — run `node tools/odoo-api/odoo.mjs help`. **Every write is a dry run unless `--execute`**, and refuses without a snapshot first. Reads are free and safe; only writes are gated. Load the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) first — its [`write-safety.md`](./.claude/skills/odoo-mcp/references/write-safety.md) is what the tool enforces |
 | Reading or writing anything **in Odoo** through the Odoo MCP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports, CRM leads, appointments | the [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) — **load it before the first Odoo MCP call.** The free plan allows only **50 tool calls/day**; plan the whole sequence first, batch every multi-record write, and log changes to the record's chatter |
 | Referral partners, the front-offer/diagnostic funnel, or the "Growth Accelerator Series" workshop concept | [`projects/marketing/referral-offer-strategy/`](./projects/marketing/referral-offer-strategy/) |
 | A **booking** page, or the firm's booking calendars — the free 10-minute phone **discovery call** vs. the paid 1-hour **$150 consultation**, each with its own availability (Odoo Appointments; EN/RU) | [`projects/marketing/consultation-booking/`](./projects/marketing/consultation-booking/) |
@@ -246,9 +250,9 @@ in that folder.
   day for the whole firm. **Then answer what was actually asked, which is usually NOT "restart in
   `odoo-api`":** a website text/SEO/copy fix belongs in **Odoo's own web editor, by hand — zero
   calls, no limit**; a small structural change can go through the connector once its cost is
-  stated; **`odoo-api` is for heavy READS**; and a bulk or scripted **write is not available from
-  any environment yet** (`tools/odoo-api/` must exist first and does not). Sending someone to
-  restart a session for a write ends in a second refusal. **Never reply
+  stated; **`odoo-api` is for heavy READS**; and a scripted **write goes through
+  [`tools/odoo-api/`](./tools/odoo-api/)** (built 2026-08-10 — dry-run unless `--execute`, and it
+  refuses without a snapshot), which needs that environment like any direct-API work. **Never reply
   with a bare "I can't do that", and never silently fall back to the connector for work that needs
   the direct route.** _(Lilian's standing instruction, Aug 2026, with a specific reason: **Julia
   is often the one asking and does not follow this machinery** — she must never be left wondering
