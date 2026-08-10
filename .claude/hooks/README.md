@@ -10,7 +10,7 @@ the session that merges it.
 
 | Hook | Fires | What it does |
 |---|---|---|
-| [`session-start.sh`](./session-start.sh) | `SessionStart` | Fetches, then prints what just landed on `main`, which files `main` has changed most in the last 4 days, and which **unmerged `claude/*` branches were active in the last 3 days** — i.e. what another session is working on right now |
+| [`session-start.sh`](./session-start.sh) | `SessionStart` | Fetches, then prints what just landed on `main`, which files `main` has changed most in the last 4 days, and which **unmerged `claude/*` branches were active in the last 3 days** — i.e. what another session is working on right now. Also flags **when this session carries direct-API Odoo credentials** — nothing when it does not, since connector-only is the default and CLAUDE.md already says so. Emitted before the `origin/main` guard, so a failed fetch cannot swallow it |
 | [`pre-commit-drift-check.sh`](./pre-commit-drift-check.sh) | `PreToolUse` on `Bash`, only when the command contains `git commit` | Fetches (throttled to once per 90s) and, if `main` moved since you branched, lists what landed and **which of your files also changed on `main`** |
 
 ## Why there are two, and why the second one matters more
@@ -66,7 +66,14 @@ signal that was missing.
   list without changing the overlap — the answer only got *smaller*, so it is not repeated. Every
   direction that makes it more alarming re-warns.
 - **Stay short.** `session-start.sh` output is prepended to every session, so it costs tokens every
-  time. It caps at 6 commits, 5 hot files and 5 branches — about 24–30 lines at its longest.
+  time. It caps at 6 commits, 5 hot files and 5 branches — about 24–30 lines at its longest, plus
+  3 lines in the minority of sessions that carry Odoo direct-API credentials. **Say nothing about
+  the default state:** the Odoo block has no `else`, because a line saying "connector only" would
+  cost every session in the repo tokens to repeat what CLAUDE.md already loads.
+- **Keep facts out of the hook.** The Odoo block states only what the session can observe (is a
+  key present?) and points at the skill for everything else. Nothing about *whose* key it is, what
+  it may do, or what is built yet lives in this script — those change, and a hook that asserts
+  them would keep asserting the old version to every session with nothing to flag the drift.
 
 ## Changing or switching them off
 

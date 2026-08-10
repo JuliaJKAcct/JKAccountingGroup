@@ -3,23 +3,35 @@
 The plan for replacing (or bypassing) the 50-call/day MCP connector with a direct
 connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 
-> **Status (2026-08-10): the key exists; the environment is being created; the test read is the
-> next action.** Lilian raised it with **Andres** — who built the firm's Odoo website and set up
-> the MCP connector — and he confirmed **there is no problem connecting through the API**, then
-> showed her how to obtain a key. She has it. Odoo's documentation says otherwise for the firm's
-> plan; **§0 explains why both can be true and what settles it.** Now that a key exists, the test
-> is **§0 Step B′** — one read of `res.company` plus the one-character control, minting nothing
-> and revoking nothing — and it can run as soon as a session starts in the `odoo-api` environment
-> (§3 Step 3). ⚠️ **Not the older Step B: its final instruction revokes the key.**
+> **Status (2026-08-10): the key exists, the `odoo-api` environment is created, and a session
+> there reports the connection working.** Lilian raised it with **Andres** — who built the firm's
+> Odoo website and set up the MCP connector — and he confirmed **there is no problem connecting
+> through the API**, then showed her how to obtain a key. Odoo's documentation says otherwise for
+> the firm's plan; **§0 explains why both can be true and what settles it.** So the *technical*
+> question now reads as answered in the affirmative, and Andres's account is the one the evidence
+> supports. **The *contractual* one is untouched** — the terms still say Standard is not entitled
+> to the external API, and Odoo Online auto-upgrades, so this can stop working without the firm
+> doing anything. Not a licence.
 >
-> **Still unrecorded, and both matter:**
-> - **Which Odoo user the key sits on.** The firm has one user and it is the administrator, so
->   assume full admin power until confirmed otherwise, and settle it before granting the key any
->   write scope (§3 Step 1, §5).
-> - **The key's duration / expiry date.** Odoo caps a non-Settings user's key at **90 days**
->   (§3 Step 2), and an expired key fails with `Invalid apikey` — indistinguishable from a
->   revoked or mistyped one, and *not* caught by the "is the variable set?" check. Record the
->   expiry here and put the rotation date in the calendar.
+> **Recorded 2026-08-10 (both were open items; Lilian answered them):**
+> - **The key sits on Julia's user — the administrator.** So the earlier "assume full admin
+>   power" is no longer an assumption: **it is confirmed.** The key can do anything Julia can do,
+>   which on this database is everything. The dedicated low-privilege user of §3 Step 1 was never
+>   created (it costs a full Odoo seat), so **[`write-safety.md`](./write-safety.md) Layer 1 is
+>   waived.** Count what is left honestly rather than saying "the other five carry it": Layer 2's
+>   snapshot rule and Layer 4 are **unbuilt code** (`tools/odoo-api/`, §5). What is actually
+>   operating today is **convention plus the connector's 50-call ceiling — and the direct route
+>   removes that ceiling.** That is precisely why §5 gates the **first direct-API write** on the
+>   tool being built. Reads are fine; writes are not, yet.
+> - **Duration: indefinite — the key never expires.** Only a Settings/system user can mint a
+>   persistent key (§3 Step 2), which independently corroborates that this is an administrator
+>   key. Two consequences: the 90-day rotation problem does not apply, and **revocation is now
+>   the only way to withdraw this credential** — done from Julia's own *My Preferences → Account
+>   Security*, which is worth knowing before it is needed in a hurry.
+>
+> **Still open:** the **one-character control call** from Step B′ item 3. Without it, "it works"
+> rests on a single successful call; the control is what rules out a false positive. Cheap, so
+> do it before relying on the connection.
 >
 > **Still not built: the tool** (`tools/odoo-api/`, §5) — required before the first write, not
 > after.
@@ -230,10 +242,11 @@ settles §0.
 
 ## 3 · The step-by-step
 
-*(**Step 3 onwards is the live procedure** — the key exists. Steps 0–2 are the road not taken:
-Step 1's dedicated user was **never created**, because an extra internal user costs a full Odoo
-seat. Re-minting the key means Step 2 alone, on the existing user; taking Step 1 as well is a
-**+$31.10/month decision that is Lilian's to make**, not a routine repeat.)*
+*(**Step 2 records how the live key was actually minted, and Step 3 onwards is the live
+procedure.** **Step 1 is the road not taken** — its dedicated user was never created, because an
+extra internal user costs a full Odoo seat. **To re-mint a lost key: Step 2 only**, on Julia's
+existing user. Adding Step 1 is a **+$31.10/month decision that is Lilian's to make**, not a
+routine repeat.)*
 
 ### Step 0 — Find the database name
 
@@ -261,6 +274,11 @@ A wrong name simply makes the login fail. It breaks nothing.
 Never put the key on Julia's user: an API key carries **exactly the power of its user**, and a
 dedicated user can be revoked without touching anyone's account.
 
+> ⚠️ **Not what happened — and not to be re-litigated.** The key sits on **Julia's** user. Lilian
+> weighed the seat cost and decided (2026-08-10); the rule above is the design the firm did not
+> buy. Do not "fix" it by moving the key — that is a paid decision and hers, and a moved key is a
+> *new* key, not a copied one.
+
 > ⚠️ **An extra internal user costs a full seat** — $31.10/month on Standard, $61.00 on
 > Custom, confirmed 2026-08-06. The firm currently has **one** user, so a dedicated
 > integration user **doubles the Odoo bill**. That is the real price of isolating the key.
@@ -275,7 +293,12 @@ user can actually perform.
 
 ### Step 2 — Generate the API key
 
-Logged in **as that user**:
+> **How the live key was actually made (2026-08-10):** logged in as **Julia**, who is the
+> administrator, **avatar → My Preferences → Account Security → New API Key**, duration
+> **indefinite**. Re-minting it means repeating exactly that — **not** Step 1, whose dedicated
+> user was never created and would cost a full Odoo seat.
+
+Logged in **as the user the key is to belong to**:
 
 > **Avatar → My Preferences → Account Security tab → New API Key**
 
@@ -285,13 +308,14 @@ developer mode nor 2FA.
 **Three things this dialog will do that surprise people:**
 
 1. **Duration is mandatory.** Odoo will not create a key without one.
-2. **A non-Settings user cannot create a never-expiring key.** The *Persistent Key* option only
-   appears for a system (Settings) user — which Step 1 deliberately avoids. For a normal
-   internal user the duration is **capped at 90 days**, after which the integration stops
-   working with an auth error that looks exactly like a revoked key.
-   **So: either accept a 90-day key and put its rotation date in the calendar, or have an
-   administrator raise the maximum duration on a group assigned to this user** (the field is
-   developer-mode only).
+2. **Only a Settings/system user can create a never-expiring key.** The *Persistent Key* option
+   does not appear for a normal internal user, whose duration is **capped at 90 days** — after
+   which the integration stops working with an auth error that looks exactly like a revoked key.
+   **For the firm's live key this does not apply:** it is on Julia's administrator account, which
+   is a Settings user, so *Persistent Key* was available and was used. The 90-day trap is only
+   relevant if a key is ever minted on the low-privilege user of Step 1 — in which case, calendar
+   the rotation, or have an administrator raise the maximum duration on a group assigned to that
+   user (the field is developer-mode only).
 3. **A user may hold at most 10 keys** (`base.programmatic_api_keys_limit`); an eleventh fails
    with HTTP 422.
 
@@ -387,9 +411,16 @@ credentials and the plan, and a failure means what it says.
 
 ### Step 5 — Enable writing, when Lilian says so
 
-She grants the **Website** group. Now `website.page` and `ir.ui.view` become readable, and the
-first write is small and reversible, executed under every rule in
-[`write-safety.md`](./write-safety.md).
+> ⚠️ **This step is moot as written.** It assumed the low-privilege user of Step 1. The live key
+> is on Julia's **administrator** account, which already holds every group — `website.page` and
+> `ir.ui.view` are readable and writable *now*, with no grant to make and **no permission gate
+> between a session and the live public site.** Do not read this step as a brake that still has
+> to be released; there is nothing left to release.
+
+What remains of this step is the part that was never about permissions: **the first write is
+small and reversible, executed under every rule in
+[`write-safety.md`](./write-safety.md)** — and it waits for `tools/odoo-api/` (§5), which is now
+the only gate there is.
 
 ## 4 · Use JSON-2, not XML-RPC
 

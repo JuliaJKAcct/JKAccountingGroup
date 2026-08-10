@@ -32,6 +32,34 @@ $TO git -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=20 \
 echo "═══ Parallel-work check — other sessions may be editing the same files ═══"
 [ "$fetch_ok" -eq 0 ] && echo "(Could not reach origin — this is from the LAST fetch and may be stale.)"
 
+# ── Which Odoo route does this session have? ────────────────────────────────
+#
+# Two routes reach Odoo and they do not have the same power: the MCP connector
+# (any session, 50 calls/day for the whole firm) and the direct API (no cap, but
+# its key must be in the session's environment, and an environment is chosen
+# when a session STARTS). Stating the route here removes a judgement call: a
+# session no longer has to classify a request before discovering what it has.
+#
+# Lilian's reason for wanting it visible (Aug 2026): Julia often asks for website
+# work and does not follow this machinery, so "I can't do that" must never be the
+# whole answer. What to say instead is in the skill — deliberately NOT duplicated
+# here, so this hook has no facts of its own to go stale.
+#
+# Printed before the origin/main guard below, so it survives a failed fetch.
+# Two lines, per the hooks README's "stay short" rule.
+if [ -n "${ODOO_API_KEY:-}" ]; then
+  if [ -n "${ODOO_URL:-}" ] && [ -n "${ODOO_DB:-}" ]; then
+    echo "Odoo: direct-API credentials present in this session (URL, DB, key)."
+  else
+    echo "Odoo: ODOO_API_KEY is set but ODOO_URL/ODOO_DB are NOT — the direct route"
+    echo "  is misconfigured, and its curl will fail on an empty host, not a 401."
+  fi
+  echo "  Before using it, read .claude/skills/odoo-mcp §1 — it says what that route"
+  echo "  may and may not do today. Do not infer either from this line."
+fi
+# No `else` branch on purpose: connector-only is the default state, and CLAUDE.md
+# already carries it into every session. Printing it here would be a third copy.
+
 if ! git rev-parse --verify --quiet origin/main >/dev/null 2>&1; then
   echo "(No origin/main here yet — nothing to compare against.)"
   echo "═════════════════════════════════════════════════════════════════════════"
@@ -84,6 +112,7 @@ echo ""
 echo "Before you commit: git fetch origin main && git log --oneline HEAD..origin/main"
 echo "Anything there means re-read the CURRENT version of what you are changing — git"
 echo "merges contradictory guidance without complaint. (CLAUDE.md → the drift check.)"
+
 echo "═════════════════════════════════════════════════════════════════════════"
 
 exit 0

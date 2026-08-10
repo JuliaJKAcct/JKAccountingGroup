@@ -1,7 +1,12 @@
 # Write safety — the six layers
 
-**The standing rules for changing anything in Odoo**, whichever route is used: the MCP
-connector today, the direct API once it exists. They apply to the website above all, because
+> ⚠️ **Six is the design. In force today: fewer.** Layer 1 is **waived** (the key sits on
+> Julia's administrator user — see its box), and several rules below are code that has not been
+> written. **Do not trust any summary of which — including this one. Read the `[code]` /
+> `[convention]` tag on each rule**, and the enforcement box just below.
+
+**The standing rules for changing anything in Odoo**, whichever route is used — the MCP
+connector, or the direct API (live since Aug 2026 for reads). They apply to the website above all, because
 that is what the public sees.
 
 > **Why they exist.** Today the 50-call/day ceiling works as a handbrake: a mistake stops
@@ -30,10 +35,35 @@ Designed as layers — if one fails, the next still catches it.
 The API key carries **exactly the power of its user**, so the first control is permissions,
 not code.
 
+> ### ⚠️ 2026-08-10 — this layer is WAIVED. It is not protecting anything today.
+>
+> The key the firm actually uses **sits on Julia's user, which is the administrator, and it never
+> expires** (confirmed by Lilian). The dedicated user in rule 1 was **never created**: an extra
+> internal user costs a full Odoo seat (+$31.10/month) and would have doubled the Odoo bill.
+>
+> Rules 1–3 therefore describe the design the firm **did not buy**. Do not read them as a
+> description of the current setup — and do not "fix" it by moving the key, because that is a
+> paid decision and it is **Lilian's to make**, not a session's.
+>
+> **What follows from the waiver, stated honestly.** These layers were written as a defence
+> *behind* a scoped key. There is no scoped key, so for writes they are the front line, and the
+> count is smaller than six: Layer 1 waived, Layer 2's snapshot rule and Layer 4 are unbuilt code
+> (see the enforcement box above). What is actually operating today is **convention, plus the
+> connector's 50-call ceiling — and the direct route removes that ceiling.** That is the real
+> reason [`direct-api-setup.md` §5](./direct-api-setup.md#5--what-still-has-to-be-built) says
+> `tools/odoo-api/` must exist **before the first write over the direct API**, not after.
+>
+> **And the practical consequence:** revocation is the only way to withdraw this credential —
+> Julia's *avatar → My Preferences → Account Security*. Worth knowing before it is needed in a
+> hurry.
+
 1. **A dedicated user**, never Julia's. Revocable without touching anyone's account.
+   ⚠️ **Not done — see the box above. The key is on Julia's administrator user.**
 2. **Start with no write rights at all.** Prove the reads work first; add the website-edit
    right only when the person is ready to make a change.
+   ⚠️ **Not done — an administrator key has every right from the start.**
 3. **Never grant Administration / Settings.**
+   ⚠️ **Not applicable — the user this key belongs to *is* the Settings user.**
 
 ## Layer 2 — Always be able to undo
 

@@ -43,7 +43,8 @@ the US.
 ├── .claude/
 │   ├── settings.json  registers the hooks below
 │   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
-│   │   ├── session-start.sh            on session start: what just landed on main + which
+│   │   ├── session-start.sh            on session start: which Odoo route this session
+│   │   │                               holds, what just landed on main + which
 │   │   │                               unmerged branches other sessions have in flight
 │   │   └── pre-commit-drift-check.sh   on `git commit`: warns if main moved under you
 │   └── skills/    reusable Claude workflows (the "engines")
@@ -232,6 +233,29 @@ in that folder.
   IDs, and post a batched chatter note on the affected record for any change. This is a
   standing rule so the budget is respected every time — running out mid-task leaves the
   database half-changed.
+- **Changing Odoo or the website? Know which route this session has, and say so out loud.**
+  There is a second route to Odoo with **no** daily cap — the direct API — and its key lives
+  **only** in the dedicated `odoo-api` cloud environment (the cloud icon above the message box at
+  claude.ai/code). The MCP connector works from any environment; the direct API does not, and an
+  environment is chosen when a session **starts** — never switched mid-session. **The [session-start hook](./.claude/hooks/session-start.sh) announces the direct
+  route when a session has it — but says nothing when it does not, so silence is not evidence.**
+  Check it yourself: `[ -n "$ODOO_API_KEY" ] && echo present || echo MISSING` (free — no MCP call,
+  no Odoo call). **Do it before starting any change to Odoo or the website, and before any
+  read big enough to matter against 50 calls.** If the key is missing, **stop and explain, in
+  plain language, before doing anything** — we are on the MCP connector, capped at 50 operations a
+  day for the whole firm. **Then answer what was actually asked, which is usually NOT "restart in
+  `odoo-api`":** a website text/SEO/copy fix belongs in **Odoo's own web editor, by hand — zero
+  calls, no limit**; a small structural change can go through the connector once its cost is
+  stated; **`odoo-api` is for heavy READS**; and a bulk or scripted **write is not available from
+  any environment yet** (`tools/odoo-api/` must exist first and does not). Sending someone to
+  restart a session for a write ends in a second refusal. **Never reply
+  with a bare "I can't do that", and never silently fall back to the connector for work that needs
+  the direct route.** _(Lilian's standing instruction, Aug 2026, with a specific reason: **Julia
+  is often the one asking and does not follow this machinery** — she must never be left wondering
+  why a website change cannot be made.)_ **One more trap:** in a **local CLI** session there is no cloud icon at all, so check
+  `$CLAUDE_CODE_REMOTE` before sending anyone to click one. The wording to use and the full reasoning are in the
+  [`odoo-mcp` skill](./.claude/skills/odoo-mcp/) §1 and
+  [`write-safety.md`](./.claude/skills/odoo-mcp/references/write-safety.md).
 - **Two people work here in parallel — keep `main` and the indexes coherent.**
   Julia and Lilian both drive this repo through Claude, often in separate sessions
   at the same time, so branches and edits collide. Every session: **start from the
