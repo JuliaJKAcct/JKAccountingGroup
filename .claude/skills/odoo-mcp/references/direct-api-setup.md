@@ -17,9 +17,12 @@ connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 > - **The key sits on Julia's user — the administrator.** So the earlier "assume full admin
 >   power" is no longer an assumption: **it is confirmed.** The key can do anything Julia can do,
 >   which on this database is everything. The dedicated low-privilege user of §3 Step 1 was never
->   created (it costs a full Odoo seat), so **[`write-safety.md`](./write-safety.md) is the only
->   thing standing between a mistake and the live database** — Layer 1 ("limit the key's power")
->   is not available to us and the other five have to carry its weight.
+>   created (it costs a full Odoo seat), so **[`write-safety.md`](./write-safety.md) Layer 1 is
+>   waived.** Count what is left honestly rather than saying "the other five carry it": Layer 2's
+>   snapshot rule and Layer 4 are **unbuilt code** (`tools/odoo-api/`, §5). What is actually
+>   operating today is **convention plus the connector's 50-call ceiling — and the direct route
+>   removes that ceiling.** That is precisely why §5 gates the **first direct-API write** on the
+>   tool being built. Reads are fine; writes are not, yet.
 > - **Duration: indefinite — the key never expires.** Only a Settings/system user can mint a
 >   persistent key (§3 Step 2), which independently corroborates that this is an administrator
 >   key. Two consequences: the 90-day rotation problem does not apply, and **revocation is now
@@ -284,7 +287,12 @@ user can actually perform.
 
 ### Step 2 — Generate the API key
 
-Logged in **as that user**:
+> **How the live key was actually made (2026-08-10):** logged in as **Julia**, who is the
+> administrator, **avatar → My Preferences → Account Security → New API Key**, duration
+> **indefinite**. Re-minting it means repeating exactly that — **not** Step 1, whose dedicated
+> user was never created and would cost a full Odoo seat.
+
+Logged in **as the user the key is to belong to**:
 
 > **Avatar → My Preferences → Account Security tab → New API Key**
 
@@ -294,13 +302,14 @@ developer mode nor 2FA.
 **Three things this dialog will do that surprise people:**
 
 1. **Duration is mandatory.** Odoo will not create a key without one.
-2. **A non-Settings user cannot create a never-expiring key.** The *Persistent Key* option only
-   appears for a system (Settings) user — which Step 1 deliberately avoids. For a normal
-   internal user the duration is **capped at 90 days**, after which the integration stops
-   working with an auth error that looks exactly like a revoked key.
-   **So: either accept a 90-day key and put its rotation date in the calendar, or have an
-   administrator raise the maximum duration on a group assigned to this user** (the field is
-   developer-mode only).
+2. **Only a Settings/system user can create a never-expiring key.** The *Persistent Key* option
+   does not appear for a normal internal user, whose duration is **capped at 90 days** — after
+   which the integration stops working with an auth error that looks exactly like a revoked key.
+   **For the firm's live key this does not apply:** it is on Julia's administrator account, which
+   is a Settings user, so *Persistent Key* was available and was used. The 90-day trap is only
+   relevant if a key is ever minted on the low-privilege user of Step 1 — in which case, calendar
+   the rotation, or have an administrator raise the maximum duration on a group assigned to that
+   user (the field is developer-mode only).
 3. **A user may hold at most 10 keys** (`base.programmatic_api_keys_limit`); an eleventh fails
    with HTTP 422.
 

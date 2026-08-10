@@ -84,6 +84,31 @@ echo ""
 echo "Before you commit: git fetch origin main && git log --oneline HEAD..origin/main"
 echo "Anything there means re-read the CURRENT version of what you are changing — git"
 echo "merges contradictory guidance without complaint. (CLAUDE.md → the drift check.)"
+
+# ── Which Odoo route does this session have? ────────────────────────────────
+#
+# Two routes reach Odoo and they do not have the same power. The direct API has
+# no daily cap, but its key exists ONLY in the `odoo-api` cloud environment, and
+# an environment is chosen when a session STARTS — it cannot be switched later.
+#
+# Stating it here, as fact, removes the judgement call: a session no longer has
+# to classify a request as "a change" before discovering which route it has.
+# Lilian's reason for wanting it visible: Julia often asks for website work and
+# does not follow this machinery, so "I can't do that" must never be the whole
+# answer. (CLAUDE.md → the Odoo environment rule; .claude/skills/odoo-mcp §1.)
+echo ""
+if [ -n "${ODOO_API_KEY:-}" ]; then
+  echo "Odoo: DIRECT API available (odoo-api environment) — no daily call cap."
+  echo "  Reads are unblocked. WRITES still need tools/odoo-api/, which is NOT built"
+  echo "  yet — and the key is Julia's admin user, non-expiring. See write-safety.md."
+else
+  echo "Odoo: MCP CONNECTOR only — 50 calls/day, shared by the whole firm."
+  echo "  No direct-API key in this session. For website changes or a heavy read,"
+  echo "  say so plainly and point to a NEW session in the 'odoo-api' environment"
+  echo "  (cloud icon above the message box) — but check first whether the fix can"
+  echo "  just be made by hand in Odoo's own web editor, which costs zero calls."
+fi
+
 echo "═════════════════════════════════════════════════════════════════════════"
 
 exit 0
