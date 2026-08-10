@@ -43,7 +43,8 @@ the US.
 ├── .claude/
 │   ├── settings.json  registers the hooks below
 │   ├── hooks/     the PARALLEL-WORK SAFETY NET — see hooks/README.md for the why
-│   │   ├── session-start.sh            on session start: what just landed on main + which
+│   │   ├── session-start.sh            on session start: which Odoo route this session
+│   │   │                               holds, what just landed on main + which
 │   │   │                               unmerged branches other sessions have in flight
 │   │   └── pre-commit-drift-check.sh   on `git commit`: warns if main moved under you
 │   └── skills/    reusable Claude workflows (the "engines")

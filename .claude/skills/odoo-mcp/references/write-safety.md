@@ -1,5 +1,9 @@
 # Write safety — the six layers
 
+> ⚠️ **Six is the design. In force today: fewer.** Layer 1 is **waived** (the key sits on
+> Julia's administrator user — see its box), and Layer 2's snapshot rule and Layer 4 are code
+> that has not been written. Read the enforcement box below before relying on any of this.
+
 **The standing rules for changing anything in Odoo**, whichever route is used: the MCP
 connector today, the direct API once it exists. They apply to the website above all, because
 that is what the public sees.

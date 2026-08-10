@@ -32,6 +32,30 @@ $TO git -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=20 \
 echo "═══ Parallel-work check — other sessions may be editing the same files ═══"
 [ "$fetch_ok" -eq 0 ] && echo "(Could not reach origin — this is from the LAST fetch and may be stale.)"
 
+# ── Which Odoo route does this session have? ────────────────────────────────
+#
+# Two routes reach Odoo and they do not have the same power: the MCP connector
+# (any session, 50 calls/day for the whole firm) and the direct API (no cap, but
+# its key must be in the session's environment, and an environment is chosen
+# when a session STARTS). Stating the route here removes a judgement call: a
+# session no longer has to classify a request before discovering what it has.
+#
+# Lilian's reason for wanting it visible (Aug 2026): Julia often asks for website
+# work and does not follow this machinery, so "I can't do that" must never be the
+# whole answer. What to say instead is in the skill — deliberately NOT duplicated
+# here, so this hook has no facts of its own to go stale.
+#
+# Printed before the origin/main guard below, so it survives a failed fetch.
+# Two lines, per the hooks README's "stay short" rule.
+if [ -n "${ODOO_API_KEY:-}" ]; then
+  echo "Odoo: a direct-API key IS in this session — no 50/day cap on that route."
+  echo "  Reads unblocked; writes still gated. See .claude/skills/odoo-mcp §1."
+else
+  echo "Odoo: MCP connector only — 50 calls/day, shared firm-wide. No direct key."
+  echo "  Before any Odoo change or heavy read, read .claude/skills/odoo-mcp §1."
+fi
+echo ""
+
 if ! git rev-parse --verify --quiet origin/main >/dev/null 2>&1; then
   echo "(No origin/main here yet — nothing to compare against.)"
   echo "═════════════════════════════════════════════════════════════════════════"
@@ -84,30 +108,6 @@ echo ""
 echo "Before you commit: git fetch origin main && git log --oneline HEAD..origin/main"
 echo "Anything there means re-read the CURRENT version of what you are changing — git"
 echo "merges contradictory guidance without complaint. (CLAUDE.md → the drift check.)"
-
-# ── Which Odoo route does this session have? ────────────────────────────────
-#
-# Two routes reach Odoo and they do not have the same power. The direct API has
-# no daily cap, but its key exists ONLY in the `odoo-api` cloud environment, and
-# an environment is chosen when a session STARTS — it cannot be switched later.
-#
-# Stating it here, as fact, removes the judgement call: a session no longer has
-# to classify a request as "a change" before discovering which route it has.
-# Lilian's reason for wanting it visible: Julia often asks for website work and
-# does not follow this machinery, so "I can't do that" must never be the whole
-# answer. (CLAUDE.md → the Odoo environment rule; .claude/skills/odoo-mcp §1.)
-echo ""
-if [ -n "${ODOO_API_KEY:-}" ]; then
-  echo "Odoo: DIRECT API available (odoo-api environment) — no daily call cap."
-  echo "  Reads are unblocked. WRITES still need tools/odoo-api/, which is NOT built"
-  echo "  yet — and the key is Julia's admin user, non-expiring. See write-safety.md."
-else
-  echo "Odoo: MCP CONNECTOR only — 50 calls/day, shared by the whole firm."
-  echo "  No direct-API key in this session. For website changes or a heavy read,"
-  echo "  say so plainly and point to a NEW session in the 'odoo-api' environment"
-  echo "  (cloud icon above the message box) — but check first whether the fix can"
-  echo "  just be made by hand in Odoo's own web editor, which costs zero calls."
-fi
 
 echo "═════════════════════════════════════════════════════════════════════════"
 

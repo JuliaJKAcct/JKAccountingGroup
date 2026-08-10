@@ -242,10 +242,11 @@ settles §0.
 
 ## 3 · The step-by-step
 
-*(**Step 3 onwards is the live procedure** — the key exists. Steps 0–2 are the road not taken:
-Step 1's dedicated user was **never created**, because an extra internal user costs a full Odoo
-seat. Re-minting the key means Step 2 alone, on the existing user; taking Step 1 as well is a
-**+$31.10/month decision that is Lilian's to make**, not a routine repeat.)*
+*(**Step 2 records how the live key was actually minted, and Step 3 onwards is the live
+procedure.** **Step 1 is the road not taken** — its dedicated user was never created, because an
+extra internal user costs a full Odoo seat. **To re-mint a lost key: Step 2 only**, on Julia's
+existing user. Adding Step 1 is a **+$31.10/month decision that is Lilian's to make**, not a
+routine repeat.)*
 
 ### Step 0 — Find the database name
 

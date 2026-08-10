@@ -64,12 +64,12 @@ demonstrably making external calls against this database today** — *if* that c
 the external API rather than logging in as a web session, which is the open question. So the
 restriction may well not be enforced at the server.
 
-> ⚠️ **A key already exists — do not mint another one, and do not follow any instruction to
-> revoke.** The remaining test is **[`direct-api-setup.md` §0, Step B′](./references/direct-api-setup.md)**:
-> one read plus a control, creating nothing and destroying nothing. The older *throwaway-key*
-> procedure in that section (Step A / Step B) is kept only for re-minting the key from scratch,
-> and **its last instruction is to revoke** — run it against the real key and the key is gone,
-> since Odoo never shows a key twice.
+> ⚠️ **A key already exists and the read has been done — do not mint another one, and do not
+> follow any instruction to revoke.** The only outstanding item is **[`direct-api-setup.md` §0,
+> Step B′ item 3](./references/direct-api-setup.md)**: the same call with **one character of the
+> key changed**, as a control. The older *throwaway-key* procedure in that section (Step A /
+> Step B) is kept only for re-minting the key from scratch, and **its last instruction is to
+> revoke** — run it against the real key and the key is gone, since Odoo never shows a key twice.
 
 Note what a pass does and does not prove: that the server does not block it **today**, not that
 the subscription entitles the firm to it — and Odoo Online auto-upgrades. That file carries the full step-by-step, the vendor pricing on both sides, and records
@@ -91,7 +91,7 @@ direct connection removes it.
 | Route | Works from | Ceiling |
 |---|---|---|
 | **MCP connector** | **any** environment — its traffic goes through Anthropic's servers, not the session's network | **50 calls/day**, shared by the whole firm |
-| **Direct API** (`ODOO_API_KEY`) | **only** a session started in the **`odoo-api`** environment | no daily cap |
+| **Direct API** (`ODOO_API_KEY`) | **only** a session whose environment carries the key — in the cloud that means one **started** in **`odoo-api`**; a local CLI session would need it exported in the shell | no daily cap |
 
 The key is **not** in the repo and **not** in every session. It lives on the dedicated
 `odoo-api` cloud environment, picked from the cloud icon above the message box at claude.ai/code
@@ -118,8 +118,9 @@ reasoning and the setup are in
 #### The trigger is the request, not the failure
 
 **Check the environment before starting the work, not after a call fails.** It costs nothing —
-no MCP call, no Odoo call. *(The [session-start hook](../../hooks/session-start.sh) already
-prints which route this session has, so usually you already know; re-run it if in doubt.)*
+no MCP call, no Odoo call. *(The [session-start hook](../../hooks/session-start.sh) prints the
+route at startup, so usually you already know — but re-check with the one-liner below, not by
+re-running the hook, which does a network fetch and reprints the whole briefing.)*
 
 ```bash
 [ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — wrong environment"
@@ -132,30 +133,40 @@ prints which route this session has, so usually you already know; re-run it if i
    crawl, anything you would not want to abandon half-done. Escaping the cap is exactly what
    heavy reads need; the budget hit 50/50 in a single session on 2026-08-06.
 
-**If the key is missing, say so immediately and in plain language.** This is a standing
-instruction from Lilian (2026-08-10) with a specific reason: **Julia is often the one asking, and
-does not follow this machinery.** She must never be left wondering why a website change cannot be
-made. Deliver it in the language of the conversation; the substance is:
+**Say the constraint out loud, immediately, in plain language.** This is a standing instruction
+from Lilian (2026-08-10) with a specific reason: **Julia is often the one asking, and does not
+follow this machinery.** She must never be left wondering why a website change cannot be made.
+Deliver it in the language of the conversation.
 
-> I'm reaching Odoo through the MCP connector right now, and that route is capped at **50
-> operations a day for the whole firm** — fine for looking things up, not enough for website
-> changes. Full access runs through the **`odoo-api`** environment, and an environment can only
-> be chosen when a session **starts**, so I can't switch it from here. Open a new session, click
-> the cloud icon above the message box, choose **`odoo-api`**, and ask me again there. Nothing is
-> broken and nothing is lost — it's one click.
+⚠️ **But route it correctly, or she gets refused twice.** `odoo-api` is **not** the answer to a
+write request — direct-API writes are gated on `tools/odoo-api/`, which does not exist. Sending
+someone to restart a session there for a website change wastes the restart and ends in a second
+refusal. Match the answer to what was actually asked:
 
-> ⚠️ **First confirm this is a cloud session.** In a **local Claude Code CLI** session there is
-> no cloud icon and no environment picker — the message above would send someone hunting for a
-> control that does not exist. `$CLAUDE_CODE_REMOTE` is `true` only in the cloud. Locally, the
-> key would have to come from the shell environment instead.
-
-**Offer all three routes, not two** — and lead with the one that costs nothing:
-
-| Route | When it is the right answer |
+| What was asked | The right answer today |
 |---|---|
-| **The Odoo web editor, by hand** | **Most of the queued website work.** Text, SEO descriptions, a broken link, page copy — the 50-call ceiling belongs to the *connector*, so a human editing in Odoo's own web interface has **no limit at all** and spends **zero** calls. Check [`PENDING-FIXES.md`](../../../projects/marketing/consultation-booking/PENDING-FIXES.md) before assuming a fix needs any API |
-| **The MCP connector, from here** | A small read, or a one-line change. Say what it will cost against the 50 first |
-| **A new session in `odoo-api`** | Structural work, volume, or anything that would not fit the budget — and *reads* as much as writes |
+| **A website text / SEO / link / copy change** | **By hand in Odoo's own web editor — zero calls, no limit at all.** The 50-call ceiling belongs to the *connector*, not to Odoo. Most of [`PENDING-FIXES.md`](../../../projects/marketing/consultation-booking/PENDING-FIXES.md) is this. Offer it first |
+| **A small structural change** (a view, a record) | The MCP connector, from this session — say what it will cost against the 50 first |
+| **A heavy read** — roster sweep, multi-model crawl | A **new session in `odoo-api`**. This is what the direct route is actually for today |
+| **A bulk or scripted write** | **Not available yet, from any environment.** `tools/odoo-api/` (dry-run default, allow-list in code, snapshot-before-write, canary) has to be built first — [`direct-api-setup.md` §5](./references/direct-api-setup.md). Say so, and say what it would take |
+
+So the message for the common case — a website change asked from `Default` — is roughly:
+
+> The change doesn't need a different session. What limits me here is the connector's budget:
+> **50 operations a day, shared by the whole firm.** Two ways forward: most text and SEO edits
+> are quicker **by hand in Odoo's own editor**, which has no limit at all; or I do it from here
+> and tell you first what it costs against the 50.
+
+And for a heavy read:
+
+> For this I'd need the uncapped route, and its key only exists in the **`odoo-api`**
+> environment. An environment is chosen when a session **starts**, so I can't switch it here —
+> open a new session, click the cloud icon above the message box, choose `odoo-api`, and ask me
+> again there. One click; nothing is lost.
+
+> ⚠️ **Before sending anyone to click a cloud icon, confirm this is a cloud session.** A
+> **local Claude Code CLI** session has no environment picker — `$CLAUDE_CODE_REMOTE` is `true`
+> only in the cloud. Locally the key would come from the shell environment instead.
 
 **Three things never to do:** silently fall back to the connector for work that needs the direct
 route (it burns the shared budget and half-finishes the job); reply with a bare "I can't do that"
@@ -171,10 +182,13 @@ same symptom comes from a local CLI session, a mistyped variable name, and `odoo
 archived. Never ask for the key to be pasted into the chat.
 
 **What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
-A revoked key passes this check and then fails at the call with `Invalid apikey`. *(Expiry is
-**not** a live hypothesis for this key — it is persistent, see the box above. The 90-day cap in
-`direct-api-setup.md` §3 Step 2 applies only to a key minted on a non-Settings user, which this
-is not.)*
+A revoked key passes this check and then fails at the call with `Invalid apikey`. *Expiry should
+be a **low**-probability hypothesis for this key, not a discarded one: it is reported as
+persistent (only a Settings user can mint such a key, and Julia's is one), but no expiry date was
+ever captured and the control call has not been run. If `Invalid apikey` ever appears, check the
+key's row in Julia's Account Security screen before assuming revocation — and record the date
+there in [`direct-api-setup.md`](./references/direct-api-setup.md)'s status header while you have
+it open.*
 
 **Why this check earns its place, and how to read a 401 if you skipped it.** Verified against
 the live instance 2026-08-10 — the two failures return the **same HTTP 401** and the **same
@@ -295,11 +309,15 @@ or `<p>` tags for line breaks rather than `\n`.
 
 ## 3. Safety rules for write operations
 
-> **The full rule set is [`references/write-safety.md`](./references/write-safety.md) — the
-> six layers agreed with Lilian (Aug 2026): limit the key's power · always be able to undo ·
+> **The full rule set is [`references/write-safety.md`](./references/write-safety.md) — six
+> layers as designed with Lilian (Aug 2026): limit the key's power · always be able to undo ·
 > three verifications per change · hard limits in the tool · leave a trail · rehearse
 > unpublished. Read it before any website change, and before the first write over the direct
 > API. The rules below are the accounting-specific subset and stay in force.**
+>
+> ⚠️ **"Six" is the design, not the count in force.** Layer 1 is **waived** — the key is on
+> Julia's administrator user — and Layer 2's snapshot rule and Layer 4 are **unbuilt code**. Read
+> that file's Layer 1 box before assuming anything is scoped or mechanically enforced.
 
 - **Never delete accounting records** (`account.move`, `account.move.line`,
   `account.payment`) without explicit per-operation confirmation. Posted entries generally
@@ -401,8 +419,10 @@ Before starting:
 - [ ] Confirm how many calls have already been used today
 - [ ] Write out the planned call sequence and count it
 - [ ] Confirm the plan fits the remaining budget
-- [ ] **Direct-API work only:** `$ODOO_API_KEY` is set — if not, the likeliest cause is the
-      wrong environment (restart the session in `odoo-api`), but read §1 before concluding that
+- [ ] **Any Odoo change, or any read heavy against 50 calls:** check `$ODOO_API_KEY` and say
+      which route this session has **before starting** — §1 has the trigger, the wording, and
+      which answer fits which request (a website text fix belongs in Odoo's web editor, not in a
+      restarted session)
 
 While working:
 - [ ] Batch every multi-record write
