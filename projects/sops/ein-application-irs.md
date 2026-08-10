@@ -368,7 +368,8 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 
 **A. The ENTITY has a legal residence, principal place of business, or office in
 one of the 50 states or DC** — ✅ **this is the normal JK case**: a Florida
-company, whatever the owner's nationality or residence:
+company **operating from its Florida address**, whatever the owner's nationality
+or residence:
 
 - **Fax:** **855-641-6935** — include your **return fax number** and the IRS
   faxes the EIN back, generally within **~4 business days**.
