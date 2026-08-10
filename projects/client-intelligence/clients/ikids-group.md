@@ -90,7 +90,12 @@ the actual details.
 - 2026-08-10 — **Targeted people/ownership sweep** (Lilian, looking for a contact she could not find in Zoom). Read the **Operating Agreement** and settled the ownership structure: three members, equal thirds, single Manager (§5). Established that the **CFO is not a member or Manager**. Located the two **2025 Zoom calls** the CFO attended — 2025-06-20 (titled as the referrer's consultation, not iKids) and 2025-07-15 "Ikids Group LLC Setup" — which is why a Zoom search by client name finds nothing; Ping only indexes from ~Jun 2026, so **neither call has a transcript**. Registered the CFO as a Double contact **with no portal access**. Sources: Gmail, Google Calendar, Google Drive, Double. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Third member is not a Double contact.** No email address for him exists in Gmail, Drive, or Double — every thread about him runs through Julia or the outside CAA. **Ask the client (or the CFO) for his email**, then register him in Double the same way as the CFO: contact record only, **no portal access**.
+- **Third member is not a Double contact — ⏸ PAUSED INDEFINITELY (Lilian, 2026-08-10).** No email
+  address for him exists in Gmail, Drive, or Double; every thread about him runs through Julia or
+  the outside CAA. Lilian decided the firm does not need him registered for now, so **do not chase
+  this** — not in the weekend sweep, not as a client request. If it is ever reopened: get his email
+  from the client or the CFO, then register him in Double the same way as the CFO — contact record
+  only, **no portal access**.
 - **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
 - A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
 - **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
@@ -98,7 +103,9 @@ the actual details.
 ### Information still needed
 - [x] Exact number of partners — **three, in equal thirds**, manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
 - [ ] Fiscal year-end
-- [ ] The third member's email address, so he can be registered in Double _(2026-08-10)_
+- [x] The third member's email address, so he can be registered in Double — **not being pursued**;
+      Lilian put this on indefinite hold on 2026-08-10 (see the paused item above). Reopen only if
+      she asks.
 - [ ] Credentials Drive link; the "operations begin" date once known
 
 ## 7. Links
