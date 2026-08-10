@@ -11,9 +11,14 @@ connection to Odoo's own API, and the step-by-step Lilian follows to set it up.
 > Step B *is* the test — one read of `res.company` plus the one-character control — and it can
 > run as soon as a session starts in the `odoo-api` environment (§3 Step 3).
 >
-> **Still unrecorded: which Odoo user the key sits on.** The firm has one user and it is the
-> administrator, so assume full admin power until confirmed otherwise, and settle it before
-> granting the key any write scope (§3 Step 1, §5).
+> **Still unrecorded, and both matter:**
+> - **Which Odoo user the key sits on.** The firm has one user and it is the administrator, so
+>   assume full admin power until confirmed otherwise, and settle it before granting the key any
+>   write scope (§3 Step 1, §5).
+> - **The key's duration / expiry date.** Odoo caps a non-Settings user's key at **90 days**
+>   (§3 Step 2), and an expired key fails with `Invalid apikey` — indistinguishable from a
+>   revoked or mistyped one, and *not* caught by the "is the variable set?" check. Record the
+>   expiry here and put the rotation date in the calendar.
 >
 > **Still not built: the tool** (`tools/odoo-api/`, §5) — required before the first write, not
 > after.
@@ -61,14 +66,44 @@ question and cannot settle the *contractual* one.
 
 ### How to settle it
 
-**Step A — the free check, no credential at all. Do this one first.**
+> ### ⚠️ 2026-08-10 — a key now exists, so the order changed
+>
+> **Run Step B′ — immediately below this box — and stop.** It creates nothing and destroys
+> nothing.
+>
+> **Steps A and B below are superseded.** They are kept for one purpose only: **re-minting the
+> key from scratch** if it is ever lost or revoked. **Do not run Step B against the real key —
+> its final instruction is to revoke it**, and Odoo never shows a key twice (§6), so revoking is
+> destroying. Step A (`/doc` in a browser) is now merely redundant: it was the free way to avoid
+> minting a key, and a key already exists.
+
+**Step B′ — the test, with the key that already exists**
+
+Two calls. Nothing created, nothing revoked.
+
+1. **Start a session in the `odoo-api` environment** (§3 Step 3) and confirm the key came
+   through: `[ -n "$ODOO_API_KEY" ] && echo present`. An unset variable sends an empty bearer
+   and returns a 401 that is *not* about the key at all — see the reading table below.
+2. **One read**, exactly the call in Step B item 2 below. **Capture the full response body, not
+   just the HTTP status** — the status alone cannot tell the failure modes apart.
+3. **The control:** the identical call with **one character of the key changed**. This is what
+   makes the result mean anything.
+4. **Do not revoke.** Record the outcome in the status header at the top of this file and in
+   `FOLLOW-UPS.md` row 21.
+
+Read the outcome with the table under Step B — it applies unchanged.
+
+---
+
+**Step A — *(superseded — see the box above)* the free check, no credential at all.**
 
 Logged into Odoo in a browser, open **`https://jkaccountinggroup.odoo.com/doc`**. Odoo 19
 serves there the list of models, fields and methods available over the external API **for this
 database**. A rendered listing is strong evidence the API is open; a refusal is strong evidence
 the other way. It mints nothing and revokes nothing.
 
-**Step B — the throwaway-key test, if Step A is inconclusive.**
+**Step B — *(superseded — for RE-MINTING a lost key only, never against the live one)* the
+throwaway-key test.**
 
 1. On an **existing** user (no new user, no extra seat): **avatar → My Preferences → Account
    Security → New API Key**. Description `TEST`, **shortest duration offered**.
@@ -93,20 +128,26 @@ the other way. It mints nothing and revokes nothing.
    the HTTP status and the error `name` field, or the key goes into the session environment as
    `ODOO_API_KEY` first and Claude runs it. Export it rather than typing it inline, so it does
    not land in `~/.bash_history`. An unset `$ODOO_API_KEY` sends an empty bearer and produces a
-   401 that looks like a real answer — check it is set.
+   401 that looks like a real answer — check it is set, and read `message` to be sure (table
+   below).
 
 3. **Control test — the step that makes the result mean something.** Repeat the identical call
    with **one character of the key changed**. (The firm used exactly this technique on the
    Double note-size issue, row 19: the control is what proved it was size and not content.)
 
-4. **Revoke the key** on the same screen.
+4. **Revoke the key** on the same screen. ⚠️ **This step belongs to the throwaway key only.**
+   Never run it against the key the firm actually uses — Odoo cannot show a key twice, so a
+   revoked key is a key that must be re-created and re-entered in the environment.
 
-**Reading the result** — the failure modes are distinguishable, so distinguish them:
+**Reading the result** — the failure modes are distinguishable, so distinguish them. **All the
+401s share the same status code and the same `name`; only `message` tells them apart, so capture
+the body.** (Rows 2 and 3 verified against the live instance 2026-08-10.)
 
 | Outcome | What it means |
 |---|---|
 | **200 with the company name** | The API is **not blocked at the server today**. That answers the technical question, **not the contractual one** — the notice still says Standard is not entitled to it, and Odoo Online **auto-upgrades**, so this can change without the firm doing anything. Enough to proceed without spending; **not a licence**. Confirm with Andres or the Customer Success Manager before building anything the firm depends on |
-| **401, `"name": "werkzeug.exceptions.Unauthorized"` / `"Invalid apikey"`** — *and the control fails identically* | Credential-shaped, not plan-shaped. Re-check the key and the host before concluding anything |
+| **401 · `"message": "User not authenticated, use an API Key with a Bearer Authorization header."`** | **No key was sent at all** — `$ODOO_API_KEY` is unset, i.e. the wrong environment. Nothing has been learned about the key or the plan. Restart in `odoo-api` and repeat |
+| **401 · `"message": "Invalid apikey"`** — *and the control fails identically* | Credential-shaped, not plan-shaped. Re-check the key and the host before concluding anything. Note an **expired** key lands here too (Step 2: 90-day cap on a non-Settings user) |
 | **`odoo.exceptions.AccessError`** | A permissions problem on that model, not the plan |
 | **A distinct plan/subscription error**, or no *New API Key* option at all | Custom really is required; go to the numbers below |
 
@@ -186,7 +227,8 @@ settles §0.
 
 ## 3 · The step-by-step
 
-*(Only after §0 is answered.)*
+*(Step 1 and Step 2 describe how the key was obtained and are kept for re-minting it. Step 3
+onwards is the live procedure — the key exists.)*
 
 ### Step 0 — Find the database name
 
@@ -267,9 +309,15 @@ It goes in a **Claude Code cloud environment's** configuration. Docs:
 ```
 ODOO_URL=https://jkaccountinggroup.odoo.com
 ODOO_DB=jkaccountinggroup
-ODOO_USER=claude-api@jkaccountinggroup.com     # not needed by JSON-2, kept for reference
 ODOO_API_KEY=(the key)
 ```
+
+**Three variables, deliberately.** JSON-2 authenticates on the bearer token alone, so no
+username is needed. An `ODOO_USER` line is optional documentation of *whose* key it is — add it
+only with the login the key was actually created under, **not** the `claude-api@…` user in Step
+1, which was never created. And put no `#` comment on the same line as a value: in `.env` format
+an unquoted `#` starts a comment, so anything after it is dropped — but a box that does not strip
+comments would store it as part of the value.
 
 5. **Network access: leave it at `Trusted`.** Verified 2026-08-10 from a cloud session — an
    unauthenticated `POST /json/2/res.company/search_read` returned **401**, so the session

@@ -52,17 +52,24 @@ calls used today, the daily limit and what remains.
 **Who owns the Odoo integration: Andres.** He built the firm's website in Odoo, has done
 most of what exists there, and set up this MCP connection. Route integration questions to him.
 
-**Aug 2026: going direct is agreed; one 5-minute test still has to confirm it is permitted.**
-Lilian asked Andres why the MCP connector rather than Odoo's own API, and he confirmed there
-is no problem going direct. Odoo's documentation disagrees — it states the external API is
+**Aug 2026: going direct is agreed, a key exists, and one test read still has to confirm it is
+permitted.** Lilian asked Andres why the MCP connector rather than Odoo's own API, he confirmed
+there is no problem going direct, and on **2026-08-10 he showed her how to obtain a key — she
+has it.** Odoo's documentation disagrees — it states the external API is
 available only on *Custom* plans, "not available on One App Free or Standard", and the firm is
 on **Standard** ($31.10/user/month, 1 user; Custom is $61.00). **But the notice reads as a
 commercial condition, has been identical since Odoo 16, and the Pantalytics connector is
 demonstrably making external calls against this database today** — *if* that connector speaks
 the external API rather than logging in as a web session, which is the open question. So the
-restriction may well not be enforced at the server. **Settle it with the two checks in
-[`references/direct-api-setup.md` §0](./references/direct-api-setup.md) before spending
-anything** — open `/doc` in a browser (free, no credential), then a throwaway key if needed.
+restriction may well not be enforced at the server.
+
+> ⚠️ **A key already exists — do not mint another one, and do not follow any instruction to
+> revoke.** The remaining test is **[`direct-api-setup.md` §0, Step B′](./references/direct-api-setup.md)**:
+> one read plus a control, creating nothing and destroying nothing. The older *throwaway-key*
+> procedure in that section (Step A / Step B) is kept only for re-minting the key from scratch,
+> and **its last instruction is to revoke** — run it against the real key and the key is gone,
+> since Odoo never shows a key twice.
+
 Note what a pass does and does not prove: that the server does not block it **today**, not that
 the subscription entitles the firm to it — and Odoo Online auto-upgrades. That file carries the full step-by-step, the vendor pricing on both sides, and records
 that the modern **JSON-2** endpoint (`/json/2/<model>/<method>`, bearer token) is live on the
@@ -88,18 +95,33 @@ the live database (Lilian, Aug 2026 — the reasoning and the setup are in
 call, no Odoo call:**
 
 ```bash
-[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — wrong environment"
+[ -n "$ODOO_API_KEY" ] && echo "key present" || echo "MISSING — see below"
 ```
 
-**If it is missing, say so plainly and name the real cause:** *this session is running in the
-wrong environment; the key lives in `odoo-api`, and an environment is chosen only when a
-session starts — so it needs a new session, it cannot be switched mid-session.* Do not debug it
-as a credential problem, and never ask for the key to be pasted into the chat.
+**If it is missing, the likeliest cause by far is the wrong environment** — the session is in
+`Default`, and an environment is chosen only when a session *starts*, so it cannot be switched
+mid-session: it needs a new session in `odoo-api`. Say that first. But **say it as the leading
+hypothesis, not as the only one** — the same symptom comes from a local CLI session (which
+never reads a cloud environment at all), from a mistyped variable name, and from `odoo-api` not
+having been created yet. Never ask for the key to be pasted into the chat.
 
-**Why this check earns its place:** an unset `$ODOO_API_KEY` sends an *empty* bearer token, and
-Odoo answers `401 Invalid apikey` — byte-identical to a revoked or mistyped key. Without the
-check, the wrong environment looks exactly like a broken credential, and the session spends its
-time debugging a key that is perfectly fine.
+**What the check does NOT cover:** it proves the variable is *set*, not that the key is *valid*.
+An expired key — Odoo caps a non-Settings user's key at 90 days (§3 Step 2) — passes this check
+and then fails at the call. The key's expiry date is not yet recorded; see §3.
+
+**Why this check earns its place, and how to read a 401 if you skipped it.** Verified against
+the live instance 2026-08-10 — the two failures return the **same HTTP 401** and the **same
+`name`**, and are told apart only by `message`:
+
+| What went wrong | `name` | `message` |
+|---|---|---|
+| **Variable unset** — empty bearer sent | `werkzeug.exceptions.Unauthorized` | `User not authenticated, use an API Key with a Bearer Authorization header.` |
+| **Key wrong, expired or revoked** | `werkzeug.exceptions.Unauthorized` | `Invalid apikey` |
+
+So **always capture the response body, not just the status code.** On status alone the wrong
+environment is indistinguishable from a broken credential, and the session burns its time
+debugging a key that is perfectly fine. `Invalid apikey` is the one that means the key itself is
+the problem.
 
 **The MCP connector is unaffected** — its traffic goes through Anthropic's servers rather than
 the session's network, so it works from **any** environment. Only the direct API needs

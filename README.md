@@ -89,7 +89,8 @@ That cap is the **connector's**, not Odoo's and not Claude's — the skill's §1
 three layers. Andres approved connecting through **Odoo's own API** instead (Aug 2026). Odoo
 documents external API access as a *Custom*-plan feature and the firm is on *Standard*, but
 that notice reads as a commercial condition and the existing connector already makes external
-calls — so a five-minute throwaway-key test settles whether any upgrade is needed. That test,
+calls — so one test read settles whether any upgrade is needed. **A key now exists (Aug 2026);
+the test is one read plus a control, minting nothing.** That test,
 the vendor pricing on both sides, and the full setup are in
 [`references/direct-api-setup.md`](./.claude/skills/odoo-mcp/references/direct-api-setup.md);
 the six rules that govern any Odoo write — whichever route — are in
