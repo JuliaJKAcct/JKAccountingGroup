@@ -5,6 +5,11 @@ description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax
 
 # The pre-return review — what to ask the client, before anyone starts
 
+> **Purpose and standing requirements:** [`projects/pre-return-review/`](../../../projects/pre-return-review/).
+> **The firm's general analysis method** (not organizer-specific, and it applies to any review):
+> [`method.md`](../../../projects/pre-return-review/method.md). Read both alongside this skill —
+> this file is the *workflow*, they are the *why* and the *how we think*.
+
 **Lilian calls this "the tax preparer."** It does not prepare or file anything. It is the
 **companion for the review that happens before preparation starts**: it reads everything
 the firm already holds on a client, notices what does not add up, and hands back the
@@ -13,12 +18,9 @@ questions that unblock the work.
 **Why it exists, in her words (2026-08-11):** *"a veces, cuando pensamos que hay clientes
 sometidos, nos encontramos con errores y problemas… y tenemos que perder mucho tiempo
 analizando todo esto para volver a pedirle al cliente."* The cost is not the analysis —
-it is the weeks lost to discovering one gap at a time.
-
-
-The firm loses weeks per return to the same loop: the organizer comes back, someone
-starts preparing, a gap appears, the client is emailed, days pass, another gap appears,
-another email. This skill collapses that into **one pass and one list of questions**.
+it is the weeks lost to discovering one gap at a time — someone starts preparing, hits a
+missing document, emails the client, waits days, hits the next one. **This skill collapses
+that into one pass and one list of questions.**
 
 **What it produces:** a short, fixed-shape review a preparer can act on in five minutes,
 ending in the **questions to send the client** — grouped, deduplicated, and ordered so
@@ -633,7 +635,13 @@ both records*, *the internal checklist is not the client message*, *ask facts no
 *derive the documents from the structure*, *a client's mistake is work, not an alarm*. They would
 serve a bookkeeping cleanup or an agency matter equally well.
 
-**They have deliberately not been split into a separate skill.** Two skills on one job is how a
+**They now live outside this skill** — [`projects/pre-return-review/method.md`](../../../projects/pre-return-review/method.md),
+summarised in `CLAUDE.md`'s core conventions so **every session sees them without loading anything**.
+Lilian's call, 2026-08-11: *"puedo necesitarlas para otras cosas, ya que no son exclusivas de
+Organizer."* Read `method.md` alongside this skill; what remains here is what is genuinely
+organizer-shaped.
+
+**They were deliberately not split into a separate SKILL.** Two skills on one job is how a
 session loads one and misses the other's rules, and one case is not enough to know what is general.
 **Revisit after the second and third real reviews** — see the open loop in
 [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
