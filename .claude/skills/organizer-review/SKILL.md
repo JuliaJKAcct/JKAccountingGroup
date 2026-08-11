@@ -469,12 +469,12 @@ once the client tells us, their answer to *us* — never what they ticked in the
 In practice that costs almost nothing, because the answer we act on is the one they give
 when we ask.
 
-⚠️ **Client files feed the Knowledge Hub build, and Lilian's standing decision (2026-08-11)
-is that the Hub is not to carry clients' tax detail.** **What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
-**`loadClients()` hard-aborts** when a client file carries a `Tax year YYYY` heading — the gate sits
-in the shared loader, so **both** publishing paths inherit it: the Hub, and the client-intelligence
-review dashboard, which ships as an Artifact. See the [`knowledge-hub`](../knowledge-hub/) skill and
-[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+⚠️ **Client files are published** — they feed the Knowledge Hub and the client-intelligence
+review dashboard (an Artifact). **Tax findings on those pages are fine** (Lilian, 2026-08-11); what
+must never reach them is an **identifier** — SSN/ITIN, passport, driver's licence, full account
+numbers, dates of birth — because the Hub link circulates inside the team and can travel further.
+That is the repo's existing two-data-homes rule, and `loadClients()` now hard-aborts on the
+patterns it can match as a backstop. It cannot see everything: **you are still the control.**
 
 ---
 

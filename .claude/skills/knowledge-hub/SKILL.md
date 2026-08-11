@@ -192,28 +192,26 @@ emitted script silently broke *every* click.
     below: keep the one canonical Hub link current, never mint a new one). Lilian wants the Hub to be the single place she
     can see every tool we've built, with no scattered or divergent copies.
 
-    > ### ⛔ Before ANY rebuild: clients' tax detail is not to be published
+    > ### ⛔ Before ANY rebuild: no identifiers on the page
     >
-    > Lilian's decision, **2026-08-11** — the Hub does **not** carry clients' tax information, while
-    > the per-client files themselves now hold a `### Tax year YYYY — the review` entry (the
-    > questions put to a client and their answers) because she wants to be able to ask later *"what
-    > happened with this client's 2025 taxes?"*.
+    > Lilian's rule, **2026-08-11**: *"no quiero que haya ninguna información sensible puesta ahí,
+    > porque el link puede ser utilizado por cualquier miembro del equipo y puede llegar a otras
+    > manos."* **The Hub carrying clients' tax findings is fine and she has no objection to it** —
+    > what must never appear is an **identifier**: SSN/ITIN, passport, driver's licence, full
+    > account or routing numbers, dates of birth.
     >
-    > **`loadClients()` hard-aborts** when any `clients/*.md` carries a `Tax year YYYY` heading — the gate
-    > is in the shared loader (`client-intelligence/render/build.mjs`), not here, so the CI review
-    > dashboard (published as an **Artifact**) inherits it too. That
-    > is deliberate: the standing "rebuild unprompted" rule above is exactly how this would have been
-    > published by accident. `HUB_ALLOW_CLIENT_TAX_DETAIL=1` overrides it — only as a decision, never
-    > to get past the error.
+    > **`loadClients()` hard-aborts** on an SSN/ITIN shape or a 9+ digit run, and the gate sits in
+    > the shared loader (`client-intelligence/render/build.mjs`) so the CI review dashboard —
+    > published as an **Artifact** — inherits it too. `CI_ALLOW_SENSITIVE=1` overrides a false
+    > positive.
     >
-    > **Know what the card actually publishes before you judge any of this.** `clientCard()` emits §1
-    > snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR
-    > bullets**, a *count* of open "Information still needed", and §7 links — not the whole file, and
-    > **not** the tax-year section. So the real exposure is **the top of §5 and the top of the re-ask
-    > list**, which is where a session naturally puts its sharpest findings. Check those two places.
+    > **It cannot see everything.** Passport and licence numbers are too variable to match, and a
+    > date of birth or an address in prose slips straight through. The repo's two-data-homes rule
+    > is the real control; this is only the backstop for the day someone forgets.
     >
-    > The gate retires when `clientCard()` filters deliberately — see
-    > [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md), "Knowledge Hub vs. client tax detail".
+    > For orientation, what a card actually publishes: §1 snapshot fields, **§5's first FOUR
+    > top-level bullets**, **§6 "Outstanding items"' first FOUR**, a *count* of open "Information
+    > still needed", and §7 links — not the whole file.
 
     **To add a new tool:**
     embed its `.src.html` as a reader — either the `it.<flag>` → `…ReaderInner` wiring (like the

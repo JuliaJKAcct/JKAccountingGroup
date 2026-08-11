@@ -216,38 +216,56 @@ const SYS = [
 /* ---------------- load + parse all clients (reusable) ---------------- */
 let bySlug = {};   // module-level; set by loadClients(), read by card()
 
-/* GATE — clients' tax detail is not published. Lilian's decision, 2026-08-11.
-   It lives HERE, in the shared loader, because there are two consumers and both publish:
+/* GATE — no SENSITIVE data on a published page. Lilian's rule, 2026-08-11:
+   "no quiero que haya ninguna información sensible puesta ahí, porque el link puede ser
+   utilizado por cualquier miembro del equipo y puede llegar a otras manos."
+   It lives HERE, in the shared loader, because there are two consumers and BOTH publish:
    the Knowledge Hub (projects/knowledge-hub/build-hub.mjs) and this file's own review
-   dashboard, which ships as an Artifact — a hosted web page, double-mcp §2.2 exposure
-   point 1, the worst one. A gate in only one of them is not a gate.
-   What actually reaches a page is clientCard(): §1 snapshot fields, §5's first FOUR
-   top-level bullets, §6 "Outstanding items"' first FOUR, a COUNT of open "Information
-   still needed", and §7 links — not the whole file, and not the tax-year section itself.
-   So the exposure is the top of §5 and the top of the re-ask list; check those.
-   Retires when clientCard() filters deliberately — FOLLOW-UPS, "Knowledge Hub vs. client
-   tax detail". Override deliberately with HUB_ALLOW_CLIENT_TAX_DETAIL=1. */
-function assertNoClientTaxDetail(files, clientsDir){
-  if (process.env.HUB_ALLOW_CLIENT_TAX_DETAIL === '1') return;
-  const offenders = files.filter(f =>
-    /^#{2,4}\s+tax year\s+\d{4}/im.test(readFileSync(resolve(clientsDir, f), 'utf8')));
-  if (!offenders.length) return;
+   dashboard, which ships as an Artifact — a hosted web page. A gate in only one is not a gate.
+   ⚠️ This is NOT a ban on clients' tax detail. Lilian is fine with tax findings appearing on
+   the Hub; what must never appear is an identifier. Earlier code here blocked any
+   "Tax year YYYY" heading — that was a misreading of her instruction and has been removed.
+   The repo's two-data-homes rule already keeps identifiers out of client files; this gate is
+   the mechanical backstop for the day someone forgets, because the Hub link circulates.
+   Deliberately narrow: SSN/ITIN shape, and long digit runs that look like an account number.
+   Passport and driver's-licence numbers vary too much to match reliably — the skill rule
+   covers those, and a reader still has to think. Override: CI_ALLOW_SENSITIVE=1. */
+function assertNoSensitiveData(files, clientsDir){
+  if (process.env.CI_ALLOW_SENSITIVE === '1') return;
+  const PATTERNS = [
+    [/\b\d{3}-\d{2}-\d{4}\b/,      'looks like an SSN or ITIN'],
+    [/\b\d{9,}\b/,                  'a run of 9+ digits — an account or identifier number?'],
+  ];
+  // Strip what legitimately carries long digit runs before matching: URLs (support-article
+  // and doc IDs), inline code, and deep links. Scanning those produces only false positives.
+  const scrub = (md) => md
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/\]\([^)]*\)/g, '] ')
+    .replace(/https?:\/\/\S+/g, ' ');
+  const hits = [];
+  for (const f of files){
+    const md = scrub(readFileSync(resolve(clientsDir, f), 'utf8'));
+    for (const [re, why] of PATTERNS){
+      const m = md.match(re);
+      if (m) hits.push(`${f.replace(/\.md$/,'')}: ${why} (found "${m[0]}")`);
+    }
+  }
+  if (!hits.length) return;
   console.error(
-    `\nBUILD STOPPED — a client file carries a tax-year review, and clients' tax information` +
-    ` is not to be published.\n  Affected: ${offenders.map(f=>f.replace(/\.md$/,'')).join(', ')}\n` +
-    `  This gate covers BOTH publishing paths: the Knowledge Hub and this review dashboard` +
-    ` (which ships as an Artifact).\n` +
-    `  What a card publishes: §1 fields, §5's first FOUR bullets, §6 Outstanding-items' first FOUR,` +
-    ` a count, §7 links.\n  Check those, not the tax-year section — the card never reads it.\n` +
-    `  Decide the filter first (FOLLOW-UPS: "Knowledge Hub vs. client tax detail").\n` +
-    `  To publish anyway, deliberately: HUB_ALLOW_CLIENT_TAX_DETAIL=1\n`);
+    `\nBUILD STOPPED — a client file may contain sensitive data, and these pages are published.\n` +
+    hits.map(h => `  • ${h}`).join('\n') +
+    `\n\n  The Hub link circulates inside the team and can travel further, so identifiers never go on it:\n` +
+    `  SSN/ITIN, passport, driver's licence, full account or routing numbers, dates of birth.\n` +
+    `  Tax findings themselves are fine — this is about identifiers, not subject matter.\n` +
+    `  Move the value to Double or Drive and reference it, then rebuild.\n` +
+    `  If the match is a false positive: CI_ALLOW_SENSITIVE=1\n`);
   process.exit(1);
 }
 
 export function loadClients(repoRoot){
   const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
   const files = readdirSync(clientsDir).filter(f=>f.endsWith('.md')).sort();
-  assertNoClientTaxDetail(files, clientsDir);
+  assertNoSensitiveData(files, clientsDir);
   const clients = files.map(f=>{
     const slug = f.replace(/\.md$/,'');
     const md = readFileSync(resolve(clientsDir,f),'utf8');
