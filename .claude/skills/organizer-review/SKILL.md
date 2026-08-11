@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: Review a client's tax organizer BEFORE anyone starts their return — read their answers, reconcile them against the prior-year return (or prior organizer), the Double notes, the client's files and the firm's own Double columns, and turn what is missing, contradictory or misclassified into ONE grouped list of questions to send back. Use when asked to analyse / review / check a client's organizer, to compare a client's year against last year, to work out what to ask a client before preparing their return, or when an organizer looks complete but the return cannot actually be prepared. Encodes the fixed output structure (a prior-year → this-year comparison table, findings grouped by root cause, a what-we-already-have guard, and the ready-to-send question list), the six sources that must be read in order, the five detection families, the rule that an upstream answer silently suppresses downstream document requests, the extra carryover block when the prior return was prepared elsewhere, and the privacy discipline that governs reading organizer responses at all.
+description: Review a client's tax organizer BEFORE anyone starts their return — read their answers, reconcile them against the prior-year return (or prior organizer), the Double notes, the client's files and the firm's own Double columns, and turn what is missing, contradictory or misclassified into ONE grouped list of questions to send back. Use when asked to analyse / review / check a client's organizer, to compare a client's year against last year, to work out what to ask a client before preparing their return, or when an organizer looks complete but the return cannot actually be prepared. Encodes the fixed output structure (a prior-year → this-year comparison table, findings grouped by root cause, a what-we-already-have guard, and the ready-to-send question list), the six sources that must be read in order, the five detection families, the rule that an earlier answer legitimately stops the organizer asking for what follows from it (so the gap is ours to re-ask, not a fault in the organizer), the extra carryover block when the prior return was prepared elsewhere, and the privacy discipline that governs reading organizer responses at all.
 ---
 
 # Organizer review — what to ask the client, before anyone starts the return
@@ -95,15 +95,35 @@ organizer that is absent this year. **Each one is a question, never a conclusion
 Applies well beyond K-1s: a W-2 employer, a rental, a 1099 payer, a dependant, a state,
 an estimated-payment pattern.
 
-**2 · Suppressed questions — the organizer never asked.** Organizer logic hides each
-document request until an earlier answer reveals it. **That design is correct** — it is
-what keeps a simple client out of a 120-slide interrogation. But one wrong answer
-upstream silently removes everything below it, and the organizer still reports 100%.
+**2 · Questions we have no answer to, because of an earlier answer.**
 
-So: **when an upstream answer conflicts with what sources 1–4 show, regenerate the
-questions it suppressed and put them to the client directly.** That regenerated set is
-usually the largest single block of the review — and it is **one finding, not fifteen**
-(§4, Block B).
+Organizer logic only asks for a document once an earlier answer makes it relevant. A
+client who says they had **no income** is not then asked to complete a Profit & Loss, a
+home-office worksheet or a vehicle log — **and that is right.** There is no sense
+asking someone with no income for the paperwork that belongs to income; it is what keeps
+a simple client out of a 120-slide interrogation.
+
+So the finding is **never** that the organizer failed, and never that questions were
+"hidden" or "suppressed" from the client. Write it the way it actually is:
+
+> **Because the client indicated X, we have no answers to the questions that follow from
+> it — and sources 1–6 give us good reason to think we need them.** Name the reason:
+> *last year's return shows several income sources, and what he sent us directly
+> describes income and expenses for this year.*
+
+⚠️ **Wording matters here and Lilian corrected it specifically (2026-08-11):** *"parece
+como que el organizer es incorrecto… es simplemente que el cliente dijo que no tenía
+fuente de ingreso."* Phrasing it as a defect makes a colleague distrust a tool that is
+working, and makes the client look at fault when they are not. **The organizer did the
+right thing with the answer it was given.** Our job is to notice that the answer looks
+wrong against the other five sources, and to put the questions to the client ourselves.
+
+That regenerated set is usually the largest part of the review — and it is **one finding,
+not fifteen** (§4, Block B).
+
+*(A genuine defect in the organizer's own wiring is a different thing entirely, does not
+belong in a client's review, and goes to
+[`individual-organizer-logic-defects.md`](../tax-season-readiness/references/individual-organizer-logic-defects.md).)*
 
 **3 · Promised but not attached.** Every answer implying a document, checked against what
 is actually attached. Four states, and only one of them is a real ask:
@@ -113,7 +133,7 @@ is actually attached. Four states, and only one of them is a real ask:
 | ✅ Attached | The document is on the question | none |
 | 📁 Elsewhere | It exists in Double, or arrived by note/email, just not on the organizer | **none — and say so loudly** |
 | 🔴 Missing | Shown, implied by the answer, nothing attached | **ask** |
-| 🚫 Never asked | Suppressed by family 2 | **ask, and it is not the client's fault** |
+| 🚫 Not requested | An earlier answer made it irrelevant — family 2 | **ask directly; nobody is at fault** |
 
 `get_organizer_responses` returns the attached file name per question — that is the
 authoritative check, better than the folder. Note that a Double organizer's attachments
