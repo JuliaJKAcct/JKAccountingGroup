@@ -5,6 +5,11 @@ description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax
 
 # The pre-return review — what to ask the client, before anyone starts
 
+> **Purpose and standing requirements:** [`projects/pre-return-review/`](../../../projects/pre-return-review/).
+> **The firm's general analysis method** (not organizer-specific, and it applies to any review):
+> [`method.md`](../../../projects/pre-return-review/method.md). Read both alongside this skill —
+> this file is the *workflow*, they are the *why* and the *how we think*.
+
 **Lilian calls this "the tax preparer."** It does not prepare or file anything. It is the
 **companion for the review that happens before preparation starts**: it reads everything
 the firm already holds on a client, notices what does not add up, and hands back the
@@ -13,12 +18,9 @@ questions that unblock the work.
 **Why it exists, in her words (2026-08-11):** *"a veces, cuando pensamos que hay clientes
 sometidos, nos encontramos con errores y problemas… y tenemos que perder mucho tiempo
 analizando todo esto para volver a pedirle al cliente."* The cost is not the analysis —
-it is the weeks lost to discovering one gap at a time.
-
-
-The firm loses weeks per return to the same loop: the organizer comes back, someone
-starts preparing, a gap appears, the client is emailed, days pass, another gap appears,
-another email. This skill collapses that into **one pass and one list of questions**.
+it is the weeks lost to discovering one gap at a time — someone starts preparing, hits a
+missing document, emails the client, waits days, hits the next one. **This skill collapses
+that into one pass and one list of questions.**
 
 **What it produces:** a short, fixed-shape review a preparer can act on in five minutes,
 ending in the **questions to send the client** — grouped, deduplicated, and ordered so
@@ -77,6 +79,13 @@ comes with rules that do not bend. In short, and none of this is optional:
    the ⛔ subsection.)
 6. **Never write the organizer payload to a file**, including the scratchpad. Do the
    comparison in context.
+7. **Every example in this file — or any skill — is INVENTED, and labelled as such.** Never
+   illustrate a rule with the client in front of you. Three separate review rounds caught this
+   exact leak, twice inside the example being used to *teach* the rule against it. A real client's
+   answers cannot be the teaching example for the rule about a real client's answers.
+   *(This is a rule about **skills**. [`method.md`](../../../projects/pre-return-review/method.md)
+   deliberately uses the real cases instead, de-identified — a rule there is only trustworthy if you
+   can see what produced it. Its header says so.)*
 
 The **findings** are free. *"No K-1 this year; last year had one"* is exactly the output
 this permission exists to produce.
@@ -337,7 +346,9 @@ job.**
 ### Block A — Can we prepare this return? (3 lines)
 
 Verdict — **Yes / No, blocked on X / Not until Y is settled** — the single thing that
-gates it, and how many questions the client owes. Nothing else.
+gates it, and how many questions the client owes. **And if a source was empty, unreachable or
+never checked, say so here** — a review that silently skipped one is worth less than it looks.
+Nothing else.
 
 ### Block B — The prior-year → this-year table
 
@@ -586,8 +597,8 @@ That only happens if every correction she makes survives the session it was made
 | Kind | What it is | Where it lives |
 |---|---|---|
 | **Domain** | How a tax thing behaves — a K-1 is issued for the year an entity closed; filing status is fixed on 31 December; an NOL offsets 80% | §2's detection families, or the carryover block |
-| **Method** | How the work is done and shown — group by root cause, five to eight findings, show the trail, check what we already hold before asking | §1, §3, §4 |
-| **Relationship** | How the firm speaks to a client — show them both records, ask facts not family-law documents, never hand them a menu | §4 Block E |
+| **Method** | How the work is done and shown | **[`method.md`](../../../projects/pre-return-review/method.md)** — it applies to any review, not just this one. Only the *organizer-shaped* specifics stay here: the five-to-eight cap, the six blocks, the marker set (§1, §3, §4) |
+| **Relationship** | How the firm speaks to a client | **[`method.md`](../../../projects/pre-return-review/method.md) §7–8.** §4 Block E applies it to a pre-return question list; the rule itself lives there |
 | **Case fact** | True of ONE client *(invented illustrations: she is paid quarterly; his warehouse lease renews in March; her prior year was prepared out of state)* | **Not here.** The client's file — **§4/§5 for the substance, §6 for the dated log** (`client-intelligence`'s own split) |
 
 **The last row is the one that goes wrong.** A case fact written into this skill makes it longer
@@ -628,12 +639,18 @@ single run.
 
 ### What is NOT yet settled — read before generalising
 
-Several rules here are plainly not about tax organizers at all: *show the trail*, *show the client
+Several of the rules this review depends on are plainly not about tax organizers at all: *show the trail*, *show the client
 both records*, *the internal checklist is not the client message*, *ask facts not documents*,
 *derive the documents from the structure*, *a client's mistake is work, not an alarm*. They would
 serve a bookkeeping cleanup or an agency matter equally well.
 
-**They have deliberately not been split into a separate skill.** Two skills on one job is how a
+**They now live outside this skill** — [`projects/pre-return-review/method.md`](../../../projects/pre-return-review/method.md),
+summarised in `CLAUDE.md`'s core conventions so **every session sees them without loading anything**.
+Lilian's call, 2026-08-11: *"puedo necesitarlas para otras cosas, ya que no son exclusivas de
+Organizer."* Read `method.md` alongside this skill; what remains here is what is genuinely
+organizer-shaped.
+
+**They were deliberately not split into a separate SKILL.** Two skills on one job is how a
 session loads one and misses the other's rules, and one case is not enough to know what is general.
 **Revisit after the second and third real reviews** — see the open loop in
 [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).

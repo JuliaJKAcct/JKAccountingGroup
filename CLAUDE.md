@@ -32,6 +32,8 @@ the US.
 │   │   ├── consultation-booking/  the booking front door — free 10-min phone discovery call vs paid $150 consultation, on two Odoo calendars (Active)
 │   │   ├── scale-your-accounting-firm/  digested notes from the "Scale Your Accounting Firm" course, by track/module/video (Active)
 │   │   └── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
+│   ├── pre-return-review/         the firm's ANALYSIS COMPANION (Lilian's "tax preparer") — its purpose,
+│   │                              and method.md: how we analyse ANYTHING, not just organizers (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   ├── proposal-tool/             in-house GoProposal alternative — branded proposals + engagement letters (Active)
@@ -93,6 +95,7 @@ the US.
 | A client's **bookkeeping KPIs / performance** — a dashboard of how a bookkeeping client's books look (health score, ranked signals & alerts, expense + revenue-vs-net charts, balance-sheet snapshot), or the board that lists all bookkeeping clients | the [`bookkeeping-kpis` skill](./.claude/skills/bookkeeping-kpis/) → [`projects/bookkeeping-kpis/`](./projects/bookkeeping-kpis/) — on-brand, dynamic, self-contained pages built with the [`impeccable`](./.claude/skills/impeccable/) skill + the Design System. Only the sample-data template is committed; a real client's figures ship as an artifact, never in the repo (Ecoorganic is the pilot) |
 | Monitoring a client's recurring monthly payments — did a subscription / insurance / rent charge post this month, is an amount off, did a new recurring charge appear | the [`recurring-expense-monitoring` skill](./.claude/skills/recurring-expense-monitoring/) → per-client watchlists live in Google Drive, not the repo |
 | A client wants an **Expenses report** that must match the **P&L**, or the expense totals on two reports don't agree (a "Transaction Detail" doesn't tie to the P&L, payroll/journal-entry lines missing) | the [`expenses-report-tie-out` skill](./.claude/skills/expenses-report-tie-out/) → cleaned `.xlsx` delivered to the user, client figures never committed |
+| **How we analyse anything** — the firm's method for a review, a reconciliation, or working out what to ask (not tax-specific) | [`projects/pre-return-review/method.md`](./projects/pre-return-review/method.md) — nine rules Lilian set by correcting real work. Its **purpose** is [`README.md`](./projects/pre-return-review/README.md) |
 | **The pre-return review — Lilian's "tax preparer"** · review ONE client before their return is prepared — "analyse this client's organizer", compare this year against last year's return, work out **what to ask the client**, or an organizer that reads "Completed" and still cannot be worked | the [`organizer-review` skill](./.claude/skills/organizer-review/) — **the companion, not a filer.** Reads **nine** sources (the client file, Double notes/files/properties, **Julia's Gmail, Google Drive, Ping**, the organizer, the prior-year return) and produces the fixed structure: a **prior-year → this-year comparison table**, findings **grouped by root cause** (one answer that leaves fifteen questions unanswered is ONE finding), a **"we already have this — don't ask for it"** guard, and the **ready-to-send question list**. Encodes the disappearance rule (a company that closed *during* the year still issues a K-1), the carryover block when the prior year was prepared elsewhere (NOL, basis, suspended losses, which states), and that a client's mistake is work to be done, not an alarm. **Load [`double-mcp`](./.claude/skills/double-mcp/) §2.2 first** — reading organizer answers has rules. Delivered in chat: **never an artifact, never committed** |
 | **Tax season status** — which clients still haven't filed (2025 or any open year), which bookkeeping/QuickBooks clients are **ready** for us to prepare vs **pending**, who we're waiting on for a **tax organizer**, or what Double's `Tax Return Status` / `Organizer Status` / `Organizer Progress` columns and the legacy **TaxDome** organizer folders actually mean (including the two routes to the progress percentages — per-organizer via the MCP since Aug 2026, or the CSV export for the whole roster) | the [`tax-season-readiness` skill](./.claude/skills/tax-season-readiness/) — encodes who is actually owed an organizer (bookkeeping and Schedule-C clients are **not**), what gates each return (a company return runs off its **books** and feeds the owner's 1040 via K-1, not the reverse), the two organizer generations (TaxDome vs Double), Lilian's manual procedure for the Organizer column, and the owner↔company link. **Read-only**: never write those columns; the client list is delivered, never committed |
 | Automating a report as a scheduled, unattended email (send a report every month / week automatically, no clicks) | the [`automated-email-reports` skill](./.claude/skills/automated-email-reports/) — the setup playbook (Claude Code Routines + the firm's email webhook) |
@@ -206,6 +209,24 @@ in that folder.
   actually sent came out ~35% **longer** than the assistant's "shortened" one, because she
   kept her own text and cut only what the assistant had added. The word count was never the
   problem.)_
+- **Analytical work follows the firm's method — it is not organizer-specific, and it always applies.**
+  When a session **reviews, reconciles, or works out what to ask** — a client before their return, a
+  bookkeeping cleanup, a matter with an agency, books that disagree with a bank —
+  [`projects/pre-return-review/method.md`](./projects/pre-return-review/method.md) is the standing
+  guide, and it holds nine rules Lilian set while directing and correcting real work. The short form, because
+  these are the ones a session gets wrong: **look before you ask** (a gap is not a finding until you
+  have searched everywhere the firm keeps things — asking for what someone already sent is worse than
+  not reviewing at all); **group by root cause** (one cause is one finding, however many questions it
+  generates); **show the trail** (what was reported, what is missing, what the prior period did);
+  **a disappearance is a question, never a conclusion**; **derive what must exist from the client's
+  structure**; **a client's mistake is work, not an alarm**; **the internal checklist is not the
+  client message** (categories and code sections are how *we* classify — the client gets a plain
+  question, and we ask for **facts, not the family-law paperwork that proves them**, though ordinary
+  working documents are still asked for by name); **where two records disagree, show the client
+  both, then ask** (recite what they told us · name each record · ask openly · then narrow, one
+  question per block); and **when several small
+  anomalies move together, question the frame, not just the pieces.** The purpose behind all of it is
+  [`projects/pre-return-review/README.md`](./projects/pre-return-review/README.md).
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
