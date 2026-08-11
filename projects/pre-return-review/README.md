@@ -95,7 +95,7 @@ lost** — plenty is written down that no single row names.
 | The **purpose** — one pass, one question list, instead of weeks of ping-pong | This README |
 | **Look before you ask** · group by root cause · show the trail · a disappearance is a question · derive from structure · a client's mistake is work · the internal checklist is not the client message · show both records then ask · question the frame | [`method.md`](./method.md) — **and summarised in `CLAUDE.md`'s core conventions, so every session sees them without loading a skill** |
 | The **fixed six-block output** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 |
-| The **"never a wall of text"** rule, and why | that skill's opening section |
+| That the review is **never a narrative** — the shape is fixed, and why | that skill's opening section |
 | The **nine sources** in order, and that Gmail / Drive / Ping are not optional | that skill §1 |
 | The **six detection families**, incl. the K-1 disappearance rule and the filing-status catch | that skill §2 |
 | The **prior-year → this-year table** and its markers | that skill §3 |
@@ -113,7 +113,7 @@ lost** — plenty is written down that no single row names.
 | **`VIA VOICE` in a Double note means Google Voice**, not a recording | [`organizer-review`](../../.claude/skills/organizer-review/) §1 source 2 + the client's file §5 |
 | The **`Tax year YYYY — the review`** entry — what gated the return, every question **and its answer as it arrives**, what the prior return established. **This is the only thing a review leaves behind** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 Block F + §5, and the [client template](../client-intelligence/_client-template.md) §6 |
 | **Only the first FOUR top-level bullets** of a client file's §5 and §6 Outstanding items ever reach the team — so order both by consequence | [`_client-template.md`](../client-intelligence/_client-template.md) §5 · [`client-intelligence`](../../.claude/skills/client-intelligence/) · [`organizer-review`](../../.claude/skills/organizer-review/) §5 |
-| **Every example in a skill must be invented, and labelled** — a real client's material is never the teaching example | [`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 5 |
+| **Every example in a SKILL must be invented, and labelled** — a real client's material is never the teaching example there | [`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 7 |
 | The rest of the **privacy discipline** — tell the person before the first read · remind them to delete the conversation · never from a subagent or a scheduled session · never into an artifact | [`organizer-review`](../../.claude/skills/organizer-review/) §0 + [`double-mcp`](../../.claude/skills/double-mcp/) §2.2 |
 | **Lilian's standing arrangement** — she keeps the information reachable, so the source list is an expectation; a genuinely missing channel is reported to her, not asked of the client | [`organizer-review`](../../.claude/skills/organizer-review/) §1 |
 | Everything about the **pilot client** — his structure, his carryovers, his open questions | [`clients/denys-melnyk.md`](../client-intelligence/clients/denys-melnyk.md) |

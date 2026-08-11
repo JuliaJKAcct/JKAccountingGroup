@@ -33,7 +33,7 @@ the US.
 │   │   ├── scale-your-accounting-firm/  digested notes from the "Scale Your Accounting Firm" course, by track/module/video (Active)
 │   │   └── lead-magnets/          free interactive calculators + assessments — the funnel's entry point (Active)
 │   ├── pre-return-review/         the firm's ANALYSIS COMPANION (Lilian's "tax preparer") — its purpose,
-│   │                             and method.md: how we analyse ANYTHING, not just organizers (Active)
+│   │                              and method.md: how we analyse ANYTHING, not just organizers (Active)
 │   ├── reasonable-compensation/   S-corp owner-salary analysis + reports (Active)
 │   ├── recurring-expense-monitoring/  twice-monthly watch for missed/abnormal client recurring payments (Active)
 │   ├── proposal-tool/             in-house GoProposal alternative — branded proposals + engagement letters (Active)

@@ -12,6 +12,15 @@ otras cosas, ya que no son exclusivas de Organizer."*
 Every rule below is dated and attributed. Where it came from **correcting** something, the
 correction is recorded with what it replaced, because the wrong version is the useful part.
 
+> **Why these examples are real, and how that squares with the invented-example rule.** The
+> [`organizer-review` skill](../../.claude/skills/organizer-review/) §0 rule 7 says every example
+> **in a skill** must be invented — because a skill teaches a procedure, and reaching for the
+> client in front of you is how a real client's answers end up committed. **This file is the
+> opposite kind of document.** A rule here is only trustworthy if you can see *what happened that
+> made someone write it*, so its cases are the real ones, **de-identified**: no name, no figures,
+> no identifiers, and nothing sourced from an organizer response. That is a deliberate difference
+> between the two files, not an oversight in either.
+
 ---
 
 ## 1 · Look before you ask

@@ -83,6 +83,9 @@ comes with rules that do not bend. In short, and none of this is optional:
    illustrate a rule with the client in front of you. Three separate review rounds caught this
    exact leak, twice inside the example being used to *teach* the rule against it. A real client's
    answers cannot be the teaching example for the rule about a real client's answers.
+   *(This is a rule about **skills**. [`method.md`](../../../projects/pre-return-review/method.md)
+   deliberately uses the real cases instead, de-identified — a rule there is only trustworthy if you
+   can see what produced it. Its header says so.)*
 
 The **findings** are free. *"No K-1 this year; last year had one"* is exactly the output
 this permission exists to produce.
@@ -636,7 +639,7 @@ single run.
 
 ### What is NOT yet settled — read before generalising
 
-Several rules here are plainly not about tax organizers at all: *show the trail*, *show the client
+Several of the rules this review depends on are plainly not about tax organizers at all: *show the trail*, *show the client
 both records*, *the internal checklist is not the client message*, *ask facts not documents*,
 *derive the documents from the structure*, *a client's mistake is work, not an alarm*. They would
 serve a bookkeeping cleanup or an agency matter equally well.
