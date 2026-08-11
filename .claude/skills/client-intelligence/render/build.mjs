@@ -216,7 +216,7 @@ const SYS = [
 /* ---------------- load + parse all clients (reusable) ---------------- */
 let bySlug = {};   // module-level; set by loadClients(), read by card()
 
-/* GATE — no SENSITIVE data on a published page. Lilian's rule, 2026-08-11:
+/* GATE — no SENSITIVE data in the CLIENT FILES, which are published. Lilian's rule, 2026-08-11:
    "no quiero que haya ninguna información sensible puesta ahí, porque el link puede ser
    utilizado por cualquier miembro del equipo y puede llegar a otras manos."
    It lives HERE, in the shared loader, because there are two consumers and BOTH publish:
@@ -227,38 +227,52 @@ let bySlug = {};   // module-level; set by loadClients(), read by card()
    "Tax year YYYY" heading — that was a misreading of her instruction and has been removed.
    The repo's two-data-homes rule already keeps identifiers out of client files; this gate is
    the mechanical backstop for the day someone forgets, because the Hub link circulates.
+   ⚠️ SCOPE: it scans projects/client-intelligence/clients/*.md ONLY. The Hub also publishes
+   the SOPs and Lilian's Notebook, and nothing scans those.
    Deliberately narrow: SSN/ITIN shape, and long digit runs that look like an account number.
    Passport and driver's-licence numbers vary too much to match reliably — the skill rule
-   covers those, and a reader still has to think. Override: CI_ALLOW_SENSITIVE=1. */
+   covers those, and a reader still has to think. It also only sees the hyphenated 123-45-6789
+   form — spaces, dots, or an EIN's 12-3456789 shape slip through.
+   Override: ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1. */
 function assertNoSensitiveData(files, clientsDir){
-  if (process.env.CI_ALLOW_SENSITIVE === '1') return;
+  if (process.env.ALLOW_SENSITIVE_ON_PUBLISHED_PAGES === '1') return;
   const PATTERNS = [
-    [/\b\d{3}-\d{2}-\d{4}\b/,      'looks like an SSN or ITIN'],
-    [/\b\d{9,}\b/,                  'a run of 9+ digits — an account or identifier number?'],
+    [/\b(\d{3})-(\d{2})-(\d{4})\b/, 'SSN/ITIN shape', m => `***-**-${m[3]}`],
+    [/\b\d{9,}\b/,                    'a run of 9+ digits — account or identifier number?',
+                                        m => `${'*'.repeat(m[0].length - 4)}${m[0].slice(-4)}`],
   ];
-  // Strip what legitimately carries long digit runs before matching: URLs (support-article
-  // and doc IDs), inline code, and deep links. Scanning those produces only false positives.
-  const scrub = (md) => md
-    .replace(/`[^`]*`/g, ' ')
+  // Strip only what legitimately carries long digit runs: URLs and markdown link targets
+  // (support-article and doc IDs — three Gusto ones live in a client file today). Do NOT
+  // strip inline code: identifiers in this repo are routinely written in backticks, so
+  // scrubbing code spans would make a single backtick switch the whole gate off, and it
+  // protects nothing — no client file has a long digit run inside one.
+  const scrub = (line) => line
     .replace(/\]\([^)]*\)/g, '] ')
     .replace(/https?:\/\/\S+/g, ' ');
   const hits = [];
   for (const f of files){
-    const md = scrub(readFileSync(resolve(clientsDir, f), 'utf8'));
-    for (const [re, why] of PATTERNS){
-      const m = md.match(re);
-      if (m) hits.push(`${f.replace(/\.md$/,'')}: ${why} (found "${m[0]}")`);
-    }
+    const lines = readFileSync(resolve(clientsDir, f), 'utf8').split('\n');
+    lines.forEach((raw, n) => {
+      const line = scrub(raw);
+      for (const [re, why, mask] of PATTERNS){
+        const m = line.match(re);
+        // Report the location and the SHAPE, never the value: this message goes to a session
+        // transcript in the firm's shared account, and an identifier must not be written out
+        // there either (CLAUDE.md / double-mcp §2.2 — by existence, never by value).
+        if (m) hits.push(`${f.replace(/\.md$/,'')}:${n + 1} — ${why} (${mask(m)})`);
+      }
+    });
   }
   if (!hits.length) return;
   console.error(
     `\nBUILD STOPPED — a client file may contain sensitive data, and these pages are published.\n` +
     hits.map(h => `  • ${h}`).join('\n') +
-    `\n\n  The Hub link circulates inside the team and can travel further, so identifiers never go on it:\n` +
-    `  SSN/ITIN, passport, driver's licence, full account or routing numbers, dates of birth.\n` +
+    `\n\n  The Hub link circulates inside the team and can travel further, so identifiers never go\n` +
+    `  on it: SSN/ITIN, passport, driver's licence, full account or routing numbers, dates of birth.\n` +
     `  Tax findings themselves are fine — this is about identifiers, not subject matter.\n` +
     `  Move the value to Double or Drive and reference it, then rebuild.\n` +
-    `  If the match is a false positive: CI_ALLOW_SENSITIVE=1\n`);
+    `  If a match is a false positive, override DELIBERATELY — never just to get past the error:\n` +
+    `  ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1\n`);
   process.exit(1);
 }
 

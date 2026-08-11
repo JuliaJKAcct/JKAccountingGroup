@@ -118,15 +118,24 @@ an estimated-payment pattern.
 >
 > **The categories are OURS, for classifying their answer — not the question.** Keep them
 > in your head while you read what they write:
-> - **Married at year end** — and note that a **surviving spouse** is generally treated as
->   married for the year of the death, so a bereavement does not automatically change the
->   status for that year.
+> - **Married at year end** — and a **surviving spouse** is generally treated as married for
+>   the year of the death, so a bereavement does not automatically change that year's status.
+>   **They may then qualify as Qualifying Surviving Spouse for the TWO years after**, which
+>   carries joint rates and the joint standard deduction. ⚠️ **Nothing will tell you this** —
+>   the firm's organizer has no Widowed option at all (see
+>   [`individual-organizer-logic-defects.md`](../tax-season-readiness/references/individual-organizer-logic-defects.md)),
+>   so it only ever surfaces from the client's own description. That is precisely why this
+>   checklist has to carry it.
 > - **Legally separated under a decree of separate maintenance** — unmarried at year end.
-> - **Married but living apart**, where §7703(b) can treat them as unmarried and, with a
->   qualifying child in the home and the rest of the §2(b) tests met, open **Head of
->   Household**. This is the one a plain description most often turns out to be.
+> - **Married but living apart**, where §7703(b) can treat them as unmarried and open
+>   **Head of Household**. **The operative threshold is §7703(b)(3): the spouse must not have
+>   been a member of the household during the LAST SIX MONTHS of the year** — that one fact
+>   decides the whole branch, and it is *not* one of the §2(b) tests, so "the rest of §2(b)"
+>   does not cover it. On top of it you still need a qualifying child in the home and the
+>   remaining §2(b) conditions. This is the case a plain description is most likely to reveal
+>   that a menu would not.
 >
-> ⚠️ **This is the same rule as "ask facts, not family-law documents", one level up:** the
+> ⚠️ **This is the same rule as "ask facts, not family-law documents" (Block E), one level up:** the
 > legal category informs how we *treat* the answer; it is never what we put in front of the
 > client. Never infer the status, never carry last year's forward because nothing said
 > otherwise, and never assume a client who says "married" today was married at year end.
@@ -390,7 +399,7 @@ Rules that come from the firm's client-message convention:
   cases are how *we* classify an answer; the client gets a plain question and room to
   explain. Listing the possibilities at them — especially the grave ones — reads as cold,
   and gets you a box ticked instead of the story you need. Ask openly, then narrow to facts.
-- **Ask for facts, not FAMILY-LAW documents.** The firm does not open with a request for
+- **Ask for facts, not FAMILY-LAW documents** — *the documents case of the rule above.* The firm does not open with a request for
   custody orders, divorce decrees, separation agreements or a signed Form 8332. **Ask the
   facts the return needs instead** — who lived where, for how many months, what the
   position was on 31 December — because those facts are what the return runs on, and
@@ -488,8 +497,11 @@ when we ask.
 review dashboard (an Artifact). **Tax findings on those pages are fine** (Lilian, 2026-08-11); what
 must never reach them is an **identifier** — SSN/ITIN, passport, driver's licence, full account
 numbers, dates of birth — because the Hub link circulates inside the team and can travel further.
-That is the repo's existing two-data-homes rule, and `loadClients()` now hard-aborts on the
-patterns it can match as a backstop. It cannot see everything: **you are still the control.**
+That is the repo's existing two-data-homes rule, and `loadClients()` hard-aborts on the patterns it
+can match as a backstop — **client files only**, not the SOPs the Hub also publishes. It misses a
+passport or licence number, a date of birth, an address in prose, and even an SSN written with
+spaces or dots rather than hyphens. **You are still the control**; see
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) and the [`knowledge-hub`](../knowledge-hub/) skill.
 
 ---
 

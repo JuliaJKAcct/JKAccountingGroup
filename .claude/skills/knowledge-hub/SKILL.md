@@ -202,12 +202,15 @@ emitted script silently broke *every* click.
     >
     > **`loadClients()` hard-aborts** on an SSN/ITIN shape or a 9+ digit run, and the gate sits in
     > the shared loader (`client-intelligence/render/build.mjs`) so the CI review dashboard —
-    > published as an **Artifact** — inherits it too. `CI_ALLOW_SENSITIVE=1` overrides a false
-    > positive.
+    > published as an **Artifact** — inherits it too. `ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1`
+    > overrides a false positive — **only as a decision, never just to get past the error.**
     >
-    > **It cannot see everything.** Passport and licence numbers are too variable to match, and a
-    > date of birth or an address in prose slips straight through. The repo's two-data-homes rule
-    > is the real control; this is only the backstop for the day someone forgets.
+    > **It cannot see everything, and its scope is narrow.** It reads **client files only** — the
+    > 16 SOPs and Lilian's Notebook that this page also publishes are not scanned at all. Within
+    > the client files it misses passport and licence numbers (too variable), dates of birth,
+    > addresses in prose, and an SSN written with spaces or dots instead of hyphens. The repo's
+    > two-data-homes rule is the real control; this is only the backstop for the day someone
+    > forgets.
     >
     > For orientation, what a card actually publishes: §1 snapshot fields, **§5's first FOUR
     > top-level bullets**, **§6 "Outstanding items"' first FOUR**, a *count* of open "Information

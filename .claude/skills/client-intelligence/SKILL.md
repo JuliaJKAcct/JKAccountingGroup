@@ -146,9 +146,10 @@ costs almost nothing, because the answer we act on is the one they give when we 
 **Artifact**) both render from them. **Tax detail is fine on those pages** (Lilian, 2026-08-11 —
 she has no objection to the Hub carrying it); **identifiers are not**, because the link circulates
 inside the team and can travel further. That is rule 1 above, and `loadClients()` now hard-aborts
-on an SSN/ITIN shape or a long digit run as a backstop (`CI_ALLOW_SENSITIVE=1` overrides). It
-cannot match a passport number, a licence number or a date of birth — **rule 1 is still the real
-control.** See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+on an SSN/ITIN shape or a long digit run as a backstop (`ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1`
+overrides — as a decision, never to get past the error). It scans **client files only**, and it
+misses a passport or licence number, a date of birth, an address in prose, and an SSN written with
+spaces or dots instead of hyphens — **rule 1 is still the real control.** See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
