@@ -1,3 +1,10 @@
 # Python bytecode cache (e.g. from running/compiling skill scripts)
 __pycache__/
 *.pyc
+
+# The client-intelligence review dashboard is a BUILD ARTIFACT, never a repo file.
+# `.claude/skills/client-intelligence/render/build.mjs` writes it to the repo root by
+# default, and it renders every client file into one page — so it carries client data
+# that this repo must not hold. It ships to Lilian as an Artifact and is thrown away.
+# Without this line a session (or a "you have untracked files" prompt) commits it.
+ci-review-dashboard.html
