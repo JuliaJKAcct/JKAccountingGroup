@@ -98,13 +98,13 @@ substance to arrive as messages rather than uploads.
 > `VIA GOOGLE VOICE` in future notes; a teammate will make the same mistake.
 
 **His organizer reports 100% complete, and we still have no answers to the questions that matter.**
-He indicated **no source of income**. The organizer therefore did not go on to ask for the 1099,
-the Profit & Loss template, the home-office question or the vehicle block — **which is correct
+An upstream answer in the income section meant the organizer never went on to request the 1099, the
+Profit & Loss template, the home-office question or the vehicle block — **which is correct
 behaviour**: there is no sense asking a client with no income to complete a P&L. So this is not an
 organizer problem and not a client failing. It simply means **those questions are unanswered**, and
-we have good reason to think they should have been answered — his 2024 return shows several income
-sources, and what he sent us directly describes income and expenses for 2025. **So we put them to
-him again** (§6).
+we have good reason to think they should have been — his 2024 return shows several income sources,
+and what he sent us directly describes income and expenses for 2025. **So we put them to him
+again** (§6).
 
 **He classifies his own expenses, and some are not deductible as he lists them.** He
 supplied a total received from the payer plus a list of amounts to subtract from it.
@@ -184,13 +184,18 @@ repo — they are on the return and in Double.)
 
 **The dependent question is worth real money, and the three sources disagree.** His 2024 return
 claimed **one dependent daughter** with both the **Earned Income Credit** and the **Additional
-Child Tax Credit** — EIC and ACTC require the child to have lived with them **more than half the
-year**, so as of 2024 she did. **And he is married to the same spouse now** — so a year in which
-that daughter is not a dependant needs an explanation the marriage does not provide. The reading
-that fits every source is **two children: one living with them (the one claimed in 2024) and one
-who does not (the child support)** — which would make the current dependant answer simply an
-oversight. Do not assume it; it is the single most likely explanation and it is worth real money. What he sent us in Aug 2026 says **two children** and **child
-support**. His 2025 organizer tells it differently again. Nothing in that is alarming on its own —
+Child Tax Credit** — and **EIC cannot be claimed by a non-custodial parent at all**, so as of 2024
+she lived with them more than half the year. (The child tax credit alone would not prove that: it
+can be released to a non-custodial parent on Form 8332. The residency conclusion rests on the EIC.)
+What he sent us in Aug 2026 says **two children** and **child support**. His 2025 organizer tells it
+differently again — the answers are in Double, not here.
+
+**One reading fits all three sources: two children — one living with them (the one claimed in 2024)
+and one who does not (the child support).** That would make the 2025 dependant position simply an
+oversight. It is worth stating because **he is married to the same spouse he was in 2024**, so any
+change in that daughter's status needs an explanation the marriage does not supply. But other
+readings fit too — custody may have switched, the resident child may be the other one, or the
+question was simply misread. **Ask; do not assume.** Nothing in it is alarming on its own —
 circumstances change and he is not an accountant — but it has to be settled **per child**: who
 they live with now, since when, and whether a Form 8332 release exists. If nothing actually
 changed, what is on file today would cost him the **Child Tax Credit**. (EIC is a separate question:
@@ -219,7 +224,7 @@ particular finding earns a place there.
 - _(2026-08-04)_ — Client marked the organizer **complete (100%)** and uploaded a copy of his **2024 return** (prepared by another firm).
 - _(2026-08-05)_ — Client sent his income and expense summary as a **text message (Google Voice)**, not through the portal.
 - _(2026-08-06, Lilian)_ — Captured that summary in the Double note **"2025 Tax Preparation - P&L and other info"**. The client's completed **Home Office Deduction template** was filed in Double under `Others > 2025`.
-- _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; an upstream answer in the income section suppressed the document requests below it; two documents genuinely outstanding (1095-A, 1098) versus two already supplied **outside** the organizer and therefore not to be chased (the home-office template, and the P&L data by voice). Client file created the same day. Findings deliberately kept out of the Double note (§5).
+- _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; an upstream answer in the income section meant the requests below it were never made; two documents genuinely outstanding (1095-A, 1098) versus two already supplied **outside** the organizer and therefore not to be chased (the home-office template, and the P&L figures from his text message). Client file created the same day. Findings deliberately kept out of the Double note (§5).
 - _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024, and neither state has come up for 2025; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit**, which needs re-establishing for 2025. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
 
 ### Outstanding items (CI-only — never in the SOP)
@@ -227,12 +232,13 @@ particular finding earns a place there.
 The re-ask list for the client, in priority order:
 
 - **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
-  a K-1 share. Everything else depends on the answer, including whether there is a Schedule C at
-  all. **Ask this first.**
+  a K-1 share. Whether there is a Schedule C at all depends on the answer.
 - **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
-  **This gates everything else** — a K-1 does not exist until the company files. The 1120-S was due
-  **15 March 2026** (15 September extended), and its late-filing penalty runs **per shareholder, per
-  month**, so a company that has not filed is its own problem to raise with him now.
+  **This gates everything else** — in practice the shareholder has no K-1 until the entity's return
+  is prepared and filed. For a calendar-year S corp the 2025 Form 1120-S was due **16 March 2026**
+  (the 15th fell on a Sunday), extendable to **15 September 2026**; the late-filing penalty runs
+  **per shareholder, per month, capped at 12 months**. A company that has not filed is its own
+  problem to raise with him now.
 - **The three S corporations' 2025 K-1s** — Midwest Expedited Corp, Midwest Truck Leasing LLC,
   AVDM Holdings Inc. If any of them stopped, we need **which one, and the date it closed or he
   left**. A company that closed *during* 2025 still issues a 2025 K-1; only an exit or closure in

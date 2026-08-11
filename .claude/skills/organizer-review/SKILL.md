@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: Review a client's tax organizer BEFORE anyone starts their return — read their answers, reconcile them against the prior-year return (or prior organizer), the Double notes, the client's files and the firm's own Double columns, and turn what is missing, contradictory or misclassified into ONE grouped list of questions to send back. Use when asked to analyse / review / check a client's organizer, to compare a client's year against last year, to work out what to ask a client before preparing their return, or when an organizer looks complete but the return cannot actually be prepared. Encodes the fixed output structure (a prior-year → this-year comparison table, findings grouped by root cause, a what-we-already-have guard, and the ready-to-send question list), the six sources that must be read in order, the five detection families, the rule that an earlier answer legitimately stops the organizer asking for what follows from it (so the gap is ours to re-ask, not a fault in the organizer), the extra carryover block when the prior return was prepared elsewhere, and the privacy discipline that governs reading organizer responses at all.
+description: Review a client's tax organizer BEFORE anyone starts their return — read their answers, reconcile them against the prior-year return (or prior organizer), the Double notes, the client's files and the firm's own Double columns, and turn what is missing, contradictory or misclassified into ONE grouped list of questions to send back. Use when asked to analyse / review / check a client's organizer, to compare a client's year against last year, to work out what to ask a client before preparing their return, or when an organizer looks complete but the return cannot actually be prepared. Encodes the fixed output structure (a prior-year → this-year comparison table, findings grouped by root cause, a what-we-already-have guard, and the ready-to-send question list), the six sources that must be read in order, the six detection families, the rule that an earlier answer legitimately stops the organizer asking for what follows from it (so the gap is ours to re-ask, not a fault in the organizer), the extra carryover block when the prior return was prepared elsewhere, and the privacy discipline that governs reading organizer responses at all.
 ---
 
 # Organizer review — what to ask the client, before anyone starts the return
@@ -71,7 +71,7 @@ nothing.
 > **A gap in the organizer is not a finding until you have looked for the answer in
 > sources 1–4.** Asking a client for something they already sent is worse than not
 > running the review at all — it burns the goodwill you need for the questions that
-> genuinely matter. §4's **Block C** exists to make this visible.
+> genuinely matter. §4's **Block D** exists to make this visible.
 
 **No prior year in Double?** Most clients have only one year there. The comparison base
 is then a **prior-year return the client uploaded** or one Lilian redacts and supplies.
@@ -79,9 +79,9 @@ Ask for it — the pilot proved it is where the value is.
 
 ---
 
-## 2. What to look for — the five detection families
+## 2. What to look for — the six detection families
 
-Run all five. They are ordered by how often they bite.
+Run all six. They are ordered by how often they bite.
 
 **1 · Disappearances — the highest-value family.** Something on last year's return or
 organizer that is absent this year. **Each one is a question, never a conclusion.**
@@ -107,19 +107,20 @@ So the finding is **never** that the organizer failed, and never that questions 
 "hidden" or "suppressed" from the client. Write it the way it actually is:
 
 > **Because the client indicated X, we have no answers to the questions that follow from
-> it — and sources 1–6 give us good reason to think we need them.** Name the reason:
-> *last year's return shows several income sources, and what he sent us directly
-> describes income and expenses for this year.*
+> it — and sources 1–6 give us good reason to think we need them.** Always name the
+> reason. *(Invented illustration: "last year's return reported rental income, and the
+> bank statements she sent show deposits from the same tenant this year.")*
 
-⚠️ **Wording matters here and Lilian corrected it specifically (2026-08-11):** *"parece
-como que el organizer es incorrecto… es simplemente que el cliente dijo que no tenía
-fuente de ingreso."* Phrasing it as a defect makes a colleague distrust a tool that is
+⚠️ **Wording matters, and Lilian set this rule specifically (2026-08-11)** after a review
+described the situation as though the organizer had gone wrong. It had not — the client
+had simply indicated they had none of that kind of income, and the organizer correctly
+stopped asking about it. Phrasing it as a defect makes a colleague distrust a tool that is
 working, and makes the client look at fault when they are not. **The organizer did the
 right thing with the answer it was given.** Our job is to notice that the answer looks
 wrong against the other five sources, and to put the questions to the client ourselves.
 
 That regenerated set is usually the largest part of the review — and it is **one finding,
-not fifteen** (§4, Block B).
+not fifteen** (§4, Block C).
 
 *(A genuine defect in the organizer's own wiring is a different thing entirely, does not
 belong in a client's review, and goes to
@@ -158,7 +159,7 @@ a >2% S-corp shareholder); anything already deducted on an entity's own return.
 the client file, and the notes. The firm's `Tax Return Type` saying one thing while the
 prior return says another is a real finding.
 
-### 5b · What the structure obliges — derive the documents, don't wait to be told
+**6 · What the structure obliges — derive the documents, don't wait to be told.**
 
 **A client's structure dictates which documents must exist, whether or not anyone
 mentions them.** Work forward from what you know about them and ask for what the
@@ -166,10 +167,10 @@ structure requires. This is what a preparer does automatically and a checklist n
 
 | If the client is… | These must exist | And the trap |
 |---|---|---|
-| **A shareholder in an S corporation** | **A K-1, every year, for every shareholder** — including a loss year. **Plus a W-2** if they work in the business and take money out; the IRS requires reasonable compensation | **The K-1 does not exist until the company files its own 1120-S.** So the entity return is a *prerequisite* for the personal return, not a parallel task — find out whether it is filed and who is preparing it. **The 1120-S deadline is 15 March** (extended 15 September), and its late-filing penalty runs **per shareholder, per month** |
-| Paid by their own S corp | Money out is **wages + distributions**, not self-employment income. **Distributions are not a separate form** — they appear on the K-1, and are tax-free only up to basis | A total "received from the company" that has not been split into wages vs. distributions cannot be entered on a return at all |
-| A partner in a partnership | A K-1 (Form 1065). No W-2 — a partner's pay is guaranteed payments, on the K-1 | People describe guaranteed payments as "salary" |
-| A shareholder who deducted an entity loss in full | A **basis** computation | Without basis the loss suspends instead; every carryforward built on it is wrong |
+| **A shareholder in an S corporation** | **A K-1, every year, for every shareholder** — including a loss year. **Plus a W-2** if they work in the business and take money out; the IRS requires reasonable compensation (see [`reasonable-compensation`](../reasonable-compensation/)) | **In practice the shareholder has no K-1 until the entity's return is prepared and filed** — so the entity return is a *prerequisite*, not a parallel task. Find out whether it is done and who is doing it. A calendar-year 1120-S is due the **15th day of the third month** — 15 March, moving to the next business day when that is a weekend or holiday — extendable six months to 15 September. Its late-filing penalty runs **per shareholder, per month, capped at 12 months** (§6699) |
+| Paid by their own S corp | Money out is **wages + distributions**, not self-employment income. **Distributions are not a separate form** — they appear on the K-1, and are tax-free only to the extent of **stock basis** (and a corporation carrying accumulated E&P from a prior C-corp life can throw a taxable dividend on top) | A total "received from the company" that has not been split into wages vs. distributions cannot be entered on a return at all |
+| A partner in a partnership | A K-1 (Form 1065). **No W-2** — a partner is paid through guaranteed payments and/or distributive share | People describe both as "salary" |
+| A shareholder who deducted an entity loss in full | A **basis** computation — **Form 7203**, required whenever a shareholder claims an S-corp loss, takes a distribution, or disposes of stock. Ask for it by name | Without basis the loss suspends instead; every carryforward built on it is wrong. The limitation order is **basis → at-risk (Form 6198) → passive (Form 8582)** |
 | An employer of subcontractors | **1099-NECs they owe**, as the payer | Establish *who* paid — them personally, or the entity |
 
 **Write it as the preparer's chain, not as a list of missing paperwork:** *"you own an
@@ -182,8 +183,9 @@ so tell us who is preparing it."* A client understands that; "please send your K
 **Not optional, and worth more than everything else combined.** Nobody here knows what
 carries forward unless somebody reads for it:
 
-- **Net operating loss** (Form 172) — post-2017 NOLs carry forward indefinitely and offset
-  up to 80% of taxable income. In the pilot this alone could absorb most of the year.
+- **Net operating loss** (Form 172, new for 2025) — post-2017 NOLs carry forward indefinitely
+  and offset up to **80% of taxable income computed without the NOL deduction**, for tax years
+  beginning after 2020. In the pilot this alone could absorb most of the year.
 - **Suspended passive losses** (Form 8582), **capital loss carryover**, **Section 179 and
   depreciation basis**, **foreign tax credit carryover**, **prior overpayment applied
   forward**, and any **election** already made.
@@ -203,13 +205,15 @@ One row per tax item. Group rows under headings — *Income · Entities · Peopl
 Deductions & credits · Carryovers*. Keep it to what actually differs plus the material
 "same".
 
+*Invented illustration — never build the example from a real client's file:*
+
 | Item | Prior year (YYYY) | This year (YYYY) | |
 |---|---|---|---|
-| K-1 — <entity> | Yes | Not reported | ⚠️ |
-| Wages | Yes | Not reported | ⚠️ |
-| Dependants | 1 | 0 | ❓ |
-| State returns | Two | None assumed | ⚠️ |
-| NOL carryforward | Generated | Not applied | 🔴 |
+| Rental — <property> | Reported on Sch. E | Not reported | ⚠️ |
+| 1099-INT — <bank> | Yes | Not reported | ⚠️ |
+| Sole-proprietor income | None | Reported | 🆕 |
+| Education credit | Claimed | 1098-T not on file | ❓ |
+| Capital loss carryforward | Generated | Not applied | 🔴 |
 
 **The markers, and what each obliges:**
 
@@ -229,7 +233,7 @@ leave or did it close?"* is the finding.
 
 ## 4. The output — this shape, every time
 
-Five blocks, in this order. **Short. If a block runs long, it is doing another block's
+**Six blocks, in this order.** **Short. If a block runs long, it is doing another block's
 job.**
 
 ### Block A — Can we prepare this return? (3 lines)
@@ -237,7 +241,14 @@ job.**
 Verdict — **Yes / No, blocked on X / Not until Y is settled** — the single thing that
 gates it, and how many questions the client owes. Nothing else.
 
-### Block B — Findings, grouped by root cause
+### Block B — The prior-year → this-year table
+
+The comparison table built in §3, in full, with its markers. **It goes in the output, not
+just in your head** — it is the fastest thing in the review to read, and it is what a
+second preparer checks your findings against. Every ⚠️ and ❓ in it must appear in a
+finding below; if one does not, the grouping missed it.
+
+### Block C — Findings, grouped by root cause
 
 **This is the block that makes the review usable, and the grouping is the whole point.**
 Lilian's instruction: *"del hecho de que no haya reportado ninguna fuente de income salen
@@ -264,13 +275,13 @@ Target **five to eight findings**. More than ten means the grouping has not been
 > two records disagree* and *what one answer would settle it*.
 >
 > And **reason about it** rather than listing it. When two facts cannot both be true, say
-> so and say which is more likely, then ask. *"He is married to the same spouse as last
-> year, and last year that daughter lived with them — so a year in which she is not a
-> dependant needs an explanation the marriage does not provide. Almost certainly an
-> oversight; ask, don't assume."* That sentence is the whole reason a person does this and
-> a checklist cannot.
+> so, say which reading fits more of the evidence, then ask. *(Invented illustration: "she
+> reports selling the rental in March, and also twelve months of rent received — one of
+> those is wrong, most likely the sale date. Ask; don't pick one.")* That reasoning is the
+> whole reason a person does this and a checklist cannot — but it stops at **ask**, never
+> at a conclusion filed as fact.
 
-### Block C — Already in hand · what it is, where it came from, what it replaces
+### Block D — Already in hand · what it is, where it came from, what it replaces
 
 **Never omit this block**, even when it is one line. It does two jobs.
 
@@ -287,22 +298,25 @@ does not surface it, Julia concludes it is missing and asks the client again.
 
 One row per item:
 
+*(Invented illustration — build the real one from the client's own sources, never copied
+from another client's file.)*
+
 | What we have | Where it came from | What it substitutes for |
 |---|---|---|
-| Completed home-office worksheet | Double → `Others > 2025`, uploaded 2026-08-06 | The organizer's home-office upload |
-| Income and expense figures | Double note "…", from the client's text message of 2026-08-05 | The Profit & Loss template |
+| Mileage log | Double → `Others > <year>`, uploaded <date> | The organizer's vehicle block |
+| Rental income and expense figures | Double note "<title>", from the client's text message of <date> | The Schedule E worksheet |
 | Prior-year return | Double file library, uploaded by the client | The comparison base for §3 |
 
-**Say what it substitutes for.** *"There is a Double note with his figures"* is filing;
-*"his P&L is not missing — the figures are in a Double note from his text message of
-2026-08-05, and that is what we build the Schedule C from"* is the answer to the
-question the preparer actually has.
+**Say what it substitutes for.** *"There is a Double note with her figures"* is filing;
+*"the worksheet is not missing — the figures are in a Double note from her text message
+of <date>, and that is what we build Schedule E from"* is the answer to the question the
+preparer actually has.
 
 **Say when a substitute is not equivalent.** Figures in a message are not a signed P&L
 template; a worksheet completed before a mid-year move may not cover both homes. Name the
 gap, so nobody treats "we have it" as "it is sufficient".
 
-### Block D — Questions for the client
+### Block E — Questions for the client
 
 The deliverable. Numbered, ordered so the answer that unblocks the most comes first, in
 **the client's language**, and formatted for a phone: one idea per block, a document name
@@ -316,13 +330,16 @@ Rules that come from the firm's client-message convention:
   half.
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
-- **Never ask for anything in Block C.**
+- **Never ask for anything in Block D.**
 
-### Block E — Notes for the file
+### Block F — Notes for the file
 
 What belongs in the Client Intelligence file (durable knowledge) and what belongs in the
-Double note (the client's own information). **The findings themselves do not go in the
-Double note** — [`double-mcp`](../double-mcp/) §7 rule 11.
+Double note (the client's own information). **Our assessment does not go in the Double
+note — observation to the note, judgement to the CI file.** *"No K-1 this year; last year
+had one"* is welcome there; *"the organizer is unusable as filed"* is not.
+[`double-mcp`](../double-mcp/) §7 rule 11 is the authority, and it is easy to get
+backwards.
 
 ---
 
@@ -344,7 +361,7 @@ Double note** — [`double-mcp`](../double-mcp/) §7 rule 11.
   family, with the case that produced it.
 - **A review runs long or unstructured again.** That means §4 needs tightening, not that
   the case was special.
-- **A client is asked for something they had already sent.** Block C failed; record why.
+- **A client is asked for something they had already sent.** Block D failed; record why.
 - **The 1040 organizer's logic is repaired** (BACKLOG IDEA-17) — family 2 shrinks, and the
   chokepoint list in
   [`tax-season-readiness`](../tax-season-readiness/references/individual-organizer-logic-defects.md)
@@ -361,4 +378,5 @@ Double note** — [`double-mcp`](../double-mcp/) §7 rule 11.
   is why family 2 exists, and its
   [`individual-organizer-questions.md`](../tax-season-readiness/references/individual-organizer-questions.md)
   is the 1040 question bank.
+- [`reasonable-compensation`](../reasonable-compensation/) — when family 6 turns up a shareholder-employee whose wages need defending.
 - [`client-intelligence`](../client-intelligence/) — where the durable output lands.
