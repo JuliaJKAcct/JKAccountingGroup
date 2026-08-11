@@ -29,8 +29,16 @@ job, so nothing depends on someone remembering.
 |---|---|
 | SSN / ITIN — hyphenated, spaced, dotted, and wide-spaced when labelled | **Names** — Lilian: *"Los nombres no son datos sensibles"* |
 | Bank routing and account numbers | **EINs** — Lilian: *"son públicos"* |
-| Dates of birth (**only** where the page says "date of birth" — a bare date is a tax date) | Every figure, form number, date, state and percentage |
-| Driver's licence / state ID, where labelled | |
+| Dates of birth (**only** where the page says "date of birth" — a bare date is a tax date) | Every figure, form number, date and percentage |
+| Driver's licence / state ID, where labelled | **City, state and ZIP** |
+| **The street line** — number, name, suffix, apartment | |
+
+**Why the street line but not the city.** Lilian's identity block does not name a home address, so
+this was not covered by her ruling either way; it is masked because losing it costs nothing and it
+is the one field on a return that points at where a person actually sleeps. The **city and state
+stay** — which state someone lived in is the entire question on a multi-state return. Measured on
+a real 44-page return: 12 street lines masked, **0.02% of the text removed**, and not one figure,
+EIN or form reference lost.
 
 Masks keep their shape — `SSN-***-**-6789`, `ACCT-****4321` — so two different numbers stay
 distinguishable without either being learned.
@@ -52,6 +60,24 @@ claimed explicitly before the account rule can eat it.
    the values. A false alarm costs one look at the PDF; a miss is not recoverable, because by
    then it is in the transcript.
 
+## ⚠️ An absence in the output is not an absence in the return
+
+A PDF's text layer does not always give everything up — rotated text and fonts pypdf cannot
+interpret both come through empty. On the first real return, **4 of 44 pages barely extracted.**
+
+The tool now **reports those page numbers**. When it does, an absence proves nothing: a form can
+be sitting on a page that did not extract. Say *"the extraction was incomplete on pages N, M"* and
+name them — never *"there is no Form 7203 on this return."* The second sentence is the failure this
+whole project exists to prevent, arriving through a new door.
+
+## ⚠️ Never print the extracted text into the conversation
+
+Not even "just the headings", not even to check the tool worked. **Print computed values only** —
+counts, booleans, page numbers, PRESENT/ABSENT. *(This is written down because it was got wrong on
+the very first real run: a probe described as printing "form titles only" printed names and a
+street address, because those pages had no titles on them. The tool did its job; the operator
+around it did not.)*
+
 ## Known limits — read these before trusting it
 
 - **Passport and other foreign ID numbers are not caught unlabelled.** The formats vary too
@@ -60,7 +86,10 @@ claimed explicitly before the account rule can eat it.
   amounts. The guard catches it and stops the job, so it fails loudly rather than silently.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
 - **It is a backstop, not the control.** The control is still deleting the session when the
-  work is done.
+  work is done — and for a document that matters more than for organizer responses, because
+  `get_file` puts a **presigned download URL** in the transcript by itself. That URL downloads the
+  file with no Double login at all. **Verified 2026-08-11: `X-Amz-Expires=3600` — it lives one
+  hour.** Short, but not zero, and not something to lean on.
 
 ## Tests
 

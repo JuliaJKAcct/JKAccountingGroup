@@ -319,10 +319,11 @@ Two consequences of the shared-account point above:
 - **Protect the Claude account like the Double superAdmin account** — password and two-factor. It
   now reaches the same data.
 
-**The `get_file` document rule (below) is deliberately unchanged.** Client documents are still not
-fetched in order to read them. That is admittedly uneven — the same completed organizer may now be
-read as data and still not be read as a PDF — and the unevenness is known, not an oversight:
-nobody has taken the document rule to Lilian. **Don't infer that it fell with the response ban.**
+**The `get_file` document rule (below) was ruled on separately, on 2026-08-11.** It still bars
+fetching client documents in order to read them — with **one hole**: inside a pre-return review,
+the **single most recent prior-year tax return**, through the redactor. Nothing else, and never a
+second document without being asked for that one. **Don't infer anything wider from the response
+permission** — the two rules were decided on the same day and are still not the same rule.
 
 **Safe test subject — with one caveat.** Lilian's own organizer (`Lilian Gonzalez Gonzalez`,
 client `710643`, organizer `140878`) is her own data with her own consent, so it is the right
@@ -409,15 +410,87 @@ editable **only while the organizer is a draft**; renaming stops working once it
 And the ceiling: **publishing to the client portal is not available via MCP.** We can build the
 entire organizer and a human still has to press publish.
 
-### Privacy rule for documents — important
+### 🔓 Privacy rule for documents — ONE document may be read, and only one
 
-`get_file` hands back a presigned download URL. **Do not fetch client documents in order to
-read them.** Completed tax organizers, bank statements and filed returns contain personal and
-financial data, and pulling them into a session is an overreach even when technically possible.
+**The default is still: do not fetch client documents in order to read them.** Work from **file
+names and folder structure**, which answers most questions ("is there a 2025 organizer on file?").
+If the user wants the document, give them the link.
 
-Work from **file names and folder structure** — which is almost always enough to answer the real
-question ("is there a 2025 organizer on file?"). If the user needs the document, give them the
-link.
+**Lilian opened exactly one hole in that on 2026-08-11**, and the size of the hole is the rule.
+She was downloading a client's prior-year return, deleting the sensitive information by hand, and
+re-uploading it so a session could read it — *"eso me ralentiza mucho las cosas."* That step is
+now automated instead of manual. Nothing else changed.
+
+> *"Los únicos documentos que necesito que lea son las declaraciones anteriores para poder
+> comparar… solamente cuando yo lo pida, que sea para la revisión previa, y que no lea documentos
+> que yo no requiera."* (Lilian, 2026-08-11)
+
+#### What is permitted — the whole of it
+
+Inside a **pre-return review that Lilian or Julia asked for**, you may read **one** document:
+
+> **the most recent tax return filed before the year under review.**
+
+Preparing 2025, with 2022 / 2023 / 2024 on file → **read 2024. Not 2023. Not 2022.**
+
+**That limit costs nothing analytically, which is why it holds.** A return states its carryovers
+*as of its own year end*: the NOL on the 2024 return already accumulates 2022 and 2023, Form 7203
+carries beginning **and** ending basis, and Form 8582 carries suspended losses forward. The latest
+return is a summary of every year before it. **If those figures are missing or self-contradictory
+on the latest return, that is a finding to report — not a licence to open the year before.** Ask.
+
+#### The route — never the raw document
+
+```
+get_file(fileId)  →  presigned URL  →  tools/redact-doc/redact.py  →  redacted text
+```
+
+**Never read the PDF directly.** [`redact.py`](../../../tools/redact-doc/) exists so the identity
+block cannot reach the transcript even by accident: it never prints the document's text, it writes
+redacted text to a file, and it deletes the raw download on every path out. Read its
+[README](../../../tools/redact-doc/README.md) — in particular that it **fails closed** and that a
+scan (no text layer) is a **stop**, never a reason to send the image somewhere else to be read.
+
+#### The limits — each of these is a "never"
+
+1. **Never a second document** on the same client without Lilian or Julia asking for that one
+   specifically. One review authorises one return.
+2. **Never a document that is not a filed tax return** — not bank statements, not IDs or
+   passports, not powers of attorney, not contracts — without an explicit, per-document request.
+   (The clients here are foreign-born owners; those folders hold immigration documents.)
+3. **Never across clients.** No loop, no sweep, no "while I'm here". One client, one review.
+4. **Never for another purpose.** The permission is for the prior-year comparison. Looking up an
+   address, a figure or a phone number is not that.
+5. **Never from a subagent**, and **never from a scheduled or unattended session.** Both controls
+   below depend on a person being present; a Routine has nobody to tell and nobody to delete.
+6. **Never inside the repo working tree.** The redacted text goes to the session scratchpad —
+   never to a path `git add` can reach. It carries names, addresses and every figure on the
+   return. ⚠️ *This is not hypothetical: sessions in this repo routinely run `git add -A`.*
+7. **Never committed, and never into an artifact or a Double note** — the redacted text is
+   redacted, not public. §2.2's four exposure points apply to it unchanged.
+
+#### The obligations — each of these is a "always"
+
+1. **Say which document, which year, and why — before the call.** One line, plain language, no
+   `§` references: the person asking may be Julia. *"I'm going to open his 2024 return from
+   Double to compare it against this year's organizer."*
+2. **Report what the redactor masked** — its counts, never its values. And **say if it looks like
+   it masked something you needed**: over-masking is silent, and a missing figure that reads as a
+   zero is worse than no figure at all.
+3. **Remind them to delete the conversation when the work is done**, in the calm wording §2.2
+   sets out. Deleting is the routine last step, not an alarm.
+4. **Delete the redacted file** when the review is delivered.
+
+#### ⚠️ One thing that is worse here than for organizer responses
+
+**`get_file` puts a presigned download URL into the transcript by itself** — the tool returns it,
+so it lands in the conversation whether or not anything echoes it. That URL is a **credential**:
+whoever holds it downloads the file **without logging into Double at all**.
+
+So for documents, "delete the conversation" is doing more work than it does for organizer
+responses — it is removing a live key, not just a copy of some data. Presigned links do expire,
+but **the expiry window has not been verified**; do not lean on it. `redact.py` never prints the
+URL, including on failure, which keeps it to the one unavoidable appearance.
 
 ---
 

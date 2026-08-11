@@ -103,6 +103,24 @@ ACCOUNT_CONTEXT = re.compile(
     re.IGNORECASE,
 )
 
+# Street line only — number + name + suffix, plus any apartment/unit. The CITY,
+# STATE and ZIP are deliberately left alone: which state someone lived in is the
+# whole question on a multi-state return, and masking it would blind the work.
+#
+# Lilian's identity block does not name a home address, so this is not covered by
+# her ruling either way. It is masked because losing it costs nothing and it is
+# the one field on a return that points at where a person actually sleeps.
+STREET = re.compile(
+    r"\b\d{1,6}\s+"
+    r"(?:[NSEW]\.?\s+)?"
+    r"(?:[A-Z][A-Za-z0-9'.-]*\s+){0,4}"
+    r"(?:STREET|ST|AVENUE|AVE|ROAD|RD|DRIVE|DR|LANE|LN|BOULEVARD|BLVD|COURT|CT|"
+    r"CIRCLE|CIR|PLACE|PL|WAY|TERRACE|TER|PARKWAY|PKWY|HIGHWAY|HWY|TRAIL|TRL)"
+    r"\b\.?"
+    r"(?:\s*,?\s*(?:APT|APARTMENT|UNIT|STE|SUITE|#)\.?\s*[A-Z0-9-]{1,8})?",
+    re.IGNORECASE,
+)
+
 
 def _tail(digits: str, keep: int = 4) -> str:
     """Last `keep` digits, so two different numbers stay distinguishable."""
@@ -112,7 +130,8 @@ def _tail(digits: str, keep: int = 4) -> str:
 
 def redact(text: str) -> tuple[str, dict]:
     """Return (redacted_text, counts). Never returns the original."""
-    counts = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0, "account": 0, "ein_kept": 0}
+    counts = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
+              "account": 0, "street": 0, "ein_kept": 0}
 
     # Park EINs behind a placeholder so no later rule can touch them, then put
     # them back at the very end.
@@ -137,6 +156,10 @@ def redact(text: str) -> tuple[str, dict]:
         counts["account"] += 1
         return f"{m.group(1)} ACCT-****{_tail(m.group(2))}"
 
+    def _street(m: re.Match) -> str:
+        counts["street"] += 1
+        return "[STREET-REDACTED]"
+
     def _ssn(m: re.Match) -> str:
         counts["ssn_itin"] += 1
         return f"SSN-***-**-{_tail(m.group(0))}"
@@ -154,6 +177,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = DOB_CONTEXT.sub(_dob, text)
     text = LICENCE_CONTEXT.sub(_licence, text)
     text = ACCOUNT_CONTEXT.sub(_account, text)
+    text = STREET.sub(_street, text)
     text = SSN_LABELLED.sub(_ssn_labelled, text)
     text = SSN.sub(_ssn, text)
     text = LONG_DIGITS.sub(_long, text)
@@ -258,13 +282,29 @@ def _run(src: Path, dst: Path) -> int:
     dst.parent.mkdir(parents=True, exist_ok=True)
     dst.write_text(redacted, encoding="utf-8")
 
+    # ⚠️ Pages a PDF's text layer would not give up — rotated text, an
+    # uninterpretable font, a scanned insert in an otherwise digital document.
+    # This number is the reason an ABSENCE in the output is not evidence of an
+    # absence in the return: a form can be sitting on a page that did not
+    # extract. Reported here so the reader cannot fail to see it.
+    thin = [i + 1 for i, p in enumerate(pages) if len(re.sub(r"\W", "", p)) < 200]
+
     # The ONLY thing this tool ever prints about the document's contents.
     print(f"redacted → {dst}  ({len(pages)} pages, {len(redacted):,} chars)")
+    if thin:
+        print(
+            f"  ⚠️  {len(thin)} of {len(pages)} pages barely extracted: {thin}\n"
+            "      Text was there and did not come through (rotated, or a font\n"
+            "      pypdf cannot read). DO NOT report 'X is not on the return'\n"
+            "      from this output — say the extraction was incomplete and name\n"
+            "      these pages. An absence here is not evidence."
+        )
     print(
         "  masked: "
         f"{counts['ssn_itin']} SSN/ITIN · "
         f"{counts['account']} labelled account/routing · "
         f"{counts['long_digits']} bare 9+ digit runs · "
+        f"{counts['street']} street lines · "
         f"{counts['dob']} dates of birth · "
         f"{counts['licence']} licence/state ID"
     )

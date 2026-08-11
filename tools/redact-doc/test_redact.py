@@ -86,6 +86,21 @@ must_keep("Label survives", "Social security number 123-45-6789", "Social securi
 #    This is the cost of the loose pattern, and why it fires only when labelled.
 must_keep("Amount columns survive", "Wages   125  40  1234   Interest   18", "125  40  1234")
 
+# ── Street lines: masked. City / state / ZIP: kept, because which state someone
+#    lived in is the whole question on a multi-state return. ──────────────────
+must_hide("Street with apt", "1234 BOZEMAN AVE Apt 5B", "BOZEMAN AVE")
+must_hide("Street plain", "77 N Maple Street", "Maple Street")
+must_keep("City/state/ZIP survive", "1234 Elm Rd, Bozeman, MT 59715", "Bozeman, MT 59715")
+must_keep("State name survives", "Montana nonresident", "Montana")
+
+# ── The street rule must NOT eat ordinary return text. "ST" inside "Statement",
+#    "CT" inside a form name, a line number followed by words. ────────────────
+must_keep("Statement not eaten", "See 1 Form Statement attached", "Statement")
+must_keep("Line refs survive", "Line 12 Ordinary Dividends", "Ordinary Dividends")
+must_keep("Form name survives", "8 Schedule K-1 Part III", "Schedule K-1 Part III")
+must_keep("Amount then word", "1,234 Other income", "Other income")
+
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:
