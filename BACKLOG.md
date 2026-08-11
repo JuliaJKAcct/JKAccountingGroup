@@ -810,14 +810,20 @@ redesigning it, mirroring how the 1040 organizer's questions were captured.
 **What we need to start:** (1) read the live Business Tax Organizer's current structure with
 `get_organizer` (structure only — never `get_organizer_responses` on a real client) to know
 exactly which questions exist today; (2) Lilian/Julia decide the filter question's exact wording
-and which downstream questions it should suppress when the answer is "yes"; (3) write the change
-into Double's organizer template (`update_organizer` — a declarative whole-document write, per the
-`double-mcp` skill's write-safety rules).
+and which downstream questions it should suppress when the answer is "yes"; (3) build the
+redesigned version and get it into what future organizers are created from.
 
 **Capability check:** the read side is fully buildable now (organizer structure is readable via
-the MCP since 2026-08-06). The write side (`update_organizer`) exists but is a whole-document
-declarative write, so it needs the current structure captured first and the change staged
-carefully — no partial/patch write is available.
+the MCP since 2026-08-06). ⚠️ **The write side is more constrained than a simple edit.** Per the
+[`double-mcp`](./.claude/skills/double-mcp/references/capability-map.md) capability map: slides
+and logic are editable via `update_organizer` **only while an organizer is a draft** — once
+published (which every already-sent Business Tax Organizer is), the structure is **frozen**, and
+only `name` / `responsesVisibility` remain writable. So this cannot be done by editing an existing
+client's organizer in place. The realistic path is to `create_organizer` a fresh **draft** with
+the redesigned structure and get *that* adopted as what new organizers are built from — but
+whether Double has a firm-wide template that governs new-organizer creation (versus each one being
+authored from scratch or cloned by hand in the UI) is **unconfirmed**; settle that with Lilian or
+Double support before starting the build, not after.
 
 **Priority:** Medium · **Status:** Not started — captured (Lilian, Aug 2026, flagged as "for
 later"); the `Organizer Status` value it depends on is already documented in the
