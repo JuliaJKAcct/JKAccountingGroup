@@ -142,9 +142,11 @@ Prior-return facts, and what the client tells **us** when we ask, are ordinary c
 belong here. The only thing still barred is what they ticked **in the organizer** (above) — which
 costs almost nothing, because the answer we act on is the one they give when we ask them directly.
 
-⚠️ **Client tax detail must not reach the Knowledge Hub.** Lilian's decision, 2026-08-11. The Hub
-build globs every file in `clients/`, so a rebuild would publish it — see the open loop in
-[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) and **do not rebuild the Hub until the filter is settled.**
+⚠️ **Client tax detail must not reach the Knowledge Hub.** Lilian's decision, 2026-08-11.
+**What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
+The Hub build **hard-aborts** when a client file carries a `### Tax year` heading, so this is
+enforced rather than remembered — but the gate is a blunt one, and the sections above are what to
+check before any publish. See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are

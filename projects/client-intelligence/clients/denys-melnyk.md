@@ -22,7 +22,7 @@
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
 - **Home state:** ⚠️ **He moves, and the states matter.** His **2024** return was filed as a **Montana resident** **plus an Illinois nonresident/part-year return** — most of his 2024 income was Illinois-sourced through his companies. He was in **Florida** by the time he became our client. Since the 2024 return was signed from a Montana address in **May 2025**, a **Montana part-year** return for 2025 is likely, and **Illinois** probably recurs while the companies operate there. **Establish the 2025 states month by month before concluding there is no state return** — getting this wrong is a filing failure, not a missed deduction.
 - **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer.
-- **Household / filing status:** **Married filing jointly in 2024.** ⚠️ **The 2025 status is NOT established** — it is fixed by the position on 31 December 2025 and must be asked, never carried forward (see §5). ⚠️ **Three sources also disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); **what he sent us directly in Aug 2026** says *"married and have two children"* and that he pays **child support**; his **2025 organizer tells it differently again** (the answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
+- **Household / filing status:** **Married filing jointly in 2024.** ⚠️ **The 2025 status is NOT established** — it is fixed by the position on 31 December 2025 and must be asked, never carried forward (see §5). ⚠️ **Three sources also disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); **what he sent us directly in Aug 2026** says *"married and have two children"* and that he pays **child support**; the **2025 organizer position is not usable and is being re-asked directly** (his answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
@@ -187,8 +187,8 @@ claimed **one dependent daughter** with both the **Earned Income Credit** and th
 Child Tax Credit** — and **EIC cannot be claimed by a non-custodial parent at all**, so as of 2024
 she lived with them more than half the year. (The child tax credit alone would not prove that: it
 can be released to a non-custodial parent on Form 8332. The residency conclusion rests on the EIC.)
-What he sent us in Aug 2026 says **two children** and **child support**. His 2025 organizer tells it
-differently again — the answers are in Double, not here.
+What he sent us in Aug 2026 says **two children** and **child support**. The 2025 organizer position is not usable and is
+being re-asked directly — his answers are in Double, not here.
 
 ⚠️ **The question underneath all of this is his filing status, and nobody has asked it.** A
 dependant that drops off, a first mention of child support and a move between states are three
@@ -205,8 +205,7 @@ change in that daughter's status needs an explanation the marriage does not supp
 readings fit too — custody may have switched, the resident child may be the other one, or the
 question was simply misread. **Ask; do not assume.** Nothing in it is alarming on its own —
 circumstances change and he is not an accountant — but it has to be settled **per child**: who
-they live with now, and for how many months of 2025. If nothing actually
-changed, what is on file today would cost him the **Child Tax Credit**. (EIC is a separate question:
+they live with now, and for how many months of 2025. If nothing actually changed, what is on file today would cost him the **Child Tax Credit**. (EIC is a separate question:
 it was available in 2024 on a deeply negative AGI, and looks unlikely for 2025 if his income is
 materially higher — confirm once the Midwest question is settled rather than assuming either way.)
 
@@ -259,39 +258,42 @@ come back, the answers he gives **us** — never what he ticked in the organizer
 
 ### Outstanding items (CI-only — never in the SOP)
 
+_Checkboxes on purpose: they are what the Knowledge Hub's client card skips, and they let an
+answer be ticked and dated in place when it arrives._
+
 The re-ask list for the client, in priority order:
 
-- **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
+- [ ] **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
   a K-1 share. Whether there is a Schedule C at all depends on the answer.
-- **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
+- [ ] **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
   **This gates everything else** — in practice the shareholder has no K-1 until the entity's return
   is prepared and filed. For a calendar-year S corp the 2025 Form 1120-S was due **16 March 2026**
   (the 15th fell on a Sunday), extendable to **15 September 2026**; the late-filing penalty runs
   **per shareholder, per month, capped at 12 months**. A company that has not filed is its own
   problem to raise with him now.
-- **The three S corporations' 2025 K-1s** — Midwest Expedited Corp, Midwest Truck Leasing LLC,
+- [ ] **The three S corporations' 2025 K-1s** — Midwest Expedited Corp, Midwest Truck Leasing LLC,
   AVDM Holdings Inc. If any of them stopped, we need **which one, and the date it closed or he
   left**. A company that closed *during* 2025 still issues a 2025 K-1; only an exit or closure in
   a **prior** year removes it.
-- **Whether the S corps' own 1120-S returns are filed**, and by whom — his 1040 cannot be
+- [ ] **Whether the S corps' own 1120-S returns are filed**, and by whom — his 1040 cannot be
   finished before those K-1s exist.
-- **Form 1095-A** — blocks filing if the coverage is Marketplace.
-- **His 2025 W-2** — expected from his own S corp; nothing he has sent accounts for one.
-- **The whole income block**, re-asked directly: which income types he actually had in 2025. The
+- [ ] **Form 1095-A** — blocks filing if the coverage is Marketplace.
+- [ ] **His 2025 W-2** — expected from his own S corp; nothing he has sent accounts for one.
+- [ ] **The whole income block**, re-asked directly: which income types he actually had in 2025. The
   organizer never got as far as asking.
-- **Which states he lived and worked in during 2025**, month by month — Montana and Illinois are
+- [ ] **Which states he lived and worked in during 2025**, month by month — Montana and Illinois are
   both live possibilities his organizer never mentions.
-- **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
-- **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
-- **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
-- **Filing status on 31 December 2025** — married or divorced. Ask it directly; everything about the household hangs on it, and it must never be carried forward from 2024 by default.
-- **The children** — how many, and whether either lived with him during 2025 and for how many months. His 2024 return claimed one daughter with EIC and the child tax credit, and that needs re-establishing for 2025. Determines whether the Child Tax Credit is available.
-  ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer; it is never a request we put to him.
-- **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).
-- **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
-- **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
-- **2024 carryovers and elections** — read from the prior return (see §5).
-- **Profit & Loss** — the summary he sent is the substitute; decide whether to have him complete the firm's template as a written record.
+- [ ] **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
+- [ ] **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
+- [ ] **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
+- [ ] **Filing status on 31 December 2025** — married or divorced. Ask it directly; everything about the household hangs on it, and it must never be carried forward from 2024 by default.
+- [ ] **The children** — how many, and whether either lived with him during 2025 and for how many months. His 2024 return claimed one daughter with EIC and the child tax credit, and that needs re-establishing for 2025. Determines whether the Child Tax Credit is available.
+  ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
+- [ ] **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).
+- [ ] **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
+- [ ] **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
+- [ ] **2024 carryovers and elections** — read from the prior return (see §5).
+- [ ] **Profit & Loss** — the summary he sent is the substitute; decide whether to have him complete the firm's template as a written record.
 
 ### Information still needed
 

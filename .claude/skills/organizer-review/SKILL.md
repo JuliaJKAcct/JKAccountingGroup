@@ -104,11 +104,21 @@ an estimated-payment pattern.
 > dependant who disappears, a new mention of child support, an address that changed: each
 > is a small puzzle on its own, and together they may mean **the marriage ended**. Filing
 > status is decided by the position on **31 December**, and it changes the standard
-> deduction, the brackets, every credit and often the state return — so it is worth far
-> more than the dependant line that started the enquiry.
-> **So ask it directly and plainly: "on 31 December 2025, were you married or divorced?"**
-> Never infer it, never carry last year's status forward because nothing said otherwise,
-> and never assume a client who says "married" today was married at year end.
+> deduction, the brackets and most credits — it bars Married Filing Separately from
+> several outright, EIC and the education credits among them — and often the state
+> return. It is worth far more than the dependant line that started the enquiry.
+> **So ask the marital *situation* on 31 December — not a yes/no.** A binary
+> married-or-divorced misses the three cases that most often decide the return:
+> **widowed** (a surviving spouse is generally treated as married for the year of the
+> death, and may qualify as a surviving spouse for two years after); **legally separated
+> under a decree of separate maintenance** (unmarried at year end); and **married but
+> living apart**, where §7703(b) can treat the client as unmarried and, with a qualifying
+> child in the home, open **Head of Household** — exactly the pattern a
+> child-support-plus-moves picture points at.
+> Ask: **married / separated (since when, and did the spouse live in the home at any point
+> in the last six months) / divorced (decree date) / widowed (date)**. Never infer it,
+> never carry last year's status forward because nothing said otherwise, and never assume
+> a client who says "married" today was married at year end.
 
 **2 · Questions we have no answer to, because of an earlier answer.**
 
@@ -278,11 +288,10 @@ list fifteen missing documents when one wrong answer caused all fifteen.
 
 **Show the trail — a finding nobody can follow is not usable.** Lilian's instruction
 (2026-08-11): the "what we know" line names *what was reported, what is missing, and what
-the prior year did*, so the reader understands the point without opening anything. *"He
-indicated mortgage interest and property taxes, no Form 1098 was attached and the question
-was marked not applicable — and there was no 1098 last year either, because the prior
-return took the standard deduction."* That sentence is the finding. *"Housing deductions
-unclear"* is not.
+the prior year did*, so the reader understands the point without opening anything.
+*(Invented illustration: "She reported <expense type>, the supporting <form> was not
+attached, and the prior year has no <form> either because that return took the standard
+deduction.")* That sentence is the finding. *"<Expense type> unclear"* is not.
 
 > ⚠️ **This is the one place the review and the repo diverge, and both rules are real.**
 > The **review is delivered in chat**, where a client's answers may be stated — that is
@@ -366,12 +375,18 @@ Rules that come from the firm's client-message convention:
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
-- **Ask for facts, not legal documents.** The firm does not ask clients for custody
-  orders, divorce decrees, separation agreements or a signed Form 8332 — that is a
-  document request most clients cannot meet and it changes the tone of the relationship.
-  **Ask the facts the return needs instead** — who lived where, for how many months, what
-  the position was on 31 December. The legal instrument stays internal knowledge for how
-  we *treat* the answer, and is raised only if the answer makes it unavoidable.
+- **Ask for facts, not FAMILY-LAW documents.** The firm does not open with a request for
+  custody orders, divorce decrees, separation agreements or a signed Form 8332. **Ask the
+  facts the return needs instead** — who lived where, for how many months, what the
+  position was on 31 December — because those facts are what the return runs on, and
+  asking a client to produce their custody paperwork changes the tone of the
+  relationship. The instrument stays internal knowledge for how we *treat* the answer,
+  and **is raised only if the answer makes it unavoidable** — a non-custodial parent
+  claiming a child does need a signed Form 8332 attached to the return under §152(e), so
+  that request can become unavoidable.
+  ⚠️ **Family-law paperwork only.** This does **not** extend to ordinary tax documents —
+  Form 7203, a mileage log, a finance agreement, the prior-year return are all asked for
+  by name (family 6), and should be.
   _(Lilian, 2026-08-11: "no preguntamos por ese tipo de documento".)_
 
 #### Where two records disagree: show the client both, then ask
@@ -437,7 +452,11 @@ nothing durable.
 So the client file's §6 gets a **`Tax year YYYY — the review`** entry carrying:
 
 - **What gated the return** — the one or two things that actually held it up.
-- **Every question we put to the client**, and **its answer once it arrives** (tick it,
+- **Every question we put to the client**, and **its answer once it arrives**.
+  ⚠️ **Record the ask, not the recital.** Block E's four-move shape builds a question out of what
+  each record says, organizer included — so the version that goes in the file is the ask with the
+  *"your organizer says X"* opening stripped off. And if the client's reply restates an organizer
+  answer (*"I ticked that by mistake"*), record the **corrected fact**, not the reply (tick it,
   append the answer and the date — the `client-intelligence` convention for answered
   items). This is the part that makes the year answerable later.
 - **What we established from the prior-year return** — carryovers, states, entities,
@@ -450,18 +469,18 @@ once the client tells us, their answer to *us* — never what they ticked in the
 In practice that costs almost nothing, because the answer we act on is the one they give
 when we ask.
 
-⚠️ **Client files are auto-published by the Knowledge Hub build**, which globs `clients/`
-with no allowlist. Lilian's standing decision (2026-08-11): **the Hub is not to carry
-clients' tax detail.** So a client file carrying a tax-year review must not reach a Hub
-rebuild until that build filters — see [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+⚠️ **Client files feed the Knowledge Hub build, and Lilian's standing decision (2026-08-11)
+is that the Hub is not to carry clients' tax detail.** **What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
+The build now **hard-aborts** when a client file carries a `### Tax year` heading; see the
+[`knowledge-hub`](../knowledge-hub/) skill and [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 ---
 
 ## 5. Finishing the job
 
 1. **Update the client's Client Intelligence file** — required, same session, and create
-   it if missing (`CLAUDE.md` core convention). §6 gets the re-ask list; §5 gets the
-   durable quirks. **Answers stay out; write the action.**
+   it if missing (`CLAUDE.md` core convention). §6 gets the re-ask list **and the `Tax year YYYY — the review` entry** (Block F); §5 gets the
+   durable quirks. **The client's ORGANIZER answers stay out — write the action. What the client tells us directly when we ask goes in.**
 2. **Do not write the analysis to the Double note.** Ask Lilian if a finding genuinely
    belongs in front of the team.
 3. **Deliver the review in chat.** Not an artifact, not a committed file.
