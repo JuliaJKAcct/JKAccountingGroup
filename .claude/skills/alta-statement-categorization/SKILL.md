@@ -104,10 +104,13 @@ engine builds the schedule. Three things to get right:
   usually well below what was paid. Take only the land-to-building *proportion*
   and apply it to the actual cost basis, so the two parts always add back to what
   was really paid. The sheet carries a `should be $0` check that proves they do.
-- **27.5 or 39 years?** A residential rental is 27.5. But a rental whose *average*
-  stay is **7 days or less** is nonresidential **39-year** property — and that
-  changes the deduction by a third. A mid-term rental (30+ days) is residential.
-  Ask; do not infer it from the word "rental."
+- **27.5 or 39 years?** Do not infer it from the word "rental," and do not infer
+  it from the billing cycle — a weekly *rate* is not a weekly *stay*. The class
+  turns on whether units are used on a **transient** basis, which practice keys to
+  a **30-day average occupancy**; the separate **7-day** figure is the §469 test
+  for whether it is a rental activity at all. Co-living billed weekly with
+  months-long stays is 27.5-year residential. Getting it wrong costs a third of
+  the deduction every year — see `references/mapping-chart.md`.
 - **Mid-month convention.** Real property is treated as placed in service in the
   middle of its month whatever the actual day, so October gives 2.5 months in year
   one. The engine computes `(12 − month + 0.5) / 12 ÷ life` rather than pasting the
@@ -197,6 +200,9 @@ missing land/building split, whether rehab exists — rather than burying them.
   that never began — no deduction, no amortization, and a stretch to call it basis.
   That argues for a narrower basis than a flip. Show both totals; don't choose one
   silently. `references/mapping-chart.md` has the full split.
+- **Which form the rent goes on.** Schedule E by default; Schedule C only for
+  hotel-style services; Form 8825 if the owner is a partnership or S-corp. A
+  single-member LLC is disregarded and goes straight to the owner's Schedule E.
 - **The $3,000 wall.** An individual's net capital loss is capped at $3,000 a year
   against ordinary income, the rest carried forward. A $40,000 capital loss takes
   over a decade to absorb; the same loss as ordinary is deductible now. Say this

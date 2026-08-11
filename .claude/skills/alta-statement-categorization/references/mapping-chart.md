@@ -98,6 +98,37 @@ costs of holding it are costs of the asset, not of a business. That means:
   `carrying_costs` sheet and grade them, because they are the part nobody has
   documentation for. See SKILL.md §4.
 
+### 27.5 or 39 years — a weekly RATE is not a weekly STAY
+
+Co-living and mid-term rentals (PadSplit and similar) bill by the week, which
+makes people reach for "7 days" and land on the wrong test. There are two, they
+ask different questions, and only one sets the recovery period:
+
+| Test | Threshold | What it decides |
+|---|---|---|
+| **§469** rental-activity exception | average stay **7 days or less** | Whether it is a rental activity at all, or a business measured by material participation |
+| **§168(e)(2)** residential class | dwelling units not used on a **transient** basis — practice keys this to a **30-day** average occupancy | 27.5-year residential vs **39-year** nonresidential |
+
+So a property billed weekly whose members actually stay months is a **27.5-year
+residential rental**: the billing cycle is irrelevant, the *average period of
+occupancy* is the fact. Getting this wrong costs about a third of the deduction
+every year for the life of the building.
+
+**Ask the platform for its average-length-of-stay report and keep it with the
+return.** Nothing else in a typical file evidences occupancy length, and it is the
+only support for choosing 27.5 over 39.
+
+### Which form does the rent go on?
+
+- **Schedule E** is the default. Furnished rooms, utilities, wifi and common-area
+  cleaning are services *customarily provided to tenants* — no self-employment tax.
+- **Schedule C** needs hotel-style service: daily maid service, meals, concierge.
+  Co-living platforms generally do not clear that bar.
+- **Form 8825** if the owner is a partnership or S-corp — the rental never touches
+  Schedule E directly; it flows through the K-1 to Schedule E page 2. A
+  **single-member LLC is disregarded**, so it goes straight onto the owner's
+  Schedule E.
+
 ### Ask WHY it never went into service — the answer moves numbers
 
 "Never placed in service" is not one situation. Establish the intended use, because
