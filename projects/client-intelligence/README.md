@@ -199,7 +199,7 @@ client-intelligence/
 | LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 | Ihor Naum & Olha Levchuk | [`clients/ihor-naum-olha-levchuk.md`](./clients/ihor-naum-olha-levchuk.md) | Lilian | In progress — 1040 filed; Form 8802 pending at the IRS |
-| GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only; financial-statement cleanup quoted separately and under way. ⚠️ **The business has been SOLD** — nothing about the sale documented, and a **2025 1099-NEC is likely owed** (payee classification unconfirmed) with no W-9 (live status in §6) |
+| GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only; financial-statement cleanup quoted separately and under way. ⚠️ **The business has been SOLD** — nothing about the sale documented, and a **2025 1099-NEC is likely owed** (payee classification unconfirmed) with no W-9. All transaction questions answered 2026-08-11 (live status in §6) |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter **open**. Closing the account is dead; the plan is to ask the DOR to **move the effective date** — **on the call**, since a third agent said it can be done and asked for no documentation; a written request (with a **reasonable-cause penalty waiver** as its alternative ask) is only the fallback. **⏳ Waiting on the POA — the 08-04 send never arrived, re-sent 2026-08-06 to `AcctMaint@floridarevenue.com` — then Lilian calls** |
 
 ## Brand & design
