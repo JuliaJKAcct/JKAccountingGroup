@@ -175,8 +175,8 @@ straight into the session transcript.
 
 **Lilian lifted the old blanket ban on 2026-08-11**, for pre-return analysis: reading an
 organizer, comparing it across years, and flagging what is missing or inconsistent before anyone
-starts the return. **The full rule — what may never be written out, the three real exposure
-points, and the obligation to tell the user to delete the session — is
+starts the return. **The full rule — what may never be written out, the four exposure points, the
+subagent and unattended-session bans, and the obligation to tell the user to delete the session — is
 [SKILL.md §2.2](../SKILL.md). Read it there before the first call; this row is only the pointer.**
 
 The short version:
@@ -191,10 +191,12 @@ The short version:
   person asking may never have read any of this. SKILL.md §2.2 carries the wording for both.
 - To know **how far along** a client is, responses are still the wrong tool —
   `list_organizers` / `get_organizer.completionPercentage` costs nothing sensitive.
-- **`responsesVisibility` is not uniform.** Sampled 2026-08-11 across 57 organizers: mostly
-  `admins_only`, but `unrestricted` (4) and `tax_users_only` (1 — Lilian's own) also occur. The
-  earlier claim that it is `admins_only` everywhere was wrong. That is Double's gate; whether
-  `tax_users_only` blocks our superAdmin connection is **untested**.
+- **`responsesVisibility` is not uniform.** The **full set** on 2026-08-11 was **57** organizers
+  (`list_organizers`, `totalCount`, not a sample — the 59 quoted in the row above is the
+  2026-08-06 audit figure; the practice archives and creates them, so the count moves). Of those
+  57: **52 `admins_only`, 4 `unrestricted`, 1 `tax_users_only`** (Lilian's own). The earlier claim
+  that it is `admins_only` everywhere was wrong. That is Double's gate; whether `tax_users_only`
+  blocks our superAdmin connection is **untested**.
 
 ### ⚠️ `update_organizer` deletes by omission
 

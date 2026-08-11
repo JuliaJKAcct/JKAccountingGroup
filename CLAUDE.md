@@ -215,7 +215,8 @@ in that folder.
   TaxDome folder conventions, what the MCP can't reach, and the **write rules — default-deny, and
   never write the hand-maintained judgment columns.** Two Double tools instruct an unprompted
   write; the skill says to override them.
-  **Reading a client's organizer answers is allowed — and obliges you to warn them afterwards.**
+  **Reading a client's organizer answers is allowed — and obliges you to tell the person before
+  the first call, and to remind them to delete the session after.**
   Lilian lifted the old ban on 2026-08-11 so we can do pre-return analysis (compare a client's
   organizer against prior years and flag what's missing — a K-1 that was there last year and
   isn't now). The call returns the whole organizer in one payload, SSNs and bank details

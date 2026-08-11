@@ -197,19 +197,49 @@ note, not in an artifact, not in an email or a report:
 - **Bank routing and account numbers**
 - **Passwords and credentials**
 - **Dates of birth**
+- **…and any other government-issued identifier, whatever it is called** — the list above is
+  illustrative, not exhaustive, and §6 of this file explains why an enumerated list is dangerous:
+  it licenses everything not on it. **The gap that matters for this firm is passport, visa and
+  immigration document numbers.** The client base is foreign-born business owners; where a US
+  client uploads a driver's licence, a foreign national uploads a passport. Treat it identically.
 
 Refer to those by **existence, never by value**: *"the spouse's SSN is missing"* — never the
 digits. Everything else is ordinary working data: income items, K-1s, dependants, deductions,
-addresses, employers, figures.
+addresses, employers, figures. **A finding is not a value** — *"the organizer shows no K-1 this
+year and 2024 had one"* is exactly the output this permission exists to produce, and it may be
+said in chat, written into a Double note, and acted on. What may never travel is the identifier
+itself.
 
-**The three real exposure points, worst first.** The identity block passing through the session
+**The four real exposure points, worst first.** The identity block passing through the session
 is not itself the danger. These are:
 
 1. **An artifact** — a published artifact is a hosted web page. Organizer data must never reach
    one. Worst case, and the easiest to do by accident.
 2. **A commit or a PR.** The repo rule is unchanged and absolute: nothing from an organizer
    response is ever committed.
-3. **A Double note.** §7 rule 10's 🔒 bullet already excludes this class of data. Still excluded.
+3. **Files the session writes, or that the harness writes for it.** This one is invisible and
+   deleting the conversation does **not** clear it. A large tool result is spilled to disk
+   automatically — `~/.claude/projects/<project>/<session>/tool-results/*.txt` — and a ~120-slide
+   organizer will almost certainly trigger that; the transcript itself is written to
+   `~/.claude/projects/<project>/<session>.jsonl`; and the scratchpad directory is the natural
+   place to stage two years of organizer JSON for a diff. **Never write an organizer payload to a
+   file.** Do the comparison in context. If something genuinely must be staged, strip the identity
+   block first and delete the file when done.
+4. **A Double note.** §7 rule 10's 🔒 bullet excludes the identity block — the *findings* are
+   welcome there, the identifiers are not.
+
+**Subagents: don't.** §5 item 4 recommends delegating roster-wide sweeps to a subagent, and a
+cross-year organizer comparison across the roster looks exactly like that work. **Read organizer
+responses in the main session only.** A subagent gets its own context and its own transcript file,
+so delegating multiplies the copies and puts them where the person deleting the conversation will
+not think to look. If a sweep genuinely needs one, the subagent's instruction must forbid returning
+any identity-block value in its report — findings only.
+
+**Never from a scheduled or unattended session.** Every control here is a sentence said to a
+human: tell them before, remind them to delete after. A Routine or any unattended run has nobody
+to tell and nobody to delete, so the whole rule silently fails. The firm does run scheduled
+sessions with the Double connector attached — see
+[`projects/client-intelligence/automation/`](../../../projects/client-intelligence/automation/).
 
 **What this rule CANNOT do — say it plainly, never let anyone believe otherwise.** The tool
 returns the whole organizer in one payload; **there is no per-question read**. So the identity
@@ -217,14 +247,29 @@ block **enters the session transcript** on every call, and it is **visible in th
 block** of the conversation even though nobody typed it. This rule governs what *leaves* the
 session, not what *enters* it.
 
-**Therefore: tell the user to delete the session — this is part of the job.** When a session has
-read organizer responses, say so at the end of the work, in plain words: *this session's history
-contains the client's SSN and bank details — delete it when you are done.* Deleting removes it
-from the conversation history immediately and from Anthropic's back end within 30 days, and a
-deleted conversation is not used for model training
-([Anthropic Privacy Center](https://privacy.anthropic.com/en/articles/7996878-can-you-delete-data-sent-via-claude-ai),
-checked 2026-08-11). That reminder is what turns a **permanent** second copy of a client's SSN
-into a **temporary** one. Don't skip it because the person already knows.
+**Therefore: tell the user to delete the session — this is part of the job.** Deleting a Claude
+Code on the web session *"permanently removes the session's event data"*, and a deleted
+conversation is not used to train models. That reminder is what turns a **permanent** second copy
+of a client's SSN into a **temporary** one. Don't skip it because the person already knows.
+
+**Three more retention facts that bind this firm specifically** — all from
+[Claude Code § Data usage](https://code.claude.com/docs/en/data-usage), checked 2026-08-11:
+
+- **The firm is on a Max plan, which is a *consumer* plan.** Retention therefore depends entirely
+  on one toggle at [claude.ai/settings/data-privacy-controls](https://claude.ai/settings/data-privacy-controls):
+  **allow data for model improvement ON → 5-year retention** and the data may be used for
+  training; **OFF → 30 days**. This is the single largest lever available to the firm and it is
+  free. Anything written here about "30 days" assumes it is off — **confirm before relying on it.**
+- **Never run `/feedback`, `/bug` or `/share` in a session that has read organizer responses.**
+  Those upload the conversation and are **retained for 5 years**, independently of deleting it.
+- **Answer "No" to the session-quality survey's follow-up** (*"Can Anthropic look at your session
+  transcript?"*). "Yes" uploads the transcript plus any subagent transcripts and the raw session
+  log, retained up to 6 months. Only API keys are redacted — organizer content is not.
+
+**Zero Data Retention would remove the server-side copy entirely, but it is not available here.**
+ZDR covers Claude Code on **Claude for Enterprise**, enabled per organization after an eligibility
+check with Anthropic's sales team. It is not offered on Max. If the firm ever wants below 30 days,
+that is the route — a plan change and a conversation, not a setting.
 
 Two consequences of the same reasoning:
 
@@ -234,9 +279,17 @@ Two consequences of the same reasoning:
 - **Protect the Claude account like the Double superAdmin account** — password and two-factor. It
   now reaches the same data.
 
-**Safe test subject:** Lilian's own organizer (`Lilian Gonzalez Gonzalez`, client `710643`,
-organizer `140878`) — her own data, her own consent. Use it to rehearse a flow rather than a
-client's record.
+**The `get_file` document rule (below) is deliberately unchanged.** Client documents are still not
+fetched in order to read them. That is admittedly uneven — the same completed organizer may now be
+read as data and still not be read as a PDF — and the unevenness is known, not an oversight:
+nobody has taken the document rule to Lilian. **Don't infer that it fell with the response ban.**
+
+**Safe test subject — with one caveat.** Lilian's own organizer (`Lilian Gonzalez Gonzalez`,
+client `710643`, organizer `140878`) is her own data with her own consent, so it is the right
+place to rehearse rather than a client's record. **But it is the practice's only
+`tax_users_only` organizer**, and whether that visibility blocks our superAdmin connection is
+untested — a refusal there means the gate, not a broken tool. If that happens, retry against one
+of the four `unrestricted` organizers before concluding anything.
 
 ##### 📣 Tell the person BEFORE the call, remind AFTER — and write both for someone with no context
 
@@ -262,16 +315,25 @@ routine last step of the job, which is what it is.
 > personal details (Social Security number, date of birth, bank details) come through in the tool
 > output. I will not repeat any of it in my replies.
 >
-> The routine for this kind of work is that we delete this conversation when we are done, and then
-> nothing is left anywhere. I will remind you at the end. Ready to go?
+> The routine for this kind of work is that we delete this conversation when we are done. I will
+> remind you at the end. Ready to go?
+
+**This is a heads-up, not a permission gate — say it and carry straight on in the same turn.**
+Stop only if the person actually raises something. The question at the end is courtesy; blocking
+on it would frame the read as a risk decision, which is exactly what the tone rule above exists
+to avoid.
 
 **At the end of the work — the closing step, not a warning:**
 
-> That is the analysis done. Last step: please delete this conversation. It is the routine
-> housekeeping for this kind of work — once it is deleted, no trace of the client's details is
-> left. It clears from your history straight away and from Anthropic's servers within 30 days, and
-> a deleted conversation is never used to train models. Nothing was saved anywhere else: none of
-> it went into the repo or into Double.
+> That is the analysis done. Last step: please delete this conversation — it is the routine
+> housekeeping for this kind of work. Deleting it removes the session's data, and a deleted
+> conversation is never used to train models. None of the client's details went into the repo or
+> into Double.
+
+**Claim only what is true.** An earlier draft of that line said *"no trace is left"* and *"nothing
+was saved anywhere else"* — both false, given exposure point 3, and it contradicted this section's
+own promise to state its limits plainly. Do not reintroduce either phrase. If a session did stage
+anything to disk, say what and where instead of reassuring.
 
 **Which deletion to describe depends on where the session runs — check `$CLAUDE_CODE_REMOTE`,
 it is free:**
@@ -280,9 +342,11 @@ it is free:**
   **firm's shared Claude account**, so anyone with that login can reopen it and scroll to the
   tool output. Deleting the conversation *is* the fix, and this is the case Lilian was worried
   about.
-- **Local CLI session**: the transcript is a file on that machine, not in the shared account.
-  The risk is different and "delete the conversation" is not the right instruction — say so
-  rather than reciting the cloud wording.
+- **Local CLI session**: there is no conversation in the shared account to delete, so the cloud
+  wording is simply wrong. Give the real instruction instead — the transcript is a plaintext file
+  at `~/.claude/projects/<project>/<session>.jsonl`, with any spilled tool results in
+  `~/.claude/projects/<project>/<session>/tool-results/`, kept 30 days by default
+  (`cleanupPeriodDays`). Tell the person to delete that session's files, and name the path.
 
 **Say the closing one even if they waved it off at the start.** Not because it is grave — because
 it is easy to forget, and forgetting is the only thing here that actually costs anything. One
@@ -415,7 +479,8 @@ hundred calls.
 2. **`get_property_columns` once per session** — 1 call returns every column ID and every valid
    option name. Never hardcode option names from memory; they change.
 3. **Batch 10–15 per-client calls in parallel** in a single message.
-4. **Delegate roster-wide sweeps to a subagent**, with an explicit read-only instruction and a
+4. **Delegate roster-wide sweeps to a subagent** — **except organizer responses, which are read in
+   the main session only (§2.2)** — with an explicit read-only instruction and a
    compact table as the required return format. A 120-client property sweep is one subagent, not
    120 calls in the main thread.
 5. **Narrow with the filters the tools already have** — `list_clients(name:)`,
