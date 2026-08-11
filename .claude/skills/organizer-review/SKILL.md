@@ -324,13 +324,43 @@ in **English and capitalised** when they will have to say it out loud or search 
 
 Rules that come from the firm's client-message convention:
 
-- **Ask, don't diagnose.** *"When did you move to Florida?"* — not *"your organizer omits
-  Montana."*
 - **One question per thing you need.** Never a compound question; they answer the first
   half.
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
+
+#### Where two records disagree: show the client both, then ask
+
+**This is the shape that gets an explanation instead of a one-word answer**, and it is
+Lilian's (2026-08-11). A bare *"how many children do you have?"* gets a number back and
+resolves nothing. Lay the records side by side and the client explains the situation
+themselves — which is what you actually need.
+
+Four moves, in this order:
+
+1. **Recite what they told us**, in their words. *"You mentioned that you have two
+   children and that you pay child support."* This shows you read what they sent, and it
+   is the half of the picture they already agree with.
+2. **State what we see**, naming each record and its year. *"Your 2024 tax return claimed
+   one child as a dependant, and on your 2025 organizer no children appear."*
+3. **Ask the open question.** *"Can you explain the situation with both children?"* Open
+   first — their explanation usually answers questions you did not think to ask.
+4. **Then narrow**, with the specific facts the return needs. *"Do they live with you?
+   Did they live with you during 2025 — and if only part of the year, which months?"*
+
+**Say plainly that it doesn't add up.** Lilian's own closing line is *"porque aquí hay
+algo raro"* — and that honesty is the point. It is not an accusation, and hiding the
+reason behind a neutral question wastes the exchange: a client who does not know why you
+are asking has no idea how much detail you need.
+
+**Ask, don't diagnose — but do show your working.** Never tell them what is *wrong* with
+their answer (*"you failed to report your dependants"*); do tell them **which records you
+are comparing and what does not line up**. The first puts them on the defensive; the
+second recruits them.
+
+Use this shape for every ⚠️ and ❓ in Block B. It is what turns a comparison table into a
+message a client can actually answer.
 
 ### Block F — Notes for the file
 
