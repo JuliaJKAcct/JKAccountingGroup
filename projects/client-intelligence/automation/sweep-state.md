@@ -57,6 +57,13 @@ list grows.
 | Artur Tseretsian | 2026-08-01 | **Ping + full Gmail history still owed** — deferred twice now (the per-run full-pass cap went to the five gap clients above). Due the next run that has room |
 | Ihor Naum & Olha Levchuk | 2026-08-01 | **Ping + Drive not yet swept, full Gmail history still owed** — same deferral; due the next run that has room |
 | Denys Melnyk | 2026-08-11 | **Ping, Gmail and Drive never swept.** The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**, supplied by Lilian as a redacted PDF. A full historical pass of the other three sources is owed |
+| ZETECH LLC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| OPTIC GOLD INC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| ONETWO STRATEGIES INC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| Greenair International LLC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| CANDRAMAS LLC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| AXDIGITAL LLC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
+| Airtouch LLC | 2026-08-11 | **Seed only — no source has ever been swept for this client.** File created 2026-08-11 from Double properties; owes a **full historical pass** on Gmail, Ping, Drive and the books |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
 _**Reconciled 2026-08-11**, when the three stalled sweeps (2026-07-25, 08-01, 08-08) were

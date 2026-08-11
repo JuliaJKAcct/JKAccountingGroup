@@ -151,9 +151,23 @@ was said). Better a sourced, low-confidence note than nothing.
 | Artur Tseretsian | 752202 |
 | Ihor Naum & Olha Levchuk | 710637 |
 | Denys Melnyk | 764785 |
+| ZETECH LLC | 706710 |
+| OPTIC GOLD INC | 706702 |
+| ONETWO STRATEGIES INC | 706701 |
+| Greenair International LLC | 706688 |
+| CANDRAMAS LLC | 706683 |
+| AXDIGITAL LLC | 706681 |
+| Airtouch LLC | 706671 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⚠️ **The last seven were missing for a structural reason worth remembering.** This list was built
+> from **Lilian's and Maria's** clients, so **every client assigned to Liudmyla Kazannik fell outside
+> it** — seven QuickBooks-connected companies with no Client Intelligence at all until 2026-08-11.
+> **When scope is derived from who owns the work, it inherits that person's blind spots.** The check
+> that catches it: `list_clients` filtered to `platform: qbo` is the firm's real bookkeeping roster —
+> reconcile this table against it, not against anyone's client list.
 
 **Excluded from the sweep — archived clients.** A client archived in Double gets no
 new activity, so sweeping it every Saturday wastes budget. These have a CI file and a
@@ -218,6 +232,13 @@ CLIENTS (name -> Double id):
 - Artur Tseretsian -> 752202
 - Ihor Naum & Olha Levchuk -> 710637
 - Denys Melnyk -> 764785
+- ZETECH LLC -> 706710
+- OPTIC GOLD INC -> 706702
+- ONETWO STRATEGIES INC -> 706701
+- Greenair International LLC -> 706688
+- CANDRAMAS LLC -> 706683
+- AXDIGITAL LLC -> 706681
+- Airtouch LLC -> 706671
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:

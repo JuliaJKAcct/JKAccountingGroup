@@ -179,7 +179,7 @@ client-intelligence/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (24 so far — see the Clients index below)
+└── clients/               ← one file per client (31 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -205,6 +205,13 @@ client-intelligence/
 | Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — Maria's process guide integrated |
 | Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — Maria's process guide integrated |
 | MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — Maria's process guide integrated |
+| ZETECH LLC | [`clients/zetech.md`](./clients/zetech.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| OPTIC GOLD INC | [`clients/optic-gold.md`](./clients/optic-gold.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| ONETWO STRATEGIES INC | [`clients/onetwo-strategies.md`](./clients/onetwo-strategies.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| Greenair International LLC | [`clients/greenair-international.md`](./clients/greenair-international.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| CANDRAMAS LLC | [`clients/candramas.md`](./clients/candramas.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| AXDIGITAL LLC | [`clients/axdigital.md`](./clients/axdigital.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
+| Airtouch LLC | [`clients/airtouch.md`](./clients/airtouch.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
 | LUMETRO LLC | [`clients/lumetro.md`](./clients/lumetro.md) | Maria | In progress — enriched |
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 | Ihor Naum & Olha Levchuk | [`clients/ihor-naum-olha-levchuk.md`](./clients/ihor-naum-olha-levchuk.md) | Lilian | In progress — 1040 filed; Form 8802 pending at the IRS |
