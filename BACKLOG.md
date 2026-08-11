@@ -42,6 +42,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
 | [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | **Built (v1, Jul 2026)** — create/enrich/audit + CI↔SOP sync + owner-level sweep rule + Atlas review-dashboard render; improve over time |
 | [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question) | Redesign the Business Tax Organizer with a QuickBooks-access filter question up front, so clients we already have QuickBooks access to skip the transaction questions | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) skill + Double's live organizer template | Medium | Not started |
+| [IDEA-17](#idea-17--repair-the-1040-organizers-broken-conditional-logic) | Repair the **1040** organizer's conditional logic — seven income options lead nowhere and the rental branch is unreachable, so those clients are never asked for a document | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) + Double's live organizer template | **High** | Not started — defects audited 2026-08-11, fix list ready |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -828,6 +829,49 @@ Double support before starting the build, not after.
 **Priority:** Medium · **Status:** Not started — captured (Lilian, Aug 2026, flagged as "for
 later"); the `Organizer Status` value it depends on is already documented in the
 `tax-season-readiness` skill.
+
+---
+
+## IDEA-17 — Repair the 1040 organizer's broken conditional logic
+
+**What Lilian wants:** fix the **individual (1040) tax organizer** in Double, whose conditional
+logic has defects that quietly cost the firm documents. Found 2026-08-11 while auditing a real
+client's organizer; she asked for help correcting it the same day ("es importante corregirlo").
+
+**Why it matters:** the organizer hides each document request until an earlier answer reveals it —
+which is **correct design**, and keeps a simple client from wading through 120 slides. But seven
+income-type options are wired to nothing: the client ticks **Rental income**, **Farming**,
+**Gambling**, **Interest (1099-INT)**, **Property sales (1099-S)**, **Lotto/gambling winnings** or
+**Railroad retirement**, and no follow-up ever appears. The **rental-property branch is unreachable
+by any answer at all**. So a client with rental property can complete the organizer honestly, be
+marked **100% complete**, and never once be asked for a rental document — and nobody finds out until
+someone reviews the return by hand. There is also no **Widowed** marital status, so Qualifying
+Surviving Spouse is never identified.
+
+**Where it fits:** the defect list, each item traced to its slide and rule ID, with a suggested
+order of repair, is
+[`.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md`](./.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md).
+The organizer itself lives in **Double**, not the repo. Sibling of
+[IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question),
+which redesigns the **business** organizer — same platform, same open question about where new
+organizers come from, different document.
+
+**What we need to start:** (1) confirm **where new organizers are created from** — a firm-wide
+template in Double, a clone of a previous client's, or hand-authored. This is the same unknown
+blocking IDEA-16 and it decides whether a fix propagates or dies on one draft; settle it with Double
+support. (2) Lilian decides, for each of the seven dead options, whether to wire it to a real
+follow-up or remove the option — offering a choice that leads nowhere is worse than not offering it.
+(3) Apply the fixes in the Double UI.
+
+**Capability check:** ⚠️ **the read side is done; the write side is constrained.** The audit was
+produced with `get_organizer`, which returns every slide and logic rule. But per the
+[`double-mcp`](./.claude/skills/double-mcp/references/capability-map.md) capability map, slides and
+logic are editable **only while an organizer is a draft** — every already-sent organizer is frozen —
+and `update_organizer` **deletes by omission**. Publishing is not available via MCP at all. **So this
+is a Double-UI job with our list in hand, not an API job.**
+
+**Priority:** High · **Status:** Not started — defects audited 2026-08-11 (Lilian), fix list ready,
+blocked on the new-organizer-template question.
 
 ---
 
