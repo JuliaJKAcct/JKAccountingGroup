@@ -254,22 +254,55 @@ function readerMeta(owner, updated){
 function dataUri(mime, relPath){
   return 'data:' + mime + ';base64,' + readFileSync(resolve(repoRoot, relPath)).toString('base64');
 }
+
+// ---- Embedded assets, ONCE each -------------------------------------------
+// Every binary we ship (guide PNG/PDF, blank forms, the COA workbook) used to be
+// base64'd into the page at each place it appeared: a guide PNG once as the inline
+// <img> and again as its download link, and each guide PDF again in its Templates
+// card. Three copies of the same megabyte, and the page has a hard 16MB ceiling as
+// a published Artifact. So an asset is emitted once into ASSET_TABLE and referenced
+// by id; the script resolves the ids onto src/href BEFORE the download interceptor
+// binds (it matches on href^="data:", so ordering matters). Trade-off, deliberate:
+// these links no longer work with JS disabled — like the reader, the search and the
+// filters, which never did.
+const ASSETS = new Map();               // relPath -> { id, mime }
+function assetRef(mime, relPath){
+  if(!ASSETS.has(relPath)) ASSETS.set(relPath, { id: 'a' + (ASSETS.size + 1), mime });
+  return ASSETS.get(relPath).id;
+}
+function assetTableJs(){
+  const rows = [...ASSETS.entries()].map(([relPath, a]) => `${a.id}:"${dataUri(a.mime, relPath)}"`);
+  return `var ASSET_TABLE={${rows.join(',')}};`;
+}
+// The table is emitted where the <script> is interpolated, so an assetRef() called
+// LATER than that point would leave a data-asset with no entry — a download button
+// that silently does nothing, with the build still exiting 0. Check the finished
+// page instead of trusting the ordering.
+function assertAssetsResolvable(html){
+  const sites = [...html.matchAll(/data-asset="([^"]+)"/g)].map((m) => m[1]);
+  const known = new Set([...ASSETS.values()].map((a) => a.id));
+  const missing = [...new Set(sites)].filter((id) => !known.has(id));
+  if (missing.length) {
+    throw new Error(`data-asset ids with no ASSET_TABLE entry: ${missing.join(', ')} — an assetRef() ran after the script was emitted`);
+  }
+  return { sites: sites.length, embedded: known.size };
+}
 // a "send this to your client" block: the visual guide images shown inline + PNG/PDF downloads.
 // Team-facing — no repo/GitHub links, everything embedded.
-function guidesBlock(guides){
+function guidesBlock(guides, label){
   const cards = guides.map((g) => {
     const base = 'projects/sops/client-guides/';
-    const png = dataUri('image/png', base + g.png);
-    const pdf = dataUri('application/pdf', base + g.pdf);
+    const png = assetRef('image/png', base + g.png);
+    const pdf = assetRef('application/pdf', base + g.pdf);
     return `<figure class="guide">
       <figcaption class="guide-hd">
         <span class="guide-lang">${esc(g.lang)}</span>
         <span class="guide-dl">
-          <a class="dlbtn" href="${pdf}" download="${esc(g.pdf)}">${IC.dl}PDF</a>
-          <a class="dlbtn" href="${png}" download="${esc(g.png)}">${IC.dl}PNG</a>
+          <a class="dlbtn" data-asset="${pdf}" download="${esc(g.pdf)}">${IC.dl}PDF</a>
+          <a class="dlbtn" data-asset="${png}" download="${esc(g.png)}">${IC.dl}PNG</a>
         </span>
       </figcaption>
-      <img class="guide-img" src="${png}" alt="Client sign-in guide (${esc(g.lang)})" loading="lazy">
+      <img class="guide-img" data-asset="${png}" alt="${esc(label)} (${esc(g.lang)})" loading="lazy">
     </figure>`;
   }).join('');
   return `<div class="shead"><span class="schip">✦</span><h2>Send this to your client</h2></div>`
@@ -285,8 +318,8 @@ function guidesBlock(guides){
 // first thing a team member sees.
 function templateBlock(t){
   const base = 'projects/sops/assets/';
-  const pdf = dataUri('application/pdf', base + t.pdf);
-  const png = t.png ? dataUri('image/png', base + t.png) : null;
+  const pdf = assetRef('application/pdf', base + t.pdf);
+  const png = t.png ? assetRef('image/png', base + t.png) : null;
   return `<div class="tdl">`
     + `<div class="tdl-ic">${IC.doc}</div>`
     + `<div class="tdl-x">`
@@ -294,8 +327,8 @@ function templateBlock(t){
     +   `<h3 class="tdl-t">${esc(t.name)}</h3>`
     +   `<p class="tdl-d">Download the blank form to <b>print, fill in, or send to the care provider</b> (the babysitter). They complete and sign it; the signed copy is kept in the client's systems — never here.</p>`
     +   `<div class="tdl-btns">`
-    +     `<a class="dlbtn big" href="${pdf}" download="${esc(t.pdf)}">${IC.dl}Download PDF</a>`
-    +     (png ? `<a class="dlbtn big ghost" href="${png}" download="${esc(t.png)}">${IC.dl}Download image (PNG)</a>` : '')
+    +     `<a class="dlbtn big" data-asset="${pdf}" download="${esc(t.pdf)}">${IC.dl}Download PDF</a>`
+    +     (png ? `<a class="dlbtn big ghost" data-asset="${png}" download="${esc(t.png)}">${IC.dl}Download image (PNG)</a>` : '')
     +   `</div>`
     +   (png ? `<p class="tdl-note">The <b>PDF</b> is the print-ready form. In this in-browser preview the <b>PNG</b> image is the one that saves; on the firm's site both download.</p>` : '')
     + `</div>`
@@ -1302,6 +1335,14 @@ const SOP_GROUPS = [
           { lang: 'English', png: 'double-first-login-en.png', pdf: 'double-first-login-en.pdf' },
           { lang: 'Russian', png: 'double-first-login-ru.png', pdf: 'double-first-login-ru.pdf' },
         ] },
+      { file: 'double-portal-sending-us-information.md', title: 'Double Portal — Sending Us Information',
+        blurb: 'The other question every client asks: “I have information for you — where do I put it?” Everything goes in “Qs for us” — four taps on a phone — plus the ready-to-send client guides (visual guide + PDF, email, WhatsApp — EN & RU). Phone flow verified; desktop not documented yet.',
+        // team page: cut the internal file table + open-items notes, show the guide images instead
+        truncateAt: 'Client-ready templates',
+        guides: [
+          { lang: 'English', png: 'double-send-info-en.png', pdf: 'double-send-info-en.pdf' },
+          { lang: 'Russian', png: 'double-send-info-ru.png', pdf: 'double-send-info-ru.pdf' },
+        ] },
       // 'double-portal-branding.md' is intentionally NOT listed — it's an internal setup
       // note (kept in the repo), not something the team needs in the Hub.
     ],
@@ -1410,7 +1451,7 @@ function renderSopItem(it, grpName) {
     let bodyHtml = mdToAtlas(md2);
     if (hasFlow) bodyHtml = flowBlock + bodyHtml;                        // designed flow(s), above the .md body
     if (it.template) bodyHtml = templateBlock(it.template) + bodyHtml;   // prominent download, top of the reader
-    if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides);
+    if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides, it.guidesAlt || it.title);
     inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
       + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
       + `<div class="page">${bodyHtml}</div>`;
@@ -1644,6 +1685,17 @@ const TEMPLATES = [
         mime: 'application/pdf', path: 'projects/sops/client-guides/double-first-login-ru.pdf', ghost: true },
     ],
     open: { id: 'double-portal-first-login', label: 'Open its SOP (guide · email · WhatsApp)' } },
+
+  { band: 'sop', kind: 'Client portal (Double)', name: 'Double Portal — “Send Us Information” Guides', owner: 'lilian',
+    blurb: 'The ready-to-send one-page guides that show a client how to send us a question, bank details, a document or a photo through the portal — “Qs for us”, four taps on a phone. English & Russian; the email and WhatsApp copy live in the SOP.',
+    formats: ['PDF · EN', 'PDF · RU'],
+    downloads: [
+      { label: 'Guide PDF — English', file: 'double-send-info-en.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-send-info-en.pdf', primary: true },
+      { label: 'Guide PDF — Russian', file: 'double-send-info-ru.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-send-info-ru.pdf', ghost: true },
+    ],
+    open: { id: 'double-portal-sending-us-information', label: 'Open its SOP (guide · email · WhatsApp)' } },
 ];
 
 // The proposals-&-pricing tools open in the in-Hub reader like the engagement letter —
@@ -1668,7 +1720,7 @@ function tplCardHtml(t) {
         + (t.tool ? `<a class="dlbtn big tpl-tool" role="button" tabindex="0" data-open-doc="${t.tool.id}" data-doc-name="${esc(t.name)}">${esc(t.tool.label)}${TARROW}</a>` : '')
         + (t.downloads || []).map((d) => {
         const cls = 'dlbtn' + (d.primary ? ' big' : '') + (d.ghost ? ' ghost' : '');
-        return `<a class="${cls}" href="${dataUri(d.mime, d.path)}" download="${esc(d.file)}">${IC.dl}${esc(d.label)}</a>`;
+        return `<a class="${cls}" data-asset="${assetRef(d.mime, d.path)}" download="${esc(d.file)}">${IC.dl}${esc(d.label)}</a>`;
       }).join('') + `</div>`;
   const open = t.open
     ? `<a class="tpl-sop" role="button" tabindex="0" data-open-doc="${t.open.id}" data-doc-name="${esc(t.name)}">${esc(t.open.label)}${TARROW}</a>`
@@ -1900,6 +1952,17 @@ ${templatesViewHtml}
 (function(){
   var root = document.documentElement;
   root.classList.add('js');
+
+  // ---- Embedded assets -----------------------------------------------------
+  // Each binary is base64'd into the page ONCE (see assetRef in the generator) and
+  // wired onto its <img>/<a> here. This MUST run before the a[download][href^="data:"]
+  // interceptor below binds, or the download links won't match its selector yet.
+  ${assetTableJs()}
+  [].forEach.call(document.querySelectorAll('[data-asset]'), function(el){
+    var u = ASSET_TABLE[el.getAttribute('data-asset')];
+    if(!u) return;
+    if(el.tagName === 'IMG') el.setAttribute('src', u); else el.setAttribute('href', u);
+  });
 
   // ---- File delivery -------------------------------------------------------
   // The claude.ai Artifact sandbox blocks BOTH "<a download>" (data: and blob:)
@@ -2174,8 +2237,9 @@ ${templatesViewHtml}
 
   // Downloads: "<a download href=data:>" is blocked in the sandbox (and silently on
   // some hosts). Intercept the click and route through saveFile — the downloads
-  // capability in the sandbox, a Blob download on the real host. The plain anchor
-  // stays as the no-JS fallback.
+  // capability in the sandbox, a Blob download on the real host.
+  // NOTE: for every binary the href is set by the asset resolver above, not by the
+  // generator, so this selector only matches once that has run — keep the order.
   [].forEach.call(document.querySelectorAll('a[download][href^="data:"]'), function(a){
     a.addEventListener('click', function(e){
       var parsed = dataUri(a.getAttribute('href') || '');
@@ -2282,6 +2346,8 @@ if (bareMermaid.length) {
   console.error(`⚠️  BARE MERMAID in SOP reader(s): ${bareMermaid.join(', ')} — the "process at a glance" must be a DESIGNED flow (a \`flow\` config → .pcflow), never raw Mermaid. See the sop-authoring + knowledge-hub skills.`);
 }
 
+const assetCheck = assertAssetsResolvable(html);   // throws rather than shipping a dead download
+
 const outStandalone = resolve(here, 'index.html');
 writeFileSync(outStandalone, html);
 // Artifact fragment (body-only; the Artifact tool supplies <head>/<body>)
@@ -2294,3 +2360,4 @@ writeFileSync(outFrag, fragment);
 console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${totalCount} documents`);
 console.error(`standalone → ${outStandalone} (${(html.length/1024).toFixed(0)}KB)`);
 console.error(`fragment   → ${outFrag} (${(fragment.length/1024).toFixed(0)}KB)`);
+console.error(`assets     → ${assetCheck.embedded} binaries embedded once, used in ${assetCheck.sites} places — 16MB is the Artifact ceiling`);
