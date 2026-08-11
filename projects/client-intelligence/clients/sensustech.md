@@ -90,6 +90,8 @@ doc guide** in Drive (§7) — never copied here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 4. Sensustech*): the monthly Brokerage JE, the manual sub-CC handling, the Uncat workflow, bank-feed map, and 2 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-08-01 — Weekly sweep (baseline 2026-07-20, incremental). Confirmed the owner-group's 5 Double records (Sensustech, Lumetro, Mobilesource, Sensus Games + the owner's individual profile). No new Ping meetings indexed under Sensustech or the owner (still none). Gmail activity was routine Gusto AutoPilot payroll confirmations (nothing new). Found a second, newer "SENSUSTECH LLC" Drive folder (created 2026-05) alongside the original 2023 one — a duplicate to consolidate, same pattern already flagged on Lumetro. Double's activity log shows the "JK 2025 Business Tax Organizer - Sensustech" was reverted to draft by Lilian on 2026-07-31 — noted for awareness (Organizer Status property reads N/A / BK client). _(Ping, Double, Gmail, Drive)_
 - 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log confirmed a
   standing **loan-from-Lumetro reconciliation** task on the monthly close checklist (not
@@ -97,8 +99,6 @@ doc guide** in Drive (§7) — never copied here.
   surfaced an open Gusto → QuickBooks Online account-mapping sync failure (due 2026-08-12) —
   added to §5 as a quirk to watch. Ping had no indexed meetings for Sensustech or the owner in
   this window.
-- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 4. Sensustech*): the monthly Brokerage JE, the manual sub-CC handling, the Uncat workflow, bank-feed map, and 2 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
-- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **External financial audit (mid-2026):** an outside auditor requested financials; the owner opted to provide tax returns in lieu of audited financials — **handle related requests discreetly**. _(Gmail)_

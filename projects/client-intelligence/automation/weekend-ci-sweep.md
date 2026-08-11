@@ -53,7 +53,10 @@ So:
 
 - **Client Intelligence merges itself.** The sweep commits its `clients/`, `sweep-state.md`
   and `sop-proposals.md` changes and **merges them to `main`** — no branch left waiting, no
-  approval. This was always the written policy (see [`sop-proposals.md`](../sop-proposals.md));
+  approval. ⚠️ **This is a deliberate, narrow carve-out from CLAUDE.md's "every PR gets an
+  independent review before merge"**, and it holds *only* for an unattended sweep whose diff is
+  confined to those three paths. A run that touches anything else — a skill, an SOP, this file,
+  the build — is ordinary work and goes through review like everything else. This was always the written policy (see [`sop-proposals.md`](../sop-proposals.md));
   only the mechanism disagreed. Git remains the safety net: every fact is source-tagged and
   dated, and any change can be reverted.
 - **SOPs still wait for Lilian.** The sweep never edits `projects/sops/`. It queues proposals

@@ -95,18 +95,18 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll).
+- 2026-07-20 — **Gmail enrichment sweep:** established the marketing-services profile (customers Alirm / Mellanni), RU language, FL (inferred), Gusto AutoPilot payroll + accountable-plan reimbursements, and the Jan-2026 S-election. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
+- 2026-07-30 — Surfaced while building the tax-readiness list. Resolved the **710636** question
+  (it's the owner's individual 1040 account) and captured the **engagement timing** from Lilian:
+  his personal return is **not** with us for 2025 and **starts with us in 2026**. Also logged the
+  `wontFileWithUs` mislabel on his 2026 project as known-bad data to ignore — see §5.
 - 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20). Double activity log shows the
   owner's individual (710636) 2026 tax-project mislabel (`wontFileWithUs`) was corrected to
   "Not Started" on 2026-07-30 — see §5. Ping (business + owner name, org-wide semantic),
   Gmail (`in:inbox`/`in:sent`, business name + owner email), and Google Drive turned up nothing
   else new in scope (Drive files present are all dated before the baseline). No repo mentions
   (SOPs/FOLLOW-UPS/BACKLOG) beyond the standing index entries.
-- 2026-07-30 — Surfaced while building the tax-readiness list. Resolved the **710636** question
-  (it's the owner's individual 1040 account) and captured the **engagement timing** from Lilian:
-  his personal return is **not** with us for 2025 and **starts with us in 2026**. Also logged the
-  `wontFileWithUs` mislabel on his 2026 project as known-bad data to ignore — see §5.
-- 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; S-corp / 1120-S; quarterly bookkeeping; automatic payroll).
-- 2026-07-20 — **Gmail enrichment sweep:** established the marketing-services profile (customers Alirm / Mellanni), RU language, FL (inferred), Gusto AutoPilot payroll + accountable-plan reimbursements, and the Jan-2026 S-election. Ping had **no indexed meetings**; facts from Gmail. Ping + Gmail now swept (see sweep-state).
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm the **registered home state** definitively (strongly inferred FL, not documented).

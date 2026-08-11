@@ -108,16 +108,24 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   firm connected Double and transferred primary QBO admin to the client — mean the
   live QBO connection status is worth double-checking before relying on Double's sync
   for this client. (Gmail full pass, 2026-08-01)
-- Entity-naming inconsistency between "Atman Parts" and "Project ATMAN LLC" across Intuit/QuickBooks records — flag for verification with the client.
-- QBO subscription had repeated payment/renewal issues and a brief cancellation around 2026-07-21, coinciding with the Double↔QBO connection — consistent with active onboarding cleanup, not a standing problem.
 - The Google Drive client folder is filed under **"Atman Products,"** not "Atman Parts" — same client, name variant (see §7).
 - One of the two Double portal contacts is not indexed in Ping at all — a standing Ping coverage gap for this client's bookkeeping/day-to-day contact.
-- **Possible dual QuickBooks/entity naming — unconfirmed.** Intuit billing notifications for this client alternate between "Atman Parts" and "Project ATMAN LLC" as the company name on the same subscription thread (source: Gmail, Mar–Aug 2026). Could be a legal-name-vs-trade-name situation, or two related subscriptions — flag for Lilian/Julia to confirm before it causes confusion in QuickBooks.
 - **QuickBooks primary admin was transferred to the owner** on 2026-07-20 (Intuit notification: "The primary admin for Atman Parts changed... [owner] is the new primary admin"), consistent with the same-day onboarding call. (Source: Gmail, 2026-07-20.)
 
 ## 6. History & open questions
 
 ### Log
+- 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
+  (QuickBooks Online). Sales-tax details to come from Lilian.
+- 2026-07-20 — Sweep: no Double notes yet.
+- 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
+- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Confirmed home state (Texas), industry (eBay auto-parts seller), QBO plan/admin handoff, and a full sales-tax filing history (8 back periods filed 2026-07-16). Found the Google Drive folder under the name "Atman Products" (§7). Client is mid-onboarding per the Double activity log.
+- 2026-07-30 — Clarified the contact roles (Lilian): the second portal contact on this
+  client is the **owner's employee**, added only for document/portal access. He is not a
+  client, so he has no individual account and never will — recorded in §2/§5 so no future
+  session flags it as a missing 1040. Generalized into the
+  [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill (§7:
+  a portal contact is not necessarily an owner).
 - 2026-08-01 — Weekly sweep: **full one-time Gmail pass** completed (coverage gap
   cleared — `in:inbox`/`in:sent`, no date bound). Found the earlier 2026-03-24
   "Vitaliy onboarding" Zoom call (predates this file's baseline) discussing organizing
@@ -133,17 +141,6 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   beyond the 2026-07-20 follow-up call already logged (semantic search returned only
   that meeting plus noise from unrelated clients, discarded). Google Drive folder for
   this client found and linked in §7.
-- 2026-07-20 — Profile started. Confirmed the client in Double as **Atman Parts**
-  (QuickBooks Online). Sales-tax details to come from Lilian.
-- 2026-07-20 — Sweep: no Double notes yet.
-- 2026-07-30 — Clarified the contact roles (Lilian): the second portal contact on this
-  client is the **owner's employee**, added only for document/portal access. He is not a
-  client, so he has no individual account and never will — recorded in §2/§5 so no future
-  session flags it as a missing 1040. Generalized into the
-  [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill (§7:
-  a portal contact is not necessarily an owner).
-- 2026-07-20 — Found Atman in Ping — indexed under the **owner's individual contact**, not the business name "Atman Parts" (that is why the first search missed it; the sweep now searches by owner **and** business). Read the owner's follow-up client meeting with Julia (Ping, 2026-07-20). The auto-transcript is rough/multilingual, so only low-confidence signals were usable: uses **QuickBooks** + a **Business PayPal**, possibly sells on **eBay**; the call discussed **sales tax, franchise tax and annual reports** (no legible state/frequency). Concrete details still need capture from Lilian/Julia.
-- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Confirmed home state (Texas), industry (eBay auto-parts seller), QBO plan/admin handoff, and a full sales-tax filing history (8 back periods filed 2026-07-16). Found the Google Drive folder under the name "Atman Products" (§7). Client is mid-onboarding per the Double activity log.
 - 2026-08-08 — **Full-pass sweep (gap catch-up).** Double client properties confirmed: **Tax Return Type = Schedule C**, **Bookkeeping = Monthly**, Assigned Staff = Lilian, Account Type = Company; no Double notes on file. Ping (bounded ≥2026-07-20, per the run's rules — this client's gap was Gmail, not Ping): a scoped search of the owner's Ping client record surfaced nothing beyond the same 2026-07-20 "Follow Up" call already on record — no new meetings. **Full historical Gmail pass (in:inbox + in:sent, no date bound) — gap closed.** Found: QuickBooks/Intuit subscription and billing history back to Mar 2026 (trial start, payment history, a lapsed-then-restored subscription) under both "Atman Parts" and "Project ATMAN LLC" as the company name (see §5); the QuickBooks primary-admin transfer to the owner (2026-07-20); a TaxDome account activation (2026-03-26); and a **Form 2848 (power of attorney)** faxed on 2026-03-28. Nothing on sales tax/franchise tax beyond what the 2026-07-20 call already flagged. Google Drive: located the client's folder (link in §7). QuickBooks and the repo (SOPs/FOLLOW-UPS/BACKLOG) were checked; no client-specific content found beyond the BACKLOG.md mention of this file's own existence.
 
 ### Outstanding items (CI-only — never in the SOP)

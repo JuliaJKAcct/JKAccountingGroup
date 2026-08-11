@@ -95,6 +95,9 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
+- 2026-07-25 — Incremental sweep: June 2026 reports sent to the GM/owner group 2026-07-24 — the "reports blocked" item below is now resolved (month-end close for 06-2026 marked Done 2026-07-23, full close checklist completed). Identified the buyback root cause (QBO duplicate payment entries). A USDT-related deposit was flagged pending to clear in QuickBooks (2026-07-23) — worth another look next sweep. Two SOP-proposal candidates queued (buyback root-cause addendum, off-cycle payroll addendum).
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20). June 2026 close completed and reports sent (buyback miscategorizations resolved); FL DOR sales-tax audit confirmed underway (state auditor reached out, cc'd Julia); occasional off-cycle/bonus Gusto payroll runs observed; recurring USDT/crypto deposit-verification quirk confirmed; owner-group also includes **Sensus Games LLC** (Double id 710596 — no CI file yet). No new meetings found for this client in Ping for the period. _(Double, Gmail, Ping, Drive)_
 - 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Gmail surfaced two developments:
   the previously-noted FL DOR "encrypted exchange" has escalated to a **formal sales-tax audit**,
@@ -103,10 +106,6 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
   (same as SensusTech, same tech owner-group) — added to §5. The buyback-categorization pattern
   already on file is still recurring as of Jul 20–21 (already a Pending item in the SOP; no new
   proposal needed). Ping had no indexed meetings for Mobilesource or the owner in this window.
-- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
-- 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
-
-- 2026-07-25 — Incremental sweep: June 2026 reports sent to the GM/owner group 2026-07-24 — the "reports blocked" item below is now resolved (month-end close for 06-2026 marked Done 2026-07-23, full close checklist completed). Identified the buyback root cause (QBO duplicate payment entries). A USDT-related deposit was flagged pending to clear in QuickBooks (2026-07-23) — worth another look next sweep. Two SOP-proposal candidates queued (buyback root-cause addendum, off-cycle payroll addendum).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **June 2026 reports:** buyback miscategorizations were resolved and the reports were sent 2026-07-24 — this item is now closed. _(Gmail, Double activity log)_

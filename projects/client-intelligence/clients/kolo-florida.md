@@ -147,7 +147,6 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706626](https://app.doublehq.com/close?cid=706626)
-- **Google Drive folder:** [KOLO FLORIDA INC](https://drive.google.com/drive/folders/1iK4p0Zrht0fCpvRtqRxYtbwikvYPkceO) _(2026-08-01; other same-named folders also turned up in Drive search — confirm this is the primary one)_
 - **Related clients:** [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) (one of
   the individuals holds a Florida workers'-comp Certificate of Election to be Exempt for
   this company), [`aura-remodeling.md`](./aura-remodeling.md) — same owner group.
