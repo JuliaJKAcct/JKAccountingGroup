@@ -246,6 +246,40 @@ in that folder.
   [`client-intelligence` skill](./.claude/skills/client-intelligence/) (the two-data-homes rule
   keeps figures, addresses and personal details out of the repo), and update the three indexes in
   the same commit.
+- **Anything you are told about a client goes into their file — unprompted, and without a filter.**
+  Lilian's standing instruction (2026-08-11): *"cada vez que hable en una sesión contigo y te dé
+  información de un cliente, debes incorporarla automáticamente, sin necesidad de que yo te la pida…
+  nunca está de más ninguna información que se ponga ahí."* **Do not weigh whether a fact is
+  important enough.** Client Intelligence is not published, costs nothing to hold, and exists so
+  that months later either of them can ask a question and get an answer with the whole context
+  behind it. So: a client is named in a session → open their file, write what the session produced,
+  and say you did. Ask only when you genuinely cannot tell **which** client a fact belongs to, or
+  whether it is client knowledge at all — never as a way of deferring the write. **If the client has
+  no file, create it** (the coverage rule below).
+- **Answering a question about a client is a two-step job: read the file, then close the gap since
+  the last sweep.** The file is the memory, not the whole answer — the weekend sweep runs weekly, so
+  anything after it is missing by construction. Before answering, check what has arrived since that
+  client's baseline in
+  [`sweep-state.md`](./projects/client-intelligence/automation/sweep-state.md): **Julia's Gmail**
+  (including the **Zoom meeting transcripts** that reach her by email), **Ping Assistant** (the call
+  and meeting transcripts), **Double** (notes, tasks, activity), and **Google Drive** where the
+  question needs it. Then answer — and **fold whatever you found into the client file in the same
+  session**, which is what stops the next person repeating the search. _(Lilian, 2026-08-11:
+  "necesitamos tener la respuesta más actualizada.")_ ⓘ **Ping's Russian/Ukrainian transcription was
+  upgraded (Aug 2026)** and Julia is testing it on her next calls — her RU meetings should start
+  producing transcripts worth reading, where before they were often too garbled to use. Treat older
+  RU/UA transcripts with the old scepticism and newer ones on their merits.
+- **Every client the firm has information about has a file — the only clients without one are the
+  ones nobody has said anything about.** Not "every client we have written a lot about": the bar is
+  *is there anything at all*. **Coverage is checked against Double, not against a person's client
+  list** — sweep `list_clients` (all non-archived) and treat a client as one we know something about
+  when **either** `platform: qbo` **or** a `Bookkeeping` cadence property is set. ⚠️ **`platform: qbo`
+  alone is not enough:** a disconnected QuickBooks reads `none`, which is exactly Deep Tech's state
+  while its bookkeeping is paused — the narrower check would reproduce the blind spot it exists to
+  catch. That audit found the failure it was written for: the weekend sweep's scope had been assembled from
+  Lilian's and Maria's clients, so **all seven of Liudmyla Kazannik's QuickBooks-connected companies
+  had no Client Intelligence whatsoever** until 2026-08-11. Scope derived from who owns the work
+  inherits that person's blind spots.
 - **Client Intelligence never waits for approval — and a contradiction is asked at the point of
   use, not in a report.** Lilian's decision (2026-08-11): **CI needs no approval to be saved or
   merged** — only **SOP** changes do (queued in

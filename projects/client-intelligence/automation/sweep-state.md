@@ -59,6 +59,12 @@ list grows.
 | Denys Melnyk | 2026-08-11 | **Ping, Gmail and Drive never swept.** The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**, supplied by Lilian as a redacted PDF. A full historical pass of the other three sources is owed |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
+> **The seven clients added to scope on 2026-08-11 (Liudmyla's) deliberately have NO ROW here.**
+> A row is a *bound* on the next run's searches, and none of them has ever been swept — a baseline
+> of 2026-08-11 would make the next run search `after:2026/08/11` and skip their entire history for
+> good. The routine's rule (b) already does the right thing with a missing row: **a client in scope
+> with no row gets a one-time full historical sweep, then a row.** Leave them out until that pass runs.
+
 _**Reconciled 2026-08-11**, when the three stalled sweeps (2026-07-25, 08-01, 08-08) were
 finally merged to `main`. Baselines now carry the **latest** date each client was actually
 swept through — the 08-08 run for most, 08-10 for iKids (a targeted people/ownership pass that

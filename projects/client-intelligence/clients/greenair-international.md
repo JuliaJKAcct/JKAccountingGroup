@@ -1,16 +1,11 @@
-<!--
-  CLIENT INTELLIGENCE — TEMPLATE
-  Copy this file to clients/<client-slug>.md to start a new client, fill the
-  header, and add a row to the Clients index in README.md.
-  KEEP EVERY SECTION below, in this order, for every client. Fill what you have;
-  mark anything unknown as _(pending)_. Never delete a section because it's empty.
-  Never paste secrets or personal contact details here — link to Drive/Double.
-  Delete this comment in the client copy.
--->
+# Greenair International LLC
 
-# {{Client business name}}
-
-> **Status:** {{Prospect | Active | Paused | Former}} · **Owner:** {{assigned staff, e.g. Lilian / Julia / Maria | Firm}} · **Last updated:** {{YYYY-MM-DD}}
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+>
+> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
+> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
+> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
+> as genuinely unknown rather than not applicable.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -32,14 +27,14 @@
 
 ## 1. Snapshot
 
-- **Business name:** _(pending)_
-- **Entity type:** _(pending)_ <!-- LLC / S-corp / C-corp / Sole prop / Partnership -->
+- **Business name:** Greenair International LLC
+- **Entity type:** **LLC**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
-- **Our engagement (services we provide):** _(pending)_ <!-- bookkeeping / payroll / sales tax / income tax / advisory … -->
+- **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**) _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** _(pending)_ <!-- QuickBooks Online, etc. -->
+- **Accounting platform:** **QuickBooks Online**, connected through Double (`platform: qbo`) _(2026-08-11)_
 
 ## 2. Contacts
 
@@ -53,7 +48,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Bookkeeping / day-to-day contact | Double client (link below) |
 | _(add roles as needed)_ | |
 
-- **Double client:** _(pending — link)_
+- **Double client:** [app.doublehq.com/close?cid=706688](https://app.doublehq.com/close?cid=706688)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 
 ## 3. Systems & access
@@ -63,7 +58,8 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(portal URL / account ending)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_ |
+| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
 | Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
 | Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
 | _(add systems as needed)_ | | | |
@@ -75,7 +71,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 "Applies? _(pending)_" or "Not applicable."
 
 ### Sales tax
-- **Applies?** _(pending)_
+- **Applies?** **No — N/A** _(Double client properties, 2026-08-11)_
 - **Jurisdiction(s):** _(pending)_
 - **Frequency & due date:** _(pending)_ <!-- e.g. monthly, due the 20th -->
 - **Agency & portal:** _(pending)_
@@ -85,25 +81,27 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
-- **Applies?** _(pending)_
+- **Applies?** **No — N/A** _(Double client properties, 2026-08-11)_
 - **Provider / frequency:** _(pending)_
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending)_
-- **Cadence:** _(pending)_
+- **Applies?** **Yes** _(Double client properties, 2026-08-11)_
+- **Cadence:** **Monthly**
 - **Categorization rules / quirks:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Income tax
-- **Applies?** _(pending)_
-- **Return type(s) & deadlines:** _(pending)_
+- **Applies?** **Yes** _(Double client properties, 2026-08-11)_
+- **Return type(s) & deadlines:** **1120-S**; deadlines _(pending)_
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Licenses & other filings
-- **Applies?** _(pending)_ <!-- Business Tax Receipt, annual report, BOI, etc. -->
+- **Applies?** _(pending — only the annual-report flag below is known; local licences, BTRs and any BOI obligation are unchecked)_
+- **Annual report:** No _(Double client properties, 2026-08-11)_
+- **Organizer Status (Double, hand-maintained by Lilian):** Sent
 - **What & when:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
@@ -120,9 +118,10 @@ watch-outs, one-off arrangements, history that affects the work.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
-> `clientCard()` — see the [render README's parsing contract](../../.claude/skills/client-intelligence/render/README.md).
+> `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- _(pending)_
+- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -130,7 +129,7 @@ watch-outs, one-off arrangements, history that affects the work.
 ### Log
 A running, dated record as we build this profile.
 
-- _(YYYY-MM-DD)_ — _(pending)_
+- 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -145,17 +144,22 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- _(pending — or a pointer to the live list in Double / Ping)_
+- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] _(pending — list each missing piece here)_
+- [ ] What the business actually does, its home state, and the owner's language
+- [ ] Contacts and their roles (portal contacts are in Double)
+- [ ] Bank/card feeds and where credentials live (Drive vault link)
+- [ ] Fiscal year-end
+- [ ] Whether the client belongs to a known owner-group already profiled here
+- [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links
 
-- **Double client:** _(pending — link)_
+- **Double client:** [app.doublehq.com/close?cid=706688](https://app.doublehq.com/close?cid=706688)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
