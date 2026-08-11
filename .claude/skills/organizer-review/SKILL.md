@@ -332,6 +332,9 @@ in **English and capitalised** when they will have to say it out loud or search 
 
 Rules that come from the firm's client-message convention:
 
+- **Ask, don't diagnose.** Never tell them what is *wrong* with their answer — ask for
+  what you need. *(In the disagreement case below this extends rather than reverses: you
+  still don't diagnose, but you do show which records you are comparing.)*
 - **One question per thing you need.** Never a compound question; they answer the first
   half.
 - **Say why** when the reason changes their answer — *"so we know whether another state
@@ -357,22 +360,30 @@ example:*
    rental income from that address, and we have nothing for it in 2024."*
 3. **Ask the open question.** *"Can you explain what happened with that property?"* Open
    first — their explanation usually answers questions you did not think to ask.
-4. **Then narrow**, with the specific facts the return needs. *"Was it rented for the
-   whole year? If only part of it, which months? Did you sell it?"*
+4. **Then narrow** to the specific facts the return needs — **one question per block,
+   listed separately, never run together.** The compound-question rule above still binds
+   here, and this is the move where it is easiest to break:
+   > *"Was it rented for the whole year?"*
+   > *"If only part of the year, which months?"*
+   > *"Did you sell it?"*
 
 **Say plainly that it doesn't add up.** Lilian's own closing line is *"porque aquí hay
 algo raro"* — and that honesty is the point. It is not an accusation, and hiding the
 reason behind a neutral question wastes the exchange: a client who does not know why you
 are asking has no idea how much detail you need.
 
-**Ask, don't diagnose — but do show your working.** Never tell them what is *wrong* with
-their answer *(invented illustration: "you failed to report your rental income")*; do tell
-them **which records you are comparing and what does not line up** *("last year's return
-reported rent from the Oak Street property, and this year it isn't there")*. The first puts them on the defensive; the
+**Showing your working is not diagnosing.** The Block E rule still holds — never tell them
+what is *wrong* with their answer *(invented illustration: "you failed to report your
+rental income")*. What this shape adds is telling them **which records you are comparing
+and what does not line up** *("last year's return reported rent from the Oak Street
+property, and this year it isn't there")*. The first puts them on the defensive; the
 second recruits them.
 
-Use this shape for every ⚠️ and ❓ in Block B. It is what turns a comparison table into a
-message a client can actually answer.
+**Use this shape wherever two records genuinely disagree** — a disappearance, a
+contradiction, anything a client has to *explain* rather than simply send. **A
+straightforward missing document is just an ask**, not a four-move message: *"please send
+your Form 1095-A"* needs no preamble. Applying the full shape to every marker in Block B
+rebuilds exactly the padded list the five-to-eight limit exists to prevent.
 
 ### Block F — Notes for the file
 
