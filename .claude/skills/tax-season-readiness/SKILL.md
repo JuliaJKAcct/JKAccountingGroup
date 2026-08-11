@@ -11,7 +11,7 @@ description: Determine which JK Accounting Group clients are READY to have their
 > **one named client** — analyse their organizer, compare this year against last year, work out what
 > to ask them, or an organizer that reads "Completed" and still cannot be worked — load
 > [`organizer-review`](../organizer-review/) instead. Lilian calls it **"the tax preparer"**. It
-> reads all nine sources on that client and produces the grouped question list. The two are layered
+> reads every source the firm holds on that client and produces the grouped question list. The two are layered
 > deliberately: this one is the roster view, that one is the client view.
 
 > **Mechanics live next door.** This skill is the *domain* layer — what the columns mean and how
