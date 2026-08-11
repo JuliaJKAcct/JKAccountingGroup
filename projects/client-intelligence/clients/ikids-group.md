@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-10
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-11
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -53,6 +53,7 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| **The client's AP mailbox — Gmail** | Where the client's **vendor bills and payment confirmations arrive** (water, insurance, permits, the environmental report…). **The firm has access to it** and works it **every month** — see §4 | _(password pending — client's Drive vault / Double)_ | `ap.ikidsllc@gmail.com` — a **company AP mailbox**, not a person's inbox. It is the **only** place several of these bills exist: nothing is forwarded to us and the client sends nothing |
 
 ## 4. Obligations & recurring processes
 
@@ -64,6 +65,19 @@ the actual details.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_
+- **The runbook:** [`../../sops/ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md) — the
+  step-by-step monthly procedure. This section stays the *summary*; the runbook holds the detail.
+- **The bills do not come from the client — we fetch them from the client's own mailbox.** Vendor
+  bills and payment confirmations land in the client's AP mailbox (§3), which the firm has access
+  to. **Every month** someone has to open that mailbox, download the month's bills and
+  confirmations, and attach each one to its payment transaction in QuickBooks. Nobody forwards
+  them; if the month is skipped, the expense sits in the books with no support behind it.
+- **The water bill is on autopay — the payment posts by itself, the document does not.** The
+  charge appears in the bank feed with no action from us; the bill and the payment confirmation
+  still have to be pulled from the mailbox and matched to that transaction. **Never pay it a
+  second time** — it is already paid. _(Lilian, 2026-08-11.)_
+- This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
+  the client's account) — the same mailbox serves both.
 
 ### Income tax
 - **Applies?** Yes — **Form 1065** (partnership; multi-member LLC → K-1s to partners) _(Double)_
@@ -82,7 +96,7 @@ the actual details.
 ## 5. Key facts & quirks
 
 - **Pre-operational — startup-cost treatment is the central bookkeeping issue:** expenses are **capitalized as startup costs** until the park "begins operations"; pinning the operations-commencement date is a live judgment call tied to the opening. _(Gmail — Julia's bookkeeping instructions)_
-- **Heavier than standard bookkeeping — hands-on AP:** the firm **pays vendors** from the client's account (insurance, landlord water bill, environmental report, city permits) and sends confirmations; there's a dedicated AP inbox.
+- **Heavier than standard bookkeeping — hands-on AP, run out of the client's own mailbox:** the firm **pays vendors** from the client's account (insurance, environmental report, city permits) and sends confirmations. The **water bill is the exception — it is on autopay**, so it needs no payment action at all, only its paperwork. Everything, paid by us or paid automatically, arrives at the **client's AP mailbox** (§3), which the firm works **monthly** to download the bills and attach them to their transactions (§4). Whether any of the *other* recurring vendors are also on autopay is **not established** _(to verify)_.
 - **Ownership & signing authority — exactly THREE members, and only ONE of them can bind the company:** the **Manager holds 33.4%** and the other two **33.3%** each (near-thirds, not exact — the odd 0.1% sits with the Manager). The LLC is **manager-managed with a single Manager** (himself a member) who alone has authority to bind it; the other two members have no day-to-day management or voting role. The **CFO is neither a member nor the Manager** — he does not appear in the agreement at all, so treat that title as a **group/functional role**, not a Florida-LLC office, and route anything needing a company-binding signature to the **Manager**. _(Operating Agreement dated 2025-04-18, Drive → `4-Corporate` — supersedes the earlier "likely 3–4 partners" estimate.)_
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC.
 
@@ -93,6 +107,8 @@ the actual details.
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; partnership / 1065; monthly bookkeeping).
 - 2026-07-20 — **Gmail enrichment sweep:** established the iKidsPark play-park profile, Fort Lauderdale FL, RU/UA language, pre-operational startup-cost treatment, hands-on AP, and the related-entity group. Ping had **no indexed meetings**; facts are from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
 - 2026-08-10 — **Targeted people/ownership sweep** (Lilian, looking for a contact she could not find in Zoom). Read the **Operating Agreement** and settled the ownership structure: three members, equal thirds, single Manager (§5). Established that the **CFO is not a member or Manager**. Located the two **2025 Zoom calls** the CFO attended — 2025-06-20 (titled as the referrer's consultation, not iKids) and 2025-07-15 "Ikids Group LLC Setup" — which is why a Zoom search by client name finds nothing; Ping only indexes from ~Jun 2026, so **neither call has a transcript**. Registered the CFO as a Double contact **with no portal access**. Sources: Gmail, Google Calendar, Google Drive, Double. _(Worked by Lilian.)_
+
+- 2026-08-11 — **How this client's bookkeeping actually runs, from Lilian.** The client's **AP mailbox** (§3) is where the vendor bills and payment confirmations arrive, the firm has access to it, and **every month** we must go in, download the bills, and attach them to their payment transactions. The **water bill is on autopay** — nothing to pay, only its paperwork to collect. Recorded here and turned into the client's first bookkeeping runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md). _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client before the next 1065.
@@ -105,6 +121,11 @@ the actual details.
 - [x] The third member's email address, so he can be registered in Double — **⏸ PAUSED INDEFINITELY by Lilian (2026-08-10): do NOT chase this**, in the weekend sweep or anywhere else. No email for him exists in Gmail, Drive or Double; every thread runs through Julia or the outside CAA. To reopen: get it from the client or the CFO, then register him in Double as a contact record with **no portal access**, exactly as was done for the CFO. This is the **contact record only** — the third member's **tax status** is a separate question and is still live (§4, §6 outstanding).
 - [ ] Fiscal year-end
 - [ ] Credentials Drive link; the "operations begin" date once known
+- [ ] **Which other recurring vendors are on autopay** — only the water bill is confirmed. The rest
+      are believed to be paid by us on request, but nobody has listed them (§5, and the runbook's
+      open-decisions log)
+- [ ] **Where the downloaded bills are filed** once pulled from the mailbox — attached to the
+      QuickBooks transaction only, or also into Double / the client's Drive folder
 
 ## 7. Links
 
@@ -112,4 +133,6 @@ the actual details.
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn)
   - `4-Corporate` — Articles of Organization, EIN letter, **Operating Agreement** (the authority on
     members, percentages, and the Manager — §5), and the members' immigration documents.
-- **Related SOPs:** _(pending — links into ../sops/ once written)_
+- **Related SOPs:** [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md)
+  — the monthly bookkeeping runbook (the AP-mailbox retrieval, the autopaid water bill, the
+  startup-cost rule).

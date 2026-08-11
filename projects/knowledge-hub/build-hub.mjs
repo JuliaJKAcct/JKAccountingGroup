@@ -1322,6 +1322,20 @@ const SOP_GROUPS = [
             { t: 'Delivered', d: 'With the sister entity', k: 'done' },
           ],
         } },
+      { file: 'ikids-group-bookkeeping-review.md', title: 'iKids Group — Monthly Bookkeeping', perClient: true, client: { slug: 'ikids-group', name: 'iKids Group' },
+        blurb: 'iKids Group’s monthly bookkeeping — a children’s play park still being built out, so the spend is capitalized as startup costs, not expensed. Its signature step: the bills don’t come to us, we fetch them from the client’s own AP mailbox every month. The water bill is autopaid — collect it, never pay it twice. A seed runbook: the reconciliation detail is still to be written.',
+        close: {
+          name: 'iKids Group LLC', loc: 'Monthly bookkeeping · pre-operational play park (Fort Lauderdale)', dl: 'iKids-bookkeeping-runbook',
+          lede: "Everything a bookkeeper needs to run iKids month to month — the one rule, the monthly flow, then the process step by step. Built from the runbook, so it stays in sync. It is a seed: the bank-feed and reconciliation detail is still being written down.",
+          oneRule: "<b>The paperwork does not come to us — we go and get it.</b> Every vendor bill and payment confirmation lands in the <b>client's own AP mailbox</b>, and for several of them that is the only copy there is. Work it <b>every month</b>. The <b>water bill is on autopay</b>: collect the bill, attach it — <b>never pay it a second time</b>. And the park has not opened, so build-out spend is <b>capitalized as startup costs</b>, not expensed.",
+          flow: [
+            { t: 'Work the mailbox', d: 'Download the month’s bills + confirmations' },
+            { t: 'Water = autopay', d: 'Collect it · never pay it twice' },
+            { t: 'Attach', d: 'Each bill to its payment transaction' },
+            { t: 'Startup costs', d: 'Capitalize — the park has not opened' },
+            { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
+          ],
+        } },
     ],
   },
   {
