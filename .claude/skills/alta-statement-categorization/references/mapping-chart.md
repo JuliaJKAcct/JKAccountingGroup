@@ -88,9 +88,8 @@ the mapping chart's *Tax Treatment* column. Never invent a template row.
 
 ## When the property never went into service
 
-A house bought to resell that never became operational has **no operating
-expenses** — every cost from acquisition to disposition is a cost of the property.
-That means:
+A property that never became operational has **no operating expenses** — the
+costs of holding it are costs of the asset, not of a business. That means:
 
 - No depreciation, no placed-in-service date, no §1250 recapture.
 - Carrying costs — taxes, insurance, utilities, pest control, security — are
@@ -99,8 +98,42 @@ That means:
   `carrying_costs` sheet and grade them, because they are the part nobody has
   documentation for. See SKILL.md §4.
 
-The character of the result still needs a decision: **dealer** (inventory →
-ordinary loss, fully deductible) versus **investor** (capital asset → Schedule D,
-and an individual's net capital loss is capped at $3,000 a year against ordinary
-income). Same numbers, very different refund. That call belongs to the preparer —
-surface it, do not assume it.
+### Ask WHY it never went into service — the answer moves numbers
+
+"Never placed in service" is not one situation. Establish the intended use, because
+it decides both the reporting form and which costs may enter basis:
+
+| Intended use | Character of the result | Reported on |
+|---|---|---|
+| **Held for resale** (a flip, dealer) | Inventory — **ordinary** loss, fully deductible | Schedule C / Form 4797 ordinary |
+| **A rental business that never launched** — permits refused, financing died | Never used in a trade or business, so **not §1231**. A capital asset held for profit | **Form 8949 Part I or II** → Schedule D |
+| **Held for appreciation** | Capital asset | **Form 8949** → Schedule D |
+
+Form 8949 is the detail form; Schedule D is the summary it feeds. Saying "it goes
+on Schedule D" is right but incomplete — the transaction is itemized on 8949, and
+the box (A/B/C) depends on whether basis was reported on a 1099-B. A real estate
+sale normally produces a **1099-S**, not a 1099-B, so it lands in **box C**
+(short-term) or **box F** (long-term).
+
+**A venture that never began splits the costs in two**, and this is the part worth
+arguing carefully:
+
+- Costs of **the property** — utilities, insurance, property taxes, survey,
+  appraisal, securing the building — were incurred to acquire and hold the asset
+  that was ultimately sold, so they capitalize into its basis.
+- Costs of **the business** that never commenced — office rent, consulting,
+  software, phone, travel to look at other opportunities — are **§195 start-up
+  costs**. A business that never began gets no §195 deduction and no amortization,
+  and pushing them into the property's basis is a stretch: they bought no part of
+  the house.
+
+So an aborted venture generally argues for a **narrower** basis than a flip would,
+even though both are "never placed in service." Grade the costs, show the preparer
+both totals, and let them decide — do not quietly fold entity overhead into basis.
+
+**The deductibility consequence is worth stating out loud.** An individual's net
+capital loss is capped at **$3,000 a year** against ordinary income, with the rest
+carried forward. A $40,000 capital loss takes over a decade to absorb; the same
+$40,000 as an ordinary loss is deductible now. Same facts, very different refund —
+which is exactly why the dealer/investor question deserves a real answer rather
+than a default.

@@ -94,9 +94,10 @@ def main():
             else:
                 missing.append(f"{title}: no journal-entry total row found")
 
-        if title == "Schedule D - Final":
-            for row in find_rows(ws, 5, "RESIDUAL"):
-                checks.append((f"{title}: cash tie-out residual", get(title, f"F{row}")))
+        # Found by its RESIDUAL row rather than a sheet name, so renaming the
+        # reporting form (Schedule D vs Form 8949) can't silently skip the check.
+        for row in find_rows(ws, 5, "RESIDUAL"):
+            checks.append((f"{title}: cash tie-out residual", get(title, f"F{row}")))
 
         if title == "ALTA Mapping Chart":
             for row in find_rows(ws, 10, "should be $0"):

@@ -1,6 +1,6 @@
 ---
 name: alta-statement-categorization
-description: Turn ALTA settlement statements into a categorized, reconciled Excel workbook for a real estate purchase and/or sale — every closing line sorted into the right bucket (facilitative cost capitalized to basis, loan cost amortized, operating cost expensed, escrow deposit, selling cost reducing the amount realized) and a filing-ready gain/loss. Use when someone hands over a purchase and/or sale ALTA (or HUD-1 / Closing Disclosure) for a property and wants it prefilled into the HUD tool, categorized, tied out, or turned into a Schedule D / Form 4797 number or a journal entry. Also use to fold post-closing carrying costs from a bank ledger into basis for a property that never went into service (a flip), and to read a scanned ALTA. Client figures are delivered to the user, never committed.
+description: Turn ALTA settlement statements into a categorized, reconciled Excel workbook for a real estate purchase and/or sale — every closing line sorted into the right bucket (facilitative cost capitalized to basis, loan cost amortized, operating cost expensed, escrow deposit, selling cost reducing the amount realized) and a filing-ready gain/loss. Use when someone hands over a purchase and/or sale ALTA (or HUD-1 / Closing Disclosure) for a property and wants it prefilled into the HUD tool, categorized, tied out, or turned into a Schedule D / Form 4797 number or a journal entry. Also use to fold post-closing carrying costs from a bank ledger into basis for a property that never went into service (a flip, or a rental venture that never launched), and to read a scanned ALTA. Client figures are delivered to the user, never committed.
 ---
 
 # ALTA settlement statements — categorize, prefill, tie out
@@ -72,7 +72,9 @@ recur:
 - **Placed in service.** If the property never became operational, leave
   `placed_in_service` null. The template keys off it: a blank or mismatched year
   capitalizes the operating costs into basis instead of expensing them — correct
-  for a property held for resale. Say in the notes that the blank is deliberate.
+  for a property not yet in service. Say in the notes that the blank is deliberate.
+  Then ask **why** it never went into service (see below) — a flip and an aborted
+  rental venture are both "never placed in service" and are taxed differently.
 - **Escrow holdbacks** (a utility-bill escrow, a repair holdback) are a
   **receivable**, not an expense. They clear when refunded or applied.
 - **Prorated taxes** go on whichever side reimburses. The direction matters more
@@ -143,12 +145,22 @@ Send the `.xlsx` to the user. **Do not commit it or the spec.** State the
 open items plainly — unexplained proceeds shortfalls, unidentified transfers, a
 missing land/building split, whether rehab exists — rather than burying them.
 
-## Two things to raise, never to decide alone
+## Three things to raise, never to decide alone
 
-- **Dealer or investor?** Same numbers, very different outcome. Inventory gives an
-  **ordinary** loss, fully deductible. A capital asset goes to **Schedule D**, and
-  an individual's net capital loss is capped at **$3,000 a year** against ordinary
-  income with the rest carried forward. Surface it; the preparer decides.
+- **Why did it never go into service?** A **flip** is inventory — ordinary loss,
+  fully deductible. A **rental venture that never launched** (permits refused,
+  financing died) was never used in a trade or business, so it is not §1231: it is
+  a capital asset reported on **Form 8949**, feeding Schedule D. Establish the
+  intended use before picking a form.
+- **Which costs may enter basis.** For an aborted venture, costs of the *property*
+  capitalize, but the *business's* overhead is a §195 start-up cost of a business
+  that never began — no deduction, no amortization, and a stretch to call it basis.
+  That argues for a narrower basis than a flip. Show both totals; don't choose one
+  silently. `references/mapping-chart.md` has the full split.
+- **The $3,000 wall.** An individual's net capital loss is capped at $3,000 a year
+  against ordinary income, the rest carried forward. A $40,000 capital loss takes
+  over a decade to absorb; the same loss as ordinary is deductible now. Say this
+  out loud — it is usually the largest number in the conversation.
 - **Holding period.** Count the days. A flip that ran 358 days is short-term by a
   week, and nobody notices without the count in front of them.
 
@@ -167,7 +179,8 @@ missing land/building split, whether rehab exists — rather than burying them.
 
 ---
 
-**Update this skill when** a new ALTA line has no obvious bucket (add it to
+**Update this skill when** a new reason for "never placed in service" turns up,
+when a new ALTA line has no obvious bucket (add it to
 `references/mapping-chart.md`), when a state's customs differ from the Florida
 notes, when the blank template in `assets/` is revised, or when a deal shape
 appears that the spec can't express — an installment sale, a 1031 exchange, a

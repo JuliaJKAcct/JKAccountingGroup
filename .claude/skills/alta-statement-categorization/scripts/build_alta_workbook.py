@@ -599,7 +599,8 @@ def build_carrying(wb, spec, tag):
 # ---------------------------------------------------------------- schedule D --
 def build_schedule_d(wb, spec, tag, carrying_ref):
     """The filing-ready gain/loss, with the cash tie-out that proves it."""
-    ws = wb.create_sheet("Schedule D - Final")
+    d_early = spec["schedule_d"]
+    ws = wb.create_sheet(d_early.get("sheet_name", "Form 8949 - Schedule D")[:31])
     ws.sheet_view.showGridLines = False
     for col, width in {"A": 3.0, "B": 52.0, "C": 18.0, "D": 4.0,
                        "E": 52.0, "F": 18.0}.items():
@@ -620,7 +621,7 @@ def build_schedule_d(wb, spec, tag, carrying_ref):
         cell.value = value
         (dark if computed else light)(cell, fmt=MONEY, align="right", bold=bold)
 
-    ws["B1"] = f"SCHEDULE D - {tag}"
+    ws["B1"] = d.get("heading", f"FORM 8949 / SCHEDULE D - {tag}")
     dark(ws["B1"], bold=True)
     dark(ws["C1"])
     ws.merge_cells("B1:C1")
