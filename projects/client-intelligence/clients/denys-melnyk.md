@@ -196,13 +196,14 @@ small puzzles separately — together they may mean **the marriage ended**. Fili
 the position on **31 December 2025**, and it changes the standard deduction, the brackets and most
 credits — it bars Married Filing Separately from several outright — and probably the state return.
 It is worth more than the dependant line that raised it.
-**Ask the situation, not a yes/no**, because a married-or-divorced binary misses the three cases
-that would actually decide this return: **widowed**, **legally separated under a decree** (unmarried
-at year end), and **married but living apart**, where §7703(b) can treat him as unmarried and, with
-a qualifying child in the home, open **Head of Household** — which is exactly where child support
-plus two moves points. So: **married / separated (since when, and did his spouse live in the home at
-any point in the last six months) / divorced (decree date) / widowed (date)**. Never infer it, and
-do not carry 2024's status forward because nothing said otherwise.
+**Ask him to describe the situation — do not hand him a list of statuses** (Lilian, 2026-08-11:
+putting *widowed* and the rest in front of a client is cold and floats possibilities nobody raised).
+One open question — *what changed at home during the year, and how things stood on 31 December* —
+then narrow only to the facts: who lived in the home, and for how many months.
+**The categories are ours, for reading his answer.** The one to watch for here is **married but
+living apart**: §7703(b) can treat him as unmarried and, with a qualifying child in the home and the
+rest of the §2(b) tests met, open **Head of Household** — which is where child support plus two
+moves points. Never infer it, and do not carry 2024's status forward because nothing said otherwise.
 
 **One reading fits all three sources: two children — one living with them (the one claimed in 2024)
 and one who does not (the child support).** That would make the 2025 dependant position simply an
@@ -289,7 +290,7 @@ The re-ask list for the client, in priority order:
 - **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
 - **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
-- **Filing status on 31 December 2025** — ask the **situation**, not a yes/no: married / separated (since when, and did his spouse live in the home at any point in the last six months) / divorced (decree date) / widowed (date). Everything about the household hangs on it, it may open Head of Household if §7703(b) applies **and** the rest of the §2(b) tests are met (see §5), and it must never be carried forward from 2024 by default.
+- **What his family situation was at the end of 2025** — asked as one open question, not as a list of statuses (§5). Everything about the household hangs on it; classify his answer ourselves, watching for the §7703(b) / Head-of-Household case. Never carried forward from 2024 by default.
 - **The children** — how many, and whether either lived with him during 2025 and for how many months. His 2024 return claimed one daughter with EIC and the child tax credit, and that needs re-establishing for 2025. Determines whether the Child Tax Credit is available.
   ⚠️ **Ask facts, not documents.** The firm does not ask clients for custody orders, decrees or a signed Form 8332 _(Lilian, 2026-08-11)_. Form 8332 stays internal knowledge for how we **treat** his answer, and is raised **only if his answer makes it unavoidable** — a non-custodial parent claiming a child does need one signed and attached to the return (§152(e)), so the request can become necessary. It is simply never how we open.
 - **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).

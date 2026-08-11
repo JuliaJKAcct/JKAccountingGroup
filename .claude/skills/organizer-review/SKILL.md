@@ -107,18 +107,29 @@ an estimated-payment pattern.
 > deduction, the brackets and most credits — it bars Married Filing Separately from
 > several outright, EIC and the education credits among them — and often the state
 > return. It is worth far more than the dependant line that started the enquiry.
-> **So ask the marital *situation* on 31 December — not a yes/no.** A binary
-> married-or-divorced misses the three cases that most often decide the return:
-> **widowed** (a surviving spouse is generally treated as married for the year of the
-> death, and may qualify as a surviving spouse for two years after); **legally separated
-> under a decree of separate maintenance** (unmarried at year end); and **married but
-> living apart**, where §7703(b) can treat the client as unmarried and, with a qualifying
-> child in the home, open **Head of Household** — exactly the pattern a
-> child-support-plus-moves picture points at.
-> Ask: **married / separated (since when, and did the spouse live in the home at any point
-> in the last six months) / divorced (decree date) / widowed (date)**. Never infer it,
-> never carry last year's status forward because nothing said otherwise, and never assume
-> a client who says "married" today was married at year end.
+> **Ask the client to describe the situation. Do NOT hand them a menu of statuses.**
+> Lilian's correction, 2026-08-11, and it is a tone rule with teeth: *"no voy a ponerle
+> cosas catastróficas como viudo… es demasiada información."* Listing *married / separated
+> / divorced / widowed* at someone reads as cold, invites them to pick the nearest box
+> rather than explain, and floats possibilities nobody raised. **One open question does the
+> job better:** *"tell us how things stand at home — what changed during the year, and what
+> your family situation was on 31 December?"* Then narrow only to the **facts** the return
+> needs: who lived in the home, and for how many months.
+>
+> **The categories are OURS, for classifying their answer — not the question.** Keep them
+> in your head while you read what they write:
+> - **Married at year end** — and note that a **surviving spouse** is generally treated as
+>   married for the year of the death, so a bereavement does not automatically change the
+>   status for that year.
+> - **Legally separated under a decree of separate maintenance** — unmarried at year end.
+> - **Married but living apart**, where §7703(b) can treat them as unmarried and, with a
+>   qualifying child in the home and the rest of the §2(b) tests met, open **Head of
+>   Household**. This is the one a plain description most often turns out to be.
+>
+> ⚠️ **This is the same rule as "ask facts, not family-law documents", one level up:** the
+> legal category informs how we *treat* the answer; it is never what we put in front of the
+> client. Never infer the status, never carry last year's forward because nothing said
+> otherwise, and never assume a client who says "married" today was married at year end.
 
 **2 · Questions we have no answer to, because of an earlier answer.**
 
@@ -375,6 +386,10 @@ Rules that come from the firm's client-message convention:
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
+- **The internal checklist is not the client message.** Categories, code sections and edge
+  cases are how *we* classify an answer; the client gets a plain question and room to
+  explain. Listing the possibilities at them — especially the grave ones — reads as cold,
+  and gets you a box ticked instead of the story you need. Ask openly, then narrow to facts.
 - **Ask for facts, not FAMILY-LAW documents.** The firm does not open with a request for
   custody orders, divorce decrees, separation agreements or a signed Form 8332. **Ask the
   facts the return needs instead** — who lived where, for how many months, what the
