@@ -43,9 +43,11 @@ sops/
 ├── hollywood-broward-business-tax-receipt.md    ← City of Hollywood + Broward County BTR
 ├── hollywood-broward-business-tax-receipt.html  ← ↑ Atlas design-system render of the BTR SOP (print/PDF-ready; the .md stays source of truth)
 ├── double-portal-first-login.md                 ← Double Client Portal first-time sign-in workaround
+├── double-portal-sending-us-information.md      ← how a client sends us information/documents through the portal ("Qs for us")
 ├── double-portal-branding.md                    ← Double Client Portal on-brand branding (colors + logo)
 ├── deep-tech-penn-credit-tolls.md               ← Deep Tech FDOT toll debts in collection (Penn Credit) — client-task pay-down runbook (draft; Hub-rendered)
 └── client-guides/                               ← ready-to-send client templates (visual guide + PDF, email/message template, WhatsApp, EN/RU)
+    └── reference/                               ← the marked-up phone captures the visual guides are drawn from
 ```
 
 _**One self-contained Markdown file per procedure** — the single source of truth
@@ -71,6 +73,7 @@ enough to warrant it._
 | [`beemold-usa-bookkeeping-review.md`](./beemold-usa-bookkeeping-review.md) | Per-client bookkeeping runbook (`bookkeeping-sop` skill): Beemold USA's monthly close — the quieter sister plumbing entity. Manual transaction upload (bank-feed sync broken since Feb 2025), intercompany-loan review. Hub-rendered; process only. **In review.** |
 | [`hollywood-broward-business-tax-receipt.md`](./hollywood-broward-business-tax-receipt.md) | Filing a Business Tax Receipt for a business in Hollywood, FL / Broward County — city + county steps, links, and the home-occupation zoning gate. |
 | [`double-portal-first-login.md`](./double-portal-first-login.md) | Double Client Portal has no sign-up step and its default magic-link/Google sign-in are unreliable — the working password-reset workaround (portal opens on the password screen → "Forgot your password?"), plus ready-to-send client guides (self-contained visual guide + PDF, email/message template, WhatsApp; EN/RU) in [`client-guides/`](./client-guides/). |
+| [`double-portal-sending-us-information.md`](./double-portal-sending-us-information.md) | The other portal question every client asks — **"I have information for you, where do I put it?"** Everything (a question, bank details, a document, a photo) goes in **"Qs for us"**: the four taps on a phone, the two upload routes (`Upload…` inside the question — preferred — vs `Upload photo` from the `+` menu), what `Team visibility` does, and how the item reaches us in Double. Ready-to-send guides (visual guide + PDF/PNG, email, WhatsApp — EN & RU) in [`client-guides/`](./client-guides/). Built with the [`client-portal-guides`](../../.claude/skills/client-portal-guides/) skill; phone flow verified, desktop still open. |
 | [`double-portal-branding.md`](./double-portal-branding.md) | The firm's official on-brand branding for the Double Client Portal — exact Brand/Button/Background hex values (mapped to Design System tokens), logo/favicon assets, and why the combination works. Replaces Double's off-brand defaults. |
 | [`deep-tech-penn-credit-tolls.md`](./deep-tech-penn-credit-tolls.md) | **Draft** client-task runbook: clearing **Deep Tech Development Group LLC**'s unpaid **FDOT tolls** that went to the **Penn Credit** collection agency — the ID-number + ZIP login (not user/password), the pay-down steps, and the recurring watch (new toll items keep reappearing). Login values stay in the client's vault. Feeds from [`../client-intelligence/clients/deep-tech-development.md`](../client-intelligence/clients/deep-tech-development.md). Hub-rendered. |
 
@@ -107,6 +110,15 @@ of truth; the HTML is a view — re-render it when the `.md` changes.
   color model (owner/equity · business/P&L · investigate · triage), and how it renders in
   the Hub. Use it for every bookkeeping-client SOP. Reference pilot:
   [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md).
+
+- [`client-portal-guides`](../../.claude/skills/client-portal-guides/) — **the house way
+  to produce an illustrated client how-to for the Double portal**: the one-page visual
+  guide (EN + RU), the PDF/PNG to send by email or WhatsApp, the message copy, and the
+  SOP behind them. Encodes the rule that portal screens are **recreated in HTML/CSS, not
+  screenshotted**, the marker convention, and the deterministic render
+  (`render/build.mjs`). Reference guides:
+  [`double-portal-first-login.md`](./double-portal-first-login.md) and
+  [`double-portal-sending-us-information.md`](./double-portal-sending-us-information.md).
 
 Well-written SOPs here can also become their own Claude skills in
 [`.claude/skills/`](../../.claude/skills/) when a procedure is repeatable enough

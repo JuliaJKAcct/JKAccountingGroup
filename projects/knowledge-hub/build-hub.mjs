@@ -1302,6 +1302,14 @@ const SOP_GROUPS = [
           { lang: 'English', png: 'double-first-login-en.png', pdf: 'double-first-login-en.pdf' },
           { lang: 'Russian', png: 'double-first-login-ru.png', pdf: 'double-first-login-ru.pdf' },
         ] },
+      { file: 'double-portal-sending-us-information.md', title: 'Double Portal — Sending Us Information',
+        blurb: 'The other question every client asks: “I have information for you — where do I put it?” Everything goes in “Qs for us” — four taps on a phone — plus the ready-to-send client guides (visual guide + PDF, email, WhatsApp — EN & RU). Phone flow verified; desktop not documented yet.',
+        // team page: cut the internal file table + open-items notes, show the guide images instead
+        truncateAt: 'Client-ready templates',
+        guides: [
+          { lang: 'English', png: 'double-send-info-en.png', pdf: 'double-send-info-en.pdf' },
+          { lang: 'Russian', png: 'double-send-info-ru.png', pdf: 'double-send-info-ru.pdf' },
+        ] },
       // 'double-portal-branding.md' is intentionally NOT listed — it's an internal setup
       // note (kept in the repo), not something the team needs in the Hub.
     ],
@@ -1644,6 +1652,17 @@ const TEMPLATES = [
         mime: 'application/pdf', path: 'projects/sops/client-guides/double-first-login-ru.pdf', ghost: true },
     ],
     open: { id: 'double-portal-first-login', label: 'Open its SOP (guide · email · WhatsApp)' } },
+
+  { band: 'sop', kind: 'Client portal (Double)', name: 'Double Portal — “Send Us Information” Guides', owner: 'lilian',
+    blurb: 'The ready-to-send one-page guides that show a client how to send us a question, bank details, a document or a photo through the portal — “Qs for us”, four taps on a phone. English & Russian; the email and WhatsApp copy live in the SOP.',
+    formats: ['PDF · EN', 'PDF · RU'],
+    downloads: [
+      { label: 'Guide PDF — English', file: 'double-send-info-en.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-send-info-en.pdf', primary: true },
+      { label: 'Guide PDF — Russian', file: 'double-send-info-ru.pdf',
+        mime: 'application/pdf', path: 'projects/sops/client-guides/double-send-info-ru.pdf', ghost: true },
+    ],
+    open: { id: 'double-portal-sending-us-information', label: 'Open its SOP (guide · email · WhatsApp)' } },
 ];
 
 // The proposals-&-pricing tools open in the in-Hub reader like the engagement letter —
