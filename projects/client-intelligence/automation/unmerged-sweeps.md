@@ -4,8 +4,10 @@
 
 Three weekend Client-Intelligence sweeps ran, did their work, committed it to their own branch and
 pushed — and **none of them was ever merged**. This file is the durable record of what is sitting in
-those branches, so the backlog survives even if a branch is deleted or renamed. It is a **pointer,
-not a copy**: the actual enrichments live in the commits named below.
+those branches. It is a **pointer, not a copy** — the enrichments themselves live in the commits
+named below, so **this register survives a branch being renamed, but not a branch being deleted.**
+Until the decision below is made, treat those three branches as **do-not-delete**: if they are
+garbage-collected, 717 lines of client knowledge and 22 SOP proposals go with them.
 
 ## Why it happened (this is the part worth fixing)
 
@@ -26,11 +28,11 @@ do not change the routine until she decides.**
 
 | Run | Branch | Head commit | Scope |
 |---|---|---|---|
-| 2026-07-25 | `claude/admiring-lamport-sm6a66` | `aa314a2` | 12 client files · coverage-gap passes (full Gmail history for several clients) |
+| 2026-07-25 | `claude/admiring-lamport-sm6a66` | `aa314a2` | 12 client files · **7 SOP proposals** (`SOP-2026-07-25-01…07`) · coverage-gap passes (full Gmail history for several clients) |
 | 2026-08-01 | `claude/admiring-lamport-rcatsn` | `b6ec4d9` | 21 client files · **9 SOP proposals** (`SOP-2026-08-01-01…09`) |
 | 2026-08-08 | `claude/admiring-lamport-iciems` | `352f7cf` | 17 client files · **6 SOP proposals** (`SOP-2026-08-08-01…06`) |
 
-Roughly **590 added lines across ~48 client-file touches**, plus **15 SOP proposals that were never
+**717 added lines across ~48 client-file touches**, plus **22 SOP proposals that were never
 applied**. Recover a branch's content with `git diff origin/main...<branch>`.
 
 ## The findings that carry consequences
@@ -62,7 +64,7 @@ Ordered by what it costs to keep losing them, not by client.
 7. **Atman Parts — Texas sales tax**, with eight back periods filed in one day (2026-07-16) as an
    onboarding catch-up. The legal name is still unresolved across three spellings.
 8. **Intercompany loans nobody had written down:** Sunoma ↔ Magnum 152, and Lumetro → Sensustech —
-   both reconciled **monthly** as standing close tasks. These are the bulk of the 15 SOP proposals.
+   both reconciled **monthly** as standing close tasks.
 9. **Google Drive folder links** were located for roughly ten clients whose files had them pending.
 
 ## Contradictions to settle before merging

@@ -37,7 +37,10 @@
   sends us nothing. The password lives in the client's vault, not here.
 - **Where the paperwork is kept:** **Julia's Google Drive** → the folder named for the client →
   **`Bookkeeping`** → **one folder per month of the year**. Every invoice and receipt for this
-  client goes there. The mailbox is where documents *arrive*; Drive is where they *live*.
+  client goes there. The mailbox is where documents *arrive*; Drive is where they *live*. The
+  client's Drive folder is linked from the client file's §7; whether that is the same parent that
+  holds `Bookkeeping` is **not verified** — open the client folder by name rather than assuming
+  _(to verify — see the open-decisions log)_.
 
 ## Monthly close process
 
@@ -136,4 +139,5 @@ because the business is pre-operational.
 | 2 | Are any **other recurring vendors on autopay**, or is water the only one? | To verify | Only water is confirmed (Lilian, 2026-08-11). The rest are believed paid by us on request, but nobody has listed them |
 | 3 | Where do the downloaded bills get **filed**? | Resolved | **Answered by Lilian 2026-08-11:** Julia's Google Drive → the client's folder → `Bookkeeping` → one folder per month. Both: filed in Drive **and** attached to the transaction |
 | 4 | The **bank feeds and the reconciliation step** are not documented here yet | Pending | Add them to *Monthly close process* once established — this runbook is deliberately a seed |
-| 5 | Is there a **fixed day of the month** the mailbox should be worked? | To verify | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |
+| 5 | Is the client's Drive folder linked in the client file's §7 the **same parent** that holds the `Bookkeeping` → month folders? | To verify | The path Lilian gave is by name, not by link. Confirm once, then put the direct link here so nobody hunts for it |
+| 6 | Is there a **fixed day of the month** the mailbox should be worked? | To verify | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |

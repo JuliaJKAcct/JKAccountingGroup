@@ -160,7 +160,7 @@ for the email. The exact routine prompt + web-UI setup steps live in
 [`automation/weekend-ci-sweep.md`](./automation/weekend-ci-sweep.md).
 
 > ⚠️ **The sweep stops at a branch, and three of them are still sitting there** (2026-07-25,
-> 08-01, 08-08 — roughly 590 lines across ~48 client-file touches, plus 15 SOP proposals). The
+> 08-01, 08-08 — 717 lines across ~48 client-file touches, plus 22 SOP proposals). The
 > routine is written to push and wait for a human to merge; nobody did. What is in them, and the
 > policy contradiction behind it, is registered in
 > [`automation/unmerged-sweeps.md`](./automation/unmerged-sweeps.md) — **awaiting Lilian's decision**
