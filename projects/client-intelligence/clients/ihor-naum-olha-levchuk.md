@@ -1,6 +1,6 @@
 # Ihor Naum & Olha Levchuk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -130,6 +130,7 @@ Watch-outs that go with the above:
 - _(2026-05-25)_ — 2025 tax return filed (Double tax project "2025 Taxes" → `filed`). _(Double)_
 - _(2026-07-30, Lilian)_ — File created. Researched how to obtain the status of a Form 8802 filed by fax and recorded the method in §5. Located and verified the filing evidence in Gmail / MyFax (Pay.gov confirmation + both fax confirmations, 2026-05-06). Confirmed the IRS contact number (267-941-1000, "U.S. residency" option) against three revisions of the Form 8802 instructions. Lilian sent the client, by WhatsApp, everything needed to prove the fax was sent with the complete documentation — the client will place the status call to the IRS themselves.
 - _(2026-07-30, Lilian)_ — Confirmed the application's scope: the certification was requested for Ukraine, tax years 2023 and 2024, in Ihor Naum's own name — not a company's.
+- _(2026-08-01)_ — Weekly incremental sweep (bounded to 2026-07-30 and later): no new Double notes/activity, no new Gmail threads, and no new Ping meetings/transcripts turned up for either name or the Form 8802 matter since the baseline. Located and confirmed the client's Google Drive vault folder (§7), closing that open item. Checked FOLLOW-UPS.md item #9 (a Double duplicate-individual-record issue) against this client — confirmed via `list_clients` there is only one Double record for this couple (id 710637), so that item is about a different client, not this one. Coverage-gap note (Ping/Drive full history, full Gmail history) left as-is per this run's scope.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -146,13 +147,13 @@ Watch-outs that go with the above:
 - [ ] Home state and the current mailing address on the Form 8802 — the related entities are Florida companies but `aura-remodeling.md` infers Illinois; confirm from Double, since the IRS replies by mail.
 - [ ] Which entity (if any) the Schedule C activity belongs to — `aura-remodeling.md` infers AURA REMODELING LLC is a two-owner LLC filing Form 1065, which would reach the 1040 by K-1 rather than Schedule C. One of the two readings is wrong.
 - [ ] Whether an extension (Form 4868) was filed for 2025 — the return was filed 2026-05-25, after the April 15 deadline.
-- [ ] Google Drive folder link for this individual client (§7).
+- [x] Google Drive folder link for this individual client — found (§7) _(Google Drive, 2026-08-01)_.
 - [ ] Confirm the ownership/officer roles in the related entities (§7) — currently inferred from correspondence and a Florida DWC exemption notice.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710637](https://app.doublehq.com/close?cid=710637)
 - **Double tax project (2025):** [2025 Taxes](https://app.doublehq.com/tax-return?cid=710637&projectId=219325)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** ["Ihor Naum"](https://drive.google.com/drive/folders/1PDwAHism2DEcSLojbg7gMy93BaZ85GrE) under `*QBO Clients and Individuals` — standard subfolders present (Notes, Completed organizers, Firm docs shared with client, Docs uploaded by client, Client uploaded documents) _(Google Drive, 2026-08-01)_.
 - **Related clients:** [`aura-remodeling.md`](./aura-remodeling.md) (the couple are its two principals), [`kolo-florida.md`](./kolo-florida.md) (Ihor holds a Florida workers'-comp Certificate of Election to be Exempt for it) — same owner group.
 - **Related SOPs:** none — Lilian decided (2026-07-30) that the Form 8802 process does not warrant its own SOP; the know-how lives in §5 of this file.

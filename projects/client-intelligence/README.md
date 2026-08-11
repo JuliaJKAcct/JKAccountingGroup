@@ -159,12 +159,14 @@ Built as the scheduled form of the `client-intelligence` skill (IDEA-15), using 
 for the email. The exact routine prompt + web-UI setup steps live in
 [`automation/weekend-ci-sweep.md`](./automation/weekend-ci-sweep.md).
 
-> ⚠️ **The sweep stops at a branch, and three of them are still sitting there** (2026-07-25,
-> 08-01, 08-08 — 717 lines across ~48 client-file touches, plus 22 SOP proposals). The
-> routine is written to push and wait for a human to merge; nobody did. What is in them, and the
-> policy contradiction behind it, is registered in
-> [`automation/unmerged-sweeps.md`](./automation/unmerged-sweeps.md) — **awaiting Lilian's decision**
-> on whether the sweep should merge its own CI work, keeping approval for SOP changes only.
+> **The sweep merges its own work (Lilian, 2026-08-11).** It used to stop at a branch and
+> wait for a human, and three runs (07-25, 08-01, 08-08) sat unmerged for three weeks that
+> way. **Client Intelligence needs no approval** — the sweep commits and merges to `main`
+> itself. **SOP changes still wait for Lilian**, queued in
+> [`sop-proposals.md`](./sop-proposals.md). And **contradictions are recorded with both
+> sources rather than escalated**: whoever next needs that fact explains where each version
+> came from, asks then, and updates the file from the answer. See
+> [`automation/weekend-ci-sweep.md`](./automation/weekend-ci-sweep.md) → *The approval line*.
 
 ## What's here
 
@@ -176,7 +178,6 @@ client-intelligence/
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
-│   ├── unmerged-sweeps.md   ← ⚠️ OPEN: three sweeps (Jul 25 · Aug 1 · Aug 8) committed to a branch and were never merged — what is in them, and why it happened
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
 └── clients/               ← one file per client (24 so far — see the Clients index below)
 ```
@@ -190,7 +191,7 @@ client-intelligence/
 | Denys Melnyk | [`clients/denys-melnyk.md`](./clients/denys-melnyk.md) | Lilian | In progress — 2025 1040, first year with us. **S-corp shareholder in three trucking entities**, with a large NOL carried forward from 2024 and MT/IL state returns his organizer never mentions. Organizer reads "Completed" and is unusable as filed; re-ask list in §6, **settle what the Midwest money was before preparing anything** |
 | BEST BROKER REALTY LLC | [`clients/best-broker-realty.md`](./clients/best-broker-realty.md) | Lilian | In progress — BTR captured |
 | ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP; 2025 1120-S in progress, Turo documents outstanding, QuickBooks primary-admin handover paused mid-change (two users on purpose — see §3) |
-| Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | In progress — skeleton only |
+| Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | ⚠️ **Winding down — company closing, no longer a client** (Lilian, 2026-08-11). July 2026 is the last sales-tax filing; account closures in progress. The owner's individual 1040 engagement is separate and continues |
 | Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |

@@ -1,6 +1,6 @@
 # NEVER GIVE UP KK LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,6 +84,7 @@ the actual details.
 ### Log
 - 2026-07-20 — Profile built from Double's **structured client properties** (Assigned Staff = Lilian; entity/tax-return type; service frequencies).
 - 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
+- 2026-08-01 — **Incremental weekly sweep** (bounded to 2026-07-20 and later): Ping (org-wide meeting search for the business + owner, `resolve_person`), Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` — activity log empty since baseline), Gmail (`in:inbox`/`in:sent` after:2026/07/20), Drive (folder confirmed), and the repo (FOLLOW-UPS/BACKLOG/sops) all came up with **no new activity in the window** — the owner's Jul-14 and Jun-23 Double-note meetings predate the baseline and were already captured. Owner-level check (contact spans Boost You LLC, Goshakes LLC, The Roadside Project LLC, and the owner's individual Double profile) surfaced no post-baseline facts specific to this company either. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. _(Double note 2026-07-14)_

@@ -1,6 +1,6 @@
 # Ecom Beavers LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -49,7 +49,7 @@ here. Open the Double client to get the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | see Drive folder (§7) | Managed through Double |
 | **Amazon** (marketplace + likely FBA) | Sales channel | see Drive folder (§7) | Marketplace facilitator collects/remits sales tax on its channel |
-| **Shopify** (multiple stores) | Sales channels | see Drive folder (§7) | Brands: Somma, BoneX, Honex |
+| **Shopify** (multiple stores) | Sales channels | see Drive folder (§7) | Brands: Somma (domain sommacompany.com), BoneX (domain bonexcompany.com), Honex _(Gmail — Shopify billing notices, 2026-07-28/29/31)_ |
 | Bank | Reconciliation | see Drive folder (§7) | **Mercury** (incl. an IO charge-card line) |
 
 ## 4. Obligations & recurring processes
@@ -65,6 +65,7 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120** (C-corp) _(Double)_. **Cross-border:** the July-2026 consult covered entity selection, **tax-treaty relief**, **ITIN**, dividend withholding, and profit repatriation for the foreign owner.
+- **Organizer Status:** **N/A (BK client)** in Double's tracking _(Double client properties, 2026-08-08)_.
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -79,6 +80,8 @@ here. Open the Double client to get the actual details.
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had a **consult note (via Double note)** — the 2026-07-09 consultation. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20, inclusive; no coverage gap). No new Ping meetings, Double notes, or Double activity-log entries since the 2026-07-09 consult — that remains the only recorded meeting. Gmail: Shopify billing notices confirmed the Somma and BoneX store domains (added to §3); a Mercury **IO credit-line limit increase** was noted, figure not retained here per the no-dollar-figures rule — see Double/Drive for the amount. _(Gmail, 2026-07-27)_ Ping `resolve_person`/`search_contacts` confirm the owner contact (Double) is associated with **Ecom Beavers LLC only** — no other businesses found, so the owner-group sweep rule doesn't apply here. Checked `FOLLOW-UPS.md` and `BACKLOG.md` — no mentions of this client. QuickBooks not queried this pass (no open financial question; books are managed through Double).
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log shows only a **2025 Taxes** project status change (In Progress → Not Started, Julia, 2026-08-04) — an observed status change, noted for context. No new Double notes beyond the existing 2026-07-09 consult note. Gmail turned up routine Shopify billing (Somma, BoneX domain/subscription charges) and a Mercury IO credit-limit change — confirms the multi-store setup already on file but nothing durable to add; no evidence yet that the post-consult deliverables (entity-options summary, treaty guidance, deductible checklist, minutes — see Outstanding items) have gone out. Ping had no legible new content for the client or the owner post-baseline (the only Ecom Beavers hits were the same pre-baseline 2026-07-09 consult already on file).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Post-consult deliverables** Julia committed to (2026-07-09): entity-options summary with tax implications; **treaty-application guidance + required certificates**; a deductible-expenses / reimbursement / home-office checklist; meeting minutes. **ITIN & treaty-certificate** needs open. _(Ping consult note)_

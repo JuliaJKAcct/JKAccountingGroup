@@ -1,6 +1,6 @@
 # LUMETRO LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-20
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,7 +24,7 @@
 
 - **Business name:** LUMETRO LLC
 - **Entity type:** LLC — Double flags Schedule C / income-tax-yes, **but see the tax quirk in §4** (the firm's note says Lumetro won't file its own return). _(Double + Gmail)_
-- **Home state:** _(pending — not established in the sources)_
+- **Home state:** _(pending — not conclusively established)_. **Lead:** the IRS EIN-assignment notice on file uses a Sheridan, **Wyoming** registered-agent mailing address for the entity — common for a WY-formed LLC, but not proof of where the business actually operates; still needs confirming. _(Google Drive, 2026-08-01 — low confidence)_
 - **Industry / what they do:** The **digital-advertising / ad-spend vehicle** within the owner's tech group — runs **Google Ads** spend that is allocated/billed to the affiliated operating company **SensusTech LLC**. Not a standalone operating business. _(Gmail)_
 - **Primary language:** English (all correspondence). _(Gmail; owner RU/UA heritage — low confidence)_
 - **Our engagement (services we provide):** Monthly bookkeeping (the monthly deliverable is an **"Ad breakdown Lumetro/Sensustech"**); **1099 preparation**. Sales tax N/A; payroll N/A; annual report **no**. Income tax — **see quirk**. **Assigned bookkeeper: Maria.** _(Double + Gmail, 2026-07-20)_
@@ -63,6 +63,8 @@ here. Open the Double client to get the actual details.
 
 ### Income tax
 - **⚠️ Quirk to reconcile:** the firm's own proposal note says **Lumetro "won't file its own tax return"** — its results are **consolidated into SensusTech** (to avoid revising the SensusTech proposal). This **conflicts** with Double's "income tax = yes / Schedule C" flags. **Resolve which is correct.** _(Gmail: "New Proposal For LUMETRO LLC")_
+- Double's **Organizer Status** property reads **"N/A (SCH-C)"** — consistent with the Schedule-C flag, and consistent with Sch-C/bookkeeping-only clients not being owed a tax organizer (per the tax-season-readiness rules). Doesn't resolve the quirk above, just confirms Double's side of it. _(Double, 2026-08-01)_
+- **Update:** Double's **Income Tax** checkbox now reads **false** (checked 2026-08-08), which is consistent with the proposal note (no separate return). The **Organizer Status** property still shows "N/A (SCH-C)" — a leftover label, not a current SCH-C flag. This looks like the quirk resolving itself but is not yet confirmed as a deliberate correction — treat as **likely resolved, not verified**. _(Double client properties, 2026-08-08)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -70,17 +72,19 @@ here. Open the Double client to get the actual details.
 ## 5. Key facts & quirks
 
 - **Tech owner-group (with SensusTech, Mobilesource, Sensus Games):** same owner (styles himself "CEO @ SensusTech LLC"); Lumetro is described as smaller than SensusTech. The owner is linked in Double across ~5 entities. _(Gmail, Double)_
-- **Intercompany accounting:** Lumetro **fronts the ad spend and bills/loans it to SensusTech** — a journal entry moves advertising into SensusTech; on Lumetro's side it hits **Accounts Payable / an intercompany Loan** account. Central to how the books work. _(Gmail)_
+- **Intercompany accounting:** Lumetro **fronts the ad spend and bills/loans it to SensusTech** — a journal entry moves advertising into SensusTech; on Lumetro's side it hits **Accounts Payable / an intercompany Loan** account, named **"Loan due to Sensustech"** in the books. Central to how the books work. _(Gmail; Double task names, 2026-08-08)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Engaged 22 Jan 2026 (LoE via GoProposal). Ping had **no indexed meetings**; Double has no notes yet. Ping + Gmail + Drive swept (see sweep-state).
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20 → today): no new Gmail correspondence or Ping meeting content specific to Lumetro since baseline (only meta weekly-CI-sweep emails and unrelated-client meetings matched). Found a Wyoming registered-agent lead on the home-state question and confirmed Double's Organizer Status value — see §1/§4. Double has no notes and no activity-log entries since baseline. Owner (Stanislav Fedorov) generates Gmail/Ping activity under SensusTech and Mobilesource in this window — routed to those files, not here.
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log (5 entries) shows the routine monthly "Loan due to Sensustech" and "Ads Journal Entry" tasks marked Done (2026-08-05/07) and a non-transaction client question resolved (8/7) — normal monthly-close activity, and it confirms the intercompany loan account's exact name (see §5). Double client properties now show Income Tax = false, bearing on the open tax-filing-treatment quirk (see §4). Still no Double notes. Gmail turned up nothing Lumetro-specific post-baseline (hits under "Lumetro" and "Fedorov" were either the firm's own weekly-sweep round-up emails or belonged to sibling entities Mobilesource/SensusTech, not Lumetro). Ping had no legible new content for the client or the owner post-baseline.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Reconcile the tax-filing treatment** — proposal says Lumetro won't file separately (consolidated into SensusTech) vs. Double's Schedule C / income-tax-yes flags. _(Gmail)_
-- Confirm **home state / state of formation**. _(unknown)_
+- Confirm **home state / state of formation** — a Wyoming registered-agent lead surfaced (§1) but is not conclusive. _(unknown)_
 - Drive has **duplicate "Lumetro LLC" folders** — worth consolidating.
 
 ### Information still needed
@@ -89,6 +93,6 @@ here. Open the Double client to get the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706691](https://app.doublehq.com/close?cid=706691)
-- **Google Drive folder (sensitive vault):** [Lumetro folder](https://drive.google.com/drive/folders/1EMtABwJDlu-UAMjCuwGfs8yLCKnLGt9c) _(several duplicates exist — consolidate)_
+- **Google Drive folder (sensitive vault):** [Lumetro folder](https://drive.google.com/drive/folders/1EMtABwJDlu-UAMjCuwGfs8yLCKnLGt9c) _(at least 4 separate "Lumetro LLC" folders exist across Drive, owned by both Maria and Julia — consolidate)_ _(Google Drive, 2026-08-01)_
 - **Related clients:** [`sensustech.md`](./sensustech.md), [`mobilesource-corp.md`](./mobilesource-corp.md) (same tech owner group)
 - **Related SOPs:** _(pending)_

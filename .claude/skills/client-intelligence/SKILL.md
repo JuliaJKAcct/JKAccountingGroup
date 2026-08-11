@@ -60,10 +60,29 @@ Read the project's own docs alongside this skill — they are the authority on c
 > into different styles before this was written down. If the answer is "not answerable", say that
 > and why, so nobody reopens it.
 
+## The approval line: CI saves itself, SOPs wait (Lilian, 2026-08-11)
+
+**Never park Client Intelligence pending a review.** CI needs no approval — not to be
+written, not to be merged. The weekend sweep now **merges its own CI work to `main`**;
+it used to leave it on a branch for a human, and three runs (07-25, 08-01, 08-08) sat
+unseen for three weeks that way — 717 lines and 22 SOP proposals. Git is the safety net:
+every fact is source-tagged and dated, and anything can be reverted.
+
+**A contradiction is recorded, not escalated.** When two sources disagree, write **both**
+into the client file with their sources and mark the fact unsettled. Do not hold the
+enrichment, and do not send Lilian a question to answer cold — she will not work through
+a weekly list of them. **The session that actually needs the fact is the one that asks:**
+name both versions, say where each came from, ask, and update the file from the answer.
+_(Her words: "si te pedimos información en un momento determinado y tienes cosas
+contradictorias, simplemente nos puedes explicar la fuente de la contradicción… y según
+nuestra respuesta, actualizas Client Intelligence.")_ Settled answers get marked as
+settled, with who settled them and when, so nobody reopens them — see Atman Parts' home
+state (Texas) for the pattern.
+
 ## CI → SOP proposals (the approval loop)
 
-CI captures everything non-sensitive automatically. A client's **SOP** never changes
-without Lilian's approval, so the bridge runs through a durable queue —
+A client's **SOP** never changes without Lilian's approval, so the bridge runs through a
+durable queue —
 [`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md):
 
 1. **Propose.** When enrichment finds an **Operating-zone** fact a client's SOP doesn't

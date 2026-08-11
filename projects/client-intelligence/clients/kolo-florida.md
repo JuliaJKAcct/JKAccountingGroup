@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** ⚠️ **WINDING DOWN — the company is closing and is no longer our client** (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-11
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -23,12 +23,12 @@
 ## 1. Snapshot
 
 - **Business name:** Kolo Florida Inc
-- **Entity type:** Corporation (Inc)
-- **Home state:** Florida
-- **Industry / what they do:** _(pending — confirm)_
-- **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** _(pending — confirm)_
-- **Fiscal year-end:** _(pending)_
+- **Entity type:** Corporation (Inc) — S-corporation, files **Form 1120-S** _(Double client property "Tax Return Type", 2026-08-01)_
+- **Home state:** Florida — **Lauderhill, Broward County** _(Gmail: City of Lauderhill Certificate of Use / zoning correspondence, 2025)_
+- **Industry / what they do:** Retail / e-commerce — imports and sells merchandise through the Shopify storefront **"Kolo House"**; leases a warehouse in Broward County, FL for inventory. A 2024 local zoning application was initially denied because "wholesale" use wasn't permitted at the site; it was resubmitted describing retail sales to customers and approved. _(Gmail, 2024–2026 correspondence, 2026-08-01)_
+- **Primary language:** Russian — the firm's correspondence with the client's primary contact is conducted in Russian _(Gmail, 2026-08-01; tentative, confirm)_
+- **Our engagement (services we provide):** Bookkeeping (Quarterly), Sales Tax (Monthly filing), Income Tax (Form 1120-S), 1099 Preparation, Annual Report. **Payroll is NOT a firm service for this client** — the client self-manages payroll through Gusto _(Double client properties, 2026-08-01)_
+- **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
 ## 2. Contacts
@@ -39,7 +39,8 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| Owner / primary contact | Double client (link below) — also has a separate individual/personal-1040 Double client with the firm |
+| Corporate officer (holds a Workers' Comp exemption alongside the owner) | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706626](https://app.doublehq.com/close?cid=706626)
 
@@ -48,50 +49,107 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
+| Shopify | E-commerce storefront "Kolo House" | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
+| Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
+| GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
+| TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — filed **monthly** through the Florida DOR e-Services portal _(Double client property "Sales Tax" = Monthly, 2026-08-01)_. The firm's internal Double recurring task "Monthly Sales tax" is scheduled around the **5th** of each month (changed from the 1st on 2026-07-20). Filing confirmations arrive by e-mail from the Florida DOR e-Services system. _(Double activity log + Gmail, 2026-08-01)_
+- **Cadence — settled by Lilian, 2026-08-11: MONTHLY.** The Drive recurring-expense watchlist (2026-07-07) and some 2025 correspondence describe it as quarterly; that is stale and should not be relied on.
+- 🛑 **ENDING: the July 2026 return is the LAST sales-tax filing the firm makes for this client.** Lilian files it herself; after that the sales-tax account is closed as part of the wind-down (§5). _(Lilian, 2026-08-11.)_
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** **Not a firm service for this client** — Double's "Payroll" property is N/A. The client runs its own **weekly** payroll through **Gusto**; the firm is copied on Gusto's automated "payroll due"/"payroll late" reminders and monthly invoice-paid confirmations, but does not process payroll for this client. A recurring lateness pattern shows up in those notices (payroll is flagged "1 day late" most weeks). _(Double property + Gmail, 2026-08-01)_
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Quarterly** _(Double client property "Bookkeeping", 2026-08-01)_. As of mid-2026 the client was under an active bookkeeping **cleanup** (many transactions still uncategorized per the Drive recurring-watchlist note); Lilian resolved six client transaction questions in Double on 2026-07-29 as part of that cleanup. _(Drive + Double activity log, 2026-08-01)_
 
 ### Income tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Form 1120-S** (S-corporation) _(Double client property, 2026-08-01)_.
+- The firm also prepares this client's **Form 1099s** (Double property "1099 Preparation" = true). _(2026-08-01)_
+- A "2025 Business Tax Organizer" for this client was **reverted to draft** in Double on 2026-07-31 — status open, see §6. _(Double activity log, 2026-08-01)_
 
 ### Licenses & other filings
-- **Applies?** Yes (at least in part) — a principal holds a Florida **workers'-compensation Certificate of Election to be Exempt** for this company. The Division of Workers' Compensation emails an **expiration notice** to the firm (one landed 2026-06-29), so the exemption has a renewal cycle to watch. _(Florida DWC notice via Gmail, 2026-07-30)_
+- **Applies?** Yes — a Florida **workers'-compensation Certificate of Election to be Exempt** is on file for this company for **both** principals (not just one): separate Division of Workers' Compensation expiration notices for each of them landed the same day, 2026-06-29, so the exemption has a renewal cycle to watch for each. _(Florida DWC notices via Gmail, 2026-07-30 / confirmed both principals 2026-08-01)_
 - **What & when:** _(pending — confirm the exemption's expiration date and who renews it, us or the client)_
+- **Florida Annual Report** — required (Double client property "Annual Report" = true); filed each spring through the third-party **GovFile** service. _(Gmail, 2026-08-01)_
+- **Local business registration** — the company registered an occupational license / Commercial Certificate of Use with its home city for the leased warehouse space (application filed mid-2024, approved after a wholesale-use denial was resubmitted as retail). _(Gmail, 2026-08-01)_
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- 🛑 **THE COMPANY IS CLOSING — this is a wind-down, not an ongoing engagement.** Lilian
+  (2026-08-11): Kolo is **no longer our client**; the company is going to close. Over the coming
+  days the work is **closing the accounts** — the Florida sales-tax account, the Gusto
+  subscription, and the rest of the systems in §3. **Nothing here should be treated as a live
+  recurring obligation** without checking it against the wind-down list in §6 first.
+- 🛑 **The July 2026 sales-tax return is the last one the firm files** (§4). Lilian files it herself.
+- **Retail, not wholesale.** A 2024 zoning application for the warehouse location was denied
+  because "wholesale" use isn't allowed there; resubmitting it as **retail sales to customers** got
+  it approved. That framing mattered for licensing and may matter again on the way out.
+- **The workers'-comp exemption covers BOTH principals** — separate Division of Workers'
+  Compensation expiration notices for each of them landed the same day, 2026-06-29.
+- **Dual engagement:** the corporate client (1120-S) and a **separate individual 1040 engagement**
+  for the same owner, under a different Double client id. **Closing the company does not
+  automatically end the personal engagement** — a distinction to keep straight through the wind-down.
+- Business was informally called "Kolo Inc" in early intake correspondence (Jan 2026) before
+  settling on "Kolo Florida Inc."
+- **Low confidence — to confirm:** mid-2024 correspondence links Kolo to a seemingly related entity,
+  "MegaBAI Florida Corp" (shared contacts, an inventory move into Kolo's warehouse, MegaBAI winding
+  down around late 2024). Unconfirmed; no CI file exists for it.
 
 ## 6. History & open questions
+<!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-20 — Profile started from the Double record (Kolo Florida Inc, QBO). Confirmed by Lilian as the client she referred to as "Colo". Almost everything still to gather.
-- 2026-07-20 — Sweep: no Double notes and **no indexed Ping meetings**; one primary contact is on file in Double/Ping. Still almost everything to gather.
-- 2026-07-30 — Linked into the owner group (§7) and recorded the **workers'-comp exemption** in §4, found via a Florida DWC expiration notice in Gmail. Captured while building the owner's individual file ([`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md)); no dedicated sweep of this client was run.
+- 2026-07-20 — Profile started from the Double record (Kolo Florida Inc, QBO); confirmed by Lilian
+  as the client she called "Colo". No Double notes and no indexed Ping meetings.
+- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass back to 2025-08. Filled most of
+  §1/§3/§4, found the Drive folder and the recurring-expense watchlist.
+- 2026-07-30 — Linked into the owner group (§7); recorded the workers'-comp exemption from a Florida
+  DWC expiration notice.
+- 2026-08-01 — Weekly sweep: cleared the Gmail full-history gap; established the Shopify storefront,
+  the leased Broward warehouse and the 2024 zoning history.
+- 2026-08-08 — Weekend sweep: confirmed the Lauderhill location, the sales-tax due-day change (1st →
+  5th), and that the 2025 Business Tax Organizer had been reverted to draft on 2026-07-31.
+- 2026-08-11 — **Lilian: the company is closing and Kolo is no longer our client.** Account closures
+  (sales tax, Gusto, and the rest) run over the coming days; the **July 2026 sales-tax return is the
+  last filing**. Also settled the long-standing cadence question — **sales tax is monthly**, and the
+  quarterly note in the Drive watchlist is stale. File switched to wind-down. _(Worked by Lilian.)_
 
-### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+### Wind-down — what has to be closed (CI-only)
+- [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
+- [ ] **Gusto subscription** — the client's own payroll platform; cancel.
+- [ ] The remaining systems in §3 — Shopify, the Florida DOR e-Services access, GovFile, TaxDome
+      (legacy) — decide for each whether it closes with the company or belongs to the owner.
+- [ ] **City of Lauderhill Certificate of Use / BTR** (valid through 2026-09-30) — confirm whether a
+      closing business must notify the city rather than simply let it lapse.
+- [ ] **Both principals' workers'-comp exemptions** — no renewal needed if the company closes;
+      confirm nothing has to be filed to withdraw them.
+- [ ] **Final 1120-S and the 2025 organizer** (reverted to draft 2026-07-31) — settle what the final
+      return needs, including whether it is a short/final-year return.
+- [ ] **The owner's individual 1040 engagement continues** — confirm with Lilian and keep it distinct.
+- [ ] **Double record** — archive it once the closures are done (and drop this client from the
+      weekend sweep scope at that point, not before).
 
 ### Information still needed
-- [ ] Industry / what they do
-- [ ] Primary language; fiscal year-end
-- [ ] Which recurring services we provide (bookkeeping? sales tax? payroll? income tax? licenses?)
-- [ ] Where credentials live (Drive vault link)
+- [ ] Fiscal year-end
+- [ ] Confirm (or rule out) the "MegaBAI Florida Corp" relationship in §5
+- [x] Industry / what they do — **retail e-commerce via the Shopify store "KOLO HOUSE"** plus a
+      leased Broward warehouse _(2026-08-01)_
+- [x] Which recurring services we provided — bookkeeping (quarterly), sales tax (monthly), income
+      tax (1120-S), 1099 prep, annual report; payroll was **never** a firm service _(2026-08-01)_
+- [x] Sales-tax cadence — **monthly**, settled by Lilian 2026-08-11
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706626](https://app.doublehq.com/close?cid=706626)
-- **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related clients:** [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) (one of
   the individuals holds a Florida workers'-comp Certificate of Election to be Exempt for
   this company), [`aura-remodeling.md`](./aura-remodeling.md) — same owner group.
+- **Google Drive folder (sensitive vault):** [Kolo Florida Inc folder](https://drive.google.com/drive/folders/1iK4p0Zrht0fCpvRtqRxYtbwikvYPkceO) _(best candidate — other similarly-titled folders also exist; confirm canonical with Julia)_
+- **Recurring-expense watchlist:** [Kolo Florida — Recurring Watchlist (Google Doc)](https://docs.google.com/document/d/1cGgStq2Yd6dluxC8IhaCkYAbdM22VdXs1ej1qsgJRRQ/edit)
 - **Related SOPs:** _(pending — none yet)_

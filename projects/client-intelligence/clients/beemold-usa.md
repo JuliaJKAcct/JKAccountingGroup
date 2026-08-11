@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -78,14 +78,21 @@ never copied here.
 - **Bank-feed sync broken since Feb 2025** → **manual transaction upload** (Mercury + BoA); resolving the connection is an open item.
 - **Construction owner-group (with Margate Plumbing Inc):** same owner; managed together and **reported jointly ("Margate and Beemold")**; **review the intercompany loan** each month. Beemold is the **quieter** of the pair (some months no activity). Keep the entities' books distinct. _(Maria's doc guide, Gmail)_
 - The owner's **Mercury IO** card account has been **repeatedly frozen for insufficient cash balance** — a standing cash-flow quirk to watch. _(Gmail)_
+- Beemold's **Mercury "IO" credit card auto-pays its monthly statement** from a Mercury checking account ending **3849** _(Gmail, 2026-07-30)_ — this last-4 doesn't match the checking (8192) already on file; may be a second Mercury checking tied specifically to the IO card, or a correction. Needs confirming (see §6).
 - The owner corresponds from multiple mailboxes (kept in Double).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 6. Beemold*): the manual-upload-since-Feb-2025 process, the intercompany-loan review with Margate, and the corrected bank-feed map (Mercury + BoA) captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 6. Beemold*): the manual-upload-since-Feb-2025 process, the intercompany-loan review with Margate, and the corrected bank-feed map (Mercury + BoA) captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20). Double (client 709445 + owner's individual profile 716172, no notes/activity-log entries since baseline), Ping (no indexed meetings for Beemold or Vasile Bivol since baseline — confirmed via scoped search), Gmail (one Beemold-specific thread — the Mercury IO checking-3849 note added to §5; all other Vasile Bivol / "Margate Plumbing" threads since baseline — WF 8477 reconnect, GL/WC audit invoice, Mercury IO credit-limit changes, QBO payment dispute, Gusto payroll — are Margate-specific and belong in `margate-plumbing.md`, not here), Drive (no new/modified files in the Beemold folders since baseline). Owner's individual Double profile (716172, "Vasile Bivol & Alisa Goras") shows 1040-Sch C, Organizer Status Completed — personal/1040-only, not a Beemold fact.
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log showed only
+  routine monthly-close task completions (Aug 3) — nothing new to the Operating zone. Gmail
+  surfaced a Mercury account-number discrepancy (see "Information still needed") and Margate-side
+  correspondence (WF 8477 reconnection, insurance audit dispute) that belongs to Margate's own
+  file, not Beemold's. Ping had no indexed meetings for Beemold or the owner in this window.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **QBO bank-feed reconnection** pending — resolve the Mercury + BoA connection so manual upload can stop. _(Maria's doc guide, Gmail)_
@@ -94,6 +101,7 @@ never copied here.
 ### Information still needed
 - [ ] Confirm home state; fiscal year-end; what Beemold actually does (low activity)
 - [ ] Which Drive folder is canonical (dedicated vs combined)
+- [ ] Confirm with Maria whether the Mercury checking ending **3849** (IO card autopay source, Gmail 2026-07-30) is a second Beemold Mercury checking account or a correction to the ●8192 already on file
 
 ## 7. Links
 

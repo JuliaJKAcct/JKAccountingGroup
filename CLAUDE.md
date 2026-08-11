@@ -246,6 +246,20 @@ in that folder.
   [`client-intelligence` skill](./.claude/skills/client-intelligence/) (the two-data-homes rule
   keeps figures, addresses and personal details out of the repo), and update the three indexes in
   the same commit.
+- **Client Intelligence never waits for approval — and a contradiction is asked at the point of
+  use, not in a report.** Lilian's decision (2026-08-11): **CI needs no approval to be saved or
+  merged** — only **SOP** changes do (queued in
+  [`sop-proposals.md`](./projects/client-intelligence/sop-proposals.md)). The weekend sweep now
+  merges its own CI work to `main`; it used to leave it on a branch, and three runs sat unseen for
+  three weeks. So when a session learns something durable about a client, **save it — do not park
+  it pending a review.** And when two sources disagree, **write both into the file with their
+  sources** and mark the fact unsettled rather than holding the enrichment or mailing her a
+  question: *"si te pedimos información en un momento determinado y tienes cosas contradictorias,
+  simplemente nos puedes explicar la fuente de la contradicción… y según nuestra respuesta,
+  actualizas Client Intelligence."* **The moment someone actually asks for that fact, name both
+  versions and where each came from, ask then, and update the file from the answer** — she will not
+  work through a weekly list of open questions, and an answer given while the fact is in use is
+  worth more than one given cold.
 - **A Double note is the client's information, not our analysis.** Lilian's instruction (Aug 2026):
   a note carries **what the client gave us and what the team needs in order to work** — their
   figures, their statements, where their documents are, the case history. It does **not** carry our
@@ -416,6 +430,13 @@ in that folder.
   request, run an independent review against it first — spawn a review agent, run
   `/code-review`, or rely on the GitHub Action if one is configured — address any
   blocking findings, then merge. Never merge an unreviewed PR.
+  **One deliberate carve-out:** the unattended **weekend Client-Intelligence sweep** merges its own
+  work without a review, because Lilian removed that gate for CI on 2026-08-11 and because a
+  Routine has no reviewer to wait for. It holds **only** while the run's diff stays inside
+  `projects/client-intelligence/clients/`, `automation/sweep-state.md` and `sop-proposals.md` — a
+  run touching a skill, an SOP or any build is ordinary work and gets reviewed like everything
+  else. See [`weekend-ci-sweep.md`](./projects/client-intelligence/automation/weekend-ci-sweep.md)
+  → *The approval line*.
 - **Self-contained HTML tools live in the Knowledge Hub, from source.** Any
   self-contained HTML tool the firm builds (e.g. the proposal generator) is
   **embedded in the [Knowledge Hub](./projects/knowledge-hub/) from its own

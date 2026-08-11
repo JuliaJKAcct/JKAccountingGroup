@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,6 +72,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
   2. **Change Merch (PaymentsHub) deposit / fee dates** so they land in the right period.
   3. **Change / rename the ADP JE names**, then **reconcile ADP**.
   4. **Monthly JEs, per store:** Monthly JE (LP), Monthly JE (AP), Expenses JE (LP), Expenses JE (AP), Cash-on-Hand adjustment, Inventory adjustment, Deposit-Fee (MRCH) AP, Deposit-Fee (MRCH) LP.
+  5. **Reconcile intercompany loans (Sunoma ↔ Magnum 152)** — a recurring **monthly closing task** ("Reconcile Sunoma/Magnum loans — to discuss with Julia"), assigned to Maria, due around the 10th of the following month. _(Double tasks/activity log, 2026-08-01)_
 - **Categorization quirks:** _(see §5)_
 
 ### Income tax
@@ -84,22 +85,34 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 
 - **Two store brands under one entity** — Lucky Pawn (LP) + Auto Pawn (AP), reconciled and journalized **separately** every month.
 - **Pawn/jewelry owner-group (with MAGNUM 152, INC):** same owner + same administrative assistant; managed together, **books kept distinct**. _(Double, Drive)_
+- **Intercompany loan(s) exist between Sunoma and Magnum 152** — reconciled monthly as its own recurring closing task (see §4). _(Double, 2026-08-01)_
 - **Reports come from the owner via TaxDome** at month-end (Ledger + Expense + Cash-on-Hand, per store) — the close can't finish until they arrive, so nudge the pipeline early in the month.
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.
 - Store inventory/POS on **Bravo**; **Truist** + **Chase** banking; recurring Bravo access/license friction (the person who managed it left).
+- **Owner-directed inventory donation in progress:** old, unsold-but-working pawn-store inventory is being donated to a charity for a tax deduction — booked at **fair market value**, not cost basis, contingent on the charity issuing a donation receipt. Not yet finalized as of 2026-07-23 (still gathering items, pickup not yet scheduled). Flagged as an SOP-proposal candidate — see the SOP for the categorization rule to add. _(Gmail, 2026-07-20→23)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 2. Sunoma*): month-end per-store process, systems (Bravo / PaymentsHub / ADP / TaxDome), bank-feed map, and reporting cadence captured into the Operating zone (non-sensitive only). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email/document flow was the richest source.
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 2. Sunoma*): month-end per-store process, systems (Bravo / PaymentsHub / ADP / TaxDome), bank-feed map, and reporting cadence captured into the Operating zone (non-sensitive only). Tutorials/step folders linked in §7. _(Maria's doc guide)_
+- 2026-07-25 — Incremental sweep: legal-matter bank-statement compilation completed and sent to the owner. New donated-inventory tax-deduction matter surfaced (§5) — queued as an SOP-proposal candidate for the categorization-rules SOP.
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20, inclusive). Double: confirmed the owner also holds a separate **individual (1040) Double profile**, distinct from the Sunoma and Magnum 152 company records (useful for future owner-level sweep routing) — no personal facts pulled from it into this file. Found a **recurring monthly closing task reconciling intercompany loans between Sunoma and Magnum 152** (added to §4/§5). An organizer titled "JK 2025 Business Tax Organizer - Sunoma" was reverted to draft by Lilian (2026-07-31) — status not yet followed up. Gmail: routine June-reports request to the owner (cadence as already known); no update on the Bravo access issue or the outstanding April-2024 Auto Pawn expense report. Ping: still no indexed meetings for Sunoma or the owner. _(Double, Gmail, Ping)_
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log confirmed a
+  standing **Sunoma/Magnum intercompany-loan reconciliation** task on the monthly close checklist
+  (not previously captured — added to §4/§5; SOP candidate proposed, see sop-proposals.md).
+  Gmail identified the outside attorney in the wire-transfer-tracing matter by name (Reizenstein
+  And Associates) and showed routine Magnum-side correspondence that belongs to Magnum's own
+  file. Ping had no indexed meetings for Sunoma or the owner in this window.
 
 ### Outstanding items (CI-only — never in the SOP)
+- **Donated-inventory tax deduction** — pending (a) the charity's written donation receipt, (b) documentation of how FMV figures were derived, (c) the owner's completed item list/pickup; expected to resume "in a couple of weeks" per the 2026-07-23 message.
+- **"JK 2025 Business Tax Organizer - Sunoma" reverted to draft** by Lilian (2026-07-31) — reason/next step not yet clear; follow up. _(Double activity log, 2026-08-01)_
 - **Recurring Bravo access/license problems** — the firm keeps losing access; asked for its own login. _(Gmail, 2026-07)_
-- **Legal matter (in progress):** compiling TD/Truist bank statements to trace wire transfers to an outside attorney, at the owner's request. _(Gmail)_
 - A missing **Auto Pawn April-2024 expense report** was requested from the owner — confirm received.
+- **Legal matter — bank-statement compilation likely complete:** the TD/Truist statements tracing wire transfers to an outside attorney were compiled and sent to the owner (2026-07-20/21); confirm with the owner that nothing further is needed. _(Gmail, 2026-08-01)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group relationship (Sunoma / Magnum)

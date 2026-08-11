@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -52,7 +52,7 @@ Drive (§7) — never copied here.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | Maria's doc guide (§7) | Managed through Double |
 | **Gusto** | Payroll (weekly) | Maria's doc guide (§7) | Some employee payments still go **outside Gusto** and need adjusting |
-| Bank & cards | Reconciliation | Maria's doc guide (§7) | **Wells Fargo** (8477), **Mercury** checking (3220) + savings (5452) + credit card, **Bank of America** (9866), **Amex CC** |
+| Bank & cards | Reconciliation | Maria's doc guide (§7) | **Wells Fargo** (8477) — **closed by the owner ~mid-Jul 2026** (recurring unauthorized vendor overcharges) and **replaced with a new Wells Fargo account** (last-4 pending confirmation; historical transactions for the closed account were manually uploaded) — see quirk below; **Mercury** checking (3220) + savings (5452) + credit card, **Bank of America** (9866), **Amex CC** _(Gmail, 2026-07-28)_ |
 | Insurance (WC + GL) | Trade insurance | see Drive folder (§7) | Broker **JDA Group**; carriers AmTrust / Auto-Owners |
 
 ## 4. Obligations & recurring processes
@@ -75,6 +75,7 @@ Drive (§7) — never copied here.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** for subcontractors.
+- **Organizer Status:** **Completed** _(Double client properties, 2026-08-08)_.
 
 ### Licenses & other filings
 - **Licensing / insurance (trade):** a licensed plumbing **qualifier** is on staff; carries **workers' comp + general liability** → periodic **WC & GL premium audits** are a recurring workload (payroll summaries, 941s, RT-6s). _(Gmail)_
@@ -85,20 +86,30 @@ Drive (§7) — never copied here.
 - **Employee payments outside Gusto** occur and must be adjusted in the books.
 - **Construction owner-group (with Beemold USA LLC):** same owner; books kept for both and **reported jointly ("Margate and Beemold")**; review the **intercompany loan** each month. Beemold is the quieter of the two. _(Maria's doc guide, Gmail)_
 - **Business downturn in 1H 2026** — reduced staff, lower turnover; **fee-sensitive**. _(Gmail — figures omitted)_
+- **WF 8477 (the account already flagged as stuck in reconciliation) was closed by the owner in Jul 2026** after recurring unauthorized overcharges from a vendor; a **replacement Wells Fargo account was connected in QBO** and historical transactions for the closed account were manually uploaded — the bank-feed list above needs its last-4 updated once confirmed. _(Gmail, 2026-07-28)_
+- **Customer payments run through QuickBooks Payments (credit-card processing)**; a customer chargeback/dispute over a card payment escalated to **Intuit's formal Pre-Arbitration process** in late Jul 2026 (owner is contesting — services were rendered, payment held non-refundable). Adds a new dimension to the AR/reconciliation complexity already noted above. _(Gmail, 2026-07-21 to 2026-07-30)_
+- **QuickBooks Payments disputes:** the business accepts customer payments via QBO's built-in merchant processing, and payment disputes/chargebacks occur on that channel — the owner has had to submit dispute evidence to Intuit. If the owner doesn't want a given invoice paid via QBO's processing, the payment-options toggle on that invoice should be unchecked before sending. _(Gmail, 2026-07-21 — flagged as a possible SOP-proposal candidate, not yet queued — borderline collections/support process rather than a close step)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
-- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 5. Margate*): bank-feed map, the AR-managed-by-owner quirk, the intercompany-loan review with Beemold, the outside-Gusto payment adjustments, and 3 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. Note: the Drive doc's title header reads "Beemold" (a copy-paste leftover) but its content is Margate's. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no relevant indexed meetings**; Double has no notes yet — email was the richest source.
+- 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 5. Margate*): bank-feed map, the AR-managed-by-owner quirk, the intercompany-loan review with Beemold, the outside-Gusto payment adjustments, and 3 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. Note: the Drive doc's title header reads "Beemold" (a copy-paste leftover) but its content is Margate's. _(Maria's doc guide)_
+- 2026-07-25 — Incremental sweep: new QBO Payments dispute/chargeback quirk found (§5); Mercury card clarified as "IO"; GL audit status update — a payment was applied to the current policy, not the outstanding audit invoice, so that balance remains outstanding.
+- 2026-08-01 — Incremental sweep (baseline 2026-07-20). Ping: no relevant meetings for Margate/Beemold or the owners still indexed (org-wide semantic search returned nothing on-topic). Double: no new notes/activity-log entries since baseline; contacts confirm the owner (portal admin, `info.margateplumbing@gmail.com`) and the co-owner (linked to a second Double client id — consistent with the Beemold link already recorded). Gmail (in:inbox + in:sent, after:2026/07/20) was the source for all new facts below; Google Drive turned up no new client-folder items; QuickBooks (Intuit-QuickBooks MCP tools) is scoped to the firm's own QBO company, not per-client — not usable for this client.
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double client properties confirmed Organizer Status = Completed (no notes, 5 task-status activity entries — routine July close). Gmail surfaced a WF-8477 account closure/replacement and a new QBO Payments customer-payment dispute. Ping had no legible new content for the client or the owner post-baseline (all hits were pre-baseline or off-topic/garbled). Drive folder link reconfirmed unchanged. QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Workers' comp audit open** — owner disputes prior-year WC as overcharged/misclassified; complicated by the **pre-Gusto payroll access gap**. _(Gmail)_
-- **General liability (GL) audit** also in progress. _(Gmail)_
+- **General liability (GL) audit** also in progress — **update 2026-07-20:** a recent owner payment was applied to the current policy, not the outstanding prior-term audit invoice, so that balance remains outstanding. _(Gmail)_
+- **QBO Payments merchant-account dispute** raised by the owner (customer refund/chargeback); owner submitted evidence to Intuit; awaiting resolution as of 2026-07-21. _(Gmail)_
 - **Accountant / CPA letter** for the owners' remortgage pending. _(Gmail)_
 - **QBO bank-feed reconnection** (Amex + a credit card) repeatedly pending — reports issued "preliminary" until connected. _(Gmail)_
-- **Open in Maria's guide:** WF 8477 reconciliation stuck since Mar-2025 (a specific vendor payment); "CJM" AR to reconcile; check-payment classification awaiting owner clarification. _(Maria's doc guide)_
+- **Open in Maria's guide:** WF 8477 reconciliation stuck since Mar-2025 (a specific vendor payment) — **superseded**: the WF 8477 account itself was closed ~mid-Jul 2026 and a replacement connected (see §5); "CJM" AR to reconcile; check-payment classification awaiting owner clarification. _(Maria's doc guide; update Gmail 2026-07-28)_
+- **Intuit QuickBooks Payments chargeback dispute** escalated to Pre-Arbitration as of 2026-07-30 — outcome pending. _(Gmail)_
+- **GL/WC insurance audit invoice** (JDA Group) — as of 2026-07-20, a payment the owner made was applied to the **current policy** rather than the outstanding **2025–2026 audit balance**, which remains outstanding — ties into the WC/GL audit already logged above. _(Gmail)_
+- Maria asked whether the replacement WF account's credentials could be added to Julia's own login so statements can be downloaded monthly — pending owner's response. _(Gmail, 2026-07-28)_
 
 ### Information still needed
 - [ ] Fiscal year-end

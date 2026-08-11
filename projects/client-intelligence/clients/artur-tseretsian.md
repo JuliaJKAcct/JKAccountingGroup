@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-31
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -37,6 +37,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) |
+| Spouse — secondary portal contact, full client-admin/tax/financial/files access _(added 2026-07-30, source: Double)_ | Double client (link below) |
 
 - **Double client:** https://app.doublehq.com/close?cid=752202
 
@@ -116,6 +117,10 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Statement coverage.** 2023–2025 captured from BofA CC (7104) + debit (9561); **Dec
   2025 runs only through the mid-December statement** — the **January 2026** statements
   of both accounts are needed to complete December 2025.
+- **Firm billing.** QuickBooks sent the client two automated "set up your recurring
+  payment to JK Accounting Group" reminders, due **by 2026-08-01** _(source: Gmail,
+  2026-07-30 and 2026-07-31)_ — confirmation the client actually completed setup is
+  still outstanding.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -135,6 +140,18 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   (tax-prep status + categorization rules). Sensitive IDs kept in Double.
 - _(2026-07-31, Lilian)_ — Spouse's **driver's license received** from the client (filed in
   Double) — removed from the outstanding list.
+- _(2026-08-01, incremental sweep, baseline 2026-07-30)_ — No new client activity in
+  Ping (client/contact not indexed there under this name — `resolve_person` and
+  `search_contacts` returned no match; org-wide `search_meetings` hits were either
+  unrelated or predate the baseline) or in Double's activity log. **Double:** the
+  spouse is now also a portal contact with full client-admin/tax/
+  financial/files access (added 2026-07-30) — added to §2. **Gmail:** two automated
+  QuickBooks "set up recurring payment" reminders sent to the client (2026-07-30,
+  2026-07-31), due 2026-08-01 — added to §5. **Google Drive:** located and linked the
+  client's top-level Drive folder in §7 (named "Rewhip"; contains the "Personal taxes
+  2023-2025" subfolder with the organizers and categorization workbooks already
+  referenced above). **Repo:** checked FOLLOW-UPS.md and BACKLOG.md — no entries for
+  this client.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
@@ -148,6 +165,7 @@ Live list lives in Double; mirrored here for context:
 - Car **purchase & sale documents**.
 - External-card statements (Capital One, Amex, Merrick, Credit One, FPB) if that spending should be captured.
 - Client to review: **Deposits** (cash/ATM/ACH/wire), **Travel**, and the auto/transport **"Business – review"** Zelles.
+- Confirmation the client completed the QuickBooks recurring-payment setup (reminders sent 2026-07-30/31, due 2026-08-01).
 
 ### Information still needed
 - [ ] Primary language / preferred communication.
@@ -155,9 +173,10 @@ Live list lives in Double; mirrored here for context:
 - [ ] The car-sales business relationship (his exact role; whether any 1099s are owed on payments he made).
 - [x] Second (younger) child confirmed a dependent from **2024** (born during 2024); 2023 has one dependent.
 - [ ] Assigned staff / relationship owner in Double (Owner in this file = Lilian).
+- [ ] Whether "Rewhip" (the client's top-level Drive folder name) is a trade name/DBA he uses for the auto-resale side, distinct from Operex LLC, or just an internal Drive naming choice _(source: Google Drive, 2026-08-01)_.
 
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=752202
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** https://drive.google.com/drive/folders/1W37vrxg1TGNX4k13vzK6ECrifiJtSHg1 (top-level folder "Rewhip"; contains the "Personal taxes 2023-2025" subfolder — organizers + categorization workbooks) _(source: Google Drive, 2026-08-01)_
 - **Related SOPs:** none yet — candidate: a "personal-account tax-prep categorization" SOP built from §5.

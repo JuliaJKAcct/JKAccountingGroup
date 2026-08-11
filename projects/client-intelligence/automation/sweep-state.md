@@ -34,33 +34,40 @@ list grows.
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
-| Atman Parts | 2026-07-20 | Gmail history not yet fully swept |
-| BEST BROKER REALTY LLC | 2026-07-20 | Gmail history not yet fully swept (only the BTR threads were searched) |
-| ECOORGANIC USA LLC | 2026-07-20 | Gmail history not yet fully swept |
-| GOSSIP MIAMI LLC | 2026-08-04 | **Ping and Drive never swept, and Gmail only searched for this client's own threads.** The file was seeded from Lilian's briefing plus a targeted Gmail search; a full historical sweep is still owed |
-| Kolo Florida Inc | 2026-07-20 | Gmail history not yet fully swept |
-| Pro Title Agency | 2026-07-20 | Gmail history not yet fully swept |
-| NEVER GIVE UP KK LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| YES TEAM CORP | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| MASCIAVE DESIGN STUDIO LLC | 2026-07-20 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| iKids Group LLC | 2026-08-10 | **Ping cannot help on this client and re-checking it is wasted budget:** its two client Zoom calls are from **Jun–Jul 2025**, before Ping's index begins (~Jun 2026), so no transcript exists and none will. Use **Google Calendar** for who attended those calls — one is titled after the referring partner, not the client. Gmail + Drive + Double swept 2026-08-10 (people/ownership pass) |
-| Deep Tech Development Group LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| AURA REMODELING LLC | 2026-07-20 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Beemold USA LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Sunoma Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| SENSUSTECH LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Mobilesource Corp | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Margate Plumbing Inc | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| MAGNUM 152, INC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| LUMETRO LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Ecom Beavers LLC | 2026-07-20 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Artur Tseretsian | 2026-07-30 | Ping + Gmail history not yet swept (file seeded from Double + the 2023–2025 tax-prep engagement) |
-| Ihor Naum & Olha Levchuk | 2026-07-30 | Ping + Drive not yet swept (file seeded from Double + a targeted Gmail search around the Form 8802 filing; full Gmail history still owed) |
-| Denys Melnyk | 2026-08-11 | **Ping, Gmail and Drive never swept.** The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**, supplied to the session by Lilian as a redacted PDF. A full historical pass of the other three sources is owed — note that this client communicates by **voice message**, so Ping/Gmail may hold little and Double is the primary source |
-| Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — the file was seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) — see the "Excluded — archived clients" table in `weekend-ci-sweep.md` |
+| Atman Parts | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
+| BEST BROKER REALTY LLC | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
+| ECOORGANIC USA LLC | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
+| GOSSIP MIAMI LLC | 2026-08-08 | — (Ping, Drive and full Gmail history all swept 2026-08-08; Ping genuinely has **no** indexed meetings for this client, scoped or org-wide — not a search miss) |
+| Kolo Florida Inc | 2026-08-08 | ⚠️ **Winding down — the company is closing** (Lilian, 2026-08-11). Keep sweeping while the account closures run; **drop it from scope once the Double record is archived**, not before |
+| Pro Title Agency | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
+| NEVER GIVE UP KK LLC | 2026-08-08 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| YES TEAM CORP | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
+| MASCIAVE DESIGN STUDIO LLC | 2026-08-08 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
+| iKids Group LLC | 2026-08-10 | **Ping cannot help on this client and re-checking it is wasted budget:** its two client Zoom calls are from **Jun–Jul 2025**, before Ping's index begins (~Jun 2026), so no transcript exists and none will. Use **Google Calendar** for who attended those calls — one is titled after the referring partner, not the client |
+| Deep Tech Development Group LLC | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
+| AURA REMODELING LLC | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
+| Beemold USA LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Sunoma Inc | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| SENSUSTECH LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Mobilesource Corp | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Margate Plumbing Inc | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| MAGNUM 152, INC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| LUMETRO LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Ecom Beavers LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
+| Artur Tseretsian | 2026-08-01 | **Ping + full Gmail history still owed** — deferred twice now (the per-run full-pass cap went to the five gap clients above). Due the next run that has room |
+| Ihor Naum & Olha Levchuk | 2026-08-01 | **Ping + Drive not yet swept, full Gmail history still owed** — same deferral; due the next run that has room |
+| Denys Melnyk | 2026-08-11 | **Ping, Gmail and Drive never swept.** The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**, supplied by Lilian as a redacted PDF. A full historical pass of the other three sources is owed |
+| Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
-_Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
-for all five;
-Gmail was only searched topically, around Best Broker's BTR — hence every client
-owes a one-time full Gmail pass). That catch-up run may exceed the steady-state
-per-client call bound once; that's expected._
+_**Reconciled 2026-08-11**, when the three stalled sweeps (2026-07-25, 08-01, 08-08) were
+finally merged to `main`. Baselines now carry the **latest** date each client was actually
+swept through — the 08-08 run for most, 08-10 for iKids (a targeted people/ownership pass that
+re-read Gmail, Drive and Double) and 08-11 for Denys Melnyk (the organizer-review pilot). **A
+human telling us a fact does not advance a baseline** — only an actual pass over the sources does,
+because the baseline is what bounds the next run's searches. **All five original Gmail coverage gaps are cleared** (Atman Parts, Best Broker
+Realty, Ecoorganic USA, Kolo Florida, Pro Title Agency), as is Gossip Miami's three-source gap.
+What remains owed: Artur Tseretsian and Ihor Naum & Olha Levchuk, deferred twice because the
+per-run full-pass cap went to the five above — give them the next run's cap. Ping's
+`list_client_meetings` needs a client-scoped context the routine does not have; `search_meetings`
+(org-wide, semantic) is the working substitute._
+
