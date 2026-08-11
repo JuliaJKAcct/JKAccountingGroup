@@ -137,6 +137,11 @@ log, a basis computation, a finance agreement, a prior-year return, a statement:
 for **by name**, and should be. The rule is about not opening a client relationship by demanding
 their court records — not about being shy of asking for the documents the work needs.
 
+_(One firm-specific consequence, not a change to this rule: a **filed tax return** may be asked for
+like anything else, but the session that asked may not then open it — it goes to Lilian or Julia,
+who hand back a redacted copy. The [`organizer-review` skill](../../.claude/skills/organizer-review/)
+§1 source 9 has the route.)_
+
 ## 8 · Where two records disagree, show the client both — then ask
 
 **This is the shape that gets an explanation instead of a one-word answer.** A bare question

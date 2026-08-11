@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat — never an artifact, never committed.
+description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return — which it never opens itself, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat — never an artifact, never committed.
 ---
 
 # The pre-return review — what to ask the client, before anyone starts
@@ -136,26 +136,34 @@ legible, tag it low-confidence, discard the rest.
 about the return, and the organizer produced none. **But you may not open the client's own copy.**
 [`double-mcp`](../double-mcp/)'s document rule bars fetching client documents in order to read
 them and **names filed tax returns specifically**. A copy sitting in their Double file library is
-exactly that.
+exactly that — and so is one in their Google Drive folder or on an email: the bar is on **a filed
+return as a document, wherever it sits**, not on one particular tool.
 
 **So the route is:**
 
 1. **Check whether a prior year exists in Double as an organizer** (`list_organizers(clientId)`).
-   If it does, that is readable under §0 and it is the cleanest base. Only three clients have more
-   than one year there.
-2. **Otherwise, ask Lilian or Julia for the prior-year return as a redacted PDF** — they open it,
-   remove the identifiers, and hand it to the session. That is how the pilot worked, and it is the
-   *only* sanctioned route to a filed return.
+   If it does, that is readable under §0 and it is the cleanest base. Run it every time — but
+   expect it to fail: almost every client has only the current year there.
+2. **Otherwise, the return reaches you as a redacted PDF from Lilian or Julia** — they open it,
+   remove the identifiers, and hand it to the session. **However the document got to the firm, that
+   is the handoff**, and it is how the pilot worked.
+   ⚠️ **This does not stop you asking the client for it** — Block E asks for the prior-year return
+   by name, and should. What changes is only what happens when it arrives: it lands as a document
+   the session may not open, so **the ask goes to the client and the file goes to Lilian or Julia,
+   who hand back the redacted copy.** Say that in the question list rather than leaving a file
+   nobody may read.
 3. **Note what the client file already tells you.** If a previous pass read that return, its
    findings are in the client's `Tax year YYYY — the review` entry — carryovers, states, entities,
    filing status. **Read that before asking for the PDF again**; you may not need it.
 4. **Say so if you don't have it.** A review without the prior year is worth much less, and Block A
    must say which sources were unavailable. **Never proceed silently.**
 
-⚠️ **Yes, this is uneven and the unevenness is deliberate:** the same client's *organizer answers*
-may be read as data (§0), while their *filed return* may not be opened as a document. That is
-recorded in [`double-mcp`](../double-mcp/) §2.2 as known, not an oversight — don't "resolve" it by
-opening the PDF.
+⚠️ **Yes, this is uneven** — the same client's *organizer answers* may be read as data (§0), while
+their *filed return* may not be opened as a document. [`double-mcp`](../double-mcp/) §2.2 records
+that as known rather than an oversight, **and records why it is still open: nobody has taken the
+document rule to Lilian.** So: follow the rule, don't "resolve" it by opening the PDF — **and don't
+read "deliberate" into it either.** It gates this review's single most valuable source and it is
+waiting on a decision she has never been asked for ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md)).
 
 ---
 
@@ -455,7 +463,7 @@ from another client's file.)*
 |---|---|---|
 | Mileage log | Double → `Others > <year>`, uploaded <date> | The organizer's vehicle block |
 | Rental income and expense figures | Double note "<title>", from the client's text message of <date> | The Schedule E worksheet |
-| Prior-year return | Double file library, uploaded by the client | The comparison base for §3 |
+| Prior-year return | Redacted PDF from Lilian, <date> — **never the client's own copy; §1 source 9** | The comparison base for §3 |
 
 **Say what it substitutes for.** *"There is a Double note with her figures"* is filing;
 *"the worksheet is not missing — the figures are in a Double note from her text message
@@ -497,7 +505,9 @@ Rules that come from the firm's client-message convention:
   that request can become unavoidable.
   ⚠️ **Family-law paperwork only.** This does **not** extend to ordinary tax documents —
   Form 7203, a mileage log, a finance agreement, the prior-year return are all asked for
-  by name (family 6), and should be.
+  by name (family 6), and should be. **For the prior-year return, say where to send it:**
+  it arrives as a document the session may not open, so it goes to Lilian or Julia, who
+  hand back the redacted copy (§1 source 9, step 2).
   _(Lilian, 2026-08-11: "no preguntamos por ese tipo de documento".)_
 
 #### Where two records disagree: show the client both, then ask
