@@ -210,6 +210,12 @@ year and 2024 had one"* is exactly the output this permission exists to produce,
 said in chat, written into a Double note, and acted on. What may never travel is the identifier
 itself.
 
+> **Where a finding may go is a separate question from whether it may be produced.** This
+> paragraph governs the **identity block**; §7 **rule 11** governs **what kind of content belongs in
+> a Double note**, and exposure point 2 below governs **the repo**. A finding can be perfectly free
+> of identifiers and still not belong in a note (rule 11) or in a commit (point 2). Check all three
+> before writing anywhere.
+
 **The four real exposure points, worst first.** The identity block passing through the session
 is not itself the danger. These are:
 
@@ -217,6 +223,24 @@ is not itself the danger. These are:
    one. Worst case, and the easiest to do by accident.
 2. **A commit or a PR.** The repo rule is unchanged and absolute: nothing from an organizer
    response is ever committed.
+   **This bites in a way that is easy to miss, so it is spelled out.** It is not only about
+   identifiers. **A client's answer is itself organizer-response content** — *"she ticked only
+   Wages as her income type"*, *"they answered yes to owning rental property"*, *"he asked us to
+   hold the refund as a credit"* are all barred from the repo even though not one of them is an
+   identifier. (Invented illustrations on purpose — a real client's answers cannot be used to
+   explain the rule against writing down a real client's answers.) This was learned by
+   doing it wrong: the first cross-year analysis (2026-08-11) wrote exactly those sentences into a
+   client-intelligence file and an independent review caught it before merge.
+   **What to write instead:** the **action** the answer generates, not the answer.
+   *"Confirm which income types she actually had this year"* carries everything the team needs and
+   states nothing she said. Beware the paraphrase: *"her answers point the other way"* reports the
+   content of an answer just as surely as quoting it. Point at Double for the answers themselves — they are already there,
+   in their proper home, and the repo file's job is the re-ask list.
+   ⚠️ **And the reason this is stricter than it looks:** a `clients/*.md` file is **auto-published**.
+   `projects/knowledge-hub/build-hub.mjs` loads **every** file in `clients/` with no allowlist, so
+   the next Hub rebuild — which CLAUDE.md makes a mandatory, unprompted part of finishing work —
+   turns that file into a hosted web page. A commit here is one routine step away from exposure
+   point 1.
 3. **Files the session writes, or that the harness writes for it.** This one is invisible, and
    **deleting the conversation does not reach it** — the two live in different places. (In a cloud
    session the VM is destroyed with the session, so the files go with it; in a **local CLI**
@@ -228,8 +252,13 @@ is not itself the danger. These are:
    place to stage two years of organizer JSON for a diff. **Never write an organizer payload to a
    file.** Do the comparison in context. If something genuinely must be staged, strip the identity
    block first and delete the file when done.
-4. **A Double note.** §7 rule 10's 🔒 bullet excludes the identity block — the *findings* are
-   welcome there, the identifiers are not.
+4. **A Double note.** §7 rule 10's 🔒 bullet excludes the identity block — the identifiers are
+   never welcome there. **Findings are welcome only within §7 rule 11's line:** what the client's
+   own data *shows* (a document that is missing, an item that was there last year and is not now)
+   belongs in a note; **our assessment of it** — the quality judgement, the reasoning, the
+   recommended treatment — does not, and goes in the
+   [`client-intelligence`](../client-intelligence/) file instead. Rule 11 is the authority on that
+   line.
 
 **Subagents: don't.** §5 item 4 recommends delegating roster-wide sweeps to a subagent, and a
 cross-year organizer comparison across the roster looks exactly like that work. **Read organizer
@@ -660,6 +689,36 @@ the whole thing start to finish, instead of reconstructing it from email.
      visible?" row in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md)). A client's own name or email in
      their own record is harmless if they see it — a password is not. Until both are settled,
      reference where the credential lives rather than pasting it.
+
+11. **A note carries the CLIENT's information — not our analysis of it.** Lilian's instruction,
+   2026-08-11, drawing the line rule 10 leaves open. What belongs in a note is **what the client gave
+   us and what the team needs in order to work**: their figures, their statements, where their
+   documents sit, what an agency said, the case history. What does **not** belong is our **internal
+   review output** — quality judgements, the reasoning behind a conclusion, our recommended
+   treatment, an assessment of how good or usable their submission was. Her words: putting that in
+   *"sería complicar demasiado esas notas"*, and a note that turns into an analysis document is a
+   note the team stops reading.
+   **The line, because "finding" is ambiguous and §2.2 uses the word the other way:** what the
+   client's own data **shows** may go in a note — *"no K-1 this year; last year had one"*, *"the
+   W-2 they told us about has not arrived"*, *"the address they gave us differs from the one on
+   file"*. That is §2.2's
+   worked example and it stays welcome. What may **not** go in is our **verdict on it** — *"the
+   organizer is unusable as filed"*, *"this looks like a basis problem"*, *"we should reclassify
+   these as corporate expenses"*. Observation to the note; judgement to the file. When a single
+   sentence carries both, split it.
+   **Rule 9 survives this.** A conclusion that legitimately reaches a note still carries its hedge:
+   *recommended, not agreed* · *inferred, not established* · *unverified*. Rule 11 removes our
+   reasoning from notes; it never licenses stating a hedged thing flatly.
+   **Where the analysis goes instead:** the [`client-intelligence`](../client-intelligence/) file
+   (§5 for standing quirks, §6 for the dated log and the open items). **The two artifacts have
+   different jobs** — the note is what a teammate opens *while working the client*; the CI file is
+   what the firm *knows* about them.
+   **When a finding genuinely belongs in front of the team, ask her** — she decides case by case,
+   and said so explicitly: *"si yo creo que debe incluirse algún análisis, lo pones."* Default to
+   leaving it out.
+   ⚠️ **This narrows rule 10, it does not reverse it.** Names, emails, phone numbers, client IDs and
+   figures still go in freely — rule 10 governs *how much detail* a note carries, rule 11 governs
+   *what kind of content*. And the 🔒 identity-block exclusion survives both.
 
 ### The size wall — a long note gets blocked, not truncated
 

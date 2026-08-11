@@ -50,6 +50,18 @@ are not duplicates of each other.
 > **`Organizer Max Progress`** (it is a maximum — §5 explains why that matters). This file uses the
 > CSV header when referring to the data and the UI name when referring to what a person sees.
 
+> **⚠️ The organizer's conditional logic has known defects — read before quoting it or acting on a
+> client's answers.** [`references/individual-organizer-logic-defects.md`](./references/individual-organizer-logic-defects.md)
+> is the audit (2026-08-11) of the 16 logic rules in **one live 2025 organizer** — assumed shared
+> across clients because these appear to be cloned, but **that is unverified**, so read a second
+> organizer before planning a fix around it. The headline: **seven
+> income-type options are dead ends** — the client ticks the box and no document is ever requested
+> — and the **rental-property branch is unreachable by any answer**. It also explains the design
+> that is *not* a defect: almost every document request is hidden until an earlier answer reveals
+> it, which is correct (it keeps the organizer short), but it means **one wrong answer at a
+> chokepoint silently removes everything downstream while the organizer still reports 100%
+> complete**. Fixing any of it is a Double-UI job, not an API one — the file says why.
+
 > **The organizer's actual questions** — what we ask an individual client — are kept in
 > [`references/individual-organizer-questions.md`](./references/individual-organizer-questions.md).
 > It holds the **General Information** and (partial) **Income** sections captured 2026-07-30; the

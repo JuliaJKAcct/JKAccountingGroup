@@ -170,7 +170,7 @@ client-intelligence/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (23 so far — see the Clients index below)
+└── clients/               ← one file per client (24 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -179,6 +179,7 @@ client-intelligence/
 |---|---|---|---|
 | Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | In progress — sales tax next |
 | Artur Tseretsian | [`clients/artur-tseretsian.md`](./clients/artur-tseretsian.md) | Lilian | In progress — 1040 Schedule C categorization (2023–2025) |
+| Denys Melnyk | [`clients/denys-melnyk.md`](./clients/denys-melnyk.md) | Lilian | In progress — 2025 1040, first year with us. **S-corp shareholder in three trucking entities**, with a large NOL carried forward from 2024 and MT/IL state returns his organizer never mentions. Organizer reads "Completed" and is unusable as filed; re-ask list in §6, **settle what the Midwest money was before preparing anything** |
 | BEST BROKER REALTY LLC | [`clients/best-broker-realty.md`](./clients/best-broker-realty.md) | Lilian | In progress — BTR captured |
 | ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP; 2025 1120-S in progress, Turo documents outstanding, QuickBooks primary-admin handover paused mid-change (two users on purpose — see §3) |
 | Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | In progress — skeleton only |

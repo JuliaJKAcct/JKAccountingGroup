@@ -83,6 +83,56 @@ The queue is the source of truth; the email is just the notice. See
 [`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md) for the
 format and full rules.
 
+## When a client gets a file — the trigger (don't wait to be asked)
+
+**Working on a named client is the trigger.** Lilian's standing instruction (2026-08-11):
+*"siempre que hablemos de un cliente, sobre todo un cliente que tenga cuenta en Double, todo lo
+que hablemos de él debe ser guardado en Client Intelligence… esto no podemos perderlo."*
+
+So in any session that analyses a client's organizer, drafts them a message, chases a filing,
+writes them a Double note, or answers a substantive question about them: **look for
+`clients/<slug>.md` and create it if it is missing** — in that same session, without being asked.
+A client **with a Double account** is the clearest case: being in Double means real, ongoing work.
+
+The bar is deliberately low — *is there anything here worth keeping?* — because the failure mode
+is silent. Knowledge gets produced, the session ends, and nobody discovers the loss until the next
+person starts from zero.
+
+**Writing a Double note is not a substitute, and that is exactly how this rule was found.** In
+Aug 2026 a client's information arrived by voice message and was carefully captured in a Double
+note — while that client still had **no CI file at all**. The note held his figures; nothing held
+what the firm had *learned* about him. Two months of that pattern and the knowledge is scattered
+across notes nobody re-reads. **A note and a file are different artifacts with different jobs** —
+see the boundary rule in the [`double-mcp`](../double-mcp/) skill §7.
+
+### ⛔ A tax organizer's ANSWERS never go in a client file
+
+Rule 1's "two data homes" bans secrets and personal data. **Organizer responses are barred more
+broadly than that** — not just the identity block, but **what the client answered**:
+*"she ticked only Wages"*, *"they answered yes to owning rental property"*, *"he asked us to hold
+the refund as a credit"* (invented examples, deliberately). None of those is an identifier and all
+of them are barred
+([`double-mcp`](../double-mcp/) §2.2, exposure point 2).
+
+**Write the action, not the answer.** *"Confirm which income types she actually had this year"*
+tells the team everything it needs and states nothing she said. **And watch the paraphrase** —
+*"her answers point the other way"* or *"nothing on file supports that"* leaks the answer just as
+effectively as quoting it. If a sentence would change when the client's answer changes, it is
+still the answer. Point at the Double organizer for the
+answers; they are already in their proper home.
+
+**Why this is stricter here than anywhere else:** `clients/*.md` is **auto-published**. The
+Knowledge Hub's build loads **every** file in `clients/` with no allowlist, so the next Hub rebuild
+turns this file into a hosted web page — and rebuilding the Hub is a standing, unprompted part of
+finishing work. A client file is one routine step from being public.
+
+_(Learned by getting it wrong: the first cross-year organizer analysis, 2026-08-11, wrote a
+client's organizer answers into their file, and an independent review caught it before merge.)_
+
+Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
+Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
+visible rather than assumed done.
+
 ## Creating a client file
 
 1. `cp projects/client-intelligence/_client-template.md projects/client-intelligence/clients/<slug>.md`
