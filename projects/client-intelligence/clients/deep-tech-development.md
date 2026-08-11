@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -29,7 +29,7 @@
 - **Primary language:** **Russian** (Ukrainian ties). _(Gmail)_
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); income tax on the owner's **Schedule C**; **sales tax (quarterly — likely FL DR-15)**; **1099 preparation**; annual-report filing. **Payroll: not in JK's scope** — N/A per Double; the company runs its **own Gusto payroll (biweekly)** (see §5). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online (via Double)
+- **Accounting platform:** QuickBooks Online — **disconnected from Double on 2026-07-21** (Double activity log shows a `client_disconnected` event by Julia; the client record's `platform` field now reads "none"). Confirm reconnection status before assuming Double-synced books are current — see §5. _(Double activity log, 2026-07-21; inferred with medium-high confidence)_
 
 ## 2. Contacts
 
@@ -47,7 +47,8 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double — **disconnected 2026-07-21**; reconnect/confirm status before relying on Double-synced data _(Double activity log, 2026-07-21)_ |
+| Shopify ("Go Robots" store) | E-commerce sales platform | _(pending)_ | Plan scheduled to downgrade from **Grow** to **Basic** (both paid monthly) effective **2026-08-02** _(Gmail, 2026-07-28)_ |
 | Sales-tax portal | Filing sales tax (quarterly) | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | _(jurisdiction pending)_ |
 | Penn Credit (collection-agency portal) | Paying the FDOT toll debts that are in collection | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | Portal: [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) · login is **not** user/password — it asks for the **account/ID number + ZIP code** (both in the vault) |
 
@@ -58,13 +59,15 @@ the actual details.
 ### Sales tax
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Jurisdiction(s):** Likely **Florida (DR-15)** — FL operations + Shopify sale of tangible goods _(inferred, medium confidence; not seen filed for this entity directly)_.
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** The firm's internal recurring sales-tax task was moved from **every 3 months on the 1st** to **every 3 months on the 5th** _(Double activity log, 2026-07-20)_.
 
 ### Payroll
 - **Applies?** Not in JK's scope — **N/A** per Double. The company runs its **own Gusto payroll (biweekly)**; JK does not process it. _(Double + Gmail)_
+- **Quirk:** despite Payroll being **N/A** for JK, JK staff (the assigned bookkeeper plus other team members) are routinely copied on Gusto's automated "payroll due / payroll late" reminder emails for this client's biweekly run — worth confirming why JK stays on that notification list _(Gmail, 2026-07-26 to 2026-07-30)_.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_
+- **Note:** QuickBooks Online was **disconnected from Double on 2026-07-21** — confirm whether/when it was reconnected before treating Double-synced financials as current. See §5. _(Double activity log, 2026-07-21)_
 
 ### Income tax
 - **Applies?** Yes — the owner's **Schedule C (Form 1040)** _(Double)_
@@ -89,6 +92,10 @@ the actual details.
 - **Client password vault (one Google Doc).** Practically all of this client's logins are kept in a single Google Doc (linked in §7) — including the Penn Credit account/ID number + ZIP used to log in and pay the FDOT toll debts. It's the fast path when a task needs a credential; sensitive values stay there, never in this file.
 - **FDOT tolls are a live, recurring collections item (Penn Credit).** See §4. Paying off one balance has **not** stopped new toll amounts from reappearing at Penn Credit, so treat every new letter as a fresh pay-down rather than assuming the debt is closed.
 - **Cancelling two storage units at Safe Guard Self Storage** — requested 2026-07-30, awaiting email confirmation (see §6). Once confirmed, the recurring charge(s) should stop — don't flag the eventual absence of this charge as a missed/abnormal recurring payment.
+- **QuickBooks Online was disconnected from Double on 2026-07-21** (Double activity log: a `client_disconnected` event by Julia; the client record's `platform` now reads "none", vs. an accounting platform being the norm for a monthly-bookkeeping client). No reconnection has been logged since. Treat any Double-synced bookkeeping figures as potentially stale until this is confirmed/resolved. _(Double activity log, 2026-07-21)_
+- **Owner runs other Double-tracked entities.** Per Double's portal-contact records, this client's owner is also linked to **1701 N M ST LLC** (files a 1065) and **Universal Trading Technology LLC**, plus his own individual (1040) Double profile — all assigned to Lilian like this client. Company-specific facts about those entities belong in their own future CI files, not here; noted here only to record the owner-group shape. _(Double contacts + client records, 2026-08-01)_
+- **External Ukrainian finance-team contact's access, more precisely:** that contact (see above) has portal access to this client **and** to the owner's other two companies (1701 N M ST LLC, Universal Trading Technology LLC) but **not** to the owner's individual profile — consistent with a bookkeeping/company-side role rather than a personal-tax one. _(Double contacts, 2026-08-01)_
+- **JK forwards vendor invoices for robot inventory purchases** directly to the owner as part of the bookkeeping relationship (seen for a batch of robot-purchase invoices). _(Gmail, 2026-07-28)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -100,9 +107,11 @@ the actual details.
 - 2026-07-22 — **Correction (Lilian):** this client is **one company — "Deep Tech Development Group LLC"**, not two. Removed the earlier "sister GROUP LLC" two-entity split; re-attributed the Gusto payroll, Shopify store, and vehicle/tolls to the single company; corrected the display name across the CI indexes and the Hub.
 - 2026-07-25 — Incremental sweep: Double activity log shows the recurring Sales Tax task's cadence changed from the 1st to the 5th of the month (2026-07-20), and a "client disconnected" event logged 2026-07-21 (ambiguous — could be the accounting-platform connection or a Double-portal disconnect; needs a manual check). No new Penn Credit / FDOT toll activity found this window.
 - 2026-07-30 — Update (Lilian): requested cancellation of the **two storage units** the client holds with **Safe Guard Self Storage**. **Awaiting confirmation by email.**
+- 2026-08-01 — **Incremental sweep (Julia), 2026-07-20 → 2026-08-01:** Double (client record, properties, notes, contacts, activity log) + Gmail + Ping + Drive folder link checked. Found **QuickBooks Online was disconnected from Double on 2026-07-21** (flagged as an open item). Confirmed the owner-group shape via Double portal contacts — this owner is also linked to **1701 N M ST LLC**, **Universal Trading Technology LLC**, and his own individual (1040) Double profile (no CI files yet for those). Captured a **Shopify plan downgrade** (Grow → Basic, effective 2026-08-02) and a **sales-tax task recurrence-date change** (1st → 5th, 2026-07-20). No update found yet on the Safe Guard Self Storage cancellation confirmation or any new Penn Credit letter. Ping had no legible Deep-Tech-specific meeting content in this window (org-wide semantic search returned only unrelated/garbled matches).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30).
+- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
+- **Confirm QuickBooks Online reconnection to Double** — disconnected 2026-07-21 by Julia; unclear if/why/when it will be reconnected.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
 - **Reconcile the payroll flag:** Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).

@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** BEST BROKER REALTY LLC
-- **Entity type:** LLC
-- **Home state:** Florida (Hollywood / Broward County)
+- **Entity type:** LLC — multi-member, taxed as a **partnership (Form 1065)** _(Double client properties, 2026-08-01)_
+- **Home state:** Florida (Hollywood / Broward County) — entity formed on Sunbiz **2025-04-30** _(Sunbiz filing notice via Gmail, found in the 2026-08-01 full-history pass)_
 - **Industry / what they do:** Real estate brokerage
 - **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** BTR filing (done), bookkeeping (quarterly), income tax (Form 1065), annual report, 1099 contractor filings; sales tax and payroll N/A (brokerage pays agents as 1099 contractors, not W-2) _(Double client properties, 2026-07-25)_
+- **Our engagement (services we provide):** BTR filing (done), bookkeeping (quarterly), income tax (Form 1065), annual report, 1099 contractor filings; sales tax and payroll N/A (brokerage pays agents as 1099 contractors, not W-2) _(Double client properties, 2026-07-25)_. A **signed Letter of Engagement** is on file, 2026-02-26; the entity was formed on Sunbiz **2025-04-30** _(Gmail; 2026-08-01 sweep)_.
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double) — primary-administrator access transferred from the firm's login to the client's own portal login 2026-01-16; a Claude/MCP integration was connected to this client's QBO company 2026-04-08 _(Gmail)_
 - **Entity/tax classification:** Multi-member LLC filing Form 1065 (partnership return) — not disregarded/Schedule-C like sister-client Pro Title Agency _(Double client properties, 2026-07-25)_
@@ -60,15 +60,17 @@ the actual details.
 - **Applies?** No (N/A) — agents are paid as 1099 contractors, not W-2 employees _(Double client properties, 2026-07-25)_.
 
 ### Bookkeeping & monthly close
-- **Applies?** Yes — cadence: Quarterly _(Double client properties, 2026-07-25)_.
+- **Applies?** Yes — cadence: Quarterly _(Double client properties, 2026-07-25)_. **Assigned staff in Double: Liudmyla Kazannik** _(2026-08-01 sweep)_.
+- **Recurring process quirk — the realtors are 1099 subcontractors, usually paid by Zelle.** Before or alongside payment, a signed contractor agreement (with W-9) has to be matched to the agent and the agent's legal name + EIN entered in QuickBooks for accurate 1099 filing. The recurring difficulty is confirming whether a given realtor already has a contract on file **before** they are paid, and catching new realtors paid without one _(Ping, 2026-07-22 — legible portion of a garbled transcript)_.
 
 ### Income tax
-- **Applies?** Yes — Form 1065 (multi-member LLC/partnership) _(Double client properties, 2026-07-25)_.
+- **Applies?** Yes — Form 1065 (multi-member LLC/partnership) _(Double client properties, 2026-07-25)_. **Organizer Status: Completed** _(2026-08-01 sweep)_.
 
 ### 1099 filings
 - **Applies?** Yes — firm prepares/sends Form 1099s to Best Broker's real-estate-agent contractors; confirmed for tax year 2025 (filed Feb–Mar 2026) _(Gmail, 2026-02-24 → 2026-03-03)_.
 
 ### Licenses & other filings
+- **Florida Annual Report (Sunbiz)** — Applies? Yes, filed annually _(Double client properties, 2026-08-01)_.
 - **Applies?** Yes — **Business Tax Receipt (BTR)**, City of Hollywood.
 - **What & when:** Local business-license receipt; renewed annually.
 - **Our role:** The firm handled the filing.
@@ -87,6 +89,7 @@ the actual details.
 - **Best Broker Realty's own landlord — the actual property owner of 1047 Buchanan St — is SYNERGY MOOD LLC.** Best Broker holds the primary/master lease directly with Synergy Mood LLC; its own City of Hollywood BTR (**Application #40663**) was filed and approved on that basis. This distinction (master tenant vs. property owner) surfaced 2026-07-29 when the city asked Pro Title Agency (Best Broker's sub-tenant) for a lease signed directly with Synergy Mood LLC — see [`pro-title-agency.md`](./pro-title-agency.md) §4/§6.
 - Best Broker is the **master tenant** at its Hollywood, FL business location; **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
 - Pays its real-estate agents as **1099 contractors** (brokerage model) rather than employees — matches the "no payroll" obligation above _(Gmail, 2026-02/03-2026; corroborated by Drive folder naming)_.
+- **The owner, Sergey Karpenko, is one of the firm's serial-entity clients** — besides Best Broker Realty, the firm manages several other companies under his ownership (e.g. Pro Title Agency LLC, which subleases and shares this location — see above). Only facts specific to Best Broker Realty itself are recorded in this file; other-entity facts belong in their own files if/when those exist. _(Double contacts + Gmail sweep, 2026-08-01)_
 
 ## 6. History & open questions
 
@@ -98,16 +101,18 @@ the actual details.
 - 2026-07-23 — Update (Lilian): checked the city's **Check Application Status** page — the **City of Hollywood LBTR is Approved / Active (issued)**. Recorded the **BTR number and identifiers in a new Double note** (2026-07-23). The BTR is done; sensitive values stay in Double, the non-sensitive status is reflected here.
 - 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Confirmed entity/tax classification (1065), engagement start date, QBO admin-access handoff, and the 1099-contractor filing pattern for agents. Found the Google Drive folder (§7).
 - 2026-07-29 — Cross-reference (Lilian): while resolving a missing-document request on **Pro Title Agency's** BTR (App #40698, its sub-tenant at the same address), confirmed that Best Broker Realty's own landlord is **Synergy Mood LLC** — Best Broker is the master tenant, not the property owner. Noted here since it clarifies the leasing chain at 1047 Buchanan St for both clients — see [`pro-title-agency.md`](./pro-title-agency.md) §6.
+- 2026-08-01 — Weekly sweep (baseline 2026-07-20 → 2026-08-01), plus the **one-time full Gmail history pass** (coverage gap — see below). Double client properties confirmed the recurring-services picture (Tax Return Type 1065, Bookkeeping Quarterly, Sales Tax/Payroll N/A, Annual Report + Income Tax applicable, Organizer Status Completed) and the assigned bookkeeper. The full Gmail pass surfaced two historical, previously-uncaptured facts: the Sunbiz formation date (2025-04-30) and a signed Letter of Engagement (2026-02-26); it also turned up a 2026-03-14 internal note about an IRS address-update task (Form 8822-B) spanning several of the owner's entities including Best Broker — status unconfirmed, added to "still needed." A Ping org-wide search surfaced one legible excerpt (Ecoorganic review meeting, 2026-07-22) describing the realtor-subcontractor 1099 workflow — added to §4. No new BTR-SOP gap found this run (the only prior gap, SOP-2026-07-23-01, is already Applied).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Residual only: if the analyst's emailed PDF copy of the receipt hasn't arrived, save it to the client's Drive folder when it does; then calendar the **Sept 30** annual renewal. _(Double note 2026-07-23)_
-- An IRS address update (Form 8822-B) was requested for several of this owner's entities including Best Broker Realty (flagged "not urgent," assigned to Lilian) — no confirmation of completion found yet. _(Gmail, 2026-03-14)_
+- **Unconfirmed:** a 2026-03-14 internal note asked to update Best Broker's (and several sibling entities') address with the IRS via Form 8822-B as part of an entity-cleanup pass — no confirmation found yet that this was completed for Best Broker specifically. _(Gmail, found 2026-08-01)_
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
-- [x] Which recurring services we provide — **done: bookkeeping (quarterly), income tax (1065), annual report, 1099 filings; sales tax/payroll N/A**
+- [x] Which recurring services we provide — **confirmed 2026-08-01: BTR + quarterly bookkeeping + Form 1065 income tax; no sales tax or payroll**
 - [x] Finish the Hollywood BTR — **done: issued Approved / Active 2026-07-23** (BTR # in the Double note)
-- [x] Where credentials live (Drive vault link) — **done, see §7** (best candidate; other duplicate-titled folders also exist, worth a manual confirm)
+- [ ] Where credentials live (Drive vault link) — a Drive folder now identified (§7); confirm it's the authoritative one and note where login credentials themselves live
+- [ ] Confirm whether the 2026-03-14 IRS address-update (Form 8822-B) for Best Broker was completed
 
 ## 7. Links
 

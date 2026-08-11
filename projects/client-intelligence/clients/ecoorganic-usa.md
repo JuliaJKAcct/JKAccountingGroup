@@ -40,7 +40,9 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Owner / primary contact | Double client (link below) — **the owner we correspond with**, in Russian (see §5) |
-| Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account, so the 1120-S issues **two K-1s** _(confirmed 2026-07-30)_ |
+| Second owner | Double client — **there are two owner contacts**, each with their own individual (1040) client account, so the **FY2025** 1120-S issues **two K-1s** _(confirmed 2026-07-30)_ |
+
+- ⚠️ **Ownership changed effective 2026-01-01 — the second owner exited.** The driver was the S-corp shareholder rule: a **nonresident shareholder is disqualifying**, so he left ownership, leaving the primary owner as **sole owner going forward**. **FY2025 still reflects the two-owner split and two K-1s; from FY2026 expect a single K-1.** _(Ping meeting "Ecoorganic tax prep", 2026-07-23 — legible, direct transcript; 2026-08-01 sweep.)_
 
 Both owner contacts are on file in **Ping** as well as Double, with no recent meetings
 indexed _(2026-08-04)_.
@@ -52,8 +54,9 @@ indexed _(2026-08-04)_.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | **QuickBooks company name: "Corganix"** _(Lilian, 2026-08-06)_. Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
-| Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
-| Gusto | Payroll | _(pending — Drive link)_ | A firm staff admin's access was revoked 2026-07-15 as part of the bookkeeper transition |
+| Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen. Historically-used bank/payment accounts also include **TD Bank, PayPal and Bank of America** _(Drive, 2026-08-01 — names only)_ |
+| Gusto | Payroll (**W-2 employees**) | _(pending — Drive link)_ | Onboarded **Sept 2025**; the company runs actual **W-2 payroll**, not only 1099 subcontractors _(Gmail, Sept 2025–Jul 2026)_. A firm staff admin's access was revoked 2026-07-15 as part of the bookkeeper transition |
+| Tax1099 (Zenwork) | 1099 e-filing | _(pending — Drive link)_ | Used by the firm to e-file 1099-NEC/MISC/DIV _(Gmail, Feb 2026)_ |
 | CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | _(pending — Drive link)_ | Recurring filings |
 | CT Dept. of Labor / ReEmployCT | Unemployment tax | _(pending — Drive link)_ | Recurring correspondence |
 | CT Secretary of the State portal | Annual Report / registered agent | _(pending — Drive link)_ | Due March 31 annually; 2026 filing accepted |
@@ -94,10 +97,19 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** Yes — Monthly, via CT DRS myconneCT (form OS-114). The recurring "Sales Tax" task's due date was moved from the 1st to the 5th of the month _(Double, 2026-07-20)_.
+- **Applies?** Yes — Connecticut **OS-114 Sales and Use Tax Return**, filed
+  **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
+  *(Double client properties + activity log, confirmed 2026-08-01)*.
 
 ### Payroll
-- **Applies?** Yes — via Gusto; CT-941 withholding and ReEmployCT filings recurring _(Gmail, 2026)_.
+- **Applies?** Yes — the company runs **W-2 payroll through Gusto** (onboarded
+  Sept 2025; multiple employees hired/I-9'd that month), in addition to the
+  1099-tracked subcontractor labor already documented in the SOP. Connecticut
+  employer obligations recur: **CT-941** (quarterly withholding reconciliation),
+  **W-2s/CT-W3** (annual reconciliation of withholding), and a **CTDOL /
+  ReEmployCT** (unemployment) account *(Gmail, Sept 2025–Jul 2026)*.
+
+### Bookkeeping & monthly close
 - **Applies?** Yes — this is the core engagement.
 - **Cadence:** Monthly.
 - **Categorization rules / quirks:** Detailed, client-specific rules already
@@ -121,13 +133,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   - Turo's refusal to deal with the firm says **nothing** about who owns the account — it only means we are not the account holder, which is why the owner has to place the call. How a company-owned account squares with Turo dealing only with an individual account holder is **not established**.
   - **On the next contact with Turo — the escalation email or a further call — get the registered account name and the name / TIN on any 1099-K.** That corroborates the ownership answer and, more importantly, determines whether the 1099-K will match to the LLC's EIN — if it comes out under his SSN, the return position has to be handled deliberately whoever "owns" the account.
 - **Applies?** Yes — Form 1120-S; firm prepares/files it. 2024 return filed under a Form 7004 extension (mid-March 2025); 2025 return also under extension as of a July 2026 note _(Double; Gmail)_.
+- **Connecticut also takes a composite return:** the company files **CT-1065/CT-1120SI** (Pass-Through Entity / Composite Income Tax Return), which covers a **nonresident shareholder's** CT tax — it ties directly to the ownership change in §2 _(Gmail, CT DRS correspondence, recurring since early 2026; 2026-08-01 sweep)_.
 
 ### 1099 filings
 - **Applies?** Yes _(Double client properties)_. Tax-year-2025 1099-NEC forms are complete (W-9 collection ran mid-Jan 2026, forms filed) — this is the closed 2025 year; ongoing/current-year 1099 payee decisions remain deferred per Lilian (see §6).
 
 ### Licenses & other filings
 - **Applies?** Yes — CT Annual Report, due March 31 annually; 2026 filing accepted _(Gmail, 2026-03-20 → 2026-04-07)_.
-- Client carries commercial General Liability + Workers' Comp; the insurer runs an annual premium audit requiring the firm to supply the P&L and a contractor/1099 listing — an audit cycle ran May–July 2026 _(Gmail)_.
+- Client carries commercial General Liability + Workers' Comp — carrier **Atlantic Casualty Insurance Co.**, placed via broker **JMG Insurance Corp**, annual policy term ~April 16 to April 16. Renewal triggers an **annual GL/payroll premium audit** (a remote auditor) requiring the firm to supply the P&L and a contractor/1099 listing — an audit cycle ran May–July 2026 _(Gmail; 2026-08-01 sweep)_.
 
 ## 5. Key facts & quirks
 
@@ -144,6 +157,26 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - A same-named Ukraine-based company (different legal entity, same industry) periodically exchanges financial documents with the firm — relationship to the US LLC unconfirmed; worth clarifying with the client.
 - The client's CT compliance record is also targeted by non-official third-party filing/renewal solicitation emails (not CT.gov) — flag so these aren't mistaken for real government notices.
 - (Medium confidence, 2026-07-22 client review meeting) Truck-rental charges (e.g. U-Haul) for moving tools/materials to a job site were discussed as belonging in "Shipping and deliveries," not COGS materials — not yet a written SOP rule (see SOP-proposal below). Same meeting: software/subscription charges are consolidated into a single QBO account (no per-tool breakout).
+- **Affiliated Ukrainian entity:** the firm periodically corresponds with the
+  Ukraine-side accountant of ТОВ «ЕКООРГАНІК» (domain ecoorganic.ua) — e.g. on
+  financial statements/certificates and a registered-capital change. Possible
+  cross-border reporting angle (foreign-entity/FBAR-type filings) — scope not
+  yet confirmed *(Gmail, Apr 2026, Cyrillic correspondence)*.
+- **Reviewer watch — a QBO-connected bank account the team didn't recognize**
+  surfaced in the 2026-07-22 review meeting (possibly the owner's personal
+  account, distinct from the single known Chase business feed) — unresolved,
+  needs client confirmation *(Ping, low-confidence/garbled transcript)*.
+- **Reviewer watch — possible personal (Turo) expenses in company books:**
+  ~$16–17K in the "Vehicle repairs & supplies" account for FY2025 may include
+  the owner's **personal Turo** (car-rental app) activity (e.g. a personal
+  Audi) rather than company costs; pending access to Turo's earnings/1099
+  report before any reclassification *(Ping meeting "Ecoorganic tax prep,"
+  2026-07-23 — legible, direct transcript)*.
+- A recurring-expense watchlist for this client exists in Drive but is
+  currently **PAUSED** (link in §7).
+- A prior bookkeeper (no longer on this engagement) sent monthly financials
+  directly to the owners through late 2025, before the 2026 handoff to the
+  current team *(Gmail, 2025)*.
 
 ## 6. History & open questions
 
@@ -169,6 +202,25 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
   Lilian stated the same day that the **Turo account is the company's**, not the owner's personally — so any income and any 1099-K belong on Ecoorganic's 1120-S _(her statement; basis not recorded, and unverifiable against the closed account — see §4)_. Note that the sent message does **not** ask Turo to email the documents to the account address — that line was in a draft and was cut — so the owner was told only to call and ask. The message-drafting lesson from the same session is now a firm-wide rule in `CLAUDE.md`. _(Source: a working session originally run in the wrong repository — `JuliaJKAcct/LilianA-T`, branch `claude/turo-artyom-message-gyvksn` — and moved here on 2026-08-04.)_
 - 2026-08-04 — **Second Turo call, this time WITH the owner on the line** (Lilian + the owner). Turo said **they cannot access the account** and **escalated** the case. The resolution comes **by email to the account's address, 1–2 business days** — no further call needed unless it fails to arrive. Also learned, and now the standing rule for this client: **Turo will not give the firm anything without the owner present** — every call has to be scheduled with him. _(§3, §4.)_
+- 2026-08-01 — Weekly sweep (baseline 2026-07-20 → 2026-08-01), plus a **one-time
+  full Gmail history pass** (coverage gap cleared — searched `Ecoorganic` and
+  `Markarian` across the account's full history, ~150+ threads reviewed back to
+  early 2025). Key findings: (1) **ownership change** effective 2026-01-01 — the
+  second owner exited (nonresident-shareholder issue), sole owner going forward
+  from FY2026 (§2); (2) **payroll confirmed** — actual W-2 employees on Gusto
+  since Sept 2025, plus the existing 1099-tracked subcontractor labor (§4); (3)
+  **sales tax confirmed** — CT OS-114, monthly (§4); (4) **CT composite return**
+  (CT-1065/CT-1120SI) tied to the nonresident-shareholder fact (§4); (5) **Annual
+  Report** due March 31 (§4); (6) **Workers' Comp/GL insurance** with an annual
+  audit cycle (§4); (7) an **affiliated Ukrainian entity** the firm corresponds
+  with (§5); (8) two **reviewer-flagged open items** from recent meetings — an
+  unrecognized QBO-connected bank account, and possible personal-Turo expenses
+  sitting in the Vehicle repairs & supplies account (§5). Sources: Double
+  (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`,
+  `list_activity_log`), Ping (`resolve_person`, `search_contacts`,
+  `search_meetings`, full transcript reads of two meetings), Gmail (full
+  history), Google Drive (`search_files` — folder links only, no file contents
+  or credentials copied into this file). No notes yet in Double for this client.
 - 2026-07-30 — **2025 tax return (1120-S) is in progress**, waiting on information from the client
   (Lilian). Two notes on the Double tracking: `Tax Return Status = Not Started` is **stale**, while
   the blank `Organizer Status` is **correct** — as a bookkeeping client no company organizer is owed
@@ -201,12 +253,20 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - [ ] Any business licenses / annual filings
 - [ ] Where credentials live (Drive vault link)
 - [ ] **Whether the firm has its own QuickBooks access to this client independent of the owners' users** — the primary-admin handover in §3 shows the access picture was never written down. Worth settling while someone is in the account.
+- [ ] Primary language; fiscal year-end
+- [ ] Identify the QBO-connected bank account the reviewer didn't recognize
+      (2026-07-22 meeting) — confirm whose account it is
+- [ ] Confirm Turo/personal-vehicle expense scope once Turo earnings/1099
+      access is restored (see §5) and reclassify if needed
+- [ ] Confirm current headcount/status of the Gusto W-2 employees (still active
+      as of this sweep; admin access changed 2026-07-15)
+- [ ] Scope of the affiliated Ukrainian entity relationship (any US
+      cross-border reporting implications for Ecoorganic USA LLC itself)
 - [ ] Resolve the SOP's open decisions: vehicle financing (reconcile the actual RAM truck loans vs the SOP's "Hyundai/Ally"), which accounts are closed, COGS-vs-opex intent
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 - **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover", note **485258** (only the stable title prefix is recorded here; the live title carries a status suffix and a name, which belong in Double) on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
-- **Google Drive folder (sensitive vault):** _(pending — link)_
-- **Google Drive folder (sensitive vault):** [Ecoorganic USA INC folder](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) _(filed as "INC" — a naming variant; same client)_
+- **Google Drive folder (sensitive vault):** [Ecoorganic USA INC](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) — the **primary** folder (filed as "INC", a naming variant; the passwords/credentials doc lives here, values never in this repo) · and [Ecoorganic USA LLC](https://drive.google.com/drive/folders/1NSBtAnwqr307dWCLRANDly4lCIp9t98g) — **secondary**: categorization workbooks, insurance/GL-audit files, the (paused) recurring-expense watchlist _(2026-08-01 sweep)_
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)

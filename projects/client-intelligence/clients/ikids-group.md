@@ -54,6 +54,11 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | **The client's AP mailbox — Gmail** | Where the client's **vendor bills and payment confirmations arrive** (water, insurance, permits, the environmental report…). **The firm has access to it** and works it **every month** — see §4 | _(password pending — client's Drive vault / Double)_ | `ap.ikidsllc@gmail.com` — a **company AP mailbox**, not a person's inbox, and **firm-controlled** (Julia is the account-recovery contact) _(Gmail, 2026-07-23)_. It is the **only** place several of these bills exist: nothing is forwarded to us and the client sends nothing |
+| Business bank accounts (2 — different banks) | Operating cash | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm has signer/payment access to pay vendors from the client's account _(Google Drive, 2026-08-01)_ |
+| FPL | Electric utility for the build-out site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| City of Fort Lauderdale — utility billing | Water bill for the site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| Broward County ePermits | Building-permit applications for the park build-out | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
+| City of Fort Lauderdale "LauderBuild" portal | Permit-fee payment portal | n/a (firm pays via portal) | Firm pays permit fees here as part of hands-on AP _(Gmail, 2026-07-28)_ |
 
 ## 4. Obligations & recurring processes
 
@@ -119,16 +124,18 @@ the actual details.
 - 2026-08-11 — **How this client's bookkeeping actually runs, from Lilian.** The client's **AP mailbox** (§3) is where the vendor bills and payment confirmations arrive, the firm has access to it, and **every month** we must go in, download the bills, and attach them to their payment transactions. The **water bill is on autopay** — nothing to pay, only its paperwork to collect. Recorded here and turned into the client's first bookkeeping runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md). _(Worked by Lilian.)_
 
 - 2026-07-25 — Incremental sweep: no Double/Ping activity in window. Gmail surfaced a concrete hands-on-AP vendor example (East of Collins Expediting) and confirmed the AP inbox is firm-controlled. Recurring-expense monitor (2026-07-20) flagged the QuickBooks subscription and city water bill as not-yet-posted — see outstanding items.
+- 2026-08-01 — **Incremental sweep** (baseline 2026-07-20, inclusive): Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log`) shows **no new notes/activity** on the company record. Ping (`resolve_person` on both owners, org-wide + owner-scoped `search_meetings`, `list_client_meetings`) still finds **no indexed meetings** for iKids or either owner. Gmail (`in:inbox`/`in:sent`, `after:2026/07/20`) surfaced the "LauderBuild" permit-payment portal name and a named permit-expediting vendor (East of Collins Expediting) — both folded into §3/§5. Google Drive folder reviewed for non-sensitive system names only (bank accounts, FPL, water utility, Broward ePermits) — no credentials copied here. QuickBooks (Intuit MCP) not applicable — iKids' QBO ledger is reached through Double, not the firm's directly-connected QuickBooks instance. **Owner-with-several-businesses check:** Andrii Matiukha and Oleksii Balasiuk each carry other Double records (Rest Invest Kids LLC, and each owner's individual 1040 profile) — reviewed at the owner level; no new *iKids-specific* facts surfaced there (Rest Invest Kids LLC's own facts, e.g. it files Form 1120, stay out of this file). Also noted: Andrii Matiukha's duplicate individual Double profile (typo variant, id 719479) was **archived 2026-07-31** — matches FOLLOW-UPS #9, owner-context only, not an iKids fact.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client before the next 1065.
 - **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
 - A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
 - **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
-- Reconcile "landlord water bill" (§5) vs. "City of Fort Lauderdale water — auto-paid" (recurring-expense monitor, 2026-07-20) — same bill or two separate charges?
+- ~~Reconcile "landlord water bill" vs. "City of Fort Lauderdale water — auto-paid"~~ — **answered by Lilian 2026-08-11:** there is **one** water bill, it is the **City of Fort Lauderdale** account, and it is **on autopay**. The old "landlord water bill" wording was wrong and has been corrected in §4/§5.
 - QuickBooks subscription and city water bill were overdue as of the 2026-07-20 mid-month check — confirm whether they posted late.
 - A possible new recurring vendor charge (monthly, since ~May 2026) was flagged by the recurring-expense monitor for review — not yet on the watchlist.
 - AP-inbox Google security alert (new sign-in, 2026-07-23) — confirm it was expected.
+- **Tax-season readiness — organizer status for the two iKids partners is still unresolved** as of 2026-07-30 (FOLLOW-UPS #10): bookkeeping/Schedule-C-style clients get no company organizer, so the real gate is each **owner's personal organizer**; both owners' organizers still need chasing.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_

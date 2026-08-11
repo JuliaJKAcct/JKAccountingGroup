@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-07-30
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -83,11 +83,10 @@ the actual details.
   filing his 2025 individual return through the firm; he **begins filing with us from 2026
   onward**. This lines up with the entity itself (formed late 2025 / S-election Jan 2026, so
   2026 is the first real tax year). _(Lilian, 2026-07-30.)_
-  - ⚠️ **Known bad data in Double, do not be misled:** his individual client (710636) carries a
-    **2026** tax project marked **`wontFileWithUs`**. That is a **data-entry error** — he *will*
-    file 2026 with us. Lilian has seen it and considers it minor, so it is deliberately **not**
-    on the follow-up list. Recorded here only so a future session doesn't read that flag and
-    wrongly drop him from a tax-season list.
+  - ✅ **Resolved:** the individual client's (710636) **2026** tax project mislabel is **fixed** —
+    on 2026-07-30 its status was updated from `wontFileWithUs` to **"Not Started,"** consistent
+    with him filing 2026 with us. The "known bad data" warning that used to live here no longer
+    applies. _(Double activity log, 2026-07-30.)_
   - He has **no 2025 project** on the individual account, which is correct given the above.
   - A completed **2025** organizer PDF does sit in his TaxDome folder, but since we aren't doing
     his 2025 return it's moot; a **fresh organizer will be needed for 2026**.
@@ -96,6 +95,12 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20). Double activity log shows the
+  owner's individual (710636) 2026 tax-project mislabel (`wontFileWithUs`) was corrected to
+  "Not Started" on 2026-07-30 — see §5. Ping (business + owner name, org-wide semantic),
+  Gmail (`in:inbox`/`in:sent`, business name + owner email), and Google Drive turned up nothing
+  else new in scope (Drive files present are all dated before the baseline). No repo mentions
+  (SOPs/FOLLOW-UPS/BACKLOG) beyond the standing index entries.
 - 2026-07-30 — Surfaced while building the tax-readiness list. Resolved the **710636** question
   (it's the owner's individual 1040 account) and captured the **engagement timing** from Lilian:
   his personal return is **not** with us for 2025 and **starts with us in 2026**. Also logged the

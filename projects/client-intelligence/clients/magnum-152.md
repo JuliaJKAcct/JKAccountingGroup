@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-25
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -40,7 +40,7 @@ here. Open the Double client to get the actual details.
 |---|---|
 | Owner / primary contact (also owns Sunoma Inc, plus a separate individual/personal Double client) | Double client (link below) |
 | Administrative assistant (sends monthly bills, reclass records) | Double client (link below) |
-| Third contact — financial-access only, not yet role-confirmed | Double client (link below) |
+| Additional portal contact — financial-access only (bank/store-account related) | Double client (link below) _(Double, 2026-08-01)_ |
 
 - **Double client:** [app.doublehq.com/close?cid=706693](https://app.doublehq.com/close?cid=706693)
 
@@ -54,7 +54,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 | QuickBooks Online (via Double) | Bookkeeping ledger | Maria's doc guide (§7) | Managed through Double |
 | **Bravo (Bravo Pawn Systems)** | Store POS / inventory reports — pulled ~monthly and saved to Drive | Maria's doc guide (§7) | Recurring access/login friction |
 | **SaasAnt** | Import / consolidate GL into QBO | Maria's doc guide (§7) | Recurring SaaS cost on JK's side |
-| **ADP (RUN / Accountant Connect)** | Payroll (run by owner group) → JK reconciles it into the books | Maria's doc guide (§7) | JK does the reconciliation, not the payroll run |
+| **ADP (RUN / Accountant Connect)** | Payroll (run by owner group) → JK reconciles it into the books | Maria's doc guide (§7) | JK does the reconciliation, not the payroll run; **payroll runs weekly** _(Gmail, 2026-07-25)_ |
 | Bank & cards | Reconciliation | Maria's doc guide (§7) | **TD Bank ×5** (5100, 2873, 5093, 5085, 3178), **Chase CC ×2**, **Capital One ×2**, **Amex CC**, **PayPal** (sync broken → monthly JE) |
 
 ## 4. Obligations & recurring processes
@@ -63,7 +63,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **Applies?** No — **N/A** _(Double)_
 
 ### Payroll
-- **Applies?** **Not on JK's side** — the owner group runs **payroll via ADP** ("US Pawn"). JK's role is limited to the monthly **ADP reconciliation** and renaming the ADP journal entries in QBO. _(Maria's doc guide, Gmail)_
+- **Applies?** **Not on JK's side** — the owner group runs **payroll via ADP** ("US Pawn"), on a **weekly** pay cycle. JK's role is limited to the monthly **ADP reconciliation** and renaming the ADP journal entries in QBO. _(Maria's doc guide, Gmail; pay-cycle confirmed Gmail 2026-07-25)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly close**, but **reports go to the client quarterly / on request** (no monthly report needed). This is the group's most time-consuming close; recommendation is to pull Bravo reports in the first 3–5 days of the next month and start early. _(Maria's doc guide, master plan)_
@@ -80,10 +80,11 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
+- **2025 return:** tax project in Double moved from "Not Started" to **In Progress** (2026-07-31); a "JK 2025 Business Tax Organizer - Magnum 152" exists in Double but was reverted to **draft** the same day. _(Double activity log, 2026-07-31)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
-- **Firearms (if carried):** possible FFL / firearms-compliance angle _(low confidence — the "guns and jewelry" categorization + a firearms wholesaler's statements)_.
+- **Firearms (if carried):** possible FFL / firearms-compliance angle — **firearms/ammo wholesaler Davidsons Inc. confirmed as a vendor** on the "US Pawn" side (a firm's own inbox payment-reminder for the client's account), raising confidence above the earlier low-confidence flag. _(Gmail, 2026-07-28)_
 
 ## 5. Key facts & quirks
 
@@ -98,6 +99,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20 → 2026-08-01): Double activity log shows the **Jul-2026 monthly close checklist completed in Double** (per-account bank/CC tasks, uncategorized/duplicate-vendor checks, 1099 prep, financial reports) on 2026-07-23, and the **2025 Form 1120-S tax project moved to In Progress** with its Business Tax Organizer reverted to draft on 2026-07-31. Gmail surfaced a weekly ADP payroll cadence, a Comcast/FPL credential request to the administrative assistant, and a Davidsons (firearms/ammo distributor) vendor relationship. Ping had no legible Magnum-specific meeting content this period (org-wide semantic search returned only unrelated/garbled hits). _(Double, Gmail, Ping — 2026-08-01)_
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 1. Magnum*): full month-end process, bank-feed map, systems (Bravo / SaasAnt / ADP), store structure, and reclass checklist captured into the Operating zone (non-sensitive only; credentials/dollar figures left in Drive). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
@@ -108,6 +110,8 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **Inventory-donation tax treatment — still open, not resolved:** JK advised on the deduction at fair market value; as of 2026-07-23 the administrative assistant is still gathering items and pickup hasn't been scheduled yet. _(Gmail)_
 - A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — confirm received. _(Gmail)_
 - **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE (waiting on info). _(Maria's doc guide)_
+- **Comcast / FPL login credentials requested** from the administrative assistant (Jul 30) so JK can verify these reclasses directly instead of relying on statements; confirm received. _(Gmail, 2026-07-30/31)_
+- **2025 Business Tax Organizer** ("JK 2025 Business Tax Organizer - Magnum 152") was reverted to draft in Double on 2026-07-31 — confirm why/whether it should be republished, since the client's Organizer Status property reads "N/A (BK client)". _(Double activity log, 2026-07-31)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group structure
