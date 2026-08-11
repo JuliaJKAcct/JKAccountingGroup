@@ -72,7 +72,9 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping. ⚠️ **BOTH company bank accounts are DISCONNECTED from QuickBooks**, so the transactions since the disconnection never loaded. **Only the client can reconnect them** — the "**Fix now**" prompt in his own QuickBooks. Asked 2026-08-04 and again 2026-08-05; **no confirmation received as of 2026-08-06 — verify in QuickBooks before chasing again**, the firm has user access (§6) |
+| QuickBooks Online (Gossip Miami) | The client's ledger — the firm has **user access only**, granted 2026-07-29, to build the P&L | _(n/a — the firm is an invited user)_ | Access was granted **for the financial-statement work**, not for ongoing bookkeeping. ⚠️ **BOTH company bank accounts are DISCONNECTED**, so the transactions since never loaded. **Only the client can reconnect** — the "**Fix now**" prompt in his own QuickBooks. **Update 2026-08-11: only ONE of the two can ever be reconnected** — the checking account is closed; the client said he would reconnect **the credit card**. **Verify in QuickBooks before chasing again**, the firm has user access (§6) |
+| Company checking — TD Bank ····7734 | Operating account | _(not in the repo)_ | ⚠️ **CLOSED** _(client, 2026-08-11)_. **Closing date unknown**, and our statements stop at **2025-12-10** — the account can't be reconnected, so the **statements through closure are the only route** to what happened after that date |
+| Company credit card ····8817 | The other 2025 payment channel | _(not in the repo)_ | **Still open**, and ⚠️ **now used by the owner PERSONALLY** _(client, 2026-08-11)_ — **from what date is unknown**. Statement cycle closes on the **3rd**. Once the feed is reconnected it will import **personal** transactions into the company file: see the §5 rule before booking any of them |
 | Bank statements | The raw material for the financial statements | _(not in the repo — sent by email/portal)_ | 2025 statements supplied for **Gossip Miami** and, separately and unprompted, for **Marat Boxing** (§4) |
 | Vagaro | The salon's booking/marketing platform _(inferred from a Vagaro email sent on the salon's behalf — never seen or used by the firm)_ | _(n/a — no firm access)_ | May or may not be a revenue source the books need; **nobody has looked**. Don't go hunting for a Vagaro export on the strength of this row |
 | TaxDome portal | Organizers, document requests, signatures | _(n/a — firm platform)_ | The 2025 individual organizer runs here |
@@ -132,6 +134,22 @@ own records, and **all of it is his to produce**:
 **The live, dated status of each of these — asked, received, still missing — lives in §6.** Don't
 duplicate it here; a request list goes stale, this list doesn't.
 
+### 1099 reporting for 2025 — now live, and the firm has nothing to file it with
+
+- **Applies?** **Yes, at least once.** The client confirmed on 2026-08-11 that the repeated
+  identical checks to one individual were **payments to a contractor** — many of them, each far
+  above the $600 reporting floor, paid by the company to a person (not a corporation, as far as we
+  know). That is a **1099-NEC** for 2025 unless something we don't know about disqualifies it.
+- **What's missing:** a **W-9** for that payee — his TIN and his tax classification. Without it the
+  form can't be prepared, and the client has never been asked for one _(§6)_. **The classification
+  matters as much as the number:** a corporation would take it out of 1099-NEC territory entirely.
+- **Watch for a second one.** The cleanup surfaced this payee because the payments repeat; a
+  one-off contractor above the floor would not stand out the same way. **When the categorization
+  finishes, sweep the year for any other individual paid $600+** before concluding there is only one.
+- **Timing:** 1099-NEC is due to the recipient and the IRS by **31 January** — long past for 2025,
+  so this is **late**, and the sooner the W-9 is requested the better. _(Penalty exposure not
+  assessed here — raise it with Lilian rather than assuming.)_
+
 ### Sales tax
 - **Applies?** _(pending — confirm; a salon's services and retail product sales may differ)_
 
@@ -155,7 +173,15 @@ duplicate it here; a request list goes stale, this list doesn't.
 - **A recurring payment to an individual has to be identified before it's categorized** — the same
   round sum going out repeatedly can be contractor work or rent, and the answer decides both the
   expense account and which **1099**, if any, the client owes for the year. Ask; don't infer it from
-  the amount.
+  the amount. _(Asked 2026-08-11, answered the same day: **contractor** — so a 1099-NEC is in play,
+  §4.)_
+- ⚠️ **The company credit card outlived the business, and is now the owner's personal card**
+  _(client, 2026-08-11)_ — **the date it changed use is unknown.** Two consequences, both easy to
+  get wrong: **(1)** once the feed is reconnected, QuickBooks will pull in **personal** spending on a
+  card the company file treats as its own — those transactions are **not** company expenses and must
+  not be booked as such; **(2)** the same card is a legitimate business account for the earlier part
+  of 2025, so **the cut-off date is what separates the two**, and nobody has it yet. **Get the date
+  before categorizing anything on that card past the sale.**
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -177,16 +203,27 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-06 — **The address question is closed as not-answerable (Lilian):** she believes the company-side address is the **wife's**, but **the couple appear to use the same email addresses** to write to the firm, so individual messages can't be attributed. Recorded so nobody spends time on it — when a signature or an owner-specific answer is needed, **ask in the message who is answering**. **One line in the Double note was updated** so it doesn't send anyone chasing a closed question; **nothing else there was touched**, per her "leave things as they are in Double" — the edit was flagged back to her rather than assumed.
 - 2026-08-06 — **Ownership settled (Lilian):** the **wife is the sole owner of Gossip Miami**, the **husband owns Marat Boxing**. That explains why only one portal contact sits on the company record and resolves the "are these two roles one person" question — they are two people, but one address carries all the company-side correspondence. One address carries all the company-side correspondence, treated as the couple's shared channel — **closed as not-answerable**, see the entry above (§2).
   - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation. **Still true after the 2026-08-11 email** — that one asked questions, not documents.
-- 2026-08-11 — **Questions to the client out of the 2025 cleanup review** _(raised internally by Maria, who is doing the cleanup; drafted for Lilian and going to the client under her name — **the client is not told who inside the firm raised them**, §5)_. One short email in Russian, plain wording, bullet points, no explanation of our process. Two things asked:
+- 2026-08-11 — **Questions to the client out of the 2025 cleanup review** _(raised internally by Maria, who is doing the cleanup; drafted for Lilian and **sent under her name at 19:07 UTC** — **the client is not told who inside the firm raised them**, §5)_. One short email in Russian, plain wording, bullet points, no explanation of our process. Two things asked:
   - **(a) What happened after 2025-12-03 (credit card) and 2025-12-10 (checking)?** Those dates are **where our information on the accounts stops — not a date on which anything was proven to end.** Past them we have nothing at all: no statements were sent, and the QuickBooks feeds are disconnected, so the transactions never loaded either. The year is not over on those dates, so the return can't be prepared until we know. **The ask has two branches: if there was no activity, they confirm that; if there was, we need the statements for that period _and_ both QuickBooks accounts reconnected.** _(Lilian, 2026-08-11: don't ask them to explain why they can't reconnect or offer help — just ask them to try if there was activity. The client should be given one clear action, not a negotiation.)_
   - **(b) What five transactions were for:** two same-day card purchases at a North Miami Beach merchant (2025-09-22), an online **government/permit** payment via EGOV COM (2025-10-03), a **deposit** (2025-11-13) that may or may not be sales, and the **repeated identical checks to one individual payee** — **contractor work or rent?** _(That last one drives the expense account and the **1099** treatment, §5.)_
   - The Double case note **485291** was updated in the same pass — its STATUS and PENDING now carry these questions. Amounts, the payee's name and the merchant lines live there, not here.
+- 2026-08-11 — ✅ **THE CLIENT REPLIED — six minutes after the email went out** _(Gmail, in Russian, Julia copied)_. What he said, in his own terms:
+  - **Credit card ····8817 — still active**, and **Yuliana now uses it for personal purposes**. He said he would **reconnect the card to QuickBooks** himself.
+  - **Checking ····7734 — the account is CLOSED.** No date given.
+  - **The EGOV COM payment (03.10.2025)** — the **renewal of one of the permits**.
+  - **The repeated checks to the individual payee** — **payment to a contractor**, not rent.
+  - **The other three — two card purchases on 22.09.2025 and the 13.11.2025 deposit — he is checking**, and promised an answer shortly.
+  - **What this changes for us, in order of consequence:** the QuickBooks ask is now **one account, not two** (a closed account can't be reconnected — for the checking account only the **statements through closure** exist, and we don't have the closing date); the **1099** question is answered and a **W-9** is now needed (§4, a new obligation section); and the card being **personal now** puts a **cut-off date** between business and personal spending that nobody has yet (§5). **The client volunteered none of these three facts before being asked** — a reminder of how much this engagement depends on asking directly.
 - 2026-08-11 — ⚠️ **The business was SOLD** _(Lilian, in conversation)_. Recorded in §1 and §4 because it changes what the return has to be: possibly a **final** one, with the sale itself to report. **Nothing about it is documented** — date, structure, price, allocation, final year — and the firm has seen no closing documents. It is also the likeliest reason account activity appears to stop in December 2025, which is what the client is being asked to confirm above. **Ask for the closing documents before preparing the return.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **WAITING ON THE CLIENT — the remaining bank documents.** ✅ **Received 2026-08-05:** the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03). **Still missing:** the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, the **photos of the checks the company wrote + the cash-deposit slips**, and the **reconnection of both QuickBooks bank feeds** (only he can do that). Asked 2026-08-04 and restated 2026-08-05.
-- **WAITING ON THE CLIENT — answers to the 2026-08-11 questions** (§6 log): **what happened on both accounts after the last statement we hold** (nothing, or activity → statements + reconnect QuickBooks), and the **purpose of five transactions**, including whether the recurring payments to one individual are **contractor work or rent**. Until that last one is answered the cleanup can't finish the categorization, and the **1099** position for the year is undecided.
+- **WAITING ON THE CLIENT — the check images.** The **photos of the checks the company wrote + the cash-deposit slips**, asked 2026-08-04 and restated 2026-08-05. ✅ Already received 2026-08-05: the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03) — **don't re-chase those**.
+  - ⚠️ **The rest of that original list was overtaken by the client's 2026-08-11 answers** — "reconnect **both** accounts" and "the December 2025 + January 2026 **checking** statements" are no longer the right asks, because that account is closed. The three items below replace it. **Read those, not this row, when writing the next email.**
+- **WAITING ON THE CLIENT — the three transactions he is still checking** (two card purchases 2025-09-22, the 2025-11-13 deposit). He answered everything else the same day; these he promised "shortly" _(2026-08-11)_.
+- **WAITING ON THE CLIENT — the closed checking account.** ····7734 is **closed** and therefore cannot be reconnected: we need the **closing date** and the **statements from 2025-12-10 through closure**. Nothing after 2025-12-10 has ever been seen.
+- **WAITING ON THE CLIENT — the credit card.** The statements after 2025-12-03 (January 2026 included), and the **reconnection he said he would do**. Then the **date business use ended** (§5) before anything on that card is categorized past the sale.
+- **NOT YET ASKED — a W-9 for the contractor.** The 1099-NEC for 2025 can't be prepared without it and is already late (§4). **This is the firm's next outbound ask, and it hasn't been made.**
 - **THE SALE — the biggest open item on this engagement, and the newest.** Get the closing documents; until then it is unknown whether the 2025 business return is a **final** return and what the sale itself has to report (§1, §4).
 - **The piece he committed to verbally: going to the bank for the check images** — deposited into the company and issued by it — and he said he would try _(Lilian, 2026-08-06)_. **The incoming-check half has never been asked for in writing** (see the log); put it in the next email so it isn't lost.
 - **So the 10-hour cap is not what's binding right now — the missing documents are.** Track the hours, but don't read a stalled clock as work left to do.
@@ -199,7 +236,8 @@ duplicate it here; a request list goes stale, this list doesn't.
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
 - [x] Whose email address the single company-side contact is — **answered 2026-08-06: not answerable.** The couple appear to share addresses, so no message can be attributed per person; ask in the message when it matters (§2)
 - [ ] **The sale of the business** — date, structure (assets vs membership interest), price and its allocation, and whether **2025 or 2026 is the final year**. Closing documents not yet requested from the client
-- [ ] Whether the **recurring payments to one individual** are contractor work or rent — and, if contractor, whether a **W-9** is on file so a 1099 can be issued (asked 2026-08-11)
+- [x] Whether the **recurring payments to one individual** are contractor work or rent — **answered 2026-08-11: contractor.** The follow-on is open: **no W-9**, so the 2025 1099-NEC can't be prepared (§4)
+- [ ] **The closing date of the checking account**, and **the date the credit card stopped being business use** — the two cut-offs that decide what belongs in the 2025 books (§3, §5)
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
 - [ ] Where the client's Google Drive folder is (§7)
