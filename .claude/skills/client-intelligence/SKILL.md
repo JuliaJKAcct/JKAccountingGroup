@@ -109,12 +109,16 @@ see the boundary rule in the [`double-mcp`](../double-mcp/) skill §7.
 
 Rule 1's "two data homes" bans secrets and personal data. **Organizer responses are barred more
 broadly than that** — not just the identity block, but **what the client answered**:
-*"he selected None of the above"*, *"he answered no to dependants"*, *"he declined direct
-deposit"*. None of those is an identifier and all of them are barred
+*"she ticked only Wages"*, *"they answered yes to owning rental property"*, *"he asked us to hold
+the refund as a credit"* (invented examples, deliberately). None of those is an identifier and all
+of them are barred
 ([`double-mcp`](../double-mcp/) §2.2, exposure point 2).
 
-**Write the action, not the answer.** *"Confirm which income types he actually had in 2025"* tells
-the team everything it needs and states nothing he said. Point at the Double organizer for the
+**Write the action, not the answer.** *"Confirm which income types she actually had this year"*
+tells the team everything it needs and states nothing she said. **And watch the paraphrase** —
+*"her answers point the other way"* or *"nothing on file supports that"* leaks the answer just as
+effectively as quoting it. If a sentence would change when the client's answer changes, it is
+still the answer. Point at the Double organizer for the
 answers; they are already in their proper home.
 
 **Why this is stricter here than anywhere else:** `clients/*.md` is **auto-published**. The

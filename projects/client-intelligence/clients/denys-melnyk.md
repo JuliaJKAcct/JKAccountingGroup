@@ -20,9 +20,9 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
-- **Home state:** ⚠️ **He moves, and the states matter.** His **2024** return was filed as a **Montana resident** **plus an Illinois nonresident/part-year return** — most of his 2024 income was Illinois-sourced through his companies. He was in **Florida** by the time he became our client, and his 2025 answers point only at no-income-tax states. Since the 2024 return was signed from a Montana address in **May 2025**, a **Montana part-year** return for 2025 is likely, and **Illinois** probably recurs while the companies operate there. **Establish the 2025 states month by month before concluding there is no state return** — getting this wrong is a filing failure, not a missed deduction.
+- **Home state:** ⚠️ **He moves, and the states matter.** His **2024** return was filed as a **Montana resident** **plus an Illinois nonresident/part-year return** — most of his 2024 income was Illinois-sourced through his companies. He was in **Florida** by the time he became our client. Since the 2024 return was signed from a Montana address in **May 2025**, a **Montana part-year** return for 2025 is likely, and **Illinois** probably recurs while the companies operate there. **Establish the 2025 states month by month before concluding there is no state return** — getting this wrong is a filing failure, not a missed deduction.
 - **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer.
-- **Household / filing status:** **Married filing jointly** (2024, and married as of 31 Dec 2025). ⚠️ **Three sources disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); his **voice note of Aug 2026** says *"married and have two children"* and that he pays **child support**; his **2025 organizer points a third way** (the answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
+- **Household / filing status:** **Married filing jointly** (2024, and married as of 31 Dec 2025). ⚠️ **Three sources disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); his **voice note of Aug 2026** says *"married and have two children"* and that he pays **child support**; his **2025 organizer tells it differently again** (the answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** _(pending)_ — the organizer was completed in English; surname suggests UA/RU, unconfirmed.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
@@ -117,8 +117,8 @@ reached that question. **So do not chase him for it; it is already here.** He ch
 mid-2025, so any allocation probably has to cover two homes — and it only matters at all once the
 Schedule C question above is settled.
 
-**Rent or mortgage — establish which, and for which home.** His Double note says he pays **rent**;
-his housing deduction answers point the other way, and no Form 1098 is on file. Both can be true
+**Rent or mortgage — establish which, and for which home.** His Double note says he pays **rent**, and no
+Form 1098 is on file. Both can be true
 (two properties, or the mid-year move), so this is a question, not a discrepancy to resolve on
 paper. It also gates the home-office allocation.
 
@@ -179,19 +179,18 @@ repo — they are on the return and in Double.)
 claimed **one dependent daughter** with both the **Earned Income Credit** and the **Additional
 Child Tax Credit** — EIC and ACTC require the child to have lived with them **more than half the
 year**, so as of 2024 she did. His voice note of Aug 2026 says **two children** and **child
-support**. His 2025 organizer points a third way. Nothing in that is alarming on its own —
+support**. His 2025 organizer tells it differently again. Nothing in that is alarming on its own —
 circumstances change and he is not an accountant — but it has to be settled **per child**: who
 they live with now, since when, and whether a Form 8332 release exists. If nothing actually
-changed, the answers on file would cost him the **Child Tax Credit**. (EIC is a separate question:
+changed, what is on file today would cost him the **Child Tax Credit**. (EIC is a separate question:
 it was available in 2024 on a deeply negative AGI, and looks unlikely for 2025 if his income is
 materially higher — confirm once the Midwest question is settled rather than assuming either way.)
 
-**Two identity-adjacent fields need correcting before the return** — his stated occupation, and
-the spouse's occupation field, neither of which currently describes what they do. Correct them in
-Double.
+**Establish what he and his wife each actually do**, in words that can go on a return — the
+occupation fields we hold for both are not usable as they stand. Correct them in Double.
 
-**Confirm how he wants a refund paid.** Nothing on file sets up direct deposit, so a refund would
-arrive as a paper check. Probably deliberate; worth one question rather than an assumption.
+**Confirm how he wants a refund paid** — bank details for direct deposit, or a paper check. We do
+not have banking details for him. Worth one question rather than an assumption.
 
 **What goes in the Double note — and what does not.** Lilian's instruction, 2026-08-11:
 this client's Double note carries **what the client gives us and what the team needs in
@@ -210,7 +209,7 @@ particular finding earns a place there.
 - _(2026-08-05)_ — Client sent his income and expense summary **by voice message**, not through the portal.
 - _(2026-08-06, Lilian)_ — Captured that summary in the Double note **"2025 Tax Preparation - P&L and other info"**. The client's completed **Home Office Deduction template** was filed in Double under `Others > 2025`.
 - _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; an upstream answer in the income section suppressed the document requests below it; two documents genuinely outstanding (1095-A, 1098) versus two already supplied **outside** the organizer and therefore not to be chased (the home-office template, and the P&L data by voice). Client file created the same day. Findings deliberately kept out of the Double note (§5).
-- _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024, and neither state has come up for 2025; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit**, which his 2025 answers do not support. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
+- _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024, and neither state has come up for 2025; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit**, which needs re-establishing for 2025. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -234,7 +233,7 @@ The re-ask list for the client, in priority order:
 - **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
 - **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
-- **Children / custody** — how many, who they live with **now versus in 2024**, and whether a Form 8332 release exists. His 2024 return claimed one daughter with EIC and the child tax credit; his 2025 answers do not support that. Determines whether the Child Tax Credit is available.
+- **Children / custody** — how many, who they live with **now versus in 2024**, and whether a Form 8332 release exists. His 2024 return claimed one daughter with EIC and the child tax credit; that needs re-establishing for 2025. Determines whether the Child Tax Credit is available.
 - **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).
 - **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.

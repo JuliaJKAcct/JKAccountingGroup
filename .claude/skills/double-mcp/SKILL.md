@@ -224,14 +224,17 @@ is not itself the danger. These are:
 2. **A commit or a PR.** The repo rule is unchanged and absolute: nothing from an organizer
    response is ever committed.
    **This bites in a way that is easy to miss, so it is spelled out.** It is not only about
-   identifiers. **A client's answer is itself organizer-response content** — *"he selected None of
-   the above for income types"*, *"he answered no to dependants"*, *"he declined direct deposit"*
-   are all barred from the repo even though not one of them is an identifier. This was learned by
+   identifiers. **A client's answer is itself organizer-response content** — *"she ticked only
+   Wages as her income type"*, *"they answered yes to owning rental property"*, *"he asked us to
+   hold the refund as a credit"* are all barred from the repo even though not one of them is an
+   identifier. (Invented illustrations on purpose — a real client's answers cannot be used to
+   explain the rule against writing down a real client's answers.) This was learned by
    doing it wrong: the first cross-year analysis (2026-08-11) wrote exactly those sentences into a
    client-intelligence file and an independent review caught it before merge.
    **What to write instead:** the **action** the answer generates, not the answer.
-   *"Confirm which income types he actually had in 2025"* carries everything the team needs and
-   states nothing he said. Point at Double for the answers themselves — they are already there,
+   *"Confirm which income types she actually had this year"* carries everything the team needs and
+   states nothing she said. Beware the paraphrase: *"her answers point the other way"* reports the
+   content of an answer just as surely as quoting it. Point at Double for the answers themselves — they are already there,
    in their proper home, and the repo file's job is the re-ask list.
    ⚠️ **And the reason this is stricter than it looks:** a `clients/*.md` file is **auto-published**.
    `projects/knowledge-hub/build-hub.mjs` loads **every** file in `clients/` with no allowlist, so
@@ -696,8 +699,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    *"sería complicar demasiado esas notas"*, and a note that turns into an analysis document is a
    note the team stops reading.
    **The line, because "finding" is ambiguous and §2.2 uses the word the other way:** what the
-   client's own data **shows** may go in a note — *"no K-1 this year; 2024 had one"*, *"the 1095-A
-   has not arrived"*, *"he reports paying rent but claimed mortgage interest"*. That is §2.2's
+   client's own data **shows** may go in a note — *"no K-1 this year; last year had one"*, *"the
+   W-2 they told us about has not arrived"*, *"the address they gave us differs from the one on
+   file"*. That is §2.2's
    worked example and it stays welcome. What may **not** go in is our **verdict on it** — *"the
    organizer is unusable as filed"*, *"this looks like a basis problem"*, *"we should reclassify
    these as corporate expenses"*. Observation to the note; judgement to the file. When a single
