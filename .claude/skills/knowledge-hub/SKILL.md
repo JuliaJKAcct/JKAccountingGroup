@@ -188,7 +188,9 @@ emitted script silently broke *every* click.
     can't touch the Hub. **Never a hand-copied duplicate.** Because the Hub is a deterministic build
     of that source, there is exactly **one** version and the Hub always shows the latest. **Standing
     rule: whenever a tool's `.src.html` changes, rebuild AND republish the Hub — unprompted — so the
-    Hub never lags the tool**
+    Hub never lags the tool** (publish from merged `main` as the **last** step, per the publish flow
+    below: keep the one canonical Hub link current, never mint a new one). Lilian wants the Hub to be the single place she
+    can see every tool we've built, with no scattered or divergent copies.
 
     > ### ⛔ Before ANY rebuild: clients' tax detail is not to be published
     >
@@ -197,7 +199,9 @@ emitted script silently broke *every* click.
     > questions put to a client and their answers) because she wants to be able to ask later *"what
     > happened with this client's 2025 taxes?"*.
     >
-    > **`build-hub.mjs` hard-aborts** when any `clients/*.md` carries a `### Tax year` heading. That
+    > **`loadClients()` hard-aborts** when any `clients/*.md` carries a `Tax year YYYY` heading — the gate
+    > is in the shared loader (`client-intelligence/render/build.mjs`), not here, so the CI review
+    > dashboard (published as an **Artifact**) inherits it too. That
     > is deliberate: the standing "rebuild unprompted" rule above is exactly how this would have been
     > published by accident. `HUB_ALLOW_CLIENT_TAX_DETAIL=1` overrides it — only as a decision, never
     > to get past the error.
@@ -209,9 +213,9 @@ emitted script silently broke *every* click.
     > list**, which is where a session naturally puts its sharpest findings. Check those two places.
     >
     > The gate retires when `clientCard()` filters deliberately — see
-    > [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md), "Knowledge Hub vs. client tax detail". (publish from merged `main` as the **last** step, per the publish flow
-    below: keep the one canonical Hub link current, never mint a new one). Lilian wants the Hub to be the single place she
-    can see every tool we've built, with no scattered or divergent copies. **To add a new tool:**
+    > [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md), "Knowledge Hub vs. client tax detail".
+
+    **To add a new tool:**
     embed its `.src.html` as a reader — either the `it.<flag>` → `…ReaderInner` wiring (like the
     engagement letter) or the reusable `inlineToolDoc()` + `toolIframe()` + a `readerDocs.push`
     with a chosen `data-doc` id (like the pricing calculator / monthly proposal) — then add one

@@ -1387,33 +1387,9 @@ const hubSopMeta = new Map(SOP_GROUPS.flatMap((g) => g.items).map((it) => [basen
 const clients = loadClients(repoRoot);
 const clientBySlug = new Map(clients.map((c) => [c.slug, c.title]));
 
-/* ---------------- GATE: clients' tax detail must not reach the Hub ----------------
-   Lilian's decision, 2026-08-11: the Hub does not carry clients' tax information.
-   Client files now hold a "### Tax year YYYY — the review" entry (the questions put to a
-   client and their answers), and clientCard() publishes §5's first four top-level bullets
-   and §6 "Outstanding items"' first four — which is where a tax-year review's content
-   lands if a session puts it there. Prose in a skill is not a lock; this is.
-   See FOLLOW-UPS.md ("Knowledge Hub vs. client tax detail") for the decision that
-   retires this gate: it stays until clientCard() filters deliberately. */
-{
-  const offenders = [];
-  for (const c of clients) {
-    const raw = readFileSync(resolve(repoRoot, 'projects/client-intelligence/clients', `${c.slug}.md`), 'utf8');
-    if (/^###\s+Tax year\s+\d{4}/m.test(raw)) offenders.push(c.slug);
-  }
-  if (offenders.length && process.env.HUB_ALLOW_CLIENT_TAX_DETAIL !== '1') {
-    console.error(
-      `\nBUILD STOPPED — a client file carries a tax-year review, and the Hub is not to publish clients' tax information.\n` +
-      `  Affected: ${offenders.join(', ')}\n` +
-      `  What clientCard() actually publishes: §1 snapshot fields, §5's first FOUR top-level bullets,\n` +
-      `  §6 "Outstanding items"' first FOUR bullets, a count of open "Information still needed", and §7 links.\n` +
-      `  So check those specific places before publishing — not the tax-year section, which the card never reads.\n` +
-      `  Decide the filter first (FOLLOW-UPS.md, "Knowledge Hub vs. client tax detail"), then remove this gate.\n` +
-      `  To publish anyway, deliberately: HUB_ALLOW_CLIENT_TAX_DETAIL=1\n`
-    );
-    process.exit(1);
-  }
-}
+/* The clients' tax-detail gate lives in loadClients() (client-intelligence/render/build.mjs)
+   so BOTH publishing paths inherit it — this Hub build and the CI review dashboard, which
+   ships as an Artifact. See the knowledge-hub skill, rule 12. */
 
 let sopCount = 0;
 const hubSopTitles = {};   // id → title, so client-card "Related SOP" links open the in-Hub reader (never a repo link)

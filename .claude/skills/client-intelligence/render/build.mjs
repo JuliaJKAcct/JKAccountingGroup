@@ -216,9 +216,38 @@ const SYS = [
 /* ---------------- load + parse all clients (reusable) ---------------- */
 let bySlug = {};   // module-level; set by loadClients(), read by card()
 
+/* GATE — clients' tax detail is not published. Lilian's decision, 2026-08-11.
+   It lives HERE, in the shared loader, because there are two consumers and both publish:
+   the Knowledge Hub (projects/knowledge-hub/build-hub.mjs) and this file's own review
+   dashboard, which ships as an Artifact — a hosted web page, double-mcp §2.2 exposure
+   point 1, the worst one. A gate in only one of them is not a gate.
+   What actually reaches a page is clientCard(): §1 snapshot fields, §5's first FOUR
+   top-level bullets, §6 "Outstanding items"' first FOUR, a COUNT of open "Information
+   still needed", and §7 links — not the whole file, and not the tax-year section itself.
+   So the exposure is the top of §5 and the top of the re-ask list; check those.
+   Retires when clientCard() filters deliberately — FOLLOW-UPS, "Knowledge Hub vs. client
+   tax detail". Override deliberately with HUB_ALLOW_CLIENT_TAX_DETAIL=1. */
+function assertNoClientTaxDetail(files, clientsDir){
+  if (process.env.HUB_ALLOW_CLIENT_TAX_DETAIL === '1') return;
+  const offenders = files.filter(f =>
+    /^#{2,4}\s+tax year\s+\d{4}/im.test(readFileSync(resolve(clientsDir, f), 'utf8')));
+  if (!offenders.length) return;
+  console.error(
+    `\nBUILD STOPPED — a client file carries a tax-year review, and clients' tax information` +
+    ` is not to be published.\n  Affected: ${offenders.map(f=>f.replace(/\.md$/,'')).join(', ')}\n` +
+    `  This gate covers BOTH publishing paths: the Knowledge Hub and this review dashboard` +
+    ` (which ships as an Artifact).\n` +
+    `  What a card publishes: §1 fields, §5's first FOUR bullets, §6 Outstanding-items' first FOUR,` +
+    ` a count, §7 links.\n  Check those, not the tax-year section — the card never reads it.\n` +
+    `  Decide the filter first (FOLLOW-UPS: "Knowledge Hub vs. client tax detail").\n` +
+    `  To publish anyway, deliberately: HUB_ALLOW_CLIENT_TAX_DETAIL=1\n`);
+  process.exit(1);
+}
+
 export function loadClients(repoRoot){
   const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
   const files = readdirSync(clientsDir).filter(f=>f.endsWith('.md')).sort();
+  assertNoClientTaxDetail(files, clientsDir);
   const clients = files.map(f=>{
     const slug = f.replace(/\.md$/,'');
     const md = readFileSync(resolve(clientsDir,f),'utf8');

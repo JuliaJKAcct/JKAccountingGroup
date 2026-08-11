@@ -471,8 +471,10 @@ when we ask.
 
 ⚠️ **Client files feed the Knowledge Hub build, and Lilian's standing decision (2026-08-11)
 is that the Hub is not to carry clients' tax detail.** **What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
-The build now **hard-aborts** when a client file carries a `### Tax year` heading; see the
-[`knowledge-hub`](../knowledge-hub/) skill and [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+**`loadClients()` hard-aborts** when a client file carries a `Tax year YYYY` heading — the gate sits
+in the shared loader, so **both** publishing paths inherit it: the Hub, and the client-intelligence
+review dashboard, which ships as an Artifact. See the [`knowledge-hub`](../knowledge-hub/) skill and
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 ---
 
