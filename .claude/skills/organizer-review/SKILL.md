@@ -121,7 +121,10 @@ an estimated-payment pattern.
 > - **Married at year end** — and a **surviving spouse** is generally treated as married for
 >   the year of the death, so a bereavement does not automatically change that year's status.
 >   **They may then qualify as Qualifying Surviving Spouse for the TWO years after**, which
->   carries joint rates and the joint standard deduction. ⚠️ **Nothing will tell you this** —
+>   carries joint rates and the joint standard deduction. **Its own conditions, so nobody
+>   applies it off the death alone:** a **dependent child living in the home**, the taxpayer
+>   paying **more than half** the cost of keeping that home up, **not remarried**, and having
+>   been eligible to file jointly in the year of the death. ⚠️ **Nothing will tell you this** —
 >   the firm's organizer has no Widowed option at all (see
 >   [`individual-organizer-logic-defects.md`](../tax-season-readiness/references/individual-organizer-logic-defects.md)),
 >   so it only ever surfaces from the client's own description. That is precisely why this
