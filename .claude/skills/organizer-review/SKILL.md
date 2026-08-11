@@ -81,7 +81,11 @@ Ask for it — the pilot proved it is where the value is.
 
 ## 2. What to look for — the six detection families
 
-Run all six. They are ordered by how often they bite.
+Run all six. Families 1–5 are roughly ordered by how often they bite. **Family 6 is last
+only because it applies to fewer clients, not because it matters less** — and it is a
+different kind of check: 1–5 detect against evidence in front of you, 6 derives from what
+you know about the client's structure and has no trigger at all. It is the one that
+catches an entire missing entity return.
 
 **1 · Disappearances — the highest-value family.** Something on last year's return or
 organizer that is absent this year. **Each one is a question, never a conclusion.**
@@ -112,10 +116,10 @@ So the finding is **never** that the organizer failed, and never that questions 
 > bank statements she sent show deposits from the same tenant this year.")*
 
 ⚠️ **Wording matters, and Lilian set this rule specifically (2026-08-11)** after a review
-described the situation as though the organizer had gone wrong. It had not — the client
-had simply indicated they had none of that kind of income, and the organizer correctly
-stopped asking about it. Phrasing it as a defect makes a colleague distrust a tool that is
-working, and makes the client look at fault when they are not. **The organizer did the
+described the situation as though the organizer had gone wrong. It had not — an upstream
+answer legitimately closed the branch beneath it, and the organizer correctly stopped
+asking. Phrasing it as a defect makes a colleague distrust a tool that is working, and
+makes the client look at fault when they are not. **The organizer did the
 right thing with the answer it was given.** Our job is to notice that the answer looks
 wrong against the other five sources, and to put the questions to the client ourselves.
 
@@ -245,8 +249,12 @@ gates it, and how many questions the client owes. Nothing else.
 
 The comparison table built in §3, in full, with its markers. **It goes in the output, not
 just in your head** — it is the fastest thing in the review to read, and it is what a
-second preparer checks your findings against. Every ⚠️ and ❓ in it must appear in a
-finding below; if one does not, the grouping missed it.
+second preparer checks your findings against.
+
+**Every ⚠️ and ❓ must be *accounted for* by a finding below — several rows will usually
+map to ONE finding**, which is the whole point of grouping. A row that maps to none means
+the grouping missed it. Do not read this as one marker, one finding: that produces exactly
+the padded list Block C's five-to-eight limit exists to prevent.
 
 ### Block C — Findings, grouped by root cause
 
@@ -355,8 +363,9 @@ reason behind a neutral question wastes the exchange: a client who does not know
 are asking has no idea how much detail you need.
 
 **Ask, don't diagnose — but do show your working.** Never tell them what is *wrong* with
-their answer (*"you failed to report your dependants"*); do tell them **which records you
-are comparing and what does not line up**. The first puts them on the defensive; the
+their answer *(invented illustration: "you failed to report your rental income")*; do tell
+them **which records you are comparing and what does not line up** *("last year's return
+reported rent from the Oak Street property, and this year it isn't there")*. The first puts them on the defensive; the
 second recruits them.
 
 Use this shape for every ⚠️ and ❓ in Block B. It is what turns a comparison table into a
