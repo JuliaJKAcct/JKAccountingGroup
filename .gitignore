@@ -1,3 +1,6 @@
 # Python bytecode cache (e.g. from running/compiling skill scripts)
 __pycache__/
 *.pyc
+
+# Per-person Claude settings (permissions differ by teammate — never shared)
+.claude/settings.local.json
