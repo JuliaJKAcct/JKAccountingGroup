@@ -136,6 +136,13 @@ the actual details.
 - A possible new recurring vendor charge (monthly, since ~May 2026) was flagged by the recurring-expense monitor for review — not yet on the watchlist.
 - AP-inbox Google security alert (new sign-in, 2026-07-23) — confirm it was expected.
 - **Tax-season readiness — organizer status for the two iKids partners is still unresolved** as of 2026-07-30 (FOLLOW-UPS #10): bookkeeping/Schedule-C-style clients get no company organizer, so the real gate is each **owner's personal organizer**; both owners' organizers still need chasing.
+- 2026-08-08 — **Weekend sweep (incremental, from 2026-07-20):** Double's **"2025 Taxes" tax project status was changed from In Progress back to Not Started** (activity log, 2026-08-04, by Julia) — worth reconciling against the "1065 extension appears filed" note below. Confirmed each co-owner also has an individual 1040 profile in Double, and found continuing LauderBuild/permit-expediter activity in Gmail (both added to §5). Ping org-wide meeting search returned no relevant/legible content for this client.
+
+### Outstanding items (CI-only — never in the SOP)
+- **Second nonresident partner's ITIN / info was pending** (as of Apr 2026) — confirm resolved.
+- A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status, especially given the **2025 Taxes project was reset to Not Started on 2026-08-04** (see log).
+- **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
+- Recurring **Double task-digest** emails (Aug 3–7, 2026) show a task assigned to the bookkeeper as due/overdue — confirm it's actioned.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_

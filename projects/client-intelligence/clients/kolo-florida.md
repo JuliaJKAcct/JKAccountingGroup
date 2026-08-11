@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,7 +24,7 @@
 
 - **Business name:** Kolo Florida Inc
 - **Entity type:** Corporation (Inc) — S-corporation, files **Form 1120-S** _(Double client property "Tax Return Type", 2026-08-01)_
-- **Home state:** Florida
+- **Home state:** Florida — **Lauderhill, Broward County** _(Gmail: City of Lauderhill Certificate of Use / zoning correspondence, 2025)_
 - **Industry / what they do:** Retail / e-commerce — imports and sells merchandise through the Shopify storefront **"Kolo House"**; leases a warehouse in Broward County, FL for inventory. A 2024 local zoning application was initially denied because "wholesale" use wasn't permitted at the site; it was resubmitted describing retail sales to customers and approved. _(Gmail, 2024–2026 correspondence, 2026-08-01)_
 - **Primary language:** Russian — the firm's correspondence with the client's primary contact is conducted in Russian _(Gmail, 2026-08-01; tentative, confirm)_
 - **Our engagement (services we provide):** Bookkeeping (Quarterly), Sales Tax (Monthly filing), Income Tax (Form 1120-S), 1099 Preparation, Annual Report. **Payroll is NOT a firm service for this client** — the client self-manages payroll through Gusto _(Double client properties, 2026-08-01)_
@@ -123,6 +123,16 @@ the actual details.
 - [x] Which recurring services we provide — Bookkeeping (Quarterly), Sales Tax (Monthly), Income Tax (1120-S), 1099 Prep, Annual Report; Payroll is NOT a firm service _(2026-08-01)_
 - [ ] Primary language — tentatively Russian, confirm
 - [ ] Fiscal year-end
+- 2026-08-08 — **Weekend sweep — GAP client, full Gmail historical pass completed** (in:inbox + in:sent, business name + resolved owner name). Filled most of §1/§4/§5 pending fields from Double client properties + Gmail: entity is an S-corp (1120-S), industry/business is retail e-commerce ("KOLO HOUSE" on Shopify), home city is Lauderhill, the City of Lauderhill COU/BTR history, the sales-tax due-day change, and the Payroll discrepancy (Double property says N/A, Gmail shows active weekly Gusto payroll). Ping (scoped to the resolved owner) and Double notes/activity log found **nothing else new** since the 2026-07-20 baseline. Six client-portal transaction questions were marked resolved 2026-07-29, and a Business Tax Organizer was reverted to draft 2026-07-31 _(Double activity log)_.
+
+### Outstanding items (CI-only — never in the SOP)
+- Reconcile the **Payroll** discrepancy: Double's client property says N/A, but Gmail shows an active weekly Gusto payroll for this company.
+- Reconcile the **Sales tax cadence**: Double's property says Monthly; some client-facing correspondence referenced quarterly balances due — confirm which is accurate.
+
+### Information still needed
+- [x] Industry / what they do — **Retail, e-commerce via a Shopify store ("KOLO HOUSE")** _(Gmail, 2025–2026)_
+- [ ] Primary language; fiscal year-end
+- [x] Which recurring services we provide — **bookkeeping (quarterly), sales tax (monthly), income tax (1120-S), annual report, 1099 prep** _(Double client properties, 2026-08-08)_; payroll cadence unclear, see outstanding items above
 - [ ] Where credentials live (Drive vault link)
 
 ## 7. Links

@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,7 +84,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
-- **Firearms (if carried):** possible FFL / firearms-compliance angle — **firearms/ammo wholesaler Davidsons Inc. confirmed as a vendor** on the "US Pawn" side (a firm's own inbox payment-reminder for the client's account), raising confidence above the earlier low-confidence flag. _(Gmail, 2026-07-28)_
+- **Firearms (if carried):** possible FFL / firearms-compliance angle — **confidence raised**: the group has active vendor accounts with **Davidson's Inc** and **Lipsey's**, both firearms wholesale distributors, confirming a firearms-retail component. _(Gmail, 2026-08-03; low-to-medium confidence — not confirmed against an actual FFL license)_.
 
 ## 5. Key facts & quirks
 
@@ -100,6 +100,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Log
 - 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20 → 2026-08-01): Double activity log shows the **Jul-2026 monthly close checklist completed in Double** (per-account bank/CC tasks, uncategorized/duplicate-vendor checks, 1099 prep, financial reports) on 2026-07-23, and the **2025 Form 1120-S tax project moved to In Progress** with its Business Tax Organizer reverted to draft on 2026-07-31. Gmail surfaced a weekly ADP payroll cadence, a Comcast/FPL credential request to the administrative assistant, and a Davidsons (firearms/ammo distributor) vendor relationship. Ping had no legible Magnum-specific meeting content this period (org-wide semantic search returned only unrelated/garbled hits). _(Double, Gmail, Ping — 2026-08-01)_
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log showed normal monthly-close task completions (bank feeds, Bravo JEs, reclasses, ADP reconciliation) through 2026-08-06, plus a **2025 Taxes project status toggle** (Not Started → In Progress by Lilian on 7/31, back to Not Started by Julia on 8/4) and a **"JK 2025 Business Tax Organizer - Magnum 152" reverted to draft** by Lilian on 7/31 — noted here as an observed status change only (Organizer Status property itself still reads "N/A (BK client)"). Gmail (via "US Pawn") surfaced vendor-account activity with two firearms distributors (see §5). No new Double notes. Ping had no legible new content for the client or the owner post-baseline. Drive folder link reconfirmed unchanged; a credentials spreadsheet in that folder surfaced an unsolicited content preview in the search results — none of it was used or copied anywhere (two-data-homes rule). QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 1. Magnum*): full month-end process, bank-feed map, systems (Bravo / SaasAnt / ADP), store structure, and reclass checklist captured into the Operating zone (non-sensitive only; credentials/dollar figures left in Drive). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 

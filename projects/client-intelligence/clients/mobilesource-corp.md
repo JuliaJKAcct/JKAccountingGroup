@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -89,12 +89,20 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - **Part of the tech owner-group** (shares a principal with SensusTech / Lumetro / **Sensus Games LLC** / the wider group). _(Double, Gmail, 2026-08-01)_
 - A **USTD deposit-tracing working file** lives in the Drive folder (large multi-month deposit-reconciliation with customer/invoice detail — sensitive; stays in Drive). _(Drive)_
 - **Crypto (USDT/stablecoin) deposits recur** and must be verified with the owner before booking — an incoming ACH/USDT deposit is sometimes not recognized by the owner and has to be traced/held pending confirmation rather than booked on receipt. Ties into the existing USDT deposit-tracing working file above. _(Gmail, 2026-07-29)_
+- **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-18) — same integration issue seen at SensusTech (same tech owner-group); watch whether it recurs. _(Gmail, 2026-08-04)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20). June 2026 close completed and reports sent (buyback miscategorizations resolved); FL DOR sales-tax audit confirmed underway (state auditor reached out, cc'd Julia); occasional off-cycle/bonus Gusto payroll runs observed; recurring USDT/crypto deposit-verification quirk confirmed; owner-group also includes **Sensus Games LLC** (Double id 710596 — no CI file yet). No new meetings found for this client in Ping for the period. _(Double, Gmail, Ping, Drive)_
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Gmail surfaced two developments:
+  the previously-noted FL DOR "encrypted exchange" has escalated to a **formal sales-tax audit**,
+  and the owner flagged a **Chase deposit he does not recognize** as tied to a USDT exchange —
+  both added to §6. Also found an open Gusto → QuickBooks Online account-mapping sync issue
+  (same as SensusTech, same tech owner-group) — added to §5. The buyback-categorization pattern
+  already on file is still recurring as of Jul 20–21 (already a Pending item in the SOP; no new
+  proposal needed). Ping had no indexed meetings for Mobilesource or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 

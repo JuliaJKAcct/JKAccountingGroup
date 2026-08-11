@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -97,6 +97,12 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 
 ### Log
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20, inclusive). Double: confirmed the owner also holds a separate **individual (1040) Double profile**, distinct from the Sunoma and Magnum 152 company records (useful for future owner-level sweep routing) — no personal facts pulled from it into this file. Found a **recurring monthly closing task reconciling intercompany loans between Sunoma and Magnum 152** (added to §4/§5). An organizer titled "JK 2025 Business Tax Organizer - Sunoma" was reverted to draft by Lilian (2026-07-31) — status not yet followed up. Gmail: routine June-reports request to the owner (cadence as already known); no update on the Bravo access issue or the outstanding April-2024 Auto Pawn expense report. Ping: still no indexed meetings for Sunoma or the owner. _(Double, Gmail, Ping)_
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log confirmed a
+  standing **Sunoma/Magnum intercompany-loan reconciliation** task on the monthly close checklist
+  (not previously captured — added to §4/§5; SOP candidate proposed, see sop-proposals.md).
+  Gmail identified the outside attorney in the wire-transfer-tracing matter by name (Reizenstein
+  And Associates) and showed routine Magnum-side correspondence that belongs to Magnum's own
+  file. Ping had no indexed meetings for Sunoma or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 2. Sunoma*): month-end per-store process, systems (Bravo / PaymentsHub / ADP / TaxDome), bank-feed map, and reporting cadence captured into the Operating zone (non-sensitive only). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email/document flow was the richest source.
 

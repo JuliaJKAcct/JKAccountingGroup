@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -75,6 +75,7 @@ Drive (§7) — never copied here.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** for subcontractors.
+- **Organizer Status:** **Completed** _(Double client properties, 2026-08-08)_.
 
 ### Licenses & other filings
 - **Licensing / insurance (trade):** a licensed plumbing **qualifier** is on staff; carries **workers' comp + general liability** → periodic **WC & GL premium audits** are a recurring workload (payroll summaries, 941s, RT-6s). _(Gmail)_
@@ -94,6 +95,7 @@ Drive (§7) — never copied here.
 
 ### Log
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20). Ping: no relevant meetings for Margate/Beemold or the owners still indexed (org-wide semantic search returned nothing on-topic). Double: no new notes/activity-log entries since baseline; contacts confirm the owner (portal admin, `info.margateplumbing@gmail.com`) and the co-owner (linked to a second Double client id — consistent with the Beemold link already recorded). Gmail (in:inbox + in:sent, after:2026/07/20) was the source for all new facts below; Google Drive turned up no new client-folder items; QuickBooks (Intuit-QuickBooks MCP tools) is scoped to the firm's own QBO company, not per-client — not usable for this client.
+- 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double client properties confirmed Organizer Status = Completed (no notes, 5 task-status activity entries — routine July close). Gmail surfaced a WF-8477 account closure/replacement and a new QBO Payments customer-payment dispute. Ping had no legible new content for the client or the owner post-baseline (all hits were pre-baseline or off-topic/garbled). Drive folder link reconfirmed unchanged. QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 5. Margate*): bank-feed map, the AR-managed-by-owner quirk, the intercompany-loan review with Beemold, the outside-Gusto payment adjustments, and 3 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. Note: the Drive doc's title header reads "Beemold" (a copy-paste leftover) but its content is Margate's. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no relevant indexed meetings**; Double has no notes yet — email was the richest source.
 

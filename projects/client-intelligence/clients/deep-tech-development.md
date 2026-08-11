@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -64,6 +64,7 @@ the actual details.
 ### Payroll
 - **Applies?** Not in JK's scope — **N/A** per Double. The company runs its **own Gusto payroll (biweekly)**; JK does not process it. _(Double + Gmail)_
 - **Quirk:** despite Payroll being **N/A** for JK, JK staff (the assigned bookkeeper plus other team members) are routinely copied on Gusto's automated "payroll due / payroll late" reminder emails for this client's biweekly run — worth confirming why JK stays on that notification list _(Gmail, 2026-07-26 to 2026-07-30)_.
+- **Update (2026-08-05, Gmail):** a Gusto payroll-fee debit failed, and the owner asked whether the company's Gusto payroll can be **cancelled** — the company currently has **no employees**, and isn't expected to until the owner is back in the US. Decision pending; if Gusto is cancelled, revisit this section and §5.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_
@@ -96,6 +97,9 @@ the actual details.
 - **Owner runs other Double-tracked entities.** Per Double's portal-contact records, this client's owner is also linked to **1701 N M ST LLC** (files a 1065) and **Universal Trading Technology LLC**, plus his own individual (1040) Double profile — all assigned to Lilian like this client. Company-specific facts about those entities belong in their own future CI files, not here; noted here only to record the owner-group shape. _(Double contacts + client records, 2026-08-01)_
 - **External Ukrainian finance-team contact's access, more precisely:** that contact (see above) has portal access to this client **and** to the owner's other two companies (1701 N M ST LLC, Universal Trading Technology LLC) but **not** to the owner's individual profile — consistent with a bookkeeping/company-side role rather than a personal-tax one. _(Double contacts, 2026-08-01)_
 - **JK forwards vendor invoices for robot inventory purchases** directly to the owner as part of the bookkeeping relationship (seen for a batch of robot-purchase invoices). _(Gmail, 2026-07-28)_
+- **QuickBooks Online was disconnected 2026-07-21** (Double activity log). Not yet confirmed whether/when it was reconnected — check before relying on live bank feeds for this client.
+- **Related-entity group (Double contacts, 2026-08-08):** this company's two portal contacts are also both linked to two other Double clients — **1701 N M ST LLC** and **Universal Trading Technology LLC** — indicating a related-entity group under the same ownership circle. Neither is yet profiled as a separate CI file.
+- **Gusto payroll may be paused/cancelled** — see §4 Payroll. The company reports it currently has no employees.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -112,8 +116,12 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
 - **Confirm QuickBooks Online reconnection to Double** — disconnected 2026-07-21 by Julia; unclear if/why/when it will be reconnected.
+- 2026-08-08 — **Weekend sweep (incremental, from 2026-07-20):** Double activity log shows the client was **disconnected** (QBO) on 2026-07-21 — reason/reconnection status unknown, added to §3/§5. Confirmed via Double contacts a **related-entity group** (1701 N M ST LLC, Universal Trading Technology LLC) sharing this company's two portal contacts — added to §5. Gmail (2026-08-05) surfaced a failed Gusto payroll-fee debit and the owner asking to **cancel Gusto payroll** since the company has no current employees — added to §4/§5, decision pending. No new Penn Credit / FDOT toll letters found, and no Safe Guard Self Storage cancellation confirmation yet. Ping org-wide meeting search returned no relevant/legible content for this client.
+
+### Outstanding items (CI-only — never in the SOP)
+- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — still not received as of 2026-08-08.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
-- **Reconcile the payroll flag:** Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here.
+- **Reconcile the payroll flag:** Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here. **Update (2026-08-08):** the owner is now asking to cancel Gusto entirely (no current employees) — get a decision and update §4.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 - A "client disconnected" event logged in Double 2026-07-21 — meaning unclear (accounting-platform link vs. portal), worth a quick manual check.

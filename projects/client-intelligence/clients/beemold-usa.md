@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -86,6 +86,11 @@ never copied here.
 
 ### Log
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20). Double (client 709445 + owner's individual profile 716172, no notes/activity-log entries since baseline), Ping (no indexed meetings for Beemold or Vasile Bivol since baseline — confirmed via scoped search), Gmail (one Beemold-specific thread — the Mercury IO checking-3849 note added to §5; all other Vasile Bivol / "Margate Plumbing" threads since baseline — WF 8477 reconnect, GL/WC audit invoice, Mercury IO credit-limit changes, QBO payment dispute, Gusto payroll — are Margate-specific and belong in `margate-plumbing.md`, not here), Drive (no new/modified files in the Beemold folders since baseline). Owner's individual Double profile (716172, "Vasile Bivol & Alisa Goras") shows 1040-Sch C, Organizer Status Completed — personal/1040-only, not a Beemold fact.
+- 2026-08-08 — Weekend incremental sweep (baseline 2026-07-20). Double activity log showed only
+  routine monthly-close task completions (Aug 3) — nothing new to the Operating zone. Gmail
+  surfaced a Mercury account-number discrepancy (see "Information still needed") and Margate-side
+  correspondence (WF 8477 reconnection, insurance audit dispute) that belongs to Margate's own
+  file, not Beemold's. Ping had no indexed meetings for Beemold or the owner in this window.
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 6. Beemold*): the manual-upload-since-Feb-2025 process, the intercompany-loan review with Margate, and the corrected bank-feed map (Mercury + BoA) captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email was the richest source.
 

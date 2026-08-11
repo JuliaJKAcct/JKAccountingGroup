@@ -28,7 +28,7 @@
 ## 1. Snapshot
 
 - **Business name:** GOSSIP MIAMI LLC
-- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
+- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_. **New evidence (2026-08-08 sweep): Double's `Tax Return Type` property reads 1120-S**, which fits an S-corp with one shareholder and is consistent with the K-1 language — it is the strongest indication so far, but it is a property someone typed, not the filed return, so the question stays open until the return itself is read.
 - **Home state:** Florida. ⚠️ **Which city is unresolved — see §4**, which holds the evidence.
 - **Industry / what they do:** A **beauty salon** — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. ⚠️ **Which city is unresolved — see §4.** The street address itself stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
@@ -165,7 +165,7 @@ duplicate it here; a request list goes stale, this list doesn't.
   _(Penalty exposure not assessed here — raise it with Lilian rather than assuming.)_
 
 ### Sales tax
-- **Applies?** _(pending — confirm; a salon's services and retail product sales may differ)_
+- **Applies?** Yes — **historically filed quarterly by the firm** with the Florida Department of Revenue (a full year of quarterly reports was delivered to the client in Oct 2025, and a POA + DR-841 records request was filed with FDOR the same month). Whether this continued into 2026 under the current tax-prep-only engagement is **not confirmed — verify current status** (this may predate the "tax prep only, no bookkeeping" scope described in §4 above). _(Source: Gmail, Sept–Oct 2025.)_
 
 ### Payroll
 - **Applies?** _(pending — confirm whether the salon has employees or booth renters)_
@@ -238,12 +238,17 @@ duplicate it here; a request list goes stale, this list doesn't.
   2026-08-11)_. Keep those emails plain and short: the questions themselves, in bullet points, with
   no explanation of our internal process attached.
 - **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
+- **The business was acquired via a share purchase in 2024** — 100% of the membership interests were transferred from the prior owners to the current owners under a signed purchase agreement (found in the client's Drive folder; deal terms and figures stay there, not here). This is the most likely explanation for the "which owners' names appear on the 2024 return" question raised in the client correspondence and logged in §6 — older/transition-year documents may still reflect pre-acquisition ownership. _(Source: Google Drive, share purchase agreement; 2026-08-08.)_
+- **The client came to the firm already in a state-compliance and EIN mess.** Around Sept 2025 the client discovered the company had been administratively flagged by Florida (their prior accountant had not filed a required zero-dollar quarterly report on time), and separately the firm found the company had **two EINs on file with the state**, apparently from a mix-up at the time of the 2024 ownership change — this was investigated and addressed with the Florida Department of Revenue in Sept–Oct 2025. No EIN digits are recorded here; see §6 for the dated log. _(Source: Gmail, Sept–Oct 2025.)_
+- **The 2024 individual (1040) return predates the firm's personal-tax relationship with this couple.** It was originally prepared by a different, Miami-based CPA firm; the client moved their personal tax work to JK Accounting Group afterward (TaxDome activation, Mar 2026). The 2024 **company** return, by contrast, was already being handled by JK. _(Source: Gmail/Drive, Oct 2025–Mar 2026.)_
+- **This is not the firm's first ad hoc financial-statement engagement for this client.** The firm produced a 2024 P&L for Gossip Miami as early as Nov 2025 — the Aug 2026 hourly-capped financial-statement project (§4) is a repeat of an existing pattern, not a first-time request. _(Source: Gmail, 2025-11-03.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 
+- 2026-08-08 — **Full-pass sweep — all three gaps closed (Ping never swept, Drive never swept, Gmail only partially swept).** Double client properties confirmed: **Tax Return Type = 1120-S** (resolves §1's open question — see there), Income Tax = true, 1099 Preparation = false, Bookkeeping = N/A, Annual Report = false, Organizer Status = Sent, Assigned Staff = Lilian. Double activity log: the **"2025 Taxes" project status was set from In Progress back to Not Started on 2026-08-04 (Julia)** — noted as an observed fact only. **Ping — full pass, no date bound:** `resolve_person` on both owners, `search_contacts`, and `search_meetings` scoped to each owner's Ping client record (including the couple's joint-individual record and the Gossip Miami LLC company record specifically) all returned **zero meetings and zero action items** — this client genuinely has no meetings indexed in Ping, org-wide or scoped. **Drive — full pass, no date bound:** located the client's main folder (link in §7) and, while confirming it was the right one, surfaced a **2024 share purchase agreement** — its non-sensitive substance (a 2024 change of 100% ownership) is now in §5; no other file contents were read or copied (per the document-privacy rule). **Gmail — full pass, no date bound (previously only this client's own threads had been searched):** found history back to **Sept 2025** — the client's original intake (state-compliance issue + prior accountant's lapse), the EIN mix-up and its resolution with Florida DOR, a prior QuickBooks Accountant-access grant-then-removal (Sept–Oct 2025, well before the 2026-07-29 re-invite — see §3), quarterly sales-tax filings by the firm (see §4), the 2024 individual return having been prepared by a different firm, and an earlier (Nov 2025) ad hoc P&L engagement — all detailed in §3–§5. Nothing found changes the live status already captured in the Double case note (§7) for the current document-chase.
 - 2026-03-03 — Client activated their **TaxDome accounts** (individuals + Gossip Miami LLC). The firm sent the standard **Business Tax Return Process** explainer for Gossip Miami, and circulated the 2024 client-copy returns. _(Gmail)_
 - 2026-03-09 → 03-11 — Documents uploaded through the **2025 individual Tax Organizer**: driver's licence, prior-year return documents, a 1095-A, a partnership K-1, and a home-office worksheet. _(Gmail — TaxDome notifications)_
 - 2026-04-12 — The last outstanding individual document request was completed. _(Gmail — TaxDome)_
@@ -295,7 +300,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 ### Information still needed
 
-- [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
+- [x] Gossip Miami's **return type** — **answered 2026-08-08: 1120-S per Double client properties** (§1). **Owners as filed** is still open — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them; the likely explanation (a 2024 ownership change) is now in §5, but the actual filed 2024 return hasn't been cross-checked
 - [x] Whose email address the single company-side contact is — **answered 2026-08-06: not answerable.** The couple appear to share addresses, so no message can be attributed per person; ask in the message when it matters (§2)
 - [ ] **The sale of the business** — date, structure (assets vs membership interest), price and its allocation, and whether **2025 or 2026 is the final year**. Closing documents not yet requested from the client
 - [x] Whether the **recurring payments to one individual** are contractor work or rent — **answered 2026-08-11: contractor.** The follow-on is open: **no W-9**, so whether a 2025 1099-NEC is owed — and who would prepare it — is unsettled (§4)
@@ -307,11 +312,14 @@ duplicate it here; a request list goes stale, this list doesn't.
 - [ ] **The permits themselves** — which ones, in which city, and what month each renews (§4). Three renewals were paid in 2025 and the firm has never seen a single permit document
 - [ ] Fiscal-year obligations _(the licence/annual-filing half of this is now partly answered — §4)_
 - [ ] Where the client's Google Drive folder is (§7)
+- [x] Sales-tax applicability — **answered 2026-08-08: applies, historically quarterly via the firm (§4); whether it continues in 2026 under the tax-prep-only scope is unconfirmed.** Payroll still pending.
+- [ ] Fiscal-year and licence/annual-filing obligations _(Annual Report answered 2026-08-08: not currently part of the firm's service, §4)_
+- [x] Where the client's Google Drive folder is — **found, 2026-08-08** (§7)
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577)
 - **Double case note — the team-facing history of the 2025 tax preparation:** "CASE · 2025 tax preparation", note **485291** on the client record. It carries the full detail including contact names and emails (that belongs in Double, not here). **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [GOSSIP MIAMI LLC](https://drive.google.com/drive/folders/1H0HYR9DHFz0ZlcWLwxpFoBWDxy_0PoWV) _(found 2026-08-08)_
 - **Related clients:** the owners' individual account and **Marat Boxing LLC** are part of this same relationship (see the note at the top)
 - **Related SOPs:** none yet. The scope rule this client exercised lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/)
