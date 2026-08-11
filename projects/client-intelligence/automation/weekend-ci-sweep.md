@@ -27,16 +27,49 @@ For the scoped clients, once per week:
    the assigned staff — clean and non-sensitive (skip EIN / Tax ID).
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
-   source + date). Commit to the run's working branch and push. **Never** touches
-   anything under `projects/sops/`.
+   source + date). **Commit and merge to `main` itself** — see *The approval line*
+   below. **Never** touches anything under `projects/sops/`.
 3. **CI → SOP proposals** — for clients that have a SOP, append the new Operating-zone
    facts the SOP doesn't yet reflect to the queue
    [`sop-proposals.md`](../sop-proposals.md) as **Pending** (with IDs; dedup — never
    queue the same candidate twice). **Never** writes an SOP.
-4. **Email Lilian one report** — per client: what's new in CI, and the **Pending SOP
-   proposals** (with their IDs) to approve/reject. She approves by ID in a normal
-   session; Claude then applies the approved ones (via `sop-authoring`: PR → review →
-   merge) and marks the queue. See [`sop-proposals.md`](../sop-proposals.md) for the loop.
+4. **Email Lilian one report** — per client: what was **saved** to CI (a record, not a
+   request), and the **Pending SOP proposals** (with their IDs), which are the only part
+   that needs her. She approves by ID in a normal session; Claude then applies the approved
+   ones (via `sop-authoring`: PR → review → merge) and marks the queue. See
+   [`sop-proposals.md`](../sop-proposals.md) for the loop. **The report is not a gate** —
+   nothing waits on it being read.
+
+## The approval line — CI merges itself, SOPs wait for Lilian
+
+**Lilian's decision, 2026-08-11.** The sweep used to push its work to a branch and wait for
+a human to merge it. Nobody did: three runs (2026-07-25, 08-01, 08-08) sat unmerged for
+three weeks — 717 lines across ~48 client-file touches and 22 SOP proposals — until she
+asked what had been piling up. Her instruction: *"configura todo para que la rutina merjee
+su propio Client Intelligence. Simplemente requiere mi aprobación para los SOPs… Lo
+importante es que esté todo lo más actualizado posible."*
+
+So:
+
+- **Client Intelligence merges itself.** The sweep commits its `clients/`, `sweep-state.md`
+  and `sop-proposals.md` changes and **merges them to `main`** — no branch left waiting, no
+  approval. This was always the written policy (see [`sop-proposals.md`](../sop-proposals.md));
+  only the mechanism disagreed. Git remains the safety net: every fact is source-tagged and
+  dated, and any change can be reverted.
+- **SOPs still wait for Lilian.** The sweep never edits `projects/sops/`. It queues proposals
+  and stops. That gate is unchanged.
+- **Contradictions are recorded, not escalated — and asked at the point of use.** When a
+  sweep finds two sources that disagree, it **writes both into the client file with their
+  sources**, marks the fact unsettled, and moves on. It does **not** hold the enrichment and
+  it does **not** send Lilian a question to answer in the abstract. **The moment someone
+  actually asks for that information, the session explains where each version came from,
+  asks then, and updates Client Intelligence from the answer** — because she will not have
+  time to work through a weekly list of open questions, and an answer given while the fact
+  is being used is worth more than one given cold. _(Lilian, 2026-08-11: "si te pedimos
+  información en un momento determinado y tienes cosas contradictorias, simplemente nos
+  puedes explicar la fuente de la contradicción… y según nuestra respuesta, actualizas
+  Client Intelligence.")_ She may occasionally ask for the list of open contradictions
+  herself; that is her initiative, not a standing obligation.
 
 **Guardrails:** non-sensitive only (secrets/PII stay in Double/Drive, referenced by
 link); source every fact; scope to the client list below (tool budgets — e.g. the Odoo
@@ -195,10 +228,11 @@ FOR EACH CLIENT:
 3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
 
 THEN:
-- Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) to your working branch and push. Do NOT merge to main and do NOT touch projects/sops/. (A human reviews/merges the branch and applies approved proposals in a normal session.)
+- Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) AND MERGE THEM TO main YOURSELF. Client Intelligence needs no approval (Lilian, 2026-08-11) — work left on a branch is work nobody sees, and three runs were lost that way. Push a branch, open a PR, and merge it; if the merge is blocked, say so in the email with the branch name. Do NOT touch projects/sops/ — SOP changes stay behind Lilian's approval and go in sop-proposals.md as Pending.
+- CONTRADICTIONS: when two sources disagree, write BOTH into the client file with their sources and mark the fact unsettled — do not hold the enrichment and do not send Lilian a question to answer cold. It gets asked later, by whichever session actually needs that fact.
 - Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
   Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
-  Body per client: what's new in CI (with sources) + the Pending SOP proposals with their IDs (approve/reject). Include the working branch name.
+  Body per client: what was SAVED to CI (with sources — a record, not a request) + the Pending SOP proposals with their IDs (the only part needing a decision). Note any contradictions recorded, in one line each, so she can ask about them if she ever wants to. Say that the CI changes are already on main.
 - SEND through the webhook EXACTLY ONCE — one POST, one recipient. Use `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` — the real values go in **this routine's prompt only**, never in the repo. Build payload.json with python3 (json.dump; keys `"secret"=<WEBHOOK_SECRET>`, `"to"`, `"subject"`, `"html"`, `"text"`), then:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
   IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):

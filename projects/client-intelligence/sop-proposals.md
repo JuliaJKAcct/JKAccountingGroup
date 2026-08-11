@@ -1,8 +1,11 @@
 # SOP proposals — pending Lilian's approval
 
 The **CI → SOP bridge**. Client Intelligence captures everything non-sensitive
-automatically (no approval needed). But a client's **SOP** is different: **no SOP
-change is ever made without Lilian's explicit approval.** So when a sweep (or a manual
+automatically (no approval needed) — and since **2026-08-11 the weekend sweep merges
+that CI work to `main` itself**, because a branch waiting for a human is how three runs
+went unseen for three weeks. But a client's **SOP** is different: **no SOP change is
+ever made without Lilian's explicit approval.** That is the one gate, and it is the
+reason this file exists. So when a sweep (or a manual
 enrichment) finds an Operating-zone fact that a client's SOP doesn't yet reflect, it
 does **not** touch the SOP — it appends a **proposal** here for Lilian to approve or
 reject. This file is the durable queue so proposals are never lost and never proposed
