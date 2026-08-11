@@ -238,34 +238,40 @@ Two consequences of the same reasoning:
 organizer `140878`) — her own data, her own consent. Use it to rehearse a flow rather than a
 client's record.
 
-##### 📣 Warn BEFORE the call, remind AFTER — and write both for someone with no context
+##### 📣 Tell the person BEFORE the call, remind AFTER — and write both for someone with no context
 
-Lilian's instruction, 2026-08-11: **the person working must be warned before the read happens,
-not only reminded once it is over.** Her reason is specific and she named it — **Julia will use
-this without knowing how any of it was built.** She has not read this skill and was not in the
+Lilian's instruction, 2026-08-11: **the person working is told before the read happens, not only
+reminded once it is over.** Her reason is specific and she named it — **Julia will use this
+without knowing how any of it was built.** She has not read this skill and was not in the
 conversation where the rule was set. So "the identity block" and "§2.2" tell her nothing: **plain
 words, no jargon, no cross-references.** Say it in whatever language the session is running in.
 
-**Before the first `get_organizer_responses` call — announce, then wait for a yes:**
+**⚠️ Tone is part of the rule — do not write these as a warning.** Lilian's correction,
+2026-08-11, after rejecting a first draft that did exactly that. The reasoning to carry: **once
+the session is deleted the firm is back to precisely the risk it had before**, and Double already
+gives anyone with the account access to the same data, so the read itself changes nothing. **The
+only real risk is forgetting to delete.** Someone who has not been through that analysis — Julia —
+will read an alarmed message as *"this is dangerous, I should not be doing it"*, conclude the work
+is a bad idea, and stop using a capability the firm deliberately enabled. Frame deletion as the
+routine last step of the job, which is what it is.
 
-> To compare the organizers I have to open the client's answers. There is no way to read just one
-> question — the call returns the whole thing, which includes their Social Security number,
-> driver's licence, date of birth and bank account details. Those will be visible in this
-> conversation, in the tool output, even though I will never repeat them in my replies.
+**Before the first `get_organizer_responses` call — a calm heads-up:**
+
+> Before I start: to compare the organizers I need to open the client's answers, and the tool
+> returns the whole organizer at once — there is no way to pull a single question. So their
+> personal details (Social Security number, date of birth, bank details) come through in the tool
+> output. I will not repeat any of it in my replies.
 >
-> That is fine and it is how we agreed to work — but it means **this conversation will hold the
-> client's SSN until you delete it.** Shall I go ahead?
+> The routine for this kind of work is that we delete this conversation when we are done, and then
+> nothing is left anywhere. I will remind you at the end. Ready to go?
 
-Wait for the answer. One extra exchange is cheap; a colleague finding out afterwards that a
-client's SSN sat in a shared account for a month is not.
+**At the end of the work — the closing step, not a warning:**
 
-**At the end of the work — remind, concretely, even if they already said they know:**
-
-> We are done. This conversation now contains <client>'s Social Security number and bank details,
-> in the tool results above. **Please delete it now.** Deleting removes it from your history
-> straight away and from Anthropic's servers within 30 days, and a deleted conversation is never
-> used to train models. Nothing is saved anywhere else — none of it went into the repo or into
-> Double.
+> That is the analysis done. Last step: please delete this conversation. It is the routine
+> housekeeping for this kind of work — once it is deleted, no trace of the client's details is
+> left. It clears from your history straight away and from Anthropic's servers within 30 days, and
+> a deleted conversation is never used to train models. Nothing was saved anywhere else: none of
+> it went into the repo or into Double.
 
 **Which deletion to describe depends on where the session runs — check `$CLAUDE_CODE_REMOTE`,
 it is free:**
@@ -278,9 +284,9 @@ it is free:**
   The risk is different and "delete the conversation" is not the right instruction — say so
   rather than reciting the cloud wording.
 
-**Never let either message become a formality.** If the person waves it off — *"yes, I know"* —
-say it once more at the end anyway. It is one sentence, and it is the only thing standing between
-a temporary copy of a client's SSN and a permanent one.
+**Say the closing one even if they waved it off at the start.** Not because it is grave — because
+it is easy to forget, and forgetting is the only thing here that actually costs anything. One
+calm sentence at the end of the work does it.
 
 _(Lilian, 2026-08-11, after working the threat model out herself: "si alguien accede a esta cuenta,
 simplemente removiendo esa regla, puede acceder a todo." The rule is hygiene and accident-prevention,

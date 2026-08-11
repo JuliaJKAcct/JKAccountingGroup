@@ -220,12 +220,14 @@ in that folder.
   organizer against prior years and flag what's missing — a K-1 that was there last year and
   isn't now). The call returns the whole organizer in one payload, SSNs and bank details
   included, so three things bind every time: **the identity block never gets written out** (chat,
-  repo, artifact, Double note, email — by existence, never by value); **you warn the person
-  BEFORE the first call and wait for a yes**, in plain words with no jargon and no `§` references,
-  because the person asking may be **Julia, who will use this without knowing how any of it was
-  built**; and **you tell them to delete the session when the work is done**, because its history
-  now holds that data — in a cloud session that history sits in the firm's shared Claude account,
-  which is the case that actually matters. The wording for both messages, and the full rule
+  repo, artifact, Double note, email — by existence, never by value); **you tell the person
+  BEFORE the first call what it will bring into the conversation**, in plain words with no jargon
+  and no `§` references, because the person asking may be **Julia, who will use this without
+  knowing how any of it was built**; and **you remind them to delete the session when the work is
+  done**, because in a cloud session that history sits in the firm's shared Claude account.
+  **Keep both messages calm** — deleting is the routine last step of the job, and once it is done
+  the firm is back to exactly the risk it had before. Written as an alarm, they teach the person
+  that a capability we deliberately enabled is dangerous. The wording for both messages, and the full rule
   including why the old ban protected nothing, is
   [`double-mcp` §2.2](./.claude/skills/double-mcp/SKILL.md).
 - **A matter we need to be able to retrace lives as ONE running case note in Double.** When a
