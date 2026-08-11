@@ -76,9 +76,12 @@ and Drive if the question needs it. Then answer, and **fold what you found back 
 same session**. ⓘ Ping's **Russian/Ukrainian transcription was upgraded in Aug 2026** and Julia is
 testing it — newer RU/UA transcripts should be usable where older ones were often garbled.
 
-**Coverage is audited against Double, never against a person's client list.** `list_clients`
-filtered to `platform: qbo` is the firm's real bookkeeping roster; reconcile the files in
-`clients/` and the sweep scope against **that**. This is not theoretical — the scope list had been
+**Coverage is audited against Double, never against a person's client list.** Sweep `list_clients`
+(all non-archived) and count a client as one we know something about when **either** `platform: qbo`
+**or** a `Bookkeeping` cadence property is set — reconcile `clients/` and the sweep scope against
+**that**. ⚠️ **Do not audit on `platform: qbo` alone:** a disconnected QuickBooks reads `none`, which
+is Deep Tech's state while its bookkeeping is paused, so the narrow check would miss exactly the kind
+of client it was written to find. This is not theoretical — the scope list had been
 built from Lilian's and Maria's clients, so **every one of Liudmyla Kazannik's seven
 QuickBooks-connected companies was invisible to Client Intelligence** until the audit on
 2026-08-11. A client with genuinely nothing known about it may have no file; a client with a

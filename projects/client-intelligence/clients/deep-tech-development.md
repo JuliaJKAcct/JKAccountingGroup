@@ -29,7 +29,7 @@
 - **Primary language:** **Russian** (Ukrainian ties). _(Gmail)_
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); income tax on the owner's **Schedule C**; **sales tax (quarterly — likely FL DR-15)**; **1099 preparation**; annual-report filing. **Payroll: not in JK's scope** — N/A per Double; the company runs its **own Gusto payroll (biweekly)** (see §5). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online — **disconnected from Double on 2026-07-21** (Double activity log shows a `client_disconnected` event by Julia; the client record's `platform` field now reads "none"). Confirm reconnection status before assuming Double-synced books are current — see §5. _(Double activity log, 2026-07-21; inferred with medium-high confidence)_
+- **Accounting platform:** QuickBooks Online — **disconnected from Double on 2026-07-21** (the client record's `platform` now reads "none"). ✅ **Explained 2026-08-11: it follows the bookkeeping pause (§4) — do not chase a reconnection**; reconnect when the client resumes. Treat any Double-synced figure as frozen at the disconnection date. _(Double activity log, 2026-07-21; inferred with medium-high confidence)_
 
 ## 2. Contacts
 
@@ -47,7 +47,7 @@ the actual details.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double — **disconnected 2026-07-21**; reconnect/confirm status before relying on Double-synced data _(Double activity log, 2026-07-21)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double — **disconnected 2026-07-21 as part of the bookkeeping pause** (§4). Not a fault: reconnect when the client resumes _(explained by Lilian, 2026-08-11)_ |
 | Shopify ("Go Robots" store) | E-commerce sales platform | _(pending)_ | Plan scheduled to downgrade from **Grow** to **Basic** (both paid monthly) effective **2026-08-02** _(Gmail, 2026-07-28)_ |
 | Sales-tax portal | Filing sales tax (quarterly) | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | _(jurisdiction pending)_ |
 | Penn Credit (collection-agency portal) | Paying the FDOT toll debts that are in collection | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | Portal: [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) · login is **not** user/password — it asks for the **account/ID number + ZIP code** (both in the vault) |
@@ -67,7 +67,7 @@ the actual details.
 - **Update (2026-08-05, Gmail):** a Gusto payroll-fee debit failed, and the owner asked whether the company's Gusto payroll can be **cancelled** — the company currently has **no employees**, and isn't expected to until the owner is back in the US. Decision pending; if Gusto is cancelled, revisit this section and §5.
 
 ### Bookkeeping & monthly close
-- **Applies?** ⏸ **PAUSED — and this is deliberate, not a lapse.** _(Lilian, 2026-08-11.)_ The owner is
+- **Applies?** **Yes — the engagement is monthly** _(Double)_, but ⏸ **PAUSED right now, deliberately, not a lapse.** _(Lilian, 2026-08-11.)_ The owner is
   **applying for a US visa**; the business is on hold until that is settled. **When he has what he needs,
   he restarts the business and we restart bookkeeping.** Nominally the engagement is monthly _(Double)_,
   and that is what it returns to.
@@ -105,11 +105,11 @@ the actual details.
 - **Client password vault (one Google Doc).** Practically all of this client's logins are kept in a single Google Doc (linked in §7) — including the Penn Credit account/ID number + ZIP used to log in and pay the FDOT toll debts. It's the fast path when a task needs a credential; sensitive values stay there, never in this file.
 - **FDOT tolls are a live, recurring collections item (Penn Credit).** See §4. Paying off one balance has **not** stopped new toll amounts from reappearing at Penn Credit, so treat every new letter as a fresh pay-down rather than assuming the debt is closed.
 - **Cancelling two storage units at Safe Guard Self Storage** — requested 2026-07-30, awaiting email confirmation (see §6). Once confirmed, the recurring charge(s) should stop — don't flag the eventual absence of this charge as a missed/abnormal recurring payment.
-- **QuickBooks Online was disconnected from Double on 2026-07-21** (Double activity log: a `client_disconnected` event by Julia; the client record's `platform` now reads "none", vs. an accounting platform being the norm for a monthly-bookkeeping client). No reconnection has been logged since. Treat any Double-synced bookkeeping figures as potentially stale until this is confirmed/resolved. _(Double activity log, 2026-07-21)_
+- **QuickBooks Online was disconnected from Double on 2026-07-21** — ✅ **explained 2026-08-11: it is part of the pause above.** Double-synced figures are frozen at that date; there is nothing to fix and nothing to chase. _(Double activity log, 2026-07-21)_
 - **Owner runs other Double-tracked entities.** Per Double's portal-contact records, this client's owner is also linked to **1701 N M ST LLC** (files a 1065) and **Universal Trading Technology LLC**, plus his own individual (1040) Double profile — all assigned to Lilian like this client. Company-specific facts about those entities belong in their own future CI files, not here; noted here only to record the owner-group shape. _(Double contacts + client records, 2026-08-01)_
 - **External Ukrainian finance-team contact's access, more precisely:** that contact (see above) has portal access to this client **and** to the owner's other two companies (1701 N M ST LLC, Universal Trading Technology LLC) but **not** to the owner's individual profile — consistent with a bookkeeping/company-side role rather than a personal-tax one. _(Double contacts, 2026-08-01)_
 - **JK forwards vendor invoices for robot inventory purchases** directly to the owner as part of the bookkeeping relationship (seen for a batch of robot-purchase invoices). _(Gmail, 2026-07-28)_
-- **QuickBooks Online was disconnected 2026-07-21** (Double activity log). Not yet confirmed whether/when it was reconnected — check before relying on live bank feeds for this client.
+- **QuickBooks Online was disconnected 2026-07-21** — part of the pause (§4), not an integration fault.
 - **Related-entity group (Double contacts, 2026-08-08):** this company's two portal contacts are also both linked to two other Double clients — **1701 N M ST LLC** and **Universal Trading Technology LLC** — indicating a related-entity group under the same ownership circle. Neither is yet profiled as a separate CI file.
 - **Gusto payroll may be paused/cancelled** — see §4 Payroll. The company reports it currently has no employees.
 
@@ -134,11 +134,11 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
-- ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
 - **Reconcile the payroll flag** _(and note the pause makes this live):_ Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here. **Update (2026-08-08):** the owner is now asking to cancel Gusto entirely (no current employees) — get a decision and update §4.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
+- ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration

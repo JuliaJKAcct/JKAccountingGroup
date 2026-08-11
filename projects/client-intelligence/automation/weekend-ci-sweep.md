@@ -166,8 +166,17 @@ per-tool call limits._
 > from **Lilian's and Maria's** clients, so **every client assigned to Liudmyla Kazannik fell outside
 > it** — seven QuickBooks-connected companies with no Client Intelligence at all until 2026-08-11.
 > **When scope is derived from who owns the work, it inherits that person's blind spots.** The check
-> that catches it: `list_clients` filtered to `platform: qbo` is the firm's real bookkeeping roster —
-> reconcile this table against it, not against anyone's client list.
+> that catches it: reconcile this table against `list_clients` (all non-archived), counting a client
+> in when **either** `platform: qbo` **or** a `Bookkeeping` cadence property is set — never against
+> anyone's client list. **`platform: qbo` alone is not enough**: a disconnected QuickBooks reads
+> `none` (Deep Tech's state while its bookkeeping is paused), so the narrow check would miss exactly
+> the kind of client it targets.
+
+> **Catch-up priority — the queue is now ten deep against a ~6-full-pass cap, so state the order
+> rather than let list position decide it.** **First: Artur Tseretsian and Ihor Naum & Olha Levchuk**
+> — deferred twice already, and the ledger records the promise. **Then the seven new clients.** A run
+> that spends its whole cap on the new arrivals breaks a commitment that is written down, which is
+> worse than a client waiting one more week.
 
 **Excluded from the sweep — archived clients.** A client archived in Double gets no
 new activity, so sweeping it every Saturday wastes budget. These have a CI file and a

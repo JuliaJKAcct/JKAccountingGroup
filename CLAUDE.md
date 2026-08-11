@@ -272,8 +272,11 @@ in that folder.
 - **Every client the firm has information about has a file — the only clients without one are the
   ones nobody has said anything about.** Not "every client we have written a lot about": the bar is
   *is there anything at all*. **Coverage is checked against Double, not against a person's client
-  list** — `list_clients` filtered to `platform: qbo` is the firm's real bookkeeping roster. That
-  check found the failure it was written for: the weekend sweep's scope had been assembled from
+  list** — sweep `list_clients` (all non-archived) and treat a client as one we know something about
+  when **either** `platform: qbo` **or** a `Bookkeeping` cadence property is set. ⚠️ **`platform: qbo`
+  alone is not enough:** a disconnected QuickBooks reads `none`, which is exactly Deep Tech's state
+  while its bookkeeping is paused — the narrower check would reproduce the blind spot it exists to
+  catch. That audit found the failure it was written for: the weekend sweep's scope had been assembled from
   Lilian's and Maria's clients, so **all seven of Liudmyla Kazannik's QuickBooks-connected companies
   had no Client Intelligence whatsoever** until 2026-08-11. Scope derived from who owns the work
   inherits that person's blind spots.

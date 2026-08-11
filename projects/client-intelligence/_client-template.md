@@ -120,7 +120,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
-> `clientCard()` — see the [render README's parsing contract](./render/README.md).
+> `clientCard()` — see the [render README's parsing contract](../../.claude/skills/client-intelligence/render/README.md).
 
 - _(pending)_
 
