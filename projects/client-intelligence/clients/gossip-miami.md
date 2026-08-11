@@ -33,6 +33,7 @@
 - **Industry / what they do:** A **beauty salon** in Miami — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. The street address stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
 - **Our engagement (services we provide):** **Tax preparation only.** The firm was **not** the bookkeeper during the year. Covers the Gossip Miami business return, the owners' **joint 1040**, and the **Schedule C** for Marat Boxing LLC.
+- **Current state of the business:** ⚠️ **SOLD** _(reported by Lilian, 2026-08-11)_. **Nothing about the sale is documented yet** — not the date, not the structure (assets vs membership interest), not the price or its allocation, and not whether **2025 or 2026 is the final year**. It is also the likeliest explanation for account activity appearing to stop in December 2025, which is exactly what the client is being asked to confirm (§6). **Get the closing documents before the return is prepared.**
 - **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online — the firm was **invited as a user on 2026-07-29** specifically to build the financial statements (§4), not to keep the books.
 
@@ -85,6 +86,10 @@ the actual details.
   - **The owners' individual return** — the two are married and filing **jointly** _(Lilian)_.
   - **Marat Boxing LLC** — reports on a **Schedule C**, not as a separate return _(confirmed by Lilian, 2026-08-04)_. That it is a disregarded single-member LLC is the natural reading, not something stated. **It lands on the husband's Schedule C** — he owns Marat Boxing (§2, Lilian 2026-08-06); revisit only if the joint filing ever changes.
 - **Our role:** prepare and file. **Tax preparation only** — see the scope rule below.
+- ⚠️ **The sale changes what these returns have to carry, and none of it is settled** _(§1, reported
+  2026-08-11)_. Whether the business return is a **final** one, what the sale itself has to report,
+  and which year it lands in all depend on documents the firm has never seen. **Don't prepare the
+  return on the assumption that 2025 is an ordinary year** — ask for the closing documents first.
 - **Process notes (→ future SOP):** the firm's standard "Business Tax Return Process" email (engagement letter → business tax organizer → preparation → review, invoice & signature → e-file) was sent for Gossip Miami in Mar 2026 and is the shape to reuse _(Gmail)_.
 
 ### Bookkeeping & monthly close
@@ -112,10 +117,13 @@ own records, and **all of it is his to produce**:
 - **The QuickBooks bank feeds connected.** Both company accounts have been **disconnected**, so the
   transactions since never loaded, and **only the client can reconnect them** — the "Fix now" prompt
   appears in his QuickBooks, not in the firm's view.
-- **Confirmation that what we hold is the last activity of the year** — on **every** account, asked
+- **Confirmation of what happened after the last statement we hold** — on **every** account, asked
   as a question, never assumed. The statement cycles here don't end on 31 December (the card closes
   on the 3rd, the checking account around the 10th), so the last statement of the year always leaves
-  a tail of December uncovered, and only the client can say whether anything moved in it.
+  a tail of December uncovered. **The date on the last statement is where our information stops, not
+  where the account stopped** — those are two different things, and only the client can say which
+  one it is. If there **was** activity, we need the statements for that period **and** the
+  QuickBooks feeds reconnected; if there wasn't, we need them to say so.
 - **An explanation for any transaction the cleanup can't categorize on its own** — a purchase with
   only a merchant location on the line, a government/permit payment, a deposit that may or may not
   be sales, a recurring payment to an individual. Expect a round of these every year; batch them
@@ -170,14 +178,16 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-06 — **Ownership settled (Lilian):** the **wife is the sole owner of Gossip Miami**, the **husband owns Marat Boxing**. That explains why only one portal contact sits on the company record and resolves the "are these two roles one person" question — they are two people, but one address carries all the company-side correspondence. One address carries all the company-side correspondence, treated as the couple's shared channel — **closed as not-answerable**, see the entry above (§2).
   - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation. **Still true after the 2026-08-11 email** — that one asked questions, not documents.
 - 2026-08-11 — **Questions to the client out of the 2025 cleanup review** _(raised internally by Maria, who is doing the cleanup; drafted for Lilian and going to the client under her name — **the client is not told who inside the firm raised them**, §5)_. One short email in Russian, plain wording, bullet points, no explanation of our process. Two things asked:
-  - **(a) Is what we hold the last activity of the year on both accounts?** The last statements on hand end **2025-12-03** (credit card) and **2025-12-10** (checking), so **neither covers December 2025 in full** — the year-end cut-off has to be confirmed, not assumed. Note this partly overtakes the standing "December 2025 checking statement" ask: a checking statement through 2025-12-10 *is* on hand, so what is still missing is the remainder of December and January 2026.
+  - **(a) What happened after 2025-12-03 (credit card) and 2025-12-10 (checking)?** Those dates are **where our information on the accounts stops — not a date on which anything was proven to end.** Past them we have nothing at all: no statements were sent, and the QuickBooks feeds are disconnected, so the transactions never loaded either. The year is not over on those dates, so the return can't be prepared until we know. **The ask has two branches: if there was no activity, they confirm that; if there was, we need the statements for that period _and_ both QuickBooks accounts reconnected.** _(Lilian, 2026-08-11: don't ask them to explain why they can't reconnect or offer help — just ask them to try if there was activity. The client should be given one clear action, not a negotiation.)_
   - **(b) What five transactions were for:** two same-day card purchases at a North Miami Beach merchant (2025-09-22), an online **government/permit** payment via EGOV COM (2025-10-03), a **deposit** (2025-11-13) that may or may not be sales, and the **repeated identical checks to one individual payee** — **contractor work or rent?** _(That last one drives the expense account and the **1099** treatment, §5.)_
   - The Double case note **485291** was updated in the same pass — its STATUS and PENDING now carry these questions. Amounts, the payee's name and the merchant lines live there, not here.
+- 2026-08-11 — ⚠️ **The business was SOLD** _(Lilian, in conversation)_. Recorded in §1 and §4 because it changes what the return has to be: possibly a **final** one, with the sale itself to report. **Nothing about it is documented** — date, structure, price, allocation, final year — and the firm has seen no closing documents. It is also the likeliest reason account activity appears to stop in December 2025, which is what the client is being asked to confirm above. **Ask for the closing documents before preparing the return.**
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **WAITING ON THE CLIENT — the remaining bank documents.** ✅ **Received 2026-08-05:** the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03). **Still missing:** the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, the **photos of the checks the company wrote + the cash-deposit slips**, and the **reconnection of both QuickBooks bank feeds** (only he can do that). Asked 2026-08-04 and restated 2026-08-05.
-- **WAITING ON THE CLIENT — answers to the 2026-08-11 questions** (§6 log): the **year-end cut-off confirmation** on both accounts, and the **purpose of five transactions**, including whether the recurring payments to one individual are **contractor work or rent**. Until that one is answered the cleanup can't finish the categorization, and the **1099** position for the year is undecided.
+- **WAITING ON THE CLIENT — answers to the 2026-08-11 questions** (§6 log): **what happened on both accounts after the last statement we hold** (nothing, or activity → statements + reconnect QuickBooks), and the **purpose of five transactions**, including whether the recurring payments to one individual are **contractor work or rent**. Until that last one is answered the cleanup can't finish the categorization, and the **1099** position for the year is undecided.
+- **THE SALE — the biggest open item on this engagement, and the newest.** Get the closing documents; until then it is unknown whether the 2025 business return is a **final** return and what the sale itself has to report (§1, §4).
 - **The piece he committed to verbally: going to the bank for the check images** — deposited into the company and issued by it — and he said he would try _(Lilian, 2026-08-06)_. **The incoming-check half has never been asked for in writing** (see the log); put it in the next email so it isn't lost.
 - **So the 10-hour cap is not what's binding right now — the missing documents are.** Track the hours, but don't read a stalled clock as work left to do.
 - **Waiting on the client's own P&L for Marat Boxing** (and the completed Home Office worksheet) before the Schedule C can be prepared. He has the templates.
@@ -188,6 +198,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
 - [x] Whose email address the single company-side contact is — **answered 2026-08-06: not answerable.** The couple appear to share addresses, so no message can be attributed per person; ask in the message when it matters (§2)
+- [ ] **The sale of the business** — date, structure (assets vs membership interest), price and its allocation, and whether **2025 or 2026 is the final year**. Closing documents not yet requested from the client
 - [ ] Whether the **recurring payments to one individual** are contractor work or rent — and, if contractor, whether a **W-9** is on file so a 1099 can be issued (asked 2026-08-11)
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
