@@ -347,15 +347,18 @@ themselves — which is what you actually need.
 
 Four moves, in this order:
 
-1. **Recite what they told us**, in their words. *"You mentioned that you have two
-   children and that you pay child support."* This shows you read what they sent, and it
-   is the half of the picture they already agree with.
-2. **State what we see**, naming each record and its year. *"Your 2024 tax return claimed
-   one child as a dependant, and on your 2025 organizer no children appear."*
-3. **Ask the open question.** *"Can you explain the situation with both children?"* Open
+*Invented illustration throughout — a real client's records never become the teaching
+example:*
+
+1. **Recite what they told us**, in their words. *"You mentioned that you now rent out the
+   apartment on Oak Street."* This shows you read what they sent, and it is the half of
+   the picture they already agree with.
+2. **State what we see**, naming each record and its year. *"Your 2023 return reported
+   rental income from that address, and we have nothing for it in 2024."*
+3. **Ask the open question.** *"Can you explain what happened with that property?"* Open
    first — their explanation usually answers questions you did not think to ask.
-4. **Then narrow**, with the specific facts the return needs. *"Do they live with you?
-   Did they live with you during 2025 — and if only part of the year, which months?"*
+4. **Then narrow**, with the specific facts the return needs. *"Was it rented for the
+   whole year? If only part of it, which months? Did you sell it?"*
 
 **Say plainly that it doesn't add up.** Lilian's own closing line is *"porque aquí hay
 algo raro"* — and that honesty is the point. It is not an accusation, and hiding the
