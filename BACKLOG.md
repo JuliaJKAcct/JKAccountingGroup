@@ -808,7 +808,7 @@ would be the natural place to capture the current business-organizer question ba
 redesigning it, mirroring how the 1040 organizer's questions were captured.
 
 **What we need to start:** (1) read the live Business Tax Organizer's current structure with
-`get_organizer` (structure only — never `get_organizer_responses` on a real client) to know
+`get_organizer` (structure only — a redesign needs the questions, not anyone's answers) to know
 exactly which questions exist today; (2) Lilian/Julia decide the filter question's exact wording
 and which downstream questions it should suppress when the answer is "yes"; (3) build the
 redesigned version and get it into what future organizers are created from.

@@ -215,6 +215,25 @@ in that folder.
   TaxDome folder conventions, what the MCP can't reach, and the **write rules — default-deny, and
   never write the hand-maintained judgment columns.** Two Double tools instruct an unprompted
   write; the skill says to override them.
+  **Reading a client's organizer answers is allowed — and obliges you to tell the person before
+  the first call, and to remind them to delete the session after.**
+  Lilian lifted the old ban on 2026-08-11 so we can do pre-return analysis (compare a client's
+  organizer against prior years and flag what's missing — a K-1 that was there last year and
+  isn't now). The call returns the whole organizer in one payload, SSNs and bank details
+  included, so three things bind every time: **the identity block never gets written out** (chat,
+  repo, artifact, Double note, email — by existence, never by value); **you tell the person
+  BEFORE the first call what it will bring into the conversation**, in plain words with no jargon
+  and no `§` references, because the person asking may be **Julia, who will use this without
+  knowing how any of it was built**; and **you remind them to delete the session when the work is
+  done**, because in a cloud session that history sits in the firm's shared Claude account. Two
+  absolute bans go with it: **never from a subagent, and never from a scheduled or unattended
+  session** — a Routine has nobody to tell and nobody to delete, so every control here fails
+  silently.
+  **Keep both messages calm** — deleting is the routine last step of the job, and once it is done
+  the firm is back to exactly the risk it had before. Written as an alarm, they teach the person
+  that a capability we deliberately enabled is dangerous. The wording for both messages, and the full rule
+  including why the old ban protected nothing, is
+  [`double-mcp` §2.2](./.claude/skills/double-mcp/SKILL.md).
 - **A matter we need to be able to retrace lives as ONE running case note in Double.** When a
   problem runs for weeks across an agency or a platform's support queue — the Tsminibears Florida
   reemployment-tax matter is the pilot — the firm keeps a single note on that Double client with

@@ -1,6 +1,6 @@
 ---
 name: double-mcp
-description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, tax organizers, monthly closes, tasks, portal contacts, the file library, time tracking, the activity log, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status or deadline, reading an organizer's progress, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, creating/updating tasks and notes, or keeping a client matter's **running case note / case history**. Also load it to answer "can we do X in Double?" — the companion `references/capability-map.md` is the audited answer sheet of every tool, what is read-only, and what is blocked (tax-project deadlines cannot be written; organizer publishing cannot; loan tools are billing-gated). Encodes the five data planes (client record vs custom properties vs tax projects vs organizers vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, the hard privacy rule on organizer responses (SSNs and bank details), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, the call-efficiency patterns for roster-wide sweeps, and the firm's case-note convention (one running note per matter, updated in place).
+description: Operating guide for ANY work through the Double MCP (the `Double` server) — the firm's practice-management and bookkeeping platform (clients, custom properties, tax projects, tax organizers, monthly closes, tasks, portal contacts, the file library, time tracking, the activity log, transactions and reports). Load this BEFORE the first Double MCP call in a session. Use whenever a task will read or write Double data: looking up a client or its properties, checking a tax project's status or deadline, reading an organizer's progress, finding a document in a client's folders, listing portal contacts, pulling transactions or a P&L/balance sheet, creating/updating tasks and notes, or keeping a client matter's **running case note / case history**. Also load it to answer "can we do X in Double?" — the companion `references/capability-map.md` is the audited answer sheet of every tool, what is read-only, and what is blocked (tax-project deadlines cannot be written; organizer publishing cannot; loan tools are billing-gated). Encodes the five data planes (client record vs custom properties vs tax projects vs organizers vs file library) and which tool reaches each, the firm's folder conventions inherited from the TaxDome migration, the organizer-response rule (readable for analysis since 2026-08-11, under a redaction + delete-the-session rule), the read-only rules for hand-maintained judgment columns, the file-ID two-space trap, the call-efficiency patterns for roster-wide sweeps, and the firm's case-note convention (one running note per matter, updated in place).
 ---
 
 # Double MCP — operating guide
@@ -29,10 +29,11 @@ the whole firm.
 > recurring ones directly: the tax-return **deadline cannot be written** from here, organizer
 > progress **now can be read**, organizer **publishing** cannot, loan tools are **billing-gated**.
 >
-> **And the one prohibition to carry before you touch anything:** never call
-> `get_organizer_responses` on a real client. It returns Social Security numbers, driver's
-> licenses and bank account numbers straight into the transcript. For progress, read
-> `completionPercentage` instead — §2.2.
+> **And the one rule to carry before you touch anything:** `get_organizer_responses` **may** be
+> read for analysis (Lilian lifted the old ban on 2026-08-11) — but it returns Social Security
+> numbers, driver's licenses and bank account numbers straight into the transcript, none of which
+> may ever be written out, and the session must be deleted afterwards. **Read §2.2 in full before
+> the first call.** For progress alone, `completionPercentage` costs nothing sensitive.
 >
 > This guide stays the *how and why*; the capability map is the *what*. When Double ships new
 > tools — it does, silently — re-run the audit described at the end of that file.
@@ -161,29 +162,211 @@ the read path works end to end (verified 2026-08-06 — 59 organizers in the pra
 |---|---|
 | `list_organizers` | The **cheap** path. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived — **`published` matches both `in_progress` and `completed`**. Returns name, status, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility` |
 | `get_organizer` | One organizer with **`completionPercentage`** (published only — a draft has none) plus every slide, section, hidden flag and logic rule. **Huge payload** — a 1040 organizer is ~120 slides. Never call it in a loop |
-| `get_organizer_responses` | The client's actual answers — see the rule below |
+| `get_organizer_responses` | The client's actual answers. **One payload — no per-question read.** Permitted for analysis under the redaction + delete-the-session rule below |
 | `create_organizer` **W** | Creates an **empty draft**, no slides |
 | `update_organizer` **W** | Declarative whole-document write — see the trap below |
 
 Both organizer shapes are live: `JK 2025 1040 Organizer - <name>` and
 `JK 2025 Business Tax Organizer - <name>`.
 
-#### 🔒 Never read organizer responses to "check on" a client
+#### 🔓 Organizer responses MAY be read — for analysis, under a redaction rule
+
+**Lilian lifted the blanket prohibition on 2026-08-11.** The rule below replaces it. The
+permission is real; so are its limits. Read all of it before the first call.
 
 A completed 1040 organizer contains, by design: **Social Security numbers** (taxpayer, spouse
 and every dependant), **driver's licenses**, dates of birth, home address, and **bank routing
-and account numbers**.
+and account numbers**. That has not changed — what changed is what the firm does about it.
 
-`get_organizer_responses` returns that **into the session transcript** — which makes it more
-dangerous than `get_file`, since `get_file` only ever hands back a link. The document privacy
-rule below applies here with more force, not less:
+**Why it changed.** The old rule forbade the read outright. Lilian's objection was correct on
+both counts: it bought **no** security against an attacker — a skill file enforces nothing, and
+someone with the account simply doesn't load it — and it blocked genuinely valuable work. What
+she wants is **pre-return analysis**: read a client's organizer, compare it against prior years,
+and surface what is missing or inconsistent *before* anyone starts the return. Her own example:
+*a K-1 last year, none this year — did the client leave that company, or forget to mention it?*
+That is the catch a person makes on a good day and misses on a busy one.
 
-- Need **progress**? → `list_organizers`, or `get_organizer.completionPercentage`. Never responses.
-- Need **one specific answer**? → ask the person to look it up, or pull that one field and use
-  only it. Don't dump the set.
-- Nothing from an organizer response is ever written to this repo.
-- The audit verified the tool against an organizer at **0% completion** on purpose, so no real
-  answers were pulled. Do that if it ever needs re-testing.
+**Permitted:** call `get_organizer_responses` on a real client to analyse it, compare it across
+years, and report what looks wrong, missing or inconsistent.
+
+**The identity block NEVER leaves the session** — not in chat, not in the repo, not in a Double
+note, not in an artifact, not in an email or a report:
+
+- **SSN / ITIN numbers**
+- **Driver's licence numbers**
+- **Bank routing and account numbers**
+- **Passwords and credentials**
+- **Dates of birth**
+- **…and any other government-issued identifier, whatever it is called** — the list above is
+  illustrative, not exhaustive, and §6 of this file explains why an enumerated list is dangerous:
+  it licenses everything not on it. **The gap that matters for this firm is passport, visa and
+  immigration document numbers.** The client base is foreign-born business owners; where a US
+  client uploads a driver's licence, a foreign national uploads a passport. Treat it identically.
+
+Refer to those by **existence, never by value**: *"the spouse's SSN is missing"* — never the
+digits. Everything else is ordinary working data: income items, K-1s, dependants, deductions,
+addresses, employers, figures. **A finding is not a value** — *"the organizer shows no K-1 this
+year and 2024 had one"* is exactly the output this permission exists to produce, and it may be
+said in chat, written into a Double note, and acted on. What may never travel is the identifier
+itself.
+
+**The four real exposure points, worst first.** The identity block passing through the session
+is not itself the danger. These are:
+
+1. **An artifact** — a published artifact is a hosted web page. Organizer data must never reach
+   one. Worst case, and the easiest to do by accident.
+2. **A commit or a PR.** The repo rule is unchanged and absolute: nothing from an organizer
+   response is ever committed.
+3. **Files the session writes, or that the harness writes for it.** This one is invisible, and
+   **deleting the conversation does not reach it** — the two live in different places. (In a cloud
+   session the VM is destroyed with the session, so the files go with it; in a **local CLI**
+   session they sit on that machine for 30 days, and the **scratchpad** is a separate path in
+   both.) A large tool result is spilled to disk
+   automatically — `~/.claude/projects/<project>/<session>/tool-results/*.txt` — and a ~120-slide
+   organizer will almost certainly trigger that; the transcript itself is written to
+   `~/.claude/projects/<project>/<session>.jsonl`; and the scratchpad directory is the natural
+   place to stage two years of organizer JSON for a diff. **Never write an organizer payload to a
+   file.** Do the comparison in context. If something genuinely must be staged, strip the identity
+   block first and delete the file when done.
+4. **A Double note.** §7 rule 10's 🔒 bullet excludes the identity block — the *findings* are
+   welcome there, the identifiers are not.
+
+**Subagents: don't.** §5 item 4 recommends delegating roster-wide sweeps to a subagent, and a
+cross-year organizer comparison across the roster looks exactly like that work. **Read organizer
+responses in the main session only.** A subagent gets its own context and its own transcript file,
+so delegating multiplies the copies and puts them where the person deleting the conversation will
+not think to look — and forbidding the subagent to *report* an identifier does not help, because
+the harm is the extra copy, not the summary. A sweep that genuinely needs a subagent gives it
+**properties and organizer metadata only** (`list_organizers`, `list_client_properties`) and never
+`get_organizer_responses`.
+
+**Never from a scheduled or unattended session.** Every control here is a sentence said to a
+human: tell them before, remind them to delete after. A Routine or any unattended run has nobody
+to tell and nobody to delete, so the whole rule silently fails. The firm does run scheduled
+sessions with the Double connector attached — see
+[`projects/client-intelligence/automation/`](../../../projects/client-intelligence/automation/).
+
+**What this rule CANNOT do — say it plainly, never let anyone believe otherwise.** The tool
+returns the whole organizer in one payload; **there is no per-question read**. So the identity
+block **enters the session transcript** on every call, and it is **visible in the tool-result
+block** of the conversation even though nobody typed it. This rule governs what *leaves* the
+session, not what *enters* it.
+
+**Therefore: tell the user to delete the session — this is part of the job.** Deleting a Claude
+Code on the web session *"permanently removes the session's event data"*, and a deleted
+conversation is not used to train models. That reminder is what turns a **permanent** second copy
+of a client's SSN into a **temporary** one. Don't skip it because the person already knows.
+
+**Three more retention facts that bind this firm specifically** — all from
+[Claude Code § Data usage](https://code.claude.com/docs/en/data-usage), checked 2026-08-11:
+
+- **The firm is on a Max plan, which is a *consumer* plan.** Retention therefore depends entirely
+  on one toggle at [claude.ai/settings/data-privacy-controls](https://claude.ai/settings/data-privacy-controls)
+  — *Help improve our AI models*: **ON → 5-year retention** and the data may be used for training;
+  **OFF → 30 days.** ✅ **Lilian switched it OFF on 2026-08-11**, checking it because of this rule,
+  and confirmed the account has no shared chats and no public artifacts. So the 30-day figure is
+  **verified, not assumed** — but it is one click from changing, so re-check rather than trusting
+  this line if anything depends on it. Deleting a conversation also removes it from future model
+  training ([Anthropic Privacy Center](https://privacy.anthropic.com/en/articles/7996878-can-you-delete-data-sent-via-claude-ai));
+  deletion cannot unwind training that already happened, which is why the toggle matters more than
+  the deleting.
+- **Never run `/feedback`, `/bug` or `/share` in a session that has read organizer responses.**
+  Those upload the conversation and are **retained for 5 years**, independently of deleting it.
+- **Answer "No" to the session-quality survey's follow-up** (*"Can Anthropic look at your session
+  transcript?"*). "Yes" uploads the transcript plus any subagent transcripts and the raw session
+  log, retained up to 6 months. Only API keys are redacted — organizer content is not.
+
+**Zero Data Retention would remove the server-side copy entirely, but it is not available here.**
+ZDR covers Claude Code on **Claude for Enterprise**, enabled per organization after an eligibility
+check with the account team — it is **not** part of the standard Enterprise plan, and not offered
+on consumer plans like Max. If the firm ever wants below 30 days, that is the route: a plan change
+and a conversation, not a setting.
+
+Two consequences of the shared-account point above:
+
+- **The firm shares one Claude account**, so session history has **no per-person gating** the way
+  Double's `responsesVisibility` does. An answer that is `admins_only` in Double is readable by
+  anyone with the Claude login for as long as the session exists.
+- **Protect the Claude account like the Double superAdmin account** — password and two-factor. It
+  now reaches the same data.
+
+**The `get_file` document rule (below) is deliberately unchanged.** Client documents are still not
+fetched in order to read them. That is admittedly uneven — the same completed organizer may now be
+read as data and still not be read as a PDF — and the unevenness is known, not an oversight:
+nobody has taken the document rule to Lilian. **Don't infer that it fell with the response ban.**
+
+**Safe test subject — with one caveat.** Lilian's own organizer (`Lilian Gonzalez Gonzalez`,
+client `710643`, organizer `140878`) is her own data with her own consent, so it is the right
+place to rehearse rather than a client's record. **But it is the practice's only
+`tax_users_only` organizer**, and whether that visibility blocks our superAdmin connection is
+untested — a refusal there means the gate, not a broken tool. If that happens, retry against one
+of the four `unrestricted` organizers before concluding anything.
+
+##### 📣 Tell the person BEFORE the call, remind AFTER — and write both for someone with no context
+
+Lilian's instruction, 2026-08-11: **the person working is told before the read happens, not only
+reminded once it is over.** Her reason is specific and she named it — **Julia will use this
+without knowing how any of it was built.** She has not read this skill and was not in the
+conversation where the rule was set. So "the identity block" and "§2.2" tell her nothing: **plain
+words, no jargon, no cross-references.** Say it in whatever language the session is running in.
+
+**⚠️ Tone is part of the rule — do not write these as a warning.** Lilian's correction,
+2026-08-11, after rejecting a first draft that did exactly that. The reasoning to carry: **once
+the session is deleted the firm is back to precisely the risk it had before**, and Double already
+gives anyone with the account access to the same data, so the read itself changes nothing. **The
+only real risk is forgetting to delete.** Someone who has not been through that analysis — Julia —
+will read an alarmed message as *"this is dangerous, I should not be doing it"*, conclude the work
+is a bad idea, and stop using a capability the firm deliberately enabled. Frame deletion as the
+routine last step of the job, which is what it is.
+
+**Before the first `get_organizer_responses` call — a calm heads-up:**
+
+> Before I start: to compare the organizers I need to open the client's answers, and the tool
+> returns the whole organizer at once — there is no way to pull a single question. So their
+> personal details (Social Security number, date of birth, bank details) come through in the tool
+> output. I will not repeat any of it in my replies.
+>
+> The routine for this kind of work is that we delete this conversation when we are done. I will
+> remind you at the end. Ready to go?
+
+**This is a heads-up, not a permission gate — say it and carry straight on in the same turn.**
+Stop only if the person actually raises something. The question at the end is courtesy; blocking
+on it would frame the read as a risk decision, which is exactly what the tone rule above exists
+to avoid.
+
+**At the end of the work — the closing step, not a warning:**
+
+> That is the analysis done. Last step: please delete this conversation — it is the routine
+> housekeeping for this kind of work. Deleting it removes the session's data. Nothing with the
+> client's personal details went into the repo, and nothing went into Double beyond the findings
+> themselves.
+
+**Claim only what is true.** An earlier draft of that line said *"no trace is left"* and *"nothing
+was saved anywhere else"* — both false, given exposure point 3, and it contradicted this section's
+own promise to state its limits plainly. Do not reintroduce either phrase. If a session did stage
+anything to disk, say what and where instead of reassuring.
+
+**Which deletion to describe depends on where the session runs — check `$CLAUDE_CODE_REMOTE`,
+it is free:**
+
+- **Cloud session** (claude.ai/code — web, desktop or mobile): the conversation lives in the
+  **firm's shared Claude account**, so anyone with that login can reopen it and scroll to the
+  tool output. That conversation is the only copy that outlives the work — the VM and its files
+  are destroyed with the session — so deleting it *is* the fix here. This is the case Lilian was
+  worried about.
+- **Local CLI session**: there is no conversation in the shared account to delete, so the cloud
+  wording is simply wrong. Give the real instruction instead — the transcript is a plaintext file
+  at `~/.claude/projects/<project>/<session>.jsonl`, with any spilled tool results in
+  `~/.claude/projects/<project>/<session>/tool-results/`, kept 30 days by default
+  (`cleanupPeriodDays`). Tell the person to delete that session's files, and name the path.
+
+**Say the closing one even if they waved it off at the start.** Not because it is grave — because
+it is easy to forget, and forgetting is the only thing here that actually costs anything. One
+calm sentence at the end of the work does it.
+
+_(Lilian, 2026-08-11, after working the threat model out herself: "si alguien accede a esta cuenta,
+simplemente removiendo esa regla, puede acceder a todo." The rule is hygiene and accident-prevention,
+not a lock — and it is written to say so rather than to imply a protection it does not give.)_
 
 #### ⚠️ `update_organizer` deletes by omission
 
@@ -308,7 +491,8 @@ hundred calls.
 2. **`get_property_columns` once per session** — 1 call returns every column ID and every valid
    option name. Never hardcode option names from memory; they change.
 3. **Batch 10–15 per-client calls in parallel** in a single message.
-4. **Delegate roster-wide sweeps to a subagent**, with an explicit read-only instruction and a
+4. **Delegate roster-wide sweeps to a subagent** — **except organizer responses, which are read in
+   the main session only (§2.2)** — with an explicit read-only instruction and a
    compact table as the required return format. A 120-client property sweep is one subagent, not
    120 calls in the main thread.
 5. **Narrow with the filters the tools already have** — `list_clients(name:)`,
@@ -462,8 +646,11 @@ the whole thing start to finish, instead of reconstructing it from email.
    main donde tenemos restricciones por seguridad".)_
    - **🔒 TAX-IDENTITY AND PAYMENT DATA IS STILL OUT — "everything" does not reach it.** No
      **SSN/ITIN**, driver's licence, date of birth, or **full bank routing/account number**, and
-     **nothing sourced from an organizer response** (§2.2's hard rule — that payload is exactly this
-     class of data). Contact details, client IDs and figures go in; the identity block does not.
+     **no identity-block value sourced from an organizer response — findings are welcome here,
+     identifiers are not.** §2.2 permits *reading* that payload for analysis, and a note may
+     absolutely say *"the organizer shows no K-1 this year; 2024 had one"*; what it may never
+     carry is the identifier itself. Contact details, client IDs and figures go in; the identity
+     block does not.
      Rule 10 replaced a blanket "nothing sensitive", which was the only thing previously excluding
      it — this is the exclusion that has to survive.
    - **Credentials are undecided, so none are in yet.** She named passwords among what belongs in a
@@ -599,6 +786,14 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
   so does the top of the capability map.
 - **Organizer publishing becomes available** — §2.2's ceiling lifts and we could run the whole
   organizer cycle end to end.
+- **A per-question organizer read appears**, or Double adds a redaction option — §2.2's central
+  problem is that one call returns everything, which is the only reason the identity block enters
+  the transcript at all. A filtered read would retire the delete-the-session obligation.
+- **The first real cross-year organizer analysis is run** — record what it actually caught, and
+  whether the identity-block discipline held under working conditions. Only three clients have
+  more than one year in Double today (Artur Tseretsian 2023/24/25, Vitalii Piliushin 2024/25,
+  Take It Easy Transportation 2024/25); for everyone else the comparison base is a prior-year
+  return that Lilian redacts and uploads herself.
 - **The loan tools unblock** (a client moves to a Scale plan) — §2's ⛔ row and capability-map §13.
 - A new **property column** is added or an option is renamed — §1's pointers stay valid, but
   re-run `get_property_columns` rather than trusting any list. Four were added between the July
