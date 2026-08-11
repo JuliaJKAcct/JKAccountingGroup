@@ -208,6 +208,30 @@ in that folder.
   figures are committed/pushed only when the user explicitly asks. Client watchlists,
   vendor lists, and dollar figures live in the firm's client systems (Drive / Double /
   QuickBooks), not this repo.
+- **Work on a client? Then that client gets a Client Intelligence file — in the same session,
+  unprompted.** Lilian's standing instruction (Aug 2026): *"siempre que hablemos de un cliente,
+  sobre todo un cliente que tenga cuenta en Double, todo lo que hablemos de él debe ser guardado
+  en Client Intelligence… esto no podemos perderlo."* So whenever a session works on a named
+  client — analysing their organizer, writing them a note, chasing a filing, answering a question
+  about them — **check [`projects/client-intelligence/clients/`](./projects/client-intelligence/clients/)
+  for their file and create it if it is missing**, then fold in what the session learned. A client
+  **with a Double account** is the clearest case: if they are in Double, they are real, ongoing
+  work. The bar is low on purpose — *is there anything here worth keeping?* — because the failure
+  mode is silent: knowledge is produced, the session ends, and it is gone. **Writing a Double note
+  is not a substitute** and it is exactly how this was missed: a note was written for a client who
+  still had no file. Run it through the
+  [`client-intelligence` skill](./.claude/skills/client-intelligence/) (the two-data-homes rule
+  keeps figures, addresses and personal details out of the repo), and update the three indexes in
+  the same commit.
+- **A Double note is the client's information, not our analysis.** Lilian's instruction (Aug 2026):
+  a note carries **what the client gave us and what the team needs in order to work** — their
+  figures, their statements, where their documents are, the case history. It does **not** carry our
+  internal review findings, quality assessments, or the reasoning behind a conclusion. Those live in
+  the [`client-intelligence`](./projects/client-intelligence/) file. Mixing the two "complica
+  demasiado esas notas" and turns a working record into something the team stops reading. When a
+  finding genuinely belongs in front of the team, **ask her** — she decides case by case. This
+  narrows what goes in a note; it does **not** touch the [`double-mcp`](./.claude/skills/double-mcp/)
+  §7 rule 10 that a note carries names, emails and figures freely.
 - **Load the `double-mcp` skill before the first Double MCP call.** Double is the firm's
   practice-management platform (clients, the firm's tracking columns, tax projects, closes, tasks,
   the document library) reached through the account-level `Double` MCP connector — it is **not**

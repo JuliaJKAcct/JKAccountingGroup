@@ -661,6 +661,24 @@ the whole thing start to finish, instead of reconstructing it from email.
      their own record is harmless if they see it — a password is not. Until both are settled,
      reference where the credential lives rather than pasting it.
 
+11. **A note carries the CLIENT's information — not our analysis of it.** Lilian's instruction,
+   2026-08-11, drawing the line rule 10 leaves open. What belongs in a note is **what the client gave
+   us and what the team needs in order to work**: their figures, their statements, where their
+   documents sit, what an agency said, the case history. What does **not** belong is our **internal
+   review output** — findings, quality assessments, "this contradicts that", the reasoning behind a
+   conclusion. Her words: putting that in *"sería complicar demasiado esas notas"*, and a note that
+   turns into an analysis document is a note the team stops reading.
+   **Where the analysis goes instead:** the [`client-intelligence`](../client-intelligence/) file
+   (§5 for standing quirks, §6 for the dated log and the open items). **The two artifacts have
+   different jobs** — the note is what a teammate opens *while working the client*; the CI file is
+   what the firm *knows* about them.
+   **When a finding genuinely belongs in front of the team, ask her** — she decides case by case,
+   and said so explicitly: *"si yo creo que debe incluirse algún análisis, lo pones."* Default to
+   leaving it out.
+   ⚠️ **This narrows rule 10, it does not reverse it.** Names, emails, phone numbers, client IDs and
+   figures still go in freely — rule 10 governs *how much detail* a note carries, rule 11 governs
+   *what kind of content*. And the 🔒 identity-block exclusion survives both.
+
 ### The size wall — a long note gets blocked, not truncated
 
 **Measured on the body string, 2026-08-06: ~7,600 characters went through; ~8,000 and ~10,400 were

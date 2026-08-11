@@ -83,6 +83,32 @@ The queue is the source of truth; the email is just the notice. See
 [`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md) for the
 format and full rules.
 
+## When a client gets a file — the trigger (don't wait to be asked)
+
+**Working on a named client is the trigger.** Lilian's standing instruction (2026-08-11):
+*"siempre que hablemos de un cliente, sobre todo un cliente que tenga cuenta en Double, todo lo
+que hablemos de él debe ser guardado en Client Intelligence… esto no podemos perderlo."*
+
+So in any session that analyses a client's organizer, drafts them a message, chases a filing,
+writes them a Double note, or answers a substantive question about them: **look for
+`clients/<slug>.md` and create it if it is missing** — in that same session, without being asked.
+A client **with a Double account** is the clearest case: being in Double means real, ongoing work.
+
+The bar is deliberately low — *is there anything here worth keeping?* — because the failure mode
+is silent. Knowledge gets produced, the session ends, and nobody discovers the loss until the next
+person starts from zero.
+
+**Writing a Double note is not a substitute, and that is exactly how this rule was found.** In
+Aug 2026 a client's information arrived by voice message and was carefully captured in a Double
+note — while that client still had **no CI file at all**. The note held his figures; nothing held
+what the firm had *learned* about him. Two months of that pattern and the knowledge is scattered
+across notes nobody re-reads. **A note and a file are different artifacts with different jobs** —
+see the boundary rule in the [`double-mcp`](../double-mcp/) skill §7.
+
+Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
+Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
+visible rather than assumed done.
+
 ## Creating a client file
 
 1. `cp projects/client-intelligence/_client-template.md projects/client-intelligence/clients/<slug>.md`
