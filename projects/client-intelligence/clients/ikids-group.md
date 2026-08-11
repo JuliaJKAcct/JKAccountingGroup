@@ -133,6 +133,6 @@ the actual details.
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn)
   - `4-Corporate` — Articles of Organization, EIN letter, **Operating Agreement** (the authority on
     members, percentages, and the Manager — §5), and the members' immigration documents.
-- **Related SOPs:** [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md)
+- **Related SOPs:** [`../../sops/ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md)
   — the monthly bookkeeping runbook (the AP-mailbox retrieval, the autopaid water bill, the
   startup-cost rule).

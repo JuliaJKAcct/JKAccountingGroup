@@ -121,8 +121,8 @@ because the business is pre-operational.
 
 | # | Question | Status | Notes |
 |---|---|---|---|
-| 1 | **When do "operations begin"?** — the date that stops startup-cost capitalization and starts normal expensing / depreciation | **Pending** | Tied to the park's opening. Julia's call; until it is fixed, keep capitalizing |
-| 2 | Are any **other recurring vendors on autopay**, or is water the only one? | **To verify** | Only water is confirmed (Lilian, 2026-08-11). The rest are believed paid by us on request, but nobody has listed them |
-| 3 | Where do the downloaded bills get **filed** — attached to the QuickBooks transaction only, or also into Double / the client's Drive folder? | **To verify** | Today the runbook says "attach to the transaction". Confirm with Lilian whether a second copy is expected |
-| 4 | The **bank feeds and the reconciliation step** are not documented here yet | **Pending** | Add them to *Monthly close process* once established — this runbook is deliberately a seed |
-| 5 | Is there a **fixed day of the month** the mailbox should be worked? | **To verify** | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |
+| 1 | **When do "operations begin"?** — the date that stops startup-cost capitalization and starts normal expensing / depreciation | Pending | Tied to the park's opening. Julia's call; until it is fixed, keep capitalizing |
+| 2 | Are any **other recurring vendors on autopay**, or is water the only one? | To verify | Only water is confirmed (Lilian, 2026-08-11). The rest are believed paid by us on request, but nobody has listed them |
+| 3 | Where do the downloaded bills get **filed** — attached to the QuickBooks transaction only, or also into Double / the client's Drive folder? | To verify | Today the runbook says "attach to the transaction". Confirm with Lilian whether a second copy is expected |
+| 4 | The **bank feeds and the reconciliation step** are not documented here yet | Pending | Add them to *Monthly close process* once established — this runbook is deliberately a seed |
+| 5 | Is there a **fixed day of the month** the mailbox should be worked? | To verify | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |

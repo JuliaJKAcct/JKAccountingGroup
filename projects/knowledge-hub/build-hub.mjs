@@ -739,6 +739,7 @@ function closeSectionBody(title, body){
   if(/categorization rules/i.test(title)) return ecoRuleCards(body);
   if(/review checklist/i.test(title)) return ecoChecklist(body);
   if(/open items|open decisions/i.test(title)) return ecoDecisionsTable(body);
+  if(/chart of accounts/i.test(title)) return ecoCoaConventions(body);   // the number-range strip, same as the rules shape
   if(/reference material/i.test(title)) return closeResList(body);
   return mdToAtlas(body);
 }
@@ -762,7 +763,7 @@ function closeProcessReader(cfg, md, owner, updated){
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
     + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every step) as a PDF.</span></div>`;
-  return closePrintFrontMatter(cfg.name, 'Monthly Bookkeeping & Close', sections, owner, updated)
+  return closePrintFrontMatter(cfg.name, cfg.kind || 'Monthly Bookkeeping & Close', sections, owner, updated)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>${esc(cfg.name)}<span class="loc">${esc(cfg.loc)}</span></h1>`
@@ -773,7 +774,7 @@ function closeProcessReader(cfg, md, owner, updated){
     + closeSignature(cfg.oneRule)
     + closeFlow(cfg.flow)
     + `<div class="shead"><span class="schip">§</span><h2>The full runbook</h2></div>`
-    + `<p class="slede">The authoritative detail — the client snapshot, the close process (with the Drive material for each step), the categorization rules, the reviewer checklist, and the open items. Open a section.</p>`
+    + `<p class="slede">${cfg.slede || 'The authoritative detail — the client snapshot, the close process (with the Drive material for each step), the categorization rules, the reviewer checklist, and the open items. Open a section.'}</p>`
     + secs
     + `</div>`;
 }
@@ -1326,6 +1327,9 @@ const SOP_GROUPS = [
         blurb: 'iKids Group’s monthly bookkeeping — a children’s play park still being built out, so the spend is capitalized as startup costs, not expensed. Its signature step: the bills don’t come to us, we fetch them from the client’s own AP mailbox every month. The water bill is autopaid — collect it, never pay it twice. A seed runbook: the reconciliation detail is still to be written.',
         close: {
           name: 'iKids Group LLC', loc: 'Monthly bookkeeping · pre-operational play park (Fort Lauderdale)', dl: 'iKids-bookkeeping-runbook',
+          // not a close-process client: no Drive walkthroughs, and the monthly work is AP retrieval rather than a close
+          kind: 'Monthly Bookkeeping',
+          slede: 'The authoritative detail — the client snapshot, the monthly process, the categorization rules, the reviewer checklist, and the open decisions. Open a section.',
           lede: "Everything a bookkeeper needs to run iKids month to month — the one rule, the monthly flow, then the process step by step. Built from the runbook, so it stays in sync. It is a seed: the bank-feed and reconciliation detail is still being written down.",
           oneRule: "<b>The paperwork does not come to us — we go and get it.</b> Every vendor bill and payment confirmation lands in the <b>client's own AP mailbox</b>, and for several of them that is the only copy there is. Work it <b>every month</b>. The <b>water bill is on autopay</b>: collect the bill, attach it — <b>never pay it a second time</b>. And the park has not opened, so build-out spend is <b>capitalized as startup costs</b>, not expensed.",
           flow: [
