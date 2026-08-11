@@ -274,6 +274,19 @@ function assetTableJs(){
   const rows = [...ASSETS.entries()].map(([relPath, a]) => `${a.id}:"${dataUri(a.mime, relPath)}"`);
   return `var ASSET_TABLE={${rows.join(',')}};`;
 }
+// The table is emitted where the <script> is interpolated, so an assetRef() called
+// LATER than that point would leave a data-asset with no entry — a download button
+// that silently does nothing, with the build still exiting 0. Check the finished
+// page instead of trusting the ordering.
+function assertAssetsResolvable(html){
+  const sites = [...html.matchAll(/data-asset="([^"]+)"/g)].map((m) => m[1]);
+  const known = new Set([...ASSETS.values()].map((a) => a.id));
+  const missing = [...new Set(sites)].filter((id) => !known.has(id));
+  if (missing.length) {
+    throw new Error(`data-asset ids with no ASSET_TABLE entry: ${missing.join(', ')} — an assetRef() ran after the script was emitted`);
+  }
+  return { sites: sites.length, embedded: known.size };
+}
 // a "send this to your client" block: the visual guide images shown inline + PNG/PDF downloads.
 // Team-facing — no repo/GitHub links, everything embedded.
 function guidesBlock(guides, label){
@@ -2224,8 +2237,9 @@ ${templatesViewHtml}
 
   // Downloads: "<a download href=data:>" is blocked in the sandbox (and silently on
   // some hosts). Intercept the click and route through saveFile — the downloads
-  // capability in the sandbox, a Blob download on the real host. The plain anchor
-  // stays as the no-JS fallback.
+  // capability in the sandbox, a Blob download on the real host.
+  // NOTE: for every binary the href is set by the asset resolver above, not by the
+  // generator, so this selector only matches once that has run — keep the order.
   [].forEach.call(document.querySelectorAll('a[download][href^="data:"]'), function(a){
     a.addEventListener('click', function(e){
       var parsed = dataUri(a.getAttribute('href') || '');
@@ -2332,6 +2346,8 @@ if (bareMermaid.length) {
   console.error(`⚠️  BARE MERMAID in SOP reader(s): ${bareMermaid.join(', ')} — the "process at a glance" must be a DESIGNED flow (a \`flow\` config → .pcflow), never raw Mermaid. See the sop-authoring + knowledge-hub skills.`);
 }
 
+const assetCheck = assertAssetsResolvable(html);   // throws rather than shipping a dead download
+
 const outStandalone = resolve(here, 'index.html');
 writeFileSync(outStandalone, html);
 // Artifact fragment (body-only; the Artifact tool supplies <head>/<body>)
@@ -2344,3 +2360,4 @@ writeFileSync(outFrag, fragment);
 console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${totalCount} documents`);
 console.error(`standalone → ${outStandalone} (${(html.length/1024).toFixed(0)}KB)`);
 console.error(`fragment   → ${outFrag} (${(fragment.length/1024).toFixed(0)}KB)`);
+console.error(`assets     → ${assetCheck.embedded} binaries embedded once, used in ${assetCheck.sites} places — 16MB is the Artifact ceiling`);

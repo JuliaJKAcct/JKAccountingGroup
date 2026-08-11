@@ -19,7 +19,7 @@
  * copy it from an existing guide in projects/sops/client-guides/). Chromium comes from
  * the pre-installed Playwright browsers; nothing to install.
  */
-import { readFileSync } from 'node:fs';
+import { readFileSync, renameSync, unlinkSync } from 'node:fs';
 import { basename, dirname, resolve } from 'node:path';
 import { createRequire } from 'node:module';
 
@@ -61,10 +61,22 @@ for (const input of inputs) {
 
     // No pageRanges here on purpose: capping the output at page 1 would SILENTLY
     // truncate an overflowing guide and make the one-page check below always pass.
-    // Let it spill, then fail on the count.
+    // Let it spill, then fail on the count. And render to a temp file first — a
+    // failed run must not overwrite the good renders that are already shipped.
     const pdfPath = `${dir}/${stem}.pdf`;
-    await page.pdf({ path: pdfPath, printBackground: true,
+    const pdfTmp = `${dir}/.${stem}.pdf.tmp`;
+    await page.pdf({ path: pdfTmp, printBackground: true,
       width: `${box.w}px`, height: `${box.h + 2}px` });
+
+    const pages = pdfPageCount(pdfTmp);
+    if (pages !== 1) {
+      failed = true;
+      unlinkSync(pdfTmp);
+      console.log(`✗ ${stem}  ·  pdf ${box.w}×${box.h}px, ${pages} page(s) — nothing written`);
+      console.error(`  the guide runs to ${pages} pages — shorten the card or tighten the grid.`);
+      continue;
+    }
+    renameSync(pdfTmp, pdfPath);
 
     // the WhatsApp image: screen media, so it keeps the ivory background
     await page.emulateMedia({ media: 'screen' });
@@ -72,11 +84,7 @@ for (const input of inputs) {
     const pngPath = `${dir}/${stem}.png`;
     await page.screenshot({ path: pngPath, fullPage: true });
 
-    const pages = pdfPageCount(pdfPath);
-    const ok = pages === 1;
-    if (!ok) failed = true;
-    console.log(`${ok ? '✓' : '✗'} ${stem}  ·  pdf ${box.w}×${box.h}px, ${pages} page(s)  ·  png written`);
-    if (!ok) console.error(`  ${stem}.pdf is ${pages} pages — shorten the card or tighten the grid.`);
+    console.log(`✓ ${stem}  ·  pdf ${box.w}×${box.h}px, 1 page  ·  png written`);
   } catch (err) {
     failed = true;
     console.error(`✗ ${stem}  ·  ${err.message}`);

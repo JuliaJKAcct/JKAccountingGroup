@@ -165,18 +165,25 @@ the source, all obvious in the image.
 
 ## 5. Naming
 
-Everything for one topic shares a stem — `double-<topic>`:
+**Two names, on purpose.** The SOP is the firm-side document and spells the topic out
+under the `double-portal-` prefix; the client-facing files share a **short stem** —
+`double-<short>` — because that stem ends up as a filename the client receives on
+WhatsApp. The two shipped sets: `double-portal-first-login.md` → `double-first-login-*`,
+and `double-portal-sending-us-information.md` → `double-send-info-*`.
 
 ```
-projects/sops/double-portal-<topic>.md            ← the SOP
-projects/sops/client-guides/
-  double-<topic>-guide-en.html · -ru.html         ← the visual guide (source of truth)
-  double-<topic>-en.pdf · -ru.pdf                 ← one page, for email
-  double-<topic>-en.png · -ru.png                 ← one image, for WhatsApp
-  double-<topic>-email-template.md                ← EN + RU in one file
-  double-<topic>-whatsapp-en.md · -ru.md
-  reference/<topic>-<n>-<screen>.jpeg             ← the marked-up captures
+projects/sops/double-portal-<topic>.md            ← the SOP (spelled out)
+projects/sops/client-guides/                      ← everything below shares <short>
+  double-<short>-guide-en.html · -ru.html         ← the visual guide (source of truth)
+  double-<short>-en.pdf · -ru.pdf                 ← one page, for email
+  double-<short>-en.png · -ru.png                 ← one image, for WhatsApp
+  double-<short>-email-template.md                ← EN + RU in one file
+  double-<short>-whatsapp-en.md · -ru.md
+  reference/<short>-<n>-<screen>.jpeg             ← the marked-up captures
 ```
+
+The render script derives the PDF/PNG names from the guide's own filename
+(`…-guide-en.html` → `…-en.pdf`), so the stem only has to be chosen once.
 
 The `.html` is the **source of truth**; the PDF and PNG are renders. If a screen
 changes, edit the HTML and re-run the build — never touch the PDF/PNG by hand.
