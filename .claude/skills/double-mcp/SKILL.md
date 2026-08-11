@@ -217,8 +217,11 @@ is not itself the danger. These are:
    one. Worst case, and the easiest to do by accident.
 2. **A commit or a PR.** The repo rule is unchanged and absolute: nothing from an organizer
    response is ever committed.
-3. **Files the session writes, or that the harness writes for it.** This one is invisible and
-   deleting the conversation does **not** clear it. A large tool result is spilled to disk
+3. **Files the session writes, or that the harness writes for it.** This one is invisible, and
+   **deleting the conversation does not reach it** — the two live in different places. (In a cloud
+   session the VM is destroyed with the session, so the files go with it; in a **local CLI**
+   session they sit on that machine for 30 days, and the **scratchpad** is a separate path in
+   both.) A large tool result is spilled to disk
    automatically — `~/.claude/projects/<project>/<session>/tool-results/*.txt` — and a ~120-slide
    organizer will almost certainly trigger that; the transcript itself is written to
    `~/.claude/projects/<project>/<session>.jsonl`; and the scratchpad directory is the natural
@@ -232,8 +235,10 @@ is not itself the danger. These are:
 cross-year organizer comparison across the roster looks exactly like that work. **Read organizer
 responses in the main session only.** A subagent gets its own context and its own transcript file,
 so delegating multiplies the copies and puts them where the person deleting the conversation will
-not think to look. If a sweep genuinely needs one, the subagent's instruction must forbid returning
-any identity-block value in its report — findings only.
+not think to look — and forbidding the subagent to *report* an identifier does not help, because
+the harm is the extra copy, not the summary. A sweep that genuinely needs a subagent gives it
+**properties and organizer metadata only** (`list_organizers`, `list_client_properties`) and never
+`get_organizer_responses`.
 
 **Never from a scheduled or unattended session.** Every control here is a sentence said to a
 human: tell them before, remind them to delete after. A Routine or any unattended run has nobody
@@ -256,10 +261,15 @@ of a client's SSN into a **temporary** one. Don't skip it because the person alr
 [Claude Code § Data usage](https://code.claude.com/docs/en/data-usage), checked 2026-08-11:
 
 - **The firm is on a Max plan, which is a *consumer* plan.** Retention therefore depends entirely
-  on one toggle at [claude.ai/settings/data-privacy-controls](https://claude.ai/settings/data-privacy-controls):
-  **allow data for model improvement ON → 5-year retention** and the data may be used for
-  training; **OFF → 30 days**. This is the single largest lever available to the firm and it is
-  free. Anything written here about "30 days" assumes it is off — **confirm before relying on it.**
+  on one toggle at [claude.ai/settings/data-privacy-controls](https://claude.ai/settings/data-privacy-controls)
+  — *Help improve our AI models*: **ON → 5-year retention** and the data may be used for training;
+  **OFF → 30 days.** ✅ **Lilian switched it OFF on 2026-08-11**, checking it because of this rule,
+  and confirmed the account has no shared chats and no public artifacts. So the 30-day figure is
+  **verified, not assumed** — but it is one click from changing, so re-check rather than trusting
+  this line if anything depends on it. Deleting a conversation also removes it from future model
+  training ([Anthropic Privacy Center](https://privacy.anthropic.com/en/articles/7996878-can-you-delete-data-sent-via-claude-ai));
+  deletion cannot unwind training that already happened, which is why the toggle matters more than
+  the deleting.
 - **Never run `/feedback`, `/bug` or `/share` in a session that has read organizer responses.**
   Those upload the conversation and are **retained for 5 years**, independently of deleting it.
 - **Answer "No" to the session-quality survey's follow-up** (*"Can Anthropic look at your session
@@ -268,10 +278,11 @@ of a client's SSN into a **temporary** one. Don't skip it because the person alr
 
 **Zero Data Retention would remove the server-side copy entirely, but it is not available here.**
 ZDR covers Claude Code on **Claude for Enterprise**, enabled per organization after an eligibility
-check with Anthropic's sales team. It is not offered on Max. If the firm ever wants below 30 days,
-that is the route — a plan change and a conversation, not a setting.
+check with the account team — it is **not** part of the standard Enterprise plan, and not offered
+on consumer plans like Max. If the firm ever wants below 30 days, that is the route: a plan change
+and a conversation, not a setting.
 
-Two consequences of the same reasoning:
+Two consequences of the shared-account point above:
 
 - **The firm shares one Claude account**, so session history has **no per-person gating** the way
   Double's `responsesVisibility` does. An answer that is `admins_only` in Double is readable by
@@ -326,9 +337,9 @@ to avoid.
 **At the end of the work — the closing step, not a warning:**
 
 > That is the analysis done. Last step: please delete this conversation — it is the routine
-> housekeeping for this kind of work. Deleting it removes the session's data, and a deleted
-> conversation is never used to train models. None of the client's details went into the repo or
-> into Double.
+> housekeeping for this kind of work. Deleting it removes the session's data. Nothing with the
+> client's personal details went into the repo, and nothing went into Double beyond the findings
+> themselves.
 
 **Claim only what is true.** An earlier draft of that line said *"no trace is left"* and *"nothing
 was saved anywhere else"* — both false, given exposure point 3, and it contradicted this section's
@@ -340,8 +351,9 @@ it is free:**
 
 - **Cloud session** (claude.ai/code — web, desktop or mobile): the conversation lives in the
   **firm's shared Claude account**, so anyone with that login can reopen it and scroll to the
-  tool output. Deleting the conversation *is* the fix, and this is the case Lilian was worried
-  about.
+  tool output. That conversation is the only copy that outlives the work — the VM and its files
+  are destroyed with the session — so deleting it *is* the fix here. This is the case Lilian was
+  worried about.
 - **Local CLI session**: there is no conversation in the shared account to delete, so the cloud
   wording is simply wrong. Give the real instruction instead — the transcript is a plaintext file
   at `~/.claude/projects/<project>/<session>.jsonl`, with any spilled tool results in
@@ -634,9 +646,11 @@ the whole thing start to finish, instead of reconstructing it from email.
    main donde tenemos restricciones por seguridad".)_
    - **🔒 TAX-IDENTITY AND PAYMENT DATA IS STILL OUT — "everything" does not reach it.** No
      **SSN/ITIN**, driver's licence, date of birth, or **full bank routing/account number**, and
-     **nothing sourced from an organizer response** — §2.2 permits *reading* that payload for
-     analysis, and still forbids writing any of this class of data out, a Double note included.
-     Contact details, client IDs and figures go in; the identity block does not.
+     **no identity-block value sourced from an organizer response — findings are welcome here,
+     identifiers are not.** §2.2 permits *reading* that payload for analysis, and a note may
+     absolutely say *"the organizer shows no K-1 this year; 2024 had one"*; what it may never
+     carry is the identifier itself. Contact details, client IDs and figures go in; the identity
+     block does not.
      Rule 10 replaced a blanket "nothing sensitive", which was the only thing previously excluding
      it — this is the exclusion that has to survive.
    - **Credentials are undecided, so none are in yet.** She named passwords among what belongs in a

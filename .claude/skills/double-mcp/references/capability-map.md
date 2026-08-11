@@ -182,12 +182,17 @@ subagent and unattended-session bans, and the obligation to tell the user to del
 The short version:
 
 - **Permitted:** analysis and cross-year comparison on a real client.
-- **Never written out**, anywhere: SSN/ITIN · driver's licences · bank routing and account
-  numbers · credentials · dates of birth. By existence, never by value.
+- **Never written out**, anywhere: SSN/ITIN · driver's licences · bank routing and account numbers
+  · credentials · dates of birth · **any other government-issued identifier, passports and
+  immigration documents included** (the list is illustrative — this firm's clients are foreign-born
+  owners). By existence, never by value. **Findings are not values** — *"no K-1 this year, 2024 had
+  one"* is the point of the exercise and travels freely.
 - **No per-question read exists** — one call returns everything, so the identity block enters the
   transcript whatever you were after.
-- **Warn before, remind after.** Announce what the call will expose and wait for a yes *before*
-  the first one; tell the person to delete the session when the work is done. Plain words — the
+- **Never from a subagent, and never from a scheduled or unattended session.** SKILL.md §2.2.
+- **Tell them before, remind after.** Say what the call will expose before the first one — a
+  heads-up, **not a permission gate**: say it and carry on in the same turn. Then tell the person
+  to delete the session when the work is done. Plain words — the
   person asking may never have read any of this. SKILL.md §2.2 carries the wording for both.
 - To know **how far along** a client is, responses are still the wrong tool —
   `list_organizers` / `get_organizer.completionPercentage` costs nothing sensitive.

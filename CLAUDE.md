@@ -225,7 +225,10 @@ in that folder.
   BEFORE the first call what it will bring into the conversation**, in plain words with no jargon
   and no `§` references, because the person asking may be **Julia, who will use this without
   knowing how any of it was built**; and **you remind them to delete the session when the work is
-  done**, because in a cloud session that history sits in the firm's shared Claude account.
+  done**, because in a cloud session that history sits in the firm's shared Claude account. Two
+  absolute bans go with it: **never from a subagent, and never from a scheduled or unattended
+  session** — a Routine has nobody to tell and nobody to delete, so every control here fails
+  silently.
   **Keep both messages calm** — deleting is the routine last step of the job, and once it is done
   the firm is back to exactly the risk it had before. Written as an alarm, they teach the person
   that a capability we deliberately enabled is dangerous. The wording for both messages, and the full rule
