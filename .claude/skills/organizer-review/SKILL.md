@@ -381,8 +381,8 @@ second recruits them.
 
 **Use this shape wherever two records genuinely disagree** — a disappearance, a
 contradiction, anything a client has to *explain* rather than simply send. **A
-straightforward missing document is just an ask**, not a four-move message: *"please send
-your Form 1095-A"* needs no preamble. Applying the full shape to every marker in Block B
+straightforward missing document is just an ask**, not a four-move message: *(invented illustration: "please send
+your Form 1098-E")* needs no preamble. Applying the full shape to every marker in Block B
 rebuilds exactly the padded list the five-to-eight limit exists to prevent.
 
 ### Block F — Notes for the file
