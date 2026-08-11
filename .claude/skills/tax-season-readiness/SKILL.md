@@ -73,8 +73,16 @@ NOT keep.** (Lilian, Jul 2026.)
 | Client | Company organizer? | Why |
 |---|---|---|
 | **We do their bookkeeping** (`Bookkeeping ` = `Monthly` or `Quarterly`, and/or QuickBooks connected) | **No** | We already hold everything it would ask for. Lilian now marks these directly with `Organizer Status = N/A (BK client)` |
+| **Not a bookkeeping client, but the firm holds QuickBooks access to their books** | **No** | Same practical effect as above, different reason: this company never became a bookkeeping engagement, but the firm was given (or kept) access to its QuickBooks anyway, even though it isn't connected in Double. Lilian marks these `Organizer Status = NA We have QuickBooks Access` (added Aug 2026) — we can log in and answer the organizer's transaction questions ourselves, so it doesn't go to the client |
 | **Schedule C** | **No** | There is no separate company return at all |
 | Neither | **Yes** | We need their P&L from them |
+
+> **`N/A (BK client)` vs `NA We have QuickBooks Access` — don't conflate them.** Both end in "no
+> organizer needed," but the reason differs and matters for other reporting (e.g. whether the
+> client has a monthly/quarterly retainer): the first means an **active bookkeeping engagement**
+> (`Bookkeeping ` property set); the second means **no such engagement, only access**. Treat a
+> client with the second value as *not* a bookkeeping client for every other purpose (§3's two
+> signals, billing, etc.) — only the organizer question is answered the same way.
 
 > The two bookkeeping signals disagree for a handful of clients (§3) and that question is still
 > open. Until it's settled, a client matching **only one** signal goes to **review** — do not put
@@ -177,7 +185,7 @@ a "waiting on the client" bucket without that confirmation.
 |---|---|---|
 | `221299` | Account Type | `Company` · `Individual` |
 | `221146` | Tax Return Type | `1040` · `1040-NR` · `1040-SCH C` · `Sch C` · `1065` · `1120` · `1120-S`. **`1040-SCH C` and `Sch C` are two separate options meaning the same thing** — a data-quality quirk, both are in live use; match either when filtering |
-| `226743` | **Organizer Status** | `Completed` · `Sent` · `In progress` · `Not Started` · `N/A (SCH-C)` · **`N/A (BK client)`** · `N/A (Nonresident)` |
+| `226743` | **Organizer Status** | `Completed` · `Sent` · `In progress` · `Not Started` · `N/A (SCH-C)` · **`N/A (BK client)`** · `N/A (Nonresident)` · **`NA We have QuickBooks Access`** (added Aug 2026 — note it doesn't follow the `N/A (...)` naming pattern the others use; match the literal string when filtering) |
 | `221151` | `Bookkeeping ` — **the trailing space is real**, it is part of the column name in Double | `Monthly` · `Quarterly` · `N/A` |
 | `221150` | Sales Tax | `Monthly` · `Quarterly` · `N/A` |
 | `221200` | Payroll | `Automatic` · `Monthly` · `Biweekly` · `TBD` · `N/A` |
@@ -273,6 +281,7 @@ we need.
 | `In progress` | ⏳ Waiting on the client |
 | `N/A (SCH-C)` | 🟡 **No company return exists.** On a *company* row (the observed convention) resolve to the **owner's 1040 status**. On an *individual* row it cannot mean that — send to review (§1b) |
 | **`N/A (BK client)`** | 📗 **Books, not organizers.** Lilian marking §1b's rule directly on the record: we keep their books, so no organizer is owed. Readiness is whether the tax year's books are closed — **never** report it as ready or as waiting on the client |
+| **`NA We have QuickBooks Access`** | 📗 **We hold QuickBooks access, not their books.** Not a bookkeeping engagement, but the firm can log into this company's QuickBooks even though it isn't connected in Double. Per Lilian (Aug 2026): the Business Tax Organizer doesn't go to this client at all — the firm answers the transaction-related questions itself from QuickBooks. Treat it like `N/A (BK client)` above: no organizer is owed, don't report it as waiting on the client. *(A caution, not yet confirmed either way: today's organizer isn't split into "transaction" vs. "other" questions, so this reads as the whole organizer being skipped for now — Lilian's planned redesign, `BACKLOG.md` IDEA-16, would make that split explicit. If a gap ever turns up between what QuickBooks can answer and what the organizer actually asks, flag it rather than assuming.)* |
 | `N/A (Nonresident)` | 🟡 **Organizer not applicable** — readiness still has to be established another way; ask Lilian what a non-resident return needs |
 | `Not Started` | 🔴 **Pending** — we don't have an organizer |
 | *(blank)* | ❓ **Unverified** — check the TaxDome folder per §4, then hand to Lilian |
@@ -532,7 +541,10 @@ Within each group, produce these buckets, not two:
   A resolvable `N/A (SCH-C)` doesn't stop here — it resolves to the owner's bucket (§5)
 - 📗 **Books, not organizers** — bookkeeping companies with their own return (1120-S / 1065 / 1120).
   Not organizer-gated; readiness is whether the tax year's books are closed, which Double can't
-  show for 2025 (§1b). Never present these as a client-blocked queue
+  show for 2025 (§1b). Never present these as a client-blocked queue. **A second, distinct case
+  lands here too:** `Organizer Status = NA We have QuickBooks Access` (§5) — not a bookkeeping
+  engagement, but the firm holds QuickBooks access and skips the organizer for that reason instead.
+  Don't merge the two reasons when explaining why a client is in this bucket
 - ⏳ **Waiting on the client** — organizer sent or in progress (report the %), a tax project at
   `Waiting on Client`, or — **for a client who is actually owed an organizer (§1b)** — none on file.
   A bookkeeping company with no organizer does **not** belong here
