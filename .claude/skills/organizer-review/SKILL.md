@@ -99,6 +99,17 @@ organizer that is absent this year. **Each one is a question, never a conclusion
 Applies well beyond K-1s: a W-2 employer, a rental, a 1099 payer, a dependant, a state,
 an estimated-payment pattern.
 
+> **When the household moves, question the FILING STATUS itself — not just the
+> dependants.** Lilian's catch (2026-08-11), and it is the one a checklist never makes. A
+> dependant who disappears, a new mention of child support, an address that changed: each
+> is a small puzzle on its own, and together they may mean **the marriage ended**. Filing
+> status is decided by the position on **31 December**, and it changes the standard
+> deduction, the brackets, every credit and often the state return — so it is worth far
+> more than the dependant line that started the enquiry.
+> **So ask it directly and plainly: "on 31 December 2025, were you married or divorced?"**
+> Never infer it, never carry last year's status forward because nothing said otherwise,
+> and never assume a client who says "married" today was married at year end.
+
 **2 · Questions we have no answer to, because of an earlier answer.**
 
 Organizer logic only asks for a document once an earlier answer makes it relevant. A
@@ -265,6 +276,21 @@ varias preguntas… agrupar un poco esto."*
 **One root cause = one numbered finding**, however many questions it generates. Do not
 list fifteen missing documents when one wrong answer caused all fifteen.
 
+**Show the trail — a finding nobody can follow is not usable.** Lilian's instruction
+(2026-08-11): the "what we know" line names *what was reported, what is missing, and what
+the prior year did*, so the reader understands the point without opening anything. *"He
+indicated mortgage interest and property taxes, no Form 1098 was attached and the question
+was marked not applicable — and there was no 1098 last year either, because the prior
+return took the standard deduction."* That sentence is the finding. *"Housing deductions
+unclear"* is not.
+
+> ⚠️ **This is the one place the review and the repo diverge, and both rules are real.**
+> The **review is delivered in chat**, where a client's answers may be stated — that is
+> what makes the trail followable. The **client file may not repeat them** (§0 rule 5). So
+> the same finding is written twice, deliberately: in full in the review, and as the
+> *action* in the file. Do not soften the chat version to match the file, and do not copy
+> the chat version into the file.
+
 Each finding, in four lines and no more:
 
 ```
@@ -340,6 +366,13 @@ Rules that come from the firm's client-message convention:
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
+- **Ask for facts, not legal documents.** The firm does not ask clients for custody
+  orders, divorce decrees, separation agreements or a signed Form 8332 — that is a
+  document request most clients cannot meet and it changes the tone of the relationship.
+  **Ask the facts the return needs instead** — who lived where, for how many months, what
+  the position was on 31 December. The legal instrument stays internal knowledge for how
+  we *treat* the answer, and is raised only if the answer makes it unavoidable.
+  _(Lilian, 2026-08-11: "no preguntamos por ese tipo de documento".)_
 
 #### Where two records disagree: show the client both, then ask
 
@@ -393,6 +426,34 @@ note — observation to the note, judgement to the CI file.** *"No K-1 this year
 had one"* is welcome there; *"the organizer is unusable as filed"* is not.
 [`double-mcp`](../double-mcp/) §7 rule 11 is the authority, and it is easy to get
 backwards.
+
+#### Write the file so the tax year can be answered a year from now
+
+Lilian's requirement (2026-08-11): she wants to be able to ask, later, **"what happened
+with this client's 2025 taxes? what problem did we have? what did they report?"** — and
+get an answer from the file. A review that only produces a chat message has produced
+nothing durable.
+
+So the client file's §6 gets a **`Tax year YYYY — the review`** entry carrying:
+
+- **What gated the return** — the one or two things that actually held it up.
+- **Every question we put to the client**, and **its answer once it arrives** (tick it,
+  append the answer and the date — the `client-intelligence` convention for answered
+  items). This is the part that makes the year answerable later.
+- **What we established from the prior-year return** — carryovers, states, entities,
+  filing status. Prior-return facts are ordinary client knowledge, not organizer
+  responses, and they belong here.
+- **What was decided and why**, including anything left unresolved at filing.
+
+**The bar in §0 rule 5 still stands over all of it:** the file records the question and,
+once the client tells us, their answer to *us* — never what they ticked in the organizer.
+In practice that costs almost nothing, because the answer we act on is the one they give
+when we ask.
+
+⚠️ **Client files are auto-published by the Knowledge Hub build**, which globs `clients/`
+with no allowlist. Lilian's standing decision (2026-08-11): **the Hub is not to carry
+clients' tax detail.** So a client file carrying a tax-year review must not reach a Hub
+rebuild until that build filters — see [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 ---
 
