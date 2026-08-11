@@ -185,7 +185,10 @@ The short version:
 - **Never written out**, anywhere: SSN/ITIN · driver's licences · bank routing and account
   numbers · credentials · dates of birth. By existence, never by value.
 - **No per-question read exists** — one call returns everything, so the identity block enters the
-  transcript whatever you were after. Say so; then tell the user to delete the session.
+  transcript whatever you were after.
+- **Warn before, remind after.** Announce what the call will expose and wait for a yes *before*
+  the first one; tell the person to delete the session when the work is done. Plain words — the
+  person asking may never have read any of this. SKILL.md §2.2 carries the wording for both.
 - To know **how far along** a client is, responses are still the wrong tool —
   `list_organizers` / `get_organizer.completionPercentage` costs nothing sensitive.
 - **`responsesVisibility` is not uniform.** Sampled 2026-08-11 across 57 organizers: mostly

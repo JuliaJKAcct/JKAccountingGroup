@@ -238,6 +238,50 @@ Two consequences of the same reasoning:
 organizer `140878`) — her own data, her own consent. Use it to rehearse a flow rather than a
 client's record.
 
+##### 📣 Warn BEFORE the call, remind AFTER — and write both for someone with no context
+
+Lilian's instruction, 2026-08-11: **the person working must be warned before the read happens,
+not only reminded once it is over.** Her reason is specific and she named it — **Julia will use
+this without knowing how any of it was built.** She has not read this skill and was not in the
+conversation where the rule was set. So "the identity block" and "§2.2" tell her nothing: **plain
+words, no jargon, no cross-references.** Say it in whatever language the session is running in.
+
+**Before the first `get_organizer_responses` call — announce, then wait for a yes:**
+
+> To compare the organizers I have to open the client's answers. There is no way to read just one
+> question — the call returns the whole thing, which includes their Social Security number,
+> driver's licence, date of birth and bank account details. Those will be visible in this
+> conversation, in the tool output, even though I will never repeat them in my replies.
+>
+> That is fine and it is how we agreed to work — but it means **this conversation will hold the
+> client's SSN until you delete it.** Shall I go ahead?
+
+Wait for the answer. One extra exchange is cheap; a colleague finding out afterwards that a
+client's SSN sat in a shared account for a month is not.
+
+**At the end of the work — remind, concretely, even if they already said they know:**
+
+> We are done. This conversation now contains <client>'s Social Security number and bank details,
+> in the tool results above. **Please delete it now.** Deleting removes it from your history
+> straight away and from Anthropic's servers within 30 days, and a deleted conversation is never
+> used to train models. Nothing is saved anywhere else — none of it went into the repo or into
+> Double.
+
+**Which deletion to describe depends on where the session runs — check `$CLAUDE_CODE_REMOTE`,
+it is free:**
+
+- **Cloud session** (claude.ai/code — web, desktop or mobile): the conversation lives in the
+  **firm's shared Claude account**, so anyone with that login can reopen it and scroll to the
+  tool output. Deleting the conversation *is* the fix, and this is the case Lilian was worried
+  about.
+- **Local CLI session**: the transcript is a file on that machine, not in the shared account.
+  The risk is different and "delete the conversation" is not the right instruction — say so
+  rather than reciting the cloud wording.
+
+**Never let either message become a formality.** If the person waves it off — *"yes, I know"* —
+say it once more at the end anyway. It is one sentence, and it is the only thing standing between
+a temporary copy of a client's SSN and a permanent one.
+
 _(Lilian, 2026-08-11, after working the threat model out herself: "si alguien accede a esta cuenta,
 simplemente removiendo esa regla, puede acceder a todo." The rule is hygiene and accident-prevention,
 not a lock — and it is written to say so rather than to imply a protection it does not give.)_
