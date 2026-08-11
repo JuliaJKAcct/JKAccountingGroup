@@ -187,7 +187,7 @@ client-intelligence/
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |
 | MASCIAVE DESIGN STUDIO LLC | [`clients/masciave-design-studio.md`](./clients/masciave-design-studio.md) | Lilian | In progress — enriched (Double + Gmail) |
-| iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail) |
+| iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail); **has a bookkeeping SOP** (seed) — the AP mailbox we work monthly + the autopaid water bill |
 | Deep Tech Development Group LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — enriched (Double + Gmail) |
 | AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — enriched (Double + Gmail) |
 | Beemold USA LLC | [`clients/beemold-usa.md`](./clients/beemold-usa.md) | Maria | In progress — Maria's process guide integrated |
