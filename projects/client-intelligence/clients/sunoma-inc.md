@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -88,6 +88,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.
 - Store inventory/POS on **Bravo**; **Truist** + **Chase** banking; recurring Bravo access/license friction (the person who managed it left).
+- **Owner-directed inventory donation in progress:** old, unsold-but-working pawn-store inventory is being donated to a charity for a tax deduction — booked at **fair market value**, not cost basis, contingent on the charity issuing a donation receipt. Not yet finalized as of 2026-07-23 (still gathering items, pickup not yet scheduled). Flagged as an SOP-proposal candidate — see the SOP for the categorization rule to add. _(Gmail, 2026-07-20→23)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -96,10 +97,13 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 2. Sunoma*): month-end per-store process, systems (Bravo / PaymentsHub / ADP / TaxDome), bank-feed map, and reporting cadence captured into the Operating zone (non-sensitive only). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet — email/document flow was the richest source.
 
+- 2026-07-25 — Incremental sweep: legal-matter bank-statement compilation completed and sent to the owner. New donated-inventory tax-deduction matter surfaced (§5) — queued as an SOP-proposal candidate for the categorization-rules SOP.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Recurring Bravo access/license problems** — the firm keeps losing access; asked for its own login. _(Gmail, 2026-07)_
-- **Legal matter (in progress):** compiling TD/Truist bank statements to trace wire transfers to an outside attorney, at the owner's request. _(Gmail)_
+- ~~**Legal matter (in progress):** compiling TD/Truist bank statements to trace wire transfers to an outside attorney~~ — **completed 2026-07-20/21**, sent to the owner.
 - A missing **Auto Pawn April-2024 expense report** was requested from the owner — confirm received.
+- **Donated-inventory tax deduction** — pending (a) the charity's written donation receipt, (b) documentation of how FMV figures were derived, (c) the owner's completed item list/pickup; expected to resume "in a couple of weeks" per the 2026-07-23 message.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group relationship (Sunoma / Magnum)

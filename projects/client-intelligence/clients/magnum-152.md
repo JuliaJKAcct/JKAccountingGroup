@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -38,8 +38,9 @@ here. Open the Double client to get the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact (also owns Sunoma Inc) | Double client (link below) |
+| Owner / primary contact (also owns Sunoma Inc, plus a separate individual/personal Double client) | Double client (link below) |
 | Administrative assistant (sends monthly bills, reclass records) | Double client (link below) |
+| Third contact — financial-access only, not yet role-confirmed | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706693](https://app.doublehq.com/close?cid=706693)
 
@@ -91,6 +92,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **PayPal 1015 feed sync is broken** — recorded via a **monthly journal entry** instead of a live feed.
 - **Bank-feed handling rules:** do **not** match open JE balances for vendors with payments — always categorize; **TD Bank check images aren't attaching in QBO** — pull images from the bank and use the vendor to pick the account; the store **class** is confirmed at month-end from the admin's bills; Amex payments are booked as CC payments from TD Bank, then matched by most-recent payment/date.
 - **SaasAnt** is used for GL consolidation into QBO; **Bravo** for store POS/inventory; **ADP** for payroll (owner-run).
+- The owner's Double footprint spans **three** client records: Magnum 152, Sunoma (the sister pawn company), and a separate individual/personal record (not a bookkeeping engagement) — useful context for future owner-group sweeps.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -99,9 +101,11 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 1. Magnum*): full month-end process, bank-feed map, systems (Bravo / SaasAnt / ADP), store structure, and reclass checklist captured into the Operating zone (non-sensitive only; credentials/dollar figures left in Drive). Tutorials/step folders linked in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
+- 2026-07-25 — Incremental sweep: confirmed the July close cycle ran to completion (bank/card reconciliations, Bravo reports, JEs, vendor recon, performance report, ADP, reclass — all Done 2026-07-22→23). Softened the inventory-donation status (still open, not resolved — see below). Flagged an Amex bank-feed-count gap in the SOP as a proposal candidate.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Legal matter (resolved ~Jul 19–21):** owner requested TD Bank statements to trace wire transfers to an outside attorney's firm; JK located and delivered them. _(Gmail)_
-- **Inventory-donation tax treatment** — JK advised on the deduction at fair market value (~Jul 10–13; essentially resolved). _(Gmail)_
+- **Inventory-donation tax treatment — still open, not resolved:** JK advised on the deduction at fair market value; as of 2026-07-23 the administrative assistant is still gathering items and pickup hasn't been scheduled yet. _(Gmail)_
 - A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — confirm received. _(Gmail)_
 - **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE (waiting on info). _(Maria's doc guide)_
 

@@ -53,6 +53,10 @@ indexed _(2026-08-04)_.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | **QuickBooks company name: "Corganix"** _(Lilian, 2026-08-06)_. Managed through Double. **The primary admin is NOT the owner we deal with, and the transfer to him is half-done — read the subsection below before touching users or the plan** |
 | Bank feed | Reconciliation | _(pending — Drive link)_ | One live feed: Chase business checking (see the bookkeeping SOP); other accounts frozen |
+| Gusto | Payroll | _(pending — Drive link)_ | A firm staff admin's access was revoked 2026-07-15 as part of the bookkeeper transition |
+| CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | _(pending — Drive link)_ | Recurring filings |
+| CT Dept. of Labor / ReEmployCT | Unemployment tax | _(pending — Drive link)_ | Recurring correspondence |
+| CT Secretary of the State portal | Annual Report / registered agent | _(pending — Drive link)_ | Due March 31 annually; 2026 filing accepted |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
 
 ### ⚠️ QuickBooks access is mid-change — don't touch users or the plan (2026-08-06)
@@ -90,12 +94,10 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — Monthly, via CT DRS myconneCT (form OS-114). The recurring "Sales Tax" task's due date was moved from the 1st to the 5th of the month _(Double, 2026-07-20)_.
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
-
-### Bookkeeping & monthly close
+- **Applies?** Yes — via Gusto; CT-941 withholding and ReEmployCT filings recurring _(Gmail, 2026)_.
 - **Applies?** Yes — this is the core engagement.
 - **Cadence:** Monthly.
 - **Categorization rules / quirks:** Detailed, client-specific rules already
@@ -118,9 +120,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   - **Whose account is it? — the company's.** The Turo account belongs to **ECOORGANIC USA LLC**, so any income and any 1099-K go on the **1120-S**, not on an owner's 1040. _(Per Lilian, 2026-08-04 — her statement; the basis is not recorded and no document was seen. The account is closed, so this has not been verified against the registration.)_
   - Turo's refusal to deal with the firm says **nothing** about who owns the account — it only means we are not the account holder, which is why the owner has to place the call. How a company-owned account squares with Turo dealing only with an individual account holder is **not established**.
   - **On the next contact with Turo — the escalation email or a further call — get the registered account name and the name / TIN on any 1099-K.** That corroborates the ownership answer and, more importantly, determines whether the 1099-K will match to the LLC's EIN — if it comes out under his SSN, the return position has to be handled deliberately whoever "owns" the account.
+- **Applies?** Yes — Form 1120-S; firm prepares/files it. 2024 return filed under a Form 7004 extension (mid-March 2025); 2025 return also under extension as of a July 2026 note _(Double; Gmail)_.
+
+### 1099 filings
+- **Applies?** Yes _(Double client properties)_. Tax-year-2025 1099-NEC forms are complete (W-9 collection ran mid-Jan 2026, forms filed) — this is the closed 2025 year; ongoing/current-year 1099 payee decisions remain deferred per Lilian (see §6).
 
 ### Licenses & other filings
-- **Applies?** _(pending)_
+- **Applies?** Yes — CT Annual Report, due March 31 annually; 2026 filing accepted _(Gmail, 2026-03-20 → 2026-04-07)_.
+- Client carries commercial General Liability + Workers' Comp; the insurer runs an annual premium audit requiring the firm to supply the P&L and a contractor/1099 listing — an audit cycle ran May–July 2026 _(Gmail)_.
 
 ## 5. Key facts & quirks
 
@@ -133,6 +140,10 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **2025 books are closed** — renames/renumbers only; never merge/retype accounts with 2025 activity.
 - Several open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex) tracked in the SOP's Open decisions log. *(Meals/gas policy is now resolved — see the log.)*
 - **Writing to this client:** messages go out in **Russian**, addressed formally ("Вы"), in simple wording — the owner reads Russian, not English. How to draft and shorten a client message at all is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md); only the language is specific to this client.
+- Client operates as a subcontractor to at least one larger general contractor, requiring COI/W-9/ACH paperwork (subcontractor-onboarding correspondence via a third-party accounting firm, Jul 2026).
+- A same-named Ukraine-based company (different legal entity, same industry) periodically exchanges financial documents with the firm — relationship to the US LLC unconfirmed; worth clarifying with the client.
+- The client's CT compliance record is also targeted by non-official third-party filing/renewal solicitation emails (not CT.gov) — flag so these aren't mistaken for real government notices.
+- (Medium confidence, 2026-07-22 client review meeting) Truck-rental charges (e.g. U-Haul) for moving tools/materials to a job site were discussed as belonging in "Shipping and deliveries," not COGS materials — not yet a written SOP rule (see SOP-proposal below). Same meeting: software/subscription charges are consolidated into a single QBO account (no per-tool breakout).
 
 ## 6. History & open questions
 
@@ -170,12 +181,17 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-07-21 — Reviewed the only connected feed (Chase checking 8310), Apr–Jul 2026 (357 transactions), to learn the client's actual keeping. Findings reported to Lilian (client figures kept out of the repo). Confirmed business type (spray-foam/insulation contractor). Corrected the SOP's account names to the real QBO chart (the personal/draws account is **Owner's distribution**, not "Owner's Pay & Personal Expenses"; there is a single **Cost of Goods Sold** account with no Materials/Sub-labor/Job-disposal sub-accounts). Key issues surfaced: subcontractor labor (incl. several payees ≥ $2,000) parked in **Outside services** with no W-9/1099 tracking; small gas/convenience charges coded to **Meals**; some …2935 owner transfers hitting **COGS**; owner transfers lumped in the **Owner's Equity** parent instead of contribution/distribution; frequent overdraft fees; triage sits at ~$0 but many categories are still wrong. Judgment calls (meals policy, COGS-vs-opex intent, which payees are 1099 subs) pending Lilian/client.
 - 2026-07-21 — Decisions from Lilian: **meals policy resolved** (per Julia) — no client/crew/personal split; all food/restaurant/fast-food/convenience → distributions (non-deductible for now), gas ≥ $25 → fuel, < $25 → distributions (so the Meals account should trend to ~$0). **1099s deferred** — Lilian will resolve payee-by-payee over time; tracked via Double for now, no repo worklist needed. Grocery/food stores → distributions, **except** supply/materials stores (Home Depot, hardware, work-parts, rental/supply houses) → Supplies & Materials/COGS. Vehicle financing left as an **open question** (SOP's "Hyundai/Ally" doesn't match the actual RAM truck loans — to reconcile later). Lilian notes she's "flying blind" on this new client and will study it piece by piece.
 
+- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass. Filled in sales tax/payroll/income tax/1099/annual-report obligations (all confirmed applicable), primary language, fiscal year-end, and several key-facts quirks. Found the Google Drive folder (§7, filed as "Ecoorganic USA INC"). Flagged a new categorization rule (U-Haul/vehicle-rental → Shipping and deliveries) as an SOP-proposal candidate, and a possible Turo car-rental topic to follow up once its meeting transcript is indexed.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
 - **QuickBooks primary admin — the whole thing is waiting on the FATHER to scan the QR code and upload a photo of his ID** (§3). Nothing else can move until he does; chase him through the son, who is the one we correspond with. **Then, in this order:** **(a)** confirm the son's primary-admin access actually works; **(b)** confirm the firm's own access survives a single-user plan — see "Information still needed", nobody has established whether the firm has access independent of the owners' users; **(c)** delete the father's user; **(d)** **downgrade the subscription** back to the single-user plan, **confirming the downgrade with the son first — it is the client's billing.** **The downgrade is the step that gets forgotten**, and the client keeps paying for the bigger plan until it's done. Meanwhile **two users on the account is intentional** — don't let anyone "clean it up".
 - **Before filing — get the registered Turo account name and the name / TIN on any 1099-K** at the next contact with Turo (§4). It corroborates the ownership answer and shows whether the 1099-K will match to the LLC's EIN or to his SSN.
 - **Check whether any Turo payouts are already in the books** — whether those deposits landed in the Chase feed and were categorised, or are missing entirely (§5). Nobody has looked yet.
 - Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
+- Prior staff bookkeeper's Gusto admin access was formally revoked 2026-07-15 — bookkeeper-handoff progressing.
+- A 2026-07-23 "Ecoorganic tax prep" meeting reportedly covered a complex situation involving Turo car rentals and expense categorization (per its auto-generated summary only — transcript not yet indexed in Ping); worth a follow-up once available, may bear on the SOP's open vehicle-financing question.
+- Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
 
 ### Information still needed
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
@@ -192,4 +208,5 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 - **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover", note **485258** (only the stable title prefix is recorded here; the live title carries a status suffix and a name, which belong in Double) on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** [Ecoorganic USA INC folder](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) _(filed as "INC" — a naming variant; same client)_
 - **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)

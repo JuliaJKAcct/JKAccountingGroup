@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-21
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-07-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -67,6 +67,7 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 ### Payroll
 - **Applies?** Yes — **Gusto**, **biweekly** (processed **Tuesday**). _(Maria's doc guide)_
 - **Process notes (→ future SOP):** the GM emails notes through the pay period (commissions, Saturday shifts, extra hours). **Tuesday morning: send one consolidated email to the GM (CC Julia)** summarizing all of it and asking if anything else is pending. Standing rules: Saturday shifts pay a fixed per-employee weekend rate; PTO logged as "day without payment" is rejected in Gusto and the hours simply removed from that period; one contractor is **skipped** until the GM says to resume; one employee is hourly (time must be approved + synced); anything extra → **Other earnings → Commissions**, extra hours → **Regular Hours**. **After each payroll, submit the contribution roster to the American Funds Simple IRA.** _(Maria's doc guide)_
+- **New process detail (2026-07-25):** when a shift (e.g. a weekend shift) is reported *after* the regular biweekly Gusto run has already processed, the fix is a separate **off-cycle "Bonus" payroll run**, not waiting for the next cycle. _(Gmail, 2026-07-17→24)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **monthly** _(Double)_. **Review model:** the client's **GM categorizes ~99%** in QBO; JK owns the **reconciliations** and supports the GM on unclear transactions (all by email, with screenshots).
@@ -74,6 +75,7 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
+- **2025 tax organizer status:** **Sent** to the client as of 2026-07-25 _(Double client properties)_ — resolves the prior "organizer state to reconcile" open item.
 
 ### Licenses & other filings
 - _(pending)_
@@ -82,6 +84,7 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 
 - **Split-responsibility bookkeeping** — the client's GM categorizes almost everything; JK reconciles and reviews. Communication is **email + screenshots**, not shared live work.
 - **Buyback workflow** — a buyback clearing account is zeroed with a matching Bill + Invoice; **buyback transactions repeatedly land in "Uncategorized expenses"** and must be re-mapped (a recurring pain point, strong SOP candidate). _(Gmail)_
+- **Buyback root cause identified (2026-07-25):** QuickBooks duplicates the payment entry when a buyback deposit payout is made to a customer — the duplicate is what lands in Uncategorized expenses. _(Gmail "BuyBack 2026" thread, 2026-07-20→22)_
 - **Sales-tax report is never right out of the box** — always recalculated; watch the invoice-level "see math" errors (see §4).
 - **Part of the tech owner-group** (shares a principal with SensusTech / the wider group). _(Double, Gmail)_
 - A **USTD deposit-tracing working file** lives in the Drive folder (large multi-month deposit-reconciliation with customer/invoice detail — sensitive; stays in Drive). _(Drive)_
@@ -93,11 +96,14 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - 2026-07-21 — **Integrated Maria Fernanda's "doc guide"** (Drive → *Mafer's Clients process / 3. Mobilesource*): sales-tax recalculation process, the biweekly Gusto payroll routine + Simple IRA roster, the split-responsibility bookkeeping model, bank-feed map, and 5 video tutorials captured into the Operating zone (non-sensitive only). Links in §7. _(Maria's doc guide)_
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had **no indexed meetings**; Double has no notes yet.
 
+- 2026-07-25 — Incremental sweep: June 2026 reports sent to the GM/owner group 2026-07-24 — the "reports blocked" item below is now resolved (month-end close for 06-2026 marked Done 2026-07-23, full close checklist completed). Identified the buyback root cause (QBO duplicate payment entries). A USDT-related deposit was flagged pending to clear in QuickBooks (2026-07-23) — worth another look next sweep. Two SOP-proposal candidates queued (buyback root-cause addendum, off-cycle payroll addendum).
+
 ### Outstanding items (CI-only — never in the SOP)
-- **June 2026 reports blocked** pending the client fixing miscategorized **buyback** transactions. _(Gmail)_
-- **2025 business income-tax prep in progress** — reconcile the client-portal organizer state. _(Gmail)_
+- ~~**June 2026 reports blocked** pending the client fixing miscategorized **buyback** transactions.~~ — **resolved 2026-07-24**, reports sent.
+- ~~**2025 business income-tax prep in progress** — reconcile the client-portal organizer state.~~ — **resolved 2026-07-25**, organizer sent.
 - A mid-2026 **encrypted exchange with a FL DOR agent** — possible account/notice matter to watch. _(Gmail)_
 - **Open in Maria's guide:** dispute case on file; an employee I-9 in Gusto; a credit memo; commission payments for the skipped contractor; a request to remove/adjust pending payments. _(Maria's doc guide)_
+- A USDT-related deposit flagged pending to clear in QuickBooks, 2026-07-23 — follow up next sweep.
 
 ### Information still needed
 - [ ] Fiscal year-end; sales-tax registration detail

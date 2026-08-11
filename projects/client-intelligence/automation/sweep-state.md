@@ -59,8 +59,9 @@ list grows.
 | Denys Melnyk | 2026-08-11 | **Ping, Gmail and Drive never swept.** The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**, supplied to the session by Lilian as a redacted PDF. A full historical pass of the other three sources is owed — note that this client communicates by **voice message**, so Ping/Gmail may hold little and Double is the primary source |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — the file was seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) — see the "Excluded — archived clients" table in `weekend-ci-sweep.md` |
 
-_Baselines set 2026-07-20. The first five came from the manual sweep (Ping + Double
-for all five;
-Gmail was only searched topically, around Best Broker's BTR — hence every client
-owes a one-time full Gmail pass). That catch-up run may exceed the steady-state
-per-client call bound once; that's expected._
+_Baselines set 2026-07-25 (prior baseline 2026-07-20) after the weekend sweep. The
+five clients that owed a one-time full Gmail history pass (Atman Parts, Best Broker
+Realty, Ecoorganic USA, Kolo Florida, Pro Title Agency) all got it this run — all
+five coverage gaps are now cleared. Ping's `list_client_meetings` tool was not usable
+this run for any client (needs a client-scoped context this session didn't have);
+`search_meetings` (org-wide, semantic) was used as the working substitute throughout._

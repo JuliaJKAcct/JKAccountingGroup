@@ -23,11 +23,11 @@
 ## 1. Snapshot
 
 - **Business name:** Kolo Florida Inc
-- **Entity type:** Corporation (Inc)
-- **Home state:** Florida
-- **Industry / what they do:** _(pending — confirm)_
-- **Primary language:** _(pending — confirm)_
-- **Our engagement (services we provide):** _(pending — confirm)_
+- **Entity type:** Corporation (Inc), taxed as an **S-corp (Form 1120-S)** _(Double client properties, 2026-07-25)_
+- **Home state:** Florida — also holds a City of Lauderhill Commercial Certificate of Use for a physical business location _(Gmail, 2025-09/2025-11)_
+- **Industry / what they do:** E-commerce — runs a **Shopify** storefront branded **"KOLO HOUSE"** _(Gmail, ongoing through 2026-07-24; Drive watchlist doc 2026-07-07)_
+- **Primary language:** Russian (client correspondence) _(Gmail, ongoing)_
+- **Our engagement (services we provide):** Income tax (1120-S), 1099 preparation, annual report, sales tax, bookkeeping — see §4 _(Double client properties, 2026-07-25)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -39,7 +39,8 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| Owner / primary contact | Double client (link below) — also has a separate individual/personal-1040 Double client with the firm |
+| Corporate officer (holds a Workers' Comp exemption alongside the owner) | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706626](https://app.doublehq.com/close?cid=706626)
 
@@ -48,44 +49,63 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
+| Gusto | Payroll — active, weekly cycle | _(pending — Drive link)_ | _(Gmail, ongoing through 2026-07-24)_ |
+| Shopify | E-commerce platform ("KOLO HOUSE" store) | _(pending — Drive link)_ | _(Gmail, ongoing)_ |
+| Florida DOR e-Services / FL Tax Portal | Sales-tax filing & secure messages | _(pending — Drive link)_ | _(Gmail, 2025-10 → 2026-07-14)_ |
+| GovFile | Third-party filer used for the FL Annual Report | _(pending — Drive link)_ | _(Gmail, 2026-05-01)_ |
+| TaxDome | Client portal for the owner's personal tax organizer | _(pending — Drive link)_ | _(Gmail, 2026-02)_ |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes.
+- **Jurisdiction(s):** Florida (FL DOR).
+- **Frequency & due date:** Quarterly (Apr / Jul / Oct / Jan) _(Gmail 2025-08→2026-05; Drive watchlist doc 2026-07-07)_.
+- **Note:** Double's client-property picker currently shows "Monthly" — appears stale vs. the observed quarterly cadence; worth correcting in Double.
 
 ### Payroll
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — active, weekly, via Gusto _(Gmail, ongoing)_. A "payroll running late" reminder recurs almost every pay cycle — a standing timing quirk, not a one-off.
+- **Note:** Double's client-property picker currently shows "N/A" — appears stale vs. the observed active weekly payroll; worth correcting in Double.
 
 ### Bookkeeping & monthly close
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — cadence on file in Double: Quarterly.
+- **Current status:** Bookkeeping cleanup in progress as of 2026-07-07 — several transactions still uncategorized; recurring-charge anomalies (see §5) pending client answers _(Google Drive watchlist doc, 2026-07-07)_.
 
 ### Income tax
-- **Applies?** _(pending — confirm)_
+- **Applies?** Yes — **Form 1120-S** _(Double client properties, 2026-07-25)_.
 
 ### Licenses & other filings
 - **Applies?** Yes (at least in part) — a principal holds a Florida **workers'-compensation Certificate of Election to be Exempt** for this company. The Division of Workers' Compensation emails an **expiration notice** to the firm (one landed 2026-06-29), so the exemption has a renewal cycle to watch. _(Florida DWC notice via Gmail, 2026-07-30)_
 - **What & when:** _(pending — confirm the exemption's expiration date and who renews it, us or the client)_
+- **The exemption covers BOTH principals, not one** — separate Division of Workers' Compensation expiration notices for each of them landed the same day, 2026-06-29; renewal status unconfirmed _(Gmail, 2026-07-25 sweep)_.
+- **Florida Annual Report** — filed each spring through the third-party **GovFile** service; the 2026 filing was confirmed 2026-05-01 _(Gmail, 2026-07-25 sweep)_.
+- **City of Lauderhill Commercial Certificate of Use / local BTR** — applied Sept 2025, inspected Oct 2025, issued Dec 2025 and **valid through 2026-09-30**. A 2025 zoning application was first **denied** ("wholesale use isn't allowed" at the location) and approved on resubmission as **retail sales to customers** — keep that framing for any future licensing or zoning question _(Gmail, 2025; 2026-07-25 sweep)_.
 
 ## 5. Key facts & quirks
 
-- _(pending)_
+- Two Double client-property values look stale vs. observed reality: **Payroll** shows "N/A" (actually active weekly Gusto payroll) and **Sales Tax** shows "Monthly" (actual filings are quarterly) — flag for correction in Double.
+- Dual-engagement client: Kolo Florida Inc (corporate, 1120-S) **and** a separate personal individual-tax (1040) engagement under a different Double client id for the same owner.
+- Business was informally referred to as "Kolo Inc" in early intake correspondence (Jan 2026) before settling on "Kolo Florida Inc."
+- Recurring-charge watchlist (Drive doc, 2026-07-07) flagged anomalies on two vendors — pending client answers as of this sweep.
 
 ## 6. History & open questions
 
 ### Log
 - 2026-07-20 — Profile started from the Double record (Kolo Florida Inc, QBO). Confirmed by Lilian as the client she referred to as "Colo". Almost everything still to gather.
 - 2026-07-20 — Sweep: no Double notes and **no indexed Ping meetings**; one primary contact is on file in Double/Ping. Still almost everything to gather.
+- 2026-07-25 — Coverage-gap sweep: full historical Gmail pass (back to 2025-08) plus a Double/Ping incremental check. Filled in most of §1/§3/§4 from Double client properties + recurring Gmail threads. Found the Google Drive folder (§7) and a recurring-expense watchlist doc. Ping still has **no indexed meetings** for this client — confirmed again, genuinely nothing there yet, not a search miss.
 - 2026-07-30 — Linked into the owner group (§7) and recorded the **workers'-comp exemption** in §4, found via a Florida DWC expiration notice in Gmail. Captured while building the owner's individual file ([`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md)); no dedicated sweep of this client was run.
 
 ### Outstanding items (CI-only — never in the SOP)
-- _(none captured yet — live tasks live in Double / Ping)_
+- Two FL Workers' Comp exemption certificates (owner + one other officer) got expiration notices 2026-06-29 — renewal not yet confirmed done.
+- City of Lauderhill Business Tax Receipt renewal due before 2026-09-30 — not yet on the Double task list.
+- Bookkeeping cleanup (uncategorized transactions, recurring-charge anomalies) status not confirmed complete as of this sweep — worth a status check with the assigned bookkeeper.
+- Two Double client-property values (Payroll = "N/A", Sales Tax = "Monthly") look stale and should be corrected to match observed reality (see §5).
 
 ### Information still needed
-- [ ] Industry / what they do
-- [ ] Primary language; fiscal year-end
-- [ ] Which recurring services we provide (bookkeeping? sales tax? payroll? income tax? licenses?)
-- [ ] Where credentials live (Drive vault link)
+- [ ] Fiscal year-end
+- [ ] Where credentials live (Drive vault links, per system in §3)
+- [ ] Confirm/clear the stale Double client-property values (Payroll, Sales Tax frequency)
 
 ## 7. Links
 
@@ -94,4 +114,6 @@ the actual details.
 - **Related clients:** [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) (one of
   the individuals holds a Florida workers'-comp Certificate of Election to be Exempt for
   this company), [`aura-remodeling.md`](./aura-remodeling.md) — same owner group.
+- **Google Drive folder (sensitive vault):** [Kolo Florida Inc folder](https://drive.google.com/drive/folders/1iK4p0Zrht0fCpvRtqRxYtbwikvYPkceO) _(best candidate — other similarly-titled folders also exist; confirm canonical with Julia)_
+- **Recurring-expense watchlist:** [Kolo Florida — Recurring Watchlist (Google Doc)](https://docs.google.com/document/d/1cGgStq2Yd6dluxC8IhaCkYAbdM22VdXs1ej1qsgJRRQ/edit)
 - **Related SOPs:** _(pending — none yet)_
