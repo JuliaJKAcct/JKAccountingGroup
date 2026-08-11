@@ -35,6 +35,12 @@
   that the firm has access to. **Every vendor bill and payment confirmation arrives there**, and for
   several of them it is the **only** copy that exists: nothing is forwarded to us, and the client
   sends us nothing. The password lives in the client's vault, not here.
+- **Where the paperwork is kept:** **Julia's Google Drive** → the folder named for the client →
+  **`Bookkeeping`** → **one folder per month of the year**. Every invoice and receipt for this
+  client goes there. The mailbox is where documents *arrive*; Drive is where they *live*. The
+  client's Drive folder is linked from the client file's §7; whether that is the same parent that
+  holds `Bookkeeping` is **not verified** — open the client folder by name rather than assuming
+  _(to verify — see the open-decisions log)_.
 
 ## Monthly close process
 
@@ -51,14 +57,20 @@ not come to us — we go and get it.** Work the mailbox first, then the ledger.
    the bill and its payment confirmation still have to be downloaded from the mailbox and matched to
    that transaction. **Do not pay it a second time** and do not chase the vendor for it — it is
    already paid.
-3. **Attach each document to its payment transaction in QuickBooks.** Match every downloaded bill
+3. **File the month's documents in Drive, in that month's folder.** Every invoice and receipt for
+   this client lives in **Julia's Google Drive** → the folder named for the client →
+   **`Bookkeeping`** → **one folder per month of the year**. Put the month's downloads in the
+   folder for that month. This is the firm's copy of the paperwork and it is where a covering
+   bookkeeper will look for it — the mailbox is where the documents *arrive*, not where they are
+   kept. _(Lilian, 2026-08-11.)_
+4. **Attach each document to its payment transaction in QuickBooks.** Match every downloaded bill
    (and its confirmation) to the corresponding transaction so the expense carries its own support.
    Where a bill has no matching transaction yet, or a payment has no bill, that is the exception to
    raise — not something to categorize around.
-4. **Categorize the month against the startup-cost rule.** The park has not opened: expenses are
+5. **Categorize the month against the startup-cost rule.** The park has not opened: expenses are
    **capitalized as startup costs**, not expensed (see *Categorization rules*). Override any
    QuickBooks auto-suggestion that expenses them.
-5. **Close gate — triage reads $0.** *Ask My Accountant* / uncategorized / holding accounts must be
+6. **Close gate — triage reads $0.** *Ask My Accountant* / uncategorized / holding accounts must be
    **$0** before the month is called closed. A $0 triage is necessary, not sufficient: it does not
    mean the categories are right.
 
@@ -72,9 +84,10 @@ because the business is pre-operational.
    expense. **When operations begin is a live judgment call** tied to the opening date, and it is
    not settled — see the open-decisions log. Until it is, keep capitalizing and flag anything that
    looks like the business has started trading.
-2. **Every bill we pay is a document we must hold.** The firm pays vendors from the client's
-   account, so the only trail is the one we file: bill + payment confirmation attached to the
-   transaction. A payment we made with nothing attached is an open item, not a closed one.
+2. **Every bill we pay is a document we must hold — in two places.** The firm pays vendors from the
+   client's account, so the only trail is the one we file: the document goes into **Drive, in that
+   month's `Bookkeeping` folder**, and gets **attached to the transaction** in QuickBooks. A
+   payment we made with nothing attached is an open item, not a closed one.
 3. **The water bill is autopaid — treat the bank charge as expected.** It will appear without any
    instruction from us. Its bill comes from the mailbox, not from the client.
 4. **Money in from the members is equity, never income.** This company has no revenue yet; funds
@@ -110,12 +123,13 @@ because the business is pre-operational.
 1. The **AP mailbox was worked this month** — the month's bills and confirmations downloaded.
 2. The **water bill** for the month is in hand **and attached** to the automatic payment — and was
    **not** paid a second time.
-3. Every bill has a matching transaction, and every payment we made has its bill attached.
-4. Build-out spend is **capitalized as startup costs**, not expensed.
-5. Member money in/out is posted to the **equity sub-accounts**, not to income or the parent.
-6. Payees present on everything except contributions, distributions and transfers; any payee at or
+3. The month's documents are **filed in Drive**, in that month's `Bookkeeping` folder.
+4. Every bill has a matching transaction, and every payment we made has its bill attached.
+5. Build-out spend is **capitalized as startup costs**, not expensed.
+6. Member money in/out is posted to the **equity sub-accounts**, not to income or the parent.
+7. Payees present on everything except contributions, distributions and transfers; any payee at or
    above **$2,000** has a **W-9** on file.
-7. **Close gate:** triage / *Ask My Accountant* reads **$0**.
+8. **Close gate:** triage / *Ask My Accountant* reads **$0**.
 
 ## Open decisions log
 
@@ -123,6 +137,7 @@ because the business is pre-operational.
 |---|---|---|---|
 | 1 | **When do "operations begin"?** — the date that stops startup-cost capitalization and starts normal expensing / depreciation | Pending | Tied to the park's opening. Julia's call; until it is fixed, keep capitalizing |
 | 2 | Are any **other recurring vendors on autopay**, or is water the only one? | To verify | Only water is confirmed (Lilian, 2026-08-11). The rest are believed paid by us on request, but nobody has listed them |
-| 3 | Where do the downloaded bills get **filed** — attached to the QuickBooks transaction only, or also into Double / the client's Drive folder? | To verify | Today the runbook says "attach to the transaction". Confirm with Lilian whether a second copy is expected |
+| 3 | Where do the downloaded bills get **filed**? | Resolved | **Answered by Lilian 2026-08-11:** Julia's Google Drive → the client's folder → `Bookkeeping` → one folder per month. Both: filed in Drive **and** attached to the transaction |
 | 4 | The **bank feeds and the reconciliation step** are not documented here yet | Pending | Add them to *Monthly close process* once established — this runbook is deliberately a seed |
-| 5 | Is there a **fixed day of the month** the mailbox should be worked? | To verify | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |
+| 5 | Is the client's Drive folder linked in the client file's §7 the **same parent** that holds the `Bookkeeping` → month folders? | To verify | The path Lilian gave is by name, not by link. Confirm once, then put the direct link here so nobody hunts for it |
+| 6 | Is there a **fixed day of the month** the mailbox should be worked? | To verify | Doing it at close works; an earlier date would catch a missing bill while the vendor still answers |

@@ -159,6 +159,13 @@ Built as the scheduled form of the `client-intelligence` skill (IDEA-15), using 
 for the email. The exact routine prompt + web-UI setup steps live in
 [`automation/weekend-ci-sweep.md`](./automation/weekend-ci-sweep.md).
 
+> ⚠️ **The sweep stops at a branch, and three of them are still sitting there** (2026-07-25,
+> 08-01, 08-08 — 717 lines across ~48 client-file touches, plus 22 SOP proposals). The
+> routine is written to push and wait for a human to merge; nobody did. What is in them, and the
+> policy contradiction behind it, is registered in
+> [`automation/unmerged-sweeps.md`](./automation/unmerged-sweeps.md) — **awaiting Lilian's decision**
+> on whether the sweep should merge its own CI work, keeping approval for SOP changes only.
+
 ## What's here
 
 ```
@@ -169,6 +176,7 @@ client-intelligence/
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
+│   ├── unmerged-sweeps.md   ← ⚠️ OPEN: three sweeps (Jul 25 · Aug 1 · Aug 8) committed to a branch and were never merged — what is in them, and why it happened
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
 └── clients/               ← one file per client (24 so far — see the Clients index below)
 ```

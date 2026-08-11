@@ -1335,6 +1335,7 @@ const SOP_GROUPS = [
           flow: [
             { t: 'Work the mailbox', d: 'Download the month’s bills + confirmations' },
             { t: 'Water = autopay', d: 'Collect it · never pay it twice' },
+            { t: 'File in Drive', d: 'Bookkeeping → that month’s folder' },
             { t: 'Attach', d: 'Each bill to its payment transaction' },
             { t: 'Startup costs', d: 'Capitalize — the park has not opened' },
             { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
