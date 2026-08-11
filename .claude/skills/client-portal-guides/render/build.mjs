@@ -46,27 +46,43 @@ for (const input of inputs) {
   const stem = basename(htmlPath).replace(/\.html$/, '').replace(/-guide-([a-z]{2})$/, '-$1');
 
   const page = await browser.newPage({ viewport: { width: 900, height: 1200 }, deviceScaleFactor: 3 });
-  await page.goto('file://' + htmlPath, { waitUntil: 'networkidle' });
+  try {
+    await page.goto('file://' + htmlPath, { waitUntil: 'networkidle' });
 
-  const pngPath = `${dir}/${stem}.png`;
-  await page.screenshot({ path: pngPath, fullPage: true });
+    await page.emulateMedia({ media: 'print' });
+    await page.setViewportSize({ width: 860, height: 600 });
+    const box = await page.evaluate(() => {
+      const el = document.querySelector('.page');
+      if (!el) return null;
+      const r = el.getBoundingClientRect();
+      return { w: Math.ceil(r.width), h: Math.ceil(r.height) };
+    });
+    if (!box) throw new Error('no .page wrapper found — is this a guide built from the house template?');
 
-  await page.emulateMedia({ media: 'print' });
-  await page.setViewportSize({ width: 860, height: 600 });
-  const box = await page.evaluate(() => {
-    const r = document.querySelector('.page').getBoundingClientRect();
-    return { w: Math.ceil(r.width), h: Math.ceil(r.height) };
-  });
-  const pdfPath = `${dir}/${stem}.pdf`;
-  await page.pdf({ path: pdfPath, printBackground: true,
-    width: `${box.w}px`, height: `${box.h + 2}px`, pageRanges: '1' });
-  await page.close();
+    // No pageRanges here on purpose: capping the output at page 1 would SILENTLY
+    // truncate an overflowing guide and make the one-page check below always pass.
+    // Let it spill, then fail on the count.
+    const pdfPath = `${dir}/${stem}.pdf`;
+    await page.pdf({ path: pdfPath, printBackground: true,
+      width: `${box.w}px`, height: `${box.h + 2}px` });
 
-  const pages = pdfPageCount(pdfPath);
-  const ok = pages === 1;
-  if (!ok) failed = true;
-  console.log(`${ok ? '✓' : '✗'} ${stem}  ·  pdf ${box.w}×${box.h}px, ${pages} page(s)  ·  png written`);
-  if (!ok) console.error(`  ${stem}.pdf is ${pages} pages — shorten the card or tighten the grid.`);
+    // the WhatsApp image: screen media, so it keeps the ivory background
+    await page.emulateMedia({ media: 'screen' });
+    await page.setViewportSize({ width: 900, height: 1200 });
+    const pngPath = `${dir}/${stem}.png`;
+    await page.screenshot({ path: pngPath, fullPage: true });
+
+    const pages = pdfPageCount(pdfPath);
+    const ok = pages === 1;
+    if (!ok) failed = true;
+    console.log(`${ok ? '✓' : '✗'} ${stem}  ·  pdf ${box.w}×${box.h}px, ${pages} page(s)  ·  png written`);
+    if (!ok) console.error(`  ${stem}.pdf is ${pages} pages — shorten the card or tighten the grid.`);
+  } catch (err) {
+    failed = true;
+    console.error(`✗ ${stem}  ·  ${err.message}`);
+  } finally {
+    await page.close();
+  }
 }
 
 await browser.close();

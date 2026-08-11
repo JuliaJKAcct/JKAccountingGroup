@@ -37,15 +37,15 @@ and our reply lands in the same thread.
      context.
    - **Team visibility** — leave it alone. It shows *"Currently visible only to you"* and
      governs which of the **client's own** people can see the item in their portal; we
-     receive it either way. _(Read off the field itself — not confirmed with Double
-     support. Don't over-explain it to a client; "leave it as it is" is enough.)_
+     receive it either way. *(Read off the field itself — not confirmed with Double
+     support. Don't over-explain it to a client; "leave it as it is" is enough.)*
 
 ## What happens on our side
 
 - A client-raised item lands in Double's **questions** data as a `contactToUser` question
-  (the mirror of `userToContact`, which is what *we* send *them*). _Inferred from the
+  (the mirror of `userToContact`, which is what *we* send *them*). *Inferred from the
   documented question types in the [`double-mcp` capability map](../../.claude/skills/double-mcp/references/capability-map.md#8-notes-comments-questions);
-  not yet confirmed against a live record._
+  not yet confirmed against a live record.*
 - The Double **`Client Portal` property column** shows `n/m. Q: k` per client — portal
   items done/total plus **open questions**. That `Q:` count is how the roster shows a
   client is waiting on us.

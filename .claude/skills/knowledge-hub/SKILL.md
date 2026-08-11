@@ -258,6 +258,19 @@ The Hub is **one HTML file** — HTML + CSS + JS inline, fonts embedded, images/
 inside a CSP-restricted Artifact, and **move to the firm's Odoo website with nothing lost**
 (embed the HTML in a private Odoo page). Never add a runtime dependency or an external fetch.
 
+### Every embedded binary goes in ONCE — use `assetRef()`, never `dataUri()` in markup
+
+A published Artifact has a **16MB ceiling**, and base64 is 1.37× the file. The generator
+keeps one copy of each binary: `assetRef(mime, path)` returns an id, the ids are emitted
+once as `ASSET_TABLE`, and the script resolves them onto `src`/`href` **before** the
+`a[download][href^="data:"]` interceptor binds — so **that resolver must stay above the
+interceptor**. Writing `href="${dataUri(...)}"` straight into markup is the regression to
+avoid: a guide PNG shown inline *and* offered as a download, whose PDF also sits in a
+Templates card, was going in three times. Deduplicating took the page from **14.9MB back
+to 10.1MB** (Aug 2026, when the second client-portal guide pair was added and the ceiling
+came into view). The trade-off, accepted deliberately: those links need JS — like the
+reader, the search and the filters, which never worked without it.
+
 ### Downloads & print behave differently in the Artifact sandbox vs the real host
 
 The claude.ai Artifact sandbox **silently blocks BOTH `<a download>` (every scheme —

@@ -1,8 +1,9 @@
 <!--
   WhatsApp-ready message, English.
-  Best: send the one-page image (double-send-info-en.png) as a photo, or the PDF
-  as a document. If you'd rather send the raw screenshots, they're in
-  reference/ — send them IN ORDER (1 tab -> 2 plus -> 3 ask a question -> 4 form).
+  Send the one-page image (double-send-info-en.png) as a photo, or the PDF as a
+  document. Do NOT send the raw captures in reference/ — those are a firm member's
+  own portal view (their name on screen, their counts, the red pen); they are the
+  drawing reference for the guide, not something a client should receive.
   Fill in {{FIRST_NAME}} before sending.
 -->
 
