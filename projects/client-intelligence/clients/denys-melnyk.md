@@ -20,13 +20,13 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us; the business activity is reported on Schedule C)
 - **Entity type:** Individual / sole proprietor (Schedule C on Form 1040)
-- **Home state:** Florida — **moved from Washington during 2025**. Both states tax neither wages nor business income, so a state return is likely unnecessary (confirm no income was sourced elsewhere).
-- **Industry / what they do:** ⚠️ **Inferred, not confirmed with the client.** The expense pattern in the Double note — a single payer, fuel paid to other drivers, year-round travel with hotels and meals, vehicle finance, occupational insurance — reads as **freight / trucking or logistics contracting**. His payer is named **Midwest** in the note. Ask him directly; the Schedule C business description depends on it.
-- **Household / filing status:** **Married** as of December 31. The client stated (Aug 2026) that he has **two children** and **pays child support**. Whether either child is claimable as his dependent is **unresolved** — his 2025 organizer answers "no dependents", which may well be correct if they live with the other parent. Names, dates of birth and SSNs are in **Double**, not here.
+- **Home state:** ⚠️ **He moves, and the states matter.** His **2024** return was filed as a **Montana resident** **plus an Illinois nonresident/part-year return** — most of his 2024 income was Illinois-sourced through his companies. His 2025 organizer names only **Washington** and **Florida** and mentions neither Montana nor Illinois. Since the 2024 return was signed from a Montana address in **May 2025**, a **Montana part-year** return for 2025 is likely, and **Illinois** probably recurs while the companies operate there. **Do not assume "no state return" from the WA/FL answer** — that would be a filing failure, not a missed deduction.
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer.
+- **Household / filing status:** **Married filing jointly** (2024, and married as of 31 Dec 2025). ⚠️ **Three sources disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); his **voice note of Aug 2026** says *"married and have two children"* and that he pays **child support**; his **2025 organizer answers "no dependents"**. Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** _(pending)_ — the organizer was completed in English; surname suggests UA/RU, unconfirmed.
-- **Our engagement (services we provide):** Individual income tax — **Form 1040 with Schedule C**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm.
+- **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
-- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). Schedule C figures come from the client's own summary, not from books we keep.
+- **Accounting platform:** None — Double shows `platform: "none"` (no QuickBooks). His figures come from his own summary, not from books we keep. **We do not have the S corporations' books or their 1120-S returns either**, which is the gap that matters most.
 
 ## 2. Contacts
 
@@ -68,7 +68,8 @@ link). Never write the credential itself here.
 
 ### Income tax
 - **Applies?** Yes.
-- **Return type(s) & deadlines:** Form **1040** with **Schedule C**. Double `Tax Return Type: 1040-SCH C`; 2025 tax project `notStarted`, due **2026-04-15**.
+- **Return type(s) & deadlines:** Form **1040**; 2025 tax project `notStarted`, due **2026-04-15**. Double's `Tax Return Type` reads **`1040-SCH C`** — ⚠️ **and the 2024 return does not support that.** The only Schedule C on the 2024 return was his **wife's** (a tiny "business supportive services" activity); his own income came through **S-corporation K-1s**, a W-2 and a retirement distribution. Settle the return type before preparing anything — see §5.
+- **State returns:** federal is not the whole job for this client. 2024 was federal + **Montana** (resident) + **Illinois** (Schedule NR). Expect state returns for 2025 and establish which ones early.
 - **Our role:** We prepare the return.
 - **Organizer status:** `JK 2025 1040 Organizer`, marked **completed 2026-08-04** at **100%**, and Double's `Organizer Status` property reads **Completed**. **It is not usable as filed** — see §5. Treat the "Completed" label as the client's sign-off, not as a statement that we have what we need.
 - **Process notes (→ future SOP):** the working method for this client is in §5 — take his own summary as raw input, reclassify it, and re-ask only what is genuinely missing.
@@ -125,12 +126,50 @@ asked for dates and amounts — read that as "paid none". With self-employment i
 no withholding, expect self-employment tax and an **underpayment penalty**; raise it with
 him rather than letting it surface at filing.
 
-**The prior-year return was prepared elsewhere, so the carryover check is not optional.**
-He uploaded his own 2024 return into the organizer and it is also in Double's file
-library. Because the firm did not prepare it, read it for **capital loss carryover, NOL,
-depreciation and Section 179 basis, foreign tax credit carryover, passive loss
-carryovers, and any 2024 overpayment applied to 2025** — none of which anyone here would
-otherwise know about.
+**The prior-year return was prepared elsewhere, so the carryover check is not optional —
+and reading it changed the entire engagement.** (Reviewed 2026-08-11 from the redacted copy
+Lilian supplied; the client's own copy is in Double's file library. Figures stay out of the
+repo — they are on the return and in Double.)
+
+- **He is an S-corporation shareholder, not a contractor.** The 2024 Schedule E carries
+  **three** S-corp K-1s: **Midwest Expedited Corp** (a very large loss), **Midwest Truck
+  Leasing LLC** and **AVDM Holdings Inc**. The "Midwest" that "sent him" money in his voice
+  note is **his own company**.
+- **⚠️ So the money he described may not be Schedule C income at all.** Money out of your own
+  S corp is normally **W-2 wages and shareholder distributions** — distributions are not income
+  and reduce basis. And the expenses he listed (occupational insurance, road trips, fuel paid to
+  drivers, phone) look like **corporate** expenses that the S corps very likely already deducted
+  on their own 1120-S returns. **Deducting them again on his 1040 would double-count them.**
+  Nothing should be prepared until this is settled — it is the difference between the right
+  return and a wrong one.
+- **A large net operating loss carried forward from 2024** (Form 172). Post-2017 NOLs carry
+  forward indefinitely and offset up to **80% of taxable income**. It is big enough to absorb
+  most or all of his 2025 income. **Preparing 2025 without it would cost him badly** — this
+  single item is why reading a prior return prepared elsewhere is mandatory.
+- **A small suspended passive loss** also carries forward (Form 8582, prior-years' unallowed).
+- **⚠️ Verify basis before relying on the NOL.** The big S-corp loss was deducted as
+  **nonpassive**, i.e. in full, which requires sufficient stock and debt basis, and the "basis
+  computation required" box does not appear ticked. Not our return and not an accusation — but
+  if basis was short, part of that loss should have been suspended instead of deducted, and the
+  carryforward figure would change. Check before building on it.
+- **Sale of business property in 2024** (Form 4797, an ordinary recapture gain) — assets were
+  disposed of. Ask whether anything continued into 2025 or was sold on installments.
+- **An early retirement distribution in 2024**, with the 10% penalty on part of it (Form 5329,
+  partial exception claimed). His 2025 organizer never asked whether he took another one,
+  because he did not tick that income type. If he drew again in 2025 there is another 1099-R and
+  another penalty.
+- **He had W-2 wages in 2024, with withholding.** An S-corp shareholder-employee generally must
+  take reasonable wages, so **expect a 2025 W-2 too** — his organizer reports none, while listing
+  his occupation as "Employed".
+
+**The dependent question is worth real money, and the three sources disagree.** His 2024 return
+claimed **one dependent daughter** with both the **Earned Income Credit** and the **Additional
+Child Tax Credit** — EIC and ACTC require the child to have lived with them **more than half the
+year**, so as of 2024 she did. His voice note says **two children** and **child support**. His 2025
+organizer says **no dependents**. If nothing actually changed, answering "no" costs him the Child
+Tax Credit; if something did change — and paying child support suggests it might have — we need to
+know **what** and **when**, per child. (EIC itself is gone for 2025 regardless, because it was only
+available in 2024 on a negative AGI; the Child Tax Credit is not.)
 
 **Two fields need correcting before the return.** His occupation is entered as
 "Employed", which conflicts with contractor income; the spouse's occupation field
@@ -156,17 +195,33 @@ particular finding earns a place there.
 - _(2026-08-05)_ — Client sent his income and expense summary **by voice message**, not through the portal.
 - _(2026-08-06, Lilian)_ — Captured that summary in the Double note **"2025 Tax Preparation - P&L and other info"**. The client's completed **Home Office Deduction template** was filed in Double under `Others > 2025`.
 - _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; the income-types answer suppressed eight downstream document requests; two documents genuinely missing (1095-A, 1098) versus two already supplied outside the organizer (home-office template, the P&L data by voice). Client file created the same day. Findings deliberately kept out of the Double note (§5).
+- _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024 and neither appears in his 2025 organizer; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit** while the 2025 organizer claims none. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
 
 ### Outstanding items (CI-only — never in the SOP)
 
 The re-ask list for the client, in priority order:
 
+- **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
+  a K-1 share. Everything else depends on the answer, including whether there is a Schedule C at
+  all. **Ask this first.**
+- **The three S corporations' 2025 K-1s** — Midwest Expedited Corp, Midwest Truck Leasing LLC,
+  AVDM Holdings Inc. If any of them stopped, we need **which one, and the date it closed or he
+  left**. A company that closed *during* 2025 still issues a 2025 K-1; only an exit or closure in
+  a **prior** year removes it.
+- **Whether the S corps' own 1120-S returns are filed**, and by whom — his 1040 cannot be
+  finished before those K-1s exist.
 - **Form 1095-A** — blocks filing if the coverage is Marketplace.
-- **The payer's 1099** — nothing on file supports the amount he reported.
-- **The whole income block**, re-asked directly: which income types he actually had in 2025 (the organizer never asked, because of the "None of the above" answer).
+- **His 2025 W-2** — expected from his own S corp; the organizer reports none.
+- **The whole income block**, re-asked directly: which income types he actually had in 2025 (the
+  organizer never asked, because of the "None of the above" answer).
+- **Which states he lived and worked in during 2025**, month by month — Montana and Illinois are
+  both live possibilities his organizer never mentions.
+- **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
 - **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
-- **Children / custody** — how many, who they live with, whether a Form 8332 release exists. Determines whether any dependent credit is available.
+- **Children / custody** — how many, who they live with **now versus in 2024**, and whether a Form 8332 release exists. His 2024 return claimed one daughter with EIC and the child tax credit; his 2025 organizer claims none. Determines whether the Child Tax Credit is available.
+- **Basis in the S corporations** — needed before relying on the 2024 NOL carryforward (§5).
+- **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
 - **2024 carryovers and elections** — read from the prior return (see §5).
 - **Profit & Loss** — his voice summary is the substitute; decide whether to have him complete the firm's template as a written record.
@@ -174,7 +229,9 @@ The re-ask list for the client, in priority order:
 ### Information still needed
 
 - [ ] Primary language and preferred communication channel (he defaults to voice messages).
-- [ ] What his work actually is — the industry in §1 is **inferred from his expense pattern**, not confirmed.
+- [x] What his work actually is — **trucking / freight, through three S corporations he holds shares in** _(2024 return, 2026-08-11)_. The earlier "inferred from his expense pattern" reading is superseded.
+- [ ] Whether the drivers he paid were paid **by him personally or by one of the S corps** — that decides who, if anyone, owes the 1099-NECs.
+- [ ] Which of the three S corporations are **still active** in 2025, and who prepares their 1120-S returns.
 - [ ] Whether he owes **1099-NECs** to the drivers he paid.
 - [ ] Whether the health coverage is **Marketplace** (drives the 1095-A requirement).
 - [ ] Assigned staff in Double — no `Assigned Staff` property is set on this client.
