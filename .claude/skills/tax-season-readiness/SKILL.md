@@ -60,8 +60,11 @@ are not duplicates of each other.
 > every slide, section and conditional-logic rule (see the
 > [`double-mcp`](../double-mcp/) skill §2.2). That is the way to answer "what exactly does the
 > 2025 organizer ask?" definitively. Two caveats: the payload is very large (~120 slides for a
-> 1040), and it is a **structure** read — never `get_organizer_responses`, which returns a real
-> client's SSNs and bank details.
+> 1040), and it is a **structure** read — `get_organizer_responses` is a different thing entirely
+> and answers a different question. Reading a client's actual answers is permitted for analysis
+> (since 2026-08-11) but returns their SSNs and bank details in one payload and obliges you to
+> delete the session afterwards — never reach for it just to see what the organizer *asks*. The
+> rule is [`double-mcp`](../double-mcp/) §2.2.
 
 ---
 
@@ -175,7 +178,7 @@ a "waiting on the client" bucket without that confirmation.
 | **Organizer Status** | Property, column `226743` | `list_client_properties` |
 | **Organizer progress (%)** | The **organizer entity** (its own data plane), surfaced in the view as `Organizer Progress` / CSV `Organizer Max Progress` | **Now readable via MCP** (since 2026-08-06): `get_organizer(organizerId)` → `completionPercentage`. The CSV export still works and is cheaper for the whole roster at once — see §5 |
 | **How many organizers are active** | Same entity; CSV header `Organizer Active Count` | **Now readable via MCP**: `list_organizers(clientId)` and count the non-archived ones. Or the CSV export. Matters — see §5 |
-| **What the organizer actually asks** | The organizer's slides | `get_organizer(organizerId)` — structure only. **Never `get_organizer_responses`** on a real client ([`double-mcp`](../double-mcp/) §2.2) |
+| **What the organizer actually asks** | The organizer's slides | `get_organizer(organizerId)` — structure only. For a client's *answers*, `get_organizer_responses` is permitted for analysis but carries the identity-block rule ([`double-mcp`](../double-mcp/) §2.2) |
 | **Completed TaxDome organizer** | File library: `TaxDome > [Client Name] > 1. Completed Tax organizers` | `list_file_library` → then `list_files(clientId, folderId)` |
 | **Who owns this company** | Portal contacts shared between clients | `list_contacts` → each contact carries a `clientIds` array. **Omit `clientId` to get the whole graph in one sweep** ([`double-mcp`](../double-mcp/) §5.7) |
 

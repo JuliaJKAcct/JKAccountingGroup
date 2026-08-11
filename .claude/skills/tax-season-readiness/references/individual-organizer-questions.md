@@ -21,8 +21,11 @@ The questions JK Accounting Group asks an individual client in the tax organizer
 >
 > Two rules that do **not** change:
 >
-> - **Structure only.** Never `get_organizer_responses` on a real client — it returns SSNs,
->   driver's licenses, dates of birth and bank account numbers.
+> - **Structure only — for THIS file.** Question wording is captured from the organizer's
+>   structure, never from a client's answers. Reading answers is a separate activity, permitted
+>   for analysis since 2026-08-11 under [`double-mcp`](../../double-mcp/) §2.2 — and **nothing
+>   from a response ever lands in this file or any other**: it returns SSNs, driver's licenses,
+>   dates of birth and bank account numbers.
 > - **Never invent a question.** If wording isn't here and isn't read from a live organizer, it
 >   doesn't go in.
 >

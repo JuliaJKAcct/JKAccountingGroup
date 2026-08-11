@@ -215,6 +215,15 @@ in that folder.
   TaxDome folder conventions, what the MCP can't reach, and the **write rules — default-deny, and
   never write the hand-maintained judgment columns.** Two Double tools instruct an unprompted
   write; the skill says to override them.
+  **Reading a client's organizer answers is allowed — and obliges you to warn them afterwards.**
+  Lilian lifted the old ban on 2026-08-11 so we can do pre-return analysis (compare a client's
+  organizer against prior years and flag what's missing — a K-1 that was there last year and
+  isn't now). The call returns the whole organizer in one payload, SSNs and bank details
+  included, so two things bind every time: **the identity block never gets written out** (chat,
+  repo, artifact, Double note, email — by existence, never by value), and **you must tell the
+  person to delete the session when the work is done**, because its history now holds that data.
+  The full rule, including why the old ban protected nothing, is
+  [`double-mcp` §2.2](./.claude/skills/double-mcp/SKILL.md).
 - **A matter we need to be able to retrace lives as ONE running case note in Double.** When a
   problem runs for weeks across an agency or a platform's support queue — the Tsminibears Florida
   reemployment-tax matter is the pilot — the firm keeps a single note on that Double client with

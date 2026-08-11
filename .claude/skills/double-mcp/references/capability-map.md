@@ -19,7 +19,7 @@ something is possible.
 | ✅ | Called live during the audit — confirmed working against real practice data |
 | ◻︎ | Schema read and understood, deliberately **not** executed (write tools, or reads that would pull sensitive data) |
 | ⛔ | Exists but blocked for us — billing plan, permission, or a documented gap |
-| 🔒 | **Works, and is forbidden by firm policy anyway** — the tool functions; we do not use it |
+| 🔒 | **Works, and firm policy governs how** — the tool functions, and a written rule constrains when we call it and what may leave the session. Not the same as ⛔ (blocked); not free to use either. Read the rule before calling |
 
 Writes are marked **W**. Everything unmarked is a read. Nothing in this file overrides
 [§6 Write safety](../SKILL.md) — default-deny still applies to every **W** row.
@@ -34,7 +34,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | …**change** a tax-return deadline? | **No.** There is no create/update tool for a tax *project*. Deadline, status, `filedAt`, preparer/reviewer/manager are all read-only via MCP — they change in the Double UI only. See §4 |
 | …change the due date of a **task** inside a tax return? | **Yes** — `update_project_task(dueDate:)` |
 | …see how far along a client's **organizer** is? | **Yes, now.** `list_organizers` for status, `get_organizer` for `completionPercentage`. This changed — it used to be CSV-export-only. See §5 |
-| …read what a client **answered** in their organizer? | Technically yes (`get_organizer_responses`) — but it returns SSNs, driver's licenses, dependants' details and bank account numbers. **Treat as forbidden by default.** See §5 |
+| …read what a client **answered** in their organizer? | **Yes, for analysis** — Lilian lifted the ban 2026-08-11. It returns SSNs, driver's licenses, dependants' details and bank account numbers in one payload, none of which may be written out, and the session must be deleted afterwards. See §5 |
 | …**build** an organizer for a client? | **Partly.** We can create a draft and author all its slides + logic. We **cannot publish it to the client portal** — Lilian does that in the UI |
 | …add a new **column** to the client list? | **Yes** — `create_property_column`. Ask first; it changes the practice for everyone |
 | …keep a long **case note** in Double? | Yes, but there is a **size wall** — keep bodies under **~7,500 characters**; note writes start 403-ing from ~8,000. The firm's answer is the `Part 1 / Part 2` split in [SKILL §7](../SKILL.md) — don't invent another. Raised with Double, answer pending — §8 of this file |
@@ -150,7 +150,7 @@ Five tools exist and the read path works end to end.
 |---|---|---|
 | `list_organizers` | ✅ | 59 organizers. Optional `clientId`; filter `status` = draft / published / in_progress / completed / archived — note **`published` matches both `in_progress` and `completed`**, it is not a status of its own. Returns `name`, `status`, `publishedAt`, `completedAt`, `archivedAt`, `responsesVisibility`. Organizers with restricted `responsesVisibility` still appear here but may refuse a `get_organizer` / responses read. **This is the cheap path** |
 | `get_organizer` | ✅ | One organizer with **`completionPercentage`** plus every slide, section, hidden flag and conditional-logic rule. **Very large payload** — a 1040 organizer is ~120 slides. Don't call it in a loop. `completionPercentage` exists **only once published** — a draft has none |
-| `get_organizer_responses` | 🔒 | The client's actual answers. It **does** work for us (the gate passes because the connected account is superAdmin — verified against a 0%-complete organizer so no real answers were pulled). **Forbidden anyway — see the privacy rule below** |
+| `get_organizer_responses` | ✅ 🔒 | The client's actual answers, **whole organizer in one payload — no per-question read**. The gate passes because the connected account is superAdmin (verified 2026-08-06 against a 0%-complete organizer). **Permitted for analysis since 2026-08-11 — under the rule below** |
 | `create_organizer` | ◻︎ **W** | Creates an **empty draft** with no slides. Auto-names it (`"00 Organizer"`) if you omit a name |
 | `update_organizer` | ◻︎ **W** | Declarative whole-document write — see the trap below |
 
@@ -165,24 +165,33 @@ Five tools exist and the read path works end to end.
 - **Business organizers exist**, not just 1040s. Both naming shapes are live:
   `JK 2025 1040 Organizer - <name>` and `JK 2025 Business Tax Organizer - <name>`.
 
-### 🔒 The privacy rule for `get_organizer_responses`
+### 🔓 The organizer-response rule — permitted for analysis since 2026-08-11
 
 A completed 1040 organizer contains, by design: **Social Security numbers** (taxpayer, spouse,
 every dependant), **driver's licenses**, dates of birth, home address, **bank routing and account
-numbers**, and medical/charitable totals.
+numbers**, and medical/charitable totals. It is still the single most sensitive read in this
+connector — worse than `get_file`, which only returns a link while this returns the data itself,
+straight into the session transcript.
 
-**Do not call `get_organizer_responses` on a real organizer to "check on it".** It is the single
-most sensitive read in this connector — worse than `get_file`, because `get_file` only returns a
-link while this returns the data itself, straight into the session transcript.
+**Lilian lifted the old blanket ban on 2026-08-11**, for pre-return analysis: reading an
+organizer, comparing it across years, and flagging what is missing or inconsistent before anyone
+starts the return. **The full rule — what may never be written out, the three real exposure
+points, and the obligation to tell the user to delete the session — is
+[SKILL.md §2.2](../SKILL.md). Read it there before the first call; this row is only the pointer.**
 
-- To know **how far along** a client is → `list_organizers` / `get_organizer.completionPercentage`.
-  Never the responses.
-- To know **whether they answered a specific question** → ask the person to look, or ask for the
-  single field and read only that.
-- The audit's own verification was run against an organizer at **0% completion**, precisely so no
-  real answers were pulled. Do the same if this ever needs re-testing.
-- `responsesVisibility` is `admins_only` on every organizer seen. That is Double's gate, not ours
-  — our gate is this rule.
+The short version:
+
+- **Permitted:** analysis and cross-year comparison on a real client.
+- **Never written out**, anywhere: SSN/ITIN · driver's licences · bank routing and account
+  numbers · credentials · dates of birth. By existence, never by value.
+- **No per-question read exists** — one call returns everything, so the identity block enters the
+  transcript whatever you were after. Say so; then tell the user to delete the session.
+- To know **how far along** a client is, responses are still the wrong tool —
+  `list_organizers` / `get_organizer.completionPercentage` costs nothing sensitive.
+- **`responsesVisibility` is not uniform.** Sampled 2026-08-11 across 57 organizers: mostly
+  `admins_only`, but `unrestricted` (4) and `tax_users_only` (1 — Lilian's own) also occur. The
+  earlier claim that it is `admins_only` everywhere was wrong. That is Double's gate; whether
+  `tax_users_only` blocks our superAdmin connection is **untested**.
 
 ### ⚠️ `update_organizer` deletes by omission
 
