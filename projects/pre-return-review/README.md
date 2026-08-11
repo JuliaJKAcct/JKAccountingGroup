@@ -97,6 +97,7 @@ lost** — plenty is written down that no single row names.
 | The **fixed six-block output** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 |
 | That the review is **never a narrative** — the shape is fixed, and why | that skill's opening section |
 | The **nine sources** in order, and that Gmail / Drive / Ping are not optional | that skill §1 |
+| **How the prior year is obtained** — the review's most valuable source, and the one it may not open itself: a redacted PDF from Lilian or Julia, never the client's own copy | that skill §1 source 9 · `FOLLOW-UPS` 28, because the rule behind it has never been put to Lilian |
 | The **six detection families**, incl. the K-1 disappearance rule and the filing-status catch | that skill §2 |
 | The **prior-year → this-year table** and its markers | that skill §3 |
 | The **carryover block** when the prior year was prepared elsewhere — NOL, basis, suspended losses, states | that skill §2 |
