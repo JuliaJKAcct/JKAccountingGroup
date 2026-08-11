@@ -1,9 +1,20 @@
 ---
 name: organizer-review
-description: Review a client's tax organizer BEFORE anyone starts their return — read their answers, reconcile them against the prior-year return (or prior organizer), the Double notes, the client's files and the firm's own Double columns, and turn what is missing, contradictory or misclassified into ONE grouped list of questions to send back. Use when asked to analyse / review / check a client's organizer, to compare a client's year against last year, to work out what to ask a client before preparing their return, or when an organizer looks complete but the return cannot actually be prepared. Encodes the fixed output structure (a prior-year → this-year comparison table, findings grouped by root cause, a what-we-already-have guard, and the ready-to-send question list), the six sources that must be read in order, the six detection families, the rule that an earlier answer legitimately stops the organizer asking for what follows from it (so the gap is ours to re-ask, not a fault in the organizer), the extra carryover block when the prior return was prepared elsewhere, and the privacy discipline that governs reading organizer responses at all.
+description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, the organizer and its answers, and the prior-year return), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the eight sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat — never an artifact, never committed.
 ---
 
-# Organizer review — what to ask the client, before anyone starts the return
+# The pre-return review — what to ask the client, before anyone starts
+
+**Lilian calls this "the tax preparer."** It does not prepare or file anything. It is the
+**companion for the review that happens before preparation starts**: it reads everything
+the firm already holds on a client, notices what does not add up, and hands back the
+questions that unblock the work.
+
+**Why it exists, in her words (2026-08-11):** *"a veces, cuando pensamos que hay clientes
+sometidos, nos encontramos con errores y problemas… y tenemos que perder mucho tiempo
+analizando todo esto para volver a pedirle al cliente."* The cost is not the analysis —
+it is the weeks lost to discovering one gap at a time.
+
 
 The firm loses weeks per return to the same loop: the organizer comes back, someone
 starts preparing, a gap appears, the client is emailed, days pass, another gap appears,
@@ -17,6 +28,25 @@ the answer that unblocks the most comes first.
 long: *"una cantidad de texto enorme sin ningún orden fijo y lógico"* is the failure
 mode. **Follow §4's structure exactly, every time.** A reviewer should be able to open
 two clients' reviews side by side and find the same thing in the same place.
+
+---
+
+## Starting cold — the first five minutes
+
+**Assume you have no memory of this client.** Sessions that read organizer answers get
+deleted (§0), so **every review starts from zero by design** and the repo is the only thing
+that carries forward. Before anything else:
+
+1. **Read the client's file** — `projects/client-intelligence/clients/<slug>.md`. Its §6
+   `Tax year YYYY — the review` entry holds what a previous pass established, every question
+   already put to the client, and any answers that came back. **If a review ran before, do
+   not re-derive it and do not re-ask what is already answered there.**
+2. **Read §5** — the standing quirks. How this client actually communicates is in there, and
+   it is usually not the portal.
+3. **Then run §1's eight sources.**
+
+If the client has no file, create one (`CLAUDE.md` core convention) — you are the first pass,
+and the next session will start from what you leave.
 
 ---
 
@@ -50,7 +80,7 @@ this permission exists to produce.
 
 ---
 
-## 1. Read all six sources, in this order — none is optional
+## 1. Read all eight sources, in this order — none is optional
 
 **The organizer is a prompt, not a source.** In the pilot case, the organizer reported
 **100% complete** and disclosed not one material fact about the return; everything came
@@ -63,15 +93,24 @@ nothing.
 | 2 | **Double notes** | What the client sent **outside** the portal — voice messages, texts, calls | `list_notes(clientId)` |
 | 3 | **Double files** | Documents that exist even though the organizer shows nothing | `list_files(clientId)`, `list_file_library(clientId)` |
 | 4 | **Double properties + tax project** | The firm's own read: return type, organizer status, year, deadline | `list_client_properties`, `list_projects` |
-| 5 | **The organizer** — structure *and* responses | The answers, and which questions were even asked | `get_organizer`, `get_organizer_responses` |
-| 6 | **The prior year** — return or organizer | The comparison base. §3 | uploaded PDF, or the prior organizer |
+| 5 | **Gmail — Julia's inbox AND sent mail** | What the client sent or was asked by email. **The firm has this access and a review that skips it is incomplete** (Lilian, 2026-08-11) | `search_threads` on the client's name, the owner's name, and their email domain |
+| 6 | **Google Drive** | The client's folder — statements, worksheets, documents that never reached Double | `search_files` by client and owner name |
+| 7 | **The organizer** — structure *and* responses | The answers, and which questions were even asked | `get_organizer`, `get_organizer_responses` |
+| 8 | **The prior year** — return or organizer | The comparison base. §3 | uploaded PDF, or the prior organizer |
 
 > ### ⛔ The rule that prevents the worst output
 >
 > **A gap in the organizer is not a finding until you have looked for the answer in
-> sources 1–4.** Asking a client for something they already sent is worse than not
+> sources 1–6.** Asking a client for something they already sent is worse than not
 > running the review at all — it burns the goodwill you need for the questions that
 > genuinely matter. §4's **Block D** exists to make this visible.
+
+> **Lilian's standing arrangement, 2026-08-11:** *"siempre trataré de estar pendiente de que tú
+> tengas toda la información posible o, al menos, el acceso a ella."* She will put what the client
+> sends into Client Intelligence or Double, and Julia's mailbox is reachable. **So the sources
+> above are not a wish-list — the information is expected to be there.** If something you need is
+> genuinely nowhere, that is worth telling her, because it means a channel is being missed. Do not
+> quietly proceed without it and do not ask the client for it first.
 
 **No prior year in Double?** Most clients have only one year there. The comparison base
 is then a **prior-year return the client uploaded** or one Lilian redacts and supplies.
@@ -155,7 +194,7 @@ So the finding is **never** that the organizer failed, and never that questions 
 "hidden" or "suppressed" from the client. Write it the way it actually is:
 
 > **Because the client indicated X, we have no answers to the questions that follow from
-> it — and sources 1–6 give us good reason to think we need them.** Always name the
+> it — and the other sources give us good reason to think we need them.** Always name the
 > reason. *(Invented illustration: "last year's return reported rental income, and the
 > bank statements she sent show deposits from the same tenant this year.")*
 
@@ -520,7 +559,76 @@ spaces or dots rather than hyphens. **You are still the control**; see
 
 ---
 
-## 6. Update this skill when…
+## 6. How this companion grows — the rule-capture protocol
+
+**Lilian's stated goal (2026-08-11):** *"tener como un compañero que nos ayude en esta revisión
+previa… bien configurado con nuestra forma de analizar las cosas y nuestra forma de pensar."*
+That only happens if every correction she makes survives the session it was made in. This is how.
+
+### Where a rule goes depends on what kind of rule it is
+
+| Kind | What it is | Where it lives |
+|---|---|---|
+| **Domain** | How a tax thing behaves — a K-1 is issued for the year an entity closed; filing status is fixed on 31 December; an NOL offsets 80% | §2's detection families, or the carryover block |
+| **Method** | How the work is done and shown — group by root cause, five to eight findings, show the trail, check what we already hold before asking | §1, §3, §4 |
+| **Relationship** | How the firm speaks to a client — show them both records, ask facts not family-law documents, never hand them a menu | §4 Block E |
+| **Case fact** | True of ONE client — he communicates by text, his rent is monthly, his 2024 was prepared in Chicago | **Not here.** The client's file, §5 or §6 |
+
+**The last row is the one that goes wrong.** A case fact written into this skill makes it longer
+and less true; a rule left in a client file is lost to every other client. When unsure: *would this
+still be true for a client I have never met?* If yes, it is a rule.
+
+### Every rule carries its provenance
+
+**Who set it, when, and the case that produced it.** Not decoration — it is what lets a future
+session tell a **decision** from an **inference**, and judge whether a rule still applies when
+circumstances change.
+
+⚠️ **This exists because of a real failure (2026-08-11).** Lilian said she did not want to spend
+time on the Knowledge Hub; a session turned that into "the Hub must not carry clients' tax
+information", wrote it into three skills and enforced it in the build. Nobody could have traced
+that back to a decision, because there wasn't one. **Never write an inference in the voice of a
+rule.** If it is your reading of what someone wants, say so, and ask.
+
+### A correction outranks a proposal — and gets marked
+
+When a rule comes from Lilian **correcting** something already written, it is worth more than one
+proposed and accepted, because it marks a place where the assistant's judgement diverged from the
+firm's. Record the correction *and what it replaced*: the wrong version is the useful part.
+
+Examples now in this file, all 2026-08-11 — describing an organizer's behaviour as a defect when
+the organizer was right; handing a client a menu of marital statuses; asking a client for
+family-law documents; writing a review as unstructured narrative. **Each of those was the natural
+thing to do and each was wrong.** Nothing but the record stops the next session repeating them.
+
+### After every run, record what it caught and what it missed
+
+In the client's `Tax year YYYY — the review` entry, and — when the lesson generalises — here, in
+§7 below. **The second case is what tells you which rules are real.** One case cannot distinguish
+a general rule from a quirk of that client, so resist promoting anything on the strength of a
+single run.
+
+### What is NOT yet settled — read before generalising
+
+Several rules here are plainly not about tax organizers at all: *show the trail*, *show the client
+both records*, *the internal checklist is not the client message*, *ask facts not documents*,
+*derive the documents from the structure*, *a client's mistake is work, not an alarm*. They would
+serve a bookkeeping cleanup or an agency matter equally well.
+
+**They have deliberately not been split into a separate skill.** Two skills on one job is how a
+session loads one and misses the other's rules, and one case is not enough to know what is general.
+**Revisit after the second and third real reviews** — see the open loop in
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+
+### Calibrating it — run it cold, correct at the end
+
+The way to find out whether this companion thinks like the firm is **not** to guide it. Ask for the
+review, let it run to the end uncorrected, then compare against what you would have done. What it
+misses is the rule that is missing. Correcting mid-flight teaches the session and not the file.
+
+---
+
+## 7. Update this skill when…
 
 - **A review runs and something is caught that no detection family predicted** — add the
   family, with the case that produced it.
@@ -535,7 +643,7 @@ spaces or dots rather than hyphens. **You are still the control**; see
 - **A second year lands in Double for a client** — the comparison base stops being a PDF
   and the table can be built from two organizers.
 
-## 7. Related
+## 8. Related
 
 - [`double-mcp`](../double-mcp/) — §2.2 (the privacy rule, read it), §7 rule 11 (what a note carries).
 - [`tax-season-readiness`](../tax-season-readiness/) — the layer above: *who* is ready. Its
