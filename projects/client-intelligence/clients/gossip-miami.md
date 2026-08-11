@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-06
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-11
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -112,6 +112,14 @@ own records, and **all of it is his to produce**:
 - **The QuickBooks bank feeds connected.** Both company accounts have been **disconnected**, so the
   transactions since never loaded, and **only the client can reconnect them** — the "Fix now" prompt
   appears in his QuickBooks, not in the firm's view.
+- **Confirmation that what we hold is the last activity of the year** — on **every** account, asked
+  as a question, never assumed. The statement cycles here don't end on 31 December (the card closes
+  on the 3rd, the checking account around the 10th), so the last statement of the year always leaves
+  a tail of December uncovered, and only the client can say whether anything moved in it.
+- **An explanation for any transaction the cleanup can't categorize on its own** — a purchase with
+  only a merchant location on the line, a government/permit payment, a deposit that may or may not
+  be sales, a recurring payment to an individual. Expect a round of these every year; batch them
+  into one email rather than asking as each one surfaces.
 
 **The live, dated status of each of these — asked, received, still missing — lives in §6.** Don't
 duplicate it here; a request list goes stale, this list doesn't.
@@ -131,6 +139,15 @@ duplicate it here; a request list goes stale, this list doesn't.
 - **The client did not understand why financial statements are needed at all** — he asked, politely, what he needed them for _(Lilian, 2026-08-04)_. When explaining, lead with *what the P&L is and where the numbers come from*, then that it's a different service, and only then the cost. Don't open with the fee.
 - **One family, several entities.** Business return, joint 1040 with a Schedule C, and outside K-1s arriving for one of the owners. Documents for one entity arrive in threads about another — check which entity a statement belongs to before filing it.
 - **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
+- **The client hears one voice from the firm.** Questions raised internally — by whoever is doing
+  the cleanup or the review — go out to the client under the name of the person who owns the
+  relationship (Lilian), and **the client is not told who inside the firm raised them** _(Lilian,
+  2026-08-11)_. Keep those emails plain and short: the questions themselves, in bullet points, with
+  no explanation of our internal process attached.
+- **A recurring payment to an individual has to be identified before it's categorized** — the same
+  round sum going out repeatedly can be contractor work or rent, and the answer decides both the
+  expense account and which **1099**, if any, the client owes for the year. Ask; don't infer it from
+  the amount.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -151,11 +168,16 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-06 — **Double case note opened for the 2025 tax preparation** — "CASE · 2025 tax preparation" (note **485291**), so Julia or anyone else can open the client and see the status in seconds. It is the team-facing mirror of this file and gets **updated in place**, never duplicated. Per Lilian the note carries the full detail — contact names, email addresses, client IDs — because Double is the system of record for client data; **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_.
 - 2026-08-06 — **The address question is closed as not-answerable (Lilian):** she believes the company-side address is the **wife's**, but **the couple appear to use the same email addresses** to write to the firm, so individual messages can't be attributed. Recorded so nobody spends time on it — when a signature or an owner-specific answer is needed, **ask in the message who is answering**. **One line in the Double note was updated** so it doesn't send anyone chasing a closed question; **nothing else there was touched**, per her "leave things as they are in Double" — the edit was flagged back to her rather than assumed.
 - 2026-08-06 — **Ownership settled (Lilian):** the **wife is the sole owner of Gossip Miami**, the **husband owns Marat Boxing**. That explains why only one portal contact sits on the company record and resolves the "are these two roles one person" question — they are two people, but one address carries all the company-side correspondence. One address carries all the company-side correspondence, treated as the couple's shared channel — **closed as not-answerable**, see the entry above (§2).
-  - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation.
+  - ⚠️ **Note the mismatch, it matters:** the emails only ever asked for the checks the company **wrote** plus the **cash**-deposit slips. **Images of checks deposited INTO the company have never been requested in writing** — and a cash-deposit slip is not the same document as an incoming customer check. If the incoming check images are genuinely needed for the revenue side, **ask for them explicitly**; right now the only record of that ask is a verbal conversation. **Still true after the 2026-08-11 email** — that one asked questions, not documents.
+- 2026-08-11 — **Questions to the client out of the 2025 cleanup review** _(raised internally by Maria, who is doing the cleanup; drafted for Lilian and going to the client under her name — **the client is not told who inside the firm raised them**, §5)_. One short email in Russian, plain wording, bullet points, no explanation of our process. Two things asked:
+  - **(a) Is what we hold the last activity of the year on both accounts?** The last statements on hand end **2025-12-03** (credit card) and **2025-12-10** (checking), so **neither covers December 2025 in full** — the year-end cut-off has to be confirmed, not assumed. Note this partly overtakes the standing "December 2025 checking statement" ask: a checking statement through 2025-12-10 *is* on hand, so what is still missing is the remainder of December and January 2026.
+  - **(b) What five transactions were for:** two same-day card purchases at a North Miami Beach merchant (2025-09-22), an online **government/permit** payment via EGOV COM (2025-10-03), a **deposit** (2025-11-13) that may or may not be sales, and the **repeated identical checks to one individual payee** — **contractor work or rent?** _(That last one drives the expense account and the **1099** treatment, §5.)_
+  - The Double case note **485291** was updated in the same pass — its STATUS and PENDING now carry these questions. Amounts, the payee's name and the merchant lines live there, not here.
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **WAITING ON THE CLIENT — the remaining bank documents.** ✅ **Received 2026-08-05:** the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03). **Still missing:** the **January 2026 credit-card statement**, the **December 2025 + January 2026 checking statements**, the **photos of the checks the company wrote + the cash-deposit slips**, and the **reconnection of both QuickBooks bank feeds** (only he can do that). Asked 2026-08-04 and restated 2026-08-05.
+- **WAITING ON THE CLIENT — answers to the 2026-08-11 questions** (§6 log): the **year-end cut-off confirmation** on both accounts, and the **purpose of five transactions**, including whether the recurring payments to one individual are **contractor work or rent**. Until that one is answered the cleanup can't finish the categorization, and the **1099** position for the year is undecided.
 - **The piece he committed to verbally: going to the bank for the check images** — deposited into the company and issued by it — and he said he would try _(Lilian, 2026-08-06)_. **The incoming-check half has never been asked for in writing** (see the log); put it in the next email so it isn't lost.
 - **So the 10-hour cap is not what's binding right now — the missing documents are.** Track the hours, but don't read a stalled clock as work left to do.
 - **Waiting on the client's own P&L for Marat Boxing** (and the completed Home Office worksheet) before the Schedule C can be prepared. He has the templates.
@@ -166,6 +188,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 - [ ] Gossip Miami's **return type** and its **owners as filed** — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them
 - [x] Whose email address the single company-side contact is — **answered 2026-08-06: not answerable.** The couple appear to share addresses, so no message can be attributed per person; ask in the message when it matters (§2)
+- [ ] Whether the **recurring payments to one individual** are contractor work or rent — and, if contractor, whether a **W-9** is on file so a 1099 can be issued (asked 2026-08-11)
 - [ ] Sales-tax and payroll applicability for the salon
 - [ ] Fiscal-year and licence/annual-filing obligations
 - [ ] Where the client's Google Drive folder is (§7)
