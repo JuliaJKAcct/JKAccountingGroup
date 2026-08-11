@@ -9,9 +9,9 @@ on any check that is not zero. Exits non-zero, so a broken workbook cannot ship.
 
 Checked automatically, wherever the sheet exists:
   * Purchase  K42 / K45 / K48   the template's three reconciliations
-  * Sale      the two "Reconciliation (should be $0)" cells
+  * ANY sheet every "…(should be $0)" row, in column B or F
   * Sale      the disposition journal entry balances (debits = credits)
-  * Schedule D  the cash tie-out residual
+  * Any sheet a "RESIDUAL" row (the Schedule D / 8949 cash tie-out)
   * Mapping   every tie-out difference in column I
 
 Requires: pip install formulas
@@ -80,9 +80,6 @@ def main():
                 checks.append((f"{title}: {what}", get(title, cell)))
 
         if title.startswith("Sale - "):
-            for row in find_rows(ws, 6, "should be $0"):
-                checks.append((f"{title}: {ws.cell(row, 6).value.strip()} (row {row})",
-                               get(title, f"G{row}")))
             total = find_rows(ws, 10, "   Total")
             if total:
                 row = total[-1]
@@ -94,8 +91,13 @@ def main():
             else:
                 missing.append(f"{title}: no journal-entry total row found")
 
-        # Found by its RESIDUAL row rather than a sheet name, so renaming the
-        # reporting form (Schedule D vs Form 8949) can't silently skip the check.
+        # Zero-checks are found by their label on EVERY sheet, in whichever
+        # column the label sits, rather than by sheet name and a fixed cell -
+        # so a new sheet or a renamed one can never silently skip its check.
+        for label_col, value_col in ((2, "C"), (6, "G")):
+            for row in find_rows(ws, label_col, "should be $0"):
+                checks.append((f"{title}: {ws.cell(row, label_col).value.strip()}"
+                               f" (row {row})", get(title, f"{value_col}{row}")))
         for row in find_rows(ws, 5, "RESIDUAL"):
             checks.append((f"{title}: cash tie-out residual", get(title, f"F{row}")))
 

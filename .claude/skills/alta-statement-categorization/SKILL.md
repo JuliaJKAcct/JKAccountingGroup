@@ -11,10 +11,12 @@ deciding, line by line, **which column is our client's** and **which bucket each
 line belongs in** — because that decision is what separates basis from a
 deduction, and a deduction from a balance-sheet item.
 
-The engine builds up to six sheets: the blank master template, a prefilled
-Purchase tab, a Sale/disposition tab, a tiered Carrying Costs schedule, a
-Schedule D summary with a cash tie-out, and a mapping chart showing where every
-line went.
+The engine builds the sheets a given deal needs: the blank master template, a
+prefilled Purchase tab, and then either **the in-service path** (a Depreciation
+tab — land split off the appraisal, MACRS from the placed-in-service date) or
+**the disposition path** (a Sale tab, a tiered Carrying Costs schedule, and a
+Form 8949 / Schedule D summary with a cash tie-out) — plus a mapping chart
+showing where every line went. A rental that is later sold uses both.
 
 ## Guardrails (do not skip)
 
@@ -31,6 +33,8 @@ line went.
   are committed.
 - **Never write amounts by row number.** The spec addresses template rows by
   their printed label; an unknown label is a hard error listing the valid ones.
+- **Establish whether the property went into service, and when.** It decides
+  whether costs are expensed or capitalized, and whether anything depreciates.
 - **Read `references/mapping-chart.md` before categorizing.** It holds the four
   buyer buckets, the three seller buckets, the Florida specifics, and where the
   odd lines go.
@@ -81,6 +85,40 @@ recur:
   than the amount: a buyer debit is the buyer's own tax cost; a seller credit is
   the buyer reimbursing the seller for a prepaid period.
 
+## Step 3b — In service? Then depreciation, not capitalization
+
+A property that **went into service** is the mirror image of one that didn't, and
+this is the fork that changes the most numbers:
+
+|  | Never in service | In service |
+|---|---|---|
+| Operating costs | Capitalized into basis | **Expensed** from the in-service date |
+| Carrying costs | All capitalized | Capitalized only **up to** that date |
+| Land/building split | Cosmetic | **Drives the deduction every year** |
+| Depreciation | None | MACRS from the in-service month |
+
+Add a `depreciation` block (see `references/example-deal-inservice.json`) and the
+engine builds the schedule. Three things to get right:
+
+- **The appraisal gives you a RATIO, not dollars.** County assessed values are
+  usually well below what was paid. Take only the land-to-building *proportion*
+  and apply it to the actual cost basis, so the two parts always add back to what
+  was really paid. The sheet carries a `should be $0` check that proves they do.
+- **27.5 or 39 years?** A residential rental is 27.5. But a rental whose *average*
+  stay is **7 days or less** is nonresidential **39-year** property — and that
+  changes the deduction by a third. A mid-term rental (30+ days) is residential.
+  Ask; do not infer it from the word "rental."
+- **Mid-month convention.** Real property is treated as placed in service in the
+  middle of its month whatever the actual day, so October gives 2.5 months in year
+  one. The engine computes `(12 − month + 0.5) / 12 ÷ life` rather than pasting the
+  IRS table, and prints the year-1 rate so it can be tied to **Table A-6** (27.5)
+  or **A-7a** (39). October on 27.5 years is 0.7576%, matching the table's 0.758%.
+
+**What never enters the building basis:** land, loan costs (they amortize over the
+loan term as a separate intangible), and escrow deposits (an asset until the
+lender spends them). A depreciation figure that quietly includes any of those is
+the most common way this goes wrong.
+
 ## Step 4 — Go past the ALTA
 
 **The statements are never the whole basis.** Rehab, improvements and carrying
@@ -114,8 +152,10 @@ python .claude/skills/alta-statement-categorization/scripts/verify_alta_workbook
   --file "Client - ALTA.xlsx"
 ```
 
-`references/example-deal.json` is a runnable spec with invented figures — copy it
-to the scratchpad and edit. Every spec key is documented there by example.
+Two runnable specs with invented figures document every key by example — copy one
+to the scratchpad and edit: `references/example-deal.json` (bought and sold, the
+disposition path) and `references/example-deal-inservice.json` (bought and placed
+in service, the depreciation path).
 
 **Verification is not optional.** openpyxl writes formulas but never evaluates
 them, so a workbook can look perfect and be arithmetically broken — a mistyped
@@ -179,7 +219,9 @@ missing land/building split, whether rehab exists — rather than burying them.
 
 ---
 
-**Update this skill when** a new reason for "never placed in service" turns up,
+**Update this skill when** a property type needs a recovery period the engine
+doesn't carry (land improvements at 15 years, cost-segregation components),
+when a new reason for "never placed in service" turns up,
 when a new ALTA line has no obvious bucket (add it to
 `references/mapping-chart.md`), when a state's customs differ from the Florida
 notes, when the blank template in `assets/` is revised, or when a deal shape

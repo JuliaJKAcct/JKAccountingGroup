@@ -690,6 +690,189 @@ def build_schedule_d(wb, spec, tag, carrying_ref):
     return ws
 
 
+# ----------------------------------------------------------- depreciation --
+# MACRS straight-line, mid-month convention. Computed rather than pasted from
+# IRS Table A-6/A-7a so the arithmetic is visible and checkable: the first-year
+# fraction is (12 - month + 0.5) / 12, which is exactly how those tables are
+# derived. October (month 10) on 27.5 years gives 0.7576%, matching Table A-6's
+# 0.758% -- the sheet prints that check so it can be tied to the published table.
+RECOVERY = {
+    "residential": (27.5, "Residential rental (27.5 yr)"),
+    "nonresidential": (39.0, "Nonresidential real property (39 yr)"),
+}
+
+
+def build_depreciation(wb, spec, tag, purchase_title):
+    """Split basis land/building off the appraisal, then run MACRS from the
+    placed-in-service date."""
+    d = spec["depreciation"]
+    ws = wb.create_sheet(f"Depreciation - {tag}"[:31])
+    ws.sheet_view.showGridLines = False
+    for col, width in {"A": 3.0, "B": 50.0, "C": 18.0, "D": 4.0, "E": 10.0,
+                       "F": 14.0, "G": 16.0, "H": 16.0, "I": 16.0, "J": 4.0,
+                       "K": 62.0}.items():
+        ws.column_dimensions[col].width = width
+
+    life, life_label = RECOVERY[d.get("class", "residential")]
+    pis = as_date(d["placed_in_service"])
+    month = pis.month
+    first_fraction = (12 - month + 0.5) / 12
+
+    def block(row, title, last=3):
+        ws.cell(row, 2).value = title
+        dark(ws.cell(row, 2), bold=True)
+        for col in range(3, last + 1):
+            dark(ws.cell(row, col))
+        ws.merge_cells(start_row=row, start_column=2, end_row=row, end_column=last)
+
+    def line(row, text, value, computed=False, bold=False, fmt=MONEY, col=2):
+        ws.cell(row, col).value = text
+        dark(ws.cell(row, col), bold=bold)
+        cell = ws.cell(row, col + 1)
+        cell.value = value
+        (dark if computed else light)(cell, fmt=fmt, align="right", bold=bold)
+
+    ws["B1"] = f"DEPRECIATION - {tag}"
+    dark(ws["B1"], bold=True)
+    dark(ws["C1"])
+    ws.merge_cells("B1:C1")
+    ws["B2"] = d.get("intro", "")
+    light(ws["B2"], wrap=True, size=8)
+    light(ws["C2"], size=8)
+    ws.merge_cells("B2:C2")
+    ws.row_dimensions[2].height = 40
+
+    # --- what is being depreciated -------------------------------------------
+    block(4, "DEPRECIABLE COST - what goes into service")
+    PUR = f"'{purchase_title}'" if purchase_title else None
+    line(5, "Contract purchase price", f"={PUR}!C8" if PUR else d.get("price", 0),
+         computed=bool(PUR))
+    line(6, "Facilitative closing costs capitalized",
+         f"={PUR}!C46" if PUR else d.get("closing_costs", 0), computed=bool(PUR))
+    line(7, "Pre-service carrying costs capitalized", d.get("carrying_costs", 0))
+    line(8, "Improvements / rehab before service", d.get("improvements", 0))
+    line(9, "TOTAL COST BASIS", "=SUM(C5:C8)", computed=True, bold=True)
+
+    # --- the appraisal split --------------------------------------------------
+    block(11, "LAND / BUILDING SPLIT - from the property appraisal")
+    line(12, "Appraised land value", d.get("appraisal_land", 0))
+    line(13, "Appraised building / improvement value", d.get("appraisal_building", 0))
+    line(14, "Appraised total", "=C12+C13", computed=True, bold=True)
+    line(15, "Land %", '=IFERROR(C12/C14,"")', computed=True, fmt="0.0000%")
+    line(16, "Building %", '=IFERROR(C13/C14,"")', computed=True, fmt="0.0000%")
+    line(18, "LAND BASIS (not depreciated)", '=IFERROR(ROUND(C9*C15,2),0)',
+         computed=True, bold=True)
+    line(19, "BUILDING BASIS (depreciated)", "=C9-C18", computed=True, bold=True)
+    ws.cell(20, 2).value = "Reconciliation (should be $0)"
+    dark(ws.cell(20, 2))
+    ws.cell(20, 3).value = "=ROUND(C18+C19-C9,2)"
+    dark(ws.cell(20, 3), fmt=MONEY, align="right")
+
+    # --- MACRS ----------------------------------------------------------------
+    ws.cell(4, 5).value = "MACRS - straight line, mid-month convention"
+    dark(ws.cell(4, 5), bold=True)
+    for col in range(6, 10):
+        dark(ws.cell(4, col))
+    ws.merge_cells(start_row=4, start_column=5, end_row=4, end_column=9)
+
+    facts = [
+        ("Property class", life_label, "@"),
+        ("Recovery period (years)", life, "0.0"),
+        ("Placed in service", pis, DATEF),
+        ("Months in service, year 1", 12 - month + 0.5, "0.0"),
+        ("Year-1 fraction of a full year", first_fraction, "0.0000%"),
+        ("Full-year rate (1 / life)", 1 / life, "0.0000%"),
+        ("Year-1 rate  (checks to IRS Table A-6 / A-7a)",
+         first_fraction / life, "0.0000%"),
+    ]
+    row = 5
+    for label_text, value, fmt in facts:
+        ws.cell(row, 5).value = label_text
+        dark(ws.cell(row, 5))
+        for col in range(6, 9):
+            dark(ws.cell(row, col))
+        ws.merge_cells(start_row=row, start_column=5, end_row=row, end_column=8)
+        cell = ws.cell(row, 9)
+        cell.value = value
+        dark(cell, fmt=fmt, align="right")
+        row += 1
+
+    # --- the schedule ---------------------------------------------------------
+    head_row = 14
+    ws.cell(head_row, 5).value = "SCHEDULE"
+    dark(ws.cell(head_row, 5), bold=True)
+    for col in range(6, 10):
+        dark(ws.cell(head_row, col))
+    ws.merge_cells(start_row=head_row, start_column=5, end_row=head_row, end_column=9)
+    for i, text in enumerate(["Year", "Rate", "Depreciation", "Accumulated",
+                              "Remaining basis"]):
+        cell = ws.cell(head_row + 1, 5 + i)
+        cell.value = text
+        light(cell, bold=True, size=8, align="right" if i else None)
+
+    years = int(d.get("show_years", 6))
+    first_year = pis.year
+    row = head_row + 2
+    first_data = row
+    for i in range(years):
+        rate = first_fraction / life if i == 0 else 1 / life
+        ws.cell(row, 5).value = first_year + i
+        light(ws.cell(row, 5), size=9)
+        ws.cell(row, 6).value = rate
+        light(ws.cell(row, 6), fmt="0.0000%", align="right", size=9)
+        ws.cell(row, 7).value = f"=ROUND($C$19*F{row},2)"
+        dark(ws.cell(row, 7), fmt=MONEY, align="right", size=9)
+        ws.cell(row, 8).value = (f"=G{row}" if i == 0 else f"=H{row - 1}+G{row}")
+        dark(ws.cell(row, 8), fmt=MONEY, align="right", size=9)
+        ws.cell(row, 9).value = f"=$C$19-H{row}"
+        dark(ws.cell(row, 9), fmt=MONEY, align="right", size=9)
+        row += 1
+    ws.cell(row, 5).value = f"…through {first_year + int(life) + 1}"
+    light(ws.cell(row, 5), size=8)
+    for col in range(6, 10):
+        light(ws.cell(row, col), size=8)
+    row += 1
+    ws.cell(row, 5).value = "First-year deduction"
+    dark(ws.cell(row, 5), bold=True)
+    for col in (6, 8, 9):
+        dark(ws.cell(row, col))
+    ws.merge_cells(start_row=row, start_column=5, end_row=row, end_column=6)
+    ws.cell(row, 7).value = f"=G{first_data}"
+    dark(ws.cell(row, 7), fmt=MONEY, align="right", bold=True)
+
+    # --- journal entry --------------------------------------------------------
+    je = row + 2
+    ws.cell(je, 5).value = f"Journal Entry - {first_year} depreciation"
+    dark(ws.cell(je, 5), bold=True)
+    for col in (6, 7):
+        dark(ws.cell(je, col))
+    ws.merge_cells(start_row=je, start_column=5, end_row=je, end_column=6)
+    for col, text in ((7, "Debit"), (8, "Credit")):
+        cell = ws.cell(je, col)
+        cell.value = text
+        dark(cell, bold=True, align="center")
+    for i, (label_text, debit, credit) in enumerate([
+        ("Depreciation Expense", f"=G{first_data}", None),
+        ("Accumulated Depreciation - Building", None, f"=G{first_data}"),
+    ], start=1):
+        r = je + i
+        ws.cell(r, 5).value = label_text
+        dark(ws.cell(r, 5))
+        dark(ws.cell(r, 6))
+        ws.merge_cells(start_row=r, start_column=5, end_row=r, end_column=6)
+        for col, value in ((7, debit), (8, credit)):
+            cell = ws.cell(r, col)
+            cell.value = value if value else None
+            dark(cell, fmt=MONEY, align="right")
+
+    write_notes(ws, d.get("notes", []), col=11)
+    for r in range(1, je + 6):
+        for col in range(1, 12):
+            if ws.cell(r, col).fill.patternType is None:
+                ws.cell(r, col).fill = fill_cream
+    return ws
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--spec", required=True, help="deal spec JSON")
@@ -718,6 +901,8 @@ def main():
         carrying = build_carrying(wb, spec, tag)
         carrying_ref = carrying.carrying_total_ref
         order.append(carrying)
+    if spec.get("depreciation"):
+        order.append(build_depreciation(wb, spec, tag, purchase_title))
     if spec.get("schedule_d"):
         order.append(build_schedule_d(wb, spec, tag, carrying_ref))
     if spec.get("mapping") or spec.get("tie_out"):

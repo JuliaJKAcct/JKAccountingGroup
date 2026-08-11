@@ -1,0 +1,82 @@
+{
+ "_comment": "Runnable example with INVENTED figures - the IN-SERVICE path (a rental that was placed in service, not sold). No sale/schedule_d block; a `depreciation` block instead. Never put a real client's numbers in this repo.",
+
+ "tag": "456 Rental Ave",
+ "entity": "EXAMPLE RENTALS LLC",
+ "ein": "",
+ "property_street": "456 Rental Avenue",
+ "property_citystatezip": "Somewhere, FL 33000",
+ "property_type": "Residential",
+ "assessor_url": "https://pbcpao.gov/",
+
+ "purchase": {
+  "settlement_date": "2025-03-14",
+  "_placed_in_service_note": "Set this once the property is genuinely in service. Its YEAR must match the purchase year for the template to expense the operating costs; a different year (or blank) capitalizes them into basis instead.",
+  "placed_in_service": "2025-10-01",
+  "price": 300000,
+  "facilitative": {
+   "Recording Fees": 20.00,
+   "Title Settlement | Closing Fee": 450.00,
+   "Survey Fee": 400.00
+  },
+  "operating": { "Property Taxes Paid": 600.00 },
+  "escrow": { "Property Taxes": 1200.00, "Homeowners Insurance": 800.00 },
+  "loan_costs": { "Origination Fee": 2250.00, "Appraisal Fee": 550.00 },
+  "reductions": { "Down Payment | Earnest Money": 60000, "Loan Funds": 240000 },
+  "pull": { "K41": 306270.0, "K44": 300000, "K47": 6270.0 },
+  "notes": [
+   [6, "PREFILLED FROM: ALTA Settlement Statement, File EXAMPLE-003."],
+   [0, "Buyer EXAMPLE RENTALS LLC. Financed - see the Loan Costs block."],
+   [10, "PLACED IN SERVICE 10/01/2025 - first tenant. Depreciation starts"],
+   [0, "then, on the Depreciation tab. Loan costs amortize over the loan"],
+   [0, "term separately; they are NOT part of the depreciable building."]
+  ]
+ },
+
+ "depreciation": {
+  "_comment": "class is 'residential' (27.5 yr) or 'nonresidential' (39 yr). A rental whose AVERAGE stay is 30 days or more is residential; 7 days or less makes it nonresidential 39-year. Ask before assuming.",
+  "class": "residential",
+  "placed_in_service": "2025-10-01",
+  "carrying_costs": 2500.00,
+  "improvements": 18000.00,
+  "appraisal_land": 90000.00,
+  "appraisal_building": 260000.00,
+  "show_years": 6,
+  "intro": "Placed in service October 2025. Land is split off the county appraisal RATIO (not its dollar amount) and never depreciates; the building runs 27.5-year straight line on the mid-month convention.",
+  "notes": [
+   [1, "THE APPRAISAL SETS THE RATIO, NOT THE DOLLARS", true],
+   [0, "The county's assessed values are usually below what was paid. Only"],
+   [0, "their land-to-building PROPORTION is used; it is applied to the"],
+   [0, "actual cost basis, so the split always adds back to what was paid."],
+   [4, "MID-MONTH CONVENTION", true],
+   [0, "Real property is treated as placed in service mid-month whatever the"],
+   [0, "actual day, so an October date gives 2.5 months in year one."],
+   [0, "The year-1 rate shown ties to IRS Table A-6 (27.5 yr) / A-7a (39 yr)."],
+   [9, "WHAT IS *NOT* IN THE BUILDING BASIS", true],
+   [0, "Loan costs amortize over the loan term as a separate intangible."],
+   [0, "Escrow deposits are an asset, released as the lender pays the bills."],
+   [0, "Land never depreciates."]
+  ]
+ },
+
+ "mapping": [
+  {
+   "side": "Purchase", "section": "Financial", "line": "Sale Price of Property",
+   "column": "Buyer Debit", "bucket": "Purchase price",
+   "sheet": "Purchase", "cell": "C8", "amount": 300000,
+   "treatment": "Basis of the property, split land/building by the appraisal ratio."
+  },
+  {
+   "side": "Purchase", "section": "Loan Charges", "line": "Origination Fee",
+   "column": "Buyer Debit", "bucket": "Loan cost",
+   "sheet": "Purchase", "cell": "C50", "amount": 2250,
+   "treatment": "Amortized over the loan term - NOT building basis, so it never reaches the depreciation schedule."
+  },
+  {
+   "side": "Purchase", "section": "Escrow", "line": "Property Taxes to escrow",
+   "column": "Buyer Debit", "bucket": "Escrow deposit",
+   "sheet": "Purchase", "cell": "C89", "amount": 1200,
+   "treatment": "Current asset. Not a cost until the lender pays the bill."
+  }
+ ]
+}
