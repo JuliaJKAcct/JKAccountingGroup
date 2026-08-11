@@ -30,7 +30,7 @@
 - **Business name:** GOSSIP MIAMI LLC
 - **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_.
 - **Home state:** Florida. ⚠️ **City unresolved:** this file says the salon is **in Miami**, but the 2025 permit renewals are in **NORTH MIAMI BEACH** (§4). **The address in Double has not been checked** — do that before either is relied on.
-- **Industry / what they do:** A **beauty salon** in Miami — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. The street address stays in Double, not here.
+- **Industry / what they do:** A **beauty salon** — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. ⚠️ **Which city is unresolved:** this record has said "in Miami", but the 2025 permit renewals are in **NORTH MIAMI BEACH** (§4) — **check the address in Double**, which outranks both. The street address itself stays in Double, not here.
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
 - **Our engagement (services we provide):** **Tax preparation only.** The firm was **not** the bookkeeper during the year. Covers the Gossip Miami business return, the owners' **joint 1040**, and the **Schedule C** for Marat Boxing LLC.
 - **Current state of the business:** ⚠️ **SOLD** _(reported by Lilian, 2026-08-11)_. **Nothing about the sale is documented yet** — not the date, not the structure (assets vs membership interest), not the price or its allocation, and not whether **2025 or 2026 is the final year**. It may also explain what happened after our last statements — but **nothing has been observed stopping**: we simply have no information past 2025-12-03 / 2025-12-10 (§6), which is a different thing and must not be written up as if the accounts went quiet. **Get the closing documents before the return is prepared.**
@@ -191,30 +191,20 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 ## 5. Key facts & quirks
 
+> ⚠️ **Order matters here — the first four bullets are what the team actually sees.** The
+> Knowledge Hub publishes only the **first four** top-level bullets of this section on the
+> client card, so they are ordered by what would cause the worst mistake if someone did not
+> know it, not chronologically. **If you add a bullet, decide deliberately where it goes**;
+> appending to the end means the team never sees it.
+
 - **Tax-prep only, and the client doesn't keep books.** This is the defining fact of the relationship: the numbers a return needs have to be built before the return can be prepared, and building them is a separately-quoted service. Expect the same conversation each year unless they take on a bookkeeper.
-- **The client did not understand why financial statements are needed at all** — he asked, politely, what he needed them for _(Lilian, 2026-08-04)_. When explaining, lead with *what the P&L is and where the numbers come from*, then that it's a different service, and only then the cost. Don't open with the fee.
-- **One family, several entities.** Business return, joint 1040 with a Schedule C, and outside K-1s arriving for one of the owners. Documents for one entity arrive in threads about another — check which entity a statement belongs to before filing it.
-- **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
-- **The client hears one voice from the firm.** Questions raised internally — by whoever is doing
-  the cleanup or the review — go out to the client under the name of the person who owns the
-  relationship (Lilian), and **the client is not told who inside the firm raised them** _(Lilian,
-  2026-08-11)_. Keep those emails plain and short: the questions themselves, in bullet points, with
-  no explanation of our internal process attached.
-- **A recurring payment to an individual has to be identified before it's categorized** — the same
-  round sum going out repeatedly can be contractor work or rent, and the answer decides both the
-  expense account and which **1099**, if any, the client owes for the year. Ask; don't infer it from
-  the amount. _(Asked 2026-08-11, answered the same day: **contractor** — so a 1099-NEC is in play,
-  §4.)_
-- **A charge whose only clue is an unreadable merchant or government payee line is, on this
-  client's 2025, usually a MUNICIPAL PERMIT RENEWAL.** All **three** such charges came back that way
-  _(client, 2026-08-11)_ — but note the evidence is thinner than "three": two of them were a
-  **same-day pair**, so it is really two occasions. **The scope matters:** five transactions went to
-  the client in total, and the other two — the repeated checks to an individual and the deposit —
-  were **not** permits. So this pattern applies to unreadable *payee lines*, not to "anything the
-  cleanup can't read".
-  **Check that explanation first, and still ask.** Only once the client confirms it does the charge
-  go to Taxes & Licenses; the standing rule above — ask, don't infer from the amount — is not
-  suspended by a pattern of three.
+- ⚠️ **The company credit card outlived the business, and is now the owner's personal card**
+  _(client, 2026-08-11)_ — **the date it changed use is unknown.** Two consequences, both easy to
+  get wrong: **(1)** once the feed is reconnected, QuickBooks will pull in **personal** spending on a
+  card the company file treats as its own — those transactions are **not** company expenses and must
+  not be booked as such; **(2)** the same card is a legitimate business account for the earlier part
+  of 2025, so **the cut-off date is what separates the two**, and nobody has it yet. **Get that date
+  before categorizing anything on that card after it.**
 - **A deposit into the account is not automatically a sale — for this client it is often the opposite.**
   The owners **put their own money in when the balance goes negative** _(client, 2026-08-11: an
   automatic charge overdrew the account and they covered it themselves)_. **What is settled: it is
@@ -226,14 +216,29 @@ duplicate it here; a request list goes stale, this list doesn't.
   does not record which account was overdrawn, and the client wrote "we" although Gossip Miami has a
   sole owner — §2.)_ **Ask about every deposit that doesn't match the pattern of the salon's
   takings**, rather than assuming.
-- ⚠️ **The company credit card outlived the business, and is now the owner's personal card**
-  _(client, 2026-08-11)_ — **the date it changed use is unknown.** Two consequences, both easy to
-  get wrong: **(1)** once the feed is reconnected, QuickBooks will pull in **personal** spending on a
-  card the company file treats as its own — those transactions are **not** company expenses and must
-  not be booked as such; **(2)** the same card is a legitimate business account for the earlier part
-  of 2025, so **the cut-off date is what separates the two**, and nobody has it yet. **Get that date
-  before categorizing anything on that card after it.**
-
+- **A charge whose only clue is an unreadable merchant or government payee line is, on this
+  client's 2025, usually a MUNICIPAL PERMIT RENEWAL.** All **three** such charges came back that way
+  _(client, 2026-08-11)_ — but note the evidence is thinner than "three": two of them were a
+  **same-day pair**, so it is really two occasions. **The scope matters:** five transactions went to
+  the client in total, and the other two — the repeated checks to an individual and the deposit —
+  were **not** permits. So this pattern applies to unreadable *payee lines*, not to "anything the
+  cleanup can't read".
+  **Check that explanation first, and still ask.** Only once the client confirms it does the charge
+  go to Taxes & Licenses; the standing rule above — ask, don't infer from the amount — is not
+  suspended by a pattern of three.
+- **One family, several entities.** Business return, joint 1040 with a Schedule C, and outside K-1s arriving for one of the owners. Documents for one entity arrive in threads about another — check which entity a statement belongs to before filing it.
+- **The client did not understand why financial statements are needed at all** — he asked, politely, what he needed them for _(Lilian, 2026-08-04)_. When explaining, lead with *what the P&L is and where the numbers come from*, then that it's a different service, and only then the cost. Don't open with the fee.
+- **A recurring payment to an individual has to be identified before it's categorized** — the same
+  round sum going out repeatedly can be contractor work or rent, and the answer decides both the
+  expense account and which **1099**, if any, the client owes for the year. Ask; don't infer it from
+  the amount. _(Asked 2026-08-11, answered the same day: **contractor** — so a 1099-NEC is in play,
+  §4.)_
+- **The client hears one voice from the firm.** Questions raised internally — by whoever is doing
+  the cleanup or the review — go out to the client under the name of the person who owns the
+  relationship (Lilian), and **the client is not told who inside the firm raised them** _(Lilian,
+  2026-08-11)_. Keep those emails plain and short: the questions themselves, in bullet points, with
+  no explanation of our internal process attached.
+- **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
