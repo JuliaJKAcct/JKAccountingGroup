@@ -124,6 +124,14 @@ A running, dated record as we build this profile.
 
 - _(YYYY-MM-DD)_ — _(pending)_
 
+### Tax year YYYY — the review
+<!-- Add one per tax year the firm reviews for this client. Records what gated the return,
+     every question put to the client AND its answer once it arrives, what a prior-year
+     return established, and what was decided. The client's ORGANIZER answers never go here
+     (double-mcp §2.2); what the client tells US directly does. See the organizer-review skill. -->
+
+- _(pending)_
+
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to

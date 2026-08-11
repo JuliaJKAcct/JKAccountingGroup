@@ -99,7 +99,7 @@ is silent. Knowledge gets produced, the session ends, and nobody discovers the l
 person starts from zero.
 
 **Writing a Double note is not a substitute, and that is exactly how this rule was found.** In
-Aug 2026 a client's information arrived by voice message and was carefully captured in a Double
+Aug 2026 a client's information arrived as a text message and was carefully captured in a Double
 note — while that client still had **no CI file at all**. The note held his figures; nothing held
 what the firm had *learned* about him. Two months of that pattern and the knowledge is scattered
 across notes nobody re-reads. **A note and a file are different artifacts with different jobs** —
@@ -128,6 +128,27 @@ finishing work. A client file is one routine step from being public.
 
 _(Learned by getting it wrong: the first cross-year organizer analysis, 2026-08-11, wrote a
 client's organizer answers into their file, and an independent review caught it before merge.)_
+
+### The file has to answer the year later
+
+Lilian's requirement (2026-08-11): she wants to be able to ask, months on, **"what happened with
+this client's 2025 taxes? what problem did we have? what did they report?"** — and get the answer
+from the file rather than from anyone's memory. So when a session works a client's tax year, §6
+carries a **`Tax year YYYY — the review`** entry: what gated the return, every question put to the
+client **and its answer once it arrives** (tick it and append the answer with the date), what the
+prior-year return established, and what was decided or left open.
+
+Prior-return facts, and what the client tells **us** when we ask, are ordinary client knowledge and
+belong here. The only thing still barred is what they ticked **in the organizer** (above) — which
+costs almost nothing, because the answer we act on is the one they give when we ask them directly.
+
+⚠️ **Client tax detail must not reach the Knowledge Hub.** Lilian's decision, 2026-08-11.
+**What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
+**`loadClients()` in [`render/build.mjs`](./render/build.mjs) hard-aborts** when a client file carries
+a `Tax year YYYY` heading. It sits in the shared loader on purpose, so **both** consumers inherit it —
+the Knowledge Hub *and* this skill's own review dashboard, which ships as an **Artifact**. The gate is
+blunt; the sections named above are what to actually check before any publish.
+See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
