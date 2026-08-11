@@ -5,6 +5,15 @@ description: Determine which JK Accounting Group clients are READY to have their
 
 # Tax-season readiness — who can we file, and who are we waiting on
 
+> ### 👉 Reviewing ONE client before their return? That is a different skill.
+>
+> This skill answers **who is ready and who we are waiting on**, across the roster. If the task is
+> **one named client** — analyse their organizer, compare this year against last year, work out what
+> to ask them, or an organizer that reads "Completed" and still cannot be worked — load
+> [`organizer-review`](../organizer-review/) instead. Lilian calls it **"the tax preparer"**. It
+> reads all nine sources on that client and produces the grouped question list. The two are layered
+> deliberately: this one is the roster view, that one is the client view.
+
 > **Mechanics live next door.** This skill is the *domain* layer — what the columns mean and how
 > to reason about them. For how to actually reach Double's data (the five data planes, the folder
 > conventions, call efficiency, write safety), load [`double-mcp`](../double-mcp/) alongside it.

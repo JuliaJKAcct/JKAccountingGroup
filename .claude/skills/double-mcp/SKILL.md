@@ -819,6 +819,8 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 ## 8. Related skills
 
+- [`organizer-review`](../organizer-review/) — **the pre-return review companion** (Lilian's "tax preparer"). If the task is *reviewing one client before their return*, that skill drives it and this one is its rule-book for the Double calls. Its §0 carries the organizer-response discipline from §2.2 above.
+
 - [`tax-season-readiness`](../tax-season-readiness/) — the domain layer on top of this: what the
   tax/organizer columns *mean* and how to turn them into a ready-vs-pending list.
 - [`client-intelligence`](../client-intelligence/) — the per-client knowledge files that Double

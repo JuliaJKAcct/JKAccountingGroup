@@ -292,6 +292,10 @@ properties, notes) or Google Drive (the client's folder) and give it **in the ch
 **never commit it** to the repo. The file's §7 links are the fast path to where it
 lives. This keeps the repo clean while making Claude the firm's quick retrieval tool.
 
+## Related
+
+- [`organizer-review`](../organizer-review/) — **the pre-return review companion** (Lilian's "tax preparer"). It reads this skill's client files as source 1 and writes back the `Tax year YYYY — the review` entry. If someone asks to review a client *before their return*, that skill drives; this one governs what may be written down.
+
 ## Files this skill touches
 
 - `projects/client-intelligence/clients/<slug>.md` — the per-client files (create/enrich).
