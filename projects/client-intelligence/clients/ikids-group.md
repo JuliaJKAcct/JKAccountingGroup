@@ -76,6 +76,10 @@ the actual details.
   charge appears in the bank feed with no action from us; the bill and the payment confirmation
   still have to be pulled from the mailbox and matched to that transaction. **Never pay it a
   second time** — it is already paid. _(Lilian, 2026-08-11.)_
+- **Where the paperwork is kept:** every invoice and receipt for this client is filed in **Julia's
+  Google Drive** → the folder named for the client → **`Bookkeeping`** → **one folder per month of
+  the year**. The mailbox is where documents arrive; Drive is where they live, and it is where a
+  covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
 
@@ -108,6 +112,9 @@ the actual details.
 - 2026-07-20 — **Gmail enrichment sweep:** established the iKidsPark play-park profile, Fort Lauderdale FL, RU/UA language, pre-operational startup-cost treatment, hands-on AP, and the related-entity group. Ping had **no indexed meetings**; facts are from Gmail + Double contacts. Ping + Gmail now swept (see sweep-state).
 - 2026-08-10 — **Targeted people/ownership sweep** (Lilian, looking for a contact she could not find in Zoom). Read the **Operating Agreement** and settled the ownership structure: three members, equal thirds, single Manager (§5). Established that the **CFO is not a member or Manager**. Located the two **2025 Zoom calls** the CFO attended — 2025-06-20 (titled as the referrer's consultation, not iKids) and 2025-07-15 "Ikids Group LLC Setup" — which is why a Zoom search by client name finds nothing; Ping only indexes from ~Jun 2026, so **neither call has a transcript**. Registered the CFO as a Double contact **with no portal access**. Sources: Gmail, Google Calendar, Google Drive, Double. _(Worked by Lilian.)_
 
+- 2026-08-11 — **Where the paperwork is kept, from Lilian:** Julia's Google Drive → the client's
+  folder → `Bookkeeping` → one folder per month of the year. Folded into §4 and the runbook, and it
+  closes the open question this file raised the same day.
 - 2026-08-11 — **How this client's bookkeeping actually runs, from Lilian.** The client's **AP mailbox** (§3) is where the vendor bills and payment confirmations arrive, the firm has access to it, and **every month** we must go in, download the bills, and attach them to their payment transactions. The **water bill is on autopay** — nothing to pay, only its paperwork to collect. Recorded here and turned into the client's first bookkeeping runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md). _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
@@ -124,8 +131,8 @@ the actual details.
 - [ ] **Which other recurring vendors are on autopay** — only the water bill is confirmed. The rest
       are believed to be paid by us on request, but nobody has listed them (§5, and the runbook's
       open-decisions log)
-- [ ] **Where the downloaded bills are filed** once pulled from the mailbox — attached to the
-      QuickBooks transaction only, or also into Double / the client's Drive folder
+- [x] **Where the downloaded bills are filed** — **answered 2026-08-11 (Lilian):** Julia's Drive →
+      the client's folder → `Bookkeeping` → a folder per month, **and** attached to the transaction
 
 ## 7. Links
 
