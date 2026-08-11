@@ -250,6 +250,10 @@ come back, the answers he gives **us** — never what he ticked in the organizer
   distribution, or a K-1 share; (2) whether the three S corporations have filed their own 1120-S
   returns, since no K-1 exists until they do; (3) health coverage, because Marketplace coverage
   makes Form 1095-A a condition of filing at all.
+- **His 2024 return: how to get it.** His own copy sits in Double's file library, and **it may not
+  be opened** — the document rule bars fetching a filed return. **Lilian supplied a redacted PDF on
+  2026-08-11**; ask her for it again rather than opening his copy. Most of what it established is
+  already in the next bullet, so check that first — you may not need the PDF at all.
 - **Established from the 2024 return** (prepared elsewhere): shareholder in three S corporations;
   a large NOL carried forward; a suspended passive loss; an S-corp loss deducted in full, so basis
   needs checking; a sale of business property; an early retirement distribution with the penalty;

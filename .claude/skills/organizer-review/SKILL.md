@@ -109,7 +109,7 @@ nothing.
 | 6 | **Google Drive** | The client's folder — statements, worksheets, documents that never reached Double | `search_files` by client and owner name |
 | 7 | **Ping Assistant** | Zoom/meeting summaries, transcripts and action items — what was actually *said* to the client | `search_meetings` (org-wide) and `resolve_person` on each owner; search by **owner name as well as business name** |
 | 8 | **The organizer** — structure *and* responses | The answers, and which questions were even asked | `get_organizer`, `get_organizer_responses` |
-| 9 | **The prior year** — return or organizer | The comparison base. §3 | uploaded PDF, or the prior organizer |
+| 9 | **The prior year** — return or organizer | The comparison base. §3 | ⚠️ **You may not open it yourself — see below** |
 
 **Finding the IDs first:** every Double call needs a `clientId` — `list_clients(name:)` gets it, and
 `list_organizers(clientId)` gets the organizer. The repo file is `clients/<slug>.md`, slug =
@@ -130,9 +130,32 @@ legible, tag it low-confidence, discard the rest.
 > genuinely nowhere, that is worth telling her, because it means a channel is being missed. Do not
 > quietly proceed without it and do not ask the client for it first.
 
-**No prior year in Double?** Most clients have only one year there. The comparison base
-is then a **prior-year return the client uploaded** or one Lilian redacts and supplies.
-Ask for it — the pilot proved it is where the value is.
+### ⚠️ Source 9 has a route you must follow — read this before reaching for the PDF
+
+**The prior-year return is where the value is** — in the pilot it produced every material fact
+about the return, and the organizer produced none. **But you may not open the client's own copy.**
+[`double-mcp`](../double-mcp/)'s document rule bars fetching client documents in order to read
+them and **names filed tax returns specifically**. A copy sitting in their Double file library is
+exactly that.
+
+**So the route is:**
+
+1. **Check whether a prior year exists in Double as an organizer** (`list_organizers(clientId)`).
+   If it does, that is readable under §0 and it is the cleanest base. Only three clients have more
+   than one year there.
+2. **Otherwise, ask Lilian or Julia for the prior-year return as a redacted PDF** — they open it,
+   remove the identifiers, and hand it to the session. That is how the pilot worked, and it is the
+   *only* sanctioned route to a filed return.
+3. **Note what the client file already tells you.** If a previous pass read that return, its
+   findings are in the client's `Tax year YYYY — the review` entry — carryovers, states, entities,
+   filing status. **Read that before asking for the PDF again**; you may not need it.
+4. **Say so if you don't have it.** A review without the prior year is worth much less, and Block A
+   must say which sources were unavailable. **Never proceed silently.**
+
+⚠️ **Yes, this is uneven and the unevenness is deliberate:** the same client's *organizer answers*
+may be read as data (§0), while their *filed return* may not be opened as a document. That is
+recorded in [`double-mcp`](../double-mcp/) §2.2 as known, not an oversight — don't "resolve" it by
+opening the PDF.
 
 ---
 
