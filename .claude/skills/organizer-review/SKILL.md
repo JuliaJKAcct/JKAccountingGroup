@@ -107,18 +107,41 @@ an estimated-payment pattern.
 > deduction, the brackets and most credits — it bars Married Filing Separately from
 > several outright, EIC and the education credits among them — and often the state
 > return. It is worth far more than the dependant line that started the enquiry.
-> **So ask the marital *situation* on 31 December — not a yes/no.** A binary
-> married-or-divorced misses the three cases that most often decide the return:
-> **widowed** (a surviving spouse is generally treated as married for the year of the
-> death, and may qualify as a surviving spouse for two years after); **legally separated
-> under a decree of separate maintenance** (unmarried at year end); and **married but
-> living apart**, where §7703(b) can treat the client as unmarried and, with a qualifying
-> child in the home, open **Head of Household** — exactly the pattern a
-> child-support-plus-moves picture points at.
-> Ask: **married / separated (since when, and did the spouse live in the home at any point
-> in the last six months) / divorced (decree date) / widowed (date)**. Never infer it,
-> never carry last year's status forward because nothing said otherwise, and never assume
-> a client who says "married" today was married at year end.
+> **Ask the client to describe the situation. Do NOT hand them a menu of statuses.**
+> Lilian's correction, 2026-08-11, and it is a tone rule with teeth: *"no voy a ponerle
+> cosas catastróficas como viudo… es demasiada información."* Listing *married / separated
+> / divorced / widowed* at someone reads as cold, invites them to pick the nearest box
+> rather than explain, and floats possibilities nobody raised. **One open question does the
+> job better:** *"tell us how things stand at home — what changed during the year, and what
+> your family situation was on 31 December?"* Then narrow only to the **facts** the return
+> needs: who lived in the home, and for how many months.
+>
+> **The categories are OURS, for classifying their answer — not the question.** Keep them
+> in your head while you read what they write:
+> - **Married at year end** — and a **surviving spouse** is generally treated as married for
+>   the year of the death, so a bereavement does not automatically change that year's status.
+>   **They may then qualify as Qualifying Surviving Spouse for the TWO years after**, which
+>   carries joint rates and the joint standard deduction. **Its own conditions, so nobody
+>   applies it off the death alone:** a **dependent child living in the home**, the taxpayer
+>   paying **more than half** the cost of keeping that home up, **not remarried**, and having
+>   been eligible to file jointly in the year of the death. ⚠️ **Nothing will tell you this** —
+>   the firm's organizer has no Widowed option at all (see
+>   [`individual-organizer-logic-defects.md`](../tax-season-readiness/references/individual-organizer-logic-defects.md)),
+>   so it only ever surfaces from the client's own description. That is precisely why this
+>   checklist has to carry it.
+> - **Legally separated under a decree of separate maintenance** — unmarried at year end.
+> - **Married but living apart**, where §7703(b) can treat them as unmarried and open
+>   **Head of Household**. **The operative threshold is §7703(b)(3): the spouse must not have
+>   been a member of the household during the LAST SIX MONTHS of the year** — that one fact
+>   decides the whole branch, and it is *not* one of the §2(b) tests, so "the rest of §2(b)"
+>   does not cover it. On top of it you still need a qualifying child in the home and the
+>   remaining §2(b) conditions. This is the case a plain description is most likely to reveal
+>   that a menu would not.
+>
+> ⚠️ **This is the same rule as "ask facts, not family-law documents" (Block E), one level up:** the
+> legal category informs how we *treat* the answer; it is never what we put in front of the
+> client. Never infer the status, never carry last year's forward because nothing said
+> otherwise, and never assume a client who says "married" today was married at year end.
 
 **2 · Questions we have no answer to, because of an earlier answer.**
 
@@ -375,7 +398,11 @@ Rules that come from the firm's client-message convention:
 - **Say why** when the reason changes their answer — *"so we know whether another state
   return is needed"*.
 - **Never ask for anything in Block D.**
-- **Ask for facts, not FAMILY-LAW documents.** The firm does not open with a request for
+- **The internal checklist is not the client message.** Categories, code sections and edge
+  cases are how *we* classify an answer; the client gets a plain question and room to
+  explain. Listing the possibilities at them — especially the grave ones — reads as cold,
+  and gets you a box ticked instead of the story you need. Ask openly, then narrow to facts.
+- **Ask for facts, not FAMILY-LAW documents** — *the documents case of the rule above.* The firm does not open with a request for
   custody orders, divorce decrees, separation agreements or a signed Form 8332. **Ask the
   facts the return needs instead** — who lived where, for how many months, what the
   position was on 31 December — because those facts are what the return runs on, and
@@ -469,12 +496,15 @@ once the client tells us, their answer to *us* — never what they ticked in the
 In practice that costs almost nothing, because the answer we act on is the one they give
 when we ask.
 
-⚠️ **Client files feed the Knowledge Hub build, and Lilian's standing decision (2026-08-11)
-is that the Hub is not to carry clients' tax detail.** **What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
-**`loadClients()` hard-aborts** when a client file carries a `Tax year YYYY` heading — the gate sits
-in the shared loader, so **both** publishing paths inherit it: the Hub, and the client-intelligence
-review dashboard, which ships as an Artifact. See the [`knowledge-hub`](../knowledge-hub/) skill and
-[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+⚠️ **Client files are published** — they feed the Knowledge Hub and the client-intelligence
+review dashboard (an Artifact). **Tax findings on those pages are fine** (Lilian, 2026-08-11); what
+must never reach them is an **identifier** — SSN/ITIN, passport, driver's licence, full account
+numbers, dates of birth — because the Hub link circulates inside the team and can travel further.
+That is the repo's existing two-data-homes rule, and `loadClients()` hard-aborts on the patterns it
+can match as a backstop — **client files only**, not the SOPs the Hub also publishes. It misses a
+passport or licence number, a date of birth, an address in prose, and even an SSN written with
+spaces or dots rather than hyphens. **You are still the control**; see
+[`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) and the [`knowledge-hub`](../knowledge-hub/) skill.
 
 ---
 

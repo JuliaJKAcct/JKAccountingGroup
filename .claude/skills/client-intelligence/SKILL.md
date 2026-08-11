@@ -142,13 +142,14 @@ Prior-return facts, and what the client tells **us** when we ask, are ordinary c
 belong here. The only thing still barred is what they ticked **in the organizer** (above) — which
 costs almost nothing, because the answer we act on is the one they give when we ask them directly.
 
-⚠️ **Client tax detail must not reach the Knowledge Hub.** Lilian's decision, 2026-08-11.
-**What a rebuild actually publishes** is not the whole file: `clientCard()` emits §1's snapshot fields, **§5's first FOUR top-level bullets**, **§6 "Outstanding items"' first FOUR bullets**, a *count* of open "Information still needed", and §7 links. So the `Tax year YYYY — the review` entry is **not** what a rebuild would leak — the card never reads it. **The exposure is §5's opening bullets and the top of the re-ask list**, which is where a session naturally puts the sharpest findings.
-**`loadClients()` in [`render/build.mjs`](./render/build.mjs) hard-aborts** when a client file carries
-a `Tax year YYYY` heading. It sits in the shared loader on purpose, so **both** consumers inherit it —
-the Knowledge Hub *and* this skill's own review dashboard, which ships as an **Artifact**. The gate is
-blunt; the sections named above are what to actually check before any publish.
-See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
+⚠️ **These files are published** — the Knowledge Hub and this skill's own review dashboard (an
+**Artifact**) both render from them. **Tax detail is fine on those pages** (Lilian, 2026-08-11 —
+she has no objection to the Hub carrying it); **identifiers are not**, because the link circulates
+inside the team and can travel further. That is rule 1 above, and `loadClients()` now hard-aborts
+on an SSN/ITIN shape or a long digit run as a backstop (`ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1`
+overrides — as a decision, never to get past the error). It scans **client files only**, and it
+misses a passport or licence number, a date of birth, an address in prose, and an SSN written with
+spaces or dots instead of hyphens — **rule 1 is still the real control.** See [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).
 
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are

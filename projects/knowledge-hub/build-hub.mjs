@@ -1387,9 +1387,10 @@ const hubSopMeta = new Map(SOP_GROUPS.flatMap((g) => g.items).map((it) => [basen
 const clients = loadClients(repoRoot);
 const clientBySlug = new Map(clients.map((c) => [c.slug, c.title]));
 
-/* The clients' tax-detail gate lives in loadClients() (client-intelligence/render/build.mjs)
+/* The no-sensitive-data gate lives in loadClients() (client-intelligence/render/build.mjs)
    so BOTH publishing paths inherit it — this Hub build and the CI review dashboard, which
-   ships as an Artifact. See the knowledge-hub skill, rule 12. */
+   ships as an Artifact. It blocks identifiers, NOT tax subject matter. See knowledge-hub
+   rule 12. */
 
 let sopCount = 0;
 const hubSopTitles = {};   // id → title, so client-card "Related SOP" links open the in-Hub reader (never a repo link)
