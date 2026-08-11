@@ -123,6 +123,11 @@ where and for how many months. The legal instrument informs how we *treat* the a
 raised only if the answer makes it unavoidable. _(Same date: "no preguntamos por ese tipo de
 documento.")_
 
+⚠️ **Family-law paperwork only — this does NOT extend to ordinary working documents.** A mileage
+log, a basis computation, a finance agreement, a prior-year return, a statement: those are asked
+for **by name**, and should be. The rule is about not opening a client relationship by demanding
+their court records — not about being shy of asking for the documents the work needs.
+
 ## 8 · Where two records disagree, show the client both — then ask
 
 **This is the shape that gets an explanation instead of a one-word answer.** A bare question
@@ -151,9 +156,9 @@ _(Lilian's own phrasing model, 2026-08-11, ending "porque aquí hay algo raro.")
 Several small anomalies that each look minor may be one large change nobody named. Before
 resolving them one by one, ask whether the **thing they all sit inside** has changed.
 
-The case: a dependant that dropped off, a first mention of child support, and a move between
-states — three small puzzles separately, and together a signal that the marriage may have
-ended, which decides far more than the dependant line that raised it.
+The case that produced it (de-identified): a dependant that dropped off, a first mention of child
+support, and a move between states — three small puzzles separately, and together a signal that a
+marriage may have ended, which decides far more than the dependant line that raised it.
 
 **The general form:** *if all of these were true at once, what would explain them?* Then ask
 that.

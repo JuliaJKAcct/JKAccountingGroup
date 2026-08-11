@@ -79,6 +79,10 @@ comes with rules that do not bend. In short, and none of this is optional:
    the ⛔ subsection.)
 6. **Never write the organizer payload to a file**, including the scratchpad. Do the
    comparison in context.
+7. **Every example in this file — or any skill — is INVENTED, and labelled as such.** Never
+   illustrate a rule with the client in front of you. Three separate review rounds caught this
+   exact leak, twice inside the example being used to *teach* the rule against it. A real client's
+   answers cannot be the teaching example for the rule about a real client's answers.
 
 The **findings** are free. *"No K-1 this year; last year had one"* is exactly the output
 this permission exists to produce.
@@ -339,7 +343,9 @@ job.**
 ### Block A — Can we prepare this return? (3 lines)
 
 Verdict — **Yes / No, blocked on X / Not until Y is settled** — the single thing that
-gates it, and how many questions the client owes. Nothing else.
+gates it, and how many questions the client owes. **And if a source was empty, unreachable or
+never checked, say so here** — a review that silently skipped one is worth less than it looks.
+Nothing else.
 
 ### Block B — The prior-year → this-year table
 
@@ -588,8 +594,8 @@ That only happens if every correction she makes survives the session it was made
 | Kind | What it is | Where it lives |
 |---|---|---|
 | **Domain** | How a tax thing behaves — a K-1 is issued for the year an entity closed; filing status is fixed on 31 December; an NOL offsets 80% | §2's detection families, or the carryover block |
-| **Method** | How the work is done and shown — group by root cause, five to eight findings, show the trail, check what we already hold before asking | §1, §3, §4 |
-| **Relationship** | How the firm speaks to a client — show them both records, ask facts not family-law documents, never hand them a menu | §4 Block E |
+| **Method** | How the work is done and shown | **[`method.md`](../../../projects/pre-return-review/method.md)** — it applies to any review, not just this one. Only the *organizer-shaped* specifics stay here: the five-to-eight cap, the six blocks, the marker set (§1, §3, §4) |
+| **Relationship** | How the firm speaks to a client | **[`method.md`](../../../projects/pre-return-review/method.md) §7–8.** §4 Block E applies it to a pre-return question list; the rule itself lives there |
 | **Case fact** | True of ONE client *(invented illustrations: she is paid quarterly; his warehouse lease renews in March; her prior year was prepared out of state)* | **Not here.** The client's file — **§4/§5 for the substance, §6 for the dated log** (`client-intelligence`'s own split) |
 
 **The last row is the one that goes wrong.** A case fact written into this skill makes it longer

@@ -48,7 +48,7 @@ Every review, without being asked:
 3. **End in the questions**, ordered so the answer that unblocks the most comes first, in
    the client's own language.
 4. **Say plainly what still cannot be established** — and if a source was empty or
-   unreachable, say that too rather than quietly proceeding.
+   unreachable, say that too rather than quietly proceeding. (Block A carries this.)
 5. **Write it into the client's file** so the year can be answered a year from now, without
    anyone's memory.
 
@@ -83,14 +83,19 @@ organizer.
 ## Everything this session established — and where it lives
 
 Built 2026-08-11, over one long session with Lilian and the pilot client. She asked, before
-deleting that session, to be certain nothing was lost. **This is the audit. Every row is
-checkable.**
+deleting that session, to be certain nothing was lost. **Every row below is checkable — open
+the destination and look.**
+
+⚠️ **This is the main record, not a proof of completeness.** If you remember something from that
+session and it is not in this table, **search the skill and `method.md` before concluding it was
+lost** — plenty is written down that no single row names.
 
 | What she established | Where it lives now |
 |---|---|
 | The **purpose** — one pass, one question list, instead of weeks of ping-pong | This README |
 | **Look before you ask** · group by root cause · show the trail · a disappearance is a question · derive from structure · a client's mistake is work · the internal checklist is not the client message · show both records then ask · question the frame | [`method.md`](./method.md) — **and summarised in `CLAUDE.md`'s core conventions, so every session sees them without loading a skill** |
-| The **fixed six-block output** and the "no wall of text" rule | [`organizer-review`](../../.claude/skills/organizer-review/) §4 |
+| The **fixed six-block output** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 |
+| The **"never a wall of text"** rule, and why | that skill's opening section |
 | The **nine sources** in order, and that Gmail / Drive / Ping are not optional | that skill §1 |
 | The **six detection families**, incl. the K-1 disappearance rule and the filing-status catch | that skill §2 |
 | The **prior-year → this-year table** and its markers | that skill §3 |
@@ -99,13 +104,18 @@ checkable.**
 | **How to phrase a question to a client** — the four moves, ask facts not family-law documents | that skill §4 Block E, and [`method.md`](./method.md) §7–8 |
 | **Starting cold** — read the client file and its tax-year entry first | that skill's "Starting cold" |
 | **How a rule gets captured** — four kinds, four homes, provenance, corrections outrank proposals | that skill §6 |
-| **Calibration** — run it cold, correct only at the end | that skill §6, and above |
+| **Calibration** — run it cold, correct only at the end | that skill §6, and *Working on this* below |
 | A client file is created **in the same session** you work a client | `CLAUDE.md` core conventions + [`client-intelligence`](../../.claude/skills/client-intelligence/) |
 | A **Double note** carries the client's information, **not our analysis** | `CLAUDE.md` + [`double-mcp`](../../.claude/skills/double-mcp/) §7 rule 11 |
 | **Organizer answers never reach the repo** — including paraphrase | [`double-mcp`](../../.claude/skills/double-mcp/) §2.2 + `client-intelligence`'s ⛔ subsection |
-| **No identifiers on published pages** — enforced in `loadClients()`, with its blind spots stated | the three skills + `FOLLOW-UPS` |
+| **No identifiers on published pages** — client files feed the Hub *and* the review dashboard (an Artifact) | Enforced in [`client-intelligence/render/build.mjs`](../../.claude/skills/client-intelligence/render/build.mjs) → `loadClients()`. Stated, with its blind spots, in the [`client-intelligence`](../../.claude/skills/client-intelligence/), [`knowledge-hub`](../../.claude/skills/knowledge-hub/) and [`organizer-review`](../../.claude/skills/organizer-review/) skills · `FOLLOW-UPS` 26 |
 | The **1040 organizer's logic defects** — seven dead options, the unreachable rental branch | [`individual-organizer-logic-defects.md`](../../.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) · `BACKLOG` IDEA-17 · `FOLLOW-UPS` |
-| **`VIA VOICE` in a Double note means Google Voice**, not a recording | that skill's source table + the client's file |
+| **`VIA VOICE` in a Double note means Google Voice**, not a recording | [`organizer-review`](../../.claude/skills/organizer-review/) §1 source 2 + the client's file §5 |
+| The **`Tax year YYYY — the review`** entry — what gated the return, every question **and its answer as it arrives**, what the prior return established. **This is the only thing a review leaves behind** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 Block F + §5, and the [client template](../client-intelligence/_client-template.md) §6 |
+| **Only the first FOUR top-level bullets** of a client file's §5 and §6 Outstanding items ever reach the team — so order both by consequence | [`_client-template.md`](../client-intelligence/_client-template.md) §5 · [`client-intelligence`](../../.claude/skills/client-intelligence/) · [`organizer-review`](../../.claude/skills/organizer-review/) §5 |
+| **Every example in a skill must be invented, and labelled** — a real client's material is never the teaching example | [`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 5 |
+| The rest of the **privacy discipline** — tell the person before the first read · remind them to delete the conversation · never from a subagent or a scheduled session · never into an artifact | [`organizer-review`](../../.claude/skills/organizer-review/) §0 + [`double-mcp`](../../.claude/skills/double-mcp/) §2.2 |
+| **Lilian's standing arrangement** — she keeps the information reachable, so the source list is an expectation; a genuinely missing channel is reported to her, not asked of the client | [`organizer-review`](../../.claude/skills/organizer-review/) §1 |
 | Everything about the **pilot client** — his structure, his carryovers, his open questions | [`clients/denys-melnyk.md`](../client-intelligence/clients/denys-melnyk.md) |
 
 **What is deliberately NOT written down:** the client's organizer answers, his figures, his
@@ -117,5 +127,8 @@ identifiers. Those stay in Double. That is the rule, not an omission.
   It starts with the privacy discipline; read it before the first call.
 - **Improving it:** that skill's §6 is the rule-capture protocol — where a new rule goes and
   what provenance it must carry.
+- **⚠️ It is not validated yet.** Everything here comes from **one client and one run**. Whether
+  the nine method rules fire on work that is not organizer-shaped is still open —
+  [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 27.
 - **Calibrating it:** Lilian's method — **run it cold, correct only at the end.** Correcting
   mid-flight teaches the session, not the file. What it misses is the rule that is missing.

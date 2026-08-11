@@ -213,7 +213,7 @@ in that folder.
   When a session **reviews, reconciles, or works out what to ask** — a client before their return, a
   bookkeeping cleanup, a matter with an agency, books that disagree with a bank —
   [`projects/pre-return-review/method.md`](./projects/pre-return-review/method.md) is the standing
-  guide, and it holds nine rules that Lilian set by correcting real work. The short form, because
+  guide, and it holds nine rules Lilian set while directing and correcting real work. The short form, because
   these are the ones a session gets wrong: **look before you ask** (a gap is not a finding until you
   have searched everywhere the firm keeps things — asking for what someone already sent is worse than
   not reviewing at all); **group by root cause** (one cause is one finding, however many questions it
@@ -221,7 +221,10 @@ in that folder.
   **a disappearance is a question, never a conclusion**; **derive what must exist from the client's
   structure**; **a client's mistake is work, not an alarm**; **the internal checklist is not the
   client message** (categories and code sections are how *we* classify — the client gets a plain
-  question); **where two records disagree, show the client both, then ask**; and **when several small
+  question, and we ask for **facts, not the family-law paperwork that proves them**, though ordinary
+  working documents are still asked for by name); **where two records disagree, show the client
+  both, then ask** (recite what they told us · name each record · ask openly · then narrow, one
+  question per block); and **when several small
   anomalies move together, question the frame, not just the pieces.** The purpose behind all of it is
   [`projects/pre-return-review/README.md`](./projects/pre-return-review/README.md).
 - **Client data is sensitive.** Reports and anything with client-specific
