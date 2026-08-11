@@ -2,7 +2,16 @@
 
 **Audited 2026-08-11** against a live, published, `completed` organizer:
 `JK 2025 1040 Organizer` (organizer `146070`), read with `get_organizer` —
-**structure and logic only, no client answers**. 5 sections, ~120 slides, 16 logic rules.
+**structure and logic only, no client answers**. 8 sections (6 carrying questions), ~120 slides,
+16 logic rules.
+
+> ⚠️ **This is ONE client's organizer, not "the template" — and the difference is not settled.**
+> Every defect below is verified in `146070`. Whether they exist in **every** client's 1040
+> organizer depends on where new organizers come from, which is **unconfirmed** (see "Fixing this"
+> at the bottom — it is the same unknown blocking IDEA-16). They are *assumed* shared, because
+> these organizers appear to be cloned from a common starting point, but nobody has checked a
+> second one. **Before a fix is planned around this list, read one more client's 1040 organizer
+> and record whether it matches.**
 
 Lilian asked for this after the organizer-review pilot surfaced the first defect
 ("Necesito que me ayudes con eso también"). Every finding below is derived from the payload,
@@ -28,10 +37,14 @@ required question was answered. There are three chokepoints:
 |---|---|---|
 | `1742689` | **Income types** (required, multi-select) | Every income-document request, the whole Schedule C block, the vehicle block, home office |
 | `1742686` | **"Did YOU pay for any of the following?"** (**not** required) | Medical, Form 1098, estimated-tax dates, 1098-E, 5498, 1098-T, charitable |
-| `1742692` | **"Select the tax year"** | The entire **"New for 2025"** section (tips / overtime / vehicle interest) — gated on the answer being exactly `"2025"` |
+| `1742692` | **"Select the tax year"** | The entire **"New for 2025"** section — tips, overtime, vehicle-loan interest **and the age-65 question** — gated on the answer being exactly the string `"2025"` |
 
-`1742686` being **optional** is worth a second look: a client who skips it suppresses seven
-deduction follow-ups and loses nothing on the completion meter.
+**Two of the three chokepoints are not even required questions.** `1742686` is `required: false`: a
+client who skips it suppresses seven deduction follow-ups and loses nothing on the completion
+meter. **`1742692` is `required: false` too**, and it is the worse of the pair — skipping it, or
+picking the wrong year from a dropdown that still offers `2020` through `2025`, silently removes an
+entire section. Both deserve to be required, and `1742692` arguably should not be a client-answered
+question at all.
 
 **None of that is a defect.** The defects are below.
 
@@ -138,7 +151,11 @@ authored by hand. That is **unconfirmed** (it is the same unknown blocking
 [`BACKLOG.md`](../../../../BACKLOG.md) IDEA-16 for the *business* organizer). Settle it with Lilian
 or Double support **before** starting a rebuild, or the work lands on a draft that governs nothing.
 
-**Whichever route, the fix is a Double-UI job with our list in hand, not an API job.**
+**Precisely: the API can author, but it cannot ship.** `create_organizer` + `update_organizer`
+*can* build a corrected draft programmatically. What is not exposed is **publishing** — so a human
+has to finish the job in the Double UI either way, and an already-sent organizer cannot be touched
+at all. Plan it as **a Double-UI job with our list in hand**, and treat any API authoring as a
+convenience, not the route.
 
 ---
 

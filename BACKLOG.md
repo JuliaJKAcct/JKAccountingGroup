@@ -856,12 +856,17 @@ The organizer itself lives in **Double**, not the repo. Sibling of
 which redesigns the **business** organizer — same platform, same open question about where new
 organizers come from, different document.
 
-**What we need to start:** (1) confirm **where new organizers are created from** — a firm-wide
-template in Double, a clone of a previous client's, or hand-authored. This is the same unknown
-blocking IDEA-16 and it decides whether a fix propagates or dies on one draft; settle it with Double
-support. (2) Lilian decides, for each of the seven dead options, whether to wire it to a real
-follow-up or remove the option — offering a choice that leads nowhere is worse than not offering it.
-(3) Apply the fixes in the Double UI.
+⚠️ **One caveat on scope:** the defects are verified in **one client's** 2025 organizer, not in a
+template. They are *assumed* to be shared, because these organizers look cloned from a common
+starting point — but nobody has checked a second one, so **step 0 is to read another client's 1040
+organizer and confirm the list applies**.
+
+**What we need to start:** (1) confirm the defects appear in a second organizer (above); (2) confirm
+**where new organizers are created from** — a firm-wide template in Double, a clone of a previous
+client's, or hand-authored. This is the same unknown blocking IDEA-16 and it decides whether a fix
+propagates or dies on one draft; settle it with Double support. (3) Lilian decides, for each of the
+seven dead options, whether to wire it to a real follow-up or remove the option — offering a choice
+that leads nowhere is worse than not offering it. (4) Apply the fixes in the Double UI.
 
 **Capability check:** ⚠️ **the read side is done; the write side is constrained.** The audit was
 produced with `get_organizer`, which returns every slide and logic rule. But per the

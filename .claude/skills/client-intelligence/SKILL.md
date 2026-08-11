@@ -105,6 +105,26 @@ what the firm had *learned* about him. Two months of that pattern and the knowle
 across notes nobody re-reads. **A note and a file are different artifacts with different jobs** —
 see the boundary rule in the [`double-mcp`](../double-mcp/) skill §7.
 
+### ⛔ A tax organizer's ANSWERS never go in a client file
+
+Rule 1's "two data homes" bans secrets and personal data. **Organizer responses are barred more
+broadly than that** — not just the identity block, but **what the client answered**:
+*"he selected None of the above"*, *"he answered no to dependants"*, *"he declined direct
+deposit"*. None of those is an identifier and all of them are barred
+([`double-mcp`](../double-mcp/) §2.2, exposure point 2).
+
+**Write the action, not the answer.** *"Confirm which income types he actually had in 2025"* tells
+the team everything it needs and states nothing he said. Point at the Double organizer for the
+answers; they are already in their proper home.
+
+**Why this is stricter here than anywhere else:** `clients/*.md` is **auto-published**. The
+Knowledge Hub's build loads **every** file in `clients/` with no allowlist, so the next Hub rebuild
+turns this file into a hosted web page — and rebuilding the Hub is a standing, unprompted part of
+finishing work. A client file is one routine step from being public.
+
+_(Learned by getting it wrong: the first cross-year organizer analysis, 2026-08-11, wrote a
+client's organizer answers into their file, and an independent review caught it before merge.)_
+
 Seeding a file from Double alone is fine — do it now and let the weekend sweep enrich it later.
 Record what it was seeded from in `sweep-state.md`'s coverage-gap column so the owed sources are
 visible rather than assumed done.

@@ -52,7 +52,9 @@ are not duplicates of each other.
 
 > **⚠️ The organizer's conditional logic has known defects — read before quoting it or acting on a
 > client's answers.** [`references/individual-organizer-logic-defects.md`](./references/individual-organizer-logic-defects.md)
-> is the audit (2026-08-11) of the live 2025 template's 16 logic rules. The headline: **seven
+> is the audit (2026-08-11) of the 16 logic rules in **one live 2025 organizer** — assumed shared
+> across clients because these appear to be cloned, but **that is unverified**, so read a second
+> organizer before planning a fix around it. The headline: **seven
 > income-type options are dead ends** — the client ticks the box and no document is ever requested
 > — and the **rental-property branch is unreachable by any answer**. It also explains the design
 > that is *not* a defect: almost every document request is hidden until an earlier answer reveals
