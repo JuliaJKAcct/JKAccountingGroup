@@ -41,6 +41,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-13](#idea-13--per-client-memory-ping-assistant-client-intelligence-connected-to-claude) | Per-client memory Lilian can query in plain language — connect **Ping Assistant's Client Intelligence** directly to Claude (Double notes as fallback bridge) | Firm ops / tooling (Ping Assistant; Double fallback) | Medium | **Blocked / vendor** — Ping identified & integrates with Double; awaiting Ping dev/support on a direct API/MCP |
 | [IDEA-14](#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured) | `sop-authoring` skill — encode how Lilian wants SOPs structured (flowchart first, numbered hierarchy, bullets, uploads checklist, email map, design-system render) | [`.claude/skills/sop-authoring/`](./.claude/skills/sop-authoring/) + [`projects/sops/`](./projects/sops/) | Medium | **Built (v1, Jul 2026)** — refine after Lilian's final BTR SOP review |
 | [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | **Built (v1, Jul 2026)** — create/enrich/audit + CI↔SOP sync + owner-level sweep rule + Atlas review-dashboard render; improve over time |
+| [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question) | Redesign the Business Tax Organizer with a QuickBooks-access filter question up front, so clients we already have QuickBooks access to skip the transaction questions | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) skill + Double's live organizer template | Medium | Not started |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -774,6 +775,53 @@ rule (sweep by owner, assign by company/person), and an Atlas review-dashboard r
 engine ([`render/`](./.claude/skills/client-intelligence/render/), built with
 `impeccable`). Improve over time: fold the weekend-sweep prompt into the skill, add a
 per-owner index, and add service→SOP deep-linking as SOPs get written.
+
+---
+
+## IDEA-16 — Redesign the Business Tax Organizer around a QuickBooks-access filter question
+
+**What Lilian wants:** restructure the firm's **Business Tax Organizer** (the Double organizer
+sent to a company for its business tax prep) so it opens with a short filter question instead of
+jumping straight into the transaction-level questions it asks today. The lead question would be
+something like *"Do we have access to your QuickBooks?"* — if yes, skip the many questions the
+firm can already answer itself by looking at the books directly; if no, ask for Financial
+Statements and the rest of what the firm needs from the client. This is the forward-looking half
+of a change she made now: she added a new `Organizer Status` value in Double,
+`NA We have QuickBooks Access`, for companies the firm can already log into even though they
+aren't connected in Double — see the [`tax-season-readiness`](./.claude/skills/tax-season-readiness/)
+skill §1b/§5 for what that value means today, ahead of this redesign.
+
+**Why it matters:** today the organizer asks every company the same long list of
+transaction-related questions regardless of whether the firm already has the answer sitting in
+QuickBooks. A filter question up front removes needless client work for the companies we already
+have access to, and keeps the full ask only for the companies that actually need to supply it.
+
+**Where it fits:** the organizer content itself lives in **Double**
+(`JK {year} Business Tax Organizer - {name}`, readable via `get_organizer` per the
+[`double-mcp`](./.claude/skills/double-mcp/) skill §2.2) — this is an edit to that live template,
+not a repo file. The repo's role is the domain knowledge that should drive the redesign:
+[`tax-season-readiness`](./.claude/skills/tax-season-readiness/) §1b/§5/§9 already document what
+the new `Organizer Status` value means and why. A `references/business-organizer-questions.md`
+companion to the existing
+[`individual-organizer-questions.md`](./.claude/skills/tax-season-readiness/references/individual-organizer-questions.md)
+would be the natural place to capture the current business-organizer question bank before
+redesigning it, mirroring how the 1040 organizer's questions were captured.
+
+**What we need to start:** (1) read the live Business Tax Organizer's current structure with
+`get_organizer` (structure only — never `get_organizer_responses` on a real client) to know
+exactly which questions exist today; (2) Lilian/Julia decide the filter question's exact wording
+and which downstream questions it should suppress when the answer is "yes"; (3) write the change
+into Double's organizer template (`update_organizer` — a declarative whole-document write, per the
+`double-mcp` skill's write-safety rules).
+
+**Capability check:** the read side is fully buildable now (organizer structure is readable via
+the MCP since 2026-08-06). The write side (`update_organizer`) exists but is a whole-document
+declarative write, so it needs the current structure captured first and the change staged
+carefully — no partial/patch write is available.
+
+**Priority:** Medium · **Status:** Not started — captured (Lilian, Aug 2026, flagged as "for
+later"); the `Organizer Status` value it depends on is already documented in the
+`tax-season-readiness` skill.
 
 ---
 
