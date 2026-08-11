@@ -114,6 +114,14 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 Anything the team must know to serve this client well — special preferences,
 watch-outs, one-off arrangements, history that affects the work.
 
+> ⚠️ **Order these by consequence — only the first FOUR are published.** Both the Knowledge
+> Hub and the client-intelligence review dashboard render **only the first four top-level
+> bullets** of this section (and of §6's "Outstanding items"); a fifth never appears on
+> either. So put first whatever would cause the worst mistake if someone didn't know it —
+> **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
+> about where it goes**; appending to the end means the team never sees it. The cap lives in
+> `clientCard()` — see the [render README's parsing contract](./render/README.md).
+
 - _(pending)_
 
 ## 6. History & open questions

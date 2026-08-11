@@ -252,6 +252,8 @@ output is an Artifact **fragment** (`<title>` + `<style>` + markup + `<script>`)
 **not committed** — it is large and fully regenerable from the files. See
 [`render/README.md`](./render/README.md).
 
+> ⚠️ **The published card is a CURATED EXTRACT, not the file — so order matters.** `clientCard()` renders only the **first four** top-level bullets of **§5** and the **first four** of **§6 "Outstanding items"**; a fifth appears nowhere, on the Hub or on the review dashboard. Order both by **consequence** — what would cause the worst mistake if someone didn't know it — and treat "where does this bullet go?" as part of adding one. A closed or historical item sitting in the first four is silently evicting live work from the team's view. The full contract is in [`render/README.md`](./render/README.md).
+
 ## Answering questions live (Julia/Lilian ask about a client) — ALWAYS sweep live first
 
 The client file is the **index + summary + open threads** — NOT the live status, and NOT a
