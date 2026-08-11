@@ -86,13 +86,16 @@ link). Never write the credential itself here.
 > recorded below is what the firm must **do** about it. Open the organizer in Double for the
 > answers themselves.
 
-**He sends his information by message, not through the organizer.** He marked the 2025 organizer
-complete on 2026-08-04, then sent his actual income and expense summary **directly to Lilian** on
-2026-08-05, which is where the usable material came from. Assume for this client that **the
-organizer is not where his information lives** — check the Double note first.
-⚠️ **The channel is unconfirmed:** the Double note records it as a **voice** message; Lilian
-recalls a **WhatsApp text** (2026-08-11). Settle it and correct whichever is wrong — it decides how
-we ask him for things.
+**He sends his information by text message, not through the organizer.** He marked the 2025
+organizer complete on 2026-08-04, then sent his actual income and expense summary **as a text
+message on 2026-08-05**, which is where the usable material came from. Assume for this client that
+**the organizer is not where his information lives** — check the Double note first, and expect the
+substance to arrive as messages rather than uploads.
+
+> **Reading the Double note's header:** it says `INFORMATION SENT BY CLIENT ... VIA VOICE`, which
+> means **Google Voice** — the firm's texting channel with clients — **not** a voice recording.
+> Confirmed by Lilian, 2026-08-11, after a session misread it. Worth writing as
+> `VIA GOOGLE VOICE` in future notes; a teammate will make the same mistake.
 
 **His organizer reports 100% complete, and we still have no answers to the questions that matter.**
 He indicated **no source of income**. The organizer therefore did not go on to ask for the 1099,
@@ -182,7 +185,11 @@ repo — they are on the return and in Double.)
 **The dependent question is worth real money, and the three sources disagree.** His 2024 return
 claimed **one dependent daughter** with both the **Earned Income Credit** and the **Additional
 Child Tax Credit** — EIC and ACTC require the child to have lived with them **more than half the
-year**, so as of 2024 she did. What he sent us in Aug 2026 says **two children** and **child
+year**, so as of 2024 she did. **And he is married to the same spouse now** — so a year in which
+that daughter is not a dependant needs an explanation the marriage does not provide. The reading
+that fits every source is **two children: one living with them (the one claimed in 2024) and one
+who does not (the child support)** — which would make the current dependant answer simply an
+oversight. Do not assume it; it is the single most likely explanation and it is worth real money. What he sent us in Aug 2026 says **two children** and **child
 support**. His 2025 organizer tells it differently again. Nothing in that is alarming on its own —
 circumstances change and he is not an accountant — but it has to be settled **per child**: who
 they live with now, since when, and whether a Form 8332 release exists. If nothing actually
@@ -210,7 +217,7 @@ particular finding earns a place there.
 
 - _(2026-07-21)_ — Client created in Double; `JK 2025 1040 Organizer` created and published the same day.
 - _(2026-08-04)_ — Client marked the organizer **complete (100%)** and uploaded a copy of his **2024 return** (prepared by another firm).
-- _(2026-08-05)_ — Client sent his income and expense summary **directly to Lilian**, not through the portal. _(Channel unconfirmed — the Double note says voice, Lilian recalls WhatsApp text.)_
+- _(2026-08-05)_ — Client sent his income and expense summary as a **text message (Google Voice)**, not through the portal.
 - _(2026-08-06, Lilian)_ — Captured that summary in the Double note **"2025 Tax Preparation - P&L and other info"**. The client's completed **Home Office Deduction template** was filed in Double under `Others > 2025`.
 - _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; an upstream answer in the income section suppressed the document requests below it; two documents genuinely outstanding (1095-A, 1098) versus two already supplied **outside** the organizer and therefore not to be chased (the home-office template, and the P&L data by voice). Client file created the same day. Findings deliberately kept out of the Double note (§5).
 - _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024, and neither state has come up for 2025; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit**, which needs re-establishing for 2025. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
@@ -222,6 +229,10 @@ The re-ask list for the client, in priority order:
 - **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
   a K-1 share. Everything else depends on the answer, including whether there is a Schedule C at
   all. **Ask this first.**
+- **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
+  **This gates everything else** — a K-1 does not exist until the company files. The 1120-S was due
+  **15 March 2026** (15 September extended), and its late-filing penalty runs **per shareholder, per
+  month**, so a company that has not filed is its own problem to raise with him now.
 - **The three S corporations' 2025 K-1s** — Midwest Expedited Corp, Midwest Truck Leasing LLC,
   AVDM Holdings Inc. If any of them stopped, we need **which one, and the date it closed or he
   left**. A company that closed *during* 2025 still issues a 2025 K-1; only an exit or closure in
@@ -246,7 +257,7 @@ The re-ask list for the client, in priority order:
 
 ### Information still needed
 
-- [ ] Primary language, and the channel he actually uses — he does not use the portal, but voice vs. WhatsApp text is unsettled (see §5).
+- [ ] Primary language. His channel is settled: **text message, not the portal** — worth sending him the Double portal guide with the question list.
 - [x] What his work actually is — **trucking / freight, through three S corporations he holds shares in** _(2024 return, 2026-08-11)_. The earlier "inferred from his expense pattern" reading is superseded.
 - [ ] Whether the drivers he paid were paid **by him personally or by one of the S corps** — that decides who, if anyone, owes the 1099-NECs.
 - [ ] Which of the three S corporations are **still active** in 2025, and who prepares their 1120-S returns.

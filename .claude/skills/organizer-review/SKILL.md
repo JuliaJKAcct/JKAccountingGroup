@@ -158,6 +158,25 @@ a >2% S-corp shareholder); anything already deducted on an entity's own return.
 the client file, and the notes. The firm's `Tax Return Type` saying one thing while the
 prior return says another is a real finding.
 
+### 5b · What the structure obliges — derive the documents, don't wait to be told
+
+**A client's structure dictates which documents must exist, whether or not anyone
+mentions them.** Work forward from what you know about them and ask for what the
+structure requires. This is what a preparer does automatically and a checklist never does.
+
+| If the client is… | These must exist | And the trap |
+|---|---|---|
+| **A shareholder in an S corporation** | **A K-1, every year, for every shareholder** — including a loss year. **Plus a W-2** if they work in the business and take money out; the IRS requires reasonable compensation | **The K-1 does not exist until the company files its own 1120-S.** So the entity return is a *prerequisite* for the personal return, not a parallel task — find out whether it is filed and who is preparing it. **The 1120-S deadline is 15 March** (extended 15 September), and its late-filing penalty runs **per shareholder, per month** |
+| Paid by their own S corp | Money out is **wages + distributions**, not self-employment income. **Distributions are not a separate form** — they appear on the K-1, and are tax-free only up to basis | A total "received from the company" that has not been split into wages vs. distributions cannot be entered on a return at all |
+| A partner in a partnership | A K-1 (Form 1065). No W-2 — a partner's pay is guaranteed payments, on the K-1 | People describe guaranteed payments as "salary" |
+| A shareholder who deducted an entity loss in full | A **basis** computation | Without basis the loss suspends instead; every carryforward built on it is wrong |
+| An employer of subcontractors | **1099-NECs they owe**, as the payer | Establish *who* paid — them personally, or the entity |
+
+**Write it as the preparer's chain, not as a list of missing paperwork:** *"you own an
+S corporation → it owes you a K-1 → it can only issue one after it files its own return →
+so tell us who is preparing it."* A client understands that; "please send your K-1" invites
+"what K-1?"
+
 ### The extra block when the prior year was prepared elsewhere
 
 **Not optional, and worth more than everything else combined.** Nobody here knows what
@@ -238,11 +257,50 @@ N. HEADLINE — what is wrong, in one line.        [🔴 blocks | 🟠 ask | �
 
 Target **five to eight findings**. More than ten means the grouping has not been done.
 
-### Block C — Already in hand · do NOT ask for these
+> **Write as the preparer, not as an auditor.** Lilian's framing: *"imagina que eres un
+> preparador de impuestos… puedes decirle al cliente cuál es la fuente del error y qué
+> necesitas para resolverlo."* So every finding names **where the inconsistency comes
+> from** and **what specifically resolves it** — not that something is wrong, but *why the
+> two records disagree* and *what one answer would settle it*.
+>
+> And **reason about it** rather than listing it. When two facts cannot both be true, say
+> so and say which is more likely, then ask. *"He is married to the same spouse as last
+> year, and last year that daughter lived with them — so a year in which she is not a
+> dependant needs an explanation the marriage does not provide. Almost certainly an
+> oversight; ask, don't assume."* That sentence is the whole reason a person does this and
+> a checklist cannot.
 
-A short list of what the client has already supplied, and where it sits. **Never omit
-this block**, even when it is one line. It is what stops the firm asking a client for a
-document they sent last week — the single fastest way to lose their patience.
+### Block C — Already in hand · what it is, where it came from, what it replaces
+
+**Never omit this block**, even when it is one line. It does two jobs.
+
+The first is the guard: it stops the firm asking a client for a document they sent last
+week — the single fastest way to lose their patience.
+
+The second matters more, and is why the block carries **provenance**. Lilian's
+instruction (2026-08-11): *"puede ser que yo haya recopilado la información del cliente y
+la haya guardado en diferentes sitios… tú necesitas decir que esa información está y de
+dónde lo obtuvimos."* **The person running the review is often not the person who
+gathered the material.** Julia may ask for this analysis on a client whose information
+Lilian filed across a Double note, the client file and the file library. If the review
+does not surface it, Julia concludes it is missing and asks the client again.
+
+One row per item:
+
+| What we have | Where it came from | What it substitutes for |
+|---|---|---|
+| Completed home-office worksheet | Double → `Others > 2025`, uploaded 2026-08-06 | The organizer's home-office upload |
+| Income and expense figures | Double note "…", from the client's text message of 2026-08-05 | The Profit & Loss template |
+| Prior-year return | Double file library, uploaded by the client | The comparison base for §3 |
+
+**Say what it substitutes for.** *"There is a Double note with his figures"* is filing;
+*"his P&L is not missing — the figures are in a Double note from his text message of
+2026-08-05, and that is what we build the Schedule C from"* is the answer to the
+question the preparer actually has.
+
+**Say when a substitute is not equivalent.** Figures in a message are not a signed P&L
+template; a worksheet completed before a mid-year move may not cover both homes. Name the
+gap, so nobody treats "we have it" as "it is sufficient".
 
 ### Block D — Questions for the client
 
