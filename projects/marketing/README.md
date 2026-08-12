@@ -14,6 +14,7 @@ work, not the purpose of the repo.
 marketing/
 ├── CLAUDE.md                  ← operating persona for all marketing work
 ├── positioning.md             ← shared offer positioning: the pitch + "what do you do?" (EN/RU)
+├── social-content-playbook.md ← shared social rules: pillars, the 50/20/20/10 mix, one action per post
 ├── collateral/                ← on-brand marketing collateral (cards, posts, flyers, copy)
 ├── email-branding/            ← team email on the Design System — signatures + branded email
 ├── video-generation/          ← on-brand marketing video (scripts + Flows briefs)
@@ -41,6 +42,14 @@ marketing/
   messaging (the pitch and the "what do you do?" answer, EN/RU). Every marketing
   project draws on it; keep it consistent with
   [`referral-offer-strategy/strategy.md`](./referral-offer-strategy/strategy.md).
+- **[`social-content-playbook.md`](./social-content-playbook.md)** — what every
+  Instagram/Facebook post is *for*: the three pillars, the 50/20/20/10 monthly
+  mix, one named action per post, cadence, and the confidentiality limits on
+  publishing client results. Applies to captions and Reels alike, and is enforced
+  by the [`social-media-posts`](../../.claude/skills/social-media-posts/) skill.
+  *(The production route — who does what, which tool makes the image, the network
+  sizes — stays in
+  [`collateral/social-post-workflow.md`](./collateral/social-post-workflow.md).)*
 - **[`CLAUDE.md`](./CLAUDE.md)** — the marketing operating persona, applied
   automatically to any work in this subtree.
 

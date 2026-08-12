@@ -25,6 +25,7 @@ the US.
 │   ├── marketing/                 GROUP of the firm's marketing projects — has its own CLAUDE.md persona
 │   │   ├── CLAUDE.md              marketing operating-persona (auto-applies to everything below)
 │   │   ├── positioning.md         shared offer positioning — the pitch + "what do you do?" (EN/RU)
+│   │   ├── social-content-playbook.md  shared social rules — pillars, the 50/20/20/10 mix, one action per post
 │   │   ├── collateral/            on-brand marketing collateral (Active)
 │   │   ├── email-branding/        team email on the Design System — signatures + email layout (Active)
 │   │   ├── video-generation/      on-brand marketing video (Active)
@@ -57,6 +58,7 @@ the US.
 │   └── skills/    reusable Claude workflows (the "engines")
 │       ├── README.md                  the SKILLS INDEX — the canonical list of every skill ("do we already have one for this?")
 │       ├── reasonable-compensation/   drives the reasonable-comp project
+│       ├── social-media-posts/        the rules for every Instagram/Facebook post — pillars, the 50/20/20/10 mix, one action per post
 │       ├── video-script-pipeline/     drives the video-generation project
 │       ├── recurring-expense-monitoring/  drives the recurring-expense-monitoring project
 │       ├── automated-email-reports/   reusable playbook for scheduled email automations
@@ -84,7 +86,8 @@ the US.
 |---|---|
 | Colors, fonts, logo, voice, design tokens | [`brand/`](./brand/) — `JK-Brand-Guide.md` is the authority |
 | Any **marketing** work — positioning, offers, campaigns, growth (the marketing operating-persona + the firm's pitch) | [`projects/marketing/`](./projects/marketing/) — [`CLAUDE.md`](./projects/marketing/CLAUDE.md) sets the persona, [`positioning.md`](./projects/marketing/positioning.md) holds the pitch + "what do you do?" |
-| Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/collateral/`](./projects/marketing/collateral/) |
+| A **social media post** — an Instagram/Facebook post, carousel, Story, Reel caption, a content plan or calendar, the profile bio, or reviewing something already drafted for social | the [`social-media-posts` skill](./.claude/skills/social-media-posts/) → the rules in [`projects/marketing/social-content-playbook.md`](./projects/marketing/social-content-playbook.md). **Load it before writing any post copy.** It carries the three pillars (expertise · personality · proof), the **50/20/20/10 monthly mix**, **one named action per post**, 3–4 posts a week over bursts, and the **confidentiality limits on publishing client results** (no client name or figures without written permission — anonymized patterns only). The production route — who does what, which tool makes the image, the network sizes — stays in [`collateral/social-post-workflow.md`](./projects/marketing/collateral/social-post-workflow.md) |
+| Marketing assets (cards, posts, flyers, copy) | [`projects/marketing/collateral/`](./projects/marketing/collateral/) — for a **social** post, go through the [`social-media-posts` skill](./.claude/skills/social-media-posts/) first (it decides what the post is *for*) |
 | Email signatures, or the on-brand look of outbound email (the whole team) — change a signature, add a teammate, edit the branded email | the [`email-signature` skill](./.claude/skills/email-signature/) → [`projects/marketing/email-branding/`](./projects/marketing/email-branding/); see its `INSTALL-GMAIL.md` to roll one out |
 | S-corp reasonable salary / owner comp / a comp report | the [`reasonable-compensation` skill](./.claude/skills/reasonable-compensation/) → outputs to [`projects/reasonable-compensation/reports/`](./projects/reasonable-compensation/reports/) |
 | A client **proposal** or **engagement letter** — a monthly-retainer proposal, a business tax-prep engagement letter (the interactive generator), a 1040 letter, or the T&C addendum (the in-house GoProposal replacement) | the [`proposal-generator` skill](./.claude/skills/proposal-generator/) → [`projects/proposal-tool/`](./projects/proposal-tool/) — read its [`docs/methodology.md`](./projects/proposal-tool/docs/methodology.md) first; client figures stay out of the repo |
@@ -140,6 +143,19 @@ in that folder.
   which auto-loads for that subtree. The shared offer positioning — the pitch
   and "what do you do?" answer — lives at
   [`projects/marketing/positioning.md`](./projects/marketing/positioning.md).
+- **A social post is never written from scratch — the rules come first, and they get said out loud.**
+  Every Instagram/Facebook post, carousel, Story, Reel caption and content plan follows
+  [`projects/marketing/social-content-playbook.md`](./projects/marketing/social-content-playbook.md),
+  loaded through the [`social-media-posts` skill](./.claude/skills/social-media-posts/) **before** any
+  copy is written. The short form: every post stands on **one pillar** (expertise · personality ·
+  proof), fills one slot of the **50/20/20/10 monthly mix** (useful · personality · trust · offer),
+  and asks for **one named action** — and the session **says which** rather than checking afterwards.
+  **3–4 posts a week to a plan beat a burst then silence.** Two hard limits an accounting firm has
+  that a content playbook does not: **no client name, business or figures without written
+  permission** (publish the anonymized *shape* of a case, never the person), and **no unverifiable
+  number** — plus the brand guide's standing ban on fear and hype, which is broken on social before
+  anywhere else. _(From the Personal Brand Starter Kit Julia brought in Aug 2026, adapted to a
+  regulated practice; the source is digested in the playbook so it outlives the session.)_
 - **Repeatable workflows are skills — and flag skill-worthy work unprompted.**
   Repeatable workflows live as skills in [`.claude/skills/`](./.claude/skills/), and
   the project README links to the skill that powers it. When a task looks like it will

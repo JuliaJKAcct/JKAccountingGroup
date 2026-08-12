@@ -49,7 +49,8 @@ The one-liners below are just the "when to reach for it."
 
 | Skill | Reach for it when… |
 |---|---|
-| [`video-script-pipeline`](./video-script-pipeline/) | Turning a topic into an **on-brand marketing-video script** + an ElevenLabs production brief. |
+| [`social-media-posts`](./social-media-posts/) | Planning, writing, or reviewing an **Instagram / Facebook post**, carousel, Story, Reel caption, content plan, or the profile bio. Carries the firm's social content rules — the three pillars (expertise · personality · proof), the **50/20/20/10 monthly mix**, one named action per post, 3–4 posts a week over bursts, and the **client-confidentiality limits on publishing results**. *(Rules live in [`projects/marketing/social-content-playbook.md`](../../projects/marketing/social-content-playbook.md); production route in `collateral/social-post-workflow.md`.)* |
+| [`video-script-pipeline`](./video-script-pipeline/) | Turning a topic into an **on-brand marketing-video script** + an ElevenLabs production brief. *(A Reel still takes its pillar, mix slot and CTA from `social-media-posts`.)* |
 | [`email-signature`](./email-signature/) | Creating, updating, or rolling out the **firm email signature** and the branded-email template. |
 
 ## Design
