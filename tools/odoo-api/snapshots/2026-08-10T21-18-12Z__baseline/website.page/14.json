@@ -1,0 +1,83 @@
+{
+  "id": 14,
+  "display_name": "Consultation Thank-You (UA)",
+  "header_visible": true,
+  "footer_visible": true,
+  "header_overlay": false,
+  "header_color": false,
+  "header_text_color": false,
+  "website_id": false,
+  "website_published": true,
+  "is_published": true,
+  "can_publish": true,
+  "website_url": "/ua/konsultatsiia/dyakuyemo",
+  "website_absolute_url": "https://jkaccountinggroup.odoo.com/ua/konsultatsiia/dyakuyemo",
+  "url": "/ua/konsultatsiia/dyakuyemo",
+  "view_id": [
+    3473,
+    "Consultation Thank-You (UA)"
+  ],
+  "view_write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "view_write_date": "2026-08-10 02:48:12",
+  "website_indexed": false,
+  "date_publish": false,
+  "menu_ids": [],
+  "is_in_menu": false,
+  "is_homepage": false,
+  "is_visible": true,
+  "is_new_page_template": false,
+  "arch": "<t t-name=\"jk_landing.consultation_thankyou_ua\">&lt;!DOCTYPE html&gt;\n<html lang=\"uk\">\n<head>\n<meta charset=\"UTF-8\"/>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n<title>Дякуємо — ми зв'яжемося з вами | JK Accounting Group</title>\n<meta name=\"description\" content=\"Вашу заявку отримано. Ми зв'яжемося з вами протягом 1 робочого дня, щоб домовитися про час безкоштовної консультації.\"/>\n<meta name=\"robots\" content=\"noindex\"/>\n<link rel=\"canonical\" href=\"https://www.jkaccountinggroup.com/ua/konsultatsiia/dyakuyemo\"/>\n<link rel=\"icon\" href=\"/web/content/3406\" type=\"image/svg+xml\"/>\n<link rel=\"icon\" href=\"/web/content/3407\" sizes=\"any\"/>\n<link rel=\"apple-touch-icon\" href=\"/web/content/3408\"/>\n<meta name=\"theme-color\" content=\"#123841\"/>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\"/>\n<link href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\" rel=\"stylesheet\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3400\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3401\"/>\n</head>\n<body>\n<a class=\"skip\" href=\"#main\">Перейти до вмісту</a>\n<header class=\"appbar appbar--lp\">\n<div class=\"wrap\">\n<a class=\"brandmark\" href=\"../\" aria-label=\"JK Accounting Group\">\n<span class=\"bm-fallback\">\n<svg viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"JK\"><g fill=\"none\" stroke=\"#ECE6DA\" stroke-width=\"9\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\"><path d=\"M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5\"/><path d=\"M70 26 L70 86\"/><path d=\"M70 56 L92 26\"/><path d=\"M70 56 L95 86\"/></g></svg>\n<b>JK Accounting Group</b>\n</span>\n</a>\n<div class=\"nav-right\">\n<div class=\"lang-toggle\" role=\"group\" aria-label=\"Мова\">\n<a href=\"../../../consultation/\" lang=\"en\" hreflang=\"en\">EN</a>\n<a href=\"../\" aria-current=\"page\" lang=\"uk\">УКР</a>\n<a href=\"../../../ru/konsultatsiya/\" lang=\"ru\" hreflang=\"ru\">РУС</a>\n</div>\n</div>\n</div>\n</header>\n<main id=\"main\">\n<section class=\"thanks wrap\">\n<div>\n<img class=\"mk\" src=\"/web/content/3404\" width=\"512\" height=\"512\" alt=\"\"/>\n<h1>Дякуємо! Вашу заявку отримано.</h1>\n<p class=\"body\">Ми зв'яжемося з вами протягом 1 робочого дня — мовою, яку ви обрали, — щоб домовитися про час безкоштовної консультації.</p>\n<p class=\"sub\">Тим часом можете написати нам: <a href=\"mailto:hello@jkaccountinggroup.com\">hello@jkaccountinggroup.com</a></p>\n</div>\n</section>\n</main>\n<footer class=\"lp-footer\">\n<div class=\"wrap\">\n<p class=\"ll\">© 2026 JK Accounting Group · Маямі · Форт-Лодердейл · Онлайн</p>\n</div>\n</footer>\n</body>\n</html>\n</t>",
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2026-06-16 20:43:29",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-08-09 21:43:13",
+  "theme_template_id": false,
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Consultation Thank-You (UA)",
+  "model": false,
+  "key": "jk_landing.consultation_thankyou_ua",
+  "priority": 16,
+  "type": "qweb",
+  "arch_base": "<t t-name=\"jk_landing.consultation_thankyou_ua\">&lt;!DOCTYPE html&gt;\n<html lang=\"uk\">\n<head>\n<meta charset=\"UTF-8\"/>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n<title>Дякуємо — ми зв'яжемося з вами | JK Accounting Group</title>\n<meta name=\"description\" content=\"Вашу заявку отримано. Ми зв'яжемося з вами протягом 1 робочого дня, щоб домовитися про час безкоштовної консультації.\"/>\n<meta name=\"robots\" content=\"noindex\"/>\n<link rel=\"canonical\" href=\"https://www.jkaccountinggroup.com/ua/konsultatsiia/dyakuyemo\"/>\n<link rel=\"icon\" href=\"/web/content/3406\" type=\"image/svg+xml\"/>\n<link rel=\"icon\" href=\"/web/content/3407\" sizes=\"any\"/>\n<link rel=\"apple-touch-icon\" href=\"/web/content/3408\"/>\n<meta name=\"theme-color\" content=\"#123841\"/>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\"/>\n<link href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\" rel=\"stylesheet\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3400\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3401\"/>\n</head>\n<body>\n<a class=\"skip\" href=\"#main\">Перейти до вмісту</a>\n<header class=\"appbar appbar--lp\">\n<div class=\"wrap\">\n<a class=\"brandmark\" href=\"../\" aria-label=\"JK Accounting Group\">\n<span class=\"bm-fallback\">\n<svg viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"JK\"><g fill=\"none\" stroke=\"#ECE6DA\" stroke-width=\"9\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\"><path d=\"M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5\"/><path d=\"M70 26 L70 86\"/><path d=\"M70 56 L92 26\"/><path d=\"M70 56 L95 86\"/></g></svg>\n<b>JK Accounting Group</b>\n</span>\n</a>\n<div class=\"nav-right\">\n<div class=\"lang-toggle\" role=\"group\" aria-label=\"Мова\">\n<a href=\"../../../consultation/\" lang=\"en\" hreflang=\"en\">EN</a>\n<a href=\"../\" aria-current=\"page\" lang=\"uk\">УКР</a>\n<a href=\"../../../ru/konsultatsiya/\" lang=\"ru\" hreflang=\"ru\">РУС</a>\n</div>\n</div>\n</div>\n</header>\n<main id=\"main\">\n<section class=\"thanks wrap\">\n<div>\n<img class=\"mk\" src=\"/web/content/3404\" width=\"512\" height=\"512\" alt=\"\"/>\n<h1>Дякуємо! Вашу заявку отримано.</h1>\n<p class=\"body\">Ми зв'яжемося з вами протягом 1 робочого дня — мовою, яку ви обрали, — щоб домовитися про час безкоштовної консультації.</p>\n<p class=\"sub\">Тим часом можете написати нам: <a href=\"mailto:hello@jkaccountinggroup.com\">hello@jkaccountinggroup.com</a></p>\n</div>\n</section>\n</main>\n<footer class=\"lp-footer\">\n<div class=\"wrap\">\n<p class=\"ll\">© 2026 JK Accounting Group · Маямі · Форт-Лодердейл · Онлайн</p>\n</div>\n</footer>\n</body>\n</html>\n</t>",
+  "arch_db": "<t t-name=\"jk_landing.consultation_thankyou_ua\">&lt;!DOCTYPE html&gt;\n<html lang=\"uk\">\n<head>\n<meta charset=\"UTF-8\"/>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n<title>Дякуємо — ми зв'яжемося з вами | JK Accounting Group</title>\n<meta name=\"description\" content=\"Вашу заявку отримано. Ми зв'яжемося з вами протягом 1 робочого дня, щоб домовитися про час безкоштовної консультації.\"/>\n<meta name=\"robots\" content=\"noindex\"/>\n<link rel=\"canonical\" href=\"https://www.jkaccountinggroup.com/ua/konsultatsiia/dyakuyemo\"/>\n<link rel=\"icon\" href=\"/web/content/3406\" type=\"image/svg+xml\"/>\n<link rel=\"icon\" href=\"/web/content/3407\" sizes=\"any\"/>\n<link rel=\"apple-touch-icon\" href=\"/web/content/3408\"/>\n<meta name=\"theme-color\" content=\"#123841\"/>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\"/>\n<link href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\" rel=\"stylesheet\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3400\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3401\"/>\n</head>\n<body>\n<a class=\"skip\" href=\"#main\">Перейти до вмісту</a>\n<header class=\"appbar appbar--lp\">\n<div class=\"wrap\">\n<a class=\"brandmark\" href=\"../\" aria-label=\"JK Accounting Group\">\n<span class=\"bm-fallback\">\n<svg viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"JK\"><g fill=\"none\" stroke=\"#ECE6DA\" stroke-width=\"9\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\"><path d=\"M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5\"/><path d=\"M70 26 L70 86\"/><path d=\"M70 56 L92 26\"/><path d=\"M70 56 L95 86\"/></g></svg>\n<b>JK Accounting Group</b>\n</span>\n</a>\n<div class=\"nav-right\">\n<div class=\"lang-toggle\" role=\"group\" aria-label=\"Мова\">\n<a href=\"../../../consultation/\" lang=\"en\" hreflang=\"en\">EN</a>\n<a href=\"../\" aria-current=\"page\" lang=\"uk\">УКР</a>\n<a href=\"../../../ru/konsultatsiya/\" lang=\"ru\" hreflang=\"ru\">РУС</a>\n</div>\n</div>\n</div>\n</header>\n<main id=\"main\">\n<section class=\"thanks wrap\">\n<div>\n<img class=\"mk\" src=\"/web/content/3404\" width=\"512\" height=\"512\" alt=\"\"/>\n<h1>Дякуємо! Вашу заявку отримано.</h1>\n<p class=\"body\">Ми зв'яжемося з вами протягом 1 робочого дня — мовою, яку ви обрали, — щоб домовитися про час безкоштовної консультації.</p>\n<p class=\"sub\">Тим часом можете написати нам: <a href=\"mailto:hello@jkaccountinggroup.com\">hello@jkaccountinggroup.com</a></p>\n</div>\n</section>\n</main>\n<footer class=\"lp-footer\">\n<div class=\"wrap\">\n<p class=\"ll\">© 2026 JK Accounting Group · Маямі · Форт-Лодердейл · Онлайн</p>\n</div>\n</footer>\n</body>\n</html>\n</t>",
+  "arch_fs": false,
+  "arch_updated": false,
+  "arch_prev": "<t t-name=\"jk_landing.consultation_thankyou_ua\">&lt;!DOCTYPE html&gt;\n<html lang=\"uk\">\n<head>\n<meta charset=\"UTF-8\"/>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n<title>Дякуємо — ми зв'яжемося з вами | JK Accounting Group</title>\n<meta name=\"description\" content=\"Вашу заявку отримано. Ми зв'яжемося з вами протягом 1 робочого дня, щоб домовитися про час безкоштовної консультації.\"/>\n<meta name=\"robots\" content=\"noindex\"/>\n<link rel=\"canonical\" href=\"https://www.jkaccountinggroup.com/ua/konsultatsiia/dyakuyemo\"/>\n<link rel=\"icon\" href=\"/web/content/3406\" type=\"image/svg+xml\"/>\n<link rel=\"icon\" href=\"/web/content/3407\" sizes=\"any\"/>\n<link rel=\"apple-touch-icon\" href=\"/web/content/3408\"/>\n<meta name=\"theme-color\" content=\"#123841\"/>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\"/>\n<link href=\"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap\" rel=\"stylesheet\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3400\"/>\n<link rel=\"stylesheet\" href=\"/web/content/3401\"/>\n</head>\n<body>\n<a class=\"skip\" href=\"#main\">Перейти до вмісту</a>\n<header class=\"appbar appbar--lp\">\n<div class=\"wrap\">\n<a class=\"brandmark\" href=\"../\" aria-label=\"JK Accounting Group\">\n<span class=\"bm-fallback\">\n<svg viewBox=\"0 0 64 64\" role=\"img\" aria-label=\"JK\"><g fill=\"none\" stroke=\"#ECE6DA\" stroke-width=\"6.5\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\"><path d=\"M29 18 L29 38 Q29 47 21.5 47 Q15.5 47 14.2 41.5\"/><path d=\"M37 18 L37 47\"/><path d=\"M37 32.5 L48 18\"/><path d=\"M37 32.5 L49.5 47\"/></g></svg>\n<b>JK Accounting Group</b>\n</span>\n</a>\n<div class=\"nav-right\">\n<div class=\"lang-toggle\" role=\"group\" aria-label=\"Мова\">\n<a href=\"../../../consultation/\" lang=\"en\" hreflang=\"en\">EN</a>\n<a href=\"../\" aria-current=\"page\" lang=\"uk\">УКР</a>\n<a href=\"../../../ru/konsultatsiya/\" lang=\"ru\" hreflang=\"ru\">РУС</a>\n</div>\n</div>\n</div>\n</header>\n<main id=\"main\">\n<section class=\"thanks wrap\">\n<div>\n<img class=\"mk\" src=\"/web/content/3404\" width=\"512\" height=\"512\" alt=\"\"/>\n<h1>Дякуємо! Вашу заявку отримано.</h1>\n<p class=\"body\">Ми зв'яжемося з вами протягом 1 робочого дня — мовою, яку ви обрали, — щоб домовитися про час безкоштовної консультації.</p>\n<p class=\"sub\">Тим часом можете написати нам: <a href=\"mailto:hello@jkaccountinggroup.com\">hello@jkaccountinggroup.com</a></p>\n</div>\n</section>\n</main>\n<footer class=\"lp-footer\">\n<div class=\"wrap\">\n<p class=\"ll\">© 2026 JK Accounting Group · Маямі · Форт-Лодердейл · Онлайн</p>\n</div>\n</footer>\n</body>\n</html>\n</t>",
+  "inherit_id": false,
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "primary",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "customize_show": false,
+  "page_ids": [
+    14
+  ],
+  "controller_page_ids": [],
+  "first_page_id": [
+    14,
+    "Consultation Thank-You (UA)"
+  ],
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": ""
+}

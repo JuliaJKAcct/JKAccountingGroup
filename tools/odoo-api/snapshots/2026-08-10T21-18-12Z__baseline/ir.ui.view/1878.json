@@ -1,0 +1,60 @@
+{
+  "id": 1878,
+  "display_name": "s_key_benefits",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "s_key_benefits",
+  "model": false,
+  "key": "theme_graphene.s_key_benefits",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.s_key_benefits\">\n    <!-- Titles -->\n    <xpath expr=\"(//h3)[1]\" position=\"replace\" mode=\"inner\">\n        Tailored Service Solutions\n    </xpath>\n    <xpath expr=\"(//h3)[2]\" position=\"replace\" mode=\"inner\">\n        24/7 Client Support\n    </xpath>\n    <xpath expr=\"(//h3)[3]\" position=\"replace\" mode=\"inner\">\n        Exclusive Service Benefits\n    </xpath>\n    <!-- Paragraphs -->\n    <xpath expr=\"//div[hasclass('col-lg-4')][1]/p\" position=\"replace\" mode=\"inner\">\n        We provide customized service offerings designed to meet your specific needs, ensuring optimal results and client satisfaction.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][2]/p\" position=\"replace\" mode=\"inner\">\n        Our team is available around the clock to assist you, providing prompt and reliable support whenever you need it.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][3]/p\" position=\"replace\" mode=\"inner\">\n        Take advantage of unique benefits and value-added services that set us apart and enhance your overall experience.\n    </xpath>\n</data>",
+  "arch_base": "<data inherit_id=\"website.s_key_benefits\">\n    <!-- Titles -->\n    <xpath expr=\"(//h3)[1]\" position=\"replace\" mode=\"inner\">\n        Tailored Service Solutions\n    </xpath>\n    <xpath expr=\"(//h3)[2]\" position=\"replace\" mode=\"inner\">\n        24/7 Client Support\n    </xpath>\n    <xpath expr=\"(//h3)[3]\" position=\"replace\" mode=\"inner\">\n        Exclusive Service Benefits\n    </xpath>\n    <!-- Paragraphs -->\n    <xpath expr=\"//div[hasclass('col-lg-4')][1]/p\" position=\"replace\" mode=\"inner\">\n        We provide customized service offerings designed to meet your specific needs, ensuring optimal results and client satisfaction.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][2]/p\" position=\"replace\" mode=\"inner\">\n        Our team is available around the clock to assist you, providing prompt and reliable support whenever you need it.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][3]/p\" position=\"replace\" mode=\"inner\">\n        Take advantage of unique benefits and value-added services that set us apart and enhance your overall experience.\n    </xpath>\n</data>",
+  "arch_db": "<data inherit_id=\"website.s_key_benefits\">\n    <!-- Titles -->\n    <xpath expr=\"(//h3)[1]\" position=\"replace\" mode=\"inner\">\n        Tailored Service Solutions\n    </xpath>\n    <xpath expr=\"(//h3)[2]\" position=\"replace\" mode=\"inner\">\n        24/7 Client Support\n    </xpath>\n    <xpath expr=\"(//h3)[3]\" position=\"replace\" mode=\"inner\">\n        Exclusive Service Benefits\n    </xpath>\n    <!-- Paragraphs -->\n    <xpath expr=\"//div[hasclass('col-lg-4')][1]/p\" position=\"replace\" mode=\"inner\">\n        We provide customized service offerings designed to meet your specific needs, ensuring optimal results and client satisfaction.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][2]/p\" position=\"replace\" mode=\"inner\">\n        Our team is available around the clock to assist you, providing prompt and reliable support whenever you need it.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][3]/p\" position=\"replace\" mode=\"inner\">\n        Take advantage of unique benefits and value-added services that set us apart and enhance your overall experience.\n    </xpath>\n</data>",
+  "arch_fs": "theme_graphene/views/customizations.xml",
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.s_key_benefits\">\n    <!-- Titles -->\n    <xpath expr=\"(//h3)[1]\" position=\"replace\" mode=\"inner\">\n        Tailored Service Solutions\n    </xpath>\n    <xpath expr=\"(//h3)[2]\" position=\"replace\" mode=\"inner\">\n        24/7 Client Support\n    </xpath>\n    <xpath expr=\"(//h3)[3]\" position=\"replace\" mode=\"inner\">\n        Exclusive Service Benefits\n    </xpath>\n    <!-- Paragraphs -->\n    <xpath expr=\"//div[hasclass('col-lg-4')][1]/p\" position=\"replace\" mode=\"inner\">\n        We provide customized service offerings designed to meet your specific needs, ensuring optimal results and client satisfaction.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][2]/p\" position=\"replace\" mode=\"inner\">\n        Our team is available around the clock to assist you, providing prompt and reliable support whenever you need it.\n    </xpath>\n    <xpath expr=\"//div[hasclass('col-lg-4')][3]/p\" position=\"replace\" mode=\"inner\">\n        Take advantage of unique benefits and value-added services that set us apart and enhance your overall experience.\n    </xpath>\n</data>",
+  "inherit_id": [
+    695,
+    "Key benefits"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-25 17:01:54",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:55",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": [
+    24,
+    "s_key_benefits"
+  ]
+}

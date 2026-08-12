@@ -36,7 +36,8 @@ short exception report to the responsible staff member.
   `<Client Name> — Recurring Watchlist`). The watchlist is the curated list
   of what to check for that client; it is the single source of truth for *what*
   recurs. See `watchlist-template.md` in the project for the schema.
-- **Transaction ledger → Double** (MCP server). Each client has a numeric Double
+- **Transaction ledger → Double** (MCP server; load the [`double-mcp`](../double-mcp/) skill
+  before the first Double call — it carries the data-plane map and the write rules). Each client has a numeric Double
   `clientId` recorded at the top of its watchlist. The Double bank/credit-card
   **cash feed is the ground truth** for "did the money actually move." (Note: the
   Double *expenses-by-vendor* report is accrual and can miss items paid from

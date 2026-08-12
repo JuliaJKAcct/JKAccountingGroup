@@ -1,0 +1,60 @@
+{
+  "id": 1883,
+  "display_name": "Graphene s_picture",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Graphene s_picture",
+  "model": false,
+  "key": "theme_graphene.s_picture",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.s_picture\" name=\"Graphene s_picture\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"pb0 pt48\" remove=\"pb64 pt64\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/02_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('o_container_small')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_02_001\"/>\n    </xpath>\n    <!-- Content -->\n    <xpath expr=\"//h2\" position=\"replace\" mode=\"inner\">\n        Grow with Us\n    </xpath>\n    <xpath expr=\"//p\" position=\"replace\" mode=\"inner\">\n        Put your people at the heart of your marketing with tools that help you get to know your audience <br/>and see who you should be talking to.\n    </xpath>\n</data>",
+  "arch_base": "<data inherit_id=\"website.s_picture\" name=\"Graphene s_picture\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"pb0 pt48\" remove=\"pb64 pt64\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/02_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('o_container_small')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_02_001\"/>\n    </xpath>\n    <!-- Content -->\n    <xpath expr=\"//h2\" position=\"replace\" mode=\"inner\">\n        Grow with Us\n    </xpath>\n    <xpath expr=\"//p\" position=\"replace\" mode=\"inner\">\n        Put your people at the heart of your marketing with tools that help you get to know your audience <br/>and see who you should be talking to.\n    </xpath>\n</data>",
+  "arch_db": "<data inherit_id=\"website.s_picture\" name=\"Graphene s_picture\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"pb0 pt48\" remove=\"pb64 pt64\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"html_builder/Rainy/02_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('o_container_small')]\" position=\"before\">\n        <div class=\"o_we_shape o_html_builder_Rainy_02_001\"/>\n    </xpath>\n    <!-- Content -->\n    <xpath expr=\"//h2\" position=\"replace\" mode=\"inner\">\n        Grow with Us\n    </xpath>\n    <xpath expr=\"//p\" position=\"replace\" mode=\"inner\">\n        Put your people at the heart of your marketing with tools that help you get to know your audience <br/>and see who you should be talking to.\n    </xpath>\n</data>",
+  "arch_fs": "theme_graphene/views/customizations.xml",
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.s_picture\" name=\"Graphene s_picture\">\n    <xpath expr=\"//section\" position=\"attributes\">\n        <attribute name=\"class\" add=\"pb0 pt48\" remove=\"pb64 pt64\" separator=\" \"/>\n        <attribute name=\"data-oe-shape-data\">{\"shape\":\"web_editor/Rainy/02_001\",\"flip\":[]}</attribute>\n    </xpath>\n    <xpath expr=\"//section/div[hasclass('o_container_small')]\" position=\"before\">\n        <div class=\"o_we_shape o_web_editor_Rainy_02_001\"/>\n    </xpath>\n    <!-- Content -->\n    <xpath expr=\"//h2\" position=\"replace\" mode=\"inner\">\n        Grow with Us\n    </xpath>\n    <xpath expr=\"//p\" position=\"replace\" mode=\"inner\">\n        Put your people at the heart of your marketing with tools that help you get to know your audience <br/>and see who you should be talking to.\n    </xpath>\n</data>",
+  "inherit_id": [
+    696,
+    "Title - Image"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-25 17:01:54",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:55",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "jkaccountinggroup"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": [
+    20,
+    "Graphene s_picture"
+  ]
+}

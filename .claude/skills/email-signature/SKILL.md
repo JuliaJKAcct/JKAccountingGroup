@@ -52,8 +52,11 @@ These are why a "simple" tweak can silently break for a recipient. Keep all of t
   mark sits seamlessly with no visible box. Never recolor / box / stretch the logo.
 - **Bronze stays rare** — only the small diamond ◆ (`#9C6A39`) and the one booking link
   (Bronze *ink* `#7E5430`, the darker step so the 9.5px link clears 4.5:1 contrast).
-  Never a second accent, background, or third font. Never ship the booking link pointing
-  at an empty `{{BOOKING_URL}}` — fill it or point it at `mailto:`.
+  Never a second accent, background, or third font. Never ship the booking link empty:
+  the firm-wide default destination is the **contact page**
+  (`https://www.jkaccountinggroup.com/contactus`) — the template ships pre-set to it, and
+  it's the right default for everyone. Swap it for a personal booking link (Calendly, etc.)
+  only when a teammate actually has one.
 - **Outlook/Word hardening stays:** `mso-table-lspace/rspace:0`, `mso-line-height-rule:exactly`,
   `mso-padding-alt` on any button cell, `font-size:0` on image cells.
 - **Keep every teammate's signature structurally identical** — only the person's details
@@ -101,13 +104,29 @@ the `curl` check).
 public repo is a judgment call — prefer Method 2 (Gmail upload) for a personal photo so the
 image isn't published in the repo.
 
-## Signature variants (Medallion vs. photo)
+## Signature variants
 The default left panel is the **Medallion** — one shared logo, structurally identical for
 everyone (the safe default). A **personal-photo** variant — a circular headshot in the teal
 panel instead of the Medallion — is a supported alternative when someone prefers it; keep the
 rest of the card identical. A photo is a per-person image: host it per Method 2 or a public
 URL, mind the privacy note, and crop it to a circle (`border-radius:50%`) sized to the panel.
 If the firm adopts photos team-wide, fold it into the template so everyone stays consistent.
+
+**No-booking-link variant (support / admin roles).** The "Book a consultation →" link is the
+card's one CTA and the default, but some roles don't take consultations (e.g. an administrative
+assistant), so the link is dropped. Watch the proportion when you do: removing the booking block
+costs ~29px of height at the same width, which leaves the card noticeably more **rectangular**
+(the first pass was 2.70:1 vs the standard card's ~2.15:1) — don't ship that squished version.
+Restore the height as intentional vertical rhythm so it still reads as a matched business card.
+The recipe that lands it at **~148px tall / ~2.2:1** (matching the standard card): ivory-panel
+padding `11px 16px` → `18px 18px`, hairline margin `8px 0` → `12px 0`, the role kicker's
+`padding-top` `4px` → `5px`, and the DIRECT/EMAIL/WEB row gaps `5px` → `8px` (label cells'
+right padding `13px` → `14px`). Also delete the person's
+post-nominal `{{CREDENTIALS}}` span if they have none — but keep the bronze diamond ◆, so bronze
+still appears exactly once. `signatures/lilian.html` is the reference build; a spacing change like
+this is a visual judgment, so run it through the **impeccable** skill and verify by rendering
+(measure width×height, not just eyeball it). If several teammates end up CTA-less, fold this
+variant into the template so it stays consistent.
 
 ## Workflow A — modify an existing signature
 1. **Understand the ask** and read the target file + the style guide. If it's a visual
@@ -129,8 +148,10 @@ If the firm adopts photos team-wide, fold it into the template so everyone stays
    (lowercase first name).
 2. Fill every placeholder: `{{FIRST_NAME}}`, `{{LAST_NAME}}`, `{{CREDENTIALS}}`
    (post-nominals incl. leading comma, or delete the span), `{{ROLE_CAPS}}`, `{{EMAIL}}`,
-   `{{PHONE}}`, `{{PHONE_TEL}}` (digits with +1), `{{BOOKING_URL}}` (or their `mailto:`).
-   Also delete the template's instructional `<!-- … -->` comment block (the shipped
+   `{{PHONE}}`, `{{PHONE_TEL}}` (digits with +1). The booking link ships pre-set to the
+   firm contact page (`https://www.jkaccountinggroup.com/contactus`) — leave it unless the
+   teammate has a personal booking link. Also delete the template's instructional
+   `<!-- … -->` comment block (the shipped
    signatures, e.g. `julia.html`, carry no comment). Then `grep "{{"` the finished file
    to be sure none remain — with the comment gone, any match is a real leftover.
 3. Render + screenshot to verify it matches the others exactly.

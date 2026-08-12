@@ -130,12 +130,15 @@ of truth, PNGs are exports for tools that can't place SVG):
 |---|---|---|
 | Full badge, **≥ 64px**, on light | Medallion primary | `JK-medallion-primary.svg` |
 | Full badge on **dark / teal** | Medallion reversed | `JK-medallion-reversed.svg` |
+| Full badge on a **photo / colored background** (self-contained round seal) | Medallion solid-teal | `JK-medallion-solid-teal.svg` |
 | Single-color / print limits | one-color / black / white | `JK-medallion-onecolor-teal.svg`, `-black.svg`, `-white.svg` |
 | Logo **with the wordmark** (headers, cards) | Horizontal lock-up | `JK-lockup-horizontal.svg` (`-reversed` on dark) |
 | Wordmark **stacked** (tall/centered) | Stacked lock-up | `JK-lockup-stacked.svg` (`-reversed` on dark) |
 | Small, **no room for text** | Emblem (rings + monogram) | `JK-emblem.svg` (`-reversed` on dark) |
 | Tiny placements / inline | Monogram (bare J&K) | `JK-monogram-teal.svg` (`-reversed` / `-black` / `-white`) |
 | App icon / favicon (the one tiled exception) | files in `favicon/` | — |
+| Round social avatar (WhatsApp, Telegram, Google…) — square, safe for circular crop | Medallion (reversed) on a teal field, sized inside the circular safe zone | files in `logo/social/` |
+| **Team member** round avatar (personal work WhatsApp) — light so it never competes with the company seal | Person's initials in the monogram letter style on ivory + firm name | files in `logo/social/team/` (generator included) |
 
 **Size step-down:** below ~64px, drop from **badge → emblem → monogram**. Never
 shrink the full badge until the ring text is illegible.

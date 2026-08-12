@@ -17,8 +17,14 @@ work, with more to come.
 brand/        Shared brand foundation — logo, brand guide, design system.
               Used by every project.
 projects/     One folder per initiative (marketing, reasonable-compensation, …).
-.claude/      Reusable Claude skills that power the projects.
+tools/        Executable tooling — code that does something, as opposed to docs.
+              tools/odoo-api/   the guarded route for changing anything in Odoo.
+              tools/redact-doc/ read a client's document without its identifiers
+              reaching the session — see .claude/skills/double-mcp/ for the rule.
+.claude/      Reusable Claude skills that power the projects, plus the hooks that
+              keep parallel sessions from colliding (see .claude/hooks/README.md).
 BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
+FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, per-person).
 .mcp.json     MCP integrations available to Claude in this repo (see below).
 ```
 
@@ -30,11 +36,20 @@ BACKLOG.md    Firm idea parking lot — ideas captured now to build later.
 | [Marketing · Email Branding](./projects/marketing/email-branding/) | Every team member's outbound email on the Design System — email-safe HTML signatures + a branded email layout. | Active |
 | [Marketing · Video Generation](./projects/marketing/video-generation/) | On-brand marketing video. | Active |
 | [Marketing · Referral & Offer Strategy](./projects/marketing/referral-offer-strategy/) | Front-offer and referral-partner funnel strategy — the paid diagnostic, partner pitches, and the "Growth Accelerator Series." | Planning |
+| [Marketing · Consultation Booking](./projects/marketing/consultation-booking/) | The booking front door — routes visitors to the free 10-min phone discovery call or the paid 1-hour $150 consultation, on two Odoo Appointments calendars with different availability. Online, EN/RU. | Active |
+| [Marketing · Scale Your Accounting Firm](./projects/marketing/scale-your-accounting-firm/) | Digested notes from the "Scale Your Accounting Firm" advisory program, by track/module/video, feeding into JK's marketing strategy. | Active |
+| [Marketing · Lead Magnets](./projects/marketing/lead-magnets/) | Free interactive calculators + assessments for foreign-owned business founders — the marketing funnel's entry point. | Active |
+| [Pre-Return Review](./projects/pre-return-review/) | The firm's **analysis companion** (Lilian's "tax preparer") — the pre-return pass that reads everything we hold on a client and returns one grouped list of questions. Holds its purpose, and [`method.md`](./projects/pre-return-review/method.md): **how we analyse anything**, not only tax organizers. | Active |
 | [Reasonable Compensation](./projects/reasonable-compensation/) | Defensible S-corp owner-salary analysis + branded reports. | Active |
 | [Recurring-Expense Monitoring](./projects/recurring-expense-monitoring/) | Twice-monthly watch over each client's recurring payments; flags missed or abnormal charges and emails an exception report. | Active |
+| [Proposal & Engagement-Letter Tool](./projects/proposal-tool/) | In-house GoProposal replacement — generates on-brand monthly proposals, tax-prep engagement letters, and a T&C addendum from the firm's pricing logic. | Active |
 | [SOPs](./projects/sops/) | The firm's standard operating procedures. | Active |
+| [Client Intelligence](./projects/client-intelligence/) | A durable, per-client knowledge base — obligations, systems, and processes built up gradually as the raw material for each client's SOPs. Secrets and personal data stay in Drive/Double and are referenced by link. | Active |
+| [Knowledge Hub](./projects/knowledge-hub/) | One on-brand, searchable index page for the whole firm — every SOP, every client and Lilian's Notebook in one place, generated from `sops/` + `client-intelligence/` + `lilian-notebook/` so it never drifts. Browse, filter, open any document. | Active |
+| [Bookkeeping KPIs](./projects/bookkeeping-kpis/) | On-brand, dynamic bookkeeping-performance dashboards — one per client — that read a client's live QuickBooks/Double financials at a glance (health score, ranked signals & alerts, charts, balance-sheet snapshot), heading toward one board listing every bookkeeping client. Only the sample-data template is committed; real client figures ship as artifacts. | Active |
+| [Lilian's Notebook](./projects/lilian-notebook/) | Lilian's personal notebook of the firm's hard knowledge — how a system actually behaves, what something costs, what's inside a fee, how to carry out a procedure — each written as the rule to follow next time, on one searchable page she has bookmarked. Hers to write, and **deliberately small**; kept in the repo so knowledge outlives the task that produced it. | Active |
 
-The four **Marketing** rows are one group under
+The seven **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
 shared offer positioning and the marketing operating-persona for Claude. See
 [`projects/README.md`](./projects/README.md) for the full index and the
@@ -56,6 +71,38 @@ approve the server when prompted.
 | Server | What it gives Claude | Package (pinned) |
 |---|---|---|
 | `notebooklm` | Ask questions against your [NotebookLM](https://notebooklm.google.com) notebooks, add sources, and generate audio overviews. | [`notebooklm-mcp@2.0.0`](https://github.com/PleasePrompto/notebooklm-mcp) |
+| `Odoo_JK_Accounting_Group` | Read/write the firm's Odoo ERP — journal entries, invoices/bills, payments, contacts, reconciliation, accounting reports. | **Account connector** — not in `.mcp.json` |
+| `Double` | The firm's practice-management platform — the client roster, our own tracking columns, tax projects, monthly closes, tasks, portal contacts, the document library, and client financials (QuickBooks sits behind it). | **Account connector** — not in `.mcp.json` |
+
+**The Double connector is account-level too, and mostly read-only in practice.** Like Odoo it's
+connected through Claude's connectors rather than `.mcp.json`, so a `.mcp.json` review won't show
+it. There's no published call cap, but a roster-wide sweep is still hundreds of calls. Anyone using
+it should follow the [`double-mcp` skill](./.claude/skills/double-mcp/) — which of the five data
+planes a fact lives in, the TaxDome folder conventions, its audited capability map ("can we do X in
+Double?" — tax-return deadlines are read-only, organizers are now readable but not publishable),
+and the write rules: **default-deny, and never write the columns Lilian maintains by
+hand.** Two of its tools instruct an unprompted write; the skill says to override them.
+
+**The Odoo connector is account-level, and rationed.** It's connected through Claude's
+connectors (shared across the firm's one account), not declared in `.mcp.json`, so it won't
+appear in a `.mcp.json` review. The free plan is capped at **50 tool calls per 24 hours,
+shared by everyone.** Anyone using it should follow the [`odoo-mcp`
+skill](./.claude/skills/odoo-mcp/) — Claude loads it when it recognizes Odoo work, and the
+always-on standing rule in [`CLAUDE.md`](./CLAUDE.md) enforces the budget regardless — which
+covers the call budget, the chatter audit-log convention, and the write-safety rules.
+That cap is the **connector's**, not Odoo's and not Claude's — the skill's §1 explains the
+three layers. Andres approved connecting through **Odoo's own API** instead (Aug 2026). Odoo
+documents external API access as a *Custom*-plan feature and the firm is on *Standard*, but
+that notice reads as a commercial condition and the existing connector already makes external
+calls — and **as of Aug 2026 the direct connection is built and reading**: the key lives in a
+dedicated **`odoo-api`** cloud environment, so a session started anywhere else has the connector
+and its 50-call cap. **Writes go through [`tools/odoo-api/`](./tools/odoo-api/)** — dry-run by
+default, snapshot-before-write, deny-list in code, versioned snapshots for audit. The pricing
+question and the full setup are in
+[`references/direct-api-setup.md`](./.claude/skills/odoo-mcp/references/direct-api-setup.md);
+the six rules that govern any Odoo write — whichever route — are in
+[`references/write-safety.md`](./.claude/skills/odoo-mcp/references/write-safety.md). Tracked
+as the **Odoo direct-API connection** row in [`FOLLOW-UPS.md`](./FOLLOW-UPS.md).
 
 **One-time NotebookLM login.** The first time you use it, ask Claude to run the
 `setup_auth` tool. It opens a **visible Chrome window** so you can sign in to

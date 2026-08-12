@@ -1,0 +1,88 @@
+{
+  "id": 2,
+  "display_name": "Home (legacy 2024 default)",
+  "header_visible": true,
+  "footer_visible": true,
+  "header_overlay": false,
+  "header_color": false,
+  "header_text_color": false,
+  "website_id": false,
+  "website_published": false,
+  "is_published": false,
+  "can_publish": true,
+  "website_url": "/legacy/home-2024",
+  "website_absolute_url": "https://jkaccountinggroup.odoo.com/legacy/home-2024",
+  "url": "/legacy/home-2024",
+  "view_id": [
+    533,
+    "Home (legacy 2024 default)"
+  ],
+  "view_write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "view_write_date": "2026-07-10 13:25:13",
+  "website_indexed": true,
+  "date_publish": false,
+  "menu_ids": [
+    2
+  ],
+  "is_in_menu": true,
+  "is_homepage": false,
+  "is_visible": false,
+  "is_new_page_template": false,
+  "arch": "<t name=\"Home\" t-name=\"website.homepage\">\n        <t t-call=\"website.layout\" pageName.f=\"homepage\">\n            <div id=\"wrap\" class=\"oe_structure oe_empty\"/>\n        </t>\n    </t>",
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-24 17:38:30",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-07-10 13:25:13",
+  "theme_template_id": false,
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": "This is the homepage of the website",
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Home (legacy 2024 default)",
+  "model": false,
+  "key": "website.home-legacy-2024-default",
+  "priority": 16,
+  "type": "qweb",
+  "arch_base": "<t name=\"Home\" t-name=\"website.homepage\">\n        <t t-call=\"website.layout\" pageName.f=\"homepage\">\n            <div id=\"wrap\" class=\"oe_structure oe_empty\"/>\n        </t>\n    </t>",
+  "arch_db": "<t name=\"Home\" t-name=\"website.homepage\">\n        <t t-call=\"website.layout\" pageName.f=\"homepage\">\n            <div id=\"wrap\" class=\"oe_structure oe_empty\"/>\n        </t>\n    </t>",
+  "arch_fs": "website/data/website_data.xml",
+  "arch_updated": false,
+  "arch_prev": "<t name=\"Home\" t-name=\"website.homepage\">\n        <t t-call=\"website.layout\">\n            <t t-set=\"pageName\" t-value=\"'homepage'\"/>\n            <div id=\"wrap\" class=\"oe_structure oe_empty\"/>\n        </t>\n    </t>",
+  "inherit_id": false,
+  "inherit_children_ids": [],
+  "model_data_id": [
+    27501,
+    "Home (legacy 2024 default)"
+  ],
+  "xml_id": "website.homepage",
+  "group_ids": [],
+  "mode": "primary",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "customize_show": false,
+  "page_ids": [
+    2
+  ],
+  "controller_page_ids": [],
+  "first_page_id": [
+    2,
+    "Home (legacy 2024 default)"
+  ],
+  "track": true,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": ""
+}

@@ -103,7 +103,7 @@ deliberate** step.
   then **⋮ → Templates → Save draft as template → Save as new template**, name it
   "JK branded email."
 - **Send it:** Compose → **⋮ → Templates → Insert**, fill the placeholders (hosted
-  logo URL, headline, body, the one bronze CTA, `{{BOOKING_URL}}`), send.
+  logo URL, headline, body, the one bronze CTA — `{{CTA_LABEL}}` / `{{CTA_URL}}`), send.
 
 **Honest limits.** It's a manual insert per email, never automatic. Gmail's compose
 **sanitizes HTML** — it ignores `<style>` blocks and `@media` queries and honors

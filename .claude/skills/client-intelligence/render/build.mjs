@@ -1,0 +1,739 @@
+#!/usr/bin/env node
+/*
+  Client-Intelligence review dashboard — deterministic render engine.
+
+  Parses every projects/client-intelligence/clients/<slug>.md into structured
+  fields (Operating zone only — the CI-only §6 "Outstanding items" is surfaced as
+  review context, but nothing sensitive is emitted: these files already hold
+  non-sensitive facts + links only) and assembles ONE self-contained, on-brand,
+  filterable HTML page for on-screen review.
+
+  Look is guaranteed on-brand: it reuses the committed Atlas tokens + embedded
+  brand fonts (brand/design-system) and the SOP render's .bar/.mast/.foot
+  components verbatim, then adds a dashboard-specific card grid.
+
+  Output is an ARTIFACT FRAGMENT (<title> + <style> + markup + <script>) — the
+  Artifact tool supplies <!doctype>/<head>/<body>.
+
+  Usage (standalone dashboard):  node build.mjs <repoRoot> <outFile> [as-of-date]
+
+  REUSED BY: projects/knowledge-hub/build-hub.mjs imports loadClients/clientCard/
+  DASH_CSS from here to render the SAME client cards inside the firm Knowledge Hub.
+  Keep those three exports stable.
+
+  ALSO REUSABLE: exports loadClients(repoRoot) → parsed clients, clientCard(c) →
+  one client card's HTML, and DASH_CSS() → the dashboard card CSS, so the
+  Knowledge Hub (projects/knowledge-hub) renders the SAME client cards from the
+  SAME engine — one implementation, no drift. Importing this module has no side
+  effects; the standalone render below only runs when the file is invoked directly.
+*/
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+/* ---------------- parsing helpers ---------------- */
+const esc = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function mdInline(s){
+  if(!s) return '';
+  // Escape first (so text/URLs are HTML-safe), THEN convert markdown inline — no
+  // sentinel characters, so text containing any letter is safe.
+  let out = esc(s);
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m,t,u)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`);
+  out = out.replace(/_\(([^)]*)\)_/g,'<span class="src">($1)</span>');
+  out = out.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  out = out.replace(/`([^`]+)`/g,'<code>$1</code>');
+  out = out.replace(/(^|[^_])_([^_]+)_(?!_)/g,'$1<em>$2</em>');
+  return out;
+}
+// strip italic source tags + collapse ws, for compact field display
+const stripSrc = s => String(s ?? '').replace(/_\([^)]*\)_/g,'').replace(/\*\*/g,'').replace(/\s+/g,' ').trim();
+
+function sectionMap(md){
+  const parts = md.split(/\n(?=## )/);
+  const map = {};
+  for(const p of parts){
+    const m = p.match(/^## (.+)/);
+    if(m) map[m[1].trim()] = p.slice(p.indexOf('\n')+1);
+  }
+  return map;
+}
+const getSec = (map, n) => { const k = Object.keys(map).find(k=>k.startsWith(n+'.')); return k ? map[k] : ''; };
+
+function subMap(text){
+  const parts = text.split(/\n(?=### )/);
+  const map = {};
+  for(const p of parts){
+    const m = p.match(/^### (.+)/);
+    if(m) map[m[1].trim()] = p.slice(p.indexOf('\n')+1);
+  }
+  return map;
+}
+function kv(text){
+  const d = {};
+  for(const line of text.split('\n')){
+    const m = line.match(/^- \*\*(.+?):\*\*\s*(.*)$/);
+    if(m) d[m[1].trim()] = m[2].trim();
+  }
+  return d;
+}
+// A long bullet in these files is ordinary Markdown, so it may be soft-wrapped across
+// several indented lines. The note here used to claim multi-line was "handled loosely";
+// it was not handled at all — the line-anchored matchers below kept the first physical
+// line and dropped the rest SILENTLY. That is not cosmetic: on one client it cut a
+// categorization rule at "…are **business income**, EXCEPT a confirmed", so the card
+// stated the opposite of the rule, and it split a bold span leaving a raw "**auto/transport"
+// on screen. Fold continuations back into their bullet before matching anything.
+function unwrap(text){
+  const out = [];
+  for(const line of (text||'').split('\n')){
+    if(/^\s+\S/.test(line) && out.length && /^- /.test(out[out.length-1])){
+      out[out.length-1] += ' ' + line.trim();          // continuation of the open bullet
+    } else {
+      out.push(line);
+    }
+  }
+  return out.join('\n');
+}
+// top-level bullets (not indented)
+function bullets(text){
+  const out = [];
+  for(const line of unwrap(text).split('\n')){
+    const m = line.match(/^- (?!\[)(.*\S)\s*$/);       // skip "- [ ]" checkboxes
+    if(m) out.push(m[1].trim());
+  }
+  return out;
+}
+// "Information still needed" rows. The skill's rule is that an ANSWERED question stays in
+// the file with its box ticked (so it is not asked again) — so the tick is meaningful data,
+// not noise, and callers must be able to tell the two apart. Returning {done,text} is what
+// stops the "N fields still to confirm" badge from counting settled rows as open ones.
+function checkboxes(text){
+  const out = [];
+  for(const line of unwrap(text).split('\n')){
+    const m = line.match(/^- \[([ xX])\] (.*\S)\s*$/);
+    if(m) out.push({ done: m[1].toLowerCase() === 'x', text: m[2].trim() });
+  }
+  return out;
+}
+
+// Entity has TWO independent dimensions the firm cares about, and the CI files pack both
+// into one "Entity type" line: the LEGAL structure (how it's formed under state law) and
+// the TAX classification (how the IRS taxes it). They're different questions — an LLC can
+// be taxed as an S-corp, a partnership, or a disregarded entity — so we derive each on its
+// own. The Hub filters them separately (Lilian's ask); mixing them in one list was wrong.
+
+// LEGAL structure — the state-law entity noun. A multi-member LLC taxed as a partnership
+// is still legally an LLC, so LLC / Corporation are matched before the partnership branch
+// (a bare "partnership" only wins when there's no LLC/Corp, i.e. a real GP/LP/LLP).
+function classifyLegal(s){
+  const t = String(s||'');
+  if(/sole prop|no LLC|not formed|without an entity|no entity/i.test(t)) return { key:'soleprop', label:'Sole prop' };
+  if(/\bLLC\b/i.test(t))                        return { key:'llc',         label:'LLC' };
+  if(/Corporation|\bInc\b|\bCorp\b/i.test(t))   return { key:'corp',        label:'Corp' };
+  if(/\bLP\b|\bLLP\b|partnership/i.test(t))     return { key:'partnership', label:'Partnership' };
+  return { key:'', label:null };
+}
+
+// TAX classification — how it's taxed federally. "Under review (A vs B vs C)" option-lists
+// are stripped first so a *mention* of another treatment can't outrank the current filing.
+// A Schedule-C filer is a disregarded entity when there's an LLC, else a sole proprietor.
+function classifyTax(s){
+  const t = String(s||'')
+    .replace(/\([^)]*\bvs\b[^)]*\)/gi, ' ')
+    .replace(/\bunder review\b/gi, ' ');
+  if(/1120-S|S-?corp\b|S-?corporation/i.test(t))    return { key:'scorp',       label:'S-corp' };
+  if(/\b1065\b|partnership/i.test(t))               return { key:'partnership', label:'Partnership' };
+  if(/\b1120\b|C-?corp\b|C-?corporation/i.test(t))  return { key:'ccorp',        label:'C-corp' };
+  if(/Schedule C|Sch\.? C|disregarded|single-?member/i.test(t))
+    return /\bLLC\b/i.test(t) ? { key:'disregarded', label:'Disregarded' } : { key:'soleprop', label:'Sole prop' };
+  return { key:'', label:null };
+}
+
+// Compact pill label — legal · tax (e.g. "LLC · S-corp", "Corp · S-corp",
+// "LLC · Disregarded"); falls back to a trimmed snippet, else nothing.
+function entityTag(s){
+  const combo = [classifyLegal(s).label, classifyTax(s).label].filter(Boolean).join(' · ');
+  if(combo) return combo;
+  const c = stripSrc(String(s||'')).replace(/\*\*/g,'');
+  return c && !/pending/i.test(c) ? c.slice(0,22) : null;
+}
+
+// Which services we actually provide — used for the Hub's "Service" facet. A service
+// counts as active when we do it (state 'on') or do it with a reconcile note ('quirk');
+// 'off' = not our service, 'neutral' = pending/unknown (not claimed).
+const SVC_KEY = { Bookkeeping:'bookkeeping', 'Income tax':'incometax', 'Sales tax':'salestax', Payroll:'payroll' };
+function activeSvcKeys(svc){
+  return Object.entries(svc)
+    .filter(([,v]) => v.state==='on' || v.state==='quirk')
+    .map(([k]) => SVC_KEY[k]);
+}
+function stateTag(s){
+  // Unresolved wins over any state named in the same line. A file that says the 2025
+  // position is not established must not publish a confident pill, however many states
+  // its prose mentions — a broken-looking pill is safer than a plausible wrong one.
+  if(/pending|not established|unknown|not settled/i.test(s)) return null;
+  if(/florida|(^|[^a-z])FL([^a-z]|$)/i.test(s)){
+    const c = (s.match(/Broward|Palm Beach|Miami-?Dade|Hillsborough|Orange/i)||[])[0];
+    return c ? `FL · ${c}` : 'FL';
+  }
+  const c = stripSrc(s).replace(/\(.*?\)/g,'').replace(/[.,;\s]+$/,'').trim();
+  return c ? c.slice(0,20) : null;
+}
+const freqOf = t => (t.match(/monthly|weekly|bi-?weekly|semi-?monthly|quarterly|annual/i)||[])[0]?.toLowerCase().replace('-','') || null;
+
+function classifySvc(block){
+  let t = null;
+  for(const line of (block||'').split('\n')){
+    const m = line.match(/^- \*\*(?:Applies\?|⚠️ Quirk to reconcile)\*\*\s*(.*)$/);
+    if(m){ t = m[1]; break; }
+  }
+  const src = t ?? block ?? '';
+  let state = 'neutral';
+  if(/⚠|quirk|reconcile|conflict/i.test(src)) state = 'quirk';
+  else if(/not our service|not on jk|handled.*own side|runs.*(its )?own|on its own/i.test(src)) state = 'off';
+  else if(/\bn\/a\b/i.test(src) || /(^|[—-])\s*no\b/i.test(src)) state = 'off';
+  else if(/\byes\b/i.test(src)) state = 'on';
+  return { state, freq: freqOf(src) };
+}
+
+function label(setSlugs){
+  const has = s => setSlugs.includes(s);
+  if(has('sunoma-inc') || has('magnum-152')) return 'Pawn & jewelry';
+  if(has('beemold-usa') || has('margate-plumbing')) return 'Construction';
+  if(has('sensustech') || has('lumetro') || has('mobilesource-corp')) return 'Tech group';
+  return 'Linked group';
+}
+
+// System chips by keyword scan (robust to table-format variation; non-sensitive).
+// ⚠️ Two traps, both found live on a real card (2026-08-12): a bare word-match fires on a
+// DENIAL — "no QuickBooks", "no bank feed" — and on an ordinary verb, so "the first thing to
+// chase" published Chase as the client's bank. Every pattern below must therefore reject a
+// preceding no/without/never, and a brand whose name is also a common word needs more than
+// the word.
+const NEG = String.raw`(?<!\b(?:no|not|without|never|non)\s{1,3})`;
+const SYS = [
+  ['QuickBooks Online', new RegExp(NEG + String.raw`quickbooks`, 'i')],
+  ['Gusto', /gusto/i], ['ADP', /\bADP\b/], ['Bravo POS', /bravo/i],
+  ['TaxDome', /taxdome/i], ['SaasAnt', /saasant/i],
+  ['Amazon', /amazon/i], ['Shopify', /shopify/i], ['eBay', /ebay/i],
+  ['Google Ads', /google ads/i], ['FL DOR portal', /fl dor|florida tax portal/i],
+  ['Mercury', /mercury/i], ['TD Bank', /td bank/i], ['Chase', /\bchase\s+(?:bank|checking|savings|business|\d)|\bchase\b(?=[^.]{0,30}\b(?:bank|account|statement|card)\b)/i],
+  ['Wells Fargo', /wells fargo/i], ['Amex', /amex|american express/i],
+];
+
+/* ---------------- load + parse all clients (reusable) ---------------- */
+let bySlug = {};   // module-level; set by loadClients(), read by card()
+
+/* GATE — no SENSITIVE data in the CLIENT FILES, which are published. Lilian's rule, 2026-08-11:
+   "no quiero que haya ninguna información sensible puesta ahí, porque el link puede ser
+   utilizado por cualquier miembro del equipo y puede llegar a otras manos."
+   It lives HERE, in the shared loader, because there are two consumers and BOTH publish:
+   the Knowledge Hub (projects/knowledge-hub/build-hub.mjs) and this file's own review
+   dashboard, which ships as an Artifact — a hosted web page. A gate in only one is not a gate.
+   ⚠️ This is NOT a ban on clients' tax detail. Lilian is fine with tax findings appearing on
+   the Hub; what must never appear is an identifier. Earlier code here blocked any
+   "Tax year YYYY" heading — that was a misreading of her instruction and has been removed.
+   The repo's two-data-homes rule already keeps identifiers out of client files; this gate is
+   the mechanical backstop for the day someone forgets, because the Hub link circulates.
+   ⚠️ SCOPE: it scans projects/client-intelligence/clients/*.md ONLY. The Hub also publishes
+   the SOPs and Lilian's Notebook, and nothing scans those.
+   Deliberately narrow: SSN/ITIN shape, and long digit runs that look like an account number.
+   Passport and driver's-licence numbers vary too much to match reliably — the skill rule
+   covers those, and a reader still has to think. It also only sees the hyphenated 123-45-6789
+   form — spaces, dots, or an EIN's 12-3456789 shape slip through.
+   Override: ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1. */
+function assertNoSensitiveData(files, clientsDir){
+  if (process.env.ALLOW_SENSITIVE_ON_PUBLISHED_PAGES === '1') return;
+  const PATTERNS = [
+    [/\b(\d{3})-(\d{2})-(\d{4})\b/, 'SSN/ITIN shape', m => `***-**-${m[3]}`],
+    [/\b\d{9,}\b/,                    'a run of 9+ digits — account or identifier number?',
+                                        m => `${'*'.repeat(m[0].length - 4)}${m[0].slice(-4)}`],
+  ];
+  // Strip only what legitimately carries long digit runs: URLs and markdown link targets
+  // (support-article and doc IDs — three Gusto ones live in a client file today). Do NOT
+  // strip inline code: identifiers in this repo are routinely written in backticks, so
+  // scrubbing code spans would make a single backtick switch the whole gate off, and it
+  // protects nothing — no client file has a long digit run inside one.
+  const scrub = (line) => line
+    .replace(/\]\([^)]*\)/g, '] ')
+    .replace(/https?:\/\/\S+/g, ' ');
+  const hits = [];
+  for (const f of files){
+    const lines = readFileSync(resolve(clientsDir, f), 'utf8').split('\n');
+    lines.forEach((raw, n) => {
+      const line = scrub(raw);
+      for (const [re, why, mask] of PATTERNS){
+        const m = line.match(re);
+        // Report the location and the SHAPE, never the value: this message goes to a session
+        // transcript in the firm's shared account, and an identifier must not be written out
+        // there either (CLAUDE.md / double-mcp §2.2 — by existence, never by value).
+        if (m) hits.push(`${f.replace(/\.md$/,'')}:${n + 1} — ${why} (${mask(m)})`);
+      }
+    });
+  }
+  if (!hits.length) return;
+  console.error(
+    `\nBUILD STOPPED — a client file may contain sensitive data, and these pages are published.\n` +
+    hits.map(h => `  • ${h}`).join('\n') +
+    `\n\n  The Hub link circulates inside the team and can travel further, so identifiers never go\n` +
+    `  on it: SSN/ITIN, passport, driver's licence, full account or routing numbers, dates of birth.\n` +
+    `  Tax findings themselves are fine — this is about identifiers, not subject matter.\n` +
+    `  Move the value to Double or Drive and reference it, then rebuild.\n` +
+    `  If a match is a false positive, override DELIBERATELY — never just to get past the error:\n` +
+    `  ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1\n`);
+  process.exit(1);
+}
+
+export function loadClients(repoRoot){
+  const clientsDir = resolve(repoRoot, 'projects/client-intelligence/clients');
+  const files = readdirSync(clientsDir).filter(f=>f.endsWith('.md')).sort();
+  assertNoSensitiveData(files, clientsDir);
+  const clients = files.map(f=>{
+    const slug = f.replace(/\.md$/,'');
+    const md = readFileSync(resolve(clientsDir,f),'utf8');
+    const title = (md.match(/^#\s+(.+)/m)||[])[1]?.trim() || slug;
+    const st = md.match(/\*\*Status:\*\*\s*(.+?)\s*·\s*\*\*Owner:\*\*\s*(.+?)\s*·\s*\*\*Last updated:\*\*\s*([0-9-]+)/) || [];
+    const status = st[1]||'Active', owner = st[2]||'Firm', updated = st[3]||'';
+    const S = sectionMap(md);
+    const snap = kv(getSec(S,'1'));
+    const obl = subMap(getSec(S,'4'));
+    const lic = kv(obl['Licenses & other filings']||'');
+    const hist = subMap(getSec(S,'6'));
+
+    const svc = {
+      Bookkeeping: classifySvc(obl['Bookkeeping & monthly close']),
+      'Income tax': classifySvc(obl['Income tax']),
+      'Sales tax': classifySvc(obl['Sales tax']),
+      Payroll: classifySvc(obl['Payroll']),
+    };
+    const flags = [];
+    if(/1099 preparation/i.test(md)) flags.push('1099');
+    if(/^Yes/i.test(lic['Annual report']||'')) flags.push('Annual report');
+    if(/licens|insurance|WC|workers.?.?comp|FFL/i.test(obl['Licenses & other filings']||'')) flags.push('Licensing');
+
+    // Scan the client's own prose only. Every file opens with the two-data-homes
+    // blockquote — "secrets stay in Google Drive / Double / QuickBooks" — so scanning the
+    // raw text gave EVERY client a QuickBooks chip, including the ones whose §1 says in
+    // as many words that they have none. Blockquotes are guidance, not client facts.
+    const sysText = md.split('\n').filter(l => !/^\s*>/.test(l)).join('\n');
+    const systems = SYS.filter(([,re])=>re.test(sysText)).map(([n])=>n);
+
+    const links = getSec(S,'7');
+    // Find the label's own line first, then take the first URL on it. The previous form
+    // (`label[^(]*\(`) bridged from the label to the URL across "anything but a paren", so
+    // ANY parenthesis in the label broke it and the link silently vanished from the card.
+    // Every client file writes "**Google Drive folder (sensitive vault):**", so the Drive
+    // link was missing on all 23. Matching per-line also stops one bullet's label from
+    // reaching into a later bullet's URL.
+    // Prefer a Markdown link's target, but fall back to a bare URL: not every file wraps
+    // one (artur-tseretsian writes "**Double client:** https://…" plain), and requiring the
+    // parens would be the same silent vanish this fix exists to remove.
+    const linkOn = re => {
+      const line = links.split('\n').find(l => re.test(l)) || '';
+      const m = line.match(/\((https?:\/\/[^)\s]+)\)/) || line.match(/(https?:\/\/[^)\s<>]+)/);
+      return m ? m[1].replace(/[.,;:]+$/,'') : undefined;
+    };
+    const dbl = linkOn(/\*\*Double client:\*\*/);
+    const drv = linkOn(/Google Drive folder/i);
+    const related = [...links.matchAll(/\[`([a-z0-9-]+)\.md`\]/g)].map(m=>m[1]);
+    const sopLine = links.split('\n').find(l=>/Related SOPs?/i.test(l)) || '';
+    const sops = [...sopLine.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(m=>({t:m[1],u:m[2]}));
+
+    const industry = stripSrc(snap['Industry / what they do']||'').replace(/\*\*/g,'');
+    const quirks = bullets(getSec(S,'5')).slice(0,4);
+    const open = bullets(hist['Outstanding items (CI-only — never in the SOP)']||'').slice(0,4);
+    // Only the UNticked rows are still open. `c.needed` stays a plain string[] so the
+    // Knowledge Hub, which imports this engine, sees no API change.
+    const needed = checkboxes(hist['Information still needed']||'').filter(n=>!n.done).map(n=>n.text);
+
+    return {
+      slug, title, status, owner, updated,
+      entity: entityTag(snap['Entity type']||''),
+      legalCls: classifyLegal(snap['Entity type']||'').key,
+      taxCls: classifyTax(snap['Entity type']||'').key,
+      svcKeys: activeSvcKeys(svc),
+      state: stateTag(snap['Home state']||''),
+      lang: stripSrc(snap['Primary language']||'').replace(/\*\*/g,''),
+      industry, platform: stripSrc(snap['Accounting platform']||''),
+      fye: stripSrc(snap['Fiscal year-end']||''),
+      svc, flags, systems, dbl, drv, related, sops, quirks, open, needed,
+    };
+  });
+
+  // owner-group graph
+  bySlug = Object.fromEntries(clients.map(c=>[c.slug,c]));
+  const seen = new Set();
+  for(const c of clients){
+    if(seen.has(c.slug)) continue;
+    const comp = []; const stack=[c.slug];
+    while(stack.length){
+      const s = stack.pop(); if(seen.has(s)||!bySlug[s]) continue;
+      seen.add(s); comp.push(s);
+      for(const r of bySlug[s].related) if(!seen.has(r)) stack.push(r);
+    }
+    const lab = comp.length>1 ? label(comp) : null;
+    comp.forEach(s=>{ if(bySlug[s]) bySlug[s].group = lab; });
+  }
+  return clients;
+}
+
+/* ---------------- render (reusable card + helpers) ---------------- */
+const JKMARK = `<svg viewBox="0 0 64 64" class="jkmark" aria-hidden="true"><path d="M29 18 L29 38 Q29 47 21.5 47 Q15.5 47 14.2 41.5"/><path d="M37 18 L37 47"/><path d="M37 32.5 L48 18"/><path d="M37 32.5 L49.5 47"/></svg>`;
+const ICON = {
+  sun:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>`,
+  print:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4v-6a2 2 0 012-2h12a2 2 0 012 2v6h-2M8 14h8v7H8z"/></svg>`,
+  ext:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8 8M18 13v5a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h5"/></svg>`,
+};
+
+const pill = (cls,txt) => txt ? `<span class="pill ${cls}">${esc(txt)}</span>` : '';
+
+function svcRow(c){
+  const order = ['Bookkeeping','Income tax','Sales tax','Payroll'];
+  const items = order.map(k=>{
+    const {state,freq} = c.svc[k];
+    const cls = state==='on'?'on':state==='quirk'?'quirk':state==='off'?'off':'neutral';
+    const det = state==='on' && freq ? `<i>${esc(freq)}</i>` : state==='off' ? `<i>n/a</i>` : state==='quirk' ? `<i>review</i>` : '';
+    return `<span class="svc ${cls}">${esc(k)}${det}</span>`;
+  }).join('');
+  const fl = c.flags.map(f=>`<span class="svc flag">${esc(f)}</span>`).join('');
+  return `<div class="svcs">${items}${fl}</div>`;
+}
+function blk(title, arr){
+  if(!arr.length) return '';
+  const li = arr.map(x=>`<li>${mdInline(x)}</li>`).join('');
+  return `<div class="cx-blk"><h4>${title}</h4><ul>${li}</ul></div>`;
+}
+export function clientCard(c){
+  const searchText = esc([c.title,c.industry,c.slug,c.group,c.state,c.entity,...c.systems,...c.quirks].join(' ').toLowerCase());
+  const tags = [
+    pill('entity', c.entity),
+    pill('state', c.state),
+    c.group ? `<span class="pill group">${esc(c.group)}</span>` : '',
+  ].join('');
+  const sys = c.systems.length ? `<div class="cx-blk"><h4>Systems</h4><div class="chips">${c.systems.map(s=>`<span class="chip">${esc(s)}</span>`).join('')}</div></div>` : '';
+  const relNames = c.related.map(r=>bySlug[r]?`<a href="#${r}">${esc(bySlug[r].title)}</a>`:null).filter(Boolean).join(' · ');
+  const need = c.needed.length ? `<div class="cx-need">${c.needed.length} field${c.needed.length>1?'s':''} still to confirm</div>` : '';
+  const watch = blk('Watch &amp; quirks', c.quirks);
+  const open  = blk('Open items — last agreed / pending', c.open);
+  const cols  = (watch||open) ? `<div class="cx-cols">${watch}${open}</div>` : '';
+  const sopLinks = c.sops.length
+    ? c.sops.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">${esc(s.t)}</a>`).join(' · ')
+    : '<span class="cx-none">none yet</span>';
+  const sources = `<div class="cx-blk cx-sources"><h4>Sources &amp; live records</h4>
+    <div class="cx-srcline">
+      ${c.dbl?`<a href="${c.dbl}" target="_blank" rel="noopener">Double ${ICON.ext}</a>`:''}
+      ${c.drv?`<a href="${c.drv}" target="_blank" rel="noopener">Drive ${ICON.ext}</a>`:''}
+      ${relNames?`<span class="rel">Linked: ${relNames}</span>`:''}
+    </div>
+    <p class="cx-hint"><b>Meetings &amp; latest detail</b> — open the client in Ping / Double for full meeting notes and action items.</p>
+    <p class="cx-hint"><b>Need sensitive data</b> (EIN, address, a login, a contact email)? Ask Claude in chat — it pulls the value live from Double / Drive and never stores it here.</p>
+    <p class="cx-hint"><b>Related SOP</b> — ${sopLinks}</p></div>`;
+  return `
+<article class="cx-card reveal" id="${c.slug}" data-owner="${esc(c.owner)}" data-legal="${esc(c.legalCls||'')}" data-tax="${esc(c.taxCls||'')}" data-svc="${esc((c.svcKeys||[]).join(' '))}" data-text="${searchText}">
+  <div class="cx-head">
+    <h3>${esc(c.title)}</h3>
+    <div class="cx-upd">${esc(c.updated)}<span class="dot"></span>${esc(c.owner)}</div>
+  </div>
+  <div class="cx-tags">${tags}</div>
+  ${c.industry?`<p class="cx-ind">${mdInline(c.industry)}</p>`:''}
+  ${svcRow(c)}
+  <details class="cx-more">
+    <summary>
+      <span class="cx-sum"><span class="cx-sum-a">Details, systems &amp; sources</span><span class="cx-sum-b">Hide details</span></span>
+      <svg class="cx-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="cx-more-body">
+      ${sys}
+      ${cols}
+      ${need}
+      ${sources}
+    </div>
+  </details>
+</article>`;
+}
+
+/* ---------------- standalone dashboard (runs only when invoked directly) ---------------- */
+function main(){
+  const repoRoot = resolve(process.argv[2] || '.');
+  const outFile  = resolve(process.argv[3] || 'ci-review-dashboard.html');
+  const asOf     = process.argv[4] || '2026-07-21';       // passed in (no Date.now in some envs)
+
+  const fonts = readFileSync(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'), 'utf8');
+  const atlas = readFileSync(resolve(repoRoot, '.claude/skills/sop-authoring/render/atlas.css'), 'utf8');
+
+  const clients = loadClients(repoRoot);
+
+  const owners = [...new Set(clients.map(c=>c.owner))];
+  const ownerOrder = ['Lilian','Maria','Julia','Firm'].filter(o=>owners.includes(o)).concat(owners.filter(o=>!['Lilian','Maria','Julia','Firm'].includes(o)));
+  const groupRank = c => c.group ? c.group : 'zzz';
+
+  function ownerSection(o){
+    const list = clients.filter(c=>c.owner===o).sort((a,b)=> groupRank(a).localeCompare(groupRank(b)) || a.title.localeCompare(b.title));
+    return `
+<section class="cx-sec" data-ownersec="${esc(o)}">
+  <div class="cx-sechead">
+    <span class="k">${esc(o)}'s book</span>
+    <h2>${list.length} client${list.length>1?'s':''}</h2>
+    <span class="cx-line"></span>
+  </div>
+  <div class="cx-grid">${list.map(clientCard).join('')}</div>
+</section>`;
+  }
+
+  const ownerCounts = Object.fromEntries(ownerOrder.map(o=>[o, clients.filter(c=>c.owner===o).length]));
+  const groups = [...new Set(clients.map(c=>c.group).filter(Boolean))];
+
+  const style = fonts.trimEnd() + '\n\n' + atlas.trimEnd() + '\n\n' + DASH_CSS();
+
+  const body = `
+<div class="bar">
+  <div class="in">
+    <div class="lhs">${JKMARK}<b>JK Accounting Group</b><span class="sep"></span><span class="k">Client Intelligence</span></div>
+    <div class="rhs">
+      <button class="tbtn" id="themeBtn" aria-label="Toggle theme">${ICON.sun}<span class="lbl">Theme</span></button>
+      <button class="tbtn" id="printBtn" aria-label="Print">${ICON.print}<span class="lbl">Print</span></button>
+    </div>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="in">
+    <p class="kick">Client Intelligence · Internal review</p>
+    <h1>What we know about every client, in one place</h1>
+    <p class="lede">A living snapshot, generated straight from the client-intelligence files. Skim your book, check the facts, and flag anything wrong, missing, or out of date — tell Claude and it edits the client's file and re-publishes this page.</p>
+    <div class="meta">
+      <span class="chipm live"><span class="dot"></span><b>${clients.length}</b> clients</span>
+      ${ownerOrder.map(o=>`<span class="chipm"><span class="dot"></span><b>${ownerCounts[o]}</b> ${esc(o)}</span>`).join('')}
+      <span class="chipm"><span class="dot"></span><b>${groups.length}</b> owner-groups</span>
+      <span class="chipm"><span class="dot"></span>as of <b>${esc(asOf)}</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="cx-filter">
+  <div class="in">
+    <label class="cx-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Search clients, industry, systems…" autocomplete="off"></label>
+    <div class="cx-owners" id="owners">
+      <button class="cx-of active" data-o="all">All</button>
+      ${ownerOrder.map(o=>`<button class="cx-of" data-o="${esc(o)}">${esc(o)}</button>`).join('')}
+    </div>
+    <div class="cx-exp"><button class="cx-xb" id="expAll">Expand all</button><button class="cx-xb" id="colAll">Collapse all</button></div>
+    <span class="cx-count" id="count"></span>
+  </div>
+</div>
+
+<main class="cx-main">
+  ${ownerOrder.map(ownerSection).join('')}
+  <p class="cx-empty" id="empty" hidden>No clients match — clear the search or filter.</p>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="row">${JKMARK}<div><b>Client Intelligence</b><p>Non-sensitive knowledge and links only. Names, logins, account numbers and dollar figures live in Double / Google Drive / QuickBooks and are referenced from each client's file — never stored here.</p></div></div>
+    <div class="bottom"><span>JK Accounting Group · internal</span><span>Generated from projects/client-intelligence · ${esc(asOf)}</span></div>
+  </div>
+</footer>`;
+
+  const script = `
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  function dark(){var t=root.getAttribute('data-theme'); if(t)return t==='dark'; return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}
+  var tb=document.getElementById('themeBtn'); if(tb)tb.addEventListener('click',function(){root.setAttribute('data-theme',dark()?'light':'dark');});
+  var pb=document.getElementById('printBtn'); if(pb)pb.addEventListener('click',function(){window.print();});
+
+  var cards=[].slice.call(document.querySelectorAll('.cx-card'));
+  var secs=[].slice.call(document.querySelectorAll('.cx-sec'));
+  var q=document.getElementById('q'), count=document.getElementById('count'), empty=document.getElementById('empty');
+  var owner='all';
+  function apply(){
+    var term=(q.value||'').trim().toLowerCase(); var shown=0;
+    cards.forEach(function(c){
+      var okO=owner==='all'||c.getAttribute('data-owner')===owner;
+      var okT=!term||c.getAttribute('data-text').indexOf(term)>-1;
+      var vis=okO&&okT; c.hidden=!vis; if(vis)shown++;
+    });
+    secs.forEach(function(s){ var any=s.querySelectorAll('.cx-card:not([hidden])').length>0; s.hidden=!any; });
+    count.textContent=shown+' of '+cards.length;
+    empty.hidden=shown>0;
+  }
+  q.addEventListener('input',apply);
+  document.getElementById('owners').addEventListener('click',function(e){
+    var b=e.target.closest('.cx-of'); if(!b)return;
+    owner=b.getAttribute('data-o');
+    [].forEach.call(this.children,function(x){x.classList.toggle('active',x===b);}); apply();
+  });
+  var mores=[].slice.call(document.querySelectorAll('details.cx-more'));
+  var ea=document.getElementById('expAll'), ca=document.getElementById('colAll');
+  if(ea)ea.addEventListener('click',function(){mores.forEach(function(d){d.open=true;});});
+  if(ca)ca.addEventListener('click',function(){mores.forEach(function(d){d.open=false;});});
+  window.addEventListener('beforeprint',function(){mores.forEach(function(d){d.open=true;});});
+  apply();
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver'in window)){cards.forEach(function(c){c.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:0.06}); cards.forEach(function(c){io.observe(c);});}
+})();
+</script>`;
+
+  const fragment = `<title>Client Intelligence — review · JK Accounting Group</title>
+<style>
+${style}
+</style>
+
+${body}
+${script}
+`;
+  writeFileSync(outFile, fragment);
+  console.error(`fragment → ${outFile} (${(fragment.length/1024).toFixed(0)}KB) · ${clients.length} clients`);
+}
+
+/* ---------------- dashboard-only CSS (composed from Atlas tokens) ---------------- */
+export function DASH_CSS(){ return `
+/* ===== Client-Intelligence dashboard (composed from Atlas tokens) ===== */
+/* Widen the canvas: atlas.css sets --maxw:880 for an SOP reading column;
+   a scan-and-compare dashboard wants a broader frame for a 2-up card grid. */
+:root{--maxw:1180px;}
+.mast .in{padding-bottom:clamp(28px,4vw,44px);}
+.cx-filter{position:sticky; top:56px; z-index:90;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--border-subtle);}
+.cx-filter .in{max-width:var(--maxw); margin:0 auto; padding:11px var(--gutter);
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.cx-search{display:flex; align-items:center; gap:9px; flex:1 1 260px; min-width:200px;
+  background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0 12px; height:40px;}
+.cx-search svg{width:16px; height:16px; color:var(--muted); flex:0 0 auto;}
+.cx-search input{border:0; background:transparent; outline:0; width:100%; height:100%;
+  font-family:var(--sans); font-size:14.5px; color:var(--body);}
+.cx-owners{display:flex; gap:6px; flex:0 0 auto;}
+.cx-of{font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;
+  color:var(--muted); background:transparent; border:1px solid var(--border); border-radius:999px;
+  padding:8px 14px; cursor:pointer; transition:all .16s var(--ease-out);}
+.cx-of:hover{color:var(--ink); border-color:var(--border);}
+.cx-of.active{color:#fff; background:var(--teal-800); border-color:var(--teal-800);}
+:root[data-theme="dark"] .cx-of.active{background:var(--accent); border-color:var(--accent); color:#0D2A31;}
+.cx-count{margin-left:auto; font-family:var(--mono); font-size:11px; letter-spacing:0.06em;
+  text-transform:uppercase; color:var(--muted); flex:0 0 auto;}
+
+.cx-main{max-width:var(--maxw); margin:0 auto; padding:clamp(20px,4vw,40px) var(--gutter) 10px;}
+.cx-sec{margin-top:clamp(30px,5vw,48px);}
+.cx-sec:first-child{margin-top:clamp(14px,3vw,26px);}
+.cx-sechead{display:flex; align-items:baseline; gap:16px; margin-bottom:20px;}
+.cx-sechead .k{font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; flex:0 0 auto;}
+.cx-sechead h2{font-size:clamp(20px,3vw,26px); flex:0 0 auto; color:var(--ink);}
+.cx-sechead .cx-line{flex:1 1 auto; height:1px; background:var(--border-subtle); align-self:center;}
+
+.cx-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 430px), 1fr)); gap:18px; align-items:start;}
+.cx-card{background:var(--surface); border:1px solid var(--border-subtle); border-radius:16px;
+  padding:20px 21px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:12px;
+  scroll-margin-top:120px; transition:box-shadow .2s var(--ease-out), border-color .2s var(--ease-out);}
+.cx-card:hover{box-shadow:var(--shadow-md); border-color:var(--border);}
+.cx-card:target{border-color:var(--accent); box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 24%,transparent), var(--shadow-md);}
+.cx-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px;}
+.cx-head h3{font-size:19.5px; line-height:1.15; color:var(--ink);}
+.cx-upd{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--muted); white-space:nowrap; flex:0 0 auto; display:flex; align-items:center; gap:7px;}
+.cx-upd .dot{width:3px; height:3px; border-radius:50%; background:var(--border);}
+
+.cx-tags{display:flex; flex-wrap:wrap; gap:6px;}
+.pill{display:inline-flex; align-items:center; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:0.04em; border-radius:999px; padding:4px 10px; white-space:nowrap;}
+.pill.entity{background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+.pill.state{background:var(--greige-100); color:var(--muted); border:1px solid var(--border-subtle);}
+:root[data-theme="dark"] .pill.state{background:rgba(236,230,218,0.06); color:var(--body);}
+.pill.group{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink);}
+
+.cx-ind{font-size:14px; line-height:1.5; color:var(--body); margin:0;}
+.cx-ind .src{color:var(--muted); font-style:italic;}
+
+.svcs{display:flex; flex-wrap:wrap; gap:6px;}
+.svc{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:0.02em; border-radius:7px; padding:4px 9px; border:1px solid transparent;}
+.svc i{font-style:normal; font-weight:500; opacity:.72; text-transform:lowercase; letter-spacing:0;}
+.svc.on{background:var(--ok-bg); color:var(--ok-text); border-color:var(--ok-bd);}
+.svc.off{background:transparent; color:var(--muted); border-color:var(--border-subtle);}
+.svc.quirk{background:var(--warn-bg); color:var(--warn-text); border-color:var(--warn-bd);}
+.svc.neutral{background:var(--note-bg); color:var(--note-text); border-color:var(--note-bd);}
+.svc.flag{background:var(--pill-teal-bg); color:var(--pill-teal-ink);}
+
+.chips{display:flex; flex-wrap:wrap; gap:5px;}
+.chip{font-family:var(--sans); font-size:11.5px; font-weight:500; color:var(--muted);
+  background:var(--paper); border:1px solid var(--border-subtle); border-radius:6px; padding:2px 8px;}
+
+.cx-cols{display:grid; grid-template-columns:1fr; gap:14px; margin-top:2px;}
+@media (min-width:520px){ .cx-card .cx-cols{grid-template-columns:1fr 1fr;} }
+.cx-blk h4{font-family:var(--mono); font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--accent); font-weight:600; margin:0 0 7px;}
+.cx-blk ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px;}
+.cx-blk li{position:relative; padding-left:14px; font-size:12.8px; line-height:1.48; color:var(--body);}
+.cx-blk li::before{content:""; position:absolute; left:2px; top:7px; width:5px; height:5px; border-radius:50%;
+  background:var(--border);}
+.cx-blk li .src{color:var(--muted); font-style:italic; font-size:11.5px;}
+.cx-blk code{font-size:0.85em; background:var(--paper); border:1px solid var(--border-subtle);
+  border-radius:4px; padding:0 4px;}
+
+.cx-need{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--warn-ic); display:inline-flex; align-items:center; gap:7px; align-self:flex-start;}
+.cx-need::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--warn-ic);}
+
+.cx-links{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:auto; padding-top:12px;
+  border-top:1px solid var(--border-subtle); font-family:var(--mono); font-size:11px; letter-spacing:0.03em;}
+.cx-links a{display:inline-flex; align-items:center; gap:5px; color:var(--accent-2); text-decoration:none;}
+.cx-links a:hover{color:var(--accent);}
+.cx-links a svg{width:11px; height:11px;}
+.cx-links .dv{color:var(--border);}
+.cx-links .rel{color:var(--muted); text-transform:none; letter-spacing:0; font-family:var(--sans); font-size:12px;}
+.cx-links .rel a{font-family:var(--sans);}
+
+/* expand/collapse controls */
+.cx-exp{display:flex; gap:6px; flex:0 0 auto;}
+.cx-xb{font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; font-weight:600;
+  color:var(--muted); background:transparent; border:1px solid var(--border-subtle); border-radius:8px;
+  padding:7px 11px; cursor:pointer; transition:color .15s var(--ease-out), border-color .15s var(--ease-out);}
+.cx-xb:hover{color:var(--ink); border-color:var(--border);}
+@media (max-width:680px){ .cx-exp{display:none;} }
+
+/* collapsible per-client detail */
+details.cx-more{margin-top:2px;}
+details.cx-more > summary{list-style:none; cursor:pointer; display:flex; align-items:center;
+  justify-content:space-between; gap:10px; padding:9px 13px; border-radius:10px;
+  background:var(--paper); border:1px solid var(--border-subtle);
+  font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;
+  color:var(--accent-2); transition:background .16s var(--ease-out), border-color .16s var(--ease-out); user-select:none;}
+details.cx-more > summary::-webkit-details-marker{display:none;}
+details.cx-more > summary:hover{background:var(--pill-teal-bg); border-color:var(--border);}
+details.cx-more > summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.cx-caret{width:15px; height:15px; flex:0 0 auto; color:var(--muted);
+  transition:transform .22s var(--ease-out);}
+details.cx-more[open] > summary .cx-caret{transform:rotate(180deg);}
+.cx-sum-b{display:none;}
+details.cx-more[open] > summary .cx-sum-a{display:none;}
+details.cx-more[open] > summary .cx-sum-b{display:inline;}
+.cx-more-body{display:flex; flex-direction:column; gap:14px; padding:15px 3px 3px;}
+.cx-sources .cx-srcline{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:9px;
+  font-family:var(--mono); font-size:11.5px; letter-spacing:0.03em;}
+.cx-sources .cx-srcline a{display:inline-flex; align-items:center; gap:5px; color:var(--accent-2); text-decoration:none;}
+.cx-sources .cx-srcline a:hover{color:var(--accent);}
+.cx-sources .cx-srcline a svg{width:12px; height:12px;}
+.cx-sources .rel{font-family:var(--sans); font-size:12px; color:var(--muted); text-transform:none; letter-spacing:0;}
+.cx-hint{font-size:12.5px; line-height:1.5; color:var(--muted); margin:0;}
+.cx-hint b{color:var(--body);}
+.cx-hint a{color:var(--accent-2);}
+.cx-none{color:var(--muted); font-style:italic;}
+
+.cx-empty{text-align:center; color:var(--muted); font-size:15px; padding:60px 0;}
+
+@media print{
+  .bar,.cx-filter{display:none !important;}
+  .cx-grid{grid-template-columns:1fr 1fr;}
+  .cx-card{break-inside:avoid; box-shadow:none;}
+  .cx-card,.pill,.svc,.chip{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+}
+`; }
+
+const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) main();

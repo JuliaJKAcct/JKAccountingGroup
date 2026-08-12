@@ -1,0 +1,36 @@
+{
+  "id": 3,
+  "display_name": "Contact us",
+  "name": "Contact us",
+  "url": "/legacy/contactus-2024",
+  "page_id": [
+    3,
+    "Contact Us (legacy 2024 default)"
+  ],
+  "controller_page_id": false,
+  "new_window": false,
+  "sequence": 60,
+  "website_id": false,
+  "parent_id": [
+    1,
+    "Default Main Menu"
+  ],
+  "child_id": [],
+  "parent_path": "1/3/",
+  "is_visible": true,
+  "group_ids": [],
+  "is_mega_menu": false,
+  "mega_menu_content": false,
+  "mega_menu_classes": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-24 17:38:30",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-07-10 13:25:19",
+  "theme_template_id": false
+}

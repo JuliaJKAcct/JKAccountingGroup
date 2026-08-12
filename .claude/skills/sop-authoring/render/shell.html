@@ -1,0 +1,56 @@
+<title>{{TITLE}}</title>
+<style>
+{{STYLE}}
+</style>
+
+{{BODY}}
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var root = document.documentElement;
+
+  // Theme toggle: default follows system; explicit choice wins.
+  function currentIsDark(){
+    var t = root.getAttribute('data-theme');
+    if(t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  var btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.addEventListener('click', function(){
+      root.setAttribute('data-theme', currentIsDark() ? 'light' : 'dark');
+    });
+  }
+  var printBtn = document.getElementById('printBtn');
+  if(printBtn){ printBtn.addEventListener('click', function(){ window.print(); }); }
+
+  // Scroll reveal (enhancement; content visible without JS)
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(reduce || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  // TOC active-section highlight
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var map = {};
+  links.forEach(function(a){ var id=a.getAttribute('href').slice(1); map[id]=a; });
+  var secs = Array.prototype.slice.call(document.querySelectorAll('main .doc, #glance'));
+  if('IntersectionObserver' in window && links.length){
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var a = map[e.target.id];
+        if(!a) return;
+        if(e.isIntersecting){ links.forEach(function(l){ l.classList.remove('active'); }); a.classList.add('active'); }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    secs.forEach(function(s){ if(s.id) so.observe(s); });
+  }
+})();
+</script>

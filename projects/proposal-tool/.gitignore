@@ -1,0 +1,14 @@
+# Local generation artifacts — never commit these.
+# The canonical blank templates live in templates/; regenerate as needed.
+generator-scripts/node_modules/
+generator-scripts/package-lock.json
+generator-scripts/output/
+generator-scripts/*.docx
+generator-scripts/*.pdf
+/tmp/pricing_wip.xlsx
+
+# Built tool artifacts (self-contained, regenerate with tools/build.mjs) — commit the .src.html, not these
+tools/business-tax-engagement-letter.html
+tools/pricing-calculator.html
+tools/pricing-calculator.artifact.html
+tools/monthly-proposal-generator.html

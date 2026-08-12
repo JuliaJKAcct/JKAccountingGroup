@@ -1,6 +1,14 @@
 # SOP: Business Tax Receipt — City of Hollywood + Broward County
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-06
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-07-29
+>
+> 🔍 **In review (Jul 2026):** Lilian is doing a final detailed read-through after a
+> major restructuring round (flowchart, two-fees box, uploads checklist, email map).
+> Her structure preferences from that round are captured in the
+> [`sop-authoring` skill](../../.claude/skills/sop-authoring/) (tracking:
+> [BACKLOG IDEA-14](../../BACKLOG.md#idea-14--sop-authoring-skill-how-lilian-wants-sops-structured));
+> update the skill with anything her final review changes. Remove this note when
+> she signs off.
 
 The complete, self-contained procedure for getting a Florida Business Tax
 Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
@@ -12,6 +20,29 @@ screen, every link, and the caveats. Everything for this task lives here.
 > (Google Drive / Double / QuickBooks) — **not** in this repo. Copy the blank
 > intake at the bottom into the client's folder there and fill it in. This repo
 > keeps only the reusable procedure + the blank template.
+
+---
+
+## The process at a glance
+
+Two receipts, in order — **county first, then city** — each with a wait and a
+payment. The map below is the whole flow; the numbered sections after it are the
+detail.
+
+```mermaid
+flowchart TD
+  A["Intake + zoning gate (§0–§1)"] --> B["① COUNTY — apply on BTExpress (§2 · Step A)"]
+  B --> C["Click the confirm link in the 1st email"]
+  C --> D["Wait ~24–48h → 2nd email: pay the county balance"]
+  D --> E["Pay county → print the County BTR ✓"]
+  E --> F["② CITY — apply on LBTR · needs the active county account (§2 · Step B)"]
+  F --> G["Pay city: $25 + classification tax (PayPal)"]
+  G --> H{"City review"}
+  H -->|"needs fixing: category / license / difference"| I["Send docs or pay the difference"]
+  I --> J["City issues + mails the BTR ✓"]
+  H -->|"looks good"| J
+  J --> K["Post both receipts · calendar the Sept 30 renewal"]
+```
 
 ---
 
@@ -72,27 +103,95 @@ whether the business is even allowed at the address):
 The City of Hollywood application **requires an active Broward County Tax
 Collector account** as supporting documentation, so do the **county** first.
 
+> 💵 **What you pay — two separate receipts, two separate fees.** A Hollywood
+> business needs **two** Business Tax Receipts, issued by **two different
+> governments**, and **each charges its own fee — paying one does not cover the
+> other**:
+>
+> **1. City of Hollywood (LBTR)** — a **$25 non-refundable** application fee
+> **plus** the local business tax set by your classification (§3B Screen 1). For a
+> small licensed business (0–1 worker) this is roughly **$120 total** (e.g. $25 +
+> ~$95 tax) — the exact tax depends on the category. Paid by card (PayPal) at
+> submission.
+>
+> **2. Broward County (BTExpress)** — a **separate** county business tax paid to
+> the Broward County Tax Collector, usually **much smaller** (often a few tens of
+> dollars, e.g. ~$30–$45). It is billed **after** the county approves (the second
+> `no-reply@grantstreet.com` email) and must be paid before the county receipt is
+> issued (see §7).
+>
+> **Bottom line:** to be fully covered you make **two separate payments** in **two
+> separate systems** — neither replaces the other, and the 50% first-year rule
+> (§4) can apply to each. Amounts here are approximate and depend on
+> classification/year; always verify the exact amount shown at submission.
+
+> 📧 **Use the firm's own email as the applicant/contact email — never the
+> client's.** On **both** applications (county BTExpress and city LBTR), put the
+> firm's email address (e.g. Julia's firm address) in the email / contact-email
+> field. Every confirmation *and* every follow-up the agency sends — a wrong
+> category, a "provide your state license", pay-the-difference instructions, and
+> the "Track Your Application" status links — is emailed to whatever address is
+> on the application. If the client's email is used, all of that lands in the
+> client's inbox and stalls the filing while you chase them to find it and
+> forward it. Keeping the firm email on the application keeps the whole thread
+> with the team so we can respond the same day. (For the exact emails you'll
+> receive and where to check status, see §7.)
+
+### Documents to have ready (uploads)
+
+Have these as **PDFs** before you start — you upload them *inside* the
+applications. **Both** applications ask for documents:
+
+**County (BTExpress) uploads:**
+- **Entity proof** — Articles of Organization/Incorporation, **or** the Fictitious
+  Name (DBA) Registration from Sunbiz.
+- **State license / certification** — only if the activity is regulated (the
+  13-question Screen-4 questionnaire, §3A, tells you which agency's license to attach).
+
+**City (Hollywood LBTR) uploads** *(PDF only, ≤ 10 MB each)*:
+- **Proof of location** — a signed lease **or** proof of ownership (property tax
+  bill, warranty deed, bill of sale, insurance certificate, or utility bill). If
+  the applicant is a **sub-tenant**, have the **master lease** (owner ↔ master
+  tenant) ready alongside the sublease — see the sub-tenant pitfall in §5.
+- **Entity proof** — Articles of Incorporation **or** Fictitious Name Registration.
+- **State license** — if the activity is regulated.
+
+> The **city** always requires proof-of-location + entity proof; the **county's**
+> uploads depend on your Screen-4 answers (a regulated activity attaches its state
+> license). Screen-by-screen detail is in §3.
+
 ### Step A — Broward County (BTExpress)
 Apply online: <https://broward.county-taxes.com/btexpress>
 (start page: <https://broward.county-taxes.com/tcb/app/btexpress/main/start_page>)
-Processing: **24–48 hours** after you click the emailed confirmation link.
-Screens: see §3A.
+After you submit, you must **click the confirmation link** in the first email;
+then, ~**24–48 hours** later, a **second email tells you to pay** — submitting
+the form is *not* the end (see §7 for the full email flow, and note the payment
+email can hide in Gmail's **"Updates" tab**). Screens: see §3A.
 
 ### Step B — City of Hollywood (LBTR)
 Apply online: <https://apps.hollywoodfl.org/LbtrOnline/>
 Info page: <https://hollywoodfl.org/218/Local-Business-Tax>
-Needs: the active county account (Step A), Sunbiz entity/DBA docs, proof of the
-location (lease/deed/tax bill/utility bill), state license if regulated, CU
-(unless single-family/condo & genuinely home-based — see §1), and the **$25
-non-refundable** processing fee **+ the local business tax** (amount set at
-submission). Receipt is mailed in ~1 week. Screens: see §3B.
-Paper alternative (commercial locations):
+
+**You need, in hand:**
+- The **active county account** (from Step A)
+- **Sunbiz** entity / DBA documents
+- **Proof of the location** (signed lease, deed, tax bill, or utility bill)
+- **State license**, if the activity is regulated
+- **Certificate of Use (CU)** — unless single-family/condo & genuinely home-based (see §1)
+- The **$25 non-refundable** processing fee **+ the local business tax** (amount set at submission)
+
+The receipt is mailed in ~1 week. Screens: see §3B. Paper alternative (commercial
+locations):
 <https://www.hollywoodfl.org/DocumentCenter/View/12443/Business-Tax-Receipt-Commercial-Location-Application>.
 
-### Step C — After issuance
-Post the receipt(s) at the place of business and **calendar the Sept 30
-renewal** (tax year runs Oct 1–Sep 30; a first-time receipt issued on/after
-Apr 1 pays only **50%** of the annual tax).
+### Step C — Once you have the receipt(s) in hand
+
+"Issuance" just means the city and county have **granted** the receipt(s). Once
+you have each one:
+- **Post the receipt at the place of business** — Florida requires it to be displayed.
+- **Calendar the Sept 30 renewal.** The tax year runs **Oct 1 – Sep 30**, so every
+  receipt expires Sept 30 and must be renewed each year. (A first-time receipt
+  issued on/after Apr 1 pays only **50%** of the annual tax — see §4.)
 
 ### Also — state & federal registrations (only what the activity requires)
 Not part of the BTR itself, but frequently needed alongside it:
@@ -149,8 +248,9 @@ triggers a specific license requirement to upload:
 12. Regulated by the **Broward County Health Department** — tanning, tattoo, body piercing?
 13. Regulated by **any other state agency** not listed above?
 
-*Still to capture on the county side: the document **upload**, **fee/payment**,
-and **email-confirmation** screens — the flow does not end at the questionnaire.*
+*Still to capture on the county side: the in-app document **upload** and
+**fee/payment** screens (the emailed confirmation + payment flow is now
+documented in §7) — the flow does not end at the questionnaire.*
 
 ### 3B. City of Hollywood LBTR (screen-by-screen)
 
@@ -172,12 +272,13 @@ Address** and **Folio Number** auto-fill from the address you enter.
 - **Company Type** (dropdown — LLC, Partnership, Corp, etc.)
 - **Business Name**; **Business DBA**
 - **Mailing Address** (checkboxes: "Same as Site Address?", "Non-US Mailing?") + lines / city / state / zip
-- **Phone**, **Cell Phone**, **Email**
+- **Phone**, **Cell Phone**, **Email** ← put the **firm's email** here, not the client's (see §2)
 - **ID Type: Social Security # or Federal EIN** (required by state law) + the EIN/SSN field
 - **Describe your business in detail** (be specific — products/goods/services)
 - **Website**; **Garbage Service** (dropdown)
 - **Contact Information:** Contact Name (First / MI / Last), Contact Title, and
-  contact address/phone/cell/email (checkbox "Same as Business Info?")
+  contact address/phone/cell/email (checkbox "Same as Business Info?") — again,
+  use the **firm's email** for the contact email (see §2)
 
 **Screen 3 — Documentation + Certification:**
 - **Upload — proof of location:** signed lease **or** proof of ownership
@@ -206,7 +307,8 @@ Address** and **Folio Number** auto-fill from the address you enter.
 - **Tax year:** Oct 1 – Sep 30. Receipts **expire Sept 30**; renew before then.
 - **50% rule:** a **first-time** receipt issued **on/after April 1** pays half the
   annual tax (Fla. Stat. § 205.0535 / § 205.053).
-- **Per receipt:** the fee applies **city and county**, one per location/category.
+- **Per receipt:** the fee applies **city and county** — two separate fees, one
+  per location/category (see the "what you pay" box in §2 for what each costs).
 - City processing fee: **$25 non-refundable** + the classification-based tax.
 - Late renewals carry escalating statutory penalties (Fla. Stat. § 205.053) —
   verify the current schedule if filing late.
@@ -220,8 +322,39 @@ Address** and **Folio Number** auto-fill from the address you enter.
   it exact at intake.
 - **Regulated activity without the matching license.** Won't issue until the
   license/competency is in hand and the **name + address match** the application.
+- **Putting the client's email on the application.** Use the **firm's email** in
+  the applicant/contact-email field (see §2) so confirmations and the agency's
+  follow-up requests come straight to the team — not stuck in the client's inbox.
+  Chasing a client to find and forward a city/county email stalls the whole filing.
 - **Treating the BTR as zoning approval.** It isn't (see §3B certification) —
   don't file for a non-resident commercial use of a residential parcel (see §1).
+- **Paying a category-difference balance and stopping.** When the city corrects
+  the classification and bills the difference by email, paying it is **not** the
+  last step — the reviewer issues and sends the receipt only **after you reply to
+  confirm the payment**. Pay, then notify them, or the receipt never comes (see §7).
+- **Sub-tenant proof of location gets rejected — "signed agreement between
+  sublessee and the property owner."** If the applicant is a **sub-tenant**
+  (leasing from a master tenant, not directly from the property owner), a signed
+  sublease alone can still get bounced: the city's follow-up email (§7) may state,
+  as boilerplate, that *"sublessees operating a business are required to provide a
+  signed agreement between sublessee and the property owner"* — even though a
+  valid sublease was already submitted. This happens because the reviewer's
+  template assumes a direct landlord ↔ tenant relationship and doesn't anticipate
+  a master-tenant + sub-tenant chain; a document directly between the sub-tenant
+  and the property owner may genuinely not exist (the owner's only contractual
+  relationship is with the master tenant).
+  - **Resolution:** reply with **both** documents together, to show the complete
+    chain of the right to occupy: (a) the master lease between the property owner
+    and the master tenant, and (b) the sublease between the master tenant and the
+    sub-tenant applicant. Explain in the email why no direct owner-to-sub-tenant
+    lease exists.
+  - **Fallback if the city still insists** on something signed directly by the
+    property owner: a short **landlord consent / acknowledgment letter** (not a
+    full lease) — one page, signed by the property owner, acknowledging the
+    sub-tenant's occupancy — is far easier to obtain than a new lease and
+    satisfies the literal wording of the requirement.
+  - *First observed 2026-07, on a sub-tenant applicant's City of Hollywood
+    filing — see client-intelligence for the specific case.*
 - **Missing the Sept 30 renewal.**
 
 ---
@@ -239,6 +372,89 @@ Address** and **Folio Number** auto-fill from the address you enter.
 | FL Office of Financial Regulation | Money services, lending, investment advisers, collections | <https://flofr.gov> |
 | FL Department of Revenue | Sales tax (DR-1) / reemployment tax | <https://floridarevenue.com> |
 | Broward County Property Appraiser | Tangible property (DR-405) / zoning lookup | <https://bcpa.net> |
+
+---
+
+## 7. What you'll receive — emails & where to check status
+
+Every confirmation, status update, and request lands by **email — to whatever
+address was entered on the application** (so always use the firm's, see §2).
+Keep all of them. Here is each email to expect, what it means, and where to
+check status.
+
+### County (Broward) — from `no-reply@grantstreet.com`
+> **The county is a two-email process with a wait in between — submitting the
+> form is NOT the end.** One email to *confirm* the submission, then (a few days
+> later) a *second* email telling you to **pay**. Watch for both.
+
+1. **"Broward County — Confirmation Required for Submitted BTExpress™
+   Application"** — arrives right after you submit. It contains a **link you must
+   click to confirm the submission** — the application is not actually sent for
+   processing until you click it. This is a submission step, **not** an approval.
+2. **"Broward County — Your BTExpress™ Application"** — arrives **a few days
+   later** (~24–48 h after you confirm). This is the **approval — and the email
+   that tells you to pay** (*"…has been approved… the full balance must be
+   paid"*). ⚠️ **This email can land in Gmail's "Updates" tab, not the Primary
+   inbox**, so it's easy to miss and assume you're done — you are not done until
+   you pay. Pay online (the *"review the details of your account"* / *"submit
+   payment"* links), then use **"Print Business Tax Receipt."**
+
+**Check county status / pay:** the links in the approval email
+(`county-taxes.net/broward/business-tax`), or the Broward Tax Collector
+business-tax search at <https://broward.county-taxes.com>. If you don't see the
+payment email a few days after confirming, **check the Gmail "Updates" tab** and
+search `from:no-reply@grantstreet.com`.
+
+### City (Hollywood) — from `paybusinesstaxreceipt@hollywoodfl.org`
+1. **"Track Your Local Business Tax Receipt Application #\<ID> for \<BUSINESS>"**
+   — arrives right after you submit the city application. *"Thank you for
+   submitting… **Please keep this email**."* Shows the **Application ID, Folio,
+   Business Name, Street Address, and Application Status** (e.g. *"Initiated"*),
+   with three links: **Check Status · Make a Payment · Upload a Document**. This
+   is *the* email to keep for tracking.
+2. **"Status Update for Local Business Tax Receipt Application #\<ID> for
+   \<BUSINESS>"** — arrives as the status changes (*"…will be reviewed by City
+   staff"*). Same three links.
+
+**Check city status / pay / upload:** the **Check Status / Make a Payment /
+Upload a Document** links in those emails, or the city's **"Check Application
+Status"** page at <https://apps.hollywoodfl.org/LbtrOnline/> (needs the
+Application ID / Folio).
+
+### City follow-up — only if something needs fixing — from `BusinessTax@hollywoodfl.org` (or a Treasury reviewer directly, e.g. `tlloyd@hollywoodfl.org`)
+- **"BUSINESS TAX APPLICATION #\<ID> - \<ADDRESS> - \<BUSINESS>"** — a
+  **personal** email from a staff member (may cc, or come **directly from**, a
+  Treasury revenue analyst, e.g. `tlloyd@hollywoodfl.org`), sent **only if there's
+  an issue**: wrong category, a state license they need you to provide, or a
+  pay-the-difference balance. Reply with exactly what they ask (e.g. the state
+  license PDF) to move forward.
+- **Pay-the-difference for a category change — how it actually completes.** After
+  you send a missing license and the city **re-categorizes** the business, the
+  reviewer emails a **due balance for the corrected category** with a **payment
+  link** ("Renew Local Business Tax") and the **business-tax account number**. Two
+  things to know:
+  1. **Pay this balance through the City's online payment center** (a card payment
+     on the city's site — the "Renew Local Business Tax" link) — a **different
+     channel from the PayPal fee at submission**. The confirmation is a **"City of
+     Hollywood Treasury Department"** page/email with a **reference number** — save
+     it with the file.
+  2. **The receipt is not issued automatically.** **Reply to the reviewer to
+     confirm you paid** — they then **email the tax receipt**. If you pay but never
+     notify them, the receipt won't come.
+
+### Payment receipt
+The **city application fee (at submission) is paid by card through PayPal**, so
+that receipt is a **PayPal "Order Confirmation"** email (`noreply@paypal.com`). A
+**later category-difference balance** (see the follow-up above) is instead paid
+through the **City's online payment center**, and its receipt is a **"City of
+Hollywood Treasury Department"** confirmation with a **reference number**. Save
+whichever you get with the application.
+
+> ⚠️ **These emails follow the email on the application.** If the client's email
+> was entered, the firm never receives the Track / Status emails and **cannot
+> check status** — exactly what happened on a city application where the client's
+> email was used (no tracking email reached the firm inbox). Use the firm's email
+> every time (see §2).
 
 ---
 

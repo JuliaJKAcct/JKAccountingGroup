@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will You Owe the IRS a Surprise Tax Bill? | JK Accounting Group</title>
+<meta name="description" content="A free 1-minute calculator for business owners in the US. When you work for yourself, no one takes tax out for you. See what you may owe the IRS — before it becomes a surprise.">
+<link rel="icon" href="../../../../brand/logo/favicon/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lead-magnets.css">
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the calculator</a>
+
+<header class="appbar">
+  <div class="wrap">
+    <a class="brandmark" href="../index.html" aria-label="JK Accounting Group — all tools">
+      <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    </a>
+    <a class="nav-cta" href="#book">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="lm-hero">
+    <div class="wrap">
+      <div class="lm-hero-grid">
+        <div class="hero-content">
+          <p class="kicker">Free calculator · 1 minute</p>
+          <h1>Will you owe the IRS a <span class="em">surprise tax bill?</span></h1>
+          <p class="lede">When you work for yourself, no one takes tax out of your money for you. You have to pay it yourself. See what you may owe — before it becomes a surprise.</p>
+          <p class="hero-trust">
+            <span>By JK Accounting Group</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <span>For business owners in the US</span>
+          </p>
+          <div class="founder-chip">
+            <img src="../assets/img/julia-ivory.png" alt="Julia, founder of JK Accounting Group">
+            <p class="t"><b>Built with Julia</b>Founder · speaks your language</p>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <img src="../assets/img/julia-ivory.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="wrap">
+      <div class="tool-card reveal">
+        <div class="tool-head">
+          <h2>Try it with your numbers</h2>
+          <p>Nothing is saved and no email is needed. You will see your answer right away.</p>
+        </div>
+
+        <form id="calc" novalidate>
+          <div class="tool-fields">
+            <div class="tool-field" id="f-profit">
+              <label for="profit">What will your business earn this year?</label>
+              <div class="money">
+                <span class="cur" aria-hidden="true">$</span>
+                <input type="text" inputmode="numeric" id="profit" name="profit" placeholder="90,000" autocomplete="off">
+              </div>
+              <p class="help">After your business costs. This is the money you keep.</p>
+              <p class="err">Please enter what your business will earn.</p>
+            </div>
+
+            <div class="tool-field" id="f-status">
+              <label for="status">How do you file your taxes?</label>
+              <select id="status" name="status">
+                <option value="single">On my own (single)</option>
+                <option value="mfj">Together with my spouse (married)</option>
+              </select>
+              <p class="help">This changes the tax amount.</p>
+            </div>
+
+            <div class="tool-field full" id="f-paid">
+              <label for="paid">How much have you already paid the IRS this year?</label>
+              <div class="money">
+                <span class="cur" aria-hidden="true">$</span>
+                <input type="text" inputmode="numeric" id="paid" name="paid" placeholder="0" autocomplete="off">
+              </div>
+              <p class="help">Any tax payments you have already sent this year. If none, leave it at 0.</p>
+            </div>
+          </div>
+
+          <div class="tool-actions">
+            <button type="submit" class="btn cta lg">Show what I may owe</button>
+            <span class="hint">Takes about a minute.</span>
+          </div>
+        </form>
+
+        <div class="tool-result" id="result" hidden aria-live="polite">
+          <p class="result-badge">Your estimate</p>
+          <p class="result-headline" id="r-headline"></p>
+          <p class="result-explain" id="r-explain"></p>
+          <div class="result-compare" id="r-compare">
+            <div class="rc">
+              <div class="rc-lbl">Estimated tax for the year</div>
+              <div class="rc-fig" id="r-total"></div>
+              <div class="rc-sub">Income tax plus self&#8209;employment tax.</div>
+            </div>
+            <div class="rc">
+              <div class="rc-lbl">Still to pay</div>
+              <div class="rc-fig" id="r-owe"></div>
+              <div class="rc-sub">After what you have already paid.</div>
+            </div>
+          </div>
+          <div class="result-note" id="r-note"></div>
+          <div class="result-cta">
+            <a class="btn cta" href="#book">Plan for this the smart way — book a free call <span class="arw" aria-hidden="true">&rarr;</span></a>
+            <span class="note">A 20&#8209;minute call. No cost, no pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goodto">
+    <div class="wrap">
+      <div class="goodto-grid">
+        <div class="reveal">
+          <hr class="ledger">
+          <h2>What new owners miss</h2>
+          <p class="intro">In plain words, so nothing catches you off guard.</p>
+        </div>
+        <ul class="nod-list reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>No one takes tax out for you.</b> At a job, your employer sends tax to the IRS from each paycheck. When you work for yourself, that is now your job.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>The IRS wants it four times a year.</b> Not once. If you wait until tax time, the bill can be large — and there can be a penalty for paying late.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>You can plan for it.</b> When you set money aside as you earn, tax time is calm — no surprise, no scramble. That is what we set up for you.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap">
+      <div class="founder-feature reveal">
+        <div class="ph">
+          <img src="../assets/img/julia-navy.png" alt="Julia, founder of JK Accounting Group">
+        </div>
+        <div>
+          <h3>Hi, I'm Julia.</h3>
+          <p class="role">Founder, JK Accounting Group<span class="langs">English · Russian · Ukrainian</span></p>
+          <p class="bio">A surprise tax bill is one of the most stressful things for a new business owner in the US — especially if the tax system where you come from worked differently.</p>
+          <p class="bio">We plan your tax through the year, so nothing is a shock in April. This tool gives you a quick idea; I would be glad to build the real plan with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead" id="book">
+    <div class="wrap">
+      <div class="lead-grid">
+        <div class="lead-aside">
+          <h2>Never be surprised by a tax bill again.</h2>
+          <p class="lede">Send us your details and we will help you plan — in English, Russian, or Ukrainian. Or book a free 20&#8209;minute call.</p>
+          <ul class="lead-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Know what to set aside, every month.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Pay the IRS on time and avoid penalties.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>A real person who speaks your language.</span>
+            </li>
+          </ul>
+          <p class="wa-alt">
+            <span class="wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg></span>
+            Prefer WhatsApp? <a href="#REPLACE-WITH-WHATSAPP">Message us here</a>
+          </p>
+        </div>
+
+        <!-- NOTE: form submission endpoint not wired yet — replace action + method. -->
+        <form class="form-card" action="#REPLACE-WITH-ENDPOINT" method="post">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+              <p class="help">Optional. We will use whatever is easiest for you.</p>
+            </div>
+            <div class="field">
+              <label for="lang">Best language for you</label>
+              <select id="lang" name="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn cta lg">Send my details</button>
+              <a class="btn secondary" href="#REPLACE-WITH-BOOKING-URL">Or book a call now</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <svg class="mk" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g></svg>
+      <h2>Tax time can be calm.</h2>
+      <p class="tag">We plan your tax through the year, so there is no surprise and no scramble. Clearly, in your language.</p>
+      <div class="actions">
+        <a class="btn cta lg" href="#book">Book a free call <span class="arw" aria-hidden="true">&rarr;</span></a>
+        <a class="btn secondary lg" href="../index.html">See our other free tools</a>
+      </div>
+      <p class="loc">Miami · Fort Lauderdale · Online</p>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><b>General information, not tax advice.</b> This calculator gives a simple estimate using 2026 tax rates and does not cover every part of your taxes. Your real bill depends on your full situation. Please talk to us before you rely on this.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group"><g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1.4"></circle><g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g><text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#ECE6DA">JK Accounting Group</text><text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#CFA268">TAX · BOOKKEEPING · CFO</text></svg>
+    <p>Miami · Fort Lauderdale · Online</p>
+    <p class="ll">Bookkeeping · Taxes · CFO — in English, Russian &amp; Ukrainian</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn cta" href="#book">Book a free call</a>
+  <a class="sticky-wa" href="#REPLACE-WITH-WHATSAPP" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.32-1.95 1.36-.5.05-.97.23-3.27-.68-2.76-1.09-4.5-3.94-4.64-4.13-.13-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.56.82 1.94.89 2.08.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.87.27.14.44.2.51.31.07.12.07.66-.17 1.34z"/></svg>
+  </a>
+</div>
+
+<script src="../assets/lead-magnets.js"></script>
+<script>
+(function () {
+  "use strict";
+  // 2026 figures — see TAX-FIGURES-TO-VERIFY.md
+  var WAGE_BASE = 184500;
+  var STD = { single: 16100, mfj: 32200 };
+  var BRACKETS = {
+    single: [[12400,0.10],[50400,0.12],[105700,0.22],[201775,0.24],[256225,0.32],[640600,0.35],[Infinity,0.37]],
+    mfj:    [[24800,0.10],[100800,0.12],[211400,0.22],[403550,0.24],[512450,0.32],[768700,0.35],[Infinity,0.37]]
+  };
+  function seTax(profit) {
+    var base = profit * 0.9235;
+    return 0.124 * Math.min(base, WAGE_BASE) + 0.029 * base;
+  }
+  function incomeTax(taxable, status) {
+    var b = BRACKETS[status], tax = 0, prev = 0;
+    for (var i = 0; i < b.length; i++) {
+      var cap = b[i][0], rate = b[i][1];
+      if (taxable > cap) { tax += (cap - prev) * rate; prev = cap; }
+      else { tax += (taxable - prev) * rate; break; }
+    }
+    return tax;
+  }
+
+  var form = document.getElementById("calc");
+  var result = document.getElementById("result");
+  var fProfit = document.getElementById("f-profit");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var profit = LM.num(document.getElementById("profit").value);
+    var status = document.getElementById("status").value;
+    var paid = LM.num(document.getElementById("paid").value);
+    if (isNaN(paid) || paid < 0) paid = 0;
+
+    fProfit.classList.remove("invalid");
+    if (!(profit > 0)) { fProfit.classList.add("invalid"); result.hidden = true; return; }
+
+    var se = seTax(profit);
+    var taxable = Math.max(0, profit - (se / 2) - STD[status]);
+    var inc = incomeTax(taxable, status);
+    var total = se + inc;
+    var owe = Math.max(0, total - paid);
+
+    document.getElementById("r-total").textContent = LM.money(total);
+    document.getElementById("r-owe").textContent = LM.money(owe);
+
+    var headline = document.getElementById("r-headline");
+    var explain = document.getElementById("r-explain");
+    var note = document.getElementById("r-note");
+    headline.classList.remove("warn");
+
+    if (owe >= 1000) {
+      headline.classList.add("warn");
+      headline.innerHTML = 'You could owe about <span class="big">' + LM.money(owe) + '.</span>';
+      explain.textContent = "This is income tax plus self-employment tax on your business money. No one is setting this aside for you — so you need to send it to the IRS yourself, usually four times a year.";
+      note.innerHTML = "<b>Because you may owe more than $1,000, the IRS expects payments during the year — not just at tax time.</b> We can set up a simple plan so you always know what to save and when to pay.";
+    } else if (owe > 0) {
+      headline.innerHTML = 'You may owe about <span class="big">' + LM.money(owe) + '</span> more.';
+      explain.textContent = "You have already paid most of your tax for the year. A smaller amount is left. It is still worth checking so there is no surprise.";
+      note.innerHTML = "<b>You are close.</b> A quick review makes sure you have set aside enough and paid on time.";
+    } else {
+      headline.innerHTML = 'You look covered for now.';
+      explain.textContent = "Based on what you have already paid, you have covered your estimated tax for the year. Keep setting money aside as you earn, so it stays that way.";
+      note.innerHTML = "<b>Nice.</b> We can double-check your numbers and keep your plan on track for the rest of the year.";
+    }
+
+    LM.showResult(result);
+  });
+})();
+</script>
+</body>
+</html>

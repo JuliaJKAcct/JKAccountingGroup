@@ -60,13 +60,19 @@ The firm's **business-card grammar**, translated to email: a two-panel card.
   bronze **diamond ◆**, the mono role kicker, a hairline, the **DIRECT / EMAIL /
   WEB label rows** (mono uppercase labels in mid-teal, values in sans —
   this label-row device is what gives it the card's finish), and one light bronze
-  **booking link** — a text link, not a button, to keep the signature low. Kept
+  **booking link** — a text link, not a button, to keep the signature low. It points to
+  the firm's contact page (`https://www.jkaccountinggroup.com/contactus`) by default —
+  the firm-wide destination — unless a teammate has a personal booking link. Kept
   deliberately short (no tagline block) so it reads as a signature, not a card.
 - **Card surface.** Both panels carry an explicit `bgcolor` + inline
   `background-color` (teal and paper), and the card has a 1px `#DAD4C6` hairline
   and soft radius. The explicit surfaces are the dark-mode fix: our palette
   mandates dark-teal text, which a dark-mode client would render invisible on a
   transparent ground — the fixed panel colors keep everything legible everywhere.
+- **Proportion.** The standard card sits at roughly `320×148px` (~2.15:1), reading as a
+  business card. If a role drops the booking link (support / admin), rebalance the vertical
+  spacing so the card holds ~148px / ~2.2:1 — don't ship the squished ~2.7:1 version. See the
+  [`email-signature` skill](../../../.claude/skills/email-signature/)'s "no-booking-link variant."
 - **One image only:** the reversed Medallion (`JK-medallion-reversed-512.png`) in Panel A.
   Everything else is live text, so the signature reads fully even before the image
   loads (or if a client blocks it).

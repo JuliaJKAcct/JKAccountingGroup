@@ -25,66 +25,77 @@ doesn't live only in chat history.
 referral-offer-strategy/
 ├── README.md        ← you are here
 ├── strategy.md      ← the full strategy: funnel logic, partner positioning,
-│                       Growth Accelerator Series, scorecard design, open questions
+│                       standardized front-offer chassis, Growth Accelerator
+│                       Series, scorecard design, open questions
+├── templates/       ← reusable front-offer checklist deliverables (realtor + agency channels)
+│   ├── operating-business-financial-checklist-en.html / -ru.html  Operating-variant
+│   │                       one-page checklist — the realtor channel's default leave-behind
+│   ├── new-business-launch-checklist-en.html / -ru.html  Pre-Launch checklist (same chassis)
+│   └── realtor-referral-playbook.md / -ru.md  how the partner delivers the checklist
 ├── partner-pitch/   ← leave-behind for the marketing-agency partner conversation
-    ├── one-pager.html         on-brand EN handout (free → $250 credited → monthly
-    │                           ladder, two channels, partner benefits) — print/PDF
-    ├── one-pager-ru.html      native-Russian version of the handout
-    ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
-    │                           Series sessions (themes, take-homes, series close)
-    ├── talk-track.md          plain-language script + Readiness Check timing
-    └── worksheets/            fillable worksheets (interactive + print)
-        ├── readiness-check-ru.html     self-scored readiness quiz (webinar gift)
-        ├── readiness-check-en.html     English version of the readiness quiz
-        ├── margin-calculator-ru.html   true-margin calculator (standalone, kept for later)
-        └── keep-more-checklist-ru.html tax-efficiency checklist (standalone, kept for later)
-├── webinar/          ← standalone lead-gen webinar (diagnostic, one-story spine)
-    ├── webinar-script.md    RU presenter script (v3): one-story spine, ~12 aha
-    │                        moments, 4 belief shifts, self-calc, + one teaching
-    │                        concept/formula per leak — co-host inserts, no "marketing"
-    ├── webinar-script.html   same script as a readable/printable on-brand page
-    ├── webinar-script-en.html  English version of the presenter script (v3, in sync)
-    ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
-    ├── announcement-ru.html  same announcement as a readable/printable page
-    ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
-    │                             partner hands to clients (details · agenda · gift)
-    ├── webinar-overview-candramas-ru.html  one-page RU overview (+ .pdf) FOR the
-    │                             partner (Boris) to review before we co-brand: what the
-    │                             webinar is, the 4 teaching breakdowns, why it helps his
-    │                             clients, and the soft "what's next"
-    ├── webinar-overview-businessclub-ru.html  same one-pager re-cut (+ .pdf) as an
-    │                             IN-PERSON talk topic pitched to the Business Family
-    │                             social club (Hallandale Beach) — co-branded with their
-    │                             recreated BF mark; no "free webinar"/Luma, Date TBD ·
-    │                             7:00 PM · in person
-    ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
-    │                             — a teaching slide (concept + formula) after each of
-    │                             the 4 leaks; arrow/click nav, PDF export
-    ├── webinar-deck-en.html      English version of the slide deck (20 slides, v3, in sync)
-    └── luma/                     Luma (lu.ma) registration setup
-        ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
-        ├── event-ru.md              event-page copy + Luma setup checklist
-        └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
-└── wealth-partner/   ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
+│   ├── one-pager.html         on-brand EN handout (free → $250 credited → monthly
+│   │                           ladder, two channels, partner benefits) — print/PDF
+│   ├── one-pager-ru.html      native-Russian version of the handout
+│   ├── growth-series-ru.html  native-Russian one-pager: the 3 co-hosted Growth
+│   │                           Series sessions (themes, take-homes, series close)
+│   ├── talk-track.md          plain-language script + Readiness Check timing
+│   └── worksheets/            fillable worksheets (interactive + print)
+│       ├── readiness-check-ru.html     self-scored readiness quiz (webinar gift)
+│       ├── readiness-check-en.html     English version of the readiness quiz
+│       ├── margin-calculator-ru.html   true-margin calculator (standalone, kept for later)
+│       └── keep-more-checklist-ru.html tax-efficiency checklist (standalone, kept for later)
+├── webinar/         ← standalone lead-gen webinar (diagnostic, one-story spine)
+│   ├── webinar-script.md    RU presenter script (v3): one-story spine, ~12 aha
+│   │                        moments, 4 belief shifts, self-calc, + one teaching
+│   │                        concept/formula per leak — co-host inserts, no "marketing"
+│   ├── webinar-script.html   same script as a readable/printable on-brand page
+│   ├── webinar-script-en.html  English version of the presenter script (v3, in sync)
+│   ├── announcement-ru.md    ready-to-post RU promo copy (full + short versions)
+│   ├── announcement-ru.html  same announcement as a readable/printable page
+│   ├── invite-candramas-ru.html  co-branded RU webinar invite (+ .pdf export) the
+│   │                             partner hands to clients (details · agenda · gift)
+│   ├── webinar-overview-candramas-ru.html  one-page RU overview (+ .pdf) FOR the
+│   │                             partner (Boris) to review before we co-brand: what the
+│   │                             webinar is, the 4 teaching breakdowns, why it helps his
+│   │                             clients, and the soft "what's next"
+│   ├── webinar-overview-businessclub-ru.html  same one-pager re-cut (+ .pdf) as an
+│   │                             IN-PERSON talk topic pitched to the Business Family
+│   │                             social club (Hallandale Beach) — co-branded with their
+│   │                             recreated BF mark; no "free webinar"/Luma, Date TBD ·
+│   │                             7:00 PM · in person
+│   ├── webinar-deck-ru.html      on-brand RU slide deck (20 slides, v3) to screen-share
+│   │                             — a teaching slide (concept + formula) after each of
+│   │                             the 4 leaks; arrow/click nav, PDF export
+│   ├── webinar-deck-en.html      English version of the slide deck (20 slides, v3, in sync)
+│   └── luma/                     Luma (lu.ma) registration setup
+│       ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
+│       ├── event-ru.md              event-page copy + Luma setup checklist
+│       └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
+└── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
     └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
                                   to clients (who we are · what we do · how we help)
 ```
 
 > **Partner 1 — Candramas LLC** (marketing agency, owner Boris): the
 > `partner-pitch/` collateral + Growth Series (readiness → true margin →
-> keep-more); Readiness Check timing is fixed in `talk-track.md` (client fills in
-> ~5 min, live finance block ~15 min).
+> keep-more), plus the diagnostic `webinar/`; Readiness Check timing is fixed
+> in `talk-track.md` (client fills in ~5 min, live finance block ~15 min).
 > **Partner 2 — Imperial Fund Asset Management** (wealth manager, Yuri Nosenko):
 > a client-facing intro sheet in `wealth-partner/`, positioned as the
 > tax/accounting complement to their investment management.
+> **Realtor channel** — the `templates/` checklists (Operating + Pre-Launch) and
+> the `realtor-referral-playbook`: a print-ready leave-behind a real-estate
+> partner hands a client moving into a new space.
 
 ## Brand & design
 
-The `partner-pitch/` deliverables are built on the Atlas design system
-(teal/bronze/ivory, Source Serif 4 + IBM Plex, the Medallion lockup) via the
-`impeccable` skill — see [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md).
-Any further client-facing asset (landing page, additional worksheets) should
-follow the same system.
+Every client-facing deliverable here — the checklist templates, the
+`partner-pitch/` handouts, the `webinar/` decks and one-pagers, and the
+`wealth-partner/` sheet — is built on the Atlas design system (teal/bronze/ivory,
+Source Serif 4 + IBM Plex, the Medallion lockup) via the `impeccable` skill —
+see [`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md). Any
+further client-facing asset (landing page, additional worksheets) should follow
+the same system.
 
 ## Skills & tooling
 
@@ -95,7 +106,25 @@ there.
 
 ## Outputs
 
-- **`partner-pitch/`** — the first built deliverables, for the marketing-agency
+- **`templates/operating-business-financial-checklist-en.html` / `-ru.html`**
+  — the one-page **Operating**-variant checklist: a "is your business set up
+  the way it should be?" gut-check for a business that already exists (the
+  realtor's typical client, moving into a new space; also the agency channel).
+  Opens with "congratulations on the new space," reframes all 8 boxes to
+  "still right / actually current?", and carries a scannable WhatsApp QR so a
+  printout is actionable. This is the realtor channel's default leave-behind.
+- **`templates/new-business-launch-checklist-en.html` / `-ru.html`** — the
+  one-page, print-ready **Pre-Launch** checklist artifact (same chassis), for
+  the rarer client genuinely *starting* their first business, on brand, no
+  partner-specific redesign needed.
+- **`templates/realtor-referral-playbook.md`** / **`-ru.md`** (native
+  Russian, not machine-translated) — how the partner actually delivers the
+  checklist: four natural trigger moments to pick from (not one rigid
+  script), WhatsApp/text as the default channel (this audience doesn't run
+  on email), and the same-day hand-off of the client's contact info to JKA
+  (the step that turns "gave them a PDF" into an actual referral) rather
+  than a self-serve booking form.
+- **`partner-pitch/`** — the deliverables for the marketing-agency
   partner (Candramas LLC): an on-brand partner handout in English and native
   Russian, a native-Russian Growth Series one-pager (the three co-hosted
   sessions), and a talk-track script. Encodes the decided front-offer (a $250
@@ -111,15 +140,16 @@ there.
   story spine (a coffee shop), ~12 discovery moments, 4 belief shifts, and the
   self-calculated margin, but now **teaches**: after each of the 4 leaks the audience
   gets one plain concept + formula — real margin, cash cushion (in months), monthly
-  close + 3 numbers, and the S-corp math (on $100k profit ≈ $7,500/yr saved). The
-  "marketing spend" framing is gone (growth is framed as "вложения в рост"), and the
-  offer lands as a natural "want me to calc this on your numbers?" Includes the
-  readable script (`.html` + `.md`), a one-page **overview for the partner (Boris)**
-  to review before co-branding (`webinar-overview-candramas-ru.html` + `.pdf`),
-  ready-to-post announcement copy (`announcement-ru.md`), a co-branded partner invite
-  (`invite-candramas-ru.html`), and the on-brand 20-slide deck to screen-share
-  (`webinar-deck-ru.html`). Coffee-shop figures are grounded in real industry data
-  (net margin 5–12%, owner ~$50–65k/yr).
+  close + 3 numbers, and the S-corp vs LLC math (on $100k profit, $15,300 → $7,650
+  tax ≈ $7,650/yr saved). The "marketing spend" framing is gone (growth is framed as
+  "вложения в рост"), and the offer lands as a natural "want me to calc this on your
+  numbers?" Includes the readable script (`.html` + `.md`), a one-page **overview for
+  the partner (Boris)** to review before co-branding (`webinar-overview-candramas-ru.html`
+  + `.pdf`), an in-person **business-club talk-topic** re-cut
+  (`webinar-overview-businessclub-ru.html` + `.pdf`), ready-to-post announcement copy
+  (`announcement-ru.md`), a co-branded partner invite (`invite-candramas-ru.html`), and
+  the on-brand 20-slide deck to screen-share (`webinar-deck-ru.html`). Coffee-shop
+  figures are grounded in real industry data (net margin 5–12%, owner ~$50–65k/yr).
 - **`wealth-partner/`** — a client-facing EN introduction sheet for the
   wealth-manager channel (Imperial Fund Asset Management / Yuri Nosenko),
   designed to be handed to *their clients*: who JK is, what we do, how we help,
@@ -127,13 +157,13 @@ there.
   tax-efficient) and a complimentary-consultation CTA. RU version is a natural
   follow-up.
 
-`strategy.md` remains the decisions-and-open-questions document. Per its §6,
-still open: scoring rubric thresholds, the document/access checklist for the
-paid assessment, Growth Accelerator Series logistics (landing page, promo copy,
-list ownership), English versions of the three worksheets, and pricing for the
-implementation phase. When any of these get built, add them here in an
-obviously-named folder (e.g. `templates/`, `landing-page/`) and update this
-section.
+Still open per `strategy.md` §6: scoring rubric thresholds, the
+document/access checklist for the *paid* assessment, Growth Accelerator
+Series logistics (landing page, promo copy, list ownership), the four
+workshop worksheet templates, and pricing for the assessment/implementation
+phases. Both checklist variants (Pre-Launch and Operating) are built on the
+shared chassis; the marketing-agency onboarding channel can reuse the
+Operating one as-is.
 
 ## Working on this / notes for AI
 

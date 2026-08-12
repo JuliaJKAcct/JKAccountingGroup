@@ -26,7 +26,7 @@ an RU caption (native, not translated), plus 5 hashtags.
 ```
 Plan a 5-slide IG carousel (1080×1350) explaining "[topic]" to Ukrainian/Russian-
 speaking US business owners. Slide 1 hook, slides 2–4 one point each, slide 5 a
-calm CTA to book a free consultation. For each slide: kicker, headline, body, and
+calm CTA to book a free discovery call. For each slide: kicker, headline, body, and
 which brand color/background. Keep the voice reassuring, plain, bicultural.
 ```
 
@@ -47,7 +47,7 @@ teal type, mono attribution line, small monogram.
 ```
 Design a one-page US-Letter flyer for "[service]" aimed at [audience]. Sections:
 kicker headline, 3 plain-language benefits, who it's for, one CTA to book a free
-consultation. Brand colors and type only. Real facts only — flag anything you'd
+discovery call. Brand colors and type only. Real facts only — flag anything you'd
 need me to confirm. 300dpi print-ready.
 ```
 

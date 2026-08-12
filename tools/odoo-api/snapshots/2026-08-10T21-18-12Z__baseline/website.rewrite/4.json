@@ -1,0 +1,22 @@
+{
+  "id": 4,
+  "display_name": "301 - 301 /ua/ -> consultation UA",
+  "name": "301 /ua/ -> consultation UA",
+  "website_id": false,
+  "active": true,
+  "url_from": "/ua/",
+  "route_id": false,
+  "url_to": "/ua/konsultatsiia",
+  "redirect_type": "301",
+  "sequence": 0,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2026-06-16 22:30:05",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-06-16 22:30:05"
+}

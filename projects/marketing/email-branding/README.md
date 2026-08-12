@@ -27,9 +27,15 @@ email-branding/
 ├── INSTALL-GMAIL.md       ← host the images, fill in, paste into Gmail
 ├── preview.html           ← open in a browser to see it all (local paths, sample data)
 ├── signatures/
-│   ├── julia.html         ← Julia's signature, canonical (Medallion via local path; upload it in Gmail)
-│   ├── julia-hosted.html  ← same, but Medallion points at the public URL — paste-and-go install
-│   └── _template.html     ← copy per teammate → signatures/<firstname>.html
+│   ├── julia.html           ← Julia's signature, canonical (Medallion via local path; upload it in Gmail)
+│   ├── julia-hosted.html    ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── lilian.html          ← Lilian's signature, canonical (no booking link)
+│   ├── lilian-hosted.html   ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── liudmyla.html        ← Liudmyla's signature, canonical (no booking link)
+│   ├── liudmyla-hosted.html ← same, but Medallion points at the public URL — paste-and-go install
+│   ├── maria.html           ← Maria's signature, canonical (no booking link)
+│   ├── maria-hosted.html    ← same, but Medallion points at the public URL — paste-and-go install
+│   └── _template.html       ← copy per teammate → signatures/<firstname>.html
 └── templates/
     └── branded-email.html ← full branded email layout (onboarding, newsletters)
 ```
@@ -82,9 +88,9 @@ phone / booking link are filled into their own file when they're rolled out.
 - The one image (the reversed Medallion) is a **PNG**; SVG doesn't render in email.
   It's uploaded in Gmail (Google hosts it) or, once the site is live, hosted at a
   public HTTPS URL. Everything else in the signature is live text.
-- **Bronze is the one accent — never ship the booking button pointing at an empty
-  `{{BOOKING_URL}}`.** Fill it with a real link, or repoint it at `mailto:` until
-  there is one. A dead accent is worse than none.
+- **Bronze is the one accent — never ship the booking link empty.** It defaults to the
+  firm's contact page (`https://www.jkaccountinggroup.com/contactus`); swap it for a
+  personal booking link only when a teammate has one. A dead accent is worse than none.
 - The signature follows the firm's **business-card grammar**: a petrol-teal panel
   (Medallion + wordmark) beside an ivory details panel with the bronze diamond and the
   DIRECT / EMAIL / WEB label rows. Panel color is `#123841` to match the

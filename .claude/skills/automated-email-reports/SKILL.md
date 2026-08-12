@@ -6,7 +6,7 @@ description: Set up a fully automated, unattended recurring email report — dat
 # Automated Email Reports — the setup playbook
 
 Turning *"send me this report automatically every month"* into a working, unattended
-pipeline hits the **same five traps every time**. This skill is the map around them.
+pipeline hits the **same six traps every time**. This skill is the map around them.
 The first time we built one (the `recurring-expense-monitoring` report) we discovered
 each trap the hard way; this captures the fixes so the next one is quick.
 
@@ -29,7 +29,7 @@ exist (the send webhook, the brand system) — a new report mostly reuses them.
   a small **Google Apps Script web app** that the firm already runs — the routine
   POSTs the finished email to it over HTTPS.
 
-## The five traps (and the fix for each)
+## The six traps (and the fix for each)
 
 | # | Trap | Why it bites | Fix |
 |---|---|---|---|
@@ -38,6 +38,7 @@ exist (the send webhook, the brand system) — a new report mostly reuses them.
 | 3 | **Duplicate emails** | An unattended agent can loop (e.g. once per client) or retry, so the report arrives 2–5×. | **Two layers:** (a) the webhook **de-dupes** identical sends (CacheService fingerprint); (b) the prompt says **exactly once — one POST, one recipient, stop on `{"ok":true}`**. |
 | 4 | **Network egress blocks the webhook** | The routine's environment has a network policy; if it doesn't allow the webhook host, the POST fails. | In the routine's **environment settings**, allow `script.google.com` and `script.googleusercontent.com` (a small **Custom** allowlist — you don't need "Full access"). |
 | 5 | **The email loses the brand** | Told to "compose an email," an unattended run improvises generic HTML and the design system disappears. | Commit an **email-safe HTML template** to the repo and tell the run to **fill it**, not invent one. See `reference/` in `recurring-expense-monitoring` for a worked example. |
+| 6 | **The repo copy of the prompt is not the live one** | A web-UI routine holds its **own pasted copy** of the prompt. Editing the version committed to the repo changes nothing, so a change everyone believes shipped keeps not happening — the JK weekend sweep ran three weeks on a superseded instruction this way (2026-08-11). | **Treat re-pasting as part of the edit, not a follow-up:** say it out loud in the same turn, and date the last change that needs it next to the block. ⚠️ **Never paste wholesale** — the repo's copy carries `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders, so carry the real values across or the send dies silently. Better: `update_trigger` (the Routines MCP) takes a `prompt` and can also read the live one back to verify. |
 
 ## Steps
 

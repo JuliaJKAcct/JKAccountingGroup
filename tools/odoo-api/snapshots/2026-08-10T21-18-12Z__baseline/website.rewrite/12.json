@@ -1,0 +1,22 @@
+{
+  "id": 12,
+  "display_name": "301 - about-us-v2 to /about-us",
+  "name": "about-us-v2 to /about-us",
+  "website_id": false,
+  "active": true,
+  "url_from": "/about-us-v2",
+  "route_id": false,
+  "url_to": "/about-us",
+  "redirect_type": "301",
+  "sequence": 0,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2026-07-10 13:25:47",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-07-10 13:25:47"
+}
