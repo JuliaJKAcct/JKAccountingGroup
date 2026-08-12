@@ -212,12 +212,24 @@ README row but are deliberately **not** in the scope table above:
 
 **Editing the prompt below changes nothing on its own.** The Routine at
 **claude.ai/code/routines** holds **its own copy**, pasted in when it was created. Until someone
-opens that Routine and replaces its prompt with the current block, the Saturday run keeps following
-the **old** instructions — including the "commit to your working branch, do NOT merge" line that
-left three weeks of Client Intelligence stranded.
+updates that Routine, the Saturday run keeps following the **old** instructions — including
+*"Commit the client-intelligence changes … to your working branch and push. Do NOT merge to main"*,
+the line that left three weeks of Client Intelligence stranded. (Quoted exactly, so it can be
+searched for in the live Routine to check whether the update has happened.)
 
-**So whenever this block changes, the change is not done until the Routine is re-pasted.** Say so
-out loud to whoever asked, and treat it as part of the task, not a follow-up.
+⚠️ **Do NOT paste this block wholesale — you would break the weekly email.** The block carries
+`<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` as **placeholders**; the real values exist **only inside the
+Routine** and are deliberately absent from this repo (step 4 above). So the update is:
+
+1. **Copy the live Routine's current webhook URL and secret out of its prompt first.**
+2. Paste the block below over the old prompt.
+3. **Put those two real values back** where the placeholders sit.
+
+Skip step 3 and the sweep will merge its Client Intelligence correctly and then **silently fail to
+send the report** — the worst shape of failure, because nothing looks broken.
+
+**So whenever this block changes, the change is not done until the Routine is updated.** Say so out
+loud to whoever asked, and treat it as part of the task, not a follow-up.
 
 **Last change needing a re-paste: 2026-08-11** — the merge-your-own-CI rule, the contradiction
 rule, the seven new clients in scope, and the email becoming a record rather than a request.
