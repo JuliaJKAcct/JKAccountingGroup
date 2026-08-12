@@ -293,13 +293,19 @@ Report, Organizer Status; **skip the EIN / Tax ID property**), `list_notes`,
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
 
 **Plus one source no sweep has ever read: the migrated TaxDome notes.** When the firm moved
-off TaxDome, the notes written by hand on each client's TaxDome profile were kept — they sit
-in a `Notes` folder inside the client's `TaxDome` folder, in **both** Julia's Google Drive and
-Double's file library. These are the richest material available (someone wrote them *about the
-client*, unlike raw email traffic) and **not one client file draws on them**. The backfill is
-scoped in [`automation/taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md);
-read it before touching them, in particular the rule that **the folder a note sits in is not
-evidence of its subject** (below).
+off TaxDome, the notes written by hand on each client's TaxDome profile were kept — reportedly
+in a `Notes` folder under the client's `TaxDome` folder in Double, and mirrored somewhere in
+Julia's Google Drive. ⚠️ **All of that is Lilian's account (2026-08-12), unverified — no
+session has opened one**, and the Drive tree is **not** known to mirror Double's layout, so
+don't conclude a client has none because a guessed path came up empty.
+🔴 **Do NOT pick these up ad hoc inside an ordinary per-client sweep, and never from the
+unattended Saturday routine.** The backfill is a phased, attended job scoped in
+[`automation/taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md),
+and reading the note **content** is currently **blocked** on a question only Lilian or Julia
+can answer — [`double-mcp`](../double-mcp/)'s document rule forbids cross-client reads of
+non-return documents, and says a session may not waive that. Read the backfill doc first; it
+also carries the source tag and the rule that **the folder a note sits in is not evidence of
+its subject** (below).
 
 **Search by BOTH the business name AND each owner/principal name** — in Ping a
 business's meetings are often filed under the owner's personal contact, and one meeting

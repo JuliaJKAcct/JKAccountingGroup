@@ -607,7 +607,10 @@ Notes that save time:
   to know before using them: they are **old by construction**, so they can contradict current
   facts; and **the folder they sit in is not evidence of their subject** — TaxDome ran a
   client's company and personal matters together under the owner's profile, so a company note
-  is routinely filed under the owner. The backfill, and the routing rule, are scoped in
+  is routinely filed under the owner. 🔴 **And reading their CONTENT is not authorised today** —
+  a roster-wide read of non-return documents is what the document rule's **limit 3** forbids
+  and says no session may waive, so it needs Lilian or Julia first. Listing the folders and
+  file **names** is fine. The backfill, the gate and the routing rule are scoped in
   [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md).
 - **`1. Completed Tax organizers` is load-bearing.** Its presence (and the *year* in the
   filename) is how Organizer Status gets set — see
@@ -1090,6 +1093,15 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 - A new **property column** is added or an option is renamed — §1's pointers stay valid, but
   re-run `get_property_columns` rather than trusting any list. Four were added between the July
   and August audits (Ext. Filed, Signature, Financials Ready, Invoice).
+- **The TaxDome `Notes` folder is seen for the first time** — §3 records it on Lilian's
+  account alone (2026-08-12). Phase 1 of
+  [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md)
+  will confirm or correct it; **drop the "reported, not verified" caveat then**, so the
+  warning doesn't become permanent furniture in the one tree sessions navigate by.
+- **The backfill's permission question is answered** — reading those notes is a cross-client
+  read of non-return documents, which the document rule's limit 3 forbids and says no session
+  may waive. When Lilian or Julia rules, **record it in the document rule above**, not only in
+  the backfill doc.
 - The **TaxDome folder structure** is cleaned up or retired — §3 shrinks to the firm's own
   structure.
 - A write pattern bites us (a bad upsert, a broken move) — record the lesson in §6 (write safety) so

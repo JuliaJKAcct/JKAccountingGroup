@@ -34,10 +34,12 @@ list grows.
 
 > ⚠️ **A baseline here says nothing about the migrated TaxDome notes.** This ledger covers
 > Ping, Double, Gmail (and Drive where noted) — **not** the notes carried over from each
-> client's TaxDome profile (`TaxDome > Notes`, mirrored in Julia's Drive). **No client has
-> ever been swept for those**, however recent their baseline reads. The backfill is scoped in
-> [`taxdome-notes-backfill.md`](./taxdome-notes-backfill.md), and its Phase 3 adds a
-> `TaxDome notes` marker to the coverage column as each client is done.
+> client's TaxDome profile. **No client has ever been swept for those**, however recent their
+> baseline reads.
+> **That backfill is tracked entirely in [`taxdome-notes-backfill.md`](./taxdome-notes-backfill.md),
+> not here** — deliberately: the third column below means work **owed**, so a completion
+> marker written into it would read as an outstanding gap and send the next run's catch-up
+> budget at work already done. **Do not add TaxDome rows or markers to this table.**
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
