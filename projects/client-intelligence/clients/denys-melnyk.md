@@ -20,8 +20,8 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
-- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ⚠️ **MONTANA IS NOT CLOSED — but it is not a mystery either.** ✅ **The simplest explanation needs no company at all, and it is almost certainly the right one: he was a Montana RESIDENT in 2024, moved to Washington, and moved on to Florida in May 2025.** Those are different years, so **nothing he told Lilian contradicts the 2024 filing** — she reported what he said about **2025**, and the Montana return is **2024**. ⚠️ **So the live question is not "was he in Montana in 2025" in the abstract — it is WHEN he left.** If that was during 2024, there is no 2025 Montana return; **if it was during 2025, there is a part-year Montana return**, which is a real return with real tax. **One question, one date.** ⓘ **On Lilian's hypothesis (2026-08-12) — that Montana came from one of the COMPANIES being registered there:** her instinct about the companies is **well founded** (Montana registration is a common vehicle/fleet arrangement in trucking, so a Montana entity is entirely plausible), but it does not explain this filing. **A registration-only entity sources no income to Montana, so it would produce NO Montana return at all** — and an entity that genuinely operated there would produce a **nonresident** return, the way Illinois did. **Only living there produces a resident one.** ⚠️ **One caveat worth keeping: the word "resident" is doing all the work, and it came from OUR reading of his 2024 return.** If that reading is wrong, her explanation becomes the right one. Worth re-checking that page before building anything on it. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and he was **locked out of it mid-year after a falling-out with his partner**, which is why he holds no K-1 and no W-2 for money he did receive _(client call, 2026-08-12 — §5, and it is now the item that gates the return)_.
+- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and he was **locked out of it mid-year after a falling-out with his partner — and that company has since FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12)_, which is why he holds **no W-2, no 1099 and no K-1** for money he did receive _(client call, 2026-08-12 — §5, and it is now the item that gates the return)_.
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -103,7 +103,27 @@ was — in Lilian's words — **"something like Midwest Expedited, or something 
 he reported to us in his Google Voice message **is that company's money**, received in the **first
 months of 2025**. Then he **fell out with his partner**, was **blocked from every access to the
 company**, and so **received no K-1 and no W-2** — for income he does not dispute receiving.
+**Nothing at all, in fact: no W-2, no 1099, no K-1** _(Lilian, 2026-08-12)_.
 
+- 🔴 **THE COMPANY FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12 — she added this after the first
+  write-up; the client told her)_. ⚠️ **One part of it is not yet clear and the two versions are
+  different facts: she said "his partner — that company — died, or it filed a bankruptcy", then
+  stated that the client said the COMPANY filed bankruptcy. Whether the PARTNER also died is
+  unconfirmed and is being checked with her.** What the bankruptcy changes:
+  - ⚠️ **The "wait for the 1120-S" route gets much weaker.** A company in bankruptcy frequently
+    stops filing — so **the K-1 may never be produced at all**, not merely be late. That pushes the
+    decision toward the transcript and toward filing on his own figures with **Form 8082**.
+    _(A corporation in bankruptcy stays the taxpayer — there is no separate estate the way there is
+    for an individual — so the obligation survives even where nobody meets it.)_
+  - ⚠️ **It may also open something in HIS favour, and nobody has looked:** if his stock became
+    **worthless** in 2025, §165(g) gives a loss, and if the stock qualifies under **§1244** it is an
+    **ordinary** loss rather than a capital one. **That is money, and it needs his BASIS** — the same
+    unverified figure this file keeps returning to (Form 7203).
+  - **Chapter matters:** a **Chapter 11** reorganisation may keep filing; a **Chapter 7**
+    liquidation usually does not. Worth establishing which, and when it was filed.
+  - ⓘ **And it recasts the "dispute with the partner" story** rather than replacing it — the two can
+    both be true, and the sequence is worth pinning down, since the date he lost access and the date
+    of the bankruptcy are different dates.
 - 🔴 **WHICH "Midwest" is NOT established, and everything below turns on it.** He holds shares in
   **two** companies whose names begin that way — **Midwest Expedited Corp** and **Midwest Truck
   Leasing LLC** — and Lilian relayed the name with an explicit hedge. **This file has already been
@@ -284,7 +304,10 @@ rental property completes the organizer at 100% and is never asked. Silence ther
 - **No Form 1099 of any kind received for 2025.**
 
 **⚠️ His business expenses are INCOMPLETE — do not work from what is on file.** What is in Adobe is
-only part; he says he has more and will send them. **But hold the cataloguing until the Midwest
+only part; he says he has more, **will look for them, and undertook to send them by MONDAY at the
+latest** _(Lilian, 2026-08-12)_. ⚠️ **They are the expenses of the company that gave him no income
+documentation** — the same one now in bankruptcy — which is exactly why they may not belong on his
+1040 at all. **But hold the cataloguing until the Midwest
 question is settled** — if that money was wages or a distribution from his own S corp, those
 expenses are the **corporation's**, already deducted on its 1120-S, and putting them on his 1040
 would double-count them. Chasing the rest first would be work spent on a schedule that may not
@@ -538,6 +561,22 @@ particular finding earns a place there.
   written out in §5** — which form is ever actually needed, why silence proves nothing, and why his
   mid-year move means two different exchanges and possibly two 1095-As.
 
+- _(2026-08-12, Lilian)_ — **Three further things from the same call, one of them large.**
+  🔴 **THE COMPANY FILED FOR BANKRUPTCY** — she had not mentioned it in the first pass, and it
+  changes the decision: a company in bankruptcy often stops filing, so **the K-1 may never exist at
+  all** rather than merely be late, which weakens the "wait for the 1120-S" route and strengthens
+  the transcript and file-with-**Form 8082** routes. It may also open a **worthless-stock loss**
+  (§165(g), ordinary under **§1244** if the stock qualifies) — **money in his favour that nobody has
+  looked at**, and it needs the same unverified **basis**. ⚠️ **One part unconfirmed:** she said
+  *"his partner — that company — died, or filed a bankruptcy"* and then that the client said the
+  **company** filed; **whether the PARTNER also died is being checked with her.** She also confirmed
+  he received **nothing at all — no W-2, no 1099, no K-1.**
+  ✅ **She CLOSED Montana** (*"olvida eso"*): he lived in Washington then Florida, so any Montana
+  residence was 2024, which is not our year (§1). **Not to be re-opened.**
+  📅 **He undertook to send the rest of his business expenses by MONDAY**, and she has **already
+  written to him about the health coverage.** A plain-English summary of all of it was prepared for
+  Julia on WhatsApp.
+
 _So this year can be answered later without anyone's memory. Records the questions, their answers
 as they come back, and **the tax facts the review established from any source** — the organizer
 included _(Lilian, 2026-08-12)_. His SSN, date of birth, licence, bank details, phone, email and
@@ -628,12 +667,9 @@ published card** — they are ordered by what would cause a wrong return or a re
   Other Dependents once she turns 17**. ⚠️ **And check which taxpayer identifier he holds:** from
   2025 the CTC requires a **work-eligible SSN for the taxpayer** as well as the child, so **an ITIN
   filer gets nothing** (§5).
-- **On what date did he LEAVE MONTANA?** One question, one date. He filed 2024 as a Montana
-  **resident** and gave us his arrival in Florida instead. **Left during 2024 → no Montana return
-  for 2025; left during 2025 → a part-year Montana return, which is a real return.** ⓘ **Nothing he
-  told Lilian contradicts the 2024 filing** — he was describing 2025 (§1). Her company reading would
-  give **no Montana return at all** on a registration-only entity, so it does not explain a resident
-  filing; the word "resident" came from our own reading and is worth re-checking.
+- ~~**On what date did he leave Montana?**~~ — ✅ **CLOSED by Lilian, 2026-08-12** (*"olvida eso"*):
+  he lived in Washington and then Florida, so any Montana residence was **2024**, which is not our
+  year (§1). **Do not re-open it.**
 - **Did he SELL, transfer or surrender his shares — and on what date?** ⚠️ **Not "are you still
   involved":** **being locked out is not the same as ceasing to be a shareholder** — a frozen-out
   shareholder still owns the stock and is still allocated a K-1, and a 2025 disposal would also
@@ -657,8 +693,8 @@ published card** — they are ordered by what would cause a wrong return or a re
 - **Does he also rent, or does he rent the apartment OUT?** Two different questions (a deduction vs
   a **Schedule E**). The organizer could never have surfaced a rental — its rental branch is
   unreachable (§5).
-- **His remaining business expenses** — he says more are coming. ⚠️ **Do not chase them until the
-  Midwest question is settled**; if that money came out of his own S corp, those expenses are the
+- **His remaining business expenses — he undertook to send them by MONDAY** _(2026-08-12)_. ⚠️ **Do
+  not chase them before that, and do not catalogue them until the Midwest question is settled**; if that money came out of his own S corp, those expenses are the
   corporation's (§5).
 - **Whether the S corporations still operate in Illinois** — asked 2026-08-12, not yet answered. His
   Illinois-source share is stated on the K-1 he does not have, so this and the blocker are one
