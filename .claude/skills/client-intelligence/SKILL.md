@@ -310,6 +310,17 @@ file since 2026-08-12 — see rule 1), `list_notes`,
 `in:sent`); **Google Drive** (the client's folder → link it in §7); **QuickBooks** if
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
 
+🔴 **Searching Drive: pass `excludeContentSnippets: true`, always.** `search_files` attaches a
+**content snippet to every hit by default**, so a search that merely *lists* a client's folder can
+dump a document's text into the session — and every client vault has a `… Passwords` doc in it. On
+2026-08-12 a routine folder listing for Ecoorganic returned that client's full credential doc,
+unrequested: bank logins, QuickBooks, the state portals. **Nothing is retractable once it is in the
+session.** The parameter costs nothing and prevents the whole class, so use it for **any** search
+that is about finding *where* something is. Only omit it when you actually intend to read content —
+and then say so first. When it happens anyway: copy no value anywhere, tell the person plainly, and
+**remind them to delete the session** (in a cloud session that history sits in the firm's shared
+Claude account). Keep it calm — deleting is the routine last step, not an alarm.
+
 **Plus one source no sweep has ever read: the migrated TaxDome notes.** When the firm moved
 off TaxDome, the notes written by hand on each client's TaxDome profile were kept — reportedly
 in a `Notes` folder under the client's `TaxDome` folder in Double, and mirrored somewhere in
@@ -422,6 +433,8 @@ what's open*; the live sweep says *what's true right now*.
    - **Double** — notes, client properties, questions, files, tasks (engagement status).
    - **Google Drive** — the client's folder and documents (you WILL find real documents there —
      organizers, statements, forms — even though you will NOT find "waiting-for" status notes).
+     🔴 **Pass `excludeContentSnippets: true`** — `search_files` attaches a content snippet by
+     default and will hand you the vault's `… Passwords` doc unasked (see the enrichment section).
    - **QuickBooks** — when the question touches their books / financials.
    - **Any other connected tool** that could hold the answer — use your full toolset.
 3. **Synthesize** the file + the live findings and answer, saying where each fact came from.

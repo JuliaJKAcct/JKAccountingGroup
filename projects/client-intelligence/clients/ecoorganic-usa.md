@@ -62,7 +62,7 @@ indexed _(2026-08-04)_.
 | Gusto | Payroll (**W-2 employees**) | _(pending — Drive link)_ | Onboarded **Sept 2025**; the company runs actual **W-2 payroll**, not only 1099 subcontractors _(Gmail, Sept 2025–Jul 2026)_. A firm staff admin's access was revoked 2026-07-15 as part of the bookkeeper transition |
 | Tax1099 (Zenwork) | 1099 e-filing | _(pending — Drive link)_ | Used by the firm to e-file 1099-NEC/MISC/DIV _(Gmail, Feb 2026)_ |
 | **Insurance — General Liability + Workers' Compensation** | Business coverage | _(pending — Drive link)_ | Carrier **Atlantic Casualty Insurance Co.**, broker **JMG Insurance Corp**; subject to a **periodic GL premium audit** (a remote auditor) that requires a payroll/contractor list — which is why the W-9/1099 tracking in the SOP matters _(Gmail, Jun–Jul 2026)_ |
-| CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | [`Sales Taxes > Connecticut > Sales tax`](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) — portal address + the firm's login _(also in the master `Ecoorganic Passwords` doc)_ | Recurring filings. **Sales tax is MONTHLY and filed by the firm as a zero return** (§4) — the login is the **firm's**, not the client's, so he cannot file it himself |
+| CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | [`Sales Taxes > Connecticut > Sales tax`](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) — portal address + the firm's login _(also in the master `Ecoorganic Passwords` doc)_ | Recurring filings. **Sales tax is MONTHLY and filed by the firm as a zero return** (§4) — the login is the **firm's**, so filing it is ours, not his |
 | CT Dept. of Labor / ReEmployCT | Unemployment tax | _(pending — Drive link)_ | Recurring correspondence |
 | CT Secretary of the State portal | Annual Report / registered agent | _(pending — Drive link)_ | Due March 31 annually; 2026 filing accepted |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
@@ -130,14 +130,21 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   due the **last day of the month following** the period; the late penalty is **15% of tax
   due or $50, whichever is greater**, so on a zero return the **$50 floor** is what lands.
   The firm's Double reminder on the 5th is deliberately early against that date.
-- **The frequency changed, and the firm fell behind once.** Returns for **2023–2024 are
-  QUARTERLY** (`1Q`–`4Q` filenames); from **10.2025** onward the folder holds one return per
-  **month**, continuously through 07.2026. When or why DRS changed the frequency is not
-  recorded. The 10–12.2025 returns were only uploaded in **April–May 2026**, and the Notices
-  folder holds a **Delinquency Notice dated 12.2025** and a **Proposed Assessment dated
-  01.2026** — *(observed from Drive filenames and upload dates, 2026-08-12; **the notices
-  have not been opened**, so the period, the amount and whether they were resolved are all
-  unknown)*.
+- 🔴 **There are nine months of 2025 with no return on file, and two unopened DRS notices.**
+  What the Drive record holds: quarterly returns through **4Q 2024** (all four quarters),
+  then **nothing at all until 10.2025** — no 1Q/2Q/3Q 2025 quarterly return and no monthly
+  return before October — then one monthly zero return continuously from **10.2025 through
+  07.2026**. Separately, the `Notices` subfolder holds a **Delinquency Notice dated 12.2025**
+  and a **Proposed Assessment dated 01.2026**. **This is a gap in the Drive record, not a
+  proven gap in filing** — myconneCT's own filing history is the authority and nobody has
+  opened it, and the folder is known to lag (the 10–12.2025 returns were uploaded only in
+  Apr–May 2026, and upload dates are not filing dates). But the nine-month hole fits a
+  12.2025 delinquency notice far better than the late uploads do. *(Observed from Drive
+  filenames and upload dates, 2026-08-12; **neither notice has been opened**, so period,
+  amount and outcome are unknown.)* **A proposed assessment left unprotested becomes final**,
+  so this is live — on `FOLLOW-UPS.md`, and decision #9 in the SOP.
+- **When or why DRS moved this client from quarterly to monthly is not recorded** — observed
+  from the filings, not established.
 
 ### Payroll
 - **Applies?** Yes — the company runs **W-2 payroll through Gusto** (onboarded
@@ -284,13 +291,22 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   firm's login. The **procedure is now a section of the bookkeeping SOP** (log in → file the OS-114
   at zero → save the PDF under the `MM.YYYY - Sales tax - zero tax return.pdf` name → keep the
   confirmation screenshot → file any DRS notice), with the doc linked from the step that needs it,
-  plus a review-checklist item and an open decision. **Three things the folder revealed that nobody
-  had recorded:** the frequency was **quarterly through 2024** and monthly only from **10.2025**;
-  the **10–12.2025 returns went in late** (uploaded Apr–May 2026); and there is a **Delinquency
-  Notice (12.2025)** and a **Proposed Assessment (01.2026)** sitting in a `Notices` subfolder. **The
-  notices were deliberately not opened** — their contents, and whether the matter closed, are still
-  unknown. Also raised with her, unresolved: **the basis for filing zero has never been written
-  down** for a business that has revenue (§4). ⚠️ **Handling note:** Drive's search returned the
+  plus a review-checklist item and two open decisions. Also verified the CT rules against DRS rather
+  than asserting them: a zero return **is** required, it is due the **last day of the month
+  following** the period, and filing late costs **15% or $50, whichever is greater** — so on a zero
+  return the **$50 floor** is what lands.
+  **What reading the folder properly turned up — and the first pass got this wrong.** The initial
+  write-up blamed a **Delinquency Notice (12.2025)** and a **Proposed Assessment (01.2026)** on the
+  10–12.2025 returns reaching Drive late (uploaded Apr–May 2026). An independent review pointed out
+  the notice predates those uploads by four months, and asked what covers the rest of 2025. It
+  does not: **the record runs from `4Q 2024` straight to `10.2025` — nine months with no return on
+  file in any frequency.** That fits the notice far better. Re-searched Drive to confirm; nothing
+  for 01.2025–09.2025 exists under any naming. **Not proof the returns were never filed** — the
+  folder lags the work and myconneCT's own history is the authority — but it is now the open
+  question, on `FOLLOW-UPS.md` and as decision #9, rather than a wrong causal story in an SOP.
+  Also raised with her, unresolved: **the basis for filing zero has never been written down** for a
+  business that has revenue, and whether these returns should be reporting gross receipts with a
+  deduction rather than sitting blank (§4). ⚠️ **Handling note:** Drive's search returned the
   contents of the client's master password doc unrequested (the tool attaches a content snippet by
   default); no value was copied anywhere and Lilian was told to delete the session. Pass
   `excludeContentSnippets: true` on Drive searches over a client's vault folder.
@@ -311,9 +327,11 @@ note** on this client (§7) — same matter, written to be read; it is **updated
       point is to be able to justify it. **Second half of the same question:** are those returns
       blank, or do they already report **gross receipts with a nontaxable deduction**? OS-114
       reports both taxable and nontaxable sales — nobody has opened one to look
-- [ ] **Were the 12.2025 Delinquency Notice and the 01.2026 Proposed Assessment resolved?** Both
-      PDFs are in the Drive `Notices` folder and **have not been opened** — period, amount and
-      outcome all unknown (§4)
+- [ ] 🔴 **What covers 01.2025–09.2025, and were the two DRS notices resolved?** Nine months
+      with no return on file in any frequency, plus an unopened Delinquency Notice (12.2025) and
+      Proposed Assessment (01.2026) (§4). Open myconneCT's own filing history and account balance
+      for those periods — the Drive folder is not evidence of what was filed. **Live, not
+      historical:** an unprotested proposed assessment becomes final. On `FOLLOW-UPS.md`
 - [ ] **When and why did DRS move this client from QUARTERLY to MONTHLY sales-tax filing?** The
       change is visible in the filings from 10.2025 but is recorded nowhere (§4)
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_

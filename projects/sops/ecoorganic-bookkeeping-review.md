@@ -106,7 +106,7 @@ blindly.
    card autopay) → Owner's distribution.
 8. **IRS `USATAXPYMT` pulls under the owner's name** are his personal federal
    tax → Owner's distribution, never a business tax expense.
-9. **Job costs to COGS, not opex — _(to verify: provenance unconfirmed)_.**
+9. **Job costs to COGS, not opex — *(to verify: provenance unconfirmed)*.**
    This rule carried over from the prior cleanup notes and has **not yet been
    re-checked** against how this client's own books have historically treated
    job costs. Before relying on it, confirm against the client's history (past
@@ -124,7 +124,7 @@ blindly.
    COGS-vs-opex split is intentional before building sub-accounts or
    reclassifying.
 10. **Vehicle financing: PENDING (open — to study).** Don't expense installments
-    blindly; park in triage until resolved. _(Discrepancy noted 2026-07-21, not
+    blindly; park in triage until resolved. *(Discrepancy noted 2026-07-21, not
     yet resolved: the SOP names "Hyundai Motor Finance / Ally," but this client's
     actual chart shows **RAM truck loans** — "Car Loan 2022 RAM 1500", "2017 RAM
     Loan" — and no Hyundai/Ally accounts, so the lender names here are probably
@@ -194,17 +194,19 @@ tax return**.
 costs $50.** Connecticut requires Form OS-114 for every assigned period "even if no sales
 were made or no tax is due", and its late penalty is **15% of the tax due or $50, whichever
 is greater** — so on a zero return the 15% is nothing and the **$50 floor is what lands**.
-A month nobody filed is therefore a $50 bill for a return that would have taken minutes,
-and this client has already been on the receiving end of a delinquency notice (see *Filing
-history* below). _(Verified against CT DRS, 2026-08-12:
+A month nobody filed is therefore a $50 bill for a return that would have taken minutes —
+and this client's own record has both a gap and two unopened DRS notices in it (see *Filing
+history* below). *(Verified against CT DRS, 2026-08-12:
 [Sales and Use Tax Information](https://portal.ct.gov/drs/sales-tax/tax-information) ·
-[Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/drs/forms/2019/sut/o-88_1019.pdf).)_
+[Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/drs/forms/2019/sut/o-88_1019.pdf)
+— the O-88 cited is the 2019 revision, so re-check the penalty figure before quoting it to
+anyone.)*
 
 1. **Log in to myconneCT.** The portal address and the login the firm uses live in the
    client's own Drive doc — never in this repo:
    [myconneCT login (Drive)](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) ·
-   [CT DRS myconneCT](https://portal.ct.gov/drs-myconnect). The login is the **firm's**,
-   not the client's — the client does not file this himself.
+   [CT DRS myconneCT](https://portal.ct.gov/drs-myconnect). The login is the **firm's**, so
+   filing this is ours, not his — never bounce it to the client.
 2. **File the period's OS-114 as a zero return.** One return per calendar month. Check the
    period being filed is the month you mean before submitting — a return filed against the
    wrong period leaves the intended month still open and delinquent.
@@ -223,10 +225,11 @@ history* below). _(Verified against CT DRS, 2026-08-12:
    and the matter gets raised with Lilian — a notice is never just filed and forgotten.
 
 **Timing.** Connecticut's due date is the **last day of the month following** the period —
-so July's return is due 31 August _(CT DRS, verified 2026-08-12)_. The firm's own recurring
-reminder for this client sits in **Double, due the 5th of the month**, which is deliberately
-early and leaves most of a month of slack. **Treat the 5th as the deadline, not the 31st:**
-the whole point of the internal date is that a missed reminder is still recoverable.
+so July's return is due 31 August *(CT DRS, verified 2026-08-12)*. The firm's own recurring
+reminder for this client sits in **Double, due the 5th of the month after the period** (so
+5 August for July), which is deliberately early and leaves most of a month of slack.
+**Treat the 5th as the deadline, not the 31st:** the whole point of the internal date is
+that a missed reminder is still recoverable.
 
 ### Why it is a *zero* return — NOT ESTABLISHED, confirm before relying on it
 
@@ -241,28 +244,40 @@ zero *sales*.** DRS says Form OS-114 reports **both taxable and nontaxable sales
 receipts go on the return, and the nontaxable portion comes off as a deduction, so a
 business with revenue and no taxable sales would normally file a return showing **receipts
 with a deduction**, not a blank one. Whether these returns are blank or already carry gross
-receipts **has not been checked** — nobody has opened one _(2026-08-12)_.
+receipts **has not been checked** — nobody has opened one *(2026-08-12)*.
 
 **What a covering bookkeeper does with that:** keep filing, on the same schedule, exactly as
 before — stopping is far worse than the open question, and nothing here says the position is
 wrong. Do **not** represent to the client, or to DRS, *why* it is zero until Lilian
 confirms it. Tracked in the Open decisions log (#8).
 
-### Filing history — what the folder actually shows
+### Filing history — what the Drive record shows, and the hole in it
 
-- **2023–2024: filed QUARTERLY.** The returns in the Sales Taxes folder are named by
-  quarter (`1Q`/`2Q`/`3Q`/`4Q`), so this client was on a quarterly frequency then.
-- **From late 2025: MONTHLY.** The Connecticut folder carries one zero return per month
-  from **10.2025** onward, continuously through **07.2026**. When and why DRS changed the
-  frequency is **not recorded** — treat the change as observed from the filings, not as an
-  established fact.
-- **The firm caught up late, and it cost a notice.** The 10–12.2025 returns were only
-  uploaded to Drive in **April–May 2026**, and the Notices folder holds a **Delinquency
-  Notice dated 12.2025** and a **Proposed Assessment dated 01.2026**. _(Observed from the
-  Drive filenames and upload dates; **the notices themselves have not been opened**, so
-  what they assess, for which period, and whether they were resolved is unknown — see the
-  client file.)_ This is the reason step 1's "do not let a quiet month pass" is written the
-  way it is.
+Read this before assuming the back history is clean. Everything below is **what the Drive
+folder contains**, which is not the same as what was filed — myconneCT's own filing history
+is the authority, and nobody has opened it.
+
+- **Through 2024: QUARTERLY.** The returns sit loose in the `Sales Taxes` root, named by
+  quarter — `4Q 2023`, then `1Q`/`2Q`/`3Q`/`4Q 2024`. All four 2024 quarters are there.
+- 🔴 **Then nothing at all for 01.2025–09.2025 — nine months, in any frequency.** After
+  `4Q 2024` the next filing of any kind is **10.2025**. There is no 1Q/2Q/3Q 2025 quarterly
+  return and no monthly return before October. **This is a gap in the record, not a proven
+  gap in filing** — the returns may have been filed and never saved here. But it is a much
+  better fit for a **Delinquency Notice dated 12.2025** than anything else in this folder,
+  so **settle it before assuming the back years are clean.** Tracked as decision #9.
+- **From 10.2025: MONTHLY**, one zero return per month, continuously through **07.2026**.
+  When or why DRS changed the frequency is **not recorded** — observed from the filings, not
+  established.
+- **The Drive record lags the filings.** The 10–12.2025 returns were only *uploaded* in
+  **April–May 2026**. Upload dates are not filing dates, so this says the folder runs behind
+  the work — it does **not** establish when those returns were actually filed.
+- **Two DRS notices sit unopened**, in the `Notices` subfolder: a **Delinquency Notice dated
+  12.2025** and a **Proposed Assessment dated 01.2026**. *(Observed from filenames only —
+  **neither has been opened**, so the period, the amount, and whether either was resolved
+  are all unknown.)* A proposed assessment left unprotested becomes final, so this is a live
+  item, not history — it is on `FOLLOW-UPS.md`.
+
+This section is the reason the opening warning is written the way it is.
 
 ## Monthly review checklist (what the reviewer verifies)
 
@@ -285,8 +300,9 @@ confirms it. Tracked in the Open decisions log (#8).
 10. No new activity in frozen accounts; any exception is escalated.
 11. **The month's Connecticut sales-tax return was filed** — the OS-114 zero return is in
     Drive under the `MM.YYYY - Sales tax - zero tax return.pdf` name, with its confirmation
-    screenshot. A gap in that folder's month sequence is a missed filing, not a filing
-    that was saved somewhere else.
+    screenshot. **A gap in that folder's month sequence is a question, not a conclusion:**
+    check myconneCT's own filing history for the period before deciding a month was missed
+    — this folder has lagged the filings by months before (see *Filing history*).
 
 ## Open decisions log
 
@@ -299,7 +315,8 @@ confirms it. Tracked in the Open decisions log (#8).
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **Job costs → COGS vs opex** — verify rule 9 against the client's history and filing before relying on it | Julia | To verify |
-| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Two parts: (a) *why* no taxable sales; (b) whether the returns should be reporting **gross receipts with a deduction** rather than blank, since OS-114 reports taxable **and** nontaxable sales. Keep filing either way; confirm before anyone represents it. Also settle whether the 12.2025 delinquency notice and the 01.2026 proposed assessment were resolved | Lilian | To verify |
+| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Two parts: (a) *why* no taxable sales; (b) whether the returns should be reporting **gross receipts with a deduction** rather than blank, since OS-114 reports taxable **and** nontaxable sales. Keep filing either way; confirm before anyone represents it | Lilian | To verify |
+| 9 | **What covers 01.2025–09.2025, and are the two DRS notices closed?** The Drive record jumps from `4Q 2024` straight to `10.2025` — nine months with no filing on file in any frequency — and a Delinquency Notice (12.2025) plus a Proposed Assessment (01.2026) sit unopened. Check myconneCT's own filing history and account balance for those periods; an unprotested proposed assessment becomes final. Tracked on `FOLLOW-UPS.md` | Lilian | Pending |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
