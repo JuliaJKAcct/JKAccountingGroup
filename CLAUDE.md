@@ -269,12 +269,36 @@ in that folder.
   Lilian's standing instruction (2026-08-11): *"cada vez que hable en una sesión contigo y te dé
   información de un cliente, debes incorporarla automáticamente, sin necesidad de que yo te la pida…
   nunca está de más ninguna información que se ponga ahí."* **Do not weigh whether a fact is
-  important enough.** Client Intelligence is not published, costs nothing to hold, and exists so
+  important enough.** Client Intelligence costs nothing to hold and exists so
   that months later either of them can ask a question and get an answer with the whole context
   behind it. So: a client is named in a session → open their file, write what the session produced,
   and say you did. Ask only when you genuinely cannot tell **which** client a fact belongs to, or
   whether it is client knowledge at all — never as a way of deferring the write. **If the client has
   no file, create it** (the coverage rule below).
+  ⚠️ **This rule used to say "Client Intelligence is not published". That was wrong and the clause
+  is struck** — `projects/knowledge-hub/build-hub.mjs` renders **every** file in `clients/` with no
+  allowlist, and rebuilding the Hub is a standing part of finishing work. So a client file is one
+  routine step from being a hosted page. It does not narrow *what* gets written — the bar is still
+  the two-data-homes rule and the identity block, not squeamishness — but nobody should write into
+  these files believing they are private.
+- **What we DO together gets recorded, not only what we are TOLD.** Lilian's instruction
+  (2026-08-12): *"vamos a tratar a partir de ahora que te tenemos a ti de registrar todo lo que
+  hagamos contigo, para que siempre tengas esa memoria y puedas trackear todos estos procesos y que
+  siempre tengamos ese registro, esa cronología."* The rule above captures facts someone states;
+  this one captures **the work itself** — the call that was made, what the agency said, the step
+  that was taken, how it ended. **Writing it down is part of doing it**, in the client's `§6` log
+  with its date, so the process can be retraced later rather than reconstructed.
+  ⓘ **The corollary — and it is scoped to BACKFILLING OLD MATERIAL, not to live work.** For a
+  matter the firm is working now, the standing rules still apply in full: *look before you ask*
+  ([`method.md`](./projects/pre-return-review/method.md)) and *close the gap since the last
+  sweep* (two bullets below). What follows governs only the salvage of pre-Claude history:
+  **what was never recorded is gone, and that is accepted.**
+  The firm has used Claude for a short time; everything before that lived in people's heads, Julia's
+  Drive and Gmail, Double, and Lilian's own notes — *"eso no es 100% efectivo, hay cosas que se
+  pierden y no hay nada que hacer."* So when a matter has **no ending** in any reachable source,
+  **record it as far as it goes and leave it open** — do not hunt for a resolution, and do not
+  invent one. *"Déjalas como hasta la información que tengas… quedará abierto y tal vez algún día,
+  si volvemos al tema, te puedo dar más información."*
 - **Answering a question about a client is a two-step job: read the file, then close the gap since
   the last sweep.** The file is the memory, not the whole answer — the weekend sweep runs weekly, so
   anything after it is missing by construction. Before answering, check what has arrived since that

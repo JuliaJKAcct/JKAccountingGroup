@@ -34,13 +34,14 @@ personal data**. Every fact goes to the right home:
 | Kind of information | Example | Where it lives |
 |---|---|---|
 | Non-sensitive knowledge | Entity type, what they do, filing frequency, due dates, which portal/form, the process steps, our engagement | **This file** (the repo) |
-| Secrets & personal data | Logins, passwords, full account numbers, EINs, dollar figures, contact names/emails/phones | **Google Drive / Double / QuickBooks** — referenced here by **link**, never pasted |
+| Secrets & personal data | Logins, passwords, full account numbers, dollar figures, contact names/emails/phones | **Google Drive / Double / QuickBooks** — referenced here by **link**, never pasted |
+| **Business EIN** | The entity's own FEI/EIN | **This file** — public on Sunbiz _(Lilian, 2026-08-12)_. An **SSN/ITIN is not**, even when it is the entity's tax ID |
 
 So a client file **describes the process and points to where the sensitive value
 lives** (a Drive link, the Double client). Claude can open those links live when a
 task actually needs the value — but the value is never committed to the repo.
 
-**Never commit:** passwords/logins, full account or routing numbers, EINs, SSNs,
+**Never commit:** passwords/logins, full account or routing numbers, SSNs/ITINs,
 dollar figures, personal contact details, or filled-in forms. When in doubt, link
 to Drive/Double instead of typing it here.
 

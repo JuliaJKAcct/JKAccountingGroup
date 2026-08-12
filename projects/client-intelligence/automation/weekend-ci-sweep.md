@@ -24,7 +24,10 @@ For the scoped clients, once per week:
    Double's **custom client properties** (`list_client_properties`) are the primary
    structured input for a client's Operating zone — service frequencies (bookkeeping,
    sales tax, payroll), tax-return type / entity, 1099 and annual-report flags, and
-   the assigned staff — clean and non-sensitive (skip EIN / Tax ID).
+   the assigned staff — clean and non-sensitive. **EIN / Tax ID is included since
+   2026-08-12** (public on Sunbiz — Lilian's ruling). ⚠️ **But the property is named
+   `EIN / Tax ID`, and for a sole proprietor or single-member LLC it may hold the OWNER'S
+   SSN.** Write it only when it is plainly an EIN; if you cannot tell, skip it.
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). **Commit and merge to `main` itself** — see *The approval line*
@@ -279,11 +282,11 @@ FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:
    - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
    - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
-   - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — but SKIP the "EIN / Tax ID" property, it is sensitive); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
+   - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — "EIN / Tax ID" IS included, it is public on Sunbiz, BUT that property can hold an owner's SSN for a sole prop / SMLLC, so write it only when it is plainly an EIN); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
    - Google Drive: search for the client's folder (usually one per client, under the firm's shared drive) and put its LINK in the file's §7 "Google Drive folder"; do NOT copy sensitive file contents into the repo.
    - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
    Keep it bounded (~10-15 calls/client).
-2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, EINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. Update "Last updated".
+2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. A business EIN IS allowed (public on Sunbiz). Update "Last updated".
 3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
 
 THEN:

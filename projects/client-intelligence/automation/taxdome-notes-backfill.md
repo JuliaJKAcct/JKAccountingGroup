@@ -1,9 +1,13 @@
 # The TaxDome notes backfill — a Client Intelligence source nobody has read
 
-**Status: SCOPED, NOT STARTED.** Raised by Lilian 2026-08-12.
+**Status: PHASE 1 DONE (2026-08-12) · PHASE 2 STILL BLOCKED.** Raised by Lilian 2026-08-12.
 🔴 **Phase 2 is BLOCKED on a decision only Lilian or Julia can make** — see *The permission
-question* below. Phase 1 is not blocked by it, but needs an environment that can reach the
-sources (*Prerequisites*).
+question* below. **Phase 1 ran on 2026-08-12** and its output is in *Inventory* at the bottom:
+**33 `Notes` folders → 22 distinct clients, 11 of them with no CI file at all.**
+
+ⓘ **A third source appeared the same day** — Lilian's own iCloud phone notes, handed over
+directly. **That source is NOT blocked** by the permission question, and the first client
+(**Optic Gold**) was written up from it on 2026-08-12. See *A THIRD source* below.
 
 When the firm migrated from **TaxDome** to **Double**, the notes that had been written by
 hand on each client's TaxDome profile were saved rather than discarded. They survive in two
@@ -113,8 +117,9 @@ Nothing here relaxes them, and this source needs the reminder more than most: Li
 described these notes as covering **the owner's personal matters** alongside the company's.
 
 - **Two data homes.** Non-sensitive knowledge and links in the repo; secrets and personal
-  data — logins, account numbers, EINs, **dollar figures**, personal emails/phones, street
-  addresses — stay in Double/Drive and are referenced by link.
+  data — logins, account numbers, **dollar figures**, personal emails/phones, street
+  addresses — stay in Double/Drive and are referenced by link. 🔵 **A business EIN may now be
+  written in the repo** _(Lilian, 2026-08-12 — public on Sunbiz)_; an SSN/ITIN still may not.
 - **The identity block never travels**: SSN/ITIN, driver's licence, passport and any other
   government identifier, dates of birth, bank routing/account numbers.
 - **The two zones.** Operating facts → §1–§5, §7. The dated log and open threads → §6.
@@ -210,12 +215,146 @@ ignore line before writing the file.
 
 ## Inventory (Phase 1 output)
 
-Not yet run. The table defined in Phase 1 goes here.
+**Run 2026-08-12** from an ordinary cloud session. Names only — no note content was opened.
+Method: Drive `search_files` for every folder whose title contains `Notes`, then each parent
+resolved by ID; cross-checked against Double `list_file_library` on four clients.
+
+### What the walk corrected in the assumptions above
+
+1. ✅ **The Drive tree does NOT mirror Double's `TaxDome/<client>/` shape** — the caution above
+   was right to flag it. `TaxDome` in Drive is the **root of the whole migration tree**, not a
+   per-client folder. The real path is
+   `JK Accounting Group → TaxDome → *Migration to Double → <one of three subtrees> → <client> → N. Notes`.
+2. 🔴 **`*Dupplicated` is a near-copy of `*QBO Clients and Individuals`** — mostly the same clients and
+   the same notes, though **Masciave and Magnum 152 appear only in `*Dupplicated`, and Igor
+   Melomed only in `*QBO`**. **33 `Notes` folders collapse to 22 distinct clients.** Anyone walking the tree
+   client-by-client without noticing this processes eleven clients twice.
+3. ✅ **Double's `TaxDome > <Client> > N. Notes` is now VERIFIED**, not reported-only — seen on
+   Optic Gold (`1. Notes`, 2 files), Andrii Tymchenko (`1. Notes`, 2 files) and Mays Express
+   (`2. Notes`). The numeric prefix varies (`1.`, `2.`, `3.`) — match loosely.
+4. ✅ **Not every client has one** — Ecoorganic USA has a `TaxDome` folder in Double with **no**
+   `Notes` subfolder, while its Drive folder does have one. **So the two copies are NOT
+   interchangeable**, exactly as this file warned. Walk Drive, then confirm per client.
+5. ✅ **The environment problem does not affect an ordinary cloud session.** Drive `search_files`,
+   `list_recent_files` and Double `list_file_library` all worked here without approval friction.
+   The *Prerequisites* diagnosis holds: it is the mobile child session that cannot prompt.
+
+### The 22 clients
+
+*"Filed under" is structural only — the routing rule above still decides the subject.*
+File counts were **not** taken except where shown; the point of this pass was to size and order
+the job.
+
+| Client / folder name | Drive subtree(s) | Double `Notes`? | Filed under | CI file? |
+|---|---|---|---|---|
+| Optic Gold Inc | QBO · Dup | ✅ `1. Notes` (2 files) | company | ✅ `optic-gold.md` — **done** |
+| Ecoorganic USA LLC | QBO · Dup | ❌ none | company | ✅ `ecoorganic-usa.md` |
+| Ecom Beavers LLC | QBO · Dup | _(unchecked)_ | company | ✅ `ecom-beavers.md` |
+| CANDRAMAS LLC | QBO · Dup | _(unchecked)_ | company | ✅ `candramas.md` |
+| Greenair International LLC | QBO · Dup | _(unchecked)_ | company | ✅ `greenair-international.md` |
+| DEEP TECH DEVELOPMENT GROUP LLC | QBO · Dup | _(unchecked)_ | company | ✅ `deep-tech-development.md` |
+| OneTwoStrategies INC | QBO · Dup | _(unchecked)_ | company | ✅ `onetwo-strategies.md` |
+| ZETECH LLC | QBO · Dup | _(unchecked)_ | company | ✅ `zetech.md` ⚠️ **two Double records** — `ZETECH LLC` (706710, qbo) and `Zetech Holding LLC` (717754). Settle which before writing |
+| Masciave Design Studio | Dup | _(unchecked)_ | company | ✅ `masciave-design-studio.md` |
+| MAGNUM 152 INC | Dup | _(unchecked)_ | company | ✅ `magnum-152.md` |
+| Ihor Naum | QBO · Dup | _(unchecked)_ | **owner** | ✅ `ihor-naum-olha-levchuk.md` |
+| VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ❌ — Double: `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
+| IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ❌ ⚠️ **two Melomed households in Double** — `Igor Melomed & Yelena Lovkina` (710635) and `Grigoriy & Margarita Melomed` (710633) |
+| SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ❌ — Double record **archived** 2026-07-22 (706706) |
+| Andrii Tymchenko | 4. Documents | ✅ `1. Notes` (2 files) | **owner** | ❌ — Double 710619 |
+| MAYS EXPRESS SERVICE LLC | 4. Documents | ✅ `2. Notes` | company | ❌ — Double 710582 |
+| R & G Friendly Inc | 4. Documents | _(unchecked)_ | company | ❌ — Double 710589 |
+| YMI Trucking LLC | 4. Documents | _(unchecked)_ | company | ❌ — Double 710608 |
+| Voicecapital Inc | 4. Documents | _(unchecked)_ | company | ❌ — Double 710725 |
+| Viacheslav Honcharenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710665 |
+| Maria Contreras | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710646 |
+| Iurii Iakovenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double: `Iurii Iakovenko & Alina Yakovenko` (710639) |
+
+**Half the roster has no CI file (11 of 22)** and **seven folders are filed under a person**, which
+is precisely where the routing rule earns its keep.
+
+Three `Notes` folders found by the search are **not** part of this backfill and should be skipped:
+`My notes - Lilian` (personal), a `Notes` folder under an internal `Audit` folder, and a `Notes`
+folder in **a client's own Drive** that is shared with us — not our migrated material.
+
+### What the note titles already show (titles only — permitted)
+
+Enough to justify the whole exercise: `1.1 - IRS call 02.04.2026 - Form 2553 not received`,
+`1.2 - IRS call 03.16.2026 - Form 2553 accepted` (Optic Gold) · `Annual Report`,
+`04.06.2026 CT state call - sales tax account` (Ecoorganic) · `FDOR - tax dates change`
+(Deep Tech) · `04.07.2026 - 2025 Tax organizer - summary call` (Andrii Tymchenko).
+
+---
+
+## A THIRD source: Lilian's own iCloud notes
+
+**Added 2026-08-12.** Lilian kept per-client notes on her phone from before the firm used Claude,
+and handed them over directly as screenshots. **This source is not affected by the permission
+question above** — she supplied the content herself rather than a session reading a document.
+
+Her iCloud folder `1-JK Accounting` has a subfolder per client: **Candramas · Deep Tech · Gossip
+Miami · Magnum 152 INC · Masciave Design · Mays Express · Megabai · Optic Gold Inc · Voicecapital
+Inc · Voxago · YMI Trucking**, plus `1- Pending Things` and `2-Important Info`.
+
+✅ **`Megabai` — resolved by Lilian, 2026-08-12.** It has no Double record because it is a
+**former client whose company closed**; it was a **bookkeeping** client. **It still gets a Client
+Intelligence file** — *"deja el registro en el Client Intelligence… deja esa información
+guardada. Es un cliente antiguo."* — and **no Double note**, since there is no Double account to
+put one on. ⚠️ **This is a general case, not a one-off:** a closed client is exactly the one whose
+history nobody can reconstruct later, so the absence of a Double record is a reason to write the
+file, never a reason to skip it.
+
+The content is the same *kind* as the TaxDome notes and **overlaps them** (Optic Gold's two IRS
+calls appear in both), so **read the phone note and the migrated note together and reconcile**
+rather than writing each up separately.
+
+**Source tag — the same shape, different source name:**
+
+```
+_(Lilian's iCloud notes, migrated — folder "<folder>"; note dated <date>)_
+```
+
+### The chronology rule — Lilian, 2026-08-12
+
+**These notes are snapshots, and a later source overrides them.** Her instruction: *if an old note
+says a problem is open, and you know from another source that it was later resolved, the latest
+information is what stands.* So:
+
+1. **Date every fact** from the date the note carries, not the date the screenshot was taken.
+2. **Where a later source resolves an earlier note, write the resolution as the fact** and keep
+   the earlier state in the §6 log as history — not in §1–§5 as if it were still true.
+3. This is **narrower than the standing contradiction rule** and does not replace it: contradiction
+   means two sources disagree and neither wins, so both get written with their sources. Chronology
+   means one source **supersedes** the other because it is later on the same thread. Tell them
+   apart before deciding which to apply.
+
+### 🛑 An open thread stays open — do NOT go looking for the ending
+
+**Lilian, 2026-08-12, and this is the instruction most likely to be over-ridden by good
+intentions.** Many of these notes stop mid-matter. That is expected and **it is not a gap to
+close**: *"puede que haya cosas que hayas resuelto y no las hayas registrado en mis notas. No me
+es posible ahora ir cliente por cliente resolviendo todos esos problemas."*
+
+- **Record the matter as far as the sources actually go, and mark it open.** Do not chase a
+  resolution across Gmail, Drive and Double hoping to find one, and **never infer an ending** from
+  the fact that nobody mentioned the problem again. Silence is not resolution.
+- **If it is not in the reachable sources — Julia's Drive, Double, the notes she supplied, the
+  documents, this chat, Gmail — there is nothing to be done.** *"Quedará abierto."*
+- **Say what is open, in the file.** An honest "open, last known state 2026-03-16, no outcome
+  recorded anywhere" is the deliverable. It is worth more than a confident guess, and it is what
+  lets her top it up later: *"tal vez algún día, si volvemos al tema, te puedo dar más
+  información."*
+
+⚠️ **This governs the BACKFILL of old material only.** Going forward the opposite applies — work
+done with Claude gets recorded as it happens, chronologically (see the standing rule in
+[`CLAUDE.md`](../../../CLAUDE.md), *"What we DO together gets recorded"*). The backfill is
+salvage; from here the record is kept properly.
+
+---
 
 ## Progress
 
-Nothing swept yet.
-
 | Date | Phase | Clients covered | By |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-08-12 | **Phase 1 — inventory** | All 22 identified; names only, no content read | Lilian |
+| 2026-08-12 | **Phase 2 (iCloud source only)** | **Optic Gold Inc** — `optic-gold.md` §1/§4/§5/§6/§7 + Double case note **491051** | Lilian |

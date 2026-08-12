@@ -7,7 +7,7 @@ that isn't finished*, so nothing you began quietly falls off the radar between
 sessions.
 
 > **Kept in English** like every repo artifact. **No sensitive client data** —
-> client dollar figures, EINs, application/folio numbers and the like live in the firm's
+> client dollar figures, SSNs/ITINs, application/folio numbers and the like live in the firm's
 > client systems (Double / Drive). A row may name the client business and the
 > pending action, and point to the Double note for the specifics.
 

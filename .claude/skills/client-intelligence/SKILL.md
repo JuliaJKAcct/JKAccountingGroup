@@ -26,11 +26,28 @@ Read the project's own docs alongside this skill — they are the authority on c
 ## The two rules that never bend
 
 1. **Two data homes.** The repo file holds **non-sensitive knowledge and links only**.
-   Secrets and personal data — logins, passwords, full account numbers, **EINs**,
+   Secrets and personal data — logins, passwords, full account numbers,
    **dollar figures**, personal names / emails / phones, **street addresses** — stay in
    **Double / Google Drive / QuickBooks** and are referenced by link. Never paste any of
    these into a file. (Business names, trade names, bank/software names, industry,
    entity type, service frequencies, state, and non-sensitive quirks are fine.)
+   🔵 **A business EIN is NOT in that list — it may be written here.** Lilian's ruling,
+   **2026-08-12**: *"los números de EIN no los considero información sensible porque son
+   públicos en Sunbiz… no hay forma de esconderlo."* Florida publishes the FEI/EIN on the
+   entity's own Sunbiz record, so withholding it from the repo bought nothing and cost the
+   next reader the one number that identifies which entity a K-1 or a W-2 belongs to. She
+   had already ruled this way once, for [`tools/redact-doc/`](../../../tools/redact-doc/),
+   which deliberately preserves EINs; this propagates the same decision to the repo.
+   ⚠️ **This is the business EIN and nothing else.** An **SSN or ITIN is still barred**,
+   including when it is the entity's tax ID — a sole proprietor's or a single-member LLC's
+   tax ID is often the owner's SSN, and that is a personal identifier that is not public
+   anywhere. If you cannot tell which one a nine-digit number is, treat it as an SSN.
+   ⚠️ **Write an EIN HYPHENATED — `12-3456789`.** The published-page gate in
+   [`render/build.mjs`](./render/build.mjs) aborts the build on any run of nine or more bare
+   digits, so an unhyphenated EIN takes down the dashboard and the Hub.
+   ⚠️ **And note where it ends up:** `clients/*.md` auto-publishes to the Knowledge Hub with
+   no allowlist, so an EIN written here becomes a hosted page. That is the accepted
+   consequence of the ruling — it is public data — not an oversight.
 2. **Two zones inside each file.**
    - **Operating zone → feeds the SOP:** §1 Snapshot, §2 Contacts, §3 Systems &
      access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links.
@@ -63,8 +80,8 @@ Read the project's own docs alongside this skill — they are the authority on c
 ## Capture is automatic, and coverage is measured against Double
 
 **Write what you are told, without being asked and without filtering.** Lilian, 2026-08-11:
-*"nunca está de más ninguna información que se ponga ahí."* CI is never published, so there is no
-cost to holding a fact and a real cost to dropping one — the file exists so that months later she
+*"nunca está de más ninguna información que se ponga ahí."* Holding a fact costs nothing and
+dropping one costs a lot — the file exists so that months later she
 or Julia can ask a question and get an answer that carries the whole context. A session that
 discusses a client and ends without touching that client's file has lost something. Ask only when
 you cannot tell which client a fact belongs to; never to defer the write.
@@ -287,7 +304,8 @@ Sources, per client: **Ping Assistant** (`resolve_person`, `search_contacts`,
 `search_meetings` org-wide semantic, `list_client_meetings`, `list_action_items`),
 **Double** (`get_client`, **`list_client_properties`** — the cleanest structured input:
 Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099, Annual
-Report, Organizer Status; **skip the EIN / Tax ID property**), `list_notes`,
+Report, Organizer Status; the **EIN / Tax ID** property is readable and writable to the
+file since 2026-08-12 — see rule 1), `list_notes`,
 `list_contacts` (roles only), `list_activity_log`; **Gmail** (`in:inbox` **and**
 `in:sent`); **Google Drive** (the client's folder → link it in §7); **QuickBooks** if
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
@@ -416,7 +434,7 @@ owner, route by company — same rule as enrichment).
 
 ### Getting sensitive data (day-to-day)
 
-Sensitive values are deliberately **not** in the repo. When someone needs one — an EIN,
+Sensitive values are deliberately **not** in the repo. When someone needs one —
 an address, a login location, a contact email — **fetch it live** from Double (contacts,
 properties, notes) or Google Drive (the client's folder) and give it **in the chat**;
 **never commit it** to the repo. The file's §7 links are the fast path to where it

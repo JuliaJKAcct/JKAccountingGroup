@@ -9,9 +9,13 @@
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
-> EINs, dollar figures, and personal contact details stay in Google Drive / Double
+> dollar figures, and personal contact details stay in Google Drive / Double
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
+> **A business EIN is the exception and MAY be written here** — it is public on Sunbiz,
+> so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
+> including when it is the entity's tax ID. Write the EIN **hyphenated** (`12-3456789`) — nine
+> bare digits trip the published-page gate and stop the build.
 
 > **Two zones — what feeds the SOP vs what stays here.** This file is the master
 > record. Its sections split into two zones:
@@ -49,7 +53,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | _(add roles as needed)_ | |
 
 - **Double client:** [app.doublehq.com/close?cid=706710](https://app.doublehq.com/close?cid=706710)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 
 ## 3. Systems & access
 
@@ -163,6 +167,6 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706710](https://app.doublehq.com/close?cid=706710)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

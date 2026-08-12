@@ -624,7 +624,7 @@ Where the line actually falls, since the repo does legitimately hold some client
 |---|---|
 | A [`client-intelligence`](../client-intelligence/) file per client — obligations, systems, recurring processes | Any client's **filing state** for a season, gathered as a list |
 | A [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row naming a client **business** and the pending action, per that file's own convention | An **individual person's** personal tax attributes — residency/return type, DOB, SSN, occupation |
-| The known-bad-values table in §6 (a correctness aid) | Dollar figures, EINs, folio/application numbers |
+| The known-bad-values table in §6 (a correctness aid) | Dollar figures, SSNs/ITINs, folio/application numbers _(a business EIN is public — Lilian, 2026-08-12)_ |
 | The organizer's **questions** ([`references/`](./references/)) | Any client's **answers** to them |
 
 When a follow-up would need the forbidden half to be useful, point at the artifact or the Double note

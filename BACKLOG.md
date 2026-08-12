@@ -19,7 +19,7 @@ ready to work, we open this file, pick one from the table, and go.
   process in `CLAUDE.md`. Update the idea's **Status** here and link to where
   the real work now lives.
 - **No client data here.** This file holds ideas and plans only — never bank
-  details, passwords, EINs, or dollar figures. Those live in the firm's systems
+  details, passwords, SSNs, or dollar figures. Those live in the firm's systems
   (Drive / Double / QuickBooks).
 
 ## Quick view

@@ -1,17 +1,22 @@
 # OPTIC GOLD INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-12
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ⚠️ **Still largely a seed.** Everything except §4 *Income tax* and the IRS history below came
+> from Double's structured client properties alone — no Gmail, Ping or QuickBooks pass has been
+> run on this client yet, so treat every `_(pending)_` as genuinely unknown rather than not
+> applicable. **What is solid is the Form 2553 / S-election history**, added 2026-08-12 from
+> Lilian's own call notes.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
-> EINs, dollar figures, and personal contact details stay in Google Drive / Double
+> dollar figures, and personal contact details stay in Google Drive / Double
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
+> **A business EIN is the exception and MAY be written here** — it is public on Sunbiz,
+> so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
+> including when it is the entity's tax ID. Write the EIN **hyphenated** (`12-3456789`) — nine
+> bare digits trip the published-page gate and stop the build.
 
 > **Two zones — what feeds the SOP vs what stays here.** This file is the master
 > record. Its sections split into two zones:
@@ -28,7 +33,7 @@
 ## 1. Snapshot
 
 - **Business name:** OPTIC GOLD INC
-- **Entity type:** **Corporation (Inc)**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
+- **Entity type:** **Corporation (Inc)**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_. **The S-election is confirmed on file with the IRS, effective 2024-01-01** — accepted 2026-03-16 after the firm had to prove the Form 2553 had been sent (§5, §6). Until that date the IRS had no S-election on record for this entity.
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
@@ -49,7 +54,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | _(add roles as needed)_ | |
 
 - **Double client:** [app.doublehq.com/close?cid=706702](https://app.doublehq.com/close?cid=706702)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note:** `CASE · IRS Form 2553 — S-election on file` — note **491051**
 
 ## 3. Systems & access
 
@@ -96,8 +101,14 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 ### Income tax
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
 - **Return type(s) & deadlines:** **1120-S**; deadlines _(pending)_
-- **Our role:** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Our role:** We prepare and file _(implied by the 2024/2025 filings below — not separately confirmed)_
+- **Process notes (→ future SOP):**
+  - ⚠️ **E-filing has been failing for this client, so check before assuming it will work.** The
+    **2024** 1120-S was rejected because the S-election was not on the IRS's records; the **2025**
+    extension was then rejected in **ATX** on 2026-03-16 — the same day that first cause was
+    confirmed resolved, so **why the second one failed is unknown**. The **Form 7004 was
+    mailed on paper, 2026-03-16**. Whether the paper 7004 was processed is still unconfirmed (§6).
+  - **Any IRS letter about this client goes to the OLD address** — see §5.
 
 ### Licenses & other filings
 - **Applies?** _(pending — only the annual-report flag below is known; local licences, BTRs and any BOI obligation are unchecked)_
@@ -120,7 +131,9 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- 🔴 **The IRS holds this company's PREVIOUS address, and it has not been corrected.** Noted on the call of **2026-03-16**; Lilian had to go into the company's earlier Annual Reports on **Sunbiz** to work out which address the IRS was holding. **Every IRS letter — on any matter, not just this one — goes to the company's previous address.** Nothing has been filed to change it (§6). This is the first thing to fix and the first thing to suspect when an IRS response never arrives.
+- **The S-election was only accepted on 2026-03-16, retroactive to 2024-01-01** — and only after the firm faxed the IRS a copy of the Form 2553 plus the USPS receipt to prove it had been sent. The IRS had **no 2553 on record**, which is why the **2024 Form 1120-S was rejected**. _(Lilian's IRS calls, 2026-02-04 and 2026-03-16 — full trail in the Double case note, §7.)_
+- **E-filing has been rejected twice, and the causes are not established to be the same** — the 2024 1120-S because the S-election was not on the IRS's records, and then the 2025 extension in **ATX**, on 2026-03-16, the very day that cause was confirmed fixed. So the second rejection's cause is unknown. The extension went out as a **paper Form 7004**. Budget for paper filing and for confirming receipt by phone.
 - Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner). Payroll reads **TBD** in Double — settle it.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
 
@@ -131,6 +144,11 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-12 — **The Form 2553 / S-election matter written up, start to finish**, from Lilian's own call notes. Two IRS calls, six weeks apart, and the second one closes the first. _(Lilian's iCloud notes, migrated — folder "Optic Gold Inc"; notes dated 2026-02-04 and 2026-03-16.)_ The operational detail — the fax numbers, the processing windows, what each agent said — is in the **Double case note** (§7), which is where the team works from; this file keeps the facts and their consequences.
+  - **2026-02-04 — the problem.** The **2024 Form 1120-S was rejected**: the return did not match the IRS's records. On the call the agent said the IRS had **never received the Form 2553**. The remedy the agent gave was to **prove it had been sent** — fax the 2553 together with the USPS receipt — with a stated processing time of 30–60 days plus up to 15 more for the response letter. Lilian faxed everything the same day.
+  - **2026-03-16 — resolved.** The IRS confirmed the **S-Corp status was accepted, effective 2024-01-01**, and faxed a **confirmation letter** (saved in Drive). ⚠️ On the same call it emerged that **the address the IRS holds is the company's previous one** — §5. Lilian raised the possibility that the outdated address may be why the 2553 went missing in the first place. **The IRS did not say so and it is not established** — it stays a hypothesis, and the notes record no answer to it.
+  - Also that day: the **2025 Form 7004 was mailed on paper**, because e-filing was being rejected in ATX.
+- 2026-08-12 — **Double case note opened** for this matter — the firm's first for this client (§7). It exists so Julia can read the whole IRS history without asking anyone. _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -146,7 +164,9 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- 🔴 **Correct the company's address with the IRS.** Open since **2026-03-16**, when the outdated address was discovered, and **nothing has been filed** (a **Form 8822-B** is the usual route). Until it is done, every IRS letter for this client goes to the old address. **Confirm first what address the IRS currently holds and what the correct one is** — the note establishes only that the one on file is the *previous* one.
+- **Confirm the IRS processed the paper Form 7004 for 2025**, mailed 2026-03-16. Nothing recorded since, so the extension is **unconfirmed**, not known-good.
+- **Everything about this client beyond Double's property columns and the IRS history is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
@@ -162,6 +182,7 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706702](https://app.doublehq.com/close?cid=706702)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note:** `CASE · IRS Form 2553 — S-election on file` — note **491051**. The IRS calls in full: dates, fax numbers, what each agent said, and what is still owed.
+- **Migrated TaxDome notes (Drive):** [`*QBO Clients and Individuals` → Optic Gold Inc → `1. Notes`](https://drive.google.com/drive/folders/13bGBpdYxjlbOCpbUUNEZryWRgZTunu21) — holds `1.1 - IRS call 02.04.2026 - Form 2553 not received` and `1.2 - IRS call 03.16.2026 - Form 2553 accepted`, the same two calls written up above. Mirrored in Double at `TaxDome > Optic Gold Inc > 1. Notes`.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
