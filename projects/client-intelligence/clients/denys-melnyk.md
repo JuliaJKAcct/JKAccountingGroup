@@ -20,7 +20,7 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
-- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ⚠️ **MONTANA IS NOT CLOSED, and what it even IS remains unexplained.** He filed 2024 as a **Montana RESIDENT**, and what he gave is the date he arrived in Florida, **not the date he left Montana** — a part-year Montana return is a real return with real tax. **Still to ask: was any part of 2025 spent in Montana, and when did he leave?** ⓘ **Lilian's hypothesis (2026-08-12) — that Montana came from one of the COMPANIES being registered there, since he says he lived in Washington before Florida — does not fit the filing as our file records it.** A company operating in a state produces a **NONRESIDENT** return, the way Illinois did; **only living there produces a resident one.** So on the record we hold, Montana is about where he **lived**, not where a company sat. ⚠️ **Two caveats, both worth keeping:** ① **her instinct about the companies is well founded for a trucking business** — Montana registration is a common vehicle/fleet arrangement, so a Montana entity is entirely plausible; it just would not have produced a *resident* return; ② **the word "resident" is doing all the work here and it came from OUR reading of his 2024 return** — if that reading is wrong, her explanation becomes the right one and the question changes completely. **Worth re-checking that page of the return before building anything on it.** _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
+- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ⚠️ **MONTANA IS NOT CLOSED — but it is not a mystery either.** ✅ **The simplest explanation needs no company at all, and it is almost certainly the right one: he was a Montana RESIDENT in 2024, moved to Washington, and moved on to Florida in May 2025.** Those are different years, so **nothing he told Lilian contradicts the 2024 filing** — she reported what he said about **2025**, and the Montana return is **2024**. ⚠️ **So the live question is not "was he in Montana in 2025" in the abstract — it is WHEN he left.** If that was during 2024, there is no 2025 Montana return; **if it was during 2025, there is a part-year Montana return**, which is a real return with real tax. **One question, one date.** ⓘ **On Lilian's hypothesis (2026-08-12) — that Montana came from one of the COMPANIES being registered there:** her instinct about the companies is **well founded** (Montana registration is a common vehicle/fleet arrangement in trucking, so a Montana entity is entirely plausible), but it does not explain this filing. **A registration-only entity sources no income to Montana, so it would produce NO Montana return at all** — and an entity that genuinely operated there would produce a **nonresident** return, the way Illinois did. **Only living there produces a resident one.** ⚠️ **One caveat worth keeping: the word "resident" is doing all the work, and it came from OUR reading of his 2024 return.** If that reading is wrong, her explanation becomes the right one. Worth re-checking that page before building anything on it. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
 - **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and he was **locked out of it mid-year after a falling-out with his partner**, which is why he holds no K-1 and no W-2 for money he did receive _(client call, 2026-08-12 — §5, and it is now the item that gates the return)_.
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
@@ -89,8 +89,8 @@ link). Never write the credential itself here.
 
 - 🔴 **He received income from one of his own S corporations in 2025, holds NO K-1 and NO W-2 for it, and cannot obtain either.** This is now the item that decides whether the return can be prepared at all — and it is **a decision for Lilian and Julia, not a question for the client**, because the documents are not his to produce. _(Why he cannot get them is in the call block below; it stays out of this bullet, which publishes.)_ **Routes are set out below** _(client call, 2026-08-12)_.
 - 🔴 **He is an S-corporation shareholder, not a contractor** — three trucking entities. So the money he describes as income is most likely **wages or a distribution**, and the expenses he listed are probably **his companies'**, already deducted on their 1120-S returns. **Nothing should be prepared until this is settled** — and it is now doubly true, because the K-1 that would answer it is missing.
-- 🟠 **Form 1095-A: the blocker is now CONTESTED, not confirmed.** The organizer says Marketplace coverage; on 2026-08-12 he named **Blue Cross Blue Shield** and Lilian's read is that it is private. **BCBS sells both on and off the exchange, so the carrier name proves nothing either way** — settle it on the form, not the brand (below).
-- 🔴 **A large net operating loss carries forward from 2024**, big enough to absorb most of 2025. **Preparing without it would cost him badly** — and it rests on a basis figure nobody has verified. ⚠️ **Do not treat it as a reason a late filing is cheap:** an NOL reduces **taxable income only**. It does not touch **self-employment tax**, the Additional Medicare Tax, NIIT or a §72(t) penalty — and the failure-to-file penalty is computed on the tax required to be shown on the return, **which includes SE tax** (§4).
+- 🟠 **Form 1095-A: the blocker is now CONTESTED, not confirmed.** The organizer says Marketplace coverage; on 2026-08-12 he named **Blue Cross Blue Shield** and Lilian's read is that it is private. **BCBS sells both on and off the exchange, so the carrier name proves nothing either way.** ⚠️ **And "which 1095 did you get" does not settle it either — he may hold none.** Ask **where he bought it and whether anyone helped pay the premium** (the method, and the message to send him, are below).
+- 🔴 **A large net operating loss carries forward from 2024**, big enough to absorb most of 2025. **Preparing without it would cost him badly** — and it rests on a basis figure nobody has verified. ⚠️ **Do not treat it as a reason a late filing is cheap:** an NOL reduces **taxable income only**. It does not touch **self-employment tax**, the Additional Medicare Tax or a §72(t) penalty (and it reaches NIIT only to the extent it is allocable to net investment income) — and the failure-to-file penalty is computed on the tax required to be shown on the return, **which includes SE tax** (§4).
 
 ### What he told Lilian on the call of 2026-08-12
 
@@ -117,7 +117,7 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
 - **Routes worth putting in front of Julia** (options for that conversation, not decisions):
   ① an **IRS wage & income transcript** in his own name — compiled from information returns (W-2,
   1099, 1098, 5498), so it settles the wages half **without needing the partner**. Two limits:
-  **a K-1 is not an information return and does not appear on it**, and it shows only what was
+  **a K-1 is not an information return and does not reliably appear on it**, and it shows only what was
   actually **filed** — a locked-out shareholder's W-2 may never have been issued at all. It needs
   either **his own IRS online account** or a **Form 8821 / 2848** from him.
   ② whether the company **has filed its 2025 Form 1120-S** at all — on extension that return is due
@@ -132,9 +132,13 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   2025 still produces a 2025 K-1 for the part-year.** Never the absence of a payment. So the
   question to him is not "did they pay you" (answered) but **"are you still a shareholder, and if
   you got out, on what date"**. This is the file's own disappearance rule, arriving in a new disguise.
-- ⚠️ **Lilian relayed on 2026-08-12 that "he is no longer part of these companies" — and that phrase
-  has to be pinned down before anyone relies on it.** **Being locked out is not the same as ceasing
-  to be a shareholder.** A shareholder who is frozen out of the office, the bank and the books
+- ⚠️ **"He is no longer part of these companies" — check with Lilian whether this is new information
+  at all before treating it as any.** She used the phrase on 2026-08-12 **inside her paragraph about
+  Montana**, as the reason her own company hypothesis would not help. **The most likely reading is
+  that she was restating the lock-out already recorded, not reporting a share disposal** — so it is
+  captured here as a phrase to clarify, not as a relay from the client.
+  **The distinction it raises is real whichever way that goes: being locked out is not the same as
+  ceasing to be a shareholder.** A shareholder frozen out of the office, the bank and the books
   **still owns the stock and is still allocated income or loss on a K-1**; nothing about the dispute
   changes his ownership. So the question is narrow and legal, not practical: **did he actually SELL,
   transfer or surrender his shares — and on what date?**
@@ -142,7 +146,12 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
     still owed**, however completely he is shut out.
   - **If he disposed during 2025,** there is still a **2025 K-1 for the part-year** — and, separately,
     a **disposal of stock to report**, which needs his **basis**. The file already flags basis as
-    unverified (below), and this is a second reason it matters.
+    unverified (below), and this is a second reason it matters. ⚠️ **And a third, which costs real
+    money: suspended losses are LOST on disposition** (§1366(d)(2)) — only a limited post-termination
+    transition period survives (§1377(b)). Given the large loss deducted in full and the unverified
+    basis, "he sold in 2025" is the expensive branch, not the tidy one. ⓘ **Form 7203** is the
+    document that carries the basis figure this file keeps asking for; it is required on a disposal,
+    a distribution, or a loss claim.
   - **Only a disposal in a PRIOR year** removes a 2025 K-1 — and it cannot apply to the company that
     paid him in 2025, since he was plainly still connected to it that year.
   ⓘ Also worth clarifying with Lilian **which** companies "these" meant: all three, or the two that
@@ -156,35 +165,91 @@ named the carrier; Lilian's read is that it is **private, not Marketplace**, and
 **Two sources, recorded unsettled.** ⚠️ **The carrier name cannot break the tie — BCBS is sold both
 on and off the exchange.**
 
-**How to settle it — the working method** _(written out because Lilian asked, 2026-08-12; it applies
-to any client, not just this one)_:
+**How to settle it — the working method** _(written out because Lilian asked, 2026-08-12; the shape
+is reusable, but read the state-by-state caveats — they are not the same for every client)_:
 
-- **Only ONE of the three forms is ever needed to file.** **1095-A** comes from the Marketplace and is
-  the only one we require — it feeds **Form 8962**. **1095-B** (from the insurer, for coverage bought
-  direct or off-exchange) and **1095-C** (from a large employer) are **informational only since the
-  individual mandate penalty went to zero in 2019** — we never need them and should not chase them.
-- ⚠️ **So "send me your 1095" is the wrong question, because he may not have one.** A 1095-A is mailed
-  automatically by the end of January. A **1095-B often is not mailed at all** — insurers are allowed
-  to post a notice instead and send it only if the member asks. **Silence proves nothing.**
-- **Ask where he BOUGHT it and whether anyone helped PAY for it** — those two answers settle it
-  without any document. Bought on a government website, or direct from the insurer / through an
-  agent / through an employer? And did the government cover part of the premium, or did he pay the
-  full price himself? **A subsidy means Marketplace**, and it is the subsidised case that blocks the
-  return.
+**The answer→action table. Start here.**
+
+| He says | What it means | What we do |
+|---|---|---|
+| Bought on **healthcare.gov** or **WA Healthplanfinder** — **or a broker/agent signed me up** | **Marketplace** | Get the **1095-A** → **Form 8962** |
+| Bought **direct from the insurer**, paid the full premium himself | Off-exchange | **Nothing needed** |
+| **Through my company** | Employer coverage — and for a **>2% S-corp shareholder** it has its own route | See the >2%-shareholder rule below; premiums must be **in his W-2** to deduct above the line |
+| **Medicaid** (in Washington it is branded **Apple Health**) / "I paid nothing" | **NOT Marketplace** | **Nothing needed** — no 1095-A, no 8962, nothing to reconcile |
+| **No cover for part of the year** | No penalty at all, federal or state | Reassure and move on |
+
+- **Only the 1095-A is ever needed to prepare a 1040.** It comes from the Marketplace and feeds
+  **Form 8962**. The **1095-B** (insurer) and **1095-C** (large employer) have been **informational
+  since the individual mandate penalty went to zero in 2019**. ⚠️ **Two exceptions that stop this
+  being a firm-wide rule:** a client in **California, Massachusetts, New Jersey, Rhode Island or DC**
+  still faces a **state** mandate and needs the 1095-B as proof; and a **1095-C matters whenever an
+  employer's offer of affordable coverage collides with a Marketplace plan**, because the offer
+  disqualifies the premium tax credit and drives the Form 8962 result. **Neither applies to this
+  client** — Washington and Florida have no mandate.
+- ⚠️ **"Send me your 1095" is the wrong question, because he may hold none.** A 1095-A is mailed
+  automatically by the end of January. A **1095-B often is not mailed at all** — the issuer may post
+  a notice instead and furnish it only on request, and since the 2024 reporting year **the same
+  furnish-on-request relief covers the 1095-C**. **Silence proves nothing.**
+- **Ask where he BOUGHT it and whether anyone helped PAY for it.** Those two answers settle it
+  without any document — and they map onto the table above.
+- ⚠️ **"The government paid part of it" has a false positive: MEDICAID.** A Medicaid enrollee will
+  answer yes and there is **no 1095-A and nothing to reconcile** — they get a 1095-B. **Separate them
+  by asking whether he paid any premium at all**; a Medicaid enrollee usually pays nothing. This is
+  live for this client, not hypothetical, given the 2024 AGI. ⓘ **If the answer is Medicaid, record
+  the CONSEQUENCE — "not Marketplace, no 1095-A needed" — never the circumstance**
+  ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 30).
 - ⚠️ **The mid-year move is a trap here.** Marketplace is not one website: **Washington runs its own
   exchange (Washington Healthplanfinder)** and **Florida uses healthcare.gov**. He lived in WA until
   May and FL after, so **each half of the year has a different door** — asking only about
   healthcare.gov would miss a Washington plan entirely. The **BCBS company differs too** (the Blues
   in Washington are Premera / Regence; in Florida it is Florida Blue), so "Blue Cross Blue Shield"
-  may well be **two plans in two states**, and if either was on-exchange there is a **1095-A for that
-  period** — possibly two.
-- **The decisive check he can run himself:** log in to the exchange for the state in question and open
-  the tax-forms section. **If a 2025 Form 1095-A is there, it is Marketplace and he can download it.
-  If he has no account at all, it is not Marketplace.**
+  may well be **two plans in two states**. **If either was on-exchange there is a 1095-A for that
+  period — possibly two, and both go on the same Form 8962.**
+- **The check he can run himself — and what it does NOT prove.** If a **2025 Form 1095-A is in his
+  exchange account, it is Marketplace** and he downloads it there. ⚠️ **If he has no account, that
+  settles NOTHING.** Brokers and agents enrol people through partner sites without the client ever
+  opening a portal, and those people are full Marketplace enrollees with a 1095-A they have never
+  seen. So "no account" means **unconfirmed**, never "not Marketplace". Then: **ask who signed him
+  up** (an agent can pull the 1095-A), or **call the Marketplace directly** — healthcare.gov
+  **1-800-318-2596**, WA Healthplanfinder **1-855-923-4633** — which confirms whether he was ever
+  enrolled at all.
 - ✅ **And nothing here is a penalty risk.** There is **no federal penalty for a gap in coverage**
   since 2019, and **neither Washington nor Florida has a state mandate** — so a month uncovered
   during the move costs nothing. Say so, rather than letting the questions sound like an
   investigation.
+- ⚠️ **If a 1095-A does turn up, read who is ON it.** It lists every covered individual, and if the
+  household was split across policies the allocation matters.
+
+**The message to send him** _(Russian — his language; the shape follows the firm's rule for two
+records that disagree: recite what he told us, name each record, ask openly, then narrow — one
+question per block, each answer on its own line for a phone screen)_:
+
+> Здравствуйте, Денис!
+>
+> Один вопрос по медицинской страховке за 2025 год. В анкете (organizer) отмечено, что страховка
+> была оформлена через государственный сайт («Marketplace»), а Вы сказали нам, что это Blue Cross
+> Blue Shield. Это может быть и одно и то же, и разное — поэтому уточняем.
+>
+> Вы переехали во Флориду в мае, поэтому ответьте, пожалуйста, отдельно по двум периодам:
+> **январь–май (Вашингтон)** и **май–декабрь (Флорида)**.
+>
+> 1. Где Вы оформляли страховку — на государственном сайте, напрямую в страховой компании, через
+> агента или через работодателя?
+>
+> 2. Вы платили полную стоимость сами, или часть взноса оплачивало государство?
+>
+> 3. Есть ли у Вас личный кабинет на одном из этих сайтов?
+> Флорида — healthcare.gov
+> Вашингтон — wahealthplanfinder.org
+>
+> Если есть — войдите, откройте раздел **Tax Forms** и посмотрите, есть ли там форма **1095-A** за
+> 2025 год. Если есть — скачайте и пришлите нам.
+>
+> Если страховку оформлял агент, напишите, пожалуйста, кто именно — он сможет получить эту форму.
+>
+> Если страховка была куплена напрямую, а не через государственный сайт, присылать ничего не нужно.
+>
+> И ещё: если в каком-то месяце страховки не было, штрафа за это нет.
 
 ⚠️ **Two refinements on what a 1095-A actually means**, because this file has stated it too bluntly:
 the e-file rejection fires when IRS records show **advance premium tax credit was PAID** for someone
@@ -239,17 +304,23 @@ and corrected it to *hijos*. They are:
 **The wife is not one of the two.** She is on the joint return as his spouse, which is a different
 thing entirely.
 
-- 🔴 **What is still open is not WHO but WHERE — and it is worth up to $2,000.** His **2025 organizer
+- 🔴 **What is still open is not WHO but WHERE — and it is worth up to $2,200 for 2025.** His **2025 organizer
   records no dependants at all**, which almost certainly means the question was simply missed, since
   the daughter existed and was claimed the year before. **So ask it directly: did the daughter live
   with him during 2025, and for how many months?** More than half the year is what the Child Tax
   Credit turns on.
-- ⚠️ **Ask her AGE at 31 December 2025 in the same breath** _(her date of birth is in Double — check
-  there first, it may already answer this)_. The **Child Tax Credit stops at 17**: a child who is
-  **under 17** at year-end is worth up to **$2,000**; from **17** it drops to the **$500 Credit for
-  Other Dependents**. She was under 17 in 2024, because the 2024 return claimed the *Additional*
-  Child Tax Credit — so **2025 may be exactly the year she ages out**, and that is a real difference
-  in the number, not a technicality.
+- 🔍 **Her AGE decides the amount — and it is a LOOKUP, not a question. Her date of birth is in
+  Double; read it before asking him anything.** The **Child Tax Credit stops at 17**: a child who
+  **has not attained age 17 at the close of the year** is worth up to **$2,200 for 2025** (raised by
+  the July 2025 legislation from $2,000, with the refundable Additional CTC capped at **$1,700**);
+  from **17** it drops to the **$500 Credit for Other Dependents**. We know she was under 17 at the
+  end of 2024, because the 2024 return claimed the *Additional* CTC, which exists only for a child
+  under 17 — so she is somewhere between 1 and 17 at the end of 2025 and **the file cannot narrow it
+  further by reasoning.** Look it up.
+- ⚠️ **And a gate that comes BEFORE age and residence, new for 2025:** the CTC now requires a
+  **work-eligible SSN for the taxpayer** as well as for the child (one spouse suffices on a joint
+  return). **An ITIN filer gets no CTC at all** — not a reduced amount, none. Check which he holds
+  before promising anything; it matters more often than it should for this firm's client base.
 - **The son: on his account we need nothing, but there is a branch worth one question.** A
   non-custodial parent cannot claim a child who does not live with them without a signed **Form
   8332** from the custodial parent, and **child support is neither income to the recipient nor
@@ -307,7 +378,8 @@ paper. It gates the home-office allocation, and it leaves the **rental** questio
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
 (the premium tax credit reconciles on Form 8962 and the return is **rejected** without it). The
 client has since named **Blue Cross Blue Shield**, and Lilian's read is private cover. **Unsettled
-until we know which 1095 he received.** **Nothing comparable appears on the 2024 return**, so
+— and settled by asking WHERE he bought it and WHETHER anyone helped pay the premium, not by asking
+which form he holds; he may hold none (the method above).** **Nothing comparable appears on the 2024 return**, so
 whatever it is, it is new for 2025 — do not expect a prior-year copy to exist.
 
 **Estimated tax payments — ask in both directions.** Nothing indicates he made any. With income
@@ -360,17 +432,17 @@ repo — they are on the return and in Double.)
   generally have to be paid or reimbursed by the corporation **and included in his W-2 wages**.
   Settle this with the W-2 question, not separately.
 
-**The dependent question is worth real money, and the sources disagree.** _(A **fourth** source
-arrived on 2026-08-12 — his own answer on the call. It is in the call block above, and it did not
-close this; it sharpened it to one thing: **neither person he named is the daughter claimed in 2024.**
-Read the two together.)_ His 2024 return
+**Why the daughter's position is worth real money — the background.** _(✅ **WHO the children are
+was settled on 2026-08-12** by Lilian's correction, in the block above. What follows is why her
+2025 residence still has to be established.)_ His 2024 return
 claimed **one dependent daughter** with both the **Earned Income Credit** and the **Additional
 Child Tax Credit** — and **EIC cannot be claimed by a non-custodial parent at all**, so as of 2024
 she lived with them more than half the year. (The child tax credit alone would not prove that: it
 can be released to a non-custodial parent on Form 8332. The residency conclusion rests on the EIC.)
-What he sent us in Aug 2026 says **two children** and **child support**. **His 2025 organizer
-records no dependants at all** _(read 2026-08-12)_ — which is what makes this a three-way
-disagreement rather than a two-way one, and why it is re-asked per child.
+What he sent us in Aug 2026 says **two children** and **child support** — ✅ **confirmed by Lilian
+on 2026-08-12: that daughter plus a son who does not live with him.** **His 2025 organizer records
+no dependants at all** _(read 2026-08-12)_, which is now best read as **a question simply missed**
+rather than a contradiction, since the daughter existed and was claimed the year before.
 
 ✅ **His 2025 filing status is SETTLED: MARRIED at 31 December 2025, and he did NOT live apart
 from his spouse for the last six months of the year.** _(2025 organizer, read 2026-08-12. Recorded
@@ -394,16 +466,13 @@ marriage does not supply.)_
 **Still true and still binding:** ask about the household **as facts, never as a list of statuses**
 (Lilian, 2026-08-11), and never carry a filing status forward from the prior year by default.
 
-**One reading fits all three of the older sources: two children — one living with them (the one
-claimed in 2024) and one who does not (the child support).** That would make the 2025 dependant
-position simply an oversight. ⚠️ **His 2026-08-12 answer is the first that does NOT fit it** — he
-described the two people as his **wife** and the non-resident child, which would leave no resident
-child at all. Both readings are live; the call block above sets out what each implies. It is worth stating because **he is married to the same spouse he was in 2024**, so any
-change in that daughter's status needs an explanation the marriage does not supply. But other
-readings fit too — custody may have switched, the resident child may be the other one, or the
-question was simply misread. **Ask; do not assume.** Nothing in it is alarming on its own —
-circumstances change and he is not an accountant — but it has to be settled **per child**: who
-they live with now, and for how many months of 2025. If nothing actually changed, what is on file today would cost him the **Child Tax Credit**. (EIC is a separate question:
+✅ **CONFIRMED 2026-08-12 — the reading that fits every source: two children, the daughter claimed
+in 2024 and a son who does not live with him.** Lilian settled it, and the 2025 dependant position
+is therefore an oversight, not a change. **Still binding:** because **he is married to the same
+spouse he was in 2024**, any change in that daughter's living arrangements would need an explanation
+the marriage does not supply — so **establish it, do not assume it in either direction**. Nothing in
+it is alarming — circumstances change and he is not an accountant. What is on file today would cost
+him the **Child Tax Credit**. (EIC is a separate question:
 it was available in 2024 on a deeply negative AGI, and looks unlikely for 2025 if his income is
 materially higher — confirm once the Midwest question is settled rather than assuming either way.)
 
@@ -507,8 +576,9 @@ street address never appear here, and nor do dollar figures — those live in Do
   - 🟠 **Where he lived** — Kirkland WA until May 2025, then Florida. **Montana is not covered by
     that answer**: it gives his arrival, not his departure.
   - ✅ **Rent or mortgage, and the Form 1098** — he has an apartment and **sent the 1098**.
-  - 🟠 **Form 1095-A** — answered with a **carrier** (BCBS), which does not answer it. Re-ask as
-    *which 1095 did you receive*.
+  - 🟠 **Form 1095-A** — answered with a **carrier** (BCBS), which does not answer it. ⚠️ **Re-ask as
+    *where did you buy it, and did anyone help pay the premium* — NOT *which form did you get*.**
+    He may hold no form at all (§5).
   - ✅ **The children — WHO they are is settled** _(Lilian's correction, 2026-08-12)_: **two
     children** — the **daughter already claimed in 2024**, and a **son** who does not live with him.
     The wife is not one of them. 🟠 **What is left is the daughter's 2025 residence and her age**,
@@ -552,20 +622,24 @@ published card** — they are ordered by what would cause a wrong return or a re
   at all. The method, and the wording, are in §5.
 - 🟠 **The daughter — where did she live in 2025, for how many months, and how old was she at 31
   December 2025?** ✅ **Who she is is settled** (the child claimed in 2024 — Lilian, 2026-08-12);
-  only her residence and age are open. Both carry money: more than half the year is what the credit
-  turns on, and **the Child Tax Credit drops from $2,000 to the $500 Credit for Other Dependents
-  once she turns 17** — 2025 may be that year. **Check her date of birth in Double before asking**
-  (§5).
-- **Was any part of 2025 spent in MONTANA, and on what date did he leave?** He filed 2024 as a
-  Montana **resident** and gave us his arrival in Florida, not his departure from Montana. A
-  part-year Montana return is a real return. ⓘ **Lilian's reading — that Montana came from a COMPANY
-  registered there — would give a nonresident return, not a resident one**, so it does not explain
-  the 2024 filing as we have recorded it; but the word "resident" came from our own reading of that
-  return and is worth re-checking (§1).
+  only her residence and age are open. 🔍 **Her AGE is a LOOKUP — her date of birth is in Double.
+  Read it before asking him anything.** Both carry money: more than half the year is what the credit
+  turns on, and **the Child Tax Credit drops from $2,200 (the 2025 amount) to the $500 Credit for
+  Other Dependents once she turns 17**. ⚠️ **And check which taxpayer identifier he holds:** from
+  2025 the CTC requires a **work-eligible SSN for the taxpayer** as well as the child, so **an ITIN
+  filer gets nothing** (§5).
+- **On what date did he LEAVE MONTANA?** One question, one date. He filed 2024 as a Montana
+  **resident** and gave us his arrival in Florida instead. **Left during 2024 → no Montana return
+  for 2025; left during 2025 → a part-year Montana return, which is a real return.** ⓘ **Nothing he
+  told Lilian contradicts the 2024 filing** — he was describing 2025 (§1). Her company reading would
+  give **no Montana return at all** on a registration-only entity, so it does not explain a resident
+  filing; the word "resident" came from our own reading and is worth re-checking.
 - **Did he SELL, transfer or surrender his shares — and on what date?** ⚠️ **Not "are you still
-  involved":** Lilian relayed that he is "no longer part of these companies", but **being locked out
-  is not the same as ceasing to be a shareholder** — a frozen-out shareholder still owns the stock
-  and is still allocated a K-1 (§5). ⚠️ **Do not ask "did they pay you"; he has answered that (no).** An S corp allocates income or loss on a K-1
+  involved":** **being locked out is not the same as ceasing to be a shareholder** — a frozen-out
+  shareholder still owns the stock and is still allocated a K-1, and a 2025 disposal would also
+  **lose the suspended losses** (§5). ⓘ **First check with Lilian** whether her phrase *"he is no
+  longer part of these companies"* was new information or a restatement of the lock-out.
+  ⚠️ **Separately: do not ask "did they pay you"; he has answered that (no).** An S corp allocates income or loss on a K-1
   **whether or not it distributes anything**, so those K-1s are still owed unless he disposed of the
   shares or the entity terminated in a **PRIOR** year — ⚠️ **an exit during 2025 still produces a
   2025 K-1 for the part-year** (§5).
