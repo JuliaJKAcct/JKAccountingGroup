@@ -21,7 +21,7 @@
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
 - **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and he was **locked out of it mid-year after a falling-out with his partner — and that company has since FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12)_, which is why he holds **no W-2, no 1099 and no K-1** for money he did receive _(client call, 2026-08-12 — §5, and it is now the item that gates the return)_.
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -70,7 +70,7 @@ link). Never write the credential itself here.
 ### Income tax
 - **Applies?** Yes.
 - **Return type(s) & deadlines:** Form **1040**; 2025 tax project `notStarted`, due **2026-04-15**. Double's `Tax Return Type` reads **`1040-SCH C`** — ⚠️ **and the 2024 return does not support that.** The only Schedule C on the 2024 return was his **wife's** (a tiny "business supportive services" activity); his own income came through **S-corporation K-1s**, a W-2 and a retirement distribution. Settle the return type before preparing anything — see §5.
-- **State returns:** federal is not the whole job for this client. 2024 was federal + **Montana** (resident) + **Illinois** (Schedule NR). **For 2025 his residence is Washington until May, then Florida** — neither taxes personal income _(client call, 2026-08-12)_. ⚠️ **Two halves are still open, for different reasons:** **Montana**, because he gave the arrival in Florida and not the departure from Montana (§1); and **Illinois**, which was never about his address at all — it followed his companies' Illinois income. **Illinois cannot be settled without the K-1** (§5), so it moves from "ask him" to "it depends on the document he cannot get".
+- **State returns:** federal is not the whole job for this client. 2024 was federal + **Montana** (resident) + **Illinois** (Schedule NR). **For 2025 his residence is Washington until May, then Florida** — neither taxes personal income _(client call, 2026-08-12)_. ✅ **Montana is CLOSED** — Lilian's decision, 2026-08-12 (§1). ⚠️ **Illinois is not**, and it was never about his address at all — it followed his companies' Illinois income. **Illinois cannot be settled without the K-1** (§5), so it moves from "ask him" to "it depends on the document he cannot get".
 - ⚠️ **Was a 2025 extension filed? Nobody has recorded it, and the original deadline has passed.** Form 1040 for 2025 was due **2026-04-15**; today is well past it. With **Form 4868** the return runs to **2026-10-15**. ⚠️ **The firm's own record cannot answer this** — he became a client in Double on **2026-07-21**, three months after the deadline, so **JK cannot have filed it.** The sources that can answer are **the client himself**, his **prior (Chicago) preparer**, or his **IRS account transcript**, which shows a posted extension. Two cautions before anyone reassures him: an extension extends the time to **file, not to pay**, so failure-to-pay and interest run from 2026-04-15 regardless; and the **NOL does not make this cheap** — it reduces taxable income but not **SE tax**, which is in the penalty base (§5). This sets how much time the missing-K-1 problem actually has.
 - **Our role:** We prepare the return.
 - **Organizer status:** `JK 2025 1040 Organizer`, marked **completed 2026-08-04** at **100%**, and Double's `Organizer Status` property reads **Completed**. **It is not usable as filed** — see §5. Treat the "Completed" label as the client's sign-off, not as a statement that we have what we need.
@@ -105,6 +105,20 @@ months of 2025**. Then he **fell out with his partner**, was **blocked from ever
 company**, and so **received no K-1 and no W-2** — for income he does not dispute receiving.
 **Nothing at all, in fact: no W-2, no 1099, no K-1** _(Lilian, 2026-08-12)_.
 
+- 🔴 **TWO VERSIONS OF THE LOAD-BEARING FACT, AND THEY DISAGREE. Settle this before anything else.**
+  Lilian **opened** the same call summary with *"no recibió ningún income de estas tres S-Corp en
+  2025"* — **no income from ANY of the three.** The rest of the file, from the same day, says he
+  **did** receive that company's money in the first months of 2025. **Three readings fit, and only
+  she or he can pick:**
+  1. **No DOCUMENTED income** — supported by her own later phrase, *"de la cual no recibió ningún
+     documento de su income"*. The likeliest reading.
+  2. **No income from the other two**, stated loosely — the position the file already holds.
+  3. 🔴 **It was a DISTRIBUTION.** A client and a bookkeeper both correctly call a distribution "not
+     income" — and **a distribution is not income to him to the extent of basis.** This reading
+     would dissolve much of the blocker, and **nobody has considered it.**
+  **Ask one question at the point of use: *"El dinero de los primeros meses de 2025 — ¿lo recibió o
+  no lo recibió, y cómo se lo pagaron?"*** ⚠️ **Nothing downstream is safe until this is settled** —
+  the Illinois question, the expenses and the whole "what was that money" blocker all rest on it.
 - 🔴 **THE COMPANY FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12 — she added this after the first
   write-up; the client told her)_. ⚠️ **One part of it is not yet clear and the two versions are
   different facts: she said "his partner — that company — died, or it filed a bankruptcy", then
@@ -115,15 +129,86 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
     decision toward the transcript and toward filing on his own figures with **Form 8082**.
     _(A corporation in bankruptcy stays the taxpayer — there is no separate estate the way there is
     for an individual — so the obligation survives even where nobody meets it.)_
-  - ⚠️ **It may also open something in HIS favour, and nobody has looked:** if his stock became
-    **worthless** in 2025, §165(g) gives a loss, and if the stock qualifies under **§1244** it is an
-    **ordinary** loss rather than a capital one. **That is money, and it needs his BASIS** — the same
-    unverified figure this file keeps returning to (Form 7203).
-  - **Chapter matters:** a **Chapter 11** reorganisation may keep filing; a **Chapter 7**
-    liquidation usually does not. Worth establishing which, and when it was filed.
+  - ⚠️ **There MAY be something in his favour — but this file's own record says probably not much,
+    and nobody should promise it.** If his stock became **worthless** during 2025, **§165(g)** treats
+    it as **sold on 31 December 2025** — a **CAPITAL** loss, so it offsets capital gains plus only
+    **$3,000 of ordinary income a year**, the rest carried forward. **§1244** would make it
+    **ordinary** instead, but only if the stock was **issued to him directly by the company for money
+    or property** (not bought from the partner, not for services — and **we do not know how he
+    acquired his shares**), the company's stock-and-capital did not exceed **$1M at issuance**, and
+    it passes the **gross-receipts test** — ⚠️ **a truck-LEASING entity's receipts may be RENTS,
+    which fails it**, unless the §1244(c)(2)(C) relief applies. Ceiling: **$100,000 a year** on a
+    joint return.
+    - 🔴 **And the threshold problem is BASIS.** The 2024 return deducted a **very large** loss from
+      this company **in full**, and an S-corp loss consumes stock basis dollar for dollar.
+      **A zero-basis shareholder has NO worthless-stock loss at all.** So this is only worth work if
+      the 2024 basis check (below) shows basis remaining — and the branch where basis *was* short
+      comes with suspended losses attached instead.
+    - ⚠️ **Bankruptcy alone does not make stock worthless.** It needs no current value **and** no
+      prospect of future value, fixed by an identifiable event — and a **Chapter 11** filing is
+      evidence *against* it. The **year** is a question of fact, and §6511(d)(1) gives a **7-year**
+      refund window, so there is no reason to guess one.
+    - ⚠️ **It is the same branch as "did he sell?", not a separate one.** §165(g) needs him to still
+      **hold** the stock at year-end; a 2025 sale is a different event; and worthlessness is itself
+      a disposition, so the suspended-loss point below applies to it too.
+  - ✅ **COD income is very unlikely to reach him — worth knowing, because it is the first thing to
+    worry about.** For an S corporation, **§108(d)(7)(A)** applies the bankruptcy and insolvency
+    exclusions **at the CORPORATE level**, and since the 2002 amendment excluded COD **does not**
+    increase shareholder stock basis. So the company's debt discharge should **not** produce a
+    phantom-income K-1 to him — and equally will not manufacture basis for the loss above.
+    ⚠️ **The one exception is his own:** if a lender forgives him personally on a **guarantee**, that
+    is a **1099-C in his name** and it is his income (below).
+  - **Chapter matters, and it is sharper than "may".** A **Chapter 11** debtor is under real
+    pressure to stay current — failure to file returns is grounds for dismissal or conversion — so
+    the 1120-S may well appear. **Chapter 7** corporate cases are where returns genuinely go
+    unfiled. Establish which, and the petition date.
+  - 🔵 **And there is a named person with a LEGAL DUTY to file it — this is a letter we can write.**
+    Under **§6012(b)(3)** a trustee or receiver holding substantially all of a corporation's property
+    **shall make the return of income for that corporation**, operating or not — with **§6722**
+    penalties for failing to furnish a payee statement. **Writing to the trustee is a far better
+    first move than Form 8082**, and it does not depend on the partner at all.
   - ⓘ **And it recasts the "dispute with the partner" story** rather than replacing it — the two can
     both be true, and the sequence is worth pinning down, since the date he lost access and the date
     of the bankruptcy are different dates.
+  - 🔵 **IF THE PARTNER DIED, almost everything above changes — and mostly for the better.** The
+    branch is flagged as unconfirmed and has to be actually worked, not just labelled:
+    - **The lock-out may simply be recoverable.** A dead partner is not the person refusing access.
+      The **executor / personal representative**, the company's **registered agent**, its
+      **accountant** and any surviving officer are all reachable, and none of them has a motive to
+      stonewall.
+    - **If he was the only officer**, the 1120-S may be unfiled because **nobody can sign it** — a
+      probate / successor-officer problem with a completely different remedy from a bankruptcy.
+    - **The S election survives either way**, so the K-1 obligation does too: a deceased
+      shareholder's shares pass to his **estate**, which is a permitted S shareholder, and an
+      individual's **bankruptcy estate** is likewise treated as an estate.
+    - ⚠️ **If the PARTNER filed personally rather than the company**, then **the company is not in
+      bankruptcy at all** — which restores the "wait for the 1120-S" route this block just
+      downgraded. That is why the two versions cannot be left interchangeable.
+  - 🔍 **THE BANKRUPTCY IS A PUBLIC RECORD — LOOK BEFORE ASKING HIM ANYTHING.** This is the firm's
+    own first method rule, and nobody has done it. **PACER** (search by entity name, and by the
+    partner's name) plus the **Illinois / Montana Secretary of State** for entity status and
+    registered agent will answer, without the client and without the partner:
+    - 🔴 **WHICH entity filed** — the file's own number-one blocker, currently sitting as a question
+      to a client who may not know the legal name either;
+    - the **chapter** and the **petition date**;
+    - the **trustee / debtor-in-possession and their counsel** — the person with the filing duty above;
+    - the **schedules and Statement of Financial Affairs**, which list equity holders, insiders and
+      **payments to insiders in the year before filing** — ⚠️ **which may document the very money he
+      received in the first months of 2025**, the fact that is unsettled at the top of this block;
+    - the **proof-of-claim bar date** (below).
+  - 💰 **HE MAY HAVE CLAIMS IN THE CASE, AND ONE HAS A HARD DEADLINE.** Nothing has been said about
+    this and a bar date forfeits money silently:
+    - **Unpaid wages** are a **priority claim** for wages earned in the 180 days before the petition,
+      up to a statutory cap. ⓘ On the tax side he is cash-basis, so **wages never received are not
+      2025 income** — there is no W-2 income to chase for money he never got.
+    - **Shareholder loans or advances** are a general unsecured claim, and on the tax side a **§166**
+      worthless debt — ⚠️ for a shareholder this is normally **NONBUSINESS**, i.e. a **short-term
+      capital** loss, not ordinary. Do not assume ordinary treatment.
+    - **Personal guarantees** are near-universal on trucking equipment finance and factoring lines.
+      Two consequences: a contingent claim in the case, and if he **pays** on one he has a §166 bad
+      debt, while if a lender **forgives him personally** he gets a **1099-C in his own name** — his
+      income, on his return.
+    - 📅 **The proof-of-claim bar date is on the docket. Find it and diary it.**
 - 🔴 **WHICH "Midwest" is NOT established, and everything below turns on it.** He holds shares in
   **two** companies whose names begin that way — **Midwest Expedited Corp** and **Midwest Truck
   Leasing LLC** — and Lilian relayed the name with an explicit hedge. **This file has already been
@@ -139,7 +224,11 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   1099, 1098, 5498), so it settles the wages half **without needing the partner**. Two limits:
   **a K-1 is not an information return and does not reliably appear on it**, and it shows only what was
   actually **filed** — a locked-out shareholder's W-2 may never have been issued at all. It needs
-  either **his own IRS online account** or a **Form 8821 / 2848** from him.
+  either **his own IRS online account** or a **Form 8821 / 2848** from him. ✅ **The bankruptcy does
+  NOT impair this route** — it reads returns filed under **his** SSN, not the company's. And **a
+  blank transcript is itself the answer**: it converts "we cannot find out" into "no W-2 was filed",
+  which is exactly what a Form 8082 disclosure needs. 2025 information returns are fully posted by
+  now, so timing is not a constraint.
   ② whether the company **has filed its 2025 Form 1120-S** at all — on extension that return is due
   **2026-09-15**, about a month out, so the K-1 may simply arrive; ③ filing on his own figures and
   **amending** when the K-1 appears — ⚠️ if we go that way, **Form 8082** (Notice of Inconsistent
@@ -167,8 +256,11 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   - **If he disposed during 2025,** there is still a **2025 K-1 for the part-year** — and, separately,
     a **disposal of stock to report**, which needs his **basis**. The file already flags basis as
     unverified (below), and this is a second reason it matters. ⚠️ **And a third, which costs real
-    money: suspended losses are LOST on disposition** (§1366(d)(2)) — only a limited post-termination
-    transition period survives (§1377(b)). Given the large loss deducted in full and the unverified
+    money: suspended losses are LOST on disposition** (§1366(d)(2)) — ⚠️ **and the §1377(b) post-termination transition
+    period does NOT rescue them** — it is triggered by the CORPORATION's S election ending, not by a
+    shareholder selling, so a shareholder who sells while the company stays an S corp simply loses
+    them (bar the §1366(d)(2)(B) spouse/divorce transfer). ⓘ A liquidation that ends the S election
+    **would** open one. Given the large loss deducted in full and the unverified
     basis, "he sold in 2025" is the expensive branch, not the tidy one. ⓘ **Form 7203** is the
     document that carries the basis figure this file keeps asking for; it is required on a disposal,
     a distribution, or a loss claim.
@@ -612,8 +704,8 @@ street address never appear here, and nor do dollar figures — those live in Do
     Schedule C** — she had no income in 2025.
   - 🟠 **Any retirement distribution** — answered **for the IRA** (none). A 401(k) or other plan was
     never asked, and his 2024 distribution may have been one.
-  - 🟠 **Where he lived** — Kirkland WA until May 2025, then Florida. **Montana is not covered by
-    that answer**: it gives his arrival, not his departure.
+  - ✅ **Where he lived** — Kirkland WA until May 2025, then Florida. **Montana closed by Lilian the
+    same day** (*"olvida eso"* — any Montana residence was 2024, §1).
   - ✅ **Rent or mortgage, and the Form 1098** — he has an apartment and **sent the 1098**.
   - 🟠 **Form 1095-A** — answered with a **carrier** (BCBS), which does not answer it. ⚠️ **Re-ask as
     *where did you buy it, and did anyone help pay the premium* — NOT *which form did you get*.**
@@ -651,9 +743,21 @@ published card** — they are ordered by what would cause a wrong return or a re
   (IRS wage & income transcript · wait on the company's 1120-S, due **2026-09-15** on extension ·
   file and amend, with **Form 8082** as the disclosure that goes with it). ⚠️ **A decision is needed
   here more than an answer** — nothing else on this return can be finished around it.
+- 🔍 **PULL THE BANKRUPTCY DOCKET BEFORE ASKING HIM ANYTHING ELSE.** PACER by entity name and by
+  the partner's name, plus the Secretary of State. It answers **which entity filed** (the blocker
+  below), the **chapter**, the **petition date**, the **trustee** — who has a legal duty to file the
+  1120-S — and the **schedules**, which may **document the money he received in early 2025**. Public
+  record; no client, no partner (§5). **This is "look before you ask", and it was skipped.**
+- 🔴 **Did he RECEIVE that money, or not — and how was he paid?** ⚠️ **Lilian's two statements of
+  2026-08-12 disagree**, and the third reading — that it was a **distribution**, which nobody calls
+  "income" — would change the return (§5). **One question, and everything else waits on it.**
 - 🔴 **WHICH "Midwest" company was it?** Lilian relayed the name with an explicit hedge, and he holds
-  shares in **two** that start that way. **Confirm the entity first** — the item above, the Illinois
-  question and the 1120-S chase all point at whichever one it is (§5).
+  shares in **two** that start that way. **Confirm the entity** — the items above, the Illinois
+  question and the 1120-S chase all point at whichever one it is (§5). ⓘ **The docket may answer
+  this without him.**
+- 📅 **The proof-of-claim BAR DATE in the bankruptcy — find it and diary it.** He may hold an unpaid
+  **wage** priority claim, a **shareholder-loan** claim, or a contingent claim on a **personal
+  guarantee**. A bar date forfeits all of them silently (§5).
 - 🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**
   — not "send me your 1095". ⚠️ **He may hold no form at all:** only the **1095-A** is ever needed,
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
@@ -702,9 +806,9 @@ published card** — they are ordered by what would cause a wrong return or a re
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
 - ~~**His 2025 W-2**~~ · ~~**any 1099**~~ · ~~**an IRA distribution**~~ · ~~**any other
   income**~~ · ~~**the wife's Schedule C**~~ · ~~**rent or mortgage, and the 1098**~~ — ✅ **answered
-  on 2026-08-12; do not re-ask** (§5). ⚠️ **Two that are only PARTLY answered stay on the list
-  above:** the states (Montana), and retirement — he was asked about an **IRA**, not about a 401(k)
-  or another plan, and his 2024 distribution may have been one. The W-2 answer
+  on 2026-08-12; do not re-ask** (§5). ⚠️ **One is only PARTLY answered and stays on the list
+  above:** retirement — he was asked about an **IRA**, not about a 401(k) or another plan, and his
+  2024 distribution may have been one. The W-2 answer
   is "there is none and he cannot get one", which is the blocker above, not a gap.
 - ~~**What his family situation was at the end of 2025**~~ — ✅ **ANSWERED, do not ask** _(2026-08-12, §5)_. His filing status for 2025 is settled and the §7703(b) / Head-of-Household branch is closed. **What remains open is the children, below — not the household.**
 - **The children — how each of them is asked about** (the live question is the daughter's **2025
@@ -733,11 +837,19 @@ published card** — they are ordered by what would cause a wrong return or a re
   says yes (which would make Form 1095-A a condition of filing); the client names **Blue Cross Blue
   Shield** and Lilian reads it as private. **Two sources, unsettled** — decide it on **which 1095 he
   received**, not on the carrier (§5). _(This line read `[x] yes` for one day.)_
+- [ ] ⚠️ **Whether he received that 2025 money at all, and in what form** — Lilian said both
+  *"no recibió ningún income de estas tres S-Corp en 2025"* and that he did. A **distribution** is
+  the reading nobody has tested (§5).
+- [ ] The **chapter, petition date, entity and trustee** of the bankruptcy — from the docket, not
+  from him (§5).
+- [ ] Whether the **PARTNER also died**, or only the company filed — different facts, different
+  remedies (§5).
+- [ ] How he **ACQUIRED his shares** (original issuance for cash, bought from the partner, for
+  services) — it decides whether §1244 is even available (§5).
 - [ ] **WHICH "Midwest" company** the 2025 income came from — two of his three start that way and
   Lilian relayed the name hedged (§5). Everything downstream points at whichever it is.
 - [ ] Whether a **2025 extension (Form 4868)** was filed — ⚠️ **not from our own records**; he became
   a client after the deadline, so ask him, his prior preparer, or read his IRS account transcript (§4).
-- [ ] Whether any part of **2025** was spent in **Montana**, and the date he left (§1).
 - [ ] Whether he took a distribution from a **401(k) or any non-IRA plan** in 2025 — the IRA question
   was asked and answered; this one was not (§5).
 - [ ] Whether he also **rents**, or **rents the apartment out** (Schedule E) — two questions (§5).
