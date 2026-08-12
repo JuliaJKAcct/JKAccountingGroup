@@ -117,8 +117,9 @@ Nothing here relaxes them, and this source needs the reminder more than most: Li
 described these notes as covering **the owner's personal matters** alongside the company's.
 
 - **Two data homes.** Non-sensitive knowledge and links in the repo; secrets and personal
-  data — logins, account numbers, EINs, **dollar figures**, personal emails/phones, street
-  addresses — stay in Double/Drive and are referenced by link.
+  data — logins, account numbers, **dollar figures**, personal emails/phones, street
+  addresses — stay in Double/Drive and are referenced by link. 🔵 **A business EIN may now be
+  written in the repo** _(Lilian, 2026-08-12 — public on Sunbiz)_; an SSN/ITIN still may not.
 - **The identity block never travels**: SSN/ITIN, driver's licence, passport and any other
   government identifier, dates of birth, bank routing/account numbers.
 - **The two zones.** Operating facts → §1–§5, §7. The dated log and open threads → §6.
@@ -295,8 +296,13 @@ Her iCloud folder `1-JK Accounting` has a subfolder per client: **Candramas · D
 Miami · Magnum 152 INC · Masciave Design · Mays Express · Megabai · Optic Gold Inc · Voicecapital
 Inc · Voxago · YMI Trucking**, plus `1- Pending Things` and `2-Important Info`.
 
-⚠️ **`Megabai` has no Double client record under that name** — resolve what it maps to before
-writing anything against it.
+✅ **`Megabai` — resolved by Lilian, 2026-08-12.** It has no Double record because it is a
+**former client whose company closed**; it was a **bookkeeping** client. **It still gets a Client
+Intelligence file** — *"deja el registro en el Client Intelligence… deja esa información
+guardada. Es un cliente antiguo."* — and **no Double note**, since there is no Double account to
+put one on. ⚠️ **This is a general case, not a one-off:** a closed client is exactly the one whose
+history nobody can reconstruct later, so the absence of a Double record is a reason to write the
+file, never a reason to skip it.
 
 The content is the same *kind* as the TaxDome notes and **overlaps them** (Optic Gold's two IRS
 calls appear in both), so **read the phone note and the migrated note together and reconcile**
@@ -321,6 +327,28 @@ information is what stands.* So:
    means two sources disagree and neither wins, so both get written with their sources. Chronology
    means one source **supersedes** the other because it is later on the same thread. Tell them
    apart before deciding which to apply.
+
+### 🛑 An open thread stays open — do NOT go looking for the ending
+
+**Lilian, 2026-08-12, and this is the instruction most likely to be over-ridden by good
+intentions.** Many of these notes stop mid-matter. That is expected and **it is not a gap to
+close**: *"puede que haya cosas que hayas resuelto y no las hayas registrado en mis notas. No me
+es posible ahora ir cliente por cliente resolviendo todos esos problemas."*
+
+- **Record the matter as far as the sources actually go, and mark it open.** Do not chase a
+  resolution across Gmail, Drive and Double hoping to find one, and **never infer an ending** from
+  the fact that nobody mentioned the problem again. Silence is not resolution.
+- **If it is not in the reachable sources — Julia's Drive, Double, the notes she supplied, the
+  documents, this chat, Gmail — there is nothing to be done.** *"Quedará abierto."*
+- **Say what is open, in the file.** An honest "open, last known state 2026-03-16, no outcome
+  recorded anywhere" is the deliverable. It is worth more than a confident guess, and it is what
+  lets her top it up later: *"tal vez algún día, si volvemos al tema, te puedo dar más
+  información."*
+
+⚠️ **This governs the BACKFILL of old material only.** Going forward the opposite applies — work
+done with Claude gets recorded as it happens, chronologically (see the standing rule in
+[`CLAUDE.md`](../../../CLAUDE.md), *"What we DO together gets recorded"*). The backfill is
+salvage; from here the record is kept properly.
 
 ---
 

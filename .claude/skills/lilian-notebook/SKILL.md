@@ -173,7 +173,7 @@ notebook's record of how we found out. Say so in the note's `Detail:` line. Don'
 if one is superseded, rewrite it and note what changed (git keeps the trail).
 
 **No client secrets, figures, or personal data.** Client business names and what happened are
-fine — they're already in `FOLLOW-UPS.md` and the client files. Their dollar figures, EINs,
+fine — they're already in `FOLLOW-UPS.md` and the client files. Their dollar figures,
 account numbers, logins and personal contact details stay in Double / Drive / QuickBooks.
 Amounts that *are* the lesson — a published penalty rate, a fee cap — are fine. **English**,
 like every repo artifact, whatever language the session ran in.

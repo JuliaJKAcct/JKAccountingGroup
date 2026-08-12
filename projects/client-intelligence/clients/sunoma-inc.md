@@ -4,9 +4,12 @@
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
-> EINs, dollar figures, and personal contact details stay in Google Drive / Double
+> dollar figures, and personal contact details stay in Google Drive / Double
 > / QuickBooks and are referenced by link. Never paste a secret or personal data
 > into this file.
+> **A business EIN is the exception and MAY be written here** — it is public on Sunbiz,
+> so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
+> including when it is the entity's tax ID.
 
 > **Two zones — what feeds the SOP vs what stays here.** This file is the master
 > record. Its sections split into two zones:
