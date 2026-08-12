@@ -62,7 +62,10 @@ link). Never write the credential itself here.
 
 ### Payroll
 - **Applies?** No — he has no payroll with us.
-- ⚠️ **But he pays other drivers.** The Double note records fuel paid to drivers. If payments to any one person cross the 1099-NEC threshold, **he has an information-return obligation of his own**. Unconfirmed — ask.
+- ⚠️ **But he pays other drivers, by Zelle.** The Double note records fuel paid to drivers. If payments to any one person cross the threshold, **he has an information-return obligation of his own** — unconfirmed, and it turns on **who paid**: if the S corp paid, the 1099s are the corporation's, the same fork as the expenses.
+  - ⚠️ **Zelle does NOT shift the reporting, and this is the common misconception** (*"I paid through an app, so the app reports it"*). Card and **third-party-network** payments are carved out of 1099-NEC/MISC and land on the settlement entity's **1099-K** — but **Zelle is not a third-party settlement organization**: it moves funds bank to bank and issues no 1099-K. **Payments through it stay 1099-NEC-reportable by the payer**, exactly like cash or a cheque.
+  - **Threshold: $600 for 2025.** The July 2025 Act raised it to **$2,000 for payments made after 31 December 2025**, indexed after that — so that applies to **2026** forms, not this year's.
+  - ⏰ **And any 2025 obligation is already late:** 1099-NECs for 2025 were due **31 January 2026**.
 
 ### Bookkeeping & monthly close
 - **Applies?** No. Double shows `Bookkeeping: N/A`. There is no monthly close; the Schedule C is built from what the client reports.
@@ -245,7 +248,8 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   2025. **Only a disposal or a termination in a PRIOR year removes the K-1**; ⚠️ **an exit during
   2025 still produces a 2025 K-1 for the part-year.** Never the absence of a payment. So the
   question to him is not "did they pay you" (answered) but **"are you still a shareholder, and if
-  you got out, on what date"**. This is the file's own disappearance rule, arriving in a new disguise.
+  you got out, on what date"** — ✅ **answered, next bullet.** This is the file's own disappearance
+  rule, arriving in a new disguise.
 - ✅ **ANSWERED 2026-08-12 — NO FINAL K-1, NO SALE, AND THE COMPANIES ARE STILL OPEN.** Lilian asked
   him directly whether he had received a **final K-1** from the two companies that paid him nothing
   in 2025. His answer: **no final K-1 — he has not sold his shares, has not disposed of them, and
@@ -254,8 +258,11 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   - 🔴 **He is still a shareholder in two LIVE companies, so BOTH ordinary annual K-1s are still
     owed.** Nothing terminated, so a *final* K-1 was never the right thing to expect — the lock-out
     was never an ownership change. This closes the question the file has been circling.
-  - ✅ **Nothing is lost, and there is nothing to report as a sale.** No stock disposal on his 2025
-    return, and the **suspended losses survive** — they die on a disposition, and there was none.
+  - ✅ **Nothing to report as a sale, and the BASIS-suspended losses survive** (§1366(d)(2)) — those
+    die on a disposition, and there was none. ⚠️ **Do not say this of the §469 suspended PASSIVE
+    loss on the 2024 Form 8582, where it is backwards:** a fully taxable disposition of the entire
+    interest to an unrelated party **RELEASES** those in full (§469(g)). For the one suspended loss
+    we actually know exists, a sale would have been **favourable**, not costly.
   - 🟠 **The worthlessness branch probably stays available for the bankrupt company** — §165(g) needs
     him to still hold that stock at 31 December. ⚠️ **But his answer did not cover it.** Lilian's
     question was scoped to *"these two companies he received no money from"*; **the bankrupt one is
@@ -280,8 +287,8 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   - ⓘ **If the two really were dormant, they still had to file an 1120-S** while the S election
     stands. Whether they did is their problem, not his, but it is why no K-1 has appeared.
 - ⚠️ **"He is no longer part of these companies" — RESOLVED as the lock-out, not a disposal**
-  _(by his own answer above, 2026-08-12)_. Kept because the reasoning still governs: She used the phrase on 2026-08-12 **inside her paragraph about
-  Montana**, as the reason her own company hypothesis would not help. **The most likely reading is
+  _(by his own answer above, 2026-08-12)_. Kept because the reasoning still governs. She used the
+  phrase on 2026-08-12 **inside her paragraph about Montana**, as the reason her own company hypothesis would not help. **The most likely reading is
   that she was restating the lock-out already recorded, not reporting a share disposal** — so it is
   captured here as a phrase to clarify, not as a relay from the client.
   **The distinction it raises is real whichever way that goes: being locked out is not the same as
@@ -648,7 +655,7 @@ Julia can pick up the return without reconstructing it. **The firm's REASONING s
 🛑 **And one thing is barred outright, by her explicit instruction the same day: our characterisation
 of the client.** She struck the passive-shareholder read from both the note and this file —
 *"no lo definas tú, no lo determines tú"*. **Record what he said and what he holds; never our
-assessment of him.** Adding them would
+assessment of him.** Putting our reasoning in a note would
 turn a working note into something else, and she decides case by case whether any
 particular finding earns a place there.
 
@@ -723,8 +730,8 @@ particular finding earns a place there.
   have not closed.** He is **"almost sure"** those two generated no income in 2025. ✅ **This closes
   the disposal branch:** he remains a shareholder in two live companies, so **both ordinary annual
   K-1s are still owed**, nothing is reportable as a sale, the **suspended losses survive**, and the
-  **worthlessness branch stays available** for the bankrupt company (he still holds that stock at
-  year end). 🛑 **A session then wrote a PASSIVE-SHAREHOLDER conclusion off an offhand remark of hers, into
+  **worthlessness branch probably stays available** for the bankrupt company — ⚠️ **inferred, not
+  confirmed: his answer covered only the other two**, and the bankrupt one is the third. 🛑 **A session then wrote a PASSIVE-SHAREHOLDER conclusion off an offhand remark of hers, into
   this file and into a Double note. She struck it the same day** — *"no lo definas tú, no lo
   determines tú… eso no salió de la boca del cliente ni yo puedo asegurar eso"* — and it is **Julia's
   determination to make**. ✅ **She also asked him for the two companies' own tax returns: he does
@@ -868,8 +875,8 @@ published card** — they are ordered by what would cause a wrong return or a re
 - ~~**Did he sell, transfer or surrender his shares?**~~ — ✅ **ANSWERED 2026-08-12: NO.** No sale,
   no disposal, **no final K-1, and the companies have not closed** (§5). ⚠️ **So the two ordinary
   annual K-1s are still owed and are still outstanding** — he simply has no way to get them. He is
-  **"almost sure"** those two had no income, but by Lilian's own read he is **not across what
-  happens in them**, so treat it as plausible and unverified. An S corp allocates income or loss on a K-1
+  **"almost sure"** those two had no income — ⚠️ **and he holds no copy of their tax returns**
+  _(asked 2026-08-12)_, so nothing sits behind it but his recollection: plausible and unverified. An S corp allocates income or loss on a K-1
   **whether or not it distributes anything**, so those K-1s are still owed unless he disposed of the
   shares or the entity terminated in a **PRIOR** year — ⚠️ **an exit during 2025 still produces a
   2025 K-1 for the part-year** (§5).
