@@ -5,6 +5,13 @@
 > **Language:** English (the repo standard). It can be mirrored to RU if the team
 > needs it.
 
+> **This file is the *production* half.** *What* a post is for — which pillar it
+> stands on, which slot of the 50/20/20/10 monthly mix it fills, the one action it
+> asks for, and what we may and may not publish about a client — is decided first,
+> in [`../social-content-playbook.md`](../social-content-playbook.md) (loaded by the
+> [`social-media-posts`](../../../.claude/skills/social-media-posts/) skill). Decide
+> that, then come back here to make the piece.
+
 ## What it's for
 
 A repeatable flow for producing Instagram / Facebook posts for JK Accounting

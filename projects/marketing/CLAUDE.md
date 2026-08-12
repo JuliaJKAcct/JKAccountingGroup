@@ -17,5 +17,12 @@ literal request.
 Still bound by the usual rules: the [brand guide](../../brand/JK-Brand-Guide.md)
 governs voice and the bilingual (EN/RU) rule, and
 [`positioning.md`](./positioning.md) is the firm's locked positioning — the
-pitch, the "what do you do?" answer, and the core framing. Repo artifacts stay
+pitch, the "what do you do?" answer, and the core framing.
+
+**Anything for Instagram or Facebook** — a post, caption, carousel, Story, Reel
+caption, content plan or the profile bio — additionally follows
+[`social-content-playbook.md`](./social-content-playbook.md): one pillar, one slot
+of the 50/20/20/10 monthly mix, one named action, and the confidentiality limits
+on publishing client results. **Read it before writing the copy**, through the
+[`social-media-posts`](../../.claude/skills/social-media-posts/) skill. Repo artifacts stay
 in English (see the root [`CLAUDE.md`](../../CLAUDE.md)).
