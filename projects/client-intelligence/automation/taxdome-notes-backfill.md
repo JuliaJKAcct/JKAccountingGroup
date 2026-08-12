@@ -217,7 +217,7 @@ ignore line before writing the file.
 
 **Run 2026-08-12** from an ordinary cloud session. Names only — no note content was opened.
 Method: Drive `search_files` for every folder whose title contains `Notes`, then each parent
-resolved by ID; cross-checked against Double `list_file_library` on three clients.
+resolved by ID; cross-checked against Double `list_file_library` on four clients.
 
 ### What the walk corrected in the assumptions above
 
@@ -225,8 +225,9 @@ resolved by ID; cross-checked against Double `list_file_library` on three client
    was right to flag it. `TaxDome` in Drive is the **root of the whole migration tree**, not a
    per-client folder. The real path is
    `JK Accounting Group → TaxDome → *Migration to Double → <one of three subtrees> → <client> → N. Notes`.
-2. 🔴 **`*Dupplicated` is a near-copy of `*QBO Clients and Individuals`** — same clients, same
-   notes. **33 `Notes` folders collapse to 22 distinct clients.** Anyone walking the tree
+2. 🔴 **`*Dupplicated` is a near-copy of `*QBO Clients and Individuals`** — mostly the same clients and
+   the same notes, though **Masciave and Magnum 152 appear only in `*Dupplicated`, and Igor
+   Melomed only in `*QBO`**. **33 `Notes` folders collapse to 22 distinct clients.** Anyone walking the tree
    client-by-client without noticing this processes eleven clients twice.
 3. ✅ **Double's `TaxDome > <Client> > N. Notes` is now VERIFIED**, not reported-only — seen on
    Optic Gold (`1. Notes`, 2 files), Andrii Tymchenko (`1. Notes`, 2 files) and Mays Express
@@ -274,8 +275,7 @@ is precisely where the routing rule earns its keep.
 
 Three `Notes` folders found by the search are **not** part of this backfill and should be skipped:
 `My notes - Lilian` (personal), a `Notes` folder under an internal `Audit` folder, and a `Notes`
-folder owned by `Izabella@primeroadcarriers.com` — that one is **the client's own Drive**, shared
-with us, not our migrated material.
+folder in **a client's own Drive** that is shared with us — not our migrated material.
 
 ### What the note titles already show (titles only — permitted)
 

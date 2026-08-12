@@ -288,7 +288,11 @@ in that folder.
   this one captures **the work itself** — the call that was made, what the agency said, the step
   that was taken, how it ended. **Writing it down is part of doing it**, in the client's `§6` log
   with its date, so the process can be retraced later rather than reconstructed.
-  ⓘ **The corollary, and it is hers too: what was never recorded is gone, and that is accepted.**
+  ⓘ **The corollary — and it is scoped to BACKFILLING OLD MATERIAL, not to live work.** For a
+  matter the firm is working now, the standing rules still apply in full: *look before you ask*
+  ([`method.md`](./projects/pre-return-review/method.md)) and *close the gap since the last
+  sweep* (two bullets below). What follows governs only the salvage of pre-Claude history:
+  **what was never recorded is gone, and that is accepted.**
   The firm has used Claude for a short time; everything before that lived in people's heads, Julia's
   Drive and Gmail, Double, and Lilian's own notes — *"eso no es 100% efectivo, hay cosas que se
   pierden y no hay nada que hacer."* So when a matter has **no ending** in any reachable source,

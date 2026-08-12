@@ -42,6 +42,9 @@ Read the project's own docs alongside this skill — they are the authority on c
    including when it is the entity's tax ID — a sole proprietor's or a single-member LLC's
    tax ID is often the owner's SSN, and that is a personal identifier that is not public
    anywhere. If you cannot tell which one a nine-digit number is, treat it as an SSN.
+   ⚠️ **Write an EIN HYPHENATED — `12-3456789`.** The published-page gate in
+   [`render/build.mjs`](./render/build.mjs) aborts the build on any run of nine or more bare
+   digits, so an unhyphenated EIN takes down the dashboard and the Hub.
    ⚠️ **And note where it ends up:** `clients/*.md` auto-publishes to the Knowledge Hub with
    no allowlist, so an EIN written here becomes a hosted page. That is the accepted
    consequence of the ruling — it is public data — not an oversight.
@@ -77,8 +80,8 @@ Read the project's own docs alongside this skill — they are the authority on c
 ## Capture is automatic, and coverage is measured against Double
 
 **Write what you are told, without being asked and without filtering.** Lilian, 2026-08-11:
-*"nunca está de más ninguna información que se ponga ahí."* CI is never published, so there is no
-cost to holding a fact and a real cost to dropping one — the file exists so that months later she
+*"nunca está de más ninguna información que se ponga ahí."* Holding a fact costs nothing and
+dropping one costs a lot — the file exists so that months later she
 or Julia can ask a question and get an answer that carries the whole context. A session that
 discusses a client and ends without touching that client's file has lost something. Ask only when
 you cannot tell which client a fact belongs to; never to defer the write.
@@ -431,7 +434,7 @@ owner, route by company — same rule as enrichment).
 
 ### Getting sensitive data (day-to-day)
 
-Sensitive values are deliberately **not** in the repo. When someone needs one — an EIN,
+Sensitive values are deliberately **not** in the repo. When someone needs one —
 an address, a login location, a contact email — **fetch it live** from Double (contacts,
 properties, notes) or Google Drive (the client's folder) and give it **in the chat**;
 **never commit it** to the repo. The file's §7 links are the fast path to where it

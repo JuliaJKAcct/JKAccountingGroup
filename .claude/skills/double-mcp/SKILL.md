@@ -197,6 +197,10 @@ note, not in an artifact, not in an email or a report:
 - **Bank routing and account numbers**
 - **Passwords and credentials**
 - **Dates of birth**
+- 🔵 **NOT in this block: a BUSINESS EIN.** Lilian, 2026-08-12 — Florida publishes the FEI/EIN
+  on the entity's own Sunbiz record, so it may be written in chat, in a note and in the repo.
+  ⚠️ **An SSN or ITIN used as an entity's tax ID still is** in the block — a sole proprietor's or
+  single-member LLC's tax ID often is one. A nine-digit number you cannot identify is an SSN.
 - **…and any other government-issued identifier, whatever it is called** — the list above is
   illustrative, not exhaustive, and §6 of this file explains why an enumerated list is dangerous:
   it licenses everything not on it. **The gap that matters for this firm is passport, visa and
@@ -835,7 +839,10 @@ the whole thing start to finish, instead of reconstructing it from email.
    específicamente."* So this authorises the agency-dealing class and **nothing wider** — a note is
    still not the place for the relationship, the bookkeeping, or how we work the client.
    ⚠️ **This does not touch rule 11.** The note carries the **procedure and what the agency said**;
-   our verdict on it still belongs in the client file. And when such a matter is written up, the
+   our verdict on it still belongs in the client file. **And it survives rule 12** — an agency
+   procedure IS what tells the next person what to do, so the dates, the reference numbers and
+   the fax and phone lines used are exactly the detail rule 12 preserves, not the derivation it
+   cuts. And when such a matter is written up, the
    [`client-intelligence`](../client-intelligence/) file gets the facts and consequences in the
    same pass (rule 7) — the note is the team-facing mirror, never the only copy.
 5. **Every entry names the person who did it — and EVERY note opens with a byline naming its
@@ -896,7 +903,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    the same day, and **confirmed the same day that the restriction is the repo's alone** — "es en el
    main donde tenemos restricciones por seguridad".)_
    - **🔒 TAX-IDENTITY AND PAYMENT DATA IS STILL OUT — "everything" does not reach it.** No
-     **SSN/ITIN**, driver's licence, date of birth, or **full bank routing/account number**, and
+     **SSN/ITIN**, driver's licence, date of birth, or **full bank routing/account number**
+     _(a **business EIN** is the one exception — public on Sunbiz, Lilian 2026-08-12 — but an
+     SSN/ITIN serving as an entity's tax ID is not)_, and
      **no identity-block value sourced from an organizer response — findings are welcome here,
      identifiers are not.** §2.2 permits *reading* that payload for analysis, and a note may
      absolutely say *"the organizer shows no K-1 this year; 2024 had one"*; what it may never

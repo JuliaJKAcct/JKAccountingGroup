@@ -9,7 +9,8 @@
 > into this file.
 > **A business EIN is the exception and MAY be written here** — it is public on Sunbiz,
 > so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
-> including when it is the entity's tax ID.
+> including when it is the entity's tax ID. Write the EIN **hyphenated** (`12-3456789`) — nine
+> bare digits trip the published-page gate and stop the build.
 
 > **Two zones — what feeds the SOP vs what stays here.** This file is the master
 > record. Its sections split into two zones:

@@ -241,7 +241,11 @@ let bySlug = {};   // module-level; set by loadClients(), read by card()
    Deliberately narrow: SSN/ITIN shape, and long digit runs that look like an account number.
    Passport and driver's-licence numbers vary too much to match reliably — the skill rule
    covers those, and a reader still has to think. It also only sees the hyphenated 123-45-6789
-   form — spaces, dots, or an EIN's 12-3456789 shape slip through.
+   form — spaces and dots slip through.
+   An EIN's 12-3456789 shape also slips through, and since 2026-08-12 that is DELIBERATE: a
+   business EIN is public on Sunbiz and is allowed on these pages. ⚠️ But an UNHYPHENATED EIN is
+   nine bare digits and this gate WILL abort the build on it — which is why the skill and the
+   client-file banner require EINs to be written hyphenated (12-3456789).
    Override: ALLOW_SENSITIVE_ON_PUBLISHED_PAGES=1. */
 function assertNoSensitiveData(files, clientsDir){
   if (process.env.ALLOW_SENSITIVE_ON_PUBLISHED_PAGES === '1') return;
