@@ -74,11 +74,18 @@ Details in the [`organizer-review` skill](../../.claude/skills/organizer-review/
 
 ## Outputs
 
-**Nothing is committed.** A review is delivered **in chat** — never an artifact, never a
-file — because it necessarily discusses a client's answers. What survives is the
-**`Tax year YYYY — the review`** entry in the client's Client Intelligence file, which
-records the questions and their answers without repeating what the client ticked in the
-organizer.
+**Nothing is committed, and nothing is published.** A review is delivered **in chat**, and
+**handed over as a PDF** so the conversation can be deleted without losing the work — Lilian's
+ask, 2026-08-12: *"dame todo esto en un PDF para poder borrar la sesión."* An **artifact** is
+still barred, because that is a hosted page with a URL that can travel; a file in her hands is
+not. The PDF carries no identifier, says on its own first page that it belongs in Double or the
+firm's Drive, and **is deleted from disk when the work is done** — deleting the conversation does
+not reach it. Mechanics in the [`organizer-review` skill](../../.claude/skills/organizer-review/)
+§0 rule 4 and §5.
+
+What survives in the repo is the **`Tax year YYYY — the review`** entry in the client's Client
+Intelligence file, which records the questions and their answers without repeating what the client
+ticked in the organizer.
 
 ## Everything this session established — and where it lives
 

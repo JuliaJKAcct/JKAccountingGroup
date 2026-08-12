@@ -252,6 +252,16 @@ is not itself the danger. These are:
    place to stage two years of organizer JSON for a diff. **Never write an organizer payload to a
    file.** Do the comparison in context. If something genuinely must be staged, strip the identity
    block first and delete the file when done.
+
+   ⚠️ **The one permitted file, and its lifecycle.** A pre-return review may be handed over as a
+   **PDF** so the person can delete the conversation without losing the work
+   ([`organizer-review`](../organizer-review/) §0 rule 4). That PDF — and the HTML it was rendered
+   from — is a **file, not a conversation**, so this exposure point governs it and **deleting the
+   session does not reach either one**. In a cloud session the VM takes them; in a **local CLI**
+   session they sit on that machine. So: write both to the **scratchpad**, never the repo; carry
+   **no identifier** in the PDF and verify that on the *rendered* file; and **delete the HTML and
+   the PDF from disk once it has been handed over.** Saying "delete the conversation" while an
+   unredacted render sits on the disk is the failure this bullet exists to prevent.
 4. **A Double note.** §7 rule 10's 🔒 bullet excludes the identity block — the identifiers are
    never welcome there. **Findings are welcome only within §7 rule 11's line:** what the client's
    own data *shows* (a document that is missing, an item that was there last year and is not now)

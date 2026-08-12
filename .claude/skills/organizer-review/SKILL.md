@@ -142,6 +142,10 @@ not all of it, the gap is invisible everywhere except in that thread.
 **So in source 5, open the threads — do not stop at subject lines.** For each outbound message to
 the client, list what was attached or asked for, then check the reply against it item by item.
 
+**Where it lands:** an unreturned request is a **Block C finding** like any other (usually 🟡) and
+its ask goes in **Block E** — phrased as a reminder, not a complaint, since the client may simply
+have missed one attachment in a reply they thought they had completed.
+
 _(Found on the first full run, 2026-08-12: two templates went out in one email, the client returned
 one the same evening, and **the missing one appeared in no other source** — not the organizer, not
 Double's files, not the client file. It had been sitting unnoticed for a week.)_
@@ -334,7 +338,7 @@ structure requires. This is what a preparer does automatically and a checklist n
 | Anyone with income outside withholding | **Estimated payments** — the dates and amounts | Ask in **both** directions: if they paid and nobody asks, the credit is lost; if they paid nothing, an underpayment penalty is coming and they should hear it now, not at filing |
 | A shareholder who deducted an entity loss in full | A **basis** computation — **Form 7203**, required whenever a shareholder claims an S-corp loss, takes a distribution, or disposes of stock. Ask for it by name | Without basis the loss suspends instead; every carryforward built on it is wrong. The limitation order is **basis → at-risk (Form 6198) → passive (Form 8582)** |
 | An employer of subcontractors | **1099-NECs they owe**, as the payer | Establish *who* paid — them personally, or the entity |
-| **Anyone whose prior year carried a NONRESIDENT state return** | That state again, for as long as the **income source** is still there | ⚠️ **A nonresident return follows the income, not the person.** Moving — even to a state with no income tax — does **not** end it. Ask *"where did you live?"* and *"do the companies still operate in <state>?"* as **two separate questions**; a client answering the first honestly will never mention the second, because to them it is not about them. And read the prior return for **why** each state was filed: resident, part-year, or income-sourced. Those three do not behave alike |
+| **Anyone whose entities operate in a state they do not live in** | A **nonresident** return in that state, for as long as the income is sourced there | ⚠️ **A nonresident return follows the income, not the person.** Moving — even to a state with no income tax — does **not** end it. Ask *"where did you live?"* and *"do the companies still operate in <state>?"* as **two separate questions**; a client answering the first honestly will never mention the second, because to them it is not about them. And read the prior return for **why** each state was filed: resident, part-year, or income-sourced. Those three do not behave alike |
 
 **Write it as the preparer's chain, not as a list of missing paperwork:** *"you own an
 S corporation → it owes you a K-1 → it can only issue one after it files its own return →
@@ -396,8 +400,9 @@ review left open, that is one of the most valuable things the run produces: it s
 asking a client a question they have already answered, which is rule 1 of
 [`method.md`](../../../projects/pre-return-review/method.md).
 
-**Mark it ✅ in the table, give it its own entry in Block C tagged as resolved with no questions
-attached, and write into the client file that it is closed and where the answer lives.** Never
+**Give it its own Block C entry tagged ⭕ resolved with no questions attached, and write into the
+client file that it is closed and where the answer lives** — the action, never the answer, because
+that file is published. Never
 delete the theory it replaced — record what it was and why it was reasonable, because that is the
 reasoning that made someone look.
 
@@ -460,11 +465,17 @@ deduction.")* That sentence is the finding. *"<Expense type> unclear"* is not.
 Each finding, in four lines and no more:
 
 ```
-N. HEADLINE — what is wrong, in one line.        [🔴 blocks | 🟠 ask | 🟡 confirm]
+N. HEADLINE — what is wrong, in one line.        [🔴 blocks | 🟠 ask | 🟡 confirm | ⭕ resolved]
    What we know: the evidence, and from which source.
    Why it matters: the money or the risk. One sentence.
-   → Asks: Q3, Q4, Q5
+   → Asks: Q3, Q4, Q5          (⭕ resolved carries "→ Asks: none" — that is the point)
 ```
+
+**⭕ resolved** is for a question a *previous* review left open that a source has now settled —
+see §3. It is the one finding type with no question attached, it does **not** count against the
+five-to-eight cap, and it is worth more than it looks: it is what stops the firm asking a client
+something they already answered. *(Do not reuse ✅ for it — in §3's table ✅ means "prior year and
+this year agree", which is a different claim and can be false of a resolved item.)*
 
 Target **five to eight findings**. More than ten means the grouping has not been done.
 
@@ -505,7 +516,7 @@ from another client's file.)*
 |---|---|---|
 | Mileage log | Double → `Others > <year>`, uploaded <date> | The organizer's vehicle block |
 | Rental income and expense figures | Double note "<title>", from the client's text message of <date> | The Schedule E worksheet |
-| Prior-year return | Redacted PDF from Lilian, <date> — **never the client's own copy; §1 source 9** | The comparison base for §3 |
+| Prior-year return | Double → `Tax Return Filed/<year>`, read through the redactor <date> — **§1 source 9** | The comparison base for §3 |
 
 **Say what it substitutes for.** *"There is a Double note with her figures"* is filing;
 *"the worksheet is not missing — the figures are in a Double note from her text message
@@ -667,16 +678,29 @@ spaces or dots rather than hyphens. **You are still the control**; see
    is **not**, so drive the binary directly):
 
    ```bash
+   SC="$CLAUDE_SCRATCHPAD"           # the session scratchpad — NEVER a path inside the repo
+   CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | tail -1)
    cp brand/design-system/fonts-cyrillic-embedded.css "$SC/fonts.css"   # RU/UA needs this one
-   /opt/pw-browsers/chromium-1194/chrome-linux/chrome --headless --disable-gpu --no-sandbox \
+   "$CHROME" --headless --disable-gpu --no-sandbox \
      --virtual-time-budget=12000 --no-pdf-header-footer \
-     --print-to-pdf="$SC/<Client>-review.pdf" "file://$SC/review.html"
+     --print-to-pdf="$SC/Client-review.pdf" "file://$SC/review.html"
    ```
 
+   The Chromium build number changes with the image, hence the glob — if it comes back empty,
+   find the binary rather than guessing. **Define `SC` before anything else:** left unset, every
+   path in that snippet resolves to the filesystem root, and a session running as root will write
+   there silently instead of failing.
+
    **Then verify the rendered PDF, not the HTML** — re-extract its text and confirm zero
-   identifier shapes, and that every block actually made it. *(Two glyphs failed silently on the
+   identifier shapes, and that every block actually made it. *(A glyph failed silently on the
    first one: `🆕` has no glyph in the embedded fonts and printed as an empty box. Use a styled
    label, not an emoji, for anything load-bearing.)*
+
+   ⚠️ **Then delete the HTML and the PDF from the scratchpad once they are handed over.** Both are
+   **files**, and [`double-mcp`](../double-mcp/) §2.2's third exposure point is explicit that
+   **deleting the conversation does not reach a file** — in a local CLI session it stays on that
+   machine. Telling someone to delete the session while an unredacted render sits on disk is worse
+   than not telling them, because they will believe it is gone.
 5. **Remind them to delete the conversation.**
 
 ---
@@ -722,6 +746,16 @@ Examples now in this file, all 2026-08-11 — describing an organizer's behaviou
 the organizer was right; handing a client a menu of marital statuses; asking a client for
 family-law documents; writing a review as unstructured narrative. **Each of those was the natural
 thing to do and each was wrong.** Nothing but the record stops the next session repeating them.
+
+> ⚠️ **The four rules added on 2026-08-12 came from ONE run**, and this section says a single case
+> cannot tell a general rule from a client's quirk. They were promoted anyway, on this reasoning,
+> which is offered so it can be disagreed with: three of them are **not about tax at all** — *check
+> what we sent and never got back*, *a source can close a question as well as open one*, and *the
+> review is handed over as a PDF* would each be true of a bookkeeping cleanup or an agency matter.
+> The fourth, **a nonresident state follows the income**, is settled tax law rather than an
+> inference from this client. **What is genuinely unproven is the frequency** — whether these
+> catch anything on a client who has not moved and owns nothing. `FOLLOW-UPS` 27 schedules that
+> check on the second client; **weaken or remove any of them that does not earn its place there.**
 
 ### After every run, record what it caught and what it missed
 
