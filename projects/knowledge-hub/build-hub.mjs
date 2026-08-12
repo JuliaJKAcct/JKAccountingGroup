@@ -1673,6 +1673,15 @@ const TEMPLATES = [
     ],
     open: { id: 'chart-of-accounts-standard', label: 'Open the interactive Chart of Accounts' } },
 
+  { band: 'firm', kind: 'Real estate', name: 'ALTA Settlement Statement — closing categorization tool', owner: 'julia',
+    blurb: 'The blank workbook for a real estate closing. Drop in a purchase settlement statement and it sorts every closing line into the bucket that decides its tax fate — facilitative costs into the basis of the building, loan costs amortized separately, operating costs expensed, escrow deposits as an asset — then reconciles to the statement and gives you the acquisition journal entry. On a sale, the selling costs reduce the amount realized. Enter the land and building values from the county property card and it splits the basis and the depreciation for you.',
+    formats: ['XLSX'],
+    downloads: [
+      { label: 'Download blank tool (Excel)', file: 'HUD-Tool-v3-blank.xlsx',
+        mime: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        path: '.claude/skills/alta-statement-categorization/assets/HUD-Tool-v3-blank.xlsx', primary: true },
+    ] },
+
   { band: 'tool', kind: 'Interactive tool', name: 'Monthly Retainer Proposal — generator', owner: 'julia',
     blurb: 'Build a full monthly-retainer proposal (our premium GoProposal replacement) for a bookkeeping client — live in the browser. Step 1 prices the client with the same pricing calculator; Step 2 flows that fee into the proposal, where every part is editable so you can adjust the number and the wording. Pick English (10 pages) or Bilingual Russian + English (Russian version first, Atman-style, then the official English version with the signature &amp; binding Terms). Generates the on-brand proposal live; “Save PDF” works in a normal browser. Client data never enters the repo.',
     formats: ['In-Hub tool'],

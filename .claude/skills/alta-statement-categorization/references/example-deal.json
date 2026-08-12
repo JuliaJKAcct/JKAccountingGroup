@@ -1,0 +1,128 @@
+{
+ "_comment": "Runnable example with INVENTED figures. Never put a real client's numbers in this repo - write the working spec to the scratchpad. Labels must match the template's printed text exactly; the builder errors and lists the valid ones if they don't.",
+
+ "tag": "123 Example St",
+ "entity": "EXAMPLE HOLDINGS LLC",
+ "ein": "",
+ "property_street": "123 Example Street",
+ "property_citystatezip": "Somewhere, FL 33000",
+ "property_type": "Residential",
+ "assessor_url": "https://pbcpao.gov/",
+
+ "purchase": {
+  "settlement_date": "2024-01-15",
+  "placed_in_service": null,
+  "price": 300000,
+  "facilitative": {
+   "Recording Fees": 20.00,
+   "Broker Fees | Commissions": 300.00,
+   "Title Settlement | Closing Fee": 450.00,
+   "Doc Preparation | Endorsement | Guaranty Fees": 150.00,
+   "Survey Fee": 400.00,
+   "Other": 10.00
+  },
+  "operating": { "Property Taxes Paid": 600.00 },
+  "escrow": { "Property Taxes": 0 },
+  "reductions": { "Down Payment | Earnest Money": 25000, "Loan Funds": 0 },
+  "pull": { "K41": 301930.0, "K44": 25000, "K47": 276930.0 },
+  "notes": [
+   [6, "PREFILLED FROM: ALTA Settlement Statement, File EXAMPLE-001."],
+   [0, "Buyer EXAMPLE HOLDINGS LLC. Cash deal - no lender."],
+   [10, "Placed in Service is blank on purpose - never went into service, so"],
+   [0, "the tool capitalizes the prorated taxes rather than expensing them."]
+  ]
+ },
+
+ "sale": {
+  "settlement_date": "2024-11-20",
+  "price": 330000,
+  "selling_costs": {
+   "Broker Commission - Listing Agent": 9900.00,
+   "Broker Commission - Selling Agent": 6600.00,
+   "Title Settlement | Closing Fee": 500.00,
+   "Owner's Title Insurance Premium": 1600.00,
+   "Deed Documentary Stamps | Transfer Tax": 2310.00,
+   "Municipal Lien | Estoppel Search": 300.00
+  },
+  "other_debits": {
+   "Property Taxes Paid at Closing": 5200.00,
+   "Escrow Holdback Retained by Title": 200.00
+  },
+  "seller_credits": { "Prorated Property Taxes (Buyer Reimbursement)": 550.00 },
+  "basis": { "Carrying Costs Capitalized (taxes, insurance, interest)": 0 },
+  "pull": { "net_due_to_seller": 303940.0, "total_seller_debits": 26610.0 },
+  "notes": [
+   [1, "PREFILLED FROM: ALTA Settlement Statement, File EXAMPLE-002."],
+   [5, "THE NAVY CELLS ARE FORMULAS - DO NOT EDIT."]
+  ]
+ },
+
+ "carrying_costs": {
+  "source": "EXAMPLE HOLDINGS LLC bank ledger",
+  "intro": "Never went into service, so every cost is a cost of the property. Graded by how well each supports that.",
+  "tiers": {
+   "A. Directly the property": [
+    ["03/04/2024", "CITY UTILITIES", "Utilities", 240.00],
+    ["04/11/2024", "PEST CONTROL CO", "Other expenses", 180.00]
+   ],
+   "B. Entity overhead - judgment call": [
+    ["02/01/2024", "BANK FEES", "Bank fees", 45.00]
+   ],
+   "C. Needs support before it goes in basis": [
+    ["05/22/2024", "UNIDENTIFIED transfer - CHK 0000", "Other expenses", 1500.00]
+   ]
+  },
+  "include": ["A", "B"]
+ },
+
+ "schedule_d": {
+  "intro": "Nothing operated, so every cost capitalizes into basis and the disposition lands on Schedule D.",
+  "sale_price": 330000.00,
+  "selling_costs": 21210.00,
+  "purchase_closing": 301930.00,
+  "property_tax": 5200.00,
+  "tax_reimbursement": 550.00,
+  "improvements": 0,
+  "holding": "310 days - SHORT-TERM",
+  "cash_received": 303940.00,
+  "escrow_holdback": 200.00,
+  "proceeds_shortfall": 0,
+  "notes": [
+   "OPEN ITEMS BEFORE FILING",
+   "1. Tier C transfers have no payee - identify them or leave them out.",
+   "2. Confirm whether the escrow holdback was refunded."
+  ]
+ },
+
+ "mapping": [
+  {
+   "side": "Purchase", "section": "Financial", "line": "Sale Price of Property",
+   "column": "Buyer Debit", "bucket": "Purchase price",
+   "sheet": "Purchase", "cell": "C8", "amount": 300000,
+   "treatment": "Basis of the property."
+  },
+  {
+   "side": "Purchase", "section": "(seller column)", "line": "Commission - Listing Agent",
+   "column": "Seller Debit", "bucket": "Not buyer's - exclude",
+   "sheet": "-", "cell": "-", "amount": 9000,
+   "treatment": "Seller-paid. Never enters the buyer's basis."
+  },
+  {
+   "side": "Sale", "section": "Commissions", "line": "Commission - Listing Agent",
+   "column": "Seller Debit", "bucket": "Selling cost",
+   "sheet": "Sale", "cell": "C17", "amount": 9900,
+   "treatment": "Reduces amount realized."
+  }
+ ],
+
+ "tie_out": [
+  {
+   "label": "Purchase - buyer debits (subtotal per ALTA)", "per_alta": 301930.00,
+   "formula": "='Purchase - 123 Example St'!C8+'Purchase - 123 Example St'!C46+'Purchase - 123 Example St'!C80"
+  },
+  {
+   "label": "Sale - due to seller per ALTA", "per_alta": 303940.00,
+   "formula": "='Sale - 123 Example St'!G30"
+  }
+ ]
+}
