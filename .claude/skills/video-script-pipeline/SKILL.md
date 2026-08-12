@@ -23,6 +23,11 @@ hype.** "Viral" here means *clear, useful, and shareable*, not clickbait. Hold t
 through every pass.
 
 ## Read these first
+- **A video that will be published on Instagram or Facebook is also a social post.** Its
+  **pillar, mix slot and CTA** come from
+  [`projects/marketing/social-content-playbook.md`](../../../projects/marketing/social-content-playbook.md)
+  via the [`social-media-posts`](../social-media-posts/) skill — load it alongside this one, and
+  it also writes the caption. This skill owns the script and the production brief.
 - `reference/content-strategy.md` — the **Trend Scout** front layer: how to pick a view-worthy,
   on-brand topic + angle (demand + delivery research); the latest opportunity report lives in
   `projects/marketing/video-generation/research/`.
@@ -70,7 +75,10 @@ for the choices; accept plain answers for the rest. Collect:
 - **Target platform(s)** — Instagram Reels, YouTube Shorts, TikTok, LinkedIn (default: vertical
   9:16 for all; see `script-frameworks.md` + brief for per-platform notes).
 - **Duration target** — ~30s / ~60s / ~90s (default ~60s). This sets the word budget.
-- **CTA** — what the viewer should do (book a consult / follow / DM / visit site).
+- **CTA** — what the viewer should do (**book a free discovery call** / follow / DM / visit site).
+  The wording is fixed firm-wide: *free discovery call*, **never** *free consultation* or
+  "consult" — a consultation is paid advisory work ($150 / 1 hour). See
+  [`positioning.md`](../../../projects/marketing/positioning.md).
 - **Avatar + voice-clone names** — the exact ElevenLabs identities to reference in the brief.
 - **Must-include points or sources** — anything the user specifically wants covered, and any
   angle to avoid.

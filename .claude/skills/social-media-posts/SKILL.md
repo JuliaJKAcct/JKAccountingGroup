@@ -30,6 +30,10 @@ that silently produces a good-looking post has not done the job.
    on (expertise · personality · proof) and which **mix bucket** it fills
    (useful 50% · personality 20% · trust 20% · offer 10%). If neither is
    answerable, the post has no reason to exist — fix that first, before writing.
+   *(Two things this skill also covers are not single posts and skip this step:
+   the **profile bio**, which answers to Rule 2 — the four elements legible to a
+   first-time visitor — and a **content plan**, where the pillar and bucket are
+   assigned per row and the mix is checked across the whole month.)*
 2. **Name the one action** the reader should take: save · follow · comment ·
    click · **book a free discovery call**. One, not three. Write the post toward
    it. *(The CTA wording is fixed — "free discovery call", never "free

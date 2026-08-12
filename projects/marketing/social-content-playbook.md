@@ -17,8 +17,11 @@
 > faithful digest of that source, kept so the material survives the session it
 > arrived in. Where we depart from the source, Part 1 says so and why.
 >
-> **Enforced by** the [`social-media-posts`](../../.claude/skills/social-media-posts/)
-> skill, which loads automatically whenever a session works on a post.
+> **Carried by** the [`social-media-posts`](../../.claude/skills/social-media-posts/)
+> skill — a session working on a post loads that skill, and the skill sends it
+> here. The marketing persona in [`CLAUDE.md`](./CLAUDE.md), which *does* apply
+> automatically to everything in this folder, points here too, so the rules are
+> reachable from both directions.
 
 ---
 
@@ -31,10 +34,17 @@ boutique advisory firm they don't buy a service — they buy **the person they w
 be dealing with**. Our positioning already says the differentiator is "a senior
 advisor in your corner." That advisor has a name.
 
-So: posts are written from **Julia** (Chief Accountant — never "CEO"), in first
-person, and she appears in the visual whenever the format allows a face. The firm
-account is where Julia is visible, not a corporate noticeboard. The team (Lilian,
-Maria) appears in its own right — a firm of real people is proof, not a dilution.
+So: posts are written from **Julia**, in first person, and she appears in the
+visual whenever the format allows a face. The firm account is where Julia is
+visible, not a corporate noticeboard. Her title in anything published is **Chief
+Accountant — never "CEO"** (the firm's standing rule, also enforced in the
+[`proposal-generator`](../../.claude/skills/proposal-generator/) skill).
+
+The rest of the firm appears in its own right, not as background: **Lilian** owns
+marketing — she sets the topics and approves what goes out (see
+[`collateral/social-post-workflow.md`](./collateral/social-post-workflow.md)) —
+and speaks in her own voice on the work she leads. A firm of real, named people is
+proof, not a dilution of Julia's brand.
 
 What this does **not** mean: it is still JK Accounting Group's account, on JK's
 palette and type, under the brand guide's voice.
@@ -45,11 +55,13 @@ The source's test: *your positioning must be understandable to a person who has
 just landed on your profile.* Four elements have to be answerable at a glance —
 **who you are · who you help · what problem you solve · why you.**
 
-Filled for JK, straight from [`positioning.md`](./positioning.md):
+Filled for JK from [`positioning.md`](./positioning.md) and the
+[brand guide](../../brand/JK-Brand-Guide.md) §1 (which is where the firm's
+one-paragraph description and the audience live):
 
 | Element | JK Accounting Group |
 |---|---|
-| **Who we are** | A boutique, founder-led US accounting firm — Miami · Fort Lauderdale · online — led by Julia, Chief Accountant. Bicultural: US rules, your language. |
+| **Who we are** | A boutique, founder-led US accounting firm — Miami · Fort Lauderdale · online — led by Julia, its Chief Accountant and the senior advisor clients actually reach. Bicultural: US rules, your language. |
 | **Who we help** | Foreign business owners operating or expanding in the US — primarily Ukrainian- and Russian-speaking. |
 | **What problem we solve** | They don't know the rules here yet. Bookkeeping happens reactively (or through a home-country bookkeeper who doesn't know the US system), so tax time is a scramble and there is nobody senior to ask when a real decision comes up. |
 | **Why us** | We become their finance department year-round: correct bookkeeping from day one, quarterly planning check-ins, and direct access to a senior advisor who speaks their language — never a call center, never alone in a foreign system. |

@@ -74,7 +74,13 @@ help, not an interruption. Ask little, trust the content:
 - **Low-friction resource:** "The plain-English checklist is in our bio."
 - **Prompt a reply:** "Comment your question and I'll answer it."
 Avoid hard "Book a call now." A soft CTA converts better here and stays on-brand. Match the CTA to
-the intake goal (awareness → follow/save; lead-gen → resource/consult in bio).
+the intake goal (awareness → follow/save; lead-gen → resource in bio, or the **free discovery
+call**).
+
+> **The CTA wording is fixed firm-wide.** It is a **free discovery call** — 10 minutes, by phone.
+> Never "consultation" and never "consult": a consultation is paid advisory work ($150 / 1 hour),
+> so "free consult" sells the wrong thing at the wrong price. See
+> [`positioning.md`](../../../../projects/marketing/positioning.md).
 
 ## Delivery specs (carry these into the Flows brief)
 The 2026 short-form standard is uniform across Instagram Reels, TikTok, YouTube Shorts, LinkedIn:
