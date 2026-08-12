@@ -40,7 +40,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Spouse (also on the return) | Double client (link below) |
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
-- **Double case note:** none — and deliberately so. See §5 ("What goes in the Double note").
+- **Double notes:** two, deliberately separate — the client's own figures in **485225**, and the tax-preparation briefing for Julia in **490984**. See §5 ("What goes in the Double note").
 
 ## 3. Systems & access
 
@@ -241,8 +241,37 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   2025 still produces a 2025 K-1 for the part-year.** Never the absence of a payment. So the
   question to him is not "did they pay you" (answered) but **"are you still a shareholder, and if
   you got out, on what date"**. This is the file's own disappearance rule, arriving in a new disguise.
-- ⚠️ **"He is no longer part of these companies" — check with Lilian whether this is new information
-  at all before treating it as any.** She used the phrase on 2026-08-12 **inside her paragraph about
+- ✅ **ANSWERED 2026-08-12 — NO FINAL K-1, NO SALE, AND THE COMPANIES ARE STILL OPEN.** Lilian asked
+  him directly whether he had received a **final K-1** from the two companies that paid him nothing
+  in 2025. His answer: **no final K-1 — he has not sold his shares, has not disposed of them, and
+  the companies have not closed.** He added that he is **"almost sure"** those two generated **no
+  income in 2025**. That was all he could tell her. **What it settles, and what it does not:**
+  - 🔴 **He is still a shareholder in two LIVE companies, so BOTH ordinary annual K-1s are still
+    owed.** Nothing terminated, so a *final* K-1 was never the right thing to expect — the lock-out
+    was never an ownership change. This closes the question the file has been circling.
+  - ✅ **Nothing is lost, and there is nothing to report as a sale.** No stock disposal on his 2025
+    return, and the **suspended losses survive** — they die on a disposition, and there was none.
+  - ✅ **The worthlessness branch stays available for the bankrupt company**, because §165(g) needs
+    him to still hold the stock at 31 December — and he does. (Still gated on basis; see below.)
+  - ⚠️ **"No income" is NOT "no K-1".** An S corporation with any activity at all still files and
+    still issues K-1s, and no-income is entirely consistent with a **LOSS** — these are trucking
+    entities carrying **depreciation**, so a loss is a likelier shape than a clean zero.
+  - 🔴 **But do NOT assume that loss is usable. Lilian's own read of him is the key fact here:
+    "él no tiene mucha participación ahí porque no está al tanto de lo que sucede con esas
+    compañías."** A shareholder who does not participate and does not know what the company is
+    doing is a **passive** investor — so a loss on those two K-1s would be **passive under §469**,
+    **suspended rather than deducted** against his other income. _(This is consistent with the 2024
+    return, which already carries a small suspended passive loss; and it does **not** contradict the
+    large Midwest Expedited loss being deducted as **nonpassive**, because that is the company he
+    actually worked in.)_
+  - ⚠️ **And "almost sure" is the weight to give it — he is not a source on these companies.** By
+    Lilian's own observation he is not across what happens in them, and he holds no documents from
+    any of them. So his statement is **plausible and unverified**, and ⚠️ **a passive shareholder
+    with no visibility is exactly the case where a K-1 turns up income nobody expected.**
+  - ⓘ **If the two really were dormant, they still had to file an 1120-S** while the S election
+    stands. Whether they did is their problem, not his, but it is why no K-1 has appeared.
+- ⚠️ **"He is no longer part of these companies" — RESOLVED as the lock-out, not a disposal**
+  _(by his own answer above, 2026-08-12)_. Kept because the reasoning still governs: She used the phrase on 2026-08-12 **inside her paragraph about
   Montana**, as the reason her own company hypothesis would not help. **The most likely reading is
   that she was restating the lock-out already recorded, not reporting a share disposal** — so it is
   captured here as a phrase to clarify, not as a relay from the client.
@@ -669,6 +698,21 @@ particular finding earns a place there.
   written to him about the health coverage.** A plain-English summary of all of it was prepared for
   Julia on WhatsApp.
 
+- _(2026-08-12, Lilian)_ — **She went back to the client on the shareholder question and got a clean
+  answer.** Asked whether he had received a **final K-1** from the two companies that paid him
+  nothing in 2025: **no — he has not sold his shares, has not disposed of them, and the companies
+  have not closed.** He is **"almost sure"** those two generated no income in 2025. ✅ **This closes
+  the disposal branch:** he remains a shareholder in two live companies, so **both ordinary annual
+  K-1s are still owed**, nothing is reportable as a sale, the **suspended losses survive**, and the
+  **worthlessness branch stays available** for the bankrupt company (he still holds that stock at
+  year end). 🔴 **The load-bearing addition is Lilian's own observation of him** — *"no tiene mucha
+  participación ahí porque no está al tanto de lo que sucede con esas compañías"* — which makes him
+  a **passive** shareholder in those two: any loss on their K-1s would be **suspended under §469**,
+  not deducted; and his "almost sure" is **not evidence**, because a passive shareholder with no
+  visibility is exactly who gets surprised by a K-1. **A second Double note was written for Julia**
+  the same day, at Lilian's instruction, so the whole situation can be read in one place before
+  anyone starts the return.
+
 _So this year can be answered later without anyone's memory. Records the questions, their answers
 as they come back, and **the tax facts the review established from any source** — the organizer
 included _(Lilian, 2026-08-12)_. His SSN, date of birth, licence, bank details, phone, email and
@@ -774,12 +818,11 @@ published card** — they are ordered by what would cause a wrong return or a re
 - ~~**On what date did he leave Montana?**~~ — ✅ **CLOSED by Lilian, 2026-08-12** (*"olvida eso"*):
   he lived in Washington and then Florida, so any Montana residence was **2024**, which is not our
   year (§1). **Do not re-open it.**
-- **Did he SELL, transfer or surrender his shares — and on what date?** ⚠️ **Not "are you still
-  involved":** **being locked out is not the same as ceasing to be a shareholder** — a frozen-out
-  shareholder still owns the stock and is still allocated a K-1, and a 2025 disposal would also
-  **lose the suspended losses** (§5). ⓘ **First check with Lilian** whether her phrase *"he is no
-  longer part of these companies"* was new information or a restatement of the lock-out.
-  ⚠️ **Separately: do not ask "did they pay you"; he has answered that (no).** An S corp allocates income or loss on a K-1
+- ~~**Did he sell, transfer or surrender his shares?**~~ — ✅ **ANSWERED 2026-08-12: NO.** No sale,
+  no disposal, **no final K-1, and the companies have not closed** (§5). ⚠️ **So the two ordinary
+  annual K-1s are still owed and are still outstanding** — he simply has no way to get them. He is
+  **"almost sure"** those two had no income, but by Lilian's own read he is **not across what
+  happens in them**, so treat it as plausible and unverified. An S corp allocates income or loss on a K-1
   **whether or not it distributes anything**, so those K-1s are still owed unless he disposed of the
   shares or the entity terminated in a **PRIOR** year — ⚠️ **an exit during 2025 still produces a
   2025 K-1 for the part-year** (§5).
@@ -860,6 +903,21 @@ published card** — they are ordered by what would cause a wrong return or a re
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
 - **Double tax project (2025):** https://app.doublehq.com/tax-return?cid=764785&projectId=234191
-- **Double case note:** none — by Lilian's instruction (§5), the review analysis stays out of Double. The working note on this client is **"2025 Tax Preparation - P&L and other info"** (client-supplied figures only).
+- **Double notes — TWO, and they are kept separate on Lilian's instruction (2026-08-12):**
+  - **485225 · "2025 Tax Preparation - P&L and other info"** — the client's own figures, as he sent
+    them. Unchanged; nothing else goes in it.
+  - **490984 · "2025 Tax Return - Situation summary and open items (read before preparing)"** —
+    the **briefing for Julia**, written in bullet points so she can pick up the whole situation
+    before starting his return: where the income came from and why no document exists, what he has
+    confirmed (so he is not re-asked), what is still open, and the one question for her.
+    ⚠️ **Lilian asked for this as a SECOND note rather than an update to the first**, so the two
+    kinds of information stay easy to find. That is a deliberate exception to the one-note rule in
+    [`double-mcp`](../../../.claude/skills/double-mcp/) §7 — **do not merge them.**
+  ⓘ **What stayed out of 490984, and why:** the firm's internal reasoning — the §165(g)/§1244
+  analysis, the basis argument, the bankruptcy-docket strategy, the reading of Lilian's own
+  wording. Those are review output and live here (§7 rule 11). And because **whether Double notes
+  are visible to the client in the portal is still unconfirmed**
+  ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 17), the note is written so nothing in it would
+  be damaging if he read it.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** none yet.
