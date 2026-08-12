@@ -40,8 +40,16 @@ stay** — which state someone lived in is the entire question on a multi-state 
 a real 44-page return: 12 street lines masked, **0.02% of the text removed**, and not one figure,
 EIN or form reference lost.
 
-Masks keep their shape — `SSN-***-**-6789`, `ACCT-****4321` — so two different numbers stay
-distinguishable without either being learned.
+**Masks are tags, not partial values** — `[SSN-1]`, `[SSN-2]`, `[ACCT-1]`. The same number always
+gets the same tag, so two values stay distinguishable, which is all the analysis ever needed, while
+no digit of either is learned. *An earlier version emitted the last four digits; name-plus-last-four
+is the standard identity-verification pair, and names are not masked here.*
+
+**Text is Unicode-normalised before any pattern runs**, and that is load-bearing. A PDF font whose
+`ToUnicode` map emits a typographic hyphen (U+2010/2011) or a zero-width space produces an SSN that
+looks identical on the page and matches **no** ASCII pattern — including the guard's, since it
+shared the character class. Verified against a crafted PDF: the tool reported "0 masked", exited 0,
+and wrote both SSNs in full.
 
 **Keeping the EIN is not a compromise, it is the point.** The EIN is how we tell which entity
 a K-1 or a W-2 came from. A return full of unidentifiable entities answers nothing, which is
@@ -54,7 +62,11 @@ claimed explicitly before the account rule can eat it.
    to ask for a text PDF — never to send the image somewhere else to be read.
 2. **A failed download writes nothing** and never echoes the URL back. A Double presigned link
    is a credential: anyone holding it downloads the file without logging in.
-3. **The final guard is stricter than the redactor.** It hunts the loose `NNN?NN?NNNN` shape
+3. **The final guard is stricter than the redactor**, and it runs **while EINs are still parked
+   behind placeholders**. That ordering is the fix for a bug where the EIN-preservation feature and
+   the guard were mutually exclusive: a legitimate unhyphenated EIN is nine bare digits, so the
+   guard aborted the tool on every K-1 carrying one — and its error message then invited the
+   operator to weaken the last line of defence to get work done. It hunts the loose `NNN?NN?NNNN` shape
    with any spacing, which the redactor only masks when the page labels it. If anything of that
    shape survives, the tool **refuses to write the file** and reports the *shapes* it saw, never
    the values. A false alarm costs one look at the PDF; a miss is not recoverable, because by
@@ -84,6 +96,8 @@ around it did not.)*
   much. This firm's clients are foreign-born owners, so this is the realistic gap.
 - **An unlabelled, wide-spaced `NNN NN NNNN`** is not masked — it collides with a column of
   amounts. The guard catches it and stops the job, so it fails loudly rather than silently.
+- **Unlabelled bank accounts of 4–8 digits are not masked.** Only labelled ones (`Account no…`,
+  `Routing…`) and bare runs of 9+ digits are. `Chase ending 45566778` survives.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
 - **It is a backstop, not the control.** The control is still deleting the session when the
   work is done — and for a document that matters more than for organizer responses, because
@@ -100,9 +114,16 @@ python3 tools/redact-doc/test_redact.py
 Every case is **invented** — no client's data is in that file and none may be added
 ([`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 7). Run it after any
 change to the patterns, and **verify the test can still fail**: neutralise a pattern and
-confirm the suite goes red. An earlier version of the EIN test passed even with the EIN rule
-deleted, because a hyphenated EIN survives on its own — it was asserting something no rule
-threatened.
+confirm the suite goes red. **All eleven mutants are caught** — the nine patterns, the guard, and
+the Unicode normalisation.
+
+Two lessons from getting this wrong twice:
+- An early EIN test passed with the EIN rule deleted, because a hyphenated EIN survives on its own.
+  It asserted something no rule threatened.
+- The **guard had no coverage at all**, because it lives in `_run()` and the suite only imported
+  `redact()`. Deleting it entirely left the suite green — which is precisely why the EIN/guard
+  collision shipped. `_run()` is now exercised end to end against generated PDFs: the guard, the
+  scan detection, and the figures surviving a full pass.
 
 ## Who set this
 

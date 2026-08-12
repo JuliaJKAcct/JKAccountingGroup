@@ -138,9 +138,11 @@ for **by name**, and should be. The rule is about not opening a client relations
 their court records — not about being shy of asking for the documents the work needs.
 
 _(One firm-specific consequence, not a change to this rule: a **filed tax return** may be asked for
-like anything else, but the session that asked may not then open it — it goes to Lilian or Julia,
-who hand back a redacted copy. The [`organizer-review` skill](../../.claude/skills/organizer-review/)
-§1 source 9 has the route.)_
+like anything else — but look in the firm's own systems first. Since 2026-08-11 a session reads the
+latest prior-year return straight from Double through a redactor, so asking a client for a year we
+already hold is exactly the rule-1 failure above. The
+[`organizer-review` skill](../../.claude/skills/organizer-review/) §1 source 9 has the route and the
+limits.)_
 
 ## 8 · Where two records disagree, show the client both — then ask
 

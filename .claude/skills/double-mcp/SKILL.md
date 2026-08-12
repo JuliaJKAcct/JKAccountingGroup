@@ -427,11 +427,22 @@ now automated instead of manual. Nothing else changed.
 
 #### What is permitted — the whole of it
 
-Inside a **pre-return review that Lilian or Julia asked for**, you may read **one** document:
+Inside a **pre-return review that Lilian or Julia asked for**, you may read **one year's return**:
 
-> **the most recent tax return filed before the year under review.**
+> **the client's return for the LATEST TAX YEAR before the year under review for which one
+> exists — the whole of that year's filed package, and no other year.**
 
 Preparing 2025, with 2022 / 2023 / 2024 on file → **read 2024. Not 2023. Not 2022.**
+
+⚠️ **"Latest tax year", not "most recently filed".** These clients include late filers — a 2022
+return filed last month is the *most recently filed* and is still the wrong document. Sort by the
+**tax year the return covers**, never by its filing date.
+
+⚠️ **"One year", not "one PDF".** A filed return is routinely several files — the federal return,
+each **state** return, the K-1 package, the 8879s. All of them for that one year are in scope, and
+they have to be: this section stresses that which state someone lived in is the whole question, and
+a session that stops at `2024 Federal.pdf` is blind to exactly that. **What is out of scope is
+another year, and anything that is not part of a filed return.**
 
 **That limit costs nothing analytically, which is why it holds.** A return states its carryovers
 *as of its own year end*: the NOL on the 2024 return already accumulates 2022 and 2023, Form 7203
@@ -453,11 +464,16 @@ scan (no text layer) is a **stop**, never a reason to send the image somewhere e
 
 #### The limits — each of these is a "never"
 
-1. **Never a second document** on the same client without Lilian or Julia asking for that one
-   specifically. One review authorises one return.
-2. **Never a document that is not a filed tax return** — not bank statements, not IDs or
-   passports, not powers of attorney, not contracts — without an explicit, per-document request.
-   (The clients here are foreign-born owners; those folders hold immigration documents.)
+1. **Never another year.** One review authorises one tax year. Not a second year to
+   cross-check, not an earlier year because a carryover looks wrong — that is a **finding**.
+2. **Never a document that is not part of that year's filed return** — not bank statements, not
+   IDs or passports, not powers of attorney, not contracts. (The clients here are foreign-born
+   owners; those folders hold immigration documents.)
+
+   ⚠️ **Limits 1 and 2 are the only two Lilian can waive, and only she or Julia can, per
+   document, in the moment, having been told what it is.** Never a standing permission, never
+   inferred from "she asked for a thorough review", and never assumed from a previous session.
+   **Everything from 3 down is absolute** and nobody waives it in a session.
 3. **Never across clients.** No loop, no sweep, no "while I'm here". One client, one review.
 4. **Never for another purpose.** The permission is for the prior-year comparison. Looking up an
    address, a figure or a phone number is not that.
@@ -479,7 +495,14 @@ scan (no text layer) is a **stop**, never a reason to send the image somewhere e
    zero is worse than no figure at all.
 3. **Remind them to delete the conversation when the work is done**, in the calm wording §2.2
    sets out. Deleting is the routine last step, not an alarm.
-4. **Delete the redacted file** when the review is delivered.
+4. **Never print the extracted text into the conversation** — not a page, not a heading, not a
+   sample "just to check the tool worked". **Print computed values only**: counts, page numbers,
+   PRESENT/ABSENT, a figure you are actually reporting as a finding.
+   ⚠️ *This is here because it is the one control that has already failed. On the first real run a
+   probe described as printing "form titles only" printed names and a street address, because those
+   pages carried no titles. The tool did its job; the step around it did not — and a "structural"
+   probe is exactly how it happens.*
+5. **Delete the redacted file** when the review is delivered.
 
 #### ⚠️ One thing that is worse here than for organizer responses
 
@@ -488,8 +511,8 @@ so it lands in the conversation whether or not anything echoes it. That URL is a
 whoever holds it downloads the file **without logging into Double at all**.
 
 So for documents, "delete the conversation" is doing more work than it does for organizer
-responses — it is removing a live key, not just a copy of some data. Presigned links do expire,
-but **the expiry window has not been verified**; do not lean on it. `redact.py` never prints the
+responses — it is removing a live key, not just a copy of some data. **Verified 2026-08-11: the link carries
+`X-Amz-Expires=3600` — it lives one hour.** Short, but not zero, and not something to lean on. `redact.py` never prints the
 URL, including on failure, which keeps it to the one unavoidable appearance.
 
 ---
@@ -927,7 +950,8 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
   whether the identity-block discipline held under working conditions. Only three clients have
   more than one year in Double today (Artur Tseretsian 2023/24/25, Vitalii Piliushin 2024/25,
   Take It Easy Transportation 2024/25); for everyone else the comparison base is a prior-year
-  return that Lilian redacts and uploads herself.
+  return read from the file library through `tools/redact-doc/` — one year only, see the
+  document rule.
 - **The loan tools unblock** (a client moves to a Scale plan) — §2's ⛔ row and capability-map §13.
 - A new **property column** is added or an option is renamed — §1's pointers stay valid, but
   re-run `get_property_columns` rather than trusting any list. Four were added between the July

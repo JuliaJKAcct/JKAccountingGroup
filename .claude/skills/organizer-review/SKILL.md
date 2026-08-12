@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return — which it never opens itself, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat — never an artifact, never committed.
+description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return, which since 2026-08-11 it fetches from Double itself through the redactor — one year only, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat — never an artifact, never committed.
 ---
 
 # The pre-return review — what to ask the client, before anyone starts
@@ -506,9 +506,9 @@ Rules that come from the firm's client-message convention:
   that request can become unavoidable.
   ⚠️ **Family-law paperwork only.** This does **not** extend to ordinary tax documents —
   Form 7203, a mileage log, a finance agreement, the prior-year return are all asked for
-  by name (family 6), and should be. **For the prior-year return, say where to send it:**
-  it arrives as a document the session may not open, so it goes to Lilian or Julia, who
-  hand back the redacted copy (§1 source 9, step 2).
+  by name (family 6), and should be. **But check Double first** — if that
+  year's return is already on file there you may read it yourself (§1 source 9), and asking
+  the client for what the firm already holds is the one thing rule 1 forbids.
   _(Lilian, 2026-08-11: "no preguntamos por ese tipo de documento".)_
 
 #### Where two records disagree: show the client both, then ask

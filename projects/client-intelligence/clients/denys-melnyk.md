@@ -250,9 +250,11 @@ come back, the answers he gives **us** — never what he ticked in the organizer
   distribution, or a K-1 share; (2) whether the three S corporations have filed their own 1120-S
   returns, since no K-1 exists until they do; (3) health coverage, because Marketplace coverage
   makes Form 1095-A a condition of filing at all.
-- **His 2024 return: ask Lilian, who redacted it on 2026-08-11.** His own upload is in Double and
-  is not the route (see the `organizer-review` skill, §1 source 9). Most of what it established is
-  in the next bullet — check that first; you may not need the PDF at all.
+- **His 2024 return is in Double** — `Tax Return Filed/2024`, and that is the route: read it
+  through `tools/redact-doc/` (see the `organizer-review` skill, §1 source 9). It is the **only**
+  year on file, so there is nothing to choose. ⚠️ **4 of its 44 pages barely extract** (rotated
+  text), so an absence in that output is not an absence on the return. Most of what it established
+  is in the next bullet — check that first; you may not need to open it at all.
 - **Established from the 2024 return** (prepared elsewhere): shareholder in three S corporations;
   a large NOL carried forward; a suspended passive loss; an S-corp loss deducted in full, so basis
   needs checking; a sale of business property; an early retirement distribution with the penalty;
