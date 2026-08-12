@@ -172,6 +172,31 @@ to hold.
 filing; ask him for it"* is the shape: the next person knows what is true and what to do, and needs
 to open nothing.
 
+**⚠️ ONE THING LILIAN HAS NOT RULED ON — ask her, do not decide it in a session.**
+The three bars above are all about **format** — data that is harmful because of what it
+*enables* (identity theft, contact, financial profiling). A 1040 organizer also asks questions
+whose answers are harmful because of what they **reveal**, and those are tax facts by every test
+here, so the rule as written **permits** them:
+
+> coverage that is **Medicaid** (income under ~138% FPL) or **Medicare under 65** (disability) ·
+> a dependant who is **permanently and totally disabled** · **living apart from a spouse** ·
+> **alimony** under a pre-2019 decree (a divorce, and who pays) · a **1099-C** or §108 insolvency ·
+> a **foreign account** and its country · a spouse or dependant with an **ITIN** rather than an SSN
+> (immigration status, and of a third party) · an **IP PIN** (a confirmed identity-theft victim) ·
+> **gambling** winnings · a dependant who was **incarcerated**.
+
+**Two of these are sharper for this firm than they would be elsewhere**: the client base is
+foreign-born owners in a community where clients know one another, so a country of account or an
+ITIN is not an abstract disclosure. And note the automated backstop does not help — `loadClients()`
+matches SSN shapes and 9+ digit runs, so an **IP PIN is six digits and sails straight past it**.
+
+**Until she rules, take the safe side and it costs almost nothing: write the CONSEQUENCE, not the
+circumstance.** *"Form 1095-A is required and blocks filing"* is the whole of what the next person
+needs; *"the coverage is Medicaid"* adds nothing to the work and a great deal to the page. When a
+circumstance genuinely is load-bearing, **ask her** — that is what §6's provenance rule is for.
+_(Raised by the independent review of 2026-08-12, tracked in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).)_
+
+
 _(**Supersedes the rule in force 2026-08-11 → 2026-08-12:** *"what the client answered is barred
 even when it is not an identifier — write the action, not the answer."* That rule was written after
 a session committed a client's answers and a review caught it, and it was **right about the leak
@@ -202,7 +227,7 @@ client **and its answer once it arrives** (tick it and append the answer with th
 prior-year return established, and what was decided or left open.
 
 Prior-return facts, and what the client tells **us** when we ask, are ordinary client knowledge and
-belong here. The only thing still barred is what they ticked **in the organizer** (above) — which
+belong here. What is still barred is the identity block, personal contact details and dollar figures (above) — which
 costs almost nothing, because the answer we act on is the one they give when we ask them directly.
 
 ⚠️ **These files are published** — the Knowledge Hub and this skill's own review dashboard (an

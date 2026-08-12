@@ -90,6 +90,12 @@ comes with rules that do not bend. In short, and none of this is optional:
    **Write the fact and the action together.** The full rule, with what it replaced and why,
    is [`double-mcp`](../double-mcp/) §2.2 exposure point 2 and
    [`client-intelligence`](../client-intelligence/).
+   ⚠️ **One category is NOT ruled on: a fact about someone's CIRCUMSTANCES** — a health
+   condition behind a coverage answer, a disability, a separation, insolvency, immigration
+   status, an identity-theft PIN. Those are tax facts by every test in the rule, so it
+   permits them, and Lilian has not been asked. **Until she is, write the consequence and
+   not the circumstance** — *"Form 1095-A is required and blocks filing"* — and **ask her**
+   when a circumstance is genuinely load-bearing. See `double-mcp` §2.2 for the list.
 6. **Never write the organizer payload to a file**, including the scratchpad. Do the
    comparison in context.
 7. **Every example in this file — or any skill — is INVENTED, and labelled as such.** Never
@@ -642,10 +648,11 @@ So the client file's §6 gets a **`Tax year YYYY — the review`** entry carryin
   responses, and they belong here.
 - **What was decided and why**, including anything left unresolved at filing.
 
-**The bar in §0 rule 5 still stands over all of it:** the file records the question and,
-the tax facts, whatever source
-established them — the organizer included since 2026-08-12. What stays out is the identity block,
-personal contact details and dollar figures (§0 rule 5).
+**§0 rule 5 governs all of it:** the file records the question, its answer, and **the tax facts
+the review established — whatever source established them**, the organizer included since
+2026-08-12. What stays out is the identity block, personal contact details and dollar figures —
+and, until Lilian rules, a fact about the client's **circumstances** rather than their tax
+position (§0 rule 5).
 In practice that costs almost nothing, because the answer we act on is the one they give
 when we ask.
 

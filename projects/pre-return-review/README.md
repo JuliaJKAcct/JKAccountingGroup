@@ -128,8 +128,10 @@ lost** — plenty is written down that no single row names.
 | **Lilian's standing arrangement** — she keeps the information reachable, so the source list is an expectation; a genuinely missing channel is reported to her, not asked of the client | [`organizer-review`](../../.claude/skills/organizer-review/) §1 |
 | Everything about the **pilot client** — his structure, his carryovers, his open questions | [`clients/denys-melnyk.md`](../client-intelligence/clients/denys-melnyk.md) |
 
-**What is deliberately NOT written down:** the client's organizer answers, his figures, his
-identifiers. Those stay in Double. That is the rule, not an omission.
+**What is deliberately NOT written down:** his **identifiers**, his **contact details** and his
+**figures**. Those stay in Double. **The tax facts are written down** — Lilian reversed the wider
+ban on 2026-08-12, one day after it was written, because it made a question the organizer had
+already *answered* unwritable.
 
 ## Working on this
 

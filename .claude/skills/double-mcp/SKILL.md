@@ -225,38 +225,63 @@ is not itself the danger. These are:
 
    **The bar is the IDENTITY BLOCK, not the answer** _(Lilian, 2026-08-12)_.
 
-**You may write what an organizer answer establishes as a tax fact** — the filing status, which
-states the client lived in, the dependants position, the type of health coverage, which income
-types they had, what carries forward. Those are the facts the return runs on and the file exists
-to hold.
+   **You may write what an organizer answer establishes as a tax fact** — the filing status, which
+   states the client lived in, the dependants position, the type of health coverage, which income
+   types they had, what carries forward. Those are the facts the return runs on and the file exists
+   to hold.
 
-**Three things still never go in**, and none of them is a tax fact:
-- **The identity block** — SSN/ITIN, driver's licence, bank routing and account numbers, passports
-  and any other government-issued identifier, credentials, dates of birth.
-- **Personal contact details** — phone, email, the street address. _(A city and state are a tax
-  fact on a multi-state return and may be written; the street line is not.)_
-- **Dollar figures** — barred by the older two-data-homes rule, which this ruling does not touch.
-  They live in Double, Drive and QuickBooks.
+   **Three things still never go in**, and none of them is a tax fact:
+   - **The identity block** — SSN/ITIN, driver's licence, bank routing and account numbers, passports
+     and any other government-issued identifier, credentials, dates of birth.
+   - **Personal contact details** — phone, email, the street address. _(A city and state are a tax
+     fact on a multi-state return and may be written; the street line is not.)_
+   - **Dollar figures** — barred by the older two-data-homes rule, which this ruling does not touch.
+     They live in Double, Drive and QuickBooks.
 
-**Write the fact AND the action.** *"Marketplace coverage — so Form 1095-A is required and blocks
-filing; ask him for it"* is the shape: the next person knows what is true and what to do, and needs
-to open nothing.
+   **Write the fact AND the action.** *"Marketplace coverage — so Form 1095-A is required and blocks
+   filing; ask him for it"* is the shape: the next person knows what is true and what to do, and needs
+   to open nothing.
+
+   **⚠️ ONE THING LILIAN HAS NOT RULED ON — ask her, do not decide it in a session.**
+   The three bars above are all about **format** — data that is harmful because of what it
+   *enables* (identity theft, contact, financial profiling). A 1040 organizer also asks questions
+   whose answers are harmful because of what they **reveal**, and those are tax facts by every test
+   here, so the rule as written **permits** them:
+
+   > coverage that is **Medicaid** (income under ~138% FPL) or **Medicare under 65** (disability) ·
+   > a dependant who is **permanently and totally disabled** · **living apart from a spouse** ·
+   > **alimony** under a pre-2019 decree (a divorce, and who pays) · a **1099-C** or §108 insolvency ·
+   > a **foreign account** and its country · a spouse or dependant with an **ITIN** rather than an SSN
+   > (immigration status, and of a third party) · an **IP PIN** (a confirmed identity-theft victim) ·
+   > **gambling** winnings · a dependant who was **incarcerated**.
+
+   **Two of these are sharper for this firm than they would be elsewhere**: the client base is
+   foreign-born owners in a community where clients know one another, so a country of account or an
+   ITIN is not an abstract disclosure. And note the automated backstop does not help — `loadClients()`
+   matches SSN shapes and 9+ digit runs, so an **IP PIN is six digits and sails straight past it**.
+
+   **Until she rules, take the safe side and it costs almost nothing: write the CONSEQUENCE, not the
+   circumstance.** *"Form 1095-A is required and blocks filing"* is the whole of what the next person
+   needs; *"the coverage is Medicaid"* adds nothing to the work and a great deal to the page. When a
+   circumstance genuinely is load-bearing, **ask her** — that is what §6's provenance rule is for.
+   _(Raised by the independent review of 2026-08-12, tracked in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md).)_
+
 
    _(**Supersedes the rule in force 2026-08-11 → 2026-08-12:** *"what the client answered is barred
-even when it is not an identifier — write the action, not the answer."* That rule was written after
-a session committed a client's answers and a review caught it, and it was **right about the leak
-and wrong about the boundary.** Lilian ruled on 2026-08-12 after seeing what it cost: the first
-full run's most valuable output was a question the organizer had already **closed**, and the rule
-made that unwritable — so the file said "go and read the organizer" and a future session had to
-reopen the very thing the file existed to spare it. Her ruling on the Knowledge Hub the day before
-— *"tax information on the page is fine; identifiers are not"* — is the same decision, and this
-makes the two consistent instead of contradictory.)_
+   even when it is not an identifier — write the action, not the answer."* That rule was written after
+   a session committed a client's answers and a review caught it, and it was **right about the leak
+   and wrong about the boundary.** Lilian ruled on 2026-08-12 after seeing what it cost: the first
+   full run's most valuable output was a question the organizer had already **closed**, and the rule
+   made that unwritable — so the file said "go and read the organizer" and a future session had to
+   reopen the very thing the file existed to spare it. Her ruling on the Knowledge Hub the day before
+   — *"tax information on the page is fine; identifiers are not"* — is the same decision, and this
+   makes the two consistent instead of contradictory.)_
 
    ⚠️ **This does put a client's tax facts on a published page, and that is the decision, not an
-oversight.** `clients/*.md` is auto-published to the Knowledge Hub with no allowlist, and rebuilding
-the Hub is a standing, unprompted part of finishing work. **What must never reach that page is the
-identity block** — that is what the two-data-homes rule and `loadClients()`'s hard abort exist for,
-and neither changes. A `clients/*.md` file is one routine step from being a hosted web page:
+   oversight.** `clients/*.md` is auto-published to the Knowledge Hub with no allowlist, and rebuilding
+   the Hub is a standing, unprompted part of finishing work. **What must never reach that page is the
+   identity block** — that is what the two-data-homes rule and `loadClients()`'s hard abort exist for,
+   and neither changes. A `clients/*.md` file is one routine step from being a hosted web page:
    `projects/knowledge-hub/build-hub.mjs` loads **every** file in `clients/` with no allowlist.
 3. **Files the session writes, or that the harness writes for it.** This one is invisible, and
    **deleting the conversation does not reach it** — the two live in different places. (In a cloud
