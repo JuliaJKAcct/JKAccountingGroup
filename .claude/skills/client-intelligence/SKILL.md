@@ -292,6 +292,21 @@ Report, Organizer Status; **skip the EIN / Tax ID property**), `list_notes`,
 `in:sent`); **Google Drive** (the client's folder → link it in §7); **QuickBooks** if
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
 
+**Plus one source no sweep has ever read: the migrated TaxDome notes.** When the firm moved
+off TaxDome, the notes written by hand on each client's TaxDome profile were kept — reportedly
+in a `Notes` folder under the client's `TaxDome` folder in Double, and mirrored somewhere in
+Julia's Google Drive. ⚠️ **All of that is Lilian's account (2026-08-12), unverified — no
+session has opened one**, and the Drive tree is **not** known to mirror Double's layout, so
+don't conclude a client has none because a guessed path came up empty.
+🔴 **Do NOT pick these up ad hoc inside an ordinary per-client sweep, and never from the
+unattended Saturday routine.** The backfill is a phased, attended job scoped in
+[`automation/taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md),
+and reading the note **content** is currently **blocked** on a question only Lilian or Julia
+can answer — [`double-mcp`](../double-mcp/)'s document rule forbids cross-client reads of
+non-return documents, and says a session may not waive that. Read the backfill doc first; it
+also carries the source tag and the rule that **the folder a note sits in is not evidence of
+its subject** (below).
+
 **Search by BOTH the business name AND each owner/principal name** — in Ping a
 business's meetings are often filed under the owner's personal contact, and one meeting
 can cover several topics. Never conclude "not found" from a single business-name lookup.
@@ -310,6 +325,14 @@ Many clients own several companies, so facts arrive mixed. **Mandatory:**
   company return / 1099s. Check **all** the owner's companies **and** the individual
   profile, then place each fact where it belongs — a personal/1040 fact → the person's
   context (not a company file); a company-operations fact → that company's file.
+- **Where a record was FILED is not evidence of its subject — read the content and decide.**
+  Sharpest on anything inherited from **TaxDome**, which did not separate owner from company
+  the way Double does: the firm ran a client's company filings and their personal matters
+  together under the owner's profile, so a **company** note routinely sits under the **owner**
+  (Lilian, 2026-08-12). Route it to the company's file anyway, and record where it came from.
+  When a single note covers both, **split it** rather than copying the whole thing into two
+  files; when you genuinely cannot tell whose it is, **ask** — a fact filed against the wrong
+  client is worse than one nobody wrote down, because the next person believes it.
 
 Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.

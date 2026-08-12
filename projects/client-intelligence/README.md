@@ -178,6 +178,7 @@ client-intelligence/
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
+│   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — scoped, not started
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
 └── clients/               ← one file per client (31 so far — see the Clients index below)
 ```
