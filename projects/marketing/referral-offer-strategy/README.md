@@ -71,9 +71,13 @@ referral-offer-strategy/
 │       ├── cover-ru.html / .png     on-brand event cover image (1:1, legible small)
 │       ├── event-ru.md              event-page copy + Luma setup checklist
 │       └── readiness-check-ru.pdf   the worksheet gift, print-ready for Luma
-└── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
-    └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
-                                  to clients (who we are · what we do · how we help)
+├── wealth-partner/  ← wealth-manager channel (Imperial Fund / Yuri Nosenko)
+│   └── imperial-fund-intro.html  client-facing EN intro sheet the advisor hands
+│                                 to clients (who we are · what we do · how we help)
+└── attorney-partnership/  ← business-attorney channel (co-hosted podcast)
+    └── podcast-collaboration-brief.html  one-page EN pitch (+ .pdf) to hand a
+                                  business attorney: the law × money podcast idea,
+                                  sample episodes, the mutual-referral win, next step
 ```
 
 > **Partner 1 — Candramas LLC** (marketing agency, owner Boris): the
@@ -86,6 +90,9 @@ referral-offer-strategy/
 > **Realtor channel** — the `templates/` checklists (Operating + Pre-Launch) and
 > the `realtor-referral-playbook`: a print-ready leave-behind a real-estate
 > partner hands a client moving into a new space.
+> **Partner 3 — a business attorney** (met Aug 2026): a co-hosted "law × money"
+> podcast — see `attorney-partnership/`; the pitch brief is built, the episode
+> topic-and-question bank is the next build.
 
 ## Brand & design
 
@@ -156,6 +163,13 @@ there.
   with an explicit lane split (the advisor grows wealth; JK keeps it
   tax-efficient) and a complimentary-consultation CTA. RU version is a natural
   follow-up.
+- **`attorney-partnership/`** — a one-page EN **pitch brief** to hand a business
+  attorney, proposing a co-hosted "law × money" video podcast: the concept (every
+  owner decision has a legal side and a money side), six sample episodes each shown
+  with its Law/Money angle, the mutual-referral win, and the low-lift next step
+  (one ~2-hour shoot → 3–4 episodes + short clips + a co-branded lead-magnet
+  checklist). Placeholder `[Attorney · Firm]` in the masthead for the recipient's
+  name. Next build: the full episode topic-and-question bank; RU version on request.
 
 Still open per `strategy.md` §6: scoring rubric thresholds, the
 document/access checklist for the *paid* assessment, Growth Accelerator
