@@ -778,7 +778,12 @@ the whole thing start to finish, instead of reconstructing it from email.
 1. **One note per case, never one note per event — this is the general rule for every case note, not
    a habit of the pilot.** The note is **rewritten in place** with `update_note` as things happen. A
    second note on the same matter splits the history and defeats the point. **Before writing anything
-   on a matter, `list_notes(clientId)` and look for the note that already covers it.** _(Lilian stated
+   on a matter, `list_notes(clientId)` and look for the note that already covers it.**
+   ⚠️ **And EDIT THE BODY YOU FETCHED — never re-author a note from memory.** A person may have
+   edited it in the UI since you last saw it (Lilian did exactly that on 2026-08-12, cutting what
+   she judged unimportant), and **Double keeps no version history: there is no `delete_note`, no
+   note revisions, and `list_activity_log` has no `Note` entity.** An overwrite of someone's own
+   edits is **unrecoverable**. _(Lilian stated
    this when the convention was created and **re-confirmed it unprompted on 2026-08-06**, when the firm
    opened its second case note — a different matter, Ecoorganic's QuickBooks handover.)_
    **The one sanctioned exception is length, not topic:** when a matter genuinely outgrows the 8 KB wall
@@ -793,9 +798,22 @@ the whole thing start to finish, instead of reconstructing it from email.
    **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk** — but the
    criteria only shortlist. **Lilian's say-so is what opens a note**; propose it, don't manufacture
    it. Routine work stays as Double **tasks**.
-5. **Every entry names the person who did it.** All the firm's notes post under one shared Double
-   user (`create_note` attributes to the connected account — currently "Julia Kononova"), so
-   without an inline name the trail is anonymous six months later.
+5. **Every entry names the person who did it — and EVERY note opens with a byline naming its
+   author.** All the firm's notes post under one shared Double user (`create_note` and
+   `update_note` attribute to the connected account — currently **"Julia Kononova"**), so without
+   an inline name the trail is anonymous six months later.
+   ⚠️ **The author field CANNOT be changed.** Neither tool takes a user parameter, and the note is
+   attributed to whoever the connector is signed in as. There is no fix in the API — only the
+   byline.
+   **So the first line of every note is:**
+   > `<p><em>Written by <strong>&lt;name&gt;</strong> — Double posts every firm note under Julia's login.</em></p>`
+
+   _(Lilian's instruction, 2026-08-12, after a note she had dictated end to end appeared in Double
+   as Julia's: **"cuando lo guardes en Double, ponlo como creado por Lilian, no por Julia"** — and
+   she could not correct it in the UI either. The byline is what the firm can actually control, and
+   the second half of the sentence is what stops the next reader assuming the author line is wrong
+   rather than shared.)_ **Keep the `Last updated: <date> — <name>` footer as well** — the byline
+   says who wrote it, the footer says who touched it last, and on a long-running note those differ.
 6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
 7. **The repo file stays the master — and its substance is NOT only `§6`.** The case's full detail
    lives in the [`client-intelligence`](../client-intelligence/) client file: **`§4`/`§5` carry the

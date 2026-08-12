@@ -38,7 +38,9 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | …**build** an organizer for a client? | **Partly.** We can create a draft and author all its slides + logic. We **cannot publish it to the client portal** — Lilian does that in the UI |
 | …add a new **column** to the client list? | **Yes** — `create_property_column`. Ask first; it changes the practice for everyone |
 | …keep a long **case note** in Double? | Yes, but there is a **size wall** — keep bodies under **~7,500 characters**; note writes start 403-ing from ~8,000. The firm's answer is the `Part 1 / Part 2` split in [SKILL §7](../SKILL.md) — don't invent another. Raised with Double, answer pending — §8 of this file |
-| …see **who did what** and when? | **Yes** — `list_activity_log` (admin-only, 5,671 entries on audit day), with per-user attribution |
+| …make a note appear as **created by someone other than the connected account** (e.g. Lilian, not Julia)? | **No** — neither `create_note` nor `update_note` takes a user/author parameter, and no other tool sets note authorship (verified 2026-08-12). The firm's answer is a **byline as the note's first line**, [SKILL §7 rule 5](../SKILL.md). ⓘ The one real route is to compose the note and have the person **paste it in the Double UI**, which does attribute correctly |
+| …recover a note after someone **edited or overwrote** it? | **No** — there is no `delete_note`, no note version history, and `list_activity_log` has **no `Note` entity**. So always edit the body you fetched with `list_notes`, never re-author from memory |
+| …see **who did what** and when? | **Yes** — `list_activity_log` (admin-only, 5,671 entries on audit day), with per-user attribution — ⚠️ **but not for notes**, which have no entity in the log |
 | …read the team's **time tracking**? | **Yes** — `list_timers` (410 entries), `list_workstreams` |
 | …change a **monthly close's** due date or assignees? | Yes, but both have irreversible side effects — see §7 |
 | …work with **loans**? | **No** — billing-gated, needs a Scale subscription per client |
@@ -272,7 +274,7 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 | Tool | | Notes |
 |---|---|---|
 | `list_notes` | ✅ (Aug) | **Always call this before writing a case note** — one note per matter, rewritten in place (SKILL §7) |
-| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up.** See below |
+| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up.** ⚠️ **Neither takes a user/author parameter** — the note is attributed to the connected account (Julia). See below |
 | `list_comments` | ◻︎ | Filter by client, task, thread, `transactionExternalId`, date range, or one of 15 comment types |
 | `add_task_comment` · `add_transaction_comment` | ◻︎ **W** | |
 | `get_questions` | ◻︎ | Client **questions/requests** — not organizer answers. Types: userToContact, contactToUser, transaction, receipt, bankFeedTransaction |
