@@ -208,6 +208,20 @@ README row but are deliberately **not** in the scope table above:
    `{"ok":true}`. Then remove the `TEST RUN` line and set the recipient to
    `lilian@jkaccountinggroup.com`.
 
+## ⚠️ THIS FILE IS NOT THE LIVE ROUTINE — the running copy is pasted in the web UI
+
+**Editing the prompt below changes nothing on its own.** The Routine at
+**claude.ai/code/routines** holds **its own copy**, pasted in when it was created. Until someone
+opens that Routine and replaces its prompt with the current block, the Saturday run keeps following
+the **old** instructions — including the "commit to your working branch, do NOT merge" line that
+left three weeks of Client Intelligence stranded.
+
+**So whenever this block changes, the change is not done until the Routine is re-pasted.** Say so
+out loud to whoever asked, and treat it as part of the task, not a follow-up.
+
+**Last change needing a re-paste: 2026-08-11** — the merge-your-own-CI rule, the contradiction
+rule, the seven new clients in scope, and the email becoming a record rather than a request.
+
 ## Routine prompt (paste into the web-UI routine)
 
 ```
