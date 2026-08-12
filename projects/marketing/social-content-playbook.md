@@ -207,7 +207,7 @@ alike.
 6. **No client data** — no name, no figures, no identifying detail without written permission.
 7. **Voice** — calm advisor; no fear, no hype, no hard-sell.
 8. **Bilingual** EN/RU, each written natively.
-9. **Brand** — palette, type, logo per the brand guide; **exact text placed by us, never typed by an image model** (`collateral/social-post-workflow.md`).
+9. **Brand** — palette, type, logo per the brand guide; **exact text placed by us, never typed by an image model** (see [the production workflow](./collateral/social-post-workflow.md)).
 10. **Right size** for the network, and any link **opens** before it goes out.
 
 ---
@@ -301,12 +301,12 @@ anxious audience.
 
 | The source says | What we did |
 |---|---|
-| Positioning formula, four elements, understandable at first glance | **Taken whole** (Rule 2) — filled from `positioning.md` |
+| Positioning formula, four elements, understandable at first glance | **Taken whole** (Rule 2) — filled from [the offer positioning](./positioning.md) |
 | Three pillars: expertise · personality · result | **Taken whole** (Rule 3) — examples made accounting-specific |
 | 50 / 20 / 20 / 10 content mix | **Taken whole** (Rule 4) — measured monthly, ~14 posts |
 | One action per publication, decided in advance | **Taken whole** (Rule 5) — CTA list bound to our fixed "free discovery call" wording |
 | Regularity beats perfection, 3–4 posts a week | **Taken whole** (Rule 6) |
-| The five-stage system (strategy → content → audience → monetization → scaling) | **Taken as the frame**, not as a service to buy. Our stages already exist across the marketing projects — the funnel in [`referral-offer-strategy/`](./referral-offer-strategy/), the entry points in [`lead-magnets/`](./lead-magnets/), the booking front door in [`consultation-booking/`](./consultation-booking/) |
+| The five-stage system (strategy → content → audience → monetization → scaling) | **Taken as the frame**, not as a service to buy. Our stages already exist across the marketing projects — the funnel in [the referral & offer strategy](./referral-offer-strategy/), the entry points in [the lead magnets](./lead-magnets/), the front door in [consultation booking](./consultation-booking/) |
 | Publish client results, testimonials, before/after | **Adapted, hard** (Rule 7) — an accounting firm cannot publish client data. Anonymized patterns, verified facts, written permission or nothing |
 | The personal brand is the individual expert | **Adapted** (Rule 1) — it is Julia, inside JK's brand, with the team visible too |
 | Register: *monetization · influence · become a magnet · financial freedom* | **Left** — the mechanism is right, the register is not ours. The brand guide bans hype and fear-based marketing; we are the calm in the room (Rule 8) |
@@ -317,7 +317,7 @@ anxious audience.
 ## Keeping this file honest
 
 Update it when: the mix or cadence changes in practice · a rule turns out not to
-survive contact with a real post · `positioning.md` moves (Rule 2's table is
+survive contact with a real post · [the offer positioning](./positioning.md) moves (Rule 2's table is
 derived from it) · or someone brings new source material worth folding in. Bring
 the [`social-media-posts`](../../.claude/skills/social-media-posts/) skill along in
 the same change — it is the copy that actually gets loaded when a post is made.

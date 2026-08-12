@@ -139,7 +139,15 @@ emitted script silently broke *every* click.
    file still needs the house `> **Status:** … **Owner:** … **Last updated:** …` header line (that
    is where the card's owner and date come from), and it renders through the same `mdToAtlas` path,
    so give it a `flow`/`schema` config like any other firm-wide procedure rather than leaving it a
-   wall of prose. **To file a new client procedure: give its catalog item the `client`
+   wall of prose. Two build guards keep multi-folder sourcing honest: a **missing file now warns
+   loudly** instead of silently dropping the card (the group badge would still have counted it),
+   and a **duplicate basename fails the build** — reader ids come from the basename, so two
+   same-named files in different folders would collide and mis-resolve every cross-link to either.
+   **Writing the `.md` so it renders is part of the job**, and four things bite: only `##`–`####`
+   are headings (a `#` heading prints as literal prose), a `>` block is flattened into ONE
+   paragraph (never put a table inside one), a link whose text is a bare filename degrades to
+   "the linked document", and an inline **code span** is printed verbatim — so a repo path in
+   backticks lands on the team page, which rule 1 forbids. **To file a new client procedure: give its catalog item the `client`
    field** (short display name + the CI slug) — it lands in that client's group automatically,
    creating the group if it's that client's first. The two `.hband`s are `data-section`, so the
    owner/search filters hide a whole band when nothing in it matches (e.g. filtering to

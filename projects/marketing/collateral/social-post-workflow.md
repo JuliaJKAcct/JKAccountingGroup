@@ -1,7 +1,10 @@
 # Procedure — Social Media Posts
 
-> **Status:** Living document · **Owner:** Lilian · Refined **over time** as we
-> sharpen the strategy. If you change the process, edit this file.
+> **Status:** Living document · **Owner:** Lilian · **Last updated:** 2026-08-12
+>
+> Refined **over time** as we sharpen the strategy. If you change the process,
+> edit this file — and bump the date above, which is what the Knowledge Hub card
+> shows.
 > **Language:** English (the repo standard). It can be mirrored to RU if the team
 > needs it.
 

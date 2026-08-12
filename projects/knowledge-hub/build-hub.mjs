@@ -1441,6 +1441,25 @@ const SOP_GROUPS = [
 // cross-reference into an in-Hub reader BUTTON (never a filename or repo path).
 const hubSopMeta = new Map(SOP_GROUPS.flatMap((g) => g.items).map((it) => [basename(it.file, '.md'), it.title]));
 
+// Reader ids (and this map) are keyed on the file's BASENAME, which was unique for free while
+// every procedure came out of one folder. `dir` sourcing from several projects makes a
+// collision possible: two same-named files would emit duplicate data-doc ids — the reader
+// would open whichever came first — and every `.md` cross-link to either would resolve wrong.
+// Fail the build rather than ship a page whose links quietly point at the wrong document.
+{
+  const seen = new Set(), dupes = new Set();
+  for (const it of SOP_GROUPS.flatMap((g) => g.items)) {
+    const id = basename(it.file, '.md');
+    if (seen.has(id)) dupes.add(id); else seen.add(id);
+  }
+  if (dupes.size) {
+    console.error(`✖ Duplicate SOP id(s): ${[...dupes].join(', ')}. Reader ids come from the `
+      + `file's basename, so two files with the same name collide even in different folders. `
+      + `Rename one of them.`);
+    process.exit(1);
+  }
+}
+
 /* ---------------- build SOP cards ---------------- */
 // Load the clients up-front (reuse the CI dashboard engine) so the per-client SOP groups
 // can link straight down to each client's intelligence card (#slug). Used again below to
@@ -1465,9 +1484,18 @@ function renderSopItem(it, grpName) {
   // belongs to another project be shown here without moving it out of the project that owns
   // it — the marketing playbook and its production workflow live in projects/marketing/,
   // where the marketing persona applies to them. The file stays put; the Hub is the view.
-  const rel = (it.dir || 'projects/sops/') + it.file;
+  // Normalise the separator so `dir: 'projects/marketing'` and 'projects/marketing/' both work.
+  const rel = (it.dir || 'projects/sops/').replace(/\/*$/, '/') + it.file;
   const abs = resolve(repoRoot, rel);
-  if (!existsSync(abs)) return '';
+  // A missing file used to drop the card SILENTLY — the group badge and the nav count still
+  // said 2 while one card was gone, and the build exited 0. With `dir` in play (a typo'd
+  // folder, a file moved by the project that owns it) that is now a live failure mode, so say
+  // so loudly. Still non-fatal: one missing document must not take the whole Hub down.
+  if (!existsSync(abs)) {
+    console.warn(`⚠ SOP card SKIPPED — no file at "${rel}". Check the catalog item's `
+      + `file/dir in build-hub.mjs; the group's card count will be short by one.`);
+    return '';
+  }
   const md = read(abs);
   const owner = headerVal(md, 'Owner of SOP') || headerVal(md, 'Owner') || 'Firm';
   const ok = ownerKey(owner);
