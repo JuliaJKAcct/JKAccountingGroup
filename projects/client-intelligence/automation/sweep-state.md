@@ -32,6 +32,13 @@ list grows.
    clients get added. The cheap **incremental** (post-baseline) passes on
    already-covered clients still run for **all** of them every time.
 
+> ⚠️ **A baseline here says nothing about the migrated TaxDome notes.** This ledger covers
+> Ping, Double, Gmail (and Drive where noted) — **not** the notes carried over from each
+> client's TaxDome profile (`TaxDome > Notes`, mirrored in Julia's Drive). **No client has
+> ever been swept for those**, however recent their baseline reads. The backfill is scoped in
+> [`taxdome-notes-backfill.md`](./taxdome-notes-backfill.md), and its Phase 3 adds a
+> `TaxDome notes` marker to the coverage column as each client is done.
+
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
 | Atman Parts | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |

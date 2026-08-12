@@ -590,6 +590,7 @@ sometimes flat):
 TaxDome/
 └── [Client Name]/
     ├── 1. Completed Tax organizers/   ← only exists if the client completed one in TaxDome
+    ├── Notes/                         ← the notes from the client's TaxDome profile (many clients, not all)
     ├── Client uploaded documents/
     ├── Firm docs shared with client/
     │   └── Bookkeeping Files/ → {year}/ → Bank Statements/ → "1. Jan" … "12. Dec"
@@ -599,6 +600,15 @@ TaxDome/
 
 Notes that save time:
 
+- **`Notes/` holds the migrated TaxDome profile notes — and no Client Intelligence sweep has
+  ever read them.** When the firm left TaxDome, the notes written by hand on each client's
+  profile were saved into this folder (and mirrored in Julia's Google Drive). ⚠️ **Reported by
+  Lilian 2026-08-12, not yet verified from a session** — the rest of this tree was. Two things
+  to know before using them: they are **old by construction**, so they can contradict current
+  facts; and **the folder they sit in is not evidence of their subject** — TaxDome ran a
+  client's company and personal matters together under the owner's profile, so a company note
+  is routinely filed under the owner. The backfill, and the routing rule, are scoped in
+  [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md).
 - **`1. Completed Tax organizers` is load-bearing.** Its presence (and the *year* in the
   filename) is how Organizer Status gets set — see
   [`tax-season-readiness`](../tax-season-readiness/) §4. The name varies slightly between

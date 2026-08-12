@@ -292,6 +292,15 @@ Report, Organizer Status; **skip the EIN / Tax ID property**), `list_notes`,
 `in:sent`); **Google Drive** (the client's folder → link it in §7); **QuickBooks** if
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
 
+**Plus one source no sweep has ever read: the migrated TaxDome notes.** When the firm moved
+off TaxDome, the notes written by hand on each client's TaxDome profile were kept — they sit
+in a `Notes` folder inside the client's `TaxDome` folder, in **both** Julia's Google Drive and
+Double's file library. These are the richest material available (someone wrote them *about the
+client*, unlike raw email traffic) and **not one client file draws on them**. The backfill is
+scoped in [`automation/taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md);
+read it before touching them, in particular the rule that **the folder a note sits in is not
+evidence of its subject** (below).
+
 **Search by BOTH the business name AND each owner/principal name** — in Ping a
 business's meetings are often filed under the owner's personal contact, and one meeting
 can cover several topics. Never conclude "not found" from a single business-name lookup.
@@ -310,6 +319,14 @@ Many clients own several companies, so facts arrive mixed. **Mandatory:**
   company return / 1099s. Check **all** the owner's companies **and** the individual
   profile, then place each fact where it belongs — a personal/1040 fact → the person's
   context (not a company file); a company-operations fact → that company's file.
+- **Where a record was FILED is not evidence of its subject — read the content and decide.**
+  Sharpest on anything inherited from **TaxDome**, which did not separate owner from company
+  the way Double does: the firm ran a client's company filings and their personal matters
+  together under the owner's profile, so a **company** note routinely sits under the **owner**
+  (Lilian, 2026-08-12). Route it to the company's file anyway, and record where it came from.
+  When a single note covers both, **split it** rather than copying the whole thing into two
+  files; when you genuinely cannot tell whose it is, **ask** — a fact filed against the wrong
+  client is worse than one nobody wrote down, because the next person believes it.
 
 Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.
