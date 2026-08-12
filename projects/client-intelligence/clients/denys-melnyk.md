@@ -97,7 +97,12 @@ link). Never write the credential itself here.
 _The first real answers to the fourteen questions put to him the same day. Recorded as his account —
 his statements, not verified facts — with what each one settles and what it opens._
 
-**🔴 He worked in only ONE of his three companies in 2025, and holds no document for it.** He
+**🔴 He worked in only ONE of his three companies in 2025, and holds no document from ANY of them.**
+✅ **The shape, as Lilian set it out on 2026-08-12:** **one** of the three **did generate income** and
+**gave him no document for it** — that is the company he had the partner problem with, the one now in
+bankruptcy. **The other two generated nothing at all, and he has received no document from them
+either.** So it is not that documents are missing from one company: **there is not a single tax
+document from any of the three.** He
 received **no money at all** in 2025 from two of the three S corporations; the only one he worked in
 was — in Lilian's words — **"something like Midwest Expedited, or something like that"**. The income
 he reported to us in his Google Voice message **is that company's money**, received in the **first
@@ -251,23 +256,27 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
     was never an ownership change. This closes the question the file has been circling.
   - ✅ **Nothing is lost, and there is nothing to report as a sale.** No stock disposal on his 2025
     return, and the **suspended losses survive** — they die on a disposition, and there was none.
-  - ✅ **The worthlessness branch stays available for the bankrupt company**, because §165(g) needs
-    him to still hold the stock at 31 December — and he does. (Still gated on basis; see below.)
+  - 🟠 **The worthlessness branch probably stays available for the bankrupt company** — §165(g) needs
+    him to still hold that stock at 31 December. ⚠️ **But his answer did not cover it.** Lilian's
+    question was scoped to *"these two companies he received no money from"*; **the bankrupt one is
+    the third.** A lock-out is not a disposal, so continued ownership is a reasonable inference —
+    **inferred, not confirmed.** (Still gated on basis; see below.)
   - ⚠️ **"No income" is NOT "no K-1".** An S corporation with any activity at all still files and
     still issues K-1s, and no-income is entirely consistent with a **LOSS** — these are trucking
     entities carrying **depreciation**, so a loss is a likelier shape than a clean zero.
-  - 🔴 **But do NOT assume that loss is usable. Lilian's own read of him is the key fact here:
-    "él no tiene mucha participación ahí porque no está al tanto de lo que sucede con esas
-    compañías."** A shareholder who does not participate and does not know what the company is
-    doing is a **passive** investor — so a loss on those two K-1s would be **passive under §469**,
-    **suspended rather than deducted** against his other income. _(This is consistent with the 2024
-    return, which already carries a small suspended passive loss; and it does **not** contradict the
-    large Midwest Expedited loss being deducted as **nonpassive**, because that is the company he
-    actually worked in.)_
-  - ⚠️ **And "almost sure" is the weight to give it — he is not a source on these companies.** By
-    Lilian's own observation he is not across what happens in them, and he holds no documents from
-    any of them. So his statement is **plausible and unverified**, and ⚠️ **a passive shareholder
-    with no visibility is exactly the case where a K-1 turns up income nobody expected.**
+  - 🛑 **PASSIVE vs NONPASSIVE IS JULIA'S DETERMINATION. DO NOT MAKE IT HERE.** Lilian's explicit
+    instruction, 2026-08-12: *"En cuanto a que es accionista pasivo, no menciones eso. No lo
+    definas tú, no lo determines tú. Eso es algo que debe determinar Julia… porque eso no salió de
+    la boca del cliente ni yo puedo asegurar eso."* **A session had written that conclusion into
+    this file and into a Double note off an offhand remark of hers; both were removed the same day.**
+    The remark was an impression, not a finding, and **she will not stand behind it.** It matters
+    because the classification changes whether a loss is deductible now or suspended — which is
+    exactly why it is not a by-product of a conversation. **Record the facts; leave the
+    determination to Julia.**
+  - ⚠️ **"Almost sure" is the weight his statement carries — and he holds no documents.** ✅ Lilian
+    also **asked him for the two companies' own tax returns** _(2026-08-12)_: **he does not have
+    them.** So there is nothing behind the statement but his recollection. **Plausible, unverified,
+    and that is where it stands.**
   - ⓘ **If the two really were dormant, they still had to file an 1120-S** while the S election
     stands. Whether they did is their problem, not his, but it is why no K-1 has appeared.
 - ⚠️ **"He is no longer part of these companies" — RESOLVED as the lock-out, not a disposal**
@@ -626,10 +635,20 @@ occupation fields we hold for both are not usable as they stand. Correct them in
 **Confirm how he wants a refund paid** — bank details for direct deposit, or a paper check. We do
 not have banking details for him. Worth one question rather than an assumption.
 
-**What goes in the Double note — and what does not.** Lilian's instruction, 2026-08-11:
-this client's Double note carries **what the client gives us and what the team needs in
+**What goes in the Double notes — and what does not.** Lilian's instruction, 2026-08-11:
+a Double note carries **what the client gives us and what the team needs in
 order to work** — his figures, his statements, where his documents are. It does **not**
-carry our review analysis or our findings. Those stay in this file. Adding them would
+carry our review analysis or our findings. Those stay in this file.
+✅ **AMENDED 2026-08-12 — she authorised a SECOND note, a briefing for Julia (490984).** This is
+the case-by-case exception the rule always allowed (*"si yo creo que debe incluirse algún análisis,
+lo pones"*), and the line she drew: **the situation and the open items go into the note** — where
+the income came from, why no document exists, what he has confirmed, what we are waiting for — so
+Julia can pick up the return without reconstructing it. **The firm's REASONING stays here**: the
+§165(g)/§1244 analysis, the basis argument, the bankruptcy-docket strategy.
+🛑 **And one thing is barred outright, by her explicit instruction the same day: our characterisation
+of the client.** She struck the passive-shareholder read from both the note and this file —
+*"no lo definas tú, no lo determines tú"*. **Record what he said and what he holds; never our
+assessment of him.** Adding them would
 turn a working note into something else, and she decides case by case whether any
 particular finding earns a place there.
 
@@ -705,13 +724,32 @@ particular finding earns a place there.
   the disposal branch:** he remains a shareholder in two live companies, so **both ordinary annual
   K-1s are still owed**, nothing is reportable as a sale, the **suspended losses survive**, and the
   **worthlessness branch stays available** for the bankrupt company (he still holds that stock at
-  year end). 🔴 **The load-bearing addition is Lilian's own observation of him** — *"no tiene mucha
-  participación ahí porque no está al tanto de lo que sucede con esas compañías"* — which makes him
-  a **passive** shareholder in those two: any loss on their K-1s would be **suspended under §469**,
-  not deducted; and his "almost sure" is **not evidence**, because a passive shareholder with no
-  visibility is exactly who gets surprised by a K-1. **A second Double note was written for Julia**
+  year end). 🛑 **A session then wrote a PASSIVE-SHAREHOLDER conclusion off an offhand remark of hers, into
+  this file and into a Double note. She struck it the same day** — *"no lo definas tú, no lo
+  determines tú… eso no salió de la boca del cliente ni yo puedo asegurar eso"* — and it is **Julia's
+  determination to make**. ✅ **She also asked him for the two companies' own tax returns: he does
+  not have them.** So his "almost sure" rests on recollection alone — plausible, unverified, and
+  that is all it is. **A second Double note was written for Julia**
   the same day, at Lilian's instruction, so the whole situation can be read in one place before
   anyone starts the return.
+
+- _(2026-08-12, Lilian)_ — **She corrected the shape of the company problem, struck a conclusion a
+  session had drawn, and added two things.** ✅ **The shape:** it is **not** one company missing
+  documents — **one company DID generate income and gave him no document for it** (the one with the
+  partner problem, now in bankruptcy), and **the other two generated nothing and produced no
+  document either**. So **there is not a single tax document from any of the three.** 🛑 **She
+  struck the passive-shareholder read** written into this file and into the Double note off an
+  offhand remark of hers — *"no lo definas tú, no lo determines tú… eso no salió de la boca del
+  cliente ni yo puedo asegurar eso"*. **It is Julia's determination.** ✅ **She asked him for the
+  two silent companies' own tax returns — he does not have them**, so "almost sure" rests on
+  recollection alone. 📌 **And she asked him again to check with his BROKER** what cover he had in
+  2025 — pending. ⓘ *That a broker is in the picture matters: brokers enrol clients in Marketplace
+  plans through their own systems, so "he has no exchange account" proves nothing.*
+  **Double note 490984 was rewritten** the same day — reorganised into numbered sections with a
+  logical sequence so Julia can follow it without getting lost, the character judgement removed,
+  and four things added that an independent review found missing: the **Illinois** nonresident
+  question, the **`1040-SCH C` return-type dispute**, the **basis hedge on the NOL**, and his own
+  possible **1099-NEC exposure** for the drivers he paid.
 
 _So this year can be answered later without anyone's memory. Records the questions, their answers
 as they come back, and **the tax facts the review established from any source** — the organizer
@@ -763,14 +801,16 @@ street address never appear here, and nor do dollar figures — those live in Do
     **whether the three 1120-S returns are filed** open, since he cannot see them.
   - ⬜ **Still not answered:** whether the S corporations still operate in **Illinois**; the **P&L
     Statement template**; the **estimated payments** question.
-- **New questions the call itself raised** — whether a **2025 extension** was filed (§4), whether he
-  **also rents / has rental income** (§5), and, for the two silent companies, **not "did they pay
-  you" but "are you still a shareholder, and on what date did you get out"** (§5).
+- **New questions the call itself raised** — whether a **2025 extension** was filed (§4), and whether
+  he **also rents / has rental income** (§5). ✅ **The shareholder question is ANSWERED** _(2026-08-12)_:
+  no sale, no disposal, the two companies have not closed, and he has **no copy of their tax returns**
+  either (§5).
 - **Two sources are empty for this client, checked 2026-08-12** — **Google Drive** has no folder of
   his (the "Melnyk" files there are a different person), and **Ping** records no meeting with him.
   Worth knowing so the next review does not spend time on them; worth re-checking if that changes.
-- **Decided so far:** rent is treated as monthly _(Lilian, 2026-08-11)_. The review findings stay
-  out of his Double note _(Lilian, 2026-08-11)_. Contact him in **Russian**.
+- **Decided so far:** rent is treated as monthly _(Lilian, 2026-08-11)_. The review REASONING stays
+  out of his Double notes _(Lilian, 2026-08-11)_, though she authorised a **second, briefing note**
+  for Julia on 2026-08-12 carrying the situation and the open items (§5). Contact him in **Russian**.
 - **No longer unresolved:** his **filing status on 31 December 2025** — **married, not living apart**
   (§5). It was the file's biggest open item until 2026-08-12, when the organizer turned out to have
   carried the answer all along. The dependant question below is **sharper** for it, not resolved by
@@ -802,6 +842,13 @@ published card** — they are ordered by what would cause a wrong return or a re
 - 📅 **The proof-of-claim BAR DATE in the bankruptcy — find it and diary it.** He may hold an unpaid
   **wage** priority claim, a **shareholder-loan** claim, or a contingent claim on a **personal
   guarantee**. A bar date forfeits all of them silently (§5).
+- 🟠 **PENDING WITH THE CLIENT: he is asking his BROKER what kind of cover he had in 2025** —
+  Marketplace or not _(Lilian asked him again on 2026-08-12)_. ⓘ **That a broker is involved is
+  itself informative:** brokers enrol people in Marketplace plans through their own systems, so the
+  client may be a Marketplace enrollee **without ever having had an account** — which is why "no
+  account" proves nothing (§5).
+- ~~**The two silent companies' own tax returns**~~ — ⚠️ **ASKED 2026-08-12: he does not have them.**
+  Not a live ask to him any more; the only routes left are the companies themselves.
 - 🟠 **Marketplace or private? Ask WHERE he bought the cover and WHETHER anyone helped pay for it**
   — not "send me your 1095". ⚠️ **He may hold no form at all:** only the **1095-A** is ever needed,
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
