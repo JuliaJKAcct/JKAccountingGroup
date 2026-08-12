@@ -120,9 +120,16 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   contractor, so a zero return is a deliberate filing position, not an absence of activity —
   plausibly because installation/construction services fall outside Connecticut's taxable-
   services net, or because taxable sales sit with a general contractor. **Neither has been
-  confirmed and no basis is recorded anywhere.** Practice is to keep filing zero (stopping is
-  worse); nobody should represent *why* until Lilian confirms it. Tracked as decision #8 in
-  the SOP's Open decisions log.
+  confirmed and no basis is recorded anywhere.** A second question sits inside it: DRS says
+  OS-114 reports **taxable *and* nontaxable sales**, so a business with revenue and no
+  taxable sales would normally file showing **gross receipts with a deduction** rather than a
+  blank return — and nobody has opened one of these filings to see which it is. Practice is
+  to keep filing (stopping is worse); nobody should represent *why* until Lilian confirms it.
+  Tracked as decision #8 in the SOP's Open decisions log.
+- **Deadline and cost of missing it _(verified against CT DRS, 2026-08-12)_:** the return is
+  due the **last day of the month following** the period; the late penalty is **15% of tax
+  due or $50, whichever is greater**, so on a zero return the **$50 floor** is what lands.
+  The firm's Double reminder on the 5th is deliberately early against that date.
 - **The frequency changed, and the firm fell behind once.** Returns for **2023–2024 are
   QUARTERLY** (`1Q`–`4Q` filenames); from **10.2025** onward the folder holds one return per
   **month**, continuously through 07.2026. When or why DRS changed the frequency is not
@@ -301,7 +308,9 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ### Information still needed
 - [ ] **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
       this is a filing position with no recorded reason (§4). Practice continues unchanged; the
-      point is to be able to justify it
+      point is to be able to justify it. **Second half of the same question:** are those returns
+      blank, or do they already report **gross receipts with a nontaxable deduction**? OS-114
+      reports both taxable and nontaxable sales — nobody has opened one to look
 - [ ] **Were the 12.2025 Delinquency Notice and the 01.2026 Proposed Assessment resolved?** Both
       PDFs are in the Drive `Notices` folder and **have not been opened** — period, amount and
       outcome all unknown (§4)

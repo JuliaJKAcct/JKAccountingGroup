@@ -188,9 +188,17 @@ Double is the working tool for the vendor side of these rules — lean on it:
 A recurring **monthly** obligation the **firm** carries out, not the client, and separate
 from the bookkeeping close below. The firm files Connecticut's **OS-114 Sales and Use Tax
 Return** through **CT DRS myconneCT**, and it currently goes out every month as a **zero
-tax return**. Do not let a quiet month pass: a zero return still has to be *filed* — CT
-charges a late penalty on a return that reports nothing, and this client has already been
-on the receiving end of that (see *Filing history* below).
+tax return**.
+
+**Do not let a quiet month pass — a zero return still has to be *filed*, and filing it late
+costs $50.** Connecticut requires Form OS-114 for every assigned period "even if no sales
+were made or no tax is due", and its late penalty is **15% of the tax due or $50, whichever
+is greater** — so on a zero return the 15% is nothing and the **$50 floor is what lands**.
+A month nobody filed is therefore a $50 bill for a return that would have taken minutes,
+and this client has already been on the receiving end of a delinquency notice (see *Filing
+history* below). _(Verified against CT DRS, 2026-08-12:
+[Sales and Use Tax Information](https://portal.ct.gov/drs/sales-tax/tax-information) ·
+[Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/drs/forms/2019/sut/o-88_1019.pdf).)_
 
 1. **Log in to myconneCT.** The portal address and the login the firm uses live in the
    client's own Drive doc — never in this repo:
@@ -214,10 +222,11 @@ on the receiving end of that (see *Filing history* below).
    [Sales Taxes → Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK),
    and the matter gets raised with Lilian — a notice is never just filed and forgotten.
 
-**Timing.** The firm's own recurring reminder for this client sits in **Double, due the 5th
-of the month**. Connecticut's statutory due date for a monthly filer is the **last day of
-the month following** the period _(to verify — not re-checked against DRS for this client's
-assigned filing frequency)_, so the internal reminder sits well inside it.
+**Timing.** Connecticut's due date is the **last day of the month following** the period —
+so July's return is due 31 August _(CT DRS, verified 2026-08-12)_. The firm's own recurring
+reminder for this client sits in **Double, due the 5th of the month**, which is deliberately
+early and leaves most of a month of slack. **Treat the 5th as the deadline, not the 31st:**
+the whole point of the internal date is that a missed reminder is still recoverable.
 
 ### Why it is a *zero* return — NOT ESTABLISHED, confirm before relying on it
 
@@ -225,10 +234,19 @@ Every return in the folder reports zero, but **the reason has never been written
 This is an operating business with revenue, so "zero" is a deliberate position, not an
 absence of activity — plausibly because the client's work is construction/installation
 services that fall outside CT's taxable-services net, or because taxable sales genuinely
-run through someone else (a general contractor). **Neither is confirmed here.** A covering
-bookkeeper should keep filing zero — that is the established practice and stopping is
-worse — but should **not** represent to anyone *why* it is zero until Lilian confirms it.
-Tracked in the Open decisions log (#8).
+run through the general contractor. **Neither is confirmed here.**
+
+⚠️ **And there is a second question hiding inside the first: zero *tax* is not the same as
+zero *sales*.** DRS says Form OS-114 reports **both taxable and nontaxable sales** — gross
+receipts go on the return, and the nontaxable portion comes off as a deduction, so a
+business with revenue and no taxable sales would normally file a return showing **receipts
+with a deduction**, not a blank one. Whether these returns are blank or already carry gross
+receipts **has not been checked** — nobody has opened one _(2026-08-12)_.
+
+**What a covering bookkeeper does with that:** keep filing, on the same schedule, exactly as
+before — stopping is far worse than the open question, and nothing here says the position is
+wrong. Do **not** represent to the client, or to DRS, *why* it is zero until Lilian
+confirms it. Tracked in the Open decisions log (#8).
 
 ### Filing history — what the folder actually shows
 
@@ -281,7 +299,7 @@ Tracked in the Open decisions log (#8).
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **Job costs → COGS vs opex** — verify rule 9 against the client's history and filing before relying on it | Julia | To verify |
-| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Keep filing zero; confirm the reason before anyone represents it. Also settle whether the 12.2025 delinquency notice and the 01.2026 proposed assessment were resolved | Lilian | To verify |
+| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Two parts: (a) *why* no taxable sales; (b) whether the returns should be reporting **gross receipts with a deduction** rather than blank, since OS-114 reports taxable **and** nontaxable sales. Keep filing either way; confirm before anyone represents it. Also settle whether the 12.2025 delinquency notice and the 01.2026 proposed assessment were resolved | Lilian | To verify |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
