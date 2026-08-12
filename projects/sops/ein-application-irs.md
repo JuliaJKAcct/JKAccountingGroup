@@ -1,6 +1,6 @@
 # SOP: Federal EIN Application (IRS Form SS-4) — after the entity is active on Sunbiz
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-10
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-12
 
 The complete, self-contained procedure for getting a **federal EIN** (Employer
 Identification Number) from the IRS for a company that is **already formed and
@@ -87,9 +87,10 @@ so you do not want to be hunting for an answer mid-flow.
    **county** and state.
 8. **Reason for applying** — for a new FL company this is "Started a new
    business."
-9. **Expected employees in the next 12 months** — `-0-` is a valid and often the
-   *correct* answer (§4E); if any, the **first date wages will be paid**. Remember
-   an **S-corp owner-employee counts as 1**.
+9. **Expected employees in the next 12 months** — **the firm's standing answer is
+   "no employees"** (`-0-` on paper, **No** online) unless payroll genuinely starts
+   now; see the rule in §4E. If there *will* be payroll, you also need the **first
+   date wages will be paid**.
 10. **Principal activity / line of business** (what the company actually does).
 11. **Closing month of the accounting year** — almost always **December**.
 12. **Is the firm filing on the client's behalf?** → if yes, you'll name the
@@ -148,7 +149,8 @@ isn't. Fill each one from its own source.
 | **Responsible party's ID** | **A valid SSN or ITIN is mandatory** (the instructions say *"SSN, EIN, or ITIN"* — the EIN case is for government entities, §2). No `Foreign` equivalent exists, which is what makes this path unusable for a foreign owner | **Line 7b accepts `Foreign` or `N/A`** — an entry is required, but it doesn't have to be a number |
 | **Business start date** | **Month + Year only** | **Line 11 — month, DAY, and year** (the day is not asked online) |
 | **Closing month of accounting year** | Not asked | **Line 12 — required** (usually `December`) |
-| **Employees** | In the July-2026 walkthrough, a single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* — note **only the "No" branch has been walked**; a "Yes" may well open follow-ups §2 doesn't record | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date). See §4E |
+| **Employees** | In the July-2026 walkthrough, a single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* — note **only the "No" branch has been walked**; a "Yes" may well open follow-ups §2 doesn't record | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date) |
+| **…and how the firm answers it** | **No** — unless payroll starts now (§4E) | **Same rule, written out**: `-0-` in all three boxes of line 13, line 14 **skipped**, line 15 **`N/A`** (§4E) |
 | **Excise / special-activity screening** | **Four yes/no questions**: ≥55,000 lb highway vehicle · gambling/wagering · Form 720 · alcohol, tobacco or firearms *(they sit in a block of five with the employee question above)* | **None of these exist on the form.** Don't go looking for them |
 | **Business activity** | A **category dropdown + a scripted follow-up** per category (the matrix in §2) | **Line 16** — a checkbox from a short list, **plus Line 17**, free text describing the actual line of merchandise or services |
 | **Prior EIN** | Not asked | **Line 18 — required**, plus the previous EIN if there was one |
@@ -259,8 +261,9 @@ English-only.
   3. Need to file **Form 720** (Quarterly Federal Excise Tax)?
   4. **Sell or manufacture alcohol, tobacco, or firearms**?
   5. **Have, or expect to have, employees who will receive Forms W-2 in the next
-     12 months?** ← answer **Yes** only if there will be payroll; it flags the
-     Form 941/940 obligations.
+     12 months?** ← **the firm's standing answer is No** (§4E). Answer **Yes**
+     only when payroll is genuinely starting now — it flags the Form 941/940
+     obligations.
 
 *Screen 4b — "Provided Business Activity and Services":* pick the one **category**
 that best fits, then answer its **follow-up** (see the matrix below). Most JK
@@ -335,7 +338,7 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
 | **11** | Date business started = **Sunbiz formation/effective date** — month, **day** and year. You don't need the Articles PDF in hand: the date is public and free on Sunbiz, so **look it up rather than estimate**. Never enter a date earlier than formation |
 | **12** | Closing month of accounting year. **This is a MONTH, not a date** — write `December` for a calendar-year filer. Spell the month out to avoid a bare "12" being misread. Note the entities that **can't** choose freely: partnerships (required year), personal service corporations and REMICs (calendar), most trusts (calendar) |
-| **13** | Highest number of employees expected in the next 12 months — **three separate boxes**: Agricultural / Household / **Other** (Other is where nearly every business goes). Enter **`-0-`** in the ones that don't apply. **When you don't know yet, `-0-` is the right answer** — see §4E for why inflating it costs you |
+| **13** | Highest number of employees expected in the next 12 months — **three separate boxes**: Agricultural / Household / **Other** (Other is where nearly every business goes). Enter **`-0-`** in the ones that don't apply. **The firm's standing answer is `-0-` in all three** unless payroll is genuinely starting now — see §4E for the rule and why a number costs you |
 | **14** | **Form 944 election.** Only if payroll tax will be ≤ **$1,000/year** (≈ **$5,000 or less** in total wages; $6,536 in US territories). ⚠️ **Checking it locks you in**: *"you must continue to file Form 944 … until the IRS instructs you to file Form 941."* **Usually leave unchecked.** And if line 13 is all zeros, **skip line 14 entirely** |
 | **15** | First date wages or annuities were paid. ⚠️ **If the business doesn't plan to have employees, enter `N/A`** — the instructions say so explicitly. **Don't leave it blank** |
 | **16** | Principal activity — one checkbox. *"**You must check a box.**"* Use **Other** (and specify) if none of the listed ones fits |
@@ -473,20 +476,34 @@ If JK completes and submits the application **on the client's behalf**:
 - **The designee block is void without a signature** — *"You must complete the
   signature area for the authorization to be valid."*
 
-### 4E. Line 13 — the employee count, and what to do when you don't know yet
+### 4E. The employee question — the firm's answer is **No** unless payroll starts now
 
 This is the line people either skip or over-answer. It is **an estimate, not a
 commitment** — the instructions ask for the number *"expected by the applicant in
 the next 12 months."*
 
-**What it actually triggers.** A number greater than zero tells the IRS to open an
-**employment-tax filing requirement** on the account: it will start expecting
-**Forms 941** quarterly and **940** annually — and it sends notices when a return
-it expects doesn't arrive. That's the whole risk.
+**It is the same question on both paths**, so this rule governs both: **line 13**
+on the paper SS-4 (three counts) and the **yes/no** *"Have, or expect to have,
+employees who will receive Forms W-2 in the next 12 months?"* in the online EIN
+Assistant (§2, screen 4a).
 
-**When you don't know yet → enter `-0-`.** The asymmetry decides it:
+> 🏛️ **The firm's standing answer: NO.** *(Julia's rule, recorded Aug 2026.)*
+> On every EIN application — paper **or** online — we answer that the company does
+> **not** expect employees (**`-0-`** in all three boxes on line 13, **No** on the
+> online screen) **unless there is a specific reason not to**: the client is
+> hiring, or starting owner payroll, **right from the start**. The reason is
+> narrow and practical — **a "yes" opens employment-tax filing obligations the
+> company doesn't have yet**, and answering "no" costs the client nothing if they
+> hire later.
 
-| | You put a number you weren't sure about | You put `-0-` and they hire later |
+**What a "yes" actually triggers.** A number greater than zero (or "Yes" online)
+tells the IRS to open an **employment-tax filing requirement** on the account: it
+will start expecting **Forms 941** quarterly and **940** annually — and it sends
+notices when a return it expects doesn't arrive. That's the whole risk.
+
+**The asymmetry is what decides it:**
+
+| | You say yes / put a number you weren't sure about | You say no / `-0-` and they hire later |
 |---|---|---|
 | What happens | IRS opens the 941/940 requirement and waits for returns that don't exist | **Nothing** |
 | Consequence | Non-filing notices to chase down and resolve | They just start filing 941 when wages are actually paid |
@@ -495,17 +512,22 @@ it expects doesn't arrive. That's the whole risk.
 Hiring later needs **no new EIN**. The instructions say so under line 10:
 *"Don't apply if you already have an EIN and are only hiring employees."*
 
-**Two cases where `-0-` would be wrong:**
+**The special situations — the only times we answer yes:**
 
-1. **Payroll is genuinely imminent.** Put the honest number and give line 15 the
-   real or expected first wage date.
-2. **The entity will elect S-corp** ⚠️ — constant here. A shareholder who works in
-   the business **is an employee** and needs a reasonable salary, so the realistic
-   minimum is **1**, not zero. This is the payroll the
-   [reasonable-compensation work](../reasonable-compensation/) depends on
-   existing — see §4B for the Form 2553 sequence.
+1. **Payroll is genuinely starting now.** The client already has someone to hire,
+   or is putting the owner on payroll from the outset. Put the honest number and
+   give line 15 the real or expected first wage date.
+2. **An S-corp that starts owner payroll right away** ⚠️. A shareholder who works
+   in the business **is an employee** and needs a reasonable salary — the payroll
+   the [reasonable-compensation work](../reasonable-compensation/) depends on
+   existing (see §4B for the Form 2553 sequence). **But "we intend to elect S-corp
+   at some point" is not by itself a reason to answer yes**: if no wages will
+   actually be paid in the next 12 months, the standing answer stands and the
+   client simply starts filing 941 when the salary begins.
 
-**The three boxes are not interchangeable:**
+**On paper, "no" still has to be written out** — `-0-` in each of the three boxes
+(never blank), **skip line 14 entirely**, and put **`N/A`** on line 15. The three
+boxes are not interchangeable:
 
 | Box | Who | Return it drives |
 |---|---|---|
@@ -513,7 +535,8 @@ Hiring later needs **no new EIN**. The instructions say so under line 10:
 | **Household** | Domestic workers in a private home (nanny, cleaner) | Schedule H |
 | **Other** | **Everything else — where ~99% of clients go** | Forms 941 / 940 |
 
-Fill every box; put `-0-` in the ones that don't apply.
+Fill every box; put `-0-` in the ones that don't apply — which, under the rule
+above, is normally **all three**.
 
 ---
 
@@ -558,8 +581,10 @@ Fill every box; put `-0-` in the ones that don't apply.
   They ask different questions — see [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions).
   The paper form needs a start **day**, a closing month, employee **counts**, a
   first wage date and a signature that the online tool never asked you for.
-- **Inflating line 13 "just in case."** It opens an employment-tax filing
-  requirement and earns non-filing notices. `-0-` when you don't know (§4E).
+- **Answering "yes" to the employee question "just in case."** It opens an
+  employment-tax filing requirement and earns non-filing notices. The firm's
+  standing answer is **No / `-0-`** unless payroll is starting now — on the paper
+  line 13 **and** on the online screen (§4E).
 - **Leaving line 15 blank when there's no payroll.** The instructions say enter
   **`N/A`**, not nothing.
 - **Checking line 14 casually.** The Form 944 election **locks you in** until the
@@ -629,8 +654,8 @@ Business details
 - Reason for applying:  ☐ Started a new business  ☐ Other: ____
 - Principal activity (line 16 checkbox):
 - Line of merchandise / services (line 17, free text):
-- Employees expected next 12 months (line 13 — "-0-" if unknown; S-corp owner = 1):
-      Agricultural: ___   Household: ___   Other: ___
+- Employees expected next 12 months  ☐ NO — the standing answer: "-0-" / "No" (§4E)
+      ☐ YES — payroll starts now (say why: ____________)  →  Agricultural: ___  Household: ___  Other: ___
 - First wage date (line 15 — enter "N/A" if no payroll planned): ____
 - Closing month of accounting year (a MONTH):  ☐ December  ☐ Other: ____
 - Applicant's phone (foreign OK — include country code): ____
@@ -658,7 +683,9 @@ full, 2026-08-10); quoted phrases come from that text. **§4E is different** —
 line-13 wording is quoted, but its *consequences* (that a non-zero count opens the
 941/940 filing requirement and draws non-filing notices, and the
 Agricultural→943 / Household→Schedule H / Other→941+940 mapping) are **the firm's
-own operating knowledge**, not statements in the instructions. The online-wizard
+own operating knowledge**, not statements in the instructions — as is the
+standing answer itself (**No / `-0-` unless payroll starts now**), which is a firm
+policy decision recorded from **Julia** in **Aug 2026**, not an IRS rule. The online-wizard
 walkthrough in §2, and therefore the online column of §1.5, was verified on screen
 in **July 2026** — the IRS changes that tool without notice, so re-check it and
 update §2 when it moves. Verify fax numbers, hours, and mailing addresses against
