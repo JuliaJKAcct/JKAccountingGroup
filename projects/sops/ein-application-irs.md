@@ -77,9 +77,10 @@ so you do not want to be hunting for an answer mid-flow.
    **Corporation** (Inc./Corp.). → drives §4A.
 4. **Number of LLC members** (if an LLC).
 5. **Will this entity elect S-corp?** (very common here) → does **not** change the
-   **entity-type** answer (§4A), and flags the separate Form 2553 step (§4B) — but
-   it **does** change **line 13**, because the owner-employee counts as an employee
-   (§4E).
+   **entity-type** answer (§4A), and flags the separate Form 2553 step (§4B). It
+   does **not** by itself change the employee answer — see §4E: the standing
+   answer stays **"no employees"** unless owner payroll actually starts within the
+   next 12 months.
 6. **Responsible party**: the one individual who owns/controls the entity, plus
    their **SSN or ITIN** (or the fact that they have **neither**). → this is the
    go/no-go decision in §1. See §4C for who qualifies.
@@ -150,7 +151,7 @@ isn't. Fill each one from its own source.
 | **Business start date** | **Month + Year only** | **Line 11 — month, DAY, and year** (the day is not asked online) |
 | **Closing month of accounting year** | Not asked | **Line 12 — required** (usually `December`) |
 | **Employees** | In the July-2026 walkthrough, a single **yes/no**: *"Have, or expect to have, employees who will receive Forms W-2 in the next 12 months?"* — note **only the "No" branch has been walked**; a "Yes" may well open follow-ups §2 doesn't record | **Line 13 — three separate counts** (Agricultural / Household / Other), plus **Line 14** (Form 944 election) and **Line 15** (first wage date) |
-| **…and how the firm answers it** | **No** — unless payroll starts now (§4E) | **Same rule, written out**: `-0-` in all three boxes of line 13, line 14 **skipped**, line 15 **`N/A`** (§4E) |
+| **…and how the firm answers it** *(firm policy, not IRS text — see the sources note at the foot)* | **No** — unless payroll starts now (§4E) | **Same rule, written out**: `-0-` in all three boxes of line 13, line 14 **skipped**, line 15 **`N/A`** (§4E) |
 | **Excise / special-activity screening** | **Four yes/no questions**: ≥55,000 lb highway vehicle · gambling/wagering · Form 720 · alcohol, tobacco or firearms *(they sit in a block of five with the employee question above)* | **None of these exist on the form.** Don't go looking for them |
 | **Business activity** | A **category dropdown + a scripted follow-up** per category (the matrix in §2) | **Line 16** — a checkbox from a short list, **plus Line 17**, free text describing the actual line of merchandise or services |
 | **Prior EIN** | Not asked | **Line 18 — required**, plus the previous EIN if there was one |
@@ -478,9 +479,9 @@ If JK completes and submits the application **on the client's behalf**:
 
 ### 4E. The employee question — the firm's answer is **No** unless payroll starts now
 
-This is the line people either skip or over-answer. It is **an estimate, not a
-commitment** — the instructions ask for the number *"expected by the applicant in
-the next 12 months."*
+This is the question people either skip or over-answer. What it asks for is **an
+estimate, not a commitment** — on paper the instructions ask for the number
+*"expected by the applicant in the next 12 months."*
 
 **It is the same question on both paths**, so this rule governs both: **line 13**
 on the paper SS-4 (three counts) and the **yes/no** *"Have, or expect to have,
@@ -537,6 +538,13 @@ boxes are not interchangeable:
 
 Fill every box; put `-0-` in the ones that don't apply — which, under the rule
 above, is normally **all three**.
+
+⚠️ **`-0-` answers this form, not the S-corp's salary obligation.** It is a
+statement about the next 12 months on the EIN application only. Once the Form
+2553 election is effective — normally from formation (§4B) — a shareholder
+working in the business still owes themselves a reasonable salary, and the
+payroll filings start then. See the
+[reasonable-compensation work](../reasonable-compensation/).
 
 ---
 

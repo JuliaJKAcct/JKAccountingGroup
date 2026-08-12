@@ -1180,7 +1180,7 @@ const SOP_GROUPS = [
             { t: `Save the confirmation letter (<b>CP 575</b>-equivalent / fax-back) to the client's system, record the EIN &amp; trigger the after-steps`, k: 'done', pill: 'EIN in hand' },
           ],
         },
-        blurb: 'Get the business’s federal EIN once it’s active on Sunbiz — the SSN/ITIN online path vs the fax “Foreign” path, what the online tool asks that the paper SS-4 doesn’t (and back), the SS-4 line by line, the employee-count trap, and the after-steps.' },
+        blurb: 'Get the business’s federal EIN once it’s active on Sunbiz — the SSN/ITIN online path vs the fax “Foreign” path, what the online tool asks that the paper SS-4 doesn’t (and back), the SS-4 line by line, the employee question (the firm answers No unless payroll starts now), and the after-steps.' },
     ],
   },
   {
