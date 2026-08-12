@@ -5,7 +5,9 @@
   Reads the firm's own repo as the source of truth and generates a single,
   self-contained, on-brand index page (the "Hub"):
 
-    • Procedures & runbooks  ← projects/sops/*.md
+    • Procedures & runbooks  ← projects/sops/*.md (plus a catalog item's `dir` override,
+                               which is how the marketing playbook + its production workflow
+                               are shown from projects/marketing/ without leaving that project)
     • Client intelligence    ← projects/client-intelligence/clients/*.md
 
   The look is the Atlas design system (brand/design-system + the SOP render's
@@ -1344,6 +1346,46 @@ const SOP_GROUPS = [
     ],
   },
   {
+    // Marketing lives in projects/marketing/, not projects/sops/ — these two items carry a
+    // `dir` override so they can be read where they belong. They are the firm's social rules
+    // (what a post is for) and the production route (how it gets made); they are procedures
+    // in every sense the team cares about, so they sit in the Procedures view like the rest.
+    name: 'Marketing & content', note: 'How a social post is decided, written and made',
+    items: [
+      { file: 'social-content-playbook.md', dir: 'projects/marketing/',
+        title: 'Social Content Playbook — Instagram & Facebook',
+        kicker: 'Playbook', readerKick: 'Marketing playbook · firm-wide', tag: 'The rules',
+        flowLede: `Every post runs the same seven steps, and the first three happen before a word is written — that is the whole point. Pillar, then the month's mix, then the one action; only then the copy.`,
+        flow: [
+          { t: 'Pick the pillar', d: 'Expertise · personality · proof — a post that stands on none of the three is not published', ic: 'search' },
+          { t: "Check the month's mix", d: '50% useful · 20% personality · 20% trust · 10% offer — counted per month, not per post', ic: 'diagram' },
+          { t: 'Name the ONE action', d: 'Save · follow · comment · click · book a free discovery call — one, decided before writing', ic: 'key' },
+          { t: 'Write it EN + RU', d: "Julia's voice, calm senior advisor; each language written natively, never machine-translated", ic: 'edit' },
+          { t: 'Verify every number', d: 'Figures, thresholds and deadlines against an authoritative source (IRS first) — unverifiable, cut', ic: 'check' },
+          { t: 'Clear the client-data gate', d: 'No client name, business or figures without written permission — anonymized patterns only', ic: 'key' },
+          { t: 'Brand finish, then publish', d: 'Exact text placed by us, right size for the network, link tested — see the production workflow', ic: 'send', k: 'done' },
+        ],
+        schema: {
+          start: { t: `A post would show <b>what we achieved for a client</b> — the Proof pillar, and the one place a content playbook written for the creator economy cannot be followed literally: their figures are private financial data.`, d: 'we are a regulated practice' },
+          decision: {
+            tag: 'The client-data gate', q: `Do we have the client's <b>explicit written permission</b> to name them?`,
+            yes: { bl: `Yes — in writing`, body: `Name and identifying detail may be used <b>as permitted</b> — nothing beyond what they agreed to. Their <b>figures</b> still need that permission specifically, and a screenshot of their books is never the illustration.` },
+            no:  { bl: `No — or only a friendly "sure"`, body: `Publish the <b>shape</b> of the case, never the person: <em>"an owner who had been filing as a sole proprietor for three years while running payroll-sized profits."</em> No name, no business, no logo, no figures. The pattern is what teaches anyway.` },
+          },
+          then: [
+            { t: `Every figure that survives is <b>verified</b> against an authoritative source (IRS first). No invented statistic, no fabricated testimonial, no stock or AI face — if it cannot be verified, it is cut.` },
+            { t: `Keep the voice: <b>calm senior advisor</b> — no fear, no hype, no hard-sell. Tax content is <b>education, not advice</b> on the reader's situation.` },
+            { t: `Then the post takes its one named action like any other, and goes through the brand finish.`, k: 'done', pill: 'Safe to publish' },
+          ],
+        },
+        blurb: 'What every Instagram/Facebook post is FOR — the three pillars (expertise · personality · proof), the 50/20/20/10 monthly mix, one named action per post, 3–4 posts a week over bursts, and the confidentiality limits on publishing client results. Adapted from the Personal Brand Starter Kit, with the source digested in full.' },
+      { file: 'social-post-workflow.md', dir: 'projects/marketing/collateral/',
+        title: 'Social Posts — Production Workflow',
+        kicker: 'Procedure', tag: 'How it gets made',
+        blurb: 'How a post actually gets produced once the playbook has decided what it is for — who does what, choosing between Gemini, NotebookLM and Claude for the visual, the golden rule that no number is ever left as text an image model typed, and the right size for each network.' },
+    ],
+  },
+  {
     name: 'Client portal (Double)', note: 'Getting clients into the portal, on-brand',
     items: [
       { file: 'double-portal-first-login.md', title: 'Double Portal — First-Time Sign-In',
@@ -1399,6 +1441,25 @@ const SOP_GROUPS = [
 // cross-reference into an in-Hub reader BUTTON (never a filename or repo path).
 const hubSopMeta = new Map(SOP_GROUPS.flatMap((g) => g.items).map((it) => [basename(it.file, '.md'), it.title]));
 
+// Reader ids (and this map) are keyed on the file's BASENAME, which was unique for free while
+// every procedure came out of one folder. `dir` sourcing from several projects makes a
+// collision possible: two same-named files would emit duplicate data-doc ids — the reader
+// would open whichever came first — and every `.md` cross-link to either would resolve wrong.
+// Fail the build rather than ship a page whose links quietly point at the wrong document.
+{
+  const seen = new Set(), dupes = new Set();
+  for (const it of SOP_GROUPS.flatMap((g) => g.items)) {
+    const id = basename(it.file, '.md');
+    if (seen.has(id)) dupes.add(id); else seen.add(id);
+  }
+  if (dupes.size) {
+    console.error(`✖ Duplicate SOP id(s): ${[...dupes].join(', ')}. Reader ids come from the `
+      + `file's basename, so two files with the same name collide even in different folders. `
+      + `Rename one of them.`);
+    process.exit(1);
+  }
+}
+
 /* ---------------- build SOP cards ---------------- */
 // Load the clients up-front (reuse the CI dashboard engine) so the per-client SOP groups
 // can link straight down to each client's intelligence card (#slug). Used again below to
@@ -1419,9 +1480,22 @@ const readerDocs = [];   // collected designed pages, opened in the in-Hub reade
 // One SOP → its designed card, and (as a side effect) its reader doc pushed to readerDocs.
 // grpName only feeds the card's search text.
 function renderSopItem(it, grpName) {
-  const rel = 'projects/sops/' + it.file;
+  // Almost every procedure lives in projects/sops/. A `dir` override lets a document that
+  // belongs to another project be shown here without moving it out of the project that owns
+  // it — the marketing playbook and its production workflow live in projects/marketing/,
+  // where the marketing persona applies to them. The file stays put; the Hub is the view.
+  // Normalise the separator so `dir: 'projects/marketing'` and 'projects/marketing/' both work.
+  const rel = (it.dir || 'projects/sops/').replace(/\/*$/, '/') + it.file;
   const abs = resolve(repoRoot, rel);
-  if (!existsSync(abs)) return '';
+  // A missing file used to drop the card SILENTLY — the group badge and the nav count still
+  // said 2 while one card was gone, and the build exited 0. With `dir` in play (a typo'd
+  // folder, a file moved by the project that owns it) that is now a live failure mode, so say
+  // so loudly. Still non-fatal: one missing document must not take the whole Hub down.
+  if (!existsSync(abs)) {
+    console.warn(`⚠ SOP card SKIPPED — no file at "${rel}". Check the catalog item's `
+      + `file/dir in build-hub.mjs; the group's card count will be short by one.`);
+    return '';
+  }
   const md = read(abs);
   const owner = headerVal(md, 'Owner of SOP') || headerVal(md, 'Owner') || 'Firm';
   const ok = ownerKey(owner);
@@ -1476,7 +1550,7 @@ function renderSopItem(it, grpName) {
     if (hasFlow) bodyHtml = flowBlock + bodyHtml;                        // designed flow(s), above the .md body
     if (it.template) bodyHtml = templateBlock(it.template) + bodyHtml;   // prominent download, top of the reader
     if (it.guides && it.guides.length) bodyHtml += guidesBlock(it.guides, it.guidesAlt || it.title);
-    inner = `<section class="mast"><div class="in"><p class="kick">Standard Operating Procedure</p>`
+    inner = `<section class="mast"><div class="in"><p class="kick">${esc(it.readerKick || 'Standard Operating Procedure')}</p>`
       + `<h1>${esc(it.title)}</h1><div class="meta">${readerMeta(owner, updated)}</div></div></section>`
       + `<div class="page">${bodyHtml}</div>`;
   }
@@ -1487,7 +1561,7 @@ function renderSopItem(it, grpName) {
          data-card data-type="sop" data-owner="${ok}" data-text="${esc(text)}">
         ${IC.arrow}
         <div class="khead">
-          <span class="kkick">SOP${it.tag ? ' · ' + esc(it.tag) : ''}</span>
+          <span class="kkick">${esc(it.kicker || 'SOP')}${it.tag ? ' · ' + esc(it.tag) : ''}</span>
           <span class="stat active"><span class="d"></span>Active</span>
         </div>
         <div class="ttl">${esc(it.title)}</div>

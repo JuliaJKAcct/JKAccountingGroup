@@ -50,6 +50,8 @@ marketing/
   *(The production route — who does what, which tool makes the image, the network
   sizes — stays in
   [`collateral/social-post-workflow.md`](./collateral/social-post-workflow.md).)*
+  Both are on the [Knowledge Hub](../knowledge-hub/) for the team, under
+  **Procedures → Marketing & content** — read there, edited here.
 - **[`CLAUDE.md`](./CLAUDE.md)** — the marketing operating persona, applied
   automatically to any work in this subtree.
 
