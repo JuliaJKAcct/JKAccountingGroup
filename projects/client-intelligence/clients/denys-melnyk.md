@@ -20,9 +20,9 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
-- **Home state:** ⚠️ **He moves, and the states matter.** His **2024** return was filed as a **Montana resident** **plus an Illinois nonresident/part-year return** — most of his 2024 income was Illinois-sourced through his companies. He was in **Florida** by the time he became our client. Since the 2024 return was signed from a Montana address in **May 2025**, a **Montana part-year** return for 2025 is likely, and **Illinois** probably recurs while the companies operate there. **Establish the 2025 states month by month before concluding there is no state return** — getting this wrong is a filing failure, not a missed deduction.
+- **Home state:** ⚠️ **He moves, the states matter, and 2025 must be established from scratch.** His **2024** return was filed as a **Montana resident** plus an **Illinois** nonresident return — most of his 2024 income was Illinois-sourced through his companies. **Do not carry that forward.** His 2025 organizer answers where he lived and gives a change-of-address date (read them there, not here — §5); the review of 2026-08-12 concluded that **2025 does not repeat 2024**, and that is exactly why the question below is on the re-ask list rather than answered from the file. ⚠️ **And a change of residence does not by itself end a state obligation:** **Illinois was never about where he lived — it followed the income his companies generate there**, so it can recur for 2025 whatever his address, while any part of the year spent in **Montana** is a part-year return. **So there are two questions, not one: where he lived month by month, and whether the companies still operate in Illinois.** Getting this wrong is a filing failure, not a missed deduction.
 - **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer.
-- **Household / filing status:** **Married filing jointly in 2024.** ⚠️ **The 2025 status is NOT established** — it is fixed by the position on 31 December 2025 and must be asked, never carried forward (see §5). ⚠️ **Three sources also disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); **what he sent us directly in Aug 2026** says *"married and have two children"* and that he pays **child support**; the **2025 organizer position is not usable and is being re-asked directly** (his answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
+- **Household / filing status:** **Married filing jointly in 2024.** ✅ **The 2025 status is answered in his organizer — read it there and do not ask him again** _(2026-08-12; see §5)_. It is fixed by the position on 31 December 2025 and is never carried forward from the prior year. ⚠️ **Three sources also disagree about the children** — his **2024 return claimed one dependent daughter**, with Earned Income Credit *and* Additional Child Tax Credit (so she lived with them more than half of 2024); **what he sent us directly in Aug 2026** says *"married and have two children"* and that he pays **child support**; the **2025 organizer position is not usable and is being re-asked directly** (his answers are in Double, not here). Unresolved and worth real money — see §5. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
 - **Fiscal year-end:** December 31
@@ -129,11 +129,15 @@ Form 1098 is on file. Both can be true
 (two properties, or the mid-year move), so this is a question, not a discrepancy to resolve on
 paper. It also gates the home-office allocation.
 
-**Health coverage — the one item that can block filing.** If his 2025 coverage came from
-Healthcare.gov / the Marketplace, **Form 1095-A is required to file at all**: the premium tax
-credit has to be reconciled on Form 8962 and the return is rejected without it. Nothing on file
-establishes the coverage either way, so **confirm it early**. Everything else on this return can
-proceed while we wait; this cannot.
+🔴 **Health coverage — settled on 2026-08-12, and it is now the first thing to chase.**
+**Get Form 1095-A from him.** Where 1095-A is required the premium tax credit is reconciled on
+Form 8962 and the return is **rejected** without it, so this blocks filing outright while
+everything else proceeds in parallel. **Nothing comparable appears on the 2024 return**, so do not
+expect a prior-year copy to exist.
+_The coverage question itself is answered in his 2025 organizer — read it there
+([`double-mcp`](../../../.claude/skills/double-mcp/) §2.2 keeps an organizer answer out of this
+file, and this file is **published**). What belongs here is the action, and the action is: ask him
+for the 1095-A._
 
 **Estimated tax payments — ask in both directions.** Nothing indicates he made any. With income
 outside withholding, expect self-employment or shareholder-level tax and a possible
@@ -190,20 +194,24 @@ can be released to a non-custodial parent on Form 8332. The residency conclusion
 What he sent us in Aug 2026 says **two children** and **child support**. The 2025 organizer position is not usable and is
 being re-asked directly — his answers are in Double, not here.
 
-⚠️ **The question underneath all of this is his filing status, and nobody has asked it.** A
-dependant that drops off, a first mention of child support and a move between states are three
-small puzzles separately — together they may mean **the marriage ended**. Filing status is fixed by
-the position on **31 December 2025**, and it changes the standard deduction, the brackets and most
-credits — it bars Married Filing Separately from several outright — and probably the state return.
-It is worth more than the dependant line that raised it.
-**Ask him to describe the situation — do not hand him a list of statuses** (Lilian, 2026-08-11:
-putting *widowed* and the rest in front of a client is cold and floats possibilities nobody raised).
-One open question — *what changed at home during the year, and how things stood on 31 December* —
-then narrow only to the facts: who lived in the home, and for how many months.
-**The categories are ours, for reading his answer.** The one to watch for here is **married but
-living apart**: §7703(b) can treat him as unmarried and, with a qualifying child in the home and the
-rest of the §2(b) tests met, open **Head of Household** — which is where child support plus two
-moves points. Never infer it, and do not carry 2024's status forward because nothing said otherwise.
+✅ **DO NOT ask him his 2025 filing status — it is already answered. Read the organizer first.**
+_(Second review, 2026-08-12.)_ His 2025 organizer carries both the marital status at 31 December
+**and** the last-six-months question that decides the **§7703(b) / Head of Household** branch.
+**Read them there before acting on anything in this section**; they are not repeated here, because
+an organizer answer never enters this file and this file is **published**
+([`double-mcp`](../../../.claude/skills/double-mcp/) §2.2).
+⚠️ **The lesson worth keeping is about the method, not about him.** This was the file's largest
+open item — recorded as *"unresolved, load-bearing, and nobody has asked"* — and it dissolved the
+moment the organizer was read properly, having carried the answer for over a week.
+**"Nobody has asked" is not the same as "the client has not said."** Check the sources before
+writing something down as open.
+_(Superseded 2026-08-12: the theory that the dependant change, the child support and the moves
+together might mean the marriage had ended. The instinct was right — three small anomalies moving
+together deserved the question — and the premise did not survive the sources. It is kept because it
+is the reasoning that made someone look, and because the dependant question below is **sharper**,
+not weaker, once the household is not what changed.)_
+**Still true and still binding:** ask about the household **as facts, never as a list of statuses**
+(Lilian, 2026-08-11), and never carry a filing status forward from the prior year by default.
 
 **One reading fits all three sources: two children — one living with them (the one claimed in 2024)
 and one who does not (the child support).** That would make the 2025 dependant position simply an
@@ -241,6 +249,8 @@ particular finding earns a place there.
 - _(2026-08-11, Lilian)_ — **First full organizer review** — the pilot case for the organizer-review tooling. Established: the organizer is 100% "complete" and unusable as filed; an upstream answer in the income section meant the requests below it were never made; two documents genuinely outstanding (1095-A, 1098) versus two already supplied **outside** the organizer and therefore not to be chased (the home-office template, and the P&L figures from his text message). Client file created the same day. Findings deliberately kept out of the Double note (§5).
 - _(2026-08-11, Lilian)_ — **Read the 2024 return** (redacted copy supplied by Lilian; prepared by another firm). It reframed the engagement: he is an **S-corporation shareholder in three trucking entities**, not a contractor; there is a **large NOL carried forward** into 2025; **Montana and Illinois** returns were filed for 2024, and neither state has come up for 2025; and his 2024 return **claimed a dependent daughter with EIC and the child tax credit**, which needs re-establishing for 2025. The organizer, at 100% complete, disclosed **none** of it — every material fact came from the prior return and the Double note. §1, §4, §5 and §6 rewritten accordingly.
 
+- _(2026-08-12, Lilian)_ — **Second full review — the first run of the finished companion, end to end.** Read all nine sources including his 2025 organizer answers and his 2024 return **fetched from Double and redacted automatically** (no hand-redaction). It **closed** the file's biggest open item (filing status — answered in the organizer all along), **turned a maybe into a blocker** (Form 1095-A is now the first thing to chase), **retired the states expectation** so 2025 is established from scratch rather than carried forward from 2024, and found in Julia's Gmail that **the P&L Statement template was sent on 2026-08-05 and never returned**. **What he answered stays in Double; this file carries what to do about it.** Fourteen questions delivered to Lilian as a PDF, in Spanish and Russian. §1, §5 and §6 rewritten accordingly.
+
 ### Tax year 2025 — the review
 
 _So this year can be answered later without anyone's memory. Records the questions and, as they
@@ -260,18 +270,34 @@ come back, the answers he gives **us** — never what he ticked in the organizer
   needs checking; a sale of business property; an early retirement distribution with the penalty;
   W-2 wages; **Montana resident + Illinois nonresident** returns; **one dependent daughter** with
   EIC and the additional child tax credit; the only Schedule C was his wife's.
-- **Open with the client** — see the re-ask list below. **Answers get ticked and appended here
-  with their date** as they arrive.
+- **Settled by the second review (2026-08-12), so nobody re-opens them:** his **filing status**
+  for 2025 (answered in the organizer — §5); **Marketplace coverage is confirmed**, which makes
+  Form 1095-A a blocker rather than a question; and the **Head-of-Household / §7703(b) theory is
+  closed**.
+- **Fourteen questions were put to him on 2026-08-12**, in this order: 1095-A · what the Midwest
+  money was · a 2025 W-2 · any 1099 · any retirement distribution · any other income · whether the
+  three 1120-S returns are filed and by whom · whether he is still a shareholder in all three ·
+  how many children and who each lived with · whether the daughter claimed in 2024 still lived with
+  him · **where he lived month by month, and whether the companies still operate in Illinois** ·
+  rent or mortgage · the Form 1098 if there is a mortgage · the **P&L Statement template**.
+  **Answers get ticked and appended here with their date** as they arrive.
+- **Two sources are empty for this client, checked 2026-08-12** — **Google Drive** has no folder of
+  his (the "Melnyk" files there are a different person), and **Ping** records no meeting with him.
+  Worth knowing so the next review does not spend time on them; worth re-checking if that changes.
 - **Decided so far:** rent is treated as monthly _(Lilian, 2026-08-11)_. The review findings stay
   out of his Double note _(Lilian, 2026-08-11)_. Contact him in **Russian**.
-- **Unresolved and load-bearing:** his **filing status on 31 December 2025**. Everything about the
-  household — dependants, credits, probably the state return — hangs on it, and it has not been
-  asked.
+- **No longer unresolved:** his **filing status on 31 December 2025** was the file's biggest open
+  item until 2026-08-12; it is answered in the organizer (§5). Everything about the household —
+  dependants, credits, probably the state return — still hangs on it, so **read it before working
+  the dependant question**, and do not ask him again.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-The re-ask list for the client, in priority order:
+The re-ask list for the client, in priority order. ⚠️ **Only the first four reach the team on the
+published card** — they are ordered by what would cause a wrong return or a rejected one.
 
+- 🔴 **Form 1095-A — ask him for it first; it blocks filing outright.** Settled 2026-08-12 (§5).
+  Everything else on this return can run in parallel; this cannot.
 - **What the money from Midwest Expedited actually was** — wages, a shareholder distribution, or
   a K-1 share. Whether there is a Schedule C at all depends on the answer.
 - **Whether each S corporation has filed its own 2025 return (Form 1120-S), and who prepares it.**
@@ -290,8 +316,10 @@ The re-ask list for the client, in priority order:
 - **His 2025 W-2** — expected from his own S corp; nothing he has sent accounts for one.
 - **The whole income block**, re-asked directly: which income types he actually had in 2025. The
   organizer never got as far as asking.
-- **Which states he lived and worked in during 2025**, month by month — Montana and Illinois are
-  both live possibilities his organizer never mentions.
+- **Which states he lived and worked in during 2025**, month by month — **and, separately, whether
+  the S corporations still operate in Illinois.** He names two states for 2025 and neither is
+  Montana or Illinois, but **Illinois followed the companies' income, not his address**, so it can
+  recur anyway. Two different questions; ask both.
 - **Any 2025 retirement distribution** — he took one in 2024 and the question was never asked for 2025.
 - **Rent or mortgage?** — and the Form 1098 if there is a mortgage.
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
@@ -302,7 +330,10 @@ The re-ask list for the client, in priority order:
 - **Form 4797 follow-through** — whether any 2024 asset disposal continued into 2025.
 - **Estimated payments** — confirm none were made, so the penalty is expected rather than discovered.
 - **2024 carryovers and elections** — read from the prior return (see §5).
-- **Profit & Loss** — the summary he sent is the substitute; decide whether to have him complete the firm's template as a written record.
+- **The P&L Statement template — asked for and never returned.** Lilian emailed him two templates
+  on **2026-08-05**; he sent back the Home Office one the same evening and **not the P&L**. The
+  figures from his text message are the working substitute, but they are not a completed template.
+  _(Found in Julia's Gmail on 2026-08-12 — it appears nowhere else.)_
 
 ### Information still needed
 
@@ -311,7 +342,7 @@ The re-ask list for the client, in priority order:
 - [ ] Whether the drivers he paid were paid **by him personally or by one of the S corps** — that decides who, if anyone, owes the 1099-NECs.
 - [ ] Which of the three S corporations are **still active** in 2025, and who prepares their 1120-S returns.
 - [ ] Whether he owes **1099-NECs** to the drivers he paid.
-- [ ] Whether the health coverage is **Marketplace** (drives the 1095-A requirement).
+- [x] Whether the health coverage drives a **Form 1095-A** — **settled 2026-08-12**; it does, and it is on the re-ask list as a blocker. _(The coverage answer is in the 2025 organizer, not here.)_
 - [ ] Assigned staff in Double — no `Assigned Staff` property is set on this client.
 - [ ] Google Drive folder, if one exists.
 
