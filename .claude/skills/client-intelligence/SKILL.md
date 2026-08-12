@@ -230,6 +230,15 @@ Prior-return facts, and what the client tells **us** when we ask, are ordinary c
 belong here. What is still barred is the identity block, personal contact details and dollar figures (above) — which
 costs almost nothing, because the answer we act on is the one they give when we ask them directly.
 
+🔴 **A DOCUMENT'S LOCATION IS NEVER WRITTEN FROM ASSUMPTION.** A path in a client file is what the
+next person follows, and a wrong one sends them hunting for a file that is sitting where you did not
+say. **Record the FILENAME, not just the folder** — a year folder holds many documents, and Double's
+`get_file` searches by name, so a folder alone is not actionable. **If you cannot confirm where
+something is, say so and ask.** _(Lilian, 2026-08-12: "si no logras encontrarlo, no es problema,
+pero no lo asumas. Simplemente pregúntame y te ayudo.")_ The shape to use:
+`JK Accounting Group > Others > 2025 > Form 1098 2025.jpeg`. Same rule, stated for Double notes, in
+[`double-mcp`](../double-mcp/) §3.
+
 ⚠️ **These files are published** — the Knowledge Hub and this skill's own review dashboard (an
 **Artifact**) both render from them. **Tax detail is fine on those pages** (Lilian, 2026-08-11 —
 she has no objection to the Hub carrying it); **identifiers are not**, because the link circulates

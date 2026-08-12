@@ -837,8 +837,9 @@ the whole thing start to finish, instead of reconstructing it from email.
 
    _(Lilian's instruction, 2026-08-12, after a note she had dictated end to end appeared in Double
    as Julia's: **"cuando lo guardes en Double, ponlo como creado por Lilian, no por Julia"** — and
-   she could not correct it in the UI either. The byline is what the firm can actually control.)_ **Keep the `Last updated: <date> — <name>` footer as well** — the byline
-   says who wrote it, the footer says who touched it last, and on a long-running note those differ.
+   she could not correct it in the UI either. The byline is what the firm can actually control.)_ **A `Last updated: <date>` footer goes on as well** — the byline says who wrote
+   the note, the footer when it last moved. ⓘ **Name the person in the footer only when it is
+   someone other than the byline**; repeating the same name twice on a short note is noise.
 6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
 7. **The repo file stays the master — and its substance is NOT only `§6`.** The case's full detail
    lives in the [`client-intelligence`](../client-intelligence/) client file: **`§4`/`§5` carry the
@@ -910,7 +911,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    ⚠️ **This narrows rule 10, it does not reverse it.** Names, emails, phone numbers, client IDs and
    figures still go in freely — rule 10 governs *how much detail* a note carries, rule 11 governs
    *what kind of content*. And the 🔒 identity-block exclusion survives both.
-12. **A note is about the RETURN — not about the relationship, and not about our machinery.**
+12. **The test for every line in a note: does this CHANGE THE RETURN, or TELL SOMEONE WHAT TO DO?**
+   If neither, it belongs in the [`client-intelligence`](../client-intelligence/) file. A note is
+   about the **return** — not about the relationship, and not about our machinery.
    _(Derived from what Lilian actually deleted when she edited note 490984 herself on 2026-08-12,
    and she asked for the pattern to be kept as a rule: **"entiende por qué lo borré… el tipo de
    cosas que sí quiero que vaya y el tipo que no."**)_ She cut two kinds of thing, and they name
@@ -923,9 +926,17 @@ the whole thing start to finish, instead of reconstructing it from email.
      works"* block: that he sends information by text rather than the portal, that he speaks
      Russian, and the explanation of **why our organizer stopped asking questions**. **Colleagues
      already know the client, and how our tools behaved is our business, not the return's.**
-   **The test to apply to every line: does this change the return, or tell someone what to do?**
-   If neither, it belongs in the [`client-intelligence`](../client-intelligence/) file. This is
-   also the first thing to cut when a note approaches the size wall below.
+   ⚠️ **REASONING SURVIVES when it is what tells the reader not to trust something, or what to do
+   next.** What gets cut is the reasoning behind a fact the reader will simply accept. *"Double's
+   return-type column says `1040-SCH C` and his 2024 return does not support it — that year his
+   income came through K-1s, a W-2 and a retirement distribution"* **stays**: without the reasoning
+   the reader has no ground to distrust the column. *"Married, and he did not live apart from his
+   spouse for the last six months"* **goes**: nobody is going to argue with "married".
+   ⓘ This is also the first thing to cut when a note approaches the size wall below.
+   ⚠️ **This narrows rule 11, it does not widen it.** **Rule 11 decides whether our analysis may be
+   in the note at all** (default: no — ask her); **rule 12 trims what is left.** Read alone, rule
+   12's *"tell someone what to do"* would license a recommended treatment into an ordinary note.
+   It does not: note 490984 carries analysis only because Lilian authorised that one by name.
    ⓘ **And leave a person's own edits alone.** When someone has trimmed a note themselves, that is
    a decision — record it in the client file and **do not restore what they removed.**
 

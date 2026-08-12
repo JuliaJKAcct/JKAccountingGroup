@@ -20,8 +20,8 @@
 
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
-- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. ⚠️ **He says that company filed for bankruptcy; Lilian does not treat that as reliable** (§5). _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
+- **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. ⚠️ **MINNESOTA is a third candidate, new on 2026-08-12: he owns a mortgaged house there** (§5). It creates **no** return on residence — he did not live there — but **Minnesota-source rental income would**, above the state's filing threshold. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -73,7 +73,7 @@ link). Never write the credential itself here.
 ### Income tax
 - **Applies?** Yes.
 - **Return type(s) & deadlines:** Form **1040**; 2025 tax project `notStarted`, due **2026-04-15**. Double's `Tax Return Type` reads **`1040-SCH C`** — ⚠️ **and the 2024 return does not support that.** The only Schedule C on the 2024 return was his **wife's** (a tiny "business supportive services" activity); his own income came through **S-corporation K-1s**, a W-2 and a retirement distribution. Settle the return type before preparing anything — see §5.
-- **State returns:** federal is not the whole job for this client. 2024 was federal + **Montana** (resident) + **Illinois** (Schedule NR). **For 2025 his residence is Washington until May, then Florida** — neither taxes personal income _(client call, 2026-08-12)_. ✅ **Montana is CLOSED** — Lilian's decision, 2026-08-12 (§1). ⚠️ **Illinois is not**, and it was never about his address at all — it followed his companies' Illinois income. **Illinois cannot be settled without the K-1** (§5), so it moves from "ask him" to "it depends on the document he cannot get".
+- **State returns:** federal is not the whole job for this client. 2024 was federal + **Montana** (resident) + **Illinois** (Schedule NR). **For 2025 his residence is Washington until May, then Florida** — neither taxes personal income _(client call, 2026-08-12)_. ✅ **Montana is CLOSED** — Lilian's decision, 2026-08-12 (§1). ⚠️ **TWO candidates remain, and neither turns on where he lived:** **Illinois**, which followed his companies' Illinois income; and **MINNESOTA**, where he owns a mortgaged house — a return only if it produces rental income above the threshold (§5). **Illinois cannot be settled without the K-1** (§5), so it moves from "ask him" to "it depends on the document he cannot get".
 - ⚠️ **Was a 2025 extension filed? Nobody has recorded it, and the original deadline has passed.** Form 1040 for 2025 was due **2026-04-15**; today is well past it. With **Form 4868** the return runs to **2026-10-15**. ⚠️ **The firm's own record cannot answer this** — he became a client in Double on **2026-07-21**, three months after the deadline, so **JK cannot have filed it.** The sources that can answer are **the client himself**, his **prior (Chicago) preparer**, or his **IRS account transcript**, which shows a posted extension. Two cautions before anyone reassures him: an extension extends the time to **file, not to pay**, so failure-to-pay and interest run from 2026-04-15 regardless; and the **NOL does not make this cheap** — it reduces taxable income but not **SE tax**, which is in the penalty base (§5). This sets how much time the missing-K-1 problem actually has.
 - **Our role:** We prepare the return.
 - **Organizer status:** `JK 2025 1040 Organizer`, marked **completed 2026-08-04** at **100%**, and Double's `Organizer Status` property reads **Completed**. **It is not usable as filed** — see §5. Treat the "Completed" label as the client's sign-off, not as a statement that we have what we need.
@@ -195,7 +195,8 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   - 🔍 **THE BANKRUPTCY IS A PUBLIC RECORD — LOOK BEFORE ASKING HIM ANYTHING.** This is the firm's
     own first method rule, and nobody has done it. **PACER** (search by entity name, and by the
     partner's name) plus the **Illinois / Montana Secretary of State** for entity status and
-    registered agent will answer, without the client and without the partner:
+    registered agent will answer, without the client and without the partner. ⚠️ **And a search
+    that finds NOTHING is itself an answer: the bankruptcy claim is unsupported.** What it settles:
     - 🔴 **WHICH entity filed** — the file's own number-one blocker, currently sitting as a question
       to a client who may not know the legal name either;
     - the **chapter** and the **petition date**;
@@ -263,7 +264,7 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
     loss on the 2024 Form 8582, where it is backwards:** a fully taxable disposition of the entire
     interest to an unrelated party **RELEASES** those in full (§469(g)). For the one suspended loss
     we actually know exists, a sale would have been **favourable**, not costly.
-  - 🟠 **The worthlessness branch probably stays available for the bankrupt company** — §165(g) needs
+  - 🟠 **The worthlessness branch probably stays available for that company** — §165(g) needs
     him to still hold that stock at 31 December. ⚠️ **But his answer did not cover it.** Lilian's
     question was scoped to *"these two companies he received no money from"*; **the bankrupt one is
     the third.** A lock-out is not a disposal, so continued ownership is a reasonable inference —
@@ -444,7 +445,7 @@ rental property completes the organizer at 100% and is never asked. Silence ther
 far (staged in Adobe — a different document from the 1098, which goes to Double) is
 only part; he says he has more, **will look for them, and undertook to send them by MONDAY at the
 latest** _(Lilian, 2026-08-12)_. ⚠️ **They are the expenses of the company that gave him no income
-documentation** — the same one now in bankruptcy — which is exactly why they may not belong on his
+documentation** — the same one he says filed for bankruptcy — which is exactly why they may not belong on his
 1040 at all. **But hold the cataloguing until the Midwest
 question is settled** — if that money was wages or a distribution from his own S corp, those
 expenses are the **corporation's**, already deducted on its 1120-S, and putting them on his 1040
@@ -524,7 +525,7 @@ Handle it as raw input and reclassify:
 **Rent is monthly.** Lilian's determination, 2026-08-11 — read as an annual figure it is
 implausibly small.
 
-**Home office:** he completed the firm's Home Office Deduction template. The file sits in Double
+**Home office:** he completed the firm's Home Office Deduction template. The file is `Home_Office_Deduction_Filled.xlsx`, in Double
 under `JK Accounting Group > Others > 2025` — **not attached to the organizer**, which never
 reached that question. **So do not chase him for it; it is already here.** He changed states
 mid-2025, so any allocation probably has to cover two homes — and it only matters at all once the
@@ -537,10 +538,25 @@ Nothing was confused: the rent on his figures note and on the Home Office templa
 is the mortgage. **Do not re-ask him "rent or mortgage".**
 ⚠️ **What it OPENS is bigger than what it closed:**
 - 🔴 **Is the Minnesota house RENTED OUT?** A house he owns and does not live in either sits empty
-  or produces **rental income** — **Schedule E**, with depreciation, and **Minnesota-source income,
-  which is its own nonresident state return.** Nobody has asked. _(If it is empty, the mortgage
-  interest is still deductible as a second home on Schedule A within the qualified-residence
-  limits — it simply is not a rental.)_
+  or produces **rental income** — **Schedule E**, with depreciation, and **Minnesota-source income**.
+  ⚠️ **The Minnesota return is threshold-gated, and the threshold has a trap:** a nonresident files
+  when **Minnesota gross income reaches $14,950 (2025)** — measured on **GROSS RENTS, not net** — so
+  **a rental running a depreciation loss can still require the return**, while a small one may not.
+  _(Filing below it can still be worth it to recover withholding.)_
+  🔍 **LOOK BEFORE ASKING HIM — the answer may already be in our hands.** His **2024 return is in
+  Double** and has been read once: **Schedule E page 1** would show a rental property, and
+  **Schedule A** would show Minnesota mortgage interest and property tax. Either settles it without
+  a client question. ⓘ **And a corroboration nobody has drawn: he filed 2024 as a MONTANA resident**,
+  so the Minnesota house was not his home that year either — which closes off the one alternative
+  worth worrying about, a Minnesota part-year *residency* in 2025 (Minnesota does tax income).
+  ⚠️ **One ambiguity to settle with Lilian first.** Her sentence — *"tiene todo el sentido que se
+  haya rentado durante el año 2025"* — can mean **he rented a place to live** or **the house was
+  rented out**. It is read here as the first, because that is what explains the rent-vs-mortgage
+  conflict. **On the other reading she has already answered this question**, and it is not open at
+  all. _(If it is empty, the mortgage
+  interest is still deductible as a **second home** on Schedule A — and solidly so: **§163(h)(4)(A)(iii)**
+  treats a dwelling unit the taxpayer does **not rent at any time in the year** as a residence
+  without any personal-use test. ⚠️ **But only if he itemises**, which is not a given.)_
 - ✅ **And it settles the home-office question the other way:** if he rented where he lived, the
   home-office expense is **rent**, which is what the template says. **The template is right, not
   wrong** — the earlier reading that it had to be redone was based on assuming the 1098 was his
@@ -768,8 +784,8 @@ particular finding earns a place there.
   have not closed.** He is **"almost sure"** those two generated no income in 2025. ✅ **This closes
   the disposal branch:** he remains a shareholder in two live companies, so **both ordinary annual
   K-1s are still owed**, nothing is reportable as a sale, the **suspended losses survive**, and the
-  **worthlessness branch probably stays available** for the bankrupt company — ⚠️ **inferred, not
-  confirmed: his answer covered only the other two**, and the bankrupt one is the third. 🛑 **A session then wrote a PASSIVE-SHAREHOLDER conclusion off an offhand remark of hers, into
+  **worthlessness branch probably stays available** for the third company — ⚠️ **inferred, not
+  confirmed: his answer covered only the other two.** 🛑 **A session then wrote a PASSIVE-SHAREHOLDER conclusion off an offhand remark of hers, into
   this file and into a Double note. She struck it the same day** — *"no lo definas tú, no lo
   determines tú… eso no salió de la boca del cliente ni yo puedo asegurar eso"* — and it is **Julia's
   determination to make**. ✅ **She also asked him for the two companies' own tax returns: he does
@@ -781,7 +797,7 @@ particular finding earns a place there.
 - _(2026-08-12, Lilian)_ — **She corrected the shape of the company problem, struck a conclusion a
   session had drawn, and added two things.** ✅ **The shape:** it is **not** one company missing
   documents — **one company DID generate income and gave him no document for it** (the one with the
-  partner problem, now in bankruptcy), and **the other two generated nothing and produced no
+  partner problem — the one he says filed for bankruptcy), and **the other two generated nothing and produced no
   document either**. So **there is not a single tax document from any of the three.** 🛑 **She
   struck the passive-shareholder read** written into this file and into the Double note off an
   offhand remark of hers — *"no lo definas tú, no lo determines tú… eso no salió de la boca del
@@ -951,7 +967,16 @@ published card** — they are ordered by what would cause a wrong return or a re
   asked. If it produces rental income there is a **Schedule E** with depreciation **and a Minnesota
   nonresident return** — a state nobody has considered. If it sits empty it is simply a second home.
 - **Did he sell any other VEHICLE in 2025?** _(Lilian's question, 2026-08-12.)_ It connects to the
-  2024 **Form 4797** disposal already on file — ask them together.
+  2024 **Form 4797** disposal already on file — ask them together. ➕ **And put the real-property
+  question beside it:** a 1098 is issued for interest **paid during the year**, including a year the
+  loan was paid off — so **it does not prove he still owned the house at 31 December.** A sale brings
+  §121 or gain into play.
+- 💰 **SCHEDULE A — new money the 1098 just created, and nobody has asked for the figures.** Pull the
+  **mortgage interest** and the **Minnesota property tax** off it and test itemising. ⚠️ **This is
+  sharper for him than for most:** he has **no state income tax at all** (Washington, Florida), so
+  **Minnesota property tax is essentially his entire SALT** — and the July 2025 legislation raised
+  the SALT cap to **$40,000**. Interest plus property tax may now clear the standard deduction where
+  before it could not.
 - 🟠 **The daughter — where did she live in 2025, for how many months, and how old was she at 31
   December 2025?** ✅ **Who she is is settled** (the child claimed in 2024 — Lilian, 2026-08-12);
   only her residence and age are open. 🔍 **Her AGE is a LOOKUP — her date of birth is in Double.
@@ -982,9 +1007,7 @@ published card** — they are ordered by what would cause a wrong return or a re
   Sunday), extendable to **15 September 2026**; the late-filing penalty runs **per shareholder, per
   month, capped at 12 months**. ⚠️ **He cannot answer this any more** — he is locked out — so it goes
   through the routes above, not through him.
-- **Does he also rent, or does he rent the apartment OUT?** Two different questions (a deduction vs
-  a **Schedule E**). The organizer could never have surfaced a rental — its rental branch is
-  unreachable (§5).
+
 - **His remaining business expenses — he undertook to send them by MONDAY** _(2026-08-12)_. ⚠️ **Do
   not chase them before that, and do not catalogue them until the Midwest question is settled**; if that money came out of his own S corp, those expenses are the
   corporation's (§5).
@@ -994,10 +1017,10 @@ published card** — they are ordered by what would cause a wrong return or a re
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
 - ~~**His 2025 W-2**~~ · ~~**any 1099**~~ · ~~**an IRA distribution**~~ · ~~**any other
   income**~~ · ~~**the wife's Schedule C**~~ — ✅ **answered
-  on 2026-08-12; do not re-ask** (§5). ⚠️ **TWO are only PARTLY answered and stay on the list
-  above:** **rent or mortgage** — it looked answered when the 1098 arrived and it is **not**
-  (the Home Office template says rent); and **retirement** — he was asked about an **IRA**, not
-  about a 401(k) or another plan, and his 2024 distribution may have been one. The W-2 answer
+  on 2026-08-12; do not re-ask** (§5). ✅ **Rent or mortgage is FULLY answered — he pays both**
+  (§5); what remains from it is **whether the Minnesota house is rented out**, listed above.
+  ⚠️ **One item is only PARTLY answered and stays on the list above:** **retirement** — he was asked
+  about an **IRA**, not about a 401(k) or another plan, and his 2024 distribution may have been one. The W-2 answer
   is "there is none and he cannot get one", which is the blocker above, not a gap.
 - ~~**What his family situation was at the end of 2025**~~ — ✅ **ANSWERED, do not ask** _(2026-08-12, §5)_. His filing status for 2025 is settled and the §7703(b) / Head-of-Household branch is closed. **What remains open is the children, below — not the household.**
 - **The children — how each of them is asked about** (the live question is the daughter's **2025
@@ -1031,7 +1054,7 @@ published card** — they are ordered by what would cause a wrong return or a re
   the reading nobody has tested (§5).
 - [ ] The **chapter, petition date, entity and trustee** of the bankruptcy — from the docket, not
   from him (§5).
-- [ ] Whether it is the **COMPANY** that filed for bankruptcy or the **partner personally** — the
+- [ ] **Whether there is a bankruptcy at all**, and if so the **chapter, petition date, entity and trustee** — and whether it is the **COMPANY** or the **partner personally**. ⚠️ The claim is the client's and Lilian does not treat it as reliable; the
   docket answers it, and if it is the partner the company is not in bankruptcy at all (§5).
   _(✅ The "did the partner die" question is closed — nobody died, it was a transcription error.)_
 - [ ] How he **ACQUIRED his shares** (original issuance for cash, bought from the partner, for
@@ -1042,7 +1065,7 @@ published card** — they are ordered by what would cause a wrong return or a re
   a client after the deadline, so ask him, his prior preparer, or read his IRS account transcript (§4).
 - [ ] Whether he took a distribution from a **401(k) or any non-IRA plan** in 2025 — the IRA question
   was asked and answered; this one was not (§5).
-- [ ] Whether he also **rents**, or **rents the apartment out** (Schedule E) — two questions (§5).
+- [ ] Whether the **MINNESOTA house** is rented out — a **Schedule E** plus a possible **Minnesota nonresident return** (§5). _(The "does he also rent" half is answered: yes, he rents where he lives.)_
 - [ ] Assigned staff in Double — no `Assigned Staff` property is set on this client.
 - [ ] Google Drive folder, if one exists.
 
