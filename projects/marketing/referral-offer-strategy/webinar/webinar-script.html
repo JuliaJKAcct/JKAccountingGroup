@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сценарий вебинара «Почему бизнес растёт, а прибыль уменьшается» — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --say-bg:#EFF4F3; --say-border:#CBDBD8; --ask-bg:#FAF2E7; --ask-border:#E4CDA8;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:800px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,44px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:220px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(30px,4.6vw,46px) clamp(24px,5vw,46px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 14px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.13; font-size:clamp(26px,4vw,38px); margin:0 0 12px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15.5px; line-height:1.6; color:var(--on-dark); max-width:60ch}
+
+  .body{padding:clamp(28px,4.4vw,42px) clamp(24px,5vw,46px) clamp(20px,3vw,30px)}
+
+  table.meta{width:100%; border-collapse:collapse; margin:0 0 26px; font-size:14.5px}
+  table.meta th{text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:9px 16px 9px 0; vertical-align:top; white-space:nowrap; width:1%}
+  table.meta td{padding:9px 0; color:var(--body); border-bottom:1px solid var(--ivory-stroke)}
+  table.meta tr:last-child td, table.meta tr:last-child th{border-bottom:none}
+
+  .thread{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); color:#fff; border-radius:14px; padding:22px 24px; margin:0 0 26px}
+  .thread .l{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 8px}
+  .thread p{margin:0; font-family:var(--serif); font-size:18px; line-height:1.45; color:#fff; font-style:italic}
+
+  h2.phase{font-family:var(--serif); font-weight:600; font-size:clamp(19px,2.6vw,23px); color:var(--ink); letter-spacing:-0.012em; margin:34px 0 3px; line-height:1.2; text-wrap:balance}
+  .phase-meta{display:flex; flex-wrap:wrap; gap:8px 12px; margin:0 0 14px; align-items:center}
+  .time{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--teal-800); background:#E7EEED; padding:3px 9px; border-radius:6px}
+  .slidechip{font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:var(--bronze-700); background:var(--paper); border:1px solid var(--border-soft); padding:3px 9px; border-radius:6px}
+  .story-tag{font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:#fff; background:var(--bronze-500); padding:3px 9px 3px 8px; border-radius:6px; display:inline-flex; align-items:center; gap:5px}
+
+  .onslide{font-size:14px; color:var(--muted); margin:0 0 14px; line-height:1.5}
+  .onslide b{color:var(--body); font-weight:600}
+
+  .say{background:var(--say-bg); border:1px solid var(--say-border); border-radius:14px; padding:18px 22px; margin:0 0 14px}
+  .say .l{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-800); margin:0 0 10px; display:flex; align-items:center; gap:8px}
+  .say .l::before{content:""; width:7px; height:7px; background:var(--teal-800); transform:rotate(45deg)}
+  .say p{margin:0 0 12px; font-size:16.5px; line-height:1.62; color:var(--ink)}
+  .say p:last-child{margin-bottom:0}
+  .say em{color:var(--bronze-700); font-style:italic}
+
+  .ask{background:var(--ask-bg); border:1px solid var(--ask-border); border-radius:14px; padding:16px 20px; margin:0 0 14px}
+  .ask .l{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 9px; font-weight:600; display:flex; align-items:center; gap:8px}
+  .ask .l::before{content:""; width:7px; height:7px; background:var(--bronze-500); transform:rotate(45deg)}
+  .ask p{margin:0 0 9px; font-size:15.5px; line-height:1.55; color:var(--ink)}
+  .ask ul{margin:4px 0 10px; padding:0; list-style:none; display:grid; gap:7px}
+  .ask ul li{position:relative; padding-left:20px; font-size:14.5px; line-height:1.45; color:var(--body)}
+  .ask ul li::before{content:""; position:absolute; left:3px; top:8px; width:6px; height:6px; border:1.5px solid var(--bronze-500); border-radius:2px}
+  .ask .mode{font-size:12.5px; color:var(--muted); margin:6px 0 0; line-height:1.45}
+  .ask p:last-child,.ask .mode:last-child{margin-bottom:0}
+
+  .belief{display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center; background:var(--paper); border:1.5px solid var(--bronze-500); border-radius:14px; padding:18px 22px; margin:26px 0 14px}
+  .belief .num{width:44px; height:44px; border-radius:50%; border:1.5px solid var(--bronze-500); color:var(--bronze-700); font-family:var(--mono); font-weight:600; font-size:17px; display:grid; place-items:center}
+  .belief .l{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 4px}
+  .belief p{margin:0; font-family:var(--serif); font-weight:600; font-size:18px; line-height:1.35; color:var(--ink); letter-spacing:-0.01em}
+
+  /* two-company compare */
+  .compare{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 14px}
+  .co{border:1px solid var(--border-soft); border-radius:14px; padding:18px 20px; background:var(--white)}
+  .co.b{background:var(--paper)}
+  .co .cn{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
+  .co .row{display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:7px 0; border-bottom:1px solid var(--ivory-stroke)}
+  .co .row:last-child{border-bottom:none}
+  .co .rk{font-size:13px; color:var(--muted)}
+  .co .rv{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--ink)}
+  .co .rv.hi{color:var(--bronze-700)}
+  .reveal-note{font-size:13.5px; color:var(--muted); font-style:italic; margin:0 0 14px; text-align:center}
+
+  /* $5,000 breakdown */
+  .breakdown{border:1px solid var(--border-soft); border-radius:14px; overflow:hidden; margin:0 0 14px}
+  .breakdown .bh{background:var(--teal-800); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:baseline}
+  .breakdown .bh .k{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--on-dark-muted)}
+  .breakdown .bh .v{font-family:var(--serif); font-weight:600; font-size:24px}
+  .breakdown ul{list-style:none; margin:0; padding:6px 20px; background:var(--white)}
+  .breakdown li{display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid var(--ivory-stroke); font-size:14px; color:var(--body)}
+  .breakdown li .m{font-family:var(--mono); color:var(--muted)}
+  .breakdown .bf{background:var(--paper); padding:14px 20px; display:flex; justify-content:space-between; align-items:baseline; border-top:2px solid var(--bronze-500)}
+  .breakdown .bf .k{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--bronze-700)}
+  .breakdown .bf .v{font-family:var(--serif); font-weight:700; font-size:26px; color:var(--bronze-700)}
+
+  .tip{font-size:13px; color:var(--muted); font-style:italic; margin:0 0 8px; line-height:1.5}
+  ul.qa{margin:6px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  ul.qa li{font-size:14.5px; line-height:1.5; padding-left:18px; position:relative}
+  ul.qa li::before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px; background:var(--bronze-500); transform:rotate(45deg)}
+  ul.qa b{color:var(--ink)}
+
+  .cohost{background:#FBF6EE; border:1px dashed #DCC49E; border-radius:12px; padding:14px 18px; margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--body)}
+  .cohost .l{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 6px; font-weight:600}
+
+  .copy{background:var(--paper); border:1px solid var(--border-soft); border-radius:12px; padding:18px 20px; margin:0 0 14px; font-size:14.5px; line-height:1.55}
+  .copy p{margin:0 0 9px} .copy p:last-child{margin-bottom:0}
+  .copy .lbl{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--bronze-700)}
+
+  table.tt{width:100%; border-collapse:collapse; margin:8px 0 0; font-size:14px}
+  table.tt td{padding:7px 0; border-bottom:1px solid var(--ivory-stroke); color:var(--body)}
+  table.tt td:first-child{font-family:var(--mono); font-size:12px; color:var(--teal-800); white-space:nowrap; padding-right:18px; width:1%}
+  table.tt tr:last-child td{border-bottom:none}
+
+  .section-label{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); margin:40px 0 2px; padding-top:22px; border-top:2px solid var(--ivory-stroke)}
+
+  .recap{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); border-radius:16px; padding:24px 26px; margin:14px 0 0; color:var(--on-dark)}
+  .recap h3{font-family:var(--serif); font-weight:600; color:#fff; margin:0 0 14px; font-size:19px}
+  .recap ol{margin:0; padding-left:0; list-style:none; counter-reset:b; display:grid; gap:11px}
+  .recap li{counter-increment:b; position:relative; padding-left:38px; font-size:15px; line-height:1.4; color:#fff}
+  .recap li::before{content:counter(b); position:absolute; left:0; top:-1px; width:26px; height:26px; border-radius:50%; border:1.5px solid var(--bronze-300); color:var(--bronze-300); font-family:var(--mono); font-weight:600; font-size:12px; display:grid; place-items:center}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+  .foot{padding:20px clamp(24px,5vw,46px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} .compare{grid-template-columns:1fr} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.thread,.say,.ask,.belief,.cohost,.time,.copy,.masthead,.compare .co.b,.breakdown .bh,.breakdown .bf,.recap{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .say,.ask,.belief,.cohost,.copy,.thread,.compare,.breakdown,.recap{break-inside:avoid}
+    h2.phase{break-after:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Сценарий ведущего · v3<b>Вебинар</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Детальный сценарий вебинара</p>
+    <h1>Почему бизнес растёт, а прибыль уменьшается</h1>
+    <p>Диагностический вебинар: каждый <i>сам</i> находит, где утекает его прибыль — а затем получает простую формулу, чтобы это измерить. Одна история, ~12 моментов «ага», 4 убеждения, которые меняем, по одному короткому обучающему концепту на каждую утечку и самостоятельный расчёт.</p>
+  </div>
+
+  <div class="body">
+
+    <table class="meta">
+      <tr><th>Формат</th><td>Бесплатный онлайн-вебинар, ~55 минут + Q&amp;A</td></tr>
+      <tr><th>Подход</th><td>Самодиагностика + короткий разбор: каждую утечку человек сначала находит у себя, затем получает простую формулу, чтобы её измерить</td></tr>
+      <tr><th>Что учим</th><td>4 понятных концепта: настоящая маржа · подушка по деньгам (в месяцах) · закрытие месяца и 3 числа · структура S-corp и налоги</td></tr>
+      <tr><th>Цель</th><td>Дать пользу и доверие → лид (емейл + заполненный лист) → запись на «Разбор утечек прибыли» ($250)</td></tr>
+      <tr><th>Подарок</th><td>Рабочий лист «Проверка готовности к росту»</td></tr>
+      <tr><th>Оффер</th><td>Разбор утечек прибыли — $250, в счёт первого месяца работы</td></tr>
+      <tr><th>Голос</th><td>Не лектор, а советник: «Я видела это у десятков владельцев — вот что происходит дальше»</td></tr>
+    </table>
+
+    <div class="thread">
+      <p class="l">Красная нить — история одной кофейни</p>
+      <p>«Рост не создаёт прибыль. Он усиливает то, что уже есть. Мы откроем одну кофейню — и на ней увидим, как удвоение продаж съедает доход владельца.»</p>
+    </div>
+
+    <!-- ДО -->
+    <p class="section-label">До вебинара</p>
+    <h2 class="phase">Страница регистрации</h2>
+    <div class="copy">
+      <p><span class="lbl">Заголовок</span><br>Почему бизнес растёт, а прибыль уменьшается</p>
+      <p><span class="lbl">Подзаголовок</span><br>Бесплатный вебинар для владельцев бизнеса. За 50 минут вы найдёте, где именно утекает ваша прибыль — и получите рабочий лист, чтобы проверить себя.</p>
+      <p><span class="lbl">Что вы обнаружите</span><br>— Почему бизнес побольше нередко платит владельцу меньше<br>— 4 места, где прибыль утекает незаметно — прямо сейчас, в вашем бизнесе<br>— Сколько на самом деле остаётся у вас с каждой продажи</p>
+      <p><span class="lbl">Кнопка</span><br>Забронировать место бесплатно</p>
+    </div>
+
+    <!-- ВО ВРЕМЯ -->
+    <p class="section-label">Во время вебинара</p>
+
+    <h2 class="phase">1 · Холодный старт: две кофейни</h2>
+    <div class="phase-meta"><span class="time">0:00–0:06</span><span class="slidechip">Слайды 1–4</span></div>
+    <p class="onslide"><b>На слайде:</b> две карточки — Кофейня A и Кофейня B, видна только выручка. Доход владельца пока скрыт.</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Здравствуйте. Прежде чем я представлюсь — один вопрос. Смотрите на две кофейни.»</p>
+    </div>
+    <div class="compare">
+      <div class="co"><p class="cn">Кофейня A</p>
+        <div class="row"><span class="rk">Выручка</span><span class="rv">$600k</span></div>
+        <div class="row"><span class="rk">Доход владельца</span><span class="rv hi">$90k</span></div>
+      </div>
+      <div class="co b"><p class="cn">Кофейня B · две точки</p>
+        <div class="row"><span class="rk">Выручка</span><span class="rv">$1.3M</span></div>
+        <div class="row"><span class="rk">Доход владельца</span><span class="rv hi">$60k</span></div>
+      </div>
+    </div>
+    <div class="ask">
+      <p class="l">Вовлеките зал</p>
+      <p>Сначала покажите <b>только выручку</b>. «Какую кофейню вы бы предпочли иметь? Голосуем.» Почти все выбирают B — она больше.</p>
+      <p class="mode">Вживую — голосование/руки. В записи — «выберите про себя, запомните ответ».</p>
+    </div>
+    <div class="say">
+      <p class="l">Что говорить (открываете доход владельца)</p>
+      <p>«Почти все выбрали B — она же больше. А теперь смотрите на нижнюю строку. Кофейня B продаёт больше чем вдвое — а владельцу оставляет <em>меньше</em>: 60 тысяч против 90 у маленькой. И это не мои выдумки: по отраслевым данным средний владелец кофейни забирает домой 50–65 тысяч в год, при чистой марже всего 5–12%. То есть B — это типичная картина, а не страшилка.</p>
+      <p>Как так выходит? Об этом весь сегодняшний час. Меня зовут Юлия, семь лет я веду финансы владельцев бизнеса — и эту картину я видела десятки раз. Сегодня мы не будем ничего заучивать. Мы будем <em>находить</em> — прямо в вашем бизнесе. Досидите до конца: у вас будет лист, по которому вы увидите свои утечки.»</p>
+    </div>
+    <div class="belief">
+      <div class="num">1</div>
+      <div><p class="l">Меняем убеждение №1</p><p>Больше выручки — ещё не значит больше денег в кармане.</p></div>
+    </div>
+
+    <h2 class="phase">2 · Открываем кофейню</h2>
+    <div class="phase-meta"><span class="time">0:06–0:13</span><span class="slidechip">Слайды 5–6</span><span class="story-tag">◆ Кофейня</span></div>
+    <p class="onslide"><b>На слайде:</b> «дырявое ведро» — выручка льётся сверху, вытекает через дыры.</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Давайте построим бизнес вместе — и я буду возвращаться к нему весь вебинар. Кофейня. Дела идут, вы решаете расти: вкладываете 30 тысяч в рост — новая точка, больше людей, больше объёма. Работает — продажи удваиваются. Вы празднуете.</p>
+      <p>А через три месяца смотрите на счёт — и денег нет. Как у кофейни B. Почему? Не потому что мало продали. А потому что рост усилил то, что уже подтекало. Представьте ведро: выручка льётся сверху, рост делает струю сильнее. Но если в ведре дыры — чем сильнее струя, тем быстрее вытекает.»</p>
+    </div>
+    <div class="belief">
+      <div class="num">2</div>
+      <div><p class="l">Меняем убеждение №2</p><p>Дело не в продажах, а в утечках прибыли.</p></div>
+    </div>
+    <div class="ask">
+      <p class="l">Вовлеките зал</p>
+      <p>«Поднимите руку, если хоть раз было так:»</p>
+      <ul>
+        <li>Продажи рекордные — а выплатить зарплаты было тяжело.</li>
+        <li>Пришлось отложить выплату <b>себе</b>, чтобы закрыть месяц.</li>
+        <li>Влезли в кредитку, чтобы «дотянуть» бизнес до денег от клиентов.</li>
+      </ul>
+      <p class="mode">Вживую — руки (полкомнаты поднимет). В записи — «напишите ДА в чат / признайтесь себе». Затем: «Вот это и есть утечки. Сегодня найдём, откуда они.»</p>
+    </div>
+    <div class="cohost">
+      <p class="l">Со-ведущий (Борис)</p>
+      Если ведёте с Борисом — здесь его 3–4 минуты: почему у этих владельцев пошёл рост (спрос, каналы) и почему именно рост обнажает слабые места в финансах. Логика: «Борис помог им вырасти — я покажу, куда утекают деньги».
+    </div>
+
+    <h2 class="phase">3 · Утечка №1: маржа, которую вы не видели</h2>
+    <div class="phase-meta"><span class="time">0:13–0:24</span><span class="slidechip">Слайды 7–8</span><span class="story-tag">◆ Кофейня</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«В кофейню приходит корпоративный заказ на 5 000 долларов. Отличный день, да? Давайте вычтем всё — по-честному.»</p>
+    </div>
+    <div class="breakdown">
+      <div class="bh"><span class="k">Заказ</span><span class="v">$5 000</span></div>
+      <ul>
+        <li><span>Продукты и ингредиенты (≈28%)</span><span class="m">− $1 400</span></li>
+        <li><span>Персонал: приготовить и доставить (≈18%)</span><span class="m">− $900</span></li>
+        <li><span>Аренда и коммуналка, доля (≈12%)</span><span class="m">− $600</span></li>
+        <li><span>Ваше время (≈8%)</span><span class="m">− $400</span></li>
+        <li><span>Страховка, софт, расходники (≈7%)</span><span class="m">− $350</span></li>
+        <li><span>Налоги с прибыли (оценка)</span><span class="m">− $320</span></li>
+        <li><span>Прочие операционные расходы (≈4%)</span><span class="m">− $200</span></li>
+        <li><span>Комиссия эквайринга (≈3%)</span><span class="m">− $150</span></li>
+      </ul>
+      <div class="bf"><span class="k">Осталось у вас</span><span class="v">$680</span></div>
+    </div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Из пяти тысяч у вас осело шестьсот восемьдесят долларов. Не пять тысяч. Шестьсот восемьдесят. И это ещё аккуратный расчёт. Я вижу это в реальных книгах постоянно: владелец уверен, что заработал пять тысяч, а на счёте — меньше семисот.»</p>
+    </div>
+    <div class="ask">
+      <p class="l">Вовлеките зал — они считают сами</p>
+      <p>«Теперь ваша очередь. Возьмите телефон, откройте калькулятор. Вспомните свой последний крупный заказ или продажу. Отнимайте вместе со мной: себестоимость… зарплаты… аренду… комиссии… налоги… ваше время. Не спешите — я подожду.»</p>
+      <p class="mode">Держите паузу 30–40 секунд, реально дайте посчитать. Вживую — «назовите в чат, что осталось». В записи — «запишите свою цифру, она вам ещё пригодится». Когда человек получает число <i>сам</i> — оно его.</p>
+    </div>
+    <p class="onslide"><b>Слайд 8 (обучающий):</b> формула маржи, применённая к кофейне.</p>
+    <div class="say">
+      <p class="l">Что говорить (даём формулу)</p>
+      <p>«А теперь назовём это словом. То, что мы посчитали, называется <em>маржа</em> — сколько реально осталось, а не оборот. Формула простая, запишите:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">Маржа = (Выручка − Все затраты) ÷ Выручка × 100%</p>
+      <p>У нашей кофейни: 680 разделить на 5 000 — это <em>13,6%</em>. Здоровая маржа — примерно 10–15%. Ниже пяти — сигнал тревоги, даже если выручка растёт. Возьмите своё число из калькулятора, разделите на сумму заказа — вот ваша реальная маржа. Запомните её, она вам сегодня ещё понадобится.»</p>
+    </div>
+    <p class="tip">Это ваш главный «ага». Пауза после «680» и пауза на их собственный расчёт — важнее любых слов. Цифры реалистичны: у кофеен чистая маржа обычно 5–12%, так что «$680 с $5 000» — это ещё по-доброму.</p>
+
+    <h2 class="phase">4 · Утечка №2: деньги, которые растут против вас</h2>
+    <div class="phase-meta"><span class="time">0:24–0:31</span><span class="slidechip">Слайды 9–10</span><span class="story-tag">◆ Кофейня</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Вторая утечка — время. Кофейня перед ростом закупила зёрна, наняла людей, оплатила рекламу — деньги ушли <em>сегодня</em>. А выручка за них придёт через недели. Пока бизнес маленький, разрыв терпимый. Но когда вы растёте, разрыв растёт вместе с вами. И вот парадокс: продажи вверх, а на счету пусто. Так и ломаются растущие компании — не от нехватки продаж, а от нехватки денег в моменте.»</p>
+    </div>
+    <div class="ask">
+      <p class="l">Вовлеките зал — вопрос, который застревает в голове</p>
+      <p>«Ответьте себе честно: <b>сколько месяцев ваш бизнес продержится, если каждый клиент заплатит на 30 дней позже?</b>»</p>
+      <p class="mode">Дайте паузу. Вживую — руки: «кто дольше трёх месяцев? кто меньше месяца?». В записи — «назовите себе число вслух». Для многих ответ — «меньше, чем думал».</p>
+    </div>
+    <p class="onslide"><b>Слайд 10 (обучающий):</b> формула денежной подушки.</p>
+    <div class="say">
+      <p class="l">Что говорить (даём формулу)</p>
+      <p>«Это чувство можно превратить в одно число — <em>подушка</em>. Смотрите:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">Подушка (мес.) = Деньги на счету ÷ Средние расходы в месяц</p>
+      <p>Если на счету 30 тысяч, а в месяц вы тратите 20 — подушка полтора месяца. Спокойно — это <em>три месяца и больше</em>. Меньше одного — бизнес работает «с колёс», и рост это только обостряет. Прибыль вы видите на бумаге, а вот подушку — в месяцах, и именно она говорит, переживёте ли вы плохой квартал.»</p>
+    </div>
+
+    <h2 class="phase">5 · Утечка №3: вы рулите, глядя назад</h2>
+    <div class="phase-meta"><span class="time">0:31–0:38</span><span class="slidechip">Слайды 11–13</span><span class="story-tag">◆ Кофейня</span></div>
+    <div class="belief">
+      <div class="num">3</div>
+      <div><p class="l">Меняем убеждение №3</p><p>Бухгалтерия — не про налоги. Она про решения, принятые вовремя.</p></div>
+    </div>
+    <div class="ask">
+      <p class="l">Вовлеките зал</p>
+      <p>«Простой вопрос. <b>Кто может назвать свою прибыль за прошлый месяц — прямо сейчас, по памяти?</b> Поднимите руку.»</p>
+      <p class="mode">Обычно рук 10%. В записи — «честно: можете или нет?».</p>
+    </div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Вот именно. Почти никто. А теперь смотрите: кофейня не заметила, что маржа поехала вниз, — потому что книги отставали на три месяца. К моменту, когда цифры собрали, деньги уже утекли. Это и есть руль по зеркалу заднего вида. Учёт нужен не для налоговой — он нужен, чтобы принять решение <em>вовремя</em>, пока ещё можно что-то поменять.»</p>
+    </div>
+    <p class="onslide"><b>Слайд 13 (обучающий):</b> закрытие месяца и три числа.</p>
+    <div class="say">
+      <p class="l">Что говорить (даём стандарт)</p>
+      <p>«А как должно быть? Нормальный учёт <em>закрывает месяц</em>: к 10–15 числу у вас на руках отчёт о прибылях за прошлый месяц. Не через квартал — через две недели. И следить каждый месяц достаточно всего за тремя числами:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">1) Выручка — сколько пришло 2) Маржа — сколько осталось 3) Деньги на счету — на сколько хватит</p>
+      <p>Это ваша приборная панель. Три числа — раз в месяц, вовремя. С ними решение «нанимать / поднимать цену / притормозить» принимается, пока деньги ещё на месте, а не после того, как они утекли.»</p>
+    </div>
+
+    <h2 class="phase">6 · Утечка №4: структура, которая тихо вас облагает</h2>
+    <div class="phase-meta"><span class="time">0:38–0:45</span><span class="slidechip">Слайды 14–16</span><span class="story-tag">◆ Кофейня</span></div>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Четвёртая утечка — структура. Пока кофейня росла, владелец просто брал деньги из бизнеса, как придётся. Форма осталась та же, что на старте. S-corp вовремя не оформили. Налог с продаж в новом штате не зарегистрировали. А потом пришло письмо из IRS.</p>
+      <p>Ничего экзотического — обычная история. Но каждая из этих мелочей на росте превращается в реальные деньги: тысячи долларов в год только на налогах. Рост не создал эти проблемы — он их <em>усилил</em>.»</p>
+    </div>
+    <p class="onslide"><b>Слайд 15 (обучающий):</b> S-corp против LLC на конкретных долларах.</p>
+    <div class="say">
+      <p class="l">Что говорить (сравниваем LLC и S-corp)</p>
+      <p>«Покажу на цифрах — и, главное, с чем сравниваем. Бизнес приносит <em>100 тысяч</em> прибыли в год. Если вы обычный LLC, налог на самозанятость — это Social Security и Medicare, те самые 15,3% — берётся со <em>всей</em> прибыли. Со ста тысяч это 15 300 долларов в год.</p>
+      <p>Теперь S-corp. Вы платите себе разумную зарплату — скажем, 50 тысяч. Те же 15,3% берутся <em>только с зарплаты</em>. Остальные ~50 тысяч вы забираете как распределение — и с них этот налог не платится вообще.</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">LLC: 15,3% × $100k = $15 300 · S-corp: 15,3% × $50k = $7 650</p>
+      <p>15 300 против 7 650 — <em>вдвое меньше</em>. Это примерно 7 650 долларов, которые остаются у вас каждый год. За одно верное решение о структуре.»</p>
+    </div>
+    <div class="belief">
+      <div class="num">4</div>
+      <div><p class="l">Меняем убеждение №4</p><p>Хороший учёт не растит бизнес. Растят своевременные финансовые решения.</p></div>
+    </div>
+
+    <h2 class="phase">7 · Оцените СВОЙ бизнес</h2>
+    <div class="phase-meta"><span class="time">0:45–0:50</span><span class="slidechip">Слайд 17</span></div>
+    <p class="onslide"><b>На слайде:</b> «Найдите свои утечки» + рабочий лист «Проверка готовности к росту».</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Мы прошли четыре утечки на кофейне. Теперь — на вашем бизнесе. У вас в подарок лист „Проверка готовности к росту". Давайте пройдём его вместе — я задаю вопрос, вы честно отмечаете. Обратите особое внимание на ответы „не уверен(а)": каждое такое „не уверен" — это, скорее всего, утечка, которую вы прямо сейчас не видите.»</p>
+    </div>
+
+    <h2 class="phase">8 · Оффер: Разбор утечек прибыли</h2>
+    <div class="phase-meta"><span class="time">0:50–0:55</span><span class="slidechip">Слайд 18</span></div>
+    <p class="onslide"><b>На слайде:</b> «Те же четыре формулы — на ваших цифрах». «Хотите, посчитаю это по вашему бизнесу?» · $250, в счёт первого месяца.</p>
+    <div class="say">
+      <p class="l">Что говорить</p>
+      <p>«Сегодня мы разобрали четыре формулы — маржа, подушка, три числа, структура. Хотите, я посчитаю их <em>по вашему бизнесу</em>? Лист показывает, что утечки <em>есть</em>. Но не показывает, <em>где именно</em> и <em>на сколько</em> — это видно только по вашим реальным цифрам.</p>
+      <p>Для этого у нас есть <b>Разбор утечек прибыли</b>. Мы берём ваши книги и находим, где утекает прибыль — конкретно, в долларах, с планом, что закрыть в первую очередь. Стоит 250 долларов. Но вот что важно: если после разбора вы решаете работать с нами, эти 250 полностью идут в счёт первого месяца. Для того, кто настроен серьёзно, он, по сути, бесплатный.</p>
+      <p>Скажу честно, как есть: у десятков владельцев я почти всегда нахожу утечек кратно больше, чем стоит сам разбор. В этом месяце я беру ограниченное число — чтобы каждому уделить время. Хотите свой — напишите мне и приходите с заполненным листом.»</p>
+    </div>
+    <p class="tip">Тон — спокойный и уверенный. Вы не «дожимаете» — вы предлагаете найти деньги, которые и так утекают.</p>
+
+    <h2 class="phase">9 · Q&amp;A и финал</h2>
+    <div class="phase-meta"><span class="time">0:55–конец</span><span class="slidechip">Слайды 19–20</span></div>
+    <p class="onslide"><b>Заготовленные вопросы</b> (если зал молчит):</p>
+    <ul class="qa">
+      <li><b>«С какой выручки уже пора думать про S-corp?»</b> → короткий ответ + «точно считается по вашей ситуации — это часть разбора».</li>
+      <li><b>«У меня уже есть бухгалтер — зачем разбор?»</b> → «Бухгалтер записывает прошлое. Разбор смотрит вперёд: где деньги утекают <i>сейчас</i>.»</li>
+      <li><b>«Я только начинаю — мне рано?»</b> → «Наоборот. Закрыть утечки до роста в разы дешевле, чем после.»</li>
+    </ul>
+    <div class="recap">
+      <h3>Финал — повторите эти четыре мысли</h3>
+      <ol>
+        <li>Больше выручки — не значит больше денег у вас.</li>
+        <li>У большинства не проблема с продажами, а утечки прибыли.</li>
+        <li>Бухгалтерия — не про налоги, а про решения вовремя.</li>
+        <li>Хороший учёт не растит бизнес — растят своевременные решения.</li>
+      </ol>
+    </div>
+    <div class="say" style="margin-top:14px">
+      <p class="l">Последняя фраза</p>
+      <p>«Спасибо, что были со мной. Пришлю запись и лист на почту. И помните: рост не создаёт прибыль — он усиливает то, что есть. Сначала закройте утечки — потом разгоняйте. Хорошего дня!»</p>
+    </div>
+
+    <!-- ПОСЛЕ -->
+    <p class="section-label">После вебинара</p>
+    <h2 class="phase">Письмо с записью</h2>
+    <div class="copy">
+      <p><span class="lbl">Тема</span><br>Ваша запись + лист «Проверка готовности к росту»</p>
+      <p>Спасибо, что были на вебинаре! Как и обещала:<br>— Запись: [ссылка]<br>— Рабочий лист «Проверка готовности к росту»: [ссылка]</p>
+      <p>Если хотите узнать, где именно и на сколько утекает ваша прибыль — это Разбор утечек прибыли ($250, полностью в счёт первого месяца, если решите работать с нами). Приходите с заполненным листом. Записаться: [ссылка].</p>
+      <p>Юлия, JK Accounting Group</p>
+    </div>
+    <p class="tip">Отправьте в течение 24 часов, пока тепло. Через 3–4 дня — одно мягкое напоминание тем, кто открыл, но не записался.</p>
+
+    <!-- СПРАВОЧНОЕ -->
+    <p class="section-label">Шпаргалка</p>
+    <h2 class="phase">Тайминг и моменты «ага»</h2>
+    <table class="tt">
+      <tr><td>0:00–0:06</td><td>Две кофейни — у той, что вдвое больше, владелец забирает меньше <b>(ага №1)</b></td></tr>
+      <tr><td>0:06–0:13</td><td>Открываем кофейню + «поднимите руку» про зарплату/кредитку <b>(ага №2–4)</b></td></tr>
+      <tr><td>0:13–0:24</td><td>$5 000 → $680, они считают своё → <b>формула маржи</b> (680 ÷ 5000 = 13,6%) <b>(ага №5–6)</b></td></tr>
+      <tr><td>0:24–0:31</td><td>«30 дней позже» → <b>формула подушки</b> (деньги ÷ расходы в мес.) <b>(ага №7)</b></td></tr>
+      <tr><td>0:31–0:38</td><td>«Кто знает прибыль за месяц?» → <b>закрытие месяца + 3 числа</b> <b>(ага №8)</b></td></tr>
+      <tr><td>0:38–0:45</td><td>Структура → <b>S-corp против LLC: $15 300 → $7 650 в год</b> <b>(ага №9–11)</b></td></tr>
+      <tr><td>0:45–0:50</td><td>Живой скоринг — они находят своё <b>(ага №12)</b></td></tr>
+      <tr><td>0:50–0:55</td><td>Оффер: «посчитаю по вашему бизнесу» — Разбор утечек прибыли</td></tr>
+      <tr><td>0:55+</td><td>Q&amp;A + повтор четырёх мыслей</td></tr>
+    </table>
+
+    <h2 class="phase">Три правила на весь вебинар</h2>
+    <ul class="qa">
+      <li><b>Сначала пусть откроют — потом дайте формулу.</b> Каждые 5–7 минут человек должен подумать «господи, это же про меня» — и только тогда получает короткий концепт, чтобы это измерить. Формула после боли, а не вместо неё.</li>
+      <li><b>Всё возвращается к кофейне.</b> Одна история, а не четыре отдельных темы — так запоминается.</li>
+      <li><b>Голос советника, не лектора.</b> «Я видела это у десятков владельцев — вот что бывает дальше.» Это ваше отличие от всех, кто просто рассказывает про налоги.</li>
+    </ul>
+
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+</body>
+</html>

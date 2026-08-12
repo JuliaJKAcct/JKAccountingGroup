@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О вебинаре «Почему бизнес растёт, а прибыль уменьшается» — обзор для Candramas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:820px; margin:26px auto 52px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px clamp(24px,5vw,42px) 18px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:212px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.04em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(26px,4.4vw,40px) clamp(24px,5vw,46px) clamp(24px,3.8vw,34px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 13px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.016em; line-height:1.1; font-size:clamp(26px,3.9vw,38px); margin:0 0 13px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:clamp(14.5px,1.8vw,16.5px); line-height:1.6; color:var(--on-dark); max-width:62ch}
+
+  .details{display:grid; grid-template-columns:repeat(5,1fr); gap:0; border-bottom:1px solid var(--ivory-stroke); background:var(--paper)}
+  .details div{padding:14px clamp(12px,2.2vw,18px); border-right:1px solid var(--ivory-stroke)}
+  .details div:last-child{border-right:none}
+  .details .k{font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 4px}
+  .details .v{font-family:var(--serif); font-weight:600; font-size:15px; color:var(--ink); line-height:1.2}
+
+  .body{padding:clamp(24px,3.8vw,38px) clamp(24px,5vw,46px) clamp(14px,2.4vw,22px)}
+  section{margin:0 0 clamp(22px,3vw,30px)}
+  .lead{font-size:15.5px; color:var(--body); margin:0; line-height:1.62}
+  .lead b{color:var(--ink); font-weight:600}
+
+  .eyebrow{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 12px; display:flex; align-items:center; gap:12px}
+  .eyebrow::after{content:""; flex:1; height:1px; background:var(--border-soft)}
+  h2{font-family:var(--serif); font-weight:600; letter-spacing:-0.012em; color:var(--ink); font-size:clamp(19px,2.6vw,23px); line-height:1.2; margin:0 0 14px; text-wrap:balance}
+
+  /* 4-leak grid */
+  .leaks{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .leak{border:1px solid var(--border-soft); border-radius:13px; padding:15px 17px 16px; background:var(--paper); position:relative}
+  .leak .no{font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--bronze-700); text-transform:uppercase; margin:0 0 5px}
+  .leak h3{font-family:var(--serif); font-weight:600; font-size:16.5px; color:var(--ink); margin:0 0 6px; line-height:1.22}
+  .leak p{margin:0 0 9px; font-size:13.5px; color:var(--body); line-height:1.45}
+  .leak .formula{font-family:var(--mono); font-size:11.5px; line-height:1.5; color:var(--teal-800); background:var(--white); border:1px solid var(--border-soft); border-left:3px solid var(--bronze-500); border-radius:7px; padding:8px 11px}
+  .leak .formula b{color:var(--ink); font-weight:600}
+
+  ul.take{list-style:none; margin:0; padding:0; display:grid; gap:11px}
+  ul.take li{position:relative; padding:1px 0 1px 30px; font-size:14.5px; color:var(--body); line-height:1.45}
+  ul.take li b{color:var(--ink); font-weight:600}
+  ul.take li::before{content:""; position:absolute; left:0; top:2px; width:19px; height:19px; border-radius:50%; background:var(--teal-800);
+    -webkit-mask:no-repeat center/10px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    mask:no-repeat center/10px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")}
+
+  .split{display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(20px,3vw,32px)}
+  @media (max-width:680px){ .split{grid-template-columns:1fr} }
+
+  .gift{display:flex; align-items:center; gap:14px; padding:14px 17px; background:var(--paper); border:1px solid var(--border-soft); border-radius:13px; margin:14px 0 0}
+  .gift .ic{width:36px; height:36px; border-radius:50%; background:var(--teal-800); flex:none; display:grid; place-items:center}
+  .gift .ic::after{content:""; width:16px; height:16px; background:var(--bronze-300);
+    -webkit-mask:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='8' width='18' height='4' rx='1'/%3E%3Cpath d='M12 8v13M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7M12 8H7.5a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8zM12 8h4.5a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8z'/%3E%3C/svg%3E");
+    mask:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='8' width='18' height='4' rx='1'/%3E%3Cpath d='M12 8v13M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7M12 8H7.5a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8zM12 8h4.5a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8z'/%3E%3C/svg%3E")}
+  .gift p{margin:0; font-size:13.5px; line-height:1.42; color:var(--body)}
+  .gift p b{color:var(--ink)}
+
+  .why{background:var(--paper); border:1px solid var(--border-soft); border-radius:14px; padding:clamp(18px,2.6vw,24px)}
+  .why h2{margin-bottom:11px}
+  .why p{margin:0 0 10px; font-size:14px; line-height:1.55; color:var(--body)}
+  .why p:last-child{margin-bottom:0}
+  .why b{color:var(--ink); font-weight:600}
+
+  .note{border-left:3px solid var(--bronze-500); padding:2px 0 2px 15px; margin:14px 0 0; font-size:13.5px; color:var(--muted); line-height:1.5}
+  .note b{color:var(--ink); font-weight:600}
+
+  .foot{padding:18px clamp(24px,5vw,46px); background:var(--paper); border-top:1px solid var(--ivory-stroke); display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; font-size:12px; color:var(--muted)}
+  .foot a{color:var(--teal-800); text-decoration:none}
+  .proof{font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; text-align:right; line-height:1.9}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+
+  @media (max-width:640px){
+    .details{grid-template-columns:1fr 1fr 1fr}
+    .leaks{grid-template-columns:1fr}
+    .masthead{flex-direction:column; align-items:flex-start; gap:14px} .tag{text-align:left}
+  }
+  @media print{
+    @page{ size:Letter; margin:0 }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.details,.gift,.masthead,.foot,.leak,.why,.gift .ic{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    section,.leak,.why,.gift{break-inside:avoid}
+    /* one-page compression */
+    .masthead{padding:9px 38px 8px} .masthead svg{width:170px}
+    .hero{padding:13px 38px 12px}
+    .hero .kicker{margin-bottom:5px; font-size:9.5px}
+    .hero h1{font-size:21px; margin-bottom:6px; line-height:1.06}
+    .hero p{font-size:11px; line-height:1.4}
+    .details div{padding:6px 15px}
+    .details .k{margin-bottom:1px}
+    .details .v{font-size:12.5px}
+    .body{padding:11px 38px 5px}
+    section{margin-bottom:10px}
+    .lead{font-size:11.5px; line-height:1.4}
+    .eyebrow{margin-bottom:7px; font-size:9.5px}
+    h2{font-size:15px; margin-bottom:7px}
+    .leaks{gap:7px}
+    .leak{padding:9px 11px 10px}
+    .leak .no{margin-bottom:3px}
+    .leak h3{font-size:13.5px; margin-bottom:3px}
+    .leak p{font-size:11px; margin-bottom:5px; line-height:1.32}
+    .leak .formula{font-size:9px; padding:5px 8px; line-height:1.38}
+    ul.take{gap:5px} ul.take li{font-size:11.5px; padding-left:26px}
+    ul.take li::before{width:16px; height:16px; top:2px}
+    .gift{padding:8px 11px; margin-top:9px} .gift p{font-size:11px} .gift .ic{width:30px; height:30px}
+    .why{padding:12px} .why p{font-size:11.5px; margin-bottom:6px; line-height:1.4}
+    .why h2{margin-bottom:6px}
+    .split{gap:20px}
+    .note{margin-top:8px; font-size:11px; line-height:1.4}
+    .foot{padding:9px 38px; font-size:10.5px}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Обзор для партнёра · на согласование<b>Candramas LLC × JK Accounting Group</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Бесплатный обучающий вебинар для владельцев бизнеса</p>
+    <h1>Почему бизнес растёт, а прибыль уменьшается</h1>
+    <p>45-минутный разбор для владельцев, у которых выручка растёт, а денег в кармане больше не становится. Не продажа услуг — рабочий инструмент: четыре формулы, посчитанные на живом примере.</p>
+  </div>
+
+  <div class="details">
+    <div><p class="k">Формат</p><p class="v">Онлайн · Zoom</p></div>
+    <div><p class="k">Длит.</p><p class="v">~45 мин</p></div>
+    <div><p class="k">Язык</p><p class="v">Русский</p></div>
+    <div><p class="k">Стоимость</p><p class="v">Бесплатно</p></div>
+    <div><p class="k">Ведёт</p><p class="v">Юлия Кононова</p></div>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <p class="lead">Это обзор для тебя, Борис — чтобы ты видел, о чём вебинар, <b>прежде чем мы отправим твоим клиентам приглашение с логотипом Candramas</b>. Всё построено вокруг одной истории (кофейня выросла вдвое, а владелец стал зарабатывать меньше) и разбирает <b>четыре места, где у растущего бизнеса тихо утекает прибыль</b> — каждое как конкретную формулу, которую можно применить к своим цифрам.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Чему учит вебинар — 4 разбора</p>
+      <div class="leaks">
+
+        <div class="leak">
+          <p class="no">Разбор 01</p>
+          <h3>Настоящая маржа</h3>
+          <p>Сколько реально остаётся с каждой продажи после всех затрат — не «оборот», а прибыль.</p>
+          <div class="formula"><b>Маржа</b> = (Выручка − Все затраты) ÷ Выручка × 100%<br>Ориентир: здоровые ~10–15%. Ниже 5% — тревога.</div>
+        </div>
+
+        <div class="leak">
+          <p class="no">Разбор 02</p>
+          <h3>Запас прочности по деньгам</h3>
+          <p>Прибыль на бумаге есть, а на счету пусто. Считаем, на сколько месяцев бизнес продержится без новой выручки.</p>
+          <div class="formula"><b>Подушка</b> (мес.) = Деньги на счету ÷ Средние расходы в месяц<br>Ориентир: 3+ месяца — спокойно.</div>
+        </div>
+
+        <div class="leak">
+          <p class="no">Разбор 03</p>
+          <h3>Цифры, которые видно вовремя</h3>
+          <p>Почему решения «на глаз» дороже всего и как выглядит нормальный ежемесячный учёт.</p>
+          <div class="formula"><b>Закрытие месяца</b>: P&L за прошлый месяц — к 10–15 числу.<br>Смотрим: выручка · маржа · деньги на счету.</div>
+        </div>
+
+        <div class="leak">
+          <p class="no">Разбор 04</p>
+          <h3>Структура и налоги</h3>
+          <p>Как форма бизнеса (S-corp) меняет налог — на понятном примере, где экономия видна в долларах.</p>
+          <div class="formula">Прибыль <b>$100k</b>. LLC: 15,3% со всего = $15 300. S-corp: 15,3% только с зарплаты $50k = $7 650 → экономия <b>≈ $7 650/год</b>.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="split">
+      <div>
+        <h2>Что участники унесут</h2>
+        <ul class="take">
+          <li><b>Свою настоящую маржу</b> — посчитанную вживую.</li>
+          <li><b>Где именно</b> у них утекает прибыль из четырёх мест.</li>
+          <li><b>Запас прочности в месяцах</b> — на сколько хватит денег.</li>
+        </ul>
+        <div class="gift">
+          <div class="ic" aria-hidden="true"></div>
+          <p><b>Подарок каждому:</b> рабочий лист «Проверка готовности к росту» — заполнил и сразу видишь слабые места.</p>
+        </div>
+      </div>
+
+      <div class="why">
+        <h2>Почему это ценно для клиентов Candramas</h2>
+        <p>Твои клиенты вкладываются в рост — в объём, в новых людей, в продвижение. Вебинар отвечает на вопрос, который у них при этом возникает: <b>«я расту, а где деньги?»</b></p>
+        <p>Для тебя это <b>полезный подарок клиентам без затрат и риска:</b> честное обучение, не продажа. Приглашение — под двумя именами, <b>Candramas × JK</b>: считывается как твоя забота о клиентах.</p>
+      </div>
+    </section>
+
+    <div class="note">
+      <b>Про «что дальше».</b> Во время вебинара услуги не продаются. В самом конце — мягкое, необязательное предложение тем, кто захочет посчитать эти же формулы на своих реальных цифрах: платный «Разбор утечек прибыли» ($250, полностью засчитывается в первый месяц обслуживания). Никакого давления.
+    </div>
+
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн · <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a></span>
+    <div class="proof">Обзор для Candramas LLC · на согласование</div>
+  </footer>
+
+</article>
+</body>
+</html>

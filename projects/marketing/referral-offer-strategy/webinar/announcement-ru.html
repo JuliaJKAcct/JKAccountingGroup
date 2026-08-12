@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анонс вебинара «Почему бизнес растёт, а прибыль уменьшается» — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:720px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,40px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:210px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(28px,4.4vw,40px) clamp(24px,5vw,42px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 12px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.14; font-size:clamp(24px,3.6vw,34px); margin:0 0 10px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15px; line-height:1.6; color:var(--on-dark); max-width:58ch}
+
+  .body{padding:clamp(26px,4.2vw,38px) clamp(24px,5vw,42px) clamp(18px,3vw,26px)}
+
+  .block{margin:0 0 24px}
+  .block-head{display:flex; align-items:center; gap:10px; margin:0 0 12px; flex-wrap:wrap}
+  .vlabel{font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:#fff; background:var(--teal-800); padding:4px 10px; border-radius:6px}
+  .vlabel.b{background:var(--bronze-500)}
+  .vlabel.g{background:var(--muted)}
+  .vhint{font-size:12.5px; color:var(--muted)}
+
+  .post{border:1px solid var(--border-soft); border-radius:14px; background:var(--paper); padding:20px 22px}
+  .post p{margin:0 0 12px; font-size:15.5px; line-height:1.6; color:var(--body)}
+  .post p:last-child{margin-bottom:0}
+  .post .title{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--ink); letter-spacing:-0.01em; margin-bottom:14px}
+  .post .stack{margin:0 0 12px}
+  .post .stack span{display:block; font-size:15.5px; color:var(--body); line-height:1.5}
+  .post ul{margin:0 0 12px; padding:0; list-style:none; display:grid; gap:8px}
+  .post ul li{position:relative; padding-left:20px; font-size:15px; line-height:1.5; color:var(--body)}
+  .post ul li::before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px; background:var(--bronze-500); transform:rotate(45deg)}
+  .post .small{font-size:13px; color:var(--muted); font-style:italic}
+  .post .meta{font-family:var(--mono); font-size:13px; color:var(--teal-800); letter-spacing:.02em}
+  .ph{color:var(--bronze-700); font-weight:600}
+  .post.one p{font-size:15px; color:var(--ink)}
+
+  .notes{border-top:2px solid var(--ivory-stroke); margin-top:34px; padding-top:22px}
+  .notes h2{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--ink); margin:0 0 12px; letter-spacing:-0.01em}
+  .notes ul{margin:0; padding:0; list-style:none; display:grid; gap:11px}
+  .notes li{position:relative; padding-left:26px; font-size:14.5px; line-height:1.5; color:var(--body)}
+  .notes li::before{content:""; position:absolute; left:4px; top:7px; width:8px; height:8px; background:var(--bronze-500); transform:rotate(45deg)}
+  .notes li b{color:var(--ink)}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+  .foot{padding:18px clamp(24px,5vw,42px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.post,.vlabel,.masthead{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .block,.notes{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Печать / Сохранить в PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Готово к публикации<b>Анонс вебинара</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Анонс · три версии</p>
+    <h1>Почему бизнес растёт, а прибыль уменьшается</h1>
+    <p>Готовые тексты для поста, сторис и подписи. Дата, время и ссылка уже подставлены под текущее событие — <span style="color:var(--bronze-300); font-weight:600">11 августа, 11:00 ET · lu.ma/7xvh1dm3</span>. Проверьте перед публикацией.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- Full -->
+    <div class="block">
+      <div class="block-head"><span class="vlabel">Полная версия</span><span class="vhint">пост / email</span></div>
+      <div class="post">
+        <p class="title">Почему бизнес растёт, а прибыль уменьшается?</p>
+        <p>Многие владельцы уверены, что решение одно — просто больше продавать. Но за годы работы я снова и снова вижу другое:</p>
+        <div class="stack">
+          <span>Выручка растёт.</span>
+          <span>Клиентов больше.</span>
+          <span>Работы больше.</span>
+          <span>А денег у владельца… почему-то меньше.</span>
+        </div>
+        <p>Знакомо? Вы не одни — и дело почти никогда не в продажах.</p>
+        <p>На бесплатном вебинаре я покажу <b>4 самые частые причины</b>, по которым прибыль утекает незаметно, — и вы прямо на встрече найдёте, где это происходит <b>в вашем бизнесе</b>.</p>
+        <p><b>Вы узнаете:</b></p>
+        <ul>
+          <li>почему бизнес побольше нередко оставляет владельцу меньше денег;</li>
+          <li>4 финансовые утечки, которые тихо стоят десятки тысяч долларов в год;</li>
+          <li>как за 5 минут увидеть, где именно ваш бизнес теряет прибыль;</li>
+          <li>и получите рабочий лист, который сразу примените к своему бизнесу.</li>
+        </ul>
+        <p>Без сложных терминов. По делу. На вашем языке.</p>
+        <p class="meta">📅 <span class="ph">11 августа</span>, <span class="ph">11:00 ET</span> &nbsp;·&nbsp; 🔗 Регистрация: <span class="ph">lu.ma/7xvh1dm3</span></p>
+        <p class="small">Место бесплатное, но количество ограничено — забронируйте заранее.</p>
+      </div>
+    </div>
+
+    <!-- Short -->
+    <div class="block">
+      <div class="block-head"><span class="vlabel b">Короткая</span><span class="vhint">сторис / быстрый пост</span></div>
+      <div class="post">
+        <p>Выручка растёт, а денег у владельца — меньше. Знакомо?</p>
+        <p>Это почти никогда не про продажи. Это <b>утечки прибыли</b>.</p>
+        <p>На бесплатном вебинаре покажу 4 причины — и вы за 5 минут найдёте их в своём бизнесе. Плюс рабочий лист в подарок.</p>
+        <p class="meta">📅 <span class="ph">11 августа</span> &nbsp;·&nbsp; 🔗 Регистрация: <span class="ph">lu.ma/7xvh1dm3</span></p>
+      </div>
+    </div>
+
+    <!-- One line -->
+    <div class="block">
+      <div class="block-head"><span class="vlabel g">Одна строка</span><span class="vhint">подпись / статус / репост</span></div>
+      <div class="post one">
+        <p>Почему бизнес растёт, а прибыль уменьшается? Бесплатный вебинар — 4 причины, по которым деньги утекают незаметно. <span class="ph">11 августа</span>, регистрация: <span class="ph">lu.ma/7xvh1dm3</span></p>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes">
+      <h2>Заметки по запуску</h2>
+      <ul>
+        <li><b>Заголовок-парадокс не меняйте</b> — «растёт, а уменьшается» и есть крючок. Не превращайте в «полезный вебинар о финансах».</li>
+        <li><b>Цену и оффер в анонсе не называйте.</b> Анонс продаёт бесплатную пользу; платный «Разбор утечек прибыли» продаёт сам вебинар.</li>
+        <li><b>Куда постить:</b> личная страница и сторис (ваш голос работает лучше всего), чаты и сообщества владельцев бизнеса, рассылка по текущей базе. С Борисом — он постит у себя, охват удваивается.</li>
+        <li><b>Ритм:</b> анонс за 7–10 дней → напоминание за 2 дня → в день вебинара. Ближе к дате — один пост «осталось N мест» для срочности.</li>
+        <li><b>Визуал:</b> под этот текст можно собрать карточку-анонс в фирменном стиле (заголовок + 4 буллета + дата) — скажите, и сделаю.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Майами · Форт-Лодердейл · Онлайн</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+</body>
+</html>

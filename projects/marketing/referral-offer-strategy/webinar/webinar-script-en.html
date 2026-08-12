@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presenter script · Why Your Business Grows but Your Profit Shrinks — JK Accounting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+    --bronze-500:#9C6A39; --bronze-300:#CFA268; --bronze-700:#7E5430;
+    --ivory:#F6F3EC; --paper:#FBF8F2; --white:#FFFFFF; --ivory-stroke:#ECE6DA;
+    --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+    --on-dark:#ECE6DA; --on-dark-muted:#9FB3B6;
+    --border:#C5BEAD; --border-soft:#DAD4C6;
+    --say-bg:#EFF4F3; --say-border:#CBDBD8; --ask-bg:#FAF2E7; --ask-border:#E4CDA8;
+    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ivory); color:var(--body); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  .sheet{max-width:800px; margin:28px auto 56px; background:var(--white); box-shadow:0 1px 2px rgba(9,31,36,.06),0 24px 60px -28px rgba(9,31,36,.34); overflow:hidden; border-radius:4px; animation:rise .7s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .masthead{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px clamp(24px,5vw,44px) 20px; background:var(--paper); border-bottom:1px solid var(--ivory-stroke)}
+  .masthead svg{display:block; width:220px; height:auto; max-width:54vw}
+  .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); text-align:right; line-height:1.7}
+  .tag b{display:block; color:var(--ink); font-weight:500; letter-spacing:.09em}
+
+  .hero{background:radial-gradient(120% 140% at 85% -10%, rgba(207,162,104,.14), transparent 55%),linear-gradient(160deg,var(--teal-800),var(--teal-900) 70%,var(--teal-950)); color:var(--on-dark); padding:clamp(30px,4.6vw,46px) clamp(24px,5vw,46px)}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 14px}
+  .hero h1{font-family:var(--serif); font-weight:600; letter-spacing:-0.014em; line-height:1.13; font-size:clamp(26px,4vw,38px); margin:0 0 12px; color:#fff; text-wrap:balance; max-width:20ch}
+  .hero p{margin:0; font-size:15.5px; line-height:1.6; color:var(--on-dark); max-width:60ch}
+
+  .body{padding:clamp(28px,4.4vw,42px) clamp(24px,5vw,46px) clamp(20px,3vw,30px)}
+
+  table.meta{width:100%; border-collapse:collapse; margin:0 0 26px; font-size:14.5px}
+  table.meta th{text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:9px 16px 9px 0; vertical-align:top; white-space:nowrap; width:1%}
+  table.meta td{padding:9px 0; color:var(--body); border-bottom:1px solid var(--ivory-stroke)}
+  table.meta tr:last-child td, table.meta tr:last-child th{border-bottom:none}
+
+  .thread{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); color:#fff; border-radius:14px; padding:22px 24px; margin:0 0 26px}
+  .thread .l{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-300); margin:0 0 8px}
+  .thread p{margin:0; font-family:var(--serif); font-size:18px; line-height:1.45; color:#fff; font-style:italic}
+
+  h2.phase{font-family:var(--serif); font-weight:600; font-size:clamp(19px,2.6vw,23px); color:var(--ink); letter-spacing:-0.012em; margin:34px 0 3px; line-height:1.2; text-wrap:balance}
+  .phase-meta{display:flex; flex-wrap:wrap; gap:8px 12px; margin:0 0 14px; align-items:center}
+  .time{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--teal-800); background:#E7EEED; padding:3px 9px; border-radius:6px}
+  .slidechip{font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:var(--bronze-700); background:var(--paper); border:1px solid var(--border-soft); padding:3px 9px; border-radius:6px}
+  .story-tag{font-family:var(--mono); font-size:11px; letter-spacing:.03em; color:#fff; background:var(--bronze-500); padding:3px 9px 3px 8px; border-radius:6px; display:inline-flex; align-items:center; gap:5px}
+
+  .onslide{font-size:14px; color:var(--muted); margin:0 0 14px; line-height:1.5}
+  .onslide b{color:var(--body); font-weight:600}
+
+  .say{background:var(--say-bg); border:1px solid var(--say-border); border-radius:14px; padding:18px 22px; margin:0 0 14px}
+  .say .l{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-800); margin:0 0 10px; display:flex; align-items:center; gap:8px}
+  .say .l::before{content:""; width:7px; height:7px; background:var(--teal-800); transform:rotate(45deg)}
+  .say p{margin:0 0 12px; font-size:16.5px; line-height:1.62; color:var(--ink)}
+  .say p:last-child{margin-bottom:0}
+  .say em{color:var(--bronze-700); font-style:italic}
+
+  .ask{background:var(--ask-bg); border:1px solid var(--ask-border); border-radius:14px; padding:16px 20px; margin:0 0 14px}
+  .ask .l{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 9px; font-weight:600; display:flex; align-items:center; gap:8px}
+  .ask .l::before{content:""; width:7px; height:7px; background:var(--bronze-500); transform:rotate(45deg)}
+  .ask p{margin:0 0 9px; font-size:15.5px; line-height:1.55; color:var(--ink)}
+  .ask ul{margin:4px 0 10px; padding:0; list-style:none; display:grid; gap:7px}
+  .ask ul li{position:relative; padding-left:20px; font-size:14.5px; line-height:1.45; color:var(--body)}
+  .ask ul li::before{content:""; position:absolute; left:3px; top:8px; width:6px; height:6px; border:1.5px solid var(--bronze-500); border-radius:2px}
+  .ask .mode{font-size:12.5px; color:var(--muted); margin:6px 0 0; line-height:1.45}
+  .ask p:last-child,.ask .mode:last-child{margin-bottom:0}
+
+  .belief{display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center; background:var(--paper); border:1.5px solid var(--bronze-500); border-radius:14px; padding:18px 22px; margin:26px 0 14px}
+  .belief .num{width:44px; height:44px; border-radius:50%; border:1.5px solid var(--bronze-500); color:var(--bronze-700); font-family:var(--mono); font-weight:600; font-size:17px; display:grid; place-items:center}
+  .belief .l{font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 4px}
+  .belief p{margin:0; font-family:var(--serif); font-weight:600; font-size:18px; line-height:1.35; color:var(--ink); letter-spacing:-0.01em}
+
+  .breakdown{border:1px solid var(--border-soft); border-radius:14px; overflow:hidden; margin:0 0 14px}
+  .breakdown .bh{background:var(--teal-800); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:baseline}
+  .breakdown .bh .k{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--on-dark-muted)}
+  .breakdown .bh .v{font-family:var(--serif); font-weight:600; font-size:24px}
+  .breakdown ul{list-style:none; margin:0; padding:6px 20px; background:var(--white)}
+  .breakdown li{display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid var(--ivory-stroke); font-size:14px; color:var(--body)}
+  .breakdown li .m{font-family:var(--mono); color:var(--muted)}
+  .breakdown .bf{background:var(--paper); padding:14px 20px; display:flex; justify-content:space-between; align-items:baseline; border-top:2px solid var(--bronze-500)}
+  .breakdown .bf .k{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--bronze-700)}
+  .breakdown .bf .v{font-family:var(--serif); font-weight:700; font-size:26px; color:var(--bronze-700)}
+
+  .tip{font-size:13px; color:var(--muted); font-style:italic; margin:0 0 8px; line-height:1.5}
+  ul.qa{margin:6px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  ul.qa li{font-size:14.5px; line-height:1.5; padding-left:18px; position:relative}
+  ul.qa li::before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px; background:var(--bronze-500); transform:rotate(45deg)}
+  ul.qa b{color:var(--ink)}
+
+  .cohost{background:#FBF6EE; border:1px dashed #DCC49E; border-radius:12px; padding:14px 18px; margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--body)}
+  .cohost .l{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--bronze-700); margin:0 0 6px; font-weight:600}
+
+  .copy{background:var(--paper); border:1px solid var(--border-soft); border-radius:12px; padding:18px 20px; margin:0 0 14px; font-size:14.5px; line-height:1.55}
+  .copy p{margin:0 0 9px} .copy p:last-child{margin-bottom:0}
+  .copy .lbl{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--bronze-700)}
+
+  table.tt{width:100%; border-collapse:collapse; margin:8px 0 0; font-size:14px}
+  table.tt td{padding:7px 0; border-bottom:1px solid var(--ivory-stroke); color:var(--body)}
+  table.tt td:first-child{font-family:var(--mono); font-size:12px; color:var(--teal-800); white-space:nowrap; padding-right:18px; width:1%}
+  table.tt tr:last-child td{border-bottom:none}
+
+  .section-label{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze-700); margin:40px 0 2px; padding-top:22px; border-top:2px solid var(--ivory-stroke)}
+
+  .recap{background:linear-gradient(160deg,var(--teal-800),var(--teal-900)); border-radius:16px; padding:24px 26px; margin:14px 0 0; color:var(--on-dark)}
+  .recap h3{font-family:var(--serif); font-weight:600; color:#fff; margin:0 0 14px; font-size:19px}
+  .recap ol{margin:0; padding-left:0; list-style:none; counter-reset:b; display:grid; gap:11px}
+  .recap li{counter-increment:b; position:relative; padding-left:38px; font-size:15px; line-height:1.4; color:#fff}
+  .recap li::before{content:counter(b); position:absolute; left:0; top:-1px; width:26px; height:26px; border-radius:50%; border:1.5px solid var(--bronze-300); color:var(--bronze-300); font-family:var(--mono); font-weight:600; font-size:12px; display:grid; place-items:center}
+
+  .printbar{position:fixed; top:16px; right:16px; z-index:10}
+  .printbar button{font-family:var(--sans); font-size:13px; font-weight:600; color:#fff; cursor:pointer; background:var(--teal-800); border:none; padding:9px 15px; border-radius:8px; box-shadow:0 8px 20px -8px rgba(9,31,36,.5)}
+  .foot{padding:20px clamp(24px,5vw,46px); background:var(--paper); border-top:1px solid var(--ivory-stroke); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  .foot a{color:var(--teal-800); text-decoration:none}
+
+  @media (max-width:560px){ .masthead{flex-direction:column; align-items:flex-start; gap:12px} .tag{text-align:left} }
+  @media print{
+    @page{ size:Letter; margin:14mm }
+    body{background:#fff}
+    .printbar{display:none}
+    .sheet{max-width:none; margin:0; box-shadow:none; border-radius:0; animation:none}
+    .hero,.thread,.say,.ask,.belief,.cohost,.time,.copy,.masthead,.breakdown .bh,.breakdown .bf,.recap{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .say,.ask,.belief,.cohost,.copy,.thread,.breakdown,.recap{break-inside:avoid}
+    h2.phase{break-after:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ .sheet{animation:none} }
+</style>
+</head>
+<body>
+<div class="printbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+<article class="sheet">
+  <header class="masthead">
+    <svg viewBox="0 0 470 130" role="img" aria-label="JK Accounting Group">
+      <g transform="translate(6,5)"><circle cx="60" cy="60" r="57" fill="none" stroke="#123841" stroke-width="3"></circle><circle cx="60" cy="60" r="50.5" fill="none" stroke="#9C6A39" stroke-width="1.4"></circle><g fill="#9C6A39"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g><g transform="translate(60,60) scale(0.6) translate(-59,-56)"><g fill="none" stroke="#123841" stroke-width="9"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g></g>
+      <text x="150" y="63" font-family="'Source Serif 4',Georgia,serif" font-size="33" font-weight="600" fill="#0D2A31">JK Accounting Group</text>
+      <text x="152" y="86" font-family="'IBM Plex Mono',monospace" font-size="11.5" letter-spacing="3" fill="#7E5430">TAX · BOOKKEEPING · CFO</text>
+    </svg>
+    <div class="tag">Presenter script · v3<b>Webinar</b></div>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">Detailed webinar script</p>
+    <h1>Why your business grows — but your profit shrinks</h1>
+    <p>A diagnostic webinar: each owner <i>discovers</i> where their own profit is leaking — then gets one simple formula to measure it. One story, ~12 "aha" moments, 4 belief shifts, one short teaching concept per leak, and a self-calculated number.</p>
+  </div>
+
+  <div class="body">
+
+    <table class="meta">
+      <tr><th>Format</th><td>Free online webinar, ~55 min + Q&amp;A</td></tr>
+      <tr><th>Approach</th><td>Self-diagnosis + a short teaching beat: for each leak the owner first finds it, then gets one simple formula to measure it</td></tr>
+      <tr><th>We teach</th><td>4 plain concepts: real margin · cash runway (in months) · the monthly close &amp; 3 numbers · S-corp structure &amp; taxes</td></tr>
+      <tr><th>Goal</th><td>Value and trust → lead (email + filled worksheet) → book the Profit Leak Review ($250)</td></tr>
+      <tr><th>Gift</th><td>The Growth Readiness Check worksheet</td></tr>
+      <tr><th>Offer</th><td>Profit Leak Review — $250, credited to the first month of service</td></tr>
+      <tr><th>Voice</th><td>Not a lecturer, an advisor: "I've seen this across dozens of owners — here's what happens next"</td></tr>
+    </table>
+
+    <div class="thread">
+      <p class="l">The through-line — one coffee shop</p>
+      <p>"Growth doesn't create profit. It amplifies what's already there. We'll open one coffee shop — and watch doubling sales eat the owner's income."</p>
+    </div>
+
+    <!-- BEFORE -->
+    <p class="section-label">Before the webinar</p>
+    <h2 class="phase">Registration page</h2>
+    <div class="copy">
+      <p><span class="lbl">Headline</span><br>Why your business grows — but your profit shrinks</p>
+      <p><span class="lbl">Subhead</span><br>A free webinar for business owners. In 45 minutes you'll find where your profit is leaking — and get a worksheet to check yourself.</p>
+      <p><span class="lbl">What you'll discover</span><br>— why the bigger business often pays its owner less<br>— 4 places profit leaks quietly — right now, in your business<br>— how much you actually keep from each sale</p>
+      <p><span class="lbl">Button</span><br>Save my free seat</p>
+    </div>
+
+    <h2 class="phase">Emails</h2>
+    <div class="copy">
+      <p><b>Confirmation</b> (immediately, with the worksheet). "Attaching the worksheet — take a look ahead of time, but we'll go through it together."</p>
+      <p><b>Reminders</b> a day and an hour before: short, the link, one teaser line ("bring the revenue from your last big order — you'll need it").</p>
+      <p><b>After the webinar</b>: recording + worksheet + offer (full text below).</p>
+    </div>
+
+    <!-- DURING -->
+    <p class="section-label">During the webinar</p>
+
+    <h2 class="phase">1 · Cold open: two coffee shops</h2>
+    <div class="phase-meta"><span class="time">0:00–0:06</span><span class="slidechip">Slides 1–4</span></div>
+    <p class="onslide"><b>On the slide:</b> two cards — Shop A and Shop B, only revenue visible. Owner income hidden for now.</p>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"Hi. Before I introduce myself — one question. Look at two coffee shops."</p>
+    </div>
+    <div class="breakdown" style="margin-bottom:14px">
+      <div class="bh"><span class="k">Shop A</span><span class="v">Revenue $600k · Owner $90k</span></div>
+      <div class="bf"><span class="k">Shop B · two locations</span><span class="v" style="font-size:20px">Revenue $1.3M · Owner $60k</span></div>
+    </div>
+    <div class="ask">
+      <p class="l">Engage the room</p>
+      <p>Show <b>revenue only</b> first. "Which coffee shop would you rather own? Let's vote." Almost everyone picks B — it's bigger.</p>
+      <p class="mode">Live — vote/hands. Recorded — "pick one in your head, remember your answer."</p>
+    </div>
+    <div class="say">
+      <p class="l">What to say (as you reveal the owner income)</p>
+      <p>"Almost everyone picked B — it's bigger. Now look at the bottom line. Shop B sells more than twice as much — and leaves its owner <em>less</em>: $60k versus $90k for the small one. And this isn't me making it up: industry data says the average coffee shop owner takes home $50–65k a year, on a net margin of just 5–12%. So B is the typical picture, not a scare story.</p>
+      <p>How does that happen? That's the whole hour. I'm Julia — I've run the finances for business owners for seven years, and I've seen this dozens of times. Today we're not going to memorize anything. We're going to <em>find</em> — right in your business. Stay to the end: you'll have a worksheet to see your own leaks."</p>
+    </div>
+    <div class="belief">
+      <div class="num">1</div>
+      <div><p class="l">Belief shift #1</p><p>More revenue doesn't mean more money in your pocket.</p></div>
+    </div>
+
+    <h2 class="phase">2 · Open the coffee shop</h2>
+    <div class="phase-meta"><span class="time">0:06–0:13</span><span class="slidechip">Slides 5–6</span><span class="story-tag">◆ Coffee shop</span></div>
+    <p class="onslide"><b>On the slide:</b> the leaky bucket — revenue pours in, drains out through holes.</p>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"Let's build a business together — and I'll keep coming back to it all webinar. A coffee shop. Things are going well, and you decide to grow: you put $30,000 into growth — a new location, more people, more volume. It works — sales double. You celebrate.</p>
+      <p>Three months later you look at the account — and the money's gone. Just like Shop B. Not because you sold too little. Because growth <em>amplified</em> what was already leaking. Picture a bucket: revenue pours in from the top, growth makes the stream stronger. But if the bucket has holes — the stronger the stream, the faster it drains."</p>
+    </div>
+    <div class="belief">
+      <div class="num">2</div>
+      <div><p class="l">Belief shift #2</p><p>You don't have a sales problem. You have a profit-leak problem.</p></div>
+    </div>
+    <div class="ask">
+      <p class="l">Engage the room</p>
+      <p>"Raise your hand if any of this has ever happened:"</p>
+      <ul>
+        <li>Record sales — but making payroll was a stretch.</li>
+        <li>You had to delay paying <b>yourself</b> to cover the month.</li>
+        <li>You put the business on a credit card to bridge to customer payments.</li>
+      </ul>
+      <p class="mode">Live — hands (half the room will raise). Recorded — "type YES in the chat / admit it to yourself." Then: "That's the leaks. Today we find where they come from."</p>
+    </div>
+    <div class="cohost">
+      <p class="l">Co-host (Boris)</p>
+      If you're co-hosting with Boris — this is his 3–4 minutes: why these owners' growth took off (demand, channels) and why growth is exactly what exposes the weak spots in the finances. The logic: "Boris helped them grow — I'll show where the money leaks out."
+    </div>
+
+    <h2 class="phase">3 · Leak 1: the margin you never saw</h2>
+    <div class="phase-meta"><span class="time">0:13–0:24</span><span class="slidechip">Slides 7–8</span><span class="story-tag">◆ Coffee shop</span></div>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"A $5,000 corporate order comes into the shop. Great day, right? Let's subtract everything — honestly."</p>
+    </div>
+    <div class="breakdown">
+      <div class="bh"><span class="k">Order</span><span class="v">$5,000</span></div>
+      <ul>
+        <li><span>Ingredients &amp; product (≈28%)</span><span class="m">− $1,400</span></li>
+        <li><span>Staff to make &amp; deliver (≈18%)</span><span class="m">− $900</span></li>
+        <li><span>Rent &amp; utilities, share (≈12%)</span><span class="m">− $600</span></li>
+        <li><span>Your time (≈8%)</span><span class="m">− $400</span></li>
+        <li><span>Insurance, software, supplies (≈7%)</span><span class="m">− $350</span></li>
+        <li><span>Taxes on the profit (est.)</span><span class="m">− $320</span></li>
+        <li><span>Other operating costs (≈4%)</span><span class="m">− $200</span></li>
+        <li><span>Card processing (≈3%)</span><span class="m">− $150</span></li>
+      </ul>
+      <div class="bf"><span class="k">You keep</span><span class="v">$680</span></div>
+    </div>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"Out of five thousand, six hundred and eighty is left. Not five thousand. Six hundred and eighty. And that's a generous version. I see this in real books all the time: the owner is sure they made five thousand, and less than seven hundred lands in the account."</p>
+    </div>
+    <div class="ask">
+      <p class="l">Engage the room — they calculate it themselves</p>
+      <p>"Now your turn. Grab your phone, open the calculator. Think of your last big order or sale. Subtract along with me: cost of goods… payroll… rent… fees… taxes… your own time. Don't rush — I'll wait."</p>
+      <p class="mode">Hold a 30–40 second pause and actually let them do the math. Live — "call out what's left in the chat." Recorded — "write down your number, you'll want it later." When someone gets the number <i>themselves</i> — it's theirs.</p>
+    </div>
+    <p class="onslide"><b>Slide 8 (teaching):</b> the margin formula, applied to the shop.</p>
+    <div class="say">
+      <p class="l">What to say (give the formula)</p>
+      <p>"Now let's name it. What we just calculated is called <em>margin</em> — what's actually left, not revenue. The formula is simple, write it down:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">Margin = (Revenue − All costs) ÷ Revenue × 100%</p>
+      <p>For our shop: 680 divided by 5,000 is <em>13.6%</em>. A healthy margin is roughly 10–15%. Under five is an alarm — even while revenue is growing. Take your own number from the calculator, divide it by the order total — that's your real margin. Remember it, you'll need it again today."</p>
+    </div>
+    <p class="tip">This is your main "aha." The pause after "$680," and the pause for their own math, matter more than any words. The numbers are realistic: coffee shops net 5–12%, so "$680 on $5,000" is on the generous side.</p>
+
+    <h2 class="phase">4 · Leak 2: the money that grows against you</h2>
+    <div class="phase-meta"><span class="time">0:24–0:31</span><span class="slidechip">Slides 9–10</span><span class="story-tag">◆ Coffee shop</span></div>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"The second leak is time. Before it grew, the shop bought beans, hired staff, paid for ads — the money went out <em>today</em>. The revenue for it arrives weeks later. While the business is small, the gap is bearable. But as you grow, the gap grows with you — and here's the paradox: sales up, and the account empty. That's how growing companies break — not from too few sales, but from running out of cash in the moment."</p>
+    </div>
+    <div class="ask">
+      <p class="l">Engage the room — the question that sticks</p>
+      <p>"Answer honestly: <b>how many months could your business survive if every customer paid 30 days late?</b>"</p>
+      <p class="mode">Give it a pause. Live — hands: "who's more than three months? who's under one?" Recorded — "say the number out loud to yourself." For many, the answer is "less than I thought."</p>
+    </div>
+    <p class="onslide"><b>Slide 10 (teaching):</b> the cash-runway formula.</p>
+    <div class="say">
+      <p class="l">What to say (give the formula)</p>
+      <p>"That feeling turns into one number — <em>runway</em>. Here it is:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">Runway (months) = Cash on hand ÷ Average monthly spend</p>
+      <p>If you have $30,000 in the account and spend $20,000 a month, your runway is a month and a half. Comfortable is <em>three months or more</em>. Under one, and the business lives paycheck to paycheck — and growth only makes it sharper. Profit shows up on paper; runway shows up in months, and it's what tells you whether you'd survive a bad quarter."</p>
+    </div>
+
+    <h2 class="phase">5 · Leak 3: you're driving by the rear-view mirror</h2>
+    <div class="phase-meta"><span class="time">0:31–0:38</span><span class="slidechip">Slides 11–13</span><span class="story-tag">◆ Coffee shop</span></div>
+    <div class="belief">
+      <div class="num">3</div>
+      <div><p class="l">Belief shift #3</p><p>Accounting isn't about taxes. It's about timely decisions.</p></div>
+    </div>
+    <div class="ask">
+      <p class="l">Engage the room</p>
+      <p>"Simple question. <b>Who can name their profit from last month — right now, from memory?</b> Raise your hand."</p>
+      <p class="mode">Usually about 10% of hands. Recorded — "honestly: can you or not?"</p>
+    </div>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"Exactly. Almost no one. And look: the shop didn't notice its margin sliding — the books were three months behind. By the time the numbers were in, the money had already leaked out. That's driving by the rear-view mirror. You don't need accounting for the tax office — you need it to make a decision <em>in time</em>, while you can still change something."</p>
+    </div>
+    <p class="onslide"><b>Slide 13 (teaching):</b> the monthly close and the 3 numbers.</p>
+    <div class="say">
+      <p class="l">What to say (give the standard)</p>
+      <p>"So what does 'right' look like? Proper bookkeeping <em>closes the month</em>: by the 10th–15th you have last month's profit-and-loss in hand. Not a quarter later — two weeks later. And each month you only need to watch three numbers:</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">1) Revenue — what came in  2) Margin — what's left  3) Cash on hand — how long it lasts</p>
+      <p>That's your dashboard. Three numbers, once a month, on time — and the 'hire / raise the price / slow down' decision gets made while the money is still there, not after it's leaked out."</p>
+    </div>
+
+    <h2 class="phase">6 · Leak 4: the structure quietly taxing you</h2>
+    <div class="phase-meta"><span class="time">0:38–0:45</span><span class="slidechip">Slides 14–16</span><span class="story-tag">◆ Coffee shop</span></div>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"The fourth leak is structure. While the shop grew, the owner just pulled money out as they went. The entity stayed the same as day one. The S-corp election was never filed in time. Sales tax in a new state — never registered. And then a letter from the IRS.</p>
+      <p>Nothing exotic — an ordinary story. But each of these little things becomes real money as you grow: thousands of dollars a year in taxes alone. Growth didn't create these problems — it <em>amplified</em> them."</p>
+    </div>
+    <p class="onslide"><b>Slide 15 (teaching):</b> S-corp vs LLC in real dollars.</p>
+    <div class="say">
+      <p class="l">What to say (compare LLC and S-corp)</p>
+      <p>"Let me show you in numbers — and, importantly, what we're comparing against. The business makes <em>$100,000</em> in profit a year. As a plain LLC, self-employment tax — Social Security and Medicare, that 15.3% — applies to <em>all</em> of the profit. On $100k, that's $15,300 a year.</p>
+      <p>Now the S-corp. You pay yourself a reasonable salary — say $50,000. The same 15.3% applies <em>only to the salary</em>. The other ~$50,000 you take as a distribution — and that tax doesn't apply to it at all.</p>
+      <p style="font-family:var(--mono);font-size:15px;color:var(--teal-800)">LLC: 15.3% × $100k = $15,300 · S-corp: 15.3% × $50k = $7,650</p>
+      <p>$15,300 versus $7,650 — <em>half the tax</em>. That's about $7,650 that stays in your pocket, every year, for one right decision about structure."</p>
+    </div>
+    <div class="belief">
+      <div class="num">4</div>
+      <div><p class="l">Belief shift #4</p><p>Good bookkeeping doesn't grow a business. Timely decisions do.</p></div>
+    </div>
+
+    <h2 class="phase">7 · Score YOUR business</h2>
+    <div class="phase-meta"><span class="time">0:45–0:50</span><span class="slidechip">Slide 17</span></div>
+    <p class="onslide"><b>On the slide:</b> "Find your leaks" + the Growth Readiness Check worksheet.</p>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"We've walked four leaks on the coffee shop. Now — on your business. You've got the Growth Readiness Check as a gift. Let's go through it together — I ask, you check honestly. Pay special attention to the 'not sure' answers: each one is probably a leak you can't see right now."</p>
+    </div>
+
+    <h2 class="phase">8 · The offer: Profit Leak Review</h2>
+    <div class="phase-meta"><span class="time">0:50–0:55</span><span class="slidechip">Slide 18</span></div>
+    <p class="onslide"><b>On the slide:</b> "The same four formulas — on your numbers." "Want me to run this on your business?" · $250, credited to the first month.</p>
+    <div class="say">
+      <p class="l">What to say</p>
+      <p>"Today we worked through four formulas — margin, runway, three numbers, structure. Want me to run them <em>on your business?</em> The worksheet shows the leaks <em>exist</em>. But it doesn't show <em>where exactly</em> or <em>how much</em> — that's only visible on your real numbers.</p>
+      <p>For that, we have the <b>Profit Leak Review</b>. We take your books and find where the profit is leaking — specifically, in dollars, with a plan for what to fix first. It's $250. But here's the important part: if you decide to work with us afterward, that $250 goes fully toward your first month. For someone serious, it's essentially free.</p>
+      <p>I'll be honest with you: across dozens of owners, I almost always find leaks worth many times the price of the review. This month I'm taking a limited number — to give each one real time. Want yours — message me and come with your filled-out worksheet."</p>
+    </div>
+    <p class="tip">Calm and confident. You're not pushing — you're offering to find money that's already leaking out.</p>
+
+    <h2 class="phase">9 · Q&amp;A and close</h2>
+    <div class="phase-meta"><span class="time">0:55–end</span><span class="slidechip">Slides 19–20</span></div>
+    <p class="onslide"><b>Seeded questions</b> (if the room is quiet):</p>
+    <ul class="qa">
+      <li><b>"At what revenue should I start thinking about an S-corp?"</b> → short answer + "it's calculated exactly for your situation — that's part of the review."</li>
+      <li><b>"I already have a bookkeeper — why a review?"</b> → "A bookkeeper records the past. A review looks forward: where money is leaking <i>now</i>."</li>
+      <li><b>"I'm just starting out — is it too early?"</b> → "The opposite. Sealing leaks before you grow is far cheaper than after."</li>
+    </ul>
+    <div class="recap">
+      <h3>Close — repeat these four ideas</h3>
+      <ol>
+        <li>More revenue ≠ more money in your pocket.</li>
+        <li>It's not a sales problem — it's profit leaks.</li>
+        <li>Accounting is about timely decisions.</li>
+        <li>Timely decisions grow a business — not bookkeeping.</li>
+      </ol>
+    </div>
+    <div class="say" style="margin-top:14px">
+      <p class="l">Last line</p>
+      <p>"Thank you for being here. I'll send the recording and the worksheet to your email. And remember: growth doesn't create profit — it amplifies what's there. Seal the leaks first — then scale. Have a great day!"</p>
+    </div>
+
+    <!-- AFTER -->
+    <p class="section-label">After the webinar</p>
+    <h2 class="phase">Recording email</h2>
+    <div class="copy">
+      <p><span class="lbl">Subject</span><br>Your recording + the Growth Readiness Check</p>
+      <p>Thanks for joining! As promised:<br>— Recording: [link]<br>— The Growth Readiness Check worksheet: [link]</p>
+      <p>If you want to know exactly where and how much your profit is leaking — that's the Profit Leak Review ($250, fully credited to your first month if you come on board). Come with your filled-out worksheet. Book: [link].</p>
+      <p>Julia, JK Accounting Group</p>
+    </div>
+    <p class="tip">Send within 24 hours, while it's warm. 3–4 days later, one gentle reminder to those who opened but didn't book.</p>
+
+    <!-- REFERENCE -->
+    <p class="section-label">Cheat sheet</p>
+    <h2 class="phase">Timing and "aha" moments</h2>
+    <table class="tt">
+      <tr><td>0:00–0:06</td><td>Two coffee shops — the bigger one pays its owner less <b>(aha #1)</b></td></tr>
+      <tr><td>0:06–0:13</td><td>Open the coffee shop + the "raise your hand" payroll trio <b>(aha #2–4)</b></td></tr>
+      <tr><td>0:13–0:24</td><td>$5,000 → $680, they calculate their own → <b>margin formula</b> (680 ÷ 5000 = 13.6%) <b>(aha #5–6)</b></td></tr>
+      <tr><td>0:24–0:31</td><td>"30 days late" → <b>runway formula</b> (cash ÷ monthly spend) <b>(aha #7)</b></td></tr>
+      <tr><td>0:31–0:38</td><td>"Who knows last month's profit?" → <b>monthly close + 3 numbers</b> <b>(aha #8)</b></td></tr>
+      <tr><td>0:38–0:45</td><td>Structure → <b>S-corp vs LLC: $15,300 → $7,650/yr</b> <b>(aha #9–11)</b></td></tr>
+      <tr><td>0:45–0:50</td><td>Live scorecard — they find their own <b>(aha #12)</b></td></tr>
+      <tr><td>0:50–0:55</td><td>The offer: "run it on your business" — Profit Leak Review</td></tr>
+      <tr><td>0:55+</td><td>Q&amp;A + the four ideas</td></tr>
+    </table>
+
+    <h2 class="phase">Three rules for the whole webinar</h2>
+    <ul class="qa">
+      <li><b>Let them discover first — then give the formula.</b> Every 5–7 minutes, someone should think "oh… that's me" — and only then get one short concept to measure it. Formula after the pain, not instead of it.</li>
+      <li><b>Everything loops back to the coffee shop.</b> One story, not four separate topics — that's how it sticks.</li>
+      <li><b>Advisor's voice, not a lecturer's.</b> "I've seen this across dozens of owners — here's what happens next." That's your edge over everyone who just explains taxes.</li>
+    </ul>
+
+  </div>
+
+  <footer class="foot">
+    <span>JK Accounting Group · Miami · Fort Lauderdale · Online</span>
+    <a href="mailto:julia@jkaccountinggroup.com">julia@jkaccountinggroup.com</a>
+  </footer>
+</article>
+</body>
+</html>
