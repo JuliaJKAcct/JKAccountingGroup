@@ -321,7 +321,12 @@ in that folder.
   organizer against prior years and flag what's missing — a K-1 that was there last year and
   isn't now). The call returns the whole organizer in one payload, SSNs and bank details
   included, so three things bind every time: **the identity block never gets written out** (chat,
-  repo, artifact, Double note, email — by existence, never by value); **you tell the person
+  repo, artifact, Double note, email — by existence, never by value) — **but the TAX FACTS an
+  answer establishes DO belong in the client's file**: the filing status, the states, the
+  dependants position, the coverage type, the income types _(Lilian, 2026-08-12, reversing a wider
+  ban that stood for one day and made a question the organizer had already **answered** unwritable;
+  personal contact details and dollar figures stay out under the separate two-data-homes rule)_;
+  **you tell the person
   BEFORE the first call what it will bring into the conversation**, in plain words with no jargon
   and no `§` references, because the person asking may be **Julia, who will use this without
   knowing how any of it was built**; and **you remind them to delete the session when the work is
