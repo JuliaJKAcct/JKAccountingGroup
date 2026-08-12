@@ -126,7 +126,20 @@ emitted script silently broke *every* click.
    of their topic group and regroups them by `client.slug`, and each client group's header links
    down to that client's intelligence card (`#slug`) — the same slug the CI engine emits.
    Firm-wide SOPs carry **no** `client` field and keep their topic group; a topic group that ends
-   up empty drops out. **To file a new client procedure: give its catalog item the `client`
+   up empty drops out.
+   **A procedure owned by another project stays where it lives — `dir` brings it to the Hub.**
+   Not every "how we do X" belongs in `projects/sops/`: the firm's **social content playbook** and
+   its production workflow live under `projects/marketing/`, where the marketing persona applies to
+   them, and moving them would break that. So a catalog item can carry **`dir`** (the repo-relative
+   folder, default `projects/sops/`) and the Hub reads the file where it is — one source, no copy,
+   no repo path shown to the team. Two optional labels go with it, for a document that is a
+   procedure but not literally an SOP: **`kicker`** (the card's kick, default `SOP`) and
+   **`readerKick`** (the reader masthead's kick, default `Standard Operating Procedure`) — the
+   playbook uses `Playbook` / `Marketing playbook · firm-wide`. Everything else is unchanged: the
+   file still needs the house `> **Status:** … **Owner:** … **Last updated:** …` header line (that
+   is where the card's owner and date come from), and it renders through the same `mdToAtlas` path,
+   so give it a `flow`/`schema` config like any other firm-wide procedure rather than leaving it a
+   wall of prose. **To file a new client procedure: give its catalog item the `client`
    field** (short display name + the CI slug) — it lands in that client's group automatically,
    creating the group if it's that client's first. The two `.hband`s are `data-section`, so the
    owner/search filters hide a whole band when nothing in it matches (e.g. filtering to

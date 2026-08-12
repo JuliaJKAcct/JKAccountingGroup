@@ -1,15 +1,10 @@
 # Social content playbook — Instagram · Facebook
 
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-12
+
 > **Purpose.** The rules that govern **what we post and why** on the firm's social
 > channels. Every Instagram / Facebook post, carousel, Story and Reel follows this
-> file. It sits beside the other two shared marketing files:
->
-> | File | Governs |
-> |---|---|
-> | [`positioning.md`](./positioning.md) | **What the offer is** — the pitch, the two offers, the CTA wording |
-> | [`../../brand/JK-Brand-Guide.md`](../../brand/JK-Brand-Guide.md) | **How it looks and sounds** — palette, type, logo, voice |
-> | **this file** | **What each post is for** — pillar, mix, one action, cadence |
-> | [`collateral/social-post-workflow.md`](./collateral/social-post-workflow.md) | **How a post actually gets made** — who does what, which tool makes the image, the sizes |
+> file.
 >
 > **Where it came from.** Julia brought the *Personal Brand Starter Kit* by
 > **Ekaterina Odintsova** (Creator Season) in August 2026 and asked that we work
@@ -19,15 +14,26 @@
 >
 > **Carried by** the [`social-media-posts`](../../.claude/skills/social-media-posts/)
 > skill — a session working on a post loads that skill, and the skill sends it
-> here. The marketing persona in [`CLAUDE.md`](./CLAUDE.md), which *does* apply
+> here. The [marketing operating persona](./CLAUDE.md), which *does* apply
 > automatically to everything in this folder, points here too, so the rules are
 > reachable from both directions.
 
+## What each file governs
+
+Four documents, four jobs — nothing is decided twice:
+
+| Where | What it governs |
+|---|---|
+| [the offer positioning](./positioning.md) | **What the offer is** — the pitch, the two offers, the CTA wording |
+| [the brand guide](../../brand/JK-Brand-Guide.md) | **How it looks and sounds** — palette, type, logo, voice |
+| **this playbook** | **What each post is for** — pillar, mix, one action, cadence |
+| [the social-post production workflow](./collateral/social-post-workflow.md) | **How a post actually gets made** — who does what, which tool makes the image, the network sizes |
+
 ---
 
-# Part 1 — The rules we follow
+## Part 1 — The rules we follow
 
-## Rule 1 · The personal brand carrying this firm is **Julia's**
+### Rule 1 · The personal brand carrying this firm is **Julia's**
 
 The source's central claim holds for us: people don't follow a logo, and in a
 boutique advisory firm they don't buy a service — they buy **the person they will
@@ -42,20 +48,20 @@ Accountant — never "CEO"** (the firm's standing rule, also enforced in the
 
 The rest of the firm appears in its own right, not as background: **Lilian** owns
 marketing — she sets the topics and approves what goes out (see
-[`collateral/social-post-workflow.md`](./collateral/social-post-workflow.md)) —
+[the production workflow](./collateral/social-post-workflow.md)) —
 and speaks in her own voice on the work she leads. A firm of real, named people is
 proof, not a dilution of Julia's brand.
 
 What this does **not** mean: it is still JK Accounting Group's account, on JK's
 palette and type, under the brand guide's voice.
 
-## Rule 2 · Positioning must land on someone seeing the profile for the first time
+### Rule 2 · Positioning must land on someone seeing the profile for the first time
 
 The source's test: *your positioning must be understandable to a person who has
 just landed on your profile.* Four elements have to be answerable at a glance —
 **who you are · who you help · what problem you solve · why you.**
 
-Filled for JK from [`positioning.md`](./positioning.md) and the
+Filled for JK from [the offer positioning](./positioning.md) and the
 [brand guide](../../brand/JK-Brand-Guide.md) §1 (which is where the firm's
 one-paragraph description and the audience live):
 
@@ -78,11 +84,11 @@ approach]"*), in the firm's own voice:
 > финансовым отделом на весь год и говоря с ними на их языке.
 
 Use this to write the bio, the first line of a carousel, and the "who this is for"
-line of any offer post. It is a **derivative** of `positioning.md`, not a second
-source of truth — if the two ever disagree, `positioning.md` wins and this table
-gets corrected.
+line of any offer post. It is a **derivative** of the offer positioning, not a
+second source of truth — if the two ever disagree, the positioning wins and this
+table gets corrected.
 
-## Rule 3 · Every post stands on one of three pillars
+### Rule 3 · Every post stands on one of three pillars
 
 The source's model, adopted as-is. A post that belongs to none of the three is
 not published.
@@ -98,7 +104,7 @@ personality creates the connection, results create trust and sales.* One pillar
 alone underperforms — expertise without personality is a textbook, personality
 without proof is a diary.
 
-## Rule 4 · The monthly mix is 50 / 20 / 20 / 10
+### Rule 4 · The monthly mix is 50 / 20 / 20 / 10
 
 Not per post — **per month**, checked when the plan is built.
 
@@ -116,7 +122,7 @@ audience we don't want the work.
 When someone asks for "a post", say which bucket it fills and what the month's mix
 looks like so far. That is the reminder this playbook exists to give.
 
-## Rule 5 · One post = one action, named before it is written
+### Rule 5 · One post = one action, named before it is written
 
 The source's pre-publication question — *what action should the person take after
 seeing this?* — is our hardest content rule, because it is the one that separates
@@ -132,12 +138,12 @@ Pick exactly one, before the first line is written:
 - **Book a free discovery call** — **the wording is fixed**: *free discovery call*,
   never *free consultation*. A consultation is paid advisory work ($150 / 1 hour);
   the discovery call is free, 10 minutes, by phone. See
-  [`positioning.md`](./positioning.md), and **check the booking link resolves
+  [the offer positioning](./positioning.md), and **check the booking link resolves
   before it goes into anything published.**
 
 A post whose action you cannot name in one word is not finished.
 
-## Rule 6 · Consistency beats perfection — 3–4 posts a week, planned
+### Rule 6 · Consistency beats perfection — 3–4 posts a week, planned
 
 Straight from the source, and it is the rule most firms break: *regularity is more
 important than perfection — 3–4 quality posts a week to a strategy beat a chaotic
@@ -147,7 +153,7 @@ more reach than it earns.
 Plan a month at a time (topic · pillar · bucket · action), then produce against
 the plan. Recognition is not an accident — it is the output of a system run daily.
 
-## Rule 7 · Proof, without breaking client confidentiality
+### Rule 7 · Proof, without breaking client confidentiality
 
 **This is ours, not the source's** — and it is the one place a personal-brand kit
 written for the creator economy cannot be followed literally. The source's "Result"
@@ -172,7 +178,7 @@ So, for anything in the Proof pillar:
   reader's situation — keep that line visible in posts that could be read as a
   recommendation.
 
-## Rule 8 · The voice does not change because it is social
+### Rule 8 · The voice does not change because it is social
 
 Social rewards volume and heat; we don't pay that price. The brand guide governs
 here without exception: **a calm senior advisor — never fear-based tax marketing,
@@ -182,7 +188,7 @@ the room. "Viral" for us means *clear, useful and shareable*, not clickbait.
 Where the source is louder than we are — *monetization*, *influence*, *financial
 freedom*, *become a magnet* — take the mechanism and drop the register. See Part 3.
 
-## Rule 9 · Bilingual EN / RU, each written natively
+### Rule 9 · Bilingual EN / RU, each written natively
 
 Per the brand guide: every language is written natively, never
 machine-translated — match the quality, not the word order. Ukrainian when the
@@ -206,7 +212,7 @@ alike.
 
 ---
 
-# Part 2 — The source, digested
+## Part 2 — The source, digested
 
 **Ekaterina Odintsova — *Personal Brand Starter Kit: 5 шагов к узнаваемости и
 монетизации* ("Личный бренд, который работает на вас"), Creator Season.** A
@@ -287,7 +293,7 @@ you want."* · **System + strategy + consistency = an inevitable result.**
 
 ---
 
-# Part 3 — What we took, adapted, and left
+## Part 3 — What we took, adapted, and left
 
 Being explicit about this is the point: the source is a personal-brand kit written
 for the creator economy, and we are a regulated professional practice serving an

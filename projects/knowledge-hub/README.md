@@ -35,7 +35,7 @@ the source files.
 ```
 knowledge-hub/
 ├── README.md         ← you are here
-├── build-hub.mjs     ← the generator: reads projects/sops + projects/client-intelligence → index.html
+├── build-hub.mjs     ← the generator: reads projects/sops (+ a catalog `dir` override for docs owned by another project, e.g. projects/marketing/) + projects/client-intelligence → index.html
 ├── hub.css           ← Hub-only components (search, cards, meters), composed ONLY from Atlas tokens
 ├── index.html        ← the generated Hub, self-contained + on-brand — for opening LOCALLY (a BUILD ARTIFACT: gitignored, never committed; rebuild on demand)
 └── scratch/          ← also generated + gitignored; holds hub.artifact.html — the body-only fragment that IS what gets published

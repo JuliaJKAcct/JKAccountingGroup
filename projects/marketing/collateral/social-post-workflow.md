@@ -84,7 +84,7 @@ text + the size. The AI provides "how it looks"; Claude ensures "what it says" a
 ## Brand
 
 We don't repeat colors or typography here (to avoid drift). The single source is
-**[`../../../brand/JK-Brand-Guide.md`](../../../brand/JK-Brand-Guide.md)** —
+**[the JK Brand Guide](../../../brand/JK-Brand-Guide.md)** —
 palette, type, logo, and voice. Claude applies that guide on every finish.
 
 ## Continuous improvement
