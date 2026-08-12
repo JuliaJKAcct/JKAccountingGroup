@@ -169,11 +169,14 @@ function activeSvcKeys(svc){
     .map(([k]) => SVC_KEY[k]);
 }
 function stateTag(s){
+  // Unresolved wins over any state named in the same line. A file that says the 2025
+  // position is not established must not publish a confident pill, however many states
+  // its prose mentions — a broken-looking pill is safer than a plausible wrong one.
+  if(/pending|not established|unknown|not settled/i.test(s)) return null;
   if(/florida|(^|[^a-z])FL([^a-z]|$)/i.test(s)){
     const c = (s.match(/Broward|Palm Beach|Miami-?Dade|Hillsborough|Orange/i)||[])[0];
     return c ? `FL · ${c}` : 'FL';
   }
-  if(/pending|not established|unknown/i.test(s)) return null;
   const c = stripSrc(s).replace(/\(.*?\)/g,'').replace(/[.,;\s]+$/,'').trim();
   return c ? c.slice(0,20) : null;
 }
@@ -202,14 +205,20 @@ function label(setSlugs){
   return 'Linked group';
 }
 
-// system chips by keyword scan (robust to table-format variation; non-sensitive)
+// System chips by keyword scan (robust to table-format variation; non-sensitive).
+// ⚠️ Two traps, both found live on a real card (2026-08-12): a bare word-match fires on a
+// DENIAL — "no QuickBooks", "no bank feed" — and on an ordinary verb, so "the first thing to
+// chase" published Chase as the client's bank. Every pattern below must therefore reject a
+// preceding no/without/never, and a brand whose name is also a common word needs more than
+// the word.
+const NEG = String.raw`(?<!\b(?:no|not|without|never|non)\s{1,3})`;
 const SYS = [
-  ['QuickBooks Online', /quickbooks/i],
+  ['QuickBooks Online', new RegExp(NEG + String.raw`quickbooks`, 'i')],
   ['Gusto', /gusto/i], ['ADP', /\bADP\b/], ['Bravo POS', /bravo/i],
   ['TaxDome', /taxdome/i], ['SaasAnt', /saasant/i],
   ['Amazon', /amazon/i], ['Shopify', /shopify/i], ['eBay', /ebay/i],
   ['Google Ads', /google ads/i], ['FL DOR portal', /fl dor|florida tax portal/i],
-  ['Mercury', /mercury/i], ['TD Bank', /td bank/i], ['Chase', /\bchase\b/i],
+  ['Mercury', /mercury/i], ['TD Bank', /td bank/i], ['Chase', /\bchase\s+(?:bank|checking|savings|business|\d)|\bchase\b(?=[^.]{0,30}\b(?:bank|account|statement|card)\b)/i],
   ['Wells Fargo', /wells fargo/i], ['Amex', /amex|american express/i],
 ];
 
@@ -303,7 +312,12 @@ export function loadClients(repoRoot){
     if(/^Yes/i.test(lic['Annual report']||'')) flags.push('Annual report');
     if(/licens|insurance|WC|workers.?.?comp|FFL/i.test(obl['Licenses & other filings']||'')) flags.push('Licensing');
 
-    const systems = SYS.filter(([,re])=>re.test(md)).map(([n])=>n);
+    // Scan the client's own prose only. Every file opens with the two-data-homes
+    // blockquote — "secrets stay in Google Drive / Double / QuickBooks" — so scanning the
+    // raw text gave EVERY client a QuickBooks chip, including the ones whose §1 says in
+    // as many words that they have none. Blockquotes are guidance, not client facts.
+    const sysText = md.split('\n').filter(l => !/^\s*>/.test(l)).join('\n');
+    const systems = SYS.filter(([,re])=>re.test(sysText)).map(([n])=>n);
 
     const links = getSec(S,'7');
     // Find the label's own line first, then take the first URL on it. The previous form

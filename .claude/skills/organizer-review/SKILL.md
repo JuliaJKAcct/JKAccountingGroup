@@ -80,12 +80,22 @@ comes with rules that do not bend. In short, and none of this is optional:
    rendered file, not the draft; it says on its own first page that it is client material for
    Double or the firm's Drive, **not for a link that circulates**; and it is written to the
    session scratchpad and **never** to a path `git add` can reach. §5 has the recipe.
-5. **Never into the repo — and the bar is wider than identifiers.** *What the client
-   answered* is barred too, not only their SSN. Write **the action**, not the answer.
-   Watch the paraphrase: *"his answers point the other way"* leaks exactly as much as a
-   quote. If a sentence would change when the client's answer changes, it is still the
-   answer. (Learned by doing it wrong — [`client-intelligence`](../client-intelligence/),
-   the ⛔ subsection.)
+5. **Into the repo: the tax facts YES, the identity block NEVER** _(Lilian, 2026-08-12 —
+   this reverses the rule that stood for one day)_. A client file may record what an answer
+   establishes — the filing status, the states, the dependants position, the coverage type,
+   the income types. It may **not** carry the identity block (SSN/ITIN, licence, bank
+   numbers, passports, dates of birth), **personal contact details** (phone, email, street
+   address — a city and state are a tax fact and may be written), or **dollar figures**,
+   which a separate two-data-homes rule keeps in Double and Drive.
+   **Write the fact and the action together.** The full rule, with what it replaced and why,
+   is [`double-mcp`](../double-mcp/) §2.2 exposure point 2 and
+   [`client-intelligence`](../client-intelligence/).
+   ⚠️ **One category is NOT ruled on: a fact about someone's CIRCUMSTANCES** — a health
+   condition behind a coverage answer, a disability, a separation, insolvency, immigration
+   status, an identity-theft PIN. Those are tax facts by every test in the rule, so it
+   permits them, and Lilian has not been asked. **Until she is, write the consequence and
+   not the circumstance** — *"Form 1095-A is required and blocks filing"* — and **ask her**
+   when a circumstance is genuinely load-bearing. See `double-mcp` §2.2 for the list.
 6. **Never write the organizer payload to a file**, including the scratchpad. Do the
    comparison in context.
 7. **Every example in this file — or any skill — is INVENTED, and labelled as such.** Never
@@ -638,8 +648,11 @@ So the client file's §6 gets a **`Tax year YYYY — the review`** entry carryin
   responses, and they belong here.
 - **What was decided and why**, including anything left unresolved at filing.
 
-**The bar in §0 rule 5 still stands over all of it:** the file records the question and,
-once the client tells us, their answer to *us* — never what they ticked in the organizer.
+**§0 rule 5 governs all of it:** the file records the question, its answer, and **the tax facts
+the review established — whatever source established them**, the organizer included since
+2026-08-12. What stays out is the identity block, personal contact details and dollar figures —
+and, until Lilian rules, a fact about the client's **circumstances** rather than their tax
+position (§0 rule 5).
 In practice that costs almost nothing, because the answer we act on is the one they give
 when we ask.
 
@@ -664,7 +677,7 @@ spaces or dots rather than hyphens. **You are still the control**; see
    "Outstanding items" ever reach the team.** The published client card renders four and a fifth
    appears nowhere ([`client-intelligence`](../client-intelligence/)). A long re-ask list is fine;
    just make sure the items that would cause a wrong return sit at the top, or they are invisible
-   to everyone but the person who wrote them. **The client's ORGANIZER answers stay out — write the action. What the client tells us directly when we ask goes in.**
+   to everyone but the person who wrote them. **Write the tax fact AND the action** — the identity block, contact details and figures stay out (§0 rule 5).
 2. **Do not write the analysis to the Double note.** Ask Lilian if a finding genuinely
    belongs in front of the team.
 3. **Deliver the review in chat** — never as an artifact, never committed.

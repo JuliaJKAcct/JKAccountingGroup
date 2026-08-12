@@ -135,8 +135,9 @@ A running, dated record as we build this profile.
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
      every question put to the client AND its answer once it arrives, what a prior-year
-     return established, and what was decided. The client's ORGANIZER answers never go here
-     (double-mcp §2.2); what the client tells US directly does. See the organizer-review skill. -->
+     return established, and what was decided. The client's TAX FACTS belong here whatever
+     source established them, the organizer included (Lilian, 2026-08-12); the identity block,
+     contact details and dollar figures never do (double-mcp §2.2). See the organizer-review skill. -->
 
 - _(pending)_
 

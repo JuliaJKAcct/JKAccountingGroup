@@ -84,8 +84,10 @@ not reach it. Mechanics in the [`organizer-review` skill](../../.claude/skills/o
 §0 rule 4 and §5.
 
 What survives in the repo is the **`Tax year YYYY — the review`** entry in the client's Client
-Intelligence file, which records the questions and their answers without repeating what the client
-ticked in the organizer.
+Intelligence file: the questions, their answers, and **the tax facts the review established** —
+whatever source they came from. The identity block, personal contact details and dollar figures
+stay out ([`organizer-review`](../../.claude/skills/organizer-review/) §0 rule 5, which Lilian
+rewrote on 2026-08-12).
 
 ## Everything this session established — and where it lives
 
@@ -115,7 +117,7 @@ lost** — plenty is written down that no single row names.
 | **Calibration** — run it cold, correct only at the end | that skill §6, and *Working on this* below |
 | A client file is created **in the same session** you work a client | `CLAUDE.md` core conventions + [`client-intelligence`](../../.claude/skills/client-intelligence/) |
 | A **Double note** carries the client's information, **not our analysis** | `CLAUDE.md` + [`double-mcp`](../../.claude/skills/double-mcp/) §7 rule 11 |
-| **Organizer answers never reach the repo** — including paraphrase | [`double-mcp`](../../.claude/skills/double-mcp/) §2.2 + `client-intelligence`'s ⛔ subsection |
+| **What an organizer answer may leave in the repo** — the **tax facts** yes (filing status, states, dependants, coverage, income types); the **identity block, contact details and dollar figures** never. Lilian reversed the wider ban on 2026-08-12, one day after it was written, because it made a *resolved* question unwritable | [`double-mcp`](../../.claude/skills/double-mcp/) §2.2 + `client-intelligence`'s ⛔ subsection |
 | **No identifiers on published pages** — client files feed the Hub *and* the review dashboard (an Artifact) | Enforced in [`client-intelligence/render/build.mjs`](../../.claude/skills/client-intelligence/render/build.mjs) → `loadClients()`. Stated, with its blind spots, in the [`client-intelligence`](../../.claude/skills/client-intelligence/), [`knowledge-hub`](../../.claude/skills/knowledge-hub/) and [`organizer-review`](../../.claude/skills/organizer-review/) skills · `FOLLOW-UPS` 26 |
 | The **1040 organizer's logic defects** — seven dead options, the unreachable rental branch | [`individual-organizer-logic-defects.md`](../../.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) · `BACKLOG` IDEA-17 · `FOLLOW-UPS` |
 | **`VIA VOICE` in a Double note means Google Voice**, not a recording | [`organizer-review`](../../.claude/skills/organizer-review/) §1 source 2 + the client's file §5 |
@@ -126,8 +128,10 @@ lost** — plenty is written down that no single row names.
 | **Lilian's standing arrangement** — she keeps the information reachable, so the source list is an expectation; a genuinely missing channel is reported to her, not asked of the client | [`organizer-review`](../../.claude/skills/organizer-review/) §1 |
 | Everything about the **pilot client** — his structure, his carryovers, his open questions | [`clients/denys-melnyk.md`](../client-intelligence/clients/denys-melnyk.md) |
 
-**What is deliberately NOT written down:** the client's organizer answers, his figures, his
-identifiers. Those stay in Double. That is the rule, not an omission.
+**What is deliberately NOT written down:** his **identifiers**, his **contact details** and his
+**figures**. Those stay in Double. **The tax facts are written down** — Lilian reversed the wider
+ban on 2026-08-12, one day after it was written, because it made a question the organizer had
+already *answered* unwritable.
 
 ## Working on this
 
