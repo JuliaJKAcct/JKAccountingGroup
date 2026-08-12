@@ -611,6 +611,16 @@ Notes that save time:
 - `list_file_library` returns **folders only**. To see documents, call
   `list_files(clientId, folderId)` — it includes the folder's subfolders too.
 
+🔴 **NEVER WRITE A DOCUMENT'S LOCATION FROM ASSUMPTION — verify it, or ask.** A path in a note or a
+client file is what the next person follows; a wrong one sends them hunting for a file that is
+sitting where you did not say. **If you cannot confirm where a document is, say so and ask** —
+Lilian's instruction, 2026-08-12, after a note gave the folder for a client's Home Office template
+without its filename and got it wrong: *"si no logras encontrarlo, no es problema, pero no lo
+asumas. Simplemente pregúntame y te ayudo."*
+**Record the FILENAME, not just the folder** — a year folder holds many documents, and
+`get_file` searches by `clientId` + **name**, so a path without a filename is not actionable.
+The shape to use: `JK Accounting Group > Others > 2025 > Form 1098 2025.jpeg`.
+
 ---
 
 ## 4. Practice configuration worth knowing
@@ -805,14 +815,29 @@ the whole thing start to finish, instead of reconstructing it from email.
    ⚠️ **The author field CANNOT be changed.** Neither tool takes a user parameter, and the note is
    attributed to whoever the connector is signed in as. There is no fix in the API — only the
    byline.
-   **So the first line of every note is:**
-   > `<p><em>Written by <strong>&lt;name&gt;</strong> — Double posts every firm note under Julia's login.</em></p>`
+   **So the first line of every note we write THROUGH THE CONNECTOR is exactly this, and nothing
+   more:**
+   > `<p><em>Written by <strong>&lt;name&gt;</strong></em></p>`
+
+   🔴 **The default name is LILIAN.** Her standing instruction, 2026-08-12: *"siempre que hagamos
+   este tipo de nota, ponme a mí como autora, porque soy yo la que estoy creando esa nota… a menos
+   que te pida lo contrario, siempre tiene que ir a nombre mío."* **Unless she says otherwise, or
+   the note plainly belongs to someone else who is present, it reads `Written by Lilian Gonzalez`.**
+   ⚠️ **Do NOT append an explanation.** A first version added *"— Double posts every firm note under
+   Julia's login"*; **she struck it the same day as unnecessary.** The byline is the name, full stop.
+   ⚠️ **Scope: a note a PERSON typed in the Double UI is already attributed correctly and gets NO
+   byline** — note `485225` on Denys Melnyk carries `userId 264904 Lilian Gonzalez` because she
+   typed it herself. Adding the line there would be false, and would edit a note nobody asked you
+   to touch.
+   🔵 **And there IS a route to real authorship — offer it when authorship actually matters:**
+   **compose the note and have her paste it into the Double UI herself.** That is exactly how 485225
+   carries her name. The byline is the fallback for notes a session writes. _(The other route —
+   re-authenticating the connector as her account — is rejected: it would break the admin-only tools
+   §4 depends on.)_
 
    _(Lilian's instruction, 2026-08-12, after a note she had dictated end to end appeared in Double
    as Julia's: **"cuando lo guardes en Double, ponlo como creado por Lilian, no por Julia"** — and
-   she could not correct it in the UI either. The byline is what the firm can actually control, and
-   the second half of the sentence is what stops the next reader assuming the author line is wrong
-   rather than shared.)_ **Keep the `Last updated: <date> — <name>` footer as well** — the byline
+   she could not correct it in the UI either. The byline is what the firm can actually control.)_ **Keep the `Last updated: <date> — <name>` footer as well** — the byline
    says who wrote it, the footer says who touched it last, and on a long-running note those differ.
 6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
 7. **The repo file stays the master — and its substance is NOT only `§6`.** The case's full detail
@@ -885,6 +910,24 @@ the whole thing start to finish, instead of reconstructing it from email.
    ⚠️ **This narrows rule 10, it does not reverse it.** Names, emails, phone numbers, client IDs and
    figures still go in freely — rule 10 governs *how much detail* a note carries, rule 11 governs
    *what kind of content*. And the 🔒 identity-block exclusion survives both.
+12. **A note is about the RETURN — not about the relationship, and not about our machinery.**
+   _(Derived from what Lilian actually deleted when she edited note 490984 herself on 2026-08-12,
+   and she asked for the pattern to be kept as a rule: **"entiende por qué lo borré… el tipo de
+   cosas que sí quiero que vaya y el tipo que no."**)_ She cut two kinds of thing, and they name
+   two axes rule 11 does not:
+   - ✂️ **The DERIVATION behind a settled fact.** She kept *"Filing status: married"* and struck
+     *"and not living apart from his spouse in the last six months of 2025"* — the test that
+     established it. **State the conclusion. The reasoning that produced it lives in the client
+     file.** A reader preparing a return needs the answer, not the audit trail.
+   - ✂️ **Client-handling background and our own process commentary.** She struck the whole *"how he
+     works"* block: that he sends information by text rather than the portal, that he speaks
+     Russian, and the explanation of **why our organizer stopped asking questions**. **Colleagues
+     already know the client, and how our tools behaved is our business, not the return's.**
+   **The test to apply to every line: does this change the return, or tell someone what to do?**
+   If neither, it belongs in the [`client-intelligence`](../client-intelligence/) file. This is
+   also the first thing to cut when a note approaches the size wall below.
+   ⓘ **And leave a person's own edits alone.** When someone has trimmed a note themselves, that is
+   a decision — record it in the client file and **do not restore what they removed.**
 
 ### The size wall — a long note gets blocked, not truncated
 

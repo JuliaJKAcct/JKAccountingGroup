@@ -21,7 +21,7 @@
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
 - **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. ⚠️ **He says that company filed for bankruptcy; Lilian does not treat that as reliable** (§5). _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -51,7 +51,7 @@ link). Never write the credential itself here.
 |---|---|---|---|
 | Double (client portal) | Organizer, document delivery | n/a — firm platform | Client `cid=764785`; 2025 organizer `responsesVisibility: admins_only` |
 | Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5 |
-| Adobe | An intermediate working step of Lilian's for client PDFs — **not where documents end up** | _(n/a — firm tool)_ | ✅ **Settled 2026-08-12:** she said of the 1098 *"voy a guardarlo ahora en Double"*, so **the client's documents land in DOUBLE**. Adobe is a staging step, not a second home. _(An earlier row here left this open.)_ |
+| Adobe | An intermediate working step of Lilian's for client PDFs — **not where documents end up** | _(n/a — firm tool)_ | ✅ **Settled 2026-08-12:** the client's documents land in **DOUBLE**. Adobe is a staging step, not a second home |
 
 - No QuickBooks, no bank feed, no payroll system. Everything we have came from the client directly.
 
@@ -127,8 +127,13 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   **Ask one question at the point of use: *"El dinero de los primeros meses de 2025 — ¿lo recibió o
   no lo recibió, y cómo se lo pagaron?"*** ⚠️ **Nothing downstream is safe until this is settled** —
   the Illinois question, the expenses and the whole "what was that money" blocker all rest on it.
-- 🔴 **THE COMPANY FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12 — she added this after the first
-  write-up; the client told her)_. ✅ **RESOLVED 2026-08-12: NOBODY DIED.** Her earlier
+- 🟠 **THE CLIENT SAYS THE COMPANY FILED FOR BANKRUPTCY — treat it as his statement, not a fact**
+  _(Lilian, 2026-08-12)_. ⚠️ **She does not regard it as reliable, and gave the reason: he broke
+  with his partner and she has no way to judge how true it is** — *"para mí eso no es una
+  información 100% confiable… simplemente ponlo como una nota o un comentario del cliente."*
+  **Everything below is conditional on it.** 🔍 **And it is cheap to verify: the docket is public**
+  (below) — that turns his claim into a fact or removes it, without asking him and without the
+  partner. **Verify before acting on any of it.** ✅ **RESOLVED 2026-08-12: NOBODY DIED.** Her earlier
   *"his partner — that company — died, or it filed a bankruptcy"* was a **voice-to-text error**;
   she confirmed the same day. **It is the bankruptcy alone**, so every consequence below runs off
   that and the partner-death branch is closed. What the bankruptcy changes:
@@ -525,42 +530,46 @@ reached that question. **So do not chase him for it; it is already here.** He ch
 mid-2025, so any allocation probably has to cover two homes — and it only matters at all once the
 Schedule C question above is settled.
 
-🔴 **Rent AND mortgage — two sources say rent, one says mortgage, and the home-office numbers may
-turn on it** _(sharpened by Lilian, 2026-08-12)_. He **sent the Form 1098**, so a **mortgage**
-exists. But **rent appears twice**: in his figures note, and — the new evidence — **in the Home
-Office template he filled in himself, where the housing expense he entered is a RENT payment.**
-⚠️ **Two readings, and Lilian cannot tell which:** he pays **both** (two homes, or the mid-year
-move), or **he wrote "rent" meaning the mortgage.** **Confirm with him.**
-⚠️ **It is not just a labelling question — but do NOT say "either way the figures have to be
-redone", which over-promises.** Two conditions gate that:
-- **There may be no Form 8829 at all.** It attaches to **Schedule C**, and whether he has one is
-  still the open question above. If the 2025 money was wages, a distribution or a K-1 share from
-  his own S corp, a shareholder-**employee** has no home-office deduction on his 1040 — the route
-  is an **accountable-plan reimbursement** on the 1120-S, employee home office is dead through 2025
-  under **§67(g)**, and **§280A(c)(6)** bars deducting rent charged to your own employer. Then the
-  template is simply moot.
-- **Under the SIMPLIFIED method it changes nothing** — the $5/sq ft safe harbour uses no actual
-  housing expense and files no 8829; interest and taxes go whole to Schedule A. **Rent vs mortgage
-  only moves numbers under the REGULAR method.**
-**So: if there is a Schedule C at all, and under the regular method, the figures have to be redone.**
-⚠️ **And the reason they change is not what an earlier version of this file said.** Both go in
-different boxes (interest line 10, real-estate taxes line 11, rent line 19), but the **indirect
-column of both is multiplied by the same business-use percentage — the apportionment is
-identical.** What actually differs: **interest and taxes are allowed regardless of the
-gross-income limitation** while **rent sits in the capped operating group** and carries forward;
-**the personal share of interest and taxes can reach Schedule A** if he itemises, while the
-personal share of rent is worth nothing; and **an owner also gets depreciation**, which brings
-unrecaptured §1250 gain on a later sale. That last one is the real reason the numbers move.
-🔍 **And before asking him at all: look at the 1098.** It names the **lender**, the **outstanding
-principal**, the **address of the property securing the loan** and whether that address is his
-**principal residence** — set against the Kirkland → Florida move and the address on the Home
-Office template, that may distinguish "owns in WA, rents in FL" from a mislabel **without a single
-question**. ⚠️ **Confirm it is a Form 1098 (Mortgage Interest Statement) and not a 1098-E or
-1098-T** — clients call all three "the 1098", and the whole contradiction rests on that reading.
-⚠️ **This is a step for Lilian or Julia, not a session:** the document rule lets a session open only
-the prior-year return, through the redactor.
-It stays separate from the **rental-income** question (does he rent the apartment OUT — a
-Schedule E), which is still open too.
+✅ **Rent AND mortgage — BOTH, and the 1098 explains why** _(Lilian read it, 2026-08-12)_. **The
+house on the Form 1098 is in MINNESOTA.** He lived in **Washington until May 2025 and Florida
+after**, so **he was paying a mortgage on a house he did not live in, and renting where he did.**
+Nothing was confused: the rent on his figures note and on the Home Office template is real, and so
+is the mortgage. **Do not re-ask him "rent or mortgage".**
+⚠️ **What it OPENS is bigger than what it closed:**
+- 🔴 **Is the Minnesota house RENTED OUT?** A house he owns and does not live in either sits empty
+  or produces **rental income** — **Schedule E**, with depreciation, and **Minnesota-source income,
+  which is its own nonresident state return.** Nobody has asked. _(If it is empty, the mortgage
+  interest is still deductible as a second home on Schedule A within the qualified-residence
+  limits — it simply is not a rental.)_
+- ✅ **And it settles the home-office question the other way:** if he rented where he lived, the
+  home-office expense is **rent**, which is what the template says. **The template is right, not
+  wrong** — the earlier reading that it had to be redone was based on assuming the 1098 was his
+  home.
+ⓘ **The trail, for the record:** he **sent the Form 1098** (a mortgage), while
+**rent appeared twice** — in his figures note and in the **Home Office template he filled in
+himself.** That looked like a contradiction, and it was not: **the two documents are about two
+different homes.**
+⚠️ **The home-office numbers still are not simply "fine", but for a different reason than before.**
+Two conditions gate whether Form 8829 matters at all: **it attaches to Schedule C**, and whether he
+has one is still open — if the 2025 money was wages, a distribution or a K-1 share from his own
+S corp, a shareholder-**employee** has no home-office deduction on his 1040 (the route is an
+**accountable-plan reimbursement** on the 1120-S; employee home office is dead through 2025 under
+**§67(g)**, and **§280A(c)(6)** bars deducting rent charged to your own employer). And **under the
+SIMPLIFIED method none of this moves a number** — the $5/sq ft safe harbour uses no actual housing
+expense and files no 8829.
+ⓘ **For the record, since an earlier version of this file got it wrong:** interest, taxes and rent
+sit in different 8829 boxes, but the **indirect column of both is multiplied by the same
+business-use percentage — the apportionment is identical.** What differs is that **interest and
+taxes are allowed regardless of the gross-income limitation** while **rent sits in the capped
+operating group**; that the **personal share of interest and taxes can reach Schedule A** while the
+personal share of rent is worth nothing; and that **an owner gets depreciation**, with unrecaptured
+§1250 gain on a later sale.
+⚠️ **One thing still to confirm on the document itself: that it is a Form 1098 (Mortgage Interest
+Statement) and not a 1098-E or 1098-T** — clients call all three "the 1098". Lilian has read it and
+taken the property address off it, which makes a mortgage statement much the likeliest, but nobody
+has said so explicitly.
+The **rental-income** question (is the Minnesota house rented out — a Schedule E, and a Minnesota
+return) is open and is now the live half of this.
 
 🟠 **Health coverage — the Marketplace finding is CONTESTED as of 2026-08-12; see the call block
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
@@ -737,7 +746,7 @@ particular finding earns a place there.
   mid-year move means two different exchanges and possibly two 1095-As.
 
 - _(2026-08-12, Lilian)_ — **Three further things from the same call, one of them large.**
-  🔴 **THE COMPANY FILED FOR BANKRUPTCY** — she had not mentioned it in the first pass, and it
+  🟠 **THE CLIENT SAYS THE COMPANY FILED FOR BANKRUPTCY** — she had not mentioned it in the first pass, and it
   changes the decision: a company in bankruptcy often stops filing, so **the K-1 may never exist at
   all** rather than merely be late, which weakens the "wait for the 1120-S" route and strengthens
   the transcript and file-with-**Form 8082** routes. It may also open a **worthless-stock loss**
@@ -805,6 +814,32 @@ particular finding earns a place there.
   `create_note` nor `update_note` takes a user — so **every note now opens with a byline naming its
   author**, written into the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7 rule 5 so
   it is not left to memory.
+
+- _(2026-08-12, Lilian)_ — **She read the Form 1098 herself, and it resolved the rent question by
+  explaining it rather than choosing between the readings.** 🏠 **The house on the 1098 is in
+  MINNESOTA**, and he lived in **Washington until May 2025, then Florida** — so **he pays a
+  mortgage on a house he does not live in and rents where he does. Both are true; nothing was
+  confused**, and the Home Office template's rent entry is correct. 🔴 **What it opens is larger:
+  is that house RENTED OUT?** That would be a **Schedule E** with depreciation **and a Minnesota
+  nonresident return** — a state nobody had considered. 🟠 **She also downgraded the bankruptcy to
+  a client statement** — *"para mí eso no es una información 100% confiable… simplemente ponlo como
+  una nota o un comentario del cliente"* — because he broke with the partner and she cannot judge
+  it. **Everything built on it is conditional, and the public docket is what would settle it.**
+  📁 **She corrected the document paths and set a rule:** the Home Office template is
+  `Home_Office_Deduction_Filled.xlsx` and the 1098 is `Form 1098 2025.jpeg`, both under
+  `JK Accounting Group > Others > 2025` — and **never write a document's location from assumption;
+  ask her** _(now [`double-mcp`](../../../.claude/skills/double-mcp/) §3)_. ➕ **One new question:
+  did he sell any other VEHICLE in 2025?** ✂️ **And two note rules came out of her own edits** —
+  the byline is **her name alone**, no explanation, and a note carries **what changes the return**,
+  not the derivation behind a settled fact and not how the client or our own tools behave
+  (§7 rules 5 and 12).
+  📋 **Her view of what is left with the CLIENT:** the **1095-A** if there is one (he is checking
+  with his broker whether the cover was Marketplace), the **rest of the expenses**, and the
+  **vehicle** question. ⚠️ **That is the client-facing list and it is hers — but it is not the whole
+  open list**, and the difference is worth putting to her: the **daughter's 2025 residence and age**
+  is also a question only he can answer, and *"how were you paid"* likewise. Everything else
+  outstanding is **firm-side** (the docket, the return type, the route with Julia), not something to
+  ask him.
 
 _So this year can be answered later without anyone's memory. Records the questions, their answers
 as they come back, and **the tax facts the review established from any source** — the organizer
@@ -909,11 +944,14 @@ published card** — they are ordered by what would cause a wrong return or a re
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
   its own exchange and Florida uses healthcare.gov, so a WA plan would not appear on healthcare.gov
   at all. The method, and the wording, are in §5.
-- 🔴 **Does he pay RENT as well as the mortgage, or did he write "rent" meaning the mortgage?** The
-  **Form 1098** says mortgage; the **Home Office template he filled in himself** records a **rent**
-  payment, and his figures note lists rent too. **Lilian cannot tell which** (§5). ⓘ **Look at the
-  1098 before asking** — it names the property securing the loan and whether it is the principal
-  residence, which may settle it without him.
+- ~~**Rent or mortgage?**~~ ✅ **ANSWERED 2026-08-12 — BOTH.** The 1098 house is in **MINNESOTA**
+  and he lived in Washington then Florida, so he pays a mortgage on one home and rent on another
+  (§5). **Do not re-ask.**
+- 🔴 **Is the MINNESOTA house rented out?** It is the live half of that finding, and nobody has
+  asked. If it produces rental income there is a **Schedule E** with depreciation **and a Minnesota
+  nonresident return** — a state nobody has considered. If it sits empty it is simply a second home.
+- **Did he sell any other VEHICLE in 2025?** _(Lilian's question, 2026-08-12.)_ It connects to the
+  2024 **Form 4797** disposal already on file — ask them together.
 - 🟠 **The daughter — where did she live in 2025, for how many months, and how old was she at 31
   December 2025?** ✅ **Who she is is settled** (the child claimed in 2024 — Lilian, 2026-08-12);
   only her residence and age are open. 🔍 **Her AGE is a LOOKUP — her date of birth is in Double.
@@ -1031,5 +1069,12 @@ published card** — they are ordered by what would cause a wrong return or a re
   are visible to the client in the portal is still unconfirmed**
   ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 17), the note is written so nothing in it would
   be damaging if he read it.
+- **Where his documents are in Double** _(exact paths and filenames — Lilian, 2026-08-12; ⚠️ never
+  write one of these from assumption, ask her instead)_:
+  - `JK Accounting Group > Others > 2025 > Home_Office_Deduction_Filled.xlsx` — the completed
+    Home Office template
+  - `JK Accounting Group > Others > 2025 > Form 1098 2025.jpeg` — the mortgage statement, **the
+    property on it is in MINNESOTA** (§5)
+  - `Tax Return Filed/2024` — his 2024 return, prepared elsewhere
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** none yet.
