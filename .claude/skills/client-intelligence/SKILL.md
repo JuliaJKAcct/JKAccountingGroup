@@ -220,6 +220,16 @@ visible rather than assumed done.
      because open matters and lessons outlive the engagement),
    - a **row in `sweep-state.md`** (new client → gets a full historical sweep once).
 
+   ⚠️ **And then say the part the commit cannot do: the live Routine must be updated.** The
+   Saturday sweep runs off a prompt **pasted into the web UI**, so editing the CLIENTS list here
+   leaves the run sweeping the **old** list. A session that adds a client, commits, and reports
+   "done" has half-finished it. Tell whoever asked, in the same breath, that the Routine at
+   claude.ai/code/routines needs its prompt updated — and warn that a wholesale paste overwrites the
+   real webhook URL and secret with this repo's placeholders, so those two values have to be carried
+   across by hand. The mechanics are in
+   [`weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
+   → *THIS FILE IS NOT THE LIVE ROUTINE*.
+
 ## Enriching — the research sweep
 
 Sources, per client: **Ping Assistant** (`resolve_person`, `search_contacts`,
