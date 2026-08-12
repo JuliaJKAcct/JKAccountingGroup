@@ -51,7 +51,7 @@ link). Never write the credential itself here.
 |---|---|---|---|
 | Double (client portal) | Organizer, document delivery | n/a — firm platform | Client `cid=764785`; 2025 organizer `responsesVisibility: admins_only` |
 | Health insurance — **Blue Cross Blue Shield** | 2025 coverage. ⚠️ **Whether it is Marketplace or private is UNSETTLED** — and the answer decides whether Form 1095-A blocks the return | _(n/a)_ | Carrier named by the client 2026-08-12; the organizer says Marketplace. **BCBS sells both on and off the exchange, so the carrier name settles nothing** — see §5 |
-| Adobe | Where Lilian said she would put the client's 1098 | _(n/a — firm tool)_ | Mentioned once by Lilian, 2026-08-12. ⚠️ **How it relates to Double is not established** — worth asking her, since a client document filed outside Double is one the next session will not find |
+| Adobe | An intermediate working step of Lilian's for client PDFs — **not where documents end up** | _(n/a — firm tool)_ | ✅ **Settled 2026-08-12:** she said of the 1098 *"voy a guardarlo ahora en Double"*, so **the client's documents land in DOUBLE**. Adobe is a staging step, not a second home. _(An earlier row here left this open.)_ |
 
 - No QuickBooks, no bank feed, no payroll system. Everything we have came from the client directly.
 
@@ -410,14 +410,14 @@ rejection**. So he may turn out to have bought on-exchange and still not be bloc
 1095-A can be **worth money, not just a gate**: with the NOL his household income may be low enough
 for a **net premium tax credit** on Form 8962.
 
-**🟠 The apartment, the Form 1098 — and a rental question that has to be asked precisely.** He has
-an **apartment** and has **sent us the Form 1098** (Lilian is filing it in Adobe). On his account
-that means **mortgage interest** — _nobody has opened the document yet_ — where his Double note had
-said he pays **rent**. Both can still be true across the mid-year move, so this is the two-homes
-picture, not a contradiction to resolve on paper.
-⚠️ **The open check is ambiguous in a way that matters:** whether he *also pays rent somewhere* or
-whether he *rents the apartment out* (a **Schedule E** question — income we do not have). **Ask it
-as two questions.** _(A note for whoever answers it: rent allocated to a **home office** runs
+**🟠 The apartment and the Form 1098 — SUPERSEDED 2026-08-12; the live version is the 🔴 rent-and-
+mortgage block below.** He has an **apartment** and **sent us the Form 1098**, which **Lilian is
+filing in Double** _(her instruction, 2026-08-12 — Adobe was her earlier working step)_. This
+paragraph used to read that rent and mortgage were "the two-homes picture, not a contradiction to
+resolve on paper". **That is no longer the position** — the Home Office template turned it into a
+question that has to be put to him. **The one distinction still worth keeping from here:** *does he
+also pay rent* and *does he rent the apartment OUT* (a **Schedule E** question — income we do not
+have) are **two different questions. Ask them separately.** _(A note for whoever answers it: rent allocated to a **home office** runs
 through Schedule C / Form 8829 and does **not** depend on itemising. Itemising governs the Schedule A
 side — mortgage interest and property tax.)_
 ⓘ **And note why nothing surfaced it:** the 1040 organizer's **rental branch is unreachable by any
@@ -435,7 +435,8 @@ rental property completes the organizer at 100% and is never asked. Silence ther
   never been asked. **Do not read this as "no retirement distribution of any kind."**
 - **No Form 1099 of any kind received for 2025.**
 
-**⚠️ His business expenses are INCOMPLETE — do not work from what is on file.** What is in Adobe is
+**⚠️ His business expenses are INCOMPLETE — do not work from what is on file.** What Lilian has so
+far (staged in Adobe — a different document from the 1098, which goes to Double) is
 only part; he says he has more, **will look for them, and undertook to send them by MONDAY at the
 latest** _(Lilian, 2026-08-12)_. ⚠️ **They are the expenses of the company that gave him no income
 documentation** — the same one now in bankruptcy — which is exactly why they may not belong on his
@@ -524,16 +525,42 @@ reached that question. **So do not chase him for it; it is already here.** He ch
 mid-2025, so any allocation probably has to cover two homes — and it only matters at all once the
 Schedule C question above is settled.
 
-🔴 **Rent AND mortgage — three sources say rent, one says mortgage, and the home-office numbers
+🔴 **Rent AND mortgage — two sources say rent, one says mortgage, and the home-office numbers may
 turn on it** _(sharpened by Lilian, 2026-08-12)_. He **sent the Form 1098**, so a **mortgage**
 exists. But **rent appears twice**: in his figures note, and — the new evidence — **in the Home
 Office template he filled in himself, where the housing expense he entered is a RENT payment.**
 ⚠️ **Two readings, and Lilian cannot tell which:** he pays **both** (two homes, or the mid-year
 move), or **he wrote "rent" meaning the mortgage.** **Confirm with him.**
-⚠️ **It is not a labelling question — either way the home-office figures have to be redone**,
-because **mortgage interest and property tax go in different boxes from rent** on Form 8829, and
-are apportioned differently. And it stays separate from the **rental-income** question (does he
-rent the apartment OUT — a Schedule E), which is still open too.
+⚠️ **It is not just a labelling question — but do NOT say "either way the figures have to be
+redone", which over-promises.** Two conditions gate that:
+- **There may be no Form 8829 at all.** It attaches to **Schedule C**, and whether he has one is
+  still the open question above. If the 2025 money was wages, a distribution or a K-1 share from
+  his own S corp, a shareholder-**employee** has no home-office deduction on his 1040 — the route
+  is an **accountable-plan reimbursement** on the 1120-S, employee home office is dead through 2025
+  under **§67(g)**, and **§280A(c)(6)** bars deducting rent charged to your own employer. Then the
+  template is simply moot.
+- **Under the SIMPLIFIED method it changes nothing** — the $5/sq ft safe harbour uses no actual
+  housing expense and files no 8829; interest and taxes go whole to Schedule A. **Rent vs mortgage
+  only moves numbers under the REGULAR method.**
+**So: if there is a Schedule C at all, and under the regular method, the figures have to be redone.**
+⚠️ **And the reason they change is not what an earlier version of this file said.** Both go in
+different boxes (interest line 10, real-estate taxes line 11, rent line 19), but the **indirect
+column of both is multiplied by the same business-use percentage — the apportionment is
+identical.** What actually differs: **interest and taxes are allowed regardless of the
+gross-income limitation** while **rent sits in the capped operating group** and carries forward;
+**the personal share of interest and taxes can reach Schedule A** if he itemises, while the
+personal share of rent is worth nothing; and **an owner also gets depreciation**, which brings
+unrecaptured §1250 gain on a later sale. That last one is the real reason the numbers move.
+🔍 **And before asking him at all: look at the 1098.** It names the **lender**, the **outstanding
+principal**, the **address of the property securing the loan** and whether that address is his
+**principal residence** — set against the Kirkland → Florida move and the address on the Home
+Office template, that may distinguish "owns in WA, rents in FL" from a mislabel **without a single
+question**. ⚠️ **Confirm it is a Form 1098 (Mortgage Interest Statement) and not a 1098-E or
+1098-T** — clients call all three "the 1098", and the whole contradiction rests on that reading.
+⚠️ **This is a step for Lilian or Julia, not a session:** the document rule lets a session open only
+the prior-year return, through the redactor.
+It stays separate from the **rental-income** question (does he rent the apartment OUT — a
+Schedule E), which is still open too.
 
 🟠 **Health coverage — the Marketplace finding is CONTESTED as of 2026-08-12; see the call block
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
@@ -882,6 +909,11 @@ published card** — they are ordered by what would cause a wrong return or a re
   and a **1095-B is often never mailed**. ⚠️ **Ask about BOTH halves of the year** — Washington runs
   its own exchange and Florida uses healthcare.gov, so a WA plan would not appear on healthcare.gov
   at all. The method, and the wording, are in §5.
+- 🔴 **Does he pay RENT as well as the mortgage, or did he write "rent" meaning the mortgage?** The
+  **Form 1098** says mortgage; the **Home Office template he filled in himself** records a **rent**
+  payment, and his figures note lists rent too. **Lilian cannot tell which** (§5). ⓘ **Look at the
+  1098 before asking** — it names the property securing the loan and whether it is the principal
+  residence, which may settle it without him.
 - 🟠 **The daughter — where did she live in 2025, for how many months, and how old was she at 31
   December 2025?** ✅ **Who she is is settled** (the child claimed in 2024 — Lilian, 2026-08-12);
   only her residence and age are open. 🔍 **Her AGE is a LOOKUP — her date of birth is in Double.
@@ -923,10 +955,11 @@ published card** — they are ordered by what would cause a wrong return or a re
   problem.
 - **Vehicle** — mileage log (start, end, business miles), date placed in service, purchase/finance agreement. Without these there is no vehicle deduction by either method.
 - ~~**His 2025 W-2**~~ · ~~**any 1099**~~ · ~~**an IRA distribution**~~ · ~~**any other
-  income**~~ · ~~**the wife's Schedule C**~~ · ~~**rent or mortgage, and the 1098**~~ — ✅ **answered
-  on 2026-08-12; do not re-ask** (§5). ⚠️ **One is only PARTLY answered and stays on the list
-  above:** retirement — he was asked about an **IRA**, not about a 401(k) or another plan, and his
-  2024 distribution may have been one. The W-2 answer
+  income**~~ · ~~**the wife's Schedule C**~~ — ✅ **answered
+  on 2026-08-12; do not re-ask** (§5). ⚠️ **TWO are only PARTLY answered and stay on the list
+  above:** **rent or mortgage** — it looked answered when the 1098 arrived and it is **not**
+  (the Home Office template says rent); and **retirement** — he was asked about an **IRA**, not
+  about a 401(k) or another plan, and his 2024 distribution may have been one. The W-2 answer
   is "there is none and he cannot get one", which is the blocker above, not a gap.
 - ~~**What his family situation was at the end of 2025**~~ — ✅ **ANSWERED, do not ask** _(2026-08-12, §5)_. His filing status for 2025 is settled and the §7703(b) / Head-of-Household branch is closed. **What remains open is the children, below — not the household.**
 - **The children — how each of them is asked about** (the live question is the daughter's **2025
@@ -986,7 +1019,10 @@ published card** — they are ordered by what would cause a wrong return or a re
     the **briefing for Julia**, written in bullet points so she can pick up the whole situation
     before starting his return: where the income came from and why no document exists, what he has
     confirmed (so he is not re-asked), what is still open, and the one question for her.
-    ⚠️ **Lilian asked for this as a SECOND note rather than an update to the first**, so the two
+    ⚠️ **Lilian EDITED THIS NOTE HERSELF on 2026-08-12 — her cuts stand (§6). Do not restore what
+    she removed**, and always `list_notes` and edit the body you fetch: Double keeps no version
+    history, so an overwrite of her edits cannot be recovered.
+    ⚠️ **She asked for this as a SECOND note rather than an update to the first**, so the two
     kinds of information stay easy to find. That is a deliberate exception to the one-note rule in
     [`double-mcp`](../../../.claude/skills/double-mcp/) §7 — **do not merge them.**
   ⓘ **What stayed out of 490984, and why:** the firm's internal reasoning — the §165(g)/§1244

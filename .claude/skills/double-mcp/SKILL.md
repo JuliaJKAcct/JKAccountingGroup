@@ -778,7 +778,12 @@ the whole thing start to finish, instead of reconstructing it from email.
 1. **One note per case, never one note per event — this is the general rule for every case note, not
    a habit of the pilot.** The note is **rewritten in place** with `update_note` as things happen. A
    second note on the same matter splits the history and defeats the point. **Before writing anything
-   on a matter, `list_notes(clientId)` and look for the note that already covers it.** _(Lilian stated
+   on a matter, `list_notes(clientId)` and look for the note that already covers it.**
+   ⚠️ **And EDIT THE BODY YOU FETCHED — never re-author a note from memory.** A person may have
+   edited it in the UI since you last saw it (Lilian did exactly that on 2026-08-12, cutting what
+   she judged unimportant), and **Double keeps no version history: there is no `delete_note`, no
+   note revisions, and `list_activity_log` has no `Note` entity.** An overwrite of someone's own
+   edits is **unrecoverable**. _(Lilian stated
    this when the convention was created and **re-confirmed it unprompted on 2026-08-06**, when the firm
    opened its second case note — a different matter, Ecoorganic's QuickBooks handover.)_
    **The one sanctioned exception is length, not topic:** when a matter genuinely outgrows the 8 KB wall
