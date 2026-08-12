@@ -821,6 +821,23 @@ the whole thing start to finish, instead of reconstructing it from email.
    **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk** — but the
    criteria only shortlist. **Lilian's say-so is what opens a note**; propose it, don't manufacture
    it. Routine work stays as Double **tasks**.
+   🔵 **One class now has STANDING authorisation and does not need to be asked about each time**
+   _(Lilian, 2026-08-12)_: **a dealing with a tax agency** — the IRS, the Florida Department of
+   Revenue, a county — **that had to be worked through**. A tax-resolution matter, an account
+   closure, an EIN problem, a filing the agency says it never received. For those, **write the note
+   as part of doing the work**, and put the **whole procedure** in it: the dates, the step-by-step,
+   **what the agent said**, the reference and account numbers, the fax and phone numbers used, and
+   how it ended. Her reason is specific and it sets the bar for how complete the note must be:
+   **so that Julia can open the client in Double and read the answer without asking anyone** — not
+   a summary that sends her back to a person.
+   **Everything else stays Client Intelligence only.** *"El resto de la información es client
+   intelligence. No necesitamos que esté trackeada en Double a menos que te lo pida
+   específicamente."* So this authorises the agency-dealing class and **nothing wider** — a note is
+   still not the place for the relationship, the bookkeeping, or how we work the client.
+   ⚠️ **This does not touch rule 11.** The note carries the **procedure and what the agency said**;
+   our verdict on it still belongs in the client file. And when such a matter is written up, the
+   [`client-intelligence`](../client-intelligence/) file gets the facts and consequences in the
+   same pass (rule 7) — the note is the team-facing mirror, never the only copy.
 5. **Every entry names the person who did it — and EVERY note opens with a byline naming its
    author.** All the firm's notes post under one shared Double user (`create_note` and
    `update_note` attribute to the connected account — currently **"Julia Kononova"**), so without
