@@ -128,10 +128,10 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   no lo recibió, y cómo se lo pagaron?"*** ⚠️ **Nothing downstream is safe until this is settled** —
   the Illinois question, the expenses and the whole "what was that money" blocker all rest on it.
 - 🔴 **THE COMPANY FILED FOR BANKRUPTCY** _(Lilian, 2026-08-12 — she added this after the first
-  write-up; the client told her)_. ⚠️ **One part of it is not yet clear and the two versions are
-  different facts: she said "his partner — that company — died, or it filed a bankruptcy", then
-  stated that the client said the COMPANY filed bankruptcy. Whether the PARTNER also died is
-  unconfirmed and is being checked with her.** What the bankruptcy changes:
+  write-up; the client told her)_. ✅ **RESOLVED 2026-08-12: NOBODY DIED.** Her earlier
+  *"his partner — that company — died, or it filed a bankruptcy"* was a **voice-to-text error**;
+  she confirmed the same day. **It is the bankruptcy alone**, so every consequence below runs off
+  that and the partner-death branch is closed. What the bankruptcy changes:
   - ⚠️ **The "wait for the 1120-S" route gets much weaker.** A company in bankruptcy frequently
     stops filing — so **the K-1 may never be produced at all**, not merely be late. That pushes the
     decision toward the transcript and toward filing on his own figures with **Form 8082**.
@@ -178,20 +178,15 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   - ⓘ **And it recasts the "dispute with the partner" story** rather than replacing it — the two can
     both be true, and the sequence is worth pinning down, since the date he lost access and the date
     of the bankruptcy are different dates.
-  - 🔵 **IF THE PARTNER DIED, almost everything above changes — and mostly for the better.** The
-    branch is flagged as unconfirmed and has to be actually worked, not just labelled:
-    - **The lock-out may simply be recoverable.** A dead partner is not the person refusing access.
-      The **executor / personal representative**, the company's **registered agent**, its
-      **accountant** and any surviving officer are all reachable, and none of them has a motive to
-      stonewall.
-    - **If he was the only officer**, the 1120-S may be unfiled because **nobody can sign it** — a
-      probate / successor-officer problem with a completely different remedy from a bankruptcy.
-    - **The S election survives either way**, so the K-1 obligation does too: a deceased
-      shareholder's shares pass to his **estate**, which is a permitted S shareholder, and an
-      individual's **bankruptcy estate** is likewise treated as an estate.
-    - ⚠️ **If the PARTNER filed personally rather than the company**, then **the company is not in
-      bankruptcy at all** — which restores the "wait for the 1120-S" route this block just
-      downgraded. That is why the two versions cannot be left interchangeable.
+  - ~~**If the partner died…**~~ ✅ **CLOSED 2026-08-12 — NOBODY DIED.** *"Debe haber sido un error
+    de transcripción de voz a texto"* (Lilian). **It is the bankruptcy alone**, so the whole
+    executor / registered-agent / probate branch is off, and everything above runs off the
+    bankruptcy. ⓘ **One point from it is worth keeping**, because it survives the correction: a
+    **bankruptcy estate is a permitted S shareholder**, so the S election — and with it the K-1
+    obligation — survives the filing. ⚠️ **And one question the branch raised is still live in a
+    different form: is it the COMPANY that filed, or the partner personally?** Nothing establishes
+    which, and if it were the partner personally the company is not in bankruptcy at all and the
+    wait-for-the-1120-S route comes back. **The docket answers it.**
   - 🔍 **THE BANKRUPTCY IS A PUBLIC RECORD — LOOK BEFORE ASKING HIM ANYTHING.** This is the firm's
     own first method rule, and nobody has done it. **PACER** (search by entity name, and by the
     partner's name) plus the **Illinois / Montana Secretary of State** for entity status and
@@ -529,10 +524,16 @@ reached that question. **So do not chase him for it; it is already here.** He ch
 mid-2025, so any allocation probably has to cover two homes — and it only matters at all once the
 Schedule C question above is settled.
 
-**Rent or mortgage — partly answered 2026-08-12.** His Double note says he pays **rent**; he has
-since told Lilian he has an **apartment** and **sent the Form 1098**, so mortgage interest exists.
-Both can still be true across the mid-year move, so this was never a discrepancy to resolve on
-paper. It gates the home-office allocation, and it leaves the **rental** question above open.
+🔴 **Rent AND mortgage — three sources say rent, one says mortgage, and the home-office numbers
+turn on it** _(sharpened by Lilian, 2026-08-12)_. He **sent the Form 1098**, so a **mortgage**
+exists. But **rent appears twice**: in his figures note, and — the new evidence — **in the Home
+Office template he filled in himself, where the housing expense he entered is a RENT payment.**
+⚠️ **Two readings, and Lilian cannot tell which:** he pays **both** (two homes, or the mid-year
+move), or **he wrote "rent" meaning the mortgage.** **Confirm with him.**
+⚠️ **It is not a labelling question — either way the home-office figures have to be redone**,
+because **mortgage interest and property tax go in different boxes from rent** on Form 8829, and
+are apportioned differently. And it stays separate from the **rental-income** question (does he
+rent the apartment OUT — a Schedule E), which is still open too.
 
 🟠 **Health coverage — the Marketplace finding is CONTESTED as of 2026-08-12; see the call block
 above.** The organizer says Marketplace, which would make **Form 1095-A** a condition of filing
@@ -716,7 +717,8 @@ particular finding earns a place there.
   (§165(g), ordinary under **§1244** if the stock qualifies) — **money in his favour that nobody has
   looked at**, and it needs the same unverified **basis**. ⚠️ **One part unconfirmed:** she said
   *"his partner — that company — died, or filed a bankruptcy"* and then that the client said the
-  **company** filed; **whether the PARTNER also died is being checked with her.** She also confirmed
+  **company** filed. ✅ **Resolved the same day: NOBODY DIED** — the "died" was a voice-to-text error
+  (Lilian). She also confirmed
   he received **nothing at all — no W-2, no 1099, no K-1.**
   ✅ **She CLOSED Montana** (*"olvida eso"*): he lived in Washington then Florida, so any Montana
   residence was 2024, which is not our year (§1). **Not to be re-opened.**
@@ -757,6 +759,25 @@ particular finding earns a place there.
   and four things added that an independent review found missing: the **Illinois** nonresident
   question, the **`1040-SCH C` return-type dispute**, the **basis hedge on the NOL**, and his own
   possible **1099-NEC exposure** for the drivers he paid.
+
+- _(2026-08-12, Lilian)_ — **She read the Double note, edited it herself, and added two things.**
+  ✂️ **Her own cuts, which stand:** the six-months clause off the filing status, and the whole
+  *"how he works"* block (the Google-Voice habit, that he speaks Russian, the organizer
+  explanation). **Do not restore them** — Julia knows the client.
+  📌 **The FORM 1098 arrived by Google Voice and she is filing it in Double** — recorded in the
+  note's document list, which is where Julia will look.
+  🔴 **And the rent question is sharper than the file had it:** the **Home Office template he filled
+  in himself shows a RENT payment**, and rent also appears in his figures note — against a **1098**,
+  which is a mortgage. **Either he pays both, or he wrote "rent" meaning the mortgage** (§5), and
+  **either way the home-office figures have to be redone**.
+  ✅ **NOBODY DIED** — the earlier *"his partner… died"* was a **voice-to-text error**, confirmed the
+  same day. The partner-death branch is closed; the live version of that question is whether the
+  **company** filed or the **partner personally**.
+  🖋️ **And a standing rule came out of it:** she asked that notes show as created by **her**, not
+  Julia. **The author field cannot be changed** — the connector signs in as Julia and neither
+  `create_note` nor `update_note` takes a user — so **every note now opens with a byline naming its
+  author**, written into the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7 rule 5 so
+  it is not left to memory.
 
 _So this year can be answered later without anyone's memory. Records the questions, their answers
 as they come back, and **the tax facts the review established from any source** — the organizer
@@ -939,8 +960,9 @@ published card** — they are ordered by what would cause a wrong return or a re
   the reading nobody has tested (§5).
 - [ ] The **chapter, petition date, entity and trustee** of the bankruptcy — from the docket, not
   from him (§5).
-- [ ] Whether the **PARTNER also died**, or only the company filed — different facts, different
-  remedies (§5).
+- [ ] Whether it is the **COMPANY** that filed for bankruptcy or the **partner personally** — the
+  docket answers it, and if it is the partner the company is not in bankruptcy at all (§5).
+  _(✅ The "did the partner die" question is closed — nobody died, it was a transcription error.)_
 - [ ] How he **ACQUIRED his shares** (original issuance for cash, bought from the partner, for
   services) — it decides whether §1244 is even available (§5).
 - [ ] **WHICH "Midwest" company** the 2025 income came from — two of his three start that way and

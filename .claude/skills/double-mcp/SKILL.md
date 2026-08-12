@@ -793,9 +793,22 @@ the whole thing start to finish, instead of reconstructing it from email.
    **third party** (a tax agency, Gusto, a bank, a county), and carries **money or risk** — but the
    criteria only shortlist. **Lilian's say-so is what opens a note**; propose it, don't manufacture
    it. Routine work stays as Double **tasks**.
-5. **Every entry names the person who did it.** All the firm's notes post under one shared Double
-   user (`create_note` attributes to the connected account — currently "Julia Kononova"), so
-   without an inline name the trail is anonymous six months later.
+5. **Every entry names the person who did it — and EVERY note opens with a byline naming its
+   author.** All the firm's notes post under one shared Double user (`create_note` and
+   `update_note` attribute to the connected account — currently **"Julia Kononova"**), so without
+   an inline name the trail is anonymous six months later.
+   ⚠️ **The author field CANNOT be changed.** Neither tool takes a user parameter, and the note is
+   attributed to whoever the connector is signed in as. There is no fix in the API — only the
+   byline.
+   **So the first line of every note is:**
+   > `<p><em>Written by <strong>&lt;name&gt;</strong> — Double posts every firm note under Julia's login.</em></p>`
+
+   _(Lilian's instruction, 2026-08-12, after a note she had dictated end to end appeared in Double
+   as Julia's: **"cuando lo guardes en Double, ponlo como creado por Lilian, no por Julia"** — and
+   she could not correct it in the UI either. The byline is what the firm can actually control, and
+   the second half of the sentence is what stops the next reader assuming the author line is wrong
+   rather than shared.)_ **Keep the `Last updated: <date> — <name>` footer as well** — the byline
+   says who wrote it, the footer says who touched it last, and on a long-running note those differ.
 6. **`YYYY-MM-DD`** dates so they sort, and so nobody has to guess at `08/04`.
 7. **The repo file stays the master — and its substance is NOT only `§6`.** The case's full detail
    lives in the [`client-intelligence`](../client-intelligence/) client file: **`§4`/`§5` carry the
