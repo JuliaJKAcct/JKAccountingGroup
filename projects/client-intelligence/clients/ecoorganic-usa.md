@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -62,7 +62,7 @@ indexed _(2026-08-04)_.
 | Gusto | Payroll (**W-2 employees**) | _(pending — Drive link)_ | Onboarded **Sept 2025**; the company runs actual **W-2 payroll**, not only 1099 subcontractors _(Gmail, Sept 2025–Jul 2026)_. A firm staff admin's access was revoked 2026-07-15 as part of the bookkeeper transition |
 | Tax1099 (Zenwork) | 1099 e-filing | _(pending — Drive link)_ | Used by the firm to e-file 1099-NEC/MISC/DIV _(Gmail, Feb 2026)_ |
 | **Insurance — General Liability + Workers' Compensation** | Business coverage | _(pending — Drive link)_ | Carrier **Atlantic Casualty Insurance Co.**, broker **JMG Insurance Corp**; subject to a **periodic GL premium audit** (a remote auditor) that requires a payroll/contractor list — which is why the W-9/1099 tracking in the SOP matters _(Gmail, Jun–Jul 2026)_ |
-| CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | _(pending — Drive link)_ | Recurring filings |
+| CT DRS myconneCT | Sales &amp; use tax (form OS-114), withholding tax (form CT-941) | [`Sales Taxes > Connecticut > Sales tax`](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) — portal address + the firm's login _(also in the master `Ecoorganic Passwords` doc)_ | Recurring filings. **Sales tax is MONTHLY and filed by the firm as a zero return** (§4) — the login is the **firm's**, not the client's, so he cannot file it himself |
 | CT Dept. of Labor / ReEmployCT | Unemployment tax | _(pending — Drive link)_ | Recurring correspondence |
 | CT Secretary of the State portal | Annual Report / registered agent | _(pending — Drive link)_ | Due March 31 annually; 2026 filing accepted |
 | **Turo** | A **company** account — its earnings and any **1099-K**; which return reports it is settled in §4 | _(n/a — the account is **closed**; see §4)_ | **The account is closed, so there is no web access to the reports.** Turo support **+1-415-965-4525**; in the voice menu press **2, 3, 3** _(Lilian's note from her 2026-08-04 call — not re-verified since)_. Turo will release the documents **only to the account holder** — and **will not talk to the firm at all unless the owner is on the call**, so every Turo call is scheduled with him |
@@ -105,6 +105,32 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Applies?** Yes — Connecticut **OS-114 Sales and Use Tax Return**, filed
   **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
   *(Double client properties + activity log, confirmed 2026-08-01)*.
+- **It is filed as a ZERO TAX RETURN, every month, by the firm** — not by the client
+  _(Lilian, 2026-08-12)_. The full procedure is now in the SOP; the short version: log in to
+  myconneCT with the **firm's** login, file the month's OS-114 at zero, save the PDF to Drive
+  as `MM.YYYY - Sales tax - zero tax return.pdf`, and keep the confirmation screenshot.
+- **Where the login lives:** the **`Sales tax`** Google Doc at
+  `Google Drive > Ecoorganic USA INC > Sales Taxes > Connecticut > Sales tax` — it holds the
+  myconneCT portal address and the firm's user/password (values stay in Drive, never here).
+  Linked in §7. _(The same myconneCT credentials also appear in the client's master
+  `Ecoorganic Passwords` doc one folder up.)_
+- **Where the filings live:** `Sales Taxes > Connecticut > <year>`, one PDF per month, with a
+  `Screenshots` subfolder holding each submission confirmation. Linked in §7.
+- ⚠️ **Why it is zero is NOT ESTABLISHED.** This is a revenue-generating spray-foam
+  contractor, so a zero return is a deliberate filing position, not an absence of activity —
+  plausibly because installation/construction services fall outside Connecticut's taxable-
+  services net, or because taxable sales sit with a general contractor. **Neither has been
+  confirmed and no basis is recorded anywhere.** Practice is to keep filing zero (stopping is
+  worse); nobody should represent *why* until Lilian confirms it. Tracked as decision #8 in
+  the SOP's Open decisions log.
+- **The frequency changed, and the firm fell behind once.** Returns for **2023–2024 are
+  QUARTERLY** (`1Q`–`4Q` filenames); from **10.2025** onward the folder holds one return per
+  **month**, continuously through 07.2026. When or why DRS changed the frequency is not
+  recorded. The 10–12.2025 returns were only uploaded in **April–May 2026**, and the Notices
+  folder holds a **Delinquency Notice dated 12.2025** and a **Proposed Assessment dated
+  01.2026** — *(observed from Drive filenames and upload dates, 2026-08-12; **the notices
+  have not been opened**, so the period, the amount and whether they were resolved are all
+  unknown)*.
 
 ### Payroll
 - **Applies?** Yes — the company runs **W-2 payroll through Gusto** (onboarded
@@ -244,6 +270,24 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-08-06 — **QuickBooks primary-admin handover, started and paused (Lilian).** The **owner we correspond with (the son)** asked for help getting himself onto QuickBooks as a user, because the **primary admin is his father**, who **no longer has access to the phone tied to that account** _(that the father is §2's **Second owner** is our inference from there being two owner contacts — Lilian said only "his father"; unconfirmed)_. Work done: a **user was created for the son** — which required **upgrading the QuickBooks subscription**, since the client's plan allowed only **one** user — and then the **primary-admin transfer failed**, because QuickBooks sends the confirmation code to that unreachable phone. Lilian **contacted QuickBooks support**, which gave an identity-verification route; following it, the **phone on the account was changed to the son's**, and the remaining step is the **father's personally: scan a QR code support provided and upload a photo of his ID**. **Paused there** — nothing else can move until he does it. Once he does: make the son primary admin, **delete the father's user, then downgrade the subscription** back to the single-user plan _(Lilian stated that outcome; the step order and its preconditions are sequenced by us — you cannot delete a primary admin — see the outstanding item)_. **So the account currently has two users on purpose.** Full state and the ordered plan in §3; the transferable lessons in §5; the QR code and any support case reference stay with Lilian. **Also confirmed: the QuickBooks company is named "Corganix"** — that is where to look to see the two users. A **Double case note** was opened the same day so the team can follow this without the repo (note **485258**, §7), and **back-filled with the full contact detail** — both owners with emails and phones, their individual accounts, and the QuickBooks company name — because a Double note carries all the information the team needs while **this file stays role-only and secret-free** _(Lilian, 2026-08-06)_; it is the mirror of this record and gets **updated in place**, never duplicated _(Lilian re-confirmed that rule 2026-08-06)_.
 - 2026-08-08 — **Full-pass sweep (gap catch-up: Gmail history not yet fully swept).** Double client properties confirmed: **Income Tax = true, Tax Return Type = 1120-S, 1099 Preparation = true, Sales Tax = Monthly, Bookkeeping = Monthly, Annual Report = true, Organizer Status = N/A (BK client)**, Assigned Staff = Lilian — fills several previously-pending §4 fields (see there). Double activity log: the **"2025 Taxes" project status was set to In Progress on 2026-07-30 (Lilian), then reverted to Not Started on 2026-08-04 (Julia)** — noted here as an observed fact, not a judgment call; worth checking with Julia/Lilian which is current. Ping (bounded ≥2026-07-20, per this run's rules — Gmail was this client's gap): scoped searches on both owner contacts' Ping records returned **zero meetings**, consistent with the 2026-08-04 note that this client has no meetings indexed. **Full historical Gmail pass (in:inbox + in:sent, no date bound) — gap closed.** New findings: **Payroll via Gusto**; recurring **CT-941 Reconciliation of Withholding** and **CT DOL Reemployment tax** correspondence; a **General Liability + Workers' Compensation insurance program** (carrier/broker in §3) subject to periodic audit; a **Form 8822-B** and a **CT Secretary of State filing** around Apr 2026; the **subcontractor/GC relationship and Darien, CT location**; the **related Ukrainian "Ecoorganic" company**; and the **father/son role corroboration** — all in §3–§5. Google Drive: located the client's main folder (link in §7); did not open or copy any file contents (per the document-privacy rule). Repo check (SOPs/FOLLOW-UPS/BACKLOG): nothing beyond what already feeds the bookkeeping SOP.
 
+- 2026-08-12 — **Connecticut sales tax written down properly (Lilian).** She stated the standing
+  practice: the firm files **monthly zero sales-tax returns** for this client in Connecticut, and
+  the site + password are in a Google Doc in Julia's Drive. Located it —
+  `Sales Taxes > Connecticut > Sales tax` — and confirmed it holds the myconneCT address and the
+  firm's login. The **procedure is now a section of the bookkeeping SOP** (log in → file the OS-114
+  at zero → save the PDF under the `MM.YYYY - Sales tax - zero tax return.pdf` name → keep the
+  confirmation screenshot → file any DRS notice), with the doc linked from the step that needs it,
+  plus a review-checklist item and an open decision. **Three things the folder revealed that nobody
+  had recorded:** the frequency was **quarterly through 2024** and monthly only from **10.2025**;
+  the **10–12.2025 returns went in late** (uploaded Apr–May 2026); and there is a **Delinquency
+  Notice (12.2025)** and a **Proposed Assessment (01.2026)** sitting in a `Notices` subfolder. **The
+  notices were deliberately not opened** — their contents, and whether the matter closed, are still
+  unknown. Also raised with her, unresolved: **the basis for filing zero has never been written
+  down** for a business that has revenue (§4). ⚠️ **Handling note:** Drive's search returned the
+  contents of the client's master password doc unrequested (the tool attaches a content snippet by
+  default); no value was copied anywhere and Lilian was told to delete the session. Pass
+  `excludeContentSnippets: true` on Drive searches over a client's vault folder.
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
 - **QuickBooks primary admin — the whole thing is waiting on the FATHER to scan the QR code and upload a photo of his ID** (§3). Nothing else can move until he does; chase him through the son, who is the one we correspond with. **Then, in this order:** **(a)** confirm the son's primary-admin access actually works; **(b)** confirm the firm's own access survives a single-user plan — see "Information still needed", nobody has established whether the firm has access independent of the owners' users; **(c)** delete the father's user; **(d)** **downgrade the subscription** back to the single-user plan, **confirming the downgrade with the son first — it is the client's billing.** **The downgrade is the step that gets forgotten**, and the client keeps paying for the bigger plan until it's done. Meanwhile **two users on the account is intentional** — don't let anyone "clean it up".
@@ -255,6 +299,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
 
 ### Information still needed
+- [ ] **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
+      this is a filing position with no recorded reason (§4). Practice continues unchanged; the
+      point is to be able to justify it
+- [ ] **Were the 12.2025 Delinquency Notice and the 01.2026 Proposed Assessment resolved?** Both
+      PDFs are in the Drive `Notices` folder and **have not been opened** — period, amount and
+      outcome all unknown (§4)
+- [ ] **When and why did DRS move this client from QUARTERLY to MONTHLY sales-tax filing?** The
+      change is visible in the filings from 10.2025 but is recorded nowhere (§4)
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
 - [ ] Whether the Turo account produced income at all, and for which years _(whose account it is: answered 2026-08-04 — the company's, per Lilian)_
 - [ ] Whether a **1099-K was actually issued** for 2025
@@ -277,4 +329,5 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Double client:** [app.doublehq.com/close?cid=719473](https://app.doublehq.com/close?cid=719473)
 - **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover", note **485258** (only the stable title prefix is recorded here; the live title carries a status suffix and a name, which belong in Double) on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** [Ecoorganic USA INC](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) — the **primary** folder (filed as "INC", a naming variant; the passwords/credentials doc lives here, values never in this repo) · and [Ecoorganic USA LLC](https://drive.google.com/drive/folders/1NSBtAnwqr307dWCLRANDly4lCIp9t98g) — **secondary**: categorization workbooks, insurance/GL-audit files, the (paused) recurring-expense watchlist _(2026-08-01 sweep)_
-- **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)
+- **Sales tax (CT) — the working folder:** [Sales Taxes](https://drive.google.com/drive/folders/1z-YELZhZxnBPlr-gBg7xhuf2xHdTwCJL) inside the primary Drive folder. Inside it: [Connecticut](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j) (the **`Sales tax` credentials doc** + a folder per year of filed returns, each with a `Screenshots` subfolder) and [Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK) (DRS correspondence — the 12.2025 delinquency notice and the 01.2026 proposed assessment). The 2023–2024 quarterly returns sit loose in the `Sales Taxes` root _(2026-08-12)_
+- **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md) — now carries the **monthly CT sales-tax filing procedure** as its own section

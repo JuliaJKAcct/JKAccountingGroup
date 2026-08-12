@@ -1,6 +1,6 @@
 # Ecoorganic — Monthly Bookkeeping & Review Runbook
 
-> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last revised:** 2026-07-21
+> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last revised:** 2026-08-12
 >
 > Born from the July 2026 cleanup of the client's books. A staff bookkeeper does
 > the monthly work; Claude acts as the **independent reviewer** using the rules
@@ -183,6 +183,69 @@ Double is the working tool for the vendor side of these rules — lean on it:
   (kept separate from ordinary service charges) so the running total is visible
   for the cash-management conversation with the client.
 
+## Connecticut sales tax — the monthly filing
+
+A recurring **monthly** obligation the **firm** carries out, not the client, and separate
+from the bookkeeping close below. The firm files Connecticut's **OS-114 Sales and Use Tax
+Return** through **CT DRS myconneCT**, and it currently goes out every month as a **zero
+tax return**. Do not let a quiet month pass: a zero return still has to be *filed* — CT
+charges a late penalty on a return that reports nothing, and this client has already been
+on the receiving end of that (see *Filing history* below).
+
+1. **Log in to myconneCT.** The portal address and the login the firm uses live in the
+   client's own Drive doc — never in this repo:
+   [myconneCT login (Drive)](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) ·
+   [CT DRS myconneCT](https://portal.ct.gov/drs-myconnect). The login is the **firm's**,
+   not the client's — the client does not file this himself.
+2. **File the period's OS-114 as a zero return.** One return per calendar month. Check the
+   period being filed is the month you mean before submitting — a return filed against the
+   wrong period leaves the intended month still open and delinquent.
+3. **Save the filed return to Drive, with the house filename.** Download the confirmed
+   return as a PDF into
+   [Sales Taxes → Connecticut → *year*](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j),
+   named **`MM.YYYY - Sales tax - zero tax return.pdf`** (e.g. `07.2026 - Sales tax - zero
+   tax return.pdf`). Keep the name exactly — it is what makes a missing month visible at a
+   glance in the folder listing.
+4. **Save the confirmation screenshot.** Capture the myconneCT submission confirmation and
+   put it in that year's **`Screenshots`** subfolder. This is the existing convention and
+   it is the only proof of *when* a return was submitted; the PDF alone doesn't carry it.
+5. **File any DRS notice that arrives.** Delinquency notices, proposed assessments and
+   other DRS correspondence go to
+   [Sales Taxes → Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK),
+   and the matter gets raised with Lilian — a notice is never just filed and forgotten.
+
+**Timing.** The firm's own recurring reminder for this client sits in **Double, due the 5th
+of the month**. Connecticut's statutory due date for a monthly filer is the **last day of
+the month following** the period _(to verify — not re-checked against DRS for this client's
+assigned filing frequency)_, so the internal reminder sits well inside it.
+
+### Why it is a *zero* return — NOT ESTABLISHED, confirm before relying on it
+
+Every return in the folder reports zero, but **the reason has never been written down.**
+This is an operating business with revenue, so "zero" is a deliberate position, not an
+absence of activity — plausibly because the client's work is construction/installation
+services that fall outside CT's taxable-services net, or because taxable sales genuinely
+run through someone else (a general contractor). **Neither is confirmed here.** A covering
+bookkeeper should keep filing zero — that is the established practice and stopping is
+worse — but should **not** represent to anyone *why* it is zero until Lilian confirms it.
+Tracked in the Open decisions log (#8).
+
+### Filing history — what the folder actually shows
+
+- **2023–2024: filed QUARTERLY.** The returns in the Sales Taxes folder are named by
+  quarter (`1Q`/`2Q`/`3Q`/`4Q`), so this client was on a quarterly frequency then.
+- **From late 2025: MONTHLY.** The Connecticut folder carries one zero return per month
+  from **10.2025** onward, continuously through **07.2026**. When and why DRS changed the
+  frequency is **not recorded** — treat the change as observed from the filings, not as an
+  established fact.
+- **The firm caught up late, and it cost a notice.** The 10–12.2025 returns were only
+  uploaded to Drive in **April–May 2026**, and the Notices folder holds a **Delinquency
+  Notice dated 12.2025** and a **Proposed Assessment dated 01.2026**. _(Observed from the
+  Drive filenames and upload dates; **the notices themselves have not been opened**, so
+  what they assess, for which period, and whether they were resolved is unknown — see the
+  client file.)_ This is the reason step 1's "do not let a quiet month pass" is written the
+  way it is.
+
 ## Monthly review checklist (what the reviewer verifies)
 
 1. Bank feed fully processed; book balance ties to the bank statement.
@@ -202,6 +265,10 @@ Double is the working tool for the vendor side of these rules — lean on it:
 9. Overdraft/NSF fees tracked in their own sub-account and totalled for the
    client conversation.
 10. No new activity in frozen accounts; any exception is escalated.
+11. **The month's Connecticut sales-tax return was filed** — the OS-114 zero return is in
+    Drive under the `MM.YYYY - Sales tax - zero tax return.pdf` name, with its confirmation
+    screenshot. A gap in that folder's month sequence is a missed filing, not a filing
+    that was saved somewhere else.
 
 ## Open decisions log
 
@@ -214,6 +281,7 @@ Double is the working tool for the vendor side of these rules — lean on it:
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **Job costs → COGS vs opex** — verify rule 9 against the client's history and filing before relying on it | Julia | To verify |
+| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Keep filing zero; confirm the reason before anyone represents it. Also settle whether the 12.2025 delinquency notice and the 01.2026 proposed assessment were resolved | Lilian | To verify |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
