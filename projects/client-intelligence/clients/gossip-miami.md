@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-12
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,12 +28,12 @@
 ## 1. Snapshot
 
 - **Business name:** GOSSIP MIAMI LLC
-- **Entity type:** LLC. **Which return it files is not settled in this record** — Lilian describes it as "a corp", while the 2024-return correspondence has the client raising which owners' **names appear on the return**, language that reads more like a multi-owner pass-through. Both an S-corp and a partnership issue K-1s, so that correspondence doesn't decide it — and it now sits oddly with **a single owner** (§2), which makes a single-member LLC or an S-corp with one shareholder the likelier shape. **Confirm against the filed 2024 return before relying on it** _(open question, §6)_. **New evidence (2026-08-08 sweep): Double's `Tax Return Type` property reads 1120-S**, which fits an S-corp with one shareholder and is consistent with the K-1 language — it is the strongest indication so far, but it is a property someone typed, not the filed return, so the question stays open until the return itself is read.
-- **Home state:** Florida. ⚠️ **Which city is unresolved — see §4**, which holds the evidence.
-- **Industry / what they do:** A **beauty salon** — services include manicure/pedicure, and it markets and books through **Vagaro** _(Gmail: a Vagaro marketing email sent on the salon's behalf, 2026-07-28 — not confirmed with the client)_. ⚠️ **Which city is unresolved — see §4.** The street address itself stays in Double, not here.
+- **Entity type:** LLC taxed as an **S corporation — settled 2026-08-12.** The **2024 return package itself is in the client's Drive folder (§7) and is a Form 1120-S**, which is the filed document Double's `Tax Return Type = 1120-S` property was only an indication of. ⚠️ **Two things that came with it are NOT settled.** First, **who prepared 2024**: that package was prepared by an **outside CPA firm, engagement letter dated March 2025** — before this firm's relationship began — yet the firm produced a 2024 P&L and sent the client return documents for review in **November 2025**, and circulated a 2024 client copy in March 2026. Whether JK filed 2024 (the outside package says it would be e-filed only once a signed Form 8879-CORP came back, and this client's EIN was a mess at exactly that time), amended it, or merely handled the copy, **is not established** _(sources: Drive 2024 package; Gmail 2025-11-03/04, 2026-03-03)_. Second, **how many members** — see §2, which now has documentary evidence of **two**.
+- **Home state:** Florida — **city settled 2026-08-12: NORTH MIAMI BEACH** (see §4; the street address itself stays in Double and Drive, not here).
+- **Industry / what they do:** A **beauty salon** in **North Miami Beach** — services include manicure/pedicure, and it markets and books through **Vagaro**, which is also where its **sales reports** come from (§5). _(Vagaro was inferred from a marketing email in Jul 2026; it is confirmed by the Vagaro sales exports the firm has been filing sales tax from since Oct 2025.)_
 - **Primary language:** **Russian** — correspondence with the firm is in Russian.
 - **Our engagement (services we provide):** **Tax preparation only.** The firm was **not** the bookkeeper during the year. Covers the Gossip Miami business return, the owners' **joint 1040**, and the **Schedule C** for Marat Boxing LLC.
-- **Current state of the business:** ⚠️ **SOLD** _(reported by Lilian, 2026-08-11)_. **Nothing about the sale is documented yet** — not the date, not the structure (assets vs membership interest), not the price or its allocation, and not whether **2025 or 2026 is the final year**. It may also explain what happened after our last statements — but **nothing has been observed stopping**: we simply have no information past 2025-12-03 / 2025-12-10 (§6), which is a different thing and must not be written up as if the accounts went quiet. **Get the closing documents before the return is prepared.**
+- **Current state of the business:** ⚠️ **SOLD** _(reported by Lilian, 2026-08-11)_. **Searched for and NOT FOUND, 2026-08-12** — a full sweep of Gmail (every thread with the client's two addresses, plus keyword sweeps in Russian and English), the whole Drive client folder, Double's file library and notes, and Ping turned up **no sale document of any kind**: no bill of sale, no closing statement, no buyer, no date. ⚠️ **The one purchase agreement the firm holds runs the OTHER WAY** — it is the **2024 acquisition** by which the current owners bought the business (§5), so a search for "the purchase agreement" finds a real document that is not this one. **Check with Lilian whether the sale was reported to her verbally or in a document nobody has filed** _(open question, §6)_. What is independently consistent with a wind-down: the checking account is **closed**, the card is **personal now**, and a call on 2025-10-30 already had the owner going to the bank to close an account (§6). None of that dates a sale. **Get the closing documents before the return is prepared.**
 - **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online — the firm was **invited as a user on 2026-07-29** specifically to build the financial statements (§4), not to keep the books.
 
@@ -45,17 +45,28 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| **Sole owner of GOSSIP MIAMI — the wife** | Double client (link below). The company is hers alone _(Lilian, 2026-08-06)_. She is a portal contact on the **joint individual account**, not on the company record |
+| **Member of GOSSIP MIAMI — the wife** | Double client (link below). ⚠️ **Whether she is the SOLE member is contradicted — see the box below.** She is a portal contact on the **joint individual account**, not on the company record |
+| **A SECOND, UNRELATED 50% MEMBER** | Named in the 2024 purchase agreement and the Operating Agreement (Drive, §7) and on the state record. **Not part of this family, and not a contact on any Double record** — which is why the engagement has only ever dealt with one household |
 | **Owner of MARAT BOXING — the husband** | Double client. The other joint filer; his company reports on a **Schedule C** of the joint return (§4), and he also receives **K-1s from outside partnerships** |
 | Company-side correspondent | **One shared address carries everything** — all email to the firm, in Russian, and every document. Double attributes it to the husband, the Gmail display name to the wife. **Treat it as the couple's channel, not one person's — see the note above** |
 | Gossip Miami's owners as filed | **Unresolved** — in the 2024-return correspondence the client raised a question about which names do and don't appear on the return. Re-check against the filed return; see §6 |
 
-> **Who owns what — settled 2026-08-06, and it explains the single contact.** **The sole owner of
-> GOSSIP MIAMI is the WIFE**, even though the couple is married and files jointly _(Lilian,
-> 2026-08-06)_ — the company is hers alone, which is why only **one** portal contact sits on the
-> company record. The **husband** owns **Marat Boxing**, so that Schedule C is his side of the joint
-> return. So the two roles below are two different people; what is *not* two people is the
-> company-side correspondence, which all runs through one address.
+> ⚠️ **WHO OWNS GOSSIP MIAMI — UNSETTLED, and the two sources disagree flatly _(surfaced 2026-08-12)_.**
+> **Lilian, 2026-08-06:** the **wife is the sole owner** — the company is hers alone, which is why only
+> one portal contact sits on the company record.
+> **The documents, all three of them, say FIFTY-FIFTY with a second, unrelated member:** the
+> **Operating Agreement** names two members at 50% each; the **2024 share purchase agreement** has both
+> of them as joint buyers of 100%; and the **state record** lists both as authorized members. So does the
+> client's own email of **2025-11-04**, querying the 2024 return because *"only me and Anastasia"* appear
+> on it — to which Julia replied that **both partners get a K-1**. _(Drive + Gmail, §7.)_
+> **Do not resolve this in a session — but do not act on "sole owner" either.** Everything about the
+> sale turns on it: a 50% member's disposal of a membership interest is reported by **each** member,
+> the second member would have her own K-1 and her own basis, and the buy-in agreement still has
+> **instalments running to October 2027** payable by that second member (§5). **Ask Lilian at the point
+> of use**, and check the filed 2024 K-1s, which settle it on their face.
+> The **husband** owns **Marat Boxing** — that part is not in doubt — so that Schedule C is his side of
+> the joint return. What is *not* two people is the company-side correspondence, which all runs through
+> one address.
 >
 > **The one address is the couple's shared channel — don't try to attribute it.** Double labels the
 > company-side contact with the **husband's** name, its Gmail display name reads as the **wife's**
@@ -164,8 +175,35 @@ duplicate it here; a request list goes stale, this list doesn't.
   this is **late** and the W-9 should be requested as soon as the role question above is settled.
   _(Penalty exposure not assessed here — raise it with Lilian rather than assuming.)_
 
-### Sales tax
-- **Applies?** Yes — **historically filed quarterly by the firm** with the Florida Department of Revenue (a full year of quarterly reports was delivered to the client in Oct 2025, and a POA + DR-841 records request was filed with FDOR the same month). Whether this continued into 2026 under the current tax-prep-only engagement is **not confirmed — verify current status** (this may predate the "tax prep only, no bookkeeping" scope described in §4 above). _(Source: Gmail, Sept–Oct 2025.)_
+### Sales tax — registered, quarterly, and NOTHING HAS BEEN FILED SINCE Q3 2025
+
+- **Applies?** **Yes.** The company holds a Florida sales-and-use-tax certificate and files the
+  **DR-15 quarterly** with the Florida Department of Revenue (Miami-Dade, 1% discretionary surtax).
+  Being a salon, almost all of its takings are **exempt services** — the taxable sliver is retail
+  product sold in-house, so the tax due each quarter is small and has sometimes been **zero**.
+  ⚠️ **A zero quarter still has to be filed**, and the minimum late penalty is **$50 even on a
+  zero return** — which is precisely the problem that brought this client to the firm.
+- **What the firm has actually filed: exactly one return — Q3 2025** _(established 2026-08-12)_.
+  It was e-filed **2025-10-15**, on time, for the collection period 07/2025–09/2025, and it carries
+  its own confirmation number. The filing PDF, and the Vagaro sales exports it was built from, are in
+  the Drive **Sales tax** folder (§7). **The figures live there and in the filing, not here.**
+- **Corroborated by FDOR itself.** The records-request response of **2025-11-05** (obtained under the
+  POA + DR-841 the firm filed in Oct 2025) encloses the account's returns for **Q1 2024 through
+  Q3 2025** — and stops there. Two independent sources therefore agree that **Q3 2025 is the last
+  period on file**.
+- **Before us:** the prior accountant filed **Q1 and Q2 2025 late, both on 2025-08-11**, drawing a
+  **$50 minimum penalty each**. Those notices are what the client first wrote to the firm about
+  (§6, Sept 2025).
+- ⚠️ **THE OPEN EXPOSURE, and nobody has looked at it.** **No DR-15 exists for Q4 2025 or for any
+  2026 quarter** — not in Drive, not in Gmail, not in FDOR correspondence. **Florida expects a return
+  every quarter until the certificate is CLOSED**, whatever the business is doing, so if the
+  registration is still open the account is accruing the **$50-per-quarter minimum**, and the count
+  grows every quarter this sits. **A sold business should have filed a FINAL return and closed the
+  certificate as of the sale date.** ⚠️ **This is inferred from the filing record, not verified against
+  the account** — the honest statement is that we have seen nothing filed and nothing closed. **The
+  firm still holds the FDOR power of attorney (DR-835, §7), so the account status can be checked
+  directly rather than asked about.** Raise it with Lilian: it may be the most time-sensitive thing
+  on this engagement, because unlike the return, the clock is still running.
 
 ### Payroll
 - **Applies?** _(pending — confirm whether the salon has employees or booth renters)_
@@ -178,14 +216,20 @@ duplicate it here; a request list goes stale, this list doesn't.
   confirmed as such _(2026-08-11)_: two on the same day in September and one in October, the October
   one paid through an **online government-payment portal** _(the bank line reads "EGOV COM"; that it
   is the NIC/eGov service is our reading, unconfirmed)_.
-- **Where:** the September pair are renewals **in the city of NORTH MIAMI BEACH** _(client's own
-  words)_. this record has long said the salon is **in Miami**, and **where that came from is not
-  recorded**, so it may itself be the client's own data. ⚠️ **This is the one authoritative statement
-  of the conflict — §1 only points here.** **Neither city is settled: check the address in Double**,
-  which outranks a permit city, and correct §1 once it is known.
-- **Which permits, and when they renew:** **unknown.** Nobody has seen the permits themselves.
-  **Ask for them** — a business with recurring municipal renewals needs them listed with their
-  renewal months, or the firm rediscovers them one bank charge at a time every year.
+- **Where — SETTLED 2026-08-12: NORTH MIAMI BEACH.** The client said so of the September pair, and the
+  documents agree unanimously: the **state corporate record**, the **Operating Agreement**, a **state
+  health permit** and the **FDOR notices** all carry the same North Miami Beach address. _(This record
+  used to say "Miami" from an unrecorded source; that is now corrected, here and in §1.)_
+- **Which permits, and when they renew — one of the three is now identified** _(Drive, 2026-08-12)_,
+  and it is **not** a city permit at all: a **Florida Department of Health operating permit** for
+  **biomedical waste**, issued through Miami-Dade, **paid 2025-10-02 and expiring 2026-09-30**. That
+  matches the **2025-10-03 "EGOV COM" charge** the client called a permit renewal — so the
+  government-portal payment is the state health permit, and it is **due again by 30 September 2026**.
+  ⚠️ **The two September charges remain unidentified** — the client called them North Miami Beach city
+  renewals, and no city permit document has ever been seen. **Ask for them by name**, or the firm keeps
+  rediscovering them one bank charge at a time. ⓘ **The health permit is marked NON-TRANSFERABLE and is
+  issued jointly to both members** — which matters twice over if the business was sold (below) and
+  again for the ownership question in §2.
 - ⚠️ **The business has been sold (§1)**, so these permits may need to be **cancelled, or transferred
   to the buyer**, and there may be a final-year municipal filing. **Not verified — raise it with
   Lilian**; it is flagged here so it isn't lost, not because anyone has checked it.
@@ -238,7 +282,31 @@ duplicate it here; a request list goes stale, this list doesn't.
   2026-08-11)_. Keep those emails plain and short: the questions themselves, in bullet points, with
   no explanation of our internal process attached.
 - **Correspondence is in Russian**, formal. How to draft and shorten a client message is the firm-wide rule in [`CLAUDE.md`](../../../CLAUDE.md).
-- **The business was acquired via a share purchase in 2024** — 100% of the membership interests were transferred from the prior owners to the current owners under a signed purchase agreement (found in the client's Drive folder; deal terms and figures stay there, not here). This is the most likely explanation for the "which owners' names appear on the 2024 return" question raised in the client correspondence and logged in §6 — older/transition-year documents may still reflect pre-acquisition ownership. _(Source: Google Drive, share purchase agreement; 2026-08-08.)_
+- ⚠️ **THE ONLY "SALE AGREEMENT" THE FIRM HOLDS IS THE 2024 PURCHASE — the direction is the opposite
+  one, and this is a trap.** Anyone asked to find "the agreement" will find a real, signed, on-point
+  document in Drive and can easily read it as the 2025 sale. It is not. **It is the buy-in**: 100% of
+  the membership interests transferred from **three prior owners** to the **two current members**
+  (§2) under a signed share purchase agreement, and **Julia requested it herself on 2025-09-09**; it
+  reached the Drive folder on **2025-09-30**. _(Deal terms, price and the payment schedule stay in
+  Drive, not here.)_
+  **Three things in it that still bite today, none of them historic:**
+  1. **The purchase price is still being paid.** The balance runs in **monthly instalments to
+     October 2027**, and they are the **second member's** obligation, not the wife's. A liability
+     to the former owners is a balance-sheet item, and the payments are financing, **not an expense**.
+  2. **It answers the long-open "which owners' names appear on the 2024 return" question** — the name
+     the client could not find belongs to a **seller**, who ceased to be an owner in 2024.
+  3. **It is the evidence for two 50% members** (§2), which the record elsewhere still calls a sole
+     owner.
+  _(Sources: Google Drive share purchase agreement + Operating Agreement; Gmail 2025-09-09 → 2025-09-30.)_
+- **The revenue side does NOT have to be rebuilt from bank deposits — the firm already holds sales
+  data through Q3 2025** _(found 2026-08-12)_. The Drive **Sales tax** folder (§7) holds the salon's
+  **Vagaro sales exports** (a "Sales Summary" and an "In-House Product Sales Summary") for
+  **2024-Q3, 2024-Q4, 2025-Q1, 2025-Q2 and 2025-Q3**, and each quarter's **DR-15 states gross sales
+  on its face**. That is an independent, quarter-by-quarter revenue figure covering **January to
+  September 2025** — far better than inferring takings from deposits, especially for a client whose
+  deposits are sometimes owner money (see the deposit rule above). ⚠️ **The gap is Q4 2025**: no sales
+  export and no DR-15 exist for it, so the last quarter of the year is the only part of revenue that
+  still has to be built from the statements.
 - **The client came to the firm already in a state-compliance and EIN mess.** Around Sept 2025 the client discovered the company had been administratively flagged by Florida (their prior accountant had not filed a required zero-dollar quarterly report on time), and separately the firm found the company had **two EINs on file with the state**, apparently from a mix-up at the time of the 2024 ownership change — this was investigated and addressed with the Florida Department of Revenue in Sept–Oct 2025. No EIN digits are recorded here; see §6 for the dated log. _(Source: Gmail, Sept–Oct 2025.)_
 - **The 2024 individual (1040) return predates the firm's personal-tax relationship with this couple.** It was originally prepared by a different, Miami-based CPA firm; the client moved their personal tax work to JK Accounting Group afterward (TaxDome activation, Mar 2026). The 2024 **company** return, by contrast, was already being handled by JK. _(Source: Gmail/Drive, Oct 2025–Mar 2026.)_
 - **This is not the firm's first ad hoc financial-statement engagement for this client.** The firm produced a 2024 P&L for Gossip Miami as early as Nov 2025 — the Aug 2026 hourly-capped financial-statement project (§4) is a repeat of an existing pattern, not a first-time request. _(Source: Gmail, 2025-11-03.)_
@@ -248,6 +316,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 ### Log
 
+- 2025-10-30 — **A Zoom call with the owner, not previously recorded here** _(Zoom auto-summary by email, found 2026-08-12; the transcript is machine-made and partly garbled, so treat its detail with care)_. The action items are the usable part, and one matters: **the owner was to go to the bank "next week" to CLOSE THE ACCOUNT and request printed copies of the checks.** So the closure was in motion from **late October 2025** — nine months before the firm asked for its date — and the check copies the client is still sitting on were first agreed on this call, not in 2026. ⓘ **This client has no meetings in Ping at all** (re-verified 2026-08-12): its call history lives in these **Zoom summary emails**, so search Gmail for them rather than concluding there were no calls.
 - 2026-03-03 — Client activated their **TaxDome accounts** (individuals + Gossip Miami LLC). The firm sent the standard **Business Tax Return Process** explainer for Gossip Miami, and circulated the 2024 client-copy returns. _(Gmail)_
 - 2026-03-09 → 03-11 — Documents uploaded through the **2025 individual Tax Organizer**: driver's licence, prior-year return documents, a 1095-A, a partnership K-1, and a home-office worksheet. _(Gmail — TaxDome notifications)_
 - 2026-04-12 — The last outstanding individual document request was completed. _(Gmail — TaxDome)_
@@ -281,17 +350,20 @@ duplicate it here; a request list goes stale, this list doesn't.
 - 2026-08-11 — ⚠️ **The reconnection is stuck, and it looks like they are reconnecting the WRONG account** _(screenshot via Lilian)_. They reached TD Bank's "Account Access — Intuit Inc. would like to access your account data" consent screen: the banking profile row expands to **no selectable accounts**, so **Continue stays greyed out**. TD's own footnote on that screen: _"Only accounts linked to your primary banking profile can be enrolled."_ **What is certain:** nothing can be enrolled while no account is selectable. **What is inferred, not established:** why — either (a) they are trying to enrol the **closed** checking account, which no longer exists to enrol, or (b) the account they want sits under a **different / secondary TD banking profile** (or under TD's separate business online-banking login), so it does not appear under the profile they are signed into. **The practical point either way: TD 7734 is closed and cannot be reconnected — only its statements exist.** If the credit card is also a TD product, it has to be enrolled from the profile that actually holds it.
 - 2026-08-11 — **Lilian replied to the client, closing the round** _(Lilian)_. She told them **Julia will look at the screenshot** and work out how the account can be reconnected — so the reconnection is now **the firm's ball, not theirs** — and asked for the **credit-card statements for December 2025 and January 2026**. **With that, the client has nothing else outstanding except those statements** and the check images they promised verbally.
 - 2026-08-11 — ⚠️ **The business was SOLD** _(Lilian, in conversation)_. Recorded in §1 and §4 because it changes what the return has to be: possibly a **final** one, with the sale itself to report. **Nothing about it is documented** — date, structure, price, allocation, final year — and the firm has seen no closing documents. It may also explain what happened after our last statements — but **nothing was observed stopping**, we simply have no information past those dates (see the entry above). **Ask for the closing documents before preparing the return.**
+- 2026-08-12 — ✅ **THE CLIENT SENT THE DECEMBER 2025 AND JANUARY 2026 STATEMENTS** — two PDFs on the same thread as the 2026-08-11 questions; Lilian confirmed receipt three minutes later _(Gmail)_. **That was the last document the client was actively being chased for.** ⚠️ **Which account(s) they cover has not been checked** — the ask was for the **card**, the **closed checking account's** final statements are owed too, and the filenames say only "Dec" and "Jan". **Open them before treating either gap as closed.**
+- 2026-08-12 — 🔍 **Full search for the sale — it is not anywhere the firm keeps things** _(Julia's request)_. Swept: **every** Gmail thread with the client's two addresses (34 in all), plus keyword sweeps in Russian and English for a sale, a buyer or a closing; the **whole Drive client folder** and its subfolders; **Double's file library** — three files only: the 2024 client copy, the 2025 Form 7004 extension, the 2025 engagement letter; **Double's notes**; and **Ping**. **Result: no sale document, no buyer, no date, no price.** The only agreement on file runs the **other way** — the 2024 acquisition (§5) — which is the thing a search for "the purchase agreement" will surface. **So the sale rests entirely on Lilian's verbal report; ask her where it came from** (§6, Information still needed). Established in the same pass: the **sales-tax filing record and the exposure** (§4), the **1120-S at return level** and the **outside-CPA question** (§1), the **two-member contradiction** (§2), the **2025-10-30 call** (above), and that **revenue through Q3 2025 already exists** in the sales-tax folder (§5).
 
 ### Outstanding items (CI-only — never in the SOP)
 
+- ⏰ **OURS, AND THE ONLY ITEM WITH A CLOCK STILL RUNNING — the Florida sales-tax account.** Nothing has been filed since **Q3 2025** (§4), and Florida expects a DR-15 every quarter until the certificate is **closed**, at a **$50 minimum penalty per missed quarter** even when nothing is due. **Check the account's status under the DR-835 the firm already holds** rather than asking the client, then decide with Lilian whether it needs a **final return and closure as of the sale date**. Everything else on this engagement is waiting on a document; this one is accruing.
 - **WAITING ON THE CLIENT — the check images, the one item he committed to verbally.** The **photos of the checks the company WROTE + the cash-deposit slips**, asked 2026-08-04 and restated 2026-08-05; he agreed on 2026-08-06 to go to the bank for them and said he would try. Nothing received. ⚠️ **The other half of what he agreed to verbally — the checks DEPOSITED INTO the company — has never been asked for in writing**; put it in the next email so it isn't lost.
   - ✅ **Already received 2026-08-05:** the 2025 credit-card statements (12 PDFs, 2025-01-03 → 2025-12-03) — **don't re-chase those**.
   - ⚠️ **The rest of that original list was overtaken by the client's 2026-08-11 answers** — "reconnect **both** accounts" and "the December 2025 + January 2026 **checking** statements" are no longer the right asks, because that account is closed. The rows below replace it. **Read those, not the old emails, when writing the next one.**
 - **WAITING ON THE CLIENT — the closed checking account.** ····7734 is **closed**, and in practice a bank stops offering a closed account in its consent list — so treat it as unreconnectable: we need the **closing date** and the **statements from 2025-12-10 through closure**. Nothing after 2025-12-10 has ever been seen.
-- **WAITING ON THE CLIENT — the credit-card statements closing 2026-01-03 and 2026-02-03**, asked 2026-08-11 as "December 2025 and January 2026". **State the closing dates, not the months, when chasing:** the statement dated **2025-12-03 is already in hand** and "the December statement" reads as that one. The 2026-01-03 statement is the one carrying December 2025 activity. ⚠️ **This is the one thing he has answered around twice** — addressing the reconnection both times and the statements neither time, which is why the ask now stands alone. Then the **date business use ended** (§5) — not the sale date, which is a different unknown — before anything on that card is categorized after it.
+- ✅ **RECEIVED 2026-08-12 — the "December 2025 and January 2026" statements**, two PDFs, after he had answered around this ask twice. **Verify what they actually are before closing the row**: what was needed is the statement **closing 2026-01-03** (the one carrying December 2025 card activity — the 2025-12-03 statement was always already in hand) **and** the closed checking account's statements **through closure**. If the two PDFs are both card statements, the checking gap after 2025-12-10 is still open. **Still outstanding either way: the date business use of the card ended** (§5) — not the sale date, which is a different unknown — before anything on that card is categorized after it.
 - **OURS, NOT THE CLIENT'S — JULIA to work out the reconnection** from the screenshot of TD's consent screen (§6). Lilian has told the client Julia will look at it, so **the client is waiting on us for this one**, not the other way round. Start from the two explanations in §6 — a closed account cannot be enrolled at all, and TD only offers accounts on the **primary banking profile**.
 - **NOT YET ASKED — a W-9 for the contractor.** Without it the payee's tax classification is unknown, so **whether a 2025 1099-NEC is owed at all cannot be settled** — and if it is, it is already late (§4). **Settle whose job the 1099 is (§4) before this ask goes out**; it has not been made.
-- **THE SALE — the biggest open item on this engagement, and the newest.** Get the closing documents; until then it is unknown whether the 2025 business return is a **final** return and what the sale itself has to report (§1, §4).
+- **THE SALE — the biggest open item on this engagement, and now confirmed to be undocumented.** A full sweep on 2026-08-12 found **nothing** — no closing document, no buyer, no date, no price (§6 log). Two asks, in this order: **(1) ask Lilian where the sale came from**, since it currently rests on one verbal report and the only agreement on file is the 2024 buy-in running the other way (§5); **(2) then ask the client** for the closing documents. Until they exist it is unknown whether the 2025 business return is a **final** return, what the sale has to report, and — because ownership is contested (§2) — **whose** return reports it.
 - **So the 10-hour cap is not what's binding right now — the missing documents are.** Track the hours, but don't read a stalled clock as work left to do.
 - **Waiting on the client's own P&L for Marat Boxing** (and the completed Home Office worksheet) before the Schedule C can be prepared. He has the templates.
 - **The Gossip Miami financial-statement work is in progress** — track hours against the 10-hour cap and invoice the balance when it closes.
@@ -300,7 +372,10 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 ### Information still needed
 
-- [x] Gossip Miami's **return type** — **answered 2026-08-08: 1120-S per Double client properties** (§1). **Owners as filed** is still open — the 2024 correspondence raised a question about which owners appear on the return, and whether the second owner of record here is among them; the likely explanation (a 2024 ownership change) is now in §5, but the actual filed 2024 return hasn't been cross-checked
+- [x] Gossip Miami's **return type** — **answered 2026-08-12: 1120-S, from the 2024 return package itself** in Drive, not just the Double property (§1)
+- [ ] ⚠️ **HOW MANY MEMBERS Gossip Miami has — the record contradicts itself** (§2): Lilian says the wife alone, three documents and the client's own email say **two at 50%**. Decide it against the **filed 2024 K-1s**, and ask Lilian. It governs who reports the sale
+- [ ] **Who prepared and filed the 2024 company return** — an **outside CPA firm's** package is in Drive with a March 2025 engagement letter, yet the firm produced a 2024 P&L and sent return documents in Nov 2025 (§1). Whether JK filed, amended, or only handled the copy is unestablished, and it decides where the 2025 return's opening figures come from
+- [ ] **Where the report of the sale came from** — after a full sweep found no document (§6 log), it rests on one verbal report. **Ask Lilian**
 - [x] Whose email address the single company-side contact is — **answered 2026-08-06: not answerable.** The couple appear to share addresses, so no message can be attributed per person; ask in the message when it matters (§2)
 - [ ] **The sale of the business** — date, structure (assets vs membership interest), price and its allocation, and whether **2025 or 2026 is the final year**. Closing documents not yet requested from the client
 - [x] Whether the **recurring payments to one individual** are contractor work or rent — **answered 2026-08-11: contractor.** The follow-on is open: **no W-9**, so whether a 2025 1099-NEC is owed — and who would prepare it — is unsettled (§4)
@@ -308,7 +383,7 @@ duplicate it here; a request list goes stale, this list doesn't.
 - [x] **What the 2025-11-13 deposit was** — **answered 2026-08-11: an owner contribution**, put in to cover an overdraft caused by an automatic charge (§5, §6). The **automatic charge itself still has to be categorized**
 - [ ] **Whether the credit card is a TD product too** — it decides whether the stuck reconnection screen (§6) is even about the right bank
 - [ ] **The closing date of the checking account**, and **the date the credit card stopped being business use** — the two cut-offs that decide what belongs in the 2025 books (§3, §5)
-- [x] **Sales-tax applicability** — **answered 2026-08-08: it applies**, historically filed **quarterly** by the firm with the FL DOR; whether that continued into 2026 under the current tax-prep-only scope is unconfirmed. **Payroll is still open.**
+- [x] **Sales-tax applicability** — **answered.** It applies; the DR-15 is **quarterly**; the firm filed **Q3 2025** and FDOR's own records confirm **nothing after it** _(2026-08-12, §4)_. What is now open is not applicability but **whether the certificate is still registered and accruing minimum penalties** — the ⏰ row above. **Payroll is still open.**
 - [ ] **The permits themselves** — which ones, in which city, and what month each renews (§4). Three renewals were paid in 2025 and the firm has never seen a single permit document
 - [ ] Fiscal-year obligations _(the Florida **Annual Report** is answered 2026-08-08: not currently part of the firm's service for this client; the licence/annual-filing half is partly answered — §4)_
 - [x] Where the client's Google Drive folder is — **found, 2026-08-08** (§7)
@@ -317,6 +392,11 @@ duplicate it here; a request list goes stale, this list doesn't.
 
 - **Double client:** [app.doublehq.com/close?cid=710577](https://app.doublehq.com/close?cid=710577)
 - **Double case note — the team-facing history of the 2025 tax preparation:** "CASE · 2025 tax preparation", note **485291** on the client record. It carries the full detail including contact names and emails (that belongs in Double, not here). **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
-- **Google Drive folder (sensitive vault):** [GOSSIP MIAMI LLC](https://drive.google.com/drive/folders/1H0HYR9DHFz0ZlcWLwxpFoBWDxy_0PoWV) _(found 2026-08-08)_
+- **Google Drive folder (sensitive vault):** [GOSSIP MIAMI LLC](https://drive.google.com/drive/folders/1H0HYR9DHFz0ZlcWLwxpFoBWDxy_0PoWV) _(found 2026-08-08)_. Inside it, the four things a session keeps having to re-find _(mapped 2026-08-12)_:
+  - **[Sales tax](https://drive.google.com/drive/folders/1sob_M_caJ_UvoJZ_UohwjtHGBl18up9Q)** — one folder per quarter, **2024-Q3 → 2025-Q3 and no further**, each holding the filed DR-15 and the **Vagaro sales exports** behind it (§4, §5). Also the FDOR **records-request response** listing everything on the account.
+  - **The 2024 share purchase agreement** — the **acquisition**, not a sale (§5). ⚠️ Read §5 before quoting it at anyone.
+  - **The 2024 return package** — a Form **1120-S**, prepared by an outside CPA firm (§1).
+  - **The FDOR power of attorney (DR-835) and the DR-841** — what lets the firm check the sales-tax account directly instead of asking the client.
+  ⚠️ **The folder also holds a logins-and-passwords document. Credentials are never copied out of it** — reference it, never repeat what is in it.
 - **Related clients:** the owners' individual account and **Marat Boxing LLC** are part of this same relationship (see the note at the top)
 - **Related SOPs:** none yet. The scope rule this client exercised lives in the [`proposal-generator` skill](../../../.claude/skills/proposal-generator/)
