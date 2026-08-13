@@ -816,6 +816,15 @@ the whole thing start to finish, instead of reconstructing it from email.
    **The one sanctioned exception is length, not topic:** when a matter genuinely outgrows the 8 KB wall
    it may be split into `Part 1 / Part 2 / …` under the strict discipline below. Splitting because a
    case has several *aspects* is still forbidden — that's the fragmentation this rule exists to prevent.
+   ⚠️ **But read it as one note per CASE, not one note per CLIENT — a client with two genuinely
+   separate matters gets two notes, and that is correct.** So `list_notes` is the first step, not the
+   answer: **the test is whether the existing note's MATTER is the one you are writing about**, not
+   whether a note exists. _(Gossip Miami, 2026-08-13: a session found `CASE · 2025 tax preparation`
+   near the size wall and concluded the client's separate **FDOR sales-tax collections** history had
+   nowhere to go — so an unclaimed four-figure credit ended up recorded in Double **nowhere**. The
+   collections matter was never that note's case; it needed its own, with a fresh budget. Caught by
+   the independent review.)_ **When the two could be read either way, the tell is whether one can be
+   closed while the other stays open.**
 2. **When new information about a tracked case arrives, updating its note is part of the work** —
    not a separate request. Lilian's instruction (Aug 2026): *when I tell you about this again, you
    have to go to that note and update it — it cannot be left sitting on out-of-date information.* (The lookup that makes this
