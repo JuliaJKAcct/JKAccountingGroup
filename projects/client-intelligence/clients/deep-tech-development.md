@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-11
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -46,6 +46,7 @@ the actual details.
 | Owner / primary contact | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706685](https://app.doublehq.com/close?cid=706685)
+- **Double case note:** `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
 
 ## 3. Systems & access
 
@@ -99,6 +100,8 @@ the actual details.
 
 ## 5. Key facts & quirks
 
+- 🔴 **THE FDOR REEMPLOYMENT-TAX EFFECTIVE DATE WAS NEVER CONFIRMED CHANGED, AND A BILL ON THE OLD ONE WAS ISSUED 2025-10-22.** On **2025-10-13** the firm asked the FDOR to move the reemployment-tax effective date to **1 July 2025**; on **2025-10-22** the FDOR sent the client a letter demanding **reemployment tax for Q2 2025** — a quarter that should fall outside it. On **2025-10-30** the FDOR confirmed the request was **still being processed** and gave no timescale. **Nothing after that is recorded**, so a wrong bill may still be live. ⚠️ **And the FDOR does NOT acknowledge a request of this kind** — see below; the absence of a letter proves nothing either way. _(The sales-tax half DID go through: effective date **1 October 2025**, confirmed 2025-10-30.)_
+- ⚠️ **The FDOR sends no acknowledgement that a change request was received or queued** — it writes only when the change is done. Lilian asked explicitly and they said they do not do it. **So the only way to know where a request stands is to telephone and ask**, and a client letter that contradicts a pending request is not evidence the request failed.
 - ⏸ **The client is paused while the owner pursues a US visa** — the business restarts when he has
   what he needs, and bookkeeping restarts with it. Until then the firm does **administrative work
   only**, and the QuickBooks disconnection of 2026-07-21 is part of the pause rather than a fault to
@@ -135,6 +138,11 @@ the actual details.
   ready he restarts the business and we restart bookkeeping. Meanwhile the firm does administrative
   work only. This closes the open question two sweeps had been carrying about why QBO was disconnected
   from Double on 2026-07-21 — it was the pause, not a broken sync. _(Worked by Lilian.)_
+- 2026-08-13 — **The FDOR effective-date matter written up.** _(Lilian's iCloud notes, migrated — folder "Deep Tech"; notes dated 2025-10-13 and 2025-10-30.)_ Full trail in the **Double case note** (§7). _(Worked by Lilian.)_
+  - **2025-10-13 — FDOR call.** ① The **sales-tax** effective date was updated to **1 October** and the FDOR sent a confirmation letter. ② A request went in to move the **reemployment-tax** effective date to **1 July**; the firm was told to wait a few days and call if no confirmation letter arrived.
+  - **2025-10-22 — FDOR letter to the client**, demanding **reemployment tax for Q2 2025** — a quarter the requested effective date should exclude. Julia passed it on.
+  - **2025-10-30 — FDOR call.** The reemployment-tax request was **still being processed** by the Department of Reemployment Tax, with no timescale beyond "it depends on the queue". Lilian asked whether they acknowledge a request in the meantime — **they said they do not**, and write only once the change is done. The **sales-tax** change was confirmed complete.
+- **Nothing after 2025-10-30 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
@@ -151,6 +159,7 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706685](https://app.doublehq.com/close?cid=706685)
+- **Double case note:** `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/19OZXViieW60GsVtKUbqta0a2mM2VMZK1)
 - **Client password vault (Google Doc):** [all client logins — incl. the Penn Credit account/ID number + ZIP](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) — sensitive values live here, never in this file.
 - **Penn Credit collection portal:** [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) — pay down the FDOT toll debts here.

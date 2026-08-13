@@ -358,3 +358,25 @@ salvage; from here the record is kept properly.
 |---|---|---|---|
 | 2026-08-12 | **Phase 1 — inventory** | All 22 identified; names only, no content read | Lilian |
 | 2026-08-12 | **Phase 2 (iCloud source only)** | **Optic Gold Inc** — `optic-gold.md` §1/§4/§5/§6/§7 + Double case note **491051** | Lilian |
+| 2026-08-13 | **Phase 2 (iCloud source only) — batch 1** | **5 new files:** Mays Express (note **491838**) · Megabai (no Double account, no note) · Voicecapital (**491840**) · Voxago (**491841**) · YMI Trucking (**491842**) | Lilian |
+| 2026-08-13 | **Phase 2 (iCloud source only) — batch 2** | **4 existing files enriched:** Candramas (note **491844**) · Deep Tech (**491845**) · Masciave (**491846**) · Gossip Miami — **new note 491858** for the FDOR collections matter, which is a *different case* from the 2025 tax-prep note 485291 | Lilian |
+
+**The iCloud source is now fully processed** — every client folder in Lilian's `1-JK Accounting`
+that carried content is written up. **Magnum 152 has a folder but no note content** in the material
+supplied, so nothing was added to it.
+
+⚠️ **Two general items surfaced across the batch and are recorded on the clients, not here:**
+**(a)** **three clients have a CONFIRMED outdated address** at the IRS or the FDOR — Optic Gold,
+Voicecapital and Voxago — plus **YMI Trucking, where it is unsettled** (the IRS holds a Texas address
+for an Indiana company, and Julia's account is that a new Texas mailing address is legitimate, so the
+record may even be current). Worth checking roster-wide rather than one client at a time;
+**(b)** **two companies have NO Form 2553 on file at the IRS while the firm files an 1120-S** —
+Voicecapital and Masciave — with **Optic Gold** the same case resolved six weeks earlier, and
+**Candramas** a near neighbour rather than the same thing: its 2553 *does* exist, it simply took
+effect a year later than intended. Four companies, one underlying weakness in how the election was
+evidenced.
+
+⚠️ **The TaxDome copies of these same notes have still NOT been read** — that is Phase 2 proper and
+it stays gated on the permission question. The overlap is known (Optic Gold's two IRS calls appear
+in both sources), so when Phase 2 runs it must **reconcile against what is already written** rather
+than append a second account of the same events.

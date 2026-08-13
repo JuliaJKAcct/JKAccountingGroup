@@ -1,6 +1,6 @@
 # CANDRAMAS LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
 >
 > ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
 > Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
@@ -53,7 +53,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | _(add roles as needed)_ | |
 
 - **Double client:** [app.doublehq.com/close?cid=706683](https://app.doublehq.com/close?cid=706683)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note:** `CASE · IRS Form 2553 — the S-election took effect a year late` — note **491844**
 
 ## 3. Systems & access
 
@@ -124,9 +124,13 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- 🔴 **THE S-ELECTION TOOK EFFECT 2024-01-01, NOT 2023-01-01 — SO 2023 IS A C-CORP YEAR AT THE IRS, AND AN 1120-S WAS FILED FOR IT.** Established on the IRS call of **2026-02-04**. What is **established** is that the IRS records the election as effective 2024-01-01 and would not explain why. The agent's *likely* account — that the previous accountant's form arrived after the 15 March cut-off — is the working theory only (next bullets). **The exposure is a failure-to-file penalty on a Form 1120 for 2023 that nobody filed** — and the 2023 1120-S was never accepted or processed, so from the IRS's side it may not exist at all. **Do not treat 2023 as a settled year.**
+- 🔴 **A late Form 2553 was MAILED OUT to fight for the 2023 date, and no outcome is recorded.** That was the firm's chosen route (§6 sets out both options and why). **Assume it is unresolved** and check with the IRS before doing anything with 2023.
+- ⚠️ **The IRS could not say WHY it rejected the 2023 effective date, or when the form actually arrived.** The "received after 15 March" explanation is **the agent's guess, not an IRS finding** — Lilian pressed for the arrival date and they would not give one. Treat it as the working theory, not as fact.
+- ⚠️ **Reaching this IRS unit is hard.** Lilian called the number on the IRS's own letter **several times with no answer** and had to leave a voicemail. Budget for that, and do not read silence as the matter being closed.
 - **Financials Ready = Ready** in Double _(2026-08-11)_ — the tax-season property is set, so the books are considered done for the return.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- **Everything outside the S-election history is still only Double's property columns** — nothing else here came from email, a call, Drive or the books.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -135,6 +139,12 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-13 — **The Form 2553 effective-date matter written up.** _(Lilian's iCloud notes, migrated — folder "Candramas"; note dated 2026-03-16, recording an IRS call of 2026-02-04.)_ The operational detail — the IRS agent, the phone line, the exact contents of the letter to send — is in the **Double case note** (§7). _(Worked by Lilian.)_
+  - **2026-02-04 — IRS call.** The agent's explanation for why the S-election reads **2024-01-01** rather than **2023-01-01**: the IRS received the Form 2553 **after 15 March 2023**, and **what counts is the date the IRS receives it, not the date it is mailed**. It arrived, apparently, in the last week of March. Lilian told them the previous accountant had mailed it on **6 March** — the date the form was signed. ⚠️ **Her note writes that mailing date as `03.06.2024`, which cannot be right for a 2023 deadline; it reads as a slip for 2023. Check the form itself before relying on the date.** The agent **could not give the actual arrival date, nor the reason the 2023 date was refused.**
+  - **2026-02-04 — the two routes the IRS set out.** ① **Accept that the company was a C-corp in 2023** — which brings a **large penalty for not filing Form 1120 on time** — and run as an S-corp from 2024-01-01. ② **Fight for the 2023 date by filing a late Form 2553.** Either in two stages (send the late 2553 with the explanation; once the acceptance letter arrives, re-send the 2023 1120-S with an explanatory letter and, optionally, a Form 2848), or **everything in one package to the same address the 1120-S normally goes to**.
+  - ⚠️ **The trap inside route ②, and it is the reason the previous accountant had to be contacted.** Because the 2023 1120-S was never accepted or processed, **it disappears from the IRS's system** — so it looks as though it was never filed at all. The package therefore has to carry **evidence that it was filed** (the return copy or the submission confirmation), and **the owner had to go back to the previous accountant to obtain it.**
+  - **The Form 2848 in the package is optional and has a specific purpose** — it is what makes the IRS direct its questions to the firm instead of phoning the owner.
+  - **Outcome: the package was MAILED OUT.** Nothing after that is recorded anywhere the firm can reach. Per Lilian's instruction of 2026-08-12, it is left open rather than chased or inferred.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -166,6 +176,6 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706683](https://app.doublehq.com/close?cid=706683)
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note:** `CASE · IRS Form 2553 — the S-election took effect a year late` — note **491844**
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
