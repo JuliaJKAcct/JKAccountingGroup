@@ -26,6 +26,11 @@ voy a acordar ni de pedírtelas"*. A `.md` file nobody remembers to open is not 
 the notebook has **one link she bookmarks** — a searchable page — and a card in the
 [Knowledge Hub](../knowledge-hub/) so it's never lost.
 
+⚠️ **The bookmarked link is the answer to that sentence — proposing notes is not.** That same
+quote used to justify a rule telling Claude to offer her notes unprompted; she ended it on
+**2026-08-13** (see the 🛑 below). Remembering where the notebook *is* was the problem; deciding
+what goes in it was never delegated.
+
 ### Whose it is
 
 **This one is Lilian's** — her decision, Aug 2026. She's the only person writing in it; it's

@@ -74,7 +74,7 @@ the US.
 │       ├── client-intelligence/       creates/enriches/audits the per-client files + renders the review dashboard (Atlas); sweep by owner, assign by company
 │       ├── knowledge-hub/             builds/extends the firm Knowledge Hub (the one page indexing all SOPs, clients + Lilian's Notebook) — preferences, curation rules, verify-before-publish gate
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
-│       ├── lilian-notebook/            drives Lilian's Notebook — capture a lesson (PROPOSE it unprompted), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
+│       ├── lilian-notebook/            drives Lilian's Notebook — write a lesson SHE ASKED FOR (🛑 never propose one), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
 │       ├── proposal-generator/         drives the proposal-tool project — client-ready proposals + engagement letters (the interactive business tax-prep generator, per-client fields, client data never committed)
 │       └── impeccable/                general UI/design skill
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
@@ -175,16 +175,19 @@ in that folder.
   Her instruction, **2026-08-13**, and it is absolute: *"No me propongas más nada para mi libreta.
   Cuando crea que algo es necesario, yo misma te lo voy a decir."* So a session that spots a
   beautiful lesson **says nothing about the notebook** — not "want me to note this?", not a
-  one-liner at the end of a reply, not a nudge. **Write into
-  [`projects/lilian-notebook/`](./projects/lilian-notebook/) only when she asks for it in that
+  one-liner at the end of a reply, not a nudge. **Add a NEW note only when she asks for it in that
   session**, in her words ("anota esto en mi libreta" / "add this to my notebook"). Answering a
-  question *about* what the notebook already says is always fine.
+  question *about* what the notebook already says is always fine — and so is **maintaining** what
+  is already there: correcting a superseded note, repairing a cross-reference, rebuilding and
+  republishing the page. This governs **new notes and the offering of them**, nothing else.
   _(This **reverses** the standing rule that ran Aug 2026 → 2026-08-13, which told every session to
   offer a note unprompted because "she won't remember to ask". She had already cut the notebook's
   first 33 notes down to four; the proposals kept coming anyway, and the reversal is what closed
   it. **The judgement was never the problem — the asking was.** Do not reintroduce this as
   "just a suggestion".)_
-  **Where a real lesson goes instead**, without involving her: a repeatable workflow → the relevant
+  **Where a real lesson goes instead** — without raising the notebook, though **each of these keeps
+  its own rule** (a Client-Intelligence write is still announced; a skill-worthy workflow is still
+  offered unprompted; an SOP change still needs her approval): a repeatable workflow → the relevant
   [skill](./.claude/skills/); a procedure → an [SOP](./projects/sops/); a fact about a client →
   their [Client Intelligence](./projects/client-intelligence/) file; an unfinished thread → a
   [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) row (deleted when it resolves). Those are unaffected by this

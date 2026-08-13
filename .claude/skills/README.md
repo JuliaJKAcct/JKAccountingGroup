@@ -43,7 +43,7 @@ The one-liners below are just the "when to reach for it."
 | [`client-portal-guides`](./client-portal-guides/) | A client **doesn't know how to do something in the Double portal** and needs step-by-step instructions **with images** — log in, send us a document, ask us something. Produces the one-page visual guide (EN + RU), the PDF/PNG for email or WhatsApp, the message copy, and the SOP behind them. *(House rule: portal screens are **recreated in HTML/CSS**, never shipped as raw screenshots. Builds on `sop-authoring` + `impeccable`, feeds `knowledge-hub`.)* |
 | [`client-intelligence`](./client-intelligence/) | Building, enriching, or auditing the **per-client knowledge files**, and rendering the client review dashboard. *(Feeds the client's SOPs.)* |
 | [`knowledge-hub`](./knowledge-hub/) | Building or extending the **firm Knowledge Hub** — the one on-brand page indexing every SOP, client + Lilian's Notebook, its in-page reader, and tools like the Chart-of-Accounts builder. *(Reuses the `client-intelligence` engine.)* |
-| [`lilian-notebook`](./lilian-notebook/) | Capturing or looking up a **lesson learned the hard way** in Lilian's Notebook — *"anota esto en mi libreta"*, or **proposing** the entry unprompted when a session turns one up. *(Lilian's personal record; a lesson, not a task — tasks go in `FOLLOW-UPS.md`.)* |
+| [`lilian-notebook`](./lilian-notebook/) | Writing or looking up a **lesson learned the hard way** in Lilian's Notebook — when she asks (*"anota esto en mi libreta"*), or to answer what a note already says. 🛑 **Never propose one unprompted** — Lilian ruled that out on 2026-08-13; she asks, or it doesn't happen. *(Lilian's personal record; a lesson, not a task — tasks go in `FOLLOW-UPS.md`.)* |
 
 ## Marketing & content
 

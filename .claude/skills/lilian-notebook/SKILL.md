@@ -56,9 +56,10 @@ Write what's established, mark it `Working assumption`, and say where it's pause
 entendiendo lo que quiero."* **Update this section whenever she keeps, rejects or reshapes a note
 in a way that sharpens the line.**
 
-⚠️ **This filter applies to notes SHE HAS ASKED FOR — it is not a licence to offer one.** It used
-to end "when a note is borderline, offer it and let her decide"; that clause is **struck**, and
-rule zero below replaces it. A borderline note is simply not written unless she asks.
+⚠️ **This filter is not a gate and not a licence to offer.** It used to end "when a note is
+borderline, offer it and let her decide"; that clause is **struck**, and rule zero below replaces
+it. **A note she has not asked for is simply not written.** A note she *has* asked for **gets
+written** — then this section shapes what it should answer and how, not whether it belongs.
 
 ## 1. Rule zero — 🛑 NEVER propose a note. She asks, or it doesn't happen.
 
@@ -83,15 +84,20 @@ threshold above which offering becomes acceptable.
 
 1. **Answering from the notebook.** When she asks about a topic a note already covers, answer
    *from the note* and give its ID, so the notebook proves itself.
-2. **Putting the lesson in its real home — silently, as usual.** A repeatable workflow belongs
+2. **Putting the lesson in its real home — without raising the notebook.** ⚠️ *Each of those
+   routes keeps its own rule: a Client-Intelligence write is still **announced**, a skill-worthy
+   workflow is still **offered** unprompted, an SOP change still needs her **approval**. This rule
+   silences the notebook, not the others.* A repeatable workflow belongs
    in a [skill](../), a procedure in an [SOP](../../../projects/sops/), a client fact in that
    client's [Client Intelligence](../../../projects/client-intelligence/) file, an unfinished
    thread in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). Those routes are untouched by this rule
    and are where a session's learning should land. **The notebook is hers; the rest of the repo
    is the firm's.**
 
-When she *does* ask for a note, §0's filter and §2's structure still apply, and if a note
-already covers the topic, say so and **enrich that note** rather than adding a second (§5).
+When she *does* ask for a note, **§0 is no longer a gate on _whether_ to write it** — she asked,
+so it gets written. §0 shapes **what the note must answer and how it is written**, and §2 gives it
+its structure. If a note already covers the topic, say so and **enrich that note** rather than
+adding a second (§5).
 
 ## 2. Writing the entry
 
