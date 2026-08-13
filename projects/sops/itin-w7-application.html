@@ -1181,9 +1181,9 @@ Austin, TX 78741-0000</pre>
     <div class="subbar reveal"><span class="tag">How</span><h3>In practice</h3></div>
     <div class="indent reveal">
       <ol class="qlist">
-        <li>Run the walkthrough for the client, then press <b>“Track this as a case”</b> on the preparation sheet. Give it a reference.</li>
+        <li>Run the walkthrough for the client, then press <b>“Track this as a case”</b> on the preparation sheet. Give it a reference. <b>Start from the walkthrough</b>, not from “New case” — only a completed walkthrough produces a checklist pruned to that applicant; “New case” gives the generic list and labels the case <em>generic</em> so nobody mistakes it for a tailored one.</li>
         <li>Tick items as they happen — each tick date-stamps itself. Add a note on any step (<em>“client emailed 13 Aug, waiting”</em>) and log events as they occur.</li>
-        <li><b>At the end of a working session, press “Copy the case note for Double”</b> and paste it into the client’s case note. Until you do, the case shows <em>“changes not yet copied”</em>.</li>
+        <li><b>At the end of a working session, press “Copy the case note for Double”</b>, paste it into the client’s case note, then press <b>“I have pasted it into Double”</b>. Until you do, the case keeps showing <em>“changes not yet copied”</em> — copying is not pasting, and the tool will not call a case saved just because it reached your clipboard.</li>
         <li>To pick a case up — on another machine, or because someone else started it — paste the note back in under <b>“Open a case from a Double note”</b>.</li>
       </ol>
     </div>
@@ -1208,7 +1208,7 @@ Austin, TX 78741-0000</pre>
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
       <div class="cx">
         <div class="cl">A size limit that bites</div>
-        <p>Double blocks a note body at around <b>8,000 characters</b> — it returns an error rather than trimming. The tool shows a character count and warns before you cross it; if a long-running case gets close, trim the oldest log entries.</p>
+        <p>Double blocks a note body at around <b>8,000 characters</b> — it returns an error rather than trimming, and the pasted body is <b>HTML</b>, so it ends up longer than the plain text you can see. The tool therefore warns from <b>7,000</b> characters and offers a <b>“Trim the log to the last 12”</b> button when you cross it — the checklist, its dates and the per-step notes are untouched; only the log history is shortened. A typical case note is around 2,000 characters, so this only bites on a long-running matter.</p>
       </div>
     </div>
   </section>

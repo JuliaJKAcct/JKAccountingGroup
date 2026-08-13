@@ -810,7 +810,11 @@ function buildSheet(){
    ======================================================================== */
 var LSKEY = 'jk-itin-cases-v1';
 var CODETAG = 'JKCASE1:';
-var NOTE_LIMIT = 7600;   // Double blocks a note body around 8,000 chars — it 403s, it does not truncate
+// Double's own guidance is "keep bodies under ~7,500", and the 403 boundary has never been
+// bracketed tighter than 7,600–8,000. The body is also HTML once pasted, so the real string
+// is bigger than the plain text we can measure here. Warn well before the cliff.
+var NOTE_LIMIT = 7000;
+var LOG_KEEP = 40;       // entries carried in the code; the readable list shows the last 12
 
 var PHASES = [['intake','Eligibility & intake'],['form','The form'],['docs','Documents'],
               ['ret','Return or exception'],['sign','Signatures'],['caa','As a CAA'],
@@ -837,6 +841,7 @@ function buildSteps(a){
   if (a.role==='b' || a.role==='a') add('l3','form','Line 3 — complete foreign address','No P.O. box, no c/o.');
   if (a.role==='c' || a.role==='g' || (a.role==='d' && !carve)) add('l6d','form','Line 6d — date of entry into the U.S.','Blank here is the IRS’s error #9.');
   if (a.apptype==='renew') add('l6ef','form','Lines 6e / 6f — previous ITIN and the name it was issued under','');
+  if (a.role==='f') add('l6d','form','Line 6d — date of entry into the U.S.','Mandatory for reason f, and blank here is the IRS’s error #9.');
   if (a.role==='f') add('l6g','form','Line 6g — institution, city and state, length of stay','');
 
   if (a.pass==='yes'){
@@ -845,6 +850,7 @@ function buildSteps(a){
   } else {
     add('twodocs','docs','Two or more documents from the 13-document list','One must carry a recent photograph, unless the applicant is an exempt dependent.');
   }
+  if (a.role==='f' || a.role==='g') add('visacopy','docs','Copy of the visa, and any I-20 / I-94','Attached to the Form W-7.');
   if (age >= 0 && age < 18 && a.pass!=='yes') add('birthcert','docs','Original civil birth certificate','Required under 18 where no valid passport is provided.');
   if (residency) add('residency','docs','Proof of U.S. residency collected','From the age band on the preparation sheet — and the record must meet its content checklist.');
   add('origcert','docs','Everything is original or issuing-agency certified','Notarised copies are not accepted.');
@@ -861,7 +867,9 @@ function buildSteps(a){
   if (a.signer==='poa') add('f2848','sign','Form 2848 attached','');
   if (a.signer==='guardian') add('courtdocs','sign','Court-appointment papers attached','');
   if (a.signer==='mark') add('witness','sign','Witness signed and is identified as a witness','');
-  add('aablock','sign','Acceptance Agent’s Use ONLY block completed','Signed by a responsible party named on the firm’s AA application.');
+  // Only when we are actually signing as an agent — the firm is not one yet, and an
+  // untickable step would stop every case ever reading as complete.
+  if (a.caa==='yes') add('aablock','sign','Acceptance Agent’s Use ONLY block completed','Signed by a responsible party named on the firm’s AA application.');
 
   if (a.caa==='yes'){
     add('coa','caa','Form W-7-COA completed and signed','Responsible party only. Identity + Foreign Status ticked per document.');
@@ -883,21 +891,70 @@ function buildSteps(a){
 function todayISO(){ var d = new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function nowStamp(){ var d = new Date(); return todayISO()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); }
 
-var cases = [], openCase = null;
-function loadCases(){
-  try { cases = JSON.parse(localStorage.getItem(LSKEY) || '[]'); } catch(e){ cases = []; }
-  if (!Array.isArray(cases)) cases = [];
+var cases = [], openCase = null, storageBroken = false, lastCard = 0;
+
+// A stored entry that is not a real case used to throw inside paintBadge() at load,
+// which aborted the whole script — the walkthrough and the reference tab went blank too,
+// with no recovery a user could perform. Validate every entry and keep going.
+function validCase(c){
+  return c && typeof c === 'object' && typeof c.ref === 'string'
+      && Array.isArray(c.steps) && Array.isArray(c.log)
+      && c.steps.every(function(s){ return s && typeof s.id === 'string'; });
 }
+function loadCases(){
+  var raw = [];
+  try { raw = JSON.parse(localStorage.getItem(LSKEY) || '[]'); } catch(e){ raw = []; }
+  if (!Array.isArray(raw)) raw = [];
+  var good = raw.filter(validCase);
+  if (good.length !== raw.length) warnStorage((raw.length - good.length) + ' stored item(s) were not readable as cases and have been ignored. Nothing was deleted — if a case is missing, reopen it from its note in Double.');
+  cases = good;
+}
+// Two windows of the tool used to clobber each other: each held the whole array in memory
+// and wrote it wholesale. Merge against what is on disk at write time, newest-updated wins.
 function saveCases(){
-  try { localStorage.setItem(LSKEY, JSON.stringify(cases)); }
-  catch(e){ alert('This browser would not save the case (storage may be full or blocked). Copy the case note block now so the work is not lost.'); }
+  if (storageBroken) return;
+  var mine = {}; cases.forEach(function(c){ mine[caseKey(c)] = true; });
+  var merged = cases.slice();
+  try {
+    var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
+    if (Array.isArray(disk)) disk.filter(validCase).forEach(function(d){
+      if (!mine[caseKey(d)]) merged.push(d);          // a case another window created — keep it
+    });
+  } catch(e){}
+  try { localStorage.setItem(LSKEY, JSON.stringify(merged)); }
+  catch(e){
+    storageBroken = true;
+    warnStorage('This browser will not save cases (storage is full, or blocked in a private window). Your work is still on screen — copy the case note for Double now, or it will be lost when this page closes.');
+  }
   paintBadge();
+}
+function caseKey(c){ return (c.ref || '') + '|' + (c.created || ''); }
+// One persistent banner, not an alert on every keystroke.
+function warnStorage(msg){
+  var id = 'storageWarn', el = document.getElementById(id);
+  if (!el){
+    el = document.createElement('div');
+    el.id = id; el.className = 'flag err'; el.setAttribute('role','alert');
+    el.style.cssText = 'margin:0 0 16px;border-radius:9px';
+    var host = document.getElementById('cases');
+    if (host) host.insertBefore(el, host.firstChild);
+  }
+  el.innerHTML = '<span class="fl">Storage problem</span>' + esc(msg);
 }
 function paintBadge(){
   var el = document.getElementById('caseCount');
   var open = cases.filter(function(c){ return progress(c).pct < 100; }).length;
-  el.textContent = open; el.hidden = cases.length === 0;
+  el.textContent = open; el.hidden = open === 0;
 }
+// Another window changed the store — pick it up rather than overwrite it later.
+window.addEventListener('storage', function(e){
+  if (e.key !== LSKEY) return;
+  var openRef = openCase ? caseKey(openCase) : null;
+  loadCases();
+  openCase = openRef ? cases.filter(function(c){ return caseKey(c) === openRef; })[0] || null : null;
+  if (!document.getElementById('cases').hidden) renderCases();
+  paintBadge();
+});
 function progress(c){
   var t = c.steps.length, d = c.steps.filter(function(s){ return s.done; }).length;
   return { total:t, done:d, pct: t ? Math.round(d/t*100) : 0 };
@@ -908,9 +965,9 @@ function b64dec(s){ return JSON.parse(decodeURIComponent(escape(atob(s)))); }
 // The compact form stored in the Double note: ids + state only, never the answers.
 function encodeCase(c){
   return CODETAG + b64enc({
-    v:1, r:c.ref, cr:c.created, up:c.updated,
+    v:1, r:c.ref, cr:c.created, up:c.updated, g:c.generic?1:0,
     s: c.steps.map(function(s){ return [s.id, s.done?1:0, s.date||'', s.note||'']; }),
-    l: c.log.map(function(e){ return [e.t, e.x]; })
+    l: c.log.slice(-LOG_KEEP).map(function(e){ return [e.t, e.x]; })
   });
 }
 function decodeCase(text){
@@ -922,7 +979,7 @@ function decodeCase(text){
   // Rebuild labels from the current step catalogue; a code carries ids, not text.
   var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
   return {
-    ref: o.r, created: o.cr, updated: o.up,
+    ref: o.r, created: o.cr, updated: o.up, generic: !!o.g,
     steps: o.s.map(function(a){
       var meta = all[a[0]] || { id:a[0], ph:'form', t:a[0], d:'' };
       return { id:a[0], ph:meta.ph, t:meta.t, d:meta.d, done:!!a[1], date:a[2]||'', note:a[3]||'' };
@@ -931,17 +988,45 @@ function decodeCase(text){
     dirty: false
   };
 }
-// Every step this tool can generate, for label rebuilding on import.
+// Every step this tool can generate, for rebuilding labels on import — a saved case
+// stores ids, not text, so a step missing from here comes back as a bare id in the
+// wrong phase, and that mislabel is then written into the client's Double note.
+// The self-check below fails loudly if a new step is ever added without a seed shape
+// that reaches it; that is exactly how `birthcert` went missing.
 var ALLSTEPS = (function(){
   var seen = {}, out = [];
   [{role:'d',pass:'yes',entry:'no',depres:'other',ret:'yes',caa:'yes',signer:'poa',apptype:'renew',age:'10',exc:'1a',ssn:'denied'},
+   {role:'d',pass:'no',depres:'other',ret:'yes',caa:'no',signer:'parent',apptype:'new',age:'8',ssn:'no'},   // reaches birthcert
    {role:'a',pass:'no',ret:'no',caa:'no',signer:'guardian',apptype:'new',age:'30',exc:'2a',ssn:'school'},
    {role:'f',pass:'yes',ret:'yes',caa:'no',signer:'mark',apptype:'new',age:'40',ssn:'no'},
+   {role:'f',pass:'no',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'25',ssn:'no'},                   // reaches visacopy without a passport
    {role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'},
    {role:'c',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'},
-   {role:'g',grole:'dep',pass:'yes',entry:'no',depres:'cm',odc:'yes',ret:'yes',caa:'yes',signer:'parent',apptype:'new',age:'8',ssn:'no'}
+   {role:'g',grole:'dep',pass:'yes',entry:'no',depres:'cm',odc:'yes',ret:'yes',caa:'yes',signer:'parent',apptype:'new',age:'8',ssn:'no'},
+   {role:'g',grole:'sp',pass:'yes',ret:'yes',caa:'yes',signer:'self',apptype:'new',age:'35',ssn:'no'}
   ].forEach(function(a){ buildSteps(a).forEach(function(s){ if(!seen[s.id]){ seen[s.id]=1; out.push(s); } }); });
   return out;
+})();
+// Self-check: sweep the answer space and prove every reachable step id is in ALLSTEPS.
+(function(){
+  var known = {}; ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
+  var missing = {}, V = {
+    apptype:['new','renew'], ssn:['no','denied','school'],
+    role:['a','b','c','d','e','f','g','h'], grole:['dep','sp'],
+    ret:['yes','no'], exc:['1a','2a'], age:['4','8','15','30'],
+    depres:['cm','mil','other'], odc:['yes','no'], pass:['yes','no'], entry:['yes','no'],
+    signer:['self','parent','guardian','poa','mark'], caa:['yes','no'], student:['yes','no']
+  };
+  for (var i = 0; i < 3000; i++){
+    var a = {}, k;
+    for (k in V) a[k] = V[k][i % V[k].length];
+    a.role = V.role[i % 8]; a.pass = V.pass[(i >> 1) % 2]; a.caa = V.caa[(i >> 2) % 2];
+    a.depres = V.depres[(i >> 3) % 3]; a.odc = V.odc[(i >> 2) % 2]; a.age = V.age[(i >> 4) % 4];
+    a.ret = V.ret[(i >> 5) % 2]; a.signer = V.signer[i % 5]; a.entry = V.entry[(i >> 6) % 2];
+    buildSteps(a).forEach(function(s){ if (!known[s.id]) missing[s.id] = 1; });
+  }
+  var m = Object.keys(missing);
+  if (m.length && window.console) console.error('ITIN tool: steps missing from ALLSTEPS — they will lose their labels on re-import: ' + m.join(', '));
 })();
 
 function newCase(ref, steps){
@@ -978,7 +1063,7 @@ function renderCases(){
     var p = progress(c);
     var next = c.steps.filter(function(s){ return !s.done; })[0];
     h += '<div class="ccard" data-i="'+i+'" role="button" tabindex="0">'
-      +  '<div class="cr"><h4>'+esc(c.ref)+'</h4><span class="cmeta">'+p.done+' / '+p.total+' done'
+      +  '<div class="cr"><h4>'+esc(c.ref)+(c.generic?' <span class="pill-dirty">generic</span>':'')+'</h4><span class="cmeta">'+p.done+' / '+p.total+' done'
       +  (c.dirty ? ' <span class="pill-dirty">not copied</span>' : '')
       +  (p.pct===100 ? ' <span class="pill-done">complete</span>' : '')+'</span></div>'
       +  '<div class="bar-wrap"><div class="bar-fill'+(p.pct===100?' done':'')+'" style="width:'+p.pct+'%"></div></div>'
@@ -994,17 +1079,38 @@ function wireList(){
   var nb = document.getElementById('newCase'); if (nb) nb.addEventListener('click', promptNewCase);
   var ib = document.getElementById('importCase'); if (ib) ib.addEventListener('click', showImport);
   [].forEach.call(document.querySelectorAll('.ccard'), function(el){
-    var go = function(){ openCase = cases[+el.dataset.i]; renderCases(); window.scrollTo({top:0,behavior:'smooth'}); };
+    var go = function(){
+      lastCard = +el.dataset.i;
+      openCase = cases[lastCard]; renderCases();
+      var hd = document.querySelector('#caseOne h2');
+      if (hd){ hd.tabIndex = -1; hd.focus(); }
+      window.scrollTo({top:0,behavior:'smooth'});
+    };
     el.addEventListener('click', go);
     el.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
   });
 }
 
+// A half-answered walkthrough used to pass the old `A.role && A.pass` gate and produce a
+// confident but silently wrong "tailored" list. Only a COMPLETE walkthrough tailors a case;
+// anything else gets the generic checklist, and says so on the card and in the Double note.
+function walkComplete(){
+  return active().every(function(q){
+    return q.free ? q.free.every(function(f){ return A[f[0]]; })
+                  : (A[q.id] !== undefined && A[q.id] !== '');
+  });
+}
 function promptNewCase(){
+  var tailored = walkComplete();
+  if (!tailored && !confirm('The walkthrough has not been completed, so this case will use the GENERIC checklist — not one pruned to a particular applicant.\n\nFor a checklist tailored to this client, cancel, finish the Walkthrough tab and press “Track this as a case” on the preparation sheet.\n\nCreate a generic case anyway?')) return;
   var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into Double.');
   if (!ref) return;
-  var steps = (A.role && A.pass) ? buildSteps(A) : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
-  cases.unshift(newCase(ref.trim(), steps));
+  var steps = tailored ? buildSteps(A)
+                       : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
+  var c = newCase(ref.trim(), steps);
+  c.generic = !tailored;
+  if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
+  cases.unshift(c);
   saveCases(); openCase = cases[0]; renderCases();
 }
 
@@ -1032,7 +1138,7 @@ function renderOne(){
         +  '<div class="sx"><label class="st" for="s_'+idx+'">'+esc(s.t)+'</label>'
         +  (s.d ? '<div class="sd">'+esc(s.d)+'</div>' : '')
         +  (s.done && s.date ? '<span class="sstamp">✓ '+esc(s.date)+'</span>' : '')
-        +  '<input class="snote" type="text" data-note="'+idx+'" value="'+esc(s.note||'')+'" placeholder="Note — e.g. who has it, what is waiting, a date">'
+        +  '<input class="snote" type="text" data-note="'+idx+'" value="'+esc(s.note||'')+'" aria-label="Note for: '+esc(s.t)+'" placeholder="Note — e.g. who has it, what is waiting, a date">'
         +  '</div></div>';
     });
     h += '</div>';
@@ -1047,25 +1153,20 @@ function renderOne(){
 
   one.innerHTML = h;
 
-  document.getElementById('backCases').addEventListener('click', function(){ openCase=null; renderCases(); });
+  document.getElementById('backCases').addEventListener('click', function(){
+    openCase = null; renderCases();
+    var card = document.querySelector('.ccard[data-i="'+lastCard+'"]') || document.getElementById('newCase');
+    if (card) card.focus();
+  });
   document.getElementById('delCase').addEventListener('click', function(){
-    if (!confirm('Delete “'+c.ref+'” from this browser?\n\nIf the case note is in Double you can always open it again from there.')) return;
+    var warn = c.dirty
+      ? 'Delete “'+c.ref+'”?\n\n⚠️ This case has changes that have NOT been copied to Double. Deleting it loses them for good — there is nothing to reopen it from.'
+      : 'Delete “'+c.ref+'” from this browser?\n\nYou last copied it to Double, so you can reopen it from that note.';
+    if (!confirm(warn)) return;
     cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
   });
   document.getElementById('copyNote').addEventListener('click', function(){ showNote(c); });
   document.getElementById('dlCase').addEventListener('click', function(){ downloadCase(c); });
-  one.addEventListener('change', function(e){
-    var t = e.target;
-    if (t.dataset.step !== undefined){
-      var s = c.steps[+t.dataset.step];
-      s.done = t.checked; s.date = t.checked ? todayISO() : '';
-      c.log.push({ t: nowStamp(), x: (t.checked ? '✓ ' : '↺ ') + s.t });
-      touch(c); renderOne();
-    }
-  });
-  one.addEventListener('input', function(e){
-    if (e.target.dataset.note !== undefined){ c.steps[+e.target.dataset.note].note = e.target.value; touch(c, true); }
-  });
   document.getElementById('logAdd').addEventListener('click', function(){
     var v = document.getElementById('logText').value.trim(); if (!v) return;
     c.log.push({ t: nowStamp(), x: v }); touch(c); renderOne();
@@ -1076,11 +1177,36 @@ function renderOne(){
 }
 function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); if (!quiet) paintBadge(); }
 
+/* #caseOne survives every render, so binding here once is the only safe place. Binding
+   inside renderOne() stacked a new pair of listeners on every redraw, each closing over
+   whichever case was open at the time — so ticking one client's step also ticked a
+   previously-opened client's, and log entries doubled with every render. Resolve the
+   case from openCase at event time instead of capturing it. */
+(function bindCaseEditingOnce(){
+  var one = document.getElementById('caseOne');
+  one.addEventListener('change', function(e){
+    var c = openCase, t = e.target;
+    if (!c || t.dataset.step === undefined) return;
+    var s = c.steps[+t.dataset.step];
+    if (!s) return;
+    s.done = t.checked; s.date = t.checked ? todayISO() : '';
+    c.log.push({ t: nowStamp(), x: (t.checked ? '✓ ' : '↺ ') + s.t });
+    touch(c); renderOne();
+  });
+  one.addEventListener('input', function(e){
+    var c = openCase, t = e.target;
+    if (!c || t.dataset.note === undefined) return;
+    var s = c.steps[+t.dataset.note];
+    if (s){ s.note = t.value; touch(c, true); }
+  });
+})();
+
 /* ---------------------- the Double note (the durable copy) --------------- */
 function caseNoteText(c){
   var p = progress(c), out = [];
   out.push('ITIN APPLICATION — ' + c.ref);
   out.push('Status: ' + p.done + ' of ' + p.total + ' steps done (' + p.pct + '%) · opened ' + c.created + ' · updated ' + c.updated);
+  if (c.generic) out.push('NOTE: generic checklist — not pruned to this applicant. Re-run the walkthrough for a tailored one.');
   out.push('');
   PHASES.forEach(function(ph){
     var steps = c.steps.filter(function(s){ return s.ph === ph[0]; });
@@ -1115,7 +1241,9 @@ function showNote(c){
     + txt.length.toLocaleString() + ' characters — Double blocks a note body around 8,000 and returns an error rather than trimming it.'
     + (over ? ' <b>Too long: trim the older log entries before pasting.</b>' : '') + '</div>'
     + '<div class="cbar" style="margin-top:12px"><button class="btn cta sm" id="doCopy" type="button">Copy to clipboard</button>'
-    + '<span class="note-inline" id="copyMsg"></span></div>';
+    + '<button class="btn ghost sm" id="didPaste" type="button" hidden>I have pasted it into Double</button>'
+    + (over ? '<button class="btn ghost sm" id="trimLog" type="button">Trim the log to the last 12</button>' : '')
+    + '<span class="note-inline" id="copyMsg" role="status" aria-live="polite"></span></div>';
   var old = document.getElementById('noteBox'); if (old) old.remove();
   box.id = 'noteBox'; one.appendChild(box);
   document.getElementById('noteOut').value = txt;
@@ -1129,12 +1257,30 @@ function showNote(c){
     } else if (ok){ marked(); } else { msg('Select the text above and copy it manually.'); }
     // Do NOT re-render here: a full redraw would destroy the very block the user is
     // about to paste from, and they may want to copy it again. Update state in place.
+    // Copying is not pasting. Clearing the flag here would tell a user who copied,
+    // got distracted and never pasted that their case is safe — the exact failure the
+    // warning exists to prevent. They confirm the paste themselves.
     function marked(){
-      c.dirty = false; saveCases(); paintBadge();
-      [].forEach.call(document.querySelectorAll('#caseOne .pill-dirty'), function(el){ el.remove(); });
-      msg('Copied — and this case is marked as saved to Double.');
+      msg('Copied. Now paste it into the client’s case note in Double.');
+      var btn = document.getElementById('didPaste');
+      if (btn) btn.hidden = false;
     }
     function msg(m){ var el = document.getElementById('copyMsg'); if (el) el.textContent = m; }
+  });
+  var dp = document.getElementById('didPaste');
+  if (dp) dp.addEventListener('click', function(){
+    c.dirty = false; saveCases(); paintBadge();
+    [].forEach.call(document.querySelectorAll('#caseOne .pill-dirty'), function(el){ el.remove(); });
+    dp.hidden = true;
+    document.getElementById('copyMsg').textContent = 'Marked as saved to Double.';
+  });
+  var tl = document.getElementById('trimLog');
+  if (tl) tl.addEventListener('click', function(){
+    if (!confirm('Drop all but the last 12 log entries?\n\nThe checklist, its dates and the per-step notes are untouched — only the log history is shortened, so the note fits Double.')) return;
+    var dropped = Math.max(0, c.log.length - 12);
+    c.log = c.log.slice(-12);
+    c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+    touch(c); renderOne(); showNote(c);
   });
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }

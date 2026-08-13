@@ -538,12 +538,17 @@ survives the session, the laptop, and the person.
 **How it works in practice:**
 
 1. Run the walkthrough for the client, then press **"Track this as a case"** on
-   the preparation sheet. Give it a reference.
+   the preparation sheet. Give it a reference. **Start from the walkthrough**, not
+   from "New case" — only a completed walkthrough produces a checklist pruned to
+   that applicant; "New case" gives the generic list and labels the case
+   *generic* so nobody mistakes it for a tailored one.
 2. Tick items as they happen. Each tick date-stamps itself; add a note on any
    step ("client emailed 13 Aug, waiting") and log events as they occur.
 3. **At the end of a working session, press "Copy the case note for Double"** and
-   paste it into the client's case note. The tool marks the case saved; until you
-   do, it shows *"changes not yet copied"*.
+   paste it into the client's case note — then press **"I have pasted it into
+   Double"**. Until you do, the case keeps showing *"changes not yet copied"*.
+   *(Copying is not pasting: the tool will not call a case saved just because it
+   reached your clipboard.)*
 4. To pick a case up — on another machine, or because someone else started it —
    paste the note back in under **"Open a case from a Double note"**.
 
@@ -561,9 +566,12 @@ dates of birth or addresses — those stay in Double and Drive under the
 two-data-homes rule. The block is safe to paste into a note the whole team reads.
 
 > **A size limit that bites:** Double blocks a note body at around **8,000
-> characters** — it returns an error rather than trimming. The tool shows a
-> character count and warns before you cross it; if a long-running case gets
-> close, trim the oldest log entries.
+> characters** — it returns an error rather than trimming, and the pasted body is
+> **HTML**, so it ends up longer than the plain text you can see. The tool
+> therefore warns from **7,000** characters, and offers a **"Trim the log to the
+> last 12"** button when you cross it — the checklist, its dates and the per-step
+> notes are untouched; only the log history is shortened. A typical case note is
+> around 2,000 characters, so this only bites on a long-running matter.
 
 ---
 

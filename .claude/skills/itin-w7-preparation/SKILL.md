@@ -124,8 +124,12 @@ So when someone asks where a client stands:
    browser on one machine** until the note is pasted.
 
 **One note per case, rewritten in place** — never a second note
-([`double-mcp`](../double-mcp/) §7). Keep it under ~7,600 characters; Double
-returns an error rather than truncating.
+([`double-mcp`](../double-mcp/) §7). The tool warns from **7,000** characters and
+offers to trim the log: Double returns an error rather than truncating, and the
+pasted body is HTML, so it is longer than the plain text being measured.
+
+**Copying is not pasting.** The tool only marks a case saved when the person
+confirms they pasted it — do not tell anyone a copied case is safe.
 
 **What a case may carry:** a reference, step state, dates, notes, the log.
 **Never** passport numbers, dates of birth or addresses — the two-data-homes rule
