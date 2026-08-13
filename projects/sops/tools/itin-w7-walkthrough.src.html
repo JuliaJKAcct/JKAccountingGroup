@@ -1085,7 +1085,14 @@ function buildSteps(a){
 
   if (a.caa==='yes'){
     add('coa','caa','Form W-7-COA completed and signed','Responsible party only. Identity + Foreign Status ticked per document.');
-    add('coadocs','caa','Document copies attached to the COA', dep ? 'For a dependent: passport and birth certificate only.' : 'All but a foreign military ID.');
+    // Says BOTH halves on purpose. A saved case stores step ids, not text, so on reopen
+    // decodeCase() rebuilds this line from ALLSTEPS — which holds whichever variant the
+    // seed shapes happened to generate first (the dependent one). A case that was not a
+    // dependent therefore came back showing the dependent rule: a wrong ITIN rule, stated
+    // confidently, on the one screen someone works from. An invariant line is true either
+    // way, live and reopened.
+    add('coadocs','caa','Document copies attached to the COA',
+        'Primary/secondary: all except a foreign military ID. Dependent: passport and birth certificate only.');
     if (dep) add('origmail','caa','Anything we may not authenticate sent as an original','Or an issuing-agency certified copy.');
     add('retain','caa','Copies retained in the client’s folder','Including a signed copy of the Form W-7 — the COA commits us to this.');
   }
@@ -1596,7 +1603,13 @@ function downloadCase(c, msgEl){
   // A blocked <a download> throws NOTHING, so we cannot know whether a file appeared.
   // Never guess and never stay mute: state both outcomes in one line. Inline rather
   // than a modal, because on a normal browser the download did just work.
-  say(savedMsg(name) + ' If no file appeared, this viewer blocked the download.');
+  // Both outcomes need an action the person can actually take. Telling someone whose
+  // download was blocked to "paste its contents" points at a file that does not exist,
+  // so the blocked half has to carry its own remedy.
+  say('Saved ' + name + ' to your device — to continue later, paste its contents into '
+    + '“Reopen a case”. If no file appeared, this viewer blocked the download: use '
+    + '“Copy the case note for Double” instead. Either way, the Double note is the copy '
+    + 'the whole firm can see.');
 }
 
 function showImport(){

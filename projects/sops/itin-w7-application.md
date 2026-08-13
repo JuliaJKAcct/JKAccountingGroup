@@ -534,6 +534,7 @@ survives the session, the laptop, and the person.
 |---|---|---|
 | **The walkthrough tool** (*Case tracker* tab) | The live checklist you tick, a note per step, a running log | Instant to use. The checklist is **tailored to that applicant** — only the steps their situation actually produces |
 | **The client's running case note in Double** | The durable copy — the readable status **and** a code block the tool can read back | Where client data belongs, where the team already looks, and what survives a cleared browser |
+| **A downloaded `ITIN-case-….txt`** (optional) | The same text as the note, as a file on one person's device | A personal spare. Reopens the case the same way — but only that person has it, so it never replaces the note |
 
 **How it works in practice:**
 
@@ -550,11 +551,24 @@ survives the session, the laptop, and the person.
    *(Copying is not pasting: the tool will not call a case saved just because it
    reached your clipboard.)*
 4. To pick a case up — on another machine, or because someone else started it —
-   paste the note back in under **"Open a case from a Double note"**.
+   copy the note out of Double and paste it back in under **"Reopen a case"**.
+   The tool reads the `JKCASE1:` line at the bottom, so pasting the whole note is
+   fine, and pasting only that last line works too.
 
 > ⚠️ **The browser copy is convenience; the Double note is the record.** Cases
 > live in one browser on one machine. If it is cleared and you have not pasted
 > the note, the case is gone. That is why step 3 is not optional.
+
+**The backup file is a spare, not the record.** *"Download a backup file"* writes
+the same text — status, checklist, notes, log and the `JKCASE1:` line — to a
+`.txt` on **your own device**, and its contents paste into *"Reopen a case"*
+exactly like the note does. Use it when you want a copy in your own hands; it is
+**not** a substitute for step 3, because a file in one person's Downloads folder
+is invisible to everyone else and stops the matter dead if that person is away.
+It also carries the client's name and your notes, so if you keep it, keep it in
+**that client's folder in Drive** — never loose in Downloads.
+*(On the published Hub the viewer blocks downloads; the tool says so and points
+you back at the note.)*
 
 **The case note follows the firm's existing convention** ([`double-mcp`](../../.claude/skills/double-mcp/) §7):
 **one note per case, rewritten in place — never a second note**, and updating it
