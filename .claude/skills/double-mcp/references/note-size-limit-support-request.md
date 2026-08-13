@@ -198,9 +198,9 @@ the call-date question that has been open since 2026-08-06.
 > for pushing it with the dev team.
 >
 > On the notes, I think the answer came back to a slightly different question. Your team is right that
-> Double has no note-length limit — but what is failing is not a note. We ran a **read-only** call
-> yesterday, `list_clients`, with a long search filter: it creates nothing, and there is no note
-> anywhere in it. It comes back with the same error:
+> Double has no note-length limit — but what is failing is not a note. We ran a **read-only** call,
+> `list_clients`, with a long search filter: it creates nothing, and there is no note anywhere in it.
+> It comes back with the same error:
 >
 > ```
 > MCP server returned 403 Forbidden — the request may have been blocked by a firewall or
