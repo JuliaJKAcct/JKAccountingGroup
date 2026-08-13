@@ -521,6 +521,52 @@ Austin, TX 78741-0000
 
 ---
 
+## 8A. Tracking one client's case
+
+An ITIN application is not a sitting; it runs for **days or weeks** — the client
+fetches a document, the SSA is asked, the package is posted, Austin takes ~60
+days. So the question *"where is this client up to?"* needs an answer that
+survives the session, the laptop, and the person.
+
+**Two homes, on purpose — the same split this repo uses everywhere else.**
+
+| | Holds | Why there |
+|---|---|---|
+| **The walkthrough tool** (*Case tracker* tab) | The live checklist you tick, a note per step, a running log | Instant to use. The checklist is **tailored to that applicant** — only the steps their situation actually produces |
+| **The client's running case note in Double** | The durable copy — the readable status **and** a code block the tool can read back | Where client data belongs, where the team already looks, and what survives a cleared browser |
+
+**How it works in practice:**
+
+1. Run the walkthrough for the client, then press **"Track this as a case"** on
+   the preparation sheet. Give it a reference.
+2. Tick items as they happen. Each tick date-stamps itself; add a note on any
+   step ("client emailed 13 Aug, waiting") and log events as they occur.
+3. **At the end of a working session, press "Copy the case note for Double"** and
+   paste it into the client's case note. The tool marks the case saved; until you
+   do, it shows *"changes not yet copied"*.
+4. To pick a case up — on another machine, or because someone else started it —
+   paste the note back in under **"Open a case from a Double note"**.
+
+> ⚠️ **The browser copy is convenience; the Double note is the record.** Cases
+> live in one browser on one machine. If it is cleared and you have not pasted
+> the note, the case is gone. That is why step 3 is not optional.
+
+**The case note follows the firm's existing convention** ([`double-mcp`](../../.claude/skills/double-mcp/) §7):
+**one note per case, rewritten in place — never a second note**, and updating it
+is part of the work rather than a separate request.
+
+**What the case carries — and what it must not.** A reference you choose, which
+steps are done, the dates, your notes and the log. **Not** passport numbers,
+dates of birth or addresses — those stay in Double and Drive under the
+two-data-homes rule. The block is safe to paste into a note the whole team reads.
+
+> **A size limit that bites:** Double blocks a note body at around **8,000
+> characters** — it returns an error rather than trimming. The tool shows a
+> character count and warns before you cross it; if a long-running case gets
+> close, trim the oldest log entries.
+
+---
+
 ## 9. Renewals and expiration
 
 - An ITIN **not included on a U.S. federal tax return at least once in the last
