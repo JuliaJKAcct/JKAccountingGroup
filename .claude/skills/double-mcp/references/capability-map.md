@@ -37,7 +37,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 | …read what a client **answered** in their organizer? | **Yes, for analysis** — Lilian lifted the ban 2026-08-11. It returns SSNs, driver's licenses, dependants' details and bank account numbers in one payload, none of which may be written out, and the session must be deleted afterwards. See §5 |
 | …**build** an organizer for a client? | **Partly.** We can create a draft and author all its slides + logic. We **cannot publish it to the client portal** — Lilian does that in the UI |
 | …add a new **column** to the client list? | **Yes** — `create_property_column`. Ask first; it changes the practice for everyone |
-| …keep a long **case note** in Double? | Yes, but there is a **size wall** — keep bodies under **~7,500 characters**; note writes start 403-ing from ~8,000. The firm's answer is the `Part 1 / Part 2` split in [SKILL §7](../SKILL.md) — don't invent another. Raised with Double, answer pending — §8 of this file |
+| …keep a long **case note** in Double? | Yes, but there is a **request-size wall** — keep bodies under **~7,500 characters**; writes start 403-ing from ~8,000. ⚠️ **It is not a note limit** — a read-only call with a ~9,000-character filter is blocked too, so this catches any large call (§8). The firm's answer is the `Part 1 / Part 2` split in [SKILL §7](../SKILL.md) — don't invent another. **Raised with Double; they answered 2026-08-13 that it is not theirs, which the evidence disproves — follow-up drafted, not sent** (§8) |
 | …make a note appear as **created by someone other than the connected account** (e.g. Lilian, not Julia)? | **No** — neither `create_note` nor `update_note` takes a user/author parameter, and no other tool sets note authorship (verified 2026-08-12). The firm's answer is a **byline as the note's first line**, [SKILL §7 rule 5](../SKILL.md). ⓘ The one real route is to compose the note and have the person **paste it in the Double UI**, which does attribute correctly |
 | …recover a note after someone **edited or overwrote** it? | **No** — there is no `delete_note`, no note version history, and `list_activity_log` has **no `Note` entity**. So always edit the body you fetched with `list_notes`, never re-author from memory |
 | …see **who did what** and when? | **Yes** — `list_activity_log` (admin-only, 5,671 entries on audit day), with per-user attribution — ⚠️ **but not for notes**, which have no entity in the log |
@@ -63,7 +63,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 
 | Tool | | Notes |
 |---|---|---|
-| `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt` |
+| `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt`. ⚠️ **Keep the `name` filter short** — a ~9,000-character filter returns `403` (§8); this is the call that proved the wall is not note-specific |
 | `get_client` | ◻︎ | Single client record |
 | `create_client` | ◻︎ **W** | Duplicates are the firm's recurring data problem and there is no merge tool. Confirm first |
 | `get_property_columns` | ✅ | 18 columns. Call once per session; never hardcode option names |
@@ -274,23 +274,28 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 | Tool | | Notes |
 |---|---|---|
 | `list_notes` | ✅ (Aug) | **Always call this before writing a case note** — one note per matter, rewritten in place (SKILL §7) |
-| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up.** ⚠️ **Neither takes a user/author parameter** — the note is attributed to the connected account (Julia). See below |
+| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up. It is a REQUEST-size wall (§8), so the same ceiling applies to any large call, batched writes included.** ⚠️ **Neither takes a user/author parameter** — the note is attributed to the connected account (Julia). See below |
 | `list_comments` | ◻︎ | Filter by client, task, thread, `transactionExternalId`, date range, or one of 15 comment types |
 | `add_task_comment` · `add_transaction_comment` | ◻︎ **W** | |
 | `get_questions` | ◻︎ | Client **questions/requests** — not organizer answers. Types: userToContact, contactToUser, transaction, receipt, bankFeedTransaction |
 | `add_question` · `update_question` | ◻︎ **W** | A question goes to the *client*. Outward-facing — explicit instruction only |
 
-### ⚠️ The note size wall
+### ⚠️ The request-size wall (was: "the note size wall")
 
-Note writes fail with **HTTP 403** once the body gets large. **Keep a note body under ~7,500
-characters** — that is the firm's working ceiling, and title plus JSON escaping count toward it.
-Applies to every `create_note` / `update_note`, not only case notes.
+**Any call fails with `HTTP 403` once the REQUEST gets large — reads included.** It is not a note
+limit: a read-only `list_clients` with a ~9,000-character filter, which creates nothing and carries no
+note, is blocked exactly like a long note. **Practically it still bites notes hardest**, because notes
+are the only thing the firm routinely writes that gets that big.
 
-The measured boundary, the `list_notes`-first recovery after a 403, and the `Part 1 / Part 2 / …`
-split discipline all live in **[SKILL §7](../SKILL.md)** — the single home for them, since the
-boundary has not been bracketed tightly and will move if Double answers. **Read §7 before working
-around this; do not invent a second approach.** Raised with Double 2026-08-06 — see the
-open-requests section below.
+**Keep a note body under ~7,500 characters** — the firm's working ceiling, with title and JSON escaping
+counting toward it — and keep any other call's whole payload under the same figure.
+
+**The evidence lives in one place: [SKILL §7](../SKILL.md)** — the measured boundary, the three-call
+proof that it is neither notes nor Claude, the five-stage table of who could fix it, the
+`list_notes`-first recovery after a 403, and the `Part 1 / Part 2 / …` split discipline. *Deliberately
+not restated here* — it has to be corrected in one place, not three. **Read §7 before working around
+this; do not invent a second approach.** Raised with Double 2026-08-06; **answered 2026-08-13 with
+"not us", which the evidence disproves — see the open-requests section below.**
 
 ---
 
@@ -391,7 +396,7 @@ tested was not. Don't build anything on loan tools without checking first.
 
 | Not available | What to do instead |
 |---|---|
-| **Creating or updating a tax project** (deadline, status, `filedAt`, preparer) | Double UI. Hand over deep links — §4. **Requested from Double 2026-08-06** (see below) |
+| **Creating or updating a tax project** (deadline, status, `filedAt`, preparer) | Double UI. Hand over deep links — §4. **Requested from Double 2026-08-06; ✅ answered 2026-08-13 — accepted as a feature request with their dev team, no date** (see below) |
 | **Publishing an organizer** to the client portal | Build the draft, then Lilian publishes — §5 |
 | **Editing a published organizer's** slides or logic | Frozen once published |
 | **Saved views** ("Tax Returns – View 2") | Rebuild from properties + projects, or ask for the CSV export (SKILL §2.1) |
@@ -412,17 +417,19 @@ Julia and Maria in copy. Two asks in that one email. The next call with Double i
 | Ask | Why | Status |
 |---|---|---|
 | **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | To raise — thread or the 17–18 Aug call |
-| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | Sent, awaiting reply |
-| **Raise or document the note size limit** | The 403 above — it caps the case notes the team relies on | Sent, awaiting reply |
+| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | ✅ **Answered 2026-08-13 — accepted.** Allison filed a **feature request** with Double's dev team and argued it with them directly. Still read-only for now; nothing to do but wait |
+| **Raise the request-size limit on the MCP endpoint** (was filed as "the note size limit") | The 403 above — it caps the case notes the team relies on, and in fact caps *every* large call | ⚠️ **Answered 2026-08-13 — declined, on a misreading.** Double: no note-length limit exists and *"the issue is coming from Claude's API… out of our scope."* **Disproven the same day** (read-only call blocked; identical payload accepted by another MCP server). **Follow-up drafted, not yet sent** — [`note-size-limit-support-request.md`](./note-size-limit-support-request.md). It must ask about the **request-size limit on Double's side — BOTH anything in front of the endpoint AND the MCP server itself** (we cannot tell those apart), not about notes |
 
 If either lands, this file and [SKILL](../SKILL.md) both change. The **deadline write** flips §4
 and the quick-answer table here, plus SKILL §1 ("The tax project is READ-ONLY — including the
-deadline") and SKILL §2. The **note limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
+deadline") and SKILL §2. The **request-size limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
 size-wall warning in §8 of this file.
 Both are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) (rows 19 and 22). The note-size
 ask has its own evidence file —
 [`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — which records what
-was sent and, importantly, that it **has** been sent.
+was sent, Double's 2026-08-13 answer, and the follow-up that has **NOT** been sent. ⚠️ **Do not read
+"the request was sent" as "nothing to do"** — the first request is answered; the follow-up is
+drafted and waiting on Lilian, and it wants to go before the 17–18 Aug wrap-up call.
 
 ---
 

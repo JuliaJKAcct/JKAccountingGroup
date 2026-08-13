@@ -758,7 +758,9 @@ hundred calls.
    120 calls in the main thread.
 5. **Narrow with the filters the tools already have** — `list_clients(name:)`,
    `list_files(folderId:/startDate:/source:)`, `list_tasks(clientId:/status:/projectYear:)`,
-   `get_questions(tagId:)` — instead of pulling everything and filtering after.
+   `get_questions(tagId:)` — instead of pulling everything and filtering after. ⚠️ **Keep the filter
+   value short.** A very long one trips the request-size wall in §7 — `list_clients(name:)` with a
+   ~9,000-character filter is the exact call that returns `403` there.
 6. **Cache within the session.** Client IDs, column IDs, folder IDs and user IDs are stable.
 7. **`list_contacts` takes an *optional* `clientId` — omit it to get the whole contact graph.**
    Called without a filter it returns every contact you have access to (112 in 2 calls at
@@ -844,7 +846,7 @@ authorization from the firm.
   you are going to perform; ask for the picker. Files land hidden from the client by default in custom
   folders; omitting `folderId` sends them to the Uploads Inbox and triggers OCR. Be deliberate about
   which you want, and about `isVisible`.
-- **Mind the payload size on any note or comment** — bodies near 8,000 characters come back `403`, not truncated; see §7's "size wall", which applies to every `create_note`/`update_note`, not just case notes.
+- **Mind the payload size on ANY call, not just notes** — a request near 8,000 characters comes back `403`, not truncated. It is a request-size wall on Double's side, so it catches reads with long parameters too; notes just hit it most often. See §7's "size wall".
 - Prefer **notes and comments** (`create_note`, `add_task_comment`) for leaving a trail, the same
   spirit as the Odoo chatter convention. The firm's standard shape for that trail is §7.
 
@@ -1045,15 +1047,87 @@ the whole thing start to finish, instead of reconstructing it from email.
    ⓘ **And leave a person's own edits alone.** When someone has trimmed a note themselves, that is
    a decision — record it in the client file and **do not restore what they removed.**
 
-### The size wall — a long note gets blocked, not truncated
+### The size wall — a large REQUEST gets blocked, not truncated (notes, reads, anything)
 
 **Measured on the body string, 2026-08-06: ~7,600 characters went through; ~8,000 and ~10,400 were
 both blocked** with a `403` / `mcp_request_blocked`. **It is size, not content** — a body of ~8,200
 characters of plain repeated filler, no markup and no client data, was refused identically. So the
-boundary sits between 7,600 and 8,000 and has not been bracketed tighter. Two things not to overstate: the `403` shape *suggests* a
-request-size rule in front of the API rather than a Double product limit — **inferred, not
-documented**; and the **title and JSON escaping count toward the payload too**, so the body is not
-the whole budget. `ping` keeps working throughout, which is what makes this read as an outage.
+boundary sits between 7,600 and 8,000 and has not been bracketed tighter. One thing not to overstate:
+the **title and JSON escaping count toward the payload too**, so the body is not the whole budget.
+`ping` keeps working throughout, which is what makes this read as an outage.
+
+**⭐ It is NOT about notes, and Claude has no size cap that would explain it — both established 2026-08-13**, after
+Double answered that the limit is not theirs (see below). Three calls, same account, same minute:
+
+| Call | Server | Payload | Result |
+|---|---|---|---|
+| `list_clients(name=…)` — **read-only, no note involved** | Double | ~48 chars | ✅ 200 |
+| `list_clients(name=…)` — **read-only, no note involved** | Double | **~9,000 chars** | ❌ **403 `mcp_request_blocked`** |
+| `search_emails(query=…)` — read-only | **Ping Assistant** | **the identical ~9,000-char string** | ✅ 200 |
+
+Read those rows together and two claims die at once. **Row 2 kills the RELEVANCE of "notes have no limit"** — not the claim
+itself, which is true and which we concede. Row 2 is a *read*: it creates nothing and carries no note,
+so whatever the product does about note length is not what is happening. ⚠️ **Never argue that notes
+DO have a limit** — that is the move that got this closed once already. **Rows 2 vs 3 kill "it comes from Claude's API"** — the
+same Claude account, the same MCP connector plumbing and the *same string* went through to a different
+server at the same moment. (*Account* here means our Claude login — nothing to do with a Double client
+record; the Ping Assistant call has no Double client in it at all.) **Row 1 vs row 2** is the control: the same tool, the same parameter, only shorter,
+succeeds — so Double is up and authenticated, and size is the whole variable.
+
+**So the block is, on the balance of the evidence, a request-size limit on Double's side, before the layer that stores notes**
+— either an edge in front of the endpoint (WAF/CDN/load balancer) or a body-size cap in Double's own
+MCP server. That is why Double's engineers can look at the product and truthfully report no limit:
+**the request never reaches the code they checked.** ⚠️ **Which of those two it is, we cannot tell** —
+see the ownership table below before telling anyone it is their firewall.
+
+ⓘ **A number worth handing them, as a lead and not a finding:** the failures start somewhere near
+**8 KB**, and 8,192 bytes is the default request-body ceiling in several common stacks (AWS WAF's
+`SizeRestrictions_BODY`, and the default body-parser limits of more than one server framework). ⚠️
+**Do not present the bracket as arithmetic that lands on 8,192** — we never measured a single payload
+in *bytes*. Our 7,600-character pass was real HTML with em-dashes, `§` and emoji, so in bytes it may
+already have been above 8,192, which would sink the neat story. Give them the observation ("around
+8 KB"), let them find the actual rule. **If anyone ever needs this tighter, measure all six payloads in bytes first** — the four note bodies of
+2026-08-06 *and* the two read filters of 2026-08-13, since the read pair is what carries the
+not-a-note-limit argument. Nothing in the repo records any of them in bytes, and it is the obvious
+thing a sceptical engineer will ask for. ⚠️ **The three failing note bodies were never kept** — those
+would have to be reconstructed. **The 2026-08-13 read filters WERE deterministic and are reproducible
+exactly:** the blocked one is the 100-character block
+`FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
+repeated 90 times with `NN` running 01→90 (9,000 chars) passed as `list_clients(name:)`; the control is
+`FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE` (48 chars). The cross-server control sent the
+**identical 9,000-character string** as `Ping_Assistant.search_emails(query:)`. ⓘ **No UTC timestamp was
+captured** — if Double wants one, re-run it rather than reconstruct it.
+
+**Who can actually fix it — the question everyone asks second.** Follow one request:
+
+| # | Stage | Whose | Can they fix it? |
+|---|---|---|---|
+| 1 | Claude decides to call a tool | Anthropic | — |
+| 2 | The call is POSTed to Double's MCP URL | Anthropic | ❌ **Very unlikely.** The same string reached a different MCP server from the same Claude account in the same minute, so there is **no blanket size cap** on Anthropic's side. ⓘ Strictly this does not rule out a rule specific to the *Double connector's* registration — say "no size cap globally", not "proven not Claude", or Double gets to bounce this back a third time. Anthropic only *reports* the 403 |
+| 3 | 🚧 An edge in front — WAF / CDN / load balancer | **Double** | ✅ Possible home of the rule — a configuration change |
+| 4 | 🚧 Double's own MCP server (its request-body cap) | **Double** | ✅ Equally possible home — a code/config change |
+| 5 | Double's app + database (notes live here) | **Double** | ⚠️ **Only its *note-length* rule is ruled out** — that is what their engineers checked, and a read with no note is blocked anyway. A *generic body-size cap* in this layer is still possible, so do not tell them stage 5 is eliminated |
+
+⚠️ **We can localise the block to Double, and no further — stages 3 and 4 are NOT distinguishable
+from what we measured.** A framework body-size cap inside Double's own MCP server produces exactly the
+same `403` with exactly the same correlation to size as a WAF in front of it. **Do not tell them "it
+is your firewall"** — if it turns out to live in the MCP server, infrastructure will look, find no such
+rule, and close it "out of scope" a second time, which is the failure this whole follow-up exists to
+avoid. Ask them to check **both**. What the evidence *does* settle is stage 5: the product is not where
+it is, so "notes have no length limit" cannot be the answer.
+
+⚠️ **The MCP server is Double's own** — they built it and they host it; there is no third-party MCP
+vendor in this path. So "Double's developers" and "the MCP developers" are **the same company**. What
+differs is the **team**: Allison asked the *product* team, who own stage 5 and answered correctly for
+stage 5. **Whoever owns stages 3 and 4 has never been asked.** That is the entire job of the follow-up
+— get the question to the right team inside Double, without prescribing which of the two it is.
+
+**And us? We cannot fix it — only work around it.** There is no setting on our side, in Double or in
+Claude; a request-size limit at either stage is not per-tenant and we have no access to it. Our options
+are the `Part 1 / Part 2` split below, shorter payloads, and pushing Double. ⓘ **One honest caveat:**
+that Double *can* raise it is inference, not something they have confirmed — the limit may be
+deliberate, protecting their service. If so they can still change it and may decline. What is **not**
+in doubt is that the decision is theirs, not Anthropic's and not ours.
 
 Practical rules:
 
@@ -1067,17 +1141,46 @@ Practical rules:
 - Length is a feature, not a limitation: it forces the note to stay the *readable* view. When a case
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
+- **And for calls that are not notes at all** — the rules above are note-shaped because notes hit this
+  most often, but the wall does not care. **keep the WHOLE request under ~7,500 characters** — one ceiling for everything, not each parameter separately, since a batched write (`upsert_client_properties`, `move_attachables`, a long ID array) can pass 8 KB while every individual value is tiny —
+  and note that the only read-path measurements we have are ~48 chars (passes) and ~9,000 (fails) —
+  **nothing in between has ever been tested** — so ~7,500 is the working ceiling everywhere, but it is
+  *measured* only for note bodies; on other calls it is a borrowed figure, not a verified one. **Recovery differs by call type.** After a `403` on a **read**,
+  nothing was created — shorten and retry. After a `403` on a **batched write**
+  (`upsert_client_properties`, `move_attachables`, `update_records`-style calls), treat it exactly like
+  the note case: **the error does not tell you whether part of the batch applied.** Re-read the target
+  first (`list_client_properties`, `list_files`…), see what actually landed, and only then retry with a
+  smaller batch. **Never blind-retry a write** — some of these touch hand-maintained judgment columns. ⚠️ **The trap is §5's own advice** to narrow a roster
+  sweep with `list_clients(name:)` — that is exactly the call the proof above blocked. Filtering with a
+  *short* name is still right; building one giant filter to save a round trip is how you meet this wall
+  on a read.
 
-**What this is, precisely — say it this way to Double support.** The `403` comes back as *"MCP server
-returned 403 Forbidden — the request may have been blocked by a firewall or security service"*, i.e.
-the endpoint refused the POST. That reads like a **WAF / request-size rule in front of the API**, not
-a documented note-length limit in the product, and it is **not proven that Double's own UI refuses a
-note that long** — nobody has tested a long paste in the browser. So don't tell support "your notes
-have an 8 KB limit"; tell them **"POSTs to the MCP endpoint with bodies at or above ~8,000 characters
-return 403 while smaller ones succeed — please raise or whitelist that"**, and test the same content
-in the UI first, because if the UI accepts it, that's the strongest evidence it's the API path alone.
+**What this is, precisely — say it this way to Double.** The `403` comes back as *"MCP server returned
+403 Forbidden — the request may have been blocked by a firewall or security service"*: the endpoint
+refused the POST. So **never** tell them "your notes have an 8 KB limit" — they will check the product,
+find no limit, and hand the problem back. Tell them **"any POST to your MCP endpoint at around 8,000
+characters and up returns 403 while smaller ones succeed, including read-only calls with no note in
+them — please check the request-body size limit both on anything in front of that endpoint and in the
+MCP server itself"**. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"
+invites infrastructure to look, find nothing, and close it again. And name the surface as the **MCP
+integration**, not "Claude": when Lilian said "the Claude integration" on 2026-06-17, Allison answered
+about *Ask Double*, a different product.
 
-**The request was sent 2026-08-06, and we are awaiting Double's reply** — what went out, and what it deliberately left unasked, is recorded with the evidence in [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md). **Do not send it again.**
+**Double answered on 2026-08-13, and the answer was "not us."** Allison relayed from her team: *"There
+is no maximum length for notes in Double and no restrictions from our side for the MCP connectors to
+limit notes. I have been instructed that the issue is coming from Claude's API, so unfortunately, it is
+out of our scope."* **Both halves of that are answering a question we did not ask** — the three-row
+table above was run the same day and shows a read-only Double call with no note in it being blocked at
+the identical size that a different MCP server accepts. **Do not treat "out of scope" as the end of
+it**, and do not re-litigate note length; the follow-up has to move the conversation from *the product*
+to *whatever on Double's side sits in front of the product* — without prescribing which layer, since we cannot tell.
+
+**The original request went out 2026-08-06 — do not send it again.** What was sent, what it left
+unasked, Double's reply, and the drafted follow-up are all in
+[`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
+⚠️ **Timing matters:** Allison's implementation window ends with the 17–18 Aug wrap-up call, so this
+is the last stretch with a named contact who already knows the case — after that it restarts at
+`help@doublehq.com` with whoever picks it up.
 
 ### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
 
@@ -1184,7 +1287,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
-- **Double answers the note-size request** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — if the limit is raised, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note.
+- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent**, and it wants to go before the 17–18 Aug wrap-up call; do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
