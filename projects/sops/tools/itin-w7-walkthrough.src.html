@@ -184,9 +184,53 @@ textarea.paste{width:100%;min-height:130px;padding:11px 13px;border:1px solid va
 .btn.sm{padding:8px 14px;font-size:13.5px}
 .btn.danger{background:transparent;color:var(--err);border-color:var(--err)}
 
+/* ---- in-page dialogs ----
+   These replace window.prompt / confirm / alert, which a sandboxed viewer
+   silently ignores (see askText, below). A native <dialog> opened with
+   showModal() renders in the browser's top layer, so it needs no z-index and
+   cannot be clipped by an ancestor's overflow. */
+/* The Hub embeds this tool in an iframe ~82vh tall, so 100vh here is already
+   short. Cap the panel and let the prose scroll, so the buttons are always
+   reachable rather than pushed off the bottom edge. */
+.dlg{border:1px solid var(--line-2);border-radius:14px;background:var(--surface);color:var(--body);
+     padding:0;max-width:min(520px,calc(100vw - 32px));width:100%;
+     max-height:calc(100vh - 32px);display:flex;flex-direction:column;overflow:hidden;
+     box-shadow:0 18px 48px rgba(13,42,49,.22),0 2px 8px rgba(13,42,49,.10)}
+.dlg form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.dlg .dx{overflow-y:auto;min-height:0}
+.dlg::backdrop{background:rgba(13,42,49,.46)}
+:root[data-theme="dark"] .dlg{box-shadow:0 18px 48px rgba(0,0,0,.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dlg{box-shadow:0 18px 48px rgba(0,0,0,.55)}}
+.dlg .dx{padding:24px 24px 20px}
+.dlg h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin:0 0 8px;line-height:1.25;letter-spacing:-.01em}
+.dlg p{font-size:14.5px;margin:0 0 10px;max-width:58ch}
+.dlg p:last-of-type{margin-bottom:0}
+.dlg label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.dlg input[type=text]{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;border-radius:9px;
+     border:1px solid var(--line-2);background:var(--card);color:var(--body)}
+.dlg input[type=text]:focus-visible{outline:2px solid var(--teal-600);outline-offset:1px;border-color:var(--teal-600)}
+.dlg input[type=text]::placeholder{color:var(--muted);opacity:1}
+.dlg .dbtns{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;
+     padding:16px 24px;border-top:1px solid var(--line);background:var(--card);border-radius:0 0 13px 13px}
+/* Field-level error text. Defined unscoped on purpose — it is used both inside a
+   dialog and under the age question in #questions, where a `.dlg`-scoped rule left
+   it rendering as plain body ink, larger and blacker than the hint above it. */
+.derr{color:var(--err);font-size:13.5px;margin:8px 0 0;min-height:0}
+/* Re-asserted at higher specificity: `.dlg p` (0,1,1) outranks a bare `.derr`
+   (0,1,0), so unscoping the rule above silently pushed the DIALOG's error text
+   back to 14.5px flush under the input — the same "does not look like an error"
+   symptom, moved from the age question into the dialog. */
+.dlg .derr{font-size:13.5px;margin:8px 0 0}
+input[aria-invalid="true"]{border-color:var(--err)}
+input[aria-invalid="true"]:focus-visible{outline-color:var(--err)}
+.dlg[open]{animation:dlgIn .22s var(--ease)}
+.dlg[open]::backdrop{animation:dlgFade .22s var(--ease)}
+@keyframes dlgIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes dlgFade{from{opacity:0}to{opacity:1}}
+
 @media print{
   body{background:#fff;color:#000;font-size:10.5pt}
-  .top,.tabs,.act,.tbtns,#questions,#ref,.noprint{display:none!important}
+  .top,.tabs,.act,.tbtns,#questions,#ref,.noprint,.dlg{display:none!important}
   #walk,#out{display:block!important}
   .wrap{padding:0;max-width:none}
   .blk{border:.5pt solid #999;background:#fff;break-inside:avoid;margin-bottom:9pt;padding:9pt 11pt}
@@ -461,15 +505,153 @@ var Q = [
 function num(v){ var n = parseInt(v, 10); return (isNaN(n) || n < 0 || n > 120) ? -1 : n; }
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
+/* ======================================================================
+   DIALOGS — why this exists instead of prompt() / confirm() / alert()
+
+   The team reaches this tool through the published Knowledge Hub, and a
+   published page runs inside a SANDBOXED iframe. A sandbox without the
+   `allow-modals` keyword makes window.prompt / confirm / alert INERT:
+   the browser logs "Ignored call to 'prompt()'. The document is sandboxed,
+   and the 'allow-modals' keyword is not set.", returns null (prompt) or
+   false (confirm), and carries on. Every caller here reads that as "the
+   user cancelled", so the button appears to do nothing at all — no error,
+   no dialog, no clue. That is exactly how "Track this as a case" died.
+   A nested iframe can never re-grant a permission its parent lacks, so
+   this cannot be fixed from the Hub's side; the tool must not call them.
+
+   A native <dialog> opened with showModal() is NOT covered by that
+   sandbox flag. It also renders in the top layer (no z-index, never
+   clipped), traps focus, and closes on Esc for free.
+
+   All three return a Promise so callers read in the same order they did
+   with the blocking originals. Kept in .then() style to match the file.
+   ====================================================================== */
+function closeDlg(d){
+  if (d.open) d.close();
+  d.remove();
+}
+// Put focus back where it came from — but only AFTER the caller's .then() has run,
+// because that handler usually re-renders (renderOne/renderCases) and destroys the
+// button we opened from. Restoring before it left focus on a detached node, which the
+// browser resolves to <body>: a keyboard user lost their place and had to Tab from the
+// top. A timeout is a macrotask, so it lands after the promise callbacks (microtasks).
+// Still in the document AND actually rendered. `document.contains` alone is not
+// enough: closing a case HIDES #caseOne rather than emptying it, so the button we
+// came from is still "in the document" while being unfocusable — focusing it is a
+// silent no-op that leaves the user on <body>.
+function usable(el){ return !!(el && document.contains(el) && el.offsetParent !== null); }
+function refocusAfter(restore){
+  function apply(){
+    // If the handler already put focus somewhere deliberate — "Track this as a case"
+    // moves it to the Case tracker tab — leave it alone.
+    var a = document.activeElement;
+    if (a && a !== document.body && usable(a)) return;
+    var el = usable(restore) ? restore
+           : document.querySelector('.tab[aria-selected="true"]');   // the view is gone — land on its tab
+    if (el && el.focus) { try { el.focus(); } catch(_){} }
+  }
+  // Run once after the caller's .then() (a macrotask beats those microtasks), then
+  // again on the next frame: Chrome clears the focus of a removed element on its own
+  // schedule, and that fixup lands AFTER the timeout, wiping a focus set there.
+  // apply() is idempotent — the second pass sees a live activeElement and returns.
+  setTimeout(function(){ apply(); if (window.requestAnimationFrame) requestAnimationFrame(apply); }, 0);
+}
+// opts: {title, body (HTML), ok, cancel, danger, input:{label, placeholder, value}}
+// Resolves to the typed string (input dialogs), true/false (confirm), or null on cancel.
+function openDlg(opts){
+  return new Promise(function(resolve){
+    var restore = document.activeElement;
+    var d = document.createElement('dialog');
+    d.className = 'dlg';
+    var wantsInput = !!opts.input;
+    d.innerHTML = '<form method="dialog"><div class="dx">'
+      + '<h3>' + esc(opts.title) + '</h3>'
+      + (opts.body || '')
+      + (wantsInput
+          ? '<label for="dlgIn">' + esc(opts.input.label) + '</label>'
+            + '<input type="text" id="dlgIn" autocomplete="off" placeholder="'
+            + esc(opts.input.placeholder || '') + '" value="' + esc(opts.input.value || '') + '">'
+            + '<p class="derr" id="dlgErr" role="alert"></p>'
+          : '')
+      + '</div><div class="dbtns">'
+      // A notice has one action; offering "Close" beside "Got it" is two buttons
+      // that do the same thing.
+      + (opts.single ? ''
+          : '<button type="button" class="btn ghost sm" data-act="cancel">' + esc(opts.cancel || 'Cancel') + '</button>')
+      + '<button type="button" class="btn ' + (opts.danger ? 'ghost sm danger' : 'cta sm') + '" data-act="ok">'
+      + esc(opts.ok || 'OK') + '</button>'
+      + '</div></form>';
+    document.body.appendChild(d);
+
+    var input = d.querySelector('#dlgIn'), errEl = d.querySelector('#dlgErr'), settled = false;
+    function done(v){ if (settled) return; settled = true; closeDlg(d); resolve(v); refocusAfter(restore); }
+    function accept(){
+      if (!wantsInput) return done(true);
+      var v = input.value.trim();
+      // An empty reference used to be indistinguishable from a cancel. Say so instead.
+      if (!v){ errEl.textContent = 'Type a reference first — a name, or a code.'; input.focus(); return; }
+      done(v);
+    }
+    d.querySelector('[data-act="ok"]').addEventListener('click', accept);
+    var cancelBtn = d.querySelector('[data-act="cancel"]');
+    if (cancelBtn) cancelBtn.addEventListener('click', function(){ done(wantsInput ? null : false); });
+    // Esc fires `cancel`, and <dialog> also emits `close` — settle once, as a cancel.
+    d.addEventListener('cancel', function(e){ e.preventDefault(); done(wantsInput ? null : false); });
+    d.addEventListener('close', function(){ done(wantsInput ? null : false); });
+    if (input) input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter'){ e.preventDefault(); accept(); }
+    });
+
+    if (d.showModal) d.showModal();
+    else {
+      // Pre-<dialog> browser. Fall back to the natives — they still work in a
+      // normal window, and this is the only case where they are reachable.
+      d.remove();
+      if (wantsInput){ var r = window.prompt(opts.title); return resolve(r && r.trim() ? r.trim() : null); }
+      return resolve(window.confirm(opts.title));
+    }
+    if (input) { input.focus(); input.select(); }
+    else d.querySelector('[data-act="ok"]').focus();
+  });
+}
+function askText(opts){ return openDlg(opts); }
+function askConfirm(opts){ return openDlg(opts); }
+function sayNote(opts){
+  // A one-button notice. Resolves when dismissed; callers rarely wait.
+  return openDlg({ title: opts.title, body: opts.body, ok: opts.ok || 'Got it', single: true });
+}
+// The reference prompt is asked from two places and must read identically in both.
+function askCaseRef(){
+  return askText({
+    title: 'Name this case',
+    body: '<p>A reference for this case — the client’s name, or a code if you prefer.</p>'
+        + '<p style="color:var(--muted);font-size:13.5px">Cases are stored in this browser. The durable copy is the block you paste into the client’s case note in Double.</p>',
+    input: { label: 'Case reference', placeholder: 'e.g. Ivanova, Olena — or ITIN-2026-004' },
+    ok: 'Create the case'
+  });
+}
+
 /* ------------------------------ render Qs ------------------------------ */
 function active(){ return Q.filter(function(q){ return !q.when || q.when(A); }); }
+
+// The ONE definition of "this question is answered" — used to lock the questions
+// below it, to count progress, to enable the Build button, and by walkComplete()
+// to decide whether a case is tailored. It lived in three places that drifted.
+// A numeric question counts only when it resolves to a REAL number: "999" and "abc"
+// both leave num() at -1, and an unknown age silently drops the age-gated rules
+// (the under-18 civil birth certificate) from the sheet and the checklist.
+function isAnswered(q){
+  if (q.free) return q.free.every(function(f){ return A[f[0]]; });
+  if (q.num)  return num(A[q.id]) >= 0;
+  return A[q.id] !== undefined && A[q.id] !== '';
+}
 
 function renderQuestions(){
   var host = document.getElementById('questions');
   var list = active(), html = '', i = 0, blocked = false;
   list.forEach(function(q){
     i++;
-    var answered = q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id] !== undefined && A[q.id] !== '');
+    var answered = isAnswered(q);
     var lock = blocked ? ' locked' : '';
     html += '<div class="q'+lock+'" data-q="'+q.id+'"'+(blocked?' aria-disabled="true"':'')+'>';
     html += '<p class="qn">'+esc(q.n)+' · question '+i+'</p>';
@@ -485,8 +667,27 @@ function renderQuestions(){
       html += '</div>';
     }
     if (q.num){
+      // type="text" (not "number") is deliberate: after every keystroke the whole
+      // questions panel re-renders (renderQuestions, below), which destroys and
+      // recreates this input, so the caret has to be restored by hand in answered().
+      // Browsers refuse setSelectionRange on type="number" (InvalidStateError), so
+      // the caret silently snapped to position 0 on every re-render — typing "26"
+      // landed the "2", then re-rendered, then inserted the "6" in front of it,
+      // reading back as "62" (and "123" as "321"). inputmode="numeric" keeps the
+      // numeric keypad on mobile without that restriction.
+      // data-num marks it for the digit filter in answered(): type="text" also drops
+      // the browser's own numeric coercion, and letters here are NOT harmless — an
+      // unreadable age makes num() return -1, which silently skips the under-18
+      // civil-birth-certificate rule and its checklist step.
+      var numBad = A[q.id] !== undefined && A[q.id] !== '' && num(A[q.id]) < 0;
+      // No maxlength: the browser applies it to a paste BEFORE our filter runs, so
+      // pasting "age 26" truncated to "age" and the digits were unrecoverable. The
+      // .slice(0,3) in answered() caps the length after the non-digits are stripped.
       html += '<div class="inline"><div><label class="fl" for="'+q.id+'_n">'+esc(q.num)+'</label>'
-           +  '<input type="number" min="0" max="120" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')+'></div></div>';
+           +  '<input type="text" inputmode="numeric" pattern="[0-9]*" data-num="1" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')
+           +  (numBad?' aria-invalid="true" aria-describedby="'+q.id+'_err"':'')+'>'
+           +  (numBad ? '<p class="derr" id="'+q.id+'_err" role="alert">Enter an age between 0 and 120.</p>' : '')
+           +  '</div></div>';
     }
     if (q.free){
       html += '<div class="inline">';
@@ -503,9 +704,7 @@ function renderQuestions(){
   host.innerHTML = html;
 
   var total = list.length;
-  var done = list.filter(function(q){
-    return q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id]!==undefined && A[q.id]!=='');
-  }).length;
+  var done = list.filter(isAnswered).length;
   var ready = (A.ssn==='yes') || done===total;
   document.getElementById('build').disabled = !ready;
   document.getElementById('progress').textContent = A.ssn==='yes'
@@ -526,11 +725,23 @@ function prune(){
 // unlocks (and the ones it reveals, like the student question) inert until some
 // other event happens to redraw. Focus and caret are restored so typing is unbroken.
 function answered(t){
+  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
+  // Strip anything that is not a digit from a numeric field. type="text" bought us a
+  // movable caret but gave up the browser's numeric coercion, and a letter here is not
+  // harmless — it makes num() return -1, which quietly removes the age-gated rules.
+  if (t.dataset && t.dataset.num){
+    var raw = t.value, clean = raw.replace(/[^0-9]/g, '').slice(0, 3);
+    if (clean !== raw){
+      // Pull the caret back by however many characters were dropped ahead of it,
+      // so deleting a stray letter does not send the cursor to the end.
+      if (pos != null) pos -= (pos - raw.slice(0, pos).replace(/[^0-9]/g, '').length);
+      t.value = clean;
+    }
+  }
   A[t.name] = t.value;
   prune();
   var out = document.getElementById('out');
   if (!out.hidden && A.ssn !== 'yes') out.hidden = true;
-  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
   renderQuestions();
   if (id){
     var again = document.getElementById(id);
@@ -788,12 +999,13 @@ function buildSheet(){
   out.focus();
   var tc = document.getElementById('trackCase');
   if (tc) tc.addEventListener('click', function(){
-    var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into the client’s case note in Double.');
-    if (!ref) return;
-    cases.unshift(newCase(ref.trim(), buildSteps(A)));
-    saveCases(); openCase = cases[0];
-    switchTab('cases'); document.getElementById('tabCase').focus();
-    window.scrollTo({top:0,behavior:'smooth'});
+    askCaseRef().then(function(ref){
+      if (!ref) return;                       // cancelled — askCaseRef already trimmed and rejected empties
+      cases.unshift(newCase(ref, buildSteps(A)));
+      saveCases(); openCase = cases[0];
+      switchTab('cases'); document.getElementById('tabCase').focus();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
   });
   out.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -892,6 +1104,10 @@ function todayISO(){ var d = new Date(); return d.getFullYear()+'-'+String(d.get
 function nowStamp(){ var d = new Date(); return todayISO()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); }
 
 var cases = [], openCase = null, storageBroken = false, lastCard = 0;
+// Cases deleted in this window. Consulted by saveCases() so the cross-window merge
+// cannot resurrect them. Session-scoped on purpose: once the delete is written to
+// disk the tombstone has done its job, and a reload starts clean.
+var deletedKeys = {};
 
 // A stored entry that is not a real case used to throw inside paintBadge() at load,
 // which aborted the whole script — the walkthrough and the reference tab went blank too,
@@ -918,7 +1134,11 @@ function saveCases(){
   try {
     var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
     if (Array.isArray(disk)) disk.filter(validCase).forEach(function(d){
-      if (!mine[caseKey(d)]) merged.push(d);          // a case another window created — keep it
+      // A case deleted in THIS window is absent from `cases` but still on disk, so the
+      // merge below used to hand it straight back and delete never stuck — you reloaded
+      // and the case was there again. Tombstones tell the two apart: absent-because-
+      // deleted stays deleted, absent-because-another-window-made-it is still kept.
+      if (!mine[caseKey(d)] && !deletedKeys[caseKey(d)]) merged.push(d);
     });
   } catch(e){}
   try { localStorage.setItem(LSKEY, JSON.stringify(merged)); }
@@ -1094,24 +1314,30 @@ function wireList(){
 // A half-answered walkthrough used to pass the old `A.role && A.pass` gate and produce a
 // confident but silently wrong "tailored" list. Only a COMPLETE walkthrough tailors a case;
 // anything else gets the generic checklist, and says so on the card and in the Double note.
-function walkComplete(){
-  return active().every(function(q){
-    return q.free ? q.free.every(function(f){ return A[f[0]]; })
-                  : (A[q.id] !== undefined && A[q.id] !== '');
-  });
-}
+function walkComplete(){ return active().every(isAnswered); }
 function promptNewCase(){
   var tailored = walkComplete();
-  if (!tailored && !confirm('The walkthrough has not been completed, so this case will use the GENERIC checklist — not one pruned to a particular applicant.\n\nFor a checklist tailored to this client, cancel, finish the Walkthrough tab and press “Track this as a case” on the preparation sheet.\n\nCreate a generic case anyway?')) return;
-  var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into Double.');
-  if (!ref) return;
-  var steps = tailored ? buildSteps(A)
-                       : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
-  var c = newCase(ref.trim(), steps);
-  c.generic = !tailored;
-  if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
-  cases.unshift(c);
-  saveCases(); openCase = cases[0]; renderCases();
+  // Two dialogs in sequence: warn about the generic checklist (only when it applies),
+  // then ask for the reference. Chained so the second waits for the first.
+  var gate = tailored ? Promise.resolve(true) : askConfirm({
+    title: 'This case will not be tailored',
+    body: '<p>The walkthrough has not been completed, so this case will use the <b>generic checklist</b> — not one pruned to a particular applicant.</p>'
+        + '<p>For a tailored checklist, cancel, finish the <b>Walkthrough</b> tab, and press “Track this as a case” on the preparation sheet.</p>',
+    ok: 'Create a generic case', cancel: 'Cancel'
+  });
+  gate.then(function(go){
+    if (!go) return;
+    return askCaseRef().then(function(ref){
+      if (!ref) return;
+      var steps = tailored ? buildSteps(A)
+                           : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
+      var c = newCase(ref, steps);
+      c.generic = !tailored;
+      if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
+      cases.unshift(c);
+      saveCases(); openCase = cases[0]; renderCases();
+    });
+  });
 }
 
 function renderOne(){
@@ -1121,6 +1347,9 @@ function renderOne(){
         + '<button class="btn ghost sm" id="dlCase" type="button">Download a copy</button>'
         + '<button class="btn ghost sm danger" id="delCase" type="button">Delete</button>'
         + (c.dirty ? '<span class="pill-dirty">changes not yet copied</span>' : '')
+        // role=status: this line exists BECAUSE the download outcome is otherwise
+        // unobservable, so it has to reach a screen reader too. Matches #copyMsg.
+        + '<span class="note-inline" id="dlMsg" role="status" aria-live="polite"></span>'
         + '</div>';
   h += '<h2 style="font-family:var(--serif);font-size:26px;color:var(--ink);margin:0 0 4px">'+esc(c.ref)+'</h2>';
   h += '<p style="color:var(--muted);font-size:13.5px;margin:0 0 6px">Opened '+esc(c.created)+' · last touched '+esc(c.updated)+' · <b>'+p.done+' of '+p.total+'</b> done</p>';
@@ -1160,13 +1389,21 @@ function renderOne(){
   });
   document.getElementById('delCase').addEventListener('click', function(){
     var warn = c.dirty
-      ? 'Delete “'+c.ref+'”?\n\n⚠️ This case has changes that have NOT been copied to Double. Deleting it loses them for good — there is nothing to reopen it from.'
-      : 'Delete “'+c.ref+'” from this browser?\n\nYou last copied it to Double, so you can reopen it from that note.';
-    if (!confirm(warn)) return;
-    cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+      ? '<p>This case has changes that have <b>not been copied to Double</b>. Deleting it loses them for good — there is nothing to reopen it from.</p>'
+      : '<p>You last copied this case to Double, so you can reopen it from that note.</p>';
+    askConfirm({
+      title: 'Delete “' + c.ref + '”?',
+      body: warn, ok: 'Delete the case', cancel: 'Keep it', danger: true
+    }).then(function(go){
+      if (!go) return;
+      deletedKeys[caseKey(c)] = true;                 // or the merge in saveCases() hands it back
+      cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+    });
   });
   document.getElementById('copyNote').addEventListener('click', function(){ showNote(c); });
-  document.getElementById('dlCase').addEventListener('click', function(){ downloadCase(c); });
+  document.getElementById('dlCase').addEventListener('click', function(){
+    downloadCase(c, document.getElementById('dlMsg'));
+  });
   document.getElementById('logAdd').addEventListener('click', function(){
     var v = document.getElementById('logText').value.trim(); if (!v) return;
     c.log.push({ t: nowStamp(), x: v }); touch(c); renderOne();
@@ -1276,25 +1513,83 @@ function showNote(c){
   });
   var tl = document.getElementById('trimLog');
   if (tl) tl.addEventListener('click', function(){
-    if (!confirm('Drop all but the last 12 log entries?\n\nThe checklist, its dates and the per-step notes are untouched — only the log history is shortened, so the note fits Double.')) return;
-    var dropped = Math.max(0, c.log.length - 12);
-    c.log = c.log.slice(-12);
-    c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
-    touch(c); renderOne(); showNote(c);
+    askConfirm({
+      title: 'Drop all but the last 12 log entries?',
+      body: '<p>The checklist, its dates and the per-step notes are <b>untouched</b> — only the log history is shortened, so the note fits Double.</p>',
+      ok: 'Trim the log', cancel: 'Cancel', danger: true
+    }).then(function(go){
+      if (!go) return;
+      var dropped = Math.max(0, c.log.length - 12);
+      c.log = c.log.slice(-12);
+      c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+      touch(c); renderOne(); showNote(c);
+    });
   });
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
-// A download works when the page is opened as a real file; inside a published
-// viewer the sandbox makes it inert, which is why the clipboard route is primary.
-function downloadCase(c){
-  try{
-    var blob = new Blob([caseNoteText(c)], {type:'text/plain'});
+// The Artifact runtime, if we are running inside one. This tool is embedded in the
+// Hub as a nested srcdoc iframe, so `window.claude` is injected on an ANCESTOR
+// document, not ours — walk up and read it through try/catch, since a cross-origin
+// ancestor throws on access. Its presence is also the signal that we are sandboxed.
+function claudeDownloads(){
+  var w = window;
+  for (var i = 0; i < 4 && w; i++){
+    try { if (w.claude && w.claude.downloads && w.claude.downloads.save) return w.claude.downloads; }
+    catch(e){ /* cross-origin ancestor — stop looking up this chain */ break; }
+    if (w === w.parent) break;
+    w = w.parent;
+  }
+  return null;
+}
+// A blob download works when the page is opened as a real file. Inside the published
+// viewer the sandbox blocks <a download> — and, crucially, blocks it WITHOUT THROWING,
+// so the old catch here never ran and this button was a silent dead click in the one
+// place the team actually uses it: exactly the failure this file's dialogs exist to kill.
+// `.txt` is on the runtime's filename allowlist, so the capability route works.
+// When neither route can be confirmed we say so rather than leaving a mute button.
+function downloadCase(c, msgEl){
+  var name = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
+  var text = caseNoteText(c);
+  function say(m){ if (msgEl) msgEl.textContent = m; }
+  function blocked(){
+    sayNote({ title: 'This viewer would not save the file',
+      body: '<p>Use <b>“Copy the case note for Double”</b> instead — that is the durable copy anyway.</p>' });
+  }
+  var rt = claudeDownloads();
+  if (rt){
+    // save() returns a PROMISE. A refusal rejects rather than throwing, so a bare
+    // try/catch reported "Saved as …" for a file that was never written — the same
+    // silent lie as the blocked <a download> this branch set out to kill, just moved
+    // one branch over. Wait for the promise before claiming anything. Mirrors
+    // build-hub.mjs's saveFile, including respecting an explicit decline.
+    var p;
+    try { p = rt.save({ filename: name, data: text }); }
+    catch(e){ blocked(); return; }
+    if (p && p.then){
+      p.then(function(){ say('Saved as ' + name); },
+             function(err){
+               if (err && err.code === 'declined'){ say('Save cancelled.'); return; }
+               say(''); blocked();
+             });
+    } else { say('Saved as ' + name); }
+    return;
+  }
+  try {
+    var blob = new Blob([text], {type:'text/plain'});
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
+    a.download = name;
     document.body.appendChild(a); a.click();
     setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-  }catch(e){ alert('This viewer blocks downloads. Use “Copy the case note for Double” instead.'); }
+  } catch(e){
+    sayNote({ title: 'This viewer would not save the file',
+      body: '<p>Use <b>“Copy the case note for Double”</b> instead — that is the durable copy anyway.</p>' });
+    return;
+  }
+  // A blocked <a download> throws NOTHING, so we cannot know whether a file appeared.
+  // Never guess and never stay mute: state both outcomes in one line. Inline rather
+  // than a modal, because on a normal browser the download did just work.
+  say('Saved as ' + name + ' — if no file appeared, this viewer blocked it; use “Copy the case note for Double”.');
 }
 
 function showImport(){
@@ -1314,10 +1609,20 @@ function showImport(){
     try { c = decodeCase(raw); } catch(e){ msg.textContent = 'That code could not be read — paste the whole note, including the line at the very bottom.'; return; }
     if (!c){ msg.textContent = 'No case code found. Make sure you copied the whole note, including the last line.'; return; }
     var existing = cases.filter(function(x){ return x.ref === c.ref; })[0];
-    if (existing && !confirm('“'+c.ref+'” is already open in this browser. Replace it with the pasted version?')) return;
-    if (existing) cases.splice(cases.indexOf(existing), 1);
-    cases.unshift(c); saveCases();
-    imp.hidden = true; openCase = cases[0]; renderCases();
+    var gate = existing ? askConfirm({
+      title: '“' + c.ref + '” is already open here',
+      body: '<p>A case with that reference is already stored in this browser. Replace it with the pasted version?</p>'
+          + '<p style="color:var(--muted);font-size:13.5px">The pasted note wins — anything ticked here since the note was written is lost.</p>',
+      ok: 'Replace it', cancel: 'Keep what is here', danger: true
+    }) : Promise.resolve(true);
+    gate.then(function(go){
+      if (!go) return;
+      // Same trap as delete: a replaced case whose `created` differs from the pasted
+      // one has a different caseKey, so the merge would keep BOTH. Tombstone it.
+      if (existing){ deletedKeys[caseKey(existing)] = true; cases.splice(cases.indexOf(existing), 1); }
+      cases.unshift(c); saveCases();
+      imp.hidden = true; openCase = cases[0]; renderCases();
+    });
   });
 }
 
