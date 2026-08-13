@@ -415,6 +415,13 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
    `321`. **So: use `type="text" inputmode="numeric"` for numeric fields in a re-rendering
    form**, never `type="number"` — same numeric keypad on mobile, no caret restriction.
    *(Lilian hit this entering an applicant's age in the ITIN walkthrough, Aug 2026.)*
+   ⚠️ **`type="text"` also gives up the browser's numeric coercion, so filter the value
+   yourself** — `pattern` never enforces anything when no form is submitted. Strip
+   non-digits on input, **and treat an out-of-range value as UNANSWERED**, or the tool
+   sails on with a number it could not read. In the walkthrough that meant an age of
+   `abc` or `999` resolved to -1 and **silently dropped the under-18 civil-birth-certificate
+   requirement** from the printed sheet and the checklist — a wrong ITIN package, produced
+   confidently. When a field gates a rule, "unreadable" must block, never quietly mean "no".
 
 ## Build & publish flow (with the verify gate)
 

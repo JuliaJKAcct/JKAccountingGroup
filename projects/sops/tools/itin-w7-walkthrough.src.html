@@ -540,7 +540,10 @@ function openDlg(opts){
             + '<p class="derr" id="dlgErr" role="alert"></p>'
           : '')
       + '</div><div class="dbtns">'
-      + '<button type="button" class="btn ghost sm" data-act="cancel">' + esc(opts.cancel || 'Cancel') + '</button>'
+      // A notice has one action; offering "Close" beside "Got it" is two buttons
+      // that do the same thing.
+      + (opts.single ? ''
+          : '<button type="button" class="btn ghost sm" data-act="cancel">' + esc(opts.cancel || 'Cancel') + '</button>')
       + '<button type="button" class="btn ' + (opts.danger ? 'ghost sm danger' : 'cta sm') + '" data-act="ok">'
       + esc(opts.ok || 'OK') + '</button>'
       + '</div></form>';
@@ -557,7 +560,8 @@ function openDlg(opts){
       done(v);
     }
     d.querySelector('[data-act="ok"]').addEventListener('click', accept);
-    d.querySelector('[data-act="cancel"]').addEventListener('click', function(){ done(wantsInput ? null : false); });
+    var cancelBtn = d.querySelector('[data-act="cancel"]');
+    if (cancelBtn) cancelBtn.addEventListener('click', function(){ done(wantsInput ? null : false); });
     // Esc fires `cancel`, and <dialog> also emits `close` — settle once, as a cancel.
     d.addEventListener('cancel', function(e){ e.preventDefault(); done(wantsInput ? null : false); });
     d.addEventListener('close', function(){ done(wantsInput ? null : false); });
@@ -581,7 +585,7 @@ function askText(opts){ return openDlg(opts); }
 function askConfirm(opts){ return openDlg(opts); }
 function sayNote(opts){
   // A one-button notice. Resolves when dismissed; callers rarely wait.
-  return openDlg({ title: opts.title, body: opts.body, ok: opts.ok || 'Got it', cancel: 'Close' });
+  return openDlg({ title: opts.title, body: opts.body, ok: opts.ok || 'Got it', single: true });
 }
 // The reference prompt is asked from two places and must read identically in both.
 function askCaseRef(){
@@ -597,12 +601,24 @@ function askCaseRef(){
 /* ------------------------------ render Qs ------------------------------ */
 function active(){ return Q.filter(function(q){ return !q.when || q.when(A); }); }
 
+// The ONE definition of "this question is answered" — used to lock the questions
+// below it, to count progress, to enable the Build button, and by walkComplete()
+// to decide whether a case is tailored. It lived in three places that drifted.
+// A numeric question counts only when it resolves to a REAL number: "999" and "abc"
+// both leave num() at -1, and an unknown age silently drops the age-gated rules
+// (the under-18 civil birth certificate) from the sheet and the checklist.
+function isAnswered(q){
+  if (q.free) return q.free.every(function(f){ return A[f[0]]; });
+  if (q.num)  return num(A[q.id]) >= 0;
+  return A[q.id] !== undefined && A[q.id] !== '';
+}
+
 function renderQuestions(){
   var host = document.getElementById('questions');
   var list = active(), html = '', i = 0, blocked = false;
   list.forEach(function(q){
     i++;
-    var answered = q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id] !== undefined && A[q.id] !== '');
+    var answered = isAnswered(q);
     var lock = blocked ? ' locked' : '';
     html += '<div class="q'+lock+'" data-q="'+q.id+'"'+(blocked?' aria-disabled="true"':'')+'>';
     html += '<p class="qn">'+esc(q.n)+' · question '+i+'</p>';
@@ -625,11 +641,16 @@ function renderQuestions(){
       // the caret silently snapped to position 0 on every re-render — typing "26"
       // landed the "2", then re-rendered, then inserted the "6" in front of it,
       // reading back as "62" (and "123" as "321"). inputmode="numeric" keeps the
-      // numeric keypad on mobile without that restriction; pattern advises but
-      // does not enforce, so out-of-range or non-digit input still resolves through
-      // num() below, same as before.
+      // numeric keypad on mobile without that restriction.
+      // data-num marks it for the digit filter in answered(): type="text" also drops
+      // the browser's own numeric coercion, and letters here are NOT harmless — an
+      // unreadable age makes num() return -1, which silently skips the under-18
+      // civil-birth-certificate rule and its checklist step.
+      var numBad = A[q.id] !== undefined && A[q.id] !== '' && num(A[q.id]) < 0;
       html += '<div class="inline"><div><label class="fl" for="'+q.id+'_n">'+esc(q.num)+'</label>'
-           +  '<input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')+'></div></div>';
+           +  '<input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" data-num="1" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')+(numBad?' aria-invalid="true"':'')+'>'
+           +  (numBad ? '<p class="derr" style="margin:6px 0 0">Enter an age between 0 and 120.</p>' : '')
+           +  '</div></div>';
     }
     if (q.free){
       html += '<div class="inline">';
@@ -646,9 +667,7 @@ function renderQuestions(){
   host.innerHTML = html;
 
   var total = list.length;
-  var done = list.filter(function(q){
-    return q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id]!==undefined && A[q.id]!=='');
-  }).length;
+  var done = list.filter(isAnswered).length;
   var ready = (A.ssn==='yes') || done===total;
   document.getElementById('build').disabled = !ready;
   document.getElementById('progress').textContent = A.ssn==='yes'
@@ -669,11 +688,23 @@ function prune(){
 // unlocks (and the ones it reveals, like the student question) inert until some
 // other event happens to redraw. Focus and caret are restored so typing is unbroken.
 function answered(t){
+  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
+  // Strip anything that is not a digit from a numeric field. type="text" bought us a
+  // movable caret but gave up the browser's numeric coercion, and a letter here is not
+  // harmless — it makes num() return -1, which quietly removes the age-gated rules.
+  if (t.dataset && t.dataset.num){
+    var raw = t.value, clean = raw.replace(/[^0-9]/g, '').slice(0, 3);
+    if (clean !== raw){
+      // Pull the caret back by however many characters were dropped ahead of it,
+      // so deleting a stray letter does not send the cursor to the end.
+      if (pos != null) pos -= (pos - raw.slice(0, pos).replace(/[^0-9]/g, '').length);
+      t.value = clean;
+    }
+  }
   A[t.name] = t.value;
   prune();
   var out = document.getElementById('out');
   if (!out.hidden && A.ssn !== 'yes') out.hidden = true;
-  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
   renderQuestions();
   if (id){
     var again = document.getElementById(id);
@@ -1036,6 +1067,10 @@ function todayISO(){ var d = new Date(); return d.getFullYear()+'-'+String(d.get
 function nowStamp(){ var d = new Date(); return todayISO()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); }
 
 var cases = [], openCase = null, storageBroken = false, lastCard = 0;
+// Cases deleted in this window. Consulted by saveCases() so the cross-window merge
+// cannot resurrect them. Session-scoped on purpose: once the delete is written to
+// disk the tombstone has done its job, and a reload starts clean.
+var deletedKeys = {};
 
 // A stored entry that is not a real case used to throw inside paintBadge() at load,
 // which aborted the whole script — the walkthrough and the reference tab went blank too,
@@ -1062,7 +1097,11 @@ function saveCases(){
   try {
     var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
     if (Array.isArray(disk)) disk.filter(validCase).forEach(function(d){
-      if (!mine[caseKey(d)]) merged.push(d);          // a case another window created — keep it
+      // A case deleted in THIS window is absent from `cases` but still on disk, so the
+      // merge below used to hand it straight back and delete never stuck — you reloaded
+      // and the case was there again. Tombstones tell the two apart: absent-because-
+      // deleted stays deleted, absent-because-another-window-made-it is still kept.
+      if (!mine[caseKey(d)] && !deletedKeys[caseKey(d)]) merged.push(d);
     });
   } catch(e){}
   try { localStorage.setItem(LSKEY, JSON.stringify(merged)); }
@@ -1238,12 +1277,7 @@ function wireList(){
 // A half-answered walkthrough used to pass the old `A.role && A.pass` gate and produce a
 // confident but silently wrong "tailored" list. Only a COMPLETE walkthrough tailors a case;
 // anything else gets the generic checklist, and says so on the card and in the Double note.
-function walkComplete(){
-  return active().every(function(q){
-    return q.free ? q.free.every(function(f){ return A[f[0]]; })
-                  : (A[q.id] !== undefined && A[q.id] !== '');
-  });
-}
+function walkComplete(){ return active().every(isAnswered); }
 function promptNewCase(){
   var tailored = walkComplete();
   // Two dialogs in sequence: warn about the generic checklist (only when it applies),
@@ -1322,6 +1356,7 @@ function renderOne(){
       body: warn, ok: 'Delete the case', cancel: 'Keep it', danger: true
     }).then(function(go){
       if (!go) return;
+      deletedKeys[caseKey(c)] = true;                 // or the merge in saveCases() hands it back
       cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
     });
   });
@@ -1489,7 +1524,9 @@ function showImport(){
     }) : Promise.resolve(true);
     gate.then(function(go){
       if (!go) return;
-      if (existing) cases.splice(cases.indexOf(existing), 1);
+      // Same trap as delete: a replaced case whose `created` differs from the pasted
+      // one has a different caseKey, so the merge would keep BOTH. Tombstone it.
+      if (existing){ deletedKeys[caseKey(existing)] = true; cases.splice(cases.indexOf(existing), 1); }
       cases.unshift(c); saveCases();
       imp.hidden = true; openCase = cases[0]; renderCases();
     });
