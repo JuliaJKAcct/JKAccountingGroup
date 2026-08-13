@@ -163,21 +163,6 @@ Consequences a session must not misread:
 | `Organizer Status` = `N/A (SCH-C)` | ✅ **Sufficient** |
 | `Income Tax` unchecked, on its own | ❌ **NOT sufficient — send to review** |
 
-ⓘ **A WORKED EXAMPLE OF WHY THE THIRD ROW SENDS YOU TO REVIEW — Aura Remodeling, 2026-08-13.**
-Aura carries **`Income Tax` unchecked and no `Tax Return Type` at all**: the exact fingerprint the
-table calls insufficient. Two sweeps read it two different ways — one inferred a **two-owner LLC
-filing Form 1065**, the individual file recorded **Schedule C activity**, and the conflict sat open
-for six weeks because a 1065 reaches the 1040 by K-1 and a Schedule C does not, so both could not
-be right. **Lilian settled it: the company is reported on the owner's Schedule C and files nothing
-of its own.** Two things to carry:
-- **The `Sch C` signals can be ABSENT on a genuine Schedule C company.** Neither sufficient signal
-  was set here. So absence of the marker is not evidence either way — which is what makes "send to
-  review" the only safe verdict rather than a formality.
-- **Ask the person.** Six weeks of inference produced a wrong answer; one question produced the
-  right one. The owner's individual file is where the company's tax work lives —
-  [`aura-remodeling.md`](../../../projects/client-intelligence/clients/aura-remodeling.md) →
-  [`ihor-naum-olha-levchuk.md`](../../../projects/client-intelligence/clients/ihor-naum-olha-levchuk.md).
-
 **`Income Tax = false` does not mean Schedule C.** Read plainly it means *we don't do this
 client's income tax at all*, and §3 documents exactly that population (bookkeeping-only
 engagements with no `Tax Return Type` and `Income Tax = false`). The same fingerprint therefore
@@ -189,6 +174,23 @@ There is a live example of why only a human can settle it: **Aura Remodeling** h
 `Income Tax = false` and no `Tax Return Type`, and is Schedule C — but that is known **only
 because Lilian said so**, not from anything in Double. When the two sufficient signals are absent,
 ask.
+
+⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
+about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
+next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
+**two-owner LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C
+activity, and **both files carried an explicit note that one reading had to be wrong** — because a
+partnership return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and
+the wrong reading kept rendering on the published client card. **The answer existed in this skill
+the whole time.**
+
+**So: when a human settles a client's structure, write it to the CLIENT FILE, not only here.** A
+fact recorded in a skill is guidance; a fact recorded on the client file is what the team and the
+published Hub actually read. ⓘ **A second trap the same day:** the correction was first written as
+*"this strikes the earlier inference that it would default to a partnership"* — inside §1 Entity
+type. The card classifier reads only that field and matches the partnership pattern **before** the
+Schedule-C branch, so **a sentence saying the inference was wrong re-rendered the card as a
+partnership.** Keep the struck reading out of §1 entirely.
 
 ### Expect stray company organizers in the data
 
