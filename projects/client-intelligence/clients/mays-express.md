@@ -148,6 +148,6 @@ A running, dated record as we build this profile.
 
 - **Double client:** [app.doublehq.com/close?cid=710582](https://app.doublehq.com/close?cid=710582)
 - **Double case note:** `CASE · FDOR — closing the sales-tax and reemployment-tax accounts` — note **491838**. Carries the FDOR phone line, the amounts, the periods and what each agent said.
-- **Migrated TaxDome notes (Double):** `TaxDome > MAYS EXPRESS SERVICE LLC > 2. Notes` — and in Drive under `4. Documents`. Not yet read (the backfill's Phase 2 is gated — see [`taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md)).
+- **Migrated TaxDome notes (Double):** `TaxDome > MAYS EXPRESS SERVICE LLC > 2. Notes` — and in Drive under `4. Documents`. **Read 2026-08-13.** It covers the same matter written up above from Lilian's phone notes and adds no new facts.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_

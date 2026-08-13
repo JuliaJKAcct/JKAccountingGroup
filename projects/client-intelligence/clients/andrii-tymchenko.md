@@ -27,7 +27,8 @@
 ## 1. Snapshot
 
 - **Business name:** Andrii Tymchenko — an **individual** client, with a company alongside (§5)
-- **Entity type:** individual taxpayer. 🔴 **For tax year 2025 he and his wife were NON-RESIDENT ALIENS and filed Form 1040-NR** — see §4.
+- **Entity type:** Individual taxpayer (Form 1040 / 1040-NR)
+- **2025 filing position:** 🔴 **Non-resident aliens — the position recorded on 2026-04-07 was Form 1040-NR, married filing separately** (§4). ⚠️ **Whether the returns were actually filed is not recorded anywhere reachable** (§6).
 - **Home state:** ⚠️ **He left the United States on 2025-05-31 and moved to Spain.** Which state, if any, has a part-year claim for 2025 is _(pending)_.
 - **Industry / what they do:** _(pending)_ — he has a company that had **no activity at all in 2025**
 - **Primary language:** _(pending — likely Ukrainian or Russian)_
@@ -89,11 +90,10 @@ the actual details (and Claude can pull them live when a task needs them).
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **THE FAMILY LEFT THE UNITED STATES ON 2025-05-31 AND ARE IN SPAIN.** That is what makes 2025 a **1040-NR, married filing separately** year (§4), and it changes almost everything about how this client is handled — residency, which states have a claim, and whether US filing continues at all. **Establish the current position before preparing anything for 2026.**
-- 🔴 **A Form 1095-A WAS REQUESTED FROM HIM, AND THE SAME NOTE SAYS THE FAMILY WAS ON MEDICAID — WHICH DOES NOT PRODUCE A 1095-A.** Marketplace coverage produces one; Medicaid produces a 1095-B. **So the request may have been a mistake, and it may be why nothing came back.** Settle what coverage actually applied before chasing him again — asking a client repeatedly for a document that cannot exist is the failure this file exists to prevent.
+- ⚠️ **A Form 1095-A was requested from him, and the note says nothing about HIS OWN coverage** — only that **his wife and children were on Medicaid, not the marketplace**. Medicaid produces a 1095-B, not a 1095-A; marketplace coverage for part of the year would produce one. **So the request may be right, or it may be chasing a form that cannot exist — the note does not settle it.** Establish what coverage HE had for 2025 before asking him again.
 - **His company was dormant for the whole of 2025** — no income, no expenses, no P&L. Do not read the missing P&L as an outstanding item.
-- ⚠️ **He does not remember whether he made estimated tax payments for the year**, and said the firm would know. **Check the IRS account rather than asking him again.**
 - **He did not sell the car — he took it to Spain.** Recorded because a vehicle disappearing from a return usually means a sale, and here it does not.
-- **His driver's licence on file expired in 2025** (§4).
+- ⚠️ **He does not remember whether he made estimated tax payments for the year**, and said the firm would know. **Check the IRS account rather than asking him again.**
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -129,6 +129,6 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710619](https://app.doublehq.com/close?cid=710619)
-- **Migrated TaxDome notes:** Drive `4. Documents > Andrii Tymchenko > 1. Notes`, mirrored in Double at `TaxDome > Andrii Tymchenko > 1. Notes` — one note, `04.07.2026 - 2025 Tax organizer - summary call`, read 2026-08-13.
+- **Migrated TaxDome notes:** Drive `4. Documents > Andrii Tymchenko > 1. Notes`, mirrored in Double at `TaxDome > Andrii Tymchenko > 1. Notes` — **two files, but one note**: `04.07.2026 - 2025 Tax organizer - summary call`, present as both a Google Doc and a `.docx` copy of the same thing. Read 2026-08-13.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_

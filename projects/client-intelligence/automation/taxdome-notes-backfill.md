@@ -4,7 +4,7 @@
 ✅ **The permission question below was ANSWERED by Lilian on 2026-08-13** and the ruling is recorded
 where a session will actually find it — in the [`double-mcp`](../../../.claude/skills/double-mcp/)
 document rule, as *"The SECOND hole"*. The section below is kept as the reasoning that produced it. **Phase 1 ran on 2026-08-12** and its output is in *Inventory* at the bottom:
-**33 `Notes` folders → 22 distinct clients, 11 of them with no CI file at all.**
+**33 `Notes` folders → 22 distinct clients.** (11 had no CI file then; **7 still do not** — see Phase 2.)
 
 ⓘ **A third source appeared the same day** — Lilian's own iCloud phone notes, handed over
 directly. **That source is NOT blocked** by the permission question, and the first client
@@ -156,7 +156,7 @@ Double**, so some notes will belong to clients with no file at all — those get
 
 ### Phase 2 — Read and route, in batches
 
-🔴 **Gated on the permission question above.** Then: client by client, applying the routing
+✅ **The permission question above was answered by Lilian on 2026-08-13, and this ran the same day** — see *Phase 2 ran 2026-08-13* below. Then: client by client, applying the routing
 rule and the writing rules. Commit per client, in small batches, so the work survives a
 session ending.
 
@@ -262,16 +262,16 @@ the job.
 | VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ❌ — Double: `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
 | IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ❌ ⚠️ **two Melomed households in Double** — `Igor Melomed & Yelena Lovkina` (710635) and `Grigoriy & Margarita Melomed` (710633) |
 | SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ❌ — Double record **archived** 2026-07-22 (706706) |
-| Andrii Tymchenko | 4. Documents | ✅ `1. Notes` (2 files) | **owner** | ❌ — Double 710619 |
-| MAYS EXPRESS SERVICE LLC | 4. Documents | ✅ `2. Notes` | company | ❌ — Double 710582 |
+| Andrii Tymchenko | 4. Documents | ✅ `1. Notes` (2 files) | **owner** | ✅ created 2026-08-13 — Double 710619 |
+| MAYS EXPRESS SERVICE LLC | 4. Documents | ✅ `2. Notes` | company | ✅ created 2026-08-13 — Double 710582 |
 | R & G Friendly Inc | 4. Documents | _(unchecked)_ | company | ❌ — Double 710589 |
 | YMI Trucking LLC | 4. Documents | _(unchecked)_ | company | ❌ — Double 710608 |
-| Voicecapital Inc | 4. Documents | _(unchecked)_ | company | ❌ — Double 710725 |
+| Voicecapital Inc | 4. Documents | _(unchecked)_ | company | ✅ created 2026-08-13 — Double 710725 |
 | Viacheslav Honcharenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710665 |
 | Maria Contreras | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710646 |
 | Iurii Iakovenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double: `Iurii Iakovenko & Alina Yakovenko` (710639) |
 
-**Half the roster has no CI file (11 of 22)** and **seven folders are filed under a person**, which
+**Eleven of the 22 had no CI file when this was written; four have been created since, leaving SEVEN** — and **seven folders are filed under a person**, which
 is precisely where the routing rule earns its keep.
 
 Three `Notes` folders found by the search are **not** part of this backfill and should be skipped:
@@ -368,7 +368,12 @@ salvage; from here the record is kept properly.
 document rule, where the next session will find it). She also **corrected the central assumption of
 this file**: the TaxDome notes and her phone notes are **independent sources**, not two copies —
 *"no son las mismas que yo tenía en mi teléfono… puede que alguna cosa coincidiera, pero no
-necesariamente."* That proved right: **of 22 documents, 6 overlapped and 16 were new.**
+necesariamente."*
+
+**She was right. Counted from the per-client listing below: 30 files across the 22 `Notes` folders**
+(one of Andrii Tymchenko's is a `.docx` copy of the same note, so **29 distinct notes**). **Seven
+covered ground the phone notes already had** — Optic Gold's two IRS calls, Candramas, Deep Tech,
+YMI, Voicecapital and Mays Express. **The other twenty-two were new.**
 
 🔴 **The single most valuable thing it produced was a CORRECTION.** Deep Tech's TaxDome note carries
 a closing line the phone note does not — *"THIS IS DONE. WE HAVE A LETTER IN DEEP TECH'S FOLDER"* —
@@ -385,13 +390,21 @@ which **closes a matter this repo had recorded as open the day before**. Exactly
 | Andrii Tymchenko | **Left the US 2025-05-31 → 1040-NR, MFS**; dormant company; a **1095-A requested against Medicaid coverage**, which cannot exist | ✅ **new file created** |
 | Optic Gold · Candramas · YMI · Voicecapital · Mays Express | Same matters already written from the phone notes — **no new facts**; Candramas's copy confirms the wording, including the `03.06.2024` date slip already flagged | — nothing to add |
 
+**Two more clients WITH files, whose notes held nothing durable** — recorded so the count closes:
+**Greenair International LLC** — one note, *"Banking info"*, which is **bank routing and account
+numbers only** (identity block; recorded nowhere). The one durable fact is that **a bank change was
+recorded on 2024-10-23** — the detail is in Drive. **MAGNUM 152 INC** — one note, *"2023 Tax
+return"*, listing **non-deductible items for 2023** (shareholder health insurance, the 50% meals
+disallowance, donations). **Figures stay in Drive; the durable fact is that the 2023 return carried
+a non-deductible add-back schedule.** Neither warranted a §5 bullet.
+
 **🔴 SEVEN clients have a TaxDome note read but STILL NO CI FILE.** Their content is preserved here
 so it cannot be lost, and each **owes a file**:
 
 - **VITALII IVANOV** — holds **50% of four Ukrainian companies** (ТОВ Бест Вей Фудс, 2018-07-30 · ТОВ
   Екстрим Прайд, 2019-06-05 · ТОВ 34-й градус, 2020-07-04 · ТОВ Юкрейн Анлімітед Трейдинг,
   2020-11-17). _(Irina Jandieri, 2025-08-18.)_ ⚠️ **50% of a foreign corporation is Form 5471
-  territory** — and the firm has a [`form-5471-tax-analysis`](../../../.claude/skills/) skill and an
+  territory** — and a **`form-5471-tax-analysis`** skill is available to sessions (it is a personal/synced skill, **not** in this repo's `.claude/skills/`) and there is an
   existing `Form5471_ExtremePride_2025.xlsx` in Drive, so this is live work, not history.
 - **SETATECH USA INC** — **Angela Saturno is the Director of Sales** (contact details in Drive/Double).
   _(Lilian, 2025-03-07.)_ The Double record is **archived** since 2026-07-22.
@@ -437,7 +450,6 @@ Voicecapital and Masciave — with **Optic Gold** the same case resolved six wee
 effect a year later than intended. Four companies, one underlying weakness in how the election was
 evidenced.
 
-⚠️ **The TaxDome copies of these same notes have still NOT been read** — that is Phase 2 proper and
-it stays gated on the permission question. The overlap is known (Optic Gold's two IRS calls appear
-in both sources), so when Phase 2 runs it must **reconcile against what is already written** rather
-than append a second account of the same events.
+✅ **The TaxDome copies WERE read on 2026-08-13** — see *Phase 2 ran 2026-08-13*. The overlap turned
+out to be **small**: Lilian's correction was that the two sources are independent, and only 6 of the
+documents covered ground the phone notes already had.

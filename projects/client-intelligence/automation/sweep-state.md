@@ -34,7 +34,8 @@ list grows.
 
 > ⚠️ **A baseline here says nothing about the migrated TaxDome notes.** This ledger covers
 > Ping, Double, Gmail (and Drive where noted) — **not** the notes carried over from each
-> client's TaxDome profile. **No client has ever been swept for those**, however recent their
+> client's TaxDome profile. **No weekend sweep reads those** — they were read once, by hand, on
+> **2026-08-13** — however recent their
 > baseline reads.
 > **That backfill is tracked entirely in [`taxdome-notes-backfill.md`](./taxdome-notes-backfill.md),
 > not here** — deliberately: the third column below means work **owed**, so a completion

@@ -127,6 +127,6 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - **Double client:** [app.doublehq.com/close?cid=710725](https://app.doublehq.com/close?cid=710725)
 - **Double case note:** `CASE · IRS Form 2553 — S-election not on file, 2023 return unprocessed` — note **491840**
-- **Migrated TaxDome notes (Drive):** `4. Documents > Voicecapital Inc > 1. Notes`. Not yet read (the backfill's Phase 2 is gated — see [`taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md)).
+- **Migrated TaxDome notes (Drive):** `4. Documents > Voicecapital Inc > 1. Notes`. **Read 2026-08-13.** It covers the same matter written up above from Lilian's phone notes and adds no new facts.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_

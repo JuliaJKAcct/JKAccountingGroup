@@ -102,7 +102,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- 🔴 **THE ACCOUNT SHOULD NOT EXIST, AND CLOSING IT IS WAITING ON JULIA.** On **2026-04-06** Connecticut DRS told Lilian that **the client was registered for sales tax even though they only provide services and sell no goods — and the firm never requested that account.** DRS also said the outstanding zero returns could be filed **with no penalty** (done; saved in Drive), and that **the account can be closed entirely online**: myconneCT → *More* → *Taxpayer Updates* → *Close Accounts*, entering a closure date. **Lilian was waiting for Julia to do it, with a reminder due after 2026-04-15. Nothing records it being done.** ⚠️ **This may be the answer to why this client files a zero return every month** — the discussion below was written without it. _(TaxDome notes, migrated — filed under Ecoorganic USA LLC; note dated 2026-04-06.)_
+- 🔴 **THE ACCOUNT SHOULD NOT EXIST, AND CLOSING IT IS WAITING ON JULIA.** On **2026-04-06** Connecticut DRS told Lilian that **the client was registered for sales tax even though they only provide services and sell no goods — and the firm never requested that account.** DRS also said the outstanding zero returns could be filed **with no penalty** (done; saved in Drive), and that **the account can be closed entirely online**: myconneCT → *More* → *Taxpayer Updates* → *Close Accounts*, entering a closure date. **Lilian was waiting for Julia to do it, with a reminder due after 2026-04-15. Nothing records it being done.** ⚠️ **This may be the answer to why this client files a zero return every month** — the discussion below was written without it. ⚠️ **And it may also be what the two unopened DRS notices are about** (the 12.2025 Delinquency Notice and the 01.2026 Proposed Assessment, further down): DRS said on 2026-04-06 that the outstanding zero returns could be filed **with no penalty**, and the note records that as **done**. **Open those two notices before treating either as a live liability.** _(TaxDome notes, migrated — filed under Ecoorganic USA LLC; note dated 2026-04-06.)_
 - **Applies?** Yes — Connecticut **OS-114 Sales and Use Tax Return**, filed
   **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
   *(Double client properties + activity log, confirmed 2026-08-01)*.
@@ -152,10 +152,11 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   🔑 **And look here BEFORE asking the state anything: a migrated TaxDome note on this client
   is titled `04.06.2026 CT state call - sales tax account`** — an April 2026 call with
   Connecticut about this very account, which falls **inside** the window of both the gap and
-  the two notices, so it may already hold the answer. *(Found 2026-08-13 in the TaxDome
-  Phase-1 inventory — the note's **content has not been read**; those notes are gated on the
-  permission question in [`../automation/taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md).
-  Its existence is the fact; what it says is not.)*
+  the two notices, so it may already hold the answer. ✅ *(**Read 2026-08-13**, once Lilian authorised
+  it. It **does** hold part of the answer: DRS said the account was opened although the client
+  sells no goods and the firm never requested it, that the outstanding zero returns could be
+  filed **with no penalty** — done — and that the account can be closed online. See the bullet at
+  the top of this section. **What it does NOT say is when or why DRS moved the client to monthly.**)*
 - **When or why DRS moved this client from quarterly to monthly is not recorded** — observed
   from the filings, not established.
 

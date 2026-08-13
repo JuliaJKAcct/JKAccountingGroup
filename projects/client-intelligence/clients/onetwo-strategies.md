@@ -127,7 +127,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- **Almost everything here is still Double's property columns alone** — the exception is the 2026-04-13 client call above, from a migrated TaxDome note. No Gmail, Ping or QuickBooks pass has been run. The first weekend sweep on this client is what makes it useful.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
 
 ## 6. History & open questions
