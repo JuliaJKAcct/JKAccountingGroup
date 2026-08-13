@@ -1,25 +1,66 @@
 # Double support — the note-size 403 (Aug 2026)
 
-> ## ✅ SENT — do not send it again
+> ## ✅ SENT — and ANSWERED. Do not send the original again.
 >
 > **Sent 2026-08-06 14:34 UTC** by Lilian, as a reply on Allison's *"Checking in before our 8/18
-> wrap-up"* thread, with Julia and Maria in copy. **Awaiting her reply.** If you were asked to
-> "send the Double note-size email", it has already gone out — follow up on that thread instead of
-> writing a new one.
+> wrap-up"* thread, with Julia and Maria in copy. **Allison replied 2026-08-13 — see
+> "Double's answer" below. The answer was "not us", and it is wrong**; the follow-up that
+> answers it is drafted at the end of this file and **has not been sent** (Lilian's call).
 >
 > **What actually went out differed from the draft below in three ways:**
 >
 > - It carried a **second, unrelated ask** in the same message — a write on the tax project's
 >   deadline (see [`capability-map.md`](./capability-map.md) → "Open requests with Double", and
->   [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 22).
+>   [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 22). **That one got a good answer:** a feature
+>   request was filed with their dev team.
 > - It asked **two questions, not three**: the documented-limit question and the can-it-be-raised
->   question. **The web-UI question was dropped**, which is exactly why the web-UI test is still an
->   open next action — running it now gives us something to follow up with.
+>   question. **The web-UI question was dropped.**
 > - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email. It
->   is still open.
+>   is still open, and the call is now days away.
 
-When Double answers, record the answer in [`../SKILL.md`](../SKILL.md) §7 ("the size wall") and
-delete or supersede this file.
+When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
+and delete or supersede this file.
+
+---
+
+## Double's answer — 2026-08-13, and why it does not close the matter
+
+Allison, relaying her team, on the same thread:
+
+> - There is no maximum length for notes in Double and no restrictions from our side for the MCP
+>   connectors to limit notes. I have been instructed that the issue is coming from Claude's API, so
+>   unfortunately, it is out of our scope.
+> - While this is currently read_only, I've submitted a feature request on your behalf (and spoken
+>   directly with our devs team about this and why it's such an important feature) so hopefully we
+>   see this one soon!
+
+**The second bullet is a win** (that is the deadline write, row 22 — nothing more to do but wait).
+**The first bullet answers a question nobody asked.** Two tests run on 2026-08-13 show why:
+
+| Call | Server | Payload | Result |
+|---|---|---|---|
+| `list_clients(name=…)` — read-only, **no note in the request** | Double | ~48 chars | ✅ 200 |
+| `list_clients(name=…)` — read-only, **no note in the request** | Double | **~9,000 chars** | ❌ **403 `mcp_request_blocked`** |
+| `search_emails(query=…)` — read-only | **Ping Assistant** | **the identical ~9,000-char string** | ✅ 200 |
+
+- **"No maximum length for notes" is true and irrelevant.** Row 2 is a *read*. It creates nothing and
+  contains no note. It is blocked anyway.
+- **"It is coming from Claude's API" is disproven.** Rows 2 and 3 are the same account, the same MCP
+  connector plumbing and the *same string*, seconds apart. One server took it; Double's did not.
+- **Row 1 is the control** — same tool, same parameter, shorter — so Double is up and authenticated,
+  and payload size is the only variable that moved.
+
+**What is actually happening:** something at the **edge in front of Double's MCP endpoint** — a WAF,
+CDN or load balancer — refuses the POST before Double's application sees it. This is why their
+engineers can check the product, find no limit, and answer in complete good faith. *The request never
+reaches the code they looked at.* **The follow-up must therefore not argue about note length at all**
+— it has to move the question from the product to the infrastructure in front of it, and hand them
+something specific enough to check.
+
+**The specific thing to hand them, as a hypothesis and not a claim:** the boundary sits at
+**8 KB = 8,192 bytes**, the default body-inspection ceiling in the common managed WAF rule sets (AWS
+WAF's `SizeRestrictions_BODY` blocks at exactly that figure). Our 7,600-pass / 8,000-fail bracket
+straddles it once the JSON envelope is counted.
 
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
 evidence is kept here rather than reconstructed from memory the next time it comes up.
@@ -52,8 +93,9 @@ Four things this email had to get right (kept as the record of why it is written
    would otherwise identify neither sender nor tenant.
 
 **The web-UI test (below) was not done before sending, and question 3 was dropped from the sent
-version.** Running the test now is therefore the strongest thing we can add to the thread — a
-measured result beats the question we didn't ask.
+version.** ⓘ **Superseded 2026-08-13** — the read-only and cross-server tests above turned out to be
+far stronger evidence than the UI paste would have been, and they are what the follow-up is built on.
+The UI test is still worth running, but as a *practical* question now, not the decisive one.
 
 **If this is escalated to Support, or re-sent after the implementation window closes**, restore the
 firm introduction from git history. It was removed because *Allison* knows us — Allison's onboarding
@@ -119,14 +161,20 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 - **The content-independence test is already done** — plain filler text at ~8,200 characters was
   refused exactly like real content (2026-08-06). That closes the most likely first
   counter-hypothesis, that something *in* our notes trips a pattern rule. Keep that row in the table.
-- **Test the web UI if you can, but do it safely.** Paste a ~10,000-character note in the browser and
-  see whether it saves. Guardrails, because **the MCP has no `delete_note`** — a test note can only be
+- **The read-only test (2026-08-13) supersedes it as the headline evidence** — a `list_clients` call
+  with a ~9,000-character filter, containing no note and creating nothing, is refused identically. It
+  is a cleaner proof than the filler-note test because it removes notes from the picture entirely.
+  **Lead with it.**
+- **The cross-server control (2026-08-13) is what refutes "it's Claude"** — the same string, the same
+  minute, accepted by a different MCP server. Without this row the follow-up is an assertion; with it,
+  it is a measurement.
+- **The web-UI test is still worth doing, but it is no longer the critical one.** It now answers a
+  *practical* question rather than a diagnostic one: **can a person paste a long note by hand while
+  this is unfixed?** Guardrails, because **the MCP has no `delete_note`** — a test note can only be
   removed by hand in the browser:
   - use an **archived or internal** record, never a client with a live case note (§7 rule 1 forbids a
     second note on a tracked matter);
-  - **delete it in the browser immediately** after looking;
-  - if the browser accepts it, that is the strongest single piece of evidence that only the API path
-    is affected, and question 3 answers itself.
+  - **delete it in the browser immediately** after looking.
 - **The boundary is not bracketed tighter than 7,600–8,200 characters.** If support asks for the exact
   cutoff it can be bisected; nobody has needed it badly enough yet.
 - **Character count may not be the unit.** The title and JSON escaping travel with the body, and real
@@ -134,3 +182,63 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
   expressed in **bytes**. Raise this only if support disputes the numbers.
 - **If the limit is raised**, collapse any `Part 1 / Part 2` notes back into one — a single note per
   matter is the shape the convention wants (§7 rule 1).
+
+---
+
+## The follow-up — drafted 2026-08-13, ⚠️ NOT SENT
+
+Lilian's to send or change. It goes on **the same thread** (*"Checking in before our 8/18 wrap-up"*),
+Julia and Maria in copy, as every previous message on this has. It deliberately **does not argue about
+note length** — it concedes their point and moves the question to the infrastructure — and it carries
+the call-date question that has been open since 2026-08-06.
+
+> Hi Allison,
+>
+> Thank you for chasing this down — and that is great news on the deadline feature request, thank you
+> for pushing it with the dev team.
+>
+> On the notes, I think the answer came back to a slightly different question. Your team is right that
+> Double has no note-length limit — but what is failing is not a note. We ran a **read-only** call
+> yesterday, `list_clients`, with a long search filter: it creates nothing, and there is no note
+> anywhere in it. It comes back with the same error:
+>
+> ```
+> MCP server returned 403 Forbidden — the request may have been blocked by a firewall or
+> security service
+> error_code: mcp_request_blocked
+> ```
+>
+> Three calls, same account, same minute:
+>
+> | Call | Server | Request size | Result |
+> |---|---|---|---|
+> | `list_clients` (read-only) | Double | ~48 characters | works |
+> | `list_clients` (read-only) | Double | ~9,000 characters | **403 Forbidden** |
+> | a read-only call on another MCP integration we use | not Double | the same ~9,000-character string | works |
+>
+> Rows 1 and 2 are the same tool and the same parameter — only the size changed. And row 3 is why we
+> don't think this is Claude's API: the identical string went through to a different server seconds
+> apart, from the same account.
+>
+> So it looks like the request is being refused **before it reaches Double's application** — by a
+> firewall, CDN or load balancer in front of your MCP endpoint. That would let both things be true at
+> once: no limit in the product, and the request still blocked.
+>
+> One specific thing that may help them: the cut-off falls right at **8 KB (8,192 bytes)**, which is
+> the default request-body inspection limit in the standard managed WAF rule sets — in AWS WAF it is
+> the `SizeRestrictions_BODY` rule. If that is what it is, it is a configuration change on your side
+> rather than a product change.
+>
+> Could you pass this to whoever manages the infrastructure in front of the MCP endpoint and ask them
+> to check the request-body size rule? We are happy to run any test payload that helps them trace it.
+>
+> One more thing — could you confirm the date of our wrap-up call? Your message says August 17th and
+> the subject line says 8/18, and we don't have an invite for either.
+>
+> Thank you so much!
+>
+> Lilian — JK Accounting Group
+
+**If it is still unresolved after the wrap-up call**, the implementation window has closed and this
+goes to `help@doublehq.com` as a support ticket — restore the firm introduction from git history, and
+lead with the three-row table rather than the story.

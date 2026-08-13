@@ -286,11 +286,17 @@ Note writes fail with **HTTP 403** once the body gets large. **Keep a note body 
 characters** — that is the firm's working ceiling, and title plus JSON escaping count toward it.
 Applies to every `create_note` / `update_note`, not only case notes.
 
-The measured boundary, the `list_notes`-first recovery after a 403, and the `Part 1 / Part 2 / …`
-split discipline all live in **[SKILL §7](../SKILL.md)** — the single home for them, since the
-boundary has not been bracketed tightly and will move if Double answers. **Read §7 before working
-around this; do not invent a second approach.** Raised with Double 2026-08-06 — see the
-open-requests section below.
+⚠️ **It is not really a *note* limit at all — it is a request-size limit, and it applies to every call.**
+Proven 2026-08-13: a **read-only** `list_clients` with a ~9,000-character filter, containing no note and
+creating nothing, is refused identically; the same string goes through to a different MCP server in the
+same minute. So the block sits at the **edge in front of Double's MCP endpoint**, not in the product —
+which is why Double's own engineers checked and reported no note limit, truthfully. **Practically it
+still bites notes hardest**, because notes are the only thing the firm writes that gets that big.
+
+The measured boundary, the three-row proof, the `list_notes`-first recovery after a 403, and the
+`Part 1 / Part 2 / …` split discipline all live in **[SKILL §7](../SKILL.md)** — the single home for
+them. **Read §7 before working around this; do not invent a second approach.** Raised with Double
+2026-08-06; **answered 2026-08-13 with "not us" — see the open-requests section below.**
 
 ---
 
@@ -412,8 +418,8 @@ Julia and Maria in copy. Two asks in that one email. The next call with Double i
 | Ask | Why | Status |
 |---|---|---|
 | **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | To raise — thread or the 17–18 Aug call |
-| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | Sent, awaiting reply |
-| **Raise or document the note size limit** | The 403 above — it caps the case notes the team relies on | Sent, awaiting reply |
+| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | ✅ **Answered 2026-08-13 — accepted.** Allison filed a **feature request** with Double's dev team and argued it with them directly. Still read-only for now; nothing to do but wait |
+| **Raise the request-size limit on the MCP endpoint** (was filed as "the note size limit") | The 403 above — it caps the case notes the team relies on, and in fact caps *every* large call | ⚠️ **Answered 2026-08-13 — declined, on a misreading.** Double: no note-length limit exists and *"the issue is coming from Claude's API… out of our scope."* **Disproven the same day** (read-only call blocked; identical payload accepted by another MCP server). **Follow-up drafted, not yet sent** — [`note-size-limit-support-request.md`](./note-size-limit-support-request.md). It must ask about the **WAF/CDN in front of the endpoint**, not about notes |
 
 If either lands, this file and [SKILL](../SKILL.md) both change. The **deadline write** flips §4
 and the quick-answer table here, plus SKILL §1 ("The tax project is READ-ONLY — including the
