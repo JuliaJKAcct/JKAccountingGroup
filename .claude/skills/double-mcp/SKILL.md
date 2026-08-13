@@ -1051,6 +1051,14 @@ the live one would strand every existing reference. And **the split point is chr
 topical**: what moved out was the oldest history, which is what rule 3 means by "entries pushed out of
 Part 1" — status and next actions never leave.
 
+⛔ **ONE CARVE-OUT: an ITIN case-tracker note is TRIMMED, never split.** The
+[`itin-w7-preparation`](../itin-w7-preparation/) walkthrough writes a machine-readable block into the
+client's case note and **reads it back** to reopen a case elsewhere, so it warns at **7,000
+characters and offers to trim the log** instead. **Splitting one of those breaks re-import** — half
+the state ends up in a note the tool never reads. So the firm has two documented answers to the same
+wall and they are not in conflict: **trim** where a tool parses the note, **split** where only people
+read it.
+
 Revisit if Double raises the limit — then collapse the parts back into one note, which is the
 preferred shape.
 

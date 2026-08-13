@@ -61,7 +61,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online | Bookkeeping ledger | _(pending — Drive link)_ | Subscription lapsed Dec 2025; client asked to restore |
 | **Gusto** | Payroll platform — the company's **Florida RT account number is registered here**, but **no payroll was ever run** | _(n/a — firm login)_ | See §4 and §5 — this is the crux of the open matter |
-| Florida DOR (reemployment tax) | RT-6 quarterly reemployment tax returns | _(pending — Drive link)_ | **The account's Florida Business Partner (BP) number is in the Double case note**, not here — a full account number, per the two-data-homes rule at the top of this file. General agency phone **(850) 488-6800**. ✅ **The case has a named agent: Felesha Spence, `felesha.spence@floridarevenue.com`, 954-346-2945** _(given 2026-08-13; she is the one who must process the POA)_. POA sent 2026-08-04 **never arrived** (wrong address), **re-sent 2026-08-06 to `AcctMaint@floridarevenue.com`**, and **sent directly to Felesha Spence 2026-08-13** — see §4 |
+| Florida DOR (reemployment tax) | RT-6 quarterly reemployment tax returns | _(pending — Drive link)_ | **The account's Florida Business Partner (BP) number is in the Double case note**, not here — a full account number, per the two-data-homes rule at the top of this file. General agency phone **(850) 488-6800**. ✅ **The case has a named agent: Felesha Spence** — **her direct email and phone live in the Double case note**, per this section's own rule that contact details are not kept here _(given 2026-08-13; she is the one who must process the POA)_. POA sent 2026-08-04 **never arrived** (wrong address), **re-sent 2026-08-06 to `AcctMaint@floridarevenue.com`**, and **sent directly to Felesha Spence 2026-08-13** — see §4 |
 | Shopify · Etsy · PayPal | Sales channels reconciled in the books | _(pending — Drive link)_ | Also Shopify Capital |
 
 ## 4. Obligations & recurring processes
@@ -105,10 +105,11 @@ recorded for history and because the Florida RT matter at the end is still open.
 
 ### Florida reemployment tax (RT) — OPEN MATTER, and still the firm's
 
-> **⏩ CURRENT STATE — THREE LIVE BLOCKS, all at the end of this section, all worth reading before
-> acting: "✅ THE HONEST EFFECTIVE-DATE REQUEST" (the ask, and the call checklist), "✅ THE THIRD CALL" (2026-08-06) and
-> "🔴 THE POA THAT NEVER ARRIVED". Everything before those three is superseded and kept only for the
-> record.** Where this stands:
+> **⏩ CURRENT STATE — FOUR LIVE BLOCKS, all at the end of this section, all worth reading before
+> acting, and the LAST one is the most current: "✅ THE HONEST EFFECTIVE-DATE REQUEST" (the ask, and
+> the call checklist), "✅ THE THIRD CALL" (2026-08-06), "🔴 THE POA THAT NEVER ARRIVED" and
+> "✅ THE FOURTH CALL" (2026-08-13 — the named agent, and the POA still not processed). Everything
+> before those four is superseded and kept only for the record.** Where this stands:
 > - **Closing the account is OFF** — not because the agency refused it, but because **Julia wants
 >   it left open** in case the company files as an S-corp and has to run payroll _(Lilian,
 >   2026-08-06)_.
@@ -128,13 +129,18 @@ recorded for history and because the Florida RT matter at the end is still open.
 > - ✅ **THE FOURTH CALL, 2026-08-13 — THE POA HAS NOT PROCESSED, AND WE FINALLY HAVE A NAMED AGENT.**
 >   Lilian called to ask whether it had processed. **It has not** — seven days after the re-send, not
 >   the 3–4 days the agency quoted. But the agency **named the agent who has the case**:
->   **Felesha Spence**, `felesha.spence@floridarevenue.com`, **954-346-2945**. Lilian **sent the
+>   **Felesha Spence** — **her direct email and phone are in the Double case note**. Lilian **sent the
 >   DR-835 straight to her the same day**. See "✅ THE FOURTH CALL".
-> - **NEXT STEP: wait for Felesha Spence to process the POA, then call and ask for the change ON the
->   call.** The representative stated the sequence plainly: **once that agent processes it, call back
->   and request the effective-date change.** **The letter is still the fallback, not the first step.**
->   ⚠️ **Do not volunteer the IRS letter** — Lilian's explicit decision. Nothing has been drafted or
->   sent _(2026-08-06)_.
+> - **NEXT STEP: CHASE Felesha Spence — do not wait passively.** The sequence the agency stated is
+>   **once that agent processes the POA, call back and request the effective-date change** — but
+>   waiting silently is what cost this matter the last seven days, and **the penalty may still be
+>   accruing** while it does. ⏱️ **The firm's own cadence, since the agency has given no date and
+>   nobody should compute one: if there is no reply to the 08-13 email by ~Wed 2026-08-19, call her
+>   line; if that gets nowhere, call the general line and ask again who has it and whether the POA is
+>   on file.** _(A working rhythm the firm set, not an agency commitment — adjust it, but do not
+>   replace it with nothing.)_ Then **ask for the change ON the call.** **The letter is still the
+>   fallback, not the first step.** ⚠️ **Do not volunteer the IRS letter** — Lilian's explicit
+>   decision. Nothing has been drafted or sent _(2026-08-06)_.
 > - ✅ **POA address: `AcctMaint@floridarevenue.com`** — not the same as the effective-date channel,
 >   `fdorspanish@floridarevenue.com`.
 > - **Filing the zero returns and paying ≈$842.50 remains the floor** if neither ask lands. ⚠️ **That
@@ -413,7 +419,7 @@ that is now the plan.** It was wrong to treat the date change as dead: what the 
   honest framing below does **not** depend on that month — *"from the quarter wages actually begin"* is
   the argument — but **October 2026 is the concrete date the request names.**
 - 🗣️ **WHAT TO EXPLAIN, IN WORDS — JULIA'S FOUR POINTS, AND THEY ALL SURVIVE.** _(Restated here
-  2026-08-13 because they were only written inside the **superseded** two-track block below, where a
+  2026-08-13 because they were only written inside the **superseded** two-track block ABOVE, where a
   reader looking for them is told not to act on the page. **What was superseded is the conclusion
   Track B drew from them — dropping the date change for a waiver — not the explanation itself**, which
   "the honest framing" already relies on.)_
@@ -559,14 +565,19 @@ it there, worked out the correct address for powers of attorney, and **re-sent t
     "TSMINIBEARS LLC - POA" from `lilian@` to `AcctMaint@floridarevenue.com`, **2026-08-06 15:17 UTC**,
     Julia bcc'd. The attachment is dated **2026-05-27** — i.e. the POA was **signed while Tsminibears
     was still a client**, three weeks before the Double record was archived. _(Gmail, 2026-08-13.)_
-- **The 3–4 day processing clock restarts from 2026-08-06.** 08-06 is a Thursday, so **Mon 2026-08-10
-  at the earliest on calendar days; Tue 2026-08-11 – Wed 2026-08-12 if the agency means business
-  days.** _(Derived from the agency's stated duration, not a date it gave.)_
-- **Realistic end-to-end timing:** POA clears ~08-10/08-12, then the effective-date change takes a
-  further **3–4 weeks** → arithmetically **Mon 2026-08-31 to Wed 2026-09-09**, and realistically
-  **into mid-September** once letter turnaround and agency latency are allowed for. _(The band is
-  derived; the slack is the firm's judgement, not the agency's.)_ **Plan around that; it is not a
-  this-week matter.**
+- 🔴 **BOTH DATE BANDS BELOW ARE DEAD — falsified by the fourth call, kept only to show the mistake.**
+  On **2026-08-13** the POA had **still not processed**, seven days in. **Do not plan from either
+  band, and do not compute a replacement** — the lesson in §5 is that the agency's 3–4 days is a
+  floor, not a promise. **Ask the named agent instead.**
+  - ~~**The 3–4 day processing clock restarts from 2026-08-06.** 08-06 is a Thursday, so **Mon
+    2026-08-10 at the earliest on calendar days; Tue 2026-08-11 – Wed 2026-08-12 if the agency means
+    business days.**~~ _(Derived from the agency's stated duration, not a date it gave. **Wrong** —
+    08-13 came and went.)_
+  - ~~**Realistic end-to-end timing:** POA clears ~08-10/08-12, then the effective-date change takes a
+    further **3–4 weeks** → arithmetically **Mon 2026-08-31 to Wed 2026-09-09**, and realistically
+    **into mid-September**.~~ _(**Void** — its premise, a POA cleared by 08-12, did not happen. The
+    3–4 weeks only start once the named agent processes it, so any real resolution is later than this
+    band, by an amount nobody can yet state.)_
 - ✅ **The correct address for the POA is `AcctMaint@floridarevenue.com`** _(Lilian, 2026-08-06 —
   Florida DOR account maintenance)_. **This is a different address from the one for the
   effective-date request** (`fdorspanish@floridarevenue.com`, given by the second representative) —
@@ -585,23 +596,30 @@ and the second one is the one that moves this matter.**
   it; this matter has now built two timelines on it and both were wrong. **The realistic resolution
   slips again**: the 3–4 weeks for the change itself only starts once Felesha Spence processes the POA.
 - ✅ **THE AGENCY NAMED THE AGENT WHO HAS THE CASE — the first identified person in four calls.**
-  **Felesha Spence** · `felesha.spence@floridarevenue.com` · **954-346-2945**. Every prior call went to
+  **Felesha Spence** — **her direct email and phone are in the Double case note**, not here _(§2: a named
+  person's contact details live in Double; the department mailboxes and the public switchboard below are
+  routing, which is a different thing)_. Every prior call went to
   whoever picked up, was never identified, and produced a different answer; **there is now one person
   to deal with, reachable directly.**
-- ✅ **And it settles the delivery question by implication.** The agency could name an agent *who has
-  this case*, which it could not do for a document it never received. _(Inference — the representative
-  did **not** expressly confirm receipt of the 08-06 send, and was not asked. It is a good deal
-  stronger than "no bounce", which is all the record had this morning.)_
+- ⚠️ **IT DOES NOT SETTLE WHETHER THE POA ARRIVED — resist that inference, this file made it once and
+  withdrew it.** Being given an agent *who has this case* looks like proof of receipt and is not: the
+  **case is the RT delinquency the DOR itself opened** with the Q2/Q3 2025 notices, so it exists with
+  or without a POA, and an officer can be assigned to a delinquent account with nothing on file. **And
+  the call's own answer — "not processed" — reads exactly the same as "never arrived."** The standard
+  is unchanged: **the only proof is a representative saying the POA is ON FILE.** Ask it in those words.
 - ✅ **THE SEQUENCE, STATED PLAINLY BY THE AGENCY:** **once Felesha Spence processes the POA, call back
   and request the effective-date change.** That is the first time the route has been confirmed by
   someone other than the third representative's manner, and it matches the plan already in place.
 - 📤 **Lilian sent the DR-835 directly to Felesha Spence the same day** — 2026-08-13 16:44 UTC, subject
-  **"BP# 6895057 TSMinibears LLC"**, Julia bcc'd, same attachment as the 08-06 send
+  **"BP# … TSMinibears LLC"** _(the subject leads with the account's Florida BP number — it is in the Double case note, not here)_, Julia bcc'd, same attachment as the 08-06 send
   (`DR-835 - POA - 05.27.2026 - TSMINIBEARS.pdf`), asking to be told when it is processed. **No reply
   yet.**
 - 🆕 **The account's Florida BP (Business Partner) number is now known** and is recorded **in the Double
   case note** — a full account number stays out of this file under the two-data-homes rule at the top.
-  It is what the agency indexes this account by, so quote it on every future call and email.
+  **Quote it on every future call and email** — Lilian leads her own subject lines with it, which is
+  where the firm learned it. _(⚠️ **Whether the DOR actually indexes the account by it is the firm's
+  inference, not something the agency said.** Nothing turns on it: quoting the number is right either
+  way.)_
 
 ⚠️ **What has NOT changed:** the change itself is still **not requested and not agreed**, nobody has
 been asked about the IRS letter, and **the rule to get the acceptance in writing stands.** ✅ **What
@@ -631,7 +649,7 @@ of whoever answers each future call, since she may not be the one who picks up.
 - **The DOR takes an effective-date request by email, with an IRS letter attached — per ONE representative.** ⚠️ **A third representative the same day raised no documentation at all; do not carry this to another client as a settled requirement.** The request explains the situation, states there are **no employees**, that the company **does file taxes**, that it is **not** an entity type requiring a mandatory salary, and **the date requested**. The address the agency gave is **`fdorspanish@floridarevenue.com`** (its Spanish-language channel). ⚠️ **That last element is what the agency asks for; it is NOT what to write for a client that genuinely does file as a corporation.** There, the honest route is to state the entity type and **rebut the salary presumption with evidence of zero wages** — see the Tsminibears §4 block. **Which IRS document satisfies it is NOT established** — the agency described what the letter must *say*, not which form it is. Confirm before sending.
 - **Acting on a Florida DOR account needs a POA on file, and the agency says that takes 3–4 days.** It will not take the instruction until the power of attorney is processed. Send the POA first and build the wait into the plan — the substantive call is a **second** call, several days after the first. _(Basis: the 2026-08-04 call.)_ **And changing an effective date takes a further 3–4 weeks after that** — _one representative's figure, third call 2026-08-06, still verbal_ — so a matter like this runs a month, not a week.
   - 🔴 **THE 3–4 DAYS IS A FLOOR, NOT A PROMISE — DO NOT DERIVE A CALLBACK DATE FROM IT.** _(Tsminibears, 2026-08-13: **seven days** after the re-send the POA still had not processed.)_ This matter built **two** timelines on that figure and both were wrong — the first because the send had bounced, the second because the agency was simply slower than it said. **Don't compute a date; call and ask whether it has processed.** The call is free, it costs one phone call to replace a guess with a fact, and on this occasion it produced the single most useful thing in the whole matter (below).
-  - ⭐ **ASK WHO HAS THE CASE — it is the highest-value question on any agency call, and nobody thinks to ask it.** _(Tsminibears, 2026-08-13.)_ Three calls had gone to whoever picked up, none of them identified, each giving a different answer. The fourth call asked a plain status question and came back with **the named agent handling the case, with her direct email and phone**. That converts an anonymous queue into one person you can reach, chase and quote. **Ask it on the first call, not the fourth**, and quote the agency's own account number (Florida indexes by the **BP / Business Partner number**) in every message.
+  - ⭐ **ASK WHO HAS THE CASE — it is the highest-value question on any agency call, and nobody thinks to ask it.** _(Tsminibears, 2026-08-13.)_ Three calls had gone to whoever picked up, none of them identified, each giving a different answer. The fourth call asked a plain status question and came back with **the named agent handling the case, with her direct email and phone**. That converts an anonymous queue into one person you can reach, chase and quote. **Ask it on the first call, not the fourth**, and quote the account's own reference (in Florida, the **BP / Business Partner number**) in every message. ⚠️ **A named officer is a contact, not an authority** — she can be chased, but a verbal answer from her still needs to come back in writing like any other.
 - **🔴 VERIFY AN EMAIL ADDRESS AN AGENT GIVES YOU OVER THE PHONE — AND THEN CHECK IT WAS DELIVERED.** _(Tsminibears, Aug 2026: the POA address given on the 2026-08-04 call was wrong — "no era ni parecido" — the send bounced, and two days of the plan rested on a document the agency never received.)_ Three habits:
   1. **Read the address back on the call, and cross-check it against the agency's website** before sending anything that a deadline depends on.
   2. **Go looking for the bounce.** The non-delivery notice landed in **Gmail's "Updates" tab**, not the inbox — which is exactly where a failure hides for weeks. **After sending anything to an agency, check that tab and the spam folder.**
@@ -696,12 +714,12 @@ All times below are **UTC** unless marked otherwise.
 
 - _(2026-08-13, Lilian — FOURTH DOR CALL, and it is the one that unblocks the matter)_ — **She called to
   ask whether the POA had processed. It has NOT** — seven days after the 08-06 re-send, against the
-  agency's quoted 3–4 days. **But the agency named the agent who has the case: Felesha Spence,
-  `felesha.spence@floridarevenue.com`, 954-346-2945** — the **first identified person in four calls**,
+  agency's quoted 3–4 days. **But the agency named the agent who has the case: Felesha Spence**
+  _(her direct email and phone are in the Double case note)_ — the **first identified person in four calls**,
   after three anonymous representatives gave three different answers. **The representative also stated
   the sequence plainly: once Felesha processes the POA, call back and request the effective-date
   change.** Lilian **sent the DR-835 directly to Felesha the same day** (2026-08-13 16:44 UTC, subject
-  **"BP# 6895057 TSMinibears LLC"**, Julia bcc'd, same attachment, asking to be told when it is
+  **"BP# … TSMinibears LLC"** _(the subject leads with the account's Florida BP number — it is in the Double case note, not here)_, Julia bcc'd, same attachment, asking to be told when it is
   processed — no reply yet), which is also how the account's **Florida BP number** entered the record;
   it is held in the Double case note, not here, being a full account number. ✅ **Two open items close:**
   the **re-send reached the agency** (inferred — it could not assign an agent to a document it never
@@ -722,7 +740,7 @@ All times below are **UTC** unless marked otherwise.
 - ⏳ **NEXT ACTION — WAIT FOR FELESHA SPENCE TO PROCESS THE POA, THEN CALL AND ASK FOR THE CHANGE ON
   THE CALL.** _(Updated after the fourth call, 2026-08-13.)_ **The POA has NOT processed** — seven days
   after the 08-06 re-send, against a quoted 3–4 days — and the agency has now named the agent who has
-  the case: **Felesha Spence, `felesha.spence@floridarevenue.com`, 954-346-2945**, to whom Lilian sent
+  the case: **Felesha Spence** _(contact details in the Double case note)_, to whom Lilian sent
   the DR-835 directly the same day. **The agency stated the sequence: once she processes it, call back
   and request the change.** ⚠️ **Do not compute another callback date from the 3–4 days — two timelines
   have already been built on that figure and both were wrong (§5). Chase Felesha directly instead**, by
@@ -760,9 +778,9 @@ All times below are **UTC** unless marked otherwise.
 - [ ] **On what date the firm registered the RT account**, and why it was registered at all with no payroll imminent. The effective date is reported as May 2025; whether that is also the registration date remains an inference.
 - [ ] **Was Tsminibears actually PAYING Gusto during Q2 and Q3 2025?** Billing history / invoices — now supporting evidence for the Track B waiver rather than the centre of a claim against Gusto.
 - [ ] **What Gusto's Payroll Service Terms said in 2025**, not what they say today. Terms change; the version in force during the penalty periods is the one that matters.
-- [x] **A named contact at the DOR — ✅ FELESHA SPENCE**, `felesha.spence@floridarevenue.com`,
-  **954-346-2945**, the agent who has this case _(given on the fourth call, 2026-08-13)_. **Deal with
-  her directly from here.**
+- [x] **A named contact at the DOR — ✅ FELESHA SPENCE**, the agent who has this case _(given on the
+  fourth call, 2026-08-13)_. **Deal with her directly from here** — **her email and phone are in the
+  Double case note**, since a named person's contact details do not live in this file (§2).
 - [ ] **The representative's name / ID and a call reference for the FIRST THREE calls** (2026-08-04 and
   the two on 2026-08-06) — **none was captured**, and the three contradict each other. Unrecoverable in
   practice; kept so nobody mistakes those three answers for attributable ones. **Keep taking the name
@@ -770,12 +788,16 @@ All times below are **UTC** unless marked otherwise.
 - [x] **Whether the POA had processed by the 2026-08-06 calls — ✅ NO, and it could not have: the 2026-08-04 send never arrived at all** (wrong address, bounced). So everything those representatives said was **general information given without account authority**, which is worth knowing before relying on the ≈$842.50 figure or on "the change can be made." **Re-sent 2026-08-06; the clock runs from there.**
 - [x] **The correct email address for powers of attorney at the Florida DOR — ✅ `AcctMaint@floridarevenue.com`** _(Lilian, 2026-08-06)_. Distinct from `fdorspanish@floridarevenue.com`, which is the effective-date channel.
 - [ ] **Once the change goes through: confirmation that the penalty balance on the notice shows CLEARED.** The firm is proceeding on the assumption that moving the date cancels the already-assessed Q2/Q3 2025 penalties (§4). **This is the one check that proves it** — it falls due weeks after the call, so it lives here rather than only on the call checklist.
-- [x] **Confirmation that the 2026-08-06 re-send actually arrived — ✅ YES, effectively.** On the
-  **fourth call (2026-08-13)** the agency was able to name **the agent who has this case**, which it
-  could not do for a document it never received; no bounce exists either. _(Inferred — the
-  representative did not expressly confirm receipt and was not asked.)_ **What it is NOT is processed:
-  seven days on, it still had not been.** That is now tracked as the next action, not as a delivery
-  question.
+- [ ] **Confirmation that the 2026-08-06 re-send actually arrived. STILL OPEN — and the fourth call did
+  NOT close it.** What the call gave: no bounce exists, and the agency could name **an agent who has
+  this case**. ⚠️ **That is weaker than it first looked, and this file briefly recorded it as settled.**
+  The "case" is the **RT delinquency the DOR itself opened** when it issued the Q2/Q3 2025 notices — it
+  exists whether or not a POA was ever received, and an agency routinely assigns an officer to a
+  delinquent account with nothing on file. **The answer the call actually gave — "it has not been
+  processed" — is indistinguishable from "it never arrived."** So the standard this file set on
+  2026-08-13 stands unchanged: **the only proof is a representative saying the POA is ON FILE.** Ask it
+  in those words on the next call; it costs one question. If it is not on file, the plan repeats and
+  the 08-13 send to the named agent becomes the live one.
 - [ ] **Which IRS document the DOR will actually accept.** It asked for **"a letter from the IRS stating how the company files its taxes"** and **named no form** _(Lilian, 2026-08-06)_. The firm's own reading is the **CP575** — which the firm has, and which Lilian calls "the SS-4" because the CP575 cites Form SS-4 on its face. **Confirm with the agency before sending; don't assume the CP575 satisfies it.**
 - [ ] **What the CP575 actually says** about the entity's filing requirement. Expected: disregarded. **Not yet read.**
 - [ ] **Whether a Form 2553 was ever filed and a CP261 issued**, and when — i.e. whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so the S-corp election exists somewhere. This decides whether **either** the closure **or** the date change is safe to pursue.
@@ -803,8 +825,8 @@ All times below are **UTC** unless marked otherwise.
     pushed out of Part 1. **Never add to it.**
   - **They mirror this file and are updated in the same pass whenever this matter moves.** **Never open
     a third note** — when Double raises the limit, collapse the two back into one.
-- **Gmail — the POA sent to the named agent:** thread "**BP# 6895057 TSMinibears LLC**",
-  `lilian@` → `felesha.spence@floridarevenue.com`, 2026-08-13, Julia bcc'd, attaching
+- **Gmail — the POA sent to the named agent:** thread **"BP# … TSMinibears LLC"** _(the subject leads with the account's Florida BP number — it is in the Double case note, not here)_,
+  `lilian@` → **the named agent at the Florida DOR**, 2026-08-13, Julia bcc'd, attaching
   `DR-835 - POA - 05.27.2026 - TSMINIBEARS.pdf`. _(The earlier send is the thread "TSMINIBEARS LLC -
   POA" to `AcctMaint@floridarevenue.com`, 2026-08-06.)_
 - **Double tax project (2025):** [2025 Taxes](https://app.doublehq.com/tax-return?cid=706709&projectId=219894)
