@@ -485,8 +485,18 @@ function renderQuestions(){
       html += '</div>';
     }
     if (q.num){
+      // type="text" (not "number") is deliberate: after every keystroke the whole
+      // questions panel re-renders (renderQuestions, below), which destroys and
+      // recreates this input, so the caret has to be restored by hand in answered().
+      // Browsers refuse setSelectionRange on type="number" (InvalidStateError), so
+      // the caret silently snapped to position 0 on every re-render — typing "26"
+      // landed the "2", then re-rendered, then inserted the "6" in front of it,
+      // reading back as "62" (and "123" as "321"). inputmode="numeric" keeps the
+      // numeric keypad on mobile without that restriction; pattern advises but
+      // does not enforce, so out-of-range or non-digit input still resolves through
+      // num() below, same as before.
       html += '<div class="inline"><div><label class="fl" for="'+q.id+'_n">'+esc(q.num)+'</label>'
-           +  '<input type="number" min="0" max="120" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')+'></div></div>';
+           +  '<input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')+'></div></div>';
     }
     if (q.free){
       html += '<div class="inline">';
