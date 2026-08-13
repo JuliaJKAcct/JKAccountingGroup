@@ -111,6 +111,34 @@ certification letter); **3** evidence of the mortgage; **4** FIRPTA withholding
 documentation; **5** TD 9363 documentation. Exception proof replaces the
 **return** and nothing else — identity documents are still required.
 
+## 5A. "Where is this client up to?"
+
+Each client's application is tracked as a **case** in the walkthrough tool's
+**Case tracker** tab, with the durable copy pasted into that client's **running
+case note in Double** — readable status plus a code block the tool reads back.
+So when someone asks where a client stands:
+
+1. **Look at the client's case note in Double** — that is the record, and it
+   shows the ticked checklist, the per-step notes and the log.
+2. The tool is the working surface, not the archive. A case sits in **one
+   browser on one machine** until the note is pasted.
+
+**One note per case, rewritten in place** — never a second note
+([`double-mcp`](../double-mcp/) §7). The tool warns from **7,000** characters and
+offers to trim the log: Double returns an error rather than truncating, and the
+pasted body is HTML, so it is longer than the plain text being measured.
+
+**Copying is not pasting.** The tool only marks a case saved when the person
+confirms they pasted it — do not tell anyone a copied case is safe.
+
+**What a case may carry:** a reference, step state, dates, notes, the log.
+**Never** passport numbers, dates of birth or addresses — the two-data-homes rule
+applies to the case note as much as to anything else.
+
+If someone wants to start tracking a client, the answer is: run the walkthrough
+for them, then press **"Track this as a case"** on the preparation sheet — that
+way the checklist is pruned to the steps their situation actually produces.
+
 ## 6. Firm rules that ride on top
 
 - **Client data never enters the repo.** Passports, birth certificates, filled-in

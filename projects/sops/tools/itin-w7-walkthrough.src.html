@@ -139,6 +139,51 @@ details.f[open]>summary{border-bottom:1px solid var(--line);background:var(--tea
 .srch{width:100%;padding:12px 14px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);font-size:15px;margin-bottom:16px;font-family:var(--sans)}
 .nores{color:var(--muted);font-size:14px;padding:16px 0;display:none}
 
+/* ---------- case tracker ---------- */
+.cbadge{display:inline-block;min-width:18px;padding:1px 6px;margin-left:7px;border-radius:999px;background:var(--bronze-500);color:#fff;font-size:10px;line-height:16px;text-align:center}
+:root[data-theme="dark"] .cbadge{color:#1A0E0A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cbadge{color:#1A0E0A}}
+.cbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 18px}
+.clist{display:grid;gap:12px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px;cursor:pointer;transition:border-color .15s var(--ease)}
+.ccard:hover{border-color:var(--teal-600)}
+.ccard .cr{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.ccard h4{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);margin:0}
+.ccard .cmeta{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ccard .cnext{font-size:13.5px;color:var(--body);margin:8px 0 0}
+.ccard .cnext b{color:var(--ink)}
+.bar-wrap{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:11px 0 0}
+.bar-fill{height:100%;background:var(--teal-600);border-radius:99px;transition:width .3s var(--ease)}
+.bar-fill.done{background:var(--ok)}
+.pill-dirty{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--warn-bg);color:var(--warn);padding:3px 8px;border-radius:99px;white-space:nowrap}
+.pill-done{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--ok-bg);color:var(--ok);padding:3px 8px;border-radius:99px}
+.phase{margin:0 0 20px}
+.phase>h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.step{display:flex;gap:12px;align-items:flex-start;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:0 0 8px}
+.step.on{background:var(--ok-bg);border-color:var(--ok)}
+.step input[type=checkbox]{margin:3px 0 0;width:17px;height:17px;accent-color:var(--ok);flex:none;cursor:pointer}
+.step .sx{flex:1;min-width:0}
+.step .st{font-size:14.5px;color:var(--ink);font-weight:500}
+.step.on .st{text-decoration:line-through;text-decoration-thickness:1px;opacity:.75}
+.step .sd{font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.45}
+.step .sstamp{font-family:var(--mono);font-size:10px;color:var(--ok);margin-top:5px;display:block}
+.step .snote{width:100%;margin-top:7px;padding:6px 9px;border:1px dashed var(--line-2);border-radius:7px;background:transparent;color:var(--body);font-family:var(--sans);font-size:13px}
+.step .snote:placeholder-shown{border-style:dotted}
+.logbox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 16px}
+.logbox h4{font-family:var(--serif);font-size:17px;margin:0 0 10px;color:var(--ink)}
+.logentry{border-left:2px solid var(--teal-100);padding:0 0 0 12px;margin:0 0 11px;font-size:14px}
+.logentry .lt{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.06em;display:block;margin-bottom:2px}
+.logadd{display:flex;gap:8px;margin-top:12px}
+.logadd input{flex:1}
+textarea.paste{width:100%;min-height:130px;padding:11px 13px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.5;resize:vertical}
+.meter{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:7px}
+.meter.warn{color:var(--warn)} .meter.err{color:var(--err)}
+.empty{text-align:center;padding:44px 20px;color:var(--muted)}
+.empty h3{font-family:var(--serif);font-size:20px;color:var(--ink);margin:0 0 8px}
+.empty p{font-size:14.5px;max-width:48ch;margin:0 auto 16px}
+.btn.sm{padding:8px 14px;font-size:13.5px}
+.btn.danger{background:transparent;color:var(--err);border-color:var(--err)}
+
 @media print{
   body{background:#fff;color:#000;font-size:10.5pt}
   .top,.tabs,.act,.tbtns,#questions,#ref,.noprint{display:none!important}
@@ -172,6 +217,7 @@ details.f[open]>summary{border-bottom:1px solid var(--line);background:var(--tea
   <div class="tabs" role="tablist">
     <button class="tab" id="tabWalk" role="tab" aria-selected="true" aria-controls="walk" type="button">Walkthrough</button>
     <button class="tab" id="tabRef" role="tab" aria-selected="false" aria-controls="ref" type="button">Field reference — every line of Form W-7</button>
+    <button class="tab" id="tabCase" role="tab" aria-selected="false" aria-controls="cases" type="button">Case tracker<span class="cbadge" id="caseCount" hidden>0</span></button>
   </div>
 
   <!-- ============================= WALKTHROUGH ============================= -->
@@ -190,6 +236,13 @@ details.f[open]>summary{border-bottom:1px solid var(--line);background:var(--tea
     <input class="srch" id="srch" type="text" placeholder="Search the form — try “6d”, “foreign address”, “signature”, “office code”…" aria-label="Search fields">
     <div id="fields"></div>
     <p class="nores" id="nores">Nothing matches that. Try a line number (<b>6c</b>), or a word from the form (<b>visa</b>, <b>delegate</b>).</p>
+  </section>
+
+  <!-- ============================= CASE TRACKER ============================= -->
+  <section id="cases" role="tabpanel" aria-labelledby="tabCase" hidden>
+    <div id="caseList"></div>
+    <div id="caseOne" hidden></div>
+    <div id="caseImport" hidden></div>
   </section>
 </div>
 
@@ -723,10 +776,549 @@ function buildSheet(){
     + '<li>It does <b>not</b> make anyone eligible for the <b>Earned Income Tax Credit</b>.</li></ul>'
     + '<p style="margin-top:12px;font-size:13.5px;color:var(--muted)">Clients believe the opposite of all three often enough that saying them out loud is part of the job, not a formality.</p></div>';
 
+  // Turning the sheet into a tracked case is the whole point of building it — the
+  // case then carries only the steps this applicant actually needs.
+  h += '<div class="blk noprint" style="border-color:var(--bronze-500)">'
+    + '<h3><span class="num">→</span>Track this client through the process</h3>'
+    + '<p>This preparation sheet is a snapshot. A <b>case</b> turns it into a checklist you tick off over the days or weeks the application actually takes — with a note on each step, a running log, and a block you paste into the client’s case note in Double so the team can see where it stands and you can pick it up on another machine.</p>'
+    + '<div class="act" style="margin-top:16px"><button class="btn cta" id="trackCase" type="button">Track this as a case</button></div></div>';
+
   out.innerHTML = h;
   out.hidden = false;
   out.focus();
+  var tc = document.getElementById('trackCase');
+  if (tc) tc.addEventListener('click', function(){
+    var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into the client’s case note in Double.');
+    if (!ref) return;
+    cases.unshift(newCase(ref.trim(), buildSteps(A)));
+    saveCases(); openCase = cases[0];
+    switchTab('cases'); document.getElementById('tabCase').focus();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
   out.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ========================================================================
+   CASE TRACKER
+   Two homes on purpose. The browser holds open cases so ticking is instant;
+   the DURABLE copy is a block pasted into the client's running case note in
+   Double — human-readable status, plus a compact code the tool can read back.
+   That keeps client state where client data belongs, makes it visible to the
+   team, and means there is no separate file to lose.
+   A published page cannot start a download (the viewer sandbox makes
+   <a download> inert), so clipboard is the primary route, not a fallback.
+   ======================================================================== */
+var LSKEY = 'jk-itin-cases-v1';
+var CODETAG = 'JKCASE1:';
+// Double's own guidance is "keep bodies under ~7,500", and the 403 boundary has never been
+// bracketed tighter than 7,600–8,000. The body is also HTML once pasted, so the real string
+// is bigger than the plain text we can measure here. Warn well before the cliff.
+var NOTE_LIMIT = 7000;
+var LOG_KEEP = 40;       // entries carried in the code; the readable list shows the last 12
+
+var PHASES = [['intake','Eligibility & intake'],['form','The form'],['docs','Documents'],
+              ['ret','Return or exception'],['sign','Signatures'],['caa','As a CAA'],
+              ['send','Sending it'],['after','After it goes']];
+
+/* The step list is derived from the walkthrough answers, so a case carries only the
+   steps that actually apply to that applicant. IDs are stable — a saved case stores
+   ids, not labels, so the code stays small enough for a Double note. */
+function buildSteps(a){
+  var S = [], dep = isDepA(a), carve = carveOut(a), age = num(a.age);
+  var passEntry = (a.pass==='yes' && a.entry==='yes');
+  var residency = dep && !carve && !passEntry;
+  function add(id, ph, t, d){ S.push({id:id, ph:ph, t:t, d:d||''}); }
+
+  add('ssn','intake','SSN eligibility settled','Confirmed they cannot get a Social Security Number.');
+  if (a.ssn==='denied') add('ssaltr','intake','SSA denial letter in hand','Without it the application is rejected.');
+  if (a.ssn==='school') add('schoolltr','intake','School official’s certification letter obtained','From the DSO / RO / Authorized School Official, in place of an SSA letter.');
+  add('status','intake','Tax status determined','Resident or nonresident for tax purposes — Pub 519.');
+
+  add('box','form','Reason box checked, dotted lines filled','One box only. Boxes d/e also need the U.S. person’s name and SSN/ITIN.');
+  if (a.role==='a') add('treaty','form','Treaty country and article entered','On the “Additional information for a and f” line; must match line 3.');
+  if (a.exc) add('boxh','form','Exception designation written beside box h','Number + alpha subsection + category.');
+  add('lines','form','Lines 1a–6g completed','“N/A” on every section that does not apply — nothing left blank.');
+  if (a.role==='b' || a.role==='a') add('l3','form','Line 3 — complete foreign address','No P.O. box, no c/o.');
+  if (a.role==='c' || a.role==='g' || (a.role==='d' && !carve)) add('l6d','form','Line 6d — date of entry into the U.S.','Blank here is the IRS’s error #9.');
+  if (a.apptype==='renew') add('l6ef','form','Lines 6e / 6f — previous ITIN and the name it was issued under','');
+  if (a.role==='f') add('l6d','form','Line 6d — date of entry into the U.S.','Mandatory for reason f, and blank here is the IRS’s error #9.');
+  if (a.role==='f') add('l6g','form','Line 6g — institution, city and state, length of stay','');
+
+  if (a.pass==='yes'){
+    add('passport','docs','Passport collected and checked','Unexpired as at the submission date.');
+    add('visapages','docs','Visa pages included in the passport copy','Required where a visa applies to the application.');
+  } else {
+    add('twodocs','docs','Two or more documents from the 13-document list','One must carry a recent photograph, unless the applicant is an exempt dependent.');
+  }
+  if (a.role==='f' || a.role==='g') add('visacopy','docs','Copy of the visa, and any I-20 / I-94','Attached to the Form W-7.');
+  if (age >= 0 && age < 18 && a.pass!=='yes') add('birthcert','docs','Original civil birth certificate','Required under 18 where no valid passport is provided.');
+  if (residency) add('residency','docs','Proof of U.S. residency collected','From the age band on the preparation sheet — and the record must meet its content checklist.');
+  add('origcert','docs','Everything is original or issuing-agency certified','Notarised copies are not accepted.');
+  add('bothsides','docs','Two-sided documents copied on both sides','');
+
+  if (a.ret==='yes'){
+    add('return','ret','U.S. federal tax return attached','');
+    if (dep) add('deponret','ret','Dependent appears on the return','And is claimed for an allowable tax benefit, with the schedule that carries it.');
+  }
+  if (a.exc) add('excproof','ret','Exception documentation attached','It replaces the return only — identity documents are still required.');
+
+  if (a.caa==='yes') add('interview','sign','Interview held with the applicant','Video is allowed; the original documents must be in our possession during it.');
+  add('signed','sign','Form W-7 signed by an eligible signer','Signature matches line 1a.');
+  if (a.signer==='poa') add('f2848','sign','Form 2848 attached','');
+  if (a.signer==='guardian') add('courtdocs','sign','Court-appointment papers attached','');
+  if (a.signer==='mark') add('witness','sign','Witness signed and is identified as a witness','');
+  // Only when we are actually signing as an agent — the firm is not one yet, and an
+  // untickable step would stop every case ever reading as complete.
+  if (a.caa==='yes') add('aablock','sign','Acceptance Agent’s Use ONLY block completed','Signed by a responsible party named on the firm’s AA application.');
+
+  if (a.caa==='yes'){
+    add('coa','caa','Form W-7-COA completed and signed','Responsible party only. Identity + Foreign Status ticked per document.');
+    add('coadocs','caa','Document copies attached to the COA', dep ? 'For a dependent: passport and birth certificate only.' : 'All but a foreign military ID.');
+    if (dep) add('origmail','caa','Anything we may not authenticate sent as an original','Or an issuing-agency certified copy.');
+    add('retain','caa','Copies retained in the client’s folder','Including a signed copy of the Form W-7 — the COA commits us to this.');
+  }
+
+  add('fiveday','send','Submitted within five business days of signing','');
+  add('mailed','send','Package mailed to the ITIN Operation, Austin','Never the address in the tax return’s own instructions.');
+  add('proof','send','Mailing date and proof of posting recorded','');
+
+  add('origback','after','Original documents returned','~60 days. Chase the IRS if not.');
+  add('itin','after','ITIN assignment letter received','');
+  add('recorded','after','ITIN recorded in the client’s file and on the return','Remember: no e-filing with it in the year it is issued.');
+  return S;
+}
+
+function todayISO(){ var d = new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function nowStamp(){ var d = new Date(); return todayISO()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); }
+
+var cases = [], openCase = null, storageBroken = false, lastCard = 0;
+
+// A stored entry that is not a real case used to throw inside paintBadge() at load,
+// which aborted the whole script — the walkthrough and the reference tab went blank too,
+// with no recovery a user could perform. Validate every entry and keep going.
+function validCase(c){
+  return c && typeof c === 'object' && typeof c.ref === 'string'
+      && Array.isArray(c.steps) && Array.isArray(c.log)
+      && c.steps.every(function(s){ return s && typeof s.id === 'string'; });
+}
+function loadCases(){
+  var raw = [];
+  try { raw = JSON.parse(localStorage.getItem(LSKEY) || '[]'); } catch(e){ raw = []; }
+  if (!Array.isArray(raw)) raw = [];
+  var good = raw.filter(validCase);
+  if (good.length !== raw.length) warnStorage((raw.length - good.length) + ' stored item(s) were not readable as cases and have been ignored. Nothing was deleted — if a case is missing, reopen it from its note in Double.');
+  cases = good;
+}
+// Two windows of the tool used to clobber each other: each held the whole array in memory
+// and wrote it wholesale. Merge against what is on disk at write time, newest-updated wins.
+function saveCases(){
+  if (storageBroken) return;
+  var mine = {}; cases.forEach(function(c){ mine[caseKey(c)] = true; });
+  var merged = cases.slice();
+  try {
+    var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
+    if (Array.isArray(disk)) disk.filter(validCase).forEach(function(d){
+      if (!mine[caseKey(d)]) merged.push(d);          // a case another window created — keep it
+    });
+  } catch(e){}
+  try { localStorage.setItem(LSKEY, JSON.stringify(merged)); }
+  catch(e){
+    storageBroken = true;
+    warnStorage('This browser will not save cases (storage is full, or blocked in a private window). Your work is still on screen — copy the case note for Double now, or it will be lost when this page closes.');
+  }
+  paintBadge();
+}
+function caseKey(c){ return (c.ref || '') + '|' + (c.created || ''); }
+// One persistent banner, not an alert on every keystroke.
+function warnStorage(msg){
+  var id = 'storageWarn', el = document.getElementById(id);
+  if (!el){
+    el = document.createElement('div');
+    el.id = id; el.className = 'flag err'; el.setAttribute('role','alert');
+    el.style.cssText = 'margin:0 0 16px;border-radius:9px';
+    var host = document.getElementById('cases');
+    if (host) host.insertBefore(el, host.firstChild);
+  }
+  el.innerHTML = '<span class="fl">Storage problem</span>' + esc(msg);
+}
+function paintBadge(){
+  var el = document.getElementById('caseCount');
+  var open = cases.filter(function(c){ return progress(c).pct < 100; }).length;
+  el.textContent = open; el.hidden = open === 0;
+}
+// Another window changed the store — pick it up rather than overwrite it later.
+window.addEventListener('storage', function(e){
+  if (e.key !== LSKEY) return;
+  var openRef = openCase ? caseKey(openCase) : null;
+  loadCases();
+  openCase = openRef ? cases.filter(function(c){ return caseKey(c) === openRef; })[0] || null : null;
+  if (!document.getElementById('cases').hidden) renderCases();
+  paintBadge();
+});
+function progress(c){
+  var t = c.steps.length, d = c.steps.filter(function(s){ return s.done; }).length;
+  return { total:t, done:d, pct: t ? Math.round(d/t*100) : 0 };
+}
+function b64enc(o){ return btoa(unescape(encodeURIComponent(JSON.stringify(o)))); }
+function b64dec(s){ return JSON.parse(decodeURIComponent(escape(atob(s)))); }
+
+// The compact form stored in the Double note: ids + state only, never the answers.
+function encodeCase(c){
+  return CODETAG + b64enc({
+    v:1, r:c.ref, cr:c.created, up:c.updated, g:c.generic?1:0,
+    s: c.steps.map(function(s){ return [s.id, s.done?1:0, s.date||'', s.note||'']; }),
+    l: c.log.slice(-LOG_KEEP).map(function(e){ return [e.t, e.x]; })
+  });
+}
+function decodeCase(text){
+  var i = text.indexOf(CODETAG);
+  if (i === -1) return null;
+  var raw = text.slice(i + CODETAG.length).replace(/[^A-Za-z0-9+/=]/g, '');
+  var o = b64dec(raw);
+  if (!o || o.v !== 1) throw new Error('unrecognised case code');
+  // Rebuild labels from the current step catalogue; a code carries ids, not text.
+  var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
+  return {
+    ref: o.r, created: o.cr, updated: o.up, generic: !!o.g,
+    steps: o.s.map(function(a){
+      var meta = all[a[0]] || { id:a[0], ph:'form', t:a[0], d:'' };
+      return { id:a[0], ph:meta.ph, t:meta.t, d:meta.d, done:!!a[1], date:a[2]||'', note:a[3]||'' };
+    }),
+    log: o.l.map(function(a){ return { t:a[0], x:a[1] }; }),
+    dirty: false
+  };
+}
+// Every step this tool can generate, for rebuilding labels on import — a saved case
+// stores ids, not text, so a step missing from here comes back as a bare id in the
+// wrong phase, and that mislabel is then written into the client's Double note.
+// The self-check below fails loudly if a new step is ever added without a seed shape
+// that reaches it; that is exactly how `birthcert` went missing.
+var ALLSTEPS = (function(){
+  var seen = {}, out = [];
+  [{role:'d',pass:'yes',entry:'no',depres:'other',ret:'yes',caa:'yes',signer:'poa',apptype:'renew',age:'10',exc:'1a',ssn:'denied'},
+   {role:'d',pass:'no',depres:'other',ret:'yes',caa:'no',signer:'parent',apptype:'new',age:'8',ssn:'no'},   // reaches birthcert
+   {role:'a',pass:'no',ret:'no',caa:'no',signer:'guardian',apptype:'new',age:'30',exc:'2a',ssn:'school'},
+   {role:'f',pass:'yes',ret:'yes',caa:'no',signer:'mark',apptype:'new',age:'40',ssn:'no'},
+   {role:'f',pass:'no',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'25',ssn:'no'},                   // reaches visacopy without a passport
+   {role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'},
+   {role:'c',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'},
+   {role:'g',grole:'dep',pass:'yes',entry:'no',depres:'cm',odc:'yes',ret:'yes',caa:'yes',signer:'parent',apptype:'new',age:'8',ssn:'no'},
+   {role:'g',grole:'sp',pass:'yes',ret:'yes',caa:'yes',signer:'self',apptype:'new',age:'35',ssn:'no'}
+  ].forEach(function(a){ buildSteps(a).forEach(function(s){ if(!seen[s.id]){ seen[s.id]=1; out.push(s); } }); });
+  return out;
+})();
+// Self-check: sweep the answer space and prove every reachable step id is in ALLSTEPS.
+(function(){
+  var known = {}; ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
+  var missing = {}, V = {
+    apptype:['new','renew'], ssn:['no','denied','school'],
+    role:['a','b','c','d','e','f','g','h'], grole:['dep','sp'],
+    ret:['yes','no'], exc:['1a','2a'], age:['4','8','15','30'],
+    depres:['cm','mil','other'], odc:['yes','no'], pass:['yes','no'], entry:['yes','no'],
+    signer:['self','parent','guardian','poa','mark'], caa:['yes','no'], student:['yes','no']
+  };
+  for (var i = 0; i < 3000; i++){
+    var a = {}, k;
+    for (k in V) a[k] = V[k][i % V[k].length];
+    a.role = V.role[i % 8]; a.pass = V.pass[(i >> 1) % 2]; a.caa = V.caa[(i >> 2) % 2];
+    a.depres = V.depres[(i >> 3) % 3]; a.odc = V.odc[(i >> 2) % 2]; a.age = V.age[(i >> 4) % 4];
+    a.ret = V.ret[(i >> 5) % 2]; a.signer = V.signer[i % 5]; a.entry = V.entry[(i >> 6) % 2];
+    buildSteps(a).forEach(function(s){ if (!known[s.id]) missing[s.id] = 1; });
+  }
+  var m = Object.keys(missing);
+  if (m.length && window.console) console.error('ITIN tool: steps missing from ALLSTEPS — they will lose their labels on re-import: ' + m.join(', '));
+})();
+
+function newCase(ref, steps){
+  return { ref:ref, created:todayISO(), updated:todayISO(), dirty:true,
+           steps: steps.map(function(s){ return {id:s.id, ph:s.ph, t:s.t, d:s.d, done:false, date:'', note:''}; }),
+           log: [{ t:nowStamp(), x:'Case opened.' }] };
+}
+
+/* ------------------------------ rendering ------------------------------ */
+function renderCases(){
+  var list = document.getElementById('caseList'),
+      one  = document.getElementById('caseOne'),
+      imp  = document.getElementById('caseImport');
+  imp.hidden = true;
+  if (openCase){ list.hidden = true; one.hidden = false; renderOne(); return; }
+  list.hidden = false; one.hidden = true;
+
+  var dirty = cases.filter(function(c){ return c.dirty; }).length;
+  var h = '<div class="cbar">'
+    + '<button class="btn cta sm" id="newCase" type="button">New case</button>'
+    + '<button class="btn ghost sm" id="importCase" type="button">Open a case from a Double note</button>'
+    + (dirty ? '<span class="pill-dirty">'+dirty+' case'+(dirty>1?'s':'')+' not yet copied to Double</span>' : '')
+    + '</div>';
+
+  if (!cases.length){
+    h += '<div class="empty"><h3>No cases open</h3>'
+      +  '<p>A case is one client’s ITIN application, tracked from the SSN check to the ITIN letter. Run the <b>Walkthrough</b> first and press <b>“Track this as a case”</b> on the preparation sheet — the case then carries only the steps that actually apply to that applicant.</p>'
+      +  '<p style="font-size:13px">Cases live in this browser. The durable copy is the block you paste into the client’s running case note in Double — that is also how you reopen a case here, or hand it to someone else.</p></div>';
+    list.innerHTML = h; wireList(); return;
+  }
+
+  h += '<div class="clist">';
+  cases.forEach(function(c, i){
+    var p = progress(c);
+    var next = c.steps.filter(function(s){ return !s.done; })[0];
+    h += '<div class="ccard" data-i="'+i+'" role="button" tabindex="0">'
+      +  '<div class="cr"><h4>'+esc(c.ref)+(c.generic?' <span class="pill-dirty">generic</span>':'')+'</h4><span class="cmeta">'+p.done+' / '+p.total+' done'
+      +  (c.dirty ? ' <span class="pill-dirty">not copied</span>' : '')
+      +  (p.pct===100 ? ' <span class="pill-done">complete</span>' : '')+'</span></div>'
+      +  '<div class="bar-wrap"><div class="bar-fill'+(p.pct===100?' done':'')+'" style="width:'+p.pct+'%"></div></div>'
+      +  '<p class="cnext">'+(next ? 'Next: <b>'+esc(next.t)+'</b>' : 'Everything ticked.')+'</p>'
+      +  '<p class="cnext" style="color:var(--muted);font-size:12.5px">Opened '+esc(c.created)+' · last touched '+esc(c.updated)+'</p>'
+      +  '</div>';
+  });
+  h += '</div>';
+  list.innerHTML = h; wireList();
+}
+
+function wireList(){
+  var nb = document.getElementById('newCase'); if (nb) nb.addEventListener('click', promptNewCase);
+  var ib = document.getElementById('importCase'); if (ib) ib.addEventListener('click', showImport);
+  [].forEach.call(document.querySelectorAll('.ccard'), function(el){
+    var go = function(){
+      lastCard = +el.dataset.i;
+      openCase = cases[lastCard]; renderCases();
+      var hd = document.querySelector('#caseOne h2');
+      if (hd){ hd.tabIndex = -1; hd.focus(); }
+      window.scrollTo({top:0,behavior:'smooth'});
+    };
+    el.addEventListener('click', go);
+    el.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
+  });
+}
+
+// A half-answered walkthrough used to pass the old `A.role && A.pass` gate and produce a
+// confident but silently wrong "tailored" list. Only a COMPLETE walkthrough tailors a case;
+// anything else gets the generic checklist, and says so on the card and in the Double note.
+function walkComplete(){
+  return active().every(function(q){
+    return q.free ? q.free.every(function(f){ return A[f[0]]; })
+                  : (A[q.id] !== undefined && A[q.id] !== '');
+  });
+}
+function promptNewCase(){
+  var tailored = walkComplete();
+  if (!tailored && !confirm('The walkthrough has not been completed, so this case will use the GENERIC checklist — not one pruned to a particular applicant.\n\nFor a checklist tailored to this client, cancel, finish the Walkthrough tab and press “Track this as a case” on the preparation sheet.\n\nCreate a generic case anyway?')) return;
+  var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into Double.');
+  if (!ref) return;
+  var steps = tailored ? buildSteps(A)
+                       : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
+  var c = newCase(ref.trim(), steps);
+  c.generic = !tailored;
+  if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
+  cases.unshift(c);
+  saveCases(); openCase = cases[0]; renderCases();
+}
+
+function renderOne(){
+  var c = openCase, p = progress(c), one = document.getElementById('caseOne');
+  var h = '<div class="cbar"><button class="btn ghost sm" id="backCases" type="button">← All cases</button>'
+        + '<button class="btn cta sm" id="copyNote" type="button">Copy the case note for Double</button>'
+        + '<button class="btn ghost sm" id="dlCase" type="button">Download a copy</button>'
+        + '<button class="btn ghost sm danger" id="delCase" type="button">Delete</button>'
+        + (c.dirty ? '<span class="pill-dirty">changes not yet copied</span>' : '')
+        + '</div>';
+  h += '<h2 style="font-family:var(--serif);font-size:26px;color:var(--ink);margin:0 0 4px">'+esc(c.ref)+'</h2>';
+  h += '<p style="color:var(--muted);font-size:13.5px;margin:0 0 6px">Opened '+esc(c.created)+' · last touched '+esc(c.updated)+' · <b>'+p.done+' of '+p.total+'</b> done</p>';
+  h += '<div class="bar-wrap" style="margin-bottom:22px"><div class="bar-fill'+(p.pct===100?' done':'')+'" style="width:'+p.pct+'%"></div></div>';
+
+  PHASES.forEach(function(ph){
+    var steps = c.steps.filter(function(s){ return s.ph === ph[0]; });
+    if (!steps.length) return;
+    var d = steps.filter(function(s){ return s.done; }).length;
+    h += '<div class="phase"><h4><span>'+esc(ph[1])+'</span><span>'+d+'/'+steps.length+'</span></h4>';
+    steps.forEach(function(s){
+      var idx = c.steps.indexOf(s);
+      h += '<div class="step'+(s.done?' on':'')+'">'
+        +  '<input type="checkbox" id="s_'+idx+'" data-step="'+idx+'"'+(s.done?' checked':'')+' aria-label="'+esc(s.t)+'">'
+        +  '<div class="sx"><label class="st" for="s_'+idx+'">'+esc(s.t)+'</label>'
+        +  (s.d ? '<div class="sd">'+esc(s.d)+'</div>' : '')
+        +  (s.done && s.date ? '<span class="sstamp">✓ '+esc(s.date)+'</span>' : '')
+        +  '<input class="snote" type="text" data-note="'+idx+'" value="'+esc(s.note||'')+'" aria-label="Note for: '+esc(s.t)+'" placeholder="Note — e.g. who has it, what is waiting, a date">'
+        +  '</div></div>';
+    });
+    h += '</div>';
+  });
+
+  h += '<div class="logbox"><h4>Case log</h4>';
+  if (!c.log.length) h += '<p style="color:var(--muted);font-size:14px">Nothing logged yet.</p>';
+  c.log.slice().reverse().forEach(function(e){
+    h += '<div class="logentry"><span class="lt">'+esc(e.t)+'</span>'+esc(e.x)+'</div>';
+  });
+  h += '<div class="logadd"><input type="text" id="logText" placeholder="What happened — “passport collected”, “called Austin, still processing”…"><button class="btn ghost sm" id="logAdd" type="button">Add</button></div></div>';
+
+  one.innerHTML = h;
+
+  document.getElementById('backCases').addEventListener('click', function(){
+    openCase = null; renderCases();
+    var card = document.querySelector('.ccard[data-i="'+lastCard+'"]') || document.getElementById('newCase');
+    if (card) card.focus();
+  });
+  document.getElementById('delCase').addEventListener('click', function(){
+    var warn = c.dirty
+      ? 'Delete “'+c.ref+'”?\n\n⚠️ This case has changes that have NOT been copied to Double. Deleting it loses them for good — there is nothing to reopen it from.'
+      : 'Delete “'+c.ref+'” from this browser?\n\nYou last copied it to Double, so you can reopen it from that note.';
+    if (!confirm(warn)) return;
+    cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+  });
+  document.getElementById('copyNote').addEventListener('click', function(){ showNote(c); });
+  document.getElementById('dlCase').addEventListener('click', function(){ downloadCase(c); });
+  document.getElementById('logAdd').addEventListener('click', function(){
+    var v = document.getElementById('logText').value.trim(); if (!v) return;
+    c.log.push({ t: nowStamp(), x: v }); touch(c); renderOne();
+  });
+  document.getElementById('logText').addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ e.preventDefault(); document.getElementById('logAdd').click(); }
+  });
+}
+function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); if (!quiet) paintBadge(); }
+
+/* #caseOne survives every render, so binding here once is the only safe place. Binding
+   inside renderOne() stacked a new pair of listeners on every redraw, each closing over
+   whichever case was open at the time — so ticking one client's step also ticked a
+   previously-opened client's, and log entries doubled with every render. Resolve the
+   case from openCase at event time instead of capturing it. */
+(function bindCaseEditingOnce(){
+  var one = document.getElementById('caseOne');
+  one.addEventListener('change', function(e){
+    var c = openCase, t = e.target;
+    if (!c || t.dataset.step === undefined) return;
+    var s = c.steps[+t.dataset.step];
+    if (!s) return;
+    s.done = t.checked; s.date = t.checked ? todayISO() : '';
+    c.log.push({ t: nowStamp(), x: (t.checked ? '✓ ' : '↺ ') + s.t });
+    touch(c); renderOne();
+  });
+  one.addEventListener('input', function(e){
+    var c = openCase, t = e.target;
+    if (!c || t.dataset.note === undefined) return;
+    var s = c.steps[+t.dataset.note];
+    if (s){ s.note = t.value; touch(c, true); }
+  });
+})();
+
+/* ---------------------- the Double note (the durable copy) --------------- */
+function caseNoteText(c){
+  var p = progress(c), out = [];
+  out.push('ITIN APPLICATION — ' + c.ref);
+  out.push('Status: ' + p.done + ' of ' + p.total + ' steps done (' + p.pct + '%) · opened ' + c.created + ' · updated ' + c.updated);
+  if (c.generic) out.push('NOTE: generic checklist — not pruned to this applicant. Re-run the walkthrough for a tailored one.');
+  out.push('');
+  PHASES.forEach(function(ph){
+    var steps = c.steps.filter(function(s){ return s.ph === ph[0]; });
+    if (!steps.length) return;
+    out.push(ph[1].toUpperCase());
+    steps.forEach(function(s){
+      out.push('  [' + (s.done ? 'x' : ' ') + '] ' + s.t + (s.done && s.date ? '  (' + s.date + ')' : '') + (s.note ? '  — ' + s.note : ''));
+    });
+    out.push('');
+  });
+  var pend = c.steps.filter(function(s){ return !s.done; });
+  out.push('NEXT: ' + (pend.length ? pend[0].t : 'nothing outstanding.'));
+  if (c.log.length){
+    out.push('');
+    out.push('LOG');
+    c.log.slice(-12).forEach(function(e){ out.push('  ' + e.t + ' — ' + e.x); });
+  }
+  out.push('');
+  out.push('--- do not edit below: this is what lets the walkthrough reopen the case ---');
+  out.push(encodeCase(c));
+  return out.join('\n');
+}
+function showNote(c){
+  var txt = caseNoteText(c), one = document.getElementById('caseOne');
+  var over = txt.length > NOTE_LIMIT;
+  var box = document.createElement('div');
+  box.className = 'logbox'; box.style.marginTop = '18px';
+  box.innerHTML = '<h4>Paste this into the client’s running case note in Double</h4>'
+    + '<p style="font-size:13.5px;color:var(--muted);margin:0 0 10px">Replace the note’s contents — one note per case, rewritten in place, never a second note. The block at the bottom is what lets you reopen this case here or hand it to someone else.</p>'
+    + '<textarea class="paste" id="noteOut" readonly rows="12"></textarea>'
+    + '<div class="meter'+(over?' err':(txt.length>NOTE_LIMIT*0.8?' warn':''))+'" id="meter">'
+    + txt.length.toLocaleString() + ' characters — Double blocks a note body around 8,000 and returns an error rather than trimming it.'
+    + (over ? ' <b>Too long: trim the older log entries before pasting.</b>' : '') + '</div>'
+    + '<div class="cbar" style="margin-top:12px"><button class="btn cta sm" id="doCopy" type="button">Copy to clipboard</button>'
+    + '<button class="btn ghost sm" id="didPaste" type="button" hidden>I have pasted it into Double</button>'
+    + (over ? '<button class="btn ghost sm" id="trimLog" type="button">Trim the log to the last 12</button>' : '')
+    + '<span class="note-inline" id="copyMsg" role="status" aria-live="polite"></span></div>';
+  var old = document.getElementById('noteBox'); if (old) old.remove();
+  box.id = 'noteBox'; one.appendChild(box);
+  document.getElementById('noteOut').value = txt;
+  document.getElementById('doCopy').addEventListener('click', function(){
+    var ta = document.getElementById('noteOut');
+    ta.select(); ta.setSelectionRange(0, txt.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e){}
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ marked(); }, function(){ if(!ok) msg('Select the text above and copy it manually.'); });
+    } else if (ok){ marked(); } else { msg('Select the text above and copy it manually.'); }
+    // Do NOT re-render here: a full redraw would destroy the very block the user is
+    // about to paste from, and they may want to copy it again. Update state in place.
+    // Copying is not pasting. Clearing the flag here would tell a user who copied,
+    // got distracted and never pasted that their case is safe — the exact failure the
+    // warning exists to prevent. They confirm the paste themselves.
+    function marked(){
+      msg('Copied. Now paste it into the client’s case note in Double.');
+      var btn = document.getElementById('didPaste');
+      if (btn) btn.hidden = false;
+    }
+    function msg(m){ var el = document.getElementById('copyMsg'); if (el) el.textContent = m; }
+  });
+  var dp = document.getElementById('didPaste');
+  if (dp) dp.addEventListener('click', function(){
+    c.dirty = false; saveCases(); paintBadge();
+    [].forEach.call(document.querySelectorAll('#caseOne .pill-dirty'), function(el){ el.remove(); });
+    dp.hidden = true;
+    document.getElementById('copyMsg').textContent = 'Marked as saved to Double.';
+  });
+  var tl = document.getElementById('trimLog');
+  if (tl) tl.addEventListener('click', function(){
+    if (!confirm('Drop all but the last 12 log entries?\n\nThe checklist, its dates and the per-step notes are untouched — only the log history is shortened, so the note fits Double.')) return;
+    var dropped = Math.max(0, c.log.length - 12);
+    c.log = c.log.slice(-12);
+    c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+    touch(c); renderOne(); showNote(c);
+  });
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+// A download works when the page is opened as a real file; inside a published
+// viewer the sandbox makes it inert, which is why the clipboard route is primary.
+function downloadCase(c){
+  try{
+    var blob = new Blob([caseNoteText(c)], {type:'text/plain'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }catch(e){ alert('This viewer blocks downloads. Use “Copy the case note for Double” instead.'); }
+}
+
+function showImport(){
+  var imp = document.getElementById('caseImport');
+  document.getElementById('caseList').hidden = true;
+  imp.hidden = false;
+  imp.innerHTML = '<div class="cbar"><button class="btn ghost sm" id="impBack" type="button">← All cases</button></div>'
+    + '<div class="logbox"><h4>Open a case from a Double note</h4>'
+    + '<p style="font-size:14px;color:var(--muted);margin:0 0 10px">Copy the client’s ITIN case note out of Double and paste the whole thing here — the tool reads the code at the bottom. This is also how you pick up a case someone else started.</p>'
+    + '<textarea class="paste" id="impText" placeholder="Paste the whole case note here…"></textarea>'
+    + '<div class="cbar" style="margin-top:12px"><button class="btn cta sm" id="impGo" type="button">Open the case</button><span class="note-inline" id="impMsg"></span></div></div>';
+  document.getElementById('impBack').addEventListener('click', function(){ imp.hidden=true; renderCases(); });
+  document.getElementById('impGo').addEventListener('click', function(){
+    var raw = document.getElementById('impText').value, msg = document.getElementById('impMsg');
+    if (!raw.trim()){ msg.textContent = 'Nothing pasted.'; return; }
+    var c;
+    try { c = decodeCase(raw); } catch(e){ msg.textContent = 'That code could not be read — paste the whole note, including the line at the very bottom.'; return; }
+    if (!c){ msg.textContent = 'No case code found. Make sure you copied the whole note, including the last line.'; return; }
+    var existing = cases.filter(function(x){ return x.ref === c.ref; })[0];
+    if (existing && !confirm('“'+c.ref+'” is already open in this browser. Replace it with the pasted version?')) return;
+    if (existing) cases.splice(cases.indexOf(existing), 1);
+    cases.unshift(c); saveCases();
+    imp.hidden = true; openCase = cases[0]; renderCases();
+  });
 }
 
 /* ------------------------------- reference ------------------------------ */
@@ -765,15 +1357,30 @@ document.getElementById('themeBtn').addEventListener('click', function(){
     || (!r.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
   r.setAttribute('data-theme', dark ? 'light' : 'dark');
 });
+var TABS = [['tabWalk','walk'],['tabRef','ref'],['tabCase','cases']];
 function switchTab(which){
-  var w = which === 'walk';
-  document.getElementById('tabWalk').setAttribute('aria-selected', w);
-  document.getElementById('tabRef').setAttribute('aria-selected', !w);
-  document.getElementById('walk').hidden = !w;
-  document.getElementById('ref').hidden = w;
+  TABS.forEach(function(t){
+    var on = t[1] === which;
+    document.getElementById(t[0]).setAttribute('aria-selected', on ? 'true' : 'false');
+    document.getElementById(t[0]).tabIndex = on ? 0 : -1;
+    document.getElementById(t[1]).hidden = !on;
+  });
+  if (which === 'cases') renderCases();
 }
-document.getElementById('tabWalk').addEventListener('click', function(){ switchTab('walk'); });
-document.getElementById('tabRef').addEventListener('click', function(){ switchTab('ref'); });
+TABS.forEach(function(t, i){
+  var el = document.getElementById(t[0]);
+  el.addEventListener('click', function(){ switchTab(t[1]); });
+  // ARIA tabs pattern: arrow keys move between tabs
+  el.addEventListener('keydown', function(e){
+    var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!d) return;
+    e.preventDefault();
+    var n = TABS[(i + d + TABS.length) % TABS.length];
+    switchTab(n[1]); document.getElementById(n[0]).focus();
+  });
+});
 
+loadCases();
+paintBadge();
 renderQuestions();
 </script>
