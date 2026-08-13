@@ -188,52 +188,56 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 ## The follow-up — drafted 2026-08-13, ⚠️ NOT SENT
 
 Lilian's to send or change. It goes on **the same thread** (*"Checking in before our 8/18 wrap-up"*),
-Julia and Maria in copy, as every previous message on this has. It deliberately **does not argue about
-note length** — it concedes their point and moves the question to the infrastructure — and it carries
-the call-date question that has been open since 2026-08-06.
+Julia and Maria in copy, as every previous message on this has.
+
+**Written for Allison, who is not an engineer.** Lilian's instruction, 2026-08-13: *"más escueta y
+mejor explicada… para que Allison no se atormente con tanta cosa técnica."* An earlier draft led with
+a three-row results table and named the AWS WAF rule in the body; it was accurate and it was the wrong
+document for its reader. The rewrite keeps **every** fact and moves the jargon to a short block at the
+end that she can forward without reading. Three rules if you edit it again:
+
+1. **Concede the note question in the second paragraph.** Arguing about note length is what got this
+   closed as "out of scope" the first time.
+2. **The evidence goes in plain sentences, not a table.** *A short version of the same question works;
+   the long one does not; the same long text goes through to another system* — that is the whole proof,
+   and it survives being said in words.
+3. **Quarantine the technical detail at the bottom**, addressed to whoever she forwards it to. Allison
+   forwards technical issues (she looped in `help@doublehq.com` on 2026-05-20, which became dev ticket
+   #102495635), so the forwarded fragment has to stand alone — but it must not be what she has to wade
+   through first.
 
 > Hi Allison,
 >
-> Thank you for chasing this down — and that is great news on the deadline feature request, thank you
-> for pushing it with the dev team.
+> Thank you for chasing this down — and that is great news about the deadline feature request.
 >
-> On the notes, I think the answer came back to a slightly different question. Your team is right that
-> Double has no note-length limit — but what is failing is not a note. We ran a **read-only** call,
-> `list_clients`, with a long search filter: it creates nothing, and there is no note anywhere in it.
-> It comes back with the same error:
+> On the notes, I think the question reached the wrong team. Your team is right that Double has no
+> limit on note length. But what is being blocked is not a note.
 >
-> ```
-> MCP server returned 403 Forbidden — the request may have been blocked by a firewall or
-> security service
-> error_code: mcp_request_blocked
-> ```
+> We tested it. We asked Double a simple *question* — "list the clients whose name matches this" —
+> using a very long search text. That saves nothing, and there is no note in it anywhere. It was
+> blocked too, with the same error. The very same question with a short search text works fine.
 >
-> Three calls, same account, same minute:
+> So it is not about notes. It is about the size of anything we send. And it does not look like Claude
+> either: we sent that identical long text to another system we use, from the same account, a minute
+> apart, and it went through with no problem.
 >
-> | Call | Server | Request size | Result |
-> |---|---|---|---|
-> | `list_clients` (read-only) | Double | ~48 characters | works |
-> | `list_clients` (read-only) | Double | ~9,000 characters | **403 Forbidden** |
-> | a read-only call on another MCP integration we use | not Double | the same ~9,000-character string | works |
+> It seems that something sitting in front of Double — a firewall or similar — is refusing our request
+> before it ever reaches Double itself. That would explain both things being true at once: your team
+> finds no limit in the product, and we are still blocked.
 >
-> Rows 1 and 2 are the same tool and the same parameter — only the size changed. And row 3 is why we
-> don't think this is Claude's API: the identical string went through to a different server seconds
-> apart, from the same account.
+> Could you ask the team that looks after Double's servers, rather than the product team, to check the
+> size limit on incoming requests? We think that is where it is.
 >
-> So it looks like the request is being refused **before it reaches Double's application** — by a
-> firewall, CDN or load balancer in front of your MCP endpoint. That would let both things be true at
-> once: no limit in the product, and the request still blocked.
+> **If it helps whoever looks at it:**
 >
-> One specific thing that may help them: the cut-off falls right at **8 KB (8,192 bytes)**, which is
-> the default request-body inspection limit in the standard managed WAF rule sets — in AWS WAF it is
-> the `SizeRestrictions_BODY` rule. If that is what it is, it is a configuration change on your side
-> rather than a product change.
+> - The error is `403 Forbidden`, `mcp_request_blocked`, on the MCP endpoint.
+> - Anything we send above roughly 8 KB is refused; below that it works. 8 KB (8,192 bytes) happens to
+>   be the default request-size limit in the standard firewall rule sets, so it may be nothing more
+>   than that setting.
+> - Happy to send a test request of the exact failing size if that helps them trace it.
 >
-> Could you pass this to whoever manages the infrastructure in front of the MCP endpoint and ask them
-> to check the request-body size rule? We are happy to run any test payload that helps them trace it.
->
-> One more thing — could you confirm the date of our wrap-up call? Your message says August 17th and
-> the subject line says 8/18, and we don't have an invite for either.
+> One more thing — is our wrap-up call on August 17th or 18th? Your message says one and the subject
+> line says the other, and we do not have an invite for either.
 >
 > Thank you so much!
 >
@@ -241,4 +245,5 @@ the call-date question that has been open since 2026-08-06.
 
 **If it is still unresolved after the wrap-up call**, the implementation window has closed and this
 goes to `help@doublehq.com` as a support ticket — restore the firm introduction from git history, and
-lead with the three-row table rather than the story.
+there the three-row table at the top of this file *is* the right opening, because the reader is the
+engineer rather than Allison.
