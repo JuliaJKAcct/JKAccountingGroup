@@ -67,14 +67,14 @@ holds is in Julia's Drive and Gmail.
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** **It did — and the account is CLOSED.** Confirmed closed by the FDOR on **2025-10-30**
+- **Applies?** **Yes — it did, and the account is now CLOSED.** Confirmed closed by the FDOR on **2025-10-30**
 - **Jurisdiction(s):** Florida
 - **Agency & portal:** Florida Department of Revenue
 - **Our role:** the firm dealt with the FDOR directly
 - **Current status:** ✅ **Closed**
 
-### Payroll / reemployment tax
-- **Applies?** **It did** — and unlike the sales-tax account, **closing it took three attempts over four months**
+### Payroll
+- **Applies?** **Yes — it did**, for the **reemployment-tax** account, and unlike the sales-tax account **closing it took three attempts over four months**
 - **Our role:** the firm requested and chased the closure
 - **Current status:** 🟡 **Requested again 2026-01-26, confirmation letter promised — no source records the outcome** (§5)
 - **Process notes (→ future SOP):**
@@ -83,7 +83,7 @@ holds is in Julia's Drive and Gmail.
   - **A closure request that is not working can be re-sent by email** to the FDOR's taxpayer-services contact address (in the Drive record) rather than only by phone.
 
 ### Bookkeeping & monthly close
-- **Applies?** **It did** — this was a bookkeeping client _(Lilian, 2026-08-12)_
+- **Applies?** **Yes — it did.** This was a bookkeeping client _(Lilian, 2026-08-12)_
 - **Cadence:** _(pending)_
 
 ### Income tax

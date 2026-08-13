@@ -154,6 +154,9 @@ was said). Better a sourced, low-confidence note than nothing.
 | Artur Tseretsian | 752202 |
 | Ihor Naum & Olha Levchuk | 710637 |
 | Denys Melnyk | 764785 |
+| VOICECAPITAL INC | 710725 |
+| VOXAGO LLC | 710606 |
+| YMI TRUCKING LLC | 710608 |
 | ZETECH LLC | 706710 |
 | OPTIC GOLD INC | 706702 |
 | ONETWO STRATEGIES INC | 706701 |
@@ -187,6 +190,8 @@ README row but are deliberately **not** in the scope table above:
 
 | Client | Double id | Why it still has a file |
 |---|---|---|
+| MAYS EXPRESS SERVICE LLC | 710582 | **Former** — business closed 2025-12-31. Kept because the FDOR refused to close its sales-tax and reemployment-tax accounts (Dec 2025 payroll/sales tax unsubmitted) and **nothing records it resolving** — case note 491838 |
+| MEGABAI | *(none)* | **Former** — company closed and **was never migrated to Double**, so there is no client to sweep and no note to keep. The file is the firm's only record of it _(Lilian, 2026-08-12)_ |
 | Tsminibears LLC | 706709 | Archived 2026-06-08, but an **open Florida reemployment-tax penalty matter** and a firm-wide Gusto lesson are recorded in it |
 
 ## Schedule
@@ -270,6 +275,9 @@ CLIENTS (name -> Double id):
 - Artur Tseretsian -> 752202
 - Ihor Naum & Olha Levchuk -> 710637
 - Denys Melnyk -> 764785
+- VOICECAPITAL INC -> 710725
+- VOXAGO LLC -> 710606
+- YMI TRUCKING LLC -> 710608
 - ZETECH LLC -> 706710
 - OPTIC GOLD INC -> 706702
 - ONETWO STRATEGIES INC -> 706701

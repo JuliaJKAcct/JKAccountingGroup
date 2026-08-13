@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** VOICECAPITAL INC
-- **Entity type:** **Corporation (Inc).** ⚠️ **The firm files it as an S-corp (1120-S), but the IRS does not treat it as one** — see §5. As of **2026-03-16** the IRS classified it as a **C-corp**, because it has no Form 2553 on record.
+- **Entity type:** Corporation (Inc) — federal tax classification **under review** (S-corp vs C-corp). ⚠️ The firm files an **1120-S**; the IRS has **no Form 2553** on record and treated the company as a **C-corp** as of **2026-03-16** (§5).
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending)_

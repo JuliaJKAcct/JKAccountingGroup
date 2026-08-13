@@ -31,7 +31,7 @@
 - **Home state:** **Florida** (Broward / Fort Lauderdale area) _(Gmail — high confidence)_
 - **Industry / what they do:** **Interior design studio** (commercial + residential; the owner holds IIDA · ASID · CPTED credentials). Work runs as numbered design **projects**, some for commercial / government REIT clients. _(Gmail)_
 - **Primary language:** **English** (all business correspondence). _(Gmail)_
-- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; **sales tax (quarterly, FL DOR)**; **payroll via Gusto (automatic)**; **1099 preparation**; annual-report filing. The firm also prepares the **owner's personal return** (a linked individual client in Double). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
+- **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (the firm files Form 1120-S — but see §1, the IRS does not accept that classification)**; **sales tax (quarterly, FL DOR)**; **payroll via Gusto (automatic)**; **1099 preparation**; annual-report filing. The firm also prepares the **owner's personal return** (a linked individual client in Double). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
 
@@ -46,7 +46,7 @@ the actual details.
 | Owner / primary contact | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
-- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on either` — note **491846**
+- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on any` — note **491846**
 
 ## 3. Systems & access
 
@@ -72,8 +72,14 @@ the actual details.
 - **Applies?** Yes — **quarterly** _(Double)_
 
 ### Income tax
-- **Applies?** Yes — **Form 1120-S** (S-corporation) _(Double)_
+- **Applies?** Yes — the firm files **Form 1120-S** _(Double)_. ⚠️ **The IRS does not accept that classification** — no Form 2553 on file, confirmed 2025-12-23 (§5). Until that is settled the return type is **contested, not established**.
 - **Our role:** We prepare income tax _(Double)_; **1099 preparation** included.
+- **Process notes (→ future SOP) — what the IRS said while the EIN matter ran:**
+  - ⚠️ **The IRS will NOT confirm an EIN cancellation in writing while it is in progress.** Lilian pressed for a letter or an email and was told the only letter they ever send is one confirming the number is **already** cancelled. The stated window is **up to 30 calendar days**, after which the only option is to call. **So no news here genuinely means no news.**
+  - ⚠️ **The IRS agent on 2025-12-23 refused to reissue transcripts older than five years**, saying the system will not produce one for a return filed more than five years ago. Transcripts for **2021 and 2022** were sent on the old EIN and the earlier ones were not. _(One agent's statement on one call — recorded as said, not verified as a standing rule.)_ For anything before 2021 on this company, the firm's own copies are the only source.
+- **Process notes (→ future SOP) — what the IRS said while the EIN matter ran:**
+  - ⚠️ **The IRS will not confirm an EIN cancellation in writing while it is in progress.** Lilian pressed for a letter or email and was told the only letter they ever send is one confirming the number is **already** cancelled. Stated window: **up to 30 calendar days**, then call. **So no news genuinely means no news.**
+  - ⚠️ **The agent on 2025-12-23 refused to reissue transcripts older than five years**, saying the system will not produce one for a return filed more than five years ago — transcripts for **2021 and 2022** came, the earlier ones did not. _(One agent on one call; recorded as said, not verified as a standing rule.)_
 - **Organizer status:** Completed _(Double client property, checked 2026-08-01)_.
 
 ### Licenses & other filings
@@ -82,9 +88,7 @@ the actual details.
 ## 5. Key facts & quirks
 
 - 🔴 **NO FORM 2553 EXISTS ON ANY OF THIS COMPANY'S EINs — THE IRS TREATS IT AS A C-CORP WHILE THE FIRM FILES AN 1120-S.** Confirmed by the IRS on **2025-12-23**. Nothing in any source the firm can reach records this being fixed. **This is the first thing to settle on this client**, and it decides whether the 1120-S filings are valid at all.
-- 🔴 **THE COMPANY HAS TWO ACTIVE EINs, AND THE IRS FILED RETURNS UNDER BOTH.** `99-2753726` carries the Form 1120 for **2023 and 2024**; `46-2647838` carries Form 1120 filings running from **April 2013 to 2022**. A third, `50-0247307`, is **not active and does not appear in IRS records at all**. The firm chose to **keep `99-2753726` and cancel `46-2647838`**; the cancellation was requested on **2026-01-14** and, per the IRS, they will **merge the information from both numbers into the one kept** so nothing is lost.
-- ⚠️ **The IRS will NOT confirm an EIN cancellation in writing while it is in progress.** Lilian pressed for a letter or an email and was told the only letter they ever send is one confirming the number is **already** cancelled. The stated window is **up to 30 calendar days**, after which the only option is to call. **So no news here genuinely means no news.**
-- ⚠️ **Transcripts older than five years cannot be reissued.** The IRS sent transcripts for **2021 and 2022** on the old EIN and refused the earlier ones — the system will not produce a transcript for a return filed more than five years ago. For anything before 2021 on this company, the firm's own copies are the only source.
+- 🔴 **THE COMPANY HAS TWO ACTIVE EINs, AND THE IRS FILED RETURNS UNDER BOTH.** `99-2753726` carries the Form 1120 for **2023 and 2024**; `46-2647838` carries Form 1120 filings running from **April 2013 to 2022**. ⚠️ **The notes say "Form 1120", which sits oddly against the firm filing 1120-S for those same years** — either the note is using "1120" loosely for the series, or the IRS genuinely has C-corp returns posted, which would be a much larger finding. **Reconcile against an IRS transcript before relying on either reading.** A third, `50-0247307`, is **not active and does not appear in IRS records at all**. The firm chose to **keep `99-2753726` and cancel `46-2647838`**; the cancellation was requested on **2026-01-14** and, per the IRS, they will **merge the information from both numbers into the one kept** so nothing is lost.
 - **Two-basis reporting (Double "Reporting & Tax Basis" note, confirmed 2026-07-20):** client-facing statements are on the **accrual** basis (so the owner sees A/R, A/P and customer deposits), but the **tax return is filed on the cash** basis — the studio invoices heavily and collects slowly, so accrual shows true monthly performance while cash defers tax on invoices not yet collected.
 - **Project-based / work-in-progress:** deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. Owner supplies monthly receipts / CC statements + per-project descriptions.
 - Pays **subcontractors** (e.g. structural engineers) and collects W-9s → drives the 1099 work.
@@ -123,7 +127,7 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
-- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on either` — note **491846**
+- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on any` — note **491846**
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1syx1fHdE1tCE0BFFsSgmPxT_QhHRdG-1)
 - **Recurring-expense watchlist (Drive):** [watchlist doc](https://docs.google.com/document/d/1zJ974hLR2p1pl1zIJT1R2WY4SwWLrX6iDguMHm4CGps/edit) — non-sensitive vendor list, no dollar figures repeated here
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

@@ -47,7 +47,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Previous accountant | Contacted by Julia in March 2026 (§6) — details _(pending)_ |
 
 - **Double client:** [app.doublehq.com/close?cid=710608](https://app.doublehq.com/close?cid=710608)
-- **Double case note:** `CASE · IRS — the 7004 nobody filed, and the Texas address` — note **491842**
+- **Double case note:** `CASE · IRS — the unexplained 2025 Form 7004, and the Texas address` — note **491842**
 
 ## 3. Systems & access
 
@@ -72,7 +72,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Return type(s) & deadlines:** **1120-S**
 - **Our role:** the firm prepares and files
 - **Process notes (→ future SOP):**
-  - ✅ **The 2025 extension IS on file** — the IRS confirmed receiving a **Form 7004 electronically on 2026-03-14**. ⚠️ **But nobody at the firm filed it and the previous accountant says they did not either** (§5). Treat the extension as valid — the IRS has it — while treating **who filed it** as unresolved.
+  - ✅ **The IRS confirms RECEIVING a Form 7004 for 2025, electronically, on 2026-03-14** — so the extension is on their system. ⚠️ **Acceptance was only assured verbally**; no written confirmation was ever obtained (§6). ⚠️ **But nobody at the firm filed it and the previous accountant says they did not either** (§5). Treat the extension as valid — the IRS has it — while treating **who filed it** as unresolved.
   - **The IRS could not issue a confirmation while the 7004 was still processing.** The agent's assurance was verbal. If written proof is ever needed, it has to be requested later.
 
 ### Licenses & other filings
@@ -90,7 +90,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 🔴 **THE IRS HAS A TEXAS ADDRESS FOR A COMPANY THAT OPERATES IN INDIANA.** Found on **2026-03-16** — not from the client, but from a **bank statement in Julia's Drive**. Julia's account is that the company is **still in Indiana** and has taken a **new mailing address in Texas**. **So the two facts may both be true and the IRS record may even be current** — nobody established which. **Settle it before assuming an IRS letter went astray**, and settle it before filing anything with an address on it.
 - 🔴 **SOMEBODY FILED A FORM 7004 FOR 2025 AND THE FIRM DOES NOT KNOW WHO.** ATX rejected the firm's own 7004 saying one had already been filed; **Julia checked with the previous accountant and it was not them**; the **IRS confirmed receiving one electronically on 2026-03-14**. An unexplained electronic filing against a company's EIN is worth understanding — it is either an unknown third party with the company's details, or something the client did without telling us.
-- **The extension itself is not at risk.** Whoever filed it, the IRS has it, so 2025 is extended. The open question is provenance, not validity.
+- **The extension is very probably safe, but only verbally so.** Whoever filed it, the IRS confirms holding it — though the agent could issue nothing in writing while it processed, so **received is documented and accepted is not**. The open question is provenance; the unclosed loop is the written proof.
 - **No written confirmation of the extension exists.** The IRS would not issue one while it was processing, and none was chased afterwards.
 
 ## 6. History & open questions
@@ -124,7 +124,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710608](https://app.doublehq.com/close?cid=710608)
-- **Double case note:** `CASE · IRS — the 7004 nobody filed, and the Texas address` — note **491842**
+- **Double case note:** `CASE · IRS — the unexplained 2025 Form 7004, and the Texas address` — note **491842**
 - **Migrated TaxDome notes (Drive):** `4. Documents > YMI Trucking LLC > 1. Notes`. Not yet read (the backfill's Phase 2 is gated — see [`taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md)).
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_
