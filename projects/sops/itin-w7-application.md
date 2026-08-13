@@ -545,6 +545,12 @@ survives the session, the laptop, and the person.
    *generic* so nobody mistakes it for a tailored one.
 2. Tick items as they happen. Each tick date-stamps itself; add a note on any
    step ("client emailed 13 Aug, waiting") and log events as they occur.
+   **Paste the client's Double page link into "This client in Double"** while you
+   are there — the case then carries an **Open in Double ↗** button, and the link
+   travels inside the case note, so whoever picks the case up next lands on the
+   right client instead of searching for them. Only `https://` links on
+   **`doublehq.com`** are turned into a button; anything else is kept as text and
+   flagged, so a mistyped link is visible rather than silently dropped.
 3. **At the end of a working session, press "Copy the case note for Double"** and
    paste it into the client's case note — then press **"I have pasted it into
    Double"**. Until you do, the case keeps showing *"changes not yet copied"*.
