@@ -184,9 +184,43 @@ textarea.paste{width:100%;min-height:130px;padding:11px 13px;border:1px solid va
 .btn.sm{padding:8px 14px;font-size:13.5px}
 .btn.danger{background:transparent;color:var(--err);border-color:var(--err)}
 
+/* ---- in-page dialogs ----
+   These replace window.prompt / confirm / alert, which a sandboxed viewer
+   silently ignores (see askText, below). A native <dialog> opened with
+   showModal() renders in the browser's top layer, so it needs no z-index and
+   cannot be clipped by an ancestor's overflow. */
+/* The Hub embeds this tool in an iframe ~82vh tall, so 100vh here is already
+   short. Cap the panel and let the prose scroll, so the buttons are always
+   reachable rather than pushed off the bottom edge. */
+.dlg{border:1px solid var(--line-2);border-radius:14px;background:var(--surface);color:var(--body);
+     padding:0;max-width:min(520px,calc(100vw - 32px));width:100%;
+     max-height:calc(100vh - 32px);display:flex;flex-direction:column;overflow:hidden;
+     box-shadow:0 18px 48px rgba(13,42,49,.22),0 2px 8px rgba(13,42,49,.10)}
+.dlg form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.dlg .dx{overflow-y:auto;min-height:0}
+.dlg::backdrop{background:rgba(13,42,49,.46)}
+:root[data-theme="dark"] .dlg{box-shadow:0 18px 48px rgba(0,0,0,.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dlg{box-shadow:0 18px 48px rgba(0,0,0,.55)}}
+.dlg .dx{padding:24px 24px 20px}
+.dlg h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin:0 0 8px;line-height:1.25;letter-spacing:-.01em}
+.dlg p{font-size:14.5px;margin:0 0 10px;max-width:58ch}
+.dlg p:last-of-type{margin-bottom:0}
+.dlg label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.dlg input[type=text]{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;border-radius:9px;
+     border:1px solid var(--line-2);background:var(--card);color:var(--body)}
+.dlg input[type=text]:focus-visible{outline:2px solid var(--teal-600);outline-offset:1px;border-color:var(--teal-600)}
+.dlg input[type=text]::placeholder{color:var(--muted);opacity:1}
+.dlg .dbtns{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;
+     padding:16px 24px;border-top:1px solid var(--line);background:var(--card);border-radius:0 0 13px 13px}
+.dlg .derr{color:var(--err);font-size:13.5px;margin:8px 0 0;min-height:0}
+.dlg[open]{animation:dlgIn .22s var(--ease)}
+.dlg[open]::backdrop{animation:dlgFade .22s var(--ease)}
+@keyframes dlgIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes dlgFade{from{opacity:0}to{opacity:1}}
+
 @media print{
   body{background:#fff;color:#000;font-size:10.5pt}
-  .top,.tabs,.act,.tbtns,#questions,#ref,.noprint{display:none!important}
+  .top,.tabs,.act,.tbtns,#questions,#ref,.noprint,.dlg{display:none!important}
   #walk,#out{display:block!important}
   .wrap{padding:0;max-width:none}
   .blk{border:.5pt solid #999;background:#fff;break-inside:avoid;margin-bottom:9pt;padding:9pt 11pt}
@@ -460,6 +494,105 @@ var Q = [
 // through to the 18-and-over residency list. Treat anything outside 0-120 as unknown.
 function num(v){ var n = parseInt(v, 10); return (isNaN(n) || n < 0 || n > 120) ? -1 : n; }
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+/* ======================================================================
+   DIALOGS — why this exists instead of prompt() / confirm() / alert()
+
+   The team reaches this tool through the published Knowledge Hub, and a
+   published page runs inside a SANDBOXED iframe. A sandbox without the
+   `allow-modals` keyword makes window.prompt / confirm / alert INERT:
+   the browser logs "Ignored call to 'prompt()'. The document is sandboxed,
+   and the 'allow-modals' keyword is not set.", returns null (prompt) or
+   false (confirm), and carries on. Every caller here reads that as "the
+   user cancelled", so the button appears to do nothing at all — no error,
+   no dialog, no clue. That is exactly how "Track this as a case" died.
+   A nested iframe can never re-grant a permission its parent lacks, so
+   this cannot be fixed from the Hub's side; the tool must not call them.
+
+   A native <dialog> opened with showModal() is NOT covered by that
+   sandbox flag. It also renders in the top layer (no z-index, never
+   clipped), traps focus, and closes on Esc for free.
+
+   All three return a Promise so callers read in the same order they did
+   with the blocking originals. Kept in .then() style to match the file.
+   ====================================================================== */
+var dlgHost = null;
+function closeDlg(d, restore){
+  if (d.open) d.close();
+  d.remove();
+  if (restore && restore.focus) { try { restore.focus(); } catch(_){} }
+}
+// opts: {title, body (HTML), ok, cancel, danger, input:{label, placeholder, value}}
+// Resolves to the typed string (input dialogs), true/false (confirm), or null on cancel.
+function openDlg(opts){
+  return new Promise(function(resolve){
+    var restore = document.activeElement;
+    var d = document.createElement('dialog');
+    d.className = 'dlg';
+    var wantsInput = !!opts.input;
+    d.innerHTML = '<form method="dialog"><div class="dx">'
+      + '<h3>' + esc(opts.title) + '</h3>'
+      + (opts.body || '')
+      + (wantsInput
+          ? '<label for="dlgIn">' + esc(opts.input.label) + '</label>'
+            + '<input type="text" id="dlgIn" autocomplete="off" placeholder="'
+            + esc(opts.input.placeholder || '') + '" value="' + esc(opts.input.value || '') + '">'
+            + '<p class="derr" id="dlgErr" role="alert"></p>'
+          : '')
+      + '</div><div class="dbtns">'
+      + '<button type="button" class="btn ghost sm" data-act="cancel">' + esc(opts.cancel || 'Cancel') + '</button>'
+      + '<button type="button" class="btn ' + (opts.danger ? 'ghost sm danger' : 'cta sm') + '" data-act="ok">'
+      + esc(opts.ok || 'OK') + '</button>'
+      + '</div></form>';
+    document.body.appendChild(d);
+    dlgHost = d;
+
+    var input = d.querySelector('#dlgIn'), errEl = d.querySelector('#dlgErr'), settled = false;
+    function done(v){ if (settled) return; settled = true; closeDlg(d, restore); resolve(v); }
+    function accept(){
+      if (!wantsInput) return done(true);
+      var v = input.value.trim();
+      // An empty reference used to be indistinguishable from a cancel. Say so instead.
+      if (!v){ errEl.textContent = 'Type a reference first — a name, or a code.'; input.focus(); return; }
+      done(v);
+    }
+    d.querySelector('[data-act="ok"]').addEventListener('click', accept);
+    d.querySelector('[data-act="cancel"]').addEventListener('click', function(){ done(wantsInput ? null : false); });
+    // Esc fires `cancel`, and <dialog> also emits `close` — settle once, as a cancel.
+    d.addEventListener('cancel', function(e){ e.preventDefault(); done(wantsInput ? null : false); });
+    d.addEventListener('close', function(){ done(wantsInput ? null : false); });
+    if (input) input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter'){ e.preventDefault(); accept(); }
+    });
+
+    if (d.showModal) d.showModal();
+    else {
+      // Pre-<dialog> browser. Fall back to the natives — they still work in a
+      // normal window, and this is the only case where they are reachable.
+      d.remove();
+      if (wantsInput){ var r = window.prompt(opts.title); return resolve(r && r.trim() ? r.trim() : null); }
+      return resolve(window.confirm(opts.title));
+    }
+    if (input) { input.focus(); input.select(); }
+    else d.querySelector('[data-act="ok"]').focus();
+  });
+}
+function askText(opts){ return openDlg(opts); }
+function askConfirm(opts){ return openDlg(opts); }
+function sayNote(opts){
+  // A one-button notice. Resolves when dismissed; callers rarely wait.
+  return openDlg({ title: opts.title, body: opts.body, ok: opts.ok || 'Got it', cancel: 'Close' });
+}
+// The reference prompt is asked from two places and must read identically in both.
+function askCaseRef(){
+  return askText({
+    title: 'Name this case',
+    body: '<p>A reference for this case — the client’s name, or a code if you prefer.</p>'
+        + '<p style="color:var(--muted);font-size:13.5px">Cases are stored in this browser. The durable copy is the block you paste into the client’s case note in Double.</p>',
+    input: { label: 'Case reference', placeholder: 'e.g. Ivanova, Olena — or ITIN-2026-004' },
+    ok: 'Create the case'
+  });
+}
 
 /* ------------------------------ render Qs ------------------------------ */
 function active(){ return Q.filter(function(q){ return !q.when || q.when(A); }); }
@@ -798,12 +931,13 @@ function buildSheet(){
   out.focus();
   var tc = document.getElementById('trackCase');
   if (tc) tc.addEventListener('click', function(){
-    var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into the client’s case note in Double.');
-    if (!ref) return;
-    cases.unshift(newCase(ref.trim(), buildSteps(A)));
-    saveCases(); openCase = cases[0];
-    switchTab('cases'); document.getElementById('tabCase').focus();
-    window.scrollTo({top:0,behavior:'smooth'});
+    askCaseRef().then(function(ref){
+      if (!ref) return;                       // cancelled — askCaseRef already trimmed and rejected empties
+      cases.unshift(newCase(ref, buildSteps(A)));
+      saveCases(); openCase = cases[0];
+      switchTab('cases'); document.getElementById('tabCase').focus();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
   });
   out.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -1112,16 +1246,27 @@ function walkComplete(){
 }
 function promptNewCase(){
   var tailored = walkComplete();
-  if (!tailored && !confirm('The walkthrough has not been completed, so this case will use the GENERIC checklist — not one pruned to a particular applicant.\n\nFor a checklist tailored to this client, cancel, finish the Walkthrough tab and press “Track this as a case” on the preparation sheet.\n\nCreate a generic case anyway?')) return;
-  var ref = prompt('A reference for this case — the client’s name, or a code if you prefer.\n\nCases are stored in this browser; the durable copy is the block you paste into Double.');
-  if (!ref) return;
-  var steps = tailored ? buildSteps(A)
-                       : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
-  var c = newCase(ref.trim(), steps);
-  c.generic = !tailored;
-  if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
-  cases.unshift(c);
-  saveCases(); openCase = cases[0]; renderCases();
+  // Two dialogs in sequence: warn about the generic checklist (only when it applies),
+  // then ask for the reference. Chained so the second waits for the first.
+  var gate = tailored ? Promise.resolve(true) : askConfirm({
+    title: 'This case will not be tailored',
+    body: '<p>The walkthrough has not been completed, so this case will use the <b>generic checklist</b> — not one pruned to a particular applicant.</p>'
+        + '<p>For a tailored checklist, cancel, finish the <b>Walkthrough</b> tab, and press “Track this as a case” on the preparation sheet.</p>',
+    ok: 'Create a generic case', cancel: 'Cancel'
+  });
+  gate.then(function(go){
+    if (!go) return;
+    return askCaseRef().then(function(ref){
+      if (!ref) return;
+      var steps = tailored ? buildSteps(A)
+                           : buildSteps({role:'b',pass:'yes',ret:'yes',caa:'no',signer:'self',apptype:'new',age:'30',ssn:'no'});
+      var c = newCase(ref, steps);
+      c.generic = !tailored;
+      if (c.generic) c.log.push({ t: nowStamp(), x: 'Generic checklist — not tailored to this applicant.' });
+      cases.unshift(c);
+      saveCases(); openCase = cases[0]; renderCases();
+    });
+  });
 }
 
 function renderOne(){
@@ -1170,10 +1315,15 @@ function renderOne(){
   });
   document.getElementById('delCase').addEventListener('click', function(){
     var warn = c.dirty
-      ? 'Delete “'+c.ref+'”?\n\n⚠️ This case has changes that have NOT been copied to Double. Deleting it loses them for good — there is nothing to reopen it from.'
-      : 'Delete “'+c.ref+'” from this browser?\n\nYou last copied it to Double, so you can reopen it from that note.';
-    if (!confirm(warn)) return;
-    cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+      ? '<p>This case has changes that have <b>not been copied to Double</b>. Deleting it loses them for good — there is nothing to reopen it from.</p>'
+      : '<p>You last copied this case to Double, so you can reopen it from that note.</p>';
+    askConfirm({
+      title: 'Delete “' + c.ref + '”?',
+      body: warn, ok: 'Delete the case', cancel: 'Keep it', danger: true
+    }).then(function(go){
+      if (!go) return;
+      cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+    });
   });
   document.getElementById('copyNote').addEventListener('click', function(){ showNote(c); });
   document.getElementById('dlCase').addEventListener('click', function(){ downloadCase(c); });
@@ -1286,11 +1436,17 @@ function showNote(c){
   });
   var tl = document.getElementById('trimLog');
   if (tl) tl.addEventListener('click', function(){
-    if (!confirm('Drop all but the last 12 log entries?\n\nThe checklist, its dates and the per-step notes are untouched — only the log history is shortened, so the note fits Double.')) return;
-    var dropped = Math.max(0, c.log.length - 12);
-    c.log = c.log.slice(-12);
-    c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
-    touch(c); renderOne(); showNote(c);
+    askConfirm({
+      title: 'Drop all but the last 12 log entries?',
+      body: '<p>The checklist, its dates and the per-step notes are <b>untouched</b> — only the log history is shortened, so the note fits Double.</p>',
+      ok: 'Trim the log', cancel: 'Cancel', danger: true
+    }).then(function(go){
+      if (!go) return;
+      var dropped = Math.max(0, c.log.length - 12);
+      c.log = c.log.slice(-12);
+      c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+      touch(c); renderOne(); showNote(c);
+    });
   });
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
@@ -1304,7 +1460,8 @@ function downloadCase(c){
     a.download = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
     document.body.appendChild(a); a.click();
     setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-  }catch(e){ alert('This viewer blocks downloads. Use “Copy the case note for Double” instead.'); }
+  }catch(e){ sayNote({ title: 'This viewer blocks downloads',
+    body: '<p>Use <b>“Copy the case note for Double”</b> instead — that is the durable copy anyway.</p>' }); }
 }
 
 function showImport(){
@@ -1324,10 +1481,18 @@ function showImport(){
     try { c = decodeCase(raw); } catch(e){ msg.textContent = 'That code could not be read — paste the whole note, including the line at the very bottom.'; return; }
     if (!c){ msg.textContent = 'No case code found. Make sure you copied the whole note, including the last line.'; return; }
     var existing = cases.filter(function(x){ return x.ref === c.ref; })[0];
-    if (existing && !confirm('“'+c.ref+'” is already open in this browser. Replace it with the pasted version?')) return;
-    if (existing) cases.splice(cases.indexOf(existing), 1);
-    cases.unshift(c); saveCases();
-    imp.hidden = true; openCase = cases[0]; renderCases();
+    var gate = existing ? askConfirm({
+      title: '“' + c.ref + '” is already open here',
+      body: '<p>A case with that reference is already stored in this browser. Replace it with the pasted version?</p>'
+          + '<p style="color:var(--muted);font-size:13.5px">The pasted note wins — anything ticked here since the note was written is lost.</p>',
+      ok: 'Replace it', cancel: 'Keep what is here', danger: true
+    }) : Promise.resolve(true);
+    gate.then(function(go){
+      if (!go) return;
+      if (existing) cases.splice(cases.indexOf(existing), 1);
+      cases.unshift(c); saveCases();
+      imp.hidden = true; openCase = cases[0]; renderCases();
+    });
   });
 }
 

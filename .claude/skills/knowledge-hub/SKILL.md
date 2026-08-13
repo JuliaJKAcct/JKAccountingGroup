@@ -352,6 +352,70 @@ it, `window.claude.downloads` is absent and even "Download as text" is dead. Loa
 the `artifact-capabilities` skill before publishing; the `downloads.d.ts` it points to is the
 authoritative contract (error codes, 16 MiB cap, the allowlist above).
 
+### 🚫 `prompt()` / `confirm()` / `alert()` are DEAD in the Hub — never call them
+
+**The same sandbox blocks the three native dialogs.** A sandboxed iframe without the
+`allow-modals` keyword makes them inert: the browser logs
+
+```
+Ignored call to 'prompt()'. The document is sandboxed, and the 'allow-modals' keyword is not set.
+```
+
+then returns **`null`** (`prompt`) or **`false`** (`confirm`) and carries straight on. Almost
+every caller reads that as *"the user pressed Cancel"* and returns silently — so **the button
+appears to do nothing at all**: no dialog, no error, no clue. **A nested iframe can never
+re-grant a permission its parent lacks**, so this cannot be fixed from the Hub's side by
+loosening the tool's own `<iframe>` — the tool itself must not call them.
+
+*(Found Aug 2026: the ITIN walkthrough's **"Track this as a case"** button was dead on the
+published Hub for exactly this reason — it opened with `prompt()` for the case reference. Six
+more `confirm()`/`alert()` calls in the same tool — delete a case, trim the log, replace a
+pasted case — were dead the same way. It worked perfectly when the built `.html` was opened as
+a local file, which is why it shipped.)*
+
+**Use a native `<dialog>` + `showModal()` instead.** It is **not** covered by the sandbox flag,
+renders in the browser's **top layer** (no `z-index`, never clipped by an ancestor's
+`overflow`), traps focus, and closes on `Esc` for free. Wrap it in a small
+Promise-returning helper so call sites keep the order they had when they were blocking:
+
+```js
+askText({title, body, input:{label, placeholder}}).then(function(v){ if (!v) return; /* … */ });
+askConfirm({title, body, ok, cancel, danger:true}).then(function(go){ if (!go) return; /* … */ });
+```
+
+The worked reference implementation — `openDlg` / `askText` / `askConfirm` / `sayNote`, with
+the CSS, Esc-cancels-once handling, focus restore, and a `window.prompt` fallback for
+pre-`<dialog>` browsers — is in
+[`projects/sops/tools/itin-w7-walkthrough.src.html`](../../../projects/sops/tools/itin-w7-walkthrough.src.html).
+**Copy it rather than re-deriving it.** Two details it gets right that are easy to miss: an
+**empty input is rejected with a visible message** instead of being indistinguishable from a
+cancel, and the panel is capped at `max-height:calc(100vh - 32px)` with the prose scrolling,
+because the Hub's tool iframe is only ~82vh tall so the buttons otherwise fall off the bottom.
+
+### Interactive tools are tested by DRIVING them, not by looking at them
+
+Both bugs above shipped because the tool was reviewed by reading it and by opening the built
+file locally. Neither is how the team uses it. Two checks, every time a Hub tool changes:
+
+1. **Drive it in a real browser, inside a sandboxed iframe** — the harness is three lines, and
+   it is the only thing that reproduces the published Hub:
+   ```html
+   <iframe sandbox="allow-scripts allow-same-origin" src="the-built-tool.html"
+           style="width:100%;height:100%;border:0"></iframe>
+   ```
+   Then click every button with Playwright (Chromium is at `/opt/pw-browsers/chromium`) and
+   **assert the console is empty**. A silent no-op is invisible in a screenshot; it is obvious
+   the moment you assert on the outcome.
+2. **Type into every text field one character at a time** — `fill()` sets the value in one shot
+   and hides an entire class of bug. **If a tool re-renders its form on every keystroke, the
+   caret must be restored by hand, and `setSelectionRange` throws on `<input type="number">`**
+   (Chrome: `InvalidStateError`), so a caret-restore that guards on `type === 'text'` silently
+   skips number fields. The caret then snaps to position 0 after each keystroke and every new
+   digit is inserted **in front** of the last: typing `26` reads back as `62`, and `123` as
+   `321`. **So: use `type="text" inputmode="numeric"` for numeric fields in a re-rendering
+   form**, never `type="number"` — same numeric keypad on mobile, no caret restriction.
+   *(Lilian hit this entering an applicant's age in the ITIN walkthrough, Aug 2026.)*
+
 ## Build & publish flow (with the verify gate)
 
 1. **Edit the source** — `build-hub.mjs` (generator), `hub.css` (Atlas-token components),
@@ -390,6 +454,13 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
    toast, and downloads take the Blob path. Chromium is at
    `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, Playwright at
    `/opt/node22/lib/node_modules/playwright`.
+
+   ```
+   # (d) EMBEDDED TOOLS: drive every button inside a sandboxed iframe, assert the console
+   #     is empty, and type into numeric fields one character at a time. See
+   #     "Interactive tools are tested by DRIVING them" above — a dead prompt() and a
+   #     digit-reversing age field both shipped past a read-through and a local file open.
+   ```
 5. **Publish / update the shareable link** with the **Artifact** tool. There is **one
    official Hub link — always update THAT one, never mint a new one:**
 
@@ -442,4 +513,7 @@ authoritative contract (error codes, 16 MiB cap, the allowlist above).
 - `.claude/skills/client-intelligence/render/build.mjs` — the reused client-card engine.
 
 *Update this skill whenever a round with Lilian establishes a new Hub preference — it is
-the memory of "how we build the Hub and what we want to see there."*
+the memory of "how we build the Hub and what we want to see there." **Also add to it whenever
+a tool turns out to behave differently inside the published Hub than it did as a local file**
+(downloads, print, native modals, anything the Artifact sandbox intercepts) — that list is
+what stops the next tool shipping broken in the only place the team actually uses it.*
