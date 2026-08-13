@@ -1056,7 +1056,7 @@ boundary sits between 7,600 and 8,000 and has not been bracketed tighter. One th
 the **title and JSON escaping count toward the payload too**, so the body is not the whole budget.
 `ping` keeps working throughout, which is what makes this read as an outage.
 
-**⭐ It is NOT about notes at all, and it is NOT Claude — both were PROVEN on 2026-08-13**, after
+**⭐ It is NOT about notes, and Claude has no size cap that would explain it — both established 2026-08-13**, after
 Double answered that the limit is not theirs (see below). Three calls, same account, same minute:
 
 | Call | Server | Payload | Result |
@@ -1065,15 +1065,16 @@ Double answered that the limit is not theirs (see below). Three calls, same acco
 | `list_clients(name=…)` — **read-only, no note involved** | Double | **~9,000 chars** | ❌ **403 `mcp_request_blocked`** |
 | `search_emails(query=…)` — read-only | **Ping Assistant** | **the identical ~9,000-char string** | ✅ 200 |
 
-Read those rows together and two claims die at once. **Row 2 kills "notes have no limit"** — it is a
-*read*, it creates nothing, and there is no note anywhere in the request; whether the product caps
-note length is simply not what is happening. **Rows 2 vs 3 kill "it comes from Claude's API"** — the
+Read those rows together and two claims die at once. **Row 2 kills the RELEVANCE of "notes have no limit"** — not the claim
+itself, which is true and which we concede. Row 2 is a *read*: it creates nothing and carries no note,
+so whatever the product does about note length is not what is happening. ⚠️ **Never argue that notes
+DO have a limit** — that is the move that got this closed once already. **Rows 2 vs 3 kill "it comes from Claude's API"** — the
 same Claude account, the same MCP connector plumbing and the *same string* went through to a different
 server at the same moment. (*Account* here means our Claude login — nothing to do with a Double client
 record; the Ping Assistant call has no Double client in it at all.) **Row 1 vs row 2** is the control: the same tool, the same parameter, only shorter,
 succeeds — so Double is up and authenticated, and size is the whole variable.
 
-**So the block is a request-size limit somewhere on Double's side, before the layer that stores notes**
+**So the block is, on the balance of the evidence, a request-size limit on Double's side, before the layer that stores notes**
 — either an edge in front of the endpoint (WAF/CDN/load balancer) or a body-size cap in Double's own
 MCP server. That is why Double's engineers can look at the product and truthfully report no limit:
 **the request never reaches the code they checked.** ⚠️ **Which of those two it is, we cannot tell** —
@@ -1088,7 +1089,14 @@ already have been above 8,192, which would sink the neat story. Give them the ob
 8 KB"), let them find the actual rule. **If anyone ever needs this tighter, measure all six payloads in bytes first** — the four note bodies of
 2026-08-06 *and* the two read filters of 2026-08-13, since the read pair is what carries the
 not-a-note-limit argument. Nothing in the repo records any of them in bytes, and it is the obvious
-thing a sceptical engineer will ask for.
+thing a sceptical engineer will ask for. ⚠️ **The three failing note bodies were never kept** — those
+would have to be reconstructed. **The 2026-08-13 read filters WERE deterministic and are reproducible
+exactly:** the blocked one is the 100-character block
+`FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
+repeated 90 times with `NN` running 01→90 (9,000 chars) passed as `list_clients(name:)`; the control is
+`FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE` (48 chars). The cross-server control sent the
+**identical 9,000-character string** as `Ping_Assistant.search_emails(query:)`. ⓘ **No UTC timestamp was
+captured** — if Double wants one, re-run it rather than reconstruct it.
 
 **Who can actually fix it — the question everyone asks second.** Follow one request:
 
@@ -1098,7 +1106,7 @@ thing a sceptical engineer will ask for.
 | 2 | The call is POSTed to Double's MCP URL | Anthropic | ❌ **Very unlikely.** The same string reached a different MCP server from the same Claude account in the same minute, so there is **no blanket size cap** on Anthropic's side. ⓘ Strictly this does not rule out a rule specific to the *Double connector's* registration — say "no size cap globally", not "proven not Claude", or Double gets to bounce this back a third time. Anthropic only *reports* the 403 |
 | 3 | 🚧 An edge in front — WAF / CDN / load balancer | **Double** | ✅ Possible home of the rule — a configuration change |
 | 4 | 🚧 Double's own MCP server (its request-body cap) | **Double** | ✅ Equally possible home — a code/config change |
-| 5 | Double's app + database (notes live here) | **Double** | ❌ Ruled out — this is the layer their engineers checked, and it is not where the block is |
+| 5 | Double's app + database (notes live here) | **Double** | ⚠️ **Only its *note-length* rule is ruled out** — that is what their engineers checked, and a read with no note is blocked anyway. A *generic body-size cap* in this layer is still possible, so do not tell them stage 5 is eliminated |
 
 ⚠️ **We can localise the block to Double, and no further — stages 3 and 4 are NOT distinguishable
 from what we measured.** A framework body-size cap inside Double's own MCP server produces exactly the
@@ -1134,11 +1142,15 @@ Practical rules:
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
 - **And for calls that are not notes at all** — the rules above are note-shaped because notes hit this
-  most often, but the wall does not care. **keep the WHOLE request well under ~7,500 characters** — not each parameter separately, since a batched write (`upsert_client_properties`, `move_attachables`, a long ID array) can pass 8 KB while every individual value is tiny —
+  most often, but the wall does not care. **keep the WHOLE request under ~7,500 characters** — one ceiling for everything, not each parameter separately, since a batched write (`upsert_client_properties`, `move_attachables`, a long ID array) can pass 8 KB while every individual value is tiny —
   and note that the only read-path measurements we have are ~48 chars (passes) and ~9,000 (fails) —
-  **nothing in between has ever been tested**, so treat anything above a couple of thousand characters
-  as unproven ground rather than known-good. There is no recovery step to run after a `403` on a read:
-  nothing was created, so just shorten and retry. ⚠️ **The trap is §5's own advice** to narrow a roster
+  **nothing in between has ever been tested** — so ~7,500 is the working ceiling everywhere, but it is
+  *measured* only for note bodies; on other calls it is a borrowed figure, not a verified one. **Recovery differs by call type.** After a `403` on a **read**,
+  nothing was created — shorten and retry. After a `403` on a **batched write**
+  (`upsert_client_properties`, `move_attachables`, `update_records`-style calls), treat it exactly like
+  the note case: **the error does not tell you whether part of the batch applied.** Re-read the target
+  first (`list_client_properties`, `list_files`…), see what actually landed, and only then retry with a
+  smaller batch. **Never blind-retry a write** — some of these touch hand-maintained judgment columns. ⚠️ **The trap is §5's own advice** to narrow a roster
   sweep with `list_clients(name:)` — that is exactly the call the proof above blocked. Filtering with a
   *short* name is still right; building one giant filter to save a round trip is how you meet this wall
   on a read.
@@ -1275,7 +1287,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
-- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7; what is still awaited is a reply to the follow-up drafted in that file. **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
+- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent**, and it wants to go before the 17–18 Aug wrap-up call; do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —

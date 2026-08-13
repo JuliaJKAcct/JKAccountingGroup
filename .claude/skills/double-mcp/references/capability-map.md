@@ -63,7 +63,7 @@ Writes are marked **W**. Everything unmarked is a read. Nothing in this file ove
 
 | Tool | | Notes |
 |---|---|---|
-| `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt` |
+| `list_clients` | ✅ | 146 clients on audit day. Returns archived ones too — always filter `archivedAt`. ⚠️ **Keep the `name` filter short** — a ~9,000-character filter returns `403` (§8); this is the call that proved the wall is not note-specific |
 | `get_client` | ◻︎ | Single client record |
 | `create_client` | ◻︎ **W** | Duplicates are the firm's recurring data problem and there is no merge tool. Confirm first |
 | `get_property_columns` | ✅ | 18 columns. Call once per session; never hardcode option names |
@@ -274,7 +274,7 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 | Tool | | Notes |
 |---|---|---|
 | `list_notes` | ✅ (Aug) | **Always call this before writing a case note** — one note per matter, rewritten in place (SKILL §7) |
-| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up.** ⚠️ **Neither takes a user/author parameter** — the note is attributed to the connected account (Julia). See below |
+| `create_note` · `update_note` | ✅ (Aug) **W** | Body is **HTML**; plain text will not render. Works on archived clients. **⚠️ Size wall — keep bodies under ~7,500 characters; 403 from ~8,000 up. It is a REQUEST-size wall (§8), so the same ceiling applies to any large call, batched writes included.** ⚠️ **Neither takes a user/author parameter** — the note is attributed to the connected account (Julia). See below |
 | `list_comments` | ◻︎ | Filter by client, task, thread, `transactionExternalId`, date range, or one of 15 comment types |
 | `add_task_comment` · `add_transaction_comment` | ◻︎ **W** | |
 | `get_questions` | ◻︎ | Client **questions/requests** — not organizer answers. Types: userToContact, contactToUser, transaction, receipt, bankFeedTransaction |

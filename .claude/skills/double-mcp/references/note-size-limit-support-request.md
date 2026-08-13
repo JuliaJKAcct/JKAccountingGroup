@@ -45,10 +45,14 @@ Allison, relaying her team, on the same thread:
 | `list_clients(name=…)` — read-only, **no note in the request** | Double | **~9,000 chars** | ❌ **403 `mcp_request_blocked`** |
 | `search_emails(query=…)` — read-only | **Ping Assistant** | **the identical ~9,000-char string** | ✅ 200 |
 
-- **"No maximum length for notes" is true and irrelevant.** Row 2 is a *read*. It creates nothing and
-  contains no note. It is blocked anyway.
-- **"It is coming from Claude's API" is disproven.** Rows 2 and 3 are the same account, the same MCP
-  connector plumbing and the *same string*, seconds apart. One server took it; Double's did not.
+- **"No maximum length for notes" is true, and we concede it.** It is simply not what is failing: row 2
+  is a *read*, it creates nothing and contains no note, and it is blocked anyway. ⚠️ **Never argue the
+  opposite** — that notes *do* have a limit — which is the move that got this closed the first time.
+- **"It is coming from Claude's API" does not survive row 3.** Rows 2 and 3 are the same account, the
+  same MCP connector plumbing and the *same string*, seconds apart. One server took it; Double's did
+  not — so there is **no blanket size cap** on Anthropic's side. ⚠️ **Say it that way, not "proven not
+  Claude".** Strictly this does not rule out a rule specific to the *Double connector's own
+  registration*; overstate it and that is the hole Double bounces this back through.
 - **Row 1 is the control** — same tool, same parameter, shorter — so Double is up and authenticated,
   and payload size is the only variable that moved.
 

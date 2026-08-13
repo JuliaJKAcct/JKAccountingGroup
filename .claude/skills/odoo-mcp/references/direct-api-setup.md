@@ -176,7 +176,7 @@ throwaway-key test.**
 
 3. **Control test — the step that makes the result mean something.** Repeat the identical call
    with **one character of the key changed**. (The firm used exactly this technique on the
-   Double note-size issue, row 19: the control is what proved it was size and not content.)
+   Double request-size issue, row 19: the control is what proved it was size and not content.)
 
 4. **Revoke the key** on the same screen. ⚠️ **This step belongs to the throwaway key only.**
    Never run it against the key the firm actually uses — Odoo cannot show a key twice, so a
