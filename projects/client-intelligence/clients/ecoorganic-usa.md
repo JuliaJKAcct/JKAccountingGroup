@@ -106,9 +106,11 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
   *(Double client properties + activity log, confirmed 2026-08-01)*.
 - **It is filed as a ZERO TAX RETURN, every month, by the firm** — not by the client
-  _(Lilian, 2026-08-12)_. The full procedure is now in the SOP; the short version: log in to
-  myconneCT with the **firm's** login, file the month's OS-114 at zero, save the PDF to Drive
-  as `MM.YYYY - Sales tax - zero tax return.pdf`, and keep the confirmation screenshot.
+  _(Lilian, 2026-08-12)_. **Its own runbook:**
+  [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md). The short
+  version: log in to myconneCT with the **firm's** login, file the month's OS-114 at zero, save
+  the PDF to Drive as `MM.YYYY - Sales tax - zero tax return.pdf`, and keep the confirmation
+  screenshot. It runs on its own clock — **not** part of the bookkeeping close.
 - **Where the login lives:** the **`Sales tax`** Google Doc at
   `Google Drive > Ecoorganic USA INC > Sales Taxes > Connecticut > Sales tax` — it holds the
   myconneCT portal address and the firm's user/password (values stay in Drive, never here).
@@ -125,7 +127,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   taxable sales would normally file showing **gross receipts with a deduction** rather than a
   blank return — and nobody has opened one of these filings to see which it is. Practice is
   to keep filing (stopping is worse); nobody should represent *why* until Lilian confirms it.
-  Tracked as decision #8 in the SOP's Open decisions log.
+  Tracked in [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §6.
 - **Deadline and cost of missing it _(verified against CT DRS, 2026-08-12)_:** the return is
   due the **last day of the month following** the period; the late penalty is **15% of tax
   due or $50, whichever is greater**, so on a zero return the **$50 floor** is what lands.
@@ -142,7 +144,15 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   12.2025 delinquency notice far better than the late uploads do. *(Observed from Drive
   filenames and upload dates, 2026-08-12; **neither notice has been opened**, so period,
   amount and outcome are unknown.)* **A proposed assessment left unprotested becomes final**,
-  so this is live — on `FOLLOW-UPS.md`, and decision #9 in the SOP.
+  so this is live — on `FOLLOW-UPS.md`, and in
+  [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §4.
+  🔑 **And look here BEFORE asking the state anything: a migrated TaxDome note on this client
+  is titled `04.06.2026 CT state call - sales tax account`** — an April 2026 call with
+  Connecticut about this very account, which falls **inside** the window of both the gap and
+  the two notices, so it may already hold the answer. *(Found 2026-08-13 in the TaxDome
+  Phase-1 inventory — the note's **content has not been read**; those notes are gated on the
+  permission question in [`../automation/taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md).
+  Its existence is the fact; what it says is not.)*
 - **When or why DRS moved this client from quarterly to monthly is not recorded** — observed
   from the filings, not established.
 
@@ -303,7 +313,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   file in any frequency.** That fits the notice far better. Re-searched Drive to confirm; nothing
   for 01.2025–09.2025 exists under any naming. **Not proof the returns were never filed** — the
   folder lags the work and myconneCT's own history is the authority — but it is now the open
-  question, on `FOLLOW-UPS.md` and as decision #9, rather than a wrong causal story in an SOP.
+  question, on `FOLLOW-UPS.md` and in the sales-tax runbook's §4, rather than a wrong causal
+  story in an SOP.
   Also raised with her, unresolved: **the basis for filing zero has never been written down** for a
   business that has revenue, and whether these returns should be reporting gross receipts with a
   deduction rather than sitting blank (§4). ⚠️ **Handling note:** Drive's search returned the
@@ -357,4 +368,4 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Double case note — the team-facing history of the QuickBooks primary-admin handover:** "CASE · QuickBooks primary-admin handover", note **485258** (only the stable title prefix is recorded here; the live title carries a status suffix and a name, which belong in Double) on the client record. **Update it in place whenever this matter moves** — never a second note (see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7).
 - **Google Drive folder (sensitive vault):** [Ecoorganic USA INC](https://drive.google.com/drive/folders/1PMyWdhf5VloFAlyGqlfNxj0cLv8aJo_L) — the **primary** folder (filed as "INC", a naming variant; the passwords/credentials doc lives here, values never in this repo) · and [Ecoorganic USA LLC](https://drive.google.com/drive/folders/1NSBtAnwqr307dWCLRANDly4lCIp9t98g) — **secondary**: categorization workbooks, insurance/GL-audit files, the (paused) recurring-expense watchlist _(2026-08-01 sweep)_
 - **Sales tax (CT) — the working folder:** [Sales Taxes](https://drive.google.com/drive/folders/1z-YELZhZxnBPlr-gBg7xhuf2xHdTwCJL) inside the primary Drive folder. Inside it: [Connecticut](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j) (the **`Sales tax` credentials doc** + a folder per year of filed returns, each with a `Screenshots` subfolder) and [Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK) (DRS correspondence — the 12.2025 delinquency notice and the 01.2026 proposed assessment). The 2023–2024 quarterly returns sit loose in the `Sales Taxes` root _(2026-08-12)_
-- **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md) — now carries the **monthly CT sales-tax filing procedure** as its own section
+- **Related SOPs:** [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md) (monthly bookkeeping + independent review) · [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) (**the monthly CT sales-tax filing** — its own runbook, on its own clock)

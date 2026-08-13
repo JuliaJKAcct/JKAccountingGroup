@@ -882,15 +882,20 @@ function flowViews(id, cfg){
     cfg.flow && cfg.flow.length ? taskFlow({ flow: cfg.flow }) : '',
     cfg.schema ? schemaFlow(cfg.schema) : '');
 }
+// The tooltip id must be UNIQUE per button: every reader is emitted into the one Hub page,
+// so a hardcoded id makes duplicate ids the moment a second SOP declares a `vault` — and
+// every `aria-describedby` then resolves to the FIRST tooltip, i.e. another client's text.
+// (Found 2026-08-13, when Ecoorganic's CT sales-tax runbook became the second vault.)
 function vaultButton(v){
   if(!v || !v.url) return '';
+  const tipId = 'vault-tip-' + String(v.label || v.url).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   return `<div class="vault">`
-    + `<a class="vault-btn" href="${v.url}" target="_blank" rel="noopener" aria-describedby="vault-tip">`
+    + `<a class="vault-btn" href="${v.url}" target="_blank" rel="noopener" aria-describedby="${tipId}">`
     + `<span class="vault-ic" aria-hidden="true">${TIC.key}</span>`
     + `<span class="vault-x"><span class="vault-t">${esc(v.label || 'Open the client password vault')}</span>`
     + `<span class="vault-s">Google Doc · opens in Google Drive</span></span>`
     + `<span class="vault-go" aria-hidden="true">${MIC.arrow}</span>`
-    + `<span class="vault-tip" role="tooltip" id="vault-tip">${esc(v.tip)}</span></a>`
+    + `<span class="vault-tip" role="tooltip" id="${tipId}">${esc(v.tip)}</span></a>`
     + `<p class="vault-note"><span class="vault-lock" aria-hidden="true">🔒</span><span>${esc(v.note || v.tip)}</span></p>`
     + `</div>`;
 }
@@ -1445,6 +1450,28 @@ const SOP_GROUPS = [
   {
     name: 'Client tasks', note: 'One-off and recurring client-specific procedures',
     items: [
+      { file: 'ecoorganic-ct-sales-tax.md', title: 'Ecoorganic — Connecticut Sales Tax (monthly)', client: { slug: 'ecoorganic-usa', name: 'Ecoorganic' },
+        blurb: 'The monthly Connecticut OS-114 the firm files for Ecoorganic as a zero return — the myconneCT login, the steps, how the filing is saved to Drive, the deadline and the $50 late floor, and the two questions nobody has settled.',
+        task: {
+          name: 'ECOORGANIC USA LLC', loc: 'Connecticut sales & use tax · Form OS-114 · monthly',
+          lede: 'Every month the firm files this client’s Connecticut sales-tax return as a zero return, on our own login — the client does not do it. It needs nothing from the books, so it never waits for the close.',
+          flowLede: 'The month ends → the reminder fires in Double on the 5th → open the login from Drive → file the OS-114 at zero → save the PDF and the confirmation screenshot. Miss a month and it costs $50, even at zero.',
+          flow: [
+            { t: 'Month ends', d: 'The period to be filed closes', ic: 'refresh' },
+            { t: 'Reminder fires', d: 'Double, the 5th of the following month — deliberately early', ic: 'mail' },
+            { t: 'Get the login', d: 'Drive → Sales Taxes → Connecticut → the “Sales tax” doc', ic: 'key' },
+            { t: 'File the OS-114', d: 'At zero — check the PERIOD before submitting', ic: 'globe', k: 'gate' },
+            { t: 'Save the PDF', d: '“MM.YYYY - Sales tax - zero tax return.pdf” in the year folder', ic: 'save' },
+            { t: 'Save the screenshot', d: 'The confirmation — the only proof of WHEN it was filed', ic: 'check', k: 'gate' },
+          ],
+          loop: 'It repeats every month on its own clock and is not part of the bookkeeping close — a zero return needs no figures, so it never waits for QuickBooks.',
+          vault: {
+            url: 'https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit',
+            label: 'Open the myconneCT login',
+            tip: 'A Google Doc in the client’s Drive, kept beside the filings: the myconneCT portal address and the firm’s username and password. The same credentials are also in the client’s master “Ecoorganic Passwords” doc one folder up.',
+            note: 'The portal address and the firm’s login for CT DRS myconneCT. The login is OURS, not the client’s — he cannot file this himself.',
+          },
+        } },
       { file: 'deep-tech-penn-credit-tolls.md', title: 'Deep Tech — FDOT Toll Debts (Penn Credit)', client: { slug: 'deep-tech-development', name: 'Deep Tech' },
         blurb: 'Clear Deep Tech’s unpaid FDOT tolls that were sent to the Penn Credit collection agency — the ID-number + ZIP login, the pay-down steps, and the recurring watch (new toll items keep reappearing).',
         task: {
@@ -1551,14 +1578,20 @@ function renderSopItem(it, grpName) {
     inner = coaReaderInner(owner, updated);
   } else if (it.engagement) {
     inner = engagementReaderInner(owner, updated);
-  } else if (/business-tax-receipt/.test(it.file)) {
-    inner = btrReaderInner();
-  } else if (/ecoorganic/.test(it.file)) {
-    inner = ecoorganicReaderInner(md, owner, updated);
+  // An EXPLICIT config always beats a filename guess. `close`/`task` are declared per item
+  // in the catalog above, so they are checked first: a filename regex cannot know which of a
+  // client's several SOPs it is looking at. (2026-08-13: `/ecoorganic/` was matching the new
+  // ecoorganic-ct-sales-tax.md and rendering it through the BOOKKEEPING reader — a silent
+  // wrong-page bug caught only by the bare-Mermaid guard. Keep the filename tests LAST, and
+  // keep them specific enough to name one file.)
   } else if (it.close) {
     inner = closeProcessReader(it.close, md, owner, updated);
   } else if (it.task) {
     inner = taskProcessReader(it.task, md, owner, updated);
+  } else if (/business-tax-receipt/.test(it.file)) {
+    inner = btrReaderInner();
+  } else if (/ecoorganic-bookkeeping-review/.test(it.file)) {
+    inner = ecoorganicReaderInner(md, owner, updated);
   } else {
     let md2 = md;
     if (it.truncateAt) {                      // drop internal-only sections from the team page

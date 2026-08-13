@@ -1,6 +1,6 @@
 # Ecoorganic — Monthly Bookkeeping & Review Runbook
 
-> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last revised:** 2026-08-12
+> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last updated:** 2026-08-13
 >
 > Born from the July 2026 cleanup of the client's books. A staff bookkeeper does
 > the monthly work; Claude acts as the **independent reviewer** using the rules
@@ -183,101 +183,20 @@ Double is the working tool for the vendor side of these rules — lean on it:
   (kept separate from ordinary service charges) so the running total is visible
   for the cash-management conversation with the client.
 
-## Connecticut sales tax — the monthly filing
+## Connecticut sales tax — filed monthly, and it has its own SOP
 
-A recurring **monthly** obligation the **firm** carries out, not the client, and separate
-from the bookkeeping close below. The firm files Connecticut's **OS-114 Sales and Use Tax
-Return** through **CT DRS myconneCT**, and it currently goes out every month as a **zero
-tax return**.
+This client's Connecticut **Sales and Use Tax Return (Form OS-114)** is filed **every
+month** by the firm, as a **zero return**, on the firm's own CT DRS myconneCT login. It is
+**not part of the bookkeeping close** and needs no figures from the books — so it does not
+wait for them.
 
-**Do not let a quiet month pass — a zero return still has to be *filed*, and filing it late
-costs $50.** Connecticut requires Form OS-114 for every assigned period "even if no sales
-were made or no tax is due", and its late penalty is **15% of the tax due or $50, whichever
-is greater** — so on a zero return the 15% is nothing and the **$50 floor is what lands**.
-A month nobody filed is therefore a $50 bill for a return that would have taken minutes —
-and this client's own record has both a gap and two unopened DRS notices in it (see *Filing
-history* below). *(Verified against CT DRS, 2026-08-12:
-[Sales and Use Tax Information](https://portal.ct.gov/drs/sales-tax/tax-information) ·
-[Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/drs/forms/2019/sut/o-88_1019.pdf)
-— the O-88 cited is the 2019 revision, so re-check the penalty figure before quoting it to
-anyone.)*
+➡️ **The procedure lives in its own runbook:
+[`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md)** — the login, the steps, the
+Drive filing convention, the deadline and the $50 late floor, what to do when a DRS notice
+arrives, and the two open questions about why the return is zero at all.
 
-1. **Log in to myconneCT.** The portal address and the login the firm uses live in the
-   client's own Drive doc — never in this repo:
-   [myconneCT login (Drive)](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) ·
-   [CT DRS myconneCT](https://portal.ct.gov/drs-myconnect). The login is the **firm's**, so
-   filing this is ours, not his — never bounce it to the client.
-2. **File the period's OS-114 as a zero return.** One return per calendar month. Check the
-   period being filed is the month you mean before submitting — a return filed against the
-   wrong period leaves the intended month still open and delinquent.
-3. **Save the filed return to Drive, with the house filename.** Download the confirmed
-   return as a PDF into
-   [Sales Taxes → Connecticut → *year*](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j),
-   named **`MM.YYYY - Sales tax - zero tax return.pdf`** (e.g. `07.2026 - Sales tax - zero
-   tax return.pdf`). Keep the name exactly — it is what makes a missing month visible at a
-   glance in the folder listing.
-4. **Save the confirmation screenshot.** Capture the myconneCT submission confirmation and
-   put it in that year's **`Screenshots`** subfolder. This is the existing convention and
-   it is the only proof of *when* a return was submitted; the PDF alone doesn't carry it.
-5. **File any DRS notice that arrives.** Delinquency notices, proposed assessments and
-   other DRS correspondence go to
-   [Sales Taxes → Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK),
-   and the matter gets raised with Lilian — a notice is never just filed and forgotten.
-
-**Timing.** Connecticut's due date is the **last day of the month following** the period —
-so July's return is due 31 August *(CT DRS, verified 2026-08-12)*. The firm's own recurring
-reminder for this client sits in **Double, due the 5th of the month after the period** (so
-5 August for July), which is deliberately early and leaves most of a month of slack.
-**Treat the 5th as the deadline, not the 31st:** the whole point of the internal date is
-that a missed reminder is still recoverable.
-
-### Why it is a *zero* return — NOT ESTABLISHED, confirm before relying on it
-
-Every return in the folder reports zero, but **the reason has never been written down.**
-This is an operating business with revenue, so "zero" is a deliberate position, not an
-absence of activity — plausibly because the client's work is construction/installation
-services that fall outside CT's taxable-services net, or because taxable sales genuinely
-run through the general contractor. **Neither is confirmed here.**
-
-⚠️ **And there is a second question hiding inside the first: zero *tax* is not the same as
-zero *sales*.** DRS says Form OS-114 reports **both taxable and nontaxable sales** — gross
-receipts go on the return, and the nontaxable portion comes off as a deduction, so a
-business with revenue and no taxable sales would normally file a return showing **receipts
-with a deduction**, not a blank one. Whether these returns are blank or already carry gross
-receipts **has not been checked** — nobody has opened one *(2026-08-12)*.
-
-**What a covering bookkeeper does with that:** keep filing, on the same schedule, exactly as
-before — stopping is far worse than the open question, and nothing here says the position is
-wrong. Do **not** represent to the client, or to DRS, *why* it is zero until Lilian
-confirms it. Tracked in the Open decisions log (#8).
-
-### Filing history — what the Drive record shows, and the hole in it
-
-Read this before assuming the back history is clean. Everything below is **what the Drive
-folder contains**, which is not the same as what was filed — myconneCT's own filing history
-is the authority, and nobody has opened it.
-
-- **Through 2024: QUARTERLY.** The returns sit loose in the `Sales Taxes` root, named by
-  quarter — `4Q 2023`, then `1Q`/`2Q`/`3Q`/`4Q 2024`. All four 2024 quarters are there.
-- 🔴 **Then nothing at all for 01.2025–09.2025 — nine months, in any frequency.** After
-  `4Q 2024` the next filing of any kind is **10.2025**. There is no 1Q/2Q/3Q 2025 quarterly
-  return and no monthly return before October. **This is a gap in the record, not a proven
-  gap in filing** — the returns may have been filed and never saved here. But it is a much
-  better fit for a **Delinquency Notice dated 12.2025** than anything else in this folder,
-  so **settle it before assuming the back years are clean.** Tracked as decision #9.
-- **From 10.2025: MONTHLY**, one zero return per month, continuously through **07.2026**.
-  When or why DRS changed the frequency is **not recorded** — observed from the filings, not
-  established.
-- **The Drive record lags the filings.** The 10–12.2025 returns were only *uploaded* in
-  **April–May 2026**. Upload dates are not filing dates, so this says the folder runs behind
-  the work — it does **not** establish when those returns were actually filed.
-- **Two DRS notices sit unopened**, in the `Notices` subfolder: a **Delinquency Notice dated
-  12.2025** and a **Proposed Assessment dated 01.2026**. *(Observed from filenames only —
-  **neither has been opened**, so the period, the amount, and whether either was resolved
-  are all unknown.)* A proposed assessment left unprotested becomes final, so this is a live
-  item, not history — it is on `FOLLOW-UPS.md`.
-
-This section is the reason the opening warning is written the way it is.
+The only thing the bookkeeping reviewer does with it is **confirm it happened** — see
+checklist item 11 below.
 
 ## Monthly review checklist (what the reviewer verifies)
 
@@ -302,7 +221,8 @@ This section is the reason the opening warning is written the way it is.
     Drive under the `MM.YYYY - Sales tax - zero tax return.pdf` name, with its confirmation
     screenshot. **A gap in that folder's month sequence is a question, not a conclusion:**
     check myconneCT's own filing history for the period before deciding a month was missed
-    — this folder has lagged the filings by months before (see *Filing history*).
+    — that folder has lagged the filings by months before. The filing itself, and what to do
+    when it is missing, is [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md).
 
 ## Open decisions log
 
@@ -315,8 +235,7 @@ This section is the reason the opening warning is written the way it is.
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **Job costs → COGS vs opex** — verify rule 9 against the client's history and filing before relying on it | Julia | To verify |
-| 8 | **Why the CT sales-tax return is a ZERO return** — the basis has never been recorded, and this is a business with revenue. Two parts: (a) *why* no taxable sales; (b) whether the returns should be reporting **gross receipts with a deduction** rather than blank, since OS-114 reports taxable **and** nontaxable sales. Keep filing either way; confirm before anyone represents it | Lilian | To verify |
-| 9 | **What covers 01.2025–09.2025, and are the two DRS notices closed?** The Drive record jumps from `4Q 2024` straight to `10.2025` — nine months with no filing on file in any frequency — and a Delinquency Notice (12.2025) plus a Proposed Assessment (01.2026) sit unopened. Check myconneCT's own filing history and account balance for those periods; an unprotested proposed assessment becomes final. Tracked on `FOLLOW-UPS.md` | Lilian | Pending |
+| 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4, and on `FOLLOW-UPS.md`. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Pending |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
