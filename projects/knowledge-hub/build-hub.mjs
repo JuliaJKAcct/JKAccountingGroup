@@ -1020,25 +1020,33 @@ const srcdocEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;'
 // shared pricing core. Same single sources the standalone tools use, so they never drift.
 function inlineToolDoc(srcFile, title, opts){
   try{
-    const dir = resolve(repoRoot, 'projects/proposal-tool/tools');
+    // Defaults to the proposal-tool folder (where the first three tools live); pass
+    // opts.dir for a tool that lives with its own SOP, e.g. projects/sops/tools.
+    const dir = resolve(repoRoot, (opts && opts.dir) || 'projects/proposal-tool/tools');
     const png = (rel) => 'data:image/png;base64,' + readFileSync(resolve(repoRoot, rel)).toString('base64');
     // Cyrillic subset only for tools that render Russian (the bilingual proposal); keep the
     // calculator embed small. Mirrors the per-tool `cyrillic` flag in the tool's own build.mjs.
     const cyrillic = opts && opts.cyrillic
       ? read(resolve(repoRoot, 'brand/design-system/fonts-cyrillic-embedded.css')) : '';
-    const body = read(resolve(dir, srcFile))
+    const raw = read(resolve(dir, srcFile));
+    // Only the pricing tools carry the shared core; reading it unconditionally would
+    // throw for a tool in any other folder and the catch below would swallow it into a
+    // silent "Tool unavailable" card.
+    const core = raw.includes('/*__PRICING_CORE__*/') ? read(resolve(dir, 'pricing-core.js')) : '';
+    const body = raw
       .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
       .replaceAll('/*__FONTS_CYRILLIC__*/', cyrillic)
       .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
       .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
       .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
-      .replaceAll('/*__PRICING_CORE__*/', read(resolve(dir, 'pricing-core.js')));
+      .replaceAll('/*__PRICING_CORE__*/', core);
     return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
       + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + '</title></head><body>\n'
       + body + '\n</body></html>';
   }catch(e){ return ''; }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
+const ITIN_DOC    = inlineToolDoc('itin-w7-walkthrough.src.html', 'JK Accounting Group — ITIN Application Walkthrough', { dir: 'projects/sops/tools' });
 const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator', { cyrillic: true });
 
 function toolIframe(doc, titleAttr){
@@ -1054,6 +1062,13 @@ function calcReaderInner(){
     + `<h1>Internal Pricing Calculator<span class="loc">Price a monthly client in seconds</span></h1>`
     + `<p class="lede">The interactive front end for the firm's Core Pricing Matrix. Enter a client's service parameters and it builds the monthly fee live — the internal breakdown plus the single bundled fee. <b>Internal only:</b> the client proposal shows just the one bundled fee. It starts fully blank, so no default can carry into a client's price.</p>`
     + `</div></section><div class="page">${toolIframe(CALC_DOC, 'Internal Pricing Calculator')}</div>`;
+}
+function itinReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">ITIN &amp; Acceptance Agent · internal</p>`
+    + `<h1>ITIN Application Walkthrough<span class="loc">Form W-7, decided one applicant at a time</span></h1>`
+    + `<p class="lede">For anyone preparing an ITIN application — including someone who has never done one. It asks plain questions (is this a dependent? which country? how old? do we have the passport?) and works out the <b>reason box</b>, the <b>documents</b>, whether <b>residency proof</b> applies, <b>who may sign</b>, and what goes in the envelope — then prints a <b>preparation sheet for that one applicant</b>. The second tab is a searchable <b>field-by-field reference to every line of Form W-7</b>, to keep open while you fill the form in. The reasoning behind it is the <b>ITIN Application (Form W-7)</b> SOP.</p>`
+    + `</div></section><div class="page">${toolIframe(ITIN_DOC, 'ITIN Application Walkthrough')}</div>`;
 }
 function monthlyReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1829,6 +1844,11 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'pricing-calculator', label: 'Open the calculator' } },
 
+  { band: 'tool', kind: 'Interactive tool', name: 'ITIN Application Walkthrough', owner: 'julia',
+    blurb: 'Prepare an ITIN application (Form W-7) without needing to know the rules first. It asks plain questions — is this a dependent? which country? how old? do we have the passport? — and works out the reason box, the documents to collect, whether U.S. residency has to be proved, who is allowed to sign, and what goes in the envelope; then prints a preparation sheet for that one applicant. Second tab: a searchable field-by-field reference to every line of Form W-7 and Form W-7-COA, to keep open while filling the form in. Nothing is stored — it runs entirely in the browser.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'itin-w7-walkthrough', label: 'Open the walkthrough' } },
+
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
     formats: ['PDF', 'PNG'],
@@ -1868,6 +1888,7 @@ const TEMPLATES = [
 // is reflected in the Hub). Reader ids match the Templates cards' tool.id above.
 readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="itin-w7-walkthrough" hidden>${itinReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="lilian-notebook" hidden>${notebookReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';

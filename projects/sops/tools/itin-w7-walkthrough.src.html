@@ -1,0 +1,723 @@
+<style>
+/*__FONTS__*/
+
+:root{
+  --teal-900:#0D2A31; --teal-800:#123841; --teal-600:#1C5460; --teal-100:#DCE7E9; --teal-50:#EEF4F5;
+  --bronze-600:#7E5430; --bronze-500:#9C6A39; --bronze-100:#F0E3D4; --bronze-50:#F8F1E8;
+  --paper:#F6F3EC; --surface:#FFF; --card:#FBF8F2;
+  --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+  --line:#DAD4C6; --line-2:#C5BEAD;
+  --ok:#2F6B4F; --ok-bg:#E6F0EA;
+  --warn:#8A6410; --warn-bg:#FAF0DA;
+  --err:#8C2F1D; --err-bg:#F8E5E0;
+  --info:#1C5460; --info-bg:#E4EEF0;
+  --serif:'Source Serif 4',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1618; --surface:#12212400; --card:#122124;
+    --ink:#ECE6DA; --body:#C9D2D0; --muted:#93A0A0;
+    --line:#25383B; --line-2:#2E4448;
+    --teal-100:#1B3439; --teal-50:#16292D; --teal-800:#8FC6CE; --teal-600:#7FB8C1; --teal-900:#ECE6DA;
+    --bronze-100:#33261A; --bronze-50:#241B12; --bronze-500:#D6A16A; --bronze-600:#E0B183;
+    --ok:#7BC49B; --ok-bg:#142A21; --warn:#DFB765; --warn-bg:#2C2413;
+    --err:#E79280; --err-bg:#331914; --info:#8FC6CE; --info-bg:#14282C;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1618; --surface:#122124; --card:#122124;
+  --ink:#ECE6DA; --body:#C9D2D0; --muted:#93A0A0;
+  --line:#25383B; --line-2:#2E4448;
+  --teal-100:#1B3439; --teal-50:#16292D; --teal-800:#8FC6CE; --teal-600:#7FB8C1; --teal-900:#ECE6DA;
+  --bronze-100:#33261A; --bronze-50:#241B12; --bronze-500:#D6A16A; --bronze-600:#E0B183;
+  --ok:#7BC49B; --ok-bg:#142A21; --warn:#DFB765; --warn-bg:#2C2413;
+  --err:#E79280; --err-bg:#331914; --info:#8FC6CE; --info-bg:#14282C;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px 80px}
+
+/* ---- masthead ---- */
+.top{background:var(--teal-800);color:#ECE6DA;padding:26px 0 24px;margin-bottom:26px}
+:root[data-theme="dark"] .top{background:#0F2A2F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top{background:#0F2A2F}}
+.top .in{max-width:940px;margin:0 auto;padding:0 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.top img{width:48px;height:48px;flex:none}
+.top .tx{flex:1;min-width:230px}
+.kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#9FB3B6;margin:0 0 5px}
+.top h1{font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.6vw,29px);margin:0;letter-spacing:-.012em;color:#ECE6DA;line-height:1.15}
+.top p{margin:7px 0 0;font-size:14px;color:#B9C9CB;max-width:60ch}
+.tbtns{display:flex;gap:8px}
+.tbtn{background:rgba(255,255,255,.09);border:1px solid rgba(236,230,218,.25);color:#ECE6DA;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;padding:8px 12px;border-radius:8px;cursor:pointer}
+.tbtn:hover{background:rgba(255,255,255,.17)}
+
+/* ---- tabs ---- */
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:26px;flex-wrap:wrap}
+.tab{background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:11px 15px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{color:var(--teal-800);border-bottom-color:var(--bronze-500)}
+.tab:focus-visible,.tbtn:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--bronze-500);outline-offset:2px}
+[hidden]{display:none!important}
+
+/* ---- question cards ---- */
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 14px}
+.q.locked{opacity:.5;pointer-events:none}
+.qn{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--bronze-500);margin:0 0 7px}
+.q h3{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink);margin:0 0 5px;letter-spacing:-.01em}
+.q .hint{font-size:13.5px;color:var(--muted);margin:0 0 14px;line-height:1.5}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:11px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;transition:border-color .15s var(--ease),background .15s var(--ease)}
+.opt:hover{border-color:var(--teal-600)}
+.opt input{margin:3px 0 0;accent-color:var(--teal-600);flex:none}
+.opt input:checked~.ox .ol{color:var(--teal-800)}
+.opt:has(input:checked){border-color:var(--teal-600);background:var(--teal-50)}
+.ox{flex:1;min-width:0}
+.ol{display:block;font-weight:600;color:var(--ink);font-size:15px}
+.od{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.5}
+.inline{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:12px}
+label.fl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+input[type=text],input[type=number],select{width:100%;padding:10px 12px;border:1px solid var(--line-2);border-radius:9px;background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px}
+
+/* ---- buttons ---- */
+.act{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0;align-items:center}
+.btn{font-family:var(--sans);font-weight:600;font-size:15px;border-radius:10px;padding:13px 22px;cursor:pointer;border:1px solid transparent}
+.btn.cta{background:var(--bronze-500);color:#fff;border-color:var(--bronze-500)}
+.btn.cta:hover{background:var(--bronze-600)}
+.btn.ghost{background:transparent;color:var(--teal-800);border-color:var(--line-2)}
+.btn.ghost:hover{border-color:var(--teal-600)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.note-inline{font-size:13px;color:var(--muted)}
+
+/* ---- output sheet ---- */
+.sheet{margin-top:6px}
+.sheet h2{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--ink);margin:0 0 4px;letter-spacing:-.014em}
+.sheet .sub{font-size:14px;color:var(--muted);margin:0 0 22px}
+.blk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 14px;break-inside:avoid}
+.blk>h3{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);margin:0 0 12px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.blk>h3 .num{font-family:var(--mono);font-size:11px;background:var(--teal-800);color:#ECE6DA;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:none}
+:root[data-theme="dark"] .blk>h3 .num{background:var(--teal-100);color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .blk>h3 .num{background:var(--teal-100);color:var(--ink)}}
+.kv{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:9px 16px;font-size:14.5px}
+.kv dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.kv dd{margin:0;color:var(--body)}
+.kv dd b,.blk b{color:var(--ink)}
+.typein{font-family:var(--mono);font-size:13.5px;background:var(--teal-50);border:1px solid var(--teal-100);border-radius:7px;padding:3px 8px;display:inline-block;color:var(--teal-800);word-break:break-word}
+ul.tick,ul.plain{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+ul.tick li{padding-left:27px;position:relative;font-size:14.5px}
+ul.tick li::before{content:"";position:absolute;left:2px;top:7px;width:11px;height:11px;border:1.5px solid var(--line-2);border-radius:3px}
+ul.plain li{padding-left:16px;position:relative;font-size:14.5px}
+ul.plain li::before{content:"·";position:absolute;left:4px;color:var(--bronze-500);font-weight:700}
+.flag{border-left:3px solid var(--line-2);padding:11px 0 11px 15px;margin:13px 0 0;font-size:14px}
+.flag.warn{border-color:var(--warn);background:var(--warn-bg)}
+.flag.err{border-color:var(--err);background:var(--err-bg)}
+.flag.ok{border-color:var(--ok);background:var(--ok-bg)}
+.flag.info{border-color:var(--info);background:var(--info-bg)}
+.flag{border-radius:0 9px 9px 0;padding-right:14px}
+.flag .fl{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.warn .fl{color:var(--warn)} .flag.err .fl{color:var(--err)} .flag.ok .fl{color:var(--ok)} .flag.info .fl{color:var(--info)}
+.stop{background:var(--err-bg);border:1px solid var(--err);border-radius:14px;padding:22px}
+.stop h3{color:var(--err);font-family:var(--serif);font-size:21px;margin:0 0 8px}
+
+/* ---- field reference ---- */
+details.f{border:1px solid var(--line);border-radius:11px;background:var(--card);margin:0 0 8px;overflow:hidden}
+details.f>summary{cursor:pointer;padding:13px 17px;list-style:none;display:flex;gap:13px;align-items:baseline}
+details.f>summary::-webkit-details-marker{display:none}
+details.f>summary::after{content:"+";margin-left:auto;color:var(--bronze-500);font-family:var(--mono);font-size:16px;flex:none}
+details.f[open]>summary::after{content:"–"}
+details.f[open]>summary{border-bottom:1px solid var(--line);background:var(--teal-50)}
+.fline{font-family:var(--mono);font-size:11.5px;color:var(--bronze-500);font-weight:500;flex:none;min-width:44px}
+.ftitle{font-weight:600;color:var(--ink);font-size:15px}
+.fbody{padding:16px 17px 18px}
+.fbody p{margin:0 0 10px;font-size:14.5px}
+.fbody p:last-child{margin-bottom:0}
+.fgrp{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.fgrp:first-of-type{margin-top:0}
+.trap{background:var(--err-bg);border-radius:8px;padding:10px 13px;font-size:13.5px;margin-top:10px;color:var(--body)}
+.trap b{color:var(--err)}
+.srch{width:100%;padding:12px 14px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);font-size:15px;margin-bottom:16px;font-family:var(--sans)}
+.nores{color:var(--muted);font-size:14px;padding:16px 0;display:none}
+
+@media print{
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .top,.tabs,.act,.tbtns,#walk,.noprint{display:none!important}
+  .wrap{padding:0;max-width:none}
+  .blk{border:.5pt solid #999;background:#fff;break-inside:avoid;margin-bottom:9pt;padding:9pt 11pt}
+  .sheet h2{font-size:16pt}
+  .flag{background:#f4f4f4!important;border-left-width:2pt}
+  .typein{background:#eee;border-color:#bbb}
+  a{color:#000;text-decoration:underline}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="top">
+  <div class="in">
+    <img src="__MEDALLION_REV__" alt="">
+    <div class="tx">
+      <p class="kick">JK Accounting Group · internal tool</p>
+      <h1>ITIN Application Walkthrough</h1>
+      <p>Answer the questions in plain language. It works out the reason box, the documents, and who signs — then prints a preparation sheet for this one applicant.</p>
+    </div>
+    <div class="tbtns">
+      <button class="tbtn" id="themeBtn" type="button">Theme</button>
+      <button class="tbtn" id="printBtn" type="button">Print</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab" id="tabWalk" role="tab" aria-selected="true" aria-controls="walk" type="button">Walkthrough</button>
+    <button class="tab" id="tabRef" role="tab" aria-selected="false" aria-controls="ref" type="button">Field reference — every line of Form W-7</button>
+  </div>
+
+  <!-- ============================= WALKTHROUGH ============================= -->
+  <section id="walk" role="tabpanel" aria-labelledby="tabWalk">
+    <div id="questions"></div>
+    <div class="act">
+      <button class="btn cta" id="build" type="button" disabled>Build the preparation sheet</button>
+      <button class="btn ghost" id="reset" type="button">Start over</button>
+      <span class="note-inline" id="progress"></span>
+    </div>
+    <div id="out" class="sheet" hidden></div>
+  </section>
+
+  <!-- ============================= REFERENCE ============================= -->
+  <section id="ref" role="tabpanel" aria-labelledby="tabRef" hidden>
+    <input class="srch" id="srch" type="text" placeholder="Search the form — try “6d”, “foreign address”, “signature”, “office code”…" aria-label="Search fields">
+    <div id="fields"></div>
+    <p class="nores" id="nores">Nothing matches that. Try a line number (<b>6c</b>), or a word from the form (<b>visa</b>, <b>delegate</b>).</p>
+  </section>
+</div>
+
+<script>
+"use strict";
+/* =========================================================================
+   Form W-7 (Rev. December 2024) · Form W-7-COA (Rev. August 2025)
+   Field text below is taken from the printed forms; the rules from the
+   Instructions for Form W-7, Pub 1915 and Pub 5726. When the IRS revises a
+   form, update FIELDS[] and the rule functions together.
+   ========================================================================= */
+
+/* ---------------------------- the field reference ---------------------- */
+var FIELDS = [
+ {g:'Before the form'},
+ {n:'Type', t:'Application type — new or renewal', k:'new renew renewal existing',
+  b:"<p>Two boxes: <b>Apply for a new ITIN</b> or <b>Renew an existing ITIN</b>. Check exactly one.</p><p><b>Renew</b> if the applicant already has an ITIN and it has expired or is about to. An ITIN that has not appeared on a U.S. federal tax return at least once in the last three consecutive tax years expires on <b>31 December of that third year</b>. ITINs assigned before 2013 and never renewed have already expired.</p><p>Renew only when there is a <b>federal tax filing purpose</b> — do not renew an ITIN nobody is about to use.</p>",
+  trap:"If you check <b>Renew</b>, lines <b>6e and 6f</b> stop being optional — the existing ITIN has to be written there."},
+
+ {g:'Why they are applying'},
+ {n:'a', t:'Nonresident alien claiming a tax treaty benefit', k:'treaty nonresident article a',
+  b:"<p>Exact wording on the form: <em>“Nonresident alien required to get an ITIN to claim tax treaty benefit.”</em></p><p><b>Box a never travels alone.</b> The form says you must also check and complete <b>box h</b>, and fill in the <b>treaty country and treaty article number</b> on the “Additional information for a and f” line.</p>",
+  trap:"The treaty country must be the <b>same country</b> you write on line 3. If they disagree, the application is wrong on its face."},
+ {n:'b', t:'Nonresident alien filing a U.S. federal tax return', k:'nonresident return b',
+  b:"<p>They are not a resident for tax purposes and they are filing a U.S. return — to report income, or to claim a refund.</p><p>Reason b <b>requires a complete foreign (non-U.S.) address on line 3.</b> There is no version of box b where line 3 is blank.</p>"},
+ {n:'c', t:'U.S. resident alien (by days present) filing a return', k:'resident substantial presence c days',
+  b:"<p>Resident <em>for tax purposes</em> because of the <b>substantial presence test</b> — days physically in the U.S. — while having no work-authorised status that would give them an SSN.</p><p>This is the box people get wrong by thinking about immigration status instead of tax status. Work it out with <b>Publication 519</b> before choosing between b and c.</p>",
+  trap:"Reason c requires the <b>date of entry into the United States</b> on line 6d."},
+ {n:'d', t:'Dependent of a U.S. citizen or resident alien', k:'dependent child d relationship',
+  b:"<p>Someone claimed as a dependent on a U.S. return who cannot get an SSN.</p><p>Two things go on the dotted lines and both are mandatory: the <b>relationship</b> to the U.S. citizen/resident alien (parent, child, grandchild…), and — shared with box e — the <b>full name and SSN or ITIN of that U.S. citizen/resident alien</b>.</p><p>Also enter the <b>date of entry into the United States</b> on line 6d, except for dependents of U.S. military stationed overseas, or Canada/Mexico dependents claimed for an allowable benefit other than the credit for other dependents.</p>",
+  trap:"A dependent must be a U.S. citizen or resident alien, <b>or reside in Mexico or Canada</b>. A W-7 for a dependent who is neither is on the IRS's top-10 error list."},
+ {n:'e', t:'Spouse of a U.S. citizen or resident alien', k:'spouse e married joint',
+  b:"<p>Enter the <b>full name and SSN or ITIN of the U.S. citizen/resident alien</b> on the dotted line — same field box d uses.</p><p>Note the standing limit: a spouse should not apply or renew <b>unless</b> they are filing their own return or are claimed for an allowable tax benefit.</p>"},
+ {n:'f', t:'Nonresident alien student, professor or researcher', k:'student professor researcher f school visa',
+  b:"<p>Filing a U.S. return, or claiming an exception. If claiming an exception, <b>also check and complete box h</b>.</p><p>Reason f makes several lines mandatory: <b>6a, 6c, 6d and 6g</b>. It also normally requires a <b>passport with a valid U.S. visa</b> — except for residents of Canada, Mexico or Bermuda.</p>"},
+ {n:'g', t:'Dependent or spouse of a nonresident alien holding a U.S. visa', k:'g visa dependent spouse nonresident',
+  b:"<p>Attach a <b>copy of the visa</b> and enter the <b>date of entry into the United States</b> on line 6d.</p>"},
+ {n:'h', t:'Other', k:'h other exception',
+  b:"<p>For anything a–g does not describe — most often <b>third-party information reporting</b> where one of the five Exceptions applies.</p><p>On the dotted line beside box h, write the <b>exception number, its letter subsection and the category</b>, exactly in this shape:</p><p><span class='typein'>Exception 1d-Pension Distributions</span></p>",
+  trap:"Box h is also the box you are <b>forced</b> into as a second checkbox by boxes a and f. Checking a treaty box without h is incomplete."},
+
+ {g:'Name and addresses'},
+ {n:'1a', t:'First name · Middle name · Last name', k:'1a name legal surname',
+  b:"<p>The applicant's legal name <b>exactly as it appears on the identity documents</b>, and it must match the name on any attached tax return.</p><p>Many of our clients' cultures use <b>two surnames</b>, or names with a hyphen or an apostrophe. Reproduce what the document shows — do not tidy it, shorten it, or drop the second surname because a field looks short.</p>",
+  trap:"A mismatch between line 1a, the passport, and the attached return is one of the most common causes of a suspended application."},
+ {n:'1b', t:'Name at birth, if different', k:'1b birth maiden name changed',
+  b:"<p>Only if it differs from 1a. If a name changed on marriage but the surname is once again the birth surname, leave 1b blank.</p><p>On a <b>renewal where the legal name has changed</b>, attach the supporting document — marriage certificate or court order.</p>"},
+ {n:'2', t:'Applicant’s mailing address', k:'2 mailing address po box',
+  b:"<p>This is where the IRS <b>returns the original documents</b> and sends every notice about the application, including the ITIN itself. Get it right or the passport goes to the wrong place.</p><p><b>P.O. boxes:</b> allowed only if the U.S. Postal Service will not deliver to the physical location — and it must be a <b>USPS</b> box. A mailbox rented from a private company is not acceptable.</p>",
+  trap:"If the client moves before the ITIN arrives, file <b>Form 8822</b> immediately, with the ITIN or the notice reference number in the SSN field."},
+ {n:'3', t:'Foreign (non-U.S.) address', k:'3 foreign address country',
+  b:"<p>A <b>complete non-U.S. address — even if it is identical to line 2.</b></p><p>If they no longer have a permanent address abroad because they have moved to the U.S., enter <b>only the name of the country</b> where they last resided.</p><p><b>No P.O. box. No “in care of” (c/o) address.</b></p>",
+  trap:"Reason b <em>always</em> needs line 3 filled. And if a treaty benefit is claimed, the country here must match the treaty country."},
+
+ {g:'Who they are'},
+ {n:'4', t:'Date of birth · country of birth · city', k:'4 birth date country dob',
+  b:"<p>Date as <b>MM/DD/YYYY</b> — 1 January 1972 is <span class='typein'>01/01/1972</span>.</p><p>The country of birth must be one <b>recognised by the U.S. Department of State</b>. City and state or province are optional but fill them when you know them.</p><p>Note: enter the country as it is <b>now</b> named where the historical name has changed.</p>"},
+ {n:'5', t:'Gender', k:'5 gender male female other sex',
+  b:"<p>The December 2024 revision offers <b>three</b> boxes: Male, Female, <b>Other</b>. Older guidance that says “male or female” predates this form.</p>"},
+ {n:'6a', t:'Country(ies) of citizenship', k:'6a citizenship country dual',
+  b:"<p>Write the <b>complete country name — never an abbreviation</b>. “UK” and “RU” are not answers.</p><p>Dual citizenship: enter both, separated by a slash <span class='typein'>/</span>.</p><p>Mandatory when reason f is checked.</p>"},
+ {n:'6b', t:'Foreign tax I.D. number (if any)', k:'6b foreign tax id number',
+  b:"<p>Only if their country of residence has issued them one — for example a Canadian Social Insurance Number. Leave blank if there is none; do not invent a placeholder.</p>"},
+ {n:'6c', t:'Type of U.S. visa, number and expiration date', k:'6c visa number expiration ds i-20 i-94',
+  b:"<p>All three parts on one line, in this shape:</p><p><span class='typein'>B-1/B-2, 123456, 12/31/2026</span></p><p>If the visa was issued for <b>duration of stay</b>, enter <span class='typein'>D/S</span> as the expiration date.</p><p><b>Attach any I-20 or I-94</b> to the Form W-7.</p><p>Mandatory when reason f is checked.</p>"},
+ {n:'6d', t:'Identification document(s) submitted', k:'6d documents passport issued number expiry entry date',
+  b:"<p>The <b>printed form gives only four tick-boxes</b> — Passport · Driver's license/State I.D. · USCIS documentation · Other — even though <b>thirteen</b> document types are acceptable. Anything not covered by the first three goes under <b>Other</b>, written in.</p><p>Then fill: <b>Issued by</b> (the state, country or other issuer) · <b>Number</b> · <b>Exp. date</b> (MM/DD/YYYY).</p><p><b>Multiple documents:</b> put only the <b>first</b> document's details on this line, and attach a separate sheet with the others in the same format.</p><p><b>Date of entry into the United States</b> lives on this line too, as MM/DD/YYYY. If they have never entered, write <span class='typein'>Never entered the United States</span>.</p>",
+  trap:"Reasons <b>c, d and g</b> all require the date of entry. Leaving it blank is the IRS's error #9."},
+ {n:'6e', t:'Previously received an ITIN or IRSN?', k:'6e previous itin irsn',
+  b:"<p>Two boxes: <b>No / Don't know</b> (skip 6f), or <b>Yes</b> (complete 6f).</p><p>An <b>IRSN</b> is a temporary Internal Revenue Service Number the IRS assigns internally — a client may have one without knowing the word, so ask whether the IRS has ever written to them with a number that was not an SSN.</p><p>If there is more than one, list them on a sheet and attach it.</p>"},
+ {n:'6f', t:'The previous ITIN / IRSN and the name it was issued under', k:'6f previous number name issued',
+  b:"<p>Enter the ITIN and/or the IRSN, then the <b>first, middle and last name it was issued under</b> — which may not be today's name.</p><p>Mandatory on every <b>renewal</b>.</p>"},
+ {n:'6g', t:'Name of college / university or company', k:'6g college university company school length stay',
+  b:"<p>Only for reason <b>f</b>. Enter the <b>name of the educational institution</b>, the <b>city and state</b> where it is, and the applicant's <b>length of stay</b> in the United States.</p><p>If they are here temporarily for business rather than study, enter the same three things for the <b>company</b> instead.</p>"},
+
+ {g:'Signatures'},
+ {n:'Sign', t:'Signature of applicant — or of a delegate', k:'sign signature delegate parent guardian power attorney witness',
+  b:"<p>The applicant signs, and the signature must match the name on <b>line 1a</b>.</p><p>If someone else signs, the form calls them a <b>delegate</b>: print the delegate's name and tick their relationship — <b>Parent</b>, <b>Power of attorney</b>, or <b>Court-appointed guardian</b>. There is no fourth option.</p><p><b>Under 18:</b> the applicant, a parent, or a court-appointed guardian. <b>18 or over:</b> the applicant, a court-appointed guardian, or a parent; anyone else needs <b>Form 2848</b>.</p><p><b>Cannot sign at all:</b> they mark an <b>X or a thumbprint in front of a witness</b>, and the witness signs and is identified as a witness.</p>",
+  trap:"<b>A spouse cannot sign for a spouse</b> unless the <b>Power of attorney</b> box is ticked and Form 2848 is attached. This surprises people every time."},
+ {n:'Date', t:'Date signed — and the five-day clock', k:'date signed five days business',
+  b:"<p>Date it on the day it is signed. Then the agent must <b>submit it within five (5) business days</b>.</p><p>A signed W-7 sitting in a folder is a defect, not a pending task.</p>"},
+ {n:'AA', t:'Acceptance Agent’s Use ONLY', k:'acceptance agent office code ein ptin fax responsible party',
+  b:"<p>Nine things, and all of them come from the firm's approved Acceptance Agent application — not from the person typing:</p><p><b>Signature</b> of the responsible party · <b>Date</b> · <b>Phone</b> · <b>Fax</b> · <b>Name and title</b> · <b>Name of company</b> · <b>EIN</b> · <b>PTIN</b> · <b>Office code</b>.</p><p>The <b>office code</b> is the 8-digit number the ITIN Policy Section assigns once the agreement is approved. The IRS derives it from the firm's EFIN preceded by two zeros — which is why it looks familiar.</p>",
+  trap:"The signature must be a <b>responsible party named on the firm's Acceptance Agent application</b>. Nobody else in the office can sign this block, however senior."},
+
+ {g:'Form W-7-COA — the Certificate of Accuracy'},
+ {n:'COA', t:'What it is, and its 2025 rename', k:'coa certificate accuracy w-7-coa responsible party',
+  b:"<p>The current form is <b>Form W-7-COA (Rev. August 2025)</b>. It used to be styled <b>Form W-7 (COA)</b>, and older publications still call it that — same document.</p><p>A <b>CAA attaches one to every single Form W-7</b> it submits. It certifies that the applicant is not eligible for an SSN and that we reviewed documentation supporting <b>identity</b>, <b>foreign status</b> and, where it applies, <b>residency</b>.</p>"},
+ {n:'COA', t:'What goes on it', k:'coa fields business name agreement date checkboxes identity foreign status',
+  b:"<p>The responsible party's name · the <b>CAA business name</b> · the <b>date the Acceptance Agent Agreement was entered into</b> · the <b>applicant's name</b> · then a document table with <b>two tick columns: Identity and Foreign Status</b> — tick under each category for every document reviewed.</p><p>Bottom block: signature of the responsible party, date signed, and the Acceptance Agent's <b>EIN, office code and PTIN</b>.</p>",
+  trap:"The COA carries the agreement date. If nobody in the office knows it, the firm's agreement paperwork has not been filed properly — find it before the first application, not during."},
+ {n:'COA', t:'What the COA does NOT cover', k:'coa supplemental residency exception denial letter attach',
+  b:"<p>The form says it plainly: <b>all supplemental documentation — residency support, Exception criteria, and any SSA denial letter — must still be attached to the Form W-7 itself.</b></p><p>The COA describes identity and foreign status. It is not a wrapper for the rest of the package.</p>"},
+ {n:'COA', t:'Retention', k:'coa retain copies records keep',
+  b:"<p>The form commits us to it in writing: the CAA <b>retains copies of all relevant documents, including signed copies of the Forms W-7</b> submitted on the applicant's behalf, that we relied on to certify identity and foreign status.</p><p>Those copies live in the client's folder in Drive or Double — never in the firm's repo.</p>"}
+];
+
+/* ---------------------------- the walkthrough --------------------------- */
+var A = {}; // answers
+
+var Q = [
+ {id:'apptype', n:'Start', h:'Is this a new ITIN, or a renewal?',
+  hint:'A renewal is for someone who already has an ITIN that has expired or is about to. Renew only if a federal tax return actually needs it.',
+  o:[['new','Apply for a new ITIN','They have never had one.'],
+     ['renew','Renew an existing ITIN','They have an ITIN already. Lines 6e and 6f become mandatory.']]},
+
+ {id:'ssn', n:'The gate', h:'Could this person get a Social Security Number?',
+  hint:'This decides whether there is an application at all — someone eligible for an SSN is not eligible for an ITIN. If you are unsure, check ssa.gov before going further. Students on an F, J or M visa who will not work, and people receiving only honoraria, do not have to go to the SSA first.',
+  o:[['no','No — they are not eligible for an SSN','The ordinary case. Continue.'],
+     ['denied','They applied and the SSA refused','Fine — but the SSA denial letter must be attached to the W-7.'],
+     ['school','They are an F / J / M student not working, or receive only honoraria','No SSA visit needed. A letter from the school official replaces the SSA letter.'],
+     ['yes','Yes — or they hold a visa that permits work','Stop. Send them to the SSA first.']]},
+
+ {id:'role', n:'The reason box', h:'Which of these describes the applicant best?',
+  hint:'Pick the ONE that fits best. Checking two boxes that do not go together is the single most common error on this form.',
+  o:[['b','They are filing their own U.S. tax return, and are a nonresident','→ box b'],
+     ['c','They are filing their own U.S. tax return, and count as a U.S. resident because of days spent in the U.S.','→ box c (the substantial presence test — check Pub 519)'],
+     ['d','They are claimed as a dependent on a U.S. citizen’s or resident alien’s return','→ box d'],
+     ['e','They are the spouse of a U.S. citizen or resident alien','→ box e'],
+     ['g','They are the dependent or spouse of a nonresident alien who holds a U.S. visa','→ box g'],
+     ['f','They are a student, professor or researcher temporarily in the U.S.','→ box f'],
+     ['a','None of the above — they need the ITIN to claim a tax treaty benefit','→ box a, plus box h'],
+     ['h','None of the above — a bank, lender or other third party asked for a number','→ box h, with an Exception']]},
+
+ {id:'treaty', n:'Treaty', h:'Which treaty country and article?',
+  when:function(a){return a.role==='a';},
+  free:[['tcountry','Treaty country'],['tarticle','Treaty article number']],
+  hint:'Both go on the “Additional information for a and f” line. Publication 901 lists the article by country. The treaty country must equal the country you write on line 3.'},
+
+ {id:'ret', n:'The return', h:'Is a U.S. federal tax return being attached to this W-7?',
+  hint:'Normally one must be. There are exactly five Exceptions — situations where proof of the exception is attached instead of a return.',
+  o:[['yes','Yes — a return is attached','The ordinary case.'],
+     ['no','No — we are claiming an Exception','You will need the exception’s own proof instead.']]},
+
+ {id:'exc', n:'Exception', h:'Which Exception applies?',
+  when:function(a){return a.ret==='no';},
+  hint:'Each one has its own required proof. Publication 1915 holds the full tables and worked examples.',
+  o:[['1a','1(a) — partner in a partnership doing business in the U.S.','Proof: a copy of the portion of the partnership or LLC agreement.'],
+     ['1b','1(b) — a bank or financial account generating reportable income','Proof: an original signed letter from the bank on letterhead.'],
+     ['1c','1(c) — other third-party withholding on passive income','Proof: an original signed letter from the withholding agent.'],
+     ['1d','1(d) — pension or annuity distributions','Proof: an original signed letter from the withholding agent.'],
+     ['2','2 — wages, scholarship, fellowship, grant or gambling winnings','Usually needs the SSA denial letter, or a school-official certification letter.'],
+     ['3','3 — a mortgage: the lender reports interest on Form 1098','Proof: evidence of the home mortgage loan.'],
+     ['4','4 — selling U.S. real property as a foreign person (FIRPTA)','Proof: the withholding or non-recognition documentation.'],
+     ['5','5 — a TD 9363 reporting requirement','Proof: the supplemental documentation TD 9363 calls for.']]},
+
+ {id:'age', n:'The applicant', h:'How old is the applicant?',
+  hint:'Age changes three things: whether a photograph is required, which residency documents count, and who is allowed to sign.',
+  num:'Age in years'},
+
+ {id:'student', n:'The applicant', h:'Is the applicant a full-time student?',
+  when:function(a){return num(a.age)>=14 && num(a.age)<24;},
+  hint:'It matters for the photograph rule (under 18 if a student) and for whether school records can be used.',
+  o:[['yes','Yes, a student',''],['no','No','']]},
+
+ {id:'depres', n:'Dependent rules', h:'Where does this dependent live?',
+  when:function(a){return a.role==='d'||a.role==='g';},
+  hint:'This is where two separate IRS tests start, and they have different carve-outs. Answer for where the dependent actually resides.',
+  o:[['cm','Canada or Mexico',''],
+     ['mil','Elsewhere, and they are a dependent of U.S. military personnel stationed overseas',''],
+     ['other','Elsewhere — neither of the above','']]},
+
+ {id:'odc', n:'Dependent rules', h:'Is the ONLY tax benefit being claimed for this dependent the Credit for Other Dependents (ODC)?',
+  when:function(a){return (a.role==='d'||a.role==='g') && a.depres==='cm';},
+  hint:'If they are also claimed for something else — the Child Tax Credit, for instance — answer No. This one answer decides whether we need a residency document.',
+  o:[['yes','Yes — ODC only',''],['no','No — another allowable benefit is claimed too','']]},
+
+ {id:'pass', n:'Documents', h:'Do we have the applicant’s passport?',
+  hint:'A passport is the only document that proves identity AND foreign status on its own. Without it, at least two other documents are needed.',
+  o:[['yes','Yes — a valid, unexpired passport',''],
+     ['no','No passport','We will need a combination of documents instead.']]},
+
+ {id:'entry', n:'Documents', h:'Does the passport show a date of entry into the United States?',
+  when:function(a){return a.pass==='yes' && (a.role==='d'||a.role==='g');},
+  hint:'For a dependent this decides whether the passport can stand alone at all.',
+  o:[['yes','Yes',''],['no','No / cannot find one','']]},
+
+ {id:'signer', n:'Signature', h:'Who will sign the Form W-7?',
+  hint:'If it is not the applicant, the form calls the signer a “delegate” and offers exactly three relationships.',
+  o:[['self','The applicant, personally',''],
+     ['parent','A parent','Delegate box: Parent'],
+     ['guardian','A court-appointed guardian','Delegate box: Court-appointed guardian. Attach the court papers.'],
+     ['poa','Someone holding Power of Attorney','Delegate box: Power of attorney. Attach Form 2848.'],
+     ['mark','The applicant cannot sign — they will make a mark','Needs a witness who signs and is identified as a witness.']]},
+
+ {id:'caa', n:'Our role', h:'Is the firm acting as a Certifying Acceptance Agent on this application?',
+  hint:'Only if the firm’s CAA agreement is signed and live. If it is not, we are helping the client file — the originals travel to Austin.',
+  o:[['yes','Yes — our CAA agreement is signed and live','We authenticate, and attach Form W-7-COA.'],
+     ['no','No — not a CAA (or not yet approved)','Originals or issuing-agency certified copies go with the application.']]}
+];
+
+function num(v){ var n = parseInt(v,10); return isNaN(n) ? -1 : n; }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+/* ------------------------------ render Qs ------------------------------ */
+function active(){ return Q.filter(function(q){ return !q.when || q.when(A); }); }
+
+function renderQuestions(){
+  var host = document.getElementById('questions');
+  var list = active(), html = '', i = 0, blocked = false;
+  list.forEach(function(q){
+    i++;
+    var answered = q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id] !== undefined && A[q.id] !== '');
+    var lock = blocked ? ' locked' : '';
+    html += '<div class="q'+lock+'" data-q="'+q.id+'">';
+    html += '<p class="qn">'+esc(q.n)+' · question '+i+'</p>';
+    html += '<h3>'+esc(q.h)+'</h3>';
+    if (q.hint) html += '<p class="hint">'+q.hint+'</p>';
+    if (q.o){
+      html += '<div class="opts">';
+      q.o.forEach(function(o){
+        var id = q.id+'_'+o[0];
+        html += '<label class="opt" for="'+id+'"><input type="radio" id="'+id+'" name="'+q.id+'" value="'+o[0]+'"'+(A[q.id]===o[0]?' checked':'')+'>'
+             +  '<span class="ox"><span class="ol">'+esc(o[1])+'</span>'+(o[2]?'<span class="od">'+esc(o[2])+'</span>':'')+'</span></label>';
+      });
+      html += '</div>';
+    }
+    if (q.num){
+      html += '<div class="inline"><div><label class="fl" for="'+q.id+'_n">'+esc(q.num)+'</label>'
+           +  '<input type="number" min="0" max="120" id="'+q.id+'_n" name="'+q.id+'" value="'+(A[q.id]||'')+'"></div></div>';
+    }
+    if (q.free){
+      html += '<div class="inline">';
+      q.free.forEach(function(f){
+        html += '<div><label class="fl" for="'+f[0]+'">'+esc(f[1])+'</label><input type="text" id="'+f[0]+'" name="'+f[0]+'" value="'+esc(A[f[0]]||'')+'"></div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    // a hard stop at the SSN gate: nothing after it matters
+    if (q.id==='ssn' && A.ssn==='yes') blocked = true;
+    if (!answered) blocked = true;
+  });
+  host.innerHTML = html;
+
+  var total = list.length;
+  var done = list.filter(function(q){
+    return q.free ? q.free.every(function(f){ return A[f[0]]; }) : (A[q.id]!==undefined && A[q.id]!=='');
+  }).length;
+  var ready = (A.ssn==='yes') || done===total;
+  document.getElementById('build').disabled = !ready;
+  document.getElementById('progress').textContent = A.ssn==='yes'
+    ? 'Stop here — see below.'
+    : done+' of '+total+' answered';
+  if (A.ssn==='yes') buildSheet();
+}
+
+// Clear answers whose question no longer applies, so a changed mind can't leave a
+// stale answer behind driving the sheet (e.g. answering the ODC question, then
+// switching the dependent's country to one where ODC is irrelevant).
+function prune(){
+  Q.forEach(function(q){
+    if (q.when && !q.when(A)){ delete A[q.id]; if (q.free) q.free.forEach(function(f){ delete A[f[0]]; }); }
+  });
+}
+// Typed fields re-render too — otherwise entering an age leaves the questions it
+// unlocks (and the ones it reveals, like the student question) inert until some
+// other event happens to redraw. Focus and caret are restored so typing is unbroken.
+function answered(t){
+  A[t.name] = t.value;
+  prune();
+  var out = document.getElementById('out');
+  if (!out.hidden && A.ssn !== 'yes') out.hidden = true;
+  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
+  renderQuestions();
+  if (id){
+    var again = document.getElementById(id);
+    if (again && again.type === t.type){
+      again.focus();
+      if (pos != null && again.setSelectionRange){ try { again.setSelectionRange(pos, pos); } catch (_) {} }
+    }
+  }
+}
+document.getElementById('questions').addEventListener('change', function(e){
+  if (e.target.name && e.target.type === 'radio') answered(e.target);
+});
+document.getElementById('questions').addEventListener('input', function(e){
+  if (e.target.name && (e.target.type === 'text' || e.target.type === 'number')) answered(e.target);
+});
+
+/* --------------------------- the preparation sheet --------------------- */
+var BOX = {a:'a',b:'b',c:'c',d:'d',e:'e',f:'f',g:'g',h:'h'};
+
+function buildSheet(){
+  var out = document.getElementById('out'), h = '';
+
+  /* --- hard stop --- */
+  if (A.ssn === 'yes'){
+    out.innerHTML = '<div class="stop"><h3>Stop — this person is not eligible for an ITIN</h3>'
+      + '<p>Someone who can get a Social Security Number cannot have an ITIN. Send them to the Social Security Administration to apply on <b>Form SS-5</b>.</p>'
+      + '<p>If the SSA <b>refuses</b>, come back: get their <b>denial letter</b>, restart this walkthrough and answer “They applied and the SSA refused”. Without that letter the W-7 will be rejected.</p></div>';
+    out.hidden = false; out.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+
+  var age = num(A.age), isDep = (A.role==='d' || A.role==='g');
+  var student = A.student === 'yes';
+
+  h += '<h2>Preparation sheet</h2><p class="sub">Built from your answers. Print this and keep it beside the form. It is not a substitute for reading the SOP — it is the SOP applied to one person.</p>';
+
+  /* --- 1. the form's top --- */
+  var box = A.role, extras = [];
+  if (A.role==='a') extras.push('box <b>h</b> as well (mandatory with a treaty claim)');
+  if (A.role==='f' && A.ret==='no') extras.push('box <b>h</b> as well (an exception is being claimed)');
+  h += '<div class="blk"><h3><span class="num">1</span>The top of the form</h3><dl class="kv">';
+  h += '<dt>Application type</dt><dd><b>'+(A.apptype==='renew'?'Renew an existing ITIN':'Apply for a new ITIN')+'</b>'
+     + (A.apptype==='renew'?' — and lines <b>6e and 6f</b> are now mandatory. Attach proof of any legal name change.':'')+'</dd>';
+  h += '<dt>Reason box</dt><dd>Check <b>box '+esc(BOX[box])+'</b>'+(extras.length?', and '+extras.join(', '):'')+'.</dd>';
+  if (A.role==='d') h += '<dt>Dotted line, box d</dt><dd>The dependent’s <b>relationship</b> to the U.S. citizen / resident alien — parent, child, grandchild…</dd>';
+  if (A.role==='d'||A.role==='e') h += '<dt>Dotted line, d/e</dt><dd>The <b>full name and SSN or ITIN of the U.S. citizen / resident alien</b>. Mandatory — get it before the appointment.</dd>';
+  if (A.role==='a') h += '<dt>Treaty line</dt><dd><span class="typein">'+esc(A.tcountry||'')+'</span> · article <span class="typein">'+esc(A.tarticle||'')+'</span> — and this country must equal the country on line 3.</dd>';
+  if (A.ret==='no') h += '<dt>Beside box h</dt><dd>Write the exception in this shape: <span class="typein">Exception '+esc(A.exc)+'-&lt;category&gt;</span></dd>';
+  h += '</dl></div>';
+
+  /* --- 2. lines that are mandatory for THIS applicant --- */
+  var must = [];
+  if (A.role==='b') must.push('<b>Line 3</b> — a complete foreign (non-U.S.) address. Reason b always requires it.');
+  if (A.role==='c') must.push('<b>Line 6d</b> — the date of entry into the United States.');
+  if (A.role==='g') must.push('<b>Line 6d</b> — the date of entry into the United States, and attach a <b>copy of the visa</b>.');
+  if (A.role==='d'){
+    if (A.depres==='mil' || (A.depres==='cm' && A.odc==='no')) must.push('<b>Line 6d</b> — date of entry <em>not</em> required for this dependent, but fill it if you have it.');
+    else must.push('<b>Line 6d</b> — the date of entry into the United States.');
+  }
+  if (A.role==='f') must.push('<b>Lines 6a, 6c, 6d and 6g</b> are all mandatory for a student, professor or researcher.');
+  if (A.role==='a') must.push('<b>Line 3</b> country must match the treaty country exactly.');
+  if (A.apptype==='renew') must.push('<b>Lines 6e and 6f</b> — the existing ITIN/IRSN and the name it was issued under.');
+  must.push('<b>Line 1a</b> — the name exactly as on the identity documents, and identical on the attached return.');
+  must.push('<b>Line 4</b> — full birth date and a country recognised by the U.S. Department of State.');
+  must.push('<b>Line 6a</b> — the country name written out in full, never abbreviated.');
+  h += '<div class="blk"><h3><span class="num">2</span>Lines you cannot leave blank on this one</h3><ul class="tick"><li>'+must.join('</li><li>')+'</li></ul>';
+  h += '<div class="flag info"><span class="fl">Line 2 — where the passport comes back to</span>The IRS returns original documents and sends the ITIN to the line 2 address. A P.O. box is acceptable <b>only</b> if USPS will not deliver to the physical address, and only a <b>USPS</b> box — never one rented from a private mailbox company.</div></div>';
+
+  /* --- 3. documents --- */
+  h += '<div class="blk"><h3><span class="num">3</span>Documents to collect</h3>';
+  if (A.pass === 'yes'){
+    h += '<p>A <b>valid, unexpired passport</b> is the only stand-alone document — it proves identity and foreign status by itself.</p>';
+    h += '<ul class="tick"><li>Passport, unexpired <b>as at the date the W-7 is submitted</b>.</li>';
+    h += '<li>If a visa is required for this application, the copy <b>must include the U.S. visa pages</b>.</li></ul>';
+  } else {
+    h += '<div class="flag warn"><span class="fl">No passport — the rules change</span>You now need <b>at least two</b> documents from the list of thirteen, and <b>one must carry a recent photograph</b>'
+      +  ((age>=0 && (age<14 || (age<18 && student))) ? ' — <b>except that this applicant is exempt</b> from the photograph requirement (under 14, or under 18 and a student).' : '.')
+      +  '</div>';
+    if (isDep || age < 18) h += '<div class="flag err"><span class="fl">And a civil birth certificate is required</span>Where no passport is provided, a dependent’s documentation <b>must</b> include a civil birth certificate. Form W-7-COA repeats this for any applicant under 18.</div>';
+    h += '<p style="margin-top:13px">The thirteen acceptable documents:</p><ul class="plain">'
+      + '<li>Passport · USCIS photo ID · U.S. Department of State visa</li>'
+      + '<li>U.S. driver’s licence · U.S. state ID card · U.S. military ID card</li>'
+      + '<li>Foreign driver’s licence · foreign military ID card · foreign voter’s registration card</li>'
+      + '<li>National identification card — current, showing name, address, photograph, date of birth and expiry</li>'
+      + '<li>Civil birth certificate</li>'
+      + '<li>Medical records — <b>dependents under 6 only</b></li>'
+      + '<li>School records — <b>dependents under 24 only, if a student</b></li></ul>';
+  }
+  h += '<div class="flag err"><span class="fl">The rule people break</span>Documents must be <b>originals</b>, or <b>copies certified by the agency that issued them</b>. <b>Notarised copies are not accepted</b> — the only exception is spouses and dependents of U.S. military personnel applying from an overseas or APO/FPO address, who must also include a copy of the servicemember’s military ID.</div>';
+  h += '<div class="flag info"><span class="fl">Two more that catch people</span>If a document carries information on <b>both sides</b>, copy both sides. Foreign-language documents may be asked for a <b>certified English translation</b>.</div>';
+  h += '</div>';
+
+  /* --- 4. the two dependent tests --- */
+  if (isDep){
+    h += '<div class="blk"><h3><span class="num">4</span>The two dependent tests</h3>';
+    // Test 1
+    var t1ok = (A.depres==='cm' || A.depres==='mil' || A.entry==='yes');
+    h += '<p><b>Test 1 — can the passport stand alone?</b></p>';
+    if (A.pass!=='yes'){
+      h += '<div class="flag info"><span class="fl">Not applicable</span>No passport is being submitted, so this test does not arise — use the two-document route above, including the civil birth certificate.</div>';
+    } else if (t1ok){
+      h += '<div class="flag ok"><span class="fl">Yes — it stands alone</span>'
+        + (A.entry==='yes' ? 'The passport shows a date of entry into the United States.' :
+           (A.depres==='cm' ? 'This dependent is from Canada or Mexico, so no date of entry is needed for this test.' :
+            'This dependent is a dependent of U.S. military personnel stationed overseas, so no date of entry is needed for this test.'))
+        + '</div>';
+    } else {
+      h += '<div class="flag err"><span class="fl">No — the passport does NOT stand alone</span>It shows no U.S. date of entry, and this dependent is not from Canada or Mexico and is not a dependent of U.S. military stationed overseas. <b>Additional original documentation proving U.S. residency is required</b> — see the age list below.</div>';
+    }
+    // Test 2
+    var t2skip = (A.depres==='mil') || (A.depres==='cm' && A.odc==='no');
+    h += '<p style="margin-top:16px"><b>Test 2 — must U.S. residency be proved?</b></p>';
+    if (t2skip){
+      h += '<div class="flag ok"><span class="fl">No residency proof needed</span>'
+        + (A.depres==='mil' ? 'A dependent of U.S. military personnel stationed overseas is excused — whatever benefit they are claimed for.' :
+           'From Canada or Mexico <b>and</b> claimed for an allowable benefit other than the Credit for Other Dependents.')
+        + '</div>';
+    } else {
+      h += '<div class="flag warn"><span class="fl">Yes — residency proof is required</span>'
+        + (A.depres==='cm' ? 'From Canada or Mexico, but claimed <b>only</b> for the Credit for Other Dependents — so the carve-out does not apply.' :
+           'This dependent does not meet either carve-out.')
+        + '</div>';
+      h += '<p style="margin-top:12px">Acceptable proof, for an applicant aged <b>'+(age>=0?age:'—')+'</b>:</p><ul class="tick">';
+      if (age >= 0 && age < 6) h += '<li>A valid <b>U.S. medical record</b>, U.S. school record, U.S. state identification card, or U.S. visa.</li>';
+      else if (age >= 6 && age < 18) h += '<li>A valid <b>U.S. school record</b>, U.S. state identification card, U.S. driver’s licence, or U.S. visa.</li>';
+      else h += '<li>A valid U.S. school record (<b>under 24 only</b>), U.S. state identification card, U.S. driver’s licence, or U.S. visa; <b>or</b> a U.S. bank statement, U.S. rental statement, or U.S. utility bill from a U.S. property showing the applicant’s name and U.S. address.</li>';
+      h += '</ul>';
+      if (age >= 0 && age < 6) h += '<div class="flag info"><span class="fl">A medical record is not just “a letter from the doctor”</span>It must show: an official document (immunisation record, or a <b>dated and signed</b> letter on letterhead) · the applicant’s <b>name, date of birth and U.S. address</b> · a <b>date of care within 12 months</b> of the W-7 · the <b>doctor’s name and the facility’s U.S. address</b>. Several documents may be combined to cover all of it.</div>';
+      if (age >= 6 && age < 24) h += '<div class="flag info"><span class="fl">A school record is not just “a letter from the school”</span>It must show: an official document (report card, transcript, or a <b>dated and signed</b> letter on letterhead) · the applicant’s <b>name and U.S. address</b> · <b>attendance or coursework with grades</b> · the <b>school’s name and U.S. address</b> · <b>term dates ending no more than 12 months</b> before the W-7. Several documents may be combined.</div>';
+    }
+    h += '<div class="flag err"><span class="fl">Before anything else</span>A dependent must be a <b>U.S. citizen or resident alien, or reside in Mexico or Canada</b>. If neither is true, there is no valid W-7 to file — stop and raise it.</div>';
+    h += '</div>';
+  }
+
+  /* --- 5. return or exception --- */
+  var EXCP = {
+    '1a':'A copy of the portion of the <b>partnership or LLC agreement</b> showing the partnership’s name and EIN, and the applicant’s name and signature, establishing that they are a partner in a partnership conducting business in the U.S.',
+    '1b':'An <b>original signed letter from the bank on its official letterhead</b>, naming the applicant and stating that a business account has been opened that is subject to IRS information reporting and/or withholding on the interest generated this tax year.',
+    '1c':'An <b>original signed letter or statement from the withholding agent</b>, on official letterhead, showing the applicant’s name and confirming an ITIN is required this tax year.',
+    '1d':'An <b>original signed letter from the withholding agent</b> on official letterhead, showing the applicant’s name and confirming that an ITIN is required to make distributions subject to reporting and/or withholding this year.',
+    '2':'Usually the <b>SSA denial letter</b>. For honoraria only, or an F-1/J-1/M-1 student who will not work, a <b>certification letter from the Designated School Official / Responsible Officer</b> instead — one per W-7, including the spouse and each dependent. Gambling winnings are only processed under this exception when submitted through the gaming official acting as an authorised Acceptance Agent.',
+    '3':'Evidence of the <b>home mortgage loan</b> — the lender reports the interest on Form 1098.',
+    '4':'The <b>withholding documentation</b> on the disposition of a U.S. real property interest, or a notice of non-recognition under Reg. §1.1445-2(d)(2).',
+    '5':'The supplemental documentation required by <b>TD 9363</b>.'
+  };
+  h += '<div class="blk"><h3><span class="num">'+(isDep?5:4)+'</span>The return, or the exception</h3>';
+  if (A.ret==='yes'){
+    h += '<p>Attach the <b>valid U.S. federal income tax return</b> to the Form W-7.</p>';
+    h += '<div class="flag warn"><span class="fl">Do not use the return’s own mailing address</span>The whole package goes to ITIN Operations in Austin — never the address printed in the tax return’s instructions, and never a copy to any other IRS office.</div>';
+    if (isDep) h += '<div class="flag err"><span class="fl">Check this before filing</span>The dependent must actually <b>appear on the attached return</b> and be claimed for an allowable tax benefit, with the schedule or form that carries it. A W-7 for a dependent who is not on the return is error #5.</div>';
+  } else {
+    h += '<p>No return is attached. <b>Exception '+esc(A.exc)+'</b> is claimed, so its proof goes in the return’s place:</p>';
+    h += '<div class="flag info"><span class="fl">Proof required</span>'+EXCP[A.exc]+'</div>';
+    h += '<div class="flag warn"><span class="fl">Exception proof does not replace the identity documents</span>It replaces the <b>tax return</b> and nothing else. Everything in section 3 above is still required.'
+      + (A.exc==='1a' ? ' Note that Exception <b>1(a)</b> is the one case where partnership information also goes on the Form W-7-COA.' : ' This documentation is <b>not</b> described on the W-7-COA.')
+      + '</div>';
+  }
+  h += '</div>';
+
+  /* --- 6. signature --- */
+  var SIGN = {
+    self:'The applicant signs personally. The signature must match the name on <b>line 1a</b> — not a shortened or anglicised version of it.',
+    parent:'A <b>parent</b> signs as delegate: print the parent’s name in the delegate field and tick <b>Parent</b>.',
+    guardian:'A <b>court-appointed guardian</b> signs as delegate: tick <b>Court-appointed guardian</b> and <b>attach the court-appointment papers</b>.',
+    poa:'The holder of a <b>Power of Attorney</b> signs as delegate: tick <b>Power of attorney</b> and <b>attach Form 2848</b>. A substitute POA must contain every element of Form 2848, and a foreign-language POA needs a certified English translation.',
+    mark:'The applicant signs a <b>mark</b> — an X or a thumbprint — <b>in the presence of a witness</b>. The witness signs too and is identified as a witness.'
+  };
+  h += '<div class="blk"><h3><span class="num">'+(isDep?6:5)+'</span>Signing it</h3><p>'+SIGN[A.signer]+'</p>';
+  if (age>=0 && age<18 && A.signer==='poa') h += '<div class="flag warn"><span class="fl">Check this is right</span>For an applicant under 18 the eligible signers are the applicant, a <b>parent</b>, or a <b>court-appointed guardian</b>. Confirm the POA route is genuinely correct here before relying on it.</div>';
+  if (A.signer==='poa') h += '<div class="flag err"><span class="fl">The one everybody trips on</span>A <b>spouse cannot sign for a spouse</b> unless the <b>Power of attorney</b> box is ticked and Form 2848 is attached. Being married is not authority to sign.</div>';
+  h += '<div class="flag warn"><span class="fl">The five-day clock starts at the signature</span>The application is dated when signed, and the agent must <b>submit it within five (5) business days</b>. Do not collect a signature until the package is otherwise ready to go.</div>';
+  h += '<p style="margin-top:14px"><b>Then the “Acceptance Agent’s Use ONLY” block</b>, if we are signing as an agent: signature of a <b>responsible party named on the firm’s Acceptance Agent application</b> · date · phone · fax · name and title · company name · <b>EIN</b> · <b>PTIN</b> · <b>8-digit office code</b>.</p></div>';
+
+  /* --- 7. CAA --- */
+  h += '<div class="blk"><h3><span class="num">'+(isDep?7:6)+'</span>'+(A.caa==='yes'?'As a Certifying Acceptance Agent':'Not acting as a CAA')+'</h3>';
+  if (A.caa==='yes'){
+    h += '<p>Attach an original <b>Form W-7-COA (Rev. 8-2025)</b> — one per Form W-7. Complete: the responsible party’s name · the CAA business name · <b>the date the Acceptance Agent Agreement was entered into</b> · the applicant’s name · the document table, ticking under <b>Identity</b> and <b>Foreign Status</b> for each document reviewed · signature, date, EIN, office code and PTIN.</p>';
+    h += '<div class="flag warn"><span class="fl">Only an approved responsible party may sign the COA</span>Same constraint as the agent block on the W-7 itself.</div>';
+    if (isDep){
+      h += '<div class="flag err"><span class="fl">Dependent — we may authenticate only two things</span>For a dependent a CAA may authenticate the <b>passport and the birth certificate, and nothing else</b>. Every other document for this dependent must go to the IRS as an <b>original, or a copy certified by the issuing agency</b>. Tell the client this before they hand anything over.</div>';
+    } else {
+      h += '<div class="flag ok"><span class="fl">Primary / secondary applicant</span>We may authenticate every supporting identification document <b>except a foreign military identification card</b>, which must still go as an original or an issuing-agency certified copy.</div>';
+    }
+    h += '<div class="flag info"><span class="fl">The interview</span>An interview is required with every applicant — primary, secondary and each dependent. <b>Video conferencing may be used for the interview only</b>, and the CAA must have the <b>original documents physically in their possession during it</b>, to see the security features. A passport held up to a webcam does not satisfy this.</div>';
+    h += '<div class="flag info"><span class="fl">Retention</span>The COA commits us in writing to retaining copies of all relevant documents, <b>including a signed copy of the Form W-7</b>. File them in the client’s folder in Drive or Double — never in the repo.</div>';
+  } else {
+    h += '<div class="flag warn"><span class="fl">The originals travel</span>Without a live CAA agreement we cannot authenticate anything. The <b>original documents, or copies certified by the issuing agency</b>, are attached to the Form W-7 and mailed to Austin. Warn the client their passport will be away — the IRS returns originals within about 60 days.</div>';
+    h += '<p style="margin-top:12px">Tell them they may include a <b>prepaid Express Mail or courier envelope</b> for a faster return, and that <b>copies are never returned</b>. If originals have not come back within 60 days, call the IRS.</p>';
+  }
+  h += '</div>';
+
+  /* --- 8. package + mail --- */
+  var pkg = ['<b>Form W-7</b> (Rev. 12-2024) — or W-7(SP) — signed and dated'];
+  if (A.ret==='yes') pkg.push('The <b>valid U.S. federal income tax return</b>'); else pkg.push('The <b>Exception '+esc(A.exc)+' documentation</b> in place of a return');
+  pkg.push(A.caa==='yes' ? '<b>Form W-7-COA</b> plus <b>copies</b> of the documents we authenticated' : 'The <b>original identity documents</b> or issuing-agency certified copies');
+  if (A.ssn==='denied') pkg.push('The <b>SSA denial letter</b> — without it the application is rejected');
+  if (A.ssn==='school') pkg.push('The <b>school official’s certification letter</b> (DSO / RO / Authorized School Official) in place of an SSA letter');
+  if (A.role==='f' || A.role==='g') pkg.push('A <b>copy of the visa</b>, and any <b>I-20 / I-94</b>');
+  if (A.signer==='guardian') pkg.push('The <b>court-appointment papers</b> showing legal guardianship');
+  if (A.signer==='poa') pkg.push('<b>Form 2848</b>, Power of Attorney');
+  if (isDep && A.caa==='yes') pkg.push('Anything beyond the passport and birth certificate as an <b>original or issuing-agency certified copy</b>');
+
+  h += '<div class="blk"><h3><span class="num">'+(isDep?8:7)+'</span>The envelope</h3><ul class="tick"><li>'+pkg.join('</li><li>')+'</li></ul>';
+  h += '<p style="margin-top:16px"><b>By mail:</b></p><p><span class="typein">Internal Revenue Service · ITIN Operations · P.O. Box 149342 · Austin, TX 78714-9342</span></p>';
+  h += '<p style="margin-top:10px"><b>By private delivery service:</b></p><p><span class="typein">Internal Revenue Service · ITIN Operations · Mail Stop 6090-AUSC · 3651 S. Interregional Hwy 35 · Austin, TX 78741-0000</span></p>';
+  h += '<div class="flag ok"><span class="fl">Then</span>Originals come back in about <b>60 days</b>. The ITIN arrives as an <b>assignment letter</b>. A return <b>cannot be e-filed using that ITIN in the year it is issued</b> — including prior-year returns.</div>';
+  h += '</div>';
+
+  /* --- 9. tell the client --- */
+  h += '<div class="blk"><h3><span class="num">'+(isDep?9:8)+'</span>Say these three things to the client</h3><ul class="plain">'
+    + '<li>An ITIN is for <b>federal tax reporting only</b>.</li>'
+    + '<li>It <b>does not authorise work</b> in the United States and <b>does not change immigration status</b>.</li>'
+    + '<li>It does <b>not</b> make anyone eligible for the <b>Earned Income Tax Credit</b>.</li></ul>'
+    + '<p style="margin-top:12px;font-size:13.5px;color:var(--muted)">Clients believe the opposite of all three often enough that saying them out loud is part of the job, not a formality.</p></div>';
+
+  out.innerHTML = h;
+  out.hidden = false;
+  out.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ------------------------------- reference ------------------------------ */
+(function(){
+  var host = document.getElementById('fields'), html = '';
+  FIELDS.forEach(function(f){
+    if (f.g){ html += '<p class="fgrp">'+esc(f.g)+'</p>'; return; }
+    html += '<details class="f" data-k="'+esc((f.n+' '+f.t+' '+(f.k||'')).toLowerCase())+'">'
+         +  '<summary><span class="fline">'+esc(f.n)+'</span><span class="ftitle">'+esc(f.t)+'</span></summary>'
+         +  '<div class="fbody">'+f.b+(f.trap?'<div class="trap"><b>Trap.</b> '+f.trap+'</div>':'')+'</div></details>';
+  });
+  host.innerHTML = html;
+})();
+
+document.getElementById('srch').addEventListener('input', function(e){
+  var q = e.target.value.trim().toLowerCase(), any = false;
+  document.querySelectorAll('#fields details.f').forEach(function(d){
+    var hit = !q || d.dataset.k.indexOf(q) > -1;
+    d.hidden = !hit; if (hit) any = true;
+    if (q && hit) d.open = true; if (!q) d.open = false;
+  });
+  document.querySelectorAll('#fields .fgrp').forEach(function(g){ g.hidden = !!q; });
+  document.getElementById('nores').style.display = any ? 'none' : 'block';
+});
+
+/* --------------------------------- chrome ------------------------------- */
+document.getElementById('build').addEventListener('click', buildSheet);
+document.getElementById('reset').addEventListener('click', function(){
+  A = {}; document.getElementById('out').hidden = true; renderQuestions();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var r = document.documentElement;
+  var dark = r.getAttribute('data-theme') === 'dark'
+    || (!r.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  r.setAttribute('data-theme', dark ? 'light' : 'dark');
+});
+function switchTab(which){
+  var w = which === 'walk';
+  document.getElementById('tabWalk').setAttribute('aria-selected', w);
+  document.getElementById('tabRef').setAttribute('aria-selected', !w);
+  document.getElementById('walk').hidden = !w;
+  document.getElementById('ref').hidden = w;
+}
+document.getElementById('tabWalk').addEventListener('click', function(){ switchTab('walk'); });
+document.getElementById('tabRef').addEventListener('click', function(){ switchTab('ref'); });
+
+renderQuestions();
+</script>
