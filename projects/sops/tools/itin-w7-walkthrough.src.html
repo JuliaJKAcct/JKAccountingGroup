@@ -1085,7 +1085,14 @@ function buildSteps(a){
 
   if (a.caa==='yes'){
     add('coa','caa','Form W-7-COA completed and signed','Responsible party only. Identity + Foreign Status ticked per document.');
-    add('coadocs','caa','Document copies attached to the COA', dep ? 'For a dependent: passport and birth certificate only.' : 'All but a foreign military ID.');
+    // Says BOTH halves on purpose. A saved case stores step ids, not text, so on reopen
+    // decodeCase() rebuilds this line from ALLSTEPS — which holds whichever variant the
+    // seed shapes happened to generate first (the dependent one). A case that was not a
+    // dependent therefore came back showing the dependent rule: a wrong ITIN rule, stated
+    // confidently, on the one screen someone works from. An invariant line is true either
+    // way, live and reopened.
+    add('coadocs','caa','Document copies attached to the COA',
+        'Primary/secondary: all except a foreign military ID. Dependent: passport and birth certificate only.');
     if (dep) add('origmail','caa','Anything we may not authenticate sent as an original','Or an issuing-agency certified copy.');
     add('retain','caa','Copies retained in the client’s folder','Including a signed copy of the Form W-7 — the COA commits us to this.');
   }
@@ -1267,14 +1274,14 @@ function renderCases(){
   var dirty = cases.filter(function(c){ return c.dirty; }).length;
   var h = '<div class="cbar">'
     + '<button class="btn cta sm" id="newCase" type="button">New case</button>'
-    + '<button class="btn ghost sm" id="importCase" type="button">Open a case from a Double note</button>'
+    + '<button class="btn ghost sm" id="importCase" type="button">Reopen a case</button>'
     + (dirty ? '<span class="pill-dirty">'+dirty+' case'+(dirty>1?'s':'')+' not yet copied to Double</span>' : '')
     + '</div>';
 
   if (!cases.length){
     h += '<div class="empty"><h3>No cases open</h3>'
       +  '<p>A case is one client’s ITIN application, tracked from the SSN check to the ITIN letter. Run the <b>Walkthrough</b> first and press <b>“Track this as a case”</b> on the preparation sheet — the case then carries only the steps that actually apply to that applicant.</p>'
-      +  '<p style="font-size:13px">Cases live in this browser. The durable copy is the block you paste into the client’s running case note in Double — that is also how you reopen a case here, or hand it to someone else.</p></div>';
+      +  '<p style="font-size:13px">Cases live <b>in this browser only</b> — another computer, another browser or a cleared cache and they are gone. The copy that lasts, and that the rest of the firm can see, is the block you paste into the client’s running case note in <b>Double</b>. That note is also what you paste back into <b>“Reopen a case”</b> to carry on, here or on someone else’s machine. A downloaded <span class="typein">.txt</span> works the same way, but it only exists on the device that downloaded it.</p></div>';
     list.innerHTML = h; wireList(); return;
   }
 
@@ -1344,7 +1351,7 @@ function renderOne(){
   var c = openCase, p = progress(c), one = document.getElementById('caseOne');
   var h = '<div class="cbar"><button class="btn ghost sm" id="backCases" type="button">← All cases</button>'
         + '<button class="btn cta sm" id="copyNote" type="button">Copy the case note for Double</button>'
-        + '<button class="btn ghost sm" id="dlCase" type="button">Download a copy</button>'
+        + '<button class="btn ghost sm" id="dlCase" type="button">Download a backup file</button>'
         + '<button class="btn ghost sm danger" id="delCase" type="button">Delete</button>'
         + (c.dirty ? '<span class="pill-dirty">changes not yet copied</span>' : '')
         // role=status: this line exists BECAUSE the download outcome is otherwise
@@ -1547,6 +1554,13 @@ function claudeDownloads(){
 // place the team actually uses it: exactly the failure this file's dialogs exist to kill.
 // `.txt` is on the runtime's filename allowlist, so the capability route works.
 // When neither route can be confirmed we say so rather than leaving a mute button.
+// The download used to say only "Saved as …", which left the person holding a file
+// and no idea what it was for — Lilian downloaded one and asked how to load it back.
+// Say what it is for, and keep pointing at the Double note as the firm's copy.
+function savedMsg(name){
+  return 'Saved ' + name + ' to your device. To continue later, paste its contents into '
+       + '“Reopen a case”. The copy the whole firm can see is still the Double note.';
+}
 function downloadCase(c, msgEl){
   var name = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
   var text = caseNoteText(c);
@@ -1566,12 +1580,12 @@ function downloadCase(c, msgEl){
     try { p = rt.save({ filename: name, data: text }); }
     catch(e){ blocked(); return; }
     if (p && p.then){
-      p.then(function(){ say('Saved as ' + name); },
+      p.then(function(){ say(savedMsg(name)); },
              function(err){
                if (err && err.code === 'declined'){ say('Save cancelled.'); return; }
                say(''); blocked();
              });
-    } else { say('Saved as ' + name); }
+    } else { say(savedMsg(name)); }
     return;
   }
   try {
@@ -1589,7 +1603,13 @@ function downloadCase(c, msgEl){
   // A blocked <a download> throws NOTHING, so we cannot know whether a file appeared.
   // Never guess and never stay mute: state both outcomes in one line. Inline rather
   // than a modal, because on a normal browser the download did just work.
-  say('Saved as ' + name + ' — if no file appeared, this viewer blocked it; use “Copy the case note for Double”.');
+  // Both outcomes need an action the person can actually take. Telling someone whose
+  // download was blocked to "paste its contents" points at a file that does not exist,
+  // so the blocked half has to carry its own remedy.
+  say('Saved ' + name + ' to your device — to continue later, paste its contents into '
+    + '“Reopen a case”. If no file appeared, this viewer blocked the download: use '
+    + '“Copy the case note for Double” instead. Either way, the Double note is the copy '
+    + 'the whole firm can see.');
 }
 
 function showImport(){
@@ -1597,9 +1617,15 @@ function showImport(){
   document.getElementById('caseList').hidden = true;
   imp.hidden = false;
   imp.innerHTML = '<div class="cbar"><button class="btn ghost sm" id="impBack" type="button">← All cases</button></div>'
-    + '<div class="logbox"><h4>Open a case from a Double note</h4>'
-    + '<p style="font-size:14px;color:var(--muted);margin:0 0 10px">Copy the client’s ITIN case note out of Double and paste the whole thing here — the tool reads the code at the bottom. This is also how you pick up a case someone else started.</p>'
-    + '<textarea class="paste" id="impText" placeholder="Paste the whole case note here…"></textarea>'
+    + '<div class="logbox"><h4>Reopen a case</h4>'
+    + '<p style="font-size:14px;color:var(--muted);margin:0 0 6px">Paste in <b>either one</b> — both carry the same case:</p>'
+    // .plain, not .tick — tick draws an empty checkbox, and these are two alternatives
+    // to choose between, not a list of things to do.
+    + '<ul class="plain" style="font-size:14px;margin:0 0 10px">'
+    + '<li>the client’s <b>ITIN case note from Double</b> — the firm’s copy, and how you pick up a case someone else started;</li>'
+    + '<li>or the contents of a <b>downloaded case file</b> (<span class="typein">ITIN-case-….txt</span>) — open it in any text editor and copy everything.</li></ul>'
+    + '<p style="font-size:13.5px;color:var(--muted);margin:0 0 10px">The tool reads the <span class="typein">JKCASE1:</span> line at the bottom, so pasting the whole thing is fine — and pasting only that last line works too.</p>'
+    + '<textarea class="paste" id="impText" placeholder="Paste the case note, or the contents of the downloaded .txt file…"></textarea>'
     + '<div class="cbar" style="margin-top:12px"><button class="btn cta sm" id="impGo" type="button">Open the case</button><span class="note-inline" id="impMsg"></span></div></div>';
   document.getElementById('impBack').addEventListener('click', function(){ imp.hidden=true; renderCases(); });
   document.getElementById('impGo').addEventListener('click', function(){
