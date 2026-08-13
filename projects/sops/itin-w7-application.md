@@ -140,7 +140,7 @@ submitted in place of the return**.
 
 | Exception | What it covers |
 |---|---|
-| **1** | **Third-party withholding on passive income** — the applicant owns an asset generating income subject to IRS information reporting / withholding this tax year. Attach an **original letter or signed statement from the bank, financial institution or withholding agent**. (1d covers pension and annuity distributions.) |
+| **1** | **Third-party withholding on passive income** — the applicant owns an asset generating income subject to IRS information reporting / withholding this tax year. **The proof differs by sub-exception:** **1(a)** takes a **copy of the portion of the partnership or LLC agreement** showing the partnership's name and EIN, and the applicant's name and signature, establishing that they are a partner in a partnership conducting business in the U.S. **1(b)–1(d)** take an **original signed letter on official letterhead from the bank, financial institution or withholding agent** (1d covers pension and annuity distributions). |
 | **2** | **Wages / salary / compensation and honoraria with treaty benefits claimed · scholarships, fellowships and grants (with or without treaty benefits) · gambling winnings with treaty benefits.** Generally needs the **SSA denial letter**; honoraria-only and non-working F-1/J-1/M-1 students use the school-official certification letter instead. Gambling winnings are only processed under this exception when submitted **through the gaming official acting as an authorized Acceptance Agent**. |
 | **3** | **Third-party reporting of mortgage interest** — a first-time filer securing a home loan whose lender reports on Form 1098. Attach evidence of the home mortgage loan. |
 | **4** | **Third-party withholding on the disposition by a foreign person of a U.S. real property interest** (FIRPTA) — including a notice of non-recognition under Reg. §1.1445-2(d)(2). |
@@ -224,15 +224,31 @@ must show **both sides**. Foreign-language documents may be asked for a
 
 ### The dependent rules — the part that gets missed
 
-**A dependent's passport is not automatically a stand-alone document.** It must
-show a **date of entry into the United States**, unless the dependent is:
+> ⚠️ **These are TWO separate tests, and merging them is the classic mistake.**
+> One asks whether the passport can stand alone; the other asks whether U.S.
+> residency must be proved at all. They have different carve-outs, and the ODC
+> condition belongs to only one of them.
 
-- from **Canada or Mexico**, or
-- a dependent of **U.S. military personnel stationed overseas**,
+**Test 1 — can the passport stand alone?** A passport **without a date of entry
+into the United States** is **not** accepted as a stand-alone document for a
+dependent, unless the dependent is:
 
-*and* is claimed for an allowable tax benefit **other than** the Credit for Other
-Dependents (ODC). **A dependent claimed for ODC must prove U.S. residency** unless
-they are a dependent of U.S. military personnel stationed overseas.
+- from **Canada or Mexico**, **or**
+- a dependent of **U.S. military personnel stationed overseas**.
+
+*(No tax-benefit condition applies to this test.)*
+
+**Test 2 — must U.S. residency be proved?** A dependent must **also prove U.S.
+residency**, unless:
+
+- they are a dependent of **U.S. military personnel stationed overseas**, **or**
+- they are **from Canada or Mexico *and*** are claimed for an allowable tax
+  benefit **other than** the Credit for Other Dependents (ODC).
+
+**Read that second bullet carefully — the ODC condition attaches only to the
+Canada/Mexico branch.** A dependent of U.S. military stationed overseas is
+excused from proving residency *whatever* they are claimed for; a Canadian or
+Mexican dependent claimed **only for ODC** must prove residency.
 
 **Proof of U.S. residency, by age:**
 
@@ -299,7 +315,10 @@ Every application we submit as an agent carries:
 3. The **business name under which we were established as an Acceptance Agent**,
    with **phone and fax numbers**
 4. Our **EIN** and our **Office Code Number** — an **8-digit number assigned to us
-   by the ITIN Policy Section**
+   by the ITIN Policy Section** once the agreement is approved. *(The IRS derives
+   it from our EFIN, preceded by two zeros — which is why it looks familiar. That
+   is the IRS's bookkeeping after approval; the EFIN itself never goes on the
+   Acceptance Agent application.)*
 
 ---
 
@@ -404,9 +423,12 @@ them is **suspended or rejected**.
 1. **Not checking the right alpha box (a–h)**, or checking an **invalid
    combination** (e.g. a *and* b).
 2. **Not attaching supporting identification documentation** proving identity,
-   foreign status or U.S. residency. Except children/students under 18, **at
-   least one document must carry a recent photograph**. *(CAAs: the W-7(COA) plus
-   document copies — and only passport and birth certificate for dependents.)*
+   foreign status or U.S. residency. **At least one document must carry a recent
+   photograph — except a dependent under 14 (under 18 if a student).** *(Pub 5726
+   restates this loosely as "under 18"; use the Form W-7 instructions' age above,
+   which is narrower and is the rule that will be applied.)* *(CAAs: the W-7(COA)
+   plus document copies — and only passport and birth certificate for
+   dependents.)*
 3. **Not attaching a valid U.S. tax return** to show a tax purpose, without
    meeting one of Exceptions 1–5.
 4. **Attaching documents that are not on the 13-document list.**
@@ -467,9 +489,15 @@ THE FORM
 ☐ Line 6d issuer + number + expiry + date of entry into the U.S.
 
 DOCUMENTS
-☐ Passport (stand-alone)  OR  ☐ two+ documents, one with a recent photograph
+☐ Passport (stand-alone)
+   OR ☐ two+ documents, one with a recent photograph
+        (photo not required for a dependent under 14 — under 18 if a student)
 ☐ Dependent: civil birth certificate present (unless passport)
-☐ Dependent: passport shows U.S. date of entry, or residency proof for the age band
+☐ Dependent TEST 1 — passport shows a U.S. date of entry?
+   ☐ Yes  ☐ No, but from Canada/Mexico or a dependent of US military overseas
+☐ Dependent TEST 2 — residency proof needed?  (skip only if a dependent of US
+   military overseas, or from Canada/Mexico AND claimed for a benefit other
+   than ODC)   ☐ Not needed  ☐ Provided for the age band
 ☐ All originals or issuing-agency certified copies (NOT notarized)
 ☐ Nothing expired as of the submission date
 ☐ Both sides copied where the document is two-sided

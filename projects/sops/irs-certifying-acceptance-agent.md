@@ -54,7 +54,12 @@ flowchart TD
 
 **What we gain.** Today an ITIN applicant who is not a CAA client has to mail
 their **original passport** to the IRS ITIN Unit in Austin and live without it
-for weeks. As a CAA we:
+for weeks. *(There is a third route worth knowing: an appointment at a designated
+**IRS Taxpayer Assistance Center**, where documents are reviewed and returned
+immediately — appointments only, 1-844-545-5640. It is a real alternative for a
+client near one, and it is not a reason to skip the program: it is the IRS's
+schedule, not ours, and it does nothing for a client who is not near a
+designated office.)* As a CAA we:
 
 1. **Authenticate identity documents in our office** and send only *copies* with
    the W-7 — the client keeps their passport. (Limits apply to dependents: §6.)
@@ -89,8 +94,10 @@ Nothing below can be improvised mid-application. Confirm each one first:
    license, Enrolled Agent number, or tax-preparer status. This gets uploaded in
    §4.
 4. **An IRS e-Services account for every person on the application** except
-   plain "contacts" — that means the **PPO** (Principal, Partner or Owner) and
-   **every RP**.
+   plain "contacts". The IRS states this positively for the **PPO** (Principal,
+   Partner or Owner) and **every RP**; it is silent on whether a **Principal
+   Consent (PC)** also needs one. ⚠️ **Assume they do and set it up** — an
+   account nobody needed costs nothing, a missing one blocks the submission.
 5. **An ID.me account** for the PPO and every RP. e-Services sign-in runs through
    ID.me identity verification, which takes its own time — start it early.
 6. **Each RP is at least 18** and a **legal resident of the U.S.**
@@ -135,13 +142,16 @@ one you receive against this list *before* you need it:
 
 1. **Original**, on the **vendor's letterhead** — not a facsimile or a scan of a
    scan.
-2. Shows the **vendor's contact information** (name, address, telephone).
+2. Shows the **vendor's contact information**: **name, address, telephone number
+   and the course title**.
 3. Shows the **participant's name** — **one person per certificate**. A single
    certificate listing several responsible parties is rejected.
 4. Shows the **date completed**.
 5. Carries an **embossed seal**.
 6. Does **not** show the same person as both instructor and student.
-7. Is **less than four years old** at the date the application is submitted.
+7. Was **not issued by the firm applying to the program** — we cannot train
+   ourselves into the program.
+8. Is **less than four years old** at the date the application is submitted.
 
 > **The four-year clock is the one to diarize.** A forensic training certificate
 > is valid for **four years**. It is the training that expires, not just the
@@ -156,8 +166,19 @@ Acceptance Agent Application Tutorial, not yet from our own run.
 
 **Paper is gone.** Form 13551 is no longer accepted by mail; the application is
 completed and submitted **electronically through IRS e-Services**. Form 13551
-still exists as the reference for what is asked — read it before starting so
-nothing is a surprise.
+still exists as the reference for **what is asked** — read it before starting so
+the questions aren't a surprise.
+
+> ⚠️ **But do not follow the PDF's instructions.** The posted Form 13551 is
+> **Rev. 6-2019**, from the paper era, and it contradicts current rules in at
+> least four places: it says processing takes **up to 120 days** (now 60), that a
+> renewal should go in **six months before expiry** (renewals are now accepted
+> only *during* the expiration year), that a **fingerprint card** must be
+> attached (not currently required), and that the **training certificate must be
+> signed and attached** (the mandatory training is now attested on the jurat).
+> Use it for the field list only; the current process is the
+> [Acceptance Agent Application Tutorial](https://www.irs.gov/pub/irs-wi/acceptance-agent-application-tutorial.pdf)
+> and this SOP.
 
 **Order of operations (this is the part that trips people up):**
 
@@ -174,9 +195,17 @@ Owner with authority to act for the firm** can submit it.
 - **Contacts** — as needed; contacts do *not* need e-Services accounts
 
 **Step C — set the application type to Certifying Acceptance Agent**, not plain
-Acceptance Agent. ⚠️ **verify on screen.** Use the correct "organization status"
-for a for-profit tax firm — **`VITA` is only for SPEC partners** and selecting it
-would route us into the wrong (streamlined) process.
+Acceptance Agent. ⚠️ **verify on screen.**
+
+Then set the **"organization status"**. Form 13551 line 1 lists the categories:
+Financial Institution · Educational Institution · Casino · Partnership ·
+Government Agency or Military Organization · **Corporation · LLC · Sole
+Proprietorship** · Other — pick the one matching **the firm's actual legal
+form**. ⚠️ **Do not pick `VITA`.** The IRS instructs SPEC partners to select it
+precisely *because* it routes the application into the SPEC streamlined process,
+which a for-profit firm does not qualify for. *(That we don't qualify is
+documented; exactly what the system does if the wrong value is chosen is not —
+so avoid it rather than test it.)*
 
 **Step D — each RP must complete their own part before the PPO can submit.**
 Every RP logs in to e-Services separately and:
@@ -243,7 +272,14 @@ minimum of five W-7 applications a year to remain in the program.
 
 **2. An in-person interview with every applicant** — primary, secondary **and
 each dependent**. **Video conferencing may be used for the interview only** —
-the documents themselves still have to be genuinely reviewed.
+and the IRS attaches a hard condition to it: **the CAA must have the original
+identification documents, or issuing-agency certified copies, physically in
+their possession during the interview**, in order to see the security features
+and authenticate them.
+
+> ⚠️ **A client holding a passport up to a webcam does not satisfy this**, and it
+> is exactly the non-compliance the condition exists to prevent. Remote interview,
+> yes; remote *documents*, no — the documents have to reach our hands first.
 
 **3. An original Form W-7 (COA), Certificate of Accuracy, attached to every
 single W-7 we submit.** On it we certify that we reviewed the documentation
@@ -323,14 +359,19 @@ submit anything.
    *before* the application is submitted, for *every* responsible party.
 2. **One forensic certificate listing several people.** Rejected. One certificate
    per person.
-3. **A photocopied or unsealed certificate.** Rejected — original, letterhead,
-   embossed seal, vendor contact details, completion date.
+3. **A certificate that fails any of the eight checks in §2B.** The usual
+   offenders: a photocopy, a missing embossed seal, a missing course title, or
+   two responsible parties named on one certificate.
 4. **Putting the EFIN on the application.** Not required, and a documented cause
-   of errors.
+   of errors. *(Confusingly, once the agreement is approved the IRS derives our
+   **Office Code** from the EFIN — the EFIN preceded by two zeros. That is the
+   IRS's own bookkeeping after approval; it is not a reason to type the EFIN into
+   the application.)*
 5. **Using the firm's trading name instead of the exact legal name on the EIN.**
    Same result.
-6. **Selecting `VITA` as the organization status.** That routes a for-profit firm
-   into the SPEC streamlined process it does not qualify for.
+6. **Selecting `VITA` as the organization status** — that value exists to route
+   SPEC partners into a streamlined process a for-profit firm does not qualify
+   for. Pick the firm's actual legal form instead (§3 Step C).
 7. **Assuming approval is the finish line.** The PPO still has to sign the
    preliminary agreement in e-Services.
 8. **Answering "fewer than five W-7s a year"** on the application — it triggers a
@@ -385,7 +426,7 @@ RESPONSIBLE PARTIES                     RP 1        RP 2
   Own tax filings current             : ☐           ☐
   Mandatory ITIN training completed   : __/__/__    __/__/__
   Forensic training completed         : __/__/__    __/__/__
-  Forensic certificate checks (§2B 1–7): ☐          ☐
+  Forensic certificate checks (§2B 1–8): ☐          ☐
   Forensic certificate EXPIRES        : __/__/__    __/__/__
   Suitability answered + jurat signed : ☐           ☐
 
