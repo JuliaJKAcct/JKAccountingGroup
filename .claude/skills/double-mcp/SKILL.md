@@ -846,7 +846,7 @@ authorization from the firm.
   you are going to perform; ask for the picker. Files land hidden from the client by default in custom
   folders; omitting `folderId` sends them to the Uploads Inbox and triggers OCR. Be deliberate about
   which you want, and about `isVisible`.
-- **Mind the payload size on ANY call, not just notes** — a request near 8,000 characters comes back `403`, not truncated. It is a request-size wall at Double's edge, so it catches reads with long parameters too; notes just hit it most often. See §7's "size wall".
+- **Mind the payload size on ANY call, not just notes** — a request near 8,000 characters comes back `403`, not truncated. It is a request-size wall on Double's side, so it catches reads with long parameters too; notes just hit it most often. See §7's "size wall".
 - Prefer **notes and comments** (`create_note`, `add_task_comment`) for leaving a trail, the same
   spirit as the Odoo chatter convention. The firm's standard shape for that trail is §7.
 
@@ -1085,16 +1085,17 @@ see the ownership table below before telling anyone it is their firewall.
 **Do not present the bracket as arithmetic that lands on 8,192** — we never measured a single payload
 in *bytes*. Our 7,600-character pass was real HTML with em-dashes, `§` and emoji, so in bytes it may
 already have been above 8,192, which would sink the neat story. Give them the observation ("around
-8 KB"), let them find the actual rule. **If anyone ever needs this tighter, measure the four payloads
-in bytes first** — nothing in the repo records that, and it is the obvious thing a sceptical engineer
-will ask for.
+8 KB"), let them find the actual rule. **If anyone ever needs this tighter, measure all six payloads in bytes first** — the four note bodies of
+2026-08-06 *and* the two read filters of 2026-08-13, since the read pair is what carries the
+not-a-note-limit argument. Nothing in the repo records any of them in bytes, and it is the obvious
+thing a sceptical engineer will ask for.
 
 **Who can actually fix it — the question everyone asks second.** Follow one request:
 
 | # | Stage | Whose | Can they fix it? |
 |---|---|---|---|
 | 1 | Claude decides to call a tool | Anthropic | — |
-| 2 | The call is POSTed to Double's MCP URL | Anthropic | ❌ **No — and proven so.** The same string reached a different MCP server from the same Claude account in the same minute. Anthropic only *reports* the 403; reporting an error is not causing it |
+| 2 | The call is POSTed to Double's MCP URL | Anthropic | ❌ **Very unlikely.** The same string reached a different MCP server from the same Claude account in the same minute, so there is **no blanket size cap** on Anthropic's side. ⓘ Strictly this does not rule out a rule specific to the *Double connector's* registration — say "no size cap globally", not "proven not Claude", or Double gets to bounce this back a third time. Anthropic only *reports* the 403 |
 | 3 | 🚧 An edge in front — WAF / CDN / load balancer | **Double** | ✅ Possible home of the rule — a configuration change |
 | 4 | 🚧 Double's own MCP server (its request-body cap) | **Double** | ✅ Equally possible home — a code/config change |
 | 5 | Double's app + database (notes live here) | **Double** | ❌ Ruled out — this is the layer their engineers checked, and it is not where the block is |
@@ -1133,7 +1134,7 @@ Practical rules:
   outgrows 7,500 characters, the first question is always whether the overflow belongs in the
   client-intelligence file (rule 7) instead.
 - **And for calls that are not notes at all** — the rules above are note-shaped because notes hit this
-  most often, but the wall does not care. **Keep any single parameter well under ~7,500 characters**,
+  most often, but the wall does not care. **keep the WHOLE request well under ~7,500 characters** — not each parameter separately, since a batched write (`upsert_client_properties`, `move_attachables`, a long ID array) can pass 8 KB while every individual value is tiny —
   and note that the only read-path measurements we have are ~48 chars (passes) and ~9,000 (fails) —
   **nothing in between has ever been tested**, so treat anything above a couple of thousand characters
   as unproven ground rather than known-good. There is no recovery step to run after a `403` on a read:

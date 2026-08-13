@@ -114,7 +114,14 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 
 ---
 
-## The email as sent — a reply on "Checking in before our 8/18 wrap-up"
+## The ORIGINAL draft — ⚠️ NOT what was sent
+
+⚠️ **Kept for the evidence table and the phrasing, not as a record of our correspondence.** What went
+out differed in the three ways listed in the header — most importantly it asked **two** questions,
+not the three below; **the web-UI question (3) was never sent.** If you are escalating to
+`help@doublehq.com`, reuse the table and the error text, **not** this question list — re-asking a
+question Double never received, as though it had been ignored, hands them a version of the thread
+that does not match theirs.
 
 > Hi Allison,
 >
@@ -185,7 +192,7 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
   - use an **archived or internal** record, never a client with a live case note (§7 rule 1 forbids a
     second note on a tracked matter);
   - **delete it in the browser immediately** after looking.
-- **The boundary is not bracketed tighter than 7,600–8,200 characters.** If support asks for the exact
+- **The boundary is not bracketed tighter than 7,600–8,000 characters** on the write path (7,600 passed, 8,000 failed; the ~8,200 filler was the *content-independence* control, not a bound). On the **read** path the only two points are ~48 (passes) and ~9,000 (fails) — a far wider bracket, and untested in between. If support asks for the exact
   cutoff it can be bisected; nobody has needed it badly enough yet.
 - **Character count may not be the unit.** The title and JSON escaping travel with the body, and real
   note bodies are HTML with multi-byte characters (`—`, `§`, `⚠️`, `✅`), so the true limit may be
@@ -204,7 +211,7 @@ Julia and Maria in copy, as every previous message on this has.
 mejor explicada… para que Allison no se atormente con tanta cosa técnica."* An earlier draft led with
 a three-row results table and named the AWS WAF rule in the body; it was accurate and it was the wrong
 document for its reader. The rewrite keeps **every** fact and moves the jargon to a short block at the
-end that she can forward without reading. Three rules if you edit it again:
+end that she can forward without reading. Four rules if you edit it again — rule 4 carries the two hardest-won ones, do not drop it as an aside:
 
 1. **Concede the note question in the second paragraph.** Arguing about note length is what got this
    closed as "out of scope" the first time.
@@ -246,14 +253,19 @@ end that she can forward without reading. Three rules if you edit it again:
 >
 > **If it helps whoever looks at it:**
 >
-> - Workspace: **JK Accounting Group**. The blocked read was tested on **13 August 2026**; the original
->   note failures were **6 August 2026, ~03:25–04:45 UTC**, on client IDs **706709** and **710577**.
+> - Workspace: **JK Accounting Group**. The note failures were **6 August 2026, ~03:25–04:45 UTC**, on
+>   client IDs **706709** and **710577**. The blocked read was **13 August 2026** — that one was a
+>   roster-wide `list_clients` search, so there is no client ID to narrow it by.
 > - The error is `403 Forbidden`, `mcp_request_blocked`, on the MCP endpoint.
-> - What we actually measured: note bodies of ~7,600 characters save; ~8,000 and ~10,400 do not. On a
->   read-only call, a ~48-character filter works and a ~9,000-character one is refused — we have not
->   tested anything in between, so we cannot give you an exact cut-off, only that it is somewhere
->   around 8 KB.
-> - Happy to send a test request of any size that helps them trace it.
+> - What we measured: note bodies of ~7,600 characters save; ~8,000 and ~10,400 do not. On a read-only
+>   call, a ~48-character filter works and a ~9,000-character one is refused — we have not tested
+>   anything in between, so we cannot give an exact cut-off, only that it is somewhere around 8 KB.
+> - **It is not our content.** A body of ~8,200 characters of plain repeated filler — no formatting, no
+>   client data, nothing that could look like an attack pattern — was refused exactly like real text.
+> - **Easiest way to catch it in a log:** tell us a time and we will run the failing request while
+>   someone watches. We can send a payload of any size you like.
+> - The other system that accepted the identical long text is a different MCP integration on the same
+>   Claude account, so the comparison is like-for-like.
 >
 > One more thing — is our wrap-up call on August 17th or 18th? Your message says one and the subject
 > line says the other, and we do not have an invite for either.

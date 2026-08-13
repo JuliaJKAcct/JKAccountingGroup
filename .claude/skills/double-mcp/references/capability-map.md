@@ -282,13 +282,13 @@ Neither is a "just try it" operation. Say what will happen, get a yes, then do i
 
 ### ⚠️ The request-size wall (was: "the note size wall")
 
-Note writes fail with **HTTP 403** once the body gets large. **Keep a note body under ~7,500
-characters** — that is the firm's working ceiling, and title plus JSON escaping count toward it.
-Applies to every `create_note` / `update_note`, not only case notes.
+**Any call fails with `HTTP 403` once the REQUEST gets large — reads included.** It is not a note
+limit: a read-only `list_clients` with a ~9,000-character filter, which creates nothing and carries no
+note, is blocked exactly like a long note. **Practically it still bites notes hardest**, because notes
+are the only thing the firm routinely writes that gets that big.
 
-⚠️ **It is not really a *note* limit — it is a request-size limit, and it applies to every call**,
-reads included. **Practically it still bites notes hardest**, because notes are the only thing the firm
-writes that gets that big.
+**Keep a note body under ~7,500 characters** — the firm's working ceiling, with title and JSON escaping
+counting toward it — and keep any other call's whole payload under the same figure.
 
 **The evidence lives in one place: [SKILL §7](../SKILL.md)** — the measured boundary, the three-call
 proof that it is neither notes nor Claude, the five-stage table of who could fix it, the
@@ -422,12 +422,14 @@ Julia and Maria in copy. Two asks in that one email. The next call with Double i
 
 If either lands, this file and [SKILL](../SKILL.md) both change. The **deadline write** flips §4
 and the quick-answer table here, plus SKILL §1 ("The tax project is READ-ONLY — including the
-deadline") and SKILL §2. The **note limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
+deadline") and SKILL §2. The **request-size limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
 size-wall warning in §8 of this file.
 Both are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) (rows 19 and 22). The note-size
 ask has its own evidence file —
 [`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — which records what
-was sent and, importantly, that it **has** been sent.
+was sent, Double's 2026-08-13 answer, and the follow-up that has **NOT** been sent. ⚠️ **Do not read
+"the request was sent" as "nothing to do"** — the first request is answered; the follow-up is
+drafted and waiting on Lilian, and it wants to go before the 17–18 Aug wrap-up call.
 
 ---
 
