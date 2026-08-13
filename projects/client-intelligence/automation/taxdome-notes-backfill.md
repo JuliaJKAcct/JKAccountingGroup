@@ -1,8 +1,9 @@
 # The TaxDome notes backfill — a Client Intelligence source nobody has read
 
-**Status: PHASE 1 DONE (2026-08-12) · PHASE 2 STILL BLOCKED.** Raised by Lilian 2026-08-12.
-🔴 **Phase 2 is BLOCKED on a decision only Lilian or Julia can make** — see *The permission
-question* below. **Phase 1 ran on 2026-08-12** and its output is in *Inventory* at the bottom:
+**Status: PHASE 1 DONE (2026-08-12) · PHASE 2 DONE (2026-08-13).** Raised by Lilian 2026-08-12.
+✅ **The permission question below was ANSWERED by Lilian on 2026-08-13** and the ruling is recorded
+where a session will actually find it — in the [`double-mcp`](../../../.claude/skills/double-mcp/)
+document rule, as *"The SECOND hole"*. The section below is kept as the reasoning that produced it. **Phase 1 ran on 2026-08-12** and its output is in *Inventory* at the bottom:
 **33 `Notes` folders → 22 distinct clients, 11 of them with no CI file at all.**
 
 ⓘ **A third source appeared the same day** — Lilian's own iCloud phone notes, handed over
@@ -360,6 +361,66 @@ salvage; from here the record is kept properly.
 | 2026-08-12 | **Phase 2 (iCloud source only)** | **Optic Gold Inc** — `optic-gold.md` §1/§4/§5/§6/§7 + Double case note **491051** | Lilian |
 | 2026-08-13 | **Phase 2 (iCloud source only) — batch 1** | **5 new files:** Mays Express (note **491838**) · Megabai (no Double account, no note) · Voicecapital (**491840**) · Voxago (**491841**) · YMI Trucking (**491842**) | Lilian |
 | 2026-08-13 | **Phase 2 (iCloud source only) — batch 2** | **4 existing files enriched:** Candramas (note **491844**) · Deep Tech (**491845**) · Masciave (**491846**) · Gossip Miami — **new note 491858** for the FDOR collections matter, which is a *different case* from the 2025 tax-prep note 485291 | Lilian |
+
+### Phase 2 ran 2026-08-13 — what the 22 TaxDome notes actually were
+
+**Lilian authorised the read that day** (recorded in the [`double-mcp`](../../../.claude/skills/double-mcp/)
+document rule, where the next session will find it). She also **corrected the central assumption of
+this file**: the TaxDome notes and her phone notes are **independent sources**, not two copies —
+*"no son las mismas que yo tenía en mi teléfono… puede que alguna cosa coincidiera, pero no
+necesariamente."* That proved right: **of 22 documents, 6 overlapped and 16 were new.**
+
+🔴 **The single most valuable thing it produced was a CORRECTION.** Deep Tech's TaxDome note carries
+a closing line the phone note does not — *"THIS IS DONE. WE HAVE A LETTER IN DEEP TECH'S FOLDER"* —
+which **closes a matter this repo had recorded as open the day before**. Exactly the chronology rule.
+
+| Client | What the note(s) held | Where it went |
+|---|---|---|
+| Deep Tech | The FDOR matter **resolved**, letter in the client's Drive folder | ✅ file + note **491845** corrected |
+| Ecoorganic USA | The CT sales-tax account was **opened in error** and is meant to be **closed** (waiting on Julia); the CT annual report filed 2026-04-07, Ishkhan removed, Artem added as principal agent | ✅ file |
+| Ecom Beavers | The firm's **non-ECI position paper** for a foreign-owned SMLLC, and with it the **Form 5472 + pro-forma 1120** duty and its **$25,000** penalty; a BOI transcript carrying the owner's Czech address | ✅ file |
+| Masciave | **The origin of the duplicate EIN — the IRS created it** when the company filed as a C-corp; the onboarding document list; the third EIN traces to the client's father's 2013 company | ✅ file |
+| Zetech | The IRS holds the company as a **sole proprietorship**, and **will not put that in writing** | ✅ file |
+| OneTwo Strategies | **Two K-1s missing** (2242 Monroe LLC, Porcupine Partnership) + an unentered home-office deduction | ✅ file |
+| Andrii Tymchenko | **Left the US 2025-05-31 → 1040-NR, MFS**; dormant company; a **1095-A requested against Medicaid coverage**, which cannot exist | ✅ **new file created** |
+| Optic Gold · Candramas · YMI · Voicecapital · Mays Express | Same matters already written from the phone notes — **no new facts**; Candramas's copy confirms the wording, including the `03.06.2024` date slip already flagged | — nothing to add |
+
+**🔴 SEVEN clients have a TaxDome note read but STILL NO CI FILE.** Their content is preserved here
+so it cannot be lost, and each **owes a file**:
+
+- **VITALII IVANOV** — holds **50% of four Ukrainian companies** (ТОВ Бест Вей Фудс, 2018-07-30 · ТОВ
+  Екстрим Прайд, 2019-06-05 · ТОВ 34-й градус, 2020-07-04 · ТОВ Юкрейн Анлімітед Трейдинг,
+  2020-11-17). _(Irina Jandieri, 2025-08-18.)_ ⚠️ **50% of a foreign corporation is Form 5471
+  territory** — and the firm has a [`form-5471-tax-analysis`](../../../.claude/skills/) skill and an
+  existing `Form5471_ExtremePride_2025.xlsx` in Drive, so this is live work, not history.
+- **SETATECH USA INC** — **Angela Saturno is the Director of Sales** (contact details in Drive/Double).
+  _(Lilian, 2025-03-07.)_ The Double record is **archived** since 2026-07-22.
+- **IGOR MELOMED** — 2023 **Schedule C** working figures: revenue, cost of goods, office supplies, a
+  **customer-appreciation / company-events** item Julia was unsure how to classify, client
+  entertainment at restaurants, and a **home office** computed from total vs. one-room square
+  footage. _(Julia, 2024-10-14.)_ **Figures stay in Drive** — the durable facts are the Schedule C,
+  the home-office claim and the open classification question.
+- **Viacheslav Honcharenko** — a **dependent daughter** was added to the 2025 tax organizer. ⚠️ **The
+  note carries her date of birth and SSN; neither is recorded anywhere in this repo** (identity
+  block). _(Lilian, 2026-04-07.)_
+- **Maria Contreras** — one line: **car insurance for 2024** (amount in Drive). _(Julia, 2025-04-08.)_
+- **Iurii Iakovenko** — the client supplied **bank details** for the return. ⚠️ **Account and routing
+  numbers are the identity block and are recorded nowhere here.** _(Julia, 2025-04-08.)_
+- **R & G Friendly Inc** — **the credit card was not connected in QuickBooks** and had no transactions
+  there _(Maria Zavarce, 2024-06-05)_, plus a large pasted **credit-card register**. The durable fact
+  is the missing feed, not the register.
+
+⚠️ **Two things the read established about these folders, and the next session needs both:**
+**(a)** they **do contain identity-block material** — a child's SSN and date of birth, and full bank
+routing/account numbers were both found — so the delete-the-session obligation applies to this work
+exactly as it does to organizer responses; and **(b)** a large share of the notes are **raw
+tax-preparation working data** (mileage, expense breakdowns, dollar amounts) whose figures belong in
+Drive, not the repo. The durable content is usually one sentence inside a page of numbers.
+
+ⓘ **Ihor Naum's folder holds a note titled "2024 Aura"** — vehicle mileage recorded against **Aura
+Remodeling**, a different client with its own file. **Left unrouted deliberately**: the routing rule
+says read the content to decide the subject, and this one genuinely could be either the individual's
+Schedule C mileage or the company's. **Ask Lilian rather than guess.**
 
 **The iCloud source is now fully processed** — every client folder in Lilian's `1-JK Accounting`
 that carried content is written up. **Magnum 152 has a folder but no note content** in the material

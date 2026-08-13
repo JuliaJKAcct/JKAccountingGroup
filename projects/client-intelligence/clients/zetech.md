@@ -1,6 +1,6 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
 >
 > ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
 > Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
@@ -114,6 +114,8 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ## 5. Key facts & quirks
 
+- 🔴 **THE IRS HAS THIS COMPANY IN ITS SYSTEM AS A "SOLE PROPRIETORSHIP".** Told to Lilian on the call of **2026-04-17**. She asked for a letter stating it and **the IRS said they do not issue that kind of document**, so there is nothing on paper. **Check what the firm actually files for this entity against that classification before the next return** — a mismatch between the IRS's record and the return type is exactly what caused the rejections at Optic Gold and Voicecapital. _(TaxDome notes, migrated — filed under ZETECH LLC; note dated 2026-04-17.)_
+
 Anything the team must know to serve this client well — special preferences,
 watch-outs, one-off arrangements, history that affects the work.
 
@@ -136,6 +138,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-13 — **TaxDome notes read (Phase 2).** One note, new: on **2026-04-17** the IRS told Lilian the company appears in their system as a **sole proprietorship**, and **refused to issue any letter saying so**. Now §5. _(TaxDome notes, migrated — filed under ZETECH LLC.)_ _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,

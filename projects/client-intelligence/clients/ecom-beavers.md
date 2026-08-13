@@ -1,6 +1,6 @@
 # Ecom Beavers LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -76,6 +76,10 @@ here. Open the Double client to get the actual details.
 
 ## 5. Key facts & quirks
 
+- 🔴 **FOREIGN-OWNED SINGLE-MEMBER LLC — FORM 5472 + PRO-FORMA 1120 IS MANDATORY, AND MISSING IT COSTS $25,000 A YEAR.** The firm's own position paper (Julia, **2025-03-26**) sets out the structure: a **foreign-owned SMLLC with no U.S. physical presence, dropshipping from China**, whose income is argued **not effectively connected** with a U.S. trade or business — so no 1040-NR and no 1120-F. **But the reporting obligation survives the tax conclusion**: Form 5472 with a pro-forma 1120, reporting every transaction between the LLC and its foreign owner, **due 15 April (15 October on extension)**. **Confirm this is being filed every year.** _(TaxDome notes, migrated — filed under Ecom Beavers LLC; paper dated 2025-03-26.)_
+- ⚠️ **The non-ECI position is a POSITION, not a settled fact** — it rests on the company having no U.S. office, employees or other significant presence. **If that ever changes, the whole analysis changes.** The paper cites IRS Pub 519, Pub 515 and Treas. Reg. §1.864-4. It also flags **FBAR (FinCEN 114)** if foreign accounts exceed the threshold, and that **state annual reports are still due** even with no U.S. tax liability.
+- ⚠️ **The owner is in the Czech Republic, with a Ukrainian address on file too — and the BOI E-Filing transcript carried the Czech one.** The owner raised it in March 2025. Addresses themselves stay in Drive/Double; what matters here is that **this client's filings carry a foreign address and it has already been queried once.**
+
 - **Foreign-owned US LLC (non-resident owner)** → the **C-corp** election fits the foreign-owner structure; cross-border tax (treaty, ITIN, withholding, repatriation) is central to the engagement. _(Ping consult)_
 - **Multi-brand e-commerce** across Amazon + several Shopify stores; **Mercury** banking. New client (first consult 2026-07-09).
 
@@ -86,6 +90,7 @@ here. Open the Double client to get the actual details.
 - 2026-07-20 — Profile built from Double properties + a Ping/Gmail/Drive enrichment sweep. Ping had a **consult note (via Double note)** — the 2026-07-09 consultation. Ping + Gmail + Drive swept (see sweep-state).
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20, inclusive; no coverage gap). No new Ping meetings, Double notes, or Double activity-log entries since the 2026-07-09 consult — that remains the only recorded meeting. Gmail: Shopify billing notices confirmed the Somma and BoneX store domains (added to §3); a Mercury **IO credit-line limit increase** was noted, figure not retained here per the no-dollar-figures rule — see Double/Drive for the amount. _(Gmail, 2026-07-27)_ Ping `resolve_person`/`search_contacts` confirm the owner contact (Double) is associated with **Ecom Beavers LLC only** — no other businesses found, so the owner-group sweep rule doesn't apply here. Checked `FOLLOW-UPS.md` and `BACKLOG.md` — no mentions of this client. QuickBooks not queried this pass (no open financial question; books are managed through Double).
 - 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log shows only a **2025 Taxes** project status change (In Progress → Not Started, Julia, 2026-08-04) — an observed status change, noted for context. No new Double notes beyond the existing 2026-07-09 consult note. Gmail turned up routine Shopify billing (Somma, BoneX domain/subscription charges) and a Mercury IO credit-limit change — confirms the multi-store setup already on file but nothing durable to add; no evidence yet that the post-consult deliverables (entity-options summary, treaty guidance, deductible checklist, minutes — see Outstanding items) have gone out. Ping had no legible new content for the client or the owner post-baseline (the only Ecom Beavers hits were the same pre-baseline 2026-07-09 consult already on file).
+- 2026-08-13 — **TaxDome notes read (Phase 2).** Two notes, both new. The firm's **position paper of 2025-03-26** on the non-ECI status of a foreign-owned SMLLC dropshipping from China, and with it the **Form 5472 + pro-forma 1120** obligation and its **$25,000** annual penalty — now §5. And a **2025-03-26** message from the owner that the **BOI E-Filing transcript carried his Czech address**; a Ukrainian address is also on file. Addresses stay in Drive/Double. _(TaxDome notes, migrated — filed under Ecom Beavers LLC.)_ _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Post-consult deliverables** Julia committed to (2026-07-09): entity-options summary with tax implications; **treaty-application guidance + required certificates**; a deductible-expenses / reimbursement / home-office checklist; meeting minutes. **ITIN & treaty-certificate** needs open. _(Ping consult note)_

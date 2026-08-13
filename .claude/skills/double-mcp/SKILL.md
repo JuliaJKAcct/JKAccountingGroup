@@ -518,6 +518,41 @@ redacted text to a file, and it deletes the raw download on every path out. Read
 [README](../../../tools/redact-doc/README.md) — in particular that it **fails closed** and that a
 scan (no text layer) is a **stop**, never a reason to send the image somewhere else to be read.
 
+#### 🔓 The SECOND hole, opened 2026-08-13: the firm's own migrated TaxDome notes
+
+**Lilian authorised this explicitly**, after being told it is a cross-client read of non-return
+documents — the thing limit 3 forbids: *"revisa esas notas de TaxDome y únelo a lo que ya tienes,
+sin duplicar nada y siguiendo la secuencia lógica en el tiempo."*
+
+**What it covers, and the scope IS the rule:** the **`Notes` folders** carried over from TaxDome
+— `TaxDome > <client> > N. Notes` in Double, and the mirrored copies in Julia's Drive under
+`4. Documents`, `*QBO Clients and Individuals` and `*Dupplicated`. **Nothing else in those
+folders.** The plan, the inventory and the routing rule are in
+[`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md).
+
+**Why this one is different from a client's tax return, and why the difference is the whole
+justification:** these are **the firm's own working notes about its clients**, written by Julia,
+Lilian and Maria on the client's TaxDome profile. They are not the client's documents. A prior-year
+return is the client's private record and gets one year, one client, through the redactor; a
+migrated firm note is our own knowledge that happens to be stored as a file.
+
+**What does NOT change, and a session must not read this as a general loosening:**
+- **Limits 4–7 apply unchanged.** Not for another purpose, **never from a subagent, never from a
+  scheduled or unattended session**, never into the repo working tree, never committed raw.
+- **The two-data-homes rule still governs what may be written**, and these notes are exactly the
+  kind that will test it — dollar figures, personal contact details and street addresses stay in
+  Double and Drive.
+- **This does not open any other folder.** `Taxes/`, `Private/`, `Client uploaded documents/` and
+  the rest are untouched by this ruling.
+- **Prefer the Drive copy.** Most are Google Docs and read directly; the Double copies are `.docx`
+  and each one puts a presigned download URL — a credential — into the transcript.
+
+⚠️ **The two sources are INDEPENDENT, not two copies of one thing** _(Lilian, 2026-08-13, correcting
+the assumption)_: *"las notas que hay en el drive y en Double, las que provienen de TaxDome, no son
+las mismas que yo tenía en mi teléfono… puede que alguna cosa coincidiera, pero no necesariamente."*
+So the job is **integration into one chronology**, not reconciliation of duplicates — and where the
+same event genuinely appears in both, it is written **once**.
+
 #### The limits — each of these is a "never"
 
 1. **Never another year.** One review authorises one tax year. Not a second year to
@@ -531,6 +566,9 @@ scan (no text layer) is a **stop**, never a reason to send the image somewhere e
    inferred from "she asked for a thorough review", and never assumed from a previous session.
    **Everything from 3 down is absolute** and nobody waives it in a session.
 3. **Never across clients.** No loop, no sweep, no "while I'm here". One client, one review.
+   ⓘ **One carve-out, and only one:** the **migrated TaxDome `Notes` folders**, authorised by
+   Lilian on 2026-08-13 (see the section immediately above). That is a cross-client read by
+   design, of the firm's own notes — it does not license a sweep of anything else.
 4. **Never for another purpose.** The permission is for the prior-year comparison. Looking up an
    address, a figure or a phone number is not that.
 5. **Never from a subagent**, and **never from a scheduled or unattended session.** Both controls
