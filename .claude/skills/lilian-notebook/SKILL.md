@@ -1,6 +1,6 @@
 ---
 name: lilian-notebook
-description: Capture, write, or publish a note in Lilian's Notebook (projects/lilian-notebook/) — her personal record of the lessons this firm learned the hard way, each written as the rule to follow next time. Use when Lilian says "anota esto en mi libreta" / "add this to my notebook", when she asks what the notebook already says about something, when a session turns up a lesson worth keeping (propose the entry unprompted — that is the point of this skill), or when the notebook page needs rebuilding and republishing. Encodes the capture rule, the required entry structure (the title IS the lesson; ID · tags · certainty · star · came-from · full-record pointer), what belongs in the notebook versus in a skill / SOP / client file / FOLLOW-UPS row, the no-client-data line, and the build-and-publish flow (one link, never a new URL). Read before adding or editing anything under projects/lilian-notebook/notes/.
+description: Capture, write, or publish a note in Lilian's Notebook (projects/lilian-notebook/) — her personal record of the lessons this firm learned the hard way, each written as the rule to follow next time. Use when Lilian says "anota esto en mi libreta" / "add this to my notebook", when she asks what the notebook already says about something, or when the notebook page needs rebuilding and republishing. NEVER propose or offer a note unprompted — Lilian ruled that out on 2026-08-13; she asks, or it does not happen. Encodes the capture rule, the required entry structure (the title IS the lesson; ID · tags · certainty · star · came-from · full-record pointer), what belongs in the notebook versus in a skill / SOP / client file / FOLLOW-UPS row, the no-client-data line, and the build-and-publish flow (one link, never a new URL). Read before adding or editing anything under projects/lilian-notebook/notes/.
 ---
 
 # Lilian's Notebook — the house way
@@ -53,31 +53,51 @@ explicitly while the handover was still open, *"para la próxima vez recordar c�
 Write what's established, mark it `Working assumption`, and say where it's paused.
 
 **This filter is provisional and she said so** — *"tenemos que ir perfeccionándolo y que vayas
-entendiendo lo que quiero."* So when a note is borderline, **offer it and let her decide** rather
-than filing it or dropping it silently, and **update this section whenever she keeps or rejects
-something that sharpens the line.**
+entendiendo lo que quiero."* **Update this section whenever she keeps, rejects or reshapes a note
+in a way that sharpens the line.**
 
-## 1. Rule zero — propose the note; don't wait to be asked
+⚠️ **This filter is not a gate and not a licence to offer.** It used to end "when a note is
+borderline, offer it and let her decide"; that clause is **struck**, and rule zero below replaces
+it. **A note she has not asked for is simply not written.** A note she *has* asked for **gets
+written** — then this section shapes what it should answer and how, not whether it belongs.
 
-**Whenever a session turns up something that would cost the firm again, offer to write it
-down.** Lilian's whole reason for asking for this: she will not remember to ask.
+## 1. Rule zero — 🛑 NEVER propose a note. She asks, or it doesn't happen.
 
-The tell — always checked against §0's filter first — is any of these:
-- The firm was **surprised by how a system actually behaves** (a platform, an agency's rule).
-- A **real number** surfaced: a rate, a fee, a penalty, a cap, a processing time.
-- A **procedure was worked out** that nobody had written down — especially one that took a
-  support call to discover.
-- A question about **what's inside a fee** got settled.
-- Lilian says *"esto hay que recordarlo"*, *"apunta esto"*, or explains something she's
-  clearly explained before.
+**Lilian's instruction, 2026-08-13, and it is absolute:**
 
-Offer it in one line — *"¿lo anoto en tu libreta?"* — with the title you'd give it,
-so she can say yes without reading a draft. **She approves; you never file one silently.** And
-if a note already covers it, say so and **enrich that note** instead of adding a second
-(§5).
+> *"No me propongas más nada para mi libreta. Cuando crea que algo es necesario, yo misma te lo
+> voy a decir."*
 
-Going the other way is part of the job too: when she asks about a topic the notebook already
-covers, answer *from the note* and give its ID, so the notebook proves itself.
+So: a session that turns up a beautiful lesson **says nothing about the notebook.** Not
+*"¿lo anoto en tu libreta?"*, not a one-line offer at the end of a reply, not a hint that
+something "would make a good note". **The trigger is her asking, in that session** — *"anota
+esto en mi libreta"*, *"add this to my notebook"* — and nothing else.
+
+⚠️ **This reverses the rule that ran Aug 2026 → 2026-08-13**, which said to propose a note
+unprompted because "she will not remember to ask." **The judgement was never the problem — the
+asking was.** She had already cut the notebook's first 33 notes to four (§0); the proposals kept
+coming anyway, and this is what stopped them. **Do not reintroduce it in a softer form** ("just
+flagging in case…"), and do not treat a particularly good lesson as an exception. There is no
+threshold above which offering becomes acceptable.
+
+**Two things are still part of the job, and neither is a proposal:**
+
+1. **Answering from the notebook.** When she asks about a topic a note already covers, answer
+   *from the note* and give its ID, so the notebook proves itself.
+2. **Putting the lesson in its real home — without raising the notebook.** ⚠️ *Each of those
+   routes keeps its own rule: a Client-Intelligence write is still **announced**, a skill-worthy
+   workflow is still **offered** unprompted, an SOP change still needs her **approval**. This rule
+   silences the notebook, not the others.* A repeatable workflow belongs
+   in a [skill](../), a procedure in an [SOP](../../../projects/sops/), a client fact in that
+   client's [Client Intelligence](../../../projects/client-intelligence/) file, an unfinished
+   thread in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). Those routes are untouched by this rule
+   and are where a session's learning should land. **The notebook is hers; the rest of the repo
+   is the firm's.**
+
+When she *does* ask for a note, **§0 is no longer a gate on _whether_ to write it** — she asked,
+so it gets written. §0 shapes **what the note must answer and how it is written**, and §2 gives it
+its structure. If a note already covers the topic, say so and **enrich that note** rather than
+adding a second (§5).
 
 ## 2. Writing the entry
 

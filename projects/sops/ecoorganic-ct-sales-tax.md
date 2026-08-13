@@ -193,7 +193,12 @@ are allowed to *say* about it.
    returns are blank or already carry gross receipts has not been checked** — nobody has
    opened one.
 
-**Until Lilian settles both:** file as before, and do **not** explain to the client, or to
+⏸️ **Lilian has parked both, deliberately** _(2026-08-13: "déjalas pendientes de resolver... cuando
+vamos a este tema, me puedes preguntar y lo vemos")_. **They are not a to-do list waiting on her,
+and nobody should chase her for them.** The moment to raise them is when someone is **actually
+working this client's sales tax** — then ask, and record what she says here.
+
+**Until then:** file as before, and do **not** explain to the client, or to
 DRS, *why* it is zero. **Nothing here says the position is wrong** — it says nobody has
 written down why it is right, which is a different problem and not one a covering
 bookkeeper should try to solve mid-filing. These two questions live here; they are also

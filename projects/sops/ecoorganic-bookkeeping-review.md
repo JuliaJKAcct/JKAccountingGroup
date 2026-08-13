@@ -235,7 +235,7 @@ checklist item 11 below.
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **Job costs → COGS vs opex** — verify rule 9 against the client's history and filing before relying on it | Julia | To verify |
-| 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4, and on `FOLLOW-UPS.md`. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Pending |
+| 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4. ⏸️ **Lilian parked both on 2026-08-13** — do not chase her; raise them only when someone is actually working this client's sales tax. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Parked |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.

@@ -127,7 +127,9 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   taxable sales would normally file showing **gross receipts with a deduction** rather than a
   blank return — and nobody has opened one of these filings to see which it is. Practice is
   to keep filing (stopping is worse); nobody should represent *why* until Lilian confirms it.
-  Tracked in [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §6.
+  ⏸️ **She parked this on 2026-08-13** — *"déjalas pendientes de resolver."* Do not chase her;
+  raise it when a session is actually working this client's sales tax. Tracked in
+  [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §6.
 - **Deadline and cost of missing it _(verified against CT DRS, 2026-08-12)_:** the return is
   due the **last day of the month following** the period; the late penalty is **15% of tax
   due or $50, whichever is greater**, so on a zero return the **$50 floor** is what lands.
@@ -322,6 +324,16 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   default); no value was copied anywhere and Lilian was told to delete the session. Pass
   `excludeContentSnippets: true` on Drive searches over a client's vault folder.
 
+- 2026-08-13 — **Lilian parked the two open sales-tax questions**, without resolving them: why the
+  CT return is filed at zero, and whether it should report gross receipts with a deduction rather
+  than sitting blank. Her words: *"déjalas pendientes de resolver. No es algo que tengo tiempo
+  ahora para hacer. Cuando vamos a este tema, me puedes preguntar y lo vemos."* **So they are not
+  owed work and nobody chases her for them** — they get raised at the point of use, when a session
+  is actually working this client's sales tax, and the answer gets written back here. **The monthly
+  filing continues unchanged**; what is parked is what we may *say* about it, not what we do. Same
+  session: she also ended the practice of proposing notes for her notebook (now a firm-wide rule in
+  [`CLAUDE.md`](../../../CLAUDE.md) — unrelated to this client, recorded there).
+
 ### Outstanding items (CI-only — never in the SOP)
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
 - **QuickBooks primary admin — the whole thing is waiting on the FATHER to scan the QR code and upload a photo of his ID** (§3). Nothing else can move until he does; chase him through the son, who is the one we correspond with. **Then, in this order:** **(a)** confirm the son's primary-admin access actually works; **(b)** confirm the firm's own access survives a single-user plan — see "Information still needed", nobody has established whether the firm has access independent of the owners' users; **(c)** delete the father's user; **(d)** **downgrade the subscription** back to the single-user plan, **confirming the downgrade with the son first — it is the client's billing.** **The downgrade is the step that gets forgotten**, and the client keeps paying for the bigger plan until it's done. Meanwhile **two users on the account is intentional** — don't let anyone "clean it up".
@@ -333,7 +345,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
 
 ### Information still needed
-- [ ] **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
+- [ ] ⏸️ **PARKED 2026-08-13 — do not chase her; ask when we next work this client's sales tax.**
+      **On what basis is the CT sales-tax return filed at ZERO?** The business has revenue, so
       this is a filing position with no recorded reason (§4). Practice continues unchanged; the
       point is to be able to justify it. **Second half of the same question:** are those returns
       blank, or do they already report **gross receipts with a nontaxable deduction**? OS-114

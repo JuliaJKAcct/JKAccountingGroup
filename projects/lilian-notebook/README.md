@@ -26,6 +26,11 @@ voy a acordar ni de pedírtelas"*. A `.md` file nobody remembers to open is not 
 the notebook has **one link she bookmarks** — a searchable page — and a card in the
 [Knowledge Hub](../knowledge-hub/) so it's never lost.
 
+⚠️ **The bookmarked link is the answer to that sentence — proposing notes is not.** That same
+quote used to justify a rule telling Claude to offer her notes unprompted; she ended it on
+**2026-08-13** (see the 🛑 below). Remembering where the notebook *is* was the problem; deciding
+what goes in it was never delegated.
+
 ### Whose it is
 
 **This one is Lilian's** — her decision, Aug 2026. She's the only person writing in it; it's
@@ -68,8 +73,14 @@ actually behave** · **what does this cost** · **what's inside the fee / how do
 how to communicate, our own repo machinery, argumentation about a live matter — she called
 *"totalmente innecesarias"* and it belongs elsewhere. The full filter, with what she kept and
 what she threw out, is **§0 of the [`lilian-notebook` skill](../../.claude/skills/lilian-notebook/)**
-— read it before adding anything. It's still being tuned, so a borderline note gets **offered**,
-not filed.
+— read it before adding anything.
+
+🛑 **Nobody proposes a note to her — she asks, or it doesn't happen.** Lilian's instruction,
+**2026-08-13**: *"No me propongas más nada para mi libreta. Cuando crea que algo es necesario, yo
+misma te lo voy a decir."* This **reverses** the earlier rule that a session should offer a note
+unprompted (and the older "a borderline note gets offered, not filed"). A lesson a session learns
+still gets written down — in a skill, an SOP, a client file or `FOLLOW-UPS.md`. Just not here, and
+not raised with her.
 
 ## Brand & design
 
@@ -87,10 +98,9 @@ in Drive, printed, and inside a CSP-restricted Artifact.
 
 ## Skills & tooling
 
-- [`lilian-notebook`](../../.claude/skills/lilian-notebook/) — **the house way to capture a
-  note, write it, and rebuild + republish the page.** Holds the capture rule (Claude proposes
-  entries unprompted), the entry structure, and what belongs here vs. in a skill / SOP /
-  client file.
+- [`lilian-notebook`](../../.claude/skills/lilian-notebook/) — **the house way to write a note
+  she has asked for, and rebuild + republish the page.** Holds rule zero (**never propose one**),
+  the entry structure, and what belongs here vs. in a skill / SOP / client file.
 - [`knowledge-hub`](../../.claude/skills/knowledge-hub/) — the Hub embeds this page from the
   same generator, so the Hub card is never a stale copy.
 

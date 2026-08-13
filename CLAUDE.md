@@ -74,7 +74,7 @@ the US.
 │       ├── client-intelligence/       creates/enriches/audits the per-client files + renders the review dashboard (Atlas); sweep by owner, assign by company
 │       ├── knowledge-hub/             builds/extends the firm Knowledge Hub (the one page indexing all SOPs, clients + Lilian's Notebook) — preferences, curation rules, verify-before-publish gate
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
-│       ├── lilian-notebook/            drives Lilian's Notebook — capture a lesson (PROPOSE it unprompted), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
+│       ├── lilian-notebook/            drives Lilian's Notebook — write a lesson SHE ASKED FOR (🛑 never propose one), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
 │       ├── proposal-generator/         drives the proposal-tool project — client-ready proposals + engagement letters (the interactive business tax-prep generator, per-client fields, client data never committed)
 │       └── impeccable/                general UI/design skill
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
@@ -171,21 +171,27 @@ in that folder.
   **part of finishing it**, run via the [`knowledge-hub` skill](./.claude/skills/knowledge-hub/) —
   not a separate ask. The only exception is when Lilian explicitly says a given thing is
   too small to warrant a Hub entry.
-- **Hard knowledge worth keeping gets captured — offer it, don't wait to be asked.** When a
-  session turns up **how a system actually behaves**, **what something costs**, **what's inside a
-  fee**, or **how to carry out a procedure nobody had written down**, **propose a note in
-  [`projects/lilian-notebook/`](./projects/lilian-notebook/) in one line**, with the title you'd
-  give it, and let Lilian say yes or no. She asked for this precisely because *she* won't remember
-  to ask (Lilian, Aug 2026). Never file one silently, and if a note already covers the topic, say
-  so and **enrich that note** rather than adding a second.
-  ⚠️ **The notebook is deliberately small — it is not a lesson dump.** Lilian cut its first 33
-  notes to four: she does **not** want process hygiene ("get it in writing"), advice on how to
-  communicate, lessons about our own repo machinery, or argumentation about a live matter. **Read
-  §0 of the [`lilian-notebook` skill](./.claude/skills/lilian-notebook/) before proposing one** —
-  it holds the filter, with what she kept and what she threw out — and when a note is borderline,
-  offer it rather than file it. **The other distinction that matters:** a **task** goes in
-  [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) and is **deleted when it resolves**, so when a matter closes,
-  ask whether it left any durable knowledge before the row disappears.
+- 🛑 **Lilian's Notebook: NEVER propose a note. She asks, or it doesn't happen.**
+  Her instruction, **2026-08-13**, and it is absolute: *"No me propongas más nada para mi libreta.
+  Cuando crea que algo es necesario, yo misma te lo voy a decir."* So a session that spots a
+  beautiful lesson **says nothing about the notebook** — not "want me to note this?", not a
+  one-liner at the end of a reply, not a nudge. **Add a NEW note only when she asks for it in that
+  session**, in her words ("anota esto en mi libreta" / "add this to my notebook"). Answering a
+  question *about* what the notebook already says is always fine — and so is **maintaining** what
+  is already there: correcting a superseded note, repairing a cross-reference, rebuilding and
+  republishing the page. This governs **new notes and the offering of them**, nothing else.
+  _(This **reverses** the standing rule that ran Aug 2026 → 2026-08-13, which told every session to
+  offer a note unprompted because "she won't remember to ask". She had already cut the notebook's
+  first 33 notes down to four; the proposals kept coming anyway, and the reversal is what closed
+  it. **The judgement was never the problem — the asking was.** Do not reintroduce this as
+  "just a suggestion".)_
+  **Where a real lesson goes instead** — without raising the notebook, though **each of these keeps
+  its own rule** (a Client-Intelligence write is still announced; a skill-worthy workflow is still
+  offered unprompted; an SOP change still needs her approval): a repeatable workflow → the relevant
+  [skill](./.claude/skills/); a procedure → an [SOP](./projects/sops/); a fact about a client →
+  their [Client Intelligence](./projects/client-intelligence/) file; an unfinished thread → a
+  [`FOLLOW-UPS.md`](./FOLLOW-UPS.md) row (deleted when it resolves). Those are unaffected by this
+  rule and remain the default homes for what a session learns.
 - **Know the skills we already have — check first, enrich instead of duplicate.**
   The canonical catalog of every skill is [`.claude/skills/README.md`](./.claude/skills/README.md)
   (the skills index). **Nobody remembers all of them**, so it's your job to: (a) answer
