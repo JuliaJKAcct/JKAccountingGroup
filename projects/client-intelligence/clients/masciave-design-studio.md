@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -27,7 +27,7 @@
 ## 1. Snapshot
 
 - **Business name:** MASCIAVE DESIGN STUDIO LLC
-- **Entity type:** LLC — **S-corp** (files Form **1120-S**) _(Double)_
+- **Entity type:** LLC — the firm files Form **1120-S** _(Double)_. 🔴 **BUT THE IRS DOES NOT AGREE.** On **2025-12-23** the IRS confirmed there is **no Form 2553 associated with any of this company's EINs**, so **to the IRS it is still a C-corp**. See §5 — this is unresolved and it is the most consequential fact on this client.
 - **Home state:** **Florida** (Broward / Fort Lauderdale area) _(Gmail — high confidence)_
 - **Industry / what they do:** **Interior design studio** (commercial + residential; the owner holds IIDA · ASID · CPTED credentials). Work runs as numbered design **projects**, some for commercial / government REIT clients. _(Gmail)_
 - **Primary language:** **English** (all business correspondence). _(Gmail)_
@@ -46,6 +46,7 @@ the actual details.
 | Owner / primary contact | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
+- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on either` — note **491846**
 
 ## 3. Systems & access
 
@@ -80,6 +81,10 @@ the actual details.
 
 ## 5. Key facts & quirks
 
+- 🔴 **NO FORM 2553 EXISTS ON ANY OF THIS COMPANY'S EINs — THE IRS TREATS IT AS A C-CORP WHILE THE FIRM FILES AN 1120-S.** Confirmed by the IRS on **2025-12-23**. Nothing in any source the firm can reach records this being fixed. **This is the first thing to settle on this client**, and it decides whether the 1120-S filings are valid at all.
+- 🔴 **THE COMPANY HAS TWO ACTIVE EINs, AND THE IRS FILED RETURNS UNDER BOTH.** `99-2753726` carries the Form 1120 for **2023 and 2024**; `46-2647838` carries Form 1120 filings running from **April 2013 to 2022**. A third, `50-0247307`, is **not active and does not appear in IRS records at all**. The firm chose to **keep `99-2753726` and cancel `46-2647838`**; the cancellation was requested on **2026-01-14** and, per the IRS, they will **merge the information from both numbers into the one kept** so nothing is lost.
+- ⚠️ **The IRS will NOT confirm an EIN cancellation in writing while it is in progress.** Lilian pressed for a letter or an email and was told the only letter they ever send is one confirming the number is **already** cancelled. The stated window is **up to 30 calendar days**, after which the only option is to call. **So no news here genuinely means no news.**
+- ⚠️ **Transcripts older than five years cannot be reissued.** The IRS sent transcripts for **2021 and 2022** on the old EIN and refused the earlier ones — the system will not produce a transcript for a return filed more than five years ago. For anything before 2021 on this company, the firm's own copies are the only source.
 - **Two-basis reporting (Double "Reporting & Tax Basis" note, confirmed 2026-07-20):** client-facing statements are on the **accrual** basis (so the owner sees A/R, A/P and customer deposits), but the **tax return is filed on the cash** basis — the studio invoices heavily and collects slowly, so accrual shows true monthly performance while cash defers tax on invoices not yet collected.
 - **Project-based / work-in-progress:** deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. Owner supplies monthly receipts / CC statements + per-project descriptions.
 - Pays **subcontractors** (e.g. structural engineers) and collects W-9s → drives the 1099 work.
@@ -98,6 +103,10 @@ the actual details.
 - 2026-07-25 — Incremental sweep: confirmed payroll provider (Gusto AutoPilot, biweekly) and the linked personal-client relationship (710615). June 2026 month-end close moved to Done (2026-07-20), including the Chase Credit Card reconciliation task. Q2 2026 financial reports sent to the client 2026-07-20 (acknowledged same day). Sales Tax task recurrence changed from the 1st to the 5th of the month.
 - 2026-08-01 — **Weekly incremental sweep (baseline 2026-07-20, inclusive):** confirmed Gusto as the payroll provider and its AutoPilot auto-run cadence from Gmail; picked up the quarterly sales-tax task's due-day change (1st → 5th) from the Double activity log; confirmed via Double's portal-contact record that the same contact is linked to both this company (706696) and the individual client (710615), resolving the prior open question about that link; found (via Drive) the client's accountable-plan workbook and recurring-expense watchlist, which name the non-sensitive recurring vendors and the accountable-plan mechanism (no dollar figures pulled in). Ping org-wide search for "Masciave" / the owner's name again returned **no legible, on-topic indexed meetings** for this client — same as the prior sweep. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
 - 2026-08-08 — **Weekend sweep (incremental, from 2026-07-20):** no new Double note since the one already on file. Double client properties confirm **Organizer Status: Completed** and the Sales Tax task recurrence change (both added to §4). Portal contacts confirm the **linked personal client (Double 710615) shares the same portal contact as this company** — the §6 open question is resolved (see below). Ping org-wide meeting search returned no relevant/legible content for this client; Gmail turned up only routine Gusto AutoPilot payroll-run notices and the already-known Q2-financials exchange from 07-20 — nothing new to record.
+- 2026-08-13 — **The EIN and S-election matter written up.** _(Lilian's iCloud notes, migrated — folder "Masciave Design"; notes dated 2025-12-23 and 2026-01-14.)_ The EINs, the agents and the exact windows are in the **Double case note** (§7). _(Worked by Lilian.)_
+  - **2025-12-23 — IRS call.** Established that the company has **two active EINs plus a third that is not active**, with Form 1120 filings sitting on both active ones, and — the finding that matters — that **no Form 2553 is associated with any of them, so the IRS treats the company as a C-corp.** The IRS's route for the duplicate: choose one EIN and call to request cancellation of the other, with a Form 2848 POA. It also refused to reissue transcripts for returns filed more than **five years** ago.
+  - **2026-01-14 — IRS call.** The **cancellation request went in to the BMF Entity unit**. The IRS said it will **merge the information from both EINs into the one kept**, gave **up to 30 calendar days**, and confirmed **no acknowledgement is issued while it is in progress** — the only letter they send is one saying the number is already cancelled. Transcripts were **resent** to the company's Coral Springs address after the client reported never receiving the first mailing.
+- **Nothing after 2026-01-14 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — still no update this window, still open.
@@ -114,6 +123,7 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
+- **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on either` — note **491846**
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1syx1fHdE1tCE0BFFsSgmPxT_QhHRdG-1)
 - **Recurring-expense watchlist (Drive):** [watchlist doc](https://docs.google.com/document/d/1zJ974hLR2p1pl1zIJT1R2WY4SwWLrX6iDguMHm4CGps/edit) — non-sensitive vendor list, no dollar figures repeated here
 - **Related SOPs:** _(pending — links into ../sops/ once written)_
