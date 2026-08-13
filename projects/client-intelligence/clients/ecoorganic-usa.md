@@ -127,7 +127,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   taxable sales would normally file showing **gross receipts with a deduction** rather than a
   blank return — and nobody has opened one of these filings to see which it is. Practice is
   to keep filing (stopping is worse); nobody should represent *why* until Lilian confirms it.
-  Tracked as decision #8 in the SOP's Open decisions log.
+  Tracked in [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §6.
 - **Deadline and cost of missing it _(verified against CT DRS, 2026-08-12)_:** the return is
   due the **last day of the month following** the period; the late penalty is **15% of tax
   due or $50, whichever is greater**, so on a zero return the **$50 floor** is what lands.
@@ -146,6 +146,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   amount and outcome are unknown.)* **A proposed assessment left unprotested becomes final**,
   so this is live — on `FOLLOW-UPS.md`, and in
   [`../../sops/ecoorganic-ct-sales-tax.md`](../../sops/ecoorganic-ct-sales-tax.md) §4.
+  🔑 **And look here BEFORE asking the state anything: a migrated TaxDome note on this client
+  is titled `04.06.2026 CT state call - sales tax account`** — an April 2026 call with
+  Connecticut about this very account, which falls **inside** the window of both the gap and
+  the two notices, so it may already hold the answer. *(Found 2026-08-13 in the TaxDome
+  Phase-1 inventory — the note's **content has not been read**; those notes are gated on the
+  permission question in [`../automation/taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md).
+  Its existence is the fact; what it says is not.)*
 - **When or why DRS moved this client from quarterly to monthly is not recorded** — observed
   from the filings, not established.
 

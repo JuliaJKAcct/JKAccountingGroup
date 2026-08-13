@@ -1,6 +1,6 @@
 # Ecoorganic — Monthly Bookkeeping & Review Runbook
 
-> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last revised:** 2026-08-12
+> **Status:** Active · **Client:** ECOORGANIC USA LLC (QBO) · **Owner of SOP:** Lilian · **Started:** Jul 2026 · **Last updated:** 2026-08-13
 >
 > Born from the July 2026 cleanup of the client's books. A staff bookkeeper does
 > the monthly work; Claude acts as the **independent reviewer** using the rules

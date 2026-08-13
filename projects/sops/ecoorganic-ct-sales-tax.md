@@ -10,6 +10,11 @@
 > filed returns, the confirmation screenshots and any DRS notice live in **Google Drive**
 > and are reached from the links below. This file holds the *procedure only*.
 >
+> 🔍 **Written from the outside, not from a real filing session — §9 lists what is still
+> missing.** The monthly cycle in §2 is complete and safe to follow; there is no
+> screen-by-screen walkthrough of myconneCT and no map of what DRS emails, because nobody
+> has captured them yet. **If you are the next person to file, capture them** — §9 says how.
+>
 > ⚠️ **Two things about this client are unsettled — read §6 before you tell anyone
 > anything.** Why the return is zero has never been written down, and there is a
 > nine-month hole in the 2025 filing record with two unopened DRS notices beside it.
@@ -29,7 +34,8 @@ flowchart TD
   F -- "Yes" --> G["⑦ Save the PDF to Drive<br/>'MM.YYYY - Sales tax - zero tax return.pdf'"]
   G --> H["⑧ Save the confirmation screenshot<br/>→ that year's Screenshots folder"]
   H --> I["✅ Month closed"]
-  J["📩 A DRS notice arrives"] --> K["Save it to Sales Taxes → Notices<br/>AND raise it with Lilian — never just file it"]
+  I -.-> J["📩 If a DRS notice arrives<br/>(any time, not only after filing)"]
+  J -.-> K["Save it to Sales Taxes → Notices<br/>AND raise it with Lilian — never just file it"]
 ```
 
 **The loop:** this repeats every month, on its own clock. It is **not** part of the
@@ -38,18 +44,18 @@ QuickBooks. The bookkeeping runbook is
 [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md); the two only
 touch at the reviewer's monthly checklist, which confirms this filing happened.
 
-## §0 — Who does what
+## §0. Who does what
 
 1. **The firm files it.** The login is the **firm's**, not the client's, so filing this is
-   ours. **Never bounce it to the client** — he cannot do it, and asking him to is how a
-   month gets missed.
+   ours. **Never bounce it to the client** — the credentials are ours, not his, and
+   handing it back to him is how a month gets missed.
 2. **The reminder lives in Double**, as a recurring task on this client due the **5th of
    the month after the period** (so 5 August for July). That date is deliberately early —
    see §3.
 3. **Anything a DRS notice says goes to Lilian.** Filing a notice into Drive is not
    handling it (§5).
 
-## §1 — Before you file: what you need in hand
+## §1. Before you file: what you need in hand
 
 You need exactly two things. Both are already set up; nothing has to be requested from the
 client.
@@ -68,7 +74,7 @@ client.
 zero return reports no figures. If you find yourself waiting on QuickBooks to file this,
 stop — you are conflating it with the bookkeeping close.
 
-## §2 — The monthly filing, step by step
+## §2. The monthly filing, step by step
 
 1. **Open the login doc** and get the myconneCT credentials (§1).
 2. **Log in to CT DRS myconneCT** — [portal.ct.gov/drs-myconnect](https://portal.ct.gov/drs-myconnect).
@@ -81,11 +87,8 @@ stop — you are conflating it with the bookkeeping close.
      have saved both artifacts below.
 4. **Save the filed return as a PDF** into
    [Sales Taxes → Connecticut → *the year*](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j),
-   named exactly:
-   ```
-   MM.YYYY - Sales tax - zero tax return.pdf
-   ```
-   For example `07.2026 - Sales tax - zero tax return.pdf`. **Keep the name exactly.** The
+   named exactly `MM.YYYY - Sales tax - zero tax return.pdf` — for example
+   `07.2026 - Sales tax - zero tax return.pdf`. **Keep the name exactly.** The
    naming is what makes a missing month visible at a glance in the folder listing — it is
    the only index anyone has of what has been filed.
 5. **Save the confirmation screenshot** into that year's **`Screenshots`** subfolder. The
@@ -104,7 +107,7 @@ file. The only money in this procedure is the penalty for *not* doing it:
 **Bottom line:** a skipped month costs $50 and buys nothing. There is no such thing as a
 month too quiet to file.
 
-## §3 — The deadline, and why our reminder is earlier
+## §3. The deadline, and why our reminder is earlier
 
 | | Date | Whose |
 |---|---|---|
@@ -115,11 +118,9 @@ month too quiet to file.
 that a missed reminder is still recoverable with weeks to spare. If you are reading this
 after the 5th, you are not late — but do it today.
 
-*(Due date and penalty verified against CT DRS on 2026-08-12 — see §8. The instruction
-booklet cited there is the 2019 revision of Form O-88, so re-check the penalty figure
-before quoting an amount to the client or to DRS.)*
+*(Due date and penalty verified against CT DRS on 2026-08-12; sources in §8.)*
 
-## §4 — Filing history: what the record shows, and the hole in it
+## §4. Filing history: what the record shows, and the hole in it
 
 Read this before assuming the back years are clean. Everything here is **what the Drive
 folder contains**, which is not the same as what was filed — **myconneCT's own filing
@@ -143,12 +144,27 @@ history is the authority, and nobody has opened it.**
    the period, the amount and whether either was resolved are all unknown. **A proposed
    assessment left unprotested becomes final**, which makes this live work, not history.
 
-**This is on the firm's open-loops list** (`FOLLOW-UPS.md`, Ecoorganic / CT sales tax) with
-one next action: **log in to myconneCT and read the account's own filing history and
-balance for 01.2025 – 09.2025, then open the two notice PDFs.** Do not conclude anything
-about those nine months from the Drive folder alone.
+6. 🔑 **The firm already called the state about this account — read that first.** A note
+   titled **`04.06.2026 CT state call - sales tax account`** exists on this client among the
+   records migrated from the firm's previous practice platform. **April 2026 sits inside the
+   window** the gap and both notices fall in, so it may already answer what the rest of this
+   section asks. *(Its **content has not been read** — those migrated notes are gated on a
+   permission question for Lilian. This records that the note exists, not what it says.)*
 
-## §5 — When a DRS notice arrives
+**This is on the firm's open-loops list** (Ecoorganic / CT sales tax). The next action, **in
+this order**:
+
+1. **Read the 04.06.2026 CT state-call note** — the firm's own record of what the state
+   already told us comes before asking the state again.
+2. **Log in to myconneCT** and read the account's own filing history and balance for
+   **01.2025 – 09.2025**.
+3. **Open the two notice PDFs.**
+
+**Do not conclude anything about those nine months from the Drive folder alone**, and do not
+treat a period as unfiled until step 2 says so — the returns may have been filed and simply
+never saved here.
+
+## §5. When a DRS notice arrives
 
 1. **Save it** to [Sales Taxes → Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK).
 2. **Raise it with Lilian, the same day.** A notice is never just filed and forgotten.
@@ -160,7 +176,7 @@ about those nine months from the Drive folder alone.
      return to go on. **It carries a deadline to respond, and it becomes final if nobody
      protests it.** This is the one that turns into real money by being ignored.
 
-## §6 — Open questions: what NOT to represent
+## §6. Open questions: what NOT to represent
 
 **Keep filing exactly as in §2.** Nothing here changes the procedure — it changes what you
 are allowed to *say* about it.
@@ -178,12 +194,14 @@ are allowed to *say* about it.
    opened one.
 
 **Until Lilian settles both:** file as before, and do **not** explain to the client, or to
-DRS, *why* it is zero. These two questions live here; they are also carried on
-`FOLLOW-UPS.md`, in the client's Client Intelligence file, and as a pointer row in the
-bookkeeping runbook's Open decisions log so a reviewer reading only that log still sees
-them.
+DRS, *why* it is zero. **Nothing here says the position is wrong** — it says nobody has
+written down why it is right, which is a different problem and not one a covering
+bookkeeper should try to solve mid-filing. These two questions live here; they are also
+carried on the firm's open-loops list, in the client's Client Intelligence file, and as a
+pointer row in the bookkeeping runbook's Open decisions log so a reviewer reading only that
+log still sees them.
 
-## §7 — Common pitfalls
+## §7. Common pitfalls
 
 1. **Assuming a quiet month needs no return.** It does. A zero return is required "even if
    no sales were made or no tax is due", and skipping it costs $50 (§2).
@@ -200,19 +218,19 @@ them.
    of the close is how it slips to the end of the month.
 7. **Sending the client to file it.** The login is ours (§0).
 
-## §8 — Contacts & links
+## §8. Contacts & links
 
 | What | Where |
 |---|---|
-| **CT DRS myconneCT** (the filing portal) | [portal.ct.gov/drs-myconnect](https://portal.ct.gov/drs-myconnect) |
+| **CT DRS myconneCT** — the state's information page for the system | [portal.ct.gov/drs-myconnect](https://portal.ct.gov/drs-myconnect). **The address you actually sign in at is in the Drive doc below** — use that one. |
 | **The login** (portal address + firm's user/password) | [`Sales Taxes > Connecticut > Sales tax`](https://docs.google.com/document/d/1FaiTyqEnm-eDsxbx1ZH8UdSAgqq6zSMwK_2z2orbk9U/edit) — a Google Doc in the client's Drive. *(The same credentials are also in the master `Ecoorganic Passwords` doc one folder up.)* |
 | **Filed returns, by year** | [Sales Taxes → Connecticut](https://drive.google.com/drive/folders/1080Kf9czucrD6vf09cu8lADjdlHumd8j) — a folder per year, each with a `Screenshots` subfolder |
 | **DRS notices** | [Sales Taxes → Notices](https://drive.google.com/drive/folders/1ReFw-i3D8LDVOAzT6PfjqYgFa6A9cwZK) |
 | **The whole sales-tax folder** | [Sales Taxes](https://drive.google.com/drive/folders/1z-YELZhZxnBPlr-gBg7xhuf2xHdTwCJL) — the 2023–2024 quarterly returns sit loose in its root |
-| **CT rules — filing requirement, due date, penalty** | [Sales and Use Tax Information](https://portal.ct.gov/drs/sales-tax/tax-information) · [Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/drs/forms/2019/sut/o-88_1019.pdf) *(2019 revision — re-check the penalty figure before quoting it)* |
+| **CT rules — filing requirement, due date, penalty** | [Sales and Use Tax Information](https://portal.ct.gov/drs/sales-tax/tax-information) · [Form O-88, OS-114 instructions](https://portal.ct.gov/-/media/DRS/Forms/2022/SUT/O-88_0722.pdf) *(07/2022 revision)* |
 | **The client's bookkeeping runbook** | [`ecoorganic-bookkeeping-review.md`](./ecoorganic-bookkeeping-review.md) |
 
-## §9 — Not yet written down
+## §9. Not yet written down
 
 Recorded so the gaps are visible rather than discovered mid-task. **None of these blocks
 the monthly filing.**
@@ -226,4 +244,5 @@ the monthly filing.**
    this filing, so the confirmation screenshot is currently the only receipt.
 3. **The client's CT sales-tax registration number and filing frequency as DRS has it
    assigned** — never recorded here, and it is what would settle §4's quarterly-to-monthly
-   question. It is visible inside myconneCT.
+   question. It is visible inside myconneCT — when someone reads it, **record it in the
+   client's Drive folder, never in this file** (a full registration number is a secret).

@@ -882,15 +882,20 @@ function flowViews(id, cfg){
     cfg.flow && cfg.flow.length ? taskFlow({ flow: cfg.flow }) : '',
     cfg.schema ? schemaFlow(cfg.schema) : '');
 }
+// The tooltip id must be UNIQUE per button: every reader is emitted into the one Hub page,
+// so a hardcoded id makes duplicate ids the moment a second SOP declares a `vault` — and
+// every `aria-describedby` then resolves to the FIRST tooltip, i.e. another client's text.
+// (Found 2026-08-13, when Ecoorganic's CT sales-tax runbook became the second vault.)
 function vaultButton(v){
   if(!v || !v.url) return '';
+  const tipId = 'vault-tip-' + String(v.label || v.url).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   return `<div class="vault">`
-    + `<a class="vault-btn" href="${v.url}" target="_blank" rel="noopener" aria-describedby="vault-tip">`
+    + `<a class="vault-btn" href="${v.url}" target="_blank" rel="noopener" aria-describedby="${tipId}">`
     + `<span class="vault-ic" aria-hidden="true">${TIC.key}</span>`
     + `<span class="vault-x"><span class="vault-t">${esc(v.label || 'Open the client password vault')}</span>`
     + `<span class="vault-s">Google Doc · opens in Google Drive</span></span>`
     + `<span class="vault-go" aria-hidden="true">${MIC.arrow}</span>`
-    + `<span class="vault-tip" role="tooltip" id="vault-tip">${esc(v.tip)}</span></a>`
+    + `<span class="vault-tip" role="tooltip" id="${tipId}">${esc(v.tip)}</span></a>`
     + `<p class="vault-note"><span class="vault-lock" aria-hidden="true">🔒</span><span>${esc(v.note || v.tip)}</span></p>`
     + `</div>`;
 }
