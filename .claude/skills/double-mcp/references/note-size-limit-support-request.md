@@ -1,4 +1,6 @@
-# Double support — the note-size 403 (Aug 2026)
+# Double support — the request-size 403 (Aug 2026)
+
+> **Findability:** this is the **request-size / payload-size / 8 KB / `mcp_request_blocked` / 403** file. It is filed under *note-size* because that is what we thought it was when it was opened, and the filename is left alone so links from other sessions' branches keep working — but the wall is **not** note-specific.
 
 > ## ✅ SENT — and ANSWERED. Do not send the original again.
 >
@@ -35,7 +37,7 @@ Allison, relaying her team, on the same thread:
 >   see this one soon!
 
 **The second bullet is a win** (that is the deadline write, row 22 — nothing more to do but wait).
-**The first bullet answers a question nobody asked.** Two tests run on 2026-08-13 show why:
+**The first bullet answers a question nobody asked.** Three calls run on 2026-08-13 show why:
 
 | Call | Server | Payload | Result |
 |---|---|---|---|
@@ -50,17 +52,25 @@ Allison, relaying her team, on the same thread:
 - **Row 1 is the control** — same tool, same parameter, shorter — so Double is up and authenticated,
   and payload size is the only variable that moved.
 
-**What is actually happening:** something at the **edge in front of Double's MCP endpoint** — a WAF,
-CDN or load balancer — refuses the POST before Double's application sees it. This is why their
-engineers can check the product, find no limit, and answer in complete good faith. *The request never
-reaches the code they looked at.* **The follow-up must therefore not argue about note length at all**
-— it has to move the question from the product to the infrastructure in front of it, and hand them
-something specific enough to check.
+**What is actually happening:** something **on Double's side refuses the POST before it reaches the
+layer that stores notes.** This is why their engineers can check the product, find no limit, and answer
+in complete good faith. *The request never reaches the code they looked at.* **The follow-up must
+therefore not argue about note length at all** — it has to move the question off the product.
 
-**The specific thing to hand them, as a hypothesis and not a claim:** the boundary sits at
-**8 KB = 8,192 bytes**, the default body-inspection ceiling in the common managed WAF rule sets (AWS
-WAF's `SizeRestrictions_BODY` blocks at exactly that figure). Our 7,600-pass / 8,000-fail bracket
-straddles it once the JSON envelope is counted.
+⚠️ **But it must not over-specify either, and an earlier draft of this file did.** The evidence
+localises the block to Double and **no further**: an edge in front of the endpoint (WAF/CDN/load
+balancer) and a request-body cap inside Double's own MCP server produce an identical `403` with an
+identical correlation to size. **Nothing we measured tells the two apart.** Say "on your side, before
+the product" and ask them to check **both** — telling infrastructure it is their firewall, when it is
+in the MCP server, gets this closed "out of scope" a second time. The five-stage ownership table in
+[`../SKILL.md`](../SKILL.md) §7 is the fuller version.
+
+**A number to hand them as a lead, not a finding:** the failures start somewhere near **8 KB**, and
+8,192 bytes is a common default request-body ceiling (AWS WAF's `SizeRestrictions_BODY`, and the
+default body-parser limits of several server frameworks). ⚠️ **Do not present it as arithmetic.** We
+never measured a payload in *bytes*, and the note that passed at ~7,600 characters was real HTML with
+em-dashes, `§` and emoji — in bytes it may already have been over 8,192, which would sink the tidy
+story. If this ever needs to be tighter, **measure the payloads in bytes first**.
 
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
 evidence is kept here rather than reconstructed from memory the next time it comes up.
@@ -203,8 +213,15 @@ end that she can forward without reading. Three rules if you edit it again:
    and it survives being said in words.
 3. **Quarantine the technical detail at the bottom**, addressed to whoever she forwards it to. Allison
    forwards technical issues (she looped in `help@doublehq.com` on 2026-05-20, which became dev ticket
-   #102495635), so the forwarded fragment has to stand alone — but it must not be what she has to wade
-   through first.
+   #102495635), so the forwarded fragment has to stand alone — **workspace name, dates, client IDs and
+   the error code all belong in it**, because a plaintext fragment arriving without them identifies
+   neither sender nor tenant and an engineer who cannot find the request in a log closes the ticket as
+   unreproducible.
+4. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"** —
+   even though it is jargon: Allison answered a "Claude integration" question with *Ask Double* on
+   2026-06-17, and unnamed it goes to the same team again. ⓑ **Ask about BOTH** the thing in front of
+   the endpoint *and* the MCP server itself. We cannot tell them apart, and naming only the firewall
+   is how this gets closed "out of scope" twice.
 
 > Hi Allison,
 >
@@ -213,28 +230,30 @@ end that she can forward without reading. Three rules if you edit it again:
 > On the notes, I think the question reached the wrong team. Your team is right that Double has no
 > limit on note length. But what is being blocked is not a note.
 >
-> We tested it. We asked Double a simple *question* — "list the clients whose name matches this" —
-> using a very long search text. That saves nothing, and there is no note in it anywhere. It was
-> blocked too, with the same error. The very same question with a short search text works fine.
+> We tested it. Through the **MCP integration** we use with Claude (not Ask Double), we asked Double a
+> simple *question* — "list the clients whose name matches this" — using a very long search text. That
+> saves nothing, and there is no note in it anywhere. It was blocked too, with the same error. The very
+> same question with a short search text works fine.
 >
-> So it is not about notes. It is about the size of anything we send. And it does not look like Claude
-> either: we sent that identical long text to another system we use, from the same account, a minute
-> apart, and it went through with no problem.
+> So it is not about notes. It is about the size of what we send. And it does not look like Claude
+> either: we sent that identical long text to another system we use, from the same Claude account, a
+> minute apart, and it went through with no problem.
 >
-> It seems that something sitting in front of Double — a firewall or similar — is refusing our request
-> before it ever reaches Double itself. That would explain both things being true at once: your team
-> finds no limit in the product, and we are still blocked.
->
-> Could you ask the team that looks after Double's servers, rather than the product team, to check the
-> size limit on incoming requests? We think that is where it is.
+> It seems that something on Double's side is refusing our request before it reaches the part of Double
+> that stores the notes. From outside we cannot tell whether that is something sitting in front of your
+> MCP endpoint, like a firewall, or a size limit inside the MCP server itself. Could you ask your
+> technical team to check both?
 >
 > **If it helps whoever looks at it:**
 >
+> - Workspace: **JK Accounting Group**. The blocked read was tested on **13 August 2026**; the original
+>   note failures were **6 August 2026, ~03:25–04:45 UTC**, on client IDs **706709** and **710577**.
 > - The error is `403 Forbidden`, `mcp_request_blocked`, on the MCP endpoint.
-> - Anything we send above roughly 8 KB is refused; below that it works. 8 KB (8,192 bytes) happens to
->   be the default request-size limit in the standard firewall rule sets, so it may be nothing more
->   than that setting.
-> - Happy to send a test request of the exact failing size if that helps them trace it.
+> - What we actually measured: note bodies of ~7,600 characters save; ~8,000 and ~10,400 do not. On a
+>   read-only call, a ~48-character filter works and a ~9,000-character one is refused — we have not
+>   tested anything in between, so we cannot give you an exact cut-off, only that it is somewhere
+>   around 8 KB.
+> - Happy to send a test request of any size that helps them trace it.
 >
 > One more thing — is our wrap-up call on August 17th or 18th? Your message says one and the subject
 > line says the other, and we do not have an invite for either.
