@@ -1036,8 +1036,31 @@ exception to rule 1, so it comes with discipline, or it becomes the fragmentatio
 9. **Update in place still applies within each part.** A new part is created only when the live one is
    full — never as a way to append an update.
 
-None of the three current notes needs this yet (all under 8 KB). Revisit if Double raises the limit —
-then collapse the parts back into one note, which is the preferred shape.
+✅ **FIRST USED 2026-08-13, on the matter this convention was built for.** The **Tsminibears** Florida
+reemployment-tax case outgrew one note when a fourth agency call added a named case officer, a new
+route and a fresh timeline entry. Lilian authorised the split. It went:
+
+- **Part 1 — note `485230`** (the original ID, kept): status, the named agent, the next action, what to
+  say on the call, and the recent timeline. **The live note.**
+- **Part 2 — note `491836`**: the background and the 2026-05-28 → 2026-08-06 history, pushed out of
+  Part 1. **Archive only.**
+
+Two things that pass on to the next split. **Keep the original note ID as Part 1** — it is the one
+already cited in the client file, in `FOLLOW-UPS.md` and in anyone's memory, so making the *new* note
+the live one would strand every existing reference. And **the split point is chronological, never
+topical**: what moved out was the oldest history, which is what rule 3 means by "entries pushed out of
+Part 1" — status and next actions never leave.
+
+⛔ **ONE CARVE-OUT: an ITIN case-tracker note is TRIMMED, never split.** The
+[`itin-w7-preparation`](../itin-w7-preparation/) walkthrough writes a machine-readable block into the
+client's case note and **reads it back** to reopen a case elsewhere, so it warns at **7,000
+characters and offers to trim the log** instead. **Splitting one of those breaks re-import** — half
+the state ends up in a note the tool never reads. So the firm has two documented answers to the same
+wall and they are not in conflict: **trim** where a tool parses the note, **split** where only people
+read it.
+
+Revisit if Double raises the limit — then collapse the parts back into one note, which is the
+preferred shape.
 
 ### The body shape
 
