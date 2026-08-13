@@ -183,6 +183,16 @@ textarea.paste{width:100%;min-height:130px;padding:11px 13px;border:1px solid va
 .empty p{font-size:14.5px;max-width:48ch;margin:0 auto 16px}
 .btn.sm{padding:8px 14px;font-size:13.5px}
 .btn.danger{background:transparent;color:var(--err);border-color:var(--err)}
+a.btn{text-decoration:none;display:inline-flex;align-items:center}
+/* The client's Double link. Wraps to its own row on a phone rather than squeezing
+   the input, and the URL stays readable because a blocked click still leaves you
+   something to copy. */
+.dblink{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+.dblink label{flex:none}
+.dblink input{flex:1 1 320px;min-width:0;font-family:var(--mono);font-size:12.5px;
+  padding:9px 11px;border-radius:9px;border:1px solid var(--line-2);background:var(--card);color:var(--body)}
+.dblink input:focus-visible{outline:2px solid var(--teal-600);outline-offset:1px;border-color:var(--teal-600)}
+.dblink input::placeholder{color:var(--muted);opacity:1}
 
 /* ---- in-page dialogs ----
    These replace window.prompt / confirm / alert, which a sandboxed viewer
@@ -1190,12 +1200,24 @@ function b64enc(o){ return btoa(unescape(encodeURIComponent(JSON.stringify(o))))
 function b64dec(s){ return JSON.parse(decodeURIComponent(escape(atob(s)))); }
 
 // The compact form stored in the Double note: ids + state only, never the answers.
+// `dl` (the client's Double link) is written only when set, so a case without one
+// encodes byte-for-byte as before and an older reader simply ignores the key.
 function encodeCase(c){
-  return CODETAG + b64enc({
+  var o = {
     v:1, r:c.ref, cr:c.created, up:c.updated, g:c.generic?1:0,
     s: c.steps.map(function(s){ return [s.id, s.done?1:0, s.date||'', s.note||'']; }),
     l: c.log.slice(-LOG_KEEP).map(function(e){ return [e.t, e.x]; })
-  });
+  };
+  if (c.dl) o.dl = c.dl;
+  return CODETAG + b64enc(o);
+}
+// Only ever hand a Double URL to an href. Anything else — another host, or a
+// javascript:/data: URL pasted in by accident or otherwise — is stored as typed but
+// never linked, so a bad paste can never become a live link on a client's case.
+function doubleLink(v){
+  var s = String(v || '').trim();
+  if (!/^https:\/\/[a-z0-9.-]*\bdoublehq\.com\//i.test(s)) return '';
+  return s;
 }
 function decodeCase(text){
   var i = text.indexOf(CODETAG);
@@ -1207,6 +1229,7 @@ function decodeCase(text){
   var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
   return {
     ref: o.r, created: o.cr, updated: o.up, generic: !!o.g,
+    dl: doubleLink(o.dl),          // re-validated on the way in, not trusted from the code
     steps: o.s.map(function(a){
       var meta = all[a[0]] || { id:a[0], ph:'form', t:a[0], d:'' };
       return { id:a[0], ph:meta.ph, t:meta.t, d:meta.d, done:!!a[1], date:a[2]||'', note:a[3]||'' };
@@ -1360,7 +1383,25 @@ function renderOne(){
         + '</div>';
   h += '<h2 style="font-family:var(--serif);font-size:26px;color:var(--ink);margin:0 0 4px">'+esc(c.ref)+'</h2>';
   h += '<p style="color:var(--muted);font-size:13.5px;margin:0 0 6px">Opened '+esc(c.created)+' · last touched '+esc(c.updated)+' · <b>'+p.done+' of '+p.total+'</b> done</p>';
-  h += '<div class="bar-wrap" style="margin-bottom:22px"><div class="bar-fill'+(p.pct===100?' done':'')+'" style="width:'+p.pct+'%"></div></div>';
+  h += '<div class="bar-wrap" style="margin-bottom:18px"><div class="bar-fill'+(p.pct===100?' done':'')+'" style="width:'+p.pct+'%"></div></div>';
+
+  // Where this client lives in Double. The note is still copied and pasted by hand —
+  // this only removes the "now go find the client" step, which is the part people
+  // actually lose time on. The URL is SHOWN as text as well as linked: inside the
+  // published viewer a click may be blocked, and a link you can read is still a link
+  // you can copy. rel=noopener because this opens a different origin.
+  var dl = doubleLink(c.dl);
+  h += '<div class="dblink">'
+    +  '<label class="fl" for="dlField">This client in Double</label>'
+    +  '<input type="text" id="dlField" data-dlink="1" value="'+esc(c.dl||'')+'" '
+    +  'placeholder="Paste the client’s Double page link — https://app.doublehq.com/…" '
+    +  'aria-label="Double link for this client">'
+    +  (dl
+        ? '<a class="btn ghost sm" href="'+esc(dl)+'" target="_blank" rel="noopener noreferrer">Open in Double ↗</a>'
+        : '')
+    +  '</div>';
+  if (c.dl && !dl) h += '<p class="derr" role="alert" style="margin:-6px 0 14px">That is not a Double link, so it is kept as text but not opened. A Double link starts with <span class="typein">https://app.doublehq.com/</span></p>';
+  else if (dl) h += '<p style="color:var(--muted);font-size:12.5px;margin:-6px 0 14px">Goes in the case note too, so whoever picks this up lands on the right client.</p>';
 
   PHASES.forEach(function(ph){
     var steps = c.steps.filter(function(s){ return s.ph === ph[0]; });
@@ -1439,10 +1480,20 @@ function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); i
   });
   one.addEventListener('input', function(e){
     var c = openCase, t = e.target;
-    if (!c || t.dataset.note === undefined) return;
+    if (!c) return;
+    if (t.dataset.dlink !== undefined){ c.dl = t.value.trim(); touch(c, true); return; }
+    if (t.dataset.note === undefined) return;
     var s = c.steps[+t.dataset.note];
     if (s){ s.note = t.value; touch(c, true); }
   });
+  // The Open-in-Double button only exists once a valid link is in the field, so redraw
+  // when the field is left. Typing does NOT redraw — that would destroy the input
+  // mid-keystroke, which is the caret bug this tool already learned the hard way.
+  one.addEventListener('blur', function(e){
+    var c = openCase, t = e.target;
+    if (!c || t.dataset.dlink === undefined) return;
+    renderOne();
+  }, true);
 })();
 
 /* ---------------------- the Double note (the durable copy) --------------- */
@@ -1450,6 +1501,7 @@ function caseNoteText(c){
   var p = progress(c), out = [];
   out.push('ITIN APPLICATION — ' + c.ref);
   out.push('Status: ' + p.done + ' of ' + p.total + ' steps done (' + p.pct + '%) · opened ' + c.created + ' · updated ' + c.updated);
+  if (doubleLink(c.dl)) out.push('Client in Double: ' + c.dl);
   if (c.generic) out.push('NOTE: generic checklist — not pruned to this applicant. Re-run the walkthrough for a tailored one.');
   out.push('');
   PHASES.forEach(function(ph){
