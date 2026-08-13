@@ -28,7 +28,12 @@
 
 - **Business name:** AURA REMODELING LLC
 - **Entity type:** LLC — 🔴 **reported on Ihor Naum's Schedule C; the company files no income-tax return of its own** _(Lilian, 2026-08-13 — settled)_. See §5 for what that means in practice, and the §6 log for the reading it replaces.
-  ⚠️ **Do not reintroduce the words "partnership" or the form number into this line.** The published-card classifier reads **only** this field and tests for them **before** the Schedule-C branch, so even a sentence saying the inference was *wrong* renders the card as a partnership. It did exactly that on 2026-08-13 until it was caught.
+<!-- ⚠️ EDITOR WARNING — do NOT put the words "partnership" or the partnership form number into the
+     Entity type line above, not even to say the old inference was wrong. classifyTax() in
+     .claude/skills/client-intelligence/render/build.mjs reads ONLY that field and tests that
+     pattern BEFORE the Schedule-C branch, so the published card renders as a partnership either
+     way. That happened on 2026-08-13 and was caught by review. Kept as a comment so it cannot
+     itself trip the classifier. -->
 - **Home state:** Likely **Illinois** _(low-medium confidence — owner's IL area code + an IL attorney for a related family company; not documented — verify)_.
 - **Industry / what they do:** **Remodeling / construction contractor** (residential + commercial) — confirmed by the 1099-to-subcontractor + customer-project pattern. _(Gmail — high confidence)_
 - **Primary language:** **Ukrainian** (client writes in Ukrainian; firm also uses Russian). _(Gmail)_
