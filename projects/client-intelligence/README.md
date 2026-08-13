@@ -207,6 +207,11 @@ client-intelligence/
 | Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — Maria's process guide integrated |
 | Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — Maria's process guide integrated |
 | MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — Maria's process guide integrated |
+| MAYS EXPRESS SERVICE LLC | [`clients/mays-express.md`](./clients/mays-express.md) | Firm | **Former** — business closed 2025-12-31. FDOR account closure **refused and unresolved**; note **491838** |
+| MEGABAI | [`clients/megabai.md`](./clients/megabai.md) | Firm | **Former** — company closed, **no Double account**, so no case note. Reemployment-tax closure unconfirmed |
+| VOICECAPITAL INC | [`clients/voicecapital.md`](./clients/voicecapital.md) | Firm | **IRS has no S-election** — C-corp to them; 2023 return unprocessed; note **491840** |
+| VOXAGO LLC | [`clients/voxago.md`](./clients/voxago.md) | Firm | FDOR review open — late 2024 periods, **court fees**, annual report; note **491841** |
+| YMI TRUCKING LLC | [`clients/ymi-trucking.md`](./clients/ymi-trucking.md) | Firm | An unexplained 7004 filing + **IRS address in the wrong state**; note **491842** |
 | ZETECH LLC | [`clients/zetech.md`](./clients/zetech.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
 | OPTIC GOLD INC | [`clients/optic-gold.md`](./clients/optic-gold.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
 | ONETWO STRATEGIES INC | [`clients/onetwo-strategies.md`](./clients/onetwo-strategies.md) | Liudmyla | ⚠️ **Seed (2026-08-11)** — Double properties only; owes a full first sweep |
