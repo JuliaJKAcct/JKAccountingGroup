@@ -190,8 +190,11 @@ IRS's **#1 most common error**.
   information the applicant necessarily has with them — ask for it *before* the
   appointment.
 - **Box "h" (Other)** is for anything not covered by a–g. Enter the **exception
-  number, alpha subsection and category** on the line beside it — e.g.
-  `Exception 1d-Pension Distributions`.
+  number, its alpha subsection and the category** on the line beside it — e.g.
+  `Exception 1d-Pension Distributions`. **"Exception 1" alone is not a valid
+  designation.** ⚠️ **This is required whenever box h is checked — including
+  under reason a, and including when a tax return *is* attached.** Box h is not
+  only for the no-return case.
 - **If a treaty is claimed, the treaty country must match the country on Line 3.**
 
 ---
@@ -204,11 +207,11 @@ submitted in place of the return**.
 
 | Exception | What it covers |
 |---|---|
-| **1** | **Third-party withholding on passive income** — the applicant owns an asset generating income subject to IRS information reporting / withholding this tax year. **The proof differs by sub-exception:** **1(a)** takes a **copy of the portion of the partnership or LLC agreement** showing the partnership's name and EIN, and the applicant's name and signature, establishing that they are a partner in a partnership conducting business in the U.S. **1(b)–1(d)** take an **original signed letter on official letterhead from the bank, financial institution or withholding agent** (1d covers pension and annuity distributions). |
-| **2** | **Wages / salary / compensation and honoraria with treaty benefits claimed · scholarships, fellowships and grants (with or without treaty benefits) · gambling winnings with treaty benefits.** Generally needs the **SSA denial letter**; honoraria-only and non-working F-1/J-1/M-1 students use the school-official certification letter instead. Gambling winnings are only processed under this exception when submitted **through the gaming official acting as an authorized Acceptance Agent**. |
+| **1** | **Passive income — third-party withholding or treaty benefits.** Each subsection has its own proof: **1(a)** the portion of the **partnership or LLC agreement** (name, EIN, the applicant's name and signature, showing they are a partner in a partnership doing business in the U.S.) · **1(b)** an original signed letter **from the bank** for a **business** deposit account · **1(c)** the same letter **from the bank** for an **individual** deposit account · **1(d)** an original document or signed letter **from the withholding agent** — covering **pensions, annuities, rental income, royalties, dividends**, not only pensions. |
+| **2** | **Other income**, in four subsections. **2(a)** wages/salary/compensation/honoraria with treaty benefits — an original **letter of employment**, employment contract, or speaking-engagement request, plus **Form 8233** to the payer · **2(b)** scholarship/fellowship/grant **with** treaty — an original letter or notification from the awarding institution, plus **Form W-8BEN** to the withholding agent · **2(c)** the same **without** treaty — plus the **SEVP school-official certification letter**, required for *each* W-7 (primary, spouse, every dependent), **without which the application is denied** · **2(d)** gambling winnings with treaty — processed **only** through a gaming official acting as an authorized Acceptance Agent. |
 | **3** | **Third-party reporting of mortgage interest** — a first-time filer securing a home loan whose lender reports on Form 1098. Attach evidence of the home mortgage loan. |
-| **4** | **Third-party withholding on the disposition by a foreign person of a U.S. real property interest** (FIRPTA) — including a notice of non-recognition under Reg. §1.1445-2(d)(2). |
-| **5** | **TD 9363 reporting requirement.** |
+| **4** | **FIRPTA** — disposition by a foreign person of a U.S. real property interest. A completed **Form 8288, 8288-A or 8288-B**, **and** *either* a copy of the **real estate sales contract**, the **Settlement Statement (HUD-1)** or the **Closing Disclosure**, *or* documents evidencing a transaction covered by a notice of non-recognition under Reg. §1.1445-2(d)(2). |
+| **5** | **T.D. 9363** — a non-U.S. representative of a foreign corporation meeting an e-filing requirement. The designation on the dotted line is the literal string `Exception 5, T.D. 9363`. |
 
 > **Exception documentation is not a substitute for identity documents.** It
 > replaces the *tax return*, nothing else — the supporting identification
@@ -277,9 +280,12 @@ acceptable if it has not expired before the date the W-7 is submitted**.
 † *May establish foreign status only if the document is foreign.*
 
 **If no passport is provided:** at least **two** documents, **one bearing a
-recent photograph** — except children under 14 (under 18 if a student).
-**A dependent's documentation must include a civil birth certificate unless a
-passport is submitted.**
+recent photograph** — except **a dependent** under 14 (under 18 if a student).
+The exemption is scoped to dependents; a non-dependent minor still needs a
+photograph.
+**An original civil birth certificate is required if the applicant is under 18
+and has not provided a valid passport** — an age rule, whether or not they are a
+dependent.
 
 **Copies of a passport must include the U.S. visa pages** if a visa is required
 for the application. If a document has information on **both sides**, the copy
@@ -288,31 +294,38 @@ must show **both sides**. Foreign-language documents may be asked for a
 
 ### The dependent rules — the part that gets missed
 
-> ⚠️ **These are TWO separate tests, and merging them is the classic mistake.**
-> One asks whether the passport can stand alone; the other asks whether U.S.
-> residency must be proved at all. They have different carve-outs, and the ODC
-> condition belongs to only one of them.
+**One carve-out governs both consequences below.** The Instructions for Form W-7
+state it twice — once for the stand-alone passport and once for residency — in
+*identical* words:
 
-**Test 1 — can the passport stand alone?** A passport **without a date of entry
-into the United States** is **not** accepted as a stand-alone document for a
-dependent, unless the dependent is:
+> "…unless the dependents are dependents of **U.S. military personnel stationed
+> overseas** or the dependents are **from Canada or Mexico and are claimed for
+> any allowable tax benefit other than the credit for other dependents (ODC)**."
 
-- from **Canada or Mexico**, **or**
-- a dependent of **U.S. military personnel stationed overseas**.
+So, **the carve-out** is:
 
-*(No tax-benefit condition applies to this test.)*
-
-**Test 2 — must U.S. residency be proved?** A dependent must **also prove U.S.
-residency**, unless:
-
-- they are a dependent of **U.S. military personnel stationed overseas**, **or**
-- they are **from Canada or Mexico *and*** are claimed for an allowable tax
+- a dependent of **U.S. military personnel stationed overseas** — whatever
+  benefit they are claimed for; **or**
+- a dependent **from Canada or Mexico *and*** claimed for an allowable tax
   benefit **other than** the Credit for Other Dependents (ODC).
 
-**Read that second bullet carefully — the ODC condition attaches only to the
-Canada/Mexico branch.** A dependent of U.S. military stationed overseas is
-excused from proving residency *whatever* they are claimed for; a Canadian or
-Mexican dependent claimed **only for ODC** must prove residency.
+**Consequence 1 — the stand-alone passport.** A dependent's passport **without a
+U.S. date of entry** is **not** accepted as a stand-alone document, unless the
+carve-out applies.
+
+**Consequence 2 — proof of U.S. residency.** A dependent must **also prove U.S.
+residency**, unless the carve-out applies — **or** a **passport is submitted
+with a date of entry into the United States**, which satisfies it on its own.
+
+> ⚠️ **A Canadian or Mexican dependent claimed *only* for ODC does not meet the
+> carve-out** — in either consequence. The ODC condition is part of the
+> Canada/Mexico branch, not a separate rule attached to residency.
+>
+> *This paragraph was wrong in the first version of this SOP: it said the ODC
+> condition applied to residency only, which would have had us tell a preparer
+> that an ODC-only Mexican dependent's entry-dateless passport stood alone. It
+> does not. Corrected against the Instructions for Form W-7 (12/2024), Line 6d
+> and Supporting Documentation Requirements.*
 
 **Proof of U.S. residency, by age:**
 
@@ -477,7 +490,7 @@ foreign status. Those copies live in the client's folder in Drive or Double.
 
 ```
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 P.O. Box 149342
 Austin, TX 78714-9342
 ```
@@ -486,9 +499,9 @@ Private delivery service (street address):
 
 ```
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 Mail Stop 6090-AUSC
-3651 S. Interregional Hwy 35
+3651 S. Interregional, Hwy 35
 Austin, TX 78741-0000
 ```
 
@@ -629,6 +642,6 @@ CAA ONLY
 
 SEND
 ☐ Signed and submitted within 5 business days of the signature date
-☐ Mailed to ITIN Operations, Austin (NOT the tax return's address)
+☐ Mailed to the ITIN Operation, Austin (NOT the tax return's address)
 ☐ Copy of the whole package filed in the client's folder
 ```

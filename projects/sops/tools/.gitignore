@@ -1,0 +1,6 @@
+# Built tool artifact (self-contained, ~830KB of embedded fonts + logo).
+# Regenerate with:  node projects/sops/tools/build.mjs
+# Commit the .src.html, not this — the Knowledge Hub embeds the .src.html directly,
+# so a committed build can only drift from what the Hub actually shows.
+# Same rule as projects/proposal-tool/.gitignore.
+itin-w7-walkthrough.html

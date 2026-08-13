@@ -98,6 +98,11 @@ a private firm or company.
 > **Trap.** If the client moves before the ITIN arrives, file **Form 8822**
 > immediately, putting the ITIN or the notice reference number in the SSN field.
 
+> **The N/A rule, which governs every line below.** The Line Instructions open
+> with: *"Enter 'N/A' (not applicable) on all sections of each line that don't
+> apply to you. **Don't leave any section blank.**"* Line 4, for instance, expects
+> three separate entries.
+
 ### 3 — Foreign (non-U.S.) address
 
 A **complete non-U.S. address, even if identical to line 2**. If they no longer
@@ -132,13 +137,52 @@ by `/`. Mandatory for reason f.
 ### 6b — Foreign tax I.D. number (if any)
 
 Only if the country of residence issued one — e.g. a Canadian Social Insurance
-Number. Leave blank if there is none; never invent a placeholder.
+Number. If there is none, enter **`N/A`** — never invent a placeholder, and never
+leave it blank (see the N/A rule under line 2).
 
 ### 6c — Type of U.S. visa (if any), number, and expiration date
 
 All three on one line: `B-1/B-2, 123456, 12/31/2026`. Visa issued for duration of
 stay → enter `D/S` as the expiration date. **Attach any I-20 / I-94.** Mandatory
 for reason f.
+
+### The dependent rules — one carve-out, two consequences
+
+The Instructions for Form W-7 (12/2024) state the same carve-out twice, in
+identical words — once at Line 6d for the stand-alone passport, once under
+*Supporting Documentation Requirements* for residency:
+
+> "…unless the dependents are dependents of **U.S. military personnel stationed
+> overseas** or the dependents are **from Canada or Mexico and are claimed for any
+> allowable tax benefit other than the credit for other dependents (ODC)**."
+
+| | Rule |
+|---|---|
+| **Stand-alone passport** | A dependent's passport **without a U.S. date of entry** is **not** accepted as a stand-alone document — unless the carve-out applies. |
+| **Proof of U.S. residency** | A dependent must **also prove U.S. residency** — unless the carve-out applies, **or** *"a passport is submitted with a date of entry into the United States"*, which satisfies it alone. |
+
+**A Canadian or Mexican dependent claimed only for ODC meets neither**: the
+instructions add, explicitly, *"Dependent applicants claimed for ODC must submit
+proof of U.S. residency unless they are dependents of U.S. military personnel
+stationed overseas."*
+
+**Proof of residency, by age** (at least one original):
+
+| Age | Acceptable |
+|---|---|
+| Under 6 | U.S. medical record · U.S. school record · U.S. state ID · U.S. visa |
+| 6 to under 18 | U.S. school record · U.S. state ID · U.S. driver's licence · U.S. visa |
+| 18 and over | U.S. school record (under 24 only) · U.S. state ID · U.S. driver's licence · U.S. visa · U.S. bank statement · U.S. rental statement · U.S. utility bill showing the applicant's name and U.S. address |
+
+> ⚠️ **Do not describe this as "two tests with different carve-outs."** That
+> framing was in this repo for one day in Aug 2026 and is wrong.
+
+### Reason g is not automatically a dependent
+
+Box g is *"Dependent/**spouse** of a nonresident alien holding a U.S. visa."* The
+residency rule above is scoped to *"applicants claimed as dependents (**reason d**
+on Form W-7)"*. A box-g **spouse** is not subject to the dependent rules, nor to
+the CAA dependent limit, nor to the §152 dependency test. Ask which one they are.
 
 ### 6d — Identification document(s) submitted
 
@@ -275,7 +319,7 @@ Double — never in the repo.
 
 ```
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 P.O. Box 149342
 Austin, TX 78714-9342
 ```
@@ -284,9 +328,9 @@ Private delivery service:
 
 ```
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 Mail Stop 6090-AUSC
-3651 S. Interregional Hwy 35
+3651 S. Interregional, Hwy 35
 Austin, TX 78741-0000
 ```
 

@@ -34,20 +34,34 @@ to the tool.
 These are the ones where general knowledge of ITINs is out of date or too coarse.
 **Check the reference before answering on any of them.**
 
-1. **The dependent rules are TWO tests, not one.** Whether the passport can
-   *stand alone* (needs a U.S. date of entry unless Canada/Mexico or U.S.
-   military overseas — no tax-benefit condition) is a different question from
-   whether *U.S. residency must be proved* (excused for U.S. military overseas
-   **or** for Canada/Mexico **and** claimed for a benefit other than ODC). The
-   ODC condition attaches to the Canada/Mexico branch only. Merging them is the
-   classic error and it was caught in review of this very SOP.
+1. **The dependent rules run off ONE carve-out, worded identically in both
+   places.** The Instructions for Form W-7 (12/2024) say, for the stand-alone
+   passport *and* for proof of residency: *"…unless the dependents are dependents
+   of **U.S. military personnel stationed overseas** or the dependents are **from
+   Canada or Mexico and are claimed for any allowable tax benefit other than the
+   credit for other dependents (ODC)**."*
+   - **Consequence 1** — a dependent's passport **without a U.S. date of entry**
+     is not a stand-alone document, unless the carve-out applies.
+   - **Consequence 2** — a dependent must prove U.S. residency, unless the
+     carve-out applies **or** a **passport with a U.S. date of entry** is
+     submitted, which satisfies it on its own.
+   - So a **Canadian or Mexican dependent claimed only for ODC** meets neither.
+   > ⚠️ An earlier version of this skill said the ODC condition attached to
+   > residency only, and that the stand-alone test had no tax-benefit condition.
+   > **That was wrong**, and it came from a review that misread Pub 1915. It was
+   > corrected against the primary text on 2026-08-13. If you find that framing
+   > anywhere, it is stale — the two carve-outs are the same words.
 2. **What a CAA may authenticate is narrower than people assume.** Primary and
    secondary: everything **except a foreign military ID card**. **Dependents:
    passport and birth certificate only** — every other dependent document
    travels to the IRS as an original or an issuing-agency certified copy.
-3. **The photograph exemption is under 14 — or under 18 if a student.** Pub 5726
-   restates it loosely as "under 18"; the Form W-7 instructions are narrower and
-   are the rule applied.
+3. **The photograph exemption is scoped to dependents**: *"At least one document
+   must contain your photograph, unless you're **a dependent** under age 14
+   (under age 18 if a student)."* A non-dependent minor still needs a photograph.
+   Pub 5726 restates the age loosely as "under 18"; the instructions are narrower
+   and are the rule applied. **Not to be confused with the birth-certificate
+   rule, which is age-only**: *"An original birth certificate is required if the
+   applicant is under age 18 and hasn't provided a valid passport."*
 4. **Form W-7 (COA) was renamed Form W-7-COA** in Rev. 8-2025. Pub 1915, 4520 and
    5726 still use the old style.
 5. **Line 5 has three boxes** on Rev. 12-2024 — Male, Female, **Other**.
