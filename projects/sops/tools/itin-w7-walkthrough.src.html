@@ -216,6 +216,11 @@ textarea.paste{width:100%;min-height:130px;padding:11px 13px;border:1px solid va
    dialog and under the age question in #questions, where a `.dlg`-scoped rule left
    it rendering as plain body ink, larger and blacker than the hint above it. */
 .derr{color:var(--err);font-size:13.5px;margin:8px 0 0;min-height:0}
+/* Re-asserted at higher specificity: `.dlg p` (0,1,1) outranks a bare `.derr`
+   (0,1,0), so unscoping the rule above silently pushed the DIALOG's error text
+   back to 14.5px flush under the input — the same "does not look like an error"
+   symptom, moved from the age question into the dialog. */
+.dlg .derr{font-size:13.5px;margin:8px 0 0}
 input[aria-invalid="true"]{border-color:var(--err)}
 input[aria-invalid="true"]:focus-visible{outline-color:var(--err)}
 .dlg[open]{animation:dlgIn .22s var(--ease)}
@@ -1342,7 +1347,9 @@ function renderOne(){
         + '<button class="btn ghost sm" id="dlCase" type="button">Download a copy</button>'
         + '<button class="btn ghost sm danger" id="delCase" type="button">Delete</button>'
         + (c.dirty ? '<span class="pill-dirty">changes not yet copied</span>' : '')
-        + '<span class="note-inline" id="dlMsg"></span>'
+        // role=status: this line exists BECAUSE the download outcome is otherwise
+        // unobservable, so it has to reach a screen reader too. Matches #copyMsg.
+        + '<span class="note-inline" id="dlMsg" role="status" aria-live="polite"></span>'
         + '</div>';
   h += '<h2 style="font-family:var(--serif);font-size:26px;color:var(--ink);margin:0 0 4px">'+esc(c.ref)+'</h2>';
   h += '<p style="color:var(--muted);font-size:13.5px;margin:0 0 6px">Opened '+esc(c.created)+' · last touched '+esc(c.updated)+' · <b>'+p.done+' of '+p.total+'</b> done</p>';
@@ -1544,15 +1551,28 @@ function downloadCase(c, msgEl){
   var name = 'ITIN-case-' + c.ref.replace(/[^A-Za-z0-9._-]+/g,'-') + '-' + todayISO() + '.txt';
   var text = caseNoteText(c);
   function say(m){ if (msgEl) msgEl.textContent = m; }
+  function blocked(){
+    sayNote({ title: 'This viewer would not save the file',
+      body: '<p>Use <b>“Copy the case note for Double”</b> instead — that is the durable copy anyway.</p>' });
+  }
   var rt = claudeDownloads();
   if (rt){
-    // The runtime reports its own failures, so this branch can be definite.
-    try { rt.save({ filename: name, data: text }); say('Saved as ' + name); return; }
-    catch(e){
-      sayNote({ title: 'This viewer would not save the file',
-        body: '<p>Use <b>“Copy the case note for Double”</b> instead — that is the durable copy anyway.</p>' });
-      return;
-    }
+    // save() returns a PROMISE. A refusal rejects rather than throwing, so a bare
+    // try/catch reported "Saved as …" for a file that was never written — the same
+    // silent lie as the blocked <a download> this branch set out to kill, just moved
+    // one branch over. Wait for the promise before claiming anything. Mirrors
+    // build-hub.mjs's saveFile, including respecting an explicit decline.
+    var p;
+    try { p = rt.save({ filename: name, data: text }); }
+    catch(e){ blocked(); return; }
+    if (p && p.then){
+      p.then(function(){ say('Saved as ' + name); },
+             function(err){
+               if (err && err.code === 'declined'){ say('Save cancelled.'); return; }
+               say(''); blocked();
+             });
+    } else { say('Saved as ' + name); }
+    return;
   }
   try {
     var blob = new Blob([text], {type:'text/plain'});
