@@ -258,7 +258,7 @@ the job.
 | ZETECH LLC | QBO · Dup | _(unchecked)_ | company | ✅ `zetech.md` ⚠️ **two Double records** — `ZETECH LLC` (706710, qbo) and `Zetech Holding LLC` (717754). Settle which before writing |
 | Masciave Design Studio | Dup | _(unchecked)_ | company | ✅ `masciave-design-studio.md` |
 | MAGNUM 152 INC | Dup | _(unchecked)_ | company | ✅ `magnum-152.md` |
-| Ihor Naum | QBO · Dup | _(unchecked)_ | **owner** | ✅ `ihor-naum-olha-levchuk.md` |
+| Ihor Naum | QBO · Dup | ✅ 2 files | **owner** | ✅ `ihor-naum-olha-levchuk.md` |
 | VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ❌ — Double: `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
 | IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ❌ ⚠️ **two Melomed households in Double** — `Igor Melomed & Yelena Lovkina` (710635) and `Grigoriy & Margarita Melomed` (710633) |
 | SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ❌ — Double record **archived** 2026-07-22 (706706) |
@@ -360,6 +360,8 @@ salvage; from here the record is kept properly.
 | 2026-08-12 | **Phase 1 — inventory** | All 22 identified; names only, no content read | Lilian |
 | 2026-08-12 | **Phase 2 (iCloud source only)** | **Optic Gold Inc** — `optic-gold.md` §1/§4/§5/§6/§7 + Double case note **491051** | Lilian |
 | 2026-08-13 | **Phase 2 (iCloud source only) — batch 1** | **5 new files:** Mays Express (note **491838**) · Megabai (no Double account, no note) · Voicecapital (**491840**) · Voxago (**491841**) · YMI Trucking (**491842**) | Lilian |
+| 2026-08-13 | **Phase 2 (TaxDome source)** | 22 clients' folders read. Written up: Deep Tech · Ecoorganic · Ecom Beavers · Masciave · Zetech · OneTwo Strategies · **Ihor Naum (2 notes)** · **Andrii Tymchenko (new file)**. Greenair + Magnum 152 held nothing durable. 7 clients still owe a file | Lilian |
+| 2026-08-13 | **Phase 2 — routing resolved** | **Aura Remodeling → Ihor Naum's Schedule C** (Lilian). Struck the partnership inference on `aura-remodeling.md`; lesson recorded in the `tax-season-readiness` skill | Lilian |
 | 2026-08-13 | **Phase 2 (iCloud source only) — batch 2** | **4 existing files enriched:** Candramas (note **491844**) · Deep Tech (**491845**) · Masciave (**491846**) · Gossip Miami — **new note 491858** for the FDOR collections matter, which is a *different case* from the 2025 tax-prep note 485291 | Lilian |
 
 ### Phase 2 ran 2026-08-13 — what the 22 TaxDome notes actually were
@@ -387,6 +389,7 @@ which **closes a matter this repo had recorded as open the day before**. Exactly
 | Masciave | **The origin of the duplicate EIN — the IRS created it** when the company filed as a C-corp; the onboarding document list; the third EIN traces to the client's father's 2013 company | ✅ file |
 | Zetech | The IRS holds the company as a **sole proprietorship**, and **will not put that in writing** | ✅ file |
 | OneTwo Strategies | **Two K-1s missing** (2242 Monroe LLC, Porcupine Partnership) + an unentered home-office deduction | ✅ file |
+| Ihor Naum & Olha Levchuk | **Two notes**, both dated 2025-04-08 (Julia). *"2024 Aura"* — vehicle mileage for **Aura Remodeling**, whose activity is on **Ihor's Schedule C**. *"2024 tax return"* — **Olha's own, separate Schedule C** as a 1099 contractor: her vehicle mileage, expense categories (advertising/apps, meals, sport equipment and clothing, insurance) and a **home-office claim at 20%** of rent and utilities. **All figures and odometer readings stay in Drive** | ✅ both routed to `ihor-naum-olha-levchuk.md` |
 | Andrii Tymchenko | **Left the US 2025-05-31 → 1040-NR, MFS**; dormant company; a **1095-A requested against Medicaid coverage**, which cannot exist | ✅ **new file created** |
 | Optic Gold · Candramas · YMI · Voicecapital · Mays Express | Same matters already written from the phone notes — **no new facts**; Candramas's copy confirms the wording, including the `03.06.2024` date slip already flagged | — nothing to add |
 
@@ -430,10 +433,17 @@ exactly as it does to organizer responses; and **(b)** a large share of the note
 tax-preparation working data** (mileage, expense breakdowns, dollar amounts) whose figures belong in
 Drive, not the repo. The durable content is usually one sentence inside a page of numbers.
 
-ⓘ **Ihor Naum's folder holds a note titled "2024 Aura"** — vehicle mileage recorded against **Aura
-Remodeling**, a different client with its own file. **Left unrouted deliberately**: the routing rule
-says read the content to decide the subject, and this one genuinely could be either the individual's
-Schedule C mileage or the company's. **Ask Lilian rather than guess.**
+✅ **Ihor Naum's "2024 Aura" note — ROUTED 2026-08-13, and the answer was structural.** The note held
+vehicle mileage recorded against **Aura Remodeling**, which has its own client file, so it was left
+unrouted and put to Lilian. Her answer: **Aura is reported on Ihor's Schedule C and files no return
+of its own**, so *all* of its tax work belongs on the **individual's** file. **The routing rule's
+"ask when you cannot tell" earned its keep here** — and it produced more than a routing decision. It
+**struck a wrong inference** (Aura's file had guessed a two-owner LLC filing a partnership return),
+**closed a conflict open since 2026-07-30**, and established the standing fact that **the firm will never have
+a tax-preparation engagement for Aura**. The lesson is now a worked example in the
+[`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill, because Aura carries
+neither of that skill's two "sufficient" Schedule-C signals — proving absence of the marker is not
+evidence either way.
 
 **The iCloud source is now fully processed** — every client folder in Lilian's `1-JK Accounting`
 that carried content is written up. **Magnum 152 has a folder but no note content** in the material

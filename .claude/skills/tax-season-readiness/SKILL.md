@@ -175,6 +175,23 @@ There is a live example of why only a human can settle it: **Aura Remodeling** h
 because Lilian said so**, not from anything in Double. When the two sufficient signals are absent,
 ask.
 
+⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
+about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
+next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
+**two-owner LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C
+activity, and **both files carried an explicit note that one reading had to be wrong** — because a
+partnership return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and
+the wrong reading kept rendering on the published client card. **The answer existed in this skill
+the whole time.**
+
+**So: when a human settles a client's structure, write it to the CLIENT FILE, not only here.** A
+fact recorded in a skill is guidance; a fact recorded on the client file is what the team and the
+published Hub actually read. ⓘ **A second trap the same day:** the correction was first written as
+*"this strikes the earlier inference that it would default to a partnership"* — inside §1 Entity
+type. The card classifier reads only that field and matches the partnership pattern **before** the
+Schedule-C branch, so **a sentence saying the inference was wrong re-rendered the card as a
+partnership.** Keep the struck reading out of §1 entirely.
+
 ### Expect stray company organizers in the data
 
 Organizers have gone out to bookkeeping companies that per the rule above shouldn't get one —

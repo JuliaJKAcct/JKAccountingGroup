@@ -1,6 +1,6 @@
 # Ihor Naum & Olha Levchuk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -29,7 +29,7 @@
 - **Business name:** Ihor Naum & Olha Levchuk — an individual (joint) client record, not a company. The couple's companies have their own files (see §7 Related clients).
 - **Entity type:** Individual / sole proprietor — Form 1040 with Schedule C _(Double: Account Type = Individual, Tax Return Type = 1040-SCH C, 2026-07-30)_.
 - **Home state:** _(pending — conflicting signals: the related entities are Florida companies, but `aura-remodeling.md` infers Illinois from the owner's area code. Confirm from Double, since the IRS replies by mail.)_
-- **Industry / what they do:** Personal tax clients. Their business activity runs through the related entities in §7 (remodeling / construction). Note the Schedule C is not yet tied to a specific entity — see §6.
+- **Industry / what they do:** Personal tax clients. Their business activity runs through the related entities in §7 (remodeling / construction). **The Schedule C is Aura Remodeling LLC** _(Lilian, 2026-08-13)_.
 - **Primary language:** Ukrainian _(the couple's company correspondence is in Ukrainian; the firm also uses Russian — see `aura-remodeling.md`)_.
 - **Our engagement (services we provide):** Individual income tax only — Form 1040 with Schedule C — plus the one-off U.S. residency certification in §4. Bookkeeping N/A; no Form 1099 work; no annual report _(Double properties)_.
 - **Fiscal year-end:** December 31
@@ -75,10 +75,12 @@ link). Never write the credential itself here.
 ### Income tax
 - **Applies?** Yes.
 - **Return type(s) & deadlines:** Form 1040 (joint) with Schedule C; calendar year, due April 15.
+- 🔴 **IHOR'S SCHEDULE C IS AURA REMODELING.** _(Lilian, 2026-08-13.)_ ⓘ **Olha files a second, separate Schedule C** for her own 1099 work — see the process note below. Lilian's ruling was about Ihor's; the Olha half comes from the migrated notes. **[Aura Remodeling LLC](./aura-remodeling.md) files no return of its own** — its activity is reported here. So **every piece of tax work for Aura belongs on this file**, and a tax-season list showing Aura as owing a return is wrong.
 - **Our role:** We prepare and file the return.
 - **Organizer status:** Completed _(Double)_ — the 2025 organizer was completed by the client in TaxDome on 2026-02-16, with supporting documents uploaded the same day.
 - **Current status:** 2025 return filed — Double tax project "2025 Taxes", status `filed`, filed 2026-05-25 (due date 2026-04-15; e-file authorization signed by both spouses 2026-03-03). Whether an extension was on file is not recorded — see §6.
 - **Process notes (→ future SOP):** the 2025 organizer round covered car miles, home-office deduction and a gas-expense review; a Form 1095-A was provided.
+  - **Vehicle mileage is tracked per car, per year, with opening and closing odometer readings** — Ihor's for the Aura activity, Olha's for her 1099 contractor work. **A second Schedule C exists for Olha**, separate from Aura: she works as a **1099 independent contractor** with her own expense schedule (advertising/apps, meals, sport equipment and clothing, insurance) and a **home-office claim taken at 20%** of rent and utilities. **Figures and odometer readings stay in Drive** _(TaxDome notes, migrated — filed under Ihor Naum; notes dated 2025-04-08)_.
 
 ### Licenses & other filings
 - **Applies?** No — individual taxpayers; no business licence or annual report is filed on this record. Any licensing obligation sits on the related company files in §7.
@@ -99,6 +101,7 @@ A one-off filing, not a recurring obligation, but an **open matter** as of this 
 
 ## 5. Key facts & quirks
 
+- 🔴 **AURA REMODELING HAS NO RETURN OF ITS OWN — it is reported on Ihor's Schedule C** _(Lilian, 2026-08-13)_. That is the tax structure, not an oversight, and it means **the firm will never have a tax-preparation engagement for Aura**; the work is here. It also **settles a conflict this file and [`aura-remodeling.md`](./aura-remodeling.md) had carried since 2026-07-30** — the Form 1065 inferred there was wrong.
 - **Owner group.** Ihor and Olha are the principals behind the firm's related company clients — see §7 "Related clients". Personal / 1040 facts belong in this file; company-operations facts belong in each company's file. _(Gmail + Florida DWC notice, 2026-07-30)_
 - **The couple files jointly** — the 2025 e-file authorization was signed by both spouses.
 - **The Form 6166 is personal, not corporate.** The certification was requested for Ihor Naum as an individual, not for any related company. The applicant of record is the person, so the IRS follow-up and any Form 2848 must be for the **individual** taxpayer — a company 2848 does not cover this application.
@@ -135,6 +138,7 @@ Watch-outs that go with the above:
 - _(2026-07-30, Lilian)_ — File created. Researched how to obtain the status of a Form 8802 filed by fax and recorded the method in §5. Located and verified the filing evidence in Gmail / MyFax (Pay.gov confirmation + both fax confirmations, 2026-05-06). Confirmed the IRS contact number (267-941-1000, "U.S. residency" option) against three revisions of the Form 8802 instructions. Lilian sent the client, by WhatsApp, everything needed to prove the fax was sent with the complete documentation — the client will place the status call to the IRS themselves.
 - _(2026-07-30, Lilian)_ — Confirmed the application's scope: the certification was requested for Ukraine, tax years 2023 and 2024, in Ihor Naum's own name — not a company's.
 - _(2026-08-01)_ — Weekly incremental sweep (bounded to 2026-07-30 and later): no new Double notes/activity, no new Gmail threads, and no new Ping meetings/transcripts turned up for either name or the Form 8802 matter since the baseline. Located and confirmed the client's Google Drive vault folder (§7), closing that open item. Checked FOLLOW-UPS.md item #9 (a Double duplicate-individual-record issue) against this client — confirmed via `list_clients` there is only one Double record for this couple (id 710637), so that item is about a different client, not this one. Coverage-gap note (Ping/Drive full history, full Gmail history) left as-is per this run's scope.
+- 2026-08-13 — **The Aura routing question, answered by Lilian.** ⓘ **Her message used the spelling *Igor*; this is IHOR NAUM.** Recorded because the roster also holds an unrelated **Igor Melomed**, who has his own migrated Schedule C note and **no connection to Aura anywhere in the repo** — and because this file already documents the spelling drift (TaxDome carries *"Ihour Naum"*). The routing rests on the note sitting in Ihor's own folder, on Ihor being a principal of Aura (§7), and on his Double record carrying `Tax Return Type = 1040-SCH C`. A migrated TaxDome note titled *"2024 Aura"* sat in this client's folder holding **vehicle mileage** for the year, and it was deliberately left unrouted because it could have belonged to either this file or [`aura-remodeling.md`](./aura-remodeling.md). **Lilian settled it: Aura is reported on Ihor's Schedule C, the company files nothing itself, and so all of its tax work lives here.** A second note from the same date carries **Olha's 1099 contractor Schedule C** — her mileage, expense categories and a 20% home-office claim. **Figures stay in Drive; the durable facts are in §4 and §5.** _(TaxDome notes, migrated — filed under Ihor Naum; notes dated 2025-04-08.)_ _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -149,7 +153,7 @@ Watch-outs that go with the above:
 
 - [x] Which country and tax year(s) the Form 6166 was requested for — **Ukraine, 2023 and 2024**, in Ihor Naum's own name _(Lilian, 2026-07-30)_.
 - [ ] Home state and the current mailing address on the Form 8802 — the related entities are Florida companies but `aura-remodeling.md` infers Illinois; confirm from Double, since the IRS replies by mail.
-- [ ] Which entity (if any) the Schedule C activity belongs to — `aura-remodeling.md` infers AURA REMODELING LLC is a two-owner LLC filing Form 1065, which would reach the 1040 by K-1 rather than Schedule C. One of the two readings is wrong.
+- [x] ~~Which entity the Schedule C activity belongs to~~ ✅ **Answered 2026-08-13 (Lilian): AURA REMODELING LLC.** It is reported on Ihor's Schedule C and files no income-tax return of its own; the partnership inference on `aura-remodeling.md` was wrong and is gone.
 - [ ] Whether an extension (Form 4868) was filed for 2025 — the return was filed 2026-05-25, after the April 15 deadline.
 - [x] Google Drive folder link for this individual client — found (§7) _(Google Drive, 2026-08-01)_.
 - [ ] Confirm the ownership/officer roles in the related entities (§7) — currently inferred from correspondence and a Florida DWC exemption notice.
