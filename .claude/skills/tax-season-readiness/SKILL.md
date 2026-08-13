@@ -163,6 +163,21 @@ Consequences a session must not misread:
 | `Organizer Status` = `N/A (SCH-C)` | ✅ **Sufficient** |
 | `Income Tax` unchecked, on its own | ❌ **NOT sufficient — send to review** |
 
+ⓘ **A WORKED EXAMPLE OF WHY THE THIRD ROW SENDS YOU TO REVIEW — Aura Remodeling, 2026-08-13.**
+Aura carries **`Income Tax` unchecked and no `Tax Return Type` at all**: the exact fingerprint the
+table calls insufficient. Two sweeps read it two different ways — one inferred a **two-owner LLC
+filing Form 1065**, the individual file recorded **Schedule C activity**, and the conflict sat open
+for six weeks because a 1065 reaches the 1040 by K-1 and a Schedule C does not, so both could not
+be right. **Lilian settled it: the company is reported on the owner's Schedule C and files nothing
+of its own.** Two things to carry:
+- **The `Sch C` signals can be ABSENT on a genuine Schedule C company.** Neither sufficient signal
+  was set here. So absence of the marker is not evidence either way — which is what makes "send to
+  review" the only safe verdict rather than a formality.
+- **Ask the person.** Six weeks of inference produced a wrong answer; one question produced the
+  right one. The owner's individual file is where the company's tax work lives —
+  [`aura-remodeling.md`](../../../projects/client-intelligence/clients/aura-remodeling.md) →
+  [`ihor-naum-olha-levchuk.md`](../../../projects/client-intelligence/clients/ihor-naum-olha-levchuk.md).
+
 **`Income Tax = false` does not mean Schedule C.** Read plainly it means *we don't do this
 client's income tax at all*, and §3 documents exactly that population (bookkeeping-only
 engagements with no `Tax Return Type` and `Income Tax = false`). The same fingerprint therefore

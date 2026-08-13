@@ -430,10 +430,17 @@ exactly as it does to organizer responses; and **(b)** a large share of the note
 tax-preparation working data** (mileage, expense breakdowns, dollar amounts) whose figures belong in
 Drive, not the repo. The durable content is usually one sentence inside a page of numbers.
 
-ⓘ **Ihor Naum's folder holds a note titled "2024 Aura"** — vehicle mileage recorded against **Aura
-Remodeling**, a different client with its own file. **Left unrouted deliberately**: the routing rule
-says read the content to decide the subject, and this one genuinely could be either the individual's
-Schedule C mileage or the company's. **Ask Lilian rather than guess.**
+✅ **Ihor Naum's "2024 Aura" note — ROUTED 2026-08-13, and the answer was structural.** The note held
+vehicle mileage recorded against **Aura Remodeling**, which has its own client file, so it was left
+unrouted and put to Lilian. Her answer: **Aura is reported on Ihor's Schedule C and files no return
+of its own**, so *all* of its tax work belongs on the **individual's** file. **The routing rule's
+"ask when you cannot tell" earned its keep here** — and it produced more than a routing decision. It
+**struck a wrong inference** (Aura's file had guessed a two-owner LLC filing Form 1065), **closed a
+conflict open since 2026-07-30**, and established the standing fact that **the firm will never have
+a tax-preparation engagement for Aura**. The lesson is now a worked example in the
+[`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill, because Aura carries
+neither of that skill's two "sufficient" Schedule-C signals — proving absence of the marker is not
+evidence either way.
 
 **The iCloud source is now fully processed** — every client folder in Lilian's `1-JK Accounting`
 that carried content is written up. **Magnum 152 has a folder but no note content** in the material
