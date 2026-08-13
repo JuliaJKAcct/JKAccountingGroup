@@ -540,6 +540,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 <nav class="toc" aria-label="Contents">
   <p class="tt">On this page</p>
   <ol id="tocList">
+    <li><a href="#start"><span class="sn">★</span> Start here</a></li>
     <li><a href="#glance"><span class="sn">◆</span> The process at a glance</a></li>
     <li><a href="#s0"><span class="sn">§0</span> What an ITIN is</a></li>
     <li><a href="#s1"><span class="sn">§1</span> The SSN gate</a></li>
@@ -548,7 +549,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <li><a href="#s4"><span class="sn">§4</span> Line by line</a></li>
     <li><a href="#s5"><span class="sn">§5</span> Identity documents</a></li>
     <li><a href="#s6"><span class="sn">§6</span> Signatures</a></li>
-    <li><a href="#s7"><span class="sn">§7</span> CAA · the W-7(COA)</a></li>
+    <li><a href="#s7"><span class="sn">§7</span> CAA · the W-7-COA</a></li>
     <li><a href="#s8"><span class="sn">§8</span> Assemble &amp; mail</a></li>
     <li><a href="#s9"><span class="sn">§9</span> Renewals &amp; expiry</a></li>
     <li><a href="#s10"><span class="sn">§10</span> The top 10 errors</a></li>
@@ -598,9 +599,59 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
     <div class="cx">
       <div class="cl">Where client data goes</div>
-      <p>The applicant's passport, birth certificate, visa, addresses, dates of birth, and the filled-in W&#8209;7 and W&#8209;7(COA) are <b>sensitive</b> and belong in the client's folder in <b>Google Drive / Double</b> — <b>never</b> in this repo. This file keeps only the procedure. Sections marked <b>CAA only</b> apply once the firm's Certifying Acceptance Agent agreement is signed (see the companion SOP <code>projects/sops/irs-certifying-acceptance-agent.md</code>); everything else applies either way.</p>
+      <p>The applicant's passport, birth certificate, visa, addresses, dates of birth, and the filled-in W&#8209;7 and W&#8209;7-COA are <b>sensitive</b> and belong in the client's folder in <b>Google Drive / Double</b> — <b>never</b> in this repo. This file keeps only the procedure. Sections marked <b>CAA only</b> apply once the firm's Certifying Acceptance Agent agreement is signed (see the companion SOP <code>projects/sops/irs-certifying-acceptance-agent.md</code>); everything else applies either way.</p>
     </div>
   </div>
+
+  <!-- ==================== START HERE ==================== -->
+  <section class="doc" id="start">
+    <div class="shead big reveal"><span class="schip">★</span><h2>Start here — if you have never done one of these</h2></div>
+
+    <div class="callout ok reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></svg></span>
+      <div class="cx">
+        <div class="cl">Use the walkthrough tool, not this document, on your first application</div>
+        <p>It is in the <b>Knowledge Hub → Templates → Interactive tools → ITIN Application Walkthrough</b>. It asks plain questions — <em>is this a dependent? which country? how old? do we have the passport?</em> — and works out the reason box, the documents, whether residency proof applies, who may sign, and what goes in the envelope. Then it prints a <b>preparation sheet for that one applicant</b>. Its second tab is a searchable <b>field-by-field reference to every line of Form W&#8209;7</b>, to keep open while you fill the form in.</p>
+        <p><b>This SOP is the reasoning behind the tool.</b> Read it once so you understand why the tool asks what it asks — then work from the tool.</p>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">1</span><h3>The job in six sentences</h3></div>
+    <div class="indent reveal">
+      <ol class="qlist">
+        <li>Someone needs a U.S. taxpayer number and <b>cannot get a Social Security Number</b> — that is the only reason an ITIN exists.</li>
+        <li>We check they really cannot get an SSN, because <b>anyone eligible for one is not eligible for an ITIN</b>.</li>
+        <li>We fill in <b>Form W&#8209;7</b>, whose hardest question is a single checkbox: <em>why</em> they are applying.</li>
+        <li>We attach their <b>tax return</b> — or, in five defined situations, proof that no return is due yet.</li>
+        <li>We attach <b>documents proving who they are and that they are foreign</b> — originals, unless the firm is a Certifying Acceptance Agent, in which case we verify them ourselves and send copies.</li>
+        <li>It all goes to <b>one address in Austin, Texas</b>, and the ITIN comes back as a letter.</li>
+      </ol>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">2</span><h3>The words you will meet</h3></div>
+    <div class="indent reveal">
+      <div class="tablewrap">
+        <table class="links">
+          <thead><tr><th>Word</th><th>What it actually means</th></tr></thead>
+          <tbody>
+            <tr><td>ITIN</td><td>The number itself. Nine digits, looks like an SSN, does nothing an SSN does except let the IRS process a tax return.</td></tr>
+            <tr><td>Form W-7</td><td>The application for that number.</td></tr>
+            <tr><td>W-7(SP)</td><td>The same form in Spanish.</td></tr>
+            <tr><td>Form W-7-COA</td><td>The <b>Certificate of Accuracy</b> — the page a Certifying Acceptance Agent signs to say “we looked at the real documents”. Renamed in Aug 2025; older publications call it <em>Form W-7 (COA)</em>.</td></tr>
+            <tr><td>AA</td><td><b>Acceptance Agent</b> — a firm authorized to help people apply. Sends the <b>originals</b> to the IRS.</td></tr>
+            <tr><td>CAA</td><td><b>Certifying Acceptance Agent</b> — an AA that may also <b>authenticate</b> documents, so the client keeps the originals. What JK is applying to become.</td></tr>
+            <tr><td>Responsible party</td><td>The specific named person at the firm allowed to sign as the agent. Not “anyone senior”.</td></tr>
+            <tr><td>Delegate</td><td>The form’s word for someone signing <em>instead of</em> the applicant — a parent, a court-appointed guardian, or a power-of-attorney holder.</td></tr>
+            <tr><td>Primary / secondary</td><td>On a joint return, the first-named taxpayer and the spouse.</td></tr>
+            <tr><td>Exception</td><td>One of five situations where an ITIN is issued <b>without</b> a tax return attached.</td></tr>
+            <tr><td>Substantial presence test</td><td>The day-count deciding whether a foreigner is a <em>resident</em> for tax purposes even though they are not one for immigration purposes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
 
   <!-- ==================== AT A GLANCE ==================== -->
   <section class="doc" id="glance">
@@ -640,7 +691,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <div class="fconn" aria-hidden="true"></div>
         <div class="fnode">Get it <b>signed by an eligible signer</b>, then complete the <b>Acceptance Agent's Use ONLY</b> block <span class="fref">§6</span></div>
         <div class="fconn" aria-hidden="true"></div>
-        <div class="fnode pay"><span class="pill">CAA only</span>Authenticate what we are permitted to authenticate and attach <b>Form W&#8209;7(COA)</b> <span class="fref">§7</span></div>
+        <div class="fnode pay"><span class="pill">CAA only</span>Authenticate what we are permitted to authenticate and attach <b>Form W&#8209;7-COA</b> <span class="fref">§7</span></div>
       </section>
 
       <div class="fconn" aria-hidden="true"></div>
@@ -719,9 +770,25 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       </div>
     </div>
 
+    <div class="tablewrap reveal">
+      <table class="links">
+        <thead><tr><th>Box</th><th>Who checks it</th><th>What else it forces</th></tr></thead>
+        <tbody>
+          <tr><td>a</td><td>Nonresident alien claiming a <b>tax treaty benefit</b></td><td><b>Must also check box h</b>, and fill the treaty country + article number</td></tr>
+          <tr><td>b</td><td>Nonresident alien <b>filing a U.S. return</b></td><td><b>Line 3 foreign address is mandatory</b></td></tr>
+          <tr><td>c</td><td><b>U.S. resident alien by days present</b> filing a return</td><td><b>Date of entry on Line 6d</b></td></tr>
+          <tr><td>d</td><td><b>Dependent</b> of a U.S. citizen / resident alien</td><td>The <b>relationship</b> on the dotted line, <b>plus</b> the U.S. person’s name and SSN/ITIN; date of entry on 6d</td></tr>
+          <tr><td>e</td><td><b>Spouse</b> of a U.S. citizen / resident alien</td><td>The U.S. person’s <b>full name and SSN/ITIN</b> on the dotted line</td></tr>
+          <tr><td>f</td><td>Nonresident alien <b>student, professor or researcher</b></td><td><b>Lines 6a, 6c, 6d and 6g</b> all mandatory; passport with a valid U.S. visa (except Canada, Mexico, Bermuda). Claiming an exception → <b>also check h</b></td></tr>
+          <tr><td>g</td><td><b>Dependent or spouse of a nonresident alien</b> holding a U.S. visa</td><td>Attach a <b>copy of the visa</b>; date of entry on 6d</td></tr>
+          <tr><td>h</td><td><b>Other</b></td><td>Write the exception on the line beside it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="indent reveal">
       <ul class="checks">
-        <li><b>Claiming a treaty benefit under box "a" or "f"?</b> You must <b>also check box "h"</b> and enter the tax treaty information on the lines below it.</li>
+        <li><b>Boxes d and e share a dotted line</b> asking for the <b>full name and SSN or ITIN of the U.S. citizen / resident alien</b>. Mandatory — and not something the applicant necessarily has with them, so ask <em>before</em> the appointment.</li>
         <li><b>Box "h" (Other)</b> is for anything not covered by a–g. Enter the <b>exception number, alpha subsection and category</b> on the line beside it — e.g. <code>Exception 1d-Pension Distributions</code>.</li>
         <li><b>If a treaty is claimed, the treaty country must match the country on Line 3.</b></li>
       </ul>
@@ -752,7 +819,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
       <div class="cx">
         <div class="cl">Exception documentation is not a substitute for identity documents</div>
-        <p>It replaces the <b>tax return</b>, nothing else — the supporting identification documents in §5 are still required. It is attached by <b>both</b> AAs and CAAs, and it is <b>not</b> described on the W&#8209;7(COA) — with one carve-out: <b>partnership agreement information when Exception 1(a) is claimed</b>. Detailed exception tables and completed examples are in <b>Publication 1915</b>.</p>
+        <p>It replaces the <b>tax return</b>, nothing else — the supporting identification documents in §5 are still required. It is attached by <b>both</b> AAs and CAAs, and it is <b>not</b> described on the W&#8209;7-COA — with one carve-out: <b>partnership agreement information when Exception 1(a) is claimed</b>. Detailed exception tables and completed examples are in <b>Publication 1915</b>.</p>
       </div>
     </div>
   </section>
@@ -769,14 +836,14 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
           <tr><td>Application type</td><td>New ITIN <b>or</b> renewal. If <b>renewal</b>, lines <b>6e and 6f</b> must be completed.</td></tr>
           <tr><td>1a — Legal name</td><td>Exactly as on the identifying documents, and <b>the same name on any attached tax return</b>. Watch for <b>two surnames, hyphens and apostrophes</b> — common in our client base and a frequent source of mismatch.</td></tr>
           <tr><td>1b — Name at birth</td><td>Only if different from 1a. If the name changed by marriage but the surname is again the birth surname, leave it blank. On a <b>renewal with a changed legal name</b>, attach the marriage certificate or court order.</td></tr>
-          <tr><td>2 — Mailing address</td><td>Where the IRS <b>returns the original documents</b> and sends all ITIN correspondence. If the client moves before the ITIN arrives, file <b>Form 8822</b> immediately.</td></tr>
+          <tr><td>2 — Mailing address</td><td>Where the IRS <b>returns the original documents</b> and sends all ITIN correspondence. <b>P.O. boxes:</b> only if the U.S. Postal Service will not deliver to the physical location, and only a <b>USPS</b> box — never one rented from a private mailbox company. If the client moves before the ITIN arrives, file <b>Form 8822</b> immediately.</td></tr>
           <tr><td>3 — Foreign address</td><td><b>Complete non-U.S. address, even if identical to Line 2.</b> If there is no permanent foreign residence any more, enter <b>only the country</b> where they last resided. <b>No P.O. Box, no "c/o".</b> If a treaty is claimed, this country must match the treaty country. Reason <b>"b"</b> always requires a complete foreign address here.</td></tr>
           <tr><td>4 — Birth information</td><td>Date as <b>MM/DD/YYYY</b>. Country of birth must be <b>recognized by the U.S. Department of State</b>. City / state / province if available.</td></tr>
-          <tr><td>5 — Gender</td><td>Male or female.</td></tr>
+          <tr><td>5 — Gender</td><td>The Dec-2024 revision offers <b>three</b> boxes: Male, Female, <b>Other</b>. Guidance saying &ldquo;male or female&rdquo; predates this form.</td></tr>
           <tr><td>6a — Citizenship</td><td>Full country name, <b>never abbreviated</b>. Dual citizenship: both, separated by <code>/</code>.</td></tr>
           <tr><td>6b — Foreign tax ID</td><td>If their country of residence issued one (e.g. a Canadian Social Insurance Number).</td></tr>
           <tr><td>6c — U.S. visa</td><td>Type, number and expiration: <code>B-1/B-2, 123456, 12/31/2020</code>. <b>Attach any I-20 / I-94.</b> If issued for duration of stay, enter <b><code>D/S</code></b>.</td></tr>
-          <tr><td>6d — ID documents</td><td>Tick the type; enter <b>issuer, document number, expiration date</b>. <b>Use only one document's details here</b> — a second goes on an attached sheet in the same format. Also carries the <b>date of entry into the United States</b>; if they have never entered, write <b>"Never entered the United States"</b>.</td></tr>
+          <tr><td>6d — ID documents</td><td>The <b>printed form gives only four tick-boxes</b> — Passport · Driver's license/State I.D. · USCIS documentation · <b>Other</b> — though thirteen document types are acceptable; anything else is written in under <em>Other</em>. Then <b>issuer, document number, expiration date</b>. <b>Use only the first document's details here</b> — a second goes on an attached sheet in the same format. Also carries the <b>date of entry into the United States</b>; if they have never entered, write <b>"Never entered the United States"</b>.</td></tr>
           <tr><td>6e / 6f — Previous ITIN or IRSN</td><td>If either was ever issued, tick <b>Yes</b> on 6e and give the number and the name it was issued under on 6f. Otherwise <b>No / Do not know</b>.</td></tr>
           <tr><td>6g — College / company</td><td>Only when box <b>"f"</b> was checked. Institution name, city and state, and the length of stay — or the equivalent for a company if they are here temporarily on business.</td></tr>
         </tbody>
@@ -827,8 +894,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <p class="prose" style="margin-top:12px;font-size:13.5px;color:var(--muted)"><b>†</b> May establish foreign status only if the document is foreign.</p>
 
       <ul class="checks" style="margin-top:14px">
-        <li><b>If no passport is provided:</b> at least <b>two</b> documents, <b>one bearing a recent photograph</b> — except a dependent under <b>14</b> (under <b>18</b> if a student). <em>(Pub 5726 restates this loosely as "under 18" — use the narrower age from the Form W&#8209;7 instructions, which is the rule that will be applied.)</em></li>
-        <li><b>A dependent's documentation must include a civil birth certificate</b> unless a passport is submitted.</li>
+        <li><b>If no passport is provided:</b> at least <b>two</b> documents, <b>one bearing a recent photograph</b> — except <b>a dependent</b> under <b>14</b> (under <b>18</b> if a student). The exemption is scoped to dependents; a non-dependent minor still needs a photograph. <em>(Pub 5726 restates this loosely as "under 18" — use the narrower age from the Form W&#8209;7 instructions, which is the rule that will be applied.)</em></li>
+        <li>An <b>original civil birth certificate is required if the applicant is under 18</b> and has not provided a valid passport — an age rule, whether or not they are a dependent.</li>
         <li><b>Copies of a passport must include the U.S. visa pages</b> if a visa is required for the application.</li>
         <li>If a document carries information on <b>both sides</b>, the copy must show <b>both sides</b>.</li>
         <li>Foreign-language documents may be asked for a <b>certified English translation</b>.</li>
@@ -836,39 +903,32 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     </div>
 
     <div class="subbar reveal"><span class="tag">5B</span><h3>The dependent rules — the part that gets missed</h3></div>
-    <div class="indent reveal">
-      <div class="callout warn" role="note">
-        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="callout info" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
         <div class="cx">
-          <div class="cl">These are TWO separate tests, and merging them is the classic mistake</div>
-          <p>One asks whether the <b>passport can stand alone</b>; the other asks whether <b>U.S. residency must be proved at all</b>. They have different carve-outs, and the ODC condition belongs to only one of them.</p>
+          <div class="cl">ONE carve-out, stated twice in identical words</div>
+          <p class="quote">&ldquo;…unless the dependents are dependents of <b>U.S. military personnel stationed overseas</b> or the dependents are <b>from Canada or Mexico and are claimed for any allowable tax benefit other than the credit for other dependents (ODC)</b>.&rdquo;</p>
+          <p>The Instructions for Form W&#8209;7 give that sentence once for the stand-alone passport and once for proof of residency. It is <b>one</b> carve-out with two consequences — not two tests with different conditions.</p>
         </div>
       </div>
 
-      <div class="subbar" style="margin-top:18px"><span class="tag">Test 1</span><h3>Can the passport stand alone?</h3></div>
+      <div class="subbar" style="margin-top:18px"><span class="tag">1</span><h3>The stand-alone passport</h3></div>
       <div class="indent">
-        <p class="prose">A passport <b>without a date of entry into the United States</b> is <b>not</b> accepted as a stand-alone document for a dependent, unless the dependent is:</p>
-        <ul class="dots" style="margin-top:10px">
-          <li>from <b>Canada or Mexico</b>, <b>or</b></li>
-          <li>a dependent of <b>U.S. military personnel stationed overseas</b>.</li>
-        </ul>
-        <p class="prose" style="margin-top:10px;color:var(--muted)"><em>No tax-benefit condition applies to this test.</em></p>
+        <p class="prose">A dependent&rsquo;s passport <b>without a U.S. date of entry</b> is <b>not</b> accepted as a stand-alone document — unless the carve-out applies.</p>
       </div>
 
-      <div class="subbar" style="margin-top:18px"><span class="tag">Test 2</span><h3>Must U.S. residency be proved?</h3></div>
+      <div class="subbar" style="margin-top:18px"><span class="tag">2</span><h3>Proof of U.S. residency</h3></div>
       <div class="indent">
-        <p class="prose">A dependent must <b>also prove U.S. residency</b>, unless:</p>
-        <ul class="dots" style="margin-top:10px">
-          <li>they are a dependent of <b>U.S. military personnel stationed overseas</b>, <b>or</b></li>
-          <li>they are <b>from Canada or Mexico <em>and</em></b> are claimed for an allowable tax benefit <b>other than</b> the Credit for Other Dependents (ODC).</li>
-        </ul>
-        <div class="callout note" role="note" style="margin-top:12px">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
+        <p class="prose">A dependent must <b>also prove U.S. residency</b> — unless the carve-out applies, <b>or</b> a <b>passport is submitted with a date of entry into the United States</b>, which satisfies it on its own.</p>
+        <div class="callout err" role="note" style="margin-top:12px">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
           <div class="cx">
-            <p>Read that second bullet carefully — <b>the ODC condition attaches only to the Canada/Mexico branch</b>. A dependent of U.S. military stationed overseas is excused from proving residency <em>whatever</em> they are claimed for; a Canadian or Mexican dependent claimed <b>only for ODC</b> must prove residency.</p>
+            <div class="cl">A Canadian or Mexican dependent claimed ONLY for ODC meets neither</div>
+            <p>The instructions say it outright: <em>&ldquo;Dependent applicants claimed for ODC must submit proof of U.S. residency unless they are dependents of U.S. military personnel stationed overseas.&rdquo;</em> <b>An earlier version of this SOP attached the ODC condition to residency only. That was wrong</b> — it would have told a preparer that an ODC-only Mexican dependent&rsquo;s entry-dateless passport stood alone.</p>
           </div>
         </div>
       </div>
+
 
       <div class="tablewrap">
         <table class="links">
@@ -930,15 +990,26 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <!-- ==================== §6 ==================== -->
   <section class="doc" id="s6">
     <div class="shead reveal"><span class="schip">§6</span><h2>Signatures</h2></div>
+    <p class="prose reveal">The form's word for anyone signing instead of the applicant is <b>delegate</b>, and it offers exactly <b>three</b> relationship boxes: <b>Parent · Power of attorney · Court-appointed guardian</b>. Print the delegate's name and tick one.</p>
+
     <div class="tablewrap reveal">
       <table class="links">
         <thead><tr><th>Situation</th><th>Who may sign</th></tr></thead>
         <tbody>
-          <tr><td>Dependent under 18</td><td>The applicant, the applicant's <b>parent</b>, or a <b>court-appointed guardian</b> (attach the court-appointment papers).</td></tr>
-          <tr><td>Dependent 18 or older</td><td>The applicant, a <b>court-appointed guardian</b>, or anyone granted <b>Power of Attorney</b> (attach the guardianship documents or <b>Form 2848</b>). Anyone other than the applicant signs in the space provided <b>and ticks the box showing their relationship</b>.</td></tr>
-          <tr><td>Applicant cannot sign</td><td>They sign their <b>mark</b> (an "X" or a thumbprint) <b>in the presence of a witness</b>; the <b>witness signs and is identified as a witness</b>.</td></tr>
+          <tr><td>The applicant signs</td><td>The signature must match the name on <b>Line 1a</b> — not a shortened or anglicised version of it.</td></tr>
+          <tr><td>Under 18</td><td>The applicant, the applicant's <b>parent</b>, or a <b>court-appointed guardian</b> (attach the court-appointment papers).</td></tr>
+          <tr><td>18 or older</td><td>The applicant, a <b>court-appointed guardian</b>, or a <b>parent</b>; anyone else needs <b>Form 2848</b>.</td></tr>
+          <tr><td>Cannot sign at all</td><td>They sign their <b>mark</b> (an "X" or a thumbprint) <b>in the presence of a witness</b>; the <b>witness signs and is identified as a witness</b>.</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">A spouse cannot sign for a spouse</div>
+        <p>Not unless the <b>Power of attorney</b> box is ticked and <b>Form 2848</b> is attached. Being married is not authority to sign, and it catches people every time.</p>
+      </div>
     </div>
     <p class="prose reveal" style="margin-top:14px">A <b>substitute Power of Attorney</b> must contain every element of Form 2848, and a foreign-language POA needs a <b>certified English translation</b>.</p>
 
@@ -952,13 +1023,25 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
     <div class="subbar reveal"><span class="tag">6A</span><h3>The "Acceptance Agent's Use ONLY" block</h3></div>
     <div class="indent reveal">
-      <p class="prose">Every application we submit as an agent carries:</p>
+      <p class="prose">The printed block has <b>nine</b> fields, and none of them are improvised — every one comes from the firm's approved Acceptance Agent application:</p>
       <ol class="qlist" style="margin-top:12px">
-        <li>The <b>signature and title of the Responsible Party</b>, matching the person on our Acceptance Agent application</li>
-        <li>The <b>date signed</b>, MM/DD/YYYY</li>
-        <li>The <b>business name under which we were established as an Acceptance Agent</b>, with <b>phone and fax numbers</b></li>
-        <li>Our <b>EIN</b> and our <b>Office Code Number</b> — an <b>8-digit number assigned to us by the ITIN Policy Section</b> once the agreement is approved. <em>(The IRS derives it from our EFIN, preceded by two zeros — which is why it looks familiar. That is the IRS's bookkeeping after approval; the EFIN itself never goes on the Acceptance Agent application.)</em></li>
+        <li><b>Signature</b> of the Responsible Party</li>
+        <li><b>Date signed</b>, MM/DD/YYYY</li>
+        <li><b>Phone</b></li>
+        <li><b>Fax</b></li>
+        <li><b>Name and title</b> of the person signing</li>
+        <li><b>Name of company</b> — the business name under which we were established as an Acceptance Agent</li>
+        <li><b>EIN</b></li>
+        <li><b>PTIN</b></li>
+        <li><b>Office code</b> — an <b>8-digit number assigned by the ITIN Policy Section</b> once the agreement is approved. <em>(The IRS derives it from our EFIN, preceded by two zeros — which is why it looks familiar. That is the IRS's bookkeeping after approval; the EFIN itself never goes on the Acceptance Agent application.)</em></li>
       </ol>
+      <div class="callout err" role="note" style="margin-top:14px">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
+        <div class="cx">
+          <div class="cl">Only a responsible party named on the firm’s Acceptance Agent application may sign this block</div>
+          <p>Nobody else in the office can, however senior.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -966,8 +1049,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
   <!-- ==================== §7 ==================== -->
   <section class="doc" id="s7">
-    <div class="shead reveal"><span class="schip">§7</span><h2>CAA only — authenticating documents and Form W&#8209;7(COA)</h2></div>
-    <p class="slede reveal">The difference between the two agent types (Rev. Proc. 2006-10): an <b>Acceptance Agent (AA)</b> reviews the documents and <b>attaches the originals or issuing-agency certified copies</b>. A <b>Certifying Acceptance Agent (CAA)</b> <b>reviews and validates</b> them and identifies them on <b>Form W&#8209;7(COA)</b> — so the client keeps the originals.</p>
+    <div class="shead reveal"><span class="schip">§7</span><h2>CAA only — authenticating documents and Form W&#8209;7-COA</h2></div>
+    <p class="slede reveal">The difference between the two agent types (Rev. Proc. 2006-10): an <b>Acceptance Agent (AA)</b> reviews the documents and <b>attaches the originals or issuing-agency certified copies</b>. A <b>Certifying Acceptance Agent (CAA)</b> <b>reviews and validates</b> them and identifies them on <b>Form W&#8209;7-COA</b> — so the client keeps the originals.</p>
 
     <div class="tablewrap reveal">
       <table class="links">
@@ -980,15 +1063,43 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       </table>
     </div>
 
-    <div class="subbar reveal"><span class="tag">7A</span><h3>Form W&#8209;7(COA), Certificate of Accuracy</h3></div>
+    <div class="subbar reveal"><span class="tag">7A</span><h3>Form W&#8209;7-COA, Certificate of Accuracy</h3></div>
     <div class="indent reveal">
-      <ol class="qlist">
-        <li>Completed and <b>signed — only by an approved Responsible Party</b></li>
-        <li><b>Identifies the specific type</b> of foreign-status and identity document attached (passport, birth certificate, visa…)</li>
-        <li><b>Attached to every submitted Form W&#8209;7</b></li>
-        <li><b>Declares that we reviewed the documentation and certify it is authentic, complete and accurate</b>, per the procedures in our signed CAA agreement</li>
+      <div class="callout info" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The form was renamed</div>
+          <p>The current version is <b>Form W&#8209;7-COA (Rev. August 2025)</b>; it used to be styled <b>Form W&#8209;7 (COA)</b>, and Pub 1915, Pub 5726 and Pub 4520 still call it that. Same document — use the current form.</p>
+        </div>
+      </div>
+
+      <p class="prose" style="margin-top:14px">Filling it in, top to bottom:</p>
+      <ol class="qlist" style="margin-top:10px">
+        <li>The <b>responsible party's name</b>, and the <b>CAA business name</b></li>
+        <li><b>The date the Acceptance Agent Agreement was entered into</b> — if nobody in the office knows this date, find the firm's agreement paperwork <em>before</em> the first application, not during it</li>
+        <li>The <b>Form W&#8209;7 applicant's name</b></li>
+        <li>The <b>document table</b>, which has <b>two tick columns — Identity and Foreign Status</b>. Tick under <em>each</em> category the document actually supports: a passport under both, a foreign birth certificate under both, a U.S. driver's licence under identity only</li>
+        <li><b>Signature of the responsible party</b>, the <b>date signed</b>, and the Acceptance Agent's <b>EIN, office code and PTIN</b></li>
       </ol>
-      <p class="prose" style="margin-top:12px"><b>Copies of the documents go with it</b> — for the primary and secondary applicant, and for the dependent's passport and birth certificate.</p>
+
+      <p class="prose" style="margin-top:14px"><b>It certifies two things:</b> that the applicant is <b>not eligible for an SSN</b>, and that the documentation shown supports <b>identity, foreign status and — where it applies — residency</b>, and is <b>authentic, complete and accurate</b> per the procedures in our signed agreement.</p>
+      <p class="prose" style="margin-top:10px"><b>Copies of the documents go with it</b> — for the primary and secondary applicant, and for the dependent's passport and birth certificate.</p>
+
+      <div class="callout warn" role="note" style="margin-top:14px">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The COA is not a wrapper for the whole package</div>
+          <p>The form says so plainly: <b>all supplemental documentation — residency support, Exception criteria, and any SSA denial letter — must still be attached to the Form W&#8209;7 itself.</b> The COA describes identity and foreign status, nothing else.</p>
+        </div>
+      </div>
+
+      <div class="callout info" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h3.5l2 2H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
+        <div class="cx">
+          <div class="cl">And it commits us to retention, in writing</div>
+          <p>The CAA "shall retain copies of all relevant documents <b>including signed copies of the Forms W&#8209;7</b>" relied on to certify foreign status and identity. Those copies live in the client's folder in Drive or Double.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1005,7 +1116,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <ul class="checks">
           <li><b>Form W&#8209;7</b> (or <b>W&#8209;7(SP)</b>) — always the <b>most current revision</b></li>
           <li>The <b>valid U.S. federal income tax return</b>, <em>or</em> the <b>exception documentation</b> in its place</li>
-          <li>The <b>supporting identification documents</b> — originals / issuing-agency certified copies, or (CAA) copies with the <b>W&#8209;7(COA)</b></li>
+          <li>The <b>supporting identification documents</b> — originals / issuing-agency certified copies, or (CAA) copies with the <b>W&#8209;7-COA</b></li>
           <li>The <b>SSA denial letter</b>, if applicable</li>
           <li><b>I-20 / I-94</b>, if applicable</li>
           <li><b>Form 2848 / guardianship papers</b>, if anyone but the applicant signed</li>
@@ -1018,15 +1129,15 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <div class="intake">
 <pre><span class="grp">By mail</span>
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 P.O. Box 149342
 Austin, TX 78714-9342
 
 <span class="grp">By private delivery service (street address)</span>
 Internal Revenue Service
-ITIN Operations
+ITIN Operation
 Mail Stop 6090-AUSC
-3651 S. Interregional Hwy 35
+3651 S. Interregional, Hwy 35
 Austin, TX 78741-0000</pre>
       </div>
 
@@ -1070,7 +1181,7 @@ Austin, TX 78741-0000</pre>
     <p class="slede reveal">Check every one before the envelope closes — an application with any of them is <b>suspended or rejected</b>.</p>
     <ol class="qlist reveal">
       <li><b>Not checking the right alpha box (a–h)</b>, or checking an <b>invalid combination</b> (e.g. a <em>and</em> b).</li>
-      <li><b>Not attaching supporting identification documentation</b> proving identity, foreign status or U.S. residency. <b>At least one document must carry a recent photograph — except a dependent under 14 (under 18 if a student).</b> <em>(CAAs: the W&#8209;7(COA) plus document copies — and only passport and birth certificate for dependents.)</em></li>
+      <li><b>Not attaching supporting identification documentation</b> proving identity, foreign status or U.S. residency. <b>At least one document must carry a recent photograph — except a dependent under 14 (under 18 if a student).</b> <em>(Pub 5726 restates this loosely as “under 18”; the Form W&#8209;7 instructions are narrower and are the rule applied.)</em> <em>(CAAs: the W&#8209;7-COA plus document copies — and only passport and birth certificate for dependents.)</em></li>
       <li><b>Not attaching a valid U.S. tax return</b> to show a tax purpose, without meeting one of Exceptions 1–5.</li>
       <li><b>Attaching documents that are not on the 13-document list.</b></li>
       <li><b>A W&#8209;7 for a dependent who is not shown on the attached return</b>, or not claimed for an allowable tax benefit.</li>
@@ -1160,7 +1271,7 @@ Austin, TX 78741-0000</pre>
   phone/fax · EIN · 8-digit Office Code
 
 <span class="grp">CAA only</span>
-☐ Form W-7(COA) completed, signed by an approved Responsible Party
+☐ Form W-7-COA completed, signed by an approved Responsible Party
 ☐ Document types named on the COA
 ☐ Copies attached (primary/secondary: all; dependent: passport + birth cert only)
 ☐ Anything we may NOT authenticate sent as original / issuing-agency certified

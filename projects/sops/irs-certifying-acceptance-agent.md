@@ -17,7 +17,7 @@ waiting weeks to get it back.
 
 > **Where client data goes:** this SOP covers *our own* authorization. Once the
 > firm is approved, an ITIN applicant's passport, birth certificate, visa,
-> address, and the filled-in Forms W-7 / W-7(COA) are **sensitive** and belong in
+> address, and the filled-in Forms W-7 / W-7-COA are **sensitive** and belong in
 > **the firm's client systems** (Google Drive / Double) — **never** in this repo.
 > The firm's own EIN, e-Services credentials, and agreement number likewise stay
 > in the vault, referenced by link.
@@ -45,7 +45,7 @@ flowchart TD
   J -->|"yes"| K["IPS issues a preliminary agreement → only the PPO signs it in e-Services"]
   J -->|"needs more"| L["Respond to the IRS notice via the same Upload Tool"]
   L --> I
-  K --> M["§6 Live as a CAA: ≥5 W-7s a year · a W-7(COA) per application · renew"]
+  K --> M["§6 Live as a CAA: ≥5 W-7s a year · a W-7-COA per application · renew"]
 ```
 
 ---
