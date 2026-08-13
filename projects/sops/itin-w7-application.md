@@ -548,8 +548,9 @@ survives the session, the laptop, and the person.
    **Paste the client's Double page link into "This client in Double"** while you
    are there — the case then carries an **Open in Double ↗** button, and the link
    travels inside the case note, so whoever picks the case up next lands on the
-   right client instead of searching for them. Only `app.doublehq.com` links are
-   turned into a button; anything else is kept as text and flagged.
+   right client instead of searching for them. Only `https://` links on
+   **`doublehq.com`** are turned into a button; anything else is kept as text and
+   flagged, so a mistyped link is visible rather than silently dropped.
 3. **At the end of a working session, press "Copy the case note for Double"** and
    paste it into the client's case note — then press **"I have pasted it into
    Double"**. Until you do, the case keeps showing *"changes not yet copied"*.

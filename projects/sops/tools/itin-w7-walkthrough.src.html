@@ -1214,10 +1214,17 @@ function encodeCase(c){
 // Only ever hand a Double URL to an href. Anything else — another host, or a
 // javascript:/data: URL pasted in by accident or otherwise — is stored as typed but
 // never linked, so a bad paste can never become a live link on a client's case.
+// Parse the host rather than pattern-match the string: the regex this replaced,
+// /^https:\/\/[a-z0-9.-]*\bdoublehq\.com\//, let `evil-doublehq.com` through, because
+// `-` is a non-word character so \b matched right after it. URL() also settles
+// userinfo tricks (`https://doublehq.com@evil.com/` parses to host evil.com).
 function doubleLink(v){
-  var s = String(v || '').trim();
-  if (!/^https:\/\/[a-z0-9.-]*\bdoublehq\.com\//i.test(s)) return '';
-  return s;
+  var u;
+  try { u = new URL(String(v || '').trim()); } catch(e){ return ''; }
+  if (u.protocol !== 'https:') return '';
+  var h = u.hostname.toLowerCase();
+  if (h !== 'doublehq.com' && h.slice(-13) !== '.doublehq.com') return '';
+  return u.href;
 }
 function decodeCase(text){
   var i = text.indexOf(CODETAG);
@@ -1229,7 +1236,11 @@ function decodeCase(text){
   var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
   return {
     ref: o.r, created: o.cr, updated: o.up, generic: !!o.g,
-    dl: doubleLink(o.dl),          // re-validated on the way in, not trusted from the code
+    // Kept exactly as typed, valid or not — the field said "kept as text", and a
+    // mistyped link that quietly vanished on reopen taught the next person nothing.
+    // Safety does not depend on this: doubleLink() re-validates before anything
+    // reaches an href, and esc() covers the value attribute.
+    dl: typeof o.dl === 'string' ? o.dl : '',
     steps: o.s.map(function(a){
       var meta = all[a[0]] || { id:a[0], ph:'form', t:a[0], d:'' };
       return { id:a[0], ph:meta.ph, t:meta.t, d:meta.d, done:!!a[1], date:a[2]||'', note:a[3]||'' };
@@ -1370,6 +1381,27 @@ function promptNewCase(){
   });
 }
 
+// Update ONLY the link chip and its warning, in place.
+// This started life as renderOne() on blur, which was a bad trade: blur fires on
+// mousedown, so the redraw detached whatever you were clicking and the click never
+// landed. The first press of "Copy the case note", a checkbox, Delete or Add-to-log
+// all did nothing — and the log case silently discarded the text you had typed.
+// Never redraw a live view from a field's own handler; touch the parts that changed.
+function syncDoubleLink(){
+  var c = openCase, box = document.getElementById('dblinkBox');
+  if (!c || !box) return;
+  var dl = doubleLink(c.dl), a = box.querySelector('a'), warn = document.getElementById('dlWarn');
+  if (dl){
+    if (!a){
+      a = document.createElement('a');
+      a.className = 'btn ghost sm'; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = 'Open in Double ↗';
+      box.appendChild(a);
+    }
+    a.href = dl;
+  } else if (a) a.remove();
+  if (warn) warn.hidden = !(c.dl && !dl);
+}
 function renderOne(){
   var c = openCase, p = progress(c), one = document.getElementById('caseOne');
   var h = '<div class="cbar"><button class="btn ghost sm" id="backCases" type="button">← All cases</button>'
@@ -1390,18 +1422,21 @@ function renderOne(){
   // actually lose time on. The URL is SHOWN as text as well as linked: inside the
   // published viewer a click may be blocked, and a link you can read is still a link
   // you can copy. rel=noopener because this opens a different origin.
+  // No aria-label: the visible <label for> already names the field, and overriding it
+  // with different words breaks "label in name" for anyone driving this by voice.
   var dl = doubleLink(c.dl);
-  h += '<div class="dblink">'
+  h += '<div class="dblink" id="dblinkBox">'
     +  '<label class="fl" for="dlField">This client in Double</label>'
     +  '<input type="text" id="dlField" data-dlink="1" value="'+esc(c.dl||'')+'" '
-    +  'placeholder="Paste the client’s Double page link — https://app.doublehq.com/…" '
-    +  'aria-label="Double link for this client">'
+    +  'placeholder="Paste the client’s Double page link — https://app.doublehq.com/…">'
     +  (dl
         ? '<a class="btn ghost sm" href="'+esc(dl)+'" target="_blank" rel="noopener noreferrer">Open in Double ↗</a>'
         : '')
     +  '</div>';
-  if (c.dl && !dl) h += '<p class="derr" role="alert" style="margin:-6px 0 14px">That is not a Double link, so it is kept as text but not opened. A Double link starts with <span class="typein">https://app.doublehq.com/</span></p>';
-  else if (dl) h += '<p style="color:var(--muted);font-size:12.5px;margin:-6px 0 14px">Goes in the case note too, so whoever picks this up lands on the right client.</p>';
+  h += '<p class="derr" id="dlWarn" role="alert" style="margin:-6px 0 14px"'+((c.dl && !dl)?'':' hidden')+'>'
+    +  'That is not a Double link, so it is kept as text but not opened. A Double link is on '
+    +  '<span class="typein">doublehq.com</span> and starts with <span class="typein">https://</span></p>';
+  if (dl) h += '<p style="color:var(--muted);font-size:12.5px;margin:-6px 0 14px">Goes in the case note too, so whoever picks this up lands on the right client.</p>';
 
   PHASES.forEach(function(ph){
     var steps = c.steps.filter(function(s){ return s.ph === ph[0]; });
@@ -1481,19 +1516,11 @@ function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); i
   one.addEventListener('input', function(e){
     var c = openCase, t = e.target;
     if (!c) return;
-    if (t.dataset.dlink !== undefined){ c.dl = t.value.trim(); touch(c, true); return; }
+    if (t.dataset.dlink !== undefined){ c.dl = t.value.trim(); touch(c, true); syncDoubleLink(); return; }
     if (t.dataset.note === undefined) return;
     var s = c.steps[+t.dataset.note];
     if (s){ s.note = t.value; touch(c, true); }
   });
-  // The Open-in-Double button only exists once a valid link is in the field, so redraw
-  // when the field is left. Typing does NOT redraw — that would destroy the input
-  // mid-keystroke, which is the caret bug this tool already learned the hard way.
-  one.addEventListener('blur', function(e){
-    var c = openCase, t = e.target;
-    if (!c || t.dataset.dlink === undefined) return;
-    renderOne();
-  }, true);
 })();
 
 /* ---------------------- the Double note (the durable copy) --------------- */
