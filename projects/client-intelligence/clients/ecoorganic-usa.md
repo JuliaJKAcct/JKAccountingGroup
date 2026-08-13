@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -102,6 +102,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ## 4. Obligations & recurring processes
 
 ### Sales tax
+- 🔴 **THE ACCOUNT SHOULD NOT EXIST, AND CLOSING IT IS WAITING ON JULIA.** On **2026-04-06** Connecticut DRS told Lilian that **the client was registered for sales tax even though they only provide services and sell no goods — and the firm never requested that account.** DRS also said the outstanding zero returns could be filed **with no penalty** (done; saved in Drive), and that **the account can be closed entirely online**: myconneCT → *More* → *Taxpayer Updates* → *Close Accounts*, entering a closure date. **Lilian was waiting for Julia to do it, with a reminder due after 2026-04-15. Nothing records it being done.** ⚠️ **This may be the answer to why this client files a zero return every month** — the discussion below was written without it. ⚠️ **And it may also be what the two unopened DRS notices are about** (the 12.2025 Delinquency Notice and the 01.2026 Proposed Assessment, further down): DRS said on 2026-04-06 that the outstanding zero returns could be filed **with no penalty**, and the note records that as **done**. **Open those two notices before treating either as a live liability.** _(TaxDome notes, migrated — filed under Ecoorganic USA LLC; note dated 2026-04-06.)_
 - **Applies?** Yes — Connecticut **OS-114 Sales and Use Tax Return**, filed
   **monthly** (recurring task due the 5th of the month) via CT DRS myconneCT
   *(Double client properties + activity log, confirmed 2026-08-01)*.
@@ -151,10 +152,11 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   🔑 **And look here BEFORE asking the state anything: a migrated TaxDome note on this client
   is titled `04.06.2026 CT state call - sales tax account`** — an April 2026 call with
   Connecticut about this very account, which falls **inside** the window of both the gap and
-  the two notices, so it may already hold the answer. *(Found 2026-08-13 in the TaxDome
-  Phase-1 inventory — the note's **content has not been read**; those notes are gated on the
-  permission question in [`../automation/taxdome-notes-backfill.md`](../automation/taxdome-notes-backfill.md).
-  Its existence is the fact; what it says is not.)*
+  the two notices, so it may already hold the answer. ✅ *(**Read 2026-08-13**, once Lilian authorised
+  it. It **does** hold part of the answer: DRS said the account was opened although the client
+  sells no goods and the firm never requested it, that the outstanding zero returns could be
+  filed **with no penalty** — done — and that the account can be closed online. See the bullet at
+  the top of this section. **What it does NOT say is when or why DRS moved the client to monthly.**)*
 - **When or why DRS moved this client from quarterly to monthly is not recorded** — observed
   from the filings, not established.
 
@@ -333,6 +335,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   filing continues unchanged**; what is parked is what we may *say* about it, not what we do. Same
   session: she also ended the practice of proposing notes for her notebook (now a firm-wide rule in
   [`CLAUDE.md`](../../../CLAUDE.md) — unrelated to this client, recorded there).
+- 2026-08-13 — **TaxDome notes read (Phase 2).** Two notes, both new to this file. **2026-04-06 — CT DRS call:** the sales-tax account was opened even though the client sells no goods and the firm never requested it; the outstanding zero returns were filed with **no penalty**; DRS explained how to close the account online. **Waiting on Julia, reminder due after 2026-04-15, nothing recorded since.** **2026-04-07 — the CT annual report was filed** (due 31 March): **Ishkhan was removed and Artem added as principal agent**, and the state sent Artem an acceptance request he had **72 hours** to answer. The payment processed but the confirmation email had not arrived and the CT account still showed it as unfiled. _(TaxDome notes, migrated — filed under Ecoorganic USA LLC.)_ _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.

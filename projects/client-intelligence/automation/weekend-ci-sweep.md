@@ -154,6 +154,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Artur Tseretsian | 752202 |
 | Ihor Naum & Olha Levchuk | 710637 |
 | Denys Melnyk | 764785 |
+| Andrii Tymchenko | 710619 |
 | VOICECAPITAL INC | 710725 |
 | VOXAGO LLC | 710606 |
 | YMI TRUCKING LLC | 710608 |
@@ -275,6 +276,7 @@ CLIENTS (name -> Double id):
 - Artur Tseretsian -> 752202
 - Ihor Naum & Olha Levchuk -> 710637
 - Denys Melnyk -> 764785
+- Andrii Tymchenko -> 710619
 - VOICECAPITAL INC -> 710725
 - VOXAGO LLC -> 710606
 - YMI TRUCKING LLC -> 710608

@@ -1,6 +1,6 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
 >
 > ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
 > Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
@@ -113,6 +113,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ## 5. Key facts & quirks
 
+- 🔴 **TWO K-1s WERE MISSING FOR THE 2025 RETURN — from 2242 Monroe LLC and Porcupine Partnership.** Recorded on a client call of **2026-04-13**, alongside a **home-office deduction that had not been entered in QuickBooks or on the return.** The 2025 return was **extended** and an extension payment made; a Q1 2026 estimate was paid manually through the IRS. **Nothing records the K-1s arriving.** A partnership K-1 that never comes is the classic cause of a return that cannot be finished — chase both before anything else here. _(TaxDome notes, migrated — filed under OneTwoStrategies INC; note dated 2026-04-13.)_
+- **A salary increase and a change to additional withholding were discussed on the same call** — raising the owner's annual salary and doubling additional withholding to cover the tax need. **Whether either was actually implemented is unrecorded.** Figures are in Double / the client's payroll records.
+
 Anything the team must know to serve this client well — special preferences,
 watch-outs, one-off arrangements, history that affects the work.
 
@@ -124,7 +127,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- **Almost everything here is still Double's property columns alone** — the exception is the 2026-04-13 client call above, from a migrated TaxDome note. No Gmail, Ping or QuickBooks pass has been run. The first weekend sweep on this client is what makes it useful.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
 
 ## 6. History & open questions
@@ -134,6 +137,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-13 — **TaxDome notes read (Phase 2).** One note, new: a client call of **2026-04-13** recording the 2025 extension and its payment, a manually-paid Q1 2026 estimate, a discussed salary increase and withholding change, and — the part that gates the return — **two missing K-1s (2242 Monroe LLC and Porcupine Partnership) and an unentered home-office deduction**. Now §5. _(TaxDome notes, migrated — filed under OneTwoStrategies INC.)_ _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,

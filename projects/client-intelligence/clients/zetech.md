@@ -1,6 +1,6 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
 >
 > ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
 > Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
@@ -32,7 +32,7 @@
 ## 1. Snapshot
 
 - **Business name:** ZETECH LLC
-- **Entity type:** **LLC**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
+- **Entity type:** **LLC**; the firm's Double record says taxed as an **S-corp**, Tax Return Type **1120-S**. ⚠️ **The IRS does not hold it that way** — on 2026-04-17 they said the company appears in their system as a **sole proprietorship** (§5). **Contested, not established.** _(Double client properties, 2026-08-11)_
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
@@ -99,7 +99,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Income tax
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
-- **Return type(s) & deadlines:** **1120-S**; deadlines _(pending)_
+- **Return type(s) & deadlines:** **1120-S** per Double — ⚠️ but see §5: the IRS's own record says sole proprietorship. **Reconcile before filing.**; deadlines _(pending)_
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
@@ -114,6 +114,8 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ## 5. Key facts & quirks
 
+- 🔴 **THE IRS HAS THIS COMPANY IN ITS SYSTEM AS A "SOLE PROPRIETORSHIP".** Told to Lilian on the call of **2026-04-17**. She asked for a letter stating it and **the IRS said they do not issue that kind of document**, so there is nothing on paper. **Check what the firm actually files for this entity against that classification before the next return** — a mismatch between the IRS's record and the return type is exactly what caused the rejections at Optic Gold and Voicecapital. _(TaxDome notes, migrated — filed under ZETECH LLC; note dated 2026-04-17.)_
+
 Anything the team must know to serve this client well — special preferences,
 watch-outs, one-off arrangements, history that affects the work.
 
@@ -125,7 +127,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- **Almost everything here is still Double's property columns alone** — the one exception is the IRS call above, which came from a migrated TaxDome note. No Gmail, Ping or QuickBooks pass has been run. The first weekend sweep on this client is what makes it useful.
 - A **`Zetech Holding LLC`** also exists in Double (id `717754`, no QuickBooks connected) — the relationship between the two is **not established** _(to verify)_. A `zetech-consolidation` skill is available in the firm's Claude environment (it is **not** in this repo), which suggests consolidation work has been done for this client before — **unverified**.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
 
@@ -136,6 +138,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-13 — **TaxDome notes read (Phase 2).** One note, new: on **2026-04-17** the IRS told Lilian the company appears in their system as a **sole proprietorship**, and **refused to issue any letter saying so**. Now §5. _(TaxDome notes, migrated — filed under ZETECH LLC.)_ _(Worked by Lilian.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,

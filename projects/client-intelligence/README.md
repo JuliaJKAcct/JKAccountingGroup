@@ -179,9 +179,9 @@ client-intelligence/
 ├── automation/
 │   ├── weekend-ci-sweep.md  ← the Saturday sweep Routine (prompt + web-UI setup)
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
-│   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — scoped, not started
+│   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (36 so far — see the Clients index below)
+└── clients/               ← one file per client (37 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -207,6 +207,7 @@ client-intelligence/
 | Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — Maria's process guide integrated |
 | Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — Maria's process guide integrated |
 | MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — Maria's process guide integrated |
+| Andrii Tymchenko | [`clients/andrii-tymchenko.md`](./clients/andrii-tymchenko.md) | Firm | Left the US 2025-05-31 → **1040-NR (MFS)**; dormant company; a 1095-A requested against Medicaid cover |
 | MAYS EXPRESS SERVICE LLC | [`clients/mays-express.md`](./clients/mays-express.md) | Firm | **Former** — business closed 2025-12-31. FDOR account closure **refused and unresolved**; note **491838** |
 | MEGABAI | [`clients/megabai.md`](./clients/megabai.md) | Firm | **Former** — company closed, **no Double account**, so no case note. Reemployment-tax closure unconfirmed |
 | VOICECAPITAL INC | [`clients/voicecapital.md`](./clients/voicecapital.md) | Firm | **IRS has no S-election** — C-corp to them; 2023 return unprocessed; note **491840** |

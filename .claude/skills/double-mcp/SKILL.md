@@ -518,6 +518,56 @@ redacted text to a file, and it deletes the raw download on every path out. Read
 [README](../../../tools/redact-doc/README.md) — in particular that it **fails closed** and that a
 scan (no text layer) is a **stop**, never a reason to send the image somewhere else to be read.
 
+#### 🔓 The SECOND hole, opened 2026-08-13: the firm's own migrated TaxDome notes
+
+**Lilian authorised this. Here is exactly what was said, because the wording matters and an
+earlier draft overstated it.**
+
+- **What she was told**, across two turns: that *"la regla que tenemos hoy dice que no abra
+  documentos de cliente para leerlos — con una sola excepción, la declaración del año anterior en
+  una revisión previa"*, that **she is the one who can open it**, and that the scope would be
+  *"solo las carpetas `Notes`, nada más de esas carpetas de cliente"*. Later, that the TaxDome
+  copies were still unread and *"sigue esperando tu permiso"*.
+- **What she said**: *"revisa esas notas de TaxDome y únelo a lo que ya tienes, sin duplicar nada y
+  siguiendo la secuencia lógica en el tiempo."*
+
+⚠️ **She was NOT walked through limit 3 by name, nor told the phrase "cross-client read".** She was
+told the rule forbids it, that only she could change that, and what the scope would be — and she
+directed the work anyway, twice. **That is a principal's decision on a rule she owns, which is what
+this needed; it is not a session reasoning its way to a waiver.** The distinction is written down
+because [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md)
+warned about exactly this trap, and the next person should be able to judge the authorisation for
+themselves rather than take a session's word for it.
+
+**What it covers, and the scope IS the rule:** the **`Notes` folders** carried over from TaxDome
+— `TaxDome > <client> > N. Notes` in Double, and the mirrored copies in Julia's Drive under
+`4. Documents`, `*QBO Clients and Individuals` and `*Dupplicated`. **Nothing else in those
+folders.** The plan, the inventory and the routing rule are in
+[`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md).
+
+**Why this one is different from a client's tax return, and why the difference is the whole
+justification:** these are **the firm's own working notes about its clients**, written by Julia,
+Lilian and Maria on the client's TaxDome profile. They are not the client's documents. A prior-year
+return is the client's private record and gets one year, one client, through the redactor; a
+migrated firm note is our own knowledge that happens to be stored as a file.
+
+**What does NOT change, and a session must not read this as a general loosening:**
+- **Limits 4–7 apply unchanged.** Not for another purpose, **never from a subagent, never from a
+  scheduled or unattended session**, never into the repo working tree, never committed raw.
+- **The two-data-homes rule still governs what may be written**, and these notes are exactly the
+  kind that will test it — dollar figures, personal contact details and street addresses stay in
+  Double and Drive.
+- **This does not open any other folder.** `Taxes/`, `Private/`, `Client uploaded documents/` and
+  the rest are untouched by this ruling.
+- **Prefer the Drive copy.** Most are Google Docs and read directly; the Double copies are `.docx`
+  and each one puts a presigned download URL — a credential — into the transcript.
+
+⚠️ **The two sources are INDEPENDENT, not two copies of one thing** _(Lilian, 2026-08-13, correcting
+the assumption)_: *"las notas que hay en el drive y en Double, las que provienen de TaxDome, no son
+las mismas que yo tenía en mi teléfono… puede que alguna cosa coincidiera, pero no necesariamente."*
+So the job is **integration into one chronology**, not reconciliation of duplicates — and where the
+same event genuinely appears in both, it is written **once**.
+
 #### The limits — each of these is a "never"
 
 1. **Never another year.** One review authorises one tax year. Not a second year to
@@ -530,7 +580,16 @@ scan (no text layer) is a **stop**, never a reason to send the image somewhere e
    document, in the moment, having been told what it is.** Never a standing permission, never
    inferred from "she asked for a thorough review", and never assumed from a previous session.
    **Everything from 3 down is absolute** and nobody waives it in a session.
+   ⓘ **"Nobody waives it in a session" still stands — and it is not the same thing as "the rule can
+   never change".** Limit 3 was **amended once, by Lilian herself, on 2026-08-13**, and the
+   amendment is written into the rule above (*"The SECOND hole"*) rather than left as something a
+   session remembers. **A session may rely on a carve-out that is written here; it may never create
+   one.** ⓘ These migrated notes breach **limit 2** as well — they are not part of a filed return —
+   and the same carve-out covers them; it is scoped to the `Notes` folders and nothing else.
 3. **Never across clients.** No loop, no sweep, no "while I'm here". One client, one review.
+   ⓘ **One carve-out, and only one:** the **migrated TaxDome `Notes` folders**, authorised by
+   Lilian on 2026-08-13 (see the section immediately above). That is a cross-client read by
+   design, of the firm's own notes — it does not license a sweep of anything else.
 4. **Never for another purpose.** The permission is for the prior-year comparison. Looking up an
    address, a figure or a phone number is not that.
 5. **Never from a subagent**, and **never from a scheduled or unattended session.** Both controls
@@ -611,9 +670,7 @@ Notes that save time:
   to know before using them: they are **old by construction**, so they can contradict current
   facts; and **the folder they sit in is not evidence of their subject** — TaxDome ran a
   client's company and personal matters together under the owner's profile, so a company note
-  is routinely filed under the owner. 🔴 **And reading their CONTENT is not authorised today** —
-  a roster-wide read of non-return documents is what the document rule's **limit 3** forbids
-  and says no session may waive, so it needs Lilian or Julia first. Listing the folders and
+  is routinely filed under the owner. ✅ **Reading their CONTENT was authorised by Lilian on 2026-08-13** — see the document rule's *"SECOND hole"* section for the scope and its limits. Phase 2 of the backfill ran the same day.
   file **names** is fine. The backfill, the gate and the routing rule are scoped in
   [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md).
 - **`1. Completed Tax organizers` is load-bearing.** Its presence (and the *year* in the
@@ -1156,7 +1213,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
   [`taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md)
   will confirm or correct it; **drop the "reported, not verified" caveat then**, so the
   warning doesn't become permanent furniture in the one tree sessions navigate by.
-- **The backfill's permission question is answered** — reading those notes is a cross-client
+- ~~The backfill's permission question is answered~~ — **answered 2026-08-13; the ruling is in the document rule** — reading those notes is a cross-client
   read of non-return documents, which the document rule's limit 3 forbids and says no session
   may waive. When Lilian or Julia rules, **record it in the document rule above**, not only in
   the backfill doc.

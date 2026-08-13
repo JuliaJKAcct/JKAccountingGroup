@@ -321,18 +321,20 @@ and then say so first. When it happens anyway: copy no value anywhere, tell the 
 **remind them to delete the session** (in a cloud session that history sits in the firm's shared
 Claude account). Keep it calm — deleting is the routine last step, not an alarm.
 
-**Plus one source no sweep has ever read: the migrated TaxDome notes.** When the firm moved
-off TaxDome, the notes written by hand on each client's TaxDome profile were kept — reportedly
-in a `Notes` folder under the client's `TaxDome` folder in Double, and mirrored somewhere in
-Julia's Google Drive. ⚠️ **All of that is Lilian's account (2026-08-12), unverified — no
-session has opened one**, and the Drive tree is **not** known to mirror Double's layout, so
-don't conclude a client has none because a guessed path came up empty.
+**Plus one source no WEEKEND SWEEP reads: the migrated TaxDome notes.** When the firm moved
+off TaxDome, the notes written by hand on each client's TaxDome profile were kept — in a
+`Notes` folder under the client's `TaxDome` folder in Double, and mirrored in Julia's Google
+Drive. ✅ **Both verified 2026-08-13**, when the folders were walked and read: **33 folders →
+22 clients**, and the Drive tree does **not** mirror Double's layout — it splits across three
+parallel subtrees, two of which near-duplicate each other. Don't conclude a client has none
+because a guessed path came up empty; use the inventory in the backfill doc.
 🔴 **Do NOT pick these up ad hoc inside an ordinary per-client sweep, and never from the
 unattended Saturday routine.** The backfill is a phased, attended job scoped in
 [`automation/taxdome-notes-backfill.md`](../../../projects/client-intelligence/automation/taxdome-notes-backfill.md),
-and reading the note **content** is currently **blocked** on a question only Lilian or Julia
-can answer — [`double-mcp`](../double-mcp/)'s document rule forbids cross-client reads of
-non-return documents, and says a session may not waive that. Read the backfill doc first; it
+and reading the note **content** was **authorised by Lilian on 2026-08-13** — the ruling, its
+scope and its limits are in [`double-mcp`](../double-mcp/)'s document rule (*"The SECOND
+hole"*), which is the only place a session may take it from. **The carve-out covers these
+`Notes` folders and nothing else.** Read the backfill doc first; it
 also carries the source tag and the rule that **the folder a note sits in is not evidence of
 its subject** (below).
 
