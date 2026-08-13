@@ -1079,6 +1079,29 @@ common managed WAF rule sets (AWS WAF's `SizeRestrictions_BODY` blocks at exactl
 / 8,000-fail bracket straddles it once the JSON envelope is counted. Give them the number; let them
 confirm it.
 
+**Who can actually fix it — the question everyone asks second.** Follow one request:
+
+| # | Stage | Whose | Can they fix it? |
+|---|---|---|---|
+| 1 | Claude decides to call a tool | Anthropic | — |
+| 2 | The call is POSTed to Double's MCP URL | Anthropic | ❌ **No — and proven so.** The same string reached a different MCP server from the same account in the same minute. Anthropic only *reports* the 403; reporting an error is not causing it |
+| 3 | 🚧 **The edge — WAF / CDN / load balancer** | **Double** | ✅ **YES. This is the one.** A configuration change, not a product change |
+| 4 | Double's MCP server | **Double** | Never sees the request |
+| 5 | Double's app + database (notes live here) | **Double** | Never sees it either — which is what their engineers checked |
+
+⚠️ **The MCP server is Double's own** — they built it and they host it; there is no third-party MCP
+vendor in this path. So "Double's developers" and "the MCP developers" are **the same company**. What
+differs is the **team**: Allison asked the *product* team, who own stage 5 and answered correctly for
+stage 5. The switch is at stage 3, which belongs to whoever runs their **infrastructure**. **That is
+the entire job of the follow-up: get the question to the right team inside Double.**
+
+**And us? We cannot fix it — only work around it.** There is no setting on our side, in Double or in
+Claude; a request-size rule at the edge is not per-tenant and we have no access to it. Our options are
+the `Part 1 / Part 2` split below, shorter notes, and pushing Double. ⓘ **One honest caveat:** that
+Double's infra team *can* flip this is inference, not something they have confirmed — the rule may be
+deliberate, protecting their service. If so they can still change it and may decline. What is **not**
+in doubt is that the decision is theirs, not Anthropic's and not ours.
+
 Practical rules:
 
 - **Keep a note body under ~7,500 characters.** Compose it, measure it, then send.
