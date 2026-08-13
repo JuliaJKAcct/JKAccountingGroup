@@ -1,6 +1,6 @@
 # Tsminibears LLC
 
-> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-06
+> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-13
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -125,7 +125,11 @@ recorded for history and because the Florida RT matter at the end is still open.
 >   on 2026-08-04 was **wrong**, the send bounced, and it sat unnoticed in Gmail's **Updates** tab.
 >   Lilian found the correct address and **re-sent the same day**. Everything downstream was waiting
 >   on a document that was never delivered — see "The POA that never arrived".
-> - **NEXT STEP: wait for the POA, then call — and ask for the change to be made ON the call.** _(From
+> - ⏰ **THE WAIT IS OVER — THE CALL IS DUE AS OF 2026-08-13.** The 3–4 day POA window ran out between
+>   Mon 08-10 and Wed 08-12; today is Thu 08-13 and **no fourth call is on record.** _(Gap-check
+>   2026-08-13: no reply from the DOR, and no bounce anywhere in Gmail since 08-05 — see "The POA that
+>   never arrived".)_
+> - **NEXT STEP: call — and ask for the change to be made ON the call.** _(From
 >   how the third representative spoke, Lilian understood it can be — her read of his manner, not
 >   something he stated.)_ **The letter is now the fallback, not the first step.**
 >   ⚠️ **Do not volunteer the IRS letter** — Lilian's explicit decision. Nothing has been drafted or
@@ -404,6 +408,22 @@ run because there was no money, **and still ask for the effective date to be mov
 that is now the plan.** It was wrong to treat the date change as dead: what the firm ruled out was
 **misrepresenting the entity type**, not the request itself.
 
+- 🎯 **THE DATE ASKED FOR: OCTOBER 2026** — Q4 2026, **Julia's figure** _(recorded 2026-08-06)_. The
+  honest framing below does **not** depend on that month — *"from the quarter wages actually begin"* is
+  the argument — but **October 2026 is the concrete date the request names.**
+- 🗣️ **WHAT TO EXPLAIN, IN WORDS — JULIA'S FOUR POINTS, AND THEY ALL SURVIVE.** _(Restated here
+  2026-08-13 because they were only written inside the **superseded** two-track block below, where a
+  reader looking for them is told not to act on the page. **What was superseded is the conclusion
+  Track B drew from them — dropping the date change for a waiver — not the explanation itself**, which
+  "the honest framing" already relies on.)_
+  1. The company **has been an S-corp since 2025**.
+  2. It **never ran payroll** — there was no money, **no salary was ever set and nothing was ever
+     paid**.
+  3. There **was a payroll agent, Gusto**, engaged and paid to be handling exactly these filings.
+  4. So **the firm had no idea the reports were not being filed** until the client began receiving the
+     notices.
+  - **Julia's stated objective:** tell the DOR **we had no idea**, and **take some of the
+    responsibility off the firm — "which is not a lie, because we paid for that service."**
 - **The honest framing.** The DOR's gate is a **presumption** — *a company filing as a corporation is
   assumed to pay a salary*. A presumption is rebutted with facts, not denied. So the request says:
   **we are not telling you this is anything other than an S-corp; it is one, and no wages were ever
@@ -527,6 +547,17 @@ it there, worked out the correct address for powers of attorney, and **re-sent t
 - **Everything downstream had been waiting on a document that never arrived.** Two days of the plan
   rested on a POA the agency never received.
 - ⚠️ **The re-send has NOT been confirmed delivered either** — no bounce has been seen, but nothing positively confirms arrival, and this file's own §5 rule says *"treat sent as unproven until something confirms delivery."* **Every date below hangs on that.**
+  - ✅ **Re-checked 2026-08-13 — still no bounce, and this time it was looked for properly.** A sweep of
+    Julia's whole mailbox for non-delivery reports since 2026-08-05 (mailer-daemon, postmaster,
+    "undeliverable" / "delivery status" / "not delivered" / failure, across all tabs) returns
+    **nothing**. That is the opposite of the 08-04 send, which bounced the same day. **Treat the
+    re-send as very likely delivered** — but it is still not positive confirmation: **the DOR has
+    never replied**, even though the covering email asked it to _("Kindly let us know when it's
+    processed")_. The only proof will be the representative on the next call saying the POA is on file.
+  - 📄 **What was actually sent:** the **Florida DR-835** power of attorney, in the message
+    "TSMINIBEARS LLC - POA" from `lilian@` to `AcctMaint@floridarevenue.com`, **2026-08-06 15:17 UTC**,
+    Julia bcc'd. The attachment is dated **2026-05-27** — i.e. the POA was **signed while Tsminibears
+    was still a client**, three weeks before the Double record was archived. _(Gmail, 2026-08-13.)_
 - **The 3–4 day processing clock restarts from 2026-08-06.** 08-06 is a Thursday, so **Mon 2026-08-10
   at the earliest on calendar days; Tue 2026-08-11 – Wed 2026-08-12 if the agency means business
   days.** _(Derived from the agency's stated duration, not a date it gave.)_
@@ -612,6 +643,21 @@ All times below are **UTC** unless marked otherwise.
 
 - _(2026-08-06, Lilian — closing the two questions from the third call)_ — **The POA address, and two decisions.** (1) ✅ **The correct address is `AcctMaint@floridarevenue.com`** — Florida DOR account maintenance, and **a different address from `fdorspanish@floridarevenue.com`**, which the second representative gave for the effective-date request. (2) ⭐ **The letter may not be needed at all:** the third representative asked nothing about documentation, and from the way he spoke Lilian understood **the change can be done on the call itself** once the POA is on file. **So the plan is now: call and try to get it done there; the letter is the fallback if someone insists.** (3) 🎯 **She deliberately did not raise the IRS letter and will not** — *"si él me da el acceso a cambiar esto, ¿para qué tendría yo que mencionar esa carta?"* (if he gives me the access to change this, why would I have to mention that letter?) Not a misstatement, just not volunteering a requirement one representative mentioned; **her call, and nobody else should raise it either.** **The Double case note 485230 was rewritten in place in the same pass.** (4) **On the penalties: her position is that moving the date cancels them**, which is sound — if the account starts later, those quarters stop existing. _(Recorded with one precision: the "avoids all penalties" statement of 2026-08-04 was about **closing** the account; nobody has been asked it about a date change, so this is the firm's inference. Nothing changes in practice — proceed on it, and confirm the notice balance shows cleared once the change goes through.)_
 
+- _(2026-08-13, Lilian — gap-check, no new action taken)_ — **Lilian asked for a recap of the matter and
+  which date the effective date was meant to move to. Answer: October 2026** (Q4 2026 — Julia's
+  figure; the honest framing behind it is *"from the quarter wages actually begin"*, which does not
+  depend on that specific month). **The recap was given in chat; nothing was requested from or agreed
+  with the agency in this session.** Three things came out of closing the gap since 08-06:
+  **(1) ⏰ THE POA WINDOW HAS ELAPSED AND THE FOURTH CALL IS OVERDUE** — 3–4 days from the 08-06
+  re-send landed Mon 08-10 to Wed 08-12; **it is now Thu 08-13 and no call is on record.**
+  **(2) ✅ No bounce on the re-send** — a full sweep of Julia's mailbox for non-delivery reports since
+  08-05 returns nothing, the opposite of the 08-04 send. **Still not positive confirmation: the DOR has
+  never replied** despite the covering email asking it to. **(3) 📄 The POA is the Florida DR-835,
+  dated 2026-05-27** — signed **while Tsminibears was still a client**, three weeks before the Double
+  record was archived, which bears on the open authority question. Ping holds **no meeting** on this
+  matter since 08-06 (the DOR calls are phone calls it does not capture). _(Sources: Gmail + Ping,
+  2026-08-13. Detail in §4.)_
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - **Do not close this out as "not our client."** The relationship ended, but the penalty periods fall inside our engagement, so the firm owns the resolution _(Lilian, 2026-07-30)_.
@@ -620,7 +666,12 @@ All times below are **UTC** unless marked otherwise.
 
 **TRACK B — Florida DOR. This is the whole plan** _(closing the account is dead; the effective-date request is back on in its honest form — §4)_.
 
-- ⏳ **NEXT ACTION — WAIT for the POA to process, then call. Nothing is drafted until then** _(Lilian, 2026-08-06)_. **The POA was re-sent 2026-08-06** after the first send bounced off a wrong address, so the 3–4 days run from there: **Mon 2026-08-10 at the earliest, Tue 08-11 – Wed 08-12 on business days** _(derived from the agency's stated duration — it gave no date — and conditional on the re-send having arrived)_. **The five things to get, in order, are listed in §4, "✅ THE HONEST EFFECTIVE-DATE REQUEST"** — name and ID first, then the POA, then **ask for the change to be made on the call**. ⚠️ **Ask on the phone, but get whatever is agreed back in writing** — three calls have now given three different pictures, so a verbal yes is the start of the record, not the end. **The one question that stays open and unasked: is the request receivable without the IRS letter?** Do **not** raise it — but it is the likeliest reason for a refusal, so be ready if the person does.
+- ⏰ **NEXT ACTION — CALL THE DOR. The wait is over and the call is OVERDUE as of 2026-08-13.** _(Was
+  "wait for the POA, then call"; the waiting half is spent.)_ **The POA was re-sent 2026-08-06** after
+  the first send bounced off a wrong address, so the 3–4 days ran from there: **Mon 2026-08-10 at the
+  earliest, Tue 08-11 – Wed 08-12 on business days** _(derived from the agency's stated duration — it
+  gave no date)_. **All of those dates have passed, no fourth call is on record, and the agency has
+  never replied to the POA email.** Nothing is drafted before that call _(Lilian, 2026-08-06)_. **The five things to get, in order, are listed in §4, "✅ THE HONEST EFFECTIVE-DATE REQUEST"** — name and ID first, then the POA, then **ask for the change to be made on the call**. ⚠️ **Ask on the phone, but get whatever is agreed back in writing** — three calls have now given three different pictures, so a verbal yes is the start of the record, not the end. **The one question that stays open and unasked: is the request receivable without the IRS letter?** Do **not** raise it — but it is the likeliest reason for a refusal, so be ready if the person does.
 - **On the call, ask for the change to be made there and then.** The third representative implied it can be. ⚠️ **Do not volunteer the IRS letter** — Lilian's decision (§4). **The letter is now the FALLBACK**, not the default: only if whoever answers insists on a written request. If it comes to that: ① primary, **move the effective date**; ② alternative, **waive the penalties for reasonable cause** and the firm files the zeros — never write *"there was no obligation to file"*, put **Gusto in as context, not blame**, and **do not attach the CP575** (§4).
 - **Assemble the evidence before writing:**
   - **No wages were ever paid in any period** — the books support this, and it is the heart of the request.
@@ -657,13 +708,23 @@ All times below are **UTC** unless marked otherwise.
 - [x] **Whether the POA had processed by the 2026-08-06 calls — ✅ NO, and it could not have: the 2026-08-04 send never arrived at all** (wrong address, bounced). So everything those representatives said was **general information given without account authority**, which is worth knowing before relying on the ≈$842.50 figure or on "the change can be made." **Re-sent 2026-08-06; the clock runs from there.**
 - [x] **The correct email address for powers of attorney at the Florida DOR — ✅ `AcctMaint@floridarevenue.com`** _(Lilian, 2026-08-06)_. Distinct from `fdorspanish@floridarevenue.com`, which is the effective-date channel.
 - [ ] **Once the change goes through: confirmation that the penalty balance on the notice shows CLEARED.** The firm is proceeding on the assumption that moving the date cancels the already-assessed Q2/Q3 2025 penalties (§4). **This is the one check that proves it** — it falls due weeks after the call, so it lives here rather than only on the call checklist.
-- [ ] **Confirmation that the 2026-08-06 re-send actually arrived.** No bounce has been seen, but nothing confirms delivery — and **the whole timeline hangs on it**. If it failed too, the plan repeats. _(This is the file's own §5 rule applied to itself.)_
+- [ ] **Confirmation that the 2026-08-06 re-send actually arrived.** ⚠️ **Half-answered 2026-08-13: no
+  bounce exists.** A full sweep of Julia's mailbox for non-delivery reports since 08-05 found nothing —
+  unlike the 08-04 send, which bounced the same day. **But the DOR has never replied**, though the
+  email asked it to, so delivery is *very likely* rather than proven. **The next call settles it: ask
+  whether the POA is on file.** If it is not, the plan repeats. _(The file's own §5 rule applied to
+  itself.)_
 - [ ] **Which IRS document the DOR will actually accept.** It asked for **"a letter from the IRS stating how the company files its taxes"** and **named no form** _(Lilian, 2026-08-06)_. The firm's own reading is the **CP575** — which the firm has, and which Lilian calls "the SS-4" because the CP575 cites Form SS-4 on its face. **Confirm with the agency before sending; don't assume the CP575 satisfies it.**
 - [ ] **What the CP575 actually says** about the entity's filing requirement. Expected: disregarded. **Not yet read.**
 - [ ] **Whether a Form 2553 was ever filed and a CP261 issued**, and when — i.e. whether the CP575 still describes how the company files. The firm filed an **1120-S for 2025**, so the S-corp election exists somewhere. This decides whether **either** the closure **or** the date change is safe to pursue.
 - [ ] **Whether the DOR checks the federal return against the letter.** If it does, a disregarded-entity letter alongside a filed 1120-S is a problem; if it only wants the letter on file, less so. Worth asking directly.
 - [ ] **Whether a written effective-date request must go to `fdorspanish@floridarevenue.com` in Spanish, or whether an English channel exists.** ⚠️ **Bears on this now: `AcctMaint@floridarevenue.com` was discovered 2026-08-06 and is not a Spanish-language address** — so the agency plainly has more than one route in. Only matters if someone insists on a written request.
 - [ ] **Whether the signed POA actually covers changing the effective date on the RT account** — who signed it and when. _(Re-pointed 2026-08-06: the closure is dead; the POA is now the critical path for the date change.)_ The relationship ended in June 2026, so authority should be confirmed, not assumed — **and the client has still not been told.**
+  - ✅ **Partly answered 2026-08-13 — the form and its date.** It is the Florida **DR-835**, and the
+    document is dated **2026-05-27**, i.e. **signed while Tsminibears was still a client** and three
+    weeks before the Double record was archived. **Still open: who signed it, and whether a DR-835 of
+    that date and scope covers changing an account's effective date** — read the form's own scope
+    boxes rather than assuming. _(Gmail attachment "DR-835 - POA - 05.27.2026 - TSMINIBEARS.pdf".)_
 - [ ] Where the client's Google Drive folder is (§7).
 
 ## 7. Links
