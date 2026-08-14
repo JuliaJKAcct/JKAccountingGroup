@@ -381,6 +381,20 @@
                steps: steps.map(function(s){ return {id:s.id, ph:s.ph, t:s.t, d:s.d, done:false, date:'', note:''}; }),
                log: [{ t:nowStamp(), x:'Case opened.' }] };
     }
+    // Keep 11 originals and add the marker: the result is the 12 entries the button
+    // promises, and `dropped` counts from 11 or the permanent marker in the client's
+    // record names one fewer entry than it actually discarded.
+    // dryRun answers "how many would go?" without touching the case.
+    function trimLog(c, dryRun){
+      if (c.log.length <= 12) return 0;
+      var dropped = c.log.length - 11;
+      if (!dryRun){
+        c.log = c.log.slice(-11);
+        c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+      }
+      return dropped;
+    }
+
     function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); if (!quiet) paintBadge(); }
 
     // The reference prompt is asked from two places and must read identically in both.
@@ -679,7 +693,16 @@
         var ok = false;
         try { ok = document.execCommand('copy'); } catch(e){}
         if (navigator.clipboard && navigator.clipboard.writeText){
-          navigator.clipboard.writeText(txt).then(function(){ marked(); }, function(){ if(!ok) msg('Select the text above and copy it manually.'); });
+          // The rejection branch has to honour `ok`. In the published Hub the tool runs in
+          // a sandboxed iframe with no clipboard-write permission, so writeText REJECTS
+          // while the execCommand above has already copied the text successfully. Doing
+          // nothing there left no message and never revealed "I have pasted it into
+          // Double" — so the case's "not yet copied" flag could never be cleared, and the
+          // delete dialog then warned that copied work would be lost. The copy worked;
+          // only the second route failed.
+          navigator.clipboard.writeText(txt).then(marked, function(){
+            if (ok) marked(); else msg('Select the text above and copy it manually.');
+          });
         } else if (ok){ marked(); } else { msg('Select the text above and copy it manually.'); }
         // Do NOT re-render here: a full redraw would destroy the very block the user is
         // about to paste from, and they may want to copy it again. Update state in place.
@@ -712,20 +735,14 @@
           // marker anyway made an already-too-long note LONGER — while telling the user
           // their problem had been dealt with. The length is coming from the step notes
           // instead, so say that: it is the only thing they can actually shorten.
-          // 11, not 12: the marker below takes the twelfth slot, so eleven originals
-          // survive and `dropped` has to count from there or the note names one fewer
-          // entry than it actually discarded — a permanent line in the client's record
-          // saying the wrong number.
-          var dropped = c.log.length > 12 ? c.log.length - 11 : 0;
+          var dropped = trimLog(c, true);   // dry run: how many WOULD go
           if (!dropped){
             sayNote({ title: 'The log is already short',
               body: '<p>There are only ' + c.log.length + ' log entries, so trimming them frees nothing.</p>'
                   + '<p>The length is coming from the <b>per-step notes</b>. Shorten the longest of those, or paste this into Double in two parts — <b>Part 1</b> and <b>Part 2</b> — keeping the block at the very bottom of the last one.</p>' });
             return;
           }
-          // Keep 11 and add the marker: the result is the 12 entries the button promises.
-          c.log = c.log.slice(-11);
-          c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
+          trimLog(c);
           touch(c); renderOne(); showNote(c);
         });
       });
@@ -885,7 +902,7 @@
       start: start, render: renderCases, paintBadge: paintBadge, trackCurrent: trackCurrent,
       // Exposed for tools/selftest.mjs — pure, no DOM.
       _internals: { encodeCase: encodeCase, decodeCase: decodeCase, newCase: newCase,
-                    progress: progress, allSteps: ALLSTEPS, checkCoverage: checkCoverage,
+                    progress: progress, allSteps: ALLSTEPS, checkCoverage: checkCoverage, trimLog: trimLog,
                     caseNoteText: caseNoteText, validCase: validCase }
     };
   }

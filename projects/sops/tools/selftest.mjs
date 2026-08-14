@@ -23,6 +23,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadTool, loadCore, verifyTool, mix } from './verify.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const read = (p) => readFileSync(resolve(here, p), 'utf8');
@@ -37,68 +38,13 @@ function ok(name, cond, detail){
 function section(t){ console.log('\n' + t); }
 
 /* ---------------------------------------------------------------- load ---- */
-// case-core.js is written to run in a browser OR bare Node: it touches no DOM
-// until createTracker(cfg) is called, and only its DOM-free parts are used here.
-const sandbox = { console, setTimeout, Promise, Date, JSON, Math, Object, Array, String, URL };
-// btoa/atob exist in modern Node; the engine uses them for the pasteable block.
-sandbox.btoa = (s) => Buffer.from(s, 'binary').toString('base64');
-sandbox.atob = (s) => Buffer.from(s, 'base64').toString('binary');
-sandbox.unescape = globalThis.unescape;
-sandbox.escape = globalThis.escape;
-
-const core = read('case-core.js');
-// The file ends with `})(typeof window !== "undefined" ? window : this)`, so calling
-// it with `sandbox` as `this` installs JKCase on the sandbox.
-new Function(core).call(sandbox);
-const JKCase = sandbox.JKCase;
+// Loading and the two step-id invariants live in verify.mjs, shared with BOTH builders —
+// tools/build.mjs and knowledge-hub/build-hub.mjs. A test that reimplements the thing it
+// tests proves nothing: the log-trim check used to do exactly that, and `slice(-11)` was
+// changed to `slice(-30)` in review with all 84 checks still green.
+const { JKCase } = loadCore();
 ok('case-core.js exposes JKCase', !!JKCase && typeof JKCase.createTracker === 'function');
 
-/* Pull a tool's buildSteps + its tracker config out of its .src.html without a
-   browser: evaluate the whole <script>, stubbing only what the module touches at
-   load time. Anything that needs a real DOM is never reached, because the tool's
-   DOM wiring happens inside functions that this never calls — except the few
-   top-level lookups, which the stub below satisfies. */
-function loadTool(srcFile){
-  const html = read(srcFile);
-  const script = html.slice(html.indexOf('<script>') + 8, html.lastIndexOf('</script>'));
-  const withCore = script.replace('/*__CASE_CORE__*/', core);
-
-  const noop = () => {};
-  const el = new Proxy({}, {
-    get(t, k){
-      if (k === 'dataset' || k === 'style' || k === 'classList') return el;
-      if (k === 'hidden' || k === 'disabled' || k === 'checked') return false;
-      if (k === 'value' || k === 'textContent' || k === 'innerHTML' || k === 'className') return '';
-      return typeof k === 'string' ? (() => el) : undefined;
-    },
-    set(){ return true; }
-  });
-  const doc = {
-    getElementById: () => el, querySelector: () => el, querySelectorAll: () => [],
-    createElement: () => el, body: el, documentElement: el, addEventListener: noop,
-    contains: () => true, activeElement: null
-  };
-  const win = {
-    document: doc, addEventListener: noop, scrollTo: noop, console,
-    localStorage: { getItem: () => '[]', setItem: noop },
-    matchMedia: () => ({ matches: false }),
-    setTimeout, Promise, Date, JSON, Math, URL,
-    btoa: sandbox.btoa, atob: sandbox.atob, unescape: sandbox.unescape, escape: sandbox.escape,
-    navigator: {}
-  };
-  win.window = win;
-  // `captured` is filled by the shim below: we want the config the tool passes in.
-  const captured = {};
-  const shimmed = withCore.replace(
-    'var tracker = JKCase.createTracker({',
-    'var tracker = (globalThis.__capture = function(c){ __cfg.v = c; return JKCase.createTracker(c); })({'
-  );
-  const fn = new Function('window', 'document', 'localStorage', 'navigator', 'console',
-                          'setTimeout', 'requestAnimationFrame', '__cfg',
-                          'with (window) {\n' + shimmed + '\n}\nreturn { buildSteps: buildSteps, tracker: tracker };');
-  const out = fn(win, doc, win.localStorage, win.navigator, console, setTimeout, noop, captured);
-  return { cfg: captured.v, buildSteps: out.buildSteps, tracker: out.tracker };
-}
 
 /* ------------------------------------------------- per-tool step coverage -- */
 // The engine already console.errors on a gap; here it must FAIL the build, because
@@ -114,12 +60,10 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   if (!tool.cfg) continue;
 
   const t = tool.tracker._internals;
-  // The engine no longer runs this on page load — it is a build-time assertion, and this
-  // is the build. A gap here means a reopened case shows a bare id in the wrong phase.
-  const missingSteps = t.checkCoverage();
-  ok(label + ' every reachable step has a label',
-     missingSteps.length === 0,
-     missingSteps.length ? 'missing from the seed shapes: ' + missingSteps.join(', ') : '');
+  // Coverage AND one-wording-per-id, from the shared verifier the builders gate on.
+  const problems = verifyTool(label, file);
+  ok(label + ' every step keeps its label and its wording, whatever the answers',
+     problems.length === 0, problems.join(' · '));
 
   // Round-trip: a case written to a note and reopened is the same case.
   const steps = tool.buildSteps(tool.cfg.genericAnswers);
@@ -179,12 +123,19 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
     const many = t.newCase('Long log', steps);
     for (let k = 0; k < 30; k++) many.log.push({ t: '2026-08-14 10:0' + (k % 10), x: 'entry ' + k });
     const before = many.log.length;
-    const kept = many.log.slice(-11);
-    kept.push({ t: 'x', x: (before - 11) + ' older log entries trimmed so the note fits Double.' });
-    ok(label + ' trimming leaves 12 entries, not 13', kept.length === 12);
-    ok(label + ' and the marker names what was actually discarded',
-       kept[11].x.startsWith(String(before - 11) + ' '),
-       kept[11].x + ' (of ' + before + ')');
+    const wouldDrop = t.trimLog(many, true);          // dry run must not touch the case
+    ok(label + ' a dry run reports without mutating', many.log.length === before);
+    const dropped = t.trimLog(many);
+    ok(label + ' the dry run agreed with the real thing', dropped === wouldDrop);
+    ok(label + ' trimming leaves 12 entries, not 13', many.log.length === 12, String(many.log.length));
+    ok(label + ' the marker names what was actually discarded',
+       many.log[11].x.startsWith(String(before - 11) + ' '),
+       many.log[11].x + ' (of ' + before + ')');
+    // Below the threshold it must do nothing at all — pushing the marker anyway made an
+    // already-too-long note LONGER while reporting the problem solved.
+    const few = t.newCase('Short log', steps);
+    const n0 = few.log.length;
+    ok(label + ' a short log is left alone', t.trimLog(few) === 0 && few.log.length === n0);
   }
 
   // The note is the thing that has to fit in Double.
@@ -203,35 +154,6 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   globalThis.__seen.key[tool.cfg.storageKey] = 1;
   globalThis.__seen.tag[tool.cfg.codeTag] = 1;
 
-  // A step id must always carry the SAME title and description, whatever the answers.
-  // A saved case stores ids, not text, so on reopen the catalogue supplies whichever
-  // variant was generated first — and a step whose wording depends on the answers comes
-  // back stating the wrong thing (the wrong regulator, the wrong URL) on the one screen
-  // someone works from, which is then re-pasted into the client's Double note.
-  // Ids are checked by the engine's own sweep; this checks the TEXT behind them.
-  {
-    const V = tool.cfg.sweepValues || {}, ks = Object.keys(V);
-    const first = {}, clash = [];
-    const mix = (i, j) => {
-      let x = Math.imul(i + 1, 0x9E3779B1) ^ Math.imul(j + 1, 0x85EBCA77);
-      x ^= x >>> 15; x = Math.imul(x, 0x2C1B3C6D);
-      x ^= x >>> 12; x = Math.imul(x, 0x297A2D39);
-      x ^= x >>> 15; return x >>> 0;
-    };
-    for (let i = 0; i < 5000 && ks.length; i++){
-      const a = {};
-      ks.forEach((k, j) => { a[k] = V[k][mix(i, j) % V[k].length]; });
-      for (const s of tool.buildSteps(a)){
-        const text = s.t + ' ' + s.d;
-        if (first[s.id] === undefined) first[s.id] = text;
-        else if (first[s.id] !== text && clash.indexOf(s.id) === -1) clash.push(s.id);
-      }
-    }
-    ok(label + ' every step id has ONE wording, whatever the answers',
-       clash.length === 0,
-       clash.length ? 'answer-dependent wording on: ' + clash.join(', ')
-                      + ' — a reopened case would show the wrong variant' : '');
-  }
 }
 
 /* ------------------------------------------- BTR: the checklist must prune -- */

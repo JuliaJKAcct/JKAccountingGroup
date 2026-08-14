@@ -34,6 +34,8 @@ import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-i
 // Lilian's Notebook is embedded from ITS OWN generator, so the Hub can never show a stale
 // copy — same rule as the proposal tools (one source, no second copy to keep in sync).
 import { buildNotebookDoc } from '../lilian-notebook/render/build.mjs';
+// The same gate tools/build.mjs runs — see the block before the tool embeds below.
+import { verifyAll as verifyWalkthroughs } from '../sops/tools/verify.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
@@ -1068,6 +1070,19 @@ function inlineToolDoc(srcFile, title, opts){
     // step downstream had no reason to stop.
     process.exitCode = 1;
     return '';
+  }
+}
+// The published surface runs the SAME gate as tools/build.mjs. A step added without a
+// seed shape, or a step whose wording depends on the answers, ships silently and comes
+// back wrong when someone reopens the case from its Double note — and the Hub is where
+// the team actually opens these tools, so gating only the standalone build gated the copy
+// nobody uses. verify.mjs deliberately reads the .src.html, never the gitignored builds.
+{
+  const problems = verifyWalkthroughs(resolve(repoRoot, 'projects/sops/tools'));
+  if (problems.length){
+    problems.forEach((p) => console.error('✗ ' + p));
+    console.error('✗ refusing to embed a walkthrough that would mislabel a reopened case.');
+    process.exit(1);
   }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
@@ -2593,7 +2608,11 @@ console.error(`assets     → ${assetCheck.embedded} binaries embedded once, use
 // Without this line the ceiling is discovered at PUBLISH time, with the work already
 // finished and nothing staged to cut.
 const CEILING = 16 * 1024 * 1024;
-const biggest = Math.max(html.length, fragment.length);
+// Buffer.byteLength, not .length: a JS string's length counts UTF-16 code units, and this
+// page is full of em dashes, arrows and Cyrillic. index.html measured ~13,000 units short
+// of its real byte size — so the guard under-reported and could pass a page that then
+// fails at publish, which is the one moment it exists to prevent.
+const biggest = Math.max(Buffer.byteLength(html, 'utf8'), Buffer.byteLength(fragment, 'utf8'));
 const pct = (biggest / CEILING) * 100;
 if (biggest > CEILING) {
   console.error(`✗ OVER THE 16MB ARTIFACT CEILING (${pct.toFixed(0)}%) — this will not publish. Drop or shrink an embedded tool.`);
