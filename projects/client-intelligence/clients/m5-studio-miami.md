@@ -47,7 +47,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Responsible party for the EIN (SS-4 line 7a) | _(pending — see §5)_ |
 
 - **Double client:** _(pending — link)_
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(none — Lilian decides which matters get one)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(none — Lilian decides which matters get one)_
 
 ## 3. Systems & access
 
@@ -114,7 +114,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
-> `clientCard()` — see the [render README's parsing contract](../../.claude/skills/client-intelligence/render/README.md).
+> `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - ✅ **M5 Studio does NOT install anything — it designs and sells.** _(Lilian, 2026-08-14.)_
   That **rules out Construction** on SS-4 **line 16**, which was the big fork: applying
@@ -163,7 +163,7 @@ A running, dated record as we build this profile.
   off the table for line 16**; see §5 for what is left and the recommendation.
 - _(2026-08-14)_ — **The SS-4 carries a Third-Party Designee, and this filing set the firm's
   standing pattern.** Lilian reported that the block was completed with **her name**, the
-  **company's Pembroke Pines address**, her **direct work line** and the **JK Accounting
+  **firm's own Pembroke Pines address (never the client's)**, her **direct work line** and the **JK Accounting
   company fax**. She stated this is what the firm will do on **every** SS-4 from now on —
   the designee is **always her**, because she is the one who ends up calling the IRS and
   Julia very rarely does — so it went into
@@ -216,6 +216,12 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
+- 🔴 **The designee block's matching check has NOT been done for this client.** The
+  [EIN SOP §4D](../../sops/ein-application-irs.md) requires confirming that neither the
+  designee address nor the designee phone matches what is in the **taxpayer** lines — and
+  **this client's own address and phone are not recorded anywhere yet** (§4/§6), so the check
+  is impossible as things stand. If they collide, the IRS silently refuses the online and
+  phone routes and nobody is told why. **Check it before the SS-4 goes out.**
 - 🟡 **Confirm SS-4 line 16: Retail or Other?** The install question is **answered** (no — so not
   Construction). What is left is whether the money comes mainly from the **materials** (→ Retail,
   the recommendation) or the **design fees** (→ Other). For a new company this is an expectation,
@@ -236,7 +242,7 @@ reports for this client.
 - [ ] Entity type (LLC single/multi-member, or corporation) and whether an S-election is planned
 - [ ] Responsible party, and whether they hold an SSN, an ITIN, or neither
 - [ ] Mailing and physical addresses, with county
-- [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the company address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
+- [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the FIRM's address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
 - [ ] Does the client have a Double account? (link it here if so)
 - [ ] Which services the firm will provide beyond the set-up
 - [ ] Whether Florida sales-tax registration and a local Business Tax Receipt are needed
@@ -244,6 +250,6 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** _(pending — link)_
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(none)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(none)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** [`ein-application-irs.md`](../../sops/ein-application-irs.md) — the federal EIN procedure this client is currently going through

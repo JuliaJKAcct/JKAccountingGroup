@@ -461,17 +461,17 @@ reasonable-compensation work depends on):
 > *(Lilian's rule, recorded 2026-08-14 — firm policy, not an IRS requirement.)*
 > When JK prepares the SS-4, **we name ourselves as Third-Party Designee every time.**
 > It is what makes the IRS release the EIN to us instead of only mailing it to the
-> client, and without it we cannot even ask about the filing. **Fill these four fields
-> from the table below — do not improvise them per client**, because the two things that
+> client, and without it we cannot even ask about the filing. **Fill the four fields
+> below — do not improvise them per client**, because the two things that
 > go wrong (the matching trap, and a fax nobody watches) both come from improvising.
->
-> | Field | What goes in it |
-> |---|---|
-> | **Designee's name** | **Lilian Gonzalez** — **always her, not "whoever prepared the form."** She is the one who calls the IRS; Julia very rarely does _(Lilian, 2026-08-14)_. The name in this block is the name the IRS will speak to, so it should be the person who will actually be on the phone |
-> | **Address** | **11347 SW 13 Street, Pembroke Pines, FL 33025** — the **company's** address (public on Sunbiz). ⚠️ **Never write the client's address here** — see the matching trap below |
-> | **Telephone** | **(754) 286-1478** — Lilian's direct work line _(the number on her [email signature](../marketing/email-branding/signatures/lilian.html); if it ever changes, that file is the source of truth)_ |
-> | **Fax** | **(786) 866-6298** — the JK Accounting company fax |
->
+
+| Field | What goes in it |
+|---|---|
+| **Designee's name** | **Lilian Gonzalez** — **always her, not "whoever prepared the form."** She is the one who calls the IRS; Julia very rarely does *(Lilian, 2026-08-14)*. The name in this block is the name the IRS will speak to, so it should be the person who will actually be on the phone |
+| **Address** | **11347 SW 13 Street, Pembroke Pines, FL 33025** — the **firm's** address. ⚠️ **Never write the client's address here** — see the matching trap below |
+| **Telephone** | **(754) 286-1478** — Lilian's direct work line *(the number on her [email signature](../marketing/email-branding/signatures/lilian.html); if it ever changes, that file is the source of truth)* |
+| **Fax** | **(786) 866-6298** — the JK Accounting company fax |
+
 > **Why the fax is the field that actually matters on Path B.** The EIN comes back
 > **by the same method it was requested** — so on a faxed SS-4, the designee's fax is
 > where the number arrives. A wrong or unwatched fax number does not fail loudly; the
@@ -479,13 +479,12 @@ reasonable-compensation work depends on):
 >
 > ⓘ **The four values above are the firm's own details** — the full sheet, including who
 > may sign which authorization, is [`firm-identity.md`](./firm-identity.md).
-> **They are written here on purpose.**
-> The address is the company's registered address and is public on Sunbiz, so nothing is
-> exposed by having it in a procedure the team reads _(Lilian's call, 2026-08-14)_. Note
+> **They are written here on purpose:** Lilian's decision, 2026-08-14, on the basis that
+> the address is the firm's registered address and therefore public. Note
 > that the firm's **document letterhead** convention is different — proposals and
 > engagement letters carry only *"Pembroke Pines, Florida"* and the main line
-> **786-318-1505** (see [the proposal tool's methodology](../proposal-tool/docs/methodology.md)).
-> A government form needs the full street address and a working fax; a letterhead does not.
+> **786-318-1505**. A government form needs the full street address and a working fax;
+> a letterhead does not. **That difference is deliberate — never "fix" it.**
 
 If JK completes and submits the application **on the client's behalf**:
 
@@ -545,6 +544,13 @@ paper:
 > SS-4, Application for Employer Identification Number"** among the specific uses the IRS
 > does **not** record on the CAF — so it is filled the same shape as the 2848 below: the
 > SS-4 matter named, and the **line 4 specific-use box checked**.
+>
+> ⚠️ **But not yet — the 8821 has the same missing-TIN problem as the 2848.** It also
+> wants the taxpayer's identification number, so **neither form works while the EIN is
+> still pending.** "Form SS-4" appears on the 8821's specific-use list because an
+> **assigned** EIN's SS-4 record is still a matter you can be authorized to see — not
+> because an 8821 can chase an application that has no number yet. **That window belongs
+> to the designee block above, and to nothing else.**
 
 **The Form 2848 for an EIN matter is a *specific-use* POA, and it is not filled in the
 ordinary way.** The IRS instructions give the entry verbatim:
