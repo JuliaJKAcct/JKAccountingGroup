@@ -216,7 +216,7 @@
     // Cases deleted in this window. Consulted by saveCases() so the cross-window merge
     // cannot resurrect them. Session-scoped on purpose: once the delete is written to
     // disk the tombstone has done its job, and a reload starts clean.
-    var deletedKeys = {};
+    var deletedKeys = Object.create(null);
 
     var $ = function(id){ return document.getElementById(id); };
 
@@ -226,7 +226,10 @@
     // The self-check below fails loudly if a new step is ever added without a seed shape
     // that reaches it; that is exactly how `birthcert` went missing.
     var ALLSTEPS = (function(){
-      var seen = {}, out = [];
+      // Object.create(null): a step id of "toString" or "constructor" is inherited on a
+      // bare {}, so it read as already-seen, skipped the gate, and came back from a note
+      // with an undefined label written into the client's record.
+      var seen = Object.create(null), out = [];
       cfg.seeds.forEach(function(a){ cfg.buildSteps(a).forEach(function(s){ if(!seen[s.id]){ seen[s.id]=1; out.push(s); } }); });
       return out;
     })();
@@ -236,8 +239,8 @@
     // Hub was paying twice on every open for a check no user can act on. Kept here
     // rather than in the test so the rule travels with the engine that enforces it.
     function checkCoverage(){
-      var known = {}; ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
-      var missing = {}, V = cfg.sweepValues || {}, keys = Object.keys(V);
+      var known = Object.create(null); ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
+      var missing = Object.create(null), V = cfg.sweepValues || {}, keys = Object.keys(V);
       if (!keys.length) return [];
       for (var i = 0; i < 5000; i++){
         var a = {};
@@ -269,7 +272,7 @@
     // memory and wrote it wholesale. Merge against what is on disk at write time.
     function saveCases(){
       if (storageBroken) return;
-      var mine = {}; cases.forEach(function(c){ mine[caseKey(c)] = true; });
+      var mine = Object.create(null); cases.forEach(function(c){ mine[caseKey(c)] = true; });
       var merged = cases.slice();
       try {
         var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
@@ -367,7 +370,7 @@
       }
       if (!o) throw err || new Error('unrecognised case code');
       // Rebuild labels from the current step catalogue; a code carries ids, not text.
-      var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
+      var all = Object.create(null); ALLSTEPS.forEach(function(s){ all[s.id] = s; });
       return {
         ref: o.r, created: o.cr, updated: o.up, generic: !!o.g,
         // Kept exactly as typed, valid or not — the field said "kept as text", and a
@@ -640,7 +643,7 @@
       // from the note they paste into Double, with nothing to notice. It can arrive from
       // an older or newer version of a tool, or a hand-edited note. Show it, and say why
       // it is here rather than pretending it belongs to a phase we guessed.
-      var known = {}; PHASES.forEach(function(ph){ known[ph[0]] = 1; });
+      var known = Object.create(null); PHASES.forEach(function(ph){ known[ph[0]] = 1; });
       var orphans = c.steps.filter(function(s){ return !known[s.ph]; });
       if (orphans.length){
         h += '<div class="phase"><h4><span>Not in any phase of this tool</span><span>'
@@ -755,7 +758,7 @@
         });
         out.push('');
       });
-      var knownPh = {}; PHASES.forEach(function(ph){ knownPh[ph[0]] = 1; });
+      var knownPh = Object.create(null); PHASES.forEach(function(ph){ knownPh[ph[0]] = 1; });
       var loose = c.steps.filter(function(s){ return !knownPh[s.ph]; });
       if (loose.length){
         out.push('NOT IN ANY PHASE OF THIS TOOL (from an older or newer version)');
@@ -1017,7 +1020,13 @@
         // they are about to paste into Double, and they may want to copy it twice.
         var nb = $('noteBox');
         var busy = !$('caseImport').hidden || !!(nb && nb.offsetParent !== null);
-        if (!$('cases').hidden && !busy) renderCases();
+        // …unless the case on screen no longer EXISTS. Both delegated handlers early-return
+        // on a null openCase, so skipping the redraw here left a panel that still looked
+        // live while every tick, step note and link edit went nowhere. Losing an open note
+        // block is a nuisance; silently discarding someone's work is not a trade.
+        var vanished = !openCase && !!openRef;
+        if (!$('cases').hidden && (!busy || vanished)) renderCases();
+        if (vanished) warnStorage('The case open here was deleted in another window, so it has been closed. Anything ticked here since is gone — reopen it from its note in Double if you need it back.');
         paintBadge();
       });
       loadCases();

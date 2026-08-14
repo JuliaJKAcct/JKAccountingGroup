@@ -146,7 +146,7 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   // Two tools must never share a storage key or a code tag, or one would read the
   // other's cases back as its own and rebuild every label from the wrong catalogue.
   ok(label + ' declares a storage key and a code tag', !!tool.cfg.storageKey && !!tool.cfg.codeTag);
-  globalThis.__seen = globalThis.__seen || { key: {}, tag: {} };
+  globalThis.__seen = globalThis.__seen || { key: Object.create(null), tag: Object.create(null) };
   ok(label + ' storage key is unique across tools', !globalThis.__seen.key[tool.cfg.storageKey]);
   // A shared code tag is the subtler half: one tool would happily decode the other's
   // pasted note and rebuild every step label from the wrong catalogue.
@@ -194,6 +194,22 @@ section('BTR — the checklist prunes on what the client already holds, and on t
      heldCity.includes('cityheld') && heldCity.includes('ctyapply'), heldCity.join(','));
   ok('…and there is no city-review round for an application nobody filed',
      !['cityreview', 'citynotify', 'localreview'].some((k) => heldCity.includes(k)), heldCity.join(','));
+
+  // Intake and prep have to prune too. They used to ignore both axes, so a client already
+  // holding the city receipt was still told to choose a Business Classification and prepare
+  // city uploads — in the CASE, which is what gets pasted into Double without the sheet's
+  // caveat beside it.
+  ok('a first filing classifies and prepares every upload',
+     ['classify', 'entitypdf', 'locpdf', 'masterlease', 'licpdf'].every((k) => ids({ sublet: 'yes', regulator: 'dbpr', licence: 'yes' }).includes(k)));
+  ok('a client holding the city receipt is not asked to classify or prepare city uploads',
+     !['classify', 'locpdf', 'masterlease'].some((k) => heldCity.includes(k)), heldCity.join(','));
+  ok('…but still prepares entity proof, which the county filing needs',
+     heldCity.includes('entitypdf'));
+  const renewSteps = ids({ existing: 'both' });
+  ok('a renewal prepares no uploads at all',
+     !['entitypdf', 'locpdf', 'masterlease', 'licpdf'].some((k) => renewSteps.includes(k)), renewSteps.join(','));
+  ok('…and still renews both halves',
+     ['ctyrenew', 'cityrenew', 'cityrenewpay'].every((k) => renewSteps.includes(k)), renewSteps.join(','));
 
   const elsewhereRenew = ids({ city: 'broward', existing: 'both' });
   ok('a renewal OUTSIDE Hollywood renews rather than applying',

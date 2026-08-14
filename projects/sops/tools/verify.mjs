@@ -138,7 +138,9 @@ export function verifyTool(label, file, dir = here) {
   }
 
   const V = tool.cfg.sweepValues || {}, ks = Object.keys(V);
-  const first = {}, clash = [];
+  // Object.create(null), not {}: a step id of 'toString' or 'constructor' would be
+  // inherited and read as already-recorded, so a wording clash on it would go unseen.
+  const first = Object.create(null), clash = [];
   for (let i = 0; i < 5000 && ks.length; i++) {
     const a = {};
     ks.forEach((k, j) => { a[k] = V[k][mix(i, j) % V[k].length]; });

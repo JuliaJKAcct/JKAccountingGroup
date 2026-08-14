@@ -686,22 +686,33 @@ function buildSteps(a){
   function add(id, ph, t, d){ S.push({id:id, ph:ph, t:t, d:d||''}); }
 
   /* --- intake --- */
+  // What is actually being FILED. The county/city blocks below read these; intake and
+  // prep used to ignore them, so a client who already holds the city receipt was still
+  // told to choose a Business Classification and prepare city uploads, and a business
+  // outside Hollywood got Hollywood's Screen 1 — in the case, which is what gets pasted
+  // into Double, where the sheet's caveat is nowhere to be seen.
+  var haveCounty = a.existing === 'county' || a.existing === 'both';
+  var haveCity   = a.existing === 'city'   || a.existing === 'both';
+  var countyFiling = !haveCounty, cityFiling = !haveCity;
+  var anyFiling = countyFiling || cityFiling;
+
   add('activity','intake','Activity established in the client’s own words','It drives the classification, the fee and which regulator applies.');
   if (a.premises === 'resnolive'){
     add('planning','intake','Planning confirmation recorded','Who at City of Hollywood Planning said the parcel is permitted, and on what date.');
   } else if (home){
     add('homeocc','intake','Home-occupation standards explained to the client','§ 559.955 protects the use subject to parking, signage, no external evidence of the business, no heavy customer traffic.');
   }
-  add('firmemail','intake','Firm’s email agreed as the applicant and contact email','On BOTH applications. The client’s address makes the filing untrackable.');
-  add('classify','intake','Business Category and Classification chosen','City Screen 1 — this sets the fee. “Show All Classifications” lists every option.');
+  add('firmemail','intake','Firm’s email agreed as the applicant and contact email','On every application filed for this client. The client’s own address makes the filing untrackable by us.');
+  // Only when a city application is actually being made — it is the city that classifies.
+  if (cityFiling) add('classify','intake','Business Category and Classification chosen','It is what sets the city fee. Hollywood’s Screen 1 has a “Show All Classifications” button; another city will have its own list.');
 
   /* --- documents --- */
   if (a.sunbiz === 'no') add('sunbiz','prep','Entity registered on Sunbiz','Nothing else can proceed until the document exists.');
   if (a.dba === 'yes') add('dbareg','prep','Fictitious Name (DBA) registered and current','Fla. Stat. § 865.09 — it becomes the entity proof.');
   if (a.ein === 'no') add('ein','prep','Federal EIN obtained','Keeps the owner’s SSN off the city application.');
-  add('entitypdf','prep','Entity proof saved as a PDF','Articles, or the Fictitious Name Registration from Sunbiz.');
-  add('locpdf','prep','Proof of location saved as a PDF','PDF only, ≤ 10 MB. Lease, deed, tax bill, insurance certificate or utility bill.');
-  if (a.sublet === 'yes') add('masterlease','prep','Master lease obtained alongside the sublease','The city may demand a document between sub-tenant and owner that does not exist — send both to show the chain.');
+  if (anyFiling) add('entitypdf','prep','Entity proof saved as a PDF','Articles, or the Fictitious Name Registration from Sunbiz.');
+  if (cityFiling) add('locpdf','prep','Proof of location saved as a PDF','PDF only, ≤ 10 MB. Lease, deed, tax bill, insurance certificate or utility bill.');
+  if (cityFiling && a.sublet === 'yes') add('masterlease','prep','Master lease obtained alongside the sublease','The city may demand a document between sub-tenant and owner that does not exist — send both to show the chain.');
   // Says it WITHOUT naming the agency, on purpose. A saved case stores step ids, not
   // text, so on reopen decodeCase() rebuilds this line from the step catalogue — which
   // holds whichever variant a seed shape happened to generate first. Baking "DBPR" into
@@ -709,7 +720,7 @@ function buildSteps(a){
   // wrong fact on the one screen someone works from, which is then re-pasted into the
   // client's Double note. The agency is named on the preparation sheet, which is built
   // live from the answers and cannot go stale. Same trap as the ITIN tool's `coadocs`.
-  if (isReg) add('licpdf','prep','State licence saved as a PDF','Whichever regulator the walkthrough identified — it is named on the preparation sheet. The name and address on the licence must match the application exactly.');
+  if (isReg && anyFiling) add('licpdf','prep','State licence saved as a PDF','Whichever regulator the walkthrough identified — it is named on the preparation sheet. The name and address on the licence must match the application exactly.');
 
   /* --- county --- */
   // The checklist has to agree with the preparation sheet built from the SAME answers.
@@ -718,7 +729,6 @@ function buildSteps(a){
   // for an application nobody was going to make. Different situations get different step
   // IDS rather than different wording for one id — a saved case stores ids, so re-wording
   // an id is how a reopened case comes back stating the wrong thing.
-  var haveCounty = a.existing === 'county' || a.existing === 'both';
   if (a.existing === 'both'){
     add('ctyrenew','county','County account renewed for the new tax year','The county receipt is already held — this is a renewal, not a new BTExpress application.');
     add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
@@ -773,12 +783,13 @@ function buildSteps(a){
   }
 
   /* --- review --- */
-  var cityFiling = a.existing !== 'city';   // nothing to review when the receipt is already held
-  if (hollywoodCase && cityFiling){
+  // NOT the same test as `cityFiling` above: a renewal IS reviewed, a held receipt is not.
+  var cityReviewed = a.existing !== 'city';
+  if (hollywoodCase && cityReviewed){
     add('cityreview','review','City review passed, or its request answered','A personal email arrives only if something needs fixing.');
     add('citydiff','review','Any category-difference balance paid','Through the City’s own payment centre — a different channel from PayPal. Keep the Treasury reference number.');
     add('citynotify','review','Reviewer told the balance was paid','THE step people miss. The receipt is issued only after this reply.');
-  } else if (cityFiling){
+  } else if (cityReviewed){
     add('localreview','review','That city’s review passed, or its request answered','Ask how it confirms payment and issues the receipt — Hollywood does not issue until you reply to the reviewer, and another city may have its own such step.');
   }
 
