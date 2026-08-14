@@ -183,6 +183,44 @@ _(Lilian, 2026-08-11 — the catch a checklist never makes.)_
 
 ---
 
+## 10 · Ask the record before you infer — and read related records as a set
+
+**The firm keeps a structured answer to most "what is this client?" questions, and it is
+faster and better than reasoning from prose. Go there first.** In Double, the client's
+**custom properties** carry the shape of the engagement — `Account Type`, `Income Tax`, and
+above all **`Tax Return Type`, which names the form that client actually files.** Lilian
+maintained those column by column, client by client _(2026-08-13: "me tomé el trabajo de
+actualizarlas uno a uno, así que ahí dice el tax form que presentan cada uno")_. **A guess
+built from emails, folder names or a company's legal form is not evidence when a maintained
+field is one call away.**
+
+**The second half is what makes it work: read the RELATED records together, not one at a
+time.** These clients come in groups — a person and their companies — and a fact recorded on
+one member is often the answer for another. **An absence on one record can be the answer
+rather than a gap**, once you look at the record next to it.
+
+The worked example. **Aura Remodeling** carries `Account Type: Company`, `Income Tax: false`,
+and **no `Tax Return Type` at all**. Read alone that looks like missing data, and two separate
+sweeps filled the hole by inference — one concluding a two-owner LLC filing a partnership
+return, the other recording Schedule C activity on the owner. Both were written down, both
+contradicted each other, and the clash sat open for a fortnight. **Read as a pair it resolves
+immediately:** the owner, **Ihor Naum**, carries `Account Type: Individual`, `Income Tax:
+true`, **`Tax Return Type: 1040-SCH C`**. The company has no form because **it files nothing**;
+its activity is reported on his Schedule C. **The properties were right the whole time.**
+
+**The general form:** *is this already recorded somewhere maintained — on this record, or on
+the one it belongs to?* Ask that before constructing an answer. And when a field is empty,
+ask **what its emptiness means for this kind of record** before calling it a gap.
+
+⚠️ **The corollary, because it is what actually went wrong:** an inference and a maintained
+field can coexist in the repo for weeks without anyone noticing, because **git merges
+contradictory guidance without complaint**. Two files here even said in writing that one of
+the two readings had to be wrong — and that note alone changed nothing. **A contradiction
+someone has already written down is not a resolved contradiction; it is an open task.**
+
+_(Lilian, 2026-08-13, after settling the Aura structure and then telling the session where the
+answer had been all along. The property values above were verified live the same day.)_
+
 ## How these grow
 
 Same protocol as everything else — the [`organizer-review` skill](../../.claude/skills/organizer-review/) §6:

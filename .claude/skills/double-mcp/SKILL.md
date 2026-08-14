@@ -49,7 +49,7 @@ in the wrong plane.
 | Plane | What lives there | Tools |
 |---|---|---|
 | **1. Client record** | Name, `platform`, `archivedAt`, `deepLink`, phone, branch | `list_clients` · `get_client` |
-| **2. Custom properties** | The **firm's own columns** — Account Type, Tax Return Type, Organizer Status, Bookkeeping, Sales Tax, Payroll, EIN, Engagement Letter, Assigned Staff, and the tax-season four (Ext. Filed, Signature, Financials Ready, Invoice) | `get_property_columns` · `list_client_properties` · `upsert_client_properties` |
+| **2. Custom properties** | The **firm's own columns**, **maintained by Lilian client by client** — so `Tax Return Type` is the firm's answer to *which form does this client file*, and worth reading before inferring one _(2026-08-13; see [`method.md`](../../../projects/pre-return-review/method.md) rule 10 — the form sits on whoever FILES it, so a company that files nothing carries none)_. Account Type, Tax Return Type, Organizer Status, Bookkeeping, Sales Tax, Payroll, EIN, Engagement Letter, Assigned Staff, and the tax-season four (Ext. Filed, Signature, Financials Ready, Invoice) | `get_property_columns` · `list_client_properties` · `upsert_client_properties` |
 | **3. Tax projects** | One container per tax **year**, with its own `status`, `dueDate` and `filedAt`. **Read-only** — see below | `list_projects` · project-task tools |
 | **4. Organizers** | The client-facing questionnaire and its answers — its own entity, **not** the `Organizer Status` property | `list_organizers` · `get_organizer` · `get_organizer_responses` (§2.2) |
 | **5. File library** | Nested folders and documents, in two sources | `list_file_library` → `list_files`. Note `get_file` does **not** take a `list_files` id — it searches by `clientId` + **name** |

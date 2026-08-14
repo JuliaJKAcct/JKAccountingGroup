@@ -23,6 +23,13 @@ Read the project's own docs alongside this skill — they are the authority on c
 - [`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md) — the Saturday routine + full sweep method.
 - [`automation/sweep-state.md`](../../../projects/client-intelligence/automation/sweep-state.md) — the incremental ledger.
 
+> ⓘ **Before inferring a client's tax structure from prose, read Double's properties — and the
+> RELATED client's too.** `Tax Return Type` is maintained client by client and names the form each
+> one files; the form sits on **whoever files it**, so a company reported on an owner's return
+> correctly carries none. An empty field on a company is a claim that it does not file, not a gap.
+> The reasoning and the worked example are [`method.md`](../../../projects/pre-return-review/method.md)
+> rule 10 _(Lilian, 2026-08-13)_.
+
 ## The two rules that never bend
 
 1. **Two data homes.** The repo file holds **non-sensitive knowledge and links only**.

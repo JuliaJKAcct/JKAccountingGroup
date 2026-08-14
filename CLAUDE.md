@@ -240,7 +240,7 @@ in that folder.
   When a session **reviews, reconciles, or works out what to ask** — a client before their return, a
   bookkeeping cleanup, a matter with an agency, books that disagree with a bank —
   [`projects/pre-return-review/method.md`](./projects/pre-return-review/method.md) is the standing
-  guide, and it holds nine rules Lilian set while directing and correcting real work. The short form, because
+  guide, and it holds **ten** rules Lilian set while directing and correcting real work. The short form, because
   these are the ones a session gets wrong: **look before you ask** (a gap is not a finding until you
   have searched everywhere the firm keeps things — asking for what someone already sent is worse than
   not reviewing at all); **group by root cause** (one cause is one finding, however many questions it
@@ -251,8 +251,13 @@ in that folder.
   question, and we ask for **facts, not the family-law paperwork that proves them**, though ordinary
   working documents are still asked for by name); **where two records disagree, show the client
   both, then ask** (recite what they told us · name each record · ask openly · then narrow, one
-  question per block); and **when several small
-  anomalies move together, question the frame, not just the pieces.** The purpose behind all of it is
+  question per block); **when several small
+  anomalies move together, question the frame, not just the pieces**; and — the newest, and the one a session
+  reaches for most often — **ask the record before you infer, and read related records as a set**: the firm's
+  **Double custom properties are maintained client by client** and `Tax Return Type` names the form each one
+  actually files, so a guess from emails or a company's legal form is not evidence when a maintained field is
+  one call away. **The form sits on whoever FILES it**, so a company that files nothing correctly carries none —
+  read the owner's record before calling an empty field a gap. The purpose behind all of it is
   [`projects/pre-return-review/README.md`](./projects/pre-return-review/README.md).
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,

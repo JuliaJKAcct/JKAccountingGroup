@@ -170,10 +170,29 @@ covers two opposite situations, and guessing is dangerous in one direction: clas
 bookkeeping-only client as Sch C makes a session **silently drop a client that needs a return**,
 with no flag raised.
 
-There is a live example of why only a human can settle it: **Aura Remodeling** has
-`Income Tax = false` and no `Tax Return Type`, and is Schedule C — but that is known **only
-because Lilian said so**, not from anything in Double. When the two sufficient signals are absent,
-ask.
+✅ **BUT IT IS OFTEN DERIVABLE — READ THE OWNER'S RECORD, NOT JUST THE COMPANY'S.** _(Lilian,
+2026-08-13; property values verified live the same day.)_ **Lilian maintains these columns client
+by client**, so `Tax Return Type` names the form each client actually files — *"me tomé el trabajo
+de actualizarlas uno a uno"*. The catch is that **the form is recorded on whoever FILES it**, so a
+company that files nothing correctly carries none.
+
+**Aura Remodeling** is the worked example, and it reads as missing data only until you look next
+to it:
+
+| | `Account Type` | `Income Tax` | `Tax Return Type` |
+|---|---|---|---|
+| **Aura Remodeling** (706679) | Company | `false` | **absent** |
+| **Ihor Naum**, its owner (710637) | Individual | `true` | **`1040-SCH C`** |
+
+**The absence on the company IS the answer** — it files nothing; its activity is reported on the
+owner's Schedule C. Two sweeps that read Aura alone filled the hole by inference instead, one
+concluding a partnership return, and the contradiction sat open for a fortnight while the answer
+was one call away on the linked record.
+
+**So when a company's two sufficient signals are absent: pull the OWNER'S properties before
+concluding anything, and treat an empty `Tax Return Type` on a company as a claim that the company
+does not file — to be confirmed, not as a data gap.** If the owner's record does not settle it
+either, then ask.
 
 ⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
 about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
@@ -451,7 +470,8 @@ Decode in this order — the first match wins:
 > is **not sufficient** to conclude anything, because the same fingerprint covers two opposite
 > situations, and §6 says to *ask* when a tax project is present — which it always is here. The
 > file's own counterexample proves it: a client with `Income Tax = false` and no `Tax Return Type`
-> turned out to be **Schedule C**, known only because Lilian said so. On top of that, `Income Tax`
+> turned out to be **Schedule C** — reported on its **owner's** return, which is where §1b now says
+> to look before concluding anything. On top of that, `Income Tax`
 > is a **checkbox** (§2) — "unticked" and "never set" are indistinguishable, so a brand-new client
 > whose properties aren't filled in yet trips test 3 before test 5 can run. Getting this wrong
 > **silently drops a client who owes us a return**, which is the worst failure this report has.
