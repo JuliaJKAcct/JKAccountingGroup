@@ -491,6 +491,21 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
      publish came from merged `main`, don't blind-`force` — that would drop those unmerged
      Hub features; rebuild from `main`, and if something looks missing, reconcile the source
      first. (Following this flow — publish *after* merge — keeps the premise true.)
+   - 🔍 **When someone ASKS for the guarantee — "republish it, but I don't want to lose what I
+     changed in the other session" — reasoning is not the answer. PROVE IT, and it is cheap.**
+     _(Lilian asked exactly this on 2026-08-14.)_ The argument above is sound and it is still an
+     argument; what she wanted was certainty. **`WebFetch` the artifact URL** — it saves the full
+     HTML to disk and hands you the path — then diff the **visible text** of the live page against
+     your fresh build:
+     ```
+     strip <script>/<style> and data: URIs → text → set of non-blank lines → published − mine
+     ```
+     **An empty difference is the proof.** On 2026-08-14 the set difference was exactly **two
+     lines**, both render bugs the build had just fixed, against **304 lines added** — so the
+     answer was "nothing is lost, and here is the list of what changes". ⓘ **This does not
+     contradict the bullet above:** a routine redeploy still does not need it. Reach for it when
+     someone is worried, when the last publish might not have come from merged `main`, or when
+     another session has touched the link — and say the numbers, not the reasoning.
    - **Always pass `capabilities: {downloads: true}`** so the download/print buttons work
      (see the downloads section above), and keep the favicon stable (📚).
    - **Standing instruction — keep this ONE link current after every Hub change (Lilian, Jul 2026).**

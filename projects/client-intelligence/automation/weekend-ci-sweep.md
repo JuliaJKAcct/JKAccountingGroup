@@ -171,6 +171,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Viacheslav Honcharenko | 710665 |
 | Maria Contreras | 710646 |
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
+| Grigoriy & Margarita Melomed | 710633 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -266,6 +267,31 @@ rule, the seven new clients in scope, and the email becoming a record rather tha
 
 ## Routine prompt (paste into the web-UI routine)
 
+> ⓘ **The Routine is called "Client Intelligence — weekly sweep"** (`trig_015LaKrto6FDKyUwHmZywqjS`),
+> cron `0 7 * * 6` — **Saturdays 07:00 UTC**, i.e. 03:00 Eastern in summer. It runs in the
+> `env_01DoJ5xZw49eoRfUWThp8rKU` environment with the Double, Gmail, Calendar, Drive, QuickBooks,
+> Odoo and Ping connectors attached, and notifies by **push**.
+>
+> ✅ **The CLIENTS list below is NOT the only route, and this correction matters.** The prompt
+> **currently live in the web UI does not contain a client list at all** — it instructs the run to
+> read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
+> scope table above already reaches the live Routine without anyone re-pasting anything.** Keep the
+> inline list below in sync anyway, because a future paste would carry it. _(Established
+> 2026-08-14 by reading the live trigger, correcting a `FOLLOW-UPS` row that said the Routine was
+> running a hardcoded old list.)_
+>
+> ⚠️ **What IS stale in the live prompt, and what a re-paste actually fixes** — three rulings from
+> **2026-08-11** that never reached it: it still says **"Do NOT merge to main"** (Lilian removed the
+> approval gate for Client Intelligence, and three runs sat unseen on branches because of exactly
+> this line); it carries **no contradictions rule**; and its email is framed as a **request for
+> decisions** rather than a **record of what was saved**.
+>
+> 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
+> wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
+> placeholders and **the weekly email dies silently.** Copy the two real values out of the live
+> prompt first and paste them back in, or have Claude update the Routine in-session with
+> `update_trigger` (which takes a `prompt` parameter) so they never have to be retyped.
+
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
 
@@ -308,6 +334,14 @@ CLIENTS (name -> Double id):
 - CANDRAMAS LLC -> 706683
 - AXDIGITAL LLC -> 706681
 - Airtouch LLC -> 706671
+- VITALII IVANOV & TETIANA MOGYLOVA -> 710666
+- Igor Melomed & Yelena Lovkina -> 710635
+- R & G Friendly Inc -> 710589
+- Viacheslav Honcharenko -> 710665
+- Maria Contreras -> 710646
+- Iurii Iakovenko & Alina Yakovenko -> 710639
+- Grigoriy & Margarita Melomed -> 710633
+  (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:

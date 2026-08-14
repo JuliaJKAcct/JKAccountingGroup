@@ -243,7 +243,9 @@ in that folder.
   guide, and it holds **ten** rules Lilian set while directing and correcting real work. The short form, because
   these are the ones a session gets wrong: **look before you ask** (a gap is not a finding until you
   have searched everywhere the firm keeps things — asking for what someone already sent is worse than
-  not reviewing at all); **group by root cause** (one cause is one finding, however many questions it
+  not reviewing at all) — **and never write what you did not find as what is not there**: every
+  negative belongs to the search that produced it, so name the search instead of claiming the world
+  (rule 1b, added after a bounded sweep's silence was published as fact about seven clients); **group by root cause** (one cause is one finding, however many questions it
   generates); **show the trail** (what was reported, what is missing, what the prior period did);
   **a disappearance is a question, never a conclusion**; **derive what must exist from the client's
   structure**; **a client's mistake is work, not an alarm**; **the internal checklist is not the
