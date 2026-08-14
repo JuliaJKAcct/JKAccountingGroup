@@ -66,9 +66,10 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 "Applies? _(pending)_" or "Not applicable."
 
 ### Sales tax
-- **Applies?** _(pending)_ — ⚠️ **likely yes.** The business sells materials at retail in
-  Florida, which normally means a Florida sales & use tax registration with the DOR
-  once the EIN exists. Not yet confirmed or actioned.
+- **Applies?** _(pending)_
+- **Likely?** Probably yes — the business sells materials in Florida, which normally means a
+  Florida sales & use tax registration with the DOR once the EIN exists. **Not confirmed, not
+  actioned, and not a service we provide today.**
 - **Jurisdiction(s):** _(pending)_
 - **Frequency & due date:** _(pending)_
 - **Agency & portal:** _(pending)_
@@ -119,29 +120,31 @@ watch-outs, one-off arrangements, history that affects the work.
 - ✅ **M5 Studio does NOT install anything — it designs and sells.** _(Lilian, 2026-08-14.)_
   That **rules out Construction** on SS-4 **line 16**, which was the big fork: applying
   material on a customer's property would have made this a special trade contractor. What
-  remains is the narrower choice between **Retail** (*"selling merchandise to the general
-  public from a fixed store; by direct, mail-order, or electronic sales"*) and **Other**
-  (design services are not on the IRS's list), and it turns on **which side the money
-  actually comes from — the materials or the design fees.** For a company with no trading
-  history that is the **expectation**, not a measurement. **Recommended: Retail**, because
-  the materials are the part of this business the IRS list has a box for; switch to
-  **Other → "Interior design services"** if the design fees are the bulk. **Not yet
-  confirmed.**
+  remains turns on **two** questions, and the second one has not been asked yet.
+  **(1) Materials or design fees?** If the design fees are the bulk it is **Other →
+  "Interior design services"** (design is not on the IRS's list at all).
+  **(2) ⚠️ If it is the materials — WHO BUYS THEM?** **Retail** is defined as _"selling
+  merchandise to the **general public**"_; selling to **contractors, designers or trade
+  buyers** is **Wholesale–other**, a different box. A specialist-plaster studio can feel
+  retail and sell wholesale. For a company with no trading history both answers are an
+  **expectation**, not a measurement. **Do not file line 16 until question (2) is
+  answered** — see [EIN SOP §4F](../../sops/ein-application-irs.md).
 - **The SS-4 wording the firm settled on**, so the three lines tell one story:
   **line 10** (Started new business → type) = `Design services and retail of decorative wall
   materials` (short — the form's space is one small line); **line 17** (detail, an entry is
   required) = `Design services and retail sale of decorative wall plaster and related
-  materials`; **line 16** = **Retail** unless the design fees turn out to be the bulk (bullet above).
+  materials`; **line 16** = **still open** — Retail, Wholesale–other or Other, per the two
+  questions in the bullet above.
 - ⚠️ **The exact legal name on Sunbiz has never been written down here.** "M5 Studio Miami"
   is how the firm refers to it; the IRS name **must match Sunbiz character for character**
   (including `LLC` / `Inc.`), and a punctuation difference causes downstream trouble
   ([EIN SOP §6](../../sops/ein-application-irs.md)). Look it up on Sunbiz before filing.
 - **Calling the IRS about this EIN — the only authorization that works right now is the SS-4
-  designee block**, and it dies on assignment (*"terminates at the time the EIN is assigned and
-  released to the designee"*). ⚠️ **After that, do NOT reach for a Form 2848 in Lilian's name** —
-  a 2848 may only name someone *eligible to practice before the IRS*, which she is not; it would
+  designee block**, and it dies on assignment (_"terminates at the time the EIN is assigned and
+  released to the designee"_). ⚠️ **After that, do NOT reach for a Form 2848 in Lilian's name** —
+  a 2848 may only name someone _eligible to practice before the IRS_, which she is not; it would
   have to be **Julia (EA)**. For a call that only **asks** rather than argues, the form is a
-  **Form 8821**, which Lilian *can* be named on. **Neither works while the EIN is still pending**
+  **Form 8821**, which Lilian _can_ be named on. **Neither works while the EIN is still pending**
   — both want a TIN this entity does not have. Full rule in
   [`firm-identity.md` §4](../../sops/firm-identity.md).
 
@@ -152,11 +155,11 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - _(2026-08-14)_ — **File created.** Lilian was filling **Form SS-4** for this client and asked
-  what to put on **line 10** (Reason for applying → *Started new business (specify type)*).
+  what to put on **line 10** (Reason for applying → _Started new business (specify type)_).
   Read the current **Instructions for Form SS-4 (Rev. 12/2025)**: line 10 wants the **type of
-  business** in short form (*"If you check this box, enter the type of business being
-  started"*), while the long description belongs on **line 17** (*"describe the applicant's
-  principal line of business in more detail"*). Recommended line 10 = `Design services and
+  business** in short form (_"If you check this box, enter the type of business being
+  started"_), while the long description belongs on **line 17** (_"describe the applicant's
+  principal line of business in more detail"_). Recommended line 10 = `Design services and
   retail of decorative wall materials`, line 17 = the full agreed wording. **Line 16 left
   open** pending the install-or-not question in §5.
 - _(2026-08-14)_ — **Answered: M5 Studio does not install.** Lilian confirmed the company only
@@ -173,27 +176,27 @@ A running, dated record as we build this profile.
   application goes out on Path B, and the designee's authority **ends the moment the EIN is
   assigned**.
 - _(2026-08-14)_ — **Business-type wording carried over from an earlier session** in which
-  Lilian and a session worked out how to describe the business: *"Design services and retail
-  sale of decorative wall plaster and related materials."* ⚠️ **That session produced no
+  Lilian and a session worked out how to describe the business: _"Design services and retail
+  sale of decorative wall plaster and related materials."_ ⚠️ **That session produced no
   Client Intelligence file** — this is the first record of it, and the rest of what that
   session established (if anything) is not recoverable here. Recorded as far as it goes.
 - _(2026-08-14)_ — **Form 2848 / EIN research** (same session, asked before the client was
   named). Read the **Instructions for Form 2848 (Rev. 09/2021)** in full. Findings that apply
   to this client:
-  - **Line 5a is not where an EIN matter goes.** It only *modifies* the default acts
+  - **Line 5a is not where an EIN matter goes.** It only _modifies_ the default acts
     (Intermediate Service Provider access, substituting/adding a representative, disclosure to
     third parties, signing a return, "Other"). Calling and receiving information is already
-    granted by default — *"authorizes the listed representative(s) to inspect and/or receive
+    granted by default — _"authorizes the listed representative(s) to inspect and/or receive
     confidential tax information and to perform all acts … with respect to matters described
-    in the power of attorney."*
-  - **It goes on line 3 + the line 4 checkbox.** *"Applications for an EIN"* is on the
+    in the power of attorney."_
+  - **It goes on line 3 + the line 4 checkbox.** _"Applications for an EIN"_ is on the
     instructions' literal list of specific uses **not recorded on the CAF**, and the
     instructions give the example verbatim: `"EIN Application"` (Description of Matter),
     `"Form SS-4"` (Tax Form Number), `"Not Applicable"` (Year(s) or Period(s)).
-  - **Consequence:** *"If you check the box on line 4, mail or fax Form 2848 to the IRS office
-    handling the specific matter"* — it is not in the CAF, so it is paper presented to the EIN
-    unit, not something the phone line can look up. *(That an assistor will accept the fax
-    during the call is ordinary practice, not something the instructions state.)*
+  - **Consequence:** _"If you check the box on line 4, mail or fax Form 2848 to the IRS office
+    handling the specific matter"_ — it is not in the CAF, so it is paper presented to the EIN
+    unit, not something the phone line can look up. _(That an assistor will accept the fax
+    during the call is ordinary practice, not something the instructions state.)_
   - **The unresolved gap:** line 1 requires the taxpayer's identification number and this
     entity **has no EIN yet**. Searched the full Instructions for Form 2848, the Instructions
     for Form SS-4 and Pub. 947 — **none of the three says what to enter when no number has
@@ -202,14 +205,14 @@ A running, dated record as we build this profile.
     EIN-application matter with ordinary tax matters on one 2848 leaves **none** of it recorded
     on the CAF. A specific-use one for the SS-4 matter, and a normal one (with the EIN in line 1,
     line 4 unchecked) once the number exists.
-  - ⚠️ **Corrected later the same day, after reading WHO may be named on one.** Form 2848: *"You
-    may only name individuals who are eligible to practice before the IRS as representatives"* —
+  - ⚠️ **Corrected later the same day, after reading WHO may be named on one.** Form 2848: _"You
+    may only name individuals who are eligible to practice before the IRS as representatives"_ —
     attorney, CPA, enrolled agent, an officer or employee **of the taxpayer**, a family member,
     and a few narrow others. **Lilian is none of those, so a 2848 in her name is invalid**, and
     she is the one who makes these calls. For **information** — which is what a status call is —
     the form is **Form 8821**, which has no such restriction and covers Form SS-4 matters
     explicitly. To **act**, it is a 2848 naming **Julia (EA)**. The bullets above describe how a
-    2848 is *filled in*, not who may sign it. See
+    2848 is _filled in_, not who may sign it. See
     [`firm-identity.md` §4](../../sops/firm-identity.md).
 
 ### Tax year YYYY — the review
@@ -232,15 +235,15 @@ it here; these never go into the client SOP.
   **this client's own address and phone are not recorded anywhere yet** (§4/§6), so the check
   is impossible as things stand. If they collide, the IRS silently refuses the online and
   phone routes and nobody is told why. **Check it before the SS-4 goes out.**
-- 🟡 **Confirm SS-4 line 16: Retail or Other?** The install question is **answered** (no — so not
-  Construction). What is left is whether the money comes mainly from the **materials** (→ Retail,
-  the recommendation) or the **design fees** (→ Other). For a new company this is an expectation,
-  not a measurement.
+- 🟡 **Confirm SS-4 line 16 — TWO questions, one of them never asked.** The install question is
+  answered (no → not Construction). Left: **(1)** materials or design fees (→ Other if design);
+  **(2)** if materials, **who buys them** — the general public (**Retail**) or contractors and
+  trade buyers (**Wholesale–other**). Nobody has asked (2).
 - **Confirm the exact legal name and formation date on Sunbiz** before the SS-4 goes out.
-- **Decide the EIN path** — the responsible party's SSN/ITIN status decides online vs. fax
-  ([EIN SOP §1](../../sops/ein-application-irs.md)); not recorded here yet.
-- **Record the EIN here (hyphenated) and save the confirmation letter** in the client's system
-  once assigned — the CP 575 equivalent is hard to replace.
+- **Decide the EIN path, then protect the result** — the responsible party's SSN/ITIN status
+  decides online vs. fax ([EIN SOP §1](../../sops/ein-application-irs.md)), and is not recorded
+  here yet. **The moment the EIN is assigned: write it here hyphenated and save the confirmation
+  letter** in the client's system — the CP 575 equivalent is only replaceable by a phone-only 147C.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

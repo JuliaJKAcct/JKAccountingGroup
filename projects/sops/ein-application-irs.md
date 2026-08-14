@@ -348,7 +348,9 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **17** | Principal line of merchandise/services — free text describing what the company actually does, in more detail than 16. *"**An entry is required.**"* e.g. checked Construction on 16 → *"General contractor for residential buildings"* on 17. **This is where the full description goes**, not line 10 (**§4F**) |
 | **18** | Has this entity ever applied for an EIN before? (No, for a new entity). If yes, write the previous EIN |
 | **Third-Party Designee** | If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the **client signs** the form (see §4D) |
-| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — that's how the EIN comes back |
+| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — that is how the EIN comes back **when no
+Third-Party Designee is named**; when one is (which for this firm is always — §4D), it goes to
+the **designee's** fax instead, and the paper notice is mailed to the taxpayer |
 
 ### Where to send it
 
@@ -377,8 +379,10 @@ one of the 50 states or DC** — ✅ **this is the normal JK case**: a Florida
 company **operating from its Florida address**, whatever the owner's nationality
 or residence:
 
-- **Fax:** **855-641-6935** — include your **return fax number** and the IRS
-  faxes the EIN back, generally within **~4 business days**.
+- **Fax:** **855-641-6935** — include a **return fax number** and the IRS
+  faxes the EIN back, generally within **~4 business days**. ⚠️ **Which fax it goes to depends
+  on the designee block:** with a Third-Party Designee named (always, for us) it goes to the
+  **designee's** fax — see §4D.
 - **Mail:** Internal Revenue Service, **Attn: EIN Operation, Cincinnati, OH
   45999** — allow **~4–5 weeks**.
 - **Phone: not available.** The 267-941-1099 line is for applicants with **no** US
@@ -677,8 +681,20 @@ up described three different ways on one form.
 two things.** There is no "mostly X, some Y" on this form. Decide it on **where the
 revenue actually comes from**, not on what the business calls itself:
 
-**Ask two questions, not one.** *Who buys it?* comes first, because the SS-4 has
-**four** goods boxes, not one:
+**Two questions, in this order** — the first can override the second entirely:
+
+**Q1 — Do they DO something to it? Make it, or put it on the customer's wall?**
+
+- ⚠️ **They apply / install it on the customer's property → Construction**, even if they
+  sell the materials too. The instructions say construction *"also includes special trade
+  contractors"*, and a wall-finishing or installation trade is one. **Ask this before
+  anything else** — nothing on the form prompts it, the client says "we sell plaster", and
+  nobody asks who puts it on the wall.
+- ⚠️ **They MAKE what they sell → Manufacturing** (*"the mechanical, physical, or chemical
+  transformation of materials … into new products"*, assembly included). A company that
+  blends or produces its own material is a manufacturer that also sells, not a seller.
+
+**Q2 — If neither: who buys it?** Because the SS-4 has **three** selling boxes, not one:
 
 - **The general public** — a store, direct, mail-order, online → **Retail** (*"selling
   merchandise to the general public from a fixed store; by direct, mail-order, or
@@ -691,14 +707,8 @@ revenue actually comes from**, not on what the business calls itself:
   wholesale.
 - **Arranging a sale of goods they never own**, or buying on commission →
   **Wholesale–agent/broker**.
-- **A service the IRS's list doesn't name** — design, consulting, most professional
-  work → **Other**, with the activity written in.
-- ⚠️ **They also APPLY / INSTALL it on the client's property → Construction**, even if
-  they sell the materials too. The instructions are explicit that construction *"also
-  includes special trade contractors"*, and a wall-finishing or installation trade is
-  one. **This is the question to ask the client before touching line 16**, and it is
-  easy to miss because nothing on the form prompts it — the client says "we sell
-  plaster" and nobody asks who puts it on the wall.
+- **Nobody buys goods at all — it is a service** the IRS's list doesn't name (design,
+  consulting, most professional work) → **Other**, with the activity written in.
 
 **Why it is worth getting right rather than guessing:** line 16 establishes the
 activity on the IRS's record of the account. It is not a cosmetic field.
@@ -837,7 +847,10 @@ Business details
   → write them in the order 17 → 10 → 16 (§4F):
 - Full description (line 17, free text — write this FIRST):
 - Type of business (line 10, SHORT — compressed from line 17):
-- Does the client INSTALL / apply what they sell on the customer's property?  ☐ No  ☐ Yes → line 16 is Construction (§4F)
+- Q1 — do they DO something to it?  ☐ Install/apply it on the customer's property → Construction
+       ☐ Make/produce it themselves → Manufacturing   ☐ Neither → go to Q2   (§4F)
+- Q2 — who buys it?  ☐ The general public → Retail   ☐ Other businesses / contractors / trade → Wholesale–other
+       ☐ They arrange sales of goods they never own → Wholesale–agent/broker   ☐ It's a service → Other (§4F)
 - Principal activity (line 16 — ONE checkbox, chosen from the description above):
 - Employees expected next 12 months  ☐ NO — the standing answer: "-0-" / "No" (§4E)
       ☐ YES — payroll starts now (say why: ____________)  →  Agricultural: ___  Household: ___  Other: ___
@@ -854,8 +867,10 @@ Filing
       ☐ Phone: (754) 286-1478   ☐ Fax: (786) 866-6298
       ⚠️ TWO fax fields on this sheet — they are not the same one:
          • THIS one (designee) is where the EIN arrives WHEN a designee is named — which for us is always
-         • the "Return FAX number" above, in the applicant lines, is the client's, and is where it
-           would arrive if no designee were named. Do NOT put the firm's fax there (matching trap, §4D)
+         • the "Return FAX number" above, in the applicant lines, is the CLIENT's — where it would
+           arrive if no designee were named. Keep the firm's fax out of the applicant lines: not
+           because of the matching trap (that is address-or-telephone only), but because the two
+           fields answer different questions and duplicating ours makes the sheet unreadable
       ☐ Checked that neither the address NOR the phone matches what's in the taxpayer lines
 - Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company operating from its FL address = A; see §3)  ☐ B — entity has none
 - Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B, and NOT a US-territory entity)
