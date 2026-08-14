@@ -573,12 +573,18 @@ function buildSheet(){
   h += sec('What it costs — two governments, two fees');
   h += '<div class="flag warn"><span class="fl">Neither payment covers the other</span>Two Business Tax Receipts from <b>two different governments</b>, each charging its own fee. To be fully covered the client makes <b>two separate payments in two separate systems</b>.</div>';
   h += '<dl class="kv" style="margin-top:14px">';
-  h += '<dt>City of Hollywood</dt><dd>'+(haveCity && !renewal
-        ? 'Nothing now — the receipt is <b>already held</b>, so there is no $25 application fee this time. It falls due again at the <b>Sept 30 renewal</b>.'
-        : hollywood
-          ? (renewal ? 'The <b>renewal</b> amount for the new tax year — the $25 application fee is charged on a first filing, not a renewal.'
-                     : '<b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.')
-          : '<b>That city’s own fee schedule</b> — the $25 + classification figures are Hollywood’s and do not carry over. Get the amount from the city itself.')+'</dd>';
+  // The city label AND the amount both follow the city. Testing `haveCity` first made the
+  // "that city's own fee schedule" branch unreachable, so a Broward-but-not-Hollywood
+  // business already holding its receipt was told about Hollywood's $25 fee under a
+  // "City of Hollywood" label — while buildSteps() correctly emitted the neutral step.
+  h += '<dt>'+(hollywood ? 'City of Hollywood' : 'The city’s own receipt')+'</dt><dd>'+(!hollywood
+        ? (haveCity && !renewal
+            ? 'Nothing now — that city’s receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>, at <b>that city’s</b> rate.'
+            : '<b>That city’s own fee schedule</b> — the $25 + classification figures below are Hollywood’s and do not carry over. Get the amount from the city itself.')
+        : haveCity && !renewal
+          ? 'Nothing now — the receipt is <b>already held</b>, so there is no $25 application fee this time. It falls due again at the <b>Sept 30 renewal</b>.'
+          : renewal ? 'The <b>renewal</b> amount for the new tax year — the $25 application fee is charged on a first filing, not a renewal.'
+                    : '<b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.')+'</dd>';
   h += '<dt>Broward County</dt><dd>'+(haveCounty && !renewal
         ? 'Nothing now — the county receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>.'
         : 'A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.')+'</dd>';

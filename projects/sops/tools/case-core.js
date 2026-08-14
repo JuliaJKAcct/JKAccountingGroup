@@ -421,6 +421,13 @@
       imp.hidden = true;
       if (openCase){ list.hidden = true; one.hidden = false; renderOne(); return; }
       list.hidden = false; one.hidden = true;
+      // Drop the note block when leaving a case. Nothing used to remove it — renderCases()
+      // only hides #caseOne — so after one "Copy the case note for Double" followed by
+      // "← All cases", the storage guard below saw it forever and cross-window refresh of
+      // the LIST was dead for the rest of the session: the badge counted cases from
+      // another tab while the visible list went stale, deleted cases stayed clickable and
+      // new ones never appeared.
+      var stale = $('noteBox'); if (stale) stale.remove();
 
       var dirty = cases.filter(function(c){ return c.dirty; }).length;
       var h = '<div class="cbar">'
@@ -958,7 +965,8 @@
         // Do not redraw over anything the user is mid-way through. The import panel is
         // one; the open "Copy the case note" block is the other — it is the very text
         // they are about to paste into Double, and they may want to copy it twice.
-        var busy = !$('caseImport').hidden || !!$('noteBox');
+        var nb = $('noteBox');
+        var busy = !$('caseImport').hidden || !!(nb && nb.offsetParent !== null);
         if (!$('cases').hidden && !busy) renderCases();
         paintBadge();
       });
