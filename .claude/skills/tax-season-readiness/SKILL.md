@@ -194,6 +194,22 @@ concluding anything, and treat an empty `Tax Return Type` on a company as a clai
 does not file — to be confirmed, not as a data gap.** If the owner's record does not settle it
 either, then ask.
 
+🛑 **The confirmation is the whole rule — an empty field is only a claim when the column has been
+MAINTAINED for that client.** Lilian filled these in one by one, but *when* she got to a given
+client is not recorded anywhere, so the same emptiness that means "files nothing" on Aura means
+"nobody has filled this in yet" on a client onboarded last month. **Three cases must never be
+closed on the absence alone**, because each ends in the failure this report fears most —
+**silently dropping a client who owes a return**:
+> - the client is **new** and its properties have never been filled in (the owner's record will
+>   usually be just as empty — that emptiness is not a second confirmation, it is the same gap
+>   twice);
+> - the company has **no owner in Double** to read across to; or
+> - the owner's record is filled in but names a form that **cannot absorb the company's activity**
+>   (a plain `1040` with no Schedule C, say).
+>
+> In all three, the answer is **ask** — and the pair that *does* resolve is the specific shape
+> proved here: the company empty, and the owner carrying a form that accounts for it.
+
 ⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
 about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
 next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a

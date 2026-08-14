@@ -212,6 +212,13 @@ its activity is reported on his Schedule C. **The properties were right the whol
 the one it belongs to?* Ask that before constructing an answer. And when a field is empty,
 ask **what its emptiness means for this kind of record** before calling it a gap.
 
+**But read an absence only where the record is actually maintained**, and that has to be
+established, not assumed: on a client nobody has filled in yet, the same emptiness means
+"unknown", and the related record is usually just as empty — which is the same gap twice, not
+a confirmation. **The pair only resolves when the neighbouring record carries something that
+accounts for the absence.** Otherwise the absence is a question, and rule 1 applies to it like
+any other.
+
 ⚠️ **The corollary, because it is what actually went wrong:** an inference and a maintained
 field can coexist in the repo for weeks without anyone noticing, because **git merges
 contradictory guidance without complaint**. Two files here even said in writing that one of

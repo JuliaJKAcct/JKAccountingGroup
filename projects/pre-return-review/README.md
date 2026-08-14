@@ -140,7 +140,7 @@ already *answered* unwritable.
 - **Improving it:** that skill's §6 is the rule-capture protocol — where a new rule goes and
   what provenance it must carry.
 - **⚠️ It is not validated yet.** Everything here comes from **one client and one run**. Whether
-  the nine method rules fire on work that is not organizer-shaped is still open —
+  the method rules fire on work that is not organizer-shaped is still open —
   [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 27.
 - **Calibrating it:** Lilian's method — **run it cold, correct only at the end.** Correcting
   mid-flight teaches the session, not the file. What it misses is the rule that is missing.
