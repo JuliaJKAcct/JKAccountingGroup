@@ -1,6 +1,6 @@
 # SETATECH USA, INC.
 
-> **Status:** ⚠️ **Archived in Double — but not quiet** · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** ⚠️ **Archived in Double — but operating** · **Owner:** Firm · **Last updated:** 2026-08-14
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,23 +24,21 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NEVER FULLY SWEPT — this file starts from a narrow base.** Created **2026-08-14** from
-> the migrated TaxDome notes plus an incremental pass from the **2026-08-08** baseline forward,
-> on Lilian's instruction not to re-read history already captured. **No full historical sweep of
-> Gmail, Drive, Ping or Double has ever run for this client.** A gap here means *not yet looked
-> at*, not *nothing there*. The catch-up is recorded in
-> [`sweep-state.md`](../automation/sweep-state.md).
+> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
+> **2026-07 → 2026-08** (a targeted catch-up after the first version read one day of a five-week
+> pattern as a new emergency). Ping, Drive and everything before July 2026 are **still unswept**.
+> The catch-up is recorded in [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 
 - **Business name:** SETATECH USA, INC.
-- **Entity type:** Corporation (Inc) — ⚠️ **federal tax classification NOT RECORDED** (§5). Double has **no `Tax Return Type`** for this client.
+- **Entity type:** Corporation (Inc) — ⚠️ **federal tax classification NOT RECORDED.** Double has **no `Tax Return Type`** for this client while `Income Tax = true` (§4)
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_ — the client's own domain is `setatech.global`
+- **Industry / what they do:** _(pending)_ — the client's own domain is `setatech.global`; it takes **card payments through QuickBooks** at a scale that had its processing limit raised in July 2026
 - **Primary language:** _(pending)_
-- **Our engagement (services we provide):** **Bookkeeping monthly · Sales tax quarterly · Payroll monthly · Income tax yes** _(Double properties)_ — a full-service engagement, which is what makes the archive (§5) hard to read
+- **Our engagement (services we provide):** on Double — **Bookkeeping monthly · Sales tax quarterly · Payroll monthly · Income tax yes**. ⚠️ **What is still actually being done is the open question** (§5)
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-14)_. Payroll runs on **Gusto** (§3).
+- **Accounting platform:** ⚠️ **Double says `platform: none`, and that is WRONG** — a **QuickBooks Online company exists** for this client (§3). Payroll and contractor payments run on **Gusto**.
 
 ## 2. Contacts
 
@@ -50,36 +48,39 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Director of Sales — **Angela Saturno** | Double client / Drive _(Lilian, 2025-03-07)_ |
-| Client-side contact on the Gusto alerts | a `@setatech.global` address, cc'd with the firm _(Gmail, 2026-08-13)_ |
-| Assigned staff | 🔴 **Julia Kononova** _(Double)_ — the only one of these seven clients not assigned to Lilian |
+| Client-side principal — the Gusto and QuickBooks account holder | Double client / Gusto |
+| Director of Sales | Double client / Drive _(recorded in the migrated note, 2025-03-07)_ |
+| **An outside CPA firm**, given Gusto admin and QuickBooks accountant access in Aug 2026 — **then removed from Gusto two days later** | Gmail (§6); the firm sent the QuickBooks invitation itself |
+| Assigned staff | 🔴 **Julia Kononova** _(Double)_ — the only one of the seven backfilled clients not assigned to Lilian |
 
 - **Double client:** [app.doublehq.com/close?cid=706706](https://app.doublehq.com/close?cid=706706)
-- **Double case note:** none yet — ⚠️ **the Gusto payroll block may become one** (§6)
+- **Double case note:** none yet — ⚠️ **a handover to another firm would deserve one**, if that is what this is (§5)
 
 ## 3. Systems & access
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| **Gusto** | Payroll + contractor payments | _(pending — Drive link)_ | 🔴 **Payroll is BLOCKED** on an outstanding balance (§5) |
+| **Gusto** | Payroll + automated contractor payments | 🔒 Drive vault — **never here** | ⚠️ **Blocked on an outstanding balance since ~2026-07-24** (§5) |
+| **QuickBooks Online** | The books, and **card payment processing** | 🔒 Drive vault | ⚠️ **Exists, though Double records `platform: none`.** An outside accountant was invited in Aug 2026 |
+| Bank | Payroll debits | 🔒 Drive vault | A bank account failed verification in early Aug 2026 and was re-verified (§6) |
 | Double client portal | Document exchange | n/a | Client record **archived** 2026-07-22 |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** **Yes — quarterly** _(Double)_. ⚠️ Whether it is still being filed after the archive is unknown.
+- **Applies?** **Quarterly** _(Double)_. ⚠️ Whether it is still being filed after the archive is unknown.
 
 ### Payroll
-- **Applies?** **Yes — monthly** _(Double)_, run through **Gusto**, including **contractor payments**.
-- 🔴 **Currently blocked** — see §5.
+- **Applies?** **Monthly** _(Double)_, on **Gusto**, including **automated contractor payments**.
+- ⚠️ **Currently blocked** on an outstanding Gusto balance (§5). ✅ **The team WAS paid** — it is the firm's *debit* that bounced, not the payroll.
 
 ### Bookkeeping & monthly close
-- **Applies?** **Yes — monthly** _(Double)_. No QuickBooks connected, so the books run somewhere else — **establish where**.
+- **Applies?** **Monthly** _(Double)_. The books are in **QuickBooks Online**, which Double does not show as connected — **relink or correct the record.**
 
 ### Income tax
 - **Applies?** **Yes** _(Double `Income Tax = true`)_
-- **Return type(s) & deadlines:** ⚠️ **NOT RECORDED — and this one is a real gap, not the "files nothing" shape.** Double has **no `Tax Return Type`** for this company while `Income Tax = true`, i.e. *we do prepare their income tax* but no form is named. Per [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) §1b that combination goes to **review**, never to a conclusion. **Ask Lilian which form this company files.**
-- **Current status:** Double's 2025 tax project reads **`filed`** — but **`filedAt` is empty**. Those two disagree, and the skill's rule is to read both and trust neither alone. **Confirm the 2025 return was actually filed, and when.**
+- **Return type(s) & deadlines:** ⚠️ **NOT RECORDED — and this is a genuine gap, not the "files nothing" pattern.** Double has **no `Tax Return Type`** while `Income Tax = true`. Per [`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) §1b that combination **goes to review, never to a conclusion**: an unticked-or-absent field is corroboration at most, and here the income-tax service is *on*, so nothing points at "no return". **There is also no owner record in Double to read across to**, which §1b makes the ❌ case outright. **Ask Lilian or Julia which form this company files.**
+- **Current status:** Double's 2025 tax project reads **`filed`** with **`filedAt` empty**. The two disagree; read both, trust neither alone. **Confirm the 2025 return was filed, and when.**
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
@@ -94,24 +95,30 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **ARCHIVED IN DOUBLE ON 2026-07-22 — AND ITS PAYROLL IS STILL RUNNING, AND CURRENTLY BLOCKED.** On **2026-08-13**, three weeks after the archive, Gusto emailed that **the company's payroll is blocked over an outstanding balance on the Gusto account**, and separately that **an automated contractor payment could not be processed**. The alert went to the client **and to four people at the firm** (Julia, Lilian, Liudmyla, Maria). **So either the archive is wrong, or the firm is still on a live payroll it has stopped tracking.** Settle which before anything else — a blocked payroll means employees and contractors are not being paid.
-- 🔴 **NO `Tax Return Type` IS RECORDED, AND `Income Tax = true`.** That combination is **not** the "this company files nothing" pattern (which needs the income-tax service to be off and the form to sit on an owner). It reads as *we prepare their income tax and nobody wrote down which form* — a genuine gap. **Ask; do not infer.** _(This is the first live case since the rule was written on 2026-08-13 — and it is the counter-case, not the Aura case.)_
-- ⚠️ **The 2025 tax project says `filed` but carries no `filedAt` date.** Do not treat 2025 as a closed year on the strength of the status alone.
-- **The engagement on file is full-service** — monthly bookkeeping, quarterly sales tax, monthly payroll and income tax — which is a lot of recurring obligation to have gone quiet. **If the client really has left, several filings may still be owed for the stub period**; if it has not, four services are unattended.
-- **Angela Saturno is the Director of Sales** _(Lilian, 2025-03-07 — migrated TaxDome note)_. Contact details in Double/Drive.
-- **This is the only one of the seven backfilled clients assigned to Julia** rather than Lilian, which matters for who to ask about it.
+- 🔴 **ARCHIVED IN DOUBLE ON 2026-07-22 WHILE STILL OPERATING — AND THE MOST LIKELY READING IS A HANDOVER TO ANOTHER FIRM.** Two days after the archive, Gusto began sending "payroll is blocked" reminders (07-24, 07-25, 07-26, 08-04, 08-13) to the client **and to four people here**. Then on **2026-08-03 the firm itself invited an outside CPA firm into this client's QuickBooks as accountant**, and the same person was made a **Gusto admin** — and **removed from Gusto on 08-05**. **Nobody wrote down what the archive meant.** Settle it: is the engagement over, transferring, or neither — and if it is over, take the firm off Gusto's notifications and close out the recurring filings.
+- ⚠️ **THE PAYROLL BLOCK IS NOT AN EMERGENCY, AND THE FIRST VERSION OF THIS FILE SAID IT WAS.** Gusto's own message of **2026-08-03** reads: *"The team was paid as planned, but our debit(s) failed because the bank rejected them."* **Employees and contractors were paid.** What is outstanding is the balance Gusto could not collect; a bank account was under verification on 08-04. The 08-13 message is the **fifth** identical automated reminder, not a new event. It still needs resolving — it is not a crisis.
+- ⚠️ **NO `Tax Return Type` IS RECORDED, AND `Income Tax = true`.** This is the **counter-case** to the empty-field rule, not the Aura case: the income-tax service is on, so the absence cannot mean "files nothing", and there is no owner record to read across to. **Send it to review — ask which form this company files** (§4).
+- ⚠️ **DOUBLE'S `platform: none` IS WRONG — a QuickBooks Online company exists**, and it processes card payments (its limit was raised in July 2026). Anyone concluding "no books connected" from the Double record will be wrong.
+- **The 2025 tax project says `filed` but carries no `filedAt`.** Do not treat 2025 as closed on the status alone.
+- **The engagement on file is full-service** — monthly bookkeeping, quarterly sales tax, monthly payroll, income tax. **If the client really has left, several filings may still be owed for the stub period.**
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 
-- 2026-08-14 — **File created** as part of closing the seven-client gap left by the TaxDome-notes backfill. Sources: the migrated TaxDome note, Double's five planes read live, and an incremental Gmail/Ping pass from the **2026-08-08** baseline. _(Worked by Lilian.)_
-  - **2025-03-07 — the contact note.** _(Lilian, migrated TaxDome notes.)_ Angela Saturno is the Director of Sales.
+- 2026-08-14 — **File created**, then **corrected the same day.** The first version read the 2026-08-13 Gusto alert as a new emergency and claimed staff were unpaid; an independent review showed it was the fifth reminder in a five-week pattern and that the team had been paid. The wider pass produced the entries below. _(Worked by Lilian.)_
+  - **2025-03-07 — the migrated TaxDome note.** _(Lilian.)_ Records the Director of Sales.
   - **2026-05-15 — Double client record created.**
-  - **2026-07-22 — Double client record ARCHIVED.** No reason is recorded anywhere reachable.
-  - **2026-08-13 — Gusto: payroll blocked.** Two separate messages the same day — an **automated contractor payment could not be processed**, and **payroll is blocked because of an outstanding balance on the Gusto account**. The second went to the client and to four people at the firm. **No response or action is recorded.**
-- **Nothing else is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
+  - **2026-07-20 — QuickBooks raised the company's card-payment processing limit** — evidence of an operating business, addressed to the client-side principal.
+  - **2026-07-17 → 07-22 — an open Double task** ("ACH/Wire Account") appears in Julia's daily digests.
+  - **2026-07-22 — Double client record ARCHIVED.** **No reason is recorded anywhere reachable.**
+  - **2026-07-24, 07-25, 07-26 — Gusto: "payroll is blocked"**, to the client and four people at the firm. The same message repeats.
+  - **2026-08-03 — Gusto explains it:** *"The team was paid as planned, but our debit(s) failed because the bank rejected them."* The same day, an **outside CPA firm was made a Gusto admin**, and **the firm sent that firm a QuickBooks accountant invitation**, which was accepted.
+  - **2026-08-04 — Gusto verifying the company's bank account** after repeated bank errors; another blocked-payroll reminder.
+  - **2026-08-05 — the outside CPA was REMOVED as a Gusto admin**, two days after being added. A second QuickBooks invitation went out the same day.
+  - **2026-08-13 — the fifth blocked-payroll reminder**, plus a failed **automated contractor payment**. No response is recorded.
+- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-07 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
 
 ### Tax year 2025 — the review
 
@@ -120,25 +127,23 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the archive-vs-live contradiction, today.** The record was archived 2026-07-22; the payroll is blocked as of 2026-08-13 with the firm cc'd. **A blocked payroll is people not getting paid.** Decide whether the firm still acts here, and tell the client either way.
-- 🔴 **Get the `Tax Return Type` recorded** — `Income Tax = true` with no form named is a gap that will silently mis-sort this client in every readiness report.
-- **Confirm the 2025 return was filed and get the date** — the status and `filedAt` disagree.
-- **Establish where the bookkeeping actually lives**, since `Bookkeeping = Monthly` but no QuickBooks is connected.
-- **If the engagement did end**, work out which of the four recurring services still owe a final filing.
-- **Run the one-time full historical sweep** — never done for this client.
+- 🔴 **Settle what the 2026-07-22 archive meant** — engagement ended, transferring to the other CPA firm, or an administrative tidy-up. Everything below depends on the answer, and the added-then-removed Gusto admin says it is not settled on the client's side either.
+- 🔴 **Resolve or hand off the Gusto balance**, and either way **take the firm off the notification list** if it is no longer our payroll. Five automated reminders have gone unanswered.
+- 🔴 **Get the `Tax Return Type` recorded**, and correct `platform` — a QuickBooks company exists. Both errors mis-sort this client in every report.
+- **Run the one-time full historical sweep, and work out which of the four recurring services still owe a final filing** if the engagement ended — plus confirm the 2025 return was actually filed. ⚠️ **This client is excluded from the weekend routine while archived, so nobody will do the sweep automatically** — it needs a person.
 
 ### Information still needed
 
 - [ ] Why the Double record was archived, and by whom
+- [ ] Whether the outside CPA firm has taken over, and from when
 - [ ] What the company does, its state, and its owner
 - [ ] Which income-tax form it files
-- [ ] Where the books are kept
-- [ ] Everything from Gmail before 2026-08-08, Drive, Ping and prior years — never swept
+- [ ] Ping, Drive, and everything before July 2026 — never swept
 
 ## 7. Links
 
-- **Double client:** [app.doublehq.com/close?cid=706706](https://app.doublehq.com/close?cid=706706) — **archived**
+- **Double client:** [app.doublehq.com/close?cid=706706](https://app.doublehq.com/close?cid=706706) — **archived 2026-07-22**
 - **Double tax project (2025):** [tax-return?cid=706706&projectId=219897](https://app.doublehq.com/tax-return?cid=706706&projectId=219897)
-- **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > SETATECH USA INC` (and the `*Dupplicated` copy) — read 2026-08-13, written up here 2026-08-14.
+- **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > SETATECH USA INC` (and the `*Dupplicated` copy) — read 2026-08-13.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_

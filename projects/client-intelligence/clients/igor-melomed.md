@@ -24,23 +24,22 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NEVER FULLY SWEPT — this file starts from a narrow base.** Created **2026-08-14** from
-> the migrated TaxDome notes plus an incremental pass from the **2026-08-08** baseline forward,
-> on Lilian's instruction not to re-read history already captured. **No full historical sweep of
-> Gmail, Drive, Ping or Double has ever run for this client.** A gap here means *not yet looked
-> at*, not *nothing there*. The catch-up is recorded in
+> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
+> **2026-03 → 2026-08** (a targeted catch-up after the first version drew conclusions from a
+> six-day window and concluded, wrongly, that the business might have ended). Ping, Drive and
+> everything before 2026 are **still unswept**. The catch-up is recorded in
 > [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 
-- **Business name:** Igor Melomed & Yelena Lovkina — an **individual (joint) client record**, not a company
-- **Entity type:** Individual taxpayers — Form 1040. ⚠️ **Double records `1040`, and the firm's own 2023 working papers are a Schedule C** (§5) — the two are not reconciled
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_ — he ran a **self-employed business** in 2023 (Schedule C)
-- **Primary language:** _(pending — likely Russian)_
-- **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, no 1099 preparation, no annual report _(Double properties)_
+- **Business name:** Igor Melomed & Yelena Lovkina — an **individual (joint) client record**
+- **Entity type:** Individual taxpayers — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_. ⚠️ See §5 — the firm keeps monthly books for his businesses, which the column does not reflect
+- **Home state:** **Florida** _(Broward — the businesses are local, and the client uses a 954 number)_
+- **Industry / what they do:** 🔴 **Pawnbroking and jewellery** — **Lucky Pawn Jewelry** and **Auto Pawn**, two operations whose monthly ledgers and expense reports the firm processes (§5)
+- **Primary language:** _(pending — likely Russian; correspondence with the firm is in English)_
+- **Our engagement (services we provide):** individual income tax (1040) per Double — **plus, in practice, monthly bookkeeping the column does not show** (§5). `1099 Preparation = false`, `Annual Report = false`
 - **Fiscal year-end:** calendar year
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-14)_
+- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-14)_. The books run off client-supplied ledgers and TD Bank statements instead.
 
 ## 2. Contacts
 
@@ -51,46 +50,52 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | The clients — a married couple on one joint record | Double client (link below) |
-| Assigned staff | **Lilian Gonzalez** _(Double)_ |
+| **Their bookkeeper/administrator**, who sends statements on the businesses' behalf | Gmail threads / Double |
+| Assigned staff (Double) | **Lilian Gonzalez** |
+| **Who actually works the monthly books** | **Maria Zavarce**, with Julia — see §6 |
 
 - **Double client:** [app.doublehq.com/close?cid=710635](https://app.doublehq.com/close?cid=710635)
 - **Double case note:** none — no agency matter has been worked for this client
 
 ⚠️ **THERE ARE TWO MELOMED HOUSEHOLDS IN DOUBLE — pick the right one.** This file is
 **`Igor Melomed & Yelena Lovkina` (710635)**. The other is **`Grigoriy & Margarita Melomed`
-(710633)**, a separate client with its own record and no file of its own. The migrated TaxDome
-folder is named `IGOR MELOMED`, which routes here. **Never merge the two, and check the ID before
-writing anywhere.**
+(710633)** — a **separate, live client** whose 2025 return the firm filed in March 2026, and who
+still has **no Client Intelligence file at all**. The migrated TaxDome folder named `IGOR MELOMED`
+routes here. **Never merge the two, and check the client ID before writing anywhere.**
 
 ## 3. Systems & access
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Double client portal | Tax organizer + document exchange | n/a | 2025 organizer **Sent**, not completed (§4) |
-| Google Drive | The 2023 Schedule C working figures | _(pending — Drive link)_ | Revenue, COGS, home-office computation (§5) |
+| **TD Bank** | The businesses' banking; statements feed the books | 🔒 Drive vault — **never here** | The firm holds the statements and pulls them on request (§6) |
+| **Truist** | A second bank, used by the related entity | 🔒 Drive vault | The firm saves **business** statements only, not personal |
+| **mySBA** | An SBA loan — the year-end statement is needed to record interest | 🔒 Drive vault | Requested each year (§5) |
+| Double client portal | Tax organizer + document exchange | n/a | 2025 organizer **Sent**, not completed |
+
+🔒 **A password for a related company's portal was once pasted into email.** It is **not** recorded
+here and must not be — the firm's convention puts credentials in the Drive vault.
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending)_ — depends on what the Schedule C business actually did
+- **Applies?** _(pending)_ — a retail pawn/jewellery operation in Florida very likely collects sales tax. **Nothing records who files it.** Establish this.
 
 ### Payroll
-- **Applies?** No _(Double)_
+- **Applies?** _(pending)_ _(Double records nothing)_
 
 ### Bookkeeping & monthly close
-- **Applies?** **No — `Bookkeeping = N/A`** _(Double)_
+- **Applies?** 🔴 **In practice YES, monthly — although Double says `Bookkeeping = N/A`.** Through 2026 the firm has processed **monthly ledgers and expense reports for Lucky Pawn and Auto Pawn**, chased missing months, recorded **SBA loan interest**, and pulled **TD Bank statements** on request. **The Double column is wrong or means something narrower; the work is real.**
+- **How it arrives:** the client (or their administrator) **emails** ledgers and expense reports — he has said outright he finds the new portal hard to use. **Expect email, not uploads.**
 
 ### Income tax
 - **Applies?** **Yes**
-- **Return type(s) & deadlines:** **Form 1040**, calendar year, due April 15 _(Double `Tax Return Type = 1040`)_. ⚠️ **See §5 — a Schedule C was prepared for 2023 and the column does not say so.**
+- **Return type(s) & deadlines:** **Form 1040**, calendar year _(Double `Tax Return Type = 1040`)_. ⚠️ The firm worked **Schedule C figures for 2023**, and the underlying businesses are still trading (§5) — so what the 1040 actually carries is **unsettled**; confirm it rather than assume either reading.
 - **Our role:** the firm prepares and files
-- **Current status:** 🔴 **2025 return NOT STARTED.** Double tax project "2025 Taxes" is **`notStarted`**, no preparer assigned, `filedAt` empty, original due date **2026-04-15** — roughly **four months past** as of this file's date.
-- **Organizer status:** **Sent** _(Double)_ — sent and not completed. That is the likely hold.
-- **Process notes (→ future SOP):**
-  - **A home-office deduction was computed for 2023 from total square footage vs. one room.** If the same claim is made again, the method and the measurements should be reused — they are in Drive.
+- **Current status:** **2025 return not filed.** Double's "2025 Taxes" project is **`notStarted`**, no preparer, **original** due date 2026-04-15. ✅ **An extension WAS handled** — Lilian assigned Julia a **"File Extension" task for this client on 2026-05-27** _(Double task digest)_. **With a 4868 the deadline is 2026-10-15**, so the year is late-but-covered, not overdue. **Confirm the 4868 was actually accepted.**
+- **Organizer status:** **Sent** _(Double)_ — sent and not completed. Given he works by email, chase it by email.
 
 ### Licenses & other filings
-- **Applies?** _(pending)_
+- **Applies?** _(pending)_ — a pawnbroker in Florida holds **state and local licences**; nothing records whether the firm touches them.
 
 ## 5. Key facts & quirks
 
@@ -102,46 +107,60 @@ writing anywhere.**
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- ⚠️ **DOUBLE SAYS `1040`; THE FIRM'S OWN 2023 WORKING PAPERS ARE A SCHEDULE C — AND NOBODY HAS RECONCILED THEM.** Julia worked 2023 Schedule C figures for this client _(2024-10-14)_: revenue, cost of goods sold, office supplies, client entertainment and a home-office computation. Double's `Tax Return Type` says plainly `1040`, with no Schedule C marker. **Both are recorded here with their sources and the fact is left UNSETTLED** — the business may have ended between 2023 and now, or the column may simply predate this. **Ask before assuming either**; do not "fix" the Double column on the strength of a two-year-old working paper.
-- 🔴 **THE 2025 RETURN HAS NOT BEEN STARTED AND THE ORGANIZER WAS NEVER COMPLETED.** `notStarted`, no preparer, four months past the deadline, organizer still `Sent`. **Check for an extension first.**
-- ⚠️ **TWO MELOMED HOUSEHOLDS EXIST IN DOUBLE** — `Igor Melomed & Yelena Lovkina` (710635, this file) and `Grigoriy & Margarita Melomed` (710633). **Confirm the client ID before writing anything anywhere.** §2 carries the detail.
-- **An open classification question was never answered** _(Julia, 2024-10-14)_: a **customer-appreciation / company-events** expense that she was unsure how to classify. It is still unresolved, and it will recur if the business is still running. Client entertainment at restaurants sat alongside it — the two are treated very differently, so the answer matters.
-- **All 2023 figures stay in Drive** — revenue, COGS, the office-supplies total and the square footages. Only the method and the open questions live here.
+- 🔴 **THE FIRM DOES MONTHLY BOOKKEEPING FOR HIS BUSINESSES, AND DOUBLE SAYS `Bookkeeping = N/A`.** Through March–July 2026 Maria and Julia have processed **Lucky Pawn and Auto Pawn** monthly ledgers and expense reports, chased a missing month, requested the **SBA year-end statement to record loan interest**, and supplied **TD Bank statements**. **Do not read the Double column as evidence this client is tax-only** — and settle whether the engagement (and the billing) matches the work.
+- ⚠️ **TWO MELOMED HOUSEHOLDS EXIST IN DOUBLE**, and the other one is live: `Grigoriy & Margarita Melomed` (710633) had their **2025 return signed on 2026-03-14** and has **no file of its own**. **Confirm the client ID before writing anywhere** — §2 carries the detail.
+- ⚠️ **HE WORKS BY EMAIL, NOT THE PORTAL** — *"I am having trouble using this new site"* (2026-06-26). Ledgers, statements and questions arrive as email, sometimes forwarded from the businesses' own addresses. **A request left in the portal will not reach him**, and the 2025 organizer sitting in `Sent` is the visible symptom.
+- ⚠️ **DOUBLE SAYS `1040`; THE FIRM'S OWN 2023 WORKING PAPERS ARE A SCHEDULE C** _(Julia, 2024-10-14)_ — revenue, cost of goods, office supplies, client entertainment and a home-office computation. **Both are recorded with their sources and the fact is left UNSETTLED.** The businesses are demonstrably still trading, so the 2023 papers are not stale evidence of a business that ended. **Ask; do not "fix" the Double column from a working paper.**
+- **An open classification question was never answered** _(Julia, 2024-10-14)_: a **customer-appreciation / company-events** expense she was unsure how to classify, sitting alongside client entertainment at restaurants. The two are treated very differently, and it recurs every year the business runs.
+- **He is connected to other clients of the firm.** The mailbox that signs itself with his name is the counterparty on **[Magnum 152, Inc](./magnum-152.md)** statements (July 2026, Julia and Maria copied), and he supplied a portal credential for **[Sunoma Inc](./sunoma-inc.md)** and asked for its Truist statements. **The owner-group link is unsettled but strong — sweep by owner, assign by company.**
+- **All figures stay in Drive** — 2023 revenue and COGS, the square footages, the monthly ledger totals. Only the method and the open questions live here.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 
-- 2026-08-14 — **File created** as part of closing the seven-client gap left by the TaxDome-notes backfill. Sources: the migrated TaxDome note, Double's five planes read live, and an incremental Gmail/Ping pass from the **2026-08-08** baseline. _(Worked by Lilian.)_
-  - **2024-10-14 — the 2023 Schedule C working note.** _(Julia, migrated TaxDome notes.)_ Recorded revenue, cost of goods sold, office supplies, **a customer-appreciation / company-events item Julia was unsure how to classify**, client entertainment at restaurants, and a **home office computed from total vs. one-room square footage**. Figures in Drive.
-- **Nothing after 2024-10-14 is recorded anywhere the firm can reach**, other than Double's own project status. Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
+- 2026-08-14 — **File created**, then **corrected the same day.** The first version said the Schedule C business "may have ended" and that bookkeeping did not apply — both from a six-day Gmail window, and both wrong. An independent review caught it; a wider pass produced the entries below. _(Worked by Lilian.)_
+  - **2024-10-14 — the migrated TaxDome note.** _(Julia.)_ 2023 **Schedule C** working figures: revenue, cost of goods sold, office supplies, a **customer-appreciation / company-events** item Julia was unsure how to classify, client entertainment at restaurants, and a **home office computed from total vs. one-room square footage**. Figures in Drive.
+  - **2026-03-11 — SBA statement chased.** Maria asked for a mySBA code or the last 2025 statement **so the loan interest could be recorded**.
+  - **2026-03-17 — he asked for the site where he posts Lucky Pawn's monthly figures**; Maria sent it.
+  - **2026-04-06 — a portal credential supplied** for the related Sunoma account. 🔒 Not recorded here.
+  - **2026-06-26 — ledgers for April and May 2026** for Lucky Pawn and Auto Pawn, emailed because *"I am having trouble using this new site."* Maria then chased a **missing Auto Pawn expense report**.
+  - **2026-07-08 — April 2026 expenses** forwarded from the Auto Pawn address.
+  - **2026-07-16 — Magnum 152 Inc statements** (June 15 – July 15) sent to the same mailbox, copying Julia and Maria.
+  - **2026-07-20 → 07-21 — TD Bank statements** assembled by Maria at his request, tracing **wire transfers to an attorney's firm**. _(Why he needed the trace is not recorded.)_
+- **2026-05-27 — Lilian assigned Julia a "File Extension" task** for this client _(Double task digest)_.
+- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything before 2026 have never been swept**, so this is a statement about the search, not about the world.
 
 ### Tax year 2025 — the review
 
-- **Status:** not started, unfiled, organizer sent but not completed.
-- **The question to settle first:** whether the Schedule C business still exists, which decides what the 2025 return even looks like.
+- **Status:** `notStarted`, no preparer, unfiled; a **File Extension task exists** (2026-05-27), so treat the deadline as 2026-10-15 pending confirmation.
+- **Organizer:** `Sent`, not completed — and he does not use the portal (§5).
+- **The question to settle first:** what the 1040 actually carries, given two trading businesses and 2023 Schedule C papers.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle whether there is still a Schedule C business**, and reconcile that with Double's `Tax Return Type = 1040`. Everything else about 2025 follows from the answer.
-- 🔴 **Confirm whether a 2025 extension was filed**, then chase the organizer — it is still in `Sent`, and the project has no preparer.
-- **Answer the 2023 classification question** — customer appreciation / company events, sitting unanswered since Julia raised it.
-- **Run the one-time full historical sweep** — never done for this client.
+- 🔴 **Reconcile the engagement with the work.** The firm does monthly books for two operations while Double says `Bookkeeping = N/A`. Whatever the truth, the column, the scope and the billing should agree.
+- 🔴 **Settle what the 2025 1040 carries** — Schedule C for one or both operations, or something else — and confirm the 4868 was accepted.
+- **Chase the 2025 organizer BY EMAIL**, not through the portal.
+- **Answer the 2023 classification question** — customer appreciation / company events, open since Julia raised it.
+- **Settle the owner-group links** to Magnum 152 and Sunoma, and cross-reference all three files.
+- **Establish the sales-tax and pawnbroker-licensing position** — a Florida retail pawn operation almost certainly has both.
 
 ### Information still needed
 
-- [ ] What the Schedule C business is, and whether it is still operating
-- [ ] Which state they live in and which language they work in
-- [ ] Whether there are dependants
-- [ ] Whether an extension exists for 2025
-- [ ] Everything from Gmail before 2026-08-08, Drive, Ping and prior years — never swept
+- [ ] The legal entities behind Lucky Pawn and Auto Pawn, and how each is taxed
+- [ ] Who files their sales tax, and whether the firm should
+- [ ] Whether he owns Magnum 152 and Sunoma, or is only connected to them
+- [ ] Why the attorney wire trace was needed
+- [ ] Ping, Drive, and everything before 2026 — never swept
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710635](https://app.doublehq.com/close?cid=710635)
 - **Double tax project (2025):** [tax-return?cid=710635&projectId=219323](https://app.doublehq.com/tax-return?cid=710635&projectId=219323)
-- **The OTHER Melomed household (not this client):** [app.doublehq.com/close?cid=710633](https://app.doublehq.com/close?cid=710633) — `Grigoriy & Margarita Melomed`, no file of its own
-- **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > IGOR MELOMED` — read 2026-08-13, written up here 2026-08-14. _(This client appears in the `*QBO` subtree only, not in `*Dupplicated`.)_
+- **The OTHER Melomed household (not this client):** [app.doublehq.com/close?cid=710633](https://app.doublehq.com/close?cid=710633) — `Grigoriy & Margarita Melomed`, **live, 2025 return filed, no file of its own**
+- **Probable owner-group siblings:** [Magnum 152, Inc](./magnum-152.md) · [Sunoma Inc](./sunoma-inc.md) — link unsettled, see §5
+- **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > IGOR MELOMED` — read 2026-08-13. _(This client appears in the `*QBO` subtree only, not in `*Dupplicated`.)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_

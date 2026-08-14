@@ -1,4 +1,4 @@
-# R & G Friendly Inc
+# R & G Friendly Inc — *DBA Lucky Pawn & Jewelry*
 
 > **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
 
@@ -24,23 +24,21 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NEVER FULLY SWEPT — this file starts from a narrow base.** Created **2026-08-14** from
-> the migrated TaxDome notes plus an incremental pass from the **2026-08-08** baseline forward,
-> on Lilian's instruction not to re-read history already captured. **No full historical sweep of
-> Gmail, Drive, Ping or Double has ever run for this client.** A gap here means *not yet looked
-> at*, not *nothing there*. The catch-up is recorded in
-> [`sweep-state.md`](../automation/sweep-state.md).
+> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
+> **2026-03 → 2026-08** (a targeted catch-up after the first version drew conclusions from a
+> six-day window). Ping, Drive and everything before 2026 are **still unswept**. The catch-up is
+> recorded in [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 
-- **Business name:** R & G Friendly Inc
-- **Entity type:** Corporation (Inc) **taxed as an S-corp** — the firm files an **1120-S** _(Double `Tax Return Type = 1120-S`, read 2026-08-14)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** income tax (1120-S). Bookkeeping **N/A**, no 1099 preparation, no annual report _(Double properties)_
+- **Business name:** R & G Friendly Inc — trading as **LUCKY PAWN & JEWELRY** _(the DBA appears on the firm's own invoices)_
+- **Entity type:** Corporation (Inc) **taxed as an S-corp** — the firm files an **1120-S** _(Double `Tax Return Type = 1120-S`)_
+- **Home state:** _(pending)_ — banking has run through **PNC** (closed Sept 2025) and **Truist**
+- **Industry / what they do:** 🔴 **Pawnbroking and jewellery.** Part of the **Melomed family group** (§5)
+- **Primary language:** _(pending — likely Russian)_
+- **Our engagement (services we provide):** income tax (1120-S) per Double, **plus bookkeeping in practice** — the firm holds the QuickBooks company and works monthly GL files (§5). `Bookkeeping = N/A`, `1099 Preparation = false`, `Annual Report = false` in Double
 - **Fiscal year-end:** calendar year
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected today** _(2026-08-14)_. ⚠️ It was in use in 2024 (§5).
+- **Accounting platform:** ⚠️ **Double says `platform: none`, and that is WRONG** — there is a **QuickBooks Online company** for "R & G Friendly, inc." with **RUN Powered by ADP** connected (§3)
 
 ## 2. Contacts
 
@@ -50,7 +48,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| **Owner / signer** — he signs the return and holds a W-2 from the company | Double / TaxDome — he is **the same person as the second Melomed household** (§5) |
+| The related individual client, connected to the same operations | [`igor-melomed.md`](./igor-melomed.md) |
 | Assigned staff | **Lilian Gonzalez** _(Double)_ |
 | Worked the 2024 QuickBooks review | **Maria Zavarce** _(migrated note, 2024-06-05)_ |
 
@@ -61,30 +60,34 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks | Bookkeeping (2024) | _(pending — Drive link)_ | ⚠️ **A company credit card was never connected** (§5) |
-| Credit card | Business spending | _(pending)_ | The register was worked from a **pasted statement**, not a feed (§5) |
+| **QuickBooks Online** | The books — company "R & G Friendly, inc." | 🔒 Drive vault — **never here** | ⚠️ Exists, though Double records `platform: none` |
+| **RUN Powered by ADP** | **Payroll** | 🔒 Drive vault | Connected to the QBO company **2026-03-10** |
+| **Truist** | Current bank | 🔒 Drive vault | December statements requested for the 2025 return |
+| **PNC** | Former bank | 🔒 Drive vault | ⚠️ **Closed September 2025** — last statements August 2025 (§5) |
+| **PayPal** ("Razz") | A payment channel for one operation | 🔒 Drive vault | Annual CSV pulled for the return |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending)_
+- **Applies?** _(pending)_ — a Florida retail pawn/jewellery operation very likely collects it. **Nothing records who files it.** Establish this.
 
 ### Payroll
-- **Applies?** _(pending)_ — an S-corp with an active owner normally owes reasonable compensation through payroll; nothing is recorded either way
+- **Applies?** ✅ **Yes — via RUN Powered by ADP**, connected to the QuickBooks company in March 2026, and the owner holds a **2025 W-2 from the company**. _(Double records nothing under Payroll — the column is incomplete.)_
 
 ### Bookkeeping & monthly close
-- **Applies?** **`Bookkeeping = N/A` today** _(Double)_ — but QuickBooks was being worked in 2024 (§5). **Establish whether the firm still does the books, and if not, who does.**
+- **Applies?** ⚠️ **In practice yes, though Double says `Bookkeeping = N/A`.** The client supplies **monthly GL reports for two operations** ("FP" and "RAZZ") plus annual GL files, bank statements and PayPal exports; the firm holds the QuickBooks company. **Reconcile the column with the work.**
 
 ### Income tax
 - **Applies?** **Yes**
-- **Return type(s) & deadlines:** **Form 1120-S**, calendar year, due **March 15** _(not April 15 — an S-corp return runs a month earlier than a 1040)_
+- **Return type(s) & deadlines:** **Form 1120-S**, calendar year, due **March 15** — a month earlier than the 1040 clients alongside it
 - **Our role:** the firm prepares and files
-- **Current status:** ✅ **2025 return FILED** — Double tax project "2025 Taxes" reads `filed` with `filedAt` **2026-05-25**. ⓘ That is after the March 15 deadline, so **an extension (Form 7004) was presumably on file**; nothing reachable confirms it.
+- **Current status:** ✅ **2025 return FILED** — Double reads `filed`, `filedAt` **2026-05-25**; the return was **signed 2026-03-14**. ⓘ Filed after March 15, so **a Form 7004 extension was presumably on file**; nothing reachable confirms it.
 - **Process notes (→ future SOP):**
-  - ⚠️ **Do not assume the credit-card activity is complete in the books.** See §5 — the card has no feed, so anything not pasted in by hand is missing.
+  - ✅ **The owner takes a W-2** — a 2025 W-2 from the company is on file. That answers the usual S-corp reasonable-compensation question in principle; **whether the amount is reasonable is a separate review** ([`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)).
+  - **The client works the document requests thoroughly and answers by text/phone.** In March 2026 he completed every assigned task in the portal chat and left a mobile number for follow-ups.
 
 ### Licenses & other filings
-- **Applies?** No annual report on our side _(Double `Annual Report = false`)_
+- **Applies?** _(pending)_ — a Florida **pawnbroker licence** is very likely; `Annual Report = false` in Double, which is worth confirming for a corporation.
 
 ## 5. Key facts & quirks
 
@@ -96,45 +99,55 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- ⚠️ **THE COMPANY CREDIT CARD WAS NEVER CONNECTED IN QUICKBOOKS, AND HAD NO TRANSACTIONS THERE** _(Maria Zavarce, 2024-06-05)_. The register was worked from a **statement pasted in by hand**. **So the books are only as complete as somebody's manual paste** — any card spending nobody transcribed is simply absent, and it will not show as a gap. **Check whether the feed was ever connected before relying on a P&L for this client.**
-- **An S-corp with no payroll recorded and no bookkeeping engagement is worth a second look.** `Bookkeeping = N/A` and nothing on payroll, yet the firm files the 1120-S — so the books come from somewhere else. **Find out where, and whether the owner takes reasonable compensation**; a shareholder-employee paid only in distributions is the classic S-corp exposure.
-- ✅ **The 2025 return is filed** — 2026-05-25, after the March 15 S-corp deadline, so an extension was presumably in place. **Confirm the Form 7004** if it ever matters.
-- **The deadline is MARCH 15, not April 15.** Written down because six of the seven clients backfilled alongside this one are 1040 filers on the April date, and this is the one that is not.
+- 🔴 **THIS COMPANY IS "LUCKY PAWN & JEWELRY", AND IT BELONGS TO THE MELOMED GROUP.** The firm's own invoices name it *"R & G FRIENDLY, INC. DBA LUCKY PAWN & JEWLERY"*, its return is signed from a **Melomed** address, and it issues that same person a **W-2**. Meanwhile [`igor-melomed.md`](./igor-melomed.md) — a *different* Melomed household — emails the firm from a Lucky Pawn address and sends its monthly ledgers. **Three Double records (710589, 710635, 710633) sit on one family business.** Work out who owns and who operates before writing anything about any of them, and never assume a "Melomed" fact belongs to the household you happen to have open.
+- ⚠️ **DOUBLE'S RECORD IS WRONG IN THREE PLACES** — `platform: none` (a QuickBooks company exists), `Bookkeeping = N/A` (monthly GL work is being done), and nothing under Payroll (ADP is connected and a W-2 was issued). **Do not read this client's engagement off the Double columns.**
+- ⚠️ **THE PNC ACCOUNT CLOSED IN SEPTEMBER 2025 AND TRUIST TOOK OVER MID-YEAR.** The 2025 books therefore span two banks with a gap the client described himself — last PNC statements August, Truist from September. **Any reconciliation that assumes one bank for the year will not balance**, and this is exactly where a year-end cut-over goes wrong.
+- **A company credit card was never connected in QuickBooks** _(Maria Zavarce, 2024-06-05)_ and its register was worked from a **statement pasted in by hand**. ⓘ **This is a 2024 observation and may have been fixed** — the QuickBooks company has since been reworked and ADP connected. **Verify before repeating it**, but until then treat card completeness as unproven.
+- **Two operations run inside the books** — the GL files arrive as "FP" and "RAZZ" sets, and PayPal activity sits under "Razz". Ask which is which before categorising.
+- **The deadline is MARCH 15, not April 15.** Written down because the other clients backfilled alongside this one are 1040 filers on the April date.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 
-- 2026-08-14 — **File created** as part of closing the seven-client gap left by the TaxDome-notes backfill. Sources: the migrated TaxDome note, Double's five planes read live, and an incremental Gmail/Ping pass from the **2026-08-08** baseline. _(Worked by Lilian.)_
-  - **2024-06-05 — the QuickBooks review note.** _(Maria Zavarce, migrated TaxDome notes.)_ The **credit card was not connected in QuickBooks** and had no transactions there; the note carried a long pasted credit-card register. The durable fact is the **missing feed**, not the register — the figures stay in Drive.
-  - **2026-05-25 — 2025 Form 1120-S filed** _(Double tax project)_.
-- **Nothing else is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
+- 2026-08-14 — **File created**, then **corrected the same day.** The first version published "an S-corp with no payroll recorded" and treated a 2024 note as current; an independent review prompted a wider Gmail pass which produced the entries below. _(Worked by Lilian.)_
+  - **2024-06-05 — the migrated TaxDome note.** _(Maria Zavarce.)_ The **credit card was not connected in QuickBooks** and had no transactions there; the note carried a long pasted credit-card register. Figures stay in Drive.
+  - **2026-03-05 — the 2025 document round.** The client uploaded monthly and annual **GL reports (FP and RAZZ)**, a **2025 W-2 for the owner from this company**, PayPal/Razz annual exports, and bank statements; he completed every assigned portal task the same day. He noted **PNC closed in September 2025**, with Truist from then on, and left a mobile number.
+  - **2026-03-06 — a software problem with one GL file**, re-sent.
+  - **2026-03-10 — RUN Powered by ADP connected** to the QuickBooks Online company.
+  - **2026-03-14 — the 2025 Form 1120-S signed**, and the firm's invoice for the work paid.
+  - **2026-05-25 — Double records the 2025 return as filed.**
+- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
 
 ### Tax year 2025 — the review
 
-- **Filing position:** Form 1120-S, filed 2026-05-25.
-- **Open:** whether the books behind it captured the credit-card activity (§5).
+- **Filing position:** Form 1120-S, signed 2026-03-14, recorded filed 2026-05-25.
+- **Payroll:** the owner holds a W-2 from the company.
+- **Open:** the two-bank year (PNC → Truist), and whether card activity is complete.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- ⚠️ **Find out whether the credit card was ever connected to QuickBooks**, and if not, how card spending reaches the books today.
-- **Establish who keeps the books**, given `Bookkeeping = N/A` on a company whose return we file.
-- **Check the owner's reasonable-compensation position** — an S-corp with no payroll recorded.
+- 🔴 **Map the Melomed group properly** — three Double records, one family business, and one file (710633) that does not exist at all. Until that is drawn, every fact about "Melomed" is ambiguous.
+- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here.
+- **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed.
+- **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence.
+- **Establish the sales-tax and pawnbroker-licensing position.**
 - **Run the one-time full historical sweep** — never done for this client.
 
 ### Information still needed
 
-- [ ] What the business does, its state and its owner
-- [ ] Whether payroll exists, and who runs it
-- [ ] Where the bookkeeping is done
-- [ ] Whether a Form 7004 extension was filed for 2025
-- [ ] Everything from Gmail before 2026-08-08, Drive, Ping and prior years — never swept
+- [ ] Who owns the company, and how it relates to each Melomed household
+- [ ] What "FP" and "RAZZ" are
+- [ ] Whether a Form 7004 was filed for 2025
+- [ ] Whether sales tax and a pawnbroker licence apply, and who handles them
+- [ ] Ping, Drive, and everything before 2026 — never swept
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710589](https://app.doublehq.com/close?cid=710589)
 - **Double tax project (2025):** [tax-return?cid=710589&projectId=219280](https://app.doublehq.com/tax-return?cid=710589&projectId=219280)
-- **Migrated TaxDome notes:** Drive `4. Documents > R & G Friendly Inc` — read 2026-08-13, written up here 2026-08-14.
+- **Owner-group siblings:** [`igor-melomed.md`](./igor-melomed.md) (710635) · `Grigoriy & Margarita Melomed` (710633 — **no file yet**) · possibly [Magnum 152, Inc](./magnum-152.md) and [Sunoma Inc](./sunoma-inc.md)
+- **Migrated TaxDome notes:** Drive `4. Documents > R & G Friendly Inc` — read 2026-08-13.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
-- **Related SOPs:** _(pending)_ — the reasonable-compensation question routes to the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)
+- **Related SOPs:** _(pending)_ — the compensation review routes to the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)

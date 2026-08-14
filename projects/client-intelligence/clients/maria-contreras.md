@@ -24,21 +24,19 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NEVER FULLY SWEPT — and this is the THINNEST file in the set.** Created **2026-08-14**
-> from the migrated TaxDome notes plus an incremental pass from the **2026-08-08** baseline
-> forward, on Lilian's instruction not to re-read history already captured. The migrated note for
-> this client is **one line**. **No full historical sweep of Gmail, Drive, Ping or Double has ever
-> run for her** — so almost everything below is *not yet looked at*, not *nothing there*. The
-> catch-up is recorded in [`sweep-state.md`](../automation/sweep-state.md).
+> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
+> **2026-03 → 2026-08** (a targeted catch-up after the first version drew conclusions from a
+> six-day window). Ping, Drive and everything before 2026 are **still unswept**. The catch-up is
+> recorded in [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 
-- **Business name:** Maria Contreras — an **individual** client, not a company
+- **Business name:** Maria Contreras — an **individual** client
 - **Entity type:** Individual taxpayer — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
-- **Primary language:** _(pending)_ — ⓘ the only Spanish-surnamed client in this backfill set, in a practice whose clients are mostly Ukrainian- and Russian-speaking. **Do not assume the language; check.**
-- **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, no 1099 preparation, no annual report _(Double properties)_
+- **Industry / what they do:** ⚠️ _(pending, and it matters)_ — she claims **vehicle, internet and vehicle-repair** deductions, which need a business, rental or other qualifying use behind them (§5)
+- **Primary language:** _(pending — do not assume from the surname; check Double)_
+- **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, `1099 Preparation = false`, `Annual Report = false` _(Double properties)_
 - **Fiscal year-end:** calendar year
 - **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-14)_
 
@@ -60,12 +58,13 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| Double client portal | Tax organizer + document exchange | n/a | 2025 organizer **Completed** (§4) |
+| **TaxDome** (legacy) | Where the 2025 documents and signature live | n/a | Documents uploaded 2026-03-03; return signed 2026-03-04 |
+| Double client portal | The current portal | n/a | `Organizer Status = Completed` |
 
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** No _(no business activity recorded)_
+- **Applies?** _(pending — depends on the activity behind the deductions in §5)_
 
 ### Payroll
 - **Applies?** No _(Double)_
@@ -75,15 +74,15 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Income tax
 - **Applies?** **Yes**
-- **Return type(s) & deadlines:** **Form 1040**, calendar year, due April 15 _(Double)_
+- **Return type(s) & deadlines:** **Form 1040**, calendar year _(Double)_. ⚠️ See §5 — the deduction set she supplies is the shape of a **Schedule C or other business-use claim**, which the plain `1040` does not reflect. Unsettled.
 - **Our role:** the firm prepares and files
-- **Current status:** ✅ **2025 return FILED** — Double tax project "2025 Taxes" reads `filed` with `filedAt` **2026-05-25**. ⓘ That is after April 15, so **an extension was presumably on file**; nothing reachable confirms it.
+- **Current status:** ✅ **2025 return FILED** — signed **2026-03-04**, Double records `filed` with `filedAt` **2026-05-25**. ⓘ The gap between signature and the recorded filing date is not explained anywhere; if the actual filing date ever matters, confirm it.
 - **Organizer status:** **Completed** _(Double)_
 - **Process notes (→ future SOP):**
-  - **Car insurance was collected as a 2024 deduction item** _(Julia, 2025-04-08)_ — the amount is in Drive. ⚠️ **Car insurance is only deductible against a business or rental use**, so this implies some activity the file does not otherwise record. **Establish what the vehicle is used for** before repeating the claim.
+  - **What she supplies for the return** _(2026-03-03)_: **car insurance**, a **car-mileage record**, an **internet bill**, and a **vehicle repair** invoice. The migrated note from a year earlier records the same car-insurance item for 2024 — so this is her **recurring** deduction set, not a one-off.
 
 ### Licenses & other filings
-- **Applies?** No
+- **Applies?** _(pending)_
 
 ## 5. Key facts & quirks
 
@@ -95,43 +94,47 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- ⚠️ **A CAR-INSURANCE DEDUCTION WAS TAKEN FOR 2024 ON A CLIENT WITH NO BUSINESS ON RECORD** _(Julia, 2025-04-08)_. Personal car insurance is not deductible on a 1040 — it needs a **business, rental or other qualifying use** behind it. Either this client has activity nobody has written down, or the item needs re-examining. **This is the single most useful thing to settle about her**, and it is the reason this file is not merely thin but *unresolved*.
-- ⓘ **The whole migrated note is that one line.** Everything else here comes from Double's own columns. Treat the emptiness as unexplored, not as a client with nothing to know.
-- ✅ **The 2025 return is filed** — 2026-05-25, after the April deadline, so an extension was presumably in place.
-- **Do not assume her working language** from the rest of this client base. Check Double before writing to her.
+- 🔴 **SHE CLAIMS VEHICLE, INTERNET AND VEHICLE-REPAIR DEDUCTIONS, AND NOTHING ON FILE SAYS WHAT THEY ARE CLAIMED AGAINST.** For 2025 she supplied **car insurance, a mileage record, an internet bill and a car-repair invoice**; the migrated note shows **car insurance for 2024** as well. None of these is deductible on a 1040 without a **business, rental or other qualifying use** — and Double records no business at all: `Tax Return Type = 1040`, `Bookkeeping = N/A`. **Establish the activity behind them before the next return**; either she has self-employment nobody has written down, or the claims need re-examining.
+- ⚠️ **The mileage record is per-vehicle and recurring** — she sends it every year alongside the insurance. Whatever the underlying activity is, the substantiation habit is already established, which is worth knowing before asking her for it again.
+- ✅ **The 2025 return is filed** — signed 2026-03-04, recorded filed 2026-05-25.
+- **Do not assume her working language** from the rest of this client base, which is mostly Ukrainian- and Russian-speaking. Check Double before writing to her.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
 
-- 2026-08-14 — **File created** as part of closing the seven-client gap left by the TaxDome-notes backfill. Sources: the migrated TaxDome note, Double's five planes read live, and an incremental Gmail/Ping pass from the **2026-08-08** baseline. _(Worked by Lilian.)_
-  - **2025-04-08 — the one-line note.** _(Julia, migrated TaxDome notes.)_ **Car insurance for 2024**; the amount is in Drive.
-  - **2026-05-25 — 2025 Form 1040 filed** _(Double tax project)_.
-- **Nothing else is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred.
+- 2026-08-14 — **File created**, then **corrected the same day.** The first version rested on a one-line migrated note and a six-day Gmail window; an independent review prompted a wider pass, which turned the file's one open question into a specific one. _(Worked by Lilian.)_
+  - **2025-04-08 — the migrated TaxDome note.** _(Julia.)_ One line: **car insurance for 2024**; the amount is in Drive.
+  - **2026-03-03 — the 2025 document upload:** **car insurance**, **car miles**, an **internet bill**, and a **vehicle repair** invoice.
+  - **2026-03-04 — the 2025 return signed.**
+  - **2026-03-06 — the firm's invoice for the work paid.**
+  - **2026-05-25 — Double records the 2025 return as filed.**
+- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
 
 ### Tax year 2025 — the review
 
-- **Filing position:** Form 1040, filed 2026-05-25.
+- **Filing position:** Form 1040, signed 2026-03-04.
 - **Organizer:** Completed.
+- **The unresolved item:** what the vehicle, internet and repair deductions are claimed against.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- ⚠️ **Establish what the car insurance was deducted against** — a business, a rental, or something else. It is the one unexplained item on this client.
-- **Run the one-time full historical sweep** — never done for her, and this file has almost nothing else in it.
-- **Confirm whether a 2025 extension was filed** (the return went in 2026-05-25).
+- 🔴 **Establish the activity behind the vehicle/internet/repair deductions.** It is the one thing that decides what her return should look like, and it has been open for two filing seasons.
+- **Run the one-time full historical sweep** — never done for her, and this file has little else in it.
+- **Confirm the actual 2025 filing date** if it ever matters — signature and recorded filing are eleven weeks apart.
 
 ### Information still needed
 
 - [ ] What she does, which state she lives in, and which language she works in
-- [ ] Whether she has any business, self-employment or rental activity
+- [ ] Whether she has self-employment, rental or other business activity
 - [ ] Whether there are dependants or a spouse on the return
-- [ ] Everything from Gmail before 2026-08-08, Drive, Ping and prior years — never swept
+- [ ] Ping, Drive, and everything before 2026 — never swept
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710646](https://app.doublehq.com/close?cid=710646)
 - **Double tax project (2025):** [tax-return?cid=710646&projectId=219333](https://app.doublehq.com/tax-return?cid=710646&projectId=219333)
-- **Migrated TaxDome notes:** Drive `4. Documents > Maria Contreras` — read 2026-08-13, written up here 2026-08-14.
+- **Migrated TaxDome notes:** Drive `4. Documents > Maria Contreras` — read 2026-08-13.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_
