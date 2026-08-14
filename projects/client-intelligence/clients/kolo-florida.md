@@ -127,6 +127,37 @@ the actual details.
   and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
   in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
   Check the PDF by hand. _(2026-08-14.)_
+- 🔴 **PAYROLL APPEARS TO HAVE STOPPED IN 2025 — and that contradicts what is on record here.**
+  §3/§4 record the client running its **own weekly payroll through Gusto**, with the firm copied
+  on "payroll due"/"payroll late" notices most weeks. The 2025 P&L carries only a token payroll
+  expense — a small fraction of 2024's salaries line, and far too little for a year of weekly
+  runs. **Either payroll genuinely ceased, or it is not being recorded in QuickBooks**, and the
+  two have completely different consequences for the return and for the W-2/941 filings. Resolve
+  before the 1120-S is prepared. _(2025 P&L, 2026-08-14.)_
+- 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
+  the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
+  — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
+  floor scrubber). A 2025 Form 4562 has to be prepared and the deduction claimed. _(2026-08-14.)_
+- ⚠️ **Officer compensation is effectively nil in 2025** where 2024 carried a real salaries line.
+  Two shareholder-employees. Reasonable-compensation exposure — weaker than usual because the year
+  is a large loss and the business is winding down, but it must be a decision, not an oversight.
+  See the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/).
+- ⚠️ **The books do not tie to the 2024 return at 1 Jan 2025 — two separate breaks.** The
+  QuickBooks inventory balance implied by the 2025 figures differs from the ending inventory on the
+  filed 2024 Form 1125-A, and QuickBooks' retained earnings differs from the 2024 return's ordinary
+  loss — **by different amounts**, so it is not one adjusting entry. Needs the QuickBooks balance
+  sheet at 31 Dec 2024 and the inventory account's 2025 ledger detail to resolve. _(2026-08-14.)_
+- ⚠️ **The COGS base moved between 2024 and 2025.** On the 2024 return, cost of goods sold was
+  about a third of reported revenue. In the 2025 books it is close to a third of **gross Shopify
+  sales before discounts** — which, because discounts run over half of gross, is nearly **twice**
+  the same ratio measured against revenue. The 30% rule can be applied to either base but not to a
+  different one each year, and the choice moves the ending inventory materially. **Settle the base
+  explicitly.** _(2026-08-14.)_
+- **Equity is held in two named shareholder accounts, one per principal** (Double holds the names,
+  per §2) — carrying substantial contributed capital, most of it from one of them. **The 2024
+  return's Schedule L does not use that structure**, so a mapping was made when it was prepared and
+  the same mapping has to be repeated. Their classification also decides whether the accumulated
+  losses are deductible or suspended (Form 7203, above). _(2026-08-14.)_
 - 🔧 **That PDF needs the fixed redactor.** `KOLOFLORIDAINC.pdf` carries a font with no Unicode
   map, so a text extraction returns glyph names rather than characters. Read through
   [`tools/redact-doc/`](../../../tools/redact-doc/) at its 2026-08-14 version or later, which
@@ -223,6 +254,15 @@ the actual details.
   reported "0 masked" while four SSN/ITINs sat unrecognised in the file. The tool was fixed the
   same day (decode + an intelligibility gate that refuses to write rather than report a
   misleading zero), with tests and a mutation check. _(Worked by Lilian.)_
+- 2026-08-14 — **Lilian supplied the 2025 QuickBooks P&L and balance sheet** (accrual, exported
+  the same day) and preparation of the 2025 Form 1125-A began. The books turn out to implement the
+  firm's COGS estimate consistently *within* the year, but four things block the return and all
+  four are now in §5: **payroll has apparently stopped**, **no depreciation was recorded**,
+  **officer compensation is nil**, and **the books do not tie to the 2024 return at 1 January** on
+  either inventory or retained earnings. The valuation base for COGS also moved between the two
+  years. Requested from Lilian: the QuickBooks balance sheet at 31 Dec 2024, the inventory
+  account's 2025 ledger detail, and confirmation that nothing was purchased in 2025.
+  _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
