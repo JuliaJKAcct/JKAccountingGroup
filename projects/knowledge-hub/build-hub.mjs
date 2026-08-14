@@ -24,7 +24,7 @@
   "Open" buttons point at the files on GitHub (the repo is the home; the Hub is
   the index). Adjust REPO / BRANCH below if the remote changes.
 */
-import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, writeSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 // Reuse the client-intelligence dashboard engine (PR #77) — the SAME parser and the
@@ -34,6 +34,17 @@ import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-i
 // Lilian's Notebook is embedded from ITS OWN generator, so the Hub can never show a stale
 // copy — same rule as the proposal tools (one source, no second copy to keep in sync).
 import { buildNotebookDoc } from '../lilian-notebook/render/build.mjs';
+// The same gate tools/build.mjs runs — see the block before the tool embeds below.
+import { verifyAll as verifyWalkthroughs } from '../sops/tools/verify.mjs';
+
+// console.error() is buffered when stderr is a pipe — which is exactly how these builds are
+// normally logged — so a message written immediately before process.exit() can be dropped,
+// leaving an exit code 1 with no cause anywhere. writeSync goes straight to the descriptor.
+function die(...lines){
+  for (const l of lines) writeSync(2, l + '\n');
+  process.exit(1);
+}
+
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
@@ -1030,23 +1041,73 @@ function inlineToolDoc(srcFile, title, opts){
       ? read(resolve(repoRoot, 'brand/design-system/fonts-cyrillic-embedded.css')) : '';
     const raw = read(resolve(dir, srcFile));
     // Only the pricing tools carry the shared core; reading it unconditionally would
-    // throw for a tool in any other folder and the catch below would swallow it into a
-    // silent "Tool unavailable" card.
+    // throw for a tool in any other folder, and that would stop the whole Hub build
+    // over a file the tool never needed.
     const core = raw.includes('/*__PRICING_CORE__*/') ? read(resolve(dir, 'pricing-core.js')) : '';
+    // The SOP walkthroughs (ITIN, BTR) share a stylesheet and a case engine that live
+    // beside them. Read each only when the tool actually asks for it — an unconditional
+    // read would throw for a tool in another folder, stopping the whole Hub build over a
+    // file that tool never needed.
+    const toolCss = raw.includes('/*__TOOL_CSS__*/') ? read(resolve(dir, 'case-tool.css')) : '';
+    const caseCore = raw.includes('/*__CASE_CORE__*/') ? read(resolve(dir, 'case-core.js')) : '';
+    // The replacements are passed as FUNCTIONS, not strings. In String.replaceAll a string
+    // replacement treats `$&`, `$\``, `$'` and `$n` as special — so the day someone puts a regex
+    // replacement inside case-core.js, every built page would be silently corrupted at the
+    // point of inlining. A function replacement disables that interpretation entirely.
+    const fonts = read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'));
+    // Read and base64 each image ONCE. A function replacement is called per occurrence,
+    // so inlining these lazily re-encoded a 2MB PNG for every placeholder in the file.
+    const medRev = png('brand/logo/png/JK-medallion-reversed-1024.png');
+    const med = png('brand/logo/png/JK-medallion-primary-1024.png');
+    const logo = png('brand/logo/png/JK-lockup-horizontal-2048.png');
     const body = raw
-      .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
-      .replaceAll('/*__FONTS_CYRILLIC__*/', cyrillic)
-      .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
-      .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
-      .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
-      .replaceAll('/*__PRICING_CORE__*/', core);
+      .replaceAll('/*__FONTS__*/', () => fonts)
+      .replaceAll('/*__FONTS_CYRILLIC__*/', () => cyrillic)
+      .replaceAll('__MEDALLION_REV__', () => medRev)
+      .replaceAll('__MEDALLION__', () => med)
+      .replaceAll('__LOGO__', () => logo)
+      .replaceAll('/*__PRICING_CORE__*/', () => core)
+      .replaceAll('/*__TOOL_CSS__*/', () => toolCss)
+      .replaceAll('/*__CASE_CORE__*/', () => caseCore);
+    // A placeholder that survives substitution embeds a tool with no styles or no case
+    // engine — which reads as a broken page, not as a build error. Throwing hands it to
+    // the catch below, which names the file and stops the build.
+    // Any surviving placeholder, not a hand-written list — the list drifts behind the
+    // tools, and a placeholder that ships raw reads as a broken page, not a build error.
+    const left = [...new Set([...body.matchAll(/\/\*__[A-Z0-9_]+__\*\/|__[A-Z][A-Z0-9_]*__/g)]
+      .map((m) => m[0]))];
+    if (left.length) throw new Error(srcFile + ': unresolved build placeholder(s) ' + left.join(', '));
     return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
       + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + '</title></head><body>\n'
       + body + '\n</body></html>';
-  }catch(e){ return ''; }
+  }catch(e){
+    // A silent '' ships a Hub whose build log looks clean while the tool's card holds a
+    // "could not be built" callout with no cause anywhere. Print the reason — the callout
+    // tells the reader to look here for it.
+    die('✗ tool embed failed: ' + srcFile + ' — ' + e.message,
+    // Stop NOW, like tools/build.mjs and the verifyWalkthroughs gate below both do.
+    // Setting exitCode alone let the build run to completion, write index.html and the
+    // fragment with a dead "Tool unavailable" card, and print the usual "Hub built: …"
+    // success lines — so the failure was one line of log above a page that looked fine,
+    // and the publish step downstream had no reason to stop.
+        '✗ refusing to build a Hub with a tool that could not be embedded.');
+  }
+}
+// The published surface runs the SAME gate as tools/build.mjs. A step added without a
+// seed shape, or a step whose wording depends on the answers, ships silently and comes
+// back wrong when someone reopens the case from its Double note — and the Hub is where
+// the team actually opens these tools, so gating only the standalone build gated the copy
+// nobody uses. verify.mjs deliberately reads the .src.html, never the gitignored builds.
+{
+  const problems = verifyWalkthroughs(resolve(repoRoot, 'projects/sops/tools'));
+  if (problems.length){
+    die(...problems.map((p) => '✗ ' + p),
+        '✗ refusing to embed a walkthrough that would mislabel a reopened case.');
+  }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
 const ITIN_DOC    = inlineToolDoc('itin-w7-walkthrough.src.html', 'JK Accounting Group — ITIN Application Walkthrough', { dir: 'projects/sops/tools' });
+const BTR_DOC     = inlineToolDoc('btr-walkthrough.src.html', 'JK Accounting Group — Business Tax Receipt Walkthrough', { dir: 'projects/sops/tools' });
 const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator', { cyrillic: true });
 
 function toolIframe(doc, titleAttr){
@@ -1054,7 +1115,13 @@ function toolIframe(doc, titleAttr){
     ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
       + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
       + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
-    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>This tool could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
+    // The fallback is REACHABLE and must stay. inlineToolDoc() stops the build itself, so
+    // its callers never arrive here — but NOTEBOOK_DOC is also a caller and deliberately
+    // returns '' on failure, so throwing here took the whole Hub down over a bad note,
+    // with a message blaming inlineToolDoc. A build failure in one embedded page should
+    // degrade that card, not the Hub; the tools get the stricter treatment because a
+    // half-built TOOL is worked from as if it were whole.
+    : `<div class="callout warn"><div class="cx"><div class="cl">Not available</div><p>This page could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
 }
 function calcReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1069,6 +1136,13 @@ function itinReaderInner(){
     + `<h1>ITIN Application Walkthrough<span class="loc">Form W-7, decided one applicant at a time</span></h1>`
     + `<p class="lede">For anyone preparing an ITIN application — including someone who has never done one. It asks plain questions (is this a dependent? which country? how old? do we have the passport?) and works out the <b>reason box</b>, the <b>documents</b>, whether <b>residency proof</b> applies, <b>who may sign</b>, and what goes in the envelope — then prints a <b>preparation sheet for that one applicant</b>. Three tabs: the <b>walkthrough</b>, a searchable <b>field-by-field reference</b> to every line of Form W-7 and Form W-7-COA, and a <b>case tracker</b> that follows one client through the weeks an application takes — a tailored checklist you tick off, a note on each step and a running log, with the durable copy pasted into that client's case note in Double. The reasoning behind it is the <b>ITIN Application (Form W-7)</b> SOP.</p>`
     + `</div></section><div class="page">${toolIframe(ITIN_DOC, 'ITIN Application Walkthrough')}</div>`;
+}
+function btrToolReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Business filings · internal</p>`
+    + `<h1>Business Tax Receipt Walkthrough<span class="loc">Hollywood + Broward, one business at a time</span></h1>`
+    + `<p class="lede">For anyone getting a Florida Business Tax Receipt for a business in Hollywood. It settles the <b>zoning gate</b> first — the one question that decides whether there is a filing at all — then works out the <b>documents to have ready as PDFs</b>, the answers this business gives on each screen of <b>both</b> applications, the <b>two separate fees to two different governments</b>, and what to do when the city comes back asking for something. Three tabs: the <b>walkthrough</b>, a searchable <b>reference</b> to both applications screen by screen with the full email map, and a <b>case tracker</b> that follows one business through the weeks the two filings take — including the county payment email that hides in Gmail's Updates tab, and the reply-to-the-reviewer step without which the receipt never arrives. The reasoning behind it is the <b>Business Tax Receipt</b> SOP.</p>`
+    + `</div></section><div class="page">${toolIframe(BTR_DOC, 'Business Tax Receipt Walkthrough')}</div>`;
 }
 function monthlyReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1849,6 +1923,11 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'itin-w7-walkthrough', label: 'Open the walkthrough' } },
 
+  { band: 'tool', kind: 'Interactive tool', name: 'Business Tax Receipt Walkthrough', owner: 'julia',
+    blurb: 'Get a Florida Business Tax Receipt for a Hollywood business without holding the whole procedure in your head. It asks the zoning question first — will the owner actually live there? — because that one answer decides whether there is a filing at all, and stops the walkthrough dead when the answer means there is not. Then it works out the PDFs to have ready, the answers this business gives on each screen of both applications, the two separate fees paid to two different governments, and the follow-up round where paying is not the last step. A searchable reference to both applications screen by screen — with the full email map, the fees, the Sept 30 renewal and the pitfalls that have actually bitten — sits on the second tab. The third tracks one business across the weeks the two filings take: a checklist pruned to that business, a note on each step, a running log, and a block you paste into the client’s case note in Double, which is both the durable record and how you reopen the case on another machine. Runs entirely in the browser; the only client data it holds is the reference you choose and your own notes.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'btr-walkthrough', label: 'Open the walkthrough' } },
+
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
     formats: ['PDF', 'PNG'],
@@ -1889,6 +1968,7 @@ const TEMPLATES = [
 readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="itin-w7-walkthrough" hidden>${itinReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="btr-walkthrough" hidden>${btrToolReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="lilian-notebook" hidden>${notebookReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
@@ -2535,15 +2615,43 @@ if (bareMermaid.length) {
 const assetCheck = assertAssetsResolvable(html);   // throws rather than shipping a dead download
 
 const outStandalone = resolve(here, 'index.html');
-writeFileSync(outStandalone, html);
 // Artifact fragment (body-only; the Artifact tool supplies <head>/<body>)
 const fragment = `<title>JK Accounting Group — Knowledge Hub</title>\n<style>\n${style}</style>\n\n${BODY.trim()}\n`;
 const outFrag = resolve(here, 'scratch/hub.artifact.html');
+
+// The ceiling is checked BEFORE anything is written. Setting exitCode after writing the
+// files and printing "Hub built: …" is the pattern this same build replaced with die()
+// in inlineToolDoc — it leaves an unpublishable page on disk under a success message,
+// and whoever reads the log top-down sees the success first.
+// Buffer.byteLength, not .length: a JS string's length counts UTF-16 code units, and this
+// page is full of em dashes, arrows and Cyrillic. index.html measured ~13,000 units short
+// of its real byte size — so the guard under-reported and could pass a page that then
+// fails at publish, which is the one moment it exists to prevent.
+const CEILING = 16 * 1024 * 1024;
+const biggest = Math.max(Buffer.byteLength(html, 'utf8'), Buffer.byteLength(fragment, 'utf8'));
+const pct = (biggest / CEILING) * 100;
+if (biggest > CEILING) {
+  die(`✗ OVER THE 16MB ARTIFACT CEILING (${pct.toFixed(0)}%) — this will not publish.`,
+      '✗ nothing was written. Drop or shrink an embedded tool, then rebuild.');
+}
+
+writeFileSync(outStandalone, html);
 // scratch/ is gitignored, so it is absent in a fresh clone — create it rather than throwing ENOENT
 mkdirSync(dirname(outFrag), { recursive: true });
 writeFileSync(outFrag, fragment);
 
 console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${totalCount} documents`);
-console.error(`standalone → ${outStandalone} (${(html.length/1024).toFixed(0)}KB)`);
-console.error(`fragment   → ${outFrag} (${(fragment.length/1024).toFixed(0)}KB)`);
+console.error(`standalone → ${outStandalone} (${(Buffer.byteLength(html,'utf8')/1024).toFixed(0)}KB)`);
+console.error(`fragment   → ${outFrag} (${(Buffer.byteLength(fragment,'utf8')/1024).toFixed(0)}KB)`);
 console.error(`assets     → ${assetCheck.embedded} binaries embedded once, used in ${assetCheck.sites} places — 16MB is the Artifact ceiling`);
+
+// Say how close we are to that ceiling, every build. The Hub only grows — each embedded
+// tool re-inlines its own font payload inside its iframe, and a strict CSP forbids
+// sharing them across iframes, so a new tool costs ~0.9MB and there is no dedupe to do.
+// Without this line the ceiling is discovered at PUBLISH time, with the work already
+// finished and nothing staged to cut. (Over the ceiling is handled above, before writing.)
+if (pct >= 70) {
+  console.error(`⚠ ${pct.toFixed(0)}% of the 16MB Artifact ceiling — roughly ${Math.floor((CEILING - biggest) / (0.95 * 1024 * 1024))} more embedded tool(s) of the current size will fit.`);
+} else {
+  console.error(`size       → ${pct.toFixed(0)}% of the 16MB Artifact ceiling`);
+}

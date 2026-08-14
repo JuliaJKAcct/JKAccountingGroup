@@ -15,6 +15,22 @@ Receipt (BTR) for a business physically located in **Hollywood, FL (Broward
 County)** — intake questions, the two filings, both applications screen-by-
 screen, every link, and the caveats. Everything for this task lives here.
 
+> 🧭 **Doing one right now? Use the walkthrough tool, not this document.**
+> The **Business Tax Receipt Walkthrough** — in the Knowledge Hub under
+> *Templates → Interactive tools*, source
+> [`tools/btr-walkthrough.src.html`](./tools/btr-walkthrough.src.html) — asks the
+> intake questions in §0 in plain language and turns this SOP into a
+> **preparation sheet for that one business**: it settles the §1 zoning gate
+> first (and **stops** when the answer means there is no valid filing), lists the
+> PDFs to have ready, gives the answers that business gives on each screen of
+> both applications, and states the two fees. Its **case tracker** then follows
+> the client through the weeks the two filings take, with the durable copy
+> pasted into their running case note in Double.
+>
+> This document stays the **authority**: when a screen or a fee changes, change
+> it here and in the tool together. Read it end-to-end at least once — the tool
+> applies the procedure, it does not replace knowing it.
+
 > **Where client data goes:** a real business's name, address, EIN, folio, and
 > the filled-in forms are **sensitive** and belong in **your client systems**
 > (Google Drive / Double / QuickBooks) — **not** in this repo. Copy the blank

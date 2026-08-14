@@ -1,0 +1,939 @@
+<style>
+/*__FONTS__*/
+/*__TOOL_CSS__*/
+</style>
+
+<header class="top">
+  <div class="in">
+    <img src="__MEDALLION_REV__" alt="">
+    <div class="tx">
+      <p class="kick">JK Accounting Group · internal tool</p>
+      <h1>Business Tax Receipt Walkthrough</h1>
+      <p>Answer the questions in plain language. It settles the zoning gate first, then works out the documents, the two filings and the two fees — and prints a preparation sheet for this one business.</p>
+    </div>
+    <div class="tbtns">
+      <button class="tbtn" id="themeBtn" type="button">Theme</button>
+      <button class="tbtn" id="printBtn" type="button">Print</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab" id="tabWalk" role="tab" aria-selected="true" aria-controls="walk" type="button">Walkthrough</button>
+    <button class="tab" id="tabRef" role="tab" aria-selected="false" aria-controls="ref" type="button">Reference — both applications, screen by screen</button>
+    <button class="tab" id="tabCase" role="tab" aria-selected="false" aria-controls="cases" type="button">Case tracker<span class="cbadge" id="caseCount" hidden>0</span></button>
+  </div>
+
+  <!-- ============================= WALKTHROUGH ============================= -->
+  <section id="walk" role="tabpanel" aria-labelledby="tabWalk">
+    <div id="questions"></div>
+    <div class="act">
+      <button class="btn cta" id="build" type="button" disabled>Build the preparation sheet</button>
+      <button class="btn ghost" id="reset" type="button">Start over</button>
+      <span class="note-inline" id="progress" role="status" aria-live="polite"></span>
+    </div>
+    <div id="out" class="sheet" tabindex="-1" hidden></div>
+  </section>
+
+  <!-- ============================= REFERENCE ============================= -->
+  <section id="ref" role="tabpanel" aria-labelledby="tabRef" hidden>
+    <input class="srch" id="srch" type="text" placeholder="Search — try “folio”, “PayPal”, “sublease”, “Sept 30”, “Updates tab”…" aria-label="Search the reference">
+    <div id="fields"></div>
+    <p class="nores" id="nores">Nothing matches that. Try a screen name (<b>Screen 4</b>), or a word from the process (<b>zoning</b>, <b>renewal</b>, <b>upload</b>).</p>
+  </section>
+
+  <!-- ============================= CASE TRACKER ============================= -->
+  <section id="cases" role="tabpanel" aria-labelledby="tabCase" hidden>
+    <div id="caseList"></div>
+    <div id="caseOne" hidden></div>
+    <div id="caseImport" hidden></div>
+  </section>
+</div>
+
+<script>
+"use strict";
+/* =========================================================================
+   Business Tax Receipt — City of Hollywood (LBTR) + Broward County (BTExpress)
+
+   Everything here comes from the SOP,
+   projects/sops/hollywood-broward-business-tax-receipt.md, which was verified
+   by walking real applications through both systems. When a city or county
+   screen changes, update the SOP and this file together — the SOP is the
+   authority and this tool is its interactive form.
+   ========================================================================= */
+
+/* ======================================================================
+   THE SHARED CASE ENGINE — projects/sops/tools/case-core.js, inlined here by
+   the build. It owns everything a case tracker DOES: the sandbox-proof
+   dialogs, storage and its cross-window merge, the client's Double link, the
+   pasteable note, import, download, and the rendering of the case views.
+   This file owns only what a BTR filing IS — the questions, the rules, the
+   preparation sheet, and buildSteps() below.
+   The ITIN walkthrough inlines the same file. That is the point: the eight
+   silent-failure fixes that engine carries were paid for once.
+   ====================================================================== */
+/*__CASE_CORE__*/
+
+/* ---------------------------- the reference ---------------------------- */
+var FIELDS = [
+ {g:'Before you file'},
+ {n:'§1', t:'The zoning gate — settle it before anything else', k:'zoning gate reside residential planning variance home occupation 559.955',
+  b:"<p>One question decides whether there is a filing at all: <b>will the owner reside at the business address?</b></p><p><b>Yes</b> → a genuine home occupation. The Certificate of Use exemption for single-family/condo applies, and Fla. Stat. <b>§ 559.955</b> (Home-Based Business Act) protects the use, subject to reasonable standards — parking, signage, no external evidence of the business, no heavy customer traffic.</p><p><b>No, and the parcel is residential</b> → <b>stop and call City of Hollywood Planning &amp; Urban Design: 954-921-3471, opt. 2</b> before doing anything else. Verify the parcel at <span class='typein'>bcpa.net</span>.</p>",
+  trap:"<b>Confirmed with Planning, Jul 2026:</b> a residential-zoned single-family lot used 100% for business <b>with no resident is not permitted</b>, and no variance or special-exception path was offered. Do not assume it can be worked around."},
+ {n:'§1', t:'A Business Tax Receipt is NOT zoning approval', k:'zoning approval lawful use certification not legal',
+  b:"<p>The city's own certification, which you sign on Screen 3, says it plainly:</p><p><em>“issuance of a local business tax receipt by the City of Hollywood does not mean that the City has determined that the existing or proposed use of a location is lawful… [it] does not legalize or condone the nature of the business being conducted if contrary to any local, state or federal laws.”</em></p><p>The single-family exemption removes the Certificate of Use <b>paperwork</b>; it does not by itself confirm the use is allowed.</p>"},
+ {n:'Order', t:'County first, then city — and why', k:'order county first city sequence active account',
+  b:"<p>The City of Hollywood application <b>requires an active Broward County Tax Collector account</b> as supporting documentation. So the county filing (BTExpress) comes first, and the city filing (LBTR) second.</p>"},
+ {n:'Email', t:'Use the FIRM’s email on both applications — never the client’s', k:'email firm client contact applicant tracking',
+  b:"<p>On <b>both</b> applications, put the firm's email in the applicant / contact-email field. Every confirmation and every follow-up — a wrong category, a “provide your state license”, pay-the-difference instructions, the “Track Your Application” links — goes to whatever address is on the application.</p>",
+  trap:"This has already cost the firm a filing: a city application went out with the client's email, so no tracking email ever reached us and the status could not be checked at all."},
+
+ {g:'① Broward County — BTExpress'},
+ {n:'Start', t:'Where to apply', k:'btexpress broward county apply url link',
+  b:"<p>Apply at <span class='typein'>broward.county-taxes.com/btexpress</span> (start page: <span class='typein'>/tcb/app/btexpress/main/start_page</span>).</p><p>Broward County Tax Collector: <b>954-357-4829</b>.</p>"},
+ {n:'Screen 1', t:'Required Documentation (preview)', k:'screen 1 county required documentation preview',
+  b:"<p>A summary of what to gather — corporate documents and/or Fictitious Name Registration, a State Certification from the matching agency. This list is <b>generated from your answers on Screen 4</b>, so do not take the exact wording literally yet.</p>"},
+ {n:'Screen 2', t:'Fictitious (DBA) name', k:'screen 2 dba fictitious 865.09 legal name',
+  b:"<p>Fla. Stat. § 865.09. Choose either:</p><ul class='plain'><li><em>“This business has registered a fictitious name…”</em> — have the DBA from Sunbiz; or</li><li><em>“This business does not require a registered fictitious name”</em> + a reason, e.g. <span class='typein'>I am doing business under my full legal name.</span></li></ul><p>The second is correct when an LLC or Corp operates under its own registered entity name — the Sunbiz name <b>is</b> the legal name, so there is no separate DBA.</p>"},
+ {n:'Screen 3', t:'Occupation information', k:'screen 3 occupation employees vending hotel restaurant',
+  b:"<p>Describe the type of business / primary function (free text — <b>be specific, it drives the classification</b>) · hotel, motel or lodging? · restaurant, bar or eating establishment? · <b>number of employees including the owner</b> (required) · vending machines?</p>"},
+ {n:'Screen 4', t:'The 13-question documentation questionnaire', k:'screen 4 thirteen questions dbpr agriculture financial services ofr ahca bar health regulated',
+  b:"<p>Each “Yes” triggers a licence to upload:</p><ul class='plain'><li>1 — in the <b>unincorporated</b> area of Broward? <em>(No for any city, Hollywood included)</em></li><li>2 — a FL corporation/LLC/LP/LLP, or a business using a DBA?</li><li>3 — within the <b>City of West Park</b>? <em>(that city requires its own licence first)</em></li><li>4 — regulated by <b>DBPR</b>: contractors, professionals, real estate, hotels, restaurants, salons?</li><li>5 — construction needing a <b>Certificate of Competency</b>?</li><li>6 — <b>FL Dept. of Agriculture &amp; Consumer Services</b>: auto repair, travel agency, telemarketing, exercise studio, pest control, grocery?</li><li>7 — <b>FL Dept. of Financial Services</b>: insurance adjusters, bail bonds, funeral homes, fire protection?</li><li>8 — <b>FL Office of Financial Regulation</b>: collection agency, loan originators, money services, investment adviser, title loan lenders?</li><li>9 — <b>FL Agency for Healthcare Administration</b>: adult day care, assisted living, clinical labs, home health?</li><li>10 — auto body/repair, limo or moving company regulated by Broward County?</li><li>11 — attorney-at-law? <em>(current FL Bar number required)</em></li><li>12 — Broward County Health Department: tanning, tattoo, body piercing?</li><li>13 — any other state agency not listed above?</li></ul>",
+  trap:"Question 1 is <b>No</b> for a Hollywood business — Hollywood is an incorporated city, not the unincorporated county."},
+ {n:'Emails', t:'The county is a TWO-email process with a wait in between', k:'email confirmation grantstreet approval pay updates tab gmail',
+  b:"<p>From <span class='typein'>no-reply@grantstreet.com</span>:</p><p><b>1. “Confirmation Required for Submitted BTExpress™ Application”</b> — arrives right after you submit, and contains a <b>link you must click</b>. The application is not actually sent for processing until you click it. This is a submission step, <b>not</b> an approval.</p><p><b>2. “Your BTExpress™ Application”</b> — arrives ~24–48 h later. This is the <b>approval, and the email that tells you to pay</b>. Then use <b>“Print Business Tax Receipt.”</b></p>",
+  trap:"That second email <b>can land in Gmail's “Updates” tab</b>, not the Primary inbox — so it is easy to miss and assume you are done. You are not done until you pay. Search <span class='typein'>from:no-reply@grantstreet.com</span>."},
+
+ {g:'② City of Hollywood — LBTR'},
+ {n:'Start', t:'Where to apply', k:'lbtr hollywood apply url link city hall paper',
+  b:"<p>Apply at <span class='typein'>apps.hollywoodfl.org/LbtrOnline/</span> · info page <span class='typein'>hollywoodfl.org/218/Local-Business-Tax</span>.</p><p>In person: City Hall, 2600 Hollywood Blvd, Room 103 (Mon–Thu 7am–6pm, <b>closed Friday</b>). There is a paper alternative for commercial locations.</p><p>The site first looks up the <b>parcel</b> — the Site Address and <b>Folio Number</b> auto-fill from the address you enter.</p>"},
+ {n:'Screen 1', t:'Business Category, Classification &amp; Tax Basis — where the fee is set', k:'screen 1 city category classification tax basis workers fee show all classifications',
+  b:"<p><b>Business Category</b> (dropdown — e.g. “Service/Other Business”) · <b>Business Classification</b> (the specific line of business, e.g. “Consultant”, “Retail Merchant”) · <b>Tax Classification</b> (worker/size tiers, e.g. “0–1 Worker”) · <b>Tax Basis Units</b> (required) · <b>Number of Employees</b> including the owner.</p><p>A <b>“Show All Classifications”</b> button lists every option if you are unsure which fits.</p>",
+  trap:"This screen sets the fee. A wrong classification is the single most common cause of the city re-categorising the business later and billing a difference — which then needs its own payment <em>and</em> a reply to the reviewer."},
+ {n:'Screen 2', t:'About your business + contact information', k:'screen 2 homebased company type dba mailing address phone email ein ssn garbage website',
+  b:"<p><b>Homebased?</b> · <b>Company Type</b> · <b>Business Name</b>; <b>Business DBA</b> · <b>Mailing Address</b> (with “Same as Site Address?” and “Non-US Mailing?” checkboxes) · Phone, Cell, <b>Email</b> · <b>ID Type: Social Security # or Federal EIN</b> (required by state law) · <b>Describe your business in detail</b> · Website · Garbage Service.</p><p>Then <b>Contact Information</b>: contact name (First / MI / Last), title, and contact address/phone/email, with a “Same as Business Info?” checkbox.</p>",
+  trap:"Both email fields — business and contact — take the <b>firm's</b> address, not the client's."},
+ {n:'Screen 3', t:'Documentation + certification', k:'screen 3 upload proof of location lease deed entity articles certification applicant pdf 10mb',
+  b:"<p><b>Upload — proof of location:</b> a signed lease <b>or</b> proof of ownership (property tax bill, warranty deed, bill of sale, insurance certificate, or utility bill). <em>PDF only, ≤ 10 MB.</em></p><p><b>Upload — entity proof:</b> Articles of Incorporation <b>or</b> Fictitious Name Registration from Sunbiz. <em>PDF only, ≤ 10 MB.</em></p><p><b>Certification</b> — you affirm the information is true, accept penalties for false information, acknowledge the <b>$25 fee is non-refundable</b>, and acknowledge that the receipt is not a determination that the use of the location is lawful.</p><p>Then <b>Applicant's Name</b> and <b>Applicant's Title</b>, and → <b>Make a Payment</b>.</p>"},
+ {n:'Emails', t:'What the city sends, and where to check status', k:'track your application status update application id folio check status make a payment upload document',
+  b:"<p>From <span class='typein'>paybusinesstaxreceipt@hollywoodfl.org</span>:</p><p><b>1. “Track Your Local Business Tax Receipt Application #&lt;ID&gt; for &lt;BUSINESS&gt;”</b> — right after you submit. Shows the <b>Application ID, Folio, Business Name, Street Address and Application Status</b>, with three links: <b>Check Status · Make a Payment · Upload a Document</b>. <b>This is the email to keep.</b></p><p><b>2. “Status Update for … Application #&lt;ID&gt;”</b> — as the status changes. Same three links.</p><p>Or use the city's <b>“Check Application Status”</b> page — it needs the Application ID / Folio.</p>"},
+ {n:'Follow-up', t:'The “only if something needs fixing” email — and how it actually completes', k:'follow up business tax application reviewer treasury category difference renew local business tax reference number reply confirm',
+  b:"<p>From <span class='typein'>BusinessTax@hollywoodfl.org</span>, or directly from a Treasury revenue analyst. Subject <b>“BUSINESS TAX APPLICATION #&lt;ID&gt; - &lt;ADDRESS&gt; - &lt;BUSINESS&gt;”</b>. Sent <b>only</b> if there is an issue: a wrong category, a state licence they need, or a pay-the-difference balance.</p><p>When the city re-categorises the business it emails a <b>due balance</b> with a <b>“Renew Local Business Tax”</b> payment link and the business-tax account number. That balance is paid through the <b>City's online payment centre</b> — a <b>different channel</b> from the PayPal fee at submission — and its receipt is a <b>“City of Hollywood Treasury Department”</b> confirmation with a <b>reference number</b>. Save it with the file.</p>",
+  trap:"<b>Paying is not the last step.</b> The receipt is not issued automatically — you must <b>reply to the reviewer to confirm you paid</b>, and only then do they email the tax receipt. Pay and stay silent and the receipt never comes."},
+
+ {g:'Money, and afterwards'},
+ {n:'Fees', t:'Two receipts, two governments, two separate fees', k:'fees two payments city county paypal amount 25 non-refundable',
+  b:"<p><b>City of Hollywood (LBTR)</b> — a <b>$25 non-refundable</b> application fee <b>plus</b> the local business tax set by the classification on Screen 1. For a small licensed business (0–1 worker) roughly <b>$120 total</b> (e.g. $25 + ~$95 tax). Paid by card through <b>PayPal</b> at submission.</p><p><b>Broward County (BTExpress)</b> — a <b>separate</b> county business tax, usually much smaller (often ~$30–$45). Billed <b>after</b> the county approves, and paid before the county receipt is issued.</p><p>Amounts are approximate and depend on classification and year — always verify what is shown at submission.</p>",
+  trap:"Neither payment covers the other. To be fully covered the client makes <b>two separate payments in two separate systems</b>."},
+ {n:'Dates', t:'The tax year, the Sept 30 expiry and the 50% rule', k:'renewal september 30 october 1 tax year 50% april 1 205.0535 late penalties',
+  b:"<p>The tax year runs <b>Oct 1 – Sep 30</b>. Every receipt <b>expires Sept 30</b> and must be renewed each year.</p><p><b>The 50% rule:</b> a <b>first-time</b> receipt issued <b>on or after April 1</b> pays half the annual tax (Fla. Stat. § 205.0535 / § 205.053). It can apply to each of the two receipts.</p><p>Late renewals carry escalating statutory penalties — verify the current schedule if filing late.</p>"},
+ {n:'After', t:'Once the receipts are in hand', k:'post display premises renewal calendar issued',
+  b:"<p>“Issuance” only means the city and county have <b>granted</b> the receipts. Then:</p><ul class='plain'><li><b>Post each receipt at the place of business</b> — Florida requires it to be displayed.</li><li><b>Calendar the Sept 30 renewal.</b></li></ul>"},
+ {n:'Also', t:'State &amp; federal registrations the activity may require', k:'sunbiz ein dr-1 sales tax reemployment dbpr dcf doh ahca dr-405 tangible',
+  b:"<p>Not part of the BTR, but frequently needed alongside it:</p><ul class='plain'><li><b>Entity on Sunbiz</b> — LLC/Corp registered, or a Fictitious Name / DBA (§ 865.09).</li><li><b>Federal EIN</b> from the IRS.</li><li><b>FL sales &amp; use tax</b> — Form <b>DR-1</b>, if selling or renting taxable goods or certain services; add <b>Reemployment Tax</b> if there are employees.</li><li><b>Tangible property ≥ $25,000</b> → a <b>DR-405</b> return to the Property Appraiser by <b>April 1</b>.</li><li><b>Professional / industry licence</b> — DBPR, DCF, DOH/AHCA, per the activity.</li></ul>"},
+
+ {g:'The pitfalls that have actually bitten'},
+ {n:'Pitfall', t:'The sub-tenant proof-of-location rejection', k:'sublease sub-tenant master lease property owner landlord consent letter rejected',
+  b:"<p>If the applicant is a <b>sub-tenant</b> — leasing from a master tenant rather than the property owner — a signed sublease alone can still get bounced. The city's follow-up email may state, as boilerplate, that <em>“sublessees operating a business are required to provide a signed agreement between sublessee and the property owner”</em>, even though a valid sublease was already submitted. The reviewer's template assumes a direct landlord ↔ tenant relationship; a document directly between the sub-tenant and the owner may genuinely not exist.</p><p><b>Resolution:</b> reply with <b>both</b> documents together to show the complete chain of the right to occupy — (a) the master lease between the property owner and the master tenant, and (b) the sublease between the master tenant and the applicant — and explain why no direct owner-to-sub-tenant lease exists.</p><p><b>Fallback</b> if the city still insists on something signed by the owner: a short <b>landlord consent / acknowledgment letter</b> — one page, signed by the property owner, acknowledging the sub-tenant's occupancy. Far easier to obtain than a new lease, and it satisfies the literal wording.</p>",
+  trap:"First observed Jul 2026 on a real filing. Have the master lease ready <b>before</b> submitting, not after the rejection."},
+ {n:'Pitfall', t:'The rest of the list', k:'pitfalls skipping tier wrong classification licence missing renewal',
+  b:"<ul class='plain'><li><b>Skipping a tier</b> — both the city and the county receipts are required.</li><li><b>Wrong classification</b> — it drives the fee and which licence; get it exact at intake.</li><li><b>A regulated activity without the matching licence</b> — it will not issue until the licence is in hand and the <b>name and address match</b> the application.</li><li><b>The client's email on the application</b> — the firm then cannot track the filing at all.</li><li><b>Treating the BTR as zoning approval</b> — it is not.</li><li><b>Paying a category-difference balance and stopping</b> — reply to the reviewer, or no receipt comes.</li><li><b>Missing the Sept 30 renewal.</b></li></ul>"},
+
+ {g:'Contacts'},
+ {n:'Who', t:'Every number and link in one place', k:'contacts phone links planning tax collector sunbiz dbpr ofr revenue bcpa',
+  b:"<ul class='plain'><li><b>City of Hollywood — Planning &amp; Urban Design</b> (zoning / CU): <b>954-921-3471, opt. 2</b></li><li><b>Broward County Tax Collector</b> (county BTR): <b>954-357-4829</b> · <span class='typein'>broward.county-taxes.com/btexpress</span></li><li><b>City LBTR application:</b> <span class='typein'>apps.hollywoodfl.org/LbtrOnline/</span> · <b>renewals:</b> <span class='typein'>apps.hollywoodfl.org/LBTRrenewals/</span></li><li><b>Sunbiz</b> — corp search <span class='typein'>search.sunbiz.org</span> · fictitious search <span class='typein'>dos.sunbiz.org/ficinam.html</span> · file a DBA <span class='typein'>efile.sunbiz.org/ficreg01.html</span></li><li><b>FL DBPR</b> <span class='typein'>myfloridalicense.com</span> · <b>FL OFR</b> <span class='typein'>flofr.gov</span> · <b>FL Dept. of Revenue</b> <span class='typein'>floridarevenue.com</span></li><li><b>Broward County Property Appraiser</b> (folio, zoning lookup, DR-405): <span class='typein'>bcpa.net</span></li></ul>"}
+];
+
+/* ---------------------------- the walkthrough --------------------------- */
+var A = {}; // answers
+
+// Which regulator, if any — Screen 4's thirteen questions collapsed to the agency
+// that actually has to issue something, because that is what changes the work.
+var REG = {
+  none:      ['No regulator', ''],
+  dbpr:      ['DBPR', 'Contractors, professionals, real estate, hotels, restaurants, salons — Screen 4 Q4. <b>myfloridalicense.com</b>'],
+  competency:['Broward Certificate of Competency', 'Construction / contractor — Screen 4 Q5, from Broward Permitting, Licensing &amp; Consumer Protection.'],
+  agriculture:['FL Dept. of Agriculture &amp; Consumer Services', 'Auto repair, travel agency, telemarketing, exercise studio, pest control, grocery — Screen 4 Q6.'],
+  dfs:       ['FL Dept. of Financial Services', 'Insurance adjusters, bail bonds, funeral homes, fire protection / fireworks / explosives — Screen 4 Q7.'],
+  ofr:       ['FL Office of Financial Regulation', 'Collection agency, loan originators/brokers/lenders, money services, investment adviser, title loan lenders — Screen 4 Q8. <b>flofr.gov</b>'],
+  ahca:      ['FL Agency for Healthcare Administration', 'Adult day care, assisted living, clinical labs, home health — Screen 4 Q9.'],
+  broward:   ['Broward County', 'Auto body/repair, limo, or moving company — Screen 4 Q10.'],
+  bar:       ['The Florida Bar', 'Attorney-at-law — Screen 4 Q11. The current <b>FL Bar number</b> is required.'],
+  health:    ['Broward County Health Department', 'Tanning, tattoo, body piercing — Screen 4 Q12.'],
+  other:     ['Another state agency', 'Screen 4 Q13. Identify the agency before filing — the county generates its document list from this answer.']
+};
+
+// A home occupation is one the owner actually lives at. Everything the zoning gate
+// turns on is this one distinction, so it is derived once and used everywhere.
+function homeBased(a){ return a.premises === 'home'; }
+function regulated(a){ return a.regulator && a.regulator !== 'none'; }
+
+var Q = [
+ {id:'city', n:'Start', h:'Where is the business physically located?',
+  hint:'This SOP is written for a business in Hollywood, Broward County. The county half applies to any Broward city; the city half does not.',
+  o:[['hollywood','City of Hollywood, Broward County','The case this walkthrough covers end to end.'],
+     ['broward','Another city in Broward County','The county filing is identical. That city’s own receipt is not covered here.'],
+     ['other','Outside Broward County','Stop — neither application applies.']]},
+
+ {id:'premises', n:'The zoning gate', h:'What kind of premises is the business at?',
+  hint:'This is the single most important question and it comes early on purpose. It decides whether there is a filing at all.',
+  o:[['commercial-lease','A commercial space, leased','Proof of location will be the signed lease.'],
+     ['commercial-own','A commercial space, owned','Proof of location will be the deed or tax bill.'],
+     ['home','The owner’s home — and the owner lives there','A genuine home occupation. Fla. Stat. § 559.955 protects the use.'],
+     ['resnolive','A residential property where nobody will reside','Stop — call Planning before filing anything.']]},
+
+ {id:'planning', n:'The zoning gate', h:'Has City of Hollywood Planning confirmed this specific parcel?',
+  when:function(a){return a.premises==='resnolive';},
+  hint:'Call Planning & Urban Design on 954-921-3471, opt. 2, and ask about this parcel by address. Verify the parcel at bcpa.net first.',
+  o:[['permitted','Yes — Planning confirmed the use is permitted here','Record who said it and when, then continue.'],
+     ['refused','Planning said it is not permitted','There is no valid filing. Stop.'],
+     ['no','Not yet — nobody has called','Call before doing anything else.']]},
+
+ {id:'sublet', n:'The premises', h:'Is the applicant a sub-tenant — leasing from a master tenant rather than the property owner?',
+  when:function(a){return a.premises==='commercial-lease';},
+  hint:'It changes what the city will accept as proof of location, and it has already caused one rejection.',
+  o:[['yes','Yes — they sublease from a master tenant','Have the master lease ready as well as the sublease.'],
+     ['no','No — they lease directly from the property owner','']]},
+
+ {id:'entity', n:'The business', h:'What is the entity type?',
+  hint:'It decides what counts as entity proof on both applications, and the Company Type dropdown on the city’s Screen 2.',
+  o:[['llc','LLC','Entity proof = Articles of Organization.'],
+     ['corp','Corporation or S-corp','Entity proof = Articles of Incorporation.'],
+     ['partnership','Partnership (LP / LLP)','Entity proof = the filed partnership documents.'],
+     ['sole','Sole proprietor','No entity filing — but a DBA registration may still be needed.']]},
+
+ {id:'dba', n:'The business', h:'Will it trade under a name different from the legal name?',
+  hint:'A different trading name is a Fictitious Name (DBA) under Fla. Stat. § 865.09 and has to be registered on Sunbiz before it can be used on the applications.',
+  o:[['yes','Yes — there is a trade name / DBA','Register it on Sunbiz; the registration becomes the entity proof.'],
+     ['no','No — it trades under its own legal name','County Screen 2: “does not require a registered fictitious name.”']]},
+
+ {id:'sunbiz', n:'The business', h:'Is the entity (or the DBA) already registered on Sunbiz?',
+  hint:'Both applications ask for the Sunbiz document as an upload, so this has to exist before you start either one.',
+  o:[['yes','Yes — the Sunbiz document is in hand',''],
+     ['no','No — it still has to be filed','Do this first; the applications cannot be completed without it.']]},
+
+ {id:'ein', n:'The business', h:'Does the business have a federal EIN?',
+  hint:'The city requires an ID number by state law — a Federal EIN or the owner’s Social Security number.',
+  o:[['yes','Yes',''],
+     ['no','No — the owner’s SSN would be used','An EIN is worth obtaining anyway; it keeps the SSN off the filing.']]},
+
+ {id:'activity', n:'The business', h:'What does the business actually do?',
+  free:[['activity','Activity — in the client’s own words']],
+  hint:'Be specific. This one answer drives the classification (which sets the fee), the county’s document list, and which regulator applies. “Consulting” is not specific; “bookkeeping and payroll for restaurants” is.'},
+
+ {id:'employees', n:'The business', h:'How many people work in the business, including the owner?',
+  hint:'Both applications ask for it, and the city’s Tax Classification is a worker tier — 0–1 Worker and so on.',
+  num:'Number of workers'},
+
+ {id:'regulator', n:'Regulated activity', h:'Is the activity regulated — and by whom?',
+  hint:'This is Screen 4’s thirteen questions, collapsed to the agency that has to issue something. If any of them is a Yes, that agency’s licence has to be uploaded and the name and address on it must match the application.',
+  o:[['none','No regulator — an ordinary unregulated business',''],
+     ['dbpr','DBPR — contractor, professional, real estate, hotel, restaurant, salon',''],
+     ['competency','Construction needing a Broward Certificate of Competency',''],
+     ['agriculture','Agriculture & Consumer Services — auto repair, travel, telemarketing, exercise studio, pest control, grocery',''],
+     ['dfs','Financial Services — insurance adjuster, bail bonds, funeral home, fire protection',''],
+     ['ofr','Office of Financial Regulation — collections, lending, money services, investment adviser',''],
+     ['ahca','Healthcare Administration — adult day care, assisted living, labs, home health',''],
+     ['broward','Broward County — auto body/repair, limo, moving company',''],
+     ['bar','The Florida Bar — attorney-at-law',''],
+     ['health','Broward County Health Department — tanning, tattoo, body piercing',''],
+     ['other','Another state agency','']]},
+
+ {id:'licence', n:'Regulated activity', h:'Is that licence already in hand?',
+  when:regulated,
+  hint:'Neither receipt will issue until it is — and the name and address on the licence must match the application exactly.',
+  o:[['yes','Yes — we have the licence document',''],
+     ['no','No — it is still being obtained','Get it before filing; the applications will stall waiting for it.']]},
+
+ {id:'salestax', n:'Other registrations', h:'Will the business sell or rent taxable goods, or taxable services?',
+  hint:'Not part of the BTR, but it is registered alongside it — Form DR-1 with the Florida Department of Revenue.',
+  o:[['yes','Yes','Register with the DOR on Form DR-1.'],
+     ['no','No','']]},
+
+ {id:'tpp', n:'Other registrations', h:'Is the business’s tangible property — furniture, equipment — worth $25,000 or more?',
+  hint:'Above that threshold a tangible personal property return (DR-405) is due to the Property Appraiser by April 1.',
+  o:[['yes','Yes — $25,000 or more','A DR-405 is due by April 1.'],
+     ['no','No / not yet',''],
+     ['unknown','Not known yet','Find out before April 1 — the deadline does not move.']]},
+
+ {id:'existing', n:'Where we are starting', h:'Does the business already hold either receipt?',
+  hint:'A renewal is a different route from a first filing, and the county account has to be active before the city application can be made.',
+  o:[['none','Neither — starting from zero',''],
+     ['county','The county receipt only','Good — the city application needs exactly that.'],
+     ['city','The city receipt only','Unusual. Check the county account is genuinely active.'],
+     ['both','Both — this is a renewal','Renew through the city’s renewals page and the county account.']]},
+
+ {id:'timing', n:'Where we are starting', h:'When will this first receipt be issued?',
+  when:function(a){return a.existing!=='both';},
+  hint:'A first-time receipt issued on or after April 1 pays half the annual tax — Fla. Stat. § 205.0535.',
+  o:[['before','Before April 1','Full annual tax.'],
+     ['after','On or after April 1','The 50% first-year rule applies — to each receipt.'],
+     ['unknown','Not sure yet','Check the date against April 1 before paying.']]}
+];
+
+// A number input does not enforce min/max, and an out-of-range worker count would
+// silently fall through the tier logic. Treat anything outside 0-9999 as unknown.
+function num(v){ var n = parseInt(v, 10); return (isNaN(n) || n < 0 || n > 9999) ? -1 : n; }
+var esc = JKCase.esc;
+
+/* ------------------------------ render Qs ------------------------------ */
+function active(){ return Q.filter(function(q){ return !q.when || q.when(A); }); }
+
+// The ONE definition of "this question is answered" — used to lock the questions
+// below it, to count progress, to enable the Build button, and by walkComplete()
+// to decide whether a case is tailored.
+// A numeric question counts only when it resolves to a REAL number.
+function isAnswered(q){
+  if (q.free) return q.free.every(function(f){ return A[f[0]] && String(A[f[0]]).trim(); });
+  if (q.num)  return num(A[q.id]) >= 0;
+  return A[q.id] !== undefined && A[q.id] !== '';
+}
+
+// The questions that STOP the walkthrough dead. Everything below one of them is
+// irrelevant, so it is locked and the sheet says why instead of pretending to plan
+// a filing that cannot happen.
+function hardStop(){
+  if (A.city === 'other') return 'city';
+  if (A.premises === 'resnolive' && (A.planning === 'refused' || A.planning === 'no')) return 'planning';
+  return '';
+}
+
+function renderQuestions(){
+  var host = document.getElementById('questions');
+  var list = active(), html = '', i = 0, blocked = false, stop = hardStop();
+  list.forEach(function(q){
+    i++;
+    var answered = isAnswered(q);
+    var lock = blocked ? ' locked' : '';
+    html += '<div class="q'+lock+'" data-q="'+q.id+'"'+(blocked?' aria-disabled="true"':'')+'>';
+    html += '<p class="qn">'+esc(q.n)+' · question '+i+'</p>';
+    html += '<h3>'+esc(q.h)+'</h3>';
+    if (q.hint) html += '<p class="hint">'+q.hint+'</p>';
+    if (q.o){
+      html += '<div class="opts">';
+      q.o.forEach(function(o){
+        var id = q.id+'_'+o[0];
+        html += '<label class="opt" for="'+id+'"><input type="radio" id="'+id+'" name="'+q.id+'" value="'+o[0]+'"'+(A[q.id]===o[0]?' checked':'')+(blocked?' disabled':'')+'>'
+             +  '<span class="ox"><span class="ol">'+esc(o[1])+'</span>'+(o[2]?'<span class="od">'+esc(o[2])+'</span>':'')+'</span></label>';
+      });
+      html += '</div>';
+    }
+    if (q.num){
+      // type="text" (not "number") is deliberate: after every keystroke the whole
+      // questions panel re-renders, which destroys and recreates this input, so the
+      // caret has to be restored by hand in answered(). Browsers refuse
+      // setSelectionRange on type="number" (InvalidStateError), so the caret silently
+      // snapped to 0 on every re-render — typing "26" read back as "62".
+      // inputmode="numeric" keeps the numeric keypad on mobile without that restriction.
+      var numBad = A[q.id] !== undefined && A[q.id] !== '' && num(A[q.id]) < 0;
+      // No maxlength: the browser applies it to a paste BEFORE our filter runs, so
+      // pasting "12 staff" would truncate to "12 " and lose digits unrecoverably.
+      html += '<div class="inline"><div><label class="fl" for="'+q.id+'_n">'+esc(q.num)+'</label>'
+           +  '<input type="text" inputmode="numeric" pattern="[0-9]*" data-num="1" id="'+q.id+'_n" name="'+q.id+'" value="'+esc(A[q.id]||'')+'"'+(blocked?' disabled':'')
+           +  (numBad?' aria-invalid="true" aria-describedby="'+q.id+'_err"':'')+'>'
+           +  (numBad ? '<p class="derr" id="'+q.id+'_err" role="alert">Enter a number of workers between 0 and 9999.</p>' : '')
+           +  '</div></div>';
+    }
+    if (q.free){
+      html += '<div class="inline">';
+      q.free.forEach(function(f){
+        html += '<div><label class="fl" for="'+f[0]+'">'+esc(f[1])+'</label><input type="text" id="'+f[0]+'" name="'+f[0]+'" value="'+esc(A[f[0]]||'')+'"'+(blocked?' disabled':'')+'></div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    // A hard stop locks everything below it: nothing after it matters.
+    if (q.id === stop) blocked = true;
+    if (!answered) blocked = true;
+  });
+  host.innerHTML = html;
+
+  var total = list.length;
+  var done = list.filter(isAnswered).length;
+  var ready = !!stop || done === total;
+  document.getElementById('build').disabled = !ready;
+  document.getElementById('progress').textContent = stop
+    ? 'Stop here — see below.'
+    : done+' of '+total+' answered';
+  if (stop) buildSheet();
+}
+
+// Clear answers whose question no longer applies, so a changed mind can't leave a
+// stale answer behind driving the sheet (e.g. answering the sub-tenant question,
+// then switching the premises to the owner's home).
+function prune(){
+  Q.forEach(function(q){
+    if (q.when && !q.when(A)){ delete A[q.id]; if (q.free) q.free.forEach(function(f){ delete A[f[0]]; }); }
+  });
+}
+// Typed fields re-render too — otherwise entering a value leaves the questions it
+// unlocks inert until some other event happens to redraw. Focus and caret are
+// restored so typing is unbroken.
+function answered(t){
+  var id = t.id, pos = (t.type === 'text' && t.selectionStart != null) ? t.selectionStart : null;
+  if (t.dataset && t.dataset.num){
+    var raw = t.value, clean = raw.replace(/[^0-9]/g, '').slice(0, 4);
+    if (clean !== raw){
+      // Pull the caret back by however many characters were dropped ahead of it,
+      // so deleting a stray letter does not send the cursor to the end.
+      if (pos != null) pos -= (pos - raw.slice(0, pos).replace(/[^0-9]/g, '').length);
+      t.value = clean;
+    }
+  }
+  A[t.name] = t.value;
+  prune();
+  var out = document.getElementById('out');
+  if (!out.hidden && !hardStop()) out.hidden = true;
+  renderQuestions();
+  if (id){
+    var again = document.getElementById(id);
+    if (again && again.type === t.type){
+      again.focus();
+      if (pos != null && again.setSelectionRange){ try { again.setSelectionRange(pos, pos); } catch (_) {} }
+    }
+  }
+}
+document.getElementById('questions').addEventListener('change', function(e){
+  if (e.target.name && e.target.type === 'radio') answered(e.target);
+});
+document.getElementById('questions').addEventListener('input', function(e){
+  if (e.target.name && e.target.type === 'text') answered(e.target);
+});
+
+/* --------------------------- the preparation sheet --------------------- */
+var ENTITY = {
+  llc:['LLC','Articles of Organization'],
+  corp:['Corporation / S-corp','Articles of Incorporation'],
+  partnership:['Partnership (LP / LLP)','the filed partnership documents'],
+  sole:['Sole proprietor','the Fictitious Name (DBA) Registration — a sole proprietor has no entity filing']
+};
+
+function buildSheet(){
+  var out = document.getElementById('out'), h = '', n = 0;
+  function sec(title){ n++; return '<div class="blk"><h3><span class="num">'+n+'</span>'+title+'</h3>'; }
+
+  /* --- hard stops --- */
+  var stop = hardStop();
+  if (stop === 'city'){
+    out.innerHTML = '<div class="stop"><h3>Stop — this procedure does not cover that location</h3>'
+      + '<p>This walkthrough is the City of Hollywood + Broward County filing. A business outside Broward County files with <b>its own</b> county tax collector and <b>its own</b> city, on different systems with different screens.</p>'
+      + '<p>The <b>shape</b> is usually the same — a county receipt and a city receipt, each with its own fee — but do not use the links, screens or fee figures here for another county. Start from that county tax collector’s site.</p></div>';
+    out.hidden = false; out.focus(); out.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  if (stop === 'planning'){
+    var refused = A.planning === 'refused';
+    out.innerHTML = '<div class="stop"><h3>Stop — the zoning gate is not cleared</h3>'
+      + (refused
+          ? '<p>Planning has said the use is <b>not permitted</b> at this parcel. There is no valid filing to make: a Business Tax Receipt is <b>not</b> zoning approval, and the city’s own certification says so in the words you would be signing.</p>'
+            + '<p>Tell the client plainly, and record what Planning said and when in their file. If they want to pursue it, that is a Planning conversation about the parcel — not a BTR application.</p>'
+          : '<p>The business will occupy a residential property where nobody will reside, and nobody has yet asked Planning about this specific parcel.</p>'
+            + '<p><b>Call City of Hollywood Planning &amp; Urban Design: 954-921-3471, opt. 2</b>, and ask about this address:</p>'
+            + '<p><span class="typein">“I have a property zoned single-family residential at [address], where no one will reside — it will be used solely for a business. Am I permitted to operate this business there as-is, or do I need some kind of permit or approval first?”</span></p>'
+            + '<p>Verify the parcel at <b>bcpa.net</b> first. Come back and answer this question again once you have their answer — and record who said it and when.</p>')
+      + '<p style="margin-top:14px;font-size:13.5px">Confirmed with Planning in Jul 2026: a residential-zoned single-family lot used 100% for business with no resident is <b>not permitted</b>, and no variance or special-exception path was offered.</p></div>';
+    out.hidden = false; out.focus(); out.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+
+  var hollywood = A.city === 'hollywood';
+  var ent = ENTITY[A.entity] || ENTITY.llc;
+  var reg = REG[A.regulator] || REG.none;
+  var workers = num(A.employees);
+  // Declared ONCE, here, with the other derived facts. These were scattered in three
+  // places, and one of them was READ above where it was assigned — `var` hoists the name
+  // but not the value, so the documents section saw `undefined` and printed the full
+  // upload checklist for a renewal that uploads nothing.
+  var renewal = A.existing === 'both';
+  var haveCounty = A.existing === 'county' || A.existing === 'both';
+  var haveCity = A.existing === 'city' || A.existing === 'both';
+  var anyFiling = !haveCounty || !haveCity;
+
+  h += '<h2>Preparation sheet</h2><p class="sub">Built from your answers. Print this and keep it beside the applications. It is not a substitute for reading the SOP — it is the SOP applied to one business.</p>';
+
+  /* --- what we are filing --- */
+  h += sec('What we are filing') + '<dl class="kv">';
+  h += '<dt>Business</dt><dd>'+esc(A.activity||'')+' — <b>'+esc(ent[0])+'</b>'+(A.dba==='yes'?', trading under a <b>DBA</b>':'')+'</dd>';
+  h += '<dt>Workers</dt><dd><b>'+(workers>=0?workers:'—')+'</b> including the owner. The city’s <b>Tax Classification</b> is a worker tier, so this figure sets part of the fee.</dd>';
+  h += '<dt>Premises</dt><dd>'+(homeBased(A)
+        ? 'The <b>owner’s home</b>, and the owner lives there — a genuine home occupation.'
+        : A.premises==='commercial-own' ? 'A <b>commercial space the client owns</b>.'
+        : A.premises==='resnolive' ? 'A residential property with no resident — <b>Planning has confirmed it is permitted</b>.'
+        : 'A <b>leased commercial space</b>'+(A.sublet==='yes'?', held as a <b>sub-tenant</b>':'')+'.')+'</dd>';
+  h += '<dt>Receipts needed</dt><dd>'+(renewal
+        ? 'This is a <b>renewal</b> of both receipts.'
+        : (A.existing==='county' ? 'The county receipt is already held — <b>the city receipt is what is outstanding</b>.'
+        : A.existing==='city' ? 'The city receipt is held but the county one is not. <b>Check the county account is genuinely active</b> — the city application requires it.'
+        : '<b>Both</b> — county first, then city.'))+'</dd>';
+  if (regulated(A)) h += '<dt>Regulator</dt><dd><b>'+reg[0]+'</b> — '+reg[1]+'</dd>';
+  h += '</dl>';
+  if (!hollywood){
+    h += '<div class="flag warn"><span class="fl">Not Hollywood — half of this applies</span>The <b>county</b> filing below (BTExpress) is identical for any business in Broward County. The <b>city</b> half is Hollywood’s own system, screens and fees: that municipality will have its own receipt, its own application and its own amounts. Use the county sections as written and treat the city sections as a <b>shape to follow, not a set of facts</b>.</div>';
+  }
+  if (homeBased(A)) h += '<div class="flag ok"><span class="fl">Home occupation</span>The owner resides at the address, so the <b>Certificate of Use exemption</b> for single-family/condo applies and Fla. Stat. <b>§ 559.955</b> protects the use — subject to reasonable standards: parking, signage, <b>no external evidence of the business</b>, no heavy customer traffic. Say this to the client; it is the part they break.</div>';
+  if (A.premises==='resnolive') h += '<div class="flag warn"><span class="fl">Record what Planning said</span>The filing rests on that call. Put <b>who said it, on what date, and about which parcel</b> in the client’s file before you go further — and note that a Business Tax Receipt still is not zoning approval.</div>';
+  h += '</div>';
+
+  /* --- before you start --- */
+  h += sec('Before you open either application');
+  h += '<div class="flag err"><span class="fl">Use the FIRM’s email — on both applications</span>Every confirmation and every follow-up goes to whatever address is on the application: a wrong category, a “provide your state licence”, the pay-the-difference instructions, and the <b>Track Your Application</b> links. Put the firm’s address in the applicant and contact email fields. This has already cost the firm a filing it could not track.</div>';
+  var blockers = [];
+  if (A.sunbiz === 'no') blockers.push('<b>The Sunbiz registration does not exist yet.</b> Both applications upload it as entity proof — file it first'+(A.dba==='yes'?' (and the Fictitious Name registration with it)':'')+'.');
+  if (regulated(A) && A.licence === 'no') blockers.push('<b>The '+reg[0]+' licence is not in hand.</b> Neither receipt will issue without it, and the <b>name and address on it must match</b> the application exactly.');
+  if (A.existing === 'city') blockers.push('<b>The county account may not be active.</b> The city application requires one as supporting documentation — confirm it before relying on the city receipt already held.');
+  if (blockers.length){
+    h += '<div class="flag err"><span class="fl">Blocked until these are done</span><ul class="tick" style="margin-top:8px"><li>'+blockers.join('</li><li>')+'</li></ul></div>';
+  } else {
+    h += '<div class="flag ok"><span class="fl">Nothing is blocking the filing</span>The entity documents exist and any licence is in hand, so both applications can be started as soon as the PDFs below are ready.</div>';
+  }
+  h += '</div>';
+
+  /* --- documents --- */
+  var cUp = ['<b>Entity proof</b> — '+ent[1]+(A.dba==='yes'?', <b>and</b> the Fictitious Name (DBA) Registration from Sunbiz':'')+'.'];
+  if (regulated(A)) cUp.push('<b>'+reg[0]+' licence or certification</b> — the county’s Screen 4 answer generates this requirement.');
+  var loc = A.premises==='commercial-own'
+      ? 'proof of ownership — the property tax bill, warranty deed, bill of sale, insurance certificate, or a utility bill'
+      : homeBased(A) ? 'proof the owner occupies the address — the property tax bill, deed, or a utility bill in the owner’s name'
+      : 'the <b>signed lease</b>';
+  var yUp = ['<b>Proof of location</b> — '+loc+'.',
+             '<b>Entity proof</b> — '+ent[1]+(A.dba==='yes'?' or the Fictitious Name Registration':'')+'.'];
+  if (regulated(A)) yUp.push('<b>'+reg[0]+' licence.</b>');
+  if (A.sublet === 'yes') yUp.push('<b>The master lease</b> — between the property owner and the master tenant — alongside the sublease. See the sub-tenant flag below.');
+
+  h += sec(anyFiling ? 'Documents to have ready — as PDFs, before you start' : 'Documents');
+  if (!anyFiling){
+    // Both receipts are held, so no application is being filed and nothing is uploaded.
+    // Printing the full PDF checklist here contradicted the case built from the same
+    // answers, which drops every upload step.
+    h += '<p><b>Nothing to upload.</b> Both receipts are held, so this is a renewal — renewals do not re-submit the entity documents or the proof of location. Keep them on file; they are wanted again only if the business moves, changes name, or changes what it does.</p>';
+  } else {
+  h += '<p>You upload these <em>inside</em> the applications, and the city accepts <b>PDF only, ≤ 10 MB each</b>.</p>';
+  if (!haveCounty) h += '<p style="margin-top:14px"><b>County (BTExpress):</b></p><ul class="tick"><li>'+cUp.join('</li><li>')+'</li></ul>';
+  if (!haveCity) h += '<p style="margin-top:14px"><b>City '+(hollywood?'(Hollywood LBTR)':'(that city’s own application)')+':</b></p><ul class="tick"><li>'+yUp.join('</li><li>')+'</li></ul>';
+  }
+  if (A.sublet === 'yes' && !haveCity){
+    h += '<div class="flag err"><span class="fl">Sub-tenant — have the master lease ready NOW, not after the rejection</span>'
+      + 'A signed sublease alone can still be bounced: the city’s follow-up may state, as boilerplate, that <em>“sublessees operating a business are required to provide a signed agreement between sublessee and the property owner”</em> — a document that may genuinely not exist, because the owner’s only contractual relationship is with the master tenant.'
+      + '<p style="margin:9px 0 0"><b>The answer</b> is to send <b>both</b> documents together, showing the complete chain of the right to occupy — the master lease (owner ↔ master tenant) and the sublease (master tenant ↔ applicant) — and explain in the email why no direct lease exists.</p>'
+      + '<p style="margin:7px 0 0"><b>If the city still insists</b> on something signed by the owner: a one-page <b>landlord consent letter</b> acknowledging the sub-tenant’s occupancy is far easier to obtain than a new lease, and satisfies the literal wording.</p></div>';
+  }
+  h += '</div>';
+
+  /* --- county --- */
+  h += sec(haveCounty && !renewal ? '① Broward County — already held'
+         : renewal ? '① Broward County — renewal'
+         : '① Broward County — BTExpress');
+  if (haveCounty && !renewal){
+    // Nothing to apply for. Printing the whole submission sequence here contradicted the
+    // checklist built from the same answers, and told the team to refile something the
+    // client already has.
+    h += '<div class="flag ok"><span class="fl">This half is done — confirm it, do not refile</span>'
+      + 'The county receipt is already held, so <b>there is no BTExpress application to make</b>. What the city needs from it is an <b>active county account</b>: open it at <span class="typein">broward.county-taxes.com</span>, confirm it is current rather than assuming, and carry the account number to the city application. If it has lapsed, renew it there — still not a new application.</div>';
+    h += '<p style="margin-top:14px;font-size:13.5px;color:var(--muted)">The screen-by-screen BTExpress walk is on the <b>Reference</b> tab if you need it for a second location.</p>';
+  } else if (renewal){
+    h += '<div class="flag info"><span class="fl">A renewal, not a new application</span>Both receipts are held, so the county side is a <b>renewal of the existing account</b> — pay the balance for the new tax year and print the receipt. Do not start a fresh BTExpress application; it would duplicate the account.</div>';
+  } else {
+  h += '<p>Apply at <span class="typein">broward.county-taxes.com/btexpress</span>. County first: the city application <b>requires an active county account</b>.</p>';
+  h += '<p style="margin-top:14px"><b>The answers this business gives on the way through:</b></p><dl class="kv">';
+  h += '<dt>Screen 2 — DBA</dt><dd>'+(A.dba==='yes'
+        ? '<b>“This business has registered a fictitious name…”</b> — have the Sunbiz DBA to hand.'
+        : '<b>“This business does not require a registered fictitious name”</b>, reason: <span class="typein">I am doing business under my full legal name.</span>')+'</dd>';
+  h += '<dt>Screen 3 — occupation</dt><dd>Describe the primary function — <b>be specific</b>, it drives the classification. Workers including the owner: <b>'+(workers>=0?workers:'—')+'</b>.</dd>';
+  h += '<dt>Screen 4 — Q1</dt><dd><b>No</b> — '+(hollywood?'Hollywood':'the city')+' is an incorporated city, not the unincorporated county.</dd>';
+  h += '<dt>Screen 4 — Q2</dt><dd><b>'+((A.entity!=='sole' || A.dba==='yes')?'Yes':'No')+'</b> — '+((A.entity!=='sole')?'a Florida '+esc(ent[0]):'a sole proprietor')+(A.dba==='yes'?' using a DBA':'')+'.</dd>';
+  h += '<dt>Screen 4 — Q3</dt><dd><b>No</b> (City of West Park only).</dd>';
+  h += '<dt>Screen 4 — regulator</dt><dd>'+(regulated(A)
+        ? '<b>Yes</b> to the '+reg[0]+' question — and upload that licence. '+reg[1]
+        : '<b>No</b> to all thirteen regulator questions.')+'</dd>';
+  h += '</dl>';
+  h += '<div class="flag warn"><span class="fl">Submitting the form is NOT the end — the county is two emails with a wait</span>'
+    + '<b>1.</b> “Confirmation Required for Submitted BTExpress™ Application” arrives immediately, from <span class="typein">no-reply@grantstreet.com</span>. It carries a <b>link you must click</b> — the application is not sent for processing until you do. <b>2.</b> ~24–48 h later, “Your BTExpress™ Application” is the <b>approval, and the instruction to pay</b>.</div>';
+  h += '<div class="flag err"><span class="fl">Where that second email hides</span>It can land in Gmail’s <b>“Updates” tab</b> rather than Primary — which is exactly how a filing gets abandoned one step from done. If it has not appeared a few days after confirming, search <span class="typein">from:no-reply@grantstreet.com</span> across all tabs.</div>';
+  h += '<p style="margin-top:14px">Pay the county balance, then use <b>“Print Business Tax Receipt”</b>. Status and payment: <span class="typein">broward.county-taxes.com</span> · <b>954-357-4829</b>.</p>';
+  }
+  h += '</div>';
+
+  /* --- city --- */
+  h += sec(hollywood ? '② City of Hollywood — LBTR' : '② The city’s own receipt — and it is NOT Hollywood’s');
+  if (!hollywood){
+    h += '<div class="flag warn"><span class="fl">Read this as a template, not as facts</span>The business is not in Hollywood, so the screens, the classifications and the amounts below belong to a different city. Keep the <b>sequence</b> — apply, pay, respond to review, receive — and get that city’s own application and fee schedule.</div>';
+  }
+  if (haveCity && !renewal){
+    h += '<div class="flag ok"><span class="fl">This half is held — confirm it, do not refile</span>'
+      + 'The city receipt is already in place, so <b>there is no new application and no $25 fee</b>. Check it has <b>not expired</b> (every receipt dies on <b>Sept 30</b>) and that the <b>classification still matches</b> what the business actually does — a business that has changed activity is the case the city re-categorises and bills a difference for. <b>The outstanding half is the county.</b></div>';
+    h += '<p style="margin-top:14px;font-size:13.5px;color:var(--muted)">The screen-by-screen LBTR walk and the fee table are on the <b>Reference</b> tab.</p>';
+  } else {
+  h += '<p>Apply at <span class="typein">apps.hollywoodfl.org/LbtrOnline/</span>'+(renewal?' — or the <b>renewals</b> page, <span class="typein">apps.hollywoodfl.org/LBTRrenewals/</span>':'')+'. The site looks the parcel up first: the <b>Site Address and Folio Number auto-fill</b> from the address you enter.</p>';
+  h += '<p style="margin-top:14px"><b>You need in hand:</b></p><ul class="tick">'
+    + '<li>The <b>active county account</b> from step ①.</li>'
+    + '<li>The Sunbiz entity / DBA document.</li>'
+    + '<li>Proof of the location — '+loc+'.</li>'
+    + (regulated(A)?'<li>The <b>'+reg[0]+' licence.</b></li>':'')
+    + (homeBased(A)
+        ? '<li><b>No Certificate of Use</b> — the single-family / condo exemption applies because this is genuinely home-based.</li>'
+        : '<li>A <b>Certificate of Use (CU)</b>, unless the exemption applies.</li>')
+    + (renewal
+        ? '<li>The <b>renewal amount</b> for the new tax year. The <b>$25 application fee is charged on a first filing, not a renewal</b> — if a $25 line appears, you are on the new-application route by mistake.</li></ul>'
+        : '<li>The <b>$25 non-refundable</b> processing fee <b>plus</b> the local business tax set on Screen 1.</li></ul>');
+  h += '<div class="flag info"><span class="fl">Screen 1 is where the fee is set</span>Business Category · <b>Business Classification</b> (the specific line of business — a <b>“Show All Classifications”</b> button lists every option) · <b>Tax Classification</b>, the worker tier — <b>'+(workers>=0?(workers<=1?'0–1 Worker':workers+' workers'):'—')+'</b> · Tax Basis Units · Number of Employees. Getting the classification wrong here is what produces the pay-the-difference round below.</div>';
+  h += '<div class="flag info"><span class="fl">Screen 2 — the two fields that matter to us</span><b>Homebased?</b> → <b>'+(homeBased(A)?'Yes':'No')+'</b>. <b>ID Type</b> → '+(A.ein==='yes'?'<b>Federal EIN</b>':'<b>the owner’s Social Security number</b>, since there is no EIN — worth obtaining one to keep the SSN off the filing')+'. And the email fields take the <b>firm’s</b> address, both of them.</div>';
+  h += '<div class="flag warn"><span class="fl">Screen 3 — what you are signing</span>The certification says the receipt <b>does not</b> mean the City has determined the use of the location is lawful, and does not legalise the business if it is contrary to any local, state or federal law. Read it rather than clicking through it — it is the reason the zoning gate comes first.</div>';
+  h += '<p style="margin-top:14px">Then <b>Make a Payment</b>: $25 + the classification tax, by card <b>through PayPal</b>. The receipt for that is a PayPal <b>“Order Confirmation”</b> email — save it with the file.</p>';
+  }
+  h += '</div>';
+
+  /* --- money --- */
+  h += sec('What it costs — two governments, two fees');
+  h += '<div class="flag warn"><span class="fl">Neither payment covers the other</span>Two Business Tax Receipts from <b>two different governments</b>, each charging its own fee. To be fully covered the client makes <b>two separate payments in two separate systems</b>.</div>';
+  h += '<dl class="kv" style="margin-top:14px">';
+  // The city label AND the amount both follow the city. Testing `haveCity` first made the
+  // "that city's own fee schedule" branch unreachable, so a Broward-but-not-Hollywood
+  // business already holding its receipt was told about Hollywood's $25 fee under a
+  // "City of Hollywood" label — while buildSteps() correctly emitted the neutral step.
+  h += '<dt>'+(hollywood ? 'City of Hollywood' : 'The city’s own receipt')+'</dt><dd>'+(!hollywood
+        ? (haveCity && !renewal
+            ? 'Nothing now — that city’s receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>, at <b>that city’s</b> rate.'
+            : '<b>That city’s own fee schedule</b> — the $25 + classification figures below are Hollywood’s and do not carry over. Get the amount from the city itself.')
+        : haveCity && !renewal
+          ? 'Nothing now — the receipt is <b>already held</b>, so there is no $25 application fee this time. It falls due again at the <b>Sept 30 renewal</b>.'
+          : renewal ? 'The <b>renewal</b> amount for the new tax year — the $25 application fee is charged on a first filing, not a renewal.'
+                    : '<b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.')+'</dd>';
+  h += '<dt>Broward County</dt><dd>'+(haveCounty && !renewal
+        ? 'Nothing now — the county receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>.'
+        : renewal
+          ? 'The county account’s <b>renewal</b> for the new tax year — usually much smaller than the city’s, often <b>~$30–$45</b>. Paid on the account, not through a fresh BTExpress application.'
+          : 'A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.')+'</dd>';
+  h += '</dl>';
+  h += '<p style="margin-top:12px;font-size:13.5px;color:var(--muted)">Amounts are approximate and depend on classification and year. Verify the exact figure shown at submission — never quote these numbers to a client as the price.</p>';
+  if (!renewal){
+    if (A.timing === 'after') h += '<div class="flag ok"><span class="fl">The 50% first-year rule applies</span>A first-time receipt issued <b>on or after April 1</b> pays <b>half</b> the annual tax — Fla. Stat. § 205.0535 / § 205.053 — and it can apply to <b>each</b> of the two receipts. Check the amount charged reflects it.</div>';
+    else if (A.timing === 'unknown') h += '<div class="flag warn"><span class="fl">Check the date against April 1</span>A first-time receipt issued <b>on or after April 1</b> pays half the annual tax. Before paying, work out which side of April 1 the issue date falls on — it can halve both fees.</div>';
+    else h += '<div class="flag info"><span class="fl">Full annual tax</span>Issued before April 1, so the 50% first-year rule does not apply.</div>';
+  }
+  h += '</div>';
+
+  /* --- review --- */
+  if (haveCity && !renewal){
+    // buildSteps() drops the whole review round here — there is no application to review.
+    // Printing it anyway is the sheet and the checklist disagreeing on one answer set,
+    // which is the divergence this tool exists to close.
+    h += sec('If the city comes back');
+    h += '<p>Nothing to review — <b>no application is being filed</b>, so no reviewer email is coming. The one thing worth checking on a held receipt is that its <b>classification still matches</b> what the business does: a business that has changed activity is exactly the case the city re-categorises, and it surfaces at renewal rather than now.</p>';
+    h += '</div>';
+  } else if (!hollywood){
+    h += sec('If that city comes back');
+    h += '<p>Not Hollywood, so the reviewer, the subject line and the payment channel below are <b>not</b> the ones you will see. What carries over is the <b>shape</b>: expect a message only if something needs fixing, and expect it to name a category, a licence or a balance.</p>';
+    h += '<div class="flag warn"><span class="fl">Ask this city one question up front</span>Hollywood does <b>not</b> issue the receipt when you pay a corrected balance — it issues it when you <b>reply to the reviewer confirming the payment</b>. Ask how <em>this</em> city closes that loop, because a filing that stalls one step from done looks exactly like a filing that is finished.</div>';
+    h += '</div>';
+  } else {
+  h += sec('If the city comes back — and how that round actually ends');
+  h += '<p>A personal email from <span class="typein">BusinessTax@hollywoodfl.org</span>, or directly from a Treasury revenue analyst, subject <b>“BUSINESS TAX APPLICATION #&lt;ID&gt; - &lt;ADDRESS&gt; - &lt;BUSINESS&gt;”</b>, arrives <b>only if something needs fixing</b>: a wrong category, a state licence they want, or a balance to pay.</p>';
+  h += '<div class="flag err"><span class="fl">The step people miss — paying is not the last step</span>When the city re-categorises the business it emails a <b>due balance</b> with a <b>“Renew Local Business Tax”</b> link. That is the <b>City’s own payment centre</b>, a different channel from the PayPal fee at submission, and its receipt is a <b>“City of Hollywood Treasury Department”</b> confirmation with a <b>reference number</b>. Then — <b>reply to the reviewer to confirm you paid.</b> They issue and email the receipt only after that reply. Pay and stay silent and the receipt never comes.</div>';
+  if (A.sublet === 'yes') h += '<div class="flag warn"><span class="fl">The most likely thing they will come back on here</span>The sub-tenant proof-of-location boilerplate. Answer with the master lease and the sublease together, as above — do not go looking for a document that does not exist.</div>';
+  if (regulated(A) && A.licence === 'no') h += '<div class="flag warn"><span class="fl">And the second most likely</span>The '+reg[0]+' licence, which is not in hand yet. Expect this exact email.</div>';
+  h += '</div>';
+  }
+
+  /* --- after --- */
+  h += sec('Once the receipts are in hand');
+  h += '<ul class="tick">'
+    + '<li><b>Post each receipt at the place of business</b> — Florida requires it to be displayed. “Issued” only means granted.</li>'
+    + '<li><b>Calendar the Sept 30 renewal.</b> The tax year is <b>Oct 1 – Sep 30</b>; both receipts expire on Sept 30 every year.</li>'
+    + '<li>File both receipts, both payment confirmations and the Application ID in the client’s systems — Drive or Double, never this repo.</li></ul>';
+  h += '</div>';
+
+  /* --- also --- */
+  var also = [];
+  if (A.sunbiz === 'no') also.push('<b>Sunbiz</b> — register the entity'+(A.dba==='yes'?' and the Fictitious Name (§ 865.09)':'')+'. Nothing else can proceed until this exists.');
+  else if (A.dba === 'yes') also.push('<b>Fictitious Name (DBA)</b> — confirm the Sunbiz registration is current, not lapsed.');
+  if (A.ein === 'no') also.push('<b>Federal EIN</b> — obtain one from the IRS. It keeps the owner’s SSN off the city application.');
+  // The worker count includes the OWNER, so it cannot tell us whether there are employees:
+  // a sole proprietor answering "1" is not their own employee and owes no Reemployment
+  // Tax, while a corporation's owner-employee does. Asserting it from the number told a
+  // one-person business to register for an ongoing RT-6 obligation it does not have.
+  // State the test instead of guessing the answer.
+  if (A.salestax === 'yes') also.push('<b>FL sales &amp; use tax</b> — register with the Department of Revenue on <b>Form DR-1</b>. Add <b>Reemployment Tax</b> <em>if the business actually has employees</em> — a corporation’s owner-employee counts, a sole proprietor is not their own employee.');
+  if (A.tpp === 'yes') also.push('<b>Tangible personal property</b> — a <b>DR-405</b> return is due to the Broward County Property Appraiser by <b>April 1</b>.');
+  if (A.tpp === 'unknown') also.push('<b>Tangible personal property</b> — establish whether it reaches $25,000 <b>before April 1</b>; above that a DR-405 is due and the deadline does not move.');
+  if (regulated(A)) also.push('<b>'+reg[0]+'</b> — '+reg[1]);
+  if (also.length){
+    h += sec('Alongside the BTR — what this business’s answers also require');
+    h += '<p>Not part of the Business Tax Receipt, but triggered by the same facts. Raise them now rather than discovering them next April.</p>';
+    h += '<ul class="tick" style="margin-top:12px"><li>'+also.join('</li><li>')+'</li></ul></div>';
+  }
+
+  /* --- track --- */
+  h += '<div class="blk noprint" style="border-color:var(--bronze-500)">'
+    + '<h3><span class="num">→</span>Track this client through the process</h3>'
+    + '<p>This preparation sheet is a snapshot. A <b>case</b> turns it into a checklist you tick off over the weeks the two filings actually take — through the county wait, the payment email that hides in the Updates tab, and the city review — with a note on each step, a running log, and a block you paste into the client’s case note in Double so the team can see where it stands and you can pick it up on another machine.</p>'
+    + '<div class="act" style="margin-top:16px"><button class="btn cta" id="trackCase" type="button">Track this as a case</button></div></div>';
+
+  out.innerHTML = h;
+  out.hidden = false;
+  out.focus();
+  var tc = document.getElementById('trackCase');
+  if (tc) tc.addEventListener('click', function(){ tracker.trackCurrent(); });
+  out.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ========================================================================
+   CASE TRACKER
+   Two homes on purpose. The browser holds open cases so ticking is instant;
+   the DURABLE copy is a block pasted into the client's running case note in
+   Double — human-readable status, plus a compact code the tool can read back.
+
+   HOW a case behaves lives in case-core.js, shared with the ITIN walkthrough.
+   WHAT a BTR filing is — its phases and its steps — lives here.
+   ======================================================================== */
+var PHASES = [['intake','Intake & the zoning gate'],['prep','Documents to prepare'],
+              ['county','① Broward County (BTExpress)'],['city','② City of Hollywood (LBTR)'],
+              ['review','City review & follow-up'],['after','Receipts in hand'],
+              ['also','Other registrations']];
+
+/* The step list is derived from the walkthrough answers, so a case carries only the
+   steps that actually apply to that business. IDs are stable — a saved case stores
+   ids, not labels, so the code stays small enough for a Double note. */
+function buildSteps(a){
+  var S = [], home = homeBased(a);
+  var isReg = !!(a.regulator && a.regulator !== 'none');
+  function add(id, ph, t, d){ S.push({id:id, ph:ph, t:t, d:d||''}); }
+
+  /* --- intake --- */
+  // What is actually being FILED. The county/city blocks below read these; intake and
+  // prep used to ignore them, so a client who already holds the city receipt was still
+  // told to choose a Business Classification and prepare city uploads, and a business
+  // outside Hollywood got Hollywood's Screen 1 — in the case, which is what gets pasted
+  // into Double, where the sheet's caveat is nowhere to be seen.
+  var haveCounty = a.existing === 'county' || a.existing === 'both';
+  var haveCity   = a.existing === 'city'   || a.existing === 'both';
+  var countyFiling = !haveCounty, cityFiling = !haveCity;
+  var anyFiling = countyFiling || cityFiling;
+
+  add('activity','intake','Activity established in the client’s own words','It drives the classification, the fee and which regulator applies.');
+  if (a.premises === 'resnolive'){
+    add('planning','intake','Planning confirmation recorded','Who at City of Hollywood Planning said the parcel is permitted, and on what date.');
+  } else if (home){
+    add('homeocc','intake','Home-occupation standards explained to the client','§ 559.955 protects the use subject to parking, signage, no external evidence of the business, no heavy customer traffic.');
+  }
+  add('firmemail','intake','Firm’s email agreed as the applicant and contact email','On every application filed for this client. The client’s own address makes the filing untrackable by us.');
+  // Only when a city application is actually being made — it is the city that classifies.
+  if (cityFiling) add('classify','intake','Business Category and Classification chosen','It is what sets the city fee. Hollywood’s Screen 1 has a “Show All Classifications” button; another city will have its own list.');
+
+  /* --- documents --- */
+  if (a.sunbiz === 'no') add('sunbiz','prep','Entity registered on Sunbiz','Nothing else can proceed until the document exists.');
+  if (a.dba === 'yes') add('dbareg','prep','Fictitious Name (DBA) registered and current','Fla. Stat. § 865.09 — it becomes the entity proof.');
+  if (a.ein === 'no') add('ein','prep','Federal EIN obtained','Keeps the owner’s SSN off the city application.');
+  if (anyFiling) add('entitypdf','prep','Entity proof saved as a PDF','Articles, or the Fictitious Name Registration from Sunbiz.');
+  if (cityFiling) add('locpdf','prep','Proof of location saved as a PDF','PDF only, ≤ 10 MB. Lease, deed, tax bill, insurance certificate or utility bill.');
+  if (cityFiling && a.sublet === 'yes') add('masterlease','prep','Master lease obtained alongside the sublease','The city may demand a document between sub-tenant and owner that does not exist — send both to show the chain.');
+  // Says it WITHOUT naming the agency, on purpose. A saved case stores step ids, not
+  // text, so on reopen decodeCase() rebuilds this line from the step catalogue — which
+  // holds whichever variant a seed shape happened to generate first. Baking "DBPR" into
+  // the title meant an OFR or Bar case came back naming the wrong regulator: a confident,
+  // wrong fact on the one screen someone works from, which is then re-pasted into the
+  // client's Double note. The agency is named on the preparation sheet, which is built
+  // live from the answers and cannot go stale. Same trap as the ITIN tool's `coadocs`.
+  if (isReg && anyFiling) add('licpdf','prep','State licence saved as a PDF','Whichever regulator the walkthrough identified — it is named on the preparation sheet. The name and address on the licence must match the application exactly.');
+
+  /* --- county --- */
+  // The checklist has to agree with the preparation sheet built from the SAME answers.
+  // It used to ignore `existing` entirely, so a renewal — or a client who already holds
+  // the county receipt — was handed the whole first-filing sequence: five BTExpress steps
+  // for an application nobody was going to make. Different situations get different step
+  // IDS rather than different wording for one id — a saved case stores ids, so re-wording
+  // an id is how a reopened case comes back stating the wrong thing.
+  if (a.existing === 'both'){
+    add('ctyrenew','county','County account renewed for the new tax year','The county receipt is already held — this is a renewal, not a new BTExpress application.');
+    add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
+    add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
+  } else if (haveCounty){
+    add('ctyactive','county','County account confirmed ACTIVE','The city application requires it as supporting documentation — check it rather than assuming, then carry the account number to the city application.');
+  } else {
+    add('ctyapply','county','BTExpress application submitted','broward.county-taxes.com/btexpress — county first; the city needs an active county account.');
+    add('ctyconfirm','county','Confirmation link in the FIRST county email clicked','Until this is clicked the application has not been sent for processing.');
+    add('ctyapproved','county','Second county email received — approved, and asking for payment','~24–48 h later. Check Gmail’s “Updates” tab; it hides there.');
+    add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
+    add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
+  }
+
+  /* --- city --- */
+  // Same discipline, and one more reason: outside Hollywood the city half is a DIFFERENT
+  // municipality's system, screens and fees. The preparation sheet says so; the checklist
+  // used to bake Hollywood's URL and "$25 plus the classification tax" into the case
+  // regardless — and the case is what gets pasted into the client's Double note, where
+  // nobody can see the caveat that only ever existed on screen.
+  // Two axes, and BOTH have to be read here or the case contradicts the sheet: WHICH city
+  // (Hollywood's LBTR, or another municipality's own system) and WHAT IS ALREADY HELD.
+  // Missing the second is how `existing:'city'` produced a checklist identical to a first
+  // filing — telling the team, in the client's Double note, to reapply and re-pay for a
+  // receipt the client already has.
+  var hollywoodCase = a.city === 'hollywood';
+  if (!hollywoodCase){
+    if (a.existing === 'both'){
+      add('localrenew','city','Municipal receipt renewed','NOT Hollywood — through that city’s own renewal route, not a new application.');
+      add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+    } else if (a.existing === 'city'){
+      add('localheld','city','Municipal receipt confirmed current','Already held — check it has not expired (Sept 30) and that the classification still matches what the business does.');
+    } else {
+      add('localapply','city','Municipal business tax receipt applied for','NOT Hollywood — that city has its own system, screens and fee schedule. Get them from the city itself; the Hollywood LBTR steps do not apply.');
+      add('localdocs','city','That city’s required documents supplied','Expect proof of location and entity proof at minimum, but confirm its own list.');
+      add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+    }
+  } else if (a.existing === 'both'){
+    add('cityrenew','city','City receipt renewed','apps.hollywoodfl.org/LBTRrenewals/ — the renewals route, not a new application.');
+    // Its own id: `citypay` says "$25 plus the classification tax", which is the FIRST
+    // filing's charge. Reusing it put that figure into a renewal's Double note, where it
+    // contradicts the sheet — and re-wording the shared id would make every reopened
+    // first-filing case state the renewal's terms instead.
+    add('cityrenewpay','city','City renewal paid','The renewal amount for the new tax year — no $25 application fee on a renewal. Keep the payment confirmation.');
+  } else if (a.existing === 'city'){
+    add('cityheld','city','City receipt confirmed current','Already held — check it has not expired (Sept 30) and that the classification still matches what the business does. The outstanding half is the county.');
+  } else {
+    add('cityapply','city','City LBTR application submitted','apps.hollywoodfl.org/LbtrOnline/ — the folio auto-fills from the address.');
+    add('cityuploads','city','Both city uploads accepted','Proof of location and entity proof. PDF only, ≤ 10 MB each.');
+    add('citytrack','city','“Track Your Application” email kept, Application ID recorded','It is the only way to check status later. Put the ID in the client’s file.');
+    add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+  }
+
+  /* --- review --- */
+  // NOT the same test as `cityFiling` above: a renewal IS reviewed, a held receipt is not.
+  var cityReviewed = a.existing !== 'city';
+  if (hollywoodCase && cityReviewed){
+    add('cityreview','review','City review passed, or its request answered','A personal email arrives only if something needs fixing.');
+    add('citydiff','review','Any category-difference balance paid','Through the City’s own payment centre — a different channel from PayPal. Keep the Treasury reference number.');
+    add('citynotify','review','Reviewer told the balance was paid','THE step people miss. The receipt is issued only after this reply.');
+  } else if (cityReviewed){
+    add('localreview','review','That city’s review passed, or its request answered','Ask how it confirms payment and issues the receipt — Hollywood does not issue until you reply to the reviewer, and another city may have its own such step.');
+  }
+
+  /* --- after --- */
+  add('countyrec','after','County receipt in hand','');
+  add('cityrec','after','City receipt received','');
+  add('posted','after','Both receipts posted at the place of business','Florida requires them to be displayed.');
+  add('renewal','after','Sept 30 renewal calendared','The tax year is Oct 1 – Sep 30. Both receipts expire every Sept 30.');
+  add('filed','after','Receipts and payment confirmations filed in the client’s systems','Drive or Double — never the repo.');
+
+  /* --- also --- */
+  if (a.salestax === 'yes') add('dr1','also','FL sales & use tax registered — Form DR-1','Add Reemployment Tax only if the business actually has employees — a corporation’s owner-employee counts, a sole proprietor is not their own employee.');
+  if (a.tpp === 'yes') add('dr405','also','Tangible property return (DR-405) calendared for April 1','Property worth $25,000 or more.');
+  if (a.tpp === 'unknown') add('tppcheck','also','Tangible property value established before April 1','Above $25,000 a DR-405 is due and the deadline does not move.');
+  if (isReg) add('proflic','also','State licence current and matching the filing','The regulator is named on the preparation sheet.');
+  return S;
+}
+
+// A half-answered walkthrough would produce a confident but silently wrong "tailored"
+// list. Only a COMPLETE walkthrough tailors a case; anything else gets the generic
+// checklist, and says so on the card and in the Double note.
+function walkComplete(){ return !hardStop() && active().every(isAnswered); }
+
+var tracker = JKCase.createTracker({
+  storageKey: 'jk-btr-cases-v1',
+  codeTag: 'JKBTR1:',
+  noteHeading: 'BUSINESS TAX RECEIPT',
+  filePrefix: 'BTR-case',
+  phases: PHASES,
+  buildSteps: buildSteps,
+  answers: function(){ return A; },
+  walkComplete: walkComplete,
+  refPlaceholder: 'e.g. Ecoorganic USA — or BTR-2026-004',
+  genericAnswers: {city:'hollywood',premises:'commercial-lease',sublet:'no',entity:'llc',dba:'no',
+                   sunbiz:'yes',ein:'yes',activity:'—',employees:'1',regulator:'none',
+                   salestax:'no',tpp:'no',existing:'none',timing:'before'},
+  // Seed shapes that between them reach every step buildSteps() can emit, so a case
+  // reopened from a note rebuilds its labels instead of showing bare ids in the wrong
+  // phase — a mislabel that then gets written into the client's Double note.
+  seeds: [
+    {city:'hollywood',premises:'commercial-lease',sublet:'yes',entity:'llc',dba:'yes',sunbiz:'no',ein:'no',
+     activity:'x',employees:'3',regulator:'dbpr',licence:'no',salestax:'yes',tpp:'yes',existing:'none',timing:'after'},
+    {city:'hollywood',premises:'home',entity:'sole',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'1',regulator:'none',salestax:'no',tpp:'unknown',existing:'both'},
+    {city:'broward',premises:'resnolive',planning:'permitted',entity:'corp',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'0',regulator:'ofr',licence:'yes',salestax:'no',tpp:'no',existing:'county',timing:'before'},
+    {city:'hollywood',premises:'commercial-own',entity:'partnership',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'12',regulator:'none',salestax:'no',tpp:'no',existing:'city',timing:'unknown'},
+    // The two axes cross: outside Hollywood, a renewal and an already-held receipt each
+    // produce their own steps. The self-test caught both missing when the city block
+    // learned to read `existing` — which is what the seed rule is for.
+    {city:'broward',premises:'commercial-lease',sublet:'no',entity:'llc',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'2',regulator:'none',salestax:'no',tpp:'no',existing:'both'},
+    {city:'broward',premises:'commercial-lease',sublet:'no',entity:'llc',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'2',regulator:'none',salestax:'no',tpp:'no',existing:'city',timing:'before'}
+  ],
+  // The core sweeps these to PROVE the seeds above miss nothing.
+  sweepValues: {
+    city:['hollywood','broward'], premises:['commercial-lease','commercial-own','home','resnolive'],
+    planning:['permitted'], sublet:['yes','no'], entity:['llc','corp','partnership','sole'],
+    dba:['yes','no'], sunbiz:['yes','no'], ein:['yes','no'], employees:['0','1','9'],
+    regulator:['none','dbpr','ofr','bar'], licence:['yes','no'],
+    salestax:['yes','no'], tpp:['yes','no','unknown'],
+    existing:['none','county','city','both'], timing:['before','after','unknown']
+  },
+  emptyBody: '<p>A case is one business’s Business Tax Receipt filing, tracked from the zoning gate to both receipts on the wall. Run the <b>Walkthrough</b> first and press <b>“Track this as a case”</b> on the preparation sheet — the case then carries only the steps that actually apply to that business.</p>',
+  importIntro: '<li>the client’s <b>BTR case note from Double</b> — the firm’s copy, and how you pick up a case someone else started;</li>'
+    + '<li>or the contents of a <b>downloaded case file</b> (<span class="typein">BTR-case-….txt</span>) — open it in any text editor and copy everything.</li>',
+  onOpened: function(){ switchTab('cases'); document.getElementById('tabCase').focus(); }
+});
+
+/* ------------------------------- reference ------------------------------ */
+(function(){
+  var host = document.getElementById('fields'), html = '';
+  FIELDS.forEach(function(f){
+    if (f.g){ html += '<p class="fgrp">'+esc(f.g)+'</p>'; return; }
+    html += '<details class="f" data-k="'+esc((f.n+' '+f.t+' '+(f.k||'')).toLowerCase())+'">'
+         +  '<summary><span class="fline">'+esc(f.n)+'</span><span class="ftitle">'+f.t+'</span></summary>'
+         +  '<div class="fbody">'+f.b+(f.trap?'<div class="trap"><b>Trap.</b> '+f.trap+'</div>':'')+'</div></details>';
+  });
+  host.innerHTML = html;
+})();
+
+document.getElementById('srch').addEventListener('input', function(e){
+  var q = e.target.value.trim().toLowerCase(), any = false;
+  document.querySelectorAll('#fields details.f').forEach(function(d){
+    var hit = !q || d.dataset.k.indexOf(q) > -1;
+    d.hidden = !hit; if (hit) any = true;
+    if (q && hit) d.open = true; if (!q) d.open = false;
+  });
+  document.querySelectorAll('#fields .fgrp').forEach(function(g){ g.hidden = !!q; });
+  document.getElementById('nores').style.display = any ? 'none' : 'block';
+});
+
+/* --------------------------------- chrome ------------------------------- */
+document.getElementById('build').addEventListener('click', buildSheet);
+document.getElementById('reset').addEventListener('click', function(){
+  A = {}; document.getElementById('out').hidden = true; renderQuestions();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var r = document.documentElement;
+  var dark = r.getAttribute('data-theme') === 'dark'
+    || (!r.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  r.setAttribute('data-theme', dark ? 'light' : 'dark');
+});
+var TABS = [['tabWalk','walk'],['tabRef','ref'],['tabCase','cases']];
+function switchTab(which){
+  TABS.forEach(function(t){
+    var on = t[1] === which;
+    document.getElementById(t[0]).setAttribute('aria-selected', on ? 'true' : 'false');
+    document.getElementById(t[0]).tabIndex = on ? 0 : -1;
+    document.getElementById(t[1]).hidden = !on;
+  });
+  if (which === 'cases') tracker.render();
+}
+TABS.forEach(function(t, i){
+  var el = document.getElementById(t[0]);
+  el.addEventListener('click', function(){ switchTab(t[1]); });
+  // ARIA tabs pattern: arrow keys move between tabs
+  el.addEventListener('keydown', function(e){
+    var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!d) return;
+    e.preventDefault();
+    var n = TABS[(i + d + TABS.length) % TABS.length];
+    switchTab(n[1]); document.getElementById(n[0]).focus();
+  });
+});
+
+tracker.start();
+renderQuestions();
+</script>
