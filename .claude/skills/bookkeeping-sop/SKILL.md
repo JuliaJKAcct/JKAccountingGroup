@@ -1,6 +1,6 @@
 ---
 name: bookkeeping-sop
-description: Write, update, or review a JK Accounting Group per-client BOOKKEEPING runbook SOP — the monthly categorization + independent-review procedure for one bookkeeping client (e.g. projects/sops/ecoorganic-bookkeeping-review.md). Use when creating or editing a client's monthly-bookkeeping SOP, adding/changing a categorization rule, the 1099 process, the chart-of-accounts conventions, the review checklist, or the open-decisions log — and to know how that runbook must be presented in the Knowledge Hub. Encodes the two-layer rule (the .md keeps MAXIMUM detail as source of truth; the Hub shows the curated visual view), the required .md structure that drives the Hub render (bold-led numbered rules → rule cards, a Status-column decisions table → status pills, a number-range grammar line → range strip, a numbered checklist → check items), the firm's categorization framework + the color mental model (owner/equity = bronze · business/P&L = teal · investigate = blue · triage = amber), the firm-wide bookkeeping principles vs. what's client-specific, and the team-facing curation rules. Two shapes are supported — a categorization-rules runbook (Ecoorganic pilot) and a month-end close-process runbook (Magnum 152 pilot) whose steps each carry a Drive "material" button to the source material. Builds on the sop-authoring skill (house structure) and feeds the knowledge-hub skill (the Hub render).
+description: Write, update, or review a JK Accounting Group per-client BOOKKEEPING runbook SOP — the monthly categorization + independent-review procedure for one bookkeeping client (e.g. projects/sops/ecoorganic-bookkeeping-review.md). Use when creating or editing a client's monthly-bookkeeping SOP, adding/changing a categorization rule, the 1099 process, the chart-of-accounts conventions, the review checklist, or the open-decisions log — and to know how that runbook must be presented in the Knowledge Hub. Encodes the two-layer rule (the .md keeps MAXIMUM detail as source of truth; the Hub shows the curated visual view), the required .md structure that drives the Hub render (bold-led numbered rules → rule cards, a Status-column decisions table → status pills, a number-range grammar line → range strip, a numbered checklist → check items), the firm's categorization framework + the color mental model (owner/equity = bronze · business/P&L = teal · investigate = blue · triage = amber), the firm-wide bookkeeping principles vs. what's client-specific, and the team-facing curation rules. Three shapes are supported — a categorization-rules runbook (Ecoorganic pilot), a month-end close-process runbook (Magnum 152 pilot) whose steps each carry a Drive "material" button to the source material, and a pre-operational/capitalization runbook (iKids Group pilot) for a client that is building something and not trading yet, where the question is which asset bucket rather than which expense account and the P&L is supposed to be empty. Also carries the client-reporting delivery log (record the period a report COVERED, not the date it was sent) and the rule that a runbook's account map is written by ROLE, never by vendor name. Builds on the sop-authoring skill (house structure) and feeds the knowledge-hub skill (the Hub render).
 ---
 
 # Bookkeeping-client SOP — the house way
@@ -17,12 +17,16 @@ reviewed **every month**. One file per client in
 - **Month-end close-process** — a step-by-step monthly close (pull reports → journal
   entries → consolidate → reconcile → reclass → close gate), where **each step carries a
   Drive "material" button** to the exact working file / walkthrough.
+- **Pre-operational / capitalization** — a client that is **building something and not yet
+  trading**, where the work is not "which expense account?" but "which asset bucket?", and
+  the P&L is supposed to be empty. See *The pre-operational shape* below.
 
-Two reference pilots (keep them as the living patterns), both rendered in
+Three reference pilots (keep them as the living patterns), all rendered in
 [`build-hub.mjs`](../../../projects/knowledge-hub/build-hub.mjs):
 
 - **Categorization-rules:** [`ecoorganic-bookkeeping-review.md`](../../../projects/sops/ecoorganic-bookkeeping-review.md) → `ecoorganicReaderInner`.
 - **Close-process:** [`magnum-152-bookkeeping-review.md`](../../../projects/sops/magnum-152-bookkeeping-review.md) (+ Sunoma, Mobilesource, Sensustech, Margate, Beemold) → the **reusable** `closeProcessReader`, driven by a per-client `close` config in the SOP catalog.
+- **Pre-operational:** [`ikids-group-bookkeeping-review.md`](../../../projects/sops/ikids-group-bookkeeping-review.md) — reuses `closeProcessReader` with a `close` config (no Drive material buttons; the sections carry the weight).
 
 This skill is the memory of the rules Lilian established while building the Ecoorganic
 runbook and its Hub view, so any session updating **these clients' SOPs follows the same
@@ -98,6 +102,48 @@ never hand-code a step's links in the reader. **Drive links are the one allowed 
 link in a team view** (they open the working material the bookkeeper needs); repo/GitHub
 links are still never allowed.
 
+### The pre-operational shape (iKids pilot, Aug 2026) — when the P&L is supposed to be empty
+
+Some clients are **building something and not trading yet**: a venue under construction, a
+business in formation. Their bookkeeping is a different question from everyone else's — not
+*"which expense account?"* but *"which asset bucket?"* — and a runbook that doesn't say so
+leaves the bookkeeper to accept QuickBooks' suggestions, which are trained on companies that
+trade and are **systematically wrong here**. Write these sections in addition to the normal
+ones:
+
+- **`## The four buckets — …`** (or whatever the client's buckets are). A table of the
+  capitalization destinations, then **the boundaries that actually get confused**, each stated
+  as a *test a person can apply*, not a definition. The three that earned their place on the
+  pilot generalize well:
+  - **Building vs. business** — *would this cost exist if the company were opening somewhere
+    else?* Yes → the business bucket (startup costs). No → the building bucket (construction
+    in progress).
+  - **A deposit is only a "security deposit" if it COMES BACK.** A contractor's deposit is a
+    prepayment consumed by the work and belongs with that contract; a landlord's or a
+    utility's is refundable and is an asset in its own right. The word on the invoice decides
+    nothing.
+  - **A lump-sum contract can't be split across trades before the work is done** — give it its
+    own sub-account rather than forcing it into the nearest one.
+- **A role→account map.** See the naming rule in the firm-wide principles below.
+- **The self-check rule, stated as a rule.** These clients have a known-shape financial
+  statement, which makes one report a complete test of the month's work: *the P&L should carry
+  nothing but bank charges — anything else on it is a categorization to re-open.* Put it in the
+  categorization rules **and** the reviewer checklist. It is the cheapest review in the file.
+- **A dated-changeover rule.** Capitalization stops on the day operations begin, and that
+  changeover is **one deliberate batch on a date somebody decides** — never a drift. The pilot
+  found four months of the same vendor posted two different ways precisely because nobody had
+  written this down.
+
+### `## Client reporting — …` (any shape) — the coverage watermark
+
+When a client **asks for its own reports periodically** — a transaction report, a
+transactions-by-account report — the runbook gets a delivery-log table. The rule that makes it
+worth having: **the row records the period the report COVERED, not the date it was sent**, so
+the next report starts the day after and nobody duplicates or skips months. Note anything that
+*caps* the coverage (a dead bank feed, an un-backfilled gap) in the same row, because
+"continue from where we left off" is exactly how an incomplete period goes out looking
+complete. Renders as prose in the Hub — no keyword collision.
+
 ## The firm's categorization framework (firm-wide — reuse for every client)
 
 Every transaction sorts into one of four destinations. **The color is the mental model** —
@@ -136,6 +182,21 @@ runbook, adapt the specifics):
 - **Provisional rules are tagged and dated.** Mark anything unconfirmed *(to verify)*; when
   a rule changes, update it in the `.md`, **date it**, and reclassify the affected
   transactions in **one batch**. Log open questions in the decisions table.
+
+- 🔒 **An account map is written by ROLE, never by vendor name** — "the general contractor",
+  "the design firm", "the site's electricity and water", "our own monthly fee". A **vendor list
+  is client data** and belongs in QuickBooks/Drive/Double, not in a repo that auto-publishes to
+  the Hub; and a role **survives a change of vendor**, which a name does not. The exceptions
+  worth allowing are **utilities and government agencies**, which a covering bookkeeper cannot
+  identify any other way. Say the choice out loud in the runbook, or the next session will
+  "helpfully" fill the names back in.
+- **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
+  client's P&L should be empty; a client with one revenue stream should show one. Write the
+  expected shape as a rule and as a checklist line — one report then tests the whole month's
+  categorization, and it costs ten seconds.
+- **A partial payment records cash, not the commitment.** If the client's books have no A/P (many
+  of ours don't — check whether an `Accounts Payable` account exists at all before assuming), the
+  balance still owed appears **nowhere**. Say in the runbook where it gets recorded instead.
 
 **Client-specific (lives in that client's `.md`, NOT this skill):** dollar thresholds (e.g.
 Ecoorganic's $25 gas line), the specific vendors and accounts, the owner's account numbers,
@@ -204,6 +265,8 @@ generalizing that one the same way is the remaining next step. Do all Hub work t
 - `projects/sops/<client>-bookkeeping-review.md` — the runbook (source of truth).
 - `projects/sops/ecoorganic-bookkeeping-review.md` — the rules-shape pilot.
 - `projects/sops/magnum-152-bookkeeping-review.md` — the close-process-shape pilot.
+- `projects/sops/ikids-group-bookkeeping-review.md` — the pre-operational-shape pilot (the four
+  buckets, the role→account map, the client-reporting delivery log).
 - `projects/knowledge-hub/build-hub.mjs` — the rules-shape reader `ecoorganicReaderInner` and
   the **reusable close-process reader `closeProcessReader`** (driven by the catalog `close`
   config); the section renderers (`ecoRuleCards`, `ecoDecisionsTable`, `ecoChecklist`,

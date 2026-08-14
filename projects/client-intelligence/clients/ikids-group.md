@@ -33,7 +33,9 @@
 - **Primary language:** **Russian / Ukrainian** (owners are Ukrainian; correspondence in RU/UA, tax docs bilingual). _(Gmail)_
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); **income tax (Form 1065 partnership → K-1s)**; **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A (pre-operational). The firm also does **hands-on AP / bill-pay** (pays vendors from the client's account). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online (via Double)
+- **Accounting platform:** QuickBooks Online (via Double). ⚠️ **The bank feed disconnected on
+  2026-07-20 and has not been reconnected** — nothing has imported since, so the books stop at
+  that date (see §4 and §6).
 
 ## 2. Contacts
 
@@ -58,7 +60,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | **The client's AP mailbox — Gmail** | Where the client's **vendor bills and payment confirmations arrive** (water, insurance, permits, the environmental report…). **The firm has access to it** and works it **every month** — see §4 | _(password pending — client's Drive vault / Double)_ | `ap.ikidsllc@gmail.com` — a **company AP mailbox**, not a person's inbox, and **firm-controlled** (Julia is the account-recovery contact) _(Gmail, 2026-07-23)_. It is the **only** place several of these bills exist: nothing is forwarded to us and the client sends nothing |
-| Business bank accounts (2 — different banks) | Operating cash | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm has signer/payment access to pay vendors from the client's account _(Google Drive, 2026-08-01)_ |
+| Business bank accounts (2 — different banks) | Operating cash | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm has signer/payment access to pay vendors from the client's account _(Google Drive, 2026-08-01)_. In practice **one of the two carries effectively all the activity**; the second is close to dormant. Both were on the QuickBooks feed until it dropped _(QuickBooks via Double, 2026-08-14)_ |
 | FPL | Electric utility for the build-out site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
 | City of Fort Lauderdale — utility billing | Water bill for the site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
 | Broward County ePermits | Building-permit applications for the park build-out | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
@@ -91,6 +93,19 @@ the actual details.
   covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
+- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20.** Nothing has imported since, so the
+  ledger stops there and any month after it will read as quiet when it is really missing.
+  Reconnect it and backfill before working a close — it is step 1 of the runbook now.
+
+### Reports the client asks us for
+- **iKids requests its own reports periodically** — a **Transaction report** and a **Transactions
+  by account** report — every few months, unprompted. _(Lilian, 2026-08-14.)_
+- **The delivery log is in the runbook**, not here: each delivery records the **period the report
+  covered**, so the next one starts the day after and nobody duplicates or skips months. See
+  [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md) →
+  *Client reporting*.
+- **Last delivered 2026-08-14, covering through 2026-07-20** — that end date is the bank-feed
+  disconnection, i.e. the last date the books are complete to, not a choice.
 
 ### Income tax
 - **Applies?** Yes — **Form 1065** (partnership; multi-member LLC → K-1s to partners) _(Double)_
@@ -113,6 +128,33 @@ the actual details.
 - **Ownership & signing authority — exactly THREE members, and only ONE of them can bind the company:** the **Manager holds 33.4%** and the other two **33.3%** each (near-thirds, not exact — the odd 0.1% sits with the Manager). The LLC is **manager-managed with a single Manager** (himself a member) who alone has authority to bind it; the other two members have no day-to-day management or voting role. The **CFO is neither a member nor the Manager** — he does not appear in the agreement at all, so treat that title as a **group/functional role**, not a Florida-LLC office, and route anything needing a company-binding signature to the **Manager**. _(Operating Agreement dated 2025-04-18, Drive → `4-Corporate` — supersedes the earlier "likely 3–4 partners" estimate.)_
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC. Each owner is individually linked in Double to **their own separate set** of related-entity records — not one shared group _(Double contacts, 2026-07-25 sweep)_.
 - **A concrete example of the hands-on AP:** the permit-expediting vendor **East of Collins Expediting** sends outstanding-balance account statements, which go to the AP mailbox for handling; permit fees themselves are paid through the City of Fort Lauderdale's **LauderBuild** portal _(Gmail, Jul 2026 sweeps)_.
+- **How the project is funded — two routes, and they are not interchangeable.** There is no
+  revenue, so every dollar in comes from the owners: the **Manager funds the project by loan**
+  (a long-term liability account in his name — by far the largest source), and **members
+  contribute capital** to their own named equity accounts. Which route a deposit takes is a fact
+  about that transaction, not a preference _(QuickBooks via Double, 2026-08-14)_.
+- **The books have never used Bills or Invoices.** There is **no Accounts Payable and no Accounts
+  Receivable account** in the chart — QuickBooks creates A/P automatically on the first Bill, so
+  its absence proves none was ever entered. Every transaction in the file's history is a direct
+  bank-feed Expense or Deposit. **Consequence:** when a vendor invoice is paid in instalments, the
+  balance still owed is recorded nowhere in the books. Whether to start using Bills is
+  **Julia's decision** — she set the books up _(2026-08-14)_.
+- **The chart of accounts is purpose-built for a pre-operational build-out, and the logic is
+  now written down.** Four capitalization buckets — `Construction in Progress` (the building),
+  `Startup Costs` (the business), `Fixed Assets` (things bought outright), `Security Deposit`
+  (money that comes back) — plus the two funding routes. **The P&L should carry nothing but bank
+  charges** until the park opens. The full framework, the boundaries and the role→account map are
+  in the runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md).
+- **There is a commercial/licensing workstream alongside the construction.** The company engaged an
+  outside consultant to research potential **licensors** and represent the brand at an
+  international licensing trade show, positioning the US launch on the back of the owners' existing
+  **Poland** locations. It is pre-opening business development — a startup cost, not a P&L expense
+  _(consultant's engagement documents, 2026-08-14)_.
+- **A capital-contribution equity account exists in the name of a third individual** beyond the two
+  members already identified in §6's log — which is what a third member's contributions would look
+  like. **Not confirmed:** the Operating Agreement is the authority on membership and has not been
+  re-checked against this. Worth settling, because *who the third member is* and *his US tax
+  status* are both open items below _(QuickBooks via Double, 2026-08-14)_.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -129,7 +171,52 @@ the actual details.
   closes the open question this file raised the same day.
 - 2026-08-11 — **How this client's bookkeeping actually runs, from Lilian.** The client's **AP mailbox** (§3) is where the vendor bills and payment confirmations arrive, the firm has access to it, and **every month** we must go in, download the bills, and attach them to their payment transactions. The **water bill is on autopay** — nothing to pay, only its paperwork to collect. Recorded here and turned into the client's first bookkeeping runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md). _(Worked by Lilian.)_
 
+- 2026-08-14 — **The categorization logic was reverse-engineered from the ledger and written down,
+  and four defects were found and three fixed.** Lilian had transactions to categorize with Julia
+  unavailable and nothing recorded explaining why the chart is shaped as it is. The full ledger
+  (every bank-feed transaction since the file opened) plus both financial statements were read end
+  to end. **What it established:** the four-bucket framework, the building-vs-business boundary,
+  the refundable-vs-consumed deposit test, and the role→account map — all now in the runbook, which
+  stopped being a seed. **What it found:** (a) **site utilities had drifted onto the P&L** from
+  April 2026 after being capitalized to `CIP - Utilities` earlier in the year — same vendors, two
+  accounts; **Lilian moved them back**; (b) a **marketing vendor sat in `Legal & Professional
+  Fees`** while `SC - Marketing` had never been used — **Lilian moved it**; (c) an **incoming-wire
+  bank fee was posted directly to the `Startup Costs` parent**, which also breaks the
+  no-posting-to-parents rule — **still to fix**, along with an older balance on the same parent
+  that only a manual-entry report will reveal; (d) **two large payments sit in `SC - Travel` that
+  do not look like travel**. **What was categorized:** a general contractor's deposit (a new
+  `CIP : General Contractor` sub-account was created for it, because a GC contract cannot be split
+  across trades before any work is done) and an asbestos survey required for permitting
+  (`CIP - Permits & Fees`, alongside the other permit-driven inspections). **Also established:**
+  the bank feed has been dead since 2026-07-20, the client asks for transaction reports
+  periodically, and the books have never used Bills. _(Worked by Lilian.)_
+
 ### Outstanding items (CI-only — never in the SOP)
+- ⚠️ **The QuickBooks bank feed has been disconnected since 2026-07-20** — reconnect it and
+  backfill the gap. Everything downstream (the close, the reports we send the client, any review)
+  is capped at that date until it is done. Also worth finding out **why** it dropped.
+- **Julia's decision: should this client start using Bills / Accounts Payable?** Raised by a
+  part-paid construction invoice whose outstanding balance is recorded nowhere. Bills would fix it
+  properly, but it changes how the books work and she built them.
+- **A construction contract is part-paid and the balance is not in the books** — record it
+  somewhere durable until decision 7 in the runbook is settled.
+- **Find the consultant's engagement deposit.** The final payment and the expense reimbursement are
+  accounted for; the earlier deposit is in none of the bank-feed transactions. Manual entry, the
+  second bank account, or paid personally — find it and post it with the rest.
+- **Clear the `Startup Costs` parent.** An incoming-wire fee (belongs in `Bank Charges`) plus an
+  older balance from 2025 that only shows on an account report over All Dates.
+- **Identify the two large `SC - Travel` payments** — an international wire to a foreign bank and a
+  payment to a property-management company. Neither reads as travel; the second looks like rent or
+  a deposit.
+- **Trade-show registration charges may be misfiled** in `SC - Legal & Licensing` (probably because
+  the bank descriptor contains "licensing"). If they are the licensing trade show, they belong with
+  the consultant's engagement in `SC - Marketing`.
+- **W-9 sweep is overdue.** Individuals working the site pass the $2,000 threshold within months,
+  and the firm pays them directly — so a missing W-9 is our gap. Sweep the labour *and* contractor
+  accounts, not just one.
+- **The third member may be identifiable from QuickBooks** — an equity contribution account exists
+  in a third individual's name (§5). Check it against the Operating Agreement; it may close, or
+  narrow, the two open questions about the third member below.
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client before the next 1065.
 - **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
 - A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
