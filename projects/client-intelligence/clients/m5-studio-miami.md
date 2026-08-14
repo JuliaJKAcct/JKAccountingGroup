@@ -157,6 +157,15 @@ A running, dated record as we build this profile.
   principal line of business in more detail"*). Recommended line 10 = `Design services and
   retail of decorative wall materials`, line 17 = the full agreed wording. **Line 16 left
   open** pending the install-or-not question in §5.
+- _(2026-08-14)_ — **The SS-4 carries a Third-Party Designee, and this filing set the firm's
+  standing pattern.** Lilian reported that the block was completed with **her name**, the
+  **firm's mailing address (Julia's home address)**, her **direct work line** and the **JK
+  Accounting company fax**. She stated this is what the firm will do on **every** SS-4 from
+  now on, and asked for it to be written into the procedure — so it went into
+  [EIN SOP §4D](../../sops/ein-application-irs.md) as firm policy, with the company fax left
+  as a gap because the number is not recorded anywhere in the repo. **Consequence for this
+  client:** the EIN will come back **to that fax** if the application goes out on Path B, and
+  the designee's authority **ends the moment the EIN is assigned**.
 - _(2026-08-14)_ — **Business-type wording carried over from an earlier session** in which
   Lilian and a session worked out how to describe the business: *"Design services and retail
   sale of decorative wall plaster and related materials."* ⚠️ **That session produced no
@@ -219,7 +228,7 @@ reports for this client.
 - [ ] Entity type (LLC single/multi-member, or corporation) and whether an S-election is planned
 - [ ] Responsible party, and whether they hold an SSN, an ITIN, or neither
 - [ ] Mailing and physical addresses, with county
-- [ ] Whether the firm goes in the SS-4 Third Party Designee block
+- [x] Whether the firm goes in the SS-4 Third Party Designee block — **yes, done** (Lilian's name, the firm's mailing address, her work line, the JK fax; now the firm's standing pattern — [EIN SOP §4D](../../sops/ein-application-irs.md))
 - [ ] Does the client have a Double account? (link it here if so)
 - [ ] Which services the firm will provide beyond the set-up
 - [ ] Whether Florida sales-tax registration and a local Business Tax Receipt are needed

@@ -1,6 +1,6 @@
 # SOP: Federal EIN Application (IRS Form SS-4) — after the entity is active on Sunbiz
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-12
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-14
 
 The complete, self-contained procedure for getting a **federal EIN** (Employer
 Identification Number) from the IRS for a company that is **already formed and
@@ -94,8 +94,10 @@ so you do not want to be hunting for an answer mid-flow.
    date wages will be paid**.
 10. **Principal activity / line of business** (what the company actually does).
 11. **Closing month of the accounting year** — almost always **December**.
-12. **Is the firm filing on the client's behalf?** → if yes, you'll name the
-    firm as **Third-Party Designee** (see §4D); the client must authorize it.
+12. **Is the firm filing on the client's behalf?** → then the **Third-Party Designee**
+    block is filled in, **every time**, from the firm's fixed set of values in §4D —
+    and the client must sign the form or the authorization is void. You need **nothing
+    from the client** for this block; it is all ours.
 
 ---
 
@@ -336,14 +338,14 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **8a–8c** | Is it an LLC? number of members? **was it organized in the United States?** **8b trap:** an LLC **owned solely by an individual and their spouse in a community-property state** who **choose** to treat it as a disregarded entity enters **`1`** on 8b, not 2 — otherwise 8b is the actual member count. (the test runs on the **spouses' domicile**, not the LLC's state of formation — Florida is not a community-property state, so this only reaches **spouse-members domiciled in one**) |
 | **9a** | Type of entity — Corporation (enter the form number, e.g. 1120) / Partnership / etc. For an LLC, this reflects how it's **taxed** (see §4A) |
 | **9b** | If a corporation, the **state or foreign country** where incorporated |
-| **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* |
+| **10** | Reason for applying → "Started new business" (+ specify the type of business). *"Check only one box. **Don't enter 'N/A'. A selection is required.**"* ⚠️ **The type goes here SHORT** — *"If you check this box, enter the type of business being started"* — it is one small line on the form, not the place for the full description. The long version belongs on **line 17**, and the two plus line 16 have to agree: see **§4F** |
 | **11** | Date business started = **Sunbiz formation/effective date** — month, **day** and year. You don't need the Articles PDF in hand: the date is public and free on Sunbiz, so **look it up rather than estimate**. Never enter a date earlier than formation |
 | **12** | Closing month of accounting year. **This is a MONTH, not a date** — write `December` for a calendar-year filer. Spell the month out to avoid a bare "12" being misread. Note the entities that **can't** choose freely: partnerships (required year), personal service corporations and REMICs (calendar), most trusts (calendar) |
 | **13** | Highest number of employees expected in the next 12 months — **three separate boxes**: Agricultural / Household / **Other** (Other is where nearly every business goes). Enter **`-0-`** in the ones that don't apply. **The firm's standing answer is `-0-` in all three** unless payroll is genuinely starting now — see §4E for the rule and why a number costs you |
 | **14** | **Form 944 election.** Only if payroll tax will be ≤ **$1,000/year** (≈ **$5,000 or less** in total wages; $6,536 in US territories). ⚠️ **Checking it locks you in**: *"you must continue to file Form 944 … until the IRS instructs you to file Form 941."* **Usually leave unchecked.** And if line 13 is all zeros, **skip line 14 entirely** |
 | **15** | First date wages or annuities were paid. ⚠️ **If the business doesn't plan to have employees, enter `N/A`** — the instructions say so explicitly. **Don't leave it blank** |
-| **16** | Principal activity — one checkbox. *"**You must check a box.**"* Use **Other** (and specify) if none of the listed ones fits |
-| **17** | Principal line of merchandise/services — free text describing what the company actually does, in more detail than 16. *"**An entry is required.**"* e.g. checked Construction on 16 → *"General contractor for residential buildings"* on 17 |
+| **16** | Principal activity — one checkbox. *"**You must check a box.**"* Use **Other** (and specify) if none of the listed ones fits. ⚠️ **One box, and it must be the PRINCIPAL activity** — a business with two activities forces a choice, and the choice is not free (**§4F**) |
+| **17** | Principal line of merchandise/services — free text describing what the company actually does, in more detail than 16. *"**An entry is required.**"* e.g. checked Construction on 16 → *"General contractor for residential buildings"* on 17. **This is where the full description goes**, not line 10 (**§4F**) |
 | **18** | Has this entity ever applied for an EIN before? (No, for a new entity). If yes, write the previous EIN |
 | **Third-Party Designee** | If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the **client signs** the form (see §4D) |
 | **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — that's how the EIN comes back |
@@ -455,10 +457,35 @@ reasonable-compensation work depends on):
 
 ### 4D. Third-Party Designee — when the firm applies for the client
 
+> 🏛️ **The firm's standing answer: YES, and the block is always filled the same way.**
+> *(Lilian's rule, recorded 2026-08-14 — firm policy, not an IRS requirement.)*
+> When JK prepares the SS-4, **we name ourselves as Third-Party Designee every time.**
+> It is what makes the IRS release the EIN to us instead of only mailing it to the
+> client, and without it we cannot even ask about the filing. **Fill these four fields
+> from the table below — do not improvise them per client**, because the two things that
+> go wrong (the matching trap, and a fax nobody watches) both come from improvising.
+>
+> | Field | What goes in it |
+> |---|---|
+> | **Designee's name** | **Lilian Gonzalez** _(the firm's named designee — see the open question at the foot of this box)_ |
+> | **Address** | The **firm's mailing address on file — Julia's home address.** ⚠️ **Never write the client's address here** (see the matching trap below). The actual address is personal data: it is **not** written in this repo — take it from the firm's records in Drive, not from memory |
+> | **Telephone** | **Lilian's direct work line — (754) 286-1478** _(the number on her [email signature](../marketing/email-branding/signatures/lilian.html); if it ever changes, that file is the source of truth)_ |
+> | **Fax** | **The JK Accounting company fax** — _(pending: the number is not recorded anywhere in this repo yet. Ask Lilian or Julia and write it in here.)_ |
+>
+> **Why the fax is the field that actually matters on Path B.** The EIN comes back
+> **by the same method it was requested** — so on a faxed SS-4, the designee's fax is
+> where the number arrives. A wrong or unwatched fax number does not fail loudly; the
+> EIN simply never shows up and everyone assumes the IRS is slow.
+>
+> ❓ **One thing still to settle:** is the designee **always Lilian**, or **whoever in
+> the firm is preparing that form**? Written as "always Lilian" above because that is
+> what was done on the M5 Studio Miami filing. If it is meant to be the preparer,
+> change this box and say so.
+
 If JK completes and submits the application **on the client's behalf**:
 
-- **Paper SS-4:** fill in the **Third-Party Designee** block (firm name, address,
-  phone/fax) so the IRS releases the EIN to the firm — and the **client (the
+- **Paper SS-4:** fill in the **Third-Party Designee** block (the four fields above)
+  so the IRS releases the EIN to the firm — and the **client (the
   responsible party) signs** the form.
 - **Online:** the tool is meant to be completed by someone authorized to receive
   the EIN for the entity; enter the client's responsible-party info with the
@@ -474,8 +501,56 @@ If JK completes and submits the application **on the client's behalf**:
   Practically this costs you the **phone** route (the online wizard has no
   designee block at all — there it's the third-party radio button in §2), which
   matters only for a bucket-**B** entity that could otherwise have called.
+  ⚠️ **Two ways the firm's own standing block above walks into this**, both of them
+  natural mistakes: (1) the client has **no US address of their own** and someone puts
+  the firm's mailing address on **line 3 / 4a** as well — now the taxpayer address and
+  the designee address are the same; (2) **Lilian is the one filling the form**, so her
+  direct line gets written into the **signature block's "Applicant's telephone number"**
+  too — now the phones match. Either one is enough to trigger it. The applicant's phone
+  is the **client's**, and the applicant's address is the **client's**.
 - **The designee block is void without a signature** — *"You must complete the
   signature area for the authorization to be valid."*
+
+#### The designee dies the moment the EIN is issued — what replaces it
+
+The instructions are explicit: *"The designee's authority terminates at the time the
+EIN is assigned and released to the designee."* So the block above covers the
+application **and nothing after it**. Two situations follow, and they need different
+paper:
+
+| You need to… | Use |
+|---|---|
+| Ask about a **pending** application, or receive the EIN | The **Third-Party Designee block** above. Nothing else is needed while the application is open |
+| Call the IRS about the entity **after** the EIN exists (147C, a name or address correction, anything on the account) | **Form 2848** — the designee is already dead |
+
+**The Form 2848 for an EIN matter is a *specific-use* POA, and it is not filled in the
+ordinary way.** The IRS instructions give the entry verbatim:
+
+| Line | What to put |
+|---|---|
+| **3 — Description of Matter** | `EIN Application` |
+| **3 — Tax Form Number** | `Form SS-4` |
+| **3 — Year(s) or Period(s)** | `Not Applicable` |
+| **4** | ✅ **check the box** — *"Applications for an EIN"* is on the instructions' own list of specific uses the IRS **does not record on the CAF** |
+| **5a** | leave alone. It only *modifies* the default acts (Intermediate Service Provider access, substituting a representative, disclosure to third parties, signing a return, "Other"). **Calling and receiving information is already granted by line 3** — the POA *"authorizes the listed representative(s) to inspect and/or receive confidential tax information and to perform all acts … with respect to matters described in the power of attorney."* |
+
+Three consequences worth knowing before you rely on it:
+
+1. **It is not in the CAF, so it does not come up when you call.** *"If you check the
+   box on line 4, mail or fax Form 2848 to the IRS office handling the specific
+   matter"* — for an EIN that is the **EIN Operation**, not the Memphis/Ogden CAF fax
+   in the Form 2848 instructions. *(That an assistor will take the fax while you are on
+   the line is ordinary practice, not something the instructions state.)*
+2. **Two separate 2848s, never one.** The line 4 checkbox governs the **whole form**.
+   Mix the EIN matter with the client's ordinary tax matters on one 2848 and **none** of
+   it gets recorded on the CAF. File the specific-use one now, and a normal one — EIN in
+   line 1, line 4 unchecked — once the number exists.
+3. **A 2848 cannot replace the designee while the EIN is still pending.** Line 1 wants
+   the taxpayer's identification number, and the entity has none yet. **The Instructions
+   for Form 2848, the Instructions for Form SS-4 and Pub. 947 were all searched
+   (2026-08-14) and none of the three says what to enter when no number has been
+   assigned.** That gap is exactly why the designee block exists — so fill it in, every
+   time, rather than planning to send a POA later.
 
 ### 4E. The employee question — the firm's answer is **No** unless payroll starts now
 
@@ -546,6 +621,52 @@ working in the business still owes themselves a reasonable salary, and the
 payroll filings start then. See the
 [reasonable-compensation work](../reasonable-compensation/).
 
+### 4F. Lines 10, 16 and 17 describe the SAME business — write them together
+
+Three different lines ask what the company does, in three different shapes, and
+people fill them in isolation. They land on the IRS account together, so they have to
+agree.
+
+| Line | What it actually asks for | Shape |
+|---|---|---|
+| **10** | *"If you check this box, enter the **type of business being started**"* | **Short.** One small line next to the checkbox |
+| **16** | *"the one box … that best describes the **principal activity**"* — *"You must check a box"* | **A single checkbox**, from the IRS's fixed list |
+| **17** | *"describe the applicant's principal line of business **in more detail**"* — *"An entry is required"* | **Free text.** The full description |
+
+**Write them in the order 17 → 10 → 16.** Get the true, complete description down on
+17 first; compress *that* into the short type for 10; then pick the one box on 16 that
+the description actually supports. Doing it the other way round is how a business ends
+up described three different ways on one form.
+
+> **Worked example.** A studio that both **designs interiors** and **sells decorative
+> wall plaster and related materials**:
+> **17** = `Design services and retail sale of decorative wall plaster and related
+> materials` · **10** = `Design services and retail of decorative wall materials` ·
+> **16** = the whole problem, below.
+
+**The hard part is line 16, because it is single-choice and most small businesses do
+two things.** There is no "mostly X, some Y" on this form. Decide it on **where the
+revenue actually comes from**, not on what the business calls itself:
+
+- **Selling goods to the public** (store, direct, mail-order, online) → **Retail**.
+- **A service the IRS's list doesn't name** — design, consulting, most professional
+  work → **Other**, with the activity written in.
+- ⚠️ **They also APPLY / INSTALL it on the client's property → Construction**, even if
+  they sell the materials too. The instructions are explicit that construction *"also
+  includes special trade contractors"*, and a wall-finishing or installation trade is
+  one. **This is the question to ask the client before touching line 16**, and it is
+  easy to miss because nothing on the form prompts it — the client says "we sell
+  plaster" and nobody asks who puts it on the wall.
+
+**Why it is worth getting right rather than guessing:** line 16 establishes the
+activity on the IRS's record of the account. It is not a cosmetic field.
+
+> **On the online path this section mostly disappears.** The EIN Assistant has **no
+> line-10 text box** — you pick "Started a new business" and write nothing — and the
+> activity is a **category dropdown plus a scripted follow-up** instead of lines 16/17
+> (the matrix is in §2). The *decision* above is the same; only the boxes change. See
+> [§1.5](#15-the-online-application-and-the-paper-ss-4-ask-different-questions).
+
 ---
 
 ## 5. After you have the EIN
@@ -606,7 +727,18 @@ payroll filings start then. See the
   responsible party is a statement of fact about who controls the entity, signed
   under penalties of perjury. Write **`Foreign`** on 7b instead (§4C).
 - **Reusing the firm's phone or address in both the taxpayer lines and the
-  designee block.** It forces the application to mail/fax only (§4D).
+  designee block.** It forces the application to mail/fax only (§4D). The two natural
+  versions: the client has no US address so the firm's goes on line 3/4a as well, or
+  the person filling the form writes **their own** work number in the applicant's
+  signature block.
+- **Leaving the Third-Party Designee block empty because "the client can just call."**
+  They usually can't and won't, and without it the IRS will neither release the EIN to
+  us nor discuss the filing. The firm fills it **every time** (§4D).
+- **Writing the full business description on line 10.** It wants the **type** in short
+  form; the description belongs on line 17, and line 16 has to agree with both (§4F).
+- **Picking line 16 without asking whether the client INSTALLS what they sell.**
+  Applying materials on a client's property is **Construction**, not Retail — and
+  nothing on the form prompts the question (§4F).
 - **Routing Path B on where the OWNER lives instead of where the ENTITY is.** A
   Florida LLC with a foreign owner is a **domestic** filing — fax **855-641-6935**,
   and the 267-941-1099 phone line is **not** open to it (§3).
@@ -660,8 +792,11 @@ Addresses
 
 Business details
 - Reason for applying:  ☐ Started a new business  ☐ Other: ____
-- Principal activity (line 16 checkbox):
-- Line of merchandise / services (line 17, free text):
+  → write them in the order 17 → 10 → 16 (§4F):
+- Full description (line 17, free text — write this FIRST):
+- Type of business (line 10, SHORT — compressed from line 17):
+- Does the client INSTALL / apply what they sell on the customer's property?  ☐ No  ☐ Yes → line 16 is Construction (§4F)
+- Principal activity (line 16 — ONE checkbox, chosen from the description above):
 - Employees expected next 12 months  ☐ NO — the standing answer: "-0-" / "No" (§4E)
       ☐ YES — payroll starts now (say why: ____________)  →  Agricultural: ___  Household: ___  Other: ___
 - First wage date (line 15 — enter "N/A" if no payroll planned): ____
@@ -671,6 +806,10 @@ Business details
 
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
+      Designee block (the firm's standing values — §4D, nothing needed from the client):
+      ☐ Name: Lilian Gonzalez   ☐ Address: firm mailing address on file (from Drive — NOT the client's)
+      ☐ Phone: (754) 286-1478   ☐ Fax: ____  ← the JK company fax; this is where a Path B EIN comes back
+      ☐ Checked that neither the address NOR the phone matches what's in the taxpayer lines
 - Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company operating from its FL address = A; see §3)  ☐ B — entity has none
 - Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B, and NOT a US-territory entity)
 
@@ -693,7 +832,27 @@ line-13 wording is quoted, but its *consequences* (that a non-zero count opens t
 Agricultural→943 / Household→Schedule H / Other→941+940 mapping) are **the firm's
 own operating knowledge**, not statements in the instructions — as is the
 standing answer itself (**No / `-0-` unless payroll starts now**), which is a firm
-policy decision recorded from **Julia** in **Aug 2026**, not an IRS rule. The online-wizard
+policy decision recorded from **Julia** in **Aug 2026**, not an IRS rule. **§4D's
+standing designee block is the same kind of thing** — the four values (Lilian's name,
+the firm's mailing address, her direct line, the company fax) are a **firm policy
+recorded from Lilian on 2026-08-14**, not anything the IRS prescribes; only the quoted
+matching-trap and signature rules around them are instruction text. **§4D's Form 2848
+subsection** is taken from the **Instructions for Form 2848 (Rev. September 2021)**,
+read in full 2026-08-14 — the line 3 entry, the "Applications for an EIN" specific-use
+listing, the CAF consequence and the *Authority Granted* sentence are all quoted from
+it; that the specific-use fax goes to the **EIN Operation** follows from the
+instruction's *"the IRS office handling the specific matter"*, and that an assistor
+takes the fax mid-call is **operating practice, not instruction text**. The statement
+that **no source says what to enter in line 1 when no EIN has been assigned** is a
+bounded negative: the Instructions for Form 2848, the Instructions for Form SS-4 and
+Pub. 947 were searched on 2026-08-14 and none addresses it — it is not a claim that
+nothing anywhere does. **In §4F**, the descriptions of what lines 10, 16 and 17 ask for
+are quoted from the SS-4 instructions (read 2026-08-14), as is *"construction … also
+includes special trade contractors."* **The rest of §4F is the firm's method**: writing
+them in the order 17 → 10 → 16, deciding line 16 by where the revenue actually comes
+from, and treating an installer of wall finishes as a special trade contractor — the
+IRS names plumbing, HVAC, electrical, carpentry, concrete and excavation, not wall
+finishing, so that last step is our reading and not a quotation. The online-wizard
 walkthrough in §2, and therefore the online column of §1.5, was verified on screen
 in **July 2026** — the IRS changes that tool without notice, so re-check it and
 update §2 when it moves. Verify fax numbers, hours, and mailing addresses against
