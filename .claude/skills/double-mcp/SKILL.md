@@ -518,6 +518,19 @@ redacted text to a file, and it deletes the raw download on every path out. Read
 [README](../../../tools/redact-doc/README.md) — in particular that it **fails closed** and that a
 scan (no text layer) is a **stop**, never a reason to send the image somewhere else to be read.
 
+⚠️ **When it will not read the file, the README has a runbook by exit code — use it instead of
+improvising.** It covers the fresh-session install (pypdf, and the `_cffi_backend` failure that
+follows it), the scan stop, the guard trip, and the one that reads as success:
+
+> 🔴 **`0 masked` can mean BLIND rather than clean.** A PDF whose font carries no usable Unicode
+> map yields glyph names instead of characters — huge volume, zero matches, a written file, and a
+> report of zero for every category including zero EINs. **A return with a K-1 on it has an EIN;
+> a report of zero EINs is a broken read, not a clean document.** The tool now decodes those
+> automatically and refuses to write when the text is still unreadable (exit 5) — but the reflex
+> to keep is: **corroborate a figure arithmetically before trusting it** (does 1125-A line 6 minus
+> line 7 equal line 8?). _(Found 2026-08-14 on a real filed 1120-S that carried four SSN/ITINs the
+> first pass never saw.)_
+
 #### 🔓 The SECOND hole, opened 2026-08-13: the firm's own migrated TaxDome notes
 
 **Lilian authorised this. Here is exactly what was said, because the wording matters and an

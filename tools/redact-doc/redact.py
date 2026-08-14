@@ -355,7 +355,17 @@ def _run(src: Path, dst: Path) -> int:
     try:
         from pypdf import PdfReader
     except ImportError:
-        print("ERROR: pypdf is not installed (pip install pypdf)", file=sys.stderr)
+        print(
+            "ERROR: pypdf is not installed.\n"
+            "    pip install pypdf\n"
+            "⚠️  In a fresh cloud session `import pypdf` can still fail afterwards with\n"
+            "    ModuleNotFoundError: No module named '_cffi_backend'. That is the system\n"
+            "    cryptography package missing its backend, not a problem with this tool:\n"
+            "    pip install --upgrade cffi\n"
+            "    (An 'ERROR: Cannot uninstall cryptography ... installed by debian' line\n"
+            "     while doing this is expected and harmless — pypdf imports anyway.)",
+            file=sys.stderr,
+        )
         return 3
 
     try:

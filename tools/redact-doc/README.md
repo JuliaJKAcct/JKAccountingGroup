@@ -111,6 +111,26 @@ Ask for a properly generated PDF from the tax software.
    it. This is the only gate here that protects against a *misleadingly reassuring* result
    rather than a leak.
 
+## 🔧 It didn't read the PDF — the runbook
+
+**Work down this table by the exit code. Do not improvise around it**, and in particular never
+solve a reading problem by sending the document somewhere else to be read.
+
+| Exit | Message | What it means | What to do |
+|---|---|---|---|
+| **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless |
+| **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
+| **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
+| **5** | `UNREADABLE EXTRACTION` | The text came out at the character level — a font with no usable Unicode map, or similar | The tool already decodes `/uniXXXX` glyph names automatically, so reaching this means the failure is a shape it cannot recover. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — see the section above; zero means blind |
+| **4** | `REFUSING TO WRITE` | An identifier-shaped run survived redaction | Read the reported *shapes*. Either a pattern missed a real identifier or a column of figures collided with the shape. Inspect the PDF by hand, decide which, and **fix the patterns** — never weaken the guard to get the job done |
+| **0** + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
+| **0** + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
+
+**The single most useful habit:** before trusting any figure out of this tool, find an internal
+arithmetic check in the document itself and confirm it. On a return, `1125-A` line 6 − line 7 =
+line 8, and `1120-S` line 1c − line 2 = line 3. Two checks that pass are worth more than a
+careful read of a mangled column.
+
 ## ⚠️ An absence in the output is not an absence in the return
 
 A PDF's text layer does not always give everything up — rotated text and fonts pypdf cannot
