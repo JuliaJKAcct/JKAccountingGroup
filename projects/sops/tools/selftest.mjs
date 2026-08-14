@@ -114,9 +114,12 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   if (!tool.cfg) continue;
 
   const t = tool.tracker._internals;
+  // The engine no longer runs this on page load — it is a build-time assertion, and this
+  // is the build. A gap here means a reopened case shows a bare id in the wrong phase.
+  const missingSteps = t.checkCoverage();
   ok(label + ' every reachable step has a label',
-     t.missingSteps.length === 0,
-     t.missingSteps.length ? 'missing from the seed shapes: ' + t.missingSteps.join(', ') : '');
+     missingSteps.length === 0,
+     missingSteps.length ? 'missing from the seed shapes: ' + missingSteps.join(', ') : '');
 
   // Round-trip: a case written to a note and reopened is the same case.
   const steps = tool.buildSteps(tool.cfg.genericAnswers);
@@ -163,6 +166,25 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
        want(tryDec(note.replace(/(.{60})/g, '$1\n'))));
     ok(label + ' pasting only the code line works',
        want(tryDec(note.split('\n').pop())));
+    // The pair, which is the likeliest note of all after three weeks in Double: it got
+    // wrapped somewhere in transit AND somebody typed under the block. Handling either
+    // fault alone still failed on both together.
+    ok(label + ' a wrapped block WITH trailing text still opens',
+       want(tryDec(note.replace(/(.{60})/g, '$1\n') + '\nPaid it today — JA\nand a second line')));
+  }
+
+  // Trimming the log must leave exactly 12 entries and name exactly what it discarded —
+  // that marker is permanent and goes into the client's record.
+  {
+    const many = t.newCase('Long log', steps);
+    for (let k = 0; k < 30; k++) many.log.push({ t: '2026-08-14 10:0' + (k % 10), x: 'entry ' + k });
+    const before = many.log.length;
+    const kept = many.log.slice(-11);
+    kept.push({ t: 'x', x: (before - 11) + ' older log entries trimmed so the note fits Double.' });
+    ok(label + ' trimming leaves 12 entries, not 13', kept.length === 12);
+    ok(label + ' and the marker names what was actually discarded',
+       kept[11].x.startsWith(String(before - 11) + ' '),
+       kept[11].x + ' (of ' + before + ')');
   }
 
   // The note is the thing that has to fit in Double.
@@ -210,6 +232,35 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
        clash.length ? 'answer-dependent wording on: ' + clash.join(', ')
                       + ' — a reopened case would show the wrong variant' : '');
   }
+}
+
+/* ------------------------------------------- BTR: the checklist must prune -- */
+// The case is what gets pasted into the client's Double note, so it has to agree with the
+// preparation sheet built from the same answers. It used to ignore `existing` and `city`
+// entirely: a renewal was handed five BTExpress steps for an application nobody was going
+// to make, and a business outside Hollywood got Hollywood's URL and "$25 plus the
+// classification tax" baked in, with none of the caveat the sheet prints on screen.
+section('BTR — the checklist prunes on what the client already holds, and on the city');
+{
+  const tool = loadTool('btr-walkthrough.src.html');
+  const base = tool.cfg.genericAnswers;
+  const ids = (o) => tool.buildSteps(Object.assign({}, base, o)).map((s) => s.id);
+  const first = ids({}), renew = ids({ existing: 'both' }),
+        hasCounty = ids({ existing: 'county' }), elsewhere = ids({ city: 'broward' });
+  ok('a first filing carries the full BTExpress sequence',
+     ['ctyapply', 'ctyconfirm', 'ctyapproved'].every((k) => first.includes(k)));
+  ok('a RENEWAL carries no BTExpress application steps',
+     !['ctyapply', 'ctyconfirm', 'ctyapproved'].some((k) => renew.includes(k)), renew.join(','));
+  ok('a renewal renews instead — and still pays',
+     ['ctyrenew', 'ctypay', 'cityrenew'].every((k) => renew.includes(k)), renew.join(','));
+  ok('a client already holding the county receipt confirms the account rather than reapplying',
+     !hasCounty.includes('ctyapply') && hasCounty.includes('ctyactive'), hasCounty.join(','));
+  ok('a business outside Hollywood gets NO Hollywood city steps',
+     !['cityapply', 'citypay', 'citynotify'].some((k) => elsewhere.includes(k)), elsewhere.join(','));
+  ok('…it gets generic municipal steps instead',
+     ['localapply', 'localpay', 'localreview'].every((k) => elsewhere.includes(k)), elsewhere.join(','));
+  ok('…and the county half is unchanged, because that part IS county-wide',
+     ['ctyapply', 'ctyconfirm'].every((k) => elsewhere.includes(k)));
 }
 
 /* ------------------------------------------------------------ doubleLink -- */

@@ -230,8 +230,12 @@
       cfg.seeds.forEach(function(a){ cfg.buildSteps(a).forEach(function(s){ if(!seen[s.id]){ seen[s.id]=1; out.push(s); } }); });
       return out;
     })();
-    // Self-check: sweep the answer space and prove every reachable step id is in ALLSTEPS.
-    var missingSteps = (function(){
+    // Sweep the answer space and prove every reachable step id is in ALLSTEPS.
+    // NOT run on load. It is a build-time assertion — tools/selftest.mjs calls it and
+    // fails the build on any gap — and 5,000 buildSteps() calls cost ~55ms, which the
+    // Hub was paying twice on every open for a check no user can act on. Kept here
+    // rather than in the test so the rule travels with the engine that enforces it.
+    function checkCoverage(){
       var known = {}; ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
       var missing = {}, V = cfg.sweepValues || {}, keys = Object.keys(V);
       if (!keys.length) return [];
@@ -241,9 +245,6 @@
         cfg.buildSteps(a).forEach(function(s){ if (!known[s.id]) missing[s.id] = 1; });
       }
       return Object.keys(missing);
-    })();
-    if (missingSteps.length && global.console && global.console.error){
-      global.console.error(cfg.noteHeading + ' tool: steps missing from the seed shapes — they will lose their labels on re-import: ' + missingSteps.join(', '));
     }
 
     /* ------------------------------ storage ------------------------------ */
@@ -340,10 +341,20 @@
       // way out. But a note that has been hard-wrapped in transit needs the opposite
       // treatment — every line joined. Try the strict reading first, then the forgiving
       // one, so trailing text is ignored without giving up on a wrapped block.
-      var tries = [tail.split('\n')[0], tail], o = null, err = null;
-      for (var t = 0; t < tries.length; t++){
+      // Grow the candidate one line at a time and take the FIRST that parses. encodeCase()
+      // emits the block as one line, so line 1 alone is the normal case; a block that was
+      // hard-wrapped in transit needs its lines rejoined; and a note that is BOTH wrapped
+      // AND has somebody's own text under it — "paid the county today", a signature —
+      // needs exactly the wrapped lines and none of the prose. Trying the two extremes
+      // separately handled either fault alone and failed on the pair, which is the
+      // likeliest note of all after three weeks in Double. Shortest-valid-prefix handles
+      // all three, and a truncated prefix cannot pass: it has to survive base64, JSON.parse
+      // and the version check.
+      var lines = tail.split('\n'), o = null, err = null, acc = '';
+      for (var t = 0; t < lines.length && t < 200; t++){
+        acc += lines[t].replace(/[^A-Za-z0-9+/=]/g, '');
         try {
-          var cand = b64dec(tries[t].replace(/[^A-Za-z0-9+/=]/g, ''));
+          var cand = b64dec(acc);
           if (cand && cand.v === 1){ o = cand; break; }
         } catch(e){ err = e; }
       }
@@ -701,7 +712,11 @@
           // marker anyway made an already-too-long note LONGER — while telling the user
           // their problem had been dealt with. The length is coming from the step notes
           // instead, so say that: it is the only thing they can actually shorten.
-          var dropped = Math.max(0, c.log.length - 12);
+          // 11, not 12: the marker below takes the twelfth slot, so eleven originals
+          // survive and `dropped` has to count from there or the note names one fewer
+          // entry than it actually discarded — a permanent line in the client's record
+          // saying the wrong number.
+          var dropped = c.log.length > 12 ? c.log.length - 11 : 0;
           if (!dropped){
             sayNote({ title: 'The log is already short',
               body: '<p>There are only ' + c.log.length + ' log entries, so trimming them frees nothing.</p>'
@@ -870,7 +885,7 @@
       start: start, render: renderCases, paintBadge: paintBadge, trackCurrent: trackCurrent,
       // Exposed for tools/selftest.mjs — pure, no DOM.
       _internals: { encodeCase: encodeCase, decodeCase: decodeCase, newCase: newCase,
-                    progress: progress, allSteps: ALLSTEPS, missingSteps: missingSteps,
+                    progress: progress, allSteps: ALLSTEPS, checkCoverage: checkCoverage,
                     caseNoteText: caseNoteText, validCase: validCase }
     };
   }

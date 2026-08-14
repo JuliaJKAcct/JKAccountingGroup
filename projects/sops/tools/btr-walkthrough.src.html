@@ -662,28 +662,60 @@ function buildSteps(a){
   if (isReg) add('licpdf','prep','State licence saved as a PDF','Whichever regulator the walkthrough identified — it is named on the preparation sheet. The name and address on the licence must match the application exactly.');
 
   /* --- county --- */
-  add('ctyapply','county','BTExpress application submitted','broward.county-taxes.com/btexpress — county first; the city needs an active county account.');
-  add('ctyconfirm','county','Confirmation link in the FIRST county email clicked','Until this is clicked the application has not been sent for processing.');
-  add('ctyapproved','county','Second county email received — approved, and asking for payment','~24–48 h later. Check Gmail’s “Updates” tab; it hides there.');
-  add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
-  add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
+  // The checklist has to agree with the preparation sheet built from the SAME answers.
+  // It used to ignore `existing` entirely, so a renewal — or a client who already holds
+  // the county receipt — was handed the whole first-filing sequence: five BTExpress steps
+  // for an application nobody was going to make. Different situations get different step
+  // IDS rather than different wording for one id — a saved case stores ids, so re-wording
+  // an id is how a reopened case comes back stating the wrong thing.
+  var haveCounty = a.existing === 'county' || a.existing === 'both';
+  if (a.existing === 'both'){
+    add('ctyrenew','county','County account renewed for the new tax year','The county receipt is already held — this is a renewal, not a new BTExpress application.');
+    add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
+    add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
+  } else if (haveCounty){
+    add('ctyactive','county','County account confirmed ACTIVE','The city application requires it as supporting documentation — check it rather than assuming, then carry the account number to the city application.');
+  } else {
+    add('ctyapply','county','BTExpress application submitted','broward.county-taxes.com/btexpress — county first; the city needs an active county account.');
+    add('ctyconfirm','county','Confirmation link in the FIRST county email clicked','Until this is clicked the application has not been sent for processing.');
+    add('ctyapproved','county','Second county email received — approved, and asking for payment','~24–48 h later. Check Gmail’s “Updates” tab; it hides there.');
+    add('ctypay','county','County balance paid','Usually ~$30–$45. The receipt does not issue until it is paid.');
+    add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
+  }
 
   /* --- city --- */
-  // Invariant for the same reason as licpdf: a renewal case reopened would otherwise come
-  // back showing the first-filing URL, because the catalogue keeps one variant per id.
-  add('cityapply','city','City LBTR application submitted','apps.hollywoodfl.org/LbtrOnline/ — or the LBTRrenewals page if this is a renewal. The folio auto-fills from the address.');
-  add('cityuploads','city','Both city uploads accepted','Proof of location and entity proof. PDF only, ≤ 10 MB each.');
-  add('citytrack','city','“Track Your Application” email kept, Application ID recorded','It is the only way to check status later. Put the ID in the client’s file.');
-  add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+  // Same discipline, and one more reason: outside Hollywood the city half is a DIFFERENT
+  // municipality's system, screens and fees. The preparation sheet says so; the checklist
+  // used to bake Hollywood's URL and "$25 plus the classification tax" into the case
+  // regardless — and the case is what gets pasted into the client's Double note, where
+  // nobody can see the caveat that only ever existed on screen.
+  var hollywoodCase = a.city === 'hollywood';
+  if (!hollywoodCase){
+    add('localapply','city','Municipal business tax receipt applied for','NOT Hollywood — that city has its own system, screens and fee schedule. Get them from the city itself; the Hollywood LBTR steps do not apply.');
+    add('localdocs','city','That city’s required documents supplied','Expect proof of location and entity proof at minimum, but confirm its own list.');
+    add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+  } else if (a.existing === 'both'){
+    add('cityrenew','city','City receipt renewed','apps.hollywoodfl.org/LBTRrenewals/ — the renewals route, not a new application.');
+    add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+  } else {
+    add('cityapply','city','City LBTR application submitted','apps.hollywoodfl.org/LbtrOnline/ — the folio auto-fills from the address.');
+    add('cityuploads','city','Both city uploads accepted','Proof of location and entity proof. PDF only, ≤ 10 MB each.');
+    add('citytrack','city','“Track Your Application” email kept, Application ID recorded','It is the only way to check status later. Put the ID in the client’s file.');
+    add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+  }
 
   /* --- review --- */
-  add('cityreview','review','City review passed, or its request answered','A personal email arrives only if something needs fixing.');
-  add('citydiff','review','Any category-difference balance paid','Through the City’s own payment centre — a different channel from PayPal. Keep the Treasury reference number.');
-  add('citynotify','review','Reviewer told the balance was paid','THE step people miss. The receipt is issued only after this reply.');
+  if (hollywoodCase){
+    add('cityreview','review','City review passed, or its request answered','A personal email arrives only if something needs fixing.');
+    add('citydiff','review','Any category-difference balance paid','Through the City’s own payment centre — a different channel from PayPal. Keep the Treasury reference number.');
+    add('citynotify','review','Reviewer told the balance was paid','THE step people miss. The receipt is issued only after this reply.');
+  } else {
+    add('localreview','review','That city’s review passed, or its request answered','Ask how it confirms payment and issues the receipt — Hollywood does not issue until you reply to the reviewer, and another city may have its own such step.');
+  }
 
   /* --- after --- */
   add('countyrec','after','County receipt in hand','');
-  add('cityrec','after','City receipt received','Mailed in about a week.');
+  add('cityrec','after','City receipt received','');
   add('posted','after','Both receipts posted at the place of business','Florida requires them to be displayed.');
   add('renewal','after','Sept 30 renewal calendared','The tax year is Oct 1 – Sep 30. Both receipts expire every Sept 30.');
   add('filed','after','Receipts and payment confirmations filed in the client’s systems','Drive or Double — never the repo.');
