@@ -165,9 +165,22 @@ was said). Better a sourced, low-confidence note than nothing.
 | CANDRAMAS LLC | 706683 |
 | AXDIGITAL LLC | 706681 |
 | Airtouch LLC | 706671 |
+| VITALII IVANOV & TETIANA MOGYLOVA | 710666 |
+| Igor Melomed & Yelena Lovkina | 710635 |
+| R & G Friendly Inc | 710589 |
+| Viacheslav Honcharenko | 710665 |
+| Maria Contreras | 710646 |
+| Iurii Iakovenko & Alina Yakovenko | 710639 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
+> archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived
+> in Double, which is the normal reason to exclude, but its **Gusto payroll was live and blocked on
+> 2026-08-13** with the firm copied in. **If the engagement turns out to be live, move it up into
+> this table** — the exclusion rule assumes an archived client generates no activity, and this one
+> is currently generating some.
 
 > ⚠️ **The last seven were missing for a structural reason worth remembering.** This list was built
 > from **Lilian's and Maria's** clients, so **every client assigned to Liudmyla Kazannik fell outside
@@ -181,9 +194,16 @@ per-tool call limits._
 
 > **Catch-up priority — the queue is now ten deep against a ~6-full-pass cap, so state the order
 > rather than let list position decide it.** **First: Artur Tseretsian and Ihor Naum & Olha Levchuk**
-> — deferred twice already, and the ledger records the promise. **Then the seven new clients.** A run
-> that spends its whole cap on the new arrivals breaks a commitment that is written down, which is
-> worse than a client waiting one more week.
+> — deferred twice already, and the ledger records the promise. **Then Liudmyla's seven** (added
+> 2026-08-11), **then the TaxDome-backfill seven** (added 2026-08-14 — they have had six days of
+> Gmail/Ping and nothing before that, so their full pass is owed in full). A run that spends its
+> whole cap on the new arrivals breaks a commitment that is written down, which is worse than a
+> client waiting one more week.
+> ⚠️ **The queue is now ~16 full passes deep against a ~6-per-run cap, so it takes about three runs
+> to clear** — and the cap exists for a reason, so the answer is patience and order, not raising it.
+> **Two clients in the newest group have live 2025 returns unfiled** (Vitalii Ivanov, Viacheslav
+> Honcharenko) — if that starts to matter before their turn comes, sweep them by hand rather than
+> jumping the queue.
 
 **Excluded from the sweep — archived clients.** A client archived in Double gets no
 new activity, so sweeping it every Saturday wastes budget. These have a CI file and a
@@ -194,6 +214,7 @@ README row but are deliberately **not** in the scope table above:
 | MAYS EXPRESS SERVICE LLC | 710582 | **Former** — business closed 2025-12-31. Kept because the FDOR refused to close its sales-tax and reemployment-tax accounts (Dec 2025 payroll/sales tax unsubmitted) and **nothing records it resolving** — case note 491838 |
 | MEGABAI | *(none)* | **Former** — company closed and **was never migrated to Double**, so there is no client to sweep and no note to keep. The file is the firm's only record of it _(Lilian, 2026-08-12)_ |
 | Tsminibears LLC | 706709 | Archived 2026-06-08, but an **open Florida reemployment-tax penalty matter** and a firm-wide Gusto lesson are recorded in it |
+| SETATECH USA, INC. | 706706 | Archived 2026-07-22 — ⚠️ **but not quiet.** Gusto reported its **payroll blocked on an outstanding balance** on 2026-08-13, to the client and four people at the firm. **Excluded provisionally only**: settle whether the engagement is actually over, and if it is not, move it into the scope table above _(created 2026-08-14)_ |
 
 ## Schedule
 

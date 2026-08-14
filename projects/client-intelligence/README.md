@@ -181,7 +181,7 @@ client-intelligence/
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (37 so far — see the Clients index below)
+└── clients/               ← one file per client (44 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -224,6 +224,13 @@ client-intelligence/
 | Ecom Beavers LLC | [`clients/ecom-beavers.md`](./clients/ecom-beavers.md) | Maria | In progress — enriched |
 | Ihor Naum & Olha Levchuk | [`clients/ihor-naum-olha-levchuk.md`](./clients/ihor-naum-olha-levchuk.md) | Lilian | In progress — 1040 filed; Form 8802 pending at the IRS |
 | GOSSIP MIAMI LLC | [`clients/gossip-miami.md`](./clients/gossip-miami.md) | Lilian | In progress — tax-prep only; financial-statement cleanup quoted separately and under way. ⚠️ **The business has been SOLD** — nothing about the sale documented, and a **2025 1099-NEC is likely owed** (payee classification unconfirmed) with no W-9 (live status in §6) |
+| VITALII IVANOV & TETIANA MOGYLOVA | [`clients/vitalii-ivanov.md`](./clients/vitalii-ivanov.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. 🔴 **50% of FOUR Ukrainian companies → Form 5471 territory**; 2025 unfiled, organizer still `Sent`. Russian only |
+| SETATECH USA, INC. | [`clients/setatech-usa.md`](./clients/setatech-usa.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. 🔴 **Archived in Double 2026-07-22 yet its Gusto payroll is LIVE AND BLOCKED** (2026-08-13, firm cc'd); `Income Tax = true` with **no `Tax Return Type`** |
+| Igor Melomed & Yelena Lovkina | [`clients/igor-melomed.md`](./clients/igor-melomed.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. Double says `1040`, the firm's 2023 papers are a **Schedule C** — unsettled; 2025 `notStarted`. ⚠️ **Two Melomed households in Double** |
+| R & G Friendly Inc | [`clients/rg-friendly.md`](./clients/rg-friendly.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. 1120-S filed 2026-05-25; **the company credit card was never connected in QuickBooks** so the books are only as complete as a manual paste |
+| Viacheslav Honcharenko | [`clients/viacheslav-honcharenko.md`](./clients/viacheslav-honcharenko.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. Organizer **Completed** yet 2025 sits `waitingOnClient` and unfiled; **first year with a dependent daughter** |
+| Iurii Iakovenko & Alina Yakovenko | [`clients/iurii-iakovenko.md`](./clients/iurii-iakovenko.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. Organizer **Completed**, 2025 `inProgress` and unfiled — **waiting on us**. Surname transliterated two ways on one record |
+| Maria Contreras | [`clients/maria-contreras.md`](./clients/maria-contreras.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep; **the thinnest file in the set**. 2025 filed. ⚠️ A **car-insurance deduction** for 2024 with no business on record |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter **open**. Closing the account is dead; the plan is to ask the DOR to **move the effective date** — **on the call**, since a third agent said it can be done and asked for no documentation; a written request (with a **reasonable-cause penalty waiver** as its alternative ask) is only the fallback. **⏳ Waiting on the POA — the 08-04 send never arrived, re-sent 2026-08-06 to `AcctMaint@floridarevenue.com` — then Lilian calls** |
 
 ## Brand & design
