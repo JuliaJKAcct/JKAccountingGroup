@@ -418,6 +418,9 @@
     // while the one you asked to delete is written straight back. Match by key, never by
     // identity.
     function live(c){
+      // Identity first. It is exact, and it is the only thing that stays correct if two
+      // cases ever do share a key — which duplicate references would cause.
+      if (cases.indexOf(c) >= 0) return c;
       var k = caseKey(c);
       for (var i = 0; i < cases.length; i++) if (caseKey(cases[i]) === k) return cases[i];
       return null;
@@ -426,6 +429,13 @@
     function touch(c){ c.updated = todayISO(); c.dirty = true; saveCases(); }
 
     // The reference prompt is asked from two places and must read identically in both.
+    // caseKey is ref + created date, so two cases named the same on the same day are
+    // indistinguishable to the store, the tombstones and live(). Import already refuses to
+    // duplicate a reference silently; creation must too.
+    function refTaken(ref){
+      for (var i = 0; i < cases.length; i++) if (cases[i].ref === ref) return true;
+      return false;
+    }
     function askCaseRef(){
       return askText({
         title: 'Name this case',
@@ -525,6 +535,10 @@
         if (!go) return;
         return askCaseRef().then(function(ref){
           if (!ref) return;
+          if (refTaken(ref)) return sayNote({
+            title: 'There is already a case called “' + ref + '”',
+            body: '<p>Two cases with the same reference cannot be told apart — by this tool, or by whoever reads the note in Double.</p>'
+                + '<p>Open the existing one from the case list, or press <b>New case</b> again and give this one a name of its own.</p>' });
           var steps = cfg.buildSteps(tailored ? cfg.answers() : cfg.genericAnswers);
           var c = newCase(ref, steps);
           c.generic = !tailored;
@@ -660,27 +674,29 @@
         if (card) card.focus();
       });
       $('delCase').addEventListener('click', function(){
-        var warn = c.dirty
+        var cur = live(c) || c;
+        var warn = cur.dirty
           ? '<p>This case has changes that have <b>not been copied to Double</b>. Deleting it loses them for good — there is nothing to reopen it from.</p>'
           : '<p>You last copied this case to Double, so you can reopen it from that note.</p>';
         askConfirm({
-          title: 'Delete “' + c.ref + '”?',
+          title: 'Delete “' + cur.ref + '”?',
           body: warn, ok: 'Delete the case', cancel: 'Keep it', danger: true
         }).then(function(go){
           if (!go) return;
-          var target = live(c) || c;
+          var target = live(c) || cur;
           deletedKeys[caseKey(target)] = true;            // or the merge in saveCases() hands it back
           var at = cases.indexOf(target);
           if (at >= 0) cases.splice(at, 1);               // never splice(-1) — that deletes the last case
           saveCases(); openCase = null; renderCases();
         });
       });
-      $('copyNote').addEventListener('click', function(){ showNote(c); });
-      $('dlCase').addEventListener('click', function(){ downloadCase(c, $('dlMsg')); });
+      $('copyNote').addEventListener('click', function(){ showNote(live(c) || c); });
+      $('dlCase').addEventListener('click', function(){ downloadCase(live(c) || c, $('dlMsg')); });
       $('logAdd').addEventListener('click', function(){
         var lt = $('logText'), v = lt.value.trim(); if (!v) return;
         lt.value = '';                    // or the pending-text restore above hands it back
-        c.log.push({ t: nowStamp(), x: v }); touch(c); renderOne();
+        var cur = live(c) || c;
+        cur.log.push({ t: nowStamp(), x: v }); touch(cur); renderOne();
       });
       $('logText').addEventListener('keydown', function(e){
         if (e.key === 'Enter'){ e.preventDefault(); $('logAdd').click(); }
@@ -833,15 +849,19 @@
           // marker anyway made an already-too-long note LONGER — while telling the user
           // their problem had been dealt with. The length is coming from the step notes
           // instead, so say that: it is the only thing they can actually shorten.
-          var dropped = trimLog(c, true);   // dry run: how many WOULD go
+          // showNote() is precisely the state in which the storage handler skips its
+          // re-render, so this closure is the likeliest of all to hold a detached twin —
+          // and a trim applied to one is shown on screen and never saved.
+          var cur = live(c) || c;
+          var dropped = trimLog(cur, true);   // dry run: how many WOULD go
           if (!dropped){
             sayNote({ title: 'The log is already short',
-              body: '<p>There are only ' + c.log.length + ' log entries, so trimming them frees nothing.</p>'
+              body: '<p>There are only ' + cur.log.length + ' log entries, so trimming them frees nothing.</p>'
                   + '<p>The length is coming from the <b>per-step notes</b>. Shorten the longest of those, or paste this into Double in two parts — <b>Part 1</b> and <b>Part 2</b> — keeping the block at the very bottom of the last one.</p>' });
             return;
           }
-          trimLog(c);
-          touch(c); renderOne(); showNote(c);
+          trimLog(cur);
+          touch(cur); renderOne(); showNote(cur);
         });
       });
       box.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -967,6 +987,10 @@
     function trackCurrent(){
       askCaseRef().then(function(ref){
         if (!ref) return;                       // cancelled — askCaseRef rejects empties itself
+        if (refTaken(ref)) return sayNote({
+          title: 'There is already a case called “' + ref + '”',
+          body: '<p>Two cases with the same reference cannot be told apart — by this tool, or by whoever reads the note in Double.</p>'
+              + '<p>Open the existing one from the case list, or press <b>“Track this as a case”</b> again and give this one a name of its own.</p>' });
         cases.unshift(newCase(ref, cfg.buildSteps(cfg.answers())));
         saveCases(); openCase = cases[0];
         if (cfg.onOpened) cfg.onOpened();

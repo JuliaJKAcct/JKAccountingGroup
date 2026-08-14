@@ -1113,10 +1113,13 @@ function toolIframe(doc, titleAttr){
     ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
       + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
       + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
-    // No fallback branch. Every caller comes from inlineToolDoc(), which now stops the
-    // build on any failure rather than returning '' — so a "Tool unavailable" card can no
-    // longer be reached, and leaving one here described a recovery that does not happen.
-    : (() => { throw new Error('toolIframe called with an empty doc — inlineToolDoc should have stopped the build'); })();
+    // The fallback is REACHABLE and must stay. inlineToolDoc() stops the build itself, so
+    // its callers never arrive here — but NOTEBOOK_DOC is also a caller and deliberately
+    // returns '' on failure, so throwing here took the whole Hub down over a bad note,
+    // with a message blaming inlineToolDoc. A build failure in one embedded page should
+    // degrade that card, not the Hub; the tools get the stricter treatment because a
+    // half-built TOOL is worked from as if it were whole.
+    : `<div class="callout warn"><div class="cx"><div class="cl">Not available</div><p>This page could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
 }
 function calcReaderInner(){
   return `<section class="mast"><div class="in">`
