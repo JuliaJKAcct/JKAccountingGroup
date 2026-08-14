@@ -359,7 +359,7 @@ each expense that has its own line, then group the remainder.
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
 | **7** | Compensation of officers | Salaries paid to shareholder-employees. Form 1125-E is required at **$500,000 or more** of total receipts |
-| **8** | Salaries and wages | Everyone else's wages |
+| **8** | Salaries and wages | Everyone else's wages — **and only actual wages**. See 5C-i |
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
 | **11** | Rents | Office, warehouse, storage, equipment rental |
@@ -386,6 +386,35 @@ total expenses per the P&L
 
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
+
+### 5C-i · ⚠️ Line 8 is WAGES — not the "payroll" accounts
+
+**A QuickBooks account called `Payroll Expenses` is not automatically wages**, and this is the
+single easiest way to put a number on line 8 that should never have been there.
+
+What actually lands where:
+
+| What it really is | Where it goes |
+|---|---|
+| Gross wages paid to non-officer employees | **Line 8** |
+| Gross wages paid to **shareholder-employees** | **Line 7**, not line 8 |
+| The employer's share of **payroll taxes** | **Line 12** (taxes and licenses) |
+| The **payroll platform's fee** — Gusto, ADP, a subscription | **Line 20**, other deductions. It is a service the company bought |
+
+> 🔑 **THE TEST THAT SETTLES IT: line 8 must tie to the W-2s.** Wages are reported to the IRS on
+> W-2s and on the quarterly 941s. **A figure on line 8 with no W-2 behind it is a mismatch the
+> IRS can see**, and a company that ran no payroll at all should show **zero** — not the balance
+> of an account whose name happens to contain the word "payroll".
+
+⚠️ **And watch the parent-versus-child trap.** In QuickBooks `Payroll Expenses` is often a
+**parent** with `Wages & Salary` and `Payroll Tax` underneath it. Line 8 takes the **`Wages &
+Salary` child**; the payroll tax goes to line 12. **Taking the parent's `Total for…` line puts
+the payroll taxes on the wages line and empties line 12.** Reproducing the prior year (§3) shows
+you which one that client's return used.
+
+_(Worked example: a client's 2024 return took the `Wages & Salary` child to line 8 and the
+`Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
+payroll, so the parent carried only a platform subscription and **line 8 was correctly zero**.)_
 
 ### 5D · Depreciation — line 14
 
@@ -723,8 +752,9 @@ right-hand column is the firm's usual convention, not a rule of the form.
 | Cost of goods sold accounts | Form 1125-A — line **2** (purchases), **3** (labor) or **5** (other costs). ⚠️ **Never "line 8"** — line 8 is computed (6 − 7), so no account feeds it directly |
 | Channel / marketplace selling fees | ⚠️ **Client-specific.** Selling fees are not ordinarily inventoriable, so they usually belong in **other deductions**. One client's prior return puts them in cost of sales — **check §3 before copying either treatment** |
 | Inventory (balance sheet) | 1125-A line 7 — ⚠️ check the subtotal used, §4 |
-| Wages & salary — shareholders | Page 1, line 7 |
-| Wages & salary — staff | Page 1, line 8 |
+| `Wages & Salary` — shareholders | Page 1, line 7 |
+| `Wages & Salary` — staff | Page 1, line 8 — the **child** account, never a `Payroll Expenses` parent total (§5C-i) |
+| `Payroll Expenses` / `Payroll Fees` **when they are the platform's fee** (Gusto, ADP) | Page 1, line 20 — a service bought, **not** wages (§5C-i) |
 | Payroll tax | Page 1, line 12 |
 | Business licences & fees, local taxes | Page 1, line 12 |
 | Rent — any kind | Page 1, line 11 |

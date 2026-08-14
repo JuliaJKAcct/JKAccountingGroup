@@ -1102,7 +1102,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
           <thead><tr><th>Line</th><th>Category</th><th>Typical QuickBooks accounts</th></tr></thead>
           <tbody>
             <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to shareholder-employees</td></tr>
-            <tr><td class="for">8</td><td>Salaries and wages</td><td>Everyone else's wages</td></tr>
+            <tr><td class="for">8</td><td>Salaries and wages</td><td>Everyone else's wages — <b>and only actual wages</b>, see 5C-i</td></tr>
             <tr><td class="for">11</td><td>Rents</td><td>Office, warehouse, storage, equipment rental</td></tr>
             <tr><td class="for">12</td><td>Taxes and licenses</td><td><b>Payroll taxes + business licences + local taxes.</b> Not income tax</td></tr>
             <tr><td class="for">13</td><td>Interest</td><td>Loan and card interest — often filed under "other expenses" in the P&amp;L</td></tr>
@@ -1125,6 +1125,35 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <p class="reveal">If your line 20 does not equal that subtraction, you have either double-counted or dropped an account.</p>
     </div>
 
+    <div class="subbar reveal"><span class="tag">5C-i</span><h3>⚠️ Line 8 is WAGES — not the &ldquo;payroll&rdquo; accounts</h3><span class="rt">the easiest wrong number on page 1</span></div>
+    <div class="indent">
+      <p class="reveal">A QuickBooks account called <code>Payroll Expenses</code> is <b>not automatically wages</b>. What actually lands where:</p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>What it really is</th><th>Where it goes</th></tr></thead>
+          <tbody>
+            <tr><td>Gross wages paid to non-officer employees</td><td><b>Line 8</b></td></tr>
+            <tr><td>Gross wages paid to <b>shareholder-employees</b></td><td><b>Line 7</b>, not line 8</td></tr>
+            <tr><td>The employer&#8217;s share of <b>payroll taxes</b></td><td><b>Line 12</b>, taxes and licenses</td></tr>
+            <tr><td>The <b>payroll platform&#8217;s fee</b> — Gusto, ADP, a subscription</td><td><b>Line 20</b>, other deductions — a service the company bought</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout err reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The test that settles it: line 8 must tie to the W-2s</div>
+          <p>Wages are reported to the IRS on <b>W-2s</b> and the quarterly <b>941s</b>. <b>A figure on line 8 with no W-2 behind it is a mismatch the IRS can see</b> — and a company that ran no payroll at all should show <b>zero</b>, not the balance of an account whose name happens to contain the word &ldquo;payroll&rdquo;.</p>
+        </div>
+      </div>
+      <div class="callout warn reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The parent-versus-child trap</div>
+          <p>In QuickBooks <code>Payroll Expenses</code> is often a <b>parent</b> with <code>Wages &amp; Salary</code> and <code>Payroll Tax</code> underneath. Line 8 takes the <b>child</b>; the payroll tax goes to line 12. <b>Taking the parent&#8217;s <em>Total for…</em> line puts the payroll taxes on the wages line and empties line 12.</b> Reproducing the prior year (§3) shows which one that client&#8217;s return used.</p>
+        </div>
+      </div>
+    </div>
     <div class="subbar reveal"><span class="tag">5D</span><h3>Depreciation — line 14</h3></div>
     <div class="indent">
       <ul class="dots reveal">

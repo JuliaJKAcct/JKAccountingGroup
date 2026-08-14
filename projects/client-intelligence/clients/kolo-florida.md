@@ -165,6 +165,13 @@ the actual details.
   and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
   in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
   Check the PDF by hand. _(2026-08-14.)_
+- 🔢 **2025 return — the two figures that were blocking it are settled.** The **2025 depreciation
+  is on ATX's Form 4562** and reconciles exactly to ATX's Schedule L accumulated depreciation less
+  the book figure carried from 2024 *(confirmed by Lilian, 2026-08-14)*. And the account named
+  `Payroll Expenses` in 2025 is **the Gusto subscription, not wages** — so **page 1 line 8 is
+  zero** and that fee belongs in other deductions. ⚠️ **The 2024 return took the `Wages & Salary`
+  CHILD account to line 8 and `Payroll Tax` to line 12 — never the `Payroll Expenses` parent
+  subtotal.** Repeat that mapping. _(Figures live in QuickBooks and ATX.)_
 - ✅ **PAYROLL STOPPED — settled by Lilian, 2026-08-14: "la nómina paró, no se corrieron más
   payrolls."** So the near-zero payroll on the 2025 P&L is the fact, not a gap in the books. §3/§4
   describe the weekly Gusto payroll in the past tense for this reason — the due/late notices in the
