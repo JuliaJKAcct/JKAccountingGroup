@@ -975,9 +975,20 @@
         }) : Promise.resolve(true);
         gate.then(function(go){
           if (!go) return;
-          // Same trap as delete: a replaced case whose `created` differs from the pasted
-          // one has a different caseKey, so the merge would keep BOTH. Tombstone it.
-          if (existing){ deletedKeys[caseKey(existing)] = true; cases.splice(cases.indexOf(existing), 1); }
+          // Same trap as delete, twice over. ① A replaced case whose `created` differs from
+          // the pasted one has a different caseKey, so the merge would keep BOTH —
+          // tombstone it. ② `existing` was captured before the confirm dialog awaited, and
+          // a cross-window storage event during that wait swaps `cases` for fresh objects
+          // (the busy guard deliberately skips the re-render while the import panel is
+          // open). indexOf then returns -1 and splice(-1, 1) deletes the LAST case —
+          // someone else's — while the duplicate survives. This was the one caller that
+          // still resolved by identity.
+          var stale = existing ? (live(existing) || existing) : null;
+          if (stale){
+            deletedKeys[caseKey(stale)] = true;
+            var at = cases.indexOf(stale);
+            if (at >= 0) cases.splice(at, 1);
+          }
           cases.unshift(c); saveCases();
           imp.hidden = true; openCase = cases[0]; renderCases();
         });
