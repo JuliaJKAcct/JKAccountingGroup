@@ -271,6 +271,11 @@
     // Two windows of a tool used to clobber each other: each held the whole array in
     // memory and wrote it wholesale. Merge against what is on disk at write time.
     function saveCases(){
+      // Repaint first. The early return below used to skip the paintBadge() at the end, so
+      // once storage broke the badge froze for the rest of the session — still counting a
+      // case that had been deleted, never showing one just created. Storage failing is
+      // exactly when the on-screen state has to stay honest, since it is now the only copy.
+      paintBadge();
       if (storageBroken) return;
       var mine = Object.create(null); cases.forEach(function(c){ mine[caseKey(c)] = true; });
       var merged = cases.slice();
@@ -948,6 +953,11 @@
     /* ------------------------------- import ------------------------------ */
     function showImport(){
       var imp = $('caseImport');
+      // Carry across anything already pasted. renderCases() hides this panel — which the
+      // Case-tracker tab triggers — and rebuilding its innerHTML here then threw the note
+      // away. The storage handler has an explicit guard against exactly this loss; the tab
+      // path had none, and a case note is not something anyone wants to go and fetch twice.
+      var pasted = $('impText') ? $('impText').value : '';
       $('caseList').hidden = true;
       imp.hidden = false;
       imp.innerHTML = '<div class="cbar"><button class="btn ghost sm" id="impBack" type="button">← All cases</button></div>'
@@ -959,6 +969,7 @@
         + '<p style="font-size:13.5px;color:var(--muted);margin:0 0 10px">The tool reads the <span class="typein">'+esc(CODETAG)+'</span> line at the bottom, so pasting the whole thing is fine — and pasting only that last line works too.</p>'
         + '<textarea class="paste" id="impText" placeholder="Paste the case note, or the contents of the downloaded .txt file…"></textarea>'
         + '<div class="cbar" style="margin-top:12px"><button class="btn cta sm" id="impGo" type="button">Open the case</button><span class="note-inline" id="impMsg"></span></div></div>';
+      if (pasted) $('impText').value = pasted;
       $('impBack').addEventListener('click', function(){ imp.hidden=true; renderCases(); });
       $('impGo').addEventListener('click', function(){
         var raw = $('impText').value, msg = $('impMsg');
