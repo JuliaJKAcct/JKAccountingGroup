@@ -35,13 +35,93 @@ flowchart TD
     K --> L{"⑪ Do the tie-out checks<br/>in §14 all pass?"}
     L -->|"No"| L1["Go back. A tie-out that fails<br/>is a mapping error, not a rounding one"]
     L1 --> E
-    L -->|"Yes"| M["⑫ Review · sign · e-file<br/>Form 8879-S"]
+    L -->|"Yes"| M["⑫ Review · sign · e-file<br/>Form 8879-CORP"]
     M --> N["✅ File the client's copy<br/>in Double · record it"]
 ```
 
 ---
 
-## §0 · What this return actually is
+## §0A · Where every number comes from, and where it goes
+
+**Read this before anything else.** Almost every mistake on a first return is a number taken
+from the wrong place, or a number that reached the right box by the wrong route. There are only
+**four sources**, and everything else on the return is computed from them.
+
+### The four sources
+
+| # | Source | What it feeds |
+|---|---|---|
+| **1** | **The Profit & Loss** | Page 1 income (lines 1a–5) and every deduction (lines 7–20) |
+| **2** | **The Balance Sheet** at year end | 1125-A line 7 · box **F** total assets · the whole **end** column of Schedule L |
+| **3** | **LAST year's FILED return** | 1125-A line 1 · the **beginning** column of Schedule L · M-2 line 1 · every convention (§3) |
+| **4** | **The depreciation schedule** | Form 4562 → page 1 line 14 → M-1 line 6a |
+
+⚠️ **Source 3 is a return, not a system.** When the books and the prior return disagree, the
+prior return wins and the books get adjusted — never the other way round.
+
+### How the numbers travel
+
+```
+  ┌─ P&L ──────────────┐   ┌─ BALANCE SHEET ────┐   ┌─ PRIOR RETURN ─────┐   ┌─ DEPR. SCHEDULE ─┐
+  │ revenue, discounts │   │ inventory subtotal │   │ 1125-A line 7      │   │ cost, method,    │
+  │ cost of sales      │   │ cash, fixed assets │   │ Sch L end column   │   │ life, in-service │
+  │ every expense      │   │ liabilities,equity │   │ M-2 line 8         │   │ prior depr.      │
+  └─────────┬──────────┘   └─────────┬──────────┘   └─────────┬──────────┘   └────────┬─────────┘
+            │                        │                        │                       │
+            │                        │  ┌─────────────────────┘                       │
+            │                        │  │                                             │
+            │                        ▼  ▼                                             ▼
+            │              ┌────────────────────┐                          ┌──────────────────┐
+            │              │  FORM 1125-A       │                          │  FORM 4562       │
+            │              │  1 ← prior return  │                          │  depreciation    │
+            │              │  7 ← balance sheet │                          └────────┬─────────┘
+            │              │  2 = 8 + 7 − 1     │                                   │
+            │              │  8 = 6 − 7 ────────┼──┐                                │
+            │              └────────────────────┘  │                                │
+            │                                      │                                │
+            ▼                                      ▼                                ▼
+  ┌───────────────────────────────────────────────────────────────────────────────────────┐
+  │  FORM 1120-S, PAGE 1                                                                  │
+  │   1a–1c  ← P&L revenue          2 ← 1125-A line 8        3 = 1c − 2                   │
+  │   7–19   ← P&L expenses         14 ← Form 4562           20 = what is left over       │
+  │   21 = sum 7…20                 22 = 6 − 21  ◄── THE NUMBER THE RETURN PRODUCES       │
+  └───────────────────────────────────────┬───────────────────────────────────────────────┘
+                                          │
+              ┌───────────────────────────┴────────────────┐
+              ▼                                            ▼
+  ┌──────────────────────────┐                 ┌────────────────────────────┐
+  │  SCHEDULE K              │                 │  SCHEDULE M-1              │
+  │  1  ← page 1 line 22     │                 │  1  ← book net income      │
+  │  4,9,11,12a ← P&L items  │                 │  3b ← non-deductible half  │
+  │       that NEVER touched │                 │  6a ← depreciation the     │
+  │       page 1             │                 │       books never recorded │
+  │  16c ← non-deductible    │                 │  8  = 4 − 7                │
+  │  18 = the reconciliation ◄─────────────────┼──  MUST EQUAL Sch K line 18│
+  └────────────┬─────────────┘                 └────────────────────────────┘
+               │
+       ┌───────┴────────┬──────────────────────┐
+       ▼                ▼                      ▼
+  ┌──────────┐   ┌─────────────┐        ┌──────────────┐
+  │ K-1 each │   │ SCHEDULE M-2│        │ FORM 7203    │
+  │ = Sch K  │   │ 1 ← prior yr│        │ per SHAREHLDR│
+  │   × their│   │ 4 ← the loss│        │ decides how  │
+  │   share  │   │ 5 ← 16c     │        │ much of the  │
+  └──────────┘   └─────────────┘        │ loss is USED │
+                                        └──────────────┘
+```
+
+### The three places one number must appear twice
+
+These are where a beginner's return most often fails to tie:
+
+1. **Total assets** — box **F** on page 1 **and** Schedule L line 15 (end column).
+2. **Ordinary business income** — page 1 line **22** **and** Schedule K line **1**.
+3. **Non-deductible expenses** — Schedule K line **16c**, Schedule M-1 line **3b**, **and** as a
+   reduction in Schedule M-2 and in each shareholder's basis.
+
+---
+
+## §0B · What this return actually is
 
 **An S-corporation normally pays no federal income tax.** It files an information return that
 says: *this is what the business earned, and here is how it splits between the owners.* Each
@@ -49,13 +129,18 @@ owner then reports their share on their own 1040, through a **Schedule K-1**.
 
 Three consequences a first-time preparer needs to hold on to:
 
-1. **The point of the whole exercise is line 21 of page 1** — *ordinary business income
+1. **The point of the whole exercise is line 22 of page 1** — *ordinary business income
    (loss)* — plus the handful of items that must travel to the owners **separately** rather
-   than inside line 21. Everything else is bookkeeping around those.
-2. **Some income and expenses never enter line 21.** Interest income, dividends, capital
+   than inside line 22. Everything else is bookkeeping around those.
+   ⚠️ **Line 22, not 21.** For tax years from 2023 the IRS inserted a new line 19 (the energy
+   efficient commercial buildings deduction, Form 7205) and everything below it moved down by
+   one. Anything you read — a checklist, a memory, an older SOP — that says "line 21" is
+   describing **2022 or earlier**. Schedule K line 1 on the current form settles it: it says
+   *"(page 1, line 22)"*.
+2. **Some income and expenses never enter line 22.** Interest income, dividends, capital
    gains, §179, charitable contributions and a few others are **separately stated**: they go
    on **Schedule K** and straight to the K-1s, because each owner's own tax treatment of them
-   differs. Sweeping them into line 21 is the classic beginner error.
+   differs. Sweeping them into line 22 is the classic beginner error.
 3. **A loss is not automatically deductible by the owner.** It is limited by that owner's
    **basis** — §12. This is where a return that "looks finished" is often wrong.
 
@@ -156,14 +241,15 @@ prior year revealed it in ten minutes.
 
 ## §4 · Form 1125-A — cost of goods sold
 
-**Fill this in first.** Its line 8 feeds page 1, and the form says so on its own face:
-*"Enter here and on Form 1120-S, page 1, line 2."* Skip it entirely if the client sells no
+**Fill this in first.** Its line 8 feeds page 1. The form points there itself — it says *"Enter here and on Form **1120**,
+page 1, line 2, **or the appropriate line of your tax return**"*, and for an S-corp the
+appropriate line is page 1 line 2. Skip it entirely if the client sells no
 goods.
 
 | Line | What it is | Formula, or where you read it |
 |---|---|---|
 | **1** | Inventory at beginning of year | 📖 **read** · `= line 7 of LAST year's 1125-A`. The prior return governs — never a system, never a recalculation |
-| **2** | Purchases | ƒ **usually calculated** · `= line 8 + line 7 − line 1` — see 4A |
+| **2** | Purchases | 📖 read **if the books track them** · ƒ **calculated** `= line 8 + line 7 − line 1` when they do not — see 4A |
 | **3** | Cost of labor | 📖 read · direct production labour only. Most retail and e-commerce clients have none |
 | **4** | Additional §263A costs | 📖 read · almost always blank for a small business taxpayer |
 | **5** | Other costs | 📖 read · whatever the firm's convention puts in cost of sales beyond purchases |
@@ -216,9 +302,13 @@ one. Do not decide it from the account's name.
 
 ### Line 9 — the checkboxes
 
-- **9a — the valuation method.** Cost, lower of cost or market, or other. **Copy what was
-  ticked last year.** Changing it is a change of accounting method, which is a formal
-  election, not a preference.
+- **9a — the valuation method.** ⚠️ **Six boxes on the current form, not three.** The old three
+  are cost · lower of cost or market · other; the November 2024 revision added **non-incidental
+  materials and supplies**, **the AFS §471(c) method** and **the non-AFS §471(c) method**, for
+  tax years beginning after 2023. Those last three are exactly the small-business inventory
+  methods our clients are most likely on. **Copy what was ticked last year — but check whether
+  a box now exists that did not exist then**, and if so raise it rather than ticking it
+  yourself. Changing the method is a formal election, not a preference.
 - **9b–9d** — subnormal goods, LIFO. Normally all "no" for these clients.
 - **9e — do the §263A rules apply?** Normally **no** for a small business taxpayer.
 - **9f — did the method of determining quantities, cost or valuation change?** If you answer
@@ -235,7 +325,7 @@ one. Do not decide it from the account's name.
 | Name, address | The company | Prior return |
 | **A** | S election effective date | Prior return |
 | **B** | Business activity code | Prior return |
-| **C** | Schedule M-3 attached? | No, for any client this size |
+| **C** | Schedule M-3 attached? | No — M-3 starts at **$10 million** of total assets |
 | **D** | Employer identification number | Prior return, or the client's Double record |
 | **E** | Date incorporated | Prior return |
 | **F** | **Total assets** | 📖 **read** off the balance sheet — the `Total for Assets` line. **It is not a calculation.** But it has two free cross-checks, and both must hold: `= current assets + fixed assets + other assets`, **and** `= total liabilities + total equity`. ⚠️ **It goes in TWO places on the return** — here in the header **and** on **Schedule L line 15** (end-of-year column) — and they must be the same number. It is also what the $250,000 question in Schedule B measures (§6) |
@@ -262,13 +352,13 @@ one. Do not decide it from the account's name.
 
 ### 5C · Deductions — lines 7 to 21
 
-**The mapping rule, which is the whole skill:** lines 7 to 18 are **named categories the IRS
-wants to see separately**. Line 19 is **everything left over**. So you work **top down** — place
+**The mapping rule, which is the whole skill:** lines 7 to 19 are **named categories the IRS
+wants to see separately**. Line 20 is **everything left over**. So you work **top down** — place
 each expense that has its own line, then group the remainder.
 
 | Line | Category | Typical QuickBooks accounts |
 |---|---|---|
-| **7** | Compensation of officers | Salaries paid to shareholder-employees. Over $500k of receipts this needs Form 1125-E |
+| **7** | Compensation of officers | Salaries paid to shareholder-employees. Form 1125-E is required at **$500,000 or more** of total receipts |
 | **8** | Salaries and wages | Everyone else's wages |
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
@@ -280,20 +370,21 @@ each expense that has its own line, then group the remainder.
 | **16** | **Advertising** | ⚠️ Has its own line. Do not leave it in "other deductions" |
 | **17** | Pension, profit-sharing plans | |
 | **18** | Employee benefit programs | Health insurance, other benefits |
-| **19** | **Other deductions** | **The remainder** — attach a statement itemising it |
-| **20** | Total deductions | Arithmetic |
-| **21** | **Ordinary business income (loss)** | Line 6 − line 20. **This is the number the return exists to produce** |
+| **19** | Energy efficient commercial buildings deduction | Form 7205. **Normally blank** — but it is why the lines below moved |
+| **20** | **Other deductions** | **The remainder** — attach a statement itemising it |
+| **21** | Total deductions | ƒ `= sum of lines 7 through 20` |
+| **22** | **Ordinary business income (loss)** | ƒ `= line 6 − line 21`. **This is the number the return exists to produce** |
 
-**How to build line 19 without missing anything:**
+**How to build line 20 without missing anything:**
 
 ```
 total expenses per the P&L
   −  everything you placed on lines 7–18
   −  the non-deductible portion of any expense (see §9)
-  =  line 19
+  =  line 20
 ```
 
-Then **itemise** it in the attached statement. If your line 19 does not equal that subtraction,
+Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
 
 ### 5D · Depreciation — line 14
@@ -315,15 +406,18 @@ number.**
 
 Most are yes/no facts about the company. Three are worth calling out:
 
-1. **Accounting method** — accrual or cash. Read it off the footer of the QuickBooks reports;
-   they say which basis they were run on.
+1. **Accounting method** — accrual or cash. ⚠️ **Take it from the PRIOR RETURN, not from
+   QuickBooks.** A QuickBooks report's basis is a per-report toggle someone can flip; the
+   entity's *tax* accounting method is what was elected and filed, and it carries forward. If
+   the report basis and the prior return disagree, that is a question for Lilian, not something
+   to resolve by looking at a footer.
 2. 🟢 **"Are total receipts AND total assets both under $250,000?"** If **yes**, you are **not
    required** to complete **Schedule L** or **Schedule M-1**.
    - **The firm's practice is to complete them anyway** when the prior year did, because they
      give continuity between years and the balance sheet is your best proof that nothing was
      mapped wrong.
    - ⚠️ **Being excused from Schedule M-1 does not remove the adjustments themselves.** A
-     non-deductible expense still changes line 21 whether or not you disclose the
+     non-deductible expense still changes line 22 whether or not you disclose the
      reconciliation.
 3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
    because it prepares them.
@@ -337,16 +431,19 @@ one owner's slice of it.
 
 | Line | Item | Where it comes from |
 |---|---|---|
-| **1** | Ordinary business income (loss) | Page 1, line 21 |
+| **1** | Ordinary business income (loss) | Page 1, line 22 |
 | **2–3** | Rental income | Rare for these clients |
 | **4** | Interest income | The P&L's interest income — the one you kept OFF page 1 line 5 |
 | **5** | Dividends | |
 | **7–8** | Capital gains | |
 | **11** | Section 179 deduction | Only if elected this year |
-| **12a** | Charitable contributions | |
+| **12a** | Charitable contributions | Cash contributions (noncash is 12b) |
 | **16c** | **Non-deductible expenses** | The disallowed half of meals, fines, and similar. ⚠️ Easy to forget — it reduces basis and AAA |
+| **9** | Net §1231 gain (loss) | ⚠️ **Separately stated.** Only the *ordinary* part of a Form 4797 gain goes on page 1 line 4 (Part II, line 17); a net §1231 gain comes here instead |
+| **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
 | **16d** | Distributions | Money paid out to shareholders during the year |
 | **17** | **§199A / QBI information** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
+| **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
 ---
 
@@ -370,7 +467,7 @@ Two columns: **beginning of year** and **end of year**.
 
 ## §9 · Schedule M-1 — where the books and the return disagree
 
-This is the bridge: **book net income in at the top, taxable ordinary income out at the
+This is the bridge: **book net income in at the top, the return's total income out at the
 bottom.** If you understand this schedule, you understand why the return is not a copy of the
 P&L.
 
@@ -383,16 +480,29 @@ P&L.
 | **5** | Income in the books that is not on the return |
 | **6** | **Deductions on the return that the books did not record** — the common one is **6a, depreciation** the bookkeeping never posted |
 | **7** | Subtotal |
-| **8** | **Result — must equal page 1, line 21** |
+| **8** | **Result — must equal Schedule K line 18**, not page 1 line 22 (see below) |
+
+> ⚠️ **M-1 line 8 is NOT page 1's ordinary income, and this trips people who assume it is.**
+> The form says line 8 goes to **Schedule K, line 18** — which combines the ordinary income
+> **and every separately stated item** (interest, dividends, capital gains, §179, charitable
+> contributions). The two are equal **only when there are no separately stated items at all**.
+> The moment the company has so much as bank interest, they differ — and a beginner who forces
+> them to agree has misstated the return. **Reconcile M-1 to Schedule K line 18.**
 
 **The two adjustments you will meet on nearly every small return:**
 
-- **Meals at 50%.** Half of meals expense is not deductible. It adds back on line 3b **and**
-  appears on Schedule K line 16c as a non-deductible expense.
+- **Meals at 50%** — the usual case. Half is not deductible: it adds back on M-1 line 3b **and**
+  appears on Schedule K line 16c.
+  ⚠️ **Not everything in a meals account is 50%.** Company recreational or social events for
+  employees (§274(e)(4)) and meals *sold* to customers stay **100%** deductible. Look at what is
+  actually in the account before halving it.
+  ⏳ **And this rule has an expiry:** for tax years beginning after **2025**, §274(o) removes the
+  employer-provided-meal deduction entirely. That is one filing season away — re-check before
+  applying this to a 2026 return.
 - **Depreciation the books never recorded.** It deducts on line 6a.
 
 > 💡 **A quick sanity check on the prior year:** the gap between last year's book net income and
-> last year's line 21 *is* last year's M-1. If that gap is roughly half the prior year's meals,
+> last year's ordinary income *is* last year's M-1. If that gap is roughly half the prior year's meals,
 > you have just confirmed both the convention and your understanding of it.
 
 ---
@@ -403,7 +513,7 @@ The **Accumulated Adjustments Account** tracks the income the company has been t
 yet distributed. It matters when distributions are made — it decides whether they are tax-free.
 
 1. **Beginning balance = last year's ending balance**, from the filed return. Copy it.
-2. Add the year's income, **or** subtract the year's loss.
+2. Add the year's income, **or** subtract the year's loss — in **column (a)**, the AAA column.
 3. Subtract **non-deductible expenses** (the same figure as Schedule K line 16c).
 4. Subtract **distributions**.
 5. **AAA can go negative from losses.** It cannot be driven negative *by distributions*.
@@ -434,16 +544,32 @@ A shareholder can only deduct losses up to their **basis** in the company. Rough
 
 ```
   what they put IN (stock purchased + capital contributed)
-+ their share of income in profitable years
-−  their share of losses already deducted
-−  distributions they received
-=  basis
++  their share of income in profitable years
++  their share of tax-exempt income
+−  distributions they received            ← these come off FIRST
+−  their share of non-deductible expenses  ← the Schedule K 16c figure
+−  their share of losses already deducted  ← these come off LAST
+=  stock basis
 ```
+
+**The order matters, not just the arithmetic.** Distributions reduce basis *before* losses do,
+so a shareholder who took money out has less room left for the loss than a straight subtraction
+would suggest.
+
+**And this is STOCK basis only.** A shareholder who lent the company money also has **debt
+basis**, which can absorb losses after stock basis is exhausted — and is restored in its own
+order before stock basis is. That is why question 1 below matters.
 
 A loss beyond that is **suspended** — carried forward until basis is restored, not deducted now.
 
-**Form 7203 is required** when a shareholder claims a loss, receives a distribution, disposes of
-stock, or receives a loan repayment from the company.
+**Form 7203 is required** when a shareholder claims a loss, receives a **non-dividend**
+distribution, disposes of stock, or receives a loan repayment from the company.
+
+> 🔑 **It is filed with the SHAREHOLDER'S Form 1040 — not with the 1120-S.** It appears in this
+> procedure because the corporate return is where you have the numbers to compute it, and
+> because it decides whether the loss you just allocated is actually usable. **Prepare it here;
+> it travels with the owner's personal return.** If the firm does not prepare that 1040, the
+> figures still have to reach whoever does.
 
 ### The two questions to settle before you compute it
 
@@ -475,20 +601,28 @@ rounding difference.
 
 - [ ] 1125-A: **line 6 − line 7 = line 8**
 - [ ] 1125-A line 8 **equals** page 1 line 2
-- [ ] Page 1: **1a − 1b = 1c**, and 1c equals the P&L's total income
-- [ ] Page 1: **1c − 2 = 3**, and 3 equals the P&L's gross profit
-- [ ] Page 1: **6 − 20 = 21**
-- [ ] Line 19 equals total expenses **less** everything placed on lines 7–18 **less**
+- [ ] Page 1: **1a − 1b = 1c** · and 1c equals the P&L's total income **less anything in the
+      P&L's income section that belongs on Schedule K instead** (interest, dividends, capital
+      gains). If the client has none of those, they are simply equal
+- [ ] Page 1: **1c − 2 = 3** · and 3 equals the P&L's gross profit **only if line 2 equals the
+      P&L's cost of sales**. In the periodic case (§4) line 2 comes off the 1125-A instead, so
+      compare deliberately rather than assuming
+- [ ] Page 1: **6 − 21 = 22**
+- [ ] Line 20 equals total expenses **less** everything placed on lines 7–19 **less**
       non-deductible amounts
 - [ ] Schedule L: the **beginning column matches last year's filed ending column exactly**
 - [ ] Schedule L: **total assets = total liabilities and equity**, and total assets equals the
       year-end balance sheet
-- [ ] Schedule M-1 **line 8 equals page 1 line 21**
+- [ ] Schedule M-1 **line 8 equals Schedule K line 18**
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
       across all K-1s
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
-- [ ] **Form 8879-S signed** before e-filing
+- [ ] **Form 8879-CORP signed** before e-filing — ⚠️ **not Form 8879-S**, which was
+      superseded from tax year 2022. Form 8879-CORP covers 1120, 1120-F and 1120-S
+- [ ] **The e-file was ACCEPTED**, not merely transmitted. A rejected return is not a filed
+      return — check the acknowledgement and, if it rejected, fix and resubmit before the
+      deadline passes
 
 ---
 
@@ -496,11 +630,11 @@ rounding difference.
 
 Each of these has bitten a real return.
 
-1. 🛑 **Treating the P&L's net income as line 21.** It is not. The difference is Schedule M-1,
+1. 🛑 **Treating the P&L's net income as ordinary business income.** It is not. The difference is Schedule M-1,
    and on a small return it is usually the meals disallowance and unrecorded depreciation.
 2. 🛑 **Reading "inventory" as the account called Inventory.** §4's trap. Check what the prior
    return used.
-3. 🛑 **Leaving advertising, rent or interest inside "other deductions."** They have their own
+3. 🛑 **Leaving advertising, rent or interest inside "other deductions" (line 20).** They have their own
    lines. The return is still arithmetically correct, but it does not match the prior year and
    nobody can compare the two.
 4. 🛑 **Putting bank interest on page 1 line 5** instead of Schedule K.
@@ -586,7 +720,8 @@ right-hand column is the firm's usual convention, not a rule of the form.
 | Sales / product income | Page 1, line 1a |
 | Discounts given | Reduces line 1a |
 | Customer refunds / returns | Page 1, line 1b |
-| Cost of goods sold + channel selling fees | Form 1125-A line 8 → page 1 line 2 |
+| Cost of goods sold accounts | Form 1125-A — line **2** (purchases), **3** (labor) or **5** (other costs). ⚠️ **Never "line 8"** — line 8 is computed (6 − 7), so no account feeds it directly |
+| Channel / marketplace selling fees | ⚠️ **Client-specific.** Selling fees are not ordinarily inventoriable, so they usually belong in **other deductions**. One client's prior return puts them in cost of sales — **check §3 before copying either treatment** |
 | Inventory (balance sheet) | 1125-A line 7 — ⚠️ check the subtotal used, §4 |
 | Wages & salary — shareholders | Page 1, line 7 |
 | Wages & salary — staff | Page 1, line 8 |
@@ -596,10 +731,10 @@ right-hand column is the firm's usual convention, not a rule of the form.
 | Interest charge / loan interest | Page 1, line 13 |
 | Advertising & promotional | Page 1, line 16 |
 | Depreciation | Page 1, line 14 — from Form 4562, **not** from the books |
-| Meals | Page 1, line 19 at **50%**; the other half → M-1 line 3b + Sch K 16c |
-| Everything else | Page 1, line 19 + itemised statement |
+| Meals | Page 1, line 20 at **50%**; the other half → M-1 line 3b + Sch K 16c |
+| Everything else | Page 1, line 20 + itemised statement |
 | Interest income | **Schedule K line 4** — never page 1 |
-| Gain/loss on equipment sold | Page 1, line 4 (via Form 4797) |
+| Gain/loss on equipment sold | ⚠️ **Split.** Only the **ordinary** part (Form 4797 Part II, line 17) goes to page 1 line 4. A net **§1231 gain is separately stated on Schedule K line 9** — the exact error §0B exists to prevent |
 | Bank accounts (balance sheet) | Schedule L, cash |
 | Credit cards payable | Schedule L, accounts payable — per the prior year's mapping |
 | Sales tax payable | Schedule L, other current liabilities |
@@ -639,17 +774,17 @@ line 1c =  line 1a − line 1b
 line 3  =  line 1c − line 2
 line 6  =  line 3 + line 4 + line 5
 
-line 19 =  total expenses per the P&L
-             − everything placed on lines 7 through 18
+line 20 =  total expenses per the P&L
+             − everything placed on lines 7 through 19
              − the non-deductible portion of any expense
-line 20 =  sum of lines 7 through 19
-line 21 =  line 6 − line 20
+line 21 =  sum of lines 7 through 20
+line 22 =  line 6 − line 21
 ```
 
 ### Meals
 
 ```
-deductible half   =  meals expense × 50%      → page 1, line 19
+deductible half   =  meals expense × 50%      → page 1, line 20
 disallowed half   =  meals expense × 50%      → Sch M-1 line 3b AND Sch K line 16c
 ```
 
@@ -670,7 +805,7 @@ retained earnings  =  total equity per the books − capital stock
 line 4  =  line 1 + line 2 + line 3
 line 7  =  line 5 + line 6
 line 8  =  line 4 − line 7
-line 8  MUST EQUAL  page 1 line 21
+line 8  MUST EQUAL  Schedule K line 18   ← NOT page 1 line 22
 ```
 
 ### Schedule M-2 (AAA)

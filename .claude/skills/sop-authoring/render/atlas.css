@@ -535,3 +535,6 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 @media (prefers-reduced-motion:reduce){
   .lrow,.lwhy{transition:none;}
 }
+
+/* Footer secondary note — smaller and quieter than the footer's own body. */
+.foot .foot-sm{font-size:.86rem; opacity:.78; margin-top:6px;}

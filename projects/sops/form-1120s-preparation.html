@@ -572,6 +572,9 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .lrow,.lwhy{transition:none;}
 }
 
+/* Footer secondary note — smaller and quieter than the footer's own body. */
+.foot .foot-sm{font-size:.86rem; opacity:.78; margin-top:6px;}
+
 </style>
 </head>
 <body>
@@ -602,7 +605,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <p class="tt">On this page</p>
   <ol id="tocList">
     <li><a href="#glance"><span class="sn">◆</span> The process at a glance</a></li>
-    <li><a href="#s0"><span class="sn">§0</span> What this return is</a></li>
+    <li><a href="#s0a"><span class="sn">§0A</span> Where numbers come from</a></li>
+    <li><a href="#s0b"><span class="sn">§0B</span> What this return is</a></li>
     <li><a href="#s1"><span class="sn">§1</span> Gather · intake</a></li>
     <li><a href="#s2"><span class="sn">§2</span> Gate: the extension</a></li>
     <li><a href="#s3"><span class="sn">§3</span> Build the map</a></li>
@@ -717,7 +721,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <div class="fdecide">Do all the tie-out checks pass? <span class="fref">§14</span></div>
       <div class="fbranch">
         <div class="branch fix"><b>No</b> — go back. A failed tie-out is a <em>mapping</em> error, not a rounding one</div>
-        <div class="branch good"><b>Yes</b> — review, sign Form 8879-S, e-file</div>
+        <div class="branch good"><b>Yes</b> — review, sign Form 8879-CORP, e-file</div>
       </div>
       <div class="fconn" aria-hidden="true"></div>
       <div class="fnode done">
@@ -726,14 +730,87 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     </figure>
   </section>
 
+
+  <!-- ==================== §0A · THE FLOW ==================== -->
+  <section class="doc" id="s0a">
+    <div class="shead big reveal"><span class="schip">§0A</span><h2>Where every number comes from, and where it goes</h2></div>
+    <p class="slede reveal">Read this before anything else. Almost every mistake on a first return is a number taken from the <b>wrong place</b>, or a number that reached the right box <b>by the wrong route</b>. There are only <b>four sources</b> — everything else on the return is computed from them.</p>
+
+    <div class="lines reveal">
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">1</span><span class="lname"><b>The Profit &amp; Loss</b></span><span class="ltag read">source</span></div>
+        <div class="lwhy"><div class="cw"><p>Feeds page 1 income (lines 1a&ndash;5) and every deduction (lines 7&ndash;20). ⚠️ <b>Not everything in the P&amp;L&#8217;s income section belongs on page 1</b> — interest, dividends and capital gains go to Schedule K instead.</p></div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">2</span><span class="lname"><b>The Balance Sheet</b> at year end</span><span class="ltag read">source</span></div>
+        <div class="lwhy"><div class="cw"><p>Feeds 1125-A line 7, box <b>F</b> total assets, and the whole <b>end</b> column of Schedule L. Box F is <em>read</em>, never computed — but it must equal Schedule L line 15, and it has two free cross-checks: assets by category, and liabilities plus equity.</p></div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">3</span><span class="lname"><b>LAST year&#8217;s FILED return</b></span><span class="ltag read">source</span></div>
+        <div class="lwhy"><div class="cw"><p>Feeds 1125-A line 1, the <b>beginning</b> column of Schedule L, M-2 line 1 — and every convention (§3). ⚠️ <b>It is a return, not a system.</b> When the books and the prior return disagree, the prior return wins and the books get adjusted.</p></div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">4</span><span class="lname"><b>The depreciation schedule</b></span><span class="ltag read">source</span></div>
+        <div class="lwhy"><div class="cw"><p>Feeds Form 4562 &rarr; page 1 line 14 &rarr; and, when the books never recorded it, M-1 line 6a as a book-to-tax difference.</p></div></div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">0A</span><h3>How the numbers travel</h3><span class="rt">follow an arrow, not a memory</span></div>
+    <div class="indent">
+      <div class="intake reveal"><pre><span class="grp">THE FOUR SOURCES</span>
+  P&amp;L            BALANCE SHEET      PRIOR RETURN       DEPRECIATION SCHEDULE
+   │                  │    │              │                     │
+   │                  │    └──────┐  ┌────┘                     │
+   │                  ▼           ▼  ▼                          ▼
+   │            FORM 1125-A                              FORM 4562
+   │             7 &larr; balance sheet                       │
+   │             1 &larr; prior return                        │
+   │             2 = 8 + 7 &minus; 1                             │
+   │             8 = 6 &minus; 7 ──┐                             │
+   │                           │                             │
+   ▼                           ▼                             ▼
+<span class="grp">FORM 1120-S, PAGE 1</span>
+  1a&ndash;1c &larr; P&amp;L revenue      2 &larr; 1125-A line 8     3 = 1c &minus; 2
+  7&ndash;19  &larr; P&amp;L expenses    14 &larr; Form 4562       20 = what is left over
+  21 = sum 7&hellip;20            22 = 6 &minus; 21   &lArr; THE NUMBER THE RETURN PRODUCES
+                                  │
+             ┌────────────────────┴──────────────────┐
+             ▼                                       ▼
+<span class="grp">SCHEDULE K</span>                              <span class="grp">SCHEDULE M-1</span>
+  1  &larr; page 1 line 22                    1  &larr; book net income
+  4, 9, 11, 12a &larr; P&amp;L items that         3b &larr; non-deductible half
+       NEVER touched page 1                6a &larr; depreciation the books
+  16c &larr; non-deductible                        never recorded
+  18 = the reconciliation  &lArr;═══════════  8  = 4 &minus; 7   MUST EQUAL Sch K 18
+       │
+   ┌───┴─────┬──────────────────┐
+   ▼         ▼                  ▼
+ K-1 each   SCHEDULE M-2      FORM 7203 per SHAREHOLDER
+ = Sch K    1 &larr; prior year   decides how much of the
+ &times; their   4 &larr; the loss     loss is actually USED
+   share    5 &larr; 16c</pre></div>
+    </div>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The three places one number must appear twice</div>
+        <p>Where a beginner&#8217;s return most often fails to tie:<br>
+        <b>1 · Total assets</b> — box F on page 1 <em>and</em> Schedule L line 15.<br>
+        <b>2 · Ordinary business income</b> — page 1 line 22 <em>and</em> Schedule K line 1.<br>
+        <b>3 · Non-deductible expenses</b> — Schedule K 16c, M-1 line 3b, <em>and</em> as a reduction in M-2 and in each shareholder&#8217;s basis.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== §0 ==================== -->
-  <section class="doc" id="s0">
-    <div class="shead reveal"><span class="schip">§0</span><h2>What this return actually is</h2></div>
+  <section class="doc" id="s0b">
+    <div class="shead reveal"><span class="schip">§0B</span><h2>What this return actually is</h2></div>
     <p class="slede reveal">An S-corporation normally <b>pays no federal income tax</b>. It files an information return saying: <em>this is what the business earned, and here is how it splits between the owners.</em> Each owner then reports their share on their own 1040, through a <b>Schedule K-1</b>.</p>
 
     <ol class="qlist reveal">
-      <li><b>The point of the exercise is page 1, line 21</b> — <em>ordinary business income (loss)</em> — plus the few items that must reach the owners <b>separately</b> rather than inside it. Everything else is bookkeeping around those two things.</li>
-      <li><b>Some income and expenses never enter line 21.</b> Interest, dividends, capital gains, §179 and charitable contributions are <b>separately stated</b>: they go on <b>Schedule K</b> and straight to the K-1s, because each owner's own treatment of them differs. Sweeping them into line 21 is the classic beginner error.</li>
+      <li><b>The point of the exercise is page 1, line 22</b> — <em>ordinary business income (loss)</em> — plus the few items that must reach the owners <b>separately</b> rather than inside it. <b>Line 22, not 21</b> — a new line 19 (Form 7205) pushed everything down from tax year 2023, so anything saying “line 21” describes 2022 or earlier. Everything else is bookkeeping around those two things.</li>
+      <li><b>Some income and expenses never enter line 22.</b> Interest, dividends, capital gains, §179 and charitable contributions are <b>separately stated</b>: they go on <b>Schedule K</b> and straight to the K-1s, because each owner's own treatment of them differs. Sweeping them into line 22 is the classic beginner error.</li>
       <li><b>A loss is not automatically deductible by the owner.</b> It is limited by that owner's <b>basis</b> (§12). This is where a return that looks finished is often wrong.</li>
     </ol>
 
@@ -1019,7 +1096,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
     <div class="subbar reveal"><span class="tag">5C</span><h3>Deductions — lines 7 to 21</h3><span class="rt">work top-down; line 19 is the remainder</span></div>
     <div class="indent">
-      <p class="reveal"><b>The mapping rule, which is the whole skill:</b> lines 7 to 18 are <b>named categories the IRS wants to see separately</b>. Line 19 is <b>everything left over</b>. So you place each expense that has its own line first, then group what remains.</p>
+      <p class="reveal"><b>The mapping rule, which is the whole skill:</b> lines 7 to 19 are <b>named categories the IRS wants to see separately</b>. Line 20 is <b>everything left over</b>. So you place each expense that has its own line first, then group what remains.</p>
       <div class="tablewrap reveal">
         <table class="links">
           <thead><tr><th>Line</th><th>Category</th><th>Typical QuickBooks accounts</th></tr></thead>
@@ -1032,16 +1109,20 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
             <tr><td class="for">14</td><td>Depreciation</td><td><b>From Form 4562</b>, not from the books</td></tr>
             <tr><td class="for">16</td><td><b>Advertising</b></td><td>⚠️ has its own line — do not leave it in "other deductions"</td></tr>
             <tr><td class="for">18</td><td>Employee benefit programs</td><td>Health insurance and other benefits</td></tr>
-            <tr><td class="for">19</td><td><b>Other deductions</b></td><td><b>The remainder</b> — attach an itemised statement</td></tr>
-            <tr><td class="for">21</td><td><b>Ordinary business income (loss)</b></td><td>Line 6 − line 20. <b>The number the return exists to produce</b></td></tr>
+            <tr><td class="for">9 · 10</td><td>Repairs and maintenance · Bad debts</td><td>—</td></tr>
+            <tr><td class="for">15 · 17</td><td>Depletion · Pension, profit-sharing</td><td>Rare for these clients</td></tr>
+            <tr><td class="for">19</td><td>Energy efficient commercial buildings</td><td>Form 7205 — normally blank, <b>but it is why the lines below moved</b></td></tr>
+            <tr><td class="for">20</td><td><b>Other deductions</b></td><td><b>The remainder</b> — attach an itemised statement</td></tr>
+            <tr><td class="for">21</td><td>Total deductions</td><td>Sum of lines 7 through 20</td></tr>
+            <tr><td class="for">22</td><td><b>Ordinary business income (loss)</b></td><td>Line 6 − line 21. <b>The number the return exists to produce</b></td></tr>
           </tbody>
         </table>
       </div>
       <div class="intake reveal"><pre>  total expenses per the P&amp;L
     −  everything you placed on lines 7–18
     −  the non-deductible portion of any expense  (§9)
-    =  line 19</pre></div>
-      <p class="reveal">If your line 19 does not equal that subtraction, you have either double-counted or dropped an account.</p>
+    =  line 20</pre></div>
+      <p class="reveal">If your line 20 does not equal that subtraction, you have either double-counted or dropped an account.</p>
     </div>
 
     <div class="subbar reveal"><span class="tag">5D</span><h3>Depreciation — line 14</h3></div>
@@ -1067,7 +1148,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
       <div class="cx">
         <div class="cl">Being excused from Schedule M-1 does not remove the adjustment</div>
-        <p>A non-deductible expense still changes line 21 whether or not you disclose the reconciliation.</p>
+        <p>A non-deductible expense still changes line 22 whether or not you disclose the reconciliation.</p>
       </div>
     </div>
   </section>
@@ -1080,12 +1161,15 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <table class="links">
         <thead><tr><th>Line</th><th>Item</th><th>Where it comes from</th></tr></thead>
         <tbody>
-          <tr><td class="for">1</td><td>Ordinary business income (loss)</td><td>Page 1, line 21</td></tr>
+          <tr><td class="for">1</td><td>Ordinary business income (loss)</td><td>Page 1, line 22</td></tr>
           <tr><td class="for">4</td><td>Interest income</td><td>The P&amp;L's interest income — the one you kept <b>off</b> page 1 line 5</td></tr>
           <tr><td class="for">11</td><td>§179 deduction</td><td>Only if elected this year</td></tr>
           <tr><td class="for">16c</td><td><b>Non-deductible expenses</b></td><td>The disallowed half of meals, fines, and similar. ⚠️ Easy to forget — it reduces basis <em>and</em> AAA</td></tr>
+          <tr><td class="for">9</td><td>Net §1231 gain (loss)</td><td>⚠️ separately stated — only the <em>ordinary</em> part of a 4797 gain goes to page 1 line 4</td></tr>
+          <tr><td class="for">14a/b</td><td><b>Schedules K-2 / K-3</b></td><td>Attach if there is foreign activity, or tick the exception. Per-shareholder penalties for omitting</td></tr>
           <tr><td class="for">16d</td><td>Distributions</td><td>Money paid out to shareholders during the year</td></tr>
           <tr><td class="for">17</td><td><b>§199A / QBI</b></td><td>Attach the statement. <b>A loss year still produces QBI information</b> — a negative amount that carries forward for the owner</td></tr>
+          <tr><td class="for">18</td><td><b>Income (loss) reconciliation</b></td><td>Lines 1–10, less 11–12e and 16f. <b>This is what Schedule M-1 reconciles to</b> — not page 1</td></tr>
         </tbody>
       </table>
     </div>
@@ -1112,13 +1196,13 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <li><b>Line 1</b> — net income per books, straight off the P&amp;L.</li>
         <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>.</li>
         <li><b>Line 6a</b> — deductions on the return the books never recorded. The common one: <b>depreciation</b>.</li>
-        <li><b>Line 8</b> — the result. <b>Must equal page 1, line 21.</b></li>
+        <li><b>Line 8</b> — the result. ⚠️ <b>Must equal SCHEDULE K LINE 18</b>, not page 1 line 22. They are equal only when there are no separately stated items at all — the moment there is bank interest they differ, and forcing them to agree misstates the return.</li>
       </ul>
       <div class="callout ok reveal" role="note">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
         <div class="cx">
           <div class="cl">A quick sanity check on the prior year</div>
-          <p>The gap between last year's <em>book</em> net income and last year's line 21 <b>is</b> last year's M-1. If that gap is roughly half the prior year's meals, you have just confirmed both the convention and your understanding of it.</p>
+          <p>The gap between last year's <em>book</em> net income and last year's ordinary income <b>is</b> last year's M-1. If that gap is roughly half the prior year's meals, you have just confirmed both the convention and your understanding of it.</p>
         </div>
       </div>
     </div>
@@ -1166,15 +1250,15 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <li>1125-A: <b>line 6 − line 7 = line 8</b>, and line 8 equals page 1 line 2</li>
         <li>Page 1: <b>1a − 1b = 1c</b>, and 1c equals the P&amp;L's total income</li>
         <li>Page 1: <b>1c − 2 = 3</b>, and 3 equals the P&amp;L's gross profit</li>
-        <li>Page 1: <b>6 − 20 = 21</b></li>
-        <li>Line 19 equals total expenses less lines 7–18 less non-deductible amounts</li>
+        <li>Page 1: <b>6 − 21 = 22</b></li>
+        <li>Line 20 equals total expenses less lines 7–19 less non-deductible amounts</li>
         <li>Schedule L: the <b>beginning column matches last year's filed ending column exactly</b></li>
         <li>Schedule L: <b>total assets = total liabilities and equity</b>, and equals the year-end balance sheet</li>
-        <li>Schedule M-1 <b>line 8 equals page 1 line 21</b></li>
+        <li>Schedule M-1 <b>line 8 equals Schedule K line 18</b></li>
         <li>Schedule M-2 beginning balance matches last year's ending balance</li>
         <li>The <b>K-1 percentages add to 100%</b>, and each Schedule K line equals the sum across all K-1s</li>
         <li><b>A Form 7203 exists for every shareholder who needs one</b></li>
-        <li><b>Form 8879-S signed</b> before e-filing</li>
+        <li><b>Form 8879-CORP signed</b> before e-filing &mdash; <b>not</b> 8879-S, superseded from TY2022</li>
       </ul>
     </div>
   </section>
@@ -1184,9 +1268,9 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="shead reveal"><span class="schip">§15</span><h2>Common pitfalls</h2></div>
     <p class="slede reveal">Each of these has bitten a real return.</p>
     <ol class="qlist reveal">
-      <li><b>Treating the P&amp;L's net income as line 21.</b> The difference is Schedule M-1 — usually meals and unrecorded depreciation.</li>
+      <li><b>Treating the P&amp;L's net income as ordinary business income.</b> The difference is Schedule M-1 — usually meals and unrecorded depreciation.</li>
       <li><b>Reading "inventory" as the account called Inventory.</b> Check what the prior return used (§4B).</li>
-      <li><b>Leaving advertising, rent or interest inside "other deductions."</b> Arithmetically fine, but it no longer matches the prior year and nobody can compare them.</li>
+      <li><b>Leaving advertising, rent or interest inside "other deductions" (line 20).</b> Arithmetically fine, but it no longer matches the prior year and nobody can compare them.</li>
       <li><b>Putting bank interest on page 1 line 5</b> instead of Schedule K.</li>
       <li><b>Recalculating the Schedule L beginning column</b> instead of copying it.</li>
       <li><b>Correcting the books on Schedule L</b> — it is "per books" on purpose.</li>
@@ -1254,8 +1338,8 @@ differences found and explained: ______________________________________
             <tr><td>Interest charge / loan interest</td><td>Page 1, line 13</td></tr>
             <tr><td>Advertising &amp; promotional</td><td>Page 1, line 16</td></tr>
             <tr><td>Depreciation</td><td>Page 1, line 14 — from Form 4562, <b>not</b> the books</td></tr>
-            <tr><td>Meals</td><td>Line 19 at <b>50%</b>; the other half → M-1 3b + Sch K 16c</td></tr>
-            <tr><td>Everything else</td><td>Line 19 + itemised statement</td></tr>
+            <tr><td>Meals</td><td>Line 20 at <b>50%</b>; the other half → M-1 3b + Sch K 16c</td></tr>
+            <tr><td>Everything else</td><td>Line 20 + itemised statement</td></tr>
             <tr><td>Interest income</td><td><b>Schedule K line 4</b> — never page 1</td></tr>
             <tr><td>Gain/loss on equipment sold</td><td>Page 1, line 4 (via Form 4797)</td></tr>
             <tr><td>Bank accounts</td><td>Schedule L, cash</td></tr>
@@ -1290,14 +1374,14 @@ line 1a =  sales revenue &minus; discounts given + shipping income charged
 line 1c =  line 1a &minus; line 1b
 line 3  =  line 1c &minus; line 2
 line 6  =  line 3 + line 4 + line 5
-line 19 =  total expenses per the P&amp;L
-             &minus; everything placed on lines 7 through 18
+line 20 =  total expenses per the P&amp;L
+             &minus; everything placed on lines 7 through 19
              &minus; the non-deductible portion of any expense
-line 20 =  sum of lines 7 through 19
-line 21 =  line 6 &minus; line 20
+line 21 =  sum of lines 7 through 20
+line 22 =  line 6 &minus; line 21
 
 <span class="grp">MEALS</span>
-deductible half  =  meals &times; 50%     &rarr; page 1, line 19
+deductible half  =  meals &times; 50%     &rarr; page 1, line 20
 disallowed half  =  meals &times; 50%     &rarr; Sch M-1 line 3b AND Sch K line 16c
 
 <span class="grp">SCHEDULE L</span>
@@ -1311,7 +1395,7 @@ retained earnings  =  total equity per books &minus; capital stock
 line 4  =  line 1 + line 2 + line 3
 line 7  =  line 5 + line 6
 line 8  =  line 4 &minus; line 7
-line 8  MUST EQUAL  page 1 line 21
+line 8  MUST EQUAL  Schedule K line 18   &larr; NOT page 1 line 22
 
 <span class="grp">SCHEDULE M-2 (AAA)</span>
 line 6  =  line 1 + line 2 + line 3 &minus; line 4 &minus; line 5
@@ -1346,7 +1430,7 @@ suspended loss   =  their share of the loss &minus; the deductible amount</pre><
 <footer class="foot">
   <div class="in">
     <p><b>JK Accounting Group</b> · Standard Operating Procedure · Form 1120-S preparation</p>
-    <p class="sm">The Markdown at <code>projects/sops/form-1120s-preparation.md</code> is the source of truth; this page is a view of it. Re-render when the Markdown changes.</p>
+    <p class="foot-sm">The Markdown at <code>projects/sops/form-1120s-preparation.md</code> is the source of truth; this page is a view of it. Re-render when the Markdown changes.</p>
   </div>
 </footer>
 
