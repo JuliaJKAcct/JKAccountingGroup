@@ -1072,8 +1072,10 @@ function inlineToolDoc(srcFile, title, opts){
     // A placeholder that survives substitution embeds a tool with no styles or no case
     // engine — which reads as a broken page, not as a build error. Throwing hands it to
     // the catch below, which names the file and stops the build.
-    const left = ['/*__FONTS__*/', '/*__TOOL_CSS__*/', '/*__CASE_CORE__*/', '/*__PRICING_CORE__*/']
-      .filter((p) => body.includes(p));
+    // Any surviving placeholder, not a hand-written list — the list drifts behind the
+    // tools, and a placeholder that ships raw reads as a broken page, not a build error.
+    const left = [...new Set([...body.matchAll(/\/\*__[A-Z0-9_]+__\*\/|__[A-Z][A-Z0-9_]*__/g)]
+      .map((m) => m[0]))];
     if (left.length) throw new Error(srcFile + ': unresolved build placeholder(s) ' + left.join(', '));
     return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
       + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + '</title></head><body>\n'

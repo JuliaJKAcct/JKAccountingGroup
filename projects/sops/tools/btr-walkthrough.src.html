@@ -441,7 +441,14 @@ function buildSheet(){
   var ent = ENTITY[A.entity] || ENTITY.llc;
   var reg = REG[A.regulator] || REG.none;
   var workers = num(A.employees);
+  // Declared ONCE, here, with the other derived facts. These were scattered in three
+  // places, and one of them was READ above where it was assigned — `var` hoists the name
+  // but not the value, so the documents section saw `undefined` and printed the full
+  // upload checklist for a renewal that uploads nothing.
   var renewal = A.existing === 'both';
+  var haveCounty = A.existing === 'county' || A.existing === 'both';
+  var haveCity = A.existing === 'city' || A.existing === 'both';
+  var anyFiling = !haveCounty || !haveCity;
 
   h += '<h2>Preparation sheet</h2><p class="sub">Built from your answers. Print this and keep it beside the applications. It is not a substitute for reading the SOP — it is the SOP applied to one business.</p>';
 
@@ -494,11 +501,18 @@ function buildSheet(){
   if (regulated(A)) yUp.push('<b>'+reg[0]+' licence.</b>');
   if (A.sublet === 'yes') yUp.push('<b>The master lease</b> — between the property owner and the master tenant — alongside the sublease. See the sub-tenant flag below.');
 
-  h += sec('Documents to have ready — as PDFs, before you start');
-  h += '<p>You upload these <em>inside</em> the applications. Both ask for documents, and the city accepts <b>PDF only, ≤ 10 MB each</b>.</p>';
-  h += '<p style="margin-top:14px"><b>County (BTExpress):</b></p><ul class="tick"><li>'+cUp.join('</li><li>')+'</li></ul>';
-  h += '<p style="margin-top:14px"><b>City (Hollywood LBTR):</b></p><ul class="tick"><li>'+yUp.join('</li><li>')+'</li></ul>';
-  if (A.sublet === 'yes'){
+  h += sec(anyFiling ? 'Documents to have ready — as PDFs, before you start' : 'Documents');
+  if (!anyFiling){
+    // Both receipts are held, so no application is being filed and nothing is uploaded.
+    // Printing the full PDF checklist here contradicted the case built from the same
+    // answers, which drops every upload step.
+    h += '<p><b>Nothing to upload.</b> Both receipts are held, so this is a renewal — renewals do not re-submit the entity documents or the proof of location. Keep them on file; they are wanted again only if the business moves, changes name, or changes what it does.</p>';
+  } else {
+  h += '<p>You upload these <em>inside</em> the applications, and the city accepts <b>PDF only, ≤ 10 MB each</b>.</p>';
+  if (!haveCounty) h += '<p style="margin-top:14px"><b>County (BTExpress):</b></p><ul class="tick"><li>'+cUp.join('</li><li>')+'</li></ul>';
+  if (!haveCity) h += '<p style="margin-top:14px"><b>City '+(hollywood?'(Hollywood LBTR)':'(that city’s own application)')+':</b></p><ul class="tick"><li>'+yUp.join('</li><li>')+'</li></ul>';
+  }
+  if (A.sublet === 'yes' && !haveCity){
     h += '<div class="flag err"><span class="fl">Sub-tenant — have the master lease ready NOW, not after the rejection</span>'
       + 'A signed sublease alone can still be bounced: the city’s follow-up may state, as boilerplate, that <em>“sublessees operating a business are required to provide a signed agreement between sublessee and the property owner”</em> — a document that may genuinely not exist, because the owner’s only contractual relationship is with the master tenant.'
       + '<p style="margin:9px 0 0"><b>The answer</b> is to send <b>both</b> documents together, showing the complete chain of the right to occupy — the master lease (owner ↔ master tenant) and the sublease (master tenant ↔ applicant) — and explain in the email why no direct lease exists.</p>'
@@ -507,7 +521,6 @@ function buildSheet(){
   h += '</div>';
 
   /* --- county --- */
-  var haveCounty = A.existing === 'county' || A.existing === 'both';
   h += sec(haveCounty && !renewal ? '① Broward County — already held'
          : renewal ? '① Broward County — renewal'
          : '① Broward County — BTExpress');
@@ -546,7 +559,6 @@ function buildSheet(){
   if (!hollywood){
     h += '<div class="flag warn"><span class="fl">Read this as a template, not as facts</span>The business is not in Hollywood, so the screens, the classifications and the amounts below belong to a different city. Keep the <b>sequence</b> — apply, pay, respond to review, receive — and get that city’s own application and fee schedule.</div>';
   }
-  var haveCity = A.existing === 'city' || A.existing === 'both';
   if (haveCity && !renewal){
     h += '<div class="flag ok"><span class="fl">This half is held — confirm it, do not refile</span>'
       + 'The city receipt is already in place, so <b>there is no new application and no $25 fee</b>. Check it has <b>not expired</b> (every receipt dies on <b>Sept 30</b>) and that the <b>classification still matches</b> what the business actually does — a business that has changed activity is the case the city re-categorises and bills a difference for. <b>The outstanding half is the county.</b></div>';
@@ -589,7 +601,9 @@ function buildSheet(){
                     : '<b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.')+'</dd>';
   h += '<dt>Broward County</dt><dd>'+(haveCounty && !renewal
         ? 'Nothing now — the county receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>.'
-        : 'A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.')+'</dd>';
+        : renewal
+          ? 'The county account’s <b>renewal</b> for the new tax year — usually much smaller than the city’s, often <b>~$30–$45</b>. Paid on the account, not through a fresh BTExpress application.'
+          : 'A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.')+'</dd>';
   h += '</dl>';
   h += '<p style="margin-top:12px;font-size:13.5px;color:var(--muted)">Amounts are approximate and depend on classification and year. Verify the exact figure shown at submission — never quote these numbers to a client as the price.</p>';
   if (!renewal){

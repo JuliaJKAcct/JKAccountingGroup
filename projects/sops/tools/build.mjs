@@ -60,8 +60,12 @@ for (const t of TOOLS) {
 
   // A placeholder that survives substitution ships a tool with no styles or no case
   // engine — which looks like a broken page, not like a build error. Fail loudly.
-  const left = ['/*__FONTS__*/', '/*__TOOL_CSS__*/', '/*__CASE_CORE__*/']
-    .filter((p) => body.includes(p));
+  // Detect ANY surviving placeholder, not just the ones this builder knows about. The
+  // list used to be hand-written, so a tool that started using /*__FONTS_CYRILLIC__*/ or
+  // __LOGO__ — both of which the Hub builder substitutes — would ship them raw here, with
+  // a green build, against the self-contained promise in this file's own header.
+  const left = [...new Set([...body.matchAll(/\/\*__[A-Z0-9_]+__\*\/|__[A-Z][A-Z0-9_]*__/g)]
+    .map((m) => m[0]))];
   if (left.length) {
     console.error('✗ ' + t.out + ' — unresolved placeholder(s): ' + left.join(', '));
     failed = true;
