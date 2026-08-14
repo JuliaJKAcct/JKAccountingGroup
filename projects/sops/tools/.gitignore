@@ -4,3 +4,4 @@
 # so a committed build can only drift from what the Hub actually shows.
 # Same rule as projects/proposal-tool/.gitignore.
 itin-w7-walkthrough.html
+btr-walkthrough.html

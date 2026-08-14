@@ -1033,20 +1033,41 @@ function inlineToolDoc(srcFile, title, opts){
     // throw for a tool in any other folder and the catch below would swallow it into a
     // silent "Tool unavailable" card.
     const core = raw.includes('/*__PRICING_CORE__*/') ? read(resolve(dir, 'pricing-core.js')) : '';
+    // The SOP walkthroughs (ITIN, BTR) share a stylesheet and a case engine that live
+    // beside them. Read each only when the tool actually asks for it — an unconditional
+    // read would throw for a tool in another folder, and the catch below would swallow
+    // that into a silent "Tool unavailable" card.
+    const toolCss = raw.includes('/*__TOOL_CSS__*/') ? read(resolve(dir, 'case-tool.css')) : '';
+    const caseCore = raw.includes('/*__CASE_CORE__*/') ? read(resolve(dir, 'case-core.js')) : '';
     const body = raw
       .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
       .replaceAll('/*__FONTS_CYRILLIC__*/', cyrillic)
       .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
       .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
       .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
-      .replaceAll('/*__PRICING_CORE__*/', core);
+      .replaceAll('/*__PRICING_CORE__*/', core)
+      .replaceAll('/*__TOOL_CSS__*/', toolCss)
+      .replaceAll('/*__CASE_CORE__*/', caseCore);
+    // A placeholder that survives substitution embeds a tool with no styles or no case
+    // engine — which reads as a broken page, not as a build error. Say so instead: the
+    // catch below turns this into the "Tool unavailable" card, which names the log.
+    const left = ['/*__FONTS__*/', '/*__TOOL_CSS__*/', '/*__CASE_CORE__*/', '/*__PRICING_CORE__*/']
+      .filter((p) => body.includes(p));
+    if (left.length) throw new Error(srcFile + ': unresolved build placeholder(s) ' + left.join(', '));
     return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
       + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(title) + '</title></head><body>\n'
       + body + '\n</body></html>';
-  }catch(e){ return ''; }
+  }catch(e){
+    // A silent '' ships a Hub whose build log looks clean while the tool's card holds a
+    // "could not be built" callout with no cause anywhere. Print the reason — the callout
+    // tells the reader to look here for it.
+    console.error('✗ tool embed failed: ' + srcFile + ' — ' + e.message);
+    return '';
+  }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
 const ITIN_DOC    = inlineToolDoc('itin-w7-walkthrough.src.html', 'JK Accounting Group — ITIN Application Walkthrough', { dir: 'projects/sops/tools' });
+const BTR_DOC     = inlineToolDoc('btr-walkthrough.src.html', 'JK Accounting Group — Business Tax Receipt Walkthrough', { dir: 'projects/sops/tools' });
 const MONTHLY_DOC = inlineToolDoc('monthly-proposal-generator.src.html', 'JK Accounting Group — Monthly Proposal Generator', { cyrillic: true });
 
 function toolIframe(doc, titleAttr){
@@ -1069,6 +1090,13 @@ function itinReaderInner(){
     + `<h1>ITIN Application Walkthrough<span class="loc">Form W-7, decided one applicant at a time</span></h1>`
     + `<p class="lede">For anyone preparing an ITIN application — including someone who has never done one. It asks plain questions (is this a dependent? which country? how old? do we have the passport?) and works out the <b>reason box</b>, the <b>documents</b>, whether <b>residency proof</b> applies, <b>who may sign</b>, and what goes in the envelope — then prints a <b>preparation sheet for that one applicant</b>. Three tabs: the <b>walkthrough</b>, a searchable <b>field-by-field reference</b> to every line of Form W-7 and Form W-7-COA, and a <b>case tracker</b> that follows one client through the weeks an application takes — a tailored checklist you tick off, a note on each step and a running log, with the durable copy pasted into that client's case note in Double. The reasoning behind it is the <b>ITIN Application (Form W-7)</b> SOP.</p>`
     + `</div></section><div class="page">${toolIframe(ITIN_DOC, 'ITIN Application Walkthrough')}</div>`;
+}
+function btrToolReaderInner(){
+  return `<section class="mast"><div class="in">`
+    + `<p class="kick">Business filings · internal</p>`
+    + `<h1>Business Tax Receipt Walkthrough<span class="loc">Hollywood + Broward, one business at a time</span></h1>`
+    + `<p class="lede">For anyone getting a Florida Business Tax Receipt for a business in Hollywood. It settles the <b>zoning gate</b> first — the one question that decides whether there is a filing at all — then works out the <b>documents to have ready as PDFs</b>, the answers this business gives on each screen of <b>both</b> applications, the <b>two separate fees to two different governments</b>, and what to do when the city comes back asking for something. Three tabs: the <b>walkthrough</b>, a searchable <b>reference</b> to both applications screen by screen with the full email map, and a <b>case tracker</b> that follows one business through the weeks the two filings take — including the county payment email that hides in Gmail's Updates tab, and the reply-to-the-reviewer step without which the receipt never arrives. The reasoning behind it is the <b>Business Tax Receipt</b> SOP.</p>`
+    + `</div></section><div class="page">${toolIframe(BTR_DOC, 'Business Tax Receipt Walkthrough')}</div>`;
 }
 function monthlyReaderInner(){
   return `<section class="mast"><div class="in">`
@@ -1849,6 +1877,11 @@ const TEMPLATES = [
     formats: ['In-Hub tool'],
     tool: { id: 'itin-w7-walkthrough', label: 'Open the walkthrough' } },
 
+  { band: 'tool', kind: 'Interactive tool', name: 'Business Tax Receipt Walkthrough', owner: 'julia',
+    blurb: 'Get a Florida Business Tax Receipt for a Hollywood business without holding the whole procedure in your head. It asks the zoning question first — will the owner actually live there? — because that one answer decides whether there is a filing at all, and stops the walkthrough dead when the answer means there is not. Then it works out the PDFs to have ready, the answers this business gives on each screen of both applications, the two separate fees paid to two different governments, and the follow-up round where paying is not the last step. A searchable reference to both applications screen by screen — with the full email map, the fees, the Sept 30 renewal and the pitfalls that have actually bitten — sits on the second tab. The third tracks one business across the weeks the two filings take: a checklist pruned to that business, a note on each step, a running log, and a block you paste into the client’s case note in Double, which is both the durable record and how you reopen the case on another machine. Runs entirely in the browser; the only client data it holds is the reference you choose and your own notes.',
+    formats: ['In-Hub tool'],
+    tool: { id: 'btr-walkthrough', label: 'Open the walkthrough' } },
+
   { band: 'sop', kind: 'Tax preparation', name: 'Child & Dependent Care — Provider Statement', owner: 'lilian',
     blurb: 'The blank form the care provider (e.g. a cash-paid babysitter) completes and signs to substantiate the Child & Dependent Care Credit when there’s no payment trail. They sign it; the signed copy stays in the client’s systems.',
     formats: ['PDF', 'PNG'],
@@ -1889,6 +1922,7 @@ const TEMPLATES = [
 readerDocs.push(`<div class="rdoc" data-doc="monthly-proposal-generator" hidden>${monthlyReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="pricing-calculator" hidden>${calcReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="itin-w7-walkthrough" hidden>${itinReaderInner()}</div>`);
+readerDocs.push(`<div class="rdoc" data-doc="btr-walkthrough" hidden>${btrToolReaderInner()}</div>`);
 readerDocs.push(`<div class="rdoc" data-doc="lilian-notebook" hidden>${notebookReaderInner()}</div>`);
 
 const TARROW = '<svg class="tpl-arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
