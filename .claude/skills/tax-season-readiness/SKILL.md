@@ -200,24 +200,40 @@ the Aura shape:
 
 | The client is… | What the empty field means | What to do |
 |---|---|---|
-| A company whose **owner's record names a form that plausibly absorbs its activity** | **Corroborates** that it files nothing of its own | Confirm **which** activity — then record it on the client file |
+| A company whose **owner's record names a form that plausibly absorbs its activity** | **Corroborates** that it files nothing of its own | Ask the two-part question below — then record the answer on the client file |
 | **Bookkeeping-only / `Income Tax = false`** (§3) | Only that **we** do not prepare the return. **The company may still file one, prepared by someone else** | ❌ row above governs — **send to review.** Never resolve to "no return" |
 | **New, with properties not yet filled in** (§6.1 test 5, §7) | Nothing at all. The owner's record is usually just as empty — that is **the same gap twice, not a second confirmation** | **Ask** |
 
-Two more cases fall to the ❌ row: a company with **no owner record in Double** to read across to,
-and an owner whose form **cannot absorb** the company's activity (a plain `1040` with no Schedule
-C). And `Account Type` itself is **occasionally empty** (§7) — these columns are not uniformly
-populated, which is the whole reason absence cannot carry an assertion.
+⚠️ **These rows are not exclusive, and no row closes the question — do not decode in order.** The
+worked example below satisfies rows 1 **and** 2 at once: that company's owner absorbs its activity
+*and* it is a bookkeeping client with `Income Tax = false`. So does a company that files its own
+1065 through another preparer while its owner happens to run an unrelated Schedule C side business —
+same fingerprint, opposite truth. **The fingerprint tells you what to ASK, never what to conclude.**
+
+🛑 **And ask it in two parts, in this order — the second question presupposes the first.**
+> 1. **Does this company file a return of its own at all** — with us or with anyone else?
+> 2. **Only if not:** which of the owner's activities carries it?
+>
+> Asking only "which activity?" invites a name and never invites *"neither — it files its own
+> return, someone else prepares it."* That is the silent drop, one leading question later.
+
+Two further cases fall straight to the ❌ row: a company with **no owner record in Double** to read
+across to, and an owner whose form **cannot absorb** the company's activity (a plain `1040` with no
+Schedule C). And `Account Type` itself is **occasionally empty** (§6.2) — these columns are not
+uniformly populated, which is the whole reason absence cannot carry an assertion.
 
 ⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
-about PROPAGATION, not about asking.** The `Income Tax = false` warning above was written on
-**2026-08-06**, and even then it recorded that both sufficient signals were absent for this client.
-For the next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
-**two-owner LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C
-activity, and **both files carried an explicit note that one reading had to be wrong** — because a
-partnership return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and
-the wrong reading kept rendering on the published client card. **The answer existed in this skill
-the whole time.**
+about PROPAGATION, not about asking.** On **2026-08-06** this section already stated in plain words
+that **Aura Remodeling is Schedule C** — as a live example of a client whose two sufficient signals
+are both absent. _(What that 2026-08-06 text got wrong was only the reason it gave — that this was
+knowable "only because Lilian said so, not from anything in Double". The pair-read above corrects
+that half, and is new on 2026-08-13. **The conclusion was right from the first day.**)_ For the next
+week the two client files went on saying the opposite: `aura-remodeling.md` inferred a **two-owner
+LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C activity, and
+**both files carried an explicit note that one reading had to be wrong** — because a partnership
+return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and the wrong
+reading kept rendering on the published client card. **The answer existed in this skill the whole
+time — it was the propagation that never happened.**
 
 **So: when a human settles a client's structure, write it to the CLIENT FILE, not only here.** A
 fact recorded in a skill is guidance; a fact recorded on the client file is what the team and the

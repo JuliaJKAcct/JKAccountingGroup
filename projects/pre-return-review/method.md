@@ -229,9 +229,22 @@ ask **what its emptiness means for this kind of record** before calling it a gap
 **But read an absence only where the record is actually maintained**, and that has to be
 established, not assumed: on a client nobody has filled in yet, the same emptiness means
 "unknown", and the related record is usually just as empty — which is the same gap twice, not
-a confirmation. **An absence is at most corroboration, never a conclusion**, and only when the
-neighbouring record carries something that accounts for it. Otherwise it is a question, and
-rule 1 applies to it like any other.
+a confirmation. **An absence is at most corroboration, never a conclusion.**
+
+⚠️ **Two traps sit inside that, and both are how an absence quietly becomes a conclusion.**
+**First: a neighbouring record that *could* account for the absence is not proof that it
+does.** Two clients can share an identical fingerprint and have opposite truths — one really
+is reported through the related record, the other files on its own through someone we never
+see, and its owner's record looks the same for an unrelated reason. **Fitting is not
+evidence.** **Second: an empty field often records what WE do, not what EXISTS.** The firm's
+columns describe the firm's engagement, so an absence there frequently means *we don't handle
+this* — which says nothing about whether the obligation exists or someone else is handling it.
+Reading "we don't do it" as "it isn't owed" is the single most damaging misreading available
+here, because it removes work from the list silently, with nothing left behind to notice.
+
+So when you ask, **ask whether the thing exists at all before asking who carries it** — the
+narrower question presupposes the answer to the wider one and will never surface *"neither."*
+Otherwise the absence is a question like any other, and rule 1 applies to it.
 
 **This runs BEFORE rule 5, not instead of it.** Read the maintained record first, then derive
 what the structure requires (rule 5). Taken in that order they compound: the record tells you
