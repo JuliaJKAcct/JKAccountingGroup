@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** ⚠️ **WINDING DOWN — the company is closing and is no longer our client** (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-11
+> **Status:** ⚠️ **WINDING DOWN — the company is closing and is no longer our client** (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-14
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -33,7 +33,11 @@
 - **Primary language:** Russian — the firm's correspondence with the client's primary contact is conducted in Russian _(Gmail, 2026-08-01; tentative, confirm)_
 - **Our engagement (services we provide):** Bookkeeping (Quarterly), Sales Tax (Monthly filing), Income Tax (Form 1120-S), 1099 Preparation, Annual Report. **Payroll is NOT a firm service for this client** — the client self-manages payroll through Gusto _(Double client properties, 2026-08-01)_
 - **Fiscal year-end:** _(pending — confirm)_
-- **Accounting platform:** QuickBooks Online (via Double)
+- **Accounting platform:** QuickBooks Online — but ⚠️ **not reachable through Double.**
+  `get_client(706626)` returns `platform: "none"` _(checked 2026-08-14)_, so Double's financial
+  reports refuse the client outright (*"This tool is unavailable for None clients"*). The books have
+  to be opened in QuickBooks itself. **This records the state on the date checked and nothing more** —
+  whether the connection was removed during the wind-down or never existed was not investigated.
 
 ## 2. Contacts
 
@@ -54,7 +58,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
-| Shopify | E-commerce storefront "Kolo House" | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
+| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the KOLO bath/shower lines and **"Cost per item" is populated**, so the month-end snapshot returns units *and* value at cost; the separate kitchen-cabinet collections are `tracked: false` with no cost. Tracking begins **August 2024** — before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
 | Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
 | GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
 | TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
@@ -94,6 +98,20 @@ the actual details.
 - **Retail, not wholesale.** A 2024 zoning application for the warehouse location was denied
   because "wholesale" use isn't allowed there; resubmitting it as **retail sales to customers** got
   it approved. That framing mattered for licensing and may matter again on the way out.
+- ⚠️ **Most of the business does NOT go through the Shopify store — the storefront is a small
+  fraction of it.** Across the whole of 2025 the store took **fewer than 50 orders**, several months
+  ran at one or two, and **December 2025 was zero**, while the warehouse held over eleven thousand
+  units. So a Shopify sales report is **not** this company's revenue, and anyone reading one as such
+  will understate the year badly. Consistent with the retail/wholesale zoning history above. _(Shopify
+  analytics, read 2026-08-14. Order counts are a volume fact; the money stays in Shopify/QuickBooks
+  per the two-data-homes rule.)_
+- ⚠️ **Shopify's inventory is NOT maintained day to day — read its unit counts as an upper bound.**
+  Shopify decrements only when a *Shopify* order ships or someone adjusts by hand, and this company
+  sells mostly off-platform (above). The signature is in the monthly series: through all of 2025 the
+  store-wide count drifted down by barely a hundred units, then in **July 2026** it dropped by roughly
+  three thousand in a single month — the shape of a physical count or a bulk correction, not of
+  selling. **For a year-end inventory figure the snapshot is the starting point; a physical count beats
+  it.** _(Shopify month-end inventory snapshot series, read 2026-08-14.)_
 - **The workers'-comp exemption covers BOTH principals** — separate Division of Workers'
   Compensation expiration notices for each of them landed the same day, 2026-06-29.
 - **Dual engagement:** the corporate client (1120-S) and a **separate individual 1040 engagement**
@@ -123,6 +141,15 @@ the actual details.
   (sales tax, Gusto, and the rest) run over the coming days; the **July 2026 sales-tax return is the
   last filing**. Also settled the long-standing cadence question — **sales tax is monthly**, and the
   quarterly note in the Drive watchlist is stale. File switched to wind-down. _(Worked by Lilian.)_
+- 2026-08-14 — **Lilian started the 2025 Form 1120-S.** The opening question was where a Shopify
+  store's year-end inventory actually lives. Established from the live Shopify connection: the
+  **month-end inventory snapshot** (Analytics → Reports → Inventory) carries units **and** value at
+  cost for **31 Dec 2025 and 31 Dec 2024** — the ending and beginning inventory Form 1125-A needs —
+  and "Cost per item" is populated, so the value is real rather than a units-only count. Two findings
+  matter more than the number itself, both now in §5: the Shopify store is a **small fraction** of the
+  company's sales, and its inventory is **not maintained day to day**. Separately, Double reports
+  Kolo's QuickBooks as **not connected** (§1), so the books cannot be read through Double at all.
+  _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
@@ -140,6 +167,17 @@ the actual details.
       weekend sweep scope at that point, not before).
 
 ### Information still needed
+- [ ] **2025 return — did the client take a physical inventory count at 31 Dec 2025?** This decides
+      whether the Shopify snapshot can be used as the figure or only as a cross-check (§5).
+- [ ] **2025 return — how are inventory purchases recorded in QuickBooks?** Expensed on purchase, or
+      carried as an inventory asset? Decides whether the year-end close needs an inventory adjusting
+      entry, and it is a large number for a company this size.
+- [ ] **2025 return — what ending inventory did the 2024 Form 1120-S report?** That figure *is* the
+      2025 beginning inventory and it governs; the Shopify snapshot for 31 Dec 2024 is a cross-check,
+      not the authority. A gap between the two has to be explained, not averaged.
+- [ ] **2025 return — is there merchandise in the warehouse Shopify does not track at all?** The
+      kitchen-cabinet collections carry no tracking and no cost, so anything like them is simply
+      absent from the snapshot.
 - [ ] Fiscal year-end
 - [ ] Confirm (or rule out) the "MegaBAI Florida Corp" relationship in §5
 - [x] Industry / what they do — **retail e-commerce via the Shopify store "KOLO HOUSE"** plus a
