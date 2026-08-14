@@ -127,13 +127,10 @@ the actual details.
   and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
   in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
   Check the PDF by hand. _(2026-08-14.)_
-- 🔴 **PAYROLL APPEARS TO HAVE STOPPED IN 2025 — and that contradicts what is on record here.**
-  §3/§4 record the client running its **own weekly payroll through Gusto**, with the firm copied
-  on "payroll due"/"payroll late" notices most weeks. The 2025 P&L carries only a token payroll
-  expense — a small fraction of 2024's salaries line, and far too little for a year of weekly
-  runs. **Either payroll genuinely ceased, or it is not being recorded in QuickBooks**, and the
-  two have completely different consequences for the return and for the W-2/941 filings. Resolve
-  before the 1120-S is prepared. _(2025 P&L, 2026-08-14.)_
+- ✅ **PAYROLL STOPPED — settled by Lilian, 2026-08-14: "la nómina paró, no se corrieron más
+  payrolls."** So the near-zero payroll on the 2025 P&L is the fact, not a gap in the books. ⚠️
+  **§3/§4 still describe weekly Gusto payroll as live and should be read as historical from here
+  on** — the Gusto due/late notices in the firm's inbox belong to the period when it ran.
 - 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
   the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
   — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
@@ -142,22 +139,42 @@ the actual details.
   Two shareholder-employees. Reasonable-compensation exposure — weaker than usual because the year
   is a large loss and the business is winding down, but it must be a decision, not an oversight.
   See the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/).
-- ⚠️ **The books do not tie to the 2024 return at 1 Jan 2025 — two separate breaks.** The
-  QuickBooks inventory balance implied by the 2025 figures differs from the ending inventory on the
-  filed 2024 Form 1125-A, and QuickBooks' retained earnings differs from the 2024 return's ordinary
-  loss — **by different amounts**, so it is not one adjusting entry. Needs the QuickBooks balance
-  sheet at 31 Dec 2024 and the inventory account's 2025 ledger detail to resolve. _(2026-08-14.)_
-- ⚠️ **The COGS base moved between 2024 and 2025.** On the 2024 return, cost of goods sold was
-  about a third of reported revenue. In the 2025 books it is close to a third of **gross Shopify
-  sales before discounts** — which, because discounts run over half of gross, is nearly **twice**
-  the same ratio measured against revenue. The 30% rule can be applied to either base but not to a
-  different one each year, and the choice moves the ending inventory materially. **Settle the base
-  explicitly.** _(2026-08-14.)_
-- **Equity is held in two named shareholder accounts, one per principal** (Double holds the names,
-  per §2) — carrying substantial contributed capital, most of it from one of them. **The 2024
-  return's Schedule L does not use that structure**, so a mapping was made when it was prepared and
-  the same mapping has to be repeated. Their classification also decides whether the accumulated
-  losses are deductible or suspended (Form 7203, above). _(2026-08-14.)_
+- ✅ **THE 1125-A METHOD IS DECODED — three rules, and they reproduce the 2024 return exactly.**
+  With the 2024 QuickBooks reports in hand (2026-08-14) the whole schedule ties to the cent:
+  1. **Line 7 (ending inventory) = the balance sheet's `Total for Other Current Assets`** — which
+     is the `Inventory` account **plus the Shopify Clearing Account**, not the Inventory account
+     alone.
+  2. **Line 8 (COGS) = the P&L's `Total for Cost of Goods Sold`** — the `COGS` account **plus
+     `Shopify Selling Fees`**.
+  3. **Line 2 (purchases) is the plug** that makes line 1 + line 2 − line 7 = line 8.
+
+  ⚠️ **Rule 1 is the one a session will get wrong**, because "inventory" reads as the Inventory
+  account. Using it alone breaks the schedule and makes purchases come out **negative**.
+- ✅ **The COGS estimate is applied consistently across both years — the base did NOT move.**
+  Cost of goods sold runs at about **31% of the `Shopify Sales` account** (the gross sales figure)
+  in each year. An earlier reading of this file suspected the base had changed; that was wrong, and
+  the cause was that **2024 has no discount accounts at all** — `Channel Discount` and `Channel
+  Refund Adjustment` first appear in 2025 — so 2024's gross and net coincide while 2025's diverge
+  sharply. Measure the ratio against `Shopify Sales`, never against total income. _(2026-08-14.)_
+- 🔴 **BASIS IS THE LIVE RISK ON THE 2025 RETURN — the two shareholders' equity accounts are
+  wildly unequal.** Equity sits in one named account per principal (Double holds the names, per
+  §2). One of them funded almost the entire business and **put in a further large contribution
+  during 2025**; the other's account has **not moved since 2024** and is a small fraction of the
+  first. Meanwhile the company has now run **two consecutive loss years**, the second much larger
+  than the first. If the loss is allocated by share percentage while contributions are that
+  lopsided, **the smaller shareholder's basis will not carry his share** and part of his loss is
+  suspended rather than deducted. **Form 7203 per shareholder is not optional here.** First
+  question: are those accounts **capital contributions or shareholder loans** — they behave
+  differently for basis. _(2026-08-14.)_
+- ⚠️ **The Security Deposit came off the balance sheet during 2025** — it was carried all through
+  2024 and is **zero** at 31 Dec 2025, with no matching write-off visible as its own expense line.
+  The likely explanation is that the landlord applied it against rent, which would already sit
+  inside the rent figure. **Confirm what happened to it** before the balance sheet is transcribed.
+  _(2026-08-14.)_
+- ⚠️ **Rent is the whole story of the 2025 loss** — store rent plus storage rent is roughly
+  **four fifths of every expense**, against revenue a fraction of its size, and it **more than
+  doubled** from 2024. With the company winding down, **whether that lease is still running is the
+  largest remaining exposure after the inventory itself.** _(2026-08-14.)_
 - 🔧 **That PDF needs the fixed redactor.** `KOLOFLORIDAINC.pdf` carries a font with no Unicode
   map, so a text extraction returns glyph names rather than characters. Read through
   [`tools/redact-doc/`](../../../tools/redact-doc/) at its 2026-08-14 version or later, which
@@ -263,6 +280,15 @@ the actual details.
   years. Requested from Lilian: the QuickBooks balance sheet at 31 Dec 2024, the inventory
   account's 2025 ledger detail, and confirmation that nothing was purchased in 2025.
   _(Worked by Lilian.)_
+- 2026-08-14 — **The 2024 QuickBooks reports closed every open question about method, and the 2025
+  Form 1125-A now ties to the cent.** Lilian also settled that **payroll stopped** and set the
+  scope: *the 2024 return is closed, Julia prepared it, and it is not to be reviewed* — it is the
+  reference for how 2025 is built, nothing more. Two things this file had recorded as problems were
+  **wrong and are struck**: the books do tie to the 2024 return at 1 January (the ending-inventory
+  line includes the Shopify Clearing Account — §5 rule 1), and the COGS base never moved (2024
+  simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
+  **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
+  Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
