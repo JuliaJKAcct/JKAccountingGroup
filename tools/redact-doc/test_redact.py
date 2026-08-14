@@ -574,16 +574,34 @@ for figures in (
     if c["glyph"]:
         FAILURES.append(f"GLYPH · FALSE POSITIVE swallowed real figures: {figures!r}")
 
-# THE COMMA IS WHAT STOPS THE RUN, and that is the property that keeps a
-# formatted table safe next to a masked token. Pin it: with a [GLYPH] present,
-# the run must stop at the comma instead of eating the whole table.
+# THE COMMA STOPS THE RUN — that is what keeps the REST of a formatted table
+# alive next to a masked token. But the figure the run stopped inside must go
+# WHOLE: `[GLYPH],392` reads as 392, and `1,204,556` losing its leading `1,` is
+# a factor-of-1000 error that no arithmetic check would flag. Over-masking is
+# only safe while the reader can SEE something was removed.
 out, _ = redact("/gX1 148,392 185,673 22,100 on line 8")
-for figure in ("392", "185,673", "22,100", "line 8"):
+for figure in ("185,673", "22,100", "line 8"):
     if figure not in out:
         FAILURES.append(
-            f"GLYPH · the adjacency run crossed a comma and ate {figure!r} — a formatted "
-            "table beside a masked token is supposed to survive"
+            f"GLYPH · the adjacency run ate {figure!r} — a formatted table beside a masked "
+            "token is supposed to survive past the first figure"
         )
+if re.search(r"\[GLYPH\],\d", out):
+    FAILURES.append(
+        "GLYPH · a masked figure came back as a smaller well-formed number — "
+        f"the comma tail was left behind: {out!r}"
+    )
+for whole in ("/g11 1,204,556 NOL carryforward", "See /Form4562  1,204,556 carryforward",
+              "/g11        6,753.00   788.00 5,965.00"):
+    out, _ = redact(whole)
+    if re.search(r"\[GLYPH\][,.]\d", out):
+        FAILURES.append(f"GLYPH · wrong-magnitude figure survived: {out!r}")
+# …and a figure with no [GLYPH] near it is never touched by that rule.
+for untouched in ("148,392 and 185,673 and 1,204,556 on line 8",
+                  "6,753.00 788.00 5,965.00 2,261.00 188.00"):
+    out, c = redact(untouched)
+    if out != untouched or c["glyph"]:
+        FAILURES.append(f"GLYPH · the comma-tail rule altered ordinary figures: {out!r}")
 
 # The token BODY must be Unicode too, not just its first letter. A font naming
 # glyphs `/gд49` has a Cyrillic body, and an ASCII-only body class stops at the

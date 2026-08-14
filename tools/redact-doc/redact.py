@@ -176,10 +176,29 @@ GLYPH_TOKEN = re.compile(r"/[^\W\d_][\w.]{0,40}")
 #    fields are padded BY CONSTRUCTION; the tight-set case this rule was written
 #    for is the rarer one. And `/` is the US date separator, so without it a
 #    date of birth published its day and year.
+#    ⓘ The bound of 20 is calibrated to real form geometry, not picked. Boxed
+#    SSN fields were run end to end at column pitches of 30, 45, 60, 90 and
+#    120pt: no digits survive at any of them. Only at 160pt — 2.2 inches between
+#    groups, wider than the whole field on a real form — does a group get
+#    through. **Do not shrink it back.**
 GLYPH_ADJACENT = re.compile(
     r"\[GLYPH\][-./\s]{0,20}\d[\d\s./\-]*"
     r"|\d[\d\s./\-]*[-./\s]{0,20}(?=\[GLYPH\])"
 )
+
+# ⚠️ And the rest of a thousands-separated figure. The run above stops at a
+# comma, which keeps a formatted table alive — but it stops INSIDE the adjacent
+# number, and what it leaves is not visibly a fragment:
+#
+#     /Form4562  1,204,556 carryforward   →   [GLYPH],204,556 carryforward
+#
+# That reads as a number. Everywhere else in this tool over-masking is safe
+# precisely BECAUSE the reader can see something was removed; `[GLYPH],392`
+# reads as 392, and losing a leading `1,` is a factor-of-1000 error that will
+# never send anyone back to the PDF. This output feeds return preparation, where
+# figures are read off it and corroborated arithmetically. **A removed figure
+# fails loudly; a wrong one does not.** So the adjacent figure goes whole.
+GLYPH_COMMA_TAIL = re.compile(r"\[GLYPH\](?:,\d{3})+(?:\.\d+)?")
 
 # The one case still worth REFUSING rather than masking: a document that is
 # mostly wreckage. Masking 61,131 tokens produces a file that is technically
@@ -401,6 +420,11 @@ def redact(text: str) -> tuple[str, dict]:
     text, n = GLYPH_ADJACENT.subn("[GLYPH]", text)
     counts["glyph"] += n
 
+    # …and the thousands-separated remainder of whatever it stopped inside, so a
+    # masked figure never comes back as a smaller well-formed one.
+    text, n = GLYPH_COMMA_TAIL.subn("[GLYPH]", text)
+    counts["glyph"] += n
+
     # Park EINs behind a placeholder so no later rule can touch them, then put
     # them back at the very end.
     eins: list[str] = []
@@ -452,6 +476,15 @@ def redact(text: str) -> tuple[str, dict]:
     text = SSN.sub(_ssn, text)
     text = LONG_DIGITS.sub(_long, text)
 
+    # ⓘ The SSN_LOOSE half is the live one — it hunts the wide-spaced shape the
+    #   redactor masks only when labelled. The LONG_DIGITS half is **unreachable
+    #   by construction**: it runs immediately after LONG_DIGITS.sub above, and
+    #   no substitution in between can create a fresh 9+ digit run — every mask
+    #   this file emits ([GLYPH], [SSN-n], [ACCT-n], [STREET-REDACTED]) contains
+    #   no digits and none of them joins two runs. It is belt-and-braces, kept
+    #   because it costs nothing and the ordering above has been got wrong once
+    #   already. **Its silence is not evidence of anything** — do not read a
+    #   clean guard as confirmation that the digit rules ran.
     counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
