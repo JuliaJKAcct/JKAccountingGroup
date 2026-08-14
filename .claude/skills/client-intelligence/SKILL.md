@@ -23,6 +23,16 @@ Read the project's own docs alongside this skill — they are the authority on c
 - [`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md) — the Saturday routine + full sweep method.
 - [`automation/sweep-state.md`](../../../projects/client-intelligence/automation/sweep-state.md) — the incremental ledger.
 
+> ⓘ **Before inferring a client's tax structure from prose, read Double's properties — and the
+> RELATED client's too.** Lilian maintained `Tax Return Type` client by client and calls the
+> columns **"bastante correctas" — fairly correct, not guaranteed**, so it beats a guess from prose
+> and is still read, not obeyed. The form sits on **whoever files it**, so a company reported on an
+> owner's return correctly carries none. ⚠️ **An empty field on a company is corroboration at most,
+> never a conclusion** — on a bookkeeping-only client it means only that *we* don't prepare the
+> return, and on a new client it means nothing at all. The reasoning is
+> [`method.md`](../../../projects/pre-return-review/method.md) rule 10; what each value proves is
+> the [`tax-season-readiness` skill](../tax-season-readiness/) §1b _(Lilian, 2026-08-13)_.
+
 ## The two rules that never bend
 
 1. **Two data homes.** The repo file holds **non-sensitive knowledge and links only**.

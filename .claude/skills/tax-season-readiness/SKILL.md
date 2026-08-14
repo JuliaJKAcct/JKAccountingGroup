@@ -162,6 +162,7 @@ Consequences a session must not misread:
 | `Tax Return Type` = `Sch C` or `1040-SCH C` | ✅ **Sufficient** |
 | `Organizer Status` = `N/A (SCH-C)` | ✅ **Sufficient** |
 | `Income Tax` unchecked, on its own | ❌ **NOT sufficient — send to review** |
+| Company's `Tax Return Type` empty **and** the owner's individual record carries `1040-SCH C` / `Sch C` | 🟡 **Corroborating, not sufficient** — it narrows the field to one question: **which** activity sits on that Schedule C. An individual record can carry more than one, and a joint record can carry one per spouse. Confirm, then record it |
 
 **`Income Tax = false` does not mean Schedule C.** Read plainly it means *we don't do this
 client's income tax at all*, and §3 documents exactly that population (bookkeeping-only
@@ -170,19 +171,69 @@ covers two opposite situations, and guessing is dangerous in one direction: clas
 bookkeeping-only client as Sch C makes a session **silently drop a client that needs a return**,
 with no flag raised.
 
-There is a live example of why only a human can settle it: **Aura Remodeling** has
-`Income Tax = false` and no `Tax Return Type`, and is Schedule C — but that is known **only
-because Lilian said so**, not from anything in Double. When the two sufficient signals are absent,
-ask.
+✅ **BUT DON'T STOP AT THE COMPANY'S RECORD — READ THE OWNER'S NEXT TO IT.** _(Lilian, 2026-08-13;
+property values verified live the same day. The general form of the reasoning is
+[`method.md`](../../../projects/pre-return-review/method.md) rule 10.)_ Lilian maintained these
+columns client by client and calls them **"bastante correctas" — fairly correct, not guaranteed**
+(*"para cada cliente están bastante correctas. Me tomé el trabajo de actualizarlas uno a uno"*). So
+`Tax Return Type` is the firm's own answer to which form a client files and beats any guess from
+prose or a company's legal form — and it is **still hand-maintained data (§6), so it is read, not
+obeyed.** The structural half is what makes it useful: **the form is recorded on whoever FILES it**,
+so a company that files nothing correctly carries none.
+
+**Aura Remodeling** is the worked example:
+
+| | `Account Type` | `Income Tax` | `Tax Return Type` |
+|---|---|---|---|
+| Aura Remodeling (706679) | Company | `false` | **absent** |
+| Its owner's individual record (710637) | Individual | `true` | **`1040-SCH C`** |
+
+Two sweeps that read Aura **alone** filled the hole by inference instead — one concluding a
+partnership return — and the contradiction sat open for a fortnight. Read as a pair, the owner's
+`1040-SCH C` **corroborates** the disregarded reading and leaves exactly one question to ask;
+**Lilian settled which activity sits on that Schedule C.** The properties are what get a session to
+the right question in two calls instead of inventing a return.
+
+🛑 **AN EMPTY `Tax Return Type` ON A COMPANY IS NOT EVIDENCE EITHER WAY ON ITS OWN**, and this is
+the direction that goes wrong quietly. It has three quite different meanings, and only the first is
+the Aura shape:
+
+| The client is… | What the empty field means | What to do |
+|---|---|---|
+| A company whose **owner's record names a form that plausibly absorbs its activity** | **Corroborates** that it files nothing of its own | Ask the two-part question below — then record the answer on the client file |
+| **Bookkeeping-only / `Income Tax = false`** (§3) | Only that **we** do not prepare the return. **The company may still file one, prepared by someone else** | ❌ row above governs — **send to review.** Never resolve to "no return" |
+| **New, with properties not yet filled in** (§6.1 test 5, §7) | Nothing at all. The owner's record is usually just as empty — that is **the same gap twice, not a second confirmation** | **Ask** |
+
+⚠️ **These rows are not exclusive, and no row closes the question — do not decode in order.** The
+worked example below satisfies rows 1 **and** 2 at once: that company's owner absorbs its activity
+*and* it is a bookkeeping client with `Income Tax = false`. So does a company that files its own
+1065 through another preparer while its owner happens to run an unrelated Schedule C side business —
+same fingerprint, opposite truth. **The fingerprint tells you what to ASK, never what to conclude.**
+
+🛑 **And ask it in two parts, in this order — the second question presupposes the first.**
+> 1. **Does this company file a return of its own at all** — with us or with anyone else?
+> 2. **Only if not:** which of the owner's activities carries it?
+>
+> Asking only "which activity?" invites a name and never invites *"neither — it files its own
+> return, someone else prepares it."* That is the silent drop, one leading question later.
+
+Two further cases fall straight to the ❌ row: a company with **no owner record in Double** to read
+across to, and an owner whose form **cannot absorb** the company's activity (a plain `1040` with no
+Schedule C). And `Account Type` itself is **occasionally empty** (§6.2) — these columns are not
+uniformly populated, which is the whole reason absence cannot carry an assertion.
 
 ⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
-about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
-next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
-**two-owner LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C
-activity, and **both files carried an explicit note that one reading had to be wrong** — because a
-partnership return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and
-the wrong reading kept rendering on the published client card. **The answer existed in this skill
-the whole time.**
+about PROPAGATION, not about asking.** On **2026-08-06** this section already stated in plain words
+that **Aura Remodeling is Schedule C** — as a live example of a client whose two sufficient signals
+are both absent. _(What that 2026-08-06 text got wrong was only the reason it gave — that this was
+knowable "only because Lilian said so, not from anything in Double". The pair-read above corrects
+that half, and is new on 2026-08-13. **The conclusion was right from the first day.**)_ For the next
+week the two client files went on saying the opposite: `aura-remodeling.md` inferred a **two-owner
+LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C activity, and
+**both files carried an explicit note that one reading had to be wrong** — because a partnership
+return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and the wrong
+reading kept rendering on the published client card. **The answer existed in this skill the whole
+time — it was the propagation that never happened.**
 
 **So: when a human settles a client's structure, write it to the CLIENT FILE, not only here.** A
 fact recorded in a skill is guidance; a fact recorded on the client file is what the team and the
@@ -451,7 +502,8 @@ Decode in this order — the first match wins:
 > is **not sufficient** to conclude anything, because the same fingerprint covers two opposite
 > situations, and §6 says to *ask* when a tax project is present — which it always is here. The
 > file's own counterexample proves it: a client with `Income Tax = false` and no `Tax Return Type`
-> turned out to be **Schedule C**, known only because Lilian said so. On top of that, `Income Tax`
+> turned out to be **Schedule C** — reported on its **owner's** return, which is where §1b now says
+> to look before concluding anything. On top of that, `Income Tax`
 > is a **checkbox** (§2) — "unticked" and "never set" are indistinguishable, so a brand-new client
 > whose properties aren't filled in yet trips test 3 before test 5 can run. Getting this wrong
 > **silently drops a client who owes us a return**, which is the worst failure this report has.

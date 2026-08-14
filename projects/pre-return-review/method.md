@@ -94,6 +94,10 @@ prerequisite rather than a parallel task.
 **The general form:** *what does being this kind of client necessarily produce?* Then check
 whether it is here.
 
+⚠️ **Establish the structure before you derive from it — rule 10 comes first.** This rule is
+only as good as its premise, and the firm records the premise: guessing a client's structure
+and then deriving confidently from the guess produces a long, wrong list.
+
 _(Lilian, 2026-08-11: "por tanto, debía haber recibido un W-2 y un K-1. Supongo. Corrígeme si
 estoy equivocada." She was not wrong.)_
 
@@ -182,6 +186,81 @@ that.
 _(Lilian, 2026-08-11 — the catch a checklist never makes.)_
 
 ---
+
+## 10 · Ask the record before you infer — and read related records as a set
+
+**The firm keeps a structured answer to most "what is this client?" questions, and it is
+faster and better than reasoning from prose. Go there first.** In Double, the client's
+**custom properties** carry the shape of the engagement — and one of them names the form that
+client actually files. Lilian maintained them client by client and calls them **"bastante
+correctas" — fairly correct, not guaranteed** _(2026-08-13: "para cada cliente están bastante
+correctas. Me tomé el trabajo de actualizarlas uno a uno, así que ahí dice el tax form que
+presentan cada uno")_. That is the right weight to give them: **a maintained field beats a
+guess built from emails, folder names or a company's legal form — and it is still
+hand-kept data, so it is read, not obeyed.** _(Which columns, and what each value proves, is
+domain: the [`tax-season-readiness` skill](../../.claude/skills/tax-season-readiness/) §1b.)_
+
+**The second half is what makes it work: read the RELATED records together, not one at a
+time.** These clients come in groups — a person and their companies — and a fact recorded on
+one member is often the answer for another. **An absence on one record can be informative
+rather than a gap**, once you look at the record next to it.
+
+The worked example, de-identified. A remodeling company's record carries `Account Type:
+Company`, `Income Tax: false`, and **no return type at all**. Read alone that looks like
+missing data, and two separate sweeps filled the hole by inference — one concluding a
+two-owner LLC filing a partnership return, the other recording sole-proprietor activity on the
+owner. Both were written down, both contradicted each other, and the clash sat open for a
+fortnight. **Read as a pair it stops being a hole:** the owner's individual record carries a
+return type that reports exactly this kind of activity, so the company most likely files
+nothing of its own.
+
+⚠️ **But notice precisely how far that gets you — this is the part worth copying.** It did
+**not** settle the answer by itself: the owner's record was a **joint** one, and that couple
+files **more than one** such schedule, so the pair-read narrowed the field to a single
+question — *which activity is on it?* — that a human then answered. **The value was getting to
+the right question in two calls instead of inventing a return.** That is what reading the
+records as a set buys you, and claiming more than that is how the wrong version got written
+down twice.
+
+**The general form:** *is this already recorded somewhere maintained — on this record, or on
+the one it belongs to?* Ask that before constructing an answer. And when a field is empty,
+ask **what its emptiness means for this kind of record** before calling it a gap.
+
+**But read an absence only where the record is actually maintained**, and that has to be
+established, not assumed: on a client nobody has filled in yet, the same emptiness means
+"unknown", and the related record is usually just as empty — which is the same gap twice, not
+a confirmation. **An absence is at most corroboration, never a conclusion.**
+
+⚠️ **Two traps sit inside that, and both are how an absence quietly becomes a conclusion.**
+**First: a neighbouring record that *could* account for the absence is not proof that it
+does.** Two clients can share an identical fingerprint and have opposite truths — one really
+is reported through the related record, the other files on its own through someone we never
+see, and its owner's record looks the same for an unrelated reason. **Fitting is not
+evidence.** **Second: an empty field often records what WE do, not what EXISTS.** The firm's
+columns describe the firm's engagement, so an absence there frequently means *we don't handle
+this* — which says nothing about whether the obligation exists or someone else is handling it.
+Reading "we don't do it" as "it isn't owed" is the single most damaging misreading available
+here, because it removes work from the list silently, with nothing left behind to notice.
+
+So when you ask, **ask whether the thing exists at all before asking who carries it** — the
+narrower question presupposes the answer to the wider one and will never surface *"neither."*
+Otherwise the absence is a question like any other, and rule 1 applies to it.
+
+**This runs BEFORE rule 5, not instead of it.** Read the maintained record first, then derive
+what the structure requires (rule 5). Taken in that order they compound: the record tells you
+what the client *is*, and rule 5 tells you what must therefore exist. Taken in the wrong order
+you reason your way to a structure that a field would have told you outright.
+
+⚠️ **The corollary, because it is what actually went wrong:** an inference and a maintained
+field can coexist in the repo for weeks without anyone noticing, because **git merges
+contradictory guidance without complaint**. Two files here even said in writing that one of
+the two readings had to be wrong — and that note alone changed nothing. **A contradiction
+someone has already written down is not a resolved contradiction; it is an open task.**
+
+_(Lilian, 2026-08-13. She settled the structure herself, and then told the session where the
+records that pointed at it had been all along — which is why the rule claims corroboration
+rather than derivation. The property values were verified live the same day; the named case
+is on the two client files.)_
 
 ## How these grow
 

@@ -152,11 +152,20 @@ function classifyTax(s){
 
 // Compact pill label — legal · tax (e.g. "LLC · S-corp", "Corp · S-corp",
 // "LLC · Disregarded"); falls back to a trimmed snippet, else nothing.
+// The two dimensions COLLAPSE for a real sole proprietor — legally a sole
+// proprietorship, taxed as one — so identical labels are shown once. Printing
+// "Sole prop · Sole prop" made a correct classification look like a bug.
 function entityTag(s){
-  const combo = [classifyLegal(s).label, classifyTax(s).label].filter(Boolean).join(' · ');
+  const combo = [...new Set([classifyLegal(s).label, classifyTax(s).label].filter(Boolean))].join(' · ');
   if(combo) return combo;
-  const c = stripSrc(String(s||'')).replace(/\*\*/g,'');
-  return c && !/pending/i.test(c) ? c.slice(0,22) : null;
+  // Unclassified fallback (e.g. a plain individual taxpayer — no branch matches).
+  // Cut on a word boundary: a blind .slice() left "Individual taxpayer (F" on a card,
+  // and would split an emoji's surrogate pair into a replacement character.
+  const c = stripSrc(String(s||'')).replace(/\*\*/g,'').trim();
+  if(!c || /pending/i.test(c)) return null;
+  if([...c].length <= 22) return c;
+  const cut = [...c].slice(0,22).join('');
+  return (cut.replace(/[\s(\[,;:—–-]+\S*$/,'').trim() || cut.trim()) + '…';
 }
 
 // Which services we actually provide — used for the Hub's "Service" facet. A service
