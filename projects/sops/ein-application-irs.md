@@ -538,13 +538,13 @@ paper:
 > status call is. What it will **not** do is let her *"speak on your behalf … advocate your
 > position … execute waivers, consents, closing agreements; or represent you in any other
 > manner."* The moment the call turns into arguing rather than asking, it needs **Julia on a
-> 2848**. Who may sign what, per person, is in [`firm-identity.md` §4](./firm-identity.md).
+> 2848**. Who may sign what, per person, is in §4 of [`firm-identity.md`](./firm-identity.md).
 >
-> 👍 **The 8821 route is explicitly contemplated for this.** Its instructions list **"Form
-> SS-4, Application for Employer Identification Number"** among the specific uses the IRS
-> does **not** record on the CAF — so it is filled the same shape as the 2848 below: the
-> SS-4 matter named, and the **line 4 specific-use box checked**.
->
+**The 8821 route is explicitly contemplated for this** — its instructions list **"Form
+SS-4, Application for Employer Identification Number"** among the specific uses the IRS
+does **not** record on the CAF, so it is filled the same shape as the 2848 below: the
+SS-4 matter named, and the **line 4 specific-use box checked**.
+
 > ⚠️ **But not yet — the 8821 has the same missing-TIN problem as the 2848.** It also
 > wants the taxpayer's identification number, so **neither form works while the EIN is
 > still pending.** "Form SS-4" appears on the 8821's specific-use list because an
@@ -677,7 +677,20 @@ up described three different ways on one form.
 two things.** There is no "mostly X, some Y" on this form. Decide it on **where the
 revenue actually comes from**, not on what the business calls itself:
 
-- **Selling goods to the public** (store, direct, mail-order, online) → **Retail**.
+**Ask two questions, not one.** *Who buys it?* comes first, because the SS-4 has
+**four** goods boxes, not one:
+
+- **The general public** — a store, direct, mail-order, online → **Retail** (*"selling
+  merchandise to the general public from a fixed store; by direct, mail-order, or
+  electronic sales"*).
+- ⚠️ **Other businesses — contractors, designers, trade buyers, resellers** →
+  **Wholesale–other** (*"selling goods in the wholesale market generally to other
+  businesses for resale on their own account, goods used in production…"*). **This is the
+  box people miss**, and it is a real trap for a specialist-material business whose
+  customers are trades rather than walk-ins. A studio can *feel* retail and sell
+  wholesale.
+- **Arranging a sale of goods they never own**, or buying on commission →
+  **Wholesale–agent/broker**.
 - **A service the IRS's list doesn't name** — design, consulting, most professional
   work → **Other**, with the activity written in.
 - ⚠️ **They also APPLY / INSTALL it on the client's property → Construction**, even if
@@ -831,14 +844,18 @@ Business details
 - First wage date (line 15 — enter "N/A" if no payroll planned): ____
 - Closing month of accounting year (a MONTH):  ☐ December  ☐ Other: ____
 - Applicant's phone (foreign OK — include country code): ____
-- Return FAX number (Path B — this is how the EIN comes back): ____
+- Return FAX number (the CLIENT's — the fallback if no designee is named; see the designee block below): ____
 
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
       Designee block (the firm's standing values — §4D, nothing needed from the client):
       ☐ Name: Lilian Gonzalez  (always her — she is the one who calls the IRS)
       ☐ Address: 11347 SW 13 Street, Pembroke Pines, FL 33025   ← the FIRM's, never the client's
-      ☐ Phone: (754) 286-1478   ☐ Fax: (786) 866-6298   ← a Path B EIN comes back to THIS fax
+      ☐ Phone: (754) 286-1478   ☐ Fax: (786) 866-6298
+      ⚠️ TWO fax fields on this sheet — they are not the same one:
+         • THIS one (designee) is where the EIN arrives WHEN a designee is named — which for us is always
+         • the "Return FAX number" above, in the applicant lines, is the client's, and is where it
+           would arrive if no designee were named. Do NOT put the firm's fax there (matching trap, §4D)
       ☐ Checked that neither the address NOR the phone matches what's in the taxpayer lines
 - Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company operating from its FL address = A; see §3)  ☐ B — entity has none
 - Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B, and NOT a US-territory entity)

@@ -1232,7 +1232,7 @@ const SOP_GROUPS = [
       // A reference sheet, not a procedure — deliberately no flow/schema (the render treats
       // both as optional), and kicker/readerKick so it is not labelled an SOP. Straight
       // apostrophes only: Hub search is a plain substring test over title + blurb.
-      { file: 'firm-identity.md', title: 'The Firm\'s Own Details', tag: 'Reference',
+      { file: 'firm-identity.md', title: 'The Firm\'s Own Details',
         kicker: 'Reference', readerKick: 'Firm reference sheet',
         blurb: 'Our address, the company fax, everyone\'s direct line — the values other people\'s forms keep asking for, in one place. And who may sign what for a client: an SS-4 designee or a Form 8821 can be anyone, but a Form 2848 may only name someone eligible to practice before the IRS.' },
     ],

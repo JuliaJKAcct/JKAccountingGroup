@@ -136,13 +136,14 @@ watch-outs, one-off arrangements, history that affects the work.
   is how the firm refers to it; the IRS name **must match Sunbiz character for character**
   (including `LLC` / `Inc.`), and a punctuation difference causes downstream trouble
   ([EIN SOP §6](../../sops/ein-application-irs.md)). Look it up on Sunbiz before filing.
-- **Calling the IRS about the EIN application:** the authorization that covers the *pending*
-  application is the **Third Party Designee block on the SS-4 itself** — and its authority
-  *"terminates at the time the EIN is assigned and released to the designee."* A **Form 2848**
-  for the same matter is a **specific-use POA**: line 3 = `EIN Application` / `Form SS-4` /
-  `Not Applicable`, **line 4 checked**, faxed to the unit handling it — and therefore **not
-  recorded on the CAF**, so it does not show up when we call. Full reasoning and the
-  two-separate-forms rule in §6.
+- **Calling the IRS about this EIN — the only authorization that works right now is the SS-4
+  designee block**, and it dies on assignment (*"terminates at the time the EIN is assigned and
+  released to the designee"*). ⚠️ **After that, do NOT reach for a Form 2848 in Lilian's name** —
+  a 2848 may only name someone *eligible to practice before the IRS*, which she is not; it would
+  have to be **Julia (EA)**. For a call that only **asks** rather than argues, the form is a
+  **Form 8821**, which Lilian *can* be named on. **Neither works while the EIN is still pending**
+  — both want a TIN this entity does not have. Full rule in
+  [`firm-identity.md` §4](../../sops/firm-identity.md).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -199,8 +200,17 @@ A running, dated record as we build this profile.
     been assigned.** This is exactly the window the SS-4's Third Party Designee block covers.
   - **Two separate 2848s, never one.** The line 4 checkbox governs the whole form: mixing the
     EIN-application matter with ordinary tax matters on one 2848 leaves **none** of it recorded
-    on the CAF. So a specific-use 2848 now, and a normal one (with the EIN in line 1, line 4
-    unchecked) once the number exists.
+    on the CAF. A specific-use one for the SS-4 matter, and a normal one (with the EIN in line 1,
+    line 4 unchecked) once the number exists.
+  - ⚠️ **Corrected later the same day, after reading WHO may be named on one.** Form 2848: *"You
+    may only name individuals who are eligible to practice before the IRS as representatives"* —
+    attorney, CPA, enrolled agent, an officer or employee **of the taxpayer**, a family member,
+    and a few narrow others. **Lilian is none of those, so a 2848 in her name is invalid**, and
+    she is the one who makes these calls. For **information** — which is what a status call is —
+    the form is **Form 8821**, which has no such restriction and covers Form SS-4 matters
+    explicitly. To **act**, it is a 2848 naming **Julia (EA)**. The bullets above describe how a
+    2848 is *filled in*, not who may sign it. See
+    [`firm-identity.md` §4](../../sops/firm-identity.md).
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,

@@ -186,6 +186,12 @@ per-tool call limits._
 > **not** covered by the no-review carve-out that lets the Saturday run merge its own work. **It is
 > low priority against the catch-up queue below**: a company being formed this week has almost no
 > history to sweep, so it should never displace a client that has been waiting.
+>
+> ⚠️ **Concretely, because rule (b) would otherwise decide this for you.** The prompt says a client
+> with **no row in `sweep-state.md` gets a one-time full historical sweep** — unconditionally, with
+> no priority test. M5 Studio Miami has no row and **must not consume a full-pass slot ahead of the
+> catch-up queue**: it goes **after** everyone listed there. Its "history" is a few days old. Give
+> it an ordinary incremental look, and let it earn a `sweep-state.md` row the normal way.
 
 > ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
 > archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived
