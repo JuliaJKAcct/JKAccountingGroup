@@ -467,20 +467,23 @@ reasonable-compensation work depends on):
 >
 > | Field | What goes in it |
 > |---|---|
-> | **Designee's name** | **Lilian Gonzalez** _(the firm's named designee — see the open question at the foot of this box)_ |
-> | **Address** | The **firm's mailing address on file — Julia's home address.** ⚠️ **Never write the client's address here** (see the matching trap below). The actual address is personal data: it is **not** written in this repo — take it from the firm's records in Drive, not from memory |
-> | **Telephone** | **Lilian's direct work line — (754) 286-1478** _(the number on her [email signature](../marketing/email-branding/signatures/lilian.html); if it ever changes, that file is the source of truth)_ |
-> | **Fax** | **The JK Accounting company fax** — _(pending: the number is not recorded anywhere in this repo yet. Ask Lilian or Julia and write it in here.)_ |
+> | **Designee's name** | **Lilian Gonzalez** — **always her, not "whoever prepared the form."** She is the one who calls the IRS; Julia very rarely does _(Lilian, 2026-08-14)_. The name in this block is the name the IRS will speak to, so it should be the person who will actually be on the phone |
+> | **Address** | **11347 SW 13 Street, Pembroke Pines, FL 33025** — the **company's** address (public on Sunbiz). ⚠️ **Never write the client's address here** — see the matching trap below |
+> | **Telephone** | **(754) 286-1478** — Lilian's direct work line _(the number on her [email signature](../marketing/email-branding/signatures/lilian.html); if it ever changes, that file is the source of truth)_ |
+> | **Fax** | **(786) 866-6298** — the JK Accounting company fax |
 >
 > **Why the fax is the field that actually matters on Path B.** The EIN comes back
 > **by the same method it was requested** — so on a faxed SS-4, the designee's fax is
 > where the number arrives. A wrong or unwatched fax number does not fail loudly; the
 > EIN simply never shows up and everyone assumes the IRS is slow.
 >
-> ❓ **One thing still to settle:** is the designee **always Lilian**, or **whoever in
-> the firm is preparing that form**? Written as "always Lilian" above because that is
-> what was done on the M5 Studio Miami filing. If it is meant to be the preparer,
-> change this box and say so.
+> ⓘ **These four values are the firm's own details, and they are written here on purpose.**
+> The address is the company's registered address and is public on Sunbiz, so nothing is
+> exposed by having it in a procedure the team reads _(Lilian's call, 2026-08-14)_. Note
+> that the firm's **document letterhead** convention is different — proposals and
+> engagement letters carry only *"Pembroke Pines, Florida"* and the main line
+> **786-318-1505** (see [the proposal tool's methodology](../proposal-tool/docs/methodology.md)).
+> A government form needs the full street address and a working fax; a letterhead does not.
 
 If JK completes and submits the application **on the client's behalf**:
 
@@ -807,8 +810,9 @@ Business details
 Filing
 - Firm filing on client's behalf?  ☐ No  ☐ Yes → Third-Party Designee block + client signs
       Designee block (the firm's standing values — §4D, nothing needed from the client):
-      ☐ Name: Lilian Gonzalez   ☐ Address: firm mailing address on file (from Drive — NOT the client's)
-      ☐ Phone: (754) 286-1478   ☐ Fax: ____  ← the JK company fax; this is where a Path B EIN comes back
+      ☐ Name: Lilian Gonzalez  (always her — she is the one who calls the IRS)
+      ☐ Address: 11347 SW 13 Street, Pembroke Pines, FL 33025   ← the FIRM's, never the client's
+      ☐ Phone: (754) 286-1478   ☐ Fax: (786) 866-6298   ← a Path B EIN comes back to THIS fax
       ☐ Checked that neither the address NOR the phone matches what's in the taxpayer lines
 - Routing bucket (about the ENTITY, not the owner):  ☐ A — entity has a US place of business (a FL company operating from its FL address = A; see §3)  ☐ B — entity has none
 - Path used:  ☐ Online   ☐ Fax A: 855-641-6935   ☐ Fax B: 855-215-1627 / 304-707-9471   ☐ Mail   ☐ Phone 267-941-1099 (bucket B, and NOT a US-territory entity)
@@ -834,9 +838,13 @@ own operating knowledge**, not statements in the instructions — as is the
 standing answer itself (**No / `-0-` unless payroll starts now**), which is a firm
 policy decision recorded from **Julia** in **Aug 2026**, not an IRS rule. **§4D's
 standing designee block is the same kind of thing** — the four values (Lilian's name,
-the firm's mailing address, her direct line, the company fax) are a **firm policy
+the company address, her direct line, the company fax) are a **firm policy
 recorded from Lilian on 2026-08-14**, not anything the IRS prescribes; only the quoted
-matching-trap and signature rules around them are instruction text. **§4D's Form 2848
+matching-trap and signature rules around them are instruction text. **The reason the
+designee is always Lilian** (she, not Julia, is the one who ends up on the phone with
+the IRS) and **the decision to write the firm's own address and fax into this file**
+(the address is the company's registered address, public on Sunbiz) are both hers, same
+date. **§4D's Form 2848
 subsection** is taken from the **Instructions for Form 2848 (Rev. September 2021)**,
 read in full 2026-08-14 — the line 3 entry, the "Applications for an EIN" specific-use
 listing, the CAF consequence and the *Authority Granted* sentence are all quoted from
