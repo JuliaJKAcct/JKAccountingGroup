@@ -20,7 +20,7 @@
  *
  * Exit code is non-zero on any failure, so a build script can gate on it.
  */
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadTool, loadCore, verifyTool, mix } from './verify.mjs';
@@ -33,7 +33,11 @@ function ok(name, cond, detail){
   checks++;
   if (cond) { if (process.env.VERBOSE) console.log('  ✓ ' + name); return; }
   failures++;
-  console.error('  ✗ ' + name + (detail ? '\n      ' + detail : ''));
+  // writeSync, not console.error: build.mjs runs this with stdio:'inherit' through a pipe,
+  // and a buffered write immediately before process.exit() can be truncated — leaving an
+  // exit 1 that names no failing check, which is worse than no message at all. These lines
+  // are the only record of WHAT broke.
+  writeSync(2, '  ✗ ' + name + (detail ? '\n      ' + detail : '') + '\n');
 }
 function section(t){ console.log('\n' + t); }
 
@@ -248,6 +252,6 @@ for (const f of ['itin-w7-walkthrough.html', 'btr-walkthrough.html']){
 }
 
 /* -------------------------------------------------------------- verdict --- */
-console.log('\n' + (failures ? '✗ ' + failures + ' of ' + checks + ' checks FAILED'
-                              : '✓ all ' + checks + ' checks passed'));
+if (failures) writeSync(2, '\n✗ ' + failures + ' of ' + checks + ' checks FAILED\n');
+else console.log('\n✓ all ' + checks + ' checks passed');
 process.exit(failures ? 1 : 0);

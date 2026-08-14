@@ -2641,8 +2641,8 @@ mkdirSync(dirname(outFrag), { recursive: true });
 writeFileSync(outFrag, fragment);
 
 console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${totalCount} documents`);
-console.error(`standalone → ${outStandalone} (${(html.length/1024).toFixed(0)}KB)`);
-console.error(`fragment   → ${outFrag} (${(fragment.length/1024).toFixed(0)}KB)`);
+console.error(`standalone → ${outStandalone} (${(Buffer.byteLength(html,'utf8')/1024).toFixed(0)}KB)`);
+console.error(`fragment   → ${outFrag} (${(Buffer.byteLength(fragment,'utf8')/1024).toFixed(0)}KB)`);
 console.error(`assets     → ${assetCheck.embedded} binaries embedded once, used in ${assetCheck.sites} places — 16MB is the Artifact ceiling`);
 
 // Say how close we are to that ceiling, every build. The Hub only grows — each embedded

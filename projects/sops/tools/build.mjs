@@ -67,7 +67,9 @@ for (const t of TOOLS) {
   const left = [...new Set([...body.matchAll(/\/\*__[A-Z0-9_]+__\*\/|__[A-Z][A-Z0-9_]*__/g)]
     .map((m) => m[0]))];
   if (left.length) {
-    console.error('✗ ' + t.out + ' — unresolved placeholder(s): ' + left.join(', '));
+    // writeSync: this is the only line naming which placeholder survived and in which
+    // tool, and process.exit() below can drop a buffered write.
+    writeSync(2, '✗ ' + t.out + ' — unresolved placeholder(s): ' + left.join(', ') + '\n');
     failed = true;
     continue;
   }
@@ -79,7 +81,9 @@ for (const t of TOOLS) {
 
   const out = resolve(here, t.out);
   writeFileSync(out, html);
-  console.log('standalone →', out, '(' + Math.round(html.length / 1024) + 'KB)');
+  // byteLength, not .length: the string counts UTF-16 units and this page is full of em
+  // dashes and arrows, so .length understated the real file size it is reporting.
+  console.log('standalone →', out, '(' + Math.round(Buffer.byteLength(html, 'utf8') / 1024) + 'KB)');
 }
 
 if (failed) process.exit(1);
