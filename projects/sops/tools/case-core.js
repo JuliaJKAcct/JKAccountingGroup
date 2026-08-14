@@ -409,6 +409,20 @@
 
     // No `quiet` flag: saveCases() repaints the badge itself, so the parameter this used
     // to take was inert — an option that looked like a decision nobody had made.
+    // Resolve the case object that is CURRENTLY in `cases` and matches this one.
+    // renderOne()'s handlers close over the case object that was open when they were
+    // bound. A cross-window storage event reloads `cases` from disk with fresh objects —
+    // and when the busy guard skips the re-render (the note block is open), those handlers
+    // are left holding a detached twin. Then `cases.indexOf(c)` returns -1, and
+    // `splice(-1, 1)` deletes the LAST case in the list: a different client's, silently,
+    // while the one you asked to delete is written straight back. Match by key, never by
+    // identity.
+    function live(c){
+      var k = caseKey(c);
+      for (var i = 0; i < cases.length; i++) if (caseKey(cases[i]) === k) return cases[i];
+      return null;
+    }
+
     function touch(c){ c.updated = todayISO(); c.dirty = true; saveCases(); }
 
     // The reference prompt is asked from two places and must read identically in both.
@@ -654,8 +668,11 @@
           body: warn, ok: 'Delete the case', cancel: 'Keep it', danger: true
         }).then(function(go){
           if (!go) return;
-          deletedKeys[caseKey(c)] = true;                 // or the merge in saveCases() hands it back
-          cases.splice(cases.indexOf(c),1); saveCases(); openCase=null; renderCases();
+          var target = live(c) || c;
+          deletedKeys[caseKey(target)] = true;            // or the merge in saveCases() hands it back
+          var at = cases.indexOf(target);
+          if (at >= 0) cases.splice(at, 1);               // never splice(-1) — that deletes the last case
+          saveCases(); openCase = null; renderCases();
         });
       });
       $('copyNote').addEventListener('click', function(){ showNote(c); });
@@ -797,7 +814,9 @@
       });
       var dp = $('didPaste');
       if (dp) dp.addEventListener('click', function(){
-        c.dirty = false; saveCases(); paintBadge();
+        // Same stale-closure trap: clearing `dirty` on a detached twin left the real case
+        // still flagged "not yet copied", so the delete dialog kept warning falsely.
+        (live(c) || c).dirty = false; saveCases(); paintBadge();
         [].forEach.call(document.querySelectorAll('#caseOne .pill-dirty'), function(el){ el.remove(); });
         dp.hidden = true;
         $('copyMsg').textContent = 'Marked as saved to Double.';

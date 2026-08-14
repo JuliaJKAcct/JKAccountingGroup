@@ -561,7 +561,9 @@ function buildSheet(){
     + (homeBased(A)
         ? '<li><b>No Certificate of Use</b> — the single-family / condo exemption applies because this is genuinely home-based.</li>'
         : '<li>A <b>Certificate of Use (CU)</b>, unless the exemption applies.</li>')
-    + '<li>The <b>$25 non-refundable</b> processing fee <b>plus</b> the local business tax set on Screen 1.</li></ul>';
+    + (renewal
+        ? '<li>The <b>renewal amount</b> for the new tax year. The <b>$25 application fee is charged on a first filing, not a renewal</b> — if a $25 line appears, you are on the new-application route by mistake.</li></ul>'
+        : '<li>The <b>$25 non-refundable</b> processing fee <b>plus</b> the local business tax set on Screen 1.</li></ul>');
   h += '<div class="flag info"><span class="fl">Screen 1 is where the fee is set</span>Business Category · <b>Business Classification</b> (the specific line of business — a <b>“Show All Classifications”</b> button lists every option) · <b>Tax Classification</b>, the worker tier — <b>'+(workers>=0?(workers<=1?'0–1 Worker':workers+' workers'):'—')+'</b> · Tax Basis Units · Number of Employees. Getting the classification wrong here is what produces the pay-the-difference round below.</div>';
   h += '<div class="flag info"><span class="fl">Screen 2 — the two fields that matter to us</span><b>Homebased?</b> → <b>'+(homeBased(A)?'Yes':'No')+'</b>. <b>ID Type</b> → '+(A.ein==='yes'?'<b>Federal EIN</b>':'<b>the owner’s Social Security number</b>, since there is no EIN — worth obtaining one to keep the SSN off the filing')+'. And the email fields take the <b>firm’s</b> address, both of them.</div>';
   h += '<div class="flag warn"><span class="fl">Screen 3 — what you are signing</span>The certification says the receipt <b>does not</b> mean the City has determined the use of the location is lawful, and does not legalise the business if it is contrary to any local, state or federal law. Read it rather than clicking through it — it is the reason the zoning gate comes first.</div>';
@@ -756,7 +758,11 @@ function buildSteps(a){
     }
   } else if (a.existing === 'both'){
     add('cityrenew','city','City receipt renewed','apps.hollywoodfl.org/LBTRrenewals/ — the renewals route, not a new application.');
-    add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+    // Its own id: `citypay` says "$25 plus the classification tax", which is the FIRST
+    // filing's charge. Reusing it put that figure into a renewal's Double note, where it
+    // contradicts the sheet — and re-wording the shared id would make every reopened
+    // first-filing case state the renewal's terms instead.
+    add('cityrenewpay','city','City renewal paid','The renewal amount for the new tax year — no $25 application fee on a renewal. Keep the payment confirmation.');
   } else if (a.existing === 'city'){
     add('cityheld','city','City receipt confirmed current','Already held — check it has not expired (Sept 30) and that the classification still matches what the business does. The outstanding half is the county.');
   } else {
