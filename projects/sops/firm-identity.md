@@ -51,11 +51,12 @@ SOPs say where each one goes.
 *Source: the firm's own team email signatures, which are the master copy — if a number
 changes, change it there **and** here.*
 
-> ⓘ **Why only two numbers are written out here.** Julia's is the line the firm's own
-> documents already carry publicly, and Lilian's is the one she gave for the SS-4 designee
-> block. **Maria's and Liudmyla's are deliberately left as a pointer** — this page is
-> published to the team's Knowledge Hub, and nobody has asked them. If the firm wants all
-> four here, that is a one-line change and Lilian's call to make.
+> ⓘ **Why only two numbers are written out here — and it is a consent test, not a secrecy
+> test.** Julia's is already the firm's public main line, printed on documents that go to
+> clients. Lilian's is **her own number, which she gave in this session to be written into the
+> firm's records.** **Maria's and Liudmyla's are deliberately left as a pointer**: this page is
+> published to the team's Knowledge Hub, and neither of them has been asked. If the firm wants
+> all four here, that is a one-line change — and it is theirs to agree to, not ours to assume.
 
 > ⚠️ **Julia's title is not one value.** Her email signature carries **"CEO · Chief
 > Accountant."** On **proposals and engagement letters her title is "Chief Accountant",
@@ -69,7 +70,7 @@ changes, change it there **and** here.*
 |---|---|---|
 | **SS-4 — Third-Party Designee block** ([EIN SOP §4D](./ein-application-irs.md)) | name · address · phone · fax | **Lilian Gonzalez** · the street address · **(754) 286-1478** · **(786) 866-6298**. ⚠️ Never the client's address or phone — it forces the application to mail/fax only |
 | **Form 2848 — representative block** | name · address · phone · fax · CAF · PTIN | **Julia** (see §4) · the street address · her direct line · the fax. CAF and PTIN ⚠️ *(pending)* |
-| **Form 8821 — designee block** | name · address · phone · fax · CAF | Whoever needs the information — **Lilian is eligible here** (§4) |
+| **Form 8821 — designee block** | name · address · phone · fax · CAF *(the instructions name these; whether the current form also carries a **PTIN** box was not checked — look at the form before filling it)* | Whoever needs the information — **Lilian is eligible here** (§4) |
 | **Business Tax Receipt applications** ([BTR SOP](./hollywood-broward-business-tax-receipt.md)) | a monitored email | The **firm's** email — the SOP's rule is that without it the filing cannot be tracked at all |
 | **Proposals & engagement letters** | letterhead | ⛔ **Not from this file.** They print **"Pembroke Pines, Florida"** (city only, no street) and **786-318-1505**, hard-coded in the tool. **This is deliberate** — a government form needs a full street address and a working fax; a client letter does not. **Leave it alone** |
 
@@ -112,7 +113,7 @@ checklist for changing them** — not a magic single source that updates the oth
 | Address, phone + fax | **§3 of this file** restates all four designee values, and the [EIN SOP](./ein-application-irs.md) carries them **twice** — the **§4D designee table** and the **intake checklist in its appendix**, the printable one people fill the form from. Three places, all needing the change |
 | Letterhead city + main phone | ⛔ The **proposal and engagement-letter tools** — hard-coded and **frozen. Do not touch** (§3) |
 | Firm email on filings | The [Business Tax Receipt SOP](./hollywood-broward-business-tax-receipt.md) |
-| **The §4 credential rule** (who may sign a 2848 vs an 8821) | Restated in **five** places: the [EIN SOP §4D](./ein-application-irs.md), the **procedures index**, the repo's **navigation map**, this page's own **Knowledge Hub card blurb** (hard-coded in the Hub build), and **M5 Studio Miami's client file**. If §4 above changes, all five are wrong until they are changed too |
+| **The §4 credential rule** (who may sign a 2848 vs an 8821) | Restated in **seven ROWS across five files** — count rows, not files: the [EIN SOP §4D](./ein-application-irs.md); the **procedures index** in **two** rows (this sheet's and the EIN SOP's); the repo's **navigation map** in **two** rows (the EIN row and the firm-details row); this page's own **Knowledge Hub card blurb**, hard-coded in the Hub build; and **M5 Studio Miami's client file**. Fixing one row per file is the trap |
 
 > 🚨 **The main phone is the exception — this list will NOT find all of it.** **(786)
 > 318-1505** is scattered far wider than firm procedures: the **firm's live Odoo website**,
@@ -125,7 +126,7 @@ checklist for changing them** — not a magic single source that updates the oth
 
 ## 6. Still missing
 
-> ⚠️ **Two of these must NOT be written into this file when they are found.** This page is
+> ⚠️ **Three of these must NOT be written into this file when they are found.** This page is
 > published to the team's Knowledge Hub, and it has **no sensitivity gate** — the build screens
 > client files, not procedures. **Julia's EA enrollment card number, any CAF number and any PTIN
 > are practitioner credentials: record them in Drive/Double and put only a pointer here**, the same

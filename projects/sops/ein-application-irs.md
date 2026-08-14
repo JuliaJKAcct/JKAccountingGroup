@@ -92,12 +92,20 @@ so you do not want to be hunting for an answer mid-flow.
    "no employees"** (`-0-` on paper, **No** online) unless payroll genuinely starts
    now; see the rule in §4E. If there *will* be payroll, you also need the **first
    date wages will be paid**.
-10. **Principal activity / line of business** (what the company actually does).
+10. **Principal activity / line of business** (what the company actually does) — and with it the
+    **two questions that decide line 16**, because nothing on the form prompts either and the
+    client will not volunteer them (§4F): **(a) do they MAKE it, or INSTALL/apply it on the
+    customer's property?** (→ Manufacturing / Construction, which override everything else);
+    **(b) if neither, WHO BUYS IT** — the general public, or other businesses and trades?
+    (→ Retail vs Wholesale). Ask both while you have the client.
 11. **Closing month of the accounting year** — almost always **December**.
-12. **Is the firm filing on the client's behalf?** → then the **Third-Party Designee**
-    block is filled in, **every time**, from the firm's fixed set of values in §4D —
-    and the client must sign the form or the authorization is void. You need **nothing
-    from the client** for this block; it is all ours.
+12. **Is the firm filing on the client's behalf?** → then, **on the paper SS-4**, the
+    **Third-Party Designee** block is filled in **every time**, from the firm's fixed set of
+    values in §4D, and the **client signs the form** or the authorization is void. You need
+    **nothing from the client** for the block itself; it is all ours. ⚠️ **The online path has
+    neither** — no designee block and no signature (submitting is the attestation); there it is
+    a **radio button** saying you are a third party applying on the entity's behalf (§2). Which
+    path you are on is decided in §1, after this list.
 
 ---
 
@@ -848,7 +856,11 @@ Business details
 - Q1 — do they DO something to it?  ☐ Install/apply it on the customer's property → Construction
        ☐ Make/produce it themselves → Manufacturing   ☐ Neither → go to Q2   (§4F)
 - Q2 — who buys it?  ☐ The general public → Retail   ☐ Other businesses / contractors / trade → Wholesale–other
-       ☐ They arrange sales of goods they never own → Wholesale–agent/broker   ☐ It's a service → Other (§4F)
+       ☐ They arrange sales of goods they never own → Wholesale–agent/broker
+       ☐ Not a goods business → ⚠️ CHECK THE FORM'S OWN LIST FIRST, don't jump to Other. Line 16 also
+         names Real estate · Rental & leasing · Transportation & warehousing · Finance & insurance ·
+         Health care & social assistance · Accommodation & food service. **Other is for an activity
+         genuinely not on the form** (design, consulting, most professional services) (§4F)
 - Principal activity (line 16 — ONE checkbox, chosen from the description above):
 - Employees expected next 12 months  ☐ NO — the standing answer: "-0-" / "No" (§4E)
       ☐ YES — payroll starts now (say why: ____________)  →  Agricultural: ___  Household: ___  Other: ___
@@ -906,11 +918,15 @@ read in full 2026-08-14 — the line 3 entry, the "Applications for an EIN" spec
 listing, the CAF consequence and the *Authority Granted* sentence are all quoted from
 it; that the specific-use fax goes to the **EIN Operation** follows from the
 instruction's *"the IRS office handling the specific matter"*, and that an assistor
-takes the fax mid-call is **operating practice, not instruction text**. **The rule that a named designee changes where a faxed EIN lands is instruction text**, quoted from
+takes the fax mid-call is **operating practice, not instruction text**. **The designee/fax routing is PART quotation, PART our reading, and the split matters.** Quoted from
 the SS-4 instructions' Third-party designee paragraph: *"EINs are released to authorized third-party
 designees by the method they used to obtain the EIN (online, telephone, or fax); however, the EIN
-notice will be mailed to the taxpayer."* That single sentence carries both halves — the designee's
-fax, and the paper notice going to the client. The statement
+notice will be mailed to the taxpayer."* That establishes **who** it is released to, **by what
+medium**, and that the paper notice goes to the taxpayer. It does **not** literally say **which fax
+number field** the IRS dials — that the release goes to the **designee block's** fax rather than the
+applicant's return-fax line is **the firm's reading of it**, and it is the reason §4D treats the
+designee fax as the one that matters. If a Path B EIN ever fails to arrive, **this inference is the
+first thing to re-test**, not the last. The statement
 that **no source says what to enter in line 1 when no EIN has been assigned** is a
 bounded negative: the Instructions for Form 2848, the Instructions for Form SS-4 and
 Pub. 947 were searched on 2026-08-14 and none addresses it — it is not a claim that

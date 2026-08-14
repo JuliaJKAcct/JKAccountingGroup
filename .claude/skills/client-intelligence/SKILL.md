@@ -303,7 +303,7 @@ visible rather than assumed done.
      date and **skips their entire history permanently**. The routine's own rule (b) already does the
      right thing with a **missing** row — *a client in scope with no row gets a one-time full
      historical sweep, then a row.* So: add them to the scope table, and add the row only when the
-     pass that justifies it has run. `sweep-state.md` names the two groups currently in that state.
+     pass that justifies it has run. `sweep-state.md` names the three groups currently in that state.
      _(Corrected 2026-08-14 — the old instruction would have destroyed the history of 14 clients
      across two backfills, and a session following it literally is exactly how that happens.)_
 
