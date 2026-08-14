@@ -124,7 +124,14 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- **Pre-operational — startup-cost treatment is the central bookkeeping issue:** expenses are **capitalized as startup costs** until the park "begins operations"; pinning the operations-commencement date is a live judgment call tied to the opening. _(Gmail — Julia's bookkeeping instructions)_
+- **Pre-operational — capitalization is the central bookkeeping issue, and the P&L should be
+  empty.** Nothing is expensed until the park "begins operations": spend is **capitalized** into
+  one of five buckets — the physical build-out to `Construction in Progress`, readying the business
+  to `Startup Costs` (§195), forming the entity to `Organizational Costs` (§709), outright
+  purchases to `Fixed Assets`, refundable deposits to `Security Deposit`. The only P&L account that
+  should carry anything is **Bank Charges**. Pinning the operations-commencement date is a live
+  judgment call tied to the opening. _(Gmail — Julia's bookkeeping instructions; framework
+  reverse-engineered from the ledger 2026-08-14 and written up in the runbook.)_
 - **Heavier than standard bookkeeping — hands-on AP, run out of the client's own mailbox:** the firm **pays vendors** from the client's account (insurance, environmental report, city permits) and sends confirmations. The **water bill is the exception — it is on autopay**, so it needs no payment action at all, only its paperwork. Everything, paid by us or paid automatically, arrives at the **client's AP mailbox** (§3), which the firm works **monthly** to download the bills and attach them to their transactions (§4). Whether any of the *other* recurring vendors are also on autopay is **not established** _(to verify)_.
 - **Ownership & signing authority — exactly THREE members, and only ONE of them can bind the company:** the **Manager holds 33.4%** and the other two **33.3%** each (near-thirds, not exact — the odd 0.1% sits with the Manager). The LLC is **manager-managed with a single Manager** (himself a member) who alone has authority to bind it; the other two members have no day-to-day management or voting role. The **CFO is neither a member nor the Manager** — he does not appear in the agreement at all, so treat that title as a **group/functional role**, not a Florida-LLC office, and route anything needing a company-binding signature to the **Manager**. _(Operating Agreement dated 2025-04-18, Drive → `4-Corporate` — supersedes the earlier "likely 3–4 partners" estimate.)_
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC. Each owner is individually linked in Double to **their own separate set** of related-entity records — not one shared group _(Double contacts, 2026-07-25 sweep)_.
@@ -208,9 +215,30 @@ the actual details.
   periodically, and the books have never used Bills. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
+<!-- ⚠️ ORDER MATTERS HERE. The Knowledge Hub's client card renders only the FIRST FOUR bullets
+     of this list (`bullets(...).slice(0,4)` in .claude/skills/client-intelligence/render/build.mjs),
+     and the same cap applies to §5's quirks. The .md keeps everything — the card is a summary —
+     but whatever leads this list is what the team sees without opening the file. Keep the four
+     that BLOCK something at the top; append the rest. (Learned 2026-08-14 by pushing four live
+     blockers off the card without noticing.) -->
 - ⚠️ **The QuickBooks bank feed has been disconnected since 2026-07-20** — reconnect it and
   backfill the gap. Everything downstream (the close, the reports we send the client, any review)
   is capped at that date until it is done. Also worth finding out **why** it dropped.
+- **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
+  three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
+  is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client
+  before the next 1065. ⓘ **A lead:** QuickBooks carries a capital-contribution equity account in a
+  third individual's name (§5) — check it against the Operating Agreement.
+- **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in
+  **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
+- **Five decisions are waiting on Julia**, all from the 2026-08-14 categorization work and none of
+  them safe to decide in a session: whether to start using **Bills / Accounts Payable** (a
+  part-paid construction contract leaves the balance owed recorded nowhere — see below); whether
+  **construction-period rent** belongs in CIP rather than `SC - Office Rent`; that
+  **`Construction In Progress` is typed Other Current Asset** and is not a current asset; that **no
+  account in the chart carries a number**; and **which basis** these books are kept on (the
+  "P&L should be empty" presentation is tax-basis, not GAAP). Detail in the runbook's decisions
+  log, rows 8 and 13–17.
 - **Julia's decision: should this client start using Bills / Accounts Payable?** Raised by a
   part-paid construction invoice whose outstanding balance is recorded nowhere. Bills would fix it
   properly, but it changes how the books work and she built them.
@@ -233,22 +261,12 @@ the actual details.
   admitting members or raising their capital is permanently non-deductible for a partnership —
   neither §195 nor §709 — and three members have contributed capital. Review what is already in
   `SC - Legal & Licensing`, then decide with Julia whether to open a separate account.
-- **Two chart-structure questions for Julia:** `Construction In Progress` is typed **Other Current
-  Asset** (it is not a current asset, and this overstates working capital on every balance sheet),
-  and **no account in the chart carries a number**, so the firm's range grammar is unapplied here.
-- **Does construction-period rent belong in CIP rather than `SC - Office Rent`?** It sits in Office
-  Rent today and the whole prior-year balance is on that treatment. Julia's call.
-- **Which basis are these books kept on?** The "P&L should be empty" presentation is tax-basis;
-  GAAP would expense start-up costs as incurred. Never written down, and it matters the moment a
-  statement goes to a lender.
 - **W-9 sweep is overdue.** Individuals working the site pass the $2,000 threshold within months,
   and the firm pays them directly — so a missing W-9 is our gap. Sweep the labour *and* contractor
   accounts, not just one.
 - **The third member may be identifiable from QuickBooks** — an equity contribution account exists
   in a third individual's name (§5). Check it against the Operating Agreement; it may close, or
   narrow, the two open questions about the third member below.
-- **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client before the next 1065.
-- **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
 - A **1065 extension** appears filed (Jul 2026); a bookkeeping task showed overdue in June — verify the return status.
 - **Pin the "operations begin" date** so startup-cost capitalization stops and normal expensing / depreciation starts.
 - ~~Reconcile "landlord water bill" vs. "City of Fort Lauderdale water — auto-paid"~~ — **answered by Lilian 2026-08-11:** there is **one** water bill, it is the **City of Fort Lauderdale** account, and it is **on autopay**. The old "landlord water bill" wording was wrong and has been corrected in §4/§5.
