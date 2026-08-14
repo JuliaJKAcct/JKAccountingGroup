@@ -150,6 +150,23 @@ function classifyTax(s){
   return { key:'', label:null };
 }
 
+// True when `re` matches at least once WITHOUT a negation in its immediate neighbourhood.
+// Deliberately local: a window wide enough to catch "= false" / "no …" / "not …" / "N/A"
+// attached to this mention, narrow enough that an unrelated "no" elsewhere in the sentence
+// can't suppress a real one. A file that only ever denies the service yields false.
+function mentionsPositively(md, re){
+  const s = String(md||'');
+  for(const m of s.matchAll(re)){
+    const before = s.slice(Math.max(0, m.index - 24), m.index);
+    const after  = s.slice(m.index + m[0].length, m.index + m[0].length + 24);
+    const negated = /\b(no|not|never|without)\b[\s*_`]*$/i.test(before)
+                 || /^[\s*_`:]*(=|is|are)?[\s*_`]*(false|no|none|n\/a)\b/i.test(after)
+                 || /\bis not\b|\bnot inside\b/i.test(after);
+    if(!negated) return true;
+  }
+  return false;
+}
+
 // Compact pill label — legal · tax (e.g. "LLC · S-corp", "Corp · S-corp",
 // "LLC · Disregarded"); falls back to a trimmed snippet, else nothing.
 // The two dimensions COLLAPSE for a real sole proprietor — legally a sole
@@ -321,7 +338,11 @@ export function loadClients(repoRoot){
       Payroll: classifySvc(obl['Payroll']),
     };
     const flags = [];
-    if(/1099 preparation/i.test(md)) flags.push('1099');
+    // The 1099 chip means "we do this client's 1099s". A bare substring test flagged every
+    // file that mentioned the service in order to DENY it — "1099 Preparation = false",
+    // "no 1099 preparation" — which is the same bug the QuickBooks comment below records.
+    // So: flag only on a mention that isn't negated in its own immediate context.
+    if(mentionsPositively(md, /1099 preparation/gi)) flags.push('1099');
     if(/^Yes/i.test(lic['Annual report']||'')) flags.push('Annual report');
     if(/licens|insurance|WC|workers.?.?comp|FFL/i.test(obl['Licenses & other filings']||'')) flags.push('Licensing');
 

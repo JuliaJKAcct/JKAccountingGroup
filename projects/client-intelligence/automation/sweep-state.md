@@ -69,11 +69,27 @@ list grows.
 | Denys Melnyk | 2026-08-11 | The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**. ⚠️ **Corrected 2026-08-12** — this row said *"Ping, Gmail and Drive never swept"*, and all three **were** read during the second review on 2026-08-12: **Drive holds no folder of his** (the "Melnyk" files there are a different person) and **Ping records no meeting with him**, while **Gmail turned up the P&L template sent 2026-08-05 and never returned**. **The baseline is deliberately left at 08-11**: it is not established that the Gmail pass was full-historical, and advancing it would bound the next run's search and lose his history for good. **A full historical Gmail pass is still owed.** _(The client's answers of 2026-08-12 came from a call with Lilian — a human telling us a fact never advances a baseline.)_ |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
-> **The seven clients added to scope on 2026-08-11 (Liudmyla's) deliberately have NO ROW here.**
-> A row is a *bound* on the next run's searches, and none of them has ever been swept — a baseline
-> of 2026-08-11 would make the next run search `after:2026/08/11` and skip their entire history for
-> good. The routine's rule (b) already does the right thing with a missing row: **a client in scope
-> with no row gets a one-time full historical sweep, then a row.** Leave them out until that pass runs.
+> **TWO GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
+> A row is a *bound* on the next run's searches, so writing one for a client who has never been
+> swept would make the next run search from that date forward and **skip their entire history for
+> good**. The routine's rule (b) does the right thing with a missing row: **a client in scope with
+> no row gets a one-time full historical sweep, then a row.** Leave both groups out until that pass
+> runs.
+>
+> 1. **Liudmyla's seven**, added to scope 2026-08-11 — the QuickBooks-connected companies the old
+>    owner-derived scope had never covered.
+> 2. **The TaxDome-backfill seven**, whose files were created **2026-08-14**: Vitalii Ivanov &
+>    Tetiana Mogylova · Setatech USA · Igor Melomed & Yelena Lovkina · R & G Friendly ·
+>    Viacheslav Honcharenko · Maria Contreras · Iurii Iakovenko & Alina Yakovenko.
+>    ⚠️ **They HAVE had an incremental pass** — Gmail and Ping from **2026-08-08** forward, run
+>    2026-08-14 on Lilian's instruction not to re-read history already captured — **and that is
+>    exactly why no row may be written from it.** The pass covered six days; a row saying
+>    `2026-08-08` would tell the next run that everything before those six days was already
+>    read, which is false for every one of them. **Each still owes the full historical pass**, and
+>    each file says so in its own header banner.
+>
+> _(Two different sets that happen to number seven each. They are not the same clients, and neither
+> group's catch-up covers the other's.)_
 
 _**Reconciled 2026-08-11**, when the three stalled sweeps (2026-07-25, 08-01, 08-08) were
 finally merged to `main`. Baselines now carry the **latest** date each client was actually

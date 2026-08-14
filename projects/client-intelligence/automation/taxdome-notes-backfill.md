@@ -259,20 +259,26 @@ the job.
 | Masciave Design Studio | Dup | _(unchecked)_ | company | ✅ `masciave-design-studio.md` |
 | MAGNUM 152 INC | Dup | _(unchecked)_ | company | ✅ `magnum-152.md` |
 | Ihor Naum | QBO · Dup | ✅ 2 files | **owner** | ✅ `ihor-naum-olha-levchuk.md` |
-| VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ❌ — Double: `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
-| IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ❌ ⚠️ **two Melomed households in Double** — `Igor Melomed & Yelena Lovkina` (710635) and `Grigoriy & Margarita Melomed` (710633) |
-| SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ❌ — Double record **archived** 2026-07-22 (706706) |
+| VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `vitalii-ivanov.md` · Double `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
+| IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `igor-melomed.md`, routed to `Igor Melomed & Yelena Lovkina` (710635). ⚠️ **two Melomed households in Double** — the other is `Grigoriy & Margarita Melomed` (710633), still with no file |
+| SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ✅ created 2026-08-14 — `setatech-usa.md` · Double **archived** 2026-07-22 (706706), 🔴 **yet its payroll is live and blocked** |
 | Andrii Tymchenko | 4. Documents | ✅ `1. Notes` (2 files) | **owner** | ✅ created 2026-08-13 — Double 710619 |
 | MAYS EXPRESS SERVICE LLC | 4. Documents | ✅ `2. Notes` | company | ✅ created 2026-08-13 — Double 710582 |
-| R & G Friendly Inc | 4. Documents | _(unchecked)_ | company | ❌ — Double 710589 |
-| YMI Trucking LLC | 4. Documents | _(unchecked)_ | company | ❌ — Double 710608 |
+| R & G Friendly Inc | 4. Documents | _(unchecked)_ | company | ✅ created 2026-08-14 — `rg-friendly.md` · Double 710589 |
+| YMI Trucking LLC | 4. Documents | _(unchecked)_ | company | ✅ created 2026-08-13 — `ymi-trucking.md` · Double 710608 |
 | Voicecapital Inc | 4. Documents | _(unchecked)_ | company | ✅ created 2026-08-13 — Double 710725 |
-| Viacheslav Honcharenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710665 |
-| Maria Contreras | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double 710646 |
-| Iurii Iakovenko | 4. Documents | _(unchecked)_ | **owner** | ❌ — Double: `Iurii Iakovenko & Alina Yakovenko` (710639) |
+| Viacheslav Honcharenko | 4. Documents | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `viacheslav-honcharenko.md` · Double 710665 |
+| Maria Contreras | 4. Documents | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `maria-contreras.md` · Double 710646 |
+| Iurii Iakovenko | 4. Documents | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `iurii-iakovenko.md` · Double `Iurii Iakovenko & Alina Yakovenko` (710639) |
 
-**Eleven of the 22 had no CI file when this was written; four have been created since, leaving SEVEN** — and **seven folders are filed under a person**, which
-is precisely where the routing rule earns its keep.
+✅ **ALL 22 NOW HAVE A CLIENT-INTELLIGENCE FILE.** Eleven of the 22 had none when this was
+written; four were created on 2026-08-13 and **the last seven on 2026-08-14** (Lilian: *"es
+importante que el Client Intelligence cubra la mayor cantidad posible de clientes"*). **Seven
+folders are filed under a person**, which is precisely where the routing rule earned its keep.
+⚠️ **One record surfaced by this table still has no file of its own:** `Grigoriy & Margarita
+Melomed` (710633) — a *second* Melomed household, not the one the `IGOR MELOMED` folder belongs to.
+It has no TaxDome note, so it is outside this backfill, but it is a real client with nothing
+written down.
 
 Three `Notes` folders found by the search are **not** part of this backfill and should be skipped:
 `My notes - Lilian` (personal), a `Notes` folder under an internal `Audit` folder, and a `Notes`
@@ -401,8 +407,19 @@ return"*, listing **non-deductible items for 2023** (shareholder health insuranc
 disallowance, donations). **Figures stay in Drive; the durable fact is that the 2023 return carried
 a non-deductible add-back schedule.** Neither warranted a §5 bullet.
 
-**🔴 SEVEN clients have a TaxDome note read but STILL NO CI FILE.** Their content is preserved here
-so it cannot be lost, and each **owes a file**:
+**✅ THESE SEVEN NOW HAVE FILES — created 2026-08-14.** They were the last of the 22, and for a day
+this block was the only place their content existed. **It is kept verbatim below as the provenance
+record** — what the migrated note actually said, before anyone rewrote it — but the **live** record
+is each client's own file, and that is what a session should read and update:
+[`vitalii-ivanov.md`](../clients/vitalii-ivanov.md) · [`setatech-usa.md`](../clients/setatech-usa.md) ·
+[`igor-melomed.md`](../clients/igor-melomed.md) · [`rg-friendly.md`](../clients/rg-friendly.md) ·
+[`viacheslav-honcharenko.md`](../clients/viacheslav-honcharenko.md) ·
+[`maria-contreras.md`](../clients/maria-contreras.md) ·
+[`iurii-iakovenko.md`](../clients/iurii-iakovenko.md).
+⚠️ **Each file also carries what the notes could NOT tell us** — Double's live properties and tax
+projects, read 2026-08-14 — and three of them turned up something the note never mentioned: an
+archived client whose payroll is blocked, a `1040`-vs-Schedule-C contradiction, and three unfiled
+2025 returns. What each migrated note said, on its own:
 
 - **VITALII IVANOV** — holds **50% of four Ukrainian companies** (ТОВ Бест Вей Фудс, 2018-07-30 · ТОВ
   Екстрим Прайд, 2019-06-05 · ТОВ 34-й градус, 2020-07-04 · ТОВ Юкрейн Анлімітед Трейдинг,

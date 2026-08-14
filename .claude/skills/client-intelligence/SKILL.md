@@ -296,7 +296,16 @@ visible rather than assumed done.
      **"Excluded — archived clients"** table instead (an archived client generates no new
      activity, so sweeping it every Saturday is wasted budget; it keeps its CI file
      because open matters and lessons outlive the engagement),
-   - a **row in `sweep-state.md`** (new client → gets a full historical sweep once).
+   - 🛑 **NOT a row in `sweep-state.md` — leave the new client out of that table until its first
+     full historical pass has actually run.** This reverses what this step used to say, and the
+     reason is that a row is **a bound on the next run's searches**, not a record of existence: write
+     `2026-08-08` for a client nobody has ever swept and the Saturday run searches only *after* that
+     date and **skips their entire history permanently**. The routine's own rule (b) already does the
+     right thing with a **missing** row — *a client in scope with no row gets a one-time full
+     historical sweep, then a row.* So: add them to the scope table, and add the row only when the
+     pass that justifies it has run. `sweep-state.md` names the two groups currently in that state.
+     _(Corrected 2026-08-14 — the old instruction would have destroyed the history of 14 clients
+     across two backfills, and a session following it literally is exactly how that happens.)_
 
    ⚠️ **And then say the part the commit cannot do: the live Routine must be updated.** The
    Saturday sweep runs off a prompt **pasted into the web UI**, so editing the CLIENTS list here
