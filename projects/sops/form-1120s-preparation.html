@@ -500,6 +500,10 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .callout, .paybox, .panel, .emailcard, .fnode, .fdecide, .subbar, .flow figure, .tablewrap, .intake,
   ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
   .shead{break-after:avoid;}
+  /* No hover on paper: every derivation prints open. */
+  .lwhy{grid-template-rows:1fr !important;}
+  .lrow{break-inside:avoid; box-shadow:none;}
+  .lrow .ln,.ltag,.ltag.calc,.ltag.read{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .fphase{break-inside:avoid;}
   a{color:var(--accent-2); text-decoration:none;}
   .foot{background:#0d2a31 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
@@ -509,6 +513,63 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 @media (prefers-reduced-motion:no-preference){
   html.js .reveal{opacity:0; transform:translateY(14px); transition:opacity .55s var(--ease-out), transform .55s var(--ease-out);}
   html.js .reveal.in{opacity:1; transform:none;}
+}
+
+/* ============================================================
+   LINE REFERENCE — "where does this number come from?"
+   A stack of form lines: the line number, what it is, and — on
+   hover, keyboard focus or tap — the formula or lookup behind it.
+
+   Deliberately NOT a floating tooltip. These panels carry
+   multi-line formulas, and an absolutely-positioned panel inside
+   .tablewrap's overflow:auto would be clipped. Expanding in flow
+   also means touch users and the printed page get the same
+   content, and nothing is hidden from assistive technology —
+   the text is always in the DOM, only visually collapsed.
+   ============================================================ */
+.lines{display:flex; flex-direction:column; gap:8px; margin:20px 0;}
+.lrow{
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:12px 14px; position:relative;
+  transition:border-color .25s var(--ease-out), box-shadow .25s var(--ease-out);
+}
+.lrow:hover,.lrow:focus,.lrow:focus-within{border-color:var(--border); box-shadow:var(--shadow-sm); outline:none;}
+.lrow:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.lhead{display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:10px 12px;}
+.lrow .ln{
+  font-family:var(--mono); font-size:.74rem; font-weight:600; letter-spacing:.02em;
+  background:var(--pill-teal-bg); color:var(--pill-teal-ink);
+  border-radius:6px; padding:3px 7px; white-space:nowrap;
+}
+.lname{color:var(--body); line-height:1.5;}
+.lname b{color:var(--ink);}
+.ltag{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--muted); border:1px solid var(--border-subtle); border-radius:999px;
+  padding:3px 9px; white-space:nowrap; align-self:center;
+}
+.ltag.calc{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink); border-color:transparent;}
+.ltag.read{background:var(--pill-teal-bg); color:var(--pill-teal-ink); border-color:transparent;}
+.lwhy{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s var(--ease-out);}
+.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy,.lrow.open .lwhy{grid-template-rows:1fr;}
+.lwhy>.cw{overflow:hidden; min-height:0;}
+.lwhy .cw>*:first-child{margin-top:11px;}
+.fx{
+  font-family:var(--mono); font-size:.82rem; line-height:1.75;
+  background:var(--paper); border:1px solid var(--border-subtle); border-radius:9px;
+  padding:10px 12px; color:var(--ink); white-space:pre-wrap; overflow-x:auto;
+}
+.fx .op{color:var(--accent); font-weight:600;}
+.lwhy p{margin:9px 0 0; font-size:.92rem; line-height:1.65; color:var(--body);}
+.lwhy p:last-child{margin-bottom:2px;}
+@media (max-width:560px){
+  .lhead{grid-template-columns:auto 1fr;}
+  .ltag{grid-column:2; justify-self:start; margin-top:2px;}
+}
+:root[data-theme="dark"] .lrow{background:var(--raise);}
+:root[data-theme="dark"] .fx{background:rgba(9,31,36,0.5);}
+@media (prefers-reduced-motion:reduce){
+  .lrow,.lwhy{transition:none;}
 }
 
 </style>
@@ -553,7 +614,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <li><a href="#s12"><span class="sn">§12</span> Basis · Form 7203</a></li>
     <li><a href="#s14"><span class="sn">§14</span> Tie-out checks</a></li>
     <li><a href="#s15"><span class="sn">§15</span> Common pitfalls</a></li>
-    <li><a href="#appendix"><span class="sn">＋</span> Intake · line map</a></li>
+    <li><a href="#appendix"><span class="sn">＋</span> Intake · line map · formulas</a></li>
   </ol>
 </nav>
 
@@ -781,20 +842,67 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="shead reveal"><span class="schip">§4</span><h2>Form 1125-A — cost of goods sold</h2></div>
     <p class="slede reveal">Fill this in <b>first</b>. Its line 8 feeds page 1, and the form says so on its own face: <em>"Enter here and on Form 1120-S, page 1, line 2."</em> Skip it entirely if the client sells no goods.</p>
 
-    <div class="tablewrap reveal">
-      <table class="links">
-        <thead><tr><th>Line</th><th>What it is</th><th>Where the number comes from</th></tr></thead>
-        <tbody>
-          <tr><td class="for">1</td><td>Inventory at beginning of year</td><td><b>Line 7 of LAST year's 1125-A.</b> The prior return governs — never a system, never a recalculation</td></tr>
-          <tr><td class="for">2</td><td>Purchases</td><td>Usually the figure that makes the schedule balance</td></tr>
-          <tr><td class="for">3</td><td>Cost of labor</td><td>Direct production labour only — most retail and e-commerce clients have none</td></tr>
-          <tr><td class="for">4</td><td>Additional §263A costs</td><td>Almost always blank for a small business taxpayer</td></tr>
-          <tr><td class="for">5</td><td>Other costs</td><td>Whatever the firm's convention puts in cost of sales beyond purchases</td></tr>
-          <tr><td class="for">6</td><td>Total (lines 1–5)</td><td>Arithmetic</td></tr>
-          <tr><td class="for">7</td><td>Inventory at end of year</td><td>The <b>balance sheet</b> — but read the trap below</td></tr>
-          <tr><td class="for">8</td><td><b>Cost of goods sold</b> (6 − 7)</td><td>Arithmetic. Carry to page 1 line 2</td></tr>
-        </tbody>
-      </table>
+    <div class="callout ok reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4.5M12 8.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Hover any line to see where its number comes from</div>
+        <p>Every line below opens on <b>hover</b>, on <b>tap</b>, or with the <b>keyboard</b> (Tab to it) to show the formula or the source. <span class="ltag calc">calculated</span> means it falls out of other numbers; <span class="ltag read">read</span> means you look it up and the risk is reading the <em>wrong source</em>. <b>When you print, every one of them opens automatically</b> — paper has no hover.</p>
+      </div>
+    </div>
+    <div class="lines reveal">
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">1</span><span class="lname">Inventory at beginning of year</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">= line 7 of <span class="op">LAST</span> year&#8217;s Form 1125-A</div>
+        <p>The prior return governs — never a system, never a recalculation. If the books disagree with it, the books are what get adjusted.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">2</span><span class="lname">Purchases</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 2 = line 8 <span class="op">+</span> line 7 <span class="op">&minus;</span> line 1</div>
+        <p>Usually the figure you solve for, because nobody adds up a year of purchase invoices. <b>It is derived, not measured</b> — which is why a wrong ending inventory shows up here as an impossible number. If it comes out <b>negative</b>, your map is wrong.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">3</span><span class="lname">Cost of labor</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Direct production labour only. Most retail and e-commerce clients have none.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">4</span><span class="lname">Additional §263A costs</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Almost always blank for a small business taxpayer.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">5</span><span class="lname">Other costs</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Whatever the firm&#8217;s convention puts in cost of sales beyond purchases. Check the prior year before adding anything here.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">6</span><span class="lname">Total</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 6 = line 1 <span class="op">+</span> line 2 <span class="op">+</span> line 3 <span class="op">+</span> line 4 <span class="op">+</span> line 5</div>
+        <p>Straight arithmetic.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">7</span><span class="lname">Inventory at end of year</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">= the balance-sheet subtotal <span class="op">the prior return used</span></div>
+        <p>⚠️ <b>Not automatically the account called Inventory.</b> On some clients it is a subtotal covering more than that one account — see 4B. Read it off the section the prior return used, not off the account name.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">8</span><span class="lname">Cost of goods sold</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 8 = line 6 <span class="op">&minus;</span> line 7   <span class="op">&rarr;</span> carry to page 1, line 2</div>
+        <p>The form says so on its own face: <em>&ldquo;Enter here and on Form 1120-S, page 1, line 2.&rdquo;</em></p>
+        </div></div>
+      </div>
     </div>
 
     <div class="subbar reveal"><span class="tag">4A</span><h3>The identity, and how to use it</h3><span class="rt">solve for the one you don't know</span></div>
@@ -846,20 +954,59 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
     <div class="subbar reveal"><span class="tag">5B</span><h3>Income — lines 1 to 6</h3></div>
     <div class="indent">
-      <div class="tablewrap reveal">
-        <table class="links">
-          <thead><tr><th>Line</th><th>What it is</th><th>Where it comes from</th></tr></thead>
-          <tbody>
-            <tr><td class="for">1a</td><td>Gross receipts or sales</td><td>Total sales revenue; point-of-sale discounts reduce it</td></tr>
-            <tr><td class="for">1b</td><td>Returns and allowances</td><td>Refunds to customers</td></tr>
-            <tr><td class="for">1c</td><td>Balance (1a − 1b)</td><td>✅ should equal the P&amp;L's total income</td></tr>
-            <tr><td class="for">2</td><td>Cost of goods sold</td><td>Form 1125-A line 8</td></tr>
-            <tr><td class="for">3</td><td>Gross profit (1c − 2)</td><td>✅ should equal the P&amp;L's gross profit</td></tr>
-            <tr><td class="for">4</td><td>Net gain (loss), Form 4797</td><td>Gain or loss on selling business equipment</td></tr>
-            <tr><td class="for">5</td><td>Other income (loss)</td><td><b>Trade-or-business income only</b> — see below</td></tr>
-            <tr><td class="for">6</td><td>Total income</td><td>Arithmetic</td></tr>
-          </tbody>
-        </table>
+      <div class="lines reveal">
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1a</span><span class="lname">Gross receipts or sales</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">= sales revenue <span class="op">&minus;</span> discounts given <span class="op">+</span> shipping income charged</div>
+          <p>Discounts given at the point of sale reduce receipts — you never earned them. Shipping the customer paid you <em>is</em> revenue.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1b</span><span class="lname">Returns and allowances</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>The refunds-to-customers account.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1c</span><span class="lname">Balance</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 1c = line 1a <span class="op">&minus;</span> line 1b</div>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s total income.</b> Your first tie-out check.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">2</span><span class="lname">Cost of goods sold</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">= Form 1125-A, line 8</div>
+          <p>Nothing to compute here — it was computed on the other form.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">3</span><span class="lname">Gross profit</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 3 = line 1c <span class="op">&minus;</span> line 2</div>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s gross profit.</b></p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">4</span><span class="lname">Net gain (loss), Form 4797</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>Gain or loss on selling business equipment. Zero in most years.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">5</span><span class="lname">Other income (loss)</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>⚠️ <b>Trade-or-business income only.</b> Interest, dividends and capital gains are portfolio income and go on <b>Schedule K</b>. Bank interest here understates Schedule K and overstates ordinary income.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">6</span><span class="lname">Total income</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 6 = line 3 <span class="op">+</span> line 4 <span class="op">+</span> line 5</div>
+          </div></div>
+        </div>
       </div>
       <div class="callout warn reveal" role="note">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
@@ -1118,6 +1265,78 @@ differences found and explained: ______________________________________
             <tr><td>Shareholder capital accounts</td><td>Schedule L equity — <b>per the prior year's mapping</b></td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">C</span><h3>Every formula on this return</h3><span class="rt">two kinds of number, and telling them apart is the skill</span></div>
+    <div class="indent">
+      <p class="reveal"><span class="ltag read">read</span> you look it up and copy it — the risk is reading the <b>wrong source</b>. &nbsp; <span class="ltag calc">calculated</span> it falls out of other numbers — the risk is that a wrong input <b>still produces a plausible result</b>.</p>
+      <div class="callout ok reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+        <div class="cx">
+          <div class="cl">An impossible result is a gift</div>
+          <p>Negative purchases, or a balance sheet that will not balance, <b>tells you the map is wrong</b>. The dangerous case is the wrong figure that looks fine — which is what §14's tie-out checks are for.</p>
+        </div>
+      </div>
+      <div class="intake reveal"><pre><span class="grp">FORM 1125-A</span>
+line 6  =  line 1 + line 2 + line 3 + line 4 + line 5
+line 8  =  line 6 &minus; line 7
+   rearranged, for whichever one you do not know:
+line 2  =  line 8 + line 7 &minus; line 1        &larr; purchases (the usual unknown)
+line 7  =  line 1 + line 2 &minus; line 8        &larr; ending inventory
+
+<span class="grp">FORM 1120-S, PAGE 1</span>
+line 1a =  sales revenue &minus; discounts given + shipping income charged
+line 1c =  line 1a &minus; line 1b
+line 3  =  line 1c &minus; line 2
+line 6  =  line 3 + line 4 + line 5
+line 19 =  total expenses per the P&amp;L
+             &minus; everything placed on lines 7 through 18
+             &minus; the non-deductible portion of any expense
+line 20 =  sum of lines 7 through 19
+line 21 =  line 6 &minus; line 20
+
+<span class="grp">MEALS</span>
+deductible half  =  meals &times; 50%     &rarr; page 1, line 19
+disallowed half  =  meals &times; 50%     &rarr; Sch M-1 line 3b AND Sch K line 16c
+
+<span class="grp">SCHEDULE L</span>
+line 15 (total assets)      =  sum of every asset line
+line 27 (total liab+equity) =  sum of every liability and equity line
+line 15  MUST EQUAL  line 27
+retained earnings  =  total equity per books &minus; capital stock
+                      (only if that is the prior year&#8217;s mapping)
+
+<span class="grp">SCHEDULE M-1</span>
+line 4  =  line 1 + line 2 + line 3
+line 7  =  line 5 + line 6
+line 8  =  line 4 &minus; line 7
+line 8  MUST EQUAL  page 1 line 21
+
+<span class="grp">SCHEDULE M-2 (AAA)</span>
+line 6  =  line 1 + line 2 + line 3 &minus; line 4 &minus; line 5
+line 8  =  line 6 &minus; line 7 (distributions)
+   where line 1 = LAST year&#8217;s line 8, copied
+
+<span class="grp">SCHEDULE K-1 &mdash; EACH SHAREHOLDER</span>
+their box  =  the matching Schedule K line &times; their ownership percentage
+   sum of the K-1s for any line  MUST EQUAL  that Schedule K line
+   the percentages               MUST TOTAL  100%
+
+<span class="grp">FORM 7203 &mdash; BASIS</span>
+basis  =  stock purchased + capital contributed
+          + their share of income in profitable years
+          &minus; their share of losses already deducted
+          &minus; distributions received
+
+deductible loss  =  the LESSER of (their share of the loss) and (their basis)
+suspended loss   =  their share of the loss &minus; the deductible amount</pre></div>
+      <div class="callout warn reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Basis is per shareholder, never per company</div>
+          <p>Two owners at the same ownership percentage can have very different basis — so the same loss allocation is fully deductible for one and partly suspended for the other. Compute it separately for each. <b>Never assume symmetry.</b></p>
+        </div>
       </div>
     </div>
   </section>

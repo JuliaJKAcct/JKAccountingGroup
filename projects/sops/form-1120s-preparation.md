@@ -160,16 +160,16 @@ prior year revealed it in ten minutes.
 *"Enter here and on Form 1120-S, page 1, line 2."* Skip it entirely if the client sells no
 goods.
 
-| Line | What it is | Where the number comes from |
+| Line | What it is | Formula, or where you read it |
 |---|---|---|
-| **1** | Inventory at beginning of year | **Line 7 of LAST year's 1125-A.** The prior return governs — never a system, never a recalculation |
-| **2** | Purchases | Usually the figure that makes the schedule balance — see below |
-| **3** | Cost of labor | Direct production labour only. Most retail and e-commerce clients have none |
-| **4** | Additional section 263A costs | Almost always blank for a small business taxpayer |
-| **5** | Other costs | Anything the firm's convention puts in cost of sales that is not purchases |
-| **6** | Total (lines 1–5) | Arithmetic |
-| **7** | Inventory at end of year | The **balance sheet** — but read the trap below |
-| **8** | **Cost of goods sold** (line 6 − line 7) | Arithmetic. Carry to page 1 line 2 |
+| **1** | Inventory at beginning of year | 📖 **read** · `= line 7 of LAST year's 1125-A`. The prior return governs — never a system, never a recalculation |
+| **2** | Purchases | ƒ **usually calculated** · `= line 8 + line 7 − line 1` — see 4A |
+| **3** | Cost of labor | 📖 read · direct production labour only. Most retail and e-commerce clients have none |
+| **4** | Additional §263A costs | 📖 read · almost always blank for a small business taxpayer |
+| **5** | Other costs | 📖 read · whatever the firm's convention puts in cost of sales beyond purchases |
+| **6** | Total | ƒ `= line 1 + line 2 + line 3 + line 4 + line 5` |
+| **7** | Inventory at end of year | 📖 **read** off the **balance sheet** — but read the trap in 4B |
+| **8** | **Cost of goods sold** | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
 
 ### The identity — and how to use it
 
@@ -177,12 +177,28 @@ goods.
 line 1  +  line 2  −  line 7  =  line 8
 ```
 
-You will usually **know three of the four** and solve for the fourth. Which one is the unknown
-depends on how the client's books work:
+You will usually **know three of the four** and solve for the fourth. Rearranged, every version of
+it:
 
-- **Purchases recorded to an asset account** (perpetual): you know 1, 2 and 7 → line 8 falls out.
-- **Purchases expensed, cost of sales estimated** (periodic): you know 1, 7 and 8 → line 2 falls
-  out.
+```
+line 8  =  line 1 + line 2 − line 7        ← cost of goods sold, when purchases are known
+line 2  =  line 8 + line 7 − line 1        ← PURCHASES, when cost of goods sold is known
+line 7  =  line 1 + line 2 − line 8        ← ending inventory, when both others are known
+line 1  =  line 8 + line 7 − line 2        ← only ever a CHECK; line 1 is copied, never solved
+```
+
+Which one is the unknown depends on how the client's books work:
+
+- **Purchases recorded to an asset account** (perpetual): you know 1, 2 and 7 → **solve for line 8**.
+- **Purchases expensed, cost of sales estimated** (periodic): you know 1, 7 and 8 → **solve for
+  line 2**.
+
+> 💡 **Why "purchases" is so often the one you solve for.** In a periodic setup nobody ever adds
+> up the purchase invoices for the year — the bookkeeping records what was *bought* into an asset
+> account and what was *sold* as an estimate, and the return needs a purchases figure that is
+> consistent with both. Solving for it guarantees the schedule balances. **It is a derived figure,
+> not a measured one** — which is exactly why an ending inventory read off the wrong account
+> shows up here as an impossible number.
 
 🛑 **If the figure you solve for comes out NEGATIVE, your map is wrong.** Negative purchases are
 not a thing. Go back to §3 — you are almost certainly reading the wrong account into line 7.
@@ -222,23 +238,23 @@ one. Do not decide it from the account's name.
 | **C** | Schedule M-3 attached? | No, for any client this size |
 | **D** | Employer identification number | Prior return, or the client's Double record |
 | **E** | Date incorporated | Prior return |
-| **F** | **Total assets** | Balance sheet — total assets at year end |
+| **F** | **Total assets** | 📖 **read** off the balance sheet — the `Total for Assets` line. **It is not a calculation.** But it has two free cross-checks, and both must hold: `= current assets + fixed assets + other assets`, **and** `= total liabilities + total equity`. ⚠️ **It goes in TWO places on the return** — here in the header **and** on **Schedule L line 15** (end-of-year column) — and they must be the same number. It is also what the $250,000 question in Schedule B measures (§6) |
 | **H(1)** | 🛑 **Final return** | **Only tick this if this is the LAST year the company exists.** A company that closes *next* year is not a final return *this* year. Ticking it early tells the IRS the entity is gone |
 | **H(2)–(5)** | Name change · address change · amended · S election termination | Normally all unticked |
 | **I** | Number of shareholders | Count the K-1s |
 
 ### 5B · Income — lines 1 to 6
 
-| Line | What it is | Where it comes from |
+| Line | What it is | Formula, or where you read it |
 |---|---|---|
-| **1a** | Gross receipts or sales | Total sales revenue. Discounts given at the point of sale reduce it |
-| **1b** | Returns and allowances | Refunds to customers |
-| **1c** | Balance (1a − 1b) | ✅ Should equal the P&L's total income |
-| **2** | Cost of goods sold | Form 1125-A line 8 |
-| **3** | Gross profit (1c − 2) | ✅ Should equal the P&L's gross profit |
-| **4** | Net gain (loss) from Form 4797 | Gain or loss on selling business equipment. Zero in most years |
-| **5** | Other income (loss) | **Trade-or-business income only.** See the warning below |
-| **6** | Total income | Arithmetic |
+| **1a** | Gross receipts or sales | ƒ `= sales revenue accounts − discounts given + shipping income charged to customers` |
+| **1b** | Returns and allowances | 📖 read · the refunds-to-customers account |
+| **1c** | Balance | ƒ `= 1a − 1b` · ✅ **must equal the P&L's total income** |
+| **2** | Cost of goods sold | 📖 Form 1125-A line 8 |
+| **3** | Gross profit | ƒ `= 1c − 2` · ✅ **must equal the P&L's gross profit** |
+| **4** | Net gain (loss), Form 4797 | 📖 read · gain or loss on selling business equipment. Zero in most years |
+| **5** | Other income (loss) | 📖 read · **trade-or-business income only** — see the warning below |
+| **6** | Total income | ƒ `= 3 + 4 + 5` |
 
 > ⚠️ **Line 5 is NOT "everything else on the P&L".** Interest income, dividends and capital
 > gains are **portfolio income** and go on **Schedule K**, not here. If you put bank interest
@@ -589,3 +605,105 @@ right-hand column is the firm's usual convention, not a rule of the form.
 | Sales tax payable | Schedule L, other current liabilities |
 | Fixed assets, accumulated depreciation | Schedule L lines 10a / 10b — **per books** |
 | Shareholder capital accounts | Schedule L equity — **per the prior year's mapping**, §8 |
+
+---
+
+## Appendix C · Every formula on this return, in one place
+
+Two kinds of number go on a tax return, and telling them apart is most of the skill:
+
+- 📖 **READ** — you look it up somewhere and copy it. The risk is reading the **wrong source**.
+- ƒ **CALCULATED** — it falls out of other numbers. The risk is that a wrong input **still
+  produces a plausible-looking result**.
+
+**A calculated figure that comes out impossible — negative purchases, a balance sheet that does
+not balance — is a gift.** It tells you the map is wrong. The dangerous case is the wrong figure
+that looks fine, which is why §14's tie-out checks exist.
+
+### Form 1125-A
+
+```
+line 6  =  line 1 + line 2 + line 3 + line 4 + line 5
+line 8  =  line 6 − line 7
+
+  rearranged, for whichever one you don't know:
+line 2  =  line 8 + line 7 − line 1          ← purchases (the usual unknown)
+line 7  =  line 1 + line 2 − line 8          ← ending inventory
+```
+
+### Form 1120-S, page 1
+
+```
+line 1a =  sales revenue − discounts given + shipping income charged
+line 1c =  line 1a − line 1b
+line 3  =  line 1c − line 2
+line 6  =  line 3 + line 4 + line 5
+
+line 19 =  total expenses per the P&L
+             − everything placed on lines 7 through 18
+             − the non-deductible portion of any expense
+line 20 =  sum of lines 7 through 19
+line 21 =  line 6 − line 20
+```
+
+### Meals
+
+```
+deductible half   =  meals expense × 50%      → page 1, line 19
+disallowed half   =  meals expense × 50%      → Sch M-1 line 3b AND Sch K line 16c
+```
+
+### Schedule L
+
+```
+line 15 (total assets)      =  sum of every asset line
+line 27 (total liab+equity) =  sum of every liability and equity line
+line 15  MUST EQUAL  line 27
+
+retained earnings  =  total equity per the books − capital stock
+                      (only if that is the prior year's mapping — §8)
+```
+
+### Schedule M-1
+
+```
+line 4  =  line 1 + line 2 + line 3
+line 7  =  line 5 + line 6
+line 8  =  line 4 − line 7
+line 8  MUST EQUAL  page 1 line 21
+```
+
+### Schedule M-2 (AAA)
+
+```
+line 6  =  line 1 + line 2 + line 3 − line 4 − line 5
+line 8  =  line 6 − line 7 (distributions)
+
+  where line 1 = LAST year's line 8, copied
+```
+
+### Schedule K-1 — each shareholder
+
+```
+their box  =  the matching Schedule K line × their ownership percentage
+
+  and across all shareholders:
+  sum of the K-1s for any line  MUST EQUAL  that Schedule K line
+  the percentages               MUST TOTAL  100%
+```
+
+### Form 7203 — basis
+
+```
+basis  =  stock purchased + capital contributed
+          + their share of income in profitable years
+          − their share of losses already deducted
+          − distributions received
+
+deductible loss this year  =  the LESSER of (their share of the loss)  and  (their basis)
+suspended loss             =  their share of the loss − the deductible amount
+```
+
+⚠️ **Basis is per shareholder, never per company.** Two owners at the same ownership percentage
+can have very different basis, so the same loss allocation can be fully deductible for one and
+partly suspended for the other. §12.

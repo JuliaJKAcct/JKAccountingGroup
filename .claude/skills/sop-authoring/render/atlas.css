@@ -464,6 +464,10 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .callout, .paybox, .panel, .emailcard, .fnode, .fdecide, .subbar, .flow figure, .tablewrap, .intake,
   .dvault, ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
   .shead{break-after:avoid;}
+  /* No hover on paper: every derivation prints open. */
+  .lwhy{grid-template-rows:1fr !important;}
+  .lrow{break-inside:avoid; box-shadow:none;}
+  .lrow .ln,.ltag,.ltag.calc,.ltag.read{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .fphase{break-inside:avoid;}
   a{color:var(--accent-2); text-decoration:none;}
   .foot{background:#0d2a31 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
@@ -473,4 +477,61 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 @media (prefers-reduced-motion:no-preference){
   html.js .reveal{opacity:0; transform:translateY(14px); transition:opacity .55s var(--ease-out), transform .55s var(--ease-out);}
   html.js .reveal.in{opacity:1; transform:none;}
+}
+
+/* ============================================================
+   LINE REFERENCE — "where does this number come from?"
+   A stack of form lines: the line number, what it is, and — on
+   hover, keyboard focus or tap — the formula or lookup behind it.
+
+   Deliberately NOT a floating tooltip. These panels carry
+   multi-line formulas, and an absolutely-positioned panel inside
+   .tablewrap's overflow:auto would be clipped. Expanding in flow
+   also means touch users and the printed page get the same
+   content, and nothing is hidden from assistive technology —
+   the text is always in the DOM, only visually collapsed.
+   ============================================================ */
+.lines{display:flex; flex-direction:column; gap:8px; margin:20px 0;}
+.lrow{
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:12px 14px; position:relative;
+  transition:border-color .25s var(--ease-out), box-shadow .25s var(--ease-out);
+}
+.lrow:hover,.lrow:focus,.lrow:focus-within{border-color:var(--border); box-shadow:var(--shadow-sm); outline:none;}
+.lrow:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.lhead{display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:10px 12px;}
+.lrow .ln{
+  font-family:var(--mono); font-size:.74rem; font-weight:600; letter-spacing:.02em;
+  background:var(--pill-teal-bg); color:var(--pill-teal-ink);
+  border-radius:6px; padding:3px 7px; white-space:nowrap;
+}
+.lname{color:var(--body); line-height:1.5;}
+.lname b{color:var(--ink);}
+.ltag{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--muted); border:1px solid var(--border-subtle); border-radius:999px;
+  padding:3px 9px; white-space:nowrap; align-self:center;
+}
+.ltag.calc{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink); border-color:transparent;}
+.ltag.read{background:var(--pill-teal-bg); color:var(--pill-teal-ink); border-color:transparent;}
+.lwhy{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s var(--ease-out);}
+.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy,.lrow.open .lwhy{grid-template-rows:1fr;}
+.lwhy>.cw{overflow:hidden; min-height:0;}
+.lwhy .cw>*:first-child{margin-top:11px;}
+.fx{
+  font-family:var(--mono); font-size:.82rem; line-height:1.75;
+  background:var(--paper); border:1px solid var(--border-subtle); border-radius:9px;
+  padding:10px 12px; color:var(--ink); white-space:pre-wrap; overflow-x:auto;
+}
+.fx .op{color:var(--accent); font-weight:600;}
+.lwhy p{margin:9px 0 0; font-size:.92rem; line-height:1.65; color:var(--body);}
+.lwhy p:last-child{margin-bottom:2px;}
+@media (max-width:560px){
+  .lhead{grid-template-columns:auto 1fr;}
+  .ltag{grid-column:2; justify-self:start; margin-top:2px;}
+}
+:root[data-theme="dark"] .lrow{background:var(--raise);}
+:root[data-theme="dark"] .fx{background:rgba(9,31,36,0.5);}
+@media (prefers-reduced-motion:reduce){
+  .lrow,.lwhy{transition:none;}
 }

@@ -1,0 +1,774 @@
+<!-- ============================ TOOLBAR ============================ -->
+<header class="bar">
+  <div class="in">
+    <div class="lhs">
+      <svg viewBox="18 20 82 72" class="jkmark" aria-hidden="true"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"/><path d="M70 26 L70 86"/><path d="M70 56 L92 26"/><path d="M70 56 L95 86"/></svg>
+      <b>JK Accounting Group</b>
+      <span class="sep"></span>
+      <span class="k">SOP · Form 1120-S</span>
+    </div>
+    <div class="rhs">
+      <button class="tbtn" id="themeBtn" type="button" aria-label="Toggle light or dark theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+        <span class="lbl">Theme</span>
+      </button>
+      <button class="tbtn" id="printBtn" type="button" aria-label="Print or save as PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
+        <span class="lbl">Print / PDF</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ TOC RAIL ============================ -->
+<nav class="toc" aria-label="Contents">
+  <p class="tt">On this page</p>
+  <ol id="tocList">
+    <li><a href="#glance"><span class="sn">◆</span> The process at a glance</a></li>
+    <li><a href="#s0"><span class="sn">§0</span> What this return is</a></li>
+    <li><a href="#s1"><span class="sn">§1</span> Gather · intake</a></li>
+    <li><a href="#s2"><span class="sn">§2</span> Gate: the extension</a></li>
+    <li><a href="#s3"><span class="sn">§3</span> Build the map</a></li>
+    <li><a href="#s4"><span class="sn">§4</span> Form 1125-A</a></li>
+    <li><a href="#s5"><span class="sn">§5</span> Page 1, line by line</a></li>
+    <li><a href="#s6"><span class="sn">§6</span> Schedule B</a></li>
+    <li><a href="#s7"><span class="sn">§7</span> Schedule K</a></li>
+    <li><a href="#s8"><span class="sn">§8</span> Schedules L · M-1 · M-2</a></li>
+    <li><a href="#s12"><span class="sn">§12</span> Basis · Form 7203</a></li>
+    <li><a href="#s14"><span class="sn">§14</span> Tie-out checks</a></li>
+    <li><a href="#s15"><span class="sn">§15</span> Common pitfalls</a></li>
+    <li><a href="#appendix"><span class="sn">＋</span> Intake · line map · formulas</a></li>
+  </ol>
+</nav>
+
+<!-- ============================ MASTHEAD ============================ -->
+<section class="mast">
+  <div class="in">
+    <svg class="medallion" viewBox="0 0 120 120" role="img" aria-label="JK Accounting Group medallion">
+      <defs>
+        <path id="arcTop" d="M20.9 51.7 A40 40 0 0 1 99.1 51.7" fill="none"></path>
+        <path id="arcBot" d="M20.9 68.3 A40 40 0 0 0 99.1 68.3" fill="none"></path>
+      </defs>
+      <circle cx="60" cy="60" r="57" fill="none" stroke="#ECE6DA" stroke-width="3"></circle>
+      <circle cx="60" cy="60" r="50.5" fill="none" stroke="#CFA268" stroke-width="1"></circle>
+      <text font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.6" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcTop" startOffset="50%">JK ACCOUNTING GROUP</textPath></text>
+      <text font-family="'IBM Plex Mono',monospace" font-size="5" letter-spacing="1.4" fill="#ECE6DA" text-anchor="middle"><textPath href="#arcBot" startOffset="50%">TAX · BOOKKEEPING · CFO</textPath></text>
+      <g fill="#CFA268"><path d="M7 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path><path d="M113 56.5 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z"></path></g>
+      <g transform="translate(60,60) scale(0.44) translate(-59,-56)"><g fill="none" stroke="#ECE6DA" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"><path d="M55 26 L55 70 Q55 86 39 86 Q26 86 23.5 74.5"></path><path d="M70 26 L70 86"></path><path d="M70 56 L92 26"></path><path d="M70 56 L95 86"></path></g></g>
+    </svg>
+    <p class="kick">Standard Operating Procedure</p>
+    <h1>Form 1120-S<span class="loc">S-corporation return · from QuickBooks to a filed return</span></h1>
+    <p class="lede">Written for someone preparing an S&#8209;corporation return <b>for the first time</b>. It explains <b>where each number comes from</b> — not just which box it goes in, because the boxes are the easy part. The method at its centre is <b>§3</b>: reproduce last year's filed return from last year's books before you touch this year's.</p>
+    <div class="meta">
+      <span class="chipm"><span class="dot"></span>Status:&nbsp;<b>Draft — in review</b></span>
+      <span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>Lilian</b></span>
+      <span class="chipm"><span class="dot"></span>Last&nbsp;updated:&nbsp;<b>2026-08-14</b></span>
+      <span class="chipm"><span class="dot"></span>Deadline&nbsp;·&nbsp;<b>15&nbsp;Mar&nbsp;→&nbsp;15&nbsp;Sep</b></span>
+    </div>
+  </div>
+</section>
+
+<main class="page">
+
+  <div class="callout info reveal" role="note">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5.6A6.5 6.5 0 1 1 6.5 17"/><path d="M3 8l3-2 1 3.4"/><circle cx="12" cy="12" r="0.6" fill="currentColor" stroke="none"/><path d="M12 11v4.5M12 8.4v.1"/></svg></span>
+    <div class="cx">
+      <div class="cl">Draft · in review with Lilian</div>
+      <p>Written 2026-08-14 while preparing the firm's first 1120-S with a session assisting, and shaped by what a first-time preparer actually needed to be told. <b>Remove this note when Lilian signs it off.</b></p>
+    </div>
+  </div>
+
+  <div class="callout warn reveal" role="note">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+    <div class="cx">
+      <div class="cl">Where client data goes</div>
+      <p>Names, EINs, balances, figures and filled-in worksheets belong in <b>Google&nbsp;Drive / Double / QuickBooks</b> — never in this repo. Every amount in this document is a placeholder. Copy the blank intake at the bottom into the client's folder and fill it in there.</p>
+    </div>
+  </div>
+
+  <!-- ==================== AT A GLANCE ==================== -->
+  <section class="doc" id="glance">
+    <div class="shead big reveal"><span class="schip">◆</span><h2>The process at a glance</h2></div>
+    <p class="slede reveal">Two things gate everything: the <b>extension</b>, which cannot be fixed later, and the <b>map</b>, which you build from last year before filling in anything this year. The rest is assembly in a fixed order.</p>
+
+    <figure class="flow reveal" aria-label="Form 1120-S preparation flow">
+      <div class="fnode gate">
+        <b>Gather</b> — the prior-year <b>filed return</b>, plus this year's <em>and</em> last year's QuickBooks <span class="fref">§1</span>
+      </div>
+      <div class="fconn" aria-hidden="true"></div>
+
+      <div class="fdecide">Was Form 7004 filed? <span class="fref">§2</span></div>
+      <div class="fbranch">
+        <div class="branch fix"><b>No, and past 15 March</b> — stop and tell Lilian. Penalties run <em>per shareholder, per month</em></div>
+        <div class="branch good"><b>Yes</b> — the deadline is 15 September</div>
+      </div>
+      <div class="fconn" aria-hidden="true"></div>
+
+      <section class="fphase">
+        <div class="fphase-h"><span class="pn">1</span><b>Build the map</b><span class="fref">§3 · the step beginners skip</span></div>
+        <div class="fnode">Reconstruct <b>last year's page 1</b> from <b>last year's P&amp;L</b></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode">Compare it against what was actually <b>filed</b></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode wait"><span class="pill">Every difference</span>is a firm convention to repeat — <b>not an error to fix</b></div>
+      </section>
+
+      <div class="fconn" aria-hidden="true"></div>
+
+      <section class="fphase">
+        <div class="fphase-h"><span class="pn">2</span><b>Assemble, in this order</b><span class="fref">§4 → §11</span></div>
+        <div class="fnode"><b>Form 1125-A</b> — cost of goods sold. Its line 8 feeds page 1 <span class="fref">§4</span></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode"><b>Page 1</b> — income, then deductions top-down <span class="fref">§5</span></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode"><b>Schedule B</b> — one answer can remove two schedules <span class="fref">§6</span></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode"><b>Schedules L · M-1 · M-2</b> — balance sheet, book↔tax bridge, AAA <span class="fref">§8–§10</span></div>
+        <div class="fconn" aria-hidden="true"></div>
+        <div class="fnode"><b>Schedule K</b> — what travels to the owners <span class="fref">§7</span></div>
+      </section>
+
+      <div class="fconn" aria-hidden="true"></div>
+
+      <div class="fnode gate">
+        <b>Form 7203 per shareholder</b> — can each owner actually deduct their share of the loss? <span class="fref">§12</span>
+      </div>
+      <div class="fconn" aria-hidden="true"></div>
+      <div class="fnode"><b>Schedule K-1</b> — one per shareholder <span class="fref">§11</span></div>
+      <div class="fconn" aria-hidden="true"></div>
+
+      <div class="fdecide">Do all the tie-out checks pass? <span class="fref">§14</span></div>
+      <div class="fbranch">
+        <div class="branch fix"><b>No</b> — go back. A failed tie-out is a <em>mapping</em> error, not a rounding one</div>
+        <div class="branch good"><b>Yes</b> — review, sign Form 8879-S, e-file</div>
+      </div>
+      <div class="fconn" aria-hidden="true"></div>
+      <div class="fnode done">
+        File the client's copy in Double and record it <span class="ckmark" aria-label="done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ==================== §0 ==================== -->
+  <section class="doc" id="s0">
+    <div class="shead reveal"><span class="schip">§0</span><h2>What this return actually is</h2></div>
+    <p class="slede reveal">An S-corporation normally <b>pays no federal income tax</b>. It files an information return saying: <em>this is what the business earned, and here is how it splits between the owners.</em> Each owner then reports their share on their own 1040, through a <b>Schedule K-1</b>.</p>
+
+    <ol class="qlist reveal">
+      <li><b>The point of the exercise is page 1, line 21</b> — <em>ordinary business income (loss)</em> — plus the few items that must reach the owners <b>separately</b> rather than inside it. Everything else is bookkeeping around those two things.</li>
+      <li><b>Some income and expenses never enter line 21.</b> Interest, dividends, capital gains, §179 and charitable contributions are <b>separately stated</b>: they go on <b>Schedule K</b> and straight to the K-1s, because each owner's own treatment of them differs. Sweeping them into line 21 is the classic beginner error.</li>
+      <li><b>A loss is not automatically deductible by the owner.</b> It is limited by that owner's <b>basis</b> (§12). This is where a return that looks finished is often wrong.</li>
+    </ol>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The rule that governs everything below</div>
+        <p><b>The return is not a copy of the P&amp;L.</b> It is the P&amp;L <b>regrouped</b> into the form's fixed categories, <b>plus</b> the adjustments where tax law and bookkeeping disagree. Every dollar in the books lands somewhere on the return — but almost never in the order QuickBooks shows it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== §1 ==================== -->
+  <section class="doc" id="s1">
+    <div class="shead reveal"><span class="schip">§1</span><h2>Gather this before you start</h2></div>
+    <p class="slede reveal">You cannot prepare from the current year alone. <b>Half of this list is about the prior year</b>, and that is deliberate — see §3.</p>
+
+    <div class="panel reveal">
+      <div class="ph"><h4>Documents to have in hand</h4></div>
+      <ul class="checks">
+        <li><b>The prior year's FILED return</b> — the whole package: federal, any state, the K-1s. From the client's <code>Tax Return Filed</code> folder in Double.</li>
+        <li><b>This year's Profit &amp; Loss</b> — full year, accrual unless the client is on cash basis.</li>
+        <li><b>This year's Balance Sheet</b> as of the last day of the year.</li>
+        <li><b>LAST year's P&amp;L and Balance Sheet.</b> Not optional — §3 is built on them.</li>
+        <li><b>The depreciation schedule</b> — cost, date placed in service, method, life, depreciation taken so far.</li>
+        <li><b>Each shareholder's ownership percentage</b>, and whether it changed during the year.</li>
+        <li><b>Whether shareholders put money in or took money out</b> — and whether those were <b>contributions</b> or <b>loans</b> (§12).</li>
+        <li><b>Confirmation that Form 7004 was filed</b>, if you are past 15 March.</li>
+      </ul>
+    </div>
+
+    <div class="callout warn reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Reading the prior-year return</div>
+        <p>Open it through <b>the redactor</b> (<code>tools/redact-doc/</code>), never the PDF directly, and <b>one year only</b>. The rule and its limits are in the <b>double-mcp</b> skill.</p>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">1A</span><h3>Intake questions for the client</h3><span class="rt">ask before you start, not when you are stuck</span></div>
+    <div class="indent">
+      <ol class="qlist reveal">
+        <li>Did the business <b>buy or sell any equipment or vehicles</b> this year?</li>
+        <li>Did any shareholder <b>put money in or take money out</b>? Was it a loan or a contribution?</li>
+        <li>Are there <b>loans to or from the company</b> — and did they change?</li>
+        <li>Did the company take a <b>physical inventory count</b> at year end?</li>
+        <li>Did anything change about the <b>business itself</b> — a new state, a new line of business, a closed location, a shareholder joining or leaving?</li>
+        <li>Are there <b>financial accounts outside the United States</b>?</li>
+        <li>Were <b>Forms 1099</b> required, and were they filed?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== §2 ==================== -->
+  <section class="doc" id="s2">
+    <div class="shead reveal"><span class="schip">§2</span><h2>Gate: the extension</h2></div>
+    <p class="slede reveal">Check this <b>first</b>, because it cannot be fixed later.</p>
+
+    <ul class="dots reveal">
+      <li>The 1120-S for a calendar year is due <b>15 March</b> of the following year — the next business day if that falls on a weekend or holiday.</li>
+      <li><b>Form 7004</b> extends it <b>six months</b>, to <b>15 September</b>.</li>
+      <li>The firm files 7004 for <b>most clients as a matter of course</b> <em>(Lilian, 2026-08-14)</em> — but <b>confirm it for this client</b>, do not assume.</li>
+    </ul>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">If no extension was filed and the deadline has passed</div>
+        <p><b>Stop and tell Lilian.</b> The late-filing penalty on an S-corp is charged <b>per shareholder, per month</b> and climbs fast. Confirm the current rate against the IRS instructions rather than quoting one from memory. And note: the extension extends the <b>filing</b>, not the paying.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== §3 ==================== -->
+  <section class="doc" id="s3">
+    <div class="shead big reveal"><span class="schip">§3</span><h2>Build the map from the prior year</h2></div>
+    <p class="slede reveal">This is the most important section here, and it is the step a beginner skips. <b>Every firm, and every client, has conventions about how the books map onto the form</b> — which account feeds which line, what gets grouped, what is netted. Those conventions are not written down anywhere. <b>They are encoded in last year's filed return.</b></p>
+
+    <ol class="qlist reveal">
+      <li>Open <b>last year's P&amp;L and Balance Sheet</b>, and <b>last year's filed return</b>.</li>
+      <li><b>Reconstruct last year's page 1 from last year's P&amp;L</b>, on paper or in a spreadsheet.</li>
+      <li><b>Compare, line by line</b>, against what was actually filed.</li>
+      <li><b>Every difference is information.</b> Do not fix it and do not average it — find out <em>why</em>. That reason is the convention you must repeat.</li>
+      <li>Only when your reconstruction reproduces the filed return do you have a trustworthy map.</li>
+    </ol>
+
+    <div class="callout note reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v13H4z"/><path d="M8 9.5h8M8 13h5"/></svg></span>
+      <div class="cx">
+        <div class="cl">What this catches — one real example</div>
+        <p>On a Shopify client, the ending-inventory line on the return did <b>not</b> equal the QuickBooks <code>Inventory</code> account. It equalled <code>Total for Other Current Assets</code> — the Inventory account <b>plus a Shopify Clearing Account</b>. Using Inventory alone broke the cost-of-goods schedule and drove <b>purchases negative</b>, which is impossible. Nobody could have guessed that convention; reproducing the prior year revealed it in ten minutes.</p>
+      </div>
+    </div>
+
+    <div class="callout warn reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Two limits on what this proves</div>
+        <p><b>A number that reconciles is not the same as a number that is right.</b> Reproducing the prior year proves your <em>map</em> is right — not the client's cost basis, inventory count or classifications.<br><br><b>And reproducing is not auditing.</b> A filed return is closed. You are reading it as an answer key, not to find fault. If something looks wrong, raise it with Lilian — do not change this year's approach on your own initiative, because consistency between years is itself a tax position.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== §4 ==================== -->
+  <section class="doc" id="s4">
+    <div class="shead reveal"><span class="schip">§4</span><h2>Form 1125-A — cost of goods sold</h2></div>
+    <p class="slede reveal">Fill this in <b>first</b>. Its line 8 feeds page 1, and the form says so on its own face: <em>"Enter here and on Form 1120-S, page 1, line 2."</em> Skip it entirely if the client sells no goods.</p>
+
+    <div class="callout ok reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4.5M12 8.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Hover any line to see where its number comes from</div>
+        <p>Every line below opens on <b>hover</b>, on <b>tap</b>, or with the <b>keyboard</b> (Tab to it) to show the formula or the source. <span class="ltag calc">calculated</span> means it falls out of other numbers; <span class="ltag read">read</span> means you look it up and the risk is reading the <em>wrong source</em>. <b>When you print, every one of them opens automatically</b> — paper has no hover.</p>
+      </div>
+    </div>
+    <div class="lines reveal">
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">1</span><span class="lname">Inventory at beginning of year</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">= line 7 of <span class="op">LAST</span> year&#8217;s Form 1125-A</div>
+        <p>The prior return governs — never a system, never a recalculation. If the books disagree with it, the books are what get adjusted.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">2</span><span class="lname">Purchases</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 2 = line 8 <span class="op">+</span> line 7 <span class="op">&minus;</span> line 1</div>
+        <p>Usually the figure you solve for, because nobody adds up a year of purchase invoices. <b>It is derived, not measured</b> — which is why a wrong ending inventory shows up here as an impossible number. If it comes out <b>negative</b>, your map is wrong.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">3</span><span class="lname">Cost of labor</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Direct production labour only. Most retail and e-commerce clients have none.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">4</span><span class="lname">Additional §263A costs</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Almost always blank for a small business taxpayer.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">5</span><span class="lname">Other costs</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <p>Whatever the firm&#8217;s convention puts in cost of sales beyond purchases. Check the prior year before adding anything here.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">6</span><span class="lname">Total</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 6 = line 1 <span class="op">+</span> line 2 <span class="op">+</span> line 3 <span class="op">+</span> line 4 <span class="op">+</span> line 5</div>
+        <p>Straight arithmetic.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">7</span><span class="lname">Inventory at end of year</span><span class="ltag read">read</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">= the balance-sheet subtotal <span class="op">the prior return used</span></div>
+        <p>⚠️ <b>Not automatically the account called Inventory.</b> On some clients it is a subtotal covering more than that one account — see 4B. Read it off the section the prior return used, not off the account name.</p>
+        </div></div>
+      </div>
+      <div class="lrow" tabindex="0">
+        <div class="lhead"><span class="ln">8</span><span class="lname">Cost of goods sold</span><span class="ltag calc">calculated</span></div>
+        <div class="lwhy"><div class="cw">
+        <div class="fx">line 8 = line 6 <span class="op">&minus;</span> line 7   <span class="op">&rarr;</span> carry to page 1, line 2</div>
+        <p>The form says so on its own face: <em>&ldquo;Enter here and on Form 1120-S, page 1, line 2.&rdquo;</em></p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">4A</span><h3>The identity, and how to use it</h3><span class="rt">solve for the one you don't know</span></div>
+    <div class="indent">
+      <div class="intake reveal"><pre>line 1  +  line 2  −  line 7  =  line 8</pre></div>
+      <ul class="dots reveal">
+        <li><b>Purchases recorded to an asset account</b> (perpetual): you know 1, 2 and 7 → line 8 falls out.</li>
+        <li><b>Purchases expensed, cost of sales estimated</b> (periodic): you know 1, 7 and 8 → line 2 falls out.</li>
+      </ul>
+      <div class="callout err reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">If the figure you solve for comes out NEGATIVE, your map is wrong</div>
+          <p>Negative purchases are not a thing. Go back to §3 — you are almost certainly reading the wrong account into line 7.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">4B</span><h3>The line 7 trap</h3><span class="rt">the one that cost a day</span></div>
+    <div class="indent">
+      <p class="reveal"><b>"Inventory at end of year" is not automatically the account called <code>Inventory</code>.</b> On some clients the return's inventory line is a <b>subtotal</b> covering more than that one account — the Shopify example in §3 is <code>Inventory</code> <b>plus</b> a clearing account, which QuickBooks already presents as one line: <code>Total for Other Current Assets</code>.</p>
+      <p class="reveal"><b>Read line 7 off the balance-sheet section the PRIOR RETURN used.</b> Do not decide it from the account's name.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">4C</span><h3>Line 9 — the checkboxes</h3></div>
+    <div class="indent">
+      <ul class="dots reveal">
+        <li><b>9a — the valuation method.</b> <b>Copy what was ticked last year.</b> Changing it is a change of accounting method — a formal election, not a preference.</li>
+        <li><b>9b–9d</b> — subnormal goods, LIFO. Normally all "no".</li>
+        <li><b>9e — do the §263A rules apply?</b> Normally <b>no</b> for a small business taxpayer.</li>
+        <li><b>9f — did quantities, cost or valuation change?</b> A "yes" here is a problem to escalate, not a box to tick.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== §5 ==================== -->
+  <section class="doc" id="s5">
+    <div class="shead big reveal"><span class="schip">§5</span><h2>Form 1120-S, page 1</h2></div>
+
+    <div class="screen reveal">
+      <div class="lab">Header <span class="t">boxes A to I</span></div>
+      <ul class="dots">
+        <li><b>A · B · D · E</b> — S election date, activity code, EIN, date incorporated. All copied from the prior return.</li>
+        <li><b>F · Total assets</b> — from the year-end balance sheet.</li>
+        <li><b>H(1) · Final return</b> — 🛑 tick <b>only</b> if this is the last year the company exists. A company closing <em>next</em> year is not a final return <em>this</em> year.</li>
+        <li><b>I</b> — number of shareholders. Count the K-1s.</li>
+      </ul>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">5B</span><h3>Income — lines 1 to 6</h3></div>
+    <div class="indent">
+      <div class="lines reveal">
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1a</span><span class="lname">Gross receipts or sales</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">= sales revenue <span class="op">&minus;</span> discounts given <span class="op">+</span> shipping income charged</div>
+          <p>Discounts given at the point of sale reduce receipts — you never earned them. Shipping the customer paid you <em>is</em> revenue.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1b</span><span class="lname">Returns and allowances</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>The refunds-to-customers account.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">1c</span><span class="lname">Balance</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 1c = line 1a <span class="op">&minus;</span> line 1b</div>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s total income.</b> Your first tie-out check.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">2</span><span class="lname">Cost of goods sold</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">= Form 1125-A, line 8</div>
+          <p>Nothing to compute here — it was computed on the other form.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">3</span><span class="lname">Gross profit</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 3 = line 1c <span class="op">&minus;</span> line 2</div>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s gross profit.</b></p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">4</span><span class="lname">Net gain (loss), Form 4797</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>Gain or loss on selling business equipment. Zero in most years.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">5</span><span class="lname">Other income (loss)</span><span class="ltag read">read</span></div>
+          <div class="lwhy"><div class="cw">
+          <p>⚠️ <b>Trade-or-business income only.</b> Interest, dividends and capital gains are portfolio income and go on <b>Schedule K</b>. Bank interest here understates Schedule K and overstates ordinary income.</p>
+          </div></div>
+        </div>
+        <div class="lrow" tabindex="0">
+          <div class="lhead"><span class="ln">6</span><span class="lname">Total income</span><span class="ltag calc">calculated</span></div>
+          <div class="lwhy"><div class="cw">
+          <div class="fx">line 6 = line 3 <span class="op">+</span> line 4 <span class="op">+</span> line 5</div>
+          </div></div>
+        </div>
+      </div>
+      <div class="callout warn reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Line 5 is NOT "everything else on the P&amp;L"</div>
+          <p>Interest income, dividends and capital gains are <b>portfolio income</b> and go on <b>Schedule K</b>, not here. Bank interest on line 5 understates Schedule K and overstates ordinary income.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">5C</span><h3>Deductions — lines 7 to 21</h3><span class="rt">work top-down; line 19 is the remainder</span></div>
+    <div class="indent">
+      <p class="reveal"><b>The mapping rule, which is the whole skill:</b> lines 7 to 18 are <b>named categories the IRS wants to see separately</b>. Line 19 is <b>everything left over</b>. So you place each expense that has its own line first, then group what remains.</p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>Line</th><th>Category</th><th>Typical QuickBooks accounts</th></tr></thead>
+          <tbody>
+            <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to shareholder-employees</td></tr>
+            <tr><td class="for">8</td><td>Salaries and wages</td><td>Everyone else's wages</td></tr>
+            <tr><td class="for">11</td><td>Rents</td><td>Office, warehouse, storage, equipment rental</td></tr>
+            <tr><td class="for">12</td><td>Taxes and licenses</td><td><b>Payroll taxes + business licences + local taxes.</b> Not income tax</td></tr>
+            <tr><td class="for">13</td><td>Interest</td><td>Loan and card interest — often filed under "other expenses" in the P&amp;L</td></tr>
+            <tr><td class="for">14</td><td>Depreciation</td><td><b>From Form 4562</b>, not from the books</td></tr>
+            <tr><td class="for">16</td><td><b>Advertising</b></td><td>⚠️ has its own line — do not leave it in "other deductions"</td></tr>
+            <tr><td class="for">18</td><td>Employee benefit programs</td><td>Health insurance and other benefits</td></tr>
+            <tr><td class="for">19</td><td><b>Other deductions</b></td><td><b>The remainder</b> — attach an itemised statement</td></tr>
+            <tr><td class="for">21</td><td><b>Ordinary business income (loss)</b></td><td>Line 6 − line 20. <b>The number the return exists to produce</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="intake reveal"><pre>  total expenses per the P&amp;L
+    −  everything you placed on lines 7–18
+    −  the non-deductible portion of any expense  (§9)
+    =  line 19</pre></div>
+      <p class="reveal">If your line 19 does not equal that subtraction, you have either double-counted or dropped an account.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">5D</span><h3>Depreciation — line 14</h3></div>
+    <div class="indent">
+      <ul class="dots reveal">
+        <li><b>A full year for an asset placed in service last year is larger than its first part-year.</b> A beginner expecting "the same as last year" will understate the deduction.</li>
+        <li><b>No new assets means no new elections</b> — no §179 or bonus decisions. Just continue the schedule.</li>
+        <li>⚠️ <b>If the books recorded no depreciation at all</b>, the deduction still belongs on the return — it becomes a book-to-tax difference on Schedule M-1.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== §6 ==================== -->
+  <section class="doc" id="s6">
+    <div class="shead reveal"><span class="schip">§6</span><h2>Schedule B — the questions</h2></div>
+    <p class="slede reveal">⚠️ <b>The question numbers move between tax years. Find each one by its wording, not its number.</b></p>
+    <ol class="qlist reveal">
+      <li><b>Accounting method</b> — accrual or cash. Read it off the footer of the QuickBooks reports; they say which basis they were run on.</li>
+      <li><b>"Are total receipts AND total assets both under $250,000?"</b> If <b>yes</b>, Schedules <b>L</b> and <b>M-1</b> are <b>not required</b>. The firm completes them anyway when the prior year did — they give continuity, and the balance sheet is the best proof nothing was mapped wrong.</li>
+      <li><b>Were Forms 1099 required, and were they filed?</b> Answer honestly; the firm usually knows because it prepares them.</li>
+    </ol>
+    <div class="callout warn reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Being excused from Schedule M-1 does not remove the adjustment</div>
+        <p>A non-deductible expense still changes line 21 whether or not you disclose the reconciliation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== §7 ==================== -->
+  <section class="doc" id="s7">
+    <div class="shead reveal"><span class="schip">§7</span><h2>Schedule K — what travels to the owners</h2></div>
+    <p class="slede reveal">Schedule K is the company's <b>total</b> of every item the owners report themselves. Each K-1 is one owner's slice of it.</p>
+    <div class="tablewrap reveal">
+      <table class="links">
+        <thead><tr><th>Line</th><th>Item</th><th>Where it comes from</th></tr></thead>
+        <tbody>
+          <tr><td class="for">1</td><td>Ordinary business income (loss)</td><td>Page 1, line 21</td></tr>
+          <tr><td class="for">4</td><td>Interest income</td><td>The P&amp;L's interest income — the one you kept <b>off</b> page 1 line 5</td></tr>
+          <tr><td class="for">11</td><td>§179 deduction</td><td>Only if elected this year</td></tr>
+          <tr><td class="for">16c</td><td><b>Non-deductible expenses</b></td><td>The disallowed half of meals, fines, and similar. ⚠️ Easy to forget — it reduces basis <em>and</em> AAA</td></tr>
+          <tr><td class="for">16d</td><td>Distributions</td><td>Money paid out to shareholders during the year</td></tr>
+          <tr><td class="for">17</td><td><b>§199A / QBI</b></td><td>Attach the statement. <b>A loss year still produces QBI information</b> — a negative amount that carries forward for the owner</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ==================== §8 ==================== -->
+  <section class="doc" id="s8">
+    <div class="shead reveal"><span class="schip">§8</span><h2>Schedules L · M-1 · M-2</h2></div>
+
+    <div class="subbar reveal"><span class="tag">8A</span><h3>Schedule L — the balance sheet</h3></div>
+    <div class="indent">
+      <ol class="qlist reveal">
+        <li>🔑 <b>The beginning column is COPIED from last year's filed return.</b> Never recalculated. If it does not match, stop — that is a mapping change or an error, and both need Lilian.</li>
+        <li>The end column comes from the year-end balance sheet; <b>total assets must agree to the dollar</b>.</li>
+        <li>🔑 <b>The heading says "per Books" and it means it.</b> If the books did not record something, Schedule L shows the books' figure and the difference goes on Schedule M-1. Do not "correct" it to tax figures.</li>
+        <li><b>Equity mapping is a convention, not a calculation.</b> How capital accounts split between capital stock, paid-in capital and retained earnings is whatever the prior return did. Repeat it, or the two years cannot be compared.</li>
+      </ol>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">8B</span><h3>Schedule M-1 — where books and return disagree</h3><span class="rt">the bridge</span></div>
+    <div class="indent">
+      <p class="reveal">Book net income in at the top, taxable ordinary income out at the bottom. <b>If you understand this schedule, you understand why the return is not a copy of the P&amp;L.</b></p>
+      <ul class="dots reveal">
+        <li><b>Line 1</b> — net income per books, straight off the P&amp;L.</li>
+        <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>.</li>
+        <li><b>Line 6a</b> — deductions on the return the books never recorded. The common one: <b>depreciation</b>.</li>
+        <li><b>Line 8</b> — the result. <b>Must equal page 1, line 21.</b></li>
+      </ul>
+      <div class="callout ok reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+        <div class="cx">
+          <div class="cl">A quick sanity check on the prior year</div>
+          <p>The gap between last year's <em>book</em> net income and last year's line 21 <b>is</b> last year's M-1. If that gap is roughly half the prior year's meals, you have just confirmed both the convention and your understanding of it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">8C</span><h3>Schedule M-2 — the AAA</h3></div>
+    <div class="indent">
+      <ul class="dots reveal">
+        <li><b>Beginning balance = last year's ending balance.</b> Copy it from the filed return.</li>
+        <li>Add the year's income <b>or</b> subtract the year's loss; subtract <b>non-deductible expenses</b> (the same figure as Schedule K 16c); subtract <b>distributions</b>.</li>
+        <li>AAA <b>can</b> go negative from losses. It cannot be driven negative <em>by distributions</em>.</li>
+        <li>⚠️ <b>Shareholder capital contributions do NOT increase AAA.</b> They increase <b>basis</b> (§12). Two different accounts that beginners merge.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== §12 ==================== -->
+  <section class="doc" id="s12">
+    <div class="shead big reveal"><span class="schip">§12</span><h2>Form 7203 — basis, and why a loss may not be deductible</h2></div>
+    <p class="slede reveal">This is the part of an S-corp return that beginners omit, and it is often the part that <b>changes the answer</b>.</p>
+
+    <div class="intake reveal"><pre>   what they put IN  (stock purchased + capital contributed)
+ + their share of income in profitable years
+ − their share of losses already deducted
+ − distributions they received
+ = basis</pre></div>
+
+    <p class="reveal">A loss beyond basis is <b>suspended</b> — carried forward until basis is restored, not deducted now. <b>Form 7203 is required</b> when a shareholder claims a loss, receives a distribution, disposes of stock, or receives a loan repayment from the company.</p>
+
+    <div class="subbar reveal"><span class="tag">12A</span><h3>Two questions to settle before you compute it</h3></div>
+    <div class="indent">
+      <ol class="qlist reveal">
+        <li><b>Was money the shareholder put in a CAPITAL CONTRIBUTION or a LOAN?</b> Both support losses, but they are tracked separately — stock basis vs debt basis — and restored in a different order. The books may not distinguish them. <b>Ask.</b></li>
+        <li><b>Are contributions proportionate to ownership?</b> If one owner funded the business and the other did not, <b>their basis is very different at identical ownership percentages</b> — so the same loss allocation can be fully deductible for one and partly suspended for the other. <b>Check each shareholder separately. Never assume symmetry.</b></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== §14 ==================== -->
+  <section class="doc" id="s14">
+    <div class="shead reveal"><span class="schip">§14</span><h2>Before you file — the tie-out checks</h2></div>
+    <p class="slede reveal">Do not file until every one of these passes. <b>A check that fails is a mapping error, not a rounding difference.</b></p>
+    <div class="panel reveal">
+      <div class="ph"><h4>Every one must tie</h4></div>
+      <ul class="checks">
+        <li>1125-A: <b>line 6 − line 7 = line 8</b>, and line 8 equals page 1 line 2</li>
+        <li>Page 1: <b>1a − 1b = 1c</b>, and 1c equals the P&amp;L's total income</li>
+        <li>Page 1: <b>1c − 2 = 3</b>, and 3 equals the P&amp;L's gross profit</li>
+        <li>Page 1: <b>6 − 20 = 21</b></li>
+        <li>Line 19 equals total expenses less lines 7–18 less non-deductible amounts</li>
+        <li>Schedule L: the <b>beginning column matches last year's filed ending column exactly</b></li>
+        <li>Schedule L: <b>total assets = total liabilities and equity</b>, and equals the year-end balance sheet</li>
+        <li>Schedule M-1 <b>line 8 equals page 1 line 21</b></li>
+        <li>Schedule M-2 beginning balance matches last year's ending balance</li>
+        <li>The <b>K-1 percentages add to 100%</b>, and each Schedule K line equals the sum across all K-1s</li>
+        <li><b>A Form 7203 exists for every shareholder who needs one</b></li>
+        <li><b>Form 8879-S signed</b> before e-filing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== §15 ==================== -->
+  <section class="doc" id="s15">
+    <div class="shead reveal"><span class="schip">§15</span><h2>Common pitfalls</h2></div>
+    <p class="slede reveal">Each of these has bitten a real return.</p>
+    <ol class="qlist reveal">
+      <li><b>Treating the P&amp;L's net income as line 21.</b> The difference is Schedule M-1 — usually meals and unrecorded depreciation.</li>
+      <li><b>Reading "inventory" as the account called Inventory.</b> Check what the prior return used (§4B).</li>
+      <li><b>Leaving advertising, rent or interest inside "other deductions."</b> Arithmetically fine, but it no longer matches the prior year and nobody can compare them.</li>
+      <li><b>Putting bank interest on page 1 line 5</b> instead of Schedule K.</li>
+      <li><b>Recalculating the Schedule L beginning column</b> instead of copying it.</li>
+      <li><b>Correcting the books on Schedule L</b> — it is "per books" on purpose.</li>
+      <li><b>Skipping Form 7203</b> because the loss "obviously" flows through. It may not.</li>
+      <li><b>Ticking "final return" a year early</b> because the client is winding down.</li>
+      <li><b>Zero officer compensation without a decision.</b> A shareholder who works in the business is expected to take a reasonable salary. Not doing so may be defensible in a heavy loss year — but it must be a documented decision, not an oversight.</li>
+      <li><b>Changing a method because it looks wrong.</b> Consistency with the prior year is itself a tax position. Raise it with Lilian; do not fix it silently.</li>
+    </ol>
+  </section>
+
+  <!-- ==================== APPENDIX ==================== -->
+  <section class="doc" id="appendix">
+    <div class="shead reveal"><span class="schip">＋</span><h2>Appendix · intake sheet and the line map</h2></div>
+    <p class="slede reveal">Copy the intake into the client's folder in Drive or Double and fill it in <b>there</b>. Filled copies never come back to the repo.</p>
+
+    <div class="intake reveal"><pre><span class="grp">CLIENT / YEAR</span>
+CLIENT: &lt;name&gt;                        TAX YEAR: &lt;year&gt;
+PREPARER: &lt;name&gt;                      DATE STARTED: &lt;date&gt;
+
+<span class="grp">EXTENSION</span>
+Form 7004 filed?   [ ] yes  [ ] no     date: ______
+Original deadline: 15 Mar   Extended: 15 Sep
+
+<span class="grp">DOCUMENTS IN HAND</span>
+[ ] prior-year filed return (year: ____)
+[ ] P&amp;L this year           [ ] P&amp;L last year
+[ ] Balance sheet this year [ ] Balance sheet last year
+[ ] depreciation schedule
+[ ] accounting basis:  [ ] accrual  [ ] cash
+
+<span class="grp">SHAREHOLDERS</span>
+name ____________________  ownership ____%  contributed this year? ______
+name ____________________  ownership ____%  contributed this year? ______
+Contributions are:  [ ] capital  [ ] loans  [ ] not established — ASK
+
+<span class="grp">CLIENT ANSWERS</span>
+equipment bought/sold? ______   money in/out? ______   loans changed? ______
+physical inventory count? ______   business changes? ______
+foreign accounts? ______   1099s required/filed? ______
+
+<span class="grp">MAP VERIFIED AGAINST PRIOR YEAR</span>
+[ ] page 1 reproduced from last year's P&amp;L and matches what was filed
+differences found and explained: ______________________________________
+
+<span class="grp">OPEN ITEMS BLOCKING THE RETURN</span>
+1. ____________________________________________________________________
+2. ____________________________________________________________________
+
+<span class="grp">TIE-OUT CHECKS</span>   [ ] all pass        date: ______</pre></div>
+
+    <div class="subbar reveal"><span class="tag">B</span><h3>The QuickBooks → 1120-S line map</h3><span class="rt">confirm against the prior year first</span></div>
+    <div class="indent">
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>QuickBooks account (typical name)</th><th>Goes to</th></tr></thead>
+          <tbody>
+            <tr><td>Sales / product income</td><td>Page 1, line 1a</td></tr>
+            <tr><td>Discounts given</td><td>Reduces line 1a</td></tr>
+            <tr><td>Customer refunds / returns</td><td>Page 1, line 1b</td></tr>
+            <tr><td>Cost of goods sold + channel selling fees</td><td>1125-A line 8 → page 1 line 2</td></tr>
+            <tr><td>Inventory (balance sheet)</td><td>1125-A line 7 — ⚠️ check the subtotal used</td></tr>
+            <tr><td>Wages — shareholders / staff</td><td>Page 1, lines 7 / 8</td></tr>
+            <tr><td>Payroll tax · licences · local taxes</td><td>Page 1, line 12</td></tr>
+            <tr><td>Rent — any kind</td><td>Page 1, line 11</td></tr>
+            <tr><td>Interest charge / loan interest</td><td>Page 1, line 13</td></tr>
+            <tr><td>Advertising &amp; promotional</td><td>Page 1, line 16</td></tr>
+            <tr><td>Depreciation</td><td>Page 1, line 14 — from Form 4562, <b>not</b> the books</td></tr>
+            <tr><td>Meals</td><td>Line 19 at <b>50%</b>; the other half → M-1 3b + Sch K 16c</td></tr>
+            <tr><td>Everything else</td><td>Line 19 + itemised statement</td></tr>
+            <tr><td>Interest income</td><td><b>Schedule K line 4</b> — never page 1</td></tr>
+            <tr><td>Gain/loss on equipment sold</td><td>Page 1, line 4 (via Form 4797)</td></tr>
+            <tr><td>Bank accounts</td><td>Schedule L, cash</td></tr>
+            <tr><td>Credit cards payable</td><td>Schedule L, accounts payable — per the prior year</td></tr>
+            <tr><td>Sales tax payable</td><td>Schedule L, other current liabilities</td></tr>
+            <tr><td>Fixed assets / accumulated depreciation</td><td>Schedule L 10a / 10b — <b>per books</b></td></tr>
+            <tr><td>Shareholder capital accounts</td><td>Schedule L equity — <b>per the prior year's mapping</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">C</span><h3>Every formula on this return</h3><span class="rt">two kinds of number, and telling them apart is the skill</span></div>
+    <div class="indent">
+      <p class="reveal"><span class="ltag read">read</span> you look it up and copy it — the risk is reading the <b>wrong source</b>. &nbsp; <span class="ltag calc">calculated</span> it falls out of other numbers — the risk is that a wrong input <b>still produces a plausible result</b>.</p>
+      <div class="callout ok reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+        <div class="cx">
+          <div class="cl">An impossible result is a gift</div>
+          <p>Negative purchases, or a balance sheet that will not balance, <b>tells you the map is wrong</b>. The dangerous case is the wrong figure that looks fine — which is what §14's tie-out checks are for.</p>
+        </div>
+      </div>
+      <div class="intake reveal"><pre><span class="grp">FORM 1125-A</span>
+line 6  =  line 1 + line 2 + line 3 + line 4 + line 5
+line 8  =  line 6 &minus; line 7
+   rearranged, for whichever one you do not know:
+line 2  =  line 8 + line 7 &minus; line 1        &larr; purchases (the usual unknown)
+line 7  =  line 1 + line 2 &minus; line 8        &larr; ending inventory
+
+<span class="grp">FORM 1120-S, PAGE 1</span>
+line 1a =  sales revenue &minus; discounts given + shipping income charged
+line 1c =  line 1a &minus; line 1b
+line 3  =  line 1c &minus; line 2
+line 6  =  line 3 + line 4 + line 5
+line 19 =  total expenses per the P&amp;L
+             &minus; everything placed on lines 7 through 18
+             &minus; the non-deductible portion of any expense
+line 20 =  sum of lines 7 through 19
+line 21 =  line 6 &minus; line 20
+
+<span class="grp">MEALS</span>
+deductible half  =  meals &times; 50%     &rarr; page 1, line 19
+disallowed half  =  meals &times; 50%     &rarr; Sch M-1 line 3b AND Sch K line 16c
+
+<span class="grp">SCHEDULE L</span>
+line 15 (total assets)      =  sum of every asset line
+line 27 (total liab+equity) =  sum of every liability and equity line
+line 15  MUST EQUAL  line 27
+retained earnings  =  total equity per books &minus; capital stock
+                      (only if that is the prior year&#8217;s mapping)
+
+<span class="grp">SCHEDULE M-1</span>
+line 4  =  line 1 + line 2 + line 3
+line 7  =  line 5 + line 6
+line 8  =  line 4 &minus; line 7
+line 8  MUST EQUAL  page 1 line 21
+
+<span class="grp">SCHEDULE M-2 (AAA)</span>
+line 6  =  line 1 + line 2 + line 3 &minus; line 4 &minus; line 5
+line 8  =  line 6 &minus; line 7 (distributions)
+   where line 1 = LAST year&#8217;s line 8, copied
+
+<span class="grp">SCHEDULE K-1 &mdash; EACH SHAREHOLDER</span>
+their box  =  the matching Schedule K line &times; their ownership percentage
+   sum of the K-1s for any line  MUST EQUAL  that Schedule K line
+   the percentages               MUST TOTAL  100%
+
+<span class="grp">FORM 7203 &mdash; BASIS</span>
+basis  =  stock purchased + capital contributed
+          + their share of income in profitable years
+          &minus; their share of losses already deducted
+          &minus; distributions received
+
+deductible loss  =  the LESSER of (their share of the loss) and (their basis)
+suspended loss   =  their share of the loss &minus; the deductible amount</pre></div>
+      <div class="callout warn reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Basis is per shareholder, never per company</div>
+          <p>Two owners at the same ownership percentage can have very different basis — so the same loss allocation is fully deductible for one and partly suspended for the other. Compute it separately for each. <b>Never assume symmetry.</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <p><b>JK Accounting Group</b> · Standard Operating Procedure · Form 1120-S preparation</p>
+    <p class="sm">The Markdown at <code>projects/sops/form-1120s-preparation.md</code> is the source of truth; this page is a view of it. Re-render when the Markdown changes.</p>
+  </div>
+</footer>
