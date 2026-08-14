@@ -515,7 +515,10 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 .ltag.calc{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink); border-color:transparent;}
 .ltag.read{background:var(--pill-teal-bg); color:var(--pill-teal-ink); border-color:transparent;}
 .lwhy{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s var(--ease-out);}
-.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy,.lrow.open .lwhy{grid-template-rows:1fr;}
+/* No JS anywhere in this render, so hover + focus ARE the whole interaction: the row
+   carries tabindex="0" so a keyboard or a tap opens it. Print forces it open (see @media
+   print) — a PDF must never hide the provenance. */
+.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy{grid-template-rows:1fr;}
 .lwhy>.cw{overflow:hidden; min-height:0;}
 .lwhy .cw>*:first-child{margin-top:11px;}
 .fx{

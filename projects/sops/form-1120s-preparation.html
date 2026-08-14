@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="JK Accounting Group Standard Operating Procedure, rendered on the Atlas design system.">
+<meta name="description" content="How the firm prepares a Form 1120-S, written for a first-time preparer: where every number comes from, the formulas, and the tie-out checks.">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxMjM4NDEiPjwvcmVjdD48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNFQ0U2REEiIHN0cm9rZS13aWR0aD0iNi41IiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciI+PHBhdGggZD0iTTI5IDE4IEwyOSAzOCBRMjkgNDcgMjEuNSA0NyBRMTUuNSA0NyAxNC4yIDQxLjUiPjwvcGF0aD48cGF0aCBkPSJNMzcgMTggTDM3IDQ3Ij48L3BhdGg+PHBhdGggZD0iTTM3IDMyLjUgTDQ4IDE4Ij48L3BhdGg+PHBhdGggZD0iTTM3IDMyLjUgTDQ5LjUgNDciPjwvcGF0aD48L2c+PC9zdmc+Cg==">
-<title>SOP · Form 1120-S preparation | JK Accounting Group</title>
+<title>SOP · Form 1120-S preparation — S-corporation return | JK Accounting Group</title>
 <style>
 /* JK brand fonts — Latin subset, embedded woff2 (self-contained) */
 @font-face {
@@ -551,7 +551,10 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 .ltag.calc{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink); border-color:transparent;}
 .ltag.read{background:var(--pill-teal-bg); color:var(--pill-teal-ink); border-color:transparent;}
 .lwhy{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s var(--ease-out);}
-.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy,.lrow.open .lwhy{grid-template-rows:1fr;}
+/* No JS anywhere in this render, so hover + focus ARE the whole interaction: the row
+   carries tabindex="0" so a keyboard or a tap opens it. Print forces it open (see @media
+   print) — a PDF must never hide the provenance. */
+.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy{grid-template-rows:1fr;}
 .lwhy>.cw{overflow:hidden; min-height:0;}
 .lwhy .cw>*:first-child{margin-top:11px;}
 .fx{
@@ -614,10 +617,13 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <li><a href="#s5"><span class="sn">§5</span> Page 1, line by line</a></li>
     <li><a href="#s6"><span class="sn">§6</span> Schedule B</a></li>
     <li><a href="#s7"><span class="sn">§7</span> Schedule K</a></li>
-    <li><a href="#s8"><span class="sn">§8</span> Schedules L · M-1 · M-2</a></li>
+    <li><a href="#s8"><span class="sn">§8–10</span> Schedules L · M-1 · M-2</a></li>
+    <li><a href="#s11"><span class="sn">§11</span> Schedule K-1</a></li>
     <li><a href="#s12"><span class="sn">§12</span> Basis · Form 7203</a></li>
+    <li><a href="#s13"><span class="sn">§13</span> State</a></li>
     <li><a href="#s14"><span class="sn">§14</span> Tie-out checks</a></li>
     <li><a href="#s15"><span class="sn">§15</span> Common pitfalls</a></li>
+    <li><a href="#s16"><span class="sn">§16</span> Where things live</a></li>
     <li><a href="#appendix"><span class="sn">＋</span> Intake · line map · formulas</a></li>
   </ol>
 </nav>
@@ -1119,7 +1125,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         </table>
       </div>
       <div class="intake reveal"><pre>  total expenses per the P&amp;L
-    −  everything you placed on lines 7–18
+    −  everything you placed on lines 7–19
     −  the non-deductible portion of any expense  (§9)
     =  line 20</pre></div>
       <p class="reveal">If your line 20 does not equal that subtraction, you have either double-counted or dropped an account.</p>
@@ -1206,9 +1212,9 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
   <!-- ==================== §8 ==================== -->
   <section class="doc" id="s8">
-    <div class="shead reveal"><span class="schip">§8</span><h2>Schedules L · M-1 · M-2</h2></div>
+    <div class="shead reveal"><span class="schip">§8–10</span><h2>Schedules L · M-1 · M-2</h2></div>
 
-    <div class="subbar reveal"><span class="tag">8A</span><h3>Schedule L — the balance sheet</h3></div>
+    <div class="subbar reveal"><span class="tag">§8</span><h3>Schedule L — the balance sheet</h3></div>
     <div class="indent">
       <ol class="qlist reveal">
         <li>🔑 <b>The beginning column is COPIED from last year's filed return.</b> Never recalculated. If it does not match, stop — that is a mapping change or an error, and both need Lilian.</li>
@@ -1218,12 +1224,12 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       </ol>
     </div>
 
-    <div class="subbar reveal"><span class="tag">8B</span><h3>Schedule M-1 — where books and return disagree</h3><span class="rt">the bridge</span></div>
+    <div class="subbar reveal"><span class="tag">§9</span><h3>Schedule M-1 — where books and return disagree</h3><span class="rt">the bridge</span></div>
     <div class="indent">
-      <p class="reveal">Book net income in at the top, taxable ordinary income out at the bottom. <b>If you understand this schedule, you understand why the return is not a copy of the P&amp;L.</b></p>
+      <p class="reveal">Book net income in at the top, the return&#8217;s <b>total</b> income out at the bottom &mdash; <b>Schedule K line 18</b>, not page 1&#8217;s ordinary income. <b>If you understand this schedule, you understand why the return is not a copy of the P&amp;L.</b></p>
       <ul class="dots reveal">
         <li><b>Line 1</b> — net income per books, straight off the P&amp;L.</li>
-        <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>.</li>
+        <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>. ⚠️ <b>Not everything in a meals account is 50%</b> — company recreational or social events for employees (&#167;274(e)(4)) and meals <em>sold</em> to customers stay <b>100%</b> deductible, so look at what is in the account before halving it. ⏳ And the rule expires: for tax years beginning after <b>2025</b>, &#167;274(o) removes the employer-provided-meal deduction entirely — re-check before applying this to a 2026 return.</li>
         <li><b>Line 6a</b> — deductions on the return the books never recorded. The common one: <b>depreciation</b>.</li>
         <li><b>Line 8</b> — the result. ⚠️ <b>Must equal SCHEDULE K LINE 18</b>, not page 1 line 22. They are equal only when there are no separately stated items at all — the moment there is bank interest they differ, and forcing them to agree misstates the return.</li>
       </ul>
@@ -1231,20 +1237,32 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
         <div class="cx">
           <div class="cl">A quick sanity check on the prior year</div>
-          <p>The gap between last year's <em>book</em> net income and last year's ordinary income <b>is</b> last year's M-1. If that gap is roughly half the prior year's meals, you have just confirmed both the convention and your understanding of it.</p>
+          <p>The gap between last year&#8217;s <em>book</em> net income and last year&#8217;s <b>Schedule K line 18</b> <b>is</b> last year&#8217;s M-1. If that gap is roughly half the prior year's meals, you have just confirmed both the convention and your understanding of it.</p>
         </div>
       </div>
     </div>
 
-    <div class="subbar reveal"><span class="tag">8C</span><h3>Schedule M-2 — the AAA</h3></div>
+    <div class="subbar reveal"><span class="tag">§10</span><h3>Schedule M-2 — the AAA</h3></div>
     <div class="indent">
       <ul class="dots reveal">
         <li><b>Beginning balance = last year's ending balance.</b> Copy it from the filed return.</li>
         <li>Add the year's income <b>or</b> subtract the year's loss; subtract <b>non-deductible expenses</b> (the same figure as Schedule K 16c); subtract <b>distributions</b>.</li>
         <li>AAA <b>can</b> go negative from losses. It cannot be driven negative <em>by distributions</em>.</li>
         <li>⚠️ <b>Shareholder capital contributions do NOT increase AAA.</b> They increase <b>basis</b> (§12). Two different accounts that beginners merge.</li>
+        <li>⚠️ <b>Nor does tax-exempt income.</b> It increases <b>basis</b> (§12&#8217;s formula) but goes to the <b>Other Adjustments Account</b>, not the AAA. Same trap, different direction.</li>
       </ul>
     </div>
+  </section>
+
+  <!-- ==================== §11 ==================== -->
+  <section class="doc" id="s11">
+    <div class="shead reveal"><span class="schip">§11</span><h2>Schedule K-1 — one per shareholder</h2></div>
+    <p class="slede reveal">Each K-1 carries that shareholder&#8217;s <b>percentage share</b> of every Schedule K line.</p>
+    <ul class="dots reveal">
+      <li><b>The percentage is ownership</b> — and if it changed during the year the allocation is done <b>per day, per share</b>. Get help before attempting that by hand.</li>
+      <li>⚠️ <b>The S-corp K-1 has no capital account analysis.</b> That is the partnership K-1. Do not go looking for it.</li>
+      <li><b>Box 16c and the §199A statement travel to the owner too.</b> An owner whose K-1 is missing the QBI statement cannot complete their own return.</li>
+    </ul>
   </section>
 
   <!-- ==================== §12 ==================== -->
@@ -1252,13 +1270,39 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="shead big reveal"><span class="schip">§12</span><h2>Form 7203 — basis, and why a loss may not be deductible</h2></div>
     <p class="slede reveal">This is the part of an S-corp return that beginners omit, and it is often the part that <b>changes the answer</b>.</p>
 
+    <p class="reveal">A shareholder can only deduct losses up to their <b>basis</b> in the company. Roughly:</p>
+
     <div class="intake reveal"><pre>   what they put IN  (stock purchased + capital contributed)
  + their share of income in profitable years
- − their share of losses already deducted
- − distributions they received
- = basis</pre></div>
+ + their share of tax-exempt income
+ − distributions they received             ← these come off FIRST
+ − their share of non-deductible expenses  ← the Schedule K 16c figure
+ − their share of losses already deducted  ← these come off LAST
+ = stock basis</pre></div>
 
-    <p class="reveal">A loss beyond basis is <b>suspended</b> — carried forward until basis is restored, not deducted now. <b>Form 7203 is required</b> when a shareholder claims a loss, receives a distribution, disposes of stock, or receives a loan repayment from the company.</p>
+    <p class="reveal"><b>The order matters, not just the arithmetic.</b> Distributions reduce basis <em>before</em> losses do, so a shareholder who took money out has less room left for the loss than a straight subtraction would suggest.</p>
+
+    <p class="reveal">And this is <b>STOCK basis only</b>. A shareholder who <b>lent</b> the company money also has <b>debt basis</b>, which can absorb losses after stock basis is exhausted — and is restored in its own order before stock basis is. That is why question 1 below matters.</p>
+
+    <p class="reveal">A loss beyond that is <b>suspended</b> — carried forward until basis is restored, not deducted now.</p>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The failure that is not a deferral</div>
+        <p>A <b>distribution above stock basis is a TAXABLE CAPITAL GAIN</b> on the shareholder&#8217;s 1040. Every other basis problem here postpones a deduction; this one creates income the shareholder has to report. It is why &#167;10 says the AAA decides whether distributions are tax-free. <b>If a shareholder took distributions in a loss year, check this before anything else.</b></p>
+      </div>
+    </div>
+
+    <p class="reveal"><b>Form 7203 is required</b> when a shareholder claims a loss, receives a <b>non-dividend</b> distribution, disposes of stock, or receives a loan repayment from the company.</p>
+
+    <div class="callout info reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14" r="3.2"/><path d="M10.4 11.8L19 5"/><path d="M16.2 7.2l1.9 1.9"/></svg></span>
+      <div class="cx">
+        <div class="cl">It is filed with the SHAREHOLDER&#8217;S Form 1040 — not with the 1120-S</div>
+        <p>It appears in this procedure because the corporate return is where you have the numbers to compute it, and because it decides whether the loss you just allocated is actually usable. <b>Prepare it here; it travels with the owner&#8217;s personal return.</b> If the firm does not prepare that 1040, the figures still have to reach whoever does.</p>
+      </div>
+    </div>
 
     <div class="subbar reveal"><span class="tag">12A</span><h3>Two questions to settle before you compute it</h3></div>
     <div class="indent">
@@ -1267,6 +1311,16 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <li><b>Are contributions proportionate to ownership?</b> If one owner funded the business and the other did not, <b>their basis is very different at identical ownership percentages</b> — so the same loss allocation can be fully deductible for one and partly suspended for the other. <b>Check each shareholder separately. Never assume symmetry.</b></li>
       </ol>
     </div>
+  </section>
+
+  <!-- ==================== §13 ==================== -->
+  <section class="doc" id="s13">
+    <div class="shead reveal"><span class="schip">§13</span><h2>State</h2></div>
+    <ul class="dots reveal">
+      <li><b>Florida does not tax S-corporations&#8217; income</b>, so there is normally no Form F-1120 for a Florida S-corp with no federal taxable income. <b>Confirm per client</b> rather than assuming.</li>
+      <li>The <b>Florida Annual Report</b> is a completely separate filing on its own calendar. It is <b>not</b> part of this return.</li>
+      <li>If the company operated in <b>another state</b>, that state may require a return regardless. Check where the business actually had activity — not just where it is registered.</li>
+    </ul>
   </section>
 
   <!-- ==================== §14 ==================== -->
@@ -1308,6 +1362,26 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <li><b>Zero officer compensation without a decision.</b> A shareholder who works in the business is expected to take a reasonable salary. Not doing so may be defensible in a heavy loss year — but it must be a documented decision, not an oversight.</li>
       <li><b>Changing a method because it looks wrong.</b> Consistency with the prior year is itself a tax position. Raise it with Lilian; do not fix it silently.</li>
     </ol>
+  </section>
+
+  <!-- ==================== §16 ==================== -->
+  <section class="doc" id="s16">
+    <div class="shead reveal"><span class="schip">§16</span><h2>Where things live</h2></div>
+    <div class="tablewrap reveal">
+      <table class="links">
+        <thead><tr><th>What</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td>The client&#8217;s prior-year filed return</td><td>Double → <code>JK Accounting Group &gt; Tax Return Filed &gt; &lt;year&gt;</code></td></tr>
+          <tr><td>Reading that return <b>safely</b></td><td><code>tools/redact-doc/</code> — <b>never open the PDF directly</b></td></tr>
+          <tr><td>The rules for reading client documents at all</td><td>the <code>double-mcp</code> skill</td></tr>
+          <tr><td>What the firm knows about this client</td><td><code>projects/client-intelligence/clients/</code></td></tr>
+          <tr><td>Blank IRS forms and instructions</td><td>irs.gov — search the form number</td></tr>
+          <tr><td>A <b>Shopify</b> client&#8217;s inventory figure</td><td>the <code>shopify-year-end-inventory</code> skill — ⚠️ <b>the number Shopify reports is usually not a cost basis</b></td></tr>
+          <tr><td>Owner salary questions</td><td>the <code>reasonable-compensation</code> skill</td></tr>
+          <tr><td>Which clients are ready to prepare</td><td>the <code>tax-season-readiness</code> skill</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- ==================== APPENDIX ==================== -->
@@ -1383,6 +1457,13 @@ differences found and explained: ______________________________________
 
     <div class="subbar reveal"><span class="tag">C</span><h3>Every formula on this return</h3><span class="rt">two kinds of number, and telling them apart is the skill</span></div>
     <div class="indent">
+      <div class="callout warn reveal" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">This appendix is SHORTHAND. The body governs.</div>
+          <p>Every formula here has conditions, exceptions and hedges stated where it is explained — the meals 50%, the discounts treatment, the equity mapping, the tie-outs. <b>If this block and a section disagree, the section is right.</b> <em>(An earlier version of this appendix carried three superseded formulas after the body was corrected and the fixes did not propagate — exactly the failure a quick-reference invites.)</em></p>
+        </div>
+      </div>
       <p class="reveal"><span class="ltag read">read</span> you look it up and copy it — the risk is reading the <b>wrong source</b>. &nbsp; <span class="ltag calc">calculated</span> it falls out of other numbers — the risk is that a wrong input <b>still produces a plausible result</b>.</p>
       <div class="callout ok reveal" role="note">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
@@ -1394,9 +1475,13 @@ differences found and explained: ______________________________________
       <div class="intake reveal"><pre><span class="grp">FORM 1125-A</span>
 line 6  =  line 1 + line 2 + line 3 + line 4 + line 5
 line 8  =  line 6 &minus; line 7
-   rearranged, for whichever one you do not know:
+   rearranged, for whichever one you do not know
+   (these three assume lines 3, 4 and 5 are zero &mdash; the usual case here):
 line 2  =  line 8 + line 7 &minus; line 1        &larr; purchases (the usual unknown)
 line 7  =  line 1 + line 2 &minus; line 8        &larr; ending inventory
+line 1  =  line 8 + line 7 &minus; line 2        &larr; beginning inventory &mdash; a CHECK,
+                                       never a plug: it must equal the
+                                       prior return&#8217;s line 7  (&#167;3)
 
 <span class="grp">FORM 1120-S, PAGE 1</span>
 line 1a =  sales revenue &minus; discounts given + shipping income charged
@@ -1427,7 +1512,11 @@ line 8  =  line 4 &minus; line 7
 line 8  MUST EQUAL  Schedule K line 18   &larr; NOT page 1 line 22
 
 <span class="grp">SCHEDULE M-2 (AAA)</span>
-line 6  =  line 1 + line 2 + line 3 &minus; line 4 &minus; line 5
+line 6  =  COMBINE lines 1 through 5     &larr; the form&#8217;s own word, and it matters:
+                                       line 4 (loss) and line 5 (other reductions)
+                                       are ENTERED AS NEGATIVES. Type them positive
+                                       and subtract them too and you have halved the
+                                       AAA &mdash; a silent, plausible-looking error.
 line 8  =  line 6 &minus; line 7 (distributions)
    where line 1 = LAST year&#8217;s line 8, copied
 
@@ -1437,13 +1526,17 @@ their box  =  the matching Schedule K line &times; their ownership percentage
    the percentages               MUST TOTAL  100%
 
 <span class="grp">FORM 7203 &mdash; BASIS</span>
-basis  =  stock purchased + capital contributed
-          + their share of income in profitable years
-          &minus; their share of losses already deducted
-          &minus; distributions received
+stock basis  =  stock purchased + capital contributed
+             +  their share of income in profitable years
+             +  their share of tax-exempt income
+             &minus;  distributions received                  &larr; FIRST
+             &minus;  their share of non-deductible expenses  (the Sch K 16c figure)
+             &minus;  their share of losses already deducted  &larr; LAST
 
-deductible loss  =  the LESSER of (their share of the loss) and (their basis)
-suspended loss   =  their share of the loss &minus; the deductible amount</pre></div>
+deductible loss this year  =  the LESSER of (their share of the loss)
+                                        and (their basis)
+suspended loss             =  their share of the loss &minus; the deductible amount</pre></div>
+      <p class="reveal"><b>The ordering is part of the formula.</b> Distributions come off <em>before</em> losses, so a shareholder who took money out has less room left for the loss than a straight subtraction suggests. <b>This is STOCK basis only</b> — a shareholder who lent the company money also has <b>debt basis</b>. Full treatment in §12.</p>
       <div class="callout warn reveal" role="note">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
         <div class="cx">
