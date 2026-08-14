@@ -269,7 +269,10 @@ with tempfile.TemporaryDirectory() as td:
 #    Found 2026-08-14 on a real filed 1120-S that carried four SSN/ITINs the
 #    first run did not see. These cases exist so it cannot happen quietly again.
 
-from redact import decode_glyph_names, looks_like_text, residual_glyphs  # noqa: E402
+from redact import (  # noqa: E402
+    GLYPH_TOKEN_TOLERANCE, MIN_DISTINCT_CHARS, decode_glyph_names, glyph_tokens,
+    looks_like_text,
+)
 
 
 def _as_glyphs(s: str) -> str:
@@ -277,9 +280,9 @@ def _as_glyphs(s: str) -> str:
     return "".join(f"/uni{ord(c):04X}" for c in s)
 
 
-def _as_undecodable(s: str) -> str:
+def _as_undecodable(s: str, prefix: str = "/g") -> str:
     """A subset font's OTHER conventions — glyph SLOTS, naming no code point."""
-    return "".join(f"/g{ord(c) % 97 + 1}" for c in s)
+    return "".join(f"{prefix}{ord(c)}" for c in s)
 
 
 decoded, n = decode_glyph_names(_as_glyphs("SSN 123-45-6789"))
@@ -361,27 +364,70 @@ with tempfile.TemporaryDirectory() as td:
             "undecodable glyph tokens reached the output file"
         )
 
-    # ══ ONE GOOD PAGE MUST NOT VOUCH FOR A BAD ONE. A whole-document alphabet
-    #    count is an average, and an average hides the mixed case. Here page 2 is
-    #    an unreadable extraction that leaves NO glyph tokens behind — so the
-    #    residual detector passes it and the document-level gate is satisfied by
-    #    page 1's rich prose. Only a PER-PAGE measure catches it, and the operator
-    #    has to be told, or an absence on page 2 reads as evidence.
+    # ══ THE WARNING MUST NOT CRY WOLF. A number-dense page — a depreciation
+    #    schedule, a K-1 allocation grid — extracts perfectly and uses barely a
+    #    dozen distinct characters. An earlier version ran the alphabet gate per
+    #    page and flagged 12 of 18 pages of a CLEAN return, telling the reader to
+    #    distrust exactly the schedules carrying the figures. A warning that fires
+    #    on two thirds of every return is a warning nobody reads.
     import contextlib, io  # noqa: E402
     good = ("Zephyr Quarry Junction LLC, Form 1120-S, U.S. Income Tax Return for an "
             "S Corporation; ordinary business income (loss) & amortization per "
             "Schedule K-1, Part III, box 1. " * 12)
-    (tmp / "twopage.pdf").write_bytes(_minimal_pdf([good, "0123456789 " * 300]))
+    schedule = "6,753.00 788.00 5,965.00 2,261.00 188.00 2,073.00 9,306.00 776.00 " * 40
+    (tmp / "twopage.pdf").write_bytes(_minimal_pdf([good, schedule]))
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
         rc = _run(tmp / "twopage.pdf", tmp / "g5.txt")
     report = buf.getvalue()
     if rc != 0:
-        FAILURES.append("_run · the two-page control did not complete")
-    elif "barely extracted" not in report or "2" not in report.split("barely extracted")[1][:20]:
+        FAILURES.append("_run · a clean two-page return with a figures schedule was refused")
+    elif "barely extracted" in report:
         FAILURES.append(
-            "_run · page 2 was an unreadable extraction and was NOT reported — "
-            "the per-page gate is not running, so one good page vouched for a bad one"
+            "_run · a perfectly-extracted figures schedule was reported as 'barely extracted' — "
+            "the warning is crying wolf and will be tuned out"
+        )
+
+    # ── …but it must still fire when a page really did give up almost nothing.
+    #    That is the warning `organizer-review` leans on: an absence on such a
+    #    page is not evidence, and nobody can know that unless it is named.
+    (tmp / "thinpage.pdf").write_bytes(_minimal_pdf([good, "x"]))
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = _run(tmp / "thinpage.pdf", tmp / "g8.txt")
+    report = buf.getvalue()
+    if rc != 0:
+        FAILURES.append("_run · a document with one near-empty page was refused outright")
+    elif "barely extracted" not in report or "[2]" not in report:
+        FAILURES.append(
+            "_run · a near-empty page 2 was NOT reported — an absence on it would be read "
+            "as evidence that something is not on the return"
+        )
+
+    # ══ THE REALISTIC SHAPE: the form template renders, the FILLED-IN taxpayer
+    #    fields do not. A handful of glyph tokens hidden in an otherwise-good
+    #    page — no bad page for a per-page check to find, and the alphabet is
+    #    rich. Only counting the tokens catches this, and the budget must be
+    #    smaller than one identifier.
+    laced = good + _as_undecodable("123-45-6789", "/C") + " " + good
+    (tmp / "laced.pdf").write_bytes(_minimal_pdf(laced))
+    if _run(tmp / "laced.pdf", tmp / "g6.txt") != 5 or (tmp / "g6.txt").exists():
+        FAILURES.append(
+            "_run · LEAK: an SSN encoded as glyph names inside a good page was WRITTEN — "
+            "the token budget is larger than an identifier"
+        )
+
+    # ══ AND SPREAD THIN: short glyph pages, each individually under every floor,
+    #    interleaved with good ones. The document-level count is what sees it.
+    pages = []
+    for _ in range(6):
+        pages.append(good)
+        pages.append(_as_undecodable("SSN 123-45-6789", "/C"))
+    (tmp / "spread.pdf").write_bytes(_minimal_pdf(pages))
+    if _run(tmp / "spread.pdf", tmp / "g7.txt") != 5 or (tmp / "g7.txt").exists():
+        FAILURES.append(
+            "_run · LEAK: SSNs spread across SHORT glyph pages were written — "
+            "each page hid under the per-page floors"
         )
 
     # A properly-read document must not be refused by the residual check.
@@ -392,20 +438,71 @@ with tempfile.TemporaryDirectory() as td:
     if _run(tmp / "clean.pdf", tmp / "g4.txt") != 0:
         FAILURES.append("_run · a normal document was refused by the residual-glyph check")
 
-# ── The residual detector itself, and the shapes it must know about.
-for shape in ("/g11", "/cid49", "/G34", "/index0031", "/glyph7"):
-    if residual_glyphs(f"text {shape} more") != 1:
-        FAILURES.append(f"RESIDUAL · {shape!r} was not recognised as an undecodable glyph name")
-# Ordinary prose containing slashes must NOT be read as glyph names.
-for innocent in ("and/or", "N/A", "12/31/2024", "w/ the client", "Schedule K-1"):
-    if residual_glyphs(innocent):
-        FAILURES.append(f"RESIDUAL · false positive on ordinary text {innocent!r}")
+# ══ THE DETECTOR MUST NOT BE A LIST OF NAMES. An independent review defeated an
+#    enumerated version of this check in a single pass — /C49, /char49, /gid49,
+#    /id49, /x49, /T49, /gAF all sailed through a list built around /uni, /g,
+#    /cid, /index and /glyph. pypdf writes whatever the FONT calls the glyph, so
+#    every one of these is a real shape and the list can never be finished.
+#    What cannot be varied is the structure: adjacent tokens, glyph-shaped.
+_SECRET = "SSN 123-45-6789"
+for prefix in ("/g", "/C", "/c", "/char", "/gid", "/id", "/a", "/x", "/n", "/T", "/F", "/G"):
+    n = glyph_tokens(_as_undecodable(_SECRET, prefix))
+    if n <= GLYPH_TOKEN_TOLERANCE:
+        FAILURES.append(
+            f"DETECT · an SSN encoded as {prefix}NN glyph names scored {n} and would be WRITTEN"
+        )
+# Hex-suffixed glyph names (/gAF) are just as real as decimal ones.
+if glyph_tokens("".join("/g%02X" % ord(c) for c in _SECRET)) <= GLYPH_TOKEN_TOLERANCE:
+    FAILURES.append("DETECT · hex-suffixed glyph names (/gAF) were not detected")
+
+# Ordinary return text must score at or under tolerance — a false positive here
+# refuses a real client document and sends the operator away for another PDF.
+for innocent in (
+    "The shareholder and/or the corporation may elect.",
+    "Line 9c N/A  Line 9d N/A  Line 9e N/A",
+    "Period 01/01/2025 through 12/31/2025, filed 09/15/2026.",
+    "Attach Sch A/B/C/D/E/F as applicable to this return.",
+    "See https://www.irs.gov/pub/irs-pdf/f1120s.pdf for instructions.",
+    "Mail w/ Form 7004 c/o the service center.",
+    "Form 1125-A line 8; Form 1120-S page 1 line 2; Form 4562 line 22.",
+    "Ownership 1/2 and 1/2; allocation 50/50 per share.",
+    "A/R 12,340  A/P 5,983  P/L summary attached.",
+    "Saved under /Clients/Kolo/2025/Returns/Final.pdf on the share.",
+    # ADJACENCY IS LOAD-BEARING. These tokens are glyph-SHAPED (letters then hex)
+    # but stand apart, which is what separates a document that mentions forms
+    # from a font dump. Drop the {3,} and this refuses a real return.
+    "See Exhibit /A1, Exhibit /B2, and Exhibit /C3 attached hereto.",
+    "Statements /Stmt1 /Stmt2 /Stmt3 accompany this return.",
+):
+    if glyph_tokens(innocent) > GLYPH_TOKEN_TOLERANCE:
+        FAILURES.append(f"DETECT · FALSE POSITIVE would refuse a real document: {innocent!r}")
+
+# ── The tolerance itself is pinned. It must stay far below one SSN (9 tokens),
+#    because the budget IS the leak: a tolerance of 20 is worth two SSNs.
+if GLYPH_TOKEN_TOLERANCE >= 9:
+    FAILURES.append(
+        f"DETECT · GLYPH_TOKEN_TOLERANCE is {GLYPH_TOKEN_TOLERANCE} — one SSN is 9 tokens, "
+        "so this budget lets a whole identifier through"
+    )
+
+# ── And the alphabet threshold is pinned from the other side: a realistic
+#    ALL-CAPS tax package measures 39 distinct characters, and a threshold of 40
+#    refused one. Anything at or above 40 is a regression, not a tightening.
+if MIN_DISTINCT_CHARS > 38:
+    FAILURES.append(
+        f"GATE · MIN_DISTINCT_CHARS is {MIN_DISTINCT_CHARS}; a real ALL-CAPS return measures "
+        "39 distinct characters and would be refused"
+    )
+_allcaps = ("KOLO FLORIDA INC — FORM 1120-S, U.S. INCOME TAX RETURN FOR AN S CORPORATION. "
+            "ORDINARY BUSINESS INCOME (LOSS): 88,065. SCHEDULE K-1, PART III, BOX 1. " * 20)
+if not looks_like_text(_allcaps)[0]:
+    FAILURES.append("GATE · an ALL-CAPS return extraction was refused as unreadable")
 
 # ── Adobe's MULTI-CHARACTER uni form. A greedy {4,6} eats one group plus two
 #    digits of the next and welds the remainder to a decoded character.
 if decode_glyph_names("/uni00310032")[0] != "12":
     FAILURES.append("GLYPH · a multi-character /uniXXXXXXXX name did not decode fully")
-if residual_glyphs(decode_glyph_names("/uni00310032/uni0033")[0]):
+if "/uni" in decode_glyph_names("/uni00310032/uni0033")[0]:
     FAILURES.append("GLYPH · decoding a multi-character name left a residual token behind")
 
 # ── A lone surrogate must never reach chr()'s output: dst.write_text() would

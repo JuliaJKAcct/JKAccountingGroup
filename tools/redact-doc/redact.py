@@ -93,7 +93,7 @@ def normalise(text: str) -> str:
 #    decoded. Those are strictly worse than the case above, because a document
 #    that is PARTLY decodable ends up with a rich-looking alphabet that disarms
 #    the diversity gate below while thousands of undecodable tokens ride into the
-#    written file. RESIDUAL_GLYPH exists to catch exactly that, and it is the
+#    written file. glyph_tokens() exists to catch exactly that, and it is the
 #    primary detector — the diversity gate is the backstop, not the other way
 #    round. _(Found by the independent review of PR #219, which built the mixed
 #    document and walked it straight through the first version of this fix.)_
@@ -104,12 +104,40 @@ def normalise(text: str) -> str:
 # explicitly and decoded one at a time.
 GLYPH_NAME = re.compile(r"/uni((?:[0-9A-Fa-f]{4})+)(?![0-9A-Fa-f])|/u([0-9A-Fa-f]{4,6})(?![0-9A-Fa-f])")
 
-# Glyph-name shapes that carry NO code point and therefore cannot be recovered.
-# `/uni` and `/u` appear here too: anything of that shape still present after
-# decoding was malformed and was deliberately left alone.
-RESIDUAL_GLYPH = re.compile(
-    r"/(?:uni[0-9A-Fa-f]*|u[0-9A-Fa-f]{4,6}|g\d+|G\d+|cid\d+|CID\d+|index\d+|glyph\d+)\b"
-)
+# ── Detecting the glyph names that CANNOT be decoded.
+#
+# ⚠️ DO NOT ENUMERATE GLYPH NAMES. The first version of this check listed the
+#    conventions it knew — `/uni`, `/g`, `/cid`, `/index`, `/glyph` — and an
+#    independent review defeated it in one pass by using `/C49`, `/char49`,
+#    `/gid49`, `/id49`, `/x49`, `/T49`, `/gAF` … pypdf writes *whatever the
+#    glyph is called*, and the font decides that, so any list is a list of the
+#    attacks someone already thought of. Two SSNs, a date of birth and an
+#    account number went into a written file at exit 0 with no warning.
+#
+# So detect the STRUCTURE instead, which the font cannot vary: a broken
+# extraction emits **adjacent `/token` groups with nothing between them**, and
+# the tokens are **glyph-shaped** — a short alphabetic prefix followed by
+# digits or hex. Natural text does neither. `Sch A/B/C/D/E/F` chains tokens but
+# they carry no numeric part; `/Form1120` is glyph-shaped but stands alone.
+# It takes both to count.
+GLYPH_RUN = re.compile(r"(?:/[A-Za-z][A-Za-z0-9._]{0,30}){3,}")
+GLYPH_SHAPED = re.compile(r"/[A-Za-z]{1,6}[0-9A-Fa-f]{1,8}(?![0-9A-Za-z])")
+
+# How many glyph-shaped tokens inside runs are tolerated before the file is
+# refused. It is small ON PURPOSE: the smallest payload that matters — one SSN —
+# is nine tokens, and the previous budget of 20 was therefore worth two of them.
+# Real text measured 0 in every probe; this leaves room for an oddity without
+# ever leaving room for an identifier.
+GLYPH_TOKEN_TOLERANCE = 2
+
+
+def glyph_tokens(text: str) -> int:
+    """Glyph-shaped tokens sitting inside adjacent-token runs.
+
+    Both conditions together are the signal. Either alone has false positives in
+    ordinary return text; the pair has none in any probe run against it.
+    """
+    return sum(len(GLYPH_SHAPED.findall(run)) for run in GLYPH_RUN.findall(text))
 
 # Lone surrogates are not encodable as UTF-8. `chr()` will happily produce one
 # from `/uniD800`, and the failure would then land on dst.write_text() AFTER the
@@ -146,11 +174,6 @@ def decode_glyph_names(text: str) -> tuple[str, int]:
     return GLYPH_NAME.sub(sub, text), n
 
 
-def residual_glyphs(text: str) -> int:
-    """How many un-decodable glyph-name tokens are still sitting in the text."""
-    return len(RESIDUAL_GLYPH.findall(text))
-
-
 # ── The intelligibility gate. Every check in this tool used to measure the
 #    VOLUME of extracted text; none measured whether it was text at all.
 #
@@ -177,7 +200,7 @@ def residual_glyphs(text: str) -> int:
 #
 #    And note what this gate is now FOR: it is the backstop for encoding failures
 #    that leave no glyph names behind. The direct detector for the glyph case is
-#    residual_glyphs() above, which does not care about alphabet size at all.
+#    glyph_tokens() above, which does not care about alphabet size at all.
 MIN_DISTINCT_CHARS = 30
 DIVERSITY_MIN_LEN = 2_000
 
@@ -457,18 +480,20 @@ def _run(src: Path, dst: Path) -> int:
     # This check does not care about the alphabet: it counts the wreckage
     # directly. A handful of tokens is tolerated (a real return can mention a
     # PDF internal in an attachment); a systemic failure is thousands.
-    residual = residual_glyphs(raw)
-    if residual > 20 or (raw and residual / max(len(raw), 1) > 0.0005):
+    residual = glyph_tokens(raw)
+    if residual > GLYPH_TOKEN_TOLERANCE:
+        bad_pages = [i + 1 for i, p in enumerate(pages) if glyph_tokens(p)]
         print(
-            f"UNREADABLE EXTRACTION: {len(pages)} page(s) carrying {residual:,} glyph-name\n"
-            "token(s) that cannot be decoded — `/g11`, `/cid49`, `/index0031` and the like\n"
-            "name a slot in a subset font, not a character, so there is nothing to recover.\n"
+            f"UNREADABLE EXTRACTION: {residual:,} glyph-name token(s) that cannot be decoded,\n"
+            f"on page(s) {bad_pages}. A name like `/g11`, `/C49` or `/cid49` identifies a slot\n"
+            "in a subset font, not a character, so there is nothing to recover from it.\n"
             "Nothing was written.\n"
             "⚠️  DO NOT re-run and trust a '0 masked' report from this file: the redaction\n"
-            "    patterns cannot match these tokens, so zero means BLIND, not clean — and a\n"
-            "    partly-decoded document is the WORST case, because the readable half makes\n"
-            "    the unreadable half look fine. Ask for a properly generated PDF from the\n"
-            "    tax software.",
+            "    patterns cannot match these tokens, so zero means BLIND, not clean. This\n"
+            "    fires even when most of the document read perfectly — a PDF whose FORM\n"
+            "    renders fine while the filled-in taxpayer fields do not is the most\n"
+            "    dangerous shape there is, not the least. Ask for a properly generated PDF\n"
+            "    from the tax software.",
             file=sys.stderr,
         )
         return 5
@@ -526,16 +551,15 @@ def _run(src: Path, dst: Path) -> int:
     # absence in the return: a form can be sitting on a page that did not
     # extract. Reported here so the reader cannot fail to see it.
     #
-    # ⚠️ Measured PER PAGE, not just per document. One good page must not be able
-    # to vouch for a stack of bad ones: a whole-document alphabet count is an
-    # average, and an average hides exactly the mixed case this tool now exists
-    # to catch. A page is reported when it gave up almost nothing, OR when what
-    # it gave up does not read as text.
-    thin = [
-        i + 1
-        for i, p in enumerate(pages)
-        if len(re.sub(r"\W", "", p)) < 200 or not looks_like_text(p)[0]
-    ]
+    # ⚠️ This measures VOLUME per page and nothing else, deliberately.
+    # An earlier version also ran the alphabet gate here, and it cried wolf on
+    # every real return: a depreciation schedule uses 14 distinct characters, a
+    # K-1 allocation grid 11, an all-caps label page 28 — all perfectly extracted.
+    # It flagged 12 of 18 pages of a clean return and told the reader to distrust
+    # exactly the schedules carrying the figures, which is how a warning that
+    # matters gets tuned out. The mixed-extraction case it was meant to catch is
+    # caught by glyph_tokens() above, which refuses outright.
+    thin = [i + 1 for i, p in enumerate(pages) if len(re.sub(r"\W", "", p)) < 200]
 
     # The ONLY thing this tool ever prints about the document's contents.
     print(f"redacted → {dst}  ({len(pages)} pages, {len(redacted):,} chars)")

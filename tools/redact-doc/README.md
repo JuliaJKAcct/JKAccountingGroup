@@ -91,23 +91,35 @@ Three changes close it, and they are different jobs:
   point, so the text is decoded back before any pattern runs. Faithful, not a guess. When this
   path is used the tool **says so**, and warns that column alignment came through worse than
   usual — read a figure's position with suspicion and prefer one you can corroborate.
-- **A residual-token check, which is the PRIMARY detector.** After decoding, anything still
-  shaped like a glyph name is counted, and a systemic count **refuses the file**. This measures
-  the wreckage directly instead of inferring it from alphabet size, so the partly-decoded case
-  cannot hide behind its readable half.
-- **A gate that measures intelligibility, not volume** — the backstop, for encoding failures
-  that leave no glyph names behind. Natural English, even the number-dense English of a return,
-  draws on a wide alphabet; a character-level extraction failure draws on a tiny one. Below the
-  threshold the tool **refuses to write**. It applies only above ~2,000 characters, because a
-  short document's alphabet proves nothing either way, and it runs **per page as well as per
-  document** — a whole-document average is exactly what lets one good page vouch for a stack of
-  bad ones.
+- **A structural detector, which is the PRIMARY one, and it does NOT enumerate glyph names.**
+  This is the part that took three attempts. A list of known conventions — `/uni`, `/g`, `/cid`,
+  `/index`, `/glyph` — was defeated in one pass with `/C49`, `/char49`, `/gid49`, `/id49`,
+  `/x49`, `/T49`, `/gAF`. **pypdf writes whatever the font calls the glyph**, and the font
+  decides, so any list is a list of the attacks someone already thought of.
 
-  ⚠️ **Calibration, because the first attempt got this wrong in the safe-looking direction.**
-  Two measured points bracket the threshold: the real broken 1120-S came in at **27 distinct
-  characters**, and a realistic ALL-CAPS tax-package extraction — a perfectly good document — at
-  **39**. The first version set the bar at 40 and therefore **refused a real return by one
-  character**, telling the operator to go and ask for a different PDF. It now sits at 30.
+  What the font *cannot* vary is the shape of the wreckage: **adjacent `/token` groups with
+  nothing between them**, whose tokens are **glyph-shaped** (a short alphabetic prefix then
+  digits or hex). Ordinary return text does one or the other, never both — `Sch A/B/C/D/E/F`
+  chains tokens carrying no numeric part; `/Form1120` is glyph-shaped but stands alone. Measured
+  across twelve realistic return and prose strings: **zero**. Measured against an SSN encoded in
+  twelve different conventions: **fifteen tokens every time**.
+
+  Above a **tolerance of 2** the tool refuses. The tolerance is small on purpose — **the budget
+  is the leak.** An earlier version allowed 20 tokens, which is worth two whole SSNs.
+- **A diversity gate — the backstop**, for encoding failures that leave no glyph names at all.
+  Natural English, even the number-dense English of a return, draws on a wide alphabet; a
+  character-level failure draws on a tiny one. Below the threshold the tool refuses. It applies
+  only above ~2,000 characters and only to the **whole document**.
+
+  ⚠️ **Calibration, twice corrected, and both errors are worth knowing.** The bar started at 40 —
+  but a realistic ALL-CAPS tax package measures **39 distinct characters**, so it refused a
+  perfectly good return by one character and told the operator to go and find another PDF. The
+  broken document measured **27**. It now sits at **30**. And this gate was briefly run *per
+  page*, where it flagged **12 of 18 pages of a clean return** — a depreciation schedule uses 14
+  distinct characters, a K-1 allocation grid 11 — telling the reader to distrust exactly the
+  schedules carrying the figures. A warning that fires on two thirds of every return is a warning
+  nobody reads. **Per-page reporting is now volume only**; the mixed-extraction case it was meant
+  to catch is caught by the structural detector, which refuses outright.
 
 **If you see the UNREADABLE EXTRACTION message, do not re-run and trust a "0 masked" report.**
 Ask for a properly generated PDF from the tax software.

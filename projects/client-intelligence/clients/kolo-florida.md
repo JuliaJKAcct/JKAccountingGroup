@@ -139,8 +139,20 @@ the actual details.
   sharply. Measure the ratio against `Shopify Sales`, never against total income.
   ⓘ **How Lilian describes the method, and it fits:** cost is *estimated* at **30% of the selling
   price** because the true cost of the goods is not known (2026-08-14). That estimate is what
-  drives **cost of goods sold**; ending inventory is then the residual (rule 3 above), which is why
-  the schedule closes without anyone ever valuing the stock directly. _(2026-08-14.)_
+  drives **cost of goods sold** (rule 2). Ending inventory is **observed** off the balance sheet
+  (rule 1) and **purchases** is the figure that falls out (rule 3) — so nobody ever values the
+  stock directly, and nobody ever counts the purchases directly either.
+  ⚠️ **Which means the ending inventory is NOT independent evidence of what the goods cost.** It
+  is a balance carried forward and reduced by an estimate. A session that reads the schedule
+  backwards will "derive" a true cost from it and be wrong — that error was made here on
+  2026-08-14 and caught in review. _(2026-08-14.)_
+  🔎 **Unresolved, and it may matter more than it looks:** Shopify's "Cost per item" is a flat
+  **30% of retail** (bullet 2) and the books' cost of goods sold runs at about **31% of Shopify
+  Sales** (this bullet). Those are almost certainly **the same policy applied in two places**
+  rather than two independent facts — in which case the entire Form 1125-A rests on that one
+  assumption, and calling the Shopify figure unusable while accepting the book figure needs a
+  reason. **Not established either way; ask before treating them as independent.** _(Raised by the
+  independent review, 2026-08-14.)_
 - 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
   the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
   — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
