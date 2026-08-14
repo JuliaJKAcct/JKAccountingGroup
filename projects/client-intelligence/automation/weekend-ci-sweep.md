@@ -172,9 +172,18 @@ was said). Better a sourced, low-confidence note than nothing.
 | Maria Contreras | 710646 |
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
 | Grigoriy & Margarita Melomed | 710633 |
+| M5 Studio Miami | *(none — no Double account confirmed; search Double by name first, then sweep by name)* |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **M5 Studio Miami has no Double id, and that is not an oversight.** It is a **company set-up**
+> client (EIN application in flight, 2026-08-14) and nobody has established whether it exists in
+> Double at all — so the run should **search Double by name first**, and if there is no client,
+> skip that plane and sweep from Gmail / Ping / Drive. If it DOES find one, record the id in the
+> **client file's §2/§7** (inside the run's commit scope) and leave this row to a human.
+> **It gets no row in [`sweep-state.md`](./sweep-state.md)** — like every newly-added client, rule
+> (b) gives it one full historical pass first. It will be a short one; that is fine.
 
 > ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
 > archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived
@@ -361,6 +370,7 @@ CLIENTS (name -> Double id):
 - Maria Contreras -> 710646
 - Iurii Iakovenko & Alina Yakovenko -> 710639
 - Grigoriy & Margarita Melomed -> 710633
+- M5 Studio Miami -> NO ID: search Double by name first; if there is no client, skip the Double plane and sweep by name from Gmail/Ping/Drive. If you DO find one, record the id in the client file's §2/§7 (in scope) and leave the scope table to a human
   (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
 
 FOR EACH CLIENT:

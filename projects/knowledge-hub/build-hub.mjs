@@ -1589,6 +1589,21 @@ const SOP_GROUPS = [
         } },
     ],
   },
+  {
+    // LAST on purpose: it is not a procedure, and the Procedures view's own copy promises
+    // "firm-wide procedures that fit any client come first". Its own group because the two
+    // questions it answers ("what is our fax number?", "can Lilian be on a 2848?") are not
+    // company-formation questions and nobody would look for them under that heading.
+    name: 'The firm', note: 'Our own details — the values other people\'s forms ask for',
+    items: [
+      // A reference sheet, not a procedure — deliberately no flow/schema (the render treats
+      // both as optional), and kicker/readerKick so it is not labelled an SOP. Straight
+      // apostrophes only: Hub search is a plain substring test over title + blurb.
+      { file: 'firm-identity.md', title: 'The Firm\'s Own Details',
+        kicker: 'Reference', readerKick: 'Firm reference sheet',
+        blurb: 'Our address, the company fax, everyone\'s direct line — the values other people\'s forms keep asking for, in one place. And who may sign what for a client: an SS-4 designee or a Form 8821 can be anyone, but a Form 2848 may only name someone eligible to practice before the IRS.' },
+    ],
+  },
 ];
 
 // id → title for every SOP shown in the Hub, so mdInlineHub can turn a relative `.md`

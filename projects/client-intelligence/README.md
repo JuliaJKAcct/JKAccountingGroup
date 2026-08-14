@@ -181,7 +181,7 @@ client-intelligence/
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (45 so far — see the Clients index below)
+└── clients/               ← one file per client (46 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -198,6 +198,7 @@ client-intelligence/
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |
 | MASCIAVE DESIGN STUDIO LLC | [`clients/masciave-design-studio.md`](./clients/masciave-design-studio.md) | Lilian | In progress — enriched (Double + Gmail) |
+| M5 Studio Miami | [`clients/m5-studio-miami.md`](./clients/m5-studio-miami.md) | Lilian | ⚠️ **New 2026-08-14 — company set-up, EIN application (Form SS-4) in progress.** Design services + retail of decorative wall plaster, **no installation** — which rules Construction out of SS-4 line 16. Lines 10 and 17 are settled and **line 16 is Retail** unless the design fees turn out to be the bulk (§5). Its SS-4 designee block set the firm's standing pattern ([EIN SOP §4D](../sops/ein-application-irs.md)). Still unconfirmed: the exact Sunbiz legal name, the entity type, and the responsible party's SSN/ITIN status |
 | iKids Group LLC | [`clients/ikids-group.md`](./clients/ikids-group.md) | Lilian | In progress — enriched (Double + Gmail + QuickBooks); **has a full bookkeeping runbook** — the five capitalization buckets and the role→account map, the AP mailbox we work monthly, the autopaid water bill, and the client's periodic transaction reports |
 | Deep Tech Development Group LLC | [`clients/deep-tech-development.md`](./clients/deep-tech-development.md) | Lilian | In progress — enriched (Double + Gmail) |
 | AURA REMODELING LLC | [`clients/aura-remodeling.md`](./clients/aura-remodeling.md) | Lilian | In progress — enriched (Double + Gmail) |

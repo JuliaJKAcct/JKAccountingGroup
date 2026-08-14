@@ -2,6 +2,8 @@
   CLIENT INTELLIGENCE — TEMPLATE
   Copy this file to clients/<client-slug>.md to start a new client, fill the
   header, and add a row to the Clients index in README.md.
+  Relative links below are written for the DESTINATION (clients/<slug>.md), not for this
+  file's own location — so they resolve once copied, and appear broken while sitting here.
   KEEP EVERY SECTION below, in this order, for every client. Fill what you have;
   mark anything unknown as _(pending)_. Never delete a section because it's empty.
   Never paste secrets or personal contact details here — link to Drive/Double.
@@ -58,7 +60,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | _(add roles as needed)_ | |
 
 - **Double client:** _(pending — link)_
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 
 ## 3. Systems & access
 
@@ -124,7 +126,7 @@ watch-outs, one-off arrangements, history that affects the work.
 > either. So put first whatever would cause the worst mistake if someone didn't know it —
 > **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
-> `clientCard()` — see the [render README's parsing contract](../../.claude/skills/client-intelligence/render/README.md).
+> `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - _(pending)_
 
@@ -161,6 +163,6 @@ reports for this client.
 ## 7. Links
 
 - **Double client:** _(pending — link)_
-- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
+- **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_
-- **Related SOPs:** _(pending — links into ../sops/ once written)_
+- **Related SOPs:** _(pending — links into ../../sops/ once written)_

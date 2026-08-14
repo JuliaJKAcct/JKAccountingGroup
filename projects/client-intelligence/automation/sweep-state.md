@@ -69,11 +69,11 @@ list grows.
 | Denys Melnyk | 2026-08-11 | The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**. ⚠️ **Corrected 2026-08-12** — this row said *"Ping, Gmail and Drive never swept"*, and all three **were** read during the second review on 2026-08-12: **Drive holds no folder of his** (the "Melnyk" files there are a different person) and **Ping records no meeting with him**, while **Gmail turned up the P&L template sent 2026-08-05 and never returned**. **The baseline is deliberately left at 08-11**: it is not established that the Gmail pass was full-historical, and advancing it would bound the next run's search and lose his history for good. **A full historical Gmail pass is still owed.** _(The client's answers of 2026-08-12 came from a call with Lilian — a human telling us a fact never advances a baseline.)_ |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
-> **TWO GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
+> **THREE GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
 > A row is a *bound* on the next run's searches, so writing one for a client who has never been
 > swept would make the next run search from that date forward and **skip their entire history for
 > good**. The routine's rule (b) does the right thing with a missing row: **a client in scope with
-> no row gets a one-time full historical sweep, then a row.** Leave both groups out until that pass
+> no row gets a one-time full historical sweep, then a row.** Leave all three groups out until that pass
 > runs.
 >
 > 1. **Liudmyla's seven**, added to scope 2026-08-11 — the QuickBooks-connected companies the old
@@ -92,11 +92,18 @@ list grows.
 >    sideways while writing up a different household — **no TaxDome note, so no backfill ever saw
 >    them** — with only March 2026 read. Same reasoning: no row until the full pass runs.
 >
+> ⓘ **"It's a brand-new client, there is no history" is NOT a reason to write a row.** M5 Studio
+> Miami (added to scope 2026-08-14) looked like that case and briefly got one — wrongly. A company
+> reaching us for an EIN is **already formed on Sunbiz**, and the correspondence that set it up
+> exists; "nothing exists before today" is a claim nobody searched. **Rule (b) is right here too:**
+> no row, one full historical pass, then a row. It will be a cheap pass, which is the point — it
+> costs little and cannot silently blind the sweep.
+>
 > _(The first two sets happen to number seven each. They are not the same clients, and no group's
 > catch-up covers another's.)_
 >
 > ⚠️ **This list is not the whole population of row-less clients** — reconciling the scope table
-> against this ledger leaves a handful unaccounted for beyond the three groups named. **Do that
+> against this ledger leaves a handful unaccounted for beyond the three groups named above. **Do that
 > reconciliation before trusting the enumeration**; the rule (no row until a full pass) is what
 > governs, not the list.
 
