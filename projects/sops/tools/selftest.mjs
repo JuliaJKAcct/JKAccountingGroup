@@ -261,6 +261,22 @@ section('BTR — the checklist prunes on what the client already holds, and on t
      ['localapply', 'localpay', 'localreview'].every((k) => elsewhere.includes(k)), elsewhere.join(','));
   ok('…and the county half is unchanged, because that part IS county-wide',
      ['ctyapply', 'ctyconfirm'].every((k) => elsewhere.includes(k)));
+
+  // The two axes cross, and both have to be read. A client already holding the CITY
+  // receipt used to get a checklist identical to a first filing — telling the team, in
+  // that client's Double note, to reapply and re-pay for something they already have.
+  const heldCity = ids({ existing: 'city' });
+  ok('a client already holding the city receipt does not refile it',
+     !['cityapply', 'citypay', 'cityuploads'].some((k) => heldCity.includes(k)), heldCity.join(','));
+  ok('…it confirms the held receipt, and the county half is what is outstanding',
+     heldCity.includes('cityheld') && heldCity.includes('ctyapply'), heldCity.join(','));
+  ok('…and there is no city-review round for an application nobody filed',
+     !['cityreview', 'citynotify', 'localreview'].some((k) => heldCity.includes(k)), heldCity.join(','));
+
+  const elsewhereRenew = ids({ city: 'broward', existing: 'both' });
+  ok('a renewal OUTSIDE Hollywood renews rather than applying',
+     elsewhereRenew.includes('localrenew') && !elsewhereRenew.includes('localapply'),
+     elsewhereRenew.join(','));
 }
 
 /* ------------------------------------------------------------ doubleLink -- */

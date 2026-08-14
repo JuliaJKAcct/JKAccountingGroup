@@ -528,7 +528,7 @@ function buildSheet(){
   h += '</div>';
 
   /* --- city --- */
-  h += sec((hollywood?'②':'②')+' City of Hollywood — LBTR');
+  h += sec(hollywood ? '② City of Hollywood — LBTR' : '② The city’s own receipt — and it is NOT Hollywood’s');
   if (!hollywood){
     h += '<div class="flag warn"><span class="fl">Read this as a template, not as facts</span>The business is not in Hollywood, so the screens, the classifications and the amounts below belong to a different city. Keep the <b>sequence</b> — apply, pay, respond to review, receive — and get that city’s own application and fee schedule.</div>';
   }
@@ -689,14 +689,28 @@ function buildSteps(a){
   // used to bake Hollywood's URL and "$25 plus the classification tax" into the case
   // regardless — and the case is what gets pasted into the client's Double note, where
   // nobody can see the caveat that only ever existed on screen.
+  // Two axes, and BOTH have to be read here or the case contradicts the sheet: WHICH city
+  // (Hollywood's LBTR, or another municipality's own system) and WHAT IS ALREADY HELD.
+  // Missing the second is how `existing:'city'` produced a checklist identical to a first
+  // filing — telling the team, in the client's Double note, to reapply and re-pay for a
+  // receipt the client already has.
   var hollywoodCase = a.city === 'hollywood';
   if (!hollywoodCase){
-    add('localapply','city','Municipal business tax receipt applied for','NOT Hollywood — that city has its own system, screens and fee schedule. Get them from the city itself; the Hollywood LBTR steps do not apply.');
-    add('localdocs','city','That city’s required documents supplied','Expect proof of location and entity proof at minimum, but confirm its own list.');
-    add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+    if (a.existing === 'both'){
+      add('localrenew','city','Municipal receipt renewed','NOT Hollywood — through that city’s own renewal route, not a new application.');
+      add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+    } else if (a.existing === 'city'){
+      add('localheld','city','Municipal receipt confirmed current','Already held — check it has not expired (Sept 30) and that the classification still matches what the business does.');
+    } else {
+      add('localapply','city','Municipal business tax receipt applied for','NOT Hollywood — that city has its own system, screens and fee schedule. Get them from the city itself; the Hollywood LBTR steps do not apply.');
+      add('localdocs','city','That city’s required documents supplied','Expect proof of location and entity proof at minimum, but confirm its own list.');
+      add('localpay','city','Municipal fee paid','Its own amount, in its own system — the Hollywood figures do not carry over.');
+    }
   } else if (a.existing === 'both'){
     add('cityrenew','city','City receipt renewed','apps.hollywoodfl.org/LBTRrenewals/ — the renewals route, not a new application.');
     add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
+  } else if (a.existing === 'city'){
+    add('cityheld','city','City receipt confirmed current','Already held — check it has not expired (Sept 30) and that the classification still matches what the business does. The outstanding half is the county.');
   } else {
     add('cityapply','city','City LBTR application submitted','apps.hollywoodfl.org/LbtrOnline/ — the folio auto-fills from the address.');
     add('cityuploads','city','Both city uploads accepted','Proof of location and entity proof. PDF only, ≤ 10 MB each.');
@@ -705,11 +719,12 @@ function buildSteps(a){
   }
 
   /* --- review --- */
-  if (hollywoodCase){
+  var cityFiling = a.existing !== 'city';   // nothing to review when the receipt is already held
+  if (hollywoodCase && cityFiling){
     add('cityreview','review','City review passed, or its request answered','A personal email arrives only if something needs fixing.');
     add('citydiff','review','Any category-difference balance paid','Through the City’s own payment centre — a different channel from PayPal. Keep the Treasury reference number.');
     add('citynotify','review','Reviewer told the balance was paid','THE step people miss. The receipt is issued only after this reply.');
-  } else {
+  } else if (cityFiling){
     add('localreview','review','That city’s review passed, or its request answered','Ask how it confirms payment and issues the receipt — Hollywood does not issue until you reply to the reviewer, and another city may have its own such step.');
   }
 
@@ -757,7 +772,14 @@ var tracker = JKCase.createTracker({
     {city:'broward',premises:'resnolive',planning:'permitted',entity:'corp',dba:'no',sunbiz:'yes',ein:'yes',
      activity:'x',employees:'0',regulator:'ofr',licence:'yes',salestax:'no',tpp:'no',existing:'county',timing:'before'},
     {city:'hollywood',premises:'commercial-own',entity:'partnership',dba:'no',sunbiz:'yes',ein:'yes',
-     activity:'x',employees:'12',regulator:'none',salestax:'no',tpp:'no',existing:'city',timing:'unknown'}
+     activity:'x',employees:'12',regulator:'none',salestax:'no',tpp:'no',existing:'city',timing:'unknown'},
+    // The two axes cross: outside Hollywood, a renewal and an already-held receipt each
+    // produce their own steps. The self-test caught both missing when the city block
+    // learned to read `existing` — which is what the seed rule is for.
+    {city:'broward',premises:'commercial-lease',sublet:'no',entity:'llc',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'2',regulator:'none',salestax:'no',tpp:'no',existing:'both'},
+    {city:'broward',premises:'commercial-lease',sublet:'no',entity:'llc',dba:'no',sunbiz:'yes',ein:'yes',
+     activity:'x',employees:'2',regulator:'none',salestax:'no',tpp:'no',existing:'city',timing:'before'}
   ],
   // The core sweeps these to PROVE the seeds above miss nothing.
   sweepValues: {

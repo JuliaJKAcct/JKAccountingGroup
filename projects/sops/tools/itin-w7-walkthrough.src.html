@@ -762,7 +762,12 @@ function buildSteps(a){
 // A half-answered walkthrough used to pass the old `A.role && A.pass` gate and produce a
 // confident but silently wrong "tailored" list. Only a COMPLETE walkthrough tailors a case;
 // anything else gets the generic checklist, and says so on the card and in the Double note.
-function walkComplete(){ return active().every(isAnswered); }
+// The SSN gate has to be part of "complete", not just of the rendering. Answer every
+// question, then change the gate to "Yes — they can get an SSN", and every answer is still
+// there: "New case" happily built a tailored 17-step ITIN checklist for someone who is not
+// eligible for an ITIN at all, and that went into their Double note as a plan of work.
+// The BTR tool's twin has this guard; this one was written first and never got it.
+function walkComplete(){ return A.ssn !== 'yes' && active().every(isAnswered); }
 
 var tracker = JKCase.createTracker({
   storageKey: 'jk-itin-cases-v1',

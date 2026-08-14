@@ -1062,6 +1062,11 @@ function inlineToolDoc(srcFile, title, opts){
     // "could not be built" callout with no cause anywhere. Print the reason — the callout
     // tells the reader to look here for it.
     console.error('✗ tool embed failed: ' + srcFile + ' — ' + e.message);
+    // Exit non-zero, like tools/build.mjs does. Logging alone let the build finish
+    // successfully and publish a Hub carrying a dead "Tool unavailable" card — the
+    // failure was visible only to whoever happened to read the log, and the publish
+    // step downstream had no reason to stop.
+    process.exitCode = 1;
     return '';
   }
 }
