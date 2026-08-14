@@ -22,7 +22,7 @@
  * coverage, the pruning branches, the built files) and a failure exits non-zero, so
  * `node build.mjs` is the only command anyone needs to remember.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, writeSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -47,12 +47,16 @@ const TOOLS = [
 
 let failed = false;
 for (const t of TOOLS) {
+  // The replacements are passed as FUNCTIONS, not strings. In String.replaceAll a string
+  // replacement treats `$&`, `$\``, `$'` and `$n` as special — so the day someone puts a regex
+  // replacement inside case-core.js, every built page would be silently corrupted at the
+  // point of inlining. A function replacement disables that interpretation entirely.
   const body = read(resolve(here, t.src))
-    .replaceAll('/*__FONTS__*/', fonts)
-    .replaceAll('/*__TOOL_CSS__*/', toolCss)
-    .replaceAll('/*__CASE_CORE__*/', caseCore)
-    .replaceAll('__MEDALLION_REV__', medallionRev)
-    .replaceAll('__MEDALLION__', medallion);
+    .replaceAll('/*__FONTS__*/', () => fonts)
+    .replaceAll('/*__TOOL_CSS__*/', () => toolCss)
+    .replaceAll('/*__CASE_CORE__*/', () => caseCore)
+    .replaceAll('__MEDALLION_REV__', () => medallionRev)
+    .replaceAll('__MEDALLION__', () => medallion);
 
   // A placeholder that survives substitution ships a tool with no styles or no case
   // engine — which looks like a broken page, not like a build error. Fail loudly.
@@ -87,6 +91,9 @@ if (failed) process.exit(1);
 // where the gate belongs.
 const { status } = spawnSync(process.execPath, [resolve(here, 'selftest.mjs')], { stdio: 'inherit' });
 if (status !== 0) {
-  console.error('\n✗ build produced the files, but the self-test failed — do not ship these.');
+  // writeSync, not console.error: stderr is buffered when it is a pipe, and a message
+  // written immediately before process.exit() can be dropped — leaving an exit 1 with no
+  // cause, which is worse than no message at all.
+  writeSync(2, '\n✗ build produced the files, but the self-test failed — do not ship these.\n');
   process.exit(1);
 }

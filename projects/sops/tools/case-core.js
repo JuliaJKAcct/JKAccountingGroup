@@ -531,6 +531,12 @@
 
     function renderOne(){
       var c = openCase, p = progress(c), one = $('caseOne');
+      // Ticking a step, or adding a log entry, redraws this whole panel — which destroys
+      // the control the user is standing on and drops focus to <body>, so a keyboard user
+      // had to Tab from the top of the page again for EVERY step. The ids survive the
+      // redraw (checkboxes are s_<index>, the log field is #logText), so remember and
+      // restore. Same care refocusAfter() takes after a dialog.
+      var wasFocused = document.activeElement && document.activeElement.id;
       var h = '<div class="cbar"><button class="btn ghost sm" id="backCases" type="button">← All cases</button>'
             + '<button class="btn cta sm" id="copyNote" type="button">Copy the case note for Double</button>'
             + '<button class="btn ghost sm" id="dlCase" type="button">Download a backup file</button>'
@@ -642,6 +648,11 @@
       $('logText').addEventListener('keydown', function(e){
         if (e.key === 'Enter'){ e.preventDefault(); $('logAdd').click(); }
       });
+
+      if (wasFocused){
+        var back = $(wasFocused);
+        if (back && back.focus){ try { back.focus(); } catch(_){} }
+      }
     }
 
     /* #caseOne survives every render, so binding here once is the only safe place. Binding

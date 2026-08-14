@@ -24,7 +24,7 @@
   "Open" buttons point at the files on GitHub (the repo is the home; the Hub is
   the index). Adjust REPO / BRANCH below if the remote changes.
 */
-import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, writeSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 // Reuse the client-intelligence dashboard engine (PR #77) — the SAME parser and the
@@ -36,6 +36,15 @@ import { loadClients, clientCard, DASH_CSS } from '../../.claude/skills/client-i
 import { buildNotebookDoc } from '../lilian-notebook/render/build.mjs';
 // The same gate tools/build.mjs runs — see the block before the tool embeds below.
 import { verifyAll as verifyWalkthroughs } from '../sops/tools/verify.mjs';
+
+// console.error() is buffered when stderr is a pipe — which is exactly how these builds are
+// normally logged — so a message written immediately before process.exit() can be dropped,
+// leaving an exit code 1 with no cause anywhere. writeSync goes straight to the descriptor.
+function die(...lines){
+  for (const l of lines) writeSync(2, l + '\n');
+  process.exit(1);
+}
+
 
 const here = dirname(fileURLToPath(import.meta.url));      // …/projects/knowledge-hub
 const repoRoot = resolve(here, '../..');
@@ -1041,15 +1050,20 @@ function inlineToolDoc(srcFile, title, opts){
     // that into a silent "Tool unavailable" card.
     const toolCss = raw.includes('/*__TOOL_CSS__*/') ? read(resolve(dir, 'case-tool.css')) : '';
     const caseCore = raw.includes('/*__CASE_CORE__*/') ? read(resolve(dir, 'case-core.js')) : '';
+    // The replacements are passed as FUNCTIONS, not strings. In String.replaceAll a string
+    // replacement treats `$&`, `$\``, `$'` and `$n` as special — so the day someone puts a regex
+    // replacement inside case-core.js, every built page would be silently corrupted at the
+    // point of inlining. A function replacement disables that interpretation entirely.
+    const fonts = read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css'));
     const body = raw
-      .replaceAll('/*__FONTS__*/', read(resolve(repoRoot, 'brand/design-system/fonts-embedded.css')))
-      .replaceAll('/*__FONTS_CYRILLIC__*/', cyrillic)
-      .replaceAll('__MEDALLION_REV__', png('brand/logo/png/JK-medallion-reversed-1024.png'))
-      .replaceAll('__MEDALLION__', png('brand/logo/png/JK-medallion-primary-1024.png'))
-      .replaceAll('__LOGO__', png('brand/logo/png/JK-lockup-horizontal-2048.png'))
-      .replaceAll('/*__PRICING_CORE__*/', core)
-      .replaceAll('/*__TOOL_CSS__*/', toolCss)
-      .replaceAll('/*__CASE_CORE__*/', caseCore);
+      .replaceAll('/*__FONTS__*/', () => fonts)
+      .replaceAll('/*__FONTS_CYRILLIC__*/', () => cyrillic)
+      .replaceAll('__MEDALLION_REV__', () => png('brand/logo/png/JK-medallion-reversed-1024.png'))
+      .replaceAll('__MEDALLION__', () => png('brand/logo/png/JK-medallion-primary-1024.png'))
+      .replaceAll('__LOGO__', () => png('brand/logo/png/JK-lockup-horizontal-2048.png'))
+      .replaceAll('/*__PRICING_CORE__*/', () => core)
+      .replaceAll('/*__TOOL_CSS__*/', () => toolCss)
+      .replaceAll('/*__CASE_CORE__*/', () => caseCore);
     // A placeholder that survives substitution embeds a tool with no styles or no case
     // engine — which reads as a broken page, not as a build error. Say so instead: the
     // catch below turns this into the "Tool unavailable" card, which names the log.
@@ -1063,14 +1077,13 @@ function inlineToolDoc(srcFile, title, opts){
     // A silent '' ships a Hub whose build log looks clean while the tool's card holds a
     // "could not be built" callout with no cause anywhere. Print the reason — the callout
     // tells the reader to look here for it.
-    console.error('✗ tool embed failed: ' + srcFile + ' — ' + e.message);
+    die('✗ tool embed failed: ' + srcFile + ' — ' + e.message,
     // Stop NOW, like tools/build.mjs and the verifyWalkthroughs gate below both do.
     // Setting exitCode alone let the build run to completion, write index.html and the
     // fragment with a dead "Tool unavailable" card, and print the usual "Hub built: …"
     // success lines — so the failure was one line of log above a page that looked fine,
     // and the publish step downstream had no reason to stop.
-    console.error('✗ refusing to build a Hub with a tool that could not be embedded.');
-    process.exit(1);
+        '✗ refusing to build a Hub with a tool that could not be embedded.');
   }
 }
 // The published surface runs the SAME gate as tools/build.mjs. A step added without a
@@ -1081,9 +1094,8 @@ function inlineToolDoc(srcFile, title, opts){
 {
   const problems = verifyWalkthroughs(resolve(repoRoot, 'projects/sops/tools'));
   if (problems.length){
-    problems.forEach((p) => console.error('✗ ' + p));
-    console.error('✗ refusing to embed a walkthrough that would mislabel a reopened case.');
-    process.exit(1);
+    die(...problems.map((p) => '✗ ' + p),
+        '✗ refusing to embed a walkthrough that would mislabel a reopened case.');
   }
 }
 const CALC_DOC    = inlineToolDoc('pricing-calculator.src.html', 'JK Accounting Group — Internal Pricing Calculator');
@@ -2616,7 +2628,7 @@ const CEILING = 16 * 1024 * 1024;
 const biggest = Math.max(Buffer.byteLength(html, 'utf8'), Buffer.byteLength(fragment, 'utf8'));
 const pct = (biggest / CEILING) * 100;
 if (biggest > CEILING) {
-  console.error(`✗ OVER THE 16MB ARTIFACT CEILING (${pct.toFixed(0)}%) — this will not publish. Drop or shrink an embedded tool.`);
+  writeSync(2, `✗ OVER THE 16MB ARTIFACT CEILING (${pct.toFixed(0)}%) — this will not publish. Drop or shrink an embedded tool.\n`);
   process.exitCode = 1;
 } else if (pct >= 70) {
   console.error(`⚠ ${pct.toFixed(0)}% of the 16MB Artifact ceiling — roughly ${Math.floor((CEILING - biggest) / (0.95 * 1024 * 1024))} more embedded tool(s) of the current size will fit.`);

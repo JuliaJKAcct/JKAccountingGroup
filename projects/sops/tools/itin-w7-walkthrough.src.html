@@ -300,7 +300,10 @@ function active(){ return Q.filter(function(q){ return !q.when || q.when(A); });
 // both leave num() at -1, and an unknown age silently drops the age-gated rules
 // (the under-18 civil birth certificate) from the sheet and the checklist.
 function isAnswered(q){
-  if (q.free) return q.free.every(function(f){ return A[f[0]]; });
+  // .trim(): a single space is not an answer. Without it a space typed in the treaty
+  // fields made walkComplete() true, and the case came out marked TAILORED — no generic
+  // pill, no caveat in the Double note — with a blank treaty line on the sheet.
+  if (q.free) return q.free.every(function(f){ return A[f[0]] && String(A[f[0]]).trim(); });
   if (q.num)  return num(A[q.id]) >= 0;
   return A[q.id] !== undefined && A[q.id] !== '';
 }

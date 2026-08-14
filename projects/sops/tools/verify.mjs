@@ -57,7 +57,11 @@ export function loadTool(file, dir = here) {
   const { core } = loadCore(dir);
   const html = readFileSync(resolve(dir, file), 'utf8');
   const script = html.slice(html.indexOf('<script>') + 8, html.lastIndexOf('</script>'))
-                     .replace('/*__CASE_CORE__*/', core);
+                     // The engine installs itself on `window` (see the IIFE's tail). In the
+                     // browser that IS the global object, so `JKCase` resolves as a bare
+                     // name; here `window` is a parameter, so bind it explicitly rather
+                     // than reaching for `with`, which strict mode forbids outright.
+                     .replace('/*__CASE_CORE__*/', core + '\nvar JKCase = window.JKCase;\n');
 
   const noop = () => {};
   const el = new Proxy({}, {
@@ -89,9 +93,17 @@ export function loadTool(file, dir = here) {
     'var tracker = JKCase.createTracker({',
     'var tracker = (function(c){ __cfg.v = c; return JKCase.createTracker(c); })({'
   );
+  // No `with`, and "use strict" FIRST. The previous form wrapped the tool in
+  // `with (window) { "use strict"; … }`, where the directive is no longer a prologue and
+  // is silently ignored — so the gate evaluated the tool sloppy-mode while every browser
+  // evaluates it strict. A missing `var`, or any other strict-only error, passed all the
+  // checks here and then threw ReferenceError in the browser and blanked the tool: the
+  // exact silent ship this gate exists to prevent. (`with` cannot be used in strict mode
+  // at all, so dropping it is not optional — every global the tools touch is a parameter
+  // below, or a real Node global.)
   const fn = new Function('window', 'document', 'localStorage', 'navigator', 'console',
                           'setTimeout', 'requestAnimationFrame', '__cfg',
-                          'with (window) {\n' + shimmed + '\n}\n'
+                          '"use strict";\n' + shimmed + '\n'
                           + 'return { buildSteps: buildSteps, tracker: tracker };');
   const out = fn(win, doc, win.localStorage, win.navigator, console, setTimeout, noop, captured);
   return { cfg: captured.v, buildSteps: out.buildSteps, tracker: out.tracker };
