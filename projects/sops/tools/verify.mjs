@@ -54,7 +54,9 @@ export function loadCore(dir = here) {
  * below satisfies those.
  */
 export function loadTool(file, dir = here) {
-  const { core } = loadCore(dir);
+  // Just the source. loadCore() also EVALUATES the engine into a throwaway sandbox, which
+  // this never uses — the tool's own script evaluates it again a few lines below.
+  const core = readFileSync(resolve(dir, 'case-core.js'), 'utf8');
   const html = readFileSync(resolve(dir, file), 'utf8');
   const script = html.slice(html.indexOf('<script>') + 8, html.lastIndexOf('</script>'))
                      // The engine installs itself on `window` (see the IIFE's tail). In the

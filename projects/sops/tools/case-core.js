@@ -376,7 +376,12 @@
         // reaches an href, and esc() covers the value attribute.
         dl: typeof o.dl === 'string' ? o.dl : '',
         steps: o.s.map(function(a){
-          var meta = all[a[0]] || { id:a[0], ph:PHASES[0][0], t:a[0], d:'' };
+          // ph:'' — deliberately NOT a real phase. A step id this build does not know used
+          // to be filed under the FIRST phase, so it rendered inside a genuine section with
+          // its raw id as the label, and caseNoteText() then wrote "[x] brandnewstep" into
+          // the client's Double note under INTAKE. An empty phase falls into the "Not in
+          // any phase of this tool" bucket, which says where it came from instead.
+          var meta = all[a[0]] || { id:a[0], ph:'', t:a[0], d:'' };
           return { id:a[0], ph:meta.ph, t:meta.t, d:meta.d, done:!!a[1], date:a[2]||'', note:a[3]||'' };
         }),
         log: o.l.map(function(a){ return { t:a[0], x:a[1] }; }),
@@ -402,7 +407,9 @@
       return dropped;
     }
 
-    function touch(c, quiet){ c.updated = todayISO(); c.dirty = true; saveCases(); if (!quiet) paintBadge(); }
+    // No `quiet` flag: saveCases() repaints the badge itself, so the parameter this used
+    // to take was inert — an option that looked like a decision nobody had made.
+    function touch(c){ c.updated = todayISO(); c.dirty = true; saveCases(); }
 
     // The reference prompt is asked from two places and must read identically in both.
     function askCaseRef(){
@@ -691,10 +698,10 @@
       one.addEventListener('input', function(e){
         var c = openCase, t = e.target;
         if (!c) return;
-        if (t.dataset.dlink !== undefined){ c.dl = t.value.trim(); touch(c, true); syncDoubleLink(); return; }
+        if (t.dataset.dlink !== undefined){ c.dl = t.value.trim(); touch(c); syncDoubleLink(); return; }
         if (t.dataset.note === undefined) return;
         var s = c.steps[+t.dataset.note];
-        if (s){ s.note = t.value; touch(c, true); }
+        if (s){ s.note = t.value; touch(c); }
       });
     }
 
