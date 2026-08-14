@@ -48,7 +48,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| **Owner / signer** — he signs the return and holds a W-2 from the company | Double / TaxDome — he is **the same person as the second Melomed household** (§5) |
+| **Officer / signer** — signs the return and holds a **2025 W-2** from the company. ⚠️ **Not established as the owner** | [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) |
 | The related individual client, connected to the same operations | [`igor-melomed.md`](./igor-melomed.md) |
 | Assigned staff | **Lilian Gonzalez** _(Double)_ |
 | Worked the 2024 QuickBooks review | **Maria Zavarce** _(migrated note, 2024-06-05)_ |
@@ -128,7 +128,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Map the Melomed group properly** — three Double records, one family business, and one file (710633) that does not exist at all. Until that is drawn, every fact about "Melomed" is ambiguous.
+- 🔴 **Settle who OWNS this company.** All three records now have files, but ownership does not: the return is signed and a W-2 issued in one household's name, while the *other* household sends the monthly ledgers. Until that is drawn, every "Melomed" fact is ambiguous.
 - ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here.
 - **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed.
 - **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence.
@@ -147,7 +147,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - **Double client:** [app.doublehq.com/close?cid=710589](https://app.doublehq.com/close?cid=710589)
 - **Double tax project (2025):** [tax-return?cid=710589&projectId=219280](https://app.doublehq.com/tax-return?cid=710589&projectId=219280)
-- **Owner-group siblings:** [`igor-melomed.md`](./igor-melomed.md) (710635) · `Grigoriy & Margarita Melomed` (710633 — **no file yet**) · possibly [Magnum 152, Inc](./magnum-152.md) and [Sunoma Inc](./sunoma-inc.md)
+- **Owner-group siblings:** [`igor-melomed.md`](./igor-melomed.md) (710635) · [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) · possibly [Magnum 152, Inc](./magnum-152.md) and [Sunoma Inc](./sunoma-inc.md)
 - **Migrated TaxDome notes:** Drive `4. Documents > R & G Friendly Inc` — read 2026-08-13.
 - **Google Drive folder (sensitive vault):** _(pending — link)_
 - **Related SOPs:** _(pending)_ — the compensation review routes to the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)

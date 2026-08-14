@@ -88,8 +88,17 @@ list grows.
 >    read, which is false for every one of them. **Each still owes the full historical pass**, and
 >    each file says so in its own header banner.
 >
-> _(Two different sets that happen to number seven each. They are not the same clients, and neither
-> group's catch-up covers the other's.)_
+> 3. **`Grigoriy & Margarita Melomed` (710633)**, file created **2026-08-14**. A live client found
+>    sideways while writing up a different household — **no TaxDome note, so no backfill ever saw
+>    them** — with only March 2026 read. Same reasoning: no row until the full pass runs.
+>
+> _(The first two sets happen to number seven each. They are not the same clients, and no group's
+> catch-up covers another's.)_
+>
+> ⚠️ **This list is not the whole population of row-less clients** — reconciling the scope table
+> against this ledger leaves a handful unaccounted for beyond the three groups named. **Do that
+> reconciliation before trusting the enumeration**; the rule (no row until a full pass) is what
+> governs, not the list.
 
 _**Reconciled 2026-08-11**, when the three stalled sweeps (2026-07-25, 08-01, 08-08) were
 finally merged to `main`. Baselines now carry the **latest** date each client was actually

@@ -64,12 +64,19 @@ the emptiness.
 gets published, and the next person plans around it. That is what makes this worse than simply
 asking twice: the wrong answer outlives the session that produced it.
 
-_(Written 2026-08-14, after a session was told to sweep only since the last weekly baseline —
-correct for swept clients — applied it to seven who had **never** been swept, and published
-"no business activity" for two clients who had one, "the business may have ended" for one the
-firm was booking monthly, and an emergency built from one day of a five-week pattern. An
-independent review falsified four of them in minutes with the searches the session had not
-run. **Nothing was wrong with the instruction; the premise under it was.**)_
+⚠️ **PROVENANCE — read this before treating 1b as settled.** Every other rule here was set by
+**Lilian**, correcting real work. **This one was written by the session that made the mistake**,
+from an independent review's findings, on **2026-08-14** — and it **has not been put to her.** By
+this file's own standard *(How these grow: "an inference written in the voice of a rule is how a
+policy nobody agreed to ends up enforced")* that makes it a **proposal with a worked case behind
+it**, not a ruling. Keep it, use it, and say so if it ever decides something.
+
+_(The case: a session was told to sweep only since the last weekly baseline — correct for swept
+clients — applied it to seven who had **never** been swept, and published "no business activity"
+for two clients who had one, "the business may have ended" for one the firm was booking monthly,
+and an emergency built from one day of a five-week pattern. An independent review falsified four
+of them in minutes, using the searches the session had not run. **Nothing was wrong with the
+instruction; the premise under it was.**)_
 
 ## 2 · Group by root cause
 

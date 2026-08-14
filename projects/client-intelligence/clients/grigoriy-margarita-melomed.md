@@ -28,14 +28,15 @@
 > targeted Gmail pass over **2026-03 only** — the month this client's return was worked. Ping,
 > Drive and every other period are **unswept**. A gap below means *not yet looked at*. There is
 > **no migrated TaxDome note** for this client, so it was outside the backfill entirely; it
-> surfaced only because a *different* Melomed household was being written up.
+> surfaced only because a *different* Melomed household was being written up. The catch-up is recorded in
+> [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 
 - **Business name:** Grigoriy & Margarita Melomed — an **individual (joint) client record**
 - **Entity type:** Individual taxpayers — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_
 - **Home state:** _(pending — likely Florida, on the family group's footprint)_
-- **Industry / what they do:** 🔴 **He is the owner/signer of [R & G Friendly Inc — "Lucky Pawn & Jewelry"](./rg-friendly.md)** and takes a **W-2** from it (§5)
+- **Industry / what they do:** 🔴 **He is an officer and W-2 employee of [R & G Friendly Inc — "Lucky Pawn & Jewelry"](./rg-friendly.md)** — he signs its return and a 2025 W-2 in his name was filed with it (§5). ⚠️ **Whether he OWNS it is not established**
 - **Primary language:** _(pending — likely Russian)_
 - **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, `1099 Preparation = false`, `Annual Report = false` _(Double properties)_
 - **Fiscal year-end:** calendar year
@@ -76,7 +77,7 @@ named `IGOR MELOMED` belongs to the *other* household.
 - **Applies?** No — an individual record. Any sales tax sits on [`rg-friendly.md`](./rg-friendly.md).
 
 ### Payroll
-- **Applies?** No on this record. ⓘ **He is a W-2 employee of the family company**, whose payroll runs on ADP — see [`rg-friendly.md`](./rg-friendly.md).
+- **Applies?** No on this record. ⓘ **He is a W-2 employee of the family company** — that payroll, and the system it runs on, are on [`rg-friendly.md`](./rg-friendly.md).
 
 ### Bookkeeping & monthly close
 - **Applies?** **No — `Bookkeeping = N/A`** _(Double)_
@@ -85,10 +86,10 @@ named `IGOR MELOMED` belongs to the *other* household.
 - **Applies?** **Yes**
 - **Return type(s) & deadlines:** **Form 1040**, calendar year, due April 15 _(Double)_
 - **Our role:** the firm prepares and files
-- **Current status:** ✅ **2025 return FILED** — signed by both spouses **2026-03-14**, Double records `filed` with `filedAt` **2026-05-27**. ⓘ The eleven-week gap between signature and the recorded filing date is unexplained; confirm the real filing date if it ever matters.
+- **Current status:** ✅ **2025 return FILED** — signed by both spouses **2026-03-14**, Double records `filed` with `filedAt` **2026-05-27**. ⓘ **Do not read the 74-day gap as a late filing** — the sibling company record shows the same pattern (§6), which points at a batch status update in Double. Confirm the real date only if it matters.
 - **Organizer status:** **Completed** _(Double)_
 - **Process notes (→ future SOP):**
-  - ⚠️ **Vehicle mileage needs checking against the prior year, every year.** On the 2025 return the odometer reading given for one car did not reconcile with the prior year's closing figure, and it took three exchanges to resolve: one vehicle had been **sold** and the reading he first gave belonged to the other. **Ask which car, and whether one was disposed of, before accepting a mileage figure.**
+  - ⚠️ **Vehicle mileage needs checking against the prior year, every year.** While working the 2025 return the odometer reading given for one car did not reconcile with the prior year's closing figure, and it took three exchanges to resolve: one vehicle **had been sold** and the reading he first gave belonged to the other. _(Which year the sale fell in was never pinned down.)_ **Ask which car, and whether one was disposed of, before accepting a mileage figure.**
   - **He answers quickly but approximately.** The mileage exchange was corrected twice in three minutes. Read the answers together, not one at a time.
 
 ### Licenses & other filings
@@ -104,9 +105,9 @@ named `IGOR MELOMED` belongs to the *other* household.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **HE IS THE OWNER OF [R & G FRIENDLY INC — "LUCKY PAWN & JEWELRY"](./rg-friendly.md), AND TAKES A W-2 FROM IT.** His 2025 W-2 from that company is on the company's file, and he signs its 1120-S. **So this individual return and that company return are one piece of work** — the S-corp's K-1 and his W-2 both land here, and the company's return has to be settled before this one can be. Never treat the two as unrelated clients.
-- ⚠️ **THREE DOUBLE RECORDS SIT ON ONE MELOMED FAMILY BUSINESS** — this household (710633), [`Igor Melomed & Yelena Lovkina`](./igor-melomed.md) (710635), and [`R & G Friendly Inc`](./rg-friendly.md) (710589). **Confirm which record a fact belongs to before writing it.** §2 carries the detail; how the two households relate to each other is **not established**.
-- ⚠️ **A VEHICLE WAS SOLD DURING 2025 AND THE MILEAGE FIGURES CROSSED OVER** (2026-03-13). The odometer reading first given for one car turned out to belong to the other, which had been sold. **Check disposals before accepting mileage**, and expect the same next year.
+- 🔴 **THIS RETURN AND [R & G FRIENDLY INC'S](./rg-friendly.md) 1120-S ARE ONE PIECE OF WORK — SETTLE THE COMPANY FIRST.** ✅ **What is evidenced:** a **2025 W-2 from that company in his name** was filed with the company's 2025 documents (2026-03-05), and **the company's 1120-S and this 1040 were signed the same day, 2026-03-14, from the same address.** So his wages and any S-corp K-1 land on this return, and the company's numbers gate it. ⚠️ **What is NOT established — do not write it as fact: that he OWNS the company.** An officer who signs a return and draws a W-2 need not be a shareholder, the *other* Melomed household is the one that emails the firm from a Lucky Pawn address and sends its monthly ledgers, and **at least three addresses are in use across this family.** [`rg-friendly.md`](./rg-friendly.md) still carries *"who owns the company"* as an open question, and so does this file.
+- ⚠️ **THREE DOUBLE RECORDS BELONG TO ONE MELOMED FAMILY GROUP** — this household (710633), [`Igor Melomed & Yelena Lovkina`](./igor-melomed.md) (710635), and [`R & G Friendly Inc`](./rg-friendly.md) (710589), with **at least two operations** behind them (Lucky Pawn and Auto Pawn) and probable links to Magnum 152 and Sunoma. **Confirm which record a fact belongs to before writing it** — §2 carries the detail. **How the two households relate, and who owns what, is not established.**
+- ⚠️ **A VEHICLE HAD BEEN SOLD AND THE MILEAGE FIGURES CROSSED OVER** (established 2026-03-13, while working the 2025 return). The odometer reading first given for one car turned out to belong to the other, which had been sold. ⚠️ **Which tax year the sale fell in is NOT established** — that is exactly what Outstanding item 4 asks. **Check disposals before accepting a mileage figure**, and expect the same next year.
 - **This client had no migrated TaxDome note**, so the 2026-08-13 backfill never touched it and nothing here predates March 2026. The file is thin because nobody has looked, not because there is little.
 
 ## 6. History & open questions
@@ -118,25 +119,25 @@ named `IGOR MELOMED` belongs to the *other* household.
   - **2026-03-05 — the company's document round** (on [`rg-friendly.md`](./rg-friendly.md)) included **his 2025 W-2 from R & G Friendly Inc**.
   - **2026-03-13 — the mileage exchange.** Julia queried an odometer figure that did not match the prior year; it emerged that **one vehicle had been sold** and the reading belonged to the other. Corrected across three replies.
   - **2026-03-14 — the 2025 Form 1040 signed** by both spouses, and Julia confirmed the balance due and asked which date to schedule the payment for. 🔒 **The amount is not recorded here.**
-  - **2026-05-27 — Double records the 2025 return as filed.**
+  - **2026-05-27 — Double records the 2025 return as filed.** ⓘ **Do not read the 74-day gap as a late filing.** [`rg-friendly.md`](./rg-friendly.md) shows the same pattern — signed 2026-03-14, recorded filed 2026-05-25 — and **two returns signed the same day whose `filedAt` land two days apart in late May look far more like a batch status update in Double than like two independent late filings.** Read the pair before drawing anything from either.
 - **Nothing further was found in the sources actually searched** — Double live, and Gmail across March 2026 only. **Ping, Drive and every other period have never been swept**, so this is a statement about the search, not about the world.
 
 ### Tax year 2025 — the review
 
 - **Filing position:** Form 1040, joint; signed 2026-03-14, recorded filed 2026-05-27.
-- **Income:** a **W-2 from the family company**, plus whatever the S-corp K-1 carried.
+- **Income:** a **W-2 from the family company**, plus whatever an S-corp K-1 carried. ⚠️ **That combination does not explain the mileage** (§6, outstanding item 4).
 - **Watch:** vehicle disposal and mileage (§5).
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **Map the Melomed group** — three Double records, one family business, and no established relationship between the two households. Until that is drawn, every "Melomed" fact is ambiguous.
-- **Add this client to the weekend-sweep scope and give it a first full historical pass** — it has never been swept, and it was invisible to the backfill because it has no TaxDome note.
-- **Confirm the real 2025 filing date** — signature and recorded filing are eleven weeks apart.
-- **Check whether the sold vehicle was a business asset**, in which case its disposal belongs on the company return rather than here.
+- **Give this client its first full historical pass.** It is in the weekend-sweep scope from 2026-08-14, but **nothing before March 2026 has ever been read** and it was invisible to the TaxDome backfill (no migrated note).
+- **Confirm the real 2025 filing date if it ever matters** — 74 days between signature and `filedAt`, and the sibling record shows the same pattern (§6).
+- 🔴 **Work out which schedule the vehicle mileage belongs on, and in which year the sale fell.** ⚠️ **A return of W-2 wages plus an S-corp K-1 has no use for mileage at all** — unreimbursed employee vehicle expense is suspended for 2025 — so either there is a Schedule C or E nobody has recorded, or the vehicle belongs on the **company's** return. §1 currently records the engagement as 1040-only.
 
 ### Information still needed
 
-- [ ] How this household relates to the other Melomed household
+- [ ] **Who owns R & G Friendly Inc**, and how this household relates to the other Melomed household
 - [ ] Which state they live in, and their working language
 - [ ] Whether there are dependants
 - [ ] Everything before March 2026, and every source other than Double and Gmail — never swept

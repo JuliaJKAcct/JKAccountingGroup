@@ -219,17 +219,25 @@ README row but are deliberately **not** in the scope table above:
 
 ## Schedule
 
-- **Saturday 06:00 America/New_York.** In cron (UTC): **`0 10 * * 6`** during EDT
-  (summer). Note: fixed-UTC cron means it fires at 05:00 ET in winter (EST) — adjust
-  to `0 11 * * 6` in winter if the exact 6 AM matters.
+- 🔴 **The LIVE Routine runs `0 7 * * 6` — Saturdays 07:00 UTC, i.e. 03:00 ET in summer**
+  _(read from the trigger 2026-08-14; this is the authority)_.
+- ⚠️ **This file previously specified `0 10 * * 6` (06:00 ET) and that is NOT what is running** —
+  three hours earlier than documented, and the setup steps below would have recreated the wrong
+  one. **Whether 03:00 was deliberate or a mis-set is unknown**; the live value is recorded here
+  rather than "corrected", because nobody established which is intended. If 06:00 ET is wanted,
+  change the Routine, not just this line. _(Fixed-UTC cron also means it drifts an hour in winter.)_
 
 ## Web-UI setup (claude.ai/code/routines → New)
 
-1. **Repository:** this repo. **Schedule:** `0 10 * * 6`.
+1. **Repository:** this repo. **Schedule:** `0 7 * * 6` — what is actually running; see the
+   Schedule section above before changing it.
 2. **Connectors (trap #1 — do it here):** attach **Double**, **Ping Assistant**,
-   **Gmail**, **Google Drive**, **QuickBooks**, and **GitHub** (to push the branch). If a connector isn't
-   available in the routines UI, the sweep uses whatever is attached and notes the
-   gap in the report.
+   **Gmail**, **Google Drive**, **QuickBooks**. ⓘ **The live Routine's attached connectors, read
+   2026-08-14:** Double · Gmail · Google Calendar · Google Drive · QuickBooks · Odoo · Ping
+   Assistant — **and no GitHub connector.** Git access comes from the environment's configured
+   **repository source** (this repo, with an outcome branch), not from an MCP connector, so the
+   absence is expected and not a fault. If a connector isn't available in the routines UI, the
+   sweep uses whatever is attached and notes the gap in the report.
 3. **Environment / network (trap #4):** a **Custom** allowlist that permits the email
    webhook host — `script.google.com` and `script.googleusercontent.com`.
 4. **Prompt:** paste the block below. **Put the webhook URL + secret in the prompt
@@ -239,14 +247,24 @@ README row but are deliberately **not** in the scope table above:
    `{"ok":true}`. Then remove the `TEST RUN` line and set the recipient to
    `lilian@jkaccountinggroup.com`.
 
-## ⚠️ THIS FILE IS NOT THE LIVE ROUTINE — the running copy is pasted in the web UI
+## ⚠️ THIS FILE IS NOT THE LIVE ROUTINE — but it IS where the live Routine gets the client list
 
-**Editing the prompt below changes nothing on its own.** The Routine at
+**Two halves, and they were run together as one claim until 2026-08-14.**
+
+🔴 **Editing the PROMPT below changes nothing on its own.** The Routine at
 **claude.ai/code/routines** holds **its own copy**, pasted in when it was created. Until someone
-updates that Routine, the Saturday run keeps following the **old** instructions — including
+updates it, the Saturday run keeps following the **old** instructions — including
 *"Commit the client-intelligence changes … to your working branch and push. Do NOT merge to main"*,
 the line that left three weeks of Client Intelligence stranded. (Quoted exactly, so it can be
 searched for in the live Routine to check whether the update has happened.)
+
+✅ **But editing the SCOPE TABLE above DOES reach the live run** _(established 2026-08-14 by
+reading the trigger itself)_. The live prompt carries **no client list**; it instructs the run to
+read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
+scope table is complete on its own** — it is only the *prompt* that needs a human.
+⚠️ **Which half applies is not obvious from the outside**, and getting it backwards produced a
+`FOLLOW-UPS` row asserting that thirteen newly-scoped clients were being skipped when they were
+not. **Say which half you changed.**
 
 ⚠️ **Do NOT paste this block wholesale — you would break the weekly email.** The block carries
 `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` as **placeholders**; the real values exist **only inside the
@@ -262,8 +280,10 @@ send the report** — the worst shape of failure, because nothing looks broken.
 **So whenever this block changes, the change is not done until the Routine is updated.** Say so out
 loud to whoever asked, and treat it as part of the task, not a follow-up.
 
-**Last change needing a re-paste: 2026-08-11** — the merge-your-own-CI rule, the contradiction
-rule, the seven new clients in scope, and the email becoming a record rather than a request.
+**Last change needing a re-paste: 2026-08-11** — the **merge-your-own-CI rule**, the
+**contradiction rule**, and the **email becoming a record rather than a request**. ⚠️ **Clients in
+scope are NOT on that list** — they reach the run through the scope table above without a paste
+_(corrected 2026-08-14)_.
 
 ## Routine prompt (paste into the web-UI routine)
 
