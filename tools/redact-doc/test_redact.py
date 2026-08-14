@@ -247,6 +247,81 @@ with tempfile.TemporaryDirectory() as td:
     if after - before:
         FAILURES.append("_run · a raw download was left behind")
 
+# ══ GLYPH-NAME EXTRACTION. A PDF whose font has no usable ToUnicode map makes
+#    pypdf emit the font's glyph NAMES — `/uni0031` where the page shows `1`.
+#    This is the nastiest failure the tool has met, because it is loud in volume
+#    and silent in meaning: half a million characters that match no pattern, so
+#    the report reads "0 masked" and a written file looks like a clean document.
+#    Found 2026-08-14 on a real filed 1120-S that carried four SSN/ITINs the
+#    first run did not see. These cases exist so it cannot happen quietly again.
+
+from redact import decode_glyph_names, looks_like_text  # noqa: E402
+
+
+def _as_glyphs(s: str) -> str:
+    """Encode text the way a broken font's extraction presents it."""
+    return "".join(f"/uni{ord(c):04X}" for c in s)
+
+
+decoded, n = decode_glyph_names(_as_glyphs("SSN 123-45-6789"))
+if decoded != "SSN 123-45-6789":
+    FAILURES.append("GLYPH · /uniXXXX tokens did not decode back to their characters")
+if n != 15:
+    FAILURES.append(f"GLYPH · decoded-token count was {n}, expected 15")
+
+# Text with no glyph names must come through completely untouched.
+plain = "Ordinary business income (loss) 22,100 — EIN 45-6789012"
+if decode_glyph_names(plain) != (plain, 0):
+    FAILURES.append("GLYPH · plain text was altered by the decoder")
+
+# A malformed token is left alone rather than silently dropped.
+if decode_glyph_names("/uniZZZZ")[0] != "/uniZZZZ":
+    FAILURES.append("GLYPH · a malformed glyph name was not left intact")
+
+# The diversity gate: long + tiny alphabet is broken; long + rich alphabet is not.
+if looks_like_text("0123456789/uni " * 400)[0]:
+    FAILURES.append("GATE · a long, tiny-alphabet extraction was accepted as text")
+if not looks_like_text("0123456789 " * 5)[0]:
+    FAILURES.append("GATE · a SHORT low-diversity text was rejected — the gate cannot know")
+# Realistic return prose — mixed case, figures, and the punctuation a tax form
+# actually carries. (An earlier version of this case repeated ONE short sentence
+# and used only 37 distinct characters, so it failed the gate: the test was
+# unrealistic, not the threshold. A real 18-page return measured 82.)
+rich = ("Zephyr Quarry Junction LLC — Form 1120-S, U.S. Income Tax Return for an "
+        "S Corporation. Ordinary business income (loss): $22,100; gross receipts "
+        "$30,475; amortization & depreciation per Form 4562, line 22. Schedule K-1 "
+        "(Form 1120-S), Part III, box 1. See Form 1125-A, line 7 [inventory]. ") * 20
+if not looks_like_text(rich)[0]:
+    FAILURES.append("GATE · ordinary return prose was rejected as unreadable")
+
+with tempfile.TemporaryDirectory() as td:
+    tmp = Path(td)
+
+    # END TO END, and this is the case that matters: an SSN hidden inside
+    # glyph-name output must be RECOVERED and then MASKED. Before the fix it
+    # survived in the PDF while the tool reported zero — blind, not clean.
+    (tmp / "glyph.pdf").write_bytes(_minimal_pdf(_as_glyphs(
+        "Taxpayer social security number 123-45-6789 EIN 45-6789012 "
+        "Inventory at end of year 185,673 Purchases 195,694 "
+        "and enough further narrative text to clear the hundred-character floor")))
+    if _run(tmp / "glyph.pdf", tmp / "g1.txt") != 0:
+        FAILURES.append("_run · a glyph-name PDF did not recover and exit 0")
+    else:
+        got = (tmp / "g1.txt").read_text()
+        if "123-45-6789" in got:
+            FAILURES.append("_run · LEAK: an SSN inside glyph-name output was not masked")
+        if "[SSN-1]" not in got:
+            FAILURES.append("_run · the glyph-encoded SSN was never recognised at all")
+        for figure in ("185,673", "195,694", "45-6789012"):
+            if figure not in got:
+                FAILURES.append(f"_run · {figure!r} did not survive glyph decoding")
+
+    # And an extraction that stays unreadable must REFUSE, not write a file
+    # whose "0 masked" would be read as a clean bill of health.
+    (tmp / "junk.pdf").write_bytes(_minimal_pdf("0123456789 " * 300))
+    if _run(tmp / "junk.pdf", tmp / "g2.txt") != 5 or (tmp / "g2.txt").exists():
+        FAILURES.append("_run · an unreadable extraction did not exit 5 without writing")
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:

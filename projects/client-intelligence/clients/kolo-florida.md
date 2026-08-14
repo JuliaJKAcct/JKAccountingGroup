@@ -105,6 +105,32 @@ the actual details.
   will understate the year badly. Consistent with the retail/wholesale zoning history above. _(Shopify
   analytics, read 2026-08-14. Order counts are a volume fact; the money stays in Shopify/QuickBooks
   per the two-data-homes rule.)_
+- 🔴 **THE 30%-OF-RETAIL ESTIMATE IS NOT WHAT THE 2024 RETURN DID — and the two disagree by a
+  lot.** Lilian's understanding (2026-08-14) is that cost is estimated at **30% of the selling
+  price** because the true cost of the goods is not known. **The filed 2024 Form 1125-A does not
+  work that way at all:** its ending inventory equals purchases minus cost of goods sold
+  **exactly**, so the figure is the residual of what the company actually *paid* — real purchase
+  records, at real invoiced cost. The two bases differ by a factor of about **1.74**, which
+  implies the goods really cost around **17% of retail**, not 30%. **So the 30% estimate
+  overstates cost by roughly three quarters, and 2025 must not silently switch bases.** Settle
+  which basis the 2025 return uses before anything is filed — a change is a change of accounting
+  method, not a preference.
+- **2024 was the first year with activity on this basis** — the filed return opens with **zero**
+  beginning inventory and a **zero** beginning balance sheet, and the only return in Double's
+  `Tax Return Filed` tree is 2024. _(Whether earlier returns exist elsewhere was not
+  investigated.)_ Purchases that year were large and cost of goods sold was small: the company
+  bought stock and sold very little of it, which is why almost the whole balance sheet is
+  inventory.
+- **Two Schedule K-1s** on the 2024 return — two shareholders, consistent with the two principals
+  holding workers'-comp exemptions above.
+- ⚠️ **`Form 7203` (shareholder basis) was not found in the extracted 2024 return — but pages 8
+  and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
+  in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
+  Check the PDF by hand. _(2026-08-14.)_
+- 🔧 **That PDF needs the fixed redactor.** `KOLOFLORIDAINC.pdf` carries a font with no Unicode
+  map, so a text extraction returns glyph names rather than characters. Read through
+  [`tools/redact-doc/`](../../../tools/redact-doc/) at its 2026-08-14 version or later, which
+  decodes them; an older copy reports "0 masked" on this file and that means **blind, not clean**.
 - ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
   30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
   cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
@@ -187,6 +213,16 @@ the actual details.
   return are now the
   [`shopify-year-end-inventory` skill](../../../.claude/skills/shopify-year-end-inventory/).
   _(Worked by Lilian.)_
+- 2026-08-14 — **The 2024 filed 1120-S was read for the 2025 preparation** (`JK Accounting Group >
+  Tax Return Filed > 2024 > KOLOFLORIDAINC.pdf`, through the redactor, that one year only). It
+  settled the valuation question: the 2024 ending inventory was **not** a 30%-of-retail estimate
+  but the residual of actual purchases, and the whole Form 1125-A reconciles internally (§5). It
+  also produced the beginning-inventory figure that governs 2025, the two-shareholder structure,
+  and the open Form 7203 question. **The read also exposed a real hole in the firm's own
+  redactor** — this PDF's font emits glyph names rather than characters, so the first pass
+  reported "0 masked" while four SSN/ITINs sat unrecognised in the file. The tool was fixed the
+  same day (decode + an intelligibility gate that refuses to write rather than report a
+  misleading zero), with tests and a mutation check. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.

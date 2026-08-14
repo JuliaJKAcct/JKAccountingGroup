@@ -56,7 +56,42 @@ a K-1 or a W-2 came from. A return full of unidentifiable entities answers nothi
 why the unhyphenated form — nine bare digits, indistinguishable from an account number — is
 claimed explicitly before the account rule can eat it.
 
-## It fails closed, three ways
+## ⚠️ "0 masked" can mean BLIND rather than clean — and that is now caught
+
+**The failure this tool is most likely to meet is not a leak, it is a lie of omission.**
+
+A PDF whose font carries no usable `ToUnicode` map makes pypdf fall back to emitting the
+font's own **glyph names** — `/uni0031` where the page shows `1`. The page is perfectly
+readable to a human and completely unreadable to every pattern in `redact.py`.
+
+That is **worse than a scan**. A scan produces nothing and trips the NO TEXT LAYER gate
+loudly. A glyph-name dump produces *enormous* volume, so it passes every check that measures
+how much came out — and every check here used to measure exactly that. The result is a large
+written file, a report of **"0 masked · 0 EIN kept"**, and nothing to distinguish it from a
+document that genuinely had no identifiers.
+
+> **Found 2026-08-14** on a real filed 1120-S read for a pre-return review: 18 pages,
+> 500,712 characters, 61,131 glyph tokens, and a report of zero for every category. After the
+> fix: 72,775 characters of real text and **four SSN/ITINs masked**. The first run had not
+> protected anything — it had simply been unable to see.
+
+Two changes close it, and they are different jobs:
+
+- **Recovery.** `/uniXXXX` is Adobe's glyph-naming convention and `XXXX` is the Unicode code
+  point, so the text is decoded back before any pattern runs. Faithful, not a guess. When this
+  path is used the tool **says so**, and warns that column alignment came through worse than
+  usual — read a figure's position with suspicion and prefer one you can corroborate.
+- **A gate that measures intelligibility, not volume.** Natural English, even the
+  number-dense English of a return, draws on a wide alphabet; a character-level extraction
+  failure draws on a tiny one (27 distinct characters across half a million, against 82 for
+  the same document read properly). Below the threshold the tool **refuses to write**. The
+  gate applies only above ~2,000 characters, because a short document's alphabet proves
+  nothing either way — those are covered by the per-page warning instead.
+
+**If you see the UNREADABLE EXTRACTION message, do not re-run and trust a "0 masked" report.**
+Ask for a properly generated PDF from the tax software.
+
+## It fails closed, four ways
 
 1. **A scan exits 2 and writes nothing.** No text layer means no OCR here, and the answer is
    to ask for a text PDF — never to send the image somewhere else to be read.
@@ -71,6 +106,10 @@ claimed explicitly before the account rule can eat it.
    shape survives, the tool **refuses to write the file** and reports the *shapes* it saw, never
    the values. A false alarm costs one look at the PDF; a miss is not recoverable, because by
    then it is in the transcript.
+4. **An unreadable extraction exits 5 and writes nothing** — the glyph-name case above. Volume
+   is not intelligibility, and a file the patterns could not read is not a file with nothing in
+   it. This is the only gate here that protects against a *misleadingly reassuring* result
+   rather than a leak.
 
 ## ⚠️ An absence in the output is not an absence in the return
 

@@ -66,6 +66,72 @@ def normalise(text: str) -> str:
     # NFKC also folds fullwidth digits and various compatibility forms.
     return unicodedata.normalize("NFKC", text).translate({**DASHES, **INVISIBLE})
 
+
+# ── Glyph-name recovery. A PDF whose font carries no usable ToUnicode CMap makes
+#    pypdf fall back to emitting the font's own GLYPH NAMES instead of characters
+#    — `/uni0031` where the page shows `1`. The page is perfectly legible to a
+#    human and completely unreadable to every pattern in this file.
+#
+#    This is worse than a scan, and that is the whole reason it is handled here.
+#    A scan yields nothing and trips the NO TEXT LAYER gate loudly. A glyph-name
+#    dump yields HUGE volume — half a million characters of `/uniXXXX` — so it
+#    sails through every volume-based check, redacts to "0 masked", and writes a
+#    file whose emptiness reads as a clean bill of health. Verified 2026-08-14 on
+#    a real filed 1120-S: 18 pages, 500,712 chars, 61,131 glyph tokens, and the
+#    tool reported zero of everything including zero EINs.
+#
+#    `/uniXXXX` is Adobe's glyph-naming convention and XXXX is the Unicode code
+#    point in hex, so decoding it is a faithful recovery, not a guess.
+GLYPH_NAME = re.compile(r"/uni([0-9A-Fa-f]{4,6})\b|/u([0-9A-Fa-f]{4,6})\b")
+
+
+def decode_glyph_names(text: str) -> tuple[str, int]:
+    """Turn `/uniXXXX` glyph names back into the characters they name.
+
+    Returns the decoded text and how many tokens were decoded, so the caller can
+    say the extraction went through this path rather than pretending it didn't.
+    """
+    n = 0
+
+    def sub(m: re.Match) -> str:
+        nonlocal n
+        try:
+            ch = chr(int(m.group(1) or m.group(2), 16))
+        except (ValueError, OverflowError):
+            return m.group(0)
+        n += 1
+        return ch
+
+    return GLYPH_NAME.sub(sub, text), n
+
+
+# ── The intelligibility gate. Every check in this tool used to measure the
+#    VOLUME of extracted text; none measured whether it was text at all.
+#
+#    Natural English — even the number-dense English of a tax return — draws on
+#    a wide alphabet: upper and lower case, punctuation, digits. A failed
+#    character-level extraction draws on a tiny one. The real 1120-S above used
+#    27 distinct characters across 500,712, because it was four token shapes
+#    repeated. A page of ordinary prose passes 60 easily.
+#
+#    So: refuse the file rather than write a misleadingly empty one.
+#
+#    The gate is LENGTH-AWARE on purpose. A 200-character document may honestly
+#    use a small alphabet and proves nothing either way; a 70,000-character one
+#    using 27 characters is broken beyond argument. Applying the rule only above
+#    a floor keeps it from firing on the short documents where it cannot know —
+#    those are already covered by the per-page "barely extracted" warning.
+MIN_DISTINCT_CHARS = 40
+DIVERSITY_MIN_LEN = 2_000
+
+
+def looks_like_text(text: str) -> tuple[bool, int]:
+    """Is this natural text, or the wreckage of a failed extraction?"""
+    distinct = len(set(text))
+    if len(text) < DIVERSITY_MIN_LEN:
+        return True, distinct
+    return distinct >= MIN_DISTINCT_CHARS, distinct
+
 # ── Patterns, most specific first. Order matters: EIN must be claimed before
 #    any generic nine-digit rule can eat it. ────────────────────────────────────
 
@@ -299,6 +365,12 @@ def _run(src: Path, dst: Path) -> int:
         print(f"ERROR: could not read as PDF: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 3
 
+    # Recover glyph-name output BEFORE anything measures these pages, so the
+    # per-page "barely extracted" count below reflects the real text and not the
+    # inflated length of `/uniXXXX` tokens.
+    pages, glyphs = zip(*(decode_glyph_names(t) for t in pages)) if pages else ((), ())
+    pages, glyphs_decoded = list(pages), sum(glyphs)
+
     raw = "\n\n".join(f"--- page {i + 1} ---\n{t}" for i, t in enumerate(pages))
 
     if len(re.sub(r"\W", "", raw)) < 100:
@@ -309,6 +381,24 @@ def _run(src: Path, dst: Path) -> int:
             file=sys.stderr,
         )
         return 2
+
+    # ⚠️ Volume is not intelligibility. Everything above this line measures how
+    # MUCH came out; this measures whether what came out is text. Without it a
+    # character-level extraction failure produces a large file that redacts to
+    # "0 masked" — and "0 masked" is exactly what a clean document looks like.
+    readable, distinct = looks_like_text(raw)
+    if not readable:
+        print(
+            f"UNREADABLE EXTRACTION: {len(pages)} page(s), {len(raw):,} chars, but only "
+            f"{distinct} distinct characters (expected >= {MIN_DISTINCT_CHARS}).\n"
+            "The text layer came out at the character level — a font with no usable\n"
+            "ToUnicode map, or a similar encoding failure. Nothing was written.\n"
+            "⚠️  DO NOT re-run and trust a '0 masked' report from this file: on this\n"
+            "    input the patterns cannot match anything, so zero means BLIND, not\n"
+            "    clean. Ask for a properly generated PDF from the tax software.",
+            file=sys.stderr,
+        )
+        return 5
 
     redacted, counts = redact(raw)
 
@@ -348,6 +438,14 @@ def _run(src: Path, dst: Path) -> int:
 
     # The ONLY thing this tool ever prints about the document's contents.
     print(f"redacted → {dst}  ({len(pages)} pages, {len(redacted):,} chars)")
+    if glyphs_decoded:
+        print(
+            f"  ⚠️  {glyphs_decoded:,} glyph-name token(s) were decoded back to text —\n"
+            "      this PDF's font carries no usable Unicode map. The recovery is\n"
+            "      faithful (/uniXXXX names its own code point), but layout and\n"
+            "      spacing come out worse than usual, so read column alignment with\n"
+            "      suspicion and prefer a figure you can corroborate."
+        )
     if thin:
         print(
             f"  ⚠️  {len(thin)} of {len(pages)} pages barely extracted: {thin}\n"
