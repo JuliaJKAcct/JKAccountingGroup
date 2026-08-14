@@ -58,7 +58,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
-| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the KOLO bath/shower lines, at a **single location** (`"KOLO" 3485 NW 19th St, Lauderdale Lakes, FL`). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
+| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the bath/shower lines — **both the KOLO and the BAI-branded ones**, which matters (see §5 on the MegaBAI question) — at a **single location** (`"KOLO" 3485 NW 19th St, Lauderdale Lakes, FL`). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
 | Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
 | GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
 | TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
@@ -71,7 +71,8 @@ the actual details.
 - 🛑 **ENDING: the July 2026 return is the LAST sales-tax filing the firm makes for this client.** Lilian files it herself; after that the sales-tax account is closed as part of the wind-down (§5). _(Lilian, 2026-08-11.)_
 
 ### Payroll
-- **Applies?** **Not a firm service for this client** — Double's "Payroll" property is N/A. The client runs its own **weekly** payroll through **Gusto**; the firm is copied on Gusto's automated "payroll due"/"payroll late" reminders and monthly invoice-paid confirmations, but does not process payroll for this client. A recurring lateness pattern shows up in those notices (payroll is flagged "1 day late" most weeks). _(Double property + Gmail, 2026-08-01)_
+- 🛑 **STOPPED — no payrolls have been run since. Settled by Lilian, 2026-08-14.** Everything below is **historical**, not a live obligation.
+- **Applies?** **Never a firm service for this client** — Double's "Payroll" property is N/A. While it ran, the client operated its own **weekly** payroll through **Gusto**; the firm was copied on Gusto's automated "payroll due"/"payroll late" reminders and monthly invoice-paid confirmations, but never processed payroll for this client. A recurring lateness pattern showed up in those notices (payroll was flagged "1 day late" most weeks). _(Double property + Gmail, 2026-08-01; stopped per Lilian, 2026-08-14)_
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **Quarterly** _(Double client property "Bookkeeping", 2026-08-01)_. As of mid-2026 the client was under an active bookkeeping **cleanup** (many transactions still uncategorized per the Drive recurring-watchlist note); Lilian resolved six client transaction questions in Double on 2026-07-29 as part of that cleanup. _(Drive + Double activity log, 2026-08-01)_
@@ -89,56 +90,36 @@ the actual details.
 
 ## 5. Key facts & quirks
 
+<!-- ORDER MATTERS: the client card renders only the FIRST FOUR bullets of this
+     section. Keep live, consequential work at the top and let settled or
+     historical items sink. See .claude/skills/client-intelligence/SKILL.md. -->
+
 - 🛑 **THE COMPANY IS CLOSING — this is a wind-down, not an ongoing engagement.** Lilian
   (2026-08-11): Kolo is **no longer our client**; the company is going to close. Over the coming
   days the work is **closing the accounts** — the Florida sales-tax account, the Gusto
   subscription, and the rest of the systems in §3. **Nothing here should be treated as a live
   recurring obligation** without checking it against the wind-down list in §6 first.
-- 🛑 **The July 2026 sales-tax return is the last one the firm files** (§4). Lilian files it herself.
-- **Retail, not wholesale.** A 2024 zoning application for the warehouse location was denied
-  because "wholesale" use isn't allowed there; resubmitting it as **retail sales to customers** got
-  it approved. That framing mattered for licensing and may matter again on the way out.
-- ⚠️ **Most of the business does NOT go through the Shopify store — the storefront is a small
-  fraction of it.** Across the whole of 2025 the store took **fewer than 50 orders**, several months
-  ran at one or two, and **December 2025 was zero**, while the warehouse held over eleven thousand
-  units. So a Shopify sales report is **not** this company's revenue, and anyone reading one as such
-  will understate the year badly. Consistent with the retail/wholesale zoning history above. _(Shopify
-  analytics, read 2026-08-14. Order counts are a volume fact; the money stays in Shopify/QuickBooks
-  per the two-data-homes rule.)_
-- 🔴 **THE 30%-OF-RETAIL ESTIMATE IS NOT WHAT THE 2024 RETURN DID — and the two disagree by a
-  lot.** Lilian's understanding (2026-08-14) is that cost is estimated at **30% of the selling
-  price** because the true cost of the goods is not known. **The filed 2024 Form 1125-A does not
-  work that way at all:** its ending inventory equals purchases minus cost of goods sold
-  **exactly**, so the figure is the residual of what the company actually *paid* — real purchase
-  records, at real invoiced cost. The two bases differ by a factor of about **1.74**, which
-  implies the goods really cost around **17% of retail**, not 30%. **So the 30% estimate
-  overstates cost by roughly three quarters, and 2025 must not silently switch bases.** Settle
-  which basis the 2025 return uses before anything is filed — a change is a change of accounting
-  method, not a preference.
-- **2024 was the first year with activity on this basis** — the filed return opens with **zero**
-  beginning inventory and a **zero** beginning balance sheet, and the only return in Double's
-  `Tax Return Filed` tree is 2024. _(Whether earlier returns exist elsewhere was not
-  investigated.)_ Purchases that year were large and cost of goods sold was small: the company
-  bought stock and sold very little of it, which is why almost the whole balance sheet is
-  inventory.
-- **Two Schedule K-1s** on the 2024 return — two shareholders, consistent with the two principals
-  holding workers'-comp exemptions above.
-- ⚠️ **`Form 7203` (shareholder basis) was not found in the extracted 2024 return — but pages 8
-  and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
-  in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
-  Check the PDF by hand. _(2026-08-14.)_
-- ✅ **PAYROLL STOPPED — settled by Lilian, 2026-08-14: "la nómina paró, no se corrieron más
-  payrolls."** So the near-zero payroll on the 2025 P&L is the fact, not a gap in the books. ⚠️
-  **§3/§4 still describe weekly Gusto payroll as live and should be read as historical from here
-  on** — the Gusto due/late notices in the firm's inbox belong to the period when it ran.
-- 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
-  the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
-  — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
-  floor scrubber). A 2025 Form 4562 has to be prepared and the deduction claimed. _(2026-08-14.)_
-- ⚠️ **Officer compensation is effectively nil in 2025** where 2024 carried a real salaries line.
-  Two shareholder-employees. Reasonable-compensation exposure — weaker than usual because the year
-  is a large loss and the business is winding down, but it must be a decision, not an oversight.
-  See the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/).
+- ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
+  30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
+  cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
+  own retail price.** That is a formula applied across the catalogue, not eight supplier
+  prices agreeing by chance. Other
+  variants carry **no cost at all** and contribute **zero** to the same total — so the number is
+  inflated and incomplete at once. **Shopify gives this client units, not value.** The valuation
+  has to come from supplier invoices, the client's cost sheet, or a physical count. _(Established
+  2026-08-14 when the Shopify figure came out ~1.74× the ending inventory on the filed 2024
+  1120-S — Lilian knew the prior-year number and questioned it, which is the only reason this was
+  caught.)_
+- 🔴 **BASIS IS THE LIVE RISK ON THE 2025 RETURN — the two shareholders' equity accounts are
+  wildly unequal.** Equity sits in one named account per principal (Double holds the names, per
+  §2). One of them funded almost the entire business and **put in a further large contribution
+  during 2025**; the other's account has **not moved since 2024** and is a small fraction of the
+  first. Meanwhile the company has now run **two consecutive loss years**, the second much larger
+  than the first. If the loss is allocated by share percentage while contributions are that
+  lopsided, **the smaller shareholder's basis will not carry his share** and part of his loss is
+  suspended rather than deducted. **Form 7203 per shareholder is not optional here.** First
+  question: are those accounts **capital contributions or shareholder loans** — they behave
+  differently for basis. _(2026-08-14.)_
 - ✅ **THE 1125-A METHOD IS DECODED — three rules, and they reproduce the 2024 return exactly.**
   With the 2024 QuickBooks reports in hand (2026-08-14) the whole schedule ties to the cent:
   1. **Line 7 (ending inventory) = the balance sheet's `Total for Other Current Assets`** — which
@@ -155,17 +136,35 @@ the actual details.
   in each year. An earlier reading of this file suspected the base had changed; that was wrong, and
   the cause was that **2024 has no discount accounts at all** — `Channel Discount` and `Channel
   Refund Adjustment` first appear in 2025 — so 2024's gross and net coincide while 2025's diverge
-  sharply. Measure the ratio against `Shopify Sales`, never against total income. _(2026-08-14.)_
-- 🔴 **BASIS IS THE LIVE RISK ON THE 2025 RETURN — the two shareholders' equity accounts are
-  wildly unequal.** Equity sits in one named account per principal (Double holds the names, per
-  §2). One of them funded almost the entire business and **put in a further large contribution
-  during 2025**; the other's account has **not moved since 2024** and is a small fraction of the
-  first. Meanwhile the company has now run **two consecutive loss years**, the second much larger
-  than the first. If the loss is allocated by share percentage while contributions are that
-  lopsided, **the smaller shareholder's basis will not carry his share** and part of his loss is
-  suspended rather than deducted. **Form 7203 per shareholder is not optional here.** First
-  question: are those accounts **capital contributions or shareholder loans** — they behave
-  differently for basis. _(2026-08-14.)_
+  sharply. Measure the ratio against `Shopify Sales`, never against total income.
+  ⓘ **How Lilian describes the method, and it fits:** cost is *estimated* at **30% of the selling
+  price** because the true cost of the goods is not known (2026-08-14). That estimate is what
+  drives **cost of goods sold**; ending inventory is then the residual (rule 3 above), which is why
+  the schedule closes without anyone ever valuing the stock directly. _(2026-08-14.)_
+- 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
+  the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
+  — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
+  floor scrubber). A 2025 Form 4562 has to be prepared and the deduction claimed. _(2026-08-14.)_
+- ⚠️ **Officer compensation is effectively nil in 2025** where 2024 carried a real salaries line.
+  Two shareholder-employees. Reasonable-compensation exposure — weaker than usual because the year
+  is a large loss and the business is winding down, but it must be a decision, not an oversight.
+  See the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/).
+- ⚠️ **`Form 7203` (shareholder basis) was not found in the extracted 2024 return — but pages 8
+  and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
+  in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
+  Check the PDF by hand. _(2026-08-14.)_
+- ✅ **PAYROLL STOPPED — settled by Lilian, 2026-08-14: "la nómina paró, no se corrieron más
+  payrolls."** So the near-zero payroll on the 2025 P&L is the fact, not a gap in the books. §3/§4
+  describe the weekly Gusto payroll in the past tense for this reason — the due/late notices in the
+  firm's inbox belong to the period when it ran.
+- **2024 was the first year with activity on this basis** — the filed return opens with **zero**
+  beginning inventory and a **zero** beginning balance sheet, and the only return in Double's
+  `Tax Return Filed` tree is 2024. _(Whether earlier returns exist elsewhere was not
+  investigated.)_ Purchases that year were large and cost of goods sold was small: the company
+  bought stock and sold very little of it, which is why almost the whole balance sheet is
+  inventory.
+- **Two Schedule K-1s** on the 2024 return — two shareholders, consistent with the two principals
+  holding workers'-comp exemptions below.
 - ⚠️ **The Security Deposit came off the balance sheet during 2025** — it was carried all through
   2024 and is **zero** at 31 Dec 2025, with no matching write-off visible as its own expense line.
   The likely explanation is that the landlord applied it against rent, which would already sit
@@ -179,17 +178,17 @@ the actual details.
   map, so a text extraction returns glyph names rather than characters. Read through
   [`tools/redact-doc/`](../../../tools/redact-doc/) at its 2026-08-14 version or later, which
   decodes them; an older copy reports "0 masked" on this file and that means **blind, not clean**.
-- ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
-  30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
-  cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
-  own retail price.** That is a formula applied across the catalogue, not eight supplier
-  prices agreeing by chance. Other
-  variants carry **no cost at all** and contribute **zero** to the same total — so the number is
-  inflated and incomplete at once. **Shopify gives this client units, not value.** The valuation
-  has to come from supplier invoices, the client's cost sheet, or a physical count. _(Established
-  2026-08-14 when the Shopify figure came out ~1.74× the ending inventory on the filed 2024
-  1120-S — Lilian knew the prior-year number and questioned it, which is the only reason this was
-  caught.)_
+- 🛑 **The July 2026 sales-tax return is the last one the firm files** (§4). Lilian files it herself.
+- ⚠️ **Most of the business does NOT go through the Shopify store — the storefront is a small
+  fraction of it.** Across the whole of 2025 the store took **fewer than 50 orders**, several months
+  ran at one or two, and **December 2025 was zero**, while the warehouse held over eleven thousand
+  units. So a Shopify sales report is **not** this company's revenue, and anyone reading one as such
+  will understate the year badly. Consistent with the retail/wholesale zoning history below. _(Shopify
+  analytics, read 2026-08-14. Order counts are a volume fact; the money stays in Shopify/QuickBooks
+  per the two-data-homes rule.)_
+- **Retail, not wholesale.** A 2024 zoning application for the warehouse location was denied
+  because "wholesale" use isn't allowed there; resubmitting it as **retail sales to customers** got
+  it approved. That framing mattered for licensing and may matter again on the way out.
 - **Shopify carries ONE cost per variant and applies it to every historical snapshot** — implied
   unit costs came back identical to the cent at both the 2024 and 2025 year ends on nearly every
   item. So editing a cost today silently rewrites what a past year "reported". _(One item did not
@@ -274,12 +273,11 @@ the actual details.
 - 2026-08-14 — **Lilian supplied the 2025 QuickBooks P&L and balance sheet** (accrual, exported
   the same day) and preparation of the 2025 Form 1125-A began. The books turn out to implement the
   firm's COGS estimate consistently *within* the year, but four things block the return and all
-  four are now in §5: **payroll has apparently stopped**, **no depreciation was recorded**,
-  **officer compensation is nil**, and **the books do not tie to the 2024 return at 1 January** on
-  either inventory or retained earnings. The valuation base for COGS also moved between the two
-  years. Requested from Lilian: the QuickBooks balance sheet at 31 Dec 2024, the inventory
-  account's 2025 ledger detail, and confirmation that nothing was purchased in 2025.
-  _(Worked by Lilian.)_
+  four looked like blockers: payroll, no depreciation recorded, officer compensation nil, and the
+  books apparently not tying to the 2024 return at 1 January. ⚠️ **Two of those four were wrong —
+  read the next entry before acting on this one.** Requested from Lilian: the QuickBooks balance
+  sheet at 31 Dec 2024, the inventory account's 2025 ledger detail, and confirmation that nothing
+  was purchased in 2025. _(Worked by Lilian.)_
 - 2026-08-14 — **The 2024 QuickBooks reports closed every open question about method, and the 2025
   Form 1125-A now ties to the cent.** Lilian also settled that **payroll stopped** and set the
   scope: *the 2024 return is closed, Julia prepared it, and it is not to be reviewed* — it is the
@@ -305,23 +303,30 @@ the actual details.
 - [ ] **Double record** — archive it once the closures are done (and drop this client from the
       weekend sweep scope at that point, not before).
 
-### Information still needed
-- [ ] **2025 return — did the client take a physical inventory count at 31 Dec 2025?** This decides
-      whether the Shopify snapshot can be used as the figure or only as a cross-check (§5).
-- [ ] **2025 return — how are inventory purchases recorded in QuickBooks?** Expensed on purchase, or
-      carried as an inventory asset? Decides whether the year-end close needs an inventory adjusting
-      entry, and it is a large number for a company this size.
-- [ ] **2025 return — what ending inventory did the 2024 Form 1120-S report?** That figure *is* the
-      2025 beginning inventory and it governs; the Shopify snapshot for 31 Dec 2024 is a cross-check,
-      not the authority. A gap between the two has to be explained, not averaged.
-- [ ] **2025 return — where does the real cost of the inventory come from?** Shopify's is a
-      30%-of-retail formula (§5), so the valuation needs supplier invoices, a client cost sheet, or
-      a counted-and-priced list. **This is the blocker on the 1125-A.**
-- [ ] **2025 return — how was the 2024 ending inventory figure derived?** Whatever method produced
-      the number on the filed 2024 1120-S is the method to repeat for consistency; it is also the
-      only evidence so far of what this inventory really costs.
-- [ ] **2025 return — are the BAI-branded lines Kolo's own stock?** They are tracked, unlike the
-      intermediary kitchen/door lines, and they are among the largest lines by value (§5).
+### Outstanding items (CI-only — never in the SOP)
+<!-- This exact heading is what the client-card render looks up. Renaming it makes
+     every row below vanish from the team's view. -->
+
+**Blocking the 2025 Form 1120-S** — asked of Lilian 2026-08-14, none answered yet:
+
+- [ ] **The 2024 depreciation schedule / Form 4562 detail.** Nothing was recorded in 2025 (§5) and
+      2025 is a full year for all three assets, so the deduction has to be computed — but the method
+      and lives are only on that schedule. **This is what blocks page 1 of the return.**
+- [ ] **The two shareholders' ownership percentages**, from the 2024 Schedule K-1s — the loss cannot
+      be allocated, and basis cannot be tested, without them (§5).
+- [ ] **Are the shareholder equity accounts capital contributions or loans?** Decides whether the
+      accumulated losses are deductible or suspended (§5).
+- [ ] **What happened to the Security Deposit** during 2025 (§5).
+- [ ] **Which valuation-method box was ticked on line 9a** of the 2024 Form 1125-A — 2025 must match.
+- [ ] **Is `Refreshments (Tax Review)` a meals account?** If so it joins the 50% disallowance in the
+      Schedule M-1 adjustment.
+
+**Standing, not blocking:**
+
+- [ ] **Are the BAI-branded lines Kolo's own stock?** They are tracked, unlike the intermediary
+      kitchen/door lines, and they are among the largest lines by value (§5).
+- [ ] **Is the warehouse lease still running?** Four fifths of 2025's expenses and the largest
+      remaining exposure of the wind-down after the inventory (§5).
 - [ ] Fiscal year-end
 - [ ] Confirm (or rule out) the "MegaBAI Florida Corp" relationship in §5
 - [x] Industry / what they do — **retail e-commerce via the Shopify store "KOLO HOUSE"** plus a

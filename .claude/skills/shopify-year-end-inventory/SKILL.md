@@ -57,9 +57,11 @@ graphql_query          → locations { name isActive address { city province } }
 
 Two things to establish:
 
-- **The plan.** The Inventory report family — including the month-end snapshot — needs the
-  **Shopify** plan or higher. On **Basic** it is not there, and the whole route below changes:
-  you are down to current levels plus the client's own records.
+- **The plan.** The pilot client is on the **Shopify** plan and the Inventory report family —
+  including the month-end snapshot — is present there, **verified 2026-08-14**. ⚠️ **That the
+  reports are ABSENT on Basic is Shopify's documented tiering, not something this firm has
+  checked** — no Basic-plan client has been worked (see the update note at the end). If you meet
+  one, confirm what the admin actually offers before telling anyone the route is unavailable.
 - **The locations.** More than one location means stock may sit somewhere that is not the
   client's, or that a second entity operates. A single location is one less thing to reconcile.
 
@@ -206,12 +208,12 @@ field. Label it as an estimate every single time you show it.
 
 ## What Shopify cannot tell you — regardless of the gates
 
-- **Historical cost.** Shopify applies the variant's **current** "Cost per item" to every
-  historical snapshot. *(Verified at Kolo across two year-ends: implied unit costs came back
-  identical **to the cent** on nearly every item across a full year of trading, which is only
-  possible if one cost value is being applied to both dates. One item did not behave
-  this way and was not explained; treat a mismatch as worth investigating, not as proof of
-  layering.)* **So a cost change made today silently rewrites last year's reported value.**
+- **Historical cost — on the evidence of one client, and the evidence is not unanimous.** At Kolo,
+  implied unit costs came back identical **to the cent** at both year-ends on nearly every item
+  across a full year of trading, which is hard to explain unless one cost value is being applied to
+  both dates. **But one item did not behave that way and was never explained**, so this is a strong
+  working assumption rather than an established fact about Shopify. Treat it as: **assume a cost
+  change today rewrites last year's reported value, and verify before relying on either reading.**
 - **A costing method.** There is no FIFO, no LIFO, no specific identification, no
   lower-of-cost-or-market. One cost, one multiplication.
 - **Goods in transit**, or anything held off-platform.

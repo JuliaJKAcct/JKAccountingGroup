@@ -75,18 +75,39 @@ document that genuinely had no identifiers.
 > fix: 72,775 characters of real text and **four SSN/ITINs masked**. The first run had not
 > protected anything — it had simply been unable to see.
 
-Two changes close it, and they are different jobs:
+⚠️ **And decoding is only half the job — the half it is easy to stop at.** `/uniXXXX` is one
+convention among several. pypdf writes the **raw glyph name** for any name it cannot map, and
+subset fonts routinely use `/g11`, `/cid49`, `/G34` or `/index0031` — none of which name a code
+point, so **none can be decoded at all**. A document that is only *partly* decodable is then the
+**worst** case in the whole tool: the successful decodes inflate the alphabet, the diversity gate
+below is satisfied, and thousands of undecodable tokens ride into the written file under a
+"0 masked" report. _(An independent review built exactly that document — 17 unreadable pages plus
+one good one — and walked it straight through the first version of this fix. The fully-broken
+document was caught; the half-broken one was not.)_
+
+Three changes close it, and they are different jobs:
 
 - **Recovery.** `/uniXXXX` is Adobe's glyph-naming convention and `XXXX` is the Unicode code
   point, so the text is decoded back before any pattern runs. Faithful, not a guess. When this
   path is used the tool **says so**, and warns that column alignment came through worse than
   usual — read a figure's position with suspicion and prefer one you can corroborate.
-- **A gate that measures intelligibility, not volume.** Natural English, even the
-  number-dense English of a return, draws on a wide alphabet; a character-level extraction
-  failure draws on a tiny one (27 distinct characters across half a million, against 82 for
-  the same document read properly). Below the threshold the tool **refuses to write**. The
-  gate applies only above ~2,000 characters, because a short document's alphabet proves
-  nothing either way — those are covered by the per-page warning instead.
+- **A residual-token check, which is the PRIMARY detector.** After decoding, anything still
+  shaped like a glyph name is counted, and a systemic count **refuses the file**. This measures
+  the wreckage directly instead of inferring it from alphabet size, so the partly-decoded case
+  cannot hide behind its readable half.
+- **A gate that measures intelligibility, not volume** — the backstop, for encoding failures
+  that leave no glyph names behind. Natural English, even the number-dense English of a return,
+  draws on a wide alphabet; a character-level extraction failure draws on a tiny one. Below the
+  threshold the tool **refuses to write**. It applies only above ~2,000 characters, because a
+  short document's alphabet proves nothing either way, and it runs **per page as well as per
+  document** — a whole-document average is exactly what lets one good page vouch for a stack of
+  bad ones.
+
+  ⚠️ **Calibration, because the first attempt got this wrong in the safe-looking direction.**
+  Two measured points bracket the threshold: the real broken 1120-S came in at **27 distinct
+  characters**, and a realistic ALL-CAPS tax-package extraction — a perfectly good document — at
+  **39**. The first version set the bar at 40 and therefore **refused a real return by one
+  character**, telling the operator to go and ask for a different PDF. It now sits at 30.
 
 **If you see the UNREADABLE EXTRACTION message, do not re-run and trust a "0 masked" report.**
 Ask for a properly generated PDF from the tax software.
@@ -121,7 +142,7 @@ solve a reading problem by sending the document somewhere else to be read.
 | **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless |
 | **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
 | **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
-| **5** | `UNREADABLE EXTRACTION` | The text came out at the character level — a font with no usable Unicode map, or similar | The tool already decodes `/uniXXXX` glyph names automatically, so reaching this means the failure is a shape it cannot recover. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — see the section above; zero means blind |
+| **5** | `UNREADABLE EXTRACTION` | Either **undecodable glyph names** (`/g11`, `/cid49`, `/index0031` — a slot in a subset font, naming no character) or text with too small an alphabet to be text | `/uniXXXX` is decoded automatically, so reaching this means the failure is a shape that **cannot** be recovered. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — zero means blind. Note this fires even when *part* of the document read fine; that mixed case is the most dangerous one, not the least |
 | **4** | `REFUSING TO WRITE` | An identifier-shaped run survived redaction | Read the reported *shapes*. Either a pattern missed a real identifier or a column of figures collided with the shape. Inspect the PDF by hand, decide which, and **fix the patterns** — never weaken the guard to get the job done |
 | **0** + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |

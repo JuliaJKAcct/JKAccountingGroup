@@ -19,6 +19,9 @@ Exit codes
     2  the PDF has no text layer (a scan) — nothing was written
     3  unreadable / not a PDF / the download failed
     4  the redactor found something it does not know how to mask safely
+    5  the text layer came out as glyph names or otherwise unreadable — nothing
+       was written, and a "0 masked" report from such a file would mean BLIND
+       rather than clean
 
 What is masked, and why (JK Accounting Group, Lilian 2026-08-11):
     SSN / ITIN · bank routing and account numbers (incl. IBAN-style) ·
@@ -82,7 +85,36 @@ def normalise(text: str) -> str:
 #
 #    `/uniXXXX` is Adobe's glyph-naming convention and XXXX is the Unicode code
 #    point in hex, so decoding it is a faithful recovery, not a guess.
-GLYPH_NAME = re.compile(r"/uni([0-9A-Fa-f]{4,6})\b|/u([0-9A-Fa-f]{4,6})\b")
+#
+# ⚠️ DECODING IS ONLY HALF THE JOB, and the half that is easy to stop at.
+#    `/uniXXXX` is one convention among several. pypdf writes the RAW glyph name
+#    for any name it cannot map, and subset fonts routinely use `/g11`, `/cid49`,
+#    `/G34` or `/index0031` — none of which name a code point, so none can be
+#    decoded. Those are strictly worse than the case above, because a document
+#    that is PARTLY decodable ends up with a rich-looking alphabet that disarms
+#    the diversity gate below while thousands of undecodable tokens ride into the
+#    written file. RESIDUAL_GLYPH exists to catch exactly that, and it is the
+#    primary detector — the diversity gate is the backstop, not the other way
+#    round. _(Found by the independent review of PR #219, which built the mixed
+#    document and walked it straight through the first version of this fix.)_
+
+# Adobe allows `uni` followed by SEVERAL 4-hex groups in one name. Matching
+# `{4,6}` greedily eats the first group plus two digits of the second and leaves
+# the remainder welded to a decoded character, so the groups are matched
+# explicitly and decoded one at a time.
+GLYPH_NAME = re.compile(r"/uni((?:[0-9A-Fa-f]{4})+)(?![0-9A-Fa-f])|/u([0-9A-Fa-f]{4,6})(?![0-9A-Fa-f])")
+
+# Glyph-name shapes that carry NO code point and therefore cannot be recovered.
+# `/uni` and `/u` appear here too: anything of that shape still present after
+# decoding was malformed and was deliberately left alone.
+RESIDUAL_GLYPH = re.compile(
+    r"/(?:uni[0-9A-Fa-f]*|u[0-9A-Fa-f]{4,6}|g\d+|G\d+|cid\d+|CID\d+|index\d+|glyph\d+)\b"
+)
+
+# Lone surrogates are not encodable as UTF-8. `chr()` will happily produce one
+# from `/uniD800`, and the failure would then land on dst.write_text() AFTER the
+# file was opened — breaking the "nothing was written" contract with a traceback.
+SURROGATES = range(0xD800, 0xE000)
 
 
 def decode_glyph_names(text: str) -> tuple[str, int]:
@@ -95,14 +127,28 @@ def decode_glyph_names(text: str) -> tuple[str, int]:
 
     def sub(m: re.Match) -> str:
         nonlocal n
-        try:
-            ch = chr(int(m.group(1) or m.group(2), 16))
-        except (ValueError, OverflowError):
-            return m.group(0)
-        n += 1
-        return ch
+        body = m.group(1) or m.group(2)
+        groups = (
+            [body[i : i + 4] for i in range(0, len(body), 4)] if m.group(1) else [body]
+        )
+        out = []
+        for g in groups:
+            try:
+                code = int(g, 16)
+            except ValueError:
+                return m.group(0)
+            if code in SURROGATES or code > 0x10FFFF:
+                return m.group(0)
+            out.append(chr(code))
+        n += len(groups)
+        return "".join(out)
 
     return GLYPH_NAME.sub(sub, text), n
+
+
+def residual_glyphs(text: str) -> int:
+    """How many un-decodable glyph-name tokens are still sitting in the text."""
+    return len(RESIDUAL_GLYPH.findall(text))
 
 
 # ── The intelligibility gate. Every check in this tool used to measure the
@@ -121,7 +167,18 @@ def decode_glyph_names(text: str) -> tuple[str, int]:
 #    using 27 characters is broken beyond argument. Applying the rule only above
 #    a floor keeps it from firing on the short documents where it cannot know —
 #    those are already covered by the per-page "barely extracted" warning.
-MIN_DISTINCT_CHARS = 40
+#
+#    CALIBRATION, because the first version got this wrong in the safe-looking
+#    direction. Two measured points bracket it: the real broken 1120-S came in at
+#    **27**, and a realistic ALL-CAPS tax-package extraction — a perfectly good
+#    document — came in at **39**. A threshold of 40 therefore REFUSED a real
+#    return by one character, and told the operator to go and ask for a different
+#    PDF. 30 sits clear of both. _(Independent review of PR #219.)_
+#
+#    And note what this gate is now FOR: it is the backstop for encoding failures
+#    that leave no glyph names behind. The direct detector for the glyph case is
+#    residual_glyphs() above, which does not care about alphabet size at all.
+MIN_DISTINCT_CHARS = 30
 DIVERSITY_MIN_LEN = 2_000
 
 
@@ -392,6 +449,30 @@ def _run(src: Path, dst: Path) -> int:
         )
         return 2
 
+    # ⚠️ THE PRIMARY DETECTOR. Glyph-name output that could not be decoded — the
+    # `/g11`, `/cid49`, `/index0031` conventions — carries no code point, so it
+    # survives decoding untouched and matches none of the redaction patterns.
+    # Worse, on a document that is only PARTLY decodable the successful decodes
+    # inflate the alphabet and walk the diversity gate below straight past it.
+    # This check does not care about the alphabet: it counts the wreckage
+    # directly. A handful of tokens is tolerated (a real return can mention a
+    # PDF internal in an attachment); a systemic failure is thousands.
+    residual = residual_glyphs(raw)
+    if residual > 20 or (raw and residual / max(len(raw), 1) > 0.0005):
+        print(
+            f"UNREADABLE EXTRACTION: {len(pages)} page(s) carrying {residual:,} glyph-name\n"
+            "token(s) that cannot be decoded — `/g11`, `/cid49`, `/index0031` and the like\n"
+            "name a slot in a subset font, not a character, so there is nothing to recover.\n"
+            "Nothing was written.\n"
+            "⚠️  DO NOT re-run and trust a '0 masked' report from this file: the redaction\n"
+            "    patterns cannot match these tokens, so zero means BLIND, not clean — and a\n"
+            "    partly-decoded document is the WORST case, because the readable half makes\n"
+            "    the unreadable half look fine. Ask for a properly generated PDF from the\n"
+            "    tax software.",
+            file=sys.stderr,
+        )
+        return 5
+
     # ⚠️ Volume is not intelligibility. Everything above this line measures how
     # MUCH came out; this measures whether what came out is text. Without it a
     # character-level extraction failure produces a large file that redacts to
@@ -444,7 +525,17 @@ def _run(src: Path, dst: Path) -> int:
     # This number is the reason an ABSENCE in the output is not evidence of an
     # absence in the return: a form can be sitting on a page that did not
     # extract. Reported here so the reader cannot fail to see it.
-    thin = [i + 1 for i, p in enumerate(pages) if len(re.sub(r"\W", "", p)) < 200]
+    #
+    # ⚠️ Measured PER PAGE, not just per document. One good page must not be able
+    # to vouch for a stack of bad ones: a whole-document alphabet count is an
+    # average, and an average hides exactly the mixed case this tool now exists
+    # to catch. A page is reported when it gave up almost nothing, OR when what
+    # it gave up does not read as text.
+    thin = [
+        i + 1
+        for i, p in enumerate(pages)
+        if len(re.sub(r"\W", "", p)) < 200 or not looks_like_text(p)[0]
+    ]
 
     # The ONLY thing this tool ever prints about the document's contents.
     print(f"redacted → {dst}  ({len(pages)} pages, {len(redacted):,} chars)")

@@ -182,17 +182,31 @@ must_keep("Amount then word", "1,234 Other income", "Other income")
 # ══ _run(): the whole pipeline had no coverage at all — not the guard, not the
 #    scan detection, not the raw-download deletion, not the thin-page warning.
 
-def _minimal_pdf(body: str) -> bytes:
-    """A tiny valid PDF carrying one line of text, so _run() can be exercised."""
-    stream = f"BT /F1 12 Tf 40 700 Td ({body}) Tj ET".encode("latin-1")
+def _minimal_pdf(body) -> bytes:
+    """A tiny valid PDF, so _run() can be exercised end to end.
+
+    `body` is one page's text, or a LIST of page texts — the multi-page form is
+    what makes the PER-PAGE intelligibility gate testable at all: a document
+    whose pages differ is the only way one good page can try to vouch for a bad
+    one.
+    """
+    bodies = [body] if isinstance(body, str) else list(body)
+    n = len(bodies)
+    font_num = 3 + 2 * n
+    kids = b" ".join(b"%d 0 R" % (3 + 2 * i) for i in range(n))
     objs = [
         b"<< /Type /Catalog /Pages 2 0 R >>",
-        b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-        b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] "
-        b"/Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>",
-        b"<< /Length %d >>\nstream\n%s\nendstream" % (len(stream), stream),
-        b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
+        b"<< /Type /Pages /Kids [%s] /Count %d >>" % (kids, n),
     ]
+    for i, text in enumerate(bodies):
+        stream = f"BT /F1 12 Tf 40 700 Td ({text}) Tj ET".encode("latin-1")
+        objs.append(
+            b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] "
+            b"/Resources << /Font << /F1 %d 0 R >> >> /Contents %d 0 R >>"
+            % (font_num, 4 + 2 * i)
+        )
+        objs.append(b"<< /Length %d >>\nstream\n%s\nendstream" % (len(stream), stream))
+    objs.append(b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>")
     out, offsets = bytearray(b"%PDF-1.4\n"), []
     for i, o in enumerate(objs, 1):
         offsets.append(len(out))
@@ -255,12 +269,17 @@ with tempfile.TemporaryDirectory() as td:
 #    Found 2026-08-14 on a real filed 1120-S that carried four SSN/ITINs the
 #    first run did not see. These cases exist so it cannot happen quietly again.
 
-from redact import decode_glyph_names, looks_like_text  # noqa: E402
+from redact import decode_glyph_names, looks_like_text, residual_glyphs  # noqa: E402
 
 
 def _as_glyphs(s: str) -> str:
     """Encode text the way a broken font's extraction presents it."""
     return "".join(f"/uni{ord(c):04X}" for c in s)
+
+
+def _as_undecodable(s: str) -> str:
+    """A subset font's OTHER conventions — glyph SLOTS, naming no code point."""
+    return "".join(f"/g{ord(c) % 97 + 1}" for c in s)
 
 
 decoded, n = decode_glyph_names(_as_glyphs("SSN 123-45-6789"))
@@ -321,6 +340,83 @@ with tempfile.TemporaryDirectory() as td:
     (tmp / "junk.pdf").write_bytes(_minimal_pdf("0123456789 " * 300))
     if _run(tmp / "junk.pdf", tmp / "g2.txt") != 5 or (tmp / "g2.txt").exists():
         FAILURES.append("_run · an unreadable extraction did not exit 5 without writing")
+
+    # ══ THE MIXED DOCUMENT. This is the case the FIRST version of the glyph fix
+    #    walked straight through, and it is worse than a wholly-broken one: the
+    #    decodable part inflates the alphabet, the diversity gate is satisfied,
+    #    and thousands of undecodable tokens ride into the written file while the
+    #    report says "0 masked". Built by the independent review of PR #219.
+    mixed = (
+        _as_glyphs("Taxpayer social security number 123-45-6789 EIN 45-6789012 ")
+        + _as_undecodable(
+            "Ordinary business income and a great deal of further narrative text "
+            "that cannot be recovered from a subset font by any means at all. " * 12
+        )
+        + " Schedule K-1 Part III inventory 185,673 and ordinary prose besides. "
+    )
+    (tmp / "mixed.pdf").write_bytes(_minimal_pdf(mixed))
+    if _run(tmp / "mixed.pdf", tmp / "g3.txt") != 5 or (tmp / "g3.txt").exists():
+        FAILURES.append(
+            "_run · LEAK: a PARTLY-decodable extraction was written instead of refused — "
+            "undecodable glyph tokens reached the output file"
+        )
+
+    # ══ ONE GOOD PAGE MUST NOT VOUCH FOR A BAD ONE. A whole-document alphabet
+    #    count is an average, and an average hides the mixed case. Here page 2 is
+    #    an unreadable extraction that leaves NO glyph tokens behind — so the
+    #    residual detector passes it and the document-level gate is satisfied by
+    #    page 1's rich prose. Only a PER-PAGE measure catches it, and the operator
+    #    has to be told, or an absence on page 2 reads as evidence.
+    import contextlib, io  # noqa: E402
+    good = ("Zephyr Quarry Junction LLC, Form 1120-S, U.S. Income Tax Return for an "
+            "S Corporation; ordinary business income (loss) & amortization per "
+            "Schedule K-1, Part III, box 1. " * 12)
+    (tmp / "twopage.pdf").write_bytes(_minimal_pdf([good, "0123456789 " * 300]))
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = _run(tmp / "twopage.pdf", tmp / "g5.txt")
+    report = buf.getvalue()
+    if rc != 0:
+        FAILURES.append("_run · the two-page control did not complete")
+    elif "barely extracted" not in report or "2" not in report.split("barely extracted")[1][:20]:
+        FAILURES.append(
+            "_run · page 2 was an unreadable extraction and was NOT reported — "
+            "the per-page gate is not running, so one good page vouched for a bad one"
+        )
+
+    # A properly-read document must not be refused by the residual check.
+    (tmp / "clean.pdf").write_bytes(_minimal_pdf(
+        "Zephyr Quarry Junction LLC Form 1120-S U.S. Income Tax Return for an S "
+        "Corporation. Ordinary business income (loss) 22,100; EIN 45-6789012; "
+        "amortization & depreciation per Form 4562. Schedule K-1 Part III box 1."))
+    if _run(tmp / "clean.pdf", tmp / "g4.txt") != 0:
+        FAILURES.append("_run · a normal document was refused by the residual-glyph check")
+
+# ── The residual detector itself, and the shapes it must know about.
+for shape in ("/g11", "/cid49", "/G34", "/index0031", "/glyph7"):
+    if residual_glyphs(f"text {shape} more") != 1:
+        FAILURES.append(f"RESIDUAL · {shape!r} was not recognised as an undecodable glyph name")
+# Ordinary prose containing slashes must NOT be read as glyph names.
+for innocent in ("and/or", "N/A", "12/31/2024", "w/ the client", "Schedule K-1"):
+    if residual_glyphs(innocent):
+        FAILURES.append(f"RESIDUAL · false positive on ordinary text {innocent!r}")
+
+# ── Adobe's MULTI-CHARACTER uni form. A greedy {4,6} eats one group plus two
+#    digits of the next and welds the remainder to a decoded character.
+if decode_glyph_names("/uni00310032")[0] != "12":
+    FAILURES.append("GLYPH · a multi-character /uniXXXXXXXX name did not decode fully")
+if residual_glyphs(decode_glyph_names("/uni00310032/uni0033")[0]):
+    FAILURES.append("GLYPH · decoding a multi-character name left a residual token behind")
+
+# ── A lone surrogate must never reach chr()'s output: dst.write_text() would
+#    raise AFTER opening the file, breaking the "nothing was written" contract.
+out, _ = decode_glyph_names("/uniD800")
+if out != "/uniD800":
+    FAILURES.append("GLYPH · a lone surrogate was decoded instead of being left alone")
+try:
+    decode_glyph_names("/uniD800/uni0041")[0].encode("utf-8")
+except UnicodeEncodeError:
+    FAILURES.append("GLYPH · decoded output is not UTF-8 encodable — write_text would crash")
 
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
