@@ -21,7 +21,7 @@ The one-liners below are just the "when to reach for it."
 
 | Skill | Reach for it when… |
 |---|---|
-| [`bookkeeping-sop`](./bookkeeping-sop/) | Writing/updating a **per-client monthly-bookkeeping runbook** — categorization rules, chart-of-accounts conventions, the 1099 process, the reviewer checklist — and how it should look in the Hub. *(Builds on `sop-authoring`, feeds `knowledge-hub`. Ecoorganic is the pilot.)* |
+| [`bookkeeping-sop`](./bookkeeping-sop/) | Writing/updating a **per-client monthly-bookkeeping runbook** — categorization rules, chart-of-accounts conventions, the 1099 process, the reviewer checklist, the client-reporting delivery log — and how it should look in the Hub. **Three shapes**: categorization-rules *(Ecoorganic)*, month-end close-process *(Magnum 152)*, and pre-operational/capitalization *(iKids Group — a client building something and not trading yet, where the P&L is supposed to be empty)*. *(Builds on `sop-authoring`, feeds `knowledge-hub`.)* |
 | [`bookkeeping-kpis`](./bookkeeping-kpis/) | Building/updating an on-brand, dynamic **bookkeeping-performance dashboard** for a client — headline numbers, a health score, ranked signals & alerts, expense + revenue-vs-net charts, a balance-sheet snapshot — and the all-clients board. *(Always via `impeccable` + the Design System; real client figures never committed. Ecoorganic is the pilot.)* |
 | [`reasonable-compensation`](./reasonable-compensation/) | Determining/justifying an **S-corp owner's reasonable salary** and producing the branded, print-ready report. |
 | [`expenses-report-tie-out`](./expenses-report-tie-out/) | Turning a QuickBooks **Transaction Detail into an Expenses report that ties to the P&L** (or diagnosing why two reports don't agree). |

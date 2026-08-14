@@ -303,7 +303,7 @@ this; do not invent a second approach.** Raised with Double 2026-08-06; **answer
 
 | Tool | | Notes |
 |---|---|---|
-| `get_transactions` · `get_transactions_count` | ✅ (Jul) | Filter by account, dimension, type, date range, free text |
+| `get_transactions` · `get_transactions_count` | ✅ (Jul) | Filter by account, dimension, type, date range, free text. ⚠️ **It does not return every entry in the ledger — see the note below.** Also returns `TRANSACTIONS_CACHE_BUILDING` / `..._IN_PROGRESS` on a cold cache; that is a wait, not a failure |
 | `get_similar_transactions` | ◻︎ | **Underused and valuable.** Given one transaction's `externalId`, returns historical transactions with the same payee/description **plus `payeeStats` and `accountStats`** — e.g. "this vendor is coded to Rent or Lease 88% of the time". Made for categorization work; feeds the [`bookkeeping-sop`](../../bookkeeping-sop/) skill |
 | `get_transaction_accounts` | ◻︎ | Full chart of accounts, including inactive |
 | `get_transaction_types` · `get_transaction_dimensions` | ◻︎ | Dimensions: vendor, customer, employee, class, location, department, project |
@@ -313,6 +313,26 @@ this; do not invent a second approach.** Raised with Double 2026-08-06; **answer
 
 These carry real client figures. They can be read freely for the firm's own work; they are
 **never committed to this repo**.
+
+### ⚠️ `get_transactions` is not the whole ledger — never reason from its silence
+
+Observed **2026-08-14** on a QBO client (iKids Group): `get_transaction_types` returned exactly two
+options, **`Deposit` and `Expense`**, and `get_transactions` returned only rows of those two types.
+The client's own **balance sheet showed materially more movement than those rows explain**, so
+entries of other kinds — **bills and journal entries at minimum** — exist in that ledger and were
+**not returned**. Whether the two-type list is a limit of the connector or a description of that
+one client was not established; either way the practical rule is the same.
+
+**So:** `get_transactions` is a *sample* of the ledger, not a census. **Reconcile what it returns
+against the balance sheet / P&L before drawing any conclusion**, and never write "every
+transaction in this client's history is X" from it — that is the [`method.md`](../../../../projects/pre-return-review/method.md)
+rule-1b failure, and it was caught in review on exactly this client. Where the gap matters, ask for
+a QuickBooks-side report instead.
+
+**One inference that *is* safe, and its exact edge:** if `get_transaction_accounts` (which includes
+inactive accounts) shows **no `Accounts Payable`**, no **Bill** has ever been entered — QuickBooks
+creates A/P by itself on the first one. It says **nothing** about journal entries, which never
+create A/P.
 
 ### ⚠️ Bank Feeds are NOT here
 

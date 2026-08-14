@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-14
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -29,13 +29,13 @@
 - **Business name:** iKids Group LLC
 - **Entity type:** LLC — **partnership** (multi-member; files Form **1065**) _(Double)_
 - **Home state:** **Florida** (Fort Lauderdale) _(Gmail — high confidence)_
-- **Industry / what they do:** **Children's indoor play park / family-entertainment venue** ("iKidsPark"), being built out at a commercial site in **Fort Lauderdale, FL**. **Pre-operational** (construction / build-out phase; not yet generating revenue). _(Gmail)_
+- **Industry / what they do:** **Children's indoor play park / family-entertainment venue** ("iKidsPark"), being built out at a commercial site in **Fort Lauderdale, FL** — a leased **former big-box retail unit** _(vendor job-site description, 2026-08-14)_. **Pre-operational** (construction / build-out phase; not yet generating revenue). _(Gmail)_
 - **Primary language:** **Russian / Ukrainian** (owners are Ukrainian; correspondence in RU/UA, tax docs bilingual). _(Gmail)_
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); **income tax (Form 1065 partnership → K-1s)**; **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A (pre-operational). The firm also does **hands-on AP / bill-pay** (pays vendors from the client's account). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double). ⚠️ **The bank feed disconnected on
-  2026-07-20 and has not been reconnected** — nothing has imported since, so the books stop at
-  that date (see §4 and §6).
+  2026-07-20 and has not been reconnected** _(Lilian, 2026-08-14)_ — nothing has posted since, so
+  the books stop at that date (see §4 and §6).
 
 ## 2. Contacts
 
@@ -93,9 +93,10 @@ the actual details.
   covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
-- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20.** Nothing has imported since, so the
-  ledger stops there and any month after it will read as quiet when it is really missing.
-  Reconnect it and backfill before working a close — it is step 1 of the runbook now.
+- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_. Nothing has
+  posted since, so the ledger stops there and any month after it will read as quiet when it is
+  really missing. Reconnect it and backfill before working a close — it is step 1 of the runbook
+  now.
 
 ### Reports the client asks us for
 - **iKids requests its own reports periodically** — a **Transaction report** and a **Transactions
@@ -129,22 +130,34 @@ the actual details.
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC. Each owner is individually linked in Double to **their own separate set** of related-entity records — not one shared group _(Double contacts, 2026-07-25 sweep)_.
 - **A concrete example of the hands-on AP:** the permit-expediting vendor **East of Collins Expediting** sends outstanding-balance account statements, which go to the AP mailbox for handling; permit fees themselves are paid through the City of Fort Lauderdale's **LauderBuild** portal _(Gmail, Jul 2026 sweeps)_.
 - **How the project is funded — two routes, and they are not interchangeable.** There is no
-  revenue, so every dollar in comes from the owners: the **Manager funds the project by loan**
-  (a long-term liability account in his name — by far the largest source), and **members
-  contribute capital** to their own named equity accounts. Which route a deposit takes is a fact
-  about that transaction, not a preference _(QuickBooks via Double, 2026-08-14)_.
-- **The books have never used Bills or Invoices.** There is **no Accounts Payable and no Accounts
-  Receivable account** in the chart — QuickBooks creates A/P automatically on the first Bill, so
-  its absence proves none was ever entered. Every transaction in the file's history is a direct
-  bank-feed Expense or Deposit. **Consequence:** when a vendor invoice is paid in instalments, the
-  balance still owed is recorded nowhere in the books. Whether to start using Bills is
-  **Julia's decision** — she set the books up _(2026-08-14)_.
+  revenue, so every dollar in comes from the owners. As the books stand, the **Manager's funding
+  sits in a long-term liability (loan) account** in his name — by far the largest source — and
+  **two other individuals have capital-contribution equity accounts** _(QuickBooks via Double,
+  2026-08-14)_. ⚠️ **Do not read that as a rule about who lends and who contributes**: the Manager
+  is himself a member, so his role cannot be what decides it. **Debt vs. equity is decided by the
+  paperwork** — a note, repayment terms, interest — and for a partnership it flows onto the K-1s
+  through §752. Whether a documented loan agreement exists for the Manager's advances is **not
+  established here**; ask before posting a new one.
+- **The books appear never to have used Bills or Invoices.** The chart read on 2026-08-14 (which
+  returns inactive accounts too) contains **no Accounts Payable and no Accounts Receivable**
+  account. QuickBooks creates A/P by itself on the first Bill, so its absence is **strong evidence
+  no Bill has ever been entered**. ⚠️ **It says nothing about the rest of the ledger** — journal
+  entries never create A/P, and the transaction read reached only `Deposit` and `Expense` rows, so
+  entries of other kinds were not visible. **The consequence that matters is narrow and solid:**
+  with no A/P, a vendor invoice paid in instalments leaves the balance still owed recorded nowhere
+  in the books. Whether to start using Bills is **Julia's decision** — she set the books up
+  _(2026-08-14)_.
 - **The chart of accounts is purpose-built for a pre-operational build-out, and the logic is
-  now written down.** Four capitalization buckets — `Construction in Progress` (the building),
-  `Startup Costs` (the business), `Fixed Assets` (things bought outright), `Security Deposit`
-  (money that comes back) — plus the two funding routes. **The P&L should carry nothing but bank
-  charges** until the park opens. The full framework, the boundaries and the role→account map are
-  in the runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md).
+  now written down.** Five capitalization buckets — `Construction in Progress` (producing the
+  physical improvement), `Startup Costs` (readying the business, §195), `Organizational Costs`
+  (forming the entity, §709), `Fixed Assets` (things bought outright), `Security Deposit` (money
+  held as security) — plus the two funding routes. **The P&L should carry nothing but bank
+  charges** until the park opens. ⚠️ Two things the framework does **not** yet have a home for and
+  which matter for a partnership with three contributing members: **syndication costs** (legal work
+  on admitting members or raising capital — permanently non-deductible, and it lands in
+  `SC - Legal & Licensing` by default), and a settled answer on **construction-period rent**. The
+  full framework, the boundaries and the role→account map are in the runbook,
+  [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md).
 - **There is a commercial/licensing workstream alongside the construction.** The company engaged an
   outside consultant to research potential **licensors** and represent the brand at an
   international licensing trade show, positioning the US launch on the back of the owners' existing
@@ -175,16 +188,19 @@ the actual details.
   and four defects were found and three fixed.** Lilian had transactions to categorize with Julia
   unavailable and nothing recorded explaining why the chart is shaped as it is. The full ledger
   (every bank-feed transaction since the file opened) plus both financial statements were read end
-  to end. **What it established:** the four-bucket framework, the building-vs-business boundary,
-  the refundable-vs-consumed deposit test, and the role→account map — all now in the runbook, which
-  stopped being a seed. **What it found:** (a) **site utilities had drifted onto the P&L** from
-  April 2026 after being capitalized to `CIP - Utilities` earlier in the year — same vendors, two
-  accounts; **Lilian moved them back**; (b) a **marketing vendor sat in `Legal & Professional
-  Fees`** while `SC - Marketing` had never been used — **Lilian moved it**; (c) an **incoming-wire
-  bank fee was posted directly to the `Startup Costs` parent**, which also breaks the
-  no-posting-to-parents rule — **still to fix**, along with an older balance on the same parent
-  that only a manual-entry report will reveal; (d) **two large payments sit in `SC - Travel` that
-  do not look like travel**. **What was categorized:** a general contractor's deposit (a new
+  to end — with the limit that the connector returned only `Deposit` and `Expense` rows, so bills
+  and journal entries were **not** readable and a material share of the year's asset movement is
+  unexplained by what was seen. **What it established:** the five-bucket framework, the
+  producing-the-improvement vs. readying-the-business boundary, the security-deposit test, and the
+  role→account map — all now in the runbook, which stopped being a seed. **What it found:**
+  (a) **site utilities are posted two different ways in 2026** — to `CIP - Utilities` through
+  March, to the P&L `Utilities` account from April, same vendors; **the reason for the April change
+  is not recorded**, and **Lilian moved the P&L balance back**; (b) a **marketing vendor sat in
+  `Legal & Professional Fees`** while `SC - Marketing` had never been used — **Lilian moved it**;
+  (c) an **incoming-wire bank fee was posted directly to the `Startup Costs` parent**, which also
+  breaks the no-posting-to-parents rule — **still to fix**, along with an older balance on the same
+  parent that only an account report will reveal; (d) **two large payments sit in `SC - Travel`
+  that do not look like travel**. **What was categorized:** a general contractor's deposit (a new
   `CIP : General Contractor` sub-account was created for it, because a GC contract cannot be split
   across trades before any work is done) and an asbestos survey required for permitting
   (`CIP - Permits & Fees`, alongside the other permit-driven inspections). **Also established:**
@@ -201,16 +217,30 @@ the actual details.
 - **A construction contract is part-paid and the balance is not in the books** — record it
   somewhere durable until decision 7 in the runbook is settled.
 - **Find the consultant's engagement deposit.** The final payment and the expense reimbursement are
-  accounted for; the earlier deposit is in none of the bank-feed transactions. Manual entry, the
-  second bank account, or paid personally — find it and post it with the rest.
+  accounted for; the deposit was not among the transactions the connector returned — which does
+  **not** mean it is absent from the ledger, since bills and journal entries were unreadable. Look
+  in QuickBooks directly, in the second account, or ask whether it was paid personally.
 - **Clear the `Startup Costs` parent.** An incoming-wire fee (belongs in `Bank Charges`) plus an
-  older balance from 2025 that only shows on an account report over All Dates.
+  older balance from 2025 that did not come through the readable transactions — only an account
+  report on the parent over All Dates will show it.
 - **Identify the two large `SC - Travel` payments** — an international wire to a foreign bank and a
   payment to a property-management company. Neither reads as travel; the second looks like rent or
   a deposit.
-- **Trade-show registration charges may be misfiled** in `SC - Legal & Licensing` (probably because
-  the bank descriptor contains "licensing"). If they are the licensing trade show, they belong with
-  the consultant's engagement in `SC - Marketing`.
+- **Trade-show registration charges may be misfiled** in `SC - Legal & Licensing`. If they are the
+  registration for the licensing trade show the consultant attended, they belong with that
+  engagement in `SC - Marketing`. Check the receipt.
+- **Syndication costs have nowhere to go, and this client will generate them.** Legal work on
+  admitting members or raising their capital is permanently non-deductible for a partnership —
+  neither §195 nor §709 — and three members have contributed capital. Review what is already in
+  `SC - Legal & Licensing`, then decide with Julia whether to open a separate account.
+- **Two chart-structure questions for Julia:** `Construction In Progress` is typed **Other Current
+  Asset** (it is not a current asset, and this overstates working capital on every balance sheet),
+  and **no account in the chart carries a number**, so the firm's range grammar is unapplied here.
+- **Does construction-period rent belong in CIP rather than `SC - Office Rent`?** It sits in Office
+  Rent today and the whole prior-year balance is on that treatment. Julia's call.
+- **Which basis are these books kept on?** The "P&L should be empty" presentation is tax-basis;
+  GAAP would expense start-up costs as incurred. Never written down, and it matters the moment a
+  statement goes to a lender.
 - **W-9 sweep is overdue.** Individuals working the site pass the $2,000 threshold within months,
   and the firm pays them directly — so a missing W-9 is our gap. Sweep the labour *and* contractor
   accounts, not just one.
