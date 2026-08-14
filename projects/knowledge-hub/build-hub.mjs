@@ -1226,6 +1226,10 @@ const SOP_GROUPS = [
   {
     name: 'Company formation', note: 'Standing up a new entity, start to finish',
     items: [
+      // A reference sheet, not a procedure — deliberately no flow/schema. The render treats
+      // both as optional, so it comes out as the document with a blurb and nothing invented.
+      { file: 'firm-identity.md', title: 'The Firm’s Own Details', tag: 'Reference',
+        blurb: 'Our address, the company fax, everyone’s direct line — the values other people’s forms keep asking for, in one place. And who may sign what for a client: an SS-4 designee or a Form 8821 can be anyone, but a Form 2848 may only name someone eligible to practice before the IRS.' },
       { file: 'florida-company-formation-sunbiz.md', title: 'Florida Company Formation (Sunbiz)', tag: 'Part 1',
         flowLede: `Forming a Florida company on Sunbiz (Part 1) turns on one choice — LLC or Profit Corporation. Different Articles, then the same core screens and the same finish: pay, confirm Active, calendar the annual report, hand off to Part 2 (the EIN).`,
         flow: [

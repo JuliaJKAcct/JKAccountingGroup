@@ -116,21 +116,22 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../.claude/skills/client-intelligence/render/README.md).
 
-- ⚠️ **The business has TWO activities and the SS-4 forces us to pick ONE as principal — and
-  the fork is unresolved.** The agreed description is *"Design services and retail sale of
-  decorative wall plaster and related materials."* **The unanswered question is whether M5
-  Studio APPLIES/INSTALLS the plaster on the client's wall or only designs and sells the
-  material** — it decides SS-4 **line 16**, which is a single checkbox for the *principal*
-  activity: **installing → Construction** (the instructions say construction *"also includes
-  special trade contractors"*); **selling only, mostly material revenue → Retail**; **selling
-  only, mostly design-fee revenue → Other** (design services are not on the IRS list).
-  Line 16 establishes the activity on the IRS account, so guessing it is not free. **Put to
-  Lilian 2026-08-14; unanswered.**
+- ✅ **M5 Studio does NOT install anything — it designs and sells.** _(Lilian, 2026-08-14.)_
+  That **rules out Construction** on SS-4 **line 16**, which was the big fork: applying
+  material on a customer's property would have made this a special trade contractor. What
+  remains is the narrower choice between **Retail** (*"selling merchandise to the general
+  public from a fixed store; by direct, mail-order, or electronic sales"*) and **Other**
+  (design services are not on the IRS's list), and it turns on **which side the money
+  actually comes from — the materials or the design fees.** For a company with no trading
+  history that is the **expectation**, not a measurement. **Recommended: Retail**, because
+  the materials are the part of this business the IRS list has a box for; switch to
+  **Other → "Interior design services"** if the design fees are the bulk. **Not yet
+  confirmed.**
 - **The SS-4 wording the firm settled on**, so the three lines tell one story:
   **line 10** (Started new business → type) = `Design services and retail of decorative wall
   materials` (short — the form's space is one small line); **line 17** (detail, an entry is
   required) = `Design services and retail sale of decorative wall plaster and related
-  materials`; **line 16** = blocked on the bullet above.
+  materials`; **line 16** = **Retail** unless the design fees turn out to be the bulk (bullet above).
 - ⚠️ **The exact legal name on Sunbiz has never been written down here.** "M5 Studio Miami"
   is how the firm refers to it; the IRS name **must match Sunbiz character for character**
   (including `LLC` / `Inc.`), and a punctuation difference causes downstream trouble
@@ -157,6 +158,9 @@ A running, dated record as we build this profile.
   principal line of business in more detail"*). Recommended line 10 = `Design services and
   retail of decorative wall materials`, line 17 = the full agreed wording. **Line 16 left
   open** pending the install-or-not question in §5.
+- _(2026-08-14)_ — **Answered: M5 Studio does not install.** Lilian confirmed the company only
+  designs and sells — no application of the material on a customer's property. **Construction is
+  off the table for line 16**; see §5 for what is left and the recommendation.
 - _(2026-08-14)_ — **The SS-4 carries a Third-Party Designee, and this filing set the firm's
   standing pattern.** Lilian reported that the block was completed with **her name**, the
   **company's Pembroke Pines address**, her **direct work line** and the **JK Accounting
@@ -212,8 +216,10 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **Answer the install-or-not question** (§5) — it is the only thing blocking SS-4 line 16.
-  Asked of Lilian 2026-08-14.
+- 🟡 **Confirm SS-4 line 16: Retail or Other?** The install question is **answered** (no — so not
+  Construction). What is left is whether the money comes mainly from the **materials** (→ Retail,
+  the recommendation) or the **design fees** (→ Other). For a new company this is an expectation,
+  not a measurement.
 - **Confirm the exact legal name and formation date on Sunbiz** before the SS-4 goes out.
 - **Decide the EIN path** — the responsible party's SSN/ITIN status decides online vs. fax
   ([EIN SOP §1](../../sops/ein-application-irs.md)); not recorded here yet.
@@ -224,7 +230,8 @@ it here; these never go into the client SOP.
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] Does M5 Studio install the plaster, or only design and sell it? (blocks SS-4 line 16)
+- [x] Does M5 Studio install the plaster, or only design and sell it? — **answered: no install, design and sell only** (Lilian, 2026-08-14)
+- [ ] Line 16: does the revenue come mainly from the materials or the design fees?
 - [ ] Exact legal name as filed on Sunbiz, plus document number and formation/effective date
 - [ ] Entity type (LLC single/multi-member, or corporation) and whether an S-election is planned
 - [ ] Responsible party, and whether they hold an SSN, an ITIN, or neither

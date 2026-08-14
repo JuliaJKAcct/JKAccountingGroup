@@ -477,7 +477,9 @@ reasonable-compensation work depends on):
 > where the number arrives. A wrong or unwatched fax number does not fail loudly; the
 > EIN simply never shows up and everyone assumes the IRS is slow.
 >
-> ⓘ **These four values are the firm's own details, and they are written here on purpose.**
+> ⓘ **The four values above are the firm's own details** — the full sheet, including who
+> may sign which authorization, is [`firm-identity.md`](./firm-identity.md).
+> **They are written here on purpose.**
 > The address is the company's registered address and is public on Sunbiz, so nothing is
 > exposed by having it in a procedure the team reads _(Lilian's call, 2026-08-14)_. Note
 > that the firm's **document letterhead** convention is different — proposals and
@@ -521,10 +523,28 @@ EIN is assigned and released to the designee."* So the block above covers the
 application **and nothing after it**. Two situations follow, and they need different
 paper:
 
-| You need to… | Use |
-|---|---|
-| Ask about a **pending** application, or receive the EIN | The **Third-Party Designee block** above. Nothing else is needed while the application is open |
-| Call the IRS about the entity **after** the EIN exists (147C, a name or address correction, anything on the account) | **Form 2848** — the designee is already dead |
+| You need to… | Use | Who can be named |
+|---|---|---|
+| Ask about a **pending** application, or receive the EIN | The **Third-Party Designee block** above. Nothing else is needed while the application is open | **Anyone** — no credential required |
+| **Be told things** about the entity after the EIN exists — call and ask, receive notices | **Form 8821** (Tax Information Authorization) | **Anyone.** ✅ **This is Lilian's form** |
+| **Act** for the client — argue a position, sign, agree, resolve | **Form 2848** | ⚠️ **Only someone eligible to practice before the IRS** — for this firm, **Julia** (Enrolled Agent). **A 2848 naming Lilian is not valid** |
+
+> ⚠️ **The form that fits our own habit is the 8821, not the 2848.** Lilian is the one who
+> calls the IRS, and Form 2848 says *"You may only name individuals who are **eligible to
+> practice** before the IRS as representatives"* — attorney, CPA, enrolled agent, an officer
+> or employee **of the taxpayer**, a family member, and a couple of narrow others. She is
+> none of those. Form 8821 has **no such restriction** (*"any individual, corporation, firm,
+> organization, or partnership you designate"*) and lets the designee *"inspect and/or
+> receive … confidential information **verbally** or in writing"* — which is exactly what a
+> status call is. What it will **not** do is let her *"speak on your behalf … advocate your
+> position … execute waivers, consents, closing agreements; or represent you in any other
+> manner."* The moment the call turns into arguing rather than asking, it needs **Julia on a
+> 2848**. Who may sign what, per person, is in [`firm-identity.md` §4](./firm-identity.md).
+>
+> 👍 **The 8821 route is explicitly contemplated for this.** Its instructions list **"Form
+> SS-4, Application for Employer Identification Number"** among the specific uses the IRS
+> does **not** record on the CAF — so it is filled the same shape as the 2848 below: the
+> SS-4 matter named, and the **line 4 specific-use box checked**.
 
 **The Form 2848 for an EIN matter is a *specific-use* POA, and it is not filled in the
 ordinary way.** The IRS instructions give the entry verbatim:
