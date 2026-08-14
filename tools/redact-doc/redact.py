@@ -143,7 +143,35 @@ GLYPH_NAME = re.compile(r"/uni((?:[0-9A-Fa-f]{4})+)(?![0-9A-Fa-f])|/u([0-9A-Fa-f
 #
 # The digit requirement is what keeps ordinary prose intact: `and/or`, `N/A`,
 # `Sch A/B/C/D/E/F` and `12/31/2024` carry no slash-token with a digit in it.
-GLYPH_TOKEN = re.compile(r"/[A-Za-z][A-Za-z0-9._]{0,40}")
+# `[^\W\d_]` is "any Unicode LETTER" — not `[A-Za-z]`. A subset font may name its
+# glyphs in any script, and pypdf decodes name objects through utf-8/gbk/latin1,
+# so `/é49`, `/д49` and `/字49` are all reachable. With an ASCII-only class those
+# pass through untouched and the code points sit in the file in plain decimal —
+# no key needed to read them back.
+GLYPH_TOKEN = re.compile(r"/[^\W\d_][\w.]{0,40}")
+
+# ⚠️ And the digits TOUCHING a masked token. `GLYPH_TOKEN` stops at `-`, so a
+# broken-font label set flush against a good-font value — an ordinary form line —
+# used to have its front eaten and its tail published:
+#
+#     /C83/C83/C78123-45-6789 Smith  →  [GLYPH][GLYPH][GLYPH]-45-6789 Smith
+#
+# That is the last four digits beside an unmasked name: precisely the
+# identity-verification pair this file's own docstring gives as the reason tags
+# replaced last-four masking. A digit run touching a [GLYPH] is a fragment of
+# something the tool could not read, so it is unreadable too and gets masked.
+# ⚠️ NOT length-bounded, and an earlier version's bound was worse than useless.
+# It looked like protection against swallowing a numeric table, but the loop
+# below re-runs to a fixed point, so a bound only changed how many passes it
+# took to eat the same characters — while implying a limit that did not exist.
+# What actually stops the run is a character outside the class: a COMMA ends it,
+# so a formatted table (`6,753.00 788.00`) is safe by construction. An
+# unformatted run adjacent to a glyph is over-masked, which is the correct way
+# to fail.
+GLYPH_ADJACENT = re.compile(
+    r"\[GLYPH\][-.\s]{0,2}\d[\d\s.\-]*"
+    r"|\d[\d\s.\-]*[-.\s]{0,2}(?=\[GLYPH\])"
+)
 
 # The one case still worth REFUSING rather than masking: a document that is
 # mostly wreckage. Masking 61,131 tokens produces a file that is technically
@@ -354,6 +382,17 @@ def redact(text: str) -> tuple[str, dict]:
 
     text = GLYPH_TOKEN.sub(_mask_glyph, text)
 
+    # Then the digits welded to those tokens — see GLYPH_ADJACENT.
+    #
+    # ⓘ ONE PASS IS ENOUGH, and that is a property of the pattern, not luck. Each
+    #   alternative extends maximally, and a substitution only shortens the text
+    #   — it can never bring distant digits into contact across a character that
+    #   is outside the class, because that character stays where it is. An
+    #   earlier version looped "just in case"; no input could distinguish it, and
+    #   an unpinned branch that no test can reach is a liability, not insurance.
+    text, n = GLYPH_ADJACENT.subn("[GLYPH]", text)
+    counts["glyph"] += n
+
     # Park EINs behind a placeholder so no later rule can touch them, then put
     # them back at the very end.
     eins: list[str] = []
@@ -530,14 +569,17 @@ def _run(src: Path, dst: Path) -> int:
     # it over. Everything below that line is masked and merely reported.
     if counts["glyph"] > GLYPH_MASS_LIMIT:
         print(
-            f"UNREADABLE EXTRACTION: {counts['glyph']:,} undecodable glyph-name token(s).\n"
-            "This PDF's font names glyphs by their slot in a subset — `/g11`, `/C49`,\n"
-            "`/cid49` — which identifies nothing, so there is no character to recover.\n"
-            "Masking that much would leave a file that is safe and worthless. Nothing\n"
-            "was written.\n"
-            "⚠️  DO NOT re-run and trust a '0 masked' report from this file: the redaction\n"
-            "    patterns cannot read these tokens, so zero would mean BLIND, not clean.\n"
-            "    Ask for a properly generated PDF from the tax software.",
+            f"UNREADABLE EXTRACTION: {counts['glyph']:,} unreadable slash-token(s) — past the\n"
+            f"limit of {GLYPH_MASS_LIMIT}, so masking them would leave a file that is safe and\n"
+            "worthless. Nothing was written.\n"
+            "⚠️  LOOK AT THE PDF BEFORE ASKING FOR ANOTHER ONE. Two different documents\n"
+            "    land here:\n"
+            "      • a font naming glyphs by their slot in a subset (`/g11`, `/C49`,\n"
+            "        `/cid49`) — nothing to recover, and a '0 masked' report from it would\n"
+            "        mean BLIND rather than clean. Ask the tax software for a proper PDF.\n"
+            "      • a perfectly good document that simply carries many slash-tokens — a\n"
+            "        long attachment index or a block of form references. Nothing is wrong\n"
+            "        with it; this tool just cannot tell the two apart at this volume.",
             file=sys.stderr,
         )
         return 5

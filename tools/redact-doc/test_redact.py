@@ -495,12 +495,75 @@ _ATTACKS["two tokens only"] = "/C49/C50"
 _ATTACKS["single-digit index /gN"] = "".join(f"/g{d}" for d in "123456789")
 _ATTACKS["single-digit index spaced"] = " ".join(f"/g{d}" for d in "123456789")
 
+# NON-ASCII glyph names. A subset font may name its glyphs in any script, and
+# pypdf decodes name objects through utf-8/gbk/latin1 — gbk being on that list
+# means it has met CJK names in the wild. With an ASCII-only prefix class these
+# pass straight through and the code points sit in the file in plain decimal.
+for script, ch in (("latin1", "é"), ("cyrillic", "д"), ("greek", "Ω"), ("cjk", "字")):
+    _ATTACKS[f"non-ASCII prefix ({script})"] = "".join(f"/{ch}{ord(c)}" for c in _SECRET)
+
 for name, payload in _ATTACKS.items():
     out, c = redact(payload)
-    if re.search(r"/[A-Za-z][A-Za-z0-9._]*\d", out):
+    if re.search(r"/[^\W\d_][\w.]*\d", out):
         FAILURES.append(f"GLYPH · LEAK: an unreadable token survived redaction — {name}")
+    if re.sub(r"\D", "", out.replace("[GLYPH]", "")):
+        FAILURES.append(f"GLYPH · LEAK: digits survived beside a masked token — {name}")
     if not c["glyph"]:
         FAILURES.append(f"GLYPH · {name} was not counted as masked")
+
+# ══ A GLYPH TOKEN FLUSH AGAINST A VALUE. The token pattern stops at `-`, so a
+#    broken-font LABEL set tight against a good-font VALUE — an ordinary form
+#    line — had its front eaten and its tail published:
+#        /C83/C83/C78123-45-6789 Smith → [GLYPH][GLYPH][GLYPH]-45-6789 Smith
+#    Last four digits beside an unmasked name is the identity-verification pair
+#    this tool's own docstring cites as the reason tags replaced last-four
+#    masking. A digit run touching a [GLYPH] is a fragment of something
+#    unreadable, so it is unreadable too.
+for label, flush in (
+    ("label flush before SSN", "/C83/C83/C78123-45-6789 DENYSFAKE TESTNAME"),
+    ("single token before SSN", "/gX1123-45-6789"),
+    ("token in the MIDDLE", "123-/gX145-6789"),
+    ("account number flush", "/g12 8891224501"),
+    ("DOB flush", "Date of birth /gX104-17-1982"),
+    # A run LONGER than the adjacency bound. One pass masks as far as the bound
+    # and leaves a tail short enough to slip under LONG_DIGITS' nine-digit floor;
+    # only re-running until it stops changing clears it. This is the case that
+    # makes the loop load-bearing rather than decorative.
+    ("run longer than the bound", "/gX1-" + "1" * 30),
+):
+    out, c = redact(flush)
+    leftover = re.sub(r"\D", "", out.replace("[GLYPH]", "").replace("[SSN-", "").replace("[ACCT-", ""))
+    if leftover:
+        FAILURES.append(
+            f"GLYPH · LEAK: digits published beside an unreadable token ({label}): {leftover!r}"
+        )
+
+# Adjacency masking must COUNT. The count is what drives GLYPH_MASS_LIMIT and
+# the "an absence near a [GLYPH] proves nothing" warning, so swallowing digits
+# silently would under-report how much of the document could not be read.
+_, _c_plain = redact("/gX1")
+_, _c_adj = redact("/gX1-123456789")
+if _c_adj["glyph"] <= _c_plain["glyph"]:
+    FAILURES.append(
+        "GLYPH · digits masked by adjacency were not counted — the mass limit and the "
+        "unreadable-region warning both under-report"
+    )
+
+# …but a value that merely sits NEAR a glyph, separated, is still redacted
+# normally rather than swallowed whole.
+out, _ = redact("/gX 123-45-6789")
+if "[SSN-1]" not in out:
+    FAILURES.append("GLYPH · a separated SSN was not redacted by the normal SSN rule")
+
+# …and legitimate figures are never eaten by the adjacency rule.
+for figures in (
+    "Ordinary business income 148,392 and 185,673 on line 8",
+    "NOL carryforward 1,204,556; EIN 45-6789012 for the entity",
+    "6,753.00 788.00 5,965.00 2,261.00 188.00 2,073.00 9,306.00",
+):
+    out, c = redact(figures)
+    if c["glyph"]:
+        FAILURES.append(f"GLYPH · FALSE POSITIVE swallowed real figures: {figures!r}")
 
 # Ordinary return text must be left ALONE. A false positive costs a mangled
 # token rather than a refused document now, but it still costs something.

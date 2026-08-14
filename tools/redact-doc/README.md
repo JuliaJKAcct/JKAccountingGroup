@@ -206,6 +206,11 @@ around it did not.)*
   much. This firm's clients are foreign-born owners, so this is the realistic gap.
 - **An unlabelled, wide-spaced `NNN NN NNNN`** is not masked — it collides with a column of
   amounts. The guard catches it and stops the job, so it fails loudly rather than silently.
+- **Glyph names carrying NO digit are not masked** — a font naming its glyphs `/gabc`, `/gaid`
+  and so on. Given the scheme those reconstruct a value, but the scheme is not in the file, so
+  what survives is a substitution cipher rather than a readable number. Widening the filter to
+  catch them would start eating `Sch A/B/C/D/E/F` and `and/or`, which is a worse trade. A
+  document made entirely of them still trips the diversity gate.
 - **Unlabelled bank accounts of 4–8 digits are not masked.** Only labelled ones (`Account no…`,
   `Routing…`) and bare runs of 9+ digits are. `Chase ending 45566778` survives.
 - **It reads PDFs only.** A `.docx` or an image is not handled.
