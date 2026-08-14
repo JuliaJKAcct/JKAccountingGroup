@@ -91,21 +91,38 @@ Three changes close it, and they are different jobs:
   point, so the text is decoded back before any pattern runs. Faithful, not a guess. When this
   path is used the tool **says so**, and warns that column alignment came through worse than
   usual — read a figure's position with suspicion and prefer one you can corroborate.
-- **A structural detector, which is the PRIMARY one, and it does NOT enumerate glyph names.**
-  This is the part that took three attempts. A list of known conventions — `/uni`, `/g`, `/cid`,
-  `/index`, `/glyph` — was defeated in one pass with `/C49`, `/char49`, `/gid49`, `/id49`,
-  `/x49`, `/T49`, `/gAF`. **pypdf writes whatever the font calls the glyph**, and the font
-  decides, so any list is a list of the attacks someone already thought of.
+- **Undecodable glyph names are MASKED, not classified — and this is the part that took three
+  attempts.** Read the failures before "improving" it, because both dead ends look sensible.
 
-  What the font *cannot* vary is the shape of the wreckage: **adjacent `/token` groups with
-  nothing between them**, whose tokens are **glyph-shaped** (a short alphabetic prefix then
-  digits or hex). Ordinary return text does one or the other, never both — `Sch A/B/C/D/E/F`
-  chains tokens carrying no numeric part; `/Form1120` is glyph-shaped but stands alone. Measured
-  across twelve realistic return and prose strings: **zero**. Measured against an SSN encoded in
-  twelve different conventions: **fifteen tokens every time**.
+  **Attempt 1 enumerated the conventions**: `/uni`, `/g`, `/cid`, `/index`, `/glyph`. Defeated
+  in one pass with `/C49`, `/char49`, `/gid49`, `/id49`, `/x49`, `/T49`, `/gAF`. **pypdf writes
+  whatever the font calls the glyph**, so a list is only ever a list of the attacks someone
+  already thought of.
 
-  Above a **tolerance of 2** the tool refuses. The tolerance is small on purpose — **the budget
-  is the leak.** An earlier version allowed 20 tokens, which is worth two whole SSNs.
+  **Attempt 2 tested the structure** — adjacent tokens, glyph-shaped — reasoning that a font
+  cannot vary *that*. It can, and it does not even have to try: `extraction_mode="layout"`
+  **inserts spaces between glyphs positioned more than ~20-30pt apart**, which is exactly how a
+  form lays out the boxes the taxpayer's data sits in. So a real return's filled-in fields arrive
+  pre-separated and the adjacency test sees nothing. Nor can it be rescued by allowing
+  whitespace: `/Stmt1 /Stmt2 /Stmt3` in a real return and `/C49 /C50 /C51` in a broken one are
+  **structurally identical**. Slash-density and repeated-prefix counting were both measured and
+  both overlap. At nine tokens — one SSN — the two populations are not separable.
+
+  **So stop classifying the document.** A leftover `/token` carrying a digit is, by definition,
+  text no pattern here can read — the exact condition this tool exists to refuse to pass on. It
+  is masked as `[GLYPH]` like anything else unreadable, and the count is reported. A false
+  positive now costs a mangled file path instead of a refused client return; no future naming
+  scheme matters; and the tolerance question disappears, because **there is no budget to spend**.
+  The digit requirement is what leaves ordinary prose intact — `and/or`, `N/A`, `Sch A/B/C/D/E/F`
+  and `12/31/2024` contain no slash-token with a digit in it.
+
+  ⚠️ **An absence near a `[GLYPH]` proves nothing.** That text was unreadable, so it was never
+  checked for anything — including for the figure you were looking for. If they cluster where a
+  number should be, ask for a properly generated PDF rather than concluding the number is absent.
+
+  The one case still **refused** outright is mass: past ~100 tokens the document is wreckage, and
+  a page of `[GLYPH]` would be safe and worthless. That threshold is loud and unambiguous, unlike
+  every one it replaced.
 - **A diversity gate — the backstop**, for encoding failures that leave no glyph names at all.
   Natural English, even the number-dense English of a return, draws on a wide alphabet; a
   character-level failure draws on a tiny one. Below the threshold the tool refuses. It applies
@@ -154,7 +171,8 @@ solve a reading problem by sending the document somewhere else to be read.
 | **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless |
 | **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
 | **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
-| **5** | `UNREADABLE EXTRACTION` | Either **undecodable glyph names** (`/g11`, `/cid49`, `/index0031` — a slot in a subset font, naming no character) or text with too small an alphabet to be text | `/uniXXXX` is decoded automatically, so reaching this means the failure is a shape that **cannot** be recovered. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — zero means blind. Note this fires even when *part* of the document read fine; that mixed case is the most dangerous one, not the least |
+| **5** | `UNREADABLE EXTRACTION` | The document is **mostly** wreckage — past ~100 undecodable glyph tokens, or an alphabet too small to be text | `/uniXXXX` is decoded automatically and smaller amounts are masked as `[GLYPH]`, so reaching this means the whole document is unreadable. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — zero means blind |
+| **0** + `token(s) were MASKED as [GLYPH]` | Some text could not be read and was masked | A font with no Unicode map, usually in the *filled-in* fields while the form template reads fine | The file is safe to use, but **an absence near a `[GLYPH]` is not evidence.** That region was never checked — for identifiers or for anything else. If they sit where a figure should be, get a better PDF rather than reporting the figure missing |
 | **4** | `REFUSING TO WRITE` | An identifier-shaped run survived redaction | Read the reported *shapes*. Either a pattern missed a real identifier or a column of figures collided with the shape. Inspect the PDF by hand, decide which, and **fix the patterns** — never weaken the guard to get the job done |
 | **0** + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |

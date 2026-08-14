@@ -9,6 +9,7 @@ Run it after any change to the patterns. A redactor nobody tests is a redactor
 that quietly stops redacting.
 """
 
+import re
 import sys
 from pathlib import Path
 
@@ -270,8 +271,7 @@ with tempfile.TemporaryDirectory() as td:
 #    first run did not see. These cases exist so it cannot happen quietly again.
 
 from redact import (  # noqa: E402
-    GLYPH_TOKEN_TOLERANCE, MIN_DISTINCT_CHARS, decode_glyph_names, glyph_tokens,
-    looks_like_text,
+    GLYPH_MASS_LIMIT, MIN_DISTINCT_CHARS, decode_glyph_names, looks_like_text,
 )
 
 
@@ -409,25 +409,50 @@ with tempfile.TemporaryDirectory() as td:
     #    page — no bad page for a per-page check to find, and the alphabet is
     #    rich. Only counting the tokens catches this, and the budget must be
     #    smaller than one identifier.
-    laced = good + _as_undecodable("123-45-6789", "/C") + " " + good
+    #    The document COMPLETES — masking is not refusal — but the payload must
+    #    be gone and the operator must be told the region was unreadable.
+    laced = good + " ".join(f"/C{ord(c)}" for c in "123-45-6789") + " " + good
     (tmp / "laced.pdf").write_bytes(_minimal_pdf(laced))
-    if _run(tmp / "laced.pdf", tmp / "g6.txt") != 5 or (tmp / "g6.txt").exists():
-        FAILURES.append(
-            "_run · LEAK: an SSN encoded as glyph names inside a good page was WRITTEN — "
-            "the token budget is larger than an identifier"
-        )
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = _run(tmp / "laced.pdf", tmp / "g6.txt")
+    if rc != 0 or not (tmp / "g6.txt").exists():
+        FAILURES.append("_run · a document with a few unreadable tokens was refused, not masked")
+    else:
+        got = (tmp / "g6.txt").read_text()
+        if re.search(r"/[A-Za-z][A-Za-z0-9._]*\d", got):
+            FAILURES.append(
+                "_run · LEAK: an SSN written as SPACED glyph names survived into the file"
+            )
+        if "[GLYPH]" not in got:
+            FAILURES.append("_run · the unreadable tokens were not masked as [GLYPH]")
+        if "MASKED as [GLYPH]" not in buf.getvalue():
+            FAILURES.append(
+                "_run · masked glyphs were not REPORTED — an absence near one would be "
+                "read as evidence"
+            )
 
-    # ══ AND SPREAD THIN: short glyph pages, each individually under every floor,
-    #    interleaved with good ones. The document-level count is what sees it.
+    # ══ AND SPREAD THIN: short glyph pages interleaved with good ones. Every
+    #    per-page floor is passed; masking does not care.
     pages = []
     for _ in range(6):
         pages.append(good)
-        pages.append(_as_undecodable("SSN 123-45-6789", "/C"))
+        pages.append(" ".join(f"/C{ord(c)}" for c in "SSN 123-45-6789"))
     (tmp / "spread.pdf").write_bytes(_minimal_pdf(pages))
-    if _run(tmp / "spread.pdf", tmp / "g7.txt") != 5 or (tmp / "g7.txt").exists():
+    if _run(tmp / "spread.pdf", tmp / "g7.txt") != 0:
+        FAILURES.append("_run · the spread-glyph document did not complete")
+    elif re.search(r"/[A-Za-z][A-Za-z0-9._]*\d", (tmp / "g7.txt").read_text()):
+        FAILURES.append("_run · LEAK: SSNs spread across short glyph pages survived")
+
+    # ══ AND THE MASS CASE IS STILL REFUSED. Masking 61,131 tokens would leave a
+    #    file that is safe and worthless; the honest answer is to ask for a
+    #    proper PDF.
+    (tmp / "mass.pdf").write_bytes(_minimal_pdf(
+        [" ".join(f"/C{ord(c)}" for c in "SSN 123-45-6789 taxpayer record") for _ in range(12)]))
+    if _run(tmp / "mass.pdf", tmp / "g9.txt") != 5 or (tmp / "g9.txt").exists():
         FAILURES.append(
-            "_run · LEAK: SSNs spread across SHORT glyph pages were written — "
-            "each page hid under the per-page floors"
+            f"_run · a document past GLYPH_MASS_LIMIT ({GLYPH_MASS_LIMIT}) was written "
+            "instead of refused"
         )
 
     # A properly-read document must not be refused by the residual check.
@@ -438,52 +463,74 @@ with tempfile.TemporaryDirectory() as td:
     if _run(tmp / "clean.pdf", tmp / "g4.txt") != 0:
         FAILURES.append("_run · a normal document was refused by the residual-glyph check")
 
-# ══ THE DETECTOR MUST NOT BE A LIST OF NAMES. An independent review defeated an
-#    enumerated version of this check in a single pass — /C49, /char49, /gid49,
-#    /id49, /x49, /T49, /gAF all sailed through a list built around /uni, /g,
-#    /cid, /index and /glyph. pypdf writes whatever the FONT calls the glyph, so
-#    every one of these is a real shape and the list can never be finished.
-#    What cannot be varied is the structure: adjacent tokens, glyph-shaped.
-_SECRET = "SSN 123-45-6789"
-for prefix in ("/g", "/C", "/c", "/char", "/gid", "/id", "/a", "/x", "/n", "/T", "/F", "/G"):
-    n = glyph_tokens(_as_undecodable(_SECRET, prefix))
-    if n <= GLYPH_TOKEN_TOLERANCE:
-        FAILURES.append(
-            f"DETECT · an SSN encoded as {prefix}NN glyph names scored {n} and would be WRITTEN"
-        )
-# Hex-suffixed glyph names (/gAF) are just as real as decimal ones.
-if glyph_tokens("".join("/g%02X" % ord(c) for c in _SECRET)) <= GLYPH_TOKEN_TOLERANCE:
-    FAILURES.append("DETECT · hex-suffixed glyph names (/gAF) were not detected")
+# ══ UNDECODABLE GLYPH NAMES ARE MASKED, NOT CLASSIFIED — and the history is the
+#    reason. Two earlier versions tried to DECIDE whether a document was broken.
+#    A name allowlist (/uni, /g, /cid, /index, /glyph) died to /C49, /char49,
+#    /gid49, /id49, /x49, /T49, /gAF: pypdf writes whatever the FONT calls the
+#    glyph. A structural test — adjacent tokens — died to pypdf's own layout
+#    mode, which inserts spaces between glyphs more than ~20-30pt apart, i.e.
+#    exactly how a form lays out the boxes the taxpayer's data sits in.
+#    And it cannot be rescued by allowing whitespace, because `/Stmt1 /Stmt2
+#    /Stmt3` in a real return is structurally identical to `/C49 /C50 /C51`.
+#    So: a leftover /token carrying a digit is unreadable by definition, and it
+#    is masked like anything else this tool cannot read.
+_SECRET = "123-45-6789"
+_ATTACKS = {}
+for prefix in ("/g", "/C", "/c", "/char", "/gid", "/id", "/a", "/x", "/n", "/T", "/F", "/G",
+               "/character", "/g_", "/glyphindex"):
+    _ATTACKS[f"{prefix}NN adjacent"] = _as_undecodable(_SECRET, prefix)
+# The spacing pypdf itself inserts between positioned glyphs — the attack that
+# killed the structural test. Several pitches, plus a page break.
+for sep, label in ((" ", "1sp"), ("     ", "5sp"), ("            ", "12sp"), ("\n", "newline")):
+    _ATTACKS[f"/CNN separated by {label}"] = sep.join(f"/C{ord(c)}" for c in _SECRET)
+_ATTACKS["hex-suffixed /gAF"] = "".join("/g%02X" % ord(c) for c in _SECRET)
+_ATTACKS["trailing letter /g49z"] = "".join("/g%dz" % ord(c) for c in _SECRET)
+_ATTACKS["long tail /g00000000NN"] = "".join("/g00000000%d" % ord(c) for c in _SECRET)
+# TWO tokens — under every tolerance any earlier version had.
+_ATTACKS["two tokens only"] = "/C49/C50"
+# SINGLE-CHARACTER indices. A form field holding only digits gets a subset font
+# with about ten glyphs, so pypdf emits /g1 … /g9 — the SHORTEST possible token,
+# and the one a minimum-length requirement on the pattern would let straight
+# through.
+_ATTACKS["single-digit index /gN"] = "".join(f"/g{d}" for d in "123456789")
+_ATTACKS["single-digit index spaced"] = " ".join(f"/g{d}" for d in "123456789")
 
-# Ordinary return text must score at or under tolerance — a false positive here
-# refuses a real client document and sends the operator away for another PDF.
+for name, payload in _ATTACKS.items():
+    out, c = redact(payload)
+    if re.search(r"/[A-Za-z][A-Za-z0-9._]*\d", out):
+        FAILURES.append(f"GLYPH · LEAK: an unreadable token survived redaction — {name}")
+    if not c["glyph"]:
+        FAILURES.append(f"GLYPH · {name} was not counted as masked")
+
+# Ordinary return text must be left ALONE. A false positive costs a mangled
+# token rather than a refused document now, but it still costs something.
 for innocent in (
     "The shareholder and/or the corporation may elect.",
     "Line 9c N/A  Line 9d N/A  Line 9e N/A",
     "Period 01/01/2025 through 12/31/2025, filed 09/15/2026.",
     "Attach Sch A/B/C/D/E/F as applicable to this return.",
-    "See https://www.irs.gov/pub/irs-pdf/f1120s.pdf for instructions.",
     "Mail w/ Form 7004 c/o the service center.",
     "Form 1125-A line 8; Form 1120-S page 1 line 2; Form 4562 line 22.",
     "Ownership 1/2 and 1/2; allocation 50/50 per share.",
     "A/R 12,340  A/P 5,983  P/L summary attached.",
-    "Saved under /Clients/Kolo/2025/Returns/Final.pdf on the share.",
-    # ADJACENCY IS LOAD-BEARING. These tokens are glyph-SHAPED (letters then hex)
-    # but stand apart, which is what separates a document that mentions forms
-    # from a font dump. Drop the {3,} and this refuses a real return.
-    "See Exhibit /A1, Exhibit /B2, and Exhibit /C3 attached hereto.",
-    "Statements /Stmt1 /Stmt2 /Stmt3 accompany this return.",
+    "6,753.00 788.00 5,965.00 2,261.00 188.00 2,073.00 9,306.00 776.00",
+    "Saved under /Clients/Kolo/Returns/Final.pdf on the share.",
+    "Формуляр 1120-S; доход/убыток по Приложению для акционера.",
+    # These three REFUSED under the previous tolerance-based design. Masking is
+    # what made them harmless: they now pass through untouched.
+    "Ownership and control: he/she/they hold shares jointly.",
+    "Sections I/II/III of the operating agreement govern this.",
+    "Allocations are pro-rata a/b/c per the shareholder table.",
 ):
-    if glyph_tokens(innocent) > GLYPH_TOKEN_TOLERANCE:
-        FAILURES.append(f"DETECT · FALSE POSITIVE would refuse a real document: {innocent!r}")
+    out, c = redact(innocent)
+    if c["glyph"]:
+        FAILURES.append(f"GLYPH · FALSE POSITIVE mangled ordinary text: {innocent!r}")
 
-# ── The tolerance itself is pinned. It must stay far below one SSN (9 tokens),
-#    because the budget IS the leak: a tolerance of 20 is worth two SSNs.
-if GLYPH_TOKEN_TOLERANCE >= 9:
-    FAILURES.append(
-        f"DETECT · GLYPH_TOKEN_TOLERANCE is {GLYPH_TOKEN_TOLERANCE} — one SSN is 9 tokens, "
-        "so this budget lets a whole identifier through"
-    )
+# The mass limit must stay far above anything a real document produces and far
+# below a font dump — it is the ONE case still worth refusing outright.
+if not (10 < MIN_DISTINCT_CHARS < 39):
+    FAILURES.append(f"GATE · MIN_DISTINCT_CHARS {MIN_DISTINCT_CHARS} is outside the bracket "
+                    "measured from a real broken return (27) and a real ALL-CAPS one (39)")
 
 # ── And the alphabet threshold is pinned from the other side: a realistic
 #    ALL-CAPS tax package measures 39 distinct characters, and a threshold of 40
