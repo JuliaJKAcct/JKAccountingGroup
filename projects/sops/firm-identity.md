@@ -37,7 +37,7 @@ SOPs say where each one goes.
 | **Main phone** | **(786) 318-1505** — this is **Julia's direct line**, doubling as the number the firm's documents carry |
 | **Fax** | **(786) 866-6298** |
 | **Website** | www.jkaccountinggroup.com |
-| **Email** | Everyone is `@jkaccountinggroup.com`, but ⚠️ **the local part is NOT simply the first name** — two of the four are not (`mariaf`, `liudmylak`). **Never construct one; copy it from §2 or the person's signature** |
+| **Email** | Everyone is `@jkaccountinggroup.com`, but ⚠️ **the local part is NOT always the first name** — two of the four are not. **Never construct an address; copy it from the person's own email signature** |
 
 ## 2. The people
 
@@ -109,10 +109,10 @@ checklist for changing them** — not a magic single source that updates the oth
 | Value | Also lives in |
 |---|---|
 | Direct lines + emails | The team's **email signatures** — **the master copy for these two.** Change them there first |
-| Address, phone + fax | The [EIN SOP](./ein-application-irs.md) in **two** places: the **§4D designee table**, and again in the **intake checklist in its appendix** — the printable one people actually fill the form from. Both need updating |
+| Address, phone + fax | **§3 of this file** restates all four designee values, and the [EIN SOP](./ein-application-irs.md) carries them **twice** — the **§4D designee table** and the **intake checklist in its appendix**, the printable one people fill the form from. Three places, all needing the change |
 | Letterhead city + main phone | ⛔ The **proposal and engagement-letter tools** — hard-coded and **frozen. Do not touch** (§3) |
 | Firm email on filings | The [Business Tax Receipt SOP](./hollywood-broward-business-tax-receipt.md) |
-| **The §4 credential rule** (who may sign a 2848 vs an 8821) | Restated in the [EIN SOP §4D](./ein-application-irs.md), in the **procedures index**, and in the repo's own **navigation map**. If §4 below ever changes, all three are wrong until they are changed too |
+| **The §4 credential rule** (who may sign a 2848 vs an 8821) | Restated in **five** places: the [EIN SOP §4D](./ein-application-irs.md), the **procedures index**, the repo's **navigation map**, this page's own **Knowledge Hub card blurb** (hard-coded in the Hub build), and **M5 Studio Miami's client file**. If §4 above changes, all five are wrong until they are changed too |
 
 > 🚨 **The main phone is the exception — this list will NOT find all of it.** **(786)
 > 318-1505** is scattered far wider than firm procedures: the **firm's live Odoo website**,
@@ -125,13 +125,20 @@ checklist for changing them** — not a magic single source that updates the oth
 
 ## 6. Still missing
 
+> ⚠️ **Two of these must NOT be written into this file when they are found.** This page is
+> published to the team's Knowledge Hub, and it has **no sensitivity gate** — the build screens
+> client files, not procedures. **Julia's EA enrollment card number, any CAF number and any PTIN
+> are practitioner credentials: record them in Drive/Double and put only a pointer here**, the same
+> two-data-homes rule every client file opens with. The firm's **legal name and EIN are different**
+> — both are public on Sunbiz and belong here in full.
+>
 The gaps that will block a real filing the day someone needs them:
 
 - [ ] **The exact legal entity name** (Sunbiz) — needed on Form 2848, Form 8821 and the CAA application
 - [ ] **The firm's federal EIN** — needed for the [CAA application](./irs-certifying-acceptance-agent.md)
-- [ ] **Julia's EA enrollment card number** — required in Form 2848 Part II, designation (c)
-- [ ] **CAF number(s)** — for Julia, and for anyone we name on an 8821. If none has been assigned, both forms take `NONE` and the IRS issues one
-- [ ] **PTIN(s)** — Julia's for Form 2848; whether Maria or Liudmyla hold one
+- [ ] **Julia's EA enrollment card number** — required in Form 2848 Part II, designation (c). ⚠️ **Store in Drive; pointer only here**
+- [ ] **CAF number(s)** — for Julia, and for anyone we name on an 8821. If none has been assigned, both forms take `NONE` and the IRS issues one. ⚠️ **Store in Drive; pointer only here**
+- [ ] **PTIN(s)** — Julia's for Form 2848; whether Maria or Liudmyla hold one. ⚠️ **Store in Drive; pointer only here**
 - [ ] **Maria's and Liudmyla's practice status** — so §4 can answer for them too
 
 ---

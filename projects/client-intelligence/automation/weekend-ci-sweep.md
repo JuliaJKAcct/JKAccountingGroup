@@ -172,30 +172,18 @@ was said). Better a sourced, low-confidence note than nothing.
 | Maria Contreras | 710646 |
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
 | Grigoriy & Margarita Melomed | 710633 |
-| M5 Studio Miami | ⚠️ **unknown — no Double account confirmed** (added 2026-08-14) |
+| M5 Studio Miami | — *(no Double account confirmed; sweep by name — see its `sweep-state.md` row)* |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
 
-> ⓘ **M5 Studio Miami is in scope but has no Double id, and that is not an oversight.** It is a
-> **company set-up** client (EIN application in flight as of 2026-08-14) and nobody has yet
-> established whether it exists in Double at all — so the Double plane of the sweep has nothing
-> to address. **Sweep it from Gmail / Ping / Drive by name.** If a run finds a Double client for
-> it, **record the id and link in the client file's §2/§7** — which is inside the run's approved
-> commit scope — and **leave this row to a human**, because `automation/weekend-ci-sweep.md` is
-> **not** covered by the no-review carve-out that lets the Saturday run merge its own work. **It is
-> low priority against the catch-up queue below**: a company being formed this week has almost no
-> history to sweep, so it should never displace a client that has been waiting.
->
-> ⚠️ **Concretely, because rule (b) would otherwise decide this for you.** The prompt says a client
-> with **no row in `sweep-state.md` gets a one-time full historical sweep** — unconditionally, with
-> no priority test. M5 Studio Miami has no row and **must not consume a full-pass slot ahead of the
-> catch-up queue** (the *Catch-up priority* block further down this file): it goes **after**
-> everyone listed there. **Its baseline is 2026-08-14, the day the file was created** — that is
-> what makes an incremental pass well-defined without a `sweep-state.md` row, and it is why no
-> full historical pass is needed: there is no history before that date. **This exception is
-> repeated inline in the prompt's client list**, because the prompt block is what actually gets
-> pasted into the Routine and this blockquote is not.
+> ⓘ **M5 Studio Miami has no Double id, and that is not an oversight.** It is a **company set-up**
+> client (EIN application in flight, 2026-08-14) and nobody has established whether it exists in
+> Double at all, so the Double plane has nothing to address — **sweep it by name from Gmail / Ping /
+> Drive.** If a run finds a Double client, record the id in the **client file's §2/§7** (inside the
+> run's commit scope) and leave this row to a human. **Everything about how far back to sweep lives
+> in its [`sweep-state.md`](./sweep-state.md) row**, dated the day it arrived — it needs no special
+> case here, and it takes no full-pass slot because it has no history to pass over.
 
 > ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
 > archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived
@@ -382,7 +370,7 @@ CLIENTS (name -> Double id):
 - Maria Contreras -> 710646
 - Iurii Iakovenko & Alina Yakovenko -> 710639
 - Grigoriy & Margarita Melomed -> 710633
-- M5 Studio Miami -> (no Double id — sweep by NAME from Gmail/Ping/Drive. ⚠️ EXCEPTION to rule (b): do NOT give it a full historical pass. Its baseline is 2026-08-14, the day it was created; there is nothing before that. It takes no full-pass slot ahead of the catch-up queue)
+- M5 Studio Miami -> (no Double id — sweep by NAME from Gmail/Ping/Drive; it has a sweep-state row, so rule (b) does not apply)
   (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
 
 FOR EACH CLIENT:

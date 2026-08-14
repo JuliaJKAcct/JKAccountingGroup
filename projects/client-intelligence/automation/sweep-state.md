@@ -67,14 +67,15 @@ list grows.
 | Artur Tseretsian | 2026-08-01 | **Ping + full Gmail history still owed** — deferred twice now (the per-run full-pass cap went to the five gap clients above). Due the next run that has room |
 | Ihor Naum & Olha Levchuk | 2026-08-01 | **Ping + Drive not yet swept, full Gmail history still owed** — same deferral; due the next run that has room |
 | Denys Melnyk | 2026-08-11 | The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**. ⚠️ **Corrected 2026-08-12** — this row said *"Ping, Gmail and Drive never swept"*, and all three **were** read during the second review on 2026-08-12: **Drive holds no folder of his** (the "Melnyk" files there are a different person) and **Ping records no meeting with him**, while **Gmail turned up the P&L template sent 2026-08-05 and never returned**. **The baseline is deliberately left at 08-11**: it is not established that the Gmail pass was full-historical, and advancing it would bound the next run's search and lose his history for good. **A full historical Gmail pass is still owed.** _(The client's answers of 2026-08-12 came from a call with Lilian — a human telling us a fact never advances a baseline.)_ |
+| M5 Studio Miami | 2026-08-14 | **No history to sweep — this baseline is the day the company came to us**, not a bound on an unread past. A set-up client (EIN application in flight); nothing exists before it. ⚠️ **No Double account confirmed** — sweep by NAME from Gmail / Ping / Drive. If a run finds a Double client, write the id into the client file's §2/§7 and leave the scope table to a human |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
-> **FOUR GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
+> **THREE GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
 > A row is a *bound* on the next run's searches, so writing one for a client who has never been
 > swept would make the next run search from that date forward and **skip their entire history for
 > good**. The routine's rule (b) does the right thing with a missing row: **a client in scope with
-> no row gets a one-time full historical sweep, then a row.** Leave both groups out until that pass
-> runs — **except for group 4, where the opposite is true; read it before applying rule (b).**
+> no row gets a one-time full historical sweep, then a row.** Leave all three groups out until that pass
+> runs.
 >
 > 1. **Liudmyla's seven**, added to scope 2026-08-11 — the QuickBooks-connected companies the old
 >    owner-derived scope had never covered.
@@ -92,23 +93,16 @@ list grows.
 >    sideways while writing up a different household — **no TaxDome note, so no backfill ever saw
 >    them** — with only March 2026 read. Same reasoning: no row until the full pass runs.
 >
-> 4. **`M5 Studio Miami`, file created 2026-08-14 — and this one is the OPPOSITE case, so read it
->    before applying rule (b).** It has no row like the others, but **not** because it owes a full
->    historical pass: it is a **company being formed this week**, and there is no history to sweep.
->    ⚠️ **Do not give it a full historical pass.** Treat **2026-08-14 as its baseline** and give it
->    an ordinary incremental look; it must **not** consume one of the ~6 full-pass slots ahead of
->    groups 1–3, who have been waiting. It also has **no Double id** — sweep it by name from
->    Gmail / Ping / Drive; if a run finds a Double client, record the id in the client file's
->    §2/§7 (inside the run's commit scope) and leave the scope table to a human.
->
-> **The four groups above are not the same kind of exception — 1, 2 and 3 are owed history, 4 has
-> none.** Rule (b) is right for the first three and wrong for the fourth.
+> ⓘ **A client with genuinely NO history is the opposite case and needs none of this** — it gets an
+> ordinary **row** dated the day it arrived (M5 Studio Miami, above). A row is only withheld from a
+> client whose *past is unread*; withholding one from a client with no past would trigger a full
+> historical sweep over nothing.
 >
 > _(The first two sets happen to number seven each. They are not the same clients, and no group's
 > catch-up covers another's.)_
 >
 > ⚠️ **This list is not the whole population of row-less clients** — reconciling the scope table
-> against this ledger leaves a handful unaccounted for beyond the three groups named. **Do that
+> against this ledger leaves a handful unaccounted for beyond the three groups named above. **Do that
 > reconciliation before trusting the enumeration**; the rule (no row until a full pass) is what
 > governs, not the list.
 

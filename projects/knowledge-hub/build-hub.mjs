@@ -1224,20 +1224,6 @@ function engagementReaderInner(owner, updated){
 /* ---------------- SOP catalog (categories + curated short titles/blurbs) ---------------- */
 const SOP_GROUPS = [
   {
-    // Its own group on purpose: it is neither a procedure nor about company formation, and
-    // the two questions it answers ("what is our fax number?", "can Lilian be on a 2848?")
-    // are ones nobody would go looking for under a formation heading.
-    name: 'The firm', note: 'Our own details — the values other people\'s forms ask for',
-    items: [
-      // A reference sheet, not a procedure — deliberately no flow/schema (the render treats
-      // both as optional), and kicker/readerKick so it is not labelled an SOP. Straight
-      // apostrophes only: Hub search is a plain substring test over title + blurb.
-      { file: 'firm-identity.md', title: 'The Firm\'s Own Details',
-        kicker: 'Reference', readerKick: 'Firm reference sheet',
-        blurb: 'Our address, the company fax, everyone\'s direct line — the values other people\'s forms keep asking for, in one place. And who may sign what for a client: an SS-4 designee or a Form 8821 can be anyone, but a Form 2848 may only name someone eligible to practice before the IRS.' },
-    ],
-  },
-  {
     name: 'Company formation', note: 'Standing up a new entity, start to finish',
     items: [
       { file: 'florida-company-formation-sunbiz.md', title: 'Florida Company Formation (Sunbiz)', tag: 'Part 1',
@@ -1601,6 +1587,21 @@ const SOP_GROUPS = [
             note: 'All of this client’s logins live in this one Doc — search inside it for the Penn Credit entry (account/ID number + ZIP). It’s not a single-password file.',
           },
         } },
+    ],
+  },
+  {
+    // LAST on purpose: it is not a procedure, and the Procedures view's own copy promises
+    // "firm-wide procedures that fit any client come first". Its own group because the two
+    // questions it answers ("what is our fax number?", "can Lilian be on a 2848?") are not
+    // company-formation questions and nobody would look for them under that heading.
+    name: 'The firm', note: 'Our own details — the values other people\'s forms ask for',
+    items: [
+      // A reference sheet, not a procedure — deliberately no flow/schema (the render treats
+      // both as optional), and kicker/readerKick so it is not labelled an SOP. Straight
+      // apostrophes only: Hub search is a plain substring test over title + blurb.
+      { file: 'firm-identity.md', title: 'The Firm\'s Own Details',
+        kicker: 'Reference', readerKick: 'Firm reference sheet',
+        blurb: 'Our address, the company fax, everyone\'s direct line — the values other people\'s forms keep asking for, in one place. And who may sign what for a client: an SS-4 designee or a Form 8821 can be anyone, but a Form 2848 may only name someone eligible to practice before the IRS.' },
     ],
   },
 ];

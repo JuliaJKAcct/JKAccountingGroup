@@ -348,9 +348,7 @@ Use this when the responsible party has **neither an SSN nor an ITIN**. Complete
 | **17** | Principal line of merchandise/services — free text describing what the company actually does, in more detail than 16. *"**An entry is required.**"* e.g. checked Construction on 16 → *"General contractor for residential buildings"* on 17. **This is where the full description goes**, not line 10 (**§4F**) |
 | **18** | Has this entity ever applied for an EIN before? (No, for a new entity). If yes, write the previous EIN |
 | **Third-Party Designee** | If the firm is applying for the client, complete this block so the IRS releases the EIN to the firm; the **client signs** the form (see §4D) |
-| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — that is how the EIN comes back **when no
-Third-Party Designee is named**; when one is (which for this firm is always — §4D), it goes to
-the **designee's** fax instead, and the paper notice is mailed to the taxpayer |
+| **Signature block** | Name and title, signature, date, **applicant's telephone**, applicant's fax. **A foreign phone number is fine** — the instructions say nothing about the applicant's phone at all, so **no US number is required**; writing it in full international form with the country code (`+380 44 123 4567`) is firm practice, so the IRS can actually dial it. **Foreign applicants may have any duly authorized person sign** (the instructions name a division manager as an example). For **Path B, always give a return fax number** — with **no** Third-Party Designee named that is how the EIN comes back; with one named (always, for us — §4D) it goes to the **designee's** fax instead, and the paper notice is mailed to the taxpayer |
 
 ### Where to send it
 
@@ -908,7 +906,11 @@ read in full 2026-08-14 — the line 3 entry, the "Applications for an EIN" spec
 listing, the CAF consequence and the *Authority Granted* sentence are all quoted from
 it; that the specific-use fax goes to the **EIN Operation** follows from the
 instruction's *"the IRS office handling the specific matter"*, and that an assistor
-takes the fax mid-call is **operating practice, not instruction text**. The statement
+takes the fax mid-call is **operating practice, not instruction text**. **The rule that a named designee changes where a faxed EIN lands is instruction text**, quoted from
+the SS-4 instructions' Third-party designee paragraph: *"EINs are released to authorized third-party
+designees by the method they used to obtain the EIN (online, telephone, or fax); however, the EIN
+notice will be mailed to the taxpayer."* That single sentence carries both halves — the designee's
+fax, and the paper notice going to the client. The statement
 that **no source says what to enter in line 1 when no EIN has been assigned** is a
 bounded negative: the Instructions for Form 2848, the Instructions for Form SS-4 and
 Pub. 947 were searched on 2026-08-14 and none addresses it — it is not a claim that
