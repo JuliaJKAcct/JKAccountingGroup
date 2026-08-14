@@ -307,10 +307,14 @@ visible rather than assumed done.
      _(Corrected 2026-08-14 — the old instruction would have destroyed the history of 14 clients
      across two backfills, and a session following it literally is exactly how that happens.)_
 
-   ⚠️ **And then say the part the commit cannot do: the live Routine must be updated.** The
-   Saturday sweep runs off a prompt **pasted into the web UI**, so editing the CLIENTS list here
-   leaves the run sweeping the **old** list. A session that adds a client, commits, and reports
-   "done" has half-finished it. Tell whoever asked, in the same breath, that the Routine at
+   ✅ **Adding a client is COMPLETE at the commit — you do not need to touch the Routine.**
+   _(Corrected 2026-08-14 by reading the live trigger.)_ The live prompt carries **no client
+   list**; it tells the run to read `weekend-ci-sweep.md` for "the CLIENTS list (every client +
+   Double id)", so a scope-table addition reaches Saturday on its own. **This reverses what this
+   step used to say** — that editing the list here "leaves the run sweeping the old list" — which
+   was wrong and produced a `FOLLOW-UPS` row claiming thirteen scoped clients were being skipped.
+   ⚠️ **What DOES still need a human is a change to the PROMPT ITSELF** (the method, the merge
+   rule, the email shape). If that is what you changed, say so in the same breath: the Routine at
    claude.ai/code/routines needs its prompt updated — and warn that a wholesale paste overwrites the
    real webhook URL and secret with this repo's placeholders, so those two values have to be carried
    across by hand. The mechanics are in

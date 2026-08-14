@@ -485,12 +485,36 @@ file locally. Neither is how the team uses it. Two checks, every time a Hub tool
      the Hub is a deterministic build of `main`, so a fresh build from the latest `main` is
      a superset of that snapshot — nothing is lost, and if the tool guards with "this session
      hasn't viewed the latest version," `force: true` is the correct resolution (a full
-     rebuild from `main`), **not** a heavy WebFetch of the 5 MB page. **The one exception:**
+     rebuild from `main`), **not** a heavy WebFetch of the (now ~11 MB) page — but see the bullet below for the case where someone asks you to *prove* it. **The one exception:**
      because publish (this step) can run *before* commit→merge (step 6), a session could have
      published the live link from an **unmerged branch**. If you can't be sure the last
      publish came from merged `main`, don't blind-`force` — that would drop those unmerged
      Hub features; rebuild from `main`, and if something looks missing, reconcile the source
      first. (Following this flow — publish *after* merge — keeps the premise true.)
+   - 🔍 **When someone ASKS for the guarantee — "republish it, but I don't want to lose what I
+     changed in the other session" — reasoning is not the answer. PROVE IT, and it is cheap.**
+     _(Lilian asked exactly this on 2026-08-14.)_ The argument above is sound and it is still an
+     argument; what she wanted was certainty. **`WebFetch` the artifact URL** — it saves the full
+     HTML to disk and hands you the path — then diff the **visible text** of the live page against
+     your fresh build:
+     ```
+     strip <script>/<style> and data: URIs → text → set of non-blank lines → published − mine
+     ```
+     On 2026-08-14 the set difference was exactly **two lines**, both render bugs the build had
+     just fixed, against **304 added** — so the answer was *"no visible prose is lost, and here is
+     the list of what changes"*.
+     ⚠️ **Claim exactly that much and no more — the diff is NOT proof the page is intact.** By
+     construction it cannot see: everything in `<script>` (stripped — and whole-page-JS breakage is
+     what the verify gate below exists for), everything in `<style>`, **attributes** (`href`, ids,
+     anchor targets — the in-page reader and every cross-link live there), **embedded binaries**
+     (the templates and fonts are `data:` URIs, stripped), and **multiplicity** — it is a *set*
+     difference, so a line lost from 40 of 45 cards but surviving on 5 diffs to nothing. Pair it
+     with the verify gate, don't substitute it.
+     ⓘ **This SUPERSEDES the "don't WebFetch, use `force`" handling in the bullet above for the
+     uncertain case** — that bullet resolves doubt by rebuilding and eyeballing; this resolves it
+     by measuring. A routine redeploy still needs neither. Reach for it when someone is worried,
+     when the last publish might not have come from merged `main`, or when another session has
+     touched the link — and answer with the numbers, not the reasoning.
    - **Always pass `capabilities: {downloads: true}`** so the download/print buttons work
      (see the downloads section above), and keep the favicon stable (📚).
    - **Standing instruction — keep this ONE link current after every Hub change (Lilian, Jul 2026).**

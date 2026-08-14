@@ -181,7 +181,7 @@ client-intelligence/
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (44 so far — see the Clients index below)
+└── clients/               ← one file per client (45 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -231,6 +231,7 @@ client-intelligence/
 | Viacheslav Honcharenko | [`clients/viacheslav-honcharenko.md`](./clients/viacheslav-honcharenko.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. 🔴 **Not a plain 1040 client — 1099s from two payers (one of them our own client Optic Gold) and a Broward business tax receipt**, against a Double column that says `1040`. **What the return is waiting on is already written down — read the April thread before asking him** |
 | Iurii Iakovenko & Alina Yakovenko | [`clients/iurii-iakovenko.md`](./clients/iurii-iakovenko.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep. 🔴 **Two LLCs sit behind this 1040** (he signs as a CEO); organizer done since March, **the return is waiting on us**. Watch for a 2025 Form 1095-A — the 2024 file had one |
 | Maria Contreras | [`clients/maria-contreras.md`](./clients/maria-contreras.md) | Firm | ⚠️ **Backfill seed (2026-08-14)** — owes a full first sweep; **the thinnest file in the set**. 2025 filed. 🔴 **She claims vehicle, internet and car-repair deductions and nothing on file says what against** — open for two seasons |
+| Grigoriy & Margarita Melomed | [`clients/grigoriy-margarita-melomed.md`](./clients/grigoriy-margarita-melomed.md) | Firm | ⚠️ **Created 2026-08-14** — never swept, **no TaxDome note**, invisible to the backfill. 🔴 **He owns [R & G Friendly Inc / "Lucky Pawn & Jewelry"](./clients/rg-friendly.md) and takes a W-2 from it** — his 1040 and that 1120-S are one piece of work. 2025 filed. ⚠️ A vehicle was sold mid-year and the mileage figures crossed over |
 | Tsminibears LLC | [`clients/tsminibears.md`](./clients/tsminibears.md) | Maria | **Former** — archived in Double 2026-06-08; Florida RT penalty matter **open**. Closing the account is dead; the plan is to ask the DOR to **move the effective date** — **on the call**, since a third agent said it can be done and asked for no documentation; a written request (with a **reasonable-cause penalty waiver** as its alternative ask) is only the fallback. **⏳ Waiting on the POA — the 08-04 send never arrived, re-sent 2026-08-06 to `AcctMaint@floridarevenue.com` — then Lilian calls** |
 
 ## Brand & design

@@ -260,7 +260,7 @@ the job.
 | MAGNUM 152 INC | Dup | _(unchecked)_ | company | ✅ `magnum-152.md` |
 | Ihor Naum | QBO · Dup | ✅ 2 files | **owner** | ✅ `ihor-naum-olha-levchuk.md` |
 | VITALII IVANOV | QBO · Dup | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `vitalii-ivanov.md` · Double `VITALII IVANOV & TETIANA MOGYLOVA` (710666) |
-| IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `igor-melomed.md`, routed to `Igor Melomed & Yelena Lovkina` (710635). ⚠️ **two Melomed households in Double** — the other is `Grigoriy & Margarita Melomed` (710633), still with no file |
+| IGOR MELOMED | QBO | _(unchecked)_ | **owner** | ✅ created 2026-08-14 — `igor-melomed.md`, routed to `Igor Melomed & Yelena Lovkina` (710635). ⚠️ **two Melomed households in Double** — the other, `Grigoriy & Margarita Melomed` (710633), got its own file the same day |
 | SETATECH USA INC | QBO · Dup | _(unchecked)_ | company | ✅ created 2026-08-14 — `setatech-usa.md` · Double **archived** 2026-07-22 (706706), 🔴 **yet its payroll is live and blocked** |
 | Andrii Tymchenko | 4. Documents | ✅ `1. Notes` (2 files) | **owner** | ✅ created 2026-08-13 — Double 710619 |
 | MAYS EXPRESS SERVICE LLC | 4. Documents | ✅ `2. Notes` | company | ✅ created 2026-08-13 — Double 710582 |
@@ -275,10 +275,11 @@ the job.
 written; four were created on 2026-08-13 and **the last seven on 2026-08-14** (Lilian: *"es
 importante que el Client Intelligence cubra la mayor cantidad posible de clientes"*). **Seven
 folders are filed under a person**, which is precisely where the routing rule earned its keep.
-⚠️ **One record surfaced by this table still has no file of its own:** `Grigoriy & Margarita
-Melomed` (710633) — a *second* Melomed household, not the one the `IGOR MELOMED` folder belongs to.
-It has no TaxDome note, so it is outside this backfill, but it is a real client with nothing
-written down.
+✅ **And the record this table surfaced sideways now has a file too:** [`grigoriy-margarita-melomed.md`](../clients/grigoriy-margarita-melomed.md)
+(Double 710633) — a *second* Melomed household, not the one the `IGOR MELOMED` folder belongs to.
+It has **no TaxDome note**, so it was outside this backfill entirely and was found only because the
+other household was being written up. **That is the shape to watch for: a client invisible to a
+source-driven backfill is invisible precisely because the source has nothing on them.**
 
 Three `Notes` folders found by the search are **not** part of this backfill and should be skipped:
 `My notes - Lilian` (personal), a `Notes` folder under an internal `Audit` folder, and a `Notes`

@@ -60,7 +60,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ⚠️ **THERE ARE TWO MELOMED HOUSEHOLDS IN DOUBLE — pick the right one.** This file is
 **`Igor Melomed & Yelena Lovkina` (710635)**. The other is **`Grigoriy & Margarita Melomed`
 (710633)** — a **separate, live client** whose 2025 return the firm filed in March 2026, and who
-still has **no Client Intelligence file at all**. The migrated TaxDome folder named `IGOR MELOMED`
+now has its own file — [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md), created 2026-08-14. The migrated TaxDome folder named `IGOR MELOMED`
 routes here. **Never merge the two, and check the client ID before writing anywhere.**
 
 ## 3. Systems & access
@@ -108,7 +108,7 @@ here and must not be — the firm's convention puts credentials in the Drive vau
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **THE FIRM DOES MONTHLY BOOKKEEPING FOR HIS BUSINESSES, AND DOUBLE SAYS `Bookkeeping = N/A`.** Through March–July 2026 Maria and Julia have processed **Lucky Pawn and Auto Pawn** monthly ledgers and expense reports, chased a missing month, requested the **SBA year-end statement to record loan interest**, and supplied **TD Bank statements**. **Do not read the Double column as evidence this client is tax-only** — and settle whether the engagement (and the billing) matches the work.
-- ⚠️ **TWO MELOMED HOUSEHOLDS EXIST IN DOUBLE**, and the other one is live: `Grigoriy & Margarita Melomed` (710633) had their **2025 return signed on 2026-03-14** and has **no file of its own**. **Confirm the client ID before writing anywhere** — §2 carries the detail.
+- ⚠️ **TWO MELOMED HOUSEHOLDS EXIST IN DOUBLE, AND A COMPANY BETWEEN THEM.** The other household is [`Grigoriy & Margarita Melomed`](./grigoriy-margarita-melomed.md) (710633) — 2025 return signed 2026-03-14 — and the company both connect to is [`R & G Friendly Inc`](./rg-friendly.md) (710589), *"Lucky Pawn & Jewelry"*. **Confirm the client ID before writing anywhere** — §2 carries the detail, and **who owns what is not established**.
 - ⚠️ **HE WORKS BY EMAIL, NOT THE PORTAL** — *"I am having trouble using this new site"* (2026-06-26). Ledgers, statements and questions arrive as email, sometimes forwarded from the businesses' own addresses. **A request left in the portal will not reach him**, and the 2025 organizer sitting in `Sent` is the visible symptom.
 - ⚠️ **DOUBLE SAYS `1040`; THE FIRM'S OWN 2023 WORKING PAPERS ARE A SCHEDULE C** _(Julia, 2024-10-14)_ — revenue, cost of goods, office supplies, client entertainment and a home-office computation. **Both are recorded with their sources and the fact is left UNSETTLED.** The businesses are demonstrably still trading, so the 2023 papers are not stale evidence of a business that ended. **Ask; do not "fix" the Double column from a working paper.**
 - **An open classification question was never answered** _(Julia, 2024-10-14)_: a **customer-appreciation / company-events** expense she was unsure how to classify, sitting alongside client entertainment at restaurants. The two are treated very differently, and it recurs every year the business runs.
@@ -159,7 +159,7 @@ here and must not be — the firm's convention puts credentials in the Drive vau
 
 - **Double client:** [app.doublehq.com/close?cid=710635](https://app.doublehq.com/close?cid=710635)
 - **Double tax project (2025):** [tax-return?cid=710635&projectId=219323](https://app.doublehq.com/tax-return?cid=710635&projectId=219323)
-- **The OTHER Melomed household (not this client):** [app.doublehq.com/close?cid=710633](https://app.doublehq.com/close?cid=710633) — `Grigoriy & Margarita Melomed`, **live, 2025 return filed, no file of its own**
+- **The OTHER Melomed household (not this client):** [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) — `Grigoriy & Margarita Melomed`, [Double 710633](https://app.doublehq.com/close?cid=710633)
 - **Probable owner-group siblings:** [Magnum 152, Inc](./magnum-152.md) · [Sunoma Inc](./sunoma-inc.md) — link unsettled, see §5
 - **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > IGOR MELOMED` — read 2026-08-13. _(This client appears in the `*QBO` subtree only, not in `*Dupplicated`.)_
 - **Google Drive folder (sensitive vault):** _(pending — link)_

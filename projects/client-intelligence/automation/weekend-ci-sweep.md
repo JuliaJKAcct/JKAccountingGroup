@@ -171,6 +171,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Viacheslav Honcharenko | 710665 |
 | Maria Contreras | 710646 |
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
+| Grigoriy & Margarita Melomed | 710633 |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -218,17 +219,25 @@ README row but are deliberately **not** in the scope table above:
 
 ## Schedule
 
-- **Saturday 06:00 America/New_York.** In cron (UTC): **`0 10 * * 6`** during EDT
-  (summer). Note: fixed-UTC cron means it fires at 05:00 ET in winter (EST) — adjust
-  to `0 11 * * 6` in winter if the exact 6 AM matters.
+- 🔴 **The LIVE Routine runs `0 7 * * 6` — Saturdays 07:00 UTC, i.e. 03:00 ET in summer**
+  _(read from the trigger 2026-08-14; this is the authority)_.
+- ⚠️ **This file previously specified `0 10 * * 6` (06:00 ET) and that is NOT what is running** —
+  three hours earlier than documented, and the setup steps below would have recreated the wrong
+  one. **Whether 03:00 was deliberate or a mis-set is unknown**; the live value is recorded here
+  rather than "corrected", because nobody established which is intended. If 06:00 ET is wanted,
+  change the Routine, not just this line. _(Fixed-UTC cron also means it drifts an hour in winter.)_
 
 ## Web-UI setup (claude.ai/code/routines → New)
 
-1. **Repository:** this repo. **Schedule:** `0 10 * * 6`.
+1. **Repository:** this repo. **Schedule:** `0 7 * * 6` — what is actually running; see the
+   Schedule section above before changing it.
 2. **Connectors (trap #1 — do it here):** attach **Double**, **Ping Assistant**,
-   **Gmail**, **Google Drive**, **QuickBooks**, and **GitHub** (to push the branch). If a connector isn't
-   available in the routines UI, the sweep uses whatever is attached and notes the
-   gap in the report.
+   **Gmail**, **Google Drive**, **QuickBooks**. ⓘ **The live Routine's attached connectors, read
+   2026-08-14:** Double · Gmail · Google Calendar · Google Drive · QuickBooks · Odoo · Ping
+   Assistant — **and no GitHub connector.** Git access comes from the environment's configured
+   **repository source** (this repo, with an outcome branch), not from an MCP connector, so the
+   absence is expected and not a fault. If a connector isn't available in the routines UI, the
+   sweep uses whatever is attached and notes the gap in the report.
 3. **Environment / network (trap #4):** a **Custom** allowlist that permits the email
    webhook host — `script.google.com` and `script.googleusercontent.com`.
 4. **Prompt:** paste the block below. **Put the webhook URL + secret in the prompt
@@ -238,14 +247,24 @@ README row but are deliberately **not** in the scope table above:
    `{"ok":true}`. Then remove the `TEST RUN` line and set the recipient to
    `lilian@jkaccountinggroup.com`.
 
-## ⚠️ THIS FILE IS NOT THE LIVE ROUTINE — the running copy is pasted in the web UI
+## ⚠️ THIS FILE IS NOT THE LIVE ROUTINE — but it IS where the live Routine gets the client list
 
-**Editing the prompt below changes nothing on its own.** The Routine at
+**Two halves, and they were run together as one claim until 2026-08-14.**
+
+🔴 **Editing the PROMPT below changes nothing on its own.** The Routine at
 **claude.ai/code/routines** holds **its own copy**, pasted in when it was created. Until someone
-updates that Routine, the Saturday run keeps following the **old** instructions — including
+updates it, the Saturday run keeps following the **old** instructions — including
 *"Commit the client-intelligence changes … to your working branch and push. Do NOT merge to main"*,
 the line that left three weeks of Client Intelligence stranded. (Quoted exactly, so it can be
 searched for in the live Routine to check whether the update has happened.)
+
+✅ **But editing the SCOPE TABLE above DOES reach the live run** _(established 2026-08-14 by
+reading the trigger itself)_. The live prompt carries **no client list**; it instructs the run to
+read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
+scope table is complete on its own** — it is only the *prompt* that needs a human.
+⚠️ **Which half applies is not obvious from the outside**, and getting it backwards produced a
+`FOLLOW-UPS` row asserting that thirteen newly-scoped clients were being skipped when they were
+not. **Say which half you changed.**
 
 ⚠️ **Do NOT paste this block wholesale — you would break the weekly email.** The block carries
 `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` as **placeholders**; the real values exist **only inside the
@@ -261,10 +280,37 @@ send the report** — the worst shape of failure, because nothing looks broken.
 **So whenever this block changes, the change is not done until the Routine is updated.** Say so out
 loud to whoever asked, and treat it as part of the task, not a follow-up.
 
-**Last change needing a re-paste: 2026-08-11** — the merge-your-own-CI rule, the contradiction
-rule, the seven new clients in scope, and the email becoming a record rather than a request.
+**Last change needing a re-paste: 2026-08-11** — the **merge-your-own-CI rule**, the
+**contradiction rule**, and the **email becoming a record rather than a request**. ⚠️ **Clients in
+scope are NOT on that list** — they reach the run through the scope table above without a paste
+_(corrected 2026-08-14)_.
 
 ## Routine prompt (paste into the web-UI routine)
+
+> ⓘ **The Routine is called "Client Intelligence — weekly sweep"** (`trig_015LaKrto6FDKyUwHmZywqjS`),
+> cron `0 7 * * 6` — **Saturdays 07:00 UTC**, i.e. 03:00 Eastern in summer. It runs in the
+> `env_01DoJ5xZw49eoRfUWThp8rKU` environment with the Double, Gmail, Calendar, Drive, QuickBooks,
+> Odoo and Ping connectors attached, and notifies by **push**.
+>
+> ✅ **The CLIENTS list below is NOT the only route, and this correction matters.** The prompt
+> **currently live in the web UI does not contain a client list at all** — it instructs the run to
+> read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
+> scope table above already reaches the live Routine without anyone re-pasting anything.** Keep the
+> inline list below in sync anyway, because a future paste would carry it. _(Established
+> 2026-08-14 by reading the live trigger, correcting a `FOLLOW-UPS` row that said the Routine was
+> running a hardcoded old list.)_
+>
+> ⚠️ **What IS stale in the live prompt, and what a re-paste actually fixes** — three rulings from
+> **2026-08-11** that never reached it: it still says **"Do NOT merge to main"** (Lilian removed the
+> approval gate for Client Intelligence, and three runs sat unseen on branches because of exactly
+> this line); it carries **no contradictions rule**; and its email is framed as a **request for
+> decisions** rather than a **record of what was saved**.
+>
+> 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
+> wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
+> placeholders and **the weekly email dies silently.** Copy the two real values out of the live
+> prompt first and paste them back in, or have Claude update the Routine in-session with
+> `update_trigger` (which takes a `prompt` parameter) so they never have to be retyped.
 
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
@@ -308,6 +354,14 @@ CLIENTS (name -> Double id):
 - CANDRAMAS LLC -> 706683
 - AXDIGITAL LLC -> 706681
 - Airtouch LLC -> 706671
+- VITALII IVANOV & TETIANA MOGYLOVA -> 710666
+- Igor Melomed & Yelena Lovkina -> 710635
+- R & G Friendly Inc -> 710589
+- Viacheslav Honcharenko -> 710665
+- Maria Contreras -> 710646
+- Iurii Iakovenko & Alina Yakovenko -> 710639
+- Grigoriy & Margarita Melomed -> 710633
+  (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
 
 FOR EACH CLIENT:
 1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:

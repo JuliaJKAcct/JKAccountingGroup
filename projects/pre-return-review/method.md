@@ -42,6 +42,42 @@ _(Lilian, 2026-08-11: "puede ser que yo haya recopilado la información del clie
 guardado en diferentes sitios… tú necesitas decir que esa información está y de dónde lo
 obtuvimos.")_
 
+### 1b · And never write what you did not find as what is not there
+
+**The same rule has a second half, and it is the one that leaves damage behind.** Rule 1 stops
+you asking for what you already have. This stops you **recording an absence as a fact.**
+
+**Every negative belongs to the search that produced it, so say which search that was.**
+*"Nothing else is recorded anywhere the firm can reach"* is a claim about the world.
+*"Nothing further in the sources searched — Double live, Gmail from this date forward"* is a
+claim about the search, and it is the only one you are entitled to make. **The second costs
+one clause and is true.**
+
+⚠️ **The trap is that a bounded search is often exactly right.** The firm sweeps incrementally
+on purpose — re-reading history that is already captured is waste. But *"only look at what is
+new"* rests on a premise: **that everything older was already captured.** When that premise
+does not hold — a client nobody has ever swept, a matter nobody wrote up — the bound is still
+fine and **the conclusions drawn from its silence are not.** Check the premise before you trust
+the emptiness.
+
+**And an absence, once written down, does not read as provisional.** It reads as a finding, it
+gets published, and the next person plans around it. That is what makes this worse than simply
+asking twice: the wrong answer outlives the session that produced it.
+
+⚠️ **PROVENANCE — read this before treating 1b as settled.** Every other rule here was set by
+**Lilian**, correcting real work. **This one was written by the session that made the mistake**,
+from an independent review's findings, on **2026-08-14** — and it **has not been put to her.** By
+this file's own standard *(How these grow: "an inference written in the voice of a rule is how a
+policy nobody agreed to ends up enforced")* that makes it a **proposal with a worked case behind
+it**, not a ruling. Keep it, use it, and say so if it ever decides something.
+
+_(The case: a session was told to sweep only since the last weekly baseline — correct for swept
+clients — applied it to seven who had **never** been swept, and published "no business activity"
+for two clients who had one, "the business may have ended" for one the firm was booking monthly,
+and an emergency built from one day of a five-week pattern. An independent review falsified four
+of them in minutes, using the searches the session had not run. **Nothing was wrong with the
+instruction; the premise under it was.**)_
+
 ## 2 · Group by root cause
 
 **One cause is one finding, however many questions it generates.** Fifteen missing documents
