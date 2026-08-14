@@ -573,8 +573,15 @@ function buildSheet(){
   h += sec('What it costs — two governments, two fees');
   h += '<div class="flag warn"><span class="fl">Neither payment covers the other</span>Two Business Tax Receipts from <b>two different governments</b>, each charging its own fee. To be fully covered the client makes <b>two separate payments in two separate systems</b>.</div>';
   h += '<dl class="kv" style="margin-top:14px">';
-  h += '<dt>City of Hollywood</dt><dd><b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.</dd>';
-  h += '<dt>Broward County</dt><dd>A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.</dd>';
+  h += '<dt>City of Hollywood</dt><dd>'+(haveCity && !renewal
+        ? 'Nothing now — the receipt is <b>already held</b>, so there is no $25 application fee this time. It falls due again at the <b>Sept 30 renewal</b>.'
+        : hollywood
+          ? (renewal ? 'The <b>renewal</b> amount for the new tax year — the $25 application fee is charged on a first filing, not a renewal.'
+                     : '<b>$25 non-refundable</b> application fee <b>+</b> the classification tax from Screen 1. For a small licensed business at 0–1 worker, roughly <b>$120 total</b> (e.g. $25 + ~$95). Card, via PayPal, at submission.')
+          : '<b>That city’s own fee schedule</b> — the $25 + classification figures are Hollywood’s and do not carry over. Get the amount from the city itself.')+'</dd>';
+  h += '<dt>Broward County</dt><dd>'+(haveCounty && !renewal
+        ? 'Nothing now — the county receipt is <b>already held</b>. It falls due again at the <b>Sept 30 renewal</b>.'
+        : 'A <b>separate</b> county business tax, usually much smaller — often <b>~$30–$45</b>. Billed <em>after</em> approval, in the second email, and paid before the county receipt issues.')+'</dd>';
   h += '</dl>';
   h += '<p style="margin-top:12px;font-size:13.5px;color:var(--muted)">Amounts are approximate and depend on classification and year. Verify the exact figure shown at submission — never quote these numbers to a client as the price.</p>';
   if (!renewal){
@@ -585,12 +592,26 @@ function buildSheet(){
   h += '</div>';
 
   /* --- review --- */
+  if (haveCity && !renewal){
+    // buildSteps() drops the whole review round here — there is no application to review.
+    // Printing it anyway is the sheet and the checklist disagreeing on one answer set,
+    // which is the divergence this tool exists to close.
+    h += sec('If the city comes back');
+    h += '<p>Nothing to review — <b>no application is being filed</b>, so no reviewer email is coming. The one thing worth checking on a held receipt is that its <b>classification still matches</b> what the business does: a business that has changed activity is exactly the case the city re-categorises, and it surfaces at renewal rather than now.</p>';
+    h += '</div>';
+  } else if (!hollywood){
+    h += sec('If that city comes back');
+    h += '<p>Not Hollywood, so the reviewer, the subject line and the payment channel below are <b>not</b> the ones you will see. What carries over is the <b>shape</b>: expect a message only if something needs fixing, and expect it to name a category, a licence or a balance.</p>';
+    h += '<div class="flag warn"><span class="fl">Ask this city one question up front</span>Hollywood does <b>not</b> issue the receipt when you pay a corrected balance — it issues it when you <b>reply to the reviewer confirming the payment</b>. Ask how <em>this</em> city closes that loop, because a filing that stalls one step from done looks exactly like a filing that is finished.</div>';
+    h += '</div>';
+  } else {
   h += sec('If the city comes back — and how that round actually ends');
   h += '<p>A personal email from <span class="typein">BusinessTax@hollywoodfl.org</span>, or directly from a Treasury revenue analyst, subject <b>“BUSINESS TAX APPLICATION #&lt;ID&gt; - &lt;ADDRESS&gt; - &lt;BUSINESS&gt;”</b>, arrives <b>only if something needs fixing</b>: a wrong category, a state licence they want, or a balance to pay.</p>';
   h += '<div class="flag err"><span class="fl">The step people miss — paying is not the last step</span>When the city re-categorises the business it emails a <b>due balance</b> with a <b>“Renew Local Business Tax”</b> link. That is the <b>City’s own payment centre</b>, a different channel from the PayPal fee at submission, and its receipt is a <b>“City of Hollywood Treasury Department”</b> confirmation with a <b>reference number</b>. Then — <b>reply to the reviewer to confirm you paid.</b> They issue and email the receipt only after that reply. Pay and stay silent and the receipt never comes.</div>';
   if (A.sublet === 'yes') h += '<div class="flag warn"><span class="fl">The most likely thing they will come back on here</span>The sub-tenant proof-of-location boilerplate. Answer with the master lease and the sublease together, as above — do not go looking for a document that does not exist.</div>';
   if (regulated(A) && A.licence === 'no') h += '<div class="flag warn"><span class="fl">And the second most likely</span>The '+reg[0]+' licence, which is not in hand yet. Expect this exact email.</div>';
   h += '</div>';
+  }
 
   /* --- after --- */
   h += sec('Once the receipts are in hand');

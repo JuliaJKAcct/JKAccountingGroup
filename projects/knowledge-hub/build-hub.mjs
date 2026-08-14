@@ -1041,13 +1041,13 @@ function inlineToolDoc(srcFile, title, opts){
       ? read(resolve(repoRoot, 'brand/design-system/fonts-cyrillic-embedded.css')) : '';
     const raw = read(resolve(dir, srcFile));
     // Only the pricing tools carry the shared core; reading it unconditionally would
-    // throw for a tool in any other folder and the catch below would swallow it into a
-    // silent "Tool unavailable" card.
+    // throw for a tool in any other folder, and that would stop the whole Hub build
+    // over a file the tool never needed.
     const core = raw.includes('/*__PRICING_CORE__*/') ? read(resolve(dir, 'pricing-core.js')) : '';
     // The SOP walkthroughs (ITIN, BTR) share a stylesheet and a case engine that live
     // beside them. Read each only when the tool actually asks for it — an unconditional
-    // read would throw for a tool in another folder, and the catch below would swallow
-    // that into a silent "Tool unavailable" card.
+    // read would throw for a tool in another folder, stopping the whole Hub build over a
+    // file that tool never needed.
     const toolCss = raw.includes('/*__TOOL_CSS__*/') ? read(resolve(dir, 'case-tool.css')) : '';
     const caseCore = raw.includes('/*__CASE_CORE__*/') ? read(resolve(dir, 'case-core.js')) : '';
     // The replacements are passed as FUNCTIONS, not strings. In String.replaceAll a string
@@ -1065,8 +1065,8 @@ function inlineToolDoc(srcFile, title, opts){
       .replaceAll('/*__TOOL_CSS__*/', () => toolCss)
       .replaceAll('/*__CASE_CORE__*/', () => caseCore);
     // A placeholder that survives substitution embeds a tool with no styles or no case
-    // engine — which reads as a broken page, not as a build error. Say so instead: the
-    // catch below turns this into the "Tool unavailable" card, which names the log.
+    // engine — which reads as a broken page, not as a build error. Throwing hands it to
+    // the catch below, which names the file and stops the build.
     const left = ['/*__FONTS__*/', '/*__TOOL_CSS__*/', '/*__CASE_CORE__*/', '/*__PRICING_CORE__*/']
       .filter((p) => body.includes(p));
     if (left.length) throw new Error(srcFile + ': unresolved build placeholder(s) ' + left.join(', '));
@@ -1108,7 +1108,10 @@ function toolIframe(doc, titleAttr){
     ? `<div class="egen"><iframe class="egen-frame" title="${esc(titleAttr)}"`
       + ` style="width:100%;height:82vh;min-height:640px;border:1px solid #C9C1B0;border-radius:10px;background:#E7E0D2;display:block"`
       + ` srcdoc="${srcdocEsc(doc)}"></iframe></div>`
-    : `<div class="callout warn"><div class="cx"><div class="cl">Tool unavailable</div><p>This tool could not be built — its source was missing or failed to parse. The reason was printed in the Hub build log; fix it and rebuild from the repo root.</p></div></div>`;
+    // No fallback branch. Every caller comes from inlineToolDoc(), which now stops the
+    // build on any failure rather than returning '' — so a "Tool unavailable" card can no
+    // longer be reached, and leaving one here described a recovery that does not happen.
+    : (() => { throw new Error('toolIframe called with an empty doc — inlineToolDoc should have stopped the build'); })();
 }
 function calcReaderInner(){
   return `<section class="mast"><div class="in">`

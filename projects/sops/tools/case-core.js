@@ -537,6 +537,11 @@
       // redraw (checkboxes are s_<index>, the log field is #logText), so remember and
       // restore. Same care refocusAfter() takes after a dialog.
       var wasFocused = document.activeElement && document.activeElement.id;
+      // And carry the UNSENT log text across. Typing a log entry, then ticking a
+      // checkbox before pressing Add, silently threw the sentence away — a redraw
+      // destroying work the user could see is the same fault as the blur-redraw that
+      // ate it on mousedown, one layer up.
+      var pendingLog = $('logText') ? $('logText').value : '';
       var h = '<div class="cbar"><button class="btn ghost sm" id="backCases" type="button">← All cases</button>'
             + '<button class="btn cta sm" id="copyNote" type="button">Copy the case note for Double</button>'
             + '<button class="btn ghost sm" id="dlCase" type="button">Download a backup file</button>'
@@ -642,13 +647,18 @@
       $('copyNote').addEventListener('click', function(){ showNote(c); });
       $('dlCase').addEventListener('click', function(){ downloadCase(c, $('dlMsg')); });
       $('logAdd').addEventListener('click', function(){
-        var v = $('logText').value.trim(); if (!v) return;
+        var lt = $('logText'), v = lt.value.trim(); if (!v) return;
+        lt.value = '';                    // or the pending-text restore above hands it back
         c.log.push({ t: nowStamp(), x: v }); touch(c); renderOne();
       });
       $('logText').addEventListener('keydown', function(e){
         if (e.key === 'Enter'){ e.preventDefault(); $('logAdd').click(); }
       });
 
+      if (pendingLog){
+        var lt = $('logText');
+        if (lt) lt.value = pendingLog;
+      }
       if (wasFocused){
         var back = $(wasFocused);
         if (back && back.focus){ try { back.focus(); } catch(_){} }
@@ -945,8 +955,11 @@
         // ticked a step — the user watching THIS tab saw their textarea vanish with no
         // explanation and nothing to undo. The store is already reloaded above; the badge
         // is enough until they finish, and importing re-renders anyway.
-        var importing = !$('caseImport').hidden;
-        if (!$('cases').hidden && !importing) renderCases();
+        // Do not redraw over anything the user is mid-way through. The import panel is
+        // one; the open "Copy the case note" block is the other — it is the very text
+        // they are about to paste into Double, and they may want to copy it twice.
+        var busy = !$('caseImport').hidden || !!$('noteBox');
+        if (!$('cases').hidden && !busy) renderCases();
         paintBadge();
       });
       loadCases();

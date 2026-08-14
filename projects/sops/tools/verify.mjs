@@ -61,7 +61,7 @@ export function loadTool(file, dir = here) {
                      // browser that IS the global object, so `JKCase` resolves as a bare
                      // name; here `window` is a parameter, so bind it explicitly rather
                      // than reaching for `with`, which strict mode forbids outright.
-                     .replace('/*__CASE_CORE__*/', core + '\nvar JKCase = window.JKCase;\n');
+                     .replace('/*__CASE_CORE__*/', () => core + '\nvar JKCase = window.JKCase;\n');
 
   const noop = () => {};
   const el = new Proxy({}, {
@@ -89,9 +89,13 @@ export function loadTool(file, dir = here) {
 
   // Capture the config the tool passes in, so callers can read its seeds and keys.
   const captured = {};
+  // Function replacements, like both builders use: in String.replace a STRING replacement
+  // treats `$&`, `$\``, `$'` and `$n` as substitution patterns. The builders were changed to
+  // functions for exactly this reason, and a verifier that inlines the engine differently
+  // from the way it ships is validating bytes nobody runs.
   const shimmed = script.replace(
     'var tracker = JKCase.createTracker({',
-    'var tracker = (function(c){ __cfg.v = c; return JKCase.createTracker(c); })({'
+    () => 'var tracker = (function(c){ __cfg.v = c; return JKCase.createTracker(c); })({'
   );
   // No `with`, and "use strict" FIRST. The previous form wrapped the tool in
   // `with (window) { "use strict"; … }`, where the directive is no longer a prologue and
