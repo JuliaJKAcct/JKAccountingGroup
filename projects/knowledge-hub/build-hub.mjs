@@ -1064,12 +1064,13 @@ function inlineToolDoc(srcFile, title, opts){
     // "could not be built" callout with no cause anywhere. Print the reason — the callout
     // tells the reader to look here for it.
     console.error('✗ tool embed failed: ' + srcFile + ' — ' + e.message);
-    // Exit non-zero, like tools/build.mjs does. Logging alone let the build finish
-    // successfully and publish a Hub carrying a dead "Tool unavailable" card — the
-    // failure was visible only to whoever happened to read the log, and the publish
-    // step downstream had no reason to stop.
-    process.exitCode = 1;
-    return '';
+    // Stop NOW, like tools/build.mjs and the verifyWalkthroughs gate below both do.
+    // Setting exitCode alone let the build run to completion, write index.html and the
+    // fragment with a dead "Tool unavailable" card, and print the usual "Hub built: …"
+    // success lines — so the failure was one line of log above a page that looked fine,
+    // and the publish step downstream had no reason to stop.
+    console.error('✗ refusing to build a Hub with a tool that could not be embedded.');
+    process.exit(1);
   }
 }
 // The published surface runs the SAME gate as tools/build.mjs. A step added without a

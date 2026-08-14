@@ -273,6 +273,13 @@
       var merged = cases.slice();
       try {
         var disk = JSON.parse(localStorage.getItem(LSKEY) || '[]');
+        // Carry unreadable entries through UNTOUCHED. loadCases() tells the user "Nothing
+        // was deleted — if a case is missing, reopen it from its note in Double", and then
+        // the very next tick or keystroke rewrote the store from the valid entries only
+        // and destroyed exactly what the banner said was safe. Whatever those bytes are —
+        // a half-written case, a future version's format, another tool's data — they are
+        // not ours to discard, and keeping them costs nothing.
+        if (Array.isArray(disk)) disk.filter(function(d){ return !validCase(d); }).forEach(function(d){ merged.push(d); });
         if (Array.isArray(disk)) disk.filter(validCase).forEach(function(d){
           // A case deleted in THIS window is absent from `cases` but still on disk, so the
           // merge below used to hand it straight back and delete never stuck — you reloaded
@@ -575,6 +582,29 @@
         });
         h += '</div>';
       });
+      // A step whose phase matches none of the tool's phases would otherwise render
+      // NOWHERE — silently absent from the checklist someone is working from, and absent
+      // from the note they paste into Double, with nothing to notice. It can arrive from
+      // an older or newer version of a tool, or a hand-edited note. Show it, and say why
+      // it is here rather than pretending it belongs to a phase we guessed.
+      var known = {}; PHASES.forEach(function(ph){ known[ph[0]] = 1; });
+      var orphans = c.steps.filter(function(s){ return !known[s.ph]; });
+      if (orphans.length){
+        h += '<div class="phase"><h4><span>Not in any phase of this tool</span><span>'
+          +  orphans.filter(function(s){ return s.done; }).length + '/' + orphans.length + '</span></h4>';
+        h += '<p style="font-size:13px;color:var(--muted);margin:0 0 10px">These came from a case built by a different version of this tool. They are kept and still count.</p>';
+        orphans.forEach(function(s){
+          var idx = c.steps.indexOf(s);
+          h += '<div class="step'+(s.done?' on':'')+'">'
+            +  '<input type="checkbox" id="s_'+idx+'" data-step="'+idx+'"'+(s.done?' checked':'')+' aria-label="'+esc(s.t)+'">'
+            +  '<div class="sx"><label class="st" for="s_'+idx+'">'+esc(s.t)+'</label>'
+            +  (s.d ? '<div class="sd">'+esc(s.d)+'</div>' : '')
+            +  (s.done && s.date ? '<span class="sstamp">✓ '+esc(s.date)+'</span>' : '')
+            +  '<input class="snote" type="text" data-note="'+idx+'" value="'+esc(s.note||'')+'" aria-label="Note for: '+esc(s.t)+'" placeholder="Note — e.g. who has it, what is waiting, a date">'
+            +  '</div></div>';
+        });
+        h += '</div>';
+      }
 
       h += '<div class="logbox"><h4>Case log</h4>';
       if (!c.log.length) h += '<p style="color:var(--muted);font-size:14px">Nothing logged yet.</p>';
@@ -657,6 +687,15 @@
         });
         out.push('');
       });
+      var knownPh = {}; PHASES.forEach(function(ph){ knownPh[ph[0]] = 1; });
+      var loose = c.steps.filter(function(s){ return !knownPh[s.ph]; });
+      if (loose.length){
+        out.push('NOT IN ANY PHASE OF THIS TOOL (from an older or newer version)');
+        loose.forEach(function(s){
+          out.push('  [' + (s.done ? 'x' : ' ') + '] ' + s.t + (s.done && s.date ? '  (' + s.date + ')' : '') + (s.note ? '  — ' + s.note : ''));
+        });
+        out.push('');
+      }
       var pend = c.steps.filter(function(s){ return !s.done; });
       out.push('NEXT: ' + (pend.length ? pend[0].t : 'nothing outstanding.'));
       if (c.log.length){
@@ -711,10 +750,15 @@
         // warning exists to prevent. They confirm the paste themselves.
         function marked(){
           msg('Copied. Now paste it into the client’s case note in Double.');
-          var btn = $('didPaste');
-          if (btn) btn.hidden = false;
+          reveal();
         }
-        function msg(m){ var el = $('copyMsg'); if (el) el.textContent = m; }
+        // The confirm button has to appear on the FAILURE path too. Someone told to select
+        // the text and copy it by hand can still paste it into Double perfectly well — but
+        // with the button hidden, the case stayed flagged "not yet copied" forever, and the
+        // delete dialog then warned that work already safely in Double would be lost.
+        // Same class of bug as the clipboard-rejection branch above.
+        function reveal(){ var btn = $('didPaste'); if (btn) btn.hidden = false; }
+        function msg(m){ var el = $('copyMsg'); if (el) el.textContent = m; reveal(); }
       });
       var dp = $('didPaste');
       if (dp) dp.addEventListener('click', function(){
