@@ -172,9 +172,18 @@ was said). Better a sourced, low-confidence note than nothing.
 | Maria Contreras | 710646 |
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
 | Grigoriy & Margarita Melomed | 710633 |
+| M5 Studio Miami | ⚠️ **unknown — no Double account confirmed** (added 2026-08-14) |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
+
+> ⓘ **M5 Studio Miami is in scope but has no Double id, and that is not an oversight.** It is a
+> **company set-up** client (EIN application in flight as of 2026-08-14) and nobody has yet
+> established whether it exists in Double at all — so the Double plane of the sweep has nothing
+> to address. **Sweep it from Gmail / Ping / Drive by name**, and the first run that finds a
+> Double client should write the id into this row. **It is low priority against the catch-up
+> queue below**: a company being formed this week has almost no history to sweep, so it should
+> never displace a client that has been waiting.
 
 > ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
 > archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived
