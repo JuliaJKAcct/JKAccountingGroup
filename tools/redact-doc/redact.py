@@ -19,11 +19,21 @@ Exit codes
     2  the PDF has no text layer (a scan) — nothing was written
     3  unreadable / not a PDF / the download failed
     4  the redactor found something it does not know how to mask safely
+    5  the extraction is mostly unreadable — a font naming glyphs by their slot
+       in a subset, or a text layer with too small an alphabet to be text.
+       Nothing was written, and a "0 masked" report from such a file would have
+       meant BLIND rather than clean
 
 What is masked, and why (JK Accounting Group, Lilian 2026-08-11):
     SSN / ITIN · bank routing and account numbers (incl. IBAN-style) ·
     dates of birth · driver's licence and other government-issued ID numbers ·
     the street line of an address (city and state are kept).
+
+    …and [GLYPH] — any leftover `/token` carrying a digit. Those come from a
+    font with no usable Unicode map, and they are unreadable BY DEFINITION: no
+    pattern in this file can tell whether one hides an SSN. Masking them is the
+    only treatment that does not depend on guessing the font's naming scheme.
+    The count is reported, because an absence near a [GLYPH] proves nothing.
 
 Text is Unicode-normalised FIRST. That is load-bearing, not tidying: a font
 emitting a typographic hyphen or a zero-width space produces an SSN that looks
@@ -65,6 +75,210 @@ def normalise(text: str) -> str:
     """Fold every look-alike separator to ASCII so one character class suffices."""
     # NFKC also folds fullwidth digits and various compatibility forms.
     return unicodedata.normalize("NFKC", text).translate({**DASHES, **INVISIBLE})
+
+
+# ── Glyph-name recovery. A PDF whose font carries no usable ToUnicode CMap makes
+#    pypdf fall back to emitting the font's own GLYPH NAMES instead of characters
+#    — `/uni0031` where the page shows `1`. The page is perfectly legible to a
+#    human and completely unreadable to every pattern in this file.
+#
+#    This is worse than a scan, and that is the whole reason it is handled here.
+#    A scan yields nothing and trips the NO TEXT LAYER gate loudly. A glyph-name
+#    dump yields HUGE volume — half a million characters of `/uniXXXX` — so it
+#    sails through every volume-based check, redacts to "0 masked", and writes a
+#    file whose emptiness reads as a clean bill of health. Verified 2026-08-14 on
+#    a real filed 1120-S: 18 pages, 500,712 chars, 61,131 glyph tokens, and the
+#    tool reported zero of everything including zero EINs.
+#
+#    `/uniXXXX` is Adobe's glyph-naming convention and XXXX is the Unicode code
+#    point in hex, so decoding it is a faithful recovery, not a guess.
+#
+# ⚠️ DECODING IS ONLY HALF THE JOB, and the half that is easy to stop at.
+#    `/uniXXXX` is one convention among several. pypdf writes the RAW glyph name
+#    for any name it cannot map, and subset fonts routinely use `/g11`, `/cid49`,
+#    `/G34` or `/index0031` — none of which name a code point, so none can be
+#    decoded. Those are strictly worse than the case above, because a document
+#    that is PARTLY decodable ends up with a rich-looking alphabet that disarms
+#    the diversity gate below while thousands of undecodable tokens ride into the
+#    written file. The [GLYPH] masking below is what handles that, and it is
+#    the primary treatment — the diversity gate is the backstop, not the other
+#    way round. _(Found by the independent review of PR #219, which built the
+#    mixed document and walked it straight through the first version of this
+#    fix, then defeated the next two versions as well.)_
+
+# Adobe allows `uni` followed by SEVERAL 4-hex groups in one name. Matching
+# `{4,6}` greedily eats the first group plus two digits of the second and leaves
+# the remainder welded to a decoded character, so the groups are matched
+# explicitly and decoded one at a time.
+GLYPH_NAME = re.compile(r"/uni((?:[0-9A-Fa-f]{4})+)(?![0-9A-Fa-f])|/u([0-9A-Fa-f]{4,6})(?![0-9A-Fa-f])")
+
+# ── Glyph names that CANNOT be decoded: MASK them, do not try to classify them.
+#
+# ⚠️ THREE ATTEMPTS FAILED HERE BEFORE THIS ONE. Read this before "improving" it.
+#
+#    Attempt 1 enumerated the conventions it knew — `/uni`, `/g`, `/cid`,
+#    `/index`, `/glyph`. An independent review defeated it with `/C49`,
+#    `/char49`, `/gid49`, `/id49`, `/x49`, `/T49`, `/gAF`. **pypdf writes
+#    whatever the FONT calls the glyph**, so a list is only ever a list of the
+#    attacks someone already thought of.
+#
+#    Attempt 2 tested the STRUCTURE — adjacent tokens, glyph-shaped. That failed
+#    for a subtler reason: `extraction_mode="layout"` **inserts spaces between
+#    glyphs positioned more than ~20-30pt apart**, which is exactly how a form
+#    lays out its boxes. So the filled-in fields of a real return arrive already
+#    separated, the adjacency test sees nothing, and an SSN is written out.
+#
+#    And the reason not to loosen the run to allow whitespace: `/Stmt1 /Stmt2
+#    /Stmt3` in a real return and `/C49 /C50 /C51` in a broken one are
+#    **structurally identical**. Slash-density and repeated-prefix counting were
+#    both measured and both overlap between attacks and legitimate text. At nine
+#    tokens — one SSN — the two populations are not separable.
+#
+# So stop classifying the document. **A leftover `/token` carrying a digit is,
+# by definition, text that no redaction pattern in this file can read** — which
+# is the exact condition this tool exists to refuse to pass on. Mask it like any
+# other unreadable thing and report the count. A false positive then costs a
+# mangled file path instead of a refused client return; no future encoding
+# matters; and the tolerance question disappears, because there is no budget.
+#
+# The digit requirement is what keeps ordinary prose intact: `and/or`, `N/A`,
+# `Sch A/B/C/D/E/F` and `12/31/2024` carry no slash-token with a digit in it.
+# `[^\W\d_]` is "any Unicode LETTER" — not `[A-Za-z]`. A subset font may name its
+# glyphs in any script, and pypdf decodes name objects through utf-8/gbk/latin1,
+# so `/é49`, `/д49` and `/字49` are all reachable. With an ASCII-only class those
+# pass through untouched and the code points sit in the file in plain decimal —
+# no key needed to read them back.
+GLYPH_TOKEN = re.compile(r"/[^\W\d_][\w.]{0,40}")
+
+# ⚠️ And the digits TOUCHING a masked token. `GLYPH_TOKEN` stops at `-`, so a
+# broken-font label set flush against a good-font value — an ordinary form line —
+# used to have its front eaten and its tail published:
+#
+#     /C83/C83/C78123-45-6789 Smith  →  [GLYPH][GLYPH][GLYPH]-45-6789 Smith
+#
+# That is the last four digits beside an unmasked name: precisely the
+# identity-verification pair this file's own docstring gives as the reason tags
+# replaced last-four masking. A digit run touching a [GLYPH] is a fragment of
+# something the tool could not read, so it is unreadable too and gets masked.
+# ⚠️ NOT length-bounded, and an earlier version's bound was worse than useless.
+# It looked like protection against swallowing a numeric table, but the loop
+# below re-runs to a fixed point, so a bound only changed how many passes it
+# took to eat the same characters — while implying a limit that did not exist.
+# What actually stops the run is a character outside the class: a COMMA ends it,
+# so a formatted table (`6,753.00 788.00`) is safe by construction. An
+# unformatted run adjacent to a glyph is over-masked, which is the correct way
+# to fail.
+#
+# ⚠️ THE GAP BOUND IS 20, NOT 2, AND THE SLASH IS IN THE CLASS. Both were found
+#    the same way: `extraction_mode="layout"` PADS between form boxes — 4 to 20+
+#    spaces at ordinary column pitches — so a boxed SSN arrives as
+#    `[GLYPH]   45   6789`, and a two-character gap reached none of it. Boxed
+#    fields are padded BY CONSTRUCTION; the tight-set case this rule was written
+#    for is the rarer one. And `/` is the US date separator, so without it a
+#    date of birth published its day and year.
+#    ⓘ The bound of 20 is calibrated to real form geometry, not picked. Boxed
+#    SSN fields were run end to end at column pitches of 30, 45, 60, 90 and
+#    120pt: no digits survive at any of them. Only at 160pt — 2.2 inches between
+#    groups, wider than the whole field on a real form — does a group get
+#    through. **Do not shrink it back.**
+GLYPH_ADJACENT = re.compile(
+    r"\[GLYPH\][-./\s]{0,20}\d[\d\s./\-]*"
+    r"|\d[\d\s./\-]*[-./\s]{0,20}(?=\[GLYPH\])"
+)
+
+# ⚠️ And the rest of a thousands-separated figure. The run above stops at a
+# comma, which keeps a formatted table alive — but it stops INSIDE the adjacent
+# number, and what it leaves is not visibly a fragment:
+#
+#     /Form4562  1,204,556 carryforward   →   [GLYPH],204,556 carryforward
+#
+# That reads as a number. Everywhere else in this tool over-masking is safe
+# precisely BECAUSE the reader can see something was removed; `[GLYPH],392`
+# reads as 392, and losing a leading `1,` is a factor-of-1000 error that will
+# never send anyone back to the PDF. This output feeds return preparation, where
+# figures are read off it and corroborated arithmetically. **A removed figure
+# fails loudly; a wrong one does not.** So the adjacent figure goes whole.
+GLYPH_COMMA_TAIL = re.compile(r"\[GLYPH\](?:,\d{3})+(?:\.\d+)?")
+
+# The one case still worth REFUSING rather than masking: a document that is
+# mostly wreckage. Masking 61,131 tokens produces a file that is technically
+# safe and analytically worthless, and the honest answer there is "ask for a
+# proper PDF", not a page of [GLYPH]. Unambiguous and loud, unlike any of the
+# thresholds this replaced.
+GLYPH_MASS_LIMIT = 100
+
+# Lone surrogates are not encodable as UTF-8. `chr()` will happily produce one
+# from `/uniD800`, and the failure would then land on dst.write_text() AFTER the
+# file was opened — breaking the "nothing was written" contract with a traceback.
+SURROGATES = range(0xD800, 0xE000)
+
+
+def decode_glyph_names(text: str) -> tuple[str, int]:
+    """Turn `/uniXXXX` glyph names back into the characters they name.
+
+    Returns the decoded text and how many tokens were decoded, so the caller can
+    say the extraction went through this path rather than pretending it didn't.
+    """
+    n = 0
+
+    def sub(m: re.Match) -> str:
+        nonlocal n
+        body = m.group(1) or m.group(2)
+        groups = (
+            [body[i : i + 4] for i in range(0, len(body), 4)] if m.group(1) else [body]
+        )
+        out = []
+        for g in groups:
+            try:
+                code = int(g, 16)
+            except ValueError:
+                return m.group(0)
+            if code in SURROGATES or code > 0x10FFFF:
+                return m.group(0)
+            out.append(chr(code))
+        n += len(groups)
+        return "".join(out)
+
+    return GLYPH_NAME.sub(sub, text), n
+
+
+# ── The intelligibility gate. Every check in this tool used to measure the
+#    VOLUME of extracted text; none measured whether it was text at all.
+#
+#    Natural English — even the number-dense English of a tax return — draws on
+#    a wide alphabet: upper and lower case, punctuation, digits. A failed
+#    character-level extraction draws on a tiny one. The real 1120-S above used
+#    27 distinct characters across 500,712, because it was four token shapes
+#    repeated. A page of ordinary prose passes 60 easily.
+#
+#    So: refuse the file rather than write a misleadingly empty one.
+#
+#    The gate is LENGTH-AWARE on purpose. A 200-character document may honestly
+#    use a small alphabet and proves nothing either way; a 70,000-character one
+#    using 27 characters is broken beyond argument. Applying the rule only above
+#    a floor keeps it from firing on the short documents where it cannot know —
+#    those are already covered by the per-page "barely extracted" warning.
+#
+#    CALIBRATION, because the first version got this wrong in the safe-looking
+#    direction. Two measured points bracket it: the real broken 1120-S came in at
+#    **27**, and a realistic ALL-CAPS tax-package extraction — a perfectly good
+#    document — came in at **39**. A threshold of 40 therefore REFUSED a real
+#    return by one character, and told the operator to go and ask for a different
+#    PDF. 30 sits clear of both. _(Independent review of PR #219.)_
+#
+#    And note what this gate is now FOR: it is the backstop for encoding failures
+#    that leave no glyph names behind. The direct detector for the glyph case is
+#    the [GLYPH] masking above, which does not care about alphabet size at all.
+MIN_DISTINCT_CHARS = 30
+DIVERSITY_MIN_LEN = 2_000
+
+
+def looks_like_text(text: str) -> tuple[bool, int]:
+    """Is this natural text, or the wreckage of a failed extraction?"""
+    distinct = len(set(text))
+    if len(text) < DIVERSITY_MIN_LEN:
+        return True, distinct
+    return distinct >= MIN_DISTINCT_CHARS, distinct
 
 # ── Patterns, most specific first. Order matters: EIN must be claimed before
 #    any generic nine-digit rule can eat it. ────────────────────────────────────
@@ -181,7 +395,35 @@ def redact(text: str) -> tuple[str, dict]:
     """
     text = normalise(text)
     counts: dict = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
-                    "account": 0, "street": 0, "ein_kept": 0, "leaks": []}
+                    "account": 0, "street": 0, "ein_kept": 0, "glyph": 0,
+                    "leaks": []}
+
+    # Undecodable glyph names go FIRST, before any other rule can see them. They
+    # are unreadable by construction, so they are masked rather than judged —
+    # see the long note at GLYPH_TOKEN for the three approaches this replaces.
+    def _mask_glyph(m: re.Match) -> str:
+        if not any(c.isdigit() for c in m.group(0)):
+            return m.group(0)  # `/or`, `/A`, `/Schedule` — ordinary text
+        counts["glyph"] += 1
+        return "[GLYPH]"
+
+    text = GLYPH_TOKEN.sub(_mask_glyph, text)
+
+    # Then the digits welded to those tokens — see GLYPH_ADJACENT.
+    #
+    # ⓘ ONE PASS IS ENOUGH, and that is a property of the pattern, not luck. Each
+    #   alternative extends maximally, and a substitution only shortens the text
+    #   — it can never bring distant digits into contact across a character that
+    #   is outside the class, because that character stays where it is. An
+    #   earlier version looped "just in case"; no input could distinguish it, and
+    #   an unpinned branch that no test can reach is a liability, not insurance.
+    text, n = GLYPH_ADJACENT.subn("[GLYPH]", text)
+    counts["glyph"] += n
+
+    # …and the thousands-separated remainder of whatever it stopped inside, so a
+    # masked figure never comes back as a smaller well-formed one.
+    text, n = GLYPH_COMMA_TAIL.subn("[GLYPH]", text)
+    counts["glyph"] += n
 
     # Park EINs behind a placeholder so no later rule can touch them, then put
     # them back at the very end.
@@ -234,6 +476,15 @@ def redact(text: str) -> tuple[str, dict]:
     text = SSN.sub(_ssn, text)
     text = LONG_DIGITS.sub(_long, text)
 
+    # ⓘ The SSN_LOOSE half is the live one — it hunts the wide-spaced shape the
+    #   redactor masks only when labelled. The LONG_DIGITS half is **unreachable
+    #   by construction**: it runs immediately after LONG_DIGITS.sub above, and
+    #   no substitution in between can create a fresh 9+ digit run — every mask
+    #   this file emits ([GLYPH], [SSN-n], [ACCT-n], [STREET-REDACTED]) contains
+    #   no digits and none of them joins two runs. It is belt-and-braces, kept
+    #   because it costs nothing and the ordering above has been got wrong once
+    #   already. **Its silence is not evidence of anything** — do not read a
+    #   clean guard as confirmation that the digit rules ran.
     counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
@@ -289,7 +540,17 @@ def _run(src: Path, dst: Path) -> int:
     try:
         from pypdf import PdfReader
     except ImportError:
-        print("ERROR: pypdf is not installed (pip install pypdf)", file=sys.stderr)
+        print(
+            "ERROR: pypdf is not installed.\n"
+            "    pip install pypdf\n"
+            "⚠️  In a fresh cloud session `import pypdf` can still fail afterwards with\n"
+            "    ModuleNotFoundError: No module named '_cffi_backend'. That is the system\n"
+            "    cryptography package missing its backend, not a problem with this tool:\n"
+            "    pip install --upgrade cffi\n"
+            "    (An 'ERROR: Cannot uninstall cryptography ... installed by debian' line\n"
+            "     while doing this is expected and harmless — pypdf imports anyway.)",
+            file=sys.stderr,
+        )
         return 3
 
     try:
@@ -298,6 +559,12 @@ def _run(src: Path, dst: Path) -> int:
     except Exception as exc:  # noqa: BLE001 — the reason matters more than the type
         print(f"ERROR: could not read as PDF: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 3
+
+    # Recover glyph-name output BEFORE anything measures these pages, so the
+    # per-page "barely extracted" count below reflects the real text and not the
+    # inflated length of `/uniXXXX` tokens.
+    pages, glyphs = zip(*(decode_glyph_names(t) for t in pages)) if pages else ((), ())
+    pages, glyphs_decoded = list(pages), sum(glyphs)
 
     raw = "\n\n".join(f"--- page {i + 1} ---\n{t}" for i, t in enumerate(pages))
 
@@ -310,7 +577,53 @@ def _run(src: Path, dst: Path) -> int:
         )
         return 2
 
+    # ⚠️ THE PRIMARY DETECTOR. Glyph-name output that could not be decoded — the
+    # `/g11`, `/cid49`, `/index0031` conventions — carries no code point, so it
+    # survives decoding untouched and matches none of the redaction patterns.
+    # Worse, on a document that is only PARTLY decodable the successful decodes
+    # inflate the alphabet and walk the diversity gate below straight past it.
+    # This check does not care about the alphabet: it counts the wreckage
+    # directly. A handful of tokens is tolerated (a real return can mention a
+    # PDF internal in an attachment); a systemic failure is thousands.
+    # ⚠️ Volume is not intelligibility. Everything above this line measures how
+    # MUCH came out; this measures whether what came out is text. Without it a
+    # character-level extraction failure produces a large file that redacts to
+    # "0 masked" — and "0 masked" is exactly what a clean document looks like.
+    readable, distinct = looks_like_text(raw)
+    if not readable:
+        print(
+            f"UNREADABLE EXTRACTION: {len(pages)} page(s), {len(raw):,} chars, but only "
+            f"{distinct} distinct characters (expected >= {MIN_DISTINCT_CHARS}).\n"
+            "The text layer came out at the character level — a font with no usable\n"
+            "ToUnicode map, or a similar encoding failure. Nothing was written.\n"
+            "⚠️  DO NOT re-run and trust a '0 masked' report from this file: on this\n"
+            "    input the patterns cannot match anything, so zero means BLIND, not\n"
+            "    clean. Ask for a properly generated PDF from the tax software.",
+            file=sys.stderr,
+        )
+        return 5
+
     redacted, counts = redact(raw)
+
+    # A document that is mostly wreckage is refused rather than masked: a page
+    # of [GLYPH] is safe and useless, and saying so is more honest than handing
+    # it over. Everything below that line is masked and merely reported.
+    if counts["glyph"] > GLYPH_MASS_LIMIT:
+        print(
+            f"UNREADABLE EXTRACTION: {counts['glyph']:,} unreadable slash-token(s) — past the\n"
+            f"limit of {GLYPH_MASS_LIMIT}, so masking them would leave a file that is safe and\n"
+            "worthless. Nothing was written.\n"
+            "⚠️  LOOK AT THE PDF BEFORE ASKING FOR ANOTHER ONE. Two different documents\n"
+            "    land here:\n"
+            "      • a font naming glyphs by their slot in a subset (`/g11`, `/C49`,\n"
+            "        `/cid49`) — nothing to recover, and a '0 masked' report from it would\n"
+            "        mean BLIND rather than clean. Ask the tax software for a proper PDF.\n"
+            "      • a perfectly good document that simply carries many slash-tokens — a\n"
+            "        long attachment index or a block of form references. Nothing is wrong\n"
+            "        with it; this tool just cannot tell the two apart at this volume.",
+            file=sys.stderr,
+        )
+        return 5
 
     # The last line of defence, and it is DELIBERATELY STRICTER than the
     # redactor: it hunts the loose NNN?NN?NNNN shape with any spacing, which the
@@ -344,10 +657,27 @@ def _run(src: Path, dst: Path) -> int:
     # This number is the reason an ABSENCE in the output is not evidence of an
     # absence in the return: a form can be sitting on a page that did not
     # extract. Reported here so the reader cannot fail to see it.
+    #
+    # ⚠️ This measures VOLUME per page and nothing else, deliberately.
+    # An earlier version also ran the alphabet gate here, and it cried wolf on
+    # every real return: a depreciation schedule uses 14 distinct characters, a
+    # K-1 allocation grid 11, an all-caps label page 28 — all perfectly extracted.
+    # It flagged 12 of 18 pages of a clean return and told the reader to distrust
+    # exactly the schedules carrying the figures, which is how a warning that
+    # matters gets tuned out. The mixed-extraction case it was meant to catch is
+    # caught by masking every unreadable token, which does not need a warning.
     thin = [i + 1 for i, p in enumerate(pages) if len(re.sub(r"\W", "", p)) < 200]
 
     # The ONLY thing this tool ever prints about the document's contents.
     print(f"redacted → {dst}  ({len(pages)} pages, {len(redacted):,} chars)")
+    if glyphs_decoded:
+        print(
+            f"  ⚠️  {glyphs_decoded:,} glyph-name token(s) were decoded back to text —\n"
+            "      this PDF's font carries no usable Unicode map. The recovery is\n"
+            "      faithful (/uniXXXX names its own code point), but layout and\n"
+            "      spacing come out worse than usual, so read column alignment with\n"
+            "      suspicion and prefer a figure you can corroborate."
+        )
     if thin:
         print(
             f"  ⚠️  {len(thin)} of {len(pages)} pages barely extracted: {thin}\n"
@@ -355,6 +685,15 @@ def _run(src: Path, dst: Path) -> int:
             "      pypdf cannot read). DO NOT report 'X is not on the return'\n"
             "      from this output — say the extraction was incomplete and name\n"
             "      these pages. An absence here is not evidence."
+        )
+    if counts["glyph"]:
+        print(
+            f"  ⚠️  {counts['glyph']} undecodable glyph-name token(s) were MASKED as [GLYPH].\n"
+            "      That text could not be read by this tool — and therefore could not be\n"
+            "      checked for identifiers either. Whatever was there is gone, safely, but\n"
+            "      an ABSENCE anywhere near a [GLYPH] proves nothing. If they cluster where\n"
+            "      a figure should be, ask for a properly generated PDF instead of\n"
+            "      concluding the figure is missing."
         )
     print(
         "  masked: "
