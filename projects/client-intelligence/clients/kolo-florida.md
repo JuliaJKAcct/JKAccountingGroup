@@ -58,7 +58,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
-| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the KOLO bath/shower lines and **"Cost per item" is populated**, so the month-end snapshot returns units *and* value at cost; the separate kitchen-cabinet collections are `tracked: false` with no cost. Tracking begins **August 2024** — before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
+| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the KOLO bath/shower lines, at a **single location** (`"KOLO" 3485 NW 19th St, Lauderdale Lakes, FL`). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
 | Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
 | GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
 | TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
@@ -105,6 +105,25 @@ the actual details.
   will understate the year badly. Consistent with the retail/wholesale zoning history above. _(Shopify
   analytics, read 2026-08-14. Order counts are a volume fact; the money stays in Shopify/QuickBooks
   per the two-data-homes rule.)_
+- ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
+  30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
+  cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
+  own retail price.** That is a formula applied across the catalogue, not eight supplier
+  prices agreeing by chance. Other
+  variants carry **no cost at all** and contribute **zero** to the same total — so the number is
+  inflated and incomplete at once. **Shopify gives this client units, not value.** The valuation
+  has to come from supplier invoices, the client's cost sheet, or a physical count. _(Established
+  2026-08-14 when the Shopify figure came out ~1.74× the ending inventory on the filed 2024
+  1120-S — Lilian knew the prior-year number and questioned it, which is the only reason this was
+  caught.)_
+- **Shopify carries ONE cost per variant and applies it to every historical snapshot** — implied
+  unit costs came back identical to the cent at both the 2024 and 2025 year ends on nearly every
+  item. So editing a cost today silently rewrites what a past year "reported". _(One item did not
+  behave this way and was not explained; 2026-08-14.)_
+- **Kolo is an INTERMEDIARY for some product lines — those goods are not its inventory.** The
+  kitchen units and the doors belong to **another company**; when a customer orders one through
+  Kolo, that other store ships it directly. **That is why they are untracked, and it is correct
+  that they are** — they must not appear in year-end inventory. _(Lilian, 2026-08-14.)_
 - ⚠️ **Shopify's inventory is NOT maintained day to day — read its unit counts as an upper bound.**
   Shopify decrements only when a *Shopify* order ships or someone adjusts by hand, and this company
   sells mostly off-platform (above). The signature is in the monthly series: through all of 2025 the
@@ -122,6 +141,13 @@ the actual details.
 - **Low confidence — to confirm:** mid-2024 correspondence links Kolo to a seemingly related entity,
   "MegaBAI Florida Corp" (shared contacts, an inventory move into Kolo's warehouse, MegaBAI winding
   down around late 2024). Unconfirmed; no CI file exists for it.
+  🔎 **Corroborated, not settled, 2026-08-14:** several **BAI-branded** products sit inside Kolo's
+  *tracked* Shopify inventory (e.g. "BAI 8044 LED 34-inch Bathroom Mirror", "BAI 0811 Wall Hung
+  34-inch Bathroom Vanity"), among its largest lines by value at both the 2024 and 2025 year ends.
+  That is consistent with the 2024 inventory move into Kolo's warehouse — **and it raises a
+  question for the return:** these are tracked, unlike the intermediary lines above, so on the
+  face of it they are being treated as Kolo's own stock. Whether Kolo bought them or is holding
+  them for someone is **not established here** — ask before the inventory figure is fixed.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -144,11 +170,22 @@ the actual details.
 - 2026-08-14 — **Lilian started the 2025 Form 1120-S.** The opening question was where a Shopify
   store's year-end inventory actually lives. Established from the live Shopify connection: the
   **month-end inventory snapshot** (Analytics → Reports → Inventory) carries units **and** value at
-  cost for **31 Dec 2025 and 31 Dec 2024** — the ending and beginning inventory Form 1125-A needs —
-  and "Cost per item" is populated, so the value is real rather than a units-only count. Two findings
-  matter more than the number itself, both now in §5: the Shopify store is a **small fraction** of the
-  company's sales, and its inventory is **not maintained day to day**. Separately, Double reports
+  cost for **31 Dec 2025 and 31 Dec 2024** — the dates Form 1125-A needs. ⛔ **The VALUE side of
+  that was reported to her as usable and it is not — corrected the same day, see the next entry.**
+  Two findings from this pass did hold, both now in §5: the Shopify store is a **small fraction** of
+  the company's sales, and its inventory is **not maintained day to day**. Separately, Double reports
   Kolo's QuickBooks as **not connected** (§1), so the books cannot be read through Double at all.
+  _(Worked by Lilian.)_
+- 2026-08-14 — **The Shopify inventory VALUE was found to be unusable, and Lilian is the reason it
+  was caught.** She knew the filed 2024 1120-S reported a materially lower ending inventory and
+  asked how the Shopify figure had been derived. It had not been derived at all — it was Shopify's
+  own `ending_inventory_value` taken at face value. Testing the field underneath showed a flat
+  **30%-of-retail formula** across every price tier, with nulls elsewhere (§5). **The units survive;
+  the valuation does not.** She also explained the intermediary arrangement behind the untracked
+  kitchen and door lines (§5), and asked for the lesson to be made reusable — the firm has other
+  Shopify clients. Both findings and the two gates that would have caught this before it reached a
+  return are now the
+  [`shopify-year-end-inventory` skill](../../../.claude/skills/shopify-year-end-inventory/).
   _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
@@ -175,9 +212,14 @@ the actual details.
 - [ ] **2025 return — what ending inventory did the 2024 Form 1120-S report?** That figure *is* the
       2025 beginning inventory and it governs; the Shopify snapshot for 31 Dec 2024 is a cross-check,
       not the authority. A gap between the two has to be explained, not averaged.
-- [ ] **2025 return — is there merchandise in the warehouse Shopify does not track at all?** The
-      kitchen-cabinet collections carry no tracking and no cost, so anything like them is simply
-      absent from the snapshot.
+- [ ] **2025 return — where does the real cost of the inventory come from?** Shopify's is a
+      30%-of-retail formula (§5), so the valuation needs supplier invoices, a client cost sheet, or
+      a counted-and-priced list. **This is the blocker on the 1125-A.**
+- [ ] **2025 return — how was the 2024 ending inventory figure derived?** Whatever method produced
+      the number on the filed 2024 1120-S is the method to repeat for consistency; it is also the
+      only evidence so far of what this inventory really costs.
+- [ ] **2025 return — are the BAI-branded lines Kolo's own stock?** They are tracked, unlike the
+      intermediary kitchen/door lines, and they are among the largest lines by value (§5).
 - [ ] Fiscal year-end
 - [ ] Confirm (or rule out) the "MegaBAI Florida Corp" relationship in §5
 - [x] Industry / what they do — **retail e-commerce via the Shopify store "KOLO HOUSE"** plus a
