@@ -324,11 +324,30 @@
       return CODETAG + b64enc(o);
     }
     function decodeCase(text){
-      var i = text.indexOf(CODETAG);
+      // lastIndexOf, not indexOf: if someone APPENDED a fresh block to the note instead of
+      // replacing its contents — which the instruction warns against but people do — the
+      // newest block is the one at the bottom, and taking the first one silently reopened
+      // an older state of the case.
+      var i = text.lastIndexOf(CODETAG);
       if (i === -1) return null;
-      var raw = text.slice(i + CODETAG.length).replace(/[^A-Za-z0-9+/=]/g, '');
-      var o = b64dec(raw);
-      if (!o || o.v !== 1) throw new Error('unrecognised case code');
+      var tail = text.slice(i + CODETAG.length);
+      // Two readings, tried in order, because the two failure modes pull opposite ways.
+      // encodeCase() emits the block as ONE line, so the first line is the code and
+      // anything under it is somebody's own text — a signature, a date, a "paid today".
+      // Folding that in used to corrupt the payload and throw, and the error then told
+      // the user to "paste the whole note, including the line at the very bottom", which
+      // is exactly what they had just done: the durable copy became unopenable with no
+      // way out. But a note that has been hard-wrapped in transit needs the opposite
+      // treatment — every line joined. Try the strict reading first, then the forgiving
+      // one, so trailing text is ignored without giving up on a wrapped block.
+      var tries = [tail.split('\n')[0], tail], o = null, err = null;
+      for (var t = 0; t < tries.length; t++){
+        try {
+          var cand = b64dec(tries[t].replace(/[^A-Za-z0-9+/=]/g, ''));
+          if (cand && cand.v === 1){ o = cand; break; }
+        } catch(e){ err = e; }
+      }
+      if (!o) throw err || new Error('unrecognised case code');
       // Rebuild labels from the current step catalogue; a code carries ids, not text.
       var all = {}; ALLSTEPS.forEach(function(s){ all[s.id] = s; });
       return {
@@ -422,9 +441,21 @@
     // case; anything else gets the generic checklist, and says so on the card and in the note.
     function promptNewCase(){
       var tailored = cfg.walkComplete();
-      // Two dialogs in sequence: warn about the generic checklist (only when it applies),
-      // then ask for the reference. Chained so the second waits for the first.
-      var gate = tailored ? Promise.resolve(true) : askConfirm({
+      // Two dialogs in sequence: say what the checklist will be built FROM, then ask for
+      // the reference. Chained so the second waits for the first.
+      //
+      // Both branches warn, and the tailored one is the dangerous branch. "New case" reads
+      // whatever answers are still loaded on the Walkthrough tab — so finishing the
+      // walkthrough for client A and then opening a New case for client B produced B's
+      // case carrying A's pruned steps, with no "generic" pill and nothing on screen
+      // saying so. It then went into B's Double note and read as fact. Silence was the
+      // bug: the answers are invisible from this tab, so the tool has to name them.
+      var gate = tailored ? askConfirm({
+        title: 'Build this case from the walkthrough on screen?',
+        body: '<p>The <b>Walkthrough</b> tab is fully answered, so this case will be pruned to <b>those</b> answers.</p>'
+            + '<p style="color:var(--muted);font-size:13.5px">That is right if they describe this client. If they belong to <b>someone else</b> — you filled the walkthrough in for another client earlier — cancel, press <b>“Start over”</b> on the Walkthrough tab and answer it for this one, or the checklist will be the wrong one under the right name.</p>',
+        ok: 'Yes — use those answers', cancel: 'Cancel'
+      }) : askConfirm({
         title: 'This case will not be tailored',
         body: '<p>The walkthrough has not been completed, so this case will use the <b>generic checklist</b> — not one pruned to a particular client.</p>'
             + '<p>For a tailored checklist, cancel, finish the <b>Walkthrough</b> tab, and press “Track this as a case” on the preparation sheet.</p>',
@@ -666,8 +697,19 @@
           ok: 'Trim the log', cancel: 'Cancel', danger: true
         }).then(function(go){
           if (!go) return;
+          // With 12 or fewer entries there is nothing to drop, and pushing the "N trimmed"
+          // marker anyway made an already-too-long note LONGER — while telling the user
+          // their problem had been dealt with. The length is coming from the step notes
+          // instead, so say that: it is the only thing they can actually shorten.
           var dropped = Math.max(0, c.log.length - 12);
-          c.log = c.log.slice(-12);
+          if (!dropped){
+            sayNote({ title: 'The log is already short',
+              body: '<p>There are only ' + c.log.length + ' log entries, so trimming them frees nothing.</p>'
+                  + '<p>The length is coming from the <b>per-step notes</b>. Shorten the longest of those, or paste this into Double in two parts — <b>Part 1</b> and <b>Part 2</b> — keeping the block at the very bottom of the last one.</p>' });
+            return;
+          }
+          // Keep 11 and add the marker: the result is the 12 entries the button promises.
+          c.log = c.log.slice(-11);
           c.log.push({ t: nowStamp(), x: dropped + ' older log entries trimmed so the note fits Double.' });
           touch(c); renderOne(); showNote(c);
         });

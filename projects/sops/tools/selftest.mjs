@@ -145,6 +145,26 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   ok(label + ' the code carries ids and state only, never the answers',
      Object.keys(payload).sort().join(',') === 'cr,g,l,r,s,up,v');
 
+  // What a note looks like after a human has had it in Double for three weeks. Trailing
+  // text used to be folded into the payload and throw — and the error then told the user
+  // to "paste the whole note, including the line at the very bottom", which is exactly
+  // what they had done, so the durable copy became unopenable.
+  {
+    const note = t.caseNoteText(c);
+    const want = (x) => x && x.ref === c.ref && x.steps.length === c.steps.length && x.steps[0].done;
+    const tryDec = (s) => { try { return t.decodeCase(s); } catch (e){ return null; } };
+    ok(label + ' a note with text typed under the block still opens',
+       want(tryDec(note + '\nPaid the county today — JA')));
+    ok(label + ' several trailing lines are ignored',
+       want(tryDec(note + '\n\nnotes below\nand another line')));
+    ok(label + ' an appended second block opens (the newest one wins)',
+       want(tryDec(note + '\n\n' + note)));
+    ok(label + ' a hard-wrapped block still opens',
+       want(tryDec(note.replace(/(.{60})/g, '$1\n'))));
+    ok(label + ' pasting only the code line works',
+       want(tryDec(note.split('\n').pop())));
+  }
+
   // The note is the thing that has to fit in Double.
   ok(label + ' a fresh case note is well under the Double limit',
      t.caseNoteText(noLink).length < JKCase.NOTE_LIMIT,

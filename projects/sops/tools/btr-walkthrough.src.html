@@ -584,7 +584,12 @@ function buildSheet(){
   if (A.sunbiz === 'no') also.push('<b>Sunbiz</b> — register the entity'+(A.dba==='yes'?' and the Fictitious Name (§ 865.09)':'')+'. Nothing else can proceed until this exists.');
   else if (A.dba === 'yes') also.push('<b>Fictitious Name (DBA)</b> — confirm the Sunbiz registration is current, not lapsed.');
   if (A.ein === 'no') also.push('<b>Federal EIN</b> — obtain one from the IRS. It keeps the owner’s SSN off the city application.');
-  if (A.salestax === 'yes') also.push('<b>FL sales &amp; use tax</b> — register with the Department of Revenue on <b>Form DR-1</b>'+((workers>=1)?', and add <b>Reemployment Tax</b> since there are employees':'')+'.');
+  // The worker count includes the OWNER, so it cannot tell us whether there are employees:
+  // a sole proprietor answering "1" is not their own employee and owes no Reemployment
+  // Tax, while a corporation's owner-employee does. Asserting it from the number told a
+  // one-person business to register for an ongoing RT-6 obligation it does not have.
+  // State the test instead of guessing the answer.
+  if (A.salestax === 'yes') also.push('<b>FL sales &amp; use tax</b> — register with the Department of Revenue on <b>Form DR-1</b>. Add <b>Reemployment Tax</b> <em>if the business actually has employees</em> — a corporation’s owner-employee counts, a sole proprietor is not their own employee.');
   if (A.tpp === 'yes') also.push('<b>Tangible personal property</b> — a <b>DR-405</b> return is due to the Broward County Property Appraiser by <b>April 1</b>.');
   if (A.tpp === 'unknown') also.push('<b>Tangible personal property</b> — establish whether it reaches $25,000 <b>before April 1</b>; above that a DR-405 is due and the deadline does not move.');
   if (regulated(A)) also.push('<b>'+reg[0]+'</b> — '+reg[1]);
@@ -684,7 +689,7 @@ function buildSteps(a){
   add('filed','after','Receipts and payment confirmations filed in the client’s systems','Drive or Double — never the repo.');
 
   /* --- also --- */
-  if (a.salestax === 'yes') add('dr1','also','FL sales & use tax registered — Form DR-1','Add Reemployment Tax if there are employees.');
+  if (a.salestax === 'yes') add('dr1','also','FL sales & use tax registered — Form DR-1','Add Reemployment Tax only if the business actually has employees — a corporation’s owner-employee counts, a sole proprietor is not their own employee.');
   if (a.tpp === 'yes') add('dr405','also','Tangible property return (DR-405) calendared for April 1','Property worth $25,000 or more.');
   if (a.tpp === 'unknown') add('tppcheck','also','Tangible property value established before April 1','Above $25,000 a DR-405 is due and the deadline does not move.');
   if (isReg) add('proflic','also','State licence current and matching the filing','The regulator is named on the preparation sheet.');

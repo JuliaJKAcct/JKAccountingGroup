@@ -2581,3 +2581,20 @@ console.error(`Hub built: ${sopCount} procedures + ${clientCount} clients = ${to
 console.error(`standalone → ${outStandalone} (${(html.length/1024).toFixed(0)}KB)`);
 console.error(`fragment   → ${outFrag} (${(fragment.length/1024).toFixed(0)}KB)`);
 console.error(`assets     → ${assetCheck.embedded} binaries embedded once, used in ${assetCheck.sites} places — 16MB is the Artifact ceiling`);
+
+// Say how close we are to that ceiling, every build. The Hub only grows — each embedded
+// tool re-inlines its own font payload inside its iframe, and a strict CSP forbids
+// sharing them across iframes, so a new tool costs ~0.9MB and there is no dedupe to do.
+// Without this line the ceiling is discovered at PUBLISH time, with the work already
+// finished and nothing staged to cut.
+const CEILING = 16 * 1024 * 1024;
+const biggest = Math.max(html.length, fragment.length);
+const pct = (biggest / CEILING) * 100;
+if (biggest > CEILING) {
+  console.error(`✗ OVER THE 16MB ARTIFACT CEILING (${pct.toFixed(0)}%) — this will not publish. Drop or shrink an embedded tool.`);
+  process.exitCode = 1;
+} else if (pct >= 70) {
+  console.error(`⚠ ${pct.toFixed(0)}% of the 16MB Artifact ceiling — roughly ${Math.floor((CEILING - biggest) / (0.95 * 1024 * 1024))} more embedded tool(s) of the current size will fit.`);
+} else {
+  console.error(`size       → ${pct.toFixed(0)}% of the 16MB Artifact ceiling`);
+}
