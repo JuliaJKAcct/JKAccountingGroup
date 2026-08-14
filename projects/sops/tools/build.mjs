@@ -18,10 +18,12 @@
  * Outputs are fully self-contained (fonts + logo inlined as data URIs, zero
  * external requests), so they work offline, in Google Drive, and when printed.
  *
- * Run `node projects/sops/tools/selftest.mjs` after building — it checks the
- * engine's round-trip, the step-label coverage and the built files themselves.
+ * The self-test runs automatically at the end of this build (round-trip, step-label
+ * coverage, the pruning branches, the built files) and a failure exits non-zero, so
+ * `node build.mjs` is the only command anyone needs to remember.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -73,3 +75,18 @@ for (const t of TOOLS) {
 }
 
 if (failed) process.exit(1);
+
+// Run the self-test as part of the build, not beside it.
+//
+// checkCoverage() was moved off page load because it is a build-time assertion — but
+// nothing actually ran it: no CI, and neither builder called selftest.mjs. So a step
+// added without a seed shape shipped in silence and came back as a bare id in the wrong
+// phase when someone reopened the case, which is then re-pasted into the client's Double
+// note. An assertion nobody invokes is not an assertion, and case-core.js was claiming
+// otherwise in a comment. `node build.mjs` is the one command anyone runs, so this is
+// where the gate belongs.
+const { status } = spawnSync(process.execPath, [resolve(here, 'selftest.mjs')], { stdio: 'inherit' });
+if (status !== 0) {
+  console.error('\n✗ build produced the files, but the self-test failed — do not ship these.');
+  process.exit(1);
+}

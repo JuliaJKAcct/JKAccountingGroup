@@ -507,7 +507,20 @@ function buildSheet(){
   h += '</div>';
 
   /* --- county --- */
-  h += sec('① Broward County — BTExpress');
+  var haveCounty = A.existing === 'county' || A.existing === 'both';
+  h += sec(haveCounty && !renewal ? '① Broward County — already held'
+         : renewal ? '① Broward County — renewal'
+         : '① Broward County — BTExpress');
+  if (haveCounty && !renewal){
+    // Nothing to apply for. Printing the whole submission sequence here contradicted the
+    // checklist built from the same answers, and told the team to refile something the
+    // client already has.
+    h += '<div class="flag ok"><span class="fl">This half is done — confirm it, do not refile</span>'
+      + 'The county receipt is already held, so <b>there is no BTExpress application to make</b>. What the city needs from it is an <b>active county account</b>: open it at <span class="typein">broward.county-taxes.com</span>, confirm it is current rather than assuming, and carry the account number to the city application. If it has lapsed, renew it there — still not a new application.</div>';
+    h += '<p style="margin-top:14px;font-size:13.5px;color:var(--muted)">The screen-by-screen BTExpress walk is on the <b>Reference</b> tab if you need it for a second location.</p>';
+  } else if (renewal){
+    h += '<div class="flag info"><span class="fl">A renewal, not a new application</span>Both receipts are held, so the county side is a <b>renewal of the existing account</b> — pay the balance for the new tax year and print the receipt. Do not start a fresh BTExpress application; it would duplicate the account.</div>';
+  } else {
   h += '<p>Apply at <span class="typein">broward.county-taxes.com/btexpress</span>. County first: the city application <b>requires an active county account</b>.</p>';
   h += '<p style="margin-top:14px"><b>The answers this business gives on the way through:</b></p><dl class="kv">';
   h += '<dt>Screen 2 — DBA</dt><dd>'+(A.dba==='yes'
@@ -525,6 +538,7 @@ function buildSheet(){
     + '<b>1.</b> “Confirmation Required for Submitted BTExpress™ Application” arrives immediately, from <span class="typein">no-reply@grantstreet.com</span>. It carries a <b>link you must click</b> — the application is not sent for processing until you do. <b>2.</b> ~24–48 h later, “Your BTExpress™ Application” is the <b>approval, and the instruction to pay</b>.</div>';
   h += '<div class="flag err"><span class="fl">Where that second email hides</span>It can land in Gmail’s <b>“Updates” tab</b> rather than Primary — which is exactly how a filing gets abandoned one step from done. If it has not appeared a few days after confirming, search <span class="typein">from:no-reply@grantstreet.com</span> across all tabs.</div>';
   h += '<p style="margin-top:14px">Pay the county balance, then use <b>“Print Business Tax Receipt”</b>. Status and payment: <span class="typein">broward.county-taxes.com</span> · <b>954-357-4829</b>.</p>';
+  }
   h += '</div>';
 
   /* --- city --- */
@@ -532,6 +546,12 @@ function buildSheet(){
   if (!hollywood){
     h += '<div class="flag warn"><span class="fl">Read this as a template, not as facts</span>The business is not in Hollywood, so the screens, the classifications and the amounts below belong to a different city. Keep the <b>sequence</b> — apply, pay, respond to review, receive — and get that city’s own application and fee schedule.</div>';
   }
+  var haveCity = A.existing === 'city' || A.existing === 'both';
+  if (haveCity && !renewal){
+    h += '<div class="flag ok"><span class="fl">This half is held — confirm it, do not refile</span>'
+      + 'The city receipt is already in place, so <b>there is no new application and no $25 fee</b>. Check it has <b>not expired</b> (every receipt dies on <b>Sept 30</b>) and that the <b>classification still matches</b> what the business actually does — a business that has changed activity is the case the city re-categorises and bills a difference for. <b>The outstanding half is the county.</b></div>';
+    h += '<p style="margin-top:14px;font-size:13.5px;color:var(--muted)">The screen-by-screen LBTR walk and the fee table are on the <b>Reference</b> tab.</p>';
+  } else {
   h += '<p>Apply at <span class="typein">apps.hollywoodfl.org/LbtrOnline/</span>'+(renewal?' — or the <b>renewals</b> page, <span class="typein">apps.hollywoodfl.org/LBTRrenewals/</span>':'')+'. The site looks the parcel up first: the <b>Site Address and Folio Number auto-fill</b> from the address you enter.</p>';
   h += '<p style="margin-top:14px"><b>You need in hand:</b></p><ul class="tick">'
     + '<li>The <b>active county account</b> from step ①.</li>'
@@ -546,6 +566,7 @@ function buildSheet(){
   h += '<div class="flag info"><span class="fl">Screen 2 — the two fields that matter to us</span><b>Homebased?</b> → <b>'+(homeBased(A)?'Yes':'No')+'</b>. <b>ID Type</b> → '+(A.ein==='yes'?'<b>Federal EIN</b>':'<b>the owner’s Social Security number</b>, since there is no EIN — worth obtaining one to keep the SSN off the filing')+'. And the email fields take the <b>firm’s</b> address, both of them.</div>';
   h += '<div class="flag warn"><span class="fl">Screen 3 — what you are signing</span>The certification says the receipt <b>does not</b> mean the City has determined the use of the location is lawful, and does not legalise the business if it is contrary to any local, state or federal law. Read it rather than clicking through it — it is the reason the zoning gate comes first.</div>';
   h += '<p style="margin-top:14px">Then <b>Make a Payment</b>: $25 + the classification tax, by card <b>through PayPal</b>. The receipt for that is a PayPal <b>“Order Confirmation”</b> email — save it with the file.</p>';
+  }
   h += '</div>';
 
   /* --- money --- */
