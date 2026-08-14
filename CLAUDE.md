@@ -252,12 +252,11 @@ in that folder.
   working documents are still asked for by name); **where two records disagree, show the client
   both, then ask** (recite what they told us · name each record · ask openly · then narrow, one
   question per block); **when several small
-  anomalies move together, question the frame, not just the pieces**; and — the newest, and the one a session
-  reaches for most often — **ask the record before you infer, and read related records as a set**: the firm's
-  **Double custom properties are maintained client by client** and `Tax Return Type` names the form each one
-  actually files, so a guess from emails or a company's legal form is not evidence when a maintained field is
-  one call away. **The form sits on whoever FILES it**, so a company that files nothing correctly carries none —
-  read the owner's record before calling an empty field a gap. The purpose behind all of it is
+  anomalies move together, question the frame, not just the pieces**; and — the newest — **ask the record
+  before you infer, and read related records as a set**: the firm maintains Double's custom properties
+  client by client (Lilian's own word for them is **"bastante correctas"** — fairly correct, not guaranteed),
+  so a maintained field beats a guess from prose, and **an empty field may be corroboration rather than a
+  gap — but never a conclusion on its own.** The purpose behind all of it is
   [`projects/pre-return-review/README.md`](./projects/pre-return-review/README.md).
 - **Client data is sensitive.** Reports and anything with client-specific
   figures are committed/pushed only when the user explicitly asks. Client watchlists,

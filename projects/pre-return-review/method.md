@@ -94,6 +94,10 @@ prerequisite rather than a parallel task.
 **The general form:** *what does being this kind of client necessarily produce?* Then check
 whether it is here.
 
+⚠️ **Establish the structure before you derive from it — rule 10 comes first.** This rule is
+only as good as its premise, and the firm records the premise: guessing a client's structure
+and then deriving confidently from the guess produces a long, wrong list.
+
 _(Lilian, 2026-08-11: "por tanto, debía haber recibido un W-2 y un K-1. Supongo. Corrígeme si
 estoy equivocada." She was not wrong.)_
 
@@ -187,26 +191,36 @@ _(Lilian, 2026-08-11 — the catch a checklist never makes.)_
 
 **The firm keeps a structured answer to most "what is this client?" questions, and it is
 faster and better than reasoning from prose. Go there first.** In Double, the client's
-**custom properties** carry the shape of the engagement — `Account Type`, `Income Tax`, and
-above all **`Tax Return Type`, which names the form that client actually files.** Lilian
-maintained those column by column, client by client _(2026-08-13: "me tomé el trabajo de
-actualizarlas uno a uno, así que ahí dice el tax form que presentan cada uno")_. **A guess
-built from emails, folder names or a company's legal form is not evidence when a maintained
-field is one call away.**
+**custom properties** carry the shape of the engagement — and one of them names the form that
+client actually files. Lilian maintained them client by client and calls them **"bastante
+correctas" — fairly correct, not guaranteed** _(2026-08-13: "para cada cliente están bastante
+correctas. Me tomé el trabajo de actualizarlas uno a uno, así que ahí dice el tax form que
+presentan cada uno")_. That is the right weight to give them: **a maintained field beats a
+guess built from emails, folder names or a company's legal form — and it is still
+hand-kept data, so it is read, not obeyed.** _(Which columns, and what each value proves, is
+domain: the [`tax-season-readiness` skill](../../.claude/skills/tax-season-readiness/) §1b.)_
 
 **The second half is what makes it work: read the RELATED records together, not one at a
 time.** These clients come in groups — a person and their companies — and a fact recorded on
-one member is often the answer for another. **An absence on one record can be the answer
+one member is often the answer for another. **An absence on one record can be informative
 rather than a gap**, once you look at the record next to it.
 
-The worked example. **Aura Remodeling** carries `Account Type: Company`, `Income Tax: false`,
-and **no `Tax Return Type` at all**. Read alone that looks like missing data, and two separate
-sweeps filled the hole by inference — one concluding a two-owner LLC filing a partnership
-return, the other recording Schedule C activity on the owner. Both were written down, both
-contradicted each other, and the clash sat open for a fortnight. **Read as a pair it resolves
-immediately:** the owner, **Ihor Naum**, carries `Account Type: Individual`, `Income Tax:
-true`, **`Tax Return Type: 1040-SCH C`**. The company has no form because **it files nothing**;
-its activity is reported on his Schedule C. **The properties were right the whole time.**
+The worked example, de-identified. A remodeling company's record carries `Account Type:
+Company`, `Income Tax: false`, and **no return type at all**. Read alone that looks like
+missing data, and two separate sweeps filled the hole by inference — one concluding a
+two-owner LLC filing a partnership return, the other recording sole-proprietor activity on the
+owner. Both were written down, both contradicted each other, and the clash sat open for a
+fortnight. **Read as a pair it stops being a hole:** the owner's individual record carries a
+return type that reports exactly this kind of activity, so the company most likely files
+nothing of its own.
+
+⚠️ **But notice precisely how far that gets you — this is the part worth copying.** It did
+**not** settle the answer by itself: the owner's record was a **joint** one, and that couple
+files **more than one** such schedule, so the pair-read narrowed the field to a single
+question — *which activity is on it?* — that a human then answered. **The value was getting to
+the right question in two calls instead of inventing a return.** That is what reading the
+records as a set buys you, and claiming more than that is how the wrong version got written
+down twice.
 
 **The general form:** *is this already recorded somewhere maintained — on this record, or on
 the one it belongs to?* Ask that before constructing an answer. And when a field is empty,
@@ -215,9 +229,14 @@ ask **what its emptiness means for this kind of record** before calling it a gap
 **But read an absence only where the record is actually maintained**, and that has to be
 established, not assumed: on a client nobody has filled in yet, the same emptiness means
 "unknown", and the related record is usually just as empty — which is the same gap twice, not
-a confirmation. **The pair only resolves when the neighbouring record carries something that
-accounts for the absence.** Otherwise the absence is a question, and rule 1 applies to it like
-any other.
+a confirmation. **An absence is at most corroboration, never a conclusion**, and only when the
+neighbouring record carries something that accounts for it. Otherwise it is a question, and
+rule 1 applies to it like any other.
+
+**This runs BEFORE rule 5, not instead of it.** Read the maintained record first, then derive
+what the structure requires (rule 5). Taken in that order they compound: the record tells you
+what the client *is*, and rule 5 tells you what must therefore exist. Taken in the wrong order
+you reason your way to a structure that a field would have told you outright.
 
 ⚠️ **The corollary, because it is what actually went wrong:** an inference and a maintained
 field can coexist in the repo for weeks without anyone noticing, because **git merges
@@ -225,8 +244,10 @@ contradictory guidance without complaint**. Two files here even said in writing 
 the two readings had to be wrong — and that note alone changed nothing. **A contradiction
 someone has already written down is not a resolved contradiction; it is an open task.**
 
-_(Lilian, 2026-08-13, after settling the Aura structure and then telling the session where the
-answer had been all along. The property values above were verified live the same day.)_
+_(Lilian, 2026-08-13. She settled the structure herself, and then told the session where the
+records that pointed at it had been all along — which is why the rule claims corroboration
+rather than derivation. The property values were verified live the same day; the named case
+is on the two client files.)_
 
 ## How these grow
 

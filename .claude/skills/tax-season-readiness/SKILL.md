@@ -162,6 +162,7 @@ Consequences a session must not misread:
 | `Tax Return Type` = `Sch C` or `1040-SCH C` | ✅ **Sufficient** |
 | `Organizer Status` = `N/A (SCH-C)` | ✅ **Sufficient** |
 | `Income Tax` unchecked, on its own | ❌ **NOT sufficient — send to review** |
+| Company's `Tax Return Type` empty **and** the owner's individual record carries `1040-SCH C` / `Sch C` | 🟡 **Corroborating, not sufficient** — it narrows the field to one question: **which** activity sits on that Schedule C. An individual record can carry more than one, and a joint record can carry one per spouse. Confirm, then record it |
 
 **`Income Tax = false` does not mean Schedule C.** Read plainly it means *we don't do this
 client's income tax at all*, and §3 documents exactly that population (bookkeeping-only
@@ -170,49 +171,48 @@ covers two opposite situations, and guessing is dangerous in one direction: clas
 bookkeeping-only client as Sch C makes a session **silently drop a client that needs a return**,
 with no flag raised.
 
-✅ **BUT IT IS OFTEN DERIVABLE — READ THE OWNER'S RECORD, NOT JUST THE COMPANY'S.** _(Lilian,
-2026-08-13; property values verified live the same day.)_ **Lilian maintains these columns client
-by client**, so `Tax Return Type` names the form each client actually files — *"me tomé el trabajo
-de actualizarlas uno a uno"*. The catch is that **the form is recorded on whoever FILES it**, so a
-company that files nothing correctly carries none.
+✅ **BUT DON'T STOP AT THE COMPANY'S RECORD — READ THE OWNER'S NEXT TO IT.** _(Lilian, 2026-08-13;
+property values verified live the same day. The general form of the reasoning is
+[`method.md`](../../../projects/pre-return-review/method.md) rule 10.)_ Lilian maintained these
+columns client by client and calls them **"bastante correctas" — fairly correct, not guaranteed**
+(*"para cada cliente están bastante correctas. Me tomé el trabajo de actualizarlas uno a uno"*). So
+`Tax Return Type` is the firm's own answer to which form a client files and beats any guess from
+prose or a company's legal form — and it is **still hand-maintained data (§6), so it is read, not
+obeyed.** The structural half is what makes it useful: **the form is recorded on whoever FILES it**,
+so a company that files nothing correctly carries none.
 
-**Aura Remodeling** is the worked example, and it reads as missing data only until you look next
-to it:
+**Aura Remodeling** is the worked example:
 
 | | `Account Type` | `Income Tax` | `Tax Return Type` |
 |---|---|---|---|
-| **Aura Remodeling** (706679) | Company | `false` | **absent** |
-| **Ihor Naum**, its owner (710637) | Individual | `true` | **`1040-SCH C`** |
+| Aura Remodeling (706679) | Company | `false` | **absent** |
+| Its owner's individual record (710637) | Individual | `true` | **`1040-SCH C`** |
 
-**The absence on the company IS the answer** — it files nothing; its activity is reported on the
-owner's Schedule C. Two sweeps that read Aura alone filled the hole by inference instead, one
-concluding a partnership return, and the contradiction sat open for a fortnight while the answer
-was one call away on the linked record.
+Two sweeps that read Aura **alone** filled the hole by inference instead — one concluding a
+partnership return — and the contradiction sat open for a fortnight. Read as a pair, the owner's
+`1040-SCH C` **corroborates** the disregarded reading and leaves exactly one question to ask;
+**Lilian settled which activity sits on that Schedule C.** The properties are what get a session to
+the right question in two calls instead of inventing a return.
 
-**So when a company's two sufficient signals are absent: pull the OWNER'S properties before
-concluding anything, and treat an empty `Tax Return Type` on a company as a claim that the company
-does not file — to be confirmed, not as a data gap.** If the owner's record does not settle it
-either, then ask.
+🛑 **AN EMPTY `Tax Return Type` ON A COMPANY IS NOT EVIDENCE EITHER WAY ON ITS OWN**, and this is
+the direction that goes wrong quietly. It has three quite different meanings, and only the first is
+the Aura shape:
 
-🛑 **The confirmation is the whole rule — an empty field is only a claim when the column has been
-MAINTAINED for that client.** Lilian filled these in one by one, but *when* she got to a given
-client is not recorded anywhere, so the same emptiness that means "files nothing" on Aura means
-"nobody has filled this in yet" on a client onboarded last month. **Three cases must never be
-closed on the absence alone**, because each ends in the failure this report fears most —
-**silently dropping a client who owes a return**:
-> - the client is **new** and its properties have never been filled in (the owner's record will
->   usually be just as empty — that emptiness is not a second confirmation, it is the same gap
->   twice);
-> - the company has **no owner in Double** to read across to; or
-> - the owner's record is filled in but names a form that **cannot absorb the company's activity**
->   (a plain `1040` with no Schedule C, say).
->
-> In all three, the answer is **ask** — and the pair that *does* resolve is the specific shape
-> proved here: the company empty, and the owner carrying a form that accounts for it.
+| The client is… | What the empty field means | What to do |
+|---|---|---|
+| A company whose **owner's record names a form that plausibly absorbs its activity** | **Corroborates** that it files nothing of its own | Confirm **which** activity — then record it on the client file |
+| **Bookkeeping-only / `Income Tax = false`** (§3) | Only that **we** do not prepare the return. **The company may still file one, prepared by someone else** | ❌ row above governs — **send to review.** Never resolve to "no return" |
+| **New, with properties not yet filled in** (§6.1 test 5, §7) | Nothing at all. The owner's record is usually just as empty — that is **the same gap twice, not a second confirmation** | **Ask** |
+
+Two more cases fall to the ❌ row: a company with **no owner record in Double** to read across to,
+and an owner whose form **cannot absorb** the company's activity (a plain `1040` with no Schedule
+C). And `Account Type` itself is **occasionally empty** (§7) — these columns are not uniformly
+populated, which is the whole reason absence cannot carry an assertion.
 
 ⚠️ **And there is a second lesson in the same example, learned the hard way on 2026-08-13 — it is
-about PROPAGATION, not about asking.** The paragraph above was written on **2026-08-06**. For the
-next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
+about PROPAGATION, not about asking.** The `Income Tax = false` warning above was written on
+**2026-08-06**, and even then it recorded that both sufficient signals were absent for this client.
+For the next week the two client files went on saying the opposite: `aura-remodeling.md` inferred a
 **two-owner LLC filing a partnership return**, `ihor-naum-olha-levchuk.md` recorded Schedule C
 activity, and **both files carried an explicit note that one reading had to be wrong** — because a
 partnership return reaches the 1040 by K-1 and a Schedule C does not. Nobody reconciled them, and

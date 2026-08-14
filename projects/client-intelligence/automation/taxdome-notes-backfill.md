@@ -440,10 +440,12 @@ of its own**, so *all* of its tax work belongs on the **individual's** file. **T
 "ask when you cannot tell" earned its keep here** — and it produced more than a routing decision. It
 **struck a wrong inference** (Aura's file had guessed a two-owner LLC filing a partnership return),
 **closed a conflict open since 2026-07-30**, and established the standing fact that **the firm will never have
-a tax-preparation engagement for Aura**. The lesson is now a worked example in the
-[`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill, because Aura carries
-neither of that skill's two "sufficient" Schedule-C signals — proving absence of the marker is not
-evidence either way.
+a tax-preparation engagement for Aura**. The general lesson is now
+[`method.md`](../../pre-return-review/method.md) **rule 10** — *ask the record before you infer, and
+read related records as a set* — with the domain half in the
+[`tax-season-readiness`](../../../.claude/skills/tax-season-readiness/) skill §1b, because Aura
+carries neither of that skill's two "sufficient" Schedule-C signals: **an absent marker is not
+evidence either way on its own.**
 
 **The iCloud source is now fully processed** — every client folder in Lilian's `1-JK Accounting`
 that carried content is written up. **Magnum 152 has a folder but no note content** in the material
