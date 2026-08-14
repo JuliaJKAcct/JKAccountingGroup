@@ -530,6 +530,15 @@ for label, flush in (
     # only re-running until it stops changing clears it. This is the case that
     # makes the loop load-bearing rather than decorative.
     ("run longer than the bound", "/gX1-" + "1" * 30),
+    # LAYOUT PADDING, which is the normal case and not the exception. pypdf's
+    # layout mode pads between form boxes — 4 to 20+ spaces at ordinary column
+    # pitches — so a boxed SSN arrives spread out. A tight gap bound reached
+    # none of it and published the last four beside the name.
+    ("boxed SSN, 3-space gap", "/gX1   123   45   6789  DENYSFAKE TESTNAME"),
+    ("boxed SSN, 6-space gap", "/gX1      123      45      6789"),
+    ("boxed SSN, 12-space gap", "/gX1            123            45            6789"),
+    # `/` is the US date separator, and DOB_CONTEXT's own class already has it.
+    ("DOB with slash separator", "Date of birth /gX104/17/1982 spouse"),
 ):
     out, c = redact(flush)
     leftover = re.sub(r"\D", "", out.replace("[GLYPH]", "").replace("[SSN-", "").replace("[ACCT-", ""))
@@ -564,6 +573,25 @@ for figures in (
     out, c = redact(figures)
     if c["glyph"]:
         FAILURES.append(f"GLYPH · FALSE POSITIVE swallowed real figures: {figures!r}")
+
+# THE COMMA IS WHAT STOPS THE RUN, and that is the property that keeps a
+# formatted table safe next to a masked token. Pin it: with a [GLYPH] present,
+# the run must stop at the comma instead of eating the whole table.
+out, _ = redact("/gX1 148,392 185,673 22,100 on line 8")
+for figure in ("392", "185,673", "22,100", "line 8"):
+    if figure not in out:
+        FAILURES.append(
+            f"GLYPH · the adjacency run crossed a comma and ate {figure!r} — a formatted "
+            "table beside a masked token is supposed to survive"
+        )
+
+# The token BODY must be Unicode too, not just its first letter. A font naming
+# glyphs `/gд49` has a Cyrillic body, and an ASCII-only body class stops at the
+# `д` — leaving the code points in the file. (Earlier probes varied only the
+# prefix, so this was untested.)
+_, c = redact("".join(f"/gд{ord(ch)}" for ch in "123-45-6789"))
+if c["glyph"] < 5:
+    FAILURES.append("GLYPH · a token with a non-ASCII BODY was not masked")
 
 # Ordinary return text must be left ALONE. A false positive costs a mangled
 # token rather than a refused document now, but it still costs something.

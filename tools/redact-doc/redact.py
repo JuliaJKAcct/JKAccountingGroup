@@ -168,9 +168,17 @@ GLYPH_TOKEN = re.compile(r"/[^\W\d_][\w.]{0,40}")
 # so a formatted table (`6,753.00 788.00`) is safe by construction. An
 # unformatted run adjacent to a glyph is over-masked, which is the correct way
 # to fail.
+#
+# ⚠️ THE GAP BOUND IS 20, NOT 2, AND THE SLASH IS IN THE CLASS. Both were found
+#    the same way: `extraction_mode="layout"` PADS between form boxes — 4 to 20+
+#    spaces at ordinary column pitches — so a boxed SSN arrives as
+#    `[GLYPH]   45   6789`, and a two-character gap reached none of it. Boxed
+#    fields are padded BY CONSTRUCTION; the tight-set case this rule was written
+#    for is the rarer one. And `/` is the US date separator, so without it a
+#    date of birth published its day and year.
 GLYPH_ADJACENT = re.compile(
-    r"\[GLYPH\][-.\s]{0,2}\d[\d\s.\-]*"
-    r"|\d[\d\s.\-]*[-.\s]{0,2}(?=\[GLYPH\])"
+    r"\[GLYPH\][-./\s]{0,20}\d[\d\s./\-]*"
+    r"|\d[\d\s./\-]*[-./\s]{0,20}(?=\[GLYPH\])"
 )
 
 # The one case still worth REFUSING rather than masking: a document that is
