@@ -153,9 +153,43 @@ for (const [label, file] of [['ITIN', 'itin-w7-walkthrough.src.html'],
   // Two tools must never share a storage key or a code tag, or one would read the
   // other's cases back as its own and rebuild every label from the wrong catalogue.
   ok(label + ' declares a storage key and a code tag', !!tool.cfg.storageKey && !!tool.cfg.codeTag);
-  globalThis.__seen = globalThis.__seen || {};
-  ok(label + ' storage key is unique across tools', !globalThis.__seen[tool.cfg.storageKey]);
-  globalThis.__seen[tool.cfg.storageKey] = 1;
+  globalThis.__seen = globalThis.__seen || { key: {}, tag: {} };
+  ok(label + ' storage key is unique across tools', !globalThis.__seen.key[tool.cfg.storageKey]);
+  // A shared code tag is the subtler half: one tool would happily decode the other's
+  // pasted note and rebuild every step label from the wrong catalogue.
+  ok(label + ' code tag is unique across tools', !globalThis.__seen.tag[tool.cfg.codeTag]);
+  globalThis.__seen.key[tool.cfg.storageKey] = 1;
+  globalThis.__seen.tag[tool.cfg.codeTag] = 1;
+
+  // A step id must always carry the SAME title and description, whatever the answers.
+  // A saved case stores ids, not text, so on reopen the catalogue supplies whichever
+  // variant was generated first — and a step whose wording depends on the answers comes
+  // back stating the wrong thing (the wrong regulator, the wrong URL) on the one screen
+  // someone works from, which is then re-pasted into the client's Double note.
+  // Ids are checked by the engine's own sweep; this checks the TEXT behind them.
+  {
+    const V = tool.cfg.sweepValues || {}, ks = Object.keys(V);
+    const first = {}, clash = [];
+    const mix = (i, j) => {
+      let x = Math.imul(i + 1, 0x9E3779B1) ^ Math.imul(j + 1, 0x85EBCA77);
+      x ^= x >>> 15; x = Math.imul(x, 0x2C1B3C6D);
+      x ^= x >>> 12; x = Math.imul(x, 0x297A2D39);
+      x ^= x >>> 15; return x >>> 0;
+    };
+    for (let i = 0; i < 5000 && ks.length; i++){
+      const a = {};
+      ks.forEach((k, j) => { a[k] = V[k][mix(i, j) % V[k].length]; });
+      for (const s of tool.buildSteps(a)){
+        const text = s.t + ' ' + s.d;
+        if (first[s.id] === undefined) first[s.id] = text;
+        else if (first[s.id] !== text && clash.indexOf(s.id) === -1) clash.push(s.id);
+      }
+    }
+    ok(label + ' every step id has ONE wording, whatever the answers',
+       clash.length === 0,
+       clash.length ? 'answer-dependent wording on: ' + clash.join(', ')
+                      + ' — a reopened case would show the wrong variant' : '');
+  }
 }
 
 /* ------------------------------------------------------------ doubleLink -- */

@@ -173,6 +173,23 @@
   var NOTE_LIMIT = 7000;
   var LOG_KEEP = 40;       // entries carried in the code; the readable list shows the last 12
 
+  // Deterministic per-(iteration, field) mixer for the step-coverage sweep below.
+  // It must be a hash, not a stride: ANY plain function of the counter alone leaves two
+  // fields with the same number of options permanently correlated, because both reduce to
+  // `i mod n`. The first version used `i >> (j % 8)`, which tied BTR's `premises` and
+  // `regulator` together — so a step gated on "home-based AND unregulated" would never
+  // have been generated, and would have shipped with no seed and no label. That is
+  // precisely the failure the sweep exists to catch, so it cannot be sampled lazily.
+  // No Math.random: the build has to be reproducible, and a flaky coverage check is worse
+  // than none — it would pass on the machine that ships and fail on the one that reviews.
+  function mix(i, j){
+    var x = Math.imul(i + 1, 0x9E3779B1) ^ Math.imul(j + 1, 0x85EBCA77);
+    x ^= x >>> 15; x = Math.imul(x, 0x2C1B3C6D);
+    x ^= x >>> 12; x = Math.imul(x, 0x297A2D39);
+    x ^= x >>> 15;
+    return x >>> 0;
+  }
+
   /* ======================================================================
      createTracker(cfg) — one tool's case tracker.
 
@@ -218,11 +235,9 @@
       var known = {}; ALLSTEPS.forEach(function(s){ known[s.id] = 1; });
       var missing = {}, V = cfg.sweepValues || {}, keys = Object.keys(V);
       if (!keys.length) return [];
-      for (var i = 0; i < 3000; i++){
+      for (var i = 0; i < 5000; i++){
         var a = {};
-        // Vary each field on its own stride so combinations actually differ rather than
-        // marching in lockstep — a lockstep sweep never pairs, say, pass=no with caa=yes.
-        keys.forEach(function(k, j){ a[k] = V[k][(i >> (j % 8)) % V[k].length]; });
+        keys.forEach(function(k, j){ a[k] = V[k][mix(i, j) % V[k].length]; });
         cfg.buildSteps(a).forEach(function(s){ if (!known[s.id]) missing[s.id] = 1; });
       }
       return Object.keys(missing);
@@ -796,7 +811,13 @@
         var openRef = openCase ? caseKey(openCase) : null;
         loadCases();
         openCase = openRef ? cases.filter(function(c){ return caseKey(c) === openRef; })[0] || null : null;
-        if (!$('cases').hidden) renderCases();
+        // Never redraw over the import panel. renderCases() hides #caseImport, so a note
+        // half-pasted into "Reopen a case" was silently thrown away the moment another tab
+        // ticked a step — the user watching THIS tab saw their textarea vanish with no
+        // explanation and nothing to undo. The store is already reloaded above; the badge
+        // is enough until they finish, and importing re-renders anyway.
+        var importing = !$('caseImport').hidden;
+        if (!$('cases').hidden && !importing) renderCases();
         paintBadge();
       });
       loadCases();

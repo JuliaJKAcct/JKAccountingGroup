@@ -167,7 +167,6 @@ var REG = {
 // A home occupation is one the owner actually lives at. Everything the zoning gate
 // turns on is this one distinction, so it is derived once and used everywhere.
 function homeBased(a){ return a.premises === 'home'; }
-function zoningBlocked(a){ return a.premises === 'resnolive' && a.planning !== 'permitted'; }
 function regulated(a){ return a.regulator && a.regulator !== 'none'; }
 
 var Q = [
@@ -627,8 +626,7 @@ var PHASES = [['intake','Intake & the zoning gate'],['prep','Documents to prepar
    steps that actually apply to that business. IDs are stable — a saved case stores
    ids, not labels, so the code stays small enough for a Double note. */
 function buildSteps(a){
-  var S = [], reg = REG[a.regulator] || REG.none, home = homeBased(a);
-  var renewal = a.existing === 'both';
+  var S = [], home = homeBased(a);
   var isReg = !!(a.regulator && a.regulator !== 'none');
   function add(id, ph, t, d){ S.push({id:id, ph:ph, t:t, d:d||''}); }
 
@@ -649,7 +647,14 @@ function buildSteps(a){
   add('entitypdf','prep','Entity proof saved as a PDF','Articles, or the Fictitious Name Registration from Sunbiz.');
   add('locpdf','prep','Proof of location saved as a PDF','PDF only, ≤ 10 MB. Lease, deed, tax bill, insurance certificate or utility bill.');
   if (a.sublet === 'yes') add('masterlease','prep','Master lease obtained alongside the sublease','The city may demand a document between sub-tenant and owner that does not exist — send both to show the chain.');
-  if (isReg) add('licpdf','prep','' + reg[0] + ' licence saved as a PDF','The name and address on it must match the application exactly.');
+  // Says it WITHOUT naming the agency, on purpose. A saved case stores step ids, not
+  // text, so on reopen decodeCase() rebuilds this line from the step catalogue — which
+  // holds whichever variant a seed shape happened to generate first. Baking "DBPR" into
+  // the title meant an OFR or Bar case came back naming the wrong regulator: a confident,
+  // wrong fact on the one screen someone works from, which is then re-pasted into the
+  // client's Double note. The agency is named on the preparation sheet, which is built
+  // live from the answers and cannot go stale. Same trap as the ITIN tool's `coadocs`.
+  if (isReg) add('licpdf','prep','State licence saved as a PDF','Whichever regulator the walkthrough identified — it is named on the preparation sheet. The name and address on the licence must match the application exactly.');
 
   /* --- county --- */
   add('ctyapply','county','BTExpress application submitted','broward.county-taxes.com/btexpress — county first; the city needs an active county account.');
@@ -659,7 +664,9 @@ function buildSteps(a){
   add('ctyprint','county','County Business Tax Receipt printed','Via “Print Business Tax Receipt”.');
 
   /* --- city --- */
-  add('cityapply','city','City LBTR application submitted',(renewal?'Through the renewals page.':'apps.hollywoodfl.org/LbtrOnline/ — the folio auto-fills from the address.'));
+  // Invariant for the same reason as licpdf: a renewal case reopened would otherwise come
+  // back showing the first-filing URL, because the catalogue keeps one variant per id.
+  add('cityapply','city','City LBTR application submitted','apps.hollywoodfl.org/LbtrOnline/ — or the LBTRrenewals page if this is a renewal. The folio auto-fills from the address.');
   add('cityuploads','city','Both city uploads accepted','Proof of location and entity proof. PDF only, ≤ 10 MB each.');
   add('citytrack','city','“Track Your Application” email kept, Application ID recorded','It is the only way to check status later. Put the ID in the client’s file.');
   add('citypay','city','City fee paid — $25 plus the classification tax','By card through PayPal. Keep the PayPal “Order Confirmation”.');
@@ -680,7 +687,7 @@ function buildSteps(a){
   if (a.salestax === 'yes') add('dr1','also','FL sales & use tax registered — Form DR-1','Add Reemployment Tax if there are employees.');
   if (a.tpp === 'yes') add('dr405','also','Tangible property return (DR-405) calendared for April 1','Property worth $25,000 or more.');
   if (a.tpp === 'unknown') add('tppcheck','also','Tangible property value established before April 1','Above $25,000 a DR-405 is due and the deadline does not move.');
-  if (isReg) add('proflic','also','' + reg[0] + ' licence current and matching the filing','');
+  if (isReg) add('proflic','also','State licence current and matching the filing','The regulator is named on the preparation sheet.');
   return S;
 }
 

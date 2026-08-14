@@ -698,9 +698,14 @@ function buildSteps(a){
   if (a.exc) add('boxh','form','Exception designation written beside box h','Number + alpha subsection + category.');
   add('lines','form','Lines 1a–6g completed','“N/A” on every section that does not apply — nothing left blank.');
   if (a.role==='b' || a.role==='a') add('l3','form','Line 3 — complete foreign address','No P.O. box, no c/o.');
-  if (a.role==='c' || a.role==='g' || (a.role==='d' && !carve)) add('l6d','form','Line 6d — date of entry into the U.S.','Blank here is the IRS’s error #9.');
+  // The description says what is true for EVERY reason that reaches this step. It used to
+  // differ between the reason-f branch below and this one, and a saved case stores step
+  // ids, not text — so on reopen decodeCase() rebuilt the line from whichever variant a
+  // seed shape generated first, and a reason-f case came back missing the "mandatory for
+  // reason f" half. Same trap as `coadocs`; the self-test now fails the build on it.
+  if (a.role==='c' || a.role==='g' || (a.role==='d' && !carve)) add('l6d','form','Line 6d — date of entry into the U.S.','Mandatory for reasons c, d, f and g. Blank here is the IRS’s error #9.');
   if (a.apptype==='renew') add('l6ef','form','Lines 6e / 6f — previous ITIN and the name it was issued under','');
-  if (a.role==='f') add('l6d','form','Line 6d — date of entry into the U.S.','Mandatory for reason f, and blank here is the IRS’s error #9.');
+  if (a.role==='f') add('l6d','form','Line 6d — date of entry into the U.S.','Mandatory for reasons c, d, f and g. Blank here is the IRS’s error #9.');
   if (a.role==='f') add('l6g','form','Line 6g — institution, city and state, length of stay','');
 
   if (a.pass==='yes'){
