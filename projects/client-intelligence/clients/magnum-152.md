@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -98,6 +98,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **Bank-feed handling rules:** do **not** match open JE balances for vendors with payments — always categorize; **TD Bank check images aren't attaching in QBO** — pull images from the bank and use the vendor to pick the account; the store **class** is confirmed at month-end from the admin's bills; Amex payments are booked as CC payments from TD Bank, then matched by most-recent payment/date.
 - **SaasAnt** is used for GL consolidation into QBO; **Bravo** for store POS/inventory; **ADP** for payroll (owner-run).
 - The owner's Double footprint spans **three** client records: Magnum 152, Sunoma (the sister pawn company), and a separate individual/personal record (not a bookkeeping engagement) — useful context for future owner-group sweeps.
+- **Two distinct Amex checking sub-accounts confirmed by task name** — "Amex Checking 2672" and "Amex Checking 2941," both reconciled as separate close-checklist line items. Corroborates (with concrete last-4s) the already-pending SOP-2026-07-25-07 candidate about expanding the single "Amex CC" bank-feed line. _(Double activity log, 2026-08-10)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -108,6 +109,15 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - 2026-07-25 — Incremental sweep: confirmed the July close cycle ran to completion (bank/card reconciliations, Bravo reports, JEs, vendor recon, performance report, ADP, reclass — all Done 2026-07-22→23). Softened the inventory-donation status (still open, not resolved — see below). Flagged an Amex bank-feed-count gap in the SOP as a proposal candidate.
 - 2026-08-01 — Weekly incremental sweep (baseline 2026-07-20 → 2026-08-01): Double activity log shows the **Jul-2026 monthly close checklist completed in Double** (per-account bank/CC tasks, uncategorized/duplicate-vendor checks, 1099 prep, financial reports) on 2026-07-23, and the **2025 Form 1120-S tax project moved to In Progress** with its Business Tax Organizer reverted to draft on 2026-07-31. Gmail surfaced a weekly ADP payroll cadence, a Comcast/FPL credential request to the administrative assistant, and a Davidsons (firearms/ammo distributor) vendor relationship. Ping had no legible Magnum-specific meeting content this period (org-wide semantic search returned only unrelated/garbled hits). _(Double, Gmail, Ping — 2026-08-01)_
 - 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log showed normal monthly-close task completions (bank feeds, Bravo JEs, reclasses, ADP reconciliation) through 2026-08-06, plus a **2025 Taxes project status toggle** (Not Started → In Progress by Lilian on 7/31, back to Not Started by Julia on 8/4) and a **"JK 2025 Business Tax Organizer - Magnum 152" reverted to draft** by Lilian on 7/31 — noted here as an observed status change only (Organizer Status property itself still reads "N/A (BK client)"). Gmail (via "US Pawn") surfaced vendor-account activity with two firearms distributors (see §5). No new Double notes. Ping had no legible new content for the client or the owner post-baseline. Drive folder link reconfirmed unchanged; a credentials spreadsheet in that folder surfaced an unsolicited content preview in the search results — none of it was used or copied anywhere (two-data-homes rule). QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log showed the routine
+  close continuing (Vendor Reconciliation, Performance Report vs QBO, Disbursement expenses,
+  Monthly Journal Entries, Bravo reports all Done Aug 10–11), including two named sub-tasks —
+  "Amex Checking 2672" and "Amex Checking 2941" — that corroborate the still-Pending
+  SOP-2026-07-25-07 proposal with concrete account identifiers (added to §5; not re-proposed,
+  since that proposal is already queued). Client properties re-confirmed unchanged. Gmail (via
+  "Magnum 152"/"US Pawn") surfaced only a routine weekly ADP payroll-due reminder (already-known
+  weekly cadence) and the firm's own SaasAnt subscription invoice (not a client fact). No new
+  Double notes. Ping had no legible new content for the client or the owner post-baseline.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Legal matter (resolved ~Jul 19–21):** owner requested TD Bank statements to trace wire transfers to an outside attorney's firm; JK located and delivered them. _(Gmail)_
