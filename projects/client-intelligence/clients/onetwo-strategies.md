@@ -1,11 +1,12 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
+> Double (client record, notes — none exist — contacts, properties), Google Drive (folder + file
+> listing) and the QuickBooks-connection flag all checked. Ping's org-wide search returned no
+> legible content scoped to this client. Home state, fiscal year-end and confirmation of the
+> business's actual activity are still `_(pending)_`.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,

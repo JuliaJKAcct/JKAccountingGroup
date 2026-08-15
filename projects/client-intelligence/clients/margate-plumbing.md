@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -93,6 +93,7 @@ Drive (§7) — never copied here.
 - **WF 8477 (the account already flagged as stuck in reconciliation) was closed by the owner in Jul 2026** after recurring unauthorized overcharges from a vendor; a **replacement Wells Fargo account was connected in QBO** and historical transactions for the closed account were manually uploaded — the bank-feed list above needs its last-4 updated once confirmed. _(Gmail, 2026-07-28)_
 - **Customer payments run through QuickBooks Payments (credit-card processing)**; a customer chargeback/dispute over a card payment escalated to **Intuit's formal Pre-Arbitration process** in late Jul 2026 (owner is contesting — services were rendered, payment held non-refundable). Adds a new dimension to the AR/reconciliation complexity already noted above. _(Gmail, 2026-07-21 to 2026-07-30)_
 - **QuickBooks Payments disputes:** the business accepts customer payments via QBO's built-in merchant processing, and payment disputes/chargebacks occur on that channel — the owner has had to submit dispute evidence to Intuit. If the owner doesn't want a given invoice paid via QBO's processing, the payment-options toggle on that invoice should be unchecked before sending. _(Gmail, 2026-07-21 — flagged as a possible SOP-proposal candidate, not yet queued — borderline collections/support process rather than a close step)_
+- **An "Intuit Loan" is a standing monthly reconciliation line item** on the close checklist (Double task "Intuit Loan," marked Done alongside the intercompany-loan review) — not previously documented; likely a QuickBooks Capital financing product. Confirm the loan's nature/terms with Maria next time it's convenient. _(Double activity log, 2026-08-13)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
