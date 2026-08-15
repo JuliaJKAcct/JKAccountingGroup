@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -97,10 +97,20 @@ never copied here.
   surfaced a Mercury account-number discrepancy (see "Information still needed") and Margate-side
   correspondence (WF 8477 reconnection, insurance audit dispute) that belongs to Margate's own
   file, not Beemold's. Ping had no indexed meetings for Beemold or the owner in this window.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log confirmed the routine
+  July close (Balance Sheet + P&L marked Done 2026-08-14) and the standing **intercompany-loan
+  review task, explicitly named "Loan to Margate Plumbing Inc"** in the close checklist, marked
+  Done 2026-08-13 — the first direct confirmation of that task's literal name (process itself was
+  already documented). No Double notes. Gmail (2026-08-14, "Margate/Beemold July 2026" thread):
+  Maria sent preliminary July reports to the owner and flagged two open items — WF account access
+  is still needed to download the statement for the new-account reconciliation (reinforces the
+  existing outstanding item), and a specific Beemold income line (dated 7/10) needs the owner to
+  identify what it is. Ping had no indexed meetings for Beemold or the owner in this window.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **QBO bank-feed reconnection** pending — resolve the Mercury + BoA connection so manual upload can stop. _(Maria's doc guide, Gmail)_
 - Owner requested an **accountant letter for a personal remortgage** — a personal / related-party ask, not a Beemold service. _(Gmail)_
+- **WF statement access still pending** for the new-account reconciliation, and **a specific Beemold income line (dated 7/10) needs owner identification** — both raised in the July 2026 preliminary-reports email. _(Gmail, 2026-08-14)_
 
 ### Information still needed
 - [ ] Confirm home state; fiscal year-end; what Beemold actually does (low activity)

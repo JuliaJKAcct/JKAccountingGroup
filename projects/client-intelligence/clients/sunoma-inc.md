@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -81,6 +81,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
+- **Organizer Status property:** "N/A (we have QBO access)" _(Double client properties, 2026-08-15)_ — the firm has direct QBO access, so no organizer is issued for this client.
 
 ### Licenses & other filings
 - _(pending)_
@@ -110,6 +111,12 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
   Gmail identified the outside attorney in the wire-transfer-tracing matter by name (Reizenstein
   And Associates) and showed routine Magnum-side correspondence that belongs to Magnum's own
   file. Ping had no indexed meetings for Sunoma or the owner in this window.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log showed **no entries**
+  for this client in the window (no close activity logged) and **no notes**. Client properties
+  confirmed the "Organizer Status" picker reads "N/A (we have QBO access)" (added to §4). Gmail
+  (business name + "Lucky Pawn"/"Auto Pawn") returned only the firm's own weekly CI-sweep email —
+  no Sunoma-specific correspondence this window. Ping had no indexed meetings for Sunoma or the
+  owner. No new material beyond the property confirmation.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Donated-inventory tax deduction** — pending (a) the charity's written donation receipt, (b) documentation of how FMV figures were derived, (c) the owner's completed item list/pickup; expected to resume "in a couple of weeks" per the 2026-07-23 message.

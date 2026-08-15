@@ -1,6 +1,6 @@
 # Ihor Naum & Olha Levchuk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,8 +28,8 @@
 
 - **Business name:** Ihor Naum & Olha Levchuk — an individual (joint) client record, not a company. The couple's companies have their own files (see §7 Related clients).
 - **Entity type:** Individual / sole proprietor — Form 1040 with Schedule C _(Double: Account Type = Individual, Tax Return Type = 1040-SCH C, 2026-07-30)_.
-- **Home state:** _(pending — conflicting signals: the related entities are Florida companies, but `aura-remodeling.md` infers Illinois from the owner's area code. Confirm from Double, since the IRS replies by mail.)_
-- **Industry / what they do:** Personal tax clients. Their business activity runs through the related entities in §7 (remodeling / construction). **The Schedule C is Aura Remodeling LLC** _(Lilian, 2026-08-13)_.
+- **Home state:** _(pending, but with new supporting evidence — not yet a full contradiction resolution.)_ The related entities are Florida companies, and `aura-remodeling.md` infers Illinois from the owner's area code. **New:** a 2024-02-17 email from Olha about the **2023** tax year states the year **"started in Chicago, ended in Florida"** and that she had two different 1099s and two different W-2 employers that year _(Gmail, "Re: 2023 Taxes - P&L Template", 2024-02-17)_ — this confirms a real Illinois connection (at minimum a 2023 part-year move IL→FL), not just an area-code inference, but does **not** by itself confirm the **current** mailing/home state. Still confirm from Double for the Form 8802 mailing address, since the IRS replies by mail.
+- **Industry / what they do:** Personal tax clients. Their business activity runs through the related entities in §7 (remodeling / construction). **The Schedule C is Aura Remodeling LLC** _(Lilian, 2026-08-13)_. Olha's separate 1099 Schedule C is for **physical-therapy / Pilates work** — she signs correspondence "PT, Cert. PPS Physical Therapist / Certified Pilates Practitioner" under the business name **"Best In Health"** _(Gmail signature, 2024-03-28)_.
 - **Primary language:** Ukrainian _(the couple's company correspondence is in Ukrainian; the firm also uses Russian — see `aura-remodeling.md`)_.
 - **Our engagement (services we provide):** Individual income tax only — Form 1040 with Schedule C — plus the one-off U.S. residency certification in §4. Bookkeeping N/A; no Form 1099 work; no annual report _(Double properties)_.
 - **Fiscal year-end:** December 31
@@ -106,6 +106,8 @@ A one-off filing, not a recurring obligation, but an **open matter** as of this 
 - **The couple files jointly** — the 2025 e-file authorization was signed by both spouses.
 - **The Form 6166 is personal, not corporate.** The certification was requested for Ihor Naum as an individual, not for any related company. The applicant of record is the person, so the IRS follow-up and any Form 2848 must be for the **individual** taxpayer — a company 2848 does not cover this application.
 - **Legacy TaxDome spelling.** TaxDome carries the first name as "Ihour Naum"; Double and the tax return use "Ihor Naum". Search both spellings when hunting for documents.
+- **A third related company: Megabai Florida Corp (now dissolved).** Beyond Aura Remodeling and Kolo Florida (§7), Ihor was also **Vice President of Operations (part-time)** at **Megabai Florida Corp**, with Mykola Kozlovskyi as Vice President of Finance _(Gmail, employment agreement thread, 2023-08-08; contract-title correction thread, 2023-08-11)_. Megabai Florida Corp **filed Articles of Dissolution with the state in Oct 2025** _(Gmail, "Megabai Documents", 2025-10-16)_ — it is no longer an active entity. **This means Ihor had W-2 income from Megabai** in addition to the Aura Schedule C in the years the company was active and paying him — relevant when reconciling prior-year income sources on this file. No Client Intelligence file exists for Megabai Florida Corp; given it is dissolved, a new file is likely not warranted, but the relationship is recorded here so prior-year W-2 income isn't mistaken for a missing source.
+- **The firm referred the couple to immigration counsel.** 2023-12-26: the firm introduced Ihor Naum & Olha Levchuk to an immigration attorney (Michelle Canero / Canero Fadul) for "migration assistance"; a consultation was scheduled and completed in early January 2024 _(Gmail, "Introduction to Ihor Naum & Olha Levchuk" thread, 2023-12-26 to 2024-01-04)_. No outcome or current status captured — this predates the Form 8802 U.S.-residency-certification matter in §4/§5, which is the more recent, actively-tracked immigration-adjacent item.
 
 ### How to check the status of the Form 8802 (the durable know-how)
 
@@ -138,6 +140,43 @@ Watch-outs that go with the above:
 - _(2026-07-30, Lilian)_ — File created. Researched how to obtain the status of a Form 8802 filed by fax and recorded the method in §5. Located and verified the filing evidence in Gmail / MyFax (Pay.gov confirmation + both fax confirmations, 2026-05-06). Confirmed the IRS contact number (267-941-1000, "U.S. residency" option) against three revisions of the Form 8802 instructions. Lilian sent the client, by WhatsApp, everything needed to prove the fax was sent with the complete documentation — the client will place the status call to the IRS themselves.
 - _(2026-07-30, Lilian)_ — Confirmed the application's scope: the certification was requested for Ukraine, tax years 2023 and 2024, in Ihor Naum's own name — not a company's.
 - _(2026-08-01)_ — Weekly incremental sweep (bounded to 2026-07-30 and later): no new Double notes/activity, no new Gmail threads, and no new Ping meetings/transcripts turned up for either name or the Form 8802 matter since the baseline. Located and confirmed the client's Google Drive vault folder (§7), closing that open item. Checked FOLLOW-UPS.md item #9 (a Double duplicate-individual-record issue) against this client — confirmed via `list_clients` there is only one Double record for this couple (id 710637), so that item is about a different client, not this one. Coverage-gap note (Ping/Drive full history, full Gmail history) left as-is per this run's scope.
+- _(2026-08-15, weekend sweep — full-historical catch-up, no date bound)_ — Ran the
+  one-time full-historical pass owed on this client (Ping full history, Google Drive
+  full search, Gmail full history — in:inbox and in:sent, no `after:` filter).
+  **Ping:** `resolve_person` and `search_contacts` for both "Ihor Naum" and "Olha
+  Levchuk" now resolve to a single Ping client record (`Ihor Naum & Olha Levchuk`,
+  email `olhalevchuk@gmail.com`) — a change from the 2026-08-01 sweep, which found no
+  match. A `search_meetings` call scoped to that Ping client ID returned **zero**
+  indexed/searchable meetings for this client. A follow-up **org-wide** semantic
+  search (no date bound, several query phrasings on Aura/Megabai/immigration/Form
+  8802) surfaced nothing relevant to this client — all hits were other clients or
+  unrelated fragments. **This closes the Ping coverage gap for this client**: there
+  is a Ping client record, but it has no searchable meeting content as of this sweep.
+  **Google Drive (full search, no date bound):** found the couple's Drive footprint
+  is larger than previously linked — besides the "Ihor Naum" folder already in §7,
+  there are at least three more legacy folders from before the TaxDome→Double
+  migration ("Ihor Naum" x2 more, "OLHA LEVCHUK & IHOR NAUM", "IHOR NAUM") under
+  different parent paths, plus Ihor's own W-2 PDFs and the signed 2024/2025 return
+  PDFs. Not consolidated into §7 individually (too many legacy paths to be useful as
+  links) — flagging that document search for this couple should check multiple
+  "Ihor Naum" folder names, not just the one linked in §7. **This closes the Drive
+  coverage gap** — full-history search has now been run; no `after:` bound was used.
+  **Gmail (full history, in:inbox + in:sent, no `after:` filter):** this is a
+  high-volume mailbox — most of the ~90 combined threads found are **Megabai Florida
+  Corp** and **Kolo Florida** company correspondence (bookkeeping, payroll, workers'-
+  comp exemptions, dissolution), which belongs on those companies' own files, not
+  here (routing rule) — only genuinely personal/individual-1040-relevant facts were
+  pulled into this file: the 2023 Illinois→Florida part-year evidence (§1), Olha's
+  PT/Pilates profession (§1), the Megabai W-2/VP-of-Operations relationship and its
+  Oct-2025 dissolution (§5), and the Dec-2023 immigration-counsel referral (§5). Also
+  reconfirmed the Form 8802 fax/Pay.gov evidence already on file (no new content
+  there). **This closes the Gmail full-history coverage gap.** **Double:** re-checked
+  `get_client`, `list_client_properties`, `list_notes` (still 0 notes — matches
+  prior), `list_contacts`, `list_activity_log` (22 entries, all file-management and
+  the 2025 tax-project status change already reflected in §4/§6) — no new facts
+  beyond what this file already had. **Repo:** re-checked `projects/sops/` (no SOP
+  for this client), `FOLLOW-UPS.md` (row #12, the Form 8802 matter, already tracked
+  — matches this file) and `BACKLOG.md` (no entries).
 - 2026-08-13 — **The Aura routing question, answered by Lilian.** ⓘ **Her message used the spelling *Igor*; this is IHOR NAUM.** Recorded because the roster also holds an unrelated **Igor Melomed**, who has his own migrated Schedule C note and **no connection to Aura anywhere in the repo** — and because this file already documents the spelling drift (TaxDome carries *"Ihour Naum"*). The routing rests on the note sitting in Ihor's own folder, on Ihor being a principal of Aura (§7), and on his Double record carrying `Tax Return Type = 1040-SCH C`. A migrated TaxDome note titled *"2024 Aura"* sat in this client's folder holding **vehicle mileage** for the year, and it was deliberately left unrouted because it could have belonged to either this file or [`aura-remodeling.md`](./aura-remodeling.md). **Lilian settled it: Aura is reported on Ihor's Schedule C, the company files nothing itself, and so all of its tax work lives here.** A second note from the same date carries **Olha's 1099 contractor Schedule C** — her mileage, expense categories and a 20% home-office claim. **Figures stay in Drive; the durable facts are in §4 and §5.** _(TaxDome notes, migrated — filed under Ihor Naum; notes dated 2025-04-08.)_ _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
@@ -156,12 +195,13 @@ Watch-outs that go with the above:
 - [x] ~~Which entity the Schedule C activity belongs to~~ ✅ **Answered 2026-08-13 (Lilian): AURA REMODELING LLC.** It is reported on Ihor's Schedule C and files no income-tax return of its own; the partnership inference on `aura-remodeling.md` was wrong and is gone.
 - [ ] Whether an extension (Form 4868) was filed for 2025 — the return was filed 2026-05-25, after the April 15 deadline.
 - [x] Google Drive folder link for this individual client — found (§7) _(Google Drive, 2026-08-01)_.
-- [ ] Confirm the ownership/officer roles in the related entities (§7) — currently inferred from correspondence and a Florida DWC exemption notice.
+- [x] Confirm the ownership/officer roles in the related entities (§7) — Ihor's role at **Megabai Florida Corp** confirmed as VP of Operations (part-time) via a 2023-08-08 employment-agreement email; Mykola Kozlovskyi was VP of Finance. Aura Remodeling and Kolo Florida roles were already established. Megabai dissolved Oct 2025 _(Gmail, 2026-08-15 sweep)_.
+- [ ] Whether the 2023 Illinois→Florida part-year move (new evidence, §1) affects any other open-year filing beyond 2023, and whether a current mailing address confirms Florida as the couple's present home state.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710637](https://app.doublehq.com/close?cid=710637)
 - **Double tax project (2025):** [2025 Taxes](https://app.doublehq.com/tax-return?cid=710637&projectId=219325)
 - **Google Drive folder (sensitive vault):** ["Ihor Naum"](https://drive.google.com/drive/folders/1PDwAHism2DEcSLojbg7gMy93BaZ85GrE) under `*QBO Clients and Individuals` — standard subfolders present (Notes, Completed organizers, Firm docs shared with client, Docs uploaded by client, Client uploaded documents) _(Google Drive, 2026-08-01)_.
-- **Related clients:** [`aura-remodeling.md`](./aura-remodeling.md) (the couple are its two principals), [`kolo-florida.md`](./kolo-florida.md) (Ihor holds a Florida workers'-comp Certificate of Election to be Exempt for it) — same owner group.
+- **Related clients:** [`aura-remodeling.md`](./aura-remodeling.md) (the couple are its two principals), [`kolo-florida.md`](./kolo-florida.md) (Ihor holds a Florida workers'-comp Certificate of Election to be Exempt for it) — same owner group. **Megabai Florida Corp** — a third related company (Ihor was VP of Operations, part-time; dissolved Oct 2025) has no Client Intelligence file; see §5 _(Gmail, 2026-08-15 sweep)_.
 - **Related SOPs:** none — Lilian decided (2026-07-30) that the Form 8802 process does not warrant its own SOP; the know-how lives in §5 of this file.
