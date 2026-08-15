@@ -1,11 +1,12 @@
 # Greenair International LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history,
+> back to 2025-09), Double (client record, notes — none exist — contacts, properties), Google
+> Drive (folder + file listing) and the QuickBooks-connection flag all checked. Ping's org-wide
+> search returned no legible content scoped to this client. What the business actually does, its
+> home state, and fiscal year-end remain `_(pending)_`.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -48,9 +49,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
-| Bookkeeping / day-to-day contact | Double client (link below) |
-| _(add roles as needed)_ | |
+| Owner / primary contact | Double client (link below) — full client-admin/tax/financial/files portal access. **Also the contact for `SETATECH USA, INC.`** (Double id 706706, archived 2026-07-22) and has a separate personal Double record (id 710626) — already tracked in [`setatech-usa.md`](./setatech-usa.md) and [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 35, and **owned by Julia, not Liudmyla** — cross-reference only, no action needed here. _(Double `list_contacts` + `get_client`, 2026-08-15)_ |
+| _(add roles as needed)_ | Only one Double portal contact is on file for this client |
 
 - **Double client:** [app.doublehq.com/close?cid=706688](https://app.doublehq.com/close?cid=706688)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
@@ -62,10 +62,10 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_ |
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_. ⚠️ The QuickBooks **subscription failed to renew** around 2026-03-15 — the client forwarded Intuit's "we couldn't renew your subscription" notice to Julia asking for help (2026-03-17); resolution not recorded. _(Gmail, 2026-08-15.)_ |
+| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | Not applicable (§4) |
 | Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
-| Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
+| Payroll | Not applicable (§4) | _(pending — Drive link)_ | _(pending)_ |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -106,7 +106,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Applies?** _(pending — only the annual-report flag below is known; local licences, BTRs and any BOI obligation are unchecked)_
 - **Annual report:** No _(Double client properties, 2026-08-11)_
 - **Organizer Status (Double, hand-maintained by Lilian):** Sent
-- **What & when:** _(pending)_
+- **What & when:** **1099s** — the firm prepared 1099s for **tax years 2023 and 2024** (Gmail, "2023/2024 1099", sent 2025-12-16). Prior-year returns for **2023 and 2024** also exist in the client's Drive folder.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### _(Add other recurring obligations as needed)_
@@ -124,8 +124,10 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- The primary contact is **also the contact for `SETATECH USA, INC.`** (Double id 706706, archived 2026-07-22, ~$40–50k/pay-period contractor payroll via Gusto) and holds a separate personal Double record. Setatech is **already tracked** in its own client-intelligence file and in `FOLLOW-UPS.md` row 35, **owned by Julia** — not part of Liudmyla's book, and not actioned here.
+- The client's **QuickBooks subscription failed to auto-renew** around 2026-03-15; the client asked the firm for help (2026-03-17). Whether it was resolved is not recorded — see §6.
+- The firm has prepared this client's **1099s for tax years 2023 and 2024**, and prior-year returns for both years exist in Drive.
+- **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 — see §6.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -134,6 +136,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-15 — **First full historical sweep (weekend CI sweep).** Read the full Gmail history for "Greenair" / "Liudmyla Kazannik" back to 2025-09 (recurring monthly-invoice payments, a 2023/2024 1099 email, a QuickBooks subscription-renewal failure, and — via the contact's other correspondence — confirmation that the primary contact is also Setatech USA's contact), Double's client record/contacts/properties (zero Double notes exist for this client), and the client's Drive folder (2023 and 2024 prior-year returns). No SOP exists yet for this client. Added: the 1099/prior-return history (§4/§5), the QuickBooks renewal lapse (§3/§5/§6), and the cross-reference to Setatech USA (§2/§5 — already tracked elsewhere, not new scope). Ping's org-wide search returned no legible, client-scoped content. What the business does, its home state and fiscal year-end remain unknown. _(Worked by weekend CI sweep, 2026-08-15.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -149,17 +152,17 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- **Confirm the QuickBooks subscription-renewal failure (2026-03-17) was actually resolved** — nothing since the client's request for help confirms it.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
 - [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
+- [x] Contacts and their roles (portal contacts are in Double) — one contact, full access
 - [ ] Bank/card feeds and where credentials live (Drive vault link)
 - [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
+- [x] Whether the client belongs to a known owner-group already profiled here — the contact also runs Setatech USA (already tracked separately, owned by Julia)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links
