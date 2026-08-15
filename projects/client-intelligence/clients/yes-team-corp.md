@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +30,7 @@
 - **Entity type:** Corporation — **S-corp** (files Form **1120-S**) _(Double)_
 - **Home state:** **Florida** _(strong inference — the firm was forming the FL entity in Dec 2025; not documented outright)_
 - **Industry / what they do:** One-owner **marketing** S-corp — the owner provides marketing services billed through this entity (recurring monthly service invoices to **Alirm LLC** and to **Mellanni**, an e-commerce home-textiles brand). Effectively a **solo consultant** invoicing through his S-corp. _(Gmail)_
-- **Primary language:** **Russian** (client Zoom recaps and family correspondence in Russian). _(Gmail)_
+- **Primary language:** **Russian** (client Zoom recaps and family correspondence in Russian). _(Gmail)_ Double's own `Preferred language` client property confirms **Bilingual (EN/RU)** _(Double client properties, 2026-08-15)_.
 - **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (Form 1120-S)**; **payroll via Gusto (AutoPilot, monthly)**; annual-report filing. Sales tax N/A; 1099 prep not required. **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
@@ -111,6 +111,16 @@ the actual details.
   Gmail (`in:inbox`/`in:sent`, business name + owner email), and Google Drive turned up nothing
   else new in scope (Drive files present are all dated before the baseline). No repo mentions
   (SOPs/FOLLOW-UPS/BACKLOG) beyond the standing index entries.
+- 2026-08-15 — **Weekend sweep (incremental, from 2026-08-08):** Double (`list_client_properties`,
+  `list_notes` — none exist, `list_contacts`, `list_activity_log` from 2026-08-08 — empty) shows no
+  change since baseline beyond the `Preferred language` property (Bilingual EN/RU), added to §1.
+  Owner identified as **Igor Poluyko** via Double contacts (also linked to Double client 710636, his
+  individual 1040 account, already known — see §5). Gmail (`in:inbox`/`in:sent`, business name +
+  "Poluyko", after:2026/08/08) returned nothing but the firm's automated weekly CI-sweep digest. Ping
+  client-scoped semantic search returned one hit from a June 27, 2026 meeting where Igor Poluyko
+  spoke ("Manager company, sure") — **predates the baseline**, not new. Google Drive full-text
+  search for the business name, modified after 2026-08-08, returned only unrelated files (other
+  clients' documents). No new activity in the window; no SOP exists yet for this client.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm the **registered home state** definitively (strongly inferred FL, not documented).

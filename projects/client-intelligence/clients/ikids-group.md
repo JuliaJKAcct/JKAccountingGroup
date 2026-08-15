@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -182,6 +182,13 @@ the actual details.
   like. **Not confirmed:** the Operating Agreement is the authority on membership and has not been
   re-checked against this. Worth settling, because *who the third member is* and *his US tax
   status* are both open items below _(QuickBooks via Double, 2026-08-14)_.
+- **A target opening window has surfaced: late November–early December 2026**, with hiring
+  expected to start around September 2026 once the pending project approval comes through and
+  construction is substantially complete (targeted November). This is the first documented estimate
+  for **"operations begin"** — the date that stops capitalization and starts normal expensing (§5
+  above, and the runbook's open-decisions log) — but it is a **target from a planning meeting, not
+  a confirmed date Julia has set**; do not use it to start expensing without her sign-off.
+  _(Double note / Ping meeting recap, 2026-08-13.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -198,6 +205,28 @@ the actual details.
   closes the open question this file raised the same day.
 - 2026-08-11 — **How this client's bookkeeping actually runs, from Lilian.** The client's **AP mailbox** (§3) is where the vendor bills and payment confirmations arrive, the firm has access to it, and **every month** we must go in, download the bills, and attach them to their payment transactions. The **water bill is on autopay** — nothing to pay, only its paperwork to collect. Recorded here and turned into the client's first bookkeeping runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md). _(Worked by Lilian.)_
 
+- 2026-08-15 — **Weekend sweep (incremental, from 2026-08-10 — Ping NOT searched for this client,
+  per standing note that its index predates the client's Jun–Jul 2025 calls):** Double surfaced a
+  **new, substantial meeting note (id 491707, 2026-08-13)** — the Manager, an outside contractor,
+  and Julia discussed a possible **expanded engagement** for the planned US venue: a fractional or
+  full-time **controller** role, formalized **AP workflow** (dedicated vendor-invoice email,
+  separated invoice-entry vs. payment-approval duties, **QuickBooks Bill Pay / BillPay** to batch
+  payments), and integrating **Restaurant365** (POS/inventory) with QuickBooks. Staffing plans
+  discussed: **~35–70 employees at opening**, with dedicated HR/payroll and benefits needed once
+  headcount passes **~50**. **Nothing here is a signed engagement** — it is a proposal being scoped;
+  logged as an outstanding item below, not folded into §4's service list. The opening-timeline
+  estimate from the same meeting is folded into §5 (the "operations begin" question). A **new Double
+  portal contact (no portal access, registered as a contractor)** was added 2026-08-10 and attended
+  this meeting — confirm whether this is the CFO already on file (§2) or a distinct operational
+  contact before assuming either. Double's activity log shows one task marked **Done** on
+  2026-08-10 — likely resolves (but does not conclusively confirm) the outstanding
+  overdue-task-digest item below. Gmail (`in:inbox`/`in:sent`, "iKids" and the AP mailbox address,
+  after:2026/08/10) surfaced only automated Zoom/Ping/Double-digest notifications, already reflected
+  above. Google Drive (full-text "iKids", modified after 2026-08-10) turned up the already-known
+  Aug-14 transaction reports and a staffing-plan draft spreadsheet that corroborates the meeting
+  note — no new facts beyond what the meeting note itself supplies. **QuickBooks bank feed
+  reconnection status not re-verified this sweep** — still logged as disconnected since 2026-07-20;
+  no evidence either way, so it is not marked resolved.
 - 2026-08-14 — **The categorization logic was reverse-engineered from the ledger and written down,
   and four defects were found and three fixed.** Lilian had transactions to categorize with Julia
   unavailable and nothing recorded explaining why the chart is shaped as it is. The full ledger
@@ -281,7 +310,16 @@ the actual details.
 - A possible new recurring vendor charge (monthly, since ~May 2026) was flagged by the recurring-expense monitor for review — not yet on the watchlist.
 - AP-inbox Google security alert (new sign-in, 2026-07-23) — confirm it was expected.
 - **Tax-season readiness — organizer status for the two iKids partners is still unresolved** as of 2026-07-30 (FOLLOW-UPS #10): bookkeeping/Schedule-C-style clients get no company organizer, so the real gate is each **owner's personal organizer**; both owners' organizers still need chasing.
-- Recurring **Double task-digest** emails (Aug 3–7, 2026) show a task assigned to the bookkeeper as due/overdue — confirm it's actioned.
+- Recurring **Double task-digest** emails (Aug 3–7, 2026) show a task assigned to the bookkeeper as due/overdue — confirm it's actioned. ⓘ **Possible resolution:** the Double activity log shows a task marked Done on 2026-08-10 — plausibly this one, but the task name did not come through the log; not confirmed as the same task.
+- **A possible engagement expansion is being scoped (2026-08-13 meeting), not yet signed:** a
+  fractional/full-time controller role, a formalized AP-payment workflow (QuickBooks Bill Pay /
+  BillPay), and a Restaurant365↔QuickBooks integration, tied to the venue's staffing ramp (~35–70
+  at opening). Julia to prepare a written proposal/estimate; nothing here is part of the current
+  engagement in §4 until it is signed.
+- **Confirm the identity of the new no-portal-access contact** registered 2026-08-10 (a
+  "contractor" role in Double) — settle whether this is the CFO already documented in §2, or a
+  separate operational contact, before writing anything further about "the CFO" that may actually
+  describe two different people.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_

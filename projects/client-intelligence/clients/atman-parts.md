@@ -1,6 +1,6 @@
 # Atman Parts
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +30,7 @@
 - **Entity type:** **LLC, single-member / disregarded entity** — files on the owner's **Schedule C** (Double's Tax Return Type = `Sch C`; a 2026-01-30 W-9 on file checks "Individual/sole proprietor") _(Double + Drive, 2026-08-01 sweep)_
 - **Home state:** **TEXAS — settled by Lilian, 2026-08-11.** Confirmed by the filed Texas Sales and Use Tax returns _(Google Drive, filings dated 2026-07-16)_. ⚠️ A later sweep read **New Hampshire** off the mailing address on a 2026-01-30 W-9 that predates the engagement — **that is wrong**; do not reopen it.
 - **Industry / what they do:** Confirmed **eBay marketplace auto-parts seller** (seller handle "atman.autoparts"; firm added to the seller's eBay team 2026-03-24) _(Gmail, 2026-03-24 — upgrades prior low-confidence note)_
-- **Primary language:** Likely **Russian** — the firm's monthly-retainer proposal for this client was built bilingual RU/EN, and the onboarding-call transcripts mix Russian _(medium confidence, 2026-08-01 sweep)_
+- **Primary language:** **Bilingual (EN/RU)** — settled by Double's own `Preferred language` client property _(Double `list_client_properties`, checked 2026-08-15)_. Upgrades the earlier medium-confidence "likely Russian" read from the bilingual proposal + mixed-Russian call transcripts _(2026-08-01 sweep)_.
 - **Our engagement (services we provide):** Bookkeeping (Monthly, per Double), sales tax (TX, confirmed active) _(Double client properties, 2026-07-25)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online — **Simple Start** plan; free trial began 2026-03-24, converted to paid ~2026-04-24 _(Gmail)_
@@ -146,6 +146,7 @@ Each obligation below becomes the raw material for Atman Parts' SOP.
   that meeting plus noise from unrelated clients, discarded). Google Drive folder for
   this client found and linked in §7.
 - 2026-08-08 — **Full-pass sweep (gap catch-up).** Double client properties confirmed: **Tax Return Type = Schedule C**, **Bookkeeping = Monthly**, Assigned Staff = Lilian, Account Type = Company; no Double notes on file. Ping (bounded ≥2026-07-20, per the run's rules — this client's gap was Gmail, not Ping): a scoped search of the owner's Ping client record surfaced nothing beyond the same 2026-07-20 "Follow Up" call already on record — no new meetings. **Full historical Gmail pass (in:inbox + in:sent, no date bound) — gap closed.** Found: QuickBooks/Intuit subscription and billing history back to Mar 2026 (trial start, payment history, a lapsed-then-restored subscription) under both "Atman Parts" and "Project ATMAN LLC" as the company name (see §5); the QuickBooks primary-admin transfer to the owner (2026-07-20); a TaxDome account activation (2026-03-26); and a **Form 2848 (power of attorney)** faxed on 2026-03-28. Nothing on sales tax/franchise tax beyond what the 2026-07-20 call already flagged. Google Drive: located the client's folder (link in §7). QuickBooks and the repo (SOPs/FOLLOW-UPS/BACKLOG) were checked; no client-specific content found beyond the BACKLOG.md mention of this file's own existence.
+- 2026-08-15 — **Incremental sweep (baseline 2026-08-08 → 2026-08-15).** Double client properties re-checked: a new **`Preferred language` = Bilingual (EN/RU)** property has been set since the last sweep (settled §1, above). Double activity log shows one **Task created by Lilian on 2026-08-13** (id 70879134) — its detail is not readable through the MCP (`get_task` returns Access denied under both `custom` and `project` kind), so only its existence and date are recorded here; check Double directly if the content matters. No new Double notes. Gmail (`in:inbox`/`in:sent`, `after:2026/08/08`, business name + both contacts' names/emails): only the firm's own automated Client Intelligence weekly-sweep email — no client correspondence. Ping (`search_meetings`, scoped to "Atman Parts", org-wide semantic): no meetings dated on/after 2026-08-08 — all hits were the same pre-08-08 "Vitaliy Atman Follow Up" call or unrelated noise. No SOP exists yet for this client, so no SOP-drift check applies.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Entity-naming mismatch ("Atman Parts" vs. "Project ATMAN LLC" vs. Drive folder "Atman Products") — verify the correct legal name with the client.

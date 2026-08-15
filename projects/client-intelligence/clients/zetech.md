@@ -1,11 +1,12 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-15** — Ping (via a synced Double meeting
+> note), Gmail (inbox + sent, full history), Double (client record, notes, contacts, properties),
+> Google Drive (folder existence) and the QuickBooks-connection flag all checked. Home state,
+> fiscal year-end, and the Drive vault/credentials links remain `_(pending)_` — nothing in the
+> reachable sources established them.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,8 +35,8 @@
 - **Business name:** ZETECH LLC
 - **Entity type:** **LLC**; the firm's Double record says taxed as an **S-corp**, Tax Return Type **1120-S**. ⚠️ **The IRS does not hold it that way** — on 2026-04-17 they said the company appears in their system as a **sole proprietorship** (§5). **Contested, not established.** _(Double client properties, 2026-08-11)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
-- **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
+- **Industry / what they do:** **E-commerce / online retail** — sells across multiple channels (Amazon, Walmart, Shopify, WooCommerce), both B2B and B2C; sources product via Alibaba (sample shipments tracked with the firm) _(Double note "Meeting: Zetech", 2026-06-26, synced from Ping; Gmail thread "Alibaba Samples july", 2026-08-01)_
+- **Primary language:** _(pending — likely Russian; correspondence with the primary contact has run in Russian, e.g. Gmail thread "Обновлённое предложение по группе Zetech", 2026-07-09)_
 - **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**), sales tax (**Monthly**), payroll (**Automatic**) _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** **QuickBooks Online**, connected through Double (`platform: qbo`) _(2026-08-11)_
@@ -48,9 +49,9 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
-| Bookkeeping / day-to-day contact | Double client (link below) |
-| _(add roles as needed)_ | |
+| Owner / primary contact | Double client (link below) — full client-admin/tax/financial/files portal access; also linked to **6 other Double client IDs**, consistent with a serial-entity owner structure (unverified — see §5) _(Double `list_contacts`, 2026-08-15)_ |
+| Secondary contact (no portal access) | Double client (link below) |
+| Additional contact (no portal access) | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706710](https://app.doublehq.com/close?cid=706710)
 - **Double case note** _(only if this client has a matter being tracked start to finish — see the [`double-mcp`](../../../.claude/skills/double-mcp/) skill §7):_ _(note title + ID)_
@@ -62,10 +63,10 @@ link). Never write the credential itself here.
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
-| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_ |
+| QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_. Sales channels sync in via **A2X** (Shopify/eBay/Amazon payouts) _(Gmail "Zetech A2X", 2026-07-28)_ |
 | Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
-| Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
-| Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
+| Bank | Payroll debits / Direct Pay | _(pending — Drive link)_ | **Wells Fargo**, account ending **1937** (payroll debit account) _(Gmail Gusto/Wells Fargo notifications, Jul–Aug 2026)_ |
+| Payroll | Gusto, weekly **AutoPilot** (automatic), runs every Friday | _(pending — Drive link)_ | _(Gmail Gusto notifications, recurring through Jul–Aug 2026)_ |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -87,14 +88,14 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** _(pending)_
-- **Our role:** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Provider / frequency:** **Gusto**, weekly AutoPilot, runs every Friday for the prior week's pay period; debited from the Wells Fargo account ending 1937 _(Gmail Gusto notifications, recurring Jul–Aug 2026)_
+- **Our role:** _(pending — firm appears to receive every payroll notification; whether we run it or only monitor is unconfirmed)_
+- **Process notes (→ future SOP):** At least one payroll run was **manually canceled and re-run** in the same week (2026-07-14/15 and 2026-07-21/22) — cause not recorded. Worth a standing check that AutoPilot actually completed each week.
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
 - **Cadence:** **Monthly**
-- **Categorization rules / quirks:** _(pending)_
+- **Categorization rules / quirks:** Multi-channel e-commerce (Amazon, Walmart, Shopify, WooCommerce, eBay) synced into QuickBooks via **A2X**. ⚠️ **A2X payment-gateway mapping for eBay/Amazon payouts was wrong in July 2026** — journal entries had to be deleted from QBO and remapped before re-posting; confirm mapping is correct each month before relying on A2X's auto-posted JEs. _(Gmail "Zetech A2X" thread, mariaf@jkaccountinggroup.com, 2026-07-28)_
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Income tax
@@ -127,9 +128,11 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **Almost everything here is still Double's property columns alone** — the one exception is the IRS call above, which came from a migrated TaxDome note. No Gmail, Ping or QuickBooks pass has been run. The first weekend sweep on this client is what makes it useful.
-- A **`Zetech Holding LLC`** also exists in Double (id `717754`, no QuickBooks connected) — the relationship between the two is **not established** _(to verify)_. A `zetech-consolidation` skill is available in the firm's Claude environment (it is **not** in this repo), which suggests consolidation work has been done for this client before — **unverified**.
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- ⚠️ **A2X's payment-gateway mapping for eBay/Amazon payouts posted wrong journal entries to QBO in July 2026** — they were deleted and had to be remapped before re-posting. Check A2X's mapping each month before trusting its auto-posted JEs, especially after any change to sales channels. _(Gmail "Zetech A2X" thread, mariaf@jkaccountinggroup.com, 2026-07-28.)_
+- **Multi-channel e-commerce business** — sells on Amazon, Walmart, Shopify and WooCommerce (B2B and B2C), sources product via Alibaba. Payroll runs through Gusto on weekly AutoPilot. _(Double note "Meeting: Zetech", 2026-06-26; Gmail, recurring Jul–Aug 2026.)_
+- A **`Zetech Holding LLC`** also exists in Double (id `717754`, no QuickBooks connected) — **confirmed as a separate billing entity**: the firm invoiced ZETECH HOLDING LLC and ZETECH LLC on two different QuickBooks invoices, paid separately on 2026-07-09. The **relationship between the two entities themselves is still not established** _(to verify)_. A `zetech-consolidation` skill is available in the firm's Claude environment (it is **not** in this repo), which suggests consolidation work has been done for this client before — **unverified**.
+- The primary contact's Double portal login is also linked to **6 other Double client IDs** beyond Zetech and Zetech Holding — a serial-entity structure like the one already flagged at Optic Gold/best-broker-realty. **Which companies those are is not established** — out of scope for this sweep (this is the client's own group, not Liudmyla's book of business). _(Double `list_contacts`, 2026-08-15.)_
+- **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 (Ping, Gmail, Double, Drive, QuickBooks-platform check) — see §6.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -139,6 +142,7 @@ A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
 - 2026-08-13 — **TaxDome notes read (Phase 2).** One note, new: on **2026-04-17** the IRS told Lilian the company appears in their system as a **sole proprietorship**, and **refused to issue any letter saying so**. Now §5. _(TaxDome notes, migrated — filed under ZETECH LLC.)_ _(Worked by Lilian.)_
+- 2026-08-15 — **First full historical sweep (weekend CI sweep).** Read the Double meeting note (a Ping-synced call from 2026-06-26 covering the business's e-commerce model and structure questions), the full Gmail history for "Zetech" and "Liudmyla Kazannik" (Gusto payroll notices, the A2X/QBO mapping issue, the Zetech Holding LLC billing, a July fee-proposal conversation), Double's client record/notes/contacts/properties, and confirmed Drive folders exist for this client. No SOP exists yet for this client. Added: the business's e-commerce model (§1), payroll provider and cadence (§3/§4), the A2X mapping quirk (§4/§5), confirmation that Zetech Holding LLC bills separately (§5), and that the primary contact's portal login spans 6 other Double client IDs (§5). Ping's own `resolve_person`/`search_meetings` tools returned no clean transcript content for this client (org-wide search returned garbled, unrelated results) — the Double-synced meeting note was the usable Ping-sourced material. _(Worked by weekend CI sweep, 2026-08-15.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -154,17 +158,20 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- **Confirm the A2X eBay/Amazon mapping fix held** after the 2026-07-28 remap — no follow-up recorded since.
+- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`, sent 2026-07-09) — the primary contact replied that "the main business is declining" and asked to revisit later. **No resolution recorded.** _(Gmail "Обновлённое предложение по группе Zetech", 2026-07-09.)_
+- **The IRS sole-proprietorship-vs-1120-S mismatch (§5) is still unresolved** — reconcile before the next return is filed.
+- Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications is unconfirmed.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
+- [x] What the business actually does, and (partially) the owner's language — home state still unknown
+- [x] Whether the client belongs to a known owner-group already profiled here — assigned to Liudmyla Kazannik's book; the client's OWN serial-entity group (6 other Double IDs linked to the primary contact) is separate and unresolved
+- [ ] Contacts' precise roles (portal contacts are in Double; role labels beyond "primary/admin" not yet distinguished)
 - [ ] Bank/card feeds and where credentials live (Drive vault link)
 - [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links
