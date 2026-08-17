@@ -153,6 +153,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Ecom Beavers LLC | 706686 |
 | Artur Tseretsian | 752202 |
 | Ihor Naum & Olha Levchuk | 710637 |
+| LILIIA HLEBOVA KOZLOVSKA | 710644 |
 | Denys Melnyk | 764785 |
 | Andrii Tymchenko | 710619 |
 | VOICECAPITAL INC | 710725 |
@@ -351,6 +352,7 @@ CLIENTS (name -> Double id):
 - Ecom Beavers LLC -> 706686
 - Artur Tseretsian -> 752202
 - Ihor Naum & Olha Levchuk -> 710637
+- LILIIA HLEBOVA KOZLOVSKA -> 710644
 - Denys Melnyk -> 764785
 - Andrii Tymchenko -> 710619
 - VOICECAPITAL INC -> 710725
