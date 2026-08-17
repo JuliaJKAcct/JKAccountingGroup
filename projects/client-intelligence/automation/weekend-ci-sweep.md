@@ -289,10 +289,12 @@ send the report** — the worst shape of failure, because nothing looks broken.
 **So whenever this block changes, the change is not done until the Routine is updated.** Say so out
 loud to whoever asked, and treat it as part of the task, not a follow-up.
 
-**Last change needing a re-paste: 2026-08-11** — the **merge-your-own-CI rule**, the
-**contradiction rule**, and the **email becoming a record rather than a request**. ⚠️ **Clients in
-scope are NOT on that list** — they reach the run through the scope table above without a paste
-_(corrected 2026-08-14)_.
+**Last change needing a re-paste: 2026-08-17** — the block below was rewritten to carry the three
+**2026-08-11** rulings the live prompt never received (**merge-your-own-CI**, the **contradiction
+rule**, and the **email as a record rather than a request**), the **2026-08-12 EIN ruling**, and a
+new **step 2 coverage check** that reconciles the scope table against Double `list_clients` every
+run so a client cannot be silently missed. ⚠️ **Clients in scope are NOT on that list** — they reach
+the run through the scope table above without a paste _(corrected 2026-08-14)_.
 
 ## Routine prompt (paste into the web-UI routine)
 
@@ -301,19 +303,29 @@ _(corrected 2026-08-14)_.
 > `env_01DoJ5xZw49eoRfUWThp8rKU` environment with the Double, Gmail, Calendar, Drive, QuickBooks,
 > Odoo and Ping connectors attached, and notifies by **push**.
 >
-> ✅ **The CLIENTS list below is NOT the only route, and this correction matters.** The prompt
-> **currently live in the web UI does not contain a client list at all** — it instructs the run to
-> read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
-> scope table above already reaches the live Routine without anyone re-pasting anything.** Keep the
-> inline list below in sync anyway, because a future paste would carry it. _(Established
-> 2026-08-14 by reading the live trigger, correcting a `FOLLOW-UPS` row that said the Routine was
-> running a hardcoded old list.)_
+> ✅ **The block below deliberately carries NO client list — that is the design, not an omission.**
+> The prompt live in the web UI has never contained one; it instructs the run to read *this file*
+> for the scope table. **So adding a client to the scope table above already reaches the Saturday
+> run without anyone re-pasting anything**, and the rewritten block keeps it that way — a hardcoded
+> list in the Routine is precisely what would make a newly-added client invisible. _(Established
+> 2026-08-14 by reading the live trigger; the inline list the block used to carry was removed
+> 2026-08-17 for this reason.)_
+>
+> ✅ **And the scope table itself is now checked, every run.** Step 2 of the block reconciles it
+> against Double `list_clients` (all non-archived; a client counts when **either** `platform: qbo`
+> **or** a `Bookkeeping` cadence property is set — `qbo` alone is not enough, a disconnected
+> QuickBooks reads `none`). Anything missing gets swept and a CI file anyway, and is named in the
+> email so a human adds the row; the run does **not** edit this file, which stays outside its
+> merge scope. This is the check that would have caught Liudmyla Kazannik's seven clients years
+> earlier.
 >
 > ⚠️ **What IS stale in the live prompt, and what a re-paste actually fixes** — three rulings from
 > **2026-08-11** that never reached it: it still says **"Do NOT merge to main"** (Lilian removed the
 > approval gate for Client Intelligence, and three runs sat unseen on branches because of exactly
 > this line); it carries **no contradictions rule**; and its email is framed as a **request for
-> decisions** rather than a **record of what was saved**.
+> decisions** rather than a **record of what was saved**. It is also stale on the **2026-08-12 EIN
+> ruling** — it still forbids writing an EIN, which the firm now allows (public on Sunbiz), with
+> the sole-prop/SMLLC SSN caveat. And it has **no coverage check**.
 >
 > 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
 > wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
@@ -324,81 +336,45 @@ _(corrected 2026-08-14)_.
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
 
-READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, projects/client-intelligence/automation/sweep-state.md (the incremental ledger), and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+METHOD — follow the repo, do not improvise:
 
-INCREMENTAL SWEEP (token discipline — this is a hard rule): sweep-state.md records the date each client is already swept through. Bound EVERY search to that client's baseline date AND LATER, INCLUSIVE of the baseline day itself (items can land later the same day a sweep ran; the one-day overlap is deliberate and duplicates are prevented because you read the client file first and only add what's new): Gmail with after:YYYY/MM/DD (inclusive of that day), Ping meetings dated on-or-after the baseline, Double notes/activity created on-or-after it. Never re-read anything from BEFORE the baseline date. Exceptions: (a) a client whose row lists a Coverage gap owes that source a one-time full historical pass — do it, then clear the note (that pass may exceed the per-client call bound once; expected); (b) a client in the list with NO row in sweep-state.md gets a one-time full historical sweep, then a row. At the end, update sweep-state.md baselines (run date) for every client fully swept, IN THE SAME COMMIT as the client-file updates; if the run fails partway, only advance the clients you finished.
+1. Read and follow the client-intelligence skill (.claude/skills/client-intelligence/SKILL.md) and projects/client-intelligence/automation/weekend-ci-sweep.md — they hold the full sweep method, the CLIENTS scope table (every client + Double id), the exclusion table (archived clients), the "sweep by owner, assign by company/person" rule, the catch-up priority order, and the incremental bound. That scope table is the authority on WHO gets swept. This prompt deliberately carries NO client list, so a client added to the table is swept from the next Saturday on without anyone editing this routine.
 
-CLIENTS (name -> Double id):
-- Atman Parts -> 763909
-- BEST BROKER REALTY LLC -> 706712
-- ECOORGANIC USA LLC -> 719473
-- GOSSIP MIAMI LLC -> 710577
-- Kolo Florida Inc -> 706626
-- Pro Title Agency -> 706716
-- NEVER GIVE UP KK LLC -> 742803
-- YES TEAM CORP -> 706718
-- MASCIAVE DESIGN STUDIO LLC -> 706696
-- iKids Group LLC -> 706689
-- Deep Tech Development Group LLC -> 706685
-- AURA REMODELING LLC -> 706679
-- Beemold USA LLC -> 709445
-- Sunoma Inc -> 706704
-- SENSUSTECH LLC -> 706699
-- Mobilesource Corp -> 706697
-- Margate Plumbing Inc -> 706694
-- MAGNUM 152, INC -> 706693
-- LUMETRO LLC -> 706691
-- Ecom Beavers LLC -> 706686
-- Artur Tseretsian -> 752202
-- Ihor Naum & Olha Levchuk -> 710637
-- Denys Melnyk -> 764785
-- Andrii Tymchenko -> 710619
-- VOICECAPITAL INC -> 710725
-- VOXAGO LLC -> 710606
-- YMI TRUCKING LLC -> 710608
-- ZETECH LLC -> 706710
-- OPTIC GOLD INC -> 706702
-- ONETWO STRATEGIES INC -> 706701
-- Greenair International LLC -> 706688
-- CANDRAMAS LLC -> 706683
-- AXDIGITAL LLC -> 706681
-- Airtouch LLC -> 706671
-- VITALII IVANOV & TETIANA MOGYLOVA -> 710666
-- Igor Melomed & Yelena Lovkina -> 710635
-- R & G Friendly Inc -> 710589
-- Viacheslav Honcharenko -> 710665
-- Maria Contreras -> 710646
-- Iurii Iakovenko & Alina Yakovenko -> 710639
-- Grigoriy & Margarita Melomed -> 710633
-- M5 Studio Miami -> NO ID: search Double by name first; if there is no client, skip the Double plane and sweep by name from Gmail/Ping/Drive. If you DO find one, record the id in the client file's §2/§7 (in scope) and leave the scope table to a human
-  (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
+2. COVERAGE CHECK — do this BEFORE sweeping, every run. It is what stops a client being silently missed. Call Double list_clients for ALL non-archived clients and reconcile the result against the scope table AND the exclusion table in weekend-ci-sweep.md. Count a client as one the firm must know about when EITHER platform: qbo OR a Bookkeeping cadence property is set — "platform: qbo" alone is NOT enough, because a disconnected QuickBooks reads "none" and that is exactly the client this check exists to catch. For every such client with no row in either table: sweep it like any other (it has no sweep-state row, so it is a first-time full pass — it counts against the cap in step 4), create its projects/client-intelligence/clients/<slug>.md, and list it in the email under "Coverage — clients not yet in the scope table" so a human adds the row. Do NOT edit weekend-ci-sweep.md yourself — that file is outside your merge scope. Never derive scope from one staff member's client list: doing that is how seven QuickBooks-connected companies went with no Client Intelligence at all until 2026-08-11.
 
-FOR EACH CLIENT:
-1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:
-   - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
-   - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
-   - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — "EIN / Tax ID" IS included, it is public on Sunbiz, BUT that property can hold an owner's SSN for a sole prop / SMLLC, so write it only when it is plainly an EIN); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
-   - Google Drive: search for the client's folder (usually one per client, under the firm's shared drive) and put its LINK in the file's §7 "Google Drive folder"; do NOT copy sensitive file contents into the repo.
-   - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
-   Keep it bounded (~10-15 calls/client).
-2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. A business EIN IS allowed (public on Sunbiz). Update "Last updated".
-3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
+3. Read projects/client-intelligence/automation/sweep-state.md (the incremental ledger), projects/client-intelligence/sop-proposals.md (the SOP-proposal queue), and each client's clients/<slug>.md — so you only ADD new, non-sensitive facts and never duplicate.
 
-THEN:
-- Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) AND MERGE THEM TO main YOURSELF. Client Intelligence needs no approval (Lilian, 2026-08-11) — work left on a branch is work nobody sees, and three runs were lost that way. Push a branch, open a PR, and merge it; if the merge is blocked, say so in the email with the branch name. Do NOT touch projects/sops/ — SOP changes stay behind Lilian's approval and go in sop-proposals.md as Pending.
-- CONTRADICTIONS: when two sources disagree, write BOTH into the client file with their sources and mark the fact unsettled — do not hold the enrichment and do not send Lilian a question to answer cold. It gets asked later, by whichever session actually needs that fact.
-- Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
-  Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
-  Body per client: what was SAVED to CI (with sources — a record, not a request) + the Pending SOP proposals with their IDs (the only part needing a decision). Note any contradictions recorded, in one line each, so she can ask about them if she ever wants to. Say that the CI changes are already on main.
-- SEND through the webhook EXACTLY ONCE — one POST, one recipient. Use `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` — the real values go in **this routine's prompt only**, never in the repo. Build payload.json with python3 (json.dump; keys `"secret"=<WEBHOOK_SECRET>`, `"to"`, `"subject"`, `"html"`, `"text"`), then:
+4. Bound every search to that client's baseline date in sweep-state.md AND LATER, inclusive of the baseline day itself (items can land later the same day a sweep ran; duplicates are prevented because you read the client file first). Gmail: after:YYYY/MM/DD. Ping/Double: date >= baseline. Never re-read anything from BEFORE the baseline. EVERY client in scope gets its cheap incremental pass EVERY run — the cap applies only to the expensive first-time / coverage-gap FULL historical passes, at most ~6 per run, taken in the catch-up priority order written in weekend-ci-sweep.md. If the cap makes you defer a client's full pass, NAME that client in the email so the queue stays visible.
+
+5. For each client, sweep the connected sources for what is NEW, searching by BOTH the business name AND each owner/principal name (a meeting titled with a person's name often covers the business). Owners with several businesses: sweep at the OWNER level across all their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's 1040 work, the COMPANY record is sales tax / the company return / 1099s; never let one company's file absorb another's facts.
+   - Ping: resolve_person on each owner; search_contacts; search_meetings (org-wide, semantic) for BOTH the business and each owner; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
+   - Double: get_client; list_client_properties (the cleanest structured input for the Operating zone — Assigned Staff, Entity / Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status); list_notes; list_contacts (ROLES only); list_activity_log.
+   - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains.
+   - Google Drive: find the client's folder and put its LINK in §7; never copy sensitive file contents into the repo.
+   - QuickBooks if useful; and the repo itself (projects/sops/, FOLLOW-UPS.md, BACKLOG.md).
+   Keep it bounded (~10-15 calls per client).
+
+6. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = what a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups, as pointers to Double/Ping. NEVER write logins, account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones — those stay in Double/Drive, referenced by link. A business EIN IS allowed (it is public on Sunbiz — Lilian, 2026-08-12), BUT Double's property is named "EIN / Tax ID" and on a sole proprietor or single-member LLC it can hold the OWNER'S SSN — write it only when it is plainly an EIN, and skip it if you cannot tell. Update "Last updated", and update sweep-state.md baselines in the SAME commit for every client you fully swept (if the run fails partway, advance only the clients you finished).
+
+7. CONTRADICTIONS: when two sources disagree, write BOTH versions into the client file with their sources and mark the fact unsettled. Do not hold the enrichment, and do not send Lilian a question to answer cold — it gets asked later, by whichever session actually needs that fact (Lilian, 2026-08-11). Note each one in a single line in the email.
+
+8. Do NOT modify anything under projects/sops/. For a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows — each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add anything already listed in any status. Never queue CI-only S6 content.
+
+9. Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) AND GET THEM ONTO main YOURSELF. Client Intelligence needs no approval (Lilian, 2026-08-11) — work left on a branch is work nobody sees, and three runs were lost exactly that way. Push your branch, open a PR and merge it; if the merge is blocked, say so in the email with the branch name. Your diff must stay inside projects/client-intelligence/clients/, projects/client-intelligence/automation/sweep-state.md and projects/client-intelligence/sop-proposals.md — that is the whole scope of the no-review carve-out. Anything else you think needs changing: leave it and report it in the email instead.
+
+DELIVERY — send exactly one email (do not skip this step):
+- Build the email HTML by FILLING the committed template projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; replace the sample content with the real swept clients). Also build a plain-text version.
+- The email is a RECORD, not a request. Per client: what was SAVED to Client Intelligence, with its sources; then the Pending SOP proposals with their IDs — those are the only part that needs a decision, and she approves by ID in a normal session, not by replying. Say plainly that the CI changes are already on main. Add the "Coverage — clients not yet in the scope table" list from step 2, any full passes deferred by the cap (step 4), and any contradictions recorded (one line each). Nothing in this email is a gate; nothing waits on it being read.
+- Do NOT use the Gmail connector (it is draft-only). Send through the webhook, EXACTLY ONCE.
+- Build payload.json with python3 (json.dump), keys: "secret"="<WEBHOOK_SECRET>", "to"="lilian@jkaccountinggroup.com" (ONE address), "subject"="Client Intelligence — weekly sweep <run date>", "html"=<the filled template>, "text"=<the plain-text version>.
+- POST it WITHOUT following redirects and read the HTTP status code:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
-  IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):
+- HOW TO READ IT (this webhook redirects — do NOT use curl -L):
   * HTTP 302 (redirect to script.googleusercontent.com) OR 200 with {"ok":true} = the email WAS SENT. STOP — do not POST again (a retry sends a duplicate).
   * A "Page Not Found" / 405 you get from FOLLOWING the redirect is NORMAL and does NOT mean failure — that is why we do not use -L.
   * Only 401 / 403 / 5xx is a real failure — then retry ONCE.
-  Report the exact HTTP status code you got.
 
-If a source/connector is unavailable, say so in the report rather than guessing.
+In your final message, state the exact HTTP status you got, whether the email was sent, how many clients got an incremental pass and how many got a full pass, and which sources/connectors you could and could not reach. If a source or connector is unavailable, say so in the report rather than guessing.
 ```
 
 ## The email template (built)
