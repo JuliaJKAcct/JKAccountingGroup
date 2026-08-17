@@ -41,7 +41,12 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    (`projects/proposal-tool/tools/monthly-proposal-generator.src.html`): Step 1 prices the
    client with the built-in calculator (shared core), Step 2 flows that fee into the
    editable premium proposal (cover · benefits · investment · what's-included ·
-   next-steps · closing quote · T&C) → Save PDF. Single bundled fee. A **Language**
+   next-steps · closing quote · T&C) → Save PDF. Single bundled fee — or a **two-phase
+   investment snapshot**: fill the optional **Phase 2** fields (Phase-1 label, Phase-2
+   label, Phase-2 fee, "what it adds") and the Investment page renders **two bold price
+   cards side by side** — an intro price and the step-up (e.g. *First 3 months · Essential
+   $725/mo* → *From month 4 · Advisory $1,497/mo*) — never buried in small text. Leave the
+   Phase-2 fee blank for a single card. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the
