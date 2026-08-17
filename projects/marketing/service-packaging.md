@@ -100,6 +100,10 @@ Also included on every plan, and therefore never a differentiator:
 - Sales tax returns, 1099s, annual report filing
 - Cash balance monitoring
 
+**Employee payroll is not on this list.** It is a genuine plan-level difference
+and it is stated on the cards: none on Essential, up to five employees on
+Advisory and Strategic (§7).
+
 ## 4. What actually climbs
 
 Not speed of reply — **initiative**. Who starts the conversation, and how often
@@ -113,6 +117,13 @@ the firm comes to the client:
 
 ## 5. The three plans
 
+Each plan carries **the same six labelled rows in the same order**, so a buyer
+can compare them line for line without a feature grid. The rows that genuinely
+differ — payroll, tax planning, advisory rhythm — are the ones that carry the
+price. *(Julia, 2026-08-17: the source brief's tier copy is the right shape but
+too abstract to buy from; these rows are what "worked on, with the details
+outlined" means.)*
+
 ### ESSENTIAL — $725+/month · *Stay compliant.*
 
 **Best for:** owners who mainly want dependable accounting and tax compliance
@@ -121,13 +132,17 @@ handled correctly.
 **Core promise:** your accounting stays current, required filings are handled,
 and you know what needs your attention.
 
-- **Accounting foundation** — bookkeeping and monthly financial statements
-  appropriate to the business.
-- **Tax & compliance** — the business tax return and routine filings, on time.
-- **Annual year-end review** — before the year closes, a review focused on
+- **Accounting foundation** — bookkeeping kept current and monthly financial
+  statements.
+- **Tax & compliance** — the business tax return, sales tax returns, 1099s, and
+  the annual report — all filed on time.
+- **Payroll** — **owner payroll only.** Set up, run, and filed: the S-corp
+  requirement handled. *Employee payroll is not included on this plan.*
+- **Tax planning** — a **year-end review** before the year closes, focused on
   accuracy, compliance, and anything that needs action.
-- **Always-on access** — reach your advisor any time; reply within one business
-  day.
+- **Advisory rhythm** — that annual review is the scheduled touchpoint.
+- **Access** — reach your advisor any time; reply within one business day. *Same
+  on every plan.*
 
 **Do not position it as:** an advisory or CFO relationship.
 
@@ -139,15 +154,18 @@ conversations through the year.
 **Core promise:** we help you deal with tax and financial issues while there is
 still time to act — not after the year is over.
 
-- **Everything in Essential** — the same reliable accounting and compliance
-  foundation.
-- **Proactive tax planning** — your tax position reviewed during the year, with
-  the actions worth taking named while they can still be taken.
-- **Quarterly planning sessions** — results, what's coming, and the decisions on
-  the horizon.
-- **Owner & entity review** — compensation, distributions, and entity structure
-  revisited as the business changes.
-- **Reporting built around the questions you actually ask.**
+- **Accounting foundation** — everything in Essential, unchanged.
+- **Tax & compliance** — everything in Essential, unchanged.
+- **Payroll** — owner payroll **plus employee payroll, up to five employees**,
+  at the cadence you choose.
+- **Tax planning** — **proactive, during the year.** Your position reviewed
+  while there is still time, with the actions worth taking named while they can
+  still be taken.
+- **Advisory rhythm** — **quarterly planning sessions** (results, what's coming,
+  the decisions on the horizon), plus an **owner & entity review**: compensation,
+  distributions, and structure revisited as the business changes. Reporting built
+  around the questions you actually ask.
+- **Access** — same as every plan.
 
 **Do not position it as:** business coaching, forecasting, or KPI consulting.
 
@@ -159,13 +177,16 @@ before significant decisions.
 **Core promise:** bring us in before the decision is made, so the consequences
 can be weighed in advance.
 
-- **Everything in Advisory.**
-- **Senior-level involvement, on demand** — when complexity rises, you are not
-  waiting for the next quarterly session.
-- **Decision support** — the tax and financial implications of major purchases,
-  compensation and distributions, entity changes, real estate, and financing.
-- **Coordination** — we work alongside your attorney, lender, investment
-  advisor, or foreign accountant.
+- **Accounting foundation** — everything in Advisory, unchanged.
+- **Tax & compliance** — everything in Advisory, unchanged.
+- **Payroll** — owner payroll plus employee payroll, **up to five employees**
+  (the firm's ceiling — see §7).
+- **Tax planning** — everything in Advisory, **plus planning around each
+  significant decision** rather than only on the quarterly cycle.
+- **Advisory rhythm** — quarterly sessions **plus senior-level involvement on
+  demand**, and **coordination** with your attorney, lender, investment advisor,
+  or foreign accountant.
+- **Access** — same as every plan.
 
 Concrete examples, on the page, so the promise has edges:
 
@@ -177,6 +198,24 @@ Concrete examples, on the page, so the promise has edges:
 **Do not position it as:** fractional CFO services. Strategic includes **the
 conversation**; producing the deliverable is the Controller add-on (§6).
 
+### The detailed comparison
+
+Lower on the page, for buyers who want the specifics. It supports the decision;
+it must not lead it.
+
+| | **Essential** | **Advisory** | **Strategic** |
+|---|---|---|---|
+| Bookkeeping & monthly financials | ✓ | ✓ | ✓ |
+| Business tax return · sales tax · 1099s · annual report | ✓ | ✓ | ✓ |
+| Cash balance monitoring | ✓ | ✓ | ✓ |
+| Owner payroll | ✓ | ✓ | ✓ |
+| **Employee payroll** | **—** | **up to 5** | **up to 5** |
+| Tax planning | Year-end review | Proactive, during the year | + around each significant decision |
+| Scheduled sessions | Annual review | Quarterly | Quarterly + on demand |
+| Owner & entity review | — | ✓ | ✓ |
+| Coordination with your other professionals | — | — | ✓ |
+| Access & response time | Same on every plan | Same on every plan | Same on every plan |
+
 ## 6. The menu — sold separately, added to any plan
 
 Removed from the plans and priced as add-ons (Julia, 2026-08-17):
@@ -185,7 +224,7 @@ Removed from the plans and priced as add-ons (Julia, 2026-08-17):
 |---|---|
 | **Accounts payable / bill pay** | Vendor bills received, scheduled, and paid on your approval. |
 | **Invoicing & collections** | Customer invoicing, statements, and follow-up on what's owed. |
-| **Team payroll — up to 5 employees** | Payroll run and filed for your staff, at the cadence you choose. |
+| **Employee payroll on Essential** | The only payroll that is ever an add-on. Employee payroll belongs to the plans (§5) — an Essential client who hires staff normally moves to Advisory, and this exists for the one who genuinely should not. |
 | **Fractional controller / CFO** | The deliverables: financial packages for banks and lenders, management reporting, forecasting, KPI reporting. |
 | **Additional states** | Sales-tax registration and filing beyond the first state. |
 | **Additional entities** | Each additional company is its own engagement. |
@@ -214,10 +253,22 @@ on all three live plans today, but no current client is actually receiving them
    compensation), already carried at $0 in the internal pricing engine.
    **Every plan, permanently.** Worded as a benefit, not a line item: *"Owner
    payroll run and filed — the S-corp requirement handled."*
-2. **Team payroll.** A real cost that scales with headcount and has nothing to
-   do with advisory depth. It is **not** a plan differentiator, and cadence
-   (weekly, biweekly, semi-monthly) is the client's choice, never a tier.
-   Sold as an add-on, **up to 5 employees**.
+2. **Employee payroll.** A **plan-level differentiator, not a menu item**
+   *(Julia, 2026-08-17)* — the clearest concrete difference between Essential
+   and the plans above it, and it belongs on the cards:
+
+   | Essential | Advisory | Strategic |
+   |---|---|---|
+   | **No employee payroll** | Up to **5 employees** | Up to **5 employees** |
+
+   What is *not* a differentiator is **cadence**. Weekly, biweekly or
+   semi-monthly is the client's operational choice, never a tier — that is the
+   distinction the live page gets backwards, selling "Biweekly" against "Weekly"
+   as if frequency were value.
+
+   Between Advisory and Strategic the payroll line is deliberately identical:
+   five is the firm's ceiling everywhere, and what separates those two plans is
+   advisory depth, not headcount.
 3. **The ceiling — 5 employees** *(Julia, 2026-08-17)*. Above five, the firm
    does not run payroll in-house. The answer is not "no": the client is set up
    on a payroll platform and the firm supervises and records it — a smaller,
@@ -230,7 +281,7 @@ need Julia's sign-off before the page is built:
 
 | Included | Proposed bound | Beyond it |
 |---|---|---|
-| Team payroll | 5 employees | Platform setup + supervision, scoped separately |
+| Employee payroll (Advisory · Strategic) | 5 employees | Platform setup + supervision, scoped separately |
 | 1099 filing | 10 contractors | $25 per additional contractor (matches the internal engine) |
 | Sales tax | 1 state | Priced per additional state |
 | Entities | 1 | Each additional entity is its own engagement |
