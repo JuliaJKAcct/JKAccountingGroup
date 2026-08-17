@@ -337,7 +337,23 @@
     </div>
   </section>
 
-  <!-- ==================== §4 ==================== -->
+    <!-- 3A -->
+  <div class="subbar reveal"><span class="tag">3A</span><h3>🔑 With more than one owner, check every prior-year K-1 for <code>Final K-1</code></h3><span class="rt">firm rule</span></div>
+  <div class="indent">
+    <p class="reveal">Before deciding how many shareholders this year has, open <b>each</b> Schedule K-1 from the prior return and look at the <b><code>Final K-1</code></b> checkbox, top right.</p>
+    <p class="reveal"><b>A ticked box means that shareholder is out.</b> It is the previous preparer&#8217;s explicit statement that it was their last K-1 &mdash; so this year they are <b>not a shareholder, get no K-1, and are not counted in box I.</b> You do not need to reconstruct the sale or reason it out from the balance sheet: the prior return already answered it, and answering it another way risks contradicting a filed position.</p>
+    <p class="reveal">Do this <b>before anything shareholder-related</b> &mdash; it decides box I, how many K-1s exist, how many Forms 7203 you prepare, and whether the year needs a per-day allocation at all. <b>A two-owner company whose second K-1 was final last year is a one-owner company this year</b>, allocating 100%, with no per-day arithmetic.</p>
+    <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Two things the box does not tell you &mdash; neither changes the answer</div>
+        <p><b>The departed shareholder&#8217;s capital account may still sit on the balance sheet.</b> Books do not clear themselves. Under the sweep convention (&#167;8A) no figure moves, but the buyer&#8217;s <b>outside basis</b> &mdash; what they paid for the shares &mdash; is nowhere in the company&#8217;s books and decides the gain on liquidation.</p>
+        <p><b>The rest of the prior return may not agree with the box.</b> A truly final K-1 normally shows zero shares at year end. If it still shows shares, <b>note it and move on &mdash; the box governs.</b> Report it to Lilian rather than resolving it yourself, and never as a criticism of a closed return.</p>
+      </div>
+    </div>
+    <p class="reveal">✅ <b>And tick <code>Final K-1</code> for anyone who leaves THIS year</b> &mdash; it is how next year&#8217;s preparer will know. <b>The box is the return&#8217;s memory.</b></p>
+  </div>
+
+<!-- ==================== §4 ==================== -->
   <section class="doc" id="s4">
     <div class="shead reveal"><span class="schip">§4</span><h2>Form 1125-A — cost of goods sold</h2></div>
     <p class="slede reveal">Fill this in <b>first</b>. Its line 8 feeds page 1, and the form says so on its own face: <em>"Enter here and on Form 1120-S, page 1, line 2."</em> Skip it entirely if the client sells no goods.</p>
@@ -425,6 +441,37 @@
     <div class="indent">
       <p class="reveal"><b>"Inventory at end of year" is not automatically the account called <code>Inventory</code>.</b> On some clients the return's inventory line is a <b>subtotal</b> covering more than that one account — the Shopify example in §3 is <code>Inventory</code> <b>plus</b> a clearing account, which QuickBooks already presents as one line: <code>Total for Other Current Assets</code>.</p>
       <p class="reveal"><b>Read line 7 off the balance-sheet section the PRIOR RETURN used.</b> Do not decide it from the account's name.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">4C</span><h3>⚠️ What a SOLVED line 2 actually contains</h3><span class="rt">it is not &ldquo;what they bought&rdquo;</span></div>
+    <div class="indent">
+      <p class="reveal"><b>The most reasonable objection a preparer can raise is: &ldquo;but the client bought nothing this year, so why is there a number in purchases?&rdquo;</b> It deserves a real answer, because the instinct is right and the conclusion is wrong.</p>
+      <p class="reveal"><b>Line 2 is not a claim about purchase invoices.</b> Solved, it is <em>whatever makes the schedule balance</em> &mdash; and you are not free to override it. <b>The identity has four slots and three are locked:</b> line 1 by the prior return, line 7 by the balance sheet (which Schedule L line 3 must also equal), line 8 by the P&amp;L. <b>Whichever one you refuse to move, another absorbs the difference.</b></p>
+      <div class="intake reveal"><pre>line 2  =  (value that entered inventory-land from anywhere other than a sale)
+
+  decompose it along the same seams as lines 7 and 8:
+line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct ]   &larr; the GOODS side
+         + [ the other accounts swept into lines 7 and 8 ]                    &larr; the ARTIFACT side</pre></div>
+      <p class="reveal">The artifact side has nothing to do with buying anything, and can easily be the <b>majority</b> of a small solved line 2.</p>
+      <ol class="qlist reveal">
+        <li><b>Goods really were bought &mdash; and often never touched the inventory account.</b> The important case is <b>pass-through / drop-shipped stock</b>: goods the client buys and has shipped straight to the customer. Their cost is posted <b>directly to cost of sales</b>, correctly, because they never sit in a warehouse. <b>Cost of sales rises with no matching inventory movement</b> — exactly the shape that surfaces in line 2.</li>
+        <li><b>The cost-of-sales estimate is off</b> — where cost of sales is a <em>percentage of sales</em> rather than a measured cost, it will never agree with the goods movement by construction.</li>
+        <li><b>Something was posted to Inventory that is not stock</b> — a reclass, a correction, a plug.</li>
+      </ol>
+      <p class="reveal"><b>Ask for the inventory ledger AND the cost-of-sales ledger.</b> One without the other cannot separate case 1 from case 3, because case 1 leaves no trace in the inventory account at all.</p>
+      <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">&ldquo;The client bought nothing&rdquo; and &ldquo;there are purchases in the ledger&rdquo; are BOTH usually true</div>
+          <p>The client means <em>we did not restock the warehouse</em>. The ledger means <em>goods cost was incurred</em>. Between them sits the pass-through business, invisible from the inventory account and obvious from the cost-of-sales account. <b>Ask which one they mean before treating the discrepancy as an error</b> — and write down which vendors are pass-through, because the question returns every year.</p>
+        </div>
+      </div>
+      <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">A physical count that produced no journal entry is not in the books</div>
+          <p>When a client says they counted the stock and corrected errors, <b>check that an adjusting entry exists.</b> If the inventory account&#8217;s only movement all year is the cost-of-sales relief, then ending inventory is just opening minus cost of sales &mdash; arithmetic, not a count &mdash; and whatever the count found is still wrong on the balance sheet you are about to put on Schedule L. The count may instead have <em>set</em> the unit quantity inside the year-end entry, which is fine. <b>Ask which.</b></p>
+        </div>
+      </div>
+      <p class="reveal">🔑 <b>The sign is the whole diagnostic.</b> A <b>negative</b> line 2 is impossible &mdash; the map is wrong, go back to &#167;3. A <b>small positive</b> line 2 is the healthy outcome: the map is right, and the number is now a question about the <em>books</em> rather than about the return.</p>
     </div>
 
     <div class="subbar reveal"><span class="tag">4C</span><h3>Line 9 — the checkboxes</h3></div>
@@ -577,6 +624,76 @@
         </div>
       </div>
     </div>
+    <div class="subbar reveal"><span class="tag">5C-ii</span><h3>⚠️ Line 12 is tax the COMPANY bears</h3><span class="rt">sales tax collected is not one</span></div>
+    <div class="indent">
+      <p class="reveal"><b>An account named <code>Taxes Paid</code> is not automatically line 12.</b> The test is not the account&#8217;s name &mdash; it is <b>who the tax belonged to</b>.</p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>What it is</th><th>Line 12?</th></tr></thead>
+          <tbody>
+            <tr><td>The employer&#8217;s share of payroll taxes</td><td>✅ yes</td></tr>
+            <tr><td>Business licences, local occupational taxes, state franchise tax</td><td>✅ yes</td></tr>
+            <tr><td><b>Sales tax collected from customers and remitted</b></td><td>❌ <b>no — it was never the company&#8217;s</b></td></tr>
+            <tr><td>Federal income tax</td><td>❌ no</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="reveal"><b>The company is a collection agent, not a taxpayer.</b> The money belonged to the customer and passed through to the state. <b>Check which method the books use, and follow it:</b></p>
+      <ul class="dots reveal">
+        <li><b>Net method</b> (the normal one) — tax collected is credited to a <b>liability</b>, never to revenue. Not income, so remitting it is <b>not a deduction</b>. It never reaches the return at all.</li>
+        <li><b>Gross method</b> — tax collected sits inside revenue, so the remittance <em>is</em> deducted. <b>Both, or neither. Never one without the other.</b></li>
+      </ul>
+      <p class="reveal"><b>How to tell in one look:</b> find the year&#8217;s sales tax collected and see which account it was credited to. A <b>liability</b> account means net method.</p>
+      <p class="reveal">🔎 <b>Then ask what an amount sitting in a sales-tax expense account actually IS.</b> Under the net method a debit there did not come from remitting the tax. It is usually <b>a genuine overpayment the company bore</b> — or <b>a plug</b> somebody wrote off to make a payable balance.</p>
+      <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">An overpayment the state will refund is a RECEIVABLE, not an expense</div>
+          <p>Writing it off says the company has given up on it. <b>The deduction and the refund claim are mutually exclusive</b> — decide which, and <b>if the entity is closing, decide before the state account is closed</b>, because afterwards the choice is made for you.</p>
+        </div>
+      </div>
+      <p class="reveal"><b>Read the sales-tax accounts as a FAMILY</b>, parent and sub-accounts together. A negative (debit) balance across the family <b>is</b> the overpayment, stated by the ledger with no arithmetic needed — and neither account shows it alone.</p>
+      <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Check a clean-up entry against its own description</div>
+          <p>An entry that says it clears a balance <b>to zero</b> is a <b>testable claim</b>: recompute the balance it leaves. <em>(One was posted twice. The tell was that with one copy the family nets to zero — and with two it lands on the opposite sign. The entry failed its own stated purpose by exactly one copy of itself.)</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">5C-iii</span><h3>🛑 Distributions hide inside ONE capital account per shareholder</h3></div>
+    <div class="indent">
+      <p class="reveal">The books almost always carry <b>a single equity account per shareholder</b>, holding contributions and distributions netted together. That is <b>normal, correct bookkeeping</b> — nothing requires the split, and the balance sheet only ever needs the net.</p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>Where it goes</th><th>Net enough?</th></tr></thead>
+          <tbody>
+            <tr><td>Schedule L equity</td><td>✅ yes — one figure</td></tr>
+            <tr><td><b>Schedule K line 16d</b> · <b>K-1 box 16 code D</b></td><td>❌ <b>gross distributions</b></td></tr>
+            <tr><td><b>Schedule M-2 line 7</b></td><td>❌ <b>gross</b> — its own line, <em>after</em> the combine</td></tr>
+            <tr><td><b>Form 7203</b></td><td>❌ <b>both</b>, and distributions come off basis BEFORE losses (&#167;12)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="reveal">🔑 <b>So you cannot prepare an S-corp return from the balance sheet.</b> Open the shareholder&#8217;s ledger and <b>total the debits and the credits separately.</b> A movement of <code>+65,562</code> is equally consistent with <em>contributed 65,562, took nothing</em> and with <em>contributed 84,000, took 18,437</em> — and those two produce a different Form 7203, a different M-2 and a different K-1.</p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">5C-iv</span><h3>⚠️ A debit in a capital account is not automatically a distribution</h3></div>
+    <div class="indent">
+      <p class="reveal">Total the debits, then <b>look at them</b>. They divide into three kinds, and only the last two are distributions:</p>
+      <ol class="qlist reveal">
+        <li><b>ROUND TRIPS — money in and straight back out.</b> Look for an outflow beside an inflow of similar size within a few days, or the same day. A deposit of 19,500 followed three days later by a withdrawal of 19,200 is a <b>contribution of 300</b> — not a contribution of 19,500 plus a distribution of 19,200. <b>Netting those is right.</b></li>
+        <li><b>Transfers to the owner&#8217;s personal accounts</b> with no matching inflow. Distributions.</li>
+        <li><b>PERSONAL SPENDING on the company card</b> — groceries, fuel, a restaurant, a personal subscription. 🔑 <b>These settle the question</b>, because they cannot be netted against anything: <b>nobody round-trips a supermarket run.</b> A bookkeeper who posts them to the owner&#8217;s equity account rather than an expense account <b>has already classified them correctly</b> — and kept a personal expense out of your deductions.</li>
+      </ol>
+      <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">A blank line 7 last year is NOT precedent</div>
+          <p>&#167;3 says repeat the prior year&#8217;s conventions — but read what the convention actually <em>was</em>. <b>&ldquo;The prior return showed no distributions&rdquo; is a RESULT, not a convention.</b> The convention behind it may have been <em>net the round trips</em>, which is a rule you can apply again — and applying it to a different year can correctly produce a very different answer.</p>
+          <p><b>A start-up year and a wind-down year are economically opposite, and the return should show it.</b> An owner funding a new company is a large net contributor whose few outflows are usually round trips; the same owner in the closing year is drawing money out systematically and buying groceries with it. <b>Same account, same convention, opposite result.</b> Do not carry a zero forward because last year had one, and <b>do not treat the difference as evidence that one of the two returns is wrong.</b></p>
+        </div>
+      </div>
+    </div>
+
     <div class="subbar reveal"><span class="tag">5D</span><h3>Depreciation — line 14</h3></div>
     <div class="indent">
       <ul class="dots reveal">
@@ -605,7 +722,25 @@
     </div>
   </section>
 
-  <!-- ==================== §7 ==================== -->
+    <div class="subbar reveal"><span class="tag">6A</span><h3>🛑 The §163(j) pair — an UNANSWERED question deletes your interest deduction</h3></div>
+  <div class="indent">
+    <p class="reveal"><b>This is the one Schedule B answer that changes a number on page 1, and it fails by omission rather than by being wrong.</b></p>
+    <p class="reveal">Two consecutive questions cover the <b>&#167;163(j) business-interest limitation</b> — find them by wording, the numbering moves, but on the 2024 form they are <b>9</b> and <b>10</b> (with parts <b>a</b> and <b>b</b>):</p>
+    <ul class="dots reveal">
+      <li><b>the election question</b> — <em>was a &#167;163(j) election in effect for a real property or farming business?</em> → normally <b>No</b></li>
+      <li><b>the exemption question</b> — <em>(a) are average annual gross receipts under the &#167;448(c) threshold, and it is not a tax shelter?</em> → for these clients <b>Yes</b>; <em>(b) is the interest only from an electing real-property / farming / utility business?</em> → normally No. The form says it outright: <b>if &ldquo;Yes,&rdquo; the corporation is not required to file Form 8990.</b></li>
+    </ul>
+    <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Leave them blank and the deduction silently disappears</div>
+        <p>The software assumes the limitation applies, wants <b>Form 8990</b>, and <b>the interest expense never reaches page 1 line 13.</b> Nothing errors. Nothing is flagged. <b>The return is just smaller than it should be.</b></p>
+        <p>⚠️ <b>You will meet this from the other direction.</b> Clicking the line 13 <em>Interest</em> field does not open a plain input — it opens a worksheet, and this block is inside it. <b>That is not a detour to click past on the way to typing a number: it is the gate.</b></p>
+      </div>
+    </div>
+    <p class="reveal"><b>The general lesson is worth more than the two questions:</b> some Schedule B answers are not disclosure — <b>they are switches.</b> Treat an unanswered question as a deduction you have not yet claimed, and <b>re-check page 1 after answering.</b></p>
+  </div>
+
+<!-- ==================== §7 ==================== -->
   <section class="doc" id="s7">
     <div class="shead reveal"><span class="schip">§7</span><h2>Schedule K — what travels to the owners</h2></div>
     <p class="slede reveal">Schedule K is the company's <b>total</b> of every item the owners report themselves. Each K-1 is one owner's slice of it.</p>
@@ -639,6 +774,43 @@
         <li>🔑 <b>The heading says "per Books" and it means it.</b> If the books did not record something, Schedule L shows the books' figure and the difference goes on Schedule M-1. Do not "correct" it to tax figures.</li>
         <li><b>Equity mapping is a convention, not a calculation.</b> How capital accounts split between capital stock, paid-in capital and retained earnings is whatever the prior return did. Repeat it, or the two years cannot be compared.</li>
       </ol>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">8A</span><h3>⚠️ The named shareholder accounts do NOT map to the line their name suggests</h3></div>
+    <div class="indent">
+      <p class="reveal">The books carry <b>one equity account per shareholder, under that person&#8217;s name</b>. The form has no such line, so every return decides where they go — and <b>the obvious guesses are usually not what the prior return did.</b></p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>Where they could go</th><th>What choosing it ASSERTS</th></tr></thead>
+          <tbody>
+            <tr><td class="for">19</td><td><b>Loans from shareholders</b> — the money is <b>debt</b>. It supports losses through <b>debt basis</b>, and it is a liability the company owes back</td></tr>
+            <tr><td class="for">23</td><td><b>Additional paid-in capital</b> — contributed capital, shown as its own equity line</td></tr>
+            <tr><td class="for">24</td><td><b>Retained earnings</b> — the named accounts are <b>swept in</b> with accumulated earnings, and the form shows no separate contribution line at all</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="reveal">🔑 <b>Read the prior return&#8217;s lines 19, 22, 23 and 24 before filling any of them</b> — and read the prior year&#8217;s <b>K-1 box for <em>Loans from shareholder</em></b> as the cross-check. A blank line 19 <b>and</b> blank K-1 loan boxes together say the money was <b>contributed capital, not debt</b> — which also settles &#167;12&#8217;s first question for you.</p>
+      <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The sweep-into-24 convention has a consequence on Schedule M-2</div>
+          <p>If the prior return put the shareholder accounts inside <b>line 24</b>, then line 24 is no longer &ldquo;accumulated earnings&rdquo; — it is <em>earnings plus contributed capital</em>. For it to keep agreeing with <b>M-2 line 8</b>, the contributions have to run through <b>M-2 line 3, other additions</b>. <b>Check whether the prior return did that.</b></p>
+          <p><b>If it did, repeat it — and know it is not what the AAA is meant to hold.</b> Capital contributions increase <em>basis</em>, not the AAA (&#167;10). Raise it with Lilian rather than fixing it silently: consistency with the prior year is itself a tax position, and the difference stays invisible until the company makes a <b>distribution</b>, which is the one thing the AAA actually decides.</p>
+        </div>
+      </div>
+      <p class="reveal"><em>(Pilot: the prior return showed capital stock $1,000, line 23 blank, line 19 blank, and two shareholders&#8217; entire capital inside line 24. A session assuming line 23 would have produced a Schedule L that did not balance; one assuming line 19 would have turned equity into debt and changed both shareholders&#8217; basis.)</em></p>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">8B</span><h3>A refundable deposit that &ldquo;disappears&rdquo; is usually a bookkeeping error</h3></div>
+    <div class="indent">
+      <p class="reveal">When an asset like a <b>security deposit</b> goes to zero with no matching expense line, the instinct is to treat it as written off. <b>Ask what actually happened first</b> — the common answer is that nothing did. A deposit <b>transferred to a new lease with the same landlord</b> is still an asset.</p>
+      <p class="reveal"><b>Find the credit side before concluding anything</b> — pull the ledger and see what it was written off against. If it went to <b>rent</b>, then rent, the loss, Schedule L&#8217;s other-current-assets line and total assets are all carrying it.</p>
+      <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Then STOP and take it to Lilian — do not reverse it yourself</div>
+          <p>Whether a deposit that moved to a new lease is an asset or an expense is a <b>position</b>, and positions are hers. A session that finds the entry, reasons correctly that the deposit still exists, and quietly posts the reversal <b>has changed a filed-return figure on its own authority.</b> Present the entry, the facts and the consequence; let her rule; then compute from her answer.</p>
+          <p><em>(This happened: a session recommended reversing exactly such an entry, and Lilian — who knew who had made it and why — ruled that it stood. The analysis was sound and the decision was not the session&#8217;s to make.)</em></p>
+        </div>
+      </div>
     </div>
 
     <div class="subbar reveal"><span class="tag">§9</span><h3>Schedule M-1 — where books and return disagree</h3><span class="rt">the bridge</span></div>
