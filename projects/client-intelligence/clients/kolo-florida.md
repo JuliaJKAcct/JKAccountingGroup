@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** ⚠️ **WINDING DOWN — the company is closing and is no longer our client** (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-14
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,10 +34,13 @@
 - **Our engagement (services we provide):** Bookkeeping (Quarterly), Sales Tax (Monthly filing), Income Tax (Form 1120-S), 1099 Preparation, Annual Report. **Payroll is NOT a firm service for this client** — the client self-manages payroll through Gusto _(Double client properties, 2026-08-01)_
 - **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online — but ⚠️ **not reachable through Double.**
-  `get_client(706626)` returns `platform: "none"` _(checked 2026-08-14)_, so Double's financial
-  reports refuse the client outright (*"This tool is unavailable for None clients"*). The books have
-  to be opened in QuickBooks itself. **This records the state on the date checked and nothing more** —
-  whether the connection was removed during the wind-down or never existed was not investigated.
+  `get_client(706626)` returns `platform: "none"` _(re-checked 2026-08-17)_, so Double's financial
+  reports refuse the client outright (*"This tool is unavailable for None clients"*) — verified by
+  calling one, not inferred from the property. **The cause is settled: the QuickBooks was
+  disconnected when the company closed** _(Lilian, 2026-08-17)_, so this is the wind-down and not a
+  configuration fault to chase. ⚠️ **There is no second route.** The firm's own
+  `Intuit_QuickBooks` MCP connector is authorised on **JK Accounting Group's** books, not on a
+  client's — checked the same day. **Every remaining figure has to be exported by Lilian by hand.**
 
 ## 2. Contacts
 
@@ -101,17 +104,37 @@ the actual details.
   return has to be exported by Lilian by hand.** The work left is the **final 2025 Form 1120-S**
   and the account closures; **nothing here is a live recurring obligation** without checking it
   against the wind-down list in §6 first.
-- 🧾 **NO merchandise was bought in 2025 — but a PHYSICAL INVENTORY COUNT was taken**, because the
-  prior inventory carried errors _(Lilian, 2026-08-17)_. **This is the explanation of the ~$3,779
-  that falls out of Form 1125-A line 2**, and it is why that figure must not be read as purchases:
-  in the identity, an inventory increase not explained by cost of sales has nowhere else to
-  surface. **Where the count adjustment was POSTED decides whether it appears there at all** — an
-  adjustment run against COGS raises line 7 and lowers line 8 by the same amount and nets to zero;
-  one run against any other account shows up as phantom purchases. The ~$1,344 goods-side residual
-  is that second signature. ⚠️ **Line 9a is `Cost`, so the distinction matters**: correcting
-  *quantities* is deductible through COGS, but writing *value* down below cost is not deductible on
-  the cost method. Needs the inventory ledger to tell them apart.
-- 💰 **The Security Deposit was NOT lost — it is still an asset, and the books are wrong.** The
+- 🧾 **The 1125-A "purchases" figure is REAL, and it is the pass-through door business — settled
+  from the 2025 general ledger, 2026-08-17.** No inventory merchandise was bought in 2025 (Lilian),
+  and the `Inventory` account has **exactly one entry all year**: the 31-Dec journal relieving it
+  for units sold. But `COGS` carries **two invoices from `United Porte`**, in April and August,
+  posted **straight to cost of sales without ever touching Inventory** — which is correct for goods
+  the client resells as an intermediary and never warehouses (the door line, §5). Together they are
+  **exactly** the goods-side residual in Form 1125-A line 2. **Both statements were true**: the
+  owner meant *we did not restock*, the ledger meant *goods cost was incurred*. **Nothing needs
+  correcting, and line 2 is right.** The rest of line 2 is the artifact — Shopify selling fees plus
+  the clearing account's growth, both consequences of the 2024 convention (§5 rule 1/2).
+- ⚠️ **The 2025 PHYSICAL INVENTORY COUNT never reached the books.** Lilian had one taken because the
+  prior inventory carried errors _(2026-08-17)_ — but ending inventory is **opening minus cost of
+  sales to the cent**, pure arithmetic with no adjusting entry anywhere. So either the count was
+  used to *set* the unit quantity inside the year-end journal (its description does cite a unit
+  count), or **the errors it found are still sitting in the figure that goes on Schedule L**. Not
+  established — ask before the balance sheet is transcribed. ⓘ If an adjustment is ever posted,
+  **line 9a is `Cost`**, so it matters which kind: correcting *quantities* is deductible through
+  COGS; writing *value* down below cost is **not** deductible on the cost method.
+- ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
+  thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
+  bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
+  `Meals`, on the post-TCJA reading that §274(n) reaches food and beverages provided on premises;
+  treating it as office supplies at 100% is the more aggressive alternative. **Lilian decides** —
+  it moves M-1 line 3b, Schedule K 16c, M-2 line 5 and page 1 line 20.
+- 💰 **The Security Deposit write-off is CONFIRMED and must be reversed.** The 2025 general ledger
+  names it: `12/31/2025 · Journal Entry · "Move security deposit to rent expense" · 12,666.66`,
+  landing in **Store Rent**. Reverse it — **Dr Security Deposit / Cr Store Rent** — because the
+  deposit still exists (next bullet). Rent falls to **68,063.06**, book net income improves to
+  **(75,426.08)**, and Schedule L carries the deposit again on **line 6**, where the 2024 return
+  put it. _(2026-08-17.)_
+- 💰 **Why it is still an asset.** The
   landlord kept it when the company moved to a **different warehouse belonging to the same
   landlord**; it became the deposit on the new lease and is refundable when they vacate _(Lilian,
   2026-08-17)_. The 2025 balance sheet shows it at **zero**, so something wrote it off. **That is a
@@ -346,6 +369,21 @@ the actual details.
   physical inventory count was taken** because the prior inventory carried errors — which is the
   real explanation of the ~$3,779 that fell out of 1125-A line 2, and the reason that figure is
   **not** evidence of purchases. _(Worked by Lilian.)_
+- 2026-08-17 — **The 2025 general ledger arrived and settled every remaining figure.** ⚠️ The first
+  export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; the two were
+  compared account by account before anything was relied on — **identical to the cent**, because
+  this client has no receivables and no payables — and Lilian re-sent the accrual copy anyway.
+  What it settled: the security-deposit write-off went to **Store Rent** and must be reversed; the
+  1125-A line-2 residual is **two `United Porte` invoices booked straight to cost of sales**, the
+  pass-through door line, so **nothing needs correcting and both "we bought nothing" and the
+  ledger were right**; **Mykola took 18,436.62 of distributions** against 83,999.00 of
+  contributions, which the netted account had been hiding; **Ihor's account did not move at all**;
+  and `Refreshments (Tax Review)` is **Primo Water office water and coffee**, which makes it a
+  judgment call rather than a fact. It also surfaced what the books do **not** contain: **no entry
+  anywhere for the physical inventory count.** All nine forms were recomputed from it and delivered
+  in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
+  pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
+  ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
@@ -372,24 +410,24 @@ exported by Lilian.** The company has closed and its QBO is disconnected (§1), 
 (*"This tool is unavailable for None clients"*), and the firm's own Intuit QuickBooks connector is
 authorised on **JK Accounting Group**, not on a client. There is no read path left.
 
-- [ ] **2025 General Ledger** (or the five accounts below) — requested 2026-08-17. Closes four of
-      the five rows under it in one export.
-- [ ] **`Security Deposit` 2025 ledger — WHAT ACCOUNT WAS IT CREDITED TO?** The facts are now
-      settled (§5: the landlord carried it to the new warehouse lease, so it is **still an asset**)
-      and the books are wrong to show zero. If the credit went to `Rent`, **six figures move** —
-      page 1 lines 11/21/22, Schedule L lines 6/15/24, Box F, M-1 line 1 and M-2 lines 4/6/8.
-- [ ] **`Inventory` 2025 ledger** — to find the physical-count adjustment and, crucially, **what it
-      was posted against** (§5).
-- [ ] **`Mykola Kozlovskiy` equity 2025 ledger — GROSS debits and credits, not the net.** Lilian
-      confirmed 2026-08-17 that there **were** distributions in 2025, netted inside the account.
-      Feeds Schedule K 16d, K-1 box 16D, M-2 line 7 and Form 7203.
-- [ ] **`Ihor Naum` equity 2025 ledger** — the balance did not move; confirm there were no
-      offsetting movements inside it.
+- [x] **2025 General Ledger — RECEIVED 2026-08-17**, and it closed four rows at once. ⚠️ The first
+      export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; every account
+      total matched to the cent (no receivables, no payables), and Lilian re-sent the accrual copy.
+      Checked, not assumed.
+- [x] **`Security Deposit` → credited to Store Rent** by a 31-Dec journal entry. Reverse it (§5).
+- [x] **`Inventory` → one entry all year**, the cost-of-sales relief. The line-2 residual is two
+      `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ⚠️ But
+      the physical count never reached the books (§5).
+- [x] **`Mykola Kozlovskiy` → 79 movements: 83,999.00 in, 18,436.62 out.** **There WERE
+      distributions**, netted inside the account exactly as suspected. Feeds Schedule K 16d, K-1
+      box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution
+      is far below basis, so no capital gain.
+- [x] **`Ihor Naum` → zero movement in 2025.** Beginning balance only.
+- [ ] **Is `Refreshments (Tax Review)` a meals account?** ⓘ **Now a decision, not a question** —
+      it is Primo Water office water/coffee (§5). Firm's working position is 50%; Lilian confirms.
 - [ ] **WHEN did Ihor Naum leave?** ⚠️ **The 2024 return does not settle it and contradicts itself**
       (§5). Not a QuickBooks question. Governs only Box I, the K-1s and Form 7203 — every
       company-level figure is identical in all three scenarios, so it does **not** block the rest.
-- [ ] **Is `Refreshments (Tax Review)` a meals account?** If so it joins the 50% disallowance in the
-      Schedule M-1 adjustment. Not answerable from the books — ask what the spend was.
 
 **Closed 2026-08-17 by reading the 2024 filed return** (through the redactor, that one year only):
 

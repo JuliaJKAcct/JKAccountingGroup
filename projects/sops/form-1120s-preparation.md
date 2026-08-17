@@ -175,7 +175,27 @@ and that is deliberate — see §3.
 - [ ] **Each shareholder's ownership percentage**, and whether it changed during the year.
 - [ ] **Whether the shareholders put money in or took money out** during the year, and whether
       those were **capital contributions** or **loans** — they are not the same thing (§12).
+      ⚠️ **Ask for the GROSS figures, not the account's net movement.** Books normally carry one
+      equity account per shareholder and net everything inside it, so `+65,562` is equally
+      consistent with *contributed 65,562, took nothing* and with *contributed 84,000, took
+      18,437*. **Those two produce the same Schedule L and different everything else** —
+      Schedule K 16d, the K-1's box 16 code D, M-2 line 7 and Form 7203 all need the two figures
+      separately. Schedule L is the only one the net satisfies, which is why the gap survives so
+      long unnoticed.
+- [ ] **The GENERAL LEDGER for the year** — the one report that answers "what actually happened
+      in this account", which no P&L or balance sheet can. Get it once, for every account, rather
+      than returning for accounts one at a time.
 - [ ] **Confirmation that Form 7004 (the extension) was filed**, if you are past 15 March.
+
+> ⚠️ **Check the BASIS printed on every export, and check that they agree with each other.**
+> QuickBooks reports carry cash-or-accrual as a per-report toggle, and the footer is the only
+> place it is stated. A general ledger exported on **cash** while the P&L and balance sheet were
+> exported on **accrual** is a different set of books, and nothing in the file warns you.
+> **Compare account totals across the two before relying on either.** They coincide only for a
+> client with no receivables and no payables — which is common enough in this practice to make
+> the mismatch look harmless right up until the year it is not. And keep §6's separate point in
+> view: **the report's basis is a toggle; the entity's tax accounting method is what was elected
+> and filed.** The two answer different questions.
 
 ### Intake questions for the client
 
@@ -345,14 +365,39 @@ decomposed to **~$2,435 of artifact** — selling fees plus the clearing account
 should have fallen by exactly the cost of goods sold. A residual says one of three things, and they
 are worth telling apart:
 
-1. **Something really was bought** — a small reorder, freight capitalised into stock, a customer
-   return put back on the shelf.
+1. **Goods really were bought — and often they never touched the inventory account at all.** The
+   important case is **pass-through / drop-shipped stock**: goods the client buys and has shipped
+   straight to the customer. Their cost is posted **directly to cost of sales**, correctly, because
+   they never sit in a warehouse. **Cost of sales therefore rises with no matching inventory
+   movement — which is exactly the shape that surfaces in line 2.** Also here: a small reorder,
+   freight capitalised into stock, a customer return put back on the shelf.
 2. **The cost-of-sales estimate is off** — where cost of sales is a *percentage of sales* rather
    than a measured cost, it will never agree with the goods movement by construction.
 3. **Something was posted to Inventory that is not stock** — a reclass, a correction, a plug.
 
-**Ask for the inventory account's ledger detail.** The residual is small; the reason it exists is
-not, because it tells you which of the three the books are doing.
+**Ask for the inventory account's ledger detail — and the cost-of-sales account's as well.** One
+without the other cannot separate case 1 from case 3, because case 1 leaves no trace in the
+inventory account at all. The residual is small; the reason it exists is not.
+
+> 🗣️ **"The client bought nothing this year" and "there are purchases in the ledger" are BOTH
+> usually true, and neither person is wrong.** The client means *we did not restock the warehouse*.
+> The ledger means *goods cost was incurred*. Between them sits the pass-through business, which
+> is invisible from the inventory account and obvious from the cost-of-sales account. **Ask which
+> one they mean before you treat the discrepancy as an error** — and, once resolved, write down
+> which vendors are pass-through, because the same question returns every year.
+>
+> _(Pilot: the entire ~$1,344 goods-side residual turned out to be **two invoices from one vendor**,
+> booked straight to cost of sales, for the product line the client resells as an intermediary. The
+> owner's "nothing was purchased" was accurate about her own inventory and the ledger was accurate
+> about the return. Nothing needed correcting.)_
+
+⚠️ **A physical count that produced no journal entry is not in the books.** When a client says
+they counted the stock and corrected errors, check that an adjusting entry actually exists. If the
+inventory account's only movement all year is the cost-of-sales relief, then **ending inventory is
+just opening inventory minus cost of sales** — arithmetic, not a count — and whatever the count
+found is still wrong on the balance sheet you are about to put on Schedule L. The count may
+instead have been used to *set* the unit quantity inside the year-end entry, which is fine; **ask
+which, rather than assuming the count reached the books.**
 
 🔑 **The sign is the alarm, and this is the whole diagnostic.** A **negative** line 2 is impossible
 and means the map is wrong — go back to §3. A **small positive** line 2 is the healthy outcome:
