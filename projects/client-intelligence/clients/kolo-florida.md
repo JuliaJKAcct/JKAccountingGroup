@@ -94,11 +94,30 @@ the actual details.
      section. Keep live, consequential work at the top and let settled or
      historical items sink. See .claude/skills/client-intelligence/SKILL.md. -->
 
-- 🛑 **THE COMPANY IS CLOSING — this is a wind-down, not an ongoing engagement.** Lilian
-  (2026-08-11): Kolo is **no longer our client**; the company is going to close. Over the coming
-  days the work is **closing the accounts** — the Florida sales-tax account, the Gusto
-  subscription, and the rest of the systems in §3. **Nothing here should be treated as a live
-  recurring obligation** without checking it against the wind-down list in §6 first.
+- 🛑 **THE COMPANY HAS CLOSED — and with it went the only read path to the books.** Lilian
+  (2026-08-11): Kolo is **no longer our client**; the company is going to close. **Closed as of
+  2026-08-17**, and **QuickBooks was disconnected as part of it** — so `platform: "none"` is not a
+  configuration glitch to chase, it is the wind-down (§1). **Every remaining figure for the 2025
+  return has to be exported by Lilian by hand.** The work left is the **final 2025 Form 1120-S**
+  and the account closures; **nothing here is a live recurring obligation** without checking it
+  against the wind-down list in §6 first.
+- 🧾 **NO merchandise was bought in 2025 — but a PHYSICAL INVENTORY COUNT was taken**, because the
+  prior inventory carried errors _(Lilian, 2026-08-17)_. **This is the explanation of the ~$3,779
+  that falls out of Form 1125-A line 2**, and it is why that figure must not be read as purchases:
+  in the identity, an inventory increase not explained by cost of sales has nowhere else to
+  surface. **Where the count adjustment was POSTED decides whether it appears there at all** — an
+  adjustment run against COGS raises line 7 and lowers line 8 by the same amount and nets to zero;
+  one run against any other account shows up as phantom purchases. The ~$1,344 goods-side residual
+  is that second signature. ⚠️ **Line 9a is `Cost`, so the distinction matters**: correcting
+  *quantities* is deductible through COGS, but writing *value* down below cost is not deductible on
+  the cost method. Needs the inventory ledger to tell them apart.
+- 💰 **The Security Deposit was NOT lost — it is still an asset, and the books are wrong.** The
+  landlord kept it when the company moved to a **different warehouse belonging to the same
+  landlord**; it became the deposit on the new lease and is refundable when they vacate _(Lilian,
+  2026-08-17)_. The 2025 balance sheet shows it at **zero**, so something wrote it off. **That is a
+  journal entry to reverse, not a Schedule M-1 adjustment** — a refundable deposit is an asset for
+  books *and* for tax, so there is no book/tax difference. If the credit went to `Rent`, rent and
+  the loss are both overstated by the same amount and **six figures on the return move**.
 - ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
   30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
   cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
@@ -306,6 +325,27 @@ the actual details.
   simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
   **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
   Lilian.)_
+- 2026-08-17 — **The 2024 filed return was read a second time and closed six open questions at
+  once** (through the redactor, that one year only): 1125-A line 9a is **Cost**; ownership was
+  **50/50**; the shareholder money is **contributed capital, not loans** (Schedule L line 19 blank
+  *and* both K-1 loan boxes blank); and the header constants. It also produced the Schedule L
+  equity convention that a session would otherwise have guessed wrong — **capital stock 1,000 with
+  both shareholders' capital swept into line 24 Retained earnings**, which forces the contributions
+  through **M-2 line 3** for L-24 to keep agreeing with M-2-8. All four are now §5/§8A material in
+  the [SOP](../../sops/form-1120s-preparation.md). ⚠️ **What it did NOT settle is when Ihor Naum
+  left** — his 2024 K-1 is marked **`Final`** while box H shows him still holding **50 of 100
+  shares at 31 Dec 2024** and box G gives him a full **50%**. The two point opposite ways. _(Worked
+  by Lilian. Per her standing instruction the 2024 return is **not** being reviewed — this is §3's
+  build-the-map-from-the-prior-year read, and the ambiguity is reported because 2025 inherits it.)_
+- 2026-08-17 — **Three facts from Lilian that change the return, and one that closes the client.**
+  (a) **The company has CLOSED**, and its QuickBooks is disconnected as a result — so there is no
+  longer any read path to the books from a session (§1, Outstanding). (b) **The security deposit
+  was never lost**: the landlord carried it to a *new* warehouse under the same landlord and it is
+  refundable on exit — so it is **still an asset** and the books zeroing it is an error to correct
+  with a journal entry, not a deduction (§5). (c) **No merchandise was bought in 2025, but a
+  physical inventory count was taken** because the prior inventory carried errors — which is the
+  real explanation of the ~$3,779 that fell out of 1125-A line 2, and the reason that figure is
+  **not** evidence of purchases. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
@@ -326,19 +366,42 @@ the actual details.
 <!-- This exact heading is what the client-card render looks up. Renaming it makes
      every row below vanish from the team's view. -->
 
-**Blocking the 2025 Form 1120-S** — asked of Lilian 2026-08-14, none answered yet:
+**Blocking the 2025 Form 1120-S** — ⚠️ **QuickBooks is gone, so every remaining figure has to be
+exported by Lilian.** The company has closed and its QBO is disconnected (§1), confirmed
+2026-08-17 from both routes: Double returns `platform: "none"` and refuses the reports outright
+(*"This tool is unavailable for None clients"*), and the firm's own Intuit QuickBooks connector is
+authorised on **JK Accounting Group**, not on a client. There is no read path left.
 
-- [ ] **The 2024 depreciation schedule / Form 4562 detail.** Nothing was recorded in 2025 (§5) and
-      2025 is a full year for all three assets, so the deduction has to be computed — but the method
-      and lives are only on that schedule. **This is what blocks page 1 of the return.**
-- [ ] **The two shareholders' ownership percentages**, from the 2024 Schedule K-1s — the loss cannot
-      be allocated, and basis cannot be tested, without them (§5).
-- [ ] **Are the shareholder equity accounts capital contributions or loans?** Decides whether the
-      accumulated losses are deductible or suspended (§5).
-- [ ] **What happened to the Security Deposit** during 2025 (§5).
-- [ ] **Which valuation-method box was ticked on line 9a** of the 2024 Form 1125-A — 2025 must match.
+- [ ] **2025 General Ledger** (or the five accounts below) — requested 2026-08-17. Closes four of
+      the five rows under it in one export.
+- [ ] **`Security Deposit` 2025 ledger — WHAT ACCOUNT WAS IT CREDITED TO?** The facts are now
+      settled (§5: the landlord carried it to the new warehouse lease, so it is **still an asset**)
+      and the books are wrong to show zero. If the credit went to `Rent`, **six figures move** —
+      page 1 lines 11/21/22, Schedule L lines 6/15/24, Box F, M-1 line 1 and M-2 lines 4/6/8.
+- [ ] **`Inventory` 2025 ledger** — to find the physical-count adjustment and, crucially, **what it
+      was posted against** (§5).
+- [ ] **`Mykola Kozlovskiy` equity 2025 ledger — GROSS debits and credits, not the net.** Lilian
+      confirmed 2026-08-17 that there **were** distributions in 2025, netted inside the account.
+      Feeds Schedule K 16d, K-1 box 16D, M-2 line 7 and Form 7203.
+- [ ] **`Ihor Naum` equity 2025 ledger** — the balance did not move; confirm there were no
+      offsetting movements inside it.
+- [ ] **WHEN did Ihor Naum leave?** ⚠️ **The 2024 return does not settle it and contradicts itself**
+      (§5). Not a QuickBooks question. Governs only Box I, the K-1s and Form 7203 — every
+      company-level figure is identical in all three scenarios, so it does **not** block the rest.
 - [ ] **Is `Refreshments (Tax Review)` a meals account?** If so it joins the 50% disallowance in the
-      Schedule M-1 adjustment.
+      Schedule M-1 adjustment. Not answerable from the books — ask what the spend was.
+
+**Closed 2026-08-17 by reading the 2024 filed return** (through the redactor, that one year only):
+
+- [x] **2024 Form 1125-A line 9a → `(i) Cost`.** 2025 must match.
+- [x] **Ownership 2024 → 50/50**, 50 shares each of 100.
+- [x] **Contributions or loans → CONTRIBUTIONS.** Schedule L line 19 blank *and* both K-1s' *Loans
+      from shareholder* boxes blank. Stock basis, not debt basis.
+- [x] **2024 depreciation → 1,752 on the filed Form 4562**, equal to the book figure; 2025 is 5,415
+      per ATX, so Schedule L 10b is 7,167.
+- [x] Header constants: business activity code **449129**, S election effective **1/1/2024**,
+      incorporated **5/30/2024**, and **2024 was a SHORT first year** (5/30–12/31), which is why its
+      beginning balance sheet is all zeros.
 
 **Standing, not blocking:**
 
