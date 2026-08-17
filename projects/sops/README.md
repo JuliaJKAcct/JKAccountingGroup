@@ -35,9 +35,9 @@ sops/
 ├── business-tax-engagement-letter-standard.md   ← Tax Return: the firm's business tax-prep engagement-letter standard — backs the interactive generator embedded in the Knowledge Hub (proposal-tool)
 ├── assets/                                      ← master templates (S-Corp COA .xlsx · blank Child & Dependent Care Provider Statement .pdf)
 ├── ecoorganic-bookkeeping-review.md             ← Ecoorganic monthly bookkeeping rules + review checklist
-├── ecoorganic-ct-sales-tax.md                   ← Ecoorganic monthly CT sales tax (OS-114 zero return, myconneCT)
 ├── atman-parts-tx-sales-tax.md                  ← Atman Parts monthly TX sales tax (eSystems/WebFile; the eBay marketplace rule)
 ├── atman-parts-tx-sales-tax.html                ← ↑ Atlas render
+├── ecoorganic-ct-sales-tax.md                   ← Ecoorganic monthly CT sales tax (OS-114 zero return, myconneCT)
 ├── magnum-152-bookkeeping-review.md             ← Magnum 152 monthly bookkeeping & close runbook (rendered in the Hub; exemplar for Maria's clients)
 ├── sunoma-bookkeeping-review.md                 ← Sunoma Inc monthly bookkeeping & close runbook (two-store pawn; Hub-rendered)
 ├── mobilesource-bookkeeping-review.md           ← Mobilesource Corp monthly bookkeeping & close runbook (phone sales/repairs; Hub-rendered)

@@ -226,6 +226,14 @@ in that folder.
   are not fully sure what she means, stop and ask a clarifying question instead of
   assuming** — she has explicitly asked to be asked. (This rides on top of the rule
   above: still follow whichever language she actually writes in.)
+  ⚠️ **And the ask-don't-guess half is NOT only about English — she dictates.** Lilian
+  often uses voice-to-text, and *"muchas veces no funciona bien y escribe mal lo que digo"*
+  **in any language, Spanish included.** So a word that simply does not parse is usually a
+  **mis-transcription, not a term you don't know** — and it can look like a perfectly
+  ordinary word, which is what makes it dangerous. **Ask; never interpret it, and never
+  write it into the repo as if it meant something.** _(2026-08-17: "Dulce" in a sentence about
+  a client's tax return was **"Schedule C"**. Guessing at a name there would have put a
+  fictional person into a client file.)_
 - **Drafting a message to a client: CORRECT the draft, don't rewrite it.** When Julia or
   Lilian hands you a draft to fix, translate, or shorten, the deliverable is **their**
   message with the mistakes repaired — their sentences, their order of ideas, minimally

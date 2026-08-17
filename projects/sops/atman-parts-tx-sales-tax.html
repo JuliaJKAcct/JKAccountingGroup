@@ -457,19 +457,26 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
    on a team-facing page: a login, a password doc, a walkthrough video, a
    client file. Always a designed button + caption — never a bare URL, never
    the secret itself. See sop-authoring/SKILL.md. */
-.vault{background:var(--paper); border:1px solid var(--bronze-300); border-radius:16px;
+.dvault{background:var(--paper); border:1px solid var(--bronze-300); border-radius:16px;
   padding:clamp(18px,2.6vw,24px); box-shadow:var(--shadow-sm); margin:20px 0;}
-:root[data-theme="dark"] .vault{border-color:rgba(207,162,104,0.42);}
-.vault > .ph{display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:11px;
+:root[data-theme="dark"] .dvault{border-color:rgba(207,162,104,0.42);}
+.dvault > .ph{display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:11px;
   letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:14px;}
-.vault > .ph svg{width:15px; height:15px; flex:0 0 auto; stroke:currentColor; fill:none; stroke-width:2;
+.dvault > .ph svg{width:15px; height:15px; flex:0 0 auto; stroke:currentColor; fill:none; stroke-width:2;
   stroke-linecap:round; stroke-linejoin:round;}
 .vbtn{position:relative; display:flex; align-items:center; gap:14px; text-decoration:none;
   background:var(--accent); color:#fff; border-radius:12px; padding:14px 18px;
   box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out),
   background-color .18s var(--ease-out);}
 .vbtn:hover, .vbtn:focus-visible{background:var(--accent-2); transform:translateY(-1px); box-shadow:var(--shadow-md);}
+/* Dark has THREE states here: the toggle, and the OS default that stamps nothing.
+   --accent flips to bronze in both, so white label text must flip in both too —
+   the un-stamped state is the one most viewers actually see. */
 :root[data-theme="dark"] .vbtn{color:var(--teal-950);}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .dvault{border-color:rgba(207,162,104,0.42);}
+  :root:not([data-theme="light"]) .vbtn{color:var(--teal-950);}
+}
 .vbtn .dicon{width:26px; height:26px; flex:0 0 auto;}
 .vbtn .vt{display:flex; flex-direction:column; gap:2px; min-width:0;}
 .vbtn .vt b{font-family:var(--sans); font-size:15px; font-weight:600; line-height:1.3; color:inherit;}
@@ -486,8 +493,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   padding:8px 11px; border-radius:9px; box-shadow:var(--shadow-md); pointer-events:none;
   opacity:0; transition:opacity .16s var(--ease-out), transform .16s var(--ease-out);}
 .vbtn:hover::after, .vbtn:focus-visible::after{opacity:1; transform:translate(-50%,0);}
-.vault .vcap{margin-top:13px; font-size:13.5px; line-height:1.6; color:var(--body);}
-.vault .vcap b{color:var(--ink);}
+.dvault .vcap{margin-top:13px; font-size:13.5px; line-height:1.6; color:var(--body);}
+.dvault .vcap b{color:var(--ink);}
 @media (prefers-reduced-motion: reduce){
   .vbtn, .vbtn .varr, .vbtn::after{transition:none;}
   .vbtn:hover, .vbtn:focus-visible{transform:none;}
@@ -537,12 +544,12 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .mast, .fnode, .fdecide, .paybox, .panel, .emailcard, .callout, .subbar, .branch, .schip, .chipm,
   .fnode.done, .fnode.pay, .fnode.gate, table.links thead th, .paybox .coin, .fphase-h .pn, .fphase-h .fref,
   ol.qlist>li::before, .pay-items>li::before, .schip, .fdecide .dt, .subbar .tag, .etag,
-  .vault, .vbtn{
+  .dvault, .vbtn{
     -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .vbtn::after{display:none;}   /* the hover tooltip never prints */
   section.doc{break-inside:avoid-page;}
   .callout, .paybox, .panel, .emailcard, .fnode, .fdecide, .subbar, .flow figure, .tablewrap, .intake,
-  .vault, ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
+  .dvault, ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
   .shead{break-after:avoid;}
   .fphase{break-inside:avoid;}
   a{color:var(--accent-2); text-decoration:none;}
@@ -727,6 +734,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="shead reveal"><span class="schip">§0</span><h2>Who does what</h2></div>
     <ol class="qlist reveal">
       <li><b>The firm files it — but we are not the only one who can, and in July we were not the one who did.</b> The login sits in the client's Drive folder and the work is ours. See the box below before you assume a month is yours to file.</li>
+      <li><b>Nothing reminds anyone to do this.</b> There is no recurring task in Double — see the box below.</li>
       <li><b>The account is the client's; the credentials are in our Drive.</b> The eSystems profile is the client's own taxpayer account, so the name shown in the top-right of the portal is <b>not</b> one of ours. That is expected — not a sign you signed in to the wrong place.</li>
       <li><b>Anything a Comptroller notice says goes to Lilian.</b> Filing a notice into Drive is not handling it.</li>
     </ol>
@@ -744,7 +752,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/></svg></span>
       <div class="cx">
         <div class="cl">Nothing reminds anyone to do this</div>
-        <p>Checked in Double on <b>2026-08-17</b>: this client has <b>no recurring sales-tax task</b> — nothing tagged <em>monthly sales tax</em>, nothing on a monthly cadence. The only thing carrying the job today is somebody remembering. <b>Every other monthly filing the firm runs has a reminder; this one does not</b> — it is the first item in §10.</p>
+        <p>Checked in Double on <b>2026-08-17</b>: this client has <b>no recurring sales-tax task</b> — nothing tagged <em>monthly sales tax</em>, nothing on a monthly cadence. The only thing carrying the job today is somebody remembering. <b>Ecoorganic's equivalent monthly filing has a reminder; this one does not</b> — it is §10 item 2.</p>
       </div>
     </div>
   </section>
@@ -756,7 +764,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="shead reveal"><span class="schip">§1</span><h2>Before you file — what you need in hand</h2></div>
     <p class="slede reveal">Three things, and <b>none of them has to be requested from the client</b>. Both the access and the figures come from systems the firm already holds.</p>
 
-    <div class="vault reveal">
+    <div class="dvault reveal">
       <div class="ph">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10.5" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
         The login — one document has all of it
@@ -827,7 +835,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <!-- ==================== §2A ==================== -->
   <section class="doc" id="s2a">
     <div class="shead reveal"><span class="schip">§2A</span><h2>The screens</h2></div>
-    <p class="slede reveal">Captured <b>2026-08-17</b>. Three screens are documented; the return-entry screens after them are <b>not</b> — see §10.4.</p>
+    <p class="slede reveal">Captured <b>2026-08-17</b>. Three screens are documented; the return-entry screens after them are <b>not</b> — see §10.5.</p>
 
     <div class="screen reveal">
       <div class="lab">Screen 1 <span class="t">eSystems Dashboard</span></div>
@@ -890,7 +898,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <tbody>
           <tr><td>Statutory due date</td><td>The <b>20th of the month following</b> the period — July's return is due <b>20 August</b></td></tr>
           <tr><td>If the 20th is a weekend or legal holiday</td><td>It moves to <b>the next business day</b>, automatically — no extension is requested</td></tr>
-          <tr><td>Our internal reminder</td><td><b>⚠️ None exists</b> — see §0 and §10.1</td></tr>
+          <tr><td>Our internal reminder</td><td><b>⚠️ None exists</b> — see §0 and §10.2</td></tr>
         </tbody>
       </table>
     </div>
@@ -915,11 +923,11 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="paybox reveal">
       <div class="ph"><span class="coin" aria-hidden="true">$</span><b>The money</b><span class="sub">one discount · the rest is being late</span></div>
       <ol class="pay-items">
-        <li><p><b>Timely filing discount — <span class="amt">0.5%</span> of the tax due, in your favour.</b> Deducted on the return when it is filed <b>and paid</b> by the due date. It is the state's standing discount for permitted taxpayers, not something to negotiate.</p></li>
+        <li><p><b>Timely filing discount — <span class="amt">0.5%</span> of the tax timely reported AND paid, in your favour.</b> Both halves are required — filing on time and paying late forfeits it. It is the state's standing discount for permitted taxpayers, not something to negotiate.</p></li>
         <li><p><b>Late filing — <span class="amt">$50</span>, flat.</b> Assessed on <b>each</b> report filed after the due date, <b>regardless of whether any tax was owed</b>. A quiet month filed late costs $50.</p></li>
         <li><p><b>Late payment — <span class="amt">5%</span>, then <span class="amt">10%</span>.</b> 5% penalty on tax paid 1–30 days late; a further 5% (10% total) beyond 30 days. Interest starts after 60 days.</p></li>
       </ol>
-      <p class="bottomline"><b>Bottom line:</b> on time, the return pays for itself twice over. A month skipped costs <b>$50 before any tax is even counted</b> — and that $50 lands on a zero month just as hard as on a big one.</p>
+      <p class="bottomline"><b>Bottom line:</b> the discount is a percentage of <em>tax due</em>, so in a month where the marketplace collected nearly all of it (§5) it is worth close to nothing — <b>while the $50 is the full $50 regardless.</b> That asymmetry is the point: there is no month too quiet to file.</p>
     </div>
 
     <div class="callout note reveal" role="note">
@@ -943,14 +951,14 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <div class="panel reveal">
       <div class="ph">Where each figure goes</div>
       <ul class="checks">
-        <li><b>Marketplace sales still go INTO Total Sales</b> — item 1 on the return.</li>
+        <li><b>Marketplace sales still go INTO Total Texas Sales</b> — item 1 on the return. <em>(That is the form's own label: it is Texas sales, not the company's total revenue.)</em></li>
         <li><b>They come OUT again at Taxable Sales</b> — item 2 — where the marketplace has certified it collects and remits.</li>
       </ul>
     </div>
 
     <p class="prose">So the two mistakes sit on <b>opposite sides of the same line</b>, and both look reasonable:</p>
     <ol class="qlist reveal">
-      <li><b>Leaving eBay out of Total Sales entirely</b> — the return then understates the business's gross receipts and stops matching the books, the bank and the tax return.</li>
+      <li><b>Leaving eBay out of item 1 entirely</b> — the return then understates the Texas sales the state expects reported, and the deduction at item 2 has nothing to come out of. ⚠️ <em>Do not go the other way either and assume item 1 should tie to the books or the bank — it is a <b>Texas</b>-sales figure and this client ships nationwide.</em></li>
       <li><b>Leaving eBay inside Taxable Sales</b> — the client pays tax the marketplace has already paid.</li>
     </ol>
 
@@ -1002,7 +1010,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
       <div class="cx">
         <div class="cl">Open since July 2026</div>
-        <p><b>Whether the firm files this, and whether it has been filed, is not established.</b> <b>Do not assume the sales-tax cadence covers it.</b> Raise it with Lilian (§10.3).</p>
+        <p><b>Whether the firm files this, and whether it has been filed, is not established.</b> <b>Do not assume the sales-tax cadence covers it.</b> Raise it with Lilian (§10.4).</p>
       </div>
     </div>
   </section>
@@ -1019,8 +1027,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <li><b>Getting the eBay figures backwards</b> — in <em>or</em> out of the wrong line (§5).</li>
       <li><b>Stopping at “submitted”.</b> Without the PDF in Drive and the <em>Return Filed</em> check, the next person cannot tell the month was done (§2.8–9).</li>
       <li><b>Using <em>File Original Return</em> to correct a filed month.</b> That is <em>File Amended Return</em>. The original is already on the account and is not overwritten by a second original.</li>
-      <li><b>Assuming the 20th.</b> Four months a year land on a weekend; the portal's own Due Date column is the answer (§3).</li>
-      <li><b>Filing a Comptroller notice and moving on.</b> It goes to Lilian the same day (§0.3).</li>
+      <li><b>Assuming the 20th.</b> Three or four months a year land on a weekend; the portal's own Due Date column is the answer (§3).</li>
+      <li><b>Filing a Comptroller notice and moving on.</b> It goes to Lilian the same day (§0.4).</li>
       <li><b>Renaming the Drive history to be tidy.</b> The <code>N.</code> numbering restarts per year folder and is the only filing index — match it, don't fix it (§2.8).</li>
       <li>🔴 <b>Filing an original on a period somebody else already filed.</b> On this client that is a real risk, not a theoretical one — July 2026 was filed by someone outside the firm (§0). <b>Check View Return Summary first, every month</b>, and if the period already reads <em>Return Filed</em>, stop and take it to Lilian rather than filing over it.</li>
     </ol>

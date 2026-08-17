@@ -35,17 +35,17 @@ flowchart TD
   A["① Month ends"] --> B["② Get the figures for THAT month<br/>(⚠️ §5 — the marketplace rule)"]
   B --> C["③ Open the login<br/>Drive → Atman Products → Sales tax → 'Sales tax'"]
   C --> D["④ Sign in to Texas eSystems"]
-  D --> E["⑤ Dashboard → pick the row<br/>Assigned Tax/Fee = <b>Sales and Use Tax</b>"]
+  D --> E["⑤ Dashboard → pick the row<br/>Assigned Tax/Fee = Sales and Use Tax"]
   E --> Z{"⑥ View Return Summary:<br/>is this period ALREADY filed?"}
   Z -- "Yes — somebody else filed it" --> Y["🛑 STOP. Do NOT file over it.<br/>Take it to Lilian (§0.1)"]
   Z -- "No — still open" --> F{"⑦ Which job?"}
   F -- "Normal month" --> G["⑧ File and Pay Taxes<br/>→ File Original Return"]
   F -- "Fixing a filed month" --> H["File Amended Return<br/>(§8 pitfall 6)"]
   G --> J["⑨ Complete the return for the period<br/>+ pay any tax due"]
-  J --> K{"⑨ Confirmation shown?"}
+  J --> K{"⑩ Confirmation shown?"}
   K -- "No" --> D
-  K -- "Yes" --> L["⑩ Save the PDF to Drive<br/>'N. Month YY.pdf' in the year folder"]
-  L --> M["⑪ Verify: View Return Summary<br/>the period reads <b>Return Filed</b>"]
+  K -- "Yes" --> L["⑪ Save the PDF to Drive<br/>'N. Month YY.pdf' in the year folder"]
+  L --> M["⑫ Verify: View Return Summary<br/>the period reads Return Filed"]
   M --> N["✅ Month closed"]
   N -.-> O["📩 If a Comptroller notice arrives"]
   O -.-> P["Save it to the client's Drive folder<br/>AND raise it with Lilian — never just file it"]
@@ -69,8 +69,8 @@ one sales-tax filing in the firm that can be blocked by the books.
    **Until it is settled — always check the period before filing (§2, and §1.2).**
 2. 🔴 **Nothing reminds anyone to do this.** Checked in Double on 2026-08-17: this client has
    **no recurring sales-tax task** — no task tagged `monthly sales tax`, nothing on a monthly
-   cadence. The only thing carrying the job today is somebody remembering. **Every other
-   monthly filing the firm runs has a reminder; this one does not** — see §10 item 1, it is
+   cadence. The only thing carrying the job today is somebody remembering. **Ecoorganic's
+   equivalent monthly filing has a reminder; this one does not** — see §10 item 2, it is
    the first thing to fix.
 3. **The account is the client's, the credentials are in our Drive.** The eSystems profile
    is the client's own taxpayer account. The name in the top-right of the portal is **not**
@@ -197,16 +197,17 @@ client's own account (§2A Screen 3).*
 Filing costs nothing, and Texas **pays you a little** for doing it on time. The money in
 this procedure is almost entirely the cost of being late.
 
-1. **Timely filing discount — 0.5% of the tax due, in your favour.** Deducted on the
-   return when it is filed **and paid** by the due date. It is the state's standing discount
+1. **Timely filing discount — 0.5% of the tax timely reported AND paid, in your favour.**
+   Both halves are required — filing on time and paying late forfeits it. It is the state's standing discount
    for permitted taxpayers, not something to negotiate.
 2. **Late filing — $50, flat.** Assessed on **each** report filed after the due date,
    **regardless of whether any tax was owed**. A quiet month filed late costs $50.
 3. **Late payment — 5%, then 10%.** 5% penalty on tax paid 1–30 days late; a further 5%
    (10% total) beyond 30 days. Interest starts after 60 days.
 
-**Bottom line:** on time, the return pays for itself twice over. A month skipped costs $50
-before any tax is even counted — and the $50 lands on a zero month just as hard.
+**Bottom line:** the discount is a percentage of *tax due*, so in a month where the marketplace
+collected nearly all of it (§5) it is worth close to nothing — **while the $50 is the full $50
+regardless.** That asymmetry is the point: there is no month too quiet to file.
 
 *(A **prepayment discount** of 1.25% also exists for taxpayers who prepay an estimate of
 the period's liability. **The firm does not use it for this client** and it is out of scope
@@ -221,14 +222,17 @@ Atman Parts sells on **eBay**. Under Texas law a **marketplace provider** (eBay)
 and remits the tax on sales made through it, and the **marketplace seller** (our client)
 does not. But the seller's return is **not** simply "everything except eBay":
 
-- **Marketplace sales still go into Total Sales** — item 1 on the return.
+- **Marketplace sales still go into Total Texas Sales** — item 1 on the return. *(That is
+  the form's own label: it is Texas sales, not the company's total revenue.)*
 - **They come OUT again at Taxable Sales** — item 2 — where the marketplace has certified
   it collects and remits.
 
 So the two mistakes sit on opposite sides of the same line, and both look reasonable:
 
-1. **Leaving eBay out of Total Sales entirely** — the return then understates the
-   business's gross receipts and stops matching the books, the bank and the return.
+1. **Leaving eBay out of item 1 entirely** — the return then understates the Texas sales the
+   state expects reported, and the deduction at item 2 has nothing to come out of. ⚠️ *Do not
+   go the other way either and assume item 1 should tie to the books or the bank — it is a
+   **Texas**-sales figure and this client ships nationwide.*
 2. **Leaving eBay inside Taxable Sales** — the client pays tax the marketplace has
    already paid.
 
@@ -240,7 +244,7 @@ rather than only the bank.
 > 🔴 **What is NOT established, and must not be guessed:** **how the firm actually derives
 > this client's monthly figures** — which report, from eBay or QuickBooks or the bank, and
 > whether the business has any non-marketplace sales at all. Nobody has written it down
-> (§10 item 2). The rule above tells you **where each figure belongs**; it does not tell you
+> (§10 item 3). The rule above tells you **where each figure belongs**; it does not tell you
 > **where to get it**. If you are filing this month and you do not know, **ask Lilian** —
 > do not reconstruct it from the last filed PDF and hope.
 
@@ -248,7 +252,7 @@ rather than only the bank.
 > **connect eBay to QuickBooks** for this client. Once that is done **the reports come out
 > differently**, so whatever anyone works out today about where the figures come from would be
 > obsolete almost immediately. _(Lilian, 2026-08-17 — the detail is not available yet; she will
-> hand it over once the connection is made, and **§5 and §10.2 get rewritten from it then.**)_
+> hand it over once the connection is made, and **§5 and §10.3 get rewritten from it then.**)_
 > **Until then this section is the rule, not the recipe.**
 
 *Rule: Texas Tax Code §151.0242(d) — a marketplace seller who accepts the provider's
@@ -283,7 +287,7 @@ holds a separate **Franchise Tax WebFile number** for it.
   Missing it can cost the entity its right to transact business in Texas.
 - 🔴 **Whether the firm files this, and whether it has been filed, is NOT established** —
   it has been an open question on this client since July 2026. **Do not assume the sales-tax
-  cadence covers it.** Raise it with Lilian (§10 item 3).
+  cadence covers it.** Raise it with Lilian (§10 item 4).
 
 ## §8. Common pitfalls
 
@@ -299,7 +303,7 @@ holds a separate **Franchise Tax WebFile number** for it.
 6. **Using `File Original Return` to correct a filed month.** That is `File Amended
    Return`. The original is already on the account and does not get overwritten by a second
    original.
-7. **Assuming the 20th.** Four of the twelve months a year land on a weekend; the portal's
+7. **Assuming the 20th.** Three or four months a year land on a weekend; the portal's
    own Due Date column is the answer (§3).
 8. **Filing a Comptroller notice and moving on.** It goes to Lilian the same day (§0.4).
 9. **Renaming the Drive history to be tidy.** The `N.` numbering restarts per year folder
@@ -347,15 +351,15 @@ know them.
    about to be replaced. **Lilian will hand over the new method once the connection is made;
    §5 and this item get rewritten from it — that is what turns this SOP from provisional into
    final.** _(Lilian, 2026-08-17.)_
-3. **The franchise-tax position** (§7) — do we file it, and is it current? Open since
+4. **The franchise-tax position** (§7) — do we file it, and is it current? Open since
    July 2026.
-4. **The return-entry screens.** §2A stops at the period picker. **Next time you file,
+5. **The return-entry screens.** §2A stops at the period picker. **Next time you file,
    capture the screens after it** — the item-by-item return, the confirmation page — and
    extend §2A. That is the cheapest moment to do it, and it is the difference between this
    SOP being a map and being a click path.
-5. **The email map.** What the Comptroller sends after a submission — sender, subject,
+6. **The email map.** What the Comptroller sends after a submission — sender, subject,
    which inbox it reaches, and whether a confirmation email arrives at all. Nothing is
    recorded, so the saved PDF is currently the only receipt.
-6. **The filing frequency as the state assigned it.** Monthly is what the account shows,
+7. **The filing frequency as the state assigned it.** Monthly is what the account shows,
    but Texas assigns frequency by volume and **can change it**. Nobody has recorded the
    assignment or watched for a change notice.
