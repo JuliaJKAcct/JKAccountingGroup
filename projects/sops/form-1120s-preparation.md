@@ -524,6 +524,56 @@ total expenses per the P&L
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
 
+### 5C-iii · 🛑 Distributions hide inside ONE capital account per shareholder
+
+**The books almost always carry a single equity account per shareholder, holding contributions and
+distributions netted together.** That is normal, correct bookkeeping — nothing requires the split,
+and the balance sheet only ever needs the net.
+
+**But the return needs both halves, and only Schedule L is satisfied by the net:**
+
+| Where it goes | Net enough? |
+|---|---|
+| Schedule L equity | ✅ yes — one figure |
+| **Schedule K line 16d** · **K-1 box 16 code D** | ❌ **gross distributions** |
+| **Schedule M-2 line 7** | ❌ **gross distributions** — a line of its own, *after* the combine |
+| **Form 7203** | ❌ **both**, and distributions come off basis BEFORE losses (§12) |
+
+🔑 **So you cannot prepare an S-corp return from the balance sheet. Open the shareholder's ledger
+and total the debits and the credits separately.** A movement of `+65,562` is equally consistent
+with *contributed 65,562, took nothing* and with *contributed 84,000, took 18,437* — and those two
+produce a different Form 7203, a different M-2, and a different K-1.
+
+### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
+
+Total the debits, then **look at them**. They divide into three kinds, and only the last two are
+distributions:
+
+1. **ROUND TRIPS — money in and straight back out.** Look for an outflow sitting beside an inflow
+   of similar size within a few days, or on the same day. That is the owner moving funds, not
+   taking profit: a deposit of 19,500 followed three days later by a withdrawal of 19,200 is a
+   **contribution of 300**, not a contribution of 19,500 plus a distribution of 19,200. **Netting
+   those is right.**
+2. **Transfers to the owner's personal accounts** with no matching inflow. Distributions.
+3. **PERSONAL SPENDING on the company card or account** — groceries, fuel, a restaurant, a
+   personal subscription. 🔑 **These are the ones that settle the question**, because they cannot
+   be netted against anything: nobody round-trips a supermarket run. **A bookkeeper who posts them
+   to the owner's equity account instead of an expense account has already classified them
+   correctly** — and has kept a personal expense out of your deductions.
+
+🛑 **AND THIS IS WHY A BLANK LINE 7 LAST YEAR IS NOT PRECEDENT.** §3 says repeat the prior year's
+conventions — but read what the convention actually *was*. "The prior return showed no
+distributions" is not a convention; it is a **result**. The convention behind it might have been
+*net the round trips*, which is a rule you can apply again, and applying it to a different year can
+correctly produce a very different answer.
+
+**A start-up year and a wind-down year are economically opposite, and the return should show it.**
+An owner funding a new company is a large net contributor whose few outflows are usually round
+trips; the same owner in the closing year is drawing money out systematically and buying groceries
+with it. **Same account, same convention, opposite result.** Do not carry a zero forward because
+last year had one, and do not treat the difference as evidence that one of the two returns is
+wrong.
+
 ### 5C-ii · ⚠️ Line 12 is tax the COMPANY bears — sales tax collected is not one
 
 **Line 12 is `Taxes and licenses`, and an account named `Taxes Paid` is not automatically it.**

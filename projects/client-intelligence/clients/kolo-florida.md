@@ -147,6 +147,30 @@ the actual details.
   the books are on the **net method** and remitting the tax is not a deduction. And because COGS,
   the 192 units and the 168,350.51 ending inventory come out of this same entry and the same
   reports, the entry cross-checking exactly is a good signal about the books generally.
+- 💸 **Why 2024 reported NO distributions and 2025 reports 18,436.62 — settled from the 2024 general
+  ledger, 2026-08-17, and the 2024 return is right.** The 2024 equity account did carry 20,927.58 of
+  debits, but **19,200 of it is a single round trip** — a deposit three days earlier of 19,500, so
+  the real contribution was 300 — and a further 1,000 came out the same day as a 2,250 deposit.
+  Netting those is correct. Against that, the owner put **250,680.46 in**: a start-up year in which
+  he funded the company by a quarter of a million dollars distributed nothing. **2025 is the
+  economic opposite** — a wind-down with 52 outflows spread over nine months, none with the 2024
+  pairing signature, and including **personal consumption** (Publix, KFC, Exxon, Amazon Prime,
+  Walmart) that cannot be netted against anything. ⚠️ **Do not read the blank 2024 line 7 as a
+  convention to repeat**: the convention was *net the round trips*, and applying that same rule to
+  2025 gives 18,436.62. General rule now in
+  [SOP §5C-iv](../../sops/form-1120s-preparation.md).
+- 🏗️ **The 2024 capitalisation was IN KIND, by journal entry — which is why the equity accounts are
+  so large.** Mykola's account carries four July-2024 journal entries: **159,810.47** (inventory),
+  **18,320.00** (exactly Computer 6,753 + Furniture 9,306 + Scrubber 2,261 — the whole fixed-asset
+  register), **12,666.66** (exactly the Security Deposit) and 6,523.33. Ihor's **entire** 32,732.26
+  is one journal entry with no bank activity at all. **The owners bought the assets, the inventory
+  and the deposit personally and contributed them.** Useful context for basis: these are
+  contributions, not purchases by the company.
+- 🗂️ **One equity account per shareholder holds contributions and distributions netted together.**
+  Normal bookkeeping, and correct — Schedule L only needs the net. **But Schedule K 16d, K-1 box
+  16D, M-2 line 7 and Form 7203 all need the gross halves**, so an S-corp return cannot be prepared
+  from the balance sheet for this client: **open the shareholder ledger and total debits and
+  credits separately.** This is the single step that nearly went missing on the 2025 return.
 - ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
   thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
   bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
