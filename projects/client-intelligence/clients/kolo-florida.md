@@ -117,8 +117,8 @@ the actual details.
 - ✅ **The 2025 physical inventory count IS reflected — through the unit quantity, not an
   adjusting entry** _(Lilian, 2026-08-17)_. The `Inventory` account's only movement all year is the
   31-Dec relief for units sold, so ending inventory is opening minus cost of sales to the cent —
-  but the count is what **established the 192 units** inside that entry. So **168,350.51 is the
-  right figure** for Form 1125-A line 7 and Schedule L line 3, and there is no missing correction.
+  but the count is what **established the 192 units** inside that entry. So the **book figure is the
+  right one** for Form 1125-A line 7 and Schedule L line 3, and there is no missing correction.
   _(Asked because the alternative — a count whose findings were never posted — would have left the
   errors it found sitting in the number going on the return. It did not.)_
 - ✅ **The two `United Porte` charges ARE purchases, and cost of goods sold is where they belong**
@@ -128,42 +128,41 @@ the actual details.
   return show purchases?" has a written answer next year.
 - 🧾 **`Taxes Paid` was 100% SALES TAX, and the entry behind it was posted TWICE — Lilian confirmed
   the duplicate and deleted one, 2026-08-17.** The account held nothing but two identical 31-Dec
-  journal entries of 201.25, `Dr Taxes Paid / Cr Channel Sales Tax Payable`, both captioned *"clear
+  journal entries, `Dr Taxes Paid / Cr Channel Sales Tax Payable`, both captioned *"clear
   residual sales tax payable (overpayment) to zero"*. **The duplicate was provable from the entry's
-  own description**: with one copy the sales-tax family nets to **0.05** (zero, as intended); with
-  two it lands at **+201.30** — not zero, and the opposite sign. **Read the sales-tax accounts as a
-  family** (parent `Channel Sales Tax Payable` −1,364.86 plus sub-account `Shopify Sales Tax`
-  +1,163.66 = **−201.20**): neither shows the overpayment alone. 💵 **Kolo really did overpay
-  Florida by ~201.20** — worth reclaiming **before the FL DOR account is closed** in the wind-down,
+  own description**: with one copy the sales-tax family nets to **zero**, as intended; with
+  two it lands on the **opposite sign** — not zero at all. **Read the sales-tax accounts as a
+  family** (the parent carried a **debit** balance from the year's remittances while the sub-account carried
+  the tax collected): neither shows the overpayment alone. 💵 **Kolo really did overpay
+  Florida** — the amount is small but real, and worth reclaiming **before the FL DOR account is closed** in the wind-down,
   and note that **claiming the refund and deducting the write-off are mutually exclusive**. General
   rule now in [SOP §5C-ii](../../sops/form-1120s-preparation.md).
 - 🔁 **The 31-Dec Shopify reconciliation is ONE compound entry, and it balances to the cent.** All
   year QuickBooks sees only the **net payouts** — a single bank number with gross sales, discounts,
   refunds, shipping, sales tax collected and Shopify's fees all buried inside it. At year end the
   whole year is decomposed from Shopify's own reports, with the **Clearing Account as the balancing
-  figure**: gross sales 49,507.41 − discounts 26,415.71 − refunds 2,543.50 + shipping 103.52 +
-  sales tax collected 1,163.66 − selling fees 732.51 = **21,082.87 to clearing** ✓. 🔑 It also
+  figure**: gross sales − discounts − refunds + shipping + sales tax collected − selling fees = **what actually
+  reached the bank** ✓ — it cross-foots to the cent, and the figures live in QuickBooks. 🔑 It also
   settles the method question: sales tax collected goes to a **liability**, never to revenue — so
   the books are on the **net method** and remitting the tax is not a deduction. And because COGS,
-  the 192 units and the 168,350.51 ending inventory come out of this same entry and the same
+  the unit count and the ending inventory come out of this same entry and the same
   reports, the entry cross-checking exactly is a good signal about the books generally.
-- 💸 **Why 2024 reported NO distributions and 2025 reports 18,436.62 — settled from the 2024 general
-  ledger, 2026-08-17, and the 2024 return is right.** The 2024 equity account did carry 20,927.58 of
-  debits, but **19,200 of it is a single round trip** — a deposit three days earlier of 19,500, so
-  the real contribution was 300 — and a further 1,000 came out the same day as a 2,250 deposit.
-  Netting those is correct. Against that, the owner put **250,680.46 in**: a start-up year in which
-  he funded the company by a quarter of a million dollars distributed nothing. **2025 is the
+- 💸 **Why 2024 reported NO distributions and 2025 reports real ones — settled from the 2024 general
+  ledger, 2026-08-17, and the 2024 return is right.** The 2024 equity account did carry debits, but **almost all of it is a single round trip** — a deposit of a near-identical amount three days
+  earlier — and a further outflow left the same day a larger deposit arrived.
+  Netting those is correct. Against that the owner was a **very large net contributor**: a start-up year in which he funded
+  the company distributed nothing. **2025 is the
   economic opposite** — a wind-down with 52 outflows spread over nine months, none with the 2024
   pairing signature, and including **personal consumption** (Publix, KFC, Exxon, Amazon Prime,
   Walmart) that cannot be netted against anything. ⚠️ **Do not read the blank 2024 line 7 as a
   convention to repeat**: the convention was *net the round trips*, and applying that same rule to
-  2025 gives 18,436.62. General rule now in
+  2025 gives a real distributions figure. General rule now in
   [SOP §5C-iv](../../sops/form-1120s-preparation.md).
 - 🏗️ **The 2024 capitalisation was IN KIND, by journal entry — which is why the equity accounts are
-  so large.** Mykola's account carries four July-2024 journal entries: **159,810.47** (inventory),
-  **18,320.00** (exactly Computer 6,753 + Furniture 9,306 + Scrubber 2,261 — the whole fixed-asset
-  register), **12,666.66** (exactly the Security Deposit) and 6,523.33. Ihor's **entire** 32,732.26
-  is one journal entry with no bank activity at all. **The owners bought the assets, the inventory
+  so large.** one owner's account carries four July-2024 journal entries — **inventory**, an amount equal to the
+  **whole fixed-asset register** (all three assets), an amount equal to the **Security Deposit**, and
+  one more. The other owner's **entire** capital account is one journal entry with no bank activity
+  at all. **The owners bought the assets, the inventory
   and the deposit personally and contributed them.** Useful context for basis: these are
   contributions, not purchases by the company.
 - 🗂️ **One equity account per shareholder holds contributions and distributions netted together.**
@@ -179,9 +178,10 @@ the actual details.
   it moves M-1 line 3b, Schedule K 16c, M-2 line 5 and page 1 line 20.
 - 💰 **The Security Deposit was EXPENSED TO RENT, and that stands — Lilian's decision, 2026-08-17.**
   The 2025 general ledger names the entry: `12/31/2025 · Journal Entry · "Move security deposit to
-  rent expense" · 12,666.66`, landing in **Store Rent**. Julia made it. **Lilian reviewed it and
-  ruled it correct — do not reverse it**, and do not re-raise it. So 2025 rent is the full
-  **80,729.72**, the deposit is **off** the balance sheet, Schedule L line 6 runs **12,667 → 0**,
+  rent expense"`, landing in **Store Rent**. Julia made it. **Lilian reviewed it and
+  ruled it correct — do not reverse it**, and do not re-raise it. So 2025 rent carries the deposit in
+  full, the deposit is **off** the balance sheet, Schedule L line 6 runs from the prior-year figure
+  **to zero**,
   and there is no book/tax difference to reconcile because the treatment is the same on both sides.
   ⓘ **The underlying facts, recorded because they are what the position rests on:** the landlord
   kept the deposit when the company moved to a **different warehouse of his own**, it became the
@@ -399,7 +399,7 @@ the actual details.
   once** (through the redactor, that one year only): 1125-A line 9a is **Cost**; ownership was
   **50/50**; the shareholder money is **contributed capital, not loans** (Schedule L line 19 blank
   *and* both K-1 loan boxes blank); and the header constants. It also produced the Schedule L
-  equity convention that a session would otherwise have guessed wrong — **capital stock 1,000 with
+  equity convention that a session would otherwise have guessed wrong — **a small capital-stock figure with
   both shareholders' capital swept into line 24 Retained earnings**, which forces the contributions
   through **M-2 line 3** for L-24 to keep agreeing with M-2-8. All four are now §5/§8A material in
   the [SOP](../../sops/form-1120s-preparation.md). ⚠️ **What it did NOT settle is when Ihor Naum
@@ -414,7 +414,7 @@ the actual details.
   refundable on exit — so it is **still an asset** and the books zeroing it is an error to correct
   with a journal entry, not a deduction (§5). (c) **No merchandise was bought in 2025, but a
   physical inventory count was taken** because the prior inventory carried errors — which is the
-  real explanation of the ~$3,779 that fell out of 1125-A line 2, and the reason that figure is
+  real explanation of the a few thousand dollars that fell out of 1125-A line 2, and the reason that figure is
   **not** evidence of purchases. _(Worked by Lilian.)_
 - 2026-08-17 — **The 2025 general ledger arrived and settled every remaining figure.** ⚠️ The first
   export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; the two were
@@ -424,7 +424,7 @@ the actual details.
   **correct and standing** (§5), so it is not reversed; the
   1125-A line-2 residual is **two `United Porte` invoices booked straight to cost of sales**, the
   pass-through door line, so **nothing needs correcting and both "we bought nothing" and the
-  ledger were right**; **Mykola took 18,436.62 of distributions** against 83,999.00 of
+  ledger were right**; **one owner took real distributions** against a larger figure of
   contributions, which the netted account had been hiding; **Ihor's account did not move at all**;
   and `Refreshments (Tax Review)` is **Primo Water office water and coffee**, which makes it a
   judgment call rather than a fact. It also surfaced what the books do **not** contain: **no entry
@@ -467,7 +467,7 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
 - [x] **`Inventory` → one entry all year**, the cost-of-sales relief. The line-2 residual is two
       `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ⚠️ But
       the physical count never reached the books (§5).
-- [x] **`Mykola Kozlovskiy` → 79 movements: 83,999.00 in, 18,436.62 out.** **There WERE
+- [x] **`Mykola Kozlovskiy` → 79 movements, contributions in and distributions out.** **There WERE
       distributions**, netted inside the account exactly as suspected. Feeds Schedule K 16d, K-1
       box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution
       is far below basis, so no capital gain.
@@ -479,7 +479,7 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
       So **box I = 1, one K-1 at 100%, one Form 7203.** The box governs; the 50-shares-at-year-end
       reading on the same K-1 was raised and she ruled on it. ⓘ **No figure moves** — the equity
       sweep convention (§5) puts every capital account inside Schedule L line 24 regardless of
-      whose it is, so his 32,732.26 sitting untouched on the 2025 balance sheet changes nothing on
+      whose it is, so his capital sitting untouched on the 2025 balance sheet changes nothing on
       this return. It may matter in **2026**, the final year: whatever Mykola paid him for the
       shares is Mykola's **outside** basis, is nowhere in the company's books, and decides the gain
       or loss on liquidation. The general rule is now

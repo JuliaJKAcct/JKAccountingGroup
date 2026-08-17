@@ -855,7 +855,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <p>Where a beginner&#8217;s return most often fails to tie:<br>
         <b>1 · Total assets</b> — box F on page 1 <em>and</em> Schedule L line 15.<br>
         <b>2 · Ordinary business income</b> — page 1 line 22 <em>and</em> Schedule K line 1.<br>
-        <b>3 · Non-deductible expenses</b> — Schedule K 16c, M-1 line 3b, <em>and</em> as a reduction in M-2 and in each shareholder&#8217;s basis.</p>
+        <b>3 · Non-deductible expenses</b> ⚠️ <em>a trail, not an identity</em> — — Schedule K 16c, M-1 line 3b, <em>and</em> as a reduction in M-2 and in each shareholder&#8217;s basis.</p>
       </div>
     </div>
   </section>
@@ -895,6 +895,9 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <li><b>The depreciation schedule</b> — cost, date placed in service, method, life, depreciation taken so far.</li>
         <li><b>Each shareholder's ownership percentage</b>, and whether it changed during the year.</li>
         <li><b>Whether shareholders put money in or took money out</b> — and whether those were <b>contributions</b> or <b>loans</b> (§12).</li>
+        <li><b>Whether the shareholders put money in or took money out</b> — and ⚠️ <b>ask for the GROSS figures, not the account&#8217;s net movement</b> (5C-iii).</li>
+        <li><b>The GENERAL LEDGER for the year</b> — the one report that answers &ldquo;what actually happened in this account&rdquo;, which no P&amp;L or balance sheet can. Get it once, for every account, rather than returning for accounts one at a time.</li>
+        <li>⚠️ <b>Check the BASIS printed on every export, and that they agree with each other.</b> A general ledger exported on <b>cash</b> while the P&amp;L and balance sheet were <b>accrual</b> is a different set of books, and nothing in the file warns you. They coincide only for a client with no receivables and no payables.</li>
         <li><b>Confirmation that Form 7004 was filed</b>, if you are past 15 March.</li>
       </ul>
     </div>
@@ -990,7 +993,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 <!-- ==================== §4 ==================== -->
   <section class="doc" id="s4">
     <div class="shead reveal"><span class="schip">§4</span><h2>Form 1125-A — cost of goods sold</h2></div>
-    <p class="slede reveal">Fill this in <b>first</b>. Its line 8 feeds page 1, and the form says so on its own face: <em>"Enter here and on Form 1120-S, page 1, line 2."</em> Skip it entirely if the client sells no goods.</p>
+    <p class="slede reveal">Fill this in <b>first</b>. Its line 8 feeds page 1, and the form points there itself: <em>&ldquo;Enter here and on Form <b>1120</b>, page 1, line 2, <b>or the appropriate line of your tax return</b>&rdquo;</em> — and for an S-corp the appropriate line is page 1 line 2. Skip it entirely if the client sells no goods.</p>
 
     <div class="callout ok reveal" role="note">
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4.5M12 8.3h.01"/></svg></span>
@@ -1050,7 +1053,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <div class="lhead"><span class="ln">8</span><span class="lname">Cost of goods sold</span><span class="ltag calc">calculated</span></div>
         <div class="lwhy"><div class="cw">
         <div class="fx">line 8 = line 6 <span class="op">&minus;</span> line 7   <span class="op">&rarr;</span> carry to page 1, line 2</div>
-        <p>The form says so on its own face: <em>&ldquo;Enter here and on Form 1120-S, page 1, line 2.&rdquo;</em></p>
+        <p>The form says so on its own face: <em>&ldquo;Enter here and on Form <b>1120</b>, page 1, line 2, <b>or the appropriate line of your tax return</b>&rdquo; — and for an S-corp the appropriate line is page 1 line 2.</em></p>
         </div></div>
       </div>
     </div>
@@ -1111,7 +1114,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
     <div class="subbar reveal"><span class="tag">4C</span><h3>Line 9 — the checkboxes</h3></div>
     <div class="indent">
       <ul class="dots reveal">
-        <li><b>9a — the valuation method.</b> <b>Copy what was ticked last year.</b> Changing it is a change of accounting method — a formal election, not a preference.</li>
+        <li><b>9a — the valuation method.</b> ⚠️ <b>Six boxes on the current form, not three</b> — the November 2024 revision added <b>non-incidental materials and supplies</b> and the <b>AFS</b> / <b>non-AFS §471(c)</b> methods, for tax years beginning after 2023. <b>Copy what was ticked last year — but check whether a box now exists that did not exist then</b>, and raise it rather than ticking it yourself. Changing it is a change of accounting method — a formal election, not a preference.</li>
         <li><b>9b–9d</b> — subnormal goods, LIFO. Normally all "no".</li>
         <li><b>9e — do the §263A rules apply?</b> Normally <b>no</b> for a small business taxpayer.</li>
         <li><b>9f — did quantities, cost or valuation change?</b> A "yes" here is a problem to escalate, not a box to tick.</li>
@@ -1153,7 +1156,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <div class="lhead"><span class="ln">1c</span><span class="lname">Balance</span><span class="ltag calc">calculated</span></div>
           <div class="lwhy"><div class="cw">
           <div class="fx">line 1c = line 1a <span class="op">&minus;</span> line 1b</div>
-          <p>✅ <b>Must equal the P&amp;L&#8217;s total income.</b> Your first tie-out check.</p>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s total income</b> — <em>less anything in it that belongs on Schedule K</em> (bank interest, dividends, capital gains). Your first tie-out check.</p>
           </div></div>
         </div>
         <div class="lrow" tabindex="0">
@@ -1167,7 +1170,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <div class="lhead"><span class="ln">3</span><span class="lname">Gross profit</span><span class="ltag calc">calculated</span></div>
           <div class="lwhy"><div class="cw">
           <div class="fx">line 3 = line 1c <span class="op">&minus;</span> line 2</div>
-          <p>✅ <b>Must equal the P&amp;L&#8217;s gross profit.</b></p>
+          <p>✅ <b>Must equal the P&amp;L&#8217;s gross profit</b> — but <em>only when line 2 equals the P&amp;L&#8217;s cost of sales</em>.</p>
           </div></div>
         </div>
         <div class="lrow" tabindex="0">
@@ -1205,7 +1208,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
         <table class="links">
           <thead><tr><th>Line</th><th>Category</th><th>Typical QuickBooks accounts</th></tr></thead>
           <tbody>
-            <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to shareholder-employees</td></tr>
+            <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to <b>officers</b> — not to every shareholder-employee (5C-i)</td></tr>
             <tr><td class="for">8</td><td>Salaries and wages</td><td>Everyone else's wages — <b>and only actual wages</b>, see 5C-i</td></tr>
             <tr><td class="for">11</td><td>Rents</td><td>Office, warehouse, storage, equipment rental</td></tr>
             <tr><td class="for">12</td><td>Taxes and licenses</td><td><b>Payroll taxes + business licences + local taxes.</b> Not income tax</td></tr>
@@ -1237,7 +1240,8 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <thead><tr><th>What it really is</th><th>Where it goes</th></tr></thead>
           <tbody>
             <tr><td>Gross wages paid to non-officer employees</td><td><b>Line 8</b></td></tr>
-            <tr><td>Gross wages paid to <b>shareholder-employees</b></td><td><b>Line 7</b>, not line 8</td></tr>
+            <tr><td>Gross wages paid to an <b>OFFICER</b></td><td><b>Line 7</b> — the line is <em>Compensation of officers</em></td></tr>
+            <tr><td>Gross wages paid to a shareholder-employee who is <b>not an officer</b></td><td><b>Line 8</b>. ⚠️ Shareholder-employee and officer are not the same thing</td></tr>
             <tr><td>The employer&#8217;s share of <b>payroll taxes</b></td><td><b>Line 12</b>, taxes and licenses</td></tr>
             <tr><td>The <b>payroll platform&#8217;s fee</b> — Gusto, ADP, a subscription</td><td><b>Line 20</b>, other deductions — a service the company bought</td></tr>
           </tbody>
@@ -1308,20 +1312,20 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           </tbody>
         </table>
       </div>
-      <p class="reveal">🔑 <b>So you cannot prepare an S-corp return from the balance sheet.</b> Open the shareholder&#8217;s ledger and <b>total the debits and the credits separately.</b> A movement of <code>+65,562</code> is equally consistent with <em>contributed 65,562, took nothing</em> and with <em>contributed 84,000, took 18,437</em> — and those two produce a different Form 7203, a different M-2 and a different K-1.</p>
+      <p class="reveal">🔑 <b>So you cannot prepare an S-corp return from the balance sheet.</b> Open the shareholder&#8217;s ledger and <b>total the debits and the credits separately.</b> A movement of <code>+50,000</code> is equally consistent with <em>contributed 50,000, took nothing</em> and with <em>contributed 90,000, took 40,000</em> — and those two produce a different Form 7203, a different M-2 and a different K-1.</p>
     </div>
 
     <div class="subbar reveal"><span class="tag">5C-iv</span><h3>⚠️ A debit in a capital account is not automatically a distribution</h3></div>
     <div class="indent">
       <p class="reveal">Total the debits, then <b>look at them</b>. They divide into three kinds, and only the last two are distributions:</p>
       <ol class="qlist reveal">
-        <li><b>ROUND TRIPS — money in and straight back out.</b> Look for an outflow beside an inflow of similar size within a few days, or the same day. A deposit of 19,500 followed three days later by a withdrawal of 19,200 is a <b>contribution of 300</b> — not a contribution of 19,500 plus a distribution of 19,200. <b>Netting those is right.</b></li>
+        <li><b>ROUND TRIPS — money in and straight back out.</b> Look for an outflow beside an inflow of similar size within a few days, or the same day. A deposit of 50,000 followed three days later by a withdrawal of 49,000 is a <b>contribution of **1,000**</b> — not a contribution of 50,000 plus a distribution of 49,000. <b>Netting those is right.</b></li>
         <li><b>Transfers to the owner&#8217;s personal accounts</b> with no matching inflow. Distributions.</li>
         <li><b>PERSONAL SPENDING on the company card</b> — groceries, fuel, a restaurant, a personal subscription. 🔑 <b>These settle the question</b>, because they cannot be netted against anything: <b>nobody round-trips a supermarket run.</b> A bookkeeper who posts them to the owner&#8217;s equity account rather than an expense account <b>has already classified them correctly</b> — and kept a personal expense out of your deductions.</li>
       </ol>
       <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
         <div class="cx">
-          <div class="cl">A blank line 7 last year is NOT precedent</div>
+          <div class="cl">A blank Schedule M-2 line 7 last year is NOT precedent</div>
           <p>&#167;3 says repeat the prior year&#8217;s conventions — but read what the convention actually <em>was</em>. <b>&ldquo;The prior return showed no distributions&rdquo; is a RESULT, not a convention.</b> The convention behind it may have been <em>net the round trips</em>, which is a rule you can apply again — and applying it to a different year can correctly produce a very different answer.</p>
           <p><b>A start-up year and a wind-down year are economically opposite, and the return should show it.</b> An owner funding a new company is a large net contributor whose few outflows are usually round trips; the same owner in the closing year is drawing money out systematically and buying groceries with it. <b>Same account, same convention, opposite result.</b> Do not carry a zero forward because last year had one, and <b>do not treat the difference as evidence that one of the two returns is wrong.</b></p>
         </div>
@@ -1343,7 +1347,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
     <div class="shead reveal"><span class="schip">§6</span><h2>Schedule B — the questions</h2></div>
     <p class="slede reveal">⚠️ <b>The question numbers move between tax years. Find each one by its wording, not its number.</b></p>
     <ol class="qlist reveal">
-      <li><b>Accounting method</b> — accrual or cash. Read it off the footer of the QuickBooks reports; they say which basis they were run on.</li>
+      <li><b>Accounting method</b> — accrual or cash. ⚠️ <b>Take it from the PRIOR RETURN, not from QuickBooks.</b> A report&#8217;s basis is a per-report toggle someone can flip; the entity&#8217;s <em>tax</em> accounting method is what was elected and filed. If they disagree, that is a question for Lilian — not something to settle from a footer.</li>
       <li><b>"Are total receipts AND total assets both under $250,000?"</b> If <b>yes</b>, Schedules <b>L</b> and <b>M-1</b> are <b>not required</b>. The firm completes them anyway when the prior year did — they give continuity, and the balance sheet is the best proof nothing was mapped wrong.</li>
       <li><b>Were Forms 1099 required, and were they filed?</b> Answer honestly; the firm usually knows because it prepares them.</li>
     </ol>
@@ -1356,22 +1360,31 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
     </div>
   </section>
 
-    <div class="subbar reveal"><span class="tag">6A</span><h3>🛑 The §163(j) pair — an UNANSWERED question deletes your interest deduction</h3></div>
+    <div class="subbar reveal"><span class="tag">6A</span><h3>🛑 The §163(j) pair — the question whose POLARITY was reversed in 2023</h3></div>
   <div class="indent">
-    <p class="reveal"><b>This is the one Schedule B answer that changes a number on page 1, and it fails by omission rather than by being wrong.</b></p>
-    <p class="reveal">Two consecutive questions cover the <b>&#167;163(j) business-interest limitation</b> — find them by wording, the numbering moves, but on the 2024 form they are <b>9</b> and <b>10</b> (with parts <b>a</b> and <b>b</b>):</p>
+    <p class="reveal"><b>This is the one Schedule B answer that changes a number on page 1 — and the trap is that the question was rewritten, so half of what is written about it online describes the opposite form.</b></p>
+    <p class="reveal">On the current form (TY2023 through TY2025):</p>
     <ul class="dots reveal">
-      <li><b>the election question</b> — <em>was a &#167;163(j) election in effect for a real property or farming business?</em> → normally <b>No</b></li>
-      <li><b>the exemption question</b> — <em>(a) are average annual gross receipts under the &#167;448(c) threshold, and it is not a tax shelter?</em> → for these clients <b>Yes</b>; <em>(b) is the interest only from an electing real-property / farming / utility business?</em> → normally No. The form says it outright: <b>if &ldquo;Yes,&rdquo; the corporation is not required to file Form 8990.</b></li>
+      <li><b>Question 9</b> — <em>&ldquo;Did the corporation have an election under section 163(j) for any real property trade or business or any farming business in effect during the tax year?&rdquo;</em> → for these clients, <b>No</b>.</li>
+      <li><b>Question 10</b> — <em>&ldquo;Does the corporation satisfy <b>one or more</b> of the following?&rdquo;</em>, with <b>three</b> sub-parts: <b>a</b> owns a pass-through entity with carryover <b>excess business interest expense</b>; <b>b</b> aggregate average annual gross receipts under &#167;448(c) are <b>MORE THAN $31 million</b> <em>(TY2025 figure — indexed, check it each year)</em> and it has business interest expense; <b>c</b> is a <b>tax shelter</b> with business interest expense. → for these clients, <b>No</b>.</li>
     </ul>
     <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
       <div class="cx">
-        <div class="cl">Leave them blank and the deduction silently disappears</div>
-        <p>The software assumes the limitation applies, wants <b>Form 8990</b>, and <b>the interest expense never reaches page 1 line 13.</b> Nothing errors. Nothing is flagged. <b>The return is just smaller than it should be.</b></p>
-        <p>⚠️ <b>You will meet this from the other direction.</b> Clicking the line 13 <em>Interest</em> field does not open a plain input — it opens a worksheet, and this block is inside it. <b>That is not a detour to click past on the way to typing a number: it is the gate.</b></p>
+        <div class="cl">Read the &ldquo;If Yes&rdquo; sentence off the form, not from memory</div>
+        <p>It says: <em>If &ldquo;Yes,&rdquo; complete and attach <b>Form 8990</b>, Limitation on Business Interest Expense Under Section 163(j).</em></p>
+        <p><b>&ldquo;Yes&rdquo; TRIGGERS Form 8990. It does not exempt you from it.</b> Answering <b>No</b> is what leaves the interest fully deductible on page 1 line 13.</p>
       </div>
     </div>
-    <p class="reveal"><b>The general lesson is worth more than the two questions:</b> some Schedule B answers are not disclosure — <b>they are switches.</b> Treat an unanswered question as a deduction you have not yet claimed, and <b>re-check page 1 after answering.</b></p>
+    <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The pre-2023 form asked the OPPOSITE question</div>
+        <p>It read <em>&ldquo;Does the corporation satisfy one of the following conditions <b>and</b> the corporation doesn&#8217;t own a pass-through entity with … excess business interest expense?&rdquo;</em>, where sub-part (a) was <em>gross receipts <b>do not exceed</b> the threshold</em>, and it ended <em>&ldquo;If &lsquo;Yes,&rsquo; the corporation is <b>not</b> required to file Form 8990.&rdquo;</em> <b>Same question number, inverted meaning — and the old wording still matches Form 1065.</b> A preparer who answers the current Q10 &ldquo;Yes&rdquo; because that is what the old form wanted has just attached Form 8990 and limited a deduction that was never limited. <em>(This SOP shipped that error itself, caught in review by pulling the actual form — which is the only way to be sure.)</em></p>
+        <p><b>The general rule: for any question whose answer changes a figure, open the current-year PDF from irs.gov and read the question and its &ldquo;If Yes&rdquo; sentence off the form.</b></p>
+      </div>
+    </div>
+    <p class="reveal"><b>And it still fails by omission.</b> Leave Q10 <b>unanswered</b> and the software assumes the limitation applies, wants Form 8990, and <b>the interest expense never reaches line 13.</b> Nothing errors, nothing is flagged, the return is simply smaller.</p>
+    <p class="reveal">⚠️ <b>You will meet this from the other direction.</b> Clicking the line 13 <em>Interest</em> field does not open a plain input — it opens a worksheet, and this block is inside it. <b>That is not a detour to click past on the way to typing a number: it is the gate.</b> Answer the pair, then <b>re-check that line 13 actually carries the number.</b></p>
+    <p class="reveal"><b>The lesson worth more than the two questions:</b> some Schedule B answers are not disclosure — <b>they are switches.</b> Treat an unanswered question as a deduction you have not yet claimed.</p>
   </div>
 
 <!-- ==================== §7 ==================== -->
@@ -1452,7 +1465,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       <p class="reveal">Book net income in at the top, the return&#8217;s <b>total</b> income out at the bottom &mdash; <b>Schedule K line 18</b>, not page 1&#8217;s ordinary income. <b>If you understand this schedule, you understand why the return is not a copy of the P&amp;L.</b></p>
       <ul class="dots reveal">
         <li><b>Line 1</b> — net income per books, straight off the P&amp;L.</li>
-        <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>. ⚠️ <b>Not everything in a meals account is 50%</b> — company recreational or social events for employees (&#167;274(e)(4)) and meals <em>sold</em> to customers stay <b>100%</b> deductible, so look at what is in the account before halving it. ⏳ And the rule expires: for tax years beginning after <b>2025</b>, &#167;274(o) removes the employer-provided-meal deduction entirely — re-check before applying this to a 2026 return.</li>
+        <li><b>Line 3b</b> — expenses in the books the return does not allow. The common one: <b>the 50% of meals that is not deductible</b>. ⚠️ <b>Not everything in a meals account is 50%</b> — company recreational or social events for employees (&#167;274(e)(4)) and meals <em>sold</em> to customers stay <b>100%</b> deductible, so look at what is in the account before halving it. ⏳ And the rule expires: for tax years beginning after <b>2025</b>, &#167;274(o) removes the deduction for &#167;119 convenience-of-the-employer meals and &#167;132(e)(2) employer-operated eating facilities — re-check before applying this to a 2026 return.</li>
         <li><b>Line 6a</b> — deductions on the return the books never recorded. The common one: <b>depreciation</b>.</li>
         <li><b>Line 8</b> — the result. ⚠️ <b>Must equal SCHEDULE K LINE 18</b>, not page 1 line 22. They are equal only when there are no separately stated items at all — the moment there is bank interest they differ, and forcing them to agree misstates the return.</li>
       </ul>
@@ -1562,6 +1575,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
         <li>Schedule L: <b>total assets = total liabilities and equity</b>, and equals the year-end balance sheet</li>
         <li>Schedule M-1 <b>line 8 equals Schedule K line 18</b></li>
         <li>Schedule M-2 beginning balance matches last year's ending balance</li>
+        <li>The <b>e-file was ACCEPTED</b>, not merely transmitted</li>
         <li>The <b>K-1 percentages add to 100%</b>, and each Schedule K line equals the sum across all K-1s</li>
         <li><b>A Form 7203 exists for every shareholder who needs one</b></li>
         <li><b>Form 8879-CORP signed</b> before e-filing &mdash; <b>not</b> 8879-S, superseded from TY2022</li>
@@ -1656,7 +1670,7 @@ differences found and explained: ______________________________________
             <tr><td>Sales / product income</td><td>Page 1, line 1a</td></tr>
             <tr><td>Discounts given</td><td>Reduces line 1a</td></tr>
             <tr><td>Customer refunds / returns</td><td>Page 1, line 1b</td></tr>
-            <tr><td>Cost of goods sold + channel selling fees</td><td>1125-A line 8 → page 1 line 2</td></tr>
+            <tr><td>Cost of goods sold</td><td>1125-A line <b>2</b> (purchases), <b>3</b> (labor) or <b>5</b> (other costs). ⚠️ <b>Never line 8</b> — line 8 is computed (6 &minus; 7), so no account feeds it directly. Channel/selling fees are <b>client-specific</b> and usually belong in <b>other deductions</b></td></tr>
             <tr><td>Inventory (balance sheet)</td><td>1125-A line 7 — ⚠️ check the subtotal used</td></tr>
             <tr><td>Wages — shareholders / staff</td><td>Page 1, lines 7 / 8</td></tr>
             <tr><td>Payroll tax · licences · local taxes</td><td>Page 1, line 12</td></tr>
@@ -1667,7 +1681,7 @@ differences found and explained: ______________________________________
             <tr><td>Meals</td><td>Line 20 at <b>50%</b>; the other half → M-1 3b + Sch K 16c</td></tr>
             <tr><td>Everything else</td><td>Line 20 + itemised statement</td></tr>
             <tr><td>Interest income</td><td><b>Schedule K line 4</b> — never page 1</td></tr>
-            <tr><td>Gain/loss on equipment sold</td><td>Page 1, line 4 (via Form 4797)</td></tr>
+            <tr><td>Gain/loss on equipment sold</td><td>⚠️ <b>Split.</b> Only the <b>ordinary</b> part (Form 4797 Part II line 17) goes to page 1 line 4; a net <b>§1231 gain is separately stated on Schedule K line 9</b></td></tr>
             <tr><td>Bank accounts</td><td>Schedule L, cash</td></tr>
             <tr><td>Credit cards payable</td><td>Schedule L, accounts payable — per the prior year</td></tr>
             <tr><td>Sales tax payable</td><td>Schedule L, other current liabilities</td></tr>

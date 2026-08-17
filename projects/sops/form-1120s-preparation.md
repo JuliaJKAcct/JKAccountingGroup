@@ -176,9 +176,9 @@ and that is deliberate — see §3.
 - [ ] **Whether the shareholders put money in or took money out** during the year, and whether
       those were **capital contributions** or **loans** — they are not the same thing (§12).
       ⚠️ **Ask for the GROSS figures, not the account's net movement.** Books normally carry one
-      equity account per shareholder and net everything inside it, so `+65,562` is equally
-      consistent with *contributed 65,562, took nothing* and with *contributed 84,000, took
-      18,437*. **Those two produce the same Schedule L and different everything else** —
+      equity account per shareholder and net everything inside it, so `+50,000` is equally
+      consistent with *contributed 50,000, took nothing* and with *contributed 90,000, took
+      40,000*. **Those two produce the same Schedule L and different everything else** —
       Schedule K 16d, the K-1's box 16 code D, M-2 line 7 and Form 7203 all need the two figures
       separately. Schedule L is the only one the net satisfies, which is why the gap survives so
       long unnoticed.
@@ -388,9 +388,9 @@ non-inventory account the convention parks inside line 7, plus whatever non-purc
 convention parks inside line 8. It can easily be the **majority** of a small solved line 2.
 
 _(The pilot: a Shopify client whose line 7 includes the Shopify **Clearing Account** and whose line
-8 includes **Shopify Selling Fees**. A solved line 2 of ~$3,779 in a year the client bought nothing
-decomposed to **~$2,435 of artifact** — selling fees plus the clearing account's growth — and
-**~$1,344 on the goods side**. Two thirds of "purchases" was not goods.)_
+8 includes **Shopify Selling Fees**. in a year the client bought no stock, a small solved line 2 decomposed to
+**roughly two thirds artifact** — selling fees plus the clearing account's growth — and one third on
+the goods side. Most of "purchases" was not goods.)_
 
 **Then ask what the goods side means.** If the client truly bought nothing, the Inventory account
 should have fallen by exactly the cost of goods sold. A residual says one of three things, and they
@@ -417,7 +417,7 @@ inventory account at all. The residual is small; the reason it exists is not.
 > one they mean before you treat the discrepancy as an error** — and, once resolved, write down
 > which vendors are pass-through, because the same question returns every year.
 >
-> _(Pilot: the entire ~$1,344 goods-side residual turned out to be **two invoices from one vendor**,
+> _(Pilot: the entire goods-side residual turned out to be **two invoices from one vendor**,
 > booked straight to cost of sales, for the product line the client resells as an intermediary. The
 > owner's "nothing was purchased" was accurate about her own inventory and the ledger was accurate
 > about the return. Nothing needed correcting.)_
@@ -434,8 +434,8 @@ which, rather than assuming the count reached the books.**
 and means the map is wrong — go back to §3. A **small positive** line 2 is the healthy outcome:
 the map is right, and the number is now a question about the books rather than about the return.
 _(Same client, same year: reading line 7 off the `Inventory` account alone instead of the subtotal
-produced **−$394**. Reading it off the subtotal produced **+$3,779**. One number is a stop sign and
-the other is a lead.)_
+produced a **negative** line 2. Reading it off the subtotal produced a **small positive** one. One
+is a stop sign and the other is a lead.)_
 
 ### Line 9 — the checkboxes
 
@@ -500,7 +500,7 @@ each expense that has its own line, then group the remainder.
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
 | **11** | Rents | Office, warehouse, storage, equipment rental |
-| **12** | Taxes and licenses | **Taxes the COMPANY BEARS** — payroll taxes, business licences, local taxes. Not income tax, and ⚠️ **not sales tax collected from customers** — see 5C-ii |
+| **12** | Taxes and licenses | **Taxes the COMPANY BEARS** — including **state** income/PTE tax on the corporation; **federal** income tax never — payroll taxes, business licences, local taxes. Not income tax, and ⚠️ **not sales tax collected from customers** — see 5C-ii |
 | **13** | Interest | Loan and credit-card interest. Often sits under "other expenses" in the P&L |
 | **14** | Depreciation | **From Form 4562** — see §5D |
 | **15** | Depletion | Rare |
@@ -540,8 +540,8 @@ and the balance sheet only ever needs the net.
 | **Form 7203** | ❌ **both**, and distributions come off basis BEFORE losses (§12) |
 
 🔑 **So you cannot prepare an S-corp return from the balance sheet. Open the shareholder's ledger
-and total the debits and the credits separately.** A movement of `+65,562` is equally consistent
-with *contributed 65,562, took nothing* and with *contributed 84,000, took 18,437* — and those two
+and total the debits and the credits separately.** A net movement of `+50,000` is equally consistent
+with *contributed 50,000, took nothing* and with *contributed 90,000, took 40,000* — and those two
 produce a different Form 7203, a different M-2, and a different K-1.
 
 ### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
@@ -551,8 +551,8 @@ distributions:
 
 1. **ROUND TRIPS — money in and straight back out.** Look for an outflow sitting beside an inflow
    of similar size within a few days, or on the same day. That is the owner moving funds, not
-   taking profit: a deposit of 19,500 followed three days later by a withdrawal of 19,200 is a
-   **contribution of 300**, not a contribution of 19,500 plus a distribution of 19,200. **Netting
+   taking profit: a deposit of 50,000 followed three days later by a withdrawal of 49,000 is a
+   **contribution of **1,000**, not a contribution of 50,000 plus a distribution of 49,000. **Netting
    those is right.**
 2. **Transfers to the owner's personal accounts** with no matching inflow. Distributions.
 3. **PERSONAL SPENDING on the company card or account** — groceries, fuel, a restaurant, a
@@ -561,7 +561,7 @@ distributions:
    to the owner's equity account instead of an expense account has already classified them
    correctly** — and has kept a personal expense out of your deductions.
 
-🛑 **AND THIS IS WHY A BLANK LINE 7 LAST YEAR IS NOT PRECEDENT.** §3 says repeat the prior year's
+🛑 **AND THIS IS WHY A BLANK SCHEDULE M-2 LINE 7 LAST YEAR IS NOT PRECEDENT.** §3 says repeat the prior year's
 conventions — but read what the convention actually *was*. "The prior return showed no
 distributions" is not a convention; it is a **result**. The convention behind it might have been
 *net the round trips*, which is a rule you can apply again, and applying it to a different year can
@@ -613,15 +613,15 @@ usually one of two things:
 
 **Read the sales-tax accounts as a FAMILY, not one at a time**, parent and sub-accounts together.
 A negative (debit) balance across the family is the overpayment, stated by the ledger itself with
-no arithmetic needed. _(Pilot: the parent sat at −1,364.86 after the year's remittances while the
-sub-account carried +1,163.66 of tax collected — netting to **−201.20**, which was the
-overpayment, and neither account showed it alone.)_
+no arithmetic needed. _(Pilot: the parent sat at a **debit** balance after the year's remittances while the sub-account
+carried the tax collected — the two netting to the overpayment, which **neither account showed
+alone.**)_
 
 🛑 **And check a clean-up entry against its own description.** One that says it clears a balance
 **to zero** is a testable claim: recompute the balance it leaves. _(Same client: the entry was
-posted **twice**, and the tell was that with one copy the family nets to 0.05 — zero — while with
-two it lands at +201.30, not zero and the opposite sign. The entry failed its own stated purpose
-by exactly one copy of itself.)_
+posted **twice**, and the tell was that with one copy the family nets to zero — as the entry said
+it would — while with two it lands on the **opposite sign**. The entry failed its own stated
+purpose by exactly one copy of itself.)_
 
 ### 5C-i · ⚠️ Line 8 is WAGES — not the "payroll" accounts
 
@@ -707,36 +707,62 @@ Most are yes/no facts about the company. Three are worth calling out:
 3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
    because it prepares them.
 
-### 6A · 🛑 The §163(j) pair — an UNANSWERED question silently deletes your interest deduction
+### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in 2023
 
-**This is the one Schedule B answer that changes a number on page 1, and it fails by omission
-rather than by being wrong.**
+**This is the one Schedule B answer that changes a number on page 1 — and the trap is that the
+question was rewritten, so half of what is written about it online describes the opposite form.**
 
-Two consecutive questions on Schedule B cover the **§163(j) business-interest limitation** (find
-them by wording — the numbering moves, but as of the 2024 form they are questions **9** and
-**10**, and 10 has sub-parts **a** and **b**):
+Two consecutive questions cover the **§163(j) business-interest limitation**. On the current form
+(TY2023 through TY2025) they read:
 
-- **the election question** — *did the corporation have a §163(j) election in effect for a real
-  property trade or business or a farming business?* → normally **No**
-- **the exemption question**, in two parts — *(a) are the corporation's average annual gross
-  receipts under the §448(c) threshold, and it is not a tax shelter?* → for these clients
-  **Yes**; *(b) is the interest only from an electing real-property / farming / utility
-  business?* → normally No. The form says it outright: **if "Yes," the corporation is not
-  required to file Form 8990.**
+- **Question 9** — *"Did the corporation have an election under section 163(j) for any real
+  property trade or business or any farming business in effect during the tax year?"* → for these
+  clients, **No**.
+- **Question 10** — *"Does the corporation satisfy **one or more** of the following?"*, with
+  **three** sub-parts:
+  - **a** owns a pass-through entity with current or prior-year carryover **excess business
+    interest expense**
+  - **b** aggregate average annual gross receipts under §448(c) for the 3 preceding years are
+    **MORE THAN $31 million** *(TY2025 figure — it is indexed, check it each year)* and the
+    corporation has business interest expense
+  - **c** is a **tax shelter** and has business interest expense
 
-🛑 **Leave them blank and the software assumes the limitation applies.** It then wants **Form
-8990**, and **the interest expense never reaches page 1 line 13** — the deduction simply is not
-there. Nothing errors. Nothing is flagged. The return is just smaller than it should be.
+  → for these clients, **No**.
+
+🛑 **READ THE FOLLOWING SENTENCE OFF THE FORM, NOT FROM MEMORY.** It says:
+
+> *If "Yes," complete and attach **Form 8990**, Limitation on Business Interest Expense Under
+> Section 163(j).*
+
+**"Yes" TRIGGERS Form 8990. It does not exempt you from it.** Answering **No** is what leaves the
+interest fully deductible on page 1 line 13.
+
+> ⚠️ **The pre-2023 form asked the OPPOSITE question**, and this is the single most likely thing to
+> get wrong here. It read *"Does the corporation satisfy one of the following conditions **and**
+> the corporation doesn't own a pass-through entity with … excess business interest expense?"*,
+> where sub-part (a) was *gross receipts **do not exceed** the threshold*, and it ended *"If
+> 'Yes,' the corporation is **not** required to file Form 8990."* **Same question number,
+> inverted meaning, and the old wording still matches Form 1065.** A preparer who answers the
+> current Q10 "Yes" because that is what the old form wanted has just attached Form 8990 and
+> limited a deduction that was never limited. _(This SOP shipped that error itself, caught in
+> review 2026-08-17 by pulling the actual form — which is the only way to be sure.)_
+>
+> **The general rule: for any question whose answer changes a figure, open the current-year PDF
+> from irs.gov and read the question and its "If Yes" sentence off the form.** §0B already says
+> this about page-1 line numbers; it is just as true here.
+
+**And it still fails by omission.** Leave Q10 **unanswered** and the software assumes the
+limitation applies, wants Form 8990, and **the interest expense never reaches line 13.** Nothing
+errors, nothing is flagged, the return is simply smaller.
 
 ⚠️ **You will meet this from the other direction.** In ATX, clicking the line 13 *Interest* field
-does not open a plain input — it opens a worksheet, and this §163(j) block is inside it. **That
-is not a detour to click past on the way to typing a number: it is the gate.** Answer the pair,
-then the number flows. _(Found preparing a client whose only interest expense was on a business
-credit card — about $153. Small enough to shrug at, and it would have been silently dropped.)_
+does not open a plain input — it opens a worksheet, and this block is inside it. **That is not a
+detour to click past on the way to typing a number: it is the gate.** Answer the pair, then
+re-check that line 13 actually carries the number.
 
-**The general lesson, which is worth more than the specific questions:** on this return, some
-Schedule B answers are not disclosure — **they are switches**. Treat an unanswered question as a
-deduction you have not yet claimed, and re-check page 1 after answering.
+**The lesson worth more than the two questions:** on this return some Schedule B answers are not
+disclosure — **they are switches.** Treat an unanswered question as a deduction you have not yet
+claimed.
 
 ---
 
@@ -758,7 +784,7 @@ one owner's slice of it.
 | **9** | Net §1231 gain (loss) | ⚠️ **Separately stated.** Only the *ordinary* part of a Form 4797 gain goes on page 1 line 4 (Part II, line 17); a net §1231 gain comes here instead |
 | **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
 | **16d** | Distributions | Money paid out to shareholders during the year |
-| **17** | **§199A / QBI information** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
+| **17d** | **§199A / QBI information** — Schedule K line 17d *Other items and amounts*; on the K-1 it is **box 17, code V** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
 ---
@@ -810,8 +836,8 @@ silently: consistency with the prior year is itself a tax position (§15), and t
 usually invisible until the company makes a **distribution**, which is the one thing the AAA
 actually decides.
 
-_(Pilot: the prior return showed capital stock $1,000, line 23 blank, line 19 blank, and two
-shareholders' entire capital — over a quarter of a million dollars — inside line 24. A session
+_(Pilot: the prior return showed a nominal **capital stock** figure, line 23 blank, line 19 blank,
+and two shareholders' **entire capital** inside line 24. A session
 that assumed line 23 would have produced a Schedule L that did not balance, and one that assumed
 line 19 would have turned equity into debt and changed both shareholders' basis analysis.)_
 
@@ -873,8 +899,8 @@ P&L.
   employees (§274(e)(4)) and meals *sold* to customers stay **100%** deductible. Look at what is
   actually in the account before halving it.
   ⏳ **And this rule has an expiry:** for tax years beginning after **2025**, §274(o) removes the
-  employer-provided-meal deduction entirely. That is one filing season away — re-check before
-  applying this to a 2026 return.
+  employer-provided-meal deduction entirely. That is one filing season away — ⚠️ **It does NOT touch the ordinary 50% business- and travel-meal deduction**, which continues —
+  do not read it as "meals stop being deductible". Re-check before applying this to a 2026 return.
 - **Depreciation the books never recorded.** It deducts on line 6a.
 
 > 💡 **A quick sanity check on the prior year:** the gap between last year's book net income and
