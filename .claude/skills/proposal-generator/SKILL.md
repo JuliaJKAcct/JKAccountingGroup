@@ -46,7 +46,19 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    label, Phase-2 fee, "what it adds") and the Investment page renders **two bold price
    cards side by side** — an intro price and the step-up (e.g. *First 3 months · Essential
    $725/mo* → *From month 4 · Advisory $1,497/mo*) — never buried in small text. Leave the
-   Phase-2 fee blank for a single card. A **Language**
+   Phase-2 fee blank for a single card. The What's-Included page also takes an optional
+   **"foundation" line** (`pfoundation`, `pfoundation_ru`): a short statement of the
+   **always-included baseline**, rendered as a bronze-bordered box *set apart at the top* of
+   the scope under the label *"The foundation — always included"* / *"Основа — всегда
+   включено"*, so the baseline reads as the plan's **foundation, never a differentiator**
+   (the packaging concept in `projects/marketing/service-packaging.md`). Below it, the
+   category list carries the itemised detail and — for a two-phase proposal — an *"Available
+   on the Advisory plan"* category for what a later phase adds. Leave the foundation field
+   blank to omit the box. **Tailor it to the client:** on a monthly retainer the firm keeps
+   the books, so *monthly financial statements* legitimately belong in the foundation (that
+   is not the tax-prep letter, where financial statements are excluded — see the
+   financial-statements rule below); and **omit owner payroll for a pre-operational /
+   pre-S-corp startup**, where it does not yet apply. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the
