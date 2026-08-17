@@ -500,7 +500,7 @@ each expense that has its own line, then group the remainder.
 | **9** | Repairs and maintenance | |
 | **10** | Bad debts | |
 | **11** | Rents | Office, warehouse, storage, equipment rental |
-| **12** | Taxes and licenses | **Payroll taxes + business licences + local taxes.** Not income tax |
+| **12** | Taxes and licenses | **Taxes the COMPANY BEARS** — payroll taxes, business licences, local taxes. Not income tax, and ⚠️ **not sales tax collected from customers** — see 5C-ii |
 | **13** | Interest | Loan and credit-card interest. Often sits under "other expenses" in the P&L |
 | **14** | Depreciation | **From Form 4562** — see §5D |
 | **15** | Depletion | Rare |
@@ -523,6 +523,55 @@ total expenses per the P&L
 
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
+
+### 5C-ii · ⚠️ Line 12 is tax the COMPANY bears — sales tax collected is not one
+
+**Line 12 is `Taxes and licenses`, and an account named `Taxes Paid` is not automatically it.**
+The test is not the account's name — it is **who the tax belonged to**.
+
+| What it is | Line 12? |
+|---|---|
+| The employer's share of payroll taxes | ✅ yes |
+| Business licences, local occupational taxes, state franchise tax | ✅ yes |
+| Sales tax **collected from customers and remitted** | ❌ **no — it was never the company's** |
+| Federal income tax | ❌ no |
+
+**Why sales tax is different: the company is a collection agent, not a taxpayer.** The money
+belonged to the customer and passed through to the state. **Check which method the books use, and
+the return follows it:**
+
+- **Net method** (the normal one) — tax collected is credited to a **liability**, never to
+  revenue. It is not income, so remitting it is **not a deduction**. Nothing about it reaches the
+  P&L or the return at all.
+- **Gross method** — tax collected is inside revenue. Then the remittance *is* deducted, because
+  the receipt was included. **Both, or neither. Never one without the other.**
+
+**How to tell in one look:** find the year's sales tax collected and see which account it was
+credited to. A **liability** account means net method.
+
+🔎 **Then ask what an amount sitting in a sales-tax expense account actually IS.** Under the net
+method, a debit there did not come from remitting the tax — something else put it there, and it is
+usually one of two things:
+
+1. **A genuine overpayment the company bore** — it paid the state more than it collected, out of
+   its own money. That is a real cost. ⚠️ **But before deducting it, ask whether it is
+   RECOVERABLE.** An overpayment the state will refund is a **receivable, not an expense**;
+   writing it off says the company has given up on it. **The deduction and the refund claim are
+   mutually exclusive** — decide which, and if the entity is closing, decide it *before* the
+   state account is closed, because afterwards the choice is made for you.
+2. **A plug** — a residual somebody wrote off to make the payable balance.
+
+**Read the sales-tax accounts as a FAMILY, not one at a time**, parent and sub-accounts together.
+A negative (debit) balance across the family is the overpayment, stated by the ledger itself with
+no arithmetic needed. _(Pilot: the parent sat at −1,364.86 after the year's remittances while the
+sub-account carried +1,163.66 of tax collected — netting to **−201.20**, which was the
+overpayment, and neither account showed it alone.)_
+
+🛑 **And check a clean-up entry against its own description.** One that says it clears a balance
+**to zero** is a testable claim: recompute the balance it leaves. _(Same client: the entry was
+posted **twice**, and the tell was that with one copy the family nets to 0.05 — zero — while with
+two it lands at +201.30, not zero and the opposite sign. The entry failed its own stated purpose
+by exactly one copy of itself.)_
 
 ### 5C-i · ⚠️ Line 8 is WAGES — not the "payroll" accounts
 

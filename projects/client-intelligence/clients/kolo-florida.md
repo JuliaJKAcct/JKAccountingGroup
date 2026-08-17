@@ -126,6 +126,27 @@ the actual details.
   **exactly** the goods-side residual in 1125-A line 2 — which is therefore a real purchases figure,
   not an artifact. Settled on the record so the question "the client bought nothing, why does the
   return show purchases?" has a written answer next year.
+- 🧾 **`Taxes Paid` was 100% SALES TAX, and the entry behind it was posted TWICE — Lilian confirmed
+  the duplicate and deleted one, 2026-08-17.** The account held nothing but two identical 31-Dec
+  journal entries of 201.25, `Dr Taxes Paid / Cr Channel Sales Tax Payable`, both captioned *"clear
+  residual sales tax payable (overpayment) to zero"*. **The duplicate was provable from the entry's
+  own description**: with one copy the sales-tax family nets to **0.05** (zero, as intended); with
+  two it lands at **+201.30** — not zero, and the opposite sign. **Read the sales-tax accounts as a
+  family** (parent `Channel Sales Tax Payable` −1,364.86 plus sub-account `Shopify Sales Tax`
+  +1,163.66 = **−201.20**): neither shows the overpayment alone. 💵 **Kolo really did overpay
+  Florida by ~201.20** — worth reclaiming **before the FL DOR account is closed** in the wind-down,
+  and note that **claiming the refund and deducting the write-off are mutually exclusive**. General
+  rule now in [SOP §5C-ii](../../sops/form-1120s-preparation.md).
+- 🔁 **The 31-Dec Shopify reconciliation is ONE compound entry, and it balances to the cent.** All
+  year QuickBooks sees only the **net payouts** — a single bank number with gross sales, discounts,
+  refunds, shipping, sales tax collected and Shopify's fees all buried inside it. At year end the
+  whole year is decomposed from Shopify's own reports, with the **Clearing Account as the balancing
+  figure**: gross sales 49,507.41 − discounts 26,415.71 − refunds 2,543.50 + shipping 103.52 +
+  sales tax collected 1,163.66 − selling fees 732.51 = **21,082.87 to clearing** ✓. 🔑 It also
+  settles the method question: sales tax collected goes to a **liability**, never to revenue — so
+  the books are on the **net method** and remitting the tax is not a deduction. And because COGS,
+  the 192 units and the 168,350.51 ending inventory come out of this same entry and the same
+  reports, the entry cross-checking exactly is a good signal about the books generally.
 - ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
   thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
   bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
