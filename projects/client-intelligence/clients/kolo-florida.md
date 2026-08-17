@@ -61,7 +61,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
-| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the bath/shower lines — **both the KOLO and the BAI-branded ones**, which matters (see §5 on the MegaBAI question) — at a **single location** (`"KOLO" 3485 NW 19th St, Lauderdale Lakes, FL`). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
+| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the bath/shower lines — **both the KOLO and the BAI-branded ones**, which matters (see §5 on the MegaBAI question) — at a **single location** (`"KOLO" — Lauderdale Lakes, FL` (street address in Double, not here)). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
 | Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
 | GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
 | TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
@@ -117,7 +117,7 @@ the actual details.
 - ✅ **The 2025 physical inventory count IS reflected — through the unit quantity, not an
   adjusting entry** _(Lilian, 2026-08-17)_. The `Inventory` account's only movement all year is the
   31-Dec relief for units sold, so ending inventory is opening minus cost of sales to the cent —
-  but the count is what **established the 192 units** inside that entry. So the **book figure is the
+  but the count is what **established the unit quantity** inside that entry. So the **book figure is the
   right one** for Form 1125-A line 7 and Schedule L line 3, and there is no missing correction.
   _(Asked because the alternative — a count whose findings were never posted — would have left the
   errors it found sitting in the number going on the return. It did not.)_
@@ -473,7 +473,7 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
       is far below basis, so no capital gain.
 - [x] **`Ihor Naum` → zero movement in 2025.** Beginning balance only.
 - [x] **`Refreshments (Tax Review)` → 50%, decided by Lilian 2026-08-17.** Primo Water office
-      water/coffee (§5) joins `Meals` in the food-and-beverage base: 504.08, half disallowed.
+      water/coffee (§5) joins `Meals` in the food-and-beverage base, half of the combined figure disallowed.
 - [x] **Ihor Naum is OUT for 2025 — settled by Lilian, 2026-08-17.** His 2024 K-1 carries a ticked
       **`Final K-1`**, which is the prior preparer's explicit statement that it was his last one.
       So **box I = 1, one K-1 at 100%, one Form 7203.** The box governs; the 50-shares-at-year-end

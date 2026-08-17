@@ -388,7 +388,7 @@ non-inventory account the convention parks inside line 7, plus whatever non-purc
 convention parks inside line 8. It can easily be the **majority** of a small solved line 2.
 
 _(The pilot: a Shopify client whose line 7 includes the Shopify **Clearing Account** and whose line
-8 includes **Shopify Selling Fees**. in a year the client bought no stock, a small solved line 2 decomposed to
+8 includes **Shopify Selling Fees**. In a year the client bought no stock, a small solved line 2 decomposed to
 **roughly two thirds artifact** — selling fees plus the clearing account's growth — and one third on
 the goods side. Most of "purchases" was not goods.)_
 
@@ -552,9 +552,14 @@ distributions:
 1. **ROUND TRIPS — money in and straight back out.** Look for an outflow sitting beside an inflow
    of similar size within a few days, or on the same day. That is the owner moving funds, not
    taking profit: a deposit of 50,000 followed three days later by a withdrawal of 49,000 is a
-   **contribution of **1,000**, not a contribution of 50,000 plus a distribution of 49,000. **Netting
+   a **contribution of 1,000**, not a contribution of 50,000 plus a distribution of 49,000. **Netting
    those is right.**
-2. **Transfers to the owner's personal accounts** with no matching inflow. Distributions.
+2. **Transfers to the owner's personal accounts** with no matching inflow. Distributions —
+   ⚠️ **unless the company carries a shareholder loan**, in which case a payment out may be a
+   **repayment of that loan**, which is **Schedule K line 16e**, not 16d, and reduces **debt
+   basis** rather than stock basis. §1's intake question about loans to or from the company is
+   what tells you; **a repayment misclassified as a distribution also loses the taxable gain that
+   arises when prior losses had already reduced debt basis.**
 3. **PERSONAL SPENDING on the company card or account** — groceries, fuel, a restaurant, a
    personal subscription. 🔑 **These are the ones that settle the question**, because they cannot
    be netted against anything: nobody round-trips a supermarket run. **A bookkeeper who posts them
@@ -584,7 +589,8 @@ The test is not the account's name — it is **who the tax belonged to**.
 | The employer's share of payroll taxes | ✅ yes |
 | Business licences, local occupational taxes, state franchise tax | ✅ yes |
 | Sales tax **collected from customers and remitted** | ❌ **no — it was never the company's** |
-| Federal income tax | ❌ no |
+| **State** income or PTE tax on the corporation | ✅ yes |
+| **Federal** income tax | ❌ no |
 
 **Why sales tax is different: the company is a collection agent, not a taxpayer.** The money
 belonged to the customer and passed through to the state. **Check which method the books use, and
@@ -754,7 +760,8 @@ interest fully deductible on page 1 line 13.
 > the corporation doesn't own a pass-through entity with … excess business interest expense?"*,
 > where sub-part (a) was *gross receipts **do not exceed** the threshold*, and it ended *"If
 > 'Yes,' the corporation is **not** required to file Form 8990."* **Same question number,
-> inverted meaning, and the old wording still matches Form 1065.** A preparer who answers the
+> inverted meaning.** And the old wording is now on **no current form** — Form 1065 was rewritten
+> in the same revision, so there is nowhere left to go looking for it. A preparer who answers the
 > current Q10 "Yes" because that is what the old form wanted has just attached Form 8990 and
 > limited a deduction that was never limited. _(This SOP shipped that error itself, caught in
 > review 2026-08-17 by pulling the actual form — which is the only way to be sure.)_
