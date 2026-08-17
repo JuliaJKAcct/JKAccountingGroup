@@ -51,7 +51,9 @@ FOLLOW-UPS.md Open loops — started work waiting for a second pass (on-demand, 
 
 The seven **Marketing** rows are one group under
 [`projects/marketing/`](./projects/marketing/), which also holds the firm's
-shared offer positioning and the marketing operating-persona for Claude. See
+shared offer positioning, the monthly
+[service packaging](./projects/marketing/service-packaging.md) (the three plans
+and the add-on menu), and the marketing operating-persona for Claude. See
 [`projects/README.md`](./projects/README.md) for the full index and the
 standard every project follows.
 

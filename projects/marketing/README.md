@@ -14,6 +14,7 @@ work, not the purpose of the repo.
 marketing/
 ├── CLAUDE.md                  ← operating persona for all marketing work
 ├── positioning.md             ← shared offer positioning: the pitch + "what do you do?" (EN/RU)
+├── service-packaging.md       ← shared monthly packaging: the 3 plans, what's in all of them, the add-on menu (EN/RU)
 ├── social-content-playbook.md ← shared social rules: pillars, the 50/20/20/10 mix, one action per post
 ├── collateral/                ← on-brand marketing collateral (cards, posts, flyers, copy)
 ├── email-branding/            ← team email on the Design System — signatures + branded email
@@ -42,6 +43,14 @@ marketing/
   messaging (the pitch and the "what do you do?" answer, EN/RU). Every marketing
   project draws on it; keep it consistent with
   [`referral-offer-strategy/strategy.md`](./referral-offer-strategy/strategy.md).
+- **[`service-packaging.md`](./service-packaging.md)** — how the monthly
+  engagements are packaged and sold: the three plans (Essential · Advisory ·
+  Strategic), the access promise that sits above all of them, what is in every
+  plan, what actually climbs between them, the add-on menu sold on top, and the
+  business conditions that justify an upgrade. Website copy EN/RU included. The
+  website pricing page, the [proposal tool](../proposal-tool/), and the sales
+  conversation all draw on it — keep them consistent with it, not with each
+  other.
 - **[`social-content-playbook.md`](./social-content-playbook.md)** — what every
   Instagram/Facebook post is *for*: the three pillars, the 50/20/20/10 monthly
   mix, one named action per post, cadence, and the confidentiality limits on

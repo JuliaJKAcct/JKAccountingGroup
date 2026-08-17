@@ -29,7 +29,9 @@ Projects share the firm's [`brand/`](../brand/) foundation and the skills in
 
 > The first seven rows are the **marketing group** — they live under
 > [`marketing/`](./marketing/), which also holds the firm's shared offer
-> [`positioning.md`](./marketing/positioning.md) and a
+> [`positioning.md`](./marketing/positioning.md), the monthly
+> [`service-packaging.md`](./marketing/service-packaging.md) (the three plans,
+> what's in all of them, and the add-on menu) and a
 > [`CLAUDE.md`](./marketing/CLAUDE.md) that gives Claude a marketing-strategist
 > persona for any work in that subtree.
 
