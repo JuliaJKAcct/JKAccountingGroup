@@ -423,26 +423,18 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
       box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution
       is far below basis, so no capital gain.
 - [x] **`Ihor Naum` → zero movement in 2025.** Beginning balance only.
-- [ ] **Is `Refreshments (Tax Review)` a meals account?** ⓘ **Now a decision, not a question** —
-      it is Primo Water office water/coffee (§5). Firm's working position is 50%; Lilian confirms.
-- [ ] **WHEN did Ihor Naum leave?** ⚠️ **The 2024 return does not settle it and contradicts itself**
-      (§5). Not a QuickBooks question. Governs only Box I, the K-1s and Form 7203 — every
-      company-level figure is identical in all three scenarios, so it does **not** block the rest.
-
-**Closed 2026-08-17 by reading the 2024 filed return** (through the redactor, that one year only):
-
-- [x] **2024 Form 1125-A line 9a → `(i) Cost`.** 2025 must match.
-- [x] **Ownership 2024 → 50/50**, 50 shares each of 100.
-- [x] **Contributions or loans → CONTRIBUTIONS.** Schedule L line 19 blank *and* both K-1s' *Loans
-      from shareholder* boxes blank. Stock basis, not debt basis.
-- [x] **2024 depreciation → 1,752 on the filed Form 4562**, equal to the book figure; 2025 is 5,415
-      per ATX, so Schedule L 10b is 7,167.
-- [x] Header constants: business activity code **449129**, S election effective **1/1/2024**,
-      incorporated **5/30/2024**, and **2024 was a SHORT first year** (5/30–12/31), which is why its
-      beginning balance sheet is all zeros.
-
-**Standing, not blocking:**
-
+- [x] **`Refreshments (Tax Review)` → 50%, decided by Lilian 2026-08-17.** Primo Water office
+      water/coffee (§5) joins `Meals` in the food-and-beverage base: 504.08, half disallowed.
+- [x] **Ihor Naum is OUT for 2025 — settled by Lilian, 2026-08-17.** His 2024 K-1 carries a ticked
+      **`Final K-1`**, which is the prior preparer's explicit statement that it was his last one.
+      So **box I = 1, one K-1 at 100%, one Form 7203.** The box governs; the 50-shares-at-year-end
+      reading on the same K-1 was raised and she ruled on it. ⓘ **No figure moves** — the equity
+      sweep convention (§5) puts every capital account inside Schedule L line 24 regardless of
+      whose it is, so his 32,732.26 sitting untouched on the 2025 balance sheet changes nothing on
+      this return. It may matter in **2026**, the final year: whatever Mykola paid him for the
+      shares is Mykola's **outside** basis, is nowhere in the company's books, and decides the gain
+      or loss on liquidation. The general rule is now
+      [SOP §3A](../../sops/form-1120s-preparation.md).
 - [ ] **Are the BAI-branded lines Kolo's own stock?** They are tracked, unlike the intermediary
       kitchen/door lines, and they are among the largest lines by value (§5).
 - [ ] **Is the warehouse lease still running?** Four fifths of 2025's expenses and the largest

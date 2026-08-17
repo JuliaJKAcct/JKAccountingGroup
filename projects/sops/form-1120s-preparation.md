@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-08-14
+> **Owner:** Lilian · **Last updated:** 2026-08-17
 
 > **Client data lives in the firm's systems, not here.** Names, EINs, figures, balances and
 > filled-in worksheets belong in Google Drive / Double / QuickBooks. This SOP carries the
@@ -256,6 +256,37 @@ prior year revealed it in ten minutes.
 > ⚠️ **A number that reconciles is not the same as a number that is right.** Reproducing the
 > prior year proves your **map** is right. It does not prove the underlying figures are — the
 > client's cost basis, their inventory count, their classifications are separate questions.
+
+### 🔑 3A · With more than one owner, CHECK EVERY PRIOR-YEAR K-1 FOR THE "FINAL K-1" BOX
+
+**Firm rule (Lilian, Aug 2026).** Before you decide how many shareholders this year has, open
+**each** Schedule K-1 from the prior return and look at the **`Final K-1`** checkbox at the top
+right.
+
+**A ticked `Final K-1` means that shareholder is out.** It is the previous preparer's explicit
+statement that it was that person's last K-1 from this company — so **this year they are not a
+shareholder, they get no K-1, and they are not counted in page 1 box I.** You do not need to
+reconstruct the sale, find the transfer document, or reason it out from the balance sheet: the
+prior return already answered it, and answering it any other way risks contradicting a filed
+position.
+
+**Do this before anything shareholder-related** — it decides box I, how many K-1s exist, how many
+Forms 7203 you prepare, and whether the year needs a per-day allocation at all. A two-owner company
+whose second K-1 was final last year is a **one-owner company this year**, allocating 100%, with no
+per-day arithmetic to do.
+
+⚠️ **Two things the box does not tell you, and neither one changes the answer above:**
+
+- **The departed shareholder's capital account may still be sitting on the balance sheet.** Books
+  do not clear themselves. Under the sweep-into-retained-earnings convention (§8A) this changes no
+  figure — the equity total is what it is — but it is worth knowing whose money it is, because the
+  buyer's **outside basis** (what they paid for the shares) is not in the company's books at all,
+  and it decides the gain or loss when the company eventually liquidates.
+- **The rest of the prior return may not agree with the box.** A truly final K-1 would normally
+  show zero shares at end of year and a below-full allocation percentage. If it shows the
+  shareholder still holding shares at 31 December, **note it and move on — the box governs.**
+  Report the inconsistency to Lilian rather than resolving it yourself, and never as a criticism
+  of a closed return (§3's rule above).
 
 > 🛑 **Reproducing the prior year is NOT auditing it.** A filed return is closed. You are
 > reading it as an answer key to learn the conventions, not to find fault with it. If you do
@@ -767,8 +798,13 @@ yet distributed. It matters when distributions are made — it decides whether t
 
 Each K-1 carries that shareholder's **percentage share** of every Schedule K line.
 
+- **How many K-1s there are was settled back in §3A**, by the `Final K-1` boxes on last year's
+  K-1s. A shareholder whose prior-year K-1 was marked final gets **no K-1 this year** and is not
+  counted in page 1 box I.
 - **The percentage is ownership**, and if it changed during the year the allocation is done
   **per day, per share** — get help before attempting that by hand.
+- ✅ **Tick `Final K-1` on any shareholder who left THIS year** — it is how next year's preparer
+  will know, and §3A is the other half of the same habit. The box is the return's memory.
 - ⚠️ **The S-corp K-1 has no capital account analysis** (that is the partnership K-1). Do not
   go looking for it.
 - Box 16c and the §199A statement travel to the owner too — an owner whose K-1 is missing the
