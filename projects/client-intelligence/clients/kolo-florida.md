@@ -375,7 +375,8 @@ the actual details.
   export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; the two were
   compared account by account before anything was relied on — **identical to the cent**, because
   this client has no receivables and no payables — and Lilian re-sent the accrual copy anyway.
-  What it settled: the security-deposit write-off went to **Store Rent** and must be reversed; the
+  What it settled: the security-deposit write-off went to **Store Rent** — which Lilian then ruled
+  **correct and standing** (§5), so it is not reversed; the
   1125-A line-2 residual is **two `United Porte` invoices booked straight to cost of sales**, the
   pass-through door line, so **nothing needs correcting and both "we bought nothing" and the
   ledger were right**; **Mykola took 18,436.62 of distributions** against 83,999.00 of
