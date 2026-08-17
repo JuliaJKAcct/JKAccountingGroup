@@ -101,6 +101,12 @@
   .pcard .pk{ font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
   .pcard .pv{ font-family:var(--serif); font-size:40px; font-weight:700; color:var(--bronze); line-height:1.05; margin-top:4px; }
   .pcard .pv .per{ font-size:17px; color:var(--muted); font-weight:400; }
+  /* Two-phase investment snapshot — an intro price and a step-up, side by side (big, not small text) */
+  .pcards2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  .pcards2 .pcard{ margin-bottom:0; display:flex; flex-direction:column; }
+  .pcards2 .pcard .pv{ font-size:34px; }
+  .pcard.p2{ border-color:var(--bronze-lt); background:rgba(156,106,57,.07); }
+  .pcard .pnote{ font-size:10.5px; color:var(--ink); margin:10px 0 0; padding-top:9px; border-top:1px solid var(--hairline); line-height:1.45; }
   .disc{ font-size:11.5px; margin:0 0 8px; } .disc b{ color:var(--teal); }
   .invnote{ font-size:10.5px; color:var(--muted); font-style:italic; }
 
@@ -238,9 +244,16 @@
       <div class="grp">
         <p class="gl">Your Investment</p>
         <label class="f"><span class="cap">Monthly fee (client-facing)</span><input id="pfee" placeholder="$0 — send from Step 1, then adjust"></label>
+        <label class="f"><span class="cap">Phase 1 label (optional — shown above the fee)</span><input id="pphase1" placeholder="e.g. First 3 months · Essential"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Phase 2 label</span><input id="pphase2" placeholder="e.g. From month 4 · Advisory"></label>
+          <label class="f"><span class="cap">Phase 2 fee</span><input id="pfee2" placeholder="$1,497"></label>
+        </div>
+        <label class="f"><span class="cap">Phase 2 — what it adds</span><input id="pphase2note" placeholder="Adds proactive tax planning, payroll &amp; quarterly advisory"></label>
+        <p class="hint">Fill <b>Phase 2 fee</b> to show a two-card investment snapshot (an intro price, then a step-up). Leave it blank for a single price.</p>
         <label class="f"><span class="cap">Standard rate (optional, for a discount anchor)</span><input id="pstdrate" placeholder="e.g. $650/mo"></label>
         <label class="f"><span class="cap">Discount text (optional)</span><input id="pdiscount" placeholder="e.g. 10% discount (–$65) for annual prepay"></label>
-        <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody" rows="2"></textarea></label>
+        <label class="f"><span class="cap">Investment body (optional — kept short; the cards carry the message)</span><textarea id="pinvbody" rows="2"></textarea></label>
         <label class="f"><span class="cap">Closing note</span><input id="pinvnote"></label>
       </div>
       <div class="grp">
@@ -281,6 +294,11 @@
         </div>
         <div class="grp">
           <p class="gl">Your Investment · Ваши инвестиции</p>
+          <label class="f"><span class="cap">Phase 1 label (RU)</span><input id="pphase1_ru" placeholder="Первые 3 месяца · Essential"></label>
+          <div class="row2">
+            <label class="f"><span class="cap">Phase 2 label (RU)</span><input id="pphase2_ru" placeholder="С 4-го месяца · Advisory"></label>
+            <label class="f"><span class="cap">Phase 2 — what it adds (RU)</span><input id="pphase2note_ru"></label>
+          </div>
           <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody_ru" rows="2"></textarea></label>
           <label class="f"><span class="cap">Closing note</span><input id="pinvnote_ru"></label>
         </div>
@@ -347,8 +365,8 @@
     pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
     psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
   };
-  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pinvbody_ru","pinvnote_ru","pincluded_ru","psteps_ru"];
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
   function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -461,10 +479,26 @@
     const L = LBL[lang];
     const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
       ? `<p class="disc">${esc(L.stdRate)} ${esc($("pstdrate").value)} · ${esc(L.includes)} <b>${esc($("pdiscount").value)}</b></p>` : "";
+    // Investment snapshot: one price card, or — when a Phase-2 fee is entered — a bold TWO-phase
+    // snapshot (an intro price and the step-up, side by side). Phase labels + the phase-2 note are
+    // translated per language; the dollar amounts are shared.
+    const fee2 = $("pfee2").value.trim();
+    const p1kick = cv("pphase1",lang).trim() || L.invCard;
+    let cards;
+    if(fee2){
+      const note2 = cv("pphase2note",lang).trim();
+      cards = `<div class="pcards2">`
+        + `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
+        + `<div class="pcard p2"><div class="pk">${ph(cv("pphase2",lang),"[Phase 2]")}</div><div class="pv">${esc(fee2)}<span class="per">${esc(L.per)}</span></div>${note2?`<p class="pnote">${esc(note2)}</p>`:""}</div>`
+        + `</div>`;
+    } else {
+      cards = `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`;
+    }
+    const body = cv("pinvbody",lang).trim();
     return sectionHead(L.invEye, L.invTitle, tag)
-      + `<div class="pcard"><div class="pk">${esc(L.invCard)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
+      + cards
       + disc
-      + `<p>${ph(cv("pinvbody",lang),L.invBodyPh)}</p>`
+      + (body ? `<p>${esc(body)}</p>` : "")
       + `<p class="invnote">${esc(cv("pinvnote",lang))}</p>`;
   }
 
