@@ -728,10 +728,17 @@ entry, not a Schedule M-1 adjustment**, because a refundable deposit is an asset
 for tax and there is no book/tax difference to reconcile.
 
 **Find the credit side before you conclude anything** — pull the account's ledger detail and see
-what it was written off against. If it went to **rent**, rent is overstated, the loss is
-overstated by the same amount, and **four things move**: page 1 line 11, page 1 line 22,
-Schedule L's other-current-assets line, and Schedule L's total assets. Correct the books and it
-all flows on its own.
+what it was written off against. If it went to **rent**, then rent, the loss, Schedule L's
+other-current-assets line and Schedule L's total assets are all carrying it.
+
+🛑 **Then STOP and take it to Lilian — do not reverse it yourself.** Whether a deposit that has
+moved to a new lease is an asset or an expense is a **position**, and positions are hers. A
+session that finds the entry, reasons correctly that the deposit still exists, and quietly posts
+the reversal has changed a filed-return figure on its own authority. **Present the entry, the
+facts and the consequence; let her rule; then compute from her answer.** _(This happened: a
+session recommended reversing exactly such an entry, and Lilian — who knew who had made it and
+why — ruled that it stood. The analysis was sound and the decision was not the session's to
+make.)_
 
 ---
 

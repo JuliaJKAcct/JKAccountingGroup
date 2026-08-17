@@ -132,19 +132,17 @@ the actual details.
   `Meals`, on the post-TCJA reading that §274(n) reaches food and beverages provided on premises;
   treating it as office supplies at 100% is the more aggressive alternative. **Lilian decides** —
   it moves M-1 line 3b, Schedule K 16c, M-2 line 5 and page 1 line 20.
-- 💰 **The Security Deposit write-off is CONFIRMED and must be reversed.** The 2025 general ledger
-  names it: `12/31/2025 · Journal Entry · "Move security deposit to rent expense" · 12,666.66`,
-  landing in **Store Rent**. Reverse it — **Dr Security Deposit / Cr Store Rent** — because the
-  deposit still exists (next bullet). Rent falls to **68,063.06**, book net income improves to
-  **(75,426.08)**, and Schedule L carries the deposit again on **line 6**, where the 2024 return
-  put it. _(2026-08-17.)_
-- 💰 **Why it is still an asset.** The
-  landlord kept it when the company moved to a **different warehouse belonging to the same
-  landlord**; it became the deposit on the new lease and is refundable when they vacate _(Lilian,
-  2026-08-17)_. The 2025 balance sheet shows it at **zero**, so something wrote it off. **That is a
-  journal entry to reverse, not a Schedule M-1 adjustment** — a refundable deposit is an asset for
-  books *and* for tax, so there is no book/tax difference. If the credit went to `Rent`, rent and
-  the loss are both overstated by the same amount and **six figures on the return move**.
+- 💰 **The Security Deposit was EXPENSED TO RENT, and that stands — Lilian's decision, 2026-08-17.**
+  The 2025 general ledger names the entry: `12/31/2025 · Journal Entry · "Move security deposit to
+  rent expense" · 12,666.66`, landing in **Store Rent**. Julia made it. **Lilian reviewed it and
+  ruled it correct — do not reverse it**, and do not re-raise it. So 2025 rent is the full
+  **80,729.72**, the deposit is **off** the balance sheet, Schedule L line 6 runs **12,667 → 0**,
+  and there is no book/tax difference to reconcile because the treatment is the same on both sides.
+  ⓘ **The underlying facts, recorded because they are what the position rests on:** the landlord
+  kept the deposit when the company moved to a **different warehouse of his own**, it became the
+  deposit on the new lease, and it is refundable when they vacate. A session reading only those
+  facts would reach for an asset; **the firm's position is the expense, and this bullet exists so
+  the question is not reopened every time someone reads the file.**
 - ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
   30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
   cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
@@ -418,7 +416,8 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
       export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; every account
       total matched to the cent (no receivables, no payables), and Lilian re-sent the accrual copy.
       Checked, not assumed.
-- [x] **`Security Deposit` → credited to Store Rent** by a 31-Dec journal entry. Reverse it (§5).
+- [x] **`Security Deposit` → credited to Store Rent** by a 31-Dec journal entry (Julia's).
+      **Lilian ruled it correct on 2026-08-17 — it stands, do not reverse** (§5).
 - [x] **`Inventory` → one entry all year**, the cost-of-sales relief. The line-2 residual is two
       `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ⚠️ But
       the physical count never reached the books (§5).
