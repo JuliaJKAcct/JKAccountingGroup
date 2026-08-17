@@ -111,6 +111,10 @@
   .invnote{ font-size:10.5px; color:var(--muted); font-style:italic; }
 
   /* Included */
+  /* "The foundation" — the always-included baseline, set apart at the top of the scope */
+  .foundation{ background:rgba(18,56,65,.05); border:1px solid var(--hairline); border-left:4px solid var(--bronze); border-radius:0 8px 8px 0; padding:12px 16px; margin:0 0 18px; }
+  .foundation .fk{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); font-weight:700; margin-bottom:5px; }
+  .foundation p{ font-size:11px; line-height:1.55; margin:0; color:var(--ink); }
   .icat{ font-family:var(--serif); font-size:14px; font-weight:700; color:var(--teal); margin:14px 0 4px; }
   .ppage ul{ margin:0 0 8px; padding-left:20px; } .ppage li{ font-size:11.5px; line-height:1.55; margin-bottom:3px; }
 
@@ -258,6 +262,7 @@
       </div>
       <div class="grp">
         <p class="gl">What's Included</p>
+        <label class="f"><span class="cap">Foundation — the always-included baseline (optional; shown as a set-apart box at the top)</span><textarea id="pfoundation" rows="3" placeholder="e.g. Whatever else you add later, these are always part of your plan: your books kept current, monthly financial statements, your business tax return and sales-tax returns filed on time…"></textarea></label>
         <label class="f"><span class="cap">Categories &amp; bullets — a line starting with "# " is a category; other lines are bullets</span><textarea id="pincluded" rows="7"></textarea></label>
       </div>
       <div class="grp">
@@ -304,6 +309,7 @@
         </div>
         <div class="grp">
           <p class="gl">What's Included · Что включено</p>
+          <label class="f"><span class="cap">Foundation — the always-included baseline (RU)</span><textarea id="pfoundation_ru" rows="3"></textarea></label>
           <label class="f"><span class="cap">Categories &amp; bullets — "# " = category</span><textarea id="pincluded_ru" rows="7"></textarea></label>
         </div>
         <div class="grp">
@@ -365,8 +371,8 @@
     pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
     psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
   };
-  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","pincluded_ru","psteps_ru"];
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
   function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -376,7 +382,7 @@
   const LBL = {
     en:{ introEye:"Welcome", introTitle:"Introduction", getEye:"Why JK", getTitle:"What You Get",
          invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo",
-         inclEye:"Scope of Services", inclTitle:"What's Included",
+         inclEye:"Scope of Services", inclTitle:"What's Included", foundationK:"The foundation — always included",
          nextEye:"Next Steps", nextTitle:"What's Next",
          overviewEye:"Overview", contentsTitle:"Contents",
          agreeH:"Agreement", agreeB:"By signing below, you agree to the services and fees outlined in this proposal.",
@@ -387,7 +393,7 @@
          rows:["Introduction","What You Get","Your Investment","What's Included","What's Next"] },
     ru:{ introEye:"Добро пожаловать", introTitle:"Введение", getEye:"Почему JK", getTitle:"Что вы получаете",
          invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес",
-         inclEye:"Объём услуг", inclTitle:"Что включено",
+         inclEye:"Объём услуг", inclTitle:"Что включено", foundationK:"Основа — всегда включено",
          nextEye:"Дальнейшие шаги", nextTitle:"Что дальше",
          overviewEye:"Обзор", contentsTitle:"Содержание",
          agreeH:"Соглашение", agreeB:"Подписывая ниже, вы соглашаетесь с услугами и стоимостью, изложенными в этом предложении.",
@@ -503,7 +509,11 @@
   }
 
   function includedPage(lang, tag){
-    return sectionHead(LBL[lang].inclEye, LBL[lang].inclTitle, tag) + includedHtml(lang);
+    // Optional "foundation" statement — the always-included baseline, set apart at the top of
+    // the scope so it reads as the foundation of the plan, never a differentiator.
+    const found = cv("pfoundation",lang).trim();
+    const foundHtml = found ? `<div class="foundation"><div class="fk">${esc(LBL[lang].foundationK)}</div><p>${esc(found)}</p></div>` : "";
+    return sectionHead(LBL[lang].inclEye, LBL[lang].inclTitle, tag) + foundHtml + includedHtml(lang);
   }
 
   function nextPage(lang, withSignature, tag){
