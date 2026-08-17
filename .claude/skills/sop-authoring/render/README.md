@@ -84,6 +84,7 @@ Compose only from these — they map straight to the SOP house structure in
 | "What you pay" money box | `<div class="paybox">` → `.ph` (`.coin` $ badge), `<ol class="pay-items">` (use `.amt` on figures), `.bottomline` |
 | Process flowchart | `<figure class="flow">` → `.fnode` (`.gate`/`.pay`/`.wait`/`.done` variants, `.pill` tag, `.ckmark`), `.fconn` connectors, `.fphase`/`.fphase-h` phase groups, `.fdecide`/`.fbranch`/`.branch.fix`/`.branch.good` for decisions |
 | Uploads / have-ready panel | `<div class="panel">` → `.ph`, `<h4>`, `.grp` groups |
+| **Drive vault button** (a login / password doc / video the step needs, kept in Drive) | `<div class="vault">` → `.ph` (mono kicker + inline SVG), then `<a class="vbtn" href="…" data-tip="…">` → `.dicon` + `.vt` (`<b>` label + `<em>` Drive path) + `.varr`, then `.vcap` caption. `data-tip` renders as the hover tooltip; it never prints. **Never a bare URL and never the secret itself** — see [`SKILL.md`](../SKILL.md) |
 | Email map (§7) | `.emailgrp` → `.eh` (`.from` sender pill), `.emailcard` (`.top` → `.step` + `.etag ack\|pay\|approve\|action`, `.subj`, `<p>`) |
 | Contacts & links | `<div class="tablewrap"><table class="links">` (`.for` = mono "for" label, `.ph` = phone) |
 | Blank intake appendix | `<div class="intake"><pre>…</pre></div>` with `.grp` on group headers |

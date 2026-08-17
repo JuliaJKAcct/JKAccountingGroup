@@ -365,6 +365,48 @@ table.links .for{font-family:var(--mono); font-size:10px; letter-spacing:0.06em;
 table.links a{word-break:break-word;}
 table.links td .ph{color:var(--body); white-space:nowrap;}
 
+/* ---------- Drive vault button (confidential material) ----------
+   For anything a step needs that lives in Google Drive and must NOT be printed
+   on a team-facing page: a login, a password doc, a walkthrough video, a
+   client file. Always a designed button + caption — never a bare URL, never
+   the secret itself. See sop-authoring/SKILL.md. */
+.vault{background:var(--paper); border:1px solid var(--bronze-300); border-radius:16px;
+  padding:clamp(18px,2.6vw,24px); box-shadow:var(--shadow-sm); margin:20px 0;}
+:root[data-theme="dark"] .vault{border-color:rgba(207,162,104,0.42);}
+.vault > .ph{display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:11px;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:14px;}
+.vault > .ph svg{width:15px; height:15px; flex:0 0 auto; stroke:currentColor; fill:none; stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round;}
+.vbtn{position:relative; display:flex; align-items:center; gap:14px; text-decoration:none;
+  background:var(--accent); color:#fff; border-radius:12px; padding:14px 18px;
+  box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out),
+  background-color .18s var(--ease-out);}
+.vbtn:hover, .vbtn:focus-visible{background:var(--accent-2); transform:translateY(-1px); box-shadow:var(--shadow-md);}
+:root[data-theme="dark"] .vbtn{color:var(--teal-950);}
+.vbtn .dicon{width:26px; height:26px; flex:0 0 auto;}
+.vbtn .vt{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.vbtn .vt b{font-family:var(--sans); font-size:15px; font-weight:600; line-height:1.3; color:inherit;}
+.vbtn .vt em{font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em; font-style:normal;
+  opacity:0.82; overflow-wrap:anywhere;}
+.vbtn .varr{width:17px; height:17px; flex:0 0 auto; margin-left:auto; stroke:currentColor; fill:none;
+  stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round;
+  transition:transform .18s var(--ease-out);}
+.vbtn:hover .varr, .vbtn:focus-visible .varr{transform:translateX(3px);}
+/* hover tooltip — what this link opens, without printing it */
+.vbtn::after{content:attr(data-tip); position:absolute; left:50%; bottom:calc(100% + 9px);
+  transform:translate(-50%,4px); width:max-content; max-width:min(300px,80vw);
+  background:var(--teal-950); color:#ECE6DA; font-family:var(--sans); font-size:12px; line-height:1.45;
+  padding:8px 11px; border-radius:9px; box-shadow:var(--shadow-md); pointer-events:none;
+  opacity:0; transition:opacity .16s var(--ease-out), transform .16s var(--ease-out);}
+.vbtn:hover::after, .vbtn:focus-visible::after{opacity:1; transform:translate(-50%,0);}
+.vault .vcap{margin-top:13px; font-size:13.5px; line-height:1.6; color:var(--body);}
+.vault .vcap b{color:var(--ink);}
+@media (prefers-reduced-motion: reduce){
+  .vbtn, .vbtn .varr, .vbtn::after{transition:none;}
+  .vbtn:hover, .vbtn:focus-visible{transform:none;}
+  .vbtn:hover .varr, .vbtn:focus-visible .varr{transform:none;}
+}
+
 /* ---------- Intake appendix ---------- */
 .intake{background:var(--paper); border:1px solid var(--border-subtle); border-radius:16px;
   padding:clamp(20px,3vw,26px); box-shadow:var(--shadow-sm); margin:18px 0;}
@@ -407,11 +449,13 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .mast{background:#0d2a31 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .mast, .fnode, .fdecide, .paybox, .panel, .emailcard, .callout, .subbar, .branch, .schip, .chipm,
   .fnode.done, .fnode.pay, .fnode.gate, table.links thead th, .paybox .coin, .fphase-h .pn, .fphase-h .fref,
-  ol.qlist>li::before, .pay-items>li::before, .schip, .fdecide .dt, .subbar .tag, .etag{
+  ol.qlist>li::before, .pay-items>li::before, .schip, .fdecide .dt, .subbar .tag, .etag,
+  .vault, .vbtn{
     -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .vbtn::after{display:none;}   /* the hover tooltip never prints */
   section.doc{break-inside:avoid-page;}
   .callout, .paybox, .panel, .emailcard, .fnode, .fdecide, .subbar, .flow figure, .tablewrap, .intake,
-  ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
+  .vault, ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
   .shead{break-after:avoid;}
   .fphase{break-inside:avoid;}
   a{color:var(--accent-2); text-decoration:none;}
