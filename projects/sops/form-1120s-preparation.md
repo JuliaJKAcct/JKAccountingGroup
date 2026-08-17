@@ -682,6 +682,18 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 - ⚠️ **If the books recorded no depreciation at all**, the deduction still belongs on the
   return. It becomes a book-to-tax difference on **Schedule M-1** (§9).
 
+> 🖥️ **IN ATX: enter the assets in the `Fixed Assets` tab — NOT on Form 4562 itself.**
+> Standing reminder (Lilian, Aug 2026), and it applies **every time this form comes up**. The
+> 4562 in ATX is a **computed output**: it is assembled from the asset register, and typing into
+> it either refuses or produces a figure the register does not support, which then disagrees with
+> Schedule L line 10b. **Add or edit each asset in `Fixed Assets` — cost, date placed in service,
+> method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation
+> figure from it.**
+>
+> **Then check the two places the number has to land:** page 1 **line 14**, and **Schedule L line
+> 10b** = prior accumulated depreciation **+** this year's. If 10b does not move by exactly the
+> line 14 figure, the register and the return have come apart.
+
 ---
 
 ## §6 · Schedule B — the questions
@@ -985,6 +997,53 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 > because it decides whether the loss you just allocated is actually usable. **Prepare it here;
 > it travels with the owner's personal return.** If the firm does not prepare that 1040, the
 > figures still have to reach whoever does.
+
+### The form, line by line — and the order is built into it
+
+**You do not have to remember the ordering: the form enforces it.** Part I runs down the page in
+the sequence §1.1367-1(f) requires, which is why reading it top to bottom is the safest way to
+prepare it.
+
+| Line | What it is | Where it comes from |
+|---|---|---|
+| **1** | Stock basis at the **beginning** of the corporation's tax year | 🔒 **line 15 of LAST year's Form 7203**, copied. If there is no prior 7203, build it from the capital account less prior losses and non-deductibles, and say in the file that it was derived |
+| **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii) |
+| **3a–3m** | Income items that increase basis | ⚠️ **A LOSS DOES NOT GO HERE.** Line 3a says *"enter losses in Part III"*. 3k is tax-exempt income |
+| **4** | Add lines 3a through 3m | ƒ |
+| **5** | **Stock basis before distributions** — add lines 1, 2 and 4 | ƒ |
+| **6** | **Distributions** (excluding dividend distributions) | 📖 the **gross debits** — the same figure as Schedule K 16d and K-1 box 16D |
+| **7** | **Stock basis after distributions** — line 5 − line 6 | ƒ ⚠️ if zero or less, enter **-0-**, skip lines 8–14 and put -0- on line 15 |
+| **8a–8c** | Non-deductible expenses · depletion · business credits | 8a is the Schedule K **16c** figure |
+| **9** | Add lines 8a through 8c | ƒ |
+| **10** | **Stock basis before loss and deduction items** — line 7 − line 9 | ƒ |
+| **11** | Allowable loss and deduction items | ƒ **from Part III, line 47 column (c)** |
+| **12** | Debt basis restoration | Only where there is debt basis (Part II) |
+| **13** | Other items that decrease stock basis | |
+| **14** | Add lines 11, 12 and 13 | ƒ |
+| **15** | **Stock basis at the END of the year** | ƒ line 10 − line 14 → **next year's line 1** |
+
+🛑 **The note printed under line 6 is the whole risk, stated by the form:** *"If line 6 is larger
+than line 5, subtract line 5 from line 6 and report the result as a **capital gain on Form 8949
+and Schedule D**."* That is the one basis failure that creates income rather than postponing a
+deduction — and the form catches it for you **only if line 6 carries the real gross distributions**
+(§5C-iii).
+
+**Part II — Shareholder Debt Basis.** Zero for a shareholder who only contributed capital. The
+prior year's **Part II and the K-1's *Loans from shareholder* boxes together** are the fastest
+answer to §12A's first question below.
+
+**Part III — Allowable Loss and Deduction Items.** Where the loss actually goes: column (a)
+carryover from prior years, (b) this year's, **(c) allowable** — which feeds line 11 — and (d)
+disallowed and carried forward.
+
+### Two header boxes that must match the prior year
+
+- **Box D — how the stock was acquired** (original shareholder · purchased · inherited · gift ·
+  other). A fact about that shareholder; it does not change year to year.
+- ⚠️ **Box E — the §1.1367-1(g) election.** It reverses part of the ordering, letting losses reduce
+  basis **before** non-deductible expenses. **Once made it binds every later year until the IRS
+  consents to a revocation** — so this box is copied from the prior year, never decided afresh.
+  If the prior year left it blank, leave it blank.
 
 ### The two questions to settle before you compute it
 

@@ -1342,7 +1342,14 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
     </div>
   </section>
 
-  <!-- ==================== §6 ==================== -->
+        <div class="callout info reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 20h8M12 17v3"/></svg></span>
+        <div class="cx">
+          <div class="cl">🖥️ IN ATX: enter the assets in the <code>Fixed Assets</code> tab — NOT on Form 4562 itself</div>
+          <p>Standing reminder, and it applies <b>every time this form comes up.</b> The 4562 in ATX is a <b>computed output</b>: it is assembled from the asset register, and typing into it either refuses or produces a figure the register does not support — which then disagrees with Schedule L line 10b.</p>
+          <p><b>Add or edit each asset in <code>Fixed Assets</code></b> — cost, date placed in service, method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation figure from it. <b>Then check the two places the number lands:</b> page 1 <b>line 14</b>, and <b>Schedule L line 10b</b> = prior accumulated depreciation <b>+</b> this year&#8217;s. If 10b does not move by exactly the line 14 figure, the register and the return have come apart.</p>
+        </div>
+      </div>
+<!-- ==================== §6 ==================== -->
   <section class="doc" id="s6">
     <div class="shead reveal"><span class="schip">§6</span><h2>Schedule B — the questions</h2></div>
     <p class="slede reveal">⚠️ <b>The question numbers move between tax years. Find each one by its wording, not its number.</b></p>
@@ -1537,6 +1544,43 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       <div class="cx">
         <div class="cl">It is filed with the SHAREHOLDER&#8217;S Form 1040 — not with the 1120-S</div>
         <p>It appears in this procedure because the corporate return is where you have the numbers to compute it, and because it decides whether the loss you just allocated is actually usable. <b>Prepare it here; it travels with the owner&#8217;s personal return.</b> If the firm does not prepare that 1040, the figures still have to reach whoever does.</p>
+      </div>
+    </div>
+
+    <div class="subbar reveal"><span class="tag">12B</span><h3>The form, line by line — and the order is built into it</h3></div>
+    <div class="indent">
+      <p class="reveal"><b>You do not have to remember the ordering: the form enforces it.</b> Part I runs down the page in the sequence &#167;1.1367-1(f) requires, which is why reading it top to bottom is the safest way to prepare it.</p>
+      <div class="tablewrap reveal">
+        <table class="links">
+          <thead><tr><th>Line</th><th>What it is</th><th>Where it comes from</th></tr></thead>
+          <tbody>
+            <tr><td class="for">1</td><td>Stock basis at the <b>beginning</b> of the year</td><td>🔒 <b>line 15 of LAST year&#8217;s Form 7203</b>, copied. With no prior 7203, build it from the capital account less prior losses and non-deductibles — and say in the file that it was derived</td></tr>
+            <tr><td class="for">2</td><td>Basis from capital contributions / additional stock</td><td>📖 the <b>gross credits</b> in that shareholder&#8217;s capital account (5C-iii)</td></tr>
+            <tr><td class="for">3a–3m</td><td>Income items that increase basis</td><td>⚠️ <b>A LOSS DOES NOT GO HERE.</b> Line 3a says <em>&ldquo;enter losses in Part III&rdquo;</em>. 3k is tax-exempt income</td></tr>
+            <tr><td class="for">5</td><td><b>Stock basis before distributions</b></td><td>ƒ lines 1 + 2 + 4</td></tr>
+            <tr><td class="for">6</td><td><b>Distributions</b> (excluding dividend distributions)</td><td>📖 the <b>gross debits</b> — same figure as Schedule K 16d and K-1 box 16D</td></tr>
+            <tr><td class="for">7</td><td><b>Stock basis after distributions</b></td><td>ƒ 5 &minus; 6. ⚠️ if zero or less, enter <b>-0-</b>, skip lines 8–14, put -0- on line 15</td></tr>
+            <tr><td class="for">8a</td><td>Non-deductible expenses</td><td>The Schedule K <b>16c</b> figure</td></tr>
+            <tr><td class="for">10</td><td><b>Stock basis before loss and deduction items</b></td><td>ƒ 7 &minus; 9</td></tr>
+            <tr><td class="for">11</td><td>Allowable loss and deduction items</td><td>ƒ <b>from Part III, line 47 column (c)</b></td></tr>
+            <tr><td class="for">15</td><td><b>Stock basis at the END of the year</b></td><td>ƒ 10 &minus; 14 → <b>next year&#8217;s line 1</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">The note printed under line 6 is the whole risk, stated by the form</div>
+          <p><em>&ldquo;If line 6 is larger than line 5, subtract line 5 from line 6 and report the result as a <b>capital gain on Form 8949 and Schedule D</b>.&rdquo;</em> That is the one basis failure that <b>creates income</b> rather than postponing a deduction — and the form catches it for you <b>only if line 6 carries the real gross distributions</b> (5C-iii).</p>
+        </div>
+      </div>
+      <p class="reveal"><b>Part II — Shareholder Debt Basis.</b> Zero for a shareholder who only contributed capital. The prior year&#8217;s <b>Part II and the K-1&#8217;s <em>Loans from shareholder</em> boxes together</b> are the fastest answer to 12A&#8217;s first question.</p>
+      <p class="reveal"><b>Part III — Allowable Loss and Deduction Items.</b> Where the loss actually goes: (a) carryover, (b) this year&#8217;s, <b>(c) allowable</b> — which feeds line 11 — and (d) disallowed and carried forward.</p>
+      <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx">
+          <div class="cl">Two header boxes that must MATCH the prior year</div>
+          <p><b>Box D — how the stock was acquired</b> (original shareholder · purchased · inherited · gift · other). A fact about that shareholder; it does not change year to year.</p>
+          <p>⚠️ <b>Box E — the §1.1367-1(g) election.</b> It reverses part of the ordering, letting losses reduce basis <b>before</b> non-deductible expenses. <b>Once made it binds every later year until the IRS consents to a revocation</b> — so this box is <b>copied</b> from the prior year, never decided afresh. If the prior year left it blank, leave it blank.</p>
+        </div>
       </div>
     </div>
 
