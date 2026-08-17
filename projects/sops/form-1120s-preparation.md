@@ -305,6 +305,62 @@ QuickBooks balance sheet already presents as one line: `Total for Other Current 
 **Read line 7 off the balance sheet section that the PRIOR RETURN used** — §3 tells you which
 one. Do not decide it from the account's name.
 
+### ⚠️ What a SOLVED line 2 actually contains — and why it is not "what they bought"
+
+**The most reasonable objection a preparer can raise is: "but the client bought nothing this year,
+so why is there a number in purchases?"** It deserves a real answer, because the instinct behind it
+is right and the conclusion is wrong.
+
+**Line 2 is not a claim about purchase invoices.** When you solve for it, it is *whatever makes the
+schedule balance* given the other three. And you are not free to override it: put a zero in line 2
+while keeping the prior year's line 1, the books' line 7 and the books' line 8, and the schedule
+does not add up. **The identity has four slots and three of them are locked** — line 1 by the prior
+return, line 7 by the balance sheet (which Schedule L line 3 must also equal), line 8 by the P&L.
+Whichever one you refuse to move, another one absorbs the difference.
+
+So a solved line 2 is a **measurement**, not an assertion — and what it measures is:
+
+```
+line 2  =  (value that entered inventory-land from anywhere other than a sale)
+```
+
+**Decompose it before you accept it.** When the client's line 7 and line 8 are subtotals covering
+more than one account (the trap above), split the solved figure along the same seams:
+
+```
+line 2  =  [ COGS acct + ending Inventory acct − beginning Inventory acct ]   ← the GOODS side
+         + [ the other accounts swept into lines 7 and 8 ]                    ← the ARTIFACT side
+```
+
+The artifact side has nothing to do with buying anything — it is the year's movement in whatever
+non-inventory account the convention parks inside line 7, plus whatever non-purchase cost the
+convention parks inside line 8. It can easily be the **majority** of a small solved line 2.
+
+_(The pilot: a Shopify client whose line 7 includes the Shopify **Clearing Account** and whose line
+8 includes **Shopify Selling Fees**. A solved line 2 of ~$3,779 in a year the client bought nothing
+decomposed to **~$2,435 of artifact** — selling fees plus the clearing account's growth — and
+**~$1,344 on the goods side**. Two thirds of "purchases" was not goods.)_
+
+**Then ask what the goods side means.** If the client truly bought nothing, the Inventory account
+should have fallen by exactly the cost of goods sold. A residual says one of three things, and they
+are worth telling apart:
+
+1. **Something really was bought** — a small reorder, freight capitalised into stock, a customer
+   return put back on the shelf.
+2. **The cost-of-sales estimate is off** — where cost of sales is a *percentage of sales* rather
+   than a measured cost, it will never agree with the goods movement by construction.
+3. **Something was posted to Inventory that is not stock** — a reclass, a correction, a plug.
+
+**Ask for the inventory account's ledger detail.** The residual is small; the reason it exists is
+not, because it tells you which of the three the books are doing.
+
+🔑 **The sign is the alarm, and this is the whole diagnostic.** A **negative** line 2 is impossible
+and means the map is wrong — go back to §3. A **small positive** line 2 is the healthy outcome:
+the map is right, and the number is now a question about the books rather than about the return.
+_(Same client, same year: reading line 7 off the `Inventory` account alone instead of the subtotal
+produced **−$394**. Reading it off the subtotal produced **+$3,779**. One number is a stop sign and
+the other is a lead.)_
+
 ### Line 9 — the checkboxes
 
 - **9a — the valuation method.** ⚠️ **Six boxes on the current form, not three.** The old three
@@ -433,6 +489,14 @@ _(Worked example: a client's 2024 return took the `Wages & Salary` child to line
 `Payroll Tax` child to line 12 — never the parent subtotal. In 2025 the same client had stopped
 payroll, so the parent carried only a platform subscription and **line 8 was correctly zero**.)_
 
+> 📝 **Name it `Payroll Fees` on the line 20 statement, and merge it with any account already
+> called that.** Firm convention (Lilian, Aug 2026). The line 20 statement is free text, so the
+> platform fee needs a caption — and "payroll" anywhere near line 8 is what caused the problem in
+> the first place. A client whose chart already carries a `Payroll Fees` account **combines the
+> two into one line**: the platform's subscription and the platform's fees are the same kind of
+> cost, and two near-identical captions on the same statement invite the next preparer to move
+> one of them back to line 8.
+
 ### 5D · Depreciation — line 14
 
 - Comes from **Form 4562**, which you prepare from the client's depreciation schedule.
@@ -467,6 +531,37 @@ Most are yes/no facts about the company. Three are worth calling out:
      reconciliation.
 3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
    because it prepares them.
+
+### 6A · 🛑 The §163(j) pair — an UNANSWERED question silently deletes your interest deduction
+
+**This is the one Schedule B answer that changes a number on page 1, and it fails by omission
+rather than by being wrong.**
+
+Two consecutive questions on Schedule B cover the **§163(j) business-interest limitation** (find
+them by wording — the numbering moves, but as of the 2024 form they are questions **9** and
+**10**, and 10 has sub-parts **a** and **b**):
+
+- **the election question** — *did the corporation have a §163(j) election in effect for a real
+  property trade or business or a farming business?* → normally **No**
+- **the exemption question**, in two parts — *(a) are the corporation's average annual gross
+  receipts under the §448(c) threshold, and it is not a tax shelter?* → for these clients
+  **Yes**; *(b) is the interest only from an electing real-property / farming / utility
+  business?* → normally No. The form says it outright: **if "Yes," the corporation is not
+  required to file Form 8990.**
+
+🛑 **Leave them blank and the software assumes the limitation applies.** It then wants **Form
+8990**, and **the interest expense never reaches page 1 line 13** — the deduction simply is not
+there. Nothing errors. Nothing is flagged. The return is just smaller than it should be.
+
+⚠️ **You will meet this from the other direction.** In ATX, clicking the line 13 *Interest* field
+does not open a plain input — it opens a worksheet, and this §163(j) block is inside it. **That
+is not a detour to click past on the way to typing a number: it is the gate.** Answer the pair,
+then the number flows. _(Found preparing a client whose only interest expense was on a business
+credit card — about $153. Small enough to shrug at, and it would have been silently dropped.)_
+
+**The general lesson, which is worth more than the specific questions:** on this return, some
+Schedule B answers are not disclosure — **they are switches**. Treat an unanswered question as a
+deduction you have not yet claimed, and re-check page 1 after answering.
 
 ---
 
@@ -508,6 +603,59 @@ Two columns: **beginning of year** and **end of year**.
 4. **Equity mapping is a convention, not a calculation.** How the client's capital accounts are
    split between *capital stock*, *additional paid-in capital* and *retained earnings* on the
    form is whatever the prior return did. **Repeat it**, or the two years cannot be compared.
+
+### 8A · ⚠️ The named shareholder accounts do NOT map to the line their name suggests
+
+The books usually carry **one equity account per shareholder, under that person's name**. The
+form has no such line, so every return has to decide where they go — and **the obvious guesses
+are usually not what the prior return did.**
+
+The three candidates, and what choosing each one *asserts*:
+
+| Where they could go | What it means |
+|---|---|
+| **Line 19** — *Loans from shareholders* | The money is **debt**. It supports losses through **debt basis**, and it is a liability the company owes back |
+| **Line 23** — *Additional paid-in capital* | The money is **contributed capital**, shown as its own equity line |
+| **Line 24** — *Retained earnings* | The named accounts are **swept in with accumulated earnings**, and the form shows no separate contribution line at all |
+
+🔑 **Read the prior return's lines 19, 22, 23 and 24 before you fill in any of them** — and read
+the prior year's **K-1 box for *Loans from shareholder*** as the cross-check. A blank line 19
+**and** blank K-1 loan boxes together say the money was treated as **contributed capital, not
+debt** — which also settles §12's first question for you, and it is the fastest way to answer it.
+
+⚠️ **The sweep-into-retained-earnings convention has a consequence on Schedule M-2, and it is the
+part that breaks.** If the prior return put the shareholder accounts inside **line 24**, then
+line 24 is no longer "accumulated earnings" — it is *earnings plus contributed capital*. For it
+to keep agreeing with **M-2 line 8** (which §10 says it should), the contributions have to be
+running through **M-2 line 3, other additions**. Check whether the prior return did that.
+
+**If it did, repeat it — and know that it is not what the AAA is meant to hold.** Capital
+contributions increase *basis*, not the AAA (§10). Raise it with Lilian rather than fixing it
+silently: consistency with the prior year is itself a tax position (§15), and the difference is
+usually invisible until the company makes a **distribution**, which is the one thing the AAA
+actually decides.
+
+_(Pilot: the prior return showed capital stock $1,000, line 23 blank, line 19 blank, and two
+shareholders' entire capital — over a quarter of a million dollars — inside line 24. A session
+that assumed line 23 would have produced a Schedule L that did not balance, and one that assumed
+line 19 would have turned equity into debt and changed both shareholders' basis analysis.)_
+
+### 8B · A refundable deposit that "disappears" is usually a bookkeeping error, not an expense
+
+When an asset like a **security deposit** goes to zero during the year with no matching expense
+line, the instinct is to treat it as written off. **Ask what actually happened first**, because
+the common answer is that nothing did.
+
+A deposit that was **transferred to a new lease with the same landlord** is still an asset — the
+company will still get it back. The books wrote it off; the facts did not. **That is a journal
+entry, not a Schedule M-1 adjustment**, because a refundable deposit is an asset for books *and*
+for tax and there is no book/tax difference to reconcile.
+
+**Find the credit side before you conclude anything** — pull the account's ledger detail and see
+what it was written off against. If it went to **rent**, rent is overstated, the loss is
+overstated by the same amount, and **four things move**: page 1 line 11, page 1 line 22,
+Schedule L's other-current-assets line, and Schedule L's total assets. Correct the books and it
+all flows on its own.
 
 ---
 
