@@ -1570,18 +1570,19 @@ const SOP_GROUPS = [
         task: {
           name: 'ATMAN PARTS LLC', loc: 'Texas sales & use tax · eSystems / WebFile · monthly',
           lede: 'Every month the firm files this client’s Texas sales-tax return on the Comptroller’s portal, using credentials kept in the client’s Drive — the client does not do it. Unlike a zero return, this one needs figures, and the client sells on eBay, which changes where each figure goes.',
-          flowLede: 'The month ends → work out the figures under the marketplace rule → open the login from Drive → take the Sales and Use Tax row (the business is listed twice) → file the original return for the right period → pay → save the PDF and confirm it reads “Return Filed”.',
+          flowLede: 'The month ends → work out the figures under the marketplace rule → open the login from Drive → take the Sales and Use Tax row (the business is listed twice) → CHECK the period is not already filed → file the original return → pay → save the PDF and confirm it reads “Return Filed”.',
           flow: [
             { t: 'Month ends', d: 'The period to be filed closes', ic: 'refresh' },
             { t: 'Work out the figures', d: 'Total sales, taxable sales — the eBay marketplace rule decides where each one goes', ic: 'search', k: 'gate' },
             { t: 'Get the login', d: 'Drive → Atman Products → Sales tax → the “Sales tax” doc', ic: 'key' },
             { t: 'Pick the RIGHT account', d: 'eSystems dashboard lists this business twice — take the Sales and Use Tax row, not Franchise Tax', ic: 'globe' },
+            { t: 'Already filed?', d: 'View Return Summary FIRST — July 2026 was filed by someone outside the firm. If it reads “Return Filed”, stop and take it to Lilian', ic: 'search', k: 'gate' },
             { t: 'File Original Return', d: 'Check the period code before submitting — 2607 is July 2026', ic: 'form' },
             { t: 'Submit and pay', d: 'Any tax due goes with the return', ic: 'pay' },
             { t: 'Save the PDF', d: '“N. Month YY.pdf” in the year folder — match the numbering already there', ic: 'save' },
-            { t: 'Confirm “Return Filed”', d: 'View Return Summary — the only thing separating submitted from filed', ic: 'check', k: 'gate' },
+            { t: 'Confirm “Return Filed”', d: 'The only thing separating submitted from filed', ic: 'check', k: 'gate' },
           ],
-          loop: 'It repeats every month on its own clock, due the 20th of the following month. It is not part of the bookkeeping close — but unlike a zero return it needs figures, so it is the one sales-tax filing the books can block. Nothing in Double currently reminds anyone to do it.',
+          loop: 'It repeats every month on its own clock, due the 20th of the following month. It is not part of the bookkeeping close — but unlike a zero return it needs figures, so it is the one sales-tax filing the books can block. Two things are unsettled: nothing in Double reminds anyone to do it, and July 2026 was filed by somebody outside the firm — so who owns this filing has not actually been agreed with the client.',
           vault: {
             url: 'https://docs.google.com/document/d/1vVZxsEdYCqnhyxCrpQbk-Fo0nB0JgBA3EcwZ7UBWfjw/edit',
             label: 'Open the eSystems login',

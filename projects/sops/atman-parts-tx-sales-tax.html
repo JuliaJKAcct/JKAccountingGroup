@@ -633,8 +633,9 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <div class="callout note reveal" role="note">
     <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5h6M8 4.5H6.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2H16"/><path d="M9 3h6v3H9z"/><path d="M8.5 12.5l2 2 4.5-4.5"/></svg></span>
     <div class="cx">
-      <div class="cl">In review · Aug 2026 · Lilian</div>
-      <p>Written <b>2026-08-17</b> at her request, from her own screenshots of that morning's filing. <b>Awaiting her sign-off</b>, and three questions in §10 are open with her — the figures, the franchise position, and the missing reminder. <b>Remove this note when she signs off.</b></p>
+      <div class="cl">In review · Aug 2026 · Lilian — and provisional by design</div>
+      <p>Written <b>2026-08-17</b> at her request, from her own screenshots of that morning's session. <b>Awaiting her sign-off</b>, and the questions in §10 are open with her. <b>Remove this note when she signs off.</b></p>
+      <p style="margin-top:9px">⏳ <b>It becomes final when eBay is connected to QuickBooks.</b> Julia is going to make that connection; <b>the reports change with it</b>, and Lilian will hand over the resulting method, at which point §5 and §10.3 are rewritten. Everything else here — the access, the click path, the deadline, the penalties, the checks — <b>stands and is usable today.</b></p>
     </div>
   </div>
 
@@ -673,6 +674,16 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
         <div class="fconn" aria-hidden="true"></div>
         <div class="fnode">On the dashboard, click the row where <b>Assigned Tax/Fee = Sales and Use Tax</b> <span class="fref">the business is listed TWICE</span></div>
       </section>
+
+      <div class="fconn" aria-hidden="true"></div>
+
+      <div class="fdecide">
+        <div class="dh"><span class="dt">Check first</span><span class="dq">Is this period <b>already filed</b>?</span></div>
+        <div class="fbranch">
+          <div class="branch fix"><span class="bl">Yes</span><b>STOP — do not file over it.</b> Somebody outside the firm has filed this account before. Take it to Lilian <span class="arw">§0.1</span></div>
+          <div class="branch good"><span class="bl">No</span><span class="arw">Still open — file it ↓</span></div>
+        </div>
+      </div>
 
       <div class="fconn" aria-hidden="true"></div>
 
@@ -715,10 +726,19 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <section class="doc" id="s0">
     <div class="shead reveal"><span class="schip">§0</span><h2>Who does what</h2></div>
     <ol class="qlist reveal">
-      <li><b>The firm files it.</b> The login sits in the client's Drive folder and the work is ours. Do not bounce it to the client.</li>
+      <li><b>The firm files it — but we are not the only one who can, and in July we were not the one who did.</b> The login sits in the client's Drive folder and the work is ours. See the box below before you assume a month is yours to file.</li>
       <li><b>The account is the client's; the credentials are in our Drive.</b> The eSystems profile is the client's own taxpayer account, so the name shown in the top-right of the portal is <b>not</b> one of ours. That is expected — not a sign you signed in to the wrong place.</li>
       <li><b>Anything a Comptroller notice says goes to Lilian.</b> Filing a notice into Drive is not handling it.</li>
     </ol>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">July 2026 was filed — and not by us</div>
+        <p>On <b>2026-08-17</b> Lilian opened the portal to file July and <b>found it already submitted</b>. She did not file it, and neither did anyone else at the firm. <b>Who filed it is not established</b> — her read is that <b>the client did it himself</b>, which is plausible (it is his taxpayer account and he can reach it) but <b>has not been confirmed with him</b>.</p>
+        <p style="margin-top:9px"><b>This is a live coordination gap, not a curiosity.</b> Two parties can reach the same account and there is no agreement about who files — which is how a month gets filed twice, or missed because each side assumed the other did it. <b>Until it is settled, check the period before filing</b> (§2 and §1.2).</p>
+      </div>
+    </div>
 
     <div class="callout err reveal" role="note">
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/></svg></span>
@@ -752,13 +772,17 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <p class="vcap">Portal address, user, password, the three security answers, and the taxpayer&nbsp;/&nbsp;WebFile numbers — <b>all in this one document</b>. Nothing from it is copied onto this page, or into the repo.</p>
     </div>
 
-    <div class="subbar reveal"><span class="tag">2</span><h3>Which month you are filing</h3></div>
+    <div class="subbar reveal"><span class="tag">2</span><h3>Which month you are filing — and whether it is still open</h3></div>
     <div class="indent reveal">
       <p class="prose">One return per calendar month, in sequence. Two places tell you where you are, and they should agree:</p>
       <ul class="dots">
         <li>the <b>Drive year folder</b> (§2 step 8) — the last PDF in it;</li>
         <li>the portal's own <b>View Return Summary</b> list (§2A Screen 3) — <b>the authority</b>.</li>
       </ul>
+      <div class="callout warn" role="note">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+        <div class="cx"><p><b>Read the portal list before you file, not after.</b> It does not only tell you which month is next — it tells you whether <b>somebody else has already filed it</b>. That has happened here (§0), so on this client it is a required check, not a nicety.</p></div>
+      </div>
     </div>
 
     <div class="subbar reveal"><span class="tag">3</span><h3>The figures for that month</h3></div>
@@ -776,6 +800,15 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <!-- ==================== §2 ==================== -->
   <section class="doc" id="s2">
     <div class="shead reveal"><span class="schip">§2</span><h2>The monthly filing, step by step</h2></div>
+
+    <div class="callout err reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h6v6H9z"/></svg></span>
+      <div class="cx">
+        <div class="cl">First, every time — check the period is not already filed</div>
+        <p>Sign in, open <b>Transaction History → View Return Summary</b>, and look at the period you are about to file. If it already reads <b><em>Return Filed</em></b>, <b>stop and take it to Lilian</b> — do not file an original on top of it (§8.10). This is here because it happened: <b>July 2026 was already filed by someone outside the firm</b> when Lilian went to file it (§0).</p>
+      </div>
+    </div>
+
     <ol class="qlist reveal">
       <li><b>Open the login doc</b> and get the credentials (§1).</li>
       <li><b>Sign in to Texas eSystems.</b> The exact sign-in address is in the login doc — use that one. (<a href="https://comptroller.texas.gov/taxes/file-pay/">comptroller.texas.gov</a> → <em>eSystems/Webfile</em> reaches the same place.)</li>
@@ -927,7 +960,15 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/></svg></span>
       <div class="cx">
         <div class="cl">What is NOT established — and must not be guessed</div>
-        <p><b>How the firm actually derives this client's monthly figures</b> — which report, from eBay or QuickBooks or the bank, and whether the business has any non-marketplace sales at all. <b>Nobody has written it down</b> (§10.2). The rule above tells you <b>where each figure belongs</b>; it does not tell you <b>where to get it</b>. If you are filing this month and you do not know, <b>ask Lilian</b> — do not reconstruct it from the last filed PDF and hope.</p>
+        <p><b>How the firm actually derives this client's monthly figures</b> — which report, from eBay or QuickBooks or the bank, and whether the business has any non-marketplace sales at all. <b>Nobody has written it down</b> (§10.3). The rule above tells you <b>where each figure belongs</b>; it does not tell you <b>where to get it</b>. If you are filing this month and you do not know, <b>ask Lilian</b> — do not reconstruct it from the last filed PDF and hope.</p>
+      </div>
+    </div>
+
+    <div class="callout info reveal" role="note">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
+      <div class="cx">
+        <div class="cl">And it is about to change — do not write the derivation down yet</div>
+        <p>Julia intends to <b>connect eBay to QuickBooks</b> for this client. Once that is done <b>the reports come out differently</b>, so whatever anyone works out today about where the figures come from would be obsolete almost immediately. <b>Until then this section is the rule, not the recipe.</b> <em>(Lilian, 2026-08-17 — the detail is not available yet; she will hand it over once the connection is made, and §5 and §10.3 get rewritten from it then.)</em></p>
       </div>
     </div>
 
@@ -942,8 +983,8 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
     <ol class="qlist reveal">
       <li><b>The account starts at period <code>2511</code> (November 2025).</b> Nothing earlier appears in the portal's return summary, and the Drive 2025 folder holds only November and December.</li>
       <li><b>Eight back periods were filed in one day.</b> Nov 2025 → Jun 2026 were all filed on <b>2026-07-16</b> as an onboarding catch-up. Several of the earlier ones carried late-filing penalties; May and June 2026 did not.</li>
-      <li><b>The steady monthly cadence has started.</b> Period <code>2607</code> (July 2026) was filed on <b>2026-08-17</b>, on time, in the session these screens came from.</li>
-      <li><b>Every period from <code>2511</code> to <code>2607</code> reads <em>Closed</em> / <em>Return Filed</em>.</b> As of 2026-08-17 there is <b>no gap and no open balance</b> — this account is current.</li>
+      <li>🔴 <b>Period <code>2607</code> (July 2026) was filed — but NOT by the firm.</b> Lilian opened the portal on <b>2026-08-17</b> to file it and found it already submitted. <b>Who filed it is not established</b>; her read is that the client did it himself. See §0 — this is the reason the “already filed?” check now opens §2.</li>
+      <li><b>Every period from <code>2511</code> to <code>2607</code> reads <em>Closed</em> / <em>Return Filed</em>.</b> As of 2026-08-17 there is <b>no gap and no open balance</b> — this account is current. ⚠️ <b>What that does not tell you is who filed each one.</b> The eight catch-up periods were the firm's (2026-07-16); July was not; the ones in between have not been checked.</li>
     </ol>
   </section>
 
@@ -981,6 +1022,7 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
       <li><b>Assuming the 20th.</b> Four months a year land on a weekend; the portal's own Due Date column is the answer (§3).</li>
       <li><b>Filing a Comptroller notice and moving on.</b> It goes to Lilian the same day (§0.3).</li>
       <li><b>Renaming the Drive history to be tidy.</b> The <code>N.</code> numbering restarts per year folder and is the only filing index — match it, don't fix it (§2.8).</li>
+      <li>🔴 <b>Filing an original on a period somebody else already filed.</b> On this client that is a real risk, not a theoretical one — July 2026 was filed by someone outside the firm (§0). <b>Check View Return Summary first, every month</b>, and if the period already reads <em>Return Filed</em>, stop and take it to Lilian rather than filing over it.</li>
     </ol>
   </section>
 
@@ -1012,10 +1054,11 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   <!-- ==================== §10 ==================== -->
   <section class="doc" id="s10">
     <div class="shead reveal"><span class="schip">§10</span><h2>Not yet written down</h2></div>
-    <p class="slede reveal">Recorded so the gaps are visible rather than discovered mid-task. <b>None of these blocks this month's filing</b> — except item 2, which blocks the <em>figures</em> if you do not already know them.</p>
+    <p class="slede reveal">Recorded so the gaps are visible rather than discovered mid-task. <b>None of these blocks this month's filing</b> — except item 3, which blocks the <em>figures</em> if you do not already know them.</p>
     <ol class="qlist reveal">
-      <li>🔴 <b>There is no reminder.</b> No recurring Double task, no Routine, nothing (§0). The fix is <b>one recurring task on the Double client, tagged <em>monthly sales tax</em>, due around the 10th</b> — early enough that a missed reminder is still recoverable. Needs Lilian's go-ahead, since creating tasks in Double is a write.</li>
-      <li>🔴 <b>Where this client's monthly figures come from.</b> Which report is pulled, from which system, and how marketplace sales are separated from any direct sales (§5). <b>This is the single most valuable thing the next person to file can capture.</b></li>
+      <li>🔴 <b>Who actually files this — us or the client?</b> The firm believes it owns this filing; <b>July 2026 was filed by somebody else</b> (§0), and Lilian's read is that it was the client. <b>Nobody has asked him.</b> Until this is settled the firm cannot know whether a month is covered, and <b>both duplicate filings and missed ones are possible</b>. This is the first question on this client — ahead of the next item, because a reminder for work someone else is already doing solves nothing.</li>
+      <li>🔴 <b>There is no reminder.</b> No recurring Double task, no Routine, nothing (§0). The fix is <b>one recurring task on the Double client, tagged <em>monthly sales tax</em>, due around the 10th</b> — early enough that a missed reminder is still recoverable. Needs Lilian's go-ahead, since creating tasks in Double is a write — <b>and it should wait on the question above.</b></li>
+      <li>⏳ <b>Where this client's monthly figures come from — deliberately unwritten, for now.</b> Which report is pulled, from which system, and how marketplace sales are separated from any direct sales (§5). <b>Julia is going to connect eBay to QuickBooks, and the reports come out differently after that</b>, so documenting today's method would be documenting something about to be replaced. <b>Lilian will hand over the new method once the connection is made; §5 and this item get rewritten from it — that is what turns this SOP from provisional into final.</b> <em>(Lilian, 2026-08-17.)</em></li>
       <li><b>The franchise-tax position</b> (§7) — do we file it, and is it current? Open since July 2026.</li>
       <li><b>The return-entry screens.</b> §2A stops at the period picker. <b>Next time you file, capture the screens after it</b> — the item-by-item return, the confirmation page — and extend §2A. That is the cheapest moment to do it, and it is the difference between this SOP being a map and being a click path.</li>
       <li><b>The email map.</b> What the Comptroller sends after a submission — sender, subject, which inbox it reaches, and whether a confirmation email arrives at all. Nothing is recorded, so the saved PDF is currently the only receipt.</li>

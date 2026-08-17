@@ -12,10 +12,15 @@
 > figure live in **Google Drive** and are reached from the links in §9. This file holds the
 > *procedure only*.
 >
-> 📋 **In review · Aug 2026 — Lilian.** Written 2026-08-17 at her request, from her own
-> screenshots of that morning's filing. **Awaiting her sign-off**, and three questions in §10
-> are open with her (the figures, the franchise position, the missing reminder). **Remove this
-> note when she signs off.** Tracked on [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 41.
+> 📋 **In review · Aug 2026 — Lilian. And PROVISIONAL by design.** Written 2026-08-17 at her
+> request, from her own screenshots of that morning's session. **Awaiting her sign-off**, and
+> the questions in §10 are open with her. **Remove this note when she signs off.** Tracked on
+> [`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 41.
+>
+> ⏳ **It becomes final when eBay is connected to QuickBooks.** Julia is going to make that
+> connection; **the reports change with it**, and Lilian will hand over the resulting method,
+> at which point §5 and §10.3 are rewritten. Everything else here — the access, the click path,
+> the deadline, the penalties, the checks — **stands and is usable today.**
 >
 > 🔍 **What is verified here, and what is not.** The navigation in §2 and the screens in
 > §2A were captured from a **real filing session on 2026-08-17** (Lilian's own screenshots)
@@ -31,11 +36,12 @@ flowchart TD
   B --> C["③ Open the login<br/>Drive → Atman Products → Sales tax → 'Sales tax'"]
   C --> D["④ Sign in to Texas eSystems"]
   D --> E["⑤ Dashboard → pick the row<br/>Assigned Tax/Fee = <b>Sales and Use Tax</b>"]
-  E --> F{"⑥ Which job?"}
-  F -- "Normal month" --> G["⑦ File and Pay Taxes<br/>→ File Original Return"]
+  E --> Z{"⑥ View Return Summary:<br/>is this period ALREADY filed?"}
+  Z -- "Yes — somebody else filed it" --> Y["🛑 STOP. Do NOT file over it.<br/>Take it to Lilian (§0.1)"]
+  Z -- "No — still open" --> F{"⑦ Which job?"}
+  F -- "Normal month" --> G["⑧ File and Pay Taxes<br/>→ File Original Return"]
   F -- "Fixing a filed month" --> H["File Amended Return<br/>(§8 pitfall 6)"]
-  F -- "Checking what's filed" --> I["Transaction History<br/>→ View Return Summary"]
-  G --> J["⑧ Complete the return for the period<br/>+ pay any tax due"]
+  G --> J["⑨ Complete the return for the period<br/>+ pay any tax due"]
   J --> K{"⑨ Confirmation shown?"}
   K -- "No" --> D
   K -- "Yes" --> L["⑩ Save the PDF to Drive<br/>'N. Month YY.pdf' in the year folder"]
@@ -51,8 +57,16 @@ one sales-tax filing in the firm that can be blocked by the books.
 
 ## §0. Who does what
 
-1. **The firm files it.** The login sits in the client's Drive folder and the work is ours.
-   Do not bounce it to the client.
+1. **The firm files it — but we are not the only one who can, and in July we were not the one
+   who did.** The login sits in the client's Drive folder and the work is ours.
+   🔴 **On 2026-08-17 Lilian opened the portal to file July 2026 and found it already
+   submitted.** She did not file it, and neither did anyone else at the firm.
+   **Who filed it is not established** — Lilian's read is that **the client did it himself**,
+   which is plausible (it is his taxpayer account and he can reach it) but has not been
+   confirmed with him. **This is a live coordination gap, not a curiosity:** two parties can
+   reach the same account and there is no agreement about who files. That is how a month gets
+   filed twice, or not at all because each side assumed the other did it.
+   **Until it is settled — always check the period before filing (§2, and §1.2).**
 2. 🔴 **Nothing reminds anyone to do this.** Checked in Double on 2026-08-17: this client has
    **no recurring sales-tax task** — no task tagged `monthly sales tax`, nothing on a monthly
    cadence. The only thing carrying the job today is somebody remembering. **Every other
@@ -69,10 +83,14 @@ one sales-tax filing in the firm that can be blocked by the books.
 1. **The eSystems login** — portal address, username, password, the three security answers,
    and the taxpayer / WebFile numbers. All of it is in **one Google Doc** in the client's
    Drive: `Atman Products > Sales tax > Sales tax`. Open it from §9.
-2. **Which month you are filing.** One return per calendar month, in sequence. Two places
-   tell you where you are, and they should agree:
+2. **Which month you are filing — and whether it is still open.** One return per calendar
+   month, in sequence. Two places tell you where you are, and they should agree:
    - the Drive year folder (§2 step 8) — the last PDF in it;
-   - the portal's own **View Return Summary** list (§2A Screen 3) — the authority.
+   - the portal's own **View Return Summary** list (§2A Screen 3) — **the authority.**
+
+   ⚠️ **Read the portal list before you file, not after.** It does not only tell you which
+   month is next — it tells you whether **somebody else has already filed it**. That has
+   happened here (§0.1), so on this client it is a required check, not a nicety.
 3. **The figures for that month** — total sales, taxable sales, and any taxable purchases
    the business made without paying tax. ⚠️ **Read §5 before you work these out.** This
    client sells on **eBay**, and Texas treats marketplace sales differently from the
@@ -82,6 +100,12 @@ one sales-tax filing in the firm that can be blocked by the books.
 systems the firm already holds.
 
 ## §2. The monthly filing, step by step
+
+> 🛑 **First, every time: check the period is not already filed.** Sign in, open
+> **Transaction History → View Return Summary**, and look at the period you are about to file.
+> If it already reads `Return Filed`, **stop and take it to Lilian** — do not file an original
+> on top of it (§8.10). This is here because it happened: July 2026 was already filed by
+> someone outside the firm when Lilian went to file it (§0.1).
 
 1. **Open the login doc** and get the credentials (§1, §9).
 2. **Sign in to Texas eSystems.** The exact sign-in address is in the login doc — use that
@@ -220,6 +244,13 @@ rather than only the bank.
 > **where to get it**. If you are filing this month and you do not know, **ask Lilian** —
 > do not reconstruct it from the last filed PDF and hope.
 
+> ⏳ **And it is about to change — do not write the derivation down yet.** Julia intends to
+> **connect eBay to QuickBooks** for this client. Once that is done **the reports come out
+> differently**, so whatever anyone works out today about where the figures come from would be
+> obsolete almost immediately. _(Lilian, 2026-08-17 — the detail is not available yet; she will
+> hand it over once the connection is made, and **§5 and §10.2 get rewritten from it then.**)_
+> **Until then this section is the rule, not the recipe.**
+
 *Rule: Texas Tax Code §151.0242(d) — a marketplace seller who accepts the provider's
 certification in good faith **excludes** those sales from its report; the Comptroller's own
 guidance places them in item 1 and out of item 2. Sources in §9.*
@@ -231,10 +262,14 @@ guidance places them in item 1 and out of item 2. Sources in §9.*
 2. **Eight back periods were filed in one day.** Nov 2025 → Jun 2026 were all filed on
    **2026-07-16** as an onboarding catch-up. Several of the earlier ones carried
    late-filing penalties; May and June 2026 did not.
-3. **The steady monthly cadence has started.** Period `2607` (July 2026) was filed on
-   **2026-08-17**, on time, in the session these screens came from.
+3. 🔴 **Period `2607` (July 2026) was filed — but NOT by the firm.** Lilian opened the portal
+   on **2026-08-17** to file it and found it already submitted. **Who filed it is not
+   established**; her read is that the client did it himself. See §0.1 — this is the reason
+   the "already filed?" check now opens §2.
 4. **Every period from `2511` to `2607` reads `Closed` / `Return Filed`.** As of
-   2026-08-17 there is **no gap and no open balance** — this account is current.
+   2026-08-17 there is **no gap and no open balance** — this account is current. ⚠️ **What
+   that does not tell you is who filed each one.** The eight catch-up periods were the firm's
+   (2026-07-16); July was not; the ones in between have not been checked.
 
 ## §7. The other account on this login — Franchise Tax
 
@@ -269,6 +304,10 @@ holds a separate **Franchise Tax WebFile number** for it.
 8. **Filing a Comptroller notice and moving on.** It goes to Lilian the same day (§0.4).
 9. **Renaming the Drive history to be tidy.** The `N.` numbering restarts per year folder
    and is the only filing index — match it, don't fix it (§2 step 8).
+10. 🔴 **Filing an original on a period somebody else already filed.** On this client that is
+    a real risk, not a theoretical one — July 2026 was filed by someone outside the firm
+    (§0.1). **Check View Return Summary first, every month**, and if the period already reads
+    `Return Filed`, stop and take it to Lilian rather than filing over it.
 
 ## §9. Contacts & links
 
@@ -287,17 +326,27 @@ holds a separate **Franchise Tax WebFile number** for it.
 ## §10. Not yet written down
 
 Recorded so the gaps are visible rather than discovered mid-task. **None of these blocks
-this month's filing** — except item 2, which blocks the *figures* if you do not already
+this month's filing** — except item 3, which blocks the *figures* if you do not already
 know them.
 
-1. 🔴 **There is no reminder.** No recurring Double task, no Routine, nothing. The firm's
+1. 🔴 **Who actually files this — us or the client?** The firm believes it owns this filing;
+   **July 2026 was filed by somebody else** (§0.1), and Lilian's read is that it was the
+   client. **Nobody has asked him.** Until this is settled the firm cannot know whether a
+   month is covered, and **both duplicate filings and missed ones are possible**. This is the
+   first question on this client — ahead of item 2, because a reminder for work someone else
+   is already doing solves nothing.
+2. 🔴 **There is no reminder.** No recurring Double task, no Routine, nothing. The firm's
    other monthly sales-tax client has one; this client does not (§0.2). **The fix is one
    recurring task on the Double client, tagged `monthly sales tax`, due around the 10th** —
    early enough that a missed reminder is still recoverable. Needs Lilian's go-ahead
-   (creating tasks in Double is a write).
-2. 🔴 **Where this client's monthly figures come from.** Which report is pulled, from which
-   system, and how marketplace sales are separated from any direct sales (§5). This is the
-   single most valuable thing the next person to file can capture.
+   (creating tasks in Double is a write), **and it should wait on item 1.**
+3. ⏳ **Where this client's monthly figures come from — deliberately unwritten, for now.**
+   Which report is pulled, from which system, and how marketplace sales are separated from any
+   direct sales (§5). **Julia is going to connect eBay to QuickBooks, and the reports come out
+   differently after that**, so documenting today's method would be documenting something
+   about to be replaced. **Lilian will hand over the new method once the connection is made;
+   §5 and this item get rewritten from it — that is what turns this SOP from provisional into
+   final.** _(Lilian, 2026-08-17.)_
 3. **The franchise-tax position** (§7) — do we file it, and is it current? Open since
    July 2026.
 4. **The return-entry screens.** §2A stops at the period picker. **Next time you file,
