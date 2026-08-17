@@ -114,14 +114,18 @@ the actual details.
   owner meant *we did not restock*, the ledger meant *goods cost was incurred*. **Nothing needs
   correcting, and line 2 is right.** The rest of line 2 is the artifact — Shopify selling fees plus
   the clearing account's growth, both consequences of the 2024 convention (§5 rule 1/2).
-- ⚠️ **The 2025 PHYSICAL INVENTORY COUNT never reached the books.** Lilian had one taken because the
-  prior inventory carried errors _(2026-08-17)_ — but ending inventory is **opening minus cost of
-  sales to the cent**, pure arithmetic with no adjusting entry anywhere. So either the count was
-  used to *set* the unit quantity inside the year-end journal (its description does cite a unit
-  count), or **the errors it found are still sitting in the figure that goes on Schedule L**. Not
-  established — ask before the balance sheet is transcribed. ⓘ If an adjustment is ever posted,
-  **line 9a is `Cost`**, so it matters which kind: correcting *quantities* is deductible through
-  COGS; writing *value* down below cost is **not** deductible on the cost method.
+- ✅ **The 2025 physical inventory count IS reflected — through the unit quantity, not an
+  adjusting entry** _(Lilian, 2026-08-17)_. The `Inventory` account's only movement all year is the
+  31-Dec relief for units sold, so ending inventory is opening minus cost of sales to the cent —
+  but the count is what **established the 192 units** inside that entry. So **168,350.51 is the
+  right figure** for Form 1125-A line 7 and Schedule L line 3, and there is no missing correction.
+  _(Asked because the alternative — a count whose findings were never posted — would have left the
+  errors it found sitting in the number going on the return. It did not.)_
+- ✅ **The two `United Porte` charges ARE purchases, and cost of goods sold is where they belong**
+  _(Lilian, 2026-08-17)_. Booked straight to COGS without passing through `Inventory`, they are
+  **exactly** the goods-side residual in 1125-A line 2 — which is therefore a real purchases figure,
+  not an artifact. Settled on the record so the question "the client bought nothing, why does the
+  return show purchases?" has a written answer next year.
 - ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
   thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
   bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
