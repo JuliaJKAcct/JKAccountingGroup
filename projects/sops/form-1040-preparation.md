@@ -3,6 +3,10 @@
 > **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** Started 2026-08-18 from the first two 1040s
 > the firm prepared with a session assisting. · **Owner:** Lilian
 >
+> ⬜ **No Atlas render yet.** [`sop-authoring`](../../.claude/skills/sop-authoring/) requires every
+> SOP to ship with one, and its engine takes a hand-authored designed body rather than this
+> Markdown. **Owed before this leaves draft.**
+>
 > 🛑 **This SOP is built to GROW.** A 1040 can carry dozens of forms and almost no client carries
 > them all. So it is written as an **intake selector plus modules**: §0 asks what this client has,
 > and you read only the modules it points to. **Every time the firm meets a form it has not
@@ -11,7 +15,8 @@
 >
 > 🛑 **The standing rule of every tax-return SOP:** an answer that changes a figure is read off the
 > **current-year form or instructions on irs.gov**, never from memory. The IRS renumbers lines and
-> Congress moves amounts. **TY2025 renumbered page 2 of the 1040** — see §2.
+> Congress moves amounts. **TY2025 renumbered page 2 of the 1040**: AGI is **11a/11b**, the standard
+> deduction is **12e**, **13a** (QBI) and **13b** (Schedule 1-A) are new, and the EIC is **27a**.
 
 ## The process at a glance
 
@@ -117,6 +122,20 @@ _Verified against the 2025 Instructions for Form 1040, "Standard deduction amoun
 
 ---
 
+## §2A · Gate — the extension
+
+**A hard stop, and it cannot be repaired afterwards.** The individual return is due **15 April**;
+**Form 4868** moves the filing deadline six months, to **15 October**.
+
+- 🔴 **An extension extends the time to FILE, never the time to PAY.** Tax unpaid at 15 April accrues
+  interest and the failure-to-pay penalty regardless.
+- **Establish whether one was filed, and whether anything was paid with it** — a payment made with a
+  4868 is a credit on the return and is easy to lose.
+- **If none was filed and the date has passed, stop and tell Lilian.** Failure-to-file runs far
+  heavier than failure-to-pay.
+- ⚠️ **On a separated couple, check BOTH of them.** An extension filed jointly before the separation
+  may not do for each of them separately.
+
 ## §3 · Dependants — and the split people miss
 
 **Ask for facts, not conclusions.** The one table that settles everything: **each child, and the
@@ -164,7 +183,7 @@ withheld across employers; and the household-employee and statutory-employee cas
 | 8–27 | Expenses | Ordinary and necessary, and **substantiated** |
 | **9** | Car and truck | Mileage log or actual costs. ⚠️ **A driver with zero vehicle expenses is a red flag, not a simple return** _(seen on a real 2024 Uber Schedule C)_ |
 | **25** | Utilities | ⚠️ **Telephone: the business share of the taxpayer's OWN line.** A household account total on a multi-line plan is not deductible as such |
-| **30** | **Business use of the home** | See below — this is its own calculation and its own limit |
+| **30** | **Business use of the home** | See below. The **actual** method is computed on **Form 8829**; the simplified method has no form, only a worksheet |
 | **31** | **Net profit or (loss)** | ƒ line 7 − line 28 − line 30 → **Schedule 1 line 3** *and* **Schedule SE** |
 
 ### 🔑 Line 30 — the home office, and the two ways to compute it
@@ -286,20 +305,32 @@ Common after a separation: one policy, one recipient, and the people on it now f
 returns. **Form 8962 Part IV allocates it.** Which rule applies depends on a fact you must
 establish first — **the date the marriage ended**:
 
-| Situation | When it applies | Allocation |
-|---|---|---|
-| **1** | Divorced or legally separated **during the year** | **By agreement** — any percentage. ⚠️ Read the instructions for the no-agreement default before relying on one |
-| **2** | **Married at year end, filing separately** | **Not negotiable** — the instructions require each to take **half** |
-| **3** | **No advance payments** were made | — |
-| **4** | Any other policy shared between tax families | By the instructions' method — **not by agreement** |
+| Situation | When it applies | Allocation | Which columns |
+|---|---|---|---|
+| **1** | Divorced or legally separated **during the year** | **By agreement — any percentage.** If they cannot agree, **50% each** | (e), (f) **and** (g) — ⚠️ **only for the months they were MARRIED** |
+| **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23 |
+| **3** | **No advance payments** were made | — | |
+| **4** | Any other policy shared between two tax families | **By agreement — any percentage.** Failing agreement, the instructions' formula: **the number of individuals enrolled by one taxpayer who are in the OTHER taxpayer's tax family, divided by the total enrolled on that policy** | (e), (f) and (g) |
 
-**Three rules that bind every allocation:**
+🔴 **Two things a session gets wrong here, and both change the numbers:**
 
-1. **The percentages across all the returns sharing the policy must total 100%.** With three tax
-   families on one policy, **all three** must be consistent — and if one has already filed, the
-   others are constrained by what that return claimed.
-2. **Both returns must carry the SAME figures.** This is the classic mismatch that generates IRS
-   notices.
+- **Situation 4 is by AGREEMENT first.** The formula is only the fallback — and it is **not** "your
+  own coverage family ÷ total enrolled". Read it again: it counts the individuals *one* taxpayer
+  enrolled who belong to the *other's* tax family.
+- **Allocation is PAIRWISE — per policy, per situation — not one percentage spread across
+  everyone.** A policy shared by three tax families is **two allocations**, each under its own
+  situation, and Situation 1 covers **only the married months** while the rest of the year is
+  something else. Form 8962 line 34 contemplates **more than four allocations**, with a statement
+  attached.
+
+**And three rules that bind whatever is chosen:**
+
+1. **One taxpayer's share and the other's must neither overlap nor leave a gap** for the same policy
+   and the same months. ⚠️ *"Everyone's percentages add to 100%"* is a useful sanity check, **not a
+   rule in the instructions** — and it does **not** hold for column (f) under Situation 2, where the
+   SLCSP is not allocated at all.
+2. **The figures each return carries must agree with the other's.** The classic mismatch that
+   generates IRS notices.
 3. ⚠️ **If the Marketplace was never told about the separation, column B (SLCSP) may be wrong for
    each of them.** The 1095-A cover letter says so itself: *"You had changes in your household that
    you didn't report to the Marketplace — like… getting married or divorced… Visit
@@ -337,12 +368,19 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
 
 - The **$2,200 is nonrefundable** — it can only reduce tax to zero.
 - The **additional** child tax credit is refundable: **15% × (earned income − $2,500)**, capped at
-  $1,700 per qualifying child.
+  $1,700 per qualifying child **and** at the part of the $2,200 credit the nonrefundable calculation
+  could not use.
 - 🔴 **Both the ACTC and the EIC require EARNED income.** Wages and net self-employment earnings are
   earned income. **An S-corporation K-1 loss is not. Distributions are not. Interest is not.**
   ⚠️ *A client can have a large K-1 and still be worth nothing on either credit.*
-- **Earned income for the 8812 worksheet**, for a self-employed taxpayer, is **net earnings from
-  self-employment less the deductible half of the SE tax** — not Schedule C line 31.
+- 🔴 **Earned income for a self-employed taxpayer starts at Schedule C line 31 — NOT at the 92.35%
+  figure.** The Schedule 8812 **Earned Income Worksheet** takes line 2b from *"net profit or (loss)
+  from **Schedule C, line 31**"* and subtracts *"the amount from **Schedule 1 (Form 1040), line
+  15**"* — the deductible half of the SE tax. The 1040 instructions' **EIC Worksheet B** does the
+  same from **Schedule SE Part I line 3** (also the net profit, *before* the 0.9235 multiplier) less
+  **Schedule SE line 13**.
+  **So: earned income = Schedule C line 31 − half the SE tax.** ⚠️ Using the 92.35% figure instead
+  understates earned income and can cost a client real credit near a threshold.
 
 ---
 
@@ -360,6 +398,11 @@ read the table — do not extrapolate._
 - The credit is the **lesser** of the amount from the table on **earned income** or on **AGI**.
 - The child must have lived with the taxpayer **more than half the year** and have a valid SSN.
 - 🚫 **The EIC cannot be released to the other parent** (§3).
+- 🔴 **"Considered unmarried" for head of household is NOT the same test as for the EIC.** Pub 501:
+  *"You may be considered unmarried for the purpose of using head of household status but not for
+  other purposes, such as claiming the EIC. Different tests apply."* A separated taxpayer still
+  married at year end needs **§32(d)(2)** separated-spouse relief for the EIC — **check it
+  separately from the HOH decision.**
 - The preparer must complete **Form 8867** (due diligence) — and it is a real penalty exposure.
 
 ---
