@@ -20,6 +20,20 @@ list grows.
    source — do it on the next sweep, then clear the note.
 3. **A client with no row here** (newly added to `clients/`) gets a **full
    historical sweep** once, then gets a row.
+   🔴 **AND SOMETHING HAS TO GO LOOKING FOR THEM, because nothing did until 2026-08-18.**
+   This rule was written as if a missing row announces itself. It does not: a client file with
+   no row is **invisible to the weekend routine forever** — it is not in the scope table, so the
+   sweep never reaches it, and it has no baseline, so nothing bounds a search for it. **The
+   coverage check reconciled Double against the scope table and never reconciled the client FILES
+   against this ledger.** On 2026-08-18, **4 of 48** files were in that state (19 before the
+   stranded 2026-08-15 sweep was recovered), and **every one had been created by a session that
+   is not the sweep** — two by pre-return reviews in the previous 48 hours, two by the backfill
+   from Lilian's phone. **So the rule for any session that creates a client file: add its row
+   here, in the same commit.** Step 2b of the Routine prompt is the backstop that catches whoever
+   forgets.
+   ⚠️ **Compare files to rows, not name strings** — `R & G Friendly Inc — *DBA Lucky Pawn &
+   Jewelry*` does not equal its ledger row, and a naive match invents gaps that send the next
+   run's catch-up budget at clients that are already covered.
 4. **Update this table in the same commit** as the client-file updates at the end
    of every sweep (state and content must never drift apart). Set the new baseline
    to the run date for every client actually swept.

@@ -392,6 +392,19 @@ Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.
 **Non-sensitive facts only** (rule 1).
 
+### 🔴 Creating a client file? Add its sweep-state row in the SAME commit
+
+A client file with **no row in [`sweep-state.md`](../../../projects/client-intelligence/automation/sweep-state.md)
+is invisible to the weekend routine forever** — it is not in the scope table, so the sweep never
+reaches it, and it has no baseline, so nothing bounds a search for it. It will look cared-for
+(there is a file, with content) and never be swept again.
+
+**This bites the sessions that are not sweeps**, which is most of them: a pre-return review, an
+ad-hoc question, a backfill. On 2026-08-18 four files were in that state and **all four had been
+created by non-sweep sessions**, two of them in the previous 48 hours. So: **create a file → add
+the row.** The routine's step 2b now reconciles files against the ledger as a backstop, but the
+backstop runs once a week and only if the run gets that far.
+
 ### 🔴 A sweep has TWO passes — "what's new?" and "what's still open?"
 
 **The second one was missing until 2026-08-18, and everything it would have caught was missed.**

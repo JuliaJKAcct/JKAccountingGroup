@@ -318,18 +318,38 @@ updates it, the Saturday run keeps following the **old** instructions — includ
 the line that left three weeks of Client Intelligence stranded. (Quoted exactly, so it can be
 searched for in the live Routine to check whether the update has happened.)
 
-🔴 **IT HAPPENED AGAIN ON 2026-08-15, AND THAT RUN'S WORK IS STILL STRANDED.** This is no longer a
+🔵 **RESOLVED 2026-08-18 for the stranded run, and the assumption underneath this section turned out to be BACKWARDS.** Lilian produced the live prompt on 2026-08-18. It is **richer than the copy this file was carrying**, not staler: it already said *"GET THEM ONTO main YOURSELF"*, and it carries a whole **COVERAGE CHECK** step that the repo's block did not have at all. **So "the repo is ahead, the Routine is behind" was wrong in both directions at once**, and this file spent days telling readers the opposite of the truth about its own most important section.
+> ⚠️ **What is still unexplained, and worth one question before trusting any of this:** if the live prompt already said to merge, **why did the 2026-08-15 run leave its work on a branch and write *"per this run's instructions"*?** Either the prompt was updated *after* that run, or something else overrode it. **Do not close this out until someone says which.**
+> ✅ **The block below is now the 2026-08-18 version, and it is the same text Lilian was given to paste**, so the two finally agree. Keep them in sync from here: when this block changes, the Routine still needs the paste (the credentials are the reason — see below).
+
+🔴 **THE 2026-08-15 RUN'S WORK WAS STRANDED, AND IS NOW RECOVERED (PR #235, merged 2026-08-18).** This is no longer a
 theoretical risk in a warning box — it is a live loss, and the run said so itself. Its email to
 Lilian closed with: *"All Client-Intelligence changes are committed and pushed to branch
 `claude/admiring-lamport-fzaj4y` (**not merged to main this run, per this run's instructions**)."*
 **"Per this run's instructions" is the stale prompt talking.** On `origin/main` at 2026-08-18 that
 branch is unmerged and holds **6 commits · 25 files · +456 lines** — 23 client files, `sweep-state.md`
 and `sop-proposals.md`, including two long-deferred coverage gaps finally cleared (Artur Tseretsian,
-Ihor Naum & Olha Levchuk) and four first-ever sweeps of Liudmyla's seed clients. **Merging it is
-sanctioned without review** — the diff is entirely inside the carve-out below.
-⚠️ **And the baselines went with it**, which is the compounding part: `sweep-state.md` on `main`
-still reads **2026-08-08** for those clients, so the loss is invisible from `main` and the next run
-will re-do work it has already paid for.
+Ihor Naum & Olha Levchuk) and four first-ever sweeps of Liudmyla's seed clients. **Merging was
+sanctioned without review** — the diff was entirely inside the carve-out below, and Lilian authorised it on
+2026-08-18. Two additive conflicts against `main` were resolved by **keeping both sides**, which is now a
+rule in the prompt: never drop another session's rows to clear a conflict.
+⚠️ **And the baselines went with it**, which was the compounding part: while it sat, `sweep-state.md` on
+`main` still read **2026-08-08** for those clients, so the loss was invisible from `main` and the next run
+would have re-bought four expensive first-time historical passes against a cap of ~6.
+🔴 **The measurable damage it was doing, found the same day:** **19 of 48** client files had no row in the
+ledger. Recovering the branch took that to **4** — its rows for ZETECH, Optic Gold, Onetwo Strategies and
+Greenair had been sitting on the branch all along.
+
+🔴 **THE FOUR THAT REMAIN ARE A DIFFERENT AND UNFIXED LEAK — a client file with no ledger row is
+invisible to this routine forever.** It is not in the scope table, so the sweep never reaches it; it has no
+baseline, so nothing bounds a search for it. **Every one of the four was created by a session that is not
+this sweep** — Liliia Hlebova Kozlovska (2026-08-17) and Mykola Kozlovskyi (2026-08-18) by **pre-return
+reviews**, Mays Express and R & G Friendly (2026-08-13) by the backfill from Lilian's phone. None of those
+sessions adds a ledger row, and nothing was ever checking. **The coverage check reconciled Double against
+the scope table and never reconciled the client FILES against the ledger** — so the routine could not see
+its own blind spot. Step 2b of the 2026-08-18 prompt adds that third direction.
+⚠️ **Match on the file, not on a name string** when running it by hand: `R & G Friendly Inc — *DBA Lucky
+Pawn & Jewelry*` will not equal its ledger row, and a naive comparison invents gaps.
 
 🔴 **A SESSION CANNOT SAFELY DO THE RE-PASTE ALONE — and this, not forgetfulness, is why it keeps
 not happening.** _(Established 2026-08-18.)_ The note below suggests having Claude update the
@@ -404,86 +424,79 @@ _(corrected 2026-08-14)_.
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
 
-READ FIRST: projects/client-intelligence/README.md (especially "Keeping Client Intelligence fresh" and "Client Intelligence <-> the client SOP"), projects/client-intelligence/_client-template.md, projects/client-intelligence/automation/sweep-state.md (the incremental ledger), and each client's current file — so you only ADD genuinely new, non-sensitive facts and never duplicate.
+WHAT THIS RUN IS FOR — read this first, it decides the judgement calls below.
+A sweep is not "did I look at every source". It is "is Client Intelligence now true, current, and ON main". Three ways this run wastes its whole cost, all of which have actually happened:
+  (a) it sweeps a client and the facts never reach main (2026-08-15: 25 files sat on a branch for three days);
+  (b) it reports "nothing new" for a client whose open item has been rotting for weeks (2026-08-15: two clients printed the green all-clear, one with a document pending 19 days, one with a licence renewal six weeks out);
+  (c) it never sweeps a client at all because nothing told it that client exists (2026-08-11: seven QuickBooks-connected companies had no Client Intelligence whatsoever; 2026-08-18: four client files had no ledger row because other sessions created them).
+Steps 2, 3 and 11 exist for exactly those three. Do not treat them as paperwork.
 
-INCREMENTAL SWEEP (token discipline — this is a hard rule): sweep-state.md records the date each client is already swept through. Bound EVERY search to that client's baseline date AND LATER, INCLUSIVE of the baseline day itself (items can land later the same day a sweep ran; the one-day overlap is deliberate and duplicates are prevented because you read the client file first and only add what's new): Gmail with after:YYYY/MM/DD (inclusive of that day), Ping meetings dated on-or-after the baseline, Double notes/activity created on-or-after it. Never re-read anything from BEFORE the baseline date. Exceptions: (a) a client whose row lists a Coverage gap owes that source a one-time full historical pass — do it, then clear the note (that pass may exceed the per-client call bound once; expected); (b) a client in the list with NO row in sweep-state.md gets a one-time full historical sweep, then a row. At the end, update sweep-state.md baselines (run date) for every client fully swept, IN THE SAME COMMIT as the client-file updates; if the run fails partway, only advance the clients you finished.
+METHOD — follow the repo, do not improvise:
 
-CLIENTS (name -> Double id):
-- Atman Parts -> 763909
-- BEST BROKER REALTY LLC -> 706712
-- ECOORGANIC USA LLC -> 719473
-- GOSSIP MIAMI LLC -> 710577
-- Kolo Florida Inc -> 706626
-- Pro Title Agency -> 706716
-- NEVER GIVE UP KK LLC -> 742803
-- YES TEAM CORP -> 706718
-- MASCIAVE DESIGN STUDIO LLC -> 706696
-- iKids Group LLC -> 706689
-- Deep Tech Development Group LLC -> 706685
-- AURA REMODELING LLC -> 706679
-- Beemold USA LLC -> 709445
-- Sunoma Inc -> 706704
-- SENSUSTECH LLC -> 706699
-- Mobilesource Corp -> 706697
-- Margate Plumbing Inc -> 706694
-- MAGNUM 152, INC -> 706693
-- LUMETRO LLC -> 706691
-- Ecom Beavers LLC -> 706686
-- Artur Tseretsian -> 752202
-- Ihor Naum & Olha Levchuk -> 710637
-- LILIIA HLEBOVA KOZLOVSKA -> 710644
-- Mykola Kozlovskyi -> 709838
-- Denys Melnyk -> 764785
-- Andrii Tymchenko -> 710619
-- VOICECAPITAL INC -> 710725
-- VOXAGO LLC -> 710606
-- YMI TRUCKING LLC -> 710608
-- ZETECH LLC -> 706710
-- OPTIC GOLD INC -> 706702
-- ONETWO STRATEGIES INC -> 706701
-- Greenair International LLC -> 706688
-- CANDRAMAS LLC -> 706683
-- AXDIGITAL LLC -> 706681
-- Airtouch LLC -> 706671
-- VITALII IVANOV & TETIANA MOGYLOVA -> 710666
-- Igor Melomed & Yelena Lovkina -> 710635
-- R & G Friendly Inc -> 710589
-- Viacheslav Honcharenko -> 710665
-- Maria Contreras -> 710646
-- Iurii Iakovenko & Alina Yakovenko -> 710639
-- Grigoriy & Margarita Melomed -> 710633
-- M5 Studio Miami -> NO ID: search Double by name first; if there is no client, skip the Double plane and sweep by name from Gmail/Ping/Drive. If you DO find one, record the id in the client file's §2/§7 (in scope) and leave the scope table to a human
-  (SETATECH USA, INC. -> 706706 is archived in Double and deliberately NOT swept — see the exclusion table above; revisit if the engagement turns out to be live.)
+1. Read and follow the client-intelligence skill (.claude/skills/client-intelligence/SKILL.md) and projects/client-intelligence/automation/weekend-ci-sweep.md — they hold the full sweep method, the CLIENTS scope table (every client + Double id), the exclusion table (archived clients), the "sweep by owner, assign by company/person" rule, the catch-up priority order, and the incremental bound. That scope table is the authority on WHO gets swept. This prompt deliberately carries NO client list, so a client added to the table is swept from the next Saturday on without anyone editing this routine.
 
-FOR EACH CLIENT:
-1. Sweep for what is NEW since the client's baseline in sweep-state.md (inclusive of the baseline day — this ledger is the ONLY bound; ignore the file's "Last updated" for bounding), searching by BOTH the business name AND each owner/principal name (a person can have several businesses, and a meeting titled with a person's name may discuss the business). OWNERS WITH SEVERAL BUSINESSES (mandatory): sweep at the OWNER level across ALL their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's individual 1040 work, while the COMPANY record is sales tax / the company return / 1099s, so put personal/1040 facts in the person's context and company-operations facts in that company's file, and never let one company's file absorb another company's facts or the owner's personal data:
-   - Ping: resolve_person on each owner/contact; search_contacts for the business and owners; search_meetings (org-wide, semantic userQuery) for BOTH "<business>" and each "<owner>"; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
-   - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains; keep anything that relates to this client.
-   - Double: get_client; list_client_properties (STRUCTURED source — Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status; the cleanest input for the Operating zone — "EIN / Tax ID" IS included, it is public on Sunbiz, BUT that property can hold an owner's SSN for a sole prop / SMLLC, so write it only when it is plainly an EIN); list_notes; list_contacts (ROLES only); list_activity_log. QuickBooks if useful.
-   - Google Drive: search for the client's folder (usually one per client, under the firm's shared drive) and put its LINK in the file's §7 "Google Drive folder"; do NOT copy sensitive file contents into the repo.
-   - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
-   Keep it bounded (~10-15 calls/client).
-1b. CHASE THIS CLIENT'S OWN OPEN ITEMS — a SECOND, SEPARATE pass, and skipping it is the defect of 2026-08-18. Step 1 asks the sources "what is new?", which is blind to a thing that should have happened and did not, to a deadline approaching, and above all to a thing that DID happen that nobody searched for because only the client file knew to watch for it. So: OPEN clients/<slug>.md, read its "Outstanding items" and "Information still needed", and take each entry BACK TO THE SOURCES AS A NAMED QUERY — search for that specific document/receipt/reply by name, not a general "what changed" pass. Then for each entry report: DID IT ARRIVE (and if so, save it and close the item), HOW OLD is it in DAYS with the date it has been pending since, and ANY DEADLINE. Budget ~5 extra calls/client inside the same ceiling: deadline items first, then oldest, then the rest — and NAME the items you had no budget to chase rather than letting them print as "no movement". Real example: a client's issued licence had arrived by email 26 days earlier while the file still said "if it hasn't arrived yet", and TWO full historical Gmail passes missed it because nobody ever searched for it.
-2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. A business EIN IS allowed (public on Sunbiz). Update "Last updated".
-3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
+2. COVERAGE CHECK — do this BEFORE sweeping, every run. It is what stops a client being silently missed, and it runs in THREE directions, not one. Nobody is swept because someone remembered them; they are swept because a reconciliation found them.
 
-THEN:
-- Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows) AND MERGE THEM TO main YOURSELF. Client Intelligence needs no approval (Lilian, 2026-08-11) — work left on a branch is work nobody sees, and three runs were lost that way. Push a branch, open a PR, and merge it; if the merge is blocked, say so in the email with the branch name. Do NOT touch projects/sops/ — SOP changes stay behind Lilian's approval and go in sop-proposals.md as Pending.
-- CONTRADICTIONS: when two sources disagree, write BOTH into the client file with their sources and mark the fact unsettled — do not hold the enrichment and do not send Lilian a question to answer cold. It gets asked later, by whichever session actually needs that fact.
-- Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
-  Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
-  Body per client: what was SAVED to CI (with sources — a record, not a request) + the Pending SOP proposals with their IDs (the only part needing a decision). Note any contradictions recorded, in one line each, so she can ask about them if she ever wants to. Say that the CI changes are already on main.
-  STILL OPEN (from step 1b) goes in the template's existing section 3 "Still needed", and EVERY entry carries its AGE IN DAYS and any deadline — "Awaiting X" with no clock is invisible, "Awaiting X — 19 days" is not.
-  TWO RULES ABOUT "NOTHING NEW", BOTH BROKEN ON 2026-08-15: (a) the template says section 4 "Nothing new" prints when sections 1 & 2 are empty — that is WRONG when section 3 has content. Print "Nothing new" ONLY when 1, 2 AND 3 are all empty. (b) In AT A GLANCE, a client with open items is NOT green: use amber #9C6A39 with the oldest item's age, and reserve green #2F8F5E for a client with genuinely nothing outstanding. On 2026-08-15 two clients printed the green all-clear while one had a document pending 19 days and the other a licence renewal six weeks out. "Nothing new" and "nothing wrong" must never print as the same line.
-- SEND through the webhook EXACTLY ONCE — one POST, one recipient. Use `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` — the real values go in **this routine's prompt only**, never in the repo. Build payload.json with python3 (json.dump; keys `"secret"=<WEBHOOK_SECRET>`, `"to"`, `"subject"`, `"html"`, `"text"`), then:
+   2a. DOUBLE → scope table. Call Double list_clients for ALL non-archived clients and reconcile against the scope table AND the exclusion table in weekend-ci-sweep.md. Count a client as one the firm must know about when EITHER platform: qbo OR a Bookkeeping cadence property is set — "platform: qbo" alone is NOT enough, because a disconnected QuickBooks reads "none" and that is exactly the client this check exists to catch.
+
+   2b. CLIENT FILES → sweep-state ledger. List projects/client-intelligence/clients/*.md (ignore _client-template.md) and check each one has a row in projects/client-intelligence/automation/sweep-state.md. THIS DIRECTION WAS MISSING UNTIL 2026-08-18 AND IT IS THE ONE THAT LEAKS. Client files are created by sessions that are not this sweep — a pre-return review, an ad-hoc question, work from Lilian's phone — and none of them adds a ledger row. On 2026-08-18 four files were in exactly that state, two created in the previous 48 hours by pre-return reviews. A file with no row is invisible to this routine forever: it is not in the scope table, so step 1 never reaches it, and it has no baseline, so nothing bounds a search for it. Treat every such file as a client in scope.
+   ⚠️ Match on the file, not on a name string. A file's H1 may carry a DBA or punctuation the ledger row does not ("R & G Friendly Inc — DBA Lucky Pawn & Jewelry"), so a plain name comparison produces false gaps. When you cannot tell whether a row exists, say so in the email rather than guessing either way.
+
+   2c. THE DEFERRAL QUEUE → actually drains. Read the "not swept this run" queue from the last run's report and the "Coverage gaps" column of sweep-state.md. A client deferred TWICE goes to the FRONT of this run's catch-up order, ahead of anything newer. Artur Tseretsian was deferred twice before being cleared; a queue that is only ever appended to is a queue that silently becomes a permanent exclusion list.
+
+   For every client found by 2a or 2b with no row in either table: sweep it like any other (it has no sweep-state row, so it is a first-time full pass — it counts against the cap in step 4), create or update its projects/client-intelligence/clients/<slug>.md, and list it in the email under "Coverage — clients not yet in the scope table" so a human adds the row. Do NOT edit weekend-ci-sweep.md yourself — that file is outside your merge scope. Never derive scope from one staff member's client list: doing that is how seven QuickBooks-connected companies went with no Client Intelligence at all until 2026-08-11.
+
+3. Read projects/client-intelligence/automation/sweep-state.md (the incremental ledger), projects/client-intelligence/sop-proposals.md (the SOP-proposal queue), and each client's clients/<slug>.md — so you only ADD new, non-sensitive facts and never duplicate.
+
+4. Bound every search to that client's baseline date in sweep-state.md AND LATER, inclusive of the baseline day itself (items can land later the same day a sweep ran; duplicates are prevented because you read the client file first). Gmail: after:YYYY/MM/DD. Ping/Double: date >= baseline. Never re-read anything from BEFORE the baseline. EVERY client in scope gets its cheap incremental pass EVERY run — the cap applies only to the expensive first-time / coverage-gap FULL historical passes, at most ~6 per run, taken in the catch-up priority order written in weekend-ci-sweep.md, with twice-deferred clients first (step 2c). If the cap makes you defer a client's full pass, NAME that client in the email so the queue stays visible.
+
+5. For each client, sweep the connected sources for what is NEW, searching by BOTH the business name AND each owner/principal name (a meeting titled with a person's name often covers the business). Owners with several businesses: sweep at the OWNER level across all their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's 1040 work, the COMPANY record is sales tax / the company return / 1099s; never let one company's file absorb another's facts.
+   - Ping: resolve_person on each owner; search_contacts; search_meetings (org-wide, semantic) for BOTH the business and each owner; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
+   - Double: get_client; list_client_properties (the cleanest structured input for the Operating zone — Assigned Staff, Entity / Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099 Preparation, Annual Report, Organizer Status); list_notes; list_contacts (ROLES only); list_activity_log.
+   - Gmail: search BOTH in:inbox and in:sent by business name, owner names and contact emails/domains.
+   - Google Drive: find the client's folder and put its LINK in §7; never copy sensitive file contents into the repo.
+   - QuickBooks if useful; and the repo itself (projects/sops/, FOLLOW-UPS.md, BACKLOG.md).
+   Keep it bounded (~10-15 calls per client).
+
+6. CHASE THIS CLIENT'S OWN OPEN ITEMS — a SECOND, SEPARATE pass over the same client, and skipping it is the defect found on 2026-08-18. Step 5 asks the sources "what is new?". That question is structurally blind to three things: something that was supposed to happen and did not, a deadline approaching, and — worst — something that DID happen that nobody searched for, because only the client file knew to watch for it.
+   So: OPEN clients/<slug>.md, read its "Outstanding items" and "Information still needed", and take each entry BACK TO THE SOURCES AS A NAMED QUERY — search for that specific document, receipt, licence or reply by name. Not a general "what changed" pass; a query for that one thing. Then for each entry report:
+     - DID IT ARRIVE? If yes, save it and close the item.
+     - HOW OLD is it — in DAYS, with the date it has been pending since. "Awaiting X" with no clock is invisible; "Awaiting X — 19 days" is not.
+     - DOES IT HAVE A DEADLINE? A renewal, a filing date, a statute clock. Surface it while there is still time to act, not in the week it expires.
+   Budget ~5 extra calls per client inside the same ceiling as step 5: DEADLINE items first, then the OLDEST, then the rest. When the budget runs out, NAME the items you did not chase. An unchased item reported as unchased is fine; an unchased item that prints as "no movement" is a lie the next run inherits.
+   Real case: a client's issued city licence had arrived by email 26 days earlier while the file still read "if it hasn't arrived yet", and TWO separate full historical Gmail passes had swept that client without finding it — because nobody ever searched for the thing the file said to watch for.
+
+7. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = what a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups, as pointers to Double/Ping. NEVER write logins, account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones — those stay in Double/Drive, referenced by link. ⚠️ That includes the name of a third party such as an agency case officer, and a licence, receipt, application or folio number — these files auto-publish to the Knowledge Hub and the build's gate does not catch a number with hyphens in it. A business EIN IS allowed (it is public on Sunbiz — Lilian, 2026-08-12), BUT Double's property is named "EIN / Tax ID" and on a sole proprietor or single-member LLC it can hold the OWNER'S SSN — write it only when it is plainly an EIN, hyphenated, and skip it if you cannot tell. Update "Last updated" to the run date on every file you touched, and update sweep-state.md baselines in the SAME commit for every client you fully swept (if the run fails partway, advance only the clients you finished).
+
+8. NEGATIVES BELONG TO THE SEARCH THAT PRODUCED THEM (method.md rule 1b). Never write "there is no X" — write "a search of <source>, bounded <how>, on <date>, did not find X". A bounded sweep's silence is not a fact about the world, and it has already been published as one. If you did not search a source, say you did not search it.
+
+9. CONTRADICTIONS: when two sources disagree, write BOTH versions into the client file with their sources and mark the fact unsettled. Do not hold the enrichment, and do not send Lilian a question to answer cold — it gets asked later, by whichever session actually needs that fact (Lilian, 2026-08-11). Note each one in a single line in the email.
+
+10. Do NOT modify anything under projects/sops/. For a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows — each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add anything already listed in any status. Keep the queue in ID order. Never queue CI-only S6 content.
+
+11. GET THE WORK ONTO main — and PROVE it landed. Commit the client-intelligence changes (client files + sweep-state.md + any new sop-proposals.md rows), push your branch, open a PR and merge it. Client Intelligence needs no approval (Lilian, 2026-08-11). Your diff must stay inside projects/client-intelligence/clients/, projects/client-intelligence/automation/sweep-state.md and projects/client-intelligence/sop-proposals.md — that is the whole scope of the no-review carve-out. Anything else you think needs changing: leave it and report it in the email instead.
+    ⚠️ AFTER merging, VERIFY: git fetch origin main && git log --oneline origin/main -3 — confirm your merge commit is actually there. Do not report success from the fact that you ran the command.
+    🔴 IF THE WORK IS NOT ON main FOR ANY REASON — a blocked merge, a conflict, a failed push — then the run has failed at its main purpose, and it says so IN THE EMAIL SUBJECT LINE: "Client Intelligence — weekly sweep <run date> — ⚠️ NOT MERGED, work on branch <name>". On 2026-08-15 the run correctly reported a stranded branch in the footer of the email and nobody read it; 25 files sat unmerged for three days and the baselines went with them, so the loss was invisible from main. A footer is not a report. The subject line is.
+    ⚠️ If a merge conflict is additive — both sides added rows or bullets — resolve it by KEEPING BOTH SIDES, in date or ID order. Never drop another session's work to clear a conflict.
+
+DELIVERY — send exactly one email (do not skip this step):
+- Build the email HTML by FILLING the committed template projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; replace the sample content with the real swept clients). Also build a plain-text version.
+- The email is a RECORD, not a request. Per client: what was SAVED to Client Intelligence, with its sources; then the Pending SOP proposals with their IDs — those are the only part that needs a decision, and she approves by ID in a normal session, not by replying. Say plainly that the CI changes are already on main. Add the "Coverage — clients not yet in the scope table" list from step 2, any full passes deferred by the cap (step 4), and any contradictions recorded (one line each). Nothing in this email is a gate; nothing waits on it being read.
+- STILL OPEN (from step 6) goes in the template's section 3 "Still needed", and EVERY entry carries its AGE IN DAYS and any deadline.
+- 🔴 TWO RULES ABOUT "NOTHING NEW", BOTH BROKEN ON 2026-08-15:
+  (a) Section 4 "Nothing new" prints ONLY when sections 1, 2 AND 3 are ALL empty. The template used to print it whenever 1 and 2 were empty, ignoring section 3 — so a client with an open item still got the green one-liner.
+  (b) In AT A GLANCE, a client with anything open is NOT green. Use amber #9C6A39 with the oldest item's age; reserve green #2F8F5E for a client with genuinely nothing outstanding.
+  "Nothing new" and "nothing wrong" must never print as the same line.
+- Do NOT use the Gmail connector (it is draft-only). Send through the webhook, EXACTLY ONCE.
+- Build payload.json with python3 (json.dump), keys: "secret"="<WEBHOOK_SECRET>", "to"="lilian@jkaccountinggroup.com" (ONE address), "subject"="Client Intelligence — weekly sweep <run date>", "html"=<the filled template>, "text"=<the plain-text version>.
+- POST it WITHOUT following redirects and read the HTTP status code:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
-  IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):
+- HOW TO READ IT (this webhook redirects — do NOT use curl -L):
   * HTTP 302 (redirect to script.googleusercontent.com) OR 200 with {"ok":true} = the email WAS SENT. STOP — do not POST again (a retry sends a duplicate).
   * A "Page Not Found" / 405 you get from FOLLOWING the redirect is NORMAL and does NOT mean failure — that is why we do not use -L.
   * Only 401 / 403 / 5xx is a real failure — then retry ONCE.
-  Report the exact HTTP status code you got.
 
-If a source/connector is unavailable, say so in the report rather than guessing.
+In your final message, state: the exact HTTP status you got and whether the email was sent; WHETHER YOUR WORK IS ON main and the merge commit SHA; how many clients got an incremental pass, how many got a full pass, and how many were deferred; how many clients each of the three coverage checks (2a, 2b, 2c) turned up; how many open items you chased in step 6 and how many you had no budget to chase; and which sources/connectors you could and could not reach. If a source or connector is unavailable, say so in the report rather than guessing.
 ```
 
 ## The email template (built)
