@@ -322,6 +322,18 @@ goods.
 line 1  +  line 2  −  line 7  =  line 8
 ```
 
+> ⚠️ **That is the SHORT form, and it holds only while lines 3, 4 and 5 are all zero.** The form
+> itself is `line 8 = line 6 − line 7` where `line 6 = lines 1+2+3+4+5`. So **before using any
+> rearrangement below, look at lines 3, 4 and 5 and confirm they are empty** — line 5 in particular
+> is *"whatever the firm's convention puts in cost of sales beyond purchases"* and is not always
+> blank.
+>
+> 🛑 **The one that bites is solving for PURCHASES.** `line 2 = line 8 + line 7 − line 1`
+> **overstates purchases by (line 3 + line 4 + line 5)** whenever any of them is populated — and
+> unlike the negative-purchases case below, **this error comes out looking perfectly plausible**,
+> so nothing catches it. The full form is `line 2 = line 8 + line 7 − line 1 − line 3 − line 4 −
+> line 5`.
+
 You will usually **know three of the four** and solve for the fourth. Rearranged, every version of
 it:
 
@@ -794,13 +806,13 @@ Most are yes/no facts about the company. Three are worth calling out:
 3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
    because it prepares them.
 
-### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in 2023
+### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019
 
 **This is the one Schedule B answer that changes a number on page 1 — and the trap is that the
 question was rewritten, so half of what is written about it online describes the opposite form.**
 
-Two consecutive questions cover the **§163(j) business-interest limitation**. On the current form
-(TY2023 through TY2025) they read:
+Two consecutive questions cover the **§163(j) business-interest limitation**. On the current form —
+and on every revision from **TY2019** onward — they read:
 
 - **Question 9** — *"Did the corporation have an election under section 163(j) for any real
   property trade or business or any farming business in effect during the tax year?"* → for these
@@ -824,20 +836,34 @@ Two consecutive questions cover the **§163(j) business-interest limitation**. O
 **"Yes" TRIGGERS Form 8990. It does not exempt you from it.** Answering **No** is what leaves the
 interest fully deductible on page 1 line 13.
 
-> ⚠️ **The pre-2023 form asked the OPPOSITE question**, and this is the single most likely thing to
-> get wrong here. It read *"Does the corporation satisfy one of the following conditions **and**
-> the corporation doesn't own a pass-through entity with … excess business interest expense?"*,
-> where sub-part (a) was *gross receipts **do not exceed** the threshold*, and it ended *"If
-> 'Yes,' the corporation is **not** required to file Form 8990."* **Same question number,
-> inverted meaning.** And the old wording is now on **no current form** — Form 1065 was rewritten
-> in the same revision, so there is nowhere left to go looking for it. A preparer who answers the
-> current Q10 "Yes" because that is what the old form wanted has just attached Form 8990 and
-> limited a deduction that was never limited. _(This SOP shipped that error itself, caught in
-> review 2026-08-17 by pulling the actual form — which is the only way to be sure.)_
+> ⚠️ **The TY2018 form asked the OPPOSITE question**, and this is the single most likely thing to
+> get wrong here. Verbatim from `f1120s--2018.pdf` — *"Does the corporation satisfy one of the
+> following conditions **and** the corporation doesn't own a pass-through entity with current year,
+> or prior year carryover, excess business interest expense?"*, with sub-part **(a)** *"aggregate
+> average annual gross receipts … **don't exceed** $25 million, and the corporation isn't a tax
+> shelter"* and sub-part **(b)** interest only from an electing real property or farming business
+> or certain utilities — ending **"If 'No,' complete and attach Form 8990."**
 >
-> **The general rule: for any question whose answer changes a figure, open the current-year PDF
+> **Same question number, opposite meaning: there, "No" triggered the form; here, "Yes" does.**
+> **TY2019 is the revision that flipped it**, and Form 1065's Q24 flipped in the same one, so the
+> old wording is on **no form still in use** — there is nowhere left to go looking for it. A
+> preparer who answers the current Q10 "Yes" because that is what the old form wanted has just
+> attached Form 8990 and limited a deduction that was never limited.
+>
+> 🛑 **The general rule: for any question whose answer changes a figure, open the current-year PDF
 > from irs.gov and read the question and its "If Yes" sentence off the form.** §0B already says
-> this about page-1 line numbers; it is just as true here.
+> this about page-1 line numbers; it is just as true here. **And when you make a claim about an
+> OLDER form, pull that year too** — `irs.gov/pub/irs-prior/f1120s--<year>.pdf`.
+>
+> _(This paragraph has been wrong twice, and it is worth knowing how. First it stated the polarity
+> backwards — caught 2026-08-17 by pulling the current form. The correction then dated the flip to
+> **2023** and quoted the old ending as *"the corporation is not required to file Form 8990"* —
+> both invented, because only the **current** PDF had been checked and the rest came from memory.
+> The real flip is **TY2019**, four filing seasons earlier, and that quoted sentence has never
+> appeared on a Form 1120-S. Caught 2026-08-18 by fetching TY2018/2019/2021/2022 from the IRS
+> prior-year archive. **The shape of the trap was right both times; the detail supplied from memory
+> was wrong both times.** Anyone amending a TY2019–TY2022 return under the "pre-2023" wording would
+> have hit the very error this section exists to prevent, in the mirror direction.)_
 
 **And it still fails by omission.** Leave Q10 **unanswered** and the software assumes the
 limitation applies, wants Form 8990, and **the interest expense never reaches line 13.** Nothing

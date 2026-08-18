@@ -92,11 +92,17 @@ form.** Not from memory, not from an older SOP, not from what the software label
 - **Form 7205 was inserted at page-1 line 19 from TY2023**, moving Other deductions to 20, Total
   deductions to 21 and Ordinary business income to **22**. Anything you read describing "line 21"
   is TY2022 or earlier.
-- **Schedule B's §163(j) question was INVERTED in the 2023 revision.** It now asks whether you
-  satisfy conditions that *trigger* Form 8990, and ends *"If 'Yes,' complete and attach Form
-  8990."* The old version asked the opposite and ended *"not required to file"*. A preparer
-  answering the current question the old way **attaches Form 8990 and silently loses the interest
-  deduction.**
+- **Schedule B's §163(j) question was INVERTED in the TY2019 revision.** TY2019 onward asks
+  whether you satisfy conditions that *trigger* Form 8990 and ends *"If 'Yes,' complete and attach
+  Form 8990."*; **TY2018** asked the opposite — conditions that *exempt* you — and ended *"If
+  'No,' complete and attach Form 8990."* A preparer answering the current question the old way
+  **attaches Form 8990 and silently loses the interest deduction.**
+  ⚠️ **This bullet has now been wrong twice**, and both times in the same way: the *shape* of the
+  trap was right and a **detail was supplied from memory** — first the polarity itself, then the
+  revision year (written as 2023; it is 2019, four filing seasons earlier) **and a "quotation" of
+  the old ending that is on no Form 1120-S ever printed.** Pulling the current PDF is not enough
+  when you make a claim about an **older** form: `irs.gov/pub/irs-prior/f1120s--<year>.pdf` is one
+  fetch, and it is the difference between a fact and a plausible sentence.
 
 **This SOP shipped that second error itself**, written from memory, and it survived one review. It
 was caught by pulling the PDF. **That is the rule: pull the PDF.**
@@ -116,8 +122,12 @@ with the same four columns:
 
 | Line | Concept | Value | **Where it came from** |
 |---|---|---|---|
-| **7** | Inventory at end of year | **172,523.47** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** |
-| **8** | Cost of goods sold | **16,928.32** | ƒ **= line 6 − line 7** → page 1 line 2 |
+| **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** |
+| **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 |
+
+⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
+in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
+read by everyone, gets published, and is the last place anyone thinks to look for client data.
 
 **Rules for the delivery, all of them learned by getting them wrong:**
 
