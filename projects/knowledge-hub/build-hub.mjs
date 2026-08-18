@@ -1289,6 +1289,19 @@ const SOP_GROUPS = [
   {
     name: 'Tax preparation', note: 'Return prep & substantiation',
     items: [
+      { file: 'form-1040-preparation.md', title: 'Form 1040 \u2014 individual return (modular)',
+        flowLede: 'The individual return, built to grow. A 1040 can carry dozens of forms and almost no client carries them all \u2014 so \u00a70 asks what THIS client has, and you read only the modules it points at. Everything the firm has not yet prepared is a marked stub, written the first time it comes up.',
+        flow: [
+          { t: 'Intake selector', d: 'Mark what the client actually has \u2014 a W-2, self-employment, a K-1, Marketplace insurance, dependants, an NOL, digital assets \u2014 and skip every module you did not mark', ic: 'search' },
+          { t: 'Filing status', d: 'Decided FIRST. Head of household needs three tests \u2014 and it can be the premium-tax-credit gate, not just a bracket: a married-filing-separately taxpayer cannot take the credit at all', ic: 'check', k: 'gate' },
+          { t: 'Dependants', d: 'One table settles it: each child, and the nights in each parent\u2019s home. Head of household, the EIC and dependent care follow RESIDENCE and cannot be released \u2014 only the child tax credit moves, on a Form 8332', ic: 'steps', k: 'gate' },
+          { t: 'Schedule C', d: 'Self-employment. The home office is computed BOTH ways and the better one taken \u2014 and it cannot be computed at all until the income is known, because it may not create a loss', ic: 'form' },
+          { t: 'Schedule E + Form 7203', d: 'An S-corporation K-1. The loss must clear three gates in order \u2014 basis, at-risk, passive \u2014 and Form 7203 answers only the first', ic: 'key' },
+          { t: 'Form 1095-A \u2192 Form 8962', d: 'The premium tax credit, which blocks e-filing if it is missing. Tax family and coverage family are not the same thing, and one policy can be shared across several returns', ic: 'diagram', k: 'gate' },
+          { t: 'The payable credits', d: 'Child tax credit, additional child tax credit and the earned income credit \u2014 the last two require EARNED income, which a K-1 loss is not', ic: 'send' },
+          { t: 'Tie out, then the working paper', d: 'Allocations totalling 100% across every shared return, each dependant claimed once, Form 8867 complete \u2014 then the return is written up in the working-paper archive', ic: 'sign', k: 'done' },
+        ],
+        blurb: 'The firm\u2019s modular procedure for an individual return: an intake selector plus one module per form, so a preparer reads only what this client needs. Written modules cover Schedule C (the home office both ways, the gross-income limit, the exclusive-use trap, self-employment tax and QBI), an S-corporation K-1 with Form 7203 and the three gates a loss must clear, Form 1095-A and Form 8962 including splitting one Marketplace policy across separate returns, the child tax credit, the earned income credit, NOL carryforwards and digital assets. Every figure carries the date it was verified against irs.gov, because the IRS renumbers lines and Congress moves amounts.' },
       { file: 'form-1120s-preparation.md', title: 'Form 1120-S — S-corporation return',
         flowLede: 'Preparing an S-corporation return from the client\u2019s QuickBooks \u2014 written for a first-time preparer. Two things gate everything: the extension, which cannot be fixed afterwards, and the map, which you build by reproducing last year\u2019s filed return before you touch this year\u2019s.',
         flow: [
