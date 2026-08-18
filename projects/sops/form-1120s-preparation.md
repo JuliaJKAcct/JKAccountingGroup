@@ -854,7 +854,7 @@ Most are yes/no facts about the company. Three are worth calling out:
 ### 6B · 🛑 The 1099 question (14a/14b) — run it off the ledger, BY PAYEE
 
 **This is a Yes/No that a signed return asserts under penalties of perjury, and it is answered
-wrong more often than any other question on Schedule B.** Three mistakes cause almost all of it.
+wrong more often than any other question on Schedule B.** Four mistakes cause almost all of it.
 
 🔑 **The test is per PAYEE for the year, not per account and not per payment.** Group the ledger's
 transactions by the **`Name` / vendor column** and total each payee across the whole year. **Four
@@ -902,7 +902,7 @@ rent paid to a **real-estate agent or property manager** (*they* file, not you) 
 organizations** · the **United States, a state, D.C., a U.S. territory or a foreign government** ·
 wages to employees (those are a W-2).
 
-🛑 **Five things are reportable EVEN WHEN THE PAYEE IS A CORPORATION**, and writing the exemption
+🛑 **Six things are reportable EVEN WHEN THE PAYEE IS A CORPORATION**, and writing the exemption
 as "corporations, except legal fees" is how the list gets lost:
 
 | Reportable to a corporation | Where |
@@ -912,6 +912,7 @@ as "corporations, except legal fees" is how the list gets lost:
 | **Medical and health care payments** | 1099-MISC **box 6** |
 | Substitute payments in lieu of dividends or tax-exempt interest | 1099-MISC box 8 |
 | Cash purchases of **fish for resale** | 1099-MISC box 11 |
+| Payments by a **federal executive agency** for services | 1099-NEC box 1 — *never a private client's problem, but it is on the list* |
 
 ⚠️ **The medical one is the practical trap.** A business paying an incorporated clinic, physician
 or lab **must** issue a 1099-MISC, and it is skipped constantly because "it's a corporation" feels
@@ -927,12 +928,21 @@ the old figure to a newer one, flips the answer.
 not cash to a payee, and a **transaction with no vendor** needs identifying rather than counting —
 it is as likely to be an internal entry as a real payment.
 
-📌 **How you actually PROVE a payee is exempt: Form W-9, box 3.** That is where the payee declares
-its federal tax classification — individual/sole proprietor · C corporation · S corporation ·
-partnership · trust/estate · LLC, and an LLC must write the letter (`C`, `S` or `P`). **A W-9 on
-file is what defends the decision not to file**; a name in the ledger is not.
+📌 **How you actually PROVE a payee is exempt: Form W-9, LINE 3a** *(a line, not a box — and it was
+renumbered from `3` when line 3b was added in the Rev. March 2024 form)*. That is where the payee
+declares its federal tax classification, in **seven** boxes: individual/sole proprietor ·
+C corporation · S corporation · partnership · trust/estate · LLC · **Other**.
 
-📌 **What "look before you ask" means here:** the ledger answers *whether* the threshold is met.
+🛑 **The LLC rule has an exception that covers the commonest case you will actually see.** The form
+says to check `LLC` and enter `C`, `S` or `P` — *"**unless it is a disregarded entity. A disregarded
+entity should instead check the appropriate box for the tax classification of its owner.**"* So a
+**single-member LLC** comes back with **`Individual/sole proprietor`** ticked and **no LLC letter at
+all** — that is a correctly completed W-9, **not a malformed one**, and that payee is **NOT exempt.**
+Reading it as an error is how a required 1099 gets skipped.
+
+**A W-9 on file is what defends the decision not to file**; a name in the ledger is not.
+
+📌 **What "look before you ask" means here:** the ledger answers *whether the threshold is met* — it does **not** answer whether the payee is exempt.
 Ask the client only for the **W-9s** the test actually turns on.
 
 ### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019
