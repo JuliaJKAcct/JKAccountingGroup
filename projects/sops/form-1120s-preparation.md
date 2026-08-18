@@ -722,6 +722,38 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 > line 1 is genuinely *per books*, and there is no difference left to reconcile. It is also what
 > should have happened anyway.
 
+#### The entry itself — and it is broken out per asset
+
+**Firm rule (Lilian, Aug 2026).** The chart of accounts carries **one accumulated-depreciation
+account per fixed asset**, so the entry is **not** a single credit — it is **one credit line per
+asset**, each for that asset's own share of the year's deduction:
+
+```
+31 December <year>
+  Dr  Depreciation (expense)                       <the year's total>
+      Cr  Accumulated depreciation — <asset 1>         <asset 1's share>
+      Cr  Accumulated depreciation — <asset 2>         <asset 2's share>
+      Cr  Accumulated depreciation — <asset 3>         <asset 3's share>
+```
+
+⚠️ **A single lump credit is wrong even though it totals correctly.** Each asset's accumulated
+depreciation has to stand on its own, because that is what **Schedule L line 10b** is built from,
+what the **net book value per asset** on the balance sheet depends on, and — the one that costs
+money — what the **gain or loss on disposal** is computed from when an asset is sold or the company
+liquidates. Lump it, and the year an asset leaves you cannot say what its basis was.
+
+🔑 **Where the per-asset amounts come from: the tax software's fixed-asset register, NOT the
+printed Form 4562.** The filed 4562 shows the **total** on line 17 or line 22 — the split lives in
+the asset list (ATX: the `Fixed Assets` tab). ⚠️ **The asset-detail statement that prints with the
+return may only carry cost, date placed in service and recovery period** — enough to identify the
+assets, not enough to split the deduction. **Open the register.**
+
+**If the register is unreachable** — the client cancelled the subscription, the engagement ended —
+**record the entry as a pending instruction in the return's working paper (§15A) with the total,
+the account names and the amounts left blank**, so whoever regains access can post it without
+rebuilding the analysis. **It does not block the return**: the deduction is already on page 1 line
+14 either way. It is the *books* that are waiting.
+
 > **Then check where the number lands — and WHICH check applies depends on a fork you have to
 > settle deliberately (§9):**
 >
