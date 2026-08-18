@@ -417,7 +417,15 @@ the actual details.
   and neither is a payee name.** It does not
   change the 14a answer, which the other two carry on their own; it changes which forms get filed.
   ⚠️ **The belief that nothing reached $600 came from looking at `Contract Labor` alone; RENT is
-  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle 14a** (not which form the storage payee gets) — an LLC is
+  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle 14a** (not which form the storage payee gets)
+  🔎 **And one of the three is an OPEN identity question, raised with Lilian 2026-08-18:** the
+  `Contract Labor` vendor is recorded as a **bare first name** that appears nowhere else in 2025 or
+  2024, while one account away the firm's own fees are booked to the firm's corporate vendor from
+  Zelle payments that name a person. **If firm fees were split across two accounts and one was not
+  attributed to the firm**, those amounts belong in `Accounting & Professional Fees` and are exempt
+  — and then **no Contract Labor payee reaches $600 at all.** If the payee is a genuine outside
+  contractor it is a 1099-NEC. ⛔ Not assumed either way; the rent finding carries 14a to Yes
+  regardless — an LLC is
   *not* automatically exempt, only one taxed as a corporation is, and **Zelle issues no 1099-K so
   it does not relieve the payer.** *(The firm's own fee is exempt — we are a Corp.)*
   **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
