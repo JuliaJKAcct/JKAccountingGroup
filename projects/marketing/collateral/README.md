@@ -23,8 +23,14 @@ collateral/
 ├── starter-prompts.md              ← ready-made prompts for common assets
 ├── social-post-workflow.md         ← process for social posts (Gemini / NotebookLM / Claude)
 └── assets/                         ← finished, versioned pieces
-    └── facebook-cover/             ← Facebook Page cover (HTML source + PNG exports)
+    ├── facebook-cover/             ← Facebook Page cover (HTML source + PNG exports)
+    └── linkedin-banner/            ← LinkedIn Page cover — three options, awaiting Julia's pick
 ```
+
+> Both cover assets are built the same way: HTML sources on the design system, a
+> `render.mjs` that screenshots them to PNG, and a README that records the copy, the
+> network's crop rules and how to re-export. Start from the nearer one when a third
+> network needs a cover.
 
 > The firm's offer positioning lives one level up at
 > [`../positioning.md`](../positioning.md) — it's shared across all marketing
