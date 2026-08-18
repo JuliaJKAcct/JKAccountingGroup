@@ -221,6 +221,21 @@ the actual details.
   the bank feed has been dead since 2026-07-20, the client asks for transaction reports
   periodically, and the books have never used Bills. _(Worked by Lilian.)_
 
+- 2026-08-18 — **The owners are opening a new related entity, `iKids Miami LLC`, and we quoted it.**
+  A brand-new Miami location under the same owners; addressed to **Oleksii Balasiuk**. We built a
+  **bilingual (RU/EN) monthly proposal** on the firm's **top service tier** — CFO-level advisory
+  (proactive tax planning, planning around each significant decision, senior involvement on demand,
+  coordination with attorney/lender/foreign accountant) on top of the usual bundle (bookkeeping,
+  monthly financials, the **1065** partnership return + K-1s, sales tax, 1099s, FL annual report),
+  **plus employee payroll (up to 5)** as they hire. **No owner payroll** — a partnership takes draws.
+  It also carries an **optional Accounts Payable add-on** — the same hands-on AP we already run for
+  iKids Group (working the vendor inbox, paying bills + permit fees, monthly reconcile). **Start
+  December 1, 2026.** For continuity, the original iKids Group agreement was GoProposal **#JKA1243**.
+  _Fees live in the delivered proposal / Double, kept out of the repo (two-data-homes)._ **Follow-up:**
+  iKids Miami LLC is a **distinct entity** — once it is set up in Double it needs its **own** Client
+  Intelligence file (related entities get their own, like Rest Invest Kids LLC — §5), not folding
+  into this one. _(Worked by Lilian.)_
+
 ### Outstanding items (CI-only — never in the SOP)
 <!-- ⚠️ ORDER MATTERS HERE. The Knowledge Hub's client card renders only the FIRST FOUR bullets
      of this list (`bullets(...).slice(0,4)` in .claude/skills/client-intelligence/render/build.mjs),
