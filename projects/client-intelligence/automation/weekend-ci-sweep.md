@@ -109,7 +109,7 @@ hard quota will quietly cut corners it did not need to cut.
 | 🔴 **The shared Claude account's usage** | ✅ Real. A sweep that burns Saturday morning leaves less for Julia's and Lilian's own sessions that day |
 
 **The arithmetic is the point.** 48 client files × (10–15 calls for step 1, ~5 for step 1b) is
-**720–960 tool results in a single conversation.** No context holds that. So the run does not fail
+**700–1,000 tool results in a single conversation.** No context holds that. So the run does not fail
 loudly — it *thins out*: the clients at the end of the roster get a shallower pass than the ones at
 the start, the catch-up cap gets spent early, and the report still reads as though everything was
 swept. **That is the most likely reason quality has been uneven, and it is a design problem, not a
@@ -128,8 +128,9 @@ responses** (§2.2) because each one is another copy of a client's SSNs. **A Cli
 sweep never reads organizer responses**, so the ban does not apply to this work — but any future
 step that adds them would have to stay in the main thread.
 
-🔵 **Not adopted yet, deliberately.** As of 2026-08-18 the current prompt **has never run once**
-(see above). Changing it again before its first execution would mean debugging two changes at
+🔵 **Not adopted yet, deliberately.** As of 2026-08-18 the current prompt **has never run once** —
+Lilian re-pasted it during the week after Saturday 2026-08-15, and the Routine fires Saturdays only
+(established further down, in *THIS FILE IS NOT THE LIVE ROUTINE*). Changing it again before its first execution would mean debugging two changes at
 the same time and re-pasting a prompt whose credentials cannot be read back. **Let it run one
 Saturday, read that report, then decide** — the report now states how many clients got a full pass,
 how many were deferred, and how many open items went unchased, which is exactly the evidence this
@@ -385,16 +386,31 @@ would have re-bought four expensive first-time historical passes against a cap o
 ledger. Recovering the branch took that to **4** — its rows for ZETECH, Optic Gold, Onetwo Strategies and
 Greenair had been sitting on the branch all along.
 
-🔴 **THE FOUR THAT REMAIN ARE A DIFFERENT AND UNFIXED LEAK — a client file with no ledger row is
-invisible to this routine forever.** It is not in the scope table, so the sweep never reaches it; it has no
-baseline, so nothing bounds a search for it. **Every one of the four was created by a session that is not
-this sweep** — Liliia Hlebova Kozlovska (2026-08-17) and Mykola Kozlovskyi (2026-08-18) by **pre-return
-reviews**, Mays Express and R & G Friendly (2026-08-13) by the backfill from Lilian's phone. None of those
-sessions adds a ledger row, and nothing was ever checking. **The coverage check reconciled Double against
-the scope table and never reconciled the client FILES against the ledger** — so the routine could not see
-its own blind spot. Step 2b of the 2026-08-18 prompt adds that third direction.
-⚠️ **Match on the file, not on a name string** when running it by hand: `R & G Friendly Inc — *DBA Lucky
-Pawn & Jewelry*` will not equal its ledger row, and a naive comparison invents gaps.
+⚠️ **RETRACTED 2026-08-18, same day, by the independent review — there was no second leak, and the
+numbers behind it were wrong.** This block claimed that "4 of 48 client files have no ledger row and
+are therefore invisible to the routine forever." **Both halves were false**, and the retraction is
+kept because the reasoning error is the useful part:
+
+- **The count was wrong.** The check matched client names against the *whole file* of
+  `sweep-state.md`, so it counted the names listed in its closing **"THREE GROUPS DELIBERATELY HAVE
+  NO ROW HERE"** prose as if they were table rows. The real figures: **48 client files · 28 dated
+  rows · 20 files with no row.** Not 4.
+- **The diagnosis was backwards.** A missing ledger row does not make a client invisible — **all 48
+  files are named in the scope or exclusion tables below**, so the routine reaches every one of
+  them. A row is a **search bound**, and its absence is the signal that says *never swept, give a
+  full historical pass*. Rule (b) already handles it.
+- **The proposed fix was actively harmful** and would have merged: *"any session that creates a
+  client file adds its row in the same commit."* That is the precise instruction the
+  **2026-08-14 correction** removed from the [`client-intelligence`](../../../.claude/skills/client-intelligence/SKILL.md)
+  skill, whose own note says following it *"would have destroyed the history of 14 clients across
+  two backfills."* A row dated today bounds the next run to *after* today and erases everything
+  before it.
+
+**What is actually true, and it is a queue problem rather than a coverage one:** 20 clients are owed
+a first full historical pass, the cap is ~6 per run, and the deferral order is not recorded anywhere
+durable. That is step 2c's job and it is worth watching.
+🔵 **The genuine finding of 2026-08-18 survives untouched:** the sweep never chased its own open
+items (step 1b). Nothing above weakens that.
 
 🔴 **A SESSION CANNOT SAFELY DO THE RE-PASTE ALONE — and this, not forgetfulness, is why it keeps
 not happening.** _(Established 2026-08-18.)_ The note below suggests having Claude update the
@@ -447,15 +463,19 @@ _(corrected 2026-08-14)_.
 > **currently live in the web UI does not contain a client list at all** — it instructs the run to
 > read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
 > scope table above already reaches the live Routine without anyone re-pasting anything.** Keep the
-> inline list below in sync anyway, because a future paste would carry it. _(Established
+> ⚠️ **the 2026-08-18 rewrite REMOVED the inline list** — the scope table above is now the only client list, so a session hunting for a "CLIENTS list" inside the prompt is looking for something deliberately deleted, not something truncated. _(Established
 > 2026-08-14 by reading the live trigger, correcting a `FOLLOW-UPS` row that said the Routine was
 > running a hardcoded old list.)_
 >
-> ⚠️ **What IS stale in the live prompt, and what a re-paste actually fixes** — three rulings from
-> **2026-08-11** that never reached it: it still says **"Do NOT merge to main"** (Lilian removed the
-> approval gate for Client Intelligence, and three runs sat unseen on branches because of exactly
-> this line); it carries **no contradictions rule**; and its email is framed as a **request for
-> decisions** rather than a **record of what was saved**.
+> ✅ **CORRECTED 2026-08-18 — the live prompt is NOT stale on those three rulings.** This paragraph
+> used to say it still carried *"Do NOT merge to main"*, no contradictions rule, and a
+> request-shaped email. **Lilian re-pasted it during the week after Saturday 2026-08-15**, and the
+> version she confirmed carries all three — plus a COVERAGE CHECK this file did not have. The run
+> that stranded its work on 2026-08-15 executed the **previous** prompt and described its own
+> instructions accurately.
+> ⚠️ **What a re-paste buys NOW is different:** the 2026-08-18 additions — the step 1b chase pass,
+> the corrected 2b/2c coverage directions, the ledger-row rule, and the conditional email subject.
+> **It still needs a human**, for the credential reason below.
 >
 > 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
 > wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
@@ -482,18 +502,21 @@ METHOD — follow the repo, do not improvise:
 
 2. COVERAGE CHECK — do this BEFORE sweeping, every run. It is what stops a client being silently missed, and it runs in THREE directions, not one. Nobody is swept because someone remembered them; they are swept because a reconciliation found them.
 
-   2a. DOUBLE → scope table. Call Double list_clients for ALL non-archived clients and reconcile against the scope table AND the exclusion table in weekend-ci-sweep.md. Count a client as one the firm must know about when EITHER platform: qbo OR a Bookkeeping cadence property is set — "platform: qbo" alone is NOT enough, because a disconnected QuickBooks reads "none" and that is exactly the client this check exists to catch.
+   2a. DOUBLE → scope table. Call Double list_clients for ALL non-archived clients and reconcile against the scope table AND the exclusion table in weekend-ci-sweep.md. A client in the EXCLUSION table is deliberately out of scope (archived in Double, no new activity) — never pull one back in, in 2a or 2b. MEGABAI has no Double record at all, so a "full pass" on it is pure waste. Count a client as one the firm must know about when EITHER platform: qbo OR a Bookkeeping cadence property is set — "platform: qbo" alone is NOT enough, because a disconnected QuickBooks reads "none" and that is exactly the client this check exists to catch.
 
-   2b. CLIENT FILES → sweep-state ledger. List projects/client-intelligence/clients/*.md (ignore _client-template.md) and check each one has a row in projects/client-intelligence/automation/sweep-state.md. THIS DIRECTION WAS MISSING UNTIL 2026-08-18 AND IT IS THE ONE THAT LEAKS. Client files are created by sessions that are not this sweep — a pre-return review, an ad-hoc question, work from Lilian's phone — and none of them adds a ledger row. On 2026-08-18 four files were in exactly that state, two created in the previous 48 hours by pre-return reviews. A file with no row is invisible to this routine forever: it is not in the scope table, so step 1 never reaches it, and it has no baseline, so nothing bounds a search for it. Treat every such file as a client in scope.
-   ⚠️ Match on the file, not on a name string. A file's H1 may carry a DBA or punctuation the ledger row does not ("R & G Friendly Inc — DBA Lucky Pawn & Jewelry"), so a plain name comparison produces false gaps. When you cannot tell whether a row exists, say so in the email rather than guessing either way.
+   2b. CLIENT FILES → the SCOPE and EXCLUSION tables (NOT the ledger). List projects/client-intelligence/clients/*.md (ignore _client-template.md) and check each one is named in the scope table OR the exclusion table in weekend-ci-sweep.md. Client files get created by sessions that are not this sweep — a pre-return review, an ad-hoc question, work from Lilian's phone — and a client with a file but no place in either table is one this routine never reaches. Treat every such file as a client in scope and list it in the email so a human adds the table row.
+   🛑 DO NOT CHECK THE LEDGER HERE, AND NEVER ADD A ROW TO IT AHEAD OF A PASS. A missing sweep-state row is NOT a gap — it is the signal that this client has never been swept and is owed a FULL HISTORICAL PASS, which step 4 already acts on. A row is a BOUND on future searches: writing today's date for a never-swept client makes the next run search only after today and skips their entire history permanently. A session proposed the opposite on 2026-08-18 ("create a file, add the row in the same commit") and a review caught it — that same instruction, removed on 2026-08-14, would have destroyed the history of 14 clients across two backfills.
+   ⓘ Measured 2026-08-18: 48 client files, 28 ledger rows, 20 files with no row — and all 48 named in one of the two tables. So this check should currently find NOTHING, and that is the correct result. It is a backstop for the next file someone creates, not a live alarm. If it starts reporting hits, something upstream changed.
+   ⚠️ Check BOTH tables before reporting a hit. A file's H1 may carry a DBA or punctuation the table does not ("R & G Friendly Inc — DBA Lucky Pawn & Jewelry"), so a plain string comparison invents gaps. When you cannot tell, say so in the email rather than guessing either way.
 
-   2c. THE DEFERRAL QUEUE → actually drains. Read the "not swept this run" queue from the last run's report and the "Coverage gaps" column of sweep-state.md. A client deferred TWICE goes to the FRONT of this run's catch-up order, ahead of anything newer. Artur Tseretsian was deferred twice before being cleared; a queue that is only ever appended to is a queue that silently becomes a permanent exclusion list.
+   2c. THE FIRST-PASS QUEUE → actually drains. The clients owed an expensive first-time full historical pass are exactly those IN SCOPE (2a/2b) WITH NO LEDGER ROW — about 20 as at 2026-08-18, against a cap of ~6 per run, so this queue is roughly three runs deep and it is the real backlog. Order it by the catch-up priority in weekend-ci-sweep.md (QuickBooks / active clients first) and, within that, OLDEST CLIENT FILE FIRST — file age is something you can actually compute, unlike a deferral count, which is recorded nowhere durable. ⚠️ Do NOT try to read a deferral count out of sweep-state.md's Coverage-gaps column: that column records which SOURCE is owed, and its own rule warns that writing status markers into it sends the next run's budget at work already done. A queue that is only ever appended to becomes a permanent exclusion list — Artur Tseretsian was deferred twice before being cleared — so if a client is STILL unswept after three runs, name them in the email.
 
-   For every client found by 2a or 2b with no row in either table: sweep it like any other (it has no sweep-state row, so it is a first-time full pass — it counts against the cap in step 4), create or update its projects/client-intelligence/clients/<slug>.md, and list it in the email under "Coverage — clients not yet in the scope table" so a human adds the row. Do NOT edit weekend-ci-sweep.md yourself — that file is outside your merge scope. Never derive scope from one staff member's client list: doing that is how seven QuickBooks-connected companies went with no Client Intelligence at all until 2026-08-11.
+   For every client found by 2a or 2b that is in NEITHER the scope table nor the exclusion table: sweep it like any other (no ledger row, so it is a first-time full pass — it counts against the cap in step 4), create or update its projects/client-intelligence/clients/<slug>.md, and list it in the email under "Coverage — clients not yet in the scope table" so a human adds the table row. Do NOT edit weekend-ci-sweep.md yourself — that file is outside your merge scope.
+   ✅ THE LEDGER ROW IS YOURS TO WRITE, AND WRITING IT IS WHAT STOPS THE LOOP. sweep-state.md IS inside your merge scope. Whenever you COMPLETE a first-time full historical pass — a client found here, or one off the 2c queue — ADD that client's row to sweep-state.md dated today, in the same commit. Skip it and next Saturday re-buys the identical expensive pass, forever. Write the row only for a pass you actually finished: if the cap or the context ran out, leave the row absent and name the client in the email. Never derive scope from one staff member's client list: doing that is how seven QuickBooks-connected companies went with no Client Intelligence at all until 2026-08-11.
 
 3. Read projects/client-intelligence/automation/sweep-state.md (the incremental ledger), projects/client-intelligence/sop-proposals.md (the SOP-proposal queue), and each client's clients/<slug>.md — so you only ADD new, non-sensitive facts and never duplicate.
 
-4. Bound every search to that client's baseline date in sweep-state.md AND LATER, inclusive of the baseline day itself (items can land later the same day a sweep ran; duplicates are prevented because you read the client file first). Gmail: after:YYYY/MM/DD. Ping/Double: date >= baseline. Never re-read anything from BEFORE the baseline. EVERY client in scope gets its cheap incremental pass EVERY run — the cap applies only to the expensive first-time / coverage-gap FULL historical passes, at most ~6 per run, taken in the catch-up priority order written in weekend-ci-sweep.md, with twice-deferred clients first (step 2c). If the cap makes you defer a client's full pass, NAME that client in the email so the queue stays visible.
+4. Bound every search to that client's baseline date in sweep-state.md AND LATER, inclusive of the baseline day itself (items can land later the same day a sweep ran; duplicates are prevented because you read the client file first). Gmail: after:YYYY/MM/DD. Ping/Double: date >= baseline. Never re-read anything from BEFORE the baseline. EVERY client in scope gets its cheap incremental pass EVERY run — the cap applies only to the expensive first-time / coverage-gap FULL historical passes, at most ~6 per run, taken in the catch-up priority order written in weekend-ci-sweep.md, with twice-deferred clients first (step 2c). If the cap makes you defer a client's full pass, NAME that client in the email so the queue stays visible. ✅ AND WHEN YOU COMPLETE A PASS THAT A "Coverage gaps" NOTE ASKED FOR, CLEAR THAT NOTE in the same commit — an un-cleared note re-prioritises a client for an expensive pass they have already had, ahead of clients who have never been swept.
 
 5. For each client, sweep the connected sources for what is NEW, searching by BOTH the business name AND each owner/principal name (a meeting titled with a person's name often covers the business). Owners with several businesses: sweep at the OWNER level across all their entities, then ROUTE each fact to the specific company file it belongs to — a Double INDIVIDUAL profile is that owner's 1040 work, the COMPANY record is sales tax / the company return / 1099s; never let one company's file absorb another's facts.
    - Ping: resolve_person on each owner; search_contacts; search_meetings (org-wide, semantic) for BOTH the business and each owner; list_client_meetings. Transcripts are garbled multilingual auto-transcriptions — use only what is legible, tag it low-confidence with its source, discard nonsense.
@@ -533,7 +556,10 @@ DELIVERY — send exactly one email (do not skip this step):
   (b) In AT A GLANCE, a client with anything open is NOT green. Use amber #9C6A39 with the oldest item's age; reserve green #2F8F5E for a client with genuinely nothing outstanding.
   "Nothing new" and "nothing wrong" must never print as the same line.
 - Do NOT use the Gmail connector (it is draft-only). Send through the webhook, EXACTLY ONCE.
-- Build payload.json with python3 (json.dump), keys: "secret"="<WEBHOOK_SECRET>", "to"="lilian@jkaccountinggroup.com" (ONE address), "subject"="Client Intelligence — weekly sweep <run date>", "html"=<the filled template>, "text"=<the plain-text version>.
+- Build payload.json with python3 (json.dump), keys: "secret"="<WEBHOOK_SECRET>", "to"="lilian@jkaccountinggroup.com" (ONE address), "html"=<the filled template>, "text"=<the plain-text version>, and "subject" per step 11:
+    - work IS on main  ->  "Client Intelligence — weekly sweep <run date>"
+    - work is NOT on main  ->  "Client Intelligence — weekly sweep <run date> — NOT MERGED, work on branch <name>"
+  Do not emit the plain subject on a run whose work did not land. That is the 2026-08-15 failure exactly: the run reported the stranded branch in the email footer, nobody read it, and 25 files sat unmerged for three days.
 - POST it WITHOUT following redirects and read the HTTP status code:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
 - HOW TO READ IT (this webhook redirects — do NOT use curl -L):

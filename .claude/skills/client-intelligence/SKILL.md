@@ -392,18 +392,24 @@ Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.
 **Non-sensitive facts only** (rule 1).
 
-### 🔴 Creating a client file? Add its sweep-state row in the SAME commit
+### ⚠️ Creating a client file? Scope table YES — sweep-state row NO
 
-A client file with **no row in [`sweep-state.md`](../../../projects/client-intelligence/automation/sweep-state.md)
-is invisible to the weekend routine forever** — it is not in the scope table, so the sweep never
-reaches it, and it has no baseline, so nothing bounds a search for it. It will look cared-for
-(there is a file, with content) and never be swept again.
+**A session tried to add the opposite of this rule on 2026-08-18 and an independent review caught
+it. Read the 🛑 bullet above before touching either file.** A `sweep-state.md` row is **a bound on
+the next run's searches, not a record that the client exists.** Writing today's date for a client
+nobody has ever swept makes the next run search only *after* today and **skip their entire history
+permanently** — the failure the 2026-08-14 correction was written to prevent, after the old wording
+would have destroyed the history of 14 clients across two backfills.
 
-**This bites the sessions that are not sweeps**, which is most of them: a pre-return review, an
-ad-hoc question, a backfill. On 2026-08-18 four files were in that state and **all four had been
-created by non-sweep sessions**, two of them in the previous 48 hours. So: **create a file → add
-the row.** The routine's step 2b now reconciles files against the ledger as a backstop, but the
-backstop runs once a week and only if the run gets that far.
+So when any session creates a client file: **add the client to the scope table** (or the exclusion
+table if they are archived) in
+[`weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md), and
+**leave the ledger alone.** A missing row is not a gap — it is the signal that says *this client has
+never been swept, give them a full historical pass*, and rule (b) already acts on it correctly.
+
+ⓘ **Measured 2026-08-18, so nobody re-raises this as a bug:** 48 client files, **28 ledger rows**,
+**20 files with no row** — and **all 48 are named in the scope or exclusion tables.** Nothing is
+invisible. Those 20 are the queue of first-time full passes, which drains at ~6 per run.
 
 ### 🔴 A sweep has TWO passes — "what's new?" and "what's still open?"
 
@@ -449,7 +455,7 @@ it did not need to cut — and one that thinks there is no limit at all writes a
 - **Odoo's hard 50/day is real but irrelevant here** — a CI sweep never touches Odoo. It is the cap
   people remember and the wrong one for this job.
 - **The real ceiling is one session's context window**, plus the shared Claude account's usage. It
-  does not error, it **degrades**: 48 clients × ~20 calls is ~1,000 tool results in one conversation,
+  does not error, it **degrades**: 48 client files × 15–20 calls is 700–1,000 tool results in one conversation,
   so the clients at the end of the roster get a thinner pass than the ones at the start while the
   report still reads as though everything was swept.
 

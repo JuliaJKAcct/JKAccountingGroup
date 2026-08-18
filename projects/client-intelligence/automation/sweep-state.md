@@ -20,31 +20,15 @@ list grows.
    source — do it on the next sweep, then clear the note.
 3. **A client with no row here** (newly added to `clients/`) gets a **full
    historical sweep** once, then gets a row.
-   🔴 **AND SOMETHING HAS TO GO LOOKING FOR THEM, because nothing did until 2026-08-18.**
-   This rule was written as if a missing row announces itself. It does not: a client file with
-   no row is **invisible to the weekend routine forever** — it is not in the scope table, so the
-   sweep never reaches it, and it has no baseline, so nothing bounds a search for it. **The
-   coverage check reconciled Double against the scope table and never reconciled the client FILES
-   against this ledger.** On 2026-08-18, **4 of 48** files were in that state (19 before the
-   stranded 2026-08-15 sweep was recovered), and **every one had been created by a session that
-   is not the sweep** — two by pre-return reviews in the previous 48 hours, two by the backfill
-   from Lilian's phone. **So the rule for any session that creates a client file: add its row
-   here, in the same commit.** Step 2b of the Routine prompt is the backstop that catches whoever
-   forgets.
-   ⚠️ **Compare files to rows, not name strings** — `R & G Friendly Inc — *DBA Lucky Pawn &
-   Jewelry*` does not equal its ledger row, and a naive match invents gaps that send the next
-   run's catch-up budget at clients that are already covered.
-4. **Update this table in the same commit** as the client-file updates at the end
-   of every sweep (state and content must never drift apart). Set the new baseline
-   to the run date for every client actually swept.
-5. If a sweep fails partway, only advance the baselines of the clients that were
-   fully processed.
-6. **Cap the catch-up work per run.** A first-time or coverage-gap **full historical
-   pass** is expensive, so do **at most ~6 of them per run** (priority order:
-   QuickBooks / active clients first, then the rest); the remaining catch-ups wait
-   for the next run. This keeps any single Saturday within budget no matter how many
-   clients get added. The cheap **incremental** (post-baseline) passes on
-   already-covered clients still run for **all** of them every time.
+   ⚠️ **A session tried to invert this on 2026-08-18 — "create a file, add the row in the same
+   commit" — and an independent review caught it before it merged.** It would have re-created the
+   exact failure the box below describes: a row dated today for a never-swept client bounds the next
+   run's searches to *after* today and **erases their history permanently.** **A missing row is not a
+   defect. It is the instruction to give that client a full historical pass.** The row is written
+   **after** the pass, never before.
+   ⓘ **Measured the same day:** 48 client files, **28 rows here**, **20 files with no row** — and all
+   48 are named in `weekend-ci-sweep.md`'s scope or exclusion table, so **none of them is invisible
+   to the routine.** Those 20 are the first-pass queue, draining at ~6 per run.
 
 > ⚠️ **A baseline here says nothing about the migrated TaxDome notes.** This ledger covers
 > Ping, Double, Gmail (and Drive where noted) — **not** the notes carried over from each
