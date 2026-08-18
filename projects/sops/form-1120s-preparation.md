@@ -701,6 +701,27 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 > method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation
 > figure from it.**
 >
+> 🔎 **A book/tax depreciation difference that appears SUDDENLY is usually a MISSING ENTRY, not a
+> tax position — ask why the gap exists before building the bridge.** Depreciation is normally
+> posted to the books by a year-end journal entry. When it is posted, book and tax agree and there
+> is nothing to reconcile; when nobody posts it, a difference appears out of nowhere. **Open the
+> books and look for the entry before deciding it is a permanent feature of this client.**
+> _(Pilot: the prior year had a single 31-December entry debiting a `Depreciation` expense account
+> and crediting the three accumulated-depreciation accounts — book and tax matched exactly. The
+> following year, with the company winding down, the entry was simply never made and the account
+> is not in the P&L at all. Nothing about the client changed; the bookkeeping did.)_
+>
+> ⚠️ **And the corollary, which is the trap: a prior year showing NO difference does not tell you
+> which convention it used — it tells you the two figures coincided.** A blank M-1 line 6a can mean
+> *there was no difference* or *nobody recorded anything*, and only the books distinguish them. So
+> a prior return with book depreciation equal to tax depreciation is **silent** on the fork below;
+> do not read it as evidence either way.
+>
+> ✅ **The cleanest resolution is usually a journal entry, not a return decision.** Post the year's
+> depreciation to the books and the fork disappears — Schedule L matches the books again, M-1
+> line 1 is genuinely *per books*, and there is no difference left to reconcile. It is also what
+> should have happened anyway.
+
 > **Then check where the number lands — and WHICH check applies depends on a fork you have to
 > settle deliberately (§9):**
 >
@@ -1117,6 +1138,7 @@ rounding difference.
 - [ ] Schedule L: **total assets = total liabilities and equity**, and total assets equals the
       year-end balance sheet
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
+- [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
       across all K-1s
