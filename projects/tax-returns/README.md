@@ -77,6 +77,23 @@ each, and next year gets its own.
    its §6 log saying the return was prepared and pointing here. **The knowledge goes there; the
    figures stay here.**
 
+## Brand & design
+
+**Not applicable.** These are plain-Markdown working papers, read in the repo. They are not
+rendered, not published, and not team-facing — see *What this is NOT*.
+
+## Skills & tooling
+
+- The procedure that produces them: [`projects/sops/form-1120s-preparation.md`](../sops/form-1120s-preparation.md) — its **§15A** makes writing the file part of preparing the return
+- Reading a client's own document safely: [`tools/redact-doc/`](../../tools/redact-doc/)
+
+## Outputs
+
+**Committed Markdown, one file per return, private to the repo.** Nothing here is published, sent
+to a client, or rendered into the Knowledge Hub. ⚠️ **There is no automated gate on this folder** —
+`assertNoSensitiveData()` scans `client-intelligence/clients/` only. The ⛔ list above is enforced
+by whoever writes the file.
+
 ## Related
 
 - The procedure: [`projects/sops/form-1120s-preparation.md`](../sops/form-1120s-preparation.md)

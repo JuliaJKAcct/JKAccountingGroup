@@ -192,7 +192,7 @@ to hold.
   and any other government-issued identifier, credentials, dates of birth.
 - **Personal contact details** — phone, email, the street address. _(A city and state are a tax
   fact on a multi-state return and may be written; the street line is not.)_
-- **Dollar figures** — barred by the older two-data-homes rule, which this ruling does not touch.
+- **Dollar figures** — barred by the older two-data-homes rule (⚠️ **but they now have a home**: the figures for a return the firm prepared go in [`projects/tax-returns/`](../../../projects/tax-returns/), never in a client file), which this ruling does not touch.
   They live in Double, Drive and QuickBooks.
 
 **Write the fact AND the action.** *"Marketplace coverage — so Form 1095-A is required and blocks

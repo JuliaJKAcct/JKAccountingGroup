@@ -425,11 +425,13 @@ the actual details.
   (a) **The company has CLOSED**, and its QuickBooks is disconnected as a result — so there is no
   longer any read path to the books from a session (§1, Outstanding). (b) **The security deposit
   was never lost**: the landlord carried it to a *new* warehouse under the same landlord and it is
-  refundable on exit — so it is **still an asset** and the books zeroing it is an error to correct
-  with a journal entry, not a deduction (§5). (c) **No merchandise was bought in 2025, but a
-  physical inventory count was taken** because the prior inventory carried errors — which is the
-  real explanation of the a few thousand dollars that fell out of 1125-A line 2, and the reason that figure is
-  **not** evidence of purchases. _(Worked by Lilian.)_
+  refundable on exit. ⛔ **The conclusion drawn from that — that the books zeroing it was an error
+  to reverse — was SUPERSEDED the same day: Lilian ruled the entry STANDS. See §5.** (c) **No
+  merchandise was bought in 2025, but a physical inventory count was taken** because the prior
+  inventory carried errors. ⛔ **ALSO SUPERSEDED, see §5:** the figure that fell out of 1125-A
+  line 2 turned out to be **two real `United Porte` purchase invoices** booked straight to cost of
+  sales, so it **is** evidence of purchases — and the count is reflected through the **unit
+  quantity**, not a missing adjustment. _(Worked by Lilian.)_
 - 2026-08-17 — **The 2025 general ledger arrived and settled every remaining figure.** ⚠️ The first
   export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; the two were
   compared account by account before anything was relied on — **identical to the cent**, because
@@ -479,8 +481,8 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
 - [x] **`Security Deposit` → credited to Store Rent** by a 31-Dec journal entry (Julia's).
       **Lilian ruled it correct on 2026-08-17 — it stands, do not reverse** (§5).
 - [x] **`Inventory` → one entry all year**, the cost-of-sales relief. The line-2 residual is two
-      `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ⚠️ But
-      the physical count never reached the books (§5).
+      `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ✅ And the physical count **is** reflected —
+      through the unit quantity inside that entry, not a separate adjusting entry (§5).
 - [x] **`Mykola Kozlovskiy` → 79 movements, contributions in and distributions out.** **There WERE
       distributions**, netted inside the account exactly as suspected. Feeds Schedule K 16d, K-1
       box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution

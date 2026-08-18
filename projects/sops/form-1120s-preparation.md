@@ -686,7 +686,9 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 - **No new assets this year means no new elections** — no §179 and no bonus depreciation
   decisions to make. Just continue the existing schedule.
 - ⚠️ **If the books recorded no depreciation at all**, the deduction still belongs on the
-  return. It becomes a book-to-tax difference on **Schedule M-1** (§9).
+  return. On a **book-basis** Schedule L it becomes a book-to-tax difference on **Schedule M-1**
+  line 6a (§9); on a **tax-basis** one it is already inside Schedule L and M-1 line 1 instead.
+  **Pick one — see the fork below.**
 
 > 🖥️ **IN ATX: enter the assets in the `Fixed Assets` tab — NOT on Form 4562 itself.**
 > Standing reminder (Lilian, Aug 2026), and it applies **every time this form comes up**. The
@@ -696,9 +698,20 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 > method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation
 > figure from it.**
 >
-> **Then check the two places the number has to land:** page 1 **line 14**, and **Schedule L line
-> 10b** = prior accumulated depreciation **+** this year's. If 10b does not move by exactly the
-> line 14 figure, the register and the return have come apart.
+> **Then check where the number lands — and WHICH check applies depends on a fork you have to
+> settle deliberately (§9):**
+>
+> - **Tax-basis Schedule L** (what tax software usually does, driving 10b from its own register):
+>   **10b must move by exactly the line 14 figure**, retained earnings is net of it, and there is
+>   **no** M-1 line 6a depreciation adjustment. ⚠️ The filed Schedule L will then **not equal
+>   QuickBooks** by the year's depreciation.
+> - **Book-basis Schedule L** (the literal reading of *"per Books"*): **10b does not move at all**,
+>   Schedule L matches the books, and the depreciation appears as an **M-1 line 6a** adjustment.
+>
+> **Both reach the same M-1 line 8.** What is not allowed is mixing them. **Repeat whichever the
+> prior return used**, and if the prior year's book and tax depreciation happened to coincide —
+> so the prior return does not reveal which — say so in the working paper (§15A) rather than
+> leaving the next preparer to guess.
 
 ---
 
@@ -1039,9 +1052,15 @@ deduction — and the form catches it for you **only if line 6 carries the real 
 prior year's **Part II and the K-1's *Loans from shareholder* boxes together** are the fastest
 answer to §12A's first question below.
 
-**Part III — Allowable Loss and Deduction Items.** Where the loss actually goes: column (a)
-carryover from prior years, (b) this year's, **(c) allowable** — which feeds line 11 — and (d)
-disallowed and carried forward.
+**Part III — Allowable Loss and Deduction Items.** Where the loss actually goes, and ⚠️ **the
+columns are not the order you would guess**: **(a)** this year's losses and deductions · **(b)**
+carryover from **last year's column (e)** · **(c) allowable against STOCK basis** — which feeds
+line 11 · **(d) allowable against DEBT basis**, which feeds line 30 · **(e)** what **carries
+forward**.
+
+🛑 **Column (d) is not "disallowed".** It is loss allowed against *debt* basis. Keying the
+disallowed amount there reduces debt basis by a loss that was never allowed, and the error is
+invisible until it reaches next year's opening figures. **The carryforward is column (e).**
 
 ### Two header boxes that must match the prior year
 
