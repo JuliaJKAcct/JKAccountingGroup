@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -110,6 +110,14 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
   (same as SensusTech, same tech owner-group) — added to §5. The buyback-categorization pattern
   already on file is still recurring as of Jul 20–21 (already a Pending item in the SOP; no new
   proposal needed). Ping had no indexed meetings for Mobilesource or the owner in this window.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log showed the routine
+  monthly close progressing (Amex, Costco Visa, and the two Valley Bank feed reconciliations
+  marked Done 2026-08-14) and the **Monthly Sales Taxes** task moved Not Started → In Progress →
+  Done on 2026-08-12. Gmail confirmed this ties to the **August FL DOR filing cycle**: a "Return
+  Filed" and a "Payment Received" notice both dated 2026-08-12 for MOBILESOURCE CORP — the
+  monthly sales-tax filing continues on its normal cadence (separate from the previously-flagged
+  FL DOR audit, on which no new correspondence appeared this window). No new Double notes. Ping
+  had no indexed meetings for Mobilesource or the owner in this window.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **June 2026 reports:** buyback miscategorizations were resolved and the reports were sent 2026-07-24 — this item is now closed. _(Gmail, Double activity log)_

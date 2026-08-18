@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +30,7 @@
 - **Entity type:** LLC — the firm files Form **1120-S** _(Double)_. 🔴 **BUT THE IRS DOES NOT AGREE.** On **2025-12-23** the IRS confirmed there is **no Form 2553 associated with any of this company's EINs**, so **to the IRS it is still a C-corp**. See §5 — this is unresolved and it is the most consequential fact on this client.
 - **Home state:** **Florida** (Broward / Fort Lauderdale area) _(Gmail — high confidence)_
 - **Industry / what they do:** **Interior design studio** (commercial + residential; the owner holds IIDA · ASID · CPTED credentials). Work runs as numbered design **projects**, some for commercial / government REIT clients. _(Gmail)_
-- **Primary language:** **English** (all business correspondence). _(Gmail)_
+- **Primary language:** **English** (all business correspondence). _(Gmail)_ Double's own `Preferred language` client property reads **Bilingual (EN/ES)** _(Double client properties, 2026-08-15)_ — noted, not a contradiction (correspondence being in English doesn't rule out bilingual capability).
 - **Our engagement (services we provide):** Bookkeeping (**quarterly**); **income tax (the firm files Form 1120-S — but see §1, the IRS does not accept that classification)**; **sales tax (quarterly, FL DOR)**; **payroll via Gusto (automatic)**; **1099 preparation**; annual-report filing. The firm also prepares the **owner's personal return** (a linked individual client in Double). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double)
@@ -110,6 +110,19 @@ the actual details.
   - **2026-01-14 — IRS call.** The **cancellation request went in to the BMF Entity unit**. The IRS said it will **merge the information from both EINs into the one kept**, gave **up to 30 calendar days**, and confirmed **no acknowledgement is issued while it is in progress** — the only letter they send is one saying the number is already cancelled. Transcripts were **resent** to the company's Coral Springs address after the client reported never receiving the first mailing.
 - **Nothing after 2026-01-14 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
 - 2026-08-13 — **TaxDome notes read (Phase 2).** Three notes — two of them substantive, and they supply the **origin** of the EIN mess this file already described. **2025-12-04 (onboarding consult):** when the company filed as a C-corp, **the IRS did not recognise the LLC's EIN and created a new one** — so the duplicate was the IRS's doing. The same note records the S-election as **filed but not processed until August 2025**, which does not sit easily beside the 2025-12-23 finding of no 2553 on any EIN; both are recorded and the fact is unsettled. It also lists what the firm asked the client for at onboarding: the executed 2553, the 2024 personal return, sales-tax correspondence, the new EIN letter and a transcript of the accepted C-corp return, plus a POA for **both** EINs. **2025-12-12:** the third EIN traces to a **company the client's father created in 2013**; two estimated tax payments had been made. _(TaxDome notes, migrated — filed under Masciave Design.)_ _(Worked by Lilian.)_
+- 2026-08-15 — **Weekend sweep (incremental, from 2026-08-08):** Double (`list_client_properties`,
+  `list_notes`, `list_contacts`, `list_activity_log` from 2026-08-08 — empty) shows both existing
+  notes (the EIN case note 491846, last updated 2026-08-13, and the reporting/tax-basis note) still
+  current, no update since. Owner contact confirmed as **Alejandra Pallisso**; the `Preferred
+  language` property reads Bilingual (EN/ES), added to §1. Gmail (`in:inbox`/`in:sent`, business
+  name + "Pallisso", after:2026/08/08) returned nothing but the firm's automated weekly CI-sweep
+  digest. Ping client-scoped semantic search returned no results specific to this client — all hits
+  were unrelated noise from other clients' meetings, including internal ASTPS coaching calls. Google
+  Drive full-text search for the business name, modified after 2026-08-08, returned only an
+  unrelated internal hours spreadsheet. **No update found on the EIN case note's open items** (the
+  2553 filing, the cancellation confirmation, or the transcript arrival) — the case remains open as
+  of 2026-01-14/08-13, nothing after that is recorded anywhere the firm can reach. No SOP exists yet
+  for this client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — still no update this window, still open.

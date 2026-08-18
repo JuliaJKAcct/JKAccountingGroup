@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -93,6 +93,7 @@ Drive (§7) — never copied here.
 - **WF 8477 (the account already flagged as stuck in reconciliation) was closed by the owner in Jul 2026** after recurring unauthorized overcharges from a vendor; a **replacement Wells Fargo account was connected in QBO** and historical transactions for the closed account were manually uploaded — the bank-feed list above needs its last-4 updated once confirmed. _(Gmail, 2026-07-28)_
 - **Customer payments run through QuickBooks Payments (credit-card processing)**; a customer chargeback/dispute over a card payment escalated to **Intuit's formal Pre-Arbitration process** in late Jul 2026 (owner is contesting — services were rendered, payment held non-refundable). Adds a new dimension to the AR/reconciliation complexity already noted above. _(Gmail, 2026-07-21 to 2026-07-30)_
 - **QuickBooks Payments disputes:** the business accepts customer payments via QBO's built-in merchant processing, and payment disputes/chargebacks occur on that channel — the owner has had to submit dispute evidence to Intuit. If the owner doesn't want a given invoice paid via QBO's processing, the payment-options toggle on that invoice should be unchecked before sending. _(Gmail, 2026-07-21 — flagged as a possible SOP-proposal candidate, not yet queued — borderline collections/support process rather than a close step)_
+- **An "Intuit Loan" is a standing monthly reconciliation line item** on the close checklist (Double task "Intuit Loan," marked Done alongside the intercompany-loan review) — not previously documented; likely a QuickBooks Capital financing product. Confirm the loan's nature/terms with Maria next time it's convenient. _(Double activity log, 2026-08-13)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -103,6 +104,18 @@ Drive (§7) — never copied here.
 - 2026-07-25 — Incremental sweep: new QBO Payments dispute/chargeback quirk found (§5); Mercury card clarified as "IO"; GL audit status update — a payment was applied to the current policy, not the outstanding audit invoice, so that balance remains outstanding.
 - 2026-08-01 — Incremental sweep (baseline 2026-07-20). Ping: no relevant meetings for Margate/Beemold or the owners still indexed (org-wide semantic search returned nothing on-topic). Double: no new notes/activity-log entries since baseline; contacts confirm the owner (portal admin, `info.margateplumbing@gmail.com`) and the co-owner (linked to a second Double client id — consistent with the Beemold link already recorded). Gmail (in:inbox + in:sent, after:2026/07/20) was the source for all new facts below; Google Drive turned up no new client-folder items; QuickBooks (Intuit-QuickBooks MCP tools) is scoped to the firm's own QBO company, not per-client — not usable for this client.
 - 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double client properties confirmed Organizer Status = Completed (no notes, 5 task-status activity entries — routine July close). Gmail surfaced a WF-8477 account closure/replacement and a new QBO Payments customer-payment dispute. Ping had no legible new content for the client or the owner post-baseline (all hits were pre-baseline or off-topic/garbled). Drive folder link reconfirmed unchanged. QuickBooks MCP is scoped to the firm's own company (not client-specific) — not usable here.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log showed the July close
+  running to completion (Aug 13–14: bank feeds, 1099 prep, P&L/Balance Sheet, AR/AP aging, cash
+  flow), plus two intercompany/financing tasks marked Done Aug 13 — "Loan Payable - BEEMOLD USA
+  LLC" (the known Margate↔Beemold loan review) and a previously-undocumented **"Intuit Loan"**
+  task (added to §5). A **new Double task "Margate New 2026 Checking Account"** was created
+  2026-08-13 (due date set to 2026-08-10, status "Waiting on Client," assigned Maria) — this
+  formally tracks in Double the still-open WF-replacement-account confirmation already logged as
+  an outstanding item. No new Double notes. Gmail (2026-08-14, "Margate/Beemold July 2026"
+  thread): Maria sent preliminary July reports; WF statement access is still needed for the new
+  account, and a specific Beemold-side income line needs the owner's identification (both
+  primarily Beemold facts, cross-referenced here since the report is joint). Ping had no legible
+  new content for the client or the owner post-baseline.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Workers' comp audit open** — owner disputes prior-year WC as overcharged/misclassified; complicated by the **pre-Gusto payroll access gap**. _(Gmail)_
@@ -114,6 +127,7 @@ Drive (§7) — never copied here.
 - **Intuit QuickBooks Payments chargeback dispute** escalated to Pre-Arbitration as of 2026-07-30 — outcome pending. _(Gmail)_
 - **GL/WC insurance audit invoice** (JDA Group) — as of 2026-07-20, a payment the owner made was applied to the **current policy** rather than the outstanding **2025–2026 audit balance**, which remains outstanding — ties into the WC/GL audit already logged above. _(Gmail)_
 - Maria asked whether the replacement WF account's credentials could be added to Julia's own login so statements can be downloaded monthly — pending owner's response. _(Gmail, 2026-07-28)_
+- **Formally tracked as a Double task** ("Margate New 2026 Checking Account," status Waiting on Client) as of 2026-08-13 — still awaiting the owner's WF access grant as of the 2026-08-14 report email. _(Double activity log; Gmail, 2026-08-15 sweep)_
 
 ### Information still needed
 - [ ] Fiscal year-end

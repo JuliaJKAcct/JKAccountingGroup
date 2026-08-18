@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -326,6 +326,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   default); no value was copied anywhere and Lilian was told to delete the session. Pass
   `excludeContentSnippets: true` on Drive searches over a client's vault folder.
 
+- 2026-08-15 — **Incremental sweep (baseline 2026-08-08 → 2026-08-15).** Double: no new notes (case note 485258 — the QuickBooks primary-admin handover — is still at its 2026-08-06 status; still paused on Ishkhan's ID verification, nothing further recorded). Client properties unchanged. Activity log: the Sales Tax task closure and nothing else (above). Gmail (`in:inbox`/`in:sent`, `after:2026/08/08`, "Ecoorganic"/"Corganix"/"Markarian"): the two items above plus the routine weekly-sweep email. Ping (`search_meetings`, scoped "Ecoorganic USA", org-wide semantic): no meetings dated on/after 2026-08-08 — all hits pre-date the baseline or are unrelated-client noise, consistent with this client having no indexed Ping meetings at all. No SOP drift found against either `ecoorganic-bookkeeping-review.md` or `ecoorganic-ct-sales-tax.md` this run.
 - 2026-08-13 — **Lilian parked the two open sales-tax questions**, without resolving them: why the
   CT return is filed at zero, and whether it should report gross receipts with a deduction rather
   than sitting blank. Her words: *"déjalas pendientes de resolver. No es algo que tengo tiempo
@@ -335,6 +336,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   filing continues unchanged**; what is parked is what we may *say* about it, not what we do. Same
   session: she also ended the practice of proposing notes for her notebook (now a firm-wide rule in
   [`CLAUDE.md`](../../../CLAUDE.md) — unrelated to this client, recorded there).
+- 2026-08-12 — **Monthly CT sales-tax filing continues on schedule.** Double's internal "Sales Tax" recurring task was marked **Done** the same day (Lilian) and CT DRS's myconneCT sent its standard submission-confirmation email — "Your return for ECOORGANIC USA LLC has been submitted" — to Julia's inbox _(Double activity log; Gmail, 2026-08-12)_. Consistent with the standing zero-return procedure (§4); no change to the parked open questions.
+- 2026-08-11 — **A CTDOL / ReEmployCT notice landed** — "Important information regarding your Account ECOORGANIC USA LLC... available to view" _(Gmail, 2026-08-11)_. Confirms the CT Dept. of Labor / ReEmployCT unemployment account (§3) is active and generating correspondence; the notice itself was not opened (no client document-reading trigger here), so its content is unknown — flag if it recurs or if a specific action is ever needed.
 - 2026-08-13 — **TaxDome notes read (Phase 2).** Two notes, both new to this file. **2026-04-06 — CT DRS call:** the sales-tax account was opened even though the client sells no goods and the firm never requested it; the outstanding zero returns were filed with **no penalty**; DRS explained how to close the account online. **Waiting on Julia, reminder due after 2026-04-15, nothing recorded since.** **2026-04-07 — the CT annual report was filed** (due 31 March): **Ishkhan was removed and Artem added as principal agent**, and the state sent Artem an acceptance request he had **72 hours** to answer. The payment processed but the confirmation email had not arrived and the CT account still showed it as unfiled. _(TaxDome notes, migrated — filed under Ecoorganic USA LLC.)_ _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)

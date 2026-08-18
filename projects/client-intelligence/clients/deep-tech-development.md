@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-13
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -70,6 +70,13 @@ the actual details.
 - **Applies?** Not in JK's scope — **N/A** per Double. The company runs its **own Gusto payroll (biweekly)**; JK does not process it. _(Double + Gmail)_
 - **Quirk:** despite Payroll being **N/A** for JK, JK staff (the assigned bookkeeper plus other team members) are routinely copied on Gusto's automated "payroll due / payroll late" reminder emails for this client's biweekly run — worth confirming why JK stays on that notification list _(Gmail, 2026-07-26 to 2026-07-30)_.
 - **Update (2026-08-05, Gmail):** a Gusto payroll-fee debit failed, and the owner asked whether the company's Gusto payroll can be **cancelled** — the company currently has **no employees**, and isn't expected to until the owner is back in the US. Decision pending; if Gusto is cancelled, revisit this section and §5.
+- ⚠️ **Unsettled — Gusto is still active and running a payroll as of 2026-08-13.** Gusto's automated
+  "payroll is late" reminders (2026-08-09, 08-11, 08-13) for the **Aug 3–16, 2026 pay period** kept
+  arriving through this sweep window, which reads as an **active, ongoing payroll run** — this sits
+  uneasily beside the 2026-08-05 note that the company "currently has no employees." **Both are on
+  record; the cancellation decision from §6 outstanding items does not appear to have been acted
+  on**, or the "no employees" framing was about future hiring rather than the current run. Confirm
+  with Julia/the owner before assuming either reading. _(Gmail, 2026-08-09/11/13.)_
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes — the engagement is monthly** _(Double)_, but ⏸ **PAUSED right now, deliberately, not a lapse.** _(Lilian, 2026-08-11.)_ The owner is
@@ -144,6 +151,20 @@ the actual details.
   - **2025-10-30 — FDOR call.** The reemployment-tax request was **still being processed** by the Department of Reemployment Tax, with no timescale beyond "it depends on the queue". Lilian asked whether they acknowledge a request in the meantime — **they said they do not**, and write only once the change is done. The **sales-tax** change was confirmed complete.
 - ⓘ **SUPERSEDED 2026-08-13.** For one day this file said *"nothing after 2025-10-30 is recorded anywhere the firm can reach"* and carried the matter as open with a possibly-live wrong bill. That was true of the phone note alone; the migrated TaxDome note carries the closing line that resolves it (below).
 - 2026-08-13 — **TaxDome notes read (Phase 2).** The migrated note on the FDOR matter **closes what the phone note left open**: both effective-date changes went through and the FDOR's confirmation letter is in the client's Drive folder. ⚠️ **The note says only "this is done" — it does not restate the granted date, so "1 July 2025" is the date REQUESTED on 2025-10-13. The letter in Drive is what confirms what was actually granted, and it has not been read.**. §5 and Double note **491845** corrected the same day. _(TaxDome notes, migrated — filed under Deep Tech.)_ _(Worked by Lilian.)_
+- 2026-08-15 — **Weekend sweep (incremental, from 2026-08-08):** Double (`list_client_properties`,
+  `list_notes` — the FDOR case note 491845 unchanged since 2026-08-13, `list_contacts`,
+  `list_activity_log` from 2026-08-08 — empty) shows no case-note update; the "confirm the FDOR
+  withdrew its Q2 2025 demand" loose end is still open. Gmail (`in:inbox`/`in:sent`, "Go Robots" /
+  "Deep Tech", after:2026/08/08) surfaced recurring Gusto "payroll is late" reminders for an active
+  **Aug 3–16, 2026 pay period** — added to §4 as an unsettled contradiction against the 2026-08-05
+  "no employees" note — plus **USPS mail-forwarding-ending notices (forwarding ends 2026-09-18)**
+  for this company **and** for the related entities **1701 N M ST LLC** and **Universal Trading
+  Technology LLC** (already known from §5), plus one for the individual owner — added to §6
+  outstanding items, since it needs action before the deadline. No Safe Guard Self Storage
+  cancellation confirmation and no new Penn Credit letter found (both searched directly). Ping
+  client-scoped semantic search returned no results specific to this client. Google Drive turned up
+  a **new "Deep Tech" folder created 2026-08-10** distinct from the one linked in §7 — flagged below,
+  same pattern as the duplicate-folder finding on Masciave.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
@@ -152,6 +173,13 @@ the actual details.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 - ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
+- ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
+  LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
+  a permanent address change should be filed instead, before mail starts bouncing. _(Gmail,
+  2026-08-14.)_
+- A **second "Deep Tech" Google Drive folder** (created 2026-08-10, different parent than the one
+  linked in §7) turned up in this sweep — confirm whether it's a duplicate/stale folder or a
+  distinct working folder before relying on it.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration
