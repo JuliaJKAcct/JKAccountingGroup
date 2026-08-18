@@ -9,6 +9,9 @@
 > filled-in worksheets belong in Google Drive / Double / QuickBooks. This SOP carries the
 > **procedure and the line map** only — every amount below is a placeholder.
 
+> **The skill that maintains this, and that writes the next one:**
+> [`tax-return-sop`](../../.claude/skills/tax-return-sop/). One SOP per form; this is the reference.
+
 > **Who this is written for.** Someone preparing an S-corporation return **for the first
 > time**, who knows bookkeeping but has not filled in a 1120-S. It explains *where each
 > number comes from*, not just which box it goes in — because the boxes are the easy part.
@@ -318,6 +321,18 @@ goods.
 ```
 line 1  +  line 2  −  line 7  =  line 8
 ```
+
+> ⚠️ **That is the SHORT form, and it holds only while lines 3, 4 and 5 are all zero.** The form
+> itself is `line 8 = line 6 − line 7` where `line 6 = lines 1+2+3+4+5`. So **before using any
+> rearrangement below, look at lines 3, 4 and 5 and confirm they are empty** — line 5 in particular
+> is *"whatever the firm's convention puts in cost of sales beyond purchases"* and is not always
+> blank.
+>
+> 🛑 **The one that bites is solving for PURCHASES.** `line 2 = line 8 + line 7 − line 1`
+> **overstates purchases by (line 3 + line 4 + line 5)** whenever any of them is populated — and
+> unlike the negative-purchases case below, **this error comes out looking perfectly plausible**,
+> so nothing catches it. The full form is `line 2 = line 8 + line 7 − line 1 − line 3 − line 4 −
+> line 5`.
 
 You will usually **know three of the four** and solve for the fourth. Rearranged, every version of
 it:
@@ -698,6 +713,59 @@ payroll, so the parent carried only a platform subscription and **line 8 was cor
 > method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation
 > figure from it.**
 >
+> 🔎 **A book/tax depreciation difference that appears SUDDENLY is usually a MISSING ENTRY, not a
+> tax position — ask why the gap exists before building the bridge.** Depreciation is normally
+> posted to the books by a year-end journal entry. When it is posted, book and tax agree and there
+> is nothing to reconcile; when nobody posts it, a difference appears out of nowhere. **Open the
+> books and look for the entry before deciding it is a permanent feature of this client.**
+> _(Pilot: the prior year had a single 31-December entry debiting a `Depreciation` expense account
+> and crediting the three accumulated-depreciation accounts — book and tax matched exactly. The
+> following year, with the company winding down, the entry was simply never made and the account
+> is not in the P&L at all. Nothing about the client changed; the bookkeeping did.)_
+>
+> ⚠️ **And the corollary, which is the trap: a prior year showing NO difference does not tell you
+> which convention it used — it tells you the two figures coincided.** A blank M-1 line 6a can mean
+> *there was no difference* or *nobody recorded anything*, and only the books distinguish them. So
+> a prior return with book depreciation equal to tax depreciation is **silent** on the fork below;
+> do not read it as evidence either way.
+>
+> ✅ **The cleanest resolution is usually a journal entry, not a return decision.** Post the year's
+> depreciation to the books and the fork disappears — Schedule L matches the books again, M-1
+> line 1 is genuinely *per books*, and there is no difference left to reconcile. It is also what
+> should have happened anyway.
+
+#### The entry itself — and it is broken out per asset
+
+**Firm rule (Lilian, Aug 2026).** The chart of accounts carries **one accumulated-depreciation
+account per fixed asset**, so the entry is **not** a single credit — it is **one credit line per
+asset**, each for that asset's own share of the year's deduction:
+
+```
+31 December <year>
+  Dr  Depreciation (expense)                       <the year's total>
+      Cr  Accumulated depreciation — <asset 1>         <asset 1's share>
+      Cr  Accumulated depreciation — <asset 2>         <asset 2's share>
+      Cr  Accumulated depreciation — <asset 3>         <asset 3's share>
+```
+
+⚠️ **A single lump credit is wrong even though it totals correctly.** Each asset's accumulated
+depreciation has to stand on its own, because that is what **Schedule L line 10b** is built from,
+what the **net book value per asset** on the balance sheet depends on, and — the one that costs
+money — what the **gain or loss on disposal** is computed from when an asset is sold or the company
+liquidates. Lump it, and the year an asset leaves you cannot say what its basis was.
+
+🔑 **Where the per-asset amounts come from: the tax software's fixed-asset register, NOT the
+printed Form 4562.** The filed 4562 shows the **total** on line 17 or line 22 — the split lives in
+the asset list (ATX: the `Fixed Assets` tab). ⚠️ **The asset-detail statement that prints with the
+return may only carry cost, date placed in service and recovery period** — enough to identify the
+assets, not enough to split the deduction. **Open the register.**
+
+**If the register is unreachable** — the client cancelled the subscription, the engagement ended —
+**record the entry as a pending instruction in the return's working paper (§15A) with the total,
+the account names and the amounts left blank**, so whoever regains access can post it without
+rebuilding the analysis. **It does not block the return**: the deduction is already on page 1 line
+14 either way. It is the *books* that are waiting.
+
 > **Then check where the number lands — and WHICH check applies depends on a fork you have to
 > settle deliberately (§9):**
 >
@@ -738,13 +806,13 @@ Most are yes/no facts about the company. Three are worth calling out:
 3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
    because it prepares them.
 
-### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in 2023
+### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019
 
 **This is the one Schedule B answer that changes a number on page 1 — and the trap is that the
 question was rewritten, so half of what is written about it online describes the opposite form.**
 
-Two consecutive questions cover the **§163(j) business-interest limitation**. On the current form
-(TY2023 through TY2025) they read:
+Two consecutive questions cover the **§163(j) business-interest limitation**. On the current form —
+and on every revision from **TY2019** onward — they read:
 
 - **Question 9** — *"Did the corporation have an election under section 163(j) for any real
   property trade or business or any farming business in effect during the tax year?"* → for these
@@ -768,20 +836,34 @@ Two consecutive questions cover the **§163(j) business-interest limitation**. O
 **"Yes" TRIGGERS Form 8990. It does not exempt you from it.** Answering **No** is what leaves the
 interest fully deductible on page 1 line 13.
 
-> ⚠️ **The pre-2023 form asked the OPPOSITE question**, and this is the single most likely thing to
-> get wrong here. It read *"Does the corporation satisfy one of the following conditions **and**
-> the corporation doesn't own a pass-through entity with … excess business interest expense?"*,
-> where sub-part (a) was *gross receipts **do not exceed** the threshold*, and it ended *"If
-> 'Yes,' the corporation is **not** required to file Form 8990."* **Same question number,
-> inverted meaning.** And the old wording is now on **no current form** — Form 1065 was rewritten
-> in the same revision, so there is nowhere left to go looking for it. A preparer who answers the
-> current Q10 "Yes" because that is what the old form wanted has just attached Form 8990 and
-> limited a deduction that was never limited. _(This SOP shipped that error itself, caught in
-> review 2026-08-17 by pulling the actual form — which is the only way to be sure.)_
+> ⚠️ **The TY2018 form asked the OPPOSITE question**, and this is the single most likely thing to
+> get wrong here. Verbatim from `f1120s--2018.pdf` — *"Does the corporation satisfy one of the
+> following conditions **and** the corporation doesn't own a pass-through entity with current year,
+> or prior year carryover, excess business interest expense?"*, with sub-part **(a)** *"aggregate
+> average annual gross receipts … **don't exceed** $25 million, and the corporation isn't a tax
+> shelter"* and sub-part **(b)** interest only from an electing real property or farming business
+> or certain utilities — ending **"If 'No,' complete and attach Form 8990."**
 >
-> **The general rule: for any question whose answer changes a figure, open the current-year PDF
+> **Same question number, opposite meaning: there, "No" triggered the form; here, "Yes" does.**
+> **TY2019 is the revision that flipped it**, and Form 1065's Q24 flipped in the same one, so the
+> old wording is on **no form still in use** — there is nowhere left to go looking for it. A
+> preparer who answers the current Q10 "Yes" because that is what the old form wanted has just
+> attached Form 8990 and limited a deduction that was never limited.
+>
+> 🛑 **The general rule: for any question whose answer changes a figure, open the current-year PDF
 > from irs.gov and read the question and its "If Yes" sentence off the form.** §0B already says
-> this about page-1 line numbers; it is just as true here.
+> this about page-1 line numbers; it is just as true here. **And when you make a claim about an
+> OLDER form, pull that year too** — `irs.gov/pub/irs-prior/f1120s--<year>.pdf`.
+>
+> _(This paragraph has been wrong twice, and it is worth knowing how. First it stated the polarity
+> backwards — caught 2026-08-17 by pulling the current form. The correction then dated the flip to
+> **2023** and quoted the old ending as *"the corporation is not required to file Form 8990"* —
+> both invented, because only the **current** PDF had been checked and the rest came from memory.
+> The real flip is **TY2019**, four filing seasons earlier, and that quoted sentence has never
+> appeared on a Form 1120-S. Caught 2026-08-18 by fetching TY2018/2019/2021/2022 from the IRS
+> prior-year archive. **The shape of the trap was right both times; the detail supplied from memory
+> was wrong both times.** Anyone amending a TY2019–TY2022 return under the "pre-2023" wording would
+> have hit the very error this section exists to prevent, in the mirror direction.)_
 
 **And it still fails by omission.** Leave Q10 **unanswered** and the software assumes the
 limitation applies, wants Form 8990, and **the interest expense never reaches line 13.** Nothing
@@ -1114,6 +1196,7 @@ rounding difference.
 - [ ] Schedule L: **total assets = total liabilities and equity**, and total assets equals the
       year-end balance sheet
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
+- [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
       across all K-1s

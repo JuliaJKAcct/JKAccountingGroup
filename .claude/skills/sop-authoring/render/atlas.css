@@ -541,3 +541,108 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
 /* Footer secondary note — smaller and quieter than the footer's own body. */
 .foot .foot-sm{font-size:.86rem; opacity:.78; margin-top:6px;}
+
+/* ============================================================
+   DFLOW — the "how the numbers travel" diagram.
+   An inline SVG map of one return: four source documents at the
+   top, the forms they feed below, and the pairs that must agree
+   drawn differently from the "feeds" arrows.
+
+   Colour encodes WHICH SOURCE a figure came from — and because
+   colour alone must never carry meaning, every source also has a
+   numbered badge matching §0A's four-sources list, and every edge
+   is labelled with the line it carries. Edge labels are painted
+   LAST so an opaque box can never bury one.
+
+   Motion is the point rather than decoration: a pulse travels
+   each edge in the ORDER THE RETURN IS PREPARED, so the sequence
+   is watched rather than memorised. It is off for reduced-motion
+   and on paper.
+
+   The viewBox is 760 wide because the column it sits in is ~762px
+   — one SVG unit is one CSS pixel at full width, so the type is
+   the size it says it is.
+   ============================================================ */
+.dflow{margin:20px 0 10px;}
+.dflow .dwrap{overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--border-subtle); border-radius:16px; background:var(--paper);
+  padding:14px 10px;}
+.dflow svg{display:block; width:100%; min-width:640px; height:auto;}
+.dflow figcaption{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--muted); margin:11px 2px 0; text-align:center;}
+
+/* source hues — four distinguishable roles inside the brand's own two families */
+.dflow{--s1:var(--teal-500); --s2:var(--bronze-600); --s3:var(--teal-900); --s4:var(--greige-500);
+  --badge-ink:#fff; --spine-bg:var(--teal-800); --spine-bd:var(--teal-800);}
+:root[data-theme="dark"] .dflow{--s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;
+  --badge-ink:var(--teal-950); --spine-bg:var(--teal-950); --spine-bd:var(--teal-300);}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dflow{
+  --s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;
+  --badge-ink:var(--teal-950); --spine-bg:var(--teal-950); --spine-bd:var(--teal-300);}}
+
+/* --muted, not --border: at --border the node outline is 1.75:1 on paper in light
+   and 1.54:1 in dark, so the boxes stop reading AS boxes — and "which things are
+   nodes" is the whole structure of this diagram. --muted gives 6.9:1 light. */
+.dflow .box{fill:var(--surface); stroke:var(--muted); stroke-width:1.1;}
+.dflow .box.spine{fill:var(--spine-bg); stroke:var(--spine-bd); stroke-width:1.4;}
+.dflow .lbl{font-family:var(--sans); font-size:12.5px; font-weight:600; fill:var(--ink);}
+.dflow .lbl.on-spine{fill:#ECE6DA;}
+.dflow .sub{font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; fill:var(--muted);}
+.dflow .sub.on-spine{fill:#A6C4C8;}
+/* badge ink flips with the theme — the badges ARE the redundancy for colour, so
+   they have to stay readable on all four hues in both themes */
+.dflow .badge{font-family:var(--mono); font-size:10px; font-weight:600; fill:var(--badge-ink);}
+.dflow .edgelbl{font-family:var(--mono); font-size:9.5px; letter-spacing:.02em; fill:var(--muted);}
+/* Paint order puts every label above every box, so nothing is hidden UNDER a node —
+   but several labels sit centred on the very edge they annotate, and a 1.7px stroke
+   through 9.5px mono is unreadable. The halo knocks the line out behind the glyphs. */
+.dflow .edgelbl,.dflow .tielbl{paint-order:stroke fill; stroke:var(--paper);
+  stroke-width:3px; stroke-linejoin:round;}
+
+/* .85, not .42 — a non-text graphic needs 3:1, and at .42 not one of the four
+   source hues reached it against the paper behind them. */
+.dflow .edge{fill:none; stroke-width:1.7; stroke-linecap:round; opacity:.85;}
+.dflow .tie{fill:none; stroke:var(--accent-2); stroke-width:1.4; stroke-dasharray:5 4; opacity:.9;}
+.dflow .tielbl{font-family:var(--mono); font-size:9.5px; font-weight:600; fill:var(--accent-2);
+  letter-spacing:.03em;}
+:root[data-theme="dark"] .dflow .tie{stroke:var(--accent);}
+/* fill only — the tielbl's `stroke` is its paper-coloured halo, not its colour.
+   Recolouring it here would paint a 3px accent ring around every tie label. */
+:root[data-theme="dark"] .dflow .tielbl{fill:var(--accent);}
+
+/* the travelling pulse. The gap (900) exceeds the longest path, so a second dash
+   never appears; the offset runs from +18 (before the start) to -760 (past the end
+   of the longest path), so no dash is ever left parked at an edge's origin. */
+.dflow .pulse{fill:none; stroke-width:2.8; stroke-linecap:round;
+  stroke-dasharray:18 900; stroke-dashoffset:18;
+  animation:dtravel 5.6s cubic-bezier(.45,0,.5,1) infinite;}
+@keyframes dtravel{
+  0%{stroke-dashoffset:18; opacity:0;}
+  4%{opacity:.95;}
+  62%{stroke-dashoffset:-760; opacity:.95;}
+  66%,100%{stroke-dashoffset:-760; opacity:0;}
+}
+/* staggered by TIER, so the eye follows the order of preparation */
+.dflow .t1 .pulse{animation-delay:0s;}
+.dflow .t2 .pulse{animation-delay:.7s;}
+.dflow .t3 .pulse{animation-delay:1.4s;}
+.dflow .t4 .pulse{animation-delay:2.1s;}
+
+@media (prefers-reduced-motion:reduce){
+  .dflow .pulse{animation:none; opacity:.9; stroke-dasharray:none; stroke-dashoffset:0; stroke-width:1.9;}
+}
+@media print{
+  .dflow .dwrap{overflow:visible; break-inside:avoid; background:none;}
+  .dflow svg{min-width:0;}
+  .dflow .pulse{display:none;}
+  .dflow .edge{opacity:.9; stroke-width:1.9;}
+  .dflow .box{fill:#fff; stroke:#8A8271;}
+  .dflow .box.spine{fill:#0D2A31; stroke:#0D2A31;}
+  .dflow .lbl{fill:#111;} .dflow .sub{fill:#4A4A44;}
+  .dflow .lbl.on-spine{fill:#fff;} .dflow .sub.on-spine{fill:#C9DDE0;}
+  .dflow .badge{fill:#fff;}
+  /* .dwrap drops its background when printing, so the halo has to match the page */
+  .dflow .edgelbl,.dflow .tielbl{stroke:#fff;}
+  .dflow .box,.dflow .box.spine,.dflow .edge,.dflow .tie,.dflow circle{
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+}
