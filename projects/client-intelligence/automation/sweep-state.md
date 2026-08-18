@@ -20,6 +20,16 @@ list grows.
    source — do it on the next sweep, then clear the note.
 3. **A client with no row here** (newly added to `clients/`) gets a **full
    historical sweep** once, then gets a row.
+   ⚠️ **A session tried to invert this on 2026-08-18 — "create a file, add the row in the same
+   commit" — and an independent review caught it before it merged.** It would have re-created the
+   exact failure the box below describes: a row dated today for a never-swept client bounds the next
+   run's searches to *after* today and **erases their history permanently.** **A missing row is not a
+   defect. It is the instruction to give that client a full historical pass.** The row is written
+   **after** the pass, never before.
+   ⓘ **Measured the same day:** 48 client files, **28 rows here**, **20 files with no row** — and all
+   48 are named in `weekend-ci-sweep.md`'s scope or exclusion table, so **none of them is invisible
+   to the routine.** Those 20 are the first-pass queue, draining at ~6 per run.
+
 4. **Update this table in the same commit** as the client-file updates at the end
    of every sweep (state and content must never drift apart). Set the new baseline
    to the run date for every client actually swept.
@@ -76,7 +86,7 @@ list grows.
 > **THREE GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
 > A row is a *bound* on the next run's searches, so writing one for a client who has never been
 > swept would make the next run search from that date forward and **skip their entire history for
-> good**. The routine's rule (b) does the right thing with a missing row: **a client in scope with
+> good**. The routine does the right thing with a missing row — its **step 2c** queues the pass (older notes call this "rule (b)"; the 2026-08-18 prompt rewrite dropped the lettering): **a client in scope with
 > no row gets a one-time full historical sweep, then a row.** Leave all three groups out until that pass
 > runs.
 >

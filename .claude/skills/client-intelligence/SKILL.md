@@ -300,8 +300,8 @@ visible rather than assumed done.
      full historical pass has actually run.** This reverses what this step used to say, and the
      reason is that a row is **a bound on the next run's searches**, not a record of existence: write
      `2026-08-08` for a client nobody has ever swept and the Saturday run searches only *after* that
-     date and **skips their entire history permanently**. The routine's own rule (b) already does the
-     right thing with a **missing** row — *a client in scope with no row gets a one-time full
+     date and **skips their entire history permanently**. The routine already does the
+     right thing with a **missing** row (step 2c queues the full pass; this was "rule (b)" before the 2026-08-18 rewrite dropped the lettering) — *a client in scope with no row gets a one-time full
      historical sweep, then a row.* So: add them to the scope table, and add the row only when the
      pass that justifies it has run. `sweep-state.md` names the three groups currently in that state.
      _(Corrected 2026-08-14 — the old instruction would have destroyed the history of 14 clients
@@ -392,6 +392,25 @@ Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.
 **Non-sensitive facts only** (rule 1).
 
+### ⚠️ Creating a client file? Scope table YES — sweep-state row NO
+
+**A session tried to add the opposite of this rule on 2026-08-18 and an independent review caught
+it. Read the 🛑 bullet above before touching either file.** A `sweep-state.md` row is **a bound on
+the next run's searches, not a record that the client exists.** Writing today's date for a client
+nobody has ever swept makes the next run search only *after* today and **skip their entire history
+permanently** — the failure the 2026-08-14 correction was written to prevent, after the old wording
+would have destroyed the history of 14 clients across two backfills.
+
+So when any session creates a client file: **add the client to the scope table** (or the exclusion
+table if they are archived) in
+[`weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md), and
+**leave the ledger alone.** A missing row is not a gap — it is the signal that says *this client has
+never been swept, give them a full historical pass*, and the Routine's step 2c queues it for a full historical pass and step 4's cap rations it (the old prompt called this "rule (b)"; the 2026-08-18 rewrite dropped the lettering).
+
+ⓘ **Measured 2026-08-18, so nobody re-raises this as a bug:** 48 client files, **28 ledger rows**,
+**20 files with no row** — and **all 48 are named in the scope or exclusion tables.** Nothing is
+invisible. Those 20 are the queue of first-time full passes, which drains at ~6 per run.
+
 ### 🔴 A sweep has TWO passes — "what's new?" and "what's still open?"
 
 **The second one was missing until 2026-08-18, and everything it would have caught was missed.**
@@ -424,6 +443,30 @@ meetings, notes, or emails"* — accurate, and worth nothing. Full write-up in
 [`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
 step 1b.)_
 
+### What the call budget is — and what it is NOT
+
+The numbers in this skill and in the routine (~10–15 calls/client, ~5 for the chase pass, ~6 full
+historical passes per run) are **self-imposed, not a vendor quota.** Nothing rejects the 200th call.
+Say that plainly when asked, because a session that thinks it is rationing a hard limit cuts corners
+it did not need to cut — and one that thinks there is no limit at all writes a run that cannot finish.
+
+- **Double has no published call cap** ([`double-mcp`](../double-mcp/SKILL.md) §0). Neither do Gmail,
+  Drive, Ping or QuickBooks in anything the firm has hit.
+- **Odoo's hard 50/day is real but irrelevant here** — a CI sweep never touches Odoo. It is the cap
+  people remember and the wrong one for this job.
+- **The real ceiling is one session's context window**, plus the shared Claude account's usage. It
+  does not error, it **degrades**: 48 client files × 15–20 calls is 700–1,000 tool results in one conversation,
+  so the clients at the end of the roster get a thinner pass than the ones at the start while the
+  report still reads as though everything was swept.
+
+**The lever, when a run stops fitting: subagents.** [`double-mcp`](../double-mcp/SKILL.md) §5 item 4
+already says to delegate roster-wide sweeps to one — each gets its own context, so N clients cost N
+compact summaries instead of N×20 raw payloads. ⚠️ **Never for organizer responses** (§2.2 — each
+subagent is another copy of a client's SSNs); a CI sweep does not read those, so the ban does not
+reach this work. Full reasoning in
+[`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
+→ *What the "call budget" actually is*.
+
 ### Incremental sweeps (token discipline)
 
 `sweep-state.md` records the date each client is swept through. Bound every search to
@@ -439,7 +482,8 @@ run.** Advance baselines **in the same commit** as the file updates. Full rules 
 When asked "what's missing" (or on the weekly repo audit), sweep all of `clients/` and
 check, per client: every section present and in order; `_(pending)_` on unknown fields;
 the Double + Drive links present in §7; owner-group cross-links **bidirectional**
-(A links B ⇒ B links A); and the client present + consistent across the README index,
+(A links B ⇒ B links A); and the client present + consistent across the README index and `weekend-ci-sweep.md`'s **scope table** (or its **exclusion table**, for archived clients).
+  🛑 **A client must NOT be required to have a `sweep-state.md` row, and the audit must never "fix" a missing one.** A row is a search **bound** written *after* a first full pass, so adding one for a never-swept client erases their history. **20 of 48 files legitimately have no row** (measured 2026-08-18). Report a missing row as *"first full pass owed"*, never as index drift. ⚠️ **The `CLIENTS list` this line used to name no longer exists** — the 2026-08-18 prompt rewrite removed it; the scope table is the only client list.
 `weekend-ci-sweep.md` (scope table **and** CLIENTS list), and `sweep-state.md` — slugs
 and Double ids matching. **Archived / `Status: Former` clients are the deliberate
 exception:** they belong in `weekend-ci-sweep.md`'s **"Excluded — archived clients"**
