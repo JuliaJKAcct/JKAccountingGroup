@@ -114,6 +114,28 @@ was never allowed, and stays invisible until next year's opening figures.
 
 ---
 
+### §3A · Two checks that belong to EVERY form's SOP
+
+**These are not 1120-S facts — write the equivalent into each new form's SOP.**
+
+**1 · A Yes/No that asserts a FACT is tested against the ledger, never answered from memory.**
+Some questions ask for a *position* (an election, an intent); those are decisions. Others assert
+**what happened** — did you make payments requiring Forms 1099, did you have foreign accounts, did
+you dispose of a digital asset. **Those are findings, and the books hold the answer.** Run the test,
+by payee or by account as the question requires, and ask the client only for the one document the
+test actually turns on. A wrong answer here is a false statement on a signed return, and it is
+*discoverable* — which a judgement call is not.
+
+**2 · 🛑 Print the finished return and read the FORM LIST before transmitting.** Tax software
+attaches a form the moment its parent line is touched, and **fixing the line does not detach the
+form.** So a figure keyed on the wrong line and then moved leaves its form behind — blank, silent,
+and it transmits. _(Real one: a number keyed on Form 1120-S page 1 line **15, Depletion**, pulled
+in **Form T, the Forest Activities Schedule** — four blank pages of a **forestry** form on a
+bathroom-fixture retailer's return, still attached after the figure was corrected. The same copy
+carried a blank Form 4797 and a blank Schedule D; **seven of twenty pages were empty forms.**)_
+**Deleting them changes no figure.** Leaving them in invites a question you have no reason to
+answer.
+
 ## §4 · Driving a REAL return — the delivery format
 
 **This is what the SOP is for, and the format matters as much as the figures.** After reading the

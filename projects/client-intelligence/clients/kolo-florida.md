@@ -401,6 +401,31 @@ the actual details.
   simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
   **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
   Lilian.)_
+- 2026-08-18 — **The prepared 2025 return was read back page by page, and it is NOT ready to
+  transmit — two things must happen first.** ⓘ Every figure and tie-out is correct, the page-1
+  line 15/16 placement is fixed, and **QBI/§199A is properly reported** (Schedule K 17d statement
+  and K-1 box 17 code V — a **loss** year still produces QBI information, which carries forward
+  against the shareholder's future QBI). What is wrong is not arithmetic:
+  **(a) 🛑 Schedule B 14a is answered "No" and the ledger says otherwise.** A by-payee sweep of the
+  2025 General Ledger found **three payees over the $600 threshold** — the **landlord**, the
+  **storage/logistics provider**, and one **individual paid by Zelle** out of `Contract Labor`.
+  ⚠️ **The storage one FORKS and must not be assumed:** the 1099-MISC instructions expressly except
+  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **storing the client's inventory
+  is excepted** while a **lease of identified space** is box-1 rent — and **predominantly fulfilment
+  work is on neither list**, which points to a 1099-NEC. **The signed agreement decides — its
+  premises clause and its fee schedule. The account caption `Storage Rent` is evidence of nothing,
+  and neither is a payee name.** It does not
+  change the 14a answer, which the other two carry on their own; it changes which forms get filed.
+  ⚠️ **The belief that nothing reached $600 came from looking at `Contract Labor` alone; RENT is
+  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle 14a** (not which form the storage payee gets) — an LLC is
+  *not* automatically exempt, only one taxed as a corporation is, and **Zelle issues no 1099-K so
+  it does not relieve the payer.** *(The firm's own fee is exempt — we are a Corp.)*
+  **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
+  **Form T (Timber) Forest Activities Schedule**, a Form 4797 and a Schedule D, all empty. The
+  Form T is a trace of the line-15 *Depletion* mis-key: the figure was corrected, **the form it
+  pulled in stayed attached.** Delete all three in ATX before e-filing; no figure changes.
+  Smaller: the signature title still reads **`MEMBER`** (LLC language on a corporation), and
+  Schedule B 2b says `SERVICE` for a company that sells goods. _(Worked by Lilian.)_
 - 2026-08-18 — **QuickBooks access has been LOST, and one journal entry is waiting on it.** Lilian
   asked the client for access; the likeliest cause is the subscription lapsing when the store
   closed. ✅ **Nothing is lost** — every report needed for the return was exported first. What is

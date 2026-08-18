@@ -760,6 +760,51 @@ the asset list (ATX: the `Fixed Assets` tab). ⚠️ **The asset-detail statemen
 return may only carry cost, date placed in service and recovery period** — enough to identify the
 assets, not enough to split the deduction. **Open the register.**
 
+##### ❓ Why the ASSET accounts are not in this entry
+
+**Everyone preparing their first one expects the asset account to be credited** — write the
+computer down, credit `Computer Equipment`. **It must not be, and the reason is what makes
+Schedule L fillable at all.**
+
+🔑 **The asset account holds ORIGINAL COST and never moves until the asset LEAVES the company.**
+Depreciation goes to a second account beside it — a **contra-asset**, `Accumulated depreciation`,
+which accumulates everything written off so far. The two are always read as a pair:
+
+```
+  <Asset> ........................  cost      ← set once. NEVER changes.
+  Accumulated depreciation ....... (taken)    ← grows every year
+                                   ───────
+  Net book value                    the rest  ← what the balance sheet shows
+```
+
+**Credit the asset directly and you destroy three things at once:**
+
+1. **The cost disappears**, and with it any way to tell a cheap old asset from an expensive
+   nearly-written-off one — both collapse to the same small number.
+2. **Gain or loss on disposal becomes unprovable**, because it is `proceeds − (cost − accumulated)`
+   and you no longer hold either input separately.
+3. 🛑 **Schedule L cannot be completed.** Line **10a** asks for *cost* and line **10b** asks for
+   *accumulated depreciation* — **two separate figures the form demands side by side.** Net them
+   into one account and there is nothing to put on 10b.
+
+ⓘ **So the entry has exactly two kinds of line and no asset account among them:** one **debit** to
+the depreciation *expense* (page 1 line 14, reducing this year's income), and one **credit per
+asset** to that asset's *accumulated depreciation* (balance sheet, never reversed).
+
+📌 **The asset accounts move on DISPOSAL, and then both sides go together** — credit the asset for
+its full original cost, debit the accumulated depreciation for everything taken, and the difference
+and the two are cleared together. **That is the entry a final return needs**, and it is the reason
+the per-asset split above is not a formality.
+
+🛑 **But the books entry is NOT the tax computation.** On a **sale**, gain = amount realized −
+adjusted basis, and **selling expenses go on the BASIS side** — Form 4797 line 21 is *"Cost or
+other basis **plus expense of sale**"* — while line 22 uses **depreciation allowed or allowable**,
+the *tax* figure, which equals the contra account only when the books carried tax depreciation.
+Scrapping or abandonment is an ordinary loss on **Form 4797 line 10**. ⛔ **On a LIQUIDATION there
+are no proceeds and §336(a) deems a sale at FAIR MARKET VALUE** — do not compute a full write-off
+loss because no cash came in — and **§336(d)** can disallow the loss where the distributee is a
+**related person**, which in a closely held S corporation it usually is.
+
 **If the register is unreachable** — the client cancelled the subscription, the engagement ended —
 **record the entry as a pending instruction in the return's working paper (§15A) with the total,
 the account names and the amounts left blank**, so whoever regains access can post it without
@@ -803,8 +848,67 @@ Most are yes/no facts about the company. Three are worth calling out:
    - ⚠️ **Being excused from Schedule M-1 does not remove the adjustments themselves.** A
      non-deductible expense still changes line 22 whether or not you disclose the
      reconciliation.
-3. **Were Forms 1099 required, and were they filed?** Answer honestly; the firm usually knows
-   because it prepares them.
+3. **Were Forms 1099 required, and were they filed?** Answer honestly — but **do not answer it from
+   memory or from the client's recollection.** Run the test in §6B.
+
+### 6B · 🛑 The 1099 question (14a/14b) — run it off the ledger, BY PAYEE
+
+**This is a Yes/No that a signed return asserts under penalties of perjury, and it is answered
+wrong more often than any other question on Schedule B.** Three mistakes cause almost all of it.
+
+🔑 **The test is per PAYEE for the year, not per account and not per payment.** Group the ledger's
+transactions by the **`Name` / vendor column** and total each payee across the whole year. **Four
+$200 payments to one person is a 1099; one $500 payment to each of four people is not.** An
+account total tells you nothing either way.
+
+⛔ **Mistake 1 — looking only at `Contract Labor`.** The question is about **all** Forms 1099. The
+biggest exposure is usually **RENT**, which is **1099-MISC box 1** at $600+ paid in a trade or
+business, and people skip it because they think "1099 = contractors". Sweep **every** account that
+can carry a reportable payment: contract labor, professional fees, rent, commissions, and any
+"other/uncategorized" bucket.
+
+⛔ **Mistake 2 — treating an LLC as exempt.** Payments to a **corporation** are exempt (except
+legal fees). **An LLC is not a corporation.** It may be taxed as a sole proprietorship, partnership
+**or** corporation, and only the last is exempt. **The name cannot tell you — the W-9 does.** By
+contrast `Inc` / `Corp` in the payee name is a reliable signal, and government bodies are exempt.
+
+⛔ **Mistake 3 — assuming an electronic payment shifts the duty.** Card and third-party-network
+payments (PayPal, Venmo-for-business, a marketplace) are reported by the **processor** on a 1099-K,
+so the payer is relieved. **Zelle is NOT one of them** — it is bank-to-bank, issues no 1099-K, and
+**the payer's own 1099 obligation stands in full.** A ledger full of Zelle payments is a ledger
+full of live 1099 duties.
+
+⛔ **Mistake 4 — reading the account NAME instead of the arrangement.** The instructions except
+*"payments for **merchandise, telegrams, telephone, freight, storage, and similar items**"*, and
+they also make **rent** of $600+ reportable in box 1. **So an account called `Storage Rent` sits on
+top of a genuine fork, and it has more than two branches.** Storing the client's **inventory** — no
+identified space, a bill that moves with volume — is **excepted**. A **lease of identified space**
+is **box 1 rent**. **Predominantly fulfilment work** (pick/pack, kitting, returns) is on **neither**
+list: the exception names *storage*, not order fulfilment, so treat it conservatively as a service
+on the **1099-NEC**. A contract that genuinely does both, separately priced, is **prorated**.
+**What decides it is the signed agreement — its title, its premises clause and its fee schedule —
+read with one full invoice showing how the charge is computed**, never the chart of accounts.
+⛔ **And a payee's NAME is not evidence either** — `LLC` is not a usable signal of tax status. The same trap runs the other way:
+freight and merchandise are excepted no matter how large.
+
+**The rest of the exception list, because people rebuild it from memory and get it short:**
+corporations (except legal fees) · **merchandise, freight, storage and similar** · rent paid to a
+**real-estate agent or property manager** (*they* file, not you) · **tax-exempt organizations** ·
+the **United States, a state, D.C., a U.S. territory or a foreign government** · wages to employees
+(those are a W-2).
+
+⚠️ **Check the threshold for the YEAR you are filing.** It was **$600** through **TY2025**; the
+One Big Beautiful Bill Act raised it to **$2,000 for payments made after 31 December 2025**, i.e.
+from **TY2026**, with inflation indexing after that. Applying the new figure to an older year, or
+the old figure to a newer one, flips the answer.
+
+**Two things that are NOT payments and must be excluded before you conclude anything:** a
+**journal entry** sitting in an expense account (a reclass, an accrual, a deposit moved to rent) is
+not cash to a payee, and a **transaction with no vendor** needs identifying rather than counting —
+it is as likely to be an internal entry as a real payment.
+
+📌 **What "look before you ask" means here:** the ledger answers this question. Ask the client only
+for the **W-9s** the test actually turns on.
 
 ### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019
 
@@ -1206,6 +1310,17 @@ rounding difference.
 - [ ] **The e-file was ACCEPTED**, not merely transmitted. A rejected return is not a filed
       return — check the acknowledgement and, if it rejected, fix and resubmit before the
       deadline passes
+- [ ] 🛑 **PRINT THE WHOLE RETURN AND LOOK AT THE FORM LIST — delete every blank form that got
+      attached.** A form attaches itself the moment its parent line is touched, and **fixing the
+      line does not detach the form**. So a number keyed on the wrong line, then moved, leaves its
+      form behind — silently, and it transmits with the return.
+      _(Real one: a figure keyed on page 1 line **15, Depletion**, instead of line 16 pulled in
+      **Form T (Timber), the Forest Activities Schedule** — four blank pages of a forestry form on
+      a bathroom-fixture retailer's return. The figure was corrected; Form T stayed. The same copy
+      also carried a blank **Form 4797** and a blank **Schedule D**, asserting asset sales that
+      never happened — seven of twenty pages were empty forms.)_
+      **Deleting them changes no figure**, and leaving them in invites a question you have no
+      reason to answer.
 
 ---
 

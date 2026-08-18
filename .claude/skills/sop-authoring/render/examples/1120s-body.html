@@ -40,6 +40,7 @@
     <li><a href="#s13"><span class="sn">§13</span> State</a></li>
     <li><a href="#s14"><span class="sn">§14</span> Tie-out checks</a></li>
     <li><a href="#s15"><span class="sn">§15</span> Common pitfalls</a></li>
+    <li><a href="#s15a"><span class="sn">§15A</span> Record it in the working-paper archive</a></li>
     <li><a href="#s16"><span class="sn">§16</span> Where things live</a></li>
     <li><a href="#appendix"><span class="sn">＋</span> Intake · line map · formulas</a></li>
   </ol>
@@ -402,7 +403,7 @@
         <div class="cx">
           <div class="cl">That is the SHORT form — it holds only while lines 3, 4 and 5 are all zero</div>
           <p>The form itself is <code>line 8 = line 6 &#8722; line 7</code> where <code>line 6 = lines 1+2+3+4+5</code>. <b>Before using any rearrangement, look at lines 3, 4 and 5 and confirm they are empty</b> — line 5 is <em>whatever the firm&#8217;s convention puts in cost of sales beyond purchases</em>, and is not always blank.</p>
-          <p>🛑 <b>The one that bites is solving for PURCHASES.</b> <code>line 2 = line 8 + line 7 &#8722; line 1</code> <b>overstates purchases by (line 3 + line 4 + line 5)</b> whenever any is populated — and unlike the negative-purchases case below, <b>this error comes out looking perfectly plausible</b>, so nothing catches it.</p>
+          <p>🛑 <b>The one that bites is solving for PURCHASES.</b> <code>line 2 = line 8 + line 7 &#8722; line 1</code> <b>overstates purchases by (line 3 + line 4 + line 5)</b> whenever any is populated. The full form is <code>line 2 = line 8 + line 7 &#8722; line 1 &#8722; line 3 &#8722; line 4 &#8722; line 5</code> — and unlike the negative-purchases case below, <b>this error comes out looking perfectly plausible</b>, so nothing catches it.</p>
         </div>
       </div>
       <ul class="dots reveal">
@@ -545,14 +546,14 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       </div>
     </div>
 
-    <div class="subbar reveal"><span class="tag">5C</span><h3>Deductions — lines 7 to 21</h3><span class="rt">work top-down; line 19 is the remainder</span></div>
+    <div class="subbar reveal"><span class="tag">5C</span><h3>Deductions — lines 7 to 21</h3><span class="rt">work top-down; line 20 is the remainder</span></div>
     <div class="indent">
       <p class="reveal"><b>The mapping rule, which is the whole skill:</b> lines 7 to 19 are <b>named categories the IRS wants to see separately</b>. Line 20 is <b>everything left over</b>. So you place each expense that has its own line first, then group what remains.</p>
       <div class="tablewrap reveal">
         <table class="links">
           <thead><tr><th>Line</th><th>Category</th><th>Typical QuickBooks accounts</th></tr></thead>
           <tbody>
-            <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to <b>officers</b> — not to every shareholder-employee (5C-i)</td></tr>
+            <tr><td class="for">7</td><td>Compensation of officers</td><td>Salaries paid to <b>officers</b> — not to every shareholder-employee (5C-i). <b>Form 1125-E is required at $500,000 or more</b> of total receipts</td></tr>
             <tr><td class="for">8</td><td>Salaries and wages</td><td>Everyone else's wages — <b>and only actual wages</b>, see 5C-i</td></tr>
             <tr><td class="for">11</td><td>Rents</td><td>Office, warehouse, storage, equipment rental</td></tr>
             <tr><td class="for">12</td><td>Taxes and licenses</td><td><b>Taxes the COMPANY BEARS</b> — payroll taxes, business licences, local taxes, and <b>state</b> income/PTE tax on the corporation. ⚠️ <b>Federal</b> income tax never, and <b>not sales tax collected from customers</b> (5C-ii)</td></tr>
@@ -687,7 +688,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       <ul class="dots reveal">
         <li><b>A full year for an asset placed in service last year is larger than its first part-year.</b> A beginner expecting "the same as last year" will understate the deduction.</li>
         <li><b>No new assets means no new elections</b> — no §179 or bonus decisions. Just continue the schedule.</li>
-        <li>⚠️ <b>If the books recorded no depreciation at all</b>, the deduction still belongs on the return — it becomes a book-to-tax difference on Schedule M-1.</li>
+        <li>⚠️ <b>If the books recorded no depreciation at all</b>, the deduction still belongs on the return — on a <b>book-basis</b> Schedule L it becomes a book-to-tax difference on <b>Schedule M-1 line 6a</b>; on a <b>tax-basis</b> one it is already inside Schedule L and lands in M-1 line 1 instead. <b>Pick one — see the fork below.</b></li>
       </ul>
     </div>
   </section>
@@ -696,7 +697,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
         <div class="cx">
           <div class="cl">🖥️ IN ATX: enter the assets in the <code>Fixed Assets</code> tab — NOT on Form 4562 itself</div>
           <p>Standing reminder, and it applies <b>every time this form comes up.</b> The 4562 in ATX is a <b>computed output</b>: it is assembled from the asset register, and typing into it either refuses or produces a figure the register does not support — which then disagrees with Schedule L line 10b.</p>
-          <p><b>Add or edit each asset in <code>Fixed Assets</code></b> — cost, date placed in service, method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation figure from it. <b>Then check the two places the number lands:</b> page 1 <b>line 14</b>, and <b>Schedule L line 10b</b> = prior accumulated depreciation <b>+</b> this year&#8217;s. If 10b does not move by exactly the line 14 figure, the register and the return have come apart.</p>
+          <p><b>Add or edit each asset in <code>Fixed Assets</code></b> — cost, date placed in service, method, life — and let ATX write the 4562, page 1 line 14 and the accumulated-depreciation figure from it. <b>Then check where the number lands — and WHICH check applies depends on a fork you settle deliberately (&#167;9).</b> On a <b>tax-basis Schedule L</b> (what tax software usually does) <b>10b must move by exactly the line 14 figure</b>, retained earnings is net of it, and there is <b>no</b> M-1 line 6a adjustment — so the filed Schedule L will <em>not</em> equal QuickBooks by the year&#8217;s depreciation. On a <b>book-basis Schedule L</b> (the literal reading of <em>&#8220;per Books&#8221;</em>) <b>10b does not move at all</b>, Schedule L matches the books, and the depreciation appears as an <b>M-1 line 6a</b> adjustment. 🛑 <b>Both reach the same M-1 line 8. What is not allowed is mixing them</b> — repeat whichever the prior return used.</p>
         </div>
       </div>
       <div class="callout info reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg></span>
@@ -726,7 +727,8 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <div class="cx">
             <div class="cl">🔑 The per-asset amounts come from the tax software&#8217;s fixed-asset register, NOT the printed Form 4562</div>
             <p>The filed 4562 shows the <b>total</b> on line 17 or line 22 — the split lives in the asset list (ATX: the <code>Fixed Assets</code> tab). ⚠️ <b>The asset-detail statement that prints with the return may only carry cost, date placed in service and recovery period</b> — enough to identify the assets, not enough to split the deduction. <b>Open the register.</b></p>
-            <p><b>If the register is unreachable</b> — the client cancelled the subscription, the engagement ended — <b>record the entry as a pending instruction in the return&#8217;s working paper (&#167;15A)</b> with everything you do have, so whoever regains access can post it without rebuilding the analysis. <b>It does not block the return</b>: the deduction is already on page 1 line 14 either way. It is the <em>books</em> that are waiting.</p>
+            <p>❓ <b>Why the ASSET accounts are not in this entry.</b> Everyone preparing their first one expects the asset account to be credited. <b>It must not be.</b> 🔑 <b>The asset account holds ORIGINAL COST and never moves until the asset LEAVES the company</b>; depreciation goes to a <b>contra-asset</b> beside it (<code>Accumulated depreciation</code>) which accumulates everything written off. Credit the asset directly and you destroy three things: the <b>cost disappears</b> (a cheap old asset and an expensive nearly-written-off one collapse to the same number); <b>gain or loss on disposal becomes unprovable</b>, since it is <code>proceeds &#8722; (cost &#8722; accumulated)</code>; and 🛑 <b>Schedule L cannot be completed</b> — line <b>10a</b> asks for <em>cost</em> and line <b>10b</b> for <em>accumulated depreciation</em>, two figures the form demands side by side. So the entry has exactly two kinds of line and <b>no asset account among them</b>: one debit to the depreciation <em>expense</em>, one credit per asset to that asset&#8217;s <em>accumulated depreciation</em>. 📌 <b>The asset accounts move on DISPOSAL</b>, and then both sides go together — credit the asset for full cost, debit the accumulated depreciation for everything taken, difference against proceeds is the gain or loss (Form 4797). <b>That is the entry a final return needs.</b></p>
+        <p><b>If the register is unreachable</b> — the client cancelled the subscription, the engagement ended — <b>record the entry as a pending instruction in the return&#8217;s working paper (&#167;15A)</b> with everything you do have, so whoever regains access can post it without rebuilding the analysis. <b>It does not block the return</b>: the deduction is already on page 1 line 14 either way. It is the <em>books</em> that are waiting.</p>
           </div>
         </div>
       </div>
@@ -737,7 +739,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
     <ol class="qlist reveal">
       <li><b>Accounting method</b> — accrual or cash. ⚠️ <b>Take it from the PRIOR RETURN, not from QuickBooks.</b> A report&#8217;s basis is a per-report toggle someone can flip; the entity&#8217;s <em>tax</em> accounting method is what was elected and filed. If they disagree, that is a question for Lilian — not something to settle from a footer.</li>
       <li><b>"Are total receipts AND total assets both under $250,000?"</b> If <b>yes</b>, Schedules <b>L</b> and <b>M-1</b> are <b>not required</b>. The firm completes them anyway when the prior year did — they give continuity, and the balance sheet is the best proof nothing was mapped wrong.</li>
-      <li><b>Were Forms 1099 required, and were they filed?</b> Answer honestly; the firm usually knows because it prepares them.</li>
+      <li><b>Were Forms 1099 required, and were they filed?</b> Answer honestly &mdash; but <b>do not answer it from memory or from the client&#8217;s recollection.</b> Run the test in &#167;6B.</li>
     </ol>
     <div class="callout warn reveal" role="note">
       <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
@@ -747,6 +749,30 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       </div>
     </div>
   </section>
+
+    <div class="subbar reveal"><span class="tag">6B</span><h3>🛑 The 1099 question (14a/14b) — run it off the ledger, BY PAYEE</h3></div>
+  <div class="indent">
+    <p class="reveal"><b>This is a Yes/No that a signed return asserts under penalties of perjury, and it is answered wrong more often than any other question on Schedule B.</b></p>
+    <p class="reveal">🔑 <b>The test is per PAYEE for the year, not per account and not per payment.</b> Group the ledger&#8217;s transactions by the <code>Name</code> / vendor column and total each payee across the whole year. <b>Four $200 payments to one person is a 1099; one $500 payment to each of four people is not.</b> An account total tells you nothing either way.</p>
+    <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The three mistakes that cause almost all wrong answers</div>
+        <p><b>1 — Looking only at <code>Contract Labor</code>.</b> The question covers <b>all</b> Forms 1099. The biggest exposure is usually <b>RENT</b>, a <b>1099-MISC box 1</b> item at $600+ paid in a trade or business, skipped because people think &ldquo;1099 = contractors&rdquo;. Sweep every account that can carry a reportable payment.</p>
+        <p><b>2 — Treating an LLC as exempt.</b> Payments to a <b>corporation</b> are exempt (except legal fees). <b>An LLC is not a corporation</b> — it may be taxed as a sole proprietorship, partnership <em>or</em> corporation, and only the last is exempt. <b>The name cannot tell you; the W-9 does.</b> <code>Inc</code>/<code>Corp</code> is a reliable signal, and government bodies are exempt.</p>
+        <p><b>4 — Reading the account NAME instead of the arrangement.</b> The instructions except <em>&ldquo;payments for <b>merchandise, telegrams, telephone, freight, storage, and similar items</b>&rdquo;</em> — and separately make <b>rent</b> of $600+ reportable in box 1. So an account called <code>Storage Rent</code> sits on a genuine <b>fork</b>: warehousing / 3PL / fulfilment <b>services</b> are <b>excepted</b>, a <b>lease of identified space</b> is <b>box 1 rent</b>. <b>The contract decides, not the chart of accounts</b> — a bookkeeper&#8217;s caption is evidence of nothing.</p>
+        <p><b>The rest of the exception list</b>, because people rebuild it from memory and get it short: corporations (except legal fees) &#183; <b>merchandise, freight, storage and similar</b> &#183; rent paid to a <b>real-estate agent or property manager</b> (<em>they</em> file, not you) &#183; <b>tax-exempt organizations</b> &#183; the <b>United States, a state, D.C., a U.S. territory or a foreign government</b> &#183; wages to employees (those are a W-2).</p>
+        <p><b>3 — Assuming an electronic payment shifts the duty.</b> Card and third-party-network payments are reported by the <em>processor</em> on a 1099-K, relieving the payer. <b>Zelle is NOT one of them</b> — bank-to-bank, no 1099-K, <b>the payer&#8217;s own obligation stands in full.</b></p>
+      </div>
+    </div>
+    <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Check the threshold for the YEAR you are filing</div>
+        <p>It was <b>$600</b> through <b>TY2025</b>; the One Big Beautiful Bill Act raised it to <b>$2,000 for payments made after 31 December 2025</b> — from <b>TY2026</b>, indexed thereafter. Applying the new figure to an older year, or the old one to a newer year, <b>flips the answer</b>.</p>
+      </div>
+    </div>
+    <p class="reveal"><b>Two things that are NOT payments, and must be excluded before you conclude anything:</b> a <b>journal entry</b> sitting in an expense account (a reclass, an accrual, a deposit moved to rent) is not cash to a payee; and a transaction with <b>no vendor</b> needs identifying rather than counting — as likely an internal entry as a real payment.</p>
+    <p class="reveal">📌 <b>What &ldquo;look before you ask&rdquo; means here:</b> the ledger answers this question. Ask the client only for the <b>W-9s</b> the test actually turns on.</p>
+  </div>
 
     <div class="subbar reveal"><span class="tag">6A</span><h3>🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019</h3></div>
   <div class="indent">
@@ -788,7 +814,9 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <tr><td class="for">1</td><td>Ordinary business income (loss)</td><td>Page 1, line 22</td></tr>
           <tr><td class="for">4</td><td>Interest income</td><td>The P&amp;L's interest income — the one you kept <b>off</b> page 1 line 5</td></tr>
           <tr><td class="for">11</td><td>§179 deduction</td><td>Only if elected this year</td></tr>
+          <tr><td class="for">12a</td><td>Charitable contributions</td><td>Cash (noncash is 12b). ⚠️ <b>Separately stated — never inside page 1 line 22</b></td></tr>
           <tr><td class="for">16c</td><td><b>Non-deductible expenses</b></td><td>The disallowed half of meals, fines, and similar. ⚠️ Easy to forget — it reduces basis <em>and</em> AAA</td></tr>
+          <tr><td class="for">7–8</td><td>Capital gains</td><td>Separately stated — they never enter page 1 line 22</td></tr>
           <tr><td class="for">9</td><td>Net §1231 gain (loss)</td><td>⚠️ separately stated — only the <em>ordinary</em> part of a 4797 gain goes to page 1 line 4</td></tr>
           <tr><td class="for">14a/b</td><td><b>Schedules K-2 / K-3</b></td><td>Attach if there is foreign activity, or tick the exception. Per-shareholder penalties for omitting</td></tr>
           <tr><td class="for">16d</td><td>Distributions</td><td>Money paid out to shareholders during the year</td></tr>
@@ -839,7 +867,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
 
     <div class="subbar reveal"><span class="tag">8B</span><h3>A refundable deposit that &ldquo;disappears&rdquo; is usually a bookkeeping error</h3></div>
     <div class="indent">
-      <p class="reveal">When an asset like a <b>security deposit</b> goes to zero with no matching expense line, the instinct is to treat it as written off. <b>Ask what actually happened first</b> — the common answer is that nothing did. A deposit <b>transferred to a new lease with the same landlord</b> is still an asset.</p>
+      <p class="reveal">When an asset like a <b>security deposit</b> goes to zero with no matching expense line, the instinct is to treat it as written off. <b>Ask what actually happened first</b> — the common answer is that nothing did. A deposit <b>transferred to a new lease with the same landlord</b> is still an asset. ⓘ <b>And when it genuinely was expensed, that is a journal entry, not a Schedule M-1 adjustment</b> — a refundable deposit is an asset for books <em>and</em> for tax, so there is no book/tax difference to reconcile.</p>
       <p class="reveal"><b>Find the credit side before concluding anything</b> — pull the ledger and see what it was written off against. If it went to <b>rent</b>, then rent, the loss, Schedule L&#8217;s other-current-assets line and total assets are all carrying it.</p>
       <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
         <div class="cx">
@@ -940,12 +968,18 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
             <tr><td class="for">1</td><td>Stock basis at the <b>beginning</b> of the year</td><td>🔒 <b>line 15 of LAST year&#8217;s Form 7203</b>, copied. With no prior 7203, build it from the capital account less prior losses and non-deductibles — and say in the file that it was derived</td></tr>
             <tr><td class="for">2</td><td>Basis from capital contributions / additional stock</td><td>📖 the <b>gross credits</b> in that shareholder&#8217;s capital account (5C-iii)</td></tr>
             <tr><td class="for">3a–3m</td><td>Income items that increase basis</td><td>⚠️ <b>A LOSS DOES NOT GO HERE.</b> Line 3a says <em>&ldquo;enter losses in Part III&rdquo;</em>. 3k is tax-exempt income</td></tr>
+            <tr><td class="for">4</td><td>Add lines 3a through 3m</td><td>ƒ</td></tr>
             <tr><td class="for">5</td><td><b>Stock basis before distributions</b></td><td>ƒ lines 1 + 2 + 4</td></tr>
             <tr><td class="for">6</td><td><b>Distributions</b> (excluding dividend distributions)</td><td>📖 the <b>gross debits</b> — same figure as Schedule K 16d and K-1 box 16D</td></tr>
             <tr><td class="for">7</td><td><b>Stock basis after distributions</b></td><td>ƒ 5 &minus; 6. ⚠️ if zero or less, enter <b>-0-</b>, skip lines 8–14, put -0- on line 15</td></tr>
             <tr><td class="for">8a</td><td>Non-deductible expenses</td><td>The Schedule K <b>16c</b> figure</td></tr>
+            <tr><td class="for">8b–8c</td><td>Depletion · non-deductible business credits</td><td>Usually blank for these clients</td></tr>
+            <tr><td class="for">9</td><td>Add lines 8a through 8c</td><td>ƒ</td></tr>
             <tr><td class="for">10</td><td><b>Stock basis before loss and deduction items</b></td><td>ƒ 7 &minus; 9</td></tr>
             <tr><td class="for">11</td><td>Allowable loss and deduction items</td><td>ƒ <b>from Part III, line 47 column (c)</b></td></tr>
+            <tr><td class="for">12</td><td>Debt basis restoration</td><td>Only where there is debt basis (Part II)</td></tr>
+            <tr><td class="for">13</td><td>Other items that decrease stock basis</td><td></td></tr>
+            <tr><td class="for">14</td><td>Add lines 11, 12 and 13</td><td>ƒ</td></tr>
             <tr><td class="for">15</td><td><b>Stock basis at the END of the year</b></td><td>ƒ 10 &minus; 14 → <b>next year&#8217;s line 1</b></td></tr>
           </tbody>
         </table>
@@ -1005,6 +1039,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
         <li>Schedule <b>M-2 line 8 equals Schedule L line 24</b> — ⚠️ <b>conditional</b>: only where the prior return ran capital contributions through <b>M-2 line 3</b> (8A). Where it did not, the two are not meant to agree, and forcing them is the error</li>
         <li>Schedule M-2 beginning balance matches last year's ending balance</li>
         <li>The <b>e-file was ACCEPTED</b>, not merely transmitted</li>
+        <li>🛑 <b>PRINT THE WHOLE RETURN AND LOOK AT THE FORM LIST — delete every blank form that got attached.</b> A form attaches the moment its parent line is touched, and <b>fixing the line does not detach it</b>: a number keyed on the wrong line, then moved, leaves its form behind — silently, and it transmits. <em>(Real one: a figure keyed on page 1 line <b>15, Depletion</b>, pulled in <b>Form T (Timber)</b> — four blank pages of a forestry form on a bathroom-fixture retailer&#8217;s return. The figure was corrected; Form T stayed. The same copy also carried a blank <b>Form 4797</b> and a blank <b>Schedule D</b>, asserting asset sales that never happened — seven of twenty pages were empty forms.)</em> <b>Deleting them changes no figure</b>, and leaving them in invites a question you have no reason to answer.</li>
         <li>The <b>K-1 percentages add to 100%</b>, and each Schedule K line equals the sum across all K-1s</li>
         <li><b>A Form 7203 exists for every shareholder who needs one</b></li>
         <li><b>Form 8879-CORP signed</b> before e-filing &mdash; <b>not</b> 8879-S, superseded from TY2022</li>
@@ -1031,6 +1066,16 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
   </section>
 
   <!-- ==================== §16 ==================== -->
+  <section class="doc" id="s15a">
+    <div class="shead reveal"><span class="schip">§15A</span><h2>🔑 Record the return in the working-paper archive — this is part of preparing it</h2></div>
+    <p class="reveal"><b>Every return the firm prepares gets a file in <code>projects/tax-returns/</code></b> — one per return, recording what went on each line, where each figure came from, what was decided and why, and what carries into next year. <b>Write it AS you prepare, not afterwards</b>: the reasoning is worth more than the finished PDF, and it is what next year&#8217;s preparer reads first.</p>
+    <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">⛔ Never in that file: an SSN or ITIN, a bank, card or routing number, a home address, a date of birth, or a login</div>
+        <p><b>Figures live there; identity does not.</b> The EIN (written hyphenated) and shareholder names are fine. This is the only place in the repo that holds client dollar figures — and the limit is absolute.</p>
+      </div>
+    </div>
+  </section>
   <section class="doc" id="s16">
     <div class="shead reveal"><span class="schip">§16</span><h2>Where things live</h2></div>
     <div class="tablewrap reveal">
@@ -1101,7 +1146,9 @@ differences found and explained: ______________________________________
             <tr><td>Customer refunds / returns</td><td>Page 1, line 1b</td></tr>
             <tr><td>Cost of goods sold</td><td>1125-A line <b>2</b> (purchases), <b>3</b> (labor) or <b>5</b> (other costs). ⚠️ <b>Never line 8</b> — line 8 is computed (6 &minus; 7), so no account feeds it directly. Channel/selling fees are <b>client-specific</b> and usually belong in <b>other deductions</b></td></tr>
             <tr><td>Inventory (balance sheet)</td><td>1125-A line 7 — ⚠️ check the subtotal used</td></tr>
-            <tr><td>Wages — shareholders / staff</td><td>Page 1, lines 7 / 8</td></tr>
+            <tr><td><code>Wages &amp; Salary</code> — <b>officers</b></td><td>Page 1, line 7 (&#167;5C-i)</td></tr>
+            <tr><td><code>Wages &amp; Salary</code> — <b>staff</b></td><td>Page 1, line 8 — the <b>child</b> account, never a <code>Payroll Expenses</code> parent total (&#167;5C-i)</td></tr>
+            <tr><td><code>Payroll Expenses</code> / <code>Payroll Fees</code> <b>when they are the platform&#8217;s fee</b> (Gusto, ADP)</td><td>Page 1, line 20 — a service bought, <b>not</b> wages (&#167;5C-i)</td></tr>
             <tr><td>Payroll tax · licences · local taxes</td><td>Page 1, line 12</td></tr>
             <tr><td>Rent — any kind</td><td>Page 1, line 11</td></tr>
             <tr><td>Interest charge / loan interest</td><td>Page 1, line 13</td></tr>
@@ -1168,8 +1215,11 @@ disallowed half  =  meals &times; 50%     &rarr; Sch M-1 line 3b AND Sch K line 
 line 15 (total assets)      =  sum of every asset line
 line 27 (total liab+equity) =  sum of every liability and equity line
 line 15  MUST EQUAL  line 27
-retained earnings  =  total equity per books &minus; capital stock
-                      (only if that is the prior year&#8217;s mapping)
+retained earnings  =  total equity per the books
+                      &minus; capital stock (line 22)
+                      &minus; additional paid-in capital (line 23)
+                      &minus; any adjustments (25) or treasury stock (26)
+                      ⚠️ ONLY if that is the prior year&#8217;s mapping — &#167;8
 
 <span class="grp">SCHEDULE M-1</span>
 line 4  =  line 1 + line 2 + line 3
