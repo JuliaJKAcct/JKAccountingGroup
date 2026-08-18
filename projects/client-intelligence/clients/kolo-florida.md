@@ -428,7 +428,7 @@ the actual details.
   else in 2025 or 2024**, so nothing in the ledger links it to the firm. **Only if Lilian confirms
   that person is firm-side** does Contract Labor fall to nothing over the threshold; otherwise it is
   a 1099-NEC. ⛔ Not assumed either way — and **the rent finding carries 14a to Yes regardless.**
-  ✅ **The firm's own fee is EXEMPT — settled 2026-08-19.** Lilian confirmed JK Accounting Group is
+  ✅ **The firm's own fee is EXEMPT — settled 2026-08-18.** Lilian confirmed JK Accounting Group is
   a **corporation**, now recorded in [`firm-identity.md`](../../sops/firm-identity.md). The reason
   is the payee's classification, not that the payment is "professional fees".
   **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
