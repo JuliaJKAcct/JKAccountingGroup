@@ -1133,6 +1133,32 @@ Each of these has bitten a real return.
 
 ---
 
+## §15A · 🔑 Record the return in the working-paper archive — this is part of preparing it
+
+**Every return the firm prepares gets a file in
+[`projects/tax-returns/`](../tax-returns/)** — one per return, recording what went on each line,
+where each figure came from, what was decided and why, and what carries into next year.
+
+**Write it AS you prepare, not afterwards.** The value is entirely in the sourcing, and sourcing
+reconstructed a week later is exactly what the archive exists to replace.
+
+**Why it is not optional:** a return prepared with a session's help produces hours of reasoning —
+the derivations, the conventions decoded from the prior year, the traps, the judgement calls —
+and **the session is deleted.** The filed PDF survives; the reasoning does not. Next year's
+preparer, or the same one in twelve months, otherwise starts from the same blank page.
+
+⛔ **It is the one place in the repo that holds client dollar figures — and the limit is absolute:**
+never an SSN or ITIN, a bank or card number, a home address, a date of birth, or a login. The EIN
+and shareholder names are fine. Read [the folder README](../tax-returns/README.md) before the first
+file.
+
+**The split with Client Intelligence:** what the firm *knows about the client* (obligations,
+systems, history, decisions that outlive this return) goes in
+[`client-intelligence/`](../client-intelligence/), which holds **no figures**. The figures for one
+return go here. Cross-link them.
+
+---
+
 ## §16 · Where things live
 
 | What | Where |

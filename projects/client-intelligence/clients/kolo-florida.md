@@ -395,6 +395,20 @@ the actual details.
   simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
   **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
   Lilian.)_
+- 2026-08-18 — **The 2025 Form 1120-S is prepared, and the whole working paper is now in the repo.**
+  Lilian filled the return in ATX from the figures this session produced, and the filed copy was
+  read back and checked line by line: **every tie-out passes** — Box F = Schedule L 15 = 27, M-1
+  line 8 = Schedule K 18, M-2 line 8 = Schedule L 24, and Form 7203 line 6 below line 5 (no
+  distribution above basis, loss fully deductible). Three items were left open at filing: a
+  **page-1 line 15/16 placement** to confirm on screen, the **signature title**, and the
+  **1099 question** on Contract Labor. ⚠️ **A presentation choice worth knowing:** ATX put the
+  return on a **tax-basis** Schedule L — accumulated depreciation carries the 2025 figure and M-1
+  line 1 is the matching adjusted number with no line 6a — so **the filed Schedule L does not
+  equal QuickBooks** by the year's depreciation. Internally consistent, and deliberate.
+  🔑 **Everything — every line, every figure, every decision and the carry-forward into the 2026
+  FINAL return — is in [`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`](../../tax-returns/kolo-florida-inc/2025-form-1120s.md).**
+  That file exists because this session gets deleted; **the figures live there and not here**, which
+  is the split the new folder establishes. _(Worked by Lilian.)_
 - 2026-08-17 — **The 2024 filed return was read a second time and closed six open questions at
   once** (through the redactor, that one year only): 1125-A line 9a is **Cost**; ownership was
   **50/50**; the shareholder money is **contributed capital, not loans** (Schedule L line 19 blank
