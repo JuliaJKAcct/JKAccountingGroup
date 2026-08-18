@@ -9,9 +9,13 @@
  *   • jk-linkedin-banner-<id>-1128x191.png   — LinkedIn's stated Page cover size
  *   • jk-linkedin-banner-<id>-2256x382.png   — 2×, the file to actually upload
  *   • jk-linkedin-banner-<id>-4512x764.png   — 4×, archival
- * plus, from the 2× render, two review crops that show what each device really shows:
+ * plus, from the 2× render, three review crops that show what LinkedIn really shows:
  *   • …-preview-desktop.png  — with the company logo's bottom-left overlap drawn in
  *   • …-preview-mobile.png   — LinkedIn's ~17%-per-side centre crop
+ *   • …-preview-strip.png    — the TIGHTEST crop measured on the real Page (the
+ *                              Edit page → Page info banner field): only the
+ *                              central ~31% of the height. If the message reads
+ *                              here, it reads everywhere. Check this one first.
  *
  * The .stage element is screenshotted, not the page, so the export is exactly
  * 1128×191 × scale with no viewport chrome. Fonts come from Google Fonts, so the
@@ -32,6 +36,7 @@ const W = 1128, H = 191;                 // LinkedIn Page cover, ~5.9:1
 const SCALES = [1, 2, 4];
 const LOGO_OVERLAP = 200;                // the company logo covers ~this square, bottom-left
 const MOBILE_INSET = 0.17;               // LinkedIn crops ~17% off each side on phones
+const STRIP_KEEP = 0.31;                 // …and the Edit-page field keeps only this much height
 
 const files = process.argv.slice(2).length
   ? process.argv.slice(2).map((f) => resolve(process.cwd(), f))
@@ -62,6 +67,11 @@ for (const htmlPath of files) {
       const m = `${OUT}/jk-linkedin-banner-${id}-preview-mobile.png`;
       await page.screenshot({ path: m, clip: { x: inset, y: 0, width: W - inset * 2, height: H } });
       console.log('✓', basename(m), `(centre ${W - inset * 2}px of ${W})`);
+
+      const keep = Math.round(H * STRIP_KEEP);
+      const st = `${OUT}/jk-linkedin-banner-${id}-preview-strip.png`;
+      await page.screenshot({ path: st, clip: { x: 0, y: Math.round((H - keep) / 2), width: W, height: keep } });
+      console.log('✓', basename(st), `(centre ${keep}px of ${H} — the tightest crop)`);
 
       await page.addStyleTag({ content: `
         .stage::after{

@@ -4,16 +4,33 @@
    ONE source for the geometry every option obeys, so a fix lands in all three.
    Each option file supplies only its own register (dark / light) and its copy.
 
-   Canvas: 1128 × 191 px — LinkedIn's Page cover ratio (~5.9:1). Exported at 2×
-   and 4× by render.mjs; LinkedIn resamples down to 1128 × 191 on the page.
+   Canvas: 1128 × 191 px — the ratio LinkedIn states for a Page cover (~5.9:1).
+   Exported at 2× and 4× by render.mjs.
 
-   The two crops the layout is built around:
-     • DESKTOP — the round company logo overlaps the banner's bottom-left
-       (~200 px square at this scale). Nothing but background may live at x < 230.
-     • MOBILE  — LinkedIn centre-crops roughly 17% off each side, so the visible
-       band is about x 197 → 931.
-   Their intersection — x 252 → 918 — is the only region that survives BOTH.
-   That is exactly what `.content` spans. Everything outside it is field.
+   ── THE THING THAT DECIDES THIS LAYOUT ───────────────────────────────────────
+   LinkedIn does not show the file it asks for. Every surface re-crops it with
+   `object-fit: cover` into a box of its own shape, and the tightest one measured
+   on the real Page (the Edit page → Page info banner field, ~10.4:1) shows only
+   the CENTRAL ~31% OF THE HEIGHT — about 59 px of the 191. The first version of
+   this banner was laid out to the full height and that field sliced the kicker
+   off the top and the second line off the bottom.
+
+   So the composition is tiered:
+
+     • THE CORE — everything that carries meaning — lives inside a band about
+       50 px tall and 666 px wide, centred both ways. That band survives every
+       crop observed: the 31% height strip, the phone's ~17%-per-side centre
+       crop, and the desktop company logo that covers the bottom-left ~200 px.
+       Nothing may leave it. This is why the type is smaller than a 191 px-tall
+       canvas would otherwise invite — the canvas is not what gets seen.
+
+     • THE FIELD — the ring geometry and the open space around the core — is
+       built to be thrown away. It is what a generous crop gets to show, and no
+       crop loses anything by cutting it.
+
+   Two things the banner used to say and no longer does, because LinkedIn's own
+   Page header prints them directly underneath it: the location line, and the
+   website URL is duplicated in Page info. The banner does not repeat the page.
    ───────────────────────────────────────────────────────────────────────────── */
 
 :root{
@@ -23,9 +40,9 @@
   --bronze:#9C6A39; --bronze-light:#CFA268;
   --ink:#0D2A31; --ink-body:#22201A; --ink-muted:#6F6857; --hair-light:#DAD4C6;
 
-  --serif:'Source Serif 4',Georgia,serif;
-  --sans:'IBM Plex Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --serif:'Source Serif 4', Georgia, serif;
+  --sans:'IBM Plex Sans', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -36,35 +53,42 @@ html,body{background:#5c5c5c;display:flex;align-items:center;justify-content:cen
   -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;font-kerning:normal;
 }
 
-/* The oversized medallion ring, cropped by the frame — the banner reads as a
-   detail of the seal rather than a rectangle with type on it. Hairlines only. */
+/* The Medallion's ring, scaled far past the frame and cropped by it — field, not
+   core. Placed in the right-hand space the core deliberately leaves open. */
 .rings{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 
-/* The one band that survives both crops. */
+/* THE CORE. left/right: the intersection of the logo overlap and the phone crop.
+   Centred vertically so the height strip takes its slice out of the middle. */
 .content{
-  position:absolute;top:0;bottom:0;left:252px;right:210px;
-  display:flex;align-items:center;justify-content:space-between;gap:44px;
+  position:absolute;top:50%;left:252px;right:210px;transform:translateY(-50%);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;
 }
 .left{flex:0 1 auto;min-width:0}
 
-.kicker{
-  font-family:var(--mono);font-weight:500;font-size:9.5px;letter-spacing:.22em;
-  text-transform:uppercase;white-space:nowrap;
-}
 .headline{
-  font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.04;
-  letter-spacing:-.016em;white-space:nowrap;margin-top:11px;
+  font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.06;
+  letter-spacing:-.016em;white-space:nowrap;
 }
-/* Warm Bronze, used once per banner — the brand's rule for the accent. */
-.rule{width:46px;height:2px;background:var(--bronze);border-radius:2px;margin:13px 0 12px}
-.sub{font-family:var(--sans);font-weight:400;font-size:12.5px;letter-spacing:.004em;white-space:nowrap}
-.sub-ru{font-family:var(--serif);font-weight:400;font-size:17px;letter-spacing:.002em;white-space:nowrap}
+.sub{
+  font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:.004em;
+  white-space:nowrap;margin-top:5px;
+}
+.sub-ru{
+  font-family:var(--serif);font-weight:400;font-size:15px;letter-spacing:.002em;
+  white-space:nowrap;margin-top:4px;
+}
 
-/* Right rail — service line, languages, domain. Its divider is a fixed height,
-   not the height of whatever copy an option puts beside it, so two lines and
-   three lines produce the same stroke. */
-.rail{position:relative;flex:0 0 auto;padding-left:24px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.rail::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:78px;background:var(--rail-hair)}
+/* Right rail — two lines, never three: a third pushes the core past what the
+   height strip shows. Its divider is the banner's ONE bronze element (the brand
+   allows the accent once), and being vertical it costs the core no height. */
+.rail{
+  position:relative;flex:0 0 auto;padding-left:26px;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-start;
+}
+.rail::before{
+  content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:2px;height:40px;border-radius:2px;background:var(--bronze);
+}
 .rail .line{
   font-family:var(--mono);font-weight:400;font-size:9.5px;letter-spacing:.16em;
   text-transform:uppercase;white-space:nowrap;

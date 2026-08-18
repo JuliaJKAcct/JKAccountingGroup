@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="./banner.css">
 <title>JK Accounting Group — LinkedIn Page banner · C · Ivory (1128×191)</title>
 <style>
-  /* The light register. LinkedIn's own page is white, so the banner is given a
-     hairline and a deep-teal foot: without them a paper-coloured band reads as
-     an image that failed to load. */
+  /* The light register. LinkedIn's own page is white, so a paper-coloured band
+     has to prove it is an image and not a failed load. The frame and the
+     deep-teal foot do that at full height — but the tightest crop keeps only the
+     middle of the height and throws BOTH away, so the field itself has to carry
+     the difference: it is based on --page, the design system's warmest surface,
+     never on white, and it deepens toward the right instead of lifting toward it.
+     At any crop the strip still reads as warm paper against LinkedIn's white. */
   .stage{
-    --rail-hair:var(--hair-light);
     background:
-      radial-gradient(120% 260% at 74% 20%, #FFFFFF 0%, var(--paper) 38%, var(--page) 100%);
+      radial-gradient(130% 280% at 32% 12%, var(--paper) 0%, var(--page) 46%, #EFE9DD 100%);
     box-shadow:inset 0 0 0 1px var(--hair-light);
   }
   .foot{position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--teal)}
-  .kicker,.rail .line{color:var(--ink-muted)}
+  .rail .line{color:var(--ink-muted)}
   .sub{color:var(--ink-body)}
   .headline{color:var(--teal)}
   .rail .line.url{color:var(--ink)}
@@ -39,9 +42,7 @@
     </svg>
     <div class="content">
       <div class="left">
-        <div class="kicker">Miami &nbsp;&middot;&nbsp; Fort Lauderdale &nbsp;&middot;&nbsp; Online</div>
         <h1 class="headline">Your US Finance Department</h1>
-        <div class="rule"></div>
         <p class="sub">For Ukrainian- and Russian-speaking business owners in the US.</p>
       </div>
       <div class="rail">
