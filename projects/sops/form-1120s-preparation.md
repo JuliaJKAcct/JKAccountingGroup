@@ -754,6 +754,16 @@ what the **net book value per asset** on the balance sheet depends on, and — t
 money — what the **gain or loss on disposal** is computed from when an asset is sold or the company
 liquidates. Lump it, and the year an asset leaves you cannot say what its basis was.
 
+🛑 **If the entity's FIRST year was a SHORT year, the MACRS percentage tables are off the table —
+literally.** Pub 946 ch. 4 opens: *"**You cannot use the MACRS percentage tables to determine
+depreciation for a short tax year.** A short tax year is any tax year with less than 12 full
+months."* A company incorporated mid-year has one, so **every** figure that year and every figure
+derived from it afterwards comes from the **remaining-basis** computation (adjusted basis at the
+start of the year × the applicable rate — Pub 946's *"simplified method"*), never from Table A-1.
+⚠️ **Checking a later year against the table will therefore show a "discrepancy" that is not one**,
+and Pub 946 counts a short year in **whole months, counting a partial month as whole** — its own
+example treats a corporation incorporated **15 March** as having a **10**-month year.
+
 🔑 **Where the per-asset amounts come from: the tax software's fixed-asset register, NOT the
 printed Form 4562.** The filed 4562 shows the **total** on line 17 or line 22 — the split lives in
 the asset list (ATX: the `Fixed Assets` tab). ⚠️ **The asset-detail statement that prints with the
@@ -802,8 +812,14 @@ other basis **plus expense of sale**"* — while line 22 uses **depreciation all
 the *tax* figure, which equals the contra account only when the books carried tax depreciation.
 Scrapping or abandonment is an ordinary loss on **Form 4797 line 10**. ⛔ **On a LIQUIDATION there
 are no proceeds and §336(a) deems a sale at FAIR MARKET VALUE** — do not compute a full write-off
-loss because no cash came in — and **§336(d)** can disallow the loss where the distributee is a
-**related person**, which in a closely held S corporation it usually is.
+loss because no cash came in.
+⚠️ **And read §336(d)(1) properly, because relatedness alone does NOT disallow a loss.** The test is
+**related person (§267)** *AND* **(the distribution is not pro rata *OR* the property is
+disqualified)** — *disqualified* meaning acquired in a **§351** transaction or as a **contribution
+to capital** within the **5 years** before the distribution. 🔑 **In a single-shareholder S
+corporation the middle prong cannot be met** — one owner at 100% makes every distribution pro rata
+— **so the whole question collapses to how the assets were ACQUIRED.** Purchased assets are not
+disqualified; contributed ones are.
 
 **If the register is unreachable** — the client cancelled the subscription, the engagement ended —
 **record the entry as a pending instruction in the return's working paper (§15A) with the total,
