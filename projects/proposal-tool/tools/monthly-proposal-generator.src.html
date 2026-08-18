@@ -109,6 +109,13 @@
   .pcard .pnote{ font-size:10.5px; color:var(--ink); margin:10px 0 0; padding-top:9px; border-top:1px solid var(--hairline); line-height:1.45; }
   .disc{ font-size:11.5px; margin:0 0 8px; } .disc b{ color:var(--teal); }
   .invnote{ font-size:10.5px; color:var(--muted); font-style:italic; }
+  /* Optional add-on — a service the client can add to the retainer, priced on its own; clearly secondary to the hero fee */
+  .paddon{ border:1px dashed var(--bronze-lt); border-radius:8px; padding:13px 18px; margin:0 0 14px; display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .paddon .ak{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; margin-bottom:3px; }
+  .paddon .an{ font-family:var(--serif); font-size:15px; font-weight:700; color:var(--ink); }
+  .paddon .av{ font-family:var(--serif); font-size:26px; font-weight:700; color:var(--bronze); line-height:1.05; white-space:nowrap; }
+  .paddon .av .per{ font-size:14px; color:var(--muted); font-weight:400; }
+  .paddon .anote{ flex-basis:100%; font-size:10.5px; color:var(--ink); margin:8px 0 0; line-height:1.5; }
 
   /* Included */
   /* "The foundation" — the always-included baseline, set apart at the top of the scope */
@@ -259,6 +266,12 @@
         <label class="f"><span class="cap">Discount text (optional)</span><input id="pdiscount" placeholder="e.g. 10% discount (–$65) for annual prepay"></label>
         <label class="f"><span class="cap">Investment body (optional — kept short; the cards carry the message)</span><textarea id="pinvbody" rows="2"></textarea></label>
         <label class="f"><span class="cap">Closing note</span><input id="pinvnote"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Optional add-on — name (optional)</span><input id="paddon" placeholder="e.g. Accounts Payable management"></label>
+          <label class="f"><span class="cap">Add-on fee</span><input id="paddonfee" placeholder="e.g. +$1,500"></label>
+        </div>
+        <label class="f"><span class="cap">Add-on — what it is</span><input id="paddonnote" placeholder="e.g. We work your vendor inbox, pay bills on your behalf, and reconcile it each month."></label>
+        <p class="hint">Fill <b>Add-on fee</b> to show a distinct "optional add-on" card below the fee. Leave it blank for none.</p>
       </div>
       <div class="grp">
         <p class="gl">What's Included</p>
@@ -306,6 +319,11 @@
           </div>
           <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody_ru" rows="2"></textarea></label>
           <label class="f"><span class="cap">Closing note</span><input id="pinvnote_ru"></label>
+          <div class="row2">
+            <label class="f"><span class="cap">Optional add-on — name (RU)</span><input id="paddon_ru" placeholder="напр. Управление кредиторской задолженностью"></label>
+            <label class="f"><span class="cap">Add-on fee (RU display)</span><input id="paddonfee_ru" placeholder="напр. +$1,500"></label>
+          </div>
+          <label class="f"><span class="cap">Add-on — what it is (RU)</span><input id="paddonnote_ru"></label>
         </div>
         <div class="grp">
           <p class="gl">What's Included · Что включено</p>
@@ -371,8 +389,8 @@
     pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
     psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
   };
-  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","paddon_ru","paddonfee_ru","paddonnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","paddon","paddonfee","paddonnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
   function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -381,7 +399,7 @@
   // Label dictionary — the FIXED proposal scaffolding, per language.
   const LBL = {
     en:{ introEye:"Welcome", introTitle:"Introduction", getEye:"Why JK", getTitle:"What You Get",
-         invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo",
+         invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo", addonK:"Optional add-on",
          inclEye:"Scope of Services", inclTitle:"What's Included", foundationK:"The foundation — always included",
          nextEye:"Next Steps", nextTitle:"What's Next",
          overviewEye:"Overview", contentsTitle:"Contents",
@@ -392,7 +410,7 @@
          stdRate:"Standard rate", includes:"includes",
          rows:["Introduction","What You Get","Your Investment","What's Included","What's Next"] },
     ru:{ introEye:"Добро пожаловать", introTitle:"Введение", getEye:"Почему JK", getTitle:"Что вы получаете",
-         invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес",
+         invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес", addonK:"Дополнительно · по желанию",
          inclEye:"Объём услуг", inclTitle:"Что включено", foundationK:"Основа — всегда включено",
          nextEye:"Дальнейшие шаги", nextTitle:"Что дальше",
          overviewEye:"Обзор", contentsTitle:"Содержание",
@@ -500,9 +518,20 @@
     } else {
       cards = `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`;
     }
+    // Optional add-on — a service priced on its own, on top of the retainer (e.g. Accounts
+    // Payable management). Rendered as a distinct, dashed "optional" card below the fee; the
+    // fee text carries its own sign (e.g. "+$1,500"). Blank add-on fee ⇒ no card.
+    const addonFee = cv("paddonfee",lang).trim();
+    const addon = addonFee
+      ? `<div class="paddon"><div><span class="ak">${esc(L.addonK)}</span><span class="an">${esc(cv("paddon",lang))}</span></div>`
+        + `<div class="av">${esc(addonFee)}<span class="per">${esc(L.per)}</span></div>`
+        + (cv("paddonnote",lang).trim()?`<p class="anote">${esc(cv("paddonnote",lang))}</p>`:"")
+        + `</div>`
+      : "";
     const body = cv("pinvbody",lang).trim();
     return sectionHead(L.invEye, L.invTitle, tag)
       + cards
+      + addon
       + disc
       + (body ? `<p>${esc(body)}</p>` : "")
       + `<p class="invnote">${esc(cv("pinvnote",lang))}</p>`;
