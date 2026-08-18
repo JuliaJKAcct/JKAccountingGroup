@@ -854,7 +854,7 @@ Most are yes/no facts about the company. Three are worth calling out:
 ### 6B · 🛑 The 1099 question (14a/14b) — run it off the ledger, BY PAYEE
 
 **This is a Yes/No that a signed return asserts under penalties of perjury, and it is answered
-wrong more often than any other question on Schedule B.** Three mistakes cause almost all of it.
+wrong more often than any other question on Schedule B.** Four mistakes cause almost all of it.
 
 🔑 **The test is per PAYEE for the year, not per account and not per payment.** Group the ledger's
 transactions by the **`Name` / vendor column** and total each payee across the whole year. **Four
@@ -867,8 +867,13 @@ business, and people skip it because they think "1099 = contractors". Sweep **ev
 can carry a reportable payment: contract labor, professional fees, rent, commissions, and any
 "other/uncategorized" bucket.
 
-⛔ **Mistake 2 — treating an LLC as exempt.** Payments to a **corporation** are exempt (except
-legal fees). **An LLC is not a corporation.** It may be taxed as a sole proprietorship, partnership
+⛔ **Mistake 2 — asking what the payment WAS instead of who RECEIVED it.** The exemption is about
+the **payee's tax classification**, never the kind of service. **Professional fees are among the
+most commonly reportable payments there are** — an accountant, a consultant, a designer, a
+bookkeeper all get a 1099-NEC at $600+ **unless the payee is a corporation.** So "it's professional
+fees, it doesn't need one" is backwards reasoning that happens to land right only when the payee
+happens to be incorporated.
+⛔ **And an LLC is not a corporation.** It may be taxed as a sole proprietorship, partnership
 **or** corporation, and only the last is exempt. **The name cannot tell you — the W-9 does.** By
 contrast `Inc` / `Corp` in the payee name is a reliable signal, and government bodies are exempt.
 
@@ -892,10 +897,26 @@ read with one full invoice showing how the charge is computed**, never the chart
 freight and merchandise are excepted no matter how large.
 
 **The rest of the exception list, because people rebuild it from memory and get it short:**
-corporations (except legal fees) · **merchandise, freight, storage and similar** · rent paid to a
-**real-estate agent or property manager** (*they* file, not you) · **tax-exempt organizations** ·
-the **United States, a state, D.C., a U.S. territory or a foreign government** · wages to employees
-(those are a W-2).
+corporations *(but see the five carve-outs below)* · **merchandise, freight, storage and similar** ·
+rent paid to a **real-estate agent or property manager** (*they* file, not you) · **tax-exempt
+organizations** · the **United States, a state, D.C., a U.S. territory or a foreign government** ·
+wages to employees (those are a W-2).
+
+🛑 **Six things are reportable EVEN WHEN THE PAYEE IS A CORPORATION**, and writing the exemption
+as "corporations, except legal fees" is how the list gets lost:
+
+| Reportable to a corporation | Where |
+|---|---|
+| **Attorneys' fees** for the attorney's own services | **1099-NEC box 1** (§6041A(a)(1)) |
+| **Gross proceeds paid to an attorney** — a settlement, *not* their fee | 1099-MISC **box 10** (§6045(f)) |
+| **Medical and health care payments** | 1099-MISC **box 6** |
+| Substitute payments in lieu of dividends or tax-exempt interest | 1099-MISC box 8 |
+| Cash purchases of **fish for resale** | 1099-MISC box 11 |
+| Payments by a **federal executive agency** for services | 1099-NEC box 1 — *never a private client's problem, but it is on the list* |
+
+⚠️ **The medical one is the practical trap.** A business paying an incorporated clinic, physician
+or lab **must** issue a 1099-MISC, and it is skipped constantly because "it's a corporation" feels
+like the end of the analysis.
 
 ⚠️ **Check the threshold for the YEAR you are filing.** It was **$600** through **TY2025**; the
 One Big Beautiful Bill Act raised it to **$2,000 for payments made after 31 December 2025**, i.e.
@@ -907,8 +928,22 @@ the old figure to a newer one, flips the answer.
 not cash to a payee, and a **transaction with no vendor** needs identifying rather than counting —
 it is as likely to be an internal entry as a real payment.
 
-📌 **What "look before you ask" means here:** the ledger answers this question. Ask the client only
-for the **W-9s** the test actually turns on.
+📌 **How you actually PROVE a payee is exempt: Form W-9, LINE 3a** *(a line, not a box — and it was
+renumbered from `3` when line 3b was added in the Rev. March 2024 form)*. That is where the payee
+declares its federal tax classification, in **seven** boxes: individual/sole proprietor ·
+C corporation · S corporation · partnership · trust/estate · LLC · **Other**.
+
+🛑 **The LLC rule has an exception that covers the commonest case you will actually see.** The form
+says to check `LLC` and enter `C`, `S` or `P` — *"**unless it is a disregarded entity. A disregarded
+entity should instead check the appropriate box for the tax classification of its owner.**"* So a
+**single-member LLC** comes back with **`Individual/sole proprietor`** ticked and **no LLC letter at
+all** — that is a correctly completed W-9, **not a malformed one**, and that payee is **NOT exempt.**
+Reading it as an error is how a required 1099 gets skipped.
+
+**A W-9 on file is what defends the decision not to file**; a name in the ledger is not.
+
+📌 **What "look before you ask" means here:** the ledger answers *whether the threshold is met* — it does **not** answer whether the payee is exempt.
+Ask the client only for the **W-9s** the test actually turns on.
 
 ### 6A · 🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019
 

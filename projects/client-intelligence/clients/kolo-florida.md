@@ -409,17 +409,28 @@ the actual details.
   **(a) 🛑 Schedule B 14a is answered "No" and the ledger says otherwise.** A by-payee sweep of the
   2025 General Ledger found **three payees over the $600 threshold** — the **landlord**, the
   **storage/logistics provider**, and one **individual paid by Zelle** out of `Contract Labor`.
-  ⚠️ **The storage one FORKS and must not be assumed:** the 1099-MISC instructions expressly except
-  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **storing the client's inventory
-  is excepted** while a **lease of identified space** is box-1 rent — and **predominantly fulfilment
-  work is on neither list**, which points to a 1099-NEC. **The signed agreement decides — its
-  premises clause and its fee schedule. The account caption `Storage Rent` is evidence of nothing,
-  and neither is a payee name.** It does not
-  change the 14a answer, which the other two carry on their own; it changes which forms get filed.
   ⚠️ **The belief that nothing reached $600 came from looking at `Contract Labor` alone; RENT is
-  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle 14a** (not which form the storage payee gets) — an LLC is
-  *not* automatically exempt, only one taxed as a corporation is, and **Zelle issues no 1099-K so
-  it does not relieve the payer.** *(The firm's own fee is exempt — we are a Corp.)*
+  the bigger exposure** and is a 1099-MISC box 1 item. Two things decide exemption and neither is
+  the account name: **an LLC is *not* automatically exempt** (only one taxed as a corporation is —
+  the **W-9** proves it), and **Zelle issues no 1099-K, so it does not relieve the payer.**
+  **W-9s settle 14a**, but not which form each payee gets.
+  ⚠️ **The storage payee FORKS and must not be assumed.** The instructions expressly except
+  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **storing the
+  client's inventory is excepted**, a **lease of identified space** is box-1 rent, and
+  **predominantly fulfilment work is on neither list** (pointing to a 1099-NEC). **The signed
+  agreement decides — its premises clause and its fee schedule.** The caption `Storage Rent` is
+  evidence of nothing, and neither is a payee's name.
+  🔎 **And one of the three is an OPEN identity question, raised with Lilian 2026-08-18.**
+  `Contract Labor` carries **two different bare first names**, and they are NOT at the same stage of
+  evidence: the **small** payment's name matches the person named in the firm's own professional-fee
+  Zelle descriptions, so reclassing that one to `Accounting & Professional Fees` is well supported —
+  but it was under the threshold anyway. **The name on the payment that IS over $600 appears nowhere
+  else in 2025 or 2024**, so nothing in the ledger links it to the firm. **Only if Lilian confirms
+  that person is firm-side** does Contract Labor fall to nothing over the threshold; otherwise it is
+  a 1099-NEC. ⛔ Not assumed either way — and **the rent finding carries 14a to Yes regardless.**
+  ⓘ **The firm's own fee is exempt if the firm is a corporation** — the ledger vendor and the
+  return's preparer block both read `CORP`, but [`firm-identity.md`](../../sops/firm-identity.md)
+  still records the exact legal entity type as **pending**. Settle it from JK's own W-9.
   **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
   **Form T (Timber) Forest Activities Schedule**, a Form 4797 and a Schedule D, all empty. The
   Form T is a trace of the line-15 *Depletion* mis-key: the figure was corrected, **the form it
