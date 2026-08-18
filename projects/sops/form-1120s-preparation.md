@@ -9,6 +9,9 @@
 > filled-in worksheets belong in Google Drive / Double / QuickBooks. This SOP carries the
 > **procedure and the line map** only — every amount below is a placeholder.
 
+> **The skill that maintains this, and that writes the next one:**
+> [`tax-return-sop`](../../.claude/skills/tax-return-sop/). One SOP per form; this is the reference.
+
 > **Who this is written for.** Someone preparing an S-corporation return **for the first
 > time**, who knows bookkeeping but has not filled in a 1120-S. It explains *where each
 > number comes from*, not just which box it goes in — because the boxes are the easy part.

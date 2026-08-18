@@ -541,3 +541,75 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 
 /* Footer secondary note — smaller and quieter than the footer's own body. */
 .foot .foot-sm{font-size:.86rem; opacity:.78; margin-top:6px;}
+
+/* ============================================================
+   DFLOW — the "how the numbers travel" diagram.
+   An inline SVG map of one return: four source documents at the
+   top, the forms they feed below, and the two "must equal" ties
+   drawn differently from the "feeds" arrows.
+
+   Colour encodes WHICH SOURCE a figure came from — and because
+   colour alone must never carry meaning, every source also has a
+   numbered badge matching §0A's four-sources table, and every
+   edge is labelled with the line it carries.
+
+   Motion is the point rather than decoration: a slow pulse
+   travels each edge in the ORDER THE RETURN IS PREPARED, so the
+   sequence is watched rather than memorised. It is off for
+   reduced-motion and on paper.
+   ============================================================ */
+.dflow{margin:20px 0 10px;}
+.dflow .dwrap{overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--border-subtle); border-radius:16px; background:var(--paper);
+  padding:14px 10px;}
+.dflow svg{display:block; width:100%; min-width:660px; height:auto;}
+.dflow figcaption{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--muted); margin:11px 2px 0; text-align:center;}
+
+/* source hues — four distinguishable roles inside the brand's own two families */
+.dflow{--s1:var(--teal-500); --s2:var(--bronze-500); --s3:var(--teal-900); --s4:var(--greige-500);}
+:root[data-theme="dark"] .dflow{--s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dflow{
+  --s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;}}
+
+.dflow .box{fill:var(--surface); stroke:var(--border); stroke-width:1.1;}
+.dflow .box.spine{fill:var(--teal-800); stroke:var(--teal-800);}
+.dflow .lbl{font-family:var(--sans); font-size:12.5px; font-weight:600; fill:var(--ink);}
+.dflow .lbl.on-spine{fill:#ECE6DA;}
+.dflow .sub{font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; fill:var(--muted);}
+.dflow .sub.on-spine{fill:#A6C4C8;}
+.dflow .badge{font-family:var(--mono); font-size:10px; font-weight:600; fill:#fff;}
+.dflow .edgelbl{font-family:var(--mono); font-size:9px; letter-spacing:.03em; fill:var(--muted);}
+
+.dflow .edge{fill:none; stroke-width:1.6; stroke-linecap:round; opacity:.42;}
+.dflow .tie{fill:none; stroke:var(--accent); stroke-width:1.4; stroke-dasharray:5 4; opacity:.85;}
+.dflow .tielbl{font-family:var(--mono); font-size:9px; font-weight:600; fill:var(--accent);
+  letter-spacing:.04em;}
+
+/* the travelling pulse — one short dash running the length of each edge */
+.dflow .pulse{fill:none; stroke-width:2.6; stroke-linecap:round;
+  stroke-dasharray:16 1200; stroke-dashoffset:1216;
+  animation:dtravel 5.6s cubic-bezier(.5,0,.5,1) infinite;}
+@keyframes dtravel{
+  0%{stroke-dashoffset:1216; opacity:0;}
+  6%{opacity:.95;}
+  46%{stroke-dashoffset:0; opacity:.95;}
+  56%{stroke-dashoffset:0; opacity:0;}
+  100%{stroke-dashoffset:0; opacity:0;}
+}
+/* staggered by TIER, so the eye follows the order of preparation */
+.dflow .t1 .pulse{animation-delay:0s;}
+.dflow .t2 .pulse{animation-delay:.75s;}
+.dflow .t3 .pulse{animation-delay:1.5s;}
+.dflow .t4 .pulse{animation-delay:2.25s;}
+
+@media (prefers-reduced-motion:reduce){
+  .dflow .pulse{animation:none; opacity:.9; stroke-dasharray:none; stroke-dashoffset:0; stroke-width:1.9;}
+}
+@media print{
+  .dflow .dwrap{overflow:visible; break-inside:avoid; background:none;}
+  .dflow svg{min-width:0;}
+  .dflow .pulse{animation:none; display:none;}
+  .dflow .edge{opacity:.75;}
+  .dflow .box,.dflow .box.spine,.dflow .edge,.dflow .tie{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+}
