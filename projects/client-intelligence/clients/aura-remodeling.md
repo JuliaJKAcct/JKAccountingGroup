@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -97,6 +97,17 @@ the actual details.
 - 2026-07-30 — Linked into the owner group (§7): the two principals now have an individual 1040 file, [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md). ~~**Open conflict to resolve:** that file's Schedule C activity vs. the Form 1065 inferred here — a 1065 reaches the 1040 by K-1, not Schedule C, so one of the two readings is wrong.~~ ✅ **RESOLVED 2026-08-13 by Lilian: the Schedule C reading is the right one.** Aura is reported on Ihor's Schedule C and files no income-tax return itself; the partnership inference was wrong and is gone from §1. Also note the home-state disagreement (IL inferred here, FL implied by the related entities). Captured while building the individual file; no dedicated sweep of this client was run.
 - 2026-08-01 — **Incremental sweep (baseline 2026-07-20 → 2026-08-01), no new facts.** Double: `get_client`/`list_client_properties` unchanged from baseline; no new notes or activity-log entries on the company record since baseline; portal contacts unchanged (two "Ihor Naum" entries — a business-address contact and a personal-address one — no new contact added). Ping: no indexed meetings and no relevant semantic hits for "Aura Remodeling" or either owner name (org-wide search over 121 accessible meetings returned only unrelated noise). Gmail (`after:2026/07/20`, business name + both known addresses): only 3 internal firm-automation threads (the weekly CI-sweep email and the mid-July recurring-expense report, both already reflected here) — no direct client correspondence in the window. Drive: the client's folder link in §7 confirmed current; no new documents in the window. Owner-level check (Ihor/Olha's individual record 710637, and sibling Kolo Florida Inc 706626) turned up no notes/activity for the individual record and only Kolo-specific activity (its own tax organizer + questions) — nothing attributable to Aura. FOLLOW-UPS.md/BACKLOG.md: no Aura-specific entries beyond what's already linked. _(Ping + Double + Gmail + Drive + repo, 2026-08-01)_
 - 2026-08-13 — **Lilian settled the tax structure: this company is reported on Ihor Naum's Schedule C and files no return of its own.** That strikes the Form 1065 inference in §1, closes the conflict opened on 2026-07-30, and means **no tax-preparation engagement will ever exist for this client** — the work belongs on [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md). The migrated TaxDome note *"2024 Aura"* (vehicle mileage) was routed there for the same reason. _(Worked by Lilian.)_
+- 2026-08-15 — **Weekend sweep (incremental, from 2026-08-08):** Double (`list_client_properties`,
+  `list_notes` — none exist, `list_contacts`, `list_activity_log` from 2026-08-08 — empty) shows no
+  change since baseline. Gmail (`in:inbox`/`in:sent`, business name + "Naum", after:2026/08/08)
+  returned only the firm's automated weekly CI-sweep digest and an unrelated forwarded invoice on a
+  different (related-family) client's thread. Ping client-scoped semantic search returned no
+  results specific to this client — all hits were unrelated noise. Google Drive full-text search for
+  the business name, modified after 2026-08-08, returned only the firm's internal password vault
+  and hours spreadsheet, neither client-specific. No new activity in the window; none of the
+  outstanding items (Amex/BofA reclassification, Chase card replacement, the unpaid customer
+  invoice, or the late-books catch-up) show any update this sweep. No SOP exists yet for this
+  client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
 - Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.

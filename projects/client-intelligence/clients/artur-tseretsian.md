@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-01
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -22,8 +22,8 @@
 
 ## 1. Snapshot
 
-- **Business name:** Artur Tseretsian (individual — no registered business entity is engaged with us)
-- **Entity type:** Individual / sole proprietor (Schedule C activities reported on Form 1040)
+- **Business name:** Artur Tseretsian (individual — the tax-prep engagement is personal). ⚠️ **Update:** the client now also has a registered company, **Rewhip LLC** — the firm filed its Articles of Organization and obtained its **EIN** on his behalf; incorporation documents were sent to the client **2026-07-15** _(Gmail, thread "Rewhip LLC - incorporation documents")_. Rewhip LLC is **distinct from Operex LLC** (the car-sales business he works with, not his own) — this resolves the prior open question about the "Rewhip" Drive-folder name. Rewhip LLC has **no Double client record of its own yet** and no tax-prep engagement is on file for it — see §6 outstanding items.
+- **Entity type:** Individual / sole proprietor (Schedule C activities reported on Form 1040). Rewhip LLC's own entity/tax classification is not yet established with the firm.
 - **Home state:** Florida (South Florida)
 - **Industry / what they do:** Two income activities — (1) **used-car reselling & auto transport** — income comes through **Operex LLC** (buying/selling cars); he is linked to a car-sales business he works with, not a company of his own; (2) **online gaming** — buying and selling CS:GO / CS2 skins on the **CS Float** marketplace (**2025 only**).
 - **Household / filing status:** Married — assume **Married Filing Jointly** (confirm). Spouse is a **homemaker**: **no income in 2023–2024; received a W-2 in 2025**. **Two dependent children** — the younger was **born during 2024** (first claimed in 2024); the older is school-age. One child's SSN is **pending** (card lost, client resolving at the SSA). Names, dates of birth, and SSNs are in **Double**, not here.
@@ -67,7 +67,7 @@ link). Never write the credential itself here.
 - **Applies?** No.
 
 ### Bookkeeping & monthly close
-- **Applies?** No — there is no ongoing bookkeeping engagement. Our work is **tax preparation from the client's bank statements**, not a monthly close.
+- **Applies?** Was "No" as of 2026-08-01; **now unsettled.** A **"JK Accounting Group — Monthly Proposal Generator" agreement was signed via Adobe Sign 2026-07-29** between Julia Kononova and Artur Tseretsian _(Gmail, "Completed: You're copied on..." thread, 2026-07-28/29)_. Scope (personal vs. Rewhip LLC bookkeeping) and fee are not visible from the email alone — confirm with Julia which entity this proposal covers before treating monthly bookkeeping as active on this record.
 
 ### Income tax
 - **Applies?** Yes.
@@ -121,6 +121,13 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
 - **Statement coverage.** 2023–2025 captured from BofA CC (7104) + debit (9561); **Dec
   2025 runs only through the mid-December statement** — the **January 2026** statements
   of both accounts are needed to complete December 2025.
+- **Initial consultation (2026-07-06, Zoom "Consultation").** Company-formation and tax-compliance discussion ahead of Rewhip LLC's registration. Discussed points, per the Zoom AI summary _(Gmail, "Meeting assets for Consultation are ready!", 2026-07-06 — machine-generated summary, Russian, use with the usual caution)_:
+  - Artur asked about **partnership structures** and the tax consequences of a **non-resident partner** — Julia explained that a non-resident partner's share of net income is subject to **37% withholding**, with the non-resident then filing a return to claim a refund; discussed opening a bank account as a 50% owner. **Whether Rewhip LLC in fact has a non-resident partner is not yet confirmed on this file** — flagged for follow-up.
+  - Discussed needing documentation for a **prior real-estate sale** and for crypto activity, as proof of the source of funds behind the company formation (figures not captured here).
+  - **Stripe** is a second payment platform (besides the two BofA accounts and CS Float) whose transaction data is still needed for the income/expense analysis.
+  - Discussed the possibility of **electing S-corp** status for the new company in the future if profitability supports it (no figures captured here).
+  - Discussed the client's **immigration status** as relevant context for filing compliance and future immigration goals — no specific status details recorded (personal/sensitive; see Double if needed).
+  - Julia's follow-up items included helping the client catch up on **overdue tax returns** with a target of resolving the situation by October, and sending the organizer/portal invitation — consistent with the 2023–2025 catch-up engagement already on this file.
 - **Firm billing.** QuickBooks sent the client two automated "set up your recurring
   payment to JK Accounting Group" reminders, due **by 2026-08-01** _(source: Gmail,
   2026-07-30 and 2026-07-31)_ — confirmation the client actually completed setup is
@@ -156,6 +163,36 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   2023-2025" subfolder with the organizers and categorization workbooks already
   referenced above). **Repo:** checked FOLLOW-UPS.md and BACKLOG.md — no entries for
   this client.
+- _(2026-08-15, weekend sweep — full-historical catch-up, no date bound)_ — Ran the
+  one-time full-historical pass owed on this client (Ping + Gmail, full history).
+  **Ping:** `resolve_person`/`search_contacts` still return no match for this name
+  (client not indexed as a Ping contact/client); org-wide `search_meetings` (multiple
+  queries, no date bound) surfaced the 2026-07-06 "Consultation" meeting with a
+  speaker labeled "Artur" — snippets were fragmentary/garbled (e.g. "Confirm your tax
+  information", "you just have a CSV file") and added nothing beyond what the Zoom
+  email summary already gave via Gmail. **This closes the Ping coverage gap for this
+  client** — there is no dedicated Ping client/contact record to search further; only
+  org-wide semantic search is possible, and it has now been run without a date bound.
+  **Gmail (full history, in:inbox + in:sent, no `after:` filter):** found and read two
+  threads not previously in this file — (1) **"Rewhip LLC - incorporation documents"**
+  (2026-07-15): the firm registered **Rewhip LLC** and obtained its EIN on the
+  client's behalf; (2) **"Completed: ... Monthly Proposal Generator"** (2026-07-29):
+  Artur signed a JK Accounting Group Monthly Proposal Generator agreement via Adobe
+  Sign. Also retrieved the full 2026-07-06 "Consultation" Zoom AI summary email
+  (Russian), whose contents are digested in §5. **Gmail sent-mail search surfaced only
+  the two internal weekly Client-Intelligence sweep emails** (2026-08-01, 2026-08-08)
+  — no other outbound correspondence to/from this client found in `in:sent` beyond
+  Lilian's 2026-07-15 Rewhip incorporation email (which is `in:inbox` for the
+  practice's shared view). **This closes the Gmail full-history coverage gap.**
+  **Double:** re-checked `get_client`, `list_client_properties`, `list_notes`,
+  `list_contacts`, `list_activity_log` — no new notes or contacts beyond what this
+  file already had; activity log shows only organizer-open/publish events already
+  reflected in §4. **Google Drive:** re-confirmed the "Rewhip" folder and found it
+  also contains "Rewhip Password" (a Doc — credential, not read) and a "Rewhip LLC"
+  subfolder with `CP_575_B - Rewhip LLC.pdf` (the IRS EIN-assignment letter) — linked
+  in §7; the EIN itself was not opened/transcribed (not needed to record that the
+  company exists). Findings folded into §1, §4, §5. **Repo:** re-checked
+  `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md` — still no entries for this client.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
@@ -170,6 +207,8 @@ Live list lives in Double; mirrored here for context:
 - External-card statements (Capital One, Amex, Merrick, Credit One, FPB) if that spending should be captured.
 - Client to review: **Deposits** (cash/ATM/ACH/wire), **Travel**, and the auto/transport **"Business – review"** Zelles.
 - Confirmation the client completed the QuickBooks recurring-payment setup (reminders sent 2026-07-30/31, due 2026-08-01).
+- **Rewhip LLC — clarify scope.** Confirm with Julia/Lilian: (a) what business activity Rewhip LLC will conduct; (b) whether it has a non-resident partner (raised in the 2026-07-06 consultation) — if so it likely needs a **Form 1065** and a 37%-withholding conversation, not a Schedule C; (c) whether the 2026-07-29 signed Monthly Proposal Generator agreement covers Rewhip LLC's bookkeeping, Artur's personal work, or both; (d) whether Rewhip LLC needs its own Double client record and its own Client Intelligence file — recommend creating one once the scope is confirmed.
+- **Stripe transaction data** — still needed for the income/expense analysis (raised 2026-07-06, not yet in the client's Drive folder as of this sweep).
 
 ### Information still needed
 - [ ] Primary language / preferred communication.
@@ -177,10 +216,11 @@ Live list lives in Double; mirrored here for context:
 - [ ] The car-sales business relationship (his exact role; whether any 1099s are owed on payments he made).
 - [x] Second (younger) child confirmed a dependent from **2024** (born during 2024); 2023 has one dependent.
 - [ ] Assigned staff / relationship owner in Double (Owner in this file = Lilian).
-- [ ] Whether "Rewhip" (the client's top-level Drive folder name) is a trade name/DBA he uses for the auto-resale side, distinct from Operex LLC, or just an internal Drive naming choice _(source: Google Drive, 2026-08-01)_.
+- [x] ~~Whether "Rewhip" (the client's top-level Drive folder name) is a trade name/DBA...~~ ✅ **Answered:** Rewhip LLC is a real, newly-registered Florida LLC with its own EIN, formed by the firm and distinct from Operex LLC _(Gmail, 2026-07-15)_. Open follow-on: its business purpose, partner structure, and which engagement(s) cover it (see §6 outstanding items).
 
 ## 7. Links
 
 - **Double client:** https://app.doublehq.com/close?cid=752202
-- **Google Drive folder (sensitive vault):** https://drive.google.com/drive/folders/1W37vrxg1TGNX4k13vzK6ECrifiJtSHg1 (top-level folder "Rewhip"; contains the "Personal taxes 2023-2025" subfolder — organizers + categorization workbooks) _(source: Google Drive, 2026-08-01)_
+- **Google Drive folder (sensitive vault):** https://drive.google.com/drive/folders/1W37vrxg1TGNX4k13vzK6ECrifiJtSHg1 (top-level folder "Rewhip"; contains the "Personal taxes 2023-2025" subfolder — organizers + categorization workbooks — and a "Rewhip LLC" subfolder with the Articles of Organization and IRS EIN-assignment letter (`CP_575_B`)) _(source: Google Drive, 2026-08-01 and 2026-08-15)_
 - **Related SOPs:** none yet — candidate: a "personal-account tax-prep categorization" SOP built from §5.
+- **Related entity (no CI file yet):** Rewhip LLC — a Florida LLC the firm formed and obtained an EIN for on Artur's behalf (2026-07-15); no Double client record or Client Intelligence file exists for it yet. See §6 outstanding items.

@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-12
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -319,7 +319,11 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   ⓘ Also worth clarifying with Lilian **which** companies "these" meant: all three, or the two that
   paid him nothing.
 - ⚠️ **Illinois rides on the same missing document.** His share of Illinois-source income is stated
-  on the K-1 he does not have (§1, §4).
+  on the K-1 he does not have (§1, §4). ➕ **Worth keeping in mind once it can be filed: Illinois
+  withholds tax for nonresident shareholders, so a return there is not only a possible liability —
+  it can also recover money.** _(Double note 490984, revised — its metadata shows an update
+  2026-08-14, two days after the review this file otherwise documents; content otherwise matches
+  what is already recorded here.)_
 
 **🟠 Health coverage — Blue Cross Blue Shield, and the Marketplace question is now open again.** He
 named the carrier; Lilian's read is that it is **private, not Marketplace**, and she is confirming.
@@ -815,6 +819,25 @@ particular finding earns a place there.
   and four things added that an independent review found missing: the **Illinois** nonresident
   question, the **`1040-SCH C` return-type dispute**, the **basis hedge on the NOL**, and his own
   possible **1099-NEC exposure** for the drivers he paid.
+
+- _(2026-08-15, incremental sweep, baseline 2026-08-11 — INCREMENTAL only; a full historical Gmail
+  pass is still owed for this client, see below)_ **No client-facing developments since the last
+  review.** Gmail (`after:2026/08/11`, in:inbox and in:sent) returned **nothing** for
+  Melnyk/Denys — no new correspondence with or about him since baseline. Ping `search_meetings`
+  scoped to his name returned no legible relevant content (all hits were unrelated internal calls
+  or other clients). Double activity log since baseline shows only the **Form 1098 file upload of
+  2026-08-12**, already on record — no note edits are logged there even though note 490984's
+  metadata shows it was touched again. Google Drive: still **no dedicated folder** for this client;
+  the only "Melnyk" hit was Lilian's own internal hours-tracking spreadsheet (not opened — not
+  client-specific content). `FOLLOW-UPS.md` row 32 reviewed — restates what this file already
+  records; nothing new. **One addition found on a close re-read of Double note 490984** (its
+  metadata shows `updatedAt` 2026-08-14, two days after the review this file otherwise documents):
+  a line on Illinois nonresident withholding, now added to §5. **No update to the K-1/W-2 blocker,
+  the bankruptcy question, or any of the other open items** — nothing has moved since 2026-08-12.
+  Confirmed (again) that **no SOP exists yet for this client** in `projects/sops/`.
+  ⚠️ **Still outstanding, not part of this run: the full historical Gmail pass for this client**,
+  flagged when the file was created 2026-08-11 and not yet done — a future sweep (not bound by
+  this run's incremental scope) should run it.
 
 - _(2026-08-12, Lilian)_ — **She read the Double note, edited it herself, and added two things.**
   ✂️ **Her own cuts, which stand:** the six-months clause off the filing status, and the whole

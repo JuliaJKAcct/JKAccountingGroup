@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -77,6 +77,7 @@ doc guide** in Drive (§7) — never copied here.
 
 ### Income tax
 - **Applies?** Yes — **Form 1120** (C-corp) _(Double)_; **1099 preparation** included.
+- **Organizer Status property:** "N/A (we have QBO access)" _(Double client properties, 2026-08-15)_ — the firm has direct QBO access, so no organizer is issued for this client.
 
 ### Licenses & other filings
 - _(pending)_
@@ -84,7 +85,7 @@ doc guide** in Drive (§7) — never copied here.
 ## 5. Key facts & quirks
 
 - **Tech owner-group:** part of a group under the same owner/CEO — **Lumetro LLC** (ad-spend entity), **Mobilesource** (electronics), **Sensus Games LLC** (files its own return). Reports bundled with Lumetro; **keep books distinct**. **Intercompany loan from Lumetro reconciled monthly** (standing Double task). _(Double, Gmail; task confirmed 2026-08-07)_
-- **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-12) — watch whether this recurs at future closes. _(Gmail, 2026-08-08)_
+- **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-12) — still unresolved as of the last Gusto reminder (2026-08-11); no confirmation email of a fix was found through 2026-08-15 — watch whether this recurs at future closes. _(Gmail, 2026-08-08, 2026-08-11)_
 - **Monthly Brokerage JE** from managed-brokerage statements (via TaxDome) is the signature recurring task — JK has no live access to those accounts.
 - **Sub-CC 4800** is entered **manually** (cannot connect to QBO).
 - **Fast Uncat turnaround** — the owner resolves Uncategorized items quickly; use Uncat rather than mis-categorizing.
@@ -103,6 +104,17 @@ doc guide** in Drive (§7) — never copied here.
   surfaced an open Gusto → QuickBooks Online account-mapping sync failure (due 2026-08-12) —
   added to §5 as a quirk to watch. Ping had no indexed meetings for Sensustech or the owner in
   this window.
+- 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log showed the **July
+  2026 month-end close completed in full** (Aug 11–14: AR/AP aging, cash-flow statement, balance
+  sheet, P&L, uncategorized transactions, newly-added/duplicate vendors & customers, 1099 prep,
+  bank-rule transactions, plus the Amex/Costco card reconciliations) — routine, on schedule. No
+  new Double notes. Client properties confirmed "Organizer Status" = "N/A (we have QBO access)"
+  (added to §4). Gmail: a "Sensustech/Lumetro Report July2026" thread (2026-08-13/14) shows Maria
+  clarifying two transactions with the owner's contact ("Stan") — resolved as dining expenses
+  during a business trip to Serbia, an ordinary categorization exchange, not logged further; the
+  standing Gusto → QBO mapping-sync issue (due 2026-08-12) had one more reminder on 2026-08-11
+  with no follow-up confirming a fix (updated in §5). Ping had no indexed meetings for Sensustech
+  or the owner in this window.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **External financial audit (mid-2026):** an outside auditor requested financials; the owner opted to provide tax returns in lieu of audited financials — **handle related requests discreetly**. _(Gmail)_

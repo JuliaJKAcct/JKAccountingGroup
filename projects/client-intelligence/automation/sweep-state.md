@@ -44,29 +44,33 @@ list grows.
 
 | Client | Swept through | Coverage gaps (one-time catch-up owed) |
 |---|---|---|
-| Atman Parts | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
-| BEST BROKER REALTY LLC | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
-| ECOORGANIC USA LLC | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
-| GOSSIP MIAMI LLC | 2026-08-08 | — (Ping, Drive and full Gmail history all swept 2026-08-08; Ping genuinely has **no** indexed meetings for this client, scoped or org-wide — not a search miss) |
-| Kolo Florida Inc | 2026-08-08 | ⚠️ **Winding down — the company is closing** (Lilian, 2026-08-11). Keep sweeping while the account closures run; **drop it from scope once the Double record is archived**, not before |
-| Pro Title Agency | 2026-08-08 | — (full Gmail history swept; gap cleared 2026-08-08) |
-| NEVER GIVE UP KK LLC | 2026-08-08 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| YES TEAM CORP | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
-| MASCIAVE DESIGN STUDIO LLC | 2026-08-08 | — (enriched from Gmail + Double note; Ping had no indexed meetings) |
-| iKids Group LLC | 2026-08-10 | **Ping cannot help on this client and re-checking it is wasted budget:** its two client Zoom calls are from **Jun–Jul 2025**, before Ping's index begins (~Jun 2026), so no transcript exists and none will. Use **Google Calendar** for who attended those calls — one is titled after the referring partner, not the client |
-| Deep Tech Development Group LLC | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
-| AURA REMODELING LLC | 2026-08-08 | — (enriched from Gmail; Ping had no indexed meetings) |
-| Beemold USA LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Sunoma Inc | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| SENSUSTECH LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Mobilesource Corp | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Margate Plumbing Inc | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| MAGNUM 152, INC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| LUMETRO LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Ecom Beavers LLC | 2026-08-08 | — (enriched from Gmail + Drive; Ping had no indexed meetings) |
-| Artur Tseretsian | 2026-08-01 | **Ping + full Gmail history still owed** — deferred twice now (the per-run full-pass cap went to the five gap clients above). Due the next run that has room |
-| Ihor Naum & Olha Levchuk | 2026-08-01 | **Ping + Drive not yet swept, full Gmail history still owed** — same deferral; due the next run that has room |
-| Denys Melnyk | 2026-08-11 | The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**. ⚠️ **Corrected 2026-08-12** — this row said *"Ping, Gmail and Drive never swept"*, and all three **were** read during the second review on 2026-08-12: **Drive holds no folder of his** (the "Melnyk" files there are a different person) and **Ping records no meeting with him**, while **Gmail turned up the P&L template sent 2026-08-05 and never returned**. **The baseline is deliberately left at 08-11**: it is not established that the Gmail pass was full-historical, and advancing it would bound the next run's search and lose his history for good. **A full historical Gmail pass is still owed.** _(The client's answers of 2026-08-12 came from a call with Lilian — a human telling us a fact never advances a baseline.)_ |
+| Atman Parts | 2026-08-15 | — (incremental sweep 2026-08-08→15: new preferred-language property + an unreadable Double task logged) |
+| BEST BROKER REALTY LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: nothing new) |
+| ECOORGANIC USA LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: sales-tax task closed, CTDOL notice logged) |
+| GOSSIP MIAMI LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: nothing new beyond the 08-13 state; Ping genuinely has **no** indexed meetings for this client) |
+| Kolo Florida Inc | 2026-08-15 | ⚠️ **Winding down — the company is closing** (Lilian, 2026-08-11). Keep sweeping while the account closures run; **drop it from scope once the Double record is archived**, not before. Incremental sweep 2026-08-08→15: nothing new |
+| Pro Title Agency | 2026-08-15 | — (incremental sweep 2026-08-08→15: nothing new) |
+| NEVER GIVE UP KK LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: nothing new; Ping had no indexed meetings) |
+| YES TEAM CORP | 2026-08-15 | — (incremental sweep 2026-08-08→15: preferred-language property added; Ping had no indexed meetings) |
+| MASCIAVE DESIGN STUDIO LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: preferred-language property added; Ping had no indexed meetings) |
+| iKids Group LLC | 2026-08-15 | **Ping cannot help on this client and re-checking it is wasted budget:** its two client Zoom calls are from **Jun–Jul 2025**, before Ping's index begins (~Jun 2026), so no transcript exists and none will. Use **Google Calendar** for who attended those calls — one is titled after the referring partner, not the client. Incremental sweep 2026-08-10→15: a possible engagement-expansion proposal and a first target operations-start window surfaced (Double note, 2026-08-13) — see SOP-2026-08-15-01 |
+| Deep Tech Development Group LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: Gusto payroll-late reminders vs. "no employees" note recorded as an **unsettled contradiction**; mail-forwarding-ending notices logged) |
+| AURA REMODELING LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: nothing new) |
+| Beemold USA LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: minor Gmail/Double detail) |
+| Sunoma Inc | 2026-08-15 | — (incremental sweep 2026-08-08→15: Organizer Status property confirmed) |
+| SENSUSTECH LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: July close completed; Gusto/QBO mapping-sync issue still open) |
+| Mobilesource Corp | 2026-08-15 | — (incremental sweep 2026-08-08→15: August FL DOR sales-tax return filed/paid) |
+| Margate Plumbing Inc | 2026-08-15 | — (incremental sweep 2026-08-08→15: a previously-undocumented recurring "Intuit Loan" close task found; WF-replacement-account item still open) |
+| MAGNUM 152, INC | 2026-08-15 | — (incremental sweep 2026-08-08→15: two distinct Amex-checking sub-account names confirmed, detailing SOP-2026-07-25-07) |
+| LUMETRO LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: July close completed; dining-expense reclass clarified with owner) |
+| Ecom Beavers LLC | 2026-08-15 | — (incremental sweep 2026-08-08→15: a related entity, **EB2 LLC** (Delaware, owned by Ecom Beavers OÜ), surfaced in Drive — flagged as unresolved whether/how it's a JK engagement) |
+| Artur Tseretsian | 2026-08-15 | ✅ **Coverage gap cleared 2026-08-15** — full Ping (org-wide, unbounded) and full Gmail history (in:inbox + in:sent, no date bound) both read. Found a new related entity, **Rewhip LLC** (a second Florida LLC the firm formed for him), resolving a prior open Drive-folder-naming question |
+| Ihor Naum & Olha Levchuk | 2026-08-15 | ✅ **Coverage gap cleared 2026-08-15** — full Ping, full Google Drive, and full Gmail history all read (unbounded). Ping has no searchable meetings for this client. Found a third related entity, **Megabai Florida Corp** (dissolved Oct 2025, W-2 income) — ⚠️ **possible connection to the unrelated `MEGABAI` file below (archived-exclusion table) is unconfirmed; do not merge the two without checking with Lilian/Julia** |
+| Denys Melnyk | 2026-08-11 | The file was seeded during the organizer-review pilot from Double (client record, properties, tax project, the working note, the file library and the 2025 organizer) **plus his 2024 tax return**. ⚠️ **Corrected 2026-08-12** — this row said *"Ping, Gmail and Drive never swept"*, and all three **were** read during the second review on 2026-08-12: **Drive holds no folder of his** (the "Melnyk" files there are a different person) and **Ping records no meeting with him**, while **Gmail turned up the P&L template sent 2026-08-05 and never returned**. **The baseline is deliberately left at 08-11**: it is not established that the Gmail pass was full-historical, and advancing it would bound the next run's search and lose his history for good. **A full historical Gmail pass is still owed.** _(The client's answers of 2026-08-12 came from a call with Lilian — a human telling us a fact never advances a baseline.)_ ⓘ **2026-08-15 incremental check (bounded ≥2026-08-11, not advancing the baseline for the reason above):** nothing new client-facing; one small addition found on re-reading Double note 490984 (Illinois nonresident-shareholder withholding). |
+| ZETECH LLC | 2026-08-15 | First full historical sweep completed 2026-08-15 (owner Liudmyla Kazannik's group, 1 of 7). Ping returned nothing usable; no SOP exists |
+| OPTIC GOLD INC | 2026-08-15 | First full historical sweep completed 2026-08-15 (Liudmyla's group, 2 of 7). ⚠️ **An unopened, starred Sunbiz "Notice of Change or Filing" (2026-08-07) has not been checked against the live IRS-outdated-address matter** — see the client file's outstanding items. Ping returned nothing usable; no SOP exists |
+| ONETWO STRATEGIES INC | 2026-08-15 | First full historical sweep completed 2026-08-15 (Liudmyla's group, 3 of 7). A 2024 "Reemployment Tax" PDF was found in Drive with no Double case note behind it — flagged, not opened. Ping returned nothing usable; no SOP exists |
+| Greenair International LLC | 2026-08-15 | First full historical sweep completed 2026-08-15 (Liudmyla's group, 4 of 7). Its primary contact is also the contact for the archived **SETATECH USA, INC.** client — already tracked there, not duplicated. Ping returned nothing usable; no SOP exists |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
 > **THREE GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
@@ -77,7 +81,9 @@ list grows.
 > runs.
 >
 > 1. **Liudmyla's seven**, added to scope 2026-08-11 — the QuickBooks-connected companies the old
->    owner-derived scope had never covered.
+>    owner-derived scope had never covered. ✅ **4 of 7 done 2026-08-15** — ZETECH LLC, OPTIC GOLD
+>    INC, ONETWO STRATEGIES INC and Greenair International LLC now have rows above. **Still owed:**
+>    CANDRAMAS LLC, AXDIGITAL LLC, Airtouch LLC — next run's priority.
 > 2. **The TaxDome-backfill seven**, whose files were created **2026-08-14**: Vitalii Ivanov &
 >    Tetiana Mogylova · Setatech USA · Igor Melomed & Yelena Lovkina · R & G Friendly ·
 >    Viacheslav Honcharenko · Maria Contreras · Iurii Iakovenko & Alina Yakovenko.
@@ -118,4 +124,17 @@ What remains owed: Artur Tseretsian and Ihor Naum & Olha Levchuk, deferred twice
 per-run full-pass cap went to the five above — give them the next run's cap. Ping's
 `list_client_meetings` needs a client-scoped context the routine does not have; `search_meetings`
 (org-wide, semantic) is the working substitute._
+
+_**2026-08-15 run:** used its ~6-full-pass cap on the top of the priority queue — **Artur
+Tseretsian and Ihor Naum & Olha Levchuk's coverage gaps are now cleared** (both rows above), and
+**4 of Liudmyla's seven** (ZETECH, OPTIC GOLD, ONETWO STRATEGIES, Greenair International) got
+their first full historical sweep and a row. All 20 clients with an existing baseline got their
+incremental pass through 2026-08-15, except Denys Melnyk (deliberately held at 08-11 — see his
+row). **Next run's priority, in order:** the remaining 3 of Liudmyla's seven (CANDRAMAS, AXDIGITAL,
+Airtouch), then the TaxDome-backfill six still owed (Vitalii Ivanov & Tetiana Mogylova, Igor
+Melomed & Yelena Lovkina, R & G Friendly, Viacheslav Honcharenko, Maria Contreras, Iurii Iakovenko
+& Alina Yakovenko), then Grigoriy & Margarita Melomed and M5 Studio Miami. **Also unaccounted for
+and not part of any named group** (flagged, not yet actioned): Andrii Tymchenko, VOICECAPITAL INC,
+VOXAGO LLC and YMI TRUCKING LLC are in the scope table with real CI content but no row here — the
+reconciliation this doc calls for above still hasn't been done for them._
 

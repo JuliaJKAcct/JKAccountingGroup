@@ -1,12 +1,12 @@
 # OPTIC GOLD INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-12
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
 >
-> ⚠️ **Still largely a seed.** Everything except §4 *Income tax* and the IRS history below came
-> from Double's structured client properties alone — no Gmail, Ping or QuickBooks pass has been
-> run on this client yet, so treat every `_(pending)_` as genuinely unknown rather than not
-> applicable. **What is solid is the Form 2553 / S-election history**, added 2026-08-12 from
-> Lilian's own call notes.
+> ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
+> Double (client record, notes, contacts, properties), Google Drive (folder + file listing) and
+> the QuickBooks-connection flag all checked. Ping's org-wide search returned no legible content
+> scoped to this client. **What the business actually does, its home state, and whether payroll
+> applies are still `_(pending)_`** — nothing in the reachable sources established them.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -49,9 +49,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
-| Bookkeeping / day-to-day contact | Double client (link below) |
-| _(add roles as needed)_ | |
+| Owner / primary contact | Double client (link below) — full client-admin/tax/financial/files portal access _(Double `list_contacts`, 2026-08-15)_ |
+| _(add roles as needed)_ | Only one Double portal contact is on file for this client |
 
 - **Double client:** [app.doublehq.com/close?cid=706702](https://app.doublehq.com/close?cid=706702)
 - **Double case note:** `CASE · IRS Form 2553 — S-election on file` — note **491051**
@@ -64,9 +63,9 @@ link). Never write the credential itself here.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_ |
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
-| Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
-| Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
+| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | Monthly filings confirmed via Julia/Liudmyla's report emails (e.g. May and June 2026) _(Gmail, 2026-08-15)_ |
+| Bank | Statements / reconciliation | _(pending — Drive link)_ | **Bank of America** — "Business Adv Unlimited Cash Rewards" / referred to internally as the "BOA CORP Account", ending **0526** _(Gmail BofA statement alerts + Liudmyla's April–May financials-adjustment email, 2026-08-15)_ |
+| Payroll | _(pending — still `TBD` in Double, unresolved this sweep)_ | _(pending — Drive link)_ | _(pending)_ |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -113,7 +112,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 ### Licenses & other filings
 - **Applies?** _(pending — only the annual-report flag below is known; local licences, BTRs and any BOI obligation are unchecked)_
 - **Annual report:** _(not set in Double)_ _(Double client properties, 2026-08-11)_
-- **What & when:** _(pending)_
+- **What & when:** **1099s** — the firm prepared and filed multiple vendor 1099s for **tax year 2025** (seven separate forms, dated 2026-01-30 in Drive) — confirms 1099 prep is part of this client's year-end work. _(Google Drive, "Optic Gold Inc" folder, 2026-08-15.)_
 - **Process notes (→ future SOP):** _(pending)_
 
 ### _(Add other recurring obligations as needed)_
@@ -132,10 +131,12 @@ watch-outs, one-off arrangements, history that affects the work.
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **The IRS holds this company's PREVIOUS address, and it has not been corrected.** Noted on the call of **2026-03-16**; Lilian had to go into the company's earlier Annual Reports on **Sunbiz** to work out which address the IRS was holding. **Every IRS letter — on any matter, not just this one — goes to the company's previous address.** Nothing has been filed to change it (§6). This is the first thing to fix and the first thing to suspect when an IRS response never arrives.
+- 🔴 **Sunbiz sent a "Notice of Change or Filing" for this entity on 2026-08-07** (document number **P23000053978**), flagged unread/starred in the firm's inbox. **What changed is not established** — given the live address-correction matter above, this needs to be opened and checked: it could be an unrelated routine filing, or it could bear directly on the address problem (including the risk of an unauthorized filing, which is exactly what Sunbiz's notice template warns about). _(Gmail, donotreply@sunbiz.dos.fl.gov, 2026-08-07.)_
 - **The S-election was only accepted on 2026-03-16, retroactive to 2024-01-01** — and only after the firm faxed the IRS a copy of the Form 2553 plus the USPS receipt to prove it had been sent. The IRS had **no 2553 on record**, which is why the **2024 Form 1120-S was rejected**. _(Lilian's IRS calls, 2026-02-04 and 2026-03-16 — full trail in the Double case note, §7.)_
-- **E-filing has been rejected twice, and the causes are not established to be the same** — the 2024 1120-S because the S-election was not on the IRS's records, and then the 2025 extension in **ATX**, on 2026-03-16, the very day that cause was confirmed fixed. So the second rejection's cause is unknown. The extension went out as a **paper Form 7004**. Budget for paper filing and for confirming receipt by phone.
-- Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner). Payroll reads **TBD** in Double — settle it.
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- **E-filing has been rejected twice, and the causes are not established to be the same** — the 2024 1120-S because the S-election was not on the IRS's records, and then the 2025 extension in **ATX**, on 2026-03-16, the very day that cause was confirmed fixed. So the second rejection's cause is unknown. The extension went out as a **paper Form 7004**; a **prepared copy of the 2025 Form 7004 exists in the client's Drive folder** (dated 2026-04-13), though that only confirms it was prepared, not that the IRS processed it (§6).
+- Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner). Payroll reads **TBD** in Double — still unresolved after this sweep.
+- The firm prepared and filed **seven vendor 1099s for tax year 2025** for this client (Drive, dated 2026-01-30) — 1099 prep is confirmed part of the year-end work here.
+- **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 — see §6.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -149,6 +150,7 @@ A running, dated record as we build this profile.
   - **2026-03-16 — resolved.** The IRS confirmed the **S-Corp status was accepted, effective 2024-01-01**, and faxed a **confirmation letter** (saved in Drive). ⚠️ On the same call it emerged that **the address the IRS holds is the company's previous one** — §5. Lilian raised the possibility that the outdated address may be why the 2553 went missing in the first place. **The IRS did not say so and it is not established** — it stays a hypothesis, and the notes record no answer to it.
   - Also that day: the **2025 Form 7004 was mailed on paper**, because e-filing was being rejected in ATX.
 - 2026-08-12 — **Double case note opened** for this matter — the firm's first for this client (§7). It exists so Julia can read the whole IRS history without asking anyone. _(Worked by Lilian.)_
+- 2026-08-15 — **First full historical sweep (weekend CI sweep).** Read the full Gmail history for "Optic Gold" / "Liudmyla Kazannik" (monthly financials and sales-tax report emails, QuickBooks-invoice traffic, a Bank of America account reference, a Sunbiz change notice), Double's client record/notes/contacts/properties, and the client's Drive folder (a prepared 2025 Form 7004 PDF and seven 1099s for tax year 2025). No SOP exists yet for this client. Added: the bank account reference (§3), the 1099 filings (§4/§5), and — the most consequential new item — an **unopened Sunbiz "Notice of Change or Filing" from 2026-08-07** that has not been checked against the live IRS-address matter (§5, §6). Ping's org-wide search returned no legible, client-scoped content. What the business actually does and its home state remain unknown. _(Worked by weekend CI sweep, 2026-08-15.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -165,19 +167,21 @@ tasks owed. Keep the **live** list in Double tasks / Ping action items and point
 it here; these never go into the client SOP.
 
 - 🔴 **Correct the company's address with the IRS.** Open since **2026-03-16**, when the outdated address was discovered, and **nothing has been filed** (a **Form 8822-B** is the usual route). Until it is done, every IRS letter for this client goes to the old address. **Confirm first what address the IRS currently holds and what the correct one is** — the note establishes only that the one on file is the *previous* one.
-- **Confirm the IRS processed the paper Form 7004 for 2025**, mailed 2026-03-16. Nothing recorded since, so the extension is **unconfirmed**, not known-good.
-- **Everything about this client beyond Double's property columns and the IRS history is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- 🔴 **NEW — open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978). It has sat unread/starred since it arrived; given the live IRS-address matter, it needs to be checked for what actually changed on the state record.
+- **Confirm the IRS processed the paper Form 7004 for 2025**, mailed 2026-03-16. A prepared copy exists in Drive (dated 2026-04-13), but nothing confirms the IRS received or processed it — the extension remains **unconfirmed**, not known-good.
+- **What the business actually does, and its home state, are still unknown** — not established by Gmail, Double or Drive in this sweep. Payroll also remains **TBD** in Double.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
 - [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
-- [ ] Bank/card feeds and where credentials live (Drive vault link)
+- [x] Contacts and their roles (portal contacts are in Double) — one contact, full access
+- [x] Bank feed identified (Bank of America, "BOA CORP Account" ending 0526) — credentials link still pending
 - [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
+- [x] Whether the client belongs to a known owner-group already profiled here — yes, the `best-broker-realty.md` serial-entity group (§5)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
+- [ ] What changed in the 2026-08-07 Sunbiz notice (new this sweep)
 
 ## 7. Links
 

@@ -1,11 +1,12 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
+> Double (client record, notes — none exist — contacts, properties), Google Drive (folder + file
+> listing) and the QuickBooks-connection flag all checked. Ping's org-wide search returned no
+> legible content scoped to this client. Home state, fiscal year-end and confirmation of the
+> business's actual activity are still `_(pending)_`.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,7 +35,7 @@
 - **Business name:** ONETWO STRATEGIES INC
 - **Entity type:** **Corporation (Inc)**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
+- **Industry / what they do:** _(pending — likely a consulting business, based on the primary contact's email domain `onetoconsult.com`; not otherwise confirmed. The firm has been invited as a "finance resource" on the client's Amazon Business account, 2026-08-04, so some retail purchasing runs through Amazon.)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
 - **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**), payroll (**Automatic**), the annual report _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
@@ -48,8 +49,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
-| Bookkeeping / day-to-day contact | Double client (link below) |
+| Owner / primary contact | Double client (link below) — full client-admin/tax/financial/files portal access _(Double `list_contacts`, 2026-08-15)_ |
+| Second contact (full access) | Double client (link below) — also linked to **1 other Double client ID**, not otherwise identified this sweep |
 | _(add roles as needed)_ | |
 
 - **Double client:** [app.doublehq.com/close?cid=706701](https://app.doublehq.com/close?cid=706701)
@@ -63,9 +64,9 @@ link). Never write the credential itself here.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Connected — `platform: qbo` _(2026-08-11)_ |
-| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
-| Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
-| Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
+| Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | Not applicable (§4) |
+| Bank | Statements / reconciliation / payroll debits | _(pending — Drive link)_ | **Bank of America** business-lending account ("Business Adv Customized Cash Rewards"), ending **1421**; payroll debits come from a **different** account ending **4889** _(Gmail BofA + Gusto notifications, 2026-08-15)_ |
+| Payroll | Gusto, semi-monthly AutoPilot | _(pending — Drive link)_ | Pay periods run 1st–15th / 16th–end of month. ⚠️ **Direct-deposit speed was slowed from 2-day to 4-day, effective 2026-06-26** — payroll must now be submitted **4 business days** ahead of payday. |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -86,9 +87,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** _(pending)_
-- **Our role:** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Provider / frequency:** **Gusto**, semi-monthly AutoPilot (1st–15th, 16th–end of month), debited from the account ending 4889 _(Gmail Gusto notifications, recurring Jun–Aug 2026)_
+- **Our role:** _(pending — firm receives every payroll notification; whether we run it or only monitor is unconfirmed)_
+- **Process notes (→ future SOP):** ⚠️ **AutoPilot has failed to run cleanly more than once.** In the week of 2026-06-25 it could not auto-run the 06/16–06/30 pay period (a pending Gusto to-do blocked it, needing manual login), and separately a payroll debit for the 06/01–06/15 period failed outright. **Check that AutoPilot actually completed each pay period** rather than assuming the automatic notification means success — and remember the direct-deposit speed is now 4 business days, not 2 (§3).
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
@@ -104,9 +105,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Licenses & other filings
 - **Applies?** _(pending — only the annual-report flag below is known; local licences, BTRs and any BOI obligation are unchecked)_
-- **Annual report:** Yes _(Double client properties, 2026-08-11)_
+- **Annual report:** Yes _(Double client properties, 2026-08-11)_ — **2026 annual report confirmed filed** (Drive copy dated 2026-01-09)
 - **Organizer Status (Double, hand-maintained by Lilian):** Sent
-- **What & when:** _(pending)_
+- **What & when:** Two **"Business information changes"** documents dated **2026-05-14** exist in Drive — likely a Sunbiz filing updating the company's registered info, content not reviewed this sweep.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### _(Add other recurring obligations as needed)_
@@ -114,7 +115,9 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 ## 5. Key facts & quirks
 
 - 🔴 **TWO K-1s WERE MISSING FOR THE 2025 RETURN — from 2242 Monroe LLC and Porcupine Partnership.** Recorded on a client call of **2026-04-13**, alongside a **home-office deduction that had not been entered in QuickBooks or on the return.** The 2025 return was **extended** and an extension payment made; a Q1 2026 estimate was paid manually through the IRS. **Nothing records the K-1s arriving.** A partnership K-1 that never comes is the classic cause of a return that cannot be finished — chase both before anything else here. _(TaxDome notes, migrated — filed under OneTwoStrategies INC; note dated 2026-04-13.)_
+- ⚠️ **Payroll (Gusto AutoPilot) has failed to run cleanly on more than one occasion, and its direct-deposit speed just got slower.** A pay period couldn't auto-run and a separate debit failed outright, both in the week of 2026-06-25; then on 2026-06-26 Gusto slowed the deposit speed from 2-day to 4-day, so payroll must now be submitted 4 business days ahead. Treat "no notification" as no longer proof payroll ran. _(Gmail Gusto notifications, Jun 2026.)_
 - **A salary increase and a change to additional withholding were discussed on the same call** — raising the owner's annual salary and doubling additional withholding to cover the tax need. **Whether either was actually implemented is unrecorded.** Figures are in Double / the client's payroll records.
+- A **2026 Accountable Plan document exists in Drive** (dated 2026-03-10), which pre-dates the 2026-04-13 call that flagged an unentered home-office deduction — likely the intended mechanism for that reimbursement. **Confirm it is actually being used and posted to QuickBooks**, not just drafted.
 
 Anything the team must know to serve this client well — special preferences,
 watch-outs, one-off arrangements, history that affects the work.
@@ -127,8 +130,8 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **Almost everything here is still Double's property columns alone** — the exception is the 2026-04-13 client call above, from a migrated TaxDome note. No Gmail, Ping or QuickBooks pass has been run. The first weekend sweep on this client is what makes it useful.
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- A file named **`ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** exists in Drive, dated **2024-07-25** — suggests a past Florida reemployment-tax matter, similar in kind to the Tsminibears case the firm tracks with a running Double case note. **No Double case note exists for this client** (`list_notes` returned zero), and the file's content was not opened this sweep (out of scope/budget) — flag for a follow-up read.
+- **Assigned to Liudmyla Kazannik.** First full historical sweep completed 2026-08-15 — see §6.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -138,6 +141,7 @@ A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
 - 2026-08-13 — **TaxDome notes read (Phase 2).** One note, new: a client call of **2026-04-13** recording the 2025 extension and its payment, a manually-paid Q1 2026 estimate, a discussed salary increase and withholding change, and — the part that gates the return — **two missing K-1s (2242 Monroe LLC and Porcupine Partnership) and an unentered home-office deduction**. Now §5. _(TaxDome notes, migrated — filed under OneTwoStrategies INC.)_ _(Worked by Lilian.)_
+- 2026-08-15 — **First full historical sweep (weekend CI sweep).** Read the full Gmail history for "OneTwo Strategies" / "onetoconsult" / "Liudmyla Kazannik" (Gusto payroll notices including two AutoPilot failures and a deposit-speed change, a Bank of America reference, an Amazon Business invite, QuickBooks-invoice traffic), Double's client record/contacts/properties (zero Double notes exist for this client), and the client's Drive folder (the 2026 annual report, two "Business information changes" filings, a 2026 Accountable Plan document, and a 2024 reemployment-tax document not yet reviewed). No SOP exists yet for this client. Added: the payroll provider/cadence and its recent failures (§3/§4/§5), the Accountable Plan document possibly tied to the home-office gap (§5), and the reemployment-tax document flag (§5). Ping's org-wide search returned no legible, client-scoped content. Home state, fiscal year-end and confirmed business activity remain unknown. _(Worked by weekend CI sweep, 2026-08-15.)_
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -153,17 +157,20 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) and confirm whether the home-office deduction has now been entered — nothing since the 2026-04-13 call confirms either.
+- **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** in Drive and, if it describes an ongoing matter, open a Double case note per the firm's running-case-note convention.
+- **Confirm whether the discussed salary increase / withholding change was implemented.**
+- **Confirm the Accountable Plan is actually posted to QuickBooks**, not just drafted.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
 - [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
-- [ ] Bank/card feeds and where credentials live (Drive vault link)
+- [x] Contacts and their roles (portal contacts are in Double) — two contacts, both full access
+- [x] Bank feeds identified (Bank of America lending account + a separate payroll-debit account) — credentials link still pending
 - [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
+- [ ] Whether the client belongs to a known owner-group already profiled here (the second contact is linked to one other, unidentified Double client ID)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links
