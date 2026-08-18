@@ -420,14 +420,10 @@ the actual details.
   **predominantly fulfilment work is on neither list** (pointing to a 1099-NEC). **The signed
   agreement decides — its premises clause and its fee schedule.** The caption `Storage Rent` is
   evidence of nothing, and neither is a payee's name.
-  🔎 **And one of the three is an OPEN identity question, raised with Lilian 2026-08-18.**
-  `Contract Labor` carries **two different bare first names**, and they are NOT at the same stage of
-  evidence: the **small** payment's name matches the person named in the firm's own professional-fee
-  Zelle descriptions, so reclassing that one to `Accounting & Professional Fees` is well supported —
-  but it was under the threshold anyway. **The name on the payment that IS over $600 appears nowhere
-  else in 2025 or 2024**, so nothing in the ledger links it to the firm. **Only if Lilian confirms
-  that person is firm-side** does Contract Labor fall to nothing over the threshold; otherwise it is
-  a 1099-NEC. ⛔ Not assumed either way — and **the rent finding carries 14a to Yes regardless.**
+  ✅ **The Contract Labor payee is SETTLED — no 1099 is owed on it** (Lilian, 2026-08-18, checked
+  outside the ledger), so that account produces no reportable payee. ⓘ **Only the conclusion is
+  recorded, not the reason** — if the same payee reappears it must be re-decided, not copied.
+  ⚠️ **14a is still Yes**: the **landlord** and the **storage provider** carry it, untouched by this.
   ✅ **The firm's own fee is EXEMPT — settled 2026-08-18.** Lilian confirmed JK Accounting Group is
   a **corporation**, now recorded in [`firm-identity.md`](../../sops/firm-identity.md). The reason
   is the payee's classification, not that the payment is "professional fees".
