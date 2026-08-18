@@ -409,6 +409,11 @@ the actual details.
   **(a) 🛑 Schedule B 14a is answered "No" and the ledger says otherwise.** A by-payee sweep of the
   2025 General Ledger found **three payees over the $600 threshold** — the **landlord**, the
   **storage/logistics provider**, and one **individual paid by Zelle** out of `Contract Labor`.
+  ⚠️ **The storage one FORKS and must not be assumed:** the 1099-MISC instructions expressly except
+  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **warehousing
+  or 3PL services are not reportable** while a **lease of identified space** is box-1 rent. **The
+  contract decides — the account caption `Storage Rent` is evidence of nothing.** It does not
+  change the 14a answer, which the other two carry on their own; it changes which forms get filed.
   ⚠️ **The belief that nothing reached $600 came from looking at `Contract Labor` alone; RENT is
   the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle it** — an LLC is
   *not* automatically exempt, only one taxed as a corporation is, and **Zelle issues no 1099-K so

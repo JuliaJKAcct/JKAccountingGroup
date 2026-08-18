@@ -869,6 +869,20 @@ so the payer is relieved. **Zelle is NOT one of them** — it is bank-to-bank, i
 **the payer's own 1099 obligation stands in full.** A ledger full of Zelle payments is a ledger
 full of live 1099 duties.
 
+⛔ **Mistake 4 — reading the account NAME instead of the arrangement.** The instructions except
+*"payments for **merchandise, telegrams, telephone, freight, storage, and similar items**"*, and
+they also make **rent** of $600+ reportable in box 1. **So an account called `Storage Rent` sits on
+top of a genuine fork:** warehousing / 3PL / fulfilment **services** are **excepted**, while a
+**lease of identified space** is **box 1 rent**. **The contract decides, not the chart of
+accounts** — a bookkeeper's caption is evidence of nothing. The same trap runs the other way:
+freight and merchandise are excepted no matter how large.
+
+**The rest of the exception list, because people rebuild it from memory and get it short:**
+corporations (except legal fees) · **merchandise, freight, storage and similar** · rent paid to a
+**real-estate agent or property manager** (*they* file, not you) · **tax-exempt organizations** ·
+the **United States, a state, D.C., a U.S. territory or a foreign government** · wages to employees
+(those are a W-2).
+
 ⚠️ **Check the threshold for the YEAR you are filing.** It was **$600** through **TY2025**; the
 One Big Beautiful Bill Act raised it to **$2,000 for payments made after 31 December 2025**, i.e.
 from **TY2026**, with inflation indexing after that. Applying the new figure to an older year, or
