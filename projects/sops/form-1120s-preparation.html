@@ -1465,7 +1465,8 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
           <div class="cx">
             <div class="cl">🔑 The per-asset amounts come from the tax software&#8217;s fixed-asset register, NOT the printed Form 4562</div>
             <p>The filed 4562 shows the <b>total</b> on line 17 or line 22 — the split lives in the asset list (ATX: the <code>Fixed Assets</code> tab). ⚠️ <b>The asset-detail statement that prints with the return may only carry cost, date placed in service and recovery period</b> — enough to identify the assets, not enough to split the deduction. <b>Open the register.</b></p>
-            <p><b>If the register is unreachable</b> — the client cancelled the subscription, the engagement ended — <b>record the entry as a pending instruction in the return&#8217;s working paper (&#167;15A)</b> with everything you do have, so whoever regains access can post it without rebuilding the analysis. <b>It does not block the return</b>: the deduction is already on page 1 line 14 either way. It is the <em>books</em> that are waiting.</p>
+            <p>❓ <b>Why the ASSET accounts are not in this entry.</b> Everyone preparing their first one expects the asset account to be credited. <b>It must not be.</b> 🔑 <b>The asset account holds ORIGINAL COST and never moves until the asset LEAVES the company</b>; depreciation goes to a <b>contra-asset</b> beside it (<code>Accumulated depreciation</code>) which accumulates everything written off. Credit the asset directly and you destroy three things: the <b>cost disappears</b> (a cheap old asset and an expensive nearly-written-off one collapse to the same number); <b>gain or loss on disposal becomes unprovable</b>, since it is <code>proceeds &#8722; (cost &#8722; accumulated)</code>; and 🛑 <b>Schedule L cannot be completed</b> — line <b>10a</b> asks for <em>cost</em> and line <b>10b</b> for <em>accumulated depreciation</em>, two figures the form demands side by side. So the entry has exactly two kinds of line and <b>no asset account among them</b>: one debit to the depreciation <em>expense</em>, one credit per asset to that asset&#8217;s <em>accumulated depreciation</em>. 📌 <b>The asset accounts move on DISPOSAL</b>, and then both sides go together — credit the asset for full cost, debit the accumulated depreciation for everything taken, difference against proceeds is the gain or loss (Form 4797). <b>That is the entry a final return needs.</b></p>
+        <p><b>If the register is unreachable</b> — the client cancelled the subscription, the engagement ended — <b>record the entry as a pending instruction in the return&#8217;s working paper (&#167;15A)</b> with everything you do have, so whoever regains access can post it without rebuilding the analysis. <b>It does not block the return</b>: the deduction is already on page 1 line 14 either way. It is the <em>books</em> that are waiting.</p>
           </div>
         </div>
       </div>
@@ -1486,6 +1487,28 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
       </div>
     </div>
   </section>
+
+    <div class="subbar reveal"><span class="tag">6B</span><h3>🛑 The 1099 question (14a/14b) — run it off the ledger, BY PAYEE</h3></div>
+  <div class="indent">
+    <p class="reveal"><b>This is a Yes/No that a signed return asserts under penalties of perjury, and it is answered wrong more often than any other question on Schedule B.</b></p>
+    <p class="reveal">🔑 <b>The test is per PAYEE for the year, not per account and not per payment.</b> Group the ledger&#8217;s transactions by the <code>Name</code> / vendor column and total each payee across the whole year. <b>Four $200 payments to one person is a 1099; one $500 payment to each of four people is not.</b> An account total tells you nothing either way.</p>
+    <div class="callout err reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">The three mistakes that cause almost all wrong answers</div>
+        <p><b>1 — Looking only at <code>Contract Labor</code>.</b> The question covers <b>all</b> Forms 1099. The biggest exposure is usually <b>RENT</b>, a <b>1099-MISC box 1</b> item at $600+ paid in a trade or business, skipped because people think &ldquo;1099 = contractors&rdquo;. Sweep every account that can carry a reportable payment.</p>
+        <p><b>2 — Treating an LLC as exempt.</b> Payments to a <b>corporation</b> are exempt (except legal fees). <b>An LLC is not a corporation</b> — it may be taxed as a sole proprietorship, partnership <em>or</em> corporation, and only the last is exempt. <b>The name cannot tell you; the W-9 does.</b> <code>Inc</code>/<code>Corp</code> is a reliable signal, and government bodies are exempt.</p>
+        <p><b>3 — Assuming an electronic payment shifts the duty.</b> Card and third-party-network payments are reported by the <em>processor</em> on a 1099-K, relieving the payer. <b>Zelle is NOT one of them</b> — bank-to-bank, no 1099-K, <b>the payer&#8217;s own obligation stands in full.</b></p>
+      </div>
+    </div>
+    <div class="callout warn reveal" role="note"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.8 2.5 17.5A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4.5"/><path d="M12 17h.01"/></svg></span>
+      <div class="cx">
+        <div class="cl">Check the threshold for the YEAR you are filing</div>
+        <p>It was <b>$600</b> through <b>TY2025</b>; the One Big Beautiful Bill Act raised it to <b>$2,000 for payments made after 31 December 2025</b> — from <b>TY2026</b>, indexed thereafter. Applying the new figure to an older year, or the old one to a newer year, <b>flips the answer</b>.</p>
+      </div>
+    </div>
+    <p class="reveal"><b>Two things that are NOT payments, and must be excluded before you conclude anything:</b> a <b>journal entry</b> sitting in an expense account (a reclass, an accrual, a deposit moved to rent) is not cash to a payee; and a transaction with <b>no vendor</b> needs identifying rather than counting — as likely an internal entry as a real payment.</p>
+    <p class="reveal">📌 <b>What &ldquo;look before you ask&rdquo; means here:</b> the ledger answers this question. Ask the client only for the <b>W-9s</b> the test actually turns on.</p>
+  </div>
 
     <div class="subbar reveal"><span class="tag">6A</span><h3>🛑 The §163(j) pair — the question whose POLARITY was reversed in TY2019</h3></div>
   <div class="indent">
@@ -1744,6 +1767,7 @@ line 2  =  [ COGS acct + ending Inventory acct &minus; beginning Inventory acct 
         <li>Schedule <b>M-2 line 8 equals Schedule L line 24</b> — ⚠️ <b>conditional</b>: only where the prior return ran capital contributions through <b>M-2 line 3</b> (8A). Where it did not, the two are not meant to agree, and forcing them is the error</li>
         <li>Schedule M-2 beginning balance matches last year's ending balance</li>
         <li>The <b>e-file was ACCEPTED</b>, not merely transmitted</li>
+        <li>🛑 <b>PRINT THE WHOLE RETURN AND LOOK AT THE FORM LIST — delete every blank form that got attached.</b> A form attaches the moment its parent line is touched, and <b>fixing the line does not detach it</b>: a number keyed on the wrong line, then moved, leaves its form behind — silently, and it transmits. <em>(Real one: a figure keyed on page 1 line <b>15, Depletion</b>, pulled in <b>Form T (Timber)</b> — four blank pages of a forestry form on a bathroom-fixture retailer&#8217;s return. The figure was corrected; Form T stayed. The same copy also carried a blank <b>Form 4797</b> and a blank <b>Schedule D</b>, asserting asset sales that never happened — seven of twenty pages were empty forms.)</em> <b>Deleting them changes no figure</b>, and leaving them in invites a question you have no reason to answer.</li>
         <li>The <b>K-1 percentages add to 100%</b>, and each Schedule K line equals the sum across all K-1s</li>
         <li><b>A Form 7203 exists for every shareholder who needs one</b></li>
         <li><b>Form 8879-CORP signed</b> before e-filing &mdash; <b>not</b> 8879-S, superseded from TY2022</li>
