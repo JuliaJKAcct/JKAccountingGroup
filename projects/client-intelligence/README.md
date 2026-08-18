@@ -35,6 +35,13 @@ personal data**. Every fact goes to the right home:
 |---|---|---|
 | Non-sensitive knowledge | Entity type, what they do, filing frequency, due dates, which portal/form, the process steps, our engagement | **This file** (the repo) |
 | Secrets & personal data | Logins, passwords, full account numbers, dollar figures, contact names/emails/phones | **Google Drive / Double / QuickBooks** — referenced here by **link**, never pasted |
+>
+> ⓘ **One exception, added 2026-08-18, and it is a DIFFERENT FILE — not a loosening of this one.**
+> The **figures for a return the firm prepared** live in
+> [`projects/tax-returns/<client>/<year>-<form>.md`](../tax-returns/) — every line, every amount,
+> every decision. **Dollar figures still never go in this file.** When a session learns a figure
+> while preparing a return, it belongs there; what the session learns *about the client* belongs
+> here.
 | **Business EIN** | The entity's own FEI/EIN | **This file** — public on Sunbiz _(Lilian, 2026-08-12)_. An **SSN/ITIN is not**, even when it is the entity's tax ID |
 
 So a client file **describes the process and points to where the sensitive value

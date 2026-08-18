@@ -1289,6 +1289,21 @@ const SOP_GROUPS = [
   {
     name: 'Tax preparation', note: 'Return prep & substantiation',
     items: [
+      { file: 'form-1120s-preparation.md', title: 'Form 1120-S — S-corporation return',
+        flowLede: 'Preparing an S-corporation return from the client\u2019s QuickBooks \u2014 written for a first-time preparer. Two things gate everything: the extension, which cannot be fixed afterwards, and the map, which you build by reproducing last year\u2019s filed return before you touch this year\u2019s.',
+        flow: [
+          { t: 'Gather', d: 'The prior-year FILED return, plus this year\u2019s and last year\u2019s QuickBooks P&L and balance sheet \u2014 four sources, and everything else is computed from them', ic: 'search' },
+          { t: 'Check the extension', d: 'Form 7004 moves the deadline from 15 March to 15 September. If it was never filed and the date has passed, stop and tell Lilian \u2014 the penalty runs per shareholder, per month', ic: 'check', k: 'gate' },
+          { t: 'Build the map', d: 'Reproduce last year\u2019s page 1 from last year\u2019s P&L and compare it to what was filed. Every difference is a firm convention to repeat, not an error to fix', ic: 'diagram', k: 'gate' },
+          { t: 'Form 1125-A', d: 'Cost of goods sold. Its line 8 feeds page 1 \u2014 and \u201cinventory at end of year\u201d is not always the account called Inventory', ic: 'form' },
+          { t: 'Page 1', d: 'Income, then deductions top-down: lines 7 to 19 are named categories, line 20 is the remainder, and ordinary business income lands on line 22', ic: 'edit' },
+          { t: 'Schedule B', d: 'One answer can remove two schedules \u2014 under $250,000 of receipts and assets, Schedules L and M-1 are not required', ic: 'steps' },
+          { t: 'Schedules L, M-1 and M-2', d: 'The balance sheet per books, the book-to-tax bridge, and the AAA. The beginning column is copied from last year, never recalculated', ic: 'save' },
+          { t: 'Schedule K', d: 'What travels to the owners \u2014 including the items that must never sit inside ordinary income, and line 18, which is what M-1 reconciles to', ic: 'send' },
+          { t: 'Form 7203 per shareholder', d: 'Basis. A loss beyond a shareholder\u2019s basis is suspended, not deducted \u2014 and two owners at the same percentage can have very different basis', ic: 'key', k: 'gate' },
+          { t: 'Tie out, sign, file', d: 'Every check in \u00a714 must pass \u2014 a failed tie-out is a mapping error, not a rounding one. Then Form 8879-CORP and e-file', ic: 'sign', k: 'done' },
+        ],
+        blurb: 'The firm\u2019s procedure for an S-corporation return, written for someone doing one for the first time: where every number comes from, not just which box it goes in. Carries the four sources every figure originates in and how they travel between the forms, the method at its centre \u2014 reproduce last year\u2019s filed return from last year\u2019s books to learn the client\u2019s conventions before filling in anything \u2014 plus the QuickBooks\u21921120-S line map, every formula in one place, the tie-out checks, and the ten pitfalls that have each bitten a real return.' },
       { file: 'child-dependent-care-provider-statement.md', title: 'Child & Dependent Care — Provider Statement',
         template: { pdf: 'child-dependent-care-provider-statement.pdf', png: 'child-dependent-care-provider-statement.png', name: 'Child and Dependent Care Provider Statement' },
         flowLede: 'When a client paid for dependent care with no transaction trail — a cash-paid babysitter, no invoices — this is how we substantiate the Child & Dependent Care Credit: from the blank form to a signed statement on file.',

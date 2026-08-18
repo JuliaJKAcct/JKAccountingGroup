@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** ⚠️ **WINDING DOWN — the company is closing and is no longer our client** (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-14
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-17
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,10 +34,13 @@
 - **Our engagement (services we provide):** Bookkeeping (Quarterly), Sales Tax (Monthly filing), Income Tax (Form 1120-S), 1099 Preparation, Annual Report. **Payroll is NOT a firm service for this client** — the client self-manages payroll through Gusto _(Double client properties, 2026-08-01)_
 - **Fiscal year-end:** _(pending — confirm)_
 - **Accounting platform:** QuickBooks Online — but ⚠️ **not reachable through Double.**
-  `get_client(706626)` returns `platform: "none"` _(checked 2026-08-14)_, so Double's financial
-  reports refuse the client outright (*"This tool is unavailable for None clients"*). The books have
-  to be opened in QuickBooks itself. **This records the state on the date checked and nothing more** —
-  whether the connection was removed during the wind-down or never existed was not investigated.
+  `get_client(706626)` returns `platform: "none"` _(re-checked 2026-08-17)_, so Double's financial
+  reports refuse the client outright (*"This tool is unavailable for None clients"*) — verified by
+  calling one, not inferred from the property. **The cause is settled: the QuickBooks was
+  disconnected when the company closed** _(Lilian, 2026-08-17)_, so this is the wind-down and not a
+  configuration fault to chase. ⚠️ **There is no second route.** The firm's own
+  `Intuit_QuickBooks` MCP connector is authorised on **JK Accounting Group's** books, not on a
+  client's — checked the same day. **Every remaining figure has to be exported by Lilian by hand.**
 
 ## 2. Contacts
 
@@ -58,7 +61,7 @@ the actual details.
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
 | Gusto | Client's own payroll platform — **not** a firm-managed service; the firm is copied on Gusto's automated due/late/invoice notices | _(n/a — client's own account)_ | Weekly pay periods; notices land in the firm's inbox _(Gmail, 2026-08-01)_ |
-| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the bath/shower lines — **both the KOLO and the BAI-branded ones**, which matters (see §5 on the MegaBAI question) — at a **single location** (`"KOLO" 3485 NW 19th St, Lauderdale Lakes, FL`). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
+| Shopify | E-commerce storefront "Kolo House" — **kolo.house**, admin `kolo-miami.myshopify.com`, on the **Shopify plan** (so the whole Inventory report family, including the month-end snapshot, is available) | _(n/a — client's own account)_ | Billing notices land in the firm's inbox _(Gmail, 2026-08-01)_. **Reachable from a Claude session through the Shopify MCP** — verified live 2026-08-14. Inventory **is** tracked on the bath/shower lines — **both the KOLO and the BAI-branded ones**, which matters (see §5 on the MegaBAI question) — at a **single location** (`"KOLO" — Lauderdale Lakes, FL` (street address in Double, not here)). ⛔ **But its "Cost per item" field is a formula, not a cost — see §5.** Tracking begins **August 2024**; before that the snapshot reads zero or negative and is unusable. Figures stay in Shopify, never here. |
 | Florida DOR e-Services | Sales-tax filing portal | _(n/a — firm-managed filing)_ | Returns/payments post to the account's Secure Message Center; confirmation e-mails follow _(Gmail, 2026-08-01)_ |
 | GovFile | Files the Florida Annual Report | _(n/a — third-party filing service)_ | Annual filing notice each spring _(Gmail, 2026-08-01)_ |
 | TaxDome (legacy) | Where an earlier business-information organizer was completed before/alongside the Double migration | _(n/a — firm login)_ | "2026 Kolo Florida Business information changes" organizer, completed 2026-04-22 _(Gmail/Double activity log, 2026-08-01)_ |
@@ -94,11 +97,97 @@ the actual details.
      section. Keep live, consequential work at the top and let settled or
      historical items sink. See .claude/skills/client-intelligence/SKILL.md. -->
 
-- 🛑 **THE COMPANY IS CLOSING — this is a wind-down, not an ongoing engagement.** Lilian
-  (2026-08-11): Kolo is **no longer our client**; the company is going to close. Over the coming
-  days the work is **closing the accounts** — the Florida sales-tax account, the Gusto
-  subscription, and the rest of the systems in §3. **Nothing here should be treated as a live
-  recurring obligation** without checking it against the wind-down list in §6 first.
+- 🛑 **THE COMPANY HAS CLOSED — and with it went the only read path to the books.** Lilian
+  (2026-08-11): Kolo is **no longer our client**; the company is going to close. **Closed as of
+  2026-08-17**, and **QuickBooks was disconnected as part of it** — so `platform: "none"` is not a
+  configuration glitch to chase, it is the wind-down (§1). **Every remaining figure for the 2025
+  return has to be exported by Lilian by hand.** The work left is the **final 2025 Form 1120-S**
+  and the account closures; **nothing here is a live recurring obligation** without checking it
+  against the wind-down list in §6 first.
+- 🧾 **The 1125-A "purchases" figure is REAL, and it is the pass-through door business — settled
+  from the 2025 general ledger, 2026-08-17.** No inventory merchandise was bought in 2025 (Lilian),
+  and the `Inventory` account has **exactly one entry all year**: the 31-Dec journal relieving it
+  for units sold. But `COGS` carries **two invoices from `United Porte`**, in April and August,
+  posted **straight to cost of sales without ever touching Inventory** — which is correct for goods
+  the client resells as an intermediary and never warehouses (the door line, §5). Together they are
+  **exactly** the goods-side residual in Form 1125-A line 2. **Both statements were true**: the
+  owner meant *we did not restock*, the ledger meant *goods cost was incurred*. **Nothing needs
+  correcting, and line 2 is right.** The rest of line 2 is the artifact — Shopify selling fees plus
+  the clearing account's growth, both consequences of the 2024 convention (§5 rule 1/2).
+- ✅ **The 2025 physical inventory count IS reflected — through the unit quantity, not an
+  adjusting entry** _(Lilian, 2026-08-17)_. The `Inventory` account's only movement all year is the
+  31-Dec relief for units sold, so ending inventory is opening minus cost of sales to the cent —
+  but the count is what **established the unit quantity** inside that entry. So the **book figure is the
+  right one** for Form 1125-A line 7 and Schedule L line 3, and there is no missing correction.
+  _(Asked because the alternative — a count whose findings were never posted — would have left the
+  errors it found sitting in the number going on the return. It did not.)_
+- ✅ **The two `United Porte` charges ARE purchases, and cost of goods sold is where they belong**
+  _(Lilian, 2026-08-17)_. Booked straight to COGS without passing through `Inventory`, they are
+  **exactly** the goods-side residual in 1125-A line 2 — which is therefore a real purchases figure,
+  not an artifact. Settled on the record so the question "the client bought nothing, why does the
+  return show purchases?" has a written answer next year.
+- 🧾 **`Taxes Paid` was 100% SALES TAX, and the entry behind it was posted TWICE — Lilian confirmed
+  the duplicate and deleted one, 2026-08-17.** The account held nothing but two identical 31-Dec
+  journal entries, `Dr Taxes Paid / Cr Channel Sales Tax Payable`, both captioned *"clear
+  residual sales tax payable (overpayment) to zero"*. **The duplicate was provable from the entry's
+  own description**: with one copy the sales-tax family nets to **zero**, as intended; with
+  two it lands on the **opposite sign** — not zero at all. **Read the sales-tax accounts as a
+  family** (the parent carried a **debit** balance from the year's remittances while the sub-account carried
+  the tax collected): neither shows the overpayment alone. 💵 **Kolo really did overpay
+  Florida** — the amount is small but real, and worth reclaiming **before the FL DOR account is closed** in the wind-down,
+  and note that **claiming the refund and deducting the write-off are mutually exclusive**. General
+  rule now in [SOP §5C-ii](../../sops/form-1120s-preparation.md).
+- 🔁 **The 31-Dec Shopify reconciliation is ONE compound entry, and it balances to the cent.** All
+  year QuickBooks sees only the **net payouts** — a single bank number with gross sales, discounts,
+  refunds, shipping, sales tax collected and Shopify's fees all buried inside it. At year end the
+  whole year is decomposed from Shopify's own reports, with the **Clearing Account as the balancing
+  figure**: gross sales − discounts − refunds + shipping + sales tax collected − selling fees = **what actually
+  reached the bank** ✓ — it cross-foots to the cent, and the figures live in QuickBooks. 🔑 It also
+  settles the method question: sales tax collected goes to a **liability**, never to revenue — so
+  the books are on the **net method** and remitting the tax is not a deduction. And because COGS,
+  the unit count and the ending inventory come out of this same entry and the same
+  reports, the entry cross-checking exactly is a good signal about the books generally.
+- 💸 **Why 2024 reported NO distributions and 2025 reports real ones — settled from the 2024 general
+  ledger, 2026-08-17, and the 2024 return is right.** The 2024 equity account did carry debits, but **almost all of it is a single round trip** — a deposit of a near-identical amount three days
+  earlier — and a further outflow left the same day a larger deposit arrived.
+  Netting those is correct. Against that the owner was a **very large net contributor**: a start-up year in which he funded
+  the company distributed nothing. **2025 is the
+  economic opposite** — a wind-down with 52 outflows spread over nine months, none with the 2024
+  pairing signature, and including **personal consumption** (Publix, KFC, Exxon, Amazon Prime,
+  Walmart) that cannot be netted against anything. ⚠️ **Do not read the blank 2024 line 7 as a
+  convention to repeat**: the convention was *net the round trips*, and applying that same rule to
+  2025 gives a real distributions figure. General rule now in
+  [SOP §5C-iv](../../sops/form-1120s-preparation.md).
+- 🏗️ **The 2024 capitalisation was IN KIND, by journal entry — which is why the equity accounts are
+  so large.** one owner's account carries four July-2024 journal entries — **inventory**, an amount equal to the
+  **whole fixed-asset register** (all three assets), an amount equal to the **Security Deposit**, and
+  one more. The other owner's **entire** capital account is one journal entry with no bank activity
+  at all. **The owners bought the assets, the inventory
+  and the deposit personally and contributed them.** Useful context for basis: these are
+  contributions, not purchases by the company.
+- 🗂️ **One equity account per shareholder holds contributions and distributions netted together.**
+  Normal bookkeeping, and correct — Schedule L only needs the net. **But Schedule K 16d, K-1 box
+  16D, M-2 line 7 and Form 7203 all need the gross halves**, so an S-corp return cannot be prepared
+  from the balance sheet for this client: **open the shareholder ledger and total debits and
+  credits separately.** This is the single step that nearly went missing on the 2025 return.
+- ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
+  thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
+  bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
+  `Meals`, on the post-TCJA reading that §274(n) reaches food and beverages provided on premises;
+  treating it as office supplies at 100% is the more aggressive alternative. **Lilian decides** —
+  it moves M-1 line 3b, Schedule K 16c, M-2 line 5 and page 1 line 20.
+- 💰 **The Security Deposit was EXPENSED TO RENT, and that stands — Lilian's decision, 2026-08-17.**
+  The 2025 general ledger names the entry: `12/31/2025 · Journal Entry · "Move security deposit to
+  rent expense"`, landing in **Store Rent**. Julia made it. **Lilian reviewed it and
+  ruled it correct — do not reverse it**, and do not re-raise it. So 2025 rent carries the deposit in
+  full, the deposit is **off** the balance sheet, Schedule L line 6 runs from the prior-year figure
+  **to zero**,
+  and there is no book/tax difference to reconcile because the treatment is the same on both sides.
+  ⓘ **The underlying facts, recorded because they are what the position rests on:** the landlord
+  kept the deposit when the company moved to a **different warehouse of his own**, it became the
+  deposit on the new lease, and it is refundable when they vacate. A session reading only those
+  facts would reach for an asset; **the firm's position is the expense, and this bullet exists so
+  the question is not reopened every time someone reads the file.**
 - ⛔ **Shopify's inventory VALUE is not a cost basis — the "Cost per item" field is a flat
   30%-of-retail formula.** Checked across eight variants spanning four price tiers, from the
   cheapest accessory to the most expensive vanity: **every one came back at exactly 30.0% of its
@@ -165,6 +254,13 @@ the actual details.
   and 10 did not extract, so this is NOT established as absent.** It matters because 2024 closed
   in an ordinary business **loss**: whether the shareholders could deduct it turns on basis.
   Check the PDF by hand. _(2026-08-14.)_
+- 🔢 **2025 return — the two figures that were blocking it are settled.** The **2025 depreciation
+  is on ATX's Form 4562** and reconciles exactly to ATX's Schedule L accumulated depreciation less
+  the book figure carried from 2024 *(confirmed by Lilian, 2026-08-14)*. And the account named
+  `Payroll Expenses` in 2025 is **the Gusto subscription, not wages** — so **page 1 line 8 is
+  zero** and that fee belongs in other deductions. ⚠️ **The 2024 return took the `Wages & Salary`
+  CHILD account to line 8 and `Payroll Tax` to line 12 — never the `Payroll Expenses` parent
+  subtotal.** Repeat that mapping. _(Figures live in QuickBooks and ATX.)_
 - ✅ **PAYROLL STOPPED — settled by Lilian, 2026-08-14: "la nómina paró, no se corrieron más
   payrolls."** So the near-zero payroll on the 2025 P&L is the fact, not a gap in the books. §3/§4
   describe the weekly Gusto payroll in the past tense for this reason — the due/late notices in the
@@ -299,6 +395,59 @@ the actual details.
   simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
   **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
   Lilian.)_
+- 2026-08-18 — **The 2025 Form 1120-S is prepared, and the whole working paper is now in the repo.**
+  Lilian filled the return in ATX from the figures this session produced, and the filed copy was
+  read back and checked line by line: **every tie-out passes** — Box F = Schedule L 15 = 27, M-1
+  line 8 = Schedule K 18, M-2 line 8 = Schedule L 24, and Form 7203 line 6 below line 5 (no
+  distribution above basis, loss fully deductible). Three items were left open at filing: a
+  **page-1 line 15/16 placement** to confirm on screen, the **signature title**, and the
+  **1099 question** on Contract Labor. ⚠️ **A presentation choice worth knowing:** ATX put the
+  return on a **tax-basis** Schedule L — accumulated depreciation carries the 2025 figure and M-1
+  line 1 is the matching adjusted number with no line 6a — so **the filed Schedule L does not
+  equal QuickBooks** by the year's depreciation. Internally consistent, and deliberate.
+  🔑 **Everything — every line, every figure, every decision and the carry-forward into the 2026
+  FINAL return — is in [`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`](../../tax-returns/kolo-florida-inc/2025-form-1120s.md).**
+  That file exists because this session gets deleted; **the figures live there and not here**, which
+  is the split the new folder establishes. _(Worked by Lilian.)_
+- 2026-08-17 — **The 2024 filed return was read a second time and closed six open questions at
+  once** (through the redactor, that one year only): 1125-A line 9a is **Cost**; ownership was
+  **50/50**; the shareholder money is **contributed capital, not loans** (Schedule L line 19 blank
+  *and* both K-1 loan boxes blank); and the header constants. It also produced the Schedule L
+  equity convention that a session would otherwise have guessed wrong — **a small capital-stock figure with
+  both shareholders' capital swept into line 24 Retained earnings**, which forces the contributions
+  through **M-2 line 3** for L-24 to keep agreeing with M-2-8. All four are now §5/§8A material in
+  the [SOP](../../sops/form-1120s-preparation.md). ⚠️ **What it did NOT settle is when Ihor Naum
+  left** — his 2024 K-1 is marked **`Final`** while box H shows him still holding **50 of 100
+  shares at 31 Dec 2024** and box G gives him a full **50%**. The two point opposite ways. _(Worked
+  by Lilian. Per her standing instruction the 2024 return is **not** being reviewed — this is §3's
+  build-the-map-from-the-prior-year read, and the ambiguity is reported because 2025 inherits it.)_
+- 2026-08-17 — **Three facts from Lilian that change the return, and one that closes the client.**
+  (a) **The company has CLOSED**, and its QuickBooks is disconnected as a result — so there is no
+  longer any read path to the books from a session (§1, Outstanding). (b) **The security deposit
+  was never lost**: the landlord carried it to a *new* warehouse under the same landlord and it is
+  refundable on exit. ⛔ **The conclusion drawn from that — that the books zeroing it was an error
+  to reverse — was SUPERSEDED the same day: Lilian ruled the entry STANDS. See §5.** (c) **No
+  merchandise was bought in 2025, but a physical inventory count was taken** because the prior
+  inventory carried errors. ⛔ **ALSO SUPERSEDED, see §5:** the figure that fell out of 1125-A
+  line 2 turned out to be **two real `United Porte` purchase invoices** booked straight to cost of
+  sales, so it **is** evidence of purchases — and the count is reflected through the **unit
+  quantity**, not a missing adjustment. _(Worked by Lilian.)_
+- 2026-08-17 — **The 2025 general ledger arrived and settled every remaining figure.** ⚠️ The first
+  export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; the two were
+  compared account by account before anything was relied on — **identical to the cent**, because
+  this client has no receivables and no payables — and Lilian re-sent the accrual copy anyway.
+  What it settled: the security-deposit write-off went to **Store Rent** — which Lilian then ruled
+  **correct and standing** (§5), so it is not reversed; the
+  1125-A line-2 residual is **two `United Porte` invoices booked straight to cost of sales**, the
+  pass-through door line, so **nothing needs correcting and both "we bought nothing" and the
+  ledger were right**; **one owner took real distributions** against a larger figure of
+  contributions, which the netted account had been hiding; **Ihor's account did not move at all**;
+  and `Refreshments (Tax Review)` is **Primo Water office water and coffee**, which makes it a
+  judgment call rather than a fact. It also surfaced what the books do **not** contain: **no entry
+  anywhere for the physical inventory count.** All nine forms were recomputed from it and delivered
+  in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
+  pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
+  ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
@@ -319,22 +468,38 @@ the actual details.
 <!-- This exact heading is what the client-card render looks up. Renaming it makes
      every row below vanish from the team's view. -->
 
-**Blocking the 2025 Form 1120-S** — asked of Lilian 2026-08-14, none answered yet:
+**Blocking the 2025 Form 1120-S** — ⚠️ **QuickBooks is gone, so every remaining figure has to be
+exported by Lilian.** The company has closed and its QBO is disconnected (§1), confirmed
+2026-08-17 from both routes: Double returns `platform: "none"` and refuses the reports outright
+(*"This tool is unavailable for None clients"*), and the firm's own Intuit QuickBooks connector is
+authorised on **JK Accounting Group**, not on a client. There is no read path left.
 
-- [ ] **The 2024 depreciation schedule / Form 4562 detail.** Nothing was recorded in 2025 (§5) and
-      2025 is a full year for all three assets, so the deduction has to be computed — but the method
-      and lives are only on that schedule. **This is what blocks page 1 of the return.**
-- [ ] **The two shareholders' ownership percentages**, from the 2024 Schedule K-1s — the loss cannot
-      be allocated, and basis cannot be tested, without them (§5).
-- [ ] **Are the shareholder equity accounts capital contributions or loans?** Decides whether the
-      accumulated losses are deductible or suspended (§5).
-- [ ] **What happened to the Security Deposit** during 2025 (§5).
-- [ ] **Which valuation-method box was ticked on line 9a** of the 2024 Form 1125-A — 2025 must match.
-- [ ] **Is `Refreshments (Tax Review)` a meals account?** If so it joins the 50% disallowance in the
-      Schedule M-1 adjustment.
-
-**Standing, not blocking:**
-
+- [x] **2025 General Ledger — RECEIVED 2026-08-17**, and it closed four rows at once. ⚠️ The first
+      export came out **Cash Basis** while the P&L and balance sheet were **Accrual**; every account
+      total matched to the cent (no receivables, no payables), and Lilian re-sent the accrual copy.
+      Checked, not assumed.
+- [x] **`Security Deposit` → credited to Store Rent** by a 31-Dec journal entry (Julia's).
+      **Lilian ruled it correct on 2026-08-17 — it stands, do not reverse** (§5).
+- [x] **`Inventory` → one entry all year**, the cost-of-sales relief. The line-2 residual is two
+      `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ✅ And the physical count **is** reflected —
+      through the unit quantity inside that entry, not a separate adjusting entry (§5).
+- [x] **`Mykola Kozlovskiy` → 79 movements, contributions in and distributions out.** **There WERE
+      distributions**, netted inside the account exactly as suspected. Feeds Schedule K 16d, K-1
+      box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution
+      is far below basis, so no capital gain.
+- [x] **`Ihor Naum` → zero movement in 2025.** Beginning balance only.
+- [x] **`Refreshments (Tax Review)` → 50%, decided by Lilian 2026-08-17.** Primo Water office
+      water/coffee (§5) joins `Meals` in the food-and-beverage base, half of the combined figure disallowed.
+- [x] **Ihor Naum is OUT for 2025 — settled by Lilian, 2026-08-17.** His 2024 K-1 carries a ticked
+      **`Final K-1`**, which is the prior preparer's explicit statement that it was his last one.
+      So **box I = 1, one K-1 at 100%, one Form 7203.** The box governs; the 50-shares-at-year-end
+      reading on the same K-1 was raised and she ruled on it. ⓘ **No figure moves** — the equity
+      sweep convention (§5) puts every capital account inside Schedule L line 24 regardless of
+      whose it is, so his capital sitting untouched on the 2025 balance sheet changes nothing on
+      this return. It may matter in **2026**, the final year: whatever Mykola paid him for the
+      shares is Mykola's **outside** basis, is nowhere in the company's books, and decides the gain
+      or loss on liquidation. The general rule is now
+      [SOP §3A](../../sops/form-1120s-preparation.md).
 - [ ] **Are the BAI-branded lines Kolo's own stock?** They are tracked, unlike the intermediary
       kitchen/door lines, and they are among the largest lines by value (§5).
 - [ ] **Is the warehouse lease still running?** Four fifths of 2025's expenses and the largest
