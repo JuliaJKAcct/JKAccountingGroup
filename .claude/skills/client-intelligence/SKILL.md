@@ -437,6 +437,30 @@ meetings, notes, or emails"* — accurate, and worth nothing. Full write-up in
 [`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
 step 1b.)_
 
+### What the call budget is — and what it is NOT
+
+The numbers in this skill and in the routine (~10–15 calls/client, ~5 for the chase pass, ~6 full
+historical passes per run) are **self-imposed, not a vendor quota.** Nothing rejects the 200th call.
+Say that plainly when asked, because a session that thinks it is rationing a hard limit cuts corners
+it did not need to cut — and one that thinks there is no limit at all writes a run that cannot finish.
+
+- **Double has no published call cap** ([`double-mcp`](../double-mcp/SKILL.md) §0). Neither do Gmail,
+  Drive, Ping or QuickBooks in anything the firm has hit.
+- **Odoo's hard 50/day is real but irrelevant here** — a CI sweep never touches Odoo. It is the cap
+  people remember and the wrong one for this job.
+- **The real ceiling is one session's context window**, plus the shared Claude account's usage. It
+  does not error, it **degrades**: 48 clients × ~20 calls is ~1,000 tool results in one conversation,
+  so the clients at the end of the roster get a thinner pass than the ones at the start while the
+  report still reads as though everything was swept.
+
+**The lever, when a run stops fitting: subagents.** [`double-mcp`](../double-mcp/SKILL.md) §5 item 4
+already says to delegate roster-wide sweeps to one — each gets its own context, so N clients cost N
+compact summaries instead of N×20 raw payloads. ⚠️ **Never for organizer responses** (§2.2 — each
+subagent is another copy of a client's SSNs); a CI sweep does not read those, so the ban does not
+reach this work. Full reasoning in
+[`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
+→ *What the "call budget" actually is*.
+
 ### Incremental sweeps (token discipline)
 
 `sweep-state.md` records the date each client is swept through. Bound every search to

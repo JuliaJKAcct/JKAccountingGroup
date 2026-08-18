@@ -92,6 +92,50 @@ For the scoped clients, once per week:
    [`sop-proposals.md`](../sop-proposals.md) for the loop. **The report is not a gate** —
    nothing waits on it being read.
 
+## What the "call budget" actually is — there is NO vendor quota here
+
+**Asked by Lilian, 2026-08-18: are there limits on running Client Intelligence?** The honest answer
+is that the numbers in this file — *"~10–15 calls per client"*, *"~5 for the chase pass"*, *"~6 full
+historical passes per run"* — are **self-imposed discipline, not a quota anyone enforces.** Nothing
+rejects the 200th call. Saying so plainly matters, because a session that believes it is rationing a
+hard quota will quietly cut corners it did not need to cut.
+
+| | Real limit? |
+|---|---|
+| **Double MCP** — the sweep's main source | ❌ **No published cap** ([`double-mcp`](../../../.claude/skills/double-mcp/SKILL.md) §0). Not a quota |
+| **Gmail · Drive · Ping · QuickBooks** | ❌ No documented cap the firm has hit |
+| **Odoo MCP** — hard **50 calls/day**, firm-wide | ⚠️ Real, but **the CI sweep never touches Odoo.** This is the cap people remember; it is the wrong one for this job |
+| 🔴 **One session's context window** | ✅ **THE actual ceiling.** Every tool result is text that stays in the run's context. It does not error — it degrades |
+| 🔴 **The shared Claude account's usage** | ✅ Real. A sweep that burns Saturday morning leaves less for Julia's and Lilian's own sessions that day |
+
+**The arithmetic is the point.** 48 client files × (10–15 calls for step 1, ~5 for step 1b) is
+**720–960 tool results in a single conversation.** No context holds that. So the run does not fail
+loudly — it *thins out*: the clients at the end of the roster get a shallower pass than the ones at
+the start, the catch-up cap gets spent early, and the report still reads as though everything was
+swept. **That is the most likely reason quality has been uneven, and it is a design problem, not a
+discipline problem.**
+
+### The strategy that is already in the repo and is not being used: subagents
+
+[`double-mcp`](../../../.claude/skills/double-mcp/SKILL.md) §5 item 4 — *"Delegate roster-wide
+sweeps to a subagent … A 120-client property sweep is one subagent, not 120 calls in the main
+thread"* — **the current Routine prompt uses none.** A subagent gets its **own context**, so N
+clients cost the main run N compact summaries instead of N×20 raw payloads. That is what turns
+*"every client, every week, and chase every open item"* from unaffordable into routine.
+
+⚠️ **The one carve-out, and it does not bite here:** subagents are **banned for organizer
+responses** (§2.2) because each one is another copy of a client's SSNs. **A Client-Intelligence
+sweep never reads organizer responses**, so the ban does not apply to this work — but any future
+step that adds them would have to stay in the main thread.
+
+🔵 **Not adopted yet, deliberately.** As of 2026-08-18 the current prompt **has never run once**
+(see above). Changing it again before its first execution would mean debugging two changes at
+the same time and re-pasting a prompt whose credentials cannot be read back. **Let it run one
+Saturday, read that report, then decide** — the report now states how many clients got a full pass,
+how many were deferred, and how many open items went unchased, which is exactly the evidence this
+decision needs. _(Lilian raised the strategy question; this is the answer parked where the next
+session will find it.)_
+
 ## The approval line — CI merges itself, SOPs wait for Lilian
 
 **Lilian's decision, 2026-08-11.** The sweep used to push its work to a branch and wait for
@@ -319,7 +363,8 @@ the line that left three weeks of Client Intelligence stranded. (Quoted exactly,
 searched for in the live Routine to check whether the update has happened.)
 
 🔵 **RESOLVED 2026-08-18 for the stranded run, and the assumption underneath this section turned out to be BACKWARDS.** Lilian produced the live prompt on 2026-08-18. It is **richer than the copy this file was carrying**, not staler: it already said *"GET THEM ONTO main YOURSELF"*, and it carries a whole **COVERAGE CHECK** step that the repo's block did not have at all. **So "the repo is ahead, the Routine is behind" was wrong in both directions at once**, and this file spent days telling readers the opposite of the truth about its own most important section.
-> ⚠️ **What is still unexplained, and worth one question before trusting any of this:** if the live prompt already said to merge, **why did the 2026-08-15 run leave its work on a branch and write *"per this run's instructions"*?** Either the prompt was updated *after* that run, or something else overrode it. **Do not close this out until someone says which.**
+> ✅ **ANSWERED by Lilian, 2026-08-18 — the prompt was updated AFTER that run, and the new one has never executed.** She replaced it during the week following Saturday 2026-08-15, from a version produced in another session. The Routine fires **Saturdays only**, so **as of 2026-08-18 the current prompt has not run once.** That fully explains the contradiction: the 2026-08-15 run executed the *old* prompt — the one carrying *"Do NOT merge to main"* — and its report was accurate about the instructions it actually had. **Nothing overrode anything, and nothing is broken here.**
+> ⓘ **Two consequences worth holding on to.** First, **the next Saturday run is the first real test** of the merge rule, the coverage check and step 1b at once — read that report properly rather than skimming it. Second, and more generally: **a Routine's behaviour lags its prompt by up to a week**, so a run's output is evidence about the prompt that was live *when it fired*, never about the one sitting there now. This session spent real effort diagnosing a "regression" that was simply a prompt newer than its last execution.
 > ✅ **The block below is now the 2026-08-18 version, and it is the same text Lilian was given to paste**, so the two finally agree. Keep them in sync from here: when this block changes, the Routine still needs the paste (the credentials are the reason — see below).
 
 🔴 **THE 2026-08-15 RUN'S WORK WAS STRANDED, AND IS NOW RECOVERED (PR #235, merged 2026-08-18).** This is no longer a
