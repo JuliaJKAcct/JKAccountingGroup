@@ -300,8 +300,8 @@ visible rather than assumed done.
      full historical pass has actually run.** This reverses what this step used to say, and the
      reason is that a row is **a bound on the next run's searches**, not a record of existence: write
      `2026-08-08` for a client nobody has ever swept and the Saturday run searches only *after* that
-     date and **skips their entire history permanently**. The routine's own rule (b) already does the
-     right thing with a **missing** row — *a client in scope with no row gets a one-time full
+     date and **skips their entire history permanently**. The routine already does the
+     right thing with a **missing** row (step 2c queues the full pass; this was "rule (b)" before the 2026-08-18 rewrite dropped the lettering) — *a client in scope with no row gets a one-time full
      historical sweep, then a row.* So: add them to the scope table, and add the row only when the
      pass that justifies it has run. `sweep-state.md` names the three groups currently in that state.
      _(Corrected 2026-08-14 — the old instruction would have destroyed the history of 14 clients
@@ -405,7 +405,7 @@ So when any session creates a client file: **add the client to the scope table**
 table if they are archived) in
 [`weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md), and
 **leave the ledger alone.** A missing row is not a gap — it is the signal that says *this client has
-never been swept, give them a full historical pass*, and rule (b) already acts on it correctly.
+never been swept, give them a full historical pass*, and the Routine's step 2c queues it for a full historical pass and step 4's cap rations it (the old prompt called this "rule (b)"; the 2026-08-18 rewrite dropped the lettering).
 
 ⓘ **Measured 2026-08-18, so nobody re-raises this as a bug:** 48 client files, **28 ledger rows**,
 **20 files with no row** — and **all 48 are named in the scope or exclusion tables.** Nothing is
@@ -482,7 +482,8 @@ run.** Advance baselines **in the same commit** as the file updates. Full rules 
 When asked "what's missing" (or on the weekly repo audit), sweep all of `clients/` and
 check, per client: every section present and in order; `_(pending)_` on unknown fields;
 the Double + Drive links present in §7; owner-group cross-links **bidirectional**
-(A links B ⇒ B links A); and the client present + consistent across the README index,
+(A links B ⇒ B links A); and the client present + consistent across the README index and `weekend-ci-sweep.md`'s **scope table** (or its **exclusion table**, for archived clients).
+  🛑 **A client must NOT be required to have a `sweep-state.md` row, and the audit must never "fix" a missing one.** A row is a search **bound** written *after* a first full pass, so adding one for a never-swept client erases their history. **20 of 48 files legitimately have no row** (measured 2026-08-18). Report a missing row as *"first full pass owed"*, never as index drift. ⚠️ **The `CLIENTS list` this line used to name no longer exists** — the 2026-08-18 prompt rewrite removed it; the scope table is the only client list.
 `weekend-ci-sweep.md` (scope table **and** CLIENTS list), and `sweep-state.md` — slugs
 and Double ids matching. **Archived / `Status: Former` clients are the deliberate
 exception:** they belong in `weekend-ci-sweep.md`'s **"Excluded — archived clients"**

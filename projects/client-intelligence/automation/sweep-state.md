@@ -30,6 +30,18 @@ list grows.
    48 are named in `weekend-ci-sweep.md`'s scope or exclusion table, so **none of them is invisible
    to the routine.** Those 20 are the first-pass queue, draining at ~6 per run.
 
+4. **Update this table in the same commit** as the client-file updates at the end
+   of every sweep (state and content must never drift apart). Set the new baseline
+   to the run date for every client actually swept.
+5. If a sweep fails partway, only advance the baselines of the clients that were
+   fully processed.
+6. **Cap the catch-up work per run.** A first-time or coverage-gap **full historical
+   pass** is expensive, so do **at most ~6 of them per run** (priority order:
+   QuickBooks / active clients first, then the rest); the remaining catch-ups wait
+   for the next run. This keeps any single Saturday within budget no matter how many
+   clients get added. The cheap **incremental** (post-baseline) passes on
+   already-covered clients still run for **all** of them every time.
+
 > ⚠️ **A baseline here says nothing about the migrated TaxDome notes.** This ledger covers
 > Ping, Double, Gmail (and Drive where noted) — **not** the notes carried over from each
 > client's TaxDome profile. **No weekend sweep reads those** — they were read once, by hand, on
@@ -74,7 +86,7 @@ list grows.
 > **THREE GROUPS OF CLIENTS DELIBERATELY HAVE NO ROW HERE — and the omission is the point.**
 > A row is a *bound* on the next run's searches, so writing one for a client who has never been
 > swept would make the next run search from that date forward and **skip their entire history for
-> good**. The routine's rule (b) does the right thing with a missing row: **a client in scope with
+> good**. The routine does the right thing with a missing row — its **step 2c** queues the pass (older notes call this "rule (b)"; the 2026-08-18 prompt rewrite dropped the lettering): **a client in scope with
 > no row gets a one-time full historical sweep, then a row.** Leave all three groups out until that pass
 > runs.
 >
