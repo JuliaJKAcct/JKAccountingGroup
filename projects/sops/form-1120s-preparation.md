@@ -793,8 +793,17 @@ asset** to that asset's *accumulated depreciation* (balance sheet, never reverse
 
 📌 **The asset accounts move on DISPOSAL, and then both sides go together** — credit the asset for
 its full original cost, debit the accumulated depreciation for everything taken, and the difference
-against proceeds is the gain or loss (Form 4797). **That is the entry a final return needs**, and
-it is the reason the per-asset split above is not a formality.
+and the two are cleared together. **That is the entry a final return needs**, and it is the reason
+the per-asset split above is not a formality.
+
+🛑 **But the books entry is NOT the tax computation.** On a **sale**, gain = amount realized −
+adjusted basis, and **selling expenses go on the BASIS side** — Form 4797 line 21 is *"Cost or
+other basis **plus expense of sale**"* — while line 22 uses **depreciation allowed or allowable**,
+the *tax* figure, which equals the contra account only when the books carried tax depreciation.
+Scrapping or abandonment is an ordinary loss on **Form 4797 line 10**. ⛔ **On a LIQUIDATION there
+are no proceeds and §336(a) deems a sale at FAIR MARKET VALUE** — do not compute a full write-off
+loss because no cash came in — and **§336(d)** can disallow the loss where the distributee is a
+**related person**, which in a closely held S corporation it usually is.
 
 **If the register is unreachable** — the client cancelled the subscription, the engagement ended —
 **record the entry as a pending instruction in the return's working paper (§15A) with the total,
@@ -872,9 +881,14 @@ full of live 1099 duties.
 ⛔ **Mistake 4 — reading the account NAME instead of the arrangement.** The instructions except
 *"payments for **merchandise, telegrams, telephone, freight, storage, and similar items**"*, and
 they also make **rent** of $600+ reportable in box 1. **So an account called `Storage Rent` sits on
-top of a genuine fork:** warehousing / 3PL / fulfilment **services** are **excepted**, while a
-**lease of identified space** is **box 1 rent**. **The contract decides, not the chart of
-accounts** — a bookkeeper's caption is evidence of nothing. The same trap runs the other way:
+top of a genuine fork, and it has more than two branches.** Storing the client's **inventory** — no
+identified space, a bill that moves with volume — is **excepted**. A **lease of identified space**
+is **box 1 rent**. **Predominantly fulfilment work** (pick/pack, kitting, returns) is on **neither**
+list: the exception names *storage*, not order fulfilment, so treat it conservatively as a service
+on the **1099-NEC**. A contract that genuinely does both, separately priced, is **prorated**.
+**What decides it is the signed agreement — its title, its premises clause and its fee schedule —
+read with one full invoice showing how the charge is computed**, never the chart of accounts.
+⛔ **And a payee's NAME is not evidence either** — `LLC` is not a usable signal of tax status. The same trap runs the other way:
 freight and merchandise are excepted no matter how large.
 
 **The rest of the exception list, because people rebuild it from memory and get it short:**

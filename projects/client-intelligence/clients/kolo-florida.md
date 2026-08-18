@@ -410,12 +410,14 @@ the actual details.
   2025 General Ledger found **three payees over the $600 threshold** — the **landlord**, the
   **storage/logistics provider**, and one **individual paid by Zelle** out of `Contract Labor`.
   ⚠️ **The storage one FORKS and must not be assumed:** the 1099-MISC instructions expressly except
-  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **warehousing
-  or 3PL services are not reportable** while a **lease of identified space** is box-1 rent. **The
-  contract decides — the account caption `Storage Rent` is evidence of nothing.** It does not
+  *"merchandise, telegrams, telephone, freight, **storage**, and similar items"*, so **storing the client's inventory
+  is excepted** while a **lease of identified space** is box-1 rent — and **predominantly fulfilment
+  work is on neither list**, which points to a 1099-NEC. **The signed agreement decides — its
+  premises clause and its fee schedule. The account caption `Storage Rent` is evidence of nothing,
+  and neither is a payee name.** It does not
   change the 14a answer, which the other two carry on their own; it changes which forms get filed.
   ⚠️ **The belief that nothing reached $600 came from looking at `Contract Labor` alone; RENT is
-  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle it** — an LLC is
+  the bigger exposure** and is a 1099-MISC box 1 item. **W-9s for the three settle 14a** (not which form the storage payee gets) — an LLC is
   *not* automatically exempt, only one taxed as a corporation is, and **Zelle issues no 1099-K so
   it does not relieve the payer.** *(The firm's own fee is exempt — we are a Corp.)*
   **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
