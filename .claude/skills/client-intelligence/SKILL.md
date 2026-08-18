@@ -404,15 +404,18 @@ direction**: it can only see things that *happened*. It cannot see
 - or, worst, a thing that **did happen and nobody looked for**, because the client's own file
   said to watch for it and no search was ever pointed at it.
 
-So after the enrichment pass, **re-read the client file's `Outstanding items` and `Information
-still needed`, and take each entry back to the sources as a named query**: *did this arrive?* Then
-report every one that is still open **with its age in days** and any deadline.
+So **before you write the enrichment** — this is **step 1b** of the routine, between the sweep and
+the file update, so everything lands in one commit — **re-read the client file's `Outstanding
+items` and `Information still needed`, and take each entry back to the sources as a named query**:
+*did this arrive?* Then report every one that is still open **with its age in days** and any
+deadline. Budget **~5 calls per client** inside the same ceiling: deadline items first, then the
+oldest; **name whatever you had no budget to chase** rather than letting it print as "no movement".
 
 ⚠️ **Treat "nothing new" as a result that still needs checking, never as a clear.** They are
 different findings and must read differently.
 
 _(**The run that proved it.** Two Business Tax Receipt applications, 2026-08-18. The issued
-certificate for one had **arrived by email 24 days earlier** while the file still read "if it
+certificate for one had **arrived by email 26 days earlier** while the file still read "if it
 hasn't arrived yet" — **two separate full historical Gmail passes** had swept that client and
 neither found it, because "what changed this week?" was the only question ever asked. Its
 **Sept 30 renewal** was six weeks out and uncalendared. The other client's awaited document had

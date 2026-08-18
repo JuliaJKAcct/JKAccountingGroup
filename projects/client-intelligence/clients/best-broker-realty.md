@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-08
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-18
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -82,7 +82,7 @@ the actual details.
   - **Broward County side is complete** (received 2026-07-15). The **City of Hollywood** application was **re-categorized to Broker/Real Estate**; the category-difference balance was **paid 2026-07-23** and the payment confirmation was sent to the city's revenue analyst.
   - The client provided the **DBPR real-estate license** (brokerage **CQ**; the qualifying broker's **BK**), which the firm **emailed to the City of Hollywood on 2026-07-16**.
   - The city's status page now shows **Application Status: Approved · LBTR Status: Active** — the receipt is issued.
-  - ✅ **The certificate itself DID arrive, the same day — this was left open in error.** Tatiana Lloyd emailed it on **2026-07-23** ("License: 083146-2026 for BEST BROKER REALTY LLC Document", attachment) and the city separately sent a **"Print Your Local Business Tax Receipt #083146-2026"** email from `paybusinesstaxreceipt@hollywoodfl.org`. Both are in Julia's inbox. _(Found 2026-08-18; the file had said "if it hasn't arrived yet" since 2026-07-23.)_
+  - ✅ **The certificate itself DID arrive, the same day — this was left open in error.** The city's revenue analyst emailed it on **2026-07-23** (subject begins "License:", with the receipt PDF attached), and the city separately sent a **"Print Your Local Business Tax Receipt"** email from `paybusinesstaxreceipt@hollywoodfl.org`. Both are in Julia's inbox. **The receipt number and the analyst's name are in the Double note, not here.** _(Found 2026-08-18; the file had said "if it hasn't arrived yet" since 2026-07-23.)_
   - ⚠️ **But it does not appear to have been SAVED.** A Drive search on the receipt number (title and full text) and on BTR/LBTR titles modified since 2026-07-01 returned the county receipt, both payment receipts and the submission confirmation — **not the issued city certificate.** _(Named searches, 2026-08-18 — that is what those searches found, not a guarantee it is nowhere.)_ **Next action: save the 2026-07-23 attachment into the client's Drive folder.**
   - **BTR / LBTR number, application ID, folio, business address, amounts and the payment reference are in the Double note** (2026-07-23).
   - **Next:** calendar the **Sept 30** annual renewal (tax year Oct 1 – Sep 30).
@@ -91,7 +91,7 @@ the actual details.
 ## 5. Key facts & quirks
 
 - As a real estate brokerage, the City of Hollywood BTR requires a **DBPR real-estate license** (brokerage **CQ**, ideally the qualifying broker's **BK**). The client provided it; the firm sent it to the city on **2026-07-16**.
-- Best Broker is the **master tenant** at its Hollywood, FL business location (1047 Buchanan St); **Pro Title Agency subleases** space from it, and the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15)_
+- ⚠️ **SUPERSEDED 2026-08-18 — read the correction three bullets down before using this.** *"Best Broker is the master tenant at 1047 Buchanan St; Pro Title Agency subleases space from it."* The sublease is real, but Best Broker is **not** the sole tenant — both companies are named jointly on the owner's lease. What still holds: the two clients **share a principal** — see [`pro-title-agency.md`](./pro-title-agency.md). _(Double note, 2026-07-15; corrected 2026-08-18)_
 - **Best Broker Realty's landlord — the property owner of 1047 Buchanan St — is SYNERGY MOOD LLC.** Its own City of Hollywood BTR (**Application #40663**) was filed and approved on that basis.
 - 🔴 **CORRECTED 2026-08-18 — Best Broker is NOT the sole tenant: it shares the lease with Pro Title Agency.** The signed Synergy Mood LLC lease of **2026-02-26** (term 2026-03-01 → 2027-02-28) names **"Best Broker Realty LLC and PRO TITLE AGENCY LLC"** *jointly* as Tenant. The Best Broker ↔ Pro Title sublease sits **on top of** that co-tenancy rather than creating Pro Title's only right to be there.
   ⚠️ **From 2026-07-29 to 2026-08-18 both files said Best Broker was the sole master tenant and Pro Title a pure sub-tenant** — and the firm argued exactly that to the City of Hollywood in writing while Pro Title's application (#40698) stalled for three weeks over the supposedly non-existent direct lease. The document had existed since February. See [`pro-title-agency.md`](./pro-title-agency.md) §4/§5/§6 for the full sequence.
@@ -119,8 +119,8 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Two residuals, both small and both still open as at **2026-08-18**:
-  - **Save the certificate.** It arrived by email 2026-07-23 (Tatiana Lloyd's "License: 083146-2026 … Document", plus the city's print link) and a Drive search does not find it filed — put it in the client's Drive folder. _(No longer "if it arrives" — it arrived.)_
-  - ⏰ **Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30). **Six weeks out and still not calendared** — this is the one with a real deadline. _(Double note 2026-07-23)_
+  - **Save the certificate.** It arrived by email 2026-07-23 (the analyst's "License: …" message with the PDF, plus the city's print link) and a Drive search does not find it filed — put it in the client's Drive folder. _(No longer "if it arrives" — it arrived.)_ Receipt number in the Double note.
+  - ⏰ **Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30) — **six weeks out**, and the one item here with a real deadline. **No reminder was found:** a semantic search of Julia's **primary** Google Calendar for the renewal returned nothing on 2026-08-18. _(That is the search that was run — one calendar, semantic, not an exhaustive check of every calendar the firm keeps. If it is already booked somewhere, this costs a moment to dismiss.)_ _(Double note 2026-07-23)_
 - **Unconfirmed:** a 2026-03-14 internal note asked to update Best Broker's (and several sibling entities') address with the IRS via Form 8822-B as part of an entity-cleanup pass — no confirmation found yet that this was completed for Best Broker specifically. _(Gmail, found 2026-08-01)_
 
 ### Information still needed
