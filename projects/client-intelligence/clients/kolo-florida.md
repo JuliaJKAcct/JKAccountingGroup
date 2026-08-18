@@ -428,9 +428,9 @@ the actual details.
   else in 2025 or 2024**, so nothing in the ledger links it to the firm. **Only if Lilian confirms
   that person is firm-side** does Contract Labor fall to nothing over the threshold; otherwise it is
   a 1099-NEC. ⛔ Not assumed either way — and **the rent finding carries 14a to Yes regardless.**
-  ⓘ **The firm's own fee is exempt if the firm is a corporation** — the ledger vendor and the
-  return's preparer block both read `CORP`, but [`firm-identity.md`](../../sops/firm-identity.md)
-  still records the exact legal entity type as **pending**. Settle it from JK's own W-9.
+  ✅ **The firm's own fee is EXEMPT — settled 2026-08-19.** Lilian confirmed JK Accounting Group is
+  a **corporation**, now recorded in [`firm-identity.md`](../../sops/firm-identity.md). The reason
+  is the payee's classification, not that the payment is "professional fees".
   **(b) 🛑 Seven of the twenty pages are BLANK forms that do not belong to this business** — a
   **Form T (Timber) Forest Activities Schedule**, a Form 4797 and a Schedule D, all empty. The
   Form T is a trace of the line-15 *Depletion* mis-key: the figure was corrected, **the form it

@@ -31,7 +31,8 @@ SOPs say where each one goes.
 | Field | Value |
 |---|---|
 | **Trading name** | JK Accounting Group |
-| **Exact legal entity name** | ⚠️ *(pending — nobody has written down whether it is an LLC, Inc. or PA. **Form 2848's representative block and the CAA application both need it exactly right**, so this is worth five minutes on Sunbiz)* |
+| **Entity TYPE** | 🟢 **A corporation** — *Lilian confirmed 2026-08-19.* Corroborated by the firm's own documents: its vendor record on a client's books and the **preparer block of a return the firm filed** both read **`JK ACCOUNTING GROUP CORP`**. 🔑 **This settles the 1099 question about ourselves** — payments a client makes to the firm are **exempt from Form 1099** because the payee is a corporation *(see [`form-1120s-preparation.md`](./form-1120s-preparation.md) §6B — the exemption is about the payee's classification, never the kind of service)* |
+| **Exact legal entity NAME as registered** | ⚠️ *(still pending — the type is settled above, but the **exact registered string** is what **Form 2848's representative block and the CAA application** must match character for character. Five minutes on Sunbiz)* |
 | **Federal EIN** | ⚠️ *(pending — required for the [CAA application](./irs-certifying-acceptance-agent.md); it is public information and belongs here once someone writes it down)* |
 | **Street address** | **11347 SW 13 Street, Pembroke Pines, FL 33025** — the firm's registered address. ⓘ **Lilian gave this on 2026-08-14 and said it is public on Sunbiz**, which is why it may be written down. **Nobody has actually opened the firm's Sunbiz record** — see the legal-name row directly above, which is missing for the same reason |
 | **Main phone** | **(786) 318-1505** — this is **Julia's direct line**, doubling as the number the firm's documents carry |
