@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-17
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-18
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -410,17 +410,33 @@ the actual details.
   loss on disposal** are all built from them. The complete entry with its per-asset split is
   written out in the [working paper](../../tax-returns/kolo-florida-inc/2025-form-1120s.md) —
   **post it as written the moment access returns.** ⚠️ **It does not block the 2025 return** (page 1
-  line 14 carries the deduction either way) but it matters for **2026, the FINAL return**, where
-  those per-asset figures decide the gain or loss on liquidation. _(Worked by Lilian.)_
-- 2026-08-18 — **2024 was a SEVEN-MONTH short tax year, and that explains the depreciation.**
-  The company was incorporated **30 May 2024**, so its first tax year ran to 31 December —
-  7 months. Under the half-year convention the mid-point of a 7-month year is **3.5 months**, not
-  6, and a full-year 200DB computation × 3.5/12 reproduces 2024's figures **exactly on all three
-  assets**. 🔑 **Two consequences worth keeping:** the MACRS percentage tables (which assume a full
-  12-month first year) are the wrong benchmark for this company, so the register's
-  remaining-basis method is the one to follow; and 2024's depreciation is **correct, not
-  understated** — an earlier reading in this session suggested otherwise and was wrong. Nothing
-  here is a finding against the 2024 return, which is closed. _(Worked by Lilian.)_
+  line 14 carries the deduction either way) **and it does not block the 2026 return either** — the
+  per-asset accumulated figures already live in the ATX register and in the working paper's table.
+  What is at risk is the **books**: if the entry is never posted, QuickBooks and the return
+  disagree permanently, and the balance sheet a liquidation is worked from is the wrong one. _(Worked by Lilian.)_
+- 2026-08-18 — **2024 was a SHORT TAX YEAR, and that is what the depreciation method turns on.**
+  The company was incorporated **30 May 2024**, so its first tax year ended 31 December without
+  ever being a full twelve months. 🔑 **The rule that matters, verbatim from Pub 946 ch. 4:**
+  *"You cannot use the MACRS percentage tables to determine depreciation for a short tax year."*
+  So the percentage tables are not merely a poor benchmark for this company — they were never
+  available, and the register's **remaining-basis** computation (adjusted basis at the start of the
+  year × the applicable rate) is the required method. **That is the convention 2025 follows and
+  2026 must keep.**
+  ⓘ **What the arithmetic establishes, and what it does not.** A full-year 200DB figure ×
+  **3.5/12** reproduces the 2024 filed figures **exactly on all three assets** — which identifies
+  the convention the prior return used, and that is all it identifies. It does **not** establish
+  that the fraction was right, because reproducing a filed number only tells you which method
+  produced it. **We take no position on the 2024 return either way** — it is closed, Julia prepared
+  it, and it is out of scope. The 2025 figures are unaffected: they run off the accumulated
+  depreciation actually claimed, which is a fact off the filed return.
+  ⚠️ **One thing for Lilian to decide, and only because 2026 is the FINAL return.** Pub 946 counts
+  a short year in **whole months, including a partial one** *("if the short tax year includes part
+  of a month, you generally include the full month")* — its own example treats a company
+  incorporated **15 March** as having a **10**-month year. Counted that way Kolo's first year is
+  **8** months, not 7. **This is flagged, not acted on**, because the year it affects is closed;
+  it is here because **disposal gain or loss on liquidation is computed from accumulated
+  depreciation**, so it is worth her eye before the final return, not before this one.
+  _(Worked by Lilian.)_
 - 2026-08-18 — **The 2025 Form 1120-S is prepared, and the whole working paper is now in the repo.**
   Lilian filled the return in ATX from the figures this session produced, and the filed copy was
   read back and checked line by line: **every tie-out passes** — Box F = Schedule L 15 = 27, M-1
