@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-17
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-18
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -242,10 +242,16 @@ the actual details.
   assumption, and calling the Shopify figure unusable while accepting the book figure needs a
   reason. **Not established either way; ask before treating them as independent.** _(Raised by the
   independent review, 2026-08-14.)_
-- 🔴 **No depreciation was recorded in 2025.** The 2025 P&L has no depreciation line at all, and
-  the balance sheet's accumulated depreciation still equals the **2024 Form 4562** figure exactly
-  — so nothing was added. There are fixed assets on the books (computer equipment, furniture, a
-  floor scrubber). A 2025 Form 4562 has to be prepared and the deduction claimed. _(2026-08-14.)_
+- 🟡 **No depreciation was recorded in 2025 — the RETURN is settled, the BOOKS are still owed.**
+  The 2025 P&L has no depreciation line at all, and the balance sheet's accumulated depreciation
+  still equals the **2024 Form 4562** figure exactly — so nothing was added. There are fixed assets
+  on the books (computer equipment, furniture, a floor scrubber). _(2026-08-14.)_ ✅ **Resolved for
+  the return, 2026-08-18:** the deduction is claimed on the 2025 Form 4562 and page 1 line 14.
+  What remains is the **journal entry into QuickBooks**, blocked only by lost access — see the §6
+  log and the [working paper](../../tax-returns/kolo-florida-inc/2025-form-1120s.md). ⓘ **2024 DID
+  record its depreciation** (a single 31-December entry), which is why both Schedule L conventions
+  coincided that year and only diverge in 2025 — so the 2025 return is **not** inconsistent with
+  2024, and the clean fix was always an entry rather than a change to the return.
 - ⚠️ **Officer compensation is effectively nil in 2025** where 2024 carried a real salaries line.
   Two shareholder-employees. Reasonable-compensation exposure — weaker than usual because the year
   is a large loss and the business is winding down, but it must be a decision, not an oversight.
@@ -395,6 +401,42 @@ the actual details.
   simply had no discount accounts — §5). What remains live for 2025 is **shareholder basis**,
   **2025 depreciation**, the **security deposit**, and the **rent commitment**. _(Worked by
   Lilian.)_
+- 2026-08-18 — **QuickBooks access has been LOST, and one journal entry is waiting on it.** Lilian
+  asked the client for access; the likeliest cause is the subscription lapsing when the store
+  closed. ✅ **Nothing is lost** — every report needed for the return was exported first. What is
+  owed is the **2025 depreciation journal entry**, which the books never got: one debit to
+  Depreciation and **three separate credits, one per accumulated-depreciation account** (the chart
+  carries one per asset), because Schedule L 10b, each asset's net book value and the **gain or
+  loss on disposal** are all built from them. The complete entry with its per-asset split is
+  written out in the [working paper](../../tax-returns/kolo-florida-inc/2025-form-1120s.md) —
+  **post it as written the moment access returns.** ⚠️ **It does not block the 2025 return** (page 1
+  line 14 carries the deduction either way) **and it does not block the 2026 return either** — the
+  per-asset accumulated figures already live in the ATX register and in the working paper's table.
+  What is at risk is the **books**: if the entry is never posted, QuickBooks and the return
+  disagree permanently, and the balance sheet a liquidation is worked from is the wrong one. _(Worked by Lilian.)_
+- 2026-08-18 — **2024 was a SHORT TAX YEAR, and that is what the depreciation method turns on.**
+  The company was incorporated **30 May 2024**, so its first tax year ended 31 December without
+  ever being a full twelve months. 🔑 **The rule that matters, verbatim from Pub 946 ch. 4:**
+  *"You cannot use the MACRS percentage tables to determine depreciation for a short tax year."*
+  So the percentage tables are not merely a poor benchmark for this company — they were never
+  available, and the register's **remaining-basis** computation (adjusted basis at the start of the
+  year × the applicable rate) is the required method. **That is the convention 2025 follows and
+  2026 must keep.**
+  ⓘ **What the arithmetic establishes, and what it does not.** A full-year 200DB figure ×
+  **3.5/12** reproduces the 2024 filed figures **exactly on all three assets** — which identifies
+  the convention the prior return used, and that is all it identifies. It does **not** establish
+  that the fraction was right, because reproducing a filed number only tells you which method
+  produced it. **We take no position on the 2024 return either way** — it is closed, Julia prepared
+  it, and it is out of scope. The 2025 figures are unaffected: they run off the accumulated
+  depreciation actually claimed, which is a fact off the filed return.
+  ⚠️ **One thing for Lilian to decide, and only because 2026 is the FINAL return.** Pub 946 counts
+  a short year in **whole months, including a partial one** *("if the short tax year includes part
+  of a month, you generally include the full month")* — its own example treats a company
+  incorporated **15 March** as having a **10**-month year. Counted that way Kolo's first year is
+  **8** months, not 7. **This is flagged, not acted on**, because the year it affects is closed;
+  it is here because **disposal gain or loss on liquidation is computed from accumulated
+  depreciation**, so it is worth her eye before the final return, not before this one.
+  _(Worked by Lilian.)_
 - 2026-08-18 — **The 2025 Form 1120-S is prepared, and the whole working paper is now in the repo.**
   Lilian filled the return in ATX from the figures this session produced, and the filed copy was
   read back and checked line by line: **every tie-out passes** — Box F = Schedule L 15 = 27, M-1
