@@ -41,7 +41,31 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    (`projects/proposal-tool/tools/monthly-proposal-generator.src.html`): Step 1 prices the
    client with the built-in calculator (shared core), Step 2 flows that fee into the
    editable premium proposal (cover · benefits · investment · what's-included ·
-   next-steps · closing quote · T&C) → Save PDF. Single bundled fee. A **Language**
+   next-steps · closing quote · T&C) → Save PDF. Single bundled fee — or a **two-phase
+   investment snapshot**: fill the optional **Phase 2** fields (Phase-1 label, Phase-2
+   label, Phase-2 fee, "what it adds") and the Investment page renders **two bold price
+   cards side by side** — an intro price and the step-up (e.g. *First 3 months · Essential
+   $725/mo* → *From month 4 · Advisory $1,497/mo*) — never buried in small text. Leave the
+   Phase-2 fee blank for a single card. The What's-Included page also takes an optional
+   **"foundation" line** (`pfoundation`, `pfoundation_ru`): a short statement of the
+   **always-included baseline**, rendered as a bronze-bordered box *set apart at the top* of
+   the scope under the label *"The foundation — always included"* / *"Основа — всегда
+   включено"*, so the baseline reads as the plan's **foundation, never a differentiator**
+   (the packaging concept in `projects/marketing/service-packaging.md`). Below it, the
+   category list carries the itemised detail and — for a two-phase proposal — an *"Available
+   on the Advisory plan"* category for what a later phase adds. Leave the foundation field
+   blank to omit the box. **Tailor it to the client:** on a monthly retainer the firm keeps
+   the books, so *monthly financial statements* legitimately belong in the foundation (that
+   is not the tax-prep letter, where financial statements are excluded — see the
+   financial-statements rule below); and **omit owner payroll for a pre-operational /
+   pre-S-corp startup**, where it does not yet apply. The Investment page also takes an
+   optional **add-on** (`paddon` name, `paddonfee`, `paddonnote` + `_ru`): a service priced
+   **on top of** the retainer — e.g. *Accounts Payable management, +$1,500/mo* — rendered as a
+   distinct **dashed "Optional add-on" card below the hero fee**, clearly secondary to it. The
+   fee text carries its own sign (type `+$1,500`); the tool appends the `/mo` period, so it is
+   for a **monthly** add-on. Blank add-on fee ⇒ no card. Use it for a paid extra the client can
+   choose (AP, payroll, a cleanup that is *not* excluded), not for a phase step-up (that is the
+   Phase-2 fields) and not for something already in the bundle. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the

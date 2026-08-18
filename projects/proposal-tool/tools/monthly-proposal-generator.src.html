@@ -101,10 +101,27 @@
   .pcard .pk{ font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; }
   .pcard .pv{ font-family:var(--serif); font-size:40px; font-weight:700; color:var(--bronze); line-height:1.05; margin-top:4px; }
   .pcard .pv .per{ font-size:17px; color:var(--muted); font-weight:400; }
+  /* Two-phase investment snapshot — an intro price and a step-up, side by side (big, not small text) */
+  .pcards2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  .pcards2 .pcard{ margin-bottom:0; display:flex; flex-direction:column; }
+  .pcards2 .pcard .pv{ font-size:34px; }
+  .pcard.p2{ border-color:var(--bronze-lt); background:rgba(156,106,57,.07); }
+  .pcard .pnote{ font-size:10.5px; color:var(--ink); margin:10px 0 0; padding-top:9px; border-top:1px solid var(--hairline); line-height:1.45; }
   .disc{ font-size:11.5px; margin:0 0 8px; } .disc b{ color:var(--teal); }
   .invnote{ font-size:10.5px; color:var(--muted); font-style:italic; }
+  /* Optional add-on — a service the client can add to the retainer, priced on its own; clearly secondary to the hero fee */
+  .paddon{ border:1px dashed var(--bronze-lt); border-radius:8px; padding:13px 18px; margin:0 0 14px; display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .paddon .ak{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:700; margin-bottom:3px; }
+  .paddon .an{ font-family:var(--serif); font-size:15px; font-weight:700; color:var(--ink); }
+  .paddon .av{ font-family:var(--serif); font-size:26px; font-weight:700; color:var(--bronze); line-height:1.05; white-space:nowrap; }
+  .paddon .av .per{ font-size:14px; color:var(--muted); font-weight:400; }
+  .paddon .anote{ flex-basis:100%; font-size:10.5px; color:var(--ink); margin:8px 0 0; line-height:1.5; }
 
   /* Included */
+  /* "The foundation" — the always-included baseline, set apart at the top of the scope */
+  .foundation{ background:rgba(18,56,65,.05); border:1px solid var(--hairline); border-left:4px solid var(--bronze); border-radius:0 8px 8px 0; padding:12px 16px; margin:0 0 18px; }
+  .foundation .fk{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); font-weight:700; margin-bottom:5px; }
+  .foundation p{ font-size:11px; line-height:1.55; margin:0; color:var(--ink); }
   .icat{ font-family:var(--serif); font-size:14px; font-weight:700; color:var(--teal); margin:14px 0 4px; }
   .ppage ul{ margin:0 0 8px; padding-left:20px; } .ppage li{ font-size:11.5px; line-height:1.55; margin-bottom:3px; }
 
@@ -238,13 +255,27 @@
       <div class="grp">
         <p class="gl">Your Investment</p>
         <label class="f"><span class="cap">Monthly fee (client-facing)</span><input id="pfee" placeholder="$0 — send from Step 1, then adjust"></label>
+        <label class="f"><span class="cap">Phase 1 label (optional — shown above the fee)</span><input id="pphase1" placeholder="e.g. First 3 months · Essential"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Phase 2 label</span><input id="pphase2" placeholder="e.g. From month 4 · Advisory"></label>
+          <label class="f"><span class="cap">Phase 2 fee</span><input id="pfee2" placeholder="$1,497"></label>
+        </div>
+        <label class="f"><span class="cap">Phase 2 — what it adds</span><input id="pphase2note" placeholder="Adds proactive tax planning, payroll &amp; quarterly advisory"></label>
+        <p class="hint">Fill <b>Phase 2 fee</b> to show a two-card investment snapshot (an intro price, then a step-up). Leave it blank for a single price.</p>
         <label class="f"><span class="cap">Standard rate (optional, for a discount anchor)</span><input id="pstdrate" placeholder="e.g. $650/mo"></label>
         <label class="f"><span class="cap">Discount text (optional)</span><input id="pdiscount" placeholder="e.g. 10% discount (–$65) for annual prepay"></label>
-        <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody" rows="2"></textarea></label>
+        <label class="f"><span class="cap">Investment body (optional — kept short; the cards carry the message)</span><textarea id="pinvbody" rows="2"></textarea></label>
         <label class="f"><span class="cap">Closing note</span><input id="pinvnote"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Optional add-on — name (optional)</span><input id="paddon" placeholder="e.g. Accounts Payable management"></label>
+          <label class="f"><span class="cap">Add-on fee</span><input id="paddonfee" placeholder="e.g. +$1,500"></label>
+        </div>
+        <label class="f"><span class="cap">Add-on — what it is</span><input id="paddonnote" placeholder="e.g. We work your vendor inbox, pay bills on your behalf, and reconcile it each month."></label>
+        <p class="hint">Fill <b>Add-on fee</b> to show a distinct "optional add-on" card below the fee. Leave it blank for none.</p>
       </div>
       <div class="grp">
         <p class="gl">What's Included</p>
+        <label class="f"><span class="cap">Foundation — the always-included baseline (optional; shown as a set-apart box at the top)</span><textarea id="pfoundation" rows="3" placeholder="e.g. Whatever else you add later, these are always part of your plan: your books kept current, monthly financial statements, your business tax return and sales-tax returns filed on time…"></textarea></label>
         <label class="f"><span class="cap">Categories &amp; bullets — a line starting with "# " is a category; other lines are bullets</span><textarea id="pincluded" rows="7"></textarea></label>
       </div>
       <div class="grp">
@@ -281,11 +312,22 @@
         </div>
         <div class="grp">
           <p class="gl">Your Investment · Ваши инвестиции</p>
+          <label class="f"><span class="cap">Phase 1 label (RU)</span><input id="pphase1_ru" placeholder="Первые 3 месяца · Essential"></label>
+          <div class="row2">
+            <label class="f"><span class="cap">Phase 2 label (RU)</span><input id="pphase2_ru" placeholder="С 4-го месяца · Advisory"></label>
+            <label class="f"><span class="cap">Phase 2 — what it adds (RU)</span><input id="pphase2note_ru"></label>
+          </div>
           <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody_ru" rows="2"></textarea></label>
           <label class="f"><span class="cap">Closing note</span><input id="pinvnote_ru"></label>
+          <div class="row2">
+            <label class="f"><span class="cap">Optional add-on — name (RU)</span><input id="paddon_ru" placeholder="напр. Управление кредиторской задолженностью"></label>
+            <label class="f"><span class="cap">Add-on fee (RU display)</span><input id="paddonfee_ru" placeholder="напр. +$1,500"></label>
+          </div>
+          <label class="f"><span class="cap">Add-on — what it is (RU)</span><input id="paddonnote_ru"></label>
         </div>
         <div class="grp">
           <p class="gl">What's Included · Что включено</p>
+          <label class="f"><span class="cap">Foundation — the always-included baseline (RU)</span><textarea id="pfoundation_ru" rows="3"></textarea></label>
           <label class="f"><span class="cap">Categories &amp; bullets — "# " = category</span><textarea id="pincluded_ru" rows="7"></textarea></label>
         </div>
         <div class="grp">
@@ -347,8 +389,8 @@
     pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
     psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
   };
-  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pinvbody_ru","pinvnote_ru","pincluded_ru","psteps_ru"];
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pstdrate","pdiscount","pinvbody","pinvnote","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","paddon_ru","paddonfee_ru","paddonnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","paddon","paddonfee","paddonnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
   function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -357,8 +399,8 @@
   // Label dictionary — the FIXED proposal scaffolding, per language.
   const LBL = {
     en:{ introEye:"Welcome", introTitle:"Introduction", getEye:"Why JK", getTitle:"What You Get",
-         invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo",
-         inclEye:"Scope of Services", inclTitle:"What's Included",
+         invEye:"Investment", invTitle:"Your Investment", invCard:"Monthly Investment — All Inclusive", per:"/mo", addonK:"Optional add-on",
+         inclEye:"Scope of Services", inclTitle:"What's Included", foundationK:"The foundation — always included",
          nextEye:"Next Steps", nextTitle:"What's Next",
          overviewEye:"Overview", contentsTitle:"Contents",
          agreeH:"Agreement", agreeB:"By signing below, you agree to the services and fees outlined in this proposal.",
@@ -368,8 +410,8 @@
          stdRate:"Standard rate", includes:"includes",
          rows:["Introduction","What You Get","Your Investment","What's Included","What's Next"] },
     ru:{ introEye:"Добро пожаловать", introTitle:"Введение", getEye:"Почему JK", getTitle:"Что вы получаете",
-         invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес",
-         inclEye:"Объём услуг", inclTitle:"Что включено",
+         invEye:"Инвестиции", invTitle:"Ваши инвестиции", invCard:"Ежемесячная оплата — всё включено", per:"/мес", addonK:"Дополнительно · по желанию",
+         inclEye:"Объём услуг", inclTitle:"Что включено", foundationK:"Основа — всегда включено",
          nextEye:"Дальнейшие шаги", nextTitle:"Что дальше",
          overviewEye:"Обзор", contentsTitle:"Содержание",
          agreeH:"Соглашение", agreeB:"Подписывая ниже, вы соглашаетесь с услугами и стоимостью, изложенными в этом предложении.",
@@ -461,15 +503,46 @@
     const L = LBL[lang];
     const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
       ? `<p class="disc">${esc(L.stdRate)} ${esc($("pstdrate").value)} · ${esc(L.includes)} <b>${esc($("pdiscount").value)}</b></p>` : "";
+    // Investment snapshot: one price card, or — when a Phase-2 fee is entered — a bold TWO-phase
+    // snapshot (an intro price and the step-up, side by side). Phase labels + the phase-2 note are
+    // translated per language; the dollar amounts are shared.
+    const fee2 = $("pfee2").value.trim();
+    const p1kick = cv("pphase1",lang).trim() || L.invCard;
+    let cards;
+    if(fee2){
+      const note2 = cv("pphase2note",lang).trim();
+      cards = `<div class="pcards2">`
+        + `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
+        + `<div class="pcard p2"><div class="pk">${ph(cv("pphase2",lang),"[Phase 2]")}</div><div class="pv">${esc(fee2)}<span class="per">${esc(L.per)}</span></div>${note2?`<p class="pnote">${esc(note2)}</p>`:""}</div>`
+        + `</div>`;
+    } else {
+      cards = `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`;
+    }
+    // Optional add-on — a service priced on its own, on top of the retainer (e.g. Accounts
+    // Payable management). Rendered as a distinct, dashed "optional" card below the fee; the
+    // fee text carries its own sign (e.g. "+$1,500"). Blank add-on fee ⇒ no card.
+    const addonFee = cv("paddonfee",lang).trim();
+    const addon = addonFee
+      ? `<div class="paddon"><div><span class="ak">${esc(L.addonK)}</span><span class="an">${esc(cv("paddon",lang))}</span></div>`
+        + `<div class="av">${esc(addonFee)}<span class="per">${esc(L.per)}</span></div>`
+        + (cv("paddonnote",lang).trim()?`<p class="anote">${esc(cv("paddonnote",lang))}</p>`:"")
+        + `</div>`
+      : "";
+    const body = cv("pinvbody",lang).trim();
     return sectionHead(L.invEye, L.invTitle, tag)
-      + `<div class="pcard"><div class="pk">${esc(L.invCard)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
+      + cards
+      + addon
       + disc
-      + `<p>${ph(cv("pinvbody",lang),L.invBodyPh)}</p>`
+      + (body ? `<p>${esc(body)}</p>` : "")
       + `<p class="invnote">${esc(cv("pinvnote",lang))}</p>`;
   }
 
   function includedPage(lang, tag){
-    return sectionHead(LBL[lang].inclEye, LBL[lang].inclTitle, tag) + includedHtml(lang);
+    // Optional "foundation" statement — the always-included baseline, set apart at the top of
+    // the scope so it reads as the foundation of the plan, never a differentiator.
+    const found = cv("pfoundation",lang).trim();
+    const foundHtml = found ? `<div class="foundation"><div class="fk">${esc(LBL[lang].foundationK)}</div><p>${esc(found)}</p></div>` : "";
+    return sectionHead(LBL[lang].inclEye, LBL[lang].inclTitle, tag) + foundHtml + includedHtml(lang);
   }
 
   function nextPage(lang, withSignature, tag){

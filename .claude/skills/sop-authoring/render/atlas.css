@@ -365,6 +365,55 @@ table.links .for{font-family:var(--mono); font-size:10px; letter-spacing:0.06em;
 table.links a{word-break:break-word;}
 table.links td .ph{color:var(--body); white-space:nowrap;}
 
+/* ---------- Drive vault button (confidential material) ----------
+   For anything a step needs that lives in Google Drive and must NOT be printed
+   on a team-facing page: a login, a password doc, a walkthrough video, a
+   client file. Always a designed button + caption — never a bare URL, never
+   the secret itself. See sop-authoring/SKILL.md. */
+.dvault{background:var(--paper); border:1px solid var(--bronze-300); border-radius:16px;
+  padding:clamp(18px,2.6vw,24px); box-shadow:var(--shadow-sm); margin:20px 0;}
+:root[data-theme="dark"] .dvault{border-color:rgba(207,162,104,0.42);}
+.dvault > .ph{display:flex; align-items:center; gap:9px; font-family:var(--mono); font-size:11px;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:14px;}
+.dvault > .ph svg{width:15px; height:15px; flex:0 0 auto; stroke:currentColor; fill:none; stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round;}
+.vbtn{position:relative; display:flex; align-items:center; gap:14px; text-decoration:none;
+  background:var(--accent); color:#fff; border-radius:12px; padding:14px 18px;
+  box-shadow:var(--shadow-sm); transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out),
+  background-color .18s var(--ease-out);}
+.vbtn:hover, .vbtn:focus-visible{background:var(--accent-2); transform:translateY(-1px); box-shadow:var(--shadow-md);}
+/* Dark has THREE states here: the toggle, and the OS default that stamps nothing.
+   --accent flips to bronze in both, so white label text must flip in both too —
+   the un-stamped state is the one most viewers actually see. */
+:root[data-theme="dark"] .vbtn{color:var(--teal-950);}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .dvault{border-color:rgba(207,162,104,0.42);}
+  :root:not([data-theme="light"]) .vbtn{color:var(--teal-950);}
+}
+.vbtn .dicon{width:26px; height:26px; flex:0 0 auto;}
+.vbtn .vt{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.vbtn .vt b{font-family:var(--sans); font-size:15px; font-weight:600; line-height:1.3; color:inherit;}
+.vbtn .vt em{font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em; font-style:normal;
+  opacity:0.82; overflow-wrap:anywhere;}
+.vbtn .varr{width:17px; height:17px; flex:0 0 auto; margin-left:auto; stroke:currentColor; fill:none;
+  stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round;
+  transition:transform .18s var(--ease-out);}
+.vbtn:hover .varr, .vbtn:focus-visible .varr{transform:translateX(3px);}
+/* hover tooltip — what this link opens, without printing it */
+.vbtn::after{content:attr(data-tip); position:absolute; left:50%; bottom:calc(100% + 9px);
+  transform:translate(-50%,4px); width:max-content; max-width:min(300px,80vw);
+  background:var(--teal-950); color:#ECE6DA; font-family:var(--sans); font-size:12px; line-height:1.45;
+  padding:8px 11px; border-radius:9px; box-shadow:var(--shadow-md); pointer-events:none;
+  opacity:0; transition:opacity .16s var(--ease-out), transform .16s var(--ease-out);}
+.vbtn:hover::after, .vbtn:focus-visible::after{opacity:1; transform:translate(-50%,0);}
+.dvault .vcap{margin-top:13px; font-size:13.5px; line-height:1.6; color:var(--body);}
+.dvault .vcap b{color:var(--ink);}
+@media (prefers-reduced-motion: reduce){
+  .vbtn, .vbtn .varr, .vbtn::after{transition:none;}
+  .vbtn:hover, .vbtn:focus-visible{transform:none;}
+  .vbtn:hover .varr, .vbtn:focus-visible .varr{transform:none;}
+}
+
 /* ---------- Intake appendix ---------- */
 .intake{background:var(--paper); border:1px solid var(--border-subtle); border-radius:16px;
   padding:clamp(20px,3vw,26px); box-shadow:var(--shadow-sm); margin:18px 0;}
@@ -407,12 +456,18 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   .mast{background:#0d2a31 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .mast, .fnode, .fdecide, .paybox, .panel, .emailcard, .callout, .subbar, .branch, .schip, .chipm,
   .fnode.done, .fnode.pay, .fnode.gate, table.links thead th, .paybox .coin, .fphase-h .pn, .fphase-h .fref,
-  ol.qlist>li::before, .pay-items>li::before, .schip, .fdecide .dt, .subbar .tag, .etag{
+  ol.qlist>li::before, .pay-items>li::before, .schip, .fdecide .dt, .subbar .tag, .etag,
+  .dvault, .vbtn{
     -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .vbtn::after{display:none;}   /* the hover tooltip never prints */
   section.doc{break-inside:avoid-page;}
   .callout, .paybox, .panel, .emailcard, .fnode, .fdecide, .subbar, .flow figure, .tablewrap, .intake,
-  ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
+  .dvault, ol.qlist>li, ul.checks>li, .pay-items>li{break-inside:avoid;}
   .shead{break-after:avoid;}
+  /* No hover on paper: every derivation prints open. */
+  .lwhy{grid-template-rows:1fr !important;}
+  .lrow{break-inside:avoid; box-shadow:none;}
+  .lrow .ln,.ltag,.ltag.calc,.ltag.read{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .fphase{break-inside:avoid;}
   a{color:var(--accent-2); text-decoration:none;}
   .foot{background:#0d2a31 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
@@ -422,4 +477,172 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
 @media (prefers-reduced-motion:no-preference){
   html.js .reveal{opacity:0; transform:translateY(14px); transition:opacity .55s var(--ease-out), transform .55s var(--ease-out);}
   html.js .reveal.in{opacity:1; transform:none;}
+}
+
+/* ============================================================
+   LINE REFERENCE — "where does this number come from?"
+   A stack of form lines: the line number, what it is, and — on
+   hover, keyboard focus or tap — the formula or lookup behind it.
+
+   Deliberately NOT a floating tooltip. These panels carry
+   multi-line formulas, and an absolutely-positioned panel inside
+   .tablewrap's overflow:auto would be clipped. Expanding in flow
+   also means touch users and the printed page get the same
+   content, and nothing is hidden from assistive technology —
+   the text is always in the DOM, only visually collapsed.
+   ============================================================ */
+.lines{display:flex; flex-direction:column; gap:8px; margin:20px 0;}
+.lrow{
+  background:var(--surface); border:1px solid var(--border-subtle); border-radius:12px;
+  padding:12px 14px; position:relative;
+  transition:border-color .25s var(--ease-out), box-shadow .25s var(--ease-out);
+}
+.lrow:hover,.lrow:focus,.lrow:focus-within{border-color:var(--border); box-shadow:var(--shadow-sm); outline:none;}
+.lrow:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.lhead{display:grid; grid-template-columns:auto 1fr auto; align-items:baseline; gap:10px 12px;}
+.lrow .ln{
+  font-family:var(--mono); font-size:.74rem; font-weight:600; letter-spacing:.02em;
+  background:var(--pill-teal-bg); color:var(--pill-teal-ink);
+  border-radius:6px; padding:3px 7px; white-space:nowrap;
+}
+.lname{color:var(--body); line-height:1.5;}
+.lname b{color:var(--ink);}
+.ltag{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--muted); border:1px solid var(--border-subtle); border-radius:999px;
+  padding:3px 9px; white-space:nowrap; align-self:center;
+}
+.ltag.calc{background:var(--pill-bronze-bg); color:var(--pill-bronze-ink); border-color:transparent;}
+.ltag.read{background:var(--pill-teal-bg); color:var(--pill-teal-ink); border-color:transparent;}
+.lwhy{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s var(--ease-out);}
+/* No JS anywhere in this render, so hover + focus ARE the whole interaction: the row
+   carries tabindex="0" so a keyboard or a tap opens it. Print forces it open (see @media
+   print) — a PDF must never hide the provenance. */
+.lrow:hover .lwhy,.lrow:focus .lwhy,.lrow:focus-within .lwhy{grid-template-rows:1fr;}
+.lwhy>.cw{overflow:hidden; min-height:0;}
+.lwhy .cw>*:first-child{margin-top:11px;}
+.fx{
+  font-family:var(--mono); font-size:.82rem; line-height:1.75;
+  background:var(--paper); border:1px solid var(--border-subtle); border-radius:9px;
+  padding:10px 12px; color:var(--ink); white-space:pre-wrap; overflow-x:auto;
+}
+.fx .op{color:var(--accent); font-weight:600;}
+.lwhy p{margin:9px 0 0; font-size:.92rem; line-height:1.65; color:var(--body);}
+.lwhy p:last-child{margin-bottom:2px;}
+@media (max-width:560px){
+  .lhead{grid-template-columns:auto 1fr;}
+  .ltag{grid-column:2; justify-self:start; margin-top:2px;}
+}
+:root[data-theme="dark"] .lrow{background:var(--raise);}
+:root[data-theme="dark"] .fx{background:rgba(9,31,36,0.5);}
+@media (prefers-reduced-motion:reduce){
+  .lrow,.lwhy{transition:none;}
+}
+
+/* Footer secondary note — smaller and quieter than the footer's own body. */
+.foot .foot-sm{font-size:.86rem; opacity:.78; margin-top:6px;}
+
+/* ============================================================
+   DFLOW — the "how the numbers travel" diagram.
+   An inline SVG map of one return: four source documents at the
+   top, the forms they feed below, and the pairs that must agree
+   drawn differently from the "feeds" arrows.
+
+   Colour encodes WHICH SOURCE a figure came from — and because
+   colour alone must never carry meaning, every source also has a
+   numbered badge matching §0A's four-sources list, and every edge
+   is labelled with the line it carries. Edge labels are painted
+   LAST so an opaque box can never bury one.
+
+   Motion is the point rather than decoration: a pulse travels
+   each edge in the ORDER THE RETURN IS PREPARED, so the sequence
+   is watched rather than memorised. It is off for reduced-motion
+   and on paper.
+
+   The viewBox is 760 wide because the column it sits in is ~762px
+   — one SVG unit is one CSS pixel at full width, so the type is
+   the size it says it is.
+   ============================================================ */
+.dflow{margin:20px 0 10px;}
+.dflow .dwrap{overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--border-subtle); border-radius:16px; background:var(--paper);
+  padding:14px 10px;}
+.dflow svg{display:block; width:100%; min-width:640px; height:auto;}
+.dflow figcaption{font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--muted); margin:11px 2px 0; text-align:center;}
+
+/* source hues — four distinguishable roles inside the brand's own two families */
+.dflow{--s1:var(--teal-500); --s2:var(--bronze-600); --s3:var(--teal-900); --s4:var(--greige-500);
+  --badge-ink:#fff; --spine-bg:var(--teal-800); --spine-bd:var(--teal-800);}
+:root[data-theme="dark"] .dflow{--s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;
+  --badge-ink:var(--teal-950); --spine-bg:var(--teal-950); --spine-bd:var(--teal-300);}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dflow{
+  --s1:#6F9DA4; --s2:#CFA268; --s3:#B7D2D6; --s4:#A19986;
+  --badge-ink:var(--teal-950); --spine-bg:var(--teal-950); --spine-bd:var(--teal-300);}}
+
+/* --muted, not --border: at --border the node outline is 1.75:1 on paper in light
+   and 1.54:1 in dark, so the boxes stop reading AS boxes — and "which things are
+   nodes" is the whole structure of this diagram. --muted gives 6.9:1 light. */
+.dflow .box{fill:var(--surface); stroke:var(--muted); stroke-width:1.1;}
+.dflow .box.spine{fill:var(--spine-bg); stroke:var(--spine-bd); stroke-width:1.4;}
+.dflow .lbl{font-family:var(--sans); font-size:12.5px; font-weight:600; fill:var(--ink);}
+.dflow .lbl.on-spine{fill:#ECE6DA;}
+.dflow .sub{font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; fill:var(--muted);}
+.dflow .sub.on-spine{fill:#A6C4C8;}
+/* badge ink flips with the theme — the badges ARE the redundancy for colour, so
+   they have to stay readable on all four hues in both themes */
+.dflow .badge{font-family:var(--mono); font-size:10px; font-weight:600; fill:var(--badge-ink);}
+.dflow .edgelbl{font-family:var(--mono); font-size:9.5px; letter-spacing:.02em; fill:var(--muted);}
+/* Paint order puts every label above every box, so nothing is hidden UNDER a node —
+   but several labels sit centred on the very edge they annotate, and a 1.7px stroke
+   through 9.5px mono is unreadable. The halo knocks the line out behind the glyphs. */
+.dflow .edgelbl,.dflow .tielbl{paint-order:stroke fill; stroke:var(--paper);
+  stroke-width:3px; stroke-linejoin:round;}
+
+/* .85, not .42 — a non-text graphic needs 3:1, and at .42 not one of the four
+   source hues reached it against the paper behind them. */
+.dflow .edge{fill:none; stroke-width:1.7; stroke-linecap:round; opacity:.85;}
+.dflow .tie{fill:none; stroke:var(--accent-2); stroke-width:1.4; stroke-dasharray:5 4; opacity:.9;}
+.dflow .tielbl{font-family:var(--mono); font-size:9.5px; font-weight:600; fill:var(--accent-2);
+  letter-spacing:.03em;}
+:root[data-theme="dark"] .dflow .tie{stroke:var(--accent);}
+/* fill only — the tielbl's `stroke` is its paper-coloured halo, not its colour.
+   Recolouring it here would paint a 3px accent ring around every tie label. */
+:root[data-theme="dark"] .dflow .tielbl{fill:var(--accent);}
+
+/* the travelling pulse. The gap (900) exceeds the longest path, so a second dash
+   never appears; the offset runs from +18 (before the start) to -760 (past the end
+   of the longest path), so no dash is ever left parked at an edge's origin. */
+.dflow .pulse{fill:none; stroke-width:2.8; stroke-linecap:round;
+  stroke-dasharray:18 900; stroke-dashoffset:18;
+  animation:dtravel 5.6s cubic-bezier(.45,0,.5,1) infinite;}
+@keyframes dtravel{
+  0%{stroke-dashoffset:18; opacity:0;}
+  4%{opacity:.95;}
+  62%{stroke-dashoffset:-760; opacity:.95;}
+  66%,100%{stroke-dashoffset:-760; opacity:0;}
+}
+/* staggered by TIER, so the eye follows the order of preparation */
+.dflow .t1 .pulse{animation-delay:0s;}
+.dflow .t2 .pulse{animation-delay:.7s;}
+.dflow .t3 .pulse{animation-delay:1.4s;}
+.dflow .t4 .pulse{animation-delay:2.1s;}
+
+@media (prefers-reduced-motion:reduce){
+  .dflow .pulse{animation:none; opacity:.9; stroke-dasharray:none; stroke-dashoffset:0; stroke-width:1.9;}
+}
+@media print{
+  .dflow .dwrap{overflow:visible; break-inside:avoid; background:none;}
+  .dflow svg{min-width:0;}
+  .dflow .pulse{display:none;}
+  .dflow .edge{opacity:.9; stroke-width:1.9;}
+  .dflow .box{fill:#fff; stroke:#8A8271;}
+  .dflow .box.spine{fill:#0D2A31; stroke:#0D2A31;}
+  .dflow .lbl{fill:#111;} .dflow .sub{fill:#4A4A44;}
+  .dflow .lbl.on-spine{fill:#fff;} .dflow .sub.on-spine{fill:#C9DDE0;}
+  .dflow .badge{fill:#fff;}
+  /* .dwrap drops its background when printing, so the halo has to match the page */
+  .dflow .edgelbl,.dflow .tielbl{stroke:#fff;}
+  .dflow .box,.dflow .box.spine,.dflow .edge,.dflow .tie,.dflow circle{
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
 }

@@ -35,6 +35,13 @@ personal data**. Every fact goes to the right home:
 |---|---|---|
 | Non-sensitive knowledge | Entity type, what they do, filing frequency, due dates, which portal/form, the process steps, our engagement | **This file** (the repo) |
 | Secrets & personal data | Logins, passwords, full account numbers, dollar figures, contact names/emails/phones | **Google Drive / Double / QuickBooks** — referenced here by **link**, never pasted |
+>
+> ⓘ **One exception, added 2026-08-18, and it is a DIFFERENT FILE — not a loosening of this one.**
+> The **figures for a return the firm prepared** live in
+> [`projects/tax-returns/<client>/<year>-<form>.md`](../tax-returns/) — every line, every amount,
+> every decision. **Dollar figures still never go in this file.** When a session learns a figure
+> while preparing a return, it belongs there; what the session learns *about the client* belongs
+> here.
 | **Business EIN** | The entity's own FEI/EIN | **This file** — public on Sunbiz _(Lilian, 2026-08-12)_. An **SSN/ITIN is not**, even when it is the entity's tax ID |
 
 So a client file **describes the process and points to where the sensitive value
@@ -181,19 +188,21 @@ client-intelligence/
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (46 so far — see the Clients index below)
+└── clients/               ← one file per client (48 so far — see the Clients index below)
 ```
 
 ## Clients
 
 | Client | File | Owner | Status |
 |---|---|---|---|
-| Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | In progress — sales tax next |
+| Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | Active — TX sales-tax SOP written ([`atman-parts-tx-sales-tax.md`](../sops/atman-parts-tx-sales-tax.md)); open: who actually files the sales tax, `Sch C` vs `1120-S` (ask Julia), the franchise position |
 | Artur Tseretsian | [`clients/artur-tseretsian.md`](./clients/artur-tseretsian.md) | Lilian | In progress — 1040 Schedule C categorization (2023–2025) |
 | Denys Melnyk | [`clients/denys-melnyk.md`](./clients/denys-melnyk.md) | Lilian | In progress — 2025 1040, first year with us. **S-corp shareholder in three trucking entities**, with a large NOL carried forward from 2024. 🔴 **He answered the review on 2026-08-12 and the return is now blocked on one thing:** he worked in only one of the three companies, and holds **no K-1 and no W-2** for the income it paid him — he cannot obtain either, so **the route is a decision for Lilian and Julia, not a question for him** (§5). ⚠️ **Which company it was is itself unconfirmed** — and **the client SAYS that company has filed for bankruptcy** — ⚠️ Lilian does not treat that as reliable, so the public docket has to settle it; **if** true, the K-1 may never exist at all. ⚠️ **There is not a single tax document from ANY of the three.** The disposal question is answered (no sale, still a shareholder, K-1s still owed); the wife's Schedule C, the 1099s and residence are answered (Montana closed); the 1095-A blocker is back to a question. **Two Double notes** — his figures, and a briefing for Julia |
 | BEST BROKER REALTY LLC | [`clients/best-broker-realty.md`](./clients/best-broker-realty.md) | Lilian | In progress — BTR captured |
 | ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP **and a separate monthly CT sales-tax runbook**; 2025 1120-S in progress, Turo documents outstanding, QuickBooks primary-admin handover paused mid-change (two users on purpose — see §3). 🔴 **New 2026-08-12:** nine months of 2025 with no sales-tax return on file and **two unopened DRS notices** (a proposed assessment goes final if unprotested), and the **basis for filing zero has never been recorded** for a business with revenue |
 | Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | ⚠️ **Winding down — company closing, no longer a client** (Lilian, 2026-08-11). July 2026 is the last sales-tax filing; account closures in progress. The owner's individual 1040 engagement is separate and continues |
+| LILIIA HLEBOVA KOZLOVSKA | [`clients/liliia-hlebova-kozlovska.md`](./clients/liliia-hlebova-kozlovska.md) | Lilian | ⚠️ **Created 2026-08-17 from a pre-return review.** Individual 1040, **first year filing separately after a divorce** — the 2025 organizer still says *Married* and must be corrected. 🔴 **Two blockers:** the **Form 8962 / Marketplace allocation**, which has to match her ex-husband's return, and her **2025 income**, which the organizer reports as nil and Lilian says is wrong (asked, unanswered). **She is NOT a Kolo Florida shareholder**, so none of the 2024 joint carryovers are hers. Dependants split deliberately deferred |
+| Mykola Kozlovskyi | [`clients/mykola-kozlovskyi.md`](./clients/mykola-kozlovskyi.md) | Lilian | ⚠️ **Created 2026-08-18.** Individual 1040, **first year filing separately after a divorce**. 🔑 **His return runs off his company's** — from 2025 he is the **sole shareholder of [Kolo Florida Inc](./clients/kolo-florida.md) at 100%** (the other shareholder's 2024 K-1 was marked `Final`), so the K-1 and the Form 7203 come off that 1120-S. No Uber in 2025; the 2024 NOL and QBI carryforward are his. 🔴 **Blocked with his ex-wife on the Form 8962 allocation and the dependants split**, and the **2025 Form 1095-A is not on file** |
 | Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |

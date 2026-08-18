@@ -28,6 +28,38 @@ For the scoped clients, once per week:
    2026-08-12** (public on Sunbiz — Lilian's ruling). ⚠️ **But the property is named
    `EIN / Tax ID`, and for a sole proprietor or single-member LLC it may hold the OWNER'S
    SSN.** Write it only when it is plainly an EIN; if you cannot tell, skip it.
+
+   🔴 **1b — CHASE THE FILE'S OWN OPEN ITEMS — this is a SEPARATE PASS, and skipping it is the
+   defect found on 2026-08-18.** Step 1 asks the sources *"what is new?"*. That question cannot
+   see a thing that was supposed to happen and did not, and it cannot see a thing that **did**
+   happen but that nobody searched for. So before writing the report, **open the client file,
+   read its `Outstanding items` and `Information still needed`, and take each one to the
+   sources by name**:
+   - **Did it arrive?** Run a *targeted* search for that specific thing — the document, the
+     receipt, the reply — not a general "what changed" pass. An open item is a **query**, not a
+     note to self.
+   - **How old is it?** If it has not moved, say so **with its age in days** and the date it has
+     been pending since. `Awaiting X` with no clock is invisible; `Awaiting X — 19 days` is not.
+   - **Does it have a deadline?** A renewal, a filing date, a statute clock. Surface it while
+     there is still time to act, not in the week it expires.
+   - ⚖️ **Budget: ~5 extra calls per client, and prioritise.** This pass sits inside the same
+     ~10–15 calls/client ceiling as step 1, so it does **not** get to chase everything: take the
+     items with a **deadline** first, then the **oldest**, then the rest. **When you run out of
+     budget, say which items you did not chase** — an unchased item reported as unchased is fine;
+     an unchased item that prints as "no movement" is a lie the next run will inherit.
+
+   _(**Why this exists — the run that proved it.** On 2026-08-18 Lilian asked where two BTR
+   applications stood. Four things had to be found by hand, and **every one of them was a
+   standing open item in a file the sweep had read**: Best Broker's issued certificate had
+   **arrived by email on 2026-07-23** while the file kept saying "if it hasn't arrived yet" —
+   missed by **two separate full historical Gmail passes** because nobody searched for the
+   thing the file said to watch for; the same client's **Sept 30 renewal** was six weeks out
+   and uncalendared; Pro Title's awaited document had been pending **19 days** with no clock on
+   it; and a **risk the city had put in writing** — that operating without the receipt is
+   unlawful — had been read and not recorded. The 2026-08-15 run reported both clients as
+   **"no new meetings, notes, or emails"**, which was **true and useless**. Nothing was new.
+   Plenty was wrong.)_
+
 2. **Enrich Client Intelligence** — update each client's `clients/<slug>.md`
    Operating and CI-only zones with the new durable facts (each tagged with its
    source + date). **Commit and merge to `main` itself** — see *The approval line*
@@ -38,7 +70,24 @@ For the scoped clients, once per week:
    queue the same candidate twice). **Never** writes an SOP.
 4. **Email Lilian one report** — per client: what was **saved** to CI (a record, not a
    request), and the **Pending SOP proposals** (with their IDs), which are the only part
-   that needs her. She approves by ID in a normal session; Claude then applies the approved
+   that needs her.
+   🔴 **A stalled client printed as an all-clear on 2026-08-15, and the template is why.**
+   ⓘ *An earlier draft of this bullet said the email "had exactly two buckets". That was wrong —
+   [`email-template.html`](./email-template.html) has had a **section 3 "Still needed"** all
+   along. The defect is narrower and more interesting than a missing bucket:*
+   - **Section 4 "Nothing new" printed whenever sections 1 & 2 were empty — regardless of
+     section 3.** So a client with an open item still got the green one-liner. Now it prints
+     **only when 1, 2 AND 3 are all empty.**
+   - **AT A GLANCE had no colour for "quiet but not clear"** — green meant "nothing new", which
+     is not the same as *nothing wrong*. A client with anything in section 3 is now **amber with
+     the oldest item's age**; green is the all-clear and has to be earned.
+   - **Section 3 carried gaps without clocks.** Every entry now takes **its age in days** and any
+     deadline, from step 1b.
+
+   That combination is what let both BTR clients print *"no new meetings, notes, or emails"* on
+   2026-08-15 while one had a document pending 19 days and the other a renewal six weeks out.
+   **A stalled matter is the normal way these fail** — nobody forgets a crisis, everybody forgets
+   a wait. She approves by ID in a normal session; Claude then applies the approved
    ones (via `sop-authoring`: PR → review → merge) and marks the queue. See
    [`sop-proposals.md`](../sop-proposals.md) for the loop. **The report is not a gate** —
    nothing waits on it being read.
@@ -153,6 +202,8 @@ was said). Better a sourced, low-confidence note than nothing.
 | Ecom Beavers LLC | 706686 |
 | Artur Tseretsian | 752202 |
 | Ihor Naum & Olha Levchuk | 710637 |
+| LILIIA HLEBOVA KOZLOVSKA | 710644 |
+| Mykola Kozlovskyi | 709838 |
 | Denys Melnyk | 764785 |
 | Andrii Tymchenko | 710619 |
 | VOICECAPITAL INC | 710725 |
@@ -267,6 +318,32 @@ updates it, the Saturday run keeps following the **old** instructions — includ
 the line that left three weeks of Client Intelligence stranded. (Quoted exactly, so it can be
 searched for in the live Routine to check whether the update has happened.)
 
+🔴 **IT HAPPENED AGAIN ON 2026-08-15, AND THAT RUN'S WORK IS STILL STRANDED.** This is no longer a
+theoretical risk in a warning box — it is a live loss, and the run said so itself. Its email to
+Lilian closed with: *"All Client-Intelligence changes are committed and pushed to branch
+`claude/admiring-lamport-fzaj4y` (**not merged to main this run, per this run's instructions**)."*
+**"Per this run's instructions" is the stale prompt talking.** On `origin/main` at 2026-08-18 that
+branch is unmerged and holds **6 commits · 25 files · +456 lines** — 23 client files, `sweep-state.md`
+and `sop-proposals.md`, including two long-deferred coverage gaps finally cleared (Artur Tseretsian,
+Ihor Naum & Olha Levchuk) and four first-ever sweeps of Liudmyla's seed clients. **Merging it is
+sanctioned without review** — the diff is entirely inside the carve-out below.
+⚠️ **And the baselines went with it**, which is the compounding part: `sweep-state.md` on `main`
+still reads **2026-08-08** for those clients, so the loss is invisible from `main` and the next run
+will re-do work it has already paid for.
+
+🔴 **A SESSION CANNOT SAFELY DO THE RE-PASTE ALONE — and this, not forgetfulness, is why it keeps
+not happening.** _(Established 2026-08-18.)_ The note below suggests having Claude update the
+Routine in-session with `update_trigger` "so they never have to be retyped". **That does not work
+as written.** `update_trigger` can *write* a prompt, but **nothing exposed to a session can READ the
+current one** — `list_triggers` returns id, name, cron, enabled state and next run, and **there is
+no `get_trigger`**. The webhook URL and secret exist **only** inside that prompt. So a session that
+rewrites it **destroys the credentials it cannot see**, and the failure is the silent one step 3
+warns about: the sweep starts merging correctly and the weekly email simply stops arriving.
+**The re-paste therefore needs a human to supply the two values**, or someone to read them out of
+the web UI first. Written down because the advice below reads as though a session could just fix
+this, three sessions have presumably tried, and the rule has now survived a week longer than the
+run it broke.
+
 ✅ **But editing the SCOPE TABLE above DOES reach the live run** _(established 2026-08-14 by
 reading the trigger itself)_. The live prompt carries **no client list**; it instructs the run to
 read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
@@ -319,7 +396,10 @@ _(corrected 2026-08-14)_.
 > wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
 > placeholders and **the weekly email dies silently.** Copy the two real values out of the live
 > prompt first and paste them back in, or have Claude update the Routine in-session with
-> `update_trigger` (which takes a `prompt` parameter) so they never have to be retyped.
+> `update_trigger` (which takes a `prompt` parameter) — ⚠️ **but only after YOU have read the two
+> real values out of the live prompt and handed them over.** A session cannot read them itself:
+> there is no `get_trigger`, and `list_triggers` does not return the prompt. See the red block
+> above.
 
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.
@@ -351,6 +431,8 @@ CLIENTS (name -> Double id):
 - Ecom Beavers LLC -> 706686
 - Artur Tseretsian -> 752202
 - Ihor Naum & Olha Levchuk -> 710637
+- LILIIA HLEBOVA KOZLOVSKA -> 710644
+- Mykola Kozlovskyi -> 709838
 - Denys Melnyk -> 764785
 - Andrii Tymchenko -> 710619
 - VOICECAPITAL INC -> 710725
@@ -381,6 +463,7 @@ FOR EACH CLIENT:
    - Google Drive: search for the client's folder (usually one per client, under the firm's shared drive) and put its LINK in the file's §7 "Google Drive folder"; do NOT copy sensitive file contents into the repo.
    - The repo itself: check projects/sops/, FOLLOW-UPS.md and BACKLOG.md for any existing content about the client and fold in what's relevant.
    Keep it bounded (~10-15 calls/client).
+1b. CHASE THIS CLIENT'S OWN OPEN ITEMS — a SECOND, SEPARATE pass, and skipping it is the defect of 2026-08-18. Step 1 asks the sources "what is new?", which is blind to a thing that should have happened and did not, to a deadline approaching, and above all to a thing that DID happen that nobody searched for because only the client file knew to watch for it. So: OPEN clients/<slug>.md, read its "Outstanding items" and "Information still needed", and take each entry BACK TO THE SOURCES AS A NAMED QUERY — search for that specific document/receipt/reply by name, not a general "what changed" pass. Then for each entry report: DID IT ARRIVE (and if so, save it and close the item), HOW OLD is it in DAYS with the date it has been pending since, and ANY DEADLINE. Budget ~5 extra calls/client inside the same ceiling: deadline items first, then oldest, then the rest — and NAME the items you had no budget to chase rather than letting them print as "no movement". Real example: a client's issued licence had arrived by email 26 days earlier while the file still said "if it hasn't arrived yet", and TWO full historical Gmail passes missed it because nobody ever searched for it.
 2. Update clients/<slug>.md with new DURABLE, NON-SENSITIVE facts, each tagged (source, date). Operating zone (S1-5, S7) = facts a covering bookkeeper needs. CI-only zone (S6) = outstanding tasks / follow-ups (as pointers to Double/Ping). NEVER write secrets, logins, full account numbers, SSNs/ITINs, dollar figures, or personal names/emails/phones -- those stay in Double/Drive, referenced by link. A business EIN IS allowed (public on Sunbiz). Update "Last updated".
 3. Do NOT modify anything under projects/sops/. Instead, for a client that HAS an SOP, append the new Operating-zone facts the SOP does not yet reflect to projects/client-intelligence/sop-proposals.md as Pending rows, each with an ID (SOP-<run date>-NN), the client, the target SOP, the change, and its source. Read that file first and do NOT re-add a candidate already listed in any status (dedup). Never queue CI-only §6 content.
 
@@ -390,6 +473,8 @@ THEN:
 - Compose ONE email by FILLING the committed template at projects/client-intelligence/automation/email-template.html (keep its table/inline-style structure and section order exactly; do not invent a new design).
   Subject: "Client Intelligence — weekly sweep <run date>"   TO: lilian@jkaccountinggroup.com
   Body per client: what was SAVED to CI (with sources — a record, not a request) + the Pending SOP proposals with their IDs (the only part needing a decision). Note any contradictions recorded, in one line each, so she can ask about them if she ever wants to. Say that the CI changes are already on main.
+  STILL OPEN (from step 1b) goes in the template's existing section 3 "Still needed", and EVERY entry carries its AGE IN DAYS and any deadline — "Awaiting X" with no clock is invisible, "Awaiting X — 19 days" is not.
+  TWO RULES ABOUT "NOTHING NEW", BOTH BROKEN ON 2026-08-15: (a) the template says section 4 "Nothing new" prints when sections 1 & 2 are empty — that is WRONG when section 3 has content. Print "Nothing new" ONLY when 1, 2 AND 3 are all empty. (b) In AT A GLANCE, a client with open items is NOT green: use amber #9C6A39 with the oldest item's age, and reserve green #2F8F5E for a client with genuinely nothing outstanding. On 2026-08-15 two clients printed the green all-clear while one had a document pending 19 days and the other a licence renewal six weeks out. "Nothing new" and "nothing wrong" must never print as the same line.
 - SEND through the webhook EXACTLY ONCE — one POST, one recipient. Use `<WEBHOOK_URL>` and `<WEBHOOK_SECRET>` — the real values go in **this routine's prompt only**, never in the repo. Build payload.json with python3 (json.dump; keys `"secret"=<WEBHOOK_SECRET>`, `"to"`, `"subject"`, `"html"`, `"text"`), then:
     code=$(curl -sS --max-time 120 -o /tmp/resp -w "%{http_code}" -X POST -H "Content-Type: application/json" --data @payload.json "<WEBHOOK_URL>")
   IMPORTANT — how to read the result (this webhook redirects; do NOT use curl -L):
