@@ -1,6 +1,6 @@
 # JK Accounting Group — the firm's own details
 
-> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Julia · **Last updated:** 2026-08-18
 
 The firm's own identity, in one place, because **other people's forms keep asking for
 it** — the SS-4's Third-Party Designee block, a Form 2848 or 8821, a Business Tax
@@ -31,7 +31,8 @@ SOPs say where each one goes.
 | Field | Value |
 |---|---|
 | **Trading name** | JK Accounting Group |
-| **Exact legal entity name** | ⚠️ *(pending — nobody has written down whether it is an LLC, Inc. or PA. **Form 2848's representative block and the CAA application both need it exactly right**, so this is worth five minutes on Sunbiz)* |
+| **Entity TYPE** | 🟢 **A corporation** — *Lilian confirmed 2026-08-18.* Corroborated by the firm's own documents: its vendor record on a client's books and the **preparer block of a return the firm filed** both read **`JK ACCOUNTING GROUP CORP`**. 🔑 **This settles the 1099 question about ourselves** — payments a client makes to the firm are **exempt from Form 1099** because the payee is a corporation *(see [`form-1120s-preparation.md`](./form-1120s-preparation.md) §6B — the exemption is about the payee's classification, never the kind of service)* |
+| **Exact legal entity NAME as registered** | ⚠️ *(still pending — the type is settled above, but the **exact registered string** is what **Form 2848's representative block and the CAA application** must match character for character. Five minutes on Sunbiz)* |
 | **Federal EIN** | ⚠️ *(pending — required for the [CAA application](./irs-certifying-acceptance-agent.md); it is public information and belongs here once someone writes it down)* |
 | **Street address** | **11347 SW 13 Street, Pembroke Pines, FL 33025** — the firm's registered address. ⓘ **Lilian gave this on 2026-08-14 and said it is public on Sunbiz**, which is why it may be written down. **Nobody has actually opened the firm's Sunbiz record** — see the legal-name row directly above, which is missing for the same reason |
 | **Main phone** | **(786) 318-1505** — this is **Julia's direct line**, doubling as the number the firm's documents carry |
@@ -113,6 +114,7 @@ checklist for changing them** — not a magic single source that updates the oth
 | Address, phone + fax | **§3 of this file** restates all four designee values, and the [EIN SOP](./ein-application-irs.md) carries them **twice** — the **§4D designee table** and the **intake checklist in its appendix**, the printable one people fill the form from. Three places, all needing the change |
 | Letterhead city + main phone | ⛔ The **proposal and engagement-letter tools** — hard-coded and **frozen. Do not touch** (§3) |
 | Firm email on filings | The [Business Tax Receipt SOP](./hollywood-broward-business-tax-receipt.md) |
+| **The ENTITY TYPE** (that the firm is a corporation, and so clients owe us no 1099) | Three places outside §1: the [1120-S SOP §6B](./form-1120s-preparation.md) exemption rule, **Kolo Florida's working paper** (`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md` §3A) and **its client file**. ⚠️ **If Sunbiz ever shows something other than a corporation, all three flip** — and the 1099 conclusion flips with them |
 | **The §4 credential rule** (who may sign a 2848 vs an 8821) | Restated in **seven ROWS across five files** — count rows, not files: the [EIN SOP §4D](./ein-application-irs.md); the **procedures index** in **two** rows (this sheet's and the EIN SOP's); the repo's **navigation map** in **two** rows (the EIN row and the firm-details row); this page's own **Knowledge Hub card blurb**, hard-coded in the Hub build; and **M5 Studio Miami's client file**. Fixing one row per file is the trap |
 
 > 🚨 **The main phone is the exception — this list will NOT find all of it.** **(786)
