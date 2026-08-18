@@ -188,7 +188,7 @@ client-intelligence/
 │   ├── sweep-state.md       ← incremental ledger: how far each client is swept (never re-read history)
 │   ├── taxdome-notes-backfill.md ← the migrated TaxDome profile notes — read 2026-08-13
 │   └── email-template.html  ← the on-brand, email-safe report template the routine fills
-└── clients/               ← one file per client (47 so far — see the Clients index below)
+└── clients/               ← one file per client (48 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -202,6 +202,7 @@ client-intelligence/
 | ECOORGANIC USA LLC | [`clients/ecoorganic-usa.md`](./clients/ecoorganic-usa.md) | Lilian | In progress — has a bookkeeping SOP **and a separate monthly CT sales-tax runbook**; 2025 1120-S in progress, Turo documents outstanding, QuickBooks primary-admin handover paused mid-change (two users on purpose — see §3). 🔴 **New 2026-08-12:** nine months of 2025 with no sales-tax return on file and **two unopened DRS notices** (a proposed assessment goes final if unprotested), and the **basis for filing zero has never been recorded** for a business with revenue |
 | Kolo Florida Inc | [`clients/kolo-florida.md`](./clients/kolo-florida.md) | Lilian | ⚠️ **Winding down — company closing, no longer a client** (Lilian, 2026-08-11). July 2026 is the last sales-tax filing; account closures in progress. The owner's individual 1040 engagement is separate and continues |
 | LILIIA HLEBOVA KOZLOVSKA | [`clients/liliia-hlebova-kozlovska.md`](./clients/liliia-hlebova-kozlovska.md) | Lilian | ⚠️ **Created 2026-08-17 from a pre-return review.** Individual 1040, **first year filing separately after a divorce** — the 2025 organizer still says *Married* and must be corrected. 🔴 **Two blockers:** the **Form 8962 / Marketplace allocation**, which has to match her ex-husband's return, and her **2025 income**, which the organizer reports as nil and Lilian says is wrong (asked, unanswered). **She is NOT a Kolo Florida shareholder**, so none of the 2024 joint carryovers are hers. Dependants split deliberately deferred |
+| Mykola Kozlovskyi | [`clients/mykola-kozlovskyi.md`](./clients/mykola-kozlovskyi.md) | Lilian | ⚠️ **Created 2026-08-18.** Individual 1040, **first year filing separately after a divorce**. 🔑 **His return runs off his company's** — from 2025 he is the **sole shareholder of [Kolo Florida Inc](./clients/kolo-florida.md) at 100%** (the other shareholder's 2024 K-1 was marked `Final`), so the K-1 and the Form 7203 come off that 1120-S. No Uber in 2025; the 2024 NOL and QBI carryforward are his. 🔴 **Blocked with his ex-wife on the Form 8962 allocation and the dependants split**, and the **2025 Form 1095-A is not on file** |
 | Pro Title Agency | [`clients/pro-title-agency.md`](./clients/pro-title-agency.md) | Lilian | In progress — BTR captured |
 | NEVER GIVE UP KK LLC | [`clients/never-give-up-kk.md`](./clients/never-give-up-kk.md) | Lilian | In progress — enriched (Double + Gmail) |
 | YES TEAM CORP | [`clients/yes-team-corp.md`](./clients/yes-team-corp.md) | Lilian | In progress — enriched (Double + Gmail) |
