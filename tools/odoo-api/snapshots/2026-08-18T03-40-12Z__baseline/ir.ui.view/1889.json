@@ -1,0 +1,60 @@
+{
+  "id": 1889,
+  "display_name": "Graphene s_three_columns",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Graphene s_three_columns",
+  "model": false,
+  "key": "theme_graphene.s_three_columns",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data inherit_id=\"website.s_three_columns\" name=\"Graphene s_three_columns\">\n    <xpath expr=\"//div[hasclass('row')]/div//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Powerful API</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div//p[1]\" position=\"replace\" mode=\"inner\">\n        Thanks to our API, Developers report building their solutions 4x faster. Discover why and how.\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Mobile Experience</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//p[1]\" position=\"replace\" mode=\"inner\">\n        Probably the only CRM with a full mobile experience. Never wondered how it works? That's because it just works\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Support Team</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//p[1]\" position=\"replace\" mode=\"inner\">\n        We have a support team that will do everything to answer you as quickly as the voice assistants.\n    </xpath>\n</data>",
+  "arch_base": "<data inherit_id=\"website.s_three_columns\" name=\"Graphene s_three_columns\">\n    <xpath expr=\"//div[hasclass('row')]/div//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Powerful API</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div//p[1]\" position=\"replace\" mode=\"inner\">\n        Thanks to our API, Developers report building their solutions 4x faster. Discover why and how.\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Mobile Experience</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//p[1]\" position=\"replace\" mode=\"inner\">\n        Probably the only CRM with a full mobile experience. Never wondered how it works? That's because it just works\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Support Team</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//p[1]\" position=\"replace\" mode=\"inner\">\n        We have a support team that will do everything to answer you as quickly as the voice assistants.\n    </xpath>\n</data>",
+  "arch_db": "<data inherit_id=\"website.s_three_columns\" name=\"Graphene s_three_columns\">\n    <xpath expr=\"//div[hasclass('row')]/div//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Powerful API</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div//p[1]\" position=\"replace\" mode=\"inner\">\n        Thanks to our API, Developers report building their solutions 4x faster. Discover why and how.\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Mobile Experience</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//p[1]\" position=\"replace\" mode=\"inner\">\n        Probably the only CRM with a full mobile experience. Never wondered how it works? That's because it just works\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//h2[1]\" position=\"replace\">\n        <h2 class=\"h5-fs\">Support Team</h2>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//p[1]\" position=\"replace\" mode=\"inner\">\n        We have a support team that will do everything to answer you as quickly as the voice assistants.\n    </xpath>\n</data>",
+  "arch_fs": "theme_graphene/views/customizations.xml",
+  "arch_updated": false,
+  "arch_prev": "<data inherit_id=\"website.s_three_columns\" name=\"Graphene s_three_columns\">\n    <xpath expr=\"//div[hasclass('row')]/div//h5[1]\" position=\"replace\">\n        <h5>Powerful API</h5>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div//p[1]\" position=\"replace\" mode=\"inner\">\n        Thanks to our API, Developers report building their solutions 4x faster. Discover why and how.\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//h5[1]\" position=\"replace\">\n        <h5>Mobile Experience</h5>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[2]//p[1]\" position=\"replace\" mode=\"inner\">\n        Probably the only CRM with a full mobile experience. Never wondered how it works? That's because it just works\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//h5[1]\" position=\"replace\">\n        <h5>Support Team</h5>\n        <div class=\"s_hr pt8 pb16\" data-snippet=\"s_hr\" data-name=\"Separator\">\n            <hr class=\"w-100 mx-auto\" style=\"border-top-color: var(--o-color-3) !important;\"/>\n        </div>\n    </xpath>\n    <xpath expr=\"//div[hasclass('row')]/div[3]//p[1]\" position=\"replace\" mode=\"inner\">\n        We have a support team that will do everything to answer you as quickly as the voice assistants.\n    </xpath>\n</data>",
+  "inherit_id": [
+    694,
+    "Columns"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-25 17:01:54",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:55",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": [
+    12,
+    "Graphene s_three_columns"
+  ]
+}

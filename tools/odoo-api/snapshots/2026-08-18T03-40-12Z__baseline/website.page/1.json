@@ -1,0 +1,86 @@
+{
+  "id": 1,
+  "display_name": "Thanks Contact us (legacy)",
+  "header_visible": true,
+  "footer_visible": true,
+  "header_overlay": false,
+  "header_color": false,
+  "header_text_color": false,
+  "website_id": false,
+  "website_published": false,
+  "is_published": false,
+  "can_publish": true,
+  "website_url": "/legacy/contactus-thank-you",
+  "website_absolute_url": "https://jkaccountinggroup.odoo.com/legacy/contactus-thank-you",
+  "url": "/legacy/contactus-thank-you",
+  "view_id": [
+    535,
+    "Thanks Contact us (legacy)"
+  ],
+  "view_write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "view_write_date": "2026-07-10 13:25:22",
+  "website_indexed": false,
+  "date_publish": false,
+  "menu_ids": [],
+  "is_in_menu": false,
+  "is_homepage": false,
+  "is_visible": false,
+  "is_new_page_template": false,
+  "arch": "<t name=\"Thanks (Contact us)\" t-name=\"website.contactus_thanks\">\n                <t t-call=\"website.layout\">\n                    <div id=\"wrap\" class=\"oe_structure oe_empty\">\n                        <section class=\"s_text_block pt40 pb40 o_colored_level \" data-snippet=\"s_text_block\">\n                            <div class=\"container s_allow_columns\">\n                                <div class=\"row\">\n                                    <div class=\"col-lg-6 offset-lg-1 text-center\">\n                                        <div class=\"d-inline-block mx-auto p-4\">\n                                            <i class=\"fa fa-paper-plane fa-2x mb-3 rounded-circle text-bg-success\" role=\"presentation\"/>\n                                            <h1 class=\"fw-bolder\">Thank You!</h1>\n                                            <p class=\"lead mb-0\">Your message has been sent.</p>\n                                            <p class=\"lead\">We will get back to you shortly.</p>\n                                            <a href=\"/\">Go to Homepage</a>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-lg-4 offset-lg-1\">\n                                        <h5>My Company</h5>\n                                        <ul class=\"list-unstyled mb-0 ps-2\">\n                                            <li><i class=\"fa fa-map-marker fa-fw me-2\"/><span class=\"o_force_ltr\">3575 Fake Buena Vista Avenue</span></li>\n                                            <li><i class=\"fa fa-phone fa-fw me-2\"/><span class=\"o_force_ltr\">+1 555-555-5556</span></li>\n                                            <li><i class=\"fa fa-1x fa-fw fa-envelope me-2\"/><span>info@yourcompany.example.com</span></li>\n                                        </ul>\n                                    </div>\n                                </div>\n                            </div>\n                        </section>\n                    </div>\n                    <input t-if=\"website.plausible_shared_key\" type=\"hidden\" class=\"js_plausible_push\" data-event-name=\"Lead Generation\" data-event-params=\"{&quot;CTA&quot;: &quot;Contact Us&quot;}\"/>\n                </t>\n            </t>",
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2024-12-24 17:38:30",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-07-10 13:25:22",
+  "theme_template_id": false,
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Thanks Contact us (legacy)",
+  "model": false,
+  "key": "website.thanks-contact-us-legacy",
+  "priority": 16,
+  "type": "qweb",
+  "arch_base": "<t name=\"Thanks (Contact us)\" t-name=\"website.contactus_thanks\">\n                <t t-call=\"website.layout\">\n                    <div id=\"wrap\" class=\"oe_structure oe_empty\">\n                        <section class=\"s_text_block pt40 pb40 o_colored_level \" data-snippet=\"s_text_block\">\n                            <div class=\"container s_allow_columns\">\n                                <div class=\"row\">\n                                    <div class=\"col-lg-6 offset-lg-1 text-center\">\n                                        <div class=\"d-inline-block mx-auto p-4\">\n                                            <i class=\"fa fa-paper-plane fa-2x mb-3 rounded-circle text-bg-success\" role=\"presentation\"/>\n                                            <h1 class=\"fw-bolder\">Thank You!</h1>\n                                            <p class=\"lead mb-0\">Your message has been sent.</p>\n                                            <p class=\"lead\">We will get back to you shortly.</p>\n                                            <a href=\"/\">Go to Homepage</a>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-lg-4 offset-lg-1\">\n                                        <h5>My Company</h5>\n                                        <ul class=\"list-unstyled mb-0 ps-2\">\n                                            <li><i class=\"fa fa-map-marker fa-fw me-2\"/><span class=\"o_force_ltr\">3575 Fake Buena Vista Avenue</span></li>\n                                            <li><i class=\"fa fa-phone fa-fw me-2\"/><span class=\"o_force_ltr\">+1 555-555-5556</span></li>\n                                            <li><i class=\"fa fa-1x fa-fw fa-envelope me-2\"/><span>info@yourcompany.example.com</span></li>\n                                        </ul>\n                                    </div>\n                                </div>\n                            </div>\n                        </section>\n                    </div>\n                    <input t-if=\"website.plausible_shared_key\" type=\"hidden\" class=\"js_plausible_push\" data-event-name=\"Lead Generation\" data-event-params=\"{&quot;CTA&quot;: &quot;Contact Us&quot;}\"/>\n                </t>\n            </t>",
+  "arch_db": "<t name=\"Thanks (Contact us)\" t-name=\"website.contactus_thanks\">\n                <t t-call=\"website.layout\">\n                    <div id=\"wrap\" class=\"oe_structure oe_empty\">\n                        <section class=\"s_text_block pt40 pb40 o_colored_level \" data-snippet=\"s_text_block\">\n                            <div class=\"container s_allow_columns\">\n                                <div class=\"row\">\n                                    <div class=\"col-lg-6 offset-lg-1 text-center\">\n                                        <div class=\"d-inline-block mx-auto p-4\">\n                                            <i class=\"fa fa-paper-plane fa-2x mb-3 rounded-circle text-bg-success\" role=\"presentation\"/>\n                                            <h1 class=\"fw-bolder\">Thank You!</h1>\n                                            <p class=\"lead mb-0\">Your message has been sent.</p>\n                                            <p class=\"lead\">We will get back to you shortly.</p>\n                                            <a href=\"/\">Go to Homepage</a>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-lg-4 offset-lg-1\">\n                                        <h5>My Company</h5>\n                                        <ul class=\"list-unstyled mb-0 ps-2\">\n                                            <li><i class=\"fa fa-map-marker fa-fw me-2\"/><span class=\"o_force_ltr\">3575 Fake Buena Vista Avenue</span></li>\n                                            <li><i class=\"fa fa-phone fa-fw me-2\"/><span class=\"o_force_ltr\">+1 555-555-5556</span></li>\n                                            <li><i class=\"fa fa-1x fa-fw fa-envelope me-2\"/><span>info@yourcompany.example.com</span></li>\n                                        </ul>\n                                    </div>\n                                </div>\n                            </div>\n                        </section>\n                    </div>\n                    <input t-if=\"website.plausible_shared_key\" type=\"hidden\" class=\"js_plausible_push\" data-event-name=\"Lead Generation\" data-event-params=\"{&quot;CTA&quot;: &quot;Contact Us&quot;}\"/>\n                </t>\n            </t>",
+  "arch_fs": "website/data/website_data.xml",
+  "arch_updated": false,
+  "arch_prev": "<t name=\"Thanks (Contact us)\" t-name=\"website.contactus_thanks\">\n                <t t-call=\"website.layout\">\n                    <div id=\"wrap\" class=\"oe_structure oe_empty\">\n                        <section class=\"s_text_block pt40 pb40 o_colored_level \" data-snippet=\"s_text_block\">\n                            <div class=\"container s_allow_columns\">\n                                <div class=\"row\">\n                                    <div class=\"col-lg-6 offset-lg-1 text-center\">\n                                        <div class=\"d-inline-block mx-auto p-4\">\n                                            <i class=\"fa fa-paper-plane fa-2x mb-3 rounded-circle text-bg-success\" role=\"presentation\"/>\n                                            <h1 class=\"fw-bolder\">Thank You!</h1>\n                                            <p class=\"lead mb-0\">Your message has been sent.</p>\n                                            <p class=\"lead\">We will get back to you shortly.</p>\n                                            <a href=\"/\">Go to Homepage</a>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-lg-4 offset-lg-1\">\n                                        <h5>My Company</h5>\n                                        <ul class=\"list-unstyled mb-0 ps-2\">\n                                            <li><i class=\"fa fa-map-marker fa-fw me-2\"/><span class=\"o_force_ltr\">3575 Fake Buena Vista Avenue</span></li>\n                                            <li><i class=\"fa fa-phone fa-fw me-2\"/><span class=\"o_force_ltr\">+1 555-555-5556</span></li>\n                                            <li><i class=\"fa fa-1x fa-fw fa-envelope me-2\"/><span>info@yourcompany.example.com</span></li>\n                                        </ul>\n                                    </div>\n                                </div>\n                            </div>\n                        </section>\n                    </div>\n                    <input t-if=\"website.plausible_shared_key\" type=\"hidden\" class=\"js_plausible_push\" data-event-name=\"Lead Generation\" data-event-params=\"{&quot;CTA&quot;: &quot;Contact Us&quot;}\"/>\n                </t>\n            </t>",
+  "inherit_id": false,
+  "inherit_children_ids": [],
+  "model_data_id": [
+    27503,
+    "Thanks Contact us (legacy)"
+  ],
+  "xml_id": "website.contactus_thanks_ir_ui_view",
+  "group_ids": [],
+  "mode": "primary",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "customize_show": false,
+  "page_ids": [
+    1
+  ],
+  "controller_page_ids": [],
+  "first_page_id": [
+    1,
+    "Thanks Contact us (legacy)"
+  ],
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": ""
+}

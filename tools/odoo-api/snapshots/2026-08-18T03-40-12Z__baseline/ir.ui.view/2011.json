@@ -1,0 +1,57 @@
+{
+  "id": 2011,
+  "display_name": "Appointment: Appointment Info",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Appointment: Appointment Info",
+  "model": false,
+  "key": "website_appointment.appointment_info",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data name=\"Appointment: Appointment Info\" inherit_id=\"appointment.appointment_info\" track=\"1\">\n        <xpath expr=\"//t[@t-call='portal.portal_layout']\" position=\"attributes\">\n            <attribute name=\"t-call\">website.layout</attribute>\n        </xpath>\n        <xpath expr=\"//div[@id='wrap']\" position=\"attributes\">\n            <attribute name=\"class\">o_wappointment_wrap h-100 overflow-x-hidden</attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-set='o_portal_fullwidth_alert']\" position=\"replace\"/>\n        <xpath expr=\"//t[@t-call='appointment.staff_user_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//div[@name='resource_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and not based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-call='appointment.appointment_progress_bar']\" position=\"before\">\n            <a t-if=\"len(available_appointments) != 1\" class=\"text-truncate\" t-attf-href=\"/appointment?#{keep_query('filter_appointment_type_ids', 'filter_staff_user_ids', 'invite_token')}\">\n                <i class=\"fa fa-long-arrow-left me-2\"/>All Appointments\n            </a>\n        </xpath>\n        <xpath expr=\"//t[@t-set='selectionPossible']\" position=\"after\">\n            <!-- Selection is no longer possible if a selection screen was shown beforehand -->\n            <t t-set=\"selectionPossible\" t-value=\"selectionPossible and not (is_manual_assign_user_resource_first and appointment_type.show_avatars)\"/>\n        </xpath>\n    </data>",
+  "arch_base": "<data name=\"Appointment: Appointment Info\" inherit_id=\"appointment.appointment_info\" track=\"1\">\n        <xpath expr=\"//t[@t-call='portal.portal_layout']\" position=\"attributes\">\n            <attribute name=\"t-call\">website.layout</attribute>\n        </xpath>\n        <xpath expr=\"//div[@id='wrap']\" position=\"attributes\">\n            <attribute name=\"class\">o_wappointment_wrap h-100 overflow-x-hidden</attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-set='o_portal_fullwidth_alert']\" position=\"replace\"/>\n        <xpath expr=\"//t[@t-call='appointment.staff_user_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//div[@name='resource_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and not based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-call='appointment.appointment_progress_bar']\" position=\"before\">\n            <a t-if=\"len(available_appointments) != 1\" class=\"text-truncate\" t-attf-href=\"/appointment?#{keep_query('filter_appointment_type_ids', 'filter_staff_user_ids', 'invite_token')}\">\n                <i class=\"fa fa-long-arrow-left me-2\"/>All Appointments\n            </a>\n        </xpath>\n        <xpath expr=\"//t[@t-set='selectionPossible']\" position=\"after\">\n            <!-- Selection is no longer possible if a selection screen was shown beforehand -->\n            <t t-set=\"selectionPossible\" t-value=\"selectionPossible and not (is_manual_assign_user_resource_first and appointment_type.show_avatars)\"/>\n        </xpath>\n    </data>",
+  "arch_db": "<data name=\"Appointment: Appointment Info\" inherit_id=\"appointment.appointment_info\" track=\"1\">\n        <xpath expr=\"//t[@t-call='portal.portal_layout']\" position=\"attributes\">\n            <attribute name=\"t-call\">website.layout</attribute>\n        </xpath>\n        <xpath expr=\"//div[@id='wrap']\" position=\"attributes\">\n            <attribute name=\"class\">o_wappointment_wrap h-100 overflow-x-hidden</attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-set='o_portal_fullwidth_alert']\" position=\"replace\"/>\n        <xpath expr=\"//t[@t-call='appointment.staff_user_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//div[@name='resource_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                is_manual_assign_user_resource_first and not based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-call='appointment.appointment_progress_bar']\" position=\"before\">\n            <a t-if=\"len(available_appointments) != 1\" class=\"text-truncate\" t-attf-href=\"/appointment?#{keep_query('filter_appointment_type_ids', 'filter_staff_user_ids', 'invite_token')}\">\n                <i class=\"fa fa-long-arrow-left me-2\"/>All Appointments\n            </a>\n        </xpath>\n        <xpath expr=\"//t[@t-set='selectionPossible']\" position=\"after\">\n            <!-- Selection is no longer possible if a selection screen was shown beforehand -->\n            <t t-set=\"selectionPossible\" t-value=\"selectionPossible and not (is_manual_assign_user_resource_first and appointment_type.show_avatars)\"/>\n        </xpath>\n    </data>",
+  "arch_fs": "website_appointment/views/appointment_templates_appointments.xml",
+  "arch_updated": false,
+  "arch_prev": "<data name=\"Appointment: Appointment Info\" inherit_id=\"appointment.appointment_info\" track=\"1\">\n        <xpath expr=\"//t[@t-call='portal.portal_layout']\" position=\"attributes\">\n            <attribute name=\"t-call\">website.layout</attribute>\n        </xpath>\n        <xpath expr=\"//div[@id='wrap']\" position=\"attributes\">\n            <attribute name=\"class\">o_wappointment_wrap h-100 overflow-x-hidden</attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-set='o_portal_fullwidth_alert']\" position=\"replace\"/>\n        <xpath expr=\"//t[@t-call='appointment.staff_user_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                appointment_type.assign_method == 'resource_time' and based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//div[@name='resource_select']\" position=\"attributes\">\n            <attribute name=\"t-if\">\n                appointment_type.assign_method == 'resource_time' and not based_on_users and not skip_resource_selection\n            </attribute>\n        </xpath>\n        <xpath expr=\"//t[@t-call='appointment.appointment_progress_bar']\" position=\"before\">\n            <a t-if=\"len(available_appointments) != 1\" class=\"text-truncate\" t-attf-href=\"/appointment?#{keep_query('filter_appointment_type_ids', 'filter_staff_user_ids', 'invite_token')}\">\n                <i class=\"fa fa-long-arrow-left me-2\"/>All Appointments\n            </a>\n        </xpath>\n        <xpath expr=\"//t[@t-call='appointment.appointment_details_column']\" position=\"inside\">\n            <!-- Selection is no longer possible if a selection screen was shown beforehand -->\n            <t t-set=\"selectionPossible\" t-value=\"selectionPossible and not (appointment_type.assign_method == 'resource_time' and appointment_type.avatars_display == 'show')\"/>\n        </xpath>\n    </data>",
+  "inherit_id": [
+    2010,
+    "Appointment: Appointment Info"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2024-12-31 18:13:45",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:25:03",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": true,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": false
+}

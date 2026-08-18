@@ -1,0 +1,57 @@
+{
+  "id": 2151,
+  "display_name": "Contact Form (Opportunity)",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "Contact Form (Opportunity)",
+  "model": false,
+  "key": "website_crm.contactus_form",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data name=\"Contact Form (Opportunity)\" inherit_id=\"website.contactus\">\n            <xpath expr=\"//t[@t-set='contactus_form_values']\" position=\"after\">\n                <t t-set=\"contactus_form_values\" t-value=\"dict(contactus_form_values, **{                     'contact_name': request.params.get('contact_name', ''),                     'partner_name': request.params.get('partner_name', ''),                     'description': request.params.get('description', ''),                 })\"/>\n            </xpath>\n\t\t</data>",
+  "arch_base": "<data name=\"Contact Form (Opportunity)\" inherit_id=\"website.contactus\">\n            <xpath expr=\"//t[@t-set='contactus_form_values']\" position=\"after\">\n                <t t-set=\"contactus_form_values\" t-value=\"dict(contactus_form_values, **{                     'contact_name': request.params.get('contact_name', ''),                     'partner_name': request.params.get('partner_name', ''),                     'description': request.params.get('description', ''),                 })\"/>\n            </xpath>\n\t\t</data>",
+  "arch_db": "<data name=\"Contact Form (Opportunity)\" inherit_id=\"website.contactus\">\n            <xpath expr=\"//t[@t-set='contactus_form_values']\" position=\"after\">\n                <t t-set=\"contactus_form_values\" t-value=\"dict(contactus_form_values, **{                     'contact_name': request.params.get('contact_name', ''),                     'partner_name': request.params.get('partner_name', ''),                     'description': request.params.get('description', ''),                 })\"/>\n            </xpath>\n\t\t</data>",
+  "arch_fs": "website_crm/views/website_templates_contactus.xml",
+  "arch_updated": false,
+  "arch_prev": "<data name=\"Contact Form (Opportunity)\" inherit_id=\"website.contactus\">\n            <xpath expr=\"//t[@t-set='contactus_form_values']\" position=\"after\">\n                <t t-set=\"contactus_form_values\" t-value=\"dict(contactus_form_values, **{                     'contact_name': request.params.get('contact_name', ''),                     'partner_name': request.params.get('partner_name', ''),                     'description': request.params.get('description', ''),                 })\"/>\n            </xpath>\n\t\t</data>",
+  "inherit_id": [
+    1903,
+    "Contact Us (legacy)"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2025-01-02 00:41:09",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:22:52",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": false
+}

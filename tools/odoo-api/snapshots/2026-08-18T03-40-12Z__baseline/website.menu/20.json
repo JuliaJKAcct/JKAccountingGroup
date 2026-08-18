@@ -1,0 +1,36 @@
+{
+  "id": 20,
+  "display_name": "Tax Dome Portal",
+  "name": "Tax Dome Portal",
+  "url": "https://jkaccountinggroup.taxdome.com/",
+  "page_id": false,
+  "controller_page_id": false,
+  "new_window": false,
+  "sequence": 8,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "parent_id": [
+    4,
+    "Top Menu for Website 1"
+  ],
+  "child_id": [],
+  "parent_path": "4/20/",
+  "is_visible": true,
+  "group_ids": [],
+  "is_mega_menu": false,
+  "mega_menu_content": false,
+  "mega_menu_classes": false,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2025-01-05 19:15:30",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2025-01-05 22:02:28",
+  "theme_template_id": false
+}

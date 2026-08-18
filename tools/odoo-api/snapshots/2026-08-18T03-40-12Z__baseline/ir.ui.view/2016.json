@@ -1,0 +1,57 @@
+{
+  "id": 2016,
+  "display_name": "'Regular' Cover",
+  "is_seo_optimized": false,
+  "website_meta_title": false,
+  "website_meta_description": false,
+  "website_meta_keywords": false,
+  "website_meta_og_img": false,
+  "seo_name": false,
+  "name": "'Regular' Cover",
+  "model": false,
+  "key": "website_blog.opt_blog_post_regular_cover",
+  "priority": 16,
+  "type": "qweb",
+  "arch": "<data name=\"'Regular' Cover\" inherit_id=\"website_blog.blog_post_complete\" active=\"False\">\n    <xpath expr=\"//div[@id='title']\" position=\"replace\">\n        <div class=\"container\">\n            <t t-set=\"readableClass\" t-if=\"opt_blog_post_readable and opt_blog_post_sidebar\" t-value=\"'o_wblog_read_with_sidebar mx-auto'\"/>\n            <t t-set=\"readableClass\" t-elif=\"opt_blog_post_readable\" t-value=\"'container'\"/>\n\n            <div id=\"title\" t-attf-class=\"blog_header o_wblog_regular_cover_container #{readableClass}\">\n\n                <t t-if=\"opt_blog_post_breadcrumb\" t-call=\"website_blog.post_breadcrumbs\">\n                    <t t-set=\"additionnal_classes\" t-value=\"'mt-4 mb-3 bg-transparent'\"/>\n                </t>\n\n                <div t-att-class=\"not opt_blog_post_breadcrumb and 'pt-4'\">\n                    <div t-attf-class=\"o_wblog_post_title mb-3\" t-ignore=\"False\">\n                        <h1 t-field=\"blog_post.name\" class=\"o_wblog_post_name\" data-oe-expression=\"blog_post.name\" t-att-data-blog-id=\"blog_post.id\" placeholder=\"Title\"/>\n                        <div t-field=\"blog_post.subtitle\" class=\"o_wblog_post_subtitle\" placeholder=\"Subtitle\"/>\n                    </div>\n                    <t t-call=\"website_blog.blog_post_info\"/>\n                </div>\n\n                <t t-call=\"website.record_cover\">\n                    <t t-set=\"_record\" t-value=\"blog_post\"/>\n                    <t t-set=\"additionnal_classes\" t-value=\"'o_wblog_post_page_cover o_wblog_post_page_cover_regular rounded shadow overflow-hidden'\"/>\n                    <t t-set=\"use_size\" t-value=\"True\"/>\n                </t>\n            </div>\n        </div>\n    </xpath>\n</data>",
+  "arch_base": "<data name=\"'Regular' Cover\" inherit_id=\"website_blog.blog_post_complete\" active=\"False\">\n    <xpath expr=\"//div[@id='title']\" position=\"replace\">\n        <div class=\"container\">\n            <t t-set=\"readableClass\" t-if=\"opt_blog_post_readable and opt_blog_post_sidebar\" t-value=\"'o_wblog_read_with_sidebar mx-auto'\"/>\n            <t t-set=\"readableClass\" t-elif=\"opt_blog_post_readable\" t-value=\"'container'\"/>\n\n            <div id=\"title\" t-attf-class=\"blog_header o_wblog_regular_cover_container #{readableClass}\">\n\n                <t t-if=\"opt_blog_post_breadcrumb\" t-call=\"website_blog.post_breadcrumbs\">\n                    <t t-set=\"additionnal_classes\" t-value=\"'mt-4 mb-3 bg-transparent'\"/>\n                </t>\n\n                <div t-att-class=\"not opt_blog_post_breadcrumb and 'pt-4'\">\n                    <div t-attf-class=\"o_wblog_post_title mb-3\" t-ignore=\"False\">\n                        <h1 t-field=\"blog_post.name\" class=\"o_wblog_post_name\" data-oe-expression=\"blog_post.name\" t-att-data-blog-id=\"blog_post.id\" placeholder=\"Title\"/>\n                        <div t-field=\"blog_post.subtitle\" class=\"o_wblog_post_subtitle\" placeholder=\"Subtitle\"/>\n                    </div>\n                    <t t-call=\"website_blog.blog_post_info\"/>\n                </div>\n\n                <t t-call=\"website.record_cover\">\n                    <t t-set=\"_record\" t-value=\"blog_post\"/>\n                    <t t-set=\"additionnal_classes\" t-value=\"'o_wblog_post_page_cover o_wblog_post_page_cover_regular rounded shadow overflow-hidden'\"/>\n                    <t t-set=\"use_size\" t-value=\"True\"/>\n                </t>\n            </div>\n        </div>\n    </xpath>\n</data>",
+  "arch_db": "<data name=\"'Regular' Cover\" inherit_id=\"website_blog.blog_post_complete\" active=\"False\">\n    <xpath expr=\"//div[@id='title']\" position=\"replace\">\n        <div class=\"container\">\n            <t t-set=\"readableClass\" t-if=\"opt_blog_post_readable and opt_blog_post_sidebar\" t-value=\"'o_wblog_read_with_sidebar mx-auto'\"/>\n            <t t-set=\"readableClass\" t-elif=\"opt_blog_post_readable\" t-value=\"'container'\"/>\n\n            <div id=\"title\" t-attf-class=\"blog_header o_wblog_regular_cover_container #{readableClass}\">\n\n                <t t-if=\"opt_blog_post_breadcrumb\" t-call=\"website_blog.post_breadcrumbs\">\n                    <t t-set=\"additionnal_classes\" t-value=\"'mt-4 mb-3 bg-transparent'\"/>\n                </t>\n\n                <div t-att-class=\"not opt_blog_post_breadcrumb and 'pt-4'\">\n                    <div t-attf-class=\"o_wblog_post_title mb-3\" t-ignore=\"False\">\n                        <h1 t-field=\"blog_post.name\" class=\"o_wblog_post_name\" data-oe-expression=\"blog_post.name\" t-att-data-blog-id=\"blog_post.id\" placeholder=\"Title\"/>\n                        <div t-field=\"blog_post.subtitle\" class=\"o_wblog_post_subtitle\" placeholder=\"Subtitle\"/>\n                    </div>\n                    <t t-call=\"website_blog.blog_post_info\"/>\n                </div>\n\n                <t t-call=\"website.record_cover\">\n                    <t t-set=\"_record\" t-value=\"blog_post\"/>\n                    <t t-set=\"additionnal_classes\" t-value=\"'o_wblog_post_page_cover o_wblog_post_page_cover_regular rounded shadow overflow-hidden'\"/>\n                    <t t-set=\"use_size\" t-value=\"True\"/>\n                </t>\n            </div>\n        </div>\n    </xpath>\n</data>",
+  "arch_fs": "website_blog/views/website_blog_templates.xml",
+  "arch_updated": false,
+  "arch_prev": "<data name=\"'Regular' Cover\" inherit_id=\"website_blog.blog_post_complete\" active=\"False\">\n    <xpath expr=\"//div[@id='title']\" position=\"replace\">\n        <div class=\"container\">\n            <t t-set=\"readableClass\" t-if=\"opt_blog_post_readable and opt_blog_post_sidebar\" t-value=\"'o_wblog_read_with_sidebar mx-auto'\"/>\n            <t t-set=\"readableClass\" t-elif=\"opt_blog_post_readable\" t-value=\"'container'\"/>\n\n            <div id=\"title\" t-attf-class=\"blog_header o_wblog_regular_cover_container #{readableClass}\">\n\n                <t t-if=\"opt_blog_post_breadcrumb\" t-call=\"website_blog.post_breadcrumbs\">\n                    <t t-set=\"additionnal_classes\" t-value=\"'mt-4 mb-3 bg-transparent'\"/>\n                </t>\n\n                <div t-att-class=\"not opt_blog_post_breadcrumb and 'pt-4'\">\n                    <div t-attf-class=\"o_wblog_post_title mb-3 #{'js_tweet' if opt_blog_post_select_to_tweet else ''} #{'js_comment' if opt_blog_post_select_to_comment else ''}\" t-ignore=\"False\">\n                        <h1 t-field=\"blog_post.name\" id=\"o_wblog_post_name\" data-oe-expression=\"blog_post.name\" t-att-data-blog-id=\"blog_post.id\" placeholder=\"Title\"/>\n                        <div t-field=\"blog_post.subtitle\" id=\"o_wblog_post_subtitle\" placeholder=\"Subtitle\"/>\n                    </div>\n                    <div class=\"text-muted mb-2\">\n                        <i class=\"fa fa-clock-o fa-fw\"/>\n                        <span t-field=\"blog_post.post_date\" class=\"text-muted\" t-options=\"{'format': 'long', 'date_only': 'true'}\"/>\n                        <span>by\n                            <t t-call=\"website_blog.post_author\">\n                                <t t-set=\"additionnal_classes\" t-value=\"'d-inline-flex me-2'\"/>\n                                <t t-set=\"hide_date\" t-value=\"True\"/>\n                            </t>\n                        </span>\n                        <span t-if=\"len(blog_post.message_ids) &gt; 0\" class=\"text-nowrap ps-2 o_not_editable\">|\n                            <i class=\"fa fa-comment text-muted me-1\"/>\n                            <a href=\"#discussion\">\n                                <t t-esc=\"len(blog_post.message_ids)\"/>\n                                <t t-if=\"len(blog_post.message_ids)&gt;1\">Comments</t>\n                                <t t-else=\"\">Comment</t>\n                            </a>\n                        </span>\n                        <span t-elif=\"is_view_active('website_blog.opt_blog_post_comment')\">| No comments yet</span>\n                    </div>\n                </div>\n\n                <t t-call=\"website.record_cover\">\n                    <t t-set=\"_record\" t-value=\"blog_post\"/>\n                    <t t-set=\"additionnal_classes\" t-value=\"'o_wblog_post_page_cover o_wblog_post_page_cover_regular rounded shadow overflow-hidden'\"/>\n                    <t t-set=\"use_size\" t-value=\"True\"/>\n                </t>\n            </div>\n        </div>\n    </xpath>\n</data>",
+  "inherit_id": [
+    1535,
+    "Blog Post"
+  ],
+  "inherit_children_ids": [],
+  "model_data_id": false,
+  "xml_id": "",
+  "group_ids": [],
+  "mode": "extension",
+  "warning_info": "",
+  "active": true,
+  "model_id": false,
+  "invalid_locators": false,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2024-12-31 20:37:25",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2026-06-05 02:25:03",
+  "customize_show": false,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "page_ids": [],
+  "controller_page_ids": [],
+  "first_page_id": false,
+  "track": false,
+  "visibility": false,
+  "visibility_password": false,
+  "visibility_password_display": "",
+  "theme_template_id": false
+}

@@ -1,0 +1,39 @@
+{
+  "id": 21,
+  "display_name": "Home",
+  "name": "Home",
+  "url": "/",
+  "page_id": [
+    20,
+    "Home"
+  ],
+  "controller_page_id": false,
+  "new_window": false,
+  "sequence": 0,
+  "website_id": [
+    1,
+    "JK Accounting Group"
+  ],
+  "parent_id": [
+    4,
+    "Top Menu for Website 1"
+  ],
+  "child_id": [],
+  "parent_path": "4/21/",
+  "is_visible": true,
+  "group_ids": [],
+  "is_mega_menu": false,
+  "mega_menu_content": false,
+  "mega_menu_classes": false,
+  "create_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "create_date": "2025-01-05 19:18:34",
+  "write_uid": [
+    2,
+    "Julia Kononova"
+  ],
+  "write_date": "2026-08-10 01:01:57",
+  "theme_template_id": false
+}
