@@ -392,6 +392,38 @@ Tag every fact with its **source + date**. Transcripts are garbled multilingual
 auto-transcriptions — use only what is legible, tag it low-confidence, discard nonsense.
 **Non-sensitive facts only** (rule 1).
 
+### 🔴 A sweep has TWO passes — "what's new?" and "what's still open?"
+
+**The second one was missing until 2026-08-18, and everything it would have caught was missed.**
+
+Bounding a search by a baseline (below) makes the sweep cheap, but it also makes it **blind in one
+direction**: it can only see things that *happened*. It cannot see
+
+- a thing that was **supposed to happen and didn't** — a document awaited for three weeks,
+- a **deadline approaching** — nothing arrives to announce it,
+- or, worst, a thing that **did happen and nobody looked for**, because the client's own file
+  said to watch for it and no search was ever pointed at it.
+
+So **before you write the enrichment** — this is **step 1b** of the routine, between the sweep and
+the file update, so everything lands in one commit — **re-read the client file's `Outstanding
+items` and `Information still needed`, and take each entry back to the sources as a named query**:
+*did this arrive?* Then report every one that is still open **with its age in days** and any
+deadline. Budget **~5 calls per client** inside the same ceiling: deadline items first, then the
+oldest; **name whatever you had no budget to chase** rather than letting it print as "no movement".
+
+⚠️ **Treat "nothing new" as a result that still needs checking, never as a clear.** They are
+different findings and must read differently.
+
+_(**The run that proved it.** Two Business Tax Receipt applications, 2026-08-18. The issued
+certificate for one had **arrived by email 26 days earlier** while the file still read "if it
+hasn't arrived yet" — **two separate full historical Gmail passes** had swept that client and
+neither found it, because "what changed this week?" was the only question ever asked. Its
+**Sept 30 renewal** was six weeks out and uncalendared. The other client's awaited document had
+been pending **19 days** with no clock. The most recent sweep had reported both as *"no new
+meetings, notes, or emails"* — accurate, and worth nothing. Full write-up in
+[`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
+step 1b.)_
+
 ### Incremental sweeps (token discipline)
 
 `sweep-state.md` records the date each client is swept through. Bound every search to
