@@ -51,7 +51,7 @@ Work down the list. Every ✅ points at the module you must read. Everything unm
 | 5 | **Marketplace / Healthcare.gov insurance** → a **Form 1095-A** | [M4 · Form 8962](#m4--form-1095-a--form-8962--the-premium-tax-credit) | ✅ written |
 | 6 | **Children or other dependants** | [M5 · Schedule 8812](#m5--schedule-8812--child-tax-credit) | ✅ written |
 | 7 | **Earned income** and a qualifying child | [M6 · Schedule EIC](#m6--schedule-eic--earned-income-credit) | ✅ written |
-| 8 | A **net operating loss** carried forward | [M7 · NOL](#m7--net-operating-loss-carryforward) | ✅ written |
+| 8 | A **net operating loss** carried forward | [M7 · NOL](#m7--net-operating-loss-carryforward--and-form-172) | ✅ written |
 | 9 | **Digital assets** — crypto bought, sold, exchanged or received | [M8](#m8--digital-assets) | ✅ written |
 | 10 | **Rental property** | M9 · Schedule E Part I | ⬜ stub |
 | 11 | **Interest, dividends, or a brokerage 1099-B** | M10 · Schedule B / Schedule D / Form 8949 | ⬜ stub |
@@ -1052,16 +1052,130 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 
 ---
 
-## M7 · Net operating loss carryforward
+## M7 · Net operating loss carryforward — and **Form 172**
+
+**Form 172, *Net Operating Losses (NOLs) for Individuals, Estates, and Trusts* (Rev. December 2024),
+replaced the worksheets that used to live in Pub 536.** Part I computes the year's NOL; **Part II is
+a CARRYBACK computation** — its columns are *"2nd preceding tax year"* / *"1st preceding tax year"* —
+and since post-2020 NOLs generally cannot be carried back, **Part II is usually not used at all.**
+A pure carryforward is tracked on a statement.
+
+### The rules
 
 - Post-2017 NOLs **carry forward indefinitely**.
 - The deduction is limited to **80% of the excess (if any) of taxable income computed without the
-  deductions for NOLs, qualified business income, and §250** _(Pub 536)_.
-- 🔴 **So in a year with no positive taxable income, the allowable NOL deduction is ZERO and the
-  whole carryforward rolls on.** Entering the carryforward anyway burns a deduction that is not
-  allowed and **understates next year's opening NOL.**
-- **On a separation, the NOL belongs to the spouse who generated it.** Do not carry it onto the
-  other's return by default; record the decision on both.
+  deductions for NOLs, qualified business income, and §250** — so in a year with no positive taxable
+  income, the arithmetic gives **-0-**.
+- **On a separation, the NOL belongs to the spouse who generated it — and there is a TEST, not just
+  a maxim.** The section that governs a joint NOL year followed by separate returns is *Change in
+  Filing Status → Joint to separate returns*, run through *Joint return in NOL year* step 1:
+  *"Figure each spouse's NOL as if he or she filed a separate return… **If only one spouse has an
+  NOL, stop here. All of the joint NOL is that spouse's NOL.**"* ⓘ The *Change in Marital Status*
+  paragraph says it more briefly — *"only the spouse who had the loss can take the NOL deduction"* —
+  but **cite the step, because it is checkable**: an NOL needs *business* losses, and nonbusiness
+  deductions are added back on line 9, so a spouse with no business loss has no NOL to claim. Do not
+  carry it onto the other's return by default; record the decision on both.
+
+### 🔑 What goes on Schedule 1 line 8a is the **ALLOWABLE** deduction — and in a loss year that settles a tie
+
+🛑 **The amount is fixed by §172(a)(2), and it has two legs:**
+
+> **the allowable NOL deduction = the pre-2018 NOLs carried to the year, PLUS the lesser of (a) the
+> post-2017 NOLs carried to the year, or (b) 80% of the excess (if any) of taxable income computed
+> without regard to the NOL, QBI and §250 deductions, over the pre-2018 NOLs.**
+
+**In a year with income, that cap governs what you list**, and a large carryforward is deducted only
+up to it — the rest keeps carrying. 🔴 **Never list a whole carryforward against real income without
+running the 80% cap.**
+
+**In a LOSS year the cap computes to nil**, and that is where practice and the letter of §172(a)
+appear to disagree — the arithmetic says the allowable deduction is `-0-`, while the instructions
+say:
+
+> ***Deducting a Carryforward.*** *"If you carry forward your NOL to a tax year after the NOL year,
+> **list your NOL deduction as a negative figure on Schedule 1 (Form 1040)** for the year to which
+> the NOL is carried."*
+
+✅ **The disagreement is harmless, and Form 172 line 23 is why:**
+
+> ***Line 23 — NOL Deduction for Losses from Other Years.*** *"**You cannot deduct any NOL carryovers
+> or carrybacks from other years.** Enter the total amount of your NOL deduction for losses from
+> other years."* — as a **positive** number, combined into line 24.
+
+🔑 **Line 23 is an ADD-BACK: a prior year's NOL can never create or enlarge the current year's NOL.**
+Because Form 172 line 1 starts from **AGI** — which already contains whatever went on Schedule 1 —
+line 23 takes it straight back out. So **in a loss year the two entries converge exactly**: line 24
+lands on the same figure, and the carryforward is reduced only by the *modified taxable income* of
+the year it passes through, which is zero. *"Your taxable income as modified cannot be less than
+zero."* **Nothing is burned either way.**
+
+✅ **So in a loss year: enter it the way the instructions and the software do**, and check line 23
+caught it. Fighting the software to force Schedule 1 to zero gains nothing and risks breaking the
+Form 172 linkage.
+
+⚠️ **BOTH ENTRIES ARE DEFENSIBLE IN A LOSS YEAR — the instructions break the tie, they do not make
+the other one wrong.** _(An earlier version of this module went the other way and said that entering
+a carryforward "burns a deduction that is not allowed and understates next year's opening NOL". **The
+§172(a) half of that was right and still is; the "burns it" half was wrong**, and line 23 plus the
+modified-taxable-income floor are what refute it. Corrected 2026-08-19 after a live return.)_
+
+🔴 **The failure mode to fear is the opposite one: carrying this loss-year convergence into a year
+with income.** It does not hold there. **The 80% cap is the rule; the convergence is a special case
+of it.**
+
+### 🛑 The three lines of Form 172 that actually go wrong
+
+| Line | What it must be | What goes wrong |
+|---|---|---|
+| **1** | *"subtract your standard deduction or itemized deductions from your **adjusted gross income (AGI)**"* — a **negative** number in a loss year | 🔴 **Reading it as Form 1040 line 15**, which is **floored at zero**. That collapses the whole computation and line 24 comes out as *"you don't have an NOL"* |
+| **6** | Nonbusiness deductions — 🔑 **the standard deduction IS one**, the instructions list it by name | Omitting it **overstates the NOL by the whole standard deduction**, and that overstatement is carried forward against real income |
+| **23** | The other-year NOL deducted on Schedule 1, as a positive number | Blank, when Schedule 1 carries a deduction → the prior NOL is **double-counted** into next year. ⚠️ **Line 23 filled and line 24 blank is NOT a contradiction** — it means the combination came out positive, which is exactly what a mis-read line 1 produces. **Both outputs are internally consistent, which is why the defect is silent** |
+
+🛑 **THE CHECK THAT MATTERS MOST: line 24 should be a negative number when the client has a real,
+ALLOWED business loss.** The line reads *"…If the result is zero or more, you don't have an NOL."*
+**A zero there is silent**, because a loss year has no tax to be wrong about — so nothing forces
+anyone to look.
+
+⚠️ **A zero is a DEFECT unless the loss was disallowed, and there are four ways it legitimately can
+be.** Rule out all four before hunting for a data-entry error:
+1. **§461(l) excess business loss** — the disallowed excess is added back as a **positive** on
+   Schedule 1 via **Form 461**, which raises AGI, makes line 1 less negative, and can properly zero
+   line 24. The excess then becomes next year's carryover through the instructions' *NOL Carryover
+   with an Excess Business Loss Worksheet*. ⓘ The threshold is indexed and high — **read the current
+   Form 461 instructions** — so it bites only large losses. ⬜ **The firm has no Form 461 module yet;
+   write one the first time this bites.**
+2. **§1366(d) basis** — an S-corporation loss in excess of stock and debt basis is suspended, not
+   deducted (Form 7203 · M3).
+3. **§465 at-risk** (Form 6198) · 4. **§469 passive activity** (Form 8582). **Same order as M3.**
+
+🔴 **If none of those applies, it is a data-entry defect — go to line 1.** _(Live case, 2026-08-19:
+the software showed line 23 correctly filled and line 24 blank, on a return whose whole purpose was
+to carry a large loss into a liquidation year. The loss cleared all four gates; line 1 was the
+problem.)_
+
+🔑 **Sanity-check line 24 against the business loss itself.** Strip the nonbusiness standard deduction
+(line 9) and any other-year NOL (line 23) and what is left should be **the trade-or-business loss**.
+If line 24 does not look like the K-1 or the Schedule C, one of lines 1, 6 and 23 is wrong.
+
+### 🔑 State the COMBINED carryforward, not the pieces
+
+**A working paper that records "2024 generated X" and "2025 generated Y" in two different sections
+has not recorded what the next return needs.** Write the addition down:
+
+> **Opening NOL carryforward, 1 January `<next year>` = `<prior unabsorbed>` + `<this year's line 24>`**
+
+⚠️ **This matters most in exactly the year nobody is watching** — a string of loss years produces no
+tax, so nothing forces anyone to check the number, and then a liquidation or a profitable year
+arrives and the figure is suddenly worth its full value. _(Live case, 2026-08-19: both halves had
+been on the working paper for three days in different sections and the total had never been written.
+**The preparer asked for it while working the return in the software** — nothing in the review had
+surfaced it.)_
+
+🔴 **And write the 80% CAP down beside the total, because that is the planning consequence.** A
+carryforward absorbs at most **80% of the year's taxable income** (computed without the NOL, QBI and
+§250 deductions), so **roughly a fifth of a big profit or liquidation gain stays taxable however
+large the carryforward is.** Handing a total forward without the cap invites the assumption that the
+income year is sheltered outright. **It is not.**
 
 ---
 
@@ -1094,7 +1208,7 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
       and exclusive** use.
 - [ ] A K-1 loss clears **all three** gates — basis, at-risk, passive.
 - [ ] Form 7203 line 1 = **last year's line 15**.
-- [ ] The NOL deduction respects the **80%** limit; any unused amount is carried forward.
+- [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.
 - [ ] The refund account belongs to **this** taxpayer.
 
