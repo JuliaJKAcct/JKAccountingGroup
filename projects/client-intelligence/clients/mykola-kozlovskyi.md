@@ -210,7 +210,9 @@ the actual details.
     company's final year and drives the whole liquidation calculation. **Nothing flagged it**: every
     total on the form added up. **The cause is that the line is not typed on Form 7203 at all** — it
     arrives from the **K-1 input screen, box 16 code C** — so there was nothing on the form to fix.
-    ✅ **Fixed by entering the box on the K-1 input.**
+    🟠 **IDENTIFIED, NOT YET CONFIRMED CORRECTED.** The route to the fix is recorded on the working
+    paper; **nobody has confirmed the re-read.** ⚠️ **Do not treat the basis as settled until the
+    form has been re-read** — it is the figure the final year runs on.
   - ✅ **Now a standing part of the delivery standard** (the tax-return skill, part 8): every line
     table carries **where the number is entered**, marked as the software's route rather than an IRS
     fact, and says **"computed — do not type"** where that is the answer. **And the diagnostic that

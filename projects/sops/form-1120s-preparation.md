@@ -1261,16 +1261,24 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 the sequence §1.1367-1(f) requires, which is why reading it top to bottom is the safest way to
 prepare it.
 
+🛑 **AND MOST OF PART I CANNOT BE TYPED ON THE FORM.** In ATX only **lines 1 and 13** are typed
+there; **lines 2, 3a–3m, 6 and 8a all live on the K-1 INPUT SCREEN**, and the rest is computed.
+⚠️ **A blank line that should carry a figure means a missing INPUT — and the form still FOOTS**, so
+nothing flags it. **The full entry-route table and the failure mode are in
+[`form-1040-preparation.md` § M3](./form-1040-preparation.md#-form-7203--the-thing-nobody-tells-you-almost-none-of-part-i-is-typed-on-it)**, which is the canonical version; the table below is the
+company-side view of where each figure originates. _(Live case, 2026-08-19: box 16C never reached the
+K-1 input, line 8a stayed blank, and ending basis was overstated in the year before a liquidation.)_
+
 | Line | What it is | Where it comes from |
 |---|---|---|
 | **1** | Stock basis at the **beginning** of the corporation's tax year | 🔒 **line 15 of LAST year's Form 7203**, copied. If there is no prior 7203, build it from the capital account less prior losses and non-deductibles, and say in the file that it was derived |
-| **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii) |
+| **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii). 🛑 **The instructions exclude loans** — *"Don't include any loans to the S corporation"* — so gross credits are a starting point, not the answer |
 | **3a–3m** | Income items that increase basis | ⚠️ **A LOSS DOES NOT GO HERE.** Line 3a says *"enter losses in Part III"*. 3k is tax-exempt income |
 | **4** | Add lines 3a through 3m | ƒ |
 | **5** | **Stock basis before distributions** — add lines 1, 2 and 4 | ƒ |
 | **6** | **Distributions** (excluding dividend distributions) | 📖 the **gross debits** — the same figure as Schedule K 16d and K-1 box 16D |
 | **7** | **Stock basis after distributions** — line 5 − line 6 | ƒ ⚠️ if zero or less, enter **-0-**, skip lines 8–14 and put -0- on line 15 |
-| **8a–8c** | Non-deductible expenses · depletion · business credits | 8a is the Schedule K **16c** figure |
+| **8a–8c** | Non-deductible expenses · depletion · business credits | 8a is the Schedule K **16c** figure → **K-1 box 16 code C**. ⚠️ Blank **by rule** if a §1.1367-1(g) election is in effect — then it goes on **line 13**, with any prior-year carryover. ⓘ **8b is not a K-1 figure** — it is oil-and-gas depletion claimed on the shareholder's *personal* return |
 | **9** | Add lines 8a through 8c | ƒ |
 | **10** | **Stock basis before loss and deduction items** — line 7 − line 9 | ƒ |
 | **11** | Allowable loss and deduction items | ƒ **from Part III, line 47 column (c)** |
