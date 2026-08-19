@@ -3,7 +3,8 @@
 > **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** Started 2026-08-18 from the first two 1040s
 > the firm prepared with a session assisting; extended the same day with the **credit mechanics**
 > (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4), and on **2026-08-19** with the
-> home-office **IN/OUT rule**, the **first-landline** limit, and the two **lease** traps (M2).
+> home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
+> line map**, the **two-dates** rule (M2) and the **Form 8962 filling order + Part IV** (M4).
 > · **Owner:** Lilian
 >
 > ⬜ **No Atlas render yet.** [`sop-authoring`](../../.claude/skills/sop-authoring/) requires every
@@ -234,6 +235,98 @@ withheld across employers; and the household-employee and statutory-employee cas
 ⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a small workspace in a
 high-rent home — the actual method came out roughly **eight times** the simplified one.)_
 
+#### 🔴 The home office is NOT written on Schedule C — it is computed on FORM 8829
+
+**Schedule C line 30 only receives a number.** The whole computation lives on **Form 8829,
+*Expenses for Business Use of Your Home*, filed with the Schedule C.** Its own header carries a rule
+people miss: *"Use a **separate Form 8829 for each home** you used for business during the year."*
+
+🛠️ **In ATX you do not open Form 8829 directly — you fill in the *Home Office Expenses* worksheet,
+and ATX builds the 8829 from it.** _(Lilian, 2026-08-19.)_ Same for the software's date fields: they
+feed the form, they are not on it.
+
+⚠️ **There is a circularity, and it catches everyone.** Form 8829 **line 8** asks for **Schedule C
+line 29** — the tentative profit *before* the home office. So the order is:
+
+```
+Schedule C Parts I & II, everything EXCEPT line 30
+        ↓  line 29
+Form 8829  (line 8 ← Sch C line 29)
+        ↓  line 36
+Schedule C line 30  →  line 31
+```
+
+**Form 8829, line by line** — the map for an ordinary rented-home office:
+
+| Part | Line | What it is | Where the number comes from |
+|---|---|---|---|
+| I | **1** | Area used **regularly and exclusively** for business | The client's measurement, in ft² |
+| I | **2** | Total area of home | " |
+| I | **3** | Divide line 1 by line 2, **as a percentage** | ƒ 1 ÷ 2 |
+| I | **7** | **Business percentage** | = line 3 (lines 4–6 are daycare only) |
+| II | **8** | **Amount from Schedule C, line 29** — *plus any gain from the business use of the home, minus any loss from the trade or business not derived from it* | 🔑 the circular input — and the §280A(c)(5) ceiling, built into the form. The two adjustments are usually nil, but they are in the line's own text |
+| II | 9 · 10 · 11 | Casualty losses · deductible mortgage interest · real estate taxes | **0 for a renter** |
+| II | 12 – 15 | Subtotals; **line 15 = the ceiling that survives** | ƒ 8 − 14 |
+| II | **18** | **Insurance** — column (b) | Homeowner's **or renter's (HO-4)** policy, pro-rated |
+| II | **19** | **Rent** — column (b) | 🔑 **what THIS taxpayer paid** — see the lease rule below |
+| II | **20** | Repairs and maintenance — column (b) | Whole-home repairs |
+| II | **21** | **Utilities** — column (b) | Electricity, gas, water, sewer, trash. ⛔ **not the internet** — *the firm's position, see the IN/OUT section below; Pub 587 does not name it* |
+| II | 22 | Other expenses — column (b) | HOA fees live here |
+| II | **23** | Add lines 16 through 22 | ƒ |
+| II | **24** | **Multiply line 23 column (b) by line 7** | ƒ — this is the actual computation |
+| II | 25 | Carryover of prior year operating expenses | From last year's line 43 |
+| II | **26** | Add line 23 column (a), line 24, and line 25 | ƒ — the total the ceiling is tested against |
+| II | **27** | **Allowable operating expenses — the SMALLER of line 15 or line 26** | 🔑 **this is where §280A(c)(5) actually bites** |
+| II | **28** | Subtract line 27 from line 15 | ƒ — the room left for casualty losses and depreciation |
+| II | 29 – 33 | Casualty losses · **depreciation** | **0 for a renter** — no depreciation, so nothing to recapture on moving out |
+| II | **36** | **Allowable expenses → Schedule C line 30** | ƒ 34 − 35 |
+| III | 37 – 42 | Depreciation of the home | **Blank for a renter** |
+| IV | **43 · 44** | **Carryover to next year** | ƒ 26 − 27 · ƒ 32 − 33 |
+
+⚠️ **Columns (a) and (b) are not what a beginner expects.** **(a) Direct expenses** = costs of the
+**business part of the home only**, deducted at **100%** (painting just that room). **(b) Indirect
+expenses** = costs of the **whole home**, deducted at the line-7 percentage. Most entries are (b).
+
+⚠️ **Line 3 asks for a percentage, and how many decimals survive is a software convention, not a
+form rule** — the printed box is blank with a trailing `%`. A percentage rounded to two decimals
+gives a different answer from the full fraction — usually a dollar, occasionally more. **Let the
+software carry it**, and if you are checking by hand, expect the wobble.
+
+#### 📅 The two DATES — and neither Schedule C nor Form 8829 asks for one
+
+**A recurring question, and the answer surprises people. Nothing in the Schedule C package asks for a
+business start DATE:**
+
+| Where | What it actually asks | A date? |
+|---|---|---|
+| **Schedule C, line H** | *"If you started or acquired this business during [year], check here"* | ❌ **A checkbox. No date.** |
+| **Form 8829** | — | ❌ **No date field anywhere on the form** |
+| Form 4562 | *"Date placed in service"* | ✅ but only if something is being **depreciated** — not a renter's home office |
+| Simplified-method worksheet | **Number of months**, not a date | ❌ |
+
+⚠️ **Scoped deliberately: this is about the RETURN.** The **Form SS-4** does ask — line 11,
+*"Date business started or acquired"* — but that is the **EIN application**, not the return. See
+[`ein-application-irs.md`](./ein-application-irs.md). Forms 1065 and 1120-S carry a date in item E as
+well. **Schedule C and Form 8829 do not.**
+
+🛠️ **So a date field on THIS screen belongs to the SOFTWARE, not the IRS.** ATX's Home Office
+worksheet carries the date business use of the home began, and that is what drives the part-year
+proration onto line 24. The IRS only ever sees the result.
+
+🔑 **THE BUSINESS AND THE HOME OFFICE RUN ON TWO DIFFERENT CLOCKS, and that is perfectly normal.**
+A business that started **1 January** with a home office only from **1 September** is a completely
+ordinary pattern — someone goes self-employed and moves mid-year. Pub 587 is explicit: *"You cannot
+deduct expenses for the business use of your home incurred during any part of the year you did not
+use your home for business purposes."*
+
+- **The business start date** governs the line-H checkbox, §195 start-up costs, and which months of
+  **business** expenses count.
+- **The home-office start date** governs **only Form 8829**.
+- ⚠️ **Two consequences worth chasing.** If the business ran before the home office existed, there
+  are **business expenses in those earlier months** (phone, internet, mileage) that nobody has asked
+  for. And if there was a workspace at a **previous home**, that is a **second Form 8829** — the
+  form's own header says one per home.
+
 #### 🔑 What goes INTO the computation — and what emphatically does not
 
 **The test is simple: does the cost scale with the FLOOR AREA of the home?** If it does, it is an
@@ -415,6 +508,28 @@ clients hit it repeatedly: a taxpayer still qualifies if **the Marketplace estim
 that household income would be at least 100% FPL**, **advance payments were made**, and they are
 otherwise eligible. **Check it explicitly rather than assuming the credit is lost.**
 
+### 🔑 The order Form 8962 is actually filled in — it is NOT top to bottom
+
+| Step | Line | What it says, and what it means |
+|---|---|---|
+| 1 | **9** | *"Are you allocating policy amounts with another taxpayer…?"* → **Yes → "Skip to Part IV"**. The allocation is settled **before** any monthly figure is written |
+| 2 | **Part IV, line 30** | The allocation itself — see the column map below |
+| 3 | **10** | 🔴 **ALWAYS "No" once Part IV has been completed** — this is not a judgement call. The 2025 instructions say it three times: *"If you complete Part IV, check 'No' on line 10, skip line 11, and continue to Lines 12 Through 23."* **An allocated return cannot use the annual line at all**, whatever the monthly figures did. ⓘ *(Line 11 is otherwise the annual shortcut, available only where the enrolment premium, the SLCSP and the advance were the same in all twelve months.)* |
+| 4 | **12–23** | The **monthly** calculation, one row per month, on the **allocated** amounts |
+| 5 | **24 – 29** | Totals, then either a **net PTC** (line 26 → Schedule 3 line 9) or an **excess repayment** (line 27 → line 29 → **Schedule 2 line 1a**) |
+
+**Each monthly row runs the same way:** **(c)** is the monthly contribution amount from line 8b;
+**(d) = (b) − (c)**; **(e) = the LESSER of (a) and (d)**.
+
+🔑 **Which of (a) or (d) binds can change during the year, and it tells you something.** While the
+SLCSP is the smaller, the *benchmark plan* caps the credit. When the SLCSP rises above the actual
+premium, the **premium** caps it — **the credit never exceeds what the insurance actually cost.**
+
+⚠️ **Line 28, the repayment limitation, has a trap in its own column headings.** Under 200% of the
+poverty line the 2025 limits are **$375** for *"unmarried individuals **other than surviving spouses
+and heads of household**"* and **$750** for *"all other taxpayers"*. **A head of household takes the
+$750 column**, not the $375 one. _(Rev. Proc. 2024-40 §.07.)_
+
 ### 🔴 A shared policy — when one 1095-A covers more than one tax family
 
 Common after a separation: one policy, one recipient, and the people on it now file two or three
@@ -425,7 +540,7 @@ establish first — **the date the marriage ended**:
 |---|---|---|---|
 | **1** | Divorced or legally separated **during the year** | **By agreement — any percentage.** If they cannot agree, **50% each** | (e), (f) **and** (g) — ⚠️ **only for the months they were MARRIED** |
 | **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23. ⚠️ **A taxpayer who cannot take the PTC at all still has to allocate and REPAY the advance** — read the Situation 2 instructions for which columns they complete |
-| **3** | **No advance payments** were made | — | |
+| **3** | **No advance payments** were made | Enrolment premiums in proportion to each taxpayer's coverage family's SLCSP | **Column (e) only** |
 | **4** | Any other policy shared between two tax families | **By agreement — any percentage.** Failing agreement, the instructions' formula: **the number of individuals enrolled by one taxpayer who are in the OTHER taxpayer's tax family, divided by the total enrolled on that policy** | (e), (f) and (g) |
 
 🔴 **Two things a session gets wrong here, and both change the numbers:**
@@ -438,6 +553,43 @@ establish first — **the date the marriage ended**:
   situation, and Situation 1 covers **only the married months** while the rest of the year is
   something else. Form 8962 line 34 contemplates **more than four allocations**, with a statement
   attached.
+
+#### What the allocation percentage IS, and the Part IV column map
+
+**The Marketplace issues ONE Form 1095-A per policy, and the IRS receives one.** When the people on
+it file more than one return, each return must state **what share of that policy it is claiming**, so
+the shares cover it without gap or overlap. The percentage is applied to the **monthly** amounts —
+that is the form's own caption: *"Allocation percentage applied to monthly amounts."*
+
+| Part IV, line 30 | What goes in it |
+|---|---|
+| **(a)** Policy Number | From **Form 1095-A, line 2** |
+| **(b)** SSN of other taxpayer | The other taxpayer's — each return names the other |
+| **(c)** Allocation start month · **(d)** stop month | The months the allocation covers. Under **Situation 1** that is the months they were **married** |
+| **(e)** **Premium Percentage** | The share of column **A** — the premium actually paid |
+| **(f)** **SLCSP Percentage** | The share of column **B** — the benchmark plan |
+| **(g)** **Advance Payment Percentage** | The share of column **C** — what the government already paid |
+
+ⓘ **Part IV holds FOUR allocations on the face of the form** (lines 30–33). **Line 34** asks *"Have
+you completed all policy amount allocations?"* — a **No** is what sends you to the instructions for
+more than four.
+
+🔑 **Three percentages, not one, because they do not always agree.** Under **Situation 2** column
+**(f) is left BLANK** — the SLCSP is not allocated at all, and each taxpayer enters the SLCSP for
+their **own** coverage family. Under Situations 1 and 4 all three usually carry the same agreed
+number. 
+
+💡 **50/50 between two ex-spouses is the strongest split available under Situation 1**, because it is
+also the **no-agreement default** — it needs no justification beyond the instruction itself. Compare
+a "proportional" split derived from who was enrolled: defensible, but it **depends on which parent
+claims which child**, so a later Form 8332 changes it. **An agreed 50/50 does not**, which decouples
+two decisions that otherwise have to be made in the right order.
+
+⚠️ **A person on the policy who reports NOTHING from it.** An adult on someone else's policy who
+files their own return and claims 0% is common. The remaining taxpayers then absorb **100%** of the
+reconciliation — which is what the IRS actually checks, and is money-neutral where the credit and the
+advance are close. **Note it, do not chase it: they have forgone whatever credit their share carried,
+and that is their return.**
 
 **And three rules that bind whatever is chosen:**
 
@@ -611,6 +763,9 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - [ ] **Filing status** supports every credit claimed — including **applicable-taxpayer status for
       the PTC** (M4).
 - [ ] Each dependant is claimed on **exactly one** return.
+- [ ] **Form 8962 line 10** — **"No" whenever Part IV was completed**, or any monthly figure changed; lines **12–23** were used, not the annual line 11
+- [ ] **Form 8829 line 8 traces to Schedule C line 29** (plus/minus the two adjustments in that line's own text), and Schedule C line 30 = **Form 8829 line 36**
+- [ ] One **Form 8829 per home** used for business during the year
 - [ ] **No cost appears BOTH in the home-office worksheet and on line 25** — the internet and the telephone are the usual double-count.
 - [ ] The **rent used is what THIS taxpayer paid**, reconciled against the lease — not the lease amount, where it is a share.
 - [ ] Where a policy is shared: the shares **cover the policy with no overlap and no gap** for the
