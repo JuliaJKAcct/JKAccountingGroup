@@ -462,11 +462,74 @@ The K-1 comes off the company's **Form 1120-S** — see
 [`form-1120s-preparation.md`](./form-1120s-preparation.md). **The company's return is a
 prerequisite**: the shareholder's 1040 cannot be finished before it.
 
-| From the K-1 | Goes to |
-|---|---|
-| Box 1 ordinary business income (loss) | Schedule E Part II, nonpassive column → Schedule 1 line 5 |
-| Box 16 C nondeductible expenses · 16 D distributions | **Form 7203**, not the 1040 directly |
-| Box 17 V §199A | Form 8995 |
+### 🔑 READ THE WHOLE K-1, BOX BY BOX — and say where each one lands
+
+**Standing requirement _(Lilian, 2026-08-19)_: whenever a taxpayer receives a K-1, the analysis
+explains how it is filled in — not just which two boxes carry figures.** A K-1 arrives looking like a
+summary; it is an instruction sheet, and three of its parts are load-bearing before you reach a
+number.
+
+**Part I — the corporation.** EIN · name and address *(⚠️ if the company moved, the K-1 must carry
+the NEW address)* · **total shares, beginning and end** — 🔑 **the corporation's total, not the
+shareholder's**, which is item H. And **`Final K-1`**: 🛑 **ticking it a year early tells the IRS the
+shareholder is out** and invites a matching problem on the 1040.
+
+**Part II — the shareholder.** Identifying number · name and address *(**his**, not the company's)* ·
+**F3** entity type · **G** current-year allocation percentage · **H** his shares, beginning and end ·
+**I** **loans from shareholder** → **Form 7203 Part II**. ⚠️ **Item G is often a RULING, not a fact**
+— a departing shareholder, a mid-year transfer, a `Final K-1` on last year's copy. **Record whose
+ruling it is.**
+
+**Part III — the numbers.**
+
+| From the K-1 | Goes to | Note |
+|---|---|---|
+| **Box 1** ordinary business income (loss) | **Schedule E Part II line 28 col (i)** *(nonpassive)* → line 32 → line 41 → **Schedule 1 line 5** | ⚠️ tick col **(e)**, *basis computation required*, whenever a loss is claimed |
+| Boxes 2 · 3 rental · 4–10 portfolio and other income | their own Schedule E / Schedule B / Schedule D lines | **read them even when blank** — a blank box is a fact about the company |
+| Box 11 §179 · **Box 12 other deductions** | Form 4562 · Schedule A or Schedule 1 by code | 🔑 **charitable contributions and investment interest hide in box 12**, by letter code |
+| Box 13 credits | the credit's own form, by code | |
+| **Box 14** Schedule K-3 attached | ☐/☑ | ☑ means a **foreign** package is coming; do not file without it |
+| **Box 16 C** nondeductible · **16 D** distributions | **Form 7203** lines 8a and 6 — **not the 1040 directly** | 🔑 the only two boxes that touch **basis** |
+| **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
+| Boxes 18 · 19 more than one activity | the at-risk / passive analysis | ☑ means the single-activity shortcut is unavailable |
+
+🔑 **Every figure on a K-1 is a share of a Schedule K line the company already computed.** If a
+number appears on a K-1 that is not on Schedule K, the error is upstream — **go back to the 1120-S,
+do not fix it on the K-1.**
+
+### 🛠️ The K-1 warning every S-corporation return raises — and why the answer is usually "change nothing"
+
+Tax software warns, on essentially every S-corp K-1, that *"per Reg. 1.1367-1(c)(2), current-year
+noncapital, nondeductible expenses **in excess of basis** will not carry forward to reduce stock
+basis next year"*, and offers to "change the carryover default."
+
+**What it means.** The Shareholder's Instructions for Schedule K-1 set the ordering: income up →
+**distributions** down → **nondeductible expenses** down → **losses and deductions** down. Under that
+default, nondeductible expenses in excess of basis are **lost**. The **§1.1367-1(g) election**
+reverses the last two steps, and then the excess *"is treated as an amount described under (3) for
+the following tax year"* — it carries forward.
+
+🔑 **Answer it in this order:**
+1. **Is there any excess at all?** Compare Form 7203 line 7 against the nondeductible expenses. **If
+   line 10 is comfortably positive, the warning is hypothetical** — the ordering cannot matter when
+   basis never runs out, and ending basis is identical either way. **Change nothing.**
+2. **Did the prior year make the election?** If not, ⛔ **do not start now.** *"Once made, the
+   election applies to the year for which it is made and **all future tax years for that S
+   corporation, unless the IRS agrees to revoke** your election."*
+3. **Only if basis is genuinely exhausted** is there a decision — and it is the client's, with the
+   permanence explained.
+
+📎 **The election is made by an attached STATEMENT, not by the checkbox** — *"attach a statement to
+your timely filed original or amended return that states you agree to the carryover rule of
+Regulations section 1.1367-1(g) and the name of the S corporation to which the rule applies."*
+**Form 7203 item E only reports that one is in effect.**
+
+ⓘ **Two other warnings are routine on these returns, and both are expected rather than wrong:** *"a
+net operating loss cannot be carried back… unless related to farming"* (post-2020 NOLs carry forward
+only), and the whole family of **`Comparison`** warnings — *"X reported on last year's return but not
+reported on this year's"* — which fire whenever a **joint return becomes a single one**, or income
+stops. 🔑 **Read every one, confirm each has a recorded reason, and say so.** A warning with an
+explanation is finished work; a warning nobody looked at is a defect waiting.
 
 ### 🔴 A loss must clear THREE gates, in this order
 
@@ -1187,6 +1250,45 @@ income year is sheltered outright. **It is not.**
   or as a reward are **ordinary income**.
 - ⚠️ **Ask for the platform statement.** The organizer asks the yes/no question and, if an earlier
   answer closed the income branch, **never asks for anything else**.
+
+---
+
+## §19 · 🛑 THE STATEMENTS AND ATTACHMENTS — the half that is not a number
+
+🔴 **A return is not finished when its figures are right. It is finished when it TRANSMITS.**
+Several positions on a 1040 require an **attached statement**, and some of them are hard e-file
+blockers: the software refuses to send the return until the statement exists. **None of them is
+visible on any form's face**, which is exactly why they get missed.
+
+⚠️ **This section exists because a session delivered a complete, correct, line-by-line return and
+never mentioned that Schedule 1 line 8a needs a statement.** The preparer met it as a red error in
+the software and had to write the justification herself. _(Lilian, 2026-08-19: **"esto no me lo
+mencionaste… necesito que para la próxima sea más específico"**.)_
+
+### The ones this firm has actually met
+
+| Position | Statement | Blocking? |
+|---|---|---|
+| **An NOL carryover on Schedule 1 line 8a** | **NOL Carryover Explanation** — which year each loss arose, how much, why no carryback, what has been absorbed, what is deducted now, what remains | 🛑 **YES — hard e-file error.** *"NOL statement must be completed when an NOL carryover amount is reported on Schedule 1"* |
+| **An NOL deduction limited by the 80% cap** | *"Attach a statement to your tax return showing how you figured the 80% limitation, if applicable"* _(Instructions for Form 172)_ | required when the cap bites |
+| **Waiving the NOL carryback period** | A statement, on the timely original return, choosing to waive under §172(b) | required to make the choice |
+| **The §1.1367-1(g) election** on an S-corp K-1 | A statement agreeing to the carryover rule **and naming the S corporation**. 🔑 **Form 7203 item E is a REPORT of the election, not the election** | required to make it |
+| **A Form 8332** release | The signed form itself, attached | required to claim a released child |
+| **A shared Marketplace policy with more than four allocations** | Form 8962 line 34 answered **No** → a statement | required |
+
+### The rule
+
+🔑 **List the return's attachments as part of the deliverable, next to the figures.** For every
+position taken, ask: *does this need a piece of paper that is not a form?* And say so **before** the
+preparer opens the software, not after it refuses to send.
+
+⚠️ **The tell is a position the FORM cannot express.** A form has boxes for amounts; it has no box
+for *why this loss is still available*, *why no carryback*, or *which company an election covers*.
+**Wherever the answer is a sentence rather than a number, expect a statement.**
+
+🛑 **And draft it.** A statement is prose about a tax position, which is the firm's job, not the
+client's — and it is written from the **carryover reasoning**, which the return itself never shows.
+**Hand over paste-ready text, not a reminder that text is needed.**
 
 ---
 

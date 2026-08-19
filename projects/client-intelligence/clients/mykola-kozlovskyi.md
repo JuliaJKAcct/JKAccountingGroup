@@ -177,6 +177,28 @@ the actual details.
   - ✅ **And the instructions independently confirm the 2026-08-17 ruling that the loss is entirely
     his**: *"only the spouse who had the loss can take the NOL deduction."*
 
+- **2026-08-19 (Lilian, in the software, later) — THE RETURN'S PAPERWORK, not its figures.** Three
+  things came out of preparing his return in ATX, and none of them was a number:
+  - 🛑 **An NOL carryover on Schedule 1 REQUIRES an attached explanation statement, and the return
+    will not e-file without it.** The firm's analysis had given the return line by line and never
+    mentioned it; **Lilian met it as a red error in the software and wrote the justification
+    herself.** ⚠️ **Her standing instruction from it:** the analysis must be more specific about the
+    level of detail — **a return is not finished when its figures are right, it is finished when it
+    transmits.** The 1040 SOP now carries a section on the statements and attachments a return
+    requires, and the tax-return skill's delivery standard now requires them to be **drafted**, not
+    just flagged.
+  - ✅ **The K-1 warning about the §1.1367-1(g) carryover default was analysed: nothing is missing
+    from his K-1 input and the default is correct.** The warning is about nondeductible expenses in
+    **excess of basis** being lost rather than carried; **his basis is nowhere near exhausted**, so
+    the ordering cannot matter and ending basis is identical either way. ⛔ **Do not take the
+    election** — it binds every future year for that company unless the IRS agrees to revoke, the
+    prior year did not make it, and it buys nothing in the year before a liquidation. ⓘ **It is made
+    by an attached statement, not by the Form 7203 checkbox**, which only reports one in effect.
+  - ✅ **The `Comparison` warnings are all expected** — wages, self-employment tax, child tax credit,
+    earned income credit and withholding *"reported on last year's return but not this year's"*.
+    They are the software noticing a **joint return became a single one**. **Each has a recorded
+    reason in the working paper.**
+
 - **What gates the return.** ✅ **(1)** The **company's 1120-S**, which produces his K-1 and his Form 7203 — **completed and on `main`** _(2026-08-18)_. ✅ **(2)** The **Form 8962 / Marketplace allocation** — **settled 2026-08-19 at 20% him / 80% his ex-wife**.
 - **Established from the 2024 filed return** (read 2026-08-17): filed **jointly**; his **Uber Schedule C** with no expenses claimed; his **K-1 from the S corporation**; a **Form 7203 in his name** carrying the stock-basis history; three dependants claimed for the child tax credit; **Marketplace coverage reconciled on Form 8962**; refundable **earned income credit** and **additional child tax credit** claimed, both resting on earned income; a **net operating loss** and a **QBI loss carryforward** generated; **no estimated payments**; **no state return** (Florida). ⓘ **The return does not say whose the single W-2 was** — the firm's own filename in Drive labels it as his.
 - **Settled for 2025:** no Uber activity; income is the company K-1; the organizer's nil-income answer is an error; the 2024 carryovers are his; the Form 4868 is not to be opened.
