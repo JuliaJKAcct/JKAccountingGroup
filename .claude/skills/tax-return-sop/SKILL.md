@@ -138,14 +138,55 @@ answer.
 
 ## §4 · Driving a REAL return — the delivery format
 
-**This is what the SOP is for, and the format matters as much as the figures.** After reading the
-client's documents, deliver **one table per form, in the order they are prepared**, every table
-with the same four columns:
+**This is what the SOP is for, and the format matters as much as the figures.**
+
+> 🔑 **The standard, in Lilian's own words (2026-08-19):** *"las tablas por cada formulario · el flujo
+> de los números entre las formas · las explicaciones · las casillas que tengo que marcar."* She has
+> little experience with returns and **gets lost between the forms, the pages and the numbers** — so
+> a table of values without a route through the forms does not help her. **Deliver all four things,
+> every time, unprompted.**
+
+### The five things every delivery carries
+
+**1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
+columns, and **the FORM, the PART and the LINE NUMBER named**:
 
 | Line | Concept | Value | **Where it came from** |
 |---|---|---|---|
 | **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** |
 | **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 |
+
+**2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
+prepared in the order they are numbered. Open with the route:
+
+```
+Schedule C Parts I & II, everything EXCEPT line 30
+        ↓  line 29
+Form 8829  (line 8 ← Sch C line 29)
+        ↓  line 36
+Schedule C line 30  →  line 31
+```
+
+⚠️ **A circular reference is the single thing most likely to strand a first-time preparer** — Form
+8829 wants a Schedule C line that is not final until Form 8829 comes back. **Say it out loud.**
+
+**3 · THE FLOW BETWEEN FORMS.** Every figure that leaves one form and lands on another gets an
+arrow with **both endpoints named by line**: *"Schedule SE line 12 → **Schedule 2 line 4**"*,
+*"Form 8829 line 36 → **Schedule C line 30**"*, *"Schedule 8812 line 27 → **Form 1040 line 28**"*.
+A value with no destination is half a delivery.
+
+**4 · THE CHECKBOXES, WITH THE ANSWER AND THE REASON.** A wrong tick is as fatal as a wrong figure
+and far harder to spot. Name the form, the line, the answer, and **what checking it does**:
+> *Form 8962 **line 9** → **Yes**, because the policy is shared with another taxpayer. Checking Yes
+> is what routes you to Part IV. · Form 8962 **line 34** → **Yes**; its own printed text is the
+> instruction for lines 12–23. · Schedule C **line H** → tick only if the business started this year.*
+
+⚠️ **Some checkboxes are gates, not disclosures** — they change which lines you may complete, or
+whether the return can be e-filed at all. Flag those as gates.
+
+**5 · THE EXPLANATION — why, not only what.** *"Line 24 is the lesser of (a) and (d)"* is a rule;
+*"whichever is smaller caps the credit, so the credit never exceeds what the insurance actually
+cost"* is what makes it stick and what lets her catch the next one herself.
 
 ⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
 in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
@@ -168,6 +209,21 @@ read by everyone, gets published, and is the last place anyone thinks to look fo
 8. ⚠️ **Never answer a shareholder-level question from the balance sheet.** Contributions and
    distributions net inside one capital account; the return needs both halves. **Ask for the
    ledger.**
+9. 🔑 **Distinguish the IRS FORM from the SOFTWARE.** A field on the screen is not necessarily a
+   field on the form, and the difference is exactly where a preparer loses an afternoon. Say which
+   is which — *"there is no date on Form 8829; the date you are typing is ATX's, and it drives the
+   part-year proration"* — and record the software's own route when someone tells you what it is
+   _(ATX builds Form 8829 from its **Home Office Expenses** worksheet; the dependants for Schedule
+   EIC are entered on the **1040 Dependents tab**, not on Schedule EIC itself)_.
+10. 🔑 **When the software throws an error, treat it as evidence and go read the instruction.** A
+    tax package encodes rules the preparer has not met yet. **Quote the error, find the rule it is
+    enforcing, then explain both** — that turns an obstacle into the thing that gets remembered.
+    _(2026-08-19: ATX's *"Line 11 must not be completed when Part IV… are used"* is the IRS
+    instruction verbatim, and it had produced a repayment of 750 where the right answer was 2.)_
+11. ⚠️ **Read the FORM's own printed text before explaining a line.** Several lines carry their
+    operating instructions on the face of the form — Form 8962 line 34's "Yes" branch is the
+    complete procedure for lines 12–23, and Form 8829's header is the one-per-home rule. **Quote
+    it; do not paraphrase it from the instructions.**
 
 ---
 
@@ -207,6 +263,14 @@ is how an SOP becomes confidently wrong.**
 ---
 
 ## Update this skill when…
+
+- **Lilian tells you the delivery missed something she needed.** §4 exists because she said so twice
+  — first that the tables never located Form 8829, then that she needs the flow, the explanations
+  and the checkboxes as well. **Her corrections ARE the standard; write them in rather than
+  remembering them.**
+- **Someone reports how the SOFTWARE behaves** — which worksheet feeds which form, which screen an
+  entry has to be made on, which error it throws. That is knowledge no IRS document carries, and
+  rule 9 says to record it.
 
 - a new form's SOP is written, and something about **writing** it generalises
 - a return turns up a trap that would have bitten any form

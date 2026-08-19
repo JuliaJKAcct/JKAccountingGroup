@@ -4,7 +4,9 @@
 > the firm prepared with a session assisting; extended the same day with the **credit mechanics**
 > (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4), and on **2026-08-19** with the
 > home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
-> line map**, the **two-dates** rule (M2) and the **Form 8962 filling order + Part IV** (M4).
+> line map**, the **two-dates** rule (M2), the **Form 8962 filling order + Part IV**, **line 34**,
+> the **divorced-parents procedure**, the **below-100%-FPL checkbox** (M4) and the **Dependents-tab
+> rule for Schedule EIC** (M6).
 > · **Owner:** Lilian
 >
 > ⬜ **No Atlas render yet.** [`sop-authoring`](../../.claude/skills/sop-authoring/) requires every
@@ -501,12 +503,39 @@ lowers the required contribution and RAISES the credit.** Do not drop them.
 _Verified against the 2025 Instructions for Form 8962, Table 1-1, 2026-08-18._ ⓘ These are the
 **prior calendar year's** HHS guidelines — the ones in force when the client enrolled.
 
-### 🔴 Household income below 100% of the poverty line
+### 🔴 Household income below 100% of the poverty line — and the CHECKBOX that saves the credit
 
 Normally that means **not an applicable taxpayer**. But there is an exception, and this firm's
-clients hit it repeatedly: a taxpayer still qualifies if **the Marketplace estimated at enrollment
-that household income would be at least 100% FPL**, **advance payments were made**, and they are
-otherwise eligible. **Check it explicitly rather than assuming the credit is lost.**
+clients hit it repeatedly. The instructions state it as five requirements, **all** of which must
+hold:
+
+> *"**Estimated household income at least 100% of the federal poverty line.** You may qualify for the
+> PTC if your household income is less than 100% of the federal poverty line and you meet all of the
+> following requirements: • **No one can claim you as a dependent** for the year. • **You or an
+> individual in your tax family enrolled in a qualified health plan** through a Marketplace. • **The
+> Marketplace estimated at the time of enrollment that your household income would be at least 100%
+> of the federal poverty line** for your family size. • **APTC was paid** for the coverage of 1 or
+> more months. • **You otherwise qualify as an applicable taxpayer** (except for the federal poverty
+> line percentage)."*
+
+🔑 **This is not a computation — it is a BOX somebody has to tick**, and the software carries it as a
+worksheet behind Part I. In ATX it is *"Part I (8962) — HI below 100% of Federal Poverty Level"*,
+**box A**, with those same five conditions as sub-items _(Lilian, 2026-08-19)_. **Untick it and the
+whole credit disappears; the calculation gives no warning, because a taxpayer under 100% simply is
+not an applicable taxpayer.**
+
+⚠️ **Two things void the exception**, both in the instructions: **no APTC was paid at all**, or the
+taxpayer *"with intentional or reckless disregard for the facts, provided incorrect information to a
+Marketplace."*
+
+⛔ **It is also an E-FILE GATE.** The software's own message: *"Per the IRS, check box A and/or box B
+must be marked for e-file. If taxpayer does not meet all requirements for the box, do not check the
+box and paper file the return."* **So the choice is not tick-or-not — it is tick, or paper file.**
+
+ⓘ **Box B is the other route:** an **alien lawfully present in the United States** who is not
+eligible for Medicaid **because of immigration status**. Its conditions are different — there is no
+Marketplace-estimate requirement and no APTC requirement. **Read both before ticking either**, and
+note that this client base makes box B a live possibility, not a curiosity.
 
 ### 🔑 The order Form 8962 is actually filled in — it is NOT top to bottom
 
@@ -520,6 +549,68 @@ otherwise eligible. **Check it explicitly rather than assuming the credit is los
 
 **Each monthly row runs the same way:** **(c)** is the monthly contribution amount from line 8b;
 **(d) = (b) − (c)**; **(e) = the LESSER of (a) and (d)**.
+
+#### 🔑 Line 34 — the checkbox that makes the allocation take effect, and prints its own procedure
+
+**Part IV ends at line 34: *"Have you completed all policy amount allocations?"*** Tick **Yes** —
+without it the percentages sit on the form doing nothing. **And read its "Yes" text, because it IS
+the instruction for lines 12–23**, printed on the face of the form:
+
+> *"**Yes.** Multiply the amounts on Form 1095-A by the allocation percentages entered by policy.
+> Add all allocated policy amounts and non-allocated policy amounts from Forms 1095-A, if any, to
+> compute a combined total for each month. **Enter the combined total for each month on lines 12–23,
+> columns (a), (b), and (f).** Compute the amounts for lines 12–23, columns (c)–(e), and continue to
+> line 24."*
+
+🔑 **So lines 12–23 carry the ALLOCATED amounts — the 1095-A figures already multiplied by the
+percentage — not the full ones.** ⚠️ **The software may ask differently.** A package with a shared-
+policy worksheet takes the full 1095-A plus the percentages and does the multiplication itself.
+**The check that works either way: line 12 column (a) should be about the allocation percentage of
+1095-A line 21 column A.** If it equals the 1095-A, the percentage never got applied.
+
+#### 🔴 Why the annual line 11 is barred here — and what it costs when it slips through
+
+Averaging a year hides the months where the **benchmark plan** was cheaper than the client's own
+premium. A small illustration, with **invented** figures:
+
+| | Monthly premium | Monthly SLCSP | (e) = lesser |
+|---|---|---|---|
+| Jan–Aug *(8 months)* | 1,000 | **900** | **900** ⟵ the SLCSP caps it |
+| Sep–Dec *(4 months)* | **1,000** | 1,200 | **1,000** ⟵ the premium caps it |
+| **Monthly total (line 24)** | | | **11,200** |
+| *Annual shortcut:* (a) 12,000 vs (b) 12,000 → lesser | 12,000 | 12,000 | **12,000** ⟵ **800 too much** |
+
+**Both figures are "the lesser of (a) and (d)". Only the monthly one is right**, because the test has
+to be applied *month by month*. ⚠️ **The error runs in the client's favour**, which is exactly why it
+survives a self-review.
+
+⚠️ **And there is a worse failure mode than using line 11: filling it and leaving 12–23 empty.** Line
+24 reads from the monthly rows, so it comes out **zero**, the entire advance becomes excess, and the
+return repays the **line 28 limitation** instead of a few dollars. _(Seen live, 2026-08-19: a
+repayment of 750 where the right answer was 2. The software's error message named the rule.)_
+
+#### 👨‍👩‍👧 The procedure for DIVORCED PARENTS who shared one 1095-A
+
+The commonest shared-policy case in this practice. In order:
+
+| # | Where | Do this |
+|---|---|---|
+| 1 | **Line 9** | **Yes.** The question is *"are you allocating policy amounts with another taxpayer?"* — it asks whether **the policy is split**, not whether they are divorced. Checking Yes routes you to Part IV |
+| 2 | **Part IV, line 30** | (a) policy number from **1095-A line 2** · (b) **the OTHER taxpayer's SSN** — each return names the other · (c)/(d) the month range · (e)(f)(g) the percentage **as a decimal to two places** (`0.50`, not 50) |
+| 3 | **Line 34** | **Yes**, and follow its printed text |
+| 4 | **Line 10** | **No** — forced by having completed Part IV |
+| 5 | **Lines 12–23** | The 1095-A monthly amounts **× the percentage** |
+| 6 | **Both returns** | The **same** percentages and the **same** figures. This is the real risk in a shared policy — not the money |
+
+🔑 **Which situation applies turns on ONE fact: the date the marriage ended** — see the table below.
+**Divorced during the year → Situation 1 → the split is by agreement, and 50/50 is its own
+no-agreement default**, which makes 50/50 the easiest position to defend and the one to reach for
+unless there is a reason not to.
+
+⚠️ **A person on the policy who is in NEITHER return's tax family** — an adult child who files
+separately — **may report nothing from the form.** The remaining taxpayers then take 100% between
+them, which is what the IRS reconciles against. **Only one allocation is needed; line 30 alone
+carries it.**
 
 🔑 **Which of (a) or (d) binds can change during the year, and it tells you something.** While the
 SLCSP is the smaller, the *benchmark plan* caps the credit. When the SLCSP rises above the actual
@@ -730,6 +821,12 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
   decides how hard to chase an unsubstantiated expense. _(Live case, 2026-08-18: a client's earned
   income sat a few dollars above the 2-child earned-income amount — close enough that one modest
   extra deduction would have crossed back over it.)_
+- 🛠️ **ENTER THE CHILDREN ON THE 1040's DEPENDENTS TAB, NOT ON SCHEDULE EIC** _(Lilian, 2026-08-19,
+  from ATX)_. Schedule EIC's own screen **will not take the Social Security number** and **will not
+  let you tick that the child lived in the United States** — the fields are not editable there. Fill
+  the dependants in on the **Form 1040 → Dependents** tab and they **flow automatically into Schedule
+  EIC's *Qualifying Child* tab.** ⚠️ **The symptom of getting this wrong is a validation error on
+  Schedule EIC**, not a blank form, so it is easy to lose time hunting on the wrong screen.
 - The preparer must complete **Form 8867** (due diligence) — and it is a real penalty exposure.
 
 ---
