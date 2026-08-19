@@ -146,26 +146,34 @@ the actual details.
 
 ### Tax year 2025 — the review
 
-- **2026-08-20 (Lilian, in the software) — 🔑 THE NET OPERATING LOSS, AND THE FIGURE HIS FINAL YEAR
+- **2026-08-19 (Lilian, in the software) — 🔑 THE NET OPERATING LOSS, AND THE FIGURE HIS FINAL YEAR
   RUNS ON.** Working the return in ATX, Lilian raised the **2024 net operating loss carried forward**
   and how it should appear. Three things came out of it:
   - ✅ **The carryforward IS listed on his return as a deduction**, and the working paper was revised
     to match. The instructions say to list a carryforward on Schedule 1, and **Form 172 line 23 then
     adds it back out of the current year's NOL** — so the prior loss can never enlarge this year's.
     ⚠️ **An earlier position in the firm's 1040 SOP said the opposite** — that entering it in a loss
-    year "burns a deduction" — **and that was wrong; the SOP has been corrected.** Both treatments
-    reach the same NOL and the same carryforward; **no 2025 tax, credit or refund moves either way.**
+    year "burns a deduction". **The statutory half of that was right and still is; the "burns it"
+    half was wrong**, and the SOP has been corrected to say so. **In a LOSS year both entries are
+    defensible and converge**; the instructions and the software break the tie. 🔴 **In a year WITH
+    income they do not converge** — the deduction is capped at 80% of taxable income, and the SOP now
+    leads with that. **No 2025 tax, credit or refund moves either way.**
   - 🔑 **The combined opening carryforward into 2026 is now recorded on the working paper.** Both
     halves — the 2024 loss and the 2025 loss — had been on the paper since 2026-08-17 **in separate
     sections, never added up.** That total is what his **final-year** return actually runs on, and it
     is the only asset this return produces. **The firm's SOP now requires the addition to be written
-    down rather than left as two pieces.**
+    down rather than left as two pieces.** ⚠️ **And the cap goes with it: a post-2017 carryforward
+    shelters at most 80% of a year's taxable income**, so a fifth of whatever the liquidation
+    produces stays taxable however large the carryforward. **Do not let anyone plan the final year
+    believing it is sheltered outright.**
   - 🛑 **A defect was flagged in the software's Form 172: line 24 was showing ZERO**, which states
     that he has **no** net operating loss for 2025 — on a return whose entire purpose is to carry a
     large loss into the liquidation year. **A zero there is silent**, because a loss year produces no
     tax to be wrong about. The usual cause is line 1, which must be **AGI minus the standard
     deduction** (a negative number) and **not** the taxable-income line, which is floored at zero.
-    **Check it before filing.**
+    ⓘ **A zero there is not always an error** — a loss disallowed under the excess-business-loss rule
+    or by the basis / at-risk / passive gates can zero it legitimately. **His clears all four**, so
+    on his return it is a defect. **Check it before filing.**
   - ✅ **And the instructions independently confirm the 2026-08-17 ruling that the loss is entirely
     his**: *"only the spouse who had the loss can take the NOL deduction."*
 
