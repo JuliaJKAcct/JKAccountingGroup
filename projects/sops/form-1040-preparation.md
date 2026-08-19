@@ -224,8 +224,8 @@ withheld across employers; and the household-employee and statutory-employee cas
 | **Simplified** | **$5 per square foot**, maximum **300 ft²**. Part-year: average the monthly allowable square footage and **divide by 12** | A small workspace in a cheap home |
 | **Actual** | **workspace ÷ total area** × (rent or mortgage interest + property taxes + insurance + utilities + repairs) for the months of business use | **A high rent.** It routinely wins by a multiple |
 
-⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a 67 ft²
-workspace in a 673 ft² rented home — actual **≈$912**, simplified **≈$112**. Eight times.)_
+⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a small workspace in a
+high-rent home — the actual method came out roughly **eight times** the simplified one.)_
 
 **Three limits and traps:**
 
