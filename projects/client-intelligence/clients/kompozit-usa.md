@@ -41,12 +41,15 @@
 - **Primary language:** UA/RU founders; site is EN _(bilingual RU/EN proposal used — confirm
   preference)_
 - **Our engagement (services we provide):** **PROSPECT — not yet signed.** Quoted 2026-08-19:
-  a **Strategic-tier monthly engagement** (bookkeeping in QuickBooks, monthly financials,
-  business tax return, sales tax, 1099s, annual report, proactive tax planning, advisory,
-  coordination) with the **Odoo–QuickBooks integration, documented accounting procedures and
-  training of their in-office bookkeeper bundled in**, plus an optional **controller
-  reporting add-on** (quarterly banking/investor financial packages). Figures live in the
-  delivered proposal, not here
+  a single **all-in monthly engagement** (Julia's call, same day — she first considered a
+  controller add-on, then chose one bundled fee so the client doesn't pick and choose):
+  bookkeeping in QuickBooks, monthly financials, business tax return, sales tax, 1099s,
+  annual report, proactive tax planning, advisory, coordination, **controller reporting
+  (quarterly banking/investor packages) included**, with the **Odoo–QuickBooks integration,
+  written accounting procedures and training of their in-office bookkeeper bundled in**.
+  Priced above the website's Strategic starting price (that page says "starts at"); the
+  value anchor in the proposal is a full-time South Florida controller's salary. Figures
+  live in the delivered proposal, not here
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** **Odoo** is the current ERP; the outgoing EA used **some
   QuickBooks** (extent unknown). Web store on **Shopify**. Direction under discussion:
@@ -125,8 +128,9 @@ link). Never write the credential itself here.
 - **They are preparing for outside investment / public-company readiness ("going IPO"), and
   that is the engagement's center of gravity:** banks will require financial packages and
   investors will expect **quarterly** reporting. The controller work (packages built by us)
-  is quoted as an **optional add-on** so the base plan stays an easy yes — per the firm's
-  line, *Strategic includes the conversation; the Controller add-on includes the deliverable*
+  is **bundled into one all-in fee** (Julia first weighed an optional add-on, then chose the
+  bundle on 2026-08-19 so the client doesn't pick and choose); the proposal anchors the
+  price against a full-time South Florida controller's salary
 - **~12 employees — never offer in-house payroll.** The firm's ceiling is 5; at this size
   the only offer is payroll-platform setup + supervision, scoped separately. Quoting
   in-house payroll here would be a promise the firm deliberately does not make
@@ -145,6 +149,11 @@ link). Never write the credential itself here.
 - **Why they left their EA:** they outgrew a tax-prep-only relationship and need someone in
   constant touch (questions "almost on a daily basis"); the EA was asked to take the bigger
   role and **declined**
+- **Communication style is part of the deal — and part of why they chose us.** The owner
+  disliked that the EA made him submit questions through a portal (formal, businesslike);
+  what won him over is a human, easygoing channel: the firm promised a **dedicated WhatsApp
+  group** he can text any time, with fast replies. The proposal names it in the pitch and
+  the scope. When onboarding starts, **creating that WhatsApp group is a day-one task**
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -159,6 +168,18 @@ link). Never write the credential itself here.
   delivered proposal (not committed). Company researched via Google (kompozitusa.com is
   egress-blocked in the session): Ukrainian brand, ~30 years, Ostapenko brothers, US
   manufacturing ~3 years, North Miami, distributor network. Open items listed below
+- 2026-08-19 — **The draft evolved through Julia's same-day feedback, three deliveries on
+  one artifact link.** (a) The **WhatsApp group** went into the pitch and the scope (the
+  owner's dislike of portal-only communication, see §5). (b) The wording about payment
+  application was corrected twice at Julia's direction and then **removed entirely**: the
+  proposal now says only that we put written procedures in place and train their in-office
+  bookkeeper — their person applies payments, we never imply we do. (c) Pricing pivoted
+  from base-plus-controller-add-on to **one all-in fee**, anchored against a full-time
+  South Florida controller's salary (Glassdoor/Built In 2026 figures used in the text).
+  (d) The whole text passed through the new **humanizer** skill (Julia installed it after
+  spotting em dashes; zero em/en dashes remain in the per-client prose). Also standing from
+  today: every proposal ships as **PDF + branded HTML artifact** (in the
+  [`proposal-generator`](../../../.claude/skills/proposal-generator/) skill)
 
 ### Outstanding items (CI-only — never in the SOP)
 
