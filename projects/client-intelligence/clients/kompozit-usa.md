@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect · **Owner:** Julia · **Last updated:** 2026-08-19
+> **Status:** Prospect — proposal sent, awaiting response · **Owner:** Julia · **Last updated:** 2026-08-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -40,7 +40,8 @@
   is blocked by the session's egress proxy)_
 - **Primary language:** UA/RU founders; site is EN _(bilingual RU/EN proposal used — confirm
   preference)_
-- **Our engagement (services we provide):** **PROSPECT — not yet signed.** Quoted 2026-08-19:
+- **Our engagement (services we provide):** **PROSPECT — proposal sent 2026-08-19 (by Julia,
+  email to the owner), awaiting response.** Valid 30 days, so through mid-September. Quoted 2026-08-19:
   a single **all-in monthly engagement** (Julia's call, same day — she first considered a
   controller add-on, then chose one bundled fee so the client doesn't pick and choose):
   bookkeeping in QuickBooks, monthly financials, business tax return, sales tax, 1099s,
@@ -188,6 +189,10 @@ link). Never write the credential itself here.
   direction; **payroll for the 12-person team moved INTO the scope** (platform-based
   wording, see §4); **Accounts Payable management added to Not Included** — the in-office
   bookkeeper owns AP, and naming the exclusion protects the fee
+- 2026-08-19 — **Julia sent the proposal to the owner by email** (final version: contact
+  details filled, all scope edits in). The clock on the 30-day validity runs from today.
+  Next event is his response; if the quote is accepted, day one is the WhatsApp group,
+  the Double client record, and the systems review for the Odoo and QuickBooks integration
 
 ### Outstanding items (CI-only — never in the SOP)
 
