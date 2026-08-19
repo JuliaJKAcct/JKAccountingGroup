@@ -227,6 +227,49 @@ withheld across employers; and the household-employee and statutory-employee cas
 ⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a small workspace in a
 high-rent home — the actual method came out roughly **eight times** the simplified one.)_
 
+#### 🔑 What goes INTO the computation — and what emphatically does not
+
+**The test is simple: does the cost scale with the FLOOR AREA of the home?** If it does, it is an
+indirect home-office expense and gets the business-use percentage. If it does not, it is an ordinary
+business expense at **its own** business-use percentage.
+
+| ✅ IN — indirect, at the floor-area % | ⛔ OUT — direct, at its own business % |
+|---|---|
+| Rent, or mortgage interest + property taxes | **Telephone** |
+| Electricity, gas, water, sewer, trash | **Internet** |
+| **Insurance on the home — including a RENTER'S policy (HO-4)** | Software, subscriptions |
+| HOA fees | Mileage |
+| Cleaning, repairs and maintenance of the whole home | Supplies, professional fees |
+
+- 🔴 **A cost may never be in BOTH places.** Moving the internet out of the worksheet and onto
+  line 25 is right; leaving it in both is double-counting. _(Live case, 2026-08-19: inside the
+  worksheet the internet was worth about a tenth of what it is worth at its real business-use
+  percentage — the floor-area share is a **floor**, not a fair split, for anything that does not
+  scale with area.)_
+- ✅ **Renter's insurance IS deductible through the home office.** Pub 587 lists *insurance on the
+  home* among the indirect expenses, and a tenant's HO-4 policy is that insurance. It is small —
+  tens of dollars a year — and it is routinely reported as **zero** on a client worksheet by someone
+  who does not think of it as a housing cost. **If the client rents, ask for the policy.**
+- ⚠️ **Take only the months of business use.** An annual premium gets pro-rated; so does everything
+  else on the left-hand column.
+
+#### 🔴 Reconcile the client's "rent" against the LEASE — two different traps live here
+
+**Ask for the lease, and read it beside the worksheet.** Two things go wrong, and they pull in
+opposite directions:
+
+1. **The figure the client calls "rent" may be their SHARE, not the lease amount.** Using the lease
+   figure would then overstate the deduction. **Only what THIS taxpayer paid enters THEIR
+   computation.**
+2. **A lease in two names is NOT evidence that two people lived together.** Separating couples stay
+   on one lease for months after one of them moves out. ⚠️ **This one is dangerous because it looks
+   decisive**: read alone it appears to prove a shared home, which would take **head of household**
+   away from one of them. **It is a question for the client, never a conclusion.**
+
+_(Both surfaced on the same document, 2026-08-19: a lease naming two ex-spouses at a rent 55% higher
+than the figure the client had reported. The rent was her share; they lived apart. Either error alone
+would have changed a return.)_
+
 **Three limits and traps:**
 
 1. 🔴 **§280A(c)(5) — the gross-income limit.** The deduction cannot exceed the business's gross
