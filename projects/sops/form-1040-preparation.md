@@ -1052,16 +1052,80 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 
 ---
 
-## M7 · Net operating loss carryforward
+## M7 · Net operating loss carryforward — and **Form 172**
+
+**Form 172, *Net Operating Losses (NOLs) for Individuals, Estates, and Trusts* (Rev. December 2024),
+replaced the worksheets that used to live in Pub 536.** Part I computes the year's NOL; **Part II is
+a CARRYBACK computation** — its columns are *"2nd preceding tax year"* / *"1st preceding tax year"* —
+and since post-2020 NOLs generally cannot be carried back, **Part II is usually not used at all.**
+A pure carryforward is tracked on a statement.
+
+### The rules
 
 - Post-2017 NOLs **carry forward indefinitely**.
 - The deduction is limited to **80% of the excess (if any) of taxable income computed without the
-  deductions for NOLs, qualified business income, and §250** _(Pub 536)_.
-- 🔴 **So in a year with no positive taxable income, the allowable NOL deduction is ZERO and the
-  whole carryforward rolls on.** Entering the carryforward anyway burns a deduction that is not
-  allowed and **understates next year's opening NOL.**
-- **On a separation, the NOL belongs to the spouse who generated it.** Do not carry it onto the
-  other's return by default; record the decision on both.
+  deductions for NOLs, qualified business income, and §250** — so in a year with no positive taxable
+  income, the arithmetic gives **-0-**.
+- **On a separation, the NOL belongs to the spouse who generated it.** The instructions say so
+  outright: *"If you and your spouse were not married to each other in all years involved in figuring
+  NOL carrybacks and carryovers, **only the spouse who had the loss can take the NOL deduction**."*
+  Do not carry it onto the other's return by default; record the decision on both.
+
+### 🔴 The trap this module got wrong for two days — DO list the carryforward on Schedule 1
+
+⚠️ **An earlier version of this SOP said that entering a carryforward in a loss year "burns a
+deduction that is not allowed and understates next year's opening NOL." That is false, and the
+reasoning behind it is the trap.** The instructions are explicit:
+
+> ***Deducting a Carryforward.*** *"If you carry forward your NOL to a tax year after the NOL year,
+> **list your NOL deduction as a negative figure on Schedule 1 (Form 1040)** for the year to which
+> the NOL is carried."*
+
+No income condition is attached, and **tax software does exactly this.** What makes it harmless is
+**Form 172 line 23**:
+
+> ***Line 23 — NOL Deduction for Losses from Other Years.*** *"**You cannot deduct any NOL carryovers
+> or carrybacks from other years.** Enter the total amount of your NOL deduction for losses from
+> other years."* — as a **positive** number, combined into line 24.
+
+🔑 **Line 23 is an ADD-BACK: a prior year's NOL can never create or enlarge the current year's NOL.**
+So the two treatments **converge exactly** — deduct it and add it back, or never deduct it; line 24
+lands on the same number, and the carryforward is reduced only by the *modified taxable income* of
+the year it passes through, which in a loss year is zero. **Nothing is burned either way.**
+
+✅ **So: enter it the way the instructions say, and check line 23 caught it.** Fighting the software
+to force Schedule 1 to zero gains nothing and risks breaking the Form 172 linkage.
+
+### 🛑 The three lines of Form 172 that actually go wrong
+
+| Line | What it must be | What goes wrong |
+|---|---|---|
+| **1** | *"subtract your standard deduction or itemized deductions from your **adjusted gross income (AGI)**"* — a **negative** number in a loss year | 🔴 **Reading it as Form 1040 line 15**, which is **floored at zero**. That collapses the whole computation and line 24 comes out as *"you don't have an NOL"* |
+| **6** | Nonbusiness deductions — 🔑 **the standard deduction IS one**, the instructions list it by name | Omitting it **overstates the NOL by the whole standard deduction**, and that overstatement is carried forward against real income |
+| **23** | The other-year NOL deducted on Schedule 1, as a positive number | Blank, when Schedule 1 carries a deduction → the prior NOL is **double-counted** into next year |
+
+🛑 **THE CHECK THAT MATTERS MOST: line 24 must be a negative number in a loss year.** The line reads
+*"…If the result is zero or more, you don't have an NOL."* **A zero on line 24 for a client with a
+real business loss is a defect, not an answer** — and it is silent, because a loss year has no tax to
+be wrong about. _(Live case, 2026-08-20: the software showed line 23 correctly filled and **line 24 =
+0**, on a return whose whole purpose was to carry a large loss into a liquidation year.)_
+
+🔑 **Sanity-check line 24 against the business loss itself.** Strip the nonbusiness standard deduction
+(line 9) and any other-year NOL (line 23) and what is left should be **the trade-or-business loss**.
+If line 24 does not look like the K-1 or the Schedule C, one of lines 1, 6 and 23 is wrong.
+
+### 🔑 State the COMBINED carryforward, not the pieces
+
+**A working paper that records "2024 generated X" and "2025 generated Y" in two different sections
+has not recorded what the next return needs.** Write the addition down:
+
+> **Opening NOL carryforward, 1 January `<next year>` = `<prior unabsorbed>` + `<this year's line 24>`**
+
+⚠️ **This matters most in exactly the year nobody is watching** — a string of loss years produces no
+tax, so nothing forces anyone to check the number, and then a liquidation or a profitable year
+arrives and the figure is suddenly worth its full value. _(Live case, 2026-08-20: both halves had been
+on the working paper for three days in different sections and the total had never been written; the
+client asked for it while working the return.)_
 
 ---
 
