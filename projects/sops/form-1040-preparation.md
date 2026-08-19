@@ -1,7 +1,8 @@
 # Preparing a Form 1040 (individual return) — the modular procedure
 
 > **Status:** 🟡 **DRAFT — pending Lilian's sign-off.** Started 2026-08-18 from the first two 1040s
-> the firm prepared with a session assisting. · **Owner:** Lilian
+> the firm prepared with a session assisting; extended the same day with the **credit mechanics**
+> (§3, M5, M6) and the **Form 1095-A continuation-page trap** (M4). · **Owner:** Lilian
 >
 > ⬜ **No Atlas render yet.** [`sop-authoring`](../../.claude/skills/sop-authoring/) requires every
 > SOP to ship with one, and its engine takes a hand-authored designed body rather than this
@@ -60,7 +61,8 @@ Work down the list. Every ✅ points at the module you must read. Everything unm
 ⚠️ **Answer 2, 3 and 5 from documents, never from the organizer alone.** The firm's organizer stops
 asking about income the moment someone answers "no sources of income", so **its silence is not
 evidence**. _(Learned 2026-08-18: a household organizer answered "None of the above" for a couple
-where one spouse held an S-corporation K-1 and the other had $20,200 of consulting income.)_
+where one spouse held an S-corporation K-1 and the other had a year of consulting income the
+organizer therefore never asked about.)_
 
 ---
 
@@ -104,7 +106,9 @@ _Verified against the 2025 Instructions for Form 1040, "Standard deduction amoun
    transport, or the value of your own services. ⓘ **Pub 501 Worksheet 1 splits "the amount YOU
    paid" from "the amount OTHERS paid"** — money the taxpayer receives and then spends **does**
    count as theirs; what does not is an amount another person pays **directly**, or an amount paid
-   out of funds received **in a child's name**.
+   out of funds received **in a child's name**. 🔑 **The SOURCE of the taxpayer's own money is
+   irrelevant** — savings, a gift already received, a loan: if they paid it, they paid it. A client
+   with no income for the year can still satisfy this test.
 3. **A qualifying person lived in the home more than half the year** — more than 182 nights.
 
 ### ⚠️ Three traps on head of household
@@ -158,6 +162,31 @@ nothing.
 not the custody order. A Form 8332 becomes unavoidable only if a **non-custodial** parent will
 actually claim a child.
 
+### 🔑 Price the levers before you ask the parents for anything
+
+**Two different things get confused every time: where a child LIVES, and who CLAIMS the child.** They
+are worth very different money, and only one of them can be chosen.
+
+| Lever | What moves | Typical worth | Can it be chosen? |
+|---|---|---|---|
+| **Residence** | HOH · **EIC** · dependent-care | **Large** — a second EIC child can be worth thousands | 🚫 **No.** It is a fact about the year |
+| **The claim (Form 8332)** | Child tax credit + dependency | **Small** — bounded by the payer's Schedule 8812 ceiling | ✅ Yes |
+
+**Run this before drafting a single question to the family:**
+
+1. **Which parent has earned income?** Credits that pay cash — the EIC and the ACTC — need it. A
+   parent with only a K-1 loss, only investment income, or no income at all **cannot use a child at
+   all**, however many they claim.
+2. **Compute that parent's Schedule 8812 15% ceiling.** It tells you **how many** releases are worth
+   asking for. Usually the answer is **one**.
+3. **Then ask for exactly that many Forms 8332** — and say plainly that signing costs the other
+   parent nothing, because **the custodial parent keeps head of household after releasing**
+   _(Pub 501 Table 4 fn 2)_.
+
+⚠️ **Never present a residence hypothetical as an option.** Where the children lived is a fact of the
+year. Modelling one to *explain how the credits behave* is fine and often the clearest way to answer
+"why is this worth so little?" — **filing on one is not.**
+
 ---
 
 ## M1 · W-2 wages
@@ -195,8 +224,8 @@ withheld across employers; and the household-employee and statutory-employee cas
 | **Simplified** | **$5 per square foot**, maximum **300 ft²**. Part-year: average the monthly allowable square footage and **divide by 12** | A small workspace in a cheap home |
 | **Actual** | **workspace ÷ total area** × (rent or mortgage interest + property taxes + insurance + utilities + repairs) for the months of business use | **A high rent.** It routinely wins by a multiple |
 
-⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a 67 ft²
-workspace in a 673 ft² rented home — actual **≈$912**, simplified **≈$112**. Eight times.)_
+⚠️ **Compute BOTH and take the better. Do not default to simplified.** _(Real case, 2025: a small workspace in a
+high-rent home — the actual method came out roughly **eight times** the simplified one.)_
 
 **Three limits and traps:**
 
@@ -272,6 +301,24 @@ conclusion. **Record material participation** rather than inheriting last year's
 
 🔴 **This form BLOCKS e-filing.** A return with advance payments and no Form 8962 is rejected.
 
+### 🔴 READ EVERY PAGE OF THE FORM BEFORE COUNTING WHO IS COVERED
+
+**Form 1095-A Part II holds only FIVE covered individuals** (lines 16–20). A sixth person goes on a
+**continuation page**, whose Part III is normally **blank** — because the monthly totals on page 1
+already cover everyone on the policy.
+
+- 🛑 **Never conclude "X is not on the policy" from one page.** Count the covered individuals across
+  **all** pages, and reconcile that count against the client's household.
+- ⚠️ **A partly-extracted document proves nothing by its silence.** [`redact-doc`](../../tools/redact-doc/)
+  prints how many pages it could not extract and says so in as many words; a scanned or image-only
+  page comes back empty and looks exactly like a page with nothing on it.
+- 🔑 **The consequence is not cosmetic.** Someone reported as uncovered turns into an invented
+  question ("what coverage did this child have — Medicaid? CHIP?") put to a client who never had one.
+
+_(2026-08-18: a session read page 5, counted five names, and reported the youngest child as not on
+the policy. She was on page 7. Lilian caught it with the paper form in front of her. **No figure
+changed** — Part III already covered all six.)_
+
 ### The two "families" that are not the same thing
 
 | | What it is | What it drives |
@@ -308,7 +355,7 @@ establish first — **the date the marriage ended**:
 | Situation | When it applies | Allocation | Which columns |
 |---|---|---|---|
 | **1** | Divorced or legally separated **during the year** | **By agreement — any percentage.** If they cannot agree, **50% each** | (e), (f) **and** (g) — ⚠️ **only for the months they were MARRIED** |
-| **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23 |
+| **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23. ⚠️ **A taxpayer who cannot take the PTC at all still has to allocate and REPAY the advance** — read the Situation 2 instructions for which columns they complete |
 | **3** | **No advance payments** were made | — | |
 | **4** | Any other policy shared between two tax families | **By agreement — any percentage.** Failing agreement, the instructions' formula: **the number of individuals enrolled by one taxpayer who are in the OTHER taxpayer's tax family, divided by the total enrolled on that policy** | (e), (f) and (g) |
 
@@ -348,11 +395,33 @@ made on a cheaper plan.
 Then: **net PTC** (Schedule 3 line 9 → 1040 line 31) if the credit exceeds the advance, or **excess
 advance repayment** (Schedule 2 line 1a) if the advance exceeds the credit.
 
+🔴 **An excess advance repayment is NOT the end of the story — it can be wiped out by a
+nonrefundable credit.** Schedule 2 line 1a → line 3 → **Form 1040 line 17 → line 18**, which the
+**child tax credit on line 19** then reduces. **See M5** before writing "owed" on a return that has
+children and nil taxable income.
+
 🔑 **The net premium tax credit IS a refundable credit** — it reaches line 31 and the "total other
 payments and refundable credits" line. A client with no earned income can still receive it.
 
 ⚠️ **The repayment of an excess advance is capped by Table 5** where household income is under 400%
 of the poverty line. **Read the current Table 5** — the amounts are indexed.
+
+### 🔑 When the contribution amount is ZERO, the allocation is nearly neutral
+
+For 2025 the **applicable figure is 0.0000 up to 150% of the poverty line**, so the required
+contribution is **zero** and the monthly credit is simply the lesser of the allocated premium and the
+allocated SLCSP. **Whatever percentages the parties choose, each one's credit almost exactly equals
+their own advance**, and the excess to repay across the whole policy comes to a few dollars.
+
+- 🔑 **So the allocation becomes a CONSISTENCY question, not a money question** — pick the split that
+  is easiest to defend (usually **who was enrolled, counted by tax family**), get everyone to carry
+  the same figures, and stop optimising.
+- ⚠️ **The neutrality collapses if any one of them is not an applicable taxpayer** — a
+  married-filing-separately return, or the below-100% exception failing. That person **repays their
+  allocated advance** instead, subject to Table 5. **Establish everyone's filing status before
+  calling it neutral.**
+- ⚠️ **Verify the applicable figure for the year you are filing.** The enhanced schedule that puts it
+  at 0.0000 is a legislated one and does **not** run forever.
 
 ---
 
@@ -370,6 +439,23 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
 - The **additional** child tax credit is refundable: **15% × (earned income − $2,500)**, capped at
   $1,700 per qualifying child **and** at the part of the $2,200 credit the nonrefundable calculation
   could not use.
+- 🔴 **THE NONREFUNDABLE CREDIT REACHES FURTHER THAN "THE TAX" — read page 2 in order.** The 2025
+  Form 1040 runs **17 = Schedule 2 line 3** (which carries the **excess advance premium tax credit
+  repayment** from Schedule 2 line 1a) → **18 = 16 + 17** → **19 = the child tax credit** → **22 = 18
+  − 21** → **23 = other taxes, including self-employment tax** → **24 = 22 + 23**. So the
+  nonrefundable child tax credit **absorbs an excess advance premium tax credit repayment**, and only
+  **line 23 escapes it**. ⚠️ **"There is no tax to offset, so the credit is worth zero" is FALSE
+  whenever there is an excess advance** — and it is the mistake a nil-taxable-income return invites.
+  🔑 **Check it against the client's own prior year**: a return with nil income tax and an excess
+  advance will show that same amount sitting on line 19. _(Caught in review, 2026-08-19, on two
+  returns at once — and the prior-year table in the same working paper had been demonstrating the
+  mechanism all along.)_
+- 🔑 **TWO CEILINGS, and knowing which one binds is the whole game.** With a modest earned income the
+  **15% ceiling** binds from the second child onwards, so **child #2 adds only the difference and
+  child #3 adds nothing at all**. Work out which ceiling binds **before** telling a separated couple
+  how many Forms 8332 to sign. _(Live case, 2026-08-18: an earned income in the high teens put the 15%
+  ceiling just above one child's 1,700 cap — so one child gave the full 1,700, a second added only
+  the difference, and a third added nothing at all.)_
 - 🔴 **Both the ACTC and the EIC require EARNED income.** Wages and net self-employment earnings are
   earned income. **An S-corporation K-1 loss is not. Distributions are not. Interest is not.**
   ⚠️ *A client can have a large K-1 and still be worth nothing on either credit.*
@@ -386,16 +472,26 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
 
 ## M6 · Schedule EIC — earned income credit
 
-| 2025, one qualifying child, single or head of household | |
-|---|---|
-| Maximum credit | **$4,328** |
-| AGI / earned income limit | **$50,434** |
-| Investment income limit | **$11,950** |
+### The 2025 parameters — all of them, so nobody extrapolates
 
-_Verified against irs.gov's EITC tables, 2026-08-18. For other child counts and for joint filers,
-read the table — do not extrapolate._
+| Item (2025) | 0 children | 1 child | 2 children | 3+ children |
+|---|---|---|---|---|
+| **Earned income amount** — where the maximum is reached | 8,490 | **12,730** | **17,880** | 17,880 |
+| **Maximum credit** | 649 | **4,328** | **7,152** | **8,046** |
+| Threshold phaseout — single / HOH | 10,620 | **23,350** | 23,350 | 23,350 |
+| Completed phaseout — single / HOH | 19,104 | **50,434** | **57,310** | **61,555** |
+| Threshold phaseout — MFJ | 17,730 | 30,470 | 30,470 | 30,470 |
+| Completed phaseout — MFJ | 26,214 | 57,554 | 64,430 | 68,675 |
+| **Investment income limit** | **11,950** | | | |
+
+_Verified against **Rev. Proc. 2024-40 §.06** on irs.gov, 2026-08-18 — the authority, not the summary
+pages. **Read the current year's revenue procedure; every figure here is indexed.**_
 
 - The credit is the **lesser** of the amount from the table on **earned income** or on **AGI**.
+- 🔑 **The shape of the credit is a triangle with a flat top**: it rises at a fixed rate to the
+  *earned income amount*, sits at the maximum until the *threshold phaseout*, then falls. **Know
+  which of the three zones the client is in before quoting what a deduction is worth** — see the
+  warning below.
 - The child must have lived with the taxpayer **more than half the year** and have a valid SSN.
 - 🚫 **The EIC cannot be released to the other parent** (§3).
 - 🔴 **"Considered unmarried" for head of household is NOT the same test as for the EIC.** Pub 501:
@@ -403,6 +499,16 @@ read the table — do not extrapolate._
   other purposes, such as claiming the EIC. Different tests apply."* A separated taxpayer still
   married at year end needs **§32(d)(2)** separated-spouse relief for the EIC — **check it
   separately from the HOH decision.**
+- 🔴 **A DEDUCTION CAN COST A CLIENT MONEY — check before chasing one.** On the rising side of the
+  triangle, an extra dollar of Schedule C deduction reduces earned income and therefore the EIC and
+  the ACTC. For a self-employed client each dollar of deduction removes about **$0.93** of earned
+  income, so at the 2-child rate the arithmetic runs: **−37¢ of EIC** (0.93 × the 40% phase-in rate),
+  **−14¢ of ACTC** (0.93 × 15%), **+14¢ of SE tax saved** (0.9235 × 15.3%) **⇒ about 37¢ LOST per
+  dollar deducted.** In the flat zone the EIC does not move and the same dollar is roughly
+  **neutral**. ⚠️ **This inverts the instinct that a bigger deduction is always better**, and it
+  decides how hard to chase an unsubstantiated expense. _(Live case, 2026-08-18: a client's earned
+  income sat a few dollars above the 2-child earned-income amount — close enough that one modest
+  extra deduction would have crossed back over it.)_
 - The preparer must complete **Form 8867** (due diligence) — and it is a real penalty exposure.
 
 ---
@@ -436,8 +542,9 @@ read the table — do not extrapolate._
 - [ ] **Filing status** supports every credit claimed — including **applicable-taxpayer status for
       the PTC** (M4).
 - [ ] Each dependant is claimed on **exactly one** return.
-- [ ] Where a policy is shared: the **allocation percentages across all returns total 100%**, and
-      both returns carry the **same** figures.
+- [ ] Where a policy is shared: the shares **cover the policy with no overlap and no gap** for the
+      same months — in the ordinary case they add to **100%** — and every return sharing it carries
+      the **same** figures. ⚠️ **Not column (f) under Situation 2**, which is not allocated at all.
 - [ ] Schedule C line 31 = Schedule SE line 2, and half the SE tax reaches Schedule 1 line 15.
 - [ ] The home-office deduction is **within the §280A(c)(5) limit**, and the space passes **regular
       and exclusive** use.
