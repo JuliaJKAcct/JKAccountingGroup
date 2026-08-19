@@ -439,15 +439,16 @@ current one** — `list_triggers` returns id, name, cron, enabled state and next
 no `get_trigger`**. The webhook URL and secret exist **only** inside that prompt. So a session that
 rewrites it **destroys the credentials it cannot see**, and the failure is the silent one step 3
 warns about: the sweep starts merging correctly and the weekly email simply stops arriving.
-**The re-paste therefore needs a human to supply the two values**, or someone to read them out of
-the web UI first. Written down because the advice below reads as though a session could just fix
+⛔ **THAT CONCLUSION WAS WRONG — corrected 2026-08-18 by testing.** `list_triggers` returns the
+**whole prompt body**, credentials included, so a session reads the two values out itself and writes
+them back. **No human is needed to supply them.** Written down because the advice below reads as though a session could just fix
 this, three sessions have presumably tried, and the rule has now survived a week longer than the
 run it broke.
 
 ✅ **But editing the SCOPE TABLE above DOES reach the live run** _(established 2026-08-14 by
 reading the trigger itself)_. The live prompt carries **no client list**; it instructs the run to
 read *this file* for "the CLIENTS list (every client + Double id)". **So adding a client to the
-scope table is complete on its own** — it is only the *prompt* that needs a human.
+scope table is complete on its own** — and the *prompt* does not need a human either: a session can read it back and rewrite it (see the corrected block above). What genuinely cannot be set from a session is **connectors and the git source** — those are UI-only.
 ⚠️ **Which half applies is not obvious from the outside**, and getting it backwards produced a
 `FOLLOW-UPS` row asserting that thirteen newly-scoped clients were being skipped when they were
 not. **Say which half you changed.**
@@ -494,7 +495,7 @@ _(corrected 2026-08-14)_.
 > instructions accurately.
 > ⚠️ **What a re-paste buys NOW is different:** the 2026-08-18 additions — the step 1b chase pass,
 > the corrected 2b/2c coverage directions, the ledger-row rule, and the conditional email subject.
-> **It still needs a human**, for the credential reason below.
+> ✅ **And a session can do it** — `list_triggers` returns the prompt with both credentials in it. _(An earlier line here said "it still needs a human, for the credential reason below"; that was wrong.)_ **Ask before rewriting a live scheduled job** — courtesy, not a technical limit.
 >
 > 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
 > wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`

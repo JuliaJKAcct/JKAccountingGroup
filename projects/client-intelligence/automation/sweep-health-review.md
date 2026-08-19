@@ -109,9 +109,10 @@ responses** (§2.2 — each is another copy of a client's SSNs). **A CI sweep ne
 responses**, so the ban does not reach this work. Any future step that added them would have to
 stay in the main thread.
 
-🔵 **Deliberately not adopted yet.** Changing the prompt again before its first execution would
-mean debugging two changes at once, and re-pasting costs a human (the webhook secret cannot be read
-back by a session — see §5). **Let 2026-08-22 run, then decide on evidence.** Tracked as
+🔵 **Deliberately not adopted yet — for ONE reason, not two.** Changing the prompt again before its
+first execution would mean debugging two changes at once. _(An earlier version added "and re-pasting
+costs a human because the webhook secret cannot be read back" — **that was false**; see §5. The
+re-paste is cheap and a session can do it.)_ **Let 2026-08-22 run, then decide on evidence.** Tracked as
 [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 48.
 
 ---
@@ -178,10 +179,9 @@ job.
 
 📋 **The full tested capability map is in the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md)
 skill** — *"What a SESSION can and cannot do to a Routine"*, every row exercised or refused in a live
-call on 2026-08-18. The short version: a session can **create, read, rewrite, reschedule, disable,
-delete and fire** a Routine, but **cannot attach MCP connectors** (refused outright for this
-organization) and **cannot attach a git source** (no parameter exists). The tell is `created_via` —
-`http_api` Routines have both, `meta_mcp` ones have neither.
+call on 2026-08-18, and **the single place these facts are maintained.** One line of it is what
+matters here: **a session can read a Routine's prompt and rewrite it**, so nothing in this file is
+blocked on a human paste.
 
 _(Kept rather than deleted because the error is instructive: a plausible mechanism was asserted
 without being tested, then repeated in five places including inside a live scheduled Routine, and it
@@ -255,7 +255,7 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 | What you see | What it means | Action |
 |---|---|---|
 | Ages in days present, deferrals named, coverage counts stated | **The chase pass took.** The core fix works | Move to §3 — decide on subagents (row 48) |
-| Open items with no ages, or a green line over an open item | The prompt did not take, or the email logic did not | Re-check the pasted prompt against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md); this needs a human paste (§5) |
+| Open items with no ages, or a green line over an open item | The prompt did not take, or the email logic did not | Re-check the live prompt (`list_triggers`) against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) and rewrite it (`update_trigger`) — **a session can do this unaided (§5)**; ask Lilian first, since it is a live scheduled job |
 | Late clients thinner than early ones | **The context ceiling (§3)** | Adopt subagents — that is what row 48 is waiting for |
 | A NOT-MERGED subject | The work is stranded | Merge the branch, then find out why |
 | A new ledger row for a client with no full pass | 🛑 **History-erasing write** | Revert that row before Saturday |
@@ -291,18 +291,17 @@ and to ask Lilian either to forward the email or to recreate the reminder from
 **claude.ai/code/routines** with connectors attached.
 
 ⓘ **The general lesson, worth more than these two Routines:** a Routine created through the MCP
-tool inherits **only what the calling session can pass** — and a session with no connector grants
-passes none, while `create_trigger` has **no parameter for a git source at all**. So **a Routine
+tool gets **neither connectors nor a git source**: `create_trigger`'s `connectors` parameter is
+**refused outright for this organization** _(tested — it is not about what the calling session
+holds)_, and there is **no parameter for a git source at all**. So **a Routine
 that must read a mailbox, or that must have a checkout waiting, has to be created in the routines
 UI**, where both are attached by hand. **Everything else about a Routine — including its prompt and
 the credentials inside it — a session can read and write perfectly well (§5).** The line is not
 "sessions cannot configure Routines"; it is **"connectors and sources are UI-only"**.
-✅ **Confirmed by testing, 2026-08-18:** passing `connectors: [...]` to `create_trigger` is refused
-with *"the connectors parameter is not available for this organization"* — a flat no, not a
-permissions problem in the calling session. And `created_via` in `list_triggers` predicts it: the
-firm's two UI-made Routines (`http_api`) carry sources and connectors; all three session-made ones
-(`meta_mcp`) carry neither. Full table in the
-[`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill.
+✅ **Tested 2026-08-18 — and the full table lives in ONE place**, the
+[`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill,
+*"What a SESSION can and cannot do to a Routine"*. Read it there rather than trusting a summary
+here: copying these facts around is precisely the failure §4 and §5 of this file document.
 
 ---
 
