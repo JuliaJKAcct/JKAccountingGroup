@@ -462,32 +462,135 @@ The K-1 comes off the company's **Form 1120-S** — see
 [`form-1120s-preparation.md`](./form-1120s-preparation.md). **The company's return is a
 prerequisite**: the shareholder's 1040 cannot be finished before it.
 
-| From the K-1 | Goes to |
-|---|---|
-| Box 1 ordinary business income (loss) | Schedule E Part II, nonpassive column → Schedule 1 line 5 |
-| Box 16 C nondeductible expenses · 16 D distributions | **Form 7203**, not the 1040 directly |
-| Box 17 V §199A | Form 8995 |
+### 🔑 READ THE WHOLE K-1, BOX BY BOX — and say where each one lands
 
-### 🔴 A loss must clear THREE gates, in this order
+**Standing requirement _(Lilian, 2026-08-19)_: whenever a taxpayer receives a K-1, the analysis
+explains how it is filled in — not just which two boxes carry figures.** A K-1 arrives looking like a
+summary; it is an instruction sheet, and three of its parts are load-bearing before you reach a
+number.
 
-1. **§1366(d) — basis.** Form 7203, filed **with the 1040**, not with the 1120-S.
-2. **§465 — at risk.** Form 6198.
-3. **§469 — passive activity.** Form 8582. Schedule E Part II has **separate passive and nonpassive
-   columns** for exactly this reason.
+**Part I — the corporation.** EIN · name and address *(⚠️ if the company moved, the K-1 must carry
+the NEW address)* · **total shares, beginning and end** — 🔑 **the corporation's total, not the
+shareholder's**, which is item H. And **`Final K-1`**: 🛑 **ticking it a year early tells the IRS the
+shareholder is out** and invites a matching problem on the 1040.
 
-⚠️ **Form 7203 answers gate 1 only.** "The loss is fully deductible" off a 7203 is a *basis*
-conclusion. **Record material participation** rather than inheriting last year's column.
+**Part II — the shareholder.** Identifying number · name and address *(**his**, not the company's)* ·
+**F3** entity type · **G** current-year allocation percentage · **H** his shares, beginning and end ·
+**I** **loans from shareholder** → **Form 7203 Part II**. ⚠️ **Item G is often a RULING, not a fact**
+— a departing shareholder, a mid-year transfer, a `Final K-1` on last year's copy. **Record whose
+ruling it is.**
 
-### Form 7203 — the mechanics that get done wrong
+**Part III — the numbers.**
 
-- **Line 1** is **last year's line 15**, copied. Never recomputed.
-- **A loss never goes on lines 3a–3m** — line 3a says *"enter losses in Part III"*.
-- **Order matters:** contributions → **distributions** (line 6) → nondeductible (8a) → **losses**
-  (11). A distribution exceeding basis is a **capital gain** on Form 8949/Schedule D.
-- **Line 15 is next year's line 1.** 🔑 On a company heading for a **final** return, line 15 is the
-  opening figure of the **liquidation** gain/loss calculation — not this year's paperwork.
-- **Box E — the §1.1367-1(g) election:** once made it binds every later year until the IRS consents
-  to revoke. **If the prior year left it blank, leave it blank.**
+| From the K-1 | Goes to | Note |
+|---|---|---|
+| **Box 1** ordinary business income (loss) | **Schedule E Part II line 28 col (i)** *(nonpassive)* → line 32 → line 41 → **Schedule 1 line 5** | ⚠️ see the col **(e)** rule below — **four triggers, not one** |
+| Boxes 2 · 3 rental | Schedule E Part II | |
+| Box 4 interest · 5a/5b dividends | Schedule B | |
+| **Box 6 royalties** | 🔑 **Schedule E line 4 — Part I, not Part II** | easy to file with box 1 and be on the wrong part of the same form |
+| Boxes 7 · 8a capital gains | Schedule D lines 5 and 12 | |
+| **Box 9 net §1231 gain (loss)** | 🔑 **Form 4797 line 2, column (g)** — *not* Schedule D | *"Don't complete columns (b) through (f)… enter 'From Schedule K-1 (Form 1120-S)' across these columns"* |
+| Box 10 other income | by code | |
+| **Box 11 §179 deduction** | **Form 4562 Part I** | ⚠️ **§179 is box 11, NOT box 12** |
+| **Box 12 other deductions** | Schedule A or Schedule 1, **by letter code** | 🔑 **charitable contributions (codes A–G) and investment interest expense (code H) hide here** |
+| Box 13 credits | the credit's own form, by code | |
+| **Box 14** Schedule K-3 attached | ☐/☑ | ☑ means a **foreign** package is coming; do not file without it |
+| **Box 16 C** nondeductible · **16 D** distributions | **Form 7203** lines 8a and 6 — **not the 1040 directly** | 🔑 the only two boxes that touch **basis** |
+| **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
+| Boxes 18 · 19 more than one activity | the at-risk / passive analysis | ☑ means the single-activity shortcut is unavailable |
+
+#### 🛑 Schedule E column (e) — FOUR triggers, and three of them are not a loss
+
+**Schedule E page 2 prints it above line 28. Quote it, do not paraphrase:**
+
+> *"Note: If you **report a loss, receive a distribution, dispose of stock, or receive a loan
+> repayment** from an S corporation, you must check the box in column (e) on line 28 and attach the
+> required basis computation."*
+
+⚠️ **"Whenever a loss is claimed" is the wrong test and will under-tick.** A **profitable**
+shareholder who simply took a **distribution** must still tick (e) and attach Form 7203. ⓘ Column
+**(f)** is a separate tick — *"If you report a loss from an at-risk activity for which any amount is
+not at risk… attach Form 6198."*
+
+🔑 **Every figure on a K-1 is a share of a Schedule K line the company already computed.** If a
+number appears on a K-1 that is not on Schedule K, the error is upstream — **go back to the 1120-S,
+do not fix it on the K-1.**
+
+### 🛠️ The K-1 warning every S-corporation return raises — and how to answer it
+
+Tax software warns, on essentially every S-corp K-1, that *"per Reg. 1.1367-1(c)(2), current-year
+noncapital, nondeductible expenses **in excess of basis** will not carry forward to reduce stock
+basis next year"*, and offers to "change the carryover default."
+
+⚠️ **That citation is the SOFTWARE's, and it is not the paragraph that sets the ordering.**
+**§1.1367-1(c)(2)** is the paragraph that *defines* noncapital, nondeductible expenses. The **ordering**
+the instructions reproduce is **§1.1367-1(f)**; the **election** that changes it is **§1.1367-1(g)**.
+ⓘ **The regulation's own text could not be reached from this environment** (eCFR and govinfo are
+blocked by the egress proxy), so everything below is quoted from **IRS instructions**, which is what
+a preparer works from anyway. **Cite the instructions; do not restate a regulation you have not read.**
+
+**What it is about.** The **Shareholder's Instructions for Schedule K-1 (Form 1120-S)** set the order:
+
+> *"1. Basis is increased by (a) all income… 2. Basis is decreased (but not below zero) by (a)
+> property distributions… **3. Basis is decreased (but not below zero) by (a) nondeductible
+> expenses**… **4. Basis is decreased (but not below zero) by all losses and deductions reported on
+> Schedule K-1."*
+
+Under that default, nondeductible expenses in excess of basis are **lost**. The election reverses
+steps 3 and 4: *"You may elect to decrease your basis under (4) prior to decreasing your basis under
+(3). If you make this election, any amount described under (3) that exceeds the basis… **is treated
+as an amount described under (3) for the following tax year**."*
+
+#### 🔑 The test — and it is NOT "is line 10 positive"
+
+**Ask whether the year's losses are fully allowed.** The right condition is **Form 7203 line 15 > 0**
+— i.e. line 10 covers the year's loss and deduction items with room left.
+
+- ✅ **If line 15 is positive, the ordering cannot matter.** Everything is absorbed either way and
+  ending basis is identical. **The warning is hypothetical — change nothing.**
+- 🔴 **If basis runs out, the ordering DOES matter and "ending basis is the same" stops being a
+  reason.** Both orderings end at zero; what differs is **how much loss is allowed this year** and
+  **whether the nondeductible amount survives**. Under the election, lines 8a–8c are blank, so line
+  10 is larger by the nondeductible amount and the line-11 ceiling rises with it. **That is a real
+  decision, and it is the client's.**
+
+⚠️ **So the earlier shorthand — "line 10 comfortably positive" — is not sufficient**, because a
+small-positive line 10 with larger losses is exactly the case where the choice bites. **Use line 15.**
+
+#### Then, before recommending anything
+
+1. **Did the prior year make the election?** If not, **starting one now is a permanent change** —
+   *"Once made, the election applies to the year for which it is made and **all future tax years for
+   that S corporation, unless the IRS agrees to revoke** your election."* ⚠️ **Default to leaving it
+   unmade**, and never start one in a year it buys nothing.
+2. **If the prior year DID make it, it is still in effect** — item E stays ticked and the mechanic in
+   the box below applies.
+3. **If basis is exhausted and no election exists, put the choice to the client** with its
+   permanence stated. **Do not make it inside a session.**
+
+#### 🛑 The Form 7203 mechanic under a (g) election — the part that gets missed
+
+> **Instructions for Form 7203, line 8:** *"**Leave lines 8a, 8b, and 8c blank if you made an
+> election under Regulations section 1.1367-1(g). If an election was made, enter this information on
+> line 13.**"*
+> **Line 13:** *"If an election is made under Regulations section 1.1367-1(g), enter the amounts on
+> this line as instructed on line 8, **including any prior year carryover amounts**."*
+
+🔴 **A return with item E ticked AND the nondeductible expenses on line 8a is wrong**, and the error
+is invisible until it reaches next year's line 1. ⚠️ **This is the trap created by copying item E
+forward from the prior year without moving the amount** — check both together, every year.
+
+📎 **And the election is made by an attached STATEMENT, not by the checkbox** — *"attach a statement
+to your timely filed original or amended return that states you agree to the carryover rule of
+Regulations section 1.1367-1(g) and the name of the S corporation to which the rule applies."*
+**Item E only reports that one is in effect** (§19).
+
+ⓘ **Two other warnings are routine on these returns, and both are expected rather than wrong:** *"a
+net operating loss cannot be carried back… unless related to farming"* (post-2020 NOLs carry forward
+only), and the whole family of **`Comparison`** warnings — *"X reported on last year's return but not
+reported on this year's"* — which fire whenever income stops or a **joint return becomes a single
+one**. 🔑 **Read every one, confirm each has a recorded reason, and say so.** A warning with an
+explanation is finished work; a warning nobody looked at is a defect waiting.
 
 ---
 
@@ -1054,6 +1157,10 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 
 ## M7 · Net operating loss carryforward — and **Form 172**
 
+🛑 **BEFORE ANYTHING ELSE IN THIS MODULE: an NOL carryover on Schedule 1 line 8a requires an attached
+explanation statement, and the return will not transmit without it.** See [§19](#19--the-statements-and-attachments--the-half-that-is-not-a-number).
+**Draft it when you deliver the figures, not when the software refuses to send.**
+
 **Form 172, *Net Operating Losses (NOLs) for Individuals, Estates, and Trusts* (Rev. December 2024),
 replaced the worksheets that used to live in Pub 536.** Part I computes the year's NOL; **Part II is
 a CARRYBACK computation** — its columns are *"2nd preceding tax year"* / *"1st preceding tax year"* —
@@ -1190,7 +1297,61 @@ income year is sheltered outright. **It is not.**
 
 ---
 
+## §19 · 🛑 THE STATEMENTS AND ATTACHMENTS — the half that is not a number
+
+🔴 **A return is not finished when its figures are right. It is finished when it TRANSMITS.**
+Several positions on a 1040 require an **attached statement**, and some of them are hard e-file
+blockers: the software refuses to send the return until the statement exists. **None of them is
+visible on any form's face**, which is exactly why they get missed.
+
+⚠️ **This section exists because a session delivered a complete, correct, line-by-line return and
+never mentioned that Schedule 1 line 8a needs a statement.** The preparer met it as a red error in
+the software and had to write the justification herself. _(Lilian, 2026-08-19: **"esto no me lo
+mencionaste… necesito que para la próxima sea más específico"**.)_
+
+### The ones to check for — one met, the rest live on these clients' facts
+
+| Position | Statement | Blocking? |
+|---|---|---|
+| ✅ **MET.** An NOL carryover on Schedule 1 line 8a | **NOL Carryover Explanation** — which year each loss arose, how much, why no carryback, what has been absorbed, what is deducted now, what remains | 🛑 **YES — the return will not transmit.** ⚠️ **This is a TRANSMISSION-level requirement, not an instruction-level one** — see the provenance note below |
+| An NOL deduction **actually limited** by the 80% cap | *"Attach a statement to your tax return showing how you figured the 80% limitation, if applicable"* _(Instructions for Form 172)_ | required **only when the cap is being figured** — ⓘ **not** the source of the blocker above |
+| Waiving the NOL carryback period | A statement on the timely original return choosing to waive under §172(b) | ⚠️ **Farming losses only, for NOLs arising after 2020** — for an ordinary post-2020 loss there is **no carryback to waive**, so attaching one is meaningless |
+| The **§1.1367-1(g) election** on an S-corp K-1 | A statement agreeing to the carryover rule **and naming the S corporation**. 🔑 **Form 7203 item E is a REPORT of the election, not the election** | required to make it |
+| A **Form 8332** release | The signed form itself, attached | required for a **noncustodial** parent to claim a released child |
+| A shared Marketplace policy with **more than four** allocations | Form 8962 line 34 answered **No** → *"attach a statement to your return providing the information shown on lines 30 through 33, columns (a) through (g), for each additional allocation"* | required |
+
+#### ⚠️ Where the NOL blocker actually comes from — say this honestly
+
+**It is not in the Form 1040 or Schedule 1 instructions**, which say only *"See the Instructions for
+Form 172 for details."* **And it is not the Form 172 80%-limitation caution**, which is a different
+requirement and applies only when the cap is being figured. **What is verifiable is that the software
+refuses to transmit**: ATX reports *"NOL statement must be completed when an NOL carryover amount is
+reported on Schedule 1"*, and at least one other package enforces the same condition — good evidence
+of an e-file schema/business rule, **but the specific IRS rule number has not been located.**
+🔑 **Quote the software as the software.** Do not dress a vendor's diagnostic as an IRS instruction
+(delivery rule 9).
+
+### The rule
+
+🔑 **List the return's attachments as part of the deliverable, next to the figures.** For every
+position taken, ask: *does this need a piece of paper that is not a form?* And say so **before** the
+preparer opens the software, not after it refuses to send.
+
+⚠️ **The tell is a position the FORM cannot express.** A form has boxes for amounts; it has no box
+for *why this loss is still available*, *why no carryback*, or *which company an election covers*.
+**Wherever the answer is a sentence rather than a number, expect a statement.**
+
+🛑 **And draft it.** A statement is prose about a tax position, which is the firm's job, not the
+client's — and it is written from the **carryover reasoning**, which the return itself never shows.
+**Hand over paste-ready text, not a reminder that text is needed.**
+
+---
+
 ## §20 · Before you file — the tie-out checks
+
+- [ ] 🛑 **Every statement §19 calls for is attached and completed.** ⚠️ **A return whose figures are
+      right still does not transmit without them** — at minimum, an NOL carryover on Schedule 1 line
+      8a blocks e-file until the explanation statement exists.
 
 - [ ] **Filing status** supports every credit claimed — including **applicable-taxpayer status for
       the PTC** (M4).

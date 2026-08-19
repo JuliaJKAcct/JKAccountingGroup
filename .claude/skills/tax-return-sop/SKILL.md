@@ -145,10 +145,16 @@ answer.
 > little experience with returns and **gets lost between the forms, the pages and the numbers** — so
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
-> **Deliver all four, every time, unprompted — plus the fifth below, which is what makes the flow
-> readable.**
+> **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
+> and parts 6 and 7 below, which are what she has had to ask for since.**
 
-### The five things every delivery carries
+> 🔴 **And the standard she set on 2026-08-19 (late), after two things a complete-looking delivery
+> had left out:** *"necesito que para la próxima sea más específico en cuanto al nivel de detalle y
+> de análisis en la preparación de los tax returns."* **The two gaps were not figures.** One was a
+> **statement the return could not e-file without**; the other was **a K-1 explained only as the two
+> boxes that carried numbers.** Parts 6 and 7 exist because of them.
+
+### The seven things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PART and the LINE NUMBER named**:
@@ -228,6 +234,61 @@ cost"* is what makes it stick and what lets her catch the next one herself.
     operating instructions on the face of the form — Form 8962 line 34's "Yes" branch is the
     complete procedure for lines 12–23, and Form 8829's header is the one-per-home rule. **Quote
     it; do not paraphrase it from the instructions.**
+
+---
+
+**6 · 🛑 THE STATEMENTS AND ATTACHMENTS THE RETURN REQUIRES — and DRAFT them.**
+
+**A return is not finished when its figures are right. It is finished when it TRANSMITS.** Several
+positions require an **attached statement**, and some are **hard e-file blockers** — the software
+refuses to send until one exists. **None of them appears on any form's face.**
+
+🔑 **The tell: a position the FORM cannot express.** A form has boxes for amounts and none for *why
+this loss is still available*, *why no carryback was taken*, or *which company an election covers*.
+**Wherever the answer is a sentence rather than a number, expect a statement.**
+
+**Say it BEFORE the preparer opens the software, and hand over paste-ready text** — a statement is
+prose about a tax position, which is the firm's job, and it is written from reasoning the return
+itself never shows. _(A delivery that was correct line by line still cost the preparer time because
+it never mentioned that an NOL carryover on Schedule 1 blocks e-file without an explanation
+statement. **She met it as a red error and wrote the justification herself.** Lilian, 2026-08-19.)_
+
+**7 · 🔑 EVERY K-1 GETS A BOX-BY-BOX — both halves of it.**
+
+**Standing requirement _(Lilian, 2026-08-19)_: whenever a taxpayer receives a K-1, the analysis
+explains how the K-1 is filled in.** Not only the two or three boxes carrying figures — **all of it**,
+because the parts that decide the return are often the ones with no number in them:
+
+- **The identifying parts.** Whose K-1, at what allocation percentage, whose address, how many
+  shares or units at each end of the year — and whether `Final K-1` is ticked. ⚠️ **The allocation
+  percentage is frequently a RULING rather than a fact** (a departing owner, a mid-year transfer);
+  **say whose ruling it is.**
+- **Every numbered box, including the blank ones** — a blank box is a fact about the entity, and the
+  boxes that hide things are the aggregate ones (*other deductions*, *other information*), where a
+  letter code changes which form the figure belongs on.
+- **Where each box LANDS on the recipient's return**, form and line — the K-1 never says.
+- **The boxes that touch BASIS**, separated from the ones that are income or deduction, because they
+  run through a different form and in a fixed order.
+
+🔑 **And the direction of travel: a K-1 is produced BY the entity's return, not filled in
+independently.** Every figure is a share of a line the entity already computed. **A number on a K-1
+that is not on the entity's Schedule K is an error upstream — go back to the entity's return.**
+
+⚠️ **Where a box's destination is not the obvious one, say so** — an entity K-1 routinely sends items
+to forms nobody expects (a §1231 amount to Form 4797 rather than Schedule D; royalties to a different
+*part* of the same schedule as the ordinary income). **A destination table whose rows are "its own
+form" has not done the job.**
+
+⚠️ **And the recipient's schedule has its own checkboxes with their own triggers.** Read the printed
+note above the line rather than assuming the obvious condition — *"if you report a loss"* is rarely
+the whole list.
+
+⚠️ **Read the software's warnings on the K-1 input and account for every one.** Several fire on
+essentially every return of that type (the S-corporation §1.1367-1(g) carryover notice, the
+no-carryback notice, the whole `Comparison` family when a joint return becomes a single one).
+**A warning with a recorded reason is finished work; a warning nobody looked at is a defect
+waiting.** 🔑 **The right answer is usually "change nothing" — but say WHY, with the figures that
+make it hypothetical**, because "ignore it" is not something a preparer can act on with confidence.
 
 ---
 
