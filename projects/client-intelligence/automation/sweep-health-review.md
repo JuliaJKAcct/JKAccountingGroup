@@ -176,9 +176,16 @@ job.
    unreachable, it is one tool call away for anyone with the account. **If that matters, the fix is
    to rotate the secret in the Apps Script and in both Routines** — not to rely on it being hidden.
 
+📋 **The full tested capability map is in the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md)
+skill** — *"What a SESSION can and cannot do to a Routine"*, every row exercised or refused in a live
+call on 2026-08-18. The short version: a session can **create, read, rewrite, reschedule, disable,
+delete and fire** a Routine, but **cannot attach MCP connectors** (refused outright for this
+organization) and **cannot attach a git source** (no parameter exists). The tell is `created_via` —
+`http_api` Routines have both, `meta_mcp` ones have neither.
+
 _(Kept rather than deleted because the error is instructive: a plausible mechanism was asserted
 without being tested, then repeated in five places including inside a live scheduled Routine, and it
-parked a real decision behind an imaginary obstacle.)_
+parked a real decision behind an imaginary obstacle. **The fix was one tool call.**)_
 
 ---
 
@@ -289,7 +296,13 @@ passes none, while `create_trigger` has **no parameter for a git source at all**
 that must read a mailbox, or that must have a checkout waiting, has to be created in the routines
 UI**, where both are attached by hand. **Everything else about a Routine — including its prompt and
 the credentials inside it — a session can read and write perfectly well (§5).** The line is not
-"sessions cannot configure Routines"; it is "connectors and sources are UI-only".
+"sessions cannot configure Routines"; it is **"connectors and sources are UI-only"**.
+✅ **Confirmed by testing, 2026-08-18:** passing `connectors: [...]` to `create_trigger` is refused
+with *"the connectors parameter is not available for this organization"* — a flat no, not a
+permissions problem in the calling session. And `created_via` in `list_triggers` predicts it: the
+firm's two UI-made Routines (`http_api`) carry sources and connectors; all three session-made ones
+(`meta_mcp`) carry neither. Full table in the
+[`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill.
 
 ---
 

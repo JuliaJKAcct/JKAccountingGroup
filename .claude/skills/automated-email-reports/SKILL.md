@@ -29,6 +29,60 @@ exist (the send webhook, the brand system) — a new report mostly reuses them.
   a small **Google Apps Script web app** that the firm already runs — the routine
   POSTs the finished email to it over HTTPS.
 
+## 🔧 What a SESSION can and cannot do to a Routine — tested 2026-08-18
+
+**Lilian's question:** *"can you create the Routines yourself and paste the prompt into them? If we
+want to change one, do you need me?"* Mostly no — and the exceptions are sharp and worth knowing
+before you promise anything. Every row below was **exercised or refused in a live call**, not read
+off a schema.
+
+| | Session? | Notes |
+|---|---|---|
+| **Create** a Routine (`create_trigger`) | ✅ | Cron or one-shot; fresh session per fire, or bound to an existing one |
+| **Read** its full prompt (`list_triggers`) | ✅ | Returns the **entire prompt body** — see the warning below |
+| **Rewrite** the prompt (`update_trigger`) | ✅ | Read it, edit it, write it back. No human paste needed |
+| **Reschedule / rename / disable / delete** | ✅ | `cron_expression`, `run_once_at`, `name`, `enabled`, `model` |
+| **Fire it now** (`fire_trigger`) | ✅ | Optionally with extra text appended for that one run |
+| 🔴 **Attach MCP connectors** (Gmail, Double, Drive…) | ❌ | *"the connectors parameter is not available for this organization"* — a flat refusal, **not** a permissions issue in the calling session |
+| 🔴 **Attach a git source** (a repo checkout) | ❌ | `create_trigger` has **no parameter for it at all**, and `update_trigger` cannot add one later |
+
+### The tell is `created_via`, and it is visible in `list_triggers`
+
+- **`http_api`** — created in the **routines UI**. These carry `sources` (the repo) *and*
+  `mcp_connections`. The firm's two working automations are both this: the weekly CI sweep (7
+  connectors) and the recurring-expense monitor (4).
+- **`meta_mcp`** — created **from a session**. These carry **neither**. All three of the firm's
+  session-made Routines are in this state.
+
+**So the rule is simple: a Routine that must read a mailbox, a calendar or Double — or that needs a
+checkout waiting for it — has to be created by a person in the UI.** Everything else, ask a session.
+
+⚠️ **A session-made Routine is not useless, but it must be written to survive its own poverty.**
+Give it two things: **clone the repo itself** (*"locate the repo, or clone `<url>`"* — the
+repo-coherence audit has run that way since July), and an instruction to **say out loud in its first
+paragraph what it could not reach**, rather than reporting a silent gap. A scheduled session that
+reports *"no reply found"* for a mailbox it could not open is worse than one that reports nothing.
+
+### 🔒 And the security fact nobody had noticed
+
+**`list_triggers` returns the prompt body verbatim — including the webhook URL and secret.** Both of
+the firm's `http_api` Routines carry the same pair in plain text inside their prompts, so **any
+session holding the Claude-Code-Remote MCP can read that credential in one call.**
+
+Two consequences:
+
+1. ✅ It is what makes a re-paste safe from a session: read the live values out, write them back in.
+   _(An earlier claim that this was impossible — "there is no `get_trigger`" — was **wrong**, and it
+   parked two real decisions behind an imaginary blocker. There is indeed no `get_trigger`;
+   `list_triggers` simply does the job.)_
+2. ⚠️ Keeping `<WEBHOOK_SECRET>` placeholders out of this repo stays right — **git history is
+   permanent and far more widely readable** — but do not describe the value as *hidden*. If it ever
+   matters, **rotate it** in the Apps Script and in every Routine that carries it.
+
+🛑 **Reading and rewriting a live scheduled job is still something you ASK about first.** It is an
+outward-facing change to something that runs unattended — confirm-before-acting, not a technical
+limit.
+
 ## The six traps (and the fix for each)
 
 | # | Trap | Why it bites | Fix |
