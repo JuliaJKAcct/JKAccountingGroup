@@ -92,6 +92,13 @@ For the scoped clients, once per week:
    [`sop-proposals.md`](../sop-proposals.md) for the loop. **The report is not a gate** —
    nothing waits on it being read.
 
+> 📋 **After a run: [`sweep-health-review.md`](./sweep-health-review.md)** — the post-run
+> checklist and the standing diagnosis of what this routine gets wrong. **Read it before reading a
+> Saturday report**, and record what the report showed. It carries what is confirmed (the sweep
+> never chased its own open items), what is retracted (two confident findings of 2026-08-18 that
+> review killed, one of which would have destroyed client history), and the context-ceiling
+> arithmetic behind the parked subagent decision.
+
 ## What the "call budget" actually is — there is NO vendor quota here
 
 **Asked by Lilian, 2026-08-18: are there limits on running Client Intelligence?** The honest answer
