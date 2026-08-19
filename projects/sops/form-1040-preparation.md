@@ -197,6 +197,36 @@ are worth very different money, and only one of them can be chosen.
 year. Modelling one to *explain how the credits behave* is fine and often the clearest way to answer
 "why is this worth so little?" — **filing on one is not.**
 
+### 🔴 The residence FACT can change after you have priced the levers. Re-price, do not patch.
+
+**Establish where each child actually lived before building anything on top of it — and treat a
+change in that answer as a new return, not an adjustment.**
+_(Live case, 2026-08-18 → 2026-08-19: the firm was told two of three children lived with the father,
+priced the levers, and was one message away from recommending a signed Form 8332 worth a few hundred
+dollars. The next day the client confirmed **all three had lived with the mother all year and the
+father had lived alone.** The 8332 became meaningless; the mother's refund roughly doubled; the
+father lost head of household, lost every dependant, and went from owing nothing to owing a balance.
+**Not one income figure moved.**)_
+
+Three things that case is worth remembering for:
+
+1. 🔑 **The unreleasable lever is usually the big one.** The Form 8332 moved the child tax credit; the
+   children's actual residence moved the **earned income credit**, which is several times larger and
+   **cannot be released on any form**. **Price the residence facts first, and be sure of them before
+   you price anything else.**
+2. 🔴 **A CHANGE OF DEPENDANTS TOUCHES FAR MORE THAN THE CREDIT LINES.** Re-derive, on **both**
+   returns: **filing status** (a parent with no resident child cannot be head of household),
+   **Schedule 8812's Part II-B routing** (three children crosses the $5,100 branch), **Form 8962
+   lines 1, 4 and 5** (tax family size and the poverty line), **Form 8962 line 28** (the repayment
+   limitation follows filing status), and **whether any nonrefundable credit is still there to absorb
+   an excess advance premium tax credit.** ⚠️ **Patching only the EIC and the CTC will leave a wrong
+   return that foots.**
+3. ⚠️ **A source that is wrong about some things is NOT thereby wrong about the thing in front of
+   you.** The joint organizer had said all along that all three children lived with their mother for
+   twelve months. **That answer was overridden because several of the organizer's OTHER answers were
+   demonstrably wrong** — and it turned out to be correct. **Discredit an answer on its own evidence,
+   never by association with its neighbours.**
+
 ---
 
 ## M1 · W-2 wages
@@ -643,10 +673,30 @@ line per allocation** (see *Allocation is PAIRWISE* below). ⓘ And note the ins
 SLCSP is the smaller, the *benchmark plan* caps the credit. When the SLCSP rises above the actual
 premium, the **premium** caps it — **the credit never exceeds what the insurance actually cost.**
 
-⚠️ **Line 28, the repayment limitation, has a trap in its own column headings.** Under 200% of the
-poverty line the 2025 limits are **$375** for *"unmarried individuals **other than surviving spouses
-and heads of household**"* and **$750** for *"all other taxpayers"*. **A head of household takes the
-$750 column**, not the $375 one. _(Rev. Proc. 2024-40 §.07.)_
+⚠️ **Line 28, the repayment limitation, is keyed to FILING STATUS — not to family size, and not to
+income except through the poverty-line band.** The **Form 8962 instructions, Table 5** put it more
+plainly than the revenue procedure does:
+
+| Form 8962 line 5 | **Filing status of Single** | **Any other filing status** |
+|---|---|---|
+| Less than 200 | **$375** | **$750** |
+| At least 200, less than 300 | $975 | $1,950 |
+| At least 300, less than 400 | $1,625 | $3,250 |
+| 400 or more | *leave line 28 blank — there is no limitation, repay all of line 27* | |
+
+_Verified against the 2025 Instructions for Form 8962, Table 5, and Rev. Proc. 2024-40 §.07,
+2026-08-19._
+
+🔴 **"Single" is one status, and every other status — head of household, joint, separate, surviving
+spouse — takes the larger column.** The revenue procedure states the same rule the other way round
+(*"unmarried individuals other than surviving spouses and heads of household"*), which is how it gets
+misread. **A head of household takes the $750 column.**
+
+🔴 **And it MOVES when a client's filing status moves.** _(Live case, 2026-08-19: a change in where
+the children lived took a taxpayer from head of household to Single, and his limitation halved from
+750 to 375 — on the same income, the same policy and the same allocation.)_ ⚠️ **It is exactly the
+kind of number that gets copied forward from last year's return.** It does not bind unless the excess
+is large — **which is the reason it goes unnoticed until the year it matters.**
 
 ### 🔴 A shared policy — when one 1095-A covers more than one tax family
 
@@ -784,7 +834,14 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
   **line 23 escapes it**. ⚠️ **"There is no tax to offset, so the credit is worth zero" is FALSE
   whenever there is an excess advance** — and it is the mistake a nil-taxable-income return invites.
   🔑 **Check it against the client's own prior year**: a return with nil income tax and an excess
-  advance will show that same amount sitting on line 19. _(Caught in review, 2026-08-19, on two
+  advance will show that same amount sitting on line 19.
+  🔴 **AND THE CONVERSE, which is the half that bites: a client with NO dependants has nothing to
+  absorb it with.** The excess advance is an **addition to tax on line 18**; it survives all the way
+  to line 24 unless a **nonrefundable** credit reaches it. ⚠️ **So the same excess is harmless on a
+  return with children and a real balance due on a return without them** — a nil-income taxpayer
+  with no dependants **owes it**. _(Live case, 2026-08-19: a change in where the children lived took
+  a taxpayer from two dependants to none, and a return that owed nothing came to owe money without a
+  single income figure changing.)_ _(Caught in review, 2026-08-19, on two
   returns at once — and the prior-year table in the same working paper had been demonstrating the
   mechanism all along.)_
 - 🔑 **TWO CEILINGS, and knowing which one binds is the whole game.** With a modest earned income the
@@ -793,6 +850,30 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
   how many Forms 8332 to sign. _(Live case, 2026-08-18: an earned income in the high teens put the 15%
   ceiling just above one child's 1,700 cap — so one child gave the full 1,700, a second added only
   the difference, and a third added nothing at all.)_
+- 🔴 **THREE OR MORE CHILDREN SENDS YOU INTO PART II-B — and the form says so in one easy-to-miss
+  line.** After line 20, Schedule 8812 prints: *"Next. On line 16b, is the amount **$5,100 or more**?
+  … **Yes.** If line 20 is equal to or more than line 17, skip Part II-B and enter the amount from
+  line 17 on line 27. **Otherwise, go to line 21.**"* 🔑 **$5,100 is 3 × $1,700, so the branch is "do
+  you have three or more qualifying children?" written as a dollar amount** — and the 2026 threshold
+  moves with the per-child figure. **Part II-B exists to give a large family the benefit of its
+  PAYROLL taxes where the 15% formula gives less**, and it runs:
+
+  | Line | What goes in it |
+  |---|---|
+  | 21 | Social security and Medicare **withheld** — Form(s) W-2 boxes 4 and 6 |
+  | 22 | **Schedule 1 line 15** (half the SE tax) + Schedule 2 lines 5, 6 and 13 — 🔑 *the self-employed taxpayer's substitute for line 21* |
+  | 23 | 21 + 22 |
+  | 24 | 🔴 **1040 line 27a (the EIC) + Schedule 3 line 11** — the credits already received |
+  | 25 | 23 − 24, not below zero |
+  | 26 | the **larger** of line 20 or line 25 |
+  | 27 | the **smaller** of line 17 or line 26 → 1040 line 28 |
+
+  🔴 **Line 24 subtracts the client's own earned income credit**, so **Part II-B almost never helps a
+  client who is receiving a large EIC** — which is most three-child clients at this income level.
+  ⚠️ **Complete it anyway.** The answer usually comes back as the same line 20 figure, but a part the
+  form routes you into and you skipped is a defect on a filed return. _(Live case, 2026-08-19: three
+  children, no W-2, an EIC several times the half-SE-tax figure — Part II-B produced zero on line 25
+  and the ordinary 15% figure won. It still had to be filled in.)_
 - 🔴 **Both the ACTC and the EIC require EARNED income.** Wages and net self-employment earnings are
   earned income. **An S-corporation K-1 loss is not. Distributions are not. Interest is not.**
   ⚠️ *A client can have a large K-1 and still be worth nothing on either credit.*
@@ -825,6 +906,13 @@ _Verified against **Rev. Proc. 2024-40 §.06** on irs.gov, 2026-08-18 — the au
 pages. **Read the current year's revenue procedure; every figure here is indexed.**_
 
 - The credit is the **lesser** of the amount from the table on **earned income** or on **AGI**.
+- 🔴 **READ THE AMOUNT OFF THE PRINTED EIC TABLE — do not compute it from the phase-in rate.** The
+  table (1040 instructions, and **Pub 596**) figures each **$50 bracket at its MIDPOINT**, so the
+  credit for earned income of 16,885 is the figure for the **16,850–16,900** row — computed on
+  16,875, not on 16,885. ⓘ **The rate formula gets you within a few dollars and is the right way to
+  understand the shape**, but the number that goes on line 27a is the table's. _(2025 example,
+  verified 2026-08-19: the 16,850–16,900 row reads **170 / 4,328 / 6,750 / 7,594** for 0 / 1 / 2 / 3+
+  children.)_
 - 🔑 **The shape of the credit is a triangle with a flat top**: it rises at a fixed rate to the
   *earned income amount*, sits at the maximum until the *threshold phaseout*, then falls. **Know
   which of the three zones the client is in before quoting what a deduction is worth** — see the
@@ -836,16 +924,57 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
   other purposes, such as claiming the EIC. Different tests apply."* A separated taxpayer still
   married at year end needs **§32(d)(2)** separated-spouse relief for the EIC — **check it
   separately from the HOH decision.**
-- 🔴 **A DEDUCTION CAN COST A CLIENT MONEY — check before chasing one.** On the rising side of the
-  triangle, an extra dollar of Schedule C deduction reduces earned income and therefore the EIC and
-  the ACTC. For a self-employed client each dollar of deduction removes about **$0.93** of earned
-  income, so at the 2-child rate the arithmetic runs: **−37¢ of EIC** (0.93 × the 40% phase-in rate),
-  **−14¢ of ACTC** (0.93 × 15%), **+14¢ of SE tax saved** (0.9235 × 15.3%) **⇒ about 37¢ LOST per
-  dollar deducted.** In the flat zone the EIC does not move and the same dollar is roughly
-  **neutral**. ⚠️ **This inverts the instinct that a bigger deduction is always better**, and it
-  decides how hard to chase an unsubstantiated expense. _(Live case, 2026-08-18: a client's earned
-  income sat a few dollars above the 2-child earned-income amount — close enough that one modest
-  extra deduction would have crossed back over it.)_
+- 🔴 **A DEDUCTION CAN COST A CLIENT MONEY — WORK OUT THE SIGN BEFORE YOU CHASE ONE.** On the rising
+  side of the triangle an extra dollar of Schedule C deduction reduces earned income, and therefore
+  the EIC *and* the ACTC.
+
+  🔑 **Start from the fact that a dollar of deduction is NOT a dollar of earned income.** It cuts
+  Schedule C line 31 by 1.00, which cuts the deductible half of the SE tax by
+  0.5 × 92.35% × 15.3% = **0.0706** — and earned income is line 31 **minus** that half, so it falls
+  by **0.9294**. Everything below follows from that one number.
+
+  | Per $1 of extra Schedule C deduction | 1 child | 2 children | **3+ children** |
+  |---|---|---|---|
+  | §32 phase-in rate | 34% | 40% | **45%** |
+  | EIC lost — ƒ rate × 0.9294 | −31.6¢ | −37.2¢ | **−41.8¢** |
+  | ACTC lost *(only where the **15% ceiling** binds, not the per-child cap)* | −13.9¢ | −13.9¢ | **−13.9¢** |
+  | SE tax saved — ƒ 92.35% × 15.3% | +14.1¢ | +14.1¢ | **+14.1¢** |
+  | **Net, in the phase-in zone** | **≈ −31¢** | **≈ −37¢** | **≈ −42¢** |
+
+  ✅ **In the FLAT zone the EIC does not move**, so the same dollar is roughly **neutral** (or a small
+  gain where the ACTC's per-child cap binds rather than the 15% ceiling). 🔴 **In the phase-OUT zone a
+  deduction gains** at the phaseout rate. **Three zones, three signs.**
+
+  ⚠️ **This inverts the instinct that a bigger deduction is always better**, and it decides how hard
+  to chase an unsubstantiated expense — **and the sign can flip on facts that have nothing to do with
+  the expense.** _(Live case, 2026-08-19: the same client, the same income and the same expenses,
+  went from **one** qualifying child to **three** when the residence facts were corrected. With one
+  child she was on the flat top and deductions were worth ~+14¢; with three she was 995 below the
+  three-child earned-income amount and the identical deductions were worth ~−42¢. **Nothing about
+  the expenses changed.**)_
+
+  ✅ **What this does NOT license.** A deduction the client is entitled to still goes on the return —
+  correctness is not negotiable, and an unhelpful deduction is not an optional one. **What changes is
+  the SALES PITCH:** stop telling the client that the missing mileage log and the blank utility lines
+  are money on the table, and **redirect the chase to the receipts side**, where the same rate works
+  in their favour.
+
+- 🔑 **THE TAX FAMILY SIZE ON FORM 8962 MOVES WHEN THE DEPENDANTS MOVE — and it moves line 4 with it.**
+  Line 1 is the tax family (taxpayer, spouse, dependants claimed) and line 4 is the poverty line
+  **for that size**, so gaining dependants **raises** line 4 and therefore **lowers** line 5, the
+  percentage. ⚠️ **A client can move FURTHER below 100% of the poverty line by claiming more
+  children** — the poverty line rises faster than their income. **Usually no dollar effect** (the
+  applicable figure is 0.0000 everywhere at or below 150%, and the repayment limitation is flat below
+  200%), **but it puts more weight on whichever below-100% exception the return is relying on.**
+  **Re-derive lines 1, 4 and 5 whenever the dependants change; do not carry them over.**
+- 🔑 **THE FORM ITSELF TELLS YOU WHY the dependants grid is where the EIC lives.** The 2025 Form 1040
+  page 1 **Dependents** grid carries, per child: **(3) SSN · (4) Relationship · (5) "Check if lived
+  with you more than half of 2025" — (a) Yes and (b) "And in the U.S." · (6) full-time student /
+  permanently and totally disabled · (7) Credits: Child tax credit *or* Credit for other
+  dependents.** ⚠️ **Columns (3) and (5) ARE the EIC's residence and SSN tests**, and column (7) is
+  the choice between the $2,200 credit and the $500 one. **Get the grid right and Schedule EIC and
+  Schedule 8812 both follow; get it wrong and you will hunt for the error on the wrong form.**
+  ⓘ Four dependants fit on the grid; **more than four has its own checkbox and instructions**.
 - 🛠️ **In ATX: ENTER THE CHILDREN ON THE 1040's DEPENDENTS TAB, NOT ON SCHEDULE EIC** _(Lilian, 2026-08-19,
   from ATX)_. Schedule EIC's own screen **will not take the Social Security number** and **will not
   let you tick that the child lived in the United States** — the fields are not editable there. Fill
