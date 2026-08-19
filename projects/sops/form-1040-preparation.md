@@ -592,6 +592,80 @@ reported on this year's"* — which fire whenever income stops or a **joint retu
 one**. 🔑 **Read every one, confirm each has a recorded reason, and say so.** A warning with an
 explanation is finished work; a warning nobody looked at is a defect waiting.
 
+### 🛑 Form 7203 — the thing nobody tells you: almost NONE of Part I is typed on it
+
+🔑 **Form 7203 Part I is an OUTPUT.** In **ATX**, only **lines 1 and 13** are typed there; everything
+else arrives from the **K-1 input screen** or is computed. **If a line will not accept a number, you
+are on the wrong screen.**
+ⓘ **Outside Part I the form IS typed** — items C, D and E, and Part II's loan balances (lines 16–20).
+
+⚠️ **The `Where it is ENTERED` column is ATX's behaviour, not an IRS rule** — screens move between
+versions and other software routes differently. **The middle column is the tax fact; the right-hand
+one is only the route.**
+
+| Line | What it is | Where the FIGURE comes from *(the tax fact)* | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|
+| **1** | Stock basis at the beginning of the year | 🔒 **last year's line 15**, copied. **Never recomputed** | ✅ **the only line typed on Form 7203** — or rolled forward automatically if the prior year was prepared in the same software |
+| **2** | Basis from capital contributions or additional stock acquired | 📖 the company's books — the shareholder's capital contributions for the year. ⚠️ **On NO K-1 box.** 🛑 **The instructions EXCLUDE loans:** *"Don't include any loans to the S corporation"* — so gross credits to the capital account are a **starting point, not the answer**; strip loan reclassifications and income postings | 🔴 **NOT on Form 7203 — the K-1 input screen**, contributions field |
+| **3a–3m** | Income and other basis-increasing items *(ordinary income · rentals ×2 · interest · dividends · royalties · net capital gains · §1231 · other income · excess depletion · tax-exempt income · **credit recapture** · **other items that increase stock basis**)* | mostly the K-1's income boxes — ⚠️ **3l and 3m are not income boxes, and 3m has no K-1 box at all.** 🛑 **A LOSS NEVER GOES HERE**: line 3a prints *"enter losses in Part III"* | 🔴 **the K-1 input screen** for the K-1-sourced ones |
+| **4** | Add 3a–3m | ƒ | **computed — do not type** |
+| **5** | Stock basis before distributions | ƒ 1 + 2 + 4 | **computed** |
+| **6** | Distributions *(excluding dividend distributions)* | 🔴 **K-1 box 16, code D** | 🔴 **the K-1 input screen, box 16 code D** |
+| **7** | Stock basis after distributions | ƒ 5 − 6. ⚠️ *"If the result is zero or less, enter -0-, **skip lines 8 through 14**, and enter -0- on line 15"* — and a distribution above basis is a **capital gain** on Form 8949/Schedule D | **computed** |
+| **8a** | Nondeductible expenses | 🔴 **K-1 box 16, code C.** ⚠️ **Blank when there is no 16C amount — and blank BY RULE if a §1.1367-1(g) election is in effect**, in which case it goes on **line 13** | 🔴 **the K-1 input screen, box 16 code C** |
+| **8b** | Oil and gas depletion | ⚠️ **NOT a K-1 figure** — *"the amount of oil and gas depletion claimed **on your personal return**, up to your proportionate share of basis in the property subject to depletion"* | from the 1040's depletion computation |
+| 8c | Business credits (§50(c)(1) and (5)) | the K-1 | the K-1 input screen |
+| **9** | Add 8a–8c | ƒ | **computed** |
+| **10** | Stock basis before loss items | ƒ 7 − 9 | **computed** |
+| **11** | Allowable loss and deduction items | ƒ **Part III, line 47, column (c)** | 🔴 **Part III**, which fills from the K-1's **loss** boxes |
+| 12 | Debt basis restoration | ƒ Part II line 23 | Part II |
+| 13 | Other items that decrease stock basis | a stock sale or redemption — **and the (g)-election amounts, with prior-year carryovers** | typed, when it applies |
+| **14** | Add 11, 12 and 13 | ƒ | **computed** |
+| **15** | **Stock basis at END of year** | ƒ 10 − 14 | **computed → next year's line 1** |
+
+🔑 **Read the right-hand column and the lesson is plain: the K-1 INPUT SCREEN IS FORM 7203'S DATA
+ENTRY.** Lines 2, 3a–3m, 6 and 8a all live there. **Work the K-1 input first, then read Form 7203 as
+a result.**
+
+#### 🔴 THE FAILURE MODE — AND IT FOOTS
+
+**A blank line on Form 7203 that SHOULD carry a figure means a missing INPUT, not a missing entry on
+Form 7203.**
+ⓘ **Most 7203 lines are legitimately blank on most returns** — there is nothing to report. **The
+question is never "is it blank?" but "should it be?"**, and you answer that from the K-1 in front of
+you, box by box.
+
+⚠️ **Every total will still add up.** Leave box 16C out of the K-1 input and line 8a is blank, line 9
+is 0, line 10 equals line 7, and **line 15 is too high by exactly the nondeductible amount** — with
+the form internally consistent from top to bottom. **Nothing flags it.** The only symptom is that
+**next year's opening basis is wrong**, which surfaces years later, or never.
+
+_(Live case, 2026-08-19: on a real return line 8a was blank and ending stock basis was overstated by
+the box 16C amount, in the year before the company's liquidation. The form footed perfectly. **Caught
+only because the preparer sent a screenshot.**)_
+
+🛑 **Three checks, every time:**
+- [ ] **Line 1 = last year's line 15**, to the dollar
+- [ ] **Every K-1 box that feeds a 7203 line is actually IN the K-1 input** — 16C and 16D above all,
+      plus the **contributions** figure, which is on **no K-1 box at all** and comes from the books
+- [ ] **Line 15 recomputed by hand:** `line 1 + contributions + income − distributions − nondeductible − allowed losses`
+
+#### The rest of the mechanics that get done wrong
+
+- **Order matters, and it is the order the form prints:** contributions → **distributions** (6) →
+  **nondeductible** (8a) → **losses** (11). A distribution exceeding basis is a **capital gain**.
+- **Line 15 is next year's line 1.** 🔑 On a company heading for a **final** return it is the opening
+  figure of the **liquidation** gain/loss calculation — not this year's paperwork.
+- **Item E — the §1.1367-1(g) election.** ⚠️ **Copy the prior year's answer, and copy the MECHANIC
+  with it:** with an election in effect, **lines 8a–8c are blank and the amounts go on line 13,
+  including prior-year carryovers**. **If the prior year left item E blank, leave it blank.**
+- **Who must file it** _(the instructions)_: a shareholder **claiming a deduction for their share of
+  an aggregate loss — *"including an aggregate loss not allowed last year because of basis
+  limitations"*** ⚠️ *(so a shareholder releasing a SUSPENDED loss files even with no current-year
+  loss)* — **receiving a non-dividend distribution**, **disposing of stock**, or **receiving a loan
+  repayment**. The same four triggers as Schedule E column (e). ⓘ *"It may be beneficial for shareholders to complete and
+  retain Form 7203 even for years it is not required to be filed."*
+
 ---
 
 ## M4 · Form 1095-A → Form 8962 — the premium tax credit
@@ -1367,8 +1441,10 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] Schedule C line 31 = Schedule SE line 2, and half the SE tax reaches Schedule 1 line 15.
 - [ ] The home-office deduction is **within the §280A(c)(5) limit**, and the space passes **regular
       and exclusive** use.
-- [ ] A K-1 loss clears **all three** gates — basis, at-risk, passive.
+- [ ] A K-1 loss clears **all four** limitations, in order — basis (7203) · at-risk (6198) · passive (8582) · excess business loss (461).
 - [ ] Form 7203 line 1 = **last year's line 15**.
+- [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** (M3)
+- [ ] **Form 7203 line 15 recomputed by hand** — it is next year's opening basis, and on a company heading for a final return it opens the liquidation computation
 - [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.
 - [ ] The refund account belongs to **this** taxpayer.

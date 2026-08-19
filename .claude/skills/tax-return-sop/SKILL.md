@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: Write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, and the explanations), the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: Write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -146,7 +146,16 @@ answer.
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 6 and 7 below, which are what she has had to ask for since.**
+> and parts 6 to 8 below, which are what she has had to ask for since.**
+
+> 🛑 **THE CALIBRATION, and it governs all eight parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
+> cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
+> de detalle que necesitamos."*
+> **Write for someone who knows none of it** — not the tax, not the forms, not how figures move
+> between them, not the arithmetic behind a number. **Assume nothing is obvious**, including which
+> screen a number is typed on. ⚠️ **The test is not "is this correct?" — it is "could someone who
+> has never seen this form act on it without asking a second question?"**
 
 > 🔴 **And the standard she set on 2026-08-19 (late), after two things a complete-looking delivery
 > had left out:** *"necesito que para la próxima sea más específico en cuanto al nivel de detalle y
@@ -154,15 +163,15 @@ answer.
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The seven things every delivery carries
+### The eight things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PART and the LINE NUMBER named**:
 
-| Line | Concept | Value | **Where it came from** |
-|---|---|---|---|
-| **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** |
-| **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 |
+| Line | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|---|
+| **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** | ✅ typed on the form |
+| **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 | **computed — do not type** |
 
 ⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
 in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
@@ -289,6 +298,52 @@ no-carryback notice, the whole `Comparison` family when a joint return becomes a
 **A warning with a recorded reason is finished work; a warning nobody looked at is a defect
 waiting.** 🔑 **The right answer is usually "change nothing" — but say WHY, with the figures that
 make it hypothetical**, because "ignore it" is not something a preparer can act on with confidence.
+
+---
+
+**8 · 🛑 THE ENTRY ROUTE — where the number is actually TYPED, which is usually not the form it appears on.**
+
+🔑 **This is the part that turns an analysis into something a person can execute**, and it is the one
+a session most reliably forgets, because it is invisible from the IRS forms. **A tax form has two
+different facts a preparer needs, and only one of them is on the form:**
+
+| | |
+|---|---|
+| **What number goes on the line** | ✅ the form and its instructions say this |
+| **WHERE YOU TYPE IT** | 🔴 **nowhere on the form** — and it is frequently a *different* screen |
+
+> 🔑 **The principle: A COMPUTED FORM IS AN OUTPUT, NOT AN INPUT SCREEN.** Most of what appears on a
+> derived form arrives from somewhere else and cannot be typed where it is displayed. **If a line
+> will not accept a number, you are on the wrong screen — go and find the input that feeds it.**
+
+🔴 **AND ITS DIAGNOSTIC, which is worth more than the rule:**
+**A BLANK LINE ON A COMPUTED FORM MEANS A MISSING INPUT, NOT A MISSING ENTRY ON THAT FORM.** Do not
+try to type into it. **Ask what feeds it, and go there.**
+⚠️ **This kind of error FOOTS** — every total on the form is internally consistent, nothing is
+flagged, and the only symptom is a final figure that is quietly wrong by the amount of the missing
+input. **It is the hardest defect on a return to see and the easiest to prevent.**
+
+**So every line table carries a column for it**, and the working paper keeps it:
+
+| Line | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
+|---|---|---|---|---|
+| … | … | … | *(the IRS source — form, line, or the books)* | *(the actual screen and field, or **"computed — do not type"**)* |
+
+**Three rules for that last column:**
+
+1. ⚠️ **Mark it as the SOFTWARE's, not the IRS's.** A screen name is a vendor fact and next year's
+   version may move it. **The source line is the tax fact; the entry route is a convenience** —
+   never present one as the other _(delivery rule 9)_.
+2. ✅ **Say "computed — do not type" explicitly** where that is the answer. A blank in this column
+   reads as *unknown*, and a preparer will hunt for a field that does not exist.
+3. 🔑 **Name the FEEDER form and box, not just the screen.** *"K-1 input, box 16 code D"* survives a
+   software update; *"the third field on the second tab"* does not.
+
+_(Lilian, 2026-08-19, on Form 7203: **"la línea 2 no es algo que yo podía llenar en la misma forma
+7203. Lo correcto era ir al K1 y buscar dónde colocar las distribuciones, que de hecho se colocan en
+el box 16, código D, y dónde colocar las contribuciones."** The analysis had given her every line of
+that form and its arithmetic, and she still could not enter it, because **only one of its fifteen
+lines is typed on the form itself.**)_
 
 ---
 

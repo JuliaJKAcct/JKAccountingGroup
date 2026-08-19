@@ -34,6 +34,13 @@ judgement calls. Without this folder, all of it dies when the session is closed.
 
 - Every **line number and its amount**, on every form and schedule
 - The **formula** behind each computed figure, and the **report and account** behind each read one
+- 🆕 **The ENTRY ROUTE — where each figure is actually TYPED in the tax software** _(Lilian,
+  2026-08-19)_, because most lines on a computed form cannot be typed where they appear. ⚠️ **Mark
+  it as the software's, not the IRS's** — screens move between versions, and the source line is the
+  tax fact
+- 🆕 **What actually happened in the software** — a warning and why it was dismissed, a defect found
+  and how it was fixed, a statement that had to be attached. **A year from now this is the only
+  record that the software was ever argued with**
 - The **decisions**: what was chosen, who chose it, and what the alternative was
 - **Open questions** left at filing, and anything to carry into next year
 - The **EIN** *(public on Sunbiz — Lilian, 2026-08-12; write it hyphenated)*

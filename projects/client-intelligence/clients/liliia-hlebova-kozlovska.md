@@ -182,6 +182,21 @@ the actual details.
 
 ### Tax year 2025 — the review
 
+- **2026-08-19 (Lilian, in the software, later still) — THE ENTRY ROUTE: where a figure is actually
+  TYPED, which is usually not the form it appears on.** Working her return, Lilian found that the
+  analysis gave every line of a form and its arithmetic and **still could not be entered**, because
+  most lines on a computed form arrive from a different screen. **Her instruction:** write for
+  someone who knows nothing — not the tax, not the forms, not how figures move between them, not the
+  arithmetic behind a number.
+  - ⓘ **The entry route was added to her working paper too** — the home-office figure is computed
+    from a worksheet and cannot be typed on Schedule C, and the children go on the **1040 Dependents
+    tab**, never on Schedule EIC.
+  - ✅ **Now a standing part of the delivery standard** (the tax-return skill, part 8): every line
+    table carries **where the number is entered**, marked as the software's route rather than an IRS
+    fact, and says **"computed — do not type"** where that is the answer. **And the diagnostic that
+    comes with it: a blank line on a computed form means a missing INPUT, not a missing entry on
+    that form — a defect of that kind FOOTS, so nothing catches it.**
+
 - **What gates the return.** ✅ **(1)** The **Form 8962 / Marketplace allocation** — **settled 2026-08-19 at 80 / 20** with her ex-husband; the adult daughter reported nothing from the form. What remains is the **substantiation** for her income. ⓘ **(2) Her 2025 income is no longer a gate** _(settled 2026-08-18: consulting services, Schedule C — §5)_; what remains open is the **substantiation** for it.
 - **Established from the 2024 filed return** (read 2026-08-17): filed **jointly**; the household's income was a single W-2, an **Uber Schedule C in her ex-husband's name with no expenses claimed at all**, and a **K-1 from Kolo Florida Inc, also his**; three dependants, all claimed for the child tax credit; refundable **earned income credit** and **additional child tax credit** both claimed — **both require earned income**, and the only earned income the return identifies by name is his; **Marketplace coverage reconciled on Form 8962**; a **net operating loss** and a **QBI loss carryforward** generated, both his; **no estimated payments**; **no state return** (Florida). ⚠️ **What the return does NOT establish is whose the W-2 was** — see §5.
 - **What changed in the organizer, 2024 → 2025.** Marital status still answered *Married* (wrong). Digital assets moved from **No** to **Yes** — and because "no income" closed that branch, **no detail was ever requested**, so a disposal may be unreported. Coverage still Marketplace. Direct deposit moved from a savings account to a checking account at a different bank, with the "name on the account" field filled in with the product name rather than a name.

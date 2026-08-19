@@ -199,6 +199,26 @@ the actual details.
     They are the software noticing a **joint return became a single one**. **Each has a recorded
     reason in the working paper.**
 
+- **2026-08-19 (Lilian, in the software, later still) — THE ENTRY ROUTE: where a figure is actually
+  TYPED, which is usually not the form it appears on.** Working his return, Lilian found that the
+  analysis gave every line of a form and its arithmetic and **still could not be entered**, because
+  most lines on a computed form arrive from a different screen. **Her instruction:** write for
+  someone who knows nothing — not the tax, not the forms, not how figures move between them, not the
+  arithmetic behind a number.
+  - 🔴 **A DEFECT WAS FOUND IN THE PREPARED FORM 7203 AND IT FOOTED.** The nondeductible-expenses
+    line was blank, so his **ending stock basis came out too high** — the figure that opens the
+    company's final year and drives the whole liquidation calculation. **Nothing flagged it**: every
+    total on the form added up. **The cause is that the line is not typed on Form 7203 at all** — it
+    arrives from the **K-1 input screen, box 16 code C** — so there was nothing on the form to fix.
+    🟠 **IDENTIFIED, NOT YET CONFIRMED CORRECTED.** The route to the fix is recorded on the working
+    paper; **nobody has confirmed the re-read.** ⚠️ **Do not treat the basis as settled until the
+    form has been re-read** — it is the figure the final year runs on.
+  - ✅ **Now a standing part of the delivery standard** (the tax-return skill, part 8): every line
+    table carries **where the number is entered**, marked as the software's route rather than an IRS
+    fact, and says **"computed — do not type"** where that is the answer. **And the diagnostic that
+    comes with it: a blank line on a computed form means a missing INPUT, not a missing entry on
+    that form — a defect of that kind FOOTS, so nothing catches it.**
+
 - **What gates the return.** ✅ **(1)** The **company's 1120-S**, which produces his K-1 and his Form 7203 — **completed and on `main`** _(2026-08-18)_. ✅ **(2)** The **Form 8962 / Marketplace allocation** — **settled 2026-08-19 at 20% him / 80% his ex-wife**.
 - **Established from the 2024 filed return** (read 2026-08-17): filed **jointly**; his **Uber Schedule C** with no expenses claimed; his **K-1 from the S corporation**; a **Form 7203 in his name** carrying the stock-basis history; three dependants claimed for the child tax credit; **Marketplace coverage reconciled on Form 8962**; refundable **earned income credit** and **additional child tax credit** claimed, both resting on earned income; a **net operating loss** and a **QBI loss carryforward** generated; **no estimated payments**; **no state return** (Florida). ⓘ **The return does not say whose the single W-2 was** — the firm's own filename in Drive labels it as his.
 - **Settled for 2025:** no Uber activity; income is the company K-1; the organizer's nil-income answer is an error; the 2024 carryovers are his; the Form 4868 is not to be opened.
