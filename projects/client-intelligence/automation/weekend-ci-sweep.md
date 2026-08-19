@@ -138,7 +138,7 @@ step that adds them would have to stay in the main thread.
 🔵 **Not adopted yet, deliberately.** As of 2026-08-18 the current prompt **has never run once** —
 Lilian re-pasted it during the week after Saturday 2026-08-15, and the Routine fires Saturdays only
 (established further down, in *THIS FILE IS NOT THE LIVE ROUTINE*). Changing it again before its first execution would mean debugging two changes at
-the same time and re-pasting a prompt whose credentials cannot be read back. **Let it run one
+the same time. _(An earlier version added "and re-pasting a prompt whose credentials cannot be read back" — **that was false**; `list_triggers` returns the whole prompt, secret included, so a session can re-paste unaided.)_ **Let it run one
 Saturday, read that report, then decide** — the report now states how many clients got a full pass,
 how many were deferred, and how many open items went unchased, which is exactly the evidence this
 decision needs. _(Lilian raised the strategy question; this is the answer parked where the next
