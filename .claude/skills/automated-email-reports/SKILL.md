@@ -1,6 +1,6 @@
 ---
 name: automated-email-reports
-description: Set up a fully automated, unattended recurring email report — data pulled from the firm's systems, composed as an on-brand email, and sent on a schedule with no clicks. Use when someone wants to "email me/Lilian/a client this report every month / twice a month / weekly," schedule a recurring report, or turn an existing manual report into an automatic one. This is the reusable playbook that captures how we solved it the first time (Claude Code Routines + a Google Apps Script email webhook), so a new automation takes an afternoon, not a week. It reuses the firm's existing send webhook and design system. Read this before wiring up any new scheduled email.
+description: Set up a fully automated, unattended recurring email report — data pulled from the firm's systems, composed as an on-brand email, and sent on a schedule with no clicks. Use when someone wants to "email me/Lilian/a client this report every month / twice a month / weekly," schedule a recurring report, or turn an existing manual report into an automatic one. This is the reusable playbook that captures how we solved it the first time (Claude Code Routines + a Google Apps Script email webhook), so a new automation takes an afternoon, not a week. It reuses the firm's existing send webhook and design system. Read this before wiring up any new scheduled email. ALSO the firm's reference for ROUTINE ADMINISTRATION generally — what a session can and cannot do to any Claude Code Routine (create, read its prompt, rewrite, reschedule, disable, delete, fire; and what is UI-only: MCP connectors, the git source, the network allowlist) — so load it for "can you create/change/delete a Routine?", "can Claude edit my scheduled task?" or any question about a trigger, even one that sends no email.
 ---
 
 # Automated Email Reports — the setup playbook
@@ -29,6 +29,78 @@ exist (the send webhook, the brand system) — a new report mostly reuses them.
   a small **Google Apps Script web app** that the firm already runs — the routine
   POSTs the finished email to it over HTTPS.
 
+## 🔧 What a SESSION can and cannot do to a Routine — tested 2026-08-18
+
+📍 **This table is the single source for these facts.** Other files (the sweep's
+[`weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md) and
+[`sweep-health-review.md`](../../../projects/client-intelligence/automation/sweep-health-review.md))
+should **point here rather than restate it** — the failure this whole page documents is a claim
+copied into five places and then falsified in one.
+
+**Lilian's question:** *"can you create the Routines yourself and paste the prompt into them? If we
+want to change one, do you need me?"* Mostly no — and the exceptions are sharp and worth knowing
+before you promise anything. Every row below was **exercised or refused in a live call**, not read
+off a schema.
+
+| | Session? | Notes |
+|---|---|---|
+| **Create** a Routine (`create_trigger`) | ✅ | Cron or one-shot; fresh session per fire, or bound to an existing one |
+| **Read** its full prompt (`list_triggers`) | ✅ | Returns the **entire prompt body** — see the warning below. ⚠️ Two caveats: it **defaults to 20 entries**, and it **hides one-shot Routines that have already fired** unless you pass `include_completed: true`. A Routine you cannot see may simply be filtered out |
+| **Rewrite** the prompt (`update_trigger`) | ✅ | Read it, edit it, write it back — no human paste needed. 🛑 **The write REPLACES the prompt wholesale**, so finish by re-reading it and confirming the real webhook URL and secret are still there (below) |
+| **Reschedule / rename / disable** | ✅ | `update_trigger`: `cron_expression`, `run_once_at`, `name`, `enabled`, `model` |
+| **Delete** | ✅ | A **separate tool**, `delete_trigger` — there is no delete flag on `update_trigger`. Disabling is not deleting: a dormant Routine the firm believes is gone is worse than either |
+| **Fire it now** (`fire_trigger`) | ✅ | Optionally with extra text appended for that one run |
+| 🔴 **Attach MCP connectors** (Gmail, Double, Drive…) | ❌ | *"the connectors parameter is not available for this organization"* — a flat refusal, **not** a permissions issue in the calling session |
+| 🔴 **Attach a git source** (a repo checkout) | ❌ | `create_trigger` has **no parameter for it at all**, and `update_trigger` cannot add one later |
+| 🔴 **Set the network-egress allowlist** | ❌ | No parameter. And for *this* skill it is load-bearing — trap #4: the POST to `script.google.com` is blocked unless that host is allowed in the environment, so **a session-made email Routine composes its report and cannot send it** |
+
+### The tell is `created_via`, and it is visible in `list_triggers`
+
+- **`http_api`** — created in the **routines UI**. These carry `sources` (the repo) *and*
+  `mcp_connections`. The firm's two working automations are both this: the weekly CI sweep (7
+  connectors) and the recurring-expense monitor (4).
+- **`meta_mcp`** — created **from a session**. These carry **neither**. All three of the firm's
+  session-made Routines are in this state.
+
+**So the rule is simple: a Routine that must read a mailbox, a calendar or Double, that needs a
+checkout waiting for it, or that must reach the internet (this skill's webhook included) — has to be
+created by a person in the UI.** Everything else, ask a session.
+
+⚠️ **A session-made Routine is not useless, but it must be written to survive its own poverty.**
+Give it two things: **clone the repo itself** (*"locate the repo, or clone `<url>`"* — the
+repo-coherence audit has run that way since July), and an instruction to **say out loud in its first
+paragraph what it could not reach**, rather than reporting a silent gap. A scheduled session that
+reports *"no reply found"* for a mailbox it could not open is worse than one that reports nothing.
+
+### 🔒 And the security fact nobody had noticed
+
+**`list_triggers` returns the prompt body verbatim — including the webhook URL and secret.** Both of
+the firm's `http_api` Routines carry the same pair in plain text inside their prompts, so **any
+session holding the Claude-Code-Remote MCP can read that credential in one call.**
+
+Two consequences:
+
+1. ✅ It is what makes a re-paste safe from a session: read the live values out, write them back in.
+   _(An earlier claim that this was impossible — "there is no `get_trigger`" — was **wrong**, and it
+   parked two real decisions behind an imaginary blocker. There is indeed no `get_trigger`;
+   `list_triggers` simply does the job.)_
+   🛑 **ALWAYS END A WRITE BY RE-READING IT.** `update_trigger` replaces the prompt wholesale, and
+   the failure is the silent one this skill's trap #6 exists for: paste the **repo** copy, which
+   carries `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders, and the sweep still runs, still
+   merges, and the weekly email just stops arriving. **Call `list_triggers` again and confirm both
+   literal values are present in what you wrote.**
+   🔒 **And handle the credential like one.** Reading it puts it in that session's transcript, which
+   lives in the firm's **shared** Claude account. So: **never echo the value into a reply**, never
+   commit it, and **delete the session when the job is done** — the same discipline
+   [`double-mcp`](../double-mcp/SKILL.md) §2.2 sets for organizer reads, for the same reason.
+2. ⚠️ Keeping `<WEBHOOK_SECRET>` placeholders out of this repo stays right — **git history is
+   permanent and far more widely readable** — but do not describe the value as *hidden*. If it ever
+   matters, **rotate it** in the Apps Script and in every Routine that carries it.
+
+🛑 **Reading and rewriting a live scheduled job is still something you ASK about first.** It is an
+outward-facing change to something that runs unattended — confirm-before-acting, not a technical
+limit.
+
 ## The six traps (and the fix for each)
 
 | # | Trap | Why it bites | Fix |
@@ -38,7 +110,7 @@ exist (the send webhook, the brand system) — a new report mostly reuses them.
 | 3 | **Duplicate emails** | An unattended agent can loop (e.g. once per client) or retry, so the report arrives 2–5×. | **Two layers:** (a) the webhook **de-dupes** identical sends (CacheService fingerprint); (b) the prompt says **exactly once — one POST, one recipient, stop on `{"ok":true}`**. |
 | 4 | **Network egress blocks the webhook** | The routine's environment has a network policy; if it doesn't allow the webhook host, the POST fails. | In the routine's **environment settings**, allow `script.google.com` and `script.googleusercontent.com` (a small **Custom** allowlist — you don't need "Full access"). |
 | 5 | **The email loses the brand** | Told to "compose an email," an unattended run improvises generic HTML and the design system disappears. | Commit an **email-safe HTML template** to the repo and tell the run to **fill it**, not invent one. See `reference/` in `recurring-expense-monitoring` for a worked example. |
-| 6 | **The repo copy of the prompt is not the live one** | A web-UI routine holds its **own pasted copy** of the prompt. Editing the version committed to the repo changes nothing, so a change everyone believes shipped keeps not happening — the JK weekend sweep ran three weeks on a superseded instruction this way (2026-08-11). | **Treat re-pasting as part of the edit, not a follow-up:** say it out loud in the same turn, and date the last change that needs it next to the block. ⚠️ **Never paste wholesale** — the repo's copy carries `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders, so carry the real values across or the send dies silently. Better: `update_trigger` (the Routines MCP) takes a `prompt` and can also read the live one back to verify. |
+| 6 | **The repo copy of the prompt is not the live one** | A web-UI routine holds its **own pasted copy** of the prompt. Editing the version committed to the repo changes nothing, so a change everyone believes shipped keeps not happening — the JK weekend sweep ran three weeks on a superseded instruction this way (2026-08-11). | **Treat re-pasting as part of the edit, not a follow-up:** say it out loud in the same turn, and date the last change that needs it next to the block. ⚠️ **Never paste wholesale** — the repo's copy carries `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders, so carry the real values across or the send dies silently. Better: `update_trigger` (the Routines MCP) takes a `prompt`; **`list_triggers` is what reads the live one back** — `update_trigger` has no read path. |
 
 ## Steps
 
