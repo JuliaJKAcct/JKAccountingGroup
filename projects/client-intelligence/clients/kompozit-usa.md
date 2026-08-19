@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect · **Owner:** Julia · **Last updated:** 2026-08-19
+> **Status:** Prospect — proposal sent, awaiting response · **Owner:** Julia · **Last updated:** 2026-08-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -40,7 +40,8 @@
   is blocked by the session's egress proxy)_
 - **Primary language:** UA/RU founders; site is EN _(bilingual RU/EN proposal used — confirm
   preference)_
-- **Our engagement (services we provide):** **PROSPECT — not yet signed.** Quoted 2026-08-19:
+- **Our engagement (services we provide):** **PROSPECT — proposal sent 2026-08-19 (by Julia,
+  email to the owner), awaiting response.** Valid 30 days, so through mid-September. Quoted 2026-08-19:
   a single **all-in monthly engagement** (Julia's call, same day — she first considered a
   controller add-on, then chose one bundled fee so the client doesn't pick and choose):
   bookkeeping in QuickBooks, monthly financials, business tax return, sales tax, 1099s,
@@ -65,7 +66,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owners / founders | The Ostapenko brothers, Dmytro and Oleksandr (public — company website). Which of them (or who else) is our contact in the sales conversation is _(pending — confirm name + email)_ |
+| Owners / founders | The Ostapenko brothers, Dmytro and Oleksandr (public — company website). **Our contact is Dmytro Ostapenko** (confirmed by Julia, 2026-08-19); his email is on the delivered proposal and goes into Double on signing, not here |
 | Planned in-office admin/bookkeeper | **Their hire, part-time (2–3 days/week), not made yet** — will own day-to-day inventory + applying customer payments to open invoices; the firm trains and supervises them ("our eyes and hands on site") |
 | Outgoing accountant | An enrolled agent — tax prep + some QuickBooks + occasional consulting; **declined** the expanded ongoing role, which is why they approached us |
 
@@ -188,21 +189,24 @@ link). Never write the credential itself here.
   direction; **payroll for the 12-person team moved INTO the scope** (platform-based
   wording, see §4); **Accounts Payable management added to Not Included** — the in-office
   bookkeeper owns AP, and naming the exclusion protects the fee
+- 2026-08-19 — **Julia sent the proposal to the owner by email** (final version: contact
+  details filled, all scope edits in). The clock on the 30-day validity runs from today.
+  Next event is his response; if the quote is accepted, day one is the WhatsApp group,
+  the Double client record, and the systems review for the Odoo and QuickBooks integration
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Confirm before sending:** exact legal entity name (Sunbiz — Facebook suggests "Art
-  Kompozit USA"), the contact person's name + email (cover placeholders in the draft),
-  entity/return type, start date, and whether Julia wants the payroll-platform line kept in
-  "Not Included"
-- **Decide with Julia:** final pricing shape — base + add-on as drafted, or a raised
-  all-in Strategic (see the delivered draft discussion)
+- **Still to confirm:** exact legal entity name (Sunbiz — Facebook suggests "Art
+  Kompozit USA") and entity/return type. Contact settled (Dmytro Ostapenko); the proposal
+  went out 2026-08-19 with start "1st of the month after signing"
+- **Pricing settled** (2026-08-19): one all-in fee, controller included — decision recorded
+  in §1 and the log
 
 ### Information still needed
 
 - [ ] Legal entity name + EIN (Sunbiz)
 - [ ] Entity type / return type / fiscal year-end
-- [ ] Contact person (name, role, email) — who exactly approached Julia
+- [x] Contact person — **Dmytro Ostapenko**, co-founder (Julia, 2026-08-19); email in the proposal/Double
 - [ ] Payroll provider + pay cadence for the ~12 employees
 - [ ] Sales-tax registrations today, and **nexus states** (distributors + Shopify shipping)
 - [ ] Inventory/COGS method in Odoo, and what the EA actually kept in QuickBooks
