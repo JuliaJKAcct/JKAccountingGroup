@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-18
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -522,6 +522,19 @@ the actual details.
   in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
   pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
   ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
+- 2026-08-19 — **The shareholder capital account was split again, from scratch, and it held.**
+  Lilian asked for the contributions and the distributions to be separated out of the single
+  `Mykola Kozlovskiy` account in the 2025 general ledger — the same question answered on 2026-08-17,
+  re-run from the export alone without reading the working paper first. **Both figures reproduced to
+  the cent**, tie to the ledger's own account total and to the printed closing balance, and 100% of
+  the account's lines are accounted for on one side or the other. Two things the second pass added,
+  now in [the working paper §3B](../../tax-returns/kolo-florida-inc/2025-form-1120s.md): the split is
+  broken out **by month and by the nature of each side**, and a soft spot was named on the
+  **contribution** side — three counter deposits with no transfer trail are booked as capital on
+  nothing but their classification, and would be **revenue** if they were takings. It moves no figure
+  on this return (distributions are nowhere near basis) but belongs on the 2026 checklist. The
+  distributions are **95% straight transfers to the owner's own bank accounts**; the two items still
+  open in the working paper together are under 4% of them. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
