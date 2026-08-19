@@ -1,6 +1,6 @@
 # LILIIA HLEBOVA KOZLOVSKA
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-18
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-19
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -132,9 +132,9 @@ the actual details.
   - ✅ **The renter's insurance is hers, is for that apartment, and IS a home-office cost.** Pub 587 lists insurance on the home among the indirect expenses. The client's own worksheet had reported it as **zero** while the firm held the policy.
   - 🔑 **The telephone and the internet came OUT of the home-office worksheet.** They do not depend on the **size** of the workspace, so they are deducted directly at their **own business-use percentage** — Lilian set the internet at **80%**. ⚠️ **The telephone percentage is still hers to set.**
   - ✅ **One phone, one plan change — not two lines.** Corrects this file's earlier reading of the carrier screenshots.
-  - 🔴 **A date this file had been repeating does not exist in any document.** "Her own tenancy from 12 September" was never on paper: the insurance policy starts in late **August** and the lease on **1 September**. Struck.
+  - 🔴 **A date this file had been repeating does not exist in any document.** "Her own tenancy from 12 September" appears in no document the firm has read: the insurance policy starts in late **August** and the lease on **1 September**, and those are the two dated documents on file. Struck.
   - ⚠️ **Her `Client uploaded documents` folder holds identity documents.** One file opened in this sweep turned out to be a **driver's licence**; it was deleted immediately and nothing from it was recorded. **Expect them in that folder and do not record them.**
-  - 🟠 **Still never asked for: MILEAGE.** For someone self-employed this is routinely the second-largest deduction after the home office, and there is nothing at all on file.
+  - 🟠 **Still never asked for: MILEAGE.** For someone self-employed this is routinely the second-largest deduction after the home office, and nothing was found in Double, Drive or Julia's Gmail in the searches of 2026-08-18 and 2026-08-19.
 
 ### Tax year 2025 — the review
 
@@ -169,8 +169,8 @@ the actual details.
 - [ ] Whether her ex-husband will sign **one Form 8332**
 - [ ] **Substantiation for her 2025 income** — no 1099 or other income document is on file
 - [ ] Who the company's 2025 `Contract Labor` payee was — **if it is her, it is additional Schedule C receipts**
-- [ ] Which **telephone line** is hers, and the business-use percentage
-- [ ] The home-office **blanks** (HOA, other utilities, cleaning, repairs), the **renter's insurance** the worksheet reports as zero, and evidence the workspace is used **regularly AND exclusively** for the business
+- [ ] The **business-use percentage of her phone** — it is one phone with a plan change, not two lines
+- [ ] The home-office **blanks** (HOA, water/sewer/trash, cleaning, repairs), and evidence the workspace is used **regularly AND exclusively** for the business
 - [ ] **Where she lived January–August 2025 and what it cost** — only her own tenancy from September is documented, while the telephone runs all twelve months
 - [ ] The **digital-asset transaction** of 2025 — what it was, and the platform statement
 - [ ] The **youngest dependant's** details for 2025
