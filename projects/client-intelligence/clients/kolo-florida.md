@@ -248,7 +248,7 @@ the actual details.
   on the books (computer equipment, furniture, a floor scrubber). _(2026-08-14.)_ ✅ **Resolved for
   the return, 2026-08-18:** the deduction is claimed on the 2025 Form 4562 and page 1 line 14.
   What remains is the **journal entry into QuickBooks**, blocked only by lost access — see the §6
-  log and the [working paper](../../tax-returns/kolo-florida-inc/2025-form-1120s.md). ⓘ **2024 DID
+  log and the working paper (`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`). ⓘ **2024 DID
   record its depreciation** (a single 31-December entry), which is why both Schedule L conventions
   coincided that year and only diverge in 2025 — so the 2025 return is **not** inconsistent with
   2024, and the clean fix was always an entry rather than a change to the return.
@@ -440,7 +440,7 @@ the actual details.
   Depreciation and **three separate credits, one per accumulated-depreciation account** (the chart
   carries one per asset), because Schedule L 10b, each asset's net book value and the **gain or
   loss on disposal** are all built from them. The complete entry with its per-asset split is
-  written out in the [working paper](../../tax-returns/kolo-florida-inc/2025-form-1120s.md) —
+  written out in the working paper (`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`) —
   **post it as written the moment access returns.** ⚠️ **It does not block the 2025 return** (page 1
   line 14 carries the deduction either way) **and it does not block the 2026 return either** — the
   per-asset accumulated figures already live in the ATX register and in the working paper's table.
@@ -480,7 +480,7 @@ the actual details.
   line 1 is the matching adjusted number with no line 6a — so **the filed Schedule L does not
   equal QuickBooks** by the year's depreciation. Internally consistent, and deliberate.
   🔑 **Everything — every line, every figure, every decision and the carry-forward into the 2026
-  FINAL return — is in [`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`](../../tax-returns/kolo-florida-inc/2025-form-1120s.md).**
+  FINAL return — is in `projects/tax-returns/kolo-florida-inc/2025-form-1120s.md`.**
   That file exists because this session gets deleted; **the figures live there and not here**, which
   is the split the new folder establishes. _(Worked by Lilian.)_
 - 2026-08-17 — **The 2024 filed return was read a second time and closed six open questions at
@@ -527,14 +527,19 @@ the actual details.
   `Mykola Kozlovskiy` account in the 2025 general ledger — the same question answered on 2026-08-17,
   re-run from the export alone without reading the working paper first. **Both figures reproduced to
   the cent**, tie to the ledger's own account total and to the printed closing balance, and 100% of
-  the account's lines are accounted for on one side or the other. Two things the second pass added,
-  now in [the working paper §3B](../../tax-returns/kolo-florida-inc/2025-form-1120s.md): the split is
-  broken out **by month and by the nature of each side**, and a soft spot was named on the
+  the account's lines are accounted for on one side or the other — which re-verifies the arithmetic
+  and the split, though not how any individual line was classified. Two things the second pass added,
+  now in the working paper (`projects/tax-returns/kolo-florida-inc/2025-form-1120s.md` §3B): the
+  split is broken out **by month and by the nature of each side**, and a soft spot was named on the
   **contribution** side — three counter deposits with no transfer trail are booked as capital on
-  nothing but their classification, and would be **revenue** if they were takings. It moves no figure
-  on this return (distributions are nowhere near basis) but belongs on the 2026 checklist. The
-  distributions are **95% straight transfers to the owner's own bank accounts**; the two items still
-  open in the working paper together are under 4% of them. _(Worked by Lilian.)_
+  nothing but their classification, and would be **revenue** if they were takings. 🛑 **That item is
+  now a third blocker on the return, not a footnote**: the independent review of the change caught
+  that the first draft had dismissed it using basis headroom, which is the wrong test — basis decides
+  whether a *distribution* is taxable, not whether a *receipt* is income. Reclassified, it is a large
+  share of the year's gross receipts and reaches the owner's own return. **Lilian has to close it,**
+  either by confirming he made those three deposits or from the bank statement. The distributions
+  themselves are **95% straight transfers to the owner's own personal accounts**, and the two items
+  still open beside them are under 4% of the total. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
 - [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
