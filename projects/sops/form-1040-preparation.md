@@ -657,9 +657,12 @@ The commonest shared-policy case in this practice. In order:
 | 6 | **Both returns** | The **same** percentages and the **same** figures. This is the real risk in a shared policy — not the money |
 
 🔑 **Which situation applies turns on ONE fact: the date the marriage ended** — see the table below.
-**Divorced during the year → Situation 1 → the split is by agreement, and 50/50 is its own
-no-agreement default**, which makes 50/50 the easiest position to defend and the one to reach for
-unless there is a reason not to.
+**Divorced during the year → Situation 1 → the split is BY AGREEMENT**, and the instructions mean
+that literally: **any percentages the two of them accept.** 50/50 is the **no-agreement default**,
+which makes it the easiest number to justify when the parties have not actually agreed on one.
+⚠️ **It is NOT "the right answer" and it is not a safer position than another agreed split** — an
+agreed 60/40 or 80/20 is exactly as valid. **Ask what they have agreed before proposing a number**,
+and reach for 50/50 only when the honest answer is that they have not agreed anything.
 
 ⚠️ **A person on the policy who is in NEITHER return's tax family** — an adult child who files
 separately — **may take 0%.** The remaining taxpayers then account for 100% between them, which is
@@ -747,11 +750,17 @@ more than four.
 their **own** coverage family. Under Situations 1 and 4 all three usually carry the same agreed
 number. 
 
-💡 **50/50 between two ex-spouses is the strongest split available under Situation 1**, because it is
-also the **no-agreement default** — it needs no justification beyond the instruction itself. Compare
-a "proportional" split derived from who was enrolled: defensible, but it **depends on which parent
-claims which child**, so a later Form 8332 changes it. **An agreed 50/50 does not**, which decouples
-two decisions that otherwise have to be made in the right order.
+💡 **The distinction that matters is AGREED vs FORMULA-DERIVED — not 50/50 vs everything else.**
+Any **agreed** percentage under Situation 1 is fixed the moment the parties agree it, and a later
+Form 8332 cannot disturb it. A **formula-derived** split — "proportional to who was enrolled in whose
+tax family" — is defensible too, but it **depends on which parent claims which child**, so it moves
+when the claims move and forces two decisions into a fixed order.
+**So: agree a number, any number, and the ordering problem disappears.** 50/50 is simply the number
+to reach for when nothing has been agreed, because the instructions supply it as the default.
+_(Corrected 2026-08-19: an earlier version of this SOP said 50/50 was "the one to reach for unless
+there is a reason not to" and "the strongest split available" — and the very next live case departed
+from it on Lilian's instruction, with an agreed 80/20 that tracked the tax families and was equally
+immune to a later 8332.)_
 
 ⚠️ **A person on the policy who claims 0%** — an adult on someone else's policy who files their own
 return — is common, and it is covered above under the divorced-parents procedure. **Note it, do not
@@ -770,6 +779,35 @@ chase it: they have forgone whatever credit their share carried, and that is the
    you didn't report to the Marketplace — like… getting married or divorced… Visit
    HealthCare.gov/tax-tool."* **Check it; do not assume the printed SLCSP fits the new coverage
    families.**
+
+### 🛑 FORM 8962 IS A DOLLARS-ONLY FORM — round the 1095-A BEFORE you allocate
+
+**The 2025 Instructions for Form 8962, under *Common errors*:**
+
+> *"**Form 8962 and the IRS electronic filing program provide for entries of dollars only.** Your
+> Form 1095-A may include amounts in dollars and cents. **You should round the amounts on Form 1095-A
+> to the nearest whole dollar** and enter dollars only on Form 8962."*
+
+and they list *"Dollar and cents amounts from Form 1095-A"* among the **examples of a math error**.
+
+🔴 **This is not cosmetic on an allocated return — it can change the answer.** The order is
+**round the 1095-A → apply the percentage → round each product**, and a policy whose SLCSP and
+advance differ by a few cents a month can carry an apparent excess that **disappears entirely** once
+the columns are rounded.
+
+_(Live case, 2026-08-19: a policy showed an apparent excess advance across the household. It was
+twelve months × the **half-cent** between an SLCSP of `x.50` and an advance of `x.00`. Rounded as the
+instructions require, the SLCSP rose to meet the advance and **the excess was zero on both returns** —
+which mattered, because one of the two taxpayers had no dependants and therefore no nonrefundable
+credit to absorb it. **Caught only in independent review, after the figures had been delivered.**)_
+
+⚠️ **A tie-out expressed in cents cannot be run on a correctly prepared return.** State the
+cross-return reconciliation in **whole dollars** — *"his line 24 + hers = the whole policy"* — or the
+check fails on a right answer.
+
+🛠️ **And record what the SOFTWARE did.** Some packages carry cents internally and print a dollar or
+two of excess anyway. The return is filable either way and the amount is trivial; **note which
+convention it used**, so next year does not start by re-deriving this.
 
 ### The monthly computation
 
@@ -822,6 +860,16 @@ their own advance**, and the excess to repay across the whole policy comes to a 
 
 _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
 
+- 🔴 🆕 **NEW FOR 2025 — THE TAXPAYER'S OWN SSN IS NOW A CONDITION.** Schedule 8812 instructions,
+  *What's New*: *"Beginning in tax year 2025, **you must have a valid SSN to claim the CTC or ACTC**.
+  If you are filing a joint return, only one filer must have a valid SSN. The other filer must have
+  either an SSN or an individual taxpayer identification number (ITIN), and it must have been issued
+  on or before the due date of your return."* ⚠️ **This is a taxpayer-level test that did not exist
+  in 2024** — an ITIN filer who claimed the credit last year cannot claim it this year. **For this
+  firm's client base it is a live gate, not a formality**, and it sits alongside the long-standing
+  rule that **each child** needs an SSN valid for employment (Schedule 8812 line 4: *"with the
+  required social security number"*). **A child with an ITIN is a $500 *other dependent*, never a
+  $2,200 child.**
 - The **$2,200 is nonrefundable** — it can only reduce tax to zero.
 - The **additional** child tax credit is refundable: **15% × (earned income − $2,500)**, capped at
   $1,700 per qualifying child **and** at the part of the $2,200 credit the nonrefundable calculation
@@ -908,16 +956,29 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - The credit is the **lesser** of the amount from the table on **earned income** or on **AGI**.
 - 🔴 **READ THE AMOUNT OFF THE PRINTED EIC TABLE — do not compute it from the phase-in rate.** The
   table (1040 instructions, and **Pub 596**) figures each **$50 bracket at its MIDPOINT**, so the
-  credit for earned income of 16,885 is the figure for the **16,850–16,900** row — computed on
-  16,875, not on 16,885. ⓘ **The rate formula gets you within a few dollars and is the right way to
-  understand the shape**, but the number that goes on line 27a is the table's. _(2025 example,
-  verified 2026-08-19: the 16,850–16,900 row reads **170 / 4,328 / 6,750 / 7,594** for 0 / 1 / 2 / 3+
-  children.)_
+  credit for an earned income of 21,318 is the figure for the **21,300–21,350** row — computed on
+  **21,325**, the midpoint, not on the client's own 21,318. *(Invented figures, per this SOP's rule
+  that every worked example here is made up.)* ⓘ **The rate formula gets you
+  within a few dollars and is the right way to understand the shape**, but the number that goes on
+  line 27a is the table's. _(Checked against the 2025 table on 2026-08-19: a mid-table row's four
+  columns are all within a dollar of `rate × bracket midpoint`, confirming the convention.)_
 - 🔑 **The shape of the credit is a triangle with a flat top**: it rises at a fixed rate to the
   *earned income amount*, sits at the maximum until the *threshold phaseout*, then falls. **Know
   which of the three zones the client is in before quoting what a deduction is worth** — see the
   warning below.
 - The child must have lived with the taxpayer **more than half the year** and have a valid SSN.
+- 🔴 **THE EIC HAS FOUR ELIGIBILITY GATES THAT ARE NOT ABOUT INCOME AT ALL, and a return can be
+  perfectly computed and still fail on one.** Check them explicitly rather than assuming:
+  **Pub 596 Rule 2** — the taxpayer (and spouse) must have an **SSN valid for employment**, issued
+  on or before the due date including extensions; **Rule 4** — must be a **U.S. citizen or resident
+  alien all year**; the **main home in the U.S. for more than half the year** (there is a box for it
+  on page 1 of the 2025 Form 1040); and each qualifying child's SSN on the same timing rule.
+  ⚠️ **For a recently-arrived household these are the most likely point of failure on the whole
+  return**, and they carry the largest single number on it. ⓘ **A prior-year return that claimed the
+  EIC is strong corroboration that the SSNs exist — corroboration, not confirmation.**
+- ⓘ **The PATH Act delays the refund.** The IRS cannot release a refund on a return claiming the EIC
+  or the ACTC before **mid-February**. **Tell the client when you deliver the return**, so a normal
+  delay is not read as a problem.
 - 🚫 **The EIC cannot be released to the other parent** (§3).
 - 🔴 **"Considered unmarried" for head of household is NOT the same test as for the EIC.** Pub 501:
   *"You may be considered unmarried for the purpose of using head of household status but not for
@@ -949,9 +1010,9 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
   to chase an unsubstantiated expense — **and the sign can flip on facts that have nothing to do with
   the expense.** _(Live case, 2026-08-19: the same client, the same income and the same expenses,
   went from **one** qualifying child to **three** when the residence facts were corrected. With one
-  child she was on the flat top and deductions were worth ~+14¢; with three she was 995 below the
-  three-child earned-income amount and the identical deductions were worth ~−42¢. **Nothing about
-  the expenses changed.**)_
+  child the earned income sat on the flat top and deductions were worth about **+14¢**; with three
+  the same earned income was **below** the three-child earned-income amount, on the phase-in, and the
+  identical deductions were worth about **−42¢**. **Nothing about the expenses changed.**)_
 
   ✅ **What this does NOT license.** A deduction the client is entitled to still goes on the return —
   correctness is not negotiable, and an unhelpful deduction is not an optional one. **What changes is

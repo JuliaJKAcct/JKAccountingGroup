@@ -125,17 +125,20 @@ the actual details.
   correction rather than an overwrite.** What followed from it:
   - 🔴 **He files as a SINGLE filer.** Head of household needs a qualifying person who lived in his
     home more than half the year, and nobody did.
-  - 🔴 **He claims no dependants at all**, so there is **no child tax credit on his return** — and
-    that, not the filing status, is the change that costs money. **His excess advance premium tax
-    credit used to be absorbed by a nonrefundable child tax credit he no longer has**, so a return
-    that owed nothing now carries a small balance due. 🔑 **The general rule to carry: an excess
-    advance premium tax credit is an ADDITION TO TAX, not a payment adjustment — a taxpayer with no
-    dependants and no tax has nothing to absorb it with.**
+  - 🔴 **He claims no dependants at all**, so there is **no child tax credit on his return.** 🔑 **The
+    general rule that exposes: an excess advance premium tax credit is an ADDITION TO TAX, not a
+    payment adjustment — it survives unless a nonrefundable credit reaches it, and a taxpayer with
+    no dependants and no tax has nothing to absorb it with.** ✅ **On his 2025 figures it does not
+    bite**: Form 8962 is a **dollars-only** form, and once the Marketplace form is rounded as the
+    instructions require there is no excess at all, so **he owes nothing and is owed nothing.**
+    ⚠️ A first draft of the working paper carried cents and had him owing a dollar — **the mechanism
+    is real, that balance was not** _(corrected in independent review, 2026-08-19)_.
   - ✅ **The Form 8962 allocation moved to 20% him / 80% her**, replacing the 50/50 set earlier the
     same day. ⓘ It divides the policy's cents exactly, where the halves did not.
   - ⚠️ **His Form 8962 repayment limitation halved**, because that limitation is keyed to **filing
-    status** — a single filer takes the smaller column, every other status the larger one. **It does
-    not bind on these figures. It is exactly the sort of number that gets copied forward.**
+    status** — a single filer takes the smaller column, every other status the larger one. **It is
+    never reached on these figures, and it is exactly the sort of number that gets copied forward
+    from last year's return.**
   - ⛔ **The Form 8332 recommendation is withdrawn** — there is nothing for him to release.
   - ✅ **Nothing on the company side moved by a cent** — the K-1, Form 7203, the ending stock basis
     that opens the company's final year, the unusable net operating loss and the QBI carryforward are
