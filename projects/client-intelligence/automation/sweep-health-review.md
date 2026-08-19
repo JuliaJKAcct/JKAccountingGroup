@@ -53,7 +53,7 @@ A sweep bounded by a baseline date can only see things that *happened*. It is st
 **The 2026-08-15 report filed both clients under "no new meetings, notes, or emails."** That was
 **true and worth nothing.** Nothing was new; plenty was wrong.
 
-**The fix, now in the prompt:** step **1b** re-reads each client's `Outstanding items` and
+**The fix, now in the prompt:** step **6** _(called "1b" in the narrative section of `weekend-ci-sweep.md`; the **prompt numbers it 6**, and the report will say "step 6")_ re-reads each client's `Outstanding items` and
 `Information still needed` and takes every entry **back to the sources as a named query** — *did
 this specific document arrive?* — then reports what is still open **with its age in days** and any
 deadline. Budget ~5 calls/client, deadline items first, and **name whatever it had no budget to
@@ -69,10 +69,16 @@ client with anything open is **amber with the oldest item's age**, never green.
 
 **Lilian's question, 2026-08-18: are there limits on running Client Intelligence?**
 
-**There is no vendor quota.** Every number in this repo — ~10–15 calls/client, ~5 for the chase
-pass, ~6 full historical passes per run — is **self-imposed discipline**. Nothing rejects the 200th
-call. Saying that plainly matters: a session that believes it is rationing a hard quota cuts
-corners it did not need to cut.
+**No vendor quota has ever stopped this firm's sweep**, and every number in this repo — ~10–15
+calls/client, ~5 for the chase pass, ~6 full historical passes per run — is **self-imposed
+discipline**, not a limit anyone enforces. Saying that plainly matters: a session that believes it
+is rationing a hard quota cuts corners it did not need to cut.
+⚠️ **That is an absence of experience, not a proof of absence** _(rule 1b, which this file leans on
+elsewhere)_. Google and Intuit publish their own API quotas, and Double has a documented
+**request-size** wall of ~8 KB per call ([`double-mcp`](../../../.claude/skills/double-mcp/SKILL.md)
+§7) — a limit on payload, not on count, but a limit. **If a run ever starts getting refusals
+mid-roster, record which connector and at what volume here** — that would be the first real quota
+the firm has met, and the subagent design in the next section would have to account for it.
 
 | | Real limit? |
 |---|---|
@@ -144,17 +150,35 @@ about the prompt currently in the web UI.
 
 ---
 
-## 5. Why the prompt cannot be fixed by a session alone
+## 5. ⛔ CORRECTED — a session CAN read the prompt back, and the secret is not hidden
 
-`update_trigger` can **write** a prompt. **Nothing exposed to a session can read one** — there is no
-`get_trigger`, and `list_triggers` returns id, name, cron, enabled state and next run, never the
-prompt body. **The webhook URL and secret exist only inside that prompt.** So a session that
-rewrites it destroys credentials it cannot see, and the failure is silent: the sweep keeps merging
-correctly and the weekly email simply stops arriving.
+**This section said the opposite until an independent review tested it on 2026-08-18.** The claim
+was: *"`update_trigger` can write a prompt but nothing exposed to a session can read one — there is
+no `get_trigger`, and `list_triggers` returns id, name, cron, enabled state and next run, never the
+prompt body."*
 
-**Every prompt change therefore needs a human** to read the two values out of the live prompt first
-(or to paste the whole block by hand). That is why this keeps not happening, and why §3's subagent
-change is being batched rather than rushed.
+🔴 **`list_triggers` returns the ENTIRE prompt body.** Verified by calling it: the response carries
+`job_config.ccr.events[0].data.message.content` — the whole ~9 KB sweep prompt verbatim, **including
+the literal webhook secret and URL.** The **recurring-expense monitor** Routine leaks the same pair.
+There is no `get_trigger`, which is what made the guess plausible; `list_triggers` simply does the
+job.
+
+**Two consequences, and they point in opposite directions:**
+
+1. ✅ **A session CAN safely re-paste a Routine prompt.** Read the live prompt, lift the two real
+   values out of it, write the new prompt back with them in place. **Nothing is blocked on a human
+   at a screen** — which means the subagent change in §3 and `FOLLOW-UPS` row 29 were parked behind
+   a blocker that does not exist. _(What a session still must not do is rewrite a live scheduled job
+   without being asked — that is an ordinary confirm-before-acting rule, not a technical limit.)_
+2. ⚠️ **The webhook secret is readable by any session holding the Claude-Code-Remote MCP.** The repo
+   keeps `<WEBHOOK_SECRET>` placeholders out of git, and that stays right — git history is permanent
+   and far more widely readable. But the *reason* written down was wrong: the value is not
+   unreachable, it is one tool call away for anyone with the account. **If that matters, the fix is
+   to rotate the secret in the Apps Script and in both Routines** — not to rely on it being hidden.
+
+_(Kept rather than deleted because the error is instructive: a plausible mechanism was asserted
+without being tested, then repeated in five places including inside a live scheduled Routine, and it
+parked a real decision behind an imaginary obstacle.)_
 
 ---
 
@@ -166,14 +190,16 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 
 1. **Did the email arrive Saturday morning?** No email = either the run failed or the webhook broke.
    Check the Routine's run history before assuming anything.
-2. **Read the SUBJECT LINE first.** It now carries failure: *"… — ⚠️ NOT MERGED, work on branch
-   `<name>`"*. If you see that, the work is stranded — **merge the branch** (it is inside the
+2. **Read the SUBJECT LINE first.** It now carries failure: *"… — NOT MERGED, work on branch
+   `<name>`"*. ⚠️ **Scan for the words `NOT MERGED`, not for the ⚠️ emoji** — the prompt specifies
+   the string twice and only one copy carries the emoji, so a run following the payload spec emits
+   it without. If you see that, the work is stranded — **merge the branch** (it is inside the
    no-review carve-out) and treat the cause as the priority finding.
 3. **Confirm the commits are on `main`**, not just claimed: `git log --oneline origin/main` should
    show the sweep's merge. _(The run now verifies this itself with `git merge-base --is-ancestor`
    rather than `git log -3`, which was recency, not containment.)_
 
-### B. Did step 1b — the chase pass — actually run?
+### B. Did the chase pass — **step 6** in the prompt — actually run?
 
 4. **Is there a "Still needed" section with AGES IN DAYS?** *"Awaiting X — 19 days"*, not
    *"Awaiting X"*. **An open item with no clock means step 1b did not run**, or ran and was not
@@ -190,9 +216,11 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 
 8. **How many clients got an incremental pass, how many a full pass, how many were deferred?**
    The run is now required to state all three. **Expect ~6 full passes** against a queue of ~20.
-9. **Did check 2b report any client file missing from the scope/exclusion tables?** On 2026-08-18
-   the answer was **none**, and that is the correct result — 2b is a backstop, not a live alarm.
-   **A hit is a real finding**, so add the table row rather than dismissing it.
+9. **Did check 2b report any client file missing from the scope/exclusion tables?** 🛑 **A hit is a
+   REAL FINDING — add the table row.** It means a session created a client file for someone the
+   routine cannot reach, which is exactly the case 2b exists for. _(On 2026-08-18 the answer
+   happened to be none. That is a dated observation, not the expected answer — the prompt says so
+   itself and tells the run to recompute every time. Do not read a hit as a measurement error.)_
 10. **Did the run add ledger rows for the full passes it completed?** It is now told to. If it did
     not, next Saturday re-buys the same expensive passes — check `sweep-state.md`'s diff.
 11. 🛑 **Did it add a ledger row for any client it did NOT fully sweep?** That is the
@@ -201,9 +229,15 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 
 ### D. Is the context ceiling biting? (§3)
 
-12. **Compare the depth of the first five clients in the report against the last five.** If the
-    late ones are visibly thinner — fewer sources named, no chase results, more deferrals — that is
-    §3 showing up, and it is the evidence for adopting subagents (row 48).
+12. **Look for thinning, but NOT by reading the report top to bottom.** ⚠️ The email is ordered by
+    *significance* (proposals first), not by sweep order, and a thinly-swept client collapses into
+    the same one-line "nothing new" block as a genuinely quiet one — so comparing the first five
+    entries against the last five measures nothing. **Use the run's own counts instead**, which it
+    is now required to state: **how many clients got a full pass vs the ~6 cap, how many were
+    deferred, and how many open items it had no budget to chase.** A run that deferred more than it
+    completed, or that names unchased items on many clients, is hitting the ceiling. Cross-check
+    against the commit diff: a client whose file gained nothing while its ledger baseline still
+    advanced is the signature to look for.
 13. **Did the run finish?** A truncated report, or a report that stops naming sources partway, says
     the same thing.
 
@@ -213,7 +247,7 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 
 | What you see | What it means | Action |
 |---|---|---|
-| Ages in days present, deferrals named, coverage counts stated | **Step 1b took.** The core fix works | Move to §3 — decide on subagents (row 48) |
+| Ages in days present, deferrals named, coverage counts stated | **The chase pass took.** The core fix works | Move to §3 — decide on subagents (row 48) |
 | Open items with no ages, or a green line over an open item | The prompt did not take, or the email logic did not | Re-check the pasted prompt against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md); this needs a human paste (§5) |
 | Late clients thinner than early ones | **The context ceiling (§3)** | Adopt subagents — that is what row 48 is waiting for |
 | A NOT-MERGED subject | The work is stranded | Merge the branch, then find out why |
@@ -233,20 +267,29 @@ with push + email notification: **`trig_016LK8zUB4js14Y2xANFv2re` — "Sweep hea
 to work §6's checklist, and asks it to write the outcome back here. It also carries the Pro Title
 BTR chase date (~2026-08-28) as a secondary item.
 
-⚠️ **It was created WITHOUT MCP connectors, and that limits it.** The tool that made it could not
-pass connectors through, so the fired session may have **no Gmail, Double or Drive** — meaning it
-**cannot read the sweep report email**. What it *can* do without them is substantial and is most of
+ⓘ **A second one-shot fires 2026-08-28** — `trig_01X8wmHqbqHqi5uVGS8pHw7S`, *"Pro Title BTR — chase
+the City of Hollywood (App #40698)"* — the chase date for the BTR reply. Separate on purpose: two
+different matters, two different weeks, and neither should be buried inside the other's report.
+
+⚠️ **Both were created WITHOUT MCP connectors AND without a git source, and both limits are real.**
+The tool that made them could not pass connectors through, so a fired session may have **no Gmail,
+Double or Drive** — it **cannot read the sweep report email**. It may also have **no checkout**:
+the weekly sweep Routine carries `sources: [{git_repository: …}]`, these two carry none, so both
+prompts now open with *"locate the repo, or clone it"*. _(The repo-coherence audit Routine has
+defended against exactly this since July — the pattern was there to copy and was missed.)_ What it *can* do without them is substantial and is most of
 the value: read this file, read `git log`/`git show` on `main` for the Saturday sweep's commits,
 check whether `sweep-state.md` baselines advanced, and run the 🛑 B11 history-erasing-row check off
-the diff. The prompt tells it to **say so in its first paragraph** rather than reporting a silent
-gap, and to ask Lilian either to forward the email or to recreate the reminder from
+the diff. Each prompt tells the session to **say so in its first paragraph** rather than report a silent gap,
+and to ask Lilian either to forward the email or to recreate the reminder from
 **claude.ai/code/routines** with connectors attached.
 
-ⓘ **The general lesson, worth more than this one Routine:** a Routine created through the MCP tool
-inherits only the connectors the calling session can pass, and a session that has none passes none.
-**A Routine that needs to read a mailbox has to be created in the routines UI**, where connectors
-are attached by hand — the same trap as the webhook secret in §5, and for the same reason: some
-things about a Routine can only be set by a person at a screen.
+ⓘ **The general lesson, worth more than these two Routines:** a Routine created through the MCP
+tool inherits **only what the calling session can pass** — and a session with no connector grants
+passes none, while `create_trigger` has **no parameter for a git source at all**. So **a Routine
+that must read a mailbox, or that must have a checkout waiting, has to be created in the routines
+UI**, where both are attached by hand. **Everything else about a Routine — including its prompt and
+the credentials inside it — a session can read and write perfectly well (§5).** The line is not
+"sessions cannot configure Routines"; it is "connectors and sources are UI-only".
 
 ---
 
