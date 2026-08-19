@@ -1,0 +1,187 @@
+# Kompozit USA
+
+> **Status:** Prospect · **Owner:** Julia · **Last updated:** 2026-08-19
+
+> **Sensitive data lives in the firm's systems, not here.** This file holds
+> non-sensitive knowledge and links only. Logins, passwords, full account numbers,
+> dollar figures, and personal contact details stay in Google Drive / Double
+> / QuickBooks and are referenced by link. Never paste a secret or personal data
+> into this file.
+> **A business EIN is the exception and MAY be written here** — it is public on Sunbiz,
+> so hiding it protects nothing _(Lilian, 2026-08-12)_. An **SSN or ITIN never may**,
+> including when it is the entity's tax ID. Write the EIN **hyphenated** (`12-3456789`) — nine
+> bare digits trip the published-page gate and stop the build.
+
+> **Two zones — what feeds the SOP vs what stays here.** This file is the master
+> record. Its sections split into two zones:
+> - **Operating (feeds the client SOP):** §1 Snapshot, §2 Contacts, §3 Systems &
+>   access, §4 Obligations & recurring processes, §5 Key facts & quirks, §7 Links —
+>   the standing info a covering bookkeeper needs to run this client.
+> - **Working context (CI-only — never in the SOP):** §6 — the log and outstanding
+>   tasks/meeting follow-ups. Live tasks live in Double / Ping (linked), not copied
+>   here.
+>
+> The SOP is the curated view of the **Operating** zone. See the project README
+> ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
+
+## 1. Snapshot
+
+- **Business name:** Kompozit USA _(exact legal entity name pending — their Facebook page reads
+  "Art Kompozit USA"; confirm on Sunbiz before any filing or engagement letter)_
+- **Entity type:** _(pending)_
+- **Home state:** Florida — North Miami (physical manufacturing facility)
+- **Industry / what they do:** **Paint & coatings manufacturer** — interior/exterior paints,
+  anti-corrosion enamels, primers, wood-protection materials, concrete-surface solutions.
+  The US arm of the Ukrainian **Kompozit** brand (founded ~30 years ago by the Ostapenko
+  brothers, Dmytro and Oleksandr); manufacturing **in the US** for roughly the last three
+  years. ~**12 people** work at the facility. Sells through a **distributor network**
+  (locations page on the site) and a **Shopify** web store; **franchising** is part of the
+  growth plan _(intake conversation, 2026-08-19; kompozitusa.com via Google — direct fetch
+  is blocked by the session's egress proxy)_
+- **Primary language:** UA/RU founders; site is EN _(bilingual RU/EN proposal used — confirm
+  preference)_
+- **Our engagement (services we provide):** **PROSPECT — not yet signed.** Quoted 2026-08-19:
+  a **Strategic-tier monthly engagement** (bookkeeping in QuickBooks, monthly financials,
+  business tax return, sales tax, 1099s, annual report, proactive tax planning, advisory,
+  coordination) with the **Odoo–QuickBooks integration, documented accounting procedures and
+  training of their in-office bookkeeper bundled in**, plus an optional **controller
+  reporting add-on** (quarterly banking/investor financial packages). Figures live in the
+  delivered proposal, not here
+- **Fiscal year-end:** _(pending)_
+- **Accounting platform:** **Odoo** is the current ERP; the outgoing EA used **some
+  QuickBooks** (extent unknown). Web store on **Shopify**. Direction under discussion:
+  QuickBooks as the books, with an **Odoo–QuickBooks integration designed, built and
+  maintained entirely by the firm** — our differentiator, given the firm's own deep Odoo
+  experience
+
+## 2. Contacts
+
+Names, emails, and phone numbers are **personal data** — they live in Double, not
+here. This section records **who plays which role**; open the Double client to get
+the actual details (and Claude can pull them live when a task needs them).
+
+| Role | Where to find them |
+|---|---|
+| Owners / founders | The Ostapenko brothers, Dmytro and Oleksandr (public — company website). Which of them (or who else) is our contact in the sales conversation is _(pending — confirm name + email)_ |
+| Planned in-office admin/bookkeeper | **Their hire, part-time (2–3 days/week), not made yet** — will own day-to-day inventory + applying customer payments to open invoices; the firm trains and supervises them ("our eyes and hands on site") |
+| Outgoing accountant | An enrolled agent — tax prep + some QuickBooks + occasional consulting; **declined** the expanded ongoing role, which is why they approached us |
+
+- **Double client:** _(pending — not in Double yet; create on signing)_
+
+## 3. Systems & access
+
+Which systems we use for this client and **where the credentials live** (a Drive
+link). Never write the credential itself here.
+
+| System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
+|---|---|---|---|
+| Odoo | Current ERP / system of record | _(pending)_ | — |
+| QuickBooks | Partial use by the outgoing EA; intended books going forward | _(pending)_ | — |
+| Shopify | Web store (kompozitusa.com) | _(pending)_ | — |
+| Stripe | One of three customer payment methods | _(pending)_ | Payments also arrive by **check** and **ACH** |
+| Payroll platform | _(pending — provider unknown)_ | _(pending)_ | ~12 employees |
+
+## 4. Obligations & recurring processes
+
+### Sales tax
+- **Applies?** Presumably — FL manufacturer selling retail (Shopify) and through distributors
+- **Jurisdiction(s):** _(pending — ⚠️ multi-state nexus is a real question: distributor
+  network + e-commerce; ask where they ship/sell before quoting states beyond FL)_
+- **Our role:** In the quoted scope (first state)
+- **Process notes (→ future SOP):** _(pending)_
+
+### Payroll
+- **Applies?** Yes — ~12 employees. ⚠️ **Above the firm's 5-employee in-house ceiling**
+  ([`service-packaging`](../../marketing/service-packaging.md) §7): the firm **never runs
+  payroll in-house at this headcount** — the offer is platform setup + supervision, scoped
+  separately. The proposal says exactly that
+- **Provider / frequency:** _(pending)_
+
+### Bookkeeping & monthly close
+- **Applies?** Quoted — to be taken over from the current part-QuickBooks state; monthly
+  financial statements; manufacturer ⇒ **inventory / COGS accounting** will matter
+- **Categorization rules / quirks:** _(pending — payment application across check/ACH/Stripe
+  is the known pain, see §5)_
+
+### Income tax
+- **Applies?** Yes — return type _(pending; entity type unknown)_. Prepared until now by the
+  outside EA
+- **Our role:** In the quoted scope, plus proactive tax planning
+
+### Licenses & other filings
+- **Applies?** FL annual report at minimum _(pending — BTR/other local licenses for the
+  North Miami facility not checked)_
+
+## 5. Key facts & quirks
+
+> ⚠️ **Order these by consequence — only the first FOUR are published.** Both the Knowledge
+> Hub and the client-intelligence review dashboard render **only the first four top-level
+> bullets** of this section (and of §6's "Outstanding items"); a fifth never appears on
+> either. So put first whatever would cause the worst mistake if someone didn't know it —
+> **not** the oldest, and **not** whatever was added last. **Adding a bullet is a decision
+> about where it goes**; appending to the end means the team never sees it. The cap lives in
+> `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
+
+- **They are preparing for outside investment / public-company readiness ("going IPO"), and
+  that is the engagement's center of gravity:** banks will require financial packages and
+  investors will expect **quarterly** reporting. The controller work (packages built by us)
+  is quoted as an **optional add-on** so the base plan stays an easy yes — per the firm's
+  line, *Strategic includes the conversation; the Controller add-on includes the deliverable*
+- **~12 employees — never offer in-house payroll.** The firm's ceiling is 5; at this size
+  the only offer is payroll-platform setup + supervision, scoped separately. Quoting
+  in-house payroll here would be a promise the firm deliberately does not make
+- **The Odoo–QuickBooks integration, handled 100% by us, is the firm's edge in this deal** —
+  they run Odoo today, the firm has deep Odoo experience, and no other local firm is likely
+  to own that bridge end-to-end. Whether Odoo stays alongside QuickBooks long-term is
+  undecided
+- **Payments arrive three ways (check · ACH · Stripe) with no documented process for applying
+  them to open invoices** — the owner himself is unsure how it should work. Documented
+  procedures + training their (planned) part-time in-office bookkeeper is a core deliverable
+  of the quoted scope, deliberately **inside** the base plan, not the add-on
+- **Franchise / distributor angle:** the owner floated offering our services to future
+  franchisees as a packaged deal. Opportunity — but ⚠️ **price carefully: a discount today
+  becomes the anchor for every franchisee tomorrow** (Julia's own caution, intake
+  2026-08-19). Nothing about franchisee pricing went into the proposal
+- **Why they left their EA:** they outgrew a tax-prep-only relationship and need someone in
+  constant touch (questions "almost on a daily basis"); the EA was asked to take the bigger
+  role and **declined**
+
+## 6. History & open questions
+<!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
+
+### Log
+- 2026-08-19 — **Intake brief (dictated) + first draft proposal built and delivered.**
+  Bilingual RU/EN monthly proposal on the tool: Strategic-tier base with the systems work
+  bundled in (Odoo–QuickBooks integration owned by us, documented payment-application
+  procedures, training their in-office hire), and the controller reporting packages
+  (quarterly, for banks/investors) as an optional add-on — the blend Julia asked for, so
+  nothing the client absolutely needs day-one sits behind the add-on price. Figures in the
+  delivered proposal (not committed). Company researched via Google (kompozitusa.com is
+  egress-blocked in the session): Ukrainian brand, ~30 years, Ostapenko brothers, US
+  manufacturing ~3 years, North Miami, distributor network. Open items listed below
+
+### Outstanding items (CI-only — never in the SOP)
+
+- **Confirm before sending:** exact legal entity name (Sunbiz — Facebook suggests "Art
+  Kompozit USA"), the contact person's name + email (cover placeholders in the draft),
+  entity/return type, start date, and whether Julia wants the payroll-platform line kept in
+  "Not Included"
+- **Decide with Julia:** final pricing shape — base + add-on as drafted, or a raised
+  all-in Strategic (see the delivered draft discussion)
+
+### Information still needed
+
+- [ ] Legal entity name + EIN (Sunbiz)
+- [ ] Entity type / return type / fiscal year-end
+- [ ] Contact person (name, role, email) — who exactly approached Julia
+- [ ] Payroll provider + pay cadence for the ~12 employees
+- [ ] Sales-tax registrations today, and **nexus states** (distributors + Shopify shipping)
+- [ ] Inventory/COGS method in Odoo, and what the EA actually kept in QuickBooks
+- [ ] Whether Odoo remains alongside QuickBooks long-term, or QuickBooks becomes sole books
+
+## 7. Links
+
+- **Double client:** _(pending — not in Double yet)_
+- **Google Drive folder (sensitive vault):** _(pending)_
+- **Related SOPs:** _(none yet)_
+- **Company site:** kompozitusa.com _(egress-blocked from sessions; research via Google)_
