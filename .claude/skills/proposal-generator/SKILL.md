@@ -70,7 +70,11 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the
    English part (English governs), and the fee/dates/client name/closing quote are
-   shared across both languages. Cyrillic renders in the brand faces via
+   shared across both languages. **Names in the Russian text follow Russian usage:**
+   address the client by the **Russian form of their given name** («Дмитрий», «Алексей» —
+   not «Дмитро», «Олексій»), while the cover block, the signature blocks and the English
+   part keep the **official Latin form** (Dmytro Ostapenko) — that is the name they sign
+   with. _(Julia, 2026-08-19, correcting «Дмитро» → «Дмитрий» on a live proposal.)_ Cyrillic renders in the brand faces via
    `brand/design-system/fonts-cyrillic-embedded.css` (inlined only into this tool). The
    docx engine (`generator-scripts/` + `premium_proposal_body.js`) is the format's source
    of truth.
