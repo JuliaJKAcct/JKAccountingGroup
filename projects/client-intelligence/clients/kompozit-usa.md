@@ -96,8 +96,10 @@ link). Never write the credential itself here.
 ### Payroll
 - **Applies?** Yes — ~12 employees. ⚠️ **Above the firm's 5-employee in-house ceiling**
   ([`service-packaging`](../../marketing/service-packaging.md) §7): the firm **never runs
-  payroll in-house at this headcount** — the offer is platform setup + supervision, scoped
-  separately. The proposal says exactly that
+  payroll in-house at this headcount** — delivery is platform-based. **Julia's call
+  (2026-08-19): payroll for the 12 is INCLUDED in the bundled quote**, worded as run on
+  their payroll platform, supervised and recorded by us — the §7 delivery model, bundled
+  rather than scoped separately
 - **Provider / frequency:** _(pending)_
 
 ### Bookkeeping & monthly close
@@ -131,9 +133,11 @@ link). Never write the credential itself here.
   is **bundled into one all-in fee** (Julia first weighed an optional add-on, then chose the
   bundle on 2026-08-19 so the client doesn't pick and choose); the proposal anchors the
   price against a full-time South Florida controller's salary
-- **~12 employees — never offer in-house payroll.** The firm's ceiling is 5; at this size
-  the only offer is payroll-platform setup + supervision, scoped separately. Quoting
-  in-house payroll here would be a promise the firm deliberately does not make
+- **~12 employees — never promise in-house payroll processing.** The firm's ceiling is 5;
+  at this size delivery is payroll-platform supervision. Julia bundled that INTO this quote
+  (2026-08-19) — included, but always platform-based wording, never "we run payroll
+  in-house". **Accounts Payable management is explicitly NOT included** (their in-office
+  bookkeeper handles AP; the proposal's Not Included list leads with it)
 - **The Odoo–QuickBooks integration, handled 100% by us, is the firm's edge in this deal** —
   they run Odoo today, the firm has deep Odoo experience, and no other local firm is likely
   to own that bridge end-to-end. Whether Odoo stays alongside QuickBooks long-term is
@@ -179,7 +183,11 @@ link). Never write the credential itself here.
   (d) The whole text passed through the new **humanizer** skill (Julia installed it after
   spotting em dashes; zero em/en dashes remain in the per-client prose). Also standing from
   today: every proposal ships as **PDF + branded HTML artifact** (in the
-  [`proposal-generator`](../../../.claude/skills/proposal-generator/) skill)
+  [`proposal-generator`](../../../.claude/skills/proposal-generator/) skill).
+  (e) Final scope pass, same day: **KPI and cash-position mentions removed** at Julia's
+  direction; **payroll for the 12-person team moved INTO the scope** (platform-based
+  wording, see §4); **Accounts Payable management added to Not Included** — the in-office
+  bookkeeper owns AP, and naming the exclusion protects the fee
 
 ### Outstanding items (CI-only — never in the SOP)
 
