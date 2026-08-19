@@ -782,7 +782,7 @@ chase it: they have forgone whatever credit their share carried, and that is the
 
 ### 🛑 FORM 8962 IS A DOLLARS-ONLY FORM — round the 1095-A BEFORE you allocate
 
-**The 2025 Instructions for Form 8962, under *Common errors*:**
+**The 2025 Instructions for Form 8962, under *How To Avoid Common Mistakes in Completing Form 8962*:**
 
 > *"**Form 8962 and the IRS electronic filing program provide for entries of dollars only.** Your
 > Form 1095-A may include amounts in dollars and cents. **You should round the amounts on Form 1095-A
@@ -796,7 +796,7 @@ advance differ by a few cents a month can carry an apparent excess that **disapp
 the columns are rounded.
 
 _(Live case, 2026-08-19: a policy showed an apparent excess advance across the household. It was
-twelve months × the **half-cent** between an SLCSP of `x.50` and an advance of `x.00`. Rounded as the
+**eight** months × the **half-cent** between an SLCSP of `x.50` and an advance of `x.00`. Rounded as the
 instructions require, the SLCSP rose to meet the advance and **the excess was zero on both returns** —
 which mattered, because one of the two taxpayers had no dependants and therefore no nonrefundable
 credit to absorb it. **Caught only in independent review, after the figures had been delivered.**)_
@@ -865,7 +865,9 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
   If you are filing a joint return, only one filer must have a valid SSN. The other filer must have
   either an SSN or an individual taxpayer identification number (ITIN), and it must have been issued
   on or before the due date of your return."* ⚠️ **This is a taxpayer-level test that did not exist
-  in 2024** — an ITIN filer who claimed the credit last year cannot claim it this year. **For this
+  in 2024.** ⚠️ **Read the joint-return carve-out with it:** on a joint return only **one** filer
+  needs the valid SSN, so an ITIN holder married to an SSN holder still reaches the credit — it is
+  the **single or head-of-household ITIN filer** who loses it outright. **For this
   firm's client base it is a live gate, not a formality**, and it sits alongside the long-standing
   rule that **each child** needs an SSN valid for employment (Schedule 8812 line 4: *"with the
   required social security number"*). **A child with an ITIN is a $500 *other dependent*, never a
@@ -956,9 +958,13 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - The credit is the **lesser** of the amount from the table on **earned income** or on **AGI**.
 - 🔴 **READ THE AMOUNT OFF THE PRINTED EIC TABLE — do not compute it from the phase-in rate.** The
   table (1040 instructions, and **Pub 596**) figures each **$50 bracket at its MIDPOINT**, so the
-  credit for an earned income of 21,318 is the figure for the **21,300–21,350** row — computed on
-  **21,325**, the midpoint, not on the client's own 21,318. *(Invented figures, per this SOP's rule
-  that every worked example here is made up.)* ⓘ **The rate formula gets you
+  credit for an earned income of 15,318 is the figure for the **15,300–15,350** row — computed on
+  **15,325**, the midpoint, not on the taxpayer's own 15,318. *(Invented income, real table row.)*
+  ⚠️ **Pick a phase-in figure to see the convention at work** — on the plateau every bracket reads
+  the same maximum and the midpoint is invisible. At the row above, the 2025 table prints
+  **289 / 4,328 / 6,130 / 6,896** for 0 / 1 / 2 / 3+ children: the 2-child and 3-child columns are
+  exactly **40% × 15,325** and **45% × 15,325**, the 1-child column is already at its 4,328 plateau,
+  and the 0-child column is phasing out. **Four columns, three different zones, one row.** ⓘ **The rate formula gets you
   within a few dollars and is the right way to understand the shape**, but the number that goes on
   line 27a is the table's. _(Checked against the 2025 table on 2026-08-19: a mid-table row's four
   columns are all within a dollar of `rate × bracket midpoint`, confirming the convention.)_
