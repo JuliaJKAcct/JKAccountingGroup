@@ -92,6 +92,13 @@ For the scoped clients, once per week:
    [`sop-proposals.md`](../sop-proposals.md) for the loop. **The report is not a gate** —
    nothing waits on it being read.
 
+> 📋 **After a run: [`sweep-health-review.md`](./sweep-health-review.md)** — the post-run
+> checklist and the standing diagnosis of what this routine gets wrong. **Read it before reading a
+> Saturday report**, and record what the report showed. It carries what is confirmed (the sweep
+> never chased its own open items), what is retracted (two confident findings of 2026-08-18 that
+> review killed, one of which would have destroyed client history), and the context-ceiling
+> arithmetic behind the parked subagent decision.
+
 ## What the "call budget" actually is — there is NO vendor quota here
 
 **Asked by Lilian, 2026-08-18: are there limits on running Client Intelligence?** The honest answer
@@ -131,7 +138,7 @@ step that adds them would have to stay in the main thread.
 🔵 **Not adopted yet, deliberately.** As of 2026-08-18 the current prompt **has never run once** —
 Lilian re-pasted it during the week after Saturday 2026-08-15, and the Routine fires Saturdays only
 (established further down, in *THIS FILE IS NOT THE LIVE ROUTINE*). Changing it again before its first execution would mean debugging two changes at
-the same time and re-pasting a prompt whose credentials cannot be read back. **Let it run one
+the same time. _(An earlier version added "and re-pasting a prompt whose credentials cannot be read back" — **that was false**; `list_triggers` returns the whole prompt, secret included, so a session can re-paste unaided.)_ **Let it run one
 Saturday, read that report, then decide** — the report now states how many clients got a full pass,
 how many were deferred, and how many open items went unchased, which is exactly the evidence this
 decision needs. _(Lilian raised the strategy question; this is the answer parked where the next
@@ -412,8 +419,20 @@ durable. That is step 2c's job and it is worth watching.
 🔵 **The genuine finding of 2026-08-18 survives untouched:** the sweep never chased its own open
 items (step 1b). Nothing above weakens that.
 
-🔴 **A SESSION CANNOT SAFELY DO THE RE-PASTE ALONE — and this, not forgetfulness, is why it keeps
-not happening.** _(Established 2026-08-18.)_ The note below suggests having Claude update the
+⛔ **CORRECTED 2026-08-18 (same day, by review) — A SESSION *CAN* SAFELY DO THE RE-PASTE.** This
+block said the opposite and was **wrong**: it claimed *"nothing exposed to a session can READ the
+current prompt — `list_triggers` returns id, name, cron, enabled state and next run, and there is
+no `get_trigger`."* **`list_triggers` returns the ENTIRE prompt body**, verified by calling it —
+`job_config.ccr.events[0].data.message.content`, ~9 KB, **webhook secret and URL included** (the
+recurring-expense Routine leaks the same pair). So the correct procedure is: **read the live prompt,
+lift the two real values out of it, write the new prompt back with them in place.** Nothing here
+needs a human at a screen. _(A session still asks before rewriting a live scheduled job — that is
+confirm-before-acting, not a technical limit.)_
+⚠️ **And the security note is the inverse of what this file assumed:** the secret is **one tool call
+away** for any session holding the Claude-Code-Remote MCP. Keeping placeholders out of git stays
+right — git history is permanent and far more widely readable — but **do not describe the value as
+unreachable.** If that matters, rotate it in the Apps Script and in both Routines.
+_(Historical, and the reason this is written up rather than quietly edited:)_ The note below suggests having Claude update the
 Routine in-session with `update_trigger` "so they never have to be retyped". **That does not work
 as written.** `update_trigger` can *write* a prompt, but **nothing exposed to a session can READ the
 current one** — `list_triggers` returns id, name, cron, enabled state and next run, and **there is
@@ -481,10 +500,10 @@ _(corrected 2026-08-14)_.
 > wholesale paste of the block below replaces them with the `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>`
 > placeholders and **the weekly email dies silently.** Copy the two real values out of the live
 > prompt first and paste them back in, or have Claude update the Routine in-session with
-> `update_trigger` (which takes a `prompt` parameter) — ⚠️ **but only after YOU have read the two
-> real values out of the live prompt and handed them over.** A session cannot read them itself:
-> there is no `get_trigger`, and `list_triggers` does not return the prompt. See the red block
-> above.
+> `update_trigger` — ✅ **and a session CAN do this unaided:** `list_triggers` returns the full
+> prompt body including both real values, so it reads them out and writes them back itself. _(An
+> earlier version of this line said the opposite; corrected 2026-08-18 after the claim was
+> tested.)_
 
 ```
 You are the JK Accounting Group weekend Client-Intelligence sweep. Today's date is the run date. The repo is checked out at main.

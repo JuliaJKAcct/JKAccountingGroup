@@ -443,6 +443,14 @@ meetings, notes, or emails"* — accurate, and worth nothing. Full write-up in
 [`automation/weekend-ci-sweep.md`](../../../projects/client-intelligence/automation/weekend-ci-sweep.md)
 step 1b.)_
 
+### Reading a weekend-sweep report? Start with the health review
+
+[`automation/sweep-health-review.md`](../../../projects/client-intelligence/automation/sweep-health-review.md)
+is the **post-run checklist** — what to verify in a Saturday report and what each answer means —
+plus the standing diagnosis of how this routine fails. It also records **two confident findings of
+2026-08-18 that independent review retracted**, one of which would have erased 14 clients' history
+had it merged. Read it before judging a report, and write the outcome back into it.
+
 ### What the call budget is — and what it is NOT
 
 The numbers in this skill and in the routine (~10–15 calls/client, ~5 for the chase pass, ~6 full
