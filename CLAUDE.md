@@ -82,7 +82,8 @@ the US.
 │       ├── bookkeeping-kpis/           drives the bookkeeping-KPIs project — on-brand dynamic per-client performance dashboards; impeccable + Design System; real client figures never committed
 │       ├── lilian-notebook/            drives Lilian's Notebook — write a lesson SHE ASKED FOR (🛑 never propose one), the entry structure, what belongs there vs. a skill/SOP/client file, build + publish
 │       ├── proposal-generator/         drives the proposal-tool project — client-ready proposals + engagement letters (the interactive business tax-prep generator, per-client fields, client data never committed)
-│       └── impeccable/                general UI/design skill
+│       ├── impeccable/                general UI/design skill
+│       └── humanizer/                 strips AI-writing tells from client-facing prose (vendored, MIT) — run on every proposal text before delivery
 └── .mcp.json      MCP integrations available to Claude (see README → Integrations)
 ```
 
