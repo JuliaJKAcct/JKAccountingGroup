@@ -149,6 +149,20 @@ company itself. This matches the firm's master template exactly.
   a preview.)*
 - **Chat:** collect the fields above, generate, render to PDF (headless Chromium), and
   deliver the file to the user. **Never commit the client PDF.**
+- **Every proposal delivery is TWO things: the PDF + a branded HTML cloud artifact**
+  (Julia's standing instruction, 2026-08-19 — she prefers working with the HTML artifact;
+  the PDF stays the signable/sendable deliverable). Produce the artifact by extracting the
+  tool's rendered document — all `<style>` blocks plus the rendered-document container's
+  innerHTML (**monthly proposal: `#proposal`, ground `#DED7C7` · business letter: `#letter`,
+  ground `#E7E0D2`** — each tool's own preview-panel color) — into a standalone page with a
+  minimal shell (`<title>` = "<Client> Proposal"; sheets stacked on that ground with a soft
+  shadow; the container gets `overflow-x:auto`
+  so a phone never side-scrolls the page body; single-theme on purpose — the document
+  commits to its ivory-paper look, so paint the background explicitly). Publish it
+  **default-private** with the Artifact tool, one artifact per client proposal (republish
+  the same file path / URL for revisions of the same proposal — never mint a second link
+  for a revision). The client file/figures still never touch the repo: the HTML lives in
+  the scratchpad and on claude.ai, exactly like the delivered PDF.
 
 ## Standing rules (apply to every proposal / letter)
 
