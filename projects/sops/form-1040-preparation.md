@@ -264,18 +264,20 @@ Schedule C line 30  →  line 31
 | I | **2** | Total area of home | " |
 | I | **3** | Divide line 1 by line 2, **as a percentage** | ƒ 1 ÷ 2 |
 | I | **7** | **Business percentage** | = line 3 (lines 4–6 are daycare only) |
-| II | **8** | **Amount from Schedule C, line 29** | 🔑 the circular input — and the §280A(c)(5) ceiling, built into the form |
+| II | **8** | **Amount from Schedule C, line 29** — *plus any gain from the business use of the home, minus any loss from the trade or business not derived from it* | 🔑 the circular input — and the §280A(c)(5) ceiling, built into the form. The two adjustments are usually nil, but they are in the line's own text |
 | II | 9 · 10 · 11 | Casualty losses · deductible mortgage interest · real estate taxes | **0 for a renter** |
 | II | 12 – 15 | Subtotals; **line 15 = the ceiling that survives** | ƒ 8 − 14 |
 | II | **18** | **Insurance** — column (b) | Homeowner's **or renter's (HO-4)** policy, pro-rated |
 | II | **19** | **Rent** — column (b) | 🔑 **what THIS taxpayer paid** — see the lease rule below |
 | II | **20** | Repairs and maintenance — column (b) | Whole-home repairs |
-| II | **21** | **Utilities** — column (b) | Electricity, gas, water, sewer, trash. ⛔ **not the internet** |
+| II | **21** | **Utilities** — column (b) | Electricity, gas, water, sewer, trash. ⛔ **not the internet** — *the firm's position, see the IN/OUT section below; Pub 587 does not name it* |
 | II | 22 | Other expenses — column (b) | HOA fees live here |
 | II | **23** | Add lines 16 through 22 | ƒ |
 | II | **24** | **Multiply line 23 column (b) by line 7** | ƒ — this is the actual computation |
 | II | 25 | Carryover of prior year operating expenses | From last year's line 43 |
+| II | **26** | Add line 23 column (a), line 24, and line 25 | ƒ — the total the ceiling is tested against |
 | II | **27** | **Allowable operating expenses — the SMALLER of line 15 or line 26** | 🔑 **this is where §280A(c)(5) actually bites** |
+| II | **28** | Subtract line 27 from line 15 | ƒ — the room left for casualty losses and depreciation |
 | II | 29 – 33 | Casualty losses · **depreciation** | **0 for a renter** — no depreciation, so nothing to recapture on moving out |
 | II | **36** | **Allowable expenses → Schedule C line 30** | ƒ 34 − 35 |
 | III | 37 – 42 | Depreciation of the home | **Blank for a renter** |
@@ -285,13 +287,15 @@ Schedule C line 30  →  line 31
 **business part of the home only**, deducted at **100%** (painting just that room). **(b) Indirect
 expenses** = costs of the **whole home**, deducted at the line-7 percentage. Most entries are (b).
 
-⚠️ **Line 3 asks for a percentage and the form has room for two decimals.** Typed by hand, 9.96%
-gives a different answer from the software's full fraction — usually a dollar, occasionally more.
-**Let the software carry it**, and if you are checking by hand, expect the wobble.
+⚠️ **Line 3 asks for a percentage, and how many decimals survive is a software convention, not a
+form rule** — the printed box is blank with a trailing `%`. A percentage rounded to two decimals
+gives a different answer from the full fraction — usually a dollar, occasionally more. **Let the
+software carry it**, and if you are checking by hand, expect the wobble.
 
-#### 📅 The two DATES — and there is no "date the business started" on any IRS form
+#### 📅 The two DATES — and neither Schedule C nor Form 8829 asks for one
 
-**A recurring question, and the answer surprises people:**
+**A recurring question, and the answer surprises people. Nothing in the Schedule C package asks for a
+business start DATE:**
 
 | Where | What it actually asks | A date? |
 |---|---|---|
@@ -300,7 +304,12 @@ gives a different answer from the software's full fraction — usually a dollar,
 | Form 4562 | *"Date placed in service"* | ✅ but only if something is being **depreciated** — not a renter's home office |
 | Simplified-method worksheet | **Number of months**, not a date | ❌ |
 
-🛠️ **So a date field on the screen belongs to the SOFTWARE, not the IRS.** ATX's Home Office
+⚠️ **Scoped deliberately: this is about the RETURN.** The **Form SS-4** does ask — line 11,
+*"Date business started or acquired"* — but that is the **EIN application**, not the return. See
+[`ein-application-irs.md`](./ein-application-irs.md). Forms 1065 and 1120-S carry a date in item E as
+well. **Schedule C and Form 8829 do not.**
+
+🛠️ **So a date field on THIS screen belongs to the SOFTWARE, not the IRS.** ATX's Home Office
 worksheet carries the date business use of the home began, and that is what drives the part-year
 proration onto line 24. The IRS only ever sees the result.
 
@@ -505,7 +514,7 @@ otherwise eligible. **Check it explicitly rather than assuming the credit is los
 |---|---|---|
 | 1 | **9** | *"Are you allocating policy amounts with another taxpayer…?"* → **Yes → "Skip to Part IV"**. The allocation is settled **before** any monthly figure is written |
 | 2 | **Part IV, line 30** | The allocation itself — see the column map below |
-| 3 | **10** | *"…determine if you can use line 11 or must complete lines 12 through 23."* 🔴 **Line 11 is the ANNUAL shortcut and is available ONLY when the enrolment premium, the SLCSP and the advance were the SAME in all twelve months.** One mid-year change — a new plan, a reported household change, anyone joining or leaving — and the answer is **No** |
+| 3 | **10** | 🔴 **ALWAYS "No" once Part IV has been completed** — this is not a judgement call. The 2025 instructions say it three times: *"If you complete Part IV, check 'No' on line 10, skip line 11, and continue to Lines 12 Through 23."* **An allocated return cannot use the annual line at all**, whatever the monthly figures did. ⓘ *(Line 11 is otherwise the annual shortcut, available only where the enrolment premium, the SLCSP and the advance were the same in all twelve months.)* |
 | 4 | **12–23** | The **monthly** calculation, one row per month, on the **allocated** amounts |
 | 5 | **24 – 29** | Totals, then either a **net PTC** (line 26 → Schedule 3 line 9) or an **excess repayment** (line 27 → line 29 → **Schedule 2 line 1a**) |
 
@@ -531,7 +540,7 @@ establish first — **the date the marriage ended**:
 |---|---|---|---|
 | **1** | Divorced or legally separated **during the year** | **By agreement — any percentage.** If they cannot agree, **50% each** | (e), (f) **and** (g) — ⚠️ **only for the months they were MARRIED** |
 | **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23. ⚠️ **A taxpayer who cannot take the PTC at all still has to allocate and REPAY the advance** — read the Situation 2 instructions for which columns they complete |
-| **3** | **No advance payments** were made | — | |
+| **3** | **No advance payments** were made | Enrolment premiums in proportion to each taxpayer's coverage family's SLCSP | **Column (e) only** |
 | **4** | Any other policy shared between two tax families | **By agreement — any percentage.** Failing agreement, the instructions' formula: **the number of individuals enrolled by one taxpayer who are in the OTHER taxpayer's tax family, divided by the total enrolled on that policy** | (e), (f) and (g) |
 
 🔴 **Two things a session gets wrong here, and both change the numbers:**
@@ -561,10 +570,14 @@ that is the form's own caption: *"Allocation percentage applied to monthly amoun
 | **(f)** **SLCSP Percentage** | The share of column **B** — the benchmark plan |
 | **(g)** **Advance Payment Percentage** | The share of column **C** — what the government already paid |
 
+ⓘ **Part IV holds FOUR allocations on the face of the form** (lines 30–33). **Line 34** asks *"Have
+you completed all policy amount allocations?"* — a **No** is what sends you to the instructions for
+more than four.
+
 🔑 **Three percentages, not one, because they do not always agree.** Under **Situation 2** column
 **(f) is left BLANK** — the SLCSP is not allocated at all, and each taxpayer enters the SLCSP for
 their **own** coverage family. Under Situations 1 and 4 all three usually carry the same agreed
-number. **Line 34** asks whether there are more than four allocations.
+number. 
 
 💡 **50/50 between two ex-spouses is the strongest split available under Situation 1**, because it is
 also the **no-agreement default** — it needs no justification beyond the instruction itself. Compare
@@ -750,8 +763,8 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - [ ] **Filing status** supports every credit claimed — including **applicable-taxpayer status for
       the PTC** (M4).
 - [ ] Each dependant is claimed on **exactly one** return.
-- [ ] **Form 8962 line 10** — if any monthly figure changed during the year, lines **12–23** were used, not the annual line 11
-- [ ] **Form 8829 line 8 = Schedule C line 29**, and Schedule C line 30 = **Form 8829 line 36**
+- [ ] **Form 8962 line 10** — **"No" whenever Part IV was completed**, or any monthly figure changed; lines **12–23** were used, not the annual line 11
+- [ ] **Form 8829 line 8 traces to Schedule C line 29** (plus/minus the two adjustments in that line's own text), and Schedule C line 30 = **Form 8829 line 36**
 - [ ] One **Form 8829 per home** used for business during the year
 - [ ] **No cost appears BOTH in the home-office worksheet and on line 25** — the internet and the telephone are the usual double-count.
 - [ ] The **rent used is what THIS taxpayer paid**, reconciled against the lease — not the lease amount, where it is a share.
