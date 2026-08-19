@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: Write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (one table per form: line · value · where it came from · the formula), the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: Write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, and the explanations), the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -143,8 +143,10 @@ answer.
 > 🔑 **The standard, in Lilian's own words (2026-08-19):** *"las tablas por cada formulario · el flujo
 > de los números entre las formas · las explicaciones · las casillas que tengo que marcar."* She has
 > little experience with returns and **gets lost between the forms, the pages and the numbers** — so
-> a table of values without a route through the forms does not help her. **Deliver all four things,
-> every time, unprompted.**
+> a table of values without a route through the forms does not help her. In English: *the tables per
+> form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
+> **Deliver all four, every time, unprompted — plus the fifth below, which is what makes the flow
+> readable.**
 
 ### The five things every delivery carries
 
@@ -155,6 +157,11 @@ columns, and **the FORM, the PART and the LINE NUMBER named**:
 |---|---|---|---|
 | **7** | Inventory at end of year | **150,000** | 📖 Balance sheet → `Total for Other Current Assets` = `Inventory` **+ the clearing account** |
 | **8** | Cost of goods sold | **20,000** | ƒ **= line 6 − line 7** → page 1 line 2 |
+
+⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
+in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
+read by everyone, gets published, and is the last place anyone thinks to look for client data.
+
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
@@ -188,10 +195,6 @@ whether the return can be e-filed at all. Flag those as gates.
 *"whichever is smaller caps the credit, so the credit never exceeds what the insurance actually
 cost"* is what makes it stick and what lets her catch the next one herself.
 
-⛔ **Those two amounts are invented, and every example in this skill is.** A real figure belongs
-in the client's working paper (§5) and **nowhere else in the repo** — including here. A skill is
-read by everyone, gets published, and is the last place anyone thinks to look for client data.
-
 **Rules for the delivery, all of them learned by getting them wrong:**
 
 1. **Every value carries its origin.** Name the **report and the account**, or the **formula**.
@@ -218,8 +221,9 @@ read by everyone, gets published, and is the last place anyone thinks to look fo
 10. 🔑 **When the software throws an error, treat it as evidence and go read the instruction.** A
     tax package encodes rules the preparer has not met yet. **Quote the error, find the rule it is
     enforcing, then explain both** — that turns an obstacle into the thing that gets remembered.
-    _(2026-08-19: ATX's *"Line 11 must not be completed when Part IV… are used"* is the IRS
-    instruction verbatim, and it had produced a repayment of 750 where the right answer was 2.)_
+    _(2026-08-19: ATX's *"Line 11 must not be completed when Part IV… are used"* encodes the IRS
+    rule in the software's own words, and it had produced a repayment of the **full Table 5
+    limitation** where the right answer was a couple of dollars.)_
 11. ⚠️ **Read the FORM's own printed text before explaining a line.** Several lines carry their
     operating instructions on the face of the form — Form 8962 line 34's "Yes" branch is the
     complete procedure for lines 12–23, and Form 8829's header is the one-per-home rule. **Quote
