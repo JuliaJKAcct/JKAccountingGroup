@@ -61,7 +61,8 @@ Work down the list. Every ✅ points at the module you must read. Everything unm
 ⚠️ **Answer 2, 3 and 5 from documents, never from the organizer alone.** The firm's organizer stops
 asking about income the moment someone answers "no sources of income", so **its silence is not
 evidence**. _(Learned 2026-08-18: a household organizer answered "None of the above" for a couple
-where one spouse held an S-corporation K-1 and the other had $20,200 of consulting income.)_
+where one spouse held an S-corporation K-1 and the other had a year of consulting income the
+organizer therefore never asked about.)_
 
 ---
 
@@ -354,7 +355,7 @@ establish first — **the date the marriage ended**:
 | Situation | When it applies | Allocation | Which columns |
 |---|---|---|---|
 | **1** | Divorced or legally separated **during the year** | **By agreement — any percentage.** If they cannot agree, **50% each** | (e), (f) **and** (g) — ⚠️ **only for the months they were MARRIED** |
-| **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23 |
+| **2** | **Married at year end**, filing separately | **50% each — not negotiable** | (e) and (g) only. 🔴 **Column (f) stays BLANK** — the SLCSP is *not* allocated; each taxpayer enters **the SLCSP for their own coverage family** on lines 12–23. ⚠️ **A taxpayer who cannot take the PTC at all still has to allocate and REPAY the advance** — read the Situation 2 instructions for which columns they complete |
 | **3** | **No advance payments** were made | — | |
 | **4** | Any other policy shared between two tax families | **By agreement — any percentage.** Failing agreement, the instructions' formula: **the number of individuals enrolled by one taxpayer who are in the OTHER taxpayer's tax family, divided by the total enrolled on that policy** | (e), (f) and (g) |
 
@@ -393,6 +394,11 @@ made on a cheaper plan.
 
 Then: **net PTC** (Schedule 3 line 9 → 1040 line 31) if the credit exceeds the advance, or **excess
 advance repayment** (Schedule 2 line 1a) if the advance exceeds the credit.
+
+🔴 **An excess advance repayment is NOT the end of the story — it can be wiped out by a
+nonrefundable credit.** Schedule 2 line 1a → line 3 → **Form 1040 line 17 → line 18**, which the
+**child tax credit on line 19** then reduces. **See M5** before writing "owed" on a return that has
+children and nil taxable income.
 
 🔑 **The net premium tax credit IS a refundable credit** — it reaches line 31 and the "total other
 payments and refundable credits" line. A client with no earned income can still receive it.
@@ -433,11 +439,23 @@ _Verified against the 2025 Instructions for Form 1040, 2026-08-18._
 - The **additional** child tax credit is refundable: **15% × (earned income − $2,500)**, capped at
   $1,700 per qualifying child **and** at the part of the $2,200 credit the nonrefundable calculation
   could not use.
+- 🔴 **THE NONREFUNDABLE CREDIT REACHES FURTHER THAN "THE TAX" — read page 2 in order.** The 2025
+  Form 1040 runs **17 = Schedule 2 line 3** (which carries the **excess advance premium tax credit
+  repayment** from Schedule 2 line 1a) → **18 = 16 + 17** → **19 = the child tax credit** → **22 = 18
+  − 21** → **23 = other taxes, including self-employment tax** → **24 = 22 + 23**. So the
+  nonrefundable child tax credit **absorbs an excess advance premium tax credit repayment**, and only
+  **line 23 escapes it**. ⚠️ **"There is no tax to offset, so the credit is worth zero" is FALSE
+  whenever there is an excess advance** — and it is the mistake a nil-taxable-income return invites.
+  🔑 **Check it against the client's own prior year**: a return with nil income tax and an excess
+  advance will show that same amount sitting on line 19. _(Caught in review, 2026-08-19, on two
+  returns at once — and the prior-year table in the same working paper had been demonstrating the
+  mechanism all along.)_
 - 🔑 **TWO CEILINGS, and knowing which one binds is the whole game.** With a modest earned income the
   **15% ceiling** binds from the second child onwards, so **child #2 adds only the difference and
   child #3 adds nothing at all**. Work out which ceiling binds **before** telling a separated couple
-  how many Forms 8332 to sign. _(Live case, 2026-08-18: earned income 17,925 → the 15% ceiling is
-  2,314, so one child gave 1,700, two gave 2,314, and three still gave 2,314.)_
+  how many Forms 8332 to sign. _(Live case, 2026-08-18: an earned income in the high teens put the 15%
+  ceiling just above one child's 1,700 cap — so one child gave the full 1,700, a second added only
+  the difference, and a third added nothing at all.)_
 - 🔴 **Both the ACTC and the EIC require EARNED income.** Wages and net self-employment earnings are
   earned income. **An S-corporation K-1 loss is not. Distributions are not. Interest is not.**
   ⚠️ *A client can have a large K-1 and still be worth nothing on either credit.*
@@ -484,11 +502,13 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - 🔴 **A DEDUCTION CAN COST A CLIENT MONEY — check before chasing one.** On the rising side of the
   triangle, an extra dollar of Schedule C deduction reduces earned income and therefore the EIC and
   the ACTC. For a self-employed client each dollar of deduction removes about **$0.93** of earned
-  income, so at the 2-child rate the arithmetic runs: **−40¢ of EIC, −14¢ of ACTC, +14¢ of SE tax
-  saved ⇒ about 37¢ LOST per dollar deducted.** In the flat zone the EIC does not move and the same
-  dollar is roughly **neutral**. ⚠️ **This inverts the instinct that a bigger deduction is always
-  better**, and it decides how hard to chase an unsubstantiated expense. _(Live case, 2026-08-18: a
-  client's earned income sat **$45** above the 2-child earned-income amount.)_
+  income, so at the 2-child rate the arithmetic runs: **−37¢ of EIC** (0.93 × the 40% phase-in rate),
+  **−14¢ of ACTC** (0.93 × 15%), **+14¢ of SE tax saved** (0.9235 × 15.3%) **⇒ about 37¢ LOST per
+  dollar deducted.** In the flat zone the EIC does not move and the same dollar is roughly
+  **neutral**. ⚠️ **This inverts the instinct that a bigger deduction is always better**, and it
+  decides how hard to chase an unsubstantiated expense. _(Live case, 2026-08-18: a client's earned
+  income sat a few dollars above the 2-child earned-income amount — close enough that one modest
+  extra deduction would have crossed back over it.)_
 - The preparer must complete **Form 8867** (due diligence) — and it is a real penalty exposure.
 
 ---
@@ -522,8 +542,9 @@ pages. **Read the current year's revenue procedure; every figure here is indexed
 - [ ] **Filing status** supports every credit claimed — including **applicable-taxpayer status for
       the PTC** (M4).
 - [ ] Each dependant is claimed on **exactly one** return.
-- [ ] Where a policy is shared: the **allocation percentages across all returns total 100%**, and
-      both returns carry the **same** figures.
+- [ ] Where a policy is shared: the shares **cover the policy with no overlap and no gap** for the
+      same months — in the ordinary case they add to **100%** — and every return sharing it carries
+      the **same** figures. ⚠️ **Not column (f) under Situation 2**, which is not allocated at all.
 - [ ] Schedule C line 31 = Schedule SE line 2, and half the SE tax reaches Schedule 1 line 15.
 - [ ] The home-office deduction is **within the §280A(c)(5) limit**, and the space passes **regular
       and exclusive** use.
