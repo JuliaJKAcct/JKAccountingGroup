@@ -145,8 +145,8 @@ answer.
 > little experience with returns and **gets lost between the forms, the pages and the numbers** — so
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
-> **Deliver all four, every time, unprompted — plus the three below, which are what she has had to
-> ask for since.**
+> **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
+> and parts 6 and 7 below, which are what she has had to ask for since.**
 
 > 🔴 **And the standard she set on 2026-08-19 (late), after two things a complete-looking delivery
 > had left out:** *"necesito que para la próxima sea más específico en cuanto al nivel de detalle y
@@ -273,6 +273,15 @@ because the parts that decide the return are often the ones with no number in th
 🔑 **And the direction of travel: a K-1 is produced BY the entity's return, not filled in
 independently.** Every figure is a share of a line the entity already computed. **A number on a K-1
 that is not on the entity's Schedule K is an error upstream — go back to the entity's return.**
+
+⚠️ **Where a box's destination is not the obvious one, say so** — an entity K-1 routinely sends items
+to forms nobody expects (a §1231 amount to Form 4797 rather than Schedule D; royalties to a different
+*part* of the same schedule as the ordinary income). **A destination table whose rows are "its own
+form" has not done the job.**
+
+⚠️ **And the recipient's schedule has its own checkboxes with their own triggers.** Read the printed
+note above the line rather than assuming the obvious condition — *"if you report a loss"* is rarely
+the whole list.
 
 ⚠️ **Read the software's warnings on the K-1 input and account for every one.** Several fire on
 essentially every return of that type (the S-corporation §1.1367-1(g) carryover notice, the
