@@ -146,9 +146,9 @@ answer.
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 6 to 8 below, which are what she has had to ask for since.**
+> and parts 6 to 9 below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all eight parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all nine parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -368,6 +368,42 @@ _(Lilian, 2026-08-19, on Form 7203: **"la línea 2 no es algo que yo podía llen
 el box 16, código D, y dónde colocar las contribuciones."** The analysis had given her every line of
 that form and its arithmetic, and she still could not enter it, because **only one of its fifteen
 lines is typed on the form itself.**)_
+
+---
+
+### Part 9 · 🛑 A FINDING IS NOT DELIVERED UNTIL IT CARRIES ITS FIX
+
+> 🔑 **Lilian, 2026-08-20:** *"Cuando encuentres errores como el de `Description of Home Office is
+> required`, necesito que me digas cómo corregirlo, no que simplemente lo señales."*
+
+**Naming a defect is half the job. The half that gets it off the return is saying what to do about
+it** — and the person reading has *"poca experiencia en declaraciones"* and is sitting in front of
+the software with the error on screen. ⛔ **"This field is blank / this box looks wrong / check this"
+is not a deliverable.**
+
+**Every finding ships with four things:**
+
+| | | Why it is not optional |
+|---|---|---|
+| 1 | 🛠️ **WHERE** — the exact screen and field | The whole point of part 8. A finding on a computed form usually gets fixed somewhere else entirely |
+| 2 | ✏️ **WHAT TO TYPE** — the literal value, or the rule that produces it | 🔴 **The one most often missing.** *"Fill in the description"* leaves them staring at an empty box. **Give the text.** Where it depends on a fact we do not have, give the **pattern** and name the fact |
+| 3 | 🔍 **HOW TO KNOW IT WORKED** — the figure or state to read back | A fix nobody verified is a fix nobody made |
+| 4 | ⚖️ **WHAT IT MOVES** — or explicitly *"nothing"* | Silence reads as *"nothing"*, and the reader cannot tell the difference between a cosmetic entry and one that shifts the refund |
+
+🔴 **AND WHERE THE FINDING IS A QUESTION RATHER THAN A DEFECT, DELIVER THE BRANCHES, NOT THE
+QUESTION.** *"Is this box right?"* hands the work back. **"Read X. If it says A, untick it; if it
+says B, leave it"** is an answer they can act on — and it often turns out the firm already holds the
+document that settles it _(**look before you ask**, [`method.md`](../../../projects/pre-return-review/method.md)
+rule 1)_.
+
+⚠️ **A VENDOR FIELD IS NOT AN EXCUSE FOR VAGUENESS — IT IS THE REASON THE ANSWER IS NEEDED.** When
+the field exists only in the software and on no IRS form, **there is nothing for the preparer to look
+up.** Nobody can research their way to the right value, so the delivery must simply state it. 🔑 **Say
+which it is** — *"ATX's field, not on Form 8829"* — **and then say what goes in it anyway.**
+
+📌 **And when a vendor field turns out to be required every time, that is not a one-off correction —
+it goes into the form's SOP as a standing entry**, so the next return never meets the error at all.
+_(Lilian's second instruction the same day: *"tienes que recordar siempre llenar este campo."*)_
 
 ---
 

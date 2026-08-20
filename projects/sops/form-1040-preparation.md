@@ -277,6 +277,29 @@ people miss: *"Use a **separate Form 8829 for each home** you used for business 
 and ATX builds the 8829 from it.** _(Lilian, 2026-08-19.)_ Same for the software's date fields: they
 feed the form, they are not on it.
 
+#### 🛠️ ✏️ FILL THE WORKSHEET'S OWN FIELDS FIRST — the *Description* is REQUIRED and blocks the return
+
+**Before any amount, fill in the worksheet's identity block.** These are **ATX's fields — none of
+them exists on Form 8829**, which carries no description and no address anywhere. ⛔ **So there is
+nothing to look up**, and a preparer who leaves them alone hits a red error with no way to research
+the answer.
+
+| Field | ✏️ **What to type** | Required? |
+|---|---|---|
+| **Description of Home Office** | 🔴 **ALWAYS FILL IT.** A short label naming **the activity and the space**, in English — the pattern is `<what the business is> — <the space>`. Examples: `Consulting services — home office` · `Bookkeeping — spare bedroom` · with two homes, name each: `Consulting — apartment (Jan–Aug)` and `Consulting — house (Sep–Dec)` | 🔴 **YES.** ATX prints *"Description of Home Office is required"* as a **red error** and will not let the return go |
+| Home Office Number | leave ATX's default (`Home Office 1`) unless there is a second | auto |
+| **Address / City / State / Zip** | ⓘ **Leave blank when the office is at the address on page 1 of the 1040** — the same rule Schedule C line E states for the business address. **Fill it only** when the office is at a *different* property, or when there are **two Form 8829s** and they must be told apart | no |
+| Daycare ☐ · Simplified ☐ | leave unticked for an ordinary actual-method office | no |
+| *disposed / converted to non-business use* ☐ | tick **only** if the office stopped being one during the year | no |
+
+🔑 **The Description is not decoration — Form 8829's own header says *"Use a separate Form 8829 for
+each home you used for business during the year"*, so the label is how two of them are told apart**
+in the file, in the printed set and next year. ⚠️ **Write it so it still makes sense to someone
+opening the return in three years.**
+
+📌 **Fill this every time, as the first step of the worksheet.** It costs ten seconds at the start
+and is a blocking red error at the end.
+
 ⚠️ **There is a circularity, and it catches everyone.** Form 8829 **line 8** asks for **Schedule C
 line 29** — the tentative profit *before* the home office. So the order is:
 
@@ -1503,6 +1526,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] **Form 8829 line 8 traces to Schedule C line 29** (plus/minus the two adjustments in that line's own text), and Schedule C line 30 = **Form 8829 line 36**
 - [ ] One **Form 8829 per home** used for business during the year
 - [ ] **No cost appears BOTH in the home-office worksheet and on line 25** — the internet and the telephone are the usual double-count.
+- [ ] 🔴 **The home-office worksheet's *Description* is filled in** — ATX's own field, a **blocking red error** when blank, and there is nothing to look up because it is on no IRS form. ✏️ **`<the business> — <the space>`**, e.g. `Consulting services — home office`
 - [ ] The **rent used is what THIS taxpayer paid**, reconciled against the lease — not the lease amount, where it is a share.
 - [ ] Where a policy is shared: the shares **cover the policy with no overlap and no gap** for the
       same months — in the ordinary case they add to **100%** — and every return sharing it carries
