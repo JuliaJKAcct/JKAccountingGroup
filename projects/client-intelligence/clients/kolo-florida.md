@@ -531,6 +531,18 @@ the actual details.
   in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
   pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
   ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
+- 2026-08-20 — **A REQUIRED HEADER QUESTION ON THE COMPANY RETURN HAS NEVER BEEN CONFIRMED AS
+  ANSWERED.** Page 1 of Form 1120-S asks whether the corporation is electing to be an S corporation
+  **beginning with this tax year**. For this company the answer is **No** — it has filed an accepted
+  S return for the prior year, so the election predates this one. ⚠️ **But the software raises no
+  error for a blank**, so nothing will ever say the box is empty, and **nobody has confirmed it is
+  ticked.** ⓘ **A `Yes` would oblige the firm to attach the election form**; `No` does not.
+  🔑 **The general lesson went into the tax-return skill:** the absence of a software error is not
+  evidence that a field is complete — a vendor's diagnostics catch what the vendor chose to catch.
+  ⚠️ **One thing not resolved:** the prior return, prepared elsewhere, carries an election-effective
+  date **earlier than the company's own incorporation date**. It cannot be right, it changes no
+  figure, and it is recorded rather than fixed.
+
 - 2026-08-20 — **THE SHAREHOLDER'S BASIS FORM WAS READ BACK ON THE PERSONAL RETURN AND IS STILL
   WRONG — for the second time, from a different cause.** The first was a missing input; this one is a
   **transposition in a typed input**. ✅ Everything else on that form is now correct, including the

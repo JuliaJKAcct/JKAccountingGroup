@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: Write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point: it says to go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — report what was found before computing anything, and only then deliver the tables. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -114,7 +114,7 @@ was never allowed, and stays invisible until next year's opening figures.
 
 ---
 
-### §3A · Two checks that belong to EVERY form's SOP
+### §3A · Three checks that belong to EVERY form's SOP
 
 **These are not 1120-S facts — write the equivalent into each new form's SOP.**
 
@@ -126,7 +126,17 @@ by payee or by account as the question requires, and ask the client only for the
 test actually turns on. A wrong answer here is a false statement on a signed return, and it is
 *discoverable* — which a judgement call is not.
 
-**2 · 🛑 Print the finished return and read the FORM LIST before transmitting.** Tax software
+**2 · 🛑 THE ABSENCE OF A SOFTWARE ERROR IS NOT EVIDENCE THAT A FIELD IS COMPLETE.**
+A vendor's diagnostics catch **what the vendor chose to catch**, and nothing else — so *"it didn't
+flag anything"* is a statement about the software, never about the return. 🔑 **Every form has boxes
+the software is silent about**, and the only thing that finds them is a checklist someone actually
+runs. **So each form's SOP owes a tie-out row for every field that must be ANSWERED rather than
+computed** — the Yes/No items, the elections, the header questions.
+⚠️ **And when you record such a field, record what you actually know:** which software, which
+version, whose observation, and **whether e-file validation was ever tested** — a return that has not
+been transmitted has proved nothing about transmission. _(1120-S §5A item G is the worked example.)_
+
+**3 · 🛑 Print the finished return and read the FORM LIST before transmitting.** Tax software
 attaches a form the moment its parent line is touched, and **fixing the line does not detach the
 form.** So a figure keyed on the wrong line and then moved leaves its form behind — blank, silent,
 and it transmits. _(Real one: a number keyed on Form 1120-S page 1 line **15, Depletion**, pulled
@@ -136,7 +146,91 @@ carried a blank Form 4797 and a blank Schedule D; **seven of twenty pages were e
 **Deleting them changes no figure.** Leaving them in invites a question you have no reason to
 answer.
 
-## §4 · Driving a REAL return — the delivery format
+## §4 · Driving a REAL return
+
+### 4A · 🛑 THE TRIGGER — *"prepárame el Tax Return de X cliente"*
+
+> 🔑 **Lilian, 2026-08-20, setting how every return starts from now on:** *"Te voy a decir: por
+> favor, prepárame el Tax Return de X cliente. Quiero que vayas a Double, [veas] qué es la
+> información que encuentres… y este mismo análisis que hicimos aquí con las tablas y las
+> explicaciones."*
+
+**That sentence is the whole instruction. It is not a request for a checklist of what to collect —
+it means: GO AND GET IT YOURSELF from Double, then deliver §4B.** ⛔ **Do not open by asking what the
+client sent.** The person is asking precisely so they do not have to assemble it.
+ⓘ **That person may be Julia**, who does not follow this machinery — so the answer is plain language
+either way.
+
+#### Step 0 · Three things that decide everything after them
+
+1. 🔴 **WHICH FORM, and WHICH YEAR.** Double's **`Tax Return Type`** property is the firm's own answer
+   *(Lilian maintains it — "bastante correctas", fairly correct, so read it before inferring)*, and
+   the **tax project** carries the year and status. **Then open that form's SOP** —
+   [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md),
+   [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) — because §1 of that
+   SOP is the real gather list and it differs by form.
+2. 🛑 **THE EXTENSION GATE.** Before any work: is the return already late, and was an extension filed?
+   Every form SOP has this as a hard stop. **A missed deadline changes what you are doing**, not just
+   when.
+3. 🔑 **A COMPANY RETURN RUNS OFF ITS BOOKS AND FEEDS THE OWNER'S 1040 — never the reverse.** So for a
+   company, the organizer is not the centre of gravity; the **general ledger** is. Do the company
+   first, then the K-1, then the owner.
+
+#### Then find these — and read the client file FIRST, because it is free
+
+| # | What | Where | If it is missing |
+|---|---|---|---|
+| **0** | 🔑 **THE [CLIENT INTELLIGENCE FILE](../../../projects/client-intelligence/clients/)** — the firm's memory of every prior session on this client, including the **prior years' working papers** in [`projects/tax-returns/`](../../../projects/tax-returns/) | the repo, no API call | ⚠️ **Read it before anything else.** Sessions get deleted; this file is why the last one's work is not lost. **If the client has no file, create it** *(CLAUDE.md)* |
+| **1** | 🔴 **THE CLIENT'S BOOKS** — general ledger for the year, **both years' balance sheets**, this year's and **last year's P&L**, the depreciation schedule, payroll | QuickBooks, or Double's reports. ⛔ **The form SOP's §1 is the authoritative list** | 🛑 **For a company return this is the blocker, not the organizer.** Say what is missing and stop — a return computed off a partial ledger is worse than no return |
+| **2** | 🔴 **The TAX ORGANIZER the client completed** | `list_organizers` → `get_organizer_responses` for the year. ⓘ **Older clients' organizers are TaxDome-era PDFs**, not Double organizers — look in `TaxDome/[Client]/1. Completed Tax organizers/` | **Say so, and say what it costs.** ⓘ **Bookkeeping and Schedule-C clients are not owed one** *(see [`tax-season-readiness`](../tax-season-readiness/))*; for anyone else its absence closes whole branches of income |
+| **3** | 🔴 **EVERY FILE THE CLIENT UPLOADED FOR THIS RETURN** — the home-office worksheet, the P&L, the 1095-A, a lease, brokerage statements, **anything at all** | `list_file_library` → `list_files`. Look in **`JK Accounting Group/Others/{year}`**, **`Tax Return Filed/{year}`**, **`1099/{year}`**, and the TaxDome tree — especially **`Client uploaded documents/`** and **`Taxes/{year}/`** | ⚠️ **Look in ALL of them before concluding anything is absent** — the two structures coexist *([`method.md`](../../../projects/pre-return-review/method.md) rule 1)* |
+| **4** | **Everything else the firm holds** | Double **notes** (`list_notes`), **tasks**, the **tax project**, **custom properties** — **and the gap since the last weekly sweep: Julia's Gmail, Ping transcripts, Drive** *(CLAUDE.md — anything after the sweep is missing by construction)* | ⚠️ **Search these, do not treat them as a fallback.** A client's answer often arrived by email and never reached Double |
+| **5** | **The PRIOR-YEAR RETURN** | Double, through **[`tools/redact-doc/`](../../../tools/redact-doc/)** — ⛔ **one year only**, the latest before the year being prepared | 🛑 **§1's build-the-map method depends on it.** Without it, name the conventions you cannot reproduce instead of guessing them |
+
+🔑 **THEN REPORT WHAT YOU FOUND BEFORE YOU COMPUTE ANYTHING** — a short list of what is in hand and
+what is not, so the missing piece can be handed over before the analysis is built on a hole.
+⛔ **And never write what you did not find as what is not there** — name the search, not the world
+*(method.md rule 1b)*.
+
+#### 🛑 When to STOP rather than prepare
+
+**A return cannot be worked when a figure it needs has no source, and no arithmetic will fill the
+hole.** Concretely: **the books are incomplete or the year is not closed**; **an income type is
+asserted with no document behind it**; **a prior-year carryover** (NOL, basis, suspended losses,
+which states) **is unknown because the prior year was prepared elsewhere**; **the organizer's answers
+contradict the documents**. 🔑 **In every one of those, run
+[`organizer-review`](../organizer-review/) FIRST** — it exists to turn exactly this into one grouped
+list of questions to send. **Do not prepare around a hole and flag it afterwards.**
+
+ⓘ **That skill and this one share their sources and differ in their output:** it ends in **questions
+for the client**; this one ends in **the tables below**.
+
+#### 🔒 The rules that ride along, every time
+
+- 🛑 **BEFORE the first `get_organizer_responses` call, say in plain words what it will bring into the
+  conversation** — the whole organizer arrives in one payload, identifiers included — **and when the
+  work is done, remind them to delete the session.** ⛔ **NEVER from a subagent. NEVER from a
+  scheduled or unattended session** — a Routine has nobody to tell and nobody to delete, so every
+  control here fails silently. *(The full rule, and the wording for both messages, is
+  [`double-mcp`](../double-mcp/) §2.2 — read it, do not work from this summary.)*
+- 🛑 **The redactor carries the same obligation:** say **which document, which year, and why**, before
+  the call. ⛔ **One tax year only**, never another document type, **never from a subagent or a
+  scheduled session.** ⓘ **CLAUDE.md scopes that permission to a pre-return review Lilian or Julia
+  asked for**; preparing a return they asked for is the same footing, but **a session may rely on a
+  carve-out that is written down — it may never invent one.** If in doubt, ask.
+- **Client figures live in [`projects/tax-returns/`](../../../projects/tax-returns/) only** — never
+  in an SOP or a client-intelligence file, **both of which publish to the Knowledge Hub**. *(Skills
+  do not publish, but the same rule applies to them: nobody should have to check.)*
+- ⛔ **Never anywhere: SSN/ITIN, bank or card numbers, residential street addresses, dates of birth,
+  logins.** A business EIN is the one exception.
+- 📌 **The work is not finished until it is written down** — the working paper in
+  [`projects/tax-returns/`](../../../projects/tax-returns/) (§5), the client's Client Intelligence
+  file, and any open action in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md). **The session will be
+  deleted; those three are what survive it.**
+
+---
+
+### 4B · The delivery format
 
 **This is what the SOP is for, and the format matters as much as the figures.**
 
