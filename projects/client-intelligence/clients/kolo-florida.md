@@ -172,9 +172,12 @@ the actual details.
   that nearly went missing on the 2025 return.
   🔴 **What the 2025 RETURN then does with them was decided on 2026-08-20: it reports them NET** —
   one contribution and no distributions. **The gross split is still how the figure is built and the
-  only record of what each side is made of; it is no longer how the return presents it.** ⚠️ **Do not
-  read this as a general rule** — the firm's [1120-S SOP](../../sops/form-1120s-preparation.md)
-  still states the gross presentation, and whether that changes is Lilian's to decide.
+  only record of what each side is made of; it is no longer how the return presents it.** 🔵 **And it IS the general rule now** — Julia decided on 2026-08-20 that where a shareholder's
+  contributions exceed their distributions the two are netted and distributions reported at zero, at
+  least for S-corp owners who took no reasonable salary. It is the firm's
+  [1120-S SOP](../../sops/form-1120s-preparation.md) **§5C-v**, with one hard boundary: **never where
+  there is accumulated E&P.** ⚠️ **Splitting the account gross stays mandatory** — the policy's own
+  test cannot be applied to a net figure.
 - ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
   thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
   bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
@@ -543,9 +546,10 @@ the actual details.
   own analysis forbids and the firm's SOP states as doctrine — a blank prior-year line is a *result*,
   not a convention, and 2024's came from netting round trips in a start-up year while 2025 is a
   wind-down whose outflows include personal spending that cannot be netted against anything.
-  ⚠️ **It reverses the 2026-08-19 position and conflicts with the firm's 1120-S SOP**, which still
-  states the gross presentation — a rule that came from this very client. **Whether the SOP changes
-  is Lilian's call and is queued in `sop-proposals.md`.** 🛑 **The ATX file predates the decision** and
+  ⚠️ **It reverses the 2026-08-19 position**, and the conflict with the firm's SOP — a rule that came
+  from this very client — was resolved the same day: 🔵 **Julia made it the general rule** (SOP
+  §5C-v), scoped to owners whose contributions exceed their distributions and who took no reasonable
+  salary, and barred where there is accumulated E&P. **This client is the pilot.** 🛑 **The ATX file predates the decision** and
   still carries the gross figures; **three fields must be re-keyed before transmission**, now the
   fourth blocker on this return. _(Worked by Lilian.)_
 - 2026-08-19 — **The shareholder capital account was split again, from scratch, and it held.**

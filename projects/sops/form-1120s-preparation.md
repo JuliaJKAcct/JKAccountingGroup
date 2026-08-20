@@ -550,14 +550,19 @@ and the balance sheet only ever needs the net.
 | Where it goes | Net enough? |
 |---|---|
 | Schedule L equity | ✅ yes — one figure |
-| **Schedule K line 16d** · **K-1 box 16 code D** | ❌ **gross distributions** |
-| **Schedule M-2 line 7** | ❌ **gross distributions** — a line of its own, *after* the combine |
+| **Schedule K line 16d** · **K-1 box 16 code D** | ❌ the ANALYSIS needs gross — 🔴 **but see §5C-v: the firm may PRESENT them netted** |
+| **Schedule M-2 line 7** | ❌ same — a line of its own, *after* the combine |
 | **Form 7203** | ❌ **both**, and distributions come off basis BEFORE losses (§12) |
 
 🔑 **So you cannot prepare an S-corp return from the balance sheet. Open the shareholder's ledger
 and total the debits and the credits separately.** A net movement of `+50,000` is equally consistent
 with *contributed 50,000, took nothing* and with *contributed 90,000, took 40,000* — and those two
 produce a different Form 7203, a different M-2, and a different K-1.
+
+🛑 **THE SPLIT IS ALWAYS MANDATORY, EVEN WHERE THE RETURN IS PRESENTED NETTED (§5C-v).** You cannot
+apply the firm's netting policy without it — its own test is *"are the contributions larger than the
+distributions?"*, which is unanswerable from a net figure. **Split first. Decide the presentation
+second.**
 
 ### 5C-iv · ⚠️ A debit in a capital account is not automatically a distribution
 
@@ -593,6 +598,88 @@ trips; the same owner in the closing year is drawing money out systematically an
 with it. **Same account, same convention, opposite result.** Do not carry a zero forward because
 last year had one, and do not treat the difference as evidence that one of the two returns is
 wrong.
+
+
+### 5C-v · 🔵 FIRM POLICY — net the account and report distributions at ZERO, where the tests are met
+
+> 🔑 **Julia's decision, 2026-08-20, and it is firm policy rather than a per-return judgement:**
+> **where a shareholder's contributions for the year EXCEED their distributions, net the two and
+> report distributions as ZERO.** **"At least"** for the case that prompted it — **S-corporation
+> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is Kolo Florida Inc's 2025
+> return, working paper §4 decision 8.)_
+
+**What that means on the forms.** One net contribution, and nothing on the distribution lines:
+
+| Line | Netted presentation |
+|---|---|
+| **Schedule K 16d** · **K-1 box 16 code D** | **0 / blank** |
+| **Schedule M-2 line 7** | **0** — ⚠️ in most software it **pulls from K 16d**; zero it there, do not type over line 7 |
+| **Schedule M-2 line 3** *(other additions)* | the **net** contribution |
+| **Form 7203 line 2** | the **same net figure** — 🔴 typed on the **K-1 input screen**, not on Form 7203 |
+| **Form 7203 line 6** | **0** |
+| **Schedule L** | unchanged — it always held the net |
+
+✅ **Both returns must carry the identical presentation.** If the shareholder's 1040 is prepared
+elsewhere, **say so in writing to whoever prepares it** — a K-1 with box 16D blank and a Form 7203
+line 2 at the gross figure is a mismatch nobody will catch.
+
+#### Why it is arithmetically safe — and the two conditions that make it so
+
+✅ **It moves nothing.** Schedule M-2 line 6 falls by the distributions and line 7 falls by the same,
+so **line 8 is unchanged**; Schedule L never moves; and on Form 7203, lines 2 and 5 fall while line 6
+falls by the same amount, so **line 7 onward — including the ending basis that opens next year — is
+identical.** **No tax moves, in either year, on either return.**
+
+✅ **Julia's own condition disposes of the basis risk automatically.** A distribution above basis is a
+**capital gain** (§1368(b)(2)) — but stock basis cannot start below zero, so **whenever contributions
+are at least as large as distributions, Form 7203 line 7 is positive by construction.** The rule
+cannot create a hidden gain. 🔑 **That is why the condition is "contributions exceed distributions"
+and not merely "the owner also contributed."**
+
+🛑 **THE ONE HARD BOUNDARY — ACCUMULATED E&P. DO NOT APPLY THIS RULE TO A FORMER C CORPORATION WITH
+AE&P.** The Form 1120-S instructions: an S corporation **with** AE&P *"must maintain the AAA to
+determine the tax effect of distributions"*, because under **§1368(c)** a distribution exceeding the
+AAA is a **DIVIDEND**. **Netting suppresses that ordering entirely and can turn taxable dividend
+income into nothing — that is not presentation, it is tax.** ⚠️ **Check Schedule B for C-corporation
+history before netting.** Without AE&P the neutrality above holds; with it, none of it does.
+
+#### ⚠️ What the netted return ASSERTS — say it to the client before anyone signs
+
+**Two statutory lines, on two returns:**
+
+1. **The corporation's return states that no distributions were made**, when money did reach the
+   shareholder. Line 16d's own instruction is affirmative — *"**Enter the total distributions
+   (including cash) made to each shareholder**…"*
+2. **The shareholder's Form 7203 line 2** — *"Basis from any capital contributions made"* — states
+   the **net**, which is smaller than what he actually contributed. **He signs that under penalties
+   of perjury.**
+
+ⓘ **The books are unchanged and still show both directions**, which is what an examination reads.
+
+#### 🔴 One thing this rule does NOT do, and it is the thing it was reached for
+
+**Netting does not reduce reasonable-compensation exposure, and on examination it probably worsens
+it.** The fact pattern is untouched: cash reached a shareholder-employee who took no salary. What
+changes is only that the marker is no longer visible on the face of the return — and
+*"reported no distributions while the money went to an officer with no salary"* is a **worse**
+posture than *"reported it, and documented why there was no salary."*
+
+🔑 **So do not let the netting substitute for the documented reasonable-compensation position.**
+Whatever defends it — a loss year, a wind-down, hours not worked, a market-rate analysis — **still
+has to be written down.** _(Recorded here because the policy's stated purpose is the salary case;
+the analysis is the firm's, and the decision is Julia's.)_
+
+#### How this sits with the rest of §5C
+
+- **§5C-iii still governs the ANALYSIS** — split the account gross, always. The policy's own test
+  cannot be applied to a net figure.
+- **§5C-iv still governs WHAT the debits are.** Round trips, distributions, personal spending —
+  🔑 **that classification decides the distributions TOTAL, which is what the test compares against
+  the contributions.** Getting it wrong gets the test wrong.
+- **The blank-prior-year rule below still stands, and is NOT support for netting.** *"Last year
+  reported no distributions"* remains a **result**, never a convention. ⛔ **Reach the zero through
+  the test in this section, never by copying a prior year.**
+
 
 ### 5C-ii · ⚠️ Line 12 is tax the COMPANY bears — sales tax collected is not one
 
@@ -1052,7 +1139,7 @@ one owner's slice of it.
 | **16c** | **Non-deductible expenses** | The disallowed half of meals, fines, and similar. ⚠️ Easy to forget — it reduces basis and AAA |
 | **9** | Net §1231 gain (loss) | ⚠️ **Separately stated.** Only the *ordinary* part of a Form 4797 gain goes on page 1 line 4 (Part II, line 17); a net §1231 gain comes here instead |
 | **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
-| **16d** | Distributions | Money paid out to shareholders during the year |
+| **16d** | Distributions | Money paid out to shareholders during the year — 🔵 **or ZERO under the firm's netting policy, §5C-v** |
 | **17d** | **§199A / QBI information** — Schedule K line 17d *Other items and amounts*; on the K-1 it is **box 17, code V** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
@@ -1272,11 +1359,11 @@ K-1 input, line 8a stayed blank, and ending basis was overstated in the year bef
 | Line | What it is | Where it comes from |
 |---|---|---|
 | **1** | Stock basis at the **beginning** of the corporation's tax year | 🔒 **line 15 of LAST year's Form 7203**, copied. If there is no prior 7203, build it from the capital account less prior losses and non-deductibles, and say in the file that it was derived |
-| **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii). 🛑 **The instructions exclude loans** — *"Don't include any loans to the S corporation"* — so gross credits are a starting point, not the answer |
+| **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii) — 🔵 **or the NET figure under the firm's netting policy, §5C-v**, in which case line 6 is zero and the two must move together. 🛑 **The instructions exclude loans** — *"Don't include any loans to the S corporation"* — so gross credits are a starting point, not the answer |
 | **3a–3m** | Income items that increase basis | ⚠️ **A LOSS DOES NOT GO HERE.** Line 3a says *"enter losses in Part III"*. 3k is tax-exempt income |
 | **4** | Add lines 3a through 3m | ƒ |
 | **5** | **Stock basis before distributions** — add lines 1, 2 and 4 | ƒ |
-| **6** | **Distributions** (excluding dividend distributions) | 📖 the **gross debits** — the same figure as Schedule K 16d and K-1 box 16D |
+| **6** | **Distributions** (excluding dividend distributions) | 📖 the **gross debits** — the same figure as Schedule K 16d and K-1 box 16D. 🔵 **Zero under the netting policy (§5C-v)**, with the net already inside line 2 |
 | **7** | **Stock basis after distributions** — line 5 − line 6 | ƒ ⚠️ if zero or less, enter **-0-**, skip lines 8–14 and put -0- on line 15 |
 | **8a–8c** | Non-deductible expenses · depletion · business credits | 8a is the Schedule K **16c** figure → **K-1 box 16 code C**. ⚠️ Blank **by rule** if a §1.1367-1(g) election is in effect — then it goes on **line 13**, with any prior-year carryover. ⓘ **8b is not a K-1 figure** — it is oil-and-gas depletion claimed on the shareholder's *personal* return |
 | **9** | Add lines 8a through 8c | ƒ |
@@ -1291,6 +1378,8 @@ K-1 input, line 8a stayed blank, and ending basis was overstated in the year bef
 than line 5, subtract line 5 from line 6 and report the result as a **capital gain on Form 8949
 and Schedule D**."* That is the one basis failure that creates income rather than postponing a
 deduction — and the form catches it for you **only if line 6 carries the real gross distributions**
+_(🔵 which is one reason §5C-v's netting is confined to years where contributions EXCEED distributions:
+line 7 is then positive by construction and there is no gain for the form to have to catch)_
 (§5C-iii).
 
 **Part II — Shareholder Debt Basis.** Zero for a shareholder who only contributed capital. The

@@ -495,7 +495,7 @@ ruling it is.**
 | **Box 12 other deductions** | Schedule A or Schedule 1, **by letter code** | 🔑 **charitable contributions (codes A–G) and investment interest expense (code H) hide here** |
 | Box 13 credits | the credit's own form, by code | |
 | **Box 14** Schedule K-3 attached | ☐/☑ | ☑ means a **foreign** package is coming; do not file without it |
-| **Box 16 C** nondeductible · **16 D** distributions | **Form 7203** lines 8a and 6 — **not the 1040 directly** | 🔑 the only two boxes that touch **basis** |
+| **Box 16 C** nondeductible · **16 D** distributions | **Form 7203** lines 8a and 6 — **not the 1040 directly** | 🔑 the only two boxes that touch **basis**. 🔵 **16D may be BLANK BY POLICY** — where the company netted contributions against distributions, Form 7203 line 2 carries the net and line 6 is zero _(the firm's rule, [1120-S SOP §5C-v](./form-1120s-preparation.md))_. **Both returns must carry the same presentation** |
 | **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
 | Boxes 18 · 19 more than one activity | the at-risk / passive analysis | ☑ means the single-activity shortcut is unavailable |
 
