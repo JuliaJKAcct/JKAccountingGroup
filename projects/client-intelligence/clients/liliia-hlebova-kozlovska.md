@@ -182,6 +182,14 @@ the actual details.
 
 ### Tax year 2025 — the review
 
+- **2026-08-19 → OPEN (Lilian) — THE HOME-OFFICE WORKING SHEET WAS BUILT AND HANDED OVER, AND ITS
+  FILING IS NOT CONFIRMED.** Lilian's rule: **the home-office figure on the return must have a
+  visible source document in Double**, so that anyone later can see where it came from — *"para que
+  se sepa de dónde salieron los números que pusimos en el Tax Return."* The sheet was produced in
+  the session and given to her, because **a session cannot upload a file to Double** (the tool opens
+  an interactive picker only a person can operate). ☐ **Whether it reached Double, and under what
+  filename, is unrecorded** — the return's working paper carries the open item.
+
 - **2026-08-20 (Lilian) — THE SCHEDULE C AND THE HOME OFFICE WERE READ BACK OFF THE PREPARED RETURN,
   AND THEY ARE CORRECT.** She asked for a check and her judgement was right. Three things it settled:
   - ✅ **The double-proration trap did not fire.** The software takes the home-office start date as

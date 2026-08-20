@@ -136,7 +136,55 @@ carried a blank Form 4797 and a blank Schedule D; **seven of twenty pages were e
 **Deleting them changes no figure.** Leaving them in invites a question you have no reason to
 answer.
 
-## §4 · Driving a REAL return — the delivery format
+## §4 · Driving a REAL return
+
+### 4A · 🛑 THE TRIGGER — *"prepárame el Tax Return de X cliente"*
+
+> 🔑 **Lilian, 2026-08-20, setting how every return starts from now on:** *"Te voy a decir: por
+> favor, prepárame el Tax Return de X cliente. Quiero que vayas a Double, [veas] qué es la
+> información que encuentres… y este mismo análisis que hicimos aquí con las tablas y las
+> explicaciones."*
+
+**That sentence is the whole instruction. It is not a request for a checklist of what to collect —
+it means: GO AND GET IT YOURSELF from Double, then deliver §4B.** ⛔ **Do not open by asking her what
+the client sent.** She is asking precisely so she does not have to assemble it.
+
+**Load [`double-mcp`](../double-mcp/) before the first Double call** — §2.2 governs organizer answers
+and **obliges you to say what you are about to pull, before you pull it, and to remind her to delete
+the session afterwards.**
+
+#### The four things to find, in this order
+
+| # | What | Where in Double | If it is missing |
+|---|---|---|---|
+| **1** | 🔴 **The TAX ORGANIZER the client completed** | `list_organizers` → `get_organizer_responses` for the year. ⓘ **Older clients' organizers are TaxDome-era files**, not Double organizers — look in `TaxDome/[Client]/1. Completed Tax organizers/` | **Say so and say what it costs.** A missing organizer does not stop a bookkeeping or Schedule-C client _(see [`tax-season-readiness`](../tax-season-readiness/) — those clients are not owed one)_, but it closes whole branches of income for anyone else |
+| **2** | 🔴 **THE FILES THE CLIENT UPLOADED FOR THIS RETURN** — the home-office worksheet, the P&L, the 1095-A, a lease, brokerage statements, a prior-year return, **anything at all** | `list_file_library` → `list_files`. Look in **`JK Accounting Group/Others/{year}`**, **`Tax Return Filed/{year}`**, **`1099/{year}`**, and the TaxDome tree — especially **`Client uploaded documents/`** and **`Taxes/{year}/`** | ⚠️ **Look in ALL of them before concluding anything is absent** — the two structures coexist and a client's documents may sit in either _([`method.md`](../../../projects/pre-return-review/method.md) rule 1)_ |
+| **3** | **Everything else the client sent for this purpose** | Double **notes** (`list_notes`), **tasks**, the **tax project**, the client's **custom properties**, and 🔑 **the [Client Intelligence file](../../../projects/client-intelligence/clients/)** — which is the memory of every prior session on this client | 🔑 **And close the gap since the last sweep** — Julia's Gmail, Ping transcripts, Drive. The weekly sweep means anything newer is missing by construction *(CLAUDE.md)* |
+| **4** | **The PRIOR-YEAR RETURN** | Double, through **[`tools/redact-doc/`](../../../tools/redact-doc/)** — ⛔ **one year only**, the latest before the year being prepared. **Never from a subagent, never from a scheduled session** | 🛑 **§1's method depends on it.** Without it, say which conventions you cannot reproduce rather than guessing them |
+
+🔑 **THEN REPORT WHAT YOU FOUND BEFORE YOU COMPUTE ANYTHING** — a short list of what is in hand and
+what is not, so she can hand over the missing piece before the analysis is built on a hole.
+⛔ **And never write what you did not find as what is not there** — name the search, not the world
+_(method.md rule 1b)_.
+
+ⓘ **This is NOT the pre-return review.** If the question is *"what do we ask this client?"* rather
+than *"prepare the return"*, that is the [`organizer-review`](../organizer-review/) skill — nine
+sources, a findings list, a question list. **The two share their sources and differ in their
+output**: that one ends in questions, this one ends in the tables below. **Run that one first when
+the return cannot yet be worked.**
+
+#### 🔒 The privacy rules that ride along, every time
+
+- **Client figures live in [`projects/tax-returns/`](../../../projects/tax-returns/) only** — never
+  in an SOP, a skill, or a client-intelligence file, all of which publish to the Knowledge Hub.
+- ⛔ **Never anywhere: SSN/ITIN, bank or card numbers, residential street addresses, dates of birth,
+  logins.** A business EIN is the one exception.
+- **Say before the first organizer call what it will bring into the conversation, and remind her to
+  delete the session when the work is done** _(double-mcp §2.2)_.
+
+---
+
+### 4B · The delivery format
 
 **This is what the SOP is for, and the format matters as much as the figures.**
 
