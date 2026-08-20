@@ -225,8 +225,10 @@ cost"* is what makes it stick and what lets her catch the next one herself.
 7. **Separate a fact from a decision.** Anything a reviewer could ask *"why did you do that?"*
    about is a **decision**: present the options and **let Lilian rule**. Positions are hers.
 8. ⚠️ **Never answer a shareholder-level question from the balance sheet.** Contributions and
-   distributions net inside one capital account; the return needs both halves. **Ask for the
-   ledger.**
+   distributions net inside one capital account; **the ANALYSIS needs both halves — always**, and
+   how the return then presents them is a separate question with its own rules (the firm may net
+   them to zero: [1120-S SOP §5C-v](../../../projects/sops/form-1120s-preparation.md)). **Ask for
+   the ledger.**
 9. 🔑 **Distinguish the IRS FORM from the SOFTWARE.** A field on the screen is not necessarily a
    field on the form, and the difference is exactly where a preparer loses an afternoon. Say which
    is which — *"there is no date on Form 8829; the date you are typing is ATX's, and it drives the

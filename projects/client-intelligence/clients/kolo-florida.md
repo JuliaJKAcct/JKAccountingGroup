@@ -531,8 +531,14 @@ the actual details.
   in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
   pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
   ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
-- 2026-08-20 — **THE RETURN REPORTS THE SHAREHOLDER ACCOUNT NET.** Lilian directed that the money in
-  and the money out be netted, so the 2025 return shows **one contribution and no distributions**
+- 2026-08-20 — **THE RETURN REPORTS THE SHAREHOLDER ACCOUNT NET — JULIA's decision, relayed by
+  Lilian, and it is FIRM POLICY rather than a ruling on this one return.** Where a shareholder's
+  contributions for the year exceed their distributions, the two are netted and distributions
+  reported at zero — *"at least"* for S-corporation owners who took no reasonable salary. **This
+  company is the pilot**, and the rule is written up as
+  [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) with **five gates** that must all pass
+  first. Here the money in
+  and the money out are netted, so the 2025 return shows **one contribution and no distributions**
   rather than the two directions separately. ✅ **The books support the figure** — a single named
   capital account, and the net is the ledger's own total for it. ✅ **Arithmetically neutral**: the
   accumulated-adjustments balance, every line of the balance sheet and the shareholder's ending stock
