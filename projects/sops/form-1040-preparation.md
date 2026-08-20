@@ -6,7 +6,10 @@
 > home-office **IN/OUT rule**, the **first-landline** limit, the two **lease** traps, the **Form 8829
 > line map**, the **two-dates** rule (M2), the **Form 8962 filling order + Part IV**, **line 34**,
 > the **divorced-parents procedure**, the **below-100%-FPL checkbox** (M4) and the **Dependents-tab
-> rule for Schedule EIC** (M6).
+> rule for Schedule EIC** (M6), and on **2026-08-20** with the **Form 8829 rounding rule**
+> (multiply by line 7 **as printed**), the **date-field proration** self-check and its ATX answer,
+> the **line-H** two-trigger reading, and the ATX home-office **worksheet identity block** — 🔴 **fill
+> the *Description* every time; it is a blocking red error** (M2).
 > · **Owner:** Lilian
 >
 > ⬜ **No Atlas render yet.** [`sop-authoring`](../../.claude/skills/sop-authoring/) requires every
@@ -276,6 +279,41 @@ people miss: *"Use a **separate Form 8829 for each home** you used for business 
 🛠️ **In ATX you do not open Form 8829 directly — you fill in the *Home Office Expenses* worksheet,
 and ATX builds the 8829 from it.** _(Lilian, 2026-08-19.)_ Same for the software's date fields: they
 feed the form, they are not on it.
+
+#### 🛠️ ✏️ FILL THE WORKSHEET'S OWN FIELDS FIRST — the *Description* is REQUIRED and blocks the return
+
+**Before any amount, fill in the worksheet's identity block.** These are **ATX's fields — none of
+them exists on Form 8829**, which carries no description and no address anywhere. ⛔ **So there is
+nothing to look up**, and a preparer who leaves them alone hits a red error with no way to research
+the answer.
+
+| Field | ✏️ **What to type** | Required? |
+|---|---|---|
+| **Description of Home Office** | 🔴 **ALWAYS FILL IT.** A short label naming **the business and the home**, in English, **plain ASCII** — the pattern is `<the business> - <which home>`. Examples: `Consulting services - home office` · with two homes, name each: `Consulting - first home (Jan-Aug)` and `Consulting - second home (Sep-Dec)` | 🔴 **YES.** ATX prints *"Description of Home Office is required"* as a **red error** and will not let the return go |
+| Home Office Number | leave ATX's default (`Home Office 1`) unless there is a second | auto |
+| **Address / City / State / Zip** | ⓘ **Not flagged as required** on the one return observed *(2026-08-20)*, and 🔴 **what ATX does with this block is NOT ESTABLISHED.** **If** it feeds Schedule C line E, then blank is right where the office is at the page-1 address — *"If you conducted the business from your home located at the address shown on page 1 of your tax return, you don't have to complete this line."* ⚠️ **That is an analogy from a different form's rule, not a finding.** **Establish it the way the date field below was established**: fill it, print the set, and see where it lands. **Fill it whenever the office is at a property OTHER than the page-1 address** | not observed as required |
+| Daycare ☐ | tick only for a daycare facility (it opens Form 8829 lines 4–6) | no |
+| Simplified (Safe Harbor) ☐ | ⚠️ **not a default either way** — 🛑 the module's own rule is **compute BOTH methods and take the better.** Tick it only once that comparison has been done and simplified won | no |
+| *disposed / converted to non-business use* ☐ | tick **only** if the space stopped being a home office during the year | no |
+| *(provenance)* | ⓘ **Only the Description is established as blocking.** The rest of this block is described from one observed return; **none of it is on an IRS form**, so treat any row here as vendor behaviour until it has been tested _(part 8 rule 1: mark it as the SOFTWARE's, never the IRS's)_ | |
+
+🔑 **The Description is the LABEL, and it is the only field that needs to be** — Form 8829's own
+header says *"Use a separate Form 8829 for each home you used for business during the year"*, so with
+two homes the two Descriptions are what tell them apart. ⛔ **Do not use the address block for that**;
+it is for a home that is **not** the page-1 address.
+
+⚠️ **DESCRIBE THE BUSINESS, NOT WHAT ELSE THE ROOM IS.** The label is free text **the firm authored**,
+and it sits in the file next to a **§280A(c)(1) exclusive-use** position we may not yet be able to
+evidence. 🔴 **Never write a word that argues against that position** — *"spare bedroom"*, *"guest
+room"*, *"corner of the living room"* are the examiner's phrases, not ours. **Name the business and
+the home; say nothing about the room's other uses.**
+
+ⓘ **One home used by TWO businesses is a different axis** and is not solved by the label: the
+instructions for line 36 say to *"allocate the amount shown on line 36 to each business"*. **One
+Form 8829 per HOME; the allocation across businesses happens inside it.**
+
+📌 **Fill this every time, as the first step of the worksheet.** It costs ten seconds at the start
+and is a blocking red error at the end.
 
 ⚠️ **There is a circularity, and it catches everyone.** Form 8829 **line 8** asks for **Schedule C
 line 29** — the tentative profit *before* the home office. So the order is:
@@ -1503,6 +1541,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] **Form 8829 line 8 traces to Schedule C line 29** (plus/minus the two adjustments in that line's own text), and Schedule C line 30 = **Form 8829 line 36**
 - [ ] One **Form 8829 per home** used for business during the year
 - [ ] **No cost appears BOTH in the home-office worksheet and on line 25** — the internet and the telephone are the usual double-count.
+- [ ] 🔴 **The home-office worksheet's *Description* is filled in** — ATX's own field, a **blocking red error** when blank, and there is nothing to look up because it is on no IRS form. ✏️ **`<the business> - <which home>`**, plain ASCII, e.g. `Consulting services - home office`. ⚠️ **Never name what else the room is** (§280A(c)(1))
 - [ ] The **rent used is what THIS taxpayer paid**, reconciled against the lease — not the lease amount, where it is a share.
 - [ ] Where a policy is shared: the shares **cover the policy with no overlap and no gap** for the
       same months — in the ordinary case they add to **100%** — and every return sharing it carries
