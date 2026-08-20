@@ -182,6 +182,26 @@ the actual details.
 
 ### Tax year 2025 — the review
 
+- **2026-08-20 (Lilian) — THE SCHEDULE C AND THE HOME OFFICE WERE READ BACK OFF THE PREPARED RETURN,
+  AND THEY ARE CORRECT.** She asked for a check and her judgement was right. Three things it settled:
+  - ✅ **The double-proration trap did not fire.** The software takes the home-office start date as
+    documentation and does **not** prorate the expense figures a second time, so entering
+    period-only amounts is right. **Recorded in the working paper so next year does not re-derive
+    it** — ⚠️ **but that finding is for a RENTER**; for a homeowner the same date drives depreciation.
+  - 🔴 **One correction, and the WORKING PAPER was the thing that was wrong, not the return.** The
+    business-use percentage is multiplied **as printed on the form**, not recomputed from the raw
+    floor-area fraction — the form's own line says *"multiply by line 7"*. The paper had used the
+    unrounded fraction and was a dollar low, which then moved the profit, the self-employment tax,
+    the AGI and the refund by a dollar each. **The credits did not move.**
+  - 🟠 **Two entries left open on the return**, neither a figure: the home office has **no
+    Description**, which the software is flagging as a required field, and **Schedule C's
+    "started this business during the year" box is ticked** — that box describes the *business*, not
+    the home office, and twelve months of telephone say she was trading all year. **Ask her when the
+    consulting work actually began.**
+  - 🔑 **The general lesson, now in the 1040 SOP:** when a hand-check disagrees with the software by
+    a dollar on a percentage line, **the form's own wording decides which is right** — and here it
+    was the software.
+
 - **2026-08-19 (Lilian, in the software, later still) — THE ENTRY ROUTE: where a figure is actually
   TYPED, which is usually not the form it appears on.** Working her return, Lilian found that the
   analysis gave every line of a form and its arithmetic and **still could not be entered**, because

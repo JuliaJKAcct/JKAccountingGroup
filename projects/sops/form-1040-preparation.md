@@ -319,10 +319,40 @@ Schedule C line 30  →  line 31
 **business part of the home only**, deducted at **100%** (painting just that room). **(b) Indirect
 expenses** = costs of the **whole home**, deducted at the line-7 percentage. Most entries are (b).
 
-⚠️ **Line 3 asks for a percentage, and how many decimals survive is a software convention, not a
-form rule** — the printed box is blank with a trailing `%`. A percentage rounded to two decimals
-gives a different answer from the full fraction — usually a dollar, occasionally more. **Let the
-software carry it**, and if you are checking by hand, expect the wobble.
+🔑 **CHECKING LINE 24 BY HAND — RECONCILE TO THE LINE 7 THE FORM ACTUALLY PRINTS.** Line 3 asks for
+the result *"as a percentage"* and line 24 says *"Multiply line 23, column (b), by **line 7**"* — so
+**line 24 must equal line 23(b) × the number sitting on line 7**, whatever precision that number is
+shown to. ⛔ **A hand-check that re-divides the square footage is checking a different sum**, and on
+most bases it disagrees by a dollar.
+
+⚠️ **HOW MANY DECIMALS SURVIVE IS NOT SETTLED BY ANY AUTHORITY.** Neither Form 8829, its
+instructions (*"square feet or any other reasonable method"*) nor Pub 587 fixes the precision of
+line 3, and §280A permits any reasonable allocation. **Two decimals is what ATX prints, not what the
+IRS requires.** 🔑 **So the rule is the reconciliation, never the decimal count** — against a package
+that prints more decimals, "correcting" to two would produce a figure that package's own form
+contradicts. _(Pub 587's Rene example multiplies line 23(b) by the printed two-decimal line 7, which
+supports the practice; it does **not** settle it, because both routes give the same answer there.)_
+
+⚠️ **And the inputs are whole dollars.** A pro-rated renter's premium of `18.75` is entered as `19`,
+so line 23 column (b) is the sum of the **already-rounded line entries**. _(That is the Form 1040
+rounding rule read correctly: include cents when adding amounts to figure ONE line's entry, but
+line 23 adds **lines**, each already rounded.)_
+
+**The illustration** — a 50 ft² office in a 600 ft² home, printing line 7 as `8.33%`:
+
+| Indirect expenses | ✅ **× line 7 as printed** | ❌ Re-divided by 50 ÷ 600 | Line 24 |
+|---|---|---|---|
+| 12,000 | `× 8.33%` = 999.60 | `× 0.08333…` = 1,000.00 | **1,000** either way |
+| 12,500 | `× 8.33%` = 1,041.25 | `× 0.08333…` = 1,041.67 | 🔴 **1,041** vs 1,042 |
+
+🔑 **Same home, same percentage — and the two routes part company as soon as the base changes**,
+which is why "it agreed last year" proves nothing. ⛔ **Reconcile to the form; a working paper that
+disagrees with it is the thing to correct.**
+
+_(This cost a dollar on a real return, and it travelled: Schedule C line 31, the self-employment tax,
+the AGI and the refund each moved by one. **The credits did not** — the earned-income bracket is $50
+wide, so the dollar landed inside it. **That is luck, not design**; a dollar that crosses a bracket
+boundary is worth hundreds.)_
 
 #### 📅 The two DATES — and neither Schedule C nor Form 8829 asks for one
 
@@ -342,8 +372,10 @@ business start DATE:**
 well. **Schedule C and Form 8829 do not.**
 
 🛠️ **So a date field on THIS screen belongs to the SOFTWARE, not the IRS.** ATX's Home Office
-worksheet carries the date business use of the home began, and that is what drives the part-year
-proration onto line 24. The IRS only ever sees the result.
+worksheet carries the date business use of the home began. ⚠️ **What that field DOES with the
+amounts you type is a vendor behaviour and must be established, never assumed** — it may prorate
+them or it may treat the date as documentation. **The self-check that settles it is below.** The IRS
+only ever sees the result. _(Established for ATX 2026-08-20: it does **not** prorate — see below.)_
 
 🔑 **THE BUSINESS AND THE HOME OFFICE RUN ON TWO DIFFERENT CLOCKS, and that is perfectly normal.**
 A business that started **1 January** with a home office only from **1 September** is a completely
@@ -358,6 +390,28 @@ use your home for business purposes."*
   are **business expenses in those earlier months** (phone, internet, mileage) that nobody has asked
   for. And if there was a workspace at a **previous home**, that is a **second Form 8829** — the
   form's own header says one per home.
+
+🛑 **AND THE CHECKBOX IS A CLAIM ABOUT THE BUSINESS, NOT ABOUT THE HOME OFFICE.** Line H —
+*"If you started or acquired this business during 2025, check here"* — is ticked from the **business**
+start date. ⛔ **A home office that began mid-year is not a business that began mid-year**, and the
+software will not tell them apart. **The tell that catches it: twelve months of telephone on line 25
+beside a September home-office date** means the business ran all year and may well predate the year.
+
+🛠️ **THE SOFTWARE'S HOME-OFFICE START DATE — does it prorate the amounts you type?** It is not on any
+IRS form, so it is a vendor field and its behaviour must be established, not assumed. **The trap is
+symmetric:** enter period-only amounts into a worksheet that prorates again and the deduction
+collapses to roughly a third; enter full-year amounts into one that does not and it is three times
+too big.
+
+🔑 **Settle it with a self-check that does not require knowing the answer first**, then **record the
+answer in the client's working paper** so next year does not re-derive it: enter the **period-only**
+amounts, then read **line 23 column (b)** and **line 24**. If line 24 ≈ line 23(b) × the full
+business-use percentage, there is no second proration. **If it comes out near a third of that, there
+is** — switch to full-year amounts.
+
+✅ **ATX, established 2026-08-20 on a live return: it does NOT prorate.** The date is documentation
+only, and **period-only amounts are correct.** ⚠️ **That finding is for a RENTER.** For a homeowner
+the same date drives **depreciation** in Part III, where it genuinely must be right.
 
 #### 🔑 What goes INTO the computation — and what emphatically does not
 
@@ -640,9 +694,24 @@ is 0, line 10 equals line 7, and **line 15 is too high by exactly the nondeducti
 the form internally consistent from top to bottom. **Nothing flags it.** The only symptom is that
 **next year's opening basis is wrong**, which surfaces years later, or never.
 
-_(Live case, 2026-08-19: on a real return line 8a was blank and ending stock basis was overstated by
-the box 16C amount, in the year before the company's liquidation. The form footed perfectly. **Caught
-only because the preparer sent a screenshot.**)_
+🛑 **AND THE OTHER HALF, WHICH THE FIRST ONE HIDES: A WRONG FIGURE ON A COMPUTED LINE MEANS A WRONG
+INPUT — AND THE FORM WILL NEVER TELL YOU WHICH.** A mistyped input is *not* a smaller version of a
+missing one; it is a second cause with the **same symptom.** Type line 2's contribution with two
+digits transposed and lines 5, 7, 10 and 15 all recompute **correctly** off the wrong figure. ⛔ **So
+never diagnose the line that is wrong. Diagnose what feeds it.**
+
+🔑 **THE ONLY DEFENCE, and it belongs in the tie-outs as its own row:
+RECOMPUTE LINE 15 BY HAND — `1 + 2 + 4 − 6 − 9 − 14` — off the figures that SHOULD feed it, on the
+PRINTED form, after every re-key.** "Check the form" is not a check: the form agrees with itself by
+construction. **Add the numbers yourself.**
+
+_(Live case, one return, two read-backs eight days apart, the same line both times — and both times
+the form footed perfectly. **2026-08-19:** line 8a blank, ending stock basis overstated by exactly the
+box 16C amount, because that box never reached the input screen — a **missing** input. The box was
+fixed. **2026-08-20:** ending stock basis **still** overstated, now by a smaller amount, because the
+contribution on line 2 had been typed with two digits transposed — a **wrong** input. Both in the year before the company's
+liquidation, on the line that **opens** that year. **Caught only because the preparer sent a
+screenshot, twice.**)_
 
 🛑 **Three checks, every time:**
 - [ ] **Line 1 = last year's line 15**, to the dollar
@@ -1444,7 +1513,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] A K-1 loss clears **all four** limitations, in order — basis (7203) · at-risk (6198) · passive (8582) · excess business loss (461).
 - [ ] Form 7203 line 1 = **last year's line 15**.
 - [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** (M3)
-- [ ] **Form 7203 line 15 recomputed by hand** — it is next year's opening basis, and on a company heading for a final return it opens the liquidation computation
+- [ ] 🛑 **Form 7203 line 15 RECOMPUTED BY HAND on the printed form** — `line 1 + 2 + 4 − 6 − 9 − 14` — **and each input compared digit by digit with the figure that should feed it.** ⚠️ **A mistyped input produces a form that recomputes correctly and flags nothing**, so nothing in the software catches it. **Re-run after every re-key.** 🔑 **It is next year's opening basis, and on a company heading for a final return it opens the liquidation computation** (M3)
 - [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.
 - [ ] The refund account belongs to **this** taxpayer.

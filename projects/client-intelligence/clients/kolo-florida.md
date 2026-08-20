@@ -531,6 +531,14 @@ the actual details.
   in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
   pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
   ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
+- 2026-08-20 — **THE SHAREHOLDER'S BASIS FORM WAS READ BACK ON THE PERSONAL RETURN AND IS STILL
+  WRONG — for the second time, from a different cause.** The first was a missing input; this one is a
+  **transposition in a typed input**. ✅ Everything else on that form is now correct, including the
+  netted presentation. 🔑 **Both errors produced a form that footed perfectly**, because a computed
+  line always agrees with whatever fed it. ⛔ **The company's own return has not been read back at
+  all**, and the equivalent figure on its Schedule M-2 must be checked digit by digit for the same
+  keystroke — there it would show up as the accumulated-adjustments balance no longer agreeing with
+  the balance sheet.
 - 2026-08-20 — **THE RETURN REPORTS THE SHAREHOLDER ACCOUNT NET — JULIA's decision, relayed by
   Lilian, and it is FIRM POLICY rather than a ruling on this one return.** Where a shareholder's
   contributions for the year exceed their distributions, the two are netted and distributions

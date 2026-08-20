@@ -325,6 +325,28 @@ try to type into it. **Ask what feeds it, and go there.**
 flagged, and the only symptom is a final figure that is quietly wrong by the amount of the missing
 input. **It is the hardest defect on a return to see and the easiest to prevent.**
 
+🛑 **AND THE SECOND HALF OF THE SAME DIAGNOSTIC, which the first one hides:
+A WRONG LINE ON A COMPUTED FORM MEANS A WRONG *INPUT*, AND THE FORM WILL NEVER TELL YOU WHICH.**
+A computed line is *always* internally consistent with whatever fed it — **so a mistyped input
+produces a form that adds up perfectly and is wrong from that line down.** Blank input, mistyped
+input: **two unrelated causes, one identical symptom.** ⛔ **Never diagnose the line that is wrong —
+diagnose what feeds it.**
+
+🔑 **Therefore the defence is TWO checks, and they must be written into the tie-outs as their own
+row, because each misses what the other catches:**
+1. **RECOMPUTE THE FINAL FIGURE BY HAND**, off the figures that *should* feed it, on the **PRINTED**
+   form, after every re-key. Not "check the form" — the form agrees with itself by construction.
+   **Add the numbers yourself.**
+2. **COMPARE EACH INPUT DIGIT BY DIGIT** against its source. This is what names *which* input is
+   wrong once check 1 says something is.
+
+_(Both halves came off one return, eight days apart, on the same line of the same form. Ending stock
+basis was **overstated by exactly the nondeductible-expenses box**, because that box never reached
+the input screen — a **missing** input. The box was fixed, and the next read-back was **still**
+overstated, now by a smaller amount, because the contribution had been typed with two digits
+transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
+opens the following year, so both would have travelled.)_
+
 **So every line table carries a column for it**, and the working paper keeps it:
 
 | Line | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |
