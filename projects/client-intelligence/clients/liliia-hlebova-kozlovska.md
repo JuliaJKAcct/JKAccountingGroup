@@ -182,14 +182,6 @@ the actual details.
 
 ### Tax year 2025 — the review
 
-- **2026-08-19 → OPEN (Lilian) — THE HOME-OFFICE WORKING SHEET WAS BUILT AND HANDED OVER, AND ITS
-  FILING IS NOT CONFIRMED.** Lilian's rule: **the home-office figure on the return must have a
-  visible source document in Double**, so that anyone later can see where it came from — *"para que
-  se sepa de dónde salieron los números que pusimos en el Tax Return."* The sheet was produced in
-  the session and given to her, because **a session cannot upload a file to Double** (the tool opens
-  an interactive picker only a person can operate). ☐ **Whether it reached Double, and under what
-  filename, is unrecorded** — the return's working paper carries the open item.
-
 - **2026-08-20 (Lilian) — THE SCHEDULE C AND THE HOME OFFICE WERE READ BACK OFF THE PREPARED RETURN,
   AND THEY ARE CORRECT.** She asked for a check and her judgement was right. Three things it settled:
   - ✅ **The double-proration trap did not fire.** The software takes the home-office start date as
@@ -209,6 +201,14 @@ the actual details.
   - 🔑 **The general lesson, now in the 1040 SOP:** when a hand-check disagrees with the software by
     a dollar on a percentage line, **the form's own wording decides which is right** — and here it
     was the software.
+
+- **2026-08-19 → OPEN (Lilian) — THE HOME-OFFICE WORKING SHEET WAS BUILT AND HANDED OVER, AND ITS
+  FILING IS NOT CONFIRMED.** Lilian's rule: **the home-office figure on the return must have a
+  visible source document in Double**, so that anyone later can see where it came from — *"para que
+  se sepa de dónde salieron los números que pusimos en el Tax Return."* The sheet was produced in
+  the session and given to her, because **a session cannot upload a file to Double** (the tool opens
+  an interactive picker only a person can operate). ☐ **Whether it reached Double, and under what
+  filename, is unrecorded** — the return's working paper carries the open item.
 
 - **2026-08-19 (Lilian, in the software, later still) — THE ENTRY ROUTE: where a figure is actually
   TYPED, which is usually not the form it appears on.** Working her return, Lilian found that the
@@ -253,6 +253,7 @@ the actual details.
 ### Information still needed
 
 - [x] ~~Whether her ex-husband will sign **one Form 8332**~~ — ⛔ **moot from 2026-08-19**: all three children live with her, so there is nothing to release
+- [ ] 🔴 **HER OWN SSN, valid for employment — and each child's, issued on or before the due date.** **Every refundable credit on her 2025 return rests on this**, and it is the single largest thing the return depends on. 🆕 **New for 2025 the TAXPAYER must have a valid SSN to claim the child tax credit or the additional child tax credit**, not only the children — and the earned income credit has always required one valid for employment. ⚠️ **An ITIN child is neither a CTC child nor an EIC child.** 🔑 **Worth surfacing early in a recently-arrived household**, and the firm runs an ITIN practice, so the two are easy to conflate.
 - [ ] **Substantiation for her 2025 income** — no 1099 or other income document is on file
 - [ ] Who the company's 2025 `Contract Labor` payee was — **if it is her, it is additional Schedule C receipts**
 - [ ] The **business-use percentage of her phone** — it is one phone with a plan change, not two lines

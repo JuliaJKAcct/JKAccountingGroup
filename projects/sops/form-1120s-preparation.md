@@ -488,7 +488,7 @@ is a stop sign and the other is a lead.)_
 | **D** | Employer identification number | Prior return, or the client's Double record |
 | **E** | Date incorporated | Prior return |
 | **F** | **Total assets** | 📖 **read** off the balance sheet — the `Total for Assets` line. **It is not a calculation.** But it has two free cross-checks, and both must hold: `= current assets + fixed assets + other assets`, **and** `= total liabilities + total equity`. ⚠️ **It goes in TWO places on the return** — here in the header **and** on **Schedule L line 15** (end-of-year column) — and they must be the same number. It is also what the $250,000 question in Schedule B measures (§6) |
-| 🔴 **G** | 🛑 **ANSWER IT — Yes or No. NEVER LEAVE IT BLANK.** *"Is the corporation electing to be an S corporation **beginning with this tax year**?"* ⚠️ **The software does NOT flag a blank G as an error** — ATX lets the return through with neither box ticked, so nothing will remind you _(Lilian, 2026-08-20, from a live return)_. **Almost always `No`**: an existing S corporation elected in an earlier year, and item **A** already carries that date. **`Yes` only where THIS year is the first S year.** 🔑 **And if it is `Yes`, the instruction attaches work:** *"If 'Yes,' **attach Form 2553** if not already filed."* Form 2553 is generally due within **2 months and 15 days** of the start of the year the election takes effect, so **a 2553 filed with the 1120-S is normally a LATE election** — relief is requested on the 2553 itself under *Relief for Late Elections*. ⛔ **Do not tick `Yes` merely because the company is young.** The question is about the ELECTION's first year, not the company's | The **prior-year return** (an S return exists → the election predates this year) and item **A**. ⚠️ **Do not confuse this with Schedule K-1 item G**, which is a shareholder's ownership percentage — a different item on a different form |
+| 🔴 **G** | 🛑 **ANSWER IT — `Yes` or `No`. DO NOT LEAVE IT BLANK.** *"Is the corporation electing to be an S corporation **beginning with this tax year**?"* 🔑 **Answer it because it is a factual question on a return someone signs** — not because the software will stop you. ⚠️ **The instructions say nothing about the item being mandatory and nothing about what a blank does**, and **ATX raises no in-form diagnostic for one** *(Lilian, 2026-08-20 — one return, one version)*. ⛔ **Whether a blank G survives e-file validation is NOT established** — that return has not been transmitted. **Treat this as a vendor observation, never as an IRS rule.** **Almost always `No`**: an existing S corporation elected in an earlier year. **`Yes` only where THIS year is the first S year.** 🔑 **And `Yes` attaches work:** *"If 'Yes,' **attach Form 2553** if not already filed."* The 2553 is generally due within **2 months and 15 days** of the start of the year the election takes effect, so **a 2553 filed with the 1120-S is normally a LATE election** — relief is requested on the 2553 itself under *Relief for Late Elections*. ⛔ **Do not tick `Yes` merely because the company is young.** The question is about the ELECTION's first year, not the company's | **For `No`:** an accepted **prior-year 1120-S** exists, so the election predates this year. **For `Yes`:** the **Form 2553** — its effective date is also what goes in item **A**. ⚠️ **Item A is corroboration, not proof** — a prior return prepared elsewhere can carry an item A that is impossible *(a date before the company was incorporated)*; if the two disagree, **record the disagreement and answer G from the prior return's existence.** 🔑 **Not to be confused with Schedule K-1 item G, *"Current year allocation percentage"*** — which equals the ownership percentage **only if no shareholder or interest changed during the year**; otherwise it is a per-day weighted figure. Different item, different form |
 | **H(1)** | 🛑 **Final return** | **Only tick this if this is the LAST year the company exists.** A company that closes *next* year is not a final return *this* year. Ticking it early tells the IRS the entity is gone |
 | **H(2)–(5)** | Name change · address change · amended · S election termination | Normally all unticked |
 | **I** | Number of shareholders | Count the K-1s |
@@ -1551,7 +1551,7 @@ rounding difference.
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
       across all K-1s
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
-- [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **The software does not flag it**, so this checklist is the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
+- [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **No in-form diagnostic was raised for a blank on the one return observed**, so this checklist may be the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
 - [ ] 🔵 **IF THE RETURN IS NETTED UNDER §5C-v** — all six, and the last three are the ones that
       catch a bad gate:
       - [ ] **Schedule K 16d = 0** and **every K-1 box 16D blank**
@@ -1587,11 +1587,13 @@ rounding difference.
 Each of these has bitten a real return.
 
 0. 🔴 **Leaving page 1 item G blank.** *"Is the corporation electing to be an S corporation beginning
-   with this tax year?"* is a **required Yes/No**, and **ATX does not flag the blank** — the return
-   goes out with neither box ticked and nothing ever said so. 🔑 **The general lesson is bigger than
-   this box: the absence of a software error is not evidence that a field is complete.** A vendor's
-   diagnostics catch what the vendor chose to catch. **The checklist in §14 is the backstop, and it
-   only works if it is actually run.** _(Lilian, 2026-08-20, from a live return.)_
+   with this tax year?"* is a factual Yes/No on a signed return, and **ATX raises no in-form
+   diagnostic for a blank** *(Lilian, 2026-08-20 — one return, one version; whether e-file validation
+   catches it has **not** been tested, that return has not been transmitted)*.
+   🔑 **The general lesson is bigger than this box, and it is not about ATX: the absence of a
+   software error is not evidence that a field is complete.** A vendor's diagnostics catch what the
+   vendor chose to catch, and nothing else. **The checklist in §14 is the backstop, and it only works
+   if it is actually run.**
 
 1. 🛑 **Treating the P&L's net income as ordinary business income.** It is not. The difference is Schedule M-1,
    and on a small return it is usually the meals disallowance and unrecorded depreciation.
