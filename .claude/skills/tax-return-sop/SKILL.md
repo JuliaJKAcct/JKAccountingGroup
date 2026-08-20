@@ -332,15 +332,19 @@ produces a form that adds up perfectly and is wrong from that line down.** Blank
 input: **two unrelated causes, one identical symptom.** ⛔ **Never diagnose the line that is wrong —
 diagnose what feeds it.**
 
-🔑 **Therefore the ONLY defence, and it must be written into the tie-outs as its own row:
-RECOMPUTE THE FINAL FIGURE BY HAND, off the figures that SHOULD feed it, on the PRINTED form, after
-every re-key.** Not "check the form" — the form agrees with itself by construction. **Add the
-numbers yourself.**
+🔑 **Therefore the defence is TWO checks, and they must be written into the tie-outs as their own
+row, because each misses what the other catches:**
+1. **RECOMPUTE THE FINAL FIGURE BY HAND**, off the figures that *should* feed it, on the **PRINTED**
+   form, after every re-key. Not "check the form" — the form agrees with itself by construction.
+   **Add the numbers yourself.**
+2. **COMPARE EACH INPUT DIGIT BY DIGIT** against its source. This is what names *which* input is
+   wrong once check 1 says something is.
 
 _(Both halves came off one return, eight days apart, on the same line of the same form. Ending stock
-basis read **+252** because a K-1 box never reached the input screen — a **missing** input; the box
-was fixed, and the next read-back showed **+90** because the contribution had been typed with two
-digits transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
+basis was **overstated by exactly the nondeductible-expenses box**, because that box never reached
+the input screen — a **missing** input. The box was fixed, and the next read-back was **still**
+overstated, now by a smaller amount, because the contribution had been typed with two digits
+transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
 opens the following year, so both would have travelled.)_
 
 **So every line table carries a column for it**, and the working paper keeps it:
