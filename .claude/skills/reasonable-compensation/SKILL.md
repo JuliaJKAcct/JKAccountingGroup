@@ -43,7 +43,12 @@ hats. Collect:
 - Industry (and NAICS if known).
 - Location — **state and metro/city** (drives wage geography).
 - Gross revenue; **net income before owner compensation**.
-- Current owner W-2 salary; distributions taken this year.
+- Current owner W-2 salary; distributions taken this year. 🛑 **Distributions come from the
+  shareholder's CAPITAL-ACCOUNT LEDGER, never from the filed return.** The firm may report them
+  **netted to zero** on Schedule K 16d and K-1 box 16D
+  ([1120-S SOP §5C-v](../../../projects/sops/form-1120s-preparation.md)) — and it does so
+  **precisely on the no-salary owners this analysis is run for**, so reading box 16D would
+  understate factor 4 on exactly the wrong clients.
 - **Company size for scaling** — number of employees, direct reports the owner supervises,
   single vs. multi-entity / multi-state, and total assets if known (see `company-scaling.md`).
 - Number of employees and, if relevant, what they're paid for comparable work.
@@ -67,6 +72,7 @@ hats. Collect:
 - Employer **retirement** contributions (SEP/SIMPLE/401(k) match/profit-sharing) and
   **health insurance** premiums paid (note the >2%-shareholder W-2 treatment).
 - **Prior 2 years** of salary, distributions, and net income if available (for the trend).
+  ⚠️ **Same rule — the prior year's distributions come from the ledger, not from that year's K-1.**
 
 If the user says "I don't know" for a figure, proceed and mark it *Not provided*; note the
 limitation it creates (e.g. no equity → income approach is qualitative only).

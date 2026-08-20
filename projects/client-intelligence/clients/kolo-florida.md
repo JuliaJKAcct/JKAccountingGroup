@@ -166,10 +166,18 @@ the actual details.
   and the deposit personally and contributed them.** Useful context for basis: these are
   contributions, not purchases by the company.
 - 🗂️ **One equity account per shareholder holds contributions and distributions netted together.**
-  Normal bookkeeping, and correct — Schedule L only needs the net. **But Schedule K 16d, K-1 box
-  16D, M-2 line 7 and Form 7203 all need the gross halves**, so an S-corp return cannot be prepared
-  from the balance sheet for this client: **open the shareholder ledger and total debits and
-  credits separately.** This is the single step that nearly went missing on the 2025 return.
+  Normal bookkeeping, and correct — the balance sheet only needs the net. **The ANALYSIS still needs
+  the gross halves**, so an S-corp return cannot be prepared from the balance sheet for this client:
+  **open the shareholder ledger and total debits and credits separately.** This is the single step
+  that nearly went missing on the 2025 return.
+  🔴 **What the 2025 RETURN then does with them was decided on 2026-08-20: it reports them NET** —
+  one contribution and no distributions. **The gross split is still how the figure is built and the
+  only record of what each side is made of; it is no longer how the return presents it.** 🔵 **And it IS the general rule now** — Julia decided on 2026-08-20 that where a shareholder's
+  contributions exceed their distributions the two are netted and distributions reported at zero, at
+  least for S-corp owners who took no reasonable salary. It is the firm's
+  [1120-S SOP](../../sops/form-1120s-preparation.md) **§5C-v**, with one hard boundary: **never where
+  there is accumulated E&P.** ⚠️ **Splitting the account gross stays mandatory** — the policy's own
+  test cannot be applied to a net figure.
 - ☕ **`Refreshments (Tax Review)` is office water and coffee — a judgment call, not a fact.** All
   thirteen 2025 charges are `Primo Water`, "WATER COFFEE DELIVERY". The account's own name is the
   bookkeeper flagging it for exactly this decision. **The firm's working position is 50%**, with
@@ -515,13 +523,41 @@ the actual details.
   1125-A line-2 residual is **two `United Porte` invoices booked straight to cost of sales**, the
   pass-through door line, so **nothing needs correcting and both "we bought nothing" and the
   ledger were right**; **one owner took real distributions** against a larger figure of
-  contributions, which the netted account had been hiding; **Ihor's account did not move at all**;
+  contributions, which the netted account had been hiding _(⚠️ **and on 2026-08-20 Lilian decided the
+  RETURN reports them net anyway** — the discovery stands, the presentation changed)_; **Ihor's account did not move at all**;
   and `Refreshments (Tax Review)` is **Primo Water office water and coffee**, which makes it a
   judgment call rather than a fact. It also surfaced what the books do **not** contain: **no entry
   anywhere for the physical inventory count.** All nine forms were recomputed from it and delivered
   in chat. Four lessons went into the [SOP](../../sops/form-1120s-preparation.md) — the
   pass-through case in §4, the gross-not-net rule for shareholder accounts, asking for the general
   ledger up front, and checking the basis printed on every export. _(Worked by Lilian.)_
+- 2026-08-20 — **THE RETURN REPORTS THE SHAREHOLDER ACCOUNT NET — JULIA's decision, relayed by
+  Lilian, and it is FIRM POLICY rather than a ruling on this one return.** Where a shareholder's
+  contributions for the year exceed their distributions, the two are netted and distributions
+  reported at zero — *"at least"* for S-corporation owners who took no reasonable salary. **This
+  company is the pilot**, and the rule is written up as
+  [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) with **five gates** that must all pass
+  first. Here the money in
+  and the money out are netted, so the 2025 return shows **one contribution and no distributions**
+  rather than the two directions separately. ✅ **The books support the figure** — a single named
+  capital account, and the net is the ledger's own total for it. ✅ **Arithmetically neutral**: the
+  accumulated-adjustments balance, every line of the balance sheet and the shareholder's ending stock
+  basis are identical either way, and **no tax moves on either return** — ⚠️ **a neutrality that
+  depends on there being no accumulated E&P**, since with it a distribution above the AAA would be a
+  dividend and the netting would suppress that ordering. 🔴 **What it costs, recorded so nobody signs
+  it unaware:** the return **asserts that no distributions were made** when money did reach the
+  shareholder, and his own basis form asserts a contribution smaller than what he contributed —
+  **two statutory lines, on two signed returns.** ⛔ **"The prior year reported no distributions" is
+  NOT support for it**, and was struck from a first draft: that is exactly the inference this client's
+  own analysis forbids and the firm's SOP states as doctrine — a blank prior-year line is a *result*,
+  not a convention, and 2024's came from netting round trips in a start-up year while 2025 is a
+  wind-down whose outflows include personal spending that cannot be netted against anything.
+  ⚠️ **It reverses the 2026-08-19 position**, and the conflict with the firm's SOP — a rule that came
+  from this very client — was resolved the same day: 🔵 **Julia made it the general rule** (SOP
+  §5C-v), scoped to owners whose contributions exceed their distributions and who took no reasonable
+  salary, and barred where there is accumulated E&P. **This client is the pilot.** 🛑 **The ATX file predates the decision** and
+  still carries the gross figures; **three fields must be re-keyed before transmission**, now the
+  fourth blocker on this return. _(Worked by Lilian.)_
 - 2026-08-19 — **The shareholder capital account was split again, from scratch, and it held.**
   Lilian asked for the contributions and the distributions to be separated out of the single
   `Mykola Kozlovskiy` account in the 2025 general ledger — the same question answered on 2026-08-17,
@@ -576,9 +612,11 @@ authorised on **JK Accounting Group**, not on a client. There is no read path le
       `United Porte` invoices in COGS — the pass-through door line, correctly booked (§5). ✅ And the physical count **is** reflected —
       through the unit quantity inside that entry, not a separate adjusting entry (§5).
 - [x] **`Mykola Kozlovskiy` → 79 movements, contributions in and distributions out.** **There WERE
-      distributions**, netted inside the account exactly as suspected. Feeds Schedule K 16d, K-1
-      box 16D, M-2 line 7 and Form 7203. The loss stays **fully deductible** and the distribution
-      is far below basis, so no capital gain.
+      distributions**, netted inside the account exactly as suspected — **that is a fact about the
+      BOOKS and it stands.** 🔴 **What the 2025 return reports is a separate decision taken
+      2026-08-20: NET — one contribution, no distributions**, so Schedule K 16d, K-1 box 16D and
+      M-2 line 7 all carry zero and Form 7203 line 2 carries the net. The loss stays **fully
+      deductible** and nothing came near basis, so no capital gain either way.
 - [x] **`Ihor Naum` → zero movement in 2025.** Beginning balance only.
 - [x] **`Refreshments (Tax Review)` → 50%, decided by Lilian 2026-08-17.** Primo Water office
       water/coffee (§5) joins `Meals` in the food-and-beverage base, half of the combined figure disallowed.

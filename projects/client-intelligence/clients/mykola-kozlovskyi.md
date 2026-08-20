@@ -230,6 +230,36 @@ the actual details.
     comes with it: a blank line on a computed form means a missing INPUT, not a missing entry on
     that form — a defect of that kind FOOTS, so nothing catches it.**
 
+- **2026-08-20 (JULIA's decision, relayed by Lilian) — THE SHAREHOLDER CAPITAL ACCOUNT IS REPORTED
+  NET, AND IT IS NOW FIRM POLICY.** Julia ruled that where a shareholder's contributions for the
+  year exceed their distributions, the two are **netted** and distributions reported at zero — *"at
+  least"* for S-corporation owners who took no reasonable salary. This company is the **pilot**; the
+  rule is written up as [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) with **five gates**
+  that must all pass before it may be applied. Here that means the
+  money the shareholder put in and the money he took out are **netted**, so the company return shows
+  **one contribution and no distributions** instead of the two directions separately.
+  - 🔑 **The ledger supports it directly** — the account is a **single** named capital account per
+    shareholder, and the net figure is the ledger's own total for that account.
+  - ✅ **It is arithmetically neutral.** The accumulated-adjustments balance, every line of the
+    balance sheet, and his **ending stock basis** all land on exactly the same figures as the gross
+    presentation. **No tax moves on either return**, this year or next.
+  - ⛔ **"It is consistent with 2024, which reported no distributions" was offered as support in a
+    first draft and is STRUCK — recorded here as struck so it is not offered again.** A blank prior
+    year is a **result**, never a convention, and it is precisely the inference this client's own
+    analysis forbids. The zero is reached through the policy's gates or not at all.
+  - 🛑 **Two of those gates are what make the neutrality true rather than assumed:** the company must
+    have **no accumulated E&P**, and the accumulated-adjustments balance before distributions must be
+    at least as large as the distributions. Both hold here; neither is automatic.
+  - ⚠️ **What it costs, stated so nobody signs it unaware:** the return **asserts that no
+    distributions were made**, when money did reach the shareholder during the year. The gross split
+    stays in the working paper as the analysis; it is no longer how the return presents it.
+  - 🔴 **This REVERSES a position another session established the day before**, which had recorded
+    that the account was split by sign and *"never netted"*. **Both are written down with their
+    dates and whose call each was** — the later one governs.
+  - ⚠️ **It does not touch the open question on the contribution side** — the counter deposits with
+    no named source, which are the return's live blocker. **If any of them turn out to be takings,
+    they are revenue and the net figure falls.** Netting changes the presentation, not that.
+
 - **What gates the return.** ✅ **(1)** The **company's 1120-S**, which produces his K-1 and his Form 7203 — **completed and on `main`** _(2026-08-18)_. ✅ **(2)** The **Form 8962 / Marketplace allocation** — **settled 2026-08-19 at 20% him / 80% his ex-wife**.
 - **Established from the 2024 filed return** (read 2026-08-17): filed **jointly**; his **Uber Schedule C** with no expenses claimed; his **K-1 from the S corporation**; a **Form 7203 in his name** carrying the stock-basis history; three dependants claimed for the child tax credit; **Marketplace coverage reconciled on Form 8962**; refundable **earned income credit** and **additional child tax credit** claimed, both resting on earned income; a **net operating loss** and a **QBI loss carryforward** generated; **no estimated payments**; **no state return** (Florida). ⓘ **The return does not say whose the single W-2 was** — the firm's own filename in Drive labels it as his.
 - **Settled for 2025:** no Uber activity; income is the company K-1; the organizer's nil-income answer is an error; the 2024 carryovers are his; the Form 4868 is not to be opened.
