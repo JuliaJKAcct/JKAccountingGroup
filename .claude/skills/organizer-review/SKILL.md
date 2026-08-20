@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return, which since 2026-08-11 it fetches from Double itself through the redactor — one year only, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat, and handed over as a PDF so the session can be deleted without losing it — never an artifact, never committed.
+description: 🔗 PHASE 1 OF PREPARING ANY RETURN, and also a standalone review. The `tax-return-sop` skill's §4A calls this FIRST, always, before any figure is computed — its Block A verdict is the gate that decides whether the preparation may start. ALSO run it on its own for "analiza el organizer de X", "¿qué le preguntamos a este cliente?", "hazme solo la Revisión", "revisión previa", or an organizer that reads Completed and still cannot be worked. The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return, which since 2026-08-11 it fetches from Double itself through the redactor — one year only, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat, and handed over as a PDF so the session can be deleted without losing it — never an artifact, never committed.
 ---
 
 # The pre-return review — what to ask the client, before anyone starts
@@ -30,6 +30,33 @@ the answer that unblocks the most comes first.
 long: *"una cantidad de texto enorme sin ningún orden fijo y lógico"* is the failure
 mode. **Follow §4's structure exactly, every time.** A reviewer should be able to open
 two clients' reviews side by side and find the same thing in the same place.
+
+---
+
+## 🔑 THIS IS ALSO PHASE 1 OF PREPARING A RETURN — not only a standalone review
+
+> 🔑 **Lilian, 2026-08-20:** *"Ese revisador de organizers que creamos sería muy útil a la hora de
+> crear un tax return, porque va a analizar si nos falta algún documento o no. Luego, este preparador
+> de impuestos ejecutaría las herramientas que tiene para preparar los impuestos."*
+
+**Two ways in, and the difference is only what happens after Block A:**
+
+| Called as | Trigger | After the verdict |
+|---|---|---|
+| 🔍 **A standalone review** | *"analiza el organizer de X"*, *"¿qué le preguntamos a este cliente?"*, *"hazme solo la Revisión"* | **The output IS the deliverable.** Six blocks, the PDF, done |
+| 🔗 **PHASE 1 of a return** | *"prepárame el Tax Return de X cliente"* — [`tax-return-sop`](../tax-return-sop/) **§4A calls this skill first, always** | **Block A is a GATE.** ✅ *Yes* → the same reply continues into the preparation tables. ⛔ *No, blocked on X* → **stop at the question list; do not prepare** |
+
+🛑 **Nothing in this skill changes when it runs as phase 1** — same nine sources, same six blocks,
+same privacy discipline. **What changes is that Block A's verdict is acted on rather than read.**
+
+⚖️ **So Block A carries more weight than its three lines suggest.** ⚠️ **Do not soften a verdict to
+let the preparation proceed, and do not harden one to be safe** — *"No"* costs the client a round
+trip they may not owe, and *"Yes"* over a real hole puts a figure with no source onto a signed
+return. **Say which it is, and say what it turns on.**
+
+ⓘ **When the verdict is Yes and little was found, deliver the six blocks COMPACTLY** — the structure
+still holds, but a clean client should not produce a wall of text before the tables she actually
+asked for.
 
 ---
 
