@@ -218,25 +218,39 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 7. **Spot-check one client against reality.** Pick a client with a known open item and confirm the
    report says something true about it. **Best Broker Realty** is the natural test: its Sept 30
    licence renewal should surface as a deadline, and its unfiled certificate as an open item.
+8. 🔴 **DID THE RUN RE-READ EVERY DOUBLE NOTE WHOSE `updatedAt` MOVED — or just notice that one had?**
+   ⚠️ **Double's activity log records no Note entity at all**, so a note whose content changed reads
+   as untouched there. **`list_notes` does carry the signal** — it returns every note's `updatedAt`
+   **and its body** in one call — so the failure is not usually "no data", it is **noticing a note
+   moved and not reading it.** That is exactly what happened: the **2026-08-15** run wrote that note
+   **490984**'s metadata *"shows it was touched again"*, re-read that one, and reported *"nothing has
+   moved"* for the client — while note **485225** had taken the client's remaining business expenses
+   on **2026-08-13**. Found five days later by a human reading the note. **It bites every client**,
+   because the firm's convention is that a working note is **rewritten in place**
+   ([`double-mcp`](../../../.claude/skills/double-mcp/) §7 rule 1) — content changes without a new
+   note appearing anywhere. ✅ **The rule to check for: compare `updatedAt` on EVERY note returned,
+   and re-read the body of every one that moved — not just the first one noticed.** **A run reporting
+   "no movement" without that has not established it**; treat the claim as unsupported, not as a
+   finding. _(Now also written into the operative prompt — `weekend-ci-sweep.md` step 5, Double.)_
 
 ### C. Did coverage work?
 
-8. **How many clients got an incremental pass, how many a full pass, how many were deferred?**
+9. **How many clients got an incremental pass, how many a full pass, how many were deferred?**
    The run is now required to state all three. **Expect ~6 full passes** against a queue of ~20.
-9. **Did check 2b report any client file missing from the scope/exclusion tables?** 🛑 **A hit is a
+10. **Did check 2b report any client file missing from the scope/exclusion tables?** 🛑 **A hit is a
    REAL FINDING — add the table row.** It means a session created a client file for someone the
    routine cannot reach, which is exactly the case 2b exists for. _(On 2026-08-18 the answer
    happened to be none. That is a dated observation, not the expected answer — the prompt says so
    itself and tells the run to recompute every time. Do not read a hit as a measurement error.)_
-10. **Did the run add ledger rows for the full passes it completed?** It is now told to. If it did
+11. **Did the run add ledger rows for the full passes it completed?** It is now told to. If it did
     not, next Saturday re-buys the same expensive passes — check `sweep-state.md`'s diff.
-11. 🛑 **Did it add a ledger row for any client it did NOT fully sweep?** That is the
+12. 🛑 **Did it add a ledger row for any client it did NOT fully sweep?** That is the
     history-erasing write. **If you see a new row for a client with no full pass in the report,
     revert it before the next Saturday.**
 
 ### D. Is the context ceiling biting? (§3)
 
-12. **Look for thinning, but NOT by reading the report top to bottom.** ⚠️ The email is ordered by
+13. **Look for thinning, but NOT by reading the report top to bottom.** ⚠️ The email is ordered by
     *significance* (proposals first), not by sweep order, and a thinly-swept client collapses into
     the same one-line "nothing new" block as a genuinely quiet one — so comparing the first five
     entries against the last five measures nothing. **Use the run's own counts instead**, which it
@@ -245,7 +259,7 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
     completed, or that names unchased items on many clients, is hitting the ceiling. Cross-check
     against the commit diff: a client whose file gained nothing while its ledger baseline still
     advanced is the signature to look for.
-13. **Did the run finish?** A truncated report, or a report that stops naming sources partway, says
+14. **Did the run finish?** A truncated report, or a report that stops naming sources partway, says
     the same thing.
 
 ---

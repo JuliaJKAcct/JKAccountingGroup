@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-20
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -25,7 +25,7 @@
 - **Business name:** Denys Melnyk (individual — no registered business entity is engaged with us directly; his companies are separate S corporations we do not act for)
 - **Entity type:** ⚠️ Individual. **Whether his 2025 activity belongs on a Schedule C at all is an open question** — the 2024 return says it does not. See §4 and §5.
 - **Home state:** ✅ **Most of his 2025 residence is established from his own account** _(client call with Lilian, 2026-08-12)_: **Kirkland, Washington** until **May 2025**, then **Florida**. Neither state taxes personal income, so on residence alone there is **no resident state return**. The two states match the organizer, though ⚠️ **its change of address is dated 06.06.2025 against his "May" — a one-month gap in the only dated evidence there is.** ✅ **MONTANA IS CLOSED — Lilian's decision, 2026-08-12: *"olvida eso"*.** Her reasoning: **the client lived in Washington and then moved to Florida, so if he lived in Montana it was 2024, and 2024 is not our year.** That fits the record — the Montana return is **2024** and everything he described is **2025**, so there was never a contradiction to resolve. **Do not re-open it.** ⓘ _(Recorded for completeness, not as a challenge: the one thing nobody stated is the DATE he moved to Washington. Her call assumes the Washington period covers the start of 2025, which is the natural reading of what he said. If a Montana date ever surfaces inside 2025, a part-year return would follow — otherwise this stays shut.)_ ⓘ **Her earlier hypothesis — that Montana came from a COMPANY registered there — is moot now, but worth keeping for the next trucking client:** Montana registration is a real fleet arrangement, and **a registration-only entity sources no income there, so it produces NO Montana return at all**; only an entity that genuinely operated there would give a nonresident return, and only living there gives a resident one. ⚠️ **MINNESOTA is a third candidate, new on 2026-08-12: he owns a mortgaged house there** (§5). It creates **no** return on residence — he did not live there — but **Minnesota-source rental income would**, above the state's filing threshold. _(One narrower point for later: Washington has no income tax but does levy a **capital-gains excise tax** above a high threshold — worth a glance only if the 2024 Form 4797 disposal produced a 2025 installment gain while he lived there.)_ ⚠️ **The state question is NOT closed, because Illinois was never about where he lived.** His **2024** return carried an **Illinois nonresident** return that followed the income his companies generate there. **One of those companies paid him in the first months of 2025** (which one is not established — §5), so an Illinois-source share can exist for 2025 whatever his address — and **we cannot compute it, because the K-1 that would state it is exactly the document he never received** (§5). So Illinois rides on the missing-K-1 problem, not on his address. Getting this wrong is a filing failure, not a missed deduction.
-- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it and cannot obtain them** — the item that now gates the return. _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
+- **Industry / what they do:** **Trucking / freight** — confirmed by the 2024 return, not inferred. He is a **shareholder in three S corporations**: **Midwest Expedited Corp**, **Midwest Truck Leasing LLC** and **AVDM Holdings Inc** (EINs are in Double and on the 2024 return, not here). The "Midwest" named in his Double note is **his own company**, not an outside payer. **For 2025 only ONE of the three had activity for him** — Lilian relayed the name hedged, as *"something like Midwest Expedited"*, and **two of his three companies start that way, so WHICH one is not established** — and **he holds no W-2, no 1099 and no K-1 for it, and cannot obtain them himself.** ⏰ **Since 2026-08-20 the FIRM has a route he does not, and is now WAITING on all three K-1s rather than blocked without them — chased 2026-09-15** (§5). ⚠️ **Promised, not arrived.** _(§5 holds WHY, and deliberately: this line publishes to the Knowledge Hub, and the reasons involve third parties.)_
 - **Household / filing status:** **Married filing jointly in 2024, and married at 31 December 2025 as well** _(2025 organizer, 2026-08-12)_ — he also confirms he did **not** live apart from his spouse for the last six months, which closes the Head-of-Household branch (§5). **Do not ask him again.** ✅ **The children are settled: he has TWO — the DAUGHTER already claimed on his 2024 return (with EIC and the Additional Child Tax Credit), and a SON from a previous relationship who does not live with him and is reported nowhere** _(Lilian, 2026-08-12)_. The **wife is not one of the two** — she is his spouse on the joint return. ⚠️ **What is still open is the daughter's 2025 RESIDENCE and AGE**, not her identity: his 2025 organizer records no dependants at all (almost certainly a missed question), and the **Child Tax Credit turns on living with him more than half the year and on being under 17 at year-end** (§5). Worth real money. Names, dates of birth and SSNs are in **Double**, not here.
 - **Primary language:** **Russian** — confirmed by Lilian, 2026-08-11. Write to him in Russian even though he completed the organizer in English.
 - **Our engagement (services we provide):** Individual income tax — **Form 1040**, tax year **2025**. **First year with JK**; the 2024 return was prepared by another firm (a Chicago practice). ⚠️ **Whether this is really a Schedule C engagement is an open question** — see §4 and §5.
@@ -42,6 +42,7 @@ the actual details (and Claude can pull them live when a task needs them).
 |---|---|
 | Taxpayer / primary contact | Double client (link below) |
 | Spouse (also on the return) | Double client (link below) |
+| **His former business partner** — the same one he fell out with _(confirmed by Lilian, 2026-08-20)_, and since that day the firm's direct route to the three K-1s _(§5)_ | **Double note 490984** — his name and mobile number were written there on 2026-08-20, having been in Lilian's phone alone. Lilian reaches him by **text message** |
 
 - **Double client:** https://app.doublehq.com/close?cid=764785
 - **Double notes:** two, deliberately separate — the client's own figures in **485225**, and the tax-preparation briefing for Julia in **490984**. See §5 ("What goes in the Double note").
@@ -94,7 +95,7 @@ link). Never write the credential itself here.
 > §2.2, exposure point 2). **His identifiers, contact details and figures are not**, and never
 > will be; open the organizer in Double for those.
 
-- 🔴 **He received income from one of his own S corporations in 2025, holds NO K-1 and NO W-2 for it, and cannot obtain either.** This is now the item that decides whether the return can be prepared at all — and it is **a decision for Lilian and Julia, not a question for the client**, because the documents are not his to produce. _(Why he cannot get them is in the call block below; it stays out of this bullet, which publishes.)_ **Routes are set out below** _(client call, 2026-08-12)_.
+- 🟠 **He received income from one of his own S corporations in 2025 and holds NO K-1 and NO W-2 for it — but as of 2026-08-20 there is a live route to the documents, and it is not through him.** ⏰ **The firm now has a route he does not, and all three K-1s are PROMISED — not arrived** _(2026-08-20)_. So this is **no longer "cannot be obtained"**: it is a **wait with a source, a delivery address and a date to chase — 2026-09-15** — rather than the firm-side decision the file had been holding for. _(Who the route is and how it was opened stays in the block "The K-1 route opened" below; like the §1 line, this bullet publishes to the Knowledge Hub and the reasons involve third parties.)_ **The fallback routes stay on the table** and are set out below _(client call, 2026-08-12)_, in case the forms do not arrive.
 - 🔴 **He is an S-corporation shareholder, not a contractor** — three trucking entities. So the money he describes as income is most likely **wages or a distribution**, and the expenses he listed are probably **his companies'**, already deducted on their 1120-S returns. **Nothing should be prepared until this is settled** — and it is now doubly true, because the K-1 that would answer it is missing.
 - 🟠 **Form 1095-A: the blocker is now CONTESTED, not confirmed.** The organizer says Marketplace coverage; on 2026-08-12 he named **Blue Cross Blue Shield** and Lilian's read is that it is private. **BCBS sells both on and off the exchange, so the carrier name proves nothing either way.** ⚠️ **And "which 1095 did you get" does not settle it either — he may hold none.** Ask **where he bought it and whether anyone helped pay the premium** (the method, and the message to send him, are below).
 - 🔴 **A large net operating loss carries forward from 2024**, big enough to absorb most of 2025. **Preparing without it would cost him badly** — and it rests on a basis figure nobody has verified. ⚠️ **Do not treat it as a reason a late filing is cheap:** an NOL reduces **taxable income only**. It does not touch **self-employment tax**, the Additional Medicare Tax or a §72(t) penalty (and it reaches NIIT only to the extent it is allocable to net investment income) — and the failure-to-file penalty is computed on the tax required to be shown on the return, **which includes SE tax** (§4).
@@ -201,8 +202,10 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
     partner's name) plus the **Illinois / Montana Secretary of State** for entity status and
     registered agent will answer, without the client and without the partner. ⚠️ **And a search
     that finds NOTHING is itself an answer: the bankruptcy claim is unsupported.** What it settles:
-    - 🔴 **WHICH entity filed** — the file's own number-one blocker, currently sitting as a question
-      to a client who may not know the legal name either;
+    - 🔴 **WHICH entity filed** — ⓘ **no longer the file's number-one blocker** (the K-1 wait
+      overtook it on 2026-08-20, and the request went out for all three companies rather than a named
+      one), but still the answer to a question that otherwise sits with a client who may not know the
+      legal name either — **and urgent again the moment only one K-1 arrives**;
     - the **chapter** and the **petition date**;
     - the **trustee / debtor-in-possession and their counsel** — the person with the filing duty above;
     - the **schedules and Statement of Financial Affairs**, which list equity holders, insiders and
@@ -230,8 +233,11 @@ company**, and so **received no K-1 and no W-2** — for income he does not disp
   2025 income came from Midwest Truck Leasing, then the instruction below about which companies to
   ask about is pointed at the wrong ones, and so is the 1120-S chase.
 - **This is the single fact that gates the return.** Its character is still unknown — wages, a
-  shareholder distribution, or his K-1 share — and the document that would say is the one he cannot
-  get. **Pending: Lilian and Julia decide how to proceed.**
+  shareholder distribution, or his K-1 share — and the document that would say is the one **he**
+  cannot get. ⏰ **UPDATED 2026-08-20: the FIRM can — the K-1s are promised and the chase date is
+  2026-09-15** (the block *"The K-1 route opened"* below). ⚠️ **So the pending item is no longer
+  "Lilian and Julia decide how to proceed" — it is the wait itself**, and the routes below are the
+  fallback if the forms do not arrive.
 - **Routes worth putting in front of Julia** (options for that conversation, not decisions):
   ① an **IRS wage & income transcript** in his own name — compiled from information returns (W-2,
   1099, 1098, 5498), so it settles the wages half **without needing the partner**. Two limits:
@@ -449,10 +455,12 @@ rental property completes the organizer at 100% and is never asked. Silence ther
   never been asked. **Do not read this as "no retirement distribution of any kind."**
 - **No Form 1099 of any kind received for 2025.**
 
-**⚠️ His business expenses are INCOMPLETE — do not work from what is on file.** What Lilian has so
-far (staged in Adobe — a different document from the 1098, which goes to Double) is
-only part; he says he has more, **will look for them, and undertook to send them by MONDAY at the
-latest** _(Lilian, 2026-08-12)_. ⚠️ **They are the expenses of the company that gave him no income
+**⚠️ His business expenses may still be incomplete — do not work from what is on file as if it were
+final.** What Lilian had on 2026-08-12 (staged in Adobe — a different document from the 1098, which
+goes to Double) was only part; he said he had more and undertook to send them by Monday.
+✅ **He did: a further batch arrived 2026-08-13** by Google Voice and is in Double note **485225**
+_(found 2026-08-20)_. ⚠️ **What is NOT established is whether that is all of them** — nobody has
+asked him since, so treat the list as open, not as closed. ⚠️ **They are the expenses of the company that gave him no income
 documentation** — the same one he says filed for bankruptcy — which is exactly why they may not belong on his
 1040 at all. **But hold the cataloguing until the Midwest
 question is settled** — if that money was wages or a distribution from his own S corp, those
@@ -720,6 +728,114 @@ assessment of him.** Putting our reasoning in a note would
 turn a working note into something else, and she decides case by case whether any
 particular finding earns a place there.
 
+### The K-1 route opened, 2026-08-20 — his former partner is in contact and has agreed to send them
+
+_Lilian's account, given the same day. **This is the biggest movement on this client since 2026-08-12**,
+and it changes the top blocker from a decision the firm had to take into a wait it can manage._
+
+**What she did.** She contacted **the client's former partner** — **by text message**, on a mobile
+number she holds herself — and asked him for the **K-1 forms of the three companies**.
+✅ **Confirmed by Lilian the same day: he is THE partner of the dispute and the bankruptcy claim** —
+the same man the client fell out with and who locked him out. He is not a bystander.
+🔒 **His name and number are on Double note 490984, and deliberately NOT here.** Two reasons, and the
+second is the one nobody would think of: he is a **third party with an unverified bankruptcy claim
+attached to him**, and this file publishes to the Knowledge Hub — and **the firm has a CLIENT whose
+first name is the same**, with his own card on that same page. A bare first name would put an adverse
+party and a client one click apart with nothing to tell them apart. **Refer to him by his role.**
+
+**What he said.**
+1. **They are not ready yet.**
+2. He **asked for an email address** to send them to.
+3. She gave him **Julia's firm email**, and he said he would **send them as soon as they are ready**.
+
+**What it settles.**
+- ✅ **The documents are obtainable, and the source is willing.** The file has said since 2026-08-12
+  that the K-1 "cannot be obtained" because the client is locked out. That was true **of the client**
+  — it was never true of the firm, and nobody had tested it. **The blocker was one text message
+  deep.** _(This is the "look before you ask" rule in its other direction: ask the person who
+  actually holds the thing.)_
+- 🟠 **SOMEBODY appears to be preparing at least one of those returns.** *"Not ready yet"* reads as
+  being worked on rather than abandoned, which is the first thing we have heard against the reading
+  that a company in bankruptcy simply stops filing (§5, the bankruptcy block). ⚠️ **But it is one
+  clause in a text message, and it does not say WHICH company, WHO is preparing it, or that anything
+  will actually be filed.** It does not settle the bankruptcy question; it makes the 1120-S chase
+  worth running rather than theoretical.
+- 🟠 **All three K-1s were ASKED FOR and undertaken — which is not the same as all three existing.**
+  Lilian asked for three and he agreed to send three; that is his undertaking, and it is consistent
+  with what this file already reasoned (an S corporation allocates and issues a K-1 **whether or not
+  it distributed a cent**, so the two silent companies owe him 2025 K-1s too). ⚠️ **But do not read
+  his agreement as evidence** — he is placed at the company of the dispute, and nothing establishes
+  that he prepares, or can obtain, the other two companies' returns. **If only one arrives, the other
+  two are a fresh problem, not a broken promise.**
+- 🟠 **And the "WHICH Midwest" question stops gating the CHASE**, because the request went out for all
+  three rather than for a named one. It still matters for the Illinois and character-of-income
+  analysis — and ⚠️ **if only one K-1 arrives, identifying the entity becomes urgent again**, since
+  which one it is decides whether the document we hold is the one that matters.
+
+**What it does NOT settle, and what to do about it.**
+- ⏰ **"Not ready yet" has a date to chase on — 2026-09-15 — but be honest about what that date is.**
+  It is the **extended** due date for a calendar-year 2025 Form 1120-S, and ⚠️ **nothing on this file
+  establishes that any of the three companies actually filed an extension.** The unextended date was
+  **2026-03-16**, which has passed. So 2026-09-15 is **the outside date if they extended**, and if
+  they did not, those returns are **already late** and the promise has no deadline behind it at all —
+  which makes the chase more urgent, not less. **Chase on 2026-09-15 regardless**; a K-1 that has not
+  arrived by then is a different conversation.
+- 🔵 **AND THE DATE HAS A SECOND MEANING NOBODY HAD PUT BESIDE IT — HIS OWN 1040 IS ALREADY LATE, AND
+  THAT ARGUES FOR WAITING, NOT AGAINST IT.** The 1120-S deadline is the *companies'* clock. **His**
+  1040 was due **2026-04-15**, and §4 records that **nobody has established a Form 4868 was ever
+  filed** — the firm cannot have filed one, since he became a client in July. Work the two cases:
+  - **If NO extension exists:** the failure-to-file penalty is **5% of the net tax due for each month
+    _or fraction of a month_, capped at 25%** (§6651(a)(1)). ⚠️ **"Or fraction" is the whole point:
+    counting from 2026-04-15, the fifth fraction-month begins 2026-08-16, so the 25% ceiling is
+    reached around 2026-08-16 — which has ALREADY PASSED.** So the FTF penalty **cannot grow any
+    further**, and the marginal cost of waiting for correct K-1s is now only **failure-to-pay at
+    0.5% per month** (its own separate 25% cap) **plus interest**. ⓘ Note also that in any month both
+    run, FTF is reduced to **4.5%** so the pair totals 5% (§6651(c)(1)) — and that a return more than
+    60 days late carries a **minimum** penalty; 🛑 **read its current amount off irs.gov, never from
+    memory.**
+  - **If an extension WAS filed:** no failure-to-file penalty at all provided the return goes in by
+    **2026-10-15** — only failure-to-pay and interest, which run from 2026-04-15 regardless, because
+    an extension extends the time to **file**, not to **pay** (§4).
+  🔵 **So the earlier reading here was wrong and is corrected: waiting is NOT getting more expensive
+  by 5% a month.** Under either case the clock that could punish delay has already done its worst, so
+  **waiting for correct K-1s beats filing a guess and amending** — an amended return costs work twice
+  and a wrong 1040 can draw its own accuracy penalty. ⚠️ **The 2024 NOL still does not protect him**
+  — it reduces taxable income, not **SE tax**, which sits in the penalty base (§4/§5). **The extension
+  question is still worth settling** (a lookup on his IRS account transcript, not a question for the
+  ex-partner) — but it now sizes the bill rather than setting the pace. **The pace decision is
+  Julia's, and this is the input she needs.**
+- 📬 **They arrive at JULIA's email, not through Double and not through the client.** So they land in
+  a place this file's weekly sweep reads and the client portal does not. **Whoever sees them first
+  files them in Double** (`JK Accounting Group > Others > 2025`, the path Lilian set — §5) **and logs
+  it here**, or three documents the whole return waits on will sit in an inbox.
+- 🟠 **THE SOURCE OF THESE DOCUMENTS IS THE ADVERSE PARTY — and that is a handling instruction, not
+  a reason to refuse them.** ✅ **Lilian confirmed on 2026-08-20 that he IS the partner of the
+  dispute and the bankruptcy claim.** So the figures that will state our client's 2025 share are
+  being prepared by the person he is in conflict with. Three things follow, and none of them is
+  "distrust it":
+  - ✅ **Take the K-1s. A K-1 from a disputing partner is still the company's own document**, and
+    refusing it would leave us exactly where we were. ⚠️ **But note WHEN it arrives:** "not ready
+    yet" means the 1120-S is **not filed**, and the consistency requirement — and the Form 8082
+    protection that goes with it — runs off **what the corporation actually files**. **A draft K-1
+    handed to us before filing is a working figure, not the filed position**, and it can still change
+    (or the return may never be filed at all). **Check what was filed before relying on it.**
+  - 🔍 **But CHECK them, and there is now something to check against.** The client told us what he
+    received in the first months of 2025 (the figures are in Double note 485225). **If the K-1 does
+    not reconcile with that, it is a finding, not a rounding difference** — and a disagreement
+    between the two is precisely what **Form 8082** exists for. ⚠️ **This does not mean assume a
+    problem**: the likeliest explanation of a gap is still the unsettled question of *what that money
+    legally was* (wages vs distribution vs K-1 share), not bad faith.
+  - ⚠️ **And it sharpens a tension nobody had noticed.** If that company really is in **Chapter 7**,
+    its return is the **trustee's** statutory duty (§6012(b)(3)), not the ex-partner's — so a partner
+    who says he is getting the K-1s ready points at one of three things: the bankruptcy is **narrower
+    than described** (perhaps only one of the three companies), it is the **partner personally** and
+    not the company, or the claim is simply **wrong**. **The docket still settles it**, and it is
+    still the cheapest open item on this file — and now it can be searched by his name as well as by
+    entity.
+- 🔍 **It does not answer the bankruptcy, the character of the income, or the basis.** Those are what
+  the K-1s themselves will speak to when they arrive — and the **docket pull is still owed** (§6),
+  because a K-1 states a share, not who filed for what.
+
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
@@ -821,8 +937,15 @@ particular finding earns a place there.
   possible **1099-NEC exposure** for the drivers he paid.
 
 - _(2026-08-15, incremental sweep, baseline 2026-08-11 — INCREMENTAL only; a full historical Gmail
-  pass is still owed for this client, see below)_ **No client-facing developments since the last
-  review.** Gmail (`after:2026/08/11`, in:inbox and in:sent) returned **nothing** for
+  pass is still owed for this client, see below)_ 🔴 **CORRECTED 2026-08-20 — THIS ENTRY'S HEADLINE
+  WAS WRONG, and it is left standing with the correction rather than rewritten.** It said *"no
+  client-facing developments"* and *"nothing has moved since 2026-08-12"*. **Something had:** the
+  client's **remaining business expenses arrived 2026-08-13** by Google Voice and Lilian added them
+  to Double note **485225**. The run missed it for a reproducible reason — **it read the activity
+  log, and Double's activity log does not record note edits** — which this same entry noticed about
+  note 490984 and did not generalise. ⚠️ **So read every negative below as "the searches this run
+  ran found nothing", never as "nothing happened"** _(the method's rule 1b, in the wild)_. The
+  original text follows, unaltered: **No client-facing developments since the last review.** Gmail (`after:2026/08/11`, in:inbox and in:sent) returned **nothing** for
   Melnyk/Denys — no new correspondence with or about him since baseline. Ping `search_meetings`
   scoped to his name returned no legible relevant content (all hits were unrelated internal calls
   or other clients). Double activity log since baseline shows only the **Form 1098 file upload of
@@ -889,15 +1012,16 @@ as they come back, and **the tax facts the review established from any source** 
 included _(Lilian, 2026-08-12)_. His SSN, date of birth, licence, bank details, phone, email and
 street address never appear here, and nor do dollar figures — those live in Double and Drive._
 
-- **What gates the return** _(revised 2026-08-12 after the client's answers)_: (1) 🔴 **the missing
-  K-1 and W-2** — he is locked out of the company after a dispute with his
-  partner, so the document that states his 2025 share cannot be obtained from him at all. Everything
-  about the character of that income, the Illinois question and the expenses hangs off it, and
-  **Lilian and Julia decide the route**, once **which “Midwest” company it was** is confirmed;
-  (2) whether that company has filed its own **1120-S** — on
-  extension it is due **2026-09-15**, so the K-1 may simply arrive; (3) health coverage — but as a
-  **contested** question now, not a confirmed blocker (Marketplace per the organizer, BCBS per the
-  client).
+- **What gates the return** _(revised 2026-08-20, after the route to the K-1s opened)_: (1) ⏰ **the
+  three K-1s — PROMISED, NOT ARRIVED.** He is locked out of the company, so the documents cannot come
+  from him; ✅ **since 2026-08-20 they are coming from his former partner instead, to Julia's email,
+  "when they are ready."** Everything about the character of that income, the Illinois question and
+  which expenses belong on his return still hangs off them, so **this remains item one — but as a
+  wait to be chased (2026-09-15), not as the firm-side decision it was**, and the fallback routes
+  hold until the forms are in hand (§5); (2) whether those companies have filed their own **1120-S**
+  returns — ⚠️ **on extension due 2026-09-15, and whether an extension was actually filed is not
+  established** (§5); (3) health coverage — but as a **contested** question now, not a confirmed
+  blocker (Marketplace per the organizer, BCBS per the client).
 - **His 2024 return is in Double** — `Tax Return Filed/2024`, and that is the route: read it
   through `tools/redact-doc/` (see the `organizer-review` skill, §1 source 9). It is the **only**
   year on file, so there is nothing to choose. ⚠️ **4 of its 44 pages barely extract** (rotated
@@ -949,19 +1073,49 @@ street address never appear here, and nor do dollar figures — those live in Do
   carried the answer all along. The dependant question below is **sharper** for it, not resolved by
   it: the household did not change, so a change in the daughter's position needs its own explanation.
 
+- _(2026-08-20, Lilian)_ — 🔴→🟠 **THE K-1 BLOCKER HAS A ROUTE.** She contacted the client's former
+  partner **by text message** on a number she holds herself, and asked him for the **K-1s
+  of the three companies**. **He said they are not ready yet, asked for an email address, was given
+  Julia's, and said he would send them as soon as they are ready.** What it changes: the file's top
+  item stops being *"the documents cannot be obtained and Lilian and Julia must decide a route"* and
+  becomes **a wait with a named source, a delivery address and a chase date** — **2026-09-15**, the
+  extended 1120-S due date. It also gives the first evidence that those returns are actually being
+  prepared, and confirms the file's own reading that **all three** companies owe him a K-1, not only
+  the one that paid him. ✅ **She confirmed the same day that this IS the partner of the dispute and
+  the bankruptcy claim** — so the documents are coming from the adverse party, which is a reason to
+  **reconcile them against what the client says he received**, not a reason to refuse them (§5).
+  ⚠️ **And two things the first write-up overstated, corrected by the review:** three K-1s were
+  *undertaken*, not established to exist; and **2026-09-15 is the EXTENDED 1120-S date — nobody has
+  established that any of the three companies extended.** Still open: the bankruptcy docket, the
+  character of the income, and everything downstream of the forms.
+  ✅ **Double note 490984 was rewritten the same day** with the route, the chase date and his name and
+  number — which until then existed only in Lilian's phone. ➕ **And the same
+  pass found something the 2026-08-15 sweep had missed:** the client's **remaining business expenses
+  arrived on 2026-08-13** by Google Voice and are in note **485225** — he had undertaken on
+  2026-08-12 to send them by Monday and he did. Full detail in §5, *"The K-1 route opened"*.
+
 ### Outstanding items (CI-only — never in the SOP)
 
-The re-ask list for the client, in priority order. ⚠️ **Only the first four reach the team on the
-published card** — they are ordered by what would cause a wrong return or a rejected one.
+**The open list, in priority order — and it is NOT all client asks.** Items are ordered by what would
+cause a wrong return or a rejected one, and they run to three different addressees: some are questions
+for **the client**, some are firm-side work that must **never** involve him (the docket pull, the
+route with Julia), and the top item is now a **wait on a third party**. ⚠️ **Check which before acting
+on one.** ⚠️ **Only the first four reach the team on the published card.**
 
-- 🔴 **The missing K-1 and W-2 — Lilian and Julia decide the route.** He received the income in
-  2025 and holds no document for it, and cannot obtain either. **This is now the first item, and it
-  is a decision for the firm rather than a question for the client.** The routes are set out in §5
-  (IRS wage & income transcript · wait on the company's 1120-S, due **2026-09-15** on extension ·
-  file and amend, with **Form 8082** as the disclosure that goes with it). ⚠️ **A decision is needed
-  here more than an answer** — nothing else on this return can be finished around it.
-- 🔍 **PULL THE BANKRUPTCY DOCKET BEFORE ASKING HIM ANYTHING ELSE.** PACER by entity name and by
-  the partner's name, plus the Secretary of State. It answers **which entity filed** (the blocker
+- ⏰ **The three K-1s — PROMISED, NOT ARRIVED. Chase on 2026-09-15.** ✅ **A route to them opened
+  2026-08-20 and it does not run through the client** — who it runs through, and how, is in §5 and on
+  **Double note 490984**, deliberately not on this line, which publishes. So this is no longer a
+  decision for Lilian and Julia — it is a **wait to be managed**, needing three things: **(a) a diary
+  entry on 2026-09-15** — ⚠️ **the EXTENDED 1120-S date, and nobody has established that those
+  companies extended** (§5); **(b) whoever receives them files them in Double and logs it here**; and
+  **(c) check what the corporation actually FILED before relying on a K-1 handed over pre-filing**
+  (§5). ⓘ **Waiting is not the expensive option** — §5 works the penalty clock through. ⚠️ **The
+  fallback routes stay on the table until the forms are in hand** — IRS wage & income transcript ·
+  the 1120-S itself · file and amend with **Form 8082** (§5). ✅ **His name and number are now on Double note
+  490984** — until 2026-08-20 the firm's only route to these documents lived in one person's phone.
+- 🔍 **PULL THE BANKRUPTCY DOCKET — still the cheapest open item, though no longer the first action**
+  (the K-1 route above overtook it on 2026-08-20). **Do it before asking the CLIENT anything else.**
+  PACER by entity name and by the partner's name, plus the Secretary of State. It answers **which entity filed** (the blocker
   below), the **chapter**, the **petition date**, the **trustee** — who has a legal duty to file the
   1120-S — and the **schedules**, which may **document the money he received in early 2025**. Public
   record; no client, no partner (§5). **This is "look before you ask", and it was skipped.**
@@ -1035,9 +1189,11 @@ published card** — they are ordered by what would cause a wrong return or a re
   month, capped at 12 months**. ⚠️ **He cannot answer this any more** — he is locked out — so it goes
   through the routes above, not through him.
 
-- **His remaining business expenses — he undertook to send them by MONDAY** _(2026-08-12)_. ⚠️ **Do
-  not chase them before that, and do not catalogue them until the Midwest question is settled**; if that money came out of his own S corp, those expenses are the
-  corporation's (§5).
+- ✅ **His remaining business expenses — MORE ARRIVED 2026-08-13**, by Google Voice, and Lilian
+  added them to Double note **485225** _(found on this file's 2026-08-20 pass; the figures stay in
+  the note)_. **He undertook on 2026-08-12 to send them by Monday and he did.** ⚠️ **Still open:
+  whether that is all of them** — and **do not catalogue them until the Midwest question is
+  settled**; if that money came out of his own S corp, those expenses are the corporation's (§5).
 - **Whether the S corporations still operate in Illinois** — asked 2026-08-12, not yet answered. His
   Illinois-source share is stated on the K-1 he does not have, so this and the blocker are one
   problem.
@@ -1068,7 +1224,13 @@ published card** — they are ordered by what would cause a wrong return or a re
 - [x] Primary language — **Russian** _(Lilian, 2026-08-11)_. His channel is settled too: **text message, not the portal** — worth sending him the Double portal guide with the question list.
 - [x] What his work actually is — **trucking / freight, through three S corporations he holds shares in** _(2024 return, 2026-08-11)_. The earlier "inferred from his expense pattern" reading is superseded.
 - [ ] Whether the drivers he paid were paid **by him personally or by one of the S corps** — that decides who, if anyone, owes the 1099-NECs.
-- [ ] Which of the three S corporations are **still active** in 2025, and who prepares their 1120-S returns.
+- [ ] Which of the three S corporations are **still active** in 2025, and who prepares their 1120-S
+  returns. ⓘ **Partly answered 2026-08-20:** somebody is preparing them — the former partner says the
+  K-1s are *"not ready yet"*, which is a statement about work in progress (§5). **Who** that preparer
+  is, and for which entities, is still unknown.
+- [x] **Is the man Lilian texted the same partner as the dispute and the bankruptcy claim?** ✅ **YES** — Lilian
+  confirmed it, 2026-08-20. The K-1s therefore come from the adverse party: take them, reconcile them
+  against what the client says he received, and note the Chapter-7-vs-partner tension it exposes (§5).
 - [ ] Whether he owes **1099-NECs** to the drivers he paid.
 - [ ] ⚠️ **RE-OPENED 2026-08-12** — whether the health coverage is **Marketplace**, asked as *where
   he bought it and whether anyone helped pay*, for **both** the Washington and the Florida halves of
