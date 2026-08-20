@@ -319,10 +319,30 @@ Schedule C line 30  →  line 31
 **business part of the home only**, deducted at **100%** (painting just that room). **(b) Indirect
 expenses** = costs of the **whole home**, deducted at the line-7 percentage. Most entries are (b).
 
-⚠️ **Line 3 asks for a percentage, and how many decimals survive is a software convention, not a
-form rule** — the printed box is blank with a trailing `%`. A percentage rounded to two decimals
-gives a different answer from the full fraction — usually a dollar, occasionally more. **Let the
-software carry it**, and if you are checking by hand, expect the wobble.
+🔑 **CHECKING LINE 24 BY HAND — MULTIPLY BY LINE 7 AS PRINTED, NOT BY THE RAW FRACTION.** Line 3
+asks for the result *"as a percentage"* and line 24 says *"Multiply line 23, column (b), by **line
+7**"* — so **the multiplier IS the rounded percentage sitting on the form**, and a hand-check that
+divides the square footage afresh will disagree by a dollar. **Use the number the form shows.**
+
+⚠️ **And the inputs are whole dollars.** A pro-rated insurance premium of `24.67` is entered as
+`25`, so line 23 column (b) is the sum of the **rounded** figures, not the rounded sum.
+
+**The illustration** — a 50 ft² office in a 600 ft² home, indirect expenses of 12,000:
+
+| Route | Arithmetic | Line 24 |
+|---|---|---|
+| ✅ **The form's** — multiply by **line 7 as printed** | `12,000 × 8.33%` = 999.60 | **1,000** |
+| ❌ A hand-check that re-divides | `12,000 × (50 ÷ 600)` = 1,000.00 | **1,000** |
+| ✅ **The form's**, on a 12,500 base | `12,500 × 8.33%` = 1,041.25 | **1,041** |
+| ❌ Re-divided | `12,500 × 0.08333…` = 1,041.67 | **1,042** |
+
+🔑 **Same form, same client, and the two routes part company as soon as the base changes.** ⛔ **The
+one on the form is the right one** — and a working paper that disagrees is the thing to correct.
+
+_(This cost a dollar on a real return, and it travelled: Schedule C line 31, the self-employment tax,
+the AGI and the refund each moved by one. **The credits did not** — the earned-income bracket is $50
+wide, so the dollar landed inside it. **That is luck, not design**; a dollar that crosses a bracket
+boundary is worth far more than a dollar.)_
 
 #### 📅 The two DATES — and neither Schedule C nor Form 8829 asks for one
 
@@ -358,6 +378,28 @@ use your home for business purposes."*
   are **business expenses in those earlier months** (phone, internet, mileage) that nobody has asked
   for. And if there was a workspace at a **previous home**, that is a **second Form 8829** — the
   form's own header says one per home.
+
+🛑 **AND THE CHECKBOX IS A CLAIM ABOUT THE BUSINESS, NOT ABOUT THE HOME OFFICE.** Line H —
+*"If you started or acquired this business during 2025, check here"* — is ticked from the **business**
+start date. ⛔ **A home office that began mid-year is not a business that began mid-year**, and the
+software will not tell them apart. **The tell that catches it: twelve months of telephone on line 25
+beside a September home-office date** means the business ran all year and may well predate the year.
+
+🛠️ **THE SOFTWARE'S HOME-OFFICE START DATE — does it prorate the amounts you type?** It is not on any
+IRS form, so it is a vendor field and its behaviour must be established, not assumed. **The trap is
+symmetric:** enter period-only amounts into a worksheet that prorates again and the deduction
+collapses to roughly a third; enter full-year amounts into one that does not and it is three times
+too big.
+
+🔑 **Settle it with a self-check that does not require knowing the answer first**, then **record the
+answer in the client's working paper** so next year does not re-derive it: enter the **period-only**
+amounts, then read **line 23 column (b)** and **line 24**. If line 24 ≈ line 23(b) × the full
+business-use percentage, there is no second proration. **If it comes out near a third of that, there
+is** — switch to full-year amounts.
+
+✅ **ATX, established 2026-08-20 on a live return: it does NOT prorate.** The date is documentation
+only, and **period-only amounts are correct.** ⚠️ **That finding is for a RENTER.** For a homeowner
+the same date drives **depreciation** in Part III, where it genuinely must be right.
 
 #### 🔑 What goes INTO the computation — and what emphatically does not
 
