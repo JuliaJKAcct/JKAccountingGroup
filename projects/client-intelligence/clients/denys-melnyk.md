@@ -749,7 +749,8 @@ party and a client one click apart with nothing to tell them apart. **Refer to h
 3. She gave him **Julia's firm email**, and he said he would **send them as soon as they are ready**.
 
 **What it settles.**
-- ✅ **The documents are obtainable, and the source is willing.** The file has said since 2026-08-12
+- 🟠 **A route exists and the source is willing — which is not yet the same as the documents being in
+  hand** (the ⚠️ two bullets down sizes that gap). The file has said since 2026-08-12
   that the K-1 "cannot be obtained" because the client is locked out. That was true **of the client**
   — it was never true of the firm, and nobody had tested it. **The blocker was one text message
   deep.** _(This is the "look before you ask" rule in its other direction: ask the person who
@@ -779,10 +780,9 @@ party and a client one click apart with nothing to tell them apart. **Refer to h
   **2026-03-16**, which has passed. So 2026-09-15 is **the outside date if they extended**, and if
   they did not, those returns are **already late** and the promise has no deadline behind it at all —
   which means the promise has no deadline of its own behind it. ⓘ **That does not make the WAIT
-  expensive — the next bullet works his own penalty clock through and the answer is the opposite of
-  what you would expect.** **Chase on 2026-09-15 regardless**; a K-1 that has not arrived by then is a
-  different conversation, and **2026-10-15 is the date that actually binds if an extension was
-  filed.**
+  expensive — the next bullet works HIS OWN penalty clock through, which is a different clock from
+  these companies', and the answer there is the opposite of what you would expect.** **Chase on
+  2026-09-15 regardless**; a K-1 that has not arrived by then is a different conversation.
 - 🔵 **AND THE DATE HAS A SECOND MEANING NOBODY HAD PUT BESIDE IT — HIS OWN 1040 IS ALREADY LATE, AND
   THAT ARGUES FOR WAITING, NOT AGAINST IT.** The 1120-S deadline is the *companies'* clock. **His**
   1040 was due **2026-04-15**, and §4 records that **nobody has established a Form 4868 was ever

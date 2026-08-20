@@ -226,7 +226,8 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
    moved and not reading it.** That is exactly what happened: the **2026-08-15** run wrote that note
    **490984**'s metadata *"shows it was touched again"*, re-read that one, and reported *"nothing has
    moved"* for the client — while note **485225** had taken the client's remaining business expenses
-   on **2026-08-13**. Found five days later by a human reading the note. **It bites every client**,
+   on **2026-08-13**. ⓘ **Those expenses are not themselves what gates that return** — the point is
+   that a document delivery went unnoticed for five days, and the next one may be the one that does. Found five days later by a human reading the note. **It bites every client**,
    because the firm's convention is that a working note is **rewritten in place**
    ([`double-mcp`](../../../.claude/skills/double-mcp/) §7 rule 1) — content changes without a new
    note appearing anywhere. ✅ **The rule to check for: compare `updatedAt` on EVERY note returned,

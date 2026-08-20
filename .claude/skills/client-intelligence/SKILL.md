@@ -341,7 +341,9 @@ new note to notice. `list_notes(clientId)` returns each note's **`updatedAt` and
 (verified live 2026-08-20), so the check costs nothing extra — **the failure mode is stopping at the
 first note you notice has moved.** _(2026-08-15: a sweep recorded that one note's metadata "shows it
 was touched again", re-read that one, and reported "nothing has moved" for the client — while a
-second note had taken the documents the whole return was waiting on. Found five days later, by hand.)_
+second note had taken a batch of documents the client had sent two days earlier. Found five days
+later, by hand.)_ ⚠️ **Sanity-check the body you get back too** — a long matter may be split across
+`Part 1 / Part 2` notes, so a body that ends mid-sentence is a truncated read, not a short note.
 ⚠️ **A client whose notes were not checked this way has NOT been established as "no movement"** — say
 what you searched, not that nothing happened (the method's rule 1b).
 
