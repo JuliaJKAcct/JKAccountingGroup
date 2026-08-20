@@ -1,6 +1,6 @@
 ---
 name: tax-return-sop
-description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point: it says to go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — report what was found before computing anything, and only then deliver the tables. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
+description: 🔴 PREPARE A CLIENT'S TAX RETURN — load this the moment anyone says "prepare X's tax return", "prepárame el Tax Return de X cliente", "hazme la declaración de X", "do X's 1120-S / 1040 / 1065", or asks for a return's figures as line-by-line tables. §4A is the entry point and it runs TWO PHASES from one sentence: PHASE 1 · LA REVISIÓN — call the `organizer-review` skill in full, ALWAYS and without being asked separately, to check the prior-year return against this year and find missing documents, contradictions and anything that raises an alarm; its Block A verdict is THE GATE. PHASE 2 · LA PREPARACIÓN — only if the gate says yes, deliver the line-by-line tables. Along the way: go to Double and gather it yourself — the client's BOOKS, the completed tax organizer, every file the client uploaded, the prior-year return through the redactor — and report what was found before computing anything. ALSO: write, extend or review a JK Accounting Group TAX-RETURN SOP — the form-by-form procedure for preparing one kind of return (Form 1120-S is the first; 1120, 1065, 1040, 1041 and the state forms follow the same shape) — and use it to drive an actual return, producing the form-by-form, line-by-line tables a first-time preparer can work from. Use when creating or editing a `projects/sops/form-*-preparation.md`, when someone asks "how do I prepare a <form>?", when preparing a real return with a session assisting, or when a return raises a lesson worth writing down. Encodes what makes a tax-return SOP different from every other firm SOP (it must say WHERE EACH NUMBER COMES FROM, not which box it goes in), the required section spine, the build-the-map-from-the-prior-year method, the delivery format for a live return (a table per form, the order of preparation, the flow of figures between forms, the checkboxes with their reasons, the explanations, the statements and attachments the return requires — drafted, because some block e-file — every K-1 read box by box, and the ENTRY ROUTE saying where each figure is actually typed, since most lines on a computed form cannot be typed where they appear), all pitched at someone who knows nothing about taxes or forms, the standing rule that any answer changing a figure is verified against the current-year PDF from irs.gov rather than from memory, and the working-paper archive every prepared return must leave behind.
 ---
 
 # Tax-return SOPs — and preparing a return from one
@@ -156,12 +156,12 @@ answer.
 > explicaciones."*
 
 **That sentence is the whole instruction. It is not a request for a checklist of what to collect —
-it means: GO AND GET IT YOURSELF from Double, then deliver §4B.** ⛔ **Do not open by asking what the
-client sent.** The person is asking precisely so they do not have to assemble it.
+it means: GO AND GET IT YOURSELF from Double.** ⛔ **Do not open by asking what the client sent.**
+The person is asking precisely so they do not have to assemble it.
 ⓘ **That person may be Julia**, who does not follow this machinery — so the answer is plain language
 either way.
 
-#### Step 0 · Three things that decide everything after them
+#### ⓪ PHASE 0 · Three things that must be settled BEFORE phase 1 starts
 
 1. 🔴 **WHICH FORM, and WHICH YEAR.** Double's **`Tax Return Type`** property is the firm's own answer
    *(Lilian maintains it — "bastante correctas", fairly correct, so read it before inferring)*, and
@@ -176,7 +176,83 @@ either way.
    company, the organizer is not the centre of gravity; the **general ledger** is. Do the company
    first, then the K-1, then the owner.
 
+🔑 **Why these come first:** phase 1 cannot pick a prior year without knowing **which year** is being
+prepared (its source 9), cannot know which reports are the books without knowing **which form**
+(its source 10), and **the extension gate is a hard stop** — there is no point reading ten sources
+for a return that needed a different conversation three weeks ago.
+
+#### 🔑 IT RUNS IN TWO PHASES, AND ONE SENTENCE STARTS BOTH
+
+> 🔑 **Lilian's decision, 2026-08-20 (later):** *"De las primeras cosas que quiero que hagas es que
+> tengamos todas las documentaciones necesarias y revisar el tax return del año pasado para
+> encontrar si hay alguna cosa que salte una alarma o levante sospechas… Ese revisador de organizers
+> que creamos sería muy útil a la hora de crear un tax return, porque va a analizar si nos falta
+> algún documento o no. Luego, este preparador de impuestos ejecutaría las herramientas que tiene
+> para preparar los impuestos."*
+
+| | Phase | What it is | Ends in |
+|---|---|---|---|
+| **1** | 🔍 **LA REVISIÓN** *(the review)* | the [`organizer-review`](../organizer-review/) skill — **run it in full, from this skill, without being asked separately** | its **Block A verdict**: *can this return be prepared?* |
+| ⚖️ | **THE GATE** | Block A's answer, and nothing else | ↓ or ⛔ |
+| **2** | 🧮 **LA PREPARACIÓN** *(the preparation)* | **§4B below** — the tables per form, the flow, the checkboxes, the entry route | the figures to type |
+
+🛑 **PHASE 1 IS NOT OPTIONAL AND IS NOT A FALLBACK. IT ALWAYS RUNS FIRST** _(Lilian, 2026-08-20:
+"siempre, sin preguntar")_. **It is slower on a clean client — and the clean client is exactly where
+what nobody looked at gets through.** _(The shape it catches, invented to illustrate: an **NOL carryforward** sitting in a prior year that
+nothing in the current year points at, on a client whose current-year documents are complete. **The
+preparation would never open that return.**)_
+
+⛔ **THE OLD WORDING WAS CIRCULAR AND IS STRUCK.** This section used to say *"run `organizer-review`
+first **when** the books are incomplete, or a carryover is unknown, or the organizer contradicts the
+documents."* 🔑 **You cannot know any of those until the review has run** — it made phase 1
+conditional on the answer phase 1 produces. **The review is the first step, not the exception.**
+
+#### ⚖️ The gate — what Block A's verdict does
+
+🔑 **Block A defines exactly four verdicts and this table consumes them** — ⛔ **do not invent a
+fifth, and do not soften one to let the preparation proceed.** The producer is
+[`organizer-review`](../organizer-review/) Block A; **its wording governs.**
+
+| Verdict | What happens next |
+|---|---|
+| ✅ **Yes** | **Continue straight into §4B in the same reply.** Deliver the review compactly — verdict, the prior-year→this-year table, anything found — then the preparation tables. **Do not stop to ask permission**; she asked for the return |
+| 🟡 **Yes, with an open question** | **Continue into §4B** — and **carry the question into the working paper's `6 · Open at filing` AND into the delivery itself**, so it is in front of her, not only in a file. 🛑 **This verdict is available only when NO finding is marked 🔴** *(Block A's own rule)*. ⚠️ **The test is not "is it small?" — it is *does any figure on the return depend on the answer?* If it does, it is not this row** |
+| ⛔ **No, blocked on X** · ⛔ **Not until Y is settled** | 🛑 **STOP AT THE QUESTION LIST.** Deliver phase 1's output and **do not prepare.** ⛔ **Never prepare around a hole and flag it afterwards** — a figure with no source does not become one by being surrounded by correct arithmetic |
+| ⚠️ **Phase 1 could not COMPLETE** — a source unreachable, the prior-year return unopenable, the books not obtainable | 🛑 **Treat as `Not until Y is settled` for every figure that depends on the missing source**, and **name the source in the delivery.** ⛔ **Never report a bounded search's silence as an absence** *(method.md rule 1b)*. ⓘ **`N/A` is not "unreachable"** — an entity return has no organizer, and that is a complete answer |
+
+🛑 **AND A CONSEQUENCE OF PHASE 1 BEING MANDATORY, WHICH NOTHING ELSE SAYS OUT LOUD:
+A RETURN IS NEVER PREPARED FROM A SUBAGENT, OR FROM A SCHEDULED / UNATTENDED SESSION.**
+Phase 1 reads organizer answers and opens the prior-year return through the redactor, and **both are
+banned from a subagent and from a Routine** — a Routine has nobody to tell and nobody to remind to
+delete. ⛔ **So delegating the preparation silently skips the gate.** _(The bans themselves are
+[`double-mcp`](../double-mcp/) §2.2 and CLAUDE.md; this is only their consequence.)_
+
+🔑 **The two skills already interlock — this only names the seam.** `organizer-review`'s output shape
+**opens** with *"Block A — Can we prepare this return?"*, which is precisely the question §4B needs
+answered before it starts. **Nothing new was invented; the order was wrong.**
+
+ⓘ **Steering it, in her words:** *"hazme solo la Revisión"* → phase 1 alone. *"salta la Revisión, ya
+la hice"* → phase 2 alone, **and say in the delivery that phase 1 was skipped on her instruction**,
+so the working paper records it. *"prepárame el Tax Return de X"* → both.
+
+🟡 **ONE THING THIS DOES NOT SETTLE BY ITSELF, AND A SESSION MAY NOT SETTLE IT EITHER.**
+CLAUDE.md scopes the [redactor](../../../tools/redact-doc/) to *"inside a **pre-return review**
+Lilian or Julia asked for"*. Phase 1 **is** a pre-return review, so preparing a return they asked for
+now contains one — **but that reasoning is a session widening its own permission**, and
+[`double-mcp`](../double-mcp/) is explicit that *a session may rely on a carve-out that is written
+down; it may never invent one.* ⛔ **So until CLAUDE.md itself says so, treat the prior-year return as
+requiring the same explicit ask it always did**, and **put the question to Lilian rather than
+resolving it in a skill.** _(Raised 2026-08-20, unresolved.)_
+
 #### Then find these — and read the client file FIRST, because it is free
+
+🔑 **PHASE 1 HAS ALREADY GATHERED MOST OF THIS.** Its ten sources cover items **0** and **2–5** below.
+**What this table is, is the CHECKLIST of what must be in hand before §4B — not a second sweep.**
+⛔ **Do not re-fetch what phase 1 already read**, and in particular **do not call `get_file` on the
+prior-year return twice**: that call puts a presigned download URL — a credential — into the
+transcript each time _([`double-mcp`](../double-mcp/))_. **Item 1, the books, is the one phase 2
+would add** — and phase 1 now reads them too, as its source 10, because the gate cannot answer
+*"are the books complete?"* without them.
 
 | # | What | Where | If it is missing |
 |---|---|---|---|
@@ -192,18 +268,23 @@ what is not, so the missing piece can be handed over before the analysis is buil
 ⛔ **And never write what you did not find as what is not there** — name the search, not the world
 *(method.md rule 1b)*.
 
-#### 🛑 When to STOP rather than prepare
+#### 🛑 What phase 1 is LOOKING FOR — the verdicts that stop a return
 
 **A return cannot be worked when a figure it needs has no source, and no arithmetic will fill the
-hole.** Concretely: **the books are incomplete or the year is not closed**; **an income type is
-asserted with no document behind it**; **a prior-year carryover** (NOL, basis, suspended losses,
-which states) **is unknown because the prior year was prepared elsewhere**; **the organizer's answers
-contradict the documents**. 🔑 **In every one of those, run
-[`organizer-review`](../organizer-review/) FIRST** — it exists to turn exactly this into one grouped
-list of questions to send. **Do not prepare around a hole and flag it afterwards.**
+hole.** These are the findings that make Block A read *"No, blocked on X"*:
 
-ⓘ **That skill and this one share their sources and differ in their output:** it ends in **questions
-for the client**; this one ends in **the tables below**.
+- **The books are incomplete, or the year is not closed.**
+- **An income type is asserted with no document behind it** — including an organizer answer that
+  says an income exists and nothing that evidences it.
+- **A prior-year carryover is unknown** — NOL, basis, suspended losses, which states — **because the
+  prior year was prepared elsewhere.** 🔑 **This is the one that hides**, because nothing in the
+  current year points at it.
+- **The organizer's answers contradict the documents**, or contradict last year's return.
+- **Something is in the prior year that has silently vanished from this one** — a K-1, a rental, a
+  state. ⚠️ **A disappearance is a question, never a conclusion.**
+
+🔑 **Phase 1 exists to find these BEFORE the tables are built, which is why it runs first.**
+⛔ **Do not prepare around a hole and flag it afterwards.**
 
 #### 🔒 The rules that ride along, every time
 
