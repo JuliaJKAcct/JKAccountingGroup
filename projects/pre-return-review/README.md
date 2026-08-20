@@ -2,10 +2,22 @@
 
 > **Status:** Active · **Owner:** Lilian · **Started:** 2026-08
 
-**Lilian calls it "the tax preparer."** It does not prepare or file anything. It is the
-**companion for the review that happens before preparation starts** — the pass that reads
-everything the firm already holds on a client, notices what does not add up, and hands
-back the questions that unblock the work.
+**Lilian calls it "the tax preparer."** It does not prepare or file anything. It is the pass that
+reads everything the firm already holds on a client, notices what does not add up, and hands back
+the questions that unblock the work.
+
+🔗 **Since 2026-08-20 it is also PHASE 1 OF PREPARING EVERY RETURN, and it runs ALWAYS.** Lilian's
+decision: *"De las primeras cosas que quiero que hagas es que tengamos todas las documentaciones
+necesarias y revisar el tax return del año pasado para encontrar si hay alguna cosa que salte una
+alarma."* So it has **two ways in**, and only the ending differs:
+
+| | How it starts | How it ends |
+|---|---|---|
+| 🔍 **Standalone** | *"analiza el organizer de X"*, *"hazme solo la Revisión"* | the six blocks are the deliverable |
+| 🔗 **Phase 1 of a return** | *"prepárame el Tax Return de X cliente"* → [`tax-return-sop`](../../.claude/skills/tax-return-sop/) §4A calls it first | **Block A's verdict is a GATE** — ✅ continue into the preparation tables, ⛔ stop at the question list |
+
+⚠️ **That raises the stakes on the validation note at the bottom of this file** — the method is still
+built on one client and one run, and it is now mandatory on every return.
 
 This folder holds **why it exists and how it must think**. The step-by-step engine is the
 [`organizer-review` skill](../../.claude/skills/organizer-review/); the reasoning that is
@@ -105,7 +117,8 @@ lost** — plenty is written down that no single row names.
 | **Look before you ask** · group by root cause · show the trail · a disappearance is a question · derive from structure · a client's mistake is work · the internal checklist is not the client message · show both records then ask · question the frame | [`method.md`](./method.md) — **and summarised in `CLAUDE.md`'s core conventions, so every session sees them without loading a skill** |
 | The **fixed six-block output** | [`organizer-review`](../../.claude/skills/organizer-review/) §4 |
 | That the review is **never a narrative** — the shape is fixed, and why | that skill's opening section |
-| The **nine sources** in order, and that Gmail / Drive / Ping are not optional | that skill §1 |
+| The **ten sources** in order — Gmail / Drive / Ping are not optional, and 🔴 **source 10 is the client's BOOKS**, which on an entity return is the source the organizer is not | that skill §1 |
+| 🔗 **That it is PHASE 1 of preparing a return**, the four Block A verdicts and what each does to phase 2 | that skill's opening table + §4 Block A · [`tax-return-sop`](../../.claude/skills/tax-return-sop/) §4A |
 | **How the prior year is obtained** — the review's most valuable source, read from Double **by the session itself** through [`tools/redact-doc/`](../../tools/redact-doc/): **one document, the latest year only**. Lilian ruled this 2026-08-11, replacing a rule an assistant had written and never put to her | that skill §1 source 9 · the limits in [`double-mcp`](../../.claude/skills/double-mcp/) · `FOLLOW-UPS` 28 |
 | The **six detection families**, incl. the K-1 disappearance rule and the filing-status catch | that skill §2 |
 | The **prior-year → this-year table** and its markers | that skill §3 |
@@ -137,6 +150,9 @@ already *answered* unwritable.
 
 - **Running a review:** load the [`organizer-review` skill](../../.claude/skills/organizer-review/).
   It starts with the privacy discipline; read it before the first call.
+- 🔗 **Preparing a return:** you do not load this one first —
+  [`tax-return-sop`](../../.claude/skills/tax-return-sop/) **§4A** is the entry point, and it calls
+  this skill as phase 1. ⛔ **Do not deliver a review to someone who asked for a return.**
 - **Improving it:** that skill's §6 is the rule-capture protocol — where a new rule goes and
   what provenance it must carry.
 - **⚠️ It is not validated yet.** Everything here comes from **one client and one run**. Whether

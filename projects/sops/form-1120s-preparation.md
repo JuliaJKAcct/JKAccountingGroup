@@ -27,6 +27,9 @@
 
 ```mermaid
 flowchart TD
+    Z["⓪ PHASE 1 · LA REVISIÓN<br/>organizer-review, in full — ALWAYS"] --> Z1{"Block A verdict:<br/>can this return be prepared?"}
+    Z1 -->|"⛔ No / Not until Y"| Z2["🛑 STOP at the question list.<br/>Do NOT prepare"]
+    Z1 -->|"✅ Yes · 🟡 Yes with an open question"| A
     A["① Gather · prior-year FILED return<br/>+ this year's and last year's QuickBooks"] --> B{"② Extension filed?<br/>(Form 7004)"}
     B -->|"No — and it is past 15 March"| B1["🛑 STOP. Tell Lilian.<br/>Penalties accrue per shareholder per month"]
     B -->|"Yes"| C["③ BUILD THE MAP<br/>Reproduce LAST year's return<br/>from LAST year's QuickBooks"]
@@ -46,6 +49,13 @@ flowchart TD
     L -->|"Yes"| M["⑫ Review · sign · e-file<br/>Form 8879-CORP"]
     M --> N["✅ File the client's copy<br/>in Double · record it"]
 ```
+
+🔗 **STEP ⓪ IS NOT OPTIONAL AND IT IS NOT PART OF THIS SOP.** Every return begins with **phase 1, la
+Revisión** — the [`organizer-review` skill](../../.claude/skills/organizer-review/) run in full,
+whose **Block A verdict is the gate into everything below** _(Lilian, 2026-08-20: "siempre, sin
+preguntar")_. **The entry point for a live return is
+[`tax-return-sop`](../../.claude/skills/tax-return-sop/) §4A**, and this SOP is what phase 2 opens.
+⚠️ **Arriving here directly — "prepárame el 1120-S de X" — does not skip it.**
 
 ---
 

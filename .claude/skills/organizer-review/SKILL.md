@@ -1,6 +1,6 @@
 ---
 name: organizer-review
-description: 🔗 PHASE 1 OF PREPARING ANY RETURN, and also a standalone review. The `tax-return-sop` skill's §4A calls this FIRST, always, before any figure is computed — its Block A verdict is the gate that decides whether the preparation may start. ALSO run it on its own for "analiza el organizer de X", "¿qué le preguntamos a este cliente?", "hazme solo la Revisión", "revisión previa", or an organizer that reads Completed and still cannot be worked. The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, and the prior-year return, which since 2026-08-11 it fetches from Double itself through the redactor — one year only, see §1 source 9), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the nine sources that must be read in order, the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat, and handed over as a PDF so the session can be deleted without losing it — never an artifact, never committed.
+description: 🔗 PHASE 1 OF PREPARING ANY RETURN, and also a standalone review. The `tax-return-sop` skill's §4A calls this FIRST, always, before any figure is computed — its Block A verdict is the gate that decides whether the preparation may start. ALSO run it on its own for "analiza el organizer de X", "¿qué le preguntamos a este cliente?", "hazme solo la Revisión", "revisión previa", or an organizer that reads Completed and still cannot be worked. The firm's PRE-RETURN REVIEW COMPANION — Lilian calls it "the tax preparer", though it never files anything. It reads everything the firm holds on a client (the Client Intelligence file, Double notes, files, properties and tax project, Julia's Gmail, Google Drive, Ping meeting notes, the organizer and its answers, the prior-year return fetched through the redactor — one year only — and 🔴 THE CLIENT'S BOOKS, which on an entity return is the source the organizer is not), reconciles them against each other, and turns what is missing, contradictory or misclassified into ONE grouped list of questions to send back — before anyone starts preparing. Use whenever asked to review / analyse / check a client before their return, to compare this year against last year, to work out what to ask a client, when an organizer reads "Completed" but the return cannot be worked, or when someone says "tax preparer", "revisión previa", "analiza el organizer de X" or "¿qué le preguntamos a este cliente?". Encodes the fixed output shape (verdict · prior-year→this-year comparison table · findings grouped by root cause · a we-already-have-this guard · the client question list · notes for the file), the TEN sources that must be read in order (including the client's BOOKS), the six detection families, the carryover block when the prior year was prepared elsewhere, how the firm phrases a question to a client, and the privacy discipline for reading organizer answers at all. Delivered in chat, and handed over as a PDF so the session can be deleted without losing it — never an artifact, never committed.
 ---
 
 # The pre-return review — what to ask the client, before anyone starts
@@ -44,10 +44,34 @@ two clients' reviews side by side and find the same thing in the same place.
 | Called as | Trigger | After the verdict |
 |---|---|---|
 | 🔍 **A standalone review** | *"analiza el organizer de X"*, *"¿qué le preguntamos a este cliente?"*, *"hazme solo la Revisión"* | **The output IS the deliverable.** Six blocks, the PDF, done |
-| 🔗 **PHASE 1 of a return** | *"prepárame el Tax Return de X cliente"* — [`tax-return-sop`](../tax-return-sop/) **§4A calls this skill first, always** | **Block A is a GATE.** ✅ *Yes* → the same reply continues into the preparation tables. ⛔ *No, blocked on X* → **stop at the question list; do not prepare** |
+| 🔗 **PHASE 1 of a return** | *"prepárame el Tax Return de X cliente"* · *"prepare X's return"* · *"hazme la declaración de X"* — [`tax-return-sop`](../tax-return-sop/) **§4A calls this skill first, always** | **Block A is a GATE.** ✅ *Yes* / 🟡 *Yes with an open question* → **the same reply continues into the preparation tables.** ⛔ *No, blocked on X* / *Not until Y* → **stop at the question list; do not prepare** |
 
-🛑 **Nothing in this skill changes when it runs as phase 1** — same nine sources, same six blocks,
-same privacy discipline. **What changes is that Block A's verdict is acted on rather than read.**
+🛑 **IF YOU LANDED HERE ON A "PREPARE THE RETURN" REQUEST, YOU ARE IN PHASE 1 — DO NOT STOP AT THE VERDICT.** ⛔ **Delivering six blocks and a delete-the-session reminder to someone who asked for a tax return is a failed job, not a completed review.** 🔑 **Load [`tax-return-sop`](../tax-return-sop/) and continue into its §4B** with the verdict in hand. _(The trigger phrases are in the row above; they name a return, not a review.)_
+
+🛑 **The WORK does not change when it runs as phase 1** — same ten sources, same six blocks, same
+privacy discipline, same detection families. **What changes is two things: Block A's verdict is
+ACTED ON rather than read, and §5 "Finishing the job" belongs to the END OF THE RETURN, not to the
+end of the review.**
+
+⚠️ **§5 has five steps and three of them must NOT fire mid-return:**
+
+| §5 step | As a standalone review | 🔗 **As phase 1** |
+|---|---|---|
+| **1** · write the Client Intelligence file | at the end | ✅ **the same — do it now.** This is the durable output of phase 1, and it survives whatever happens next |
+| **2** · do not put the analysis in a Double note | at the end | ✅ **the same** |
+| **3** · deliver in chat, never committed | at the end | ⚠️ **the REVIEW is still never committed** — but the open question it produced **is** written into the working paper's `6 · Open at filing`, which **is** committed. **Those are different things**: the finding travels, the analysis does not |
+| **4** · the PDF | at the end | 🛑 **DEFER IT.** One PDF at the end covering **the review AND the preparation tables** — the tables are the part she cannot reconstruct, and two PDFs for one job is how a discipline gets skipped |
+| **5** · 🔴 remind them to delete the session | at the end | ⛔ **DO NOT SAY IT YET.** Delivered here it lands **immediately before the return is computed**, which is the worst possible moment and is advice she might act on. **It belongs after the tables, with the PDF** |
+
+🔑 **The rule in one line: phase 1 writes the client file now, and everything that closes a session
+waits for phase 2.**
+
+📌 **PHASE 1 RUNS ONCE PER CLIENT PER YEAR PER SESSION — not once per form.** A company and its owner
+are **two clients** and each gets its own phase 1. ⛔ **But do not re-run it for the same client and
+year inside one session**: carry the verdict forward and **say that you are doing so.** ⚠️ **Without
+this the privacy pre-announcement, the redactor fetch and the delete reminder all fire twice for one
+piece of work** — and §4A's own order *(company first, then the K-1, then the owner)* puts two
+returns back to back in a single session by design.
 
 ⚖️ **So Block A carries more weight than its three lines suggest.** ⚠️ **Do not soften a verdict to
 let the preparation proceed, and do not harden one to be safe** — *"No"* costs the client a round
@@ -64,7 +88,9 @@ asked for.
 
 **Assume you have no memory of this client.** Sessions that read organizer answers get
 deleted (§0), so **every review starts from zero by design** and the repo is the only thing
-that carries forward. Before anything else:
+that carries forward. 🔗 **As phase 1 this still holds** — the review genuinely starts cold — **but
+what it establishes then carries into the preparation in the same session**, rather than being
+rediscovered. Before anything else:
 
 1. **Read the client's file** — `projects/client-intelligence/clients/<slug>.md`. Its §6
    `Tax year YYYY — the review` entry holds what a previous pass established, every question
@@ -72,7 +98,7 @@ that carries forward. Before anything else:
    not re-derive it and do not re-ask what is already answered there.**
 2. **Read that same file's §5** — the standing quirks. How this client actually communicates is in there, and
    it is usually not the portal.
-3. **Then run §1's nine sources.**
+3. **Then run §1's TEN sources.**
 
 If the client has no file, create one (`CLAUDE.md` core convention) — you are the first pass,
 and the next session will start from what you leave.
@@ -138,12 +164,18 @@ this permission exists to produce.
 
 ---
 
-## 1. Read all nine sources, in this order — none is optional
+## 1. Read all TEN sources, in this order — none is optional
 
 **The organizer is a prompt, not a source.** In the pilot case, the organizer reported
 **100% complete** and disclosed not one material fact about the return; everything came
 from the prior return and a Double note. Auditing an organizer against itself finds
 nothing.
+
+⚠️ **AND ON AN ENTITY RETURN THERE IS NO ORGANIZER AT ALL.** A 1120-S, an 1120 or a 1065 has
+none, and **bookkeeping and Schedule-C clients are not owed one either**
+_(see [`tax-season-readiness`](../tax-season-readiness/))_. **That is not a blocked review** —
+record **source 8 as `N/A — entity return`** in Block A and carry on. 🔑 **Source 10, the books,
+is what takes its place**, and on those returns it is the heaviest source in the table.
 
 | # | Source | What it gives you | Tool |
 |---|---|---|---|
@@ -156,6 +188,7 @@ nothing.
 | 7 | **Ping Assistant** | Zoom/meeting summaries, transcripts and action items — what was actually *said* to the client | `search_meetings` (org-wide) and `resolve_person` on each owner; search by **owner name as well as business name** |
 | 8 | **The organizer** — structure *and* responses | The answers, and which questions were even asked | `get_organizer`, `get_organizer_responses` |
 | 9 | **The prior year** — return or organizer | The comparison base. §3 | `list_organizers` first; else `get_file` → **the redactor**, and **only the latest year** — see below |
+| 🔴 **10** | **THE CLIENT'S BOOKS** — the general ledger for the year, **both years' balance sheets**, this year's and last year's P&L, the depreciation schedule, payroll | 🛑 **Whether the return can be worked AT ALL.** *Are the books complete? Is the year closed? Does the balance sheet's opening column match last year's filed closing column?* ⚠️ **On an ENTITY return this is the source the organizer is not** — a company return runs off its ledger, and "the books are incomplete or the year is not closed" is the **first** thing that makes Block A read *No* | QuickBooks, or Double's reports (`get_profit_loss_report`, `get_balance_sheet_report`, `get_transactions`). ⓘ **The form SOP's §1 is the authoritative list** of exactly which reports that form needs |
 
 **Finding the IDs first:** every Double call needs a `clientId` — `list_clients(name:)` gets it, and
 `list_organizers(clientId)` gets the organizer. The repo file is `clients/<slug>.md`, slug =
@@ -460,9 +493,31 @@ job.**
 
 ### Block A — Can we prepare this return? (3 lines)
 
-Verdict — **Yes / No, blocked on X / Not until Y is settled** — the single thing that
-gates it, and how many questions the client owes. **And if a source was empty, unreachable or
-never checked, say so here** — a review that silently skipped one is worth less than it looks.
+Verdict — the single thing that gates it, and how many questions the client owes.
+🔗 **When this ran as PHASE 1 of a return, this verdict is not read — it is ACTED ON**
+([`tax-return-sop`](../tax-return-sop/) §4A), so it must be one of these four and nothing else:
+
+| Verdict | Means | Phase 2 |
+|---|---|---|
+| ✅ **Yes** | nothing found that a figure depends on | **proceeds** |
+| 🟡 **Yes, with an open question** | something is genuinely open, but **no figure on the return depends on the answer** | **proceeds, carrying the question** |
+| ⛔ **No, blocked on X** | a figure has no source, and arithmetic will not make one | **stops** |
+| ⛔ **Not until Y is settled** | a decision or a fact must be resolved first | **stops** |
+
+🛑 **THE TEST THAT SEPARATES 🟡 FROM ⛔, AND IT IS NOT A JUDGEMENT CALL:**
+**does any figure that goes on the return depend on the answer?** **Yes → it blocks.** No → 🟡.
+
+⛔ **ANY FINDING MARKED 🔴 IN BLOCK C FORCES THIS VERDICT TO "No".** 🟡 is available **only when
+every finding is 🟠 or 🟡.** ⚠️ **A 🔴 written up as *"Yes, but"* is the failure this rule exists to
+stop** — it is how a real blocker becomes a footnote in a working paper the client never sees.
+**If the verdict and the markers disagree, the markers are right.**
+
+⚠️ **And if a source was empty, unreachable or never checked, say so here** — a review that silently
+skipped one is worth less than it looks. 🔴 **When a source could not be reached and a figure depends
+on it, that is `Not until Y is settled`, not `Yes`** — an unopenable prior-year return is the case
+that matters, because §3's whole comparison rests on it. ⓘ **`N/A` is not "empty":** an entity return
+has **no organizer** (§1 source 8), and recording it as `N/A — entity return` is a complete answer,
+not a gap.
 Nothing else.
 
 ### Block B — The prior-year → this-year table
@@ -697,6 +752,12 @@ spaces or dots rather than hyphens. **You are still the control**; see
 
 ## 5. Finishing the job
 
+🔗 **IF THIS RAN AS PHASE 1 OF A RETURN, ONLY STEPS 1 AND 2 HAPPEN NOW.** Steps 3–5 — the chat
+delivery discipline, the PDF and **the delete-the-session reminder** — belong to the **end of the
+whole return**, and the PDF then covers the review **and** the preparation tables. ⛔ **Do not tell
+anyone to delete the conversation while the return is still being computed.** *(The table at the top
+of this skill is the authority; this note exists so nobody meets step 5 without it.)*
+
 1. **Update the client's Client Intelligence file** — required, same session, and create
    it if missing (`CLAUDE.md` core convention). §6 gets the re-ask list **and the `Tax year YYYY — the review` entry** (Block F); §5 gets the
    durable quirks.
@@ -849,6 +910,9 @@ misses is the rule that is missing. Correcting mid-flight teaches the session an
 
 ## 8. Related
 
+- 🔗 **[`tax-return-sop`](../tax-return-sop/) — the other half of the same process.** This skill is
+  its **§4A phase 1**; its **§4B** is what runs once Block A says yes. **If the request was to
+  prepare a return, that is where this ends, not here.**
 - [`double-mcp`](../double-mcp/) — §2.2 (the privacy rule, read it), §7 rule 11 (what a note carries).
 - [`tax-season-readiness`](../tax-season-readiness/) — the layer above: *who* is ready. Its
   [`individual-organizer-logic-defects.md`](../tax-season-readiness/references/individual-organizer-logic-defects.md)

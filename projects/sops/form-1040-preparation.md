@@ -29,7 +29,17 @@
 
 ## The process at a glance
 
+🔗 **IT DOES NOT START HERE. STEP ⓪ IS PHASE 1 · LA REVISIÓN** — the
+[`organizer-review` skill](../../.claude/skills/organizer-review/) run **in full, always**, whose
+**Block A verdict is the gate** into everything below _(Lilian, 2026-08-20: "siempre, sin
+preguntar")_. ⛔ *No / Not until Y is settled* → **stop at the question list and do not prepare.**
+**The entry point for a live return is [`tax-return-sop`](../../.claude/skills/tax-return-sop/)
+§4A**; this SOP is what phase 2 opens. ⚠️ **Arriving here directly — *"prepárame el 1040 de X"* —
+does not skip it.**
+
 ```
+⓪ LA REVISIÓN (organizer-review) → ⚖️ Block A verdict → ⛔ stop, or ↓
+      ↓
 §1 GATHER  →  §2 FILING STATUS (the gate)  →  §3 DEPENDANTS  →  the MODULES §0 selected
                                                                           ↓
                                               §20 TIE-OUT  →  §21 WORKING PAPER  →  file

@@ -161,6 +161,26 @@ The person is asking precisely so they do not have to assemble it.
 ⓘ **That person may be Julia**, who does not follow this machinery — so the answer is plain language
 either way.
 
+#### ⓪ PHASE 0 · Three things that must be settled BEFORE phase 1 starts
+
+1. 🔴 **WHICH FORM, and WHICH YEAR.** Double's **`Tax Return Type`** property is the firm's own answer
+   *(Lilian maintains it — "bastante correctas", fairly correct, so read it before inferring)*, and
+   the **tax project** carries the year and status. **Then open that form's SOP** —
+   [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md),
+   [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) — because §1 of that
+   SOP is the real gather list and it differs by form.
+2. 🛑 **THE EXTENSION GATE.** Before any work: is the return already late, and was an extension filed?
+   Every form SOP has this as a hard stop. **A missed deadline changes what you are doing**, not just
+   when.
+3. 🔑 **A COMPANY RETURN RUNS OFF ITS BOOKS AND FEEDS THE OWNER'S 1040 — never the reverse.** So for a
+   company, the organizer is not the centre of gravity; the **general ledger** is. Do the company
+   first, then the K-1, then the owner.
+
+🔑 **Why these come first:** phase 1 cannot pick a prior year without knowing **which year** is being
+prepared (its source 9), cannot know which reports are the books without knowing **which form**
+(its source 10), and **the extension gate is a hard stop** — there is no point reading ten sources
+for a return that needed a different conversation three weeks ago.
+
 #### 🔑 IT RUNS IN TWO PHASES, AND ONE SENTENCE STARTS BOTH
 
 > 🔑 **Lilian's decision, 2026-08-20 (later):** *"De las primeras cosas que quiero que hagas es que
@@ -178,9 +198,9 @@ either way.
 
 🛑 **PHASE 1 IS NOT OPTIONAL AND IS NOT A FALLBACK. IT ALWAYS RUNS FIRST** _(Lilian, 2026-08-20:
 "siempre, sin preguntar")_. **It is slower on a clean client — and the clean client is exactly where
-what nobody looked at gets through.** _(A real one: an **NOL carryforward** sitting in a prior
-year that nothing in the current year pointed at, on a client whose current-year documents were
-complete. The preparation would never have opened that return.)_
+what nobody looked at gets through.** _(The shape it catches, invented to illustrate: an **NOL carryforward** sitting in a prior year that
+nothing in the current year points at, on a client whose current-year documents are complete. **The
+preparation would never open that return.**)_
 
 ⛔ **THE OLD WORDING WAS CIRCULAR AND IS STRUCK.** This section used to say *"run `organizer-review`
 first **when** the books are incomplete, or a carryover is unknown, or the organizer contradicts the
@@ -189,11 +209,23 @@ conditional on the answer phase 1 produces. **The review is the first step, not 
 
 #### ⚖️ The gate — what Block A's verdict does
 
+🔑 **Block A defines exactly four verdicts and this table consumes them** — ⛔ **do not invent a
+fifth, and do not soften one to let the preparation proceed.** The producer is
+[`organizer-review`](../organizer-review/) Block A; **its wording governs.**
+
 | Verdict | What happens next |
 |---|---|
 | ✅ **Yes** | **Continue straight into §4B in the same reply.** Deliver the review compactly — verdict, the prior-year→this-year table, anything found — then the preparation tables. **Do not stop to ask permission**; she asked for the return |
-| ⛔ **No, blocked on X** · **Not until Y is settled** | 🛑 **STOP AT THE QUESTION LIST.** Deliver phases 1's output and **do not prepare.** ⛔ **Never prepare around a hole and flag it afterwards** — a figure with no source does not become one by being surrounded by correct arithmetic |
-| 🟡 **Yes, but with an open question that does not block** | **Continue into §4B, and carry the open question into the working paper's §6 and the delivery** — do not let it evaporate because the tables were more interesting |
+| 🟡 **Yes, with an open question** | **Continue into §4B** — and **carry the question into the working paper's `6 · Open at filing` AND into the delivery itself**, so it is in front of her, not only in a file. 🛑 **This verdict is available only when NO finding is marked 🔴** *(Block A's own rule)*. ⚠️ **The test is not "is it small?" — it is *does any figure on the return depend on the answer?* If it does, it is not this row** |
+| ⛔ **No, blocked on X** · ⛔ **Not until Y is settled** | 🛑 **STOP AT THE QUESTION LIST.** Deliver phase 1's output and **do not prepare.** ⛔ **Never prepare around a hole and flag it afterwards** — a figure with no source does not become one by being surrounded by correct arithmetic |
+| ⚠️ **Phase 1 could not COMPLETE** — a source unreachable, the prior-year return unopenable, the books not obtainable | 🛑 **Treat as `Not until Y is settled` for every figure that depends on the missing source**, and **name the source in the delivery.** ⛔ **Never report a bounded search's silence as an absence** *(method.md rule 1b)*. ⓘ **`N/A` is not "unreachable"** — an entity return has no organizer, and that is a complete answer |
+
+🛑 **AND A CONSEQUENCE OF PHASE 1 BEING MANDATORY, WHICH NOTHING ELSE SAYS OUT LOUD:
+A RETURN IS NEVER PREPARED FROM A SUBAGENT, OR FROM A SCHEDULED / UNATTENDED SESSION.**
+Phase 1 reads organizer answers and opens the prior-year return through the redactor, and **both are
+banned from a subagent and from a Routine** — a Routine has nobody to tell and nobody to remind to
+delete. ⛔ **So delegating the preparation silently skips the gate.** _(The bans themselves are
+[`double-mcp`](../double-mcp/) §2.2 and CLAUDE.md; this is only their consequence.)_
 
 🔑 **The two skills already interlock — this only names the seam.** `organizer-review`'s output shape
 **opens** with *"Block A — Can we prepare this return?"*, which is precisely the question §4B needs
@@ -203,27 +235,24 @@ answered before it starts. **Nothing new was invented; the order was wrong.**
 la hice"* → phase 2 alone, **and say in the delivery that phase 1 was skipped on her instruction**,
 so the working paper records it. *"prepárame el Tax Return de X"* → both.
 
-ⓘ **One consequence worth knowing:** because phase 1 is now always part of preparing a return,
-**preparing a return always CONTAINS a pre-return review** — which is the scope CLAUDE.md gives the
-[redactor](../../../tools/redact-doc/) for opening a prior-year return. The two are no longer
-different footings.
-
-#### Step 0 · Three things that decide everything after them
-
-1. 🔴 **WHICH FORM, and WHICH YEAR.** Double's **`Tax Return Type`** property is the firm's own answer
-   *(Lilian maintains it — "bastante correctas", fairly correct, so read it before inferring)*, and
-   the **tax project** carries the year and status. **Then open that form's SOP** —
-   [`form-1120s-preparation.md`](../../../projects/sops/form-1120s-preparation.md),
-   [`form-1040-preparation.md`](../../../projects/sops/form-1040-preparation.md) — because §1 of that
-   SOP is the real gather list and it differs by form.
-2. 🛑 **THE EXTENSION GATE.** Before any work: is the return already late, and was an extension filed?
-   Every form SOP has this as a hard stop. **A missed deadline changes what you are doing**, not just
-   when.
-3. 🔑 **A COMPANY RETURN RUNS OFF ITS BOOKS AND FEEDS THE OWNER'S 1040 — never the reverse.** So for a
-   company, the organizer is not the centre of gravity; the **general ledger** is. Do the company
-   first, then the K-1, then the owner.
+🟡 **ONE THING THIS DOES NOT SETTLE BY ITSELF, AND A SESSION MAY NOT SETTLE IT EITHER.**
+CLAUDE.md scopes the [redactor](../../../tools/redact-doc/) to *"inside a **pre-return review**
+Lilian or Julia asked for"*. Phase 1 **is** a pre-return review, so preparing a return they asked for
+now contains one — **but that reasoning is a session widening its own permission**, and
+[`double-mcp`](../double-mcp/) is explicit that *a session may rely on a carve-out that is written
+down; it may never invent one.* ⛔ **So until CLAUDE.md itself says so, treat the prior-year return as
+requiring the same explicit ask it always did**, and **put the question to Lilian rather than
+resolving it in a skill.** _(Raised 2026-08-20, unresolved.)_
 
 #### Then find these — and read the client file FIRST, because it is free
+
+🔑 **PHASE 1 HAS ALREADY GATHERED MOST OF THIS.** Its ten sources cover items **0** and **2–5** below.
+**What this table is, is the CHECKLIST of what must be in hand before §4B — not a second sweep.**
+⛔ **Do not re-fetch what phase 1 already read**, and in particular **do not call `get_file` on the
+prior-year return twice**: that call puts a presigned download URL — a credential — into the
+transcript each time _([`double-mcp`](../double-mcp/))_. **Item 1, the books, is the one phase 2
+would add** — and phase 1 now reads them too, as its source 10, because the gate cannot answer
+*"are the books complete?"* without them.
 
 | # | What | Where | If it is missing |
 |---|---|---|---|
