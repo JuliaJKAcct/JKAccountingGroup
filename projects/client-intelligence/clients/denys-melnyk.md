@@ -778,32 +778,41 @@ party and a client one click apart with nothing to tell them apart. **Refer to h
   establishes that any of the three companies actually filed an extension.** The unextended date was
   **2026-03-16**, which has passed. So 2026-09-15 is **the outside date if they extended**, and if
   they did not, those returns are **already late** and the promise has no deadline behind it at all —
-  which makes the chase more urgent, not less. **Chase on 2026-09-15 regardless**; a K-1 that has not
-  arrived by then is a different conversation.
+  which means the promise has no deadline of its own behind it. ⓘ **That does not make the WAIT
+  expensive — the next bullet works his own penalty clock through and the answer is the opposite of
+  what you would expect.** **Chase on 2026-09-15 regardless**; a K-1 that has not arrived by then is a
+  different conversation, and **2026-10-15 is the date that actually binds if an extension was
+  filed.**
 - 🔵 **AND THE DATE HAS A SECOND MEANING NOBODY HAD PUT BESIDE IT — HIS OWN 1040 IS ALREADY LATE, AND
   THAT ARGUES FOR WAITING, NOT AGAINST IT.** The 1120-S deadline is the *companies'* clock. **His**
   1040 was due **2026-04-15**, and §4 records that **nobody has established a Form 4868 was ever
   filed** — the firm cannot have filed one, since he became a client in July. Work the two cases:
-  - **If NO extension exists:** the failure-to-file penalty is **5% of the net tax due for each month
-    _or fraction of a month_, capped at 25%** (§6651(a)(1)). ⚠️ **"Or fraction" is the whole point:
-    counting from 2026-04-15, the fifth fraction-month begins 2026-08-16, so the 25% ceiling is
-    reached around 2026-08-16 — which has ALREADY PASSED.** So the FTF penalty **cannot grow any
-    further**, and the marginal cost of waiting for correct K-1s is now only **failure-to-pay at
-    0.5% per month** (its own separate 25% cap) **plus interest**. ⓘ Note also that in any month both
-    run, FTF is reduced to **4.5%** so the pair totals 5% (§6651(c)(1)) — and that a return more than
-    60 days late carries a **minimum** penalty; 🛑 **read its current amount off irs.gov, never from
-    memory.**
-  - **If an extension WAS filed:** no failure-to-file penalty at all provided the return goes in by
-    **2026-10-15** — only failure-to-pay and interest, which run from 2026-04-15 regardless, because
-    an extension extends the time to **file**, not to **pay** (§4).
-  🔵 **So the earlier reading here was wrong and is corrected: waiting is NOT getting more expensive
-  by 5% a month.** Under either case the clock that could punish delay has already done its worst, so
-  **waiting for correct K-1s beats filing a guess and amending** — an amended return costs work twice
-  and a wrong 1040 can draw its own accuracy penalty. ⚠️ **The 2024 NOL still does not protect him**
-  — it reduces taxable income, not **SE tax**, which sits in the penalty base (§4/§5). **The extension
-  question is still worth settling** (a lookup on his IRS account transcript, not a question for the
-  ex-partner) — but it now sizes the bill rather than setting the pace. **The pace decision is
-  Julia's, and this is the input she needs.**
+  - **If NO extension exists:** the failure-to-file penalty runs at **5% of the net tax due for each
+    month _or fraction of a month_** (§6651(a)(1)). ⚠️ **"Or fraction" is the whole point:** counting
+    from 2026-04-15 the fifth fraction-month begins **2026-08-16**, so the five months that build the
+    maximum are **already run**. ⓘ **And the maximum here is 22.5%, not 25%** — in any month where
+    failure-to-pay also applies, the FTF rate is reduced by it to **4.5%** (§6651(c)(1)), so five
+    months give 4.5% × 5 = **22.5%**; the 25% figure is the FTF cap in the abstract, reached only in
+    months where no FTP runs. Either way **the FTF component has stopped growing**, and the marginal
+    cost of waiting is now **failure-to-pay at 0.5% per month** (its own separate 25% cap) **plus
+    interest**. ⓘ A return more than 60 days late also carries a **minimum** penalty; 🛑 **read its
+    current amount off irs.gov, never from memory.**
+  - **If an extension WAS filed:** no failure-to-file penalty at all **provided the return goes in by
+    2026-10-15** — only failure-to-pay and interest, which run from 2026-04-15 regardless, because an
+    extension extends the time to **file**, not to **pay** (§4). 🔴 **But this case has a cliff the
+    other does not:** miss **2026-10-15** and the FTF penalty **starts from zero at 5% a month** and
+    climbs to its maximum over the following five. **So an extension makes delay cheap up to that
+    date and expensive after it.**
+  🔵 **So the earlier reading here was wrong in the direction it pointed, and is corrected: waiting is
+  NOT getting more expensive by 5% a month right now.** **Waiting for correct K-1s beats filing a
+  guess and amending** — an amended return costs work twice and a wrong 1040 can draw its own
+  accuracy penalty. ⚠️ **But the two cases diverge at 2026-10-15, which is why the extension question
+  still has to be answered** (a lookup on his IRS account transcript, not a question for the
+  ex-partner): **no extension → the FTF damage is done, and waiting past October costs only FTP and
+  interest; extension → 2026-10-15 is a hard wall and the return must be filed by it, with or without
+  the K-1s.** ⚠️ **The 2024 NOL protects neither case** — it reduces taxable income, not **SE tax**,
+  which sits in the penalty base (§4/§5). **The pace decision is Julia's, and this is the input she
+  needs.**
 - 📬 **They arrive at JULIA's email, not through Double and not through the client.** So they land in
   a place this file's weekly sweep reads and the client portal does not. **Whoever sees them first
   files them in Double** (`JK Accounting Group > Others > 2025`, the path Lilian set — §5) **and logs
@@ -941,9 +950,11 @@ party and a client one click apart with nothing to tell them apart. **Refer to h
   WAS WRONG, and it is left standing with the correction rather than rewritten.** It said *"no
   client-facing developments"* and *"nothing has moved since 2026-08-12"*. **Something had:** the
   client's **remaining business expenses arrived 2026-08-13** by Google Voice and Lilian added them
-  to Double note **485225**. The run missed it for a reproducible reason — **it read the activity
-  log, and Double's activity log does not record note edits** — which this same entry noticed about
-  note 490984 and did not generalise. ⚠️ **So read every negative below as "the searches this run
+  to Double note **485225**. The run missed it for a reproducible reason, and it is sharper than
+  "it trusted the activity log" — **it HAD the signal and stopped at the first hit.** Its own text
+  below notes that note 490984 *"shows it was touched again"* and re-reads that one; note 485225 had
+  moved too and was not re-read. (Double's activity log does record no Note entity, which is why the
+  metadata is the only signal there is.) ⚠️ **So read every negative below as "the searches this run
   ran found nothing", never as "nothing happened"** _(the method's rule 1b, in the wild)_. The
   original text follows, unaltered: **No client-facing developments since the last review.** Gmail (`after:2026/08/11`, in:inbox and in:sent) returned **nothing** for
   Melnyk/Denys — no new correspondence with or about him since baseline. Ping `search_meetings`

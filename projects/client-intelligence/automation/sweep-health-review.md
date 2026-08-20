@@ -218,6 +218,7 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
 7. **Spot-check one client against reality.** Pick a client with a known open item and confirm the
    report says something true about it. **Best Broker Realty** is the natural test: its Sept 30
    licence renewal should surface as a deadline, and its unfiled certificate as an open item.
+### C. Did coverage work?
 8. 🔴 **DID THE RUN RE-READ EVERY DOUBLE NOTE WHOSE `updatedAt` MOVED — or just notice that one had?**
    ⚠️ **Double's activity log records no Note entity at all**, so a note whose content changed reads
    as untouched there. **`list_notes` does carry the signal** — it returns every note's `updatedAt`
@@ -231,9 +232,10 @@ Work top to bottom. Each row says what to look at and **what the answer means.**
    note appearing anywhere. ✅ **The rule to check for: compare `updatedAt` on EVERY note returned,
    and re-read the body of every one that moved — not just the first one noticed.** **A run reporting
    "no movement" without that has not established it**; treat the claim as unsupported, not as a
-   finding. _(Now also written into the operative prompt — `weekend-ci-sweep.md` step 5, Double.)_
-
-### C. Did coverage work?
+   finding. _(Now also written where it can PREVENT the miss rather than detect it: the operative
+   prompt `weekend-ci-sweep.md` step 5 (Double), the [`client-intelligence`](../../../.claude/skills/client-intelligence/)
+   skill's sweep sources, and [`double-mcp`](../../../.claude/skills/double-mcp/) §7 rule 1 — so an
+   ad-hoc sweep run by hand meets it too.)_
 
 9. **How many clients got an incremental pass, how many a full pass, how many were deferred?**
    The run is now required to state all three. **Expect ~6 full passes** against a queue of ~20.

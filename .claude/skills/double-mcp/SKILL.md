@@ -881,7 +881,16 @@ the whole thing start to finish, instead of reconstructing it from email.
    ⚠️ **And EDIT THE BODY YOU FETCHED — never re-author a note from memory.** A person may have
    edited it in the UI since you last saw it (Lilian did exactly that on 2026-08-12, cutting what
    she judged unimportant), and **Double keeps no version history: there is no `delete_note`, no
-   note revisions, and `list_activity_log` has no `Note` entity.** An overwrite of someone's own
+   note revisions, and `list_activity_log` has no `Note` entity** — 🔴 **and that last clause cuts a
+   second way that cost the firm five days: because the activity log carries no `Note` entity, a note
+   whose CONTENT changed is invisible to it, and "rewritten in place" is precisely the shape that
+   leaves no new note to notice. So when you are looking for what MOVED on a client, `list_notes`
+   is the only signal — it returns each note's `updatedAt` **and its body** together (verified live
+   2026-08-20). **Compare `updatedAt` on EVERY note and re-read every body that moved; stopping at
+   the first one you notice is the actual failure mode.** _(2026-08-15: a sweep recorded that one
+   note "shows it was touched again", re-read that one, reported "nothing has moved" for the client —
+   and a second note had taken the documents the client's whole return was waiting on.)_ An
+   overwrite of someone's own
    edits is **unrecoverable**. _(Lilian stated
    this when the convention was created and **re-confirmed it unprompted on 2026-08-06**, when the firm
    opened its second case note — a different matter, Ecoorganic's QuickBooks handover.)_
