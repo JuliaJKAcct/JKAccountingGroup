@@ -328,10 +328,24 @@ Sources, per client: **Ping Assistant** (`resolve_person`, `search_contacts`,
 **Double** (`get_client`, **`list_client_properties`** — the cleanest structured input:
 Assigned Staff, Entity/Tax Return Type, Sales Tax, Bookkeeping, Payroll, 1099, Annual
 Report, Organizer Status; the **EIN / Tax ID** property is readable and writable to the
-file since 2026-08-12 — see rule 1), `list_notes`,
-`list_contacts` (roles only), `list_activity_log`; **Gmail** (`in:inbox` **and**
+file since 2026-08-12 — see rule 1), **`list_notes` — and read the 🔴 note below before you use its
+output**, `list_contacts` (roles only), `list_activity_log`; **Gmail** (`in:inbox` **and**
 `in:sent`); **Google Drive** (the client's folder → link it in §7); **QuickBooks** if
 useful; and **the repo itself** (existing SOPs, FOLLOW-UPS, BACKLOG).
+
+🔴 **A note that CHANGED looks untouched — compare `updatedAt` on EVERY note, and re-read every body
+that moved.** Double's `list_activity_log` records **no Note entity at all**, so an edit leaves no
+trace there — and the firm's own convention is that a working note is **rewritten in place** rather
+than replaced ([`double-mcp`](../double-mcp/) §7 rule 1), which is exactly the shape that produces no
+new note to notice. `list_notes(clientId)` returns each note's **`updatedAt` and its body together**
+(verified live 2026-08-20), so the check costs nothing extra — **the failure mode is stopping at the
+first note you notice has moved.** _(2026-08-15: a sweep recorded that one note's metadata "shows it
+was touched again", re-read that one, and reported "nothing has moved" for the client — while a
+second note had taken a batch of documents the client had sent two days earlier. Found five days
+later, by hand.)_ ⚠️ **Sanity-check the body you get back too** — a long matter may be split across
+`Part 1 / Part 2` notes, so a body that ends mid-sentence is a truncated read, not a short note.
+⚠️ **A client whose notes were not checked this way has NOT been established as "no movement"** — say
+what you searched, not that nothing happened (the method's rule 1b).
 
 🔴 **Searching Drive: pass `excludeContentSnippets: true`, always.** `search_files` attaches a
 **content snippet to every hit by default**, so a search that merely *lists* a client's folder can
