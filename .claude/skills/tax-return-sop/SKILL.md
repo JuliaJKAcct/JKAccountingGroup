@@ -325,6 +325,24 @@ try to type into it. **Ask what feeds it, and go there.**
 flagged, and the only symptom is a final figure that is quietly wrong by the amount of the missing
 input. **It is the hardest defect on a return to see and the easiest to prevent.**
 
+🛑 **AND THE SECOND HALF OF THE SAME DIAGNOSTIC, which the first one hides:
+A WRONG LINE ON A COMPUTED FORM MEANS A WRONG *INPUT*, AND THE FORM WILL NEVER TELL YOU WHICH.**
+A computed line is *always* internally consistent with whatever fed it — **so a mistyped input
+produces a form that adds up perfectly and is wrong from that line down.** Blank input, mistyped
+input: **two unrelated causes, one identical symptom.** ⛔ **Never diagnose the line that is wrong —
+diagnose what feeds it.**
+
+🔑 **Therefore the ONLY defence, and it must be written into the tie-outs as its own row:
+RECOMPUTE THE FINAL FIGURE BY HAND, off the figures that SHOULD feed it, on the PRINTED form, after
+every re-key.** Not "check the form" — the form agrees with itself by construction. **Add the
+numbers yourself.**
+
+_(Both halves came off one return, eight days apart, on the same line of the same form. Ending stock
+basis read **+252** because a K-1 box never reached the input screen — a **missing** input; the box
+was fixed, and the next read-back showed **+90** because the contribution had been typed with two
+digits transposed — a **wrong** input. Same line, same clean-looking form, twice. And that line
+opens the following year, so both would have travelled.)_
+
 **So every line table carries a column for it**, and the working paper keeps it:
 
 | Line | Concept | Value | Where it came from | 🛠️ **Where it is ENTERED** |

@@ -230,6 +230,21 @@ the actual details.
     comes with it: a blank line on a computed form means a missing INPUT, not a missing entry on
     that form — a defect of that kind FOOTS, so nothing catches it.**
 
+- **2026-08-20 (Lilian) — THE PREPARED FORM 7203 WAS READ BACK, AND THE SAME LINE HAS NOW BEEN WRONG
+  TWICE FOR TWO DIFFERENT REASONS.** ✅ The two defects recorded earlier are **closed** — the
+  nondeductible-expenses box reached the input screen, and the netted presentation is keyed on the
+  personal return including the field that does **not** inherit from the company file. 🔴 **But the
+  ending stock basis is still wrong, now by a smaller amount, because the contribution was typed with
+  two digits transposed.**
+  - 🔑 **The lesson, and it is general:** a computed line is **always** internally consistent with
+    whatever fed it, so **a blank input and a mistyped input produce the identical symptom — a form
+    that adds up perfectly and is wrong from that line down.** Neither is visible in the software.
+  - ⛔ **The only defence is recomputing the final figure BY HAND off the figures that should feed
+    it, on the printed form, after every re-key.** That is now written into
+    [the tax-return SOP skill](../../../.claude/skills/tax-return-sop/SKILL.md) as the second half of
+    the entry-route diagnostic.
+  - ⚠️ **This line opens the following year**, which is why a small error on it does not stay small.
+
 - **2026-08-20 (JULIA's decision, relayed by Lilian) — THE SHAREHOLDER CAPITAL ACCOUNT IS REPORTED
   NET, AND IT IS NOW FIRM POLICY.** Julia ruled that where a shareholder's contributions for the
   year exceed their distributions, the two are **netted** and distributions reported at zero — *"at

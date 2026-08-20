@@ -640,9 +640,24 @@ is 0, line 10 equals line 7, and **line 15 is too high by exactly the nondeducti
 the form internally consistent from top to bottom. **Nothing flags it.** The only symptom is that
 **next year's opening basis is wrong**, which surfaces years later, or never.
 
-_(Live case, 2026-08-19: on a real return line 8a was blank and ending stock basis was overstated by
-the box 16C amount, in the year before the company's liquidation. The form footed perfectly. **Caught
-only because the preparer sent a screenshot.**)_
+🛑 **AND THE OTHER HALF, WHICH THE FIRST ONE HIDES: A WRONG FIGURE ON A COMPUTED LINE MEANS A WRONG
+INPUT — AND THE FORM WILL NEVER TELL YOU WHICH.** A mistyped input is *not* a smaller version of a
+missing one; it is a second cause with the **same symptom.** Type line 2's contribution with two
+digits transposed and lines 5, 7, 10 and 15 all recompute **correctly** off the wrong figure. ⛔ **So
+never diagnose the line that is wrong. Diagnose what feeds it.**
+
+🔑 **THE ONLY DEFENCE, and it belongs in the tie-outs as its own row:
+RECOMPUTE LINE 15 BY HAND — `1 + 2 + 4 − 6 − 9 − 14` — off the figures that SHOULD feed it, on the
+PRINTED form, after every re-key.** "Check the form" is not a check: the form agrees with itself by
+construction. **Add the numbers yourself.**
+
+_(Live case, one return, two read-backs eight days apart, the same line both times — and both times
+the form footed perfectly. **2026-08-19:** line 8a blank, ending stock basis overstated by exactly the
+box 16C amount, because that box never reached the input screen — a **missing** input. The box was
+fixed. **2026-08-20:** ending stock basis overstated by 90, because the contribution on line 2 had
+been typed with two digits transposed — a **wrong** input. Both in the year before the company's
+liquidation, on the line that **opens** that year. **Caught only because the preparer sent a
+screenshot, twice.**)_
 
 🛑 **Three checks, every time:**
 - [ ] **Line 1 = last year's line 15**, to the dollar
@@ -1444,6 +1459,7 @@ client's — and it is written from the **carryover reasoning**, which the retur
 - [ ] A K-1 loss clears **all four** limitations, in order — basis (7203) · at-risk (6198) · passive (8582) · excess business loss (461).
 - [ ] Form 7203 line 1 = **last year's line 15**.
 - [ ] 🛑 **Every K-1 box that feeds a Form 7203 line is actually IN the K-1 input** — **16C → line 8a**, **16D → line 6**, and the **contributions → line 2**, which is on no K-1 box. ⚠️ **A missing input leaves a blank line and the form still FOOTS** (M3)
+- [ ] 🛑 **Form 7203 line 15 RECOMPUTED BY HAND on the printed form** — `line 1 + 2 + 4 − 6 − 9 − 14` — and **compare digit by digit with the figure that should feed line 2.** ⚠️ **This is the ONLY check that catches a MISTYPED input**: the form recomputes correctly off a wrong figure and flags nothing. **Re-run it after every re-key** (M3)
 - [ ] **Form 7203 line 15 recomputed by hand** — it is next year's opening basis, and on a company heading for a final return it opens the liquidation computation
 - [ ] The NOL deduction on Schedule 1 line 8a is the **allowable** amount under the §172(a) **80%** cap, and any unused amount is carried forward. ⓘ **In a loss year the cap is nil and the whole carryforward is listed anyway** — Form 172 line 23 adds it back (M7)
 - [ ] **Form 8867** is complete where EIC, CTC/ACTC, AOTC or HOH is claimed.
