@@ -163,7 +163,7 @@ answer.
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The eight things every delivery carries
+### The nine things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PART and the LINE NUMBER named**:
@@ -369,9 +369,7 @@ el box 16, código D, y dónde colocar las contribuciones."** The analysis had g
 that form and its arithmetic, and she still could not enter it, because **only one of its fifteen
 lines is typed on the form itself.**)_
 
----
-
-### Part 9 · 🛑 A FINDING IS NOT DELIVERED UNTIL IT CARRIES ITS FIX
+**9 · 🛑 A FINDING IS NOT DELIVERED UNTIL IT CARRIES ITS FIX.**
 
 > 🔑 **Lilian, 2026-08-20:** *"Cuando encuentres errores como el de `Description of Home Office is
 > required`, necesito que me digas cómo corregirlo, no que simplemente lo señales."*
@@ -396,6 +394,27 @@ says B, leave it"** is an answer they can act on — and it often turns out the 
 document that settles it _(**look before you ask**, [`method.md`](../../../projects/pre-return-review/method.md)
 rule 1)_.
 
+🛑 **BUT A BRANCH MUST BE A REAL BRANCH. DO NOT MANUFACTURE ONE TO AVOID ASKING.** ⚠️ **This is the
+failure mode this part CREATES**, and it is more dangerous than the gap it closes: pressed to produce
+an actionable instruction, a session writes a confident two-way branch off a source that only settles
+the question **one** way. **A search that finds nothing has ruled out one possibility, not established
+the opposite** _(method.md **rule 1b** — never write what you did not find as what is not there)_.
+🔑 **So say which way the evidence CAN settle it, and route the other way to a question.**
+_(2026-08-20, on a Schedule C line-H checkbox: an instruction with **two independent triggers** was
+collapsed into one, and the branch *"if the prior year shows nothing, leave the box ticked"* was
+written into a live return's working paper. The prior year could disprove the claim; it could never
+prove it. **Caught in review — the delivery format had made a wrong answer look finished.**)_
+
+⛔ **THREE FINDINGS CANNOT CARRY A LITERAL VALUE, AND FORCING ONE IS WORSE THAN THE GAP:**
+
+| The fix turns on… | What to ship instead |
+|---|---|
+| **A fact only the CLIENT holds** | the **question, written ready to send**, plus what each answer changes |
+| **A POSITION** — an election, an allocation, a characterisation | 🛑 **the options with each one's consequence, and let Lilian rule.** *Positions are hers* — **delivery rule 7 above, which part 9 does NOT override.** Anything a reviewer could ask *"why did you do that?"* about is a decision, not a defect |
+| **A rule the firm has not settled** | say so plainly, and **name who settles it** |
+
+**The four things then attach to each BRANCH, not to the finding.**
+
 ⚠️ **A VENDOR FIELD IS NOT AN EXCUSE FOR VAGUENESS — IT IS THE REASON THE ANSWER IS NEEDED.** When
 the field exists only in the software and on no IRS form, **there is nothing for the preparer to look
 up.** Nobody can research their way to the right value, so the delivery must simply state it. 🔑 **Say
@@ -404,6 +423,11 @@ which it is** — *"ATX's field, not on Form 8829"* — **and then say what goes
 📌 **And when a vendor field turns out to be required every time, that is not a one-off correction —
 it goes into the form's SOP as a standing entry**, so the next return never meets the error at all.
 _(Lilian's second instruction the same day: *"tienes que recordar siempre llenar este campo."*)_
+⚠️ **Proposed, not assumed.** An **SOP change is the one thing that needs Lilian's sign-off** (client
+files do not — [`CLAUDE.md`](../../../CLAUDE.md); the queue is
+[`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md)), and the form SOPs are
+still **Draft**. **So say in the delivery that you have added it and what it now instructs** — do not
+let a standing rule appear in a procedure she has not read.
 
 ---
 
