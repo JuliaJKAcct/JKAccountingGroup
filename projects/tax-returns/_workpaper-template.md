@@ -74,3 +74,46 @@ A line that is deliberately **blank** and might look like an omission gets a row
 | | | \<next year's line\> |
 
 **This section is the one next year's preparer reads first.**
+
+## 8 · 🔗 What flows to ANOTHER return — the handoff
+
+> **Entity returns only.** Delete this section on a 1040 that feeds nobody.
+
+🛑 **AN ENTITY RETURN IS ONLY HALF THE JOB, AND THE OTHER HALF IS A SEPARATE REQUEST**
+_(Lilian, 2026-08-21)_: *"Si te digo que preparo el tax return de una compañía, no preparo el del
+dueño… Prefiero terminar una cosa y, cuando estoy segura de que está bien, entonces podemos
+centrarnos en la otra."*
+
+⛔ **Do NOT prepare the owner's return here.** ✅ **Do leave it READY** — this section is what she
+opens when she comes back to the 1040, possibly weeks later and certainly in a different session.
+
+**Recipient:** \<owner's name — one block per recipient\> · **Their working paper:**
+`projects/tax-returns/<slug>/<year>-form-1040.md` *(may not exist yet)*
+
+### 8A · The tables to carry across
+
+| # | What | Value | 🛠️ Where it is ENTERED on the 1040 | Status |
+|---|---|---|---|---|
+| 1 | \<Schedule K-1, box by box\> | | \<the K-1 input screen\> | ✅ ready |
+
+### 8B · 🔴 What this side CANNOT supply — inputs the 1040 must bring
+
+**Some figures on the owner's return do not exist on the company's**, so they are named here rather
+than guessed:
+
+| What | Why it is not here | Where it comes from |
+|---|---|---|
+| **Form 7203 line 1 — beginning stock basis** | 🔑 **Form 7203 is filed with the SHAREHOLDER's 1040, not with this return** | **last year's Form 7203 line 15** — check the prior year's working paper in `projects/tax-returns/` **first**; if the firm did not prepare it, it is a question for the client |
+
+### 8C · What must MATCH on both returns
+
+| The figure | Here | On the 1040 | Why it must agree |
+|---|---|---|---|
+| | | | |
+
+### 8D · Before the 1040 is started
+
+- [ ] **This return is FILED and ACCEPTED** — ⚠️ a K-1 from an unfiled return can still change
+- [ ] Every blocker in §6 above is closed
+- [ ] 🔗 **The owner's return is its OWN request** — it gets its own phase 1 review, and its own
+      permission to open **his** prior-year return _(CLAUDE.md; preparing the company did not)_

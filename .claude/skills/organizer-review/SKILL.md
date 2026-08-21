@@ -66,12 +66,17 @@ end of the review.**
 🔑 **The rule in one line: phase 1 writes the client file now, and everything that closes a session
 waits for phase 2.**
 
-📌 **PHASE 1 RUNS ONCE PER CLIENT PER YEAR PER SESSION — not once per form.** A company and its owner
-are **two clients** and each gets its own phase 1. ⛔ **But do not re-run it for the same client and
-year inside one session**: carry the verdict forward and **say that you are doing so.** ⚠️ **Without
-this the privacy pre-announcement, the redactor fetch and the delete reminder all fire twice for one
-piece of work** — and §4A's own order *(company first, then the K-1, then the owner)* puts two
-returns back to back in a single session by design.
+📌 **PHASE 1 RUNS ONCE PER CLIENT PER YEAR PER SESSION — not once per form.** ⛔ **Do not re-run it
+for the same client and year inside one session**: carry the verdict forward and **say that you are
+doing so**, or the privacy pre-announcement, the redactor fetch and the delete reminder all fire
+twice for one piece of work.
+
+🔑 **A COMPANY AND ITS OWNER ARE TWO CLIENTS — AND TWO SEPARATE REQUESTS.** ⛔ **Asking for the
+company's return is not asking for the owner's** _(Lilian, 2026-08-21;
+[`tax-return-sop`](../tax-return-sop/) part 10)_, so **you do not run a second phase 1 for the owner
+off the back of the company's.** The company's work ends in a **handoff** — the tables left ready in
+§8 of its working paper — and **the owner's return gets its own phase 1, on the day it is asked
+for**, with its own permission to open **that** person's prior year.
 
 ⚖️ **So Block A carries more weight than its three lines suggest.** ⚠️ **Do not soften a verdict to
 let the preparation proceed, and do not harden one to be safe** — *"No"* costs the client a round

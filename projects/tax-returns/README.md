@@ -43,6 +43,12 @@ judgement calls. Without this folder, all of it dies when the session is closed.
   record that the software was ever argued with**
 - The **decisions**: what was chosen, who chose it, and what the alternative was
 - **Open questions** left at filing, and anything to carry into next year
+- 🆕 🔗 **THE HANDOFF — what flows to ANOTHER return** _(Lilian, 2026-08-21)_, in **§8** of an
+  entity return's paper: the tables the owner's 1040 must receive **with their entry route**, what
+  this side **cannot** supply, and what must **match** on both. ⛔ **Asking for the company is not
+  asking for the owner** — the other return is a separate request on a separate day, and §8 is
+  what makes that possible without redoing the work. **It is written down and not merely said,
+  because she may open the 1040 weeks later and the session will be gone**
 - The **EIN** *(public on Sunbiz — Lilian, 2026-08-12; write it hyphenated)*
 - **Shareholder names** *(Lilian: "los nombres no son datos sensibles")*
 

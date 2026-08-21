@@ -173,8 +173,15 @@ either way.
    Every form SOP has this as a hard stop. **A missed deadline changes what you are doing**, not just
    when.
 3. 🔑 **A COMPANY RETURN RUNS OFF ITS BOOKS AND FEEDS THE OWNER'S 1040 — never the reverse.** So for a
-   company, the organizer is not the centre of gravity; the **general ledger** is. Do the company
-   first, then the K-1, then the owner.
+   company, the organizer is not the centre of gravity; the **general ledger** is.
+   ⛔ **BUT THAT IS THE ORDER OF DEPENDENCY, NOT A LICENCE TO DO BOTH.** **Prepare only the return
+   that was asked for** _(part 10 — Lilian, 2026-08-21: "si te digo que preparo el tax return de una
+   compañía, no preparo el del dueño")_. The company's return ends in a **handoff** — §8 of the
+   working paper, the tables left ready — and **the owner's 1040 is a separate request on a separate
+   day.**
+   ⚠️ **The dependency still binds the other way:** asked for the 1040 while the company's return is
+   unprepared, **the K-1 does not exist** — that is a Block A *"No, blocked on X"*, and the answer is
+   which return has to come first.
 
 🔑 **Why these come first:** phase 1 cannot pick a prior year without knowing **which year** is being
 prepared (its source 9), cannot know which reports are the books without knowing **which form**
@@ -332,9 +339,9 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 6 to 9 below, which are what she has had to ask for since.**
+> and parts 6 to 10 below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all nine parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all ten parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -349,7 +356,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The nine things every delivery carries
+### The TEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PART and the LINE NUMBER named**:
@@ -615,6 +622,47 @@ files do not — [`CLAUDE.md`](../../../CLAUDE.md); the queue is
 [`sop-proposals.md`](../../../projects/client-intelligence/sop-proposals.md)), and the form SOPs are
 still **Draft**. **So say in the delivery that you have added it and what it now instructs** — do not
 let a standing rule appear in a procedure she has not read.
+
+**10 · 🛑 ONE RETURN PER REQUEST — AND THE HANDOFF IS THE DELIVERABLE, NOT THE OTHER RETURN.**
+
+> 🔑 **Lilian, 2026-08-21:** *"Si te digo que preparo el tax return de una compañía, no preparo el
+> del dueño. Si no te lo pido, sería un gasto de tokens y de tiempo innecesario… No me gusta hacerlo
+> todo del tirón. Prefiero terminar una cosa y, cuando estoy segura de que está bien, de que está
+> correcta, entonces podemos centrarnos en la otra."*
+
+⛔ **ASKING FOR THE COMPANY IS NOT ASKING FOR THE OWNER.** An 1120-S or a 1065 feeds a 1040, and the
+temptation is to carry straight on. **Do not.** She works one return at a time **on purpose**: she
+finishes it, satisfies herself it is right, and only then moves. **A second return she did not ask
+for costs her time and tokens and arrives before she can check the first.**
+
+✅ **WHAT SHE DOES WANT, AND IT IS OWED WITHOUT BEING ASKED:** at the **end of the whole analysis**,
+say **what has to travel to the other return, and leave it ready to be typed.**
+
+> *"Estas formas o estas tablas tienen que fluir luego a la declaración del dueño, y me las dejen
+> listas para cuando yo vaya a preparar la declaración individual… no que prepares la declaración
+> completa."*
+
+**The handoff, in four parts** — §8 of
+[`_workpaper-template.md`](../../../projects/tax-returns/_workpaper-template.md):
+
+| | | |
+|---|---|---|
+| **8A** | **The tables to carry across** | every figure that travels, **with the entry route on the receiving return** — the same standard as part 8. A K-1 read box by box, and every form it drives |
+| **8B** | 🔴 **What this side CANNOT supply** | figures the other return needs that **do not exist on this one.** ⛔ **Name them; never guess them.** _(The one that catches everyone: **Form 7203 is filed with the SHAREHOLDER's 1040**, so the beginning-basis figure is not on the company's return at all — it is last year's Form 7203 line 15. **Check the prior year's working paper first**; if the firm did not prepare it, it is a question for the client.)_ |
+| **8C** | **What must MATCH on both** | anything a presentation choice binds together — e.g. a netted shareholder account *(1120-S SOP §5C-v)* must be netted on **both** returns |
+| **8D** | **Before the other return is started** | **this one is FILED and ACCEPTED** — a K-1 from an unfiled return can still move — and every §6 blocker is closed |
+
+📌 **WRITE IT DOWN, DO NOT ONLY SAY IT.** It goes in the **working paper**, because she may open the
+1040 weeks later and **this session will have been deleted.** Deliver it in chat *and* commit it.
+
+🔗 **And the other return, when she does ask for it, is a FULL SEPARATE REQUEST** — its own phase 1
+review, its own client, its own permission to open **that** person's prior-year return
+_(CLAUDE.md — preparing the company did not open it)_. ⛔ **The handoff is a head start, never a
+substitute for phase 1.**
+
+⚠️ **The reverse order is a BLOCKER, not a handoff.** Asked for the 1040 first while the company's
+return is unprepared: **the K-1 does not exist yet.** That is a Block A *"No, blocked on X"* — say
+which return has to come first.
 
 ---
 

@@ -1536,6 +1536,43 @@ invisible until it reaches next year's opening figures. **The carryforward is co
 
 ---
 
+## §13A · 🔗 The handoff — what flows to the shareholder's 1040
+
+🛑 **PREPARING THIS RETURN IS NOT PREPARING THE OWNER'S** _(Lilian, 2026-08-21)_:
+*"Si te digo que preparo el tax return de una compañía, no preparo el del dueño… Prefiero terminar
+una cosa y, cuando estoy segura de que está bien, entonces podemos centrarnos en la otra."*
+
+⛔ **Do not carry on into the 1040.** ✅ **Do close this return with the handoff** — the tables the
+1040 will need, left ready, so the individual return can be prepared later without redoing the work.
+
+📌 **It is WRITTEN, not merely said** — **§8 of the working paper**
+([`_workpaper-template.md`](../tax-returns/_workpaper-template.md)) — because the 1040 may be
+prepared weeks later, by a session that has none of this in front of it.
+
+**What an 1120-S hands over:**
+
+| # | What | To | ⚠️ Watch |
+|---|---|---|---|
+| 1 | **Schedule K-1, box by box** | the 1040's **K-1 input screen** | 🔴 **not the 1040 itself** — almost nothing is typed where it appears |
+| 2 | **Box 1** ordinary income/loss | Schedule E Part II line 28 → line 41 → Schedule 1 line 5 | the loss must clear **basis → at-risk → passive**, in that order (§12) |
+| 3 | **Box 16 C · 16 D** | **Form 7203** lines 8a and 6 | the only two boxes that touch **basis** |
+| 4 | **The shareholder's capital contributions** | **Form 7203 line 2** | 🔴 **on NO K-1 box** — it comes from the books, and the 1040 preparer cannot find it without being told |
+| 5 | **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
+| 6 | **Schedule E column (e)** | Schedule E page 2 | tick it whenever a loss, a distribution, a disposal **or** a loan repayment occurred |
+| 7 | 🔵 **The netting presentation, if applied** (§5C-v) | Form 7203 lines 2 and 6 | ⛔ **both returns must present it the same way** — a blank 16D beside a gross line 2 is the mismatch nobody catches |
+
+🔴 **AND WHAT THIS RETURN CANNOT SUPPLY — say it, do not guess it.**
+**Form 7203 is filed with the SHAREHOLDER's 1040, not with this return**, so **line 1, beginning
+stock basis, is not on the company's books at all.** It is **last year's Form 7203 line 15** —
+check the prior year's working paper in [`projects/tax-returns/`](../tax-returns/) first; **if the
+firm did not prepare that year, it is a question for the client**, not a figure to derive.
+
+⚠️ **The dependency runs one way only.** Asked for the **1040 first** while this return is
+unprepared: **the K-1 does not exist yet.** That is a blocker, and the answer is which return comes
+first — not a K-1 estimated from the books.
+
+---
+
 ## §14 · Before you file — the tie-out checks
 
 **Do not file until every one of these passes.** A check that fails is a mapping error, not a
@@ -1562,6 +1599,7 @@ rounding difference.
       across all K-1s
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
 - [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **No in-form diagnostic was raised for a blank on the one return observed**, so this checklist may be the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
+- [ ] 🔗 **§8 of the working paper — the HANDOFF to the shareholder's 1040 — is written** (§13A): the K-1 box by box **with its entry route**, what this side cannot supply *(Form 7203 line 1)*, and what must **match** on both returns. ⛔ **The 1040 itself is a separate request**
 - [ ] 🔵 **IF THE RETURN IS NETTED UNDER §5C-v** — all six, and the last three are the ones that
       catch a bad gate:
       - [ ] **Schedule K 16d = 0** and **every K-1 box 16D blank**
