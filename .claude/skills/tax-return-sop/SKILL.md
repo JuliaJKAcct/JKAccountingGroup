@@ -59,6 +59,7 @@ Follow it in this order; a preparer works the document top-down.
 | **§2 · The extension gate** | 🛑 A hard stop before work begins |
 | **§3 · Build the map** | §1 above |
 | **§4 … §n · One section per form**, in the order they are prepared | Each with a **line table**: line · what it is · the **formula, or where you read it** |
+| 🔗 **The HANDOFF — what flows to another return** | **Any form that FEEDS another return owes this** — an 1120-S or 1065 to its owners' 1040s, a 1041 to its beneficiaries. **Walk every box that can carry a figure**, say where each is TYPED on the receiving return, name what this side **cannot** supply *(the recipient's own carryovers and basis history — they are on THEIR return, not this one)*, and what must **match** on both. ⛔ **Preparing this return is not preparing theirs** (part 10) |
 | **Tie-out checks** | Every equality that must hold before filing. **A check that fails is a mapping error, not a rounding difference** |
 | **Common pitfalls** | Each one that has bitten a real return |
 | **Working-paper archive** | §5 below |

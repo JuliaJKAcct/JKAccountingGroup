@@ -48,6 +48,7 @@ flowchart TD
     L1 --> E
     L -->|"Yes"| M["⑫ Review · sign · e-file<br/>Form 8879-CORP"]
     M --> N["✅ File the client's copy<br/>in Double · record it"]
+    N --> O["🔗 ⑬ THE HANDOFF (§13A)<br/>the tables the owner's 1040 needs,<br/>left READY — not prepared"]
 ```
 
 🔗 **STEP ⓪ IS NOT OPTIONAL AND IT IS NOT PART OF THIS SOP.** Every return begins with **phase 1, la
@@ -1538,6 +1539,11 @@ invisible until it reaches next year's opening figures. **The carryforward is co
 
 ## §13A · 🔗 The handoff — what flows to the shareholder's 1040
 
+> 🟡 **DRAFT — proposed 2026-08-21, awaiting Lilian's sign-off** *(queued in
+> [`sop-proposals.md`](../client-intelligence/sop-proposals.md))*. **The RULE it implements is hers**
+> — one return per request, with the handoff at the end. **What needs her eye is this section's
+> CONTENT: whether the list of what travels, and of what this side cannot supply, is complete.**
+
 🛑 **PREPARING THIS RETURN IS NOT PREPARING THE OWNER'S** _(Lilian, 2026-08-21)_:
 *"Si te digo que preparo el tax return de una compañía, no preparo el del dueño… Prefiero terminar
 una cosa y, cuando estoy segura de que está bien, entonces podemos centrarnos en la otra."*
@@ -1554,22 +1560,51 @@ prepared weeks later, by a session that has none of this in front of it.
 | # | What | To | ⚠️ Watch |
 |---|---|---|---|
 | 1 | **Schedule K-1, box by box** | the 1040's **K-1 input screen** | 🔴 **not the 1040 itself** — almost nothing is typed where it appears |
-| 2 | **Box 1** ordinary income/loss | Schedule E Part II line 28 → line 41 → Schedule 1 line 5 | the loss must clear **basis → at-risk → passive**, in that order (§12) |
-| 3 | **Box 16 C · 16 D** | **Form 7203** lines 8a and 6 | the only two boxes that touch **basis** |
-| 4 | **The shareholder's capital contributions** | **Form 7203 line 2** | 🔴 **on NO K-1 box** — it comes from the books, and the 1040 preparer cannot find it without being told |
+| 2 | **Box 1** ordinary income/loss | Schedule E Part II line 28 → line 41 → Schedule 1 line 5 | 🔑 **the loss must clear THREE gates in order — basis (Form 7203, §12) → at-risk (§465, Form 6198) → passive (§469, Form 8582).** ⚠️ **Only the basis gate is written up in this SOP (§12); the other two are not yet — say so rather than implying they are covered.** ⚠️ **Only the first is on this return**; the other two are the shareholder's and need **his** prior-year carryovers |
+| 2b | **Box 11 §179** · **Box 12 other deductions by code** · **Box 13 credits by code** | box 11 → **the shareholder's own Form 4562**, then Schedule E col (j); box 12 → Schedule A or Schedule 1 **by letter**; box 13 → each credit's own form | ⛔ **§179 cannot be typed on Schedule E** — it is limited again at **his** level |
+| 2c | **Boxes 2–10 · 15 · 16 A/B** | rentals → Schedule E page 1 · portfolio → Schedule B / D · AMT → Form 6251 · tax-exempt → **7203 line 3k** | **Kolo has none of these. A future client will.** ⚠️ **Walk every box that carries a figure** — a box nobody carried over is a figure that silently never reaches the 1040 |
+| 3 | **Box 16 — codes A · B · C · D · E** | **Form 7203** lines **3k** *(A + B)*, **8a** *(C)*, **6** *(D)*, and **Part II** *(E)* | ⛔ **NOT just C and D.** *"Enter the sum of the amounts from Schedule K-1, **box 16, codes A and B**"* — tax-exempt income **INCREASES** stock basis (7203 line 3k). **Code E is loan repayments** and moves **DEBT** basis, not stock. ⚠️ **Every income and loss box touches basis too**, through lines 3a–3m and Part III — box 16 is not the whole of it |
+| 4 | **The shareholder's capital contributions**, ➕ **any stock acquired during the year** | **Form 7203 line 2** | 🔴 **on NO K-1 box** — it comes from the books, and the 1040 preparer cannot find it without being told |
+| 4b | **K-1 Part II item I — loans from the shareholder, beginning and end** | **Form 7203 Part II** | the company knows the **balance**; ⛔ **it does not know his BASIS in that loan** — see below |
+| 4c | **The corporation's NAME and EIN** · **item F ownership %** · the **passive / non-passive** determination · whether the activity is an **SSTB** | Schedule E line 28 cols (a)(d), Form 7203 items A/B, Schedule E col (g) vs (i), Form 8995-A | 🔑 **Trivial on this side, and unreachable from the 1040 without reopening the company's books.** Put them in the handoff |
 | 5 | **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
 | 6 | **Schedule E column (e)** | Schedule E page 2 | tick it whenever a loss, a distribution, a disposal **or** a loan repayment occurred |
 | 7 | 🔵 **The netting presentation, if applied** (§5C-v) | Form 7203 lines 2 and 6 | ⛔ **both returns must present it the same way** — a blank 16D beside a gross line 2 is the mismatch nobody catches |
 
-🔴 **AND WHAT THIS RETURN CANNOT SUPPLY — say it, do not guess it.**
-**Form 7203 is filed with the SHAREHOLDER's 1040, not with this return**, so **line 1, beginning
-stock basis, is not on the company's books at all.** It is **last year's Form 7203 line 15** —
-check the prior year's working paper in [`projects/tax-returns/`](../tax-returns/) first; **if the
-firm did not prepare that year, it is a question for the client**, not a figure to derive.
+🔴 **AND WHAT THIS RETURN CANNOT SUPPLY — NAME IT, NEVER GUESS IT.** 🔑 **The whole category exists
+because Form 7203, Form 6198 and Form 8582 are filed with the SHAREHOLDER's 1040, not with this
+return** — so the shareholder's own history is invisible from here:
 
-⚠️ **The dependency runs one way only.** Asked for the **1040 first** while this return is
-unprepared: **the K-1 does not exist yet.** That is a blocker, and the answer is which return comes
-first — not a K-1 estimated from the books.
+| What the 1040 needs | Where it comes from | ⚠️ |
+|---|---|---|
+| **7203 line 1 — beginning STOCK basis** | last year's **7203 line 15** | ⛔ *"Unless this is your **initial year** owning stock… this amount should be the same as your ending stock basis from the prior tax year."* **In an initial year it is his COST, or his §351 carryover basis** — not zero, and not a prior line 15 |
+| **7203 line 21 — beginning DEBT basis** · **line 23 restoration** | the same prior-year form | 🔑 **The company knows the loan BALANCE (item I); it does not know his BASIS in it** — repayments in a year when basis was reduced create **income to him** |
+| 🔴 **7203 line 47 column (e) — losses suspended for BASIS in an earlier year** | last year's 7203 Part III | ⛔ **Nothing on this return points at it.** Miss it and a deduction he is entitled to is **lost, permanently** |
+| **§465 at-risk carryover** (Form 6198) · **§469 passive carryover** (Form 8582) | his prior-year return | gates 2 and 3 of row 2 above |
+| **His estimated payments, and any credit for tax the entity paid on his behalf** | his own records | |
+
+🛠️ **HOW TO ANSWER THEM, in order** — ⛔ *"ask the client"* is the last resort, not the first:
+1. **The prior year's working paper** in [`projects/tax-returns/`](../tax-returns/) — if the firm
+   prepared it, every one of these is already written down.
+2. **His prior-year return** through the redactor — that is his own request, and it carries the
+   filed 7203.
+3. ⛔ **Only then the client** — and ⚠️ **a shareholder almost never knows their own basis.** If no
+   7203 was ever filed, the honest answer is that it must be **reconstructed** from the original
+   contribution plus every K-1 since, and **that is a piece of work to be quoted, not a question to
+   send.**
+
+#### ⚠️ Asked for the 1040 FIRST, while this return is unprepared
+
+**The K-1 does not exist yet — but that does not stop the whole 1040.**
+
+- ✅ **Everything not fed by the K-1 can be worked** — wages, the 1095-A, the standard deduction,
+  dependants. **Hold only the figures that depend on the missing K-1** *(Block A's
+  `Not until Y is settled`, scoped — not `No, blocked on X` for the entire return)*.
+- 🔑 **An extension is often exactly why the 1040 is being worked first.** The 1040 is due
+  **15 April**; an S-corp on extension has until **15 September**. **Sizing a Form 4868 payment off
+  an estimated K-1 is legitimate work** and must not be refused.
+- ⛔ **What is NOT legitimate is FILING the 1040 on an estimated K-1.** Say which return has to be
+  transmitted first, and what it would cost to file early and amend.
 
 ---
 
