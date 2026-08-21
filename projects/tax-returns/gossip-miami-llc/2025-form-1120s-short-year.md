@@ -124,7 +124,7 @@ against the exact arithmetic is normal and is not an error.
 | **C** Schedule M-3 attached | **No** — leave unchecked | M-3 starts at $10 million of total assets | ✅ |
 | **D** EIN | **99-2586917** | 🔒 2024 return — **and confirmed by the sellers as unchanged after the sale** | ✅ typed |
 | **E** Date incorporated | **02-01-2023** | 🔒 2024 return | ✅ typed |
-| **F** Total assets | **35,522** | 📖 Schedule L line 15 column (d). The instruction is explicit: *"If the corporation is required to complete Schedule L, include total assets reported on Schedule L, line 15, column (d), on page 1, item F."* ⚠️ Moves to **29,901** under §4 decision 6's alternative | **computed — do not type** (it follows Schedule L) |
+| **F** Total assets | **29,901** | 📖 Schedule L line 15 column (d). The instruction is explicit: *"If the corporation is required to complete Schedule L, include total assets reported on Schedule L, line 15, column (d), on page 1, item F."* ⚠️ Becomes **35,522** if §4 decision 6 flips to the 29 October column | **computed — do not type** (it follows Schedule L) |
 | **G** *"Is the corporation electing to be an S corporation beginning with this tax year?"* | 🔴 **No** | The election began **1 Jan 2024**, not this year. ⚠️ **The 2024 return answered YES and was right to** — that was the first S year. Copying 2024 here would be wrong, and a `Yes` obliges you to attach Form 2553 | ✅ typed — **answer it, never leave it blank** |
 | **H(1)** Final return | 🛑 **DO NOT CHECK** | Verified against the 2025 instructions, quoted: *"If this is the corporation's final return and **it will no longer exist**, check the 'Final return' box."* **This company continues to exist** under the buyer | ✅ |
 | **H(5)** S election termination | ✅ **CHECK IT** | Same instruction: *"If the corporation has terminated its S election, check the 'S election termination' box."* This is the box that describes this return | ✅ typed |
@@ -168,8 +168,8 @@ against the exact arithmetic is normal and is not an error.
 | **18** | Employee benefit programs | **0** | 📖 None — there are no employees | ✅ |
 | **19** | Energy efficient commercial buildings (Form 7205) | **0** | Not applicable. ⚠️ It exists only to remind you that **lines 20/21/22 are one lower on any pre-2023 checklist** | ✅ |
 | **20** | **Other deductions** (statement) | **282,605** | ƒ the itemised statement below | ✅ typed — **on the statement/detail screen, which totals to line 20**; the line itself usually will not accept a number |
-| **21** | Total deductions | **338,605** | ƒ `= sum of lines 7–20`. Exact arithmetic in cents: **338,605.95** | **computed — do not type** |
-| **22** | 🎯 **Ordinary business income (loss)** | 🔴 **51,450 or 51,451 — read it off the keyed return, see below** | ƒ `= line 6 − line 21`. **In cents: 390,055.79 − 338,605.95 = 51,449.84 → 51,450.** **From the rounded lines: 390,056 − 338,605 = 51,451.** → **carries to Schedule K line 1** | **computed — do not type** |
+| **21** | Total deductions | **338,606** | ƒ `= sum of lines 7–20`. In cents **338,605.95 → 338,606**. ⚠️ Adding the *rounded* lines instead gives **338,605** — the other branch, below | **computed — do not type** |
+| **22** | 🎯 **Ordinary business income (loss)** | 🔴 **51,450 or 51,451 — read it off the keyed return, see below** | ƒ `= line 6 − line 21`. **Cents branch: 390,056 − 338,606 = 51,450.** **Rounded-lines branch: 390,056 − 338,605 = 51,451.** → **carries to Schedule K line 1** | **computed — do not type** |
 
 > 🔴 **THE ONE-DOLLAR PROBLEM, AND THE RULE THAT SETTLES IT — read this before keying.**
 > Rounding each line and then adding gives **51,451**; keeping cents to the end gives **51,450**. Which one
@@ -179,8 +179,11 @@ against the exact arithmetic is normal and is not an error.
 > Schedule K line 1, Schedule K line 18, Schedule M-1 line 8, Schedule M-2 line 2 and — halved — on the two
 > K-1s, whose box 1 amounts must SUM to it exactly.** If line 22 comes out 51,451, the K-1 halves are
 > **25,726 / 25,725**, and Schedule M-1 line 3 becomes **6,904** so that line 4 still reaches line 22.
-> **Everything below is written on the 51,450 branch; if the software gives 51,451, shift the whole chain by
-> that one dollar rather than leaving one schedule behind.**
+> ⚠️ **And put the odd dollar in the right place on the M-1.** On the 51,451 branch it belongs on **line 1,
+> net income per books (44,548)** — the dollar is created by rounding the *deductions*, which flow through book
+> income too. ⛔ **It does NOT go on line 3:** line 3 is `5,636 + 1,267 = 6,903`, and its 3b component must stay
+> equal to Schedule K line 16c. **Everything below is written on the 51,450 branch; if the software gives
+> 51,451, shift line 1 and line 22 — nothing else.**
 
 #### Statement to attach — Form 1120-S, line 20, Other deductions
 
@@ -245,18 +248,18 @@ against the exact arithmetic is normal and is not an error.
 
 ### 3.6 · Schedule L — the balance sheet ⚠️ *(read §4 decision 6 before filling the end column)*
 
-| Line | Concept | Beginning (1 Jan 2025) | **End — at 29 Oct** | *(alternative: at 31 Dec)* | Where it came from |
+| Line | Concept | Beginning (1 Jan 2025) | **End — at 31 Dec** *(the instruction's default)* | *(alternative: at 29 Oct)* | Where it came from |
 |---|---|---|---|---|---|
-| **1** | Cash | **987** | **5,621** | *0* | 📖 TD checking 7734 running balance at the date |
+| **1** | Cash | **987** | **0** | *5,621* | 📖 the running balance of the company's TD business checking account at that date |
 | **6** | Other current assets *(statement: undeposited cash sales)* | 0 | **29,901** | *29,901* | 📖 the `Cash Sales` account — Vagaro takings recorded but never banked. ⚠️ §4 decision 8 |
-| **15** | **Total assets** | **987** | **35,522** | *29,901* | ƒ → **page 1 item F** |
+| **15** | **Total assets** | **987** | **29,901** | *35,522* | ƒ → **page 1 item F** |
 | **16** | Accounts payable | 0 | 0 | *0* | 📖 the A/P account is nil at every date |
-| **18** | Other current liabilities *(statement: credit card 407 + accrued rent 5,636)* | 0 | **6,043** | *5,975* | 📖 card 8817 balance + the accrued-rent liability |
-| **19** | **Loans from shareholders** | 0 | **24,440** | *25,140* | 📖 the `Loan from Owners` account — owner cash deposited into the company. ⚠️ §4 decision 9 |
+| **18** | Other current liabilities *(statement: company credit card 407 + accrued rent 5,636)* | 0 | **5,975** | *6,043* | 📖 the company credit-card balance + the accrued-rent liability |
+| **19** | **Loans from shareholders** | 0 | **25,140** | *24,440* | 📖 the `Loan from Owners` account — owner cash deposited into the company. ⚠️ §4 decision 9 |
 | **22** | Capital stock | 0 | 0 | *0* | An LLC issued no stock; the 2024 return recorded none |
 | **23** | Additional paid-in capital | 0 | 0 | *0* | See line 24 — the sweep convention |
-| **24** | **Retained earnings** | **987** | **5,039** | *(1,214)* | ƒ **all equity swept into one line**: draw + contributions + prior retained earnings + the period's book net income |
-| **27** | **Total liabilities and shareholders' equity** | **987** | **35,522** | *29,901* | ✅ **equals line 15 at every date** |
+| **24** | **Retained earnings** | **987** | **(1,214)** | *5,039* | ƒ **all equity swept into one line**: draw + contributions + prior retained earnings + the period's book net income |
+| **27** | **Total liabilities and shareholders' equity** | **987** | **29,901** | *35,522* | ✅ **equals line 15 at every date** |
 
 > 🔑 **Two validations worth recording.** (1) The 31 December column reproduces **exactly** the Balance Sheet
 > Maria delivered (total equity −1,213.50, total assets 29,901.03) — so the ledger split is arithmetically
@@ -301,8 +304,10 @@ against the exact arithmetic is normal and is not an error.
 > ✅ **The firm's netting policy was tested and does NOT apply**
 > ([1120-S SOP §5C-v](../../sops/form-1120s-preparation.md)): gate 1 requires contributions to **exceed**
 > distributions, and here contributions are 2,021.45 against distributions of 42,516.65. **Gate 1 fails →
-> both halves are reported GROSS.** Gate 3 would have failed as well, which is exactly the case the SOP warns
-> is *not* neutral.
+> both halves are reported GROSS.** ⚠️ **A caveat on how gate 1 was tested:** the SOP applies it *per shareholder*,
+> and the books hold only pooled totals (§6 finding 9), so it was tested entity-wide. **The conclusion is safe
+> anyway, because gate 3 fails independently** — the AAA before distributions is smaller than the distributions,
+> exactly the case the SOP warns is *not* neutral. **No per-shareholder split could rescue netting here.**
 
 ### 3.9 · Schedule K-1 — box by box, both shareholders
 
@@ -349,10 +354,10 @@ splits the year.
 |---|---|---|---|---|
 | **1** | 🛑 **Is the S election gone at all?** | **Assume YES — prepare the short period** | If the buyer is a US person the election survived: **one full-year 1120-S**, three K-1s, and this entire working paper is re-cut. **Nothing here is safe to transmit until this is confirmed** | **Julia**, relayed by Lilian · 2026-08-21. ⚠️ Julia unavailable to confirm the underlying fact |
 | **2** | Accounting method, and the accrued rent | **Cash — the 5,636 accrued rent is NOT deducted** | Accrual would deduct it: line 11 → 56,838, **line 22 → 45,814**, and M-1 line 3 loses 5,636. But the method is the one on the 2024 filed return and changing it needs Form 3115 | Session, from the 2024 return · 2026-08-21 |
-| **3** | The receipts banked after the cut (1,313.09) | **They belong to the C short period — excluded here** | 🔑 **Lilian's reading — that they were services performed before the sale and merely collected later — is the ACCRUAL answer, and it is sound reasoning.** On the **cash** method the year they fall in is the year the money arrived. Including them: line 1a → 391,369, **line 22 → 52,763**. ⚠️ Two of the five (31 Oct) are almost certainly pre-sale card batches; the other three are 20 Nov and 4 Dec, which are harder to call. **Also note: five transactions on three dates — Julia counted three; the difference is the two 31 Oct deposits** | Session, from decision 2 · **Lilian to overrule if she prefers accrual** |
+| **3** | The receipts banked after the cut (1,313.09) | **They belong to the C short period — excluded here** | 🔑 **Lilian's reading — that they were services performed before the sale and merely collected later — is the ACCRUAL answer, and it is sound reasoning.** On the **cash** method the year they fall in is the year the money arrived. Including them: line 1a → 391,369, **line 22 → 52,763**. ⚠️ **The count in the outgoing email does not match the ledger: the email says THREE, the ledger holds FIVE receipts on THREE DATES** — two on 31 Oct, two on 20 Nov, one on 4 Dec. Dates were probably counted rather than transactions, **but that is our inference and nobody has confirmed it**, so **re-ask naming all five with their dates and amounts** instead of assuming the client knew which we meant. On the merits the **31 Oct pair are card settlements two days after the cut and are the likeliest to be pre-sale services**; 20 Nov and 4 Dec are harder to call | Session, from decision 2 · **Lilian to overrule if she prefers accrual** |
 | **4** | Meals and entertainment (2,533.44) | **50% deductible under §274(n)** — 1,267 deducted, 1,267 to K 16c | **(a)** Treat as entertainment / personal → **0% deductible**, line 22 → 52,717 and K 16c → 2,533. **(b)** Argue the coffee-bar consumables are *food made available to the general public* → **100%**, line 22 → 50,183 and K 16c → 0. ⚠️ **And a fact that pushes toward (a):** the November–December charges on this card (DoorDash, cafés, a liquor store) are **after the sale**, on a card the client told us became personal — those are not company expenses at all. They fall in the C period, so they do not touch this return, but they colour how the whole account should be read | Session default · **Julia to rule** |
 | **5** | Distributions — presentation | **GROSS: K 16d = 42,517, M-2 line 7 capped at 23,400** | The firm's netting policy was **tested and fails gate 1** (contributions 2,021 < distributions 42,517). Netting was never available here | [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) · 2026-08-21 |
-| **6** | ⚠️ **Which date the Schedule L end column carries** | **29 October** *(the S short period end)* | 🛑 **The instruction verified today says the opposite by default**: *"the year-end balance sheet should generally agree with the books and records at the end of the **C short year**. However, if the corporation elected under section 1362(e)(3) … the year-end balance sheet should agree with the books and records at the end of the **S short year**."* Our cut is forced by the sale rather than made by an (e)(3) election, so the exception's literal words do not cover it. **Both columns are computed in §3.6.** Using 31 Dec changes item F to 29,901 and line 24 to (1,214) | 🔴 **UNRESOLVED — verify before filing** (§6 finding 6) |
+| **6** | ⚠️ **Which date the Schedule L end column carries** | 🔵 **31 December** — *the instruction's default, and the only reading a source we could actually read supports* | The instruction verified today: *"the year-end balance sheet should generally agree with the books and records at the end of the **C short year**. However, if the corporation elected under section 1362(e)(3) … the year-end balance sheet should agree with the books and records at the end of the **S short year**."* 🔑 **Our cut is forced by the sale, not made by an (e)(3) election, so the exception's literal words do not reach it** — which is why the default is taken. **The alternative is the 29 October column**, computed in full in §3.6; it changes item F to 35,522 and line 24 to 5,039. ⚠️ **It is the more intuitive presentation and may well be the right one** — it turns on the §1362(e) question in §9 that the network blocked | 🔵 **Chosen on the verified instruction; revisit when §1362(e) can be read** (§6 finding 6) |
 | **7** | Schedule B question 14b (were the 1099s filed?) | 🛑 **Not answered in this working paper** | The truthful answer today is **No** — none were filed and the firm was not engaged to file them. Answering **Yes** would be a false statement on a signed return. The alternative is to **file them late before the return goes out**, which makes Yes true and starts a separate piece of work | 🔴 **Julia — scope and answer** |
 | **8** | The 29,901 of undeposited cash sales | **Left as an asset, per the books** | If, as the sale covenant suggests (all company accounts emptied before closing), the owners kept that cash, it is really a **distribution**: assets → 5,621, distributions → 72,418, and the M-2 cap bites far harder. **Nobody has asked the client** | 🟡 open — asked below |
 | **9** | The 24,440 of owner ATM deposits | **Left as `Loans from shareholders`, per the books** | The client asked (2026-08-11) that owner deposits be treated as **contributions**. As contributions: Schedule L line 19 → 0, contributions → 26,461 — and the netting policy's gate 1 **still fails**. ⚠️ There is also a real chance these are the **same cash** the owners took out (a round trip, [SOP §5C-iv](../../sops/form-1120s-preparation.md)) | 🟡 open — **Julia/Lilian + the client** |
@@ -366,8 +371,8 @@ splits the year.
 |---|---|---|
 | 1 | Page 1 line 22 **=** Schedule K line 1 | ✅ 51,450 = 51,450 |
 | 2 | Schedule K line 18 **=** Schedule M-1 line 8 | ✅ 51,450 = 51,450 |
-| 3 | Page 1 item F **=** Schedule L line 15 column (d) | ✅ 35,522 (moves with §4 decision 6) |
-| 4 | Schedule L total assets **=** total liabilities + equity, **both** columns | ✅ 35,522 and 987 |
+| 3 | Page 1 item F **=** Schedule L line 15 column (d) | ✅ **29,901** on the instruction's default column; **35,522** if decision 6 flips |
+| 4 | Schedule L total assets **=** total liabilities + equity, in **every** column | ✅ 987 opening · 29,901 at 31 Dec · 35,522 at 29 Oct |
 | 5 | The 31 Dec column reproduces Maria's delivered Balance Sheet | ✅ equity (1,213.50), assets 29,901.03 — exact |
 | 6 | Line 20 rebuilt from total book expenses less every line placed elsewhere | ✅ 282,605.39 |
 | 7 | S period + C period **=** the full-year P&L, line by line | ✅ every account |
@@ -376,7 +381,7 @@ splits the year.
 | 10 | Book-to-tax equity reconciliation *(the check that proves the whole model)* | ✅ book retained earnings 5,038.60 vs uncapped AAA (19,116.53) — difference 24,155.13 = opening plug 27,769.68 − accrued rent 5,636.00 + contributions 2,021.45 |
 | 11 | 🛑 **Fields that must be ANSWERED, not computed** — the short-period dates in the header, item G, H(1), H(5), item I, Schedule B 1/2/11/14a/14b/16, `Final K-1` | ⚠️ **Every one is decided above. The software will flag none of them** |
 | 12 | 🛑 **Print the return and read the FORM LIST before transmitting** | ⚠️ **Not done — the return has not been keyed.** Expect no Form 4797, no Schedule D, no Form 1125-A, no Form 4562, no Form 8990. **A blank one of any of those means a figure was keyed on the wrong line and then moved** |
-| 13 | 🔴 **Recompute line 22 by hand off the printed form after keying** | ⚠️ **Not done.** `390,056 − 338,605 = 51,451` (±1 rounding) — a computed form always agrees with itself, so this is the only check that catches a mistyped input |
+| 13 | 🔴 **Recompute line 22 by hand off the printed form after keying** | ⚠️ **Not done — the return has not been keyed.** Check the branch you are on: **cents → `390,056 − 338,606 = 51,450`**; **rounded lines → `390,056 − 338,605 = 51,451`**. Both are internally consistent; **a line 22 matching neither means a mistyped input.** A computed form always agrees with itself, so this is the only check that catches one |
 
 ---
 
@@ -387,7 +392,7 @@ splits the year.
 3. 🟠 **The opening equity does not tie to the tax history** — books open at +987, the 2024 AAA closed at (26,783), a 27,770 gap that is a plug. It does not stop the return (Schedule L is "per books" and the AAA is carried from the filed return), but a reviewer will ask, and the answer is in tie-out 10.
 4. 🟠 **No fixed assets, ever.** The 2024 purchase agreement's schedule listed salon equipment; none of it is on the books or on the 2024 return, so depreciation is 0 and UBIA for §199A is 0. **Raise with Julia** — do not capitalise anything unilaterally on a short-period return.
 5. 🟡 **Reasonable compensation.** An income year with the owners drawing money and **no payroll at all**. Mitigating: they sold in October and the salon runs on contractors. The position has to be **written down** whether or not anything changes.
-6. 🟠 **Which date Schedule L ends on** — decision 6, with the instruction quoted.
+6. 🟠 **Which date Schedule L ends on.** Taken as **31 December**, because that is what the instruction we could read prescribes by default (decision 6). 🛠️ **Fix:** read §1362(e) and Reg. §1.1362-3 on a machine the network does not block; if a forced closing of the books is treated like an (e)(3) election, **flip to the 29 October column** — both are computed in §3.6, and the change moves item F, Schedule L and tie-outs 3 and 4, and nothing else.
 7. 🟡 **Who engages and who signs.** An officer of the corporation signs, and after 30 October the only member is the buyer, who is not our client. The 2025 engagement letter was signed by the sellers in March, before any of this was known.
 8. 🟡 **Florida.** Not researched today. The S short period is unlikely to need an F-1120; the **C short period will**, and that is the buyer's. **Verify before telling anyone there is no state filing.**
 9. 🔴 **The distributions are split 50/50 off ONE pooled `Draw` account.** No per-shareholder ledger exists.
@@ -410,7 +415,7 @@ splits the year.
    documents disagree.
 13. 🔴 **The opening AAA of (26,783) is taken from a 2024 return whose ACCEPTANCE has never been confirmed.**
    The 2024 package in Drive is an outside firm's and states it would be e-filed only once a signed
-   Form 8879-CORP came back; a signed 8879-CORP dated 07-02-2025 is in the package, but **an IRS transcript
+   Form 8879-CORP came back; a signed 8879-CORP dated **7 February 2025** is in the package, but **an IRS transcript
    or e-file acknowledgement has never been obtained**. 🛠️ **Fix:** pull the transcript. **What it moves:**
    if 2024 was never accepted, the opening AAA, the shareholders' basis history and a per-shareholder
    per-month late-filing penalty are all in play — and this return's line 1 of Schedule M-2 rests on it.
