@@ -45,6 +45,24 @@ the first year the company is big enough to owe a balance sheet on the return.
 
 ---
 
+## 1A · 🛑 THE EXTENSION GATE — checked, and it is not clean
+
+**The SOP makes this the first hard stop, before any figure, because it cannot be fixed later.** It was
+missed in the first draft of this working paper and is recorded here in full.
+
+| Question | Answer |
+|---|---|
+| What is the due date of **this** return? | 🔑 **Not 15 March.** The 2025 instructions, quoted: *"If the S corporation election was terminated … during the tax year and the corporation reverts to a C corporation, file Form 1120-S for the S corporation's short year **by the due date (including extensions) of the C corporation's short year return**."* The C short period ends **31 December 2025**, so the unextended date is **15 April 2026**, extended **15 October 2026** |
+| Was a Form 7004 filed? | ✅ **A `7004 2025 Ext.pdf` is in Double** (`Tax Return Filed > 2025`) and Double's `Ext. Filed` property is ticked |
+| 🔴 **Does that 7004 actually extend THIS return?** | ⛔ **NOT ESTABLISHED.** It was filed before anyone here knew the year would be cut, so it was almost certainly filed as an ordinary **calendar-year 1120-S** extension. Whether an extension keyed that way covers a **short period ending 29 October**, and whether the extension that governs is the **C short period's** — which only the **buyer** could have filed — has not been checked |
+| Where does that leave us today (**21 August 2026**)? | 🟡 **Probably inside the window, on the reading that the extended date is 15 October 2026 — with roughly eight weeks left.** ⛔ **If no valid extension covers it, the return is already late**, and the S-corporation late-filing penalty runs **per shareholder, per month** |
+
+🛠️ **Fix, before anything else on this return:** open the `7004 2025 Ext.pdf` and read **which form and
+which period** it names, and establish whether the buyer extended the C short period. **If either is
+wrong, tell Julia the same day** — this is the one item where a week costs money.
+
+---
+
 ## 2 · Adjusting entries made before preparing
 
 | # | Entry | Amount | Why | Who decided |
@@ -52,8 +70,10 @@ the first year the company is big enough to owe a balance sheet on the return.
 | 1 | **None posted to the books.** | — | Every difference between the books and this return is handled as a **tax adjustment on Schedule M-1**, not as a journal entry. The books stay as Maria built them | Session, 2026-08-21 |
 
 ⚠️ **Two book items that a reviewer will ask about and that were deliberately NOT adjusted in the ledger:**
-the **accrued rent** (handled on M-1, §4 decision 2) and the **post-sale personal card spending** left inside
-Entertainment Meals (§4 decision 4). Both are visible in the numbers below.
+**(1)** the **accrued rent** — it *is* in the numbers below, as an M-1 add-back (§4 decision 2); and **(2)** the
+**post-sale personal card spending** left inside Entertainment Meals — which ⚠️ **does NOT touch any figure on
+this return**, because it falls after 29 October and lands in the C short period (§4 decision 4). It is recorded
+here because it is evidence about how the whole meals account should be read, **not** because it moves a line.
 
 ---
 
@@ -109,7 +129,7 @@ against the exact arithmetic is normal and is not an error.
 | **H(1)** Final return | 🛑 **DO NOT CHECK** | Verified against the 2025 instructions, quoted: *"If this is the corporation's final return and **it will no longer exist**, check the 'Final return' box."* **This company continues to exist** under the buyer | ✅ |
 | **H(5)** S election termination | ✅ **CHECK IT** | Same instruction: *"If the corporation has terminated its S election, check the 'S election termination' box."* This is the box that describes this return | ✅ typed |
 | **H(2) (3) (4)** | unchecked | No name change, no address change, not an amendment | ✅ |
-| **I** Number of shareholders during any part of the tax year | **2** | The two selling members. ⚠️ **The buyer is NOT counted** — he became a shareholder on 30 October, which is *after* this short period ended | ✅ typed |
+| **I** Number of shareholders during any part of the tax year | **2** | The two selling members, per the **filed 2024 K-1s** (50 shares each, neither marked Final). ⚠️ **The buyer is NOT counted** — he became a shareholder on 30 October, *after* this short period ended. 🔴 **And a contradiction that has to be seen by whoever signs:** the 2025 sale agreement names a **third** person among the sellers/members — someone the 2024 return shows ceased to be an owner in 2024. **The filed return governs and the answer is 2**, but the disagreement is real and is §6 finding 12 | ✅ typed |
 | **J(1) (2)** | unchecked | No §465 aggregation, no §469 grouping — reproduces 2024 | ✅ |
 
 ### 3.2 · Page 1 — income (lines 1a–6)
@@ -119,7 +139,7 @@ against the exact arithmetic is normal and is not an error.
 | **1a** | Gross receipts or sales | **390,056** | ƒ `Sales 362,042.48 + card-surcharge income 8,659.84 + Tips 29,064.57 − discounts 9,711.10 = 390,055.79`. ⚠️ **Discounts go INSIDE 1a, not on 1b** — 1b is returns and allowances, and the 2024 return also left it empty | ✅ typed |
 | **1b** | Less returns and allowances | **0** | 📖 There is no refunds-to-customers account. Reproduces 2024 | ✅ (leave blank) |
 | **1c** | Balance | **390,056** | ƒ `= 1a − 1b` | **computed — do not type** |
-| **2** | Cost of goods sold | **0** | 📖 No Form 1125-A. The salon is a service business; the small product cost is **already netted inside revenue** by the Vagaro entries (*"In-House Product Sales net of business cost"*). Reproduces the 2024 convention exactly — 2024 also showed no COGS. ⚠️ See §6, this is a presentation to raise, not to change unilaterally | ✅ (leave blank) |
+| **2** | Cost of goods sold | **0** | 📖 No Form 1125-A. The salon is a service business; the small product cost is **already netted inside revenue** by the Vagaro entries (*"In-House Product Sales net of business cost"*). Reproduces the 2024 convention exactly — 2024 also showed no COGS. ⚠️ **§6 finding 10** — a presentation to raise, not to change unilaterally | ✅ (leave blank) |
 | **3** | Gross profit | **390,056** | ƒ `= 1c − 2` | **computed — do not type** |
 | **4** | Net gain (loss), Form 4797 | **0** | 🔴 **Deliberately blank, and this is the line everyone expects to carry the sale.** It does not. The members sold their **membership interests**; the company sold nothing, so there is no asset disposition on this return | ✅ (leave blank) |
 | **5** | Other income (loss) | **0** | 📖 No interest, no dividends, no other trade-or-business income in the ledger | ✅ (leave blank) |
@@ -148,14 +168,25 @@ against the exact arithmetic is normal and is not an error.
 | **18** | Employee benefit programs | **0** | 📖 None — there are no employees | ✅ |
 | **19** | Energy efficient commercial buildings (Form 7205) | **0** | Not applicable. ⚠️ It exists only to remind you that **lines 20/21/22 are one lower on any pre-2023 checklist** | ✅ |
 | **20** | **Other deductions** (statement) | **282,605** | ƒ the itemised statement below | ✅ typed — **on the statement/detail screen, which totals to line 20**; the line itself usually will not accept a number |
-| **21** | Total deductions | **338,605** | ƒ `= sum of lines 7–20` (exact 338,605.95) | **computed — do not type** |
-| **22** | 🎯 **Ordinary business income (loss)** | **51,450** | ƒ `= line 6 − line 21` (exact 51,449.84; ±1 on rounding) → **carries to Schedule K line 1** | **computed — do not type** |
+| **21** | Total deductions | **338,605** | ƒ `= sum of lines 7–20`. Exact arithmetic in cents: **338,605.95** | **computed — do not type** |
+| **22** | 🎯 **Ordinary business income (loss)** | 🔴 **51,450 or 51,451 — read it off the keyed return, see below** | ƒ `= line 6 − line 21`. **In cents: 390,055.79 − 338,605.95 = 51,449.84 → 51,450.** **From the rounded lines: 390,056 − 338,605 = 51,451.** → **carries to Schedule K line 1** | **computed — do not type** |
+
+> 🔴 **THE ONE-DOLLAR PROBLEM, AND THE RULE THAT SETTLES IT — read this before keying.**
+> Rounding each line and then adding gives **51,451**; keeping cents to the end gives **51,450**. Which one
+> appears depends on whether the software holds cents internally (most do) or totals what you typed.
+> ⚠️ **Neither figure is wrong. What WOULD be wrong is mixing them.**
+> 🛠️ **So: key page 1 first, read line 22 off the screen, and make that figure the one that appears on
+> Schedule K line 1, Schedule K line 18, Schedule M-1 line 8, Schedule M-2 line 2 and — halved — on the two
+> K-1s, whose box 1 amounts must SUM to it exactly.** If line 22 comes out 51,451, the K-1 halves are
+> **25,726 / 25,725**, and Schedule M-1 line 3 becomes **6,904** so that line 4 still reaches line 22.
+> **Everything below is written on the 51,450 branch; if the software gives 51,451, shift the whole chain by
+> that one dollar rather than leaving one schedule behind.**
 
 #### Statement to attach — Form 1120-S, line 20, Other deductions
 
 | Description | Amount |
 |---|---|
-| Independent contractor | 248,630 |
+| Independent contractor ⚠️ *(includes payments to a company owned by a shareholder's husband — §6 finding 11)* | 248,630 |
 | Supplies and materials | 20,097 |
 | Bank charges | 3,206 |
 | Utilities | 2,834 |
@@ -296,7 +327,7 @@ splits the year.
 | **Box 1** Ordinary business income | **25,725** | **25,725** | ƒ 50% of 51,450 → their **Schedule E, Part II**, line 28 — *not* Schedule C, and not subject to self-employment tax |
 | **Boxes 2–15** | blank | blank | Blank because the entity has no such items — see Schedule K |
 | **Box 16 code C** Nondeductible expenses | **633** | **634** | ƒ 50% of 1,267 (the odd dollar to either; the two must sum to Schedule K). 🔑 **Reduces stock basis on Form 7203 and is deducted nowhere** |
-| **Box 16 code D** Distributions | **21,258** | **21,259** | ƒ 50% of 42,517. 🛠️ **This box is where Form 7203 gets its distributions** — on the 1040 side it is typed on the **K-1 input screen at box 16 code D**, never on Form 7203 itself |
+| **Box 16 code D** Distributions | **21,258** | **21,259** | ƒ 50% of 42,517. 🔴 **This 50/50 split is an ASSUMPTION, not a reading.** The books carry **one pooled `Draw` account** with no per-shareholder detail, and [SOP §5C-iii](../../sops/form-1120s-preparation.md) says a shareholder-level question is never answered from a pooled figure. **§6 finding 9 — ask for the split before filing**; the same paper refuses to assume it for the shareholder loans (item I) and for basis (§8B), and it should not assume it here either. 🛠️ On the 1040 side it is typed on the **K-1 input screen at box 16 code D**, never on Form 7203 itself |
 | **Box 17 code AC** Gross receipts for §448(c) | **195,028** | **195,028** | ƒ 50% of 390,056. 🔒 Exactly the 2024 convention (that year: 108,672 each of 217,344) |
 | **Box 17 code V** §199A information | **STMT** | **STMT** | Points to Statement A below |
 | **Boxes 18 / 19** more than one activity | unchecked | unchecked | One activity |
@@ -359,7 +390,31 @@ splits the year.
 6. 🟠 **Which date Schedule L ends on** — decision 6, with the instruction quoted.
 7. 🟡 **Who engages and who signs.** An officer of the corporation signs, and after 30 October the only member is the buyer, who is not our client. The 2025 engagement letter was signed by the sellers in March, before any of this was known.
 8. 🟡 **Florida.** Not researched today. The S short period is unlikely to need an F-1120; the **C short period will**, and that is the buyer's. **Verify before telling anyone there is no state filing.**
-9. ⓘ **Not established, and stated as the bounded search it was:** the sale documents, the ledger, the 2024 return and Julia's mailbox were read. **Lilian's and Maria's mailboxes, Sunbiz's current filings and QuickBooks itself were not.**
+9. 🔴 **The distributions are split 50/50 off ONE pooled `Draw` account.** No per-shareholder ledger exists.
+   🛠️ **Fix:** ask Maria (or the client) which withdrawals belonged to which member. **What it moves:** K-1
+   box 16D on both K-1s, and therefore each shareholder's Form 7203 and any capital gain under the line-6
+   Note. **If the split cannot be established, say so on the return rather than presenting a guess as a
+   reading.** The same gap covers the **24,440 of shareholder loans**, which Schedule L reports in total and
+   K-1 item I has to report per shareholder.
+10. 🟡 **No Form 1125-A, and the product cost is netted inside revenue.** The Vagaro entries book product
+   sales *"net of business cost"*, so cost of goods sold never appears. It reproduces 2024 exactly and the
+   amounts are small, but it is a presentation the firm should decide on deliberately rather than inherit.
+   **Raise with Julia; do not change it unilaterally on a short-period return.**
+11. 🟠 **A related party sits inside the Contractors line.** Payments to **Marat Boxing LLC** — the company
+   owned by one shareholder's husband — are booked as contract labour inside the 248,630. It touches three
+   things at once: **Schedule B 14a/14b** (a 1099 may be owed to it), **finding 5** (money reaching the
+   owners' household while no salary was paid), and the possibility that some of it is really a
+   **distribution**. **Nobody has asked what the payments were for.**
+12. 🟠 **The sale agreement names a third seller** who the filed 2024 return shows was no longer an owner.
+   Item I is answered **2** from the filed return, which governs — but whoever signs should know the
+   documents disagree.
+13. 🔴 **The opening AAA of (26,783) is taken from a 2024 return whose ACCEPTANCE has never been confirmed.**
+   The 2024 package in Drive is an outside firm's and states it would be e-filed only once a signed
+   Form 8879-CORP came back; a signed 8879-CORP dated 07-02-2025 is in the package, but **an IRS transcript
+   or e-file acknowledgement has never been obtained**. 🛠️ **Fix:** pull the transcript. **What it moves:**
+   if 2024 was never accepted, the opening AAA, the shareholders' basis history and a per-shareholder
+   per-month late-filing penalty are all in play — and this return's line 1 of Schedule M-2 rests on it.
+14. ⓘ **Not established, and stated as the bounded search it was:** the sale documents, the ledger, the 2024 return and Julia's mailbox were read. **Lilian's and Maria's mailboxes, Sunbiz's current filings and QuickBooks itself were not.**
 
 ---
 
@@ -381,7 +436,7 @@ splits the year.
 | What travels | Amount | Where it is TYPED on the recipient's 1040 |
 |---|---|---|
 | K-1 box 1 — ordinary business income | 25,725 each | K-1 input screen → **Schedule E, Part II, line 28**. Not self-employment income |
-| K-1 box 16 code C — nondeductible expenses | 633 / 634 | K-1 input screen → **Form 7203 line 12** (reduces basis, deducted nowhere) |
+| K-1 box 16 code C — nondeductible expenses | 633 / 634 | K-1 input screen → 🔴 **Form 7203 line 8a**, *"Nondeductible expenses"* — verified against the form itself. ⚠️ **Not line 12**, and the order matters: **distributions (line 6) come off BEFORE nondeductible expenses (line 8a)** |
 | K-1 box 16 code D — distributions | 21,258 / 21,259 | 🛠️ **K-1 input screen, box 16 code D → Form 7203 line 6.** Most of Form 7203 cannot be typed on Form 7203 |
 | K-1 box 17 code AC — §448(c) gross receipts | 195,028 each | Informational; feeds the Form 8990 test |
 | Statement A — §199A: income 25,725, **W-2 wages 0, UBIA 0**, not an SSTB | — | **Form 8995 / 8995-A**. The zeros are what cap the deduction above the threshold |
@@ -390,6 +445,7 @@ splits the year.
 ### 8B · 🔴 What this side CANNOT supply
 
 - **Each shareholder's beginning stock basis.** Form 7203 is filed with the **1040**, so the opening figure is last year's Form 7203 line 15 — and **2024 was prepared by an outside firm**, so the firm may not hold it. Without it, nobody can tell whether the **19,117 of distributions in excess of the AAA** is a tax-free return of basis or a **capital gain**.
+  🔑 **The form states the mechanism on its own face, under line 6:** *"If line 6 is larger than line 5, subtract line 5 from line 6 and report the result as a capital gain on Form 8949 and Schedule D."* So the test is against **stock basis**, not against the AAA — which is why the M-2 cap in §3.8 settles nothing for the shareholders.
 - **What each seller paid for her interest in 2024** — the basis for both the distribution test and the gain on sale. The 2024 agreement was a joint purchase with instalments payable by one member only; **the split between them is not on any return we hold. Ask; never assume half each.**
 - **The instalment obligation still running to October 2027** and how it interacts with the 2025 sale.
 - Anything about the buyer.
