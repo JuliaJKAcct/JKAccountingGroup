@@ -500,6 +500,22 @@ they have to be: this section stresses that which state someone lived in is the 
 a session that stops at `2024 Federal.pdf` is blind to exactly that. **What is out of scope is
 another year, and anything that is not part of a filed return.**
 
+> 🔵 **EXTENDED 2026-08-20, by Lilian — put to her as a question rather than assumed.**
+> **A request from Lilian or Julia to PREPARE A RETURN carries this permission too**, because
+> **[`tax-return-sop`](../tax-return-sop/) §4A now makes this review phase 1 of every preparation** —
+> so *"prepárame el Tax Return de X cliente"* asks for the review as well, and you do not stop to ask
+> again.
+> ⛔ **NOTHING ELSE MOVES — every limit above stands exactly as written:** the **latest tax year
+> before the year being prepared** *(not the most recently filed)*, that whole year's filed package
+> and **no other year**, **nothing that is not part of a filed return**, **never from a subagent**,
+> **never from a scheduled or unattended session**.
+> ✅ **And it is THAT CLIENT'S OWN prior year** — preparing the company does not open the owner's, or
+> the reverse; **each is its own request** (limit 3 below, unchanged).
+> 🔑 **Why it was ASKED and not assumed, which is the part to carry forward:** a session had written
+> this permission into a skill on its own reasoning, and the reasoning was sound. **A permission
+> worded *"only when I ask"* is not widened by a session deciding that it has been asked** — it is
+> widened by putting the question and getting an answer.
+
 **That limit costs nothing analytically, which is why it holds.** A return states its carryovers
 *as of its own year end*: the NOL on the 2024 return already accumulates 2022 and 2023, Form 7203
 carries beginning **and** ending basis, and Form 8582 carries suspended losses forward. The latest

@@ -234,18 +234,33 @@ about the return, and the organizer produced none. **Since 2026-08-11 you may fe
 yourself**, through the redactor. Lilian opened this specifically so nobody has to download the
 return, delete the identifiers by hand and re-upload it — *"eso me ralentiza mucho las cosas."*
 
+🔵 **AND SINCE 2026-08-20, A REQUEST FROM LILIAN OR JULIA TO PREPARE A RETURN CARRIES THE SAME
+PERMISSION** — *"prepárame el Tax Return de X cliente"* asks for this review too, because it is now
+[phase 1](../tax-return-sop/) of every preparation _(put to her as a question and answered)_.
+⛔ **Nothing else moves — every limit in this section stands**, including *that client's own* prior
+year: preparing the company does not open the owner's, **each is its own request.**
+
 **Read [`double-mcp`](../double-mcp/)'s document rule before the first call.** It is short and all
 of it binds. The shape of it:
 
 1. **Check for a prior year as an organizer first** (`list_organizers(clientId)`). If one exists it
    is the cleanest base and needs no PDF. Run it every time — but expect it to fail: almost every
    client has only the current year there.
-2. **Otherwise fetch exactly one document: the most recent return filed before the year under
-   review.** Preparing 2025 with 2022 / 2023 / 2024 on file → **2024 only.** A return states its
-   carryovers as of its own year end, so the latest one already summarises the years before it;
-   the limit costs nothing. `list_files(clientId)` → identify it by name and year →
-   `get_file(fileId)` → hand the URL to
-   [`tools/redact-doc/redact.py`](../../../tools/redact-doc/). **Never open the PDF directly.**
+2. **Otherwise fetch ONE YEAR's return — the LATEST TAX YEAR before the year under review.**
+   Preparing 2025 with 2022 / 2023 / 2024 on file → **2024 only.** A return states its carryovers as
+   of its own year end, so the latest one already summarises the years before it; the limit costs
+   nothing. `list_files(clientId)` → identify it by name and year → `get_file(fileId)` → hand the URL
+   to [`tools/redact-doc/redact.py`](../../../tools/redact-doc/). **Never open the PDF directly.**
+   - 🛑 **"LATEST TAX YEAR", NOT "MOST RECENTLY FILED".** These clients include **late filers** — a
+     2022 return filed last month is the most recently filed and is **the wrong document.** Sort by
+     **the tax year the return covers**, never by its filing date.
+   - 🛑 **"ONE YEAR", NOT "ONE PDF".** A filed return is routinely several files — the **federal**
+     return, **each STATE return**, the K-1 package, the 8879s. **All of them for that one year are
+     in scope, and they have to be:** which state someone lived in is often the whole question, and
+     a session that stops at `2024 Federal.pdf` is blind to exactly that.
+   ⚠️ **Both of these are [`double-mcp`](../double-mcp/)'s wording and it governs** — an earlier
+   version of this step said "the most recent return filed" and "exactly one document", and both
+   were wrong.
 3. **Say what you are doing before the call** — which document, which year, why, in one plain
    sentence. The person asking may be Julia.
 4. **Note what the client file already tells you.** If a previous pass read that return, its
@@ -254,9 +269,9 @@ of it binds. The shape of it:
 5. **Say so if you could not get it.** Block A must name the unavailable source. **Never proceed
    silently**, and never quietly widen the scope to a second year to compensate.
 
-⚠️ **The scope is the permission.** One client, one review, one return, for the comparison — never
-a second document, never a non-return document, never a sweep across clients, never from a
-subagent or a scheduled session. If the latest return's carryover figures are missing or
+⚠️ **The scope is the permission.** One client, **one tax year's filed package**, for the comparison
+— never a second **year**, never a document that is not part of a filed return, never a sweep across
+clients, never from a subagent or a scheduled session. If the latest return's carryover figures are missing or
 self-contradictory, **that is a finding to report, not a reason to open the year before it.** Ask.
 
 ⚠️ **Asking the client for it is still right** (Block E, [`method.md`](../../../projects/pre-return-review/method.md)
