@@ -485,6 +485,18 @@ now automated instead of manual. Nothing else changed.
 
 Inside a **pre-return review that Lilian or Julia asked for**, you may read **one year's return**:
 
+> 🔵 **EXTENDED 2026-08-20, by Lilian, and this is the second time the hole was sized — put to her
+> as a question rather than assumed:** **asking for a RETURN TO BE PREPARED carries this permission
+> too.** *"Prepárame el Tax Return de X cliente"* is a request for the review as well, because
+> **[`tax-return-sop`](../tax-return-sop/) §4A now makes the review phase 1 of every preparation.**
+> ⛔ **Nothing else moves.** Same one year, same client, same whole-package scope, same bans — **never
+> from a subagent, never from a scheduled or unattended session, never a document that is not that
+> return.** ✅ **And it is that client's own prior year only** — preparing the company does not open
+> the owner's, or the reverse; each is its own request.
+> _(Why it was asked: a session had written this into a skill on its own reasoning. A permission
+> worded "only when I ask" cannot be widened by a session deciding it has been asked.)_
+
+
 > **the client's return for the LATEST TAX YEAR before the year under review for which one
 > exists — the whole of that year's filed package, and no other year.**
 

@@ -235,14 +235,19 @@ answered before it starts. **Nothing new was invented; the order was wrong.**
 la hice"* → phase 2 alone, **and say in the delivery that phase 1 was skipped on her instruction**,
 so the working paper records it. *"prepárame el Tax Return de X"* → both.
 
-🟡 **ONE THING THIS DOES NOT SETTLE BY ITSELF, AND A SESSION MAY NOT SETTLE IT EITHER.**
-CLAUDE.md scopes the [redactor](../../../tools/redact-doc/) to *"inside a **pre-return review**
-Lilian or Julia asked for"*. Phase 1 **is** a pre-return review, so preparing a return they asked for
-now contains one — **but that reasoning is a session widening its own permission**, and
-[`double-mcp`](../double-mcp/) is explicit that *a session may rely on a carve-out that is written
-down; it may never invent one.* ⛔ **So until CLAUDE.md itself says so, treat the prior-year return as
-requiring the same explicit ask it always did**, and **put the question to Lilian rather than
-resolving it in a skill.** _(Raised 2026-08-20, unresolved.)_
+✅ **THE PRIOR-YEAR RETURN — SETTLED 2026-08-20, BY LILIAN, AFTER BEING PUT TO HER.**
+**Asking for a return to be prepared carries the [redactor](../../../tools/redact-doc/) permission**,
+because phase 1 makes the review part of every preparation. **You do not stop to ask again.**
+⛔ **Every other limit is unchanged:** **one tax year** (the latest before the year being prepared,
+its state returns and schedules included), **that client's own** prior year — preparing the company
+does not open the owner's, and each is its own request — **never another year, never a document that
+is not that return, never from a subagent, never from a scheduled or unattended session.**
+
+🔑 **And the reason it was ASKED rather than assumed is itself the rule worth keeping:** a session had
+written this permission into a skill on its own reasoning. ⛔ **A permission worded *"only when I
+ask"* cannot be widened by a session deciding that it has been asked** — it is widened by putting the
+question and getting an answer. _(The authority is [CLAUDE.md](../../../CLAUDE.md) and
+[`double-mcp`](../double-mcp/); this is a pointer to it, not a second copy.)_
 
 #### Then find these — and read the client file FIRST, because it is free
 

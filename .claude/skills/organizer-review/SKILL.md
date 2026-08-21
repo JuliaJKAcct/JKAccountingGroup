@@ -234,6 +234,12 @@ about the return, and the organizer produced none. **Since 2026-08-11 you may fe
 yourself**, through the redactor. Lilian opened this specifically so nobody has to download the
 return, delete the identifiers by hand and re-upload it — *"eso me ralentiza mucho las cosas."*
 
+🔵 **AND SINCE 2026-08-20, ASKING FOR THE RETURN TO BE PREPARED CARRIES THE SAME PERMISSION** —
+*"prepárame el Tax Return de X cliente"* is a request for this review too, because it is now
+[phase 1](../tax-return-sop/) of every preparation _(Lilian, put to her as a question and answered)_.
+⛔ **Nothing else moves:** one year, that client's own, never from a subagent, never from a scheduled
+session.
+
 **Read [`double-mcp`](../double-mcp/)'s document rule before the first call.** It is short and all
 of it binds. The shape of it:
 
