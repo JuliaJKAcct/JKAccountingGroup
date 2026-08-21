@@ -236,18 +236,20 @@ la hice"* → phase 2 alone, **and say in the delivery that phase 1 was skipped 
 so the working paper records it. *"prepárame el Tax Return de X"* → both.
 
 ✅ **THE PRIOR-YEAR RETURN — SETTLED 2026-08-20, BY LILIAN, AFTER BEING PUT TO HER.**
-**Asking for a return to be prepared carries the [redactor](../../../tools/redact-doc/) permission**,
-because phase 1 makes the review part of every preparation. **You do not stop to ask again.**
-⛔ **Every other limit is unchanged:** **one tax year** (the latest before the year being prepared,
-its state returns and schedules included), **that client's own** prior year — preparing the company
-does not open the owner's, and each is its own request — **never another year, never a document that
-is not that return, never from a subagent, never from a scheduled or unattended session.**
+**A request from LILIAN OR JULIA to prepare a return carries the
+[redactor](../../../tools/redact-doc/) permission**, because phase 1 makes the review part of every
+preparation. **You do not stop to ask again.**
+⛔ **THE SCOPE IS UNCHANGED — and it is not restated here on purpose.** Six limits bind every call,
+and a fourth copy of them is a fourth thing to drift. **Read them at
+[CLAUDE.md](../../../CLAUDE.md) and [`double-mcp`](../double-mcp/) *What is permitted — the whole of
+it*, before the first call.** ⚠️ **The two that get remembered wrong: it is the latest tax year
+BEFORE the year being prepared, not the most recently filed — and it is that CLIENT's own prior
+year.**
 
-🔑 **And the reason it was ASKED rather than assumed is itself the rule worth keeping:** a session had
-written this permission into a skill on its own reasoning. ⛔ **A permission worded *"only when I
-ask"* cannot be widened by a session deciding that it has been asked** — it is widened by putting the
-question and getting an answer. _(The authority is [CLAUDE.md](../../../CLAUDE.md) and
-[`double-mcp`](../double-mcp/); this is a pointer to it, not a second copy.)_
+🔑 **The reason it was ASKED rather than assumed is itself the rule worth keeping:** a session had
+written this permission into a skill on its own reasoning, and **the reasoning was sound.** That is
+not the point. ⛔ **A permission worded *"only when I ask"* is not widened by a session deciding that
+it has been asked** — it is widened by putting the question and getting an answer.
 
 #### Then find these — and read the client file FIRST, because it is free
 
@@ -300,10 +302,14 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
   control here fails silently. *(The full rule, and the wording for both messages, is
   [`double-mcp`](../double-mcp/) §2.2 — read it, do not work from this summary.)*
 - 🛑 **The redactor carries the same obligation:** say **which document, which year, and why**, before
-  the call. ⛔ **One tax year only**, never another document type, **never from a subagent or a
-  scheduled session.** ⓘ **CLAUDE.md scopes that permission to a pre-return review Lilian or Julia
-  asked for**; preparing a return they asked for is the same footing, but **a session may rely on a
-  carve-out that is written down — it may never invent one.** If in doubt, ask.
+  the call. ✅ **A request from Lilian or Julia to prepare a return carries this permission** — you do
+  not stop to ask again *(Lilian, 2026-08-20)*. ⛔ **One tax year only** — the **latest before the
+  year being prepared**, *not* the most recently filed — **that whole year's filed package**
+  including the state returns, **that client's own** *(the company's preparation does not open the
+  owner's; each is its own request)*, **nothing that is not part of a filed return**, **never from a
+  subagent, never from a scheduled session.**
+  **The authority is [CLAUDE.md](../../../CLAUDE.md) and [`double-mcp`](../double-mcp/) — read the
+  rule there, do not work from this summary.**
 - **Client figures live in [`projects/tax-returns/`](../../../projects/tax-returns/) only** — never
   in an SOP or a client-intelligence file, **both of which publish to the Knowledge Hub**. *(Skills
   do not publish, but the same rule applies to them: nobody should have to check.)*
@@ -592,6 +598,7 @@ prove it. **Caught in review — the delivery format had made a wrong answer loo
 | **A fact only the CLIENT holds** | the **question, written ready to send**, plus what each answer changes |
 | **A POSITION** — an election, an allocation, a characterisation | 🛑 **the options with each one's consequence, and let Lilian rule.** *Positions are hers* — **delivery rule 7 above, which part 9 does NOT override.** Anything a reviewer could ask *"why did you do that?"* about is a decision, not a defect |
 | **A rule the firm has not settled** | say so plainly, and **name who settles it** |
+| 🛑 **A PERMISSION or a SCOPE question** — may I read this, may I write here, does the rule cover this case | ⛔ **Ask. Always.** A permission worded *"only when I ask"* is **not** widened by a session deciding it has been asked, **and a sound argument that it ought to cover this case is not the permission.** *(CLAUDE.md core conventions)* |
 
 **The four things then attach to each BRANCH, not to the finding.**
 
