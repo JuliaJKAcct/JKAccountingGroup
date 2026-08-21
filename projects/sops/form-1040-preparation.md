@@ -560,6 +560,21 @@ profitable the business. Compute it, expect zero, and do not chase it.
 
 ## M3 · Schedule E Part II — an S-corporation K-1
 
+🔗 **FIRST — IF THE FIRM PREPARED THE COMPANY'S RETURN, THE HANDOFF IS ALREADY WRITTEN. READ IT
+BEFORE YOU TYPE ANYTHING.** The company's working paper in
+[`projects/tax-returns/`](../tax-returns/) carries a **§8** with the K-1 box by box, **the screen
+each figure is typed on**, what must **match** on both returns, and — the one that saves an
+afternoon — **which figures are still PROVISIONAL because a blocker on that return can move them.**
+_(1120-S SOP [§13A](./form-1120s-preparation.md) is what produces it.)_
+
+⚠️ **And what §8 will tell you it CANNOT supply:** the shareholder's **own** history — beginning
+stock basis, **debt basis**, **losses suspended for basis in an earlier year** (prior 7203 line 47),
+and the **§465 / §469 carryovers**. 🔑 **Those live on HIS prior-year return, never on the company's**,
+so look in his prior working paper first and his prior return second. ⛔ **A shareholder almost never
+knows their own basis** — if no Form 7203 was ever filed it has to be reconstructed, which is work to
+be quoted, not a question to send.
+
+
 The K-1 comes off the company's **Form 1120-S** — see
 [`form-1120s-preparation.md`](./form-1120s-preparation.md). **The company's return is a
 prerequisite**: the shareholder's 1040 cannot be finished before it.
@@ -597,7 +612,7 @@ ruling it is.**
 | **Box 12 other deductions** | Schedule A or Schedule 1, **by letter code** | 🔑 **charitable contributions (codes A–G) and investment interest expense (code H) hide here** |
 | Box 13 credits | the credit's own form, by code | |
 | **Box 14** Schedule K-3 attached | ☐/☑ | ☑ means a **foreign** package is coming; do not file without it |
-| **Box 16 C** nondeductible · **16 D** distributions | **Form 7203** lines 8a and 6 — **not the 1040 directly** | 🔑 the only two boxes that touch **basis**. 🔵 **16D may be BLANK BY POLICY** — where the company netted contributions against distributions, Form 7203 line 2 carries the net and line 6 is zero _(the firm's rule, [1120-S SOP §5C-v](./form-1120s-preparation.md))_. **Both returns must carry the same presentation** |
+| **Box 16 A · B** tax-exempt income · **16 C** nondeductible · **16 D** distributions · **16 E** loan repayments | **Form 7203** lines **3k** *(A+B)*, **8a** *(C)*, **6** *(D)*, **Part II** *(E)* — **not the 1040 directly** | ⛔ **NOT just C and D.** *"Enter the sum of the amounts from Schedule K-1, box 16, **codes A and B**"* — tax-exempt income **INCREASES** stock basis; **code E moves DEBT basis.** ⚠️ **And every income/loss box touches basis too**, via lines 3a–3m and Part III. 🔵 **16D may be BLANK BY POLICY** — where the company netted contributions against distributions, Form 7203 line 2 carries the net and line 6 is zero _(the firm's rule, [1120-S SOP §5C-v](./form-1120s-preparation.md))_. **Both returns must carry the same presentation** |
 | **Box 17 V** §199A | Form 8995 / 8995-A | **a loss year still produces QBI information** — a negative carryforward |
 | Boxes 18 · 19 more than one activity | the at-risk / passive analysis | ☑ means the single-activity shortcut is unavailable |
 
