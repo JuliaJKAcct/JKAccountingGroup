@@ -43,7 +43,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | **Built (v1, Jul 2026)** — create/enrich/audit + CI↔SOP sync + owner-level sweep rule + Atlas review-dashboard render; improve over time |
 | [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question) | Redesign the Business Tax Organizer with a QuickBooks-access filter question up front, so clients we already have QuickBooks access to skip the transaction questions | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) skill + Double's live organizer template | Medium | Not started |
 | [IDEA-17](#idea-17--repair-the-1040-organizers-broken-conditional-logic) | Repair the **1040** organizer's conditional logic — seven income options lead nowhere and the rental branch is unreachable, so those clients are never asked for a document | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) + Double's live organizer template | **High** | Not started — defects audited 2026-08-11 on **one** client's organizer; confirm they repeat in a second one before planning the fix |
-| [IDEA-18](#idea-18--improved-home-office-deduction-template) | Improved **Home Office Deduction template** — a better version of the one the firm currently sends clients | Firm templates (Drive/Double) + the [`knowledge-hub`](./projects/knowledge-hub/) Templates band | Medium (Lilian to confirm) | Not started — captured (Lilian, 2026-08-21) |
+| [IDEA-18](#idea-18--improved-home-office-deduction-template) | Improved **Home Office Deduction template** — a better version of the one the firm currently sends clients | Firm templates (Drive/Double) + the [`knowledge-hub`](./projects/knowledge-hub/) Templates band | Medium (proposed) | Not started — captured (Lilian, 2026-08-21) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -893,9 +893,12 @@ Lilian will detail *what* to improve when we pick it up.
 season, and the firm's own case history already shows where it creates friction.
 Candidate improvements the repo evidence suggests (for Lilian to confirm, not
 decided): make explicit that the **telephone and internet do not belong in it**
-(they are deducted at their own business-use percentage on Schedule C line 25,
-never inside the home-office computation — the double-count is "the usual" error
-per [`form-1040-preparation.md`](./projects/sops/form-1040-preparation.md));
+— they follow their own Schedule C line-25 rules in
+[`form-1040-preparation.md`](./projects/sops/form-1040-preparation.md) (where a
+first home landline's base rate is **never deductible at all**, a mobile plan
+splits by business use, and internet-at-business-use-% is a firm *position*, not
+a citation), and the template-vs-line-25 double-count is "the usual" error per
+that SOP's checklist;
 prompt for costs clients tend to omit (a renter's-insurance premium was reported
 as **zero** on one client's worksheet while the firm held the policy); and guard
 against a cost appearing **both** in the template and on the client's P&L /
@@ -926,8 +929,9 @@ version, the Design System + `impeccable` cover a branded PDF/HTML version, and
 the Hub's Templates band is the established home for the blank. No external
 dependency; only Lilian's improvement list is needed to begin.
 
-**Priority:** Medium (Lilian to confirm) · **Status:** Not started — captured
-(Lilian, 2026-08-21)
+**Priority:** Medium (proposed — Julia decides, per this file's convention) ·
+**Status:** Not started — captured (Lilian, 2026-08-21; her improvement list is
+the input we're waiting on)
 
 ---
 
