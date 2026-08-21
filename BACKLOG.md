@@ -43,6 +43,7 @@ ready to work, we open this file, pick one from the table, and go.
 | [IDEA-15](#idea-15--client-intelligence-skill-create-from-template--gap-audit) | `client-intelligence` skill — the engine that creates each client file from the template and runs the consistency/gap audit the same way in any session | [`.claude/skills/client-intelligence/`](./.claude/skills/client-intelligence/) + [`projects/client-intelligence/`](./projects/client-intelligence/) | Medium | **Built (v1, Jul 2026)** — create/enrich/audit + CI↔SOP sync + owner-level sweep rule + Atlas review-dashboard render; improve over time |
 | [IDEA-16](#idea-16--redesign-the-business-tax-organizer-around-a-quickbooks-access-filter-question) | Redesign the Business Tax Organizer with a QuickBooks-access filter question up front, so clients we already have QuickBooks access to skip the transaction questions | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/) skill + Double's live organizer template | Medium | Not started |
 | [IDEA-17](#idea-17--repair-the-1040-organizers-broken-conditional-logic) | Repair the **1040** organizer's conditional logic — seven income options lead nowhere and the rental branch is unreachable, so those clients are never asked for a document | [`tax-season-readiness`](./.claude/skills/tax-season-readiness/references/individual-organizer-logic-defects.md) + Double's live organizer template | **High** | Not started — defects audited 2026-08-11 on **one** client's organizer; confirm they repeat in a second one before planning the fix |
+| [IDEA-18](#idea-18--improved-home-office-deduction-template) | Improved **Home Office Deduction template** — a better version of the one the firm currently sends clients | Firm templates (Drive/Double) + the [`knowledge-hub`](./projects/knowledge-hub/) Templates band | Medium (Lilian to confirm) | Not started — captured (Lilian, 2026-08-21) |
 
 _Priority and status are Julia's call — Claude proposes, she decides. "Blocked"
 means we're waiting on an input or an access grant before real work can begin._
@@ -877,6 +878,56 @@ is a Double-UI job with our list in hand, not an API job.**
 
 **Priority:** High · **Status:** Not started — defects audited 2026-08-11 (Lilian), fix list ready,
 blocked on the new-organizer-template question.
+
+---
+
+## IDEA-18 — Improved Home Office Deduction template
+
+**What Lilian wants:** create a **new version of the firm's Home Office Deduction
+template** — the fill-in sheet the firm sends a Schedule-C client so they report
+their home-office figures (square footage, rent, utilities, insurance…) for the
+return — as an **improved version of the one we send today**. Captured 2026-08-21;
+Lilian will detail *what* to improve when we pick it up.
+
+**Why it matters:** the current template is a live client touchpoint every tax
+season, and the firm's own case history already shows where it creates friction.
+Candidate improvements the repo evidence suggests (for Lilian to confirm, not
+decided): make explicit that the **telephone and internet do not belong in it**
+(they are deducted at their own business-use percentage on Schedule C line 25,
+never inside the home-office computation — the double-count is "the usual" error
+per [`form-1040-preparation.md`](./projects/sops/form-1040-preparation.md));
+prompt for costs clients tend to omit (a renter's-insurance premium was reported
+as **zero** on one client's worksheet while the firm held the policy); and guard
+against a cost appearing **both** in the template and on the client's P&L /
+figures note (a rent entry showed up in two places on one 2025 engagement and
+took a round of questions to untangle). A clearer template turns those recurring
+questions into answers the client gives right the first time.
+
+**Where it fits:** the template itself is a **firm document that lives in the
+firm's systems** (it is sent to clients and their filled copies come back into
+Double — e.g. `Home_Office_Deduction_Filled.xlsx` under a client's `Others >
+{year}` folder), so the finished file is delivered and stored there, not
+committed with client data. The repo's role: the blank template belongs in the
+[Knowledge Hub's Templates band](./projects/knowledge-hub/) like the firm's other
+downloadable templates, built on-brand via the
+[`impeccable`](./.claude/skills/impeccable/) skill + the Design System. The
+domain rules it must encode are already written down in
+[`projects/sops/form-1040-preparation.md`](./projects/sops/form-1040-preparation.md)
+(the home-office module and its checklist).
+
+**What we need to start:** (1) pull the **current** template from Drive/Double as
+the baseline — improve it, don't rebuild it blind; (2) Lilian narrates what she
+wants changed (her list, plus the candidate fixes above for her to accept or
+reject); (3) decide format (keep `.xlsx`, or a branded fill-in PDF/HTML like the
+firm's other client-facing pieces) and language(s) (EN / RU).
+
+**Capability check:** fully buildable now — the `xlsx` skill covers a spreadsheet
+version, the Design System + `impeccable` cover a branded PDF/HTML version, and
+the Hub's Templates band is the established home for the blank. No external
+dependency; only Lilian's improvement list is needed to begin.
+
+**Priority:** Medium (Lilian to confirm) · **Status:** Not started — captured
+(Lilian, 2026-08-21)
 
 ---
 
