@@ -578,16 +578,30 @@ shortcut is the special case of it.**
 | **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
 | **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION** |
 | **2b** | Is it a **return, a refund, a rebate or an allowance**? | ⛔ **Line 1b, not line 1a.** The instruction for line 1b, verbatim: *"Enter cash and credit refunds the corporation made to customers for returned merchandise, **rebates, and other allowances made on gross receipts or sales**."* **Two different things go wrong, and the SILENT one is the dangerous one** — see below |
-| **3** | Everything else: is it money the business **took in for its own account**? | ✅ **Inside line 1a** |
+| **3** | Everything else in the income block | ✅ **Inside line 1a** — see the note below on money collected for someone else |
 
 🛑 **The two ways refunds go wrong, and why only one of them is ever caught:**
 
 | What the preparer does | line 1a | line 1c | Caught? |
 |---|---|---|---|
-| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **NO. Nothing catches this.** Every tie-out in §14 runs off 1c or below, so the return foots, the P&L agrees, and the only wrong figure is **line 1a itself**. ✅ **Schedule B question 11 is measured on it** — the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **NO. Nothing catches this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together. Every other tie-out runs off **1c or below**. **Nothing on the return compares line 1a to the books**, so the return foots, the P&L agrees, and the only wrong figure is **line 1a itself**. ✅ **Schedule B question 11 is measured on it** — the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
 | Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
 
 🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
+
+🔑 **"But that money isn't really ours" — the test is what the BOOKS DID with it, not who it morally
+belongs to.** Tips are owed to the workers and sales tax is owed to the state, yet one is in line 1a
+and the other is not, and the reason is mechanical:
+
+- **It never reached the P&L** — collected straight into a **liability** account, as sales tax is under
+  the net method (§5C-ii). ⛔ **Then it is not revenue and there is nothing to put on line 1a**, and
+  remitting it is not a deduction either. **Both, or neither.**
+- **It is sitting in the income block** — as tips and card surcharges are here. ✅ **Then it is in line
+  1a, and what is paid out is a DEDUCTION.** *(Sales tax under the gross method behaves exactly this
+  way — which is why the same account can be in or out on two different clients.)*
+
+⛔ **So never decide this from the account's name or from who the money is destined for. Find out which
+account it was credited to.**
 
 #### 3 · ⚠️ The accounts that look like pass-throughs, and are not
 
@@ -635,9 +649,15 @@ books run past the cut — a terminated election, a mid-year sale, a change of a
        =  full-year line 1a
 
    STEP 2 — prove the full year against the P&L (full-year figures only):
-       full-year line 1a  −  full-year line 1b  +  full-year Schedule K items
+       full-year line 1a
+         −  full-year line 1b
+         +  any Schedule K item that actually sits INSIDE Total for Income
        =  the P&L's Total for Income
    ```
+   ⚠️ **Check WHERE the Schedule K items sit before adding anything back.** QuickBooks usually puts
+   interest and dividends under **Other Income**, which is **below** `Total for Income` — and capital
+   gains are often not on the P&L at all. **When they sit below it, that third term is ZERO**, and
+   adding them anyway breaks the proof by their amount.
    🔑 **Why 1b is SUBTRACTED and the Schedule K items are ADDED, because the signs are the whole
    check:** `Total for Income` already carries the refunds **as a negative** and already carries the
    Schedule K items **as positives**. Line 1a excludes both. So you take the refunds back out and put
@@ -2026,11 +2046,13 @@ line 1  =  line 8 + line 7 − line 2          ← beginning inventory — a CHE
 ### Form 1120-S, page 1
 
 ```
-line 1a =  EVERY account in the P&L's income block
-             (sales · tips · card surcharges charged to the customer · shipping charged …)
-           − discounts and other contra-revenue at the point of sale
-           − customer refunds, rebates and allowances   → these are line 1b instead
-           − interest · dividends · capital gains · rents → these are Schedule K instead
+line 1a =  the P&L's income block, EACH ACCOUNT AT ITS OWN SIGN — add them up, do not adjust them
+             sales · tips · surcharges charged to the customer · shipping charged   → already positive
+             discounts · package redemptions                                        → already negative
+
+           EXCLUDE these entirely — ⛔ they are NOT subtractions from 1a, they belong elsewhere:
+             customer refunds · rebates · allowances     → line 1b
+             interest · dividends · capital gains · rents → Schedule K
                                                     → the method is §5B-i; this is only its shape
 line 1c =  line 1a − line 1b
 line 3  =  line 1c − line 2

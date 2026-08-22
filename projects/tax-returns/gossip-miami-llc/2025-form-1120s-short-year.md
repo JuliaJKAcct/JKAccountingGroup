@@ -148,7 +148,7 @@ against the exact arithmetic is normal and is not an error.
 > ⚠️ **What line 1a is NOT.** It is not the full-year P&L figure (391,368.88) — that includes **1,313.09**
 > banked after the cut, which belongs to the C short period (§4 decision 3). And it is **not complete**:
 > October carries no cash sales, tips, surcharge or discounts at all, because there is no Vagaro export
-> for Q4 (§6, finding 1). **This figure is understated by an amount nobody has measured.**
+> for Q4 (§6 finding 1), which is sized there at roughly **4,000–12,000** — an estimate, not a measurement. ⚠️ **And it has an offsetting exposure running the other way that is larger:** the tips inside this figure may have no deductible payout behind them (**§6 finding 2**, up to 29,065). **Neither is resolved; do not treat this figure as settled in either direction.**
 
 ### 3.3 · Page 1 — deductions (lines 7–22)
 
