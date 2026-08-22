@@ -513,7 +513,7 @@ is a stop sign and the other is a lead.)_
 
 | Line | What it is | Formula, or where you read it |
 |---|---|---|
-| **1a** | Gross receipts or sales | ƒ **built account by account — see 5B-i, which is the whole method.** The one-line version: `= every trade-or-business revenue account, INCLUDING the ones that look like pass-throughs, MINUS discounts and other contra-revenue`. ⛔ **Customer refunds are NOT subtracted here — they are line 1b**, or 1c deducts them twice. ⛔ **Never read a P&L subtotal** |
+| **1a** | Gross receipts or sales | ƒ **built account by account — see 5B-i, which is the whole method.** The one-line version: `= every trade-or-business revenue account, INCLUDING the ones that look like pass-throughs, MINUS discounts and other contra-revenue`. ⛔ **Customer refunds are NOT subtracted here — they are line 1b.** 🔴 **Leaving 1b blank and taking them off inside 1a is the SILENT version: 1c comes out right, the return foots, and line 1a is understated with nothing to catch it** (§5B-i part 2). ⛔ **Never read a P&L subtotal** |
 | **1b** | Returns and allowances | 📖 read · the refunds-to-customers account |
 | **1c** | Balance | ƒ `= 1a − 1b` · ✅ equals the P&L's total income **less anything in it that belongs on Schedule K** (interest, dividends, capital gains) |
 | **2** | Cost of goods sold | 📖 Form 1125-A line 8 |
@@ -576,7 +576,7 @@ shortcut is the special case of it.**
 | # | Question | If yes |
 |---|---|---|
 | **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
-| **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION** |
+| **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, and it must REDUCE it.** ⚠️ **Look at the sign the P&L prints.** Most print it negative, so adding the column already reduces 1a — **confirm the total went down.** If it prints positive, subtract it. ⛔ **Never both** |
 | **2b** | Is it a **return, a refund, a rebate or an allowance**? | ⛔ **Line 1b, not line 1a.** The instruction for line 1b, verbatim: *"Enter cash and credit refunds the corporation made to customers for returned merchandise, **rebates, and other allowances made on gross receipts or sales**."* **Two different things go wrong, and the SILENT one is the dangerous one** — see below |
 | **3** | Everything else in the income block | ✅ **Inside line 1a** — see the note below on money collected for someone else |
 
@@ -1802,9 +1802,23 @@ rounding difference.
 
 - [ ] 1125-A: **line 6 − line 7 = line 8**
 - [ ] 1125-A line 8 **equals** page 1 line 2
-- [ ] Page 1: **1a − 1b = 1c** · and 1c equals the P&L's total income **less anything in the
-      P&L's income section that belongs on Schedule K instead** (interest, dividends, capital
-      gains). If the client has none of those, they are simply equal
+- [ ] Page 1: **1a − 1b = 1c**. ⚠️ **This one is INTERNAL — it passes even when line 1a is wrong**,
+      because both sides move together. It is not evidence about 1a; the next two checks are
+- [ ] 🔴 **Page 1 line 1a equals the REVENUE ACCOUNTS YOU LISTED, added up — compare it to the books,
+      account by account** (§5B-i). **This is the only check on the return that looks at line 1a at
+      all.** ⛔ Without it, refunds subtracted inside 1a with 1b left blank produces a correct 1c, a
+      return that foots, a P&L that agrees — and an understated line 1a that nothing else will ever
+      surface *(§5B-i part 2)*
+- [ ] 🔴 **Page 1 line 1b equals the customer-refunds account**, and that account was **not** also
+      taken off inside 1a
+- [ ] Page 1: **1c equals the P&L's total income**, less anything in the P&L's income section that
+      belongs on **Schedule K** instead (interest, dividends, capital gains). If the client has none
+      of those, they are simply equal.
+      🛑 **DOES NOT APPLY WHEN THE BOOKS' PERIOD IS NOT THE RETURN'S PERIOD** — a terminated election,
+      a mid-year sale, a change of accounting period. **The P&L you hold is the full year and this
+      check will fail by whatever falls outside the return's period.** ⛔ **Do not close that gap by
+      moving anything onto line 1a.** Use **§5B-i part 4's two-step proof** instead, which is this
+      check generalised
 - [ ] Page 1: **1c − 2 = 3** · and 3 equals the P&L's gross profit **only if line 2 equals the
       P&L's cost of sales**. In the periodic case (§4) line 2 comes off the 1125-A instead, so
       compare deliberately rather than assuming
@@ -2046,9 +2060,12 @@ line 1  =  line 8 + line 7 − line 2          ← beginning inventory — a CHE
 ### Form 1120-S, page 1
 
 ```
-line 1a =  the P&L's income block, EACH ACCOUNT AT ITS OWN SIGN — add them up, do not adjust them
-             sales · tips · surcharges charged to the customer · shipping charged   → already positive
-             discounts · package redemptions                                        → already negative
+line 1a =  the P&L's income block, taken so that each account has its PROPER EFFECT
+             sales · tips · surcharges charged to the customer · shipping charged   → INCREASE 1a
+             discounts · package redemptions                                        → REDUCE 1a
+           ⚠️ most P&Ls already print the contra-revenue as a negative, so adding the column at face
+              value is right — CHECK THAT THE TOTAL WENT DOWN. If it prints positive, subtract it.
+              ⛔ Never both: that takes the discount off twice.
 
            EXCLUDE these entirely — ⛔ they are NOT subtractions from 1a, they belong elsewhere:
              customer refunds · rebates · allowances     → line 1b

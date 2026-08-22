@@ -148,7 +148,11 @@ against the exact arithmetic is normal and is not an error.
 > ⚠️ **What line 1a is NOT.** It is not the full-year P&L figure (391,368.88) — that includes **1,313.09**
 > banked after the cut, which belongs to the C short period (§4 decision 3). And it is **not complete**:
 > October carries no cash sales, tips, surcharge or discounts at all, because there is no Vagaro export
-> for Q4 (§6 finding 1), which is sized there at roughly **4,000–12,000** — an estimate, not a measurement. ⚠️ **And it has an offsetting exposure running the other way that is larger:** the tips inside this figure may have no deductible payout behind them (**§6 finding 2**, up to 29,065). **Neither is resolved; do not treat this figure as settled in either direction.**
+> for Q4 (§6 finding 1), which is sized there at roughly **4,000–12,000** — an estimate, not a measurement.
+> ⛔ **The tips exposure is NOT a reason to touch this line.** The 29,064.57 of tips belongs in line 1a
+> and stays there — the company collected it (§5B-i part 3). What may be missing is the **deduction**
+> for paying it on, which moves **line 20 and line 22** (§6 finding 2). ⚠️ **The two open items pull
+> ordinary income in opposite directions, and neither one is fixed on line 1a.**
 
 ### 3.3 · Page 1 — deductions (lines 7–22)
 
@@ -388,7 +392,8 @@ splits the year.
 ## 6 · Open at filing
 
 1. 🔴 **October revenue is understated, and October is entirely inside this period.** January–September revenue was built from quarterly **Vagaro** true-ups; **there is no Vagaro export for Q4**, so October carries only what reached the bank — **no cash sales, no tips, no card-surcharge income, no discounts**. The expenses for October are complete, because they are bank-fed. 🛠️ **Fix:** get the Vagaro **Sales Summary and In-House Product Sales Summary for 1–29 October 2025** from the client (or from the buyer, who now holds the account), and rebuild October the way Q1–Q3 were built. **What it moves:** line 1a up, line 22 up, both K-1s up, and the AAA cap in §3.8.
-   🔑 **Corroborated 2026-08-22 by the payout ratio, which is a one-division test** *(now written into [SOP §5B-i part 5](../../sops/form-1120s-preparation.md))*: contract labour divided by revenue runs **56.1% · 67.6% · 66.6%** in the three trued-up quarters and **76.7% in October**. October did not become less profitable — its costs are complete and its revenue is not.
+   🔑 **Supported 2026-08-22 by the payout ratio, a one-division test** *(now written into [SOP §5B-i part 5](../../sops/form-1120s-preparation.md))*: contract labour divided by revenue runs **56.1% · 67.6% · 66.6%** in the three trued-up quarters and **76.7% in October** — above every one of them, in the direction the missing-revenue theory predicts.
+   ⚠️ **Read it as an INDICATOR, not a measurement, and note its three weaknesses**, which are the ones that SOP section names: it compares **one month against quarterly averages**, which is not like-for-like; the **step (9.1 points) is smaller than the quarters' own spread (11.5)**, so the size of the jump proves nothing; and a passing ratio would have proved nothing either. 🔑 **It corroborates a theory that already had a documented cause — there is no Q4 Vagaro export — and it would not have been enough to raise that theory on its own.**
    📏 **Size of the gap, as an ESTIMATE and labelled as one:** the cash proportion of revenue ran between **8% and 26%** across the three quarters, so October's missing cash is roughly **2,000–8,400**; add missing tips of roughly **3,000–3,700** and surcharge of **800–1,100**, less missing discounts of roughly **700–1,600**. **Range: about 4,000 to 12,000.** ⛔ **Do not put an estimate on the return** — it is here to show the size of what is unresolved.
 2. 🔴 **Tips are income here, and the offsetting payout has never been located.** The 29,065 of tips is
    in line 1a because the company collected it. If the money was passed to the workers, that payout must
@@ -479,7 +484,16 @@ splits the year.
 
 ### 8D · Before the other return is started
 
-- **This return is FILED and ACCEPTED** — a K-1 from an unfiled return can still move, and on this one **four** separate open items would move it: **§6 finding 1** (October revenue), **§6 finding 2** (the tips payout — the largest of them), and **§4 decisions 4 and 8**.
+- **This return is FILED and ACCEPTED** — a K-1 from an unfiled return can still move, and on this one **six** separate open items would move one:
+
+  | | What is open | Which K-1 figure it moves |
+  |---|---|---|
+  | **§6 finding 1** | October revenue is understated | box 1 |
+  | **§6 finding 2** | the tips payout may not be deducted — **the largest** | box 1 |
+  | **§6 finding 10** | the pooled `Draw` split 50/50 between the two shareholders | **box 16D**, and each shareholder's Form 7203 |
+  | **§4 decision 3** | the post-cut receipts, if Lilian prefers the accrual reading | box 1 |
+  | **§4 decision 4** | the meals treatment — 0% / 50% / 100% | box 1 **and** box 16C |
+  | **§4 decision 8** | the undeposited cash, if it was really distributed | **box 16D** |
 - **§6 items 1, 2 and 3 are closed** — the October revenue, the tips payout, and the buyer's US-person status. ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
 
 ---
