@@ -556,7 +556,7 @@ Total for Income             216,000    ✅ THIS is the block line 1a is built f
 
 - **Copy the subtotal** → **200,000**, which misses the surcharge and the tips entirely (20,000) and
   has *not* been reduced by the discount (4,000). **Understated by 16,000.**
-- **Copy the subtotal and then subtract the discount** → **196,000**. ✅ **The discount subtraction
+- **Copy the subtotal and then reduce it by the 4,000 discount** → **196,000**. ✅ **The discount subtraction
   itself is right** — the discount really is outside that subtotal, so taking it off is the one
   correct step. **The answer is still 20,000 short**, because the surcharge and the tips were never
   in the subtotal either. `196,000 + 5,000 + 15,000 = 216,000`.
@@ -566,8 +566,8 @@ Total for Income             216,000    ✅ THIS is the block line 1a is built f
 turns it into line 1a.
 
 🛑 **So: never copy a subtotal. List the accounts and add them yourself.**
-⚠️ **Line 1a equals `Total for Income` only when there are no refunds and nothing belonging on
-Schedule K** — which is true of this illustration and of many small service clients, and false the
+⚠️ **Line 1a equals `Total for Income` only when there are no refunds, nothing belonging on
+Schedule K, and nothing belonging on page 1 lines 4 or 5** — which is true of this illustration and of many small service clients, and false the
 moment a bank-interest or customer-refund account appears. **The general proof is part 4 step 2; this
 shortcut is the special case of it.**
 
@@ -585,7 +585,7 @@ shortcut is the special case of it.**
 
 | What the preparer does | line 1a | line 1c | Caught? |
 |---|---|---|---|
-| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **Schedule B question 11 is measured on it** — the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **Only ONE check catches it, and it exists because of this.** §14's check on these lines is **internal** — `1a − 1b = 1c` — and it passes identically whether or not the refunds were taken out of 1a, because both sides move together; every other tie-out runs off **1c or below**. **So §14 now carries a check that compares line 1a to the books account by account** *(and line 1b to the refunds account)*. ⛔ **Skip that one and the return foots, the P&L agrees, and line 1a is understated with nothing to surface it.** ✅ **The Schedule B question that asks whether receipts AND assets were both under $250,000 is measured on it** *(question 11 on the 2025 form — ⚠️ find it by its wording, §6)*: the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
 | Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
 
 🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
@@ -1825,8 +1825,9 @@ rounding difference.
 - [ ] 🔴 **Page 1 line 1b equals the customer-refunds account**, and that account was **not** also
       taken off inside 1a
 - [ ] Page 1: **1c equals the P&L's total income**, less anything in the P&L's income section that
-      belongs on **Schedule K** instead (interest, dividends, capital gains). If the client has none
-      of those, they are simply equal.
+      belongs on **Schedule K** instead (portfolio interest, dividends, capital gains) **or on page 1
+      lines 4 and 5** (gains on business property, other trade-or-business income). If the client has
+      none of those, they are simply equal.
       🛑 **DOES NOT APPLY WHEN THE BOOKS' PERIOD IS NOT THE RETURN'S PERIOD** — a terminated election,
       a mid-year sale, a change of accounting period. **The P&L you hold is the full year and this
       check will fail by whatever falls outside the return's period.** ⛔ **Do not close that gap by

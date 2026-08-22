@@ -393,7 +393,12 @@ splits the year.
 
 1. 🔴 **October revenue is understated, and October is entirely inside this period.** January–September revenue was built from quarterly **Vagaro** true-ups; **there is no Vagaro export for Q4**, so October carries only what reached the bank — **no cash sales, no tips, no card-surcharge income, no discounts**. The expenses for October are complete, because they are bank-fed. 🛠️ **Fix:** get the Vagaro **Sales Summary and In-House Product Sales Summary for 1–29 October 2025** from the client (or from the buyer, who now holds the account), and rebuild October the way Q1–Q3 were built. **What it moves:** line 1a up, line 22 up, both K-1s up, and the AAA cap in §3.8.
    🔑 **Supported 2026-08-22 by the payout ratio, a one-division test** *(now written into [SOP §5B-i part 5](../../sops/form-1120s-preparation.md))*: contract labour divided by revenue runs **56.1% · 67.6% · 66.6%** in the three trued-up quarters and **76.7% in October** — above every one of them, in the direction the missing-revenue theory predicts.
-   ⚠️ **Read it as an INDICATOR, not a measurement, and note its three weaknesses**, which are the ones that SOP section names: it compares **one month against quarterly averages**, which is not like-for-like; the **step (9.1 points) is smaller than the quarters' own spread (11.5)**, so the size of the jump proves nothing; and a passing ratio would have proved nothing either. 🔑 **It corroborates a theory that already had a documented cause — there is no Q4 Vagaro export — and it would not have been enough to raise that theory on its own.**
+   ⚠️ **Read it as an INDICATOR, not a measurement, and note its three weaknesses**, which are the ones that SOP section names: it compares **one month against quarterly averages**, which is not like-for-like; the **step (9.1 points) is smaller than the quarters' own spread (11.5)**, so the size of the jump proves nothing; and a passing ratio would have proved nothing either.
+   🛑 **AND THE GATE THE SOP MAKES MANDATORY MAY NOT PASS ON THIS CLIENT.** The ratio only has a
+   direction if the tail's **costs** are complete. **Finding 2 hypothesises exactly the opposite** —
+   tips handed to workers in cash, off the bank feed. If that is what happened, October's costs are
+   incomplete too and **this ratio is not a test at all here.** ⛔ **Do not present it as evidence
+   until finding 2 is answered.** 🔑 **It corroborates a theory that already had a documented cause — there is no Q4 Vagaro export — and it would not have been enough to raise that theory on its own.**
    📏 **Size of the gap, as an ESTIMATE and labelled as one:** the cash proportion of revenue ran between **8% and 26%** across the three quarters, so October's missing cash is roughly **2,000–8,400**; add missing tips of roughly **3,000–3,700** and surcharge of **800–1,100**, less missing discounts of roughly **700–1,600**. **Range: about 4,000 to 12,000.** ⛔ **Do not put an estimate on the return** — it is here to show the size of what is unresolved.
 2. 🔴 **Tips are income here, and the offsetting payout has never been located.** The 29,065 of tips is
    in line 1a because the company collected it. If the money was passed to the workers, that payout must
@@ -402,6 +407,11 @@ splits the year.
    🛠️ **Fix:** ask Maria whether the worker payments include tips. **What it moves:** if the payout is
    genuinely absent, ordinary income is **overstated by up to the whole 29,065** — the largest single
    uncertainty on this return, and it runs in the opposite direction to finding 1.
+   ⚠️ **And it does not stop at line 22.** Deducting the 29,065 takes ordinary income to **22,385**,
+   which takes **M-2 line 6 to (5,665)** — so line 7 is capped at **0** instead of 23,400, and the
+   **distributions in excess of the AAA jump from 19,117 to the whole 42,517**. That is the figure
+   §8B hands to both Forms 7203, where it is tested against each shareholder's own basis. **One
+   unanswered question moves the AAA, the K-1s and both 1040s.**
    🔴 **AND RESOLVE IT TOGETHER WITH §4 DECISION 8, NOT SEPARATELY.** The undeposited `Cash Sales`
    asset is **29,901** and these tips are **29,064.57** — within 836 of each other. They are built from
    different things (the tips are three Vagaro true-up entries; the cash asset is three quarter-end
@@ -494,7 +504,11 @@ splits the year.
   | **§4 decision 3** | the post-cut receipts, if Lilian prefers the accrual reading | box 1 |
   | **§4 decision 4** | the meals treatment — 0% / 50% / 100% | box 1 **and** box 16C |
   | **§4 decision 8** | the undeposited cash, if it was really distributed | **box 16D** |
-- **§6 items 1, 2, 3 and 10 are closed** — the October revenue, the tips payout, the buyer's US-person status, **and the pooled `Draw` split**, which the table above names as moving box 16D and each shareholder's Form 7203. ⛔ **Starting a 1040 on a guessed 16D is the one thing this gate exists to stop.** ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
+  | **§4 decision 9** | the owner ATM deposits — loan or contribution | **item I** *(loans from shareholder)*, and Form 7203 |
+  | **§6 finding 3** | the buyer's US-person status | 🔴 **all of it** — a different return shape entirely |
+  | **§6 finding 5** | no fixed assets were ever capitalised | box 1, and **Statement A's UBIA** |
+  | **§6 finding 12** | the related-party payments, if any are really distributions | box 1 **and** box 16D |
+- **Every row of the table above is closed** — not a subset of them. Each one moves a figure the 1040 copies straight off the K-1. ⛔ **Starting a 1040 on a guessed 16D is the one thing this gate exists to stop.** ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
 
 ---
 
