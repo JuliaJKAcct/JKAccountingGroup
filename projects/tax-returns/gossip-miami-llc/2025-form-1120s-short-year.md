@@ -129,17 +129,17 @@ against the exact arithmetic is normal and is not an error.
 | **H(1)** Final return | 🛑 **DO NOT CHECK** | Verified against the 2025 instructions, quoted: *"If this is the corporation's final return and **it will no longer exist**, check the 'Final return' box."* **This company continues to exist** under the buyer | ✅ |
 | **H(5)** S election termination | ✅ **CHECK IT** | Same instruction: *"If the corporation has terminated its S election, check the 'S election termination' box."* This is the box that describes this return | ✅ typed |
 | **H(2) (3) (4)** | unchecked | No name change, no address change, not an amendment | ✅ |
-| **I** Number of shareholders during any part of the tax year | **2** | The two selling members, per the **filed 2024 K-1s** (50 shares each, neither marked Final). ⚠️ **The buyer is NOT counted** — he became a shareholder on 30 October, *after* this short period ended. 🔴 **And a contradiction that has to be seen by whoever signs:** the 2025 sale agreement names a **third** person among the sellers/members — someone the 2024 return shows ceased to be an owner in 2024. **The filed return governs and the answer is 2**, but the disagreement is real and is §6 finding 12 | ✅ typed |
+| **I** Number of shareholders during any part of the tax year | **2** | The two selling members, per the **filed 2024 K-1s** (50 shares each, neither marked Final). ⚠️ **The buyer is NOT counted** — he became a shareholder on 30 October, *after* this short period ended. 🔴 **And a contradiction that has to be seen by whoever signs:** the 2025 sale agreement names a **third** person among the sellers/members — someone the 2024 return shows ceased to be an owner in 2024. **The filed return governs and the answer is 2**, but the disagreement is real and is §6 finding 13 | ✅ typed |
 | **J(1) (2)** | unchecked | No §465 aggregation, no §469 grouping — reproduces 2024 | ✅ |
 
 ### 3.2 · Page 1 — income (lines 1a–6)
 
 | Line | Concept | Value | Where it came from | 🛠️ Where it is ENTERED |
 |---|---|---|---|---|
-| **1a** | Gross receipts or sales | **390,056** | ƒ `Sales 362,042.48 + card-surcharge income 8,659.84 + Tips 29,064.57 − discounts 9,711.10 = 390,055.79`. ⚠️ **Discounts go INSIDE 1a, not on 1b** — 1b is returns and allowances, and the 2024 return also left it empty | ✅ typed |
+| **1a** | Gross receipts or sales | **390,056** | ƒ `Sales 362,042.48 + card-surcharge income 8,659.84 + Tips 29,064.57 − discounts 9,711.10 = 390,055.79`. 🔴 **The tips are in here and their payout has not been located — §6 finding 2.** ⚠️ **Discounts go INSIDE 1a, not on 1b** — 1b is returns and allowances, and the 2024 return also left it empty | ✅ typed |
 | **1b** | Less returns and allowances | **0** | 📖 There is no refunds-to-customers account. Reproduces 2024 | ✅ (leave blank) |
 | **1c** | Balance | **390,056** | ƒ `= 1a − 1b` | **computed — do not type** |
-| **2** | Cost of goods sold | **0** | 📖 No Form 1125-A. The salon is a service business; the small product cost is **already netted inside revenue** by the Vagaro entries (*"In-House Product Sales net of business cost"*). Reproduces the 2024 convention exactly — 2024 also showed no COGS. ⚠️ **§6 finding 10** — a presentation to raise, not to change unilaterally | ✅ (leave blank) |
+| **2** | Cost of goods sold | **0** | 📖 No Form 1125-A. The salon is a service business; the small product cost is **already netted inside revenue** by the Vagaro entries (*"In-House Product Sales net of business cost"*). Reproduces the 2024 convention exactly — 2024 also showed no COGS. ⚠️ **§6 finding 11** — a presentation to raise, not to change unilaterally | ✅ (leave blank) |
 | **3** | Gross profit | **390,056** | ƒ `= 1c − 2` | **computed — do not type** |
 | **4** | Net gain (loss), Form 4797 | **0** | 🔴 **Deliberately blank, and this is the line everyone expects to carry the sale.** It does not. The members sold their **membership interests**; the company sold nothing, so there is no asset disposition on this return | ✅ (leave blank) |
 | **5** | Other income (loss) | **0** | 📖 No interest, no dividends, no other trade-or-business income in the ledger | ✅ (leave blank) |
@@ -154,14 +154,14 @@ against the exact arithmetic is normal and is not an error.
 
 | Line | Concept | Value | Where it came from | 🛠️ Where it is ENTERED |
 |---|---|---|---|---|
-| **7** | Compensation of officers | **0** | 📖 **No payroll was run in 2025** — no wage accounts, no payroll-tax accounts, no W-2s. Reproduces 2024. ⚠️ See §6 finding 5 (reasonable compensation) | ✅ (leave blank) |
+| **7** | Compensation of officers | **0** | 📖 **No payroll was run in 2025** — no wage accounts, no payroll-tax accounts, no W-2s. Reproduces 2024. ⚠️ See §6 finding 6 (reasonable compensation) | ✅ (leave blank) |
 | **8** | Salaries and wages | **0** | 📖 Same. ⚠️ **`Contractors` is NOT wages** — it is contract labour and belongs on line 20 | ✅ (leave blank) |
 | **9** | Repairs and maintenance | **0** | 📖 No such account | ✅ |
 | **10** | Bad debts | **0** | 📖 No receivables | ✅ |
 | **11** | **Rents** | **51,202** | ƒ `Rent account 56,838.00 − the 5,636.00 accrued and never paid = 51,202.00`. 📖 Nine monthly payments actually left the bank (February's was accrued, not paid). **Cash method — §4 decision 2** | ✅ typed |
 | **12** | Taxes and licenses | **1,168** | 📖 `License and permits` 1,168.40 — the municipal permit renewals. ⚠️ **No sales tax here**: the company uses the net method, so tax collected never touched the P&L | ✅ typed |
 | **13** | Interest | **0** | 📖 No loan or card interest was charged to expense | ✅ |
-| **14** | Depreciation | **0** | 📖 **No fixed assets exist on the books, and none were on the 2024 return.** ⚠️ §6 finding 4 — the 2024 purchase schedule listed salon equipment, and none of it was ever capitalised | ✅ (leave blank) |
+| **14** | Depreciation | **0** | 📖 **No fixed assets exist on the books, and none were on the 2024 return.** ⚠️ §6 finding 5 — the 2024 purchase schedule listed salon equipment, and none of it was ever capitalised | ✅ (leave blank) |
 | **15** | Depletion | **0** | Not applicable | ✅ |
 | **16** | **Advertising** | **3,630** | 📖 `Advertising` 3,630.16. ⚠️ **Has its own line — do not leave it inside other deductions** | ✅ typed |
 | **17** | Pension, profit-sharing | **0** | 📖 None | ✅ |
@@ -189,7 +189,7 @@ against the exact arithmetic is normal and is not an error.
 
 | Description | Amount |
 |---|---|
-| Independent contractor ⚠️ *(includes payments to a company owned by a shareholder's husband — §6 finding 11)* | 248,630 |
+| Independent contractor ⚠️ *(a related party is inside it — §6 finding 12; and this is where the TIPS PAYOUT would sit if it was made at all — §6 finding 2)* | 248,630 |
 | Supplies and materials | 20,097 |
 | Bank charges | 3,206 |
 | Utilities | 2,834 |
@@ -266,7 +266,7 @@ against the exact arithmetic is normal and is not an error.
 > sound. (2) The opening column balances at 987 on its own.
 > 🔴 **But the opening column does not tie to the tax history, and cannot.** 2024 filed **no** Schedule L, and
 > its AAA closed at **(26,783)** while the books open at **+987** — a gap of **27,770** that is a bookkeeping
-> plug, not a transaction. **State it; do not force either side to the other.** §6 finding 3.
+> plug, not a transaction. **State it; do not force either side to the other.** §6 finding 4.
 
 ### 3.7 · Schedule M-1 — book income → return income
 
@@ -305,7 +305,7 @@ against the exact arithmetic is normal and is not an error.
 > ([1120-S SOP §5C-v](../../sops/form-1120s-preparation.md)): gate 1 requires contributions to **exceed**
 > distributions, and here contributions are 2,021.45 against distributions of 42,516.65. **Gate 1 fails →
 > both halves are reported GROSS.** ⚠️ **A caveat on how gate 1 was tested:** the SOP applies it *per shareholder*,
-> and the books hold only pooled totals (§6 finding 9), so it was tested entity-wide. **The conclusion is safe
+> and the books hold only pooled totals (§6 finding 10), so it was tested entity-wide. **The conclusion is safe
 > anyway, because gate 3 fails independently** — the AAA before distributions is smaller than the distributions,
 > exactly the case the SOP warns is *not* neutral. **No per-shareholder split could rescue netting here.**
 
@@ -332,7 +332,7 @@ splits the year.
 | **Box 1** Ordinary business income | **25,725** | **25,725** | ƒ 50% of 51,450 → their **Schedule E, Part II**, line 28 — *not* Schedule C, and not subject to self-employment tax |
 | **Boxes 2–15** | blank | blank | Blank because the entity has no such items — see Schedule K |
 | **Box 16 code C** Nondeductible expenses | **633** | **634** | ƒ 50% of 1,267 (the odd dollar to either; the two must sum to Schedule K). 🔑 **Reduces stock basis on Form 7203 and is deducted nowhere** |
-| **Box 16 code D** Distributions | **21,258** | **21,259** | ƒ 50% of 42,517. 🔴 **This 50/50 split is an ASSUMPTION, not a reading.** The books carry **one pooled `Draw` account** with no per-shareholder detail, and [SOP §5C-iii](../../sops/form-1120s-preparation.md) says a shareholder-level question is never answered from a pooled figure. **§6 finding 9 — ask for the split before filing**; the same paper refuses to assume it for the shareholder loans (item I) and for basis (§8B), and it should not assume it here either. 🛠️ On the 1040 side it is typed on the **K-1 input screen at box 16 code D**, never on Form 7203 itself |
+| **Box 16 code D** Distributions | **21,258** | **21,259** | ƒ 50% of 42,517. 🔴 **This 50/50 split is an ASSUMPTION, not a reading.** The books carry **one pooled `Draw` account** with no per-shareholder detail, and [SOP §5C-iii](../../sops/form-1120s-preparation.md) says a shareholder-level question is never answered from a pooled figure. **§6 finding 10 — ask for the split before filing**; the same paper refuses to assume it for the shareholder loans (item I) and for basis (§8B), and it should not assume it here either. 🛠️ On the 1040 side it is typed on the **K-1 input screen at box 16 code D**, never on Form 7203 itself |
 | **Box 17 code AC** Gross receipts for §448(c) | **195,028** | **195,028** | ƒ 50% of 390,056. 🔒 Exactly the 2024 convention (that year: 108,672 each of 217,344) |
 | **Box 17 code V** §199A information | **STMT** | **STMT** | Points to Statement A below |
 | **Boxes 18 / 19** more than one activity | unchecked | unchecked | One activity |
@@ -343,7 +343,7 @@ splits the year.
 |---|---|---|
 | Ordinary business income (loss) | **25,725** each | |
 | W-2 wages | **0** | 🔴 **Load-bearing.** Zero wages means the shareholder's §199A deduction is capped by the wage limitation once their taxable income passes the threshold — **their** return, but caused by **this** entity |
-| UBIA of qualified property | **0** | No fixed assets on the books (§6 finding 4) |
+| UBIA of qualified property | **0** | No fixed assets on the books (§6 finding 5) |
 | SSTB? | **No** | 🔒 The 2024 return answered No. A beauty salon is not a specified service trade or business |
 
 ---
@@ -357,7 +357,7 @@ splits the year.
 | **3** | The receipts banked after the cut (1,313.09) | **They belong to the C short period — excluded here** | 🔑 **Lilian's reading — that they were services performed before the sale and merely collected later — is the ACCRUAL answer, and it is sound reasoning.** On the **cash** method the year they fall in is the year the money arrived. Including them: line 1a → 391,369, **line 22 → 52,763**. ⚠️ **The count in the outgoing email does not match the ledger: the email says THREE, the ledger holds FIVE receipts on THREE DATES** — two on 31 Oct, two on 20 Nov, one on 4 Dec. Dates were probably counted rather than transactions, **but that is our inference and nobody has confirmed it**, so **re-ask naming all five with their dates and amounts** instead of assuming the client knew which we meant. On the merits the **31 Oct pair are card settlements two days after the cut and are the likeliest to be pre-sale services**; 20 Nov and 4 Dec are harder to call | Session, from decision 2 · **Lilian to overrule if she prefers accrual** |
 | **4** | Meals and entertainment (2,533.44) | **50% deductible under §274(n)** — 1,267 deducted, 1,267 to K 16c | **(a)** Treat as entertainment / personal → **0% deductible**, line 22 → 52,717 and K 16c → 2,533. **(b)** Argue the coffee-bar consumables are *food made available to the general public* → **100%**, line 22 → 50,183 and K 16c → 0. ⚠️ **And a fact that pushes toward (a):** the November–December charges on this card (DoorDash, cafés, a liquor store) are **after the sale**, on a card the client told us became personal — those are not company expenses at all. They fall in the C period, so they do not touch this return, but they colour how the whole account should be read | Session default · **Julia to rule** |
 | **5** | Distributions — presentation | **GROSS: K 16d = 42,517, M-2 line 7 capped at 23,400** | The firm's netting policy was **tested and fails gate 1** (contributions 2,021 < distributions 42,517). Netting was never available here | [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) · 2026-08-21 |
-| **6** | ⚠️ **Which date the Schedule L end column carries** | 🔵 **31 December** — *the instruction's default, and the only reading a source we could actually read supports* | The instruction verified today: *"the year-end balance sheet should generally agree with the books and records at the end of the **C short year**. However, if the corporation elected under section 1362(e)(3) … the year-end balance sheet should agree with the books and records at the end of the **S short year**."* 🔑 **Our cut is forced by the sale, not made by an (e)(3) election, so the exception's literal words do not reach it** — which is why the default is taken. **The alternative is the 29 October column**, computed in full in §3.6; it changes item F to 35,522 and line 24 to 5,039. ⚠️ **It is the more intuitive presentation and may well be the right one** — it turns on the §1362(e) question in §9 that the network blocked | 🔵 **Chosen on the verified instruction; revisit when §1362(e) can be read** (§6 finding 6) |
+| **6** | ⚠️ **Which date the Schedule L end column carries** | 🔵 **31 December** — *the instruction's default, and the only reading a source we could actually read supports* | The instruction verified today: *"the year-end balance sheet should generally agree with the books and records at the end of the **C short year**. However, if the corporation elected under section 1362(e)(3) … the year-end balance sheet should agree with the books and records at the end of the **S short year**."* 🔑 **Our cut is forced by the sale, not made by an (e)(3) election, so the exception's literal words do not reach it** — which is why the default is taken. **The alternative is the 29 October column**, computed in full in §3.6; it changes item F to 35,522 and line 24 to 5,039. ⚠️ **It is the more intuitive presentation and may well be the right one** — it turns on the §1362(e) question in §9 that the network blocked | 🔵 **Chosen on the verified instruction; revisit when §1362(e) can be read** (§6 finding 7) |
 | **7** | Schedule B question 14b (were the 1099s filed?) | 🛑 **Not answered in this working paper** | The truthful answer today is **No** — none were filed and the firm was not engaged to file them. Answering **Yes** would be a false statement on a signed return. The alternative is to **file them late before the return goes out**, which makes Yes true and starts a separate piece of work | 🔴 **Julia — scope and answer** |
 | **8** | The 29,901 of undeposited cash sales | **Left as an asset, per the books** | If, as the sale covenant suggests (all company accounts emptied before closing), the owners kept that cash, it is really a **distribution**: assets → 5,621, distributions → 72,418, and the M-2 cap bites far harder. **Nobody has asked the client** | 🟡 open — asked below |
 | **9** | The 24,440 of owner ATM deposits | **Left as `Loans from shareholders`, per the books** | The client asked (2026-08-11) that owner deposits be treated as **contributions**. As contributions: Schedule L line 19 → 0, contributions → 26,461 — and the netting policy's gate 1 **still fails**. ⚠️ There is also a real chance these are the **same cash** the owners took out (a round trip, [SOP §5C-iv](../../sops/form-1120s-preparation.md)) | 🟡 open — **Julia/Lilian + the client** |
@@ -390,45 +390,45 @@ splits the year.
 1. 🔴 **October revenue is understated, and October is entirely inside this period.** January–September revenue was built from quarterly **Vagaro** true-ups; **there is no Vagaro export for Q4**, so October carries only what reached the bank — **no cash sales, no tips, no card-surcharge income, no discounts**. The expenses for October are complete, because they are bank-fed. 🛠️ **Fix:** get the Vagaro **Sales Summary and In-House Product Sales Summary for 1–29 October 2025** from the client (or from the buyer, who now holds the account), and rebuild October the way Q1–Q3 were built. **What it moves:** line 1a up, line 22 up, both K-1s up, and the AAA cap in §3.8.
    🔑 **Corroborated 2026-08-22 by the payout ratio, which is a one-division test** *(now written into [SOP §5B-i part 5](../../sops/form-1120s-preparation.md))*: contract labour divided by revenue runs **56.1% · 67.6% · 66.6%** in the three trued-up quarters and **76.7% in October**. October did not become less profitable — its costs are complete and its revenue is not.
    📏 **Size of the gap, as an ESTIMATE and labelled as one:** the cash proportion of revenue ran between **8% and 26%** across the three quarters, so October's missing cash is roughly **2,000–8,400**; add missing tips of roughly **3,000–3,700** and surcharge of **800–1,100**, less missing discounts of roughly **700–1,600**. **Range: about 4,000 to 12,000.** ⛔ **Do not put an estimate on the return** — it is here to show the size of what is unresolved.
-1b. 🔴 **Tips are income here, and the offsetting payout has never been located.** The 29,065 of tips is
+2. 🔴 **Tips are income here, and the offsetting payout has never been located.** The 29,065 of tips is
    in line 1a because the company collected it. If the money was passed to the workers, that payout must
    be deducted somewhere — and `Contractors` **contains no journal entries at all** (133 checks and 114
    bank payments), so the payout is either inside those bank payments or it is not in the books.
    🛠️ **Fix:** ask Maria whether the worker payments include tips. **What it moves:** if the payout is
    genuinely absent, ordinary income is **overstated by up to the whole 29,065** — the largest single
    uncertainty on this return, and it runs in the opposite direction to finding 1.
-2. 🔴 **The buyer's US-person status** — decision 1. Everything rests on it.
-3. 🟠 **The opening equity does not tie to the tax history** — books open at +987, the 2024 AAA closed at (26,783), a 27,770 gap that is a plug. It does not stop the return (Schedule L is "per books" and the AAA is carried from the filed return), but a reviewer will ask, and the answer is in tie-out 10.
-4. 🟠 **No fixed assets, ever.** The 2024 purchase agreement's schedule listed salon equipment; none of it is on the books or on the 2024 return, so depreciation is 0 and UBIA for §199A is 0. **Raise with Julia** — do not capitalise anything unilaterally on a short-period return.
-5. 🟡 **Reasonable compensation.** An income year with the owners drawing money and **no payroll at all**. Mitigating: they sold in October and the salon runs on contractors. The position has to be **written down** whether or not anything changes.
-6. 🟠 **Which date Schedule L ends on.** Taken as **31 December**, because that is what the instruction we could read prescribes by default (decision 6). 🛠️ **Fix:** read §1362(e) and Reg. §1.1362-3 on a machine the network does not block; if a forced closing of the books is treated like an (e)(3) election, **flip to the 29 October column** — both are computed in §3.6, and the change moves item F, Schedule L and tie-outs 3 and 4, and nothing else.
-7. 🟡 **Who engages and who signs.** An officer of the corporation signs, and after 30 October the only member is the buyer, who is not our client. The 2025 engagement letter was signed by the sellers in March, before any of this was known.
-8. 🟡 **Florida.** Not researched today. The S short period is unlikely to need an F-1120; the **C short period will**, and that is the buyer's. **Verify before telling anyone there is no state filing.**
-9. 🔴 **The distributions are split 50/50 off ONE pooled `Draw` account.** No per-shareholder ledger exists.
+3. 🔴 **The buyer's US-person status** — decision 1. Everything rests on it.
+4. 🟠 **The opening equity does not tie to the tax history** — books open at +987, the 2024 AAA closed at (26,783), a 27,770 gap that is a plug. It does not stop the return (Schedule L is "per books" and the AAA is carried from the filed return), but a reviewer will ask, and the answer is in tie-out 10.
+5. 🟠 **No fixed assets, ever.** The 2024 purchase agreement's schedule listed salon equipment; none of it is on the books or on the 2024 return, so depreciation is 0 and UBIA for §199A is 0. **Raise with Julia** — do not capitalise anything unilaterally on a short-period return.
+6. 🟡 **Reasonable compensation.** An income year with the owners drawing money and **no payroll at all**. Mitigating: they sold in October and the salon runs on contractors. The position has to be **written down** whether or not anything changes.
+7. 🟠 **Which date Schedule L ends on.** Taken as **31 December**, because that is what the instruction we could read prescribes by default (decision 6). 🛠️ **Fix:** read §1362(e) and Reg. §1.1362-3 on a machine the network does not block; if a forced closing of the books is treated like an (e)(3) election, **flip to the 29 October column** — both are computed in §3.6, and the change moves item F, Schedule L and tie-outs 3 and 4, and nothing else.
+8. 🟡 **Who engages and who signs.** An officer of the corporation signs, and after 30 October the only member is the buyer, who is not our client. The 2025 engagement letter was signed by the sellers in March, before any of this was known.
+9. 🟡 **Florida.** Not researched today. The S short period is unlikely to need an F-1120; the **C short period will**, and that is the buyer's. **Verify before telling anyone there is no state filing.**
+10. 🔴 **The distributions are split 50/50 off ONE pooled `Draw` account.** No per-shareholder ledger exists.
    🛠️ **Fix:** ask Maria (or the client) which withdrawals belonged to which member. **What it moves:** K-1
    box 16D on both K-1s, and therefore each shareholder's Form 7203 and any capital gain under the line-6
    Note. **If the split cannot be established, say so on the return rather than presenting a guess as a
    reading.** The same gap covers the **24,440 of shareholder loans**, which Schedule L reports in total and
    K-1 item I has to report per shareholder.
-10. 🟡 **No Form 1125-A, and the product cost is netted inside revenue.** The Vagaro entries book product
+11. 🟡 **No Form 1125-A, and the product cost is netted inside revenue.** The Vagaro entries book product
    sales *"net of business cost"*, so cost of goods sold never appears. It reproduces 2024 exactly and the
    amounts are small, but it is a presentation the firm should decide on deliberately rather than inherit.
    **Raise with Julia; do not change it unilaterally on a short-period return.**
-11. 🟠 **A related party sits inside the Contractors line.** Payments to **Marat Boxing LLC** — the company
+12. 🟠 **A related party sits inside the Contractors line.** Payments to **Marat Boxing LLC** — the company
    owned by one shareholder's husband — are booked as contract labour inside the 248,630. It touches three
-   things at once: **Schedule B 14a/14b** (a 1099 may be owed to it), **finding 5** (money reaching the
+   things at once: **Schedule B 14a/14b** (a 1099 may be owed to it), **finding 6** (money reaching the
    owners' household while no salary was paid), and the possibility that some of it is really a
    **distribution**. **Nobody has asked what the payments were for.**
-12. 🟠 **The sale agreement names a third seller** who the filed 2024 return shows was no longer an owner.
+13. 🟠 **The sale agreement names a third seller** who the filed 2024 return shows was no longer an owner.
    Item I is answered **2** from the filed return, which governs — but whoever signs should know the
    documents disagree.
-13. 🔴 **The opening AAA of (26,783) is taken from a 2024 return whose ACCEPTANCE has never been confirmed.**
+14. 🔴 **The opening AAA of (26,783) is taken from a 2024 return whose ACCEPTANCE has never been confirmed.**
    The 2024 package in Drive is an outside firm's and states it would be e-filed only once a signed
    Form 8879-CORP came back; a signed 8879-CORP dated **7 February 2025** is in the package, but **an IRS transcript
    or e-file acknowledgement has never been obtained**. 🛠️ **Fix:** pull the transcript. **What it moves:**
    if 2024 was never accepted, the opening AAA, the shareholders' basis history and a per-shareholder
    per-month late-filing penalty are all in play — and this return's line 1 of Schedule M-2 rests on it.
-14. ⓘ **Not established, and stated as the bounded search it was:** the sale documents, the ledger, the 2024 return and Julia's mailbox were read. **Lilian's and Maria's mailboxes, Sunbiz's current filings and QuickBooks itself were not.**
+15. ⓘ **Not established, and stated as the bounded search it was:** the sale documents, the ledger, the 2024 return and Julia's mailbox were read. **Lilian's and Maria's mailboxes, Sunbiz's current filings and QuickBooks itself were not.**
 
 ---
 

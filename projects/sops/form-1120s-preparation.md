@@ -510,7 +510,7 @@ is a stop sign and the other is a lead.)_
 
 | Line | What it is | Formula, or where you read it |
 |---|---|---|
-| **1a** | Gross receipts or sales | ƒ **built account by account — see 5B-i, which is the whole method.** The one-line version: `= every trade-or-business revenue account, INCLUDING the ones that look like pass-throughs, MINUS every contra-revenue account`. ⛔ **Never read a P&L subtotal** |
+| **1a** | Gross receipts or sales | ƒ **built account by account — see 5B-i, which is the whole method.** The one-line version: `= every trade-or-business revenue account, INCLUDING the ones that look like pass-throughs, MINUS discounts and other contra-revenue`. ⛔ **Customer refunds are NOT subtracted here — they are line 1b**, or 1c deducts them twice. ⛔ **Never read a P&L subtotal** |
 | **1b** | Returns and allowances | 📖 read · the refunds-to-customers account |
 | **1c** | Balance | ƒ `= 1a − 1b` · ✅ equals the P&L's total income **less anything in it that belongs on Schedule K** (interest, dividends, capital gains) |
 | **2** | Cost of goods sold | 📖 Form 1125-A line 8 |
@@ -543,11 +543,19 @@ Income
     Discount                  (4,000)   ← same level as Sales, OUTSIDE "Total for Sales"
     Sales                    200,000
         Cash Sales                 0    ← sub-account, INSIDE "Total for Sales"
-    Total for Sales          200,000    ⛔ reading this as revenue overstates by the 4,000
+    Total for Sales          200,000    ⛔ NOT line 1a — see the two ways it goes wrong below
     Service charge income      5,000    ← outside it too
     Tips                      15,000    ← outside it too
 Total for Income             216,000    ✅ THIS is the block line 1a is built from
 ```
+
+**The subtotal is 200,000. Line 1a is 216,000. Two different mistakes lead there:**
+
+- **Copy the subtotal** → **200,000**, which misses the surcharge and the tips entirely (20,000) and
+  has *not* been reduced by the discount (4,000). **Understated by 16,000.**
+- **Copy the subtotal and then subtract the discount**, on the reasonable assumption that a sales
+  subtotal is gross → **196,000**. **Wrong twice**: the discount comes off a figure it was never in,
+  and the other two accounts are still missing.
 
 🛑 **So: never copy a subtotal. List the accounts and add them yourself**, then prove the total by
 agreeing to `Total for Income`.
@@ -557,7 +565,8 @@ agreeing to `Total for Income`.
 | # | Question | If yes |
 |---|---|---|
 | **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
-| **2** | Is it **contra-revenue** — a discount, an allowance, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION.** ⛔ **Not on line 1b** — 1b is *returns and allowances*, meaning refunds of money to a customer |
+| **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION** |
+| **2b** | Is it a **return, a refund, or an allowance granted after the sale**? | ⛔ **Line 1b, not line 1a.** The form's own caption is *Returns and allowances*. **Subtracting it in both places deducts it twice**, and 1c comes out right while line 1a — the figure §448(c), §163(j) and Schedule B question 11 all measure — comes out understated |
 | **3** | Everything else: is it money the business **took in for its own account**? | ✅ **Inside line 1a** |
 
 #### 3 · ⚠️ The accounts that look like pass-throughs, and are not
@@ -579,16 +588,27 @@ a first year, a final year — needs revenue **as of a day inside the year**, an
 or trial balance can give it. **Only the general ledger can**, because only it carries a date on every
 row.
 
-**So on any short-period return:**
+**So whenever the BOOKS' period is not the RETURN's period:**
+⚠️ **That is the real condition, not "a short period" as such.** Where a first year or a dissolution
+year happens to have books that start and stop with the return, **the P&L is a perfectly good source
+and rebuilding from the ledger is wasted, error-prone work.** The rebuild is for the case where the
+books run past the cut — a terminated election, a mid-year sale, a change of accounting period.
 
 1. **Build line 1a from the GENERAL LEDGER**, summing each revenue account's transactions up to and
    including the last day of the period.
-2. **Then use the P&L to PROVE it**, with this identity:
+2. **Then use the P&L to PROVE it**, with this identity — ⚠️ **and it needs BOTH carve-outs, or it
+   will not close and the SOP will have sent you looking for an account that is not missing:**
    ```
-   the period's figure  +  what falls after the cut  =  the P&L's Total for Income
+   line 1a for the period
+     +  what falls after the cut
+     +  line 1b            (customer refunds — in Total for Income, NOT in 1a)
+     +  the Schedule K items (interest · dividends · capital gains · rents — same)
+     =  the P&L's Total for Income
    ```
-   ⚠️ **If it does not agree to the cent, an account was missed** — most often one whose entries are
-   all quarterly journal entries and therefore easy to overlook.
+   ⚠️ **If it still does not agree to the cent, an account was missed** — most often one whose entries
+   are all quarterly journal entries and therefore easy to overlook.
+   ⛔ **Never close the gap by folding interest or refunds into line 1a.** That is the error §5B's own
+   warning exists to prevent, and this identity is the place a preparer is most tempted to commit it.
 3. 🔑 **Ask which accounts move at all.** Where revenue is trued up **quarterly** from an outside
    system, the true-up accounts are identical in both figures and **only the bank-fed account
    differs.** That is a useful check and a warning at once — see below.
@@ -602,8 +622,20 @@ bank-fed.** So the tail of the year shows **full costs against partial revenue**
 understates income by an amount nobody can see on the face of the P&L.
 
 🛠️ **The detection, and it costs one division:** compute the **payout ratio** *(the main cost of
-sales — contract labour, commissions — divided by revenue)* **for each trued-up quarter and again for
-the untrued-up tail.** A tail ratio well above the trued-up quarters is the signature.
+sales — contract labour, commissions — divided by revenue)* **for each trued-up period and again for
+the untrued-up tail.**
+
+🛑 **The test is whether the tail falls OUTSIDE THE RANGE of the trued-up periods — not whether the
+step looks big.** ⚠️ **Say the range out loud first**, because these ratios move a lot between
+quarters on their own, and a step that impresses you may be smaller than the normal spread.
+_(On the pilot: the trued-up quarters ran **56.1% · 67.6% · 66.6%** — an internal spread of 11.5
+points — and the tail came in at **76.7%**. The step from the nearest quarter is only 10.1 points,
+**smaller than the normal spread**, so the step proves nothing. What does the work is that 76.7% is
+**above every trued-up quarter**, and in the same direction the missing-revenue theory predicts.)_
+
+⚠️ **It is an INDICATOR, not a measurement, and it can be silent.** A tail inside the range does not
+mean the revenue is complete — a low-margin month masks it entirely. **Never treat a passing ratio as
+evidence that the tail is fine**, and never let it replace getting the report.
 ⛔ **Do not "fix" it by estimating the missing revenue** — get the outside system's report for the
 untrued-up period and rebuild it the way the other quarters were built. **If it cannot be obtained,
 say the figure is understated and by roughly how much, rather than presenting it as complete.**
@@ -1879,8 +1911,12 @@ right-hand column is the firm's usual convention, not a rule of the form.
 | QuickBooks account (typical name) | Goes to |
 |---|---|
 | Sales / product income | Page 1, line 1a |
-| Discounts given | Reduces line 1a |
-| Customer refunds / returns | Page 1, line 1b |
+| **Tips** collected through the company's system | Page 1, line 1a — ⚠️ **and find the payout**, §5B-i part 3 |
+| **Card surcharge / "bank fees income"** charged to the customer | Page 1, line 1a — the processor's fee is deducted separately, never netted |
+| **Shipping charged to the customer** | Page 1, line 1a |
+| Discounts given, package redemptions | Reduces line 1a |
+| Customer refunds / returns / **allowances** | Page 1, line 1b — ⛔ **not** a reduction of 1a, or it is deducted twice |
+| Interest, dividends, capital gains, rental income | ⛔ **Schedule K, never line 1a or line 5** (§5B) |
 | Cost of goods sold accounts | Form 1125-A — line **2** (purchases), **3** (labor) or **5** (other costs). ⚠️ **Never "line 8"** — line 8 is computed (6 − 7), so no account feeds it directly |
 | Channel / marketplace selling fees | ⚠️ **Client-specific.** Selling fees are not ordinarily inventoriable, so they usually belong in **other deductions**. One client's prior return puts them in cost of sales — **check §3 before copying either treatment** |
 | Inventory (balance sheet) | 1125-A line 7 — ⚠️ check the subtotal used, §4 |
@@ -1942,7 +1978,11 @@ line 1  =  line 8 + line 7 − line 2          ← beginning inventory — a CHE
 ### Form 1120-S, page 1
 
 ```
-line 1a =  sales revenue − discounts given + shipping income charged
+line 1a =  EVERY trade-or-business revenue account in the P&L's income block
+             (sales · tips · card surcharges charged to the customer · shipping charged)
+           − discounts and other contra-revenue    ⛔ NOT customer refunds — those are line 1b
+           − anything that belongs on Schedule K   (interest · dividends · capital gains · rents)
+                                                    → the method is §5B-i; this is only its shape
 line 1c =  line 1a − line 1b
 line 3  =  line 1c − line 2
 line 6  =  line 3 + line 4 + line 5
