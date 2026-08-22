@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -110,10 +110,13 @@ the actual details.
   client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
-- Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw.
-- Confirm the older **Chase credit card** was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync.
-- Resolve an **invoice-to-deposit mismatch** with a customer and chase a **customer invoice unpaid since January 2026**.
-- **QuickBooks flagged behind** in the July 2026 recurring-expense review — bookkeeping catch-up needed.
+- Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw. Not chased this run (budget; needs QuickBooks transaction-level review).
+- Confirm the older **Chase credit card** was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync. STILL OPEN, pending since before 2026-07-20, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Chase (card OR statement) Aura" found nothing.
+- Resolve an **invoice-to-deposit mismatch** with a customer and chase a **customer invoice unpaid since January 2026**. STILL OPEN, ~7 months pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "invoice unpaid Aura" found nothing.
+- **QuickBooks flagged behind** in the July 2026 recurring-expense review — STILL OPEN, ~5–6 weeks pending, no deadline; possibly the same item Julia's 2026-08-20 recurring-expense check flags for this client (an unspecified "quick item to check" — unconfirmed).
+
+### Log (continued)
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double activity, notes, or Ping meetings found on/after 2026-08-15. ⚠️ **A cross-client routing note:** two documents, "Form 6166_2024" and "Form 6166 Tax 2023" (IRS Certification of U.S. Tax Residency), were uploaded 2026-08-19 by the Aura AP mailbox into a Drive folder titled "Forms 8802" that already holds **Ihor Naum's personal Form 8802 application** — these read as the IRS-issued certificates arriving for Ihor Naum's own Form 8802, not an Aura company fact, so they are recorded in [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) instead, not here. Julia's 2026-08-20 recurring-expense-check email also names Aura as having a "quick item to check" — unspecified. Chase pass: all four outstanding items checked, ages above; Amex/BofA reclassification not chased (budget).
 
 ### Information still needed
 - [ ] Confirm home state (IL inferred); fiscal year-end

@@ -1,11 +1,13 @@
 # Airtouch LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
+> contacts, activity log — 161 entries plus targeted Project/Organizer pulls), Gmail (full
+> history, business name + all owner-linked emails, plus "AIRTOUCH FLORIDA LLC"), Ping
+> (`resolve_person`, `search_contacts`, org-wide/client-scoped `search_meetings`), and Google
+> Drive all checked. Home state is inferred only from the Florida LLC/annual-report context, not
+> independently confirmed; fiscal year-end and primary language remain `_(pending)_`.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -86,7 +88,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** _(pending)_
+- **Provider / frequency:** **Gusto AutoPilot**; payroll notices go to firm staff + one of the two principal contacts _(Gmail, 2026-08-22)_.
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
@@ -124,9 +126,14 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
+- 🔴 **Possible second/related Florida entity, unresolved.** A Florida filing-service vendor has been sending escalating "past due 2026 Annual Report / risk of administrative dissolution" notices to the firm since at least mid-August 2026 for an entity named **"AIRTOUCH FLORIDA LLC"** (Florida Division of Corporations document/EID **L25000085751**), with an earlier "renewal due" notice from March 2026. This document/EID is **different** from a separate, unrelated Florida-filing marketing email for **"AIRTOUCH LLC"** itself (document/EID **L23000016132**), which is current on its own 2027 filing. A 2026-07-30 official Florida Division of Corporations notice ("Intent to Administratively Dissolve or Revoke") addressed to the firm references **2 records**, without naming them. **Reported as found, not resolved**: not established whether "AIRTOUCH FLORIDA LLC" is a second entity belonging to the same owners that the firm should also track, or a differently-owned, similarly-named company whose compliance mail is reaching the firm's inbox by vendor error. _(Gmail, full-historical, 2026-08-22)_
+- A Form 8594 (Asset Acquisition Statement) filed in this client's Drive folder is named for "Airtouch Beauty Bar" — suggests the business may operate, or has acquired the assets of, a beauty-bar/salon business. Inferred from a filename only (Drive contents not opened); flag for confirmation rather than treat as settled.
+- ⚠️ **"Organizer Status" property reads Completed, but a full-historical Organizer-entity activity-log search returned ZERO results** for this client — no create/publish/unpublish/delete trail, unlike CANDRAMAS and AXDIGITAL where that trail is visible. Reported as an unexplained gap, not resolved.
 - Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner).
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
+- Four Double portal contacts: two with full admin/tax/financial/files access (both also linked in Ping to one combined personal-return client record together, consistent with co-owners/business partners); one with financial-access-only (likely a spouse of one of the two, who separately forwarded a business-insurance proposal in June 2026); one with no portal-access flags set, associated by shared surname/email domain with one of the two principal contacts (a marketing-role contact). _(Double + Ping + Gmail, 2026-08-22)_
+- The Double "2025 Taxes" project status is **Filed** (set 2026-05-25) — ahead of CANDRAMAS (In Progress) and AXDIGITAL (reverted to Not Started).
+- Engagement began **May 2024** (signed proposal via the firm's proposal tool) — the longest-standing client of the three researched in this pass. If something about this client seems missing, it probably is.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -135,6 +142,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: 161 activity-log entries reviewed plus targeted Project- and Organizer-entity pulls; 0 notes found. Gmail: full history by business name and all owner-linked emails, plus a targeted "AIRTOUCH FLORIDA LLC" search that surfaced the possible-second-entity finding (§5). Ping: `resolve_person` on both principals, `search_contacts`, org-wide + client-scoped `search_meetings` — zero indexed results, Ping appears to have no meaningfully searchable content for this client at all. Google Drive: `search_files` with `excludeContentSnippets:true` — three folders located (including one from 2024), plus the Form 8594 and a 2025 balance sheet. Findings folded into §5 above. No SOP exists for this client.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -150,17 +158,19 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- 🔴 **Confirm whether "AIRTOUCH FLORIDA LLC" (EID L25000085751) is a second entity of this owner-group or an unrelated company's mail reaching the firm by error** — the escalating dissolution-risk notices need a decision before the risk becomes real.
+- Reconcile the "Organizer Status = Completed" property against the missing Organizer-entity activity-log trail.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
+- [ ] What the business actually does — a Form 8594 filename suggests a beauty-bar/salon acquisition, not confirmed (§5)
+- [ ] Home state — inferred from FL LLC/annual-report context only, not independently confirmed
+- [x] Contacts and their roles — four portal contacts, roles distinguished (§5)
 - [ ] Bank/card feeds and where credentials live (Drive vault link)
-- [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
+- [ ] Fiscal year-end; owner's primary language
+- [x] Whether the client belongs to a known owner-group already profiled here — yes, the `best-broker-realty.md` serial-entity group (§5)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links

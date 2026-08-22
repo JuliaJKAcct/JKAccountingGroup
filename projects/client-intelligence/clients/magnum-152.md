@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -118,14 +118,16 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
   "Magnum 152"/"US Pawn") surfaced only a routine weekly ADP payroll-due reminder (already-known
   weekly cadence) and the firm's own SaasAnt subscription invoice (not a client fact). No new
   Double notes. Ping had no legible new content for the client or the owner post-baseline.
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double activity log: 0 entries. New facts and chase-pass results in §5/outstanding items above.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Legal matter (resolved ~Jul 19–21):** owner requested TD Bank statements to trace wire transfers to an outside attorney's firm; JK located and delivered them. _(Gmail)_
-- **Inventory-donation tax treatment — still open, not resolved:** JK advised on the deduction at fair market value; as of 2026-07-23 the administrative assistant is still gathering items and pickup hasn't been scheduled yet. _(Gmail)_
-- A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — confirm received. _(Gmail)_
-- **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE (waiting on info). _(Maria's doc guide)_
-- **Comcast / FPL login credentials requested** from the administrative assistant (Jul 30) so JK can verify these reclasses directly instead of relying on statements; confirm received. _(Gmail, 2026-07-30/31)_
-- **2025 Business Tax Organizer** ("JK 2025 Business Tax Organizer - Magnum 152") was reverted to draft in Double on 2026-07-31 — confirm why/whether it should be republished, since the client's Organizer Status property reads "N/A (BK client)". _(Double activity log, 2026-07-31)_
+- **Legal matter:** resolved. _(Gmail)_
+- **Inventory-donation tax treatment** — STILL OPEN, ~30 days pending since 2026-07-23, no update found, no deadline known.
+- A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — STILL OPEN. A targeted search found the actual ask was made **2026-06-28** (not just referenced in July); a broader search after that date found no reply supplying it, so it is **~55 days** pending since 2026-06-28, no deadline.
+- **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE — not chased this run (budget; no targeted search run for these specific line items).
+- **Comcast / FPL login credentials** — STILL OPEN. Maria **re-asked for the same credentials directly to the owner on 2026-08-19**, meaning they had not arrived by then; no reply confirming delivery found through 2026-08-22. ~23 days pending since the original 2026-07-30 ask (3 days since the 2026-08-19 re-ask).
+- **2025 Business Tax Organizer** reverted to draft 2026-07-31 — STILL OPEN, no update found.
+- 🔵 **New this window:** Igor Melomed paid a Magnum 152 obligation from the Sunoma account on 2026-08-19 (the Magnum account lacked funds on the due date); he said he would wire the amount back marked "reimbursement," and Maria recorded it as an **intercompany loan between Sunoma and Magnum, booked on both sides** — directly corroborates the already-pending SOP-2026-08-01-01 proposal (not re-proposed). A new "Open Items for Magnum and Sunoma" thread (2026-08-19/20) also asked for a **Silencer Shop (MS1) login fix** and **2026 gun-show reports** — routed here rather than to Sunoma's file, per that agent's flag. Double's **Organizer Status** property now reads "N/A (we have QBO access)" — a different label from the "N/A (BK client)" seen 2026-08-08; exact date of the change not established.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group structure

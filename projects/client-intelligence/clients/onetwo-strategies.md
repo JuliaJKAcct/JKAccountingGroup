@@ -1,6 +1,6 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes — none exist — contacts, properties), Google Drive (folder + file
@@ -152,15 +152,17 @@ A running, dated record as we build this profile.
 
 - _(pending)_
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 activity-log entries — no bookkeeping/close activity found at all this window, in contrast to Zetech/Optic Gold, which both show routine August close work (sales tax N/A for this client, so a sales-tax-task absence was expected, but nothing else logged either). Chase pass on all four outstanding items — results above, all still open.
+
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) and confirm whether the home-office deduction has now been entered — nothing since the 2026-04-13 call confirms either.
-- **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** in Drive and, if it describes an ongoing matter, open a Double case note per the firm's running-case-note convention.
-- **Confirm whether the discussed salary increase / withholding change was implemented.**
-- **Confirm the Accountable Plan is actually posted to QuickBooks**, not just drafted.
+- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **131 days** pending since 2026-04-13. A targeted search found only a 2025-03-17 prior-cycle thread ("Documents / Taxes 2024") showing the client had previously supplied K-1-type documents for both entities (tax year 2024) — this is a **prior cycle** and does not resolve the 2025 gap.
+- **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** — its Drive last-viewed timestamp is still 2025-03-17, confirming it remains unopened; not opened this sweep either (content stays out of scope).
+- **Confirm whether the discussed salary increase / withholding change was implemented** — STILL OPEN, targeted search found only unrelated correspondence.
+- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; the Drive "2026 Accountable Plan - ONETWO STRATEGY" spreadsheet has not been modified since its creation on 2026-03-10.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

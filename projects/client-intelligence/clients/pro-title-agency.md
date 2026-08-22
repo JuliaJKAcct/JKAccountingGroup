@@ -1,6 +1,6 @@
 # Pro Title Agency
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-18
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -136,15 +136,17 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 _(Double notes — live status lives in Double.)_
-- ⏳ **App #40698 — REPLY SENT 2026-08-18, awaiting the City of Hollywood.** Lilian replied on the existing thread attaching the signed Synergy Mood LLC lease that names Pro Title as a tenant — which is exactly what the city asked for on 2026-07-30. _(Supersedes both "awaiting a letter from the owner" and the earlier "the send is unconfirmed".)_ **Nothing is owed by us or the client.**
-  - ⚠️ **One guard survives from the earlier "unconfirmed" wording, and it should:** the send is recorded from **Lilian's word in session** — **no sent-mail search has been run**, and the previous reply on this thread went out from **julia@**, not Lilian. So when chasing, **first confirm the message exists in sent mail and check which address carried it.** If it never went, or went from an address the city does not associate with App #40698, the silence will read as "the city is slow" indefinitely — and per [`method.md`](../../pre-return-review/method.md) rule 1b that negative would belong to a search nobody ran.
-  - ⏰ **THIS ONE GETS CHASED, NOT WAITED ON. Follow up if there is no reply by ~2026-08-28** (about 7 working days): reply on the same email thread first, then telephone the Business Tax office. **The same application already went silent for 19 days** after the city's last message and nobody noticed until it was asked about — do not let that clock restart unwatched.
+- ⏳ **App #40698 — reply reportedly sent 2026-08-18, STILL awaiting the City of Hollywood, now 4 days pending.** ⚠️ **The "no sent-mail search has been run" guard was tested 2026-08-22 and DID NOT confirm the send**: a Gmail search `in:sent "40698" after:2026/08/01` found **no sent message on this thread after 2026-07-30** — only the routine weekly-sweep digest appears in that window. This means **no evidence was found that the 2026-08-18 reply actually went out** from julia@'s Gmail (it may have gone from an address/account not reachable by this search). **Recommend confirming with Lilian how/from where the reply was sent before relying on the 2026-08-28 chase date** — this is exactly the risk the file flagged, now tested and unresolved rather than untested.
+  - ⏰ **Chase date 2026-08-28 (not yet due as of this sweep, 2026-08-22).** The same application already went silent for 19 days after the city's last message and nobody noticed until it was asked about — do not let that clock restart unwatched, and verify the send before assuming the clock is even running.
   - ⚠️ **If they push back it will be about USE, not occupancy** — a residential lease on a single-family home. Answer with the Best Broker precedent at the same address, approved on the same footing, and see the zoning gate in the [BTR SOP](../../sops/hollywood-broward-business-tax-receipt.md) §1.
   - ⚠️ **Still unsettled: is 1047 Buchanan the right address to license at all?** The **Coral Springs** move (below) was in progress in Jul 2026; if it completes, a Hollywood receipt needs an address transfer straight after issue. **One question to the client settles it** — better asked now, while the city holds the file, than after they approve.
 - **Address change pending:** on 2026-07-14 the client asked to move the address to **Coral Springs** (on the DFS license + Sunbiz). If it proceeds, a **BTR address update/transfer** will be needed later. **Now in progress** — the DFS DICE MyProfile license/address update is underway as of Jul 2026, alongside the Managing Title Agent transition. _(Gmail, Jul 2026)_
 - **IRS filing-requirement mismatch:** the EIN letter (CP575) shows a **Form 1065 (partnership)** requirement, but the entity is a **disregarded single-member LLC** reported on Schedule C — reconcile with the IRS so they don't expect a partnership return.
 - **Payroll status discrepancy** (Double says N/A, Gmail shows Gusto activity through Jan 2026) — needs a direct check.
 - (Low confidence, 2026-07-22 internal discussion) A landlord/property owner is asking, via a third party, whether the BTR/zoning matter is resolved; two WhatsApp follow-ups to the owner about forwarding the city tracking email had gone unanswered as of that date. Also: the assigned bookkeeper reportedly can't close this client's quarterly books in the available time and work is being reassigned.
+
+### Log (continued)
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double activity, notes, or Ping meetings found on/after 2026-08-15. Chase pass on App #40698: ran the sent-mail guard search the file itself flagged as untested — it found no sent message on the thread after 2026-07-30, so the 2026-08-18 reply is **not corroborated** by a Gmail search (see Outstanding items). The IRS 1065-vs-Schedule-C mismatch and the payroll-status discrepancy (Double N/A vs. past Gusto activity) were not chased this run (budget).
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

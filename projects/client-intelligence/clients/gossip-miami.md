@@ -1,6 +1,6 @@
 # GOSSIP MIAMI LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-21 (2)
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -428,6 +428,9 @@ duplicate it here; a request list goes stale, this list doesn't.
   - **Netting policy tested and it does NOT apply**: the owners' distributions for the period far exceed their contributions, so gate 1 of [1120-S SOP §5C-v](../../sops/form-1120s-preparation.md) fails and both halves are reported **gross**.
   - **Distributions exceed the AAA available**, so Schedule M-2 line 7 is capped and the excess never enters M-2. Whether any of it is taxable to a shareholder turns on **their own stock basis**, which is on *their* Form 7203 and is not on this return — the handoff item.
   - **Both K-1s carry `Final K-1`** — the sellers will receive no further K-1 from this company.
+
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-21→2026-08-22).** Double properties now show formal fields for **Ext. Filed = true** (corroborates the 7004 extension already discussed) and **Preferred language = Only Russian** (confirms §1's informal note). No other new activity, notes, emails, meetings, or Drive changes found dated after the 2026-08-21 review work. Chase pass on the four open items below: the post-sale-deposits question (asked 2026-08-20) is STILL OPEN, 2 days unanswered as of this sweep — no reply found from the client's known address; the Vagaro report for 1–29 October is STILL OPEN, no delivery found; the check images (agreed verbally 2025-10-30, restated in writing 2026-08-04/05) are STILL OPEN, ~9 months pending since the verbal agreement, ~18 days since the last written restatement; the W-9 for the 1099-NEC contractor is STILL OPEN, not yet asked. Two "OURS" investigative items (the FL sales-tax account direct status check via DR-835, and confirming the 2024 return's IRS acceptance) were not chased this run — both require an external check (FDOR portal / IRS transcript) rather than a correspondence search, out of this pass's budget.
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **THE 2025 RETURN IS BEING PREPARED ON A WORKING ASSUMPTION, AND FOUR THINGS ARE STILL OPEN** _(2026-08-21)_. Julia ruled the route — prepare the **short-period 1120-S** as if the S election ended at the sale — so this is no longer a blocker but it is **not a settled fact** (§1). Still open, in order: **(a) the extension** — a 7004 is on file but it was filed as an ordinary calendar-year extension and nobody has checked that it covers a return whose due date now follows the **buyer's** C short period *(working paper §1A — the only item here with a clock)*; **(b)** confirmation of the buyer's US-person status; **(c)** the post-sale deposits, asked 2026-08-20 and unanswered; **(d)** the Draw / undeposited-cash / owner-loan classification, which the books hold only as pooled totals. ⓘ **Who engages and who signs** also has to be settled — the year-end owner is not our client.

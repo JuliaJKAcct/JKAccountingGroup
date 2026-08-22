@@ -1,11 +1,12 @@
 # CANDRAMAS LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record, notes, contacts,
+> activity log — 154 entries), Gmail (full history, business name + owner email), Ping
+> (`resolve_person` + org-wide/client-scoped `search_meetings`), and Google Drive all checked.
+> Home state, fiscal year-end, primary language and the industry remain `_(pending)_` — nothing
+> in the reachable sources established them.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -86,7 +87,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ### Payroll
 - **Applies?** **Yes — Monthly** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** _(pending)_
+- **Provider / frequency:** **Gusto**, recurring monthly cycle; the sole Double portal contact is the payroll administrator _(Gmail, full-historical, 2026-08-22)_
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** _(pending)_
 
@@ -129,8 +130,11 @@ watch-outs, one-off arrangements, history that affects the work.
 - ⚠️ **The IRS could not say WHY it rejected the 2023 effective date, or when the form actually arrived.** The "received after 15 March" explanation is **the agent's guess, not an IRS finding** — Lilian pressed for the arrival date and they would not give one. Treat it as the working theory, not as fact.
 - ⚠️ **Reaching this IRS unit is hard.** Lilian called the number on the IRS's own letter **several times with no answer** and had to leave a voicemail. Budget for that, and do not read silence as the matter being closed.
 - **Financials Ready = Ready** in Double _(2026-08-11)_ — the tax-season property is set, so the books are considered done for the return.
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
-- **Everything outside the S-election history is still only Double's property columns** — nothing else here came from email, a call, Drive or the books.
+- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
+- The sole Double portal contact is also linked, in Ping, to a combined personal record with a second individual (a spouse) — consistent with "Director"/"originally partner" language surfaced in a client meeting (see log). _(Double + Ping, 2026-08-22)_
+- The **previous accounting firm** that filed the 2023 Form 2553/1120-S is Illinois-based; it supplied proof-of-filing documentation when the firm followed up in Feb 2026 — corroborates and sources the existing case note 491844 rather than changing its conclusion. _(Gmail, 2026-08-22)_
+- Engagement began **2025-04-29** (signed Letter of Engagement via the firm's proposal tool). _(Gmail, 2026-08-22)_
+- A tax organizer ("JK 2025 Business Tax Organizer - Candramas") existed in Double, was **unpublished** (reverted to draft) 2026-07-31 and then **deleted** 2026-08-17 (both by staff) — even though the client's Organizer Status property reads "N/A (we have QBO access)". Worth knowing this history exists even though the property itself never changed. _(Double activity log, 2026-08-22)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -145,6 +149,7 @@ A running, dated record as we build this profile.
   - ⚠️ **The trap inside route ②, and it is the reason the previous accountant had to be contacted.** Because the 2023 1120-S was never accepted or processed, **it disappears from the IRS's system** — so it looks as though it was never filed at all. The package therefore has to carry **evidence that it was filed** (the return copy or the submission confirmation), and **the owner had to go back to the previous accountant to obtain it.**
   - **The Form 2848 in the package is optional and has a specific purpose** — it is what makes the IRS direct its questions to the firm instead of phoning the owner.
   - **Outcome: the package was MAILED OUT.** Nothing after that was found in the sources searched. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — this file was built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_ Per Lilian's instruction of 2026-08-12, it is left open rather than chased or inferred.
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: 154 activity-log entries reviewed (most recent 50 in detail, plus a targeted Project-entity pull); 2 notes read in full. Gmail: full history by business name and owner email. Ping: `resolve_person` on the owner, org-wide + client-scoped `search_meetings`. Google Drive: `search_files` with `excludeContentSnippets:true`. Findings folded into §4/§5/outstanding items above. No SOP exists for this client. Ping's semantic search returned no legible description of the business itself — only the topic list from one garbled recorded meeting.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -160,16 +165,19 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- The 2025 Form 1120-S is not yet filed — Double's "2025 Taxes" project status was set to **In Progress** on 2026-05-25 and remains open.
+- The client **declined the next scheduled monthly accounting meeting invite** on 2026-08-20 — worth a follow-up.
+- A September 2025 automated reminder ("Register CANDRAMAS LLC with Florida tax agencies") suggests FL state tax registration was an open item at that time — a weak, unconfirmed signal on home state.
+- The Form 2553 effective-date matter (§5/§6) — outcome still not recorded anywhere the firm can reach.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
-- [ ] Bank/card feeds and where credentials live (Drive vault link)
-- [ ] Fiscal year-end
+- [ ] What the business actually does — Ping's semantic search returned no legible description; a recorded internal meeting (2026-06-04) touches on business/ownership paperwork, an installment-agreement/income-tax discussion, property insurance, and communication-channel preferences (Telegram vs WhatsApp) but is heavily garbled — low confidence, topic list only
+- [x] Contacts and their roles — one portal contact, linked in Ping to a combined personal record with a spouse (§5)
+- [ ] Bank/card feeds and where credentials live (Drive vault link) — Drive folders located and confirmed to exist, contents not opened
+- [ ] Fiscal year-end; home state (weak FL signal only); primary language
 - [ ] Whether the client belongs to a known owner-group already profiled here
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 

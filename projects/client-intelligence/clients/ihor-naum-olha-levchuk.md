@@ -1,6 +1,6 @@
 # Ihor Naum & Olha Levchuk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -98,6 +98,7 @@ A one-off filing, not a recurring obligation, but an **open matter** as of this 
 - **Evidence on file #3 — fax:** "Form 8802 WITH payment confirmation – Ihor Naum", 2026-05-06 21:36 GMT, 5 pages, 217 s, successful — the complete package (application + proof of the Pay.gov payment) _(MyFax)_.
 - **Where the evidence lives:** Gmail (search `from:myfax.com "Successful transmission"`) and MyFax Central → Inbox → Sent, where the transmitted document itself can also be downloaded.
 - **Status as of 2026-07-30:** no response from the IRS; roughly 12 weeks elapsed, past both the IRS's 45-day guidance and the realistic 6–10-week range. No Form 6166 received.
+- ✅ **THE FORM 6166 CERTIFICATES ARRIVED — 2026-08-19.** Two documents, **"Form 6166_2024"** and **"Form 6166 Tax 2023"** (IRS Certification of U.S. Tax Residency), were uploaded 2026-08-19 into a Drive folder titled "Forms 8802" that already holds this client's Form 8802 application and its May 2026 payment confirmation. This reads as the IRS-issued certificates for **both** requested years (2023 and 2024) finally arriving — roughly 15 weeks after the 2026-05-06 filing. **This closes the "watch for IRS mail" outstanding item.** _(Found via Google Drive, 2026-08-22 sweep — the file was uploaded to a folder shared with [`aura-remodeling.md`](./aura-remodeling.md)'s AP mailbox, so this fact is recorded here, on the individual applicant's file, not there.)_ ⚠️ **Not yet confirmed:** whether these are the final, complete certificates or a partial response — worth Lilian/Julia opening them to check content, dates and any conditions before treating the matter as fully closed.
 
 ## 5. Key facts & quirks
 
@@ -179,14 +180,16 @@ Watch-outs that go with the above:
   — matches this file) and `BACKLOG.md` (no entries).
 - 2026-08-13 — **The Aura routing question, answered by Lilian.** ⓘ **Her message used the spelling *Igor*; this is IHOR NAUM.** Recorded because the roster also holds an unrelated **Igor Melomed**, who has his own migrated Schedule C note and **no connection to Aura anywhere in the repo** — and because this file already documents the spelling drift (TaxDome carries *"Ihour Naum"*). The routing rests on the note sitting in Ihor's own folder, on Ihor being a principal of Aura (§7), and on his Double record carrying `Tax Return Type = 1040-SCH C`. A migrated TaxDome note titled *"2024 Aura"* sat in this client's folder holding **vehicle mileage** for the year, and it was deliberately left unrouted because it could have belonged to either this file or [`aura-remodeling.md`](./aura-remodeling.md). **Lilian settled it: Aura is reported on Ihor's Schedule C, the company files nothing itself, and so all of its tax work lives here.** A second note from the same date carries **Olha's 1099 contractor Schedule C** — her mileage, expense categories and a 20% home-office claim. **Figures stay in Drive; the durable facts are in §4 and §5.** _(TaxDome notes, migrated — filed under Ihor Naum; notes dated 2025-04-08.)_ _(Worked by Lilian.)_
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes/contacts/activity found. Ping: `resolve_person` still no match. Gmail: no new correspondence found by a targeted search bounded after 2026-08-15. 🔑 **The Form 6166 certificates arrived 2026-08-19** — found via a Drive search on a different client's routing check (see §4) — this is the single most consequential finding of this run for this client and resolves the standing "watch for IRS mail" item.
+
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Client is calling the IRS** (267-941-1000, "U.S. residency" option) about the Form 8802 filed 2026-05-06 — awaiting their report back.
-- Ask the client to raise the possible duplicate from the two 2026-05-06 transmissions, so the IRS processes only the complete package.
-- Confirm the **2023 and 2024 returns were on file** when the application was transmitted (or that a penalties-of-perjury statement was attached) — this is the most common reason an 8802 stalls.
-- Confirm a **Form 2848 for Ihor Naum as an individual** is on file (a company 2848 does not cover this application), so the firm can call directly if the client's own call doesn't resolve it.
-- Watch for IRS mail — either the Form 6166 itself or a letter requesting more information; ask the client to forward anything that arrives.
-- Archive the filing evidence in the client's Drive folder as one PDF (Pay.gov receipt + both MyFax confirmations + the transmitted document from MyFax → Sent), rather than leaving it only in Gmail/MyFax.
+- ✅ **Watch for IRS mail — ARRIVED 2026-08-19.** Both Form 6166 certificates (2023, 2024) are in Drive — see §4. Closed as a chase item; open only whether they need review for completeness (above).
+- **Client was calling the IRS** (267-941-1000, "U.S. residency" option) — with the certificates now in hand this may be moot; not chased further this run.
+- Ask the client to raise the possible duplicate from the two 2026-05-06 transmissions — STILL OPEN (a client-side action, not a searchable arrival), not chased this run (budget).
+- Confirm the **2023 and 2024 returns were on file** when the application was transmitted — not chased this run (budget).
+- Confirm a **Form 2848 for Ihor Naum as an individual** is on file — STILL OPEN/UNCONFIRMED; a targeted Gmail search found nothing relevant.
+- Archive the filing evidence in the client's Drive folder as one PDF — not chased this run (budget; internal firm task, now lower priority with the certificates received).
 
 ### Information still needed
 

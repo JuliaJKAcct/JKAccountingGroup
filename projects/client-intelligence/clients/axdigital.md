@@ -1,11 +1,11 @@
 # AXDIGITAL LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-11
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
-> ⚠️ **SEED — created 2026-08-11 from Double's structured client properties only.** No Gmail,
-> Ping, Drive or QuickBooks pass has been run on this client yet. It is in the weekend-sweep
-> scope from now on, so the gaps below fill themselves; until then treat every `_(pending)_`
-> as genuinely unknown rather than not applicable.
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
+> contacts, activity log — 191 entries), Gmail (full history, business name + both owner-contact
+> emails), Ping (`resolve_person`, org-wide/client-scoped `search_meetings`, `search_contacts`),
+> and Google Drive all checked. Fiscal year-end and primary language remain `_(pending)_`.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -33,8 +33,8 @@
 
 - **Business name:** AXDIGITAL LLC
 - **Entity type:** **LLC**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
-- **Home state:** _(pending)_
-- **Industry / what they do:** _(pending)_
+- **Home state:** **Florida — Fort Lauderdale (strong signal)** — a recurring email signature from the business's day-to-day contact places the company's office in Fort Lauderdale, FL _(Gmail, 2026-08-22; exact street address withheld per confidentiality rule)_
+- **Industry / what they do:** **E-commerce / marketplace selling on Amazon** — uses an A2X integration to post Amazon settlements/invoices into QuickBooks _(Gmail, recurring A2X digests, full-historical, 2026-08-22)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
 - **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**), sales tax (**Monthly**), payroll (**Automatic**) _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
@@ -81,15 +81,15 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Frequency & due date:** _(pending)_ <!-- e.g. monthly, due the 20th -->
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
-- **Our role:** _(pending)_ <!-- we file / we prepare, client files / client handles -->
-- **Current status:** _(pending)_
+- **Our role:** Firm staff prepare monthly filings; several months (Apr–Aug 2026) show "no tax due" _(Gmail, 2026-08-22)_.
+- **Current status:** One 2026-05 incident: sales tax was incorrectly triggered on an out-of-state (Indiana) shipment and was manually removed by staff — the firm's stated position is that out-of-state shipments don't require tax collection unless an economic-nexus revenue threshold is crossed.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** _(pending)_
+- **Provider / frequency:** **Gusto AutoPilot**, plus a company-sponsored **401(k) plan through Human Interest**, onboarded January 2025 with at least one enrolled employee _(Gmail, 2026-08-22)_.
 - **Our role:** _(pending)_
-- **Process notes (→ future SOP):** _(pending)_
+- **Process notes (→ future SOP):** An open/unresolved 2026-08 item: the day-to-day contact asked what to do about an employee's payroll/W-2 because a work-authorization renewal for a Ukrainian worker had not come through; a call was scheduled 2026-08-10 to discuss, but no outcome/resolution was found in any source searched.
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
@@ -125,9 +125,12 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- **This file is a seed built from Double's properties alone** — nothing here came from email, a call, Drive or the books. The first weekend sweep on this client is what makes it useful.
 - Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner).
-- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6. If something about this client seems missing, it probably is.
+- **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
+- Two Double portal contacts (both full access); one signs consistently as the business's "Project manager," the other is linked in Ping to a combined personal-return client record with the first — consistent with the operating pair being spouses/co-owners. _(Double + Ping, 2026-08-22)_
+- A term loan (~$25,000 per a 2026-05 email subject line — figure not otherwise recorded here) exists on the books; several loan-related close tasks ("Uncapped Loan," "AMAZON FIXED RATE LOAN") were marked Done in the same period.
+- 🟡 On **2026-08-04** staff **reverted** the Double "2025 Taxes" project status from In Progress back to **Not Started** — a regression worth flagging (2025 return prep restarted or was found incomplete).
+- A tax organizer ("JK 2025 Business Tax Organizer - AXDigital") was unpublished (reverted to draft) on 2026-07-31 — same day as CANDRAMAS's — while the Organizer Status property still reads "N/A (we have QBO access)." _(Double activity log, 2026-08-22)_ If something about this client seems missing, it probably is.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -136,6 +139,7 @@ watch-outs, one-off arrangements, history that affects the work.
 A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: 191 activity-log entries reviewed (most recent 50 in detail, plus a targeted Project-entity pull); 0 notes found. Gmail: full history by business name and both owner-contact emails. Ping: `resolve_person` on both contacts, org-wide + client-scoped `search_meetings`, `search_contacts`. Google Drive: `search_files` with `excludeContentSnippets:true` — confirmed folder + filed documents (1099s, P&L, balance sheet for FY2024). Findings folded into §1/§4/§5 above. No SOP exists for this client. Ping's semantic search for "what does this business do" surfaced no relevant, legible content.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -151,17 +155,20 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Everything about this client beyond Double's property columns is still unknown** — who the contacts are, what the business does, which bank feeds exist, its quirks. The next weekend sweep should treat this as a full historical pass, not an incremental one.
+- The reverted "2025 Taxes" project status (Not Started as of 2026-08-04) — confirm with Julia/Lilian whether prep is resuming.
+- The Ukrainian employee's work-authorization/payroll question raised 2026-08-04, call scheduled 2026-08-10 — no outcome found.
+- The unpublished 2025 Business Tax Organizer — confirm intent, same as CANDRAMAS.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
 reports for this client.
 
-- [ ] What the business actually does, its home state, and the owner's language
-- [ ] Contacts and their roles (portal contacts are in Double)
-- [ ] Bank/card feeds and where credentials live (Drive vault link)
-- [ ] Fiscal year-end
-- [ ] Whether the client belongs to a known owner-group already profiled here
+- [x] What the business actually does — e-commerce/Amazon marketplace selling (§1)
+- [x] Home state — Florida, Fort Lauderdale (strong signal, §1)
+- [ ] Owner's primary language; fiscal year-end
+- [x] Contacts and their roles — two portal contacts, consistent with spouses/co-owners (§5)
+- [ ] Bank/card feeds and where credentials live (Drive vault link) — Drive folder confirmed, credentials link still pending
+- [x] Whether the client belongs to a known owner-group already profiled here — yes, the `best-broker-realty.md` serial-entity group (§5)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
 
 ## 7. Links

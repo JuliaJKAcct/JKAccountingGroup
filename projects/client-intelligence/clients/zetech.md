@@ -1,6 +1,6 @@
 # ZETECH LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Ping (via a synced Double meeting
 > note), Gmail (inbox + sent, full history), Double (client record, notes, contacts, properties),
@@ -83,12 +83,12 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
 - **Our role:** _(pending)_ <!-- we file / we prepare, client files / client handles -->
-- **Current status:** _(pending)_
+- **Current status:** July 2026 sales-tax report filed and paid — first confirmed filing on record for this client _(Gmail + Google Drive, 2026-08-18/19)_.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
 - **Applies?** **Yes — Automatic** _(Double client properties, 2026-08-11)_
-- **Provider / frequency:** **Gusto**, weekly AutoPilot, runs every Friday for the prior week's pay period; debited from the Wells Fargo account ending 1937 _(Gmail Gusto notifications, recurring Jul–Aug 2026)_
+- **Provider / frequency:** **Gusto**, weekly AutoPilot, runs every Friday for the prior week's pay period; debited from the Wells Fargo account ending 1937 _(Gmail Gusto notifications, recurring Jul–Aug 2026)_. The Aug 8–14 pay period ran and confirmed without a failure notice _(Gmail, 2026-08-17/18)_.
 - **Our role:** _(pending — firm appears to receive every payroll notification; whether we run it or only monitor is unconfirmed)_
 - **Process notes (→ future SOP):** At least one payroll run was **manually canceled and re-run** in the same week (2026-07-14/15 and 2026-07-21/22) — cause not recorded. Worth a standing check that AutoPilot actually completed each week.
 
@@ -153,15 +153,17 @@ A running, dated record as we build this profile.
 
 - _(pending)_
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax was filed and paid (Gmail + Drive confirmation, 2026-08-18/19) — first confirmed sales-tax activity for this client. The Aug 8–14 Gusto AutoPilot payroll run confirmed without a failure notice. A W-9 was uploaded to Drive 2026-08-17. August month-end close moved to In Progress and the "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above.
+
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Confirm the A2X eBay/Amazon mapping fix held** after the 2026-07-28 remap — no follow-up recorded since.
-- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`, sent 2026-07-09) — the primary contact replied that "the main business is declining" and asked to revisit later. **No resolution recorded.** _(Gmail "Обновлённое предложение по группе Zetech", 2026-07-09.)_
-- **The IRS sole-proprietorship-vs-1120-S mismatch (§5) is still unresolved** — reconcile before the next return is filed.
-- Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications is unconfirmed.
+- **Confirm the A2X eBay/Amazon mapping fix held** — STILL OPEN, 25 days pending since 2026-07-28, no deadline. A targeted search found no message after the 2026-07-28 remap note. (A separate, unrelated A2X support ticket about B2B invoice formatting, opened 2026-06-10, was resolved 2026-07-14 — a different issue, not evidence the eBay/Amazon fix held.)
+- **Client pushed back on an updated group fee proposal** (`#JKA1204-v3`) — STILL OPEN, 44 days pending since 2026-07-09, no deadline. No follow-up email found.
+- **The IRS sole-proprietorship-vs-1120-S mismatch (§5) is still unresolved** — no correspondence found on this matter since the 2026-04-17 call it originates from; it is an internal reconciliation item with no natural external counterparty thread to chase.
+- Whether the firm actually **runs** this client's payroll or only monitors Gusto's AutoPilot notifications — STILL unconfirmed; no clarifying communication found.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

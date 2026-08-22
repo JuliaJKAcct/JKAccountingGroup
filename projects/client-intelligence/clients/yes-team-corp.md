@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -122,10 +122,12 @@ the actual details.
   search for the business name, modified after 2026-08-08, returned only unrelated files (other
   clients' documents). No new activity in the window; no SOP exists yet for this client.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double activity log: 0 entries. Gmail, Ping and Drive all returned only unrelated noise or the firm's own automated digest — no client-specific activity found on or after 2026-08-15. Chase pass on all three outstanding items: no updates found on any (ages/searches recorded below). Credentials Drive link not chased this run (budget).
+
 ### Outstanding items (CI-only — never in the SOP)
-- Confirm the **registered home state** definitively (strongly inferred FL, not documented).
-- **Retirement plan** — proposals were presented (Feb 2026) by an external TPA; decision / status unknown.
-- **Mellanni invoice format** — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names; verify resolved and the template fixed.
+- Confirm the **registered home state** definitively (strongly inferred FL, not documented). Not chased this run (no registry-lookup tool available).
+- **Retirement plan** — proposals were presented (Feb 2026) by an external TPA. STILL OPEN, ~6+ months pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for TPA/retirement-plan/401k terms found only threads about the **firm's own** 401(k) plan (Human Interest) — nothing specific to this client's decision.
+- **Mellanni invoice format** — the customer asked (Jun 2026) that invoices be reissued with proper vendor info + service names. STILL OPEN, ~2 months pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Mellanni" found nothing.
 - ~~Clarify the **second linked entity (Double 710636)**~~ — **resolved 2026-07-30:** it is the
   owner's own individual (1040) account, not an entity. Individuals don't get their own CI file;
   his return details live here in §5.

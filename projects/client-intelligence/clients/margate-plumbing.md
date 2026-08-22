@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -116,18 +116,16 @@ Drive (§7) — never copied here.
   account, and a specific Beemold-side income line needs the owner's identification (both
   primarily Beemold facts, cross-referenced here since the report is joint). Ping had no legible
   new content for the client or the owner post-baseline.
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** The WF-replacement-account item was renamed "WF Checking 0647" and marked Done 2026-08-20, alongside the July close moving to Done — resolves the outstanding item, see above. Mercury IO credit limit decreased 2026-08-19; weekly Gusto payroll confirmed 2026-08-21. Chase pass on the remaining items — results above; "CJM" AR and check-payment classification not chased (budget).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Workers' comp audit open** — owner disputes prior-year WC as overcharged/misclassified; complicated by the **pre-Gusto payroll access gap**. _(Gmail)_
-- **General liability (GL) audit** also in progress — **update 2026-07-20:** a recent owner payment was applied to the current policy, not the outstanding prior-term audit invoice, so that balance remains outstanding. _(Gmail)_
-- **QBO Payments merchant-account dispute** raised by the owner (customer refund/chargeback); owner submitted evidence to Intuit; awaiting resolution as of 2026-07-21. _(Gmail)_
-- **Accountant / CPA letter** for the owners' remortgage pending. _(Gmail)_
-- **QBO bank-feed reconnection** (Amex + a credit card) repeatedly pending — reports issued "preliminary" until connected. _(Gmail)_
-- **Open in Maria's guide:** WF 8477 reconciliation stuck since Mar-2025 (a specific vendor payment) — **superseded**: the WF 8477 account itself was closed ~mid-Jul 2026 and a replacement connected (see §5); "CJM" AR to reconcile; check-payment classification awaiting owner clarification. _(Maria's doc guide; update Gmail 2026-07-28)_
-- **Intuit QuickBooks Payments chargeback dispute** escalated to Pre-Arbitration as of 2026-07-30 — outcome pending. _(Gmail)_
-- **GL/WC insurance audit invoice** (JDA Group) — as of 2026-07-20, a payment the owner made was applied to the **current policy** rather than the outstanding **2025–2026 audit balance**, which remains outstanding — ties into the WC/GL audit already logged above. _(Gmail)_
-- Maria asked whether the replacement WF account's credentials could be added to Julia's own login so statements can be downloaded monthly — pending owner's response. _(Gmail, 2026-07-28)_
-- **Formally tracked as a Double task** ("Margate New 2026 Checking Account," status Waiting on Client) as of 2026-08-13 — still awaiting the owner's WF access grant as of the 2026-08-14 report email. _(Double activity log; Gmail, 2026-08-15 sweep)_
+- ✅ **QBO bank-feed reconnection (WF account) — RESOLVED 2026-08-20.** The Double task tracking the WF-replacement-account confirmation was renamed **"WF Checking 0647"** and marked Done 2026-08-20, alongside the July 2026 close moving to Done; Maria confirmed by email "we finally have access to the new account" the same day. Last-4 is **0647** (no other account digits recorded). This closes the item and the underlying premise of pending SOP proposal SOP-2026-08-08-05, whose text should be updated with the confirmed last-4 when applied.
+- **Workers' comp audit** and **general liability (GL) audit** — STILL OPEN, no new correspondence found in an 8-day targeted search; pending since at least 2026-07-20 (33+ days); last known state is that a payment was applied to the current policy, not the outstanding prior-term audit balance, which remains outstanding.
+- **Accountant / CPA letter** for the owners' remortgage — STILL OPEN, shared item with Beemold, no deadline known.
+- **QuickBooks Payments chargeback dispute (Pre-Arbitration, escalated 2026-07-30)** — STILL OPEN, 23+ days pending, no new correspondence found in an 8-day targeted search, no deadline stated.
+- **"CJM" AR item / check-payment classification** — not chased this run (budget).
+- **Mercury IO card credit limit decreased 2026-08-19** (no dollar figure recorded) — a new data point on the existing "Mercury IO repeatedly frozen for insufficient balance" quirk.
+- Weekly Gusto payroll continues on its normal cadence (Aug 19–25 run confirmed 2026-08-21, no dollar figure recorded).
 
 ### Information still needed
 - [ ] Fiscal year-end

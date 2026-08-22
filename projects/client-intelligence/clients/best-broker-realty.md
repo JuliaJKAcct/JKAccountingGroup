@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-18
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -83,7 +83,7 @@ the actual details.
   - The client provided the **DBPR real-estate license** (brokerage **CQ**; the qualifying broker's **BK**), which the firm **emailed to the City of Hollywood on 2026-07-16**.
   - The city's status page now shows **Application Status: Approved · LBTR Status: Active** — the receipt is issued.
   - ✅ **The certificate itself DID arrive, the same day — this was left open in error.** The city's revenue analyst emailed it on **2026-07-23** (subject begins "License:", with the receipt PDF attached), and the city separately sent a **"Print Your Local Business Tax Receipt"** email from `paybusinesstaxreceipt@hollywoodfl.org`. Both are in Julia's inbox. **The receipt number and the analyst's name are in the Double note, not here.** _(Found 2026-08-18; the file had said "if it hasn't arrived yet" since 2026-07-23.)_
-  - ⚠️ **But it does not appear to have been SAVED.** A Drive search on the receipt number (title and full text) and on BTR/LBTR titles modified since 2026-07-01 returned the county receipt, both payment receipts and the submission confirmation — **not the issued city certificate.** _(Named searches, 2026-08-18 — that is what those searches found, not a guarantee it is nowhere.)_ **Next action: save the 2026-07-23 attachment into the client's Drive folder.**
+  - ✅ **Saved 2026-08-18.** The certificate (**LBTR_083146-2026_20260723.pdf**) is confirmed in Drive, under `BEST BROKER REALTY folder > BTR application 2026 > 2- Hollywood - Confirmation emails and receipts`, uploaded 2026-08-18 — (Google Drive file metadata, 2026-08-22). This closes the outstanding "save the certificate" item.
   - **BTR / LBTR number, application ID, folio, business address, amounts and the payment reference are in the Double note** (2026-07-23).
   - **Next:** calendar the **Sept 30** annual renewal (tax year Oct 1 – Sep 30).
 - **Process notes (→ SOP):** Follows the BTR runbook — [`../../sops/hollywood-broward-business-tax-receipt.md`](../../sops/hollywood-broward-business-tax-receipt.md).
@@ -115,13 +115,14 @@ the actual details.
 
 - 2026-08-18 — **Status re-check (Lilian), no sweep.** She asked where this and Pro Title Agency's BTRs stand in order to resume them. Two things closed against Gmail and Drive: the **issued LBTR certificate did arrive** by email on 2026-07-23 (the file had been carrying "if it hasn't arrived yet" for three weeks), and it **does not appear to be saved in Drive** — so the residual action is now a specific one rather than a wait. Also noted that the **Sept 30 renewal is six weeks out** and still uncalendared. Nothing was written to Double.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** The issued LBTR certificate was confirmed saved in Drive 2026-08-18 (see §4 — resolves the last open BTR residual). A formal Sept-30 renewal notice arrived from the city 2026-08-19 — the deadline is now sourced to an actual notice rather than only the tax-year rule, and it is still not confirmed calendared, 5.5 weeks out. A targeted search for the 2026-03-14 Form 8822-B address-update task found nothing confirming it was completed. No Double activity, no new notes, no Ping meetings found on/after 2026-08-15.
 - 2026-08-18 (later, same session) — **Leasing chain corrected (Lilian).** The signed Synergy Mood LLC lease she produced for Pro Title's application names **both companies jointly as Tenant**, so this client is a **co-tenant, not the sole master tenant** — §5 corrected. Nothing about this client's own issued BTR changes; its footing with the city was never in question.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** Two residuals, both small and both still open as at **2026-08-18**:
-  - **Save the certificate.** It arrived by email 2026-07-23 (the analyst's "License: …" message with the PDF, plus the city's print link) and a Drive search does not find it filed — put it in the client's Drive folder. _(No longer "if it arrives" — it arrived.)_ Receipt number in the Double note.
-  - ⏰ **Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30) — **six weeks out**, and the one item here with a real deadline. **No reminder was found:** a semantic search of Julia's **primary** Google Calendar for the renewal returned nothing on 2026-08-18. _(That is the search that was run — one calendar, semantic, not an exhaustive check of every calendar the firm keeps. If it is already booked somewhere, this costs a moment to dismiss.)_ _(Double note 2026-07-23)_
-- **Unconfirmed:** a 2026-03-14 internal note asked to update Best Broker's (and several sibling entities') address with the IRS via Form 8822-B as part of an entity-cleanup pass — no confirmation found yet that this was completed for Best Broker specifically. _(Gmail, found 2026-08-01)_
+- **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** One residual remains:
+  - ✅ **Certificate saved to Drive 2026-08-18** — see §4 above. Closed.
+  - ⏰ **STILL OPEN — Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30) — a formal **"City of Hollywood Local Business Tax Annual Registration Renewal is now due"** notice arrived by email **2026-08-19**, 3 days pending as of this sweep, **deadline 2026-09-30 (~5.5 weeks out)**. No evidence found that the notice has been actioned or calendared. _(Gmail, 2026-08-19; checked 2026-08-22)_
+- A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "8822-B" + the owner's names did not find any correspondence — the 2026-03-14 IRS address-update (Form 8822-B) for Best Broker remains unconfirmed as completed.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end

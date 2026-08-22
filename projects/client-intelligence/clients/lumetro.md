@@ -1,6 +1,6 @@
 # LUMETRO LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -69,6 +69,7 @@ here. Open the Double client to get the actual details.
 - **⚠️ Quirk to reconcile:** the firm's own proposal note says **Lumetro "won't file its own tax return"** — its results are **consolidated into SensusTech** (to avoid revising the SensusTech proposal). This **conflicts** with Double's "income tax = yes / Schedule C" flags. **Resolve which is correct.** _(Gmail: "New Proposal For LUMETRO LLC")_
 - Double's **Organizer Status** property reads **"N/A (SCH-C)"** — consistent with the Schedule-C flag, and consistent with Sch-C/bookkeeping-only clients not being owed a tax organizer (per the tax-season-readiness rules). Doesn't resolve the quirk above, just confirms Double's side of it. _(Double, 2026-08-01)_
 - **Update:** Double's **Income Tax** checkbox now reads **false** (checked 2026-08-08), which is consistent with the proposal note (no separate return). The **Organizer Status** property still shows "N/A (SCH-C)" — a leftover label, not a current SCH-C flag. This looks like the quirk resolving itself but is not yet confirmed as a deliberate correction — treat as **likely resolved, not verified**. _(Double client properties, 2026-08-08)_
+- 🔵 **A second, independent, dated source now supports "no separate filing."** A 2026-04-13 Gmail thread ("Tax Return") has Julia writing to Lilian: **"Note Lumetro LLC - single member llc - will be reporting inside Stans return"** — i.e. a disregarded single-member LLC reporting on the owner's personal return. This predates the 2026-08-15 baseline and was not previously captured. It does **not** explain the earlier Double flags that had read Schedule C / income-tax-yes (those were already noted stale), but it is a second source, in Julia's own words, on the "no separate filing" side. _(Gmail, 2026-04-13; found 2026-08-22)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -87,10 +88,12 @@ here. Open the Double client to get the actual details.
 - 2026-08-08 — Incremental sweep (baseline 2026-07-20). Double activity log (5 entries) shows the routine monthly "Loan due to Sensustech" and "Ads Journal Entry" tasks marked Done (2026-08-05/07) and a non-transaction client question resolved (8/7) — normal monthly-close activity, and it confirms the intercompany loan account's exact name (see §5). Double client properties now show Income Tax = false, bearing on the open tax-filing-treatment quirk (see §4). Still no Double notes. Gmail turned up nothing Lumetro-specific post-baseline (hits under "Lumetro" and "Fedorov" were either the firm's own weekly-sweep round-up emails or belonged to sibling entities Mobilesource/SensusTech, not Lumetro). Ping had no legible new content for the client or the owner post-baseline.
 - 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double activity log shows the **July 2026 month-end close completed 2026-08-13** (Maria Zavarce) — all standard close tasks (P&L, balance sheet, cash-flow statement, 1099 prep, reconciliation checks) marked Done; no line item specifically flags the "Loan due to Sensustech" account this pass, but the close itself completed on schedule. _(Double activity log, 2026-08-15)_ Gmail: a new thread **"Sensustech/Lumetro Report July2026"** (2026-08-13/14) — Maria sent the owner (Stan Fedorov) the July reports for both entities and flagged two transactions needing clarification; he explained they were **dining expenses from a business trip to Serbia in July 2026**, and Maria reclassified accordingly. Routine monthly-report correspondence, cc'd to Julia — no intercompany-loan-specific content in it. _(Gmail, 2026-08-13/14)_ Still no Double notes for this client. Ping `search_meetings` scoped to "Lumetro LLC" returned no relevant hits (results were all unrelated clients/internal calls). `FOLLOW-UPS.md` and `BACKLOG.md` checked — no mentions of Lumetro or Fedorov.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double activity/notes; Ping had no legible Lumetro-specific hits. Found the 2026-04-13 Julia email on the tax-filing-treatment quirk (see §4) — bears on but does not fully resolve the standing Schedule-C-flag question. Sibling-entity activity found under "Lumetro"/"Fedorov" (a 2026-08-21 "USD FUNDS - FYI" thread) belongs to Mobilesource/SensusTech, not routed here.
+
 ### Outstanding items (CI-only — never in the SOP)
-- **Reconcile the tax-filing treatment** — proposal says Lumetro won't file separately (consolidated into SensusTech) vs. Double's Schedule C / income-tax-yes flags. _(Gmail)_
-- Confirm **home state / state of formation** — a Wyoming registered-agent lead surfaced (§1) but is not conclusive. _(unknown)_
-- Drive has **duplicate "Lumetro LLC" folders** — worth consolidating.
+- **Reconcile the tax-filing treatment** — ARRIVED (partially): see the new 2026-04-13 Julia email above, supporting "no separate filing." Not conclusively closed against the earlier Double Schedule-C flag, which was never explained (only noted stale).
+- Confirm **home state / state of formation** — STILL OPEN; a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for Lumetro + Wyoming/home-state/state-of-formation terms found no confirmation.
+- Drive has **duplicate "Lumetro LLC" folders** — not re-chased this run (budget).
 
 ### Information still needed
 - [ ] Home state; fiscal year-end; the income-tax treatment (above); credentials location
