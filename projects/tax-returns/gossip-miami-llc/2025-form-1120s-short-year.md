@@ -397,6 +397,13 @@ splits the year.
    🛠️ **Fix:** ask Maria whether the worker payments include tips. **What it moves:** if the payout is
    genuinely absent, ordinary income is **overstated by up to the whole 29,065** — the largest single
    uncertainty on this return, and it runs in the opposite direction to finding 1.
+   🔴 **AND RESOLVE IT TOGETHER WITH §4 DECISION 8, NOT SEPARATELY.** The undeposited `Cash Sales`
+   asset is **29,901** and these tips are **29,064.57** — within 836 of each other. They are built from
+   different things (the tips are three Vagaro true-up entries; the cash asset is three quarter-end
+   Vagaro-versus-books residuals), so the closeness **may be coincidence** — but both are roughly the
+   same ~29k the books cannot account for, and one story explains both at once: **tips collected in
+   cash, never banked and never run through a payout.** ⛔ **Correcting them independently would adjust
+   the same money twice.** Put the two questions to Maria in one message.
 3. 🔴 **The buyer's US-person status** — decision 1. Everything rests on it.
 4. 🟠 **The opening equity does not tie to the tax history** — books open at +987, the 2024 AAA closed at (26,783), a 27,770 gap that is a plug. It does not stop the return (Schedule L is "per books" and the AAA is carried from the filed return), but a reviewer will ask, and the answer is in tie-out 10.
 5. 🟠 **No fixed assets, ever.** The 2024 purchase agreement's schedule listed salon equipment; none of it is on the books or on the 2024 return, so depreciation is 0 and UBIA for §199A is 0. **Raise with Julia** — do not capitalise anything unilaterally on a short-period return.
@@ -472,7 +479,7 @@ splits the year.
 
 ### 8D · Before the other return is started
 
-- **This return is FILED and ACCEPTED** — a K-1 from an unfiled return can still move, and on this one three separate open items (October revenue, decisions 4 and 8) would move it.
+- **This return is FILED and ACCEPTED** — a K-1 from an unfiled return can still move, and on this one **four** separate open items would move it: **§6 finding 1** (October revenue), **§6 finding 2** (the tips payout — the largest of them), and **§4 decisions 4 and 8**.
 - **§6 items 1, 2 and 3 are closed** — the October revenue, the tips payout, and the buyer's US-person status. ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
 
 ---
