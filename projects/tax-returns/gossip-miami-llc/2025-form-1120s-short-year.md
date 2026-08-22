@@ -473,7 +473,7 @@ splits the year.
 ### 8D · Before the other return is started
 
 - **This return is FILED and ACCEPTED** — a K-1 from an unfiled return can still move, and on this one three separate open items (October revenue, decisions 4 and 8) would move it.
-- **§6 items 1 and 2 are closed.**
+- **§6 items 1, 2 and 3 are closed** — the October revenue, the tips payout, and the buyer's US-person status. ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
 
 ---
 

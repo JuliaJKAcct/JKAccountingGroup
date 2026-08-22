@@ -206,8 +206,11 @@ and that is deliberate — see §3.
 - [ ] **The GENERAL LEDGER for the year** — the one report that answers "what actually happened
       in this account", which no P&L or balance sheet can. Get it once, for every account, rather
       than returning for accounts one at a time.
-      🔴 **On a SHORT-PERIOD return it stops being a supporting document and becomes the ONLY source
-      that works** — a P&L cannot be cut at a date, and the ledger can. **See §5B-i part 4.**
+      🔴 **When the BOOKS' period is not the RETURN's period** — a terminated election, a mid-year
+      sale, a change of accounting period — **it stops being a supporting document and becomes the
+      source you build from**, because it is the only report that shows the true-up entries sitting
+      around the cut. ⓘ **Not every short period needs that**: where the books start and stop with the
+      return, an ordinary P&L is fine. **See §5B-i part 4.**
 - [ ] **Confirmation that Form 7004 (the extension) was filed**, if you are past 15 March.
 
 > ⚠️ **Check the BASIS printed on every export, and check that they agree with each other.**
@@ -553,9 +556,14 @@ Total for Income             216,000    ✅ THIS is the block line 1a is built f
 
 - **Copy the subtotal** → **200,000**, which misses the surcharge and the tips entirely (20,000) and
   has *not* been reduced by the discount (4,000). **Understated by 16,000.**
-- **Copy the subtotal and then subtract the discount**, on the reasonable assumption that a sales
-  subtotal is gross → **196,000**. **Wrong twice**: the discount comes off a figure it was never in,
-  and the other two accounts are still missing.
+- **Copy the subtotal and then subtract the discount** → **196,000**. ✅ **The discount subtraction
+  itself is right** — the discount really is outside that subtotal, so taking it off is the one
+  correct step. **The answer is still 20,000 short**, because the surcharge and the tips were never
+  in the subtotal either. `196,000 + 5,000 + 15,000 = 216,000`.
+
+🔑 **The lesson is not "subtract the discount" or "don't".** The subtotal named after sales is
+**neither gross revenue nor net revenue** — it is one account's total. There is no adjustment that
+turns it into line 1a.
 
 🛑 **So: never copy a subtotal. List the accounts and add them yourself**, then prove the total by
 agreeing to `Total for Income`.
@@ -566,8 +574,17 @@ agreeing to `Total for Income`.
 |---|---|---|
 | **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
 | **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION** |
-| **2b** | Is it a **return, a refund, or an allowance granted after the sale**? | ⛔ **Line 1b, not line 1a.** The form's own caption is *Returns and allowances*. **Subtracting it in both places deducts it twice**, and 1c comes out right while line 1a — the figure §448(c), §163(j) and Schedule B question 11 all measure — comes out understated |
+| **2b** | Is it a **return, a refund, or an allowance granted after the sale**? | ⛔ **Line 1b, not line 1a.** The form's own caption is *Returns and allowances*. **Two different things go wrong, and the SILENT one is the dangerous one** — see below |
 | **3** | Everything else: is it money the business **took in for its own account**? | ✅ **Inside line 1a** |
+
+🛑 **The two ways refunds go wrong, and why only one of them is ever caught:**
+
+| What the preparer does | line 1a | line 1c | Caught? |
+|---|---|---|---|
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **NO. Nothing catches this.** Every tie-out in §14 runs off 1c or below, so the return foots, the P&L agrees, and the only wrong figure is line 1a — which is what **§448(c)**, **§163(j)** and **Schedule B question 11** are measured on |
+| Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
+
+🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
 
 #### 3 · ⚠️ The accounts that look like pass-throughs, and are not
 
@@ -583,10 +600,19 @@ is whether the **company collected it**:
 
 #### 4 · 🛑 A P&L FOR A DIFFERENT PERIOD THAN THE RETURN CANNOT BE THE SOURCE — ONLY THE LEDGER CAN
 
-**A summary report cannot be cut at a date.** A short period — a **terminated S election (§1362(e))**,
-a first year, a final year — needs revenue **as of a day inside the year**, and no P&L, balance sheet
-or trial balance can give it. **Only the general ledger can**, because only it carries a date on every
-row.
+⚠️ **This is NOT "a P&L cannot be run for a short period" — QuickBooks will happily run one for any
+date range, and you should run it.** The hazard is different and it is worse, because it is silent:
+
+1. **The P&L you were handed is almost certainly the full year.** Nobody rebuilds it for a cut nobody
+   knew about when they exported it. **Check the date range in the header before using any figure.**
+2. 🔴 **A cut in the middle of a quarter lands inside the periodic TRUE-UP ENTRIES**, and a date-range
+   P&L simply includes or excludes each one depending on the day it was posted — with no warning. A
+   quarterly true-up can be a large fraction of that quarter's revenue, so a cut one day either side
+   of it changes the answer enormously. **The general ledger is what lets you SEE those entries**,
+   decide what belongs in the period, and say why.
+
+🔑 **So: run the report for the exact period, AND open the ledger around the cut.** The ledger is not
+a formality here — it is the only thing that shows you what the date range silently did.
 
 **So whenever the BOOKS' period is not the RETURN's period:**
 ⚠️ **That is the real condition, not "a short period" as such.** Where a first year or a dissolution
@@ -600,11 +626,15 @@ books run past the cut — a terminated election, a mid-year sale, a change of a
    will not close and the SOP will have sent you looking for an account that is not missing:**
    ```
    line 1a for the period
-     +  what falls after the cut
-     +  line 1b            (customer refunds — in Total for Income, NOT in 1a)
-     +  the Schedule K items (interest · dividends · capital gains · rents — same)
+     +  what falls after the cut          (the same 1a accounts, past the cut date)
+     −  line 1b                           (customer refunds)
+     +  the Schedule K items              (interest · dividends · capital gains · rents)
      =  the P&L's Total for Income
    ```
+   🔑 **Why 1b is SUBTRACTED and the Schedule K items are ADDED, because the signs are the whole
+   check:** `Total for Income` already carries the refunds **as a negative** and already carries the
+   Schedule K items **as positives**. Line 1a excludes both. So you take the refunds back out and put
+   the Schedule K items back in. **It is the same relation as §5B's line 1c note, read backwards.**
    ⚠️ **If it still does not agree to the cent, an account was missed** — most often one whose entries
    are all quarterly journal entries and therefore easy to overlook.
    ⛔ **Never close the gap by folding interest or refunds into line 1a.** That is the error §5B's own
@@ -629,13 +659,15 @@ the untrued-up tail.**
 step looks big.** ⚠️ **Say the range out loud first**, because these ratios move a lot between
 quarters on their own, and a step that impresses you may be smaller than the normal spread.
 _(On the pilot: the trued-up quarters ran **56.1% · 67.6% · 66.6%** — an internal spread of 11.5
-points — and the tail came in at **76.7%**. The step from the nearest quarter is only 10.1 points,
+points — and the tail came in at **76.7%**. The step from the nearest quarter is only 9.1 points,
 **smaller than the normal spread**, so the step proves nothing. What does the work is that 76.7% is
 **above every trued-up quarter**, and in the same direction the missing-revenue theory predicts.)_
 
-⚠️ **It is an INDICATOR, not a measurement, and it can be silent.** A tail inside the range does not
-mean the revenue is complete — a low-margin month masks it entirely. **Never treat a passing ratio as
-evidence that the tail is fine**, and never let it replace getting the report.
+⚠️ **It is an INDICATOR, not a measurement, and it can be silent.** Missing revenue **pushes the
+ratio UP**, so the false negative is a tail that was genuinely **high-margin** — its true ratio sits
+below the range, the missing revenue lifts it back **into** the range, and the test says nothing.
+**Never treat a passing ratio as evidence that the tail is complete**, and never let it replace
+getting the report.
 ⛔ **Do not "fix" it by estimating the missing revenue** — get the outside system's report for the
 untrued-up period and rebuild it the way the other quarters were built. **If it cannot be obtained,
 say the figure is understated and by roughly how much, rather than presenting it as complete.**
