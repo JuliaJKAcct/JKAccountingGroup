@@ -565,8 +565,11 @@ Total for Income             216,000    ✅ THIS is the block line 1a is built f
 **neither gross revenue nor net revenue** — it is one account's total. There is no adjustment that
 turns it into line 1a.
 
-🛑 **So: never copy a subtotal. List the accounts and add them yourself**, then prove the total by
-agreeing to `Total for Income`.
+🛑 **So: never copy a subtotal. List the accounts and add them yourself.**
+⚠️ **Line 1a equals `Total for Income` only when there are no refunds and nothing belonging on
+Schedule K** — which is true of this illustration and of many small service clients, and false the
+moment a bank-interest or customer-refund account appears. **The general proof is part 4 step 2; this
+shortcut is the special case of it.**
 
 #### 2 · Put every income account through three questions
 
@@ -574,14 +577,14 @@ agreeing to `Total for Income`.
 |---|---|---|
 | **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
 | **2** | Is it **contra-revenue at the point of sale** — a discount, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION** |
-| **2b** | Is it a **return, a refund, or an allowance granted after the sale**? | ⛔ **Line 1b, not line 1a.** The form's own caption is *Returns and allowances*. **Two different things go wrong, and the SILENT one is the dangerous one** — see below |
+| **2b** | Is it a **return, a refund, a rebate or an allowance**? | ⛔ **Line 1b, not line 1a.** The instruction for line 1b, verbatim: *"Enter cash and credit refunds the corporation made to customers for returned merchandise, **rebates, and other allowances made on gross receipts or sales**."* **Two different things go wrong, and the SILENT one is the dangerous one** — see below |
 | **3** | Everything else: is it money the business **took in for its own account**? | ✅ **Inside line 1a** |
 
 🛑 **The two ways refunds go wrong, and why only one of them is ever caught:**
 
 | What the preparer does | line 1a | line 1c | Caught? |
 |---|---|---|---|
-| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **NO. Nothing catches this.** Every tie-out in §14 runs off 1c or below, so the return foots, the P&L agrees, and the only wrong figure is line 1a — which is what **§448(c)**, **§163(j)** and **Schedule B question 11** are measured on |
+| Subtracts refunds inside 1a **and leaves 1b blank** | **understated** by the refunds | ✅ **correct** — because `1c = 1a` and the refunds came off already | 🔴 **NO. Nothing catches this.** Every tie-out in §14 runs off 1c or below, so the return foots, the P&L agrees, and the only wrong figure is **line 1a itself**. ✅ **Schedule B question 11 is measured on it** — the instructions define *total receipts* as starting from *"Gross receipts or sales (page 1, line 1a)"*. ⚠️ **Whether the §448(c) / §163(j) gross-receipts test is measured on 1a or on 1c (net of returns) is NOT settled here** — the 1120-S instructions only cross-refer to §448(c), and the regulation could not be read. **Check it before relying on either** |
 | Subtracts refunds inside 1a **and also puts them on 1b** | understated | **understated** too — deducted twice | 🟡 usually, because 1c stops agreeing with the books |
 
 🔑 **So the rule is not "don't double count" — it is `refunds NEVER touch line 1a`, full stop.**
@@ -624,12 +627,16 @@ books run past the cut — a terminated election, a mid-year sale, a change of a
    including the last day of the period.
 2. **Then use the P&L to PROVE it**, with this identity — ⚠️ **and it needs BOTH carve-outs, or it
    will not close and the SOP will have sent you looking for an account that is not missing:**
+   **In two steps, and keep them separate — mixing a period figure with a full-year P&L is how this
+   proof stops closing:**
    ```
-   line 1a for the period
-     +  what falls after the cut          (the same 1a accounts, past the cut date)
-     −  line 1b                           (customer refunds)
-     +  the Schedule K items              (interest · dividends · capital gains · rents)
-     =  the P&L's Total for Income
+   STEP 1 — rebuild the full year from your period figure (period arithmetic only):
+       line 1a for the period  +  the same accounts' movement AFTER the cut
+       =  full-year line 1a
+
+   STEP 2 — prove the full year against the P&L (full-year figures only):
+       full-year line 1a  −  full-year line 1b  +  full-year Schedule K items
+       =  the P&L's Total for Income
    ```
    🔑 **Why 1b is SUBTRACTED and the Schedule K items are ADDED, because the signs are the whole
    check:** `Total for Income` already carries the refunds **as a negative** and already carries the
@@ -655,13 +662,22 @@ understates income by an amount nobody can see on the face of the P&L.
 sales — contract labour, commissions — divided by revenue)* **for each trued-up period and again for
 the untrued-up tail.**
 
-🛑 **The test is whether the tail falls OUTSIDE THE RANGE of the trued-up periods — not whether the
-step looks big.** ⚠️ **Say the range out loud first**, because these ratios move a lot between
+🛑 **Compare like with like, or the test means nothing.** ⚠️ **A one-month tail against QUARTERLY
+averages is not a fair comparison** — a quarter averaging 66% can be made of months at 50% and 85%,
+so the tail can look anomalous on ordinary monthly noise, or look fine while hiding a real gap.
+**Compute the ratio MONTH BY MONTH wherever the books allow it**, and compare the tail months against
+the monthly series. Where only quarterly figures exist, **say so and treat the result as weaker.**
+
+🛑 **Then: the test is whether the tail falls OUTSIDE THE RANGE of the trued-up periods — not whether
+the step looks big.** ⚠️ **Say the range out loud first**, because these ratios move a lot between
 quarters on their own, and a step that impresses you may be smaller than the normal spread.
 _(On the pilot: the trued-up quarters ran **56.1% · 67.6% · 66.6%** — an internal spread of 11.5
 points — and the tail came in at **76.7%**. The step from the nearest quarter is only 9.1 points,
 **smaller than the normal spread**, so the step proves nothing. What does the work is that 76.7% is
-**above every trued-up quarter**, and in the same direction the missing-revenue theory predicts.)_
+**above every trued-up quarter**, and in the same direction the missing-revenue theory predicts.
+⚠️ **And that pilot has the weakness this section just described** — one month against three quarterly
+averages. It is corroboration for a theory that already had a documented cause (**no Q4 export
+exists**); **it would not have been enough to raise the theory on its own.**)_
 
 ⚠️ **It is an INDICATOR, not a measurement, and it can be silent.** Missing revenue **pushes the
 ratio UP**, so the false negative is a tail that was genuinely **high-margin** — its true ratio sits
@@ -2010,10 +2026,11 @@ line 1  =  line 8 + line 7 − line 2          ← beginning inventory — a CHE
 ### Form 1120-S, page 1
 
 ```
-line 1a =  EVERY trade-or-business revenue account in the P&L's income block
-             (sales · tips · card surcharges charged to the customer · shipping charged)
-           − discounts and other contra-revenue    ⛔ NOT customer refunds — those are line 1b
-           − anything that belongs on Schedule K   (interest · dividends · capital gains · rents)
+line 1a =  EVERY account in the P&L's income block
+             (sales · tips · card surcharges charged to the customer · shipping charged …)
+           − discounts and other contra-revenue at the point of sale
+           − customer refunds, rebates and allowances   → these are line 1b instead
+           − interest · dividends · capital gains · rents → these are Schedule K instead
                                                     → the method is §5B-i; this is only its shape
 line 1c =  line 1a − line 1b
 line 3  =  line 1c − line 2
