@@ -494,7 +494,7 @@ splits the year.
   | **§4 decision 3** | the post-cut receipts, if Lilian prefers the accrual reading | box 1 |
   | **§4 decision 4** | the meals treatment — 0% / 50% / 100% | box 1 **and** box 16C |
   | **§4 decision 8** | the undeposited cash, if it was really distributed | **box 16D** |
-- **§6 items 1, 2 and 3 are closed** — the October revenue, the tips payout, and the buyer's US-person status. ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
+- **§6 items 1, 2, 3 and 10 are closed** — the October revenue, the tips payout, the buyer's US-person status, **and the pooled `Draw` split**, which the table above names as moving box 16D and each shareholder's Form 7203. ⛔ **Starting a 1040 on a guessed 16D is the one thing this gate exists to stop.** ⓘ *(Renumbered 2026-08-22 when the tips finding was inserted; this line used to read "1 and 2" and would have quietly dropped the buyer's status, which is the item everything else rests on.)*
 
 ---
 
