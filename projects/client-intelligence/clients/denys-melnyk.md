@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-20
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1104,6 +1104,8 @@ street address never appear here, and nor do dollar figures — those live in Do
   pass found something the 2026-08-15 sweep had missed:** the client's **remaining business expenses
   arrived on 2026-08-13** by Google Voice and are in note **485225** — he had undertaken on
   2026-08-12 to send them by Monday and he did. Full detail in §5, *"The K-1 route opened"*.
+
+- 2026-08-22 — **Weekend sweep — baseline advanced from 2026-08-11 to 2026-08-22, with the FULL-HISTORICAL Gmail pass this file had been carrying as owed now DONE.** Double: both notes (485225, 490984) re-read in full and their current bodies compared against `updatedAt` — content matches what this file already records; no undiscovered edits. Gmail bounded `after:2026/08/11`: only the internal weekly-sweep email. Gmail **full-historical (no date bound)** by his name and each of the three trucking companies: 5 results total, all pre-2026-08-11 and already reflected here — nothing new. Targeted chase searches (K-1/Schedule K-1; 1095/BCBS/marketplace; extension/4868; his own address since 2026-08-12) all came back empty. Ping: `resolve_person` still no match; an org-wide search surfaced only an unrelated meeting about a different client's own three-K-1 problem, discarded as noise. Drive: a full-text "Melnyk" search surfaced two W-9 PDFs (created 2026-01-23/31) whose filenames pair a first name with the surname "Melnyk" — **possibly** the former business partner named in note 490984, but not confirmed, and deliberately not written up further per the no-personal-names rule; worth Lilian checking, since they share a surname. **The three K-1s (chase date 2026-09-15) have not arrived.** No new health-coverage, extension, or S-corp-Illinois-operations answers found.
 
 ### Outstanding items (CI-only — never in the SOP)
 

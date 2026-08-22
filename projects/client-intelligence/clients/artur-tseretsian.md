@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -194,21 +194,18 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   company exists). Findings folded into §1, §4, §5. **Repo:** re-checked
   `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md` — still no entries for this client.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes (both existing notes' `updatedAt` predate baseline), no new contacts, zero activity-log entries, no new Gmail correspondence, no new/modified Drive files under "Rewhip". Ping `resolve_person` for this name still returns no match, consistent with prior sweeps. Chase pass on all three outstanding items — ages above, no arrivals found.
+
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
-- **The older child's SSN** — card lost; client resolving at the SSA and will send the number.
-- **Year-end 2024 & 2025 addresses** — client had a different address each year.
-- January 2026 statements (both accounts) to complete Dec 2025.
-- CS Float: the **purchases/expense** report, plus 2023/2024 platform reports if there was activity.
-- Home-office worksheet (2024/2025 figures).
-- Lendbuzz & Westlake **amortization schedules** (interest vs principal).
-- Form **1095-A** per year (health insurance).
-- Car **purchase & sale documents**.
-- External-card statements (Capital One, Amex, Merrick, Credit One, FPB) if that spending should be captured.
-- Client to review: **Deposits** (cash/ATM/ACH/wire), **Travel**, and the auto/transport **"Business – review"** Zelles.
-- Confirmation the client completed the QuickBooks recurring-payment setup (reminders sent 2026-07-30/31, due 2026-08-01).
-- **Rewhip LLC — clarify scope.** Confirm with Julia/Lilian: (a) what business activity Rewhip LLC will conduct; (b) whether it has a non-resident partner (raised in the 2026-07-06 consultation) — if so it likely needs a **Form 1065** and a 37%-withholding conversation, not a Schedule C; (c) whether the 2026-07-29 signed Monthly Proposal Generator agreement covers Rewhip LLC's bookkeeping, Artur's personal work, or both; (d) whether Rewhip LLC needs its own Double client record and its own Client Intelligence file — recommend creating one once the scope is confirmed.
-- **Stripe transaction data** — still needed for the income/expense analysis (raised 2026-07-06, not yet in the client's Drive folder as of this sweep).
+- **The older child's SSN** — card lost; client resolving at the SSA and will send the number. Not chased this run (budget).
+- **Year-end 2024 & 2025 addresses** — not chased this run (budget).
+- January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
+- CS Float purchases/expense report — not chased this run (budget).
+- Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
+- Confirmation the client completed the QuickBooks recurring-payment setup — STILL OPEN, ~24 days pending since the first reminder (2026-07-29), the 2026-08-01/08-04 deadline already passed. A targeted search found the automated reminders continued (one further reminder dated 2026-08-03, pre-baseline) but no confirmation the client ever completed setup.
+- **Rewhip LLC — clarify scope** — STILL OPEN, 38 days pending since raised (2026-07-15), no deadline. A targeted search found nothing beyond what's already on file.
+- **Stripe transaction data** — STILL OPEN, 47 days pending since raised (2026-07-06), no deadline. A targeted search found only unrelated firm-subscription receipts, nothing client-specific.
 
 ### Information still needed
 - [ ] Primary language / preferred communication.

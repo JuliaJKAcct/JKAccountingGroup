@@ -1,6 +1,8 @@
 # Andrii Tymchenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+>
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, notes, contacts, activity log — both pages, plus the linked second Double client id), Gmail ("Tymchenko"/"TRUSTBURN", full history), Ping (`resolve_person` + `search_meetings`), and Google Drive (multiple title queries) all checked.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -30,7 +32,8 @@
 - **Entity type:** Individual taxpayer (Form 1040 / 1040-NR)
 - **2025 filing position:** 🔴 **Non-resident aliens — the position recorded on 2026-04-07 was Form 1040-NR, married filing separately** (§4). ⚠️ **Whether the returns were actually filed is not recorded anywhere reachable** (§6).
 - **Home state:** ⚠️ **He left the United States on 2025-05-31 and moved to Spain.** Which state, if any, has a part-year claim for 2025 is _(pending)_.
-- **Industry / what they do:** _(pending)_ — he has a company that had **no activity at all in 2025**
+- **Industry / what they do:** _(pending)_ — his company (see below) had **no activity at all in 2025**
+- **Company name — SETTLED 2026-08-22: TRUSTBURN LLC (Florida LLC).** Drive holds its Articles of Incorporation, Sunbiz registration record, and a Form SS-4 EIN application, all from March 2024; Gmail confirms Form 2848 (POA) and the SS-4 were faxed to the IRS 2024-03-28/29/30, and a QuickBooks invoice was paid by "Trustburn LLC" (same contact email as Andrii's) on 2025-04-07. _(Gmail + Drive, 2026-08-22)_
 - **Primary language:** _(pending — likely Ukrainian or Russian)_
 - **Our engagement (services we provide):** income tax _(pending — the rest)_
 - **Fiscal year-end:** _(pending)_
@@ -45,7 +48,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Role | Where to find them |
 |---|---|
 | The client | Double client (link below) |
-| Spouse — a **joint filer for some years, but NOT 2025** (§4) | Double client |
+| Spouse — a **joint filer for some years, but NOT 2025** (§4); has her **own, separate Double client record** (id 710640), distinct from Andrii's, even though earlier years were filed jointly _(Double `get_client` 710640, 2026-08-22)_ | Double client |
 | Children | Double client — there are dependants _(number pending)_ |
 
 - **Double client:** [app.doublehq.com/close?cid=710619](https://app.doublehq.com/close?cid=710619)
@@ -90,7 +93,8 @@ the actual details (and Claude can pull them live when a task needs them).
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
 - 🔴 **THE FAMILY LEFT THE UNITED STATES ON 2025-05-31 AND ARE IN SPAIN.** That is what makes 2025 a **1040-NR, married filing separately** year (§4), and it changes almost everything about how this client is handled — residency, which states have a claim, and whether US filing continues at all. **Establish the current position before preparing anything for 2026.**
-- ⚠️ **A Form 1095-A was requested from him, and the note says nothing about HIS OWN coverage** — only that **his wife and children were on Medicaid, not the marketplace**. Medicaid produces a 1095-B, not a 1095-A; marketplace coverage for part of the year would produce one. **So the request may be right, or it may be chasing a form that cannot exist — the note does not settle it.** Establish what coverage HE had for 2025 before asking him again.
+- ⚠️ **CONTRADICTION FOUND 2026-08-22 on the 1095-A / health-coverage question.** This file's §5/§6 (from the migrated TaxDome note) says a 1095-A was "requested from him" and that the note "says nothing about his own coverage — only that his wife and children were on Medicaid." A **different, native Double note** (id 447824, created by Lilian 2026-06-22, "2025 Tax return - Important notes") covers the same 2025 organizer call but says instead: **"He provided 1095-A"** (past tense, already supplied) and **makes no mention of Medicaid or the wife's coverage at all** — only that the children's school/health insurance was free/subsidized. Both sources are attributed to the same underlying 2025 organizer call but disagree on these two points. **Reported, not resolved** — check with Lilian which is current before asking the client again.
+- A Form 4868 extension was filed for the 2025 return — Double shows a recurring task "Extension Filed" created 2026-05-25 and marked Done the same day, and the "2025 Taxes" project moved Not Started → In Progress that day. _(Double activity log, 2026-08-22)_
 - **His company was dormant for the whole of 2025** — no income, no expenses, no P&L. Do not read the missing P&L as an outstanding item.
 - **He did not sell the car — he took it to Spain.** Recorded because a vehicle disappearing from a return usually means a sale, and here it does not.
 - ⚠️ **He does not remember whether he made estimated tax payments for the year**, and said the firm would know. **Check the IRS account rather than asking him again.**
@@ -103,6 +107,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-08-13 — **File created** from the migrated TaxDome notes, on Lilian's ruling of the same day authorising them to be read. _(TaxDome notes, migrated — filed under Andrii Tymchenko; note dated 2026-04-07.)_ _(Worked by Lilian.)_
   - **2026-04-07 — the 2025 tax-organizer summary call.** Lilian went through the organizer with him by phone and recorded: they **left the United States on 2025-05-31**; the **company had no activity in 2025**; he uploaded a **driver's licence that expired in 2025**; there is **no P&L** because there was no activity; the **home-office document is last year's, not updated**; **school and health insurance for the children were free or subsidised**; **his wife and children were on Medicaid, not the marketplace**; for medical expenses he has only the **payment history for his insurance premium**, and a **1095-A was requested**; he **does not remember** whether he made estimated tax payments; and he **did not sell the car — he took it to Spain**. The conclusion recorded on the note: **as non-resident aliens for 2025 they had to file 1040-NR, and separately (MFS), as the IRS requires for non-resident aliens.**
 - **Nothing after 2026-04-07 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double (both client records — his and the spouse's separate one, 710640), Gmail (full history, "Tymchenko"/"TRUSTBURN"), Ping (`resolve_person` + `search_meetings` — zero results, no legible or garbled content found), Google Drive (multiple title queries) all checked. Established: the company's name (TRUSTBURN LLC), the spouse's separate Double record, a Form 4868 extension filed 2026-05-25, a contradiction on the 1095-A/health-coverage question between two internal sources (§5), and the 1095-A→1099-A document swap (see Outstanding items). Did not pursue a stray "ceo@semalt.com" cc on a 2024 return-delivery email further — noted only as a data point, not confirmed related.
 
 ### Tax year 2025 — the review
 
@@ -113,16 +118,18 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the health-coverage position before asking him for anything else.** The note requests a **1095-A** while recording **Medicaid** — those are inconsistent, and a 1095-A does not exist for Medicaid coverage.
+- 🔴 **Settle the health-coverage contradiction** between the migrated TaxDome note and native Double note 447824 (see §5) before asking him for anything else.
 - 🔴 **Establish where he is tax-resident now, and whether the firm still files for him at all.** He has been out of the US since 2025-05-31.
 - **Check the IRS account for 2025 estimated payments** rather than asking him again.
 - **Get a current photo ID** — the licence on file expired in 2025.
+- **Confirm which document is which** — on 2026-06-22 Lilian removed "1095-A.jpg" and created "2025 1099-A.pdf" in its place, in the "2026" custom folder. Form 1099-A (Acquisition/Abandonment of Secured Property) is a different form from 1095-A (health coverage) — worth checking which document this actually is.
 
 ### Information still needed
 
-- [ ] The company's name, state and whether it still exists / still owes filings
+- [x] The company's name and state — **TRUSTBURN LLC, a Florida LLC** (§1)
+- [ ] Whether the company still exists / still owes filings
 - [ ] Whether a state part-year return was owed for 2025
-- [ ] Whether the 2025 1040-NRs were actually filed, and when
+- [ ] Whether the 2025 1040-NRs/1040 (extended via Form 4868) were actually filed, and when
 - [ ] Current residence and tax-residency position
 - [ ] What else the firm does for him beyond the return
 

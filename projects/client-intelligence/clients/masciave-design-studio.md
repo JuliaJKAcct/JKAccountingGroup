@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -95,6 +95,10 @@ the actual details.
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
 - **Accountable plan (S-corp status):** home-office and vehicle-mileage costs are reimbursed to the owner through a formal accountable plan rather than run as a rent/company expense — tracked in a dedicated accountable-plan workbook (Drive). _(Drive — accountable-plan workbook, 2026-07-20 sweep)_
 - Q2 2026 client-facing financial reports were delivered to the owner on schedule. _(Gmail, 2026-07-20)_
+- An **off-cycle Gusto payroll run** was processed 2026-08-20, in addition to the regular biweekly AutoPilot run — (Gmail, 2026-08-20; no dollar figure recorded).
+- A **client-portal transaction question was resolved** by Lilian on 2026-08-20 — (Double activity log, 2026-08-22).
+- The **accountable-plan workbook** ("2026 Accountable Plan 2026 - Masciave.xlsx") was updated 2026-08-20 — (Google Drive, 2026-08-22).
+- The **"Studio Passwords" document** inside the vault folder already linked in §7 was modified 2026-08-20 — this may be the answer to the long-pending "credentials Drive link" item below — (Google Drive, 2026-08-22).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -124,12 +128,14 @@ the actual details.
   of 2026-01-14/08-13, nothing after that is recorded anywhere the firm can reach. No SOP exists yet
   for this client, so no SOP-proposal candidates were queued.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** New facts folded into §5. No update on the EIN/S-election case note (491846) — still last touched 2026-01-14/08-13 IRS-side, no hard deadline recorded but the unresolved S-election carries ongoing filing-validity risk. Deeper Double bank-feed history and FL sales-tax county confirmation not chased this run (budget).
+
 ### Outstanding items (CI-only — never in the SOP)
-- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — still no update this window, still open.
-- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — indirect positive signal (the Chase Credit Card reconciliation task closed as part of the June 2026 month-end close, done 2026-07-20) but no explicit confirmation yet.
-- Confirm the exact **FL sales-tax county / registration**.
+- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, ~5–6 weeks pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Comcast Masciave" did not find anything specific; the firm's own 2026-08-20 recurring-expense monitor names Masciave as having an unspecified "quick item to check" — may be this, unconfirmed.
+- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — not chased beyond the activity-log check this run, which showed no bank-feed-related entries.
+- Confirm the exact **FL sales-tax county / registration** — not chased this run (no registry-lookup tool available).
 - ~~Clarify the linked personal client (Double 710615)~~ — **resolved 2026-08-01:** Double's portal-contact record confirms the same contact carries both clientIds (706696 + 710615), i.e. it is the owner's individual 1040 engagement.
-- A **second Google Drive folder** also titled "Masciave Design Studio" (different parent folder than the one linked in §7) turned up in this sweep — confirm whether it's a duplicate/stale folder or a distinct working folder before relying on it.
+- A **second Google Drive folder** also titled "Masciave Design Studio" (created 2026-05-09, different parent folder than the one linked in §7, last modified 2025-12-12) — STILL confirmed to exist as of 2026-08-22; metadata alone could not establish whether it's a duplicate or a distinct working folder. Contents not opened.
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration

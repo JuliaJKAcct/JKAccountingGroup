@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -167,9 +167,9 @@ the actual details.
   same pattern as the duplicate-folder finding on Masciave.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — no confirmation seen as of 2026-08-01.
-- **New toll balance appeared** at Penn Credit after the last payment brought it to zero — log in and pay it down, and keep re-checking whenever a new collection letter arrives until the portal reads zero.
-- **Reconcile the payroll flag** _(and note the pause makes this live):_ Double marks payroll **N/A** for JK, but the company runs its **own Gusto payroll (biweekly)** — confirm this is employees-only and that JK has no payroll role here. **Update (2026-08-08):** the owner is now asking to cancel Gusto entirely (no current employees) — get a decision and update §4.
+- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~23 days pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Safe Guard Self Storage" did not find any results.
+- **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
+- **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL UNSETTLED. A broad review of **all** Gusto-sender emails received 2026-08-15 through 2026-08-21 (18 threads, across all firm clients) found **none mentioning "Deep Tech" or "Go Robots"** — no "payroll is late" reminders and no payroll-confirmation emails for this client appeared in that window, unlike the pattern seen 08-09/08-11/08-13 (three late-payroll reminders). This is new negative evidence but does not resolve the contradiction on its own — it could mean payroll was cancelled/paused, caught up, or that the notification pattern simply changed. Reported per the negatives rule: a search of Gmail (`from:gustonoreply@gusto.com`, `after:2026/08/15`) did not find any emails naming this client.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 - ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
@@ -179,7 +179,10 @@ the actual details.
   2026-08-14.)_
 - A **second "Deep Tech" Google Drive folder** (created 2026-08-10, different parent than the one
   linked in §7) turned up in this sweep — confirm whether it's a duplicate/stale folder or a
-  distinct working folder before relying on it.
+  distinct working folder before relying on it. Not re-chased this run (budget).
+
+### Log (continued)
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes/activity; the FDOR case note (491845) is unchanged since 2026-08-13. Chase pass on all five §6 items (deadline items first): the **USPS mail-forwarding-ending deadline is 2026-09-18 (27 days out)** — no evidence found that a renewal/address-change decision has been made; the Safe Guard Self Storage cancellation and the Penn Credit toll balance are both still open with no update; the FDOR Q2-2025-demand-withdrawal confirmation is unchanged since 2026-08-13; the Gusto cancellation decision remains UNSETTLED (see above — new negative evidence, not a resolution). The second "Deep Tech" Drive folder identity check was not re-chased this run (budget).
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration

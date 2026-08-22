@@ -1,6 +1,13 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent, awaiting response · **Owner:** Julia · **Last updated:** 2026-08-19
+> **Status:** Prospect — proposal sent, awaiting response · **Owner:** Julia · **Last updated:** 2026-08-22
+>
+> ⚠️ **Coverage gap, weekend sweep 2026-08-22:** this client has no Double account yet and is **not
+> named in `weekend-ci-sweep.md`'s scope or exclusion table** — a genuine gap found by this run's
+> coverage check (2b). A human needs to add a scope-table row once it becomes a signed client with a
+> Double record (see the routine's email for the flag). Checked this run: Gmail (bounded to
+> `after:2026/08/19`) and Google Drive only — Ping and Double were not searched (no meetings
+> expected there yet, no Double account).
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -164,6 +171,7 @@ link). Never write the credential itself here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-22 — **Weekend sweep (bounded, Gmail + Drive only since 2026-08-19).** A Zoom call titled "Dmytro Ostapenko Proposal Review" took place **2026-08-19** (recap email received 16:10 UTC) — Julia walked Dmytro through a comprehensive proposal for financial/accounting services; this is a **live proposal walkthrough with the owner**, not just an emailed PDF, and is new to this file's log (which previously only documented the proposal being "sent by email"). A separate, earlier Zoom call — **"Dmytro Ostapenko & JK Follow up - Accounting," 2026-08-17, 11:00 AM ET, Ping Assistant recording** — predates the proposal delivery by two days and likely fed into it; also new to this file. No reply from Dmytro Ostapenko or anyone at Kompozit was found in Gmail since 2026-08-19. No new Drive folder or document found for this prospect — the sensitive-vault Drive folder remains pending as already noted. The two Zoom-recap emails were not opened in full (only snippet summaries reviewed), so further detail from the 2026-08-17 follow-up call (which may contain scope/pricing discussion) was not extracted this pass.
 - 2026-08-19 — **Intake brief (dictated) + first draft proposal built and delivered.**
   Bilingual RU/EN monthly proposal on the tool: Strategic-tier base with the systems work
   bundled in (Odoo–QuickBooks integration owned by us, documented payment-application
@@ -201,6 +209,7 @@ link). Never write the credential itself here.
   went out 2026-08-19 with start "1st of the month after signing"
 - **Pricing settled** (2026-08-19): one all-in fee, controller included — decision recorded
   in §1 and the log
+- **Owner reply to the proposal** — STILL OPEN as of 2026-08-22 (3 days since the walkthrough call). A search of Gmail bounded `after:2026/08/19`, on 2026-08-22, for "Kompozit"/"Ostapenko" (in:inbox and in:sent) did not find a reply. Proposal is valid 30 days from 2026-08-19.
 
 ### Information still needed
 

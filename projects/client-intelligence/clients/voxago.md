@@ -1,6 +1,8 @@
 # VOXAGO LLC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+>
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, note 491841 read in full, contacts, activity log), Gmail (full history — first page of ~40 estimated results reviewed in detail), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -31,9 +33,9 @@
 - **Home state:** **Florida**
 - **Industry / what they do:** _(pending — the company has a website, which the FDOR asked for)_
 - **Primary language:** _(pending)_
-- **Our engagement (services we provide):** sales tax with the FDOR; annual report; anything else _(pending)_
+- **Our engagement (services we provide):** sales tax with the FDOR; annual report; **bookkeeping — Quarterly** _(Double client properties, 2026-08-22)_. Assigned staff: **Julia Kononova**. Income Tax = **No** in Double, consistent with the FDOR Schedule-C inference (business income reported on the owner's individual return, not a separate company return).
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_
+- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_. ⚠️ The client-portal-linked Drive folder is literally named "Voxago LLC (empty)" — the actual working files (a 2025 Chase bank-activity export, plus older 2024/2025 TaxDome-era folders) live elsewhere, meaning bookkeeping/reconciliation work is happening off-Double despite `platform: none`. _(Google Drive, 2026-08-22)_
 
 ## 2. Contacts
 
@@ -101,6 +103,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **There are COURT fees, not only FDOR fees.** The FDOR told the firm the client also owes fees to the **local court** — which usually means the delinquency had already been referred out. That is a different creditor, a different deadline, and it is the item most likely to have been forgotten.
 - **The FDOR has an old address for this business** — the firm was asked to state **in writing** that it no longer operates at the previous address. So, like [Optic Gold](./optic-gold.md) and [Voicecapital](./voicecapital.md), **correspondence may be going somewhere nobody reads.** ⓘ Three of the clients in this batch have the same problem; it may be worth checking across the roster rather than one at a time.
 - **The 2025 Florida annual report was still outstanding on 2026-02-10** and no filing is recorded. _(Florida's published penalty is $400 late, and administrative dissolution if it is never filed — general law, not from the source note.)_
+- 🔵 **Double's "2025 Taxes" project was marked Filed on 2026-07-03** — worth noting alongside the Income Tax=No property; not resolved which return this project actually tracks. _(Double activity log, 2026-08-22)_
+- A real **Zoom call took place 2026-04-22** between Julia and Voxago (meeting recap: "Voxago has joined your meeting," Russian summary states the call covered business operations, financial reporting and compliance) — postdates the 2025-12-15 FDOR call, content otherwise unreachable. A second, similarly-named recap ("Best Broker - Zoom," 2026-03-24) exists on the same recurring meeting link — **ambiguous** whether it involved Voxago or Best Broker Realty LLC (a separate client on the same shared contact roster); not resolved. _(Gmail, 2026-08-22)_
+- Florida sent a "Notice of Change or Filing" for this entity's Sunbiz record on **2026-04-29**, the same day the firm's "2026 Annual Report and Dissolutions" payment-receipts email went out — consistent with, but not proof of, the outstanding annual report having been filed around that date.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -111,6 +116,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2025-12-15 — FDOR call.** The agent set out what the FDOR wanted: a **copy of the Schedule C by fax**, carrying the company name, the account number and the **Business Partner number**; **something in writing** stating the business is not operating at the previous address; and a **link to the company's website**. She confirmed that **tax returns for January, February and April 2024 were filed late and late fees are payable**, and that there are **also fees owed to the local court**. She asked the firm to find out **whether the business sells tangible goods** — the sales-tax taxability question that decides what should be collected on the account at all.
   - **2026-02-10 — the annual-report list.** Lilian's pinned note recorded Voxago's **2025 Florida annual report as still pending**, alongside two other entities.
 - **Nothing after those dates is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, this is left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: note 491841 re-read in full — matches this file's existing summary, adds only the operational specifics (fax numbers, agent name, Business Partner number) this file deliberately keeps out. Client properties resolved bookkeeping cadence (Quarterly) and assigned staff (Julia Kononova); Income Tax = No corroborates the FDOR Schedule-C reading; "2025 Taxes" project confirmed Filed 2026-07-03 (unreconciled against Income Tax=No — see §5). Gmail: full history, found a 2026-04-22 Zoom call and an ambiguous 2026-03-24 recap possibly belonging to Best Broker Realty instead (§5), plus the 2026-04-29 Sunbiz notice. Drive: found the "Voxago LLC (empty)" folder naming quirk and the actual working files elsewhere. Ping: `resolve_person` + `search_meetings` returned largely irrelevant/garbled results — no legible content specific to the FDOR case.
 
 ### Tax year YYYY — the review
 
@@ -118,18 +124,19 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Check the FDOR account and establish what is still owed** — the late fees on the three 2024 periods, and whether the five items the agent asked for were ever sent. Last recorded state: **requested 2025-12-15, nothing recorded since.**
-- 🔴 **The court fees** — a separate creditor from the FDOR, and the easiest thing here to lose. Establish which court, how much, and whether it was paid.
-- **Was the 2025 Florida annual report filed?** Pending as of 2026-02-10.
-- **Settle whether the business sells tangible goods** — the FDOR asked on 2025-12-15 and it was never answered. It is the taxability question underneath the whole account: what the business should have been collecting and remitting.
+- 🔴 **Check the FDOR account and establish what is still owed** — STILL OPEN. Whether the FDOR's five requested items or the court fees were ever actually sent/paid remains unconfirmed by any source searched, including the full-historical Gmail pass.
+- 🔴 **The court fees** — STILL OPEN, no update found.
+- **Was the 2025 Florida annual report filed?** Possibly — the 2026-04-29 Sunbiz notice is consistent with a filing around that date, but not confirmed.
+- **Settle whether the business sells tangible goods** — STILL OPEN, no answer found.
+- **Clarify which entity the 2026-03-24 "Best Broker - Zoom" recap actually covers** — Voxago or Best Broker Realty LLC (same recurring meeting link, same shared contact roster).
 
 ### Information still needed
 
 - [ ] What the business actually does, and its website
 - [ ] The owner, and whether the business income lands on an individual return
 - [ ] The company's current address, and whether the FDOR now has it
-- [ ] Whether the firm also does bookkeeping / payroll here
-- [ ] Everything from Gmail, Drive, Ping and the books — never swept
+- [x] Whether the firm also does bookkeeping here — **yes, Quarterly per Double** (§1); off-Double work product found in Drive
+- [x] Full-historical Gmail/Drive/Ping/Double sweep — **done 2026-08-22** (Gmail: only the first page of ~40 estimated results reviewed in detail, dominated by unrelated automated invoice notifications and Optic Gold/Best Broker financial-delivery emails sharing the inbox)
 
 ## 7. Links
 

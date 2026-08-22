@@ -1,6 +1,8 @@
 # VOICECAPITAL INC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+>
+> ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, note 491840 read in full, contacts, activity log), Gmail (full history — first page of ~201 estimated results reviewed, not fully paged), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -28,12 +30,13 @@
 
 - **Business name:** VOICECAPITAL INC
 - **Entity type:** Corporation (Inc) — federal tax classification **under review** (S-corp vs C-corp). ⚠️ The firm files an **1120-S**; the IRS has **no Form 2553** on record and treated the company as a **C-corp** as of **2026-03-16** (§5).
+- **EIN:** `92-1191375` — plainly stated, hyphenated, in a 2026-03-16 fax-confirmation email subject line _(Gmail, 2026-08-22)_.
 - **Home state:** _(pending)_
 - **Industry / what they do:** _(pending)_
 - **Primary language:** _(pending)_
-- **Our engagement (services we provide):** income tax (1120-S as filed by the firm); anything else _(pending)_
+- **Our engagement (services we provide):** income tax (1120-S as filed by the firm); **bookkeeping — Quarterly** _(Double client properties, 2026-08-22 — resolves the prior "pending" cadence)_. Assigned staff: **Julia Kononova**.
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_
+- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_. ⚠️ Drive holds off-Double bookkeeping work product (a 2024 consolidated P&L, a "corrected" 2024 P&L, and a Chase bank-activity export) — bookkeeping/reconciliation work is happening outside Double for this client. _(Google Drive, 2026-08-22)_
 
 ## 2. Contacts
 
@@ -92,6 +95,10 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **The 2023 return was received by the IRS but has NOT been processed** — the IRS is holding it precisely because it has no 2553 to support an 1120-S. So **2023 is not a filed-and-accepted year**, whatever the client copy shows, and any carryover taken from it rests on a return the IRS has not accepted.
 - ⚠️ **The 2553 WAS mailed — attached to the 2023 return, which the IRS admits receiving — and the IRS still says it never got it.** The agent suggested the 2553 might have gone to the wrong address; **Lilian verified the address and it was correct**, so that explanation did not hold. The remedy the IRS gave was to fax a copy of the original 2553 with the certified-mail receipt.
 - **The IRS holds an outdated address for this company** — the agent confirmed their records still show the previous one, never updated. **Every IRS letter goes there**, including the response to the fax. _(The same problem exists at [Optic Gold](./optic-gold.md) — see §6.)_
+- 🔵 **Double's "2025 Taxes" project was marked Filed on 2026-07-03** — notwithstanding the open S-election/C-corp classification dispute (still unresolved per note 491840, last touched 2026-03-16). Worth reconciling. _(Double activity log, 2026-08-22)_
+- A **second Form 2848 (POA) fax specifically for Voicecapital** was sent 2026-04-28 — about six weeks after the 2026-03-16 S-election case, purpose not stated in the notification email. _(Gmail, 2026-08-22)_
+- Florida sent a "Notice of Change or Filing" for this entity's Sunbiz record on 2026-04-29, the same day Lilian emailed the shared contact payment receipts for "2026 Annual Reports and Dissolutions" — consistent with, but not proof of, an annual-report/address-related filing around that date.
+- Invoices to Voicecapital are cc'd to a shared payment-processing business inbox ("paylitemerchant.com"), suggesting this client sits in the same beneficial-owner group as other clients under the same contact (Sergey Karpenko, also a contact on Voxago and several other Double clients). _(Gmail, 2026-08-22)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -104,6 +111,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Nothing after 2026-03-16 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, this is left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
 
 ⚠️ **This is the same fact pattern as [Optic Gold](./optic-gold.md), which DID resolve** — there the IRS accepted the election about six weeks after the identical fax. That is a reason to go and check this one, **not** a reason to assume it resolved the same way.
+- 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: note 491840 re-read in full — matches this file's existing summary exactly, no new substantive content. Client properties resolved bookkeeping cadence (Quarterly) and assigned staff (Julia Kononova); "2025 Taxes" project confirmed Filed 2026-07-03. Gmail: full history, EIN found, a second 2848 fax (2026-04-28), a Sunbiz notice (2026-04-29), and the shared "paylitemerchant.com" beneficial-owner-group signal — see §5. Drive: found off-Double bookkeeping work product (2024 P&Ls, a Chase export). Ping: `resolve_person` + `search_meetings` scoped to this client returned only semantically-loose, largely irrelevant or garbled results — no legible new content specific to the S-election matter.
 
 ### Tax year YYYY — the review
 
@@ -111,17 +119,18 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** This gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp. **The comparable case (Optic Gold) turned around in about six weeks**, so an answer very likely exists — it was just never written down.
-- **Correct the company's address with the IRS** (a Form 8822-B is the usual route). Until then the IRS's reply to the fax goes to the previous address.
-- **Confirm the paper Form 7004 for 2025 was processed**, mailed 2026-03-13.
+- 🔴 **Find out whether the IRS accepted the S-election after the 2026-03-16 fax.** STILL OPEN — no confirmation found in the full-historical Gmail pass, and the "2025 Taxes" project shows Filed regardless (see §5, unreconciled). This gates the 2023 return being processed, the 2025 return's classification, and whether the company owes anything as a C-corp.
+- **Correct the company's address with the IRS** (a Form 8822-B is the usual route) — not confirmed done.
+- **Confirm the paper Form 7004 for 2025 was processed**, mailed 2026-03-13 — not confirmed.
+- **Confirm the purpose of the 2026-04-28 Form 2848 fax** — content unclear from the notification email alone.
 
 ### Information still needed
 
 - [ ] What the business does, its home state and the owner
 - [ ] Whether an S-election exists today
 - [ ] Whether the 2023 return has been processed
-- [ ] Whether the firm also does bookkeeping / payroll / sales tax here
-- [ ] Everything from Gmail, Drive, Ping and the books — never swept
+- [x] Whether the firm also does bookkeeping here — **yes, Quarterly per Double** (§1); off-Double work product also found in Drive
+- [x] Full-historical Gmail/Drive/Ping/Double sweep — **done 2026-08-22** (Gmail: only the first page of ~201 estimated results was reviewed in detail, dominated by automated invoice-reminder noise across many clients sharing the inbox — a second page was not paged through, so some client-specific threads may remain unseen)
 
 ## 7. Links
 

@@ -1,6 +1,6 @@
 # Kolo Florida Inc
 
-> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-19
+> **Status:** 🛑 **CLOSED — the company has closed; only the final 2025 Form 1120-S remains** (Lilian, 2026-08-17) · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -551,6 +551,7 @@ the actual details.
   all**, and the equivalent figure on its Schedule M-2 must be checked digit by digit for the same
   keystroke — there it would show up as the accumulated-adjustments balance no longer agreeing with
   the balance sheet.
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double's "2025 Taxes" project status moved **In Progress → Filed on 2026-08-20** (Lilian); new Double properties now show **Signature = Signed**, **Invoice = Sent**, **Financials Ready = In Progress**. The signed return attachment "KOLOFLORIDAINC2025.pdf" was moved into a "2025" folder 2026-08-20, associated with a `signedSignatureRequest` transaction — consistent with the client e-signing around that date. Three 2025 financial-statement exports (GL, Balance Sheet, P&L) were saved into a Double "Financial docs for tax prep" folder the same day. 🔴 **A contradiction surfaced — see the Wind-down checklist above**: the "payroll stopped" statement (2026-08-14) versus active Gusto payroll-due notices dated 2026-08-18 and 2026-08-20. The firm's recurring-expense monitor again confirmed on 2026-08-20 that the QuickBooks connection remains down. Not chased this run (budget): whether the BAI-branded lines are Kolo's own stock; whether the warehouse lease is still running.
 - 2026-08-20 — **THE RETURN REPORTS THE SHAREHOLDER ACCOUNT NET — JULIA's decision, relayed by
   Lilian, and it is FIRM POLICY rather than a ruling on this one return.** Where a shareholder's
   contributions for the year exceed their distributions, the two are netted and distributions
@@ -598,8 +599,8 @@ the actual details.
   still open beside them are under 4% of the total. _(Worked by Lilian.)_
 
 ### Wind-down — what has to be closed (CI-only)
-- [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account.
-- [ ] **Gusto subscription** — the client's own payroll platform; cancel.
+- [ ] **Florida sales-tax account** — file July 2026 (Lilian), then close the FL DOR account. Not confirmed done: a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for FL DOR/sales-tax correspondence did not find anything.
+- [ ] 🔴 **CONTRADICTION — Gusto subscription cancellation, unconfirmed.** §4 states payroll STOPPED (Lilian, 2026-08-14) and that the Gusto subscription is to be cancelled. Against that: **Gusto sent an active "Run KOLO FLORIDA INC's payroll" reminder on 2026-08-18** (pay period Aug 8–14, 2026) and an **"Action required: Payroll is late for KOLO FLORIDA INC"** notice on **2026-08-20**, both addressed to julia@jkaccountinggroup.com and kolofloridainc@gmail.com — (Gmail, 2026-08-18 and 2026-08-20). Both sources reported as-is, not resolved — worth reconciling with Lilian/the client before the Gusto cancellation proceeds, since either the "stopped" statement or the live Gusto notices is stale.
 - [ ] The remaining systems in §3 — Shopify, the Florida DOR e-Services access, GovFile, TaxDome
       (legacy) — decide for each whether it closes with the company or belongs to the owner.
 - [ ] **City of Lauderhill Certificate of Use / BTR** (valid through 2026-09-30) — confirm whether a

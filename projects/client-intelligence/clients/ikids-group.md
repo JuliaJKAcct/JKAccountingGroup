@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -275,10 +275,7 @@ the actual details.
 - ⚠️ **The QuickBooks bank feed has been disconnected since 2026-07-20** — reconnect it and
   backfill the gap. Everything downstream (the close, the reports we send the client, any review)
   is capped at that date until it is done. Also worth finding out **why** it dropped.
-- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — nobody has verified it.** A bookkeeping task
-  also showed overdue in June. **Confirm the return status**, because this is the item with the
-  largest downside on the list: a partnership that turns out not to be extended accrues
-  failure-to-file penalties **per partner, per month**.
+- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
   three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
   is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client
@@ -286,7 +283,7 @@ the actual details.
   third individual's name (§5) — check it against the Operating Agreement; it may close, or narrow,
   this question and the one below.
 - **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in
-  **May 2026** via the outside CAA. Confirm the ITINs were actually issued.
+  **May 2026** via the outside CAA. STILL OPEN, ~3+ months pending. Confirm the ITINs were actually issued; a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, found nothing.
 - **Five decisions are waiting on Julia**, all from the 2026-08-14 categorization work and none of
   them safe to decide in a session — **none is urgent, which is why they sit below the four
   above**: whether to start using **Bills / Accounts Payable** (with no A/P in the chart, a
@@ -332,9 +329,10 @@ the actual details.
   at opening). Julia to prepare a written proposal/estimate; nothing here is part of the current
   engagement in §4 until it is signed.
 - **Confirm the identity of the new no-portal-access contact** registered 2026-08-10 (a
-  "contractor" role in Double) — settle whether this is the CFO already documented in §2, or a
-  separate operational contact, before writing anything further about "the CFO" that may actually
-  describe two different people.
+  "contractor" role in Double) — Double contacts now name him **Sergey Yalansky** (2026-08-22), who attended the 2026-08-13 engagement-scoping meeting. STILL unconfirmed whether this is the CFO already documented in §2, or a separate operational contact.
+
+### Log (continued)
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-10→2026-08-22; Ping not searched, per standing note).** Double `list_projects` confirms the "2025 Taxes" project is still `notStarted` with `filedAt: null` — this bears on (but doesn't settle) the unverified 1065-extension item. The new no-portal-access contact registered 2026-08-10 is named Sergey Yalansky (Double contacts). Chase pass: QuickBooks bank-feed disconnection (since 2026-07-20) still open, now 33 days, no deadline — Double shows the Double↔QBO API connection as "connected", which does not confirm the underlying bank feed is reconnected; the 1065-extension question and both members' ITIN applications remain open (ages above). Not chased this run (budget): the third member's US tax status; signed status of the proposed engagement expansion; W-9 sweep status; the five decisions waiting on Julia.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_

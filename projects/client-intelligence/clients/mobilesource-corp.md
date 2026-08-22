@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -119,12 +119,14 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
   FL DOR audit, on which no new correspondence appeared this window). No new Double notes. Ping
   had no indexed meetings for Mobilesource or the owner in this window.
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 30 activity-log entries, all 2026-08-17/18, routine July close + biweekly payroll task completions. Gmail: the FL DOR sales-tax audit escalated materially — see outstanding items. Chase pass: USDT deposit still open; the four "Maria's guide" items and fiscal year-end not chased this run (budget).
+
 ### Outstanding items (CI-only — never in the SOP)
-- **June 2026 reports:** buyback miscategorizations were resolved and the reports were sent 2026-07-24 — this item is now closed. _(Gmail, Double activity log)_
-- **2025 business income-tax prep in progress** — reconcile the client-portal organizer state. _(Gmail)_
-- **FL DOR sales-tax audit confirmed underway** (was: "possible account/notice matter to watch" from a mid-2026 encrypted exchange) — a Florida Dept. of Revenue tax auditor reached out (cc'ing Julia) saying they are closing prior audits and will follow up soon. Watch for further audit correspondence. _(Gmail, 2026-07-27)_
-- **Open in Maria's guide:** dispute case on file; an employee I-9 in Gusto; a credit memo; commission payments for the skipped contractor; a request to remove/adjust pending payments. _(Maria's doc guide)_
-- A USDT-related deposit flagged pending to clear in QuickBooks, 2026-07-23 — follow up next sweep.
+- **June 2026 reports:** closed. _(Gmail, Double activity log)_
+- **2025 business income-tax prep in progress** — not chased this run (budget).
+- 🔴 **FL DOR sales-tax audit — ESCALATED.** On 2026-08-20 the auditor sent a detailed written list of questions about P&L transactions, specifically buyback-program processing (shipping vs. in-store carrier pickup); the client's GM (Amalia) replied same-day with explanations, cc'ing the President. This is substantive, not dormant — recommend a full read of the attachment thread next sweep. No stated deadline for further response found in the snippet. _(Gmail, 2026-08-20)_
+- **Open in Maria's guide:** dispute case, employee I-9, credit memo, skipped-contractor commissions, pending-payment removal — not chased this run (budget).
+- USDT-related deposit flagged pending 2026-07-23 — STILL OPEN, 30 days pending, no follow-up found confirming it cleared.
 
 ### Information still needed
 - [ ] Fiscal year-end; sales-tax registration detail

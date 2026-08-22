@@ -1,6 +1,6 @@
 # SENSUSTECH LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -90,6 +90,7 @@ doc guide** in Drive (§7) — never copied here.
 - **Sub-CC 4800** is entered **manually** (cannot connect to QBO).
 - **Fast Uncat turnaround** — the owner resolves Uncategorized items quickly; use Uncat rather than mis-categorizing.
 - **Crypto / USDT exposure** noted in prior sweep — confirm against the brokerage/statement flow. _(Gmail — to reconcile)_
+- **Cross-company cash coordination within the tech owner-group:** on 2026-08-21 the Mobilesource GM sent this client's CEO a "USD Funds" pending-deposit position update — beyond the documented Lumetro loan, some cash-position coordination happens across the group's entities. _(Gmail, 2026-08-21)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -115,14 +116,16 @@ doc guide** in Drive (§7) — never copied here.
   standing Gusto → QBO mapping-sync issue (due 2026-08-12) had one more reminder on 2026-08-11
   with no follow-up confirming a fix (updated in §5). Ping had no indexed meetings for Sensustech
   or the owner in this window.
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 notes, 0 activity-log entries despite the client `updatedAt` field showing 2026-08-17T16:30:45Z — cause not determined. Gmail: on 2026-08-21 the Mobilesource GM sent this client's CEO a cross-company "USD Funds" pending-deposit position update — indicates operational/cash coordination across the tech owner-group beyond the documented Lumetro loan; folded into §5 as a note, not a new intercompany loan. Chase pass on all six §6 items — results above.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **External financial audit (mid-2026):** an outside auditor requested financials; the owner opted to provide tax returns in lieu of audited financials — **handle related requests discreetly**. _(Gmail)_
-- **June reports pending** final expense categorization (external categorizer). _(Gmail, 2026-07)_
+- **External financial audit (mid-2026)** — not chased this run (budget).
+- **June reports pending** final expense categorization — not chased this run (budget).
 - Confirm **home state** and a definitive primary language.
-- Reconcile the **crypto/USDT** note against the managed-brokerage statement flow.
-- **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) exists alongside the original 2023 vault folder — consolidate. _(Drive, 2026-08-01)_
-- **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft, given the Organizer Status property reads N/A (BK client). _(Double, 2026-08-01)_
+- **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now 10 days past its due date. A general Gusto "weekly task reminder" arrived 2026-08-18 but does not name this client specifically, so it cannot confirm resolution either way.
+- Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
+- **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-15 found nothing addressing consolidation.
+- **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft — not chased this run (budget).
 
 ### Information still needed
 - [ ] Home state; fiscal year-end

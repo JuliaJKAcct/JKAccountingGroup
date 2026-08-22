@@ -1,6 +1,6 @@
 # OPTIC GOLD INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-15
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes, contacts, properties), Google Drive (folder + file listing) and
@@ -82,7 +82,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Agency & portal:** _(pending)_
 - **Form:** _(pending)_
 - **Our role:** _(pending)_ <!-- we file / we prepare, client files / client handles -->
-- **Current status:** _(pending)_
+- **Current status:** July 2026 sales-tax report filed and paid _(Gmail + Google Drive, 2026-08-18/19)_.
 - **Process notes (→ future SOP):** _(pending)_
 
 ### Payroll
@@ -161,15 +161,17 @@ A running, dated record as we build this profile.
 
 - _(pending)_
 
+- 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax filed and paid (Gmail + Drive, 2026-08-18/19). August month-end close moved Not Started → In Progress; "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above; context found on the Sunbiz notice pattern but the 2026-08-07 notice itself remains unopened.
+
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **Correct the company's address with the IRS.** Open since **2026-03-16**, when the outdated address was discovered, and **nothing has been filed** (a **Form 8822-B** is the usual route). Until it is done, every IRS letter for this client goes to the old address. **Confirm first what address the IRS currently holds and what the correct one is** — the note establishes only that the one on file is the *previous* one.
-- 🔴 **NEW — open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978). It has sat unread/starred since it arrived; given the live IRS-address matter, it needs to be checked for what actually changed on the state record.
-- **Confirm the IRS processed the paper Form 7004 for 2025**, mailed 2026-03-16. A prepared copy exists in Drive (dated 2026-04-13), but nothing confirms the IRS received or processed it — the extension remains **unconfirmed**, not known-good.
-- **What the business actually does, and its home state, are still unknown** — not established by Gmail, Double or Drive in this sweep. Payroll also remains **TBD** in Double.
+- 🔴 **Correct the company's address with the IRS (Form 8822-B).** STILL OPEN, **159 days** pending since 2026-03-16. A targeted search for "Optic Gold" + (8822 OR address OR 7004) found no filing or correspondence.
+- 🔴 **Open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978) — STILL OPEN, **15 days** pending since 2026-08-07, still shows as starred/unread in Gmail. A targeted search found no reply or action thread after the original notice. Context found this sweep: the same document number generated two earlier "Notice of Change or Filing" emails with an identical subject line, dated 2026-04-29 and 2025-02-12 — distinct from an explicitly-labeled 2025 Annual Report filing notice also on file (2025-02-08). This establishes the template recurs periodically; it does **not** establish what changed on 2026-08-07 — the notice still needs opening.
+- **Confirm the IRS processed the paper Form 7004 for 2025** — STILL OPEN, same targeted search found no confirmation.
+- **What the business actually does, and its home state** — not chased this pass (deferred to prioritize the three named items above; no natural search target). Payroll also remains **TBD** in Double.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit
