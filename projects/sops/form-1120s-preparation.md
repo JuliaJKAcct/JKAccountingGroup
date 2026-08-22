@@ -206,6 +206,8 @@ and that is deliberate — see §3.
 - [ ] **The GENERAL LEDGER for the year** — the one report that answers "what actually happened
       in this account", which no P&L or balance sheet can. Get it once, for every account, rather
       than returning for accounts one at a time.
+      🔴 **On a SHORT-PERIOD return it stops being a supporting document and becomes the ONLY source
+      that works** — a P&L cannot be cut at a date, and the ledger can. **See §5B-i part 4.**
 - [ ] **Confirmation that Form 7004 (the extension) was filed**, if you are past 15 March.
 
 > ⚠️ **Check the BASIS printed on every export, and check that they agree with each other.**
@@ -508,7 +510,7 @@ is a stop sign and the other is a lead.)_
 
 | Line | What it is | Formula, or where you read it |
 |---|---|---|
-| **1a** | Gross receipts or sales | ƒ `= sales revenue accounts − discounts given + shipping income charged to customers` |
+| **1a** | Gross receipts or sales | ƒ **built account by account — see 5B-i, which is the whole method.** The one-line version: `= every trade-or-business revenue account, INCLUDING the ones that look like pass-throughs, MINUS every contra-revenue account`. ⛔ **Never read a P&L subtotal** |
 | **1b** | Returns and allowances | 📖 read · the refunds-to-customers account |
 | **1c** | Balance | ƒ `= 1a − 1b` · ✅ equals the P&L's total income **less anything in it that belongs on Schedule K** (interest, dividends, capital gains) |
 | **2** | Cost of goods sold | 📖 Form 1125-A line 8 |
@@ -520,6 +522,91 @@ is a stop sign and the other is a lead.)_
 > ⚠️ **Line 5 is NOT "everything else on the P&L".** Interest income, dividends and capital
 > gains are **portfolio income** and go on **Schedule K**, not here. If you put bank interest
 > on line 5 you have understated Schedule K and overstated ordinary income.
+
+### 5B-i · 🔑 How to BUILD line 1a from a Profit & Loss — the account-by-account method
+
+**This section exists because a preparer looked at a real P&L, looked at the figure on line 1a, and
+could not get from one to the other** _(Lilian, 2026-08-22)_. The old one-line formula named three
+things — sales, discounts, shipping — and a real P&L has accounts that are none of them.
+
+#### 1 · Start at `Total for Income`, never at `Total for Sales`
+
+🔴 **The subtotal named after sales is the single most misleading number on a QuickBooks P&L.** It is
+the total of **one parent account and its sub-accounts** — and a contra-revenue account sitting at
+the *same indent level*, one row above it, is **outside** that subtotal while still being **inside**
+`Total for Income`.
+
+*(Invented illustration — the shape, not any client's figures.)*
+
+```
+Income
+    Discount                  (4,000)   ← same level as Sales, OUTSIDE "Total for Sales"
+    Sales                    200,000
+        Cash Sales                 0    ← sub-account, INSIDE "Total for Sales"
+    Total for Sales          200,000    ⛔ reading this as revenue overstates by the 4,000
+    Service charge income      5,000    ← outside it too
+    Tips                      15,000    ← outside it too
+Total for Income             216,000    ✅ THIS is the block line 1a is built from
+```
+
+🛑 **So: never copy a subtotal. List the accounts and add them yourself**, then prove the total by
+agreeing to `Total for Income`.
+
+#### 2 · Put every income account through three questions
+
+| # | Question | If yes |
+|---|---|---|
+| **1** | Does it belong on **Schedule K** instead? *(interest, dividends, capital gains, rental income)* | ⛔ **Out of line 1a entirely** — §5B's warning above |
+| **2** | Is it **contra-revenue** — a discount, an allowance, a package redemption? | ✅ **Inside line 1a, as a SUBTRACTION.** ⛔ **Not on line 1b** — 1b is *returns and allowances*, meaning refunds of money to a customer |
+| **3** | Everything else: is it money the business **took in for its own account**? | ✅ **Inside line 1a** |
+
+#### 3 · ⚠️ The accounts that look like pass-throughs, and are not
+
+**A revenue account is not excluded because the money "belongs to someone else" in spirit.** The test
+is whether the **company collected it**:
+
+| Account | In line 1a? | The rule, and the thing to check |
+|---|---|---|
+| **Tips** collected through the company's own system and paid on to workers | ✅ **Yes** | 🔴 **And then GO AND FIND THE PAYOUT.** If the tips are income and the payout is not deducted anywhere, ordinary income is overstated by the whole of them. **Check whether the payout is booked separately or is buried inside a wages / contract-labour account** — and say which you found |
+| **Card surcharges charged to the customer** *(a "bank fees income" account)* | ✅ **Yes** | The processor's fee is a **separate deduction**. ⛔ Never net the two — that is the same gross-not-net rule as §5C-ii |
+| **Shipping charged to the customer** | ✅ **Yes** | The carrier's cost is a separate deduction |
+| **Sales tax collected** | ❌ **No, under the net method** | §5C-ii — the company is a collection agent. ⚠️ Under the **gross** method it *is* in revenue and the remittance is deducted. **Both, or neither** |
+
+#### 4 · 🛑 A P&L FOR A DIFFERENT PERIOD THAN THE RETURN CANNOT BE THE SOURCE — ONLY THE LEDGER CAN
+
+**A summary report cannot be cut at a date.** A short period — a **terminated S election (§1362(e))**,
+a first year, a final year — needs revenue **as of a day inside the year**, and no P&L, balance sheet
+or trial balance can give it. **Only the general ledger can**, because only it carries a date on every
+row.
+
+**So on any short-period return:**
+
+1. **Build line 1a from the GENERAL LEDGER**, summing each revenue account's transactions up to and
+   including the last day of the period.
+2. **Then use the P&L to PROVE it**, with this identity:
+   ```
+   the period's figure  +  what falls after the cut  =  the P&L's Total for Income
+   ```
+   ⚠️ **If it does not agree to the cent, an account was missed** — most often one whose entries are
+   all quarterly journal entries and therefore easy to overlook.
+3. 🔑 **Ask which accounts move at all.** Where revenue is trued up **quarterly** from an outside
+   system, the true-up accounts are identical in both figures and **only the bank-fed account
+   differs.** That is a useful check and a warning at once — see below.
+
+#### 5 · 🔴 THE TRAP THIS RETURN FOUND: a cut that lands where the true-ups stop
+
+**When revenue is reconciled to an outside system periodically — quarterly Vagaro/Square/Shopify
+true-ups — the months after the last true-up carry ONLY what reached the bank.** No cash sales, no
+tips, no surcharges, no discounts. **The expenses for those months are complete, because they are
+bank-fed.** So the tail of the year shows **full costs against partial revenue**, and the return
+understates income by an amount nobody can see on the face of the P&L.
+
+🛠️ **The detection, and it costs one division:** compute the **payout ratio** *(the main cost of
+sales — contract labour, commissions — divided by revenue)* **for each trued-up quarter and again for
+the untrued-up tail.** A tail ratio well above the trued-up quarters is the signature.
+⛔ **Do not "fix" it by estimating the missing revenue** — get the outside system's report for the
+untrued-up period and rebuild it the way the other quarters were built. **If it cannot be obtained,
+say the figure is understated and by roughly how much, rather than presenting it as complete.**
 
 ### 5C · Deductions — lines 7 to 21
 
