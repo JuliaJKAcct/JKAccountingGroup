@@ -349,9 +349,9 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 1b and 6 to 10 below, which are what she has had to ask for since.**
+> and parts 1b, 1c and 6 to 10 below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all ten parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all twelve parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -366,7 +366,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The ELEVEN things every delivery carries
+### The TWELVE things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
@@ -451,6 +451,36 @@ an assumption too. **Settle the split before step 4, not after.**
 it.** On a **partnership there is no AAA at all**: the entity-pool row has no meaning, and a
 distribution is tested against **outside basis** under **§731**. **The owner-basis half travels; the
 pool half does not.**
+
+
+**1c · 🔑 EVERY SCHEDULE THAT RECONCILES — the M-2, the M-1, the basis form — IS DELIVERED WITH WHAT
+IT MEANS, NOT ONLY WHERE ITS NUMBERS CAME FROM.**
+
+**Lilian's standing instruction (2026-08-23):** *"necesito que me hagas esta explicación y detalles
+bien de dónde sale cada número que va en cada columna y qué significa ese número. No simplemente de
+dónde sale, sino qué significa esto o cuál es el objetivo de este Schedule."* — and her reason:
+*"tengo muy poca experiencia y conocimientos en tax returns, sobre todo de compañías."*
+
+🔑 **A line table alone teaches nobody.** Someone who is handed *"line 5 = 1,250, from Schedule K
+16c"* ⓘ *(invented, like every figure in this skill)* can key it and still not know what they have done, cannot spot it when it is wrong, and cannot
+answer a client. **So a reconciling schedule gets three things, in this order:**
+
+1. **WHY THE SCHEDULE EXISTS AT ALL** — the problem it solves, in plain words, **assuming no
+   accounting background**. *(The worked one is [§10.0 of the 1120-S SOP](../../../projects/sops/form-1120s-preparation.md)
+   — an S corporation's owners pay tax on profit they may never have received, so the company keeps a
+   tally of which money has already been taxed. Everything on Schedule M-2 follows from that.)*
+2. **WHAT EACH MOVEMENT MEANS** — for every line, not just where the figure is read from but **why it
+   moves the account that way**, and what it would mean if it did not.
+3. **THE FORMULAS AND THE TIE-OUTS** — what equals what, and which figure feeds which other schedule.
+
+⚠️ **And name the traps in the meaning, not only in the arithmetic:** what the account is NOT, which
+neighbouring concept it is confused with, and which way round the confusion runs. **On the M-2 that
+is: the AAA belongs to the company and basis belongs to a person; and the AAA decides presentation
+while basis decides tax** — ⓘ **which holds for an entity with no accumulated earnings and profits;
+where there ARE any, the AAA also decides whether a distribution becomes a dividend.**
+
+🛑 **This is not a "nice to have" and it is not conditional on being asked.** It applies to the M-2,
+the M-1, the basis form and any state equivalent — **every time, for every client.**
 
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
