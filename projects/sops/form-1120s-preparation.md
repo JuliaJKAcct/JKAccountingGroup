@@ -60,6 +60,45 @@ preguntar")_. **The entry point for a live return is
 
 ---
 
+## §0C · 🗺️ THE MAP OF THE FORM — which page every schedule is on
+
+**Read this before hunting for a line.** Form 1120-S is **five pages**, and **two** of its schedules —
+**Schedule B and Schedule K** — are **split across a page break**, which is the single commonest reason
+a preparer decides a line "is not on the form". ⓘ **Schedule L and the two M schedules are not split;
+they simply do not get pages of their own.**
+
+| Page | What is on it | Lines |
+|---|---|---|
+| **1** | **The header** (name, address, EIN, items **A–J**) · **Income** · **Deductions** · the result · tax and payments · the **signature** | 1a–6 income · 7–21 deductions · **22 ordinary business income** · 23–27 tax and payments · **28 refund / direct deposit** ⚠️ *(28c–28e are the routing number, account type and account number — page 1 does not stop at 27)* |
+| **2** | **Schedule B** — *Other Information* | questions **1 to 11** |
+| **3** | **Schedule B *(continued)*** at the top — then **Schedule K BEGINS** below it | B: **12 to 17** · K: **1 to 16f** |
+| **4** | **Schedule K *(continued)*** at the top — then **the whole of Schedule L** | K: **17a, 17b, 17c, 17d, 18** · L: **1 to 27** |
+| **5** | **Schedule M-1** and **Schedule M-2**, one above the other | M-1: 1–8 · M-2: 1–8 |
+
+🔑 **Three things the page layout does, and each costs time the first time:**
+
+1. **Schedule B is split.** Questions 1–11 on page 2, **12–17 on page 3**. The 1099 question (14a/b)
+   is on page 3, not with the rest.
+2. **Schedule K is split.** Lines 1–16f on page 3, **17a–18 on page 4**. ⚠️ **This is why line 17d
+   and line 18 "cannot be found"** — they sit on a different page from the Schedule K everyone knows.
+3. **Schedule L has no page of its own.** It shares page 4 with the tail of Schedule K. And **M-1
+   and M-2 share page 5** — both of them, stacked.
+
+🛠️ **How to navigate it in the software, rather than trusting this table:** every page carries its
+number **printed in the top-right corner of the form face** (`Form 1120-S (2025) … Page 4`). In **ATX** the page buttons sit at the bottom of the
+form window next to a **`Pages & Worksheets`** control that lists every page *and* every supporting
+worksheet; other forms-based programs have an equivalent, under their own name.
+
+⚠️ **Check this map against the year you are filing.** The IRS moves content between pages, exactly
+as it renumbers Schedule B's questions (§6). _(Verified against the **2025** `f1120s.pdf` from
+irs.gov, 2026-08-23.)_
+
+🔑 **And this is a DELIVERY rule, not just a reading aid: every line table handed to a preparer
+names the page it is on.** A table headed *"Schedule K"* sends someone to page 3 for a line that is
+on page 4.
+
+---
+
 ## §0A · Where every number comes from, and where it goes
 
 **Read this before anything else.** Almost every mistake on a first return is a number taken
@@ -1454,6 +1493,18 @@ one owner's slice of it.
 | **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c.** 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
+> 🛠️ **HOW LINE 17d IS ENTERED, because the box on the form face is often greyed out.** 17d is not one
+> amount — it is *"Other items and amounts (attach statement)"*, a container holding several unrelated
+> items, **each with its own K-1 code letter**. So a cell that refuses a number here is the software
+> working correctly: it wants the items on a **detail or statement screen**, not a total typed on the
+> form. ⚠️ **Which screen — one reached from Schedule K, or the code rows on each shareholder's K-1
+> box 17 — is exactly what §11A's two-minute test settles, and it differs by program.**
+> 🛑 **Whichever it is, enter it in ONE place only** (§11A): keyed at entity level *and* on the K-1s, a
+> program that allocates reports it twice and raises no diagnostic. ✅ **Then verify:** Schedule K
+> line 17d must equal the sum of that code across the K-1s.
+> ⛔ **And the form's sub-line "d" is unrelated to the K-1 code letter "D"** (*Basis of energy
+> property*).
+
 ---
 
 ## §8 · Schedule L — the balance sheet
@@ -1534,6 +1585,81 @@ make.)_
 
 ---
 
+### 8C · 🔑 BUILD SCHEDULE L FROM THE LEDGER'S ACCOUNT BALANCES — and NAME the lines that are zero
+
+**Schedule L is the one schedule where the risk is not a wrong number — it is a right number on the
+wrong line.** The balance sheet still balances internally when an account is misplaced *within* a
+side, and it fails by a puzzling amount when it crosses sides. So build it as a **mapping exercise**,
+not by copying figures down a page.
+
+**The method, in four steps:**
+
+1. **List every balance-sheet account in the ledger, with its balance at the period end.** Assets,
+   liabilities, equity — all of them, including the ones at zero.
+2. **Assign each account to a Schedule L line**, writing down *which* line and *why*. An account
+   nobody can place is a question, not a rounding difference.
+3. **Type only the component lines.** ⚠️ **Lines 15 and 27 are COMPUTED** — `15 = sum of 1–14`,
+   `27 = sum of 16–26` — and the software will not let you type them. **Page 1 item F** is computed
+   from line 15 too. A preparer who "cannot type Total assets" has not hit a bug.
+4. **A line reading *(attach statement)* is not a line you type either** — you type its **components
+   on a detail screen** and the software totals them onto the form and builds the statement. On
+   Schedule L that is **lines 6, 9, 14, 18, 21 and 25**.
+
+> 🛑 **AND THE TABLE YOU HAND THE PREPARER LISTS THE ZERO LINES EXPLICITLY.** A Schedule L table that
+> shows only the lines carrying an amount looks complete and is not: the reader goes looking for
+> where their remaining account belongs, finds a plausible-sounding line the table never mentioned,
+> and puts it there. **Say `0` and say why** — *"line 3 Inventories — 0, a service business"* — or at
+> minimum state once that **every line not listed is zero**. _(This was a real failure: a table that
+> silently omitted line 7 sent a number to line 7.)_
+
+#### ⚠️ Line 7 vs line 19 — *Loans TO* and *Loans FROM* shareholders
+
+**The two most confusable lines on the form**, because the names differ by one preposition and they
+sit on **opposite sides of the balance sheet**:
+
+| Line | Wording | What it asserts | Side |
+|---|---|---|---|
+| **7** | Loans **TO** shareholders | **The company LENT money to the owners.** They owe the company. A receivable | **ASSET** |
+| **19** | Loans **FROM** shareholders | **The owners LENT money to the company.** The company owes them. A debt | **LIABILITY** |
+
+🔑 **`TO` = money went OUT of the company · `FROM` = money came IN.** So an account named
+`Loan from Owners`, `Due to shareholder`, or holding **owner deposits into the company**, belongs on
+the **LIABILITY / EQUITY side — never line 7**, however much line 7 appears first when you scroll.
+⚠️ **That is the rule this section settles: the SIDE.** *Which* line on that side — **19 loans from
+shareholders**, or **23/24 as contributed capital** — is **§8A's question, and it follows the prior
+return.**
+
+🛑 **THE SIGNATURE OF THIS ERROR, AND IT IS WORTH MEMORISING: once both sides are keyed, the balance
+sheet is out by EXACTLY TWICE a figure you recognise.** Putting a liability on the asset side adds it
+above *and* leaves it missing below, so the gap is `2 ×` the amount. ⚠️ **Whenever lines 15 and 27
+differ by exactly double something you have seen today, look for a number on the wrong side before you
+look for a missing one.**
+⚠️ **Scope it, or it misleads:** that is the arithmetic of a **single misplacement where the amount was
+removed from its proper line**. An amount **duplicated** — left on line 19 *and* added to line 7 — gives
+a gap of `1 ×`. ⛔ **So a 1× gap does not clear you.**
+_(What was actually observed, stated as what it was: a Schedule L table that listed only the lines
+carrying an amount **omitted line 7 entirely**, and a shareholder loan was keyed there instead of on
+line 19 — total assets came out over by the amount. **The 2× gap is the arithmetic of what happens
+once the liability side is keyed too; the return had not been keyed that far.**)_
+
+⚠️ **Getting the side right is not the end of it.** Whether owner money in is **debt (line 19)** or
+**contributed capital (lines 23/24)** is §8A's question, it follows the prior return, and it changes
+the shareholder's **Form 7203 basis** (§12) — debt basis in Part II versus stock basis on line 2.
+⛔ **Do not settle it from the account's name alone**, and note that a client may have asked for one
+treatment while the books carry the other.
+
+#### Which liability line — 16, 17 or 18
+
+| Line | Takes | Not this |
+|---|---|---|
+| **16** Accounts payable | The **A/P account** — vendor bills entered as bills and not yet paid | ⚠️ **An A/P account netting to zero is still a fact, not an absent account.** Report 0 |
+| **17** Mortgages, notes, bonds payable in **less than 1 year** | **Formal debt instruments** — a note, a bond, a mortgage — due within a year | ⛔ **Not a credit card.** A revolving card is not a note or a bond |
+| **18** Other current liabilities *(attach statement)* | Everything else current: **credit-card balances**, **accrued expenses**, accrued wages, taxes payable | 🛠️ **Statement line** — type the components, not the total |
+
+🔑 **A useful check on line 18, because it is where the M-1 items hide:** the accruals sitting in
+line 18 are the same balances §9A step 1 tells you to hunt. **If a figure is on Schedule L line 18
+and nowhere on Schedule M-1, one of the two is wrong** — either the accrual was reversed (so it is
+not a liability) or its expense was deducted (so it needs an add-back).
 ## §9 · Schedule M-1 — where the books and the return disagree
 
 This is the bridge: **book net income in at the top, the return's total income out at the
@@ -2052,11 +2178,15 @@ rounding difference.
 - [ ] Line 20 equals total expenses **less** everything placed on lines 7–19 **less**
       non-deductible amounts
 - [ ] Schedule L: the **beginning column matches last year's filed ending column exactly**
+- [ ] 🔴 **Every balance-sheet account in the ledger was ASSIGNED to a Schedule L line** (§8C) — including the ones at zero, and including any the table you were handed did not mention
+- [ ] 🔴 **Owner money was placed by DIRECTION, not by the account's name** (§8C): money the owners put IN is **line 19 (liability)**, money the company lent THEM is **line 7 (asset)**. ⚠️ **If lines 15 and 27 differ by exactly TWICE a figure you recognise, a number is on the wrong side**
+- [ ] **Every Schedule L amount on a *(attach statement)* line has its statement** — lines 6, 9, 14, 18, 21, 25
 - [ ] Schedule L: **total assets = total liabilities and equity**, and total assets equals the
       year-end balance sheet
 - [ ] 🔴 **Every `Accrued *` / `* Payable` / `Deferred *` balance on Schedule L has been ACCOUNTED FOR**
-      — either adjusted on M-1 or consciously left alone with a reason (§9A). 🔑 **On a cash-basis
-      return an unexplained liability balance is an unfound M-1 item**
+      — either adjusted on M-1 or consciously left alone with a reason (§9A, §8C). 🔑 **On a cash-basis
+      return an unexplained liability balance is an unfound M-1 item**, and **line 18 is where they
+      collect**: a balance sitting there with no matching M-1 add-back means one of the two is wrong
 - [ ] 🔴 **Every M-1 item was classified TIMING or PERMANENT** (§9A) — and **only the permanent ones
       reached Schedule K line 16c, M-2 line 5 and Form 7203.** ⛔ A timing item in 16c understates the
       shareholders' AAA and basis for money the company never spent

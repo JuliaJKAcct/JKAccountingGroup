@@ -55,6 +55,7 @@ Follow it in this order; a preparer works the document top-down.
 | **The process at a glance** | A **flowchart** — the whole return in one picture |
 | **§0A · Where every number comes from** | The **sources table** (three or four documents, no more) and a **diagram of how figures travel**. ⚠️ Build the diagram with [`impeccable`](../impeccable/) + the Atlas `.dflow` component — colour encodes *which source*, and every source also carries a numbered badge, because colour alone must never carry meaning |
 | **§0B · What this return actually is** | One paragraph. Who pays the tax, what the form is really saying |
+| **§0C · 🗺️ The map of the form** | 🔴 **Which PAGE every schedule and line range is on**, read off the current-year PDF (§3). ⚠️ **Forms split their schedules across page breaks in places nobody guesses**, and "it is not on the form" is almost always "it is on the next page". Note which schedules share a page and which are split |
 | **§1 · Gather this before you start** | ⚠️ **Half the list is about the prior year.** Always ask for the **general ledger**, always ask for **gross** figures where an account nets things, always **check the basis printed on every export** |
 | **§2 · The extension gate** | 🛑 A hard stop before work begins |
 | **§3 · Build the map** | §1 above |
@@ -68,10 +69,18 @@ Follow it in this order; a preparer works the document top-down.
 
 ### The line table — the unit this SOP is made of
 
+**Head it with the FORM AND ITS PAGE** — *"Form 1125-A, page 1"* — because a schedule's lines do not
+all live on the page its name suggests (§4B):
+
 | Line | What it is | Formula, or where you read it |
 |---|---|---|
 | **7** | Inventory at end of year | 📖 **read** off the balance sheet — but read the trap in §4B |
 | **8** | Cost of goods sold | ƒ `= line 6 − line 7` → carry to **page 1, line 2** |
+
+🛑 **And name the lines that are ZERO, with their reason.** A table showing only the lines that carry
+an amount reads as the complete map of the form and is not one — the reader's leftover figure then goes
+to a line the table never mentioned. **`0` with a reason, or one sentence saying every line not listed
+is zero.**
 
 **Two kinds of number, and telling them apart is most of the skill:**
 - 📖 **READ** — you look it up and copy it. The risk is reading the **wrong source**.
@@ -360,7 +369,26 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 ### The TEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
-columns, and **the FORM, the PART and the LINE NUMBER named**:
+columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
+
+> 🗺️ **THE PAGE IS PART OF THE ADDRESS, and leaving it out costs a preparer real time.** A tax form
+> splits its schedules across page breaks in places nobody would guess — on Form 1120-S, Schedule B
+> and Schedule K are each **split across a page break**, and Schedule L has no page of its own. A
+> table headed only *"Schedule K"* sends someone to the page where most of Schedule K lives, for a
+> line that is on the next one. **So head every table with its page** — *"Schedule K, page 4"* — and
+> **open the delivery with a page map of the form** *(the worked one is [§0C of the 1120-S
+> SOP](../../../projects/sops/form-1120s-preparation.md))*. ⚠️ **Read the page numbers off the
+> current-year PDF** (§3): the IRS moves content between pages.
+
+> 🛑 **A TABLE THAT SHOWS ONLY THE LINES CARRYING AN AMOUNT IS NOT COMPLETE — it is a trap.** It
+> looks finished, so the reader treats it as the whole map; then their leftover account has to go
+> *somewhere*, they find a plausible line the table never mentioned, and they put it there. **Name
+> the zero lines and say why they are zero**, or state once that every line not listed is zero.
+> ⚠️ **This matters most on Schedule L and on page 1's deductions**, where the form offers many
+> similarly-named lines and only a few are used. _(Real, and stated as what was actually seen: a Schedule L
+> table that listed only the lines carrying an amount **omitted "Loans TO shareholders" entirely**, and
+> a shareholder LOAN — a liability — was keyed there, putting total assets over by the amount. Once
+> both sides are keyed such a misplacement leaves the balance sheet out by exactly **twice** it.)_
 
 | Line | Concept | Value | **Where it came from** | 🛠️ **Where it is ENTERED** |
 |---|---|---|---|---|
