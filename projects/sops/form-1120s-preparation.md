@@ -3,7 +3,7 @@
 > **Status:** 🟡 **DRAFT — in review with Lilian.** Written 2026-08-14 while preparing the
 > firm's first 1120-S with a session assisting, and shaped by what a first-time preparer
 > actually needed to be told. **Remove this note when Lilian signs it off.** ·
-> **Owner:** Lilian · **Last updated:** 2026-08-20
+> **Owner:** Lilian · **Last updated:** 2026-08-23
 >
 > 🔵 **One part of this DRAFT is already FIRM POLICY and is not waiting on the sign-off: §5C-v**,
 > Julia's rule on netting a shareholder's contributions against their distributions. **Read it
@@ -1245,8 +1245,14 @@ Most are yes/no facts about the company. Three are worth calling out:
 1. **Accounting method** — accrual or cash. ⚠️ **Take it from the PRIOR RETURN, not from
    QuickBooks.** A QuickBooks report's basis is a per-report toggle someone can flip; the
    entity's *tax* accounting method is what was elected and filed, and it carries forward. If
-   the report basis and the prior return disagree, that is a question for Lilian, not something
-   to resolve by looking at a footer.
+   the report basis and the prior return disagree, **do NOT resolve it by looking at a footer** —
+   the filed return governs, and you key what it says.
+   🔑 **But be clear which of two situations you are in, because only one of them is a question for
+   Lilian.** ⓘ **Accrual BOOKS with a CASH return is the ordinary case, not a problem** — it is
+   exactly what Schedule M-1 exists to bridge, and §9A step 0 tells you to treat it as a signal to
+   go hunting for the adjustments. 🛑 **Escalate to Lilian when the TAX METHOD ITSELF is unclear or
+   contradicted** — the prior return is missing, its Schedule B answer conflicts with how it was
+   actually prepared, or someone proposes changing method (which needs Form 3115).
 2. 🟢 **"Are total receipts AND total assets both under $250,000?"** If **yes**, you are **not
    required** to complete **Schedule L** or **Schedule M-1**.
    - **The firm's practice is to complete them anyway** when the prior year did, because they
@@ -1445,6 +1451,7 @@ one owner's slice of it.
 | **14a/14b** | **Schedules K-2 / K-3** | Attach K-2 if there is any foreign activity — or tick the exception box. ⚠️ **This is what §1's foreign-accounts question is for.** Omitting them carries per-shareholder penalties, so do not skip it because the client "has nothing foreign" without confirming |
 | **16d** | Distributions | Money paid out to shareholders during the year — 🔵 **or ZERO under the firm's netting policy, but ONLY where all five of §5C-v's gates pass.** ⛔ A year with distributions and no contributions fails gate 1: the zero is never available on its own |
 | **17d** | **§199A / QBI information** — Schedule K line 17d *Other items and amounts*; on the K-1 it is **box 17, code V** | Attach the statement. **A loss year still produces QBI information** — a negative amount that carries forward for the owner |
+| **17d** | **Gross receipts for §448(c)** — also line 17d, and on the K-1 it is **box 17, code AC** | ƒ **page 1 line 1c.** 🔴 **A SECOND item that lives under the same line 17d**, which is why the line needs an itemised statement. ⚠️ **Reproduce the prior return's convention** — if last year reported it, this year must. 🛠️ **On screen it is usually not "17d" at all:** software expands line 17 into the **K-1 code letters**, so look for the row reading `AC Gross receipts for section 448(c)` — ⛔ **`D Basis of energy property` is a different item; the form's sub-line "d" and the code letter "D" are unrelated** (§11A) |
 | **18** | **Income (loss) reconciliation** | ƒ `= lines 1 through 10, less lines 11 through 12e and 16f`. **This is what Schedule M-1 reconciles to** — not page 1's ordinary income (§9) |
 
 ---
@@ -1675,25 +1682,35 @@ suspiciously clean number among dirty ones was almost always typed by a person.
 | M-1 line 3b *(travel & entertainment)* | ⛔ no | ✅ yes, if it is meals/entertainment |
 | **Schedule K line 16c** | ⛔ **NO** | ✅ **yes** |
 | **M-2 line 5 — reduces the AAA** | ⛔ **NO** | ✅ **yes** |
-| **Form 7203 — reduces the shareholders' basis** | ⛔ **NO** | ✅ **yes** *(line 8a)* |
+| **Form 7203 — reduces the shareholders' basis** | ⛔ **NO** | ✅ **yes** *(line 8a — or **line 13** where a §1.1367-1(g) election is in effect, §12)* |
+
+✅ **And this is not an inference — the instructions say it outright.** Form 1120-S, **Schedule K line 16c**:
+*"Don't include separately stated deductions shown elsewhere…, capital expenditures, **or items for which the
+deduction is deferred to a later tax year**."* 🔑 **A timing difference IS an item whose deduction is
+deferred to a later year.** It is excluded from 16c by the line's own text.
 
 🔑 **The reasoning behind that column, so it is remembered rather than memorised:** line 16c is for
 money that **left the company and will never produce a deduction** — it made the shareholders poorer,
 so their AAA and their basis must fall. **An accrual has not left the company at all.** The cash is
 still there; the deduction is only waiting its turn.
 
-⛔ **Putting a timing item in 16c reduces two shareholders' AAA and basis for money the company never
+⛔ **Putting a timing item in 16c reduces the shareholders' AAA and basis for money the company never
 spent — and the error travels out of this return and onto their 1040s, where nobody will find it.**
 
-> 📌 **Worked example — a real one, with the figures rounded because they are a client's.** Accrual
+> 📌 **Worked example — a real one, told without its figures because they are a client's.** Accrual
 > books, a cash return *(step 0 flagged it before anything was opened)*. The balance sheet carried a
 > single `Accrued Expenses` balance of **one month's rent** *(step 1)*. The `Rent` account held twelve
 > rows for a twelve-month tenancy: eleven were `Check`s to the landlord out of the operating account,
 > and one was a **`Journal Entry` with no payee and no bank account in the Split column** *(steps 2 and
 > 3)* — its other side was that same liability. **Eleven payments plus one accrual is twelve months of
 > rent for twelve months of occupancy** *(step 4)*, so the accrual was **correct on the books**. The
-> liability had **one entry and was never reversed** *(step 5)*, and its amount was the **base rent
-> exactly**, while every real cheque carried odd cents for CAM and sales tax *(step 6)*.
+> liability had **one entry and was never reversed** *(step 5)*, and its amount was the **base rent exactly**,
+> while the real cheques **varied month to month** as CAM and sales tax moved *(step 6)*. ⚠️ **Note what the
+> step-6 signal actually was on this client, because it is not always cents:** every figure in the account was
+> a whole dollar, so the tell was not a suspiciously clean number among dirty ones — it was **an amount that
+> matched the CONTRACT figure while the payments around it did not match anything**. 🔑 **Read step 6 as
+> "the accrual looks like the agreement, the payments look like the bank"**, and let the shape of the account
+> tell you which form that takes.
 > ✅ **Conclusion: that month was expensed on the books and never paid, so on the cash method it comes
 > out of line 11** — as a **timing** difference, on M-1 line 3 only, **nowhere near 16c**.
 > 🔴 **And the question the six steps could NOT answer, which is why it became an open item rather than
@@ -1757,20 +1774,22 @@ Schedule K   =   K-1 of shareholder 1   +   K-1 of shareholder 2   +   …
 **Schedule K is not a third thing you complete alongside the K-1s. It is their sum.** So a program
 that shows you one K-1 per shareholder and no separate "Schedule K" screen is behaving correctly.
 
-⚠️ **And it is not a separate FORM either.** On the IRS form, Schedule K is **pages 3 and 4 of Form
-1120-S itself**, printed after Schedule B. In a forms-based program (ATX among them) that means it is
+⚠️ **And it is not a separate FORM either.** Schedule K is printed on **Form 1120-S itself, after
+Schedule B** *(pages 3–4 on the TY2025 form — ⚠️ **check the page numbers against the year you are filing**;
+like the Schedule B question numbers (§6), the layout moves between years). In a forms-based program (ATX among them) that means it is
 further down the **same** Form 1120-S tab already open — there is no tab to go looking for.
 
 **Every Schedule K line falls into one of three categories, and they enter by three different doors:**
 
 | | Which lines | Where it is entered |
 |---|---|---|
-| **A · Flows in from page 1** | **line 1** (ordinary income) and **line 18** (the reconciliation) | 🚫 **Nowhere.** Already entered when page 1 was keyed. **Typing it breaks the link** |
+| **A · Flows in from page 1** | **line 1** (ordinary income) — and **only** line 1 | 🚫 **Nowhere.** Already entered when page 1 was keyed. **Typing it breaks the link** |
+| **A2 · Computed INSIDE Schedule K** | **line 18** (the reconciliation) | 🚫 **Nowhere.** ⚠️ **It does NOT come from page 1** — it is `lines 1–10 less 11–12e and 16f`, computed from Schedule K's **own** lines, **including separately stated items that never appear on page 1** (§7, §9). 🔑 It equals page 1 line 22 **only when there are no separately stated items at all** |
 | **B · An ENTITY-level amount the program allocates** | **16c** nondeductible · **16d** distributions · **17d / code AC** §448(c) receipts · charitable contributions · §179 · every separately stated item | ✅ **Once**, as the company total — the program splits it by each shareholder's percentage |
 | **C · A fact about ONE shareholder** | name · address · TIN · shares · **item G** the percentage · **item I** shareholder loans · the **`Final K-1`** box | ✅ **On that shareholder's own sheet.** These are never allocated |
 
 🛑 **The rule that prevents the expensive error: enter each figure in ONE place only.** Entered at
-the entity level *and* on the K-1s, some programs will **double** it — a
+the entity level *and* on the K-1s, a program that allocates will **double** it — a
 distributions figure entered in both places is reported at twice its size — **and nothing will warn
 you**, because both entries are valid input as far as the software is
 concerned.
@@ -1778,9 +1797,9 @@ concerned.
 🛠️ **How to find out which way a given program works — a two-minute test, in this order:**
 
 1. **Enter the shareholders and their shares FIRST**, before any allocated amount. Confirm each K-1's
-   **item G** shows the percentage you expect. ⚠️ **Allocation engines read the percentage at the
-   moment the amount is entered** — amounts keyed before the ownership is set can land on nobody, or
-   entirely on the first shareholder.
+   **item G** shows the percentage you expect. ⚠️ **An allocation engine can only split by a percentage it
+   already has** — so enter the ownership before the amounts, and re-check the K-1s if you did it the other
+   way round. ⛔ **This is a precaution, not an observed failure** — no program has been tested for it here.
 2. **Enter ONE category-B figure** at the entity level — line 16d is the clearest.
 3. **Open the K-1s and look.** Split already? → the program allocates: enter the rest at entity level
    only. Still blank, or the entity field refuses input? → that program wants it **per shareholder**,
@@ -1795,8 +1814,9 @@ concerned.
 > been cut at the sale, so **within this return there was no transfer** — every shareholder held their
 > shares for every day of it, and the percentages are plain arithmetic. ⛔ **Do not enter a
 > stock-transfer or ownership-change date in the shareholder screen.** Doing so switches the program
-> to the **per-day, per-share** allocation of §1377(a)(1) and re-splits the income — often across a
-> buyer who is not a shareholder of *this* period at all. **The cut IS the allocation mechanism. Do
+> to the **per-day, per-share** allocation of §1377(a)(1) and re-splits the income — potentially across a
+> buyer who is not a shareholder of *this* period at all. ⚠️ **The mechanism is the statute's, not one
+> program's; how a given program reacts is what the two-minute test above is for.** **The cut IS the allocation mechanism. Do
 > not perform it twice.**
 
 ---
@@ -2038,7 +2058,7 @@ rounding difference.
       — either adjusted on M-1 or consciously left alone with a reason (§9A). 🔑 **On a cash-basis
       return an unexplained liability balance is an unfound M-1 item**
 - [ ] 🔴 **Every M-1 item was classified TIMING or PERMANENT** (§9A) — and **only the permanent ones
-      reached Schedule K line 16c, M-2 line 5 and Form 7203.** ⛔ A timing item in 16c understates two
+      reached Schedule K line 16c, M-2 line 5 and Form 7203.** ⛔ A timing item in 16c understates the
       shareholders' AAA and basis for money the company never spent
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
 - [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
