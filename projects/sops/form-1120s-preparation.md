@@ -1569,6 +1569,144 @@ P&L.
 
 ---
 
+## §9A · 🔑 How to FIND the M-1 items — before you need them
+
+**The M-1 is not a schedule you fill in at the end. It is a list you go looking for at the
+beginning.** A preparer who waits until §9 discovers the adjustments by tripping over a number that
+will not tie; a preparer who runs the six steps below arrives at §9 with the list already made.
+
+⏱️ **It is about five minutes on a small return, and it is the same six steps every time.**
+
+### Step 0 · Establish which TWO bases you are working between
+
+Two readings, thirty seconds:
+
+1. **The footer of the QuickBooks export.** It states `Accrual Basis` or `Cash Basis` in plain text.
+2. **Schedule B question 1 of last year's FILED return.** Cash or accrual.
+
+🔑 **If they agree, expect almost no M-1. If they DISAGREE — accrual books, a cash return — then you
+already know adjustments exist, before you have looked at a single account.** That change of posture
+is half the method: you are now searching, not waiting to be surprised.
+
+### Step 1 · 🔑 Start at the LIABILITIES, not at the expenses
+
+This is the shortcut, and it is the opposite of what most people do. Do not read the expense
+accounts. Open the balance sheet and look at the debt accounts:
+
+`Accrued Expenses` · `Accounts Payable` · `Accrued Wages` · `Payroll Liabilities` ·
+`Taxes Payable` · `Deferred Revenue` — anything named **Accrued**, **Payable** or **Provision**.
+
+🔑 **On a CASH-basis return, every balance sitting in one of those accounts is a candidate M-1
+add-back.** That is the whole rule. The liability *is* the flag: the company owes it because the
+books recorded an expense that no money has yet paid for.
+
+⚠️ **It runs in the other direction too.** A `Deferred Revenue` balance on a cash return means cash
+was collected and the books did **not** call it income — that is an M-1 item on the *income* side, and
+it is missed far more often than the expense ones.
+
+### Step 2 · Filter the ledger to `Journal Entry` and read every one
+
+In a business whose books are built from a bank feed, nearly every real transaction is a `Check`,
+`Expense`, `Deposit` or `Transfer`, carrying a payee and a bank account. **The bank generated it.**
+
+**A `Journal Entry` was written by a person.** There are only a few reasons anyone writes one:
+
+- an **accrual**
+- a **true-up** from a system outside the bank feed (a POS or booking platform)
+- a **reclassification** — moving something from one account to another
+- **depreciation**
+- a **correction**
+
+🔑 **On a small return this is a handful of rows and five minutes of reading — and it is where every
+piece of accounting judgment in the year lives.** Everything else is the bank copying itself. **If
+there were time for only one procedure in a ledger review, this is the one.**
+
+### Step 3 · Three columns tell you whether money actually moved
+
+| Column | What to read |
+|---|---|
+| **Transaction type** | `Check`/`Expense`/`Deposit`, or `Journal Entry`? |
+| **Name** (payee) | Is there someone who was paid, or is it empty? |
+| **Split** (contra account) | 🔑 **The decisive one.** Is a **bank or card** account named? |
+
+🔑 **With no bank or card account on the other side, no money left the company.** It is that
+mechanical. A contra account that is a **liability** means an accrual; one that is **equity** means a
+distribution or an owner-paid item (§5C-iii, §5C-iv).
+
+### Step 4 · Divide, and count the months
+
+For **every fixed monthly cost** — rent, insurance, a subscription, a loan payment:
+
+```
+account total for the period  ÷  the monthly amount  =  how many months?
+```
+
+Compare that against how many months the company actually operated in the period.
+
+- **Fewer months than it operated** → an expense is missing, or a month was never recorded.
+- **More** → something is duplicated, or an accrual was booked *and* the payment was booked too.
+
+🔑 **One division per account, ten seconds each, and it catches far more than its cost.**
+
+### Step 5 · Check whether the accrual was REVERSED
+
+Look at the liability account's **activity**, not only its balance:
+
+| What the account shows | What happened |
+|---|---|
+| **One entry, and nothing else** — the balance just sits there | 🔴 **It was never paid.** This is an M-1 item |
+| **Two entries that cancel** — one creating, one clearing | ✅ Accrued then paid. **On the cash method it IS deductible** |
+| Entries every month, each clearing the last | ✅ Routine month-end close. No adjustment |
+
+### Step 6 · Distrust round numbers in a bank-fed account
+
+Real payments carry cents and vary month to month. **Someone recording what is OWED writes the
+contract figure, round; someone recording what was PAID copies the cheque, with its cents.** A
+suspiciously clean number among dirty ones was almost always typed by a person.
+
+### 🛑 And for every item you find, the last question is always the same
+
+> **Is it TIMING, or is it PERMANENT?**
+
+| | ⏳ **Timing** *(accrued rent, accrued wages, deferred revenue)* | 🚫 **Permanent** *(the disallowed half of meals, penalties, life-insurance premiums)* |
+|---|---|---|
+| Will it ever be deducted? | **Yes** — in the year it is paid | **Never** |
+| M-1 line 3 | ✅ yes | ✅ yes |
+| M-1 line 3b *(travel & entertainment)* | ⛔ no | ✅ yes, if it is meals/entertainment |
+| **Schedule K line 16c** | ⛔ **NO** | ✅ **yes** |
+| **M-2 line 5 — reduces the AAA** | ⛔ **NO** | ✅ **yes** |
+| **Form 7203 — reduces the shareholders' basis** | ⛔ **NO** | ✅ **yes** *(line 8a)* |
+
+🔑 **The reasoning behind that column, so it is remembered rather than memorised:** line 16c is for
+money that **left the company and will never produce a deduction** — it made the shareholders poorer,
+so their AAA and their basis must fall. **An accrual has not left the company at all.** The cash is
+still there; the deduction is only waiting its turn.
+
+⛔ **Putting a timing item in 16c reduces two shareholders' AAA and basis for money the company never
+spent — and the error travels out of this return and onto their 1040s, where nobody will find it.**
+
+> 📌 **Worked example — a real one, with the figures rounded because they are a client's.** Accrual
+> books, a cash return *(step 0 flagged it before anything was opened)*. The balance sheet carried a
+> single `Accrued Expenses` balance of **one month's rent** *(step 1)*. The `Rent` account held twelve
+> rows for a twelve-month tenancy: eleven were `Check`s to the landlord out of the operating account,
+> and one was a **`Journal Entry` with no payee and no bank account in the Split column** *(steps 2 and
+> 3)* — its other side was that same liability. **Eleven payments plus one accrual is twelve months of
+> rent for twelve months of occupancy** *(step 4)*, so the accrual was **correct on the books**. The
+> liability had **one entry and was never reversed** *(step 5)*, and its amount was the **base rent
+> exactly**, while every real cheque carried odd cents for CAM and sales tax *(step 6)*.
+> ✅ **Conclusion: that month was expensed on the books and never paid, so on the cash method it comes
+> out of line 11** — as a **timing** difference, on M-1 line 3 only, **nowhere near 16c**.
+> 🔴 **And the question the six steps could NOT answer, which is why it became an open item rather than
+> a conclusion:** whether it was paid from *outside* the company's bank account — an owner's own money,
+> or till cash that never reached the bank. **The ledger proves no money left the company's accounts.
+> It cannot prove nobody else paid it.** ⚠️ **That distinction is the whole of
+> [method.md](../pre-return-review/method.md) rule 1b:** the negative belongs to the search that
+> produced it. **Ask; do not conclude** — and note that a *yes* makes the expense deductible on the
+> cash method with no Form 3115 and no method change, which is a different route to the same figure as
+> switching to accrual. ⛔ **The two must not be confused.**
+
+---
+
 ## §10 · Schedule M-2 — the AAA
 
 The **Accumulated Adjustments Account** tracks the income the company has been taxed on but not
@@ -1606,6 +1744,60 @@ Each K-1 carries that shareholder's **percentage share** of every Schedule K lin
   go looking for it.
 - Box 16c and the §199A statement travel to the owner too — an owner whose K-1 is missing the
   QBI statement cannot complete their own return.
+
+### 11A · 🛑 THERE IS NO "Schedule K" TO FILL IN — it is a TOTAL, and each figure is entered ONCE
+
+**The single most common "I cannot find where to type this" on this return**, and it is not the
+software's fault. The identity is:
+
+```
+Schedule K   =   K-1 of shareholder 1   +   K-1 of shareholder 2   +   …
+```
+
+**Schedule K is not a third thing you complete alongside the K-1s. It is their sum.** So a program
+that shows you one K-1 per shareholder and no separate "Schedule K" screen is behaving correctly.
+
+⚠️ **And it is not a separate FORM either.** On the IRS form, Schedule K is **pages 3 and 4 of Form
+1120-S itself**, printed after Schedule B. In a forms-based program (ATX among them) that means it is
+further down the **same** Form 1120-S tab already open — there is no tab to go looking for.
+
+**Every Schedule K line falls into one of three categories, and they enter by three different doors:**
+
+| | Which lines | Where it is entered |
+|---|---|---|
+| **A · Flows in from page 1** | **line 1** (ordinary income) and **line 18** (the reconciliation) | 🚫 **Nowhere.** Already entered when page 1 was keyed. **Typing it breaks the link** |
+| **B · An ENTITY-level amount the program allocates** | **16c** nondeductible · **16d** distributions · **17d / code AC** §448(c) receipts · charitable contributions · §179 · every separately stated item | ✅ **Once**, as the company total — the program splits it by each shareholder's percentage |
+| **C · A fact about ONE shareholder** | name · address · TIN · shares · **item G** the percentage · **item I** shareholder loans · the **`Final K-1`** box | ✅ **On that shareholder's own sheet.** These are never allocated |
+
+🛑 **The rule that prevents the expensive error: enter each figure in ONE place only.** Entered at
+the entity level *and* on the K-1s, some programs will **double** it — a
+distributions figure entered in both places is reported at twice its size — **and nothing will warn
+you**, because both entries are valid input as far as the software is
+concerned.
+
+🛠️ **How to find out which way a given program works — a two-minute test, in this order:**
+
+1. **Enter the shareholders and their shares FIRST**, before any allocated amount. Confirm each K-1's
+   **item G** shows the percentage you expect. ⚠️ **Allocation engines read the percentage at the
+   moment the amount is entered** — amounts keyed before the ownership is set can land on nobody, or
+   entirely on the first shareholder.
+2. **Enter ONE category-B figure** at the entity level — line 16d is the clearest.
+3. **Open the K-1s and look.** Split already? → the program allocates: enter the rest at entity level
+   only. Still blank, or the entity field refuses input? → that program wants it **per shareholder**,
+   and Schedule K will total itself.
+
+✅ **The tie-out that works whichever way it turned out**, and which belongs in §14:
+
+> **Schedule K line 1, 16c, 16d and 17-AC must each equal the SUM of that box across every K-1.**
+> Print them and add by hand. **Double the expected figure = entered twice. Half = a K-1 is missing.**
+
+> 🔴 **A trap specific to a SHORT period that ends at a change of ownership.** The year has already
+> been cut at the sale, so **within this return there was no transfer** — every shareholder held their
+> shares for every day of it, and the percentages are plain arithmetic. ⛔ **Do not enter a
+> stock-transfer or ownership-change date in the shareholder screen.** Doing so switches the program
+> to the **per-day, per-share** allocation of §1377(a)(1) and re-splits the income — often across a
+> buyer who is not a shareholder of *this* period at all. **The cut IS the allocation mechanism. Do
+> not perform it twice.**
 
 ---
 
@@ -1842,11 +2034,22 @@ rounding difference.
 - [ ] Schedule L: the **beginning column matches last year's filed ending column exactly**
 - [ ] Schedule L: **total assets = total liabilities and equity**, and total assets equals the
       year-end balance sheet
+- [ ] 🔴 **Every `Accrued *` / `* Payable` / `Deferred *` balance on Schedule L has been ACCOUNTED FOR**
+      — either adjusted on M-1 or consciously left alone with a reason (§9A). 🔑 **On a cash-basis
+      return an unexplained liability balance is an unfound M-1 item**
+- [ ] 🔴 **Every M-1 item was classified TIMING or PERMANENT** (§9A) — and **only the permanent ones
+      reached Schedule K line 16c, M-2 line 5 and Form 7203.** ⛔ A timing item in 16c understates two
+      shareholders' AAA and basis for money the company never spent
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
 - [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
-      across all K-1s
+      across all K-1s — 🔴 **add lines 1, 16c, 16d and 17-AC by hand off the printed forms** (§11A).
+      **Twice the expected figure means it was entered at the entity level AND on the K-1s; half means a
+      K-1 is missing.** ⚠️ **No software raises a diagnostic for either**
+- [ ] 🔴 **ON A SHORT PERIOD ENDING AT A CHANGE OF OWNERSHIP: no stock-transfer date was entered**
+      in the shareholder screen, and every **item G** reads the plain arithmetic percentage (§11A).
+      **The cut already performed the allocation** — a transfer date makes the software do it a second time
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
 - [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **No in-form diagnostic was raised for a blank on the one return observed**, so this checklist may be the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
 - [ ] 🔗 **§8 of the working paper — the HANDOFF to the shareholder's 1040 — is written** (§13A): the K-1 box by box **with its entry route**, what this side cannot supply *(Form 7203 line 1)*, and what must **match** on both returns. ⛔ **The 1040 itself is a separate request**
