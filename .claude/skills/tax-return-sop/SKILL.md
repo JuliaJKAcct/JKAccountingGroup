@@ -349,7 +349,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > a table of values without a route through the forms does not help her. In English: *the tables per
 > form, the flow of the figures between the forms, the explanations, and the boxes I have to tick.*
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
-> and parts 6 to 10 below, which are what she has had to ask for since.**
+> and parts 1b and 6 to 10 below, which are what she has had to ask for since.**
 
 > 🛑 **THE CALIBRATION, and it governs all ten parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
@@ -366,7 +366,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > **statement the return could not e-file without**; the other was **a K-1 explained only as the two
 > boxes that carried numbers.** Parts 6 and 7 exist because of them.
 
-### The TEN things every delivery carries
+### The ELEVEN things every delivery carries
 
 **1 · ONE TABLE PER FORM, in the order the forms are actually prepared** — every table with the same
 columns, and **the FORM, the PAGE, the PART and the LINE NUMBER named**:
@@ -413,28 +413,44 @@ caused a misstatement **on somebody else's tax return**, discovered years later 
 **The block, in every delivery, even when the answer is "nothing to do":**
 
 ```
-Distributions reported (the pass-through line)      ......
-Pool available to absorb them tax-free              ......
-EXCESS tested against each owner's OWN basis        ......   ← per owner
+Total distributed to the owners this year           ......
+   → owner 1's share, against owner 1's OWN basis   ......
+   → owner 2's share, against owner 2's OWN basis   ......
+(entity-level only: the pool available to absorb them, and the cap it puts on the AAA line)
 ```
 
-**and then the four questions answered in writing:**
+🛑 **AND THE THING TO GET RIGHT, because getting it backwards is the classic error: WHAT MAKES A
+DISTRIBUTION TAXABLE IS THE OWNER'S BASIS, NOT THE ENTITY'S POOL.** On an S corporation with no
+accumulated E&P, **§1368(b)**: tax-free to the extent of that shareholder's **stock basis**, which it
+**reduces**; the excess is a **capital gain**. ⛔ **The AAA does not appear in that test.** A company
+can hold a large pool while one owner has almost no basis — someone admitted recently, someone who
+took distributions before, someone whose suspended losses ate it. **That owner has a gain, and a
+pool-versus-distributions test would clear them.**
+✅ **So the pool comparison is a SCREEN that says how alarmed to be. It never clears anybody.**
 
-1. **Are there distributions at all?** No → say so, done.
-2. **Do they exceed the pool of already-taxed profit?** No → ✅ **say "the pool absorbs all of it,
-   checked"** and move on. ⛔ **Silence is not an answer** — the reader cannot tell it was checked.
-3. **Yes → what is each owner's basis?** From their **prior-year basis form**. ⚠️ **If none exists it
-   must be RECONSTRUCTED from prior years — separate work, with its own time, and it gets SCOPED, not
-   absorbed silently.**
-4. **Is basis smaller than their share of the excess?** → 🔴 **capital gain on their personal return,
-   and they are told BEFORE they file.**
+**The questions, answered in writing:**
+
+1. **Did money or property reach the owners at all?** No → say so, done. 🔵 **Do not key this off the
+   reported distributions line alone** where a netting convention can make it read zero while money
+   moved — read the **gross debits in each capital account**.
+2. **What is EACH owner's own basis before the distribution?** From their **prior-year basis form**.
+   ⚠️ **If none exists it must be RECONSTRUCTED from prior years — separate work, with its own time,
+   SCOPED rather than absorbed silently.**
+3. **Is any owner's distribution larger than their basis?** → 🔴 **capital gain on their personal
+   return, and they are told BEFORE they file.**
+4. **Separately, at entity level:** does the distribution exceed the pool? That sets the **cap** on
+   the AAA line and **nothing else**. ⚠️ **Record the answer either way** — silence does not tell the
+   reader it was checked.
 
 ⚠️ **And name the assumption when there is one:** where the books hold **one pooled owner-equity
 account**, the per-owner split is an assumption, so the amount tested against each person's basis is
 an assumption too. **Settle the split before step 4, not after.**
 
 🔗 The worked version is [§10A–10B of the 1120-S SOP](../../../projects/sops/form-1120s-preparation.md).
-**The same block belongs on a 1065 and anywhere else money leaves an entity to its owners.**
+⚠️ **The same block belongs anywhere money leaves an entity to its owners — but adapt it, do not copy
+it.** On a **partnership there is no AAA at all**: the entity-pool row has no meaning, and a
+distribution is tested against **outside basis** under **§731**. **The owner-basis half travels; the
+pool half does not.**
 
 
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
