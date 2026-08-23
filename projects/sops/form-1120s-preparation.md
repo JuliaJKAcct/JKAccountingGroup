@@ -1979,7 +1979,64 @@ spent — and the error travels out of this return and onto their 1040s, where n
 
 ## §10 · Schedule M-2 — the AAA
 
-### 10.0 · 🔑 WHAT THE AAA IS — read this before the mechanics, or none of it lands
+### 10.0 · 🔑 WHAT THE AAA IS — explained for someone with NO accounting background
+
+🛑 **This explanation is DELIVERED EVERY TIME a return with an M-2 is prepared, in full, unprompted.**
+Lilian's standing instruction (2026-08-23): *"cada vez que hagamos un análisis de este tipo y haya que
+completar un Schedule M-2, necesito que me hagas esta explicación… no simplemente de dónde sale, sino
+qué significa ese número o cuál es el objetivo de este Schedule."* ⛔ **Where a figure comes from is
+only half of it — say what it MEANS.**
+
+#### The problem the AAA exists to solve
+
+**An ordinary company (a C corporation) is taxed twice.** The company pays tax on its profit; then,
+when it hands money to its owners, **the owners pay tax again** on the same money.
+
+**An S corporation is taxed once — but the timing is strange, and that is where the AAA comes from.**
+🔑 **The owners pay tax on the company's profit EVERY YEAR, whether or not they receive a cent of
+it.** A company that earns 100,000 and leaves it all in the bank has still put 100,000 onto its
+owners' personal tax returns, and they have paid on it out of their own pockets.
+
+🔴 **So the company's bank account now holds money the owners have ALREADY paid tax on.** When it is
+finally handed over — this year, or in five years — **taxing it again would be taxing it twice**,
+which is the very thing being an S corporation is supposed to avoid.
+
+**But money in a bank account has no label on it.** Looking at the balance, nobody can tell which
+part has been taxed and which has not.
+
+> 💡 **So the company keeps a running tally: "of everything that has passed through here, THIS MUCH is
+> profit the owners have already been taxed on and have not yet received."**
+> **That tally is the Accumulated Adjustments Account. Schedule M-2 is where it is reported.**
+
+#### What each movement means — not just where it comes from
+
+| What happens | Which way the tally moves | **Why — the meaning** |
+|---|---|---|
+| The company makes a **profit** | **UP** | The owners are being taxed on it **this year**, so from now on it is money they have already paid for |
+| The company makes a **loss** | **DOWN** | It reduces what they have been taxed on. ⓘ **A loss CAN push the tally below zero** — that is normal and is why an opening balance is often negative |
+| The company **hands money to the owners** | **DOWN** | They are collecting what they already paid tax on. The tally is being **used** |
+| The company spends on something **never deductible** *(the disallowed half of meals, fines)* | **DOWN** | 🔑 **That money left the company and gave nobody a deduction.** It cannot still be counted as "taxed profit available to hand out" — it is simply gone |
+| An owner **puts money IN** | **NOTHING** ⛔ | 🔑 **It was never profit and was never taxed as profit.** It raises that person's **basis** — a different account, on a different form, on their own return (§12). ⚠️ **This is the single most common confusion on this schedule** |
+
+#### Two sentences that prevent most of the mistakes
+
+🔑 **1 · The AAA belongs to the COMPANY. Basis belongs to a PERSON.** The AAA is one number for the
+whole entity and **does not know who owns what**. Basis is a separate number **for each shareholder**,
+kept on their own return, which the company's books do not contain. ⛔ **They are not two views of the
+same thing, and they will not agree.**
+
+🔑 **2 · The AAA decides PRESENTATION. Basis decides TAX.** How much of a distribution shows on
+Schedule M-2 line 7 is an AAA question. **Whether that distribution costs a shareholder any tax is a
+BASIS question** — §10B, and getting these two backwards is the classic error.
+
+#### And why the tally cannot be driven below zero by a distribution
+
+**You cannot take more "already-taxed money" out of the jar than the jar says is in it.** If the
+owners take more than the tally holds, **the extra came from somewhere else** — and *somewhere else*
+is each owner's own investment in the company. **That is the cap on line 7 (§10A), and it is the
+return handing the question to the shareholder's own tax return.**
+
+### 10.0b · 🔑 The mechanics, now that the meaning is in place
 
 **An S corporation normally pays no federal income tax *(§0B — built-in gains and excess net passive income are the exceptions)*. Its shareholders do — every year, on their share of the profit,
 whether or not the money is handed to them.** A company that earns 100,000 and leaves it in the bank
