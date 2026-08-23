@@ -400,6 +400,43 @@ in the client's working paper (§5) and **nowhere else in the repo** — includi
 read by everyone, gets published, and is the last place anyone thinks to look for client data.
 
 
+**1b · 🔴 WHERE THERE ARE DISTRIBUTIONS, THE DELIVERY CARRIES A DISTRIBUTIONS-vs-BASIS BLOCK. Always.**
+
+**Lilian's standing instruction (2026-08-23), and the reason she gave for it:** *"como soy nueva en
+esto de los taxes, puede que pase esto por alto y tiene importantes consecuencias fiscales."* 🔑 **So
+the delivery raises it — she does not have to remember to ask.**
+
+**It is the highest-consequence thing on a pass-through return that produces NO error message, NO
+diagnostic and NO red figure anywhere.** A preparer can file a flawless entity return and still have
+caused a misstatement **on somebody else's tax return**, discovered years later as an IRS notice.
+
+**The block, in every delivery, even when the answer is "nothing to do":**
+
+```
+Distributions reported (the pass-through line)      ......
+Pool available to absorb them tax-free              ......
+EXCESS tested against each owner's OWN basis        ......   ← per owner
+```
+
+**and then the four questions answered in writing:**
+
+1. **Are there distributions at all?** No → say so, done.
+2. **Do they exceed the pool of already-taxed profit?** No → ✅ **say "the pool absorbs all of it,
+   checked"** and move on. ⛔ **Silence is not an answer** — the reader cannot tell it was checked.
+3. **Yes → what is each owner's basis?** From their **prior-year basis form**. ⚠️ **If none exists it
+   must be RECONSTRUCTED from prior years — separate work, with its own time, and it gets SCOPED, not
+   absorbed silently.**
+4. **Is basis smaller than their share of the excess?** → 🔴 **capital gain on their personal return,
+   and they are told BEFORE they file.**
+
+⚠️ **And name the assumption when there is one:** where the books hold **one pooled owner-equity
+account**, the per-owner split is an assumption, so the amount tested against each person's basis is
+an assumption too. **Settle the split before step 4, not after.**
+
+🔗 The worked version is [§10A–10B of the 1120-S SOP](../../../projects/sops/form-1120s-preparation.md).
+**The same block belongs on a 1065 and anywhere else money leaves an entity to its owners.**
+
+
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
 
