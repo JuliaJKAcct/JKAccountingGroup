@@ -1292,6 +1292,10 @@ Most are yes/no facts about the company. Three are worth calling out:
    go hunting for the adjustments. 🛑 **Escalate to Lilian when the TAX METHOD ITSELF is unclear or
    contradicted** — the prior return is missing, its Schedule B answer conflicts with how it was
    actually prepared, or someone proposes changing method (which needs Form 3115).
+   ⛔ **And never "fix" a basis mismatch by re-exporting the reports on the other basis.** It cannot
+   change what the entity elected, a package's cash toggle leaves journal-entry accruals behind, and
+   it hides the liabilities the M-1 is found from — **§9A step 0 has the full answer, and the one
+   legitimate use of the toggle.**
 2. 🟢 **"Are total receipts AND total assets both under $250,000?"** If **yes**, you are **not
    required** to complete **Schedule L** or **Schedule M-1**.
    - **The firm's practice is to complete them anyway** when the prior year did, because they
@@ -1706,20 +1710,96 @@ P&L.
 
 **The M-1 is not a schedule you fill in at the end. It is a list you go looking for at the
 beginning.** A preparer who waits until §9 discovers the adjustments by tripping over a number that
-will not tie; a preparer who runs the six steps below arrives at §9 with the list already made.
+will not tie; a preparer who runs steps 1 to 6 below — after step 0's thirty-second check — arrives at §9 with the list already made.
 
 ⏱️ **It is about five minutes on a small return, and it is the same six steps every time.**
+
+### 📋 The card — the whole method, at a glance
+
+| | Step | What you are looking for |
+|---|---|---|
+| **0** | **Compare the two bases** — the export's footer against **Schedule B question 1 of last year's filed return** | Do they differ? Then adjustments exist and you are now *searching* |
+| **1** | **Go to the LIABILITIES, not the expenses** | On a cash return, every accrued / payable / deferred balance is a candidate |
+| **2** | **Filter the ledger to `Journal Entry` and read every one** | The bank generated everything else; this short list holds all the judgment |
+| **3** | **Read the payee and the Split column** | No bank or card on the other side = **no money moved** |
+| **4** | **Divide the account total by the monthly amount** | Fewer months than they operated = something missing; more = a duplicate |
+| **5** | **Check whether the accrual was REVERSED** | One entry and no clearing = it was never paid |
+| **6** | **Distrust a figure that matches the CONTRACT while the payments match nothing** | Someone typed it; the bank did not |
+
+🛑 **Then, for every item found: TIMING or PERMANENT?** Only a permanent one reaches Schedule K
+line 16c, M-2 line 5 and Form 7203.
 
 ### Step 0 · Establish which TWO bases you are working between
 
 Two readings, thirty seconds:
 
-1. **The footer of the QuickBooks export.** It states `Accrual Basis` or `Cash Basis` in plain text.
+1. **The footer of the export.** It states `Accrual Basis` or `Cash Basis` in plain text.
 2. **Schedule B question 1 of last year's FILED return.** Cash or accrual.
 
 🔑 **If they agree, expect almost no M-1. If they DISAGREE — accrual books, a cash return — then you
 already know adjustments exist, before you have looked at a single account.** That change of posture
 is half the method: you are now searching, not waiting to be surprised.
+
+#### 🛑 "Could we just export the reports on the cash basis and make the mismatch go away?"
+
+**No — and it is worth understanding why, because the instinct is a good one and the answer teaches
+what the M-1 actually is.**
+
+✅ **The premise is right:** QuickBooks *does* let you choose. Nearly every report carries an
+**accounting-method toggle** in its customization panel, and there is a company-wide default in the
+settings that decides what new reports open as. So a preparer really can hand you either version of
+the same P&L.
+
+⛔ **But switching it does not remove the mismatch, for three separate reasons — and the second one
+is the dangerous one:**
+
+1. **A tax accounting method is not a display setting.** It was **ADOPTED on the entity's first return
+   — by filing it (§446) — and carries forward**; it lives on the return, not in the bookkeeping
+   software. ⓘ **Say *adopted*, not *elected*:** someone told a method was "elected" goes hunting for an
+   election statement that does not exist. Changing a dropdown changes what a *report* shows.
+   **Changing the method itself needs Form 3115** (§15) — ⓘ *and note that under the **automatic**-change
+   procedures a small S corporation would normally use, consent is **deemed granted** on filing; the form
+   is required, waiting for an answer is not.* ⛔ **Nothing you do in QuickBooks changes what the company
+   adopted.**
+
+2. 🔴 **QuickBooks' "cash basis" is NOT the tax cash method, and it will quietly leave accruals
+   behind.** ⛔ **Stated as the mechanism, not as a tested observation: nobody here has re-run a firm
+   export both ways to confirm it, and this is QuickBooks' behaviour — not necessarily every package's.
+   Verify it on the file in front of you.** The toggle works mostly by stripping out **unpaid invoices (A/R) and unpaid
+   bills (A/P)**. **A manual journal entry that credits some other liability account is not
+   reversed** — the software has no way to know that entry was an accrual rather than an ordinary
+   posting. 🛑 **So the accrued rent, the accrued wages and the accrued taxes usually survive the
+   conversion**, and you have a report that says `Cash Basis` in the footer and still is not one.
+   ⚠️ **That is worse than the honest mismatch**, because it stops you looking.
+
+3. **You would throw away evidence — and note this is the OPPOSITE half of reason 2, not a repeat of
+   it.** ⚠️ **Whatever the toggle DOES remove** — the A/R and A/P driven balances — **leaves the balance
+   sheet**, taking the **Schedule L line 16 and line 18 components** with it (§8C). **What it LEAVES
+   BEHIND (reason 2) is the worse problem**, because that looks converted and is not. 🔑 **Between them
+   you lose both ways: the balances you needed to see are gone, and the ones still there are
+   mislabelled.**
+   ⚠️ **And do not read this as settling which basis Schedule L is presented on** — **§5D** says that is a
+   **fork you settle from the prior return** (tax-basis Schedule L, which most software produces, versus
+   the literal reading of *"per Books"*), and **§8 point 3** carries the *per Books* rule itself. ⛔ **It
+   is not a fork you settle with an export toggle.**
+
+🔑 **And the thing to take away: the mismatch is NOT a defect to be engineered away. It is the normal
+state of a small business, and Schedule M-1 is the IRS's own bridge for it.** Most small companies
+keep **accrual books** — because that is how the software works best and how the owner sees what is
+owed — and **file on the cash method**, because it is simpler and often better for them. ⛔ **If the
+books and the return always agreed, Schedule M-1 would not need to exist.**
+
+⚠️ **What IS a real problem — the one that comes up at THIS step:** the prior return answers **Cash**
+on Schedule B question 1 but was actually **prepared from accrual figures** — the return contradicting
+itself. ⓘ **§6 point 1 lists three escalation triggers, not one** — that, a **missing** prior return,
+and **anyone proposing to change method**. All three are **Lilian's call, not a preparer's.**
+
+✅ **The one genuinely useful thing the toggle buys you — a shortcut, with a warning attached.**
+**Pull the P&L BOTH ways and compare them.** The accounts where the two versions differ are a
+**first draft of your M-1 list**: they point straight at what to investigate.
+⛔ **Treat it as a POINTER, never an answer** — by reason 2 above, the conversion misses
+journal-entry accruals entirely, **so a small difference (or none at all) does not mean there is
+nothing to adjust.** Steps 1 to 6 still have to be run.
 
 ### Step 1 · 🔑 Start at the LIABILITIES, not at the expenses
 
