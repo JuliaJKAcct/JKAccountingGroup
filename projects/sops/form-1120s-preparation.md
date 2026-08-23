@@ -1992,7 +1992,7 @@ only half of it — say what it MEANS.**
 **An ordinary company (a C corporation) is taxed twice.** The company pays tax on its profit; then,
 when it hands money to its owners, **the owners pay tax again** on the same money.
 
-**An S corporation is taxed once — but the timing is strange, and that is where the AAA comes from.**
+**An S corporation is taxed once** *(⚠️ **read that as "normally" — §0B: built-in gains tax and excess net passive income tax are the two exceptions that can fall on the entity itself**)* **— but the timing is strange, and that is where the AAA comes from.**
 🔑 **The owners pay tax on the company's profit EVERY YEAR, whether or not they receive a cent of
 it.** A company that earns 100,000 and leaves it all in the bank has still put 100,000 onto its
 owners' personal tax returns, and they have paid on it out of their own pockets.
@@ -2008,6 +2008,11 @@ part has been taxed and which has not.
 > profit the owners have already been taxed on and have not yet received."**
 > **That tally is the Accumulated Adjustments Account. Schedule M-2 is where it is reported.**
 
+🔑 **The rule in one line — and it is what tells you where every M-2 figure belongs:** the AAA moves
+by **everything the shareholders are TAXED on** *(up for income of any kind, down for losses and
+deductions of any kind)*, **plus** money that left the company and produced **no deduction for
+anyone**, **and never** by anything that was never taxed in the first place.
+
 #### What each movement means — not just where it comes from
 
 | What happens | Which way the tally moves | **Why — the meaning** |
@@ -2015,8 +2020,11 @@ part has been taxed and which has not.
 | The company makes a **profit** | **UP** | The owners are being taxed on it **this year**, so from now on it is money they have already paid for |
 | The company makes a **loss** | **DOWN** | It reduces what they have been taxed on. ⓘ **A loss CAN push the tally below zero** — that is normal and is why an opening balance is often negative |
 | The company **hands money to the owners** | **DOWN** | They are collecting what they already paid tax on. The tally is being **used** |
-| The company spends on something **never deductible** *(the disallowed half of meals, fines)* | **DOWN** | 🔑 **That money left the company and gave nobody a deduction.** It cannot still be counted as "taxed profit available to hand out" — it is simply gone |
-| An owner **puts money IN** | **NOTHING** ⛔ | 🔑 **It was never profit and was never taxed as profit.** It raises that person's **basis** — a different account, on a different form, on their own return (§12). ⚠️ **This is the single most common confusion on this schedule** |
+| **Separately stated INCOME** — interest, dividends, capital gains *(M-2 line 3)* | **UP** | Same reason as profit: **the owners are being taxed on it this year too.** ⚠️ It is not inside page 1 line 22, which is why it needs its own line |
+| **Separately stated DEDUCTIONS** — charitable, §179 *(part of M-2 line 5)* | **DOWN** | ⚠️ **NOT because "nobody got a deduction" — the OWNERS did get it.** It comes off because it reduces what they are **net taxed on** |
+| The company spends on something **never deductible** *(the disallowed half of meals, fines)* — also line 5 | **DOWN** | 🔑 **That money left the company and gave NOBODY a deduction.** It cannot still count as "taxed profit available to hand out" — it is simply gone |
+| The company receives **TAX-EXEMPT income** | **NOTHING to the AAA** ⛔ | It was never taxed, so it cannot join a pool of *taxed* profit. It goes to the **OAA**, column (d) — rule 7 |
+| An owner **puts money IN** | **NOTHING** ⛔ | 🔑 **It was never profit and was never taxed as profit.** It raises that person's **basis** — a different account, on a different form, on their own return (§12). ⚠️ **This is the single most common confusion on this schedule.** 🔵 **BUT READ THE PRIOR RETURN FIRST:** some clients run contributions through **M-2 line 3** by convention (§10.1 rule 6, §8A), and **§5C-v's netted presentation puts them there deliberately** — repeat what that client's prior return did |
 
 #### Two sentences that prevent most of the mistakes
 
@@ -2028,23 +2036,20 @@ same thing, and they will not agree.**
 🔑 **2 · The AAA decides PRESENTATION. Basis decides TAX.** How much of a distribution shows on
 Schedule M-2 line 7 is an AAA question. **Whether that distribution costs a shareholder any tax is a
 BASIS question** — §10B, and getting these two backwards is the classic error.
+ⓘ **Scope it honestly: this holds for a company with NO accumulated E&P**, which is these clients and
+is why §5C-v gate 2 exists. ⚠️ **Where there IS accumulated E&P the AAA also decides whether a
+distribution becomes a DIVIDEND** (§1368(c), §10B) — there it carries a tax consequence of its own.
 
 #### And why the tally cannot be driven below zero by a distribution
 
 **You cannot take more "already-taxed money" out of the jar than the jar says is in it.** If the
 owners take more than the tally holds, **the extra came from somewhere else** — and *somewhere else*
-is each owner's own investment in the company. **That is the cap on line 7 (§10A), and it is the
-return handing the question to the shareholder's own tax return.**
+is each owner's own investment in the company — **on a company whose ONLY M-2 column is the AAA.**
+**That is the cap on line 7 (§10A), and it is the return handing the question to the shareholder's
+own tax return.** ⓘ **Where there are other columns the excess passes through them first** — PTEP,
+then accumulated E&P, then the OAA. **§10A qualifies it.**
 
 ### 10.0b · 🔑 The mechanics, now that the meaning is in place
-
-**An S corporation normally pays no federal income tax *(§0B — built-in gains and excess net passive income are the exceptions)*. Its shareholders do — every year, on their share of the profit,
-whether or not the money is handed to them.** A company that earns 100,000 and leaves it in the bank
-has still put 100,000 on its owners' personal returns, and they have paid on it.
-
-🔑 **So when the company later hands them that money, taxing it again would tax it twice. The AAA is
-the running tally of "profit the shareholders have ALREADY been taxed on and have NOT yet received."
-While a distribution comes out of that pool, it is tax-free — the tax was paid years ago.**
 
 **Schedule M-2 is that pool's bank statement. That is all it is:** what was in it, what went in, what
 came out, what is left. Everything below follows from that one idea.

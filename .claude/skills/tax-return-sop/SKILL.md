@@ -351,7 +351,7 @@ hole.** These are the findings that make Block A read *"No, blocked on X"*:
 > **Deliver all four, every time, unprompted — plus part 5, which is what makes the flow readable,
 > and parts 1b, 1c and 6 to 10 below, which are what she has had to ask for since.**
 
-> 🛑 **THE CALIBRATION, and it governs all ten parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
+> 🛑 **THE CALIBRATION, and it governs all twelve parts _(Lilian, 2026-08-19)_:** *"Imagina que esto
 > tiene que hacerlo una persona que no sabe prácticamente nada de taxes, ni de formularios, ni de
 > cómo fluyen las cosas en los formularios, ni las fórmulas detrás de cada número. Este es el nivel
 > de detalle que necesitamos."*
@@ -461,8 +461,8 @@ bien de dónde sale cada número que va en cada columna y qué significa ese nú
 dónde sale, sino qué significa esto o cuál es el objetivo de este Schedule."* — and her reason:
 *"tengo muy poca experiencia y conocimientos en tax returns, sobre todo de compañías."*
 
-🔑 **A line table alone teaches nobody.** Someone who is handed *"line 5 = 1,267, from Schedule K
-16c"* can key it and still not know what they have done, cannot spot it when it is wrong, and cannot
+🔑 **A line table alone teaches nobody.** Someone who is handed *"line 5 = 1,250, from Schedule K
+16c"* ⓘ *(invented, like every figure in this skill)* can key it and still not know what they have done, cannot spot it when it is wrong, and cannot
 answer a client. **So a reconciling schedule gets three things, in this order:**
 
 1. **WHY THE SCHEDULE EXISTS AT ALL** — the problem it solves, in plain words, **assuming no
@@ -475,8 +475,9 @@ answer a client. **So a reconciling schedule gets three things, in this order:**
 
 ⚠️ **And name the traps in the meaning, not only in the arithmetic:** what the account is NOT, which
 neighbouring concept it is confused with, and which way round the confusion runs. **On the M-2 that
-is: the AAA belongs to the company and basis belongs to a person; the AAA decides presentation and
-basis decides tax.**
+is: the AAA belongs to the company and basis belongs to a person; and the AAA decides presentation
+while basis decides tax** — ⓘ **which holds for an entity with no accumulated earnings and profits;
+where there ARE any, the AAA also decides whether a distribution becomes a dividend.**
 
 🛑 **This is not a "nice to have" and it is not conditional on being asked.** It applies to the M-2,
 the M-1, the basis form and any state equivalent — **every time, for every client.**
