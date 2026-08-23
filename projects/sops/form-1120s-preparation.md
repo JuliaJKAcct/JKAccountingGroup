@@ -1504,8 +1504,14 @@ one owner's slice of it.
 > form. ⚠️ **Which screen — one reached from Schedule K, or the code rows on each shareholder's K-1
 > box 17 — is exactly what §11A's two-minute test settles, and it differs by program.**
 > 🛑 **Whichever it is, enter it in ONE place only** (§11A): keyed at entity level *and* on the K-1s, a
-> program that allocates reports it twice and raises no diagnostic. ✅ **Then verify:** Schedule K
-> line 17d must equal the sum of that code across the K-1s.
+> program that allocates reports it twice and raises no diagnostic.
+> ⛔ **DO NOT VERIFY IT BY LOOKING AT THE 17d BOX ON PAGE 4 — in at least one program that box NEVER
+> fills, and that is correct behaviour.** 🔑 **17d has no meaningful total**: it holds items carrying
+> different code letters that cannot be added together *(gross receipts plus basis of energy property
+> is not a number)*, so the detail belongs on the attached statement, not in a box on the form face.
+> ✅ **The verification that works: PRINT the return and read the STATEMENT PAGES** — a statement for
+> Schedule K line 17d should name the item and its amount. **Failing that, check each K-1 carries the
+> code letter and the amount**, which is what the IRS and the shareholder actually need.
 > ⛔ **And the form's sub-line "d" is unrelated to the K-1 code letter "D"** (*Basis of energy
 > property*).
 
@@ -1588,6 +1594,47 @@ why — ruled that it stood. The analysis was sound and the decision was not the
 make.)_
 
 ---
+
+### 8D · ⚠️ A TERMINATION YEAR — why the balance sheet may sit at a LATER date than the income
+
+**On a return whose year was cut short because the S election ended, the income statement and the
+balance sheet run to different dates, and it feels wrong until you see why.**
+
+🔑 **The company did not stop existing on the day the election ended. What ended was its STATUS.** It
+carried on — same EIN, same premises, same bank account — as a **C corporation** for the rest of the
+calendar year. **So the company's YEAR is still January to December.** What splits in two is the tax
+status, not the calendar.
+
+**The IRS's answer: split the INCOME into two pieces, one per status — but show ONE balance sheet, at
+the end of the whole year.** The instruction, quoted:
+
+> *"If the S election terminated during the tax year and the corporation reverted to a C corporation,
+> **the year-end balance sheet should generally agree with the books and records at the end of the C
+> short year.** However, if the corporation elected under section 1362(e)(3) …, the year-end balance
+> sheet should agree with the books and records at the end of the S short year."*
+
+🛑 **AND SAY THIS OUT LOUD, because it is the half a first-timer does not know exists: the C short
+period is ITS OWN RETURN — a Form 1120, for the same EIN, taxed AT THE ENTITY LEVEL, with its own due
+date.** ⛔ **This 1120-S covers the S short period only.** Whether the firm is engaged for that second
+return is a separate question that has to be asked, not assumed.
+
+💡 **The way to hold it in your head:** one shop that changes its tax STATUS mid-year. **The profit
+splits into two pieces — one taxed to the owners, one taxed to the company itself.** ⚠️ **But "what
+was in the shop on 31 December?" has one answer, on one date.** The result splits; the inventory does
+not. ⓘ **Note it is the STATUS that splits, not necessarily the ownership** — an election can
+terminate with no change of owner at all.
+
+⚠️ **So expect a page 1 that stops in October beside a Schedule L dated 31 December. They do not tie
+to each other, and they are not meant to.**
+
+🛑 **The exception is keyed to an ELECTION — and do not talk yourself out of reading the law.** It is
+tempting to reason *"nobody elected, so the exception cannot apply."* ⛔ **That reasoning has failed
+in practice**, for three reasons worth knowing: a **50%-or-more stock sale may FORCE the closing of
+the books with no election at all**; an (e)(3) election is made **by a statement attached to the very
+return you are preparing**, so nothing has been foregone yet; and if there is **neither** an election
+**nor** a mandate, the **pro-rata default** governs — which would make the short period's
+*allocation* wrong, not merely its balance-sheet date. **Read §1362(e), §1362(e)(6)(D) and
+Reg. §1.1362-3 before concluding anything**, and present the instruction's default meanwhile.
 
 ### 8C · 🔑 BUILD SCHEDULE L FROM THE LEDGER'S ACCOUNT BALANCES — and NAME the lines that are zero
 
@@ -1932,8 +1979,31 @@ spent — and the error travels out of this return and onto their 1040s, where n
 
 ## §10 · Schedule M-2 — the AAA
 
-The **Accumulated Adjustments Account** tracks the income the company has been taxed on but not
-yet distributed. It matters when distributions are made — it decides whether they are tax-free.
+### 10.0 · 🔑 WHAT THE AAA IS — read this before the mechanics, or none of it lands
+
+**An S corporation normally pays no federal income tax *(§0B — built-in gains and excess net passive income are the exceptions)*. Its shareholders do — every year, on their share of the profit,
+whether or not the money is handed to them.** A company that earns 100,000 and leaves it in the bank
+has still put 100,000 on its owners' personal returns, and they have paid on it.
+
+🔑 **So when the company later hands them that money, taxing it again would tax it twice. The AAA is
+the running tally of "profit the shareholders have ALREADY been taxed on and have NOT yet received."
+While a distribution comes out of that pool, it is tax-free — the tax was paid years ago.**
+
+**Schedule M-2 is that pool's bank statement. That is all it is:** what was in it, what went in, what
+came out, what is left. Everything below follows from that one idea.
+
+| Line | What it does to the pool | Where the figure comes from |
+|---|---|---|
+| **1** Balance at beginning | what was in it on day one | 🔒 **last year's FILED return, its own line 8.** Copied, never recalculated. ⓘ **It can be negative** — losses do drive the AAA below zero |
+| **2** Ordinary income from page 1, line 22 | **IN** — this year's profit | ƒ page 1 line 22. They are being taxed on it now, so it joins the pool |
+| **3** Other additions | **IN** — the **separately stated INCOME** items | ƒ Schedule K's income lines that are not in line 22 — **interest (4), dividends (5a), capital gains (7/8a), other income (10)**. ⚠️ **Not "usually nothing"**: the instructions' own worked example puts K lines 4 and 5a here. ⛔ **Capital contributions do NOT belong here** — rule 6 below |
+| **4** Loss from page 1, line 22 | **OUT** — this year's loss | ƒ page 1 line 22 when it is negative |
+| **5** Other reductions | **OUT** — the **separately stated LOSS and DEDUCTION** items **plus** the nondeductible expenses | ƒ Schedule K's **line 2 loss, 12a charitable, 12e, §179** … **and line 16c**. ⚠️ **NOT just 16c** — the instructions' worked example adds all of them. 🔑 On 16c: that money left the company and will never produce a deduction for anyone, so it cannot sit in a pool of profit available to hand out tax-free. ⓘ **Entered as a positive; the form subtracts it** |
+| **6** Combine lines 1 through 5 | the pool **before** paying anything out | ƒ |
+| **7** Distributions | **OUT** — 🔴 **but capped at line 6** | See 10A |
+| **8** Balance at end of tax year | what is left → **next year's line 1** | ƒ `line 6 − line 7` |
+
+### 10.1 · The rules that follow from it
 
 1. **Beginning balance = last year's ending balance**, from the filed return. Copy it.
 2. Add the year's income, **or** subtract the year's loss — in **column (a)**, the AAA column.
@@ -1949,6 +2019,159 @@ yet distributed. It matters when distributions are made — it decides whether t
    textbook convention there is nothing on line 3 for the netting to reduce.
 7. ⚠️ **Nor does tax-exempt income.** It increases *basis* (§12's formula) but goes to the
    **Other Adjustments Account**, not the AAA. Same trap, different direction.
+8. **Only column (a) normally carries anything.** The form has four: **(a) AAA** · **(b)
+   shareholders' undistributed taxable income previously taxed** — a pre-1983 concept, almost never
+   present · **(c) accumulated E&P** — 🔴 **zero for a company that was never a C corporation, and
+   that zero is load-bearing** (the Schedule B question about a **former C corporation's net unrealized
+   built-in gain** — ⚠️ **find it by its wording, not its number** (§6). **And a blank answer there is
+   corroboration, not proof:** the conclusion rests on the company **never having been a C
+   corporation**) · **(d) other adjustments account** — tax-exempt income and its expenses.
+
+### 10A · 🛑 THE CAP ON LINE 7 — and the question it hands to the shareholder
+
+**The pool cannot be emptied below zero by handing money out.** If the shareholders took 60,000 and
+the pool holds 35,000, **line 7 shows 35,000 and line 8 shows zero.** ⓘ **On a company whose only
+M-2 column is the AAA, the other 25,000 appears nowhere on Schedule M-2.** ⚠️ **On a company with
+other columns it does:** the instructions' ordering sends the excess on to the **PTEP account**, then
+**accumulated E&P**, then the **OAA** — so check which columns the client actually has before saying
+it vanishes.
+
+⛔ **Do NOT "fix" the difference, and do NOT copy Schedule K line 16d into line 7.** Both figures are
+right: **the K-1 reports what the shareholders actually RECEIVED; the AAA absorbs only what it HAD.**
+
+🔑 **What the cap actually is: the return telling the shareholder *"this part is not covered by the
+AAA — go and check your own basis."*** The excess is not taxed on this return. It is tested on that
+person's **Form 7203**, on their **1040** — see §10B, which is not optional.
+
+### 10B · 🔴 DISTRIBUTIONS vs BASIS — RUN THIS EVERY TIME THERE IS A DISTRIBUTION
+
+**The most consequential thing on this return that produces no error message, no diagnostic and no
+red figure anywhere.** A preparer can file a perfect 1120-S and still have caused a misstatement —
+**on somebody else's tax return.**
+
+#### What "basis" is, in one paragraph
+
+**Basis is what a shareholder has invested in the company for tax purposes. It is a PERSONAL number
+that lives on THEIR return, not on the company's**, and the company's books do not contain it. It
+starts at what they paid for their shares, and each year:
+
+```
+  opening basis
++ their share of the profit            ← they were taxed on it, so it is now theirs
++ their share of tax-exempt income
++ money they put in
+− distributions they received          ← these come off BEFORE losses
+− their share of nondeductible expenses
+− their share of losses already deducted   ← these come off LAST
+= closing basis
+```
+
+🛑 **The ORDER is not decoration — it is Reg. §1.1367-1(f), and Form 7203 Part I enforces it**
+(line 6 distributions → line 8a nondeductibles → line 11 losses). **It is §12's order; use §12's.**
+A shareholder who took money out has **less room left for a loss** than a straight subtraction
+suggests.
+
+#### 🔴 WHAT MAKES A DISTRIBUTION TAXABLE IS **BASIS**, NOT THE AAA
+
+**This is the sentence to hold on to, and getting it backwards is the classic error** — one this SOP
+made and had corrected in review, so it is written out in full.
+
+**For a company with NO accumulated E&P — every S corporation that has never been a C corporation,
+which is most of these clients — §1368(b) says:**
+
+| | The shareholder's own **stock basis** | Consequence |
+|---|---|---|
+| **1** | The distribution is **within** their basis | ✅ **Tax-free** — ⚠️ **and their basis FALLS by the whole distribution** (§1367(a)(2)(A)) |
+| **2** | 🔴 The distribution **exceeds** their basis | 🔴 **The excess is a CAPITAL GAIN on their 1040** — gain from the sale of property |
+
+⛔ **THE AAA DOES NOT APPEAR IN THAT TEST AT ALL.** A distribution fully covered by the AAA is
+**still** tested against basis, and **still** reduces it.
+
+**Where the AAA does matter: §1368(c), and only when the company HAS accumulated E&P.** There the AAA
+decides whether a middle tier is reached — up to the AAA it is treated as under (b); beyond the AAA
+and up to the accumulated E&P it is a **DIVIDEND**; beyond that, back to (b). ⓘ **On a company with no
+E&P there is no middle tier**, which is why §6's built-in-gain/E&P question carries so much weight.
+
+> 🛑 **THE OPERATIONAL CONSEQUENCE, and it is the whole reason this section exists.** *"The AAA
+> covers the distributions, so we are fine"* is **NOT a valid conclusion.** A company can have a
+> large AAA while a particular shareholder has almost no basis — someone admitted recently, someone
+> who took distributions in earlier years, someone whose suspended losses ate their basis. **That
+> shareholder has a capital gain, and an AAA test would clear them.**
+> ✅ **So: the AAA-versus-distributions comparison is a SCREEN that tells you how alarmed to be. It
+> never clears anybody. The basis test is run whenever there is a non-dividend distribution.**
+
+#### 🛑 The four questions — mandatory, in this order
+
+1. **Did any money or property reach the shareholders this year?** No → done, say so.
+   🔵 **Do NOT key this off Schedule K line 16d alone: on a NETTED return (§5C-v) 16d reads ZERO by
+   design while money did reach them.** Read the **gross debits in each capital account** (§5C-iii).
+2. **What is EACH shareholder's own stock basis before the distribution?** Source: **their
+   prior-year Form 7203**, or its Part I reconstructed from prior K-1s. ⚠️ **If none exists, the
+   reconstruction is SEPARATE WORK with its own time — scope it, do not absorb it silently.**
+   ⛔ **There is no step that lets you skip this because "the AAA covered it."**
+3. **Is that shareholder's distribution larger than their basis?** → 🔴 **the excess is a CAPITAL
+   GAIN on their 1040**, and 🛑 **TELL THEM BEFORE THEY FILE.**
+4. **Separately, for the ENTITY:** does the distribution exceed **M-2 line 6**? That decides the
+   **cap on M-2 line 7** (§10A) — ✅ **and nothing else.** ⚠️ **Record the answer either way**, so the
+   next reader can see it was looked at.
+
+#### Why missing it is expensive
+
+| | |
+|---|---|
+| 🔴 The shareholder **under-reports income** | Tax, plus interest, plus penalties — **personally** |
+| 🔴 **The wrong return is not the one you prepared** | The 1120-S can be flawless and the damage still be yours |
+| 🔴 **Form 7203 is required** of a shareholder who **receives a distribution**, claims a loss, disposes of stock, or receives a loan repayment | Not an optional schedule — and a distribution is one of the triggers |
+| 🟠 It surfaces **years later** | Usually as an IRS notice, when fixing it is hardest |
+
+⚠️ **And the trap that makes this worse on a company like these:** where the books hold **one pooled
+`Draw` account** (§5C-iii), the per-shareholder split of the distributions is an **assumption**, so
+the amount tested against each person's basis is an assumption too. **Settle the split before running
+step 4, not after.**
+
+### 10C · 🔑 HOW THE M-2 REACHES SCHEDULE L LINE 24 — and why the balance sheet will not balance until it does
+
+**Tax software normally COMPUTES Schedule L line 24 (retained earnings) from the M-2 rather than
+letting you type it** — click line 24 and it jumps you to the M-2. That is correct behaviour, and it
+is where a first-time preparer gets stuck, because:
+
+🔴 **The AAA is a TAX number and retained earnings is a BOOK number. They are not the same thing and
+they are not supposed to agree.** The AAA runs on the return's method, excludes contributions and
+starts from the prior return; retained earnings runs on the books' method, includes contributions
+and starts from the ledger (§8, §8A).
+
+🛠️ **So the M-2 worksheet in tax software usually carries EXTRA COLUMNS that are not on the IRS
+form** — typically named something like *retained earnings unappropriated* or *timing differences*,
+plus a *total retained earnings* column. ✅ **That bridge column is exactly where the book-versus-tax
+difference goes, and it is what makes line 24 come out right.** Its opening balance is:
+
+```
+book retained earnings at the start   −   AAA at the start   =   the bridge column's opening balance
+```
+
+```
+bridge opening  =  book retained earnings  −  (AAA + OAA + every other M-2 column)
+```
+⚠️ **Against ALL the M-2 columns, not the AAA alone** — rule 8 above.
+
+and its movement for the year is everything that moved the books but not those columns (or moved them
+by different amounts): **the book-versus-tax income difference · capital contributions · the portion
+of distributions the columns could not absorb.**
+⛔ **And one client-specific trap:** where the prior return **ran contributions through M-2 line 3**
+(§8A, §10.1 rule 6), **they are already inside the AAA — do not count them again in the movement.**
+
+> ✅ **THE DIAGNOSTIC — the program observed prints it at the foot of Schedule L: *"End of year
+> balance sheet out of balance by …"*.** 🔑 **Once every account is confirmed assigned, that figure is
+> what line 24 is missing.**
+> 🛑 **BUT DO NOT REACH FOR THE BRIDGE COLUMN FIRST.** An out-of-balance Schedule L means assets ≠
+> liabilities + equity, and **line 24 is only one of the possible causes.** ⛔ **Check §8C's test
+> before anything:** is the gap **1× or 2× a figure you recognise**? Then an account is on the wrong
+> line or the wrong side, and moving the bridge column would **bury** it.
+> ✅ **Only once §8C's assignment check passes does the residue belong to the bridge column** — and
+> **build it from its named components**, never as one lump chosen to make the difference disappear.
+
+⛔ **Do not "fix" this by overriding Schedule L line 24 to make the balance sheet close** — that
+breaks the M-2 link and hides a real difference. **Fix the bridge column.**
 
 ---
 
@@ -2013,8 +2236,11 @@ concerned.
 
 ✅ **The tie-out that works whichever way it turned out**, and which belongs in §14:
 
-> **Schedule K line 1, 16c, 16d and 17-AC must each equal the SUM of that box across every K-1.**
+> **Schedule K lines 1, 16c and 16d must each equal the SUM of that box across every K-1.**
 > Print them and add by hand. **Double the expected figure = entered twice. Half = a K-1 is missing.**
+> ⛔ **17-AC is the EXCEPTION and must not be tested this way** — it lives under line 17d, whose box
+> may never fill because 17d has no meaningful total (§7). **Verify it from the STATEMENT PAGE and
+> the K-1 code rows instead.**
 
 > 🔴 **A trap specific to a SHORT period that ends at a change of ownership.** The year has already
 > been cut at the sale, so **within this return there was no transfer** — every shareholder held their
@@ -2274,12 +2500,19 @@ rounding difference.
 - [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
 - [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
-      across all K-1s — 🔴 **add lines 1, 16c, 16d and 17-AC by hand off the printed forms** (§11A).
+      across all K-1s — 🔴 **add lines 1, 16c and 16d by hand off the printed forms** (§11A).
       **Twice the expected figure means it was entered at the entity level AND on the K-1s; half means a
-      K-1 is missing.** ⚠️ **No software raises a diagnostic for either**
+      K-1 is missing.** ⚠️ **No software raises a diagnostic for either.** ⛔ **17-AC is exempt from this
+      test — verify it on the statement page and the K-1 code rows (§7)**
 - [ ] 🔴 **ON A SHORT PERIOD ENDING AT A CHANGE OF OWNERSHIP: no stock-transfer date was entered**
       in the shareholder screen, and every **item G** reads the plain arithmetic percentage (§11A).
       **The cut already performed the allocation** — a transfer date makes the software do it a second time
+- [ ] 🔴 **THE DISTRIBUTIONS-vs-BASIS CHECK WAS RUN AND ITS RESULT WRITTEN DOWN** (§10B) — all four
+      questions, including *"the AAA absorbed all of it"* when that is the answer. ⛔ **Never leave it
+      silent:** an excess over the AAA that nobody tested against basis is a **capital gain the
+      shareholder does not know they have**, and no software raises it
+- [ ] 🔑 **The Schedule L *"out of balance by"* diagnostic reads ZERO** (§10C) — and if it did not,
+      the **book-to-tax bridge column on the M-2** was fixed, ⛔ **never Schedule L line 24 overridden**
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
 - [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **No in-form diagnostic was raised for a blank on the one return observed**, so this checklist may be the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
 - [ ] 🔗 **§8 of the working paper — the HANDOFF to the shareholder's 1040 — is written** (§13A): the K-1 box by box **with its entry route**, what this side cannot supply *(Form 7203 line 1)*, and what must **match** on both returns. ⛔ **The 1040 itself is a separate request**
