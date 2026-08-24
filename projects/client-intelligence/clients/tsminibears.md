@@ -1,6 +1,6 @@
 # Tsminibears LLC
 
-> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-13
+> **Status:** Former — archived in Double 2026-06-08 · **Owner:** Maria · **Last updated:** 2026-08-24
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -728,6 +728,19 @@ All times below are **UTC** unless marked otherwise.
   raised by anyone, and the 3–4 weeks for the change only begins once the POA clears. **Two firm-wide
   lessons in §5: the agency's turnaround figure is a floor, not a promise — call instead of computing a
   date; and ASK WHO HAS THE CASE, on the first call.** _(Detail in §4, "✅ THE FOURTH CALL".)_
+
+- _(2026-08-24, Lilian — gap-check, no action taken)_ — **Eleven days on, nothing has moved.** Lilian
+  asked for a recap of where the matter stands; the session swept the three places a development would
+  land and all three are unchanged since 2026-08-13: the Gmail thread to **Felesha Spence** still holds
+  **one message and no reply**, both Double notes (`485230` Part 1 / `491836` Part 2) still carry
+  `updatedAt` **2026-08-13**, and Ping has nothing. 🔴 **What that makes overdue is the firm's own
+  cadence.** The case note sets it out: *no reply by ~Wed 2026-08-19 → call her direct line; still
+  nothing → call the general line and ask whether the POA is ON FILE.* **That date passed and the call
+  was not made**, so the matter has now sat on one unanswered email for eleven days — **and the penalty
+  may still be accruing.** The next action is unchanged and simply **due: call.** _(Rule 1b — the
+  searches behind that negative: Gmail on the client and agency names since 2026-08-12,
+  `list_notes(706709)`, and a Ping meeting search. A DOR phone call Lilian made without telling anyone
+  would appear in none of them.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
