@@ -425,13 +425,15 @@ run because there was no money, **and still ask for the effective date to be mov
 that is now the plan.** It was wrong to treat the date change as dead: what the firm ruled out was
 **misrepresenting the entity type**, not the request itself.
 
-- 🎯 **THE DATE ASKED FOR: 1 OCTOBER 2026** — the first day of Q4 2026, **Julia's figure**
-  _(recorded 2026-08-06)_. ✅ **And it is the date Lilian actually named to the agency on the fifth
-  call** _(confirmed by her, 2026-08-24: "la fecha que solicité fue primero de octubre de 2026")_ — so
-  this is no longer only the firm's intention, it is **the request on the table**. The honest framing
-  below does **not** depend on that date — *"from the quarter wages actually begin"* is the argument —
-  but **1 October 2026 is the concrete date the request names**, and it is what Tallahassee is
-  deciding.
+- 🎯 **THE DATE ASKED FOR: 1 OCTOBER 2026** — the first day of Q4 2026, and **consistent with
+  Julia's figure**, which this file records only as the **month** October 2026 _(§4 Option 3; §6,
+  2026-08-13)_. ✅ **It is the date Lilian actually named to the agency on the fifth call**
+  _(confirmed by her, 2026-08-24: "la fecha que solicité fue primero de octubre de 2026, como habíamos
+  dicho antes")_ — so the **ask** is now on the record instead of being inferred. ⚠️ **What that does
+  NOT establish is that the request reached Tallahassee** — she confirmed the date she requested, not
+  that it was lodged; see question ① of the monitoring. The honest framing below does **not** depend on
+  the date — *"from the quarter wages actually begin"* is the argument — but **1 October 2026 is the
+  concrete date the ask names.**
 - 🗣️ **WHAT TO EXPLAIN, IN WORDS — JULIA'S FOUR POINTS, AND THEY ALL SURVIVE.** _(Restated here
   2026-08-13 because they were only written inside the **superseded** two-track block ABOVE, where a
   reader looking for them is told not to act on the page. **What was superseded is the conclusion
@@ -700,8 +702,11 @@ that remain is worth one question on the next contact:
 - ✅ **CLOSED the same day — the date requested was 1 OCTOBER 2026.** The write-up said only
   "changing the effective date", so this file recorded it as unestablished rather than assuming;
   **Lilian confirmed it when asked** _(2026-08-24: "la fecha que solicité fue primero de octubre de
-  2026, como habíamos dicho antes")_. It matches Julia's figure, so **the request on the table is the
-  one the firm intended** — and the one variable Tallahassee acts on is now on the record.
+  2026, como habíamos dicho antes")_. It is **consistent with Julia's figure** — which this file
+  records as the **month** October 2026, so "consistent", not "identical"; the only thing equating them
+  is Lilian's own *"como habíamos dicho antes"*. **The date named in the ask is the one the firm
+  intended**, and the one variable Tallahassee acts on is on the record. ⚠️ **Still not established:
+  that the ask ever reached Tallahassee.**
 - **No identifier for the request itself** — a case, task or reference number in Tallahassee. Without
   it, every future call restarts from the client's BP number.
 
@@ -891,8 +896,7 @@ All times below are **UTC** unless marked otherwise.
   notice is not a refusal**. 📬 **A favourable decision arrives as a letter, and Felesha said she will
   also call**; ⚠️ **an unfavourable one has no stated route at all.** ⚠️ **Not produced by the call:
   anything in writing, a reference number for the request, or a record of WHICH date was asked for**
-  (✅ **since answered — see the next entry**). **Three firm-wide
-  lessons in §5:** an unprocessed POA is not always the gate — **ask the named officer to act now**;
+  (✅ **since answered — see the next entry**). **Three firm-wide lessons in §5:** an unprocessed POA is not always the gate — **ask the named officer to act now**;
   an **automated notice is not a decision** and the client must be warned before one lands; and when a
   request leaves the office you can reach, **ask how long, whether the notices stop, and what arrives
   if the answer is no.** _(Detail in §4, "⭐ THE FIFTH CALL", with the monitoring plan.)_
@@ -917,7 +921,9 @@ All times below are **UTC** unless marked otherwise.
   requested on the fifth call was 1 OCTOBER 2026** — *"la fecha que solicité fue primero de octubre de
   2026, como habíamos dicho antes"*. Her write-up for Julia said only *"changing the effective date"*,
   so this file recorded the date as **unestablished** rather than assuming it matched Julia's figure,
-  and asked her. **It did** — the first day of Q4 2026, exactly the ask of 2026-08-06. ⭐ **Why the
+  and asked her. **It is the first day of Q4 2026 — consistent with the ask of 2026-08-06**, which
+  this file records only as the month _(§4 Option 3)_; the day-level match rests on Lilian's own
+  *"como habíamos dicho antes"*, not on the record. ⭐ **Why the
   question was worth one line:** the requested date is **the only variable Tallahassee acts on**, and
   a file that had guessed it would have read as authoritative while resting on nothing. ⚠️ **What
   remains open is not the date but whether the AGENCY has it right** — nothing came back in writing,
@@ -925,7 +931,12 @@ All times below are **UTC** unless marked otherwise.
   three places in the same pass:** the Double case note `485230` (rewritten in place — the date is now
   in its STATUS line and its timeline), the FOLLOW-UPS row, and **the monitoring Routine's own prompt**
   (`trig_01418WCAJnNHsweVawBZErYS`), so the September session states the date rather than asking for it
-  again.
+  again. 📏 **Note `485230` re-measured after this rewrite: 7,421-character body (7,509 with the title)
+  — trimmed to 7,336 / 7,424 before sending**, since the earlier figure in this log (7,364) no longer
+  described it. **Its two remaining gaps were also aligned to this file's two** — *nothing in writing*
+  and *no identifier for the request* — with the **DR-835 scope question moved to the note's POA
+  bullet**, where this file keeps it too, so a teammate cross-reading them does not think one is
+  stale.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -947,8 +958,7 @@ All times below are **UTC** unless marked otherwise.
   decision? ③ is the POA processed yet? ④ is there a reference number for the request? ⑤ which
   quarters show as delinquent now?** ✅ **The date requested is settled: 1 OCTOBER 2026**, confirmed by
   Lilian on 2026-08-24 — ⚠️ **but a different date quoted back by the agency is a finding, not a
-  detail.** ⚠️ **Nothing is in writing**: no confirmation, no reference,
-  no email — the standing *get it in writing* rule applies to this request too. 🔴 **A new penalty
+  detail.** ⚠️ **Nothing is in writing**: no confirmation, no reference, no email — the standing *get it in writing* rule applies to this request too. 🔴 **A new penalty
   notice is NOT a refusal** — the notices are automated and stop only on a favourable decision. **The
   one question that stays open and unasked: is the request receivable without the IRS letter?** Do
   **not** raise it — but it is still the likeliest shape of a refusal, so be ready if Tallahassee
@@ -1028,8 +1038,8 @@ All times below are **UTC** unless marked otherwise.
 - [x] **WHICH EFFECTIVE DATE was actually requested on 2026-08-24 — ✅ 1 OCTOBER 2026.** The write-up
   said only "changing the effective date", so it was recorded as unestablished rather than assumed;
   **Lilian confirmed it the same day** _("la fecha que solicité fue primero de octubre de 2026, como
-  habíamos dicho antes")_. It matches Julia's figure. ⚠️ **What stays open is not the date but whether
-  the agency HAS it right** — if a future contact quotes a different one, that is a finding.
+  habíamos dicho antes")_. **Consistent with Julia's figure**, which the file records as the month
+  October 2026. ⚠️ **What stays open is not the date but whether the agency HAS it right** — if a future contact quotes a different one, that is a finding.
   _(Opened and closed 2026-08-24.)_
 - [ ] **A reference/case number for the Tallahassee request, and anything in writing confirming it was
   submitted.** Neither was produced on the call; without them every future contact restarts from the
