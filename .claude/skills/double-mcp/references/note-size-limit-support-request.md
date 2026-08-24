@@ -206,79 +206,101 @@ that does not match theirs.
 
 ---
 
-## The follow-up — drafted 2026-08-13, ⚠️ NOT SENT
+## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
 
-Lilian's to send or change. It goes on **the same thread** (*"Checking in before our 8/18 wrap-up"*),
-Julia and Maria in copy, as every previous message on this has.
+🔴 **Do not send this to Allison on the old thread. That window closed.** The follow-up drafted on
+2026-08-13 sat unsent for eleven days, and in that time the situation moved twice:
 
-**Written for Allison, who is not an engineer.** Lilian's instruction, 2026-08-13: *"más escueta y
-mejor explicada… para que Allison no se atormente con tanta cosa técnica."* An earlier draft led with
-a three-row results table and named the AWS WAF rule in the body; it was accurate and it was the wrong
-document for its reader. The rewrite keeps **every** fact and moves the jargon to a short block at the
-end that she can forward without reading. Four rules if you edit it again — rule 4 carries the two hardest-won ones, do not drop it as an aside:
+- **2026-08-17 — Allison ended her implementation period** (*"Dedicated Double Support Period Winding
+  Down"*, after the wrap-up call she and Lilian held that day). Her words: *"While I won't be your main
+  point of contact moving forward, the team at Double is still here for you. If you ever need help or
+  have a question, please reach out to **help@doublehq.com** or use the in-app chat."* Maria replied
+  and thanked her; **the matter was never raised again on that thread.**
+- **2026-08-24 — Ryan Quill** (`ryan.quill@doublehq.com`) opened a fresh account conversation: he had
+  audited the account, praised the firm's use of the integration, and pitched the new **Plus / Scale**
+  tiers with launch-promotion pricing plus a 15-minute call. Julia's out-of-office answered him.
 
-1. **Concede the note question in the second paragraph.** Arguing about note length is what got this
-   closed as "out of scope" the first time.
-2. **The evidence goes in plain sentences, not a table.** *A short version of the same question works;
-   the long one does not; the same long text goes through to another system* — that is the whole proof,
-   and it survives being said in words.
-3. **Quarantine the technical detail at the bottom**, addressed to whoever she forwards it to. Allison
-   forwards technical issues (she looped in `help@doublehq.com` on 2026-05-20, which became dev ticket
-   #102495635), so the forwarded fragment has to stand alone — **workspace name, dates, client IDs and
-   the error code all belong in it**, because a plaintext fragment arriving without them identifies
-   neither sender nor tenant and an engineer who cannot find the request in a log closes the ticket as
+⚠️ **Two questions in the old draft are now DEAD and must not be sent:** *"is our call on the 17th or
+18th?"* (it happened on the 17th) and anything addressed to Allison as the owner of the issue.
+
+**The route now:** send it to **`help@doublehq.com`**, which is where Allison directed us, and
+**copy Allison** — she carries the entire history, she personally argued the deadline feature request
+with their developers, and a bare ticket at `help@` restarts from zero. Julia and Maria in copy as
+before. **A new email, not a reply on the old thread** — the thread belongs to an implementation that
+is formally closed.
+
+ⓘ **Unused leverage, Lilian's call and nobody else's:** Ryan Quill is asking for a call to sell an
+upgrade. A paying customer with an open technical blocker is in a reasonable position to raise it
+there. **Not written into the email** — it is a commercial judgement, not a support fact.
+
+**Written in plain language for a reader who may not be an engineer**, per Lilian's instruction of
+2026-08-13 (*"más escueta y mejor explicada… para que Allison no se atormente con tanta cosa
+técnica"*) and 2026-08-24 (*"lenguaje sencillo y bien explicativo… el objetivo es que Double entienda
+bien qué está sucediendo"*). The body stays plain; the measurements sit in a block at the end that a
+support agent can hand to an engineer. **Four rules if you edit it again:**
+
+1. **Concede the note question early.** Arguing that notes *do* have a limit is what got this closed
+   as "out of scope" the first time.
+2. **The evidence goes in plain sentences.** *A short version of the same question works; the long one
+   does not; the same long text goes through to another system* — that is the whole proof.
+3. **The technical block must stand alone** — workspace, dates, client IDs, error code — because it
+   will be forwarded, and an engineer who cannot find the request in a log closes the ticket as
    unreproducible.
-4. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"** —
-   even though it is jargon: Allison answered a "Claude integration" question with *Ask Double* on
-   2026-06-17, and unnamed it goes to the same team again. ⓑ **Ask about BOTH** the thing in front of
-   the endpoint *and* the MCP server itself. We cannot tell them apart, and naming only the firewall
-   is how this gets closed "out of scope" twice.
+4. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
+   Allison answered a "Claude integration" question with *Ask Double* on 2026-06-17. ⓑ **Ask about
+   BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
+   and naming only the firewall is how this gets closed "out of scope" twice.
 
-> Hi Allison,
->
-> Thank you for chasing this down — and that is great news about the deadline feature request.
->
-> On the notes, I think the question reached the wrong team. Your team is right that Double has no
-> limit on note length. But what is being blocked is not a note.
->
-> We tested it. Through the **MCP integration** we use with Claude (not Ask Double), we asked Double a
-> simple *question* — "list the clients whose name matches this" — using a very long search text. That
-> saves nothing, and there is no note in it anywhere. It was blocked too, with the same error. The very
-> same question with a short search text works fine.
->
-> So it is not about notes. It is about the size of what we send. And it does not look like Claude
-> either: we sent that identical long text to another system we use, from the same Claude account, a
-> minute apart, and it went through with no problem.
->
-> It seems that something on Double's side is refusing our request before it reaches the part of Double
-> that stores the notes. From outside we cannot tell whether that is something sitting in front of your
-> MCP endpoint, like a firewall, or a size limit inside the MCP server itself. Could you ask your
-> technical team to check both?
->
-> **If it helps whoever looks at it:**
->
-> - Workspace: **JK Accounting Group**. The note failures were **6 August 2026, ~03:25–04:45 UTC**, on
->   client IDs **706709** and **710577**. The blocked read was **13 August 2026** — that one was a
->   roster-wide `list_clients` search, so there is no client ID to narrow it by.
-> - The error is `403 Forbidden`, `mcp_request_blocked`, on the MCP endpoint.
-> - What we measured: note bodies of ~7,600 characters save; ~8,000 and ~10,400 do not. On a read-only
->   call, a ~48-character filter works and a ~9,000-character one is refused — we have not tested
->   anything in between, so we cannot give an exact cut-off, only that it is somewhere around 8 KB.
-> - **It is not our content.** A body of ~8,200 characters of plain repeated filler — no formatting, no
->   client data, nothing that could look like an attack pattern — was refused exactly like real text.
-> - **Easiest way to catch it in a log:** tell us a time and we will run the failing request while
->   someone watches. We can send a payload of any size you like.
-> - The other system that accepted the identical long text is a different MCP integration on the same
->   Claude account, so the comparison is like-for-like.
->
-> One more thing — is our wrap-up call on August 17th or 18th? Your message says one and the subject
-> line says the other, and we do not have an invite for either.
->
-> Thank you so much!
->
-> Lilian — JK Accounting Group
+**Subject:** `MCP integration — requests over about 8 KB are refused with a 403 (JK Accounting Group)`
+**To:** `help@doublehq.com` · **Cc:** Allison, Julia, Maria
 
-**If it is still unresolved after the wrap-up call**, the implementation window has closed and this
-goes to `help@doublehq.com` as a support ticket — restore the firm introduction from git history, and
-there the three-row table at the top of this file *is* the right opening, because the reader is the
-engineer rather than Allison.
+> Hello,
+>
+> Allison Millea helped us with this during our implementation, and suggested we write to you now that
+> our dedicated support period has ended. Allison is copied here — she has the full history.
+>
+> **The short version:** when we use Double through the **MCP integration** with Claude, any request
+> over roughly 8,000 characters comes back as `403 Forbidden`. Smaller requests work normally.
+>
+> We first reported this as a problem with long notes, and the answer that came back was that Double
+> has no limit on note length and that the problem must be coming from Claude's API. We think the first
+> part is correct — and that is exactly why we believe the question went to the wrong place.
+>
+> **What is being blocked is not a note.** We tested it: we asked Double a simple question — "list the
+> clients whose name matches this" — using a very long search text. That call saves nothing and
+> contains no note at all. It was refused with the same error. The same question with a short search
+> text works fine.
+>
+> **And it does not appear to be Claude.** We sent the identical long text to a different system we
+> connect to in the same way, from the same Claude account, about a minute apart. It went through with
+> no problem — so there is no general size limit on Claude's side.
+>
+> That leaves something on Double's side refusing our request before it reaches the part of Double that
+> stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
+> endpoint, such as a firewall, or a size limit inside the MCP server itself. **Could you have someone
+> check both?**
+>
+> Why it matters to us: we keep one running note per client matter, holding the whole history of a case
+> so that anyone on the team can open the client and understand it in a minute. Today we have to split
+> those notes in two, which defeats the purpose.
+>
+> **Technical details, if they help:**
+>
+> - Workspace: **JK Accounting Group** (account owner Julia Kononova).
+> - Error: `403 Forbidden`, `error_code: mcp_request_blocked`, on the MCP endpoint.
+> - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
+>   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
+> - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
+>   characters is refused. Tested 13 August 2026. We have not tested sizes in between, so we cannot
+>   give an exact cut-off — only that it is somewhere around 8 KB.
+> - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
+>   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
+>   text.
+> - We are happy to run the failing request at a time you choose, so someone can watch it reach your
+>   logs, and we can send a payload of any size you like.
+>
+> Thank you very much for your help.
+>
+> Lilian Gonzalez
+> JK Accounting Group
+
