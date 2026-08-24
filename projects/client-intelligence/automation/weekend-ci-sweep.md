@@ -504,19 +504,19 @@ _(corrected 2026-08-14)_.
 > version she confirmed carries all three — plus a COVERAGE CHECK this file did not have. The run
 > that stranded its work on 2026-08-15 executed the **previous** prompt and described its own
 > instructions accurately.
-> 🔴 **DIVERGED SINCE 2026-08-24 — THE BLOCK BELOW IS NOT WHAT RUNS ON SATURDAY.** The live Routine
-> still carries the **2026-08-18** text (verified with `list_triggers` on 2026-08-24 — it still reads
-> *"20 of 48 files"*). The block below carries the three fixes from the 2026-08-22 review:
-> **`⚠️ CATCH-UP OWED` + the two-population queue**, **`AT A GLANCE` coloured by the worst open
-> item**, and **an item with no start date saying so**. **Nothing changes until a person pastes it**
-> — a session cannot (`created_via: http_api`, see above). ⚠️ **Until the paste, read the LIVE
-> prompt, not this one, when reasoning about what a run did.** _(This banner exists because editing
-> the repo copy and believing the change had shipped is exactly how the sweep ran three weeks on a
-> superseded instruction in Aug 2026. Delete it the moment the paste is confirmed.)_
+> ✅ **IN SYNC — Lilian pasted this block on 2026-08-24 at 18:45 UTC, and it was VERIFIED, not
+> assumed.** The live prompt was read back with `list_triggers` and diffed line by line against the
+> block below: **identical**, with the three 2026-08-24 fixes present (`⚠️ CATCH-UP OWED` + the
+> two-population queue · `AT A GLANCE` coloured by the worst open item · an item with no start date
+> saying so) **and both real webhook values intact** — the silent-death check that matters more than
+> the content one, because a paste of this file's `<WEBHOOK_*>` placeholders leaves a sweep that
+> still runs, still merges, and simply stops emailing. **First run on the new text: Saturday
+> 2026-08-29 07:08 UTC.**
 >
-> ⚠️ **What a re-paste buys NOW:** the three 2026-08-24 fixes above, on top of the 2026-08-18
-> additions — the step 6 chase pass, the corrected 2b/2c coverage directions, the ledger-row rule,
-> and the conditional email subject.
+> ⚠️ **The next edit to this block re-opens the gap.** Whenever this file's prompt changes and the
+> Routine has not been re-pasted, put the divergence banner back and say what it buys — editing the
+> repo copy and believing the change had shipped is exactly how the sweep ran three weeks on a
+> superseded instruction in Aug 2026.
 > 🛑 **A SESSION CANNOT DO THE PASTE — tested 2026-08-24.** `list_triggers` returns the prompt with both credentials in it, so a session can **read** it and **draft** the replacement; `update_trigger` on this Routine is then **refused**, because its `created_via` is `http_api` and agents may only update Routines they created. **So the last step is always a human at claude.ai/code/routines.** _(Two earlier versions of this line were both wrong, in opposite directions: first "it needs a human for the credential reason", then "a session can do it unaided". The credential was never the obstacle; provenance is.)_ **And still ask before rewriting a live scheduled job** — that part was always courtesy rather than a limit.
 >
 > 🔒 **The webhook URL and secret live in the Routine's prompt only, never in this file.** A
