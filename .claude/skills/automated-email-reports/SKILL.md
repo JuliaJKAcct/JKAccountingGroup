@@ -46,9 +46,9 @@ off a schema.
 |---|---|---|
 | **Create** a Routine (`create_trigger`) | ✅ | Cron or one-shot; fresh session per fire, or bound to an existing one |
 | **Read** its full prompt (`list_triggers`) | ✅ | Returns the **entire prompt body** — see the warning below. ⚠️ Two caveats: it **defaults to 20 entries**, and it **hides one-shot Routines that have already fired** unless you pass `include_completed: true`. A Routine you cannot see may simply be filtered out |
-| **Rewrite** the prompt (`update_trigger`) | ✅ | Read it, edit it, write it back — no human paste needed. 🛑 **The write REPLACES the prompt wholesale**, so finish by re-reading it and confirming the real webhook URL and secret are still there (below) |
-| **Reschedule / rename / disable** | ✅ | `update_trigger`: `cron_expression`, `run_once_at`, `name`, `enabled`, `model` |
-| **Delete** | ✅ | A **separate tool**, `delete_trigger` — there is no delete flag on `update_trigger`. Disabling is not deleting: a dormant Routine the firm believes is gone is worse than either |
+| **Rewrite** the prompt (`update_trigger`) | ⚠️ **ONLY on a Routine a session created** | 🔴 **`created_via` gates the WRITE, not just connectors — tested 2026-08-24.** `update_trigger` on the weekly CI sweep (`created_via: http_api`) is refused outright: *"Agents can only update routines they created (via create_trigger). A routine's own session may still disable itself (enabled=false only)."* So **the firm's two real automations — the CI sweep and the recurring-expense monitor — can be READ by a session but only re-pasted by a person in the UI.** A `meta_mcp` Routine rewrites fine. 🛑 **When you can write, the write REPLACES the prompt wholesale**, so finish by re-reading it and confirming the real webhook URL and secret are still there (below) |
+| **Reschedule / rename / disable** | ⚠️ same gate | All of these go through `update_trigger`, so the `created_via` rule above applies to them too — **an `http_api` Routine cannot be rescheduled or renamed from a session either.** The one documented exception is in the refusal itself: a Routine's **own** session may set `enabled=false`. Fields: `cron_expression`, `run_once_at`, `name`, `enabled`, `model` |
+| **Delete** | ✅ on `meta_mcp` · ❓ **untested on `http_api`** | A **separate tool**, `delete_trigger` — there is no delete flag on `update_trigger`. ⚠️ **Nobody has tried deleting an `http_api` Routine and this table will not guess**: the `update_trigger` refusal is about *updating*, and a destructive test on a live automation is not one to run casually. Assume it may refuse the same way. Disabling is not deleting: a dormant Routine the firm believes is gone is worse than either |
 | **Fire it now** (`fire_trigger`) | ✅ | Optionally with extra text appended for that one run |
 | 🔴 **Attach MCP connectors** (Gmail, Double, Drive…) | ❌ | *"the connectors parameter is not available for this organization"* — a flat refusal, **not** a permissions issue in the calling session |
 | 🔴 **Attach a git source** (a repo checkout) | ❌ | `create_trigger` has **no parameter for it at all**, and `update_trigger` cannot add one later |
@@ -66,6 +66,16 @@ off a schema.
 checkout waiting for it, or that must reach the internet (this skill's webhook included) — has to be
 created by a person in the UI.** Everything else, ask a session.
 
+🔴 **AND THE SAME FIELD GATES WRITES — found 2026-08-24, and it costs more than it looks.** A
+session cannot `update_trigger` an `http_api` Routine at all; the refusal is explicit that agents
+may only update Routines they themselves created. **The two Routines that actually run this firm are
+both `http_api`**, so the whole loop is: a session can *read* the live prompt, *draft* the new one,
+and *check* it — but **a person has to paste it.** Plan for that: when a session rewrites one of
+these prompts, it should hand over a ready-to-paste block **with the real webhook values already
+substituted in**, and say plainly that nothing changes until the paste happens. ⚠️ **This is exactly
+where the 2026-08-11 failure came from** — the repo copy was edited, everyone believed the change
+had shipped, and the sweep ran three weeks on the old instruction.
+
 ⚠️ **A session-made Routine is not useless, but it must be written to survive its own poverty.**
 Give it two things: **clone the repo itself** (*"locate the repo, or clone `<url>`"* — the
 repo-coherence audit has run that way since July), and an instruction to **say out loud in its first
@@ -80,10 +90,15 @@ session holding the Claude-Code-Remote MCP can read that credential in one call.
 
 Two consequences:
 
-1. ✅ It is what makes a re-paste safe from a session: read the live values out, write them back in.
-   _(An earlier claim that this was impossible — "there is no `get_trigger`" — was **wrong**, and it
-   parked two real decisions behind an imaginary blocker. There is indeed no `get_trigger`;
-   `list_triggers` simply does the job.)_
+1. ✅ It is what makes a re-paste safe: read the live values out, write them back in — **by whoever
+   is doing the pasting.** On a `meta_mcp` Routine a session does the whole thing; on an `http_api`
+   one (both of the firm's real automations) the session reads and drafts and **a person pastes**,
+   per the `created_via` write gate above.
+   _(An earlier claim that reading was impossible — "there is no `get_trigger`" — was **wrong**, and
+   it parked two real decisions behind an imaginary blocker. There is indeed no `get_trigger`;
+   `list_triggers` simply does the job. ⚠️ But the correction then over-reached in the other
+   direction and asserted a session could rewrite **any** prompt; that was untested on `http_api`
+   and is false. **Both errors are the same error** — a capability asserted from one observation.)_
    🛑 **ALWAYS END A WRITE BY RE-READING IT.** `update_trigger` replaces the prompt wholesale, and
    the failure is the silent one this skill's trap #6 exists for: paste the **repo** copy, which
    carries `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders, and the sweep still runs, still

@@ -34,13 +34,22 @@
          client with a document pending 19 days and a licence renewal six weeks
          out printed the green all-clear on 2026-08-15. Section 3 having content
          is exactly when this line must NOT appear.)
-  - Fill AT A GLANCE with one row per client, colour-coded to its state:
-    bronze #9C6A39 = proposals await approval · blue #2F5E8C = new facts saved ·
-    amber #9C6A39 = nothing new BUT items still open (say the oldest one's age) ·
-    green #2F8F5E = nothing new AND nothing outstanding. ⚠️ Green is the
-    all-clear and must be earned: a client with anything in section 3 is amber,
-    never green. Dots use the bright hue; the right-hand status
-    text uses the AA-darkened shades below.
+  - Fill AT A GLANCE with one row per client. 🔴 COLOUR BY OPEN ITEMS — NOT BY
+    WHETHER SOMETHING NEW HAPPENED. Decide the colour from section 3 FIRST, then
+    let the status text carry the rest:
+      bronze #9C6A39 = proposals await approval (outranks everything) ·
+      amber  #9C6A39 = ANY open item in section 3 — whether or not new facts were
+                       saved — and the row MUST carry the oldest item's age ·
+      blue   #2F5E8C = new facts saved AND nothing open ·
+      green  #2F8F5E = nothing new AND nothing outstanding.
+    The "N new facts" count rides ALONGSIDE amber ("2 new facts · oldest open 159
+    days"); it never replaces it. ⚠️ THIS REVERSES THE OLD RANKING, and here is why:
+    amber used to mean "nothing new BUT items open", so proposals ▸ new facts ▸ quiet
+    overrode it — and on 2026-08-22 OPTIC GOLD INC printed a neutral blue "1 new
+    fact(s) saved" while carrying a 15-day unopened Sunbiz notice AND a 159-day
+    IRS-address item, with no age shown at all. Green is still the all-clear and must
+    be earned. Dots use the bright hue; the right-hand status text uses the
+    AA-darkened shades below.
   - The sample content below (Harbor & Vale, Sunmark) is FICTIONAL — replace
     with the real swept clients at send time. Real client names are fine in the
     sent email; they are NEVER committed into this template.
@@ -130,13 +139,22 @@
             </div>
 
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #E6E0D2;background-color:#FFFFFF;">
-              <!-- glance row (repeat): dot + status = client's state; proposals outrank new facts outrank quiet -->
+              <!-- glance row (repeat): dot = colour from OPEN ITEMS first (see the spec at the top); proposals outrank all, then any open item = amber WITH the oldest age, then blue for new-facts-and-nothing-open, then green -->
               <tr>
                 <td style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
                   <span style="color:#9C6A39;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Harbor &amp; Vale Studio
                 </td>
                 <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#7E5430;">
                   2 SOP proposals &middot; 3 new facts
+                </td>
+              </tr>
+              <!-- the case the old ranking got wrong: new facts AND something open = AMBER, with the oldest age -->
+              <tr>
+                <td style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
+                  <span style="color:#9C6A39;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Ridgeline Freight Co
+                </td>
+                <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#7E5430;">
+                  1 new fact &middot; oldest open 159 days
                 </td>
               </tr>
               <tr>

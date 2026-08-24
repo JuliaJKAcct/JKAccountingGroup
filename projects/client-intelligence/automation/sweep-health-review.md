@@ -216,11 +216,17 @@ job.
 
 **Two consequences, and they point in opposite directions:**
 
-1. ✅ **A session CAN safely re-paste a Routine prompt.** Read the live prompt, lift the two real
-   values out of it, write the new prompt back with them in place. **Nothing is blocked on a human
-   at a screen** — which means the subagent change in §3 and `FOLLOW-UPS` row 29 were parked behind
-   a blocker that does not exist. _(What a session still must not do is rewrite a live scheduled job
-   without being asked — that is an ordinary confirm-before-acting rule, not a technical limit.)_
+1. ⚠️ **HALF RIGHT, AND THE OTHER HALF WAS TESTED ON 2026-08-24 — it is false.** Reading is free, as
+   above. **Writing is not: `update_trigger` on THIS Routine is refused outright** — *"Agents can
+   only update routines they created (via create_trigger). A routine's own session may still disable
+   itself (enabled=false only)."* 🔴 **The gate is `created_via`**, the same field the
+   [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill
+   already named for connectors and git sources — **it gates writes too**, and the weekly sweep is
+   `http_api`. So the real loop is: **a session reads the live prompt, drafts the new one with the
+   real webhook values already in it, and checks it — and Lilian or Julia pastes it.** _(The
+   original claim here — "nothing exposed to a session can read one" — was wrong. Its correction
+   then over-reached and asserted a session could rewrite any prompt. **Both are the same error:
+   a capability asserted from one observation.** This one at least was caught by trying it.)_
 2. ⚠️ **The webhook secret is readable by any session holding the Claude-Code-Remote MCP.** The repo
    keeps `<WEBHOOK_SECRET>` placeholders out of git, and that stays right — git history is permanent
    and far more widely readable. But the *reason* written down was wrong: the value is not
@@ -229,13 +235,16 @@ job.
 
 📋 **The full tested capability map is in the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md)
 skill** — *"What a SESSION can and cannot do to a Routine"*, every row exercised or refused in a live
-call on 2026-08-18, and **the single place these facts are maintained.** One line of it is what
-matters here: **a session can read a Routine's prompt and rewrite it**, so nothing in this file is
-blocked on a human paste.
+call, and **the single place these facts are maintained.** One line of it is what matters here:
+**a session can read this Routine's prompt and draft its replacement, but only a person can paste
+it** — `created_via: http_api`. Budget for the paste; it is not optional and it is not automatable.
 
-_(Kept rather than deleted because the error is instructive: a plausible mechanism was asserted
-without being tested, then repeated in five places including inside a live scheduled Routine, and it
-parked a real decision behind an imaginary obstacle. **The fix was one tool call.**)_
+_(Kept rather than deleted because the error is instructive **and it happened twice, in opposite
+directions**: a plausible mechanism was asserted without being tested, repeated in five places
+including inside a live scheduled Routine, and parked a real decision behind an imaginary obstacle —
+then the correction generalised one successful call into a blanket "a session can rewrite any
+Routine", which the 2026-08-24 attempt disproved. **Neither direction was tested against the Routine
+it was being claimed about.** That is the lesson worth keeping.)_
 
 ---
 
@@ -290,8 +299,11 @@ parked a real decision behind an imaginary obstacle. **The fix was one tool call
 > 3. 🟡 **An item with no start date says so** — *"pending since unknown — no start date in the
 >    file"* rather than a bare *"no update"*. §2.
 >
-> ⓘ **Not changed yet — a live scheduled job is Lilian's to authorise.** Nothing above is a
-> regression and Saturday's run is safe as it stands.
+> ✅ **All three were written into the canonical prompt and the template on 2026-08-24, with
+> Lilian's go-ahead.** 🛑 **But the live Routine is NOT updated and cannot be from a session** —
+> `created_via: http_api`, see §5. **Nothing changes until the new prompt is pasted at
+> claude.ai/code/routines**, with the real webhook URL and secret carried across. Until then
+> Saturday runs the 2026-08-18 text, which is safe — none of the three is a regression.
 
 **The checklist itself, for the next run.** Work top to bottom. Each row says what to look at and
 **what the answer means.**
