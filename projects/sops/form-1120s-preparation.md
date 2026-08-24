@@ -3154,7 +3154,7 @@ a formal note.** ⛔ **Ask which — do not infer it from the size of the balanc
 > (Form 7203 **line 23**) runs off the **net increase** under §1367(b)(2)(B) and
 > **Reg. §1.1367-2(c)(1)**, and ✅ **the net-increase TEST does not turn on the checkbox.**
 > ⚠️ **But the ALLOCATION of a restoration across debts does** — a net increase goes first to any debt
-> repaid in the year, then apportioned across the remaining debts by **the amount by which each one's basis was reduced** (§1.1367-2(c)(2)) — **and
+> repaid in the year, then is apportioned across the remaining debts by **the amount by which each one's basis was reduced** (§1.1367-2(c)(2)) — **and
 > the checkbox is what decides whether there are separate columns to allocate across at all.**
 
 ✅ **What the checkbox ACTUALLY decides — verbatim from the Instructions for Form 7203, line 34:**
