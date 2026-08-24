@@ -3016,7 +3016,7 @@ concepts are what Form 7203 asks for.
 printed form** — the same hedge §11E carries, and it has not been discharged. **Confirm on a printed
 K-1 and a printed 7203 before relying on it.**
 
-| Column | Believed to feed | What it holds | 🔑 In one sentence |
+| Column | Corresponds to, on Form 7203 | What it holds | 🔑 In one sentence |
 |---|---|---|---|
 | **Stock Basis** | Form 7203 **Part I** | what the shareholder has invested in their SHARES | *what they put in, plus profits taxed to them, minus what they took out* |
 | **Loan Balance** | **Part II Section A** *(lines 16–20)* | what the company **owes** them | *the money — the debt at face value* |
@@ -3056,7 +3056,7 @@ no BASIS figure of any kind.** ⚠️ **But it is not empty-handed — it holds 
 | Source | Gives you | |
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
-| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is dispositive** *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
+| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is near-conclusive** *(the instruction says the two reconcile "generally")* *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
 | **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → stock basis line 1; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
@@ -3068,9 +3068,9 @@ right way — ⛔ but do not stop there.**
 
 1. ⛔ **The ledger and Schedule L are NOT two independent records.** §8C builds Schedule L **from** the
    ledger. **Citing both is citing one twice** — and if the Schedule L you are looking at is *this
-   year's return in progress*, you are citing **your own keystroke** back as evidence. ✅ **The records
-   that carries weight is the one the preparer did not create and that always exists: the prior-year
-   K-1s' item I.** *(The prior Schedule L helps only if it was actually filed — way 3.)*
+   year's return in progress*, you are citing **your own keystroke** back as evidence. ✅ **The record that
+   carries weight is the one the preparer did not create and that always exists: the prior-year K-1s'
+   item I.** *(The prior Schedule L helps only if it was actually filed — way 3.)*
 2. ⛔ **One account name is not the search.** §8A already warns that **the named shareholder accounts do
    not map to the line their name suggests.** A prior advance may sit in an equity account, be netted
    into a draw account, or hide in an accrual. 🛠️ **Look at EVERY owner-facing account, not the one
@@ -3127,7 +3127,7 @@ answer the client gives; it cannot produce one.**
 | 🔴 **4 Other increases in basis** | ⛔ **usually EMPTY.** Her share of income arrives from the **K-1 input**, not here |
 | **5 Repayment of loans from shareholder** | loan column only — and the screen notes it **links from Schedule K-1 line 16, code E**, so it is normally driven from there, not typed |
 | 🔴 **6 Other decreases in basis** | ⛔ **usually EMPTY.** Distributions (**16D**) and nondeductibles (**16C**) arrive from the **K-1 input**. ⚠️ **Not to be confused with Form 7203 line 6 — see the collision table above** |
-| **7 Carryover losses from prior years** | from her prior Form 7203 — zero if the prior year was profitable and nothing was suspended |
+| **7 Carryover losses from prior years** | from that shareholder's prior Form 7203 — zero **only if** the prior year was profitable and nothing was suspended. 🛑 **Check, do not assume: a prior year whose AAA went NEGATIVE was a loss year** *(distributions cannot drive the AAA below zero — only losses can)*, and a suspended loss is then live |
 | **8 Carryover nondeductible expenses** | same source, same test |
 
 🛑 **Lines 4 and 6 are where a preparer who cannot find a figure will type it, and that is the error.**
@@ -3201,9 +3201,9 @@ consequence that moves money is **not** the extra column — it is **netting**:
 🔴 **So formal-note treatment turns a NETTED repayment into a GROSS one — and line 19 drives line 32,
 which drives the line 34 gain.** **Worked through: a shareholder is owed 30,000 on an open account at
 the end of year 1** — over the threshold, so year 2 computes the repayment gain on a formal-note
-footing. **In year 2 the company repays 8,000 and she advances 5,000 more.** ⛔ **Netted, line 19 would
-show 3,000 — or nothing at all, since the instruction puts a net repayment there only when repayments
-exceed advances.** ✅ **On the formal-note footing the 8,000 principal repayment goes on line 19
+footing. **In year 2 the company repays 8,000 and she advances 5,000 more.** ⛔ **Netted, line 19 would show 3,000** — the net repayment, since here
+repayments (8,000) do exceed advances (5,000). *(Had the advances been larger, line 19 would show
+nothing at all: the instruction puts a net repayment there only when repayments exceed advances.)* ✅ **On the formal-note footing the 8,000 principal repayment goes on line 19
 specific to that loan**, and the fresh 5,000 advance opens its own new open-account debt.
 **Bigger line 19 → bigger line 32 → bigger line 34.** ⛔ **Netting it under-reports the gain.**
 🔑 **It changes how the gain is COMPUTED, never what it IS.**
