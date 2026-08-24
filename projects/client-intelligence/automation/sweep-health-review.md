@@ -461,10 +461,11 @@ it was being claimed about.** That is the lesson worth keeping.)_
 | What you see | What it means | Action |
 |---|---|---|
 | Ages in days present, deferrals named, coverage counts stated | **The chase pass took.** The core fix works | Move to §3 — decide on subagents (row 48) |
-| Open items with no ages, or a green line over an open item | The prompt did not take, or the email logic did not | Re-check the live prompt (`list_triggers`) against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) and rewrite it (`update_trigger`) — **a session can do this unaided (§5)**; ask Lilian first, since it is a live scheduled job |
+| Open items with no ages, or a green line over an open item | The prompt did not take, or the email logic did not | Re-check the live prompt (`list_triggers`) against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md), fix the canonical copy, and hand Lilian a ready-to-paste block with the real webhook values already substituted in. 🛑 **A session CANNOT rewrite this Routine** — `update_trigger` refuses it (`created_via: http_api`), tested 2026-08-24; §5. **The paste is a person's, always** _(an earlier version of this cell said a session could do it unaided — struck)_ |
 | Late clients thinner than early ones | **The context ceiling (§3)** | Adopt subagents — that is what row 48 is waiting for |
 | A NOT-MERGED subject | The work is stranded | Merge the branch, then find out why |
-| A new ledger row for a client with no full pass | 🛑 **History-erasing write** | Revert that row before Saturday |
+| A new **plain** ledger row for a client with no full pass | 🛑 **History-erasing write** | Revert that row before Saturday |
+| A new row marked **`⚠️ CATCH-UP OWED`** | ✅ **Correct output of a pass that ran but finished incomplete** — since the 2026-08-24 prompt | 🛑 **NEVER revert it.** Count it (§6 check 15); it is the evidence §3 gates the subagent decision on |
 | Everything clean | The design holds at this roster size | Note it here with the date, and re-check when the roster grows |
 
 **Whatever the outcome, write it into this file with its date.** The point of the exercise is that
@@ -522,7 +523,7 @@ the weekly sweep Routine carries `sources: [{git_repository: …}]`, these two c
 prompts now open with *"locate the repo, or clone it"*. _(The repo-coherence audit Routine has
 defended against exactly this since July — the pattern was there to copy and was missed.)_ What it *can* do without them is substantial and is most of
 the value: read this file, read `git log`/`git show` on `main` for the Saturday sweep's commits,
-check whether `sweep-state.md` baselines advanced, and run the 🛑 B11 history-erasing-row check off
+check whether `sweep-state.md` baselines advanced, and run the 🛑 **C12** history-erasing-row check (⚠️ it used to be called *B11* here — there is no B11; §6 numbers it C12, and the live 08-31 Routine calls it C12 too) off
 the diff. Each prompt tells the session to **say so in its first paragraph** rather than report a silent gap,
 and to ask Lilian either to forward the email or to recreate the reminder from
 **claude.ai/code/routines** with connectors attached.
