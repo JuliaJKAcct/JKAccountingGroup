@@ -3056,11 +3056,11 @@ no BASIS figure of any kind.** ⚠️ **But it is not empty-handed — it holds 
 | Source | Gives you | |
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
-| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **EXCEPT A POOLED ZERO, which is dispositive.** Item I cannot be negative, and loans **to** shareholders sit on **Schedule L line 7**, a different line, so line 19 nets nothing. **A filed line 19 of nil forces every shareholder's item I to nil** |
+| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is dispositive** *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
 | **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → stock basis line 1; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
-#### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — three ways it lies
+#### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — four ways it lies
 
 **It is tempting to open the ledger, see the shareholder-loan account opening at zero, and conclude the
 loan columns start at zero for everyone.** 🔑 **Run it — it is five minutes and it usually points the
@@ -3069,18 +3069,29 @@ right way — ⛔ but do not stop there.**
 1. ⛔ **The ledger and Schedule L are NOT two independent records.** §8C builds Schedule L **from** the
    ledger. **Citing both is citing one twice** — and if the Schedule L you are looking at is *this
    year's return in progress*, you are citing **your own keystroke** back as evidence. ✅ **The records
-   that carry weight are the ones the preparer did not create: the prior-year K-1s' item I, and the
-   prior FILED return's Schedule L line 19 END column.**
+   that carries weight is the one the preparer did not create and that always exists: the prior-year
+   K-1s' item I.** *(The prior Schedule L helps only if it was actually filed — way 3.)*
 2. ⛔ **One account name is not the search.** §8A already warns that **the named shareholder accounts do
    not map to the line their name suggests.** A prior advance may sit in an equity account, be netted
    into a draw account, or hide in an accrual. 🛠️ **Look at EVERY owner-facing account, not the one
    called "loans."**
-3. 🛑 **And even a clean zero does not settle the shareholder's own Form 7203.** The company's books
+3. 🔴 **A BLANK PRIOR-YEAR SCHEDULE L IS NOT A REPORTED ZERO — and this is the one that catches
+   people.** ⛔ **A prior year that answered YES to the $250,000 question filed NO Schedule L at all**
+   (§10 item 2: *"you are not required to complete Schedule L or Schedule M-1"*). **There is then no
+   line 19 to have carried anything**, and reading its blank as *"the prior return reported nil"* is
+   **the absence of a record written up as a record of absence** —
+   [`method.md` rule 1b](../pre-return-review/method.md). 🛠️ **Check the prior return's answer to that
+   question BEFORE citing its Schedule L for anything.** ✅ **And when it is blank, go where the record
+   still exists: a "Yes" exempts Schedules L and M-1, it does NOT exempt the K-1s — item I is still
+   there, per shareholder, beginning and end.**
+4. 🛑 **And even a clean zero does not settle the shareholder's own Form 7203.** The company's books
    cannot establish what her prior 7203 Part II carried. **A prior preparer who treated an advance as a
    loan on her 7203 while the company booked it to equity produces exactly that mismatch** — as do
    books rebuilt in a new file, or an account created mid-year. ✅ **If a prior 7203 exists, read it.**
 
-⚠️ **And before reading an ABSENCE at all, check the report prints opening balances somewhere.**
+⚠️ **And before reading ANY absence — in a ledger or on a form — check that the thing which would have
+recorded it was required to.** For the ledger, that means confirming the report prints opening balances
+somewhere.
 ✅ **The strong version of that test: find an account with a balance and NO transactions all year**
 *(retained earnings is the usual one)*. **If its opening balance prints, the report is not suppressing
 balances on inactive accounts, and a missing opening line elsewhere is meaningful.** ⛔ **That is an
@@ -3187,21 +3198,22 @@ consequence that moves money is **not** the extra column — it is **netting**:
 > loan**."* … *"For open account debt, **if the repayments exceed the advances** for the tax year, the
 > net repayment should be entered on line 19."*
 
-🔴 **So conversion turns a NETTED repayment into a GROSS one.** A shareholder who advances 10,000 and
-is repaid 10,000 in the same year reports **line 19 = 0** as an open account and **line 19 = 10,000**
-as a formal note — **and line 19 drives line 32, which drives the line 34 gain.** ⛔ **A preparer who
-nets a converted debt under-reports the gain.**
-ⓘ *(The debt also gets its own column, since formal notes cannot be aggregated — but on a shareholder
-with a single open account there is nothing to separate it from, so the column is not the point.)*
+🔴 **So formal-note treatment turns a NETTED repayment into a GROSS one — and line 19 drives line 32,
+which drives the line 34 gain.** **Worked through: a shareholder is owed 30,000 on an open account at
+the end of year 1** — over the threshold, so year 2 computes the repayment gain on a formal-note
+footing. **In year 2 the company repays 8,000 and she advances 5,000 more.** ⛔ **Netted, line 19 would
+show 3,000 — or nothing at all, since the instruction puts a net repayment there only when repayments
+exceed advances.** ✅ **On the formal-note footing the 8,000 principal repayment goes on line 19
+specific to that loan**, and the fresh 5,000 advance opens its own new open-account debt.
+**Bigger line 19 → bigger line 32 → bigger line 34.** ⛔ **Netting it under-reports the gain.**
 🔑 **It changes how the gain is COMPUTED, never what it IS.**
 
 ⚠️ **The threshold is PER SHAREHOLDER, on the AGGREGATE OPEN-ACCOUNT BALANCE** — un-instrumented
 advances are **a single debt**, so ⛔ **it is never tested advance by advance** *(fifteen deposits of
-under $25,000 each are still one debt that can cross the line)*. *(Formal notes ARE tested note by
-note.)* 🛑 **And on a company whose owner-loan account is pooled across shareholders, you cannot
-apply the test at all until the split is known.** 🔑 **And a year-end balance near
-$25,000 makes the year-end DATE load-bearing**, which on a short-period return means the branch choice
-can move it.
+under $25,000 each are still one debt that can cross the line)*. *(Formal notes are TRACKED note by note — ⛔ **there is no $25,000 test
+for them at all**; the rule reaches open account debt only.)* 🛑 **And on a company whose owner-loan account is pooled across shareholders, you cannot
+apply the test at all until the split is known.** 🔑 **And a year-end balance near $25,000 makes the year-end DATE load-bearing** — which matters on a
+**short-period return**, where the choice of which period is filed changes which balance is tested.
 
 #### ⚠️ A PARTIAL disposition needs TWO Forms 7203 — and read the scope before you file two
 
