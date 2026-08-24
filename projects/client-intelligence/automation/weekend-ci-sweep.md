@@ -276,6 +276,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Iurii Iakovenko & Alina Yakovenko | 710639 |
 | Grigoriy & Margarita Melomed | 710633 |
 | M5 Studio Miami | *(none — no Double account confirmed; search Double by name first, then sweep by name)* |
+| Kompozit USA | *(none — PROSPECT, no Double account yet; Gmail + Drive only, and no `sweep-state.md` row until it signs)* |
 
 _Add clients here as they get CI files; keep the list small enough to respect
 per-tool call limits._
@@ -287,6 +288,16 @@ per-tool call limits._
 > **client file's §2/§7** (inside the run's commit scope) and leave this row to a human.
 > **It gets no row in [`sweep-state.md`](./sweep-state.md)** — like every newly-added client, rule
 > (b) gives it one full historical pass first. It will be a short one; that is fine.
+
+> ⓘ **Kompozit USA is the same shape, and this row is the 2026-08-22 run's own coverage finding.**
+> Its check **2b** reported — correctly — that the client had a CI file but sat in neither table, so
+> the routine could never reach it. It is a **prospect**: a proposal went out 2026-08-19 and is live
+> for 30 days, and there is **no Double account**, so Double, Ping and the tax planes do not exist
+> for it — sweep **Gmail and Drive only**. 🛑 **No `sweep-state.md` row while it is a prospect**: a
+> row is a search *bound*, and this client's whole history is a handful of emails that cost nothing
+> to re-read. **When it signs and gets a Double record, put the id in this row** and let the first
+> full pass write the ledger row then. _(Row added by hand 2026-08-24 — the sweep may not edit this
+> file.)_
 
 > ⓘ **Six of the TaxDome-backfill seven are above; the seventh — SETATECH USA (706706) — is in the
 > archived-exclusion table below, and that placement is DELIBERATELY UNDER REVIEW.** It is archived

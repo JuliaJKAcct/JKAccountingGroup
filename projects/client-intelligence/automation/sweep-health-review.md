@@ -20,7 +20,7 @@ so nobody has to rediscover it, and turns it into a **checklist to run against t
 | **Routine** | *Client Intelligence — weekly sweep* · `trig_015LaKrto6FDKyUwHmZywqjS` · cron `0 7 * * 6` |
 | **Fires** | **Saturdays 07:00 UTC** = 03:00 Eastern (summer) |
 | **Prompt in the Routine** | The **2026-08-18** version, pasted by Lilian that evening |
-| **First run of that prompt** | 🔴 **Saturday 2026-08-22 — it has never executed.** Everything below is untested in production |
+| **First run of that prompt** | ✅ **Saturday 2026-08-22 — it ran, and the core fix took.** Reviewed against §6 on **2026-08-24**; the result is at the top of §6 |
 | **Canonical copy of the prompt** | [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) → *Routine prompt* (with `<WEBHOOK_*>` placeholders) |
 
 ⚠️ **A Routine's behaviour lags its prompt by up to a week.** A report is evidence about the
@@ -62,6 +62,36 @@ chase** rather than letting it print as "no movement".
 **And in the email:** "Nothing new" now prints **only** when sections 1, 2 *and* 3 are empty, and a
 client with anything open is **amber with the oldest item's age**, never green.
 **"Nothing new" and "nothing wrong" must never print as the same line.**
+
+### ✅ It worked — and the same confusion survives one level up (found 2026-08-24)
+
+**The fix itself is proven.** On the 2026-08-22 report **Best Broker Realty**, the designated test
+client, came back with *both* halves right: the LBTR certificate confirmed saved (2026-08-18) and
+the **Sept-30 renewal surfaced as a dated open item**. Those are the exact two facts that sat unseen
+for 26 days and that two full historical passes had walked straight past. Ages in days now print
+across the report — *"131 days"*, *"158 days"*, *"159 days"* — and deadlines print with them
+(*"USPS mail-forwarding — deadline 2026-09-18, 27 days out"*). Section 4 never printed at all; **8
+clients came back amber and 0 green.**
+
+🔴 **But `AT A GLANCE` still answers the wrong question, and it is the same defect one storey up.**
+Both the prompt and [`email-template.html`](./email-template.html) define the states as *mutually
+exclusive and ranked* — proposals ▸ new facts ▸ nothing-new — with amber scoped to **"nothing new
+BUT items still open"**. So the amber-with-an-age treatment can only ever reach a client who had a
+quiet week. **A client with one new fact and a rotting item prints neutral blue, with no age.**
+On 2026-08-22 **OPTIC GOLD INC** printed `[BLUE] 1 new fact(s) saved` while carrying a 🔴 **15-day
+unopened Sunbiz notice** *and* a **159-day** IRS-address item; Ihor Naum and Ecoorganic did the
+same. The green ban held — blue is not green — but the one-line summary is still ordered by *"did
+something happen this week?"* rather than *"what is rotting?"*, which is what §2 set out to end.
+✅ **The rule to write instead: colour AT A GLANCE by OPEN ITEMS, independently of whether new facts
+were saved — any client with an open item is amber and carries the oldest item's age; the "new
+facts" count rides alongside it, it does not replace it.**
+
+⚠️ **Second, smaller: about a third of open items still print with no clock** — *"Sales-tax nexus
+analysis — no update"*, *"BOI report — no update"*, *"1065 extension — still unverified"*. That is
+**not** step 6 failing (it plainly ran); it is that those items have **no start date recorded in the
+client file**, so no age can be computed. The trouble is that an unclockable item and an unchased
+one print identically, which is the ambiguity this whole section exists to remove. ✅ **Say which it
+is: *"pending since unknown — no start date in the file"*.**
 
 ---
 
@@ -114,6 +144,26 @@ first execution would mean debugging two changes at once. _(An earlier version a
 costs a human because the webhook secret cannot be read back" — **that was false**; see §5. The
 re-paste is cheap and a session can do it.)_ **Let 2026-08-22 run, then decide on evidence.** Tracked as
 [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 48.
+
+### 🔵 The evidence arrived — recommendation 2026-08-24: STILL NOT YET, and here is the reasoning
+
+**The thinning signature §3 predicted is visible, and it is confined to exactly one place.** The run
+spent its full ~6-pass cap, and **the last two full passes of the run are the two that admit
+incomplete work**: VOICECAPITAL INC (*"only the first page of ~201 estimated results reviewed … a
+second page was not paged through"*) and VOXAGO LLC (*"only the first page of ~40"*). The clients at
+the end of the expensive block got the shallow pass. That is the ceiling, not carelessness.
+
+**But it is a backlog symptom, not a steady-state one.** The first-pass queue went from ~17 to
+**11** in one run and drains at ~6 a run: **two more Saturdays (2026-08-29, 2026-09-05) and the
+expensive block is empty.** What remains after that is 40-odd cheap incremental passes plus the
+chase pass — the part that showed no thinning at all this week. Adopting subagents now would mean
+changing the prompt again in the same week its rewrite finally proved out, and debugging two changes
+at once is the exact reason this was parked.
+
+✅ **So: fix the three small things in §6's *What to change* list now, let 08-29 and 09-05 run the
+queue dry, and re-open this on a run that has NO first-pass queue.** If a run with nothing expensive
+in it still comes back thin, the ceiling is structural and subagents are the answer. If it comes
+back clean, this section becomes history.
 
 ---
 
@@ -189,9 +239,62 @@ parked a real decision behind an imaginary obstacle. **The fix was one tool call
 
 ---
 
-## 6. ✅ The checklist — run this against the 2026-08-22 report
+## 6. ✅ The checklist — and what it found on the 2026-08-22 run
 
-Work top to bottom. Each row says what to look at and **what the answer means.**
+> ### 🟢 RESULT — worked 2026-08-24 by Lilian, with Gmail and the commit diff both in hand
+>
+> **Verdict: the rewrite took. The run landed, merged itself, and the chase pass — the fix this
+> whole file was written for — demonstrably works.** Two new defects and one pending human action
+> came out of it; none of them is a regression, and none is urgent enough to touch before Saturday
+> without Lilian's say-so.
+>
+> | # | Check | Answer |
+> |---|---|---|
+> | **A1** | Email arrived? | ✅ Sat **2026-08-22 07:40 UTC** → `lilian@`, one send |
+> | **A2** | Subject line | ✅ Clean — no `NOT MERGED` |
+> | **A3** | Commits on `main` | ✅ Merge **`2bed4b3`** (PR **#267**), 36 files. **100% inside the no-review carve-out** — `clients/`, `sweep-state.md`, `sop-proposals.md`, nothing else |
+> | **B4** | Ages in days? | ✅ **Yes** — *"131 days"*, *"158 days"*, *"159 days"*, with deadlines beside them. ⚠️ ~⅓ of items still print with no clock (see §2) |
+> | **B5** | Green over an open item? | ✅ **Never.** Section 4 did not print at all; **8 amber, 0 green**. ⚠️ But `AT A GLANCE` shows blue over open items — §2 |
+> | **B6** | Unchased items named? | ⚪ **None named, and none evident** — all 34 clients carry a *Still needed* block. The email never states the count the prompt asks for, so this is unproven either way |
+> | **B7** | Spot-check (Best Broker) | ✅✅ **Both halves right** — certificate confirmed saved, Sept-30 renewal surfaced as a dated open item. **This is the proof** |
+> | **C8** | Every moved Double note re-read? | ✅ On the evidence available — Melnyk's **both** notes (485225 *and* 490984, the exact pair of the 08-15 miss), plus VOICECAPITAL 491840 and VOXAGO 491841, all re-read in full. Not provable roster-wide |
+> | **C9** | Counts stated? | ✅ **34 swept = 27 incremental + 6 first-time full + 1 bounded** (Kompozit). **11 deferred, all named** |
+> | **C10** | 2b hit? | 🛑 **YES — Kompozit USA**, correctly found and reported (the run may not write that file itself). ✅ **Actioned in this same pass** — it now has its scope-table row in [`weekend-ci-sweep.md`](./weekend-ci-sweep.md), as a prospect: Gmail + Drive only, no ledger row until it signs |
+> | **C11** | Ledger rows for the full passes? | ✅ All **6** written — next Saturday will not re-buy them |
+> | **C12** | 🛑 History-erasing row? | ✅ **No.** Kompozit deliberately got **no** row, with the reasoning stated. ⚠️ **A softer form exists** — see *What to change*, item 1 |
+> | **D13** | Thinning? | ⚠️ **Visible, and confined to the tail of the expensive block** — the run's last two full passes are the two admitting unread Gmail pages. §3 has the reasoning and the recommendation |
+> | **D14** | Did it finish? | ✅ Complete report, sources named throughout |
+>
+> **✅ And the reconciliation the ledger kept saying it owed is now clean.** Counted by hand
+> 2026-08-24: **49 client files = 34 ledger rows + 11 in the first-pass queue + 3 in the exclusion
+> table** (MAYS EXPRESS, MEGABAI, SETATECH USA) **+ Kompozit USA** (the C10 flag). Nothing is
+> unaccounted for. 🛑 **The footnote at the foot of [`sweep-state.md`](./sweep-state.md) saying the
+> reconciliation "still hasn't been done" for Andrii Tymchenko, VOICECAPITAL, VOXAGO and YMI
+> TRUCKING is now STALE** — three of those four hold rows as of this run.
+>
+> ### What to change — three small things, in priority order
+>
+> 1. 🔴 **A partial full pass must not become a completed one.** VOICECAPITAL and VOXAGO both got
+>    *"First full historical sweep completed"* rows **with the baseline advanced to 2026-08-22**,
+>    while the same rows admit their Gmail history was only read one page deep. **The run was honest
+>    — it wrote the limit into the Coverage-gaps column — but nothing acts on it**, because step 2c
+>    queues only clients with **no row**, so a client with a row and an admitted gap is never
+>    re-queued. The bound is now permanent and the unread pages are out of the routine's reach.
+>    ✅ **Fix, and it is small:** when a full pass finishes incomplete, write the Coverage-gaps cell
+>    as an explicit **`⚠️ CATCH-UP OWED: <source> — <what was not read>`**, and make **step 2c queue
+>    those alongside the row-less clients** (step 4 already knows "coverage-gap FULL historical
+>    passes" exist and counts them against the cap — it is only 2c's queue computation that misses
+>    them).
+> 2. 🟠 **Colour `AT A GLANCE` by open items, not by "nothing new"** — §2, the OPTIC GOLD case.
+>    This one needs the **template** changed as well as the prompt; both carry the same wording.
+> 3. 🟡 **An item with no start date says so** — *"pending since unknown — no start date in the
+>    file"* rather than a bare *"no update"*. §2.
+>
+> ⓘ **Not changed yet — a live scheduled job is Lilian's to authorise.** Nothing above is a
+> regression and Saturday's run is safe as it stands.
+
+**The checklist itself, for the next run.** Work top to bottom. Each row says what to look at and
+**what the answer means.**
 
 ### A. Did the run land at all?
 
@@ -285,7 +388,14 @@ the next person does not start from scratch — which is exactly what went wrong
 
 ## 8. The reminder that brings someone back here
 
-A one-shot Routine fires **Monday 2026-08-24, 13:00 UTC** (9am Eastern) in a **fresh session**,
+✅ **It fired — 2026-08-24 13:03 UTC — and the connector warning below turned out to be exactly
+right.** The fired session carried **no MCP connectors**, so it could not open the report email;
+the review recorded in §6 was worked **in a separate session of Lilian's the same afternoon**, which
+had Gmail, Double and the checkout together. **The lesson stands and is now tested twice: a Routine
+that must read a mailbox has to be created in the routines UI.** The one-shot has disabled itself
+(`run_once_fired`) and needs no cleanup.
+
+A one-shot Routine fired **Monday 2026-08-24, 13:00 UTC** (9am Eastern) in a **fresh session**,
 with push + email notification: **`trig_016LK8zUB4js14Y2xANFv2re` — "Sweep health review — the
 2026-08-22 run"**. It is written to stand alone: it points the new session at this file, tells it
 to work §6's checklist, and asks it to write the outcome back here. It also carries the Pro Title
@@ -324,8 +434,12 @@ here: copying these facts around is precisely the failure §4 and §5 of this fi
 
 ## 9. Update this file when…
 
-- **The 2026-08-22 run happens** — record what the checklist found, and delete any check that
-  turned out to be pointless.
+- ~~**The 2026-08-22 run happens**~~ ✅ **done 2026-08-24 — the result is at the top of §6.** No
+  check turned out pointless; **B7 (the Best Broker spot-check) is the one that settled it**, and
+  **C12 needed widening** — it caught the row-with-no-pass it was written for, but not the
+  row-for-a-PARTIAL-pass that actually occurred.
+- **The next run happens (2026-08-29)** — check whether §6's three *What to change* items landed,
+  and whether a run with a shorter first-pass queue still thins at the tail (§3).
 - **Subagents are adopted or rejected** (row 48) — §3 becomes history either way.
 - **The prompt changes** — §1's "first run of that prompt" date resets, and §6 may need new checks.
 - **A new failure mode appears** — add it to §2 as confirmed, or to §4 as retracted. **Both halves

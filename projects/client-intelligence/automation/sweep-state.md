@@ -173,3 +173,16 @@ pass was completed in the same run. Greenair International's baseline was delibe
 found is a live-risk finding, not a reason to invent a baseline that overstates what was checked.
 Chased each client's own open items (step 6/1b) across all 27 incremental clients — see the
 per-client rows and the weekly email for ages and deadlines._
+
+_**2026-08-24 — the reconciliation this ledger kept saying it owed is DONE, by hand, and it is
+clean.** **49 client files = 34 rows above + 11 in the first-pass queue + 3 in the exclusion table**
+(MAYS EXPRESS SERVICE, MEGABAI, SETATECH USA) **+ Kompozit USA**, which now has its own scope-table
+row in [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) — the 2026-08-22 run's check-2b finding,
+actioned. **Nothing is unaccounted for.** 🛑 **This supersedes the last sentence of the 2026-08-15
+paragraph above**, which named Andrii Tymchenko, VOICECAPITAL INC, VOXAGO LLC and YMI TRUCKING LLC
+as unreconciled: the first three were fully swept on 2026-08-22 and hold rows, and YMI TRUCKING is
+first in the queue. ⚠️ **One thing the reconciliation DID surface, and it is not visible from the
+counts:** VOICECAPITAL's and VOXAGO's rows read `First full historical sweep completed` **with the
+baseline advanced**, while the same rows admit their Gmail was read only one page deep — so the
+bound is now permanent over history nobody has read. See
+[`sweep-health-review.md`](./sweep-health-review.md) §6 → *What to change*, item 1._
