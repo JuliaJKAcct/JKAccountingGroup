@@ -514,6 +514,67 @@ one is the return as the software computes it, the other is a model nobody has t
 never be able to file the modelled column by mistake.**
 
 
+**1e · 🔴 ON ANY RETURN WITH SHAREHOLDERS OR PARTNERS, THE DELIVERY CARRIES THE BASIS-GRID BLOCK. Always, unprompted.**
+
+🔑 **Delivery rule 1b already forces a distributions-vs-basis block. This one is different and it is
+about ENTRY:** the software collects each owner's basis on **one grid with three columns**, and a
+preparer who has not met it before cannot fill it in from the tax rules alone. _(Lilian, 2026-08-24:
+**"cuando lleguemos a esta hoja del Schedule K-1, que haya que poner el stock basis al inicio del año,
+me digas qué se saca del 7203 del año anterior de la declaración individual"** — and that the whole
+grid explanation must ride in **every** future delivery.)_
+
+**The block is not optional and it always contains all five parts:**
+
+**① WHAT THE THREE COLUMNS ARE — because two of them look like the same thing.**
+
+| Column | What it holds | 🔑 In one sentence |
+|---|---|---|
+| **Stock Basis** | what they have invested in their SHARES | *what they put in, plus profits already taxed to them, minus what they took out* |
+| **Loan Balance** | what the company **owes** them | *the money — the debt at face value* |
+| **Loan Basis** | their **tax basis** in that debt | *what the debt is worth to them for absorbing losses* |
+
+🛑 **Say WHY there are two loan columns, every time:** they start equal and **come apart** when a loss
+runs past stock basis and eats debt basis without changing what is owed — **and a later repayment
+across that gap is taxable income to the owner.** ⛔ **Never let them be copied into each other.**
+
+**② WHERE EACH BEGINNING FIGURE COMES FROM — and the sentence that has to be said out loud:**
+
+> 🔴 **THE STOCK BASIS AT THE BEGINNING OF THE YEAR COMES FROM LAST YEAR'S FORM 7203, LINE 15 — AND
+> THAT FORM IS FILED WITH THE OWNER'S *INDIVIDUAL* RETURN, NOT WITH THE COMPANY'S.**
+> ⛔ **It is not on the company's prior return, in any form.** A preparer who goes looking for it on
+> last year's entity return will not find it, and may key a zero instead — **which silently overstates
+> every loss the owner can deduct and can turn a tax-free distribution into a taxable one.**
+> 🛠️ **If the firm does not hold that Form 7203, say so as a RED item and name who has to produce it:
+> the owner, or whoever prepared their 1040.** ⛔ **Do not reconstruct it from the company's books and
+> present the result as the figure.**
+
+**And the rest of the sources, each named to the exact line:**
+
+| Beginning figure | Comes from | 
+|---|---|
+| **Stock Basis** line 1 | 🔒 **prior-year Form 7203 line 15** — the owner's individual return |
+| **Loan Balance** line 1 | ✅ **prior-year Schedule K-1, item I** *(beginning of year)* — this one IS on the company's return, per shareholder |
+| **Loan Basis** line 1 | 🔒 **prior-year Form 7203 Part II line 31** — the individual return again |
+| Carryover losses / carryover nondeductibles | 🔒 **prior-year Form 7203** — ⛔ **never assumed zero; check whether the prior year had losses** |
+
+**③ WHAT GOES IN THE REST OF THE GRID, LINE BY LINE**, with the two lines that should usually stay
+**empty** called out — the ones fed from the K-1 input screen, where a preparer who cannot find a
+figure will type it by hand instead (delivery rule 8).
+
+**④ THE LOAN-TYPE CHECKBOX**, if there is any loan balance: what it decides *(the character of a
+future repayment gain)*, and that it is asked, not inferred.
+
+**⑤ WHAT CANNOT BE FILLED IN, AND WHY.** Where the books hold one pooled owner-loan account, the
+per-owner split does not exist — ⛔ **and that is the SAME question as K-1 item I, asked once, not
+twice.**
+
+⚠️ **Mark the software-specific parts as such** (delivery rules 8 and 8b): the grid's layout and its
+line numbers are the vendor's; **the three concepts and their sources are not.**
+🛑 **And warn that the grid's line numbers are NOT the basis form's line numbers** wherever that is
+true — on the pilot software they collide on the line that carries **distributions**, which is the one
+line that can turn a basis shortfall into reportable income.
+
+
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
 

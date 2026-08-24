@@ -3050,14 +3050,36 @@ deduction** (§12, and the §1368(b) rule in §10B). 🔑 **Read the grid's labe
 
 #### Where the `Beginning balance` of each column comes from
 
-🛑 **THE TRAP: Form 7203 is filed with the shareholder's 1040, so the COMPANY'S prior return contains
-no BASIS figure of any kind.** ⚠️ **But it is not empty-handed — it holds the loan BALANCES:**
+#### 🔴 SAY THIS OUT LOUD EVERY TIME, BEFORE ANYTHING ELSE IN THIS SECTION
+
+**THE STOCK BASIS AT THE BEGINNING OF THE YEAR COMES FROM LAST YEAR'S FORM 7203, LINE 15 — AND THAT
+FORM IS FILED WITH THE OWNER'S *INDIVIDUAL* RETURN, NOT WITH THE COMPANY'S.**
+
+🔑 **Line 15 is the last line of Part I: *"Stock basis at the end of the corporation's tax year."*
+Last year's ending IS this year's beginning.** ⛔ **There is no other source for it.**
+
+⚠️ **Why this is the single most important sentence in §12A:** a preparer looking for it on the
+company's prior return **will not find it**, because the company's return does not contain any
+shareholder's basis. **What they do next is the damage: they key a ZERO** — and a zero opening stock
+basis **caps the losses the owner may deduct at far less than they are entitled to, and can turn a
+tax-free distribution into a reported capital gain that is not real.**
+
+🛠️ **If the firm does not hold that Form 7203:** it is a 🔴 **RED item in the delivery**, and it is
+named as one — **the owner, or whoever prepared their 1040, has to produce it.** ⛔ **Do not
+reconstruct it from the company's books and present the result as the figure.** *(You may reconstruct
+it as an ESTIMATE, clearly labelled, to size the exposure — never to file.)*
+
+ⓘ **First year of the S election and genuinely no prior 7203?** Then build it from what the
+shareholder paid for the stock plus contributions — **and write down that you did, and from what.**
+
+🛑 **AND THE TRAP UNDERNEATH IT: the COMPANY'S prior return contains no BASIS figure of any kind.**
+⚠️ **But it is not empty-handed — it holds the loan BALANCES:**
 
 | Source | Gives you | |
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
 | The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is near-conclusive** *(the instruction says the two reconcile "generally")* *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
-| **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → stock basis line 1; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
+| 🔒 **Each shareholder's prior-year Form 7203** *(on THEIR 1040)* | 🔴 **Part I line 15** → **stock basis line 1 — the sentence above**; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis**; ✅ **Part III carryovers** → grid lines 7 and 8 | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
 #### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — four ways it lies
