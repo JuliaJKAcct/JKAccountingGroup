@@ -2990,6 +2990,97 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 > it travels with the owner's personal return.** If the firm does not prepare that 1040, the
 > figures still have to reach whoever does.
 
+### 🛠️ 12A · THE THREE-COLUMN `Stock and Loan Basis` GRID — and the two columns everyone merges
+
+🖥️ *(Screen observed in **ATX 2025**, **2026-08-24**, on the shareholder input. Layout is a vendor
+fact; the tax content below is not.)*
+
+**The software collects Form 7203 on ONE grid with THREE columns, and a preparer who reads them as
+"the loan, twice" will fill them in wrong.**
+
+| Column | Which part of Form 7203 | What it holds | 🔑 In one sentence |
+|---|---|---|---|
+| **Stock Basis** | **Part I** | what she has invested in her SHARES | *what she put in, plus profits taxed to her, minus what she took out* |
+| **Loan Balance** | **Part II**, the loan itself | what the company **owes** her | *the money — the debt at face value* |
+| **Loan Basis** | **Part II**, the basis in it | her **tax basis** in that debt | *what the debt is worth to her for absorbing losses* |
+
+🛑 **`Loan Balance` and `Loan Basis` START EQUAL AND COME APART. That is the whole reason there are
+two columns.** She lends 10,000 → both are 10,000. **A pass-through loss that runs past her stock
+basis then eats her DEBT basis without touching what she is owed.** She is still owed 10,000; her
+basis in it may be 4,000.
+⚠️ **And the gap is not academic: if the company repays her, the difference is TAXABLE INCOME to her.**
+⛔ **Never copy one column into the other, and never "tidy" a difference between them — the difference
+IS the information.**
+
+#### Where the `Beginning balance` of each column comes from
+
+🛑 **THE TRAP, AND IT CATCHES EVERYONE ONCE: the COMPANY'S prior-year return does not contain any of
+these figures.** Form 7203 is filed with the **shareholder's 1040**.
+
+| Source | Gives you | |
+|---|---|---|
+| **The prior-year Form 1120-S** | Schedule L line 19 — ⛔ **ONE POOLED figure for all shareholders together**, plus the K-1s | ⛔ **no per-shareholder basis of any kind** |
+| **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → this year's stock-basis line 1; ✅ **the ending debt figures** → the two loan lines | 🔑 **The only real source.** Get it from her personal return |
+| **The company's own ledger** | ✅ **whether a shareholder-loan account existed at all on day one** | 🛠️ **Do this FIRST — see below** |
+
+> ✅ **AND CHECK THE CHEAP THING BEFORE CHASING THE EXPENSIVE ONE.** If the shareholder-loan account
+> **opens at zero** — no opening-balance line in the general ledger, and an empty **Schedule L line 19
+> beginning column** — then **both loan columns begin at 0 for everybody** and no prior Form 7203 is
+> needed for them at all. 🔑 **On a company that never had shareholder loans before, two thirds of
+> this grid answers itself in five minutes.**
+> ⚠️ **A general ledger DOES print an opening balance where one exists** *(the bank account and the
+> draw account will show theirs)* — **so an account with no opening line genuinely opened at zero.**
+> 🛠️ **Cross-check it against the prior return's Schedule L line 19 END column** — if that carried a
+> balance and the books show zero, the two records disagree and it must be resolved before filing.
+> ⛔ **Only the STOCK column then still needs the prior Form 7203**, and it always does.
+
+#### 🔴 The blockage this grid shares with K-1 item I — and they are ONE question, not two
+
+**Schedule L line 19 is a single pooled liability. Both the grid's `Loan Balance` column and K-1
+item I are PER SHAREHOLDER.** ⛔ **Where the ledger holds one owner-loan account, the split does not
+exist and cannot be derived.**
+
+🛠️ **Test how bad it is by looking at the `Name` / payee column on those transactions:**
+
+| What you find | What it means |
+|---|---|
+| **Named deposits** — each entry carries a person | ✅ **Total by name. The split is in the ledger** |
+| 🔴 **Anonymous entries** — cash or ATM deposits with an EMPTY name field | ⛔ **Nobody recorded who paid it in. It must be ASKED** |
+
+ⓘ **On bank-fed ATM deposits there is one forensic thread, and mark it as a LEAD, never as evidence:
+the ATM terminal ID.** ⛔ **A terminal ID identifies a MACHINE, not a person** — two owners at the same
+branch produce the same ID. 🔑 **It can corroborate an answer the client gives; it cannot produce one.**
+
+✅ **Ask the loan split and item I in the SAME question** — they are the same fact, and asking twice
+makes the firm look like it is not reading its own file.
+
+#### The rest of the grid, and the two lines that should usually stay EMPTY
+
+| Grid line | What belongs there |
+|---|---|
+| **2 Stock/loan contributions** | stock column: the year's **capital contributions** · loan column: **what SHE lent the company this year** |
+| **3 §179 disposition gain (loss)** | rare — only where §179 property was disposed of |
+| 🔴 **4 Other increases in basis** | ⛔ **usually EMPTY.** Her share of income arrives from the **K-1 input**, not here |
+| **5 Repayment of loans from shareholder** | loan column only — and the screen itself notes it **links from Schedule K-1 line 16, code E**, so it is normally driven from there, not typed |
+| 🔴 **6 Other decreases in basis** | ⛔ **usually EMPTY.** Distributions (**16D**) and nondeductibles (**16C**) arrive from the **K-1 input** — §12's own warning about box 16C never reaching that screen is exactly this line |
+| **7 Carryover losses from prior years** | from her prior Form 7203 — zero if the prior year was profitable and nothing was suspended |
+| **8 Carryover nondeductible expenses** | same source, same test |
+
+🛑 **Lines 4 and 6 are where a preparer who cannot find a figure will type it, and that is the
+error.** ⚠️ **If a number you expect is missing from the computed result, the fix is upstream on the
+K-1 input screen — not a manual entry here** (delivery rule 8: a blank on a computed form means a
+missing INPUT, and the form still foots).
+
+#### ⚠️ The `Loan Type` checkbox — not cosmetic
+
+**`Formal Note` / `Open Account Debt`, with the screen's own instruction: check one if there is a loan
+balance.** 🔑 **Informal owner advances with no paperwork are open account debt; a signed instrument
+is a formal note.** ⛔ **Ask which — do not infer it from the size of the balance.** The two are
+**restored differently** once a loss has reduced debt basis, so the choice changes that shareholder's
+return in a **later** year, when nobody will remember this screen.
+
+---
+
 ### The form, line by line — and the order is built into it
 
 **You do not have to remember the ordering: the form enforces it.** Part I runs down the page in
