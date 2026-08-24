@@ -2829,8 +2829,12 @@ Debt`.** The screen says *"check one if there is a loan balance"*, so it is not 
 exists. **Open account debt is the default for informal owner advances; a formal note means there is a
 signed instrument.** ⚠️ **It is not cosmetic — it decides the CHARACTER of any future gain on repayment** (§12A): a
 **formal note** gives **capital gain** on Form 8949 / Schedule D; **open account debt** gives
-**ordinary gain** on Form 4797. ⛔ **An earlier version of this sentence said the two are "restored
-differently". That was wrong** — restoration runs off the net increase and does not turn on this box. ⛔ **Ask which it
+**ordinary gain** on Form 4797.
+🛑 **One exception, and it is the one that catches people: debt converted by the $25,000 rule is
+treated as a formal note but its gain stays ORDINARY** — the instructions name it inside the
+open-account limb. **§12A carries it in full; do not answer this from the summary above.**
+⛔ *(An earlier version of this sentence said the two are "restored differently". That was wrong —
+see §12A.)* ⛔ **Ask which it
 is; do not assume.**
 
 ✅ **Verify by PRINTING the K-1 and reading item I**, exactly as §11B says to verify any field: the
@@ -3002,9 +3006,9 @@ ATX's and moves between versions; the tax rules below are not vendor-specific.)*
 🛑 **WHAT THIS GRID IS, AND WHAT IT IS NOT — because §12 above says Form 7203 is filed with the
 shareholder's 1040, and that is still true.** On the 1120-S side, the grid's job is to derive **K-1
 item I** (§11E). ⛔ **Filling it in does NOT prepare the Form 7203 that gets filed** — that is built on
-the shareholder's own return. ⓘ **[`form-1040-preparation.md` §M3](./form-1040-preparation.md) covers
-PART I only; Part II — the two loan columns — is documented here in §12A and has not been moved
-there.** 🔑 **It
+the shareholder's own return. ⓘ **[`form-1040-preparation.md` §M3](./form-1040-preparation.md)'s line-by-line table covers PART I;
+it touches Part II only in passing (which lines are typed, K-1 box 16E). The two loan columns are
+documented here in §12A.** 🔑 **It
 matters here because the entity return is where the figures exist**, and because the same three
 concepts are what Form 7203 asks for.
 
@@ -3033,7 +3037,7 @@ them — the difference IS the information.**
 | 1 | Beginning balance | Part I line 1 — stock basis at beginning ✅ *lines up* |
 | 2 | Stock/loan contributions | line 2 — basis from contributions / stock acquired ✅ *lines up* |
 | 3 | §179 disposition gain | lines 3a–3m — the income items |
-| 4 | Other increases in basis | line 4 — the subtotal of lines 1 through 3m |
+| 4 | Other increases in basis | line 4 — **Add lines 3a through 3m** *(the income subtotal; lines 1 and 2 do NOT enter it — they join at line 5)* |
 | 5 | Repayment of loans from shareholder | line 5 — stock basis **before distributions** |
 | 🔴 **6** | **"Other decreases in basis"** | 🔴 **line 6 — DISTRIBUTIONS** |
 | 7 | Carryover losses from prior years | line 7 — stock basis **after** distributions |
@@ -3052,7 +3056,7 @@ no BASIS figure of any kind.** ⚠️ **But it is not empty-handed — it holds 
 | Source | Gives you | |
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
-| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only |
+| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **EXCEPT A POOLED ZERO, which is dispositive.** Item I cannot be negative, and loans **to** shareholders sit on **Schedule L line 7**, a different line, so line 19 nets nothing. **A filed line 19 of nil forces every shareholder's item I to nil** |
 | **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → stock basis line 1; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
@@ -3133,7 +3137,8 @@ a formal note.** ⛔ **Ask which — do not infer it from the size of the balanc
 > **line 26 = line 25 × line 19** *(the nontaxable part)*; **line 34 = line 32 − line 33** *(the
 > reportable gain)*. ⛔ **Only on a FULL repayment does the gain equal the whole gap.**
 
-> ⛔ **A CORRECTION, recorded because this SOP said it wrong.** An earlier version said the two are
+> ⛔ **A CORRECTION, recorded because this SOP said it wrong** *(§11E carried it too — a pointer only
+> there now)*. An earlier version said the two are
 > *"restored differently"* after a loss reduces debt basis. **That is not the rule.** Restoration
 > (Form 7203 **line 23**) runs off the **net increase** under §1367(b)(2)(B) and
 > **Reg. §1.1367-2(c)(1)**, and ✅ **the net-increase TEST does not turn on the checkbox.**
@@ -3163,21 +3168,38 @@ and then drew the opposite conclusion from it.)_
 
 🛑 **AND THE $25,000 RULE, which turns an open account into a formal note without anybody choosing:**
 
-> *"If an open account debt has a year-end balance of **more than $25,000**, it will be classified as a
-> **formal note at the beginning of the next tax year** and must be separately tracked."*
-> *"Any debt that exceeded $25,000 at the end of the prior year is treated as a formal note **for
-> purposes of calculating the gain on loan repayment**."* (Reg. §1.1367-2(a)(2)(ii).)
+✅ **From the Part II preamble of the Instructions:** *"If an open account debt has a year-end balance
+of **more than $25,000**, it will be classified as a **formal note at the beginning of the next tax
+year** and must be separately tracked."*
+✅ **And under line 17:** *"Any debt that exceeded $25,000 at the end of the prior year is treated as a
+formal note **for purposes of calculating the gain on loan repayment**. See Regulations section
+1.1367-2(a)(2)(ii)."*
 
 🛑 **AND HERE IS THE TRAP THIS SOP FELL INTO ONCE: THE $25,000 CONVERSION DOES *NOT* MAKE THE GAIN
 CAPITAL.** ⛔ **Line 34's open-account limb expressly names §1.1367-2(a)(2)(ii) debt** — the converted
 debt — **so its gain stays ORDINARY, on Form 4797.**
-✅ **What the conversion actually does is force SEPARATE TRACKING**: the debt gets its own column
-instead of being netted with the rest of the open account, so **the pro-rata computation at lines
-25–26 runs per column rather than on one netted figure.** 🔑 **It changes how the gain is COMPUTED,
-never what it IS.**
+✅ **What the conversion does is put the debt on a FORMAL-NOTE FOOTING FOR THE COMPUTATION**, and the
+consequence that moves money is **not** the extra column — it is **netting**:
 
-⚠️ **The threshold is PER DEBT, PER SHAREHOLDER** — so on a company whose owner-loan account is pooled,
-**you cannot apply the test at all until the split is known.** 🔑 **And a year-end balance near
+> ✅ **Line 17:** *"Advances and repayments made during the S corporation's tax year on an open account
+> are **netted** at the close of the S corporation's tax year…"*
+> ✅ **Line 19:** *"**For a formal note**, enter the amount of principal repayment **specific to each
+> loan**."* … *"For open account debt, **if the repayments exceed the advances** for the tax year, the
+> net repayment should be entered on line 19."*
+
+🔴 **So conversion turns a NETTED repayment into a GROSS one.** A shareholder who advances 10,000 and
+is repaid 10,000 in the same year reports **line 19 = 0** as an open account and **line 19 = 10,000**
+as a formal note — **and line 19 drives line 32, which drives the line 34 gain.** ⛔ **A preparer who
+nets a converted debt under-reports the gain.**
+ⓘ *(The debt also gets its own column, since formal notes cannot be aggregated — but on a shareholder
+with a single open account there is nothing to separate it from, so the column is not the point.)*
+🔑 **It changes how the gain is COMPUTED, never what it IS.**
+
+⚠️ **The threshold is PER SHAREHOLDER, on the AGGREGATE OPEN-ACCOUNT BALANCE** — un-instrumented
+advances are **a single debt**, so ⛔ **it is never tested advance by advance** *(fifteen deposits of
+under $25,000 each are still one debt that can cross the line)*. *(Formal notes ARE tested note by
+note.)* 🛑 **And on a company whose owner-loan account is pooled across shareholders, you cannot
+apply the test at all until the split is known.** 🔑 **And a year-end balance near
 $25,000 makes the year-end DATE load-bearing**, which on a short-period return means the branch choice
 can move it.
 
