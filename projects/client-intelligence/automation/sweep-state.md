@@ -87,8 +87,8 @@ list grows.
 | AXDIGITAL LLC | 2026-08-22 | ✅ **First full historical sweep completed 2026-08-22** (Liudmyla's group, 6 of 7). Established: e-commerce/Amazon marketplace business, home state (Fort Lauderdale, FL), a reverted "2025 Taxes" project status (2026-08-04), an open work-authorization/payroll question for a Ukrainian employee |
 | Airtouch LLC | 2026-08-22 | ✅ **First full historical sweep completed 2026-08-22** (Liudmyla's group, 7 of 7 — Liudmyla's group is now fully covered). 🔴 Found a possible second/related Florida entity ("AIRTOUCH FLORIDA LLC", different Sunbiz EID) facing administrative-dissolution notices — unresolved whether it belongs to this owner-group or is an unrelated company's mail reaching the firm by error |
 | Andrii Tymchenko | 2026-08-22 | ✅ **First full historical sweep completed 2026-08-22.** Established the company's name (TRUSTBURN LLC, a Florida LLC) and the spouse's separate Double record. Found a CONTRADICTION on the 1095-A/health-coverage question between two internal sources — unresolved |
-| VOICECAPITAL INC | 2026-08-22 | ✅ **First full historical sweep completed 2026-08-22.** Note 491840 re-read in full, no new substantive content; bookkeeping cadence and assigned staff resolved from Double properties. Gmail: only the first page of ~201 estimated results reviewed (dominated by cross-client automated noise) — a second page was not paged through, so some client-specific threads may remain unseen |
-| VOXAGO LLC | 2026-08-22 | ✅ **First full historical sweep completed 2026-08-22.** Note 491841 re-read in full. Found a possibly-misattributed Zoom recap that may belong to Best Broker Realty instead — unresolved. Gmail: only the first page of ~40 estimated results reviewed in detail |
+| VOICECAPITAL INC | 2026-08-22 | ⚠️ **CATCH-UP OWED: Gmail — page 2+ of ~201 results never read.** The full pass RAN 2026-08-22 and the rest of it finished: note 491840 re-read in full (no new substantive content), bookkeeping cadence and assigned staff resolved from Double properties. But only the **first page** of Gmail was reviewed (the set was dominated by cross-client automated noise) and the baseline advanced anyway — so every bounded search now starts after history nobody has read. 🛑 **Queue work under step 2c population (ii), not a completed pass** _(marker converted by hand 2026-08-24; the row originally read *first full historical sweep completed*, which is exactly what made it invisible)_ |
+| VOXAGO LLC | 2026-08-22 | ⚠️ **CATCH-UP OWED: Gmail — only page 1 of ~40 results read in detail.** The full pass RAN 2026-08-22: note 491841 re-read in full, and a possibly-misattributed Zoom recap found that may belong to Best Broker Realty instead — unresolved. The baseline advanced on a Gmail pass that was not finished. 🛑 **Queue work under step 2c population (ii), not a completed pass** _(marker converted by hand 2026-08-24)_ |
 | Tsminibears LLC | 2026-07-30 | **Ping, Drive and full Gmail history never swept** — seeded from Double plus a targeted Gmail search around the Gusto / Florida RT case only. That catch-up is owed **only if the client is ever un-archived**: it is **excluded from the weekend sweep** while archived in Double (2026-06-08) |
 
 > **CLIENTS WITH NO ROW HERE — and the omission is the point.**
@@ -173,3 +173,19 @@ pass was completed in the same run. Greenair International's baseline was delibe
 found is a live-risk finding, not a reason to invent a baseline that overstates what was checked.
 Chased each client's own open items (step 6/1b) across all 27 incremental clients — see the
 per-client rows and the weekly email for ages and deadlines._
+
+_**2026-08-24 — the reconciliation this ledger kept saying it owed is DONE, by hand, and it
+closes.** **49 client files = 34 rows above + 11 in the full-pass queue + 3 excluded clients with NO
+row here + Kompozit USA.** ⚠️ **Read that third bucket carefully, because the obvious count is
+wrong:** the exclusion table in [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) has **FOUR** rows —
+MAYS EXPRESS SERVICE, MEGABAI, **Tsminibears LLC** and SETATECH USA — but **Tsminibears also holds a
+ledger row above** (it was swept before it was archived), so it is already inside the 34. The
+partition is by *where each file is accounted for*, never by table membership; adding the exclusion
+table's four to the 34 double-counts Tsminibears and invents a 50th file. Kompozit USA now has its
+own scope-table row — the 2026-08-22 run's check-2b finding, actioned. **Nothing is unaccounted
+for.** 🛑 **This supersedes the last sentence of the 2026-08-15 paragraph above**, which named Andrii
+Tymchenko, VOICECAPITAL INC, VOXAGO LLC and YMI TRUCKING LLC as unreconciled. **Andrii Tymchenko was
+fully swept** on 2026-08-22 and holds a plain row. **VOICECAPITAL and VOXAGO hold rows too — but
+⚠️ CATCH-UP OWED rows, not completed ones**: their Gmail was read one page deep while the baseline
+advanced anyway, so they are queue work, not coverage. YMI TRUCKING is first in the queue. See
+[`sweep-health-review.md`](./sweep-health-review.md) §6 → *What to change*, item 1._
