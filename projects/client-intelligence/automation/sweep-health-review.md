@@ -18,9 +18,9 @@ so nobody has to rediscover it, and turns it into a **checklist to run against t
 | | |
 |---|---|
 | **Routine** | *Client Intelligence — weekly sweep* · `trig_015LaKrto6FDKyUwHmZywqjS` · cron `0 7 * * 6` |
-| **Fires** | **Saturdays 07:00 UTC** = 03:00 Eastern (summer) |
-| **Prompt in the Routine** | 🔴 **The 2026-08-18 version — and it has DIVERGED from the repo since 2026-08-24.** The canonical copy in [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) now carries three fixes the live Routine does not, and **a session cannot paste them** (`created_via: http_api`, §5). **Until a person pastes it, the live prompt is the 2026-08-18 text** — reason about a run from that, not from the repo |
-| **First run of that prompt** | ✅ **Saturday 2026-08-22 — it ran, and the core fix took.** Reviewed against §6 on **2026-08-24**; the result is at the top of §6 |
+| **Fires** | **Saturdays, cron `0 7 * * 6`** — but the real fire time is **~07:08 UTC** (03:08 Eastern in summer). ⓘ The server **anchors an hourly-or-daily cron to the minute the Routine was created** rather than to :00, so `0 7` and `07:08` are both correct and neither is an edit error. Check `next_run_at` when the exact minute matters |
+| **Prompt in the Routine** | ✅ **The 2026-08-24 version — pasted by Lilian at 18:45 UTC and VERIFIED in sync.** Read back with `list_triggers` and diffed line by line against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md): **identical apart from the two substituted webhook lines**, which the repo copy deliberately carries as `<WEBHOOK_*>` placeholders. Three fixes present, both real values intact. ⚠️ **Expect exactly TWO diff lines when you repeat this check** — more than two is drift. ⚠️ **The lag rule below still applies** — the 2026-08-22 report is evidence about the *2026-08-18* prompt, not this one |
+| **First run of that prompt** | ⏳ **Saturday 2026-08-29 — it has NOT run yet.** _(The 2026-08-18 prompt's first run was 2026-08-22; it ran, the core fix took, and the review is at the top of §6. **That report is evidence about the 2026-08-18 text, not this one** — §9's rule is that this row resets whenever the prompt changes, and it just did.)_ |
 | **Canonical copy of the prompt** | [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) → *Routine prompt* (with `<WEBHOOK_*>` placeholders) |
 
 ⚠️ **A Routine's behaviour lags its prompt by up to a week.** A report is evidence about the
@@ -308,11 +308,15 @@ it was being claimed about.** That is the lesson worth keeping.)_
 > 3. 🟡 **An item with no start date says so** — *"pending since unknown — no start date in the
 >    file"* rather than a bare *"no update"*. §2.
 >
-> ✅ **All three were written into the canonical prompt and the template on 2026-08-24, with
-> Lilian's go-ahead.** 🛑 **But the live Routine is NOT updated and cannot be from a session** —
-> `created_via: http_api`, see §5. **Nothing changes until the new prompt is pasted at
-> claude.ai/code/routines**, with the real webhook URL and secret carried across. Until then
-> Saturday runs the 2026-08-18 text, which is safe — none of the three is a regression.
+> ✅ **ALL THREE ARE LIVE.** Written into the canonical prompt and the template on 2026-08-24 with
+> Lilian's go-ahead, and **pasted by her the same evening (18:45 UTC) after a session established it
+> could not do the write itself** (`created_via: http_api`, §5). **Verified, not assumed:** the live
+> prompt was read back and diffed against the repo copy — **identical apart from the two substituted
+> webhook lines** (the repo keeps those as placeholders by design), and both real values survived
+> the paste. **First run on the new text: Saturday 2026-08-29.**
+>
+> ⚠️ **So the 2026-08-29 report is the first evidence about ANY of this**, and §3 names the one
+> question to put to it: **how many `⚠️ CATCH-UP OWED` rows did it create?**
 
 **The checklist itself, for the next run.** Work top to bottom. Each row says what to look at and
 **what the answer means.**
@@ -371,9 +375,22 @@ it was being claimed about.** That is the lesson worth keeping.)_
    itself and tells the run to recompute every time. Do not read a hit as a measurement error.)_
 11. **Did the run add ledger rows for the full passes it completed?** It is now told to. If it did
     not, next Saturday re-buys the same expensive passes — check `sweep-state.md`'s diff.
-12. 🛑 **Did it add a ledger row for any client it did NOT fully sweep?** That is the
-    history-erasing write. **If you see a new row for a client with no full pass in the report,
-    revert it before the next Saturday.**
+12. 🛑 **Did it add a ledger row for any client it did NOT fully sweep, AND did not mark
+    `⚠️ CATCH-UP OWED`?** That is the history-erasing write: a row is a search *bound*, so a plain
+    row for an unswept client skips their history permanently. **Revert that row before the next
+    Saturday.**
+    ⛔ **A row carrying `⚠️ CATCH-UP OWED` is NOT that, and must NOT be reverted** — since the
+    2026-08-24 prompt it is the *correct* output for a full pass that ran but finished incomplete,
+    and reverting it destroys the very signal check 15 counts. _(Widened 2026-08-24: this check was
+    written for the row-with-no-pass and would have eaten the row-for-a-PARTIAL-pass.)_
+15. 🔴 **COUNT the `⚠️ CATCH-UP OWED` rows this run created**, from `sweep-state.md`'s diff — no
+    connectors needed. **This is the number §3 gates the subagent decision on**, and it needs
+    2026-08-29 *and* 2026-09-05 together before it decides anything. Also check the inverse: a row
+    reading *"first full historical sweep completed"* whose own text admits a source was read only
+    partway means the fix did **not** take, and that is the 2026-08-22 defect exactly.
+16. **Did the population-(ii) re-queue actually happen?** VOICECAPITAL INC and VOXAGO LLC hold
+    hand-converted `⚠️ CATCH-UP OWED` rows (Gmail read one page deep). A run that leaves them
+    untouched has not implemented step 2c's second population, whatever else it did.
 
 ### D. Is the context ceiling biting? (§3)
 
@@ -409,12 +426,35 @@ the next person does not start from scratch — which is exactly what went wrong
 
 ## 8. The reminder that brings someone back here
 
-✅ **It fired — 2026-08-24 13:03 UTC — and the connector warning below turned out to be exactly
+⏰ **THE LIVE ONE, and it is the next thing that happens on this file: `trig_01M1FeEQC6TFoUfLRgdQ8RfP`
+— "Revisión del barrido — corrida del 2026-08-29 (la primera con el prompt nuevo)", Monday
+2026-08-31 13:00 UTC, fresh session, push + email.** Lilian asked for it on 2026-08-24, the evening
+she pasted the new prompt. Its job is this file's §6 checklist against the 08-29 report, and it
+leads with the question §3 gates the subagent call on — **how many `⚠️ CATCH-UP OWED` rows did that
+run create?** — which is answerable **from the commit diff alone**. It also carries the targeted
+test: VOICECAPITAL and VOXAGO, whose rows were converted by hand, must be re-queued and their Gmail
+read **unbounded**.
+🛑 **It RECORDS that count; it does not CLOSE the subagent question.** §3 requires 08-29 **and**
+09-05 *between them*, and "two or more per run, **sustained**" cannot be read off one run at all —
+so the 08-31 session is told to re-arm an equivalent one-shot for **Monday 2026-09-07** and decide
+then.
+🔴 **AND IT WAS CREATED TWICE, for a reason worth keeping.** The first version
+(`trig_01372vWvCAfQEvf9PprwpYoS`) was armed with **no `notifications` block at all** — it would have
+fired on Monday, done the review, and told nobody, in a fresh session no one opens. That is this
+file's own §2 failure ("three runs sat unseen for three weeks") rebuilt from scratch, and a review
+caught it before it could happen. ✅ **Every one-shot this file arms carries
+`notifications: {push:true, email:true}` explicitly** — the parameter is optional and its default is
+not a promise.
+
+✅ **The 2026-08-24 one fired at 13:03 UTC — and the connector warning below turned out to be exactly
 right.** The fired session carried **no MCP connectors**, so it could not open the report email;
 the review recorded in §6 was worked **in a separate session of Lilian's the same afternoon**, which
 had Gmail, Double and the checkout together. **The lesson stands and is now tested twice: a Routine
-that must read a mailbox has to be created in the routines UI.** The one-shot has disabled itself
-(`run_once_fired`) and needs no cleanup.
+that must read a mailbox has to be created in the routines UI.** That one-shot disabled itself
+(`run_once_fired`). ⓘ **A third, `trig_01R9Zid5CU3sxLccZZHrBBFo`, was created that afternoon to chase
+the paste before Saturday and DELETED the same evening — Lilian pasted the prompt within the hour,
+so it had nothing left to do.** Deleting a served reminder is part of the work: a dormant Routine
+the firm believes is live is worse than no reminder at all.
 
 A one-shot Routine fired **Monday 2026-08-24, 13:00 UTC** (9am Eastern) in a **fresh session**,
 with push + email notification: **`trig_016LK8zUB4js14Y2xANFv2re` — "Sweep health review — the
@@ -426,7 +466,8 @@ BTR chase date (~2026-08-28) as a secondary item.
 the City of Hollywood (App #40698)"* — the chase date for the BTR reply. Separate on purpose: two
 different matters, two different weeks, and neither should be buried inside the other's report.
 
-⚠️ **Both were created WITHOUT MCP connectors AND without a git source, and both limits are real.**
+⚠️ **NONE of the one-shots on this page has MCP connectors OR a git source — that now includes the
+live 2026-08-31 one — and both limits are real.**
 The tool that made them could not pass connectors through, so a fired session may have **no Gmail,
 Double or Drive** — it **cannot read the sweep report email**. It may also have **no checkout**:
 the weekly sweep Routine carries `sources: [{git_repository: …}]`, these two carry none, so both
@@ -459,8 +500,12 @@ here: copying these facts around is precisely the failure §4 and §5 of this fi
   check turned out pointless; **B7 (the Best Broker spot-check) is the one that settled it**, and
   **C12 needed widening** — it caught the row-with-no-pass it was written for, but not the
   row-for-a-PARTIAL-pass that actually occurred.
-- **The next run happens (2026-08-29)** — check whether §6's three *What to change* items landed,
-  and whether a run with a shorter first-pass queue still thins at the tail (§3).
+- ⏰ **The next run happens (2026-08-29)** — the three fixes are LIVE for it (pasted and verified
+  2026-08-24), so it is the first evidence about any of them. Check whether they landed, and count
+  the `⚠️ CATCH-UP OWED` rows: that number, not the queue length, is what §3 now gates the subagent
+  decision on. **`trig_01M1FeEQC6TFoUfLRgdQ8RfP` fires Monday 2026-08-31 to do exactly this — and re-arms for 2026-09-07 rather than deciding on one run.**
+- **A Routine here is served** — delete it rather than leaving it armed, and say so in §8. A dormant
+  reminder the firm believes is live is worse than no reminder.
 - **Subagents are adopted or rejected** (row 48) — §3 becomes history either way.
 - **The prompt changes** — §1's "first run of that prompt" date resets, and §6 may need new checks.
 - **A new failure mode appears** — add it to §2 as confirmed, or to §4 as retracted. **Both halves
