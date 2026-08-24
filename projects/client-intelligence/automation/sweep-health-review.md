@@ -1,5 +1,46 @@
 # Sweep health review — what to check after a run, and what is currently suspected
 
+> ## ⬛ STATUS — read this before anything else
+>
+> ### Does anyone owe something right now?
+> **Nothing is BLOCKING.** The Routine's prompt is correct and live — Lilian pasted it 2026-08-24
+> 18:45 UTC and it was read back and diffed against this repo. **There is nothing to change and
+> nothing to paste.**
+> ⚠️ **But one OPTIONAL thing is worth doing before Monday, and only a person can do it:** the
+> 2026-08-31 review Routine has **no MCP connectors** (`create_trigger` cannot attach them — §8), so
+> it **cannot open the sweep's report email**. It will still do the repo half, which is most of the
+> value. To get the whole review, **recreate it at claude.ai/code/routines with connectors attached**,
+> or simply **forward it the email** when it asks. _(The identical Routine failed exactly this way on
+> 2026-08-24 — §8.)_
+>
+> ### What happens on its own, and when
+> | When | What | Anyone needed? |
+> |---|---|---|
+> | **Fri 2026-08-28** | ⚠️ **NOT the sweep** — a separate one-shot chases the **Pro Title BTR** with the City of Hollywood (`trig_01X8wmHqbqHqi5uVGS8pHw7S`). It also has no connectors. **Different matter; see §8, and FOLLOW-UPS row 3** | Possibly — read what it reports |
+> | **Sat 2026-08-29 ~07:08 UTC** | The sweep runs. **First run on the new prompt.** Emails Lilian through the webhook | No |
+> | **Mon 2026-08-31 13:00 UTC** | `trig_01M1FeEQC6TFoUfLRgdQ8RfP` reviews that run. It notifies the **firm's shared Claude account** (push + email) — **it does NOT send Lilian a separate email**, so open the session it creates | No, but open it |
+> | **Sat 2026-09-05** | The sweep runs again — the second of the two runs the decision needs | No |
+> | **Mon 2026-09-07** | 🔵 **The subagent decision**, on both runs together | Yes — Lilian decides |
+>
+> ### The one open question, and the one number that settles it
+> Whether the sweep should split across **subagents**. 🛑 **It is NOT decided on one run.** Count the
+> **NEW `⚠️ CATCH-UP OWED` rows each run CREATES** in [`sweep-state.md`](./sweep-state.md) — ⚠️ **two
+> such rows already exist** (VOICECAPITAL, VOXAGO, converted by hand 2026-08-24), so count what is
+> *added*, never the total. **Near zero across 08-29 and 09-05 → leave it as it is. Two or more per
+> run, on both → split it.**
+>
+> ### Where the real record is
+> ⓘ **The firm's open loops live in [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) — row 48 is this
+> matter, and it is the authority.** This box is a summary for whoever opens *this file*; if the two
+> ever disagree, **row 48 wins.** Everything below this box is the **WHY** — the diagnosis, the
+> retracted mistakes, and the checklist a reviewer works. It is not a to-do list.
+>
+> 🔄 **Keep this box true, and note that it goes stale WITHOUT ANYONE EDITING ANYTHING** — a date
+> passes and it starts lying. Update it when a date in it passes, when the prompt or a Routine
+> changes, or when the open question moves. §9 carries this as a rule.
+
+---
+
 **Why this file exists.** On **2026-08-18** Lilian asked where two Business Tax Receipt
 applications stood. Twenty minutes of manual checking found four things that mattered — and
 **every one of them had been sitting in a client file the weekly sweep had already read.** The
@@ -19,7 +60,7 @@ so nobody has to rediscover it, and turns it into a **checklist to run against t
 |---|---|
 | **Routine** | *Client Intelligence — weekly sweep* · `trig_015LaKrto6FDKyUwHmZywqjS` · cron `0 7 * * 6` |
 | **Fires** | **Saturdays, cron `0 7 * * 6`** — but the real fire time is **~07:08 UTC** (03:08 Eastern in summer). ⓘ The server **anchors an hourly-or-daily cron to the minute the Routine was created** rather than to :00, so `0 7` and `07:08` are both correct and neither is an edit error. Check `next_run_at` when the exact minute matters |
-| **Prompt in the Routine** | ✅ **The 2026-08-24 version — pasted by Lilian at 18:45 UTC and VERIFIED in sync.** Read back with `list_triggers` and diffed line by line against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md): **identical apart from the two substituted webhook lines**, which the repo copy deliberately carries as `<WEBHOOK_*>` placeholders. Three fixes present, both real values intact. ⚠️ **Expect exactly TWO diff lines when you repeat this check** — more than two is drift. ⚠️ **The lag rule below still applies** — the 2026-08-22 report is evidence about the *2026-08-18* prompt, not this one |
+| **Prompt in the Routine** | ✅ **The 2026-08-24 version — pasted by Lilian at 18:45 UTC and VERIFIED in sync.** Read back with `list_triggers` and diffed line by line against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md): **identical apart from the two substituted webhook lines**, which the repo copy deliberately carries as `<WEBHOOK_*>` placeholders. Three fixes present, both real values intact. ⚠️ **Expect exactly TWO diff lines when you repeat this check** — more than two is drift. ⚠️ **The lag rule below still applies** — the 2026-08-22 report is evidence about the *2026-08-18* prompt, not this one. ✅ **And the 2026-08-20 Double-notes rule IS in it** — *compare `updatedAt` on EVERY note `list_notes` returns and re-read the body of any that moved* — confirmed in the live text 2026-08-24. A session left that question open on 2026-08-21 (*"should I update the live prompt with the August 20 Double notes line?"*); **it is answered: yes, and it is already there.** |
 | **First run of that prompt** | ⏳ **Saturday 2026-08-29 — it has NOT run yet.** _(The 2026-08-18 prompt's first run was 2026-08-22; it ran, the core fix took, and the review is at the top of §6. **That report is evidence about the 2026-08-18 text, not this one** — §9's rule is that this row resets whenever the prompt changes, and it just did.)_ |
 | **Canonical copy of the prompt** | [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) → *Routine prompt* (with `<WEBHOOK_*>` placeholders) |
 
@@ -166,7 +207,10 @@ population**, and every run that thins at the tail puts those clients *back* int
 run produced **2 incomplete passes out of 6**, so at that rate a run clears ~6 and re-queues ~2 —
 **a net drain nearer 4, and a terminating condition of "no queue left" that may never arrive.**
 
-✅ **So the recommendation stands but the gate changes: re-decide on 2026-09-05 REGARDLESS of what
+✅ **So the recommendation stands but the gate changes: re-decide on the two runs together — the
+2026-09-05 one included, which means the decision itself lands MONDAY 2026-09-07, once that Saturday
+run can actually be read** _(corrected 2026-08-24: this said "on 2026-09-05", which is the morning
+the run fires and therefore too early to review it)_ — REGARDLESS of what
 the queue looks like** — not "when the queue is empty", which is now a condition the fix can defeat.
 The question to ask that day is narrower and answerable: **how many CATCH-UP OWED rows did 08-29 and
 09-05 create between them?** Near zero → the ceiling was the backlog, and it is gone. Two a run,
@@ -385,7 +429,11 @@ it was being claimed about.** That is the lesson worth keeping.)_
     written for the row-with-no-pass and would have eaten the row-for-a-PARTIAL-pass.)_
 15. 🔴 **COUNT the `⚠️ CATCH-UP OWED` rows this run created**, from `sweep-state.md`'s diff — no
     connectors needed. **This is the number §3 gates the subagent decision on**, and it needs
-    2026-08-29 *and* 2026-09-05 together before it decides anything. Also check the inverse: a row
+    2026-08-29 *and* 2026-09-05 together before it decides anything — so the decision lands **Monday
+    2026-09-07**, not on either Saturday. ⚠️ **Count what each run ADDS, not the total:** two
+    CATCH-UP OWED rows already exist (VOICECAPITAL, VOXAGO, converted by hand 2026-08-24), and step
+    4 tells a run to REWRITE an existing marker rather than add a row, so a total reads as evidence
+    of a ceiling that may be pure backlog. Also check the inverse: a row
     reading *"first full historical sweep completed"* whose own text admits a source was read only
     partway means the fix did **not** take, and that is the 2026-08-22 defect exactly.
 16. **Did the population-(ii) re-queue actually happen?** VOICECAPITAL INC and VOXAGO LLC hold
@@ -507,6 +555,12 @@ here: copying these facts around is precisely the failure §4 and §5 of this fi
 - **A Routine here is served** — delete it rather than leaving it armed, and say so in §8. A dormant
   reminder the firm believes is live is worse than no reminder.
 - **Subagents are adopted or rejected** (row 48) — §3 becomes history either way.
-- **The prompt changes** — §1's "first run of that prompt" date resets, and §6 may need new checks.
+- 🔄 **A DATE IN THE STATUS BOX PASSES** — and this is the only entry here that fires with **nobody
+  editing anything**, which is exactly why it is the one that will be missed. The box at the top is
+  the first thing anyone reads and it asserts "nothing is blocking"; the moment 2026-08-29 or
+  2026-08-31 is in the past it says that on stale evidence. **Re-read the box before trusting it,
+  and update it in the same commit as anything below.**
+- **The prompt changes** — §1's "first run of that prompt" date resets, §6 may need new checks, and
+  the STATUS box's first paragraph is wrong until it is rewritten.
 - **A new failure mode appears** — add it to §2 as confirmed, or to §4 as retracted. **Both halves
   earn their place**; the retractions are what stop a future session re-proposing a harmful fix.
