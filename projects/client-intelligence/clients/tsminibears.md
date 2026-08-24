@@ -425,9 +425,15 @@ run because there was no money, **and still ask for the effective date to be mov
 that is now the plan.** It was wrong to treat the date change as dead: what the firm ruled out was
 **misrepresenting the entity type**, not the request itself.
 
-- 🎯 **THE DATE ASKED FOR: OCTOBER 2026** — Q4 2026, **Julia's figure** _(recorded 2026-08-06)_. The
-  honest framing below does **not** depend on that month — *"from the quarter wages actually begin"* is
-  the argument — but **October 2026 is the concrete date the request names.**
+- 🎯 **THE DATE ASKED FOR: 1 OCTOBER 2026** — the first day of Q4 2026, and **consistent with
+  Julia's figure**, which this file records only as the **month** October 2026 _(§4 Option 3; §6,
+  2026-08-13)_. ✅ **It is the date Lilian actually named to the agency on the fifth call**
+  _(confirmed by her, 2026-08-24: "la fecha que solicité fue primero de octubre de 2026, como habíamos
+  dicho antes")_ — so the **ask** is now on the record instead of being inferred. ⚠️ **What that does
+  NOT establish is that the request reached Tallahassee** — she confirmed the date she requested, not
+  that it was lodged; see question ① of the monitoring. The honest framing below does **not** depend on
+  the date — *"from the quarter wages actually begin"* is the argument — but **1 October 2026 is the
+  concrete date the ask names.**
 - 🗣️ **WHAT TO EXPLAIN, IN WORDS — JULIA'S FOUR POINTS, AND THEY ALL SURVIVE.** _(Restated here
   2026-08-13 because they were only written inside the **superseded** two-track block ABOVE, where a
   reader looking for them is told not to act on the page. **What was superseded is the conclusion
@@ -686,17 +692,21 @@ _(Her account of it, written up for Julia the same morning.)_
    case** — so what arrives on a refusal, if anything, is simply not known. **Silence is therefore
    not information**, which is the whole reason this is monitored rather than waited on.
 
-⚠️ **THREE THINGS THE CALL DID NOT PRODUCE.** None is fatal; each is worth one question on the next
-contact:
+⚠️ **THREE THINGS THE CALL DID NOT PRODUCE — one has since closed.** None is fatal; each of the two
+that remain is worth one question on the next contact:
 
 - **Nothing in writing.** The request exists on the agency's side and in Lilian's account of the call
   — the firm holds **no confirmation, no reference number, no email.** The standing rule on this
   matter since three anonymous representatives gave three answers is *get the acceptance in writing*,
   and it applies here too.
-- **Which date was requested is not established.** The firm's ask is **October 2026** (Julia's
-  figure); the write-up says only "changing the effective date" and does not name a month. ⚠️
-  **Recorded as unestablished deliberately — the requested date is the one thing Tallahassee will act
-  on.** Confirm it with Felesha on the first check-in.
+- ✅ **CLOSED the same day — the date requested was 1 OCTOBER 2026.** The write-up said only
+  "changing the effective date", so this file recorded it as unestablished rather than assuming;
+  **Lilian confirmed it when asked** _(2026-08-24: "la fecha que solicité fue primero de octubre de
+  2026, como habíamos dicho antes")_. It is **consistent with Julia's figure** — which this file
+  records as the **month** October 2026, so "consistent", not "identical"; the only thing equating them
+  is Lilian's own *"como habíamos dicho antes"*. **The date named in the ask is the one the firm
+  intended**, and the one variable Tallahassee acts on is on the record. ⚠️ **Still not established:
+  that the ask ever reached Tallahassee.**
 - **No identifier for the request itself** — a case, task or reference number in Tallahassee. Without
   it, every future call restarts from the client's BP number.
 
@@ -712,7 +722,9 @@ one-shot Claude Routine fires the first check-in** — its trigger ID is in §6.
   on what date?** ② is there a **decision**? ③ has the **POA** been processed yet? ④ is there a
   **reference number** for the request? ⑤ which quarters does the account show as **delinquent** now?
   _(① exists because the only evidence the request was filed is that an officer said she would file
-  it. If it never went in, the check-in is the first thing that can surface it.)_
+  it. If it never went in, the check-in is the first thing that can surface it.)_ ⓘ **What the date
+  requested was is NOT one of the questions any more — it is 1 October 2026, confirmed 2026-08-24.**
+  ⚠️ **But if the agency ever states a DIFFERENT date back to us, that is a finding, not a detail.**
 - **Watch BOTH mailboxes** for anything from `floridarevenue.com` quoting the account's **BP number**
   _(the number is in the Double case note, not here)_. ⚠️ **A reply lands in `lilian@`, not `julia@`** —
   the 08-13 email went from Lilian's account with Julia only **bcc'd**, so Julia's mailbox holds the
@@ -884,8 +896,7 @@ All times below are **UTC** unless marked otherwise.
   notice is not a refusal**. 📬 **A favourable decision arrives as a letter, and Felesha said she will
   also call**; ⚠️ **an unfavourable one has no stated route at all.** ⚠️ **Not produced by the call:
   anything in writing, a reference number for the request, or a record of WHICH date was asked for**
-  (the firm's ask is October 2026; the write-up says only "the effective date"). **Three firm-wide
-  lessons in §5:** an unprocessed POA is not always the gate — **ask the named officer to act now**;
+  (✅ **since answered — see the next entry**). **Three firm-wide lessons in §5:** an unprocessed POA is not always the gate — **ask the named officer to act now**;
   an **automated notice is not a decision** and the client must be warned before one lands; and when a
   request leaves the office you can reach, **ask how long, whether the notices stop, and what arrives
   if the answer is no.** _(Detail in §4, "⭐ THE FIFTH CALL", with the monitoring plan.)_
@@ -906,6 +917,26 @@ All times below are **UTC** unless marked otherwise.
   connectors**, so the session it fires has **no Gmail and no Double tools** (the same as the Pro Title
   BTR chase Routine). It will read the repo and tell Lilian to call; **it cannot check the mailbox
   itself.** _(Connectors can only be attached from the claude.ai Routines UI, not from a session.)_
+- _(2026-08-24, Lilian — ✅ the date is confirmed, and it was worth asking)_ — **The effective date
+  requested on the fifth call was 1 OCTOBER 2026** — *"la fecha que solicité fue primero de octubre de
+  2026, como habíamos dicho antes"*. Her write-up for Julia said only *"changing the effective date"*,
+  so this file recorded the date as **unestablished** rather than assuming it matched Julia's figure,
+  and asked her. **It is the first day of Q4 2026 — consistent with the ask of 2026-08-06**, which
+  this file records only as the month _(§4 Option 3)_; the day-level match rests on Lilian's own
+  *"como habíamos dicho antes"*, not on the record. ⭐ **Why the
+  question was worth one line:** the requested date is **the only variable Tallahassee acts on**, and
+  a file that had guessed it would have read as authoritative while resting on nothing. ⚠️ **What
+  remains open is not the date but whether the AGENCY has it right** — nothing came back in writing,
+  so if a future contact quotes a different date, that is a finding, not a detail. ✅ **Carried into all
+  three places in the same pass:** the Double case note `485230` (rewritten in place — the date is now
+  in its STATUS line and its timeline), the FOLLOW-UPS row, and **the monitoring Routine's own prompt**
+  (`trig_01418WCAJnNHsweVawBZErYS`), so the September session states the date rather than asking for it
+  again. 📏 **Note `485230` re-measured after this rewrite: 7,421-character body (7,509 with the title)
+  — trimmed to 7,336 / 7,424 before sending**, since the earlier figure in this log (7,364) no longer
+  described it. **Its two remaining gaps were also aligned to this file's two** — *nothing in writing*
+  and *no identifier for the request* — with the **DR-835 scope question moved to the note's POA
+  bullet**, where this file keeps it too, so a teammate cross-reading them does not think one is
+  stale.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -923,11 +954,11 @@ All times below are **UTC** unless marked otherwise.
   months… depends on Tallahassee"*: contact Felesha ~every 3 weeks — first ~2026-09-15, then
   ~2026-10-06, then monthly** _(a rhythm the firm set; adjust it, never replace it with nothing —
   and **do not compute a decision date**, three quoted turnarounds on this matter have all been
-  wrong)_. **Four questions each time: ① is there a decision? ② is the POA processed yet? ③ is there a
-  reference number for the request? ④ which quarters show as delinquent now?** ⚠️ **Confirm on the
-  first check-in WHICH DATE was requested** — the firm's ask is **October 2026**, and Lilian's
-  write-up does not name the month (§4). ⚠️ **Nothing is in writing**: no confirmation, no reference,
-  no email — the standing *get it in writing* rule applies to this request too. 🔴 **A new penalty
+  wrong)_. **Five questions each time: ① was the request actually submitted, and when? ② is there a
+  decision? ③ is the POA processed yet? ④ is there a reference number for the request? ⑤ which
+  quarters show as delinquent now?** ✅ **The date requested is settled: 1 OCTOBER 2026**, confirmed by
+  Lilian on 2026-08-24 — ⚠️ **but a different date quoted back by the agency is a finding, not a
+  detail.** ⚠️ **Nothing is in writing**: no confirmation, no reference, no email — the standing *get it in writing* rule applies to this request too. 🔴 **A new penalty
   notice is NOT a refusal** — the notices are automated and stop only on a favourable decision. **The
   one question that stays open and unasked: is the request receivable without the IRS letter?** Do
   **not** raise it — but it is still the likeliest shape of a refusal, so be ready if Tallahassee
@@ -1004,10 +1035,12 @@ All times below are **UTC** unless marked otherwise.
     lodged with Tallahassee while the POA is **unprocessed**; nobody has established that a DR-835
     of that date and scope authorises this change, or who signed it. **Read the form's scope boxes**
     — the answer costs nothing now and is expensive to discover from a refusal.
-- [ ] **WHICH EFFECTIVE DATE was actually requested on 2026-08-24.** The firm's ask is **October 2026**
-  (Julia's figure); Lilian's write-up of the call says only "changing the effective date". **It is the
-  one variable Tallahassee will act on** — confirm it with Felesha on the first check-in. _(Opened
-  2026-08-24.)_
+- [x] **WHICH EFFECTIVE DATE was actually requested on 2026-08-24 — ✅ 1 OCTOBER 2026.** The write-up
+  said only "changing the effective date", so it was recorded as unestablished rather than assumed;
+  **Lilian confirmed it the same day** _("la fecha que solicité fue primero de octubre de 2026, como
+  habíamos dicho antes")_. **Consistent with Julia's figure**, which the file records as the month
+  October 2026. ⚠️ **What stays open is not the date but whether the agency HAS it right** — if a future contact quotes a different one, that is a finding.
+  _(Opened and closed 2026-08-24.)_
 - [ ] **A reference/case number for the Tallahassee request, and anything in writing confirming it was
   submitted.** Neither was produced on the call; without them every future contact restarts from the
   client's BP number, and the firm's only record of the request is one person's account of a phone
