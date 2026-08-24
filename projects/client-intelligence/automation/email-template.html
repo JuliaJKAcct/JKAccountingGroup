@@ -26,30 +26,45 @@
       2. New in Client Intelligence (blue callout — facts auto-saved this run,
          each with its source tag; already committed, no action needed)
       3. Still needed (plain amber-labelled list — this client's OPEN items from
-         the sweep's step 1b. EVERY entry carries its AGE IN DAYS and any
+         the sweep's step 6. EVERY entry carries its AGE IN DAYS and any
          deadline: "Awaiting the owner's letter — 19 days", not "Awaiting the
-         owner's letter". An item with no clock on it is invisible.)
+         owner's letter". An item with no clock on it is invisible.
+         ⚠️ WHERE THE CLIENT FILE RECORDS NO START DATE, write "pending since
+         unknown — no start date in the file". NEVER a bare "no update", and
+         NEVER an invented date. About a third of items were in this state on
+         2026-08-22, and an item you could not clock printed identically to one
+         nobody chased — which is the ambiguity this section exists to remove.)
       4. Nothing new (compact green one-liner — ONLY when 1, 2 AND 3 are all
          empty. ⚠️ It used to print whenever 1 & 2 were empty, which meant a
          client with a document pending 19 days and a licence renewal six weeks
          out printed the green all-clear on 2026-08-15. Section 3 having content
          is exactly when this line must NOT appear.)
-  - Fill AT A GLANCE with one row per client. 🔴 COLOUR BY OPEN ITEMS — NOT BY
-    WHETHER SOMETHING NEW HAPPENED. Decide the colour from section 3 FIRST, then
-    let the status text carry the rest:
-      bronze #9C6A39 = proposals await approval (outranks everything) ·
-      amber  #9C6A39 = ANY open item in section 3 — whether or not new facts were
-                       saved — and the row MUST carry the oldest item's age ·
-      blue   #2F5E8C = new facts saved AND nothing open ·
-      green  #2F8F5E = nothing new AND nothing outstanding.
-    The "N new facts" count rides ALONGSIDE amber ("2 new facts · oldest open 159
-    days"); it never replaces it. ⚠️ THIS REVERSES THE OLD RANKING, and here is why:
-    amber used to mean "nothing new BUT items open", so proposals ▸ new facts ▸ quiet
-    overrode it — and on 2026-08-22 OPTIC GOLD INC printed a neutral blue "1 new
-    fact(s) saved" while carrying a 15-day unopened Sunbiz notice AND a 159-day
-    IRS-address item, with no age shown at all. Green is still the all-clear and must
-    be earned. Dots use the bright hue; the right-hand status text uses the
-    AA-darkened shades below.
+  - Fill AT A GLANCE with one row per client. 🔴 THE DOT IS DECIDED BY THE WORST
+    OPEN ITEM IN SECTION 3 — never by whether something new happened, and never by
+    proposals. Proposals and new-fact counts go in the STATUS TEXT, not the dot:
+      red   #B23A3A (text #8F2E2E) = a deadline within 14 days, OR an open item
+                                     90 days or older. The row that must catch the eye ·
+      amber #B8841C (text #7A5710) = any other open item ·
+      blue  #2F5E8C (text #24507A) = nothing open, but new facts were saved ·
+      green #2F8F5E (text #237049) = nothing open and nothing new.
+    EVERY row with an open item carries THE OLDEST ITEM'S AGE in its status text,
+    whatever its colour, and the text carries everything at once: "2 SOP proposals ·
+    1 new fact · oldest open 159 days". ORDER THE SECTION red first, then amber by
+    age DESCENDING, then the rest.
+    ⚠️ THE THRESHOLD AND THE ORDERING ARE LOAD-BEARING, not decoration. A flat
+    "anything open = amber" defeats itself: on 2026-08-22 ALL 34 swept clients had
+    something in section 3, so that rule prints 34 identical dots and discriminates
+    nothing — worse than what it replaced. The severity split is what makes the eye
+    land on the 159-day item.
+    ⚠️ And the defect being fixed: amber used to mean "nothing new BUT items open",
+    so the old ranking (proposals ▸ new facts ▸ quiet) overrode it, and on 2026-08-22
+    OPTIC GOLD INC printed a neutral blue "1 new fact(s) saved" while carrying a
+    15-day unopened Sunbiz notice AND a 159-day IRS-address item, with no age at all.
+    🛑 Bronze #9C6A39 is now used ONLY for the per-client "Proposed for the SOP"
+    block below — never as a glance dot. It was the same hex as amber, so a client
+    awaiting your approval and a client quietly rotting rendered pixel-identical.
+    Green is still the all-clear and must be earned. Dots use the bright hue; the
+    right-hand status text uses the AA-darkened shade beside it above.
   - The sample content below (Harbor & Vale, Sunmark) is FICTIONAL — replace
     with the real swept clients at send time. Real client names are fine in the
     sent email; they are NEVER committed into this template.
@@ -139,24 +154,26 @@
             </div>
 
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #E6E0D2;background-color:#FFFFFF;">
-              <!-- glance row (repeat): dot = colour from OPEN ITEMS first (see the spec at the top); proposals outrank all, then any open item = amber WITH the oldest age, then blue for new-facts-and-nothing-open, then green -->
+              <!-- glance row (repeat): the dot is the WORST OPEN ITEM (see the spec at the top) — red = deadline <=14d or item >=90d · amber = anything else open · blue = nothing open + new facts · green = nothing open, nothing new. Proposals live in the status TEXT, never in the dot. Order: red, then amber by age descending, then the rest. -->
+              <!-- RED: an item 90 days or older (or a deadline within 14 days). Sorts to the top. -->
               <tr>
                 <td style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
-                  <span style="color:#9C6A39;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Harbor &amp; Vale Studio
+                  <span style="color:#B23A3A;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Ridgeline Freight Co
                 </td>
-                <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#7E5430;">
-                  2 SOP proposals &middot; 3 new facts
-                </td>
-              </tr>
-              <!-- the case the old ranking got wrong: new facts AND something open = AMBER, with the oldest age -->
-              <tr>
-                <td style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
-                  <span style="color:#9C6A39;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Ridgeline Freight Co
-                </td>
-                <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#7E5430;">
+                <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#8F2E2E;">
                   1 new fact &middot; oldest open 159 days
                 </td>
               </tr>
+              <!-- AMBER: something open, but nothing over the threshold. NOTE the proposals sit in the TEXT — they never decide the dot. -->
+              <tr>
+                <td style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
+                  <span style="color:#B8841C;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Harbor &amp; Vale Studio
+                </td>
+                <td align="right" style="padding:11px 16px;border-bottom:1px solid #EFEADD;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:bold;color:#7A5710;">
+                  2 SOP proposals &middot; 3 new facts &middot; oldest open 19 days
+                </td>
+              </tr>
+              <!-- GREEN: the all-clear, and it has to be earned — nothing open AND nothing new. -->
               <tr>
                 <td style="padding:11px 16px;font-family:Arial,'IBM Plex Sans',sans-serif;font-size:14px;color:#22201A;">
                   <span style="color:#2F8F5E;font-size:15px;">&#9679;</span>&nbsp;&nbsp;Sunmark Logistics

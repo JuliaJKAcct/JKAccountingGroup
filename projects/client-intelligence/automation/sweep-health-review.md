@@ -19,7 +19,7 @@ so nobody has to rediscover it, and turns it into a **checklist to run against t
 |---|---|
 | **Routine** | *Client Intelligence — weekly sweep* · `trig_015LaKrto6FDKyUwHmZywqjS` · cron `0 7 * * 6` |
 | **Fires** | **Saturdays 07:00 UTC** = 03:00 Eastern (summer) |
-| **Prompt in the Routine** | The **2026-08-18** version, pasted by Lilian that evening |
+| **Prompt in the Routine** | 🔴 **The 2026-08-18 version — and it has DIVERGED from the repo since 2026-08-24.** The canonical copy in [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) now carries three fixes the live Routine does not, and **a session cannot paste them** (`created_via: http_api`, §5). **Until a person pastes it, the live prompt is the 2026-08-18 text** — reason about a run from that, not from the repo |
 | **First run of that prompt** | ✅ **Saturday 2026-08-22 — it ran, and the core fix took.** Reviewed against §6 on **2026-08-24**; the result is at the top of §6 |
 | **Canonical copy of the prompt** | [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) → *Routine prompt* (with `<WEBHOOK_*>` placeholders) |
 
@@ -160,10 +160,19 @@ chase pass — the part that showed no thinning at all this week. Adopting subag
 changing the prompt again in the same week its rewrite finally proved out, and debugging two changes
 at once is the exact reason this was parked.
 
-✅ **So: fix the three small things in §6's *What to change* list now, let 08-29 and 09-05 run the
-queue dry, and re-open this on a run that has NO first-pass queue.** If a run with nothing expensive
-in it still comes back thin, the ceiling is structural and subagents are the answer. If it comes
-back clean, this section becomes history.
+⚠️ **AND THE DRAIN ARITHMETIC ABOVE IS TOO OPTIMISTIC — the fix itself slows it.** "17 → 11 → 5 → 0
+by 09-05" assumed the queue only ever empties. It does not any more: step 2c now has a **second
+population**, and every run that thins at the tail puts those clients *back* into it. The 2026-08-22
+run produced **2 incomplete passes out of 6**, so at that rate a run clears ~6 and re-queues ~2 —
+**a net drain nearer 4, and a terminating condition of "no queue left" that may never arrive.**
+
+✅ **So the recommendation stands but the gate changes: re-decide on 2026-09-05 REGARDLESS of what
+the queue looks like** — not "when the queue is empty", which is now a condition the fix can defeat.
+The question to ask that day is narrower and answerable: **how many CATCH-UP OWED rows did 08-29 and
+09-05 create between them?** Near zero → the ceiling was the backlog, and it is gone. Two a run,
+steadily → the run cannot finish what it starts inside one context, which is the structural case,
+and **subagents are the answer.** ⓘ That number is also the cleanest evidence anyone has ever had
+for this decision: it is the ceiling made countable, which is precisely what §3 lacked in August.
 
 ---
 
