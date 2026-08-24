@@ -775,28 +775,37 @@ because it finds the mechanism rather than a symptom:**
 does not. ⛔ **The ratio below is a SYMPTOM test and is far weaker; run this one first and let it
 decide whether the ratio is even worth computing.**
 
-> ### 🔴 4 · AND LOOK FOR THE PLUG — the account that holds what the true-up could not place
->
-> **A true-up that cannot reconcile the system to the books has to put the difference somewhere.**
-> Very often that somewhere is **an asset account**, and 🔑 **the journal entry's own DESCRIPTION says
-> what it is.** *(A real one, with the system and the amount changed: **"<system> net revenue
-> ($XXX,XXX) exceeds QBO booked revenue by…"**. 🛑 **Read the descriptions on the true-up entries —
-> they are written by the bookkeeper and they are the most honest sentence in the file.**)*
->
-> 🛠️ **Then track that account QUARTER BY QUARTER, because the SHAPE is the finding.** A plug that
-> sits at a few hundred for two quarters and then jumps to five figures is not a bigger version of the
-> same thing — **something upstream stopped working**, and the jump dates it.
-> *(The shape, with invented figures: the monthly entry recording cash taken out of the business runs
-> January to April and then stops for the rest of the year. The plug sits at **400** and **1,500** in
-> Q1 and Q2 and then reads **30,000 in Q3**. 🔑 **The jump dates the failure to May** — which is the
-> finding, not the balance.)*
->
-> 🛑 **What a plug is NOT: an asset.** Calling it one asserts the company still holds the money.
-> **It is the bookkeeper saying *"the system says this came in, the bank never saw it, and I do not
-> know where it went."*** ⚠️ **On the return it can only resolve two ways, and they pull OPPOSITE:**
-> **money the owners took → a DISTRIBUTION** *(Schedule K 16d up, total assets down, the M-2 cap
-> bites harder)*, or **money paid out in cash → a DEDUCTION** *(line 20 up, line 22 down)*.
-> ⛔ **You cannot split it by guessing, and the proportions are not evidence.** 🛠️ **Ask.**
+#### 4 · 🔴 AND LOOK FOR THE PLUG — the account that holds what the true-up could not place
+
+**A true-up that cannot reconcile the system to the books has to put the difference somewhere.** Very
+often that somewhere is **an asset account**, and 🔑 **the journal entry's own DESCRIPTION says what
+it is.** *(A real one, with the system and the amount changed: **"<system> net revenue ($XXX,XXX)
+exceeds QBO booked revenue by…"**. 🛑 **Read the descriptions on the true-up entries — they are
+written by the bookkeeper and they are the most honest sentence in the file.**)*
+
+🛠️ **Then track that account QUARTER BY QUARTER, because the SHAPE is the finding.** A plug that sits
+at a few hundred for two quarters and then jumps to five figures is not a bigger version of the same
+thing — **something upstream stopped working, and the jump dates WHEN.**
+
+> 🛑 **AND HERE IS THE TRAP, WHICH COST A REAL SESSION A PUBLISHED WRONG ANSWER: the cause you find
+> first is usually the one you can SEE, and the quarterly shape is what disproves it.**
+> On that return the monthly entry capturing cash ran January to April and then **stopped**, and the
+> plug read roughly **400 · 1,500 · 30,000** across the three quarters *(figures rounded, system
+> anonymised)*. **The obvious story — "the entries stopped, so the cash piled up" — is disproved by
+> the Q2 figure itself**, because ⚠️ **the Q2 true-up covers APRIL, MAY AND JUNE.** If May and June had
+> gone uncaptured, Q2's plug would already be large. **It was not.**
+> ✅ **So the evidence dates the failure to Q3, and the stopped entry is a COINCIDENT FACT, not a
+> demonstrated cause.**
+> 🔑 **The general rule: a quarterly plug is a QUARTERLY measurement. Check that your proposed cause
+> falls inside the quarter that actually moved** — the quarter boundaries are the only dating evidence
+> you have, and they are usually enough to kill a plausible story.
+
+🛑 **What a plug is NOT: an asset.** Calling it one asserts the company still holds the money. **It is
+the bookkeeper saying *"the system says this came in, the bank never saw it, and I do not know where
+it went."*** ⚠️ **On the return it can only resolve two ways, and they pull OPPOSITE:** **money the
+owners took → a DISTRIBUTION** *(Schedule K 16d up, total assets down, the M-2 cap bites harder)*, or
+**money paid out in cash → a DEDUCTION** *(line 20 up, line 22 down)*. ⛔ **You cannot split it by
+guessing, and the proportions are not evidence.** 🛠️ **Ask.**
 
 ⚠️ **State the result the way it actually is** (`method.md` rule 1b). **FACT:** the account is fed only
 by those entries and one is missing. **FACT:** the business traded that month, per the bank-fed
@@ -1249,15 +1258,17 @@ purpose by exactly one copy of itself.)_
 **When lines 7 and 8 are ZERO and Schedule K line 16d is large, stop and look. 🛑 It is the
 best-known exposure on an S-corp return, and the return itself gives no warning of it.**
 
-### Why it happens and why the IRS cares
+#### Why it happens and why the IRS cares
 
 **An S corporation's profit passes through and the owner pays income tax on it — but NOT social
-security and Medicare tax.** 🔑 **Wages carry both halves of FICA, about 15.3% up to the wage base.**
+security and Medicare tax.** 🔑 **Wages carry both halves of FICA, about 15.3%** — of which the **12.4% social security half stops
+at the wage base** and the **2.9% Medicare half has NO ceiling** *(plus 0.9% more above the employee's
+Additional Medicare threshold, which the employer does not pay)*.
 So taking everything as a distribution and nothing as salary avoids that 15.3%. **The IRS position
 since Rev. Rul. 74-44 is that a shareholder who WORKS in the business must be paid reasonable
 compensation as wages first**, and it **recharacterises distributions as wages** where none was.
 
-### 🛠️ The test, and it runs off two lines you already have
+#### 🛠️ The test, and it runs off two lines you already have
 
 > **Is Schedule K line 16d material while lines 7 and 8 are zero, AND did any shareholder work in the
 > business?** ⚠️ **If yes to both, the position has to be written down before the return goes out.**
@@ -1267,25 +1278,35 @@ compensation as wages first**, and it **recharacterises distributions as wages**
 shareholder's name.** Money paid to an owner for services, out of the company, with no W-2, is **the
 exact substitution the IRS looks for** — and it is far stronger evidence against a no-payroll position
 than the distributions are, because it shows the company itself treated them as workers.
-⚠️ **It drags in Schedule B 14a/14b too**, since a 1099 was probably not issued to them either.
+⚠️ **And it FORKS the 1099 question rather than simply adding to it.** If the contractor
+characterisation **stands**, a **1099-NEC was owed** (Schedule B 14a/14b). If it does **not**, a
+**W-2 was owed and a 1099 would have been the wrong form.** 🔑 **Either way something was not
+filed** — ⛔ **but never write that a 1099 was owed to a shareholder-employee for services**, because
+under the theory being argued it was not.
 
-### What the exposure actually costs
+#### What the exposure actually costs
 
 | | |
 |---|---|
-| Recharacterised wages | **~15.3% FICA** on whatever is recharacterised |
+| Recharacterised wages | **~15.3% FICA** on whatever is recharacterised *(the 12.4% part capped at the wage base, the 2.9% part not)*. ⚠️ **State the NET, not the gross:** recharacterised wages are **deductible by the company**, so pass-through income falls by the same amount and part of the FICA is bought back in income tax. ⛔ **The penalties are not** |
 | The filings that were never made | **941 · 940 · W-2** — failure-to-file, failure-to-deposit and late-payment penalties, often a large fraction of the tax |
-| 🆕 **§199A** | 🔴 **W-2 wages of ZERO is what caps the shareholders' own QBI deduction above the threshold** (§11D). **The no-payroll position can also throw away up to 20% of the pass-through income.** ⚠️ Below the threshold it costs nothing |
+| 🆕 **§199A** | 🔴 **W-2 wages of ZERO is what caps the shareholders' own QBI deduction** (§11D) — the limit **phases in above $197,300 / $394,600 and bites in full above $247,300 / $494,600** (2025). **The no-payroll position can throw away up to 20% of the pass-through income.** ⚠️ Below the threshold it costs nothing |
 
 🛑 **AND WHERE THE COMPANY HAS BEEN SOLD, IT IS AN INDEMNITY QUESTION, NOT ONLY A TAX ONE.** The
 liability is the **company's**, and the company now belongs to the buyer. ⚠️ **Read what the sellers
 warranted about taxes** — a share purchase agreement routinely warrants that all taxes are paid in
 full for every year of the company's existence. **If it is there, they gave it.**
 
-### ⛔ What the preparer does — and does not do
+#### ⛔ What the preparer does — and does not do
 
 **Lines 7 and 8 stay at what the books and the payroll filings say. Zero stays zero.** ⛔ **A preparer
 does not invent a salary, and does not reclassify distributions unilaterally.**
+🔗 **Three places in this firm already carry part of this, and §5C-viii is the entry point to them:**
+**§5C-v** — *netting contributions against distributions does NOT reduce reasonable-compensation
+exposure*; **§15 pitfall 9**; and the firm's [`reasonable-compensation` skill](../../.claude/skills/reasonable-compensation/),
+**which is the tool that actually produces the defensible figure and the write-up this section
+demands.** ⛔ **Do not build the analysis by hand here — run that skill.**
+
 🛠️ **What the preparer owes is the WRITE-UP**, to whoever signs: **who did what work · why the
 contractor model · what was paid to owners and how it was booked · what the three routes cost** —
 (a) file as computed and document the position, (b) late-file payroll and reclassify part of the
@@ -1531,8 +1552,12 @@ Most are yes/no facts about the company. Three are worth calling out:
      22a."* ⛔ **It is GROSS. Deductions never enter it**, so a company that loses money can still
      be far over the line.
    - 🛑 **SCHEDULE M-2 IS NOT EXEMPTED — EVER.** The instructions grant the exemption to **Schedule L
-     and Schedule M-1 only**. **The AAA still has to be computed**, so on a company where the AAA is
-     the hard part, answering yes removes the easy pages and leaves the hard one.
+     and Schedule M-1 only**; M-2 is not mentioned. ⓘ **One nuance, because the instructions say
+     something adjacent that is NOT the same thing:** on Schedule M-2 column (a) they state that *"an S
+     corporation **without AE&P doesn't need to maintain the AAA** in order to determine the tax effect
+     of distributions… Therefore, it is **recommended** that the AAA be maintained by all S
+     corporations."* ⛔ **That is about MAINTAINING the account, not about FILING the schedule** — the
+     schedule is still required. **So answering yes removes the easy pages and leaves the hard one.**
    - ⛔ **It is not a way out of a problem in the books.** 🔑 **Not filing a schedule does not answer
      a question about what the books MEAN** — and page 1 **item F still asks for total assets**. **A
      disclosure you are allowed to omit is not a disclosure you were right to omit**, and a reviewer
@@ -2307,6 +2332,8 @@ alone.
 
 ## §9C · 🛠️ WHERE THE M-1 LINE 3 ITEMS ARE ACTUALLY TYPED — the blank line nobody can find
 
+🖥️ *(Screens below observed in **ATX 2025**, **2026-08-24**. A vendor fact, not an IRS one — next year's version may move things. §0C.)*
+
 🛑 **This section exists because a preparer was told "put it in line 3's blank itemisation area",
 looked at the form, and found FOUR different rows of dots** _(Lilian, 2026-08-24: "hay varios puntos
 suspensivos en esa forma y no sé dónde ponerlo")_. **The instruction was true and useless. Here is the
@@ -2357,15 +2384,23 @@ names the expense; **"Accrued rent — not paid, cash method"** names the reason
 a reviewer needs. ⚠️ **The description prints on the return** where the software attaches an
 itemisation, so it is written for a stranger.
 
-⛔ **Do NOT put a second item on the meals row to make it fit.** That row feeds form line 3b, which
-must equal Schedule K line 16c on its own (§9, §10). **Two unrelated things added together there
-breaks a tie-out and nothing will tell you.**
+⛔ **Do NOT put a second item on the meals row to make it fit.** 🔑 **That row prints on form line 3b,
+which is *travel and entertainment* SPECIFICALLY** — every other nondeductible gets its own itemised
+row and still reaches Schedule K line 16c. ⚠️ **Putting something else on the meals row overstates 3b
+and destroys the trail §0A tells you to follow** *(and §0A is explicit that 3b → 16c is **a trail, not
+an identity** — do not "fix" a difference by forcing them equal)*.
 
 🛑 **AND THE SAME SHAPE IS EVERYWHERE ON THIS RETURN.** *"An itemise line whose typeable field is a
 link, not a number"* is the normal design: **page 1 line 20** (other deductions), **Schedule L lines 6,
-9, 14, 18, 21 and 25**, **Schedule K line 17d**, **M-1 lines 3, 5 and 6**, **M-2 lines 3 and 5**.
-✅ **The rule that saves the hunt: if a line says *(itemize)* or *(attach statement)*, stop trying to
-type on the form — find the field that opens the detail sheet, and type there.**
+9, 14, 18, 21 and 25**, **Schedule K line 17d**, **M-1 lines 2, 3, 5 and 6**, **M-2 lines 3 and 5**.
+
+✅ **The rule that saves most of the hunt: if a line says *(itemize)* or *(attach statement)*, stop
+trying to type on the form — find the field that opens the detail sheet, and type there.**
+⚠️ **But the rule does not fire on everything, so do not read a missing parenthetical as permission to
+type:** **M-2 lines 3 and 5 carry NO *(itemize)* on the face of the form** and still open a detail
+sheet, because the itemisation is required by the instructions rather than printed on the line.
+🔑 **The reliable test is behavioural, not textual: if the line will not accept a number, it has a
+sheet behind it.**
 
 ## §10 · Schedule M-2 — the AAA
 
@@ -2751,11 +2786,13 @@ Schedule K line must equal the **sum** of that box across every K-1 (§11A).
 
 ### 11E · 🛠️ ITEM I *(loans from shareholder)* IS NOT LABELLED "I" ON THE INPUT SCREEN — where it really is
 
+🖥️ *(Shareholder input screen observed in **ATX 2025**, **2026-08-24**.)*
+
 🛑 **This section exists because a preparer was told "enter it in item I", opened the shareholder
 screen, and item I was not there** _(Lilian, 2026-08-24: "no veo dónde está eso")_. **She was looking
 in the right place. The label does not exist there.**
 
-### Why it cannot be found
+#### Why it cannot be found
 
 **The shareholder input screen shows the per-shareholder items in this order:** address · `Percentage
 of Stock` · `Special Allocation Percentages` · **`Stock and Loan Basis`** · the `Final K-1` /
@@ -2765,7 +2802,7 @@ of Stock` · `Special Allocation Percentages` · **`Stock and Loan Basis`** · t
 they are DERIVED**, like the numbered boxes: **H** comes from `Percentage of Stock → Number of Shares`,
 and **I** comes from the **`Stock and Loan Basis`** grid.
 
-### ✅ Where to type it
+#### ✅ Where to type it
 
 **In `Stock and Loan Basis`, use the middle column — `Loan Balance`** *(not `Stock Basis`, not
 `Loan Basis`)*:
@@ -2779,6 +2816,12 @@ and **I** comes from the **`Stock and Loan Basis`** grid.
 
 **Ending item I = line 1 + line 2 − line 5.**
 
+⚠️ **Marked honestly: the LAYOUT above is observed; the DERIVATION is inferred.** A screenshot shows
+which fields exist, not what feeds what. ⛔ **And there is a real tension to resolve before relying on
+it:** this grid tracks **debt basis**, which losses reduce (§12), while **K-1 item I asks for the loan
+BALANCE**, which they do not. **`1 + 2 − 5` holds only if lines 3 and 4 really are inapplicable in that
+column.** 🛠️ **Confirm it on a PRINTED K-1 before treating it as the rule.**
+
 🔴 **AND THERE IS A CHECKBOX ABOVE IT THAT IS EASY TO SKIP: `Loan Type — Formal Note / Open Account
 Debt`.** The screen says *"check one if there is a loan balance"*, so it is not optional once a balance
 exists. **Open account debt is the default for informal owner advances; a formal note means there is a
@@ -2789,7 +2832,7 @@ is; do not assume.**
 ✅ **Verify by PRINTING the K-1 and reading item I**, exactly as §11B says to verify any field: the
 input screen's labels and the printed form's labels are different vocabularies.
 
-### 🛑 And the reason it is usually still blank after you find it
+#### 🛑 And the reason it is usually still blank after you find it
 
 **Schedule L line 19 is ONE pooled figure for every shareholder. Item I is PER shareholder.** Where the
 books carry a single owner-loan account — which is the normal case (§5C-iii) — **the split does not
@@ -2821,7 +2864,7 @@ when the activity worksheet is perfectly complete.**
 - **Statement A prints for one shareholder and not another** → the worksheet is fine; **that
   shareholder's item G is the problem.** ⛔ **Do not touch the worksheet.**
 
-### 🛠️ HOW TO REACH THE WORKSHEET — the click path, because it is not on any menu
+#### 🛠️ HOW TO REACH THE WORKSHEET — the click path, because it is not on any menu
 
 **It is not a form you add and not a tab in the left-hand form list.** It is a **worksheet belonging to
 the 1120S form**, and worksheets are reached from the form, not from the form list:
@@ -2829,12 +2872,15 @@ the 1120S form**, and worksheets are reached from the form, not from the form li
 > **Open the `1120S` form in the left-hand list → click `Pages & Worksheets` in the bar along the
 > bottom → choose `199A Activity Summary`.**
 
-🔑 **`Pages & Worksheets` is the general answer to "where is that sheet?" in a forms-based program**,
-and it is where the M-1 line 3 detail sheet, the line 20 statement and the activity summary all live.
+🔑 **`Pages & Worksheets` is ATX's answer to "where is that sheet?"** — 🖥️ *(observed in **ATX 2025**,
+**2026-08-24**)* — and it is where the M-1 line 3 detail sheet, the line 20 statement and the activity
+summary all live. ⚠️ **§0C already carries this navigation and the caveat that goes with it: other
+forms-based programs have an equivalent under their own name.** ⛔ **Do not read the ATX control name
+as a general one.**
 ⚠️ **Every form has its own set** — a worksheet belonging to the 1120S will never appear while a K-1 is
 the open form, which is exactly why the §199A screen on the K-1 looks broken.
 
-### 🔴 THE TWO CHECKBOXES, AND THEY ARE NOT THE SAME QUESTION
+#### 🔴 THE TWO CHECKBOXES, AND THEY ARE NOT THE SAME QUESTION
 
 **The worksheet asks two things that a first-time preparer reads as one.** ⛔ **Answer them separately.**
 
@@ -2847,7 +2893,7 @@ the open form, which is exactly why the §199A screen on the K-1 looks broken.
 business* for a shareholder under the income threshold — see Exception 1 below. **`Qualified Business`
 is the switch that makes the activity exist; `SSTB` is a label on it.**
 
-### The SSTB list, verbatim, so it is not answered from memory
+#### The SSTB list, verbatim, so it is not answered from memory
 
 *(2025 Instructions for Form 8995 — read off irs.gov. 🛑 **Re-read it for the year you are filing.**)*
 **An SSTB is any trade or business providing services in the fields of:**
@@ -2865,9 +2911,13 @@ its people being good at their job" — the instructions define it by those thre
 🔑 **So an ordinary personal-services business that is not on the list is NOT an SSTB.** A salon, a
 restaurant, a shop, a contractor, a cleaning company: **`Qualified Business` yes, `SSTB` no.**
 ⚠️ **"Health" means medical services**, not anything to do with wellbeing; ⛔ **do not reach for it
-because a business is a spa or a gym.**
+because a business is a spa or a gym.** ⓘ **Source note, because it is NOT the Form 8995 instructions
+quoted above:** that gloss comes from **Reg. §1.199A-5(b)(2)(ii)**, which names health clubs and health
+spas expressly as outside the health field. **Cite the regulation, not the instructions, if anyone
+asks** — and 🛑 **this session could not read the regulation itself** *(the legal-text sites are
+blocked)*, so it is stated from the firm's reading of it.
 
-### ✅ Exception 1 — why the SSTB box often changes nothing anyway
+#### ✅ Exception 1 — why the SSTB box often changes nothing anyway
 
 **From the same instructions:** *"If your 2025 taxable income before the QBI deduction is less than or
 equal to **$394,600** if married filing jointly, and **$197,300** for all others, your SSTB is treated
@@ -2879,10 +2929,13 @@ reason to answer it carelessly**, because it is *their* taxable income that deci
 and the entity has no way of knowing it. ⚠️ **Thresholds are indexed every year. Take them from the
 current year's Form 8995 instructions.**
 
-### 🛑 The two zeros that actually decide the deduction — and one of them is a payroll decision
+#### 🛑 The two zeros that actually decide the deduction — and one of them is a payroll decision
 
-**W-2 wages and UBIA are entered here too, and above the threshold the deduction is LIMITED by them.**
-**A company with no payroll and no fixed assets reports 0 and 0.**
+**W-2 wages and UBIA are entered here too, and the deduction is LIMITED by them.** ⚠️ **The limit
+PHASES IN above the taxable-income threshold** *(2025: $197,300 / $394,600)* **and applies in FULL only
+above $247,300 / $494,600** — ⛔ **"above the threshold" alone overstates it, in the same way the SSTB
+paragraph above would if it dropped Exception 2.** **A company with no payroll and no fixed assets
+reports 0 and 0.**
 
 🔴 **So on a company that ran no payroll, a shareholder above the threshold can lose the §199A
 deduction entirely** — not because the business does not qualify, but because there are no wages to
