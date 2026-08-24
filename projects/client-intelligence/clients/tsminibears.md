@@ -915,7 +915,7 @@ All times below are **UTC** unless marked otherwise.
 
 **TRACK B — Florida DOR. This is the whole plan** _(closing the account is dead; the effective-date request is back on in its honest form — §4)_.
 
-- ⏳ **NEXT ACTION — MONITOR. THE REQUEST IS IN; TALLAHASSEE DECIDES.** _(Updated after the fifth call,
+- ⏳ **NEXT ACTION — MONITOR. THE ASK HAS BEEN ACCEPTED BY THE AGENT; CONFIRM SHE LODGED IT.** _(Updated after the fifth call,
   2026-08-24.)_ Felesha Spence **said she would submit the effective-date request to Tallahassee** —
   the ask the matter has been working towards since 2026-08-04. ⚠️ **That she actually filed it is
   unconfirmed**, which is why the first check-in question is *was it submitted, and when?* **She asked nothing about why,
