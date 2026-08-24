@@ -3127,7 +3127,7 @@ answer the client gives; it cannot produce one.**
 | 🔴 **4 Other increases in basis** | ⛔ **usually EMPTY.** Her share of income arrives from the **K-1 input**, not here |
 | **5 Repayment of loans from shareholder** | loan column only — and the screen notes it **links from Schedule K-1 line 16, code E**, so it is normally driven from there, not typed |
 | 🔴 **6 Other decreases in basis** | ⛔ **usually EMPTY.** Distributions (**16D**) and nondeductibles (**16C**) arrive from the **K-1 input**. ⚠️ **Not to be confused with Form 7203 line 6 — see the collision table above** |
-| **7 Carryover losses from prior years** | from that shareholder's prior Form 7203 — zero **only if** the prior year was profitable and nothing was suspended. 🛑 **Check, do not assume: a prior year whose AAA went NEGATIVE was a loss year** *(distributions cannot drive the AAA below zero — only losses can)*, and a suspended loss is then live |
+| **7 Carryover losses from prior years** | from that shareholder's prior Form 7203 — zero **only if** the prior year was profitable and nothing was suspended. 🛑 **Check, do not assume: a prior year whose AAA went NEGATIVE almost certainly had losses** — ✅ **only DISTRIBUTIONS are floored** *(Reg. §1.1368-2(a)(3)(iii): decreased, "but not below zero")*, while **losses, deductions AND nondeductible expenses** reduce the AAA with no floor (§10.1 rules 3–5). ⚠️ **So a negative AAA is a strong signal, not a proof: size the nondeductibles first, then treat a suspended loss as live** |
 | **8 Carryover nondeductible expenses** | same source, same test |
 
 🛑 **Lines 4 and 6 are where a preparer who cannot find a figure will type it, and that is the error.**
@@ -3154,7 +3154,7 @@ a formal note.** ⛔ **Ask which — do not infer it from the size of the balanc
 > (Form 7203 **line 23**) runs off the **net increase** under §1367(b)(2)(B) and
 > **Reg. §1.1367-2(c)(1)**, and ✅ **the net-increase TEST does not turn on the checkbox.**
 > ⚠️ **But the ALLOCATION of a restoration across debts does** — a net increase goes first to any debt
-> repaid in the year, then *"to each debt in proportion to its reduced basis"* (§1.1367-2(c)(2)) — **and
+> repaid in the year, then apportioned across the remaining debts by **the amount by which each one's basis was reduced** (§1.1367-2(c)(2)) — **and
 > the checkbox is what decides whether there are separate columns to allocate across at all.**
 
 ✅ **What the checkbox ACTUALLY decides — verbatim from the Instructions for Form 7203, line 34:**
