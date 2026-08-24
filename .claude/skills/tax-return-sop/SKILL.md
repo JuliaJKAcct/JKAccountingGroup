@@ -483,6 +483,37 @@ where there ARE any, the AAA also decides whether a distribution becomes a divid
 the M-1, the basis form and any state equivalent — **every time, for every client.**
 
 
+**1d · 🔴 WHEN THE SOFTWARE'S FIGURE DISAGREES WITH THE WORKING PAPER, THE SOFTWARE WINS — AND THE
+PAPER IS PROPAGATED IN THE SAME PASS, NOT ANNOTATED.**
+
+**Working papers are computed to the cent and rounded once at the end. Tax software rounds every line
+first and adds the rounded lines.** On a return with a long itemised statement those two roads part by
+a dollar or two, **and neither is more accurate.**
+
+🔑 **The filed figure is the software's, for a reason that has nothing to do with accuracy: a computed
+form has to agree with itself.** Every total must be the sum of the lines printed above it. A hand
+figure that is a dollar off makes the printed form contradict its own arithmetic — which is what a
+reviewer, and an examiner, actually sees.
+
+🛑 **So when a keyed return comes back with a different figure, THREE things happen and the third is
+the one that gets skipped:**
+
+1. **Find out WHY it differs, and say so in cause terms** — *"the software split the meals 1,267 / 1,266
+   so the halves add back to the gross; ours had 1,267 twice, which exceeds it"* — ⛔ **never
+   *"rounding"* as a bare word.** If the cause cannot be found, **it is not rounding, it is an input
+   error**, and the tie-out that surfaced it stays open.
+2. **Say which one is filed**, and put the rule down once so the next session does not re-litigate it.
+3. 🔴 **PROPAGATE IT THROUGH THE WHOLE PAPER — every downstream figure, in the same sitting.** ⛔ **A
+   conclusion written in one section while the old figures stand everywhere else is WORSE than not
+   correcting it at all**, because the paper now contradicts itself and the reader cannot tell which
+   half is current. **Grep the paper for the old figure before you call it done**, and where the old
+   value is kept deliberately as history, **label it as history.**
+
+⚠️ **Where a paper carries TWO BRANCHES and only one was keyed, say which footing each column is on** —
+one is the return as the software computes it, the other is a model nobody has typed. ⛔ **A reader must
+never be able to file the modelled column by mistake.**
+
+
 **2 · THE ORDER OF PREPARATION, up front — and every circularity called out.** Forms are not
 prepared in the order they are numbered. Open with the route:
 

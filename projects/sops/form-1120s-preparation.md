@@ -716,7 +716,17 @@ books run past the cut — a terminated election, a mid-year sale, a change of a
    system, the true-up accounts are identical in both figures and **only the bank-fed account
    differs.** That is a useful check and a warning at once — see below.
 
-#### 5 · 🔴 THE TRAP THIS RETURN FOUND: a cut that lands where the true-ups stop
+#### 5 · 🔴 REVENUE THAT ARRIVES THROUGH PERIODIC TRUE-UPS — and the cut that lands where they stop
+
+🔑 **A very common shape, not one client's oddity: retail, salons, restaurants, clinics — anywhere a
+POS or booking system sits beside the bank feed.** The bank feed builds most of the books, and the
+outside system supplies the rest through a **journal entry** every month or quarter.
+
+**What that entry typically does, and it is worth knowing because it is why step 1 below works:** it
+**reverses the bank-only sales already booked**, puts **the system's real sales** in their place, and
+adds **the things the bank never saw — cash takings, tips, card surcharges, discounts.** 🔴 **So those
+accounts are fed by NOTHING ELSE.** A period whose entry was never made leaves them **empty by
+construction** — no error, no gap in the bank feed, nothing that looks wrong.
 
 **When revenue is reconciled to an outside system periodically — quarterly Vagaro/Square/Shopify
 true-ups — the months after the last true-up carry ONLY what reached the bank.** No cash sales, no
@@ -730,7 +740,29 @@ too**, and the ratio loses its direction entirely: it can move either way, or no
 cash-paying business the payout ratio is not a test at all** — go straight for the outside system's
 report.
 
-🛠️ **The detection, and it costs one division:** compute the **payout ratio** *(the main cost of
+🛠️ **DETECTION 1 — THE LEDGER TEST. Thirty seconds, no judgement, and it is the one to run first,
+because it finds the mechanism rather than a symptom:**
+
+1. **List the transaction TYPES feeding each revenue account.** An account fed **only** by
+   `Journal Entry` is a true-up account — it receives nothing from the bank feed and is **empty by
+   construction** in any period whose entry was never made.
+2. **List the MONTHS those entries exist for.** Monthly or quarterly, they should run to the end of
+   the period you are filing.
+3. 🔴 **Compare against the months the business actually TRADED** — which the bank-fed accounts show:
+   sales deposits, wages, supplies.
+
+> **A trading month with no true-up entry = revenue missing from the return.**
+
+🔑 **This test needs no premise and has no false direction** — it either finds a missing entry or it
+does not. ⛔ **The ratio below is a SYMPTOM test and is far weaker; run this one first and let it
+decide whether the ratio is even worth computing.**
+
+⚠️ **State the result the way it actually is** (`method.md` rule 1b). **FACT:** the account is fed only
+by those entries and one is missing. **FACT:** the business traded that month, per the bank-fed
+accounts. **INFERENCE:** it therefore generated the same kinds of revenue it generated every other
+month. ⛔ **You have not seen that period's report** — so ask for it, and say the estimate is an estimate.
+
+🛠️ **DETECTION 2 — the payout ratio, and it costs one division:** compute the **payout ratio** *(the main cost of
 sales — contract labour, commissions — divided by revenue)* **for each trued-up period and again for
 the untrued-up tail.**
 
@@ -796,6 +828,103 @@ total expenses per the P&L
 
 Then **itemise** it in the attached statement. If your line 20 does not equal that subtraction,
 you have either double-counted or dropped an account.
+
+### 5C-vi · 🔴 MONEY THE ENTITY COLLECTS FOR SOMEBODY ELSE — tips, gratuities, pass-throughs
+
+> 🛑 **FIRST, READ WHAT THIS SECTION DOES AND DOES NOT REOPEN, because §5B-i part 3 looks like it
+> says the opposite.**
+> **§5B-i part 3 answers:** *money that IS sitting in the income block — where does it go?* ✅ **Line 1a**,
+> and it says in terms that **the test is NOT "did the company collect it"** — it is which account the
+> money was credited to.
+> **This section asks the question BEFORE that one:** *should it have been in the income block at all,
+> and if it was, where is the matching payout?*
+> 🔑 **They do not conflict, and the default is part 3's.** Money in the income block is line 1a
+> revenue. ⛔ **Case (c) below — "it never reached the entity" — is available ONLY on positive evidence**
+> from outside the books: the outside system's own report, or the processor's settlement statements,
+> showing the money was never remitted to the company. **The absence of a payout is not that evidence,
+> and neither is anyone's sense of whose money it is.**
+
+**Where an entity collects money that belongs to its workers, three things can be true and they lead
+to opposite answers. Do not guess which.**
+
+| | What happened | Effect on the return |
+|---|---|---|
+| **(a)** | The entity collected it **and paid it on**, inside its ordinary payments to those people | ✅ **Income and deduction both present. Nothing to do** |
+| **(b)** | The entity collected it and **paid it out in cash, unrecorded** | 🔴 **The deduction is MISSING — income is overstated** |
+| **(c)** | 🔑 **It never reached the entity at all** — handed straight to the worker, or split out by the processor — **but the outside system reported it and the true-up booked it as income** | 🔴 **The INCOME ENTRY ITSELF is wrong. Income overstated, and there is no deduction to look for** |
+
+🛑 **THE REASONING TRAP, and it is the one a careful person falls into:** *"if it had been paid inside
+the ordinary payments, the books would have said so — they don't, so it wasn't paid."*
+⛔ **That does not follow.** A payment to a worker is deductible whether it is pay, pay plus tips
+passed on, or tips alone. ✅ **So the absence of a label is NOT evidence.**
+
+> 🛑 **⛔ EVERYTHING ABOVE ASSUMES THE WORKERS ARE NOT EMPLOYEES. Settle that first — it changes
+> the answer, not just the paperwork.**
+> **If they are NON-EMPLOYEES** *(independent contractors, booth renters, 1099 recipients)*: the whole
+> payment is contract labour, **the 1099 total is the same however it is made up**, nothing obliges
+> anyone to label the tip portion, and the paragraph above holds.
+> **If they are EMPLOYEES, none of that is true**, and **three separate things** follow — ⛔ **keep them
+> apart, because only the first is about a deduction:**
+>
+> 1. **REPORTING.** Tips an employee reports are **wages** — **§3121(q)** — so they belong on the **W-2**
+>    and carry **FICA**.
+> 2. 🛑 **DEDUCTION — and this is where the section's own framing has to be applied.** ✅ **Only tips the
+>    COMPANY collected and paid on are the company's expense**, and those belong on **page 1 line 8**
+>    *(salaries and wages)*, ⛔ **not inside line 20's contract labour.** ⛔ **Tips a customer handed the
+>    employee directly are §3121(q) wages for reporting and FICA and are deducted NOWHERE — the company
+>    never had that money.** ⚠️ **Do not put reported cash tips on line 8 as an expense the company never
+>    incurred.**
+> 3. ✅ **A CREDIT MAY BE AVAILABLE — the employer CLAIMS it, it is not something owed.** **Form 8846**,
+>    *Credit for Employer Social Security and Medicare Taxes Paid on Certain Employee Tips* (§45B) —
+>    the employer's 7.65% on creditable tips, part of the general business credit. 🔴 **On an S
+>    corporation the form is MANDATORY to claim it and the amount goes on Schedule K** — the 2025 form's
+>    line 6 says so in terms: *"Partnerships and S corporations, report this amount on Schedule K."*
+>
+> 🛑 **THE CREDIT REACHES ONLY TWO LINES OF BUSINESS. Read them before telling anyone it is available** —
+> *(quoted from the **2025 Form 8846**, page 2, "Who Should File", read off irs.gov)*:
+> **(a)** *"Providing, delivering, or serving **food or beverages** for consumption if tipping of employees
+> for delivering or serving food or beverages is customary."*
+> **(b)** 🆕 *"Providing **barbering and hair care, nail care, esthetics, or body and spa treatment
+> services**, if tipping of employees for providing such services is customary."*
+> 🔑 **(b) IS NEW.** The same page's *What's New*: *"For tax years beginning after 2024, the tax credit
+> was extended to certain beauty service businesses."* ⛔ **It does NOT reach delivery, valet, hotels,
+> transport, gig work or any other tipped trade.**
+> ⚠️ **And the wage floor differs between them** — creditable tips are reduced by the shortfall to
+> **$5.15/hour** for food and beverage but to **$7.25/hour** for beauty services, so an identical salon
+> and restaurant do not get the same credit. **Take both figures from the current year's Form 8846, never
+> from memory.**
+> ⓘ **One thing this SOP does NOT state, because it could not be read here:** whether §45B carries a
+> statutory gross-receipts condition on the newly-added establishments. **It is not on the 2025 Form
+> 8846 or its instructions.** ⛔ **Read §45B(b) before relying on either answer.**
+>
+> ⚠️ **Separately — a LARGE FOOD-AND-BEVERAGE establishment may also owe Form 8027**, the tip-allocation
+> report. ⛔ **That is a food-and-beverage-only filing and is NOT extended to beauty services.**
+>
+> 🔴 **A tip payout found sitting in a contract-labour account on an EMPLOYER's books is not a
+> bookkeeping detail — it is an unfiled payroll question, and it goes to whoever owns payroll before this
+> return is finished.**
+
+**What IS evidence:**
+
+- 🔍 **The pass-through account never empties.** If the entity collected the money and paid it on in
+  cash, there must be an entry taking it back out — an expense, or a debit to the income account
+  itself. **A collection account that only ever goes UP has never been settled in the books.**
+- 🔍 **The payout ratio.** Payments to the workers ÷ revenue. **A ratio well above the trade's normal
+  commission rate is consistent with (a)** — the tips are inside. ⚠️ **Consistent with, not proof of.**
+  🛑 **AND YOU CANNOT USE THIS RATIO FOR TWO THINGS AT ONCE. §5B-i part 5 reads a HIGH ratio as
+  MISSING REVENUE; this section reads a HIGH ratio as TIPS INSIDE THE PAYMENTS. One symptom, two
+  opposite conclusions — so on any client where both questions are open, the ratio settles NEITHER.**
+  🔑 **Order of operations:** run **§5B-i part 5's detection 1** (the ledger test — does a true-up
+  entry exist for every trading month?) and settle the revenue question **first**. **Only once the
+  revenue side is closed does a high ratio say anything about tips.** ⛔ **Never quote the ratio in
+  support of one theory while the other is still open** — say instead that the ratio is not available
+  as evidence here, and go and ask.
+
+🛠️ **ONE question settles all three** — ask it of whoever keeps the books:
+
+> *"When the system reported one of these, did the money reach the company's bank account, or go
+> straight to the worker? And if it reached the company, how was it passed on — inside the ordinary
+> payment, or in cash?"*
 
 ### 5C-iii · 🛑 Distributions hide inside ONE capital account per shareholder
 
@@ -1627,6 +1756,38 @@ terminate with no change of owner at all.
 ⚠️ **So expect a page 1 that stops in October beside a Schedule L dated 31 December. They do not tie
 to each other, and they are not meant to.**
 
+#### 🔴 AND ASK THE QUESTION THE INSTRUCTION DOES NOT: are the books for that later date even OURS?
+
+**The instruction says to report the balance sheet at the end of the C short year. It assumes somebody
+kept those books. On a SALE, often nobody we can reach did.**
+
+**After control changes hands, the buyer normally opens their own accounting.** The file the firm
+holds keeps recording — but only the accounts **the SELLERS still controlled**, which they are usually
+closing. ⚠️ **And a sale agreement can oblige them to empty and close those accounts — one did on the
+pilot**, in a covenant requiring every company bank account emptied and closed before completion.
+🛑 **So READ THE AGREEMENT'S CLOSING COVENANTS before trusting the year-end column** — do not assume
+the covenant is there, and do not assume it is not. Where it is, what remains in the file is a
+wind-down, not a business.
+
+🔑 **So a year-end column built from that file can be, in plain terms, the SELLERS' remaining bank
+accounts on 31 December — not the COMPANY's position on 31 December.** The trading the buyer did is
+simply absent.
+
+🛠️ **The test, before keying that column:** look at what the books contain for the period **after**
+control changed.
+
+| What you see there | What it means |
+|---|---|
+| Sales, wages, rent, supplies — **a business operating** | ✅ the books still cover the entity; the year-end column is real |
+| 🔴 **A few late receipts, final payouts, bank charges, an accountant's fee, the card being paid down** | 🔴 **A WIND-DOWN.** The column describes the sellers' accounts, not the company |
+
+🛑 **This does NOT change what the instruction prescribes — but it changes what the figure MEANS, and
+that is a professional judgement, not a preparer's.** ⚠️ **Raise it with the person who signs**, in
+these terms: *"the year-end column comes from a file that after the sale only sees the accounts the
+sellers were closing; the earlier date is the last one our books describe completely. Which do we
+present?"* **And record the answer** — this is exactly the kind of decision nobody remembers a year
+later.
+
 🛑 **The exception is keyed to an ELECTION — and do not talk yourself out of reading the law.** It is
 tempting to reason *"nobody elected, so the exception cannot apply."* ⛔ **That reasoning has failed
 in practice**, for three reasons worth knowing: a **50%-or-more stock sale may FORCE the closing of
@@ -1977,6 +2138,60 @@ spent — and the error travels out of this return and onto their 1040s, where n
 
 ---
 
+## §9B · 🛠️ WHEN M-1 LINE 1 IS A CALCULATED FIELD — the fix is never to override it
+
+**ATX computes Schedule M-1 line 1 (*net income per books*) by working BACKWARDS, and other packages
+do the same:** it already knows line 8 (which must equal Schedule K line 18), so it subtracts whatever
+adjustments you entered and shows the remainder as "book income". **Nothing about line 1 comes from
+the books.**
+
+🔴 **That means an M-1 with a MISSING adjustment still balances — and lies.** Line 8 is right, line 4
+is right, and line 1 quietly reports a book income the books never showed.
+
+🔑 **So the diagnostic is not "does the M-1 add up?" — it always will. It is: DOES LINE 1 EQUAL THE
+NET INCOME ON THE P&L?** Compute the P&L's net income for the return's period independently, and
+compare.
+
+> 🛑 **RUN THE PRECONDITION FIRST, or the test tells you nothing.** This diagnostic assumes **line 8
+> is already right** — it is back-solved *from* line 8, so a wrong line 8 makes line 1 wrong for a
+> reason that has nothing to do with a missing adjustment. **So before reading the table below:**
+> ✅ **page 1 line 22 = Schedule K line 1 = Schedule K line 18 = M-1 line 8** *(§14's tie-outs, run in
+> that order)*. **If any of those disagree, fix that first and come back.**
+
+> ⚠️ **AND SET A TOLERANCE BEFORE YOU LOOK, or you will chase rounding.** The return is filed in whole
+> dollars and the software totals **rounded lines**, while your P&L net income comes off figures in
+> **cents**. **A gap of a few dollars on a return with a long deduction statement is that, and nothing
+> more.** *(Invented illustration — the shape, not any client's figures: the software shows **80,002**
+> against a P&L net income of **80,000.15**. A two-dollar gap, entirely rounding, on a return whose
+> real defect had already been fixed. **A missing add-back would have shown as thousands.**)*
+> 🔑 **A missing adjustment is the SIZE OF THE ITEM, not a dollar or two.** **Rule of thumb: under
+> about ten dollars, look at the rounding before you look for an item; anything larger, find the item.**
+
+| If line 1 … | What is missing | Where it goes |
+|---|---|---|
+| **equals the P&L's net income** *(within the tolerance above)* | ✅ every adjustment is captured | nothing |
+| **is HIGHER than the P&L's** | 🔴 **either** an **add-back** — a book expense the return did not allow *(the common case)* — **or** income the return picks up that the books never showed | **line 3** *(add-back)* · **line 2** *(income on Schedule K not on the books)* |
+| **is LOWER than the P&L's** | 🔴 **either** a **deduction** the return allows that the books never recorded *(the common case)* — **or** book income the return does not tax | **line 6** *(deduction)* · **line 5** *(income on the books not on Schedule K)* |
+
+🔑 **Why each direction has TWO answers, and it falls out of the arithmetic.** The software solves
+`line 1 = line 8 − line 2 − line 3 + line 5 + line 6`. **Lines 2 and 3 push line 1 DOWN; lines 5 and 6
+push it UP.** So a line 1 that is too high means *something on the 2/3 side is missing*, and a line 1
+that is too low means *something on the 5/6 side is*. ⛔ **The direction tells you which SIDE, never
+which LINE** — that comes from what the item actually is.
+
+🛠️ **And the fix is to ENTER THE MISSING ITEM, never to override line 1.** Put the item on line 3 (or
+6) and the software recomputes line 1 by itself, to the right figure. ⛔ **Overriding line 1 makes the
+schedule balance while still omitting the item — the worst of both.**
+
+⚠️ **Where on line 3 it goes, because this is a real trip-up:** line 3 has **named sub-lines** (3a
+depreciation, 3b travel and entertainment) **and a blank itemisation area**. **Anything that is not
+depreciation or travel-and-entertainment goes in the BLANK area** — an accrued expense the cash method
+did not allow is the commonest. ⛔ **Do not force it onto 3b just because 3b is the box you can see:**
+3b feeds the travel-and-entertainment disclosure and must equal the meals/entertainment disallowance
+alone.
+
+---
+
 ## §10 · Schedule M-2 — the AAA
 
 ### 10.0 · 🔑 WHAT THE AAA IS — explained for someone with NO accounting background
@@ -2290,7 +2505,9 @@ concerned.
 1. **Enter the shareholders and their shares FIRST**, before any allocated amount. Confirm each K-1's
    **item G** shows the percentage you expect. ⚠️ **An allocation engine can only split by a percentage it
    already has** — so enter the ownership before the amounts, and re-check the K-1s if you did it the other
-   way round. ⛔ **This is a precaution, not an observed failure** — no program has been tested for it here.
+   way round. 🔴 **THIS IS NOW AN OBSERVED FAILURE, NOT A PRECAUTION** — it happened in **ATX** on the
+   pilot return: one shareholder's item G was left at **0.00000%** and her entire K-1 printed blank,
+   with no diagnostic. **§11C is that failure written up.**
 2. **Enter ONE category-B figure** at the entity level — line 16d is the clearest.
 3. **Open the K-1s and look.** Split already? → the program allocates: enter the rest at entity level
    only. Still blank, or the entity field refuses input? → that program wants it **per shareholder**,
@@ -2312,6 +2529,77 @@ concerned.
 > buyer who is not a shareholder of *this* period at all. ⚠️ **The mechanism is the statute's, not one
 > program's; how a given program reacts is what the two-minute test above is for.** **The cut IS the allocation mechanism. Do
 > not perform it twice.**
+
+### 11B · 🗺️ WHERE EACH K-1 FIELD ACTUALLY LIVES — the address of every box
+
+**A preparer told "put it in item I" and left there will hunt for ten minutes.** Give the **form, the
+part and the label.** ⓘ **This is the map, not the routing rule** — §11A above decides *whether* a
+figure is entered at entity level or per shareholder; **this section only says where on the printed
+K-1 each field physically is**, so that an instruction naming a box can be followed. ⚠️ **And check it against the year you are filing** — like the rest of the
+package the K-1's layout moves (§11A); F was split into F1/F2/F3 for TY2023, and boxes 18 and 19 are
+recent. _(Verified against the **2025** Schedule K-1, 2026-08-23.)_
+
+| Where on the K-1 | What is there |
+|---|---|
+| **Top of the form**, above the numbered boxes | `Final K-1` / `Amended K-1` **checkboxes** |
+| **Part I — Information About the CORPORATION** *(left column)* | **A** EIN · **B** name and address · **C** IRS centre · 🔴 **D corporation's total number of shares** — ⚠️ **D is a CORPORATION fact and lives in Part I**, not with the shareholder items; it is entered once, not per person |
+| **Part II — Information About the SHAREHOLDER** *(left column, below Part I)* | **E** shareholder's identifying number · **F1** name and address · **F2** the responsible person and TIN where the shareholder is a disregarded entity, trust, estate or nominee · **F3** type of entity · **G** current year allocation percentage · **H** shareholder's number of shares · **I** **loans from shareholder** |
+| **Part III** *(the whole RIGHT column)* | The numbered boxes **1 through 19** — income, deductions, credits, `16` items affecting basis, `17` other information, and **18 / 19** the more-than-one-activity checkboxes |
+
+🔑 **Items E through I are per-SHAREHOLDER facts, typed on that shareholder's own screen.** Part III's
+boxes are mostly **allocated by the software** from the entity-level figures — which is why they go
+blank when item G is wrong (§11C).
+
+**Item I specifically — *Loans from shareholder*:** two boxes, **beginning of tax year** and **end of
+tax year**, reporting what **that one shareholder personally lent the company.**
+🔑 **What it is FOR:** a shareholder's loan creates **DEBT basis** — a second pool, separate from stock
+basis, that can absorb losses after stock basis runs out. It is Part II of that shareholder's basis
+form (§12). **Without item I, their 1040 preparer cannot complete it.**
+🛑 **And the trap: Schedule L line 19 is ONE pooled figure for all shareholders, while item I is PER
+shareholder.** Where the books carry a single owner-loan account (§5C-iii), **the split does not exist
+in the ledger and cannot be derived from it — it has to be asked.** ⛔ **Do not enter zero** *(that
+asserts they lent nothing while Schedule L says otherwise)* **and do not halve it by default.**
+
+### 11C · 🔴 A SHAREHOLDER WHOSE ALLOCATION PERCENTAGE IS ZERO GETS AN EMPTY K-1 — silently
+
+**The single highest-yield thing to check on a multi-shareholder return.** If item G reads
+**0.00000%**, the software allocates **nothing** to that person: box 1, the basis items and the
+distributions all come out **blank**, and **no diagnostic fires** — the K-1 prints, it just says
+nothing.
+
+🛠️ **Fix the CAUSE, not the boxes:** set that shareholder's **shares / percentage**, and every
+allocated box fills itself. ⛔ **Typing figures into the boxes while G is zero leaves a K-1 that
+contradicts its own percentage.**
+
+✅ **The check that catches it in ten seconds:** the percentages **must add to 100%**, and each
+Schedule K line must equal the **sum** of that box across every K-1 (§11A).
+
+### 11D · 🛠️ §199A / QBI — entered at the ENTITY, not on the K-1
+
+**A preparer opening the §199A screen on a K-1 and finding every field zero and uneditable has not hit
+a bug.** 🖥️ **In ATX — observed on the pilot return, 2026-08-23 — that screen is read-only and says
+so at the top:** the §199A information is entered on the **1120S** tab, on the **`199A Activity
+Summary`** worksheet. ⚠️ **Other packages put it elsewhere; what generalises is that it is an ENTITY
+worksheet, not a K-1 field.**
+
+🔑 **The model: you describe the ACTIVITY once, at entity level — its qualified income, its W-2 wages,
+its UBIA, and whether it is an SSTB — and the software allocates all four to each shareholder,
+prints `STMT` in the K-1's §199A box, and generates Statement A** as an attached page.
+
+⚠️ **`STMT` is not a number and is never typed.** It is the software printing the word *statement* to
+say *"this code's information is on an attached page, because it is FOUR facts and a box holds one."*
+✅ **A missing Statement A and an empty §199A box USUALLY have the same cause** — the activity
+worksheet was never filled in — and then both are fixed in one place.
+⛔ **But an empty §199A box has a SECOND cause, and the two look identical on the printout: a
+shareholder whose item G is zero (§11C) gets a blank §199A box like every other allocated box, even
+when the activity worksheet is perfectly complete.**
+🔑 **The two are told apart in one glance: look at whether STATEMENT A EXISTS AT ALL.**
+- **No Statement A anywhere in the return** → the activity was never entered. **Fix the worksheet.**
+- **Statement A prints for one shareholder and not another** → the worksheet is fine; **that
+  shareholder's item G is the problem.** ⛔ **Do not touch the worksheet.**
+
+🛑 **Never leave the SSTB question unanswered**, and reproduce the prior return's answer: it is the
+switch that can remove the shareholder's deduction entirely above the income threshold.
 
 ---
 
@@ -2561,11 +2849,16 @@ rounding difference.
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
 - [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
-- [ ] The **K-1 percentages add to 100%**, and each Schedule K line equals the sum of that line
-      across all K-1s — 🔴 **add lines 1, 16c and 16d by hand off the printed forms** (§11A).
-      **Twice the expected figure means it was entered at the entity level AND on the K-1s; half means a
-      K-1 is missing.** ⚠️ **No software raises a diagnostic for either.** ⛔ **17-AC is exempt from this
-      test — verify it on the statement page and the K-1 code rows (§7)**
+- [ ] 🔴 **K-1 allocation, part 1 — EVERY shareholder's percentage is NON-ZERO** (§11C). ⚠️ **A zero
+      yields a K-1 that prints with EMPTY boxes and no diagnostic**; the pilot return's second K-1 did
+      exactly this
+- [ ] 🔴 **K-1 allocation, part 2 — the percentages add to 100%** (§11A)
+- [ ] 🔴 **K-1 allocation, part 3 — each Schedule K line equals the SUM of that box across all K-1s**
+      (§11A) — **add lines 1, 16c and 16d by hand off the printed forms.** **Twice the expected figure
+      means it was entered at the entity level AND on the K-1s; half means a K-1 is missing.** ⚠️ **No
+      software raises a diagnostic for either.** ⛔ **17-AC is exempt — verify it on the statement page
+      and the K-1 code rows (§7)**
+      🔑 **All three fail together; run them in one pass off the printed K-1s**
 - [ ] 🔴 **ON A SHORT PERIOD ENDING AT A CHANGE OF OWNERSHIP: no stock-transfer date was entered**
       in the shareholder screen, and every **item G** reads the plain arithmetic percentage (§11A).
       **The cut already performed the allocation** — a transfer date makes the software do it a second time
@@ -2575,6 +2868,19 @@ rounding difference.
       shareholder does not know they have**, and no software raises it
 - [ ] 🔑 **The Schedule L *"out of balance by"* diagnostic reads ZERO** (§10C) — and if it did not,
       the **book-to-tax bridge column on the M-2** was fixed, ⛔ **never Schedule L line 24 overridden**
+- [ ] 🔴 **M-1 line 1 EQUALS the P&L's net income for the period** (§9B) — ⚠️ **run it only AFTER
+      line 8 ties to Schedule K line 18, and allow a few dollars for whole-dollar rounding.** **The M-1
+      balances even when an adjustment is missing**, because the software back-solves line 1. **Compute
+      the book figure independently and compare. Line 1 too HIGH → an item is missing from line 2 or 3;
+      too LOW → from line 5 or 6.** ⛔ **Enter the item; never override line 1**
+- [ ] 🔴 **§199A: the activity was entered and Statement A PRINTS for every shareholder** (§11D).
+      ⚠️ **An empty §199A box has two causes and the printout tells them apart:** **no Statement A at
+      all** → the entity activity worksheet was never filled in; **Statement A for one shareholder but
+      not another** → that shareholder's **item G** is zero (§11C), and the worksheet is fine
+- [ ] 🔑 **Every revenue account fed ONLY by journal entries has one for EVERY month the business
+      traded** (§5B-i part 5, detection 1) — a missing period is revenue missing from the return, with no error anywhere
+- [ ] 🔑 **Money the entity collected for its workers has been traced to one of §5C-vi's three
+      answers** — paid on, paid unrecorded, or never received. ⛔ **The absence of a label proves nothing**
 - [ ] **A Form 7203 exists for every shareholder who needs one** (§12)
 - [ ] 🔴 **Page 1 item G is ANSWERED — `Yes` or `No`, never blank** (§5A). ⚠️ **No in-form diagnostic was raised for a blank on the one return observed**, so this checklist may be the only thing that catches it. **If `Yes`, Form 2553 is attached** unless already filed
 - [ ] 🔗 **§8 of the working paper — the HANDOFF to the shareholder's 1040 — is written** (§13A): the K-1 box by box **with its entry route**, what this side cannot supply *(Form 7203 line 1)*, and what must **match** on both returns. ⛔ **The 1040 itself is a separate request**
