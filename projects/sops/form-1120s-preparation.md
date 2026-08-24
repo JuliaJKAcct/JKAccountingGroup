@@ -716,7 +716,17 @@ books run past the cut — a terminated election, a mid-year sale, a change of a
    system, the true-up accounts are identical in both figures and **only the bank-fed account
    differs.** That is a useful check and a warning at once — see below.
 
-#### 5 · 🔴 THE TRAP THIS RETURN FOUND: a cut that lands where the true-ups stop
+#### 5 · 🔴 REVENUE THAT ARRIVES THROUGH PERIODIC TRUE-UPS — and the cut that lands where they stop
+
+🔑 **A very common shape, not one client's oddity: retail, salons, restaurants, clinics — anywhere a
+POS or booking system sits beside the bank feed.** The bank feed builds most of the books, and the
+outside system supplies the rest through a **journal entry** every month or quarter.
+
+**What that entry typically does, and it is worth knowing because it is why step 1 below works:** it
+**reverses the bank-only sales already booked**, puts **the system's real sales** in their place, and
+adds **the things the bank never saw — cash takings, tips, card surcharges, discounts.** 🔴 **So those
+accounts are fed by NOTHING ELSE.** A period whose entry was never made leaves them **empty by
+construction** — no error, no gap in the bank feed, nothing that looks wrong.
 
 **When revenue is reconciled to an outside system periodically — quarterly Vagaro/Square/Shopify
 true-ups — the months after the last true-up carry ONLY what reached the bank.** No cash sales, no
@@ -853,12 +863,46 @@ passed on, or tips alone. ✅ **So the absence of a label is NOT evidence.**
 > **If they are NON-EMPLOYEES** *(independent contractors, booth renters, 1099 recipients)*: the whole
 > payment is contract labour, **the 1099 total is the same however it is made up**, nothing obliges
 > anyone to label the tip portion, and the paragraph above holds.
-> **If they are EMPLOYEES, none of that is true.** Tips an employee reports are **wages** — **§3121(q)** —
-> so they belong on the **W-2**, they carry **FICA**, they sit on **page 1 line 8** *(salaries and wages)*
-> and **not** inside line 20's contract labour, the company may owe the **§45B credit** side of it, and
-> a large food-and-beverage employer may owe **Form 8027**. 🔴 **A tip payout found sitting in a
-> contract-labour account on an employer's books is not a bookkeeping detail — it is an unfiled payroll
-> question, and it goes to whoever owns payroll before this return is finished.**
+> **If they are EMPLOYEES, none of that is true**, and **three separate things** follow — ⛔ **keep them
+> apart, because only the first is about a deduction:**
+>
+> 1. **REPORTING.** Tips an employee reports are **wages** — **§3121(q)** — so they belong on the **W-2**
+>    and carry **FICA**.
+> 2. 🛑 **DEDUCTION — and this is where the section's own framing has to be applied.** ✅ **Only tips the
+>    COMPANY collected and paid on are the company's expense**, and those belong on **page 1 line 8**
+>    *(salaries and wages)*, ⛔ **not inside line 20's contract labour.** ⛔ **Tips a customer handed the
+>    employee directly are §3121(q) wages for reporting and FICA and are deducted NOWHERE — the company
+>    never had that money.** ⚠️ **Do not put reported cash tips on line 8 as an expense the company never
+>    incurred.**
+> 3. ✅ **A CREDIT MAY BE AVAILABLE — the employer CLAIMS it, it is not something owed.** **Form 8846**,
+>    *Credit for Employer Social Security and Medicare Taxes Paid on Certain Employee Tips* (§45B) —
+>    the employer's 7.65% on creditable tips, part of the general business credit. 🔴 **On an S
+>    corporation the form is MANDATORY to claim it and the amount goes on Schedule K** — the 2025 form's
+>    line 6 says so in terms: *"Partnerships and S corporations, report this amount on Schedule K."*
+>
+> 🛑 **THE CREDIT REACHES ONLY TWO LINES OF BUSINESS. Read them before telling anyone it is available** —
+> *(quoted from the **2025 Form 8846**, page 2, "Who Should File", read off irs.gov)*:
+> **(a)** *"Providing, delivering, or serving **food or beverages** for consumption if tipping of employees
+> for delivering or serving food or beverages is customary."*
+> **(b)** 🆕 *"Providing **barbering and hair care, nail care, esthetics, or body and spa treatment
+> services**, if tipping of employees for providing such services is customary."*
+> 🔑 **(b) IS NEW.** The same page's *What's New*: *"For tax years beginning after 2024, the tax credit
+> was extended to certain beauty service businesses."* ⛔ **It does NOT reach delivery, valet, hotels,
+> transport, gig work or any other tipped trade.**
+> ⚠️ **And the wage floor differs between them** — creditable tips are reduced by the shortfall to
+> **$5.15/hour** for food and beverage but to **$7.25/hour** for beauty services, so an identical salon
+> and restaurant do not get the same credit. **Take both figures from the current year's Form 8846, never
+> from memory.**
+> ⓘ **One thing this SOP does NOT state, because it could not be read here:** whether §45B carries a
+> statutory gross-receipts condition on the newly-added establishments. **It is not on the 2025 Form
+> 8846 or its instructions.** ⛔ **Read §45B(b) before relying on either answer.**
+>
+> ⚠️ **Separately — a LARGE FOOD-AND-BEVERAGE establishment may also owe Form 8027**, the tip-allocation
+> report. ⛔ **That is a food-and-beverage-only filing and is NOT extended to beauty services.**
+>
+> 🔴 **A tip payout found sitting in a contract-labour account on an EMPLOYER's books is not a
+> bookkeeping detail — it is an unfiled payroll question, and it goes to whoever owns payroll before this
+> return is finished.**
 
 **What IS evidence:**
 
@@ -2094,7 +2138,7 @@ spent — and the error travels out of this return and onto their 1040s, where n
 
 ---
 
-### 9B · 🛠️ WHEN M-1 LINE 1 IS A CALCULATED FIELD — the fix is never to override it
+## §9B · 🛠️ WHEN M-1 LINE 1 IS A CALCULATED FIELD — the fix is never to override it
 
 **ATX computes Schedule M-1 line 1 (*net income per books*) by working BACKWARDS, and other packages
 do the same:** it already knows line 8 (which must equal Schedule K line 18), so it subtracts whatever
@@ -2805,15 +2849,16 @@ rounding difference.
 - [ ] Schedule M-1 **line 8 equals Schedule K line 18**
 - [ ] Schedule **M-2 line 8** equals **Schedule L line 24** — ⚠️ **conditional, not universal**: it holds only where the prior return ran capital contributions through **M-2 line 3** (§8A). Where it did not, the two are not meant to agree, and forcing them is the error
 - [ ] Schedule M-2 beginning balance matches last year's ending balance
-- [ ] 🔴 **THE K-1 ALLOCATION CHECK — three things in one pass, because they fail together** (§11A, §11C):
-      - [ ] **Every shareholder's percentage is NON-ZERO**, and ⚠️ **a zero yields a K-1 that prints
-            with EMPTY boxes and no diagnostic** — the pilot return's second K-1 did exactly this
-      - [ ] **The percentages add to 100%**
-      - [ ] **Each Schedule K line equals the SUM of that box across all K-1s** — **add lines 1, 16c
-            and 16d by hand off the printed forms.** **Twice the expected figure means it was entered
-            at the entity level AND on the K-1s; half means a K-1 is missing.** ⚠️ **No software
-            raises a diagnostic for either.** ⛔ **17-AC is exempt — verify it on the statement page
-            and the K-1 code rows (§7)**
+- [ ] 🔴 **K-1 allocation, part 1 — EVERY shareholder's percentage is NON-ZERO** (§11C). ⚠️ **A zero
+      yields a K-1 that prints with EMPTY boxes and no diagnostic**; the pilot return's second K-1 did
+      exactly this
+- [ ] 🔴 **K-1 allocation, part 2 — the percentages add to 100%** (§11A)
+- [ ] 🔴 **K-1 allocation, part 3 — each Schedule K line equals the SUM of that box across all K-1s**
+      (§11A) — **add lines 1, 16c and 16d by hand off the printed forms.** **Twice the expected figure
+      means it was entered at the entity level AND on the K-1s; half means a K-1 is missing.** ⚠️ **No
+      software raises a diagnostic for either.** ⛔ **17-AC is exempt — verify it on the statement page
+      and the K-1 code rows (§7)**
+      🔑 **All three fail together; run them in one pass off the printed K-1s**
 - [ ] 🔴 **ON A SHORT PERIOD ENDING AT A CHANGE OF OWNERSHIP: no stock-transfer date was entered**
       in the shareholder screen, and every **item G** reads the plain arithmetic percentage (§11A).
       **The cut already performed the allocation** — a transfer date makes the software do it a second time
