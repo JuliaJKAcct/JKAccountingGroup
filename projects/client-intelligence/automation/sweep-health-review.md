@@ -1,5 +1,27 @@
 # Sweep health review — what to check after a run, and what is currently suspected
 
+> ## ⬛ STATUS — read these six lines before anything else
+>
+> **Is anything waiting on a person right now? — NO.** _(as of 2026-08-24)_
+>
+> | | |
+> |---|---|
+> | **The Routine's prompt** | ✅ **Correct and live.** Lilian pasted the current version on 2026-08-24 18:45 UTC; it was read back and diffed against this repo. **Nothing to change, nothing to paste.** |
+> | **Next thing that happens** | **Sat 2026-08-29**, the sweep runs on its own — first run on the new text. **Nobody needs to do anything.** |
+> | **Then** | **Mon 2026-08-31**, a Routine reviews that run and emails Lilian _(`trig_01M1FeEQC6TFoUfLRgdQ8RfP`, push + email)_. |
+> | **The one open question** | Whether the sweep should split across **subagents**. It is **not** decided on one run: 08-31 records a number, and the decision is **Mon 2026-09-07**. |
+> | **If you only want one number** | How many `⚠️ CATCH-UP OWED` rows the sweep writes into [`sweep-state.md`](./sweep-state.md). Near zero over two runs = fine as it is. Two or more per run = split it. |
+>
+> ⓘ **Everything below is the WHY, not a to-do list.** It is the diagnosis, the retracted mistakes,
+> and the checklist a reviewer works — written for whoever runs the next review, not for whoever
+> just wants to know if they owe something. **If this box says NO, you owe nothing.**
+>
+> 🔄 **Keep this box true.** It is the first thing anyone reads, so it is also the first thing that
+> goes stale: update it in the same commit as any change to the prompt, the Routines, or the open
+> question — the same rule §9 applies to the rest of the file.
+
+---
+
 **Why this file exists.** On **2026-08-18** Lilian asked where two Business Tax Receipt
 applications stood. Twenty minutes of manual checking found four things that mattered — and
 **every one of them had been sitting in a client file the weekly sweep had already read.** The
@@ -19,7 +41,7 @@ so nobody has to rediscover it, and turns it into a **checklist to run against t
 |---|---|
 | **Routine** | *Client Intelligence — weekly sweep* · `trig_015LaKrto6FDKyUwHmZywqjS` · cron `0 7 * * 6` |
 | **Fires** | **Saturdays, cron `0 7 * * 6`** — but the real fire time is **~07:08 UTC** (03:08 Eastern in summer). ⓘ The server **anchors an hourly-or-daily cron to the minute the Routine was created** rather than to :00, so `0 7` and `07:08` are both correct and neither is an edit error. Check `next_run_at` when the exact minute matters |
-| **Prompt in the Routine** | ✅ **The 2026-08-24 version — pasted by Lilian at 18:45 UTC and VERIFIED in sync.** Read back with `list_triggers` and diffed line by line against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md): **identical apart from the two substituted webhook lines**, which the repo copy deliberately carries as `<WEBHOOK_*>` placeholders. Three fixes present, both real values intact. ⚠️ **Expect exactly TWO diff lines when you repeat this check** — more than two is drift. ⚠️ **The lag rule below still applies** — the 2026-08-22 report is evidence about the *2026-08-18* prompt, not this one |
+| **Prompt in the Routine** | ✅ **The 2026-08-24 version — pasted by Lilian at 18:45 UTC and VERIFIED in sync.** Read back with `list_triggers` and diffed line by line against [`weekend-ci-sweep.md`](./weekend-ci-sweep.md): **identical apart from the two substituted webhook lines**, which the repo copy deliberately carries as `<WEBHOOK_*>` placeholders. Three fixes present, both real values intact. ⚠️ **Expect exactly TWO diff lines when you repeat this check** — more than two is drift. ⚠️ **The lag rule below still applies** — the 2026-08-22 report is evidence about the *2026-08-18* prompt, not this one. ✅ **And the 2026-08-20 Double-notes rule IS in it** — *compare `updatedAt` on EVERY note `list_notes` returns and re-read the body of any that moved* — confirmed in the live text 2026-08-24. A session left that question open on 2026-08-21 (*"should I update the live prompt with the August 20 Double notes line?"*); **it is answered: yes, and it is already there.** |
 | **First run of that prompt** | ⏳ **Saturday 2026-08-29 — it has NOT run yet.** _(The 2026-08-18 prompt's first run was 2026-08-22; it ran, the core fix took, and the review is at the top of §6. **That report is evidence about the 2026-08-18 text, not this one** — §9's rule is that this row resets whenever the prompt changes, and it just did.)_ |
 | **Canonical copy of the prompt** | [`weekend-ci-sweep.md`](./weekend-ci-sweep.md) → *Routine prompt* (with `<WEBHOOK_*>` placeholders) |
 
