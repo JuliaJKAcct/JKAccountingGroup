@@ -478,7 +478,7 @@ send the report** — the worst shape of failure, because nothing looks broken.
 **So whenever this block changes, the change is not done until the Routine is updated.** Say so out
 loud to whoever asked, and treat it as part of the task, not a follow-up.
 
-**Last change needing a re-paste: 2026-08-11** — the **merge-your-own-CI rule**, the
+**Last change needing a re-paste: 2026-08-24** _(pasted the same day, 18:45 UTC — see the banner on the block below)_. ⚠️ **This marker went stale twice before anyone noticed**, through the 2026-08-18, 08-20 and 08-24 changes, while still reading 2026-08-11 — so **update it in the same commit as any prompt edit**, or the next editor concludes no paste has been needed since August 11th and skips the divergence banner. The 2026-08-11 entries it used to name were the **merge-your-own-CI rule**, the
 **contradiction rule**, and the **email becoming a record rather than a request**. ⚠️ **Clients in
 scope are NOT on that list** — they reach the run through the scope table above without a paste
 _(corrected 2026-08-14)_.
@@ -506,7 +506,9 @@ _(corrected 2026-08-14)_.
 > instructions accurately.
 > ✅ **IN SYNC — Lilian pasted this block on 2026-08-24 at 18:45 UTC, and it was VERIFIED, not
 > assumed.** The live prompt was read back with `list_triggers` and diffed line by line against the
-> block below: **identical**, with the three 2026-08-24 fixes present (`⚠️ CATCH-UP OWED` + the
+> block below: **identical apart from the two substituted webhook lines** — this file keeps those as
+> `<WEBHOOK_URL>` / `<WEBHOOK_SECRET>` placeholders on purpose, so **exactly two diff lines is the
+> expected result and anything more is drift** — with the three 2026-08-24 fixes present (`⚠️ CATCH-UP OWED` + the
 > two-population queue · `AT A GLANCE` coloured by the worst open item · an item with no start date
 > saying so) **and both real webhook values intact** — the silent-death check that matters more than
 > the content one, because a paste of this file's `<WEBHOOK_*>` placeholders leaves a sweep that
