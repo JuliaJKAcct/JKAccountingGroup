@@ -1439,7 +1439,7 @@ the asset list (ATX: the `Fixed Assets` tab). ⚠️ **The asset-detail statemen
 return may only carry cost, date placed in service and recovery period** — enough to identify the
 assets, not enough to split the deduction. **Open the register.**
 
-##### ❓ Why the ASSET accounts are not in this entry
+#### ❓ Why the ASSET accounts are not in this entry
 
 **Everyone preparing their first one expects the asset account to be credited** — write the
 computer down, credit `Computer Equipment`. **It must not be, and the reason is what makes
@@ -2817,16 +2817,24 @@ and **I** comes from the **`Stock and Loan Basis`** grid.
 **Ending item I = line 1 + line 2 − line 5.**
 
 ⚠️ **Marked honestly: the LAYOUT above is observed; the DERIVATION is inferred.** A screenshot shows
-which fields exist, not what feeds what. ⛔ **And there is a real tension to resolve before relying on
-it:** this grid tracks **debt basis**, which losses reduce (§12), while **K-1 item I asks for the loan
-BALANCE**, which they do not. **`1 + 2 − 5` holds only if lines 3 and 4 really are inapplicable in that
-column.** 🛠️ **Confirm it on a PRINTED K-1 before treating it as the rule.**
+which fields exist, not what feeds what. 🛠️ **Confirm it on a PRINTED K-1 before treating it as the
+rule.**
+ⓘ *(An earlier version of this note worried that the grid "tracks debt basis, which losses reduce,
+while item I asks for the loan balance, which they do not." **§12A resolves it: the grid has SEPARATE
+`Loan Balance` and `Loan Basis` columns, and item I comes off the balance one.** The tension was in the
+reading, not in the screen.)*
 
 🔴 **AND THERE IS A CHECKBOX ABOVE IT THAT IS EASY TO SKIP: `Loan Type — Formal Note / Open Account
 Debt`.** The screen says *"check one if there is a loan balance"*, so it is not optional once a balance
 exists. **Open account debt is the default for informal owner advances; a formal note means there is a
-signed instrument.** ⚠️ **It is not cosmetic — the two are restored differently after a loss reduces
-debt basis** (§12), **so it changes that shareholder's own return in a later year.** ⛔ **Ask which it
+signed instrument.** ⚠️ **It is not cosmetic — it decides the CHARACTER of any future gain on repayment** (§12A): a
+**formal note** gives **capital gain** on Form 8949 / Schedule D; **open account debt** gives
+**ordinary gain** on Form 4797.
+🛑 **One exception, and it is the one that catches people: debt converted by the $25,000 rule is
+treated as a formal note but its gain stays ORDINARY** — the instructions name it inside the
+open-account limb. **§12A carries it in full; do not answer this from the summary above.**
+⛔ *(An earlier version of this sentence said the two are "restored differently". That was wrong —
+see §12A.)* ⛔ **Ask which it
 is; do not assume.**
 
 ✅ **Verify by PRINTING the K-1 and reading item I**, exactly as §11B says to verify any field: the
@@ -2990,6 +2998,244 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 > it travels with the owner's personal return.** If the firm does not prepare that 1040, the
 > figures still have to reach whoever does.
 
+### 12A · 🛠️ THE THREE-COLUMN `Stock and Loan Basis` GRID — and the two columns everyone merges
+
+🖥️ *(Screen observed in **ATX 2025**, **2026-08-24**, on the **1120-S shareholder input**. The layout is
+ATX's and moves between versions; the tax rules below are not vendor-specific.)*
+
+🛑 **WHAT THIS GRID IS, AND WHAT IT IS NOT — because §12 above says Form 7203 is filed with the
+shareholder's 1040, and that is still true.** On the 1120-S side, the grid's job is to derive **K-1
+item I** (§11E). ⛔ **Filling it in does NOT prepare the Form 7203 that gets filed** — that is built on
+the shareholder's own return. ⓘ **[`form-1040-preparation.md` §M3](./form-1040-preparation.md)'s line-by-line table covers PART I;
+it touches Part II only in passing (which lines are typed, K-1 box 16E). The two loan columns are
+documented here in §12A.** 🔑 **It
+matters here because the entity return is where the figures exist**, and because the same three
+concepts are what Form 7203 asks for.
+
+⚠️ **The column → Form 7203 mapping below is INFERRED from the screen's labels, not confirmed on a
+printed form** — the same hedge §11E carries, and it has not been discharged. **Confirm on a printed
+K-1 and a printed 7203 before relying on it.**
+
+| Column | Corresponds to, on Form 7203 | What it holds | 🔑 In one sentence |
+|---|---|---|---|
+| **Stock Basis** | Form 7203 **Part I** | what the shareholder has invested in their SHARES | *what they put in, plus profits taxed to them, minus what they took out* |
+| **Loan Balance** | **Part II Section A** *(lines 16–20)* | what the company **owes** them | *the money — the debt at face value* |
+| **Loan Basis** | **Part II Section B** *(lines 21–31)* | their **tax basis** in that debt | *what the debt is worth to them for absorbing losses* |
+
+🛑 **`Loan Balance` and `Loan Basis` START EQUAL AND COME APART. That is the whole reason there are two
+columns.** A shareholder lends 10,000 → both are 10,000. **A pass-through loss that runs past their
+stock basis then eats their DEBT basis without touching what they are owed.** They are still owed
+10,000; their basis in it may be 4,000. ⛔ **Never copy one column into the other, and never "tidy" a difference between
+them — the difference IS the information.**
+
+#### 🛑 The grid's line numbers are NOT Form 7203's line numbers
+
+**Both run 1–8. Lines 1 and 2 line up; 3 through 8 do not, and one collision is dangerous.**
+
+| Grid line | What the GRID calls it | What Form 7203's line of that number is |
+|---|---|---|
+| 1 | Beginning balance | Part I line 1 — stock basis at beginning ✅ *lines up* |
+| 2 | Stock/loan contributions | line 2 — basis from contributions / stock acquired ✅ *lines up* |
+| 3 | §179 disposition gain | lines 3a–3m — the income items |
+| 4 | Other increases in basis | line 4 — **Add lines 3a through 3m** *(the income subtotal; lines 1 and 2 do NOT enter it — they join at line 5)* |
+| 5 | Repayment of loans from shareholder | line 5 — stock basis **before distributions** |
+| 🔴 **6** | **"Other decreases in basis"** | 🔴 **line 6 — DISTRIBUTIONS** |
+| 7 | Carryover losses from prior years | line 7 — stock basis **after** distributions |
+| 8 | Carryover nondeductible expenses | line 8a — nondeductible expenses |
+
+⛔ **So a preparer who reads "grid line 6 is usually empty" and carries it to Form 7203 line 6 zeroes
+out DISTRIBUTIONS** — the one line whose printed Note catches a distribution in excess of basis and
+sends it to Form 8949 / Schedule D. **That is the failure that creates income rather than deferring a
+deduction** (§12, and the §1368(b) rule in §10B). 🔑 **Read the grid's labels, never its numbers.**
+
+#### Where the `Beginning balance` of each column comes from
+
+🛑 **THE TRAP: Form 7203 is filed with the shareholder's 1040, so the COMPANY'S prior return contains
+no BASIS figure of any kind.** ⚠️ **But it is not empty-handed — it holds the loan BALANCES:**
+
+| Source | Gives you | |
+|---|---|---|
+| 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
+| The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is near-conclusive** *(the instruction says the two reconcile "generally")* *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
+| **Each shareholder's prior-year Form 7203** | ✅ **Part I line 15** → stock basis line 1; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
+| The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
+
+#### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — four ways it lies
+
+**It is tempting to open the ledger, see the shareholder-loan account opening at zero, and conclude the
+loan columns start at zero for everyone.** 🔑 **Run it — it is five minutes and it usually points the
+right way — ⛔ but do not stop there.**
+
+1. ⛔ **The ledger and Schedule L are NOT two independent records.** §8C builds Schedule L **from** the
+   ledger. **Citing both is citing one twice** — and if the Schedule L you are looking at is *this
+   year's return in progress*, you are citing **your own keystroke** back as evidence. ✅ **The record that
+   carries weight is the one the preparer did not create and that always exists: the prior-year K-1s'
+   item I.** *(The prior Schedule L helps only if it was actually filed — way 3.)*
+2. ⛔ **One account name is not the search.** §8A already warns that **the named shareholder accounts do
+   not map to the line their name suggests.** A prior advance may sit in an equity account, be netted
+   into a draw account, or hide in an accrual. 🛠️ **Look at EVERY owner-facing account, not the one
+   called "loans."**
+3. 🔴 **A BLANK PRIOR-YEAR SCHEDULE L IS NOT A REPORTED ZERO — and this is the one that catches
+   people.** ⛔ **A prior year that answered YES to the $250,000 question filed NO Schedule L at all**
+   (§10 item 2: *"you are not required to complete Schedule L or Schedule M-1"*). **There is then no
+   line 19 to have carried anything**, and reading its blank as *"the prior return reported nil"* is
+   **the absence of a record written up as a record of absence** —
+   [`method.md` rule 1b](../pre-return-review/method.md). 🛠️ **Check the prior return's answer to that
+   question BEFORE citing its Schedule L for anything.** ✅ **And when it is blank, go where the record
+   still exists: a "Yes" exempts Schedules L and M-1, it does NOT exempt the K-1s — item I is still
+   there, per shareholder, beginning and end.**
+4. 🛑 **And even a clean zero does not settle the shareholder's own Form 7203.** The company's books
+   cannot establish what her prior 7203 Part II carried. **A prior preparer who treated an advance as a
+   loan on her 7203 while the company booked it to equity produces exactly that mismatch** — as do
+   books rebuilt in a new file, or an account created mid-year. ✅ **If a prior 7203 exists, read it.**
+
+⚠️ **And before reading ANY absence — in a ledger or on a form — check that the thing which would have
+recorded it was required to.** For the ledger, that means confirming the report prints opening balances
+somewhere.
+✅ **The strong version of that test: find an account with a balance and NO transactions all year**
+*(retained earnings is the usual one)*. **If its opening balance prints, the report is not suppressing
+balances on inactive accounts, and a missing opening line elsewhere is meaningful.** ⛔ **That is an
+observation about one export, not a property of every general ledger** — a partial date range or an
+account created mid-year breaks it.
+
+#### 🔴 The blockage this grid shares with K-1 item I — and they are ONE question, not two
+
+**Schedule L line 19 is a single pooled liability. Both the grid's `Loan Balance` column and K-1
+item I are PER SHAREHOLDER.** ⛔ **Where the ledger holds one owner-loan account, the split does not
+exist and cannot be derived.**
+
+🛠️ **Test how bad it is by looking at the `Name` / payee column on those transactions:**
+
+| What you find | What it means |
+|---|---|
+| **Named deposits** — each entry carries a person | ✅ **Total by name. The split is in the ledger** |
+| 🔴 **Anonymous entries** — cash or ATM deposits with an EMPTY name field | ⛔ **Nobody recorded who paid it in. It must be ASKED** |
+
+ⓘ **On bank-fed ATM deposits there is one forensic thread, and mark it as a LEAD, never as evidence:
+the ATM terminal ID.** ⛔ **A terminal ID identifies a MACHINE, not a person** — two owners at the same
+branch produce the same ID, and **two IDs can sit at one street address.** 🔑 **It can corroborate an
+answer the client gives; it cannot produce one.**
+
+✅ **Ask the loan split and item I in the SAME question** — they are the same fact.
+
+#### The rest of the grid, and the two lines that should usually stay EMPTY
+
+| Grid line | What belongs there |
+|---|---|
+| **2 Stock/loan contributions** | stock column: the year's **capital contributions** · loan column: **what SHE lent the company this year** |
+| **3 §179 disposition gain (loss)** | rare — only where §179 property was disposed of |
+| 🔴 **4 Other increases in basis** | ⛔ **usually EMPTY.** Her share of income arrives from the **K-1 input**, not here |
+| **5 Repayment of loans from shareholder** | loan column only — and the screen notes it **links from Schedule K-1 line 16, code E**, so it is normally driven from there, not typed |
+| 🔴 **6 Other decreases in basis** | ⛔ **usually EMPTY.** Distributions (**16D**) and nondeductibles (**16C**) arrive from the **K-1 input**. ⚠️ **Not to be confused with Form 7203 line 6 — see the collision table above** |
+| **7 Carryover losses from prior years** | from that shareholder's prior Form 7203 — zero **only if** the prior year was profitable and nothing was suspended. 🛑 **Check, do not assume: a prior year whose AAA went NEGATIVE almost certainly had losses** — ✅ **only DISTRIBUTIONS are floored** *(Reg. §1.1368-2(a)(3)(iii): decreased, "but not below zero")*, while **losses, deductions AND nondeductible expenses** reduce the AAA with no floor (§10.1 rules 3–5). ⚠️ **So a negative AAA is a strong signal, not a proof: size the nondeductibles first, then treat a suspended loss as live** |
+| **8 Carryover nondeductible expenses** | same source, same test |
+
+🛑 **Lines 4 and 6 are where a preparer who cannot find a figure will type it, and that is the error.**
+⚠️ **If a number you expect is missing from the computed result, the fix is upstream on the K-1 input
+screen — not a manual entry here** (delivery rule 8: a blank on a computed form means a missing INPUT,
+and the form still foots). _(The live 2026-08-19 case — box 16C never reaching the K-1 input, so **Form
+7203 line 8a** stayed blank — is that failure, and it is **line 8a**, not this grid's line 6.)_
+
+#### 🛑 The `Loan Type` checkbox — and the reason it matters is NOT what an earlier version of this SOP said
+
+**`Formal note` / `Open account debt`, with the screen's own instruction: check one if there is a loan
+balance.** 🔑 **Informal owner advances with no paperwork are open account debt; a signed instrument is
+a formal note.** ⛔ **Ask which — do not infer it from the size of the balance.**
+
+> ✅ **AND HOW A REPAYMENT IS ACTUALLY SPLIT, because "the difference is taxable" is wrong.** When the
+> company repays a debt whose basis has fallen below its face, the repayment is divided **pro rata**:
+> **line 25 = line 24 ÷ line 18** *(debt basis before repayment ÷ loan balance before repayment)*;
+> **line 26 = line 25 × line 19** *(the nontaxable part)*; **line 34 = line 32 − line 33** *(the
+> reportable gain)*. ⛔ **Only on a FULL repayment does the gain equal the whole gap.**
+
+> ⛔ **A CORRECTION, recorded because this SOP said it wrong** *(§11E carried it too — a pointer only
+> there now)*. An earlier version said the two are
+> *"restored differently"* after a loss reduces debt basis. **That is not the rule.** Restoration
+> (Form 7203 **line 23**) runs off the **net increase** under §1367(b)(2)(B) and
+> **Reg. §1.1367-2(c)(1)**, and ✅ **the net-increase TEST does not turn on the checkbox.**
+> ⚠️ **But the ALLOCATION of a restoration across debts does** — a net increase goes first to any debt
+> repaid in the year, then is apportioned across the remaining debts by **the amount by which each one's basis was reduced** (§1.1367-2(c)(2)) — **and
+> the checkbox is what decides whether there are separate columns to allocate across at all.**
+
+✅ **What the checkbox ACTUALLY decides — verbatim from the Instructions for Form 7203, line 34:**
+
+> *"The character of the gain on repayment is dependent on whether the debt is evidenced by a formal
+> note or is an open account. Debt evidenced by a formal note will result in **capital gain**, and
+> should be reported on **Form 8949 and Schedule D**. Any open account debt **(including debt
+> referenced in Regulations section 1.1367-2(a)(2)(ii))** will result in **ordinary gain** and should
+> be reported on **Form 4797**, Sales of Business Property."*
+
+🛑 **DO NOT ELIDE THAT PARENTHETICAL — it is the whole point of the sentence, and §1.1367-2(a)(2)(ii)
+is the $25,000 rule below.** ✅ **The IRS put it there to say that debt converted by the $25,000 rule
+STAYS ORDINARY.** _(An earlier version of this SOP quoted the sentence with the parenthetical cut out
+and then drew the opposite conclusion from it.)_
+
+**Two more consequences from the Part II preamble, both verbatim:**
+
+- **Formal notes are tracked SEPARATELY**, one column each — *"You can't aggregate multiple loans into
+  a single column."*
+- **Open account debts** *"aren't separately tracked"*, and advances and repayments are **netted at
+  year end** (Reg. §1.1367-2(d)(2)).
+
+🛑 **AND THE $25,000 RULE, which turns an open account into a formal note without anybody choosing:**
+
+✅ **From the Part II preamble of the Instructions:** *"If an open account debt has a year-end balance
+of **more than $25,000**, it will be classified as a **formal note at the beginning of the next tax
+year** and must be separately tracked."*
+✅ **And under line 17:** *"Any debt that exceeded $25,000 at the end of the prior year is treated as a
+formal note **for purposes of calculating the gain on loan repayment**. See Regulations section
+1.1367-2(a)(2)(ii)."*
+
+🛑 **AND HERE IS THE TRAP THIS SOP FELL INTO ONCE: THE $25,000 CONVERSION DOES *NOT* MAKE THE GAIN
+CAPITAL.** ⛔ **Line 34's open-account limb expressly names §1.1367-2(a)(2)(ii) debt** — the converted
+debt — **so its gain stays ORDINARY, on Form 4797.**
+✅ **What the conversion does is put the debt on a FORMAL-NOTE FOOTING FOR THE COMPUTATION**, and the
+consequence that moves money is **not** the extra column — it is **netting**:
+
+> ✅ **Line 17:** *"Advances and repayments made during the S corporation's tax year on an open account
+> are **netted** at the close of the S corporation's tax year…"*
+> ✅ **Line 19:** *"**For a formal note**, enter the amount of principal repayment **specific to each
+> loan**."* … *"For open account debt, **if the repayments exceed the advances** for the tax year, the
+> net repayment should be entered on line 19."*
+
+🔴 **So formal-note treatment turns a NETTED repayment into a GROSS one — and line 19 drives line 32,
+which drives the line 34 gain.** **Worked through: a shareholder is owed 30,000 on an open account at
+the end of year 1** — over the threshold, so year 2 computes the repayment gain on a formal-note
+footing. **In year 2 the company repays 8,000 and she advances 5,000 more.** ⛔ **Netted, line 19 would show 3,000** — the net repayment, since here
+repayments (8,000) do exceed advances (5,000). *(Had the advances been larger, line 19 would show
+nothing at all: the instruction puts a net repayment there only when repayments exceed advances.)* ✅ **On the formal-note footing the 8,000 principal repayment goes on line 19
+specific to that loan**, and the fresh 5,000 advance opens its own new open-account debt.
+**Bigger line 19 → bigger line 32 → bigger line 34.** ⛔ **Netting it under-reports the gain.**
+🔑 **It changes how the gain is COMPUTED, never what it IS.**
+
+⚠️ **The threshold is PER SHAREHOLDER, on the AGGREGATE OPEN-ACCOUNT BALANCE** — un-instrumented
+advances are **a single debt**, so ⛔ **it is never tested advance by advance** *(fifteen deposits of
+under $25,000 each are still one debt that can cross the line)*. *(Formal notes are TRACKED note by note — ⛔ **there is no $25,000 test
+for them at all**; the rule reaches open account debt only.)* 🛑 **And on a company whose owner-loan account is pooled across shareholders, you cannot
+apply the test at all until the split is known.** 🔑 **And a year-end balance near $25,000 makes the year-end DATE load-bearing** — which matters on a
+**short-period return**, where the choice of which period is filed changes which balance is tested.
+
+#### ⚠️ A PARTIAL disposition needs TWO Forms 7203 — and read the scope before you file two
+
+✅ **Verbatim, from the Instructions for Form 7203 — a TIP under LINE 13**, not a Part I preamble:
+
+> *"If **a portion of** your stock is **redeemed**, sold, or otherwise disposed of during the year,
+> attach two separate forms. Use the first to figure your stock basis at the date of sale and the
+> second to figure your stock and debt basis at year end."*
+
+🔑 **"A portion of" is doing real work.** The second form exists to compute **year-end** basis — which
+only means something if **the shareholder still holds stock at year end.**
+
+⛔ **So on a 100% disposition the instruction does not on its face apply**, and nothing else in the
+instructions (*Who Must File* included) requires a second form. ⚠️ **What still matters on a complete
+sale is that the figure deciding the gain is the one at the DISPOSITION DATE, not at 31 December** —
+so if the software only produces a year-end column, that is the gap to close. 🛠️ **Settle the
+presentation before filing two forms for a shareholder who sold out entirely.**
+
+ⓘ **Form 7203 is still Rev. December 2022** — there is no annual reissue, so a "2025 Form 7203" does
+not exist. **Check for a newer revision rather than a newer year.**
+
+
 ### The form, line by line — and the order is built into it
 
 **You do not have to remember the ordering: the form enforces it.** Part I runs down the page in
@@ -3030,9 +3276,13 @@ _(🔵 which is one reason §5C-v's netting is confined to years where contribut
 line 7 is then NON-NEGATIVE by construction — exactly zero where they are equal and the opening basis is zero — and there is no gain for the form to have to catch)_
 (§5C-iii).
 
-**Part II — Shareholder Debt Basis.** Zero for a shareholder who only contributed capital. The
-prior year's **Part II and the K-1's *Loans from shareholder* boxes together** are the fastest
-answer to §12A's first question below.
+**Part II — Shareholder Debt Basis.** Zero for a shareholder who only contributed capital.
+🔑 **It is in THREE sections, and the first two are the two loan columns of the input grid (§12A
+above):** **Section A** (lines 16–20) is the loan **BALANCE** — what the shareholder is owed;
+**Section B** (lines 21–31) is the **DEBT BASIS** in it; **Section C** (lines 32–34) is the **gain on
+repayment** that arises when the two have come apart. 🛠️ **The prior year's Part II and the K-1's *Loans from shareholder* box
+(item I) together are the fastest route to this year's opening figures** — the K-1 gives the balance
+per shareholder, the prior Part II gives the basis.
 
 **Part III — Allowable Loss and Deduction Items.** Where the loss actually goes, and ⚠️ **the
 columns are not the order you would guess**: **(a)** this year's losses and deductions · **(b)**
