@@ -705,6 +705,40 @@ el box 16, código D, y dónde colocar las contribuciones."** The analysis had g
 that form and its arithmetic, and she still could not enter it, because **only one of its fifteen
 lines is typed on the form itself.**)_
 
+**8b · 🛑 "WHERE" MEANS THE CLICK PATH, NOT THE NAME OF THE FIELD — three ways a correct instruction is still unusable.**
+
+🔑 **Item 8 says to name the entry route. This one says how precise that has to be**, because a
+preparer who works on returns a few times a year does not carry the software's shape in their head,
+and **an instruction that is true but unfollowable costs the same as a wrong one.**
+_(Lilian, 2026-08-24, on three separate fields in one sitting: **"me dices que en unos puntos
+suspensivos, pero es que hay varios puntos suspensivos en esa forma y no sé dónde ponerlo"** ·
+**"en ese campo no me deja escribir"** · **"no logro encontrar el item del que hablas… no veo dónde
+está eso"**.)_
+
+**The three failures, and the rule each produces:**
+
+| | The failure | ⛔ Not enough | ✅ What to write instead |
+|---|---|---|---|
+| **①** | **The form has SEVERAL blank lines that look identical.** *(itemise areas, "other" rows, dotted continuation lines)* | *"put it in the blank itemisation area"* | 🔑 **Anchor it to the NEAREST NAMED ROW, above or below.** *"the first blank row immediately BELOW `Personal use portion of rental expenses`"*. **A named neighbour is findable; an ordinal is not** |
+| **②** | **The typeable field is a LINK, not a number field.** Clicking it opens a worksheet | *"type it on line 3"* | 🔑 **Say that it opens a sheet, NAME the sheet by its title bar, and then locate the row inside it.** ⚠️ **Also say what the form line will show afterwards** — a total, not what you typed — **or the preparer thinks it failed** |
+| **③** | **The label exists on the PRINTED form but NOT on the input screen.** *(per-shareholder items that the software derives)* | *"enter it in item I"* | 🔴 **Say the label is absent, name the section that actually feeds it, and give the arithmetic.** *"Items H and I are not on the input screen — H comes from `Number of Shares`, I from the `Loan Balance` column of `Stock and Loan Basis`, as line 1 + line 2 − line 5"* |
+
+🛑 **AND ALWAYS GIVE THE ROUTE TO WORKSHEETS THEMSELVES, ONCE, IN THE SOP.** In a forms-based
+program the sheet is reached **from the form it belongs to** — in ATX, the `Pages & Worksheets` button
+along the bottom of the open form. ⚠️ **A worksheet belonging to the entity form will never appear
+while a K-1 is the open form**, which is exactly why a read-only screen on the K-1 looks like a bug.
+**"Which form owns this worksheet" is the question that finds it.**
+
+🔑 **THE UNDERLYING FACT, and it is worth saying to the preparer in these words: THE INPUT SCREEN AND
+THE PRINTED FORM ARE TWO DIFFERENT VOCABULARIES.** The IRS names things one way and the software names
+them another, and they overlap only partly. ⛔ **So an instruction phrased in IRS vocabulary is not an
+entry route.** ✅ **Give both, and say which is which** — and **verify by PRINTING the form and reading
+the box**, never by looking at the screen you just typed on.
+
+⚠️ **Mark all of it as the software's, not the IRS's** (item 8 rule 1) — and where the SOP describes a
+screen it has actually seen, **say which program and when it was observed**, so a later session knows
+whether it is describing this year's version.
+
 **9 · 🛑 A FINDING IS NOT DELIVERED UNTIL IT CARRIES ITS FIX.**
 
 > 🔑 **Lilian, 2026-08-20:** *"Cuando encuentres errores como el de `Description of Home Office is
