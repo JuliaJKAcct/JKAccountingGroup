@@ -106,12 +106,15 @@ recorded for history and because the Florida RT matter at the end is still open.
 ### Florida reemployment tax (RT) — OPEN MATTER, and still the firm's
 
 > **⏩ CURRENT STATE — read "⭐ THE FIFTH CALL (2026-08-24)" at the end of this section FIRST; it
-> supersedes everything else here.** 🎯 **The effective-date change has been REQUESTED — the agent who
-> holds the case submitted it to Tallahassee on 2026-08-24, and Tallahassee now decides.** The other
-> live blocks are background to that one: "✅ THE HONEST EFFECTIVE-DATE REQUEST" (the argument, still
-> the fallback if it is refused), "✅ THE THIRD CALL" (2026-08-06), "🔴 THE POA THAT NEVER ARRIVED"
-> and "✅ THE FOURTH CALL" (2026-08-13 — the named agent). Everything before those is superseded and
-> kept only for the record.** Where this stands:
+> supersedes everything else here.** 🎯 **The agent who holds the case AGREED TO LODGE the
+> effective-date request with Tallahassee on 2026-08-24 — the first time anyone at the agency has
+> agreed to put the ask in.** ⚠️ **That she actually filed it is UNCONFIRMED** — she said she *would*,
+> there is nothing in writing and no reference number, and this matter's own record is three verbal
+> agency answers that did not hold. **Confirming the submission is question ① of the monitoring
+> below.** The other live blocks are background: "✅ THE HONEST EFFECTIVE-DATE REQUEST" (the argument,
+> still the fallback if it is refused), "✅ THE THIRD CALL" (2026-08-06), "🔴 THE POA THAT NEVER
+> ARRIVED" and "✅ THE FOURTH CALL" (2026-08-13 — the named agent). **Everything before those is
+> superseded and kept only for the record.** Where this stands:
 > - **Closing the account is OFF** — not because the agency refused it, but because **Julia wants
 >   it left open** in case the company files as an S-corp and has to run payroll _(Lilian,
 >   2026-08-06)_.
@@ -133,11 +136,11 @@ recorded for history and because the Florida RT matter at the end is still open.
 >   the 3–4 days the agency quoted. But the agency **named the agent who has the case**:
 >   **Felesha Spence** — **her direct email and phone are in the Double case note**. Lilian **sent the
 >   DR-835 straight to her the same day**. See "✅ THE FOURTH CALL".
-> - ⭐ **THE FIFTH CALL, 2026-08-24 — THE REQUEST IS IN.** Lilian called **Felesha Spence's own
->   number**. The **POA is still not processed** — but Felesha **found the emailed DR-835 in her own
->   inbox**, discussed the case anyway, and **submitted a request to Tallahassee to change the
->   effective date**. She asked **nothing** about why, and **never mentioned the IRS letter**. See
->   "⭐ THE FIFTH CALL".
+> - ⭐ **THE FIFTH CALL, 2026-08-24 — THE ASK IS FINALLY BEING LODGED.** Lilian called **Felesha
+>   Spence's own number**. The **POA is still not processed** — but Felesha **had the emailed DR-835
+>   in her own inbox**, discussed the case anyway, and **said she would submit a request to
+>   Tallahassee to change the effective date**. Lilian's write-up records **no questions about why**
+>   and **no mention of the IRS letter**. See "⭐ THE FIFTH CALL".
 > - **NEXT STEP: MONITOR — the matter is now waited on, which is exactly when it gets dropped.**
 >   ⏱️ **Contact Felesha every ~3 weeks while Tallahassee holds it: first ~2026-09-15, then
 >   ~2026-10-06, then monthly.** _(A rhythm the firm set — the agency said only "1 month, 2 months…
@@ -158,7 +161,7 @@ recorded for history and because the Florida RT matter at the end is still open.
 >   about **closing** the account; no representative has been asked it about a date change. Proceed
 >   on it, and **confirm the notice balance shows cleared** once the change goes through.)_
 >
-> Everything between here and the three live blocks named above is kept for the record only.
+> Everything between here and the live blocks named above is kept for the record only.
 
 - **The problem:** the Florida DOR issued a notice assessing **penalties for failure to file reemployment tax returns**, for **Q2 2025 and Q3 2025**.
 - **Whose problem it is:** **the firm's.** The penalty periods and the Gusto setup that caused them fall inside our engagement, so the relationship ending does not hand this to the departed client _(Lilian, 2026-07-30)_.
@@ -485,16 +488,24 @@ that is now the plan.** It was wrong to treat the date change as dead: what the 
 - **What to attach instead:** evidence that **no wages were ever paid** (books / bank statements),
   the company's financial position, and **Gusto's written 2026-06-09 refusal**.
 
+> 🛑 **SUPERSEDED IN PART, 2026-08-24 — read "⭐ THE FIFTH CALL" before using the checklist below.**
+> **The call this checklist describes HAPPENED on 2026-08-24, and the POA was NOT the gate:** it was
+> still unprocessed, and the agency discussed the account and agreed to lodge the request anyway.
+> **What survives here is the ARGUMENT and the three drafting rules** — they are the fallback if
+> Tallahassee refuses. **The sequence below does not survive**, and neither does "the POA must
+> process first".
+
 **⏳ THE CALL COMES FIRST — and the letter is now only a fallback** _(revised 2026-08-06 after the
 third call: it is no longer "call, then write". **Ask for the change ON the call**; a written request
 is what you fall back to if whoever answers insists on one.)_ ⚠️ **The third call of 2026-08-06 was
 NOT this call** — it asked only whether the date could be changed in principle, with no POA on file.
-**This call still has to happen, once the POA clears. Five things, in this order:**
+**Five things, in this order** _(written before the fifth call; items 2 and 3 are the ones it
+overtook)_:
 
-1. **The representative's name and ID — take it first.** Never captured on any of the three calls, and
-   it is what lets a favourable answer be pointed back to.
-2. **Has the POA processed?** Without it they will not discuss the account. ⚠️ **Count from 2026-08-06,
-   not 08-04** — the first send never arrived (see "The POA that never arrived").
+1. **The representative's name and ID — take it first.** Never captured on any of the first three
+   calls, and it is what lets a favourable answer be pointed back to.
+2. ~~**Has the POA processed?**~~ ⚠️ **Overtaken 2026-08-24** — it had not, and the officer worked the
+   case from her own inbox regardless. Still worth asking, but **not as a gate**.
 3. **Ask for the change to be made on the call.** _(From how the third representative spoke, Lilian
    understood it can be — her read of his manner, not something he stated.)_ ⚠️ **Do NOT volunteer the
    IRS letter** — Lilian's explicit decision, below. If the person insists on documentation, take
@@ -633,28 +644,37 @@ been asked about the IRS letter, and **the rule to get the acceptance in writing
 HAS changed: take Felesha Spence's name off the "still needed" list** — but still take the name and ID
 of whoever answers each future call, since she may not be the one who picks up.
 
-#### ⭐ THE FIFTH CALL (2026-08-24) — the request is IN, and the decision leaves the office we can reach
+#### ⭐ THE FIFTH CALL (2026-08-24) — the ask is being lodged, and the decision leaves the office we can reach
 
 **Lilian called Felesha Spence directly, on the number the fourth call produced** — the first call in
 five that reached the person who actually holds the case rather than whoever answered the queue.
 _(Her account of it, written up for Julia the same morning.)_
 
 1. 🔴 **The POA is STILL not processed** — eighteen days after the 08-06 re-send, eleven after the
-   08-13 email. ⭐ **But it stopped being the gate:** Felesha **found the DR-835 in her own email**
-   and worked the case from there. ✅ **That also closes a question this file has carried since
-   2026-08-06 — the 08-13 email ARRIVED.** _(It says nothing about the 08-06 send to
-   `AcctMaint@floridarevenue.com`, which is still unconfirmed.)_
+   08-13 email. ⭐ **But it stopped being the gate:** Felesha **had it in her own email** and worked
+   the case from there. ⭐ **That is the strongest evidence yet that the 08-13 send reached her** —
+   ⚠️ **evidence, not proof, and this file has made exactly this inference once and withdrawn it.**
+   Lilian's write-up says *"she found it on her email"*; **"it" is not pinned to a document**, she was
+   not asked which send, and **"in her inbox" is still not "ON FILE"**. _(It says nothing at all about
+   the 08-06 send to `AcctMaint@floridarevenue.com`.)_
 2. ✅ **Lilian explained the situation and Felesha said she would submit a request to Tallahassee to
    change the effective date** — **that is where the change is actually made**, not at the local
-   office. **The ask is now IN.** After three weeks in which the plan was permanently one step away
-   from being made, it has been made.
-3. ⭐ **She asked NOTHING about why the firm wanted the date changed** — no reason demanded, no
-   documentation requested, and **the IRS letter never came up**, from the one person who has
-   actually handled the request. The letter has now been raised by **exactly one** anonymous
-   representative (2026-08-06) and by **nobody since**, across three later contacts. ⚠️ **It is still
-   not disproved** — Tallahassee has not spoken, and it is the likeliest shape of a refusal.
-4. ⏳ **No timeline, and she declined to invent one:** *"it can be 1 month, 2 months… depends on
-   Tallahassee."* ⚠️ **The 3–4 weeks from the third call is dead** — one anonymous representative's
+   office. After three weeks in which the plan was permanently one step away from being made, an
+   agency officer has finally agreed to put it in. ⚠️ **What the source says is that she SAID SHE
+   WOULD.** Nobody has confirmed she did: **nothing in writing, no reference number**, and this
+   matter's own record is **three verbal agency answers that did not hold** (§5 — *a verbal yes is
+   the start of the record, not the end*). **Treat the submission as agreed, not as done, until it
+   is confirmed** — question ① below.
+3. ⭐ **Lilian's write-up records that she asked NOTHING about why the firm wanted the date changed**
+   — *"she didn't ask anything about why we wanted to change the date or so"* — and **records no
+   mention of the IRS letter**, from the one person who has actually handled the request. ⚠️ **Read
+   that for what it is: nobody has ever been ASKED whether the letter is required**, on any of the
+   five calls. **The silence still resolves nothing** (§4), Tallahassee has not spoken, and the letter
+   remains the likeliest shape of a refusal. ⚠️ **Do not tally the silences into reassurance** — that
+   is the mistake this matter's own record warns against.
+4. ⏳ **No timeline, and she declined to invent one** — *"it can be 1 month, 2 months… depends on
+   Tallahassee"*, in **Lilian's rendering of what she was told**, not a verbatim quote. ⚠️ **The 3–4
+   weeks from the third call is dead** — one anonymous representative's
    figure, and it never described this stage anyway. **Do not compute a decision date from anything.**
 5. 🔴 **THE NOTICES KEEP COMING, AND A NEW ONE IS NOT A REFUSAL.** Penalty and fee notices are issued
    by an **automated system** and **stop only if a decision goes our way**. So a notice landing while
@@ -662,9 +682,9 @@ _(Her account of it, written up for Julia the same morning.)_
    refused, and **not** a reason to pay. ⚠️ **The client receives these**, and has still not been told
    any of this is happening.
 6. 📬 **How a decision reaches us: a letter, if it is favourable** — and **Felesha said she will also
-   call Lilian**. ⚠️ **An unfavourable decision has no stated route at all**: nobody said what
-   arrives, or whether anything does. **Silence is therefore not information**, which is the whole
-   reason this is monitored rather than waited on.
+   call Lilian**. ⚠️ **Lilian asked how she would be told, and the answer covered only the favourable
+   case** — so what arrives on a refusal, if anything, is simply not known. **Silence is therefore
+   not information**, which is the whole reason this is monitored rather than waited on.
 
 ⚠️ **THREE THINGS THE CALL DID NOT PRODUCE.** None is fatal; each is worth one question on the next
 contact:
@@ -680,14 +700,23 @@ contact:
 - **No identifier for the request itself** — a case, task or reference number in Tallahassee. Without
   it, every future call restarts from the client's BP number.
 
-**📡 THE MONITORING PLAN — this is the stage a matter gets dropped at.**
+**📡 THE MONITORING PLAN — this is the stage a matter gets dropped at, and it is SCHEDULED, not
+remembered.** ⚠️ **Neither this file nor `FOLLOW-UPS.md` is read by anything on its own, and this
+client is deliberately excluded from the weekend Client-Intelligence sweep** (archived in Double), so
+a cadence written here and nowhere else is exactly the mechanism that missed the 2026-08-19 date. **A
+one-shot Claude Routine fires the first check-in** — its trigger ID is in §6.
 
 - ⏱️ **Contact Felesha every ~3 weeks while Tallahassee holds it: first ~2026-09-15, then ~2026-10-06,
   then monthly.** _(A rhythm the firm set, not an agency commitment.)_
-- **Four questions every time:** ① is there a decision? ② has the **POA** been processed yet? ③ is
-  there a **reference number** for the Tallahassee request? ④ which quarters does the account show as
-  **delinquent** now?
-- **Watch Julia's Gmail** for anything from `floridarevenue.com` quoting **BP# 6895057**.
+- **Five questions every time, and ① is the new one:** ① **was the request actually submitted, and
+  on what date?** ② is there a **decision**? ③ has the **POA** been processed yet? ④ is there a
+  **reference number** for the request? ⑤ which quarters does the account show as **delinquent** now?
+  _(① exists because the only evidence the request was filed is that an officer said she would file
+  it. If it never went in, the check-in is the first thing that can surface it.)_
+- **Watch BOTH mailboxes** for anything from `floridarevenue.com` quoting the account's **BP number**
+  _(the number is in the Double case note, not here)_. ⚠️ **A reply lands in `lilian@`, not `julia@`** —
+  the 08-13 email went from Lilian's account with Julia only **bcc'd**, so Julia's mailbox holds the
+  outbound copy and would never receive the answer. **Searching Julia's mailbox alone proves nothing.**
 - 🔴 **A RISK NOBODY HAS RAISED: the firm may never see the letter.** The POA is **not on file**, so
   the agency's correspondence goes to **the company** — and Tsminibears is a **former client who has
   still not been told any of this is happening**. If the decision arrives by post, it arrives at
@@ -728,10 +757,13 @@ contact:
 - **↳ The same lesson, extended after a third call — and it cuts both ways.** _(This refines the bullet above, which was written when only two calls had happened; read them together.)_ Three calls on this matter produced three different pictures: *close it retroactively* (08-04, entity type never raised), *both fixes need an IRS letter proving no salary requirement* (08-06), and *the change can be made, just wait for the POA* (08-06, third call, letter never mentioned). **Practical rule** _(Lilian, 2026-08-06)_: **if one representative starts listing requirements, call again — another may simply do it.** ⚠️ **But a friendlier verbal answer is still verbal**, and whoever processes the request can apply the stricter rule. **Take the name every time, and get the acceptance in writing.**
 - ⭐ **AN UNPROCESSED POWER OF ATTORNEY IS NOT ALWAYS THE GATE — ASK THE NAMED OFFICER TO ACT NOW.**
   _(Tsminibears, 2026-08-24.)_ The firm spent **eighteen days** treating *"wait until the POA has
-  processed"* as a precondition, on the word of one anonymous representative. When Lilian finally
-  reached the **named officer** on her own line, the POA was **still** not processed — and it did not
-  matter: the officer **found the emailed POA in her own inbox**, discussed the case, and **submitted
-  the request**. **So: email the document straight to the named officer AND ask her to act on it now.
+  processed"* as a precondition — and **not on one person's word: two separate agency contacts said
+  it** (the third representative on 2026-08-06, and the fourth call on 2026-08-13, which stated the
+  sequence plainly enough that this file recorded it as the agency's own position). When Lilian
+  finally reached the **named officer** on her own line, the POA was **still** not processed — and it
+  did not matter: the officer **had the emailed POA in her own inbox**, discussed the case, and
+  **agreed to lodge the request**. **That two agency statements said "wait" and asking anyway still
+  worked is the uncomfortable half of this lesson, and the half worth carrying.** **So: email the document straight to the named officer AND ask her to act on it now.
   Do not accept the queue as the gate until she herself says so.** ⚠️ **The limit of this:** the
   agency *discussed* a case and *submitted* a request without a processed POA — it does **not** follow
   that it will release account information or take a binding instruction without one. **Ask; don't
@@ -832,16 +864,19 @@ All times below are **UTC** unless marked otherwise.
   nothing → call the general line and ask whether the POA is ON FILE.* **That date passed and the call
   was not made**, so the matter has now sat on one unanswered email for eleven days — **and the penalty
   may still be accruing.** The next action is unchanged and simply **due: call.** _(Rule 1b — the
-  searches behind that negative: Gmail on the client and agency names since 2026-08-12,
+  searches behind that negative: **Julia's** Gmail — the only mailbox this connector reads — on the
+  client and agency names since 2026-08-12,
   `list_notes(706709)`, and a Ping meeting search. A DOR phone call Lilian made without telling anyone
   would appear in none of them.)_
 
 - _(2026-08-24, Lilian — ⭐ FIFTH DOR CALL, and it is the one that finally lodges the ask)_ — **She
-  called Felesha Spence on her own line and the effective-date request is now SUBMITTED TO
-  TALLAHASSEE.** The **POA is still not processed** — eighteen days after the re-send — **but it
+  called Felesha Spence on her own line and an agency officer has, for the first time, AGREED TO LODGE
+  the effective-date request with Tallahassee** — ⚠️ **agreed, not confirmed done: she said she
+  *would* submit it, and there is nothing in writing and no reference number.** The **POA is still not processed** — eighteen days after the re-send — **but it
   stopped being the gate: Felesha found the emailed DR-835 in her own inbox** and worked the case from
-  there, which ✅ **also proves the 08-13 email arrived** _(nothing follows about the 08-06 send to
-  `AcctMaint@floridarevenue.com`)_. Lilian explained the situation; Felesha said she would **submit a
+  there, which is the **strongest evidence yet that the 08-13 send reached her** — ⚠️ **evidence, not
+  proof: "in her inbox" is not "ON FILE", and this file withdrew this same inference once before**
+  _(and nothing follows about the 08-06 send to `AcctMaint@floridarevenue.com`)_. Lilian explained the situation; Felesha said she would **submit a
   request to Tallahassee for the effective-date change — that is where it is done** — and **asked
   nothing about why, and never mentioned the IRS letter**. ⏳ **No timeline:** *"1 month, 2 months…
   depends on Tallahassee"* — **the 3–4 weeks from the third call is dead.** 🔴 **The penalty notices
@@ -854,6 +889,23 @@ All times below are **UTC** unless marked otherwise.
   an **automated notice is not a decision** and the client must be warned before one lands; and when a
   request leaves the office you can reach, **ask how long, whether the notices stop, and what arrives
   if the answer is no.** _(Detail in §4, "⭐ THE FIFTH CALL", with the monitoring plan.)_
+  ✅ **Double case note `485230` (Part 1, the live note) rewritten in place the same day** — body
+  measured at **7,364 characters** (7,452 with the title) against the ~7,500 request-size wall, nothing
+  pushed out to Part 2 (`491836`), no third note opened. **It carries the same corrections this entry
+  does** — *agreed, not confirmed done*; *evidence, not proof*; the five check-in questions; and the
+  mailbox trap.
+- _(2026-08-24, Lilian — 📡 THE WATCH IS SCHEDULED, not remembered)_ — **A one-shot Claude Routine now
+  fires the first check-in: `trig_01418WCAJnNHsweVawBZErYS`, "TSMinibears FDOR — chase Felesha Spence",
+  due 2026-09-15 13:00 UTC**, with push + email notification to the owner. It carries the five
+  questions, the both-mailboxes trap and the do-not-write-the-BP-number rule, and its step 6 is to
+  **re-arm the next one (~3 weeks, then monthly) and record the new ID here** — or to stop, if the
+  matter has resolved. **Why it exists:** this client is **archived in Double and therefore excluded
+  from the weekend Client-Intelligence sweep**, and neither this file nor
+  [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) is read by anything on its own — so the cadence written on
+  2026-08-13 had nothing to fire it, and it was missed. ⚠️ **KNOWN LIMIT — the Routine stores NO MCP
+  connectors**, so the session it fires has **no Gmail and no Double tools** (the same as the Pro Title
+  BTR chase Routine). It will read the repo and tell Lilian to call; **it cannot check the mailbox
+  itself.** _(Connectors can only be attached from the claude.ai Routines UI, not from a session.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -864,8 +916,9 @@ All times below are **UTC** unless marked otherwise.
 **TRACK B — Florida DOR. This is the whole plan** _(closing the account is dead; the effective-date request is back on in its honest form — §4)_.
 
 - ⏳ **NEXT ACTION — MONITOR. THE REQUEST IS IN; TALLAHASSEE DECIDES.** _(Updated after the fifth call,
-  2026-08-24.)_ Felesha Spence **submitted the effective-date request to Tallahassee** — the ask the
-  matter has been working towards since 2026-08-04 is finally lodged. **She asked nothing about why,
+  2026-08-24.)_ Felesha Spence **said she would submit the effective-date request to Tallahassee** —
+  the ask the matter has been working towards since 2026-08-04. ⚠️ **That she actually filed it is
+  unconfirmed**, which is why the first check-in question is *was it submitted, and when?* **She asked nothing about why,
   and never mentioned the IRS letter.** ⏱️ **The cadence, since the agency gave only *"1 month, 2
   months… depends on Tallahassee"*: contact Felesha ~every 3 weeks — first ~2026-09-15, then
   ~2026-10-06, then monthly** _(a rhythm the firm set; adjust it, never replace it with nothing —
@@ -947,8 +1000,8 @@ All times below are **UTC** unless marked otherwise.
     weeks before the Double record was archived. **Still open: who signed it, and whether a DR-835 of
     that date and scope covers changing an account's effective date** — read the form's own scope
     boxes rather than assuming. _(Gmail attachment "DR-835 - POA - 05.27.2026 - TSMINIBEARS.pdf".)_
-  - ⚠️ **STILL OPEN after 2026-08-24, and now with a live request riding on it.** Tallahassee is
-    deciding a request lodged while the POA is **unprocessed**; nobody has established that a DR-835
+  - ⚠️ **STILL OPEN after 2026-08-24, and now with a live request riding on it.** A request was
+    lodged with Tallahassee while the POA is **unprocessed**; nobody has established that a DR-835
     of that date and scope authorises this change, or who signed it. **Read the form's scope boxes**
     — the answer costs nothing now and is expensive to discover from a refusal.
 - [ ] **WHICH EFFECTIVE DATE was actually requested on 2026-08-24.** The firm's ask is **October 2026**
