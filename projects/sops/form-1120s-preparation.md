@@ -2380,18 +2380,20 @@ Each K-1 carries that shareholder's **percentage share** of every Schedule K lin
 ### 11B · 🗺️ WHERE EACH K-1 FIELD ACTUALLY LIVES — the address of every box
 
 **A preparer told "put it in item I" and left there will hunt for ten minutes.** Give the **form, the
-page, the part and the label** — the K-1's own layout, which is the same every year:
+part and the label.** ⚠️ **And check it against the year you are filing** — like the rest of the
+package the K-1's layout moves (§11A); F was split into F1/F2/F3 for TY2023, and boxes 18 and 19 are
+recent. _(Verified against the **2025** Schedule K-1, 2026-08-23.)_
 
 | Where on the K-1 | What is there |
 |---|---|
-| **Top left**, above Part I | `Final K-1` / `Amended K-1` **checkboxes** |
-| **Part I — Information About the Corporation** *(left column)* | **A** EIN · **B** name and address · **C** IRS centre |
-| **Part II — Information About the Shareholder** *(left column, below Part I)* | **D** corporation's total shares · **E** shareholder's identifying number · **F** shareholder's name and address · **G** current year allocation percentage · **H** shareholder's number of shares · **I** **loans from shareholder** |
-| **Part III** *(the whole RIGHT column)* | The numbered boxes **1 through 17** — income, deductions, credits, `16` items affecting basis, `17` other information |
+| **Top of the form**, above the numbered boxes | `Final K-1` / `Amended K-1` **checkboxes** |
+| **Part I — Information About the CORPORATION** *(left column)* | **A** EIN · **B** name and address · **C** IRS centre · 🔴 **D corporation's total number of shares** — ⚠️ **D is a CORPORATION fact and lives in Part I**, not with the shareholder items; it is entered once, not per person |
+| **Part II — Information About the SHAREHOLDER** *(left column, below Part I)* | **E** shareholder's identifying number · **F1** name and address · **F2** the responsible person and TIN where the shareholder is a disregarded entity, trust, estate or nominee · **F3** type of entity · **G** current year allocation percentage · **H** shareholder's number of shares · **I** **loans from shareholder** |
+| **Part III** *(the whole RIGHT column)* | The numbered boxes **1 through 19** — income, deductions, credits, `16` items affecting basis, `17` other information, and **18 / 19** the more-than-one-activity checkboxes |
 
-🔑 **Items D through I are per-SHAREHOLDER facts and are typed on that shareholder's own screen.**
-Part III's boxes are mostly **allocated by the software** from the entity-level figures — which is why
-they go blank when item G is wrong (§11C).
+🔑 **Items E through I are per-SHAREHOLDER facts, typed on that shareholder's own screen.** Part III's
+boxes are mostly **allocated by the software** from the entity-level figures — which is why they go
+blank when item G is wrong (§11C).
 
 **Item I specifically — *Loans from shareholder*:** two boxes, **beginning of tax year** and **end of
 tax year**, reporting what **that one shareholder personally lent the company.**
