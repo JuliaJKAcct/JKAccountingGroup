@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-24
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -91,7 +91,13 @@ the actual details.
 - **Project-based / work-in-progress:** deposited-but-incomplete projects carry across year-end — the reason for accrual reporting. Owner supplies monthly receipts / CC statements + per-project descriptions.
 - Pays **subcontractors** (e.g. structural engineers) and collects W-9s → drives the 1099 work.
 - **No QBO timesheet integration** (owner decided manual per-project entry wasn't worth it for a one-person shop).
-- The firm's chart-of-accounts grammar is described as "**Masciave/Aura-style**" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/SOP knowledge)_
+- The firm's chart-of-accounts grammar is described as "**Masciave/Aura-style**" (number-prefixed account names) — this client is a reference for that COA convention (see [`../../sops/ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md)). _(firm/SOP knowledge)_ **Confirmed live 2026-08-24** against the QuickBooks COA (81 accounts): the blocks run **100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s opex · 750 accountable plan · 805 other income · 901 depreciation · 999 triage**, parents group and sub-accounts carry the postings. ⚠️ **A handful of QuickBooks DEFAULT accounts are still active and sit off-grammar** — `Billable Expense Income`, `Sales of Product Income`, `Uncategorized Income`, `Uncategorized Asset`, `Inventory Asset`, `Purchases`, `Cost of Goods Sold` (the generic one, separate from `500 Cost of Goods Sold`), `Reconciliation Discrepancies`, `Out Of Scope Agency Payable`. They are outside the numbered blocks, so anything landing in them reads wrong on the statements.
+- 📦 **SHIPPING / DELIVERY TO A CLIENT — the accounts already exist; do not create new ones** _(established 2026-08-24, Lilian asked where to book a merchandise delivery the company pays for)_:
+  - **Cost side → `603.Shipping`** (Expense, active, top level of the 600 block). **Freight-OUT — delivering goods to the client — is a distribution cost of the period, NOT COGS**: under §263A distribution costs to the customer are not inventoried. Freight-**IN**, which brings goods to the studio, is the opposite case and capitalizes into `500.1.COGS - Project Supplies & Materials`. The 500 block here is deliberately narrow — **project supplies + subcontractors only**.
+  - **Income side, when the delivery IS re-billed → `400.4 Shipping Income`**, or **`400.3 Delivery & Installation Income`** when installation is included. Both already exist under `400 Net Sales`.
+  - 🔴 **The trap:** marking an expense *billable* in QuickBooks routes the recovery to the default **`Billable Expense Income`** account, which carries no number prefix and sits **outside `400 Net Sales`** — so the gross margin reads wrong. If the studio starts re-billing deliveries, **change the billable-expense income preference to `400.4`** before the first one.
+  - **For project-level margin, tag the transaction to the customer/project — never move the cost into COGS.** Project profitability reads the tag; reclassifying to the 500 block would distort the gross-margin line.
+  - **If deliveries become recurring**, the house convention (parents group only) says split `603.Shipping` into `603.1 Client Deliveries (Freight Out)` + `603.2 Postage & Courier`. Safe to do — no type change, no merge. **Not worth it for a one-off**, and it had barely any activity in 2026 YTD.
 - As an **S-corp**, watch reasonable-compensation / owner-payroll at year-end.
 - **Accountable plan (S-corp status):** home-office and vehicle-mileage costs are reimbursed to the owner through a formal accountable plan rather than run as a rent/company expense — tracked in a dedicated accountable-plan workbook (Drive). _(Drive — accountable-plan workbook, 2026-07-20 sweep)_
 - Q2 2026 client-facing financial reports were delivered to the owner on schedule. _(Gmail, 2026-07-20)_
@@ -130,7 +136,22 @@ the actual details.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** New facts folded into §5. No update on the EIN/S-election case note (491846) — still last touched 2026-01-14/08-13 IRS-side, no hard deadline recorded but the unresolved S-election carries ongoing filing-validity risk. Deeper Double bank-feed history and FL sales-tax county confirmation not chased this run (budget).
 
+- 2026-08-24 — **Chart of accounts read live, and the delivery-expense question answered.** Lilian
+  asked which account to use for shipping merchandise to a client where the **company bears the
+  cost**. `get_transaction_accounts` (81 accounts) plus the 2026 YTD P&L established that
+  **nothing needs to be created**: `603.Shipping` already exists on the cost side, and
+  `400.4 Shipping Income` / `400.3 Delivery & Installation Income` already exist on the income
+  side for the re-billed case. The reasoning, the freight-in/freight-out line, the
+  `Billable Expense Income` trap and the sub-account option are written into §5. Also surfaced,
+  and **not yet actioned**: the `999.Uncategorized Expense` triage account carries a real
+  four-figure balance in 2026 YTD (figure given to Lilian in chat, not recorded here per the
+  two-data-homes rule) — see Outstanding items. _(Worked by Lilian.)_
+
 ### Outstanding items (CI-only — never in the SOP)
+- **`999.Uncategorized Expense` carries a real four-figure balance in 2026 YTD** (seen 2026-08-24
+  on the cash-basis P&L). It is the triage account, so that balance is unclassified spend awaiting
+  review — and it may itself contain earlier delivery/shipping charges that belong in `603.Shipping`.
+  **Not reviewed this session; no transactions opened.** Worth a pass at the next quarterly close.
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, ~5–6 weeks pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Comcast Masciave" did not find anything specific; the firm's own 2026-08-20 recurring-expense monitor names Masciave as having an unspecified "quick item to check" — may be this, unconfirmed.
 - Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — not chased beyond the activity-log check this run, which showed no bank-feed-related entries.
 - Confirm the exact **FL sales-tax county / registration** — not chased this run (no registry-lookup tool available).
