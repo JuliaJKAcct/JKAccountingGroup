@@ -44,6 +44,15 @@ Period Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat
 
 **Governs:** the follow-up below, and `FOLLOW-UPS.md` rows 19, 22 and 23.
 
+📌 **Two known weaknesses in this arrangement, left open deliberately rather than churned:**
+① **This is the wrong home.** Where the firm's asks to Double go is general routing; it is bolted onto
+a file about one incident. **It belongs in [`../SKILL.md`](../SKILL.md) §7 or a firm-contacts SOP** —
+do that move as its own change, repointing SKILL, the capability map and FOLLOW-UPS rows 19/22/23 in
+the same pass, rather than as a rider on whatever closes the 403. ② **The 2026-08-17 hand-off is
+narrated in several places in this file** (its header, this section, the historical section, the
+follow-up). That is tolerable *inside* one file, which is partly a chronology — **but the ROUTE
+itself is stated only here**, and that is the invariant to protect.
+
 ⓘ **A second live contact, and NOT a route:** **Ryan Quill** (`ryan.quill@doublehq.com`), account-side,
 opened a conversation 2026-08-24 pitching the Plus/Scale tiers and asking for a call. Raising a
 technical ask there is **Lilian's commercial judgement and nobody else's** — a session must not choose
@@ -52,7 +61,7 @@ it, and the FOLLOW-UPS rows that mention him say so.
 ---
 
 When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall").
-🛑 **Do NOT simply delete this file** — *"The route"* below governs asks that have nothing to do with the
+🛑 **Do NOT simply delete this file** — *"The route"* (the section immediately above) governs asks that have nothing to do with the
 403 (`FOLLOW-UPS.md` rows 22 and 23) and is pointed at from SKILL §7, the capability map and three
 FOLLOW-UPS rows. **Move that section to SKILL §7 and repoint everything first**, then supersede the rest.
 
@@ -219,6 +228,13 @@ received, as though it had been ignored, hands them a version of the thread that
 
 ## Notes for whoever follows this up
 
+🛑 **These notes predate the four review rounds and the rewrite. Where one disagrees with the numbered
+rules in *"The follow-up"*, THE RULES WIN** — in particular: this section says to keep the evidence
+**table** (the rules say plain sentences, and never restore the table), says to raise the bytes point
+**only if support disputes it** (the email now raises it up front, so an engineer cannot convert our
+character counts by mistake), and calls the web-UI test *not critical* (row 19 now makes it a
+prerequisite before rewording `case-core.js`).
+
 - **The content-independence test is already done** — plain filler text at ~8,200 characters was
   refused exactly like real content (2026-08-06). That closes the most likely first
   counter-hypothesis, that something *in* our notes trips a pattern rule. Keep that row in the table.
@@ -248,9 +264,8 @@ received, as though it had been ignored, hands them a version of the thread that
 
 ## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
 
-🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is
-["The route" at the top of this file](#-the-route--canonical-everything-else-in-the-repo-points-here)
-— deliberately not repeated here.** The follow-up drafted on 2026-08-13 is **still unsent as at
+🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is in the *"The route"* section at the top of this file — deliberately not repeated
+here.** The follow-up drafted on 2026-08-13 is **still unsent as at
 2026-08-25**, and in that time the situation moved twice:
 
 - **2026-08-17 — Allison ended her implementation period** (*"Dedicated Double Support Period Winding
@@ -312,8 +327,9 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > we are bringing it here, as her hand-off note suggested. Allison is copied in — she has the full
 > history.
 >
-> **The short version:** when we use Double through the **MCP integration** with Claude, any request
-> over roughly 8,000 characters comes back as `403 Forbidden`. Smaller requests work normally.
+> **The short version:** when we use Double through the **MCP integration** with Claude, large requests
+> come back as `403 Forbidden` while small ones work normally. On the calls we have measured most
+> closely — saving a note — the change happens between about 7,600 and about 8,000 characters.
 >
 > We first reported this as a problem with long notes, and the answer that came back was that Double
 > has no limit on note length and that the problem must be coming from Claude's API. We think the first
@@ -345,8 +361,12 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
 >   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
 > - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
->   characters is refused. Tested 13 August 2026 — that one is a roster-wide search, so there is no
->   client ID to narrow the log query by. We have not tested anything in between on this path,
+>   characters is refused. Tested 13 August 2026. There is no client ID on that one — it is a
+>   roster-wide search — **but the filter text is a unique string you can grep for directly:** the
+>   100-character block `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
+>   repeated 90 times, with `NN` running 01 to 90.
+> - **It reproduces every time:** the same payload fails on every attempt, and trimming it below the
+>   threshold makes it succeed. We have not tested anything in between on this path,
 >   so all we can say is that the limit lies somewhere between those two.
 > - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
 >   characters. Everything above is counted in characters — **we have not measured any payload in

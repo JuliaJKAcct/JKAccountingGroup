@@ -1203,9 +1203,12 @@ refused the POST. So **never** tell them "your notes have an 8 KB limit" — the
 find no limit, and hand the problem back. Tell them **"any POST to your MCP endpoint at around 8,000
 characters and up returns 403 while smaller ones succeed, including read-only calls with no note in
 them — please check the request-body size limit both on anything in front of that endpoint and in the
-MCP server itself — and if you find one, can it be raised for our account?"** ⚠️ **The raise-it half is
+MCP server itself — and if you find one, can it be raised, for us or generally?"** ⚠️ **The raise-it half is
 not optional:** if we ask only for a check, support can reply *"confirmed, that is our configured
-limit"*, close the ticket as answered, and leave us nothing to reopen on. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"
+limit"*, close the ticket as answered, and leave us nothing to reopen on. ⓘ **Say "for us or
+generally"**, not "for our account" — §7 already expects this limit to be global rather than
+per-tenant, and an account-scoped ask invites the true answer *"that limit is not per-account"* as a
+way of closing the ticket. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"
 invites infrastructure to look, find nothing, and close it again. And name the surface as the **MCP
 integration**, not "Claude": when Lilian said "the Claude integration" on 2026-06-17, Allison answered
 about *Ask Double*, a different product.
@@ -1332,7 +1335,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
-- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent**, and its deadline was **missed** — the contact and the channel both changed on 2026-08-17, so ➡️ **read the route box at the top of [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) before sending anything.** Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
+- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent** _("unsent" as at 2026-08-25, from a search of **Julia's** mailbox; this is Lilian's to send from hers, so confirm with her before sending — see the reference file.)_, and its deadline was **missed** — the contact and the channel both changed on 2026-08-17, so ➡️ **read the route box at the top of [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) before sending anything.** Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
