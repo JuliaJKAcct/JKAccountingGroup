@@ -220,7 +220,14 @@ the actual details.
   **never been used** _(2026-08-25)_. **Post the cost to whatever bucket the underlying matter sits
   in** — a permit mailing to `CIP - Permits & Fees`, entity papers to `Organizational Costs`,
   licensing material to `SC - Marketing`, tax documents to `SC - Accounting & Consulting` — and to
-  the **sub-account**, never the parent (rule 8). 🔴 **The exception that is not a startup cost at
+  the **sub-account**, never the parent (rule 8). **Worked example, ruled 2026-08-25:** mailing the
+  **company's tax return to the owner for signature** goes to `SC - Accounting & Consulting`, the same
+  account as the fee for preparing that return — an accessory is never split off from its principal,
+  which is rule 13's shape. ⓘ **The honest caveat:** whether a return-preparation cost is a §195
+  startup cost at all is arguable, since a partnership files **because it exists**, not because it is
+  readying a trade. That argument, if it wins, moves the **whole** `SC - Accounting & Consulting`
+  account in one dated batch (rule 14) — never one stamp at a time. Julia's call if she wants it
+  revisited. 🔴 **The exception that is not a startup cost at
   all:** postage on the members' **W-7/ITIN packages**. An ITIN is the member's *personal*
   identifier, so a company-paid mailing belongs with **admitting members** — the syndication-cost
   question already open as the runbook's decision 16 — or is the member's own expense. It is **not**
@@ -319,7 +326,7 @@ the actual details.
   **Confirm on the banking screen whether the feed is live, check the 07-20 → 08-03 window for a
   hole, then close this item** — and it still deserves a *why* it dropped. Until it is confirmed,
   the reporting caution in the runbook's *Client reporting* section stands.
-- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
+- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. 🔴 **Re-checked live 2026-08-25 and unchanged — plus one detail nobody had read off it: the project's `dueDate` is still `2026-04-15`, the UN-extended date.** It was never moved to the extended September deadline, so the tax project corroborates nothing and is itself out of step. **This surfaced because Lilian was posting the postage on a mailing that carries the company's return out for signature** — i.e. a 2025 return is being worked while Double still reads `notStarted` against an April deadline. ⚠️ **Those columns are hand-maintained and the firm does not write them from a session** — this is Lilian's or Julia's to correct in the UI. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
   three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
   is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client
@@ -411,6 +418,15 @@ the actual details.
   not transfer here except as the contrast: that client books shipping to opex, this one cannot book
   anything to opex at all. **Which bucket this particular mailing belongs to is unanswered** — it
   depends on what the documents were, and Lilian was asked.
+- 2026-08-25 — **The postage question resolved to a concrete case** _(Lilian)_: the envelope carries
+  **the company's tax return, going to the owner for signature**. Ruled to `SC - Accounting &
+  Consulting`, with the accessory-follows-principal reasoning and the §195 caveat recorded in §5.
+  ⓘ **The categorization was the small half.** Checking the tax project live to ground the answer
+  showed the 2025 project still `notStarted` / `filedAt: null` **and carrying the un-extended
+  2026-04-15 due date** — while a 2025 return is evidently being worked. Folded into the extension
+  outstanding item above, which was already the highest-downside item on this client. Also re-raised
+  with Lilian, **not verified this session**: both nonresident members' ITINs were still open at the
+  2026-08-22 sweep, and a 1065 needs a TIN per partner for the K-1s. Gmail was **not** searched today.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
