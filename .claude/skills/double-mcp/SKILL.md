@@ -1205,7 +1205,9 @@ characters and up returns 403 while smaller ones succeed, including read-only ca
 them — please check the request-body size limit both on anything in front of that endpoint and in the
 MCP server itself — and if you find one, can it be raised, for us or generally?"** ⚠️ **The raise-it half is
 not optional:** if we ask only for a check, support can reply *"confirmed, that is our configured
-limit"*, close the ticket as answered, and leave us nothing to reopen on. ⓘ **Say "for us or
+limit"*, close the ticket as answered, and leave us nothing to reopen on. ⓘ **And lead with the
+SYMPTOM, not the status code** — what the person loses ("the note does not save"), and since when.
+Support triages on impact; a bare `403` is not impact. ⓘ **Say "for us or
 generally"**, not "for our account" — §7 already expects this limit to be global rather than
 per-tenant, and an account-scoped ask invites the true answer *"that limit is not per-account"* as a
 way of closing the ticket. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"

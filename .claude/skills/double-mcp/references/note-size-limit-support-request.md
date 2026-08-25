@@ -213,7 +213,7 @@ received, as though it had been ignored, hands them a version of the thread that
 > Three questions:
 >
 > 1. Is there a documented maximum note length for the API?
-> 2. If it is a security or request-size rule, can it be raised for our account?
+> 2. If it is a security or request-size rule, can it be raised for our account? ⚠️ *(This account-scoped wording is why rule 5c exists — do not reuse it.)*
 > 3. Does the web interface have the same limit?
 >
 > For now we are cutting content out of the notes to make them fit, which defeats the point of keeping
@@ -228,7 +228,7 @@ received, as though it had been ignored, hands them a version of the thread that
 
 ## Notes for whoever follows this up
 
-🛑 **These notes predate the four review rounds and the rewrite. Where one disagrees with the numbered
+🛑 **These notes predate the review rounds and the rewrite. Where one disagrees with the numbered
 rules in *"The follow-up"*, THE RULES WIN** — in particular: this section says to keep the evidence
 **table** (the rules say plain sentences, and never restore the table), says to raise the bytes point
 **only if support disputes it** (the email now raises it up front, so an engineer cannot convert our
@@ -265,8 +265,8 @@ prerequisite before rewording `case-core.js`).
 ## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
 
 🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is in the *"The route"* section at the top of this file — deliberately not repeated
-here.** The follow-up drafted on 2026-08-13 is **still unsent as at
-2026-08-25**, and in that time the situation moved twice:
+here.** The follow-up, first drafted 2026-08-13 and **materially rewritten on 2026-08-25** (the ask, the
+impact paragraph and the probe strings), is **still unsent as at 2026-08-25**, and in that time the situation moved twice:
 
 - **2026-08-17 — Allison ended her implementation period** (*"Dedicated Double Support Period Winding
   Down"*, after the wrap-up call she and Lilian held that day). Her words: *"While I won't be your main
@@ -290,8 +290,8 @@ here.** The follow-up drafted on 2026-08-13 is **still unsent as at
 2026-08-13 (*"más escueta y mejor explicada… para que Allison no se atormente con tanta cosa
 técnica"*) and 2026-08-24 (*"lenguaje sencillo y bien explicativo… el objetivo es que Double entienda
 bien qué está sucediendo"*). The body stays plain; the measurements sit in a block at the end that a
-support agent can hand to an engineer. **FIVE rules if you edit it again.** ⚠️ **Rule 5 carries the two hardest-won ones — it is a rule, not a
-trailing aside; do not drop it.**
+support agent can hand to an engineer. **SIX rules if you edit it again.** ⚠️ **Rules 5 and 6 carry the hardest-won ones — they are rules, not
+trailing asides; do not drop them.**
 
 1. **Concede the note question early.** Arguing that notes *do* have a limit is what got this closed
    as "out of scope" the first time.
@@ -303,7 +303,14 @@ trailing aside; do not drop it.**
 4. **Never restore from git history:** not the firm introduction (the escalation opens with two lines
    of context instead) and not the three-row evidence table (rule 2). Older versions of this file
    recommend both; they are superseded.
-5. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
+5. **Three things the email must always carry, each lost at least once already:** ⓐ the **user-visible
+   symptom and the duration** ("it does not save", "since 6 August 2026, still happening") — a support
+   agent triages on impact, and a bare `403` is not impact; ⓑ **both probe strings**, refused *and*
+   accepted, because the pair is what proves size was the only variable; ⓒ the raise-it ask scoped
+   **"for us, or generally"** — ⚠️ *never* "for our account", which invites the true answer *"that
+   limit is not per-account"* as a way to close the ticket. **The account-scoped wording survives in
+   the historical section below and must not be copied forward from there.**
+6. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
    Allison answered a "Claude integration" question with *Ask Double* on 2026-06-17. ⓑ **Ask about
    BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
    and naming only the firewall is how this gets closed "out of scope" twice.
@@ -330,10 +337,7 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > **The short version:** when we use Double through the **MCP integration** with Claude, large requests
 > come back as `403 Forbidden` while small ones work normally. On the calls we have measured most
 > closely — saving a note — the change happens between about 7,600 and about 8,000 characters.
->
-> What it looks like from our side: the note simply does not save. There is no partial save and no
-> warning, just the error, so whoever wrote it has to cut it down and try again. We have been working
-> around this since **6 August**.
+
 >
 > We first reported this as a problem with long notes, and the answer that came back was that Double
 > has no limit on note length and that the problem must be coming from Claude's API. We think the first
@@ -352,26 +356,35 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > that stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
 > endpoint, such as a firewall, or a size limit inside the MCP server itself. **Could you have someone
 > check both?** **And if a limit is found, can it be raised — for us, or generally?** That is what we
-> are really asking for: the size limit is what stops us keeping a case history in one note.
+> are really asking for — the size limit is what stops us keeping a case history in one note.
 >
 > Why it matters to us: we keep one running note per client matter, holding the whole history of a case
-> so that anyone on the team can open the client and understand it in a minute. Today we have to split
-> those notes in two, which defeats the purpose.
+> so that anyone on the team can open the client and understand it in a minute. When one grows past the
+> limit it does not save — and the response does not tell us whether anything was written, so we have
+> to go and check before retrying. The history then has to be split across two notes to fit, which
+> defeats the purpose. It also reaches ordinary work with no note in it at all, like the client search
+> above. **We have been working around this since 6 August 2026, and it is still happening.**
 >
 > **Technical details, if they help:**
 >
-> - Workspace: **JK Accounting Group** (account owner Julia Kononova).
+> - Workspace: **JK Accounting Group** (account owner Julia Kononova). **Still reproducing as at the
+>   date of this email** — the test dates below are when we measured it, not when it stopped.
 > - Error: `403 Forbidden`, `error_code: mcp_request_blocked`, on the MCP endpoint.
 > - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
 >   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
 > - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
->   characters is refused. Tested 13 August 2026. There is no client ID on that one — it is a
->   roster-wide search — **but the filter text is a unique string you can grep for directly:** the
->   100-character block `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
->   repeated 90 times, with `NN` running 01 to 90. We have not tested any size between those two on the
->   read path, so we cannot narrow it further than 48–9,000 there.
-> - **It reproduces every time:** the same payload fails on every attempt, and trimming it below the
->   threshold makes it succeed.
+>   characters is refused. Tested 13 August 2026. We have not tested any size between 48 and 9,000, so
+>   on this path that is as close as we can put it. There is no client ID to narrow it by — it is a
+>   roster-wide search — **but both filter strings are unique and you can grep for them directly:**
+>   - refused: the 100-character block
+>     `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
+>     repeated 90 times, with `NN` running 01 to 90;
+>   - accepted, seconds earlier, same tool: `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE`.
+>
+>   That pair is the whole argument in your logs: same endpoint, same account, same tool, one short and
+>   one long, minutes apart.
+> - **The note writes reproduce every time:** the same body fails on every attempt, and trimming it
+>   below about 7,600 characters makes it save.
 > - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
 >   characters. Everything above is counted in characters — **we have not measured any payload in
 >   bytes.**
