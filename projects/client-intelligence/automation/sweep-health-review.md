@@ -9,9 +9,13 @@
 > ⚠️ **But one OPTIONAL thing is worth doing before Monday, and only a person can do it:** the
 > 2026-08-31 review Routine has **no MCP connectors** (`create_trigger` cannot attach them — §8), so
 > it **cannot open the sweep's report email**. It will still do the repo half, which is most of the
-> value. To get the whole review, **recreate it at claude.ai/code/routines with connectors attached**,
-> or simply **forward it the email** when it asks. _(The identical Routine failed exactly this way on
-> 2026-08-24 — §8.)_
+> value. Two ways to get the whole review: **open the session it creates on Monday and paste the
+> sweep email into it** (two minutes, nothing to build — the usual answer for a one-shot), or
+> **recreate it at claude.ai/code/routines with connectors attached** if you want every future
+> review to read its own mail. 📋 **The replacement procedure — and why there is no way to just
+> ADD connectors — is in the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md)
+> skill**, *"It already exists and it has no connectors"*: create the new one FIRST, verify, then
+> delete the old. _(The identical Routine failed exactly this way on 2026-08-24 — §8.)_
 >
 > ### What happens on its own, and when
 > | When | What | Anyone needed? |
