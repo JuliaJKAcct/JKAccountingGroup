@@ -21,9 +21,23 @@
 >   🔴 **DEAD as of 2026-08-17** — the call happened that day, and the question has been removed from
 >   the follow-up. Do not re-add it.
 >
-> 🔴 **THE ROUTE CHANGED 2026-08-17.** Allison ended her implementation period and sent us to
-> `help@doublehq.com`. The follow-up now goes there as a **new email copying her** — see
-> *"The follow-up"* below, which supersedes the *"Who this goes to"* section further down.
+> 🔴 **THE ROUTE CHANGED 2026-08-17 — this box is the CANONICAL statement of it.** Everywhere else in
+> the repo points here rather than restating it, because the first attempt at this reroute restated it
+> in four files and missed five more. **If the route changes again, change it HERE and check the
+> pointers still say only "see the reference file".**
+>
+> | | |
+> |---|---|
+> | **Send to** | `help@doublehq.com` |
+> | **Copy** | `allison@doublehq.com` · Julia · Maria |
+> | **Form** | A **new email**, never a reply on *"Checking in before our 8/18 wrap-up"* |
+> | **Why Allison stays in copy** | She carries the whole history and personally argued the deadline request with Double's developers; a bare `help@` ticket restarts from zero |
+> | **Second live contact** | **Ryan Quill** `ryan.quill@doublehq.com` — account-side, opened a conversation 2026-08-24 pitching the Plus/Scale tiers and asking for a call |
+>
+> **Why:** Allison closed her implementation period on 2026-08-17 (*"Dedicated Double Support Period
+> Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat. This box governs the
+> follow-up **and** every other open ask with Double (`FOLLOW-UPS.md` rows 19, 22 and 23).
+> ⚠️ The *"Who this goes to"* section further down is **historical** and says the opposite.
 
 When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
 and delete or supersede this file.
@@ -124,9 +138,9 @@ The UI test is still worth running, but as a *practical* question now, not the d
 ⚠️ **Superseded — the escalation was written, and it did NOT restore the firm introduction.** The email
 at the end of this file opens with two lines of context instead, and per its rule 2 carries the evidence
 in plain sentences with **no table**. Do not reintroduce either from git history. *(Original note:
-restore the firm introduction from git history.)* It was removed because *Allison* knows us — Allison's onboarding
-email (2026-05-15) describes her as the implementation contact "for the next three months", so this
-wrap-up call is the end of that window and a hand-off is a live scenario.
+restore the firm introduction from git history.)* It was removed because *Allison* knew us — her onboarding
+email (2026-05-15) described her as the implementation contact "for the next three months", so the
+wrap-up call was the end of that window. **That hand-off has now happened: 2026-08-17.**
 
 ---
 
@@ -227,7 +241,10 @@ received, as though it had been ignored, hands them a version of the thread that
   Down"*, after the wrap-up call she and Lilian held that day). Her words: *"While I won't be your main
   point of contact moving forward, the team at Double is still here for you. If you ever need help or
   have a question, please reach out to **help@doublehq.com** or use the in-app chat."* Maria replied
-  and thanked her; **the matter was never raised again on that thread.**
+  and thanked her. **Searched 2026-08-25** (Gmail, the thread itself plus every message to or from
+  `doublehq.com` after 2026-08-13): **the thread has not moved since Allison's 08-13 answer, and
+  nothing has gone to `help@doublehq.com`.** So the follow-up is still unsent and re-asking is safe —
+  ⚠️ **re-run that search before sending**, since this claim ages.
 - **2026-08-24 — Ryan Quill** (`ryan.quill@doublehq.com`) opened a fresh account conversation: he had
   audited the account, praised the firm's use of the integration, and pitched the new **Plus / Scale**
   tiers with launch-promotion pricing plus a 15-minute call. Julia's out-of-office answered him.
@@ -253,7 +270,7 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
 
 1. **Concede the note question early.** Arguing that notes *do* have a limit is what got this closed
    as "out of scope" the first time.
-2. **The evidence goes in plain sentences.** *A short version of the same question works; the long one
+2. **The evidence goes in plain sentences, NOT a table.** *A short version of the same question works; the long one
    does not; the same long text goes through to another system* — that is the whole proof.
 3. **The technical block must stand alone** — workspace, dates, client IDs, error code — because it
    will be forwarded, and an engineer who cannot find the request in a log closes the ticket as
@@ -264,9 +281,13 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
    and naming only the firewall is how this gets closed "out of scope" twice.
 
 **Subject:** `MCP integration — requests over about 8,000 characters are refused with a 403 (JK Accounting Group)`
-⚠️ **In characters, never in KB** — the subject is the most-quoted line in the whole thread, and we never
-measured a payload in bytes (see the warning above). A byte figure here is the one an engineer checks first.
-**To:** `help@doublehq.com` · **Cc:** Allison, Julia, Maria
+⚠️ **The subject states the MEASURED unit — characters.** The body may still offer *"somewhere around
+8 KB"* as a **lead** ([`../SKILL.md`](../SKILL.md) §7: *"give them the observation, let them find the
+actual rule"*), and that is not a contradiction: characters are what we counted, 8 KB is the hint about
+where to look. What must never happen is a **byte figure presented as our measurement** — the subject is
+the most-quoted line in the thread, and an engineer who converts our passing 7,600-character HTML note
+and finds it already over 8,192 bytes stops trusting the rest.
+**To:** `help@doublehq.com` · **Cc:** `allison@doublehq.com`, Julia, Maria
 
 > Hello,
 >
@@ -307,8 +328,12 @@ measured a payload in bytes (see the warning above). A byte figure here is the o
 > - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
 >   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
 > - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
->   characters is refused. Tested 13 August 2026. We have not tested sizes in between, so we cannot
->   give an exact cut-off — only that it is somewhere around 8 KB.
+>   characters is refused. Tested 13 August 2026. We have not tested anything in between on this path,
+>   so all we can say is that the limit lies somewhere between those two.
+> - **Putting the two together:** the tightest bracket we have is the note-write one — between about
+>   7,600 and about 8,000 characters — which is roughly 8 KB, and may be worth checking against any
+>   request-size setting near that figure. We have not measured any payload in bytes, so please treat
+>   8 KB as a hint about where to look rather than as our measurement.
 > - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
 >   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
 >   text.

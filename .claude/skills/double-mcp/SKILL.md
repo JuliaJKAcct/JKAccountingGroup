@@ -1220,8 +1220,10 @@ to *whatever on Double's side sits in front of the product* — without prescrib
 **The original request went out 2026-08-06 — do not send it again.** What was sent, what it left
 unasked, Double's reply, and the drafted follow-up are all in
 [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
-🔴 **The route has CHANGED — do not send this to Allison on her thread.** **The implementation is OVER (2026-08-17)** — Allison handed off to `help@doublehq.com` and the in-app chat. Anything still open with Double goes there as a **new email, copying Allison** (she carries the history), never as a reply on her closed *"Checking in before our 8/18 wrap-up"* thread. Her wrap-up call happened on **2026-08-17**; the draft had already sat unsent for four days by then and is
-still unsent. The rewritten email and the full story are in the reference file.
+🔴 **The route CHANGED on 2026-08-17 — Allison's implementation period is over, so do NOT send this on
+her thread.** ➡️ **The canonical route (who to send to, who to copy, why) is the box at the top of
+[`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) — read it there and do not restate it, so there is one place to change when the contact changes again.**
+The rewritten email is at the end of that same file. The draft has been unsent since 2026-08-13.
 
 ### When it genuinely doesn't fit — `Part 1 / Part 2 / …`
 
@@ -1328,7 +1330,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
-- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent**, and its deadline was **missed** — Allison's implementation period closed 2026-08-17, so it now goes to `help@doublehq.com` copying her, as a new email. Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
+- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent**, and its deadline was **missed** — the contact and the channel both changed on 2026-08-17, so ➡️ **read the route box at the top of [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) before sending anything.** Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
