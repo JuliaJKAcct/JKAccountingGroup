@@ -331,6 +331,10 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > come back as `403 Forbidden` while small ones work normally. On the calls we have measured most
 > closely — saving a note — the change happens between about 7,600 and about 8,000 characters.
 >
+> What it looks like from our side: the note simply does not save. There is no partial save and no
+> warning, just the error, so whoever wrote it has to cut it down and try again. We have been working
+> around this since **6 August**.
+>
 > We first reported this as a problem with long notes, and the answer that came back was that Double
 > has no limit on note length and that the problem must be coming from Claude's API. We think the first
 > part is correct — and that is exactly why we believe the question went to the wrong place.
@@ -347,8 +351,8 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > That points to something on Double's side refusing our request before it reaches the part of Double
 > that stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
 > endpoint, such as a firewall, or a size limit inside the MCP server itself. **Could you have someone
-> check both?** **And if a limit is found, can it be raised for our account?** That is what we are
-> really asking for — the size limit is what stops us keeping a case history in one note.
+> check both?** **And if a limit is found, can it be raised — for us, or generally?** That is what we
+> are really asking for: the size limit is what stops us keeping a case history in one note.
 >
 > Why it matters to us: we keep one running note per client matter, holding the whole history of a case
 > so that anyone on the team can open the client and understand it in a minute. Today we have to split
@@ -364,10 +368,10 @@ and finds it already over 8,192 bytes stops trusting the rest.
 >   characters is refused. Tested 13 August 2026. There is no client ID on that one — it is a
 >   roster-wide search — **but the filter text is a unique string you can grep for directly:** the
 >   100-character block `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
->   repeated 90 times, with `NN` running 01 to 90.
+>   repeated 90 times, with `NN` running 01 to 90. We have not tested any size between those two on the
+>   read path, so we cannot narrow it further than 48–9,000 there.
 > - **It reproduces every time:** the same payload fails on every attempt, and trimming it below the
->   threshold makes it succeed. We have not tested anything in between on this path,
->   so all we can say is that the limit lies somewhere between those two.
+>   threshold makes it succeed.
 > - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
 >   characters. Everything above is counted in characters — **we have not measured any payload in
 >   bytes.**
