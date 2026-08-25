@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -34,8 +34,9 @@
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); **income tax (Form 1065 partnership → K-1s)**; **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A (pre-operational). The firm also does **hands-on AP / bill-pay** (pays vendors from the client's account). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double). ⚠️ **The bank feed disconnected on
-  2026-07-20 and has not been reconnected** _(Lilian, 2026-08-14)_ — nothing has posted since, so
-  the books stop at that date (see §4 and §6).
+  2026-07-20** _(Lilian, 2026-08-14)_ — but the ledger **has** moved since: transactions dated
+  2026-08-03, 08-10 and 08-11 are in it _(read 2026-08-25)_. Whether the feed itself reconnected, or
+  those rows were entered by hand, is **not established** — see §4 and §6.
 
 ## 2. Contacts
 
@@ -93,10 +94,13 @@ the actual details.
   covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
-- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_. Nothing has
-  posted since, so the ledger stops there and any month after it will read as quiet when it is
-  really missing. Reconnect it and backfill before working a close — it is step 1 of the runbook
-  now.
+- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_ — and the
+  danger it creates is unchanged: a month with no data reads exactly like a quiet month. **Confirming
+  the feed is live is step 1 of the runbook**, before working any close. ⓘ **The ledger has moved
+  since that date** — transactions dated 2026-08-03, 08-10 and 08-11 are in it _(read 2026-08-25)_ —
+  so the "nothing has posted" statement no longer holds. That is **not** proof the feed reconnected;
+  check the banking screen, and check the 07-20 → 08-03 window for a hole, before trusting any month
+  after July.
 
 ### Reports the client asks us for
 - **iKids requests its own reports periodically** — a **Transaction report** and a **Transactions
@@ -190,6 +194,22 @@ the actual details.
   a confirmed date Julia has set**; do not use it to start expensing without her sign-off.
   _(Double note / Ping meeting recap, 2026-08-13.)_
 
+- **Attractions and play equipment have NO home in the chart — and the two places they land by
+  default are both wrong.** The Fixed Asset section carries only `Furniture & Fixtures`, `Equipment`
+  and `Computers & IT Equipment`, and the last two have **never been used** — so imported play
+  equipment lands in `Furniture & Fixtures`, which is where the client's two overseas equipment
+  purchases sit today _(QuickBooks via Double, 2026-08-25)_. ⚠️ **The bigger risk is the other
+  direction: an attraction must never go into `Construction In Progress`.** CIP is the antechamber
+  of a **single** asset — the leasehold improvement — so anything swept into it comes back out with
+  the **building's** recovery period. An attraction is **§1245 tangible personal property**: a short
+  recovery period, and eligible for bonus/§179. **The same trap catches its costs of installation** —
+  freight, customs duty, import-broker fees and the installer's labour are capitalized **into the
+  asset**, not into `CIP - Materials` / `CIP - Labor`, and the runbook's role→account map currently
+  routes site labour to the latter. Only genuinely **structural** work an attraction requires (a pit
+  cut into the slab, reinforcement, drainage) is CIP; that means splitting the invoice. A dedicated
+  `Attractions & Play Equipment` fixed-asset account (plus its accumulated-depreciation pair) is
+  **proposed and pending Julia's decision** _(raised by Lilian 2026-08-25)_.
+
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
@@ -272,9 +292,13 @@ the actual details.
      but whatever leads this list is what the team sees without opening the file. Keep the four
      that BLOCK something at the top; append the rest. (Learned 2026-08-14 by pushing four live
      blockers off the card without noticing.) -->
-- ⚠️ **The QuickBooks bank feed has been disconnected since 2026-07-20** — reconnect it and
-  backfill the gap. Everything downstream (the close, the reports we send the client, any review)
-  is capped at that date until it is done. Also worth finding out **why** it dropped.
+- ⚠️ **The QuickBooks bank feed disconnected 2026-07-20 — but the ledger has moved since, so the
+  "nothing has posted" half of this item no longer holds.** Transactions dated **2026-08-03, 08-10
+  and 08-11** are in the ledger _(read 2026-08-25)_. That is evidence the gap is being filled; it is
+  **not** proof the feed itself reconnected, since those rows could have been entered by hand.
+  **Confirm on the banking screen whether the feed is live, check the 07-20 → 08-03 window for a
+  hole, then close this item** — and it still deserves a *why* it dropped. Until it is confirmed,
+  the reporting caution in the runbook's *Client reporting* section stands.
 - ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
 - **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
   three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
@@ -333,10 +357,34 @@ the actual details.
 
 ### Log (continued)
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-10→2026-08-22; Ping not searched, per standing note).** Double `list_projects` confirms the "2025 Taxes" project is still `notStarted` with `filedAt: null` — this bears on (but doesn't settle) the unverified 1065-extension item. The new no-portal-access contact registered 2026-08-10 is named Sergey Yalansky (Double contacts). Chase pass: QuickBooks bank-feed disconnection (since 2026-07-20) still open, now 33 days, no deadline — Double shows the Double↔QBO API connection as "connected", which does not confirm the underlying bank feed is reconnected; the 1065-extension question and both members' ITIN applications remain open (ages above). Not chased this run (budget): the third member's US tax status; signed status of the proposed engagement expansion; W-9 sweep status; the five decisions waiting on Julia.
+- 2026-08-25 — **Chart-of-accounts review for an attraction purchase** _(Lilian)_. The client bought
+  an attraction — a large inflatable "balloon bed" — and asked where it belongs. Read the full chart
+  of accounts and every transaction the connector returns. **The chart has no account for
+  attractions**, and `Equipment` / `Computers & IT Equipment` have never been used, so play equipment
+  defaults into `Furniture & Fixtures` — where the client's two overseas equipment purchases already
+  sit, both from suppliers whose names read as **play-equipment manufacturers rather than furniture
+  makers** (one wired to Guangdong, CN; one to Poltava, UA, whose memo nonetheless says "furniture").
+  **The invoices, not the memos, should decide whether either is really furniture** — and if the
+  Chinese one is an attraction, the new purchase is the *second* case, not the first. Recommended a
+  dedicated `Attractions & Play Equipment` fixed-asset account, that freight/duty/installation be
+  capitalized into the asset rather than CIP, and that any structural work the attraction requires be
+  split off to CIP. **Pending Julia's decision**, and pending one fact only Lilian can get: whether
+  this attraction sits on the floor or needs excavation. Also surfaced and left for her: a large
+  payment to a **real-estate management company sitting in `Startup Costs - Travel`** (with an
+  unassigned overseas wire, the two of them are most of that account); the **bank feed** item above;
+  and **`Security Deposit` carrying far more than the transactions account for** — worth confirming
+  what it is made of, since anything that is consideration for the lease rather than money that comes
+  back is not a deposit. ⚠️ **Scope of that read, because the negatives depend on it:** the connector
+  returns only `Deposit` and `Expense` rows — **no bills and no journal entries** — and most of the
+  balance-sheet movement did not come through the rows that were read. Nothing here is a statement
+  about the rest of the ledger.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
 - [x] The third member's email address, so he can be registered in Double — **⏸ PAUSED INDEFINITELY by Lilian (2026-08-10): do NOT chase this**, in the weekend sweep or anywhere else. No email for him exists in Gmail, Drive or Double; every thread runs through Julia or the outside CAA. To reopen: get it from the client or the CFO, then register him in Double as a contact record with **no portal access**, exactly as was done for the CFO. This is the **contact record only** — the third member's **tax status** is a separate question and is still live (§4, §6 outstanding).
+- [ ] **Does the new attraction need structural work** (a pit in the slab, reinforcement, drainage),
+      or does it sit on the floor? It is the one fact that decides whether part of its invoice is CIP
+      rather than a fixed asset — asked 2026-08-25, unanswered
 - [ ] Fiscal year-end
 - [ ] Credentials Drive link; the "operations begin" date once known
 - [ ] **Which other recurring vendors are on autopay** — only the water bill is confirmed. The rest
