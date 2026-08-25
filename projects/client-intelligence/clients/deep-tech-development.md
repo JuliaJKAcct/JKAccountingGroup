@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -46,14 +46,16 @@ the actual details.
 | Owner / primary contact | Double client (link below) |
 
 - **Double client:** [app.doublehq.com/close?cid=706685](https://app.doublehq.com/close?cid=706685)
-- **Double case note:** `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
+- **Double case notes** (two separate matters — one note each):
+  - `CASE · Shopify — transferring store ownership to Vitalii Ivanov` — note **503544**
+  - `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
 
 ## 3. Systems & access
 
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double — **disconnected 2026-07-21 as part of the bookkeeping pause** (§4). Not a fault: reconnect when the client resumes _(explained by Lilian, 2026-08-11)_ |
-| Shopify ("Go Robots" store) | E-commerce sales platform | _(pending)_ | Plan scheduled to downgrade from **Grow** to **Basic** (both paid monthly) effective **2026-08-02** _(Gmail, 2026-07-28)_ |
+| Shopify — store **"Deep Tech Development"**, domain **gorobots.us** (the "Go Robots" brand) | E-commerce sales platform | _(pending)_ | 🔴 **Registered under Julia, not the client — the transfer to the owner is IN PROGRESS and blocked** (§5, and Double case note `503544`). Plan downgraded from **Grow** to **Basic** (both paid monthly) effective **2026-08-02**, and it still bills monthly to Julia's inbox _(Gmail, 2026-07-28 / 2026-08-02)_ |
 | Sales-tax portal | Filing sales tax (quarterly) | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | _(jurisdiction pending)_ |
 | Penn Credit (collection-agency portal) | Paying the FDOT toll debts that are in collection | [Client password vault (Google Doc)](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) | Portal: [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) · login is **not** user/password — it asks for the **account/ID number + ZIP code** (both in the vault) |
 
@@ -107,13 +109,14 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- ✅ **THE FDOR EFFECTIVE-DATE CHANGES BOTH WENT THROUGH — sales tax to 1 October 2025, reemployment tax to 1 July 2025.** ⚠️ **This CORRECTS what this file said on 2026-08-13.** Lilian's phone note stopped at "still being processed"; the **migrated TaxDome note on the same matter carries a later line — "THIS IS DONE. WE HAVE A LETTER IN DEEP TECH'S FOLDER"** — so the reemployment-tax change completed and the FDOR's confirmation letter is filed in the client's Drive folder. **The 2025-10-22 bill for Q2 2025 reemployment tax should therefore not stand**; nothing records it being withdrawn, and that is the one piece left to confirm. _(TaxDome notes, migrated — filed under Deep Tech.)_
-- ⚠️ **The FDOR sends no acknowledgement that a change request was received or queued** — it writes only when the change is done. Lilian asked explicitly and they said they do not do it. **So the only way to know where a request stands is to telephone and ask**, and a client letter that contradicts a pending request is not evidence the request failed.
+- 🔴 **THE SHOPIFY STORE IS REGISTERED UNDER JULIA, NOT THE CLIENT — AND MOVING IT TO THE OWNER IS BLOCKED.** The store **Deep Tech Development** (**gorobots.us**) has Julia as its store owner and `julia@jkaccountinggroup.com` as its email of record; the real owner is **Vitalii Ivanov**. Adding him as a staff user **errors**, and *Transfer ownership* refuses and sends us to support. Shopify's diagnosis (2026-08-25) is that the store's **Shopify Balance account is active and is the blocker, even at $0**, and it has to be **closed permanently** first — a closure Shopify has now **requested, with no ETA and no ticket number yet**. ⚠️ **Untested:** nobody has attempted the transfer with Balance closed, and nobody established why the *staff-user* add failed, so the staff-user error may survive the closure as a second problem. **Full trail, options and next actions: Double note `503544`.** _(Shopify support chat transcript, 2026-08-25, via Lilian.)_
 - ⏸ **The client is paused while the owner pursues a US visa** — the business restarts when he has
   what he needs, and bookkeeping restarts with it. Until then the firm does **administrative work
   only**, and the QuickBooks disconnection of 2026-07-21 is part of the pause rather than a fault to
   fix. Read every recurring obligation below in that light. _(Lilian, 2026-08-11.)_
+- ⚠️ **The FDOR sends no acknowledgement that a change request was received or queued** — it writes only when the change is done. Lilian asked explicitly and they said they do not do it. **So the only way to know where a request stands is to telephone and ask**, and a client letter that contradicts a pending request is not evidence the request failed.
 - **One company — "Deep Tech Development Group LLC" (not two).** This single company runs **Gusto payroll (biweekly)**, holds the **Shopify store** and the "Go Robots" AP mailbox, and carries the **vehicle policy**; it files on **Schedule C** (single-member) per Double. Automated emails (Gusto, QuickBooks, Shopify, insurance) render the name inconsistently (with/without "GROUP"), which earlier looked like two separate entities — **it is not**. _(Corrected by Lilian, 2026-07-22.)_
+- ✅ **THE FDOR EFFECTIVE-DATE CHANGES BOTH WENT THROUGH — sales tax to 1 October 2025, reemployment tax to 1 July 2025.** ⚠️ **This CORRECTS what this file said on 2026-08-13.** Lilian's phone note stopped at "still being processed"; the **migrated TaxDome note on the same matter carries a later line — "THIS IS DONE. WE HAVE A LETTER IN DEEP TECH'S FOLDER"** — so the reemployment-tax change completed and the FDOR's confirmation letter is filed in the client's Drive folder. **The 2025-10-22 bill for Q2 2025 reemployment tax should therefore not stand**; nothing records it being withdrawn, and that is the one piece left to confirm. _(TaxDome notes, migrated — filed under Deep Tech.)_
 - **External Ukrainian finance team:** the owner uses an outside Ukrainian bookkeeping / tax group that shares documents and handles the owner's **personal Ukrainian tax declaration**; JK coordinates hand-offs via Google Drive.
 - **Ownership (corrected by Lilian, 2026-07-20):** the owner is a **different individual** from Never Give Up KK's owner — Never Give Up's owner was a **former employee** of Deep Tech Development Group, not an owner.
 - **Client password vault (one Google Doc).** Practically all of this client's logins are kept in a single Google Doc (linked in §7) — including the Penn Credit account/ID number + ZIP used to log in and pay the FDOT toll debts. It's the fast path when a task needs a credential; sensitive values stay there, never in this file.
@@ -167,22 +170,54 @@ the actual details.
   same pattern as the duplicate-folder finding on Masciave.
 
 ### Outstanding items (CI-only — never in the SOP)
+<!-- Only the FIRST FOUR top-level bullets are published (Hub + review dashboard). Order by consequence:
+     live/irreversible and deadline-bearing items first. Reordered 2026-08-25. -->
+- 🔴 **SHOPIFY — the store ownership transfer to the owner is blocked, and the unblocking step is IRREVERSIBLE.**
+  Shopify has **requested closure of the store's Shopify Balance account** (2026-08-25) because it is what blocks
+  the transfer; closure is **permanent**, takes the Balance statements with it, and has **no ETA and no ticket
+  number**. Waiting on Shopify's confirmation email to `julia@jkaccountinggroup.com`, then *Settings → Users →
+  transfer ownership*. **Three things to check before relying on this** — the Balance-is-the-only-blocker diagnosis
+  is untested, the separate *staff-user* error was never explained, and Shopify's two advisors contradicted each
+  other on whether payouts route through Balance at all. Full trail: Double note **503544**. _(Shopify chat
+  transcript, 2026-08-25, via Lilian.)_
+- **File the downloaded Shopify Balance statements into the client's Drive folder** — Julia downloaded every
+  monthly statement one by one on 2026-08-25 before agreeing to the closure. Once Balance is closed they are the
+  **only** record of that account, and nothing yet confirms they left her Downloads folder.
+- **Confirm the store's payment method moves to the owner with the ownership** — the store bills monthly (Basic
+  since 2026-08-02) and every Shopify billing email lands in Julia's inbox, so a transfer that leaves billing
+  behind means the firm keeps paying the client's subscription. _(Gmail, 2026-08-02.)_
+- ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
+  LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
+  a permanent address change should be filed instead, before mail starts bouncing. _(Gmail,
+  2026-08-14.)_
 - **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~23 days pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Safe Guard Self Storage" did not find any results.
 - **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
 - **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL UNSETTLED. A broad review of **all** Gusto-sender emails received 2026-08-15 through 2026-08-21 (18 threads, across all firm clients) found **none mentioning "Deep Tech" or "Go Robots"** — no "payroll is late" reminders and no payroll-confirmation emails for this client appeared in that window, unlike the pattern seen 08-09/08-11/08-13 (three late-payroll reminders). This is new negative evidence but does not resolve the contradiction on its own — it could mean payroll was cancelled/paused, caught up, or that the notification pattern simply changed. Reported per the negatives rule: a search of Gmail (`from:gustonoreply@gusto.com`, `after:2026/08/15`) did not find any emails naming this client.
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 - ~~Confirm QuickBooks Online reconnection to Double~~ — **answered 2026-08-11 (Lilian): the disconnection follows the bookkeeping pause.** Reconnect when the client resumes, not before.
-- ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
-  LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
-  a permanent address change should be filed instead, before mail starts bouncing. _(Gmail,
-  2026-08-14.)_
 - A **second "Deep Tech" Google Drive folder** (created 2026-08-10, different parent than the one
   linked in §7) turned up in this sweep — confirm whether it's a duplicate/stale folder or a
   distinct working folder before relying on it. Not re-chased this run (budget).
 
 ### Log (continued)
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes/activity; the FDOR case note (491845) is unchanged since 2026-08-13. Chase pass on all five §6 items (deadline items first): the **USPS mail-forwarding-ending deadline is 2026-09-18 (27 days out)** — no evidence found that a renewal/address-change decision has been made; the Safe Guard Self Storage cancellation and the Penn Credit toll balance are both still open with no update; the FDOR Q2-2025-demand-withdrawal confirmation is unchanged since 2026-08-13; the Gusto cancellation decision remains UNSETTLED (see above — new negative evidence, not a resolution). The second "Deep Tech" Drive folder identity check was not re-chased this run (budget).
+- 2026-08-25 — **The Shopify store's ownership transfer to the owner was worked with Shopify support, and it is
+  blocked.** _(Shopify support chat transcript, 2026-08-25, supplied by Lilian; corroborated against Gmail and
+  Double.)_ The store is **Deep Tech Development / gorobots.us**, registered under **Julia**, and the owner it has
+  to move to is **Vitalii Ivanov** — confirmed as this client's Double admin contact (he is also the contact on
+  1701 N M ST LLC, Universal Trading Technology LLC and his own individual profile). Neither adding him as a
+  **staff user** nor **Transfer ownership** works from the admin. Across a three-handler chat Shopify concluded the
+  store's **Shopify Balance account is active and is the blocker even at $0**, offered either closing it
+  permanently or switching payouts to an external bank, and — Julia having only one bank account — **submitted a
+  permanent closure request**. Julia downloaded every monthly Balance statement first; Shopify said there was no
+  transaction history to export because the account never processed a payout. **No ETA, and the promised ticket
+  number had not arrived** when this was written. Recorded as Double case note **503544**; §3 and §5 updated, and
+  §5 reordered so the live item is visible on the published card. _(Worked by Lilian.)_
+  - ⓘ **Corroboration, because the name reached the session as "DigTech":** Shopify's own billing and Balance
+    emails to Julia name the store **"Deep Tech Development" (gorobots.us)**, monthly Balance statements ran
+    Nov 2025 → Jul 2026 (an active Balance account, exactly as Shopify found), and no client, contact or email
+    anywhere is named "DigTech".
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration
@@ -191,8 +226,11 @@ the actual details.
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=706685](https://app.doublehq.com/close?cid=706685)
-- **Double case note:** `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
+- **Double case notes** (two separate matters — one note each):
+  - `CASE · Shopify — transferring store ownership to Vitalii Ivanov` — note **503544**
+  - `CASE · FDOR — moving the sales-tax and reemployment-tax effective dates` — note **491845**
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/19OZXViieW60GsVtKUbqta0a2mM2VMZK1)
 - **Client password vault (Google Doc):** [all client logins — incl. the Penn Credit account/ID number + ZIP](https://docs.google.com/document/d/1dR6glVFYIu9k8bs4DPUzCcx1AnMq-d_-HoJWcTmJNug/edit) — sensitive values live here, never in this file.
 - **Penn Credit collection portal:** [account.penncredit.com/myaccount](https://account.penncredit.com/myaccount) — pay down the FDOT toll debts here.
+- **Related clients (owner group):** [Vitalii Ivanov & Tetiana Mogylova](./vitalii-ivanov.md) — the owner's individual (1040) file. His other companies (1701 N M ST LLC, Universal Trading Technology LLC) have no CI file yet.
 - **Related SOPs:** [Deep Tech — FDOT Toll Debts (Penn Credit)](../../sops/deep-tech-penn-credit-tolls.md) — the pay-down runbook (draft).
