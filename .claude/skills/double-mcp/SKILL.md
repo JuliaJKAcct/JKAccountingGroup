@@ -1213,6 +1213,13 @@ invites infrastructure to look, find nothing, and close it again. And name the s
 integration**, not "Claude": when Lilian said "the Claude integration" on 2026-06-17, Allison answered
 about *Ask Double*, a different product.
 
+ⓘ **Before drafting anything to Double, read the numbered rules in
+[`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)**
+("The follow-up" → the six rules). They are the single home for what a message to Double must carry
+and what it must never say — including the symptom-and-duration requirement, both probe strings, and
+the scope of the raise-it ask. **Deliberately not restated here:** this guidance has already been
+corrected in one place and left stale in the other three times.
+
 **Double answered on 2026-08-13, and the answer was "not us."** Allison relayed from her team: *"There
 is no maximum length for notes in Double and no restrictions from our side for the MCP connectors to
 limit notes. I have been instructed that the issue is coming from Claude's API, so unfortunately, it is
