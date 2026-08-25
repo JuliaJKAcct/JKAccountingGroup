@@ -1213,11 +1213,12 @@ invites infrastructure to look, find nothing, and close it again. And name the s
 integration**, not "Claude": when Lilian said "the Claude integration" on 2026-06-17, Allison answered
 about *Ask Double*, a different product.
 
-ⓘ **Carry the SYMPTOM as well as the status code** — what the person loses (*"the note does not
-save"*) and since when we have been working around it. Support triages on impact, and a bare `403` is
-not impact. ⚠️ **But do not put it first**: the reader must meet *"this is not about notes"* before
-any sentence about notes, or the ticket goes back to the product team that already answered it. In
-the drafted email it sits after the argument, not before it.
+ⓘ **Before drafting anything to Double, read the numbered rules in
+[`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)**
+("The follow-up" → the six rules). They are the single home for what a message to Double must carry
+and what it must never say — including the symptom-and-duration requirement, both probe strings, and
+the scope of the raise-it ask. **Deliberately not restated here:** this guidance has already been
+corrected in one place and left stale in the other three times.
 
 **Double answered on 2026-08-13, and the answer was "not us."** Allison relayed from her team: *"There
 is no maximum length for notes in Double and no restrictions from our side for the MCP connectors to

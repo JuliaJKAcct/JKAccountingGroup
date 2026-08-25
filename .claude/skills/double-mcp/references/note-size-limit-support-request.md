@@ -169,9 +169,8 @@ wrap-up call was the end of that window. **That hand-off has now happened: 2026-
 
 ## The ORIGINAL draft — ⚠️ NOT what was sent
 
-⚠️ *(Editor's note, not part of the email.)* **Question 2 below asks for the limit to be raised "for
-our account". That wording is why rule 5ⓒ exists — it is kept here as the archival record of what was
-drafted, and must never be copied into a live message.**
+⚠️ *(Editor's note, not part of the email.)* **Question 2 below carries the account-scoped wording
+that rule 5ⓒ forbids. Read that rule before reusing anything from this section.**
 
 ⚠️ **Kept for the evidence table and the phrasing, not as a record of our correspondence.** What went
 out differed in the three ways listed in the header — most importantly it asked **two** questions,
@@ -308,7 +307,9 @@ trailing asides; do not drop them.**
    of context instead) and not the three-row evidence table (rule 2). Older versions of this file
    recommend both; they are superseded.
 5. **Three things the email must carry.** ⓐ The **user-visible symptom, and since when we have been
-   working around it** — a support agent triages on impact, and a bare `403` is not impact. ⚠️ **State
+   working around it** — worded as what we can observe (*"it does not save, and the response does not
+   tell us whether anything was written"*), **never** *"there is no partial save"*, which §7's own
+   recovery rule says we cannot know — a support agent triages on impact, and a bare `403` is not impact. ⚠️ **State
    the last date we actually confirmed the failure, not that it is happening today**, unless someone
    has just re-tested: we avoid the wall by keeping notes short, so "still happening" is an inference,
    not an observation. ⓑ **Both probe strings**, refused *and* accepted — the pair is what shows size
@@ -368,47 +369,45 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > so that anyone on the team can open the client and understand it in a minute. When one grows past the
 > limit it does not save — and the response does not tell us whether anything was written, so we have
 > to go and check before retrying. The history then has to be split across two notes to fit, which
-> defeats the purpose. **And the limit is not really about notes** — a plain client search with a long
-> filter is refused in the same way, which is how we know it is the size of the request rather than
-> anything about a note. We have been working around this since **6 August 2026** by keeping notes
-> short and splitting them; we last confirmed the failure on **13 August 2026** and have not
-> deliberately re-tested since, though nothing suggests it has changed. Happy to re-run it any time.
+> defeats the purpose. We have been working around it since **6 August 2026** by keeping notes short
+> and splitting them, so we no longer run into it by accident — the last time we confirmed it
+> deliberately was **13 August 2026**, and nothing since suggests it has changed.
 >
 > **Technical details, if they help:**
 >
 > - Workspace: **JK Accounting Group** (account owner Julia Kononova).
 > - Error: `403 Forbidden`, `error_code: mcp_request_blocked`, on the MCP endpoint.
-> - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
->   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
-> - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
->   characters is refused. Tested 13 August 2026. We have not tested any size between 48 and 9,000, so
->   on this path that is as close as we can put it. There is no client ID to narrow it by — it is a
->   roster-wide search — **but both filter strings are unique and you can grep for them directly:**
->   - refused: the 100-character block
->     `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
->     repeated 90 times, with `NN` running 01 to 90;
->   - accepted, same tool, same session: `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE`.
->
->   That pair is what shows size is the variable: same endpoint, same account, same tool, one short and
->   one long. We did not record the exact times, so please search the whole of 13 August 2026 — or ask
->   us to re-run both while you watch.
-> - **The note writes reproduce every time:** the same body is refused on every attempt, while a
->   shorter body of about 7,600 characters saves.
-> - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
->   characters. Everything above is counted in characters — **we have not measured any payload in
->   bytes.**
-> - **A hint, not a measurement of ours:** an 8 KB request-body limit is a common default, and it may
->   be worth checking whether one is configured anywhere in this path. Please do not convert our
->   character counts into bytes to test that — our note bodies are HTML with multi-byte characters, so
->   the conversion would not be reliable.
-> - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
+> - **Note writes — measured 6 August 2026**, roughly 03:25–04:45 UTC, on client IDs **706709** and
+>   **710577**: a body of about 7,600 characters saves; about 8,000 and about 10,400 are refused. The
+>   same body is refused on every attempt, so it reproduces reliably.
+> - **It is not our content:** a body of about 8,200 characters of plain repeated filler — no
 >   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
 >   text.
-> - **The comparison that points away from Claude:** the system that accepted the identical ~9,000
->   characters is a different MCP integration on the same Claude account, tested about a minute apart —
->   so it is like-for-like.
-> - We are happy to run the failing request at a time you choose, so someone can watch it reach your
->   logs, and we can send a payload of any size you like.
+> - **Read-only calls — tested 13 August 2026.** A `list_clients` name filter of about 48 characters
+>   works; one of about 9,000 characters is refused. We have not tried any size in between, so on this
+>   path 48–9,000 is as close as we can put it. There is no client ID to narrow it by — it is a
+>   roster-wide search — **but both filters are unique text you can grep for.** They share this prefix,
+>   which is the part to search on:
+>
+>   `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-`
+>
+>   The refused one continues `JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-` followed by a
+>   nine-digit counter, that whole 100-character block repeated 90 times. The accepted one is just
+>   `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE`. Same endpoint, same account, same tool, one
+>   short and one long — which is what shows size is the variable. We did not record the exact times,
+>   so please search the whole of 13 August 2026.
+> - **Two exact byte figures, from those two filters.** They are plain ASCII, so their character and
+>   byte counts are identical: the refused one is **9,000 bytes** and the accepted one **48 bytes**.
+>   Those are the only payloads we can give you in bytes.
+> - ⚠️ **Please do not convert our NOTE figures into bytes.** Note bodies are HTML containing
+>   multi-byte characters, so the ~7,600 that saves may already exceed 8 KB when encoded — converting
+>   it would give you a misleading result. An 8 KB request-body limit is a common default and may be
+>   worth checking for, but we are offering that as a lead, not as a measurement of ours.
+> - **The comparison that points away from Claude:** the system that accepted the identical
+>   9,000-character text is a different MCP integration on the same Claude account, tested about a
+>   minute apart — so it is like-for-like.
+> - We are happy to run any of these at a time you choose, so someone can watch the request reach your
+>   logs, and to send a payload of any size you like.
 >
 > Thank you very much for your help.
 >
