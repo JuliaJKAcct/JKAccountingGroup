@@ -21,23 +21,34 @@
 >   🔴 **DEAD as of 2026-08-17** — the call happened that day, and the question has been removed from
 >   the follow-up. Do not re-add it.
 >
-> 🔴 **THE ROUTE CHANGED 2026-08-17 — this box is the CANONICAL statement of it.** Everywhere else in
-> the repo points here rather than restating it, because the first attempt at this reroute restated it
-> in four files and missed five more. **If the route changes again, change it HERE and check the
-> pointers still say only "see the reference file".**
+> ➡️ **For where anything goes NOW, read "The route" immediately below — not this box.**
 >
-> | | |
-> |---|---|
-> | **Send to** | `help@doublehq.com` |
-> | **Copy** | `allison@doublehq.com` · Julia · Maria |
-> | **Form** | A **new email**, never a reply on *"Checking in before our 8/18 wrap-up"* |
-> | **Why Allison stays in copy** | She carries the whole history and personally argued the deadline request with Double's developers; a bare `help@` ticket restarts from zero |
-> | **Second live contact** | **Ryan Quill** `ryan.quill@doublehq.com` — account-side, opened a conversation 2026-08-24 pitching the Plus/Scale tiers and asking for a call |
->
-> **Why:** Allison closed her implementation period on 2026-08-17 (*"Dedicated Double Support Period
-> Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat. This box governs the
-> follow-up **and** every other open ask with Double (`FOLLOW-UPS.md` rows 19, 22 and 23).
-> ⚠️ The *"Who this goes to"* section further down is **historical** and says the opposite.
+## 🔴 The route — CANONICAL. Everything else in the repo points here.
+
+**Changed 2026-08-17.** This is the only place the route is written out. If it changes again, **change
+it HERE**, then check that the pointers elsewhere still only *point* — they must not restate it.
+*(Written after the first attempt at this reroute restated the route in two files and left it stale in
+five others; the route currently appears across four files, and only this one states it.)*
+
+| | |
+|---|---|
+| **Send to** | `help@doublehq.com` |
+| **Copy** | `allison@doublehq.com` · Julia · Maria — **on matters Allison already worked** (the request-size 403, the deadline write). ⚠️ **Not** on an ask she has never seen: `FOLLOW-UPS.md` row 23 (Bank Feeds) was never raised with her, and copying a departed contact into a first-time feature request is the opposite of the reason she is copied at all |
+| **Form** | A **new email**, never a reply on *"Checking in before our 8/18 wrap-up"* |
+| **One ask per message** | Do **not** bundle. The 2026-08-06 email carried two and came back with one good answer and one wrong one |
+| **Why Allison at all** | She carries the whole history and personally argued the deadline request with Double's developers; a bare `help@` ticket restarts from zero |
+
+**Why it changed:** Allison closed her implementation period on 2026-08-17 (*"Dedicated Double Support
+Period Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat.
+
+**Governs:** the follow-up below, and `FOLLOW-UPS.md` rows 19, 22 and 23.
+
+ⓘ **A second live contact, and NOT a route:** **Ryan Quill** (`ryan.quill@doublehq.com`), account-side,
+opened a conversation 2026-08-24 pitching the Plus/Scale tiers and asking for a call. Raising a
+technical ask there is **Lilian's commercial judgement and nobody else's** — a session must not choose
+it, and the FOLLOW-UPS rows that mention him say so.
+
+---
 
 When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
 and delete or supersede this file.
@@ -103,7 +114,7 @@ evidence is kept here rather than reconstructed from memory the next time it com
 🔴 **This section describes the ORIGINAL send of 2026-08-06 and is kept only as the record of why that
 email was written the way it was. Its routing instructions are DEAD** — Allison closed her
 implementation period on 2026-08-17, the thread it names is closed, and the call it says to confirm has
-happened. **For where the follow-up actually goes, read *"The follow-up"* at the end of this file.**
+happened. **For where anything goes now, read *"The route"* at the top of this file.**
 
 **Allison Millea, Implementation Specialist at Double** *(as she was during implementation)* — the firm's implementation contact, with
 recurring 30-minute calls with Lilian, Maria and Julia. **She already knows who we are and that we
@@ -234,33 +245,28 @@ received, as though it had been ignored, hands them a version of the thread that
 
 ## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
 
-🔴 **Do not send this to Allison on the old thread. That window closed.** The follow-up drafted on
-2026-08-13 sat unsent for eleven days, and in that time the situation moved twice:
+🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is
+["The route" at the top of this file](#-the-route--canonical-everything-else-in-the-repo-points-here)
+— deliberately not repeated here.** The follow-up drafted on 2026-08-13 is **still unsent as at
+2026-08-25**, and in that time the situation moved twice:
 
 - **2026-08-17 — Allison ended her implementation period** (*"Dedicated Double Support Period Winding
   Down"*, after the wrap-up call she and Lilian held that day). Her words: *"While I won't be your main
   point of contact moving forward, the team at Double is still here for you. If you ever need help or
   have a question, please reach out to **help@doublehq.com** or use the in-app chat."* Maria replied
-  and thanked her. **Searched 2026-08-25** (Gmail, the thread itself plus every message to or from
-  `doublehq.com` after 2026-08-13): **the thread has not moved since Allison's 08-13 answer, and
-  nothing has gone to `help@doublehq.com`.** So the follow-up is still unsent and re-asking is safe —
-  ⚠️ **re-run that search before sending**, since this claim ages.
+  and thanked her. **Searched 2026-08-25 in JULIA's mailbox** (`julia@jkaccountinggroup.com` — the
+  thread itself, plus every message to or from `doublehq.com` after 2026-08-13): the thread has not
+  moved since Allison's 08-13 answer, and nothing has gone to `help@doublehq.com`. ⚠️ **That is Julia's
+  mailbox, and this email is Lilian's to send from `lilian@`** — a send from her own account with
+  nobody at `jkaccountinggroup.com` copied would be invisible to it. **So: ask Lilian whether she has
+  already sent it, or re-run the search in her mailbox, before sending.** The evidence says *unsent*;
+  it does not prove it.
 - **2026-08-24 — Ryan Quill** (`ryan.quill@doublehq.com`) opened a fresh account conversation: he had
   audited the account, praised the firm's use of the integration, and pitched the new **Plus / Scale**
   tiers with launch-promotion pricing plus a 15-minute call. Julia's out-of-office answered him.
 
 ⚠️ **Two questions in the old draft are now DEAD and must not be sent:** *"is our call on the 17th or
 18th?"* (it happened on the 17th) and anything addressed to Allison as the owner of the issue.
-
-**The route now:** send it to **`help@doublehq.com`**, which is where Allison directed us, and
-**copy Allison** — she carries the entire history, she personally argued the deadline feature request
-with their developers, and a bare ticket at `help@` restarts from zero. Julia and Maria in copy as
-before. **A new email, not a reply on the old thread** — the thread belongs to an implementation that
-is formally closed.
-
-ⓘ **Unused leverage, Lilian's call and nobody else's:** Ryan Quill is asking for a call to sell an
-upgrade. A paying customer with an open technical blocker is in a reasonable position to raise it
-there. **Not written into the email** — it is a commercial judgement, not a support fact.
 
 **Written in plain language for a reader who may not be an engineer**, per Lilian's instruction of
 2026-08-13 (*"más escueta y mejor explicada… para que Allison no se atormente con tanta cosa
@@ -275,19 +281,26 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
 3. **The technical block must stand alone** — workspace, dates, client IDs, error code — because it
    will be forwarded, and an engineer who cannot find the request in a log closes the ticket as
    unreproducible.
-4. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
+4. **Never restore from git history:** not the firm introduction (the escalation opens with two lines
+   of context instead) and not the three-row evidence table (rule 2). Older versions of this file
+   recommend both; they are superseded.
+5. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
    Allison answered a "Claude integration" question with *Ask Double* on 2026-06-17. ⓑ **Ask about
    BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
    and naming only the firewall is how this gets closed "out of scope" twice.
 
 **Subject:** `MCP integration — requests over about 8,000 characters are refused with a 403 (JK Accounting Group)`
-⚠️ **The subject states the MEASURED unit — characters.** The body may still offer *"somewhere around
+
+**To:** `help@doublehq.com`
+
+**Cc:** `allison@doublehq.com`, Julia, Maria
+
+⚠️ *(Editor's note, not part of the email.)* **The subject states the MEASURED unit — characters.** The body may still offer *"somewhere around
 8 KB"* as a **lead** ([`../SKILL.md`](../SKILL.md) §7: *"give them the observation, let them find the
 actual rule"*), and that is not a contradiction: characters are what we counted, 8 KB is the hint about
 where to look. What must never happen is a **byte figure presented as our measurement** — the subject is
 the most-quoted line in the thread, and an engineer who converts our passing 7,600-character HTML note
 and finds it already over 8,192 bytes stops trusting the rest.
-**To:** `help@doublehq.com` · **Cc:** `allison@doublehq.com`, Julia, Maria
 
 > Hello,
 >

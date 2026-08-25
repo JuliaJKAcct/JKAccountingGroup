@@ -445,7 +445,8 @@ implementation period. ➡️ **Everything in this section now goes by the route
 If any of the three lands, this file and [SKILL](../SKILL.md) both change. The **deadline write** flips §4
 and the quick-answer table here, plus SKILL §1 ("The tax project is READ-ONLY — including the
 deadline") and SKILL §2. The **request-size limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
-size-wall warning in §8 of this file.
+size-wall warning in §8 of this file. The **Bank Feeds split** would change §9, the quick-answer row
+that says the feed is not exposed, and the §14 "Still not available" list.
 All three are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) — **rows 19, 22 and 23**. The note-size
 ask has its own evidence file —
 [`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — which records what
