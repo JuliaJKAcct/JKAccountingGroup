@@ -1067,8 +1067,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    about the **return** — not about the relationship, and not about our machinery.
    _(Derived from what Lilian actually deleted when she edited note 490984 herself on 2026-08-12,
    and she asked for the pattern to be kept as a rule: **"entiende por qué lo borré… el tipo de
-   cosas que sí quiero que vaya y el tipo que no."**)_ She cut two kinds of thing, and they name
-   two axes rule 11 does not:
+   cosas que sí quiero que vaya y el tipo que no."**)_ **Three kinds of thing come out**, and they name
+   three axes rule 11 does not. **The first two are from that 2026-08-12 edit; the third is from a second
+   one she made on 2026-08-25** and is attributed in place:
    - ✂️ **The DERIVATION behind a settled fact.** She kept *"Filing status: married"* and struck
      *"and not living apart from his spouse in the last six months of 2025"* — the test that
      established it. **State the conclusion. The reasoning that produced it lives in the client
@@ -1095,9 +1096,10 @@ the whole thing start to finish, instead of reconstructing it from email.
    income came through K-1s, a W-2 and a retirement distribution"* **stays**: without the reasoning
    the reader has no ground to distrust the column. *"Married, and he did not live apart from his
    spouse for the last six months"* **goes**: nobody is going to argue with "married".
-   ⚠️ **The third bullet does NOT touch rule 9.** A hedge on something **the note itself asserts** still
-   goes in — *recommended, not agreed* · *inferred, not established* · *unverified*. What comes out is
-   doubt about **someone else's** reasoning that changes nothing the reader will do.
+   ⚠️ **The third-party-diagnosis cut does NOT touch rule 9's caveats** _(§7 rule 9 — "carry the master's
+   caveats into the note")_. A hedge on something **the note itself asserts** still goes in — *recommended,
+   not agreed* · *inferred, not established* · *unverified*. What comes out is doubt about **someone else's**
+   reasoning that changes nothing the reader will do.
    ⓘ This is also the first thing to cut when a note approaches the size wall below.
    ⚠️ **This narrows rule 11, it does not widen it.** **Rule 11 decides whether our analysis may be
    in the note at all** (default: no — ask her); **rule 12 trims what is left.** Read alone, rule
