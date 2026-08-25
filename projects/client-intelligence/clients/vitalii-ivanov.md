@@ -1,6 +1,6 @@
 # VITALII IVANOV & TETIANA MOGYLOVA
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-25
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -35,7 +35,7 @@
 - **Business name:** Vitalii Ivanov & Tetiana Mogylova — an **individual (joint) client record**, not a company
 - **Entity type:** Individual taxpayers — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_
 - **Home state:** _(pending)_
-- **Industry / what they do:** _(pending in the US)_ — abroad he holds **50% of four Ukrainian companies** (§5). ⚠️ **He also has US-side activity the file cannot yet name:** in July 2026 Lilian sent him **invoices for robot purchases**
+- **Industry / what they do:** **In the US he is the owner of Deep Tech Development Group LLC** — e-commerce (robotics), trading as **"Go Robots"** at **gorobots.us**. He is **also the Double admin portal contact on 1701 N M ST LLC and Universal Trading Technology LLC — which is NOT the same as owning them**, and nothing has established that he does (§5). Abroad he holds **50% of four Ukrainian companies** (§5). ✅ **This answers what the file called "US-side activity it cannot yet name":** the **robot-purchase invoices** Lilian sent him in July 2026 are inventory for that store _(Lilian, 2026-08-25 — she named him its "dueño verdadero"; corroborated by Double contacts and the store's own billing emails to Julia)_
 - **Primary language:** 🔴 **Russian only** _(Double `Preferred language = Only Russian`)_ — write to this client in Russian, not English
 - **Our engagement (services we provide):** individual income tax (1040). Bookkeeping **N/A**, `1099 Preparation = false`, `Annual Report = false` _(Double properties)_
 - **Fiscal year-end:** calendar year
@@ -54,7 +54,7 @@ the actual details (and Claude can pull them live when a task needs them).
 | Preparer on the 2025 return | **Irina Jandieri** _(Double tax project)_ — also the author of the 2025 note in §6 |
 
 - **Double client:** [app.doublehq.com/close?cid=710666](https://app.doublehq.com/close?cid=710666)
-- **Double case note:** none — no agency matter has been worked for this client
+- **Double case note:** none **on this individual record**. The live matter concerning him sits on his company, **Deep Tech Development Group LLC** — Double note **503544**, on [`deep-tech-development.md`](./deep-tech-development.md).
 
 ## 3. Systems & access
 
@@ -66,7 +66,7 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending — nothing recorded, but see §1: US-side activity exists and is unnamed)_
+- **Applies?** _(pending on this individual record — nothing recorded.)_ ⓘ **His US business activity is now named (§1) and it sells tangible goods**, but that obligation sits on the **company**, not on this 1040 record — see [`deep-tech-development.md`](./deep-tech-development.md) §4, where the sales-tax registration is itself still an open question.
 
 ### Payroll
 - **Applies?** No _(Double)_
@@ -98,6 +98,7 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 🔴 **HE HOLDS 50% OF FOUR UKRAINIAN COMPANIES — A FOREIGN-ENTITY REPORTING QUESTION IS OPEN ON ALL FOUR, AND IT IS LIVE WORK.** ⚠️ **Which form is not settled, and the file must not pretend it is.** Two things stop it being automatic: **50% is not a majority** — Form 5471's control category needs *more than* 50%, and a CFC needs US shareholders to hold *more than* 50% of vote or value, so at exactly 50% with a non-US co-owner it may not apply at all (acquisition-year categories can still bite); and a Ukrainian **ТОВ is an LLC-type entity**, so for US purposes it may be a corporation (**5471**), a partnership (**8865**) or disregarded (**8858**) depending on classification. **A working file already exists in Drive (`Form5471_ExtremePride_2025.xlsx`), so somebody has already reached a view on one of them.** Establish the position for **each** of the four, and what has been filed for prior years — the penalty for a missed foreign-entity form is **per form, per year** and among the harshest in the code. ⓘ A **`form-5471-tax-analysis` skill exists** — it is a personal/synced skill, **not** in this repo's `.claude/skills/`, so a session that cannot see it should ask for it rather than improvise.
 - 🔴 **THE 2025 RETURN IS UNFILED AND THE ORGANIZER WAS NEVER COMPLETED.** The project sits `inProgress` with the organizer still in `Sent`, past the **original** 2026-04-15 date. ⚠️ **Do not report him as four months overdue without checking the extension** — the firm ran a roster-wide "File Extension" round in May 2026, and a 4868 moves the deadline to **2026-10-15**.
+- 🔵 **HE IS THE OWNER BEHIND THE FIRM'S DEEP TECH WORK — and that company has a live, blocked handover.** **Deep Tech Development Group LLC** is his _(Lilian, 2026-08-25)_, and its **"Go Robots" store (`gorobots.us`) is registered under Julia and is being transferred to him** — **blocked** as at 2026-08-25, with the whole trail on the company's file and in Double note **503544**, not here. ⚠️ **On his other two US entities the evidence is weaker:** Double records him as the **admin portal contact** on **1701 N M ST LLC** and **Universal Trading Technology LLC**, and **a portal contact is not proof of ownership** — nobody has established who owns those. **His company matters belong in [`deep-tech-development.md`](./deep-tech-development.md), not in this file**; this bullet exists so nobody reads this record as though he had no US business. _(Double contacts, 2026-08-25.)_
 - **Write to this client in RUSSIAN.** Double records `Preferred language = Only Russian`. It is the only client file so far carrying that property, and it means English correspondence will not land.
 - **The four companies, with their registration dates** _(Irina Jandieri, 2025-08-18)_: **ТОВ Бест Вей Фудс** (2018-07-30) · **ТОВ Екстрим Прайд** (2019-06-05) · **ТОВ 34-й градус** (2020-07-04) · **ТОВ Юкрейн Анлімітед Трейдинг** (2020-11-17). The Drive working file names **Extreme Pride**, so that is the one already under analysis.
 - ✅ **THE FIRM'S ADDRESS IS THIS COUPLE'S MAIL-OF-RECORD — treat it as answered, not open.** USPS Informed Delivery digests addressed to the spouse arrive at Julia's inbox **daily** (observed continuously through July and August 2026), and the firm has forwarded her physical mail on to her. **So an IRS notice for this couple lands here**, and somebody at the firm has to watch for it — that is an obligation, not a curiosity.
@@ -110,9 +111,24 @@ the actual details (and Claude can pull them live when a task needs them).
 - 2026-08-14 — **File created**, then **corrected the same day.** The first version stated the Form 5471 position as settled and left the mail-of-record question open; an independent review caught the overreach and a wider Gmail pass answered the second. _(Worked by Lilian.)_
   - **2025-08-18 — the ownership note.** _(Irina Jandieri, migrated TaxDome notes.)_ He holds **50% of four Ukrainian companies**, with each company's registration date (§5).
   - **2026-07-13 — Lilian forwarded him the letters received at Julia's address** — the firm's own mail-of-record arrangement, in his own correspondence.
-  - **2026-07-28 — Lilian sent him invoices for robot purchases** _(in Russian)_. What the robots are for is not recorded, and it is the first sign of US-side activity on this file.
+  - **2026-07-28 — Lilian sent him invoices for robot purchases** _(in Russian)_. The first sign of US-side activity on this file. ⓘ **ANSWERED 2026-08-25** — they are inventory for the **"Go Robots" store** (`gorobots.us`) run by his company **Deep Tech Development Group LLC**; see the 2026-08-25 entry below.
   - **Throughout July and August 2026 — USPS Informed Delivery digests** addressed to the spouse arrive at the firm's inbox daily.
 - **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-07 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
+- 2026-08-25 — **Established that he is the owner behind the firm's Deep Tech / "Go Robots" work**, while recording
+  the store-ownership transfer being worked for that company. Double's portal contacts put him as admin on
+  **Deep Tech Development Group LLC**, **1701 N M ST LLC**, **Universal Trading Technology LLC** and this individual
+  record; the store's own billing emails to Julia name it **Deep Tech Development / gorobots.us**. That closes the
+  "robot purchases" question this file had carried since 2026-07-28 and names the US-side activity §1 could not.
+  **That matter itself is recorded on the company** — [`deep-tech-development.md`](./deep-tech-development.md)
+  and Double note **503544** — not duplicated here. ⚠️ **What it does NOT establish** is that he owns **1701 N M ST
+  LLC** or **Universal Trading Technology LLC**: Lilian's statement covered **Deep Tech only**, and on the other two
+  all we have is portal-contact status. _(Worked by Lilian.)_
+  - ⓘ **A loose thread this turned up, and it is an INFERENCE, not a finding.** The external Ukrainian
+    finance-team contact who holds portal access to Deep Tech and to two of his other US entities uses an
+    email domain that matches one of his **four Ukrainian companies** (**ТОВ 34-й градус**). If that is the
+    same organisation it links the Ukrainian finance team to a company inside the open foreign-entity
+    question above — **but it rests on the domain name alone and nobody has checked it.** Worth one question
+    when that work is picked up. _(Double contacts, 2026-08-25.)_
 
 ### Tax year 2025 — the review
 
@@ -125,12 +141,12 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔴 **Settle the foreign-entity reporting position for each of the four companies**, for 2025 and prior years — **5471, 8865 or 8858 depending on classification**, and 50% may put some of them outside 5471 entirely. Start from the existing Drive working file, which shows a view was already taken on one.
 - 🔴 **Confirm the 2025 Form 4868**, then chase the organizer — it is still in `Sent`, and he works in Russian only.
 - **Assign someone to watch the physical mail** — the firm is this couple's mail-of-record (§5), so IRS correspondence lands here.
-- **Find out what the "robot purchases" are** (2026-07-28). It is the only sign of US-side activity and nothing explains it.
 - **Run the one-time full historical sweep** — Ping, Drive and everything before July 2026 have never been swept.
+- ~~Find out what the "robot purchases" are (2026-07-28)~~ — **answered 2026-08-25:** they are inventory for the **"Go Robots" store** (`gorobots.us`) run by **Deep Tech Development Group LLC**, which is his. Forwarding those vendor invoices to him is a standing part of that company's bookkeeping relationship.
 
 ### Information still needed
 
-- [ ] What they do in the US, their home state, and whether either has US business activity
+- [ ] What they do in the US, their home state, and whether either has US business activity — **partly answered 2026-08-25:** **he** has US business activity (he owns **Deep Tech Development Group LLC**, and is the admin portal contact on two more US entities whose ownership is unestablished — §5). **Still open: their home state**, and whether **Tetiana Mogylova** has any US activity of her own.
 - [ ] Which of the four Ukrainian companies are still active, and their current ownership percentages
 - [ ] What foreign-entity forms have been filed to date, and for which years
 - [ ] Whether a 2025 extension exists
@@ -142,4 +158,5 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Double tax project (2025):** [tax-return?cid=710666&projectId=219350](https://app.doublehq.com/tax-return?cid=710666&projectId=219350)
 - **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > VITALII IVANOV` (and the `*Dupplicated` copy) — read 2026-08-13, written up here 2026-08-14.
 - **Google Drive folder (sensitive vault):** _(pending — link)_ — holds `Form5471_ExtremePride_2025.xlsx`
+- **Related clients (owner group):** [`deep-tech-development.md`](./deep-tech-development.md) — **Deep Tech Development Group LLC**, his US e-commerce company (the "Go Robots" store), where his company-side matters are recorded. **1701 N M ST LLC** and **Universal Trading Technology LLC** — he is their admin portal contact, ownership unestablished — have no CI file yet.
 - **Related SOPs:** _(pending)_

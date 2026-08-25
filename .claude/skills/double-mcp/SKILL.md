@@ -896,7 +896,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    on a matter, `list_notes(clientId)` and look for the note that already covers it.**
    ⚠️ **And EDIT THE BODY YOU FETCHED — never re-author a note from memory.** A person may have
    edited it in the UI since you last saw it (Lilian did exactly that on 2026-08-12, cutting what
-   she judged unimportant), and **Double keeps no version history: there is no `delete_note`, no
+   she judged unimportant — **and again on 2026-08-25, deleting a whole block from a note a session had
+   written two hours earlier**; that session was asked to revise the same note, fetched first, and so
+   applied its changes on top of her cuts instead of restoring them), and **Double keeps no version history: there is no `delete_note`, no
    note revisions, and `list_activity_log` has no `Note` entity.**
    🔴 **That last clause cuts a second way, and it cost the firm five days.** Because the log carries
    no `Note` entity, a note whose **content** changed is invisible to it — and "rewritten in place"
@@ -1065,8 +1067,9 @@ the whole thing start to finish, instead of reconstructing it from email.
    about the **return** — not about the relationship, and not about our machinery.
    _(Derived from what Lilian actually deleted when she edited note 490984 herself on 2026-08-12,
    and she asked for the pattern to be kept as a rule: **"entiende por qué lo borré… el tipo de
-   cosas que sí quiero que vaya y el tipo que no."**)_ She cut two kinds of thing, and they name
-   two axes rule 11 does not:
+   cosas que sí quiero que vaya y el tipo que no."**)_ **Three kinds of thing come out**, and they name
+   three axes rule 11 does not. **The first two are from that 2026-08-12 edit; the third is from a second
+   one she made on 2026-08-25** and is attributed in place:
    - ✂️ **The DERIVATION behind a settled fact.** She kept *"Filing status: married"* and struck
      *"and not living apart from his spouse in the last six months of 2025"* — the test that
      established it. **State the conclusion. The reasoning that produced it lives in the client
@@ -1075,12 +1078,28 @@ the whole thing start to finish, instead of reconstructing it from email.
      works"* block: that he sends information by text rather than the portal, that he speaks
      Russian, and the explanation of **why our organizer stopped asking questions**. **Colleagues
      already know the client, and how our tools behaved is our business, not the return's.**
+   - ✂️ **OUR DOUBTS ABOUT A THIRD PARTY'S DIAGNOSIS, and the gaps nobody chased.** _(Lilian,
+     2026-08-25, on the Deep Tech Shopify note. She deleted the block herself, then said of all three
+     items in it: **"ninguna de ellas vale la pena que te hable de ellas. No son relevantes. Olvida esas
+     tres cosas."**)_ The note carried a *"THREE THINGS THAT ARE NOT SETTLED"* block: that the vendor's
+     diagnosis of what was blocking us was **untested**, that nobody had established why a second,
+     related error happened, and that two of the vendor's own advisors had **contradicted each other**.
+     All three were true. None of them was the note's business. **A case note records what the third
+     party SAID and DID, and what we do next — not our audit of whether they were right.** Rule 12's own
+     test is why: none of it changed what the reader does. The next action was identical either way —
+     wait for the confirmation, then transfer — and **if the diagnosis turns out to be wrong, that
+     becomes a new TIMELINE entry, not a caveat carried in advance.** Chase the gap if it matters; do
+     not park it in the note as a standing doubt.
    ⚠️ **REASONING SURVIVES when it is what tells the reader not to trust something, or what to do
    next.** What gets cut is the reasoning behind a fact the reader will simply accept. *"Double's
    return-type column says `1040-SCH C` and his 2024 return does not support it — that year his
    income came through K-1s, a W-2 and a retirement distribution"* **stays**: without the reasoning
    the reader has no ground to distrust the column. *"Married, and he did not live apart from his
    spouse for the last six months"* **goes**: nobody is going to argue with "married".
+   ⚠️ **The third-party-diagnosis cut does NOT touch rule 9's caveats** _(§7 rule 9 — "carry the master's
+   caveats into the note")_. A hedge on something **the note itself asserts** still goes in — *recommended,
+   not agreed* · *inferred, not established* · *unverified*. What comes out is doubt about **someone else's**
+   reasoning that changes nothing the reader will do.
    ⓘ This is also the first thing to cut when a note approaches the size wall below.
    ⚠️ **This narrows rule 11, it does not widen it.** **Rule 11 decides whether our analysis may be
    in the note at all** (default: no — ask her); **rule 12 trims what is left.** Read alone, rule
