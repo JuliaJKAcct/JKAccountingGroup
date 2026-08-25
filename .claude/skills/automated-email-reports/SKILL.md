@@ -76,6 +76,60 @@ substituted in**, and say plainly that nothing changes until the paste happens. 
 where the 2026-08-11 failure came from** — the repo copy was edited, everyone believed the change
 had shipped, and the sweep ran three weeks on the old instruction.
 
+### 🔁 "It already exists and it has no connectors" — there is no upgrade, only a REPLACEMENT
+
+**This is the second-most-common question after "can you make one?", and it came up twice in two
+days (2026-08-24).** A session created a Routine; now it turns out the fired session needs Gmail, or
+Double, or a checkout.
+
+🛑 **FIRST, LOOK — because the honest state of knowledge is narrower than "it cannot be done."** What
+is **tested** is that **a SESSION cannot add them**: `update_trigger` has no parameter for connectors
+or sources, and `create_trigger`'s `connectors` is refused outright for this organization. ❓ **What
+nobody here has ever opened is the UI's EDIT screen for an existing Routine.** If it lets you tick a
+connector on a Routine that already exists, that is far cheaper than everything below — **so open it
+and see, and record what you find here.** _(This paragraph used to read "you cannot add any of them",
+an absolute negative drawn entirely from the MCP surface — the mistake `method.md` rule 1b names:
+every negative belongs to the search that produced it.)_
+
+**If the UI will not do it, the route is: create a NEW one in the UI and delete the old one.**
+
+**First decide whether it is worth it, because usually it is not:**
+
+| The Routine fires… | Do this |
+|---|---|
+| **Once** (a one-shot reminder, a chase date) | 🟢 **Leave it.** Let it fire; it opens a session and says in its first paragraph what it could not reach. **Open that session and paste or attach what it needs** — the email, the document. Two minutes, nothing to build. 🛑 **Check `notifications` FIRST, with `list_triggers`:** the parameter is optional on `create_trigger`, so a Routine armed without it fires into a session **nobody is told about** — and this whole route depends on someone opening that session. If the block is absent, the Routine cannot be fixed in place either (`update_trigger` has no `notifications` parameter): **delete and recreate it from a session with `notifications: {push:true, email:true}`**, which is cheap because it is still `meta_mcp`. |
+| **Repeatedly**, or it is the first of a series you know is coming | 🔵 **Recreate it in the UI** — the setup is paid once and every future firing has the connectors. ⚠️ **But it is a TRADE, not a free upgrade:** a UI-made Routine is `created_via: http_api`, and per the table above **no session can ever rewrite its prompt again** — every future edit needs a person to paste it by hand, which is the failure mode that let the sweep run three weeks on a superseded instruction. **Worth it when the connectors are load-bearing and the prompt is settled; a bad trade for a prompt you are still iterating on.** |
+
+**The replacement, in order — and the order is the point:**
+
+1. **Create the new one first**, at **claude.ai/code/routines → New**: attach the **Repository** (this
+   also gives the fired session a checkout, which a session-made Routine never has), the
+   **Connectors** it needs, the **network policy** if it must POST anywhere (trap #4), and paste the
+   prompt. ⓘ **Get the prompt from the old one with `list_triggers`** — a session can read it out and
+   hand it over ready to paste. 🔒 **If that prompt carries the webhook secret, do not echo it into
+   chat** — deliver it as a file and delete the session afterwards.
+2. **Verify it exists and is scheduled** before touching the old one.
+3. **Then delete the old one** (`delete_trigger`, which works on a `meta_mcp` Routine). 🛑 **Never
+   the other way round**: delete first and a crash, a typo or an interruption leaves the firm with
+   **no reminder at all** for a date it believes is covered — which is worse than the missing
+   connector you set out to fix.
+4. **Record the new trigger id** wherever the old one was written down. A stale id in a repo file is
+   a reader following a pointer to nothing.
+
+⚠️ **Two traps in the schedule field, and the first one is a guess this file will not make for you:**
+- ❓ **Whether the UI offers a true one-shot ("run once") schedule is NOT ESTABLISHED here** — the
+  MCP tool has `run_once_at`, the UI's own field has only ever been used for cron by this firm.
+  **Look, and if it is there, use it.**
+- 🛑 **If cron is all you get, a one-shot has to be faked and it WILL fire again.** `0 13 31 8 *` is
+  **13:00 UTC** on 31 August — every year. ⚠️ **Write the zone down every time: cron here is evaluated
+  in UTC**, so "9am" is `0 13`-ish in the summer, not `0 9` (which is 05:00 Eastern, i.e. a reminder
+  that fires while nobody is awake). **Delete it the same day it fires**, and say so in the prompt
+  itself so the fired session reminds whoever reads it. ⚠️ **And it is a UI Routine, so it is
+  `http_api`: `delete_trigger` is UNTESTED there and may refuse the way `update_trigger` does** — if
+  it does, **delete it in the UI**, and record here which one worked. A Routine nobody remembers
+  creating, firing a year later into a matter that closed, is exactly the "dormant Routine the firm
+  believes is gone" this page warns about under **Delete**.
+
 ⚠️ **A session-made Routine is not useless, but it must be written to survive its own poverty.**
 Give it two things: **clone the repo itself** (*"locate the repo, or clone `<url>`"* — the
 repo-coherence audit has run that way since July), and an instruction to **say out loud in its first
