@@ -206,9 +206,29 @@ the actual details.
   freight, customs duty, import-broker fees and the installer's labour are capitalized **into the
   asset**, not into `CIP - Materials` / `CIP - Labor`, and the runbook's role→account map currently
   routes site labour to the latter. Only genuinely **structural** work an attraction requires (a pit
-  cut into the slab, reinforcement, drainage) is CIP; that means splitting the invoice. A dedicated
-  `Attractions & Play Equipment` fixed-asset account (plus its accumulated-depreciation pair) is
-  **proposed and pending Julia's decision** _(raised by Lilian 2026-08-25)_.
+  cut into the slab, reinforcement, drainage) is CIP, which means splitting that invoice — ✅ **but
+  not for this one: Lilian confirmed 2026-08-25 that it sits on the floor with no pit**, so the whole
+  invoice is capitalized into the asset. A dedicated `Attractions & Play Equipment` fixed-asset
+  account (plus its accumulated-depreciation pair) is **proposed and pending Julia's decision**
+  _(raised by Lilian 2026-08-25)_.
+
+- **An incidental cost follows the matter it serves — it never gets its own expense line here, and
+  postage is the case that catches people.** Pre-opening postage, courier, printing and stationery
+  feel like office overheads, so they reach for an expense account; on this client that puts
+  something on the P&L and breaks the rule that makes the ten-second check work. ⚠️ **The magnet is
+  already in the chart:** `Office Expenses & Software` exists as a P&L expense account and has
+  **never been used** _(2026-08-25)_. **Post the cost to whatever bucket the underlying matter sits
+  in** — a permit mailing to `CIP - Permits & Fees`, entity papers to `Organizational Costs`,
+  licensing material to `SC - Marketing`, tax documents to `SC - Accounting & Consulting` — and to
+  the **sub-account**, never the parent (rule 8). 🔴 **The exception that is not a startup cost at
+  all:** postage on the members' **W-7/ITIN packages**. An ITIN is the member's *personal*
+  identifier, so a company-paid mailing belongs with **admitting members** — the syndication-cost
+  question already open as the runbook's decision 16 — or is the member's own expense. It is **not**
+  `SC - Legal & Licensing`, which is where it lands by default. ⓘ **And a real gap:** `Startup Costs`
+  has no **general administration** sub-account (its children are Marketing, Legal & Licensing,
+  Accounting & Consulting, Travel, Office Rent, Payroll, Software), so genuinely unattributable
+  pre-opening admin spend has nowhere to go. `Startup Costs - Office & Admin` is the missing one —
+  proposed, not created.
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -378,13 +398,27 @@ the actual details.
   returns only `Deposit` and `Expense` rows — **no bills and no journal entries** — and most of the
   balance-sheet movement did not come through the rows that were read. Nothing here is a statement
   about the rest of the ledger.
+- 2026-08-25 — **Follow-ups to the same session** _(Lilian)_. (a) She confirmed the attraction **sits
+  on the floor, no pit** — so no part of its invoice is CIP and the whole cost, installation included,
+  capitalizes into the fixed asset. (b) Asked where **postage on a business-document mailing** goes.
+  Answered with the principle rather than an account: **an incidental cost follows the matter it
+  serves**, which is the runbook's rule 2 applied to the case people get wrong. Recorded in §5 with
+  the three things that make it worth writing down — the unused `Office Expenses & Software` P&L
+  account sitting there as a magnet, the **W-7/ITIN postage** case that is a syndication-cost question
+  rather than a startup cost, and the **missing general-admin sub-account** under `Startup Costs`.
+  ⓘ Checked the in-flight `claude/delivery-expenses-account-ezlj36` branch first — it settles
+  shipping accounts for **Masciave Design Studio**, an operating client with a normal P&L, so it does
+  not transfer here except as the contrast: that client books shipping to opex, this one cannot book
+  anything to opex at all. **Which bucket this particular mailing belongs to is unanswered** — it
+  depends on what the documents were, and Lilian was asked.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
 - [x] The third member's email address, so he can be registered in Double — **⏸ PAUSED INDEFINITELY by Lilian (2026-08-10): do NOT chase this**, in the weekend sweep or anywhere else. No email for him exists in Gmail, Drive or Double; every thread runs through Julia or the outside CAA. To reopen: get it from the client or the CFO, then register him in Double as a contact record with **no portal access**, exactly as was done for the CFO. This is the **contact record only** — the third member's **tax status** is a separate question and is still live (§4, §6 outstanding).
-- [ ] **Does the new attraction need structural work** (a pit in the slab, reinforcement, drainage),
-      or does it sit on the floor? It is the one fact that decides whether part of its invoice is CIP
-      rather than a fixed asset — asked 2026-08-25, unanswered
+- [x] **Does the new attraction need structural work?** — **answered 2026-08-25 (Lilian): no. It
+      sits on the floor, no pit.** So there is nothing to split off to CIP: the **whole** invoice —
+      equipment, freight, customs duty, import-broker fees and installation — is capitalized into the
+      fixed asset
 - [ ] Fiscal year-end
 - [ ] Credentials Drive link; the "operations begin" date once known
 - [ ] **Which other recurring vendors are on autopay** — only the water bill is confirmed. The rest
