@@ -7,7 +7,7 @@
 > **Sent 2026-08-06 14:34 UTC** by Lilian, as a reply on Allison's *"Checking in before our 8/18
 > wrap-up"* thread, with Julia and Maria in copy. **Allison replied 2026-08-13 — see
 > "Double's answer" below. The answer was "not us", and it is wrong**; the follow-up that
-> answers it is drafted at the end of this file and **has not been sent** (Lilian's call).
+> answers it was **sent on 2026-08-25** — see the ✅ line at the foot of this box.
 >
 > **What actually went out differed from the draft below in three ways:**
 >
@@ -22,6 +22,9 @@
 >   the follow-up. Do not re-add it.
 >
 > ➡️ **For where anything goes NOW, read "The route" immediately below — not this box.**
+>
+> ✅ **AND THE FOLLOW-UP HAS NOW GONE — 2026-08-25 16:18 UTC.** Lilian sent it, and **not by the route
+> planned below**: see *"What was actually sent"*. Do not send it again.
 >
 ## 🔴 The route — CANONICAL. Everything else in the repo points here.
 
@@ -42,7 +45,26 @@ edit. Restating is what makes that happen; pointing does not.)*
 **Why it changed:** Allison closed her implementation period on 2026-08-17 (*"Dedicated Double Support
 Period Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat.
 
-**Governs:** the follow-up below, and `FOLLOW-UPS.md` rows 19, 22 and 23.
+**Governs:** `FOLLOW-UPS.md` rows 22 and 23, and any *further* message on the 403.
+
+### ✅ What was actually sent — 2026-08-25 16:18 UTC
+
+**Lilian sent it to `allison@doublehq.com` directly, on Allison's own *"Dedicated Double Support Period
+Winding Down"* thread**, copying Julia and Maria. **`help@doublehq.com` was not included.** She kept the
+drafted body essentially intact — every measurement, both probe strings, the byte figures, the ask
+scoped *"for us, or generally"* — replaced the cold opening with a personal thank-you, and framed it as
+*"As I promised, I am sending you Claude's explanation of the issue"*.
+
+⚠️ **This is a deliberate departure from the route above, and the reason is not in the repo:** *"as I
+promised"* means Lilian had already told Allison on the 17 August call that this was coming. Allison is
+therefore expecting it, which a cold `help@` ticket would not have been. **Do not "correct" it.**
+
+🎯 **What it does mean is that the ask now depends on Allison forwarding it.** She has formally handed
+off, so there is no ticket number, no queue and no SLA behind this message. **There is precedent that
+she does forward:** on 2026-05-20 she looped `help@doublehq.com` into a bank-feed problem and it became
+dev ticket **#102495635**. So the outcome to watch for is a `help@` reply or a ticket number appearing
+on that thread. **If neither appears, the same body goes to `help@doublehq.com` under the route
+above** — see `FOLLOW-UPS.md` row 19 for the date that falls due.
 
 📌 **Two known weaknesses in this arrangement, left open deliberately rather than churned:**
 ① **This is the wrong home.** Where the firm's asks to Double go is general routing; it is bolted onto
@@ -265,9 +287,9 @@ prerequisite before rewording `case-core.js`).
 
 ---
 
-## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
+## The follow-up — ✅ SENT 2026-08-25 (see "What was actually sent" above for the route actually used)
 
-🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is in the *"The route"* section at the top of this file — deliberately not repeated
+✅ **This has been sent — 2026-08-25 16:18 UTC. Do not send it again.** What follows is the text as drafted; the route actually used, and what it costs us, is recorded above. ➡️ **The route is in the *"The route"* section at the top of this file — deliberately not repeated
 here.** The follow-up, first drafted 2026-08-13 and **materially rewritten on 2026-08-25** (the ask, the
 impact paragraph and the probe strings), is **still unsent as at 2026-08-25**, and in that time the situation moved twice:
 

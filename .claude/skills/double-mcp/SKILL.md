@@ -1229,7 +1229,7 @@ the identical size that a different MCP server accepts. **Do not treat "out of s
 it**, and do not re-litigate note length; the follow-up has to move the conversation from *the product*
 to *whatever on Double's side sits in front of the product* — without prescribing which layer, since we cannot tell.
 
-**The original request went out 2026-08-06 — do not send it again.** What was sent, what it left
+**The original request went out 2026-08-06 and the follow-up on 2026-08-25 — do not send either again.** What was sent, what it left
 unasked, Double's reply, and the drafted follow-up are all in
 [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md).
 🔴 **The route CHANGED on 2026-08-17 — Allison's implementation period is over, so do NOT send this on
@@ -1342,7 +1342,7 @@ what turns on portal visibility is **candid internal judgment**, **blame aimed a
 
 - **The portal-visibility question in §7 is answered** — one of the two open items blocking case
   notes from being fully trusted.
-- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up is drafted and **unsent** _("unsent" as at 2026-08-25, from a search of **Julia's** mailbox; this is Lilian's to send from hers, so confirm with her before sending — see the reference file.)_, and its deadline was **missed** — the contact and the channel both changed on 2026-08-17, so ➡️ **read the route box at the top of [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) before sending anything.** Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
+- **Double replies to the request-size follow-up** ([`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md)) — ✅ their *first* answer came 2026-08-13 ("not us") and is already recorded in §7. ⚠️ **The ball is OURS, not theirs** — the follow-up was **SENT 2026-08-25** — to Allison directly rather than to `help@`, which is recorded with its consequences in the reference file, and its deadline was **missed** — the contact and the channel both changed on 2026-08-17, so ➡️ **read the route box at the top of [`references/note-size-limit-support-request.md`](./references/note-size-limit-support-request.md) before sending anything.** Do not report this as "waiting on Double". **If the limit is raised**, the `Part 1 / Part 2` exception retires and existing parts collapse back into one note — including the live Tsminibears split (`485230` / `491836`). **If they identify where the rule lives**, replace the two-candidate ownership table in §7 with the answer.
 - **The credentials question is decided** (rule 10) — whether logins may live in a note at all, or
   stay in the Drive vault with the note only pointing at them.
 - **Any tool call contradicts [`references/capability-map.md`](./references/capability-map.md)** —
