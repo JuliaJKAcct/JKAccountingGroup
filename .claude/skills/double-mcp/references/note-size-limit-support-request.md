@@ -17,11 +17,53 @@
 >   request was filed with their dev team.
 > - It asked **two questions, not three**: the documented-limit question and the can-it-be-raised
 >   question. **The web-UI question was dropped.**
-> - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email. It
->   is still open, and the call is now days away.
+> - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email.
+>   🔴 **DEAD as of 2026-08-17** — the call happened that day, and the question has been removed from
+>   the follow-up. Do not re-add it.
+>
+> ➡️ **For where anything goes NOW, read "The route" immediately below — not this box.**
+>
+## 🔴 The route — CANONICAL. Everything else in the repo points here.
 
-When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
-and delete or supersede this file.
+**Changed 2026-08-17.** This is the only place the route is written out. If it changes again, **change
+it HERE**, then check that the pointers elsewhere still only *point* — they must not restate it.
+*(Written because the first attempt at this reroute left the old route standing in every file it did not
+edit. Restating is what makes that happen; pointing does not.)*
+
+| | |
+|---|---|
+| **Send FROM** | **Lilian**, `lilian@jkaccountinggroup.com` — it is hers to send, and *which* mailbox it leaves from is what decides where a later "has it gone?" check has to look |
+| **Send to** | `help@doublehq.com` |
+| **Copy** | `allison@doublehq.com` · Julia · Maria — **on matters Allison already worked** (the request-size 403, the deadline write). ⚠️ **Not** on an ask she has never seen: `FOLLOW-UPS.md` row 23 (Bank Feeds) was never raised with her, and copying a departed contact into a first-time feature request is the opposite of the reason she is copied at all |
+| **Form** | A **new email**, never a reply on *"Checking in before our 8/18 wrap-up"* |
+| **One ask per message** | Do **not** bundle. The 2026-08-06 email carried two and came back with one good answer and one wrong one |
+| **Why Allison at all** | She carries the whole history and personally argued the deadline request with Double's developers; a bare `help@` ticket restarts from zero |
+
+**Why it changed:** Allison closed her implementation period on 2026-08-17 (*"Dedicated Double Support
+Period Winding Down"*) and directed us to `help@doublehq.com` or the in-app chat.
+
+**Governs:** the follow-up below, and `FOLLOW-UPS.md` rows 19, 22 and 23.
+
+📌 **Two known weaknesses in this arrangement, left open deliberately rather than churned:**
+① **This is the wrong home.** Where the firm's asks to Double go is general routing; it is bolted onto
+a file about one incident. **It belongs in [`../SKILL.md`](../SKILL.md) §7 or a firm-contacts SOP** —
+do that move as its own change, repointing SKILL, the capability map and FOLLOW-UPS rows 19/22/23 in
+the same pass, rather than as a rider on whatever closes the 403. ② **The 2026-08-17 hand-off is
+narrated in several places in this file** (its header, this section, the historical section, the
+follow-up). That is tolerable *inside* one file, which is partly a chronology — **but the ROUTE
+itself is stated only here**, and that is the invariant to protect.
+
+ⓘ **A second live contact, and NOT a route:** **Ryan Quill** (`ryan.quill@doublehq.com`), account-side,
+opened a conversation 2026-08-24 pitching the Plus/Scale tiers and asking for a call. Raising a
+technical ask there is **Lilian's commercial judgement and nobody else's** — a session must not choose
+it, and the FOLLOW-UPS rows that mention him say so.
+
+---
+
+When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall").
+🛑 **Do NOT simply delete this file** — *"The route"* (the section immediately above) governs asks that have nothing to do with the
+403 (`FOLLOW-UPS.md` rows 22 and 23) and is pointed at from SKILL §7, the capability map and three
+FOLLOW-UPS rows. **Move that section to SKILL §7 and repoint everything first**, then supersede the rest.
 
 ---
 
@@ -79,9 +121,14 @@ story. If this ever needs to be tighter, **measure the payloads in bytes first**
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
 evidence is kept here rather than reconstructed from memory the next time it comes up.
 
-## Who this goes to, and why it is short
+## Who this goes to, and why it is short — ⚠️ HISTORICAL, superseded 2026-08-17
 
-**Allison Millea, Implementation Specialist at Double** — the firm's implementation contact, with
+🔴 **This section describes the ORIGINAL send of 2026-08-06 and is kept only as the record of why that
+email was written the way it was. Its routing instructions are DEAD** — Allison closed her
+implementation period on 2026-08-17, the thread it names is closed, and the call it says to confirm has
+happened. **For where anything goes now, read *"The route"* at the top of this file.**
+
+**Allison Millea, Implementation Specialist at Double** *(as she was during implementation)* — the firm's implementation contact, with
 recurring 30-minute calls with Lilian, Maria and Julia. **She already knows who we are and that we
 work through the Claude integration**: Lilian raised a Claude-integration limitation with her on
 2026-06-17 and Allison answered directly.
@@ -111,10 +158,12 @@ version.** ⓘ **Superseded 2026-08-13** — the read-only and cross-server test
 far stronger evidence than the UI paste would have been, and they are what the follow-up is built on.
 The UI test is still worth running, but as a *practical* question now, not the decisive one.
 
-**If this is escalated to Support, or re-sent after the implementation window closes**, restore the
-firm introduction from git history. It was removed because *Allison* knows us — Allison's onboarding
-email (2026-05-15) describes her as the implementation contact "for the next three months", so this
-wrap-up call is the end of that window and a hand-off is a live scenario.
+⚠️ **Superseded — the escalation was written, and it did NOT restore the firm introduction.** The email
+at the end of this file opens with two lines of context instead, and per its rule 2 carries the evidence
+in plain sentences with **no table**. Do not reintroduce either from git history. *(Original note:
+restore the firm introduction from git history.)* It was removed because *Allison* knew us — her onboarding
+email (2026-05-15) described her as the implementation contact "for the next three months", so the
+wrap-up call was the end of that window. **That hand-off has now happened: 2026-08-17.**
 
 ---
 
@@ -122,10 +171,10 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 
 ⚠️ **Kept for the evidence table and the phrasing, not as a record of our correspondence.** What went
 out differed in the three ways listed in the header — most importantly it asked **two** questions,
-not the three below; **the web-UI question (3) was never sent.** If you are escalating to
-`help@doublehq.com`, reuse the table and the error text, **not** this question list — re-asking a
-question Double never received, as though it had been ignored, hands them a version of the thread
-that does not match theirs.
+not the three below; **the web-UI question (3) was never sent.** ⚠️ **The escalation to `help@doublehq.com` is already written** (end of
+this file) and deliberately uses plain sentences, **not** this table. Reuse the **error text and the
+measurements** from here if you need them; never this question list — re-asking a question Double never
+received, as though it had been ignored, hands them a version of the thread that does not match theirs.
 
 > Hi Allison,
 >
@@ -179,6 +228,13 @@ that does not match theirs.
 
 ## Notes for whoever follows this up
 
+🛑 **These notes predate the four review rounds and the rewrite. Where one disagrees with the numbered
+rules in *"The follow-up"*, THE RULES WIN** — in particular: this section says to keep the evidence
+**table** (the rules say plain sentences, and never restore the table), says to raise the bytes point
+**only if support disputes it** (the email now raises it up front, so an engineer cannot convert our
+character counts by mistake), and calls the web-UI test *not critical* (row 19 now makes it a
+prerequisite before rewording `case-core.js`).
+
 - **The content-independence test is already done** — plain filler text at ~8,200 characters was
   refused exactly like real content (2026-08-06). That closes the most likely first
   counter-hypothesis, that something *in* our notes trips a pattern rule. Keep that row in the table.
@@ -206,79 +262,130 @@ that does not match theirs.
 
 ---
 
-## The follow-up — drafted 2026-08-13, ⚠️ NOT SENT
+## The follow-up — ⚠️ NOT SENT, and the ROUTE CHANGED on 2026-08-17
 
-Lilian's to send or change. It goes on **the same thread** (*"Checking in before our 8/18 wrap-up"*),
-Julia and Maria in copy, as every previous message on this has.
+🔴 **Do not send this to Allison on the old thread. That window closed.** ➡️ **The route is in the *"The route"* section at the top of this file — deliberately not repeated
+here.** The follow-up drafted on 2026-08-13 is **still unsent as at
+2026-08-25**, and in that time the situation moved twice:
 
-**Written for Allison, who is not an engineer.** Lilian's instruction, 2026-08-13: *"más escueta y
-mejor explicada… para que Allison no se atormente con tanta cosa técnica."* An earlier draft led with
-a three-row results table and named the AWS WAF rule in the body; it was accurate and it was the wrong
-document for its reader. The rewrite keeps **every** fact and moves the jargon to a short block at the
-end that she can forward without reading. Four rules if you edit it again — rule 4 carries the two hardest-won ones, do not drop it as an aside:
+- **2026-08-17 — Allison ended her implementation period** (*"Dedicated Double Support Period Winding
+  Down"*, after the wrap-up call she and Lilian held that day). Her words: *"While I won't be your main
+  point of contact moving forward, the team at Double is still here for you. If you ever need help or
+  have a question, please reach out to **help@doublehq.com** or use the in-app chat."* Maria replied
+  and thanked her. **Searched 2026-08-25 in JULIA's mailbox** (`julia@jkaccountinggroup.com` — the
+  thread itself, plus every message to or from `doublehq.com` after 2026-08-13): the thread has not
+  moved since Allison's 08-13 answer, and nothing has gone to `help@doublehq.com`. ⚠️ **That is Julia's
+  mailbox, and this email is Lilian's to send from `lilian@`** — a send from her own account with
+  nobody at `jkaccountinggroup.com` copied would be invisible to it. **So: ask Lilian whether she has
+  already sent it, or re-run the search in her mailbox, before sending.** The evidence says *unsent*;
+  it does not prove it.
+- **2026-08-24 — Ryan Quill** (`ryan.quill@doublehq.com`) opened a fresh account conversation: he had
+  audited the account, praised the firm's use of the integration, and pitched the new **Plus / Scale**
+  tiers with launch-promotion pricing plus a 15-minute call. Julia's out-of-office answered him.
 
-1. **Concede the note question in the second paragraph.** Arguing about note length is what got this
-   closed as "out of scope" the first time.
-2. **The evidence goes in plain sentences, not a table.** *A short version of the same question works;
-   the long one does not; the same long text goes through to another system* — that is the whole proof,
-   and it survives being said in words.
-3. **Quarantine the technical detail at the bottom**, addressed to whoever she forwards it to. Allison
-   forwards technical issues (she looped in `help@doublehq.com` on 2026-05-20, which became dev ticket
-   #102495635), so the forwarded fragment has to stand alone — **workspace name, dates, client IDs and
-   the error code all belong in it**, because a plaintext fragment arriving without them identifies
-   neither sender nor tenant and an engineer who cannot find the request in a log closes the ticket as
+⚠️ **Two questions in the old draft are now DEAD and must not be sent:** *"is our call on the 17th or
+18th?"* (it happened on the 17th) and anything addressed to Allison as the owner of the issue.
+
+**Written in plain language for a reader who may not be an engineer**, per Lilian's instruction of
+2026-08-13 (*"más escueta y mejor explicada… para que Allison no se atormente con tanta cosa
+técnica"*) and 2026-08-24 (*"lenguaje sencillo y bien explicativo… el objetivo es que Double entienda
+bien qué está sucediendo"*). The body stays plain; the measurements sit in a block at the end that a
+support agent can hand to an engineer. **FIVE rules if you edit it again.** ⚠️ **Rule 5 carries the two hardest-won ones — it is a rule, not a
+trailing aside; do not drop it.**
+
+1. **Concede the note question early.** Arguing that notes *do* have a limit is what got this closed
+   as "out of scope" the first time.
+2. **The evidence goes in plain sentences, NOT a table.** *A short version of the same question works; the long one
+   does not; the same long text goes through to another system* — that is the whole proof.
+3. **The technical block must stand alone** — workspace, dates, client IDs, error code — because it
+   will be forwarded, and an engineer who cannot find the request in a log closes the ticket as
    unreproducible.
-4. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"** —
-   even though it is jargon: Allison answered a "Claude integration" question with *Ask Double* on
-   2026-06-17, and unnamed it goes to the same team again. ⓑ **Ask about BOTH** the thing in front of
-   the endpoint *and* the MCP server itself. We cannot tell them apart, and naming only the firewall
-   is how this gets closed "out of scope" twice.
+4. **Never restore from git history:** not the firm introduction (the escalation opens with two lines
+   of context instead) and not the three-row evidence table (rule 2). Older versions of this file
+   recommend both; they are superseded.
+5. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
+   Allison answered a "Claude integration" question with *Ask Double* on 2026-06-17. ⓑ **Ask about
+   BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
+   and naming only the firewall is how this gets closed "out of scope" twice.
 
-> Hi Allison,
->
-> Thank you for chasing this down — and that is great news about the deadline feature request.
->
-> On the notes, I think the question reached the wrong team. Your team is right that Double has no
-> limit on note length. But what is being blocked is not a note.
->
-> We tested it. Through the **MCP integration** we use with Claude (not Ask Double), we asked Double a
-> simple *question* — "list the clients whose name matches this" — using a very long search text. That
-> saves nothing, and there is no note in it anywhere. It was blocked too, with the same error. The very
-> same question with a short search text works fine.
->
-> So it is not about notes. It is about the size of what we send. And it does not look like Claude
-> either: we sent that identical long text to another system we use, from the same Claude account, a
-> minute apart, and it went through with no problem.
->
-> It seems that something on Double's side is refusing our request before it reaches the part of Double
-> that stores the notes. From outside we cannot tell whether that is something sitting in front of your
-> MCP endpoint, like a firewall, or a size limit inside the MCP server itself. Could you ask your
-> technical team to check both?
->
-> **If it helps whoever looks at it:**
->
-> - Workspace: **JK Accounting Group**. The note failures were **6 August 2026, ~03:25–04:45 UTC**, on
->   client IDs **706709** and **710577**. The blocked read was **13 August 2026** — that one was a
->   roster-wide `list_clients` search, so there is no client ID to narrow it by.
-> - The error is `403 Forbidden`, `mcp_request_blocked`, on the MCP endpoint.
-> - What we measured: note bodies of ~7,600 characters save; ~8,000 and ~10,400 do not. On a read-only
->   call, a ~48-character filter works and a ~9,000-character one is refused — we have not tested
->   anything in between, so we cannot give an exact cut-off, only that it is somewhere around 8 KB.
-> - **It is not our content.** A body of ~8,200 characters of plain repeated filler — no formatting, no
->   client data, nothing that could look like an attack pattern — was refused exactly like real text.
-> - **Easiest way to catch it in a log:** tell us a time and we will run the failing request while
->   someone watches. We can send a payload of any size you like.
-> - The other system that accepted the identical long text is a different MCP integration on the same
->   Claude account, so the comparison is like-for-like.
->
-> One more thing — is our wrap-up call on August 17th or 18th? Your message says one and the subject
-> line says the other, and we do not have an invite for either.
->
-> Thank you so much!
->
-> Lilian — JK Accounting Group
+**Subject:** `MCP integration — requests over about 8,000 characters are refused with a 403 (JK Accounting Group)`
 
-**If it is still unresolved after the wrap-up call**, the implementation window has closed and this
-goes to `help@doublehq.com` as a support ticket — restore the firm introduction from git history, and
-there the three-row table at the top of this file *is* the right opening, because the reader is the
-engineer rather than Allison.
+**To:** `help@doublehq.com`
+
+**Cc:** `allison@doublehq.com`, Julia, Maria
+
+⚠️ *(Editor's note, not part of the email.)* **The subject states the MEASURED unit — characters.** The body may still offer *"somewhere around
+8 KB"* as a **lead** ([`../SKILL.md`](../SKILL.md) §7: *"give them the observation, let them find the
+actual rule"*), and that is not a contradiction: characters are what we counted, 8 KB is the hint about
+where to look. What must never happen is a **byte figure presented as our measurement** — the subject is
+the most-quoted line in the thread, and an engineer who converts our passing 7,600-character HTML note
+and finds it already over 8,192 bytes stops trusting the rest.
+
+> Hello,
+>
+> We worked on this with Allison Millea during our implementation, and since that period has now ended
+> we are bringing it here, as her hand-off note suggested. Allison is copied in — she has the full
+> history.
+>
+> **The short version:** when we use Double through the **MCP integration** with Claude, large requests
+> come back as `403 Forbidden` while small ones work normally. On the calls we have measured most
+> closely — saving a note — the change happens between about 7,600 and about 8,000 characters.
+>
+> We first reported this as a problem with long notes, and the answer that came back was that Double
+> has no limit on note length and that the problem must be coming from Claude's API. We think the first
+> part is correct — and that is exactly why we believe the question went to the wrong place.
+>
+> **What is being blocked is not a note.** We tested it: we asked Double a simple question — "list the
+> clients whose name matches this" — using a very long search text. That call saves nothing and
+> contains no note at all. It was refused with the same error. The same question with a short search
+> text works fine.
+>
+> **And it does not appear to be Claude.** We sent the identical long text to a different system we
+> connect to in the same way, from the same Claude account, about a minute apart. It went through with
+> no problem — so there is no general size limit on Claude's side.
+>
+> That points to something on Double's side refusing our request before it reaches the part of Double
+> that stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
+> endpoint, such as a firewall, or a size limit inside the MCP server itself. **Could you have someone
+> check both?** **And if a limit is found, can it be raised for our account?** That is what we are
+> really asking for — the size limit is what stops us keeping a case history in one note.
+>
+> Why it matters to us: we keep one running note per client matter, holding the whole history of a case
+> so that anyone on the team can open the client and understand it in a minute. Today we have to split
+> those notes in two, which defeats the purpose.
+>
+> **Technical details, if they help:**
+>
+> - Workspace: **JK Accounting Group** (account owner Julia Kononova).
+> - Error: `403 Forbidden`, `error_code: mcp_request_blocked`, on the MCP endpoint.
+> - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
+>   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
+> - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
+>   characters is refused. Tested 13 August 2026. There is no client ID on that one — it is a
+>   roster-wide search — **but the filter text is a unique string you can grep for directly:** the
+>   100-character block `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
+>   repeated 90 times, with `NN` running 01 to 90.
+> - **It reproduces every time:** the same payload fails on every attempt, and trimming it below the
+>   threshold makes it succeed. We have not tested anything in between on this path,
+>   so all we can say is that the limit lies somewhere between those two.
+> - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
+>   characters. Everything above is counted in characters — **we have not measured any payload in
+>   bytes.**
+> - **A hint, not a measurement of ours:** an 8 KB request-body limit is a common default, and it may
+>   be worth checking whether one is configured anywhere in this path. Please do not convert our
+>   character counts into bytes to test that — our note bodies are HTML with multi-byte characters, so
+>   the conversion would not be reliable.
+> - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
+>   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
+>   text.
+> - **The comparison that points away from Claude:** the system that accepted the identical ~9,000
+>   characters is a different MCP integration on the same Claude account, tested about a minute apart —
+>   so it is like-for-like.
+> - We are happy to run the failing request at a time you choose, so someone can watch it reach your
+>   logs, and we can send a payload of any size you like.
+>
+> Thank you very much for your help.
+>
+> Lilian Gonzalez
+> JK Accounting Group
+

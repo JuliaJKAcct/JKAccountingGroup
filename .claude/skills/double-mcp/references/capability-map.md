@@ -432,25 +432,27 @@ tested was not. Don't build anything on loan tools without checking first.
 
 **Sent 2026-08-06** by Lilian, as one reply to **Allison Millea** (Implementation Specialist at
 Double, `allison@doublehq.com`) on her open *"Checking in before our 8/18 wrap-up"* thread —
-Julia and Maria in copy. Two asks in that one email. The next call with Double is **17–18 Aug
-2026** (her message says Aug 17, her subject line says 8/18 — the date itself is unconfirmed).
+Julia and Maria in copy. Two asks in that one email. 🔴 **That channel CLOSED on 2026-08-17**, when Allison ended her
+implementation period. ➡️ **Everything in this section now goes by the route in the box at the top of**
+[`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — the single home for it, deliberately not restated here.
 
 | Ask | Why | Status |
 |---|---|---|
-| **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | To raise — thread or the 17–18 Aug call |
-| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | ✅ **Answered 2026-08-13 — accepted.** Allison filed a **feature request** with Double's dev team and argued it with them directly. Still read-only for now; nothing to do but wait |
-| **Raise the request-size limit on the MCP endpoint** (was filed as "the note size limit") | The 403 above — it caps the case notes the team relies on, and in fact caps *every* large call | ⚠️ **Answered 2026-08-13 — declined, on a misreading.** Double: no note-length limit exists and *"the issue is coming from Claude's API… out of our scope."* **Disproven the same day** (read-only call blocked; identical payload accepted by another MCP server). **Follow-up drafted, not yet sent** — [`note-size-limit-support-request.md`](./note-size-limit-support-request.md). It must ask about the **request-size limit on Double's side — BOTH anything in front of the endpoint AND the MCP server itself** (we cannot tell those apart), not about notes |
+| **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | **Still to raise; the old channel is gone.** Route per the box in [`note-size-limit-support-request.md`](./note-size-limit-support-request.md); the next action is owned by FOLLOW-UPS row 23 |
+| **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | ✅ **Answered 2026-08-13 — accepted.** Allison filed a **feature request** with Double's dev team and argued it with them directly. Still read-only for now. ⚠️ **Not "nothing to do"** — it is with their dev team (Allison filed it), but **we have no named contact to chase it through** now that her implementation period has ended, and we have not asked Double who owns it. A status has to be *asked for* by the current route; see FOLLOW-UPS row 22 |
+| **Raise the request-size limit on the MCP endpoint** (was filed as "the note size limit") | The 403 above — it caps the case notes the team relies on, and in fact caps *every* large call | ⚠️ **Answered 2026-08-13 — declined, on a misreading.** Double: no note-length limit exists and *"the issue is coming from Claude's API… out of our scope."* **Disproven the same day** (read-only call blocked; identical payload accepted by another MCP server). **Follow-up drafted, not yet sent** _("unsent" as at 2026-08-25, from a search of **Julia's** mailbox; this is Lilian's to send from hers, so confirm with her before sending — see the reference file.)_ — [`note-size-limit-support-request.md`](./note-size-limit-support-request.md). It must ask about the **request-size limit on Double's side — BOTH anything in front of the endpoint AND the MCP server itself** (we cannot tell those apart), not about notes |
 
-If either lands, this file and [SKILL](../SKILL.md) both change. The **deadline write** flips §4
+If any of the three lands, this file changes; the first two also change [SKILL](../SKILL.md), while the Bank Feeds split is confined to this file (SKILL carries no bank-feed content). The **deadline write** flips §4
 and the quick-answer table here, plus SKILL §1 ("The tax project is READ-ONLY — including the
 deadline") and SKILL §2. The **request-size limit** retires the `Part 1 / Part 2` split in SKILL §7 and the
-size-wall warning in §8 of this file.
-Both are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) (rows 19 and 22). The note-size
+size-wall warning in §8 of this file. The **Bank Feeds split** would change §9 and the §14 "Still not available" list
+(which is where the "feed is not exposed" row lives — §1 has no Bank Feeds row).
+All three are tracked in [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) — **rows 19, 22 and 23**. The note-size
 ask has its own evidence file —
 [`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — which records what
 was sent, Double's 2026-08-13 answer, and the follow-up that has **NOT** been sent. ⚠️ **Do not read
 "the request was sent" as "nothing to do"** — the first request is answered; the follow-up is
-drafted and waiting on Lilian, and it wants to go before the 17–18 Aug wrap-up call.
+drafted and (as far as Julia's mailbox shows) **not yet sent**, waiting on Lilian, and **its deadline was missed** — route per the box at the top of that file.
 
 ---
 
