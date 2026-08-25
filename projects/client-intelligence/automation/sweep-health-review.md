@@ -9,13 +9,16 @@
 > ⚠️ **But one OPTIONAL thing is worth doing before Monday, and only a person can do it:** the
 > 2026-08-31 review Routine has **no MCP connectors** (`create_trigger` cannot attach them — §8), so
 > it **cannot open the sweep's report email**. It will still do the repo half, which is most of the
-> value. Two ways to get the whole review: **open the session it creates on Monday and paste the
-> sweep email into it** (two minutes, nothing to build — the usual answer for a one-shot), or
-> **recreate it at claude.ai/code/routines with connectors attached** if you want every future
-> review to read its own mail. 📋 **The replacement procedure — and why there is no way to just
-> ADD connectors — is in the [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md)
-> skill**, *"It already exists and it has no connectors"*: create the new one FIRST, verify, then
-> delete the old. _(The identical Routine failed exactly this way on 2026-08-24 — §8.)_
+> value. **The cheap fix is the one to take here: open the session it creates on Monday and paste
+> the sweep email into it** — two minutes, nothing to build, and it is what a ONE-SHOT deserves.
+> ⚠️ **Recreating it in the UI would NOT carry forward:** the 08-31 session is told to re-arm the
+> next review with `create_trigger`, from a session, which cannot attach connectors — so the UI
+> setup would buy Gmail for **that one firing** and the 09-07 review would be back where it started.
+> 📋 **If you do want the permanent version, the procedure and its trade-offs are in the
+> [`automated-email-reports`](../../../.claude/skills/automated-email-reports/SKILL.md) skill** —
+> *"It already exists and it has no connectors"*. **Read it there; this box deliberately does not
+> repeat it** (§8: copying these facts around is the failure §4 and §5 document).
+> _(The identical Routine failed exactly this way on 2026-08-24 — §8.)_
 >
 > ### What happens on its own, and when
 > | When | What | Anyone needed? |
@@ -214,7 +217,7 @@ run produced **2 incomplete passes out of 6**, so at that rate a run clears ~6 a
 ✅ **So the recommendation stands but the gate changes: re-decide on the two runs together — the
 2026-09-05 one included, which means the decision itself lands MONDAY 2026-09-07, once that Saturday
 run can actually be read** _(corrected 2026-08-24: this said "on 2026-09-05", which is the morning
-the run fires and therefore too early to review it)_ — REGARDLESS of what
+the run fires and therefore too early to review it)_ — **REGARDLESS of what
 the queue looks like** — not "when the queue is empty", which is now a condition the fix can defeat.
 The question to ask that day is narrower and answerable: **how many CATCH-UP OWED rows did 08-29 and
 09-05 create between them?** Near zero → the ceiling was the backlog, and it is gone. Two a run,
