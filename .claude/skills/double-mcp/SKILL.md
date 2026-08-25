@@ -1203,9 +1203,9 @@ refused the POST. So **never** tell them "your notes have an 8 KB limit" — the
 find no limit, and hand the problem back. Tell them **"any POST to your MCP endpoint at around 8,000
 characters and up returns 403 while smaller ones succeed, including read-only calls with no note in
 them — please check the request-body size limit both on anything in front of that endpoint and in the
-MCP server itself, **and if you find one, can it be raised for our account?**"**. ⚠️ **The raise-it half
-is not optional.** Ask only for a check and support can reply *"confirmed, that is our configured
-limit"*, close the ticket as answered, and leave nothing to reopen on. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"
+MCP server itself — and if you find one, can it be raised for our account?"** ⚠️ **The raise-it half is
+not optional:** if we ask only for a check, support can reply *"confirmed, that is our configured
+limit"*, close the ticket as answered, and leave us nothing to reopen on. ⚠️ **Name both**, for the reason in the ownership table: prescribing "your WAF"
 invites infrastructure to look, find nothing, and close it again. And name the surface as the **MCP
 integration**, not "Claude": when Lilian said "the Claude integration" on 2026-06-17, Allison answered
 about *Ask Double*, a different product.

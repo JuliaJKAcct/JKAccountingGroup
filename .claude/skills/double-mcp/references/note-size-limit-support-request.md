@@ -27,11 +27,12 @@
 
 **Changed 2026-08-17.** This is the only place the route is written out. If it changes again, **change
 it HERE**, then check that the pointers elsewhere still only *point* — they must not restate it.
-*(Written after the first attempt at this reroute restated the route in two files and left it stale in
-five others; the route currently appears across four files, and only this one states it.)*
+*(Written because the first attempt at this reroute left the old route standing in every file it did not
+edit. Restating is what makes that happen; pointing does not.)*
 
 | | |
 |---|---|
+| **Send FROM** | **Lilian**, `lilian@jkaccountinggroup.com` — it is hers to send, and *which* mailbox it leaves from is what decides where a later "has it gone?" check has to look |
 | **Send to** | `help@doublehq.com` |
 | **Copy** | `allison@doublehq.com` · Julia · Maria — **on matters Allison already worked** (the request-size 403, the deadline write). ⚠️ **Not** on an ask she has never seen: `FOLLOW-UPS.md` row 23 (Bank Feeds) was never raised with her, and copying a departed contact into a first-time feature request is the opposite of the reason she is copied at all |
 | **Form** | A **new email**, never a reply on *"Checking in before our 8/18 wrap-up"* |
@@ -50,8 +51,10 @@ it, and the FOLLOW-UPS rows that mention him say so.
 
 ---
 
-When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
-and delete or supersede this file.
+When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall").
+🛑 **Do NOT simply delete this file** — *"The route"* below governs asks that have nothing to do with the
+403 (`FOLLOW-UPS.md` rows 22 and 23) and is pointed at from SKILL §7, the capability map and three
+FOLLOW-UPS rows. **Move that section to SKILL §7 and repoint everything first**, then supersede the rest.
 
 ---
 
@@ -272,7 +275,8 @@ received, as though it had been ignored, hands them a version of the thread that
 2026-08-13 (*"más escueta y mejor explicada… para que Allison no se atormente con tanta cosa
 técnica"*) and 2026-08-24 (*"lenguaje sencillo y bien explicativo… el objetivo es que Double entienda
 bien qué está sucediendo"*). The body stays plain; the measurements sit in a block at the end that a
-support agent can hand to an engineer. **Four rules if you edit it again:**
+support agent can hand to an engineer. **FIVE rules if you edit it again.** ⚠️ **Rule 5 carries the two hardest-won ones — it is a rule, not a
+trailing aside; do not drop it.**
 
 1. **Concede the note question early.** Arguing that notes *do* have a limit is what got this closed
    as "out of scope" the first time.
@@ -341,12 +345,16 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
 >   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
 > - **Read-only calls:** a `list_clients` name filter of about 48 characters works; about 9,000
->   characters is refused. Tested 13 August 2026. We have not tested anything in between on this path,
+>   characters is refused. Tested 13 August 2026 — that one is a roster-wide search, so there is no
+>   client ID to narrow the log query by. We have not tested anything in between on this path,
 >   so all we can say is that the limit lies somewhere between those two.
-> - **Putting the two together:** the tightest bracket we have is the note-write one — between about
->   7,600 and about 8,000 characters — which is roughly 8 KB, and may be worth checking against any
->   request-size setting near that figure. We have not measured any payload in bytes, so please treat
->   8 KB as a hint about where to look rather than as our measurement.
+> - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
+>   characters. Everything above is counted in characters — **we have not measured any payload in
+>   bytes.**
+> - **A hint, not a measurement of ours:** an 8 KB request-body limit is a common default, and it may
+>   be worth checking whether one is configured anywhere in this path. Please do not convert our
+>   character counts into bytes to test that — our note bodies are HTML with multi-byte characters, so
+>   the conversion would not be reliable.
 > - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
 >   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
 >   text.
