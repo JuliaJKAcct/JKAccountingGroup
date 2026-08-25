@@ -432,12 +432,16 @@ tested was not. Don't build anything on loan tools without checking first.
 
 **Sent 2026-08-06** by Lilian, as one reply to **Allison Millea** (Implementation Specialist at
 Double, `allison@doublehq.com`) on her open *"Checking in before our 8/18 wrap-up"* thread —
-Julia and Maria in copy. Two asks in that one email. The next call with Double is **17–18 Aug
-2026** (her message says Aug 17, her subject line says 8/18 — the date itself is unconfirmed).
+Julia and Maria in copy. Two asks in that one email. 🔴 **That channel is CLOSED.** The wrap-up call
+happened **2026-08-17** and Allison ended her implementation period the same day (*"Dedicated Double
+Support Period Winding Down"*), directing us to **`help@doublehq.com`** or the in-app chat. **Everything
+below now goes there as a NEW email, copying Allison** — she carries the history — never as a reply on
+her old thread. ⓘ A second live contact appeared 2026-08-24: **Ryan Quill** (`ryan.quill@doublehq.com`),
+account-side, pitching the new Plus/Scale tiers and asking for a call.
 
 | Ask | Why | Status |
 |---|---|---|
-| **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | To raise — thread or the 17–18 Aug call |
+| **A *for review* / *categorized* split in Bank Feeds** (plus: will QuickBooks → Double ever sync, and will feed items reach the MCP?) | The screen mixes categorized, pending and suggested items, so the queue cannot be worked — see §9 and FOLLOW-UPS row 23 | **Still to raise, and now with no channel chosen** — the thread and the call are both gone. Send to `help@doublehq.com` copying Allison, or put it to Ryan Quill on the call he is asking for |
 | **A write on the tax project's `dueDate`** | After extensions are filed the deadline moves for much of the roster at once (1120-S/1065 Mar 15 → Sep 15; 1040/1120 Apr 15 → Oct 15). The firm wants to say *"for every client with `Ext. Filed` checked, set the extended date for their return type"* — everything needed to decide that is already readable, only the write is missing | ✅ **Answered 2026-08-13 — accepted.** Allison filed a **feature request** with Double's dev team and argued it with them directly. Still read-only for now; nothing to do but wait |
 | **Raise the request-size limit on the MCP endpoint** (was filed as "the note size limit") | The 403 above — it caps the case notes the team relies on, and in fact caps *every* large call | ⚠️ **Answered 2026-08-13 — declined, on a misreading.** Double: no note-length limit exists and *"the issue is coming from Claude's API… out of our scope."* **Disproven the same day** (read-only call blocked; identical payload accepted by another MCP server). **Follow-up drafted, not yet sent** — [`note-size-limit-support-request.md`](./note-size-limit-support-request.md). It must ask about the **request-size limit on Double's side — BOTH anything in front of the endpoint AND the MCP server itself** (we cannot tell those apart), not about notes |
 
@@ -450,7 +454,7 @@ ask has its own evidence file —
 [`note-size-limit-support-request.md`](./note-size-limit-support-request.md) — which records what
 was sent, Double's 2026-08-13 answer, and the follow-up that has **NOT** been sent. ⚠️ **Do not read
 "the request was sent" as "nothing to do"** — the first request is answered; the follow-up is
-drafted and waiting on Lilian, and it wants to go before the 17–18 Aug wrap-up call.
+drafted and waiting on Lilian, and **its deadline was missed** — it now goes to `help@doublehq.com` copying Allison, as a new email.
 
 ---
 

@@ -17,8 +17,13 @@
 >   request was filed with their dev team.
 > - It asked **two questions, not three**: the documented-limit question and the can-it-be-raised
 >   question. **The web-UI question was dropped.**
-> - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email. It
->   is still open, and the call is now days away.
+> - **Point 2 below was not done:** the call-date discrepancy was *not* asked in the sent email.
+>   🔴 **DEAD as of 2026-08-17** — the call happened that day, and the question has been removed from
+>   the follow-up. Do not re-add it.
+>
+> 🔴 **THE ROUTE CHANGED 2026-08-17.** Allison ended her implementation period and sent us to
+> `help@doublehq.com`. The follow-up now goes there as a **new email copying her** — see
+> *"The follow-up"* below, which supersedes the *"Who this goes to"* section further down.
 
 When this is finally settled, record the outcome in [`../SKILL.md`](../SKILL.md) §7 ("the size wall")
 and delete or supersede this file.
@@ -79,9 +84,14 @@ story. If this ever needs to be tighter, **measure the payloads in bytes first**
 **Why this file exists:** the limit shapes how the firm's case notes are written (§7), so the exact
 evidence is kept here rather than reconstructed from memory the next time it comes up.
 
-## Who this goes to, and why it is short
+## Who this goes to, and why it is short — ⚠️ HISTORICAL, superseded 2026-08-17
 
-**Allison Millea, Implementation Specialist at Double** — the firm's implementation contact, with
+🔴 **This section describes the ORIGINAL send of 2026-08-06 and is kept only as the record of why that
+email was written the way it was. Its routing instructions are DEAD** — Allison closed her
+implementation period on 2026-08-17, the thread it names is closed, and the call it says to confirm has
+happened. **For where the follow-up actually goes, read *"The follow-up"* at the end of this file.**
+
+**Allison Millea, Implementation Specialist at Double** *(as she was during implementation)* — the firm's implementation contact, with
 recurring 30-minute calls with Lilian, Maria and Julia. **She already knows who we are and that we
 work through the Claude integration**: Lilian raised a Claude-integration limitation with her on
 2026-06-17 and Allison answered directly.
@@ -111,8 +121,10 @@ version.** ⓘ **Superseded 2026-08-13** — the read-only and cross-server test
 far stronger evidence than the UI paste would have been, and they are what the follow-up is built on.
 The UI test is still worth running, but as a *practical* question now, not the decisive one.
 
-**If this is escalated to Support, or re-sent after the implementation window closes**, restore the
-firm introduction from git history. It was removed because *Allison* knows us — Allison's onboarding
+⚠️ **Superseded — the escalation was written, and it did NOT restore the firm introduction.** The email
+at the end of this file opens with two lines of context instead, and per its rule 2 carries the evidence
+in plain sentences with **no table**. Do not reintroduce either from git history. *(Original note:
+restore the firm introduction from git history.)* It was removed because *Allison* knows us — Allison's onboarding
 email (2026-05-15) describes her as the implementation contact "for the next three months", so this
 wrap-up call is the end of that window and a hand-off is a live scenario.
 
@@ -122,10 +134,10 @@ wrap-up call is the end of that window and a hand-off is a live scenario.
 
 ⚠️ **Kept for the evidence table and the phrasing, not as a record of our correspondence.** What went
 out differed in the three ways listed in the header — most importantly it asked **two** questions,
-not the three below; **the web-UI question (3) was never sent.** If you are escalating to
-`help@doublehq.com`, reuse the table and the error text, **not** this question list — re-asking a
-question Double never received, as though it had been ignored, hands them a version of the thread
-that does not match theirs.
+not the three below; **the web-UI question (3) was never sent.** ⚠️ **The escalation to `help@doublehq.com` is already written** (end of
+this file) and deliberately uses plain sentences, **not** this table. Reuse the **error text and the
+measurements** from here if you need them; never this question list — re-asking a question Double never
+received, as though it had been ignored, hands them a version of the thread that does not match theirs.
 
 > Hi Allison,
 >
@@ -251,13 +263,16 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
    BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
    and naming only the firewall is how this gets closed "out of scope" twice.
 
-**Subject:** `MCP integration — requests over about 8 KB are refused with a 403 (JK Accounting Group)`
+**Subject:** `MCP integration — requests over about 8,000 characters are refused with a 403 (JK Accounting Group)`
+⚠️ **In characters, never in KB** — the subject is the most-quoted line in the whole thread, and we never
+measured a payload in bytes (see the warning above). A byte figure here is the one an engineer checks first.
 **To:** `help@doublehq.com` · **Cc:** Allison, Julia, Maria
 
 > Hello,
 >
-> Allison Millea helped us with this during our implementation, and suggested we write to you now that
-> our dedicated support period has ended. Allison is copied here — she has the full history.
+> We worked on this with Allison Millea during our implementation, and since that period has now ended
+> we are bringing it here, as her hand-off note suggested. Allison is copied in — she has the full
+> history.
 >
 > **The short version:** when we use Double through the **MCP integration** with Claude, any request
 > over roughly 8,000 characters comes back as `403 Forbidden`. Smaller requests work normally.
@@ -275,10 +290,11 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
 > connect to in the same way, from the same Claude account, about a minute apart. It went through with
 > no problem — so there is no general size limit on Claude's side.
 >
-> That leaves something on Double's side refusing our request before it reaches the part of Double that
-> stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
+> That points to something on Double's side refusing our request before it reaches the part of Double
+> that stores notes. From outside we cannot tell whether that is something sitting in front of your MCP
 > endpoint, such as a firewall, or a size limit inside the MCP server itself. **Could you have someone
-> check both?**
+> check both?** **And if a limit is found, can it be raised for our account?** That is what we are
+> really asking for — the size limit is what stops us keeping a case history in one note.
 >
 > Why it matters to us: we keep one running note per client matter, holding the whole history of a case
 > so that anyone on the team can open the client and understand it in a minute. Today we have to split
@@ -296,6 +312,9 @@ support agent can hand to an engineer. **Four rules if you edit it again:**
 > - **It is not our content:** a note body of about 8,200 characters of plain repeated filler — no
 >   formatting, no client data, nothing resembling an attack pattern — was refused exactly like real
 >   text.
+> - **The comparison that points away from Claude:** the system that accepted the identical ~9,000
+>   characters is a different MCP integration on the same Claude account, tested about a minute apart —
+>   so it is like-for-like.
 > - We are happy to run the failing request at a time you choose, so someone can watch it reach your
 >   logs, and we can send a payload of any size you like.
 >
