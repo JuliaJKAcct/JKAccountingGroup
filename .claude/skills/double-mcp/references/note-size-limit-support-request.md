@@ -169,6 +169,10 @@ wrap-up call was the end of that window. **That hand-off has now happened: 2026-
 
 ## The ORIGINAL draft — ⚠️ NOT what was sent
 
+⚠️ *(Editor's note, not part of the email.)* **Question 2 below asks for the limit to be raised "for
+our account". That wording is why rule 5ⓒ exists — it is kept here as the archival record of what was
+drafted, and must never be copied into a live message.**
+
 ⚠️ **Kept for the evidence table and the phrasing, not as a record of our correspondence.** What went
 out differed in the three ways listed in the header — most importantly it asked **two** questions,
 not the three below; **the web-UI question (3) was never sent.** ⚠️ **The escalation to `help@doublehq.com` is already written** (end of
@@ -213,7 +217,7 @@ received, as though it had been ignored, hands them a version of the thread that
 > Three questions:
 >
 > 1. Is there a documented maximum note length for the API?
-> 2. If it is a security or request-size rule, can it be raised for our account? ⚠️ *(This account-scoped wording is why rule 5c exists — do not reuse it.)*
+> 2. If it is a security or request-size rule, can it be raised for our account?
 > 3. Does the web interface have the same limit?
 >
 > For now we are cutting content out of the notes to make them fit, which defeats the point of keeping
@@ -303,13 +307,16 @@ trailing asides; do not drop them.**
 4. **Never restore from git history:** not the firm introduction (the escalation opens with two lines
    of context instead) and not the three-row evidence table (rule 2). Older versions of this file
    recommend both; they are superseded.
-5. **Three things the email must always carry, each lost at least once already:** ⓐ the **user-visible
-   symptom and the duration** ("it does not save", "since 6 August 2026, still happening") — a support
-   agent triages on impact, and a bare `403` is not impact; ⓑ **both probe strings**, refused *and*
-   accepted, because the pair is what proves size was the only variable; ⓒ the raise-it ask scoped
-   **"for us, or generally"** — ⚠️ *never* "for our account", which invites the true answer *"that
-   limit is not per-account"* as a way to close the ticket. **The account-scoped wording survives in
-   the historical section below and must not be copied forward from there.**
+5. **Three things the email must carry.** ⓐ The **user-visible symptom, and since when we have been
+   working around it** — a support agent triages on impact, and a bare `403` is not impact. ⚠️ **State
+   the last date we actually confirmed the failure, not that it is happening today**, unless someone
+   has just re-tested: we avoid the wall by keeping notes short, so "still happening" is an inference,
+   not an observation. ⓑ **Both probe strings**, refused *and* accepted — the pair is what shows size
+   was the variable; either alone is one refused request. ⓒ The raise-it ask scoped **"for us, or
+   generally"** — ⚠️ *never* "for our account", which invites the true answer *"that limit is not
+   per-account"* as a way to close the ticket. **ⓒ is the one with history: it was corrected in #285
+   and the correction failed to reach the email, so the account-scoped wording still stands in "The
+   ORIGINAL draft" section ABOVE — that copy is the archival record and must never be mined forward.**
 6. **Two things plain language must NOT cost us.** ⓐ **Name the surface — "the MCP integration"**:
    Allison answered a "Claude integration" question with *Ask Double* on 2026-06-17. ⓑ **Ask about
    BOTH** the thing in front of the endpoint *and* the MCP server itself — we cannot tell them apart,
@@ -337,7 +344,6 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > **The short version:** when we use Double through the **MCP integration** with Claude, large requests
 > come back as `403 Forbidden` while small ones work normally. On the calls we have measured most
 > closely — saving a note — the change happens between about 7,600 and about 8,000 characters.
-
 >
 > We first reported this as a problem with long notes, and the answer that came back was that Double
 > has no limit on note length and that the problem must be coming from Claude's API. We think the first
@@ -362,13 +368,15 @@ and finds it already over 8,192 bytes stops trusting the rest.
 > so that anyone on the team can open the client and understand it in a minute. When one grows past the
 > limit it does not save — and the response does not tell us whether anything was written, so we have
 > to go and check before retrying. The history then has to be split across two notes to fit, which
-> defeats the purpose. It also reaches ordinary work with no note in it at all, like the client search
-> above. **We have been working around this since 6 August 2026, and it is still happening.**
+> defeats the purpose. **And the limit is not really about notes** — a plain client search with a long
+> filter is refused in the same way, which is how we know it is the size of the request rather than
+> anything about a note. We have been working around this since **6 August 2026** by keeping notes
+> short and splitting them; we last confirmed the failure on **13 August 2026** and have not
+> deliberately re-tested since, though nothing suggests it has changed. Happy to re-run it any time.
 >
 > **Technical details, if they help:**
 >
-> - Workspace: **JK Accounting Group** (account owner Julia Kononova). **Still reproducing as at the
->   date of this email** — the test dates below are when we measured it, not when it stopped.
+> - Workspace: **JK Accounting Group** (account owner Julia Kononova).
 > - Error: `403 Forbidden`, `error_code: mcp_request_blocked`, on the MCP endpoint.
 > - **Note writes:** bodies of about 7,600 characters save; about 8,000 and about 10,400 are refused.
 >   Measured 6 August 2026, roughly 03:25–04:45 UTC, on client IDs **706709** and **710577**.
@@ -379,12 +387,13 @@ and finds it already over 8,192 bytes stops trusting the rest.
 >   - refused: the 100-character block
 >     `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-JKACCOUNTINGGROUP-DOUBLE-MCP-REQUEST-SIZE-PROBE-0000000NN`
 >     repeated 90 times, with `NN` running 01 to 90;
->   - accepted, seconds earlier, same tool: `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE`.
+>   - accepted, same tool, same session: `FILLER-2026-08-13-SIZE-TEST-NO-CLIENT-DATA-PROBE`.
 >
->   That pair is the whole argument in your logs: same endpoint, same account, same tool, one short and
->   one long, minutes apart.
-> - **The note writes reproduce every time:** the same body fails on every attempt, and trimming it
->   below about 7,600 characters makes it save.
+>   That pair is what shows size is the variable: same endpoint, same account, same tool, one short and
+>   one long. We did not record the exact times, so please search the whole of 13 August 2026 — or ask
+>   us to re-run both while you watch.
+> - **The note writes reproduce every time:** the same body is refused on every attempt, while a
+>   shorter body of about 7,600 characters saves.
 > - **The tightest bracket we have** is the note-write one: between about 7,600 and about 8,000
 >   characters. Everything above is counted in characters — **we have not measured any payload in
 >   bytes.**
