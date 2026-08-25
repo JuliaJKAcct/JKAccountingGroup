@@ -109,7 +109,7 @@ the actual details.
 
 ## 5. Key facts & quirks
 
-- 🔴 **THE SHOPIFY STORE IS REGISTERED UNDER JULIA, NOT THE CLIENT — AND MOVING IT TO THE OWNER IS BLOCKED.** The store **Deep Tech Development** (**gorobots.us**) has Julia as its store owner and `julia@jkaccountinggroup.com` as its email of record; the real owner is **Vitalii Ivanov**. Adding him as a staff user **errors**, and *Transfer ownership* refuses and sends us to support. Shopify's diagnosis (2026-08-25) is that the store's **Shopify Balance account is active and is the blocker, even at $0**, and it has to be **closed permanently** first — a closure Shopify has now **requested, with no ETA and no ticket number yet**. ⚠️ **Untested:** nobody has attempted the transfer with Balance closed, and nobody established why the *staff-user* add failed, so the staff-user error may survive the closure as a second problem. **Full trail, options and next actions: Double note `503544`.** _(Shopify support chat transcript, 2026-08-25, via Lilian.)_
+- 🔴 **THE SHOPIFY STORE IS REGISTERED UNDER JULIA, NOT THE CLIENT — AND MOVING IT TO THE OWNER IS BLOCKED.** The store **Deep Tech Development** (**gorobots.us**) has Julia as its store owner and `julia@jkaccountinggroup.com` as its email of record; the real owner is **Vitalii Ivanov**. Adding him as a staff user **errors**, and *Transfer ownership* refuses and sends us to support. Shopify's diagnosis (2026-08-25) is that the store's **Shopify Balance account is active and is the blocker, even at $0**, and it has to be **closed permanently** first — a closure Shopify has now **requested, with no ETA and no ticket number yet**. **Full trail, options and next actions: Double note `503544`.** _(Shopify support chat transcript, 2026-08-25, via Lilian.)_
 - ⏸ **The client is paused while the owner pursues a US visa** — the business restarts when he has
   what he needs, and bookkeeping restarts with it. Until then the firm does **administrative work
   only**, and the QuickBooks disconnection of 2026-07-21 is part of the pause rather than a fault to
@@ -176,16 +176,15 @@ the actual details.
   Shopify has **requested closure of the store's Shopify Balance account** (2026-08-25) because it is what blocks
   the transfer; closure is **permanent**, takes the Balance statements with it, and has **no ETA and no ticket
   number**. Waiting on Shopify's confirmation email to `julia@jkaccountinggroup.com`, then *Settings → Users →
-  transfer ownership*. **Three things to check before relying on this** — the Balance-is-the-only-blocker diagnosis
-  is untested, the separate *staff-user* error was never explained, and Shopify's two advisors contradicted each
-  other on whether payouts route through Balance at all. Full trail: Double note **503544**. _(Shopify chat
+  transfer ownership*. If it goes quiet, the **chat transcript is on file** in Julia's Shopify Support Inbox —
+  that is the reference to reopen the request with. Full trail: Double note **503544**. _(Shopify chat
   transcript, 2026-08-25, via Lilian.)_
-- **File the downloaded Shopify Balance statements into the client's Drive folder** — Julia downloaded every
-  monthly statement one by one on 2026-08-25 before agreeing to the closure. Once Balance is closed they are the
-  **only** record of that account, and nothing yet confirms they left her Downloads folder.
-- **Confirm the store's payment method moves to the owner with the ownership** — the store bills monthly (Basic
-  since 2026-08-02) and every Shopify billing email lands in Julia's inbox, so a transfer that leaves billing
-  behind means the firm keeps paying the client's subscription. _(Gmail, 2026-08-02.)_
+- ~~File the downloaded Shopify Balance statements into the client's Drive folder~~ — **done, confirmed by
+  Lilian 2026-08-25:** they are uploaded to Google Drive. Once Balance closes they are the **only** record of
+  that account.
+- ~~Confirm the store's payment method moves to the owner with the ownership~~ — **answered by Lilian
+  2026-08-25: nothing changes.** The payment method stays as it is and **Deep Tech's bank account is not
+  affected** by the transfer. Do not re-raise this as an open item.
 - ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
   LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
   a permanent address change should be filed instead, before mail starts bouncing. _(Gmail,
@@ -218,6 +217,16 @@ the actual details.
     emails to Julia name the store **"Deep Tech Development" (gorobots.us)**, monthly Balance statements ran
     Nov 2025 → Jul 2026 (an active Balance account, exactly as Shopify found), and no client, contact or email
     anywhere is named "DigTech".
+- 2026-08-25 (later the same day) — **Lilian revised the Double note herself and ruled three of this session's
+  points out of scope.** She deleted the note's *"three things that are not settled"* block in the Double UI —
+  that Shopify's Balance-is-the-blocker diagnosis was untested, that nobody established why the staff-user add
+  errored, and that the two advisors contradicted each other on payouts — and confirmed it in words:
+  **"ninguna de ellas vale la pena… no son relevantes. Olvida esas tres cosas."** 🛑 **They are not to be
+  re-raised**, here or in the note. She also settled two open items: the Balance statements **are uploaded to
+  Google Drive**, and the **payment method and Deep Tech's bank account do not change** with the transfer. The
+  note was then updated on top of *her* edited body — fetched first, so her cuts were not restored. The general
+  lesson (what a case note carries vs. what is our own audit of a third party) is written into the
+  [`double-mcp` skill](../../../.claude/skills/double-mcp/SKILL.md) §7 rule 12. _(Worked by Lilian.)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration
