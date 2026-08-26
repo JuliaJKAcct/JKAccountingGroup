@@ -123,8 +123,8 @@ blindly.
    - **Transfer to another bank account:** check whether we recognize the
      destination account — pull how prior transfers to that *same* account were
      categorized (Double history / `get_similar_transactions`). A known
-     **contractor's** account → the labor account (*Contract labor*, rule 9),
-     with 1099 exposure; the owner's **personal** account → distributions
+     **contractor's** account → the labor accounts (**per rule 17** — an individual →
+     *Contract labor*, an LLC or company → *Outside services*), with 1099 exposure; the owner's **personal** account → distributions
      (rule 6). If the account is unknown, ask the client before posting.
 6. **Transfers with the owner's personal account:** money **in** →
    **Owner's contribution**; money **out** → **Owner's distribution**. Post to
@@ -156,7 +156,9 @@ blindly.
      service consumes, so it is cost of goods sold. This is what the return needs
      for **Form 1125-A**, and moving it changes **gross profit** while leaving net
      income alone.
-   - **Installation SUBCONTRACTOR LABOR → Contract labor** (opex), per rule 17.
+   - **Installation SUBCONTRACTOR LABOR → the labor accounts per rule 17** (an
+     individual → `Contract labor`; an LLC or company → `Outside services`) — **opex
+     either way**, which is the half that matters here.
      Collect a **W-9** from every new one and keep the 1099 list current.
    - **Job-site disposal** → still opex today; no COGS sub-account exists for it.
    ⚠️ **The reviewer's actual job here is the boundary, not the rule.** Materials
@@ -285,14 +287,20 @@ blindly.
     Storage`** — sweep both when applying this.
 17. **Labor: an INDIVIDUAL goes to `Contract labor`; a COMPANY or PLATFORM goes to
     `Outside services` (SETTLED 2026-08-26, per Lilian).** The chart has two
-    similarly-named accounts that had drifted into each other's roles. The line she
-    drew is **who you are paying, not what they do**:
-    - **A person, paid in their own name** — the individual subcontractor, anyone
-      paid cash from an ATM (rule 5) — → **`Contract labor`**.
+    similarly-named accounts that had drifted into each other's roles. The line is
+    **who you are paying, not what they do**:
+    - **A person, paid in their own name** — the individual subcontractor; ATM cash
+      **when the client says it paid a person** (rule 5) — → **`Contract labor`**.
     - **An LLC, a company, or a platform** — the subcontractor that invoices as an
-      LLC, a freelance marketplace — → **`Outside services`**.
+      LLC, a freelance marketplace; ATM cash **the client says paid a company** — →
+      **`Outside services`**.
     Both carry **1099 exposure and need a W-9** — the account does not decide that,
     and an LLC is not exempt unless it is taxed as a corporation.
+    🔴 **The QuickBooks VENDOR RECORD decides, not the bank descriptor** — and on this
+    client they disagree on the payee this rule matters most for. The LLC
+    subcontractor is **paid by Zelle under an individual's name**, so the descriptor
+    says *person* and the vendor record says *LLC*. **The vendor record wins.** Rule 4
+    sends you to the descriptor to *identify* a payee; it does not decide their type.
     ⚠️ **"Outside Labor" is Lilian's name for `Outside services`, and no account of
     that name exists in the chart.** Read it that way whenever she says it.
     🔴 **This CORRECTS what this rule said for one day.** A session asked what
@@ -301,8 +309,13 @@ blindly.
     fuller instruction the same day separates the two subcontractors by **who they
     are**, which only works if **Outside Labor = `Outside services`**; that reading
     is also the only one consistent with her very first instruction, which sent the
-    freelance platform to *Outside Services*. **Say so if that is not what you
-    meant** — it moves the LLC subcontractor's whole year.
+    freelance platform to *Outside Services*.
+    ⓘ **Two different confidence levels, and they must not be read as one.** The
+    **equation** *Outside Labor = `Outside services`* is **forced by her own words** —
+    two independent instructions, one conclusion. The **individual-vs-entity line** is
+    **this firm's reading of three payees she named**, not a principle she stated; she
+    gave accounts, not a rule. It now also drives rule 5's ATM destination for payees
+    she has never ruled on, so **confirm it before applying it to a new one.**
 18. **⛔ The owner's personal account (`Artem Personal`) is OUT OF SCOPE — do not
     categorize it, do not clean it (new 2026-08-26, per Lilian).** It was
     connected to QuickBooks **by mistake** and none of the rules above apply to
@@ -329,7 +342,8 @@ Double is the working tool for the vendor side of these rules — lean on it:
   these current as new subcontractors are paid (rules 5, 9), so 1099 season is
   clean.
 - **Reviewer 1099 sweep — don't let subs hide.** Subcontractor labor is
-  scattered across *Contract labor* (its home since rule 17), *Outside services*,
+  spread across **both** labor accounts **by design since rule 17** (*Contract labor* for
+  individuals, *Outside services* for companies and platforms) and historically also
   and even *Auto Expenses: Vehicles repair* rather than one labor account. **Cash
   taken from an ATM is labor too** (rule 5) and is the easiest 1099 of all to
   miss, because until the client answers there is no payee name on it at all. Each close,
@@ -430,7 +444,7 @@ checklist item 16 below.
 | 4 | Identity/role of a recurring individual payee (name on file in the firm's client systems) | Client | Pending |
 | 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
-| 7 | **RESOLVED 2026-08-26 (per Lilian):** job costs split — spray-foam/insulation **materials → Cost of Goods Sold**; installation **subcontractor labor → Contract labor** (opex). Not symmetrical, and that is the answer. See rule 9. **Row 7 asked for verification against the client's history *and the filed return*; Lilian answered from the client's history and the chart. The filed-return half was not re-checked** — if a prior 1120-S treated job labor as COGS, raise it rather than assume this rule matches it. | Lilian | Resolved |
+| 7 | **RESOLVED 2026-08-26 (per Lilian):** job costs split — spray-foam/insulation **materials → Cost of Goods Sold**; installation **subcontractor labor → the labor accounts per rule 17** (individual → `Contract labor`; LLC/company → `Outside services`), **opex either way**. Not symmetrical, and that is the answer. See rule 9. **Row 7 asked for verification against the client's history *and the filed return*; Lilian answered from the client's history and the chart. The filed-return half was not re-checked** — if a prior 1120-S treated job labor as COGS, raise it rather than assume this rule matches it. | Lilian | Resolved |
 | 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4. ⏸️ **Lilian parked both on 2026-08-13** — do not chase her; raise them only when someone is actually working this client's sales tax. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Parked |
 | 9 | **RESOLVED 2026-08-26 (per Lilian):** the largest 2026 labor payee is an **individual subcontractor → `Contract labor`**. Answered once the question was put **by name** rather than by role — the role description alone was not answerable in conversation, which is the lesson worth keeping. Settling it also produced rule 17's individual-vs-entity line. | Lilian | Resolved |
 | 10 | **Is there a retailer store CARD outside QuickBooks?** The only 2026 trace of the large online retailer is an ACH **payment to a `SYF`/Synchrony store card**, not a purchase — so those purchases may sit on a card the books never see. Decides whether rule 14 has anything to apply to. | Client | To verify |
