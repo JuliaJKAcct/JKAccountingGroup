@@ -175,15 +175,18 @@ use the same colors in every client's decision-flow so a bookkeeper learns them 
 > Worth stating here because this skill is all about *deciding* the category, which makes "now go and
 > apply it" feel like the next step. It is not available: **neither the `Double` connector nor the
 > `Intuit_QuickBooks` connector can set an account on a transaction** — not on a pending bank-feed
-> item, not on one already posted. Double's transaction tools are read-only apart from
-> `add_transaction_comment`; the QuickBooks connector writes invoices, estimates, customers and
-> payroll, and nothing else. ⚠️ **And one tool looks like the exception and is not:
+> item, not on one already posted. ⚠️ **And one tool looks like the exception and is not:
 > `quickbooks_transaction_import` CREATES transactions — aim it at a correction list and the ledger
 > doubles while the miscoded original survives untouched.** So the deliverable is the *worklist*:
 > each item, the account to move it to, and why. Reach for `get_similar_transactions` when deciding —
-> it returns how a payee has been coded historically. Full audit in the
-> [`double-mcp` capability map](../double-mcp/references/capability-map.md) §9. _(Audited 2026-08-26,
-> after Lilian asked directly.)_
+> it returns how a payee has been coded historically.
+> ⛔ **Do not restate either connector's write surface here** — an enumeration in a skill that is not
+> about connectors is the line that rots first, and the one that stood here until 2026-08-26 was
+> already wrong in both halves. **The audited list lives in one place**, and it is the
+> [`double-mcp` capability map](../double-mcp/references/capability-map.md) **§9** — which also
+> records that Double *can* post journal entries (the accruals family), so "read-only" is the wrong
+> mental model even though no tool recategorizes. _(Audited 2026-08-26, after Lilian asked
+> directly.)_
 
 **Firm-wide principles** (these generalize across bookkeeping clients — state them in each
 runbook, adapt the specifics):

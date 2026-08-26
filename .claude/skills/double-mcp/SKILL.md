@@ -107,7 +107,7 @@ you excluded.
 
 ## 2. What the MCP does **not** expose
 
-Re-verified **2026-08-06**. Don't burn calls rediscovering these — and note that this list
+Re-verified **2026-08-06** (the categorization row: **2026-08-26**). Don't burn calls rediscovering these — and note that this list
 **shrank**: organizers moved out of it. The full per-tool detail is in
 [`references/capability-map.md`](./references/capability-map.md).
 
