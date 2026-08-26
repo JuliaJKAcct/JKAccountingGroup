@@ -267,9 +267,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
     what the cash was for.** Lilian's standing instruction: flag the **most recent** ones separately,
     because those are the ones he can still remember, so she can write and ask while the answer is
     still recoverable. (This sharpens the SOP's rule 5 from *investigate* to *ask, every time*.)
-  - **U-Haul → Shipping and Delivery** — her words; ⚠️ **no account of that name exists**, and SOP
-    rule 16 resolves it to `Postage and shipping` pending her confirmation. Consistent with the
-    2026-07-22 review meeting (§5 above), which is now confirmed rather than medium-confidence.
+  - **U-Haul → `Shipping`, the COGS account** ✅ _(settled 2026-08-26: her words were "Shipping and
+    Delivery", no account of that name exists, and she chose `Shipping` naming it as cost of goods
+    sold)_. **Moving the job's materials to site is part of the cost of the job**, so it sits beside
+    the foam materials rather than in opex. ⚠️ A session had inferred the opposite — *"a delivery
+    cost is not COGS"* → `Postage and shipping` — and was wrong. Consistent with the 2026-07-22
+    review meeting (§5 above), now confirmed rather than medium-confidence.
   - **The largest 2026 labor payee is a subcontractor** — so 1099 exposure, and a W-9 is needed.
     Which account he belongs in is still open — see the outstanding items.
   - **Upwork → Outside Services.**

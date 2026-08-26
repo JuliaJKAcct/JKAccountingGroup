@@ -41,13 +41,13 @@
   to name lives in the QBO vendor list and in Double. Don't "helpfully" fill the
   missing names back in *(firm rule, [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md),
   2026-08-14)*.
-  ⚠️ **Retail chains and platforms are named here — Sunoco, Home Depot, Amazon,
-  U-Haul, Upwork — and that is NOT covered by the firm rule, which allows only
-  "utilities and government agencies".** It is this runbook's own long-standing
-  practice (rules 2 and 3 have named chains since July), kept because a covering
-  bookkeeper cannot identify a *category of merchant* any other way. **Flagged
-  rather than assumed** — decisions row 12 puts it to Lilian, and until she rules,
-  don't widen it and don't strip what is already there.
+  ✅ **Retail chains and platforms ARE named here — Sunoco, Home Depot, Amazon,
+  U-Haul, Upwork — and Lilian ruled that explicitly allowed on 2026-08-26** when
+  asked: *"el runbook puede nombrar cadenas retail sin problema."* The reason it is
+  safe is the reason it is useful: a chain is a **category of merchant**, not one of
+  the client's people, and a covering bookkeeper cannot identify the category any
+  other way. **The line stays exactly where it is:** merchant categories named, the
+  **client's own payees by role**.
 
 ## Categorization rules
 
@@ -253,17 +253,23 @@ blindly.
     hotel-related is travel. Post to the **`Travel:Hotel` sub-account, never the
     `Travel` parent** — rule 11 forbids parent postings, and a 2026 hotel charge
     is currently sitting on the parent.
-16. **Truck and trailer rental (U-Haul and similar) → `Postage and shipping`
-    (new 2026-08-26, per Lilian).** Renting a truck or trailer to move tools and materials to a job
-    site is a delivery cost, **not** vehicle fuel, not storage, and not COGS
-    materials. *(Confirms what the 2026-07-22 client review meeting discussed;
-    it was carried as medium-confidence until Lilian ruled.)*
-    ⚠️ **Lilian's words were "Shipping and Delivery" and NO account of that name
-    exists in this chart.** What exists is `Postage and shipping` (an operating
-    expense), `Shipping` (a **COGS** account) and `Shipping Income`. This rule
-    points at **`Postage and shipping`**, because the rule itself says the cost is
-    **not COGS** — which rules out the account whose name is the closer match.
-    **Confirm before applying at volume** — decisions row 13. ⚠️ **These have
+16. **Truck and trailer rental (U-Haul and similar) → `Shipping`, which is a COGS
+    account (RESOLVED 2026-08-26, per Lilian).** Renting a truck or trailer to move tools and
+    materials to a job site is a **direct job cost**, not vehicle fuel and not storage —
+    it is the cost of getting the job's materials to the job. *(Confirms what the
+    2026-07-22 client review meeting discussed; it was carried as
+    medium-confidence until Lilian ruled.)*
+    ⚠️ **Her original words were "Shipping and Delivery" and no account of that name
+    exists in this chart** — what exists is `Postage and shipping` (an operating
+    expense), **`Shipping` (Cost of Goods Sold)** and `Shipping Income`. **She chose
+    `Shipping`, naming it as COGS**, so this is a job cost and sits beside the
+    foam materials of rule 9 rather than in opex.
+    🔴 **A session first read this the other way and was wrong** — it reasoned from
+    "a delivery cost is not COGS" to `Postage and shipping`. That inference is what
+    row 13 existed to test, and it did not survive: **for this trade the delivery of
+    materials to site IS part of the cost of the job.** Kept as a warning because it
+    is the kind of tidy reasoning that reads as obviously right.
+    ⚠️ **These have
     historically been miscoded to `Vehicle gas and fuel` and to `Utilities:
     Storage`** — sweep both when applying this.
 17. **Subcontractor and outside labor → Contract labor; service platforms →
@@ -411,8 +417,8 @@ checklist item 16 below.
 | 9 | **Which account the largest labor payee belongs in.** Lilian said only that he is *a subcontractor*, which settles that he is business labor but not the account. Either subcontractor → **Contract labor** with the rest (rule 17), or the remark was about **1099 exposure** and he stays in *Outside services*. He is the client's largest 2026 labor payee, so it is asked, not inferred. **Does not block the rest of the cleanup** — hold that one line item. | Lilian | Pending |
 | 10 | **Is there a retailer store CARD outside QuickBooks?** The only 2026 trace of the large online retailer is an ACH **payment to a `SYF`/Synchrony store card**, not a purchase — so those purchases may sit on a card the books never see. Decides whether rule 14 has anything to apply to. | Client | To verify |
 | 11 | **The 2026 bank-feed queue is the gate on all of this.** Several hundred transactions were still unposted at 2026-08-26 and are invisible to Double, so every count drawn from the posted ledger is a statement about *what is posted*, not about the year. **Work the queue before treating the P&L as complete** — and before writing to the client (rule 5). | Lilian | To study |
-| 12 | **May this runbook name RETAIL CHAINS and PLATFORMS?** It does (Sunoco, Home Depot, Amazon, U-Haul, Upwork — rules 2, 3, 14, 16, 17) and has since July, but the firm rule in [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) allows only **"utilities and government agencies"** as exceptions to role-not-vendor. The client's own payees are already by role. **A session may not widen a written permission by reasoning** — so this is put to Lilian rather than assumed either way. If she agrees, the answer belongs in the skill, not only here. | Lilian | Pending |
-| 13 | **Which account is "Shipping and Delivery"?** No account of that name exists in this chart. Rule 16 points at `Postage and shipping` because the rule says the cost is not COGS, which rules out the similarly-named `Shipping` (a COGS account). Confirm before applying at volume. | Lilian | To verify |
+| 12 | **RESOLVED 2026-08-26 (per Lilian):** this runbook **may name retail chains and platforms** — *"el runbook puede nombrar cadenas retail sin problema"*. A chain is a category of merchant, not one of the client's people. **The client's own payees stay by role.** Propagated to the [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) role-not-vendor rule so the two no longer contradict. | Lilian | Resolved |
+| 13 | **RESOLVED 2026-08-26 (per Lilian):** truck/trailer rental goes to **`Shipping`, the COGS account** — *"vamos a ponerlo en la cuenta de shipping, que es cost of goods sold"*. ⚠️ **This reversed a session's inference**, which had reasoned from *"a delivery cost is not COGS"* to `Postage and shipping`. For this trade, delivering the job's materials to site is part of the cost of the job. See rule 16. | Lilian | Resolved |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
