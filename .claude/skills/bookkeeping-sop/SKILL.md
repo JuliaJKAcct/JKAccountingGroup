@@ -44,6 +44,18 @@ bookkeeping skills are [`recurring-expense-monitoring`](../recurring-expense-mon
 2. **The Hub shows the curated VISUAL view** of that same `.md` (via the `knowledge-hub`
    skill). Lighter, graphic, memorable — but it renders **from the `.md`**, so it can't
    drift. Curation happens at render time, not by cutting the source.
+   ⚠️ **That is true of the SECTION renderers and FALSE of the curated visuals — and the
+   difference is where a stale rule hides.** `ecoRuleCards`, `ecoDecisionsTable`,
+   `ecoChecklist`, `closeSteps` and friends parse the `.md`, so they genuinely cannot
+   drift. But **`ecoDecisionFlow`, `ecoMonthlyFlow` and `ecoSignature` are hand-authored
+   in `build-hub.mjs`** with nothing linking them to the source. **A rule change that
+   touches what they show must be applied there too, in the same pass.**
+   🔴 **And the visual is the half the team actually reads** — a bookkeeper working the
+   decision ladder sees the chip and never opens the rule card, so a stale chip is worse
+   than a stale paragraph. _(2026-08-26: a rule about which labor account a subcontractor
+   goes to was corrected in the `.md` and reviewed three times; the decision-flow chip
+   still taught the superseded answer each time, because everyone was checking the
+   markdown — the two-layer rule said the Hub could not drift.)_
 
 Client figures, vendor lists, and dollar balances stay in the firm's client systems (Drive
 / Double / QuickBooks), **never** in the repo — the `.md` holds the *procedure and rules
@@ -180,6 +192,13 @@ use the same colors in every client's decision-flow so a bookkeeper learns them 
 > not the ledger you would expect — §9.** So the deliverable is the *worklist*:
 > each item, the account to move it to, and why. Reach for `get_similar_transactions` when deciding —
 > it returns how a payee has been coded historically.
+> ✅ **And for the PENDING queue, which no connector can even list, there is a working route Lilian
+> established on 2026-08-26: she exports the uncategorized transactions from QuickBooks to Excel and
+> uploads the file.** A session reads the sheet, applies the client's rules to every row, and hands
+> back the decided list; she applies it. This is the way to work a backlog the MCP is blind to — the
+> built-in `xlsx` skill reads the workbook (it ships with Claude Code — there is no folder for it
+> under `.claude/skills/`). ⚠️ The sheet carries real client figures and payees:
+> work it in chat, deliver the result to her, and **commit none of it** (two-data-homes).
 > ⛔ **Do not restate either connector's write surface here** — an enumeration in a skill that is not
 > about connectors is the line that rots first, and the one that stood here until 2026-08-26 was
 > already wrong in both halves. **The audited list lives in one place**, and it is the
@@ -219,8 +238,18 @@ runbook, adapt the specifics):
   "the design firm", "the site's electricity and water", "our own monthly fee". A **vendor list
   is client data** and belongs in QuickBooks/Drive/Double, not in a repo that auto-publishes to
   the Hub; and a role **survives a change of vendor**, which a name does not. The exceptions
-  worth allowing are **utilities and government agencies**, which a covering bookkeeper cannot
-  identify any other way. Say the choice out loud in the runbook, or the next session will
+  worth allowing are **utilities and government agencies**, **and — provisionally, pending
+  confirmation — RETAIL CHAINS AND PLATFORMS** (a gas-station chain, a hardware chain, the big
+  online retailer, a truck-rental chain, a freelance marketplace). They share the reason: a covering
+  bookkeeper cannot identify a *category of merchant* any other way, and none of them is one of the
+  client's own people.
+  ⚠️ **This is a SESSION'S GENERALISATION, not a firm ruling.** On 2026-08-26 Lilian allowed it for
+  the **Ecoorganic runbook only** — *"el runbook puede nombrar cadenas retail sin problema"*. The
+  firm-wide wording here was widened by a session so the two files stop contradicting each other,
+  which is a real problem worth solving, but **she has not ruled on it for every client. Ask her
+  before relying on it for another one** — [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) tracks the
+  confirmation. **What does NOT move is the client's
+  own payees — subcontractors, individuals, the small local suppliers — which stay by role.** Say the choice out loud in the runbook, or the next session will
   "helpfully" fill the names back in.
 - **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
   client's P&L should be empty; a client with one revenue stream should show one. Write the
