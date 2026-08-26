@@ -479,7 +479,7 @@ function ecoDecisionFlow(){
       `Food, restaurant, groceries or convenience?`,
       `any meal, coffee, fast food, or grocery run`,
       dchip('own', '', `Owner's <b>Distribution</b>`) + dchip('biz', 'EXCEPT', `supply / hardware / job store → <b>Supplies</b> or <b>COGS</b>`),
-      `<b>Meals should trend to $0.</b> Judge a store by what it's <em>for</em> — Home Depot, Decker Rental, Compass Hardware stay business.`),
+      `<b>Meals should trend to $0.</b> Judge a store by what it's <em>for</em> — a hardware or job-supply store stays business.`),
     ecoGate(5,
       `A job cost?`,
       `foam &amp; spray materials · installation subs · job-site disposal`,

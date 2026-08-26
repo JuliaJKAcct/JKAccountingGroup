@@ -12,7 +12,7 @@
 > The firm recently took this client over, so we are still learning how the
 > business actually runs and how the books were kept before us. The rules below
 > are being **checked against the client's own history as the cleanup proceeds**;
-> treat anything tagged _(to verify)_ as provisional until confirmed, and expect
+> treat anything tagged *(to verify)* as provisional until confirmed, and expect
 > thresholds and categories to change as we learn. Nothing here assumes the prior
 > bookkeeping was correct — the goal is to make it correct, not to preserve what
 > was done. When a rule changes, the reviewer updates it here, dates it, and
@@ -22,28 +22,32 @@
 
 - Spray-foam insulation contractor, Connecticut. Owner: Artem Markarian.
 - Books in QuickBooks Online, managed through Double.
-- **Two connected feeds, and only ONE of them is the business's** _(corrected
-  2026-08-26 — the runbook previously said one)_:
+- **Two connected feeds, and only ONE of them is the business's** *(corrected
+  2026-08-26 — the runbook previously said one)*:
   - **`Checking Chase 8310` — the business operating account.** This is the one
     that gets cleaned. Customer deposits, vendor payments, the subcontractor
     Zelles and the card activity all run through it.
   - **`Artem Personal` — the owner's personal account (Chase …2935), connected
     to QuickBooks BY MISTAKE.** ⛔ Out of scope: see rule 18. Its presence in the
     file is what makes rule 12 necessary.
-  All other bank and card accounts are disconnected; which of them are actually
-  closed is **pending client confirmation** — until then they are frozen
+- **All other bank and card accounts are disconnected**; which of them are
+  actually closed is **pending client confirmation** — until then they are frozen
   (rename-only, no new postings, no cleanup).
 - Check- and cash-heavy business; many Zelle payments to subcontractors.
-- 🔒 **Named people and vendors are NOT written into this file.** The rules below
-  say *the recurring insulation subcontractor*, not a name — a role survives a
-  change of vendor, and a vendor list is client data that belongs in QuickBooks
-  and Double, not in a repo that auto-publishes to the Hub. **Retail chains,
-  platforms, utilities and agencies ARE named** — Sunoco, Home Depot, Amazon,
-  U-Haul, Upwork — because they are categories of merchant, not the client's
-  people, and a covering bookkeeper cannot identify them any other way. **The
-  client's own subcontractors and payees are not**, and that is where the line
-  sits. This is a choice, not an omission; don't "helpfully" fill the missing
-  names back in _(firm rule, 2026-08-14)_.
+- 🔒 **The client's own subcontractors and payees are written by ROLE, not by
+  name** — *the recurring insulation subcontractor*, not a person. A role survives
+  a change of vendor, and a payee list is client data that belongs in QuickBooks
+  and Double, not in a repo that auto-publishes to the Hub. The mapping from role
+  to name lives in the QBO vendor list and in Double. Don't "helpfully" fill the
+  missing names back in *(firm rule, [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md),
+  2026-08-14)*.
+  ⚠️ **Retail chains and platforms are named here — Sunoco, Home Depot, Amazon,
+  U-Haul, Upwork — and that is NOT covered by the firm rule, which allows only
+  "utilities and government agencies".** It is this runbook's own long-standing
+  practice (rules 2 and 3 have named chains since July), kept because a covering
+  bookkeeper cannot identify a *category of merchant* any other way. **Flagged
+  rather than assumed** — decisions row 12 puts it to Lilian, and until she rules,
+  don't widen it and don't strip what is already there.
 
 ## Categorization rules
 
@@ -83,8 +87,8 @@ blindly.
    is a distribution. Grocery / food-store purchases follow the same
    food-is-personal logic → distributions. **Exception — supply/materials stores
    are business, not food:** Home Depot and any hardware / work-parts / job-supply
-   store (e.g. Decker Rental, Compass Hardware) → **Supplies & Materials** (or
-   COGS per rule 9), *not* distributions — treat a store by what it is *for*, so a
+   store → **Supplies & Materials** (**never COGS** — see rule 9), *not*
+   distributions — treat a store by what it is *for*, so a
    supply house stays business even though anything can be bought there. The
    food-is-personal rule is about groceries, restaurants, and convenience — not
    supply houses. **Consequence:** the **Meals** account
@@ -92,7 +96,8 @@ blindly.
    distributions. *"For now" — revisit if the client's facts change.*
 4. **Every transaction gets a vendor/payee**, except owner draws, owner
    contributions, and transfers. Unknown bank descriptors: identify the business
-   online first (this works — e.g. CWPM LLC resolved to a CT waste hauler);
+   online first (this works — an unrecognised descriptor resolved to a local
+   waste hauler that way);
    check the QBO vendor list; propose creating the vendor if missing. Never
    guess — an unidentifiable descriptor goes to *Ask My Accountant* (triage).
 5. **Cash out / withdrawals — investigate, never assume (updated 2026-07-21).**
@@ -126,25 +131,30 @@ blindly.
    split) — and **never** to Sales or **Cost of Goods Sold** (a recurring 2026
    error: some of these transfers are still landing in COGS; this rule exists to
    catch them).
-   ⚠️ **Since the personal account was connected, QuickBooks now proposes these as
-   TRANSFERS rather than leaving them to be categorized** — and a genuine
-   `Online Transfer to/from` between the two accounts is fine to accept as one.
-   **What is never fine is a transfer QuickBooks invented from a matching amount
-   — see rule 12**, which is the failure mode that has actually cost this client
-   money.
+   🔴 **Since the personal account was connected, QuickBooks proposes these as
+   TRANSFERS — and a transfer is the WRONG answer even when the movement is
+   real.** Accepting one posts bank-to-bank: it never reaches
+   *Owner's contribution* / *Owner's distribution*, so the draws and the
+   contributions **net to zero in equity** and the split this rule exists to
+   preserve is lost. It also books the postings against an account rule 18 says
+   is leaving the file. **So: never accept one as a transfer — post the equity
+   entry, whatever QuickBooks proposes.** ⚠️ **This applies to ALL of them, not
+   only the invented ones** — an `Online Transfer to/from` between the two
+   accounts is genuine as a *movement* and still not a transfer for *this* client.
+   Rule 12 is the separate, worse case: a transfer QuickBooks invented from a
+   matching amount, where the underlying transaction is not a movement at all.
 7. **Personal ACH pulls named to the owner** (e.g. his personal Capital One
    card autopay) → Owner's distribution.
 8. **IRS `USATAXPYMT` pulls under the owner's name** are his personal federal
    tax → Owner's distribution, never a business tax expense.
-9. **Job costs — MATERIALS to COGS, LABOR to opex (RESOLVED 2026-08-26, per
-   Lilian).** The split is not symmetrical, and that is the answer, not an
+9. **Job costs — MATERIALS to COGS, LABOR to opex (RESOLVED 2026-08-26, per Lilian).** The split is not symmetrical, and that is the answer, not an
    oversight:
    - **Spray-foam and insulation MATERIALS → *Cost of Goods Sold*.** The
      specialist foam/insulation distributors supply the material the installation
      service consumes, so it is cost of goods sold. This is what the return needs
      for **Form 1125-A**, and moving it changes **gross profit** while leaving net
      income alone.
-   - **Installation SUBCONTRACTOR LABOR → *Contract labor*** (opex), per rule 17.
+   - **Installation SUBCONTRACTOR LABOR → Contract labor** (opex), per rule 17.
      Collect a **W-9** from every new one and keep the 1099 list current.
    - **Job-site disposal** → still opex today; no COGS sub-account exists for it.
    ⚠️ **The reviewer's actual job here is the boundary, not the rule.** Materials
@@ -153,21 +163,26 @@ blindly.
    distributors**, not for everything that could be called a material. A recurring
    2026 error is specialist-distributor purchases landing in *Supplies &
    Materials*; sweep that account for them each close.
+   ⚠️ **This is a DELIBERATE DEPARTURE from the firm-wide framework, and the next
+   reviewer should know that rather than "fix" it.** The
+   [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) framework puts
+   **subcontractor labor in COGS** alongside materials. Lilian ruled otherwise for
+   *this* client. Follow the client rule here; do not generalise it to others.
    **COA reality check:** this client's chart has a **single *Cost of Goods Sold*
    account** (plus *Shipping*) — there are **no** Materials / Subcontractor Labor
    / Job Disposal sub-accounts, and none are being built yet (classify first,
    restructure the chart second).
-   _(This replaces the July draft, which was tagged **to verify** because its
+   *(This replaces the July draft, which was tagged **to verify** because its
    provenance was unconfirmed and which sent subcontractor labor to a COGS
    sub-account that does not exist. Lilian resolved it directly; decisions-log
-   row 7 is closed.)_
+   row 7 is closed.)*
 10. **Vehicle financing: PENDING (open — to study).** Don't expense installments
     blindly; park in triage until resolved. *(Discrepancy noted 2026-07-21, not
     yet resolved: the SOP names "Hyundai Motor Finance / Ally," but this client's
     actual chart shows **RAM truck loans** — "Car Loan 2022 RAM 1500", "2017 RAM
     Loan" — and no Hyundai/Ally accounts, so the lender names here are probably
     inherited from another client. Leaving it as an open question until the
-    client confirms the vehicles and financing; treatment unchanged for now.)_
+    client confirms the vehicles and financing; treatment unchanged for now.)*
 11. **Parent accounts never receive postings.** And the **holding /
     "uncategorized" accounts** — today that's *Ask My Accountant*, *Uncategorized
     Income*, *Uncategorized Expense* (and, once we renumber the chart, the
@@ -196,23 +211,37 @@ blindly.
       $0 while revenue and cost are missing.
     - **The test, and it needs no judgement:** a **fuel purchase**, an **ATM cash
       deposit** and an **ATM cash withdrawal are not transfers by nature**,
-      whatever the amounts match. Only an actual bank-to-bank movement is a
-      transfer — the descriptor reads `Online Transfer to/from`.
+      whatever the amounts match. Only an actual bank-to-bank movement is even a
+      *candidate* — the descriptor reads `Online Transfer to/from`. ⚠️ **And on
+      this client a candidate is still not accepted:** per rule 6 those movements
+      are posted as **equity**, so in practice **no** pair suggestion involving
+      the personal account is ever accepted.
     - **Found in the 2026 books:** ATM **check deposits** booked as transfers
       instead of **revenue**, and ATM **cash withdrawals** booked as transfers
       instead of **labor** — the second also erasing the 1099 exposure the cash
       carries (rule 5). Both directions of damage from one bad suggestion.
     - **To undo one:** open the posted transaction and use **Unpair transaction**,
       then categorize it properly.
-13. **Cash and ATM DEPOSITS → *Sales* — but check the open invoices FIRST (new
+13. **Cash and ATM DEPOSITS → Sales — but work the ladder, FIRST YES WINS (new
     2026-08-26, per Lilian).** A cash or ATM deposit is normally the client's
-    revenue. ⚠️ **Before booking one to Sales, check A/R:** this client carries
+    revenue, and *Sales* is the default — but it is the **last** branch, not the
+    first. In order:
+    1. **Does it pay an OPEN INVOICE?** → apply it to the invoice so the invoice
+       closes. Check A/R before anything else.
+    2. **Is it money the OWNER put in?** → **Owner's contribution** (rule 6),
+       never Sales. Booking an owner's capital injection as revenue puts
+       **non-taxable money on the 1120-S as taxable income** — the most expensive
+       mistake available on this rule.
+    3. **Is it a new sale?** → **Sales**, with the customer named (rule 1).
+    4. **Can't tell?** → **ask the client.** He is the only one who knows which
+       job the cash came from.
+    ⚠️ **On the A/R branch:** this client carries
     open invoices, some long overdue, and a deposit that is really an invoice
     payment must be **applied against that invoice** so it closes. Booking it to
     Sales instead **counts the revenue twice and leaves the receivable standing
-    forever.** Where it is not obvious, **ask the client** — he is the only one
-    who knows which job the cash came from. This sharpens rule 1's
-    "deposits are never assumed" with the specific trap.
+    forever.** This sharpens rule 1's "deposits are never assumed" — rule 1 already
+    says every deposit carries a customer *or the owner*; this rule says which
+    branch to test first.
 14. **Amazon purchases → *Supplies & Materials* (new 2026-08-26, per Lilian).**
     Amazon buys are job supplies; anything coded elsewhere is an error to correct.
     ⚠️ **Know what you are looking at before applying this:** a **payment to an
@@ -220,19 +249,25 @@ blindly.
     a **credit-card payment, not a purchase** — the purchases sit on a card that
     may not be connected to QuickBooks at all, so the books may never see them.
     Do not code a card payment as supplies. See the decisions log.
-15. **Hotels → *Travel:Hotel* (new 2026-08-26, per Lilian).** Anything
+15. **Hotels → Travel:Hotel (new 2026-08-26, per Lilian).** Anything
     hotel-related is travel. Post to the **`Travel:Hotel` sub-account, never the
     `Travel` parent** — rule 11 forbids parent postings, and a 2026 hotel charge
     is currently sitting on the parent.
-16. **Truck and trailer rental (U-Haul and similar) → *Shipping and delivery*
+16. **Truck and trailer rental (U-Haul and similar) → `Postage and shipping`
     (new 2026-08-26, per Lilian).** Renting a truck or trailer to move tools and materials to a job
     site is a delivery cost, **not** vehicle fuel, not storage, and not COGS
-    materials. _(Confirms what the 2026-07-22 client review meeting discussed;
-    it was carried as medium-confidence until Lilian ruled.)_ ⚠️ **These have
-    historically been miscoded to *Vehicle gas and fuel* and to *Utilities:
-    Storage*** — sweep both when applying this.
-17. **Subcontractor and outside labor → *Contract labor*; service platforms →
-    *Outside services* (new 2026-08-26, per Lilian).** The chart has two
+    materials. *(Confirms what the 2026-07-22 client review meeting discussed;
+    it was carried as medium-confidence until Lilian ruled.)*
+    ⚠️ **Lilian's words were "Shipping and Delivery" and NO account of that name
+    exists in this chart.** What exists is `Postage and shipping` (an operating
+    expense), `Shipping` (a **COGS** account) and `Shipping Income`. This rule
+    points at **`Postage and shipping`**, because the rule itself says the cost is
+    **not COGS** — which rules out the account whose name is the closer match.
+    **Confirm before applying at volume** — decisions row 13. ⚠️ **These have
+    historically been miscoded to `Vehicle gas and fuel` and to `Utilities:
+    Storage`** — sweep both when applying this.
+17. **Subcontractor and outside labor → Contract labor; service platforms →
+    Outside services (new 2026-08-26, per Lilian).** The chart has two
     similarly-named accounts and they had drifted into each other's roles, so the
     line is now fixed:
     - **People and firms doing the client's actual work** — the recurring
@@ -241,9 +276,9 @@ blindly.
     - **Freelance / outsourcing PLATFORM charges** (Upwork and similar) →
       **`Outside services`**. The platform is a service the business buys, not a
       person on the crew.
-    _(Lilian's wording was "Outside Labor" for the first group; the chart has no
+    *(Lilian's wording was "Outside Labor" for the first group; the chart has no
     account of that name, and she confirmed on 2026-08-26 that it means the
-    existing **Contract labor** account.)_
+    existing **Contract labor** account.)*
 18. **⛔ The owner's personal account (`Artem Personal`) is OUT OF SCOPE — do not
     categorize it, do not clean it (new 2026-08-26, per Lilian).** It was
     connected to QuickBooks **by mistake** and none of the rules above apply to
@@ -312,7 +347,7 @@ Drive filing convention, the deadline and the $50 late floor, what to do when a 
 arrives, and the two open questions about why the return is zero at all.
 
 The only thing the bookkeeping reviewer does with it is **confirm it happened** — see
-checklist item 11 below.
+checklist item 16 below.
 
 ## Monthly review checklist (what the reviewer verifies)
 
@@ -333,20 +368,25 @@ checklist item 11 below.
 9. Overdraft/NSF fees tracked in their own sub-account and totalled for the
    client conversation.
 10. No new activity in frozen accounts; any exception is escalated.
-11. 🔴 **No transaction is sitting as a TRANSFER against the owner's personal
-    account that is not genuinely a bank-to-bank movement** (rule 12). Filter the
-    personal account's transactions and read the descriptors: anything that is not
-    `Online Transfer to/from` — an ATM deposit, an ATM withdrawal, a card purchase
-    — is a false pair to unpair and re-categorize. **The close gate in item 2 does
-    NOT catch these**, which is why this is its own line.
+11. 🔴 **Nothing in the BUSINESS account is sitting as a transfer against the
+    owner's personal account** (rules 6 and 12). Filter *`Checking Chase 8310`*
+    for transactions typed **Transfer** and read each descriptor: an ATM deposit,
+    an ATM withdrawal or a card purchase is a **false pair** (rule 12), and even a
+    genuine `Online Transfer to/from` belongs in **equity**, not in a transfer
+    (rule 6). Unpair it and post the business side correctly. ⛔ **Work from the
+    business account, not the personal one** — rule 18 puts `Artem Personal` out of
+    scope, and unpairing releases the business-side transaction, which is the only
+    side in scope. **The close gate in item 2 does NOT catch any of this**, because
+    a consumed transfer never reaches a triage account — which is why this is its
+    own line.
 12. **Every ATM cash withdrawal in the period has been put to the client**, and
     the recent ones were flagged separately from the old (rule 5). An unanswered
     withdrawal is an open 1099 question, not a closed month.
 13. **Cash / ATM deposits were checked against open A/R before being booked to
     Sales** (rule 13) — no deposit that was really an invoice payment went to
     Sales and left the receivable standing.
-14. **The specialist foam/insulation distributors are in COGS, not *Supplies &
-    Materials*** (rule 9) — sweep *Supplies & Materials* for them.
+14. **The specialist foam/insulation distributors are in COGS, not `Supplies &
+    Materials`** (rule 9) — sweep that account for them.
 15. **`Travel:Hotel` carries the hotel charges and the `Travel` parent is empty**
     (rules 11, 15).
 16. **The month's Connecticut sales-tax return was filed** — the OS-114 zero return is in
@@ -364,13 +404,15 @@ checklist item 11 below.
 | 2 | Vehicle financing: lease vs loan vs personal — **and** reconcile the SOP's "Hyundai Motor Finance/Ally" against the actual **RAM truck loans** in the chart (open, to study) | Client | Pending |
 | 3 | Which disconnected bank/card accounts are closed | Client | Pending |
 | 4 | Identity/role of a recurring individual payee (name on file in the firm's client systems) | Client | Pending |
+| 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
+| 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
+| 7 | **RESOLVED 2026-08-26 (per Lilian):** job costs split — spray-foam/insulation **materials → Cost of Goods Sold**; installation **subcontractor labor → Contract labor** (opex). Not symmetrical, and that is the answer. See rule 9. **Row 7 asked for verification against the client's history *and the filed return*; Lilian answered from the client's history and the chart. The filed-return half was not re-checked** — if a prior 1120-S treated job labor as COGS, raise it rather than assume this rule matches it. | Lilian | Resolved |
+| 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4. ⏸️ **Lilian parked both on 2026-08-13** — do not chase her; raise them only when someone is actually working this client's sales tax. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Parked |
 | 9 | **Which account the largest labor payee belongs in.** Lilian said only that he is *a subcontractor*, which settles that he is business labor but not the account. Either subcontractor → **Contract labor** with the rest (rule 17), or the remark was about **1099 exposure** and he stays in *Outside services*. He is the client's largest 2026 labor payee, so it is asked, not inferred. **Does not block the rest of the cleanup** — hold that one line item. | Lilian | Pending |
 | 10 | **Is there a retailer store CARD outside QuickBooks?** The only 2026 trace of the large online retailer is an ACH **payment to a `SYF`/Synchrony store card**, not a purchase — so those purchases may sit on a card the books never see. Decides whether rule 14 has anything to apply to. | Client | To verify |
 | 11 | **The 2026 bank-feed queue is the gate on all of this.** Several hundred transactions were still unposted at 2026-08-26 and are invisible to Double, so every count drawn from the posted ledger is a statement about *what is posted*, not about the year. **Work the queue before treating the P&L as complete** — and before writing to the client (rule 5). | Lilian | To study |
-| 5 | What "Laundry" purchases are (workwear vs personal) | Client | Pending |
-| 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
-| 7 | **RESOLVED 2026-08-26 (per Lilian):** job costs split — spray-foam/insulation **materials → Cost of Goods Sold**; installation **subcontractor labor → Contract labor** (opex). Not symmetrical, and that is the answer. See rule 9. | Lilian | Resolved |
-| 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4. ⏸️ **Lilian parked both on 2026-08-13** — do not chase her; raise them only when someone is actually working this client's sales tax. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Parked |
+| 12 | **May this runbook name RETAIL CHAINS and PLATFORMS?** It does (Sunoco, Home Depot, Amazon, U-Haul, Upwork — rules 2, 3, 14, 16, 17) and has since July, but the firm rule in [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) allows only **"utilities and government agencies"** as exceptions to role-not-vendor. The client's own payees are already by role. **A session may not widen a written permission by reasoning** — so this is put to Lilian rather than assumed either way. If she agrees, the answer belongs in the skill, not only here. | Lilian | Pending |
+| 13 | **Which account is "Shipping and Delivery"?** No account of that name exists in this chart. Rule 16 points at `Postage and shipping` because the rule says the cost is not COGS, which rules out the similarly-named `Shipping` (a COGS account). Confirm before applying at volume. | Lilian | To verify |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
