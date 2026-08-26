@@ -350,6 +350,47 @@ categorize. The firm's own complaint about that screen — that categorized, pen
 merely-suggested items are indistinguishable, where QuickBooks splits them into *For review* and
 *Categorized* — is raised with Double; see [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 23.
 
+### 🔴 "Can you just categorize it for me?" — NO, by either route, and one tool will bite
+
+Asked by Lilian, 2026-08-26, while cleaning up a client's 2026 books. It is the obvious next
+question after a session has produced a list of what is miscoded, and the honest answer has two
+halves — **they fail for different reasons, so answer both.**
+
+**Half 1 — the PENDING bank feed** (items still "for review"): unreachable, per the section above.
+No MCP tool lists them, so a session cannot even tell you how many are waiting.
+
+**Half 2 — ALREADY-POSTED transactions** (changing the account on something already categorized):
+also unreachable, and this is the half people assume must be possible because `get_transactions`
+clearly *sees* them. It sees them **read-only**. The Double connector has no
+`update_transaction` / `recategorize` / `patch` of any shape; the only write anywhere near a
+transaction is **`add_transaction_comment`**, which attaches a comment and **changes no
+categorization**.
+
+**And the other connector does not rescue it.** The firm also has the account-level
+**`Intuit_QuickBooks`** connector — a reasonable place to look, and it is **not** covered by this
+map, which is Double-scoped. Audited 2026-08-26: its entire write surface is **invoices,
+estimates, payment links, customers, products, payroll, sales settings and the company profile**.
+**Nothing** reaches an expense's category, a bank-feed item, or a posted transaction's account.
+
+> ⚠️ **The trap, and it is a real one: `quickbooks_transaction_import`.** It is the one tool that
+> writes transactions, its description says *"Import transactions into your QuickBooks account"*,
+> and it even runs AI categorization on what you send. Reach for it to "fix" a miscoded
+> transaction and you will **CREATE A SECOND ONE** — the ledger doubles, the P&L moves, and the
+> original stays exactly as wrong as it was. It is an importer for transactions QuickBooks does
+> **not** have; it is not an editor for transactions it does. **Never point it at a
+> correction list.**
+
+**So what a session is actually for here** — say this rather than just refusing, because it is
+most of the value: read the ledger, the chart of accounts, the P&L and the aging; find what is
+miscoded and **why**; and produce the **worklist a person executes by hand**, with the account to
+move each item to and the reason. `get_similar_transactions` (§9) is built for exactly this — it
+returns how a payee has historically been coded, with `payeeStats` / `accountStats`. The judgement
+is the deliverable; the clicking stays with the bookkeeper.
+
+**Two things that would change this answer** — re-audit rather than trusting this paragraph if
+either lands: a Double write tool for transactions, or a QuickBooks connector tool that updates a
+`Purchase`/`Expense` object rather than creating one.
+
 ---
 
 ## 10. Metrics dashboards — QuickBooks / Xero clients only
@@ -425,6 +466,7 @@ tested was not. Don't build anything on loan tools without checking first.
 | **Loan tools** | Billing-gated — §13 |
 | **Merging duplicate clients** | No tool. Prevention only |
 | **Bank Feeds** — listing or categorizing a client's feed | Not exposed; the ledger endpoint shows posted entries only — §9 |
+| **Categorizing ANY transaction** — pending *or* already posted, by Double **or** by the `Intuit_QuickBooks` connector | Not exposed by either. A session produces the worklist; a person executes it. ⚠️ **`quickbooks_transaction_import` CREATES transactions — pointing it at a correction list duplicates the ledger** — §9 |
 
 ---
 
