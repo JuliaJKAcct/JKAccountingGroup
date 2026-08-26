@@ -107,7 +107,7 @@ you excluded.
 
 ## 2. What the MCP does **not** expose
 
-Re-verified **2026-08-06**. Don't burn calls rediscovering these — and note that this list
+Re-verified **2026-08-06** (the categorization row: **2026-08-26**). Don't burn calls rediscovering these — and note that this list
 **shrank**: organizers moved out of it. The full per-tool detail is in
 [`references/capability-map.md`](./references/capability-map.md).
 
@@ -120,6 +120,7 @@ Re-verified **2026-08-06**. Don't burn calls rediscovering these — and note th
 | **File contents** | `get_file` returns a **download link for the user** — it does not load the file for you. See the privacy rule below |
 | **Loan tools** (`list_loans`, `get_loan`, schedules…) | ⛔ `BILLING_ACCESS_DENIED` — the client needs a Scale subscription. Gated **per client**, so check before building on them |
 | **Merging duplicate clients** | No tool, and duplicates already exist in the roster. Prevention only — confirm before `create_client` |
+| **Categorizing a transaction** — pending bank-feed item *or* already posted | Not exposed. A session reads, decides and hands over a worklist; a person applies it. 🔴 **The `Intuit_QuickBooks` connector is NOT the way round it — it is authenticated to the firm's own books, not a client's** (audited 2026-08-26; re-check with `company_info`, it is one free call). ⚠️ **`quickbooks_transaction_import` CREATES transactions — never aim it at a correction list.** [Capability map](./references/capability-map.md) §9 |
 | Property columns with **no options defined** (`Service Tier`, `Entity Type`) | They exist but are unused — don't treat an empty value as meaningful |
 
 **No longer on this list:** tax organizers and their progress percentage. Both are readable now —

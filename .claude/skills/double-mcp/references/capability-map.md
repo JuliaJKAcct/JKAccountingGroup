@@ -2,15 +2,24 @@
 
 **The answer sheet for "can we do X in Double?"**
 
-Every tool the `Double` MCP server exposes (**104** as of the audit), what it can and cannot do,
+Every tool the `Double` MCP server exposes (**at least 111** — see the count caveat below), what it can and cannot do,
 and whether we have actually run it. Read this before telling anyone something is impossible — and before promising
 something is possible.
 
 - **Audited:** 2026-08-06 (Lilian). Previous audit: 2026-07-30.
+- ⚠️ **Partial re-audit 2026-08-26** — scoped to §9's transaction-write surface and the
+  `Intuit_QuickBooks` connector. **It found five tools this file had never documented, two of which
+  post journal entries to a client's ledger** (the accruals family, §9a), plus
+  `create_metrics_visual_grid` and `search_app_navigation`. **So the "104" this header used to claim
+  was already stale, and 111 is a floor, not a verified census** — the scoped pass only looked where
+  it was pointed. **A full re-audit is owed** (see *Keeping this file honest*); until it runs, treat
+  an undocumented tool as likely rather than surprising.
 - **Connected account:** Julia Kononova — role `superAdmin`. Several tools are role-gated, so a
   capability listed here is "available to the firm's connector", not "available to every user".
-- **Scope:** the `Double` MCP only. It is an account-level connector and is **not** declared in
-  this repo's `.mcp.json`.
+- **Scope:** the `Double` MCP. It is an account-level connector and is **not** declared in this
+  repo's `.mcp.json`. ⓘ **§9 additionally records an audited boundary of the separate
+  `Intuit_QuickBooks` connector**, because the question *"can a session categorize a transaction?"*
+  is only answered by both, and there is no QuickBooks skill for it to live in.
 
 ## Verification legend
 
@@ -315,6 +324,38 @@ this; do not invent a second approach.** Raised with Double 2026-08-06; **answer
 These carry real client figures. They can be read freely for the firm's own work; they are
 **never committed to this repo**.
 
+### 9a. Accruals — the ledger WRITES this file had never recorded
+
+**Found 2026-08-26**, undocumented since the connector gained them. Five tools, and two of them
+**post journal entries into the client's QuickBooks**. Schemas read; **none executed**.
+
+| Tool | | Notes |
+|---|---|---|
+| `get_accrual_presets` | ◻︎ | ⚠️ **The CLIENT's presets, not the firm's** — `clientId` is required, so they are per-client and must be re-read for each one. **Call this FIRST** — the create tool's own description says a matching preset defaults duration, reversal method and expense account, so only ask the user for what it does not cover. Its `accrualType` enum reveals the wider system: `ACCRUED_EXPENSE` · `DEFERRED_REVENUE` · `FIXED_ASSET` · `NON_DEPRECIATING_FIXED_ASSET` · `PREPAID_EXPENSE` — **five types, and the connector exposes a create/reverse pair for only the first** |
+| `get_accruals_needing_review` | ◻︎ | The accruals awaiting manual reversal; source of the `accrualId` the reverse tool needs |
+| `get_accrual_reversal_schedule` | ◻︎ | **Preview.** Computes the reversal server-side. Run it and show the user before reversing |
+| `create_accrued_expense` | ◻︎ **W** 🔒 | *"accrues the amount each month against the liability account, **posts the journal entries**, and schedules the reversal."* Also creates or reuses an accrual tracking task on a close. Three reversal methods: `REV_MONTHLY` · `REV_END_OF_DURATION` · `REV_MANUAL` |
+| `reverse_accrued_expense` | ◻︎ **W** 🔒 | *"**posts the reversal journal entry to the ledger**"* and marks the accrual reversed |
+
+🔒 **Write safety — §6's default-deny governs these, and they carry the connector's heaviest
+financial consequence.** They change a client's financial statements, and unlike a note or a property there
+is no undo here: a reversal is itself another journal entry, **there is no delete tool among the
+five, and `reverse_accrued_expense` only accepts an accrual created `REV_MANUAL` and not yet
+reversed** — so a mistaken `REV_MONTHLY` create has *no in-connector remedy at all*. So — **an explicit human instruction
+naming the client, the amount, the accounts and the method**, the tools' own instruction to
+**confirm the details with the user before calling**, and the **schedule computed server-side,
+never by us** (`get_accrual_presets` / `get_accrual_reversal_schedule` first). Nothing about them
+is exempt from the rule that reading is free and writing needs a person to ask.
+
+⚠️ **They do not help with categorization** — that is why they were invisible to the question that
+found them. They create *new* entries; they cannot change the account on an existing transaction.
+
+**Three more tools this file had never listed**, found in the same pass and left for the full
+re-audit to place properly: **`create_metrics_visual_grid`** (metrics, §11-shaped),
+**`search_app_navigation`** (returns Double UI destinations — useful for handing a person a deep
+link to a screen the MCP cannot work, the Bank Feeds queue being the obvious one), and the
+accruals' own tracking-task behaviour, which touches closes.
+
 ### ⚠️ `get_transactions` is not the whole ledger — never reason from its silence
 
 Observed **2026-08-14** on a QBO client (iKids Group): `get_transaction_types` returned exactly two
@@ -349,6 +390,71 @@ So: **a session cannot work a client's bank feed**, and cannot tell you what is 
 categorize. The firm's own complaint about that screen — that categorized, pending and
 merely-suggested items are indistinguishable, where QuickBooks splits them into *For review* and
 *Categorized* — is raised with Double; see [`FOLLOW-UPS.md`](../../../../FOLLOW-UPS.md) row 23.
+
+### 🔴 "Can you just categorize it for me?" — NO, by either route, and one tool will bite
+
+Asked by Lilian, 2026-08-26, while cleaning up a client's 2026 books. It is the obvious next
+question after a session has produced a list of what is miscoded, and the honest answer has two
+halves — **they fail for different reasons, so answer both.**
+
+**Half 1 — the PENDING bank feed** (items still "for review"): unreachable, per the section above.
+No MCP tool lists them, so a session cannot even tell you how many are waiting.
+
+**Half 2 — ALREADY-POSTED transactions** (changing the account on something already categorized):
+also unreachable, and this is the half people assume must be possible because `get_transactions`
+clearly *sees* them — and it does see them, **but every tool that reads a transaction's account
+only reads it.** The Double connector has no `update_transaction` / `recategorize` / `patch` of any
+shape: **nothing changes the account on a posted transaction.** `add_transaction_comment` attaches
+a comment and changes no categorization.
+> ⚠️ **That is a narrow negative, and it must stay narrow — it does NOT mean "Double cannot write
+> to the ledger". It can, and this file claimed otherwise until 2026-08-26.** `create_accrued_expense` and `reverse_accrued_expense` **post
+> journal entries to the client's books** (§9a below), and `move_attachables` can attach a file
+> directly onto a posted transaction (its `attachmentKey` accepts `{TxnType}-{id}`, e.g.
+> `Expense-123`). **None of them recategorize anything** — the headline holds — but a session that
+> believes the transaction surface is read-only is holding a live ledger-write capability without
+> knowing it.
+
+**And the other connector does not rescue it — for a blunter reason than "no tool".** The firm also
+has the account-level **`Intuit_QuickBooks`** connector, which is the reasonable next place to look.
+🔴 **It is authenticated to JK ACCOUNTING GROUP'S OWN QuickBooks company, not to any client's.**
+Verified 2026-08-26 by calling `company_info`, which returns `Company Name: JK Accounting Group`.
+⚠️ **That is one realm at one moment, not a permanent property — a connector can be
+re-authenticated.** `company_info` is one free call: **re-check before relying on this**, because
+the trap *inverts* if it ever points at a client (then the import would duplicate the **client's**
+ledger and the "wrong company" framing below would be false).
+Unlike Double — which reaches every client's books — this connector is a **single OAuth'd realm**,
+and its tools say *"your QuickBooks account"* because they mean the firm's. **So for client
+bookkeeping it is not a limited route; it is the wrong company.**
+
+Its write surface was audited the same day, by reading the schema of every tool it exposes and
+calling none: **invoices, estimates, recurring invoices, payment links, customers, products,
+payroll, sales settings and the company profile.** Nothing reaches an expense's category, a
+bank-feed item or a posted transaction's account — **in the firm's own books either.** _(A bounded
+search, named per [`method.md`](../../../../projects/pre-return-review/method.md) rule 1b: this is
+what a schema read of that connector's tool list found on 2026-08-26, not a claim about QuickBooks
+as a product.)_
+
+> ⚠️ **The trap, and it is a real one: `quickbooks_transaction_import`.** It is the one tool that
+> writes transactions, its description says *"Import transactions into your QuickBooks account"*,
+> and it even runs AI categorization on what you send. Reach for it to "fix" a miscoded
+> transaction and you will **CREATE A SECOND ONE** — the imported rows sit alongside the miscoded
+> originals, which stay exactly as wrong as they were. It has **no transaction-id parameter at
+> all**, which is the tell: there is nothing to target. It is an importer for transactions
+> QuickBooks does **not** have; it is not an editor for transactions it does.
+> 🔴 **And the realm above makes it worse than a duplicate:** pointed at a *client's* correction
+> list it would write those rows into **the firm's own books**, where they do not belong at all.
+> **Never point it at a correction list.**
+
+**So what a session is actually for here** — say this rather than just refusing, because it is
+most of the value: read the ledger, the chart of accounts, the P&L and the aging; find what is
+miscoded and **why**; and produce the **worklist a person executes by hand**, with the account to
+move each item to and the reason. `get_similar_transactions` (see the tool table above) is built for exactly this — it
+returns how a payee has historically been coded, with `payeeStats` / `accountStats`. The judgement
+is the deliverable; the clicking stays with the bookkeeper.
+
+**Two things that would change this answer** — re-audit rather than trusting this paragraph if
+either lands: a Double write tool for transactions, or a QuickBooks connector tool that updates a
+`Purchase`/`Expense` object rather than creating one.
 
 ---
 
@@ -425,6 +531,7 @@ tested was not. Don't build anything on loan tools without checking first.
 | **Loan tools** | Billing-gated — §13 |
 | **Merging duplicate clients** | No tool. Prevention only |
 | **Bank Feeds** — listing or categorizing a client's feed | Not exposed; the ledger endpoint shows posted entries only — §9 |
+| **Categorizing ANY transaction** — pending *or* already posted, by Double **or** by the `Intuit_QuickBooks` connector | Not exposed by either. A session produces the worklist; a person executes it. 🔴 **`Intuit_QuickBooks` is authenticated to the FIRM's own books, not a client's** — wrong company, not just a missing tool. ⚠️ **`quickbooks_transaction_import` CREATES transactions** — aimed at a client's correction list it writes rows into the firm's ledger — §9 |
 
 ---
 
@@ -462,9 +569,14 @@ Re-run the audit when someone hits a surprise, and at minimum whenever:
 
 - a tool call fails in a way this file says it shouldn't;
 - Double ships new tools (they arrive silently — organizers did, between July and August 2026);
+- 🔴 **ONE IS OWED NOW.** The 2026-08-26 partial pass was scoped to §9 and found **five tools this
+  file had never listed** — two of which post journal entries (§9a) — proving the "104" header had
+  been stale for some time. **Nobody has counted the full inventory since.** Until that runs, the
+  header's 111 is a floor and an undocumented tool is expected, not surprising;
 - a new property column appears (`get_property_columns` is one call);
 - the practice's plan changes and the loan tools unblock.
 
 The audit itself is cheap: read the tool inventory, call the read-only ones with the smallest
-page size, read the schemas of the write ones without calling them, and update the ✅/◻︎/⛔ marks
-and the counts. Record the date at the top.
+page size, read the schemas of the write ones without calling them, and update the ✅/◻︎/⛔/🔒 marks
+and the counts. Record the date at the top — and **if the pass was scoped rather than complete, say
+so there** instead of stamping it as a full audit.
