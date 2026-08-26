@@ -104,11 +104,13 @@ blindly.
    Do **not** blanket these to owner draws (the old "cash always = draws" default
    is retired). Cash here can pay subcontractors, which carries 1099 exposure we
    must not miss. First tell the two cases apart:
-   - **ATM / over-the-counter cash withdrawal → *Contract labor*, and ASK THE
-     CLIENT EVERY TIME (hardened 2026-08-26, per Lilian).** The default
-     destination is now the labor account — *Contract labor* — because on this
-     client the cash is normally paying a worker, which carries 1099 exposure and
-     a W-9 we must not miss. **But the default never replaces the question:**
+   - **ATM / over-the-counter cash withdrawal → the LABOR accounts, and ASK THE
+     CLIENT EVERY TIME (hardened 2026-08-26, per Lilian).** The cash on this client
+     is normally paying a worker, which carries 1099 exposure and a W-9 we must not
+     miss. **Which labor account follows rule 17, so it follows the answer:** an
+     **individual** → *Contract labor*; an **LLC or company** → *Outside services*.
+     Until the client says who was paid it cannot be posted correctly — which is
+     exactly why this is asked rather than defaulted. **But the default never replaces the question:**
      every withdrawal gets asked about, not just the ambiguous ones. The answer
      decides labor vs. distribution and whether a W-9 is owed.
      🕐 **Ask while he can still remember — this rule has a shelf life.** Flag the
@@ -168,6 +170,14 @@ blindly.
    [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) framework puts
    **subcontractor labor in COGS** alongside materials. Lilian ruled otherwise for
    *this* client. Follow the client rule here; do not generalise it to others.
+   ⚠️ **A SECOND COGS account now receives postings:** `Shipping`, for truck/trailer
+   rental (rule 16). Until 2026-08-26 nothing posted there and this paragraph read as
+   though `Cost of Goods Sold` were the only live one.
+   🔴 **And one consequence nobody should meet for the first time while preparing the
+   return:** because this rule keeps **subcontractor labor in opex**, this client's COGS
+   holds **materials and hauling but NOT direct labor** — so the "gross profit" line is
+   **not a real gross margin**, and Form 1125-A will not contain the job labor. Whoever
+   prepares the 1120-S needs to know that before reading it.
    **COA reality check:** this client's chart has a **single *Cost of Goods Sold*
    account** (plus *Shipping*) — there are **no** Materials / Subcontractor Labor
    / Job Disposal sub-accounts, and none are being built yet (classify first,
@@ -256,7 +266,8 @@ blindly.
 16. **Truck and trailer rental (U-Haul and similar) → `Shipping`, which is a COGS
     account (RESOLVED 2026-08-26, per Lilian).** Renting a truck or trailer to move tools and
     materials to a job site is a **direct job cost**, not vehicle fuel and not storage —
-    it is the cost of getting the job's materials to the job. *(Confirms what the
+    it is the cost of getting the job's materials to the job. *(She gave the account and
+    its type; the reason is the firm's reading of why, not her words.)* *(Confirms what the
     2026-07-22 client review meeting discussed; it was carried as
     medium-confidence until Lilian ruled.)*
     ⚠️ **Her original words were "Shipping and Delivery" and no account of that name
@@ -272,19 +283,26 @@ blindly.
     ⚠️ **These have
     historically been miscoded to `Vehicle gas and fuel` and to `Utilities:
     Storage`** — sweep both when applying this.
-17. **Subcontractor and outside labor → Contract labor; service platforms →
-    Outside services (new 2026-08-26, per Lilian).** The chart has two
-    similarly-named accounts and they had drifted into each other's roles, so the
-    line is now fixed:
-    - **People and firms doing the client's actual work** — the recurring
-      insulation subcontractor, anyone paid cash from an ATM (rule 5) — →
-      **`Contract labor`**. 1099 exposure; get the W-9.
-    - **Freelance / outsourcing PLATFORM charges** (Upwork and similar) →
-      **`Outside services`**. The platform is a service the business buys, not a
-      person on the crew.
-    *(Lilian's wording was "Outside Labor" for the first group; the chart has no
-    account of that name, and she confirmed on 2026-08-26 that it means the
-    existing **Contract labor** account.)*
+17. **Labor: an INDIVIDUAL goes to `Contract labor`; a COMPANY or PLATFORM goes to
+    `Outside services` (SETTLED 2026-08-26, per Lilian).** The chart has two
+    similarly-named accounts that had drifted into each other's roles. The line she
+    drew is **who you are paying, not what they do**:
+    - **A person, paid in their own name** — the individual subcontractor, anyone
+      paid cash from an ATM (rule 5) — → **`Contract labor`**.
+    - **An LLC, a company, or a platform** — the subcontractor that invoices as an
+      LLC, a freelance marketplace — → **`Outside services`**.
+    Both carry **1099 exposure and need a W-9** — the account does not decide that,
+    and an LLC is not exempt unless it is taxed as a corporation.
+    ⚠️ **"Outside Labor" is Lilian's name for `Outside services`, and no account of
+    that name exists in the chart.** Read it that way whenever she says it.
+    🔴 **This CORRECTS what this rule said for one day.** A session asked what
+    "Outside Labor" meant, was told **`Contract labor`**, and wrote the split as
+    *worker vs platform* — which put the LLC subcontractor in `Contract labor`. Her
+    fuller instruction the same day separates the two subcontractors by **who they
+    are**, which only works if **Outside Labor = `Outside services`**; that reading
+    is also the only one consistent with her very first instruction, which sent the
+    freelance platform to *Outside Services*. **Say so if that is not what you
+    meant** — it moves the LLC subcontractor's whole year.
 18. **⛔ The owner's personal account (`Artem Personal`) is OUT OF SCOPE — do not
     categorize it, do not clean it (new 2026-08-26, per Lilian).** It was
     connected to QuickBooks **by mistake** and none of the rules above apply to
@@ -414,7 +432,7 @@ checklist item 16 below.
 | 6 | Blanket rule: obvious personal retail → Owner's distribution | Client | Proposed |
 | 7 | **RESOLVED 2026-08-26 (per Lilian):** job costs split — spray-foam/insulation **materials → Cost of Goods Sold**; installation **subcontractor labor → Contract labor** (opex). Not symmetrical, and that is the answer. See rule 9. **Row 7 asked for verification against the client's history *and the filed return*; Lilian answered from the client's history and the chart. The filed-return half was not re-checked** — if a prior 1120-S treated job labor as COGS, raise it rather than assume this rule matches it. | Lilian | Resolved |
 | 8 | **The two open CT sales-tax questions moved with the procedure** — why the return is zero at all, and what covers the nine-month 2025 gap beside the two unopened DRS notices. They live in [`ecoorganic-ct-sales-tax.md`](./ecoorganic-ct-sales-tax.md) §6 and §4. ⏸️ **Lilian parked both on 2026-08-13** — do not chase her; raise them only when someone is actually working this client's sales tax. Kept as a row here so a reviewer reading only this log knows they exist | Lilian | Parked |
-| 9 | **Which account the largest labor payee belongs in.** Lilian said only that he is *a subcontractor*, which settles that he is business labor but not the account. Either subcontractor → **Contract labor** with the rest (rule 17), or the remark was about **1099 exposure** and he stays in *Outside services*. He is the client's largest 2026 labor payee, so it is asked, not inferred. **Does not block the rest of the cleanup** — hold that one line item. | Lilian | Pending |
+| 9 | **RESOLVED 2026-08-26 (per Lilian):** the largest 2026 labor payee is an **individual subcontractor → `Contract labor`**. Answered once the question was put **by name** rather than by role — the role description alone was not answerable in conversation, which is the lesson worth keeping. Settling it also produced rule 17's individual-vs-entity line. | Lilian | Resolved |
 | 10 | **Is there a retailer store CARD outside QuickBooks?** The only 2026 trace of the large online retailer is an ACH **payment to a `SYF`/Synchrony store card**, not a purchase — so those purchases may sit on a card the books never see. Decides whether rule 14 has anything to apply to. | Client | To verify |
 | 11 | **The 2026 bank-feed queue is the gate on all of this.** Several hundred transactions were still unposted at 2026-08-26 and are invisible to Double, so every count drawn from the posted ledger is a statement about *what is posted*, not about the year. **Work the queue before treating the P&L as complete** — and before writing to the client (rule 5). | Lilian | To study |
 | 12 | **RESOLVED 2026-08-26 (per Lilian):** this runbook **may name retail chains and platforms** — *"el runbook puede nombrar cadenas retail sin problema"*. A chain is a category of merchant, not one of the client's people. **The client's own payees stay by role.** Propagated to the [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) role-not-vendor rule so the two no longer contradict. | Lilian | Resolved |

@@ -185,7 +185,7 @@ use the same colors in every client's decision-flow so a bookkeeper learns them 
 > uploads the file.** A session reads the sheet, applies the client's rules to every row, and hands
 > back the decided list; she applies it. This is the way to work a backlog the MCP is blind to — the
 > built-in `xlsx` skill reads the workbook (it ships with Claude Code — there is no folder for it
-> under `.claude/skills/`). ⚠️ **The sheet carries real client figures and payees:
+> under `.claude/skills/`). ⚠️ The sheet carries real client figures and payees:
 > work it in chat, deliver the result to her, and **commit none of it** (two-data-homes).
 > ⛔ **Do not restate either connector's write surface here** — an enumeration in a skill that is not
 > about connectors is the line that rots first, and the one that stood here until 2026-08-26 was
@@ -226,13 +226,17 @@ runbook, adapt the specifics):
   "the design firm", "the site's electricity and water", "our own monthly fee". A **vendor list
   is client data** and belongs in QuickBooks/Drive/Double, not in a repo that auto-publishes to
   the Hub; and a role **survives a change of vendor**, which a name does not. The exceptions
-  worth allowing are **utilities and government agencies**, **and — added 2026-08-26 by Lilian —
-  RETAIL CHAINS AND PLATFORMS** (a gas-station chain, a hardware chain, the big online retailer, a
-  truck-rental chain, a freelance marketplace). All of them share the reason: a covering bookkeeper
-  cannot identify a *category of merchant* any other way, and none of them is one of the client's
-  own people. ⓘ *She ruled it for the Ecoorganic runbook, which had named chains since July while
-  this rule said it may not; the wording here is generalised from that ruling so the two stop
-  contradicting each other — say so if you meant it narrower.* **What does NOT move is the client's
+  worth allowing are **utilities and government agencies**, **and — provisionally, pending
+  confirmation — RETAIL CHAINS AND PLATFORMS** (a gas-station chain, a hardware chain, the big
+  online retailer, a truck-rental chain, a freelance marketplace). They share the reason: a covering
+  bookkeeper cannot identify a *category of merchant* any other way, and none of them is one of the
+  client's own people.
+  ⚠️ **This is a SESSION'S GENERALISATION, not a firm ruling.** On 2026-08-26 Lilian allowed it for
+  the **Ecoorganic runbook only** — *"el runbook puede nombrar cadenas retail sin problema"*. The
+  firm-wide wording here was widened by a session so the two files stop contradicting each other,
+  which is a real problem worth solving, but **she has not ruled on it for every client. Ask her
+  before relying on it for another one** — [`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) tracks the
+  confirmation. **What does NOT move is the client's
   own payees — subcontractors, individuals, the small local suppliers — which stay by role.** Say the choice out loud in the runbook, or the next session will
   "helpfully" fill the names back in.
 - **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
