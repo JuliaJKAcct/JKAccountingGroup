@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-26
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -241,6 +241,64 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **A related company in Ukraine appears connected.** Correspondence with an accounting contact at a Ukrainian company sharing the "Ecoorganic" name (domain ecoorganic.ua) periodically shares financial statements and corporate-structure updates. The exact relationship (parent, affiliate, or unrelated same-name company) is **not established** — flag for Lilian/Julia if it becomes relevant to the US entity's own filings. _(Source: Gmail, Apr 2026.)_
 - **Some corroboration on the father/son roles (still not fully resolved).** A 2026-07-01 email thread with a related subcontractor-client relationship describes the son as the company's "current principal" and the father as the one who "initially filed the business registration" — consistent with, but not a full resolution of, the open question in §3 about whether the father remains an LLC owner of record. _(Source: Gmail, 2026-07-01.)_
 
+- 🔑 **Categorization rules Lilian set on 2026-08-26**, given as a batch while opening the
+  QuickBooks cleanup. They are this client's rules, not firm-wide ones. ✅ **Lilian approved folding
+  them into the bookkeeping SOP the same day**, where they are now **rules 12–18** of
+  [`ecoorganic-bookkeeping-review.md`](../../sops/ecoorganic-bookkeeping-review.md), plus rewrites of
+  rules 5, 6 and 9 — **the SOP is the operative copy**; this list is the record of what she said. Two
+  of them **change what we do with the client**, not just where a figure sits:
+  - **The recurring insulation subcontractor → Outside Labor**, and ✅ **"Outside Labor" means the
+    existing `Contract labor` account** _(Lilian, 2026-08-26, when asked — the chart has no account
+    of that name)_. ⚠️ **Paid by Zelle under an INDIVIDUAL's name while the vendor record is the
+    LLC's** — so the bank descriptor and the payee do not match, and the QuickBooks vendor mapping is
+    the only thing that makes these findable. The names are in the QBO vendor list and in Double.
+  - **Spray / foam suppliers → Cost of Goods Sold**, because that is the material consumed by the
+    insulation installation service. ✅ **This closed the SOP's rule 9, tagged _(to verify)_ since
+    July** — and the answer is **asymmetric**: materials to COGS, subcontractor **labor to
+    `Contract labor` (opex)**, a deliberate departure from the firm-wide framework that puts both
+    in COGS.
+  - **Amazon → Supplies & Materials.** Anything in 2026 coded otherwise is an error to correct.
+  - **ATM / cash DEPOSITS → generally Sales** — ⚠️ **but ask the client first whether any of them
+    pay an OPEN INVOICE.** The client has open invoices, some long overdue; a deposit that is really
+    an invoice payment must be applied so the invoice closes, not booked as fresh sales. Booking it
+    to Sales instead double-counts the revenue and leaves the receivable standing.
+  - **Anything hotel → `Travel:Hotel`** — the sub-account, never the `Travel` parent (SOP rule 15).
+  - **ATM WITHDRAWALS → Outside Labor** (= `Contract labor`, as above), ⚠️ **and from now on the client is asked every single time
+    what the cash was for.** Lilian's standing instruction: flag the **most recent** ones separately,
+    because those are the ones he can still remember, so she can write and ask while the answer is
+    still recoverable. (This sharpens the SOP's rule 5 from *investigate* to *ask, every time*.)
+  - **U-Haul → Shipping and Delivery** — her words; ⚠️ **no account of that name exists**, and SOP
+    rule 16 resolves it to `Postage and shipping` pending her confirmation. Consistent with the
+    2026-07-22 review meeting (§5 above), which is now confirmed rather than medium-confidence.
+  - **The largest 2026 labor payee is a subcontractor** — so 1099 exposure, and a W-9 is needed.
+    Which account he belongs in is still open — see the outstanding items.
+  - **Upwork → Outside Services.**
+- ⛔ **The `Artem Personal` bank account is OUT OF SCOPE — do not categorize it, do not clean it**
+  _(Lilian, 2026-08-26)_. It is the owner's personal account and was **connected to QuickBooks by
+  mistake**. Julia's instruction for it, in order: **export its transactions to Excel first** —
+  some genuine business expenses are mixed in and get analysed separately — **then disconnect the
+  account**; the business expenses are re-entered in QuickBooks manually later, as a separate piece
+  of work. Until that happens, leave it alone.
+  ✅ **WHICH account, settled 2026-08-26 by Lilian when asked:** the personal one is the account
+  QuickBooks names **`Artem Personal`** — the Chase checking ending **…2935** that appears in the
+  transfer descriptors, which is what the SOP already recorded as the owner's personal account.
+  **`Checking Chase 8310` is the BUSINESS operating account** and is cleaned normally. Worth keeping
+  because it nearly went the other way: Lilian named *"la que dice Chase 8310"* in the session, the
+  live chart carries **both as separate bank accounts**, and treating 8310 as personal would have
+  stranded the entire company ledger — it is the feed the July 2026 review worked through and the one
+  carrying customer deposits, vendor payments and the subcontractor Zelles. **Asked, not inferred.**
+- 🔴 **QuickBooks' "pair" suggestions are actively producing false transfers on this client, and
+  some were accepted.** QuickBooks matches a transaction in the business account against one in
+  `Artem Personal` on **amount alone** and offers it as a transfer; accepting it consumes both sides
+  and the transaction never reaches an income or expense account. Two shapes of damage found in the
+  posted 2026 ledger: **ATM check deposits** booked as transfers instead of **revenue**, and **ATM
+  cash withdrawals** booked as transfers instead of **labor** — the second also erases the 1099
+  exposure the withdrawal carries. The example Lilian brought was a **gas-station fuel charge**
+  offered as a transfer against a Zelle payment received a week later, for the same amount, from an
+  unrelated person. **Rule: never accept a pair suggestion involving `Artem Personal`** — a fuel
+  purchase, an ATM deposit and an ATM withdrawal are not transfers by nature, whatever the amounts
+  match. Undo one with **Unpair transaction** on the posted transaction _(2026-08-26)_.
+
 ## 6. History & open questions
 
 ### Log
@@ -343,13 +401,42 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 ### Log
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Found a new CT DRS notice: **CT-941 Reconciliation of Withholding return past due**, arrived 2026-08-18 — not previously reflected in §4's payroll obligations; flagged as a candidate for the CT sales-tax SOP but not written there directly (Lilian to confirm). Chase pass: the Turo escalation email is now **18 days** pending since expected arrival (2026-08-04/06), still not found; the QuickBooks primary-admin handover (case note 485258) is unchanged since 2026-08-06, **16 days** pending; the nine-month CT sales-tax gap and the two unopened DRS notices remain open, no update; the zero-filing-basis question stays parked per Lilian's 2026-08-13 instruction; when/why DRS moved the client to monthly filing remains unrecorded. All items in §6 were checked with a named search this run — none deferred for budget.
 
+- 2026-08-26 — **QuickBooks cleanup opened; nine categorization rules received and the books read against them (Lilian).** Lilian gave the batch of client-specific rules now recorded in §5 and asked what they turn up. Read the live chart of accounts, the 2026 YTD P&L, the AR aging and the posted transaction history through Double (read-only; figures stayed in chat under the two-data-homes rule). **What the rules actually caught, worst first:** ① **false "pair" transfers against `Artem Personal`** — accepted pair suggestions turned ATM **check deposits** into transfers instead of revenue and ATM **cash withdrawals** into transfers instead of labor, so both income and 1099-bearing cost are missing from the P&L (§5 has the mechanism and the rule); ② **spray-foam material sitting in `Supplies & Materials` instead of `Cost of Goods Sold`** — four 2026 purchases from the foam distributors, a material total, which moves **gross profit** and feeds Form 1125-A on the return, though not net income; ③ **the recurring insulation subcontractor and the freelance platform are in each other's accounts** relative to Lilian's rules — the subcontractor sits in *Outside services* and the platform in *Contract labor*, the exact reverse of what she specified; ④ **`Meals` is nowhere near the ~$0 the SOP's rule 3 requires** — it carries a substantial 2026 balance of restaurant/convenience charges that the resolved meals policy sends to owner distributions; ⑤ a **hotel charge posted to the `Travel` PARENT** rather than `Travel:Hotel`, breaking the SOP's no-postings-to-parents rule; ⑥ **`Ask my accountant` is not at $0**, so the close gate fails as written. **Two rules had nothing to correct, and the reason matters more than the finding:** **Amazon** has *zero* posted 2026 transactions — the only Amazon trace in 2026 is an overdraft fee on an `AMAZON CORP / SYF PAYMNT` ACH, which is a payment to an **Amazon store card (Synchrony)** whose purchases never enter the Chase feed at all; and **U-Haul**'s 2026 charges are likewise visible only through their overdraft fees. Both point the same way: **a large 2026 backlog is still unposted in the bank-feed queue** (the client's QuickBooks banking screen showed several hundred pending items), so the ledger the firm can read is not the whole year. **Nothing was written to QuickBooks** — neither the Double MCP nor the QuickBooks MCP can recategorize a transaction, so the output is a worklist Lilian executes in QuickBooks by hand. _(Worked by Lilian.)_
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🟡 **Confirm where the LARGEST 2026 LABOR PAYEE belongs — the one rule whose account Lilian did
+  not name.** She said only that he is *a subcontractor*, which settles that he is business labor
+  (two 2025
+  payments sit in **Owner's distribution**, which is wrong on any reading) but not which account. Two
+  readings, and the amount makes it worth asking rather than inferring: either *subcontractor = the
+  same Outside Labor treatment as the insulation subcontractor* → move him to `Contract labor` with
+  the rest, or the remark
+  was about **1099 exposure** and he stays in `Outside services`. He is the client's largest 2026
+  labor payee. **Not blocking the rest of the cleanup** — hold this one line item until she says.
+- 🔴 **Ask the client what each recent ATM cash withdrawal was for** — Lilian's new standing rule
+  (§5) and it is time-sensitive: only the recent ones are still in his memory. The answer decides
+  labor-vs-distribution **and** whether a W-9 and a 1099 are owed. Draft the question in Russian.
+- 🔴 **Ask the client whether any cash / ATM check deposits are payments of the OPEN INVOICES.**
+  The AR aging carries open invoices to three customers, most of it long overdue. Any deposit that
+  is really an invoice payment must be applied against the invoice, not booked to Sales — otherwise
+  the revenue is counted twice and the receivable never clears.
+- **Export `Artem Personal` to Excel, then disconnect it** (Julia's instruction, §5) — the business
+  expenses mixed into it get re-entered in QuickBooks manually afterwards, as separate work. Until
+  the export exists, the account stays connected and untouched.
+- **The 2026 bank-feed backlog is the real gate on this cleanup.** Several hundred items were
+  pending in QuickBooks' banking screen and are invisible to Double, so any conclusion drawn from
+  the posted ledger — including "there are no Amazon purchases in 2026" — is a statement about what
+  is *posted*, not about the year. Work the queue before treating the P&L as complete.
+- **Confirm whether an Amazon store card (Synchrony) exists and is outside QuickBooks.** The 2026
+  Amazon trace is an ACH payment to `AMAZON CORP / SYF PAYMNT`, which is a card payment, not a
+  purchase — so the purchases are on a card the books may never see. Bears on Lilian's
+  Amazon → Supplies & Materials rule, which currently has nothing to apply to.
 - 🔴 **A CT DRS myconneCT notice arrived 2026-08-18: "Your CT-941 Reconciliation of Withholding CT Tax return is past due."** New, not yet reflected in §4's payroll obligations — (Gmail, 2026-08-18). Not yet opened/actioned as far as this sweep found; flag to Lilian.
 - **Watch for Turo's email — due 1–2 business days from 2026-08-04, so by ~2026-08-06.** It goes to the **account's** email address, not ours, so the owner has to forward it. **If nothing arrives, call Turo again with him on the line** (§3) — never alone.
 - **QuickBooks primary admin — the whole thing is waiting on the FATHER to scan the QR code and upload a photo of his ID** (§3). Nothing else can move until he does; chase him through the son, who is the one we correspond with. **Then, in this order:** **(a)** confirm the son's primary-admin access actually works; **(b)** confirm the firm's own access survives a single-user plan — see "Information still needed", nobody has established whether the firm has access independent of the owners' users; **(c)** delete the father's user; **(d)** **downgrade the subscription** back to the single-user plan, **confirming the downgrade with the son first — it is the client's billing.** **The downgrade is the step that gets forgotten**, and the client keeps paying for the bigger plan until it's done. Meanwhile **two users on the account is intentional** — don't let anyone "clean it up".
 - **Before filing — get the registered Turo account name and the name / TIN on any 1099-K** at the next contact with Turo (§4). It corroborates the ownership answer and shows whether the 1099-K will match to the LLC's EIN or to his SSN.
 - **Check whether any Turo payouts are already in the books** — whether those deposits landed in the Chase feed and were categorised, or are missing entirely (§5). Nobody has looked yet.
-- Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex to verify) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
+- Open categorization decisions (vehicle finance lease-vs-loan, which disconnected accounts are closed, COGS-vs-opex **resolved 2026-08-26**) — tracked in the SOP's **Open decisions log**; live status in Double. Meals/gas policy is resolved.
 - Prior staff bookkeeper's Gusto admin access was formally revoked 2026-07-15 — bookkeeper-handoff progressing.
 - A 2026-07-23 "Ecoorganic tax prep" meeting reportedly covered a complex situation involving Turo car rentals and expense categorization (per its auto-generated summary only — transcript not yet indexed in Ping); worth a follow-up once available, may bear on the SOP's open vehicle-financing question.
 - Clarify the relationship (if any) between this LLC and a same-named Ukraine-based company that periodically exchanges financial documents with the firm.
