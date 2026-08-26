@@ -267,8 +267,9 @@ note** on this client (§7) — same matter, written to be read; it is **updated
     what the cash was for.** Lilian's standing instruction: flag the **most recent** ones separately,
     because those are the ones he can still remember, so she can write and ask while the answer is
     still recoverable. (This sharpens the SOP's rule 5 from *investigate* to *ask, every time*.)
-  - **U-Haul → Shipping and Delivery.** Consistent with the 2026-07-22 review meeting (§5 above),
-    which is now confirmed rather than medium-confidence.
+  - **U-Haul → Shipping and Delivery** — her words; ⚠️ **no account of that name exists**, and SOP
+    rule 16 resolves it to `Postage and shipping` pending her confirmation. Consistent with the
+    2026-07-22 review meeting (§5 above), which is now confirmed rather than medium-confidence.
   - **The largest 2026 labor payee is a subcontractor** — so 1099 exposure, and a W-9 is needed.
     Which account he belongs in is still open — see the outstanding items.
   - **Upwork → Outside Services.**
@@ -403,8 +404,9 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-08-26 — **QuickBooks cleanup opened; nine categorization rules received and the books read against them (Lilian).** Lilian gave the batch of client-specific rules now recorded in §5 and asked what they turn up. Read the live chart of accounts, the 2026 YTD P&L, the AR aging and the posted transaction history through Double (read-only; figures stayed in chat under the two-data-homes rule). **What the rules actually caught, worst first:** ① **false "pair" transfers against `Artem Personal`** — accepted pair suggestions turned ATM **check deposits** into transfers instead of revenue and ATM **cash withdrawals** into transfers instead of labor, so both income and 1099-bearing cost are missing from the P&L (§5 has the mechanism and the rule); ② **spray-foam material sitting in `Supplies & Materials` instead of `Cost of Goods Sold`** — four 2026 purchases from the foam distributors, a material total, which moves **gross profit** and feeds Form 1125-A on the return, though not net income; ③ **the recurring insulation subcontractor and the freelance platform are in each other's accounts** relative to Lilian's rules — the subcontractor sits in *Outside services* and the platform in *Contract labor*, the exact reverse of what she specified; ④ **`Meals` is nowhere near the ~$0 the SOP's rule 3 requires** — it carries a substantial 2026 balance of restaurant/convenience charges that the resolved meals policy sends to owner distributions; ⑤ a **hotel charge posted to the `Travel` PARENT** rather than `Travel:Hotel`, breaking the SOP's no-postings-to-parents rule; ⑥ **`Ask my accountant` is not at $0**, so the close gate fails as written. **Two rules had nothing to correct, and the reason matters more than the finding:** **Amazon** has *zero* posted 2026 transactions — the only Amazon trace in 2026 is an overdraft fee on an `AMAZON CORP / SYF PAYMNT` ACH, which is a payment to an **Amazon store card (Synchrony)** whose purchases never enter the Chase feed at all; and **U-Haul**'s 2026 charges are likewise visible only through their overdraft fees. Both point the same way: **a large 2026 backlog is still unposted in the bank-feed queue** (the client's QuickBooks banking screen showed several hundred pending items), so the ledger the firm can read is not the whole year. **Nothing was written to QuickBooks** — neither the Double MCP nor the QuickBooks MCP can recategorize a transaction, so the output is a worklist Lilian executes in QuickBooks by hand. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🟡 **Confirm where BRYANT TORRES belongs — the one rule whose account Lilian did not name.** She
-  said only *"Bryant es un subcontractor"*, which settles that he is business labor (two 2025
+- 🟡 **Confirm where the LARGEST 2026 LABOR PAYEE belongs — the one rule whose account Lilian did
+  not name.** She said only that he is *a subcontractor*, which settles that he is business labor
+  (two 2025
   payments sit in **Owner's distribution**, which is wrong on any reading) but not which account. Two
   readings, and the amount makes it worth asking rather than inferring: either *subcontractor = the
   same Outside Labor treatment as the insulation subcontractor* → move him to `Contract labor` with
