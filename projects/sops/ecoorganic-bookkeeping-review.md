@@ -358,6 +358,15 @@ Double is the working tool for the vendor side of these rules — lean on it:
   only after we understand the business and have worked down the backlog of
   unclassified transactions. **Classify first, restructure the chart second;**
   don't reorganize the chart ahead of understanding it.
+  ✅ **Lilian confirmed this sequencing and asked for the renumbering explicitly on
+  2026-08-26 — decisions row 15.** So the second half is now a committed piece of
+  work with a trigger, not an aspiration: **when the backlog is cleared, renumber.**
+  ⚠️ **Two account-line questions belong to that same pass, not to the cleanup:**
+  the `Software` ↔ `Dues & subscriptions` overlap (**row 14**), and the
+  payment-processor fees sitting in `Software` while a dedicated fees account
+  exists. Renumbering is the moment those get settled, because deciding them means
+  reclassifying history — which is exactly what you do not want to be doing while
+  the backlog is still moving.
 - Masciave/Aura-style grammar (the target): number prefixes in the account
   *name* — 100s assets · 200s liabilities · 300s equity · 400s income · 500s
   COGS · 600s opex · 800s other income · 901 depreciation · 997/998/999 triage.
@@ -451,6 +460,8 @@ checklist item 16 below.
 | 11 | **The 2026 bank-feed queue is the gate on all of this.** Several hundred transactions were still unposted at 2026-08-26 and are invisible to Double, so every count drawn from the posted ledger is a statement about *what is posted*, not about the year. **Work the queue before treating the P&L as complete** — and before writing to the client (rule 5). | Lilian | To study |
 | 12 | **RESOLVED 2026-08-26 (per Lilian):** this runbook **may name retail chains and platforms** — *"el runbook puede nombrar cadenas retail sin problema"*. A chain is a category of merchant, not one of the client's people. **The client's own payees stay by role.** Propagated to the [`bookkeeping-sop`](../../.claude/skills/bookkeeping-sop/SKILL.md) role-not-vendor rule so the two no longer contradict. | Lilian | Resolved |
 | 13 | **RESOLVED 2026-08-26 (per Lilian):** truck/trailer rental goes to **`Shipping`, the COGS account** — *"vamos a ponerlo en la cuenta de shipping, que es cost of goods sold"*. ⚠️ **This reversed a session's inference**, which had reasoned from *"a delivery cost is not COGS"* to `Postage and shipping`. For this trade, delivering the job's materials to site is part of the cost of the job. See rule 16. | Lilian | Resolved |
+| 14 | 🔵 **`Software` and `Dues & subscriptions` overlap and the line between them is not clear — REVIEW AFTER THE CLEANUP.** Lilian's read, 2026-08-26: *"siento que son muy similares entre sí… no creo que quede muy clara la diferencia entre una y otra"*. ✅ **The history bears it out.** One platform (Thumbtack) is **split across both accounts**; ordinary SaaS sits in **both** (a search/prospecting tool and a hosting registrar in `Software`, an AI subscription and a credit-monitoring subscription in `Dues & subscriptions`); and a **trade-association membership** — the one item that is unambiguously *dues* rather than software — sits in `Dues & subscriptions` beside those SaaS charges. ⚠️ **A third account is entangled:** payment-processor fees appear in `Software` although a dedicated `QuickBooks Payments Fees` account exists. ⓘ **And the 2026-07-22 client review meeting recorded that software/subscription charges are consolidated into a SINGLE account with no per-tool breakout** — two accounts are in use, so either that never happened or it was undone. **Do not start this mid-cleanup:** deciding the line means reclassifying history, and the backlog has to be worked first. | Lilian | To study |
+| 15 | 🔵 **Renumber the chart of accounts to the firm's number-prefix grammar — AFTER THE CLEANUP.** Lilian asked for this on 2026-08-26, using **the number sequence already recorded in this runbook's *Chart of accounts conventions*** (100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s opex · 800s other income · 901 depreciation · 997/998/999 triage). **This confirms the sequencing this SOP already states** — *classify first, restructure the chart second* — so it is not a change of plan, it is her putting a date on the second half. ⚠️ **The 2025 safety rules govern it:** renames and renumbers are retroactive and harmless, but **never merge** an account with 2025 activity and **never change its type** — create a new one and reclassify 2026 into it. ⓘ *Her words were "shadow of accounts"; read as **chart of accounts**, which is what "la secuencia de números que ya conoces" can only mean. Say so if it was something else.* | Lilian | To study |
 
 When a decision lands, update the rule above, note the date, and reclassify the
 parked transactions in one batch.
