@@ -176,8 +176,8 @@ use the same colors in every client's decision-flow so a bookkeeper learns them 
 > apply it" feel like the next step. It is not available: **neither the `Double` connector nor the
 > `Intuit_QuickBooks` connector can set an account on a transaction** — not on a pending bank-feed
 > item, not on one already posted. ⚠️ **And one tool looks like the exception and is not:
-> `quickbooks_transaction_import` CREATES transactions — aim it at a correction list and the ledger
-> doubles while the miscoded original survives untouched.** So the deliverable is the *worklist*:
+> `quickbooks_transaction_import` CREATES transactions rather than editing them, and what it hits is
+> not the ledger you would expect — §9.** So the deliverable is the *worklist*:
 > each item, the account to move it to, and why. Reach for `get_similar_transactions` when deciding —
 > it returns how a payee has been coded historically.
 > ⛔ **Do not restate either connector's write surface here** — an enumeration in a skill that is not

@@ -331,15 +331,17 @@ These carry real client figures. They can be read freely for the firm's own work
 
 | Tool | | Notes |
 |---|---|---|
-| `get_accrual_presets` | ◻︎ | The firm's saved presets. **Call this FIRST** — the create tool's own description says a matching preset defaults duration, reversal method and expense account, so only ask the user for what it does not cover |
+| `get_accrual_presets` | ◻︎ | ⚠️ **The CLIENT's presets, not the firm's** — `clientId` is required, so they are per-client and must be re-read for each one. **Call this FIRST** — the create tool's own description says a matching preset defaults duration, reversal method and expense account, so only ask the user for what it does not cover. Its `accrualType` enum reveals the wider system: `ACCRUED_EXPENSE` · `DEFERRED_REVENUE` · `FIXED_ASSET` · `NON_DEPRECIATING_FIXED_ASSET` · `PREPAID_EXPENSE` — **five types, and the connector exposes a create/reverse pair for only the first** |
 | `get_accruals_needing_review` | ◻︎ | The accruals awaiting manual reversal; source of the `accrualId` the reverse tool needs |
 | `get_accrual_reversal_schedule` | ◻︎ | **Preview.** Computes the reversal server-side. Run it and show the user before reversing |
-| `create_accrued_expense` | ◻︎ **W** 🔴 | *"accrues the amount each month against the liability account, **posts the journal entries**, and schedules the reversal."* Also creates or reuses an accrual tracking task on a close. Three reversal methods: `REV_MONTHLY` · `REV_END_OF_DURATION` · `REV_MANUAL` |
-| `reverse_accrued_expense` | ◻︎ **W** 🔴 | *"**posts the reversal journal entry to the ledger**"* and marks the accrual reversed |
+| `create_accrued_expense` | ◻︎ **W** 🔒 | *"accrues the amount each month against the liability account, **posts the journal entries**, and schedules the reversal."* Also creates or reuses an accrual tracking task on a close. Three reversal methods: `REV_MONTHLY` · `REV_END_OF_DURATION` · `REV_MANUAL` |
+| `reverse_accrued_expense` | ◻︎ **W** 🔒 | *"**posts the reversal journal entry to the ledger**"* and marks the accrual reversed |
 
-🔴 **Write safety — these are the most consequential writes in the connector and §6's default-deny
-governs them.** They change a client's financial statements, and unlike a note or a property there
-is no undo here: a reversal is itself another journal entry. So — **an explicit human instruction
+🔒 **Write safety — §6's default-deny governs these, and they carry the connector's heaviest
+financial consequence.** They change a client's financial statements, and unlike a note or a property there
+is no undo here: a reversal is itself another journal entry, **there is no delete tool among the
+five, and `reverse_accrued_expense` only accepts an accrual created `REV_MANUAL` and not yet
+reversed** — so a mistaken `REV_MONTHLY` create has *no in-connector remedy at all*. So — **an explicit human instruction
 naming the client, the amount, the accounts and the method**, the tools' own instruction to
 **confirm the details with the user before calling**, and the **schedule computed server-side,
 never by us** (`get_accrual_presets` / `get_accrual_reversal_schedule` first). Nothing about them
@@ -416,6 +418,10 @@ a comment and changes no categorization.
 has the account-level **`Intuit_QuickBooks`** connector, which is the reasonable next place to look.
 🔴 **It is authenticated to JK ACCOUNTING GROUP'S OWN QuickBooks company, not to any client's.**
 Verified 2026-08-26 by calling `company_info`, which returns `Company Name: JK Accounting Group`.
+⚠️ **That is one realm at one moment, not a permanent property — a connector can be
+re-authenticated.** `company_info` is one free call: **re-check before relying on this**, because
+the trap *inverts* if it ever points at a client (then the import would duplicate the **client's**
+ledger and the "wrong company" framing below would be false).
 Unlike Double — which reaches every client's books — this connector is a **single OAuth'd realm**,
 and its tools say *"your QuickBooks account"* because they mean the firm's. **So for client
 bookkeeping it is not a limited route; it is the wrong company.**
@@ -563,9 +569,14 @@ Re-run the audit when someone hits a surprise, and at minimum whenever:
 
 - a tool call fails in a way this file says it shouldn't;
 - Double ships new tools (they arrive silently — organizers did, between July and August 2026);
+- 🔴 **ONE IS OWED NOW.** The 2026-08-26 partial pass was scoped to §9 and found **five tools this
+  file had never listed** — two of which post journal entries (§9a) — proving the "104" header had
+  been stale for some time. **Nobody has counted the full inventory since.** Until that runs, the
+  header's 111 is a floor and an undocumented tool is expected, not surprising;
 - a new property column appears (`get_property_columns` is one call);
 - the practice's plan changes and the loan tools unblock.
 
 The audit itself is cheap: read the tool inventory, call the read-only ones with the smallest
-page size, read the schemas of the write ones without calling them, and update the ✅/◻︎/⛔ marks
-and the counts. Record the date at the top.
+page size, read the schemas of the write ones without calling them, and update the ✅/◻︎/⛔/🔒 marks
+and the counts. Record the date at the top — and **if the pass was scoped rather than complete, say
+so there** instead of stamping it as a full audit.
