@@ -44,6 +44,18 @@ bookkeeping skills are [`recurring-expense-monitoring`](../recurring-expense-mon
 2. **The Hub shows the curated VISUAL view** of that same `.md` (via the `knowledge-hub`
    skill). Lighter, graphic, memorable — but it renders **from the `.md`**, so it can't
    drift. Curation happens at render time, not by cutting the source.
+   ⚠️ **That is true of the SECTION renderers and FALSE of the curated visuals — and the
+   difference is where a stale rule hides.** `ecoRuleCards`, `ecoDecisionsTable`,
+   `ecoChecklist`, `closeSteps` and friends parse the `.md`, so they genuinely cannot
+   drift. But **`ecoDecisionFlow`, `ecoMonthlyFlow` and `ecoSignature` are hand-authored
+   in `build-hub.mjs`** with nothing linking them to the source. **A rule change that
+   touches what they show must be applied there too, in the same pass.**
+   🔴 **And the visual is the half the team actually reads** — a bookkeeper working the
+   decision ladder sees the chip and never opens the rule card, so a stale chip is worse
+   than a stale paragraph. _(2026-08-26: a rule about which labor account a subcontractor
+   goes to was corrected in the `.md` and reviewed three times; the decision-flow chip
+   still taught the superseded answer each time, because everyone was checking the
+   markdown — the two-layer rule said the Hub could not drift.)_
 
 Client figures, vendor lists, and dollar balances stay in the firm's client systems (Drive
 / Double / QuickBooks), **never** in the repo — the `.md` holds the *procedure and rules

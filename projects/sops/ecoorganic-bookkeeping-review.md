@@ -341,15 +341,15 @@ Double is the working tool for the vendor side of these rules — lean on it:
   us mark whether the **W-9 is on file** and the payee's info is complete. Keep
   these current as new subcontractors are paid (rules 5, 9), so 1099 season is
   clean.
-- **Reviewer 1099 sweep — don't let subs hide.** Subcontractor labor is
-  spread across **both** labor accounts **by design since rule 17** (*Contract labor* for
-  individuals, *Outside services* for companies and platforms) and historically also
-  and even *Auto Expenses: Vehicles repair* rather than one labor account. **Cash
-  taken from an ATM is labor too** (rule 5) and is the easiest 1099 of all to
-  miss, because until the client answers there is no payee name on it at all. Each close,
-  list **every individual or LLC paid ≥ $2,000** across all of those accounts
-  (Zelle payments especially) and confirm a W-9 is on file — a payee parked in
-  "Outside services" is the easiest 1099 to miss.
+- **Reviewer 1099 sweep — don't let subs hide.** Subcontractor labor sits in
+  **both** labor accounts **by design since rule 17** (*Contract labor* for individuals,
+  *Outside services* for companies and platforms), and historically also landed in
+  *Auto Expenses: Vehicles repair*, which is not a labor account at all. **Cash taken
+  from an ATM is labor too** (rule 5) and is the easiest 1099 of all to miss, because
+  until the client answers there is no payee name on it. Each close, list **every
+  individual or LLC paid ≥ $2,000** across all of those accounts (Zelle payments
+  especially) and confirm a W-9 is on file — and remember **the sweep must cover BOTH
+  labor accounts**, not just *Contract labor*.
 
 ## Chart of accounts conventions
 
