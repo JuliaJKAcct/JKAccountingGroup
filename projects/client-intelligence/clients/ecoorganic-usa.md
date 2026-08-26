@@ -245,8 +245,10 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   QuickBooks cleanup. They are this client's rules, not firm-wide ones, and they are **not yet in
   the bookkeeping SOP** — that change needs her sign-off (the SOP's own Open decisions log is where
   they land). Two of them **change what we do with the client**, not just where a figure sits:
-  - **Kozami LLC → Outside Labor.** Paid by Zelle, and the bank descriptor is the individual's name
-    (`Sviat Kozak`), not the LLC's — the vendor mapping is what makes these findable at all.
+  - **Kozami LLC → Outside Labor**, and ✅ **"Outside Labor" means the existing `Contract labor`
+    account** _(Lilian, 2026-08-26, when asked — the chart has no account of that name)_. Paid by
+    Zelle, and the bank descriptor is the individual's name (`Sviat Kozak`), not the LLC's — the
+    vendor mapping is what makes these findable at all.
   - **Spray / foam suppliers → Cost of Goods Sold**, because that is the material consumed by the
     insulation installation service. This is the client-history answer to the SOP's rule 9
     *(to verify)* question, given by Lilian directly.
@@ -256,7 +258,7 @@ note** on this client (§7) — same matter, written to be read; it is **updated
     an invoice payment must be applied so the invoice closes, not booked as fresh sales. Booking it
     to Sales instead double-counts the revenue and leaves the receivable standing.
   - **Anything hotel → Travel.**
-  - **ATM WITHDRAWALS → Outside Labor**, ⚠️ **and from now on the client is asked every single time
+  - **ATM WITHDRAWALS → Outside Labor** (= `Contract labor`, as above), ⚠️ **and from now on the client is asked every single time
     what the cash was for.** Lilian's standing instruction: flag the **most recent** ones separately,
     because those are the ones he can still remember, so she can write and ask while the answer is
     still recoverable. (This sharpens the SOP's rule 5 from *investigate* to *ask, every time*.)
@@ -270,16 +272,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   some genuine business expenses are mixed in and get analysed separately — **then disconnect the
   account**; the business expenses are re-entered in QuickBooks manually later, as a separate piece
   of work. Until that happens, leave it alone.
-  ⚠️ **Which account this is, is NOT settled and must be confirmed before anyone acts.** Lilian
-  identified it in the session as *"la que dice Chase 8310"*. The live QuickBooks chart of accounts
-  disagrees: it carries **`Checking Chase 8310` and `Artem Personal` as two separate bank accounts**,
-  and every posted transaction pattern says **`Checking Chase 8310` is the BUSINESS operating
-  account** — it is the feed the July 2026 review worked through, and it is the one carrying customer
-  deposits, vendor payments and payroll-type activity. The personal account reads as the Chase
-  checking ending **…2935** named in the transfer descriptors, which is what the SOP already records
-  as the owner's personal account. **Treating 8310 as personal would strand the entire company
-  ledger**, so this is asked, never inferred _(raised with Lilian 2026-08-26; unanswered at the time
-  of writing)_.
+  ✅ **WHICH account, settled 2026-08-26 by Lilian when asked:** the personal one is the account
+  QuickBooks names **`Artem Personal`** — the Chase checking ending **…2935** that appears in the
+  transfer descriptors, which is what the SOP already recorded as the owner's personal account.
+  **`Checking Chase 8310` is the BUSINESS operating account** and is cleaned normally. Worth keeping
+  because it nearly went the other way: Lilian named *"la que dice Chase 8310"* in the session, the
+  live chart carries **both as separate bank accounts**, and treating 8310 as personal would have
+  stranded the entire company ledger — it is the feed the July 2026 review worked through and the one
+  carrying customer deposits, vendor payments and the subcontractor Zelles. **Asked, not inferred.**
 - 🔴 **QuickBooks' "pair" suggestions are actively producing false transfers on this client, and
   some were accepted.** QuickBooks matches a transaction in the business account against one in
   `Artem Personal` on **amount alone** and offers it as a transfer; accepting it consumes both sides
@@ -397,16 +397,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 2026-08-26 — **QuickBooks cleanup opened; nine categorization rules received and the books read against them (Lilian).** Lilian gave the batch of client-specific rules now recorded in §5 and asked what they turn up. Read the live chart of accounts, the 2026 YTD P&L, the AR aging and the posted transaction history through Double (read-only; figures stayed in chat under the two-data-homes rule). **What the rules actually caught, worst first:** ① **false "pair" transfers against `Artem Personal`** — accepted pair suggestions turned ATM **check deposits** into transfers instead of revenue and ATM **cash withdrawals** into transfers instead of labor, so both income and 1099-bearing cost are missing from the P&L (§5 has the mechanism and the rule); ② **spray-foam material sitting in `Supplies & Materials` instead of `Cost of Goods Sold`** — four 2026 purchases from the foam distributors, a five-figure total, which moves **gross profit** and feeds Form 1125-A on the return, though not net income; ③ **`Kozami LLC` and `Upwork` are in each other's accounts** relative to Lilian's rules — Kozami sits in *Outside services* and Upwork in *Contract labor*, the exact reverse of what she specified; ④ **`Meals` is nowhere near the ~$0 the SOP's rule 3 requires** — it carries a four-figure 2026 balance of restaurant/convenience charges that the resolved meals policy sends to owner distributions; ⑤ a **hotel charge posted to the `Travel` PARENT** rather than `Travel:Hotel`, breaking the SOP's no-postings-to-parents rule; ⑥ **`Ask my accountant` is not at $0**, so the close gate fails as written. **Two rules had nothing to correct, and the reason matters more than the finding:** **Amazon** has *zero* posted 2026 transactions — the only Amazon trace in 2026 is an overdraft fee on an `AMAZON CORP / SYF PAYMNT` ACH, which is a payment to an **Amazon store card (Synchrony)** whose purchases never enter the Chase feed at all; and **U-Haul**'s 2026 charges are likewise visible only through their overdraft fees. Both point the same way: **a large 2026 backlog is still unposted in the bank-feed queue** (the client's QuickBooks banking screen showed several hundred pending items), so the ledger the firm can read is not the whole year. **Nothing was written to QuickBooks** — neither the Double MCP nor the QuickBooks MCP can recategorize a transaction, so the output is a worklist Lilian executes in QuickBooks by hand. _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🔴 **BLOCKING — confirm WHICH bank account is the personal one before any cleanup touches it.**
-  Lilian said *"la que dice Chase 8310"*; the live chart has `Checking Chase 8310` **and**
-  `Artem Personal` as separate accounts and every posted pattern says 8310 is the **business**
-  operating account (the personal one reads as the Chase …2935 in the transfer descriptors). Asked
-  2026-08-26, unanswered. **Nothing in the cleanup proceeds on a guess here** — see §5.
-- 🔴 **Decide what "Outside Labor" means in this client's chart.** Lilian's rules send **Kozami** and
-  **ATM withdrawals** to *Outside Labor* and **Upwork** to *Outside Services*, but the chart has no
-  account called **Outside Labor** — it has `Outside services` and `Contract labor`. Either an
-  account gets created or *Outside Labor* maps to `Contract labor`. Until this is settled the
-  Kozami/Upwork swap cannot be executed, only described.
+- 🟡 **Confirm where BRYANT TORRES belongs — the one rule whose account Lilian did not name.** She
+  said only *"Bryant es un subcontractor"*, which settles that he is business labor (two 2025
+  payments sit in **Owner's distribution**, which is wrong on any reading) but not which account. Two
+  readings, and the amount makes it worth asking rather than inferring: either *subcontractor = the
+  same Outside Labor treatment as Kozami* → move him to `Contract labor` with the rest, or the remark
+  was about **1099 exposure** and he stays in `Outside services`. He is the client's largest 2026
+  labor payee. **Not blocking the rest of the cleanup** — hold this one line item until she says.
 - 🔴 **Ask the client what each recent ATM cash withdrawal was for** — Lilian's new standing rule
   (§5) and it is time-sensitive: only the recent ones are still in his memory. The answer decides
   labor-vs-distribution **and** whether a W-9 and a 1099 are owed. Draft the question in Russian.
