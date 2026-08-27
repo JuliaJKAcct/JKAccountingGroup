@@ -158,6 +158,12 @@ the actual details.
   **separate long-term-liability sub-account per agreement** under one parent. 🔴 **But the ledger
   and the agreements do not agree, and the wire memos cannot settle it** — see §6.
 - **Part of a related group** of LLCs under the same owners — e.g. **Rest Invest Kids LLC** (activated alongside iKids); iKids appears to be the US **operating** LLC. Each owner is individually linked in Double to **their own separate set** of related-entity records — not one shared group _(Double contacts, 2026-07-25 sweep)_.
+- **We reach this client through a shared WhatsApp WORK GROUP, not one-to-one** _(Lilian,
+  2026-08-27)_. A question addressed to one person is read by the others, which cuts both ways:
+  someone other than the addressee often has the answer and will give it — so **address the person
+  who owns the question, but leave the door open for anyone to reply**, and put the name on the
+  one question only that person can answer. It also means **anything written there is read by the
+  whole group**, so it is not the place for a question about one individual.
 - **A concrete example of the hands-on AP:** the **permit-expediting vendor** sends outstanding-balance account statements, which go to the AP mailbox for handling; permit fees themselves are paid through the City of Fort Lauderdale's **LauderBuild** portal _(Gmail, Jul 2026 sweeps)_. _(The vendor's name was removed 2026-08-14 — a vendor list is client data and lives in QuickBooks/Double, not in a file that auto-publishes.)_
 - **The books appear never to have used Bills or Invoices.** The chart read on 2026-08-14 (which
   returns inactive accounts too) contains **no Accounts Payable and no Accounts Receivable**
@@ -380,6 +386,16 @@ the actual details.
   (`get_transaction_types` confirms it), so **journal entries and the pre-2026 loan history are
   invisible from here** — every "not found" in this pass belongs to that bounded search, not to
   the ledger. _(Worked by Lilian.)_
+
+- 2026-08-27 — **The loan question went to the client, and it is now waiting on them.** Lilian sent
+  the message on WhatsApp, in Russian, addressed to the Manager but posted in the shared work group
+  (§5) so a colleague who knows can answer, with a photo of the transaction memo attached. It asks
+  two things and nothing else: **which agreement each of the two overrun receipts belongs to**, and
+  **what the Manager actually sent** on the one that arrived net of a charge — that second one
+  states our own reading (the memo's stated charge, and the round figure it implies) and asks him
+  to confirm it, rather than asking cold for something we had already worked out. ⏳ **Nothing in
+  QuickBooks moves until they answer** — see the outstanding item above and `FOLLOW-UPS.md` row 56.
+  _(Worked by Lilian.)_
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
