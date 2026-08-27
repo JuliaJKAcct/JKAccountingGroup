@@ -116,6 +116,11 @@
   .paddon .av{ font-family:var(--serif); font-size:26px; font-weight:700; color:var(--bronze); line-height:1.05; white-space:nowrap; }
   .paddon .av .per{ font-size:14px; color:var(--muted); font-weight:400; }
   .paddon .anote{ flex-basis:100%; font-size:10.5px; color:var(--ink); margin:8px 0 0; line-height:1.5; }
+  /* Itemized fee table — one-time engagements quoting several services; the price card below it carries the total */
+  .feetbl{ margin:0 0 14px; border-top:1px solid var(--hairline); }
+  .feetbl .ftr{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:9px 2px; border-bottom:1px solid var(--hairline); }
+  .feetbl .fts{ font-size:11.5px; color:var(--ink); line-height:1.45; }
+  .feetbl .ftv{ font-family:var(--serif); font-size:15px; font-weight:700; color:var(--bronze); white-space:nowrap; }
 
   /* Included */
   /* "The foundation" — the always-included baseline, set apart at the top of the scope */
@@ -264,6 +269,10 @@
         <p class="hint">Fill <b>Phase 2 fee</b> to show a two-card investment snapshot (an intro price, then a step-up). Leave it blank for a single price.</p>
         <label class="f"><span class="cap">Standard rate (optional, for a discount anchor)</span><input id="pstdrate" placeholder="e.g. $650/mo"></label>
         <label class="f"><span class="cap">Discount text (optional)</span><input id="pdiscount" placeholder="e.g. 10% discount (–$65) for annual prepay"></label>
+        <div class="row2">
+          <label class="f"><span class="cap">Fee period (after each amount — clear it for a one-time engagement)</span><input id="pfeeper" value="/mo"></label>
+        </div>
+        <label class="f"><span class="cap">Fee table (optional) — one "Service | $fee" per line; renders above the card, so the card becomes the total</span><textarea id="pfeetable" rows="4" placeholder="Partnership return — Form 1065 + K-1s | $650&#10;Individual returns — four Form 1040-NR | $2,000"></textarea></label>
         <label class="f"><span class="cap">Investment body (optional — kept short; the cards carry the message)</span><textarea id="pinvbody" rows="2"></textarea></label>
         <label class="f"><span class="cap">Closing note</span><input id="pinvnote"></label>
         <div class="row2">
@@ -317,6 +326,10 @@
             <label class="f"><span class="cap">Phase 2 label (RU)</span><input id="pphase2_ru" placeholder="С 4-го месяца · Advisory"></label>
             <label class="f"><span class="cap">Phase 2 — what it adds (RU)</span><input id="pphase2note_ru"></label>
           </div>
+          <div class="row2">
+            <label class="f"><span class="cap">Fee period (RU)</span><input id="pfeeper_ru" value="/мес"></label>
+          </div>
+          <label class="f"><span class="cap">Fee table (RU) — "Услуга | $сумма" per line</span><textarea id="pfeetable_ru" rows="4"></textarea></label>
           <label class="f"><span class="cap">Investment body</span><textarea id="pinvbody_ru" rows="2"></textarea></label>
           <label class="f"><span class="cap">Closing note</span><input id="pinvnote_ru"></label>
           <div class="row2">
@@ -371,6 +384,7 @@
     b3k:"[Benefit 3 kicker]", b3t:"[Benefit 3 title]", b3d:"[Benefit 3 description]",
     pinvbody:"Covers everything in the What's Included section — as a single fixed monthly payment, with nothing billed separately during the year.",
     pinvnote:"Fee is reviewed annually for inflation. This proposal is valid for 30 days.",
+    pfeeper:"/mo",
     pincluded:"# Monthly Bookkeeping\nTransaction recording & categorization\nBank, credit-card & PayPal reconciliation\n# Financial Reporting\nMonthly Profit & Loss and Balance Sheet\n# Tax & Compliance\nAnnual business tax return preparation\nYear-round tax coordination",
     psteps:"Review this proposal and sign the agreement below.\nWe'll send your first monthly invoice via QuickBooks, payable by ACH; future invoices arrive on the 1st of each month.\nWe'll set up your accounting systems and coordinate any handoff needed.\nWe'll hold a kickoff session to align on goals and reporting.",
     pquote:"«Knowing is not enough, we must apply.\nWilling is not enough, we must do.»",
@@ -386,11 +400,12 @@
     b3k_ru:"[Подзаголовок выгоды 3]", b3t_ru:"[Название выгоды 3]", b3d_ru:"[Описание выгоды 3]",
     pinvbody_ru:"Покрывает всё, что указано в разделе «Что включено», — единым фиксированным ежемесячным платежом, без отдельных счетов в течение года.",
     pinvnote_ru:"Стоимость ежегодно пересматривается с учётом инфляции. Это предложение действительно в течение 30 дней.",
+    pfeeper_ru:"/мес",
     pincluded_ru:"# Ежемесячный бухгалтерский учёт\nЗапись и категоризация операций\nСверка банковских, карточных счетов и PayPal\n# Финансовая отчётность\nЕжемесячный отчёт о прибылях и убытках и баланс\n# Налоги и соответствие требованиям\nПодготовка годовой налоговой декларации бизнеса\nКруглогодичная налоговая координация",
     psteps_ru:"Ознакомьтесь с этим предложением и подпишите соглашение в английском разделе.\nМы выставим первый ежемесячный счёт через QuickBooks с оплатой по ACH; последующие счета приходят 1-го числа каждого месяца.\nМы настроим ваши учётные системы и организуем необходимую передачу дел.\nМы проведём установочную встречу, чтобы согласовать цели и отчётность.",
   };
-  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","paddon_ru","paddonfee_ru","paddonnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
-  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","paddon","paddonfee","paddonnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
+  const RU_FIELDS = ["psubtitle_ru","pintro_ru","b1k_ru","b1t_ru","b1d_ru","b2k_ru","b2t_ru","b2d_ru","b3k_ru","b3t_ru","b3d_ru","pphase1_ru","pphase2_ru","pphase2note_ru","pinvbody_ru","pinvnote_ru","pfeeper_ru","pfeetable_ru","paddon_ru","paddonfee_ru","paddonnote_ru","pfoundation_ru","pincluded_ru","psteps_ru"];
+  const CONTENT = ["pdate","pnumber","pcompany","psubtitle","pcontact","pemail","pintro","b1k","b1t","b1d","b2k","b2t","b2d","b3k","b3t","b3d","pfee","pphase1","pphase2","pfee2","pphase2note","pstdrate","pdiscount","pinvbody","pinvnote","pfeeper","pfeetable","paddon","paddonfee","paddonnote","pfoundation","pincluded","psteps","prep","pquote","pquoteby","pquotesub"].concat(RU_FIELDS);
   function applyDefaults(){ for(const k in DEFAULTS) $(k).value = DEFAULTS[k]; for(const k in DEFAULTS_RU) $(k).value = DEFAULTS_RU[k]; }
 
   const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -503,6 +518,9 @@
     const L = LBL[lang];
     const disc = ($("pstdrate").value.trim() && $("pdiscount").value.trim())
       ? `<p class="disc">${esc(L.stdRate)} ${esc($("pstdrate").value)} · ${esc(L.includes)} <b>${esc($("pdiscount").value)}</b></p>` : "";
+    // Fee period: "/mo" by default (DEFAULTS), editable — blank it for a ONE-TIME engagement
+    // so no amount reads as monthly. Per-language (the RU field defaults to "/мес").
+    const per = cv("pfeeper",lang);
     // Investment snapshot: one price card, or — when a Phase-2 fee is entered — a bold TWO-phase
     // snapshot (an intro price and the step-up, side by side). Phase labels + the phase-2 note are
     // translated per language; the dollar amounts are shared.
@@ -512,24 +530,35 @@
     if(fee2){
       const note2 = cv("pphase2note",lang).trim();
       cards = `<div class="pcards2">`
-        + `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`
-        + `<div class="pcard p2"><div class="pk">${ph(cv("pphase2",lang),"[Phase 2]")}</div><div class="pv">${esc(fee2)}<span class="per">${esc(L.per)}</span></div>${note2?`<p class="pnote">${esc(note2)}</p>`:""}</div>`
+        + `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(per)}</span></div></div>`
+        + `<div class="pcard p2"><div class="pk">${ph(cv("pphase2",lang),"[Phase 2]")}</div><div class="pv">${esc(fee2)}<span class="per">${esc(per)}</span></div>${note2?`<p class="pnote">${esc(note2)}</p>`:""}</div>`
         + `</div>`;
     } else {
-      cards = `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(L.per)}</span></div></div>`;
+      cards = `<div class="pcard"><div class="pk">${esc(p1kick)}</div><div class="pv">${ph($("pfee").value,"$[amount]")}<span class="per">${esc(per)}</span></div></div>`;
     }
+    // Optional itemized FEE TABLE — "Service | $fee" per line — rendered ABOVE the price card,
+    // so the card reads as the total (set its label via the Phase-1 field, e.g. "Total · First
+    // year"). Built for one-time tax engagements quoting several services; blank ⇒ no table.
+    const tblLines = lines(cv("pfeetable",lang)).map(l=>{
+      const i = l.indexOf("|");
+      return i === -1 ? {s:l.trim(), v:""} : {s:l.slice(0,i).trim(), v:l.slice(i+1).trim()};
+    }).filter(r=>r.s);
+    const feetbl = tblLines.length
+      ? `<div class="feetbl">` + tblLines.map(r=>`<div class="ftr"><span class="fts">${esc(r.s)}</span><span class="ftv">${esc(r.v)}</span></div>`).join("") + `</div>`
+      : "";
     // Optional add-on — a service priced on its own, on top of the retainer (e.g. Accounts
     // Payable management). Rendered as a distinct, dashed "optional" card below the fee; the
     // fee text carries its own sign (e.g. "+$1,500"). Blank add-on fee ⇒ no card.
     const addonFee = cv("paddonfee",lang).trim();
     const addon = addonFee
       ? `<div class="paddon"><div><span class="ak">${esc(L.addonK)}</span><span class="an">${esc(cv("paddon",lang))}</span></div>`
-        + `<div class="av">${esc(addonFee)}<span class="per">${esc(L.per)}</span></div>`
+        + `<div class="av">${esc(addonFee)}<span class="per">${esc(per)}</span></div>`
         + (cv("paddonnote",lang).trim()?`<p class="anote">${esc(cv("paddonnote",lang))}</p>`:"")
         + `</div>`
       : "";
     const body = cv("pinvbody",lang).trim();
     return sectionHead(L.invEye, L.invTitle, tag)
+      + feetbl
       + cards
       + addon
       + disc

@@ -65,7 +65,16 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    fee text carries its own sign (type `+$1,500`); the tool appends the `/mo` period, so it is
    for a **monthly** add-on. Blank add-on fee ⇒ no card. Use it for a paid extra the client can
    choose (AP, payroll, a cleanup that is *not* excluded), not for a phase step-up (that is the
-   Phase-2 fields) and not for something already in the bundle. A **Language**
+   Phase-2 fields) and not for something already in the bundle. The same generator is also the
+   **one-time TAX-ENGAGEMENT template** (Julia, 2026-08-27; built for a four-member property
+   LLC): blank the **Fee period** field (default `/mo`; the RU field defaults to `/мес`) so no
+   amount reads as monthly, and fill the **Fee table** (`pfeetable`, one `Service | $fee` per
+   line) to itemize several services; the rows render above the price card, and the card then
+   carries the **total**, labeled via the Phase-1 field (e.g. *Total · First-year engagement*).
+   Blank table ⇒ no rows, and the `/mo` default keeps every monthly proposal unchanged. When
+   such an engagement deliberately quotes personal returns alongside the company's (e.g.
+   non-resident members' 1040-NRs + ITINs with the 1065), the "personal tax preparation"
+   Not-Included default is dropped for that proposal — the quote defines the scope. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the
