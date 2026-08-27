@@ -31,7 +31,7 @@
   .group .ghint{ font-size:10.5px; line-height:1.45; color:var(--muted); margin:0 0 10px; }
   label.field{ display:block; margin-bottom:10px; }
   label.field .cap{ display:block; font-size:11px; color:var(--muted); margin-bottom:4px; font-weight:500; }
-  input, select{ width:100%; font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:8px 10px; }
+  input, select, textarea{ width:100%; font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:8px 10px; }
   input:focus, select:focus{ outline:2px solid var(--bronze-lt); border-color:var(--bronze); }
   input.missing{ border-color:#B4472F; background:#fbeee9; }
   .row2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -72,6 +72,10 @@
   .letter .addr .cn{ color:var(--teal); font-weight:700; }
   .letter .addr b{ font-weight:600; }
   .letter .ret{ margin:5px 0 8px 8px; font-weight:600; }
+  /* Itemized fee schedule — engagements quoting services beyond the entity return */
+  .letter .feesched{ margin:6px 0 10px; }
+  .letter .feesched .fsr{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:5px 2px; border-bottom:1px solid #C9C1B0; }
+  .letter .feesched .fsr.total{ border-bottom:0; border-top:2px solid #123841; font-weight:700; }
   .letter .fee b{ color:var(--bronze); font-weight:700; }
   .letter .sig{ font-style:italic; margin:8px 0 2px; }
   .letter .sigline{ display:inline-block; min-width:2.8in; border-bottom:1px solid var(--ink); line-height:1.15; }
@@ -136,6 +140,11 @@
         </div>
       </div>
       <div class="group">
+        <p class="glabel">Additional services <span class="opt">optional</span></p>
+        <p class="ghint">For a tax engagement that covers more than the entity return (e.g. the members' 1040-NRs and ITIN applications quoted with the company's 1065). One service per line as "Service | fee (USD)"; the letter then lists each service in the scope and turns the Professional Fee into an itemized schedule ending in a total. Leave empty for the standard single-return letter.</p>
+        <label class="field"><span class="cap">Services — one "Service | fee" per line</span><textarea id="svcs" rows="3" placeholder="Form 1040-NR for each of the four members | 2000&#10;Form W-7 ITIN application for each member | 2000"></textarea></label>
+      </div>
+      <div class="group">
         <p class="glabel">Deposit to begin <span class="opt">optional</span></p>
         <label class="check"><input type="checkbox" id="depreq"><span>A <b>deposit</b> is required before we begin work</span></label>
         <label class="field"><span class="cap">Deposit amount (USD)</span><input id="depamt" type="number" placeholder="500"></label>
@@ -169,7 +178,7 @@
 
 <script>
   const $ = id => document.getElementById(id);
-  const ids = ["company","addr1","addr2","entity","year","fee","depamt","repname","reptitle","ldate","infoby"];
+  const ids = ["company","addr1","addr2","entity","year","fee","svcs","depamt","repname","reptitle","ldate","infoby"];
   // Representative name/title are OPTIONAL — left blank when the client signs personally
   // (matches Julia's template: an empty rep field just prints the blank signature line).
   const req = {company:"Company name",addr1:"Address line 1",addr2:"Address line 2",entity:"Entity type",year:"Tax year",fee:"Fee",ldate:"Letter date",infoby:"Info needed by"};
@@ -232,6 +241,30 @@
       ? `After crediting your ${depAmt} deposit, the remaining balance is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`
       : `This fee is invoiced upon completion of the engagement, prior to release of the completed tax return(s).`;
 
+    // Additional services (optional): "Service | fee" lines. When present, the scope lists each
+    // service under the return line and the Professional Fee paragraph becomes an itemized
+    // schedule whose last row is the engagement total. Blank => the standard single-return letter.
+    const svcRows = (v.svcs || "").split("\n").map(l=>{
+      const i = l.indexOf("|");
+      const sName = (i===-1 ? l : l.slice(0,i)).trim();
+      const n = i===-1 ? NaN : Number(String(l.slice(i+1)).replace(/[^0-9.]/g,""));
+      return { s:sName, n };
+    }).filter(r=>r.s);
+    const scopeIntro = svcRows.length
+      ? `We will prepare the following federal and state tax returns, and provide the related services listed, for the year ended ${yearEnd}:`
+      : `We will prepare the following federal and state tax return for the year ended ${yearEnd}:`;
+    const svcScope = svcRows.map(r=>`<p class="ret">${esc(r.s)}</p>`).join("");
+    const svcTotal = svcRows.reduce((t,r)=>t+(isNaN(r.n)?0:r.n), Number(v.fee||0));
+    const feeSentence = `This fee is based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depends upon the timely delivery, availability, quality, and completeness of the information you provide to us.`;
+    const feePara = svcRows.length
+      ? `<div class="feesched">`
+        + `<div class="fsr"><span>Preparation of ${retLine}</span><b>${feeVal}</b></div>`
+        + svcRows.map(r=>`<div class="fsr"><span>${esc(r.s)}</span><b>${isNaN(r.n)?"":money(r.n)}</b></div>`).join("")
+        + `<div class="fsr total"><span>Total for this engagement</span><b>${est?`estimated at ${money(svcTotal)}`:money(svcTotal)}</b></div>`
+        + `</div>`
+        + `<p class="fee">These fees are based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depend upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} ${feeInvoice.replace(/^This fee is/, "These fees are")}</p>`
+      : `<p class="fee">Our professional fee for the tax return preparation outlined above is <b>${feeBold}</b>. ${feeSentence}${estNote} ${feeInvoice}</p>`;
+
     $("letter").innerHTML = `
       <div class="lh"><img src="__LOGO__" alt="JK Accounting Group"><div class="kd">Tax Preparation Engagement Letter</div><div class="meta">Pembroke Pines, Florida</div><div class="meta">786-318-1505</div></div>
 
@@ -241,8 +274,8 @@
       <p>JK Accounting Group Corp (“firm,” “we,” “us,” or “our”) is pleased to provide <b>${co}</b> (“you” or “your”) with the professional services described below. This letter, and the attached <i>Terms and Conditions Addendum</i> and any other attachments incorporated herein (collectively, “Agreement”), confirm our understanding of the terms and objectives of our engagement and the nature and limitations of the services we will provide. The engagement between you and our firm will be governed by the terms of this Agreement.</p>
 
       <h3>Engagement Objective and Scope</h3>
-      <p>We will prepare the following federal and state tax return for the year ended ${yearEnd}:</p>
-      <p class="ret">${retLine}</p>
+      <p>${scopeIntro}</p>
+      <p class="ret">${retLine}</p>${svcScope}
       <p>We will not prepare any tax returns other than those identified above, without your written request, and our written consent to do so. We will rely upon the completeness and accuracy of the information and representations you provide to us to prepare your tax returns. We have not been engaged to and will not prepare financial statements. We will not audit or otherwise verify the data you submit to us, although we may ask you to clarify certain information.</p>
       <p>We will prepare the above-referenced tax returns solely for filing with the Internal Revenue Service (“IRS”) and applicable state and local tax authorities. Our work is not intended to benefit or influence any third party, either to obtain credit or for any other purpose.</p>
       <p>You agree to indemnify and hold us harmless with respect to any and all claims arising from the use of the tax returns for any purpose other than filing with the IRS, state and local tax authorities regardless of the nature of the claim, including the negligence of any party.</p>
@@ -303,7 +336,7 @@
       <p>Federal, state, and local tax authorities impose various penalties and interest charges for non-compliance with tax laws and regulations including failure to file or late filing of returns, and underpayment of taxes. You, as the taxpayer, remain responsible for the payment of all tax, penalties, and interest charges imposed by tax authorities.</p>
 
       <h3>Professional Fee</h3>
-      <p class="fee">Our professional fee for the tax return preparation outlined above is <b>${feeBold}</b>. This fee is based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depends upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} ${feeInvoice}</p>
+      ${feePara}
       <p>If bookkeeping or accounting cleanup work is needed to complete the return(s) (see Bookkeeping assistance above), that work is billed separately at $60/hr. Any tax planning or advisory consultations outside the scope of this engagement are billed separately at $150/hr under a separate agreement.</p>
       <p>You agree that you will deliver all records requested and respond to all inquiries made by our staff to complete this engagement on a timely basis. You agree to pay all fees and expenses incurred whether or not we prepare the tax returns.</p>
       <p>We require that all outstanding invoices be paid prior to releasing the completed tax returns. We do not release incomplete tax returns.</p>
