@@ -28,6 +28,7 @@
 
 - **Business name:** iKids Group LLC
 - **Entity type:** LLC — **partnership** (multi-member; files Form **1065**) _(Double)_
+- **Registered identity — the block other people's forms keep asking for:** Federal **EIN `33-4887976`** · Florida document number **L25000185674** · organized **2025-04-18** · **ACTIVE** _(Sunbiz, 2026-08-27)_. ⓘ **Which ADDRESS a form gets is a real choice:** Sunbiz carries a **principal address** — the build-out site — and a **mailing address that is the FIRM's**, because we are the registered agent. Goods, deliveries and "where the business operates" take the **principal** one; only post meant for us takes ours. Street lines are on the Sunbiz record and in Double, not here — §2's carve-out covers the EIN, and a session does not widen a written permission by reasoning.
 - **Home state:** **Florida** (Fort Lauderdale) _(Gmail — high confidence)_
 - **Industry / what they do:** **Children's indoor play park / family-entertainment venue** ("iKidsPark"), being built out at a commercial site in **Fort Lauderdale, FL** — a leased **former big-box retail unit** _(vendor job-site description, 2026-08-14)_. **Pre-operational** (construction / build-out phase; not yet generating revenue). _(Gmail)_
 - **Primary language:** **Russian / Ukrainian** (owners are Ukrainian; correspondence in RU/UA, tax docs bilingual). _(Gmail)_
@@ -212,6 +213,18 @@ the actual details.
   like. **Not confirmed:** the Operating Agreement is the authority on membership and has not been
   re-checked against this. Worth settling, because *who the third member is* and *his US tax
   status* are both open items below _(QuickBooks via Double, 2026-08-14)_.
+- **The build-out has reached EQUIPMENT PURCHASING, and the firm now fills in the suppliers' CREDIT
+  APPLICATIONS.** A restaurant-equipment supplier's net-terms packet was prepared on 2026-08-27
+  (§6). Three things about these that are the same every time and are worth not re-deriving: **only
+  the Manager may sign** — a credit application binds the company and carries a personal-guaranty
+  page, so it follows the same routing as anything else that binds it (the ownership bullet above);
+  **the company has NO phone number of its own** — Double's client record carries none, so the
+  Manager's mobile is what goes on the form, and any supplier verifying the account will ring him,
+  not us; and **invoices must be routed to the AP mailbox (§3), not to a person**, or they never
+  enter the monthly retrieval routine and the expense ends up in the books with no support behind
+  it. ⚠️ **A supplier's packet will also ask for a card to keep on file and for a PERSONAL guaranty
+  from the signer. Neither is ours to answer** — the card is the client's and the guaranty is a
+  personal financial commitment by the Manager; leave both blank and put them to Julia.
 - **A target opening window has surfaced: late November–early December 2026**, with hiring
   expected to start around September 2026 once the pending project approval comes through and
   construction is substantially complete (targeted November). This is the first documented estimate
@@ -392,6 +405,15 @@ the actual details.
   BillPay), and a Restaurant365↔QuickBooks integration, tied to the venue's staffing ramp (~35–70
   at opening). Julia to prepare a written proposal/estimate; nothing here is part of the current
   engagement in §4 until it is signed.
+- **The supplier credit application is filled but CANNOT BE SENT — four things are open, and one of
+  them is not ours to decide.** (a) A **third trade reference** — the packet demands three and we
+  have two. (b) The **bank's branch address and a contact email** for the bank-reference block. (c)
+  🔴 **The PERSONAL GUARANTY page** — the supplier asks the signer to guarantee the company's debt
+  **personally**, with his home address. That is the Manager's own decision, not a form field, so
+  the page was left **entirely blank**; it must not be filled in on his behalf. (d) The
+  **card-on-file block**, likewise blank — the client's card, never ours to supply. ⓘ Also worth
+  confirming before it goes: the bank-reference page requires a signer **authorized per the bank's
+  own records**, which is not the same test as who may bind the LLC. _(2026-08-27.)_
 - **Confirm the identity of the new no-portal-access contact** registered 2026-08-10 (a
   "contractor" role in Double) — Double contacts now name him **Sergey Yalansky** (2026-08-22), who attended the 2026-08-13 engagement-scoping meeting. STILL unconfirmed whether this is the CFO already documented in §2, or a separate operational contact.
 
@@ -435,6 +457,19 @@ the actual details.
   to confirm it, rather than asking cold for something we had already worked out. ⏳ **Nothing in
   QuickBooks moves until they answer** — see the outstanding item above and `FOLLOW-UPS.md` row 56.
   _(Worked by Lilian.)_
+
+- 2026-08-27 — **Filled in a supplier's net-terms CREDIT APPLICATION for the company** (KaTom
+  Restaurant Supply — the restaurant/park equipment supplier), at Julia's request. Julia supplied
+  the banking and trade-reference material; the entity block was read off **Sunbiz**, the signer and
+  the invoice contacts off **Double**. **What the exercise settled:** the signer is the **Manager**
+  (Sunbiz lists him as the sole authorized person, `MGR`, which corroborates the Operating
+  Agreement); the company has **no phone of its own** in Double, so the Manager's mobile went on the
+  form; and the **AP mailbox address Julia quoted was a near-miss** — she wrote it without the
+  `llc`. Five Gmail threads spanning 2025-12 → 2026-07, including QuickBooks' own notifications and
+  Julia's sent mail, all carry the §3 address and **nothing at all uses the shorter one**, so the
+  form was filled with the §3 address and the discrepancy put to her. ⏳ **Not sent** — it is short a
+  third trade reference, the bank's branch address, and a decision on the personal guaranty; see the
+  outstanding item and `FOLLOW-UPS.md` row 65. _(Worked for Julia.)_
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
