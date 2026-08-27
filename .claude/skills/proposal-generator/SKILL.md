@@ -62,10 +62,24 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    optional **add-on** (`paddon` name, `paddonfee`, `paddonnote` + `_ru`): a service priced
    **on top of** the retainer — e.g. *Accounts Payable management, +$1,500/mo* — rendered as a
    distinct **dashed "Optional add-on" card below the hero fee**, clearly secondary to it. The
-   fee text carries its own sign (type `+$1,500`); the tool appends the `/mo` period, so it is
-   for a **monthly** add-on. Blank add-on fee ⇒ no card. Use it for a paid extra the client can
+   fee text carries its own sign (type `+$1,500`); the tool appends the **Fee period** field
+   (default `/mo`) after it, so the add-on reads monthly on a monthly proposal and unlabeled
+   on a one-time engagement. Blank add-on fee ⇒ no card. Use it for a paid extra the client can
    choose (AP, payroll, a cleanup that is *not* excluded), not for a phase step-up (that is the
-   Phase-2 fields) and not for something already in the bundle. A **Language**
+   Phase-2 fields) and not for something already in the bundle. The same generator is also the
+   **one-time TAX-ENGAGEMENT template** (Julia, 2026-08-27; built for a four-member property
+   LLC): blank the **Fee period** field (default `/mo`; the RU field defaults to `/мес`) so no
+   amount reads as monthly, and fill the **Fee table** (`pfeetable`, one `Service | $fee` per
+   line) to itemize several services; the rows render above the price card, and the card then
+   carries the **total**, labeled via the Phase-1 field (e.g. *Total · First-year engagement*).
+   Blank table ⇒ no rows, and the `/mo` default keeps every monthly proposal unchanged. When
+   such an engagement deliberately quotes personal returns alongside the company's (e.g.
+   non-resident members' 1040-NRs + ITINs with the 1065), the "personal tax preparation"
+   Not-Included default is dropped for that proposal — the quote defines the scope.
+   ⚠️ **Routing (Julia, 2026-08-27, correcting a session that picked wrong): a TAX ENGAGEMENT
+   goes on the ENGAGEMENT-LETTER template** (its Additional-services schedule — field 14
+   below), **not this proposal format**; this fee-table mode stays for a fixed-fee quote
+   that wants the premium proposal layout. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the
@@ -104,6 +118,13 @@ real filled letter — nothing else varies). The tool refuses to generate while 
 11. **Fee is an estimate** — *optional* toggle ("Fee basis" group); off by default
 12. **Deposit to begin** — *optional* toggle ("Deposit to begin" group); off by default
 13. **Deposit amount (USD)** — used only when the deposit toggle is on
+14. **Additional services** — *optional* textarea, one `Service | fee (USD)` per line. This is
+    what makes the letter the **tax-engagement template for a multi-service quote** (Julia,
+    2026-08-27, built for a four-member property LLC: the 1065 plus the members' 1040-NRs and
+    W-7 ITIN applications). When filled, the scope lists each service under the return line and
+    the Professional Fee becomes an **itemized schedule** (preparation of the entity return at
+    the Fee amount, then each service, then a bold **Total for this engagement** — the estimate
+    toggle marks the total "estimated at"). Leave empty for the standard single-return letter
 
 **When "Fee is an estimate" is on**, the Professional Fee line reads **"estimated at $X"**
 (instead of a fixed **"$X"**) and a good-faith-estimate sentence is appended: the final fee
@@ -173,7 +194,11 @@ company itself. This matches the firm's master template exactly.
 - **Julia's title is "Chief Accountant"** (Главный бухгалтер) — never "CEO".
 - **"Not Included" is standard on every proposal**, and its defaults are **personal tax
   preparation** and **historical cleanup / catch-up bookkeeping** — these are *never*
-  included in a proposal (Lilian, Jul 2026). Preparing the **financial statements** follows the
+  included in a proposal (Lilian, Jul 2026). One carve-out: a **tax-engagement quote that
+  deliberately covers the owners' personal returns** (e.g. non-resident members' 1040-NRs +
+  ITINs quoted with the company's 1065 — see the template notes in §3 and the letter's
+  Additional-services field) drops the personal-tax default for that document (Julia,
+  2026-08-27). Preparing the **financial statements** follows the
   same logic — see the rule below — though whether it is named in the section's wording hasn't
   been decided with Lilian yet. **Note:** none of the three generators actually renders a
   "Not Included" section today (they carry "What's Included" only) — so this rule currently
