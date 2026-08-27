@@ -3179,91 +3179,6 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 > it travels with the owner's personal return.** If the firm does not prepare that 1040, the
 > figures still have to reach whoever does.
 
-### 12B · 🔑 WHEN YOU CANNOT GET A SHAREHOLDER'S PRIOR FORM 7203 — reconstruct it, and PROVE the method first
-
-**This comes up constantly and it is usually treated as a dead end.** The opening basis on Form 7203 is
-last year's line 15, which lives on **that person's 1040** — a return the firm may not have prepared and
-that shareholder may be slow, unwilling or unable to produce. ✅ **It can be reconstructed from company
-records. The technique below is what makes the result defensible rather than a guess.**
-
-> 💡 **From Gossip Miami, Aug 2026: two shareholders bought 50% each on the same day under one agreement
-> for the same $82,500. One shareholder's Form 7203 was in hand; the other's was not.**
-
-### ⛔ First — the shortcut that looks obvious and is wrong
-
-**"They bought the same thing, on the same day, for the same price, so copy the one we have."**
-🛑 **Test it before you rely on it, and on the pilot it failed immediately:** the known shareholder's
-closing basis was **4,109 ABOVE her cost** in a year the company made a **loss**. **Something moved her
-basis that the purchase price does not explain** — and there is no reason to think an unexplained item
-on one person's personal return applies to the other. ⛔ **Copying the number copies the unknown.**
-
-### ✅ The method — reconstruct, then test it on the person whose answer you already know
-
-**Step 1 — write the §1367 roll-forward. It is the same five lines for everybody:**
-
-```
-        cost of the stock when acquired              (§1012)
-      + later contributions
-      + her share of income
-      − her share of losses and deductions
-      − her share of nondeductible expenses
-      − distributions received
-      = stock basis at the end of the year
-```
-
-**Step 2 — fill it in for the shareholder whose real answer you HAVE, using company records only.**
-
-**Step 3 — compare your prediction with her actual Form 7203 line 15.**
-
-| Outcome | What to do |
-|---|---|
-| ✅ **They match** | **The method is proved on a live case.** Run the identical arithmetic for the other shareholder; the result is measured, not assumed |
-| 🔴 **They do not match** | ⛔ **STOP. The difference is exactly what company records cannot see.** Explain it before extending anything |
-
-🔑 **This is the whole idea, and it is what turns "we think it is about X" into something you can put your
-name to.** ⚠️ **Do step 3 BEFORE promising anyone an answer.**
-
-### 📋 What company records CAN supply
-
-| | Where |
-|---|---|
-| the cost of the stock | the purchase agreement — ✅ **and confirm it with the client; an agreement says what was DUE, not what was PAID** |
-| ordinary income or loss, per shareholder | the prior year's filed **K-1, box 1** |
-| nondeductible expenses, per shareholder | **K-1 box 16C** |
-| distributions, per shareholder | **K-1 box 16D** |
-| loans from that shareholder | **K-1 item I** — ⚠️ **a "Yes" to Schedule B question 11 exempts Schedules L and M-1, never the K-1s** |
-| contributions | the ledger's owner-contribution account — 🟠 **splitting a POOLED account by person is the weak point.** Ask; never assume half each |
-
-### 🔴 The five things NO company record can supply
-
-1. 🛑 **Whether a purchase-money NOTE gives basis at all — the biggest one, and the one to ask about
-   first.** Cost basis under §1012 includes an obligation the buyer is **personally liable** on; the
-   cheques do not have to have cleared. ⛔ **But if the note is effectively NON-RECOURSE — the seller's
-   only remedy is to take the property back — basis is limited to what has actually been PAID.**
-   🔑 **The tell is in the agreement:** a clause letting the seller **revert the shares** for
-   non-payment, or a seller who **stays on the company's paperwork until paid**, is describing security.
-   ⚠️ **On the pilot this single point moved an opening basis by tens of thousands.**
-2. Anything contributed personally that never went through the company's books.
-3. A loan made to the company from her own pocket that the bookkeeper put in a **pooled** account.
-4. **Losses suspended under §1366(d)** in an earlier year because basis ran out.
-5. A **Reg. §1.1367-1(g) election** on her 1040, which changes the ORDER the reductions happen in.
-
-### 🔑 AND ASK HOW MUCH OF IT THE RETURN ACTUALLY NEEDS — usually far less
-
-🛑 **The only basis question the CORPORATE return forces is: did that shareholder's distributions exceed
-her stock basis?** *(If they did, the excess is a capital gain — on **her** 1040, never on the 1120-S.)*
-✅ **So if the distribution is nowhere near any plausible basis, the reconstruction is a CHECK, not a
-dependency, and the 1120-S is not blocked by it.**
-
-🛠️ **AND THERE IS ALMOST ALWAYS A LIGHTER ASK THAN "SEND US YOUR FORM 7203".** People hand over ordinary
-facts far more readily than tax forms. **Two plain questions usually settle it:**
-
-> *"If you had stopped paying the instalments, could the seller have come after you for the balance —
-> or only taken your share of the business back?"* → **the recourse test, in language anyone can answer**
-> *"How many instalments had you paid by \<date\>?"* → **the number the non-recourse reading needs**
-
-⛔ **Do not open by asking for the form.** ✅ **Ask for the facts; compute the form yourself.**
-
 ### 12A · 🛠️ THE THREE-COLUMN `Stock and Loan Basis` GRID — and the two columns everyone merges
 
 🖥️ *(Screen observed in **ATX 2025**, **2026-08-24**, on the **1120-S shareholder input**. The layout is
@@ -3580,6 +3495,82 @@ presentation before filing two forms for a shareholder who sold out entirely.**
 ⓘ **Form 7203 is still Rev. December 2022** — there is no annual reissue, so a "2025 Form 7203" does
 not exist. **Check for a newer revision rather than a newer year.**
 
+
+### 12C · 🔑 PROVE THE RECONSTRUCTION BEFORE YOU RELY ON IT — and three things §12A's roll-forward cannot reach
+
+> 🔗 **This continues [§12A](#12a---the-three-column-stock-and-loan-basis-grid--and-the-two-columns-everyone-merges)'s
+> reconstruction rules — it does not replace them.** §12A tells you **where the starting figure comes
+> from** (the Item D acquisition table) and **how to roll it forward** (the whole of §1367, income line
+> included). ⛔ **Read that first and run it from there.** ✅ **This section is what to do when TWO
+> shareholders are in the same position and you can only get ONE of their forms** — which is the common
+> case, and the one where a shortcut is most tempting.
+
+💡 **From Gossip Miami, Aug 2026: two shareholders bought 50% each on the same day, under one agreement,
+for the same price. One shareholder's prior Form 7203 was in hand; the other's was not, and the client
+was unlikely to produce it.**
+
+#### ⛔ The shortcut that looks obvious, and how to kill it in one line
+
+**"They bought the same thing, on the same day, for the same price — so copy the one we have."**
+
+🛑 **Test it against the form you DO hold before you rely on it.** On the pilot it failed instantly: the
+known shareholder's closing basis was **4,109 above her cost, in a year the company made a LOSS.**
+**Something moved her basis that the purchase price does not explain**, and there is no reason at all to
+think an unexplained item on one person's personal return applies to the other.
+⛔ **Copying the number copies the unknown.**
+
+#### ✅ The method — run §12A's roll-forward on the person whose ANSWER YOU ALREADY HAVE, first
+
+| Step | |
+|---|---|
+| **1** | Reconstruct the shareholder **whose real Form 7203 you hold**, using **company records only** — the acquisition cost, then every year's K-1 box 1, box 16C, box 16D, and the contributions |
+| **2** | **Compare your figure with her actual line 15** |
+| **3a** | ✅ **They match → the method is proved on a live case.** Run the identical arithmetic for the other shareholder. The result is measured, not assumed |
+| **3b** | 🔴 **They do not match → STOP.** The difference is exactly what company records cannot see. **Explain it before extending anything to anyone else** |
+
+🔑 **This is what turns "we think it is about X" into a figure you can put your name to** — and it costs
+one afternoon with the prior-year package. ⚠️ **Do it BEFORE promising anyone an answer.**
+
+🟠 **One weak point to name out loud while you do it:** contributions usually sit in a **POOLED** owner
+account. **Splitting it by person is a guess unless somebody asks.** ⛔ **Never assume half each.**
+
+#### 🔴 The three things §12A's roll-forward cannot reach, and the first is the big one
+
+1. 🛑 **WHETHER A PURCHASE-MONEY NOTE GIVES BASIS AT ALL.** §12A's *Purchased* box says the basis is
+   "what they paid for it", and under **§1012** that includes an obligation the buyer is **personally
+   liable** on — the cheques do not have to have cleared. ⛔ **But if the note is effectively
+   NON-RECOURSE — the seller's only remedy being to take the shares back — basis is limited to what has
+   actually been PAID.**
+   🔑 **The tells are in the agreement, and they are easy to read once you know to look:** a clause
+   letting the seller **revert the shares** for non-payment, or a seller who **stays on the company's
+   paperwork until paid.** **Both are describing security.**
+   ⚠️ **On the pilot this one point moved an opening basis by tens of thousands** — from the full
+   purchase price down to a deposit plus the instalments actually paid.
+2. **Losses suspended under §1366(d)** in an earlier year because basis ran out. *(§12A's grid line 7
+   carries these — but only the shareholder's own prior form says what they are.)*
+3. **A Reg. §1.1367-1(g) election** on that 1040, which changes the ORDER the reductions happen in and
+   therefore the closing figure.
+
+#### 🛠️ ASK FOR THE FACTS, NOT FOR THE FORM
+
+**People hand over ordinary facts far more readily than tax documents, and two plain questions usually
+settle a purchase-money note without anyone opening a return:**
+
+> *"If you had stopped paying the instalments, could the seller have come after you for the balance —
+> or only taken your share of the business back?"* → **the recourse test, in language anyone can answer**
+>
+> *"How many instalments had you paid by \<date\>?"* → **the figure the non-recourse reading needs**
+
+⛔ **Do not open by asking for the Form 7203.** ✅ **Ask for the facts and compute the form yourself.**
+
+#### 🔑 AND CHECK HOW MUCH OF IT THE RETURN ACTUALLY NEEDS — usually far less than it looks
+
+🛑 **The only basis question the CORPORATE return forces is the §10B one: did that shareholder's
+distributions exceed her stock basis?** *(If they did, the excess is a capital gain — on **her** 1040,
+never on the 1120-S.)* ✅ **So where the distribution is nowhere near any plausible basis, the
+reconstruction is a CHECK rather than a dependency, and the 1120-S is not blocked by it.**
+⚠️ **Say that plainly to whoever is waiting** — it is the difference between "we cannot file" and "we can
+file, and this is owed to her 1040."
 
 ### The form, line by line — and the order is built into it
 
