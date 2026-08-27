@@ -33,15 +33,18 @@
 - **Primary language:** **Russian / Ukrainian** (owners are Ukrainian; correspondence in RU/UA, tax docs bilingual). _(Gmail)_
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); **income tax (Form 1065 partnership → K-1s)**; **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A (pre-operational). The firm also does **hands-on AP / bill-pay** (pays vendors from the client's account). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** QuickBooks Online (via Double). ✅ **The bank feed that dropped on
-  2026-07-20 appears to be BACK, and the "nothing has posted since" statement no longer holds.**
-  The ledger carries rows dated **2026-08-03** _(read 2026-08-25)_ and deposits dated **08-10 →
-  08-20** _(read 2026-08-27)_, and the later ones' descriptions are **raw feed text**
-  (`CHIPS CREDIT VIA:`, `TRN:`) — which is what a feed writes and not what a person types, so it
-  also answers the open question of whether those rows were hand-entered. ⚠️ **Evidence, not
-  confirmation, and it does NOT clear the month:** nobody has looked at the banking screen, and
-  **the 07-20 → 08-03 window has not been checked for a hole** — a gap there still reads exactly
-  like a quiet month. Confirming the feed is live stays **step 1 of the runbook**. See §4 and §6.
+- **Accounting platform:** QuickBooks Online (via Double) — ⚠️ **feed status UNCONFIRMED since 2026-07-20; verify before any close (§4).**
+  <!-- ⚠️ The line above is the WHOLE field as the Hub/dashboard card shows it: the render engine's
+       kv() matches per physical line and drops continuation lines silently, unlike bullets().
+       Keep the operative statement on the FIRST physical line. -->
+  The feed dropped on 2026-07-20 _(Lilian, 2026-08-14)_, but **the ledger has moved since** — rows
+  dated **2026-08-03** _(read 2026-08-25)_ and deposits dated **08-10 → 08-20** _(read 2026-08-27)_ —
+  so the old "nothing has posted since" statement no longer holds. ⚠️ **What that does NOT tell you
+  is whether the feed is live.** The later rows carry **raw bank text** (`CHIPS CREDIT VIA:`, `TRN:`),
+  which rules out somebody typing them by hand — **but not a statement/CSV import**, which produces
+  the identical text and is exactly what §6 tells someone to do ("reconnect it and backfill"). So
+  all three explanations remain open, **the 07-20 → 08-03 window has never been checked for a
+  hole**, and confirming the feed on the banking screen stays **step 1 of the runbook**. See §4 and §6.
 
 ## 2. Contacts
 
@@ -99,10 +102,16 @@ the actual details.
   covering bookkeeper looks for them. _(Lilian, 2026-08-11.)_
 - This sits **alongside** the hands-on AP work in §5 (the vendors the firm actively *pays* from
   the client's account) — the same mailbox serves both.
-- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_. Nothing has
-  posted since, so the ledger stops there and any month after it will read as quiet when it is
-  really missing. Reconnect it and backfill before working a close — it is step 1 of the runbook
-  now.
+- ⚠️ **The QuickBooks bank feed disconnected on 2026-07-20** _(Lilian, 2026-08-14)_, and **whether
+  it is live again has never been confirmed** — so **step 1 of the runbook is to check the banking
+  screen before working any close.** The danger is unchanged and is why this cannot be skipped: a
+  month with no data reads exactly like a quiet month. ⓘ ~~*"Nothing has posted since"*~~ — **that
+  is no longer true and must not be repeated:** the ledger carries rows dated 2026-08-03 and
+  2026-08-10 → 08-20 (§1). It is **not** evidence the feed reconnected — a statement import
+  produces the same rows — and **the 07-20 → 08-03 window has never been checked for a hole.**
+  🔴 **The published runbook, [`ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md),
+  still says "nothing has posted since" in two places.** It is an SOP, so it is not corrected here
+  without Lilian — see the outstanding items.
 
 ### Reports the client asks us for
 - **iKids requests its own reports periodically** — a **Transaction report** and a **Transactions
@@ -165,8 +174,13 @@ the actual details.
   2026-08-27)_. A question addressed to one person is read by the others, which cuts both ways:
   someone other than the addressee often has the answer and will give it — so **address the person
   who owns the question, but leave the door open for anyone to reply**, and put the name on the
-  one question only that person can answer. It also means **anything written there is read by the
-  whole group**, so it is not the place for a question about one individual.
+  one question only that person can answer. ⚠️ **The limit is the SUBJECT, not the addressee.**
+  A **company transaction** is group business even when only one member can answer it — the
+  2026-08-27 loan message asked the Manager, in the group, what he sent on a wire **into the
+  company**, and that is correct. What must **not** go there is a **member's personal position** —
+  his own tax status, residency, ITIN or return — because everything written there is read by the
+  other two partners. The third member's US tax status (§6) is the live example: **ask that one
+  privately.**
 - **A concrete example of the hands-on AP:** the **permit-expediting vendor** sends outstanding-balance account statements, which go to the AP mailbox for handling; permit fees themselves are paid through the City of Fort Lauderdale's **LauderBuild** portal _(Gmail, Jul 2026 sweeps)_. _(The vendor's name was removed 2026-08-14 — a vendor list is client data and lives in QuickBooks/Double, not in a file that auto-publishes.)_
 - **The books appear never to have used Bills or Invoices.** The chart read on 2026-08-14 (which
   returns inactive accounts too) contains **no Accounts Payable and no Accounts Receivable**
@@ -288,10 +302,29 @@ the actual details.
      but whatever leads this list is what the team sees without opening the file. Keep the four
      that BLOCK something at the top; append the rest. (Learned 2026-08-14 by pushing four live
      blockers off the card without noticing.) -->
-- ⚠️ **The QuickBooks bank feed has been disconnected since 2026-07-20** — reconnect it and
-  backfill the gap. Everything downstream (the close, the reports we send the client, any review)
-  is capped at that date until it is done. Also worth finding out **why** it dropped.
-- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
+- ⚠️ **The QuickBooks bank feed's status has been UNCONFIRMED since 2026-07-20** — open the banking
+  screen and settle it. It dropped that day; **the ledger has since moved** (rows dated 08-03 and
+  08-10 → 08-20), so ~~*"nothing has posted since"*~~ is no longer true — **but that is not evidence
+  the feed reconnected**, because a statement import produces identical rows (§1). Three things to
+  do, in order: confirm the feed on the banking screen; **check the 07-20 → 08-03 window for a
+  hole**, which nobody has; and find out **why** it dropped. Until the first two are done, every
+  month after July is unreliable — the close, the reports we send the client, any review.
+  🔴 **And the published runbook still carries the old wording in two places** — it says the feed
+  is down and nothing has posted. **That is an SOP, so a session does not correct it: Lilian's
+  call.** Same pass should revisit its **rule 7**, which now routes a Manager advance straight into
+  a loan sub-account while the allocation question above is open _(2026-08-27)_.
+- ⚠️ **A 1065 extension *appears* filed (Jul 2026) — STILL UNVERIFIED, and Double's own record does not corroborate it.** `list_projects` shows the "2025 Taxes" Double tax-project status is still **`notStarted`, with `filedAt: null`** — Double has no internal record of an extension having been filed. This does not by itself confirm or rule out an actual IRS-side extension filed outside Double's tracking, but it removes one place the confirmation could have come from. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for W-7/ITIN/"1065 extension" terms found nothing. ⓘ **One lead nobody has followed:** Double's file library holds a file named **`7004 2025 Ext.pdf`**
+  — Form 7004 is what extends a 1065. **A lead, not proof:** the name says a document exists, not
+  that it was transmitted, and nobody has opened it. **Open it first** — it is cheaper than another
+  Gmail sweep _(2026-08-27)_. **Confirm the return status** — this is the item with the largest downside on the list: a partnership that turns out not to be extended accrues failure-to-file penalties **per partner, per month**.
+- **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
+  three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
+  is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client
+  before the next 1065. ⓘ **A lead:** QuickBooks carries a capital-contribution equity account in a
+  third individual's name (§5) — check it against the Operating Agreement; it may close, or narrow,
+  this question and the one below.
+- **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in
+  **May 2026** via the outside CAA. STILL OPEN, ~3+ months pending. Confirm the ITINs were actually issued; a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, found nothing.
 - 🔴 **The Manager's loan sub-accounts do not agree with the two loan agreements, and the wire
   memos cannot settle it — a question is with the client (2026-08-27).** The **first** agreement's
   sub-account is carrying **more than the agreement's face amount**; the overrun is two receipts —
@@ -300,7 +333,11 @@ the actual details.
   books:** the second receipt's bank memo cites the **2025** agreement — but so do the four
   transfers that followed it, and those were booked to the **second** agreement. **Same memo, two
   different treatments**, so the memo is a reused wire template and is not evidence of allocation.
-  ⚠️ **Do NOT reallocate on our own reading** — which agreement each advance sits under is the
+  🛑 **Do NOT reallocate — and do NOT POST A NEW ONE either.** The old instruction here was *"ask
+  before posting a new one"*, which was written when no agreement was known to exist; now that two
+  do, runbook rule 7 resolves cleanly and the next wire would be posted into one of the two
+  sub-accounts on a coin flip, enlarging the very mismatch the client was asked about. **Until they
+  answer, a new Manager advance is parked and asked about, not posted.** Which agreement each advance sits under is the
   lender's and the company's call, and the overrun that predates the second agreement may need an
   amendment, a third agreement, or reclassification as a capital contribution. **Figures are in
   QuickBooks; the agreements are in Drive** (§7). _(Worked by Lilian.)_
@@ -311,14 +348,6 @@ the actual details.
   a loan balance should be what the lender advanced. **Pick one convention and correct the other**,
   and note the March one landed its fee on the `Startup Costs` **parent**, which is the separate
   no-posting-to-parents defect already on this list. _(Found 2026-08-27.)_
-- **Third member's US tax status is unsettled — this one DOES need an answer.** Only two of the
-  three members were put through a W-7/ITIN (§4). Whether the third already holds an SSN/ITIN, or
-  is a US resident, changes his K-1 treatment and any §1446 withholding. Ask Julia or the client
-  before the next 1065. ⓘ **A lead:** QuickBooks carries a capital-contribution equity account in a
-  third individual's name (§5) — check it against the Operating Agreement; it may close, or narrow,
-  this question and the one below.
-- **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in
-  **May 2026** via the outside CAA. STILL OPEN, ~3+ months pending. Confirm the ITINs were actually issued; a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, found nothing.
 - **Five decisions are waiting on Julia**, all from the 2026-08-14 categorization work and none of
   them safe to decide in a session — **none is urgent, which is why they sit below the four
   above**: whether to start using **Bills / Accounts Payable** (with no A/P in the chart, a
@@ -374,8 +403,12 @@ the actual details.
   checked first. **Established:** there are **two** documented loans from the Manager, dated
   **2025-07-15** and **2026-07-30**, both in Julia's Drive (§7), and QuickBooks carries one
   long-term-liability sub-account per agreement under a shared parent. **The first sub-account
-  exceeds its agreement's face amount**, by two receipts — the arithmetic closes exactly, which
-  independently corroborates the first one, whose own transaction the connector cannot return.
+  exceeds its agreement's face amount**, by two receipts, and the arithmetic closes **exactly** on
+  Lilian's account of the earlier one — whose own transaction the connector cannot return.
+  ⚠️ **That tie is consistent, NOT independent corroboration**, and the method note below is why:
+  journal entries are invisible here, so the sum only identifies those two receipts **if nothing
+  else has ever touched the account.** Nobody has established that. If a journal entry has, the
+  overrun is different transactions from the two the client was asked about.
   🔑 **The finding that decides the question:** the second receipt's bank memo cites the **2025**
   agreement, **and so do the four later transfers that were booked to the 2026 agreement** — five
   transfers, one memo, two treatments. So the memo is a reused template, the books contradict
@@ -422,11 +455,13 @@ the actual details.
     members, percentages, and the Manager — §5), and the members' immigration documents.
 - **The Manager's two loan agreements — the authority on which advance sits under which loan (§6).**
   Each has its own dated folder in Julia's Drive, alongside the `4-Corporate` folder above:
-  - **`07.15.2025 …`** — [folder](https://drive.google.com/drive/folders/1OFSEtG173I8dU_5r8NyWeNpu5nOy0XpF)
-    · the signed PDF is `07.15.2025 LOAN AGREEMENT - Andrii Matiukha - … - signed.pdf`
-    ⚠️ **an unsigned copy sits beside it** (`… - missing signature.pdf`) — take the signed one.
-  - **`07.30.2026 …`** — [folder](https://drive.google.com/drive/folders/1M2e1Efmi4rbXEOfe4ZL2dz3OY-6IZas-)
-    · `LOAN AGREEMENT_Matiukha_2026.pdf` (and the `.docx` it was made from).
+  <!-- Filenames are given by their distinguishing SUFFIX only: the full names carry the Manager's
+       personal name, and §7 is the Operating zone that feeds the published SOP (§2's rule). -->
+  - **The 2025 one — folder `07.15.2025 …`** — [open it](https://drive.google.com/drive/folders/1OFSEtG173I8dU_5r8NyWeNpu5nOy0XpF)
+    · take the PDF ending **`- signed.pdf`**. ⚠️ **An unsigned copy sits beside it**, ending
+    **`- missing signature.pdf`** — not that one.
+  - **The 2026 one — folder `07.30.2026 …`** — [open it](https://drive.google.com/drive/folders/1M2e1Efmi4rbXEOfe4ZL2dz3OY-6IZas-)
+    · one PDF and the `.docx` it was made from.
     ⓘ **Neither this folder's PDF nor the `.docx` is named as signed**, and nobody has opened
     either — **whether the 2026 agreement is executed is not established here.**
 - **Related SOPs:** [`../../sops/ikids-group-bookkeeping-review.md`](../../sops/ikids-group-bookkeeping-review.md)
