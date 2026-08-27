@@ -3095,20 +3095,39 @@ has shareholders who have held their stock for years — their basis carries ove
 **buys into an existing S corp** has an initial year in the middle of that company's life.
 
 **Where the starting figure comes from depends on HOW THE STOCK WAS ACQUIRED — the five boxes of
-Item D on the form:**
+Item D on the form.** ⓘ *(Listed here by how often they come up; **the form's own order is Original
+shareholder · Purchased · Inherited · Gift · Other** — read the labels, not the positions.)*
 
 | Item D box | Where the basis starts |
 |---|---|
 | **Purchased** | what they paid for it |
-| **Inherited** | 🔴 **fair market value at the date of death** (§1014) — ⛔ **not** what the deceased paid |
-| **Gift** | 🔴 **the donor's basis** carries over (§1015) |
-| **Original shareholder** *(a §351 contribution at formation)* | carryover basis of the property put in, **less liabilities assumed** (§358, §357(c)) |
+| **Inherited** | 🔴 **fair market value at the date of death — or at the alternate valuation date** if one was elected (§1014). ⛔ **Not** what the deceased paid |
+| **Gift** | 🔴 **the donor's basis** carries over (§1015). ⚠️ **Special DUAL-BASIS rules if the stock's FMV at the gift was BELOW the donor's basis** — the instructions send you to Reg. §§1.1015-1, 1.1366-2(a)(6) and (a)(7). **Check before using the donor's figure** |
+| **Original shareholder** | **Cash at formation is simply what they paid in.** Where PROPERTY was contributed (§351): carryover basis of that property, **plus any gain recognised, less liabilities assumed** (§358, §357(c)) |
 | **Other** — e.g. stock received as compensation | its **FMV at the time it was included in income** |
 
-**Then add later capital contributions and subtract prior non-dividend distributions.**
-⚠️ **"What the shareholder paid" covers PURCHASE alone** — on an inherited interest that is not a
-rounding error, it is a different number entirely. ✅ **Write down which box applied and what you built
-the figure from.**
+🛑 **AND THAT STARTING FIGURE IS ONLY THE FIRST LINE. The roll-forward from there to today is the
+WHOLE of §1367, and leaving parts out is the same failure as keying a zero — a basis smaller than the
+shareholder is entitled to.** ⛔ **"Add contributions and subtract distributions" is NOT the
+roll-forward.** Run every year between, in this order *(the same formula §12 opens with)*:
+
+```
+    the starting figure from the table above
+  + capital contributed since
+  + their share of INCOME in every profitable year      ← the one most often forgotten
+  + their share of tax-exempt income
+  −  distributions received                              ← these come off FIRST
+  −  their share of nondeductible expenses
+  −  their share of losses already deducted              ← these come off LAST
+  =  opening stock basis for the year you are preparing
+```
+
+⚠️ **On the case this section calls the ordinary one — a profitable company that made no distributions,
+so no 7203 was ever required — the income line IS the whole answer.** ⛔ **Omit it and you hand the
+shareholder an opening basis stripped of every year the business made money.**
+🔑 **The K-1s are what you run it from**: each year's box 1 and box 16 codes C and D are exactly the
+lines above. ✅ **Write down which Item D box applied, which years you ran, and that the figure is a
+reconstruction.**
 
 🛑 **AND THE TRAP UNDERNEATH IT: the COMPANY'S prior return contains no BASIS figure of any kind.**
 ⚠️ **But it is not empty-handed — it holds the loan BALANCES:**
@@ -3117,7 +3136,7 @@ the figure from.**
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
 | The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is near-conclusive** *(the instruction says the two reconcile "generally")* *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
-| 🔒 **Each shareholder's prior-year Form 7203** *(on THEIR 1040)* | 🔴 **Part I line 15** → **stock basis line 1 — the sentence above**; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis**; ✅ **Part III column (e)** → grid line 7 *(carryover LOSSES)*. 🛑 **Grid line 8 is different: nondeductible expenses in excess of basis DO NOT carry forward** unless a **Reg. §1.1367-1(g) election** is in effect *(Item E on the form says whether it is)* — **and with one they sit on LINE 13, never in Part III** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
+| 🔒 **Each shareholder's prior-year Form 7203** *(on THEIR 1040)* | 🔴 **Part I line 15** → **stock basis line 1 — the sentence above**; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis**; ✅ **Part III column (e)** → grid line 7 *(carryover LOSSES)*. 🛑 **Grid line 8 is different: nondeductible expenses in excess of basis DO NOT carry forward** unless a **Reg. §1.1367-1(g) election** is in effect *(Item E on the form says whether it is)* — **and with one they sit on LINE 13, never in Part III** | 🔑 **The only source ON A RETURN — but not the only source that exists** *(the shareholder's own retained schedule, or the pre-2021 three-part K-1 basis worksheet, counts if they kept one; and where none of them exists the figure is RECONSTRUCTED — see below)*. ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
 #### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — four ways it lies
@@ -3188,7 +3207,7 @@ answer the client gives; it cannot produce one.**
 | **5 Repayment of loans from shareholder** | loan column only — and the screen notes it **links from Schedule K-1 line 16, code E**, so it is normally driven from there, not typed |
 | 🔴 **6 Other decreases in basis** | ⛔ **usually EMPTY.** Distributions (**16D**) and nondeductibles (**16C**) arrive from the **K-1 input**. ⚠️ **Not to be confused with Form 7203 line 6 — see the collision table above** |
 | **7 Carryover losses from prior years** | from that shareholder's prior Form 7203 — zero **only if** the prior year was profitable and nothing was suspended. 🛑 **Check, do not assume: a prior year whose AAA went NEGATIVE almost certainly had losses** — ✅ **only DISTRIBUTIONS are floored** *(Reg. §1.1368-2(a)(3)(iii): decreased, "but not below zero")*, while **losses, deductions AND nondeductible expenses** reduce the AAA with no floor (§10.1 rules 3–5). ⚠️ **So a negative AAA is a strong signal, not a proof: size the nondeductibles first, then treat a suspended loss as live** |
-| **8 Carryover nondeductible expenses** | same source, same test |
+| **8 Carryover nondeductible expenses** | 🛑 **NOT the same test as line 7 — usually ZERO BY LAW.** *"Nondeductible expenses in excess of stock and debt basis **don't carry forward** (unless an election is made under Regulations section 1.1367-1(g))."* ⚠️ **With a (g) election in effect they DO carry — and they sit on Form 7203 LINE 13, never in Part III.** 🛠️ **Item E on the prior-year form tells you in one look whether the election is on** |
 
 🛑 **Lines 4 and 6 are where a preparer who cannot find a figure will type it, and that is the error.**
 ⚠️ **If a number you expect is missing from the computed result, the fix is upstream on the K-1 input
