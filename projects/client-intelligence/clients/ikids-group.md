@@ -34,11 +34,14 @@
 - **Our engagement (services we provide):** Bookkeeping (**monthly**); **income tax (Form 1065 partnership → K-1s)**; **1099 preparation**; annual-report filing. Sales tax N/A; payroll N/A (pre-operational). The firm also does **hands-on AP / bill-pay** (pays vendors from the client's account). **Assigned bookkeeper: Lilian.** _(Double + Gmail, 2026-07-20)_
 - **Fiscal year-end:** _(pending)_
 - **Accounting platform:** QuickBooks Online (via Double). ✅ **The bank feed that dropped on
-  2026-07-20 appears to be BACK** — the ledger carries deposits dated **2026-08-10 → 2026-08-20**
-  whose descriptions are raw feed text (`CHIPS CREDIT VIA:`, `TRN:`), which is what a feed writes
-  and not what a person types _(read 2026-08-27)_. **Evidence, not confirmation** — nobody has
-  checked the connection itself, and the July 20 → August 10 window has **not** been proved
-  complete. See §4 and §6.
+  2026-07-20 appears to be BACK, and the "nothing has posted since" statement no longer holds.**
+  The ledger carries rows dated **2026-08-03** _(read 2026-08-25)_ and deposits dated **08-10 →
+  08-20** _(read 2026-08-27)_, and the later ones' descriptions are **raw feed text**
+  (`CHIPS CREDIT VIA:`, `TRN:`) — which is what a feed writes and not what a person types, so it
+  also answers the open question of whether those rows were hand-entered. ⚠️ **Evidence, not
+  confirmation, and it does NOT clear the month:** nobody has looked at the banking screen, and
+  **the 07-20 → 08-03 window has not been checked for a hole** — a gap there still reads exactly
+  like a quiet month. Confirming the feed is live stays **step 1 of the runbook**. See §4 and §6.
 
 ## 2. Contacts
 
@@ -380,7 +383,10 @@ the actual details.
   read off the memo: that receipt arrived **net of a stated sending-bank charge**, which is why it
   is not a round number — and the two wires were booked on **opposite conventions** (one grossed
   up, one net). ⓘ **Two side findings, neither chased:** the bank feed appears to be **back**
-  (§1), and Double's file library holds a file named `7004 2025 Ext.pdf` — a lead on the
+  (§1 — ⚠️ **a parallel session found the same thing on 2026-08-25 from different rows**, on branch
+  `claude/ikids-attraction-categorization-vw1j2s`; §1 now carries both reads, and the raw feed text
+  in this one settles that branch's open "feed or hand-entered?" question), and Double's file
+  library holds a file named `7004 2025 Ext.pdf` — a lead on the
   long-open extension question above, **not** proof it was filed. ⚠️ **Method note:** the Double
   connector returns only `Deposit` and `Expense` rows for this client
   (`get_transaction_types` confirms it), so **journal entries and the pre-2026 loan history are
