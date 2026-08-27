@@ -190,13 +190,14 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (49 so far — see the Clients index below)
+└── clients/               ← one file per client (50 so far — see the Clients index below)
 ```
 
 ## Clients
 
 | Client | File | Owner | Status |
 |---|---|---|---|
+| 4TUKAS, LLC | [`clients/4tukas.md`](./clients/4tukas.md) | Julia | **Prospect — first-year engagement letter drafted 2026-08-27.** FL property LLC, four Lithuanian non-resident members (25% each): 1065 + four K-1s, a 1040-NR and W-7 per member, itemized per name. Starts after the property purchase closes. ⛔ EIN 37-2243148 assigned, CP575B in hand — never file another SS-4. Open: §1446/8804-8805 withholding scope, tax-planning line, Manager's email |
 | Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | Active — TX sales-tax SOP written ([`atman-parts-tx-sales-tax.md`](../sops/atman-parts-tx-sales-tax.md)); open: who actually files the sales tax, `Sch C` vs `1120-S` (ask Julia), the franchise position |
 | Artur Tseretsian | [`clients/artur-tseretsian.md`](./clients/artur-tseretsian.md) | Lilian | In progress — 1040 Schedule C categorization (2023–2025) |
 | Denys Melnyk | [`clients/denys-melnyk.md`](./clients/denys-melnyk.md) | Lilian | In progress — 2025 1040, first year with us. **S-corp shareholder in three trucking entities**, with a large NOL carried forward from 2024. 🟠 **He answered the review on 2026-08-12 and the return was blocked on one thing — which now has a route:** he worked in only one of the three companies and holds **no K-1 and no W-2** for the income it paid him. ⏰ **2026-08-20 — Lilian reached his former partner by text and he UNDERTOOK to send all three K-1s to Julia's email ("not ready yet"). Promised, not arrived.** So it is a **wait with a chase date — 2026-09-15** — rather than the firm-side decision it had been. ⚠️ **That date is the EXTENDED 1120-S date and nobody has established those companies extended**; three K-1s were undertaken, not established to exist (§5). ⚠️ **Which company it was is itself unconfirmed** — and **the client SAYS that company has filed for bankruptcy** — ⚠️ Lilian does not treat that as reliable, so the public docket has to settle it; **if** true, the K-1 may never exist at all. ⚠️ **There is not a single tax document from ANY of the three.** The disposal question is answered (no sale, still a shareholder, K-1s still owed); the wife's Schedule C, the 1099s and residence are answered (Montana closed); the 1095-A blocker is back to a question. **Two Double notes** — his figures, and a briefing for Julia |
