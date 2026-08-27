@@ -75,7 +75,11 @@ for the pricing engine, the premium visual format, and the `docx.js` gotchas.
    Blank table ⇒ no rows, and the `/mo` default keeps every monthly proposal unchanged. When
    such an engagement deliberately quotes personal returns alongside the company's (e.g.
    non-resident members' 1040-NRs + ITINs with the 1065), the "personal tax preparation"
-   Not-Included default is dropped for that proposal — the quote defines the scope. A **Language**
+   Not-Included default is dropped for that proposal — the quote defines the scope.
+   ⚠️ **Routing (Julia, 2026-08-27, correcting a session that picked wrong): a TAX ENGAGEMENT
+   goes on the ENGAGEMENT-LETTER template** (its Additional-services schedule — field 14
+   below), **not this proposal format**; this fee-table mode stays for a fixed-fee quote
+   that wants the premium proposal layout. A **Language**
    selector offers **English** (10 pages) or **Bilingual (Russian + English)** — the
    bilingual version puts the **full Russian version first** (Atman-style), then the
    official **English** version (15 pages); the signature + binding T&C live in the

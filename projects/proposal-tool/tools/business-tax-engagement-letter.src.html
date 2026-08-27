@@ -31,7 +31,7 @@
   .group .ghint{ font-size:10.5px; line-height:1.45; color:var(--muted); margin:0 0 10px; }
   label.field{ display:block; margin-bottom:10px; }
   label.field .cap{ display:block; font-size:11px; color:var(--muted); margin-bottom:4px; font-weight:500; }
-  input, select{ width:100%; font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:8px 10px; }
+  input, select, textarea{ width:100%; font-family:var(--sans); font-size:13px; color:var(--ink); background:var(--paper); border:1px solid var(--hairline); border-radius:4px; padding:8px 10px; }
   input:focus, select:focus{ outline:2px solid var(--bronze-lt); border-color:var(--bronze); }
   input.missing{ border-color:#B4472F; background:#fbeee9; }
   .row2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -262,7 +262,7 @@
         + svcRows.map(r=>`<div class="fsr"><span>${esc(r.s)}</span><b>${isNaN(r.n)?"":money(r.n)}</b></div>`).join("")
         + `<div class="fsr total"><span>Total for this engagement</span><b>${est?`estimated at ${money(svcTotal)}`:money(svcTotal)}</b></div>`
         + `</div>`
-        + `<p class="fee">These fees are based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depend upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} ${feeInvoice}</p>`
+        + `<p class="fee">These fees are based upon the complexity of the work to be performed and our professional time, as well as out-of-pocket expenses, and depend upon the timely delivery, availability, quality, and completeness of the information you provide to us.${estNote} ${feeInvoice.replace(/^This fee is/, "These fees are")}</p>`
       : `<p class="fee">Our professional fee for the tax return preparation outlined above is <b>${feeBold}</b>. ${feeSentence}${estNote} ${feeInvoice}</p>`;
 
     $("letter").innerHTML = `
