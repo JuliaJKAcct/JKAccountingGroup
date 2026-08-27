@@ -32,7 +32,11 @@ flowchart TD
     Z1 -->|"✅ Yes · 🟡 Yes with an open question"| A
     A["① Gather · prior-year FILED return<br/>+ this year's and last year's QuickBooks"] --> B{"② Extension filed?<br/>(Form 7004)"}
     B -->|"No — and it is past 15 March"| B1["🛑 STOP. Tell Lilian.<br/>Penalties accrue per shareholder per month"]
-    B -->|"Yes"| C["③ BUILD THE MAP<br/>Reproduce LAST year's return<br/>from LAST year's QuickBooks"]
+    B -->|"Yes"| BA{"②A Was the company SOLD,<br/>or a shareholder changed?<br/>(§2A)"}
+    BA -->|"Yes — and the buyer is<br/>not a US tax resident"| BA1["🔴 S TERMINATION YEAR.<br/>TWO returns. Fix the period,<br/>item H and the Schedule L date<br/>BEFORE computing (§2A)"]
+    BA1 --> C
+    BA -->|"No"| C
+    C["③ BUILD THE MAP<br/>Reproduce LAST year's return<br/>from LAST year's QuickBooks"]
     C --> D{"Does your reconstruction<br/>match what was filed?"}
     D -->|"No"| C1["Find out why.<br/>The difference IS the firm's convention"]
     C1 --> C
@@ -293,6 +297,154 @@ if that is a weekend or holiday). **Form 7004** extends it **six months**, to **
   Confirm the current rate against the IRS instructions rather than quoting one from memory.
 
 ---
+
+## §2A · 🔴 GATE: **WAS THE COMPANY SOLD, OR DID A SHAREHOLDER CHANGE?** — the S termination year
+
+**Run this immediately after the extension gate and before any figure.** 🔑 **It decides how many
+returns exist, what period this one covers, which date the balance sheet carries, and how the year's
+result is split.** ⛔ **Every one of those is impossible to fix once the figures are keyed**, and a
+session that computes first will compute the wrong period.
+
+> 💡 **Written from the Gossip Miami 2025 return (Aug 2026), where this question stayed open for six
+> days while the figures were built twice.** ✅ **Nothing computed was wasted — because both periods were
+> carried side by side — but the SHAPE had to be rebuilt from scratch when the answer arrived.**
+> **This section is so the next one does not.**
+
+### ① The three questions that open it
+
+| Ask | Why |
+|---|---|
+| **Did anyone acquire shares this year who is NOT a US citizen or resident?** | 🔴 **An S corporation may only be owned by US individuals and certain trusts and estates.** The election dies **automatically** on the day an ineligible person acquires a share — §1362(d)(2). **Nobody files anything; it just ends** |
+| **Did the shareholders revoke the election?** | A different route to the same place — §1362(d)(1) |
+| **Did the company acquire a second class of stock, too many shareholders, or an ineligible entity shareholder?** | Same result, different trigger — §1361(b) |
+
+🛑 **THE FIRST ONE IS THE TRAP, BECAUSE NOBODY VOLUNTEERS IT.** A client says *"we sold the business"*
+and everyone starts computing. ⛔ **Ask who the buyer is and whether they are a US tax resident**, in
+those words. ⚠️ **It is not a rude question and it is not optional** — it is the difference between one
+return and two.
+
+> ⓘ **AN LLC THAT LOSES ITS S ELECTION DOES NOT BECOME "A NORMAL LLC AGAIN".** Electing S status
+> carries a **deemed election to be classified as a corporation** (Reg. §301.7701-3(c)(1)(v)(C)), and
+> **that second election survives the first.** 🔑 **So the buyer is left holding a C CORPORATION** —
+> one that pays its own tax — **not a disregarded single-member LLC.** ⚠️ **Tell whoever is advising the
+> buyer's side, if anyone is.**
+
+### ② If the election terminated: there are TWO returns, and usually only ONE is yours
+
+| | **The S short year** | **The C short year** |
+|---|---|---|
+| Period | 1 January → **the day BEFORE** the terminating event | the day of the event → the end of the calendar year |
+| Form | **Form 1120-S** — *this* return | **Form 1120** |
+| Taxed | passes through to the shareholders on K-1s | at the entity, 21% |
+| Whose job | ours, for our client | 🔴 **whoever controls the company now** — ask, never assume |
+| EIN | 🛑 **the same on both** | 🛑 **the same on both** |
+
+🛑 **SAY THIS OUT LOUD TO WHOEVER SIGNS.** Our return carries **item H(5)**, which announces the
+termination. **From the moment it is filed the IRS expects a Form 1120 for the rest of the year under
+that EIN.** ⛔ **We are not engaged for it and we should not quietly prepare it** — but **the new owner
+may not know it exists**, and unfiled, the notices reach a company our client used to own.
+**Raise it; let the partner decide what, if anything, is said.**
+
+### ③ 🔑 HOW THE YEAR IS SPLIT — and the rule most people get backwards
+
+**Something has to decide which income and expenses belong to each short period. There are two methods
+and they give completely different answers.**
+
+| | Method | What it does |
+|---|---|---|
+| **A · Pro rata, per DAY** — §1362(e)(2) | the **general default** | **Ignores when things happened.** Takes the whole year's result and gives each period its share of the *days* |
+| **B · Normal accounting rules — "closing the books"** — §1362(e)(3) | by **election** | **Cuts the books on the date** and reports what each period actually did |
+
+🛑 **AND THE THIRD THING, WHICH IS THE ONE THAT ACTUALLY GOVERNS A SALE: §1362(e)(6)(D).**
+**Where 50% or more of the stock is sold or exchanged during the S termination year, the pro-rata
+method is NOT AVAILABLE and closing the books is compulsory** *(Reg. §1.1362-3(b)(3))*. ✅ **So on an
+ordinary sale of the business there is nothing to elect, nothing to sign, and no consent to obtain from
+a buyer nobody has spoken to.**
+
+> 🔑 **WHY THIS MATTERS SO MUCH, IN ONE LINE:** under method A the return reports a **per-day fraction of
+> a full year**, which is not a real result of anything. **On the pilot the two methods gave 36,977 and
+> 51,452 for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
+>
+> 🛑 **AND DO NOT REASON YOUR WAY TO THE RIGHT ANSWER BY THE WRONG ROAD.** A session on the pilot argued
+> *"nobody made a §1362(e)(3) election, so the books cannot be closed"* — and that argument **fails**,
+> because **(e)(6)(D) is a second door to the same method** and it does not need an election at all.
+> ⚠️ **The (e)(3) election is also made by a statement attached to the very return you are preparing**,
+> so nothing has been foregone while you are still preparing it.
+
+### ④ What changes on the return itself — the checklist
+
+| | |
+|---|---|
+| **The tax-year boxes on page 1** | 🛑 **THE SINGLE MOST IMPORTANT ENTRY.** *"For calendar year 2025 or tax year beginning ___, ending ___"* — **a short period is stated HERE and nowhere else.** ⛔ **Leave it blank and the return claims to be a full calendar year**, contradicting every figure on it. **It lives on the software's return-header screen, not on the form face** |
+| **Item H(1) "Final return"** | ⛔ **DO NOT CHECK** unless the company **ceases to exist** — the instruction says so in those words: *"if this is the corporation's final return and **it will no longer exist**"*. **A company that was sold still exists** |
+| **Item H(5) "S election termination"** | ✅ **CHECK IT.** This is the box that describes the return |
+| **"Final K-1"** | ✅ **Check it for a shareholder who disposed of her ENTIRE interest.** ⚠️ **The instructions mention this box only in the H(1) bullet, so there is no instruction squarely on a sale** — you are checking it on the shareholder's facts. ⛔ **It does not oblige you to check H(1)** |
+| **Item I, number of shareholders** | **Count who held shares during *this* return's tax year.** 🔑 **A buyer who acquired on the day AFTER the S short year ended was never a shareholder during it and gets NO K-1 from us** |
+| **The allocation between shareholders** | ✅ **Usually a plain pro-rata split with no election.** 🔑 **The §1362(e) cut does not split a year between PEOPLE — it ENDS the year**, so each shareholder held their percentage for every day of it. ⛔ **A §1377(a)(2) election is for a shareholder exiting *within* a tax year and does not apply** |
+| **Schedule L** | see ⑤ |
+| **The due date** | see ⑥ |
+
+### ⑤ 🔵 THE SCHEDULE L DATE — the instruction reads one way and means another
+
+**The instruction, verbatim:**
+
+> *"If the S election terminated during the tax year and the corporation reverted to a C corporation,
+> the year-end balance sheet should generally agree with the books and records at the end of the
+> **C short year.** However, if the corporation **elected under section 1362(e)(3)** to have items
+> assigned to each short year under normal tax accounting rules, the year-end balance sheet should
+> agree with the books and records at the end of the **S short year**."*
+
+🔑 **The rule follows the METHOD, and here is why the default looks strange until you see it.** Under
+the **pro-rata** method **the books are never closed on the cut date at all** — the return's figures are
+a per-day slice of the whole year, so **no balance sheet exists at that date.** The only real one is at
+the end of the C short year. ✅ **Under the closing-of-the-books method a real balance sheet DOES exist
+on the cut date**, and that is the one the instruction then asks for.
+
+🛑 **So on a SALE of 50% or more — where (e)(6)(D) makes closing the books compulsory — the balance
+sheet goes on the CUT DATE, even though no §1362(e)(3) election was made.** The instruction names the
+method by the election that usually produces it; here the same method arrives by a different door.
+⚠️ **The alternative reading prints a balance sheet dated months after the return's own income
+statement ends, for a company that by then belonged to somebody else.**
+
+🛠️ **Attach a one-line explanatory footnote either way** — *"S termination year under §1362(d)(2);
+items assigned to each short year under §1362(e)(6)(D); balance sheet at the end of the S short
+year"* — **so the reader is not left wondering.** ⛔ **Do NOT attach a §1362(e)(3) election statement
+for a rule that is not elective.**
+
+### ⑥ 🔴 THE DUE DATE — it is NOT the ordinary 1120-S date, and it depends on a return you are not filing
+
+**The instruction, verbatim:** *"If the S corporation election was terminated … file Form 1120-S for the
+S corporation's short year **by the due date (including extensions) of the C corporation's short year
+return**."*
+
+| Step | |
+|---|---|
+| Find the **C short year's** end | usually 31 December |
+| Form 1120 is due | **the 15th day of the 4th month** after it — 15 April for a December end |
+| With a Form 7004 | **+6 months** — ✅ *Instructions for Form 7004 (Rev. 12-2025): "The automatic extension period for time to file is generally 6 months", the only exceptions being certain Forms 1041 and **June-30** C corporations. **The old five-month rule for December year-ends is gone*** |
+| 🔴 **But only if somebody actually extended it** | **and that is normally the BUYER's side, not ours** |
+
+🛑 **TWO TRAPS, AND THE PILOT WALKED INTO BOTH.**
+**①** **The Form 7004 the firm filed before anyone knew about the cut extends a return that does not
+exist** — an ordinary calendar-year 1120-S. ⛔ **Do not assume it covers the short period.**
+**②** **The branch with MORE time is the one where our extension may not work.** 🔑 **So work to the
+EARLIEST candidate date, not the most favourable one**, and say so in writing to whoever signs.
+⚠️ **And check whether the original date has already passed** — the Form 1120-S late-filing penalty runs
+**per shareholder per month**, and on a small company it is not small.
+
+### ⑦ ⛔ WHAT NOT TO DO
+
+- ⛔ **Do not check "Final return" because it is the last 1120-S the company will file.** That is not what
+  the box asks.
+- ⛔ **Do not put the post-sale receipts into the S short year because "the services were pre-sale".**
+  The reasoning is sound and it is **not available**: a tax year that has ended cannot take in a later
+  receipt, and on the cash method the receipt falls when the money arrived. ⚠️ **The real-world problem
+  it identifies is genuine — money for the sellers' work landing, after closing, in accounts the buyer
+  never controlled, and now legally the C corporation's income — but that is a matter between the
+  parties, not something a return can fix. Raise it; do not solve it on the form.**
+- ⛔ **Do not compute anything before the answer to ① is known.** ✅ **If it cannot be got quickly, carry
+  BOTH periods side by side in the working paper** — that is what saved the pilot. **Every figure of the
+  short period stood unchanged when the answer came; only the shape had to be rebuilt.**
 
 ## §3 · 🔑 BUILD THE MAP FROM THE PRIOR YEAR — before you fill in anything
 
@@ -1862,7 +2014,18 @@ make.)_
 
 ---
 
-### 8D · ⚠️ A TERMINATION YEAR — why the balance sheet may sit at a LATER date than the income
+### 8D · ⚠️ A TERMINATION YEAR — which date the balance sheet carries, and whether the books are even ours
+
+> 🔴 **READ §2A FIRST.** It is the gate that decides the whole shape of a terminated year — two returns,
+> the tax-year boxes, item H, the due date, and **which date this balance sheet carries.** ✅ **§2A ⑤
+> answers the date question; this section is what remains once it is answered: whether the books for
+> that date are even ours.**
+>
+> 🛑 **AND ONE CORRECTION TO WHAT THIS SECTION USED TO SAY.** It read *"show ONE balance sheet, at the end
+> of the whole year"* and *"expect a page 1 that stops in October beside a Schedule L dated 31
+> December."* ⛔ **That is the PRO-RATA case only.** **On a sale of 50% or more of the stock, closing the
+> books is compulsory and the balance sheet goes on the CUT DATE** — so page 1 and Schedule L end on the
+> **same** day, which is the intuitive result. **§2A ⑤ carries the reasoning.**
 
 **On a return whose year was cut short because the S election ended, the income statement and the
 balance sheet run to different dates, and it feels wrong until you see why.**
@@ -1872,8 +2035,8 @@ carried on — same EIN, same premises, same bank account — as a **C corporati
 calendar year. **So the company's YEAR is still January to December.** What splits in two is the tax
 status, not the calendar.
 
-**The IRS's answer: split the INCOME into two pieces, one per status — but show ONE balance sheet, at
-the end of the whole year.** The instruction, quoted:
+**The IRS's answer: split the INCOME into two pieces, one per status — and put the balance sheet on
+whichever date the SPLITTING METHOD actually closed the books.** The instruction, quoted:
 
 > *"If the S election terminated during the tax year and the corporation reverted to a C corporation,
 > **the year-end balance sheet should generally agree with the books and records at the end of the C
@@ -1886,13 +2049,21 @@ date.** ⛔ **This 1120-S covers the S short period only.** Whether the firm is 
 return is a separate question that has to be asked, not assumed.
 
 💡 **The way to hold it in your head:** one shop that changes its tax STATUS mid-year. **The profit
-splits into two pieces — one taxed to the owners, one taxed to the company itself.** ⚠️ **But "what
-was in the shop on 31 December?" has one answer, on one date.** The result splits; the inventory does
-not. ⓘ **Note it is the STATUS that splits, not necessarily the ownership** — an election can
-terminate with no change of owner at all.
+splits into two pieces — one taxed to the owners, one taxed to the company itself.** ⓘ **Note it is the
+STATUS that splits, not necessarily the ownership** — an election can terminate with no change of owner
+at all.
 
-⚠️ **So expect a page 1 that stops in October beside a Schedule L dated 31 December. They do not tie
-to each other, and they are not meant to.**
+🔑 **Then ask ONE question, and the balance-sheet date follows from it: were the books actually CLOSED
+on the cut date?**
+
+| The split method | Books closed on the cut date? | Schedule L carries |
+|---|---|---|
+| **Pro rata, per day** — §1362(e)(2) | ⛔ **No.** The figures are a per-day slice of the whole year, so no balance sheet exists at the cut date | **the end of the C short year** |
+| **Closing the books** — by §1362(e)(3) election **or** compelled by §1362(e)(6)(D) on a 50%+ stock sale | ✅ **Yes** | 🔵 **the end of the S short year — the CUT DATE** |
+
+⚠️ **So on a pro-rata year, expect a page 1 that stops in October beside a Schedule L dated 31 December:
+they do not tie to each other and are not meant to.** ✅ **On a SALE — the common case — they end on the
+same day and the return reads normally.**
 
 #### 🔴 AND ASK THE QUESTION THE INSTRUCTION DOES NOT: are the books for that later date even OURS?
 
@@ -1933,7 +2104,17 @@ the books with no election at all**; an (e)(3) election is made **by a statement
 return you are preparing**, so nothing has been foregone yet; and if there is **neither** an election
 **nor** a mandate, the **pro-rata default** governs — which would make the short period's
 *allocation* wrong, not merely its balance-sheet date. **Read §1362(e), §1362(e)(6)(D) and
-Reg. §1.1362-3 before concluding anything**, and present the instruction's default meanwhile.
+Reg. §1.1362-3 before concluding anything.**
+
+> ✅ **AND ON THE PILOT THAT READING WAS DONE, so the next session starts from the answer rather than the
+> warning: §1362(e)(6)(D) DOES force the closing of the books on a 50%-or-more stock sale**, which is why
+> [§2A ③](#3--how-the-year-is-split--and-the-rule-most-people-get-backwards) states it as the governing
+> rule for a sale. ⛔ **The old instruction here to *"present the instruction's default meanwhile"* is
+> WITHDRAWN** — on a sale, presenting the C-short-year date is presenting the wrong date.
+> 🟠 **What is still outstanding is the primary-source read of the REGULATION itself, which the firm's
+> environment blocks** *(law.cornell.edu, the eCFR, govinfo and govregs are all refused by the egress
+> proxy, and irs.gov does not host the CFR — see the Gossip Miami working paper §9)*. 🛠️ **Read it once,
+> on an unblocked machine, and it is settled for every future return.**
 
 ### 8C · 🔑 BUILD SCHEDULE L FROM THE LEDGER'S ACCOUNT BALANCES — and NAME the lines that are zero
 
@@ -2997,6 +3178,91 @@ distribution, disposes of stock, or receives a loan repayment from the company.
 > because it decides whether the loss you just allocated is actually usable. **Prepare it here;
 > it travels with the owner's personal return.** If the firm does not prepare that 1040, the
 > figures still have to reach whoever does.
+
+### 12B · 🔑 WHEN YOU CANNOT GET A SHAREHOLDER'S PRIOR FORM 7203 — reconstruct it, and PROVE the method first
+
+**This comes up constantly and it is usually treated as a dead end.** The opening basis on Form 7203 is
+last year's line 15, which lives on **that person's 1040** — a return the firm may not have prepared and
+that shareholder may be slow, unwilling or unable to produce. ✅ **It can be reconstructed from company
+records. The technique below is what makes the result defensible rather than a guess.**
+
+> 💡 **From Gossip Miami, Aug 2026: two shareholders bought 50% each on the same day under one agreement
+> for the same $82,500. One shareholder's Form 7203 was in hand; the other's was not.**
+
+### ⛔ First — the shortcut that looks obvious and is wrong
+
+**"They bought the same thing, on the same day, for the same price, so copy the one we have."**
+🛑 **Test it before you rely on it, and on the pilot it failed immediately:** the known shareholder's
+closing basis was **4,109 ABOVE her cost** in a year the company made a **loss**. **Something moved her
+basis that the purchase price does not explain** — and there is no reason to think an unexplained item
+on one person's personal return applies to the other. ⛔ **Copying the number copies the unknown.**
+
+### ✅ The method — reconstruct, then test it on the person whose answer you already know
+
+**Step 1 — write the §1367 roll-forward. It is the same five lines for everybody:**
+
+```
+        cost of the stock when acquired              (§1012)
+      + later contributions
+      + her share of income
+      − her share of losses and deductions
+      − her share of nondeductible expenses
+      − distributions received
+      = stock basis at the end of the year
+```
+
+**Step 2 — fill it in for the shareholder whose real answer you HAVE, using company records only.**
+
+**Step 3 — compare your prediction with her actual Form 7203 line 15.**
+
+| Outcome | What to do |
+|---|---|
+| ✅ **They match** | **The method is proved on a live case.** Run the identical arithmetic for the other shareholder; the result is measured, not assumed |
+| 🔴 **They do not match** | ⛔ **STOP. The difference is exactly what company records cannot see.** Explain it before extending anything |
+
+🔑 **This is the whole idea, and it is what turns "we think it is about X" into something you can put your
+name to.** ⚠️ **Do step 3 BEFORE promising anyone an answer.**
+
+### 📋 What company records CAN supply
+
+| | Where |
+|---|---|
+| the cost of the stock | the purchase agreement — ✅ **and confirm it with the client; an agreement says what was DUE, not what was PAID** |
+| ordinary income or loss, per shareholder | the prior year's filed **K-1, box 1** |
+| nondeductible expenses, per shareholder | **K-1 box 16C** |
+| distributions, per shareholder | **K-1 box 16D** |
+| loans from that shareholder | **K-1 item I** — ⚠️ **a "Yes" to Schedule B question 11 exempts Schedules L and M-1, never the K-1s** |
+| contributions | the ledger's owner-contribution account — 🟠 **splitting a POOLED account by person is the weak point.** Ask; never assume half each |
+
+### 🔴 The five things NO company record can supply
+
+1. 🛑 **Whether a purchase-money NOTE gives basis at all — the biggest one, and the one to ask about
+   first.** Cost basis under §1012 includes an obligation the buyer is **personally liable** on; the
+   cheques do not have to have cleared. ⛔ **But if the note is effectively NON-RECOURSE — the seller's
+   only remedy is to take the property back — basis is limited to what has actually been PAID.**
+   🔑 **The tell is in the agreement:** a clause letting the seller **revert the shares** for
+   non-payment, or a seller who **stays on the company's paperwork until paid**, is describing security.
+   ⚠️ **On the pilot this single point moved an opening basis by tens of thousands.**
+2. Anything contributed personally that never went through the company's books.
+3. A loan made to the company from her own pocket that the bookkeeper put in a **pooled** account.
+4. **Losses suspended under §1366(d)** in an earlier year because basis ran out.
+5. A **Reg. §1.1367-1(g) election** on her 1040, which changes the ORDER the reductions happen in.
+
+### 🔑 AND ASK HOW MUCH OF IT THE RETURN ACTUALLY NEEDS — usually far less
+
+🛑 **The only basis question the CORPORATE return forces is: did that shareholder's distributions exceed
+her stock basis?** *(If they did, the excess is a capital gain — on **her** 1040, never on the 1120-S.)*
+✅ **So if the distribution is nowhere near any plausible basis, the reconstruction is a CHECK, not a
+dependency, and the 1120-S is not blocked by it.**
+
+🛠️ **AND THERE IS ALMOST ALWAYS A LIGHTER ASK THAN "SEND US YOUR FORM 7203".** People hand over ordinary
+facts far more readily than tax forms. **Two plain questions usually settle it:**
+
+> *"If you had stopped paying the instalments, could the seller have come after you for the balance —
+> or only taken your share of the business back?"* → **the recourse test, in language anyone can answer**
+> *"How many instalments had you paid by \<date\>?"* → **the number the non-recourse reading needs**
+
+⛔ **Do not open by asking for the form.** ✅ **Ask for the facts; compute the form yourself.**
 
 ### 12A · 🛠️ THE THREE-COLUMN `Stock and Loan Basis` GRID — and the two columns everyone merges
 
