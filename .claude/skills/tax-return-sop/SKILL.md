@@ -514,7 +514,7 @@ one is the return as the software computes it, the other is a model nobody has t
 never be able to file the modelled column by mistake.**
 
 
-**1e · 🔴 ON ANY RETURN WITH SHAREHOLDERS OR PARTNERS, THE DELIVERY CARRIES THE BASIS-GRID BLOCK. Always, unprompted.**
+**1e · 🔴 ON ANY S-CORPORATION RETURN, THE DELIVERY CARRIES THE BASIS-GRID BLOCK. Always, unprompted.**
 
 🔑 **Delivery rule 1b already forces a distributions-vs-basis block. This one is different and it is
 about ENTRY:** the software collects each owner's basis on **one grid with three columns**, and a
@@ -523,7 +523,10 @@ preparer who has not met it before cannot fill it in from the tax rules alone. _
 me digas qué se saca del 7203 del año anterior de la declaración individual"** — and that the whole
 grid explanation must ride in **every** future delivery.)_
 
-**The block is not optional and it always contains all five parts:**
+**The block is not optional. Parts ①②③ always appear; ④ and ⑤ are conditional — and 🛑 when the
+condition is absent the block SAYS SO in one line** — *"no shareholder has lent the company anything,
+so the loan columns are nil and the loan-type box does not arise"* — ⛔ **rather than being dropped
+silently, which reads as an omission.**
 
 **① WHAT THE THREE COLUMNS ARE — because two of them look like the same thing.**
 
@@ -535,27 +538,41 @@ grid explanation must ride in **every** future delivery.)_
 
 🛑 **Say WHY there are two loan columns, every time:** they start equal and **come apart** when a loss
 runs past stock basis and eats debt basis without changing what is owed — **and a later repayment
-across that gap is taxable income to the owner.** ⛔ **Never let them be copied into each other.**
+across that gap is taxable income to the owner — in PART, pro rata**, not the whole gap *(Form 7203
+lines 25–26; only a FULL repayment makes the gain equal the gap)*. ⛔ **Never let them be copied into each other.**
 
 **② WHERE EACH BEGINNING FIGURE COMES FROM — and the sentence that has to be said out loud:**
 
 > 🔴 **THE STOCK BASIS AT THE BEGINNING OF THE YEAR COMES FROM LAST YEAR'S FORM 7203, LINE 15 — AND
 > THAT FORM IS FILED WITH THE OWNER'S *INDIVIDUAL* RETURN, NOT WITH THE COMPANY'S.**
 > ⛔ **It is not on the company's prior return, in any form.** A preparer who goes looking for it on
-> last year's entity return will not find it, and may key a zero instead — **which silently overstates
-> every loss the owner can deduct and can turn a tax-free distribution into a taxable one.**
-> 🛠️ **If the firm does not hold that Form 7203, say so as a RED item and name who has to produce it:
-> the owner, or whoever prepared their 1040.** ⛔ **Do not reconstruct it from the company's books and
-> present the result as the figure.**
+> last year's entity return will not find it, and may key a zero instead — ⛔ **which silently CAPS
+> every loss the owner can deduct at far LESS than they are entitled to, and can turn a tax-free
+> distribution into a taxable capital gain that is not real.** *(The cap is stock basis **plus** debt
+> basis — §1366(d) — so a shareholder with loan basis is not capped at the stock figure alone.)*
+> 🛠️ **If the firm does not hold that Form 7203 — and 🛑 THAT IS THE ORDINARY CASE, NOT AN EDGE
+> ONE.** The form is only *required* in four situations *(a loss claimed, a non-dividend distribution, a
+> disposition, a loan repayment)*; otherwise the instructions merely say it *"may be beneficial… to
+> complete and **retain**"*. **A profitable S corp that made no distributions has shareholders with
+> legitimately no 7203 on file, every year.**
+> ✅ **So the answer is not "produce a form that never had to exist" — it is:** **①** ask whether one
+> exists *(the owner, or whoever prepared their 1040)*; **②** if not, the opening basis has to be
+> **RECONSTRUCTED**, and that is **separate work with its own time, scoped rather than absorbed
+> silently** — the same rule delivery **1b step 2** already states, and 1120-S SOP §10B and §12 both
+> sanction.
+> ⛔ **What is banned is the shortcut, not the reconstruction: never take a capital-account balance off
+> the company's books, call it the opening basis, and present it as if it had been read off a filed
+> form.** ✅ **A reconstruction is labelled as one, and says what it was built from.**
 
 **And the rest of the sources, each named to the exact line:**
 
-| Beginning figure | Comes from | 
+| Beginning figure | Comes from |
 |---|---|
 | **Stock Basis** line 1 | 🔒 **prior-year Form 7203 line 15** — the owner's individual return |
-| **Loan Balance** line 1 | ✅ **prior-year Schedule K-1, item I** *(beginning of year)* — this one IS on the company's return, per shareholder |
-| **Loan Basis** line 1 | 🔒 **prior-year Form 7203 Part II line 31** — the individual return again |
-| Carryover losses / carryover nondeductibles | 🔒 **prior-year Form 7203** — ⛔ **never assumed zero; check whether the prior year had losses** |
+| **Loan Balance** line 1 | ✅ **prior-year Schedule K-1, item I — the *END OF YEAR* box.** ⛔ **Not the beginning one** — this year's opening IS last year's close. ✅ **This one is on the COMPANY's return**, per shareholder |
+| **Loan Basis** line 1 | 🔒 **prior-year Form 7203 Part II line 31** *(debt basis at END of year)* — the individual return again |
+| **Carryover LOSSES** | 🔒 **prior-year Form 7203 Part III, column (e)** — ⛔ **never assumed zero; check whether the prior year had losses** |
+| **Carryover NONDEDUCTIBLES** | 🛑 **usually genuinely ZERO, and that is the law, not an assumption.** *"Nondeductible expenses in excess of stock and debt basis **don't carry forward** (unless an election is made under Regulations section 1.1367-1(g))."* ⚠️ **With a (g) election in effect they DO carry — and they live on Form 7203 LINE 13, never in Part III.** Item E on the form says whether the election is in effect |
 
 **③ WHAT GOES IN THE REST OF THE GRID, LINE BY LINE**, with the two lines that should usually stay
 **empty** called out — the ones fed from the K-1 input screen, where a preparer who cannot find a
@@ -568,8 +585,21 @@ future repayment gain)*, and that it is asked, not inferred.
 per-owner split does not exist — ⛔ **and that is the SAME question as K-1 item I, asked once, not
 twice.**
 
+🔗 **The worked version, with the screens and the line-by-line detail, is 1120-S SOP §12A — build the
+block from THERE, not from this summary.**
+
 ⚠️ **Mark the software-specific parts as such** (delivery rules 8 and 8b): the grid's layout and its
-line numbers are the vendor's; **the three concepts and their sources are not.**
+line numbers are the vendor's; **the three concepts and their sources are not.** ⚠️ **And carry §12A's
+open hedge rather than dropping it: the column→Form 7203 mapping is inferred from the screen's labels
+and has not been confirmed on a printed form.**
+🛑 **ON A PARTNERSHIP RETURN, ADAPT IT — DO NOT COPY IT**, exactly as rule 1b says of its own block.
+**There is no Form 7203**, so there is no line 15 or line 31 to read; a partner's outside basis
+**includes a share of partnership LIABILITIES under §752** — including third-party debt the partner
+never lent — which has no `Loan Basis` analogue at all. ✅ **What travels is the idea: say where each
+opening figure comes from, and name what the firm does not hold.** ⛔ **Parts ①②④⑤ as written do not.**
+*(And on a **Form 1120** no shareholder basis is tracked on the return at all — the block does not
+arise.)*
+
 🛑 **And warn that the grid's line numbers are NOT the basis form's line numbers** wherever that is
 true — on the pilot software they collide on the line that carries **distributions**, which is the one
 line that can turn a basis shortfall into reportable income.

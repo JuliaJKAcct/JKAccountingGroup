@@ -3050,27 +3050,65 @@ deduction** (§12, and the §1368(b) rule in §10B). 🔑 **Read the grid's labe
 
 #### Where the `Beginning balance` of each column comes from
 
-#### 🔴 SAY THIS OUT LOUD EVERY TIME, BEFORE ANYTHING ELSE IN THIS SECTION
+🔴 **SAY THIS ONE OUT LOUD EVERY TIME.**
 
 **THE STOCK BASIS AT THE BEGINNING OF THE YEAR COMES FROM LAST YEAR'S FORM 7203, LINE 15 — AND THAT
 FORM IS FILED WITH THE OWNER'S *INDIVIDUAL* RETURN, NOT WITH THE COMPANY'S.**
 
 🔑 **Line 15 is the last line of Part I: *"Stock basis at the end of the corporation's tax year."*
-Last year's ending IS this year's beginning.** ⛔ **There is no other source for it.**
+Last year's ending IS this year's beginning.** ⛔ **There is no other source for it ON THE COMPANY'S
+RETURN.** ⓘ *(The duty is the shareholder's — the instructions say **"you are responsible for keeping
+the information needed to figure the basis of your stock"** — so their own retained schedule, or the
+pre-2021 three-part K-1 basis worksheet, is a legitimate source if they kept one.)*
 
 ⚠️ **Why this is the single most important sentence in §12A:** a preparer looking for it on the
 company's prior return **will not find it**, because the company's return does not contain any
 shareholder's basis. **What they do next is the damage: they key a ZERO** — and a zero opening stock
 basis **caps the losses the owner may deduct at far less than they are entitled to, and can turn a
-tax-free distribution into a reported capital gain that is not real.**
+tax-free distribution into a reported capital gain that is not real.** ⚠️ **The cap is stock basis
+PLUS debt basis (§1366(d))**, so a shareholder who has also lent the company money is not capped at the
+stock figure alone.
 
-🛠️ **If the firm does not hold that Form 7203:** it is a 🔴 **RED item in the delivery**, and it is
-named as one — **the owner, or whoever prepared their 1040, has to produce it.** ⛔ **Do not
-reconstruct it from the company's books and present the result as the figure.** *(You may reconstruct
-it as an ESTIMATE, clearly labelled, to size the exposure — never to file.)*
+🛑 **AND NOT HOLDING IT IS THE ORDINARY CASE, NOT AN EDGE CASE.** Form 7203 is **required** in only
+four situations — *a loss claimed, a non-dividend distribution, a disposition, a loan repayment* — and
+for every other year the instructions merely say it *"may be beneficial for shareholders to complete
+and **retain**"*. ✅ **A profitable S corp that made no distributions has shareholders with legitimately
+no 7203 on file.** ⛔ **So "produce the form" is not always an answerable request.**
 
-ⓘ **First year of the S election and genuinely no prior 7203?** Then build it from what the
-shareholder paid for the stock plus contributions — **and write down that you did, and from what.**
+🛠️ **What to do, in order:**
+1. **Ask whether one exists** — the owner, or whoever prepared their 1040. **If it does, it governs.**
+2. **If it does not, the opening basis is RECONSTRUCTED** — and that is **separate work with its own
+   time, scoped rather than absorbed silently** *(§10B step 2, §12's line-by-line table and the
+   skill's delivery rule 1b all already say so)*. **Where it is material and unfunded, it is a 🔴 RED item
+   in the delivery, named as one.**
+3. ⛔ **What is banned is the SHORTCUT, not the reconstruction: never take a capital-account balance
+   off the company's books, call it the opening basis, and present it as if it had been read off a
+   filed form.** ✅ **A reconstruction is LABELLED as one and says what it was built from.**
+
+#### 🛠️ Where a reconstruction STARTS — and the trigger is not the one people assume
+
+⛔ **It is not "the first year of the S election".** The instruction on line 1 reads: *"**Unless this is
+your initial year owning stock** in the S corporation, this amount should be the same as your ending
+stock basis from the prior tax year."*
+🔑 **"Initial year owning stock" ≠ "first year of the election."** A **C corporation that elects S**
+has shareholders who have held their stock for years — their basis carries over. And someone who
+**buys into an existing S corp** has an initial year in the middle of that company's life.
+
+**Where the starting figure comes from depends on HOW THE STOCK WAS ACQUIRED — the five boxes of
+Item D on the form:**
+
+| Item D box | Where the basis starts |
+|---|---|
+| **Purchased** | what they paid for it |
+| **Inherited** | 🔴 **fair market value at the date of death** (§1014) — ⛔ **not** what the deceased paid |
+| **Gift** | 🔴 **the donor's basis** carries over (§1015) |
+| **Original shareholder** *(a §351 contribution at formation)* | carryover basis of the property put in, **less liabilities assumed** (§358, §357(c)) |
+| **Other** — e.g. stock received as compensation | its **FMV at the time it was included in income** |
+
+**Then add later capital contributions and subtract prior non-dividend distributions.**
+⚠️ **"What the shareholder paid" covers PURCHASE alone** — on an inherited interest that is not a
+rounding error, it is a different number entirely. ✅ **Write down which box applied and what you built
+the figure from.**
 
 🛑 **AND THE TRAP UNDERNEATH IT: the COMPANY'S prior return contains no BASIS figure of any kind.**
 ⚠️ **But it is not empty-handed — it holds the loan BALANCES:**
@@ -3079,7 +3117,7 @@ shareholder paid for the stock plus contributions — **and write down that you 
 |---|---|---|
 | 🔑 **Each shareholder's prior-year K-1, item I** | ✅ **that shareholder's loan balance at the beginning and end of the year — PER SHAREHOLDER** | ✅ **The firm usually holds these, and it is a record the preparer did not create** |
 | The prior-year **Schedule L line 19** | the same money, ⛔ **POOLED across all shareholders** | corroboration only — ✅ **except a FILED, REPORTED zero, which is near-conclusive** *(the instruction says the two reconcile "generally")* *(item I cannot be negative, and loans **to** shareholders sit on **line 7**, a different line, so line 19 nets nothing)*. 🔴 **Read way 3 below before treating a blank as a reported zero** |
-| 🔒 **Each shareholder's prior-year Form 7203** *(on THEIR 1040)* | 🔴 **Part I line 15** → **stock basis line 1 — the sentence above**; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis**; ✅ **Part III carryovers** → grid lines 7 and 8 | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
+| 🔒 **Each shareholder's prior-year Form 7203** *(on THEIR 1040)* | 🔴 **Part I line 15** → **stock basis line 1 — the sentence above**; ✅ **Part II line 20** → loan balance; ✅ **Part II line 31** → **debt basis**; ✅ **Part III column (e)** → grid line 7 *(carryover LOSSES)*. 🛑 **Grid line 8 is different: nondeductible expenses in excess of basis DO NOT carry forward** unless a **Reg. §1.1367-1(g) election** is in effect *(Item E on the form says whether it is)* — **and with one they sit on LINE 13, never in Part III** | 🔑 **The ONLY source of the basis figures.** ⛔ **It is on the SHAREHOLDER'S PERSONAL return, which a company engagement does not open** — **request** it, or ask their own preparer. **Never pull it** |
 | The company's ledger | whether a shareholder-loan account existed at all on day one | 🛠️ a screen — see below |
 
 #### ⚠️ THE LEDGER CHECK IS A SCREEN, NOT AN ANSWER — four ways it lies
@@ -3274,7 +3312,7 @@ K-1 input, line 8a stayed blank, and ending basis was overstated in the year bef
 
 | Line | What it is | Where it comes from |
 |---|---|---|
-| **1** | Stock basis at the **beginning** of the corporation's tax year | 🔒 **line 15 of LAST year's Form 7203**, copied. If there is no prior 7203, build it from the capital account less prior losses and non-deductibles, and say in the file that it was derived |
+| **1** | Stock basis at the **beginning** of the corporation's tax year | 🔒 **line 15 of LAST year's Form 7203** *(the SHAREHOLDER'S individual return)*, copied. 🛑 **Where no prior 7203 exists — which is the ordinary case, not an edge one — see §12A: it is RECONSTRUCTED, as scoped work, and labelled as a reconstruction.** ⛔ **A capital-account balance is not the opening basis and must never be presented as one** |
 | **2** | Basis from capital contributions / additional stock acquired | 📖 the **gross credits** in that shareholder's capital account (§5C-iii) — 🔵 **or the NET figure under the firm's netting policy (all five §5C-v gates), ➕ any stock acquired during the year**, in which case line 6 is zero and the two must move together. 🛑 **The instructions exclude loans** — *"Don't include any loans to the S corporation"* — so gross credits are a starting point, not the answer |
 | **3a–3m** | Income items that increase basis | ⚠️ **A LOSS DOES NOT GO HERE.** Line 3a says *"enter losses in Part III"*. 3k is tax-exempt income |
 | **4** | Add lines 3a through 3m | ƒ |
