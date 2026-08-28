@@ -405,14 +405,15 @@ the actual details.
   BillPay), and a Restaurant365↔QuickBooks integration, tied to the venue's staffing ramp (~35–70
   at opening). Julia to prepare a written proposal/estimate; nothing here is part of the current
   engagement in §4 until it is signed.
-- **The supplier credit application is now COMPLETE except for one field — and Julia has answered
-  the two questions that were open.** ✅ The three **trade references** are in _(2026-08-27)_. ✅ **No
-  personal guaranty** — Julia's decision, 2026-08-27, so page 7 stays **entirely blank** and the
-  packet goes without it; do not fill it in later on anyone's behalf. ✅ The **Manager is the signer
-  on Chase's own records** _(Julia, 2026-08-27)_ — that is the test the bank-reference page applies,
-  and it is not the same as who may bind the LLC, so it was worth asking. ⏳ **Still missing: the
-  bank's branch address and a contact email** for the bank-reference block. The **card-on-file
-  block** is deliberately blank — the client's card, never ours to supply.
+- **The supplier credit application is COMPLETE and waiting only on signatures** _(2026-08-27)_.
+  Everything asked for came back the same day: all three **trade references**, the **bank-reference
+  block** (the Chase business-banking relationship manager — her card is with Julia; the branch is
+  the Hallandale Beach business-banking office), and two decisions. ✅ **NO personal guaranty** —
+  Julia's decision, so page 7 stays **entirely blank** and the packet goes without it; it is not to
+  be completed later on anyone's behalf. ✅ The **Manager is the signer on Chase's own records**,
+  which is the test the bank-reference page applies and is *not* the same as who may bind the LLC —
+  worth asking, and now settled. The **card-on-file block** is deliberately blank: the client's
+  card, never ours to supply. ⏳ Left to do: **wet signatures and dates on pages 3, 4, 6, 8 and 9.**
 - **Confirm the identity of the new no-portal-access contact** registered 2026-08-10 (a
   "contractor" role in Double) — Double contacts now name him **Sergey Yalansky** (2026-08-22), who attended the 2026-08-13 engagement-scoping meeting. STILL unconfirmed whether this is the CFO already documented in §2, or a separate operational contact.
 
@@ -459,19 +460,19 @@ the actual details.
 
 - 2026-08-27 — **Filled in a supplier's net-terms CREDIT APPLICATION for the company** (a
   restaurant/park equipment supplier — named in `FOLLOW-UPS.md` row 65, not here: the 2026-08-14
-  precedent keeps vendor names out of a file that auto-publishes), at Julia's request. She supplied
-  the banking and trade-reference material; the entity block was read off **Sunbiz**, the signer and
-  the invoice contacts off **Double**. **What the exercise settled:** the signer is the **Manager**
-  (Sunbiz lists him as the sole authorized person, `MGR`, corroborating the Operating Agreement) and
-  Julia confirmed he is also the signer **on Chase's own records**, which is the separate test the
-  bank-reference page applies; the company has **no phone of its own** in Double, so the Manager's
-  mobile went on the form; **no personal guaranty** is being given (Julia's decision — page 7
-  blank); and the **AP mailbox address Julia quoted was a near-miss** — she wrote it without the
-  `llc`. Five Gmail threads spanning 2025-12 → 2026-07, including QuickBooks' own notifications and
-  Julia's sent mail, all carry the §3 address and **nothing at all uses the shorter one**, so the
-  form was filled with the §3 address and the discrepancy put to her. ⏳ **Not sent** — one field
-  short, the bank's branch address; see the outstanding item and `FOLLOW-UPS.md` row 65. _(Worked
-  for Julia.)_
+  precedent keeps vendor names out of a file that auto-publishes), at Julia's request, and it was
+  **finished the same day**. She supplied the banking and trade-reference material; the entity block
+  came off **Sunbiz**, the signer and the invoice contacts off **Double**. **What it settled, and is
+  worth keeping for the next one:** the signer is the **Manager** (Sunbiz lists him as the sole
+  authorized person, `MGR`, corroborating the Operating Agreement) *and* Julia confirmed he is the
+  signer **on Chase's own records**, a separate test the bank-reference page applies; the company
+  has **no phone of its own** in Double, so the Manager's mobile went on the form; **no personal
+  guaranty** is being given, by Julia's decision; and the **AP mailbox address Julia quoted was a
+  near-miss** — she wrote it without the `llc`. Five Gmail threads spanning 2025-12 → 2026-07,
+  including QuickBooks' own notifications and Julia's sent mail, all carry the §3 address and
+  **nothing at all uses the shorter one**, so the form was filled with the §3 address and the
+  discrepancy put to her rather than corrected silently. ⏳ Waiting only on signatures. _(Worked for
+  Julia.)_
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
