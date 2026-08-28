@@ -368,8 +368,31 @@ a buyer nobody has spoken to.**
 > 🛑 **AND DO NOT REASON YOUR WAY TO THE RIGHT ANSWER BY THE WRONG ROAD.** A session on the pilot argued
 > *"nobody made a §1362(e)(3) election, so the books cannot be closed"* — and that argument **fails**,
 > because **(e)(6)(D) is a second door to the same method** and it does not need an election at all.
-> ⚠️ **The (e)(3) election is also made by a statement attached to the very return you are preparing**,
-> so nothing has been foregone while you are still preparing it.
+>
+> ⛔ **AND A CORRECTION THIS SOP CARRIED UNTIL 2026-08-27:** it used to say the (e)(3) election *"is made
+> by a statement attached to the very return you are preparing, so nothing has been foregone."*
+> 🔴 **That is WRONG.** **Reg. §1.1362-6(a)(5), as recited by the IRS in PLR 201507011:** *"The statement
+> must be filed with the corporation's return for the **C short year**."* — **the Form 1120, which on a
+> sale is the BUYER'S return, not yours.** ⚠️ **So on a sale you could not make that election on the
+> 1120-S even if you wanted to** — and §1362(e)(3)(B) would also need the **buyer's** consent.
+> ✅ **Three independent reasons the election route is closed on a 50%+ sale. Any one is enough.**
+
+> ### ✅ WHERE TO READ THE 50% RULE WHEN THE LEGAL-TEXT SITES ARE BLOCKED — the route that worked
+>
+> **The firm's environment refuses law.cornell.edu, the eCFR, uscode.house.gov, govinfo, govregs and
+> federalregister, and irs.gov does not host the CFR.** 🔑 **irs.gov's own PRIOR-PUBLICATION archive
+> does carry the rule, in plain English, and nobody had tried it:**
+>
+> | Source | What it gives |
+> |---|---|
+> | **Pub. 589, *Tax Information on S Corporations*, Rev. 1995 (and 1994), p. 18** — `irs.gov/pub/irs-prior/p589--1995.pdf` | *"**The pro rata allocation cannot be made if 50% or more of the corporation's stock is sold or exchanged during the S termination year.**"* — and the whole of §1362(e) in plain English, including the five items an (e)(3) election statement must contain |
+> | **PLR 201507011** — `irs.gov/pub/irs-wd/201507011.pdf` | recites the current statute: *"except as provided in § 1362(e)(3) and § 1362(e)(6)(C) and (D)"* — **proof that (6)(D) is still there** |
+> | **Reg. §1.460-4(k)(3)(v)(D)** via **IRB 2004-34** | lists (6)(D) among the provisions under which *"the S corporation's books are **closed**"* — **proof of what it DOES** |
+>
+> ⚠️ **Pub. 589 is OBSOLETE — discontinued after 1995, and parts of it are stale** *(it still says "more
+> than 35 shareholders")*. ⛔ **Never cite it alone.** ✅ **Cite it for the CONTENT and the other two for
+> currency** — that combination is what makes it usable, and it is a route worth remembering for any
+> S-corporation question the blocked sites would otherwise own.
 
 ### ④ What changes on the return itself — the checklist
 
@@ -382,6 +405,7 @@ a buyer nobody has spoken to.**
 | **Item I, number of shareholders** | **Count who held shares during *this* return's tax year.** 🔑 **A buyer who acquired on the day AFTER the S short year ended was never a shareholder during it and gets NO K-1 from us** |
 | **The allocation between shareholders** | ✅ **Usually a plain pro-rata split with no election.** 🔑 **The §1362(e) cut does not split a year between PEOPLE — it ENDS the year**, so each shareholder held their percentage for every day of it. ⛔ **A §1377(a)(2) election is for a shareholder exiting *within* a tax year and does not apply** |
 | **Schedule L** | see ⑤ |
+| 🔴 **A TERMINATION-NOTICE STATEMENT** | 🛑 **REQUIRED, and easy to miss because the H(5) box feels like it covers it.** The instructions, *Termination of Election*, item 1, verbatim: *"…**Attach to Form 1120-S for the final year of the S corporation a statement notifying the IRS of the termination and the date it occurred.**"* 🛠️ **One short statement naming the terminating event and its date.** ⛔ **Ticking the box is not the statement** |
 | **The due date** | see ⑥ |
 
 ### ⑤ 🔵 THE SCHEDULE L DATE — the instruction reads one way and means another
@@ -2111,10 +2135,14 @@ Reg. §1.1362-3 before concluding anything.**
 > [§2A ③](#3--how-the-year-is-split--and-the-rule-most-people-get-backwards) states it as the governing
 > rule for a sale. ⛔ **The old instruction here to *"present the instruction's default meanwhile"* is
 > WITHDRAWN** — on a sale, presenting the C-short-year date is presenting the wrong date.
-> 🟠 **What is still outstanding is the primary-source read of the REGULATION itself, which the firm's
-> environment blocks** *(law.cornell.edu, the eCFR, govinfo and govregs are all refused by the egress
-> proxy, and irs.gov does not host the CFR — see the Gossip Miami working paper §9)*. 🛠️ **Read it once,
-> on an unblocked machine, and it is settled for every future return.**
+> ✅ **AND THE SOURCING IS NO LONGER THIN.** The rule is stated verbatim in **Pub. 589 (Rev. 1995), p.
+> 18**, corroborated as current by **PLR 201507011** and as books-closing by **Reg. §1.460-4(k)(3)(v)(D)**
+> — all on irs.gov, and §2A ③ carries the route. 🟠 **Reading Reg. §1.1362-3(b) itself remains the right
+> final step**, and the legal-text sites are still blocked to this environment.
+>
+> ⛔ **One more thing this section used to get wrong, corrected 2026-08-27:** an **(e)(3) election is NOT
+> attached to the 1120-S you are preparing.** Reg. §1.1362-6(a)(5) puts the statement on the **C
+> short-year return — the Form 1120** — which on a sale belongs to the buyer's side.
 
 ### 8C · 🔑 BUILD SCHEDULE L FROM THE LEDGER'S ACCOUNT BALANCES — and NAME the lines that are zero
 
@@ -3541,11 +3569,21 @@ account. **Splitting it by person is a guess unless somebody asks.** ⛔ **Never
    liable** on — the cheques do not have to have cleared. ⛔ **But if the note is effectively
    NON-RECOURSE — the seller's only remedy being to take the shares back — basis is limited to what has
    actually been PAID.**
-   🔑 **The tells are in the agreement, and they are easy to read once you know to look:** a clause
-   letting the seller **revert the shares** for non-payment, or a seller who **stays on the company's
-   paperwork until paid.** **Both are describing security.**
-   ⚠️ **On the pilot this one point moved an opening basis by tens of thousands** — from the full
-   purchase price down to a deposit plus the instalments actually paid.
+   🛑 **BUT READ THE WHOLE ARTICLE BEFORE CONCLUDING ANYTHING — the pilot got this WRONG in exactly the
+   way that is easy to get wrong.** A reversion clause *looks* like the seller's only remedy is the
+   property, and a seller who **stays on the company's paperwork until paid** *looks* like security.
+   **On the pilot neither survived contact with the document**, and one subsection settled it:
+   > *"**No Prejudice to Other Remedies:** The rights and remedies provided in this Article are **in
+   > addition to, and do not exclude or limit**, any other rights or remedies available to the Seller
+   > under this Agreement or applicable law."*
+   ✅ **That makes the obligation RECOURSE, and the basis the full contract price.** **Two more things
+   pointed the same way and are worth looking for:** the buyers were defined **"jointly and severally"**
+   *(each liable for the WHOLE price, not her half)*, and late payments carried **8% per annum** — a
+   lender's term, not a forfeiture.
+   ⚠️ **The session that raised the alarm reasoned from the reversion clause's EXISTENCE without reading
+   that clause's own final subsection, in a document the firm already held.** ⛔ **Read the document; do
+   not theorise about it.** 🔑 **The alarm is still worth raising — it just has to be settled by reading,
+   and it can be, usually in one page.**
 2. **Losses suspended under §1366(d)** in an earlier year because basis ran out. *(§12A's grid line 7
    carries these — but only the shareholder's own prior form says what they are.)*
 3. **A Reg. §1.1367-1(g) election** on that 1040, which changes the ORDER the reductions happen in and
