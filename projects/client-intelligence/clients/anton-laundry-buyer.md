@@ -1,6 +1,6 @@
 # Anton (last name pending) — laundry portfolio buyer
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28 · **Owner:** Julia · **Last updated:** 2026-08-28
+> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope expanded same day · **Owner:** Julia · **Last updated:** 2026-08-28
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -36,11 +36,18 @@
 - **Primary language:** Russian-speaking — the proposal is bilingual RU/EN (English governs)
 - **Our engagement (services we provide):** **PROSPECT.** A **Financial Due Diligence &
   Purchase Analysis** proposal drafted 2026-08-28 — the firm's first consulting-type
-  (non-tax, non-monthly) engagement: historical financials for the five locations, seller
-  add-backs and normalized earnings, revenue reasonableness against utilities / card
-  processing / cash, seller projections, and a written findings report. **Hourly with an
-  initial not-to-exceed budget and a deposit credited to the final bill** (figures in the
-  delivered proposal, not here); work beyond the budget requires his written approval
+  (non-tax, non-monthly) engagement — and **expanded the same day to Julia's full
+  methodology brief**: three years of financials and tax data (IRS transcripts via a
+  seller-signed Form 4506-C, obtained from the IRS directly), **three independent revenue
+  reasonableness tests** (utility-consumption "water-hole" analysis on water and electric,
+  card-processing + coin-collection reconciliation, bank-deposit analysis), add-backs /
+  EBITDA / quality of earnings, sales-tax and employment-tax compliance, the real-estate
+  component (incl. property-tax reassessment and a cost-segregation feasibility read),
+  hidden operating costs and impact/tap fees, UCC-1 lien and environmental-history checks,
+  coordination of a third-party equipment inspection, and a written findings report.
+  **Hourly with an initial not-to-exceed budget and a deposit credited to the final bill**
+  (figures in the delivered proposal, not here); work beyond the budget requires his
+  written approval
 - **Fiscal year-end:** n/a (no engagement entity yet)
 - **Accounting platform:** n/a
 
@@ -96,18 +103,31 @@ the actual details.
   audit, review, or compilation; no opinion, no assurance; the word "verification" stays out
   of the service description (Julia, 2026-08-28, on professional-standards grounds). The
   report explains procedures performed and findings, and is restricted to the buyer's use
-- **The deal's center of gravity is the add-backs:** the seller's adjusted earnings rest
-  almost entirely on add-backs to reported results that are close to break-even, and the
-  add-back schedules include categories a buyer should scrutinize (supplies, officer
-  distributions, loan payments, equipment purchases, income added back). The seller also
-  projects a further "efficiency bridge" for next year. This is why the engagement is
-  budgeted hourly with a ceiling rather than flat
+- **The deal's center of gravity is the add-backs — and cash revenue is tested three
+  independent ways:** the seller's adjusted earnings rest almost entirely on add-backs to
+  reported results that are close to break-even, and the add-back schedules include
+  categories a buyer should scrutinize (supplies, officer distributions, loan payments,
+  equipment purchases, income added back). Per Julia, **four of the points run mostly on
+  cash and two on cards** — cash is the easiest revenue to overstate, so the scope tests it
+  by utility consumption ("water-hole" method), by card/coin reconciliation, and by bank
+  deposits, and **tax data comes straight from the IRS on a seller-signed Form 4506-C,
+  never from the seller's own copies** — the offering memorandum must match what was filed
+  with the government
 - **Fee protection is the structure Julia chose:** hourly, an estimate range, an initial
   not-to-exceed budget, a deposit credited in full, balance billed on report delivery, and
   written approval before exceeding the budget — protection against poor seller records or
   sprawling bank/merchant streams. Reuse this shape for future due-diligence quotes
-- **Tax planning is the promised follow-on** (his own request): excluded from this scope,
-  quoted separately after the analysis — do not let it slip
+- **The follow-on is now a named structuring consultation** (his own request, sharpened by
+  Julia's methodology brief): after the analysis — acquisition-entity choice (LLC / S-corp /
+  C-corp), splitting the real estate and the operating business across companies, and the
+  Form 8594 purchase-price allocation (weight toward equipment, away from goodwill and
+  land). Excluded from this scope, quoted separately — do not let it slip
+- **Third-party specialists are coordinated, not absorbed:** the laundromat equipment
+  technician (defect list + reserve-fund estimate) and any Phase I environmental assessment
+  are separate contractors, paid by Anton directly, answering for their own conclusions —
+  the proposal and T&C say so explicitly. The engagement also depends on seller
+  cooperation: the signed 4506-C, site access for the technician, and consent for utility
+  and municipal inquiries (listed as next-step requirements in the document)
 - The proposal document is bespoke (no tool template exists yet for consulting engagements);
   if due-diligence work recurs, it should become the third template family
 
@@ -123,11 +143,30 @@ the actual details.
   clauses; added No Assurance, Use of the Report, deposit-aware termination, governing
   English). Same-day iterations: bilingual RU-first layout, the deposit, tax planning
   moved explicitly out of scope, client name Anton. Delivered as PDF + private artifact
+- 2026-08-28 (later) — **Scope expanded to Julia's full methodology brief (in Russian) and
+  redelivered.** Added: the three revenue tests (water-hole on utilities, card/coin
+  reconciliation, bank deposits), IRS transcripts via seller-signed 4506-C, sales-tax
+  review + clearance letter, employment taxes (940/941, actual vs officially reported
+  headcount — deliberately worded diplomatically in the document), real-estate analysis +
+  property-tax reassessment + cost-segregation feasibility, hidden operating costs and
+  impact/tap fees, UCC-1 liens, Phase I environmental history (dry-cleaner archives),
+  coordinated equipment inspection, quality of earnings — and the structuring consultation
+  named as the follow-on. Document grew to a two-page scope per language; hours and the
+  estimate range were restated upward (~1.5×) for the wider scope **as a draft judgment
+  pending Julia's confirmation** — her checkpoint-budget and deposit mechanics kept
+  verbatim. Redelivered as PDF + the same private artifact
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **From Julia:** Anton's last name and email (cover and agreement carry placeholders);
-  then create the Double client and complete §1/§2 here
+- **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
+  email field — her instruction); then create the Double client and complete §1/§2 here
+- **Julia to confirm — the restated estimate:** the expanded methodology roughly doubles
+  the analysis work, so the draft restates the hours and the estimate range upward (~1.5×)
+  while keeping her initial not-to-exceed checkpoint and deposit exactly as she set them.
+  Her call to keep the restated range or revert to the original one
+- **Julia to confirm — the unit count:** her brief says four cash points + two card points
+  (six); the offering memorandum lists five locations plus the delivery business. The
+  document uses her 4 + 2 framing — confirm the counting before signing
 - **Julia to confirm:** balance invoiced on report delivery (assumed), and whether the
   bespoke T&C set reads right for a first consulting engagement
 
