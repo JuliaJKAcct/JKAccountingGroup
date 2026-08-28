@@ -362,7 +362,7 @@ ordinary sale of the business there is nothing to elect, nothing to sign, and no
 a buyer nobody has spoken to.**
 
 > 🔑 **WHY THIS MATTERS SO MUCH, IN ONE LINE:** under method A the return reports a **per-day fraction of
-> a full year**, which is not a real result of anything. **On the pilot the two methods gave 36,977 and
+> a full year**, which is not a real result of anything. **On the pilot the two methods gave 36,990 and
 > 51,452 for the same line 22.** ⛔ **Getting this wrong is not a presentation error.**
 >
 > 🛑 **AND DO NOT REASON YOUR WAY TO THE RIGHT ANSWER BY THE WRONG ROAD.** A session on the pilot argued
@@ -2132,7 +2132,7 @@ Reg. §1.1362-3 before concluding anything.**
 
 > ✅ **AND ON THE PILOT THAT READING WAS DONE, so the next session starts from the answer rather than the
 > warning: §1362(e)(6)(D) DOES force the closing of the books on a 50%-or-more stock sale**, which is why
-> [§2A ③](#3--how-the-year-is-split--and-the-rule-most-people-get-backwards) states it as the governing
+> **§2A ③** states it as the governing
 > rule for a sale. ⛔ **The old instruction here to *"present the instruction's default meanwhile"* is
 > WITHDRAWN** — on a sale, presenting the C-short-year date is presenting the wrong date.
 > ✅ **AND THE SOURCING IS NO LONGER THIN.** The rule is stated verbatim in **Pub. 589 (Rev. 1995), p.
@@ -3566,7 +3566,12 @@ account. **Splitting it by person is a guess unless somebody asks.** ⛔ **Never
 
 1. 🛑 **WHETHER A PURCHASE-MONEY NOTE GIVES BASIS AT ALL.** §12A's *Purchased* box says the basis is
    "what they paid for it", and under **§1012** that includes an obligation the buyer is **personally
-   liable** on — the cheques do not have to have cleared. ⛔ **But if the note is effectively
+   liable** on — the cheques do not have to have cleared. 🟠 **AUTHORITY FLAG, and do not lose it when
+   this section is quoted:** §1012's own text says only *"the basis of property shall be the cost of such
+   property"*. **That an incurred recourse obligation forms part of that cost rests on *Crane v.
+   Commissioner*, 331 U.S. 1 (1947) and its line of cases** — ⛔ **stated from knowledge, not pulled**,
+   because the case-law hosts are blocked to this environment. **Cite the cases, never "§1012" as though
+   the sentence were in it.** ⛔ **But if the note is effectively
    NON-RECOURSE — the seller's only remedy being to take the shares back — basis is limited to what has
    actually been PAID.**
    🛑 **BUT READ THE WHOLE ARTICLE BEFORE CONCLUDING ANYTHING — the pilot got this WRONG in exactly the
