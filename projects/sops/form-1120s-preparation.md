@@ -1218,8 +1218,11 @@ wrong.
 > 🔑 **Julia's decision, 2026-08-20, and it is firm policy rather than a per-return judgement:**
 > **where a shareholder's contributions for the year EXCEED their distributions, net the two and
 > report distributions as ZERO.** **"At least"** for the case that prompted it — **S-corporation
-> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the 2025 return
-> recorded in its working paper §4 decision 8.)_
+> owners who took no reasonable salary.** _(Relayed by Lilian; the pilot is the **Gossip
+> Miami LLC** 2025 return, recorded in its working paper at **§4 decision 5**. ⚠️ **An earlier version
+> of this line said "decision 8" and named no client — in that paper decision 8 is the undeposited cash
+> sales, not the distributions presentation. Corrected 2026-08-27, and the client is now named so the
+> reference can be checked.)_
 
 #### 🛑 THE SCOPE GATE — all five, checked BEFORE netting, on the GROSS figures
 
