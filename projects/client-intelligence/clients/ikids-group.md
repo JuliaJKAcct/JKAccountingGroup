@@ -405,15 +405,14 @@ the actual details.
   BillPay), and a Restaurant365↔QuickBooks integration, tied to the venue's staffing ramp (~35–70
   at opening). Julia to prepare a written proposal/estimate; nothing here is part of the current
   engagement in §4 until it is signed.
-- **The supplier credit application is filled but CANNOT BE SENT — four things are open, and one of
-  them is not ours to decide.** (a) A **third trade reference** — the packet demands three and we
-  have two. (b) The **bank's branch address and a contact email** for the bank-reference block. (c)
-  🔴 **The PERSONAL GUARANTY page** — the supplier asks the signer to guarantee the company's debt
-  **personally**, with his home address. That is the Manager's own decision, not a form field, so
-  the page was left **entirely blank**; it must not be filled in on his behalf. (d) The
-  **card-on-file block**, likewise blank — the client's card, never ours to supply. ⓘ Also worth
-  confirming before it goes: the bank-reference page requires a signer **authorized per the bank's
-  own records**, which is not the same test as who may bind the LLC. _(2026-08-27.)_
+- **The supplier credit application is now COMPLETE except for one field — and Julia has answered
+  the two questions that were open.** ✅ The three **trade references** are in _(2026-08-27)_. ✅ **No
+  personal guaranty** — Julia's decision, 2026-08-27, so page 7 stays **entirely blank** and the
+  packet goes without it; do not fill it in later on anyone's behalf. ✅ The **Manager is the signer
+  on Chase's own records** _(Julia, 2026-08-27)_ — that is the test the bank-reference page applies,
+  and it is not the same as who may bind the LLC, so it was worth asking. ⏳ **Still missing: the
+  bank's branch address and a contact email** for the bank-reference block. The **card-on-file
+  block** is deliberately blank — the client's card, never ours to supply.
 - **Confirm the identity of the new no-portal-access contact** registered 2026-08-10 (a
   "contractor" role in Double) — Double contacts now name him **Sergey Yalansky** (2026-08-22), who attended the 2026-08-13 engagement-scoping meeting. STILL unconfirmed whether this is the CFO already documented in §2, or a separate operational contact.
 
@@ -458,18 +457,21 @@ the actual details.
   QuickBooks moves until they answer** — see the outstanding item above and `FOLLOW-UPS.md` row 56.
   _(Worked by Lilian.)_
 
-- 2026-08-27 — **Filled in a supplier's net-terms CREDIT APPLICATION for the company** (KaTom
-  Restaurant Supply — the restaurant/park equipment supplier), at Julia's request. Julia supplied
+- 2026-08-27 — **Filled in a supplier's net-terms CREDIT APPLICATION for the company** (a
+  restaurant/park equipment supplier — named in `FOLLOW-UPS.md` row 65, not here: the 2026-08-14
+  precedent keeps vendor names out of a file that auto-publishes), at Julia's request. She supplied
   the banking and trade-reference material; the entity block was read off **Sunbiz**, the signer and
   the invoice contacts off **Double**. **What the exercise settled:** the signer is the **Manager**
-  (Sunbiz lists him as the sole authorized person, `MGR`, which corroborates the Operating
-  Agreement); the company has **no phone of its own** in Double, so the Manager's mobile went on the
-  form; and the **AP mailbox address Julia quoted was a near-miss** — she wrote it without the
+  (Sunbiz lists him as the sole authorized person, `MGR`, corroborating the Operating Agreement) and
+  Julia confirmed he is also the signer **on Chase's own records**, which is the separate test the
+  bank-reference page applies; the company has **no phone of its own** in Double, so the Manager's
+  mobile went on the form; **no personal guaranty** is being given (Julia's decision — page 7
+  blank); and the **AP mailbox address Julia quoted was a near-miss** — she wrote it without the
   `llc`. Five Gmail threads spanning 2025-12 → 2026-07, including QuickBooks' own notifications and
   Julia's sent mail, all carry the §3 address and **nothing at all uses the shorter one**, so the
-  form was filled with the §3 address and the discrepancy put to her. ⏳ **Not sent** — it is short a
-  third trade reference, the bank's branch address, and a decision on the personal guaranty; see the
-  outstanding item and `FOLLOW-UPS.md` row 65. _(Worked for Julia.)_
+  form was filled with the §3 address and the discrepancy put to her. ⏳ **Not sent** — one field
+  short, the bank's branch address; see the outstanding item and `FOLLOW-UPS.md` row 65. _(Worked
+  for Julia.)_
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_
