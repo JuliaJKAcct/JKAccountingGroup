@@ -102,7 +102,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Log
 
-- _(2026-08-28)_ — Julia supplied the **2024 Form 1040 (140 pages), Form 1065 for Rock Wealth LLC, Form 1120 for Wealth Bay, LLC** and a driving licence, and asked for a document-request checklist for 2025 covering organizational documents plus any new company or rental property. All three returns were read line by line. Produced a **77-item request list** grouped A–G, with the entity and property inventory and **twelve issues to settle before preparing anything** — published as an artifact (link in §7). No engagement letter exists yet; nothing has been prepared.
+- _(2026-08-28)_ — Julia supplied the **2024 Form 1040 (140 pages), Form 1065 for Rock Wealth LLC, Form 1120 for Wealth Bay, LLC** and a driving licence, and asked for a document-request checklist for 2025 covering organizational documents plus any new company or rental property. All three returns were read line by line. Produced a **77-item request list** grouped A–G, with the entity and property inventory and **twelve issues to settle before preparing anything** — published as an internal artifact (link in §7). No engagement letter exists yet; nothing has been prepared.
+- _(2026-08-28)_ — Julia redirected: she wants **the list she sends the client**, not the internal review, and said she would send it herself. Built a second, **client-facing** document (link in §7) to her specification: formation documents for **every** company even where 2024 already shows something; **articles of organization and the EIN letter named explicitly**; purchase agreement **and** closing statement for **every** property; a **2025 property tax bill for every property**; **Form 1098 or a lender letter per property**; and an explicit **"did you buy or sell any property in 2025?"** question asking for the purchase and sale agreements. ⛔ **The seven Ukrainian companies' financial statements are deliberately excluded — Julia already holds them** and does not want the client asked twice. ✅ **The Polish company (Avirock Limited Liability Company, Warszawa) she did not know about**, so it has its own full financial-statement section.
 
 ### Tax year 2025 — the review
 
@@ -131,7 +132,8 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ## 7. Links
 
-- **2025 document request (artifact):** https://claude.ai/code/artifact/abcda70d-d3d6-4f93-8749-ba874ad7e344
+- **2025 document list — CLIENT-FACING, this is the one Julia sends:** https://claude.ai/code/artifact/77696b28-e12f-4113-b606-63930fbb19a5
+- **2025 intake review — INTERNAL, do not send:** https://claude.ai/code/artifact/abcda70d-d3d6-4f93-8749-ba874ad7e344
 - **Double client:** _(pending — none identified)_
 - **Google Drive folder (sensitive vault):** _(pending — the 2024 returns and the licence need a home)_
 - **Related SOPs:** [`form-1040-preparation.md`](../../sops/form-1040-preparation.md) · [`ein-application-irs.md`](../../sops/ein-application-irs.md) (the eight foreign EINs read "Applied For")
