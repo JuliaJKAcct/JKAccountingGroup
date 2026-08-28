@@ -658,6 +658,68 @@ account**, whatever it was. ⛔ **So "it is an S corp" is not the reason — the
 basis is never entity-level on any form.** *(The S-corp fact only removes the §754 route that would
 have been the one partial exception.)*
 
+#### ④c 🔴 "WHAT ABOUT S-CORP CONTRIBUTIONS — wouldn't this be the case?" — asked 2026-08-28. No, and ONE question settles it
+
+**A capital contribution requires a shareholder to transfer cash or property TO THE CORPORATION.**
+🔑 **Here the money went from the buyers' personal accounts to the SELLERS' personal accounts. The
+corporation received nothing** — Julia's own observation, and it is dispositive.
+
+| | **A contribution (PRIMARY)** | **What happened here (SECONDARY)** |
+|---|---|---|
+| Who receives the money | **the corporation** | **the selling shareholder** |
+| What the buyer receives | **newly issued** shares | **existing** shares |
+| Company entry | `Dr Cash · Cr Paid-in capital` | ⛔ **none** |
+| Company equity | **increases** | **unchanged** |
+| Buyer's stock basis | + the amount contributed | = what they paid the seller |
+
+⚠️ **Both routes give the buyer 82,500 of basis, and THAT is why the contribution framing feels
+right** — the *basis* answer is identical. 🔑 **The difference is entirely whether the COMPANY's
+balance sheet moves**, and here it does not, because the company was not in the transaction.
+
+**🔑 THE MECHANICAL TELL — "contribution" does not solve the missing debit, it renames the credit.**
+
+```
+Dr   ????                          165,000     ← still nothing to put here
+     Cr   Paid-in capital            165,000
+```
+
+**A contribution needs a debit too, and that debit is the cash the company received.** ⛔ **No cash,
+no debit, no contribution.** The framing runs straight back into the same wall — **which is itself
+the proof that the transaction is not the company's.**
+
+**⛔ AND THE COST OF BOOKING IT ANYWAY: DOUBLE BASIS.** Each buyer would carry **82,500 from the
+purchase** *(Form 7203, correctly)* **plus 82,500 from a phantom contribution** — 165,000 of basis
+each on a 165,000 company. ⚠️ **That overstates deductible loss and understates gain (or overstates
+loss) on the 2025 sale.** 🔑 **The client file already carries the identical trap in its LOAN form:**
+*"Treated as a loan it would be counted twice — once in stock basis and once in debt basis."*
+**Same error, different label** — and the fact that it has now been reached twice by two different
+routes is the reason it is written up here rather than just answered.
+
+**✅ WHEN CONTRIBUTIONS DO ARISE FOR THIS CLIENT — and they are real.** The 2025 ledger carries
+**genuine capital contributions of 2,651.98** for the year *(2,021.45 to the 29-October cut)*. The
+test each time:
+
+| Did… | Entry |
+|---|---|
+| money go **into the business account**? | `Dr Cash · Cr Member's Equity — [name]` |
+| a member pay a **company** expense or liability personally? | `Dr Expense/Liability · Cr Member's Equity — [name]` |
+| neither? | ⛔ no entry |
+
+**🔵 THE ONE VERSION THAT WOULD HAVE BEEN A COMPANY TRANSACTION — a REDEMPTION.** Had the
+**corporation** bought the old members out with **company money**, that is squarely the company's
+transaction — `Dr Equity/Treasury · Cr Cash` — hitting the balance sheet, the AAA and §302.
+✅ **The agreement says it was not:** §1 names the Buyer as *"Anastasiia Makalendra and Yuliana
+Varavva Bogopolska (jointly and severally)"* — **two individuals; the company is not a party.**
+🔑 **Worth knowing the shape, because it is the one fact pattern that flips the answer.**
+
+> ✅ **AAA checked against the sister paper, and there is no conflict to raise.** Capital
+> contributions **increase stock basis and paid-in capital but do NOT enter the AAA** — AAA is
+> adjusted in a manner similar to §1367(a)(2) *(§1368(e)(1)(A))*, which tracks **earnings**, not
+> capital. [`2025-form-1120s.md`](./2025-form-1120s.md) §3.8 line 3 already says exactly this
+> *("Capital contributions do not enter the AAA on the textbook convention, and the 2024 return put
+> nothing here")*, and the SOP's netting gate 4 treats *"prior return ran contributions through M-2
+> line 3"* as **a risk condition to test for, not the firm's practice.** ⛔ **Nothing to correct.**
+
 #### ⑤ Where the 165,000 IS recorded
 
 **Each buyer's stock basis — 82,500 each — on their personal Form 7203.** It decides whether the
@@ -753,6 +815,7 @@ this.*
 | 8 | ✅ **CLOSED — 2024 was a loss year as filed**, on the K-1s themselves | §4E |
 | 9 | 🔴 **Did the SELLERS sweep the company's cash at closing, 18 Apr 2024?** §7 of the agreement entitled them to. If they did it is a 2024 DISTRIBUTION, and the filed return shows none. **The bank statement answers it** | §6I③ · §4B |
 | 10 | ✅ **CLOSED — the split is 82,500 EACH**, confirmed by Julia 2026-08-28; the earlier 80,501 was misspoken. Ties to the contract exactly | §6I④ |
+| 10b | ✅ **ANSWERED — the 82,500 is NOT an S-corp capital contribution either.** The company received nothing; "contribution" renames the credit without supplying a debit, and booking it would give each buyer DOUBLE basis | §6I④c |
 | 10a | ✅ **ANSWERED — the 82,500 bases do NOT go on the balance sheet.** Outside basis is the OWNER's attribute, never entity-level — on an 1120-S **or** a 1065 | §6I④a · §6I④b |
 | 11 | ✅ **ANSWERED — how to book the 2024 purchase: you don't.** No company cash moved, so there is no company entry; what exists is a reclassification inside equity that nets to zero *(Julia, 2026-08-28)* | §6I |
 | 12 | ✅ **CLOSED — the 7,924 is line 16 Advertising and is fully supported.** *(Julia, 2026-08-28. The paper first read it as an unsupported line 12.)* | §3D correction box |
