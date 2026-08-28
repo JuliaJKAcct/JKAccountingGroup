@@ -595,21 +595,68 @@ Dr   Member's Equity — [old members]      (amount swept)
 shows as nil** (§4B). 🛠️ **The bank statement around 18 April 2024 answers it**, and it is a far
 better use of the effort than trying to book the 165,000.
 
-#### ④ 🛑 The two figures given do not reconcile — settle this BEFORE posting anything
+#### ④ ✅ THE SPLIT IS 82,500 EACH — confirmed by Julia, 2026-08-28, and it ties to the contract exactly
 
-| | |
-|---|---:|
-| "Paid from their personal account" | **80,501** |
-| "Paid off from the other member" | **82,500** |
-| **Sum** | **163,001** |
-| **Contract price (§1 of the agreement)** | **165,000** |
-| **Gap** | 🔴 **1,999** |
+⚠️ **Her first figures were `80,501` and `82,500`, which fell 1,999 short of the 165,000 and were
+raised back rather than smoothed over. She confirmed she had misspoken: it is 82,500 EACH.**
 
-⚠️ **They are also different KINDS of number.** **82,500 is a CONTRACT OBLIGATION** and the
-agreement gives **each** member exactly that — Bogopolska `2,500 deposit + 50,000 + 30,000`;
-Makalendra `2,500 deposit + 80,000 in 36 instalments of 2,222`. **80,501 looks like a TRACED
-PAYMENT.** ⛔ **Taking one of each understates the deal by 1,999 and does not say whose is whose.**
-🛠️ **Name both — which member, and which kind of figure — before either is used.**
+| Member | Per §1 of the agreement | |
+|---|---|---:|
+| **Bogopolska** | deposit 2,500 + 50,000 *(by 5 May 2024)* + 30,000 *(by 1 Oct 2024)* | **82,500** |
+| **Makalendra** | deposit 2,500 + 80,000 *(36 × 2,222, Nov 2024 → Oct 2027)* | **82,500** |
+| | **Purchase Price** | **165,000** ✓ |
+
+✅ **So the obligations were EQUAL and only the payment SHAPES differed** — which is what the client
+file already recorded, and it now has the arithmetic behind it.
+
+#### ④a 🔑 THE DISTINCTION THAT DECIDES ALL OF THIS — outside basis vs. inside capital
+
+**Julia's follow-up was the right question and deserves its own answer: should the 82,500 basis
+figures go on the balance sheet in QuickBooks? ⛔ No — and the reason is sharper than "it is not a
+transaction."**
+
+- **OUTSIDE (stock) BASIS — 82,500 each — is what a member paid FOR THEIR INTEREST.** It is a
+  personal tax attribute **of the owner**. It is not an asset, a liability, or equity **of the
+  company**.
+- **INSIDE CAPITAL / BOOK EQUITY is the company's own accumulated position**, and 🔑 **it does not
+  move when ownership changes hands.**
+
+⚠️ **The two are routinely different, and here they are wildly different: 165,000 outside against
+about 987 of book equity.** ⛔ **That is NOT an error to be reconciled away — it is what buying a
+business for GOODWILL looks like.** The buyers paid for future earnings; the balance sheet only ever
+held the assets and accumulated profit, which were nearly nil. **Recording the basis on the balance
+sheet would put the OWNERS' tax attribute into the COMPANY's equity — a different taxpayer.**
+
+**Three numbers in this family, three homes, none interchangeable:**
+
+| Number | What it is | Where it lives | Who reports it |
+|---:|---|---|---|
+| **82,500** each | **stock (outside) basis** | **Form 7203** | each shareholder, with their 1040 |
+| **~987** | book equity at 31 Dec 2024 | **QuickBooks → Schedule L** | the company |
+| **(26,783)** | **AAA** at 31 Dec 2024 | **Schedule M-2** | the company |
+
+⚠️ **And AAA is NOT basis** — the third confusion in the same family. **AAA is an ENTITY-level
+account** tracking undistributed taxed income; it ignores what anyone paid for their shares and
+**can go negative**. **Basis is PER-SHAREHOLDER**, includes the purchase price, and **floors at
+zero**. They move together and they never tie.
+
+#### ④b ⚠️ THE 1065 TRAP — worth writing down, because the instinct is a reasonable one
+
+**Julia's question said "1065".** 🔑 **Gossip Miami is an 1120-S, and the distinction is not
+pedantry — the two forms have opposite rules here, so an instinct carried across from partnerships
+lands wrong.**
+
+| | **Form 1065 — partnership** | **Form 1120-S — this company** |
+|---|---|---|
+| Per-owner capital on the K-1 | ✅ **Required — K-1 Item L, on the TAX BASIS, since 2020** | ⛔ **Does not exist. No capital-account reporting at all** |
+| Where owner basis is reported | the partner tracks it; Item L reports tax capital | 🔑 **Form 7203, with the shareholder's own 1040** |
+| Purchase price reaching INSIDE basis | only via a **§754 election** → a **§743(b)** adjustment, tracked as a **partner-specific** adjustment outside the ordinary capital accounts | ⛔ **No mechanism exists — elective or otherwise** |
+
+🔑 **AND THE ANSWER WOULD STILL BE NO ON A 1065.** Buying a partnership interest for 165,000 does
+**not** put 165,000 on the partnership's balance sheet: **the buyer steps into the SELLER's capital
+account**, whatever it was. ⛔ **So "it is an S corp" is not the reason — the reason is that outside
+basis is never entity-level on any form.** *(The S-corp fact only removes the §754 route that would
+have been the one partial exception.)*
 
 #### ⑤ Where the 165,000 IS recorded
 
@@ -705,7 +752,8 @@ this.*
 | 7 | ✅ **CLOSED — no §336(e)/§338 election exists** *(FOLLOW-UPS row 64)* | §6H |
 | 8 | ✅ **CLOSED — 2024 was a loss year as filed**, on the K-1s themselves | §4E |
 | 9 | 🔴 **Did the SELLERS sweep the company's cash at closing, 18 Apr 2024?** §7 of the agreement entitled them to. If they did it is a 2024 DISTRIBUTION, and the filed return shows none. **The bank statement answers it** | §6I③ · §4B |
-| 10 | 🛑 **The 80,501 and the 82,500 do not reconcile to the 165,000 contract price — 1,999 short**, and they are different kinds of figure. Name whose is whose before either is used | §6I④ |
+| 10 | ✅ **CLOSED — the split is 82,500 EACH**, confirmed by Julia 2026-08-28; the earlier 80,501 was misspoken. Ties to the contract exactly | §6I④ |
+| 10a | ✅ **ANSWERED — the 82,500 bases do NOT go on the balance sheet.** Outside basis is the OWNER's attribute, never entity-level — on an 1120-S **or** a 1065 | §6I④a · §6I④b |
 | 11 | ✅ **ANSWERED — how to book the 2024 purchase: you don't.** No company cash moved, so there is no company entry; what exists is a reclassification inside equity that nets to zero *(Julia, 2026-08-28)* | §6I |
 | 12 | ✅ **CLOSED — the 7,924 is line 16 Advertising and is fully supported.** *(Julia, 2026-08-28. The paper first read it as an unsupported line 12.)* | §3D correction box |
 
