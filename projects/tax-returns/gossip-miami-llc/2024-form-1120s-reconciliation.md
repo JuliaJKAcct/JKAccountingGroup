@@ -516,6 +516,126 @@ which is NOT in the copy we hold.** ⛔ **Ask the client for it before deciding 
 > not.** _(See the [`shopify-year-end-inventory` skill](../../../.claude/skills/shopify-year-end-inventory/) for
 > why that pattern keeps recurring.)_
 
+### 6I · 🛑 HOW TO BOOK THE 2024 PURCHASE IN QUICKBOOKS — asked 2026-08-28, and the answer is "you don't"
+
+**Julia's question, verbatim in substance:** *she is creating two equity accounts to reflect the
+2024 membership-interest purchase; **80,501** was paid from a personal account and **82,500** was
+paid off by the other member — **what is the debit, and what are we offsetting?** There needs to be
+a membership-interest portion and a cash contribution, but cash never moved from the business
+account.*
+
+🔑 **The premise is the answer: because no company cash moved, there is no company entry.** A
+journal entry requires something of the *company's* to change, and on this transaction nothing did.
+
+| Test | 2024 share purchase |
+|---|---|
+| Was the company a party? | ⛔ **No** — five individuals were |
+| Did the company receive an asset? | ⛔ **No** |
+| Did the company incur a liability? | ⛔ **No** |
+| Did company cash move? | ⛔ **No** *(Julia's own observation, and it is the whole point)* |
+
+⚠️ **The debit is being sought because a credit to equity is already assumed. The credit is wrong
+too.** Nobody contributed 165,000 to this company. **Any debit that balances it has to be an asset
+the company owns — Goodwill or "Investment" — and it owns neither.** This is §6D's error arriving
+through a different door, and it must be refused the same way.
+
+#### ① The entry that DOES belong — a reclassification inside equity, netting to zero
+
+```
+Dr   Member's Equity — Sapa                     X₁
+Dr   Member's Equity — Reaboconi                X₂
+Dr   Member's Equity — Turcan                   X₃
+     Cr   Member's Equity — Makalendra               (X₁+X₂+X₃) × 50%
+     Cr   Member's Equity — Bogopolska               (X₁+X₂+X₃) × 50%
+```
+
+**Total debits = total credits = the company's existing equity. Net balance-sheet effect: ZERO.**
+
+🔴 **X is NOT 165,000.** It is whatever the old members' capital actually held on **18 April 2024**,
+and for this company that is a **small** number: the 2025 books open on **book retained earnings of
+986.68**, with all equity swept into that one line (§8A convention in the sister paper).
+
+⚠️ **And there may be nothing to reclassify at all.** The 2025 ledger carries **one pooled `Draw`
+account with no per-member detail** *(sister paper §6 finding 10)*. If 2024 was kept the same way,
+there are no old member capital accounts to debit — in which case **open the two new equity
+accounts and leave the balances where they are.** Cleaner, and equally correct.
+
+#### ② The "cash contribution" — the three tests
+
+**A contribution is defined by cash or property actually REACHING the company.** Money moving from a
+member's personal account to the *sellers'* personal accounts is that member buying something for
+themselves.
+
+| If… | Entry | Amount |
+|---|---|---|
+| A buyer paid a **company** expense or liability personally | `Dr Expense/Liability · Cr Member's Equity — [name]` | what they paid |
+| A buyer put money **into the business account** | `Dr Cash · Cr Member's Equity — [name]` | what went in |
+| Neither | ⛔ **no entry** | — |
+
+✅ **Already settled against this transaction, twice:** the client file records that Julia's
+recollection of a contribution *"as part of the loan that is in the books"* had **the amount right
+and the label wrong** — it is purchase price paid to the 2024 sellers — and the 2025 ledger shows
+the **shareholder-loan account opening at zero.**
+
+#### ③ 🔴 THE ONE PLACE A REAL 2024 ENTRY MAY BE HIDING — and it is in the agreement
+
+**§7 of the 2024 agreement, verbatim:** *"Buyer will acquire all fixed and current assets, accounts
+receivable. **The only exception is the cash and funds in all Company business accounts on the
+Closing Date**, any trailing income from sales prior to the Closing Date."*
+
+🔑 **The sellers were entitled to sweep the company's cash at closing.** If they did, that **is** a
+company transaction and a real 2024 entry:
+
+```
+Dr   Member's Equity — [old members]      (amount swept)
+     Cr   Cash                                 (amount swept)
+```
+
+⚠️ **It is a DISTRIBUTION** — it hits 2024's AAA and Schedule M-2, **both of which the filed return
+shows as nil** (§4B). 🛠️ **The bank statement around 18 April 2024 answers it**, and it is a far
+better use of the effort than trying to book the 165,000.
+
+#### ④ 🛑 The two figures given do not reconcile — settle this BEFORE posting anything
+
+| | |
+|---|---:|
+| "Paid from their personal account" | **80,501** |
+| "Paid off from the other member" | **82,500** |
+| **Sum** | **163,001** |
+| **Contract price (§1 of the agreement)** | **165,000** |
+| **Gap** | 🔴 **1,999** |
+
+⚠️ **They are also different KINDS of number.** **82,500 is a CONTRACT OBLIGATION** and the
+agreement gives **each** member exactly that — Bogopolska `2,500 deposit + 50,000 + 30,000`;
+Makalendra `2,500 deposit + 80,000 in 36 instalments of 2,222`. **80,501 looks like a TRACED
+PAYMENT.** ⛔ **Taking one of each understates the deal by 1,999 and does not say whose is whose.**
+🛠️ **Name both — which member, and which kind of figure — before either is used.**
+
+#### ⑤ Where the 165,000 IS recorded
+
+**Each buyer's stock basis — 82,500 each — on their personal Form 7203.** It decides whether the
+2024 K-1 loss was deductible and it is what the 2025 sale is measured against (§6F). 🔑 **It is the
+most valuable thing to come out of this question, and it lives on their 1040, not in QuickBooks.**
+
+#### ⑥ ⛔ Push-down accounting — the one legitimate-sounding route, and why it is refused
+
+**ASC 805-50 does permit an acquiree to restate its books to the acquirer's cost on a change of
+control.** ⛔ **It is a GAAP financial-reporting election with NO tax effect** — the company's tax
+basis is unchanged either way (§6E) — so it would create **book goodwill that cannot be amortized
+for tax** and a **permanent book/tax difference to reconcile on Schedule M-1 forever.** For a salon
+LLC with no external financial-statement users it buys nothing and costs a great deal. **Do not.**
+
+#### ⑦ ✅ THE TIE-OUT THAT PROVES THE ENTRY IS RIGHT — and an operational warning
+
+**After the entry, TOTAL EQUITY must be exactly what it was before**, and **31 December 2024 book
+equity must still land at 986.68** — because that is what the 2025 books open on.
+
+> 🔴 **THIS IS NOT THEORETICAL. The 2025 return is in preparation right now**, on branch
+> `claude/gossip-miami-tax-2025-l8dtr9`, with **Schedule L built on that 986.68 opening** and a
+> **27,770 book-versus-AAA gap** it already has to explain (sister paper §3.6, finding 4).
+> ⛔ **Posting 165,000 into 2024 equity breaks that return and blows the gap out to roughly
+> 193,000.** 🛠️ **If any 2024 equity entry is actually made, tell whoever is finishing 2025.**
+
 ### 6H · ✅ What reading the 2025 agreement in full CLOSED
 
 ✅ **There is NO §336(e) election, no §338(h)(10), and no deemed-asset-sale language anywhere in
@@ -584,7 +704,10 @@ this.*
 | 6 | 🟡 Is `Entertainment Meals` really entertainment? Up to 1,922 may not be deductible | §3D② |
 | 7 | ✅ **CLOSED — no §336(e)/§338 election exists** *(FOLLOW-UPS row 64)* | §6H |
 | 8 | ✅ **CLOSED — 2024 was a loss year as filed**, on the K-1s themselves | §4E |
-| 9 | ✅ **CLOSED — the 7,924 is line 16 Advertising and is fully supported.** *(Julia, 2026-08-28. The paper first read it as an unsupported line 12.)* | §3D correction box |
+| 9 | 🔴 **Did the SELLERS sweep the company's cash at closing, 18 Apr 2024?** §7 of the agreement entitled them to. If they did it is a 2024 DISTRIBUTION, and the filed return shows none. **The bank statement answers it** | §6I③ · §4B |
+| 10 | 🛑 **The 80,501 and the 82,500 do not reconcile to the 165,000 contract price — 1,999 short**, and they are different kinds of figure. Name whose is whose before either is used | §6I④ |
+| 11 | ✅ **ANSWERED — how to book the 2024 purchase: you don't.** No company cash moved, so there is no company entry; what exists is a reclassification inside equity that nets to zero *(Julia, 2026-08-28)* | §6I |
+| 12 | ✅ **CLOSED — the 7,924 is line 16 Advertising and is fully supported.** *(Julia, 2026-08-28. The paper first read it as an unsupported line 12.)* | §3D correction box |
 
 ---
 
