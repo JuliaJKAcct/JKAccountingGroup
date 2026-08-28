@@ -190,7 +190,7 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (50 so far — see the Clients index below)
+└── clients/               ← one file per client (51 so far — see the Clients index below)
 ```
 
 ## Clients
@@ -221,6 +221,7 @@ client-intelligence/
 | Mobilesource Corp | [`clients/mobilesource-corp.md`](./clients/mobilesource-corp.md) | Maria | In progress — Maria's process guide integrated |
 | Margate Plumbing Inc | [`clients/margate-plumbing.md`](./clients/margate-plumbing.md) | Maria | In progress — Maria's process guide integrated |
 | MAGNUM 152, INC | [`clients/magnum-152.md`](./clients/magnum-152.md) | Maria | In progress — Maria's process guide integrated |
+| Andrii Kravchenko | [`clients/andrii-kravchenko.md`](./clients/andrii-kravchenko.md) | Julia | ⚠️ **Prospect — created 2026-08-28** from the 2024 returns Julia supplied; **no engagement letter, no Double account, not in the weekend sweep.** 🔴 **Eighteen entities behind one 1040** (1120 + 1065 + 8 on Schedule C + **8 Forms 5471**), **eleven rentals**, FBAR in 3 countries. ⛔ **Two blockers sit upstream of any preparation:** his **U.S. tax residency is unestablished** while the 1120 answers "no foreign owner ≥25%" and files **no Form 5472** ($25k/form), and **an LLC filed Form 1120 with no Form 8832 seen**. A 77-item document request is published |
 | Andrii Tymchenko | [`clients/andrii-tymchenko.md`](./clients/andrii-tymchenko.md) | Firm | Left the US 2025-05-31 → **1040-NR (MFS)**; dormant company; a 1095-A requested against Medicaid cover |
 | MAYS EXPRESS SERVICE LLC | [`clients/mays-express.md`](./clients/mays-express.md) | Firm | **Former** — business closed 2025-12-31. FDOR account closure **refused and unresolved**; note **491838** |
 | MEGABAI | [`clients/megabai.md`](./clients/megabai.md) | Firm | **Former** — company closed, **no Double account**, so no case note. Reemployment-tax closure unconfirmed |
