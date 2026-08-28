@@ -16,8 +16,8 @@ Julia asked a narrow question — *where does the QuickBooks 2024 P&L disagree w
 Form 1120-S, and by how much on which line* — and then a second one about the **two purchase
 agreements**. The answer to the first is that the return and the books **reconcile to the cent**,
 and the reconciliation has exactly **two** components: **$84,823 of `Cash Sales` that was never
-reported**, and a **net $764 of deduction differences** whose small size hides three much larger
-offsetting movements. The answer to the second is that **neither agreement was an asset
+reported**, and a **net $764 of deduction differences**, of which **$600 is a single book account
+that never reached the return** and the rest is ordinary rounding and timing. The answer to the second is that **neither agreement was an asset
 purchase** — both transferred **the entity itself** — which is why nothing appears on the books,
 and why **nothing should**. 🔑 **The two halves meet in one place:** the reason to care about the
 missing cash sales is not the 2024 return alone; it is that restating 2024 turns a reported **loss**
@@ -63,8 +63,8 @@ question here, and none of them is resolved:
 
 🔑 **What this changes in practice:** the **cash-sales finding (§3A) survives all three** — an
 84,823 account cannot be a basis difference, a re-categorization or a timing item, and it is
-**absent from the return entirely**. Everything in §3D, by contrast, should be read as *"these two
-records differ"*, not *"the return is wrong"*, until a ledger is looked at.
+**absent from the return entirely**. The five small differences in §3D④, by contrast, should be
+read as *"these two records differ"*, not *"the return is wrong"*, until a ledger is looked at.
 
 ---
 
@@ -120,11 +120,15 @@ taken up below.
 | Return line | Caption | Amount |
 |---|---|---:|
 | **11** | Rents | **39,126** |
-| **12** | Taxes and licenses | **7,924** |
+| **16** | **Advertising** | **7,924** |
 | **20** | Other deductions *(Statement #2)* | **197,077** |
 | **21** | **Total deductions** | **244,127** |
 
 ✅ Footed: `39,126 + 7,924 + 197,077 = 244,127`.
+
+⛔ **Line 12 (Taxes and licenses) is BLANK**, as are lines 7, 8, 9, 10, 13, 14, 15, 17, 18 and 19.
+🔑 **The 7,924 is on line 16, not line 12 — and the difference matters**, because line 16 has a book
+account behind it and line 12 would not have. See the correction box in §3D.
 
 **Statement #2 — Other deductions, as filed** *(the statement's own header reads "LINE 20", which
 is correct for 2024: line 19 is the Form 7205 energy-efficient-buildings deduction)*:
@@ -150,14 +154,14 @@ is correct for 2024: line 19 is the Form 7205 energy-efficient-buildings deducti
 
 | Book account | Books 2024 | Where it went on the return | Return | **Difference** |
 |---|---:|---|---:|---:|
-| Advertising | 6,001.85 | 🔴 **nowhere — line 16 is BLANK and it is absent from Statement #2** | **0** | 🔴 **(6,001.85)** |
+| Advertising | 6,001.85 | **line 16 Advertising** — *combined with Entertainment Meals* | **7,924** | *see below* |
 | Auto Expenses | 35.37 | Stmt #2 · AUTOMOBILE AND TRUCK | 35 | (0.37) |
 | Bank Fees | 1,482.63 | Stmt #2 · BANK CHARGES | 1,443 | **(39.63)** |
 | Contractors | 156,855.72 | Stmt #2 · INDEPENDENT CONTRACTOR | 157,455 | **+599.28** |
-| Entertainment Meals | 1,922.32 | 🔴 **nowhere** | **0** | 🔴 **(1,922.32)** |
+| Entertainment Meals | 1,922.32 | **line 16 Advertising** — *combined with Advertising* | *↑* | **(0.17) combined** |
 | Insurance | 1,000.80 | Stmt #2 · INSURANCE | 1,001 | +0.20 |
 | Internet | 583.48 | Stmt #2 · INTERNET | 583 | (0.48) |
-| Legal and Professional Services | 600.00 | 🔴 **nowhere** | **0** | 🔴 **(600.00)** |
+| Legal and Professional Services | 600.00 | 🔴 **NOWHERE — the only book account absent from the return** | **0** | 🔴 **(600.00)** |
 | Rent | 39,126.22 | **line 11 Rents** | 39,126 | (0.22) |
 | Sales Tax | 4,540.25 | Stmt #2 · SALES TAX PAID | 4,540 | (0.25) |
 | Salon Expenses | 6,701.69 | Stmt #2 · SALON EXPENSES | 7,417 | **+715.31** |
@@ -165,39 +169,69 @@ is correct for 2024: line 19 is the Form 7205 energy-efficient-buildings deducti
 | Supplies & materials | 15,210.80 | Stmt #2 · SUPPLIES | 14,979 | **(231.80)** |
 | Travel | 321.15 | Stmt #2 · TRAVEL | 321 | (0.15) |
 | Utilities | 6,363.39 | Stmt #2 · UTILITIES | 6,685 | **+321.61** |
-| — | **0** | 🔴 **line 12 Taxes and licenses — NO book account behind it** | **7,924** | 🔴 **+7,924** |
 | **TOTAL** | **243,363.40** | | **244,127** | **+763.60** |
+
+> ✅ **`Advertising 6,001.85 + Entertainment Meals 1,922.32 = 7,924.17` → line 16 as filed, `7,924`.**
+> **Seventeen cents.** The preparer folded the two book accounts onto one line.
 
 ---
 
 ### 3D · The same table, grouped by root cause
 
+> ### 🔴 CORRECTION — the first version of this section got line 16 wrong, and Julia caught it
+>
+> **This paper originally read the 7,924 as line 12, *Taxes and licenses*, with no book account
+> behind it**, and built a finding on it: that the return claimed 12,464 of taxes against 4,540 in
+> the books, and that totalling the 2024 DR-15s was the most urgent thing to do. ⛔ **All of that
+> was wrong.** The figure is on **line 16, Advertising**, and it is **fully supported**.
+>
+> 🔑 **How it was settled, so nobody has to take anybody's word for it.** The filed pages carry no
+> form fields — the amounts and the captions are separate text runs — so the two were matched by
+> **coordinate**. On page 1 the caption `16 Advertising` sits at y=385.4 and the `7,924` at
+> y=385.2; `12 Taxes and licenses` at y=433.4 has **nothing on its row**. The 3-year comparison
+> worksheet says the same thing independently: `Advertising` at y=457.4 → `7,924` at y=457.2,
+> `Taxes and licenses` at y=505.4 → empty.
+>
+> ⚠️ **The lesson, and it is the reusable half:** the figures were read in *content-stream order*,
+> which on an IRS form is **not** row order — the captions are laid down in one pass and the
+> amounts in another. **Reading a flattened tax-form PDF by stream order will silently mis-assign
+> an amount to the wrong line.** 🛠️ **Match by y-coordinate, and corroborate on a second page that
+> carries the same figure.**
+>
+> ✅ **Nothing in §3A, the bridge, or any total moved.** The correction changes *which* deduction
+> lines the difference sits on, not the reconciliation.
+
 **① Matched to the dollar — 7 accounts, rounding only.** Auto · Insurance · Internet · Rent ·
 Sales Tax · Software · Travel. 🔑 **These are the evidence that the preparer WAS working from a
-version of these books** — seven accounts agreeing to the cent is not coincidence. It makes the
-three missing accounts and the phantom line 12 harder to explain, not easier.
+version of these books** — seven accounts agreeing to the cent is not coincidence.
 
-**② In the books, NOT on the return — 8,524.17 of deductions simply dropped.**
+**② Combined, not dropped — Advertising + Entertainment Meals → line 16.**
 
-| | Books | Why it stands out |
-|---|---:|---|
-| Advertising | 6,001.85 | ⚠️ **The return has a dedicated line 16 for Advertising and left it blank**, and Statement #2 has no advertising row either. It was not reclassified — it vanished |
-| Entertainment Meals | 1,922.32 | 🟡 **Partly explainable**: entertainment has been non-deductible since 2018 and meals are generally 50%. A preparer disallowing it entirely is defensible if the account is truly entertainment — **but no Schedule M-1 was filed to show the add-back**, so nothing on the return says that is what happened |
-| Legal and Professional Services | 600.00 | ⚠️ No line 16-style home for it; it belongs in Other deductions and is not there |
+| | Books |
+|---|---:|
+| Advertising | 6,001.85 |
+| Entertainment Meals | 1,922.32 |
+| **Sum** | **7,924.17** |
+| **Line 16 as filed** | **7,924** |
 
-**③ On the return, NOT in the books — 7,924 with nothing behind it.**
-🔴 **Line 12 "Taxes and licenses" — 7,924 — has no counterpart in the 2024 books at all.** And it
-sits *alongside* a separate **SALES TAX PAID 4,540** inside Statement #2, so the return claims
-**12,464** of taxes where the books show **4,540**. Two readings, and they are very different:
-- ✅ **Benign:** it is the **sales tax actually remitted on the DR-15s for 2024**, taken from the
-  filings rather than the books — in which case the books understate that expense, and the
-  Statement #2 line is a *different* 4,540 (something else the client paid). 🛠️ **Testable today:**
-  the Drive `Sales tax` folder holds **2024-Q3 and 2024-Q4** DR-15s and the Vagaro exports behind
-  them; the FDOR records-request response lists everything on the account.
-- 🔴 **Not benign:** it is unsupported, or it double-counts the sales tax. **7,924 of deduction on a
-  return that is otherwise short of income is the wrong direction to guess about.**
+✅ **Seventeen cents.** ⛔ **So neither account was dropped**, and the return's deduction side is
+far better supported than the first read suggested: **13 of the 15 book expense accounts map onto
+it, two of them combined to within a rounding error.**
 
-⛔ **Do not resolve this by reasoning. Pull the 2024 DR-15s and add them up.**
+🟠 **But the combination hides something worth checking.** **Entertainment has been 100%
+non-deductible since 2018** (§274(a)), and business meals are generally limited to **50%**. An
+account literally named `Entertainment Meals`, deducted **in full** and **inside an unrelated
+caption**, is exactly where that would go unnoticed — and **no Schedule M-1 was filed**, so nothing
+on the return discloses it. 🛠️ **Look at what is actually in that account before assuming either
+way** — if it is client refreshments in the salon it may be fine; if it is entertainment, up to
+1,922 is not deductible. ⚠️ **Small money, but it is the kind of thing that is only ever found by
+opening the account.**
+
+**③ In the books, NOT on the return — ONE account, 600.00.**
+🔴 **`Legal and Professional Services`, 600.00, is the only book expense account that does not
+appear anywhere on the return** — not on a numbered line, not in Statement #2. ⚠️ **Small, and it
+runs *against* the taxpayer** (a deduction not taken). It is noted for completeness, not as an
+exposure.
 
 **④ Same account, different number — five, netting to +1,364.77 in the return's favour.**
 Contractors **+599.28** · Salon Expenses **+715.31** · Utilities **+321.61** · Supplies **(231.80)** ·
@@ -206,12 +240,17 @@ explain** — a December invoice accrued in the books but not paid until January
 the start of the year. **All five are small and they point both ways, which is what a genuine
 timing difference looks like.** ✅ **Leave them.** They are not worth a ledger request on their own.
 
-**⑤ The bottom line the grouping produces.** The return's deductions are **763.60 higher** than the
-books — but that near-agreement is an accident of three large movements cancelling:
-`−8,524.17 (dropped) + 7,924.00 (phantom) + 1,363.77 (net timing) = +763.60`.
-⚠️ **Anyone who compares only the totals will conclude the expenses agree. They do not.**
+**⑤ The taxes position, stated plainly because the first version of this paper got it backwards.**
+✅ **Line 12 Taxes and licenses is BLANK, and the ONLY tax deduction on the return is the
+`SALES TAX PAID 4,540` inside Statement #2 — which matches the book `Sales Tax` account of
+4,540.25 to the cent.** ⛔ **There is no double-counted tax, no unsupported 7,924, and no reason to
+go and total the 2024 DR-15s for this purpose.**
 
----
+**⑥ The bottom line the grouping produces.** `−0.17 (combined) − 600.00 (Legal) + 1,364.77 (timing)
+− 1.00 (rounding on the seven matched) = +763.60`. 🔑 **The deduction side of this return is
+essentially right.** ⚠️ **Which sharpens §3A rather than softening it:** somebody who mapped
+fifteen expense accounts this carefully did not *overlook* the income — **they were never given
+it.**
 
 ### 3E · The `Reconciliation Discrepancies` of 3,908.59
 
@@ -329,6 +368,7 @@ in cash is entirely consistent, because she bought a **165,000** company and her
 | Form 2553 attached, **"INCLUDES LATE ELECTION(S) FILED PURSUANT TO REV. PROC. 2013-30"** | page 1, item G / EF attachment |
 | Schedule K line 18 income reconciliation **(26,783)** | Schedule K |
 | Schedule L, M-1 — **blank** | pages 4 and 5 |
+| **Deduction lines carrying an amount: 11, 16, 20 only.** 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19 all **blank** | page 1 |
 | No Form 1125-A, no Form 4562, no Form 1125-E, no state income return | — |
 | Preparer **CFO INTERNATIONAL LLC**, EIN 93-2901295, signed **03-04-2025** | page 1, paid-preparer block |
 | Officer signing — **Yuliana Varavva Bogopolska, President** | page 1, signature block |
@@ -515,15 +555,20 @@ honestly.
 
 ### 🛠️ What to do first, in order, before the decision is even ripe
 
-1. **Pull the 2024 DR-15s from Drive and total them.** Settles the phantom 7,924 (§3D③) — the one
-   item where the return may be *over*stating a deduction. **Free, today.**
-2. **Get the 2024 general ledger.** The P&L alone cannot say whether the cash sales were journalled
-   in the same way 2025's were, nor what the 3,909 reconciliation plug is.
-3. **Establish who filed 2024** — us or CFO International. Client file §1, still open.
+1. **Get the 2024 general ledger.** 🔑 **This is now the first item.** The P&L alone cannot say
+   whether the cash sales were journalled the way 2025's were, what the 3,909 reconciliation plug
+   is, or what is actually inside `Entertainment Meals` (§3D②).
+2. **Establish who filed 2024** — us or CFO International. Client file §1, still open. 🛑 **It
+   decides whether this is our correction to make or a conversation about someone else's return.**
+3. **Ask whether 2024 Forms 1099-NEC were issued** (§4D) — the return answered **Yes**.
 4. **Ask the client for the 2024 agreement's missing `Schedule 1`.** Settles §6G.
-5. **Ask whether 2024 Forms 1099-NEC were issued** (§4D).
-6. **Then, and only then, put the amendment question to the client** — with the personal-return
+5. **Then, and only then, put the amendment question to the client** — with the personal-return
    consequence stated up front, because that is the part that will decide it for them.
+
+⛔ **What is NO LONGER on this list: totalling the 2024 DR-15s.** The first version of this paper
+made it item 1, on a misreading of line 16 as line 12. **The sales tax on the return matches the
+books to the cent** (§3D⑤). *The DR-15s remain worth pulling for the FDOR matter — just not for
+this.*
 
 ---
 
@@ -531,29 +576,34 @@ honestly.
 
 | # | Item | Where it goes |
 |---|---|---|
-| 1 | 🔴 The **7,924 on line 12** — supported by the DR-15s, or not? | §3D③ · **do this first** |
-| 2 | 🔴 **Amend 2024, or not** — Julia's call, after items 1–5 of §7 | §7 |
+| 1 | 🔴 **Amend 2024, or not** — Julia's call, after items 1–4 of §7 | §7 |
+| 2 | 🔴 The **2024 general ledger** — the cash-sales mechanism, the 3,909 plug, and what is in `Entertainment Meals` | §3E · §3D② · **do this first** |
 | 3 | 🟠 Were **2024 Forms 1099-NEC** filed? The return says yes | §4D |
-| 4 | 🟠 The 2024 agreement's **`Schedule 1` fixed-asset list** — ask the client | §6G |
-| 5 | 🟠 Each shareholder's **2024 stock basis**, computed properly from 82,500 | §4B · §4E · §6F |
-| 6 | 🟡 The **2024 general ledger** — the cash-sales mechanism and the 3,909 plug | §3E |
+| 4 | 🟠 Each shareholder's **2024 stock basis**, computed properly from 82,500 | §4B · §4E · §6F |
+| 5 | 🟠 The 2024 agreement's **`Schedule 1` fixed-asset list** — ask the client | §6G |
+| 6 | 🟡 Is `Entertainment Meals` really entertainment? Up to 1,922 may not be deductible | §3D② |
 | 7 | ✅ **CLOSED — no §336(e)/§338 election exists** *(FOLLOW-UPS row 64)* | §6H |
 | 8 | ✅ **CLOSED — 2024 was a loss year as filed**, on the K-1s themselves | §4E |
+| 9 | ✅ **CLOSED — the 7,924 is line 16 Advertising and is fully supported.** *(Julia, 2026-08-28. The paper first read it as an unsupported line 12.)* | §3D correction box |
 
 ---
 
 ## 9 · What was verified, and what was not
 
 **✅ Verified directly from the documents in hand:**
-every figure in §3 (read off the filed return and the P&L export, and footed twice) · the
-accounting-method and Schedule B answers, read from the checkbox coordinates on the filed pages ·
-Statement #2's composition and total · both K-1 amounts · Schedule 1.2(c)'s 42,030, re-added
-line by line and agreeing with the schedule's own TOTAL · the absence of any §336(e)/§338 language.
+every figure in §3 (read off the filed return and the P&L export, and footed twice) · 🔑 **every
+amount matched to its form line by COORDINATE, and corroborated on the 3-year comparison worksheet
+— after the first pass mis-assigned line 16 by reading in content-stream order (§3D correction
+box)** · the accounting-method and Schedule B answers, read from the checkbox coordinates on the
+filed pages · Statement #2's composition and total · both K-1 amounts · Schedule 1.2(c)'s 42,030,
+re-added line by line and agreeing with the schedule's own TOTAL · the absence of any
+§336(e)/§338 language.
 
 **⚠️ NOT verified, and stated as the search that produced it:**
 - **No 2024 general ledger, balance sheet or bank statement was available to this session.** Where
-  this paper says a difference "has no book account behind it", that means **it is not in the 2024
-  P&L column supplied** — not that it is absent from the client's records.
+  this paper says an account is or is not in "the books", it means **the 2024 column of the P&L
+  export supplied** — not the client's records as a whole. That applies in particular to the
+  `Legal and Professional Services` 600 of §3D③ and to what sits inside `Entertainment Meals`.
 - **Whether the cash-sales journal pattern ran in 2024** is inferred from the **2025** ledger. It
   is a strong inference, not a reading of 2024.
 - **The direction of the §3D④ differences** is untested — see §2.
