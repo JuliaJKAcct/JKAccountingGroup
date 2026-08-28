@@ -479,6 +479,17 @@ table.links td .ph{color:var(--body); white-space:nowrap;}
   html.js .reveal.in{opacity:1; transform:none;}
 }
 
+/* PRINT / PDF — force every .reveal visible.
+   The entrance above hides .reveal until an IntersectionObserver adds .in on
+   scroll. Printing never scrolls, so any section below the first screen would
+   come out BLANK — silently, with the page numbering intact. Found 2026-08-27
+   when a headless print of a briefing dropped whole sections. This rule is the
+   guard: it must sit AFTER the entrance block to win, and it is why a printed
+   SOP is complete. */
+@media print{
+  html.js .reveal, html.js .reveal.in{opacity:1 !important; transform:none !important;}
+}
+
 /* ============================================================
    LINE REFERENCE — "where does this number come from?"
    A stack of form lines: the line number, what it is, and — on
