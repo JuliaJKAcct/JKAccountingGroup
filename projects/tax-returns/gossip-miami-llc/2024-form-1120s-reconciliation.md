@@ -753,6 +753,72 @@ no tax-election article at all. 🔑 **This closes FOLLOW-UPS row 64**, which as
 noted the agreement was in the firm's hands unread. ✅ **The consequence it was worried about — a
 tax year ending on the disposition date with a return due end of January 2026 — does not arise.**
 
+### 6J · 🔴 THE LEASE SECURITY DEPOSIT — both agreements address it, in OPPOSITE directions
+
+**Asked by Julia 2026-08-28: does either contract mention a security deposit for rent, and how is it
+handled on the sale? ✅ Both do, and they do not agree with each other.**
+
+| | **2024 — §6, last sentence** | **2025 — §6.2 Lease** |
+|---|---|---|
+| The words | *"Any advanced rent and **deposits for the lease will belong to the Buyer at closing**."* | *"…to the extent that the Company has heretofore deposited any amounts as **security, prepaid rent or any other amounts held by the landlord** on behalf of the Company **or the Seller**, **Buyer shall pay that amount to Seller at Closing**."* |
+| Who ends up with it | the **Buyer** | the **Buyer** |
+| Did the buyer pay for it? | ⛔ **No — folded into the 165,000** | 🔴 **YES — SEPARATELY, on top of the 126,000** |
+| Amount stated? | ⛔ no | ⛔ no — *"that amount"*, by reference |
+
+#### ① 🔴 THE 2025 SALE PRICE IS NOT 126,000
+
+**Everything the buyer paid the sellers in connection with acquiring the interests is AMOUNT
+REALIZED.** So the sellers' proceeds are **`126,000 + the §6.2 deposit payment`**, and **the capital
+loss computed in §6F shrinks by exactly that amount.** 🛠️ **It belongs on the sellers' Form 8949 and
+nobody has it yet.**
+
+#### ② 🔴 IT LOOKS LIKE A MISSING ASSET ON THE 2025 SCHEDULE L — and that return is in flight
+
+**The 2025 balance sheet as currently built shows total assets 35,522** — cash 5,621 plus other
+current assets 29,901 *(the undeposited cash sales)*. ⛔ **There is no security-deposit asset on it,
+and the phrase does not appear anywhere in [`2025-form-1120s.md`](./2025-form-1120s.md).**
+
+⚠️ **But §6.2 says in terms that *"the Company has heretofore deposited any amounts as security."*
+If the Company did, that is a COMPANY ASSET** — *Other assets · Deposits* — **that has never been on
+the books and should be on Schedule L.** 🛠️ **This is for whoever is finishing 2025 on
+`claude/gossip-miami-tax-2025-l8dtr9`, not for this paper to change.**
+
+#### ③ ⚠️ THE 2025 AGREEMENT CONTRADICTS ITSELF — the buyer both RECEIVES it and PAYS for it
+
+- **§1.2(b)** puts *"prepaid expenses and **deposits**"* inside the **Included Assets** that come with
+  the deal.
+- **§6.2** makes the buyer **pay the Seller separately** for the same thing.
+
+🔑 **§6.2 is the specific, operative provision and governs.** ⚠️ **But the document argues with
+itself, and a reader quoting §1.2(b) reaches the opposite answer** — the same template sloppiness as
+*"the tutoring center"* and the asset-deal boilerplate in §8.2 (§6C).
+
+#### ④ 🔑 "…ON BEHALF OF THE COMPANY **OR THE SELLER**" — and that phrase points at Victoria Sapa
+
+**The client file records that the premises lease is in SAPA's name** and that the parties did not
+want it redone. **§6.2 deliberately covers amounts held on behalf of the Company *or the Seller*.**
+
+| If the deposit was funded by… | §6.2 is… | The money is… |
+|---|---|---|
+| **the Company** | additional consideration for the interests | **amount realized** to the sellers — **and a company asset missing from Schedule L** (② above) |
+| **Sapa personally** | reimbursement of her own funds | **her money back** — not a company asset, and not necessarily proceeds |
+
+⛔ **Two very different answers, and neither agreement settles it.** 🛠️ **The Commercial Lease dated
+16 March 2023 and the 2025 closing statement are where both the funder and the AMOUNT live.**
+
+#### ⑤ 🔵 A DIFFERENT SENSE OF THE WORD, found in the same search — and it upgrades an inference
+
+**§6.1(a):** *"Seller shall **close all Company bank accounts and ensure no deposits or funds remain
+prior to Closing**."*
+
+⚠️ **That is BANK deposits, not the security deposit** — but it turns the sister paper's *"the sale
+covenant **suggests** all company accounts were emptied before closing"* into an **EXPRESS
+COVENANT**, not an inference. 🔑 **It strengthens the reading that the 29,901 of undeposited cash
+sales was taken by the owners and is really a DISTRIBUTION** *(sister paper §4 decision 8, still
+open)*.
+
+---
+
 ---
 
 ## 7 · 🛑 SO WHAT SHOULD ACTUALLY HAPPEN — the decision, which is Julia's
@@ -805,6 +871,7 @@ this.*
 
 | # | Item | Where it goes |
 |---|---|---|
+| 0 | 🔴 **THE LEASE SECURITY DEPOSIT — get the amount and the funder** from the 16 Mar 2023 lease and the 2025 closing statement. It raises the sellers' 2025 proceeds, and may be a company asset missing from the 2025 Schedule L | §6J |
 | 1 | 🔴 **Amend 2024, or not** — Julia's call, after items 1–4 of §7 | §7 |
 | 2 | 🔴 The **2024 general ledger** — the cash-sales mechanism, the 3,909 plug, and what is in `Entertainment Meals` | §3E · §3D② · **do this first** |
 | 3 | 🟠 Were **2024 Forms 1099-NEC** filed? The return says yes | §4D |
