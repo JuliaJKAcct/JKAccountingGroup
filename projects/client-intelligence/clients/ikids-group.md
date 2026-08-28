@@ -69,7 +69,7 @@ the actual details.
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | QuickBooks Online (via Double) | Bookkeeping ledger | _(pending — Drive link)_ | Managed through Double |
-| **The client's AP mailbox — Gmail** | Where the client's **vendor bills and payment confirmations arrive** (water, insurance, permits, the environmental report…). **The firm has access to it** and works it **every month** — see §4 | _(password pending — client's Drive vault / Double)_ | `ap.ikidsllc@gmail.com` — a **company AP mailbox**, not a person's inbox, and **firm-controlled** (Julia is the account-recovery contact) _(Gmail, 2026-07-23)_. It is the **only** place several of these bills exist: nothing is forwarded to us and the client sends nothing |
+| **The client's AP mailbox — Gmail** | Where the client's **vendor bills and payment confirmations arrive** (water, insurance, permits, the environmental report…). **The firm has access to it** and works it **every month** — see §4 | _(password pending — client's Drive vault / Double)_ | `ap.ikidsllc@gmail.com` — ✅ **confirmed by Julia 2026-08-28** against a near-miss variant without the `llc`, which is the form the address is misremembered in; it is a **company AP mailbox**, not a person's inbox, and **firm-controlled** (Julia is the account-recovery contact) _(Gmail, 2026-07-23)_. It is the **only** place several of these bills exist: nothing is forwarded to us and the client sends nothing |
 | Business bank accounts (2 — different banks) | Operating cash | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm has signer/payment access to pay vendors from the client's account _(Google Drive, 2026-08-01)_. In practice **one of the two carries effectively all the activity**; the second is close to dormant. Both were on the QuickBooks feed until it dropped _(QuickBooks via Double, 2026-08-14)_ |
 | FPL | Electric utility for the build-out site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
 | City of Fort Lauderdale — utility billing | Water bill for the site | [Drive folder](https://drive.google.com/drive/folders/1_RBDmfPaRsV0mhvzZl-XNjRG8zqgjQfn) | Firm-managed account _(Google Drive, 2026-08-01)_ |
@@ -471,7 +471,11 @@ the actual details.
   near-miss** — she wrote it without the `llc`. Five Gmail threads spanning 2025-12 → 2026-07,
   including QuickBooks' own notifications and Julia's sent mail, all carry the §3 address and
   **nothing at all uses the shorter one**, so the form was filled with the §3 address and the
-  discrepancy put to her rather than corrected silently. ⏳ Waiting only on signatures. _(Worked for
+  discrepancy put to her rather than corrected silently — ✅ **and she confirmed the §3 address the
+  same day: "you have correct gmail, I was wrong."** That is the whole value of asking instead of
+  quietly using the address given: had the form gone out with the shorter one, the supplier's
+  invoices would have bounced or vanished, and nobody would have connected the silence to a typo
+  months later. ⏳ Waiting only on signatures. _(Worked for
   Julia.)_
 
 ### Information still needed
