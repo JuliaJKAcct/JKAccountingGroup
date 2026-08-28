@@ -190,13 +190,14 @@ client-intelligence/
 │   ├── email-template.html  ← the on-brand, email-safe report template the routine fills
 │   └── sweep-health-review.md ← post-run checklist for a Saturday report, + the standing
 │                                diagnosis of how this sweep fails (and two retracted findings)
-└── clients/               ← one file per client (50 so far — see the Clients index below)
+└── clients/               ← one file per client (51 so far — see the Clients index below)
 ```
 
 ## Clients
 
 | Client | File | Owner | Status |
 |---|---|---|---|
+| Anton (laundry portfolio buyer) | [`clients/anton-laundry-buyer.md`](./clients/anton-laundry-buyer.md) | Julia | **Prospect — Financial Due Diligence & Purchase Analysis proposal drafted 2026-08-28** (the firm's first consulting-type engagement): buyer-side review of a five-location FL laundry portfolio whose adjusted earnings rest almost entirely on seller add-backs. Hourly with a not-to-exceed budget + deposit; 🛑 never describe it with assurance words. Tax planning is the promised follow-on. Open: last name, email, entity |
 | 4TUKAS, LLC | [`clients/4tukas.md`](./clients/4tukas.md) | Julia | **Prospect — first-year engagement letter drafted 2026-08-27.** FL property LLC, four Lithuanian non-resident members (25% each): 1065 + four K-1s, a 1040-NR and W-7 per member, itemized per name. Starts after the property purchase closes. ⛔ EIN 37-2243148 assigned, CP575B in hand — never file another SS-4. Open: §1446/8804-8805 withholding scope, tax-planning line, Manager's email |
 | Atman Parts | [`clients/atman-parts.md`](./clients/atman-parts.md) | Lilian | Active — TX sales-tax SOP written ([`atman-parts-tx-sales-tax.md`](../sops/atman-parts-tx-sales-tax.md)); open: who actually files the sales tax, `Sch C` vs `1120-S` (ask Julia), the franchise position |
 | Artur Tseretsian | [`clients/artur-tseretsian.md`](./clients/artur-tseretsian.md) | Lilian | In progress — 1040 Schedule C categorization (2023–2025) |
