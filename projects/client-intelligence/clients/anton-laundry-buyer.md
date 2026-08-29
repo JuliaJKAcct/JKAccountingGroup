@@ -82,10 +82,13 @@ the actual details.
 - **Applies?** Not engaged
 
 ### Income tax
-- **Applies?** Not engaged. ⚠️ **He has already asked for TAX PLANNING after the analysis** —
-  deliberately excluded from the due-diligence scope (listed in its Not Included) and
-  positioned as the follow-on engagement. If he proceeds with the purchase, the planning
-  engagement (entity choice, purchase-price allocation, RE/business split) is the next quote
+- **Applies?** Not engaged. ⚠️ **Tax structuring is now INSIDE the engagement's scope**
+  (Julia's scope brief, 2026-08-29, reversing the earlier exclusion): entity choice, the
+  RE/business split, Form 8594 and depreciation planning are performed by us **after the
+  deal parameters are set**, at the same hourly rate, explicitly outside the due-diligence
+  hour estimate. Cost segregation: we select and coordinate the specialist firm (client
+  pays it directly, post-closing). A monthly engagement (payroll on Gusto + I-9
+  administration) is the intended follow-on if he buys
 
 ### Licenses & other filings
 - **Applies?** n/a at this stage
@@ -114,9 +117,15 @@ the actual details.
   municipal engineering determinations of impact/tap/sewer fees (we analyze actual bills
   and identified fees only), immigration/work-authorization checks (payroll, W-2s,
   940/941 and worker classification reviewed from a tax perspective only), a formal
-  real-estate appraisal, and the engineering-based cost segregation study (we advise on
-  whether it makes sense; a specialist firm performs it). Their results, when delivered,
-  are folded into our analysis, illustrated in the document with a hypothetical
+  real-estate appraisal. Refined 2026-08-29 by Julia's scope brief: each exclusion names
+  the specialist type in parentheses (her table: distributor service department,
+  laundromat-savvy mechanical/plumbing contractor, Florida M&A/RE attorney + title
+  company, civil/utility engineer, Florida Certified General Appraiser); equipment leases
+  sit with the transaction attorney; the immigration exclusion narrowed to **legal
+  opinions only** (I-9 administration and roster-to-W-2/941 reconciliation are OUR work,
+  as the employer's authorized representative); and **cost segregation left the exclusions**
+  (we select and coordinate the firm; the client pays it directly). Their results, when
+  delivered, are folded into our analysis, illustrated with a hypothetical
   equipment-replacement CapEx. Reuse this page as the boundary standard for any future
   due-diligence engagement. The engagement still depends on seller cooperation: the
   signed 4506-C and consent for utility and municipal billing inquiries
@@ -136,11 +145,13 @@ the actual details.
   credited in full, balance billed on report delivery, and written approval before
   exceeding the budget — protection against poor seller records or sprawling
   bank/merchant streams. Reuse this shape for future due-diligence quotes
-- **The follow-on is now a named structuring consultation** (his own request, sharpened by
-  Julia's methodology brief): after the analysis — acquisition-entity choice (LLC / S-corp /
-  C-corp), splitting the real estate and the operating business across companies, and the
-  Form 8594 purchase-price allocation (weight toward equipment, away from goodwill and
-  land). Excluded from this scope, quoted separately — do not let it slip
+- **The structuring phase is inside this engagement, sequenced after the analysis** (Julia,
+  2026-08-29, reversing the earlier separate-agreement framing): acquisition-entity choice
+  (LLC / S-corp / C-corp), the RE/business split across companies, the Form 8594
+  allocation (weight toward equipment, away from goodwill and land) and depreciation
+  planning — performed by us at the same hourly rate once the deal parameters are set,
+  and deliberately **outside** the due-diligence hour estimate. The monthly engagement
+  (Gusto payroll + I-9 administration) is the follow-on if he buys — do not let it slip
 - The proposal document is bespoke (no tool template exists yet for consulting engagements);
   if due-diligence work recurs, it should become the third template family
 
@@ -188,6 +199,19 @@ the actual details.
   payroll review vs work-authorization checks; financial RE analysis vs appraisal) and the
   incorporate-their-results paragraph with a hypothetical replacement-CapEx example.
   Environmental history moved wholly out of scope. Redelivered as PDF + the same artifact
+- 2026-08-29 (later) — **Julia's internal scope brief (a ChatGPT-composed PDF she uploaded,
+  §7 addressed to Claude) + voice corrections, applied and redelivered.** Three reversals
+  of earlier framing, all hers: structuring/8594/depreciation planning INTO scope (same
+  rate, after deal parameters, outside the DD hour estimate); cost segregation
+  JK-coordinated (we source the firm, client pays it directly, post-closing per her
+  "post-factum" correction); I-9 administration is our work as authorized representative
+  (only immigration legal opinions excluded) — she plans Gusto payroll under a monthly
+  follow-on. Also: balance sheets, gas and non-laundry usage in the utility test,
+  insurance in operating costs, her exact specialist titles on the exclusions page,
+  equipment leases under the transaction attorney, Phase II mention, and boundaries
+  extended (not a legal opinion / engineering inspection / environmental assessment /
+  appraisal). One garbled dictation left open: who prepares employment contracts
+  (attorney vs us) — flagged back to her, not written into the document
 
 ### Outstanding items (CI-only — never in the SOP)
 
