@@ -189,6 +189,27 @@ the actual details.
   incorporate-their-results paragraph with a hypothetical replacement-CapEx example.
   Environmental history moved wholly out of scope. Redelivered as PDF + the same artifact
 
+- 2026-08-29 — **Coin-laundry benchmark reference built (firm asset), and two findings that bear on this
+  engagement.** Julia asked for the profitability, margin and KPI statistics for a South Florida coin
+  laundry. Delivered as a private artifact and committed generically to the new
+  [`acquisition-diligence`](../../acquisition-diligence/) project — the cost-structure bands, the KPI set
+  grouped by the question each answers, the three revenue-reasonableness tests with a **live water-method
+  calculator**, county utility inputs, valuation multiples, each figure graded Firm / Directional / Not
+  obtained. **No deal figures are in it.** Two findings apply directly here:
+  **(1) ⚠️ the target is not in South Florida.** Bradenton, Palmetto and Ruskin sit in **Manatee and
+  Hillsborough counties**. Commercial water + sewer is roughly **$7.49 per 1,000 gallons** in
+  unincorporated Manatee against roughly **$25 in Miami-Dade's upper tier** — about **3×**. Since utilities
+  are 20–30% of a laundromat's revenue, benchmarking these stores against South Florida costs would make
+  the seller's utility line look understated when it is not, and the same error inverts the water-method
+  test. Use the county the store is actually in. *(The City of Bradenton bills on its own schedule,
+  separate from the county — obtain it if any location sits inside city limits.)*
+  **(2) Florida repealed sales tax on commercial rent effective 1 Oct 2025.** Any financials covering
+  periods before that date carry a rent-tax line (2.0% by then, 4.5% earlier) that **will not recur** — a
+  real forward-looking adjustment on any **leased** location, and one a seller working from historical
+  statements may not have made. Irrelevant on the owned real estate, which is one more reason the property
+  and the operating business are modelled apart. **Both to be confirmed against the actual bills and leases
+  once the seller's package arrives** — the benchmark is a screen, not evidence
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
@@ -209,6 +230,11 @@ the actual details.
 - [ ] Anton's last name, email, and whether he buys personally or through an entity
 - [ ] Whether a lender is involved (the report's third-party restriction will come up)
 - [ ] Timing: when the seller's full financial package becomes available
+- [ ] **Which utility bills each of the five locations** — unincorporated Manatee County, the City of
+      Bradenton (its own schedule) or Hillsborough for the Ruskin site. This decides the rate used in the
+      water-method test, and the schedules differ enough to change the conclusion
+- [ ] **Leased or owned, location by location** — the commercial-rent-tax repeal adjustment applies only
+      to the leased ones, and rent as a share of revenue is only a meaningful benchmark where rent is paid
 
 ## 7. Links
 

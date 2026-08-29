@@ -1,0 +1,786 @@
+<title>Florida Coin Laundry Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ============ Atlas tokens (brand/design-system) ============ */
+:root{
+  --teal-50:#EAF1F2; --teal-100:#CFE0E2; --teal-200:#A6C4C8; --teal-300:#6F9DA4;
+  --teal-400:#3F767F; --teal-500:#245C66; --teal-600:#1A4C55; --teal-700:#163F47;
+  --teal-800:#123841; --teal-900:#0D2A31; --teal-950:#091F24;
+  --bronze-100:#EFDDC6; --bronze-200:#E1C195; --bronze-300:#CFA268;
+  --bronze-400:#B98545; --bronze-500:#9C6A39; --bronze-600:#7E5430;
+  --greige-50:#F6F3EC; --greige-100:#EDE9DF; --greige-150:#E5E0D4; --greige-200:#DAD4C6;
+  --greige-300:#C5BEAD; --greige-400:#A19986; --greige-500:#6F6857; --greige-700:#3C372E;
+
+  --bg-page:#F6F3EC; --surface:#FFFFFF; --paper:#FBF8F2;
+  --ink:#0D2A31; --body:#22201A; --muted:#6F6857;
+  --brand:#123841; --accent:#9C6A39; --link:#7E5430;
+  --mast-bg:#123841; --mast-edge:#123841;
+  --border:#C5BEAD; --border-subtle:#DAD4C6;
+  --band:#A6C4C8; --band-core:#3F767F;
+
+  --ok:#1F7049; --ok-bg:#E3F1EA;
+  --warn:#8A6111; --warn-bg:#F6ECD2;
+  --bad:#8C2A2A; --bad-bg:#F6E3DF;
+  --info:#214668; --info-bg:#E3EAF3;
+
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --shadow:0 1px 2px rgba(9,38,44,.06), 0 6px 18px rgba(9,38,44,.07);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --maxw:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg-page:#0B2229; --surface:#12313A; --paper:#0F2A32;
+    --ink:#ECE6DA; --body:#DCD6C9; --muted:#9FB3B6;
+    --brand:#A6C4C8; --accent:#CFA268; --link:#CFA268;
+    --mast-bg:#071519; --mast-edge:#27505A;
+    --border:#27505A; --border-subtle:#1D444E;
+    --band:#245C66; --band-core:#6F9DA4;
+    --ok:#7CC9A0; --ok-bg:#12352A;
+    --warn:#E0B45E; --warn-bg:#3A2E12;
+    --bad:#E58C8C; --bad-bg:#3B1E1E;
+    --info:#8FB4D8; --info-bg:#152B3F;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --bg-page:#0B2229; --surface:#12313A; --paper:#0F2A32;
+  --ink:#ECE6DA; --body:#DCD6C9; --muted:#9FB3B6;
+  --brand:#A6C4C8; --accent:#CFA268; --link:#CFA268;
+  --mast-bg:#071519; --mast-edge:#27505A;
+  --border:#27505A; --border-subtle:#1D444E;
+  --band:#245C66; --band-core:#6F9DA4;
+  --ok:#7CC9A0; --ok-bg:#12352A;
+  --warn:#E0B45E; --warn-bg:#3A2E12;
+  --bad:#E58C8C; --bad-bg:#3B1E1E;
+  --info:#8FB4D8; --info-bg:#152B3F;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg-page); color:var(--body);
+  font-family:var(--sans); font-size:16.5px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(18px,4vw,36px)}
+h1,h2,h3,h4{font-family:var(--serif); color:var(--ink); letter-spacing:-.012em; text-wrap:balance; margin:0}
+h1{font-size:clamp(30px,4.6vw,46px); font-weight:600; line-height:1.1}
+h2{font-size:clamp(23px,2.9vw,31px); font-weight:600; line-height:1.18}
+h3{font-size:clamp(18px,2vw,21px); font-weight:600; line-height:1.3}
+h4{font-size:16px; font-weight:600}
+p{margin:0 0 1em; max-width:72ch; text-wrap:pretty}
+a{color:var(--link)}
+strong{font-weight:600; color:var(--ink)}
+.kicker{
+  font-family:var(--mono); font-size:11px; font-weight:500; text-transform:uppercase;
+  letter-spacing:.14em; color:var(--muted);
+}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums; font-feature-settings:"tnum"}
+
+/* ============ masthead ============ */
+.mast{
+  background:var(--mast-bg); color:#ECE6DA;
+  padding:clamp(30px,5vw,52px) 0 clamp(26px,4vw,40px);
+  border-bottom:1px solid var(--mast-edge);
+}
+.mast h1{color:#FFFFFF; max-width:20ch}
+.mast .kicker{color:#A6C4C8}
+.mast p{color:#D9D3C6; max-width:66ch; margin-top:.7em; margin-bottom:0}
+.mast-meta{
+  display:flex; flex-wrap:wrap; gap:8px 26px; margin-top:22px;
+  padding-top:18px; border-top:1px solid rgba(166,196,200,.28);
+  font-family:var(--mono); font-size:11.5px; text-transform:uppercase;
+  letter-spacing:.1em; color:#9FB3B6;
+}
+.mast-meta b{color:#ECE6DA; font-weight:500}
+
+/* ============ sections ============ */
+section{padding:clamp(34px,5vw,58px) 0; border-bottom:1px solid var(--border-subtle)}
+section:last-of-type{border-bottom:0}
+.sec-head{margin-bottom:22px}
+.sec-head .kicker{display:block; margin-bottom:9px}
+.sec-head p{margin-top:.6em; margin-bottom:0; color:var(--muted)}
+.lede{font-size:17.5px}
+
+/* ============ callout ============ */
+.callout{
+  background:var(--paper); border:1px solid var(--border);
+  border-radius:15px; padding:clamp(18px,2.6vw,26px); box-shadow:var(--shadow);
+}
+.callout.flag{background:var(--warn-bg); border-color:color-mix(in srgb, var(--warn) 34%, transparent)}
+.callout h3{margin-bottom:.45em}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{
+  display:inline-block; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--warn);
+  border:1px solid color-mix(in srgb, var(--warn) 45%, transparent);
+  border-radius:999px; padding:3px 10px; margin-bottom:12px;
+}
+
+/* ============ two-up ============ */
+.duo{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); margin-top:20px}
+.panel{
+  background:var(--surface); border:1px solid var(--border-subtle);
+  border-radius:15px; padding:20px 22px;
+}
+.panel h4{margin-bottom:4px}
+.panel .big{font-family:var(--mono); font-size:26px; font-weight:600; color:var(--ink); letter-spacing:-.02em}
+.panel .sub{font-size:13.5px; color:var(--muted); line-height:1.45}
+
+/* ============ benchmark band chart ============ */
+.bands{margin-top:26px; background:var(--surface); border:1px solid var(--border-subtle); border-radius:15px; padding:clamp(16px,2.4vw,24px)}
+.bands-axis{
+  position:relative; height:20px; margin-left:var(--lbl); margin-right:var(--valw); margin-bottom:6px;
+  font-family:var(--mono); font-size:10.5px; color:var(--muted);
+}
+.bands-axis span{position:absolute; transform:translateX(-50%); top:0; white-space:nowrap}
+.brow{
+  display:grid; grid-template-columns:var(--lbl) 1fr var(--valw); align-items:center;
+  gap:0; padding:9px 0; border-top:1px solid var(--border-subtle);
+}
+.brow:first-of-type{border-top:0}
+.brow .blabel{font-size:14.5px; color:var(--ink); padding-right:14px; line-height:1.35}
+.brow .blabel small{display:block; color:var(--muted); font-size:12px; line-height:1.35}
+.btrack{position:relative; height:30px}
+.btrack::before{
+  content:""; position:absolute; left:0; right:0; top:50%; height:1px;
+  background:var(--border-subtle); transform:translateY(-50%);
+}
+.bband{
+  position:absolute; top:50%; transform:translateY(-50%); height:15px;
+  background:var(--band); border-radius:4px;
+}
+.bband.core{background:var(--band-core); height:15px; opacity:.95}
+.bval{
+  font-family:var(--mono); font-size:11.5px; font-weight:500; color:var(--ink);
+  white-space:nowrap; padding-left:10px; text-align:right;
+}
+.bands{--lbl:clamp(120px,26%,215px); --valw:66px}
+@media (max-width:620px){
+  .brow{grid-template-columns:1fr var(--valw); gap:1px 0}
+  .bands{--lbl:0}
+  .bands-axis{margin-left:0}
+  .brow .blabel{padding-right:0; grid-column:1/-1}
+}
+
+/* ============ tables ============ */
+.tscroll{overflow-x:auto; margin-top:20px; border:1px solid var(--border-subtle); border-radius:14px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:14.5px}
+caption{text-align:left; padding:14px 18px 0; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+th,td{text-align:left; padding:11px 18px; border-top:1px solid var(--border-subtle); vertical-align:top}
+thead th{
+  border-top:0; background:var(--paper); font-family:var(--mono); font-weight:600;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  position:sticky; top:0;
+}
+tbody tr:hover{background:color-mix(in srgb, var(--band) 11%, transparent)}
+td.n{font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink)}
+td b{color:var(--ink)}
+
+/* ============ pills ============ */
+.pill{
+  display:inline-block; font-family:var(--mono); font-size:10px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:999px;
+  white-space:nowrap;
+}
+.pill.firm{background:var(--ok-bg); color:var(--ok)}
+.pill.dir{background:var(--warn-bg); color:var(--warn)}
+.pill.none{background:var(--bad-bg); color:var(--bad)}
+.pill.info{background:var(--info-bg); color:var(--info)}
+
+/* ============ calculator ============ */
+.calc{
+  margin-top:24px; background:var(--surface); border:1px solid var(--border);
+  border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+}
+.calc-head{padding:20px 22px 16px; border-bottom:1px solid var(--border-subtle); background:var(--paper)}
+.calc-head h3{margin-bottom:4px}
+.calc-head p{margin:0; font-size:14px; color:var(--muted)}
+.calc-body{display:grid; grid-template-columns:1fr; gap:0}
+@media (min-width:860px){.calc-body{grid-template-columns:1.15fr .85fr}}
+.calc-in{padding:20px 22px}
+.calc-out{padding:20px 22px; background:var(--paper); border-top:1px solid var(--border-subtle)}
+@media (min-width:860px){.calc-out{border-top:0; border-left:1px solid var(--border-subtle)}}
+
+fieldset{border:0; padding:0; margin:0 0 18px}
+legend{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); padding:0; margin-bottom:9px;
+}
+.f{display:flex; align-items:center; gap:10px 12px; margin-bottom:9px; flex-wrap:wrap}
+.f label{flex:1 1 155px; font-size:14px; line-height:1.35}
+.f label small{display:block; color:var(--muted); font-size:12px}
+input[type=number],select{
+  font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:14px;
+  width:100px; padding:7px 9px; border:1px solid var(--border); border-radius:8px;
+  background:var(--surface); color:var(--ink); transition:border-color .16s var(--ease), box-shadow .16s var(--ease);
+}
+select{width:auto; min-width:0; max-width:100%; flex:1 1 190px; font-family:var(--sans)}
+input[type=number]{max-width:100%}
+@media (max-width:470px){
+  .f{align-items:flex-start}
+  .f label{flex:1 1 100%}
+  input[type=number],select{width:100%; flex:1 1 100%}
+}
+input[type=number]:hover,select:hover{border-color:var(--band-core)}
+input[type=number]:focus-visible,select:focus-visible{
+  outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+.mixgrid{display:grid; grid-template-columns:1fr 74px 84px; gap:7px 10px; align-items:center}
+.mixgrid .mh{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.mixgrid input{width:100%}
+.mixgrid .ml{font-size:13.5px}
+
+.res{margin-bottom:16px}
+.res-row{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:7px 0; border-top:1px solid var(--border-subtle); font-size:14px}
+.res-row:first-of-type{border-top:0}
+.res-row .rv{font-family:var(--mono); font-variant-numeric:tabular-nums; font-weight:500; color:var(--ink); white-space:nowrap}
+.verdict{border-radius:12px; padding:15px 17px; margin-top:4px}
+.verdict .vh{font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px}
+.verdict .vb{font-size:14px; line-height:1.5; margin:0}
+.verdict.ok{background:var(--ok-bg)} .verdict.ok .vh{color:var(--ok)}
+.verdict.warn{background:var(--warn-bg)} .verdict.warn .vh{color:var(--warn)}
+.verdict.bad{background:var(--bad-bg)} .verdict.bad .vh{color:var(--bad)}
+.verdict.info{background:var(--info-bg)} .verdict.info .vh{color:var(--info)}
+.gauge{height:8px; border-radius:999px; background:var(--border-subtle); overflow:hidden; margin:12px 0 4px}
+.gauge i{display:block; height:100%; background:var(--band-core); border-radius:999px; transition:width .3s var(--ease)}
+
+ul.tight{margin:0 0 1em; padding-left:1.15em}
+ul.tight li{margin-bottom:.42em; max-width:72ch}
+ul.tight li::marker{color:var(--band-core)}
+.foot{padding:30px 0 44px; color:var(--muted); font-size:13.5px}
+.foot p{max-width:78ch}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important; animation-duration:.01ms!important}
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <span class="kicker">JK Accounting Group · Due-diligence reference</span>
+    <h1>Florida Coin Laundry Benchmarks</h1>
+    <p>The yardstick for reading a laundromat's numbers: what the cost structure should look like, which KPIs decide the deal, and the three independent ways to test whether reported revenue is real.</p>
+    <div class="mast-meta">
+      <span>Compiled <b>29 Aug 2026</b></span>
+      <span>Markets <b>South Florida · Tampa Bay–Sarasota</b></span>
+      <span>Basis <b>Published industry + utility data</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ===================== GEOGRAPHY ===================== -->
+<section>
+  <div class="callout flag">
+    <span class="tag">Read this before using any number below</span>
+    <h3>"South Florida" and the Bradenton–Palmetto–Ruskin corridor are not one market</h3>
+    <p>Those towns sit in <strong>Manatee and Hillsborough counties</strong> — the Tampa Bay–Sarasota metro, roughly 200 miles from Miami. That distinction is not pedantry here, because the single largest controllable cost in a laundromat is water and sewer, and it is set county by county.</p>
+    <p style="margin-bottom:0">On the published schedules, high-volume commercial water + sewer runs about <strong class="num">$7.49</strong> per 1,000 gallons in unincorporated Manatee County against roughly <strong class="num">$25</strong> per 1,000 gallons in Miami-Dade's upper tier — <strong>on the order of three times the cost for the same wash</strong>. Benchmarked against South Florida utility costs, a Bradenton store's utility line looks impossibly low; benchmarked the other way, a Miami store looks broken. Both readings would be wrong. Everything below is therefore given for both markets.</p>
+  </div>
+</section>
+
+<!-- ===================== COST ANATOMY ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Where the money goes</span>
+    <h2>The cost structure, as a share of gross revenue</h2>
+    <p class="lede">Laundromats are a utility-and-occupancy business with a thin labor layer — not a labor business. Margin is won or lost on two lines, and both are visible from outside the company.</p>
+  </div>
+
+  <div class="bands" role="img" aria-label="Benchmark ranges as a percentage of gross revenue: utilities 20 to 30 percent, rent and occupancy 15 to 25 percent, labor 0 to 25 percent depending on model, repairs and maintenance 3 to 6 percent, insurance supplies and admin 5 to 10 percent, owner earnings 20 to 35 percent.">
+    <div class="bands-axis" id="axis"></div>
+    <div id="bandrows"></div>
+  </div>
+  <p style="font-size:13px;color:var(--muted);margin-top:10px">Darker segment = the range most stores land in. Lighter extension = the tail that still occurs, with a reason attached. Percentages are of <em>gross</em> revenue.</p>
+
+  <div class="duo">
+    <div class="panel">
+      <h4>Utilities — the swing factor</h4>
+      <div class="big num">20–30%</div>
+      <p class="sub">Modern high-efficiency equipment can hold this near <span class="num">15%</span>. Equipment past its service life pushes it to <span class="num">35–40%</span>. A store reporting under <span class="num">15%</span> in a high-rate county is either revenue-overstated or paying some utilities off-book.</p>
+    </div>
+    <div class="panel">
+      <h4>Owner earnings (SDE)</h4>
+      <div class="big num">20–35%</div>
+      <p class="sub">The band well-run stores occupy. Reaching it depends far more on rent and utility rates than on operating skill — which is why the same store is a good buy on one side of a county line and not the other.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KPIs ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">The metric set</span>
+    <h2>The KPIs, grouped by the question each one answers</h2>
+    <p>A KPI list that isn't organized by question becomes a checklist nobody acts on. These are the four questions a buyer is actually asking.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>1 · Is the store busy enough?</caption>
+      <thead><tr><th>Metric</th><th>How to compute</th><th>Benchmark</th><th>Reads as</th></tr></thead>
+      <tbody>
+        <tr><td><b>Turns per day (TPD)</b></td><td>Cycles run ÷ washers ÷ days</td><td class="n">3.8 top-load<br>5.1 front-load</td><td>&lt;3 weak · 4 average · 5+ strong. The industry's primary operating metric.</td></tr>
+        <tr><td><b>Revenue per washer / month</b></td><td>Self-service revenue ÷ washers</td><td class="n">Derive from TPD<br>× vend price</td><td>Normalizes stores of different size. Compare across the five locations.</td></tr>
+        <tr><td><b>Revenue per sq ft / year</b></td><td>Gross revenue ÷ leased sq ft</td><td class="n">Store 1,000–5,000 sq ft<br>(~2,200 typical)</td><td>Flags a store paying rent on floor area it doesn't monetize.</td></tr>
+        <tr><td><b>Vend price realization</b></td><td>Wash revenue ÷ cycles</td><td class="n">$2.00–$10.00<br>by machine size</td><td>Below the local going rate means pricing power was never taken — an upside, or a sign the location can't hold price.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>2 · Is the reported revenue real? <span style="text-transform:none;letter-spacing:0">— the three independent tests, detailed below</span></caption>
+      <thead><tr><th>Test</th><th>Independent source</th><th>Catches</th></tr></thead>
+      <tbody>
+        <tr><td><b>Water-consumption method</b></td><td>Utility billing history</td><td>Revenue that cannot physically have been produced by the water the store bought.</td></tr>
+        <tr><td><b>Card + coin reconciliation</b></td><td>Card processor settlements</td><td>A cash share that moves inversely to card volume, or a coin ratio that drifts month to month.</td></tr>
+        <tr><td><b>Bank-deposit analysis</b></td><td>Bank statements</td><td>Reported revenue never deposited — and deposits that aren't revenue.</td></tr>
+        <tr><td><b>IRS transcript match</b></td><td>Form 4506-C, filed with the IRS</td><td>An offering memorandum that disagrees with what was filed with the government. Obtain transcripts directly, never the seller's own copies.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>3 · Is the margin real?</caption>
+      <thead><tr><th>Metric</th><th>Benchmark</th><th>What breaks it</th></tr></thead>
+      <tbody>
+        <tr><td><b>Utilities % of revenue</b></td><td class="n">20–30%</td><td>Under 15% → revenue overstated or utilities incomplete. Over 35% → equipment at end of life.</td></tr>
+        <tr><td><b>Rent + occupancy % of revenue</b></td><td class="n">15–25%</td><td>Above 25% the margin is structurally impaired regardless of operations. Owned real estate changes the whole calculation.</td></tr>
+        <tr><td><b>Labor % of revenue</b></td><td class="n">0–10% unattended<br>15–25% attended / WDF</td><td>An "unattended" store with attendant hours in the payroll records, or the reverse.</td></tr>
+        <tr><td><b>Repairs &amp; maintenance</b></td><td class="n">3–6%</td><td>Suppressed R&amp;M ahead of a sale is deferred CapEx handed to the buyer.</td></tr>
+        <tr><td><b>Add-backs as % of SDE</b></td><td class="n">Scrutinize above ~30%</td><td>Loan payments, equipment purchases and "income added back" are not owner perks — they are usually not add-backs at all.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>4 · Is the asset real?</caption>
+      <thead><tr><th>Metric</th><th>Benchmark</th><th>Why it decides price</th></tr></thead>
+      <tbody>
+        <tr><td><b>Equipment age vs service life</b></td><td class="n">10–15 yr life</td><td>Machines past 12 years are a replacement reserve the buyer funds, not an asset they receive.</td></tr>
+        <tr><td><b>Annual CapEx vs reserve</b></td><td class="n">Reserve ≈ replacement<br>cost ÷ remaining life</td><td>A store with no CapEx line for three years has been harvested.</td></tr>
+        <tr><td><b>Lease term remaining</b></td><td class="n">10 yr+ preferred</td><td>Equipment is bolted to a location. A short tail means the buyer's leverage at renewal is zero.</td></tr>
+        <tr><td><b>UCC-1 filings</b></td><td>Nil at closing</td><td>Equipment financing that survives closing. Review the financing; the release confirmation is the attorney's.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== WATER METHOD ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Revenue test 1</span>
+    <h2>The water method, made computable</h2>
+    <p class="lede">Water is the one input a laundromat cannot fake: it arrives through a metered pipe and a third party bills for it. Every wash consumes a knowable quantity, so the utility bill sets a physical ceiling on how much washing can possibly have happened — and therefore on revenue.</p>
+  </div>
+
+  <p>Work it backwards from the bill. Net the water down to what the washers actually used, convert gallons into cycles, price the cycles, and add the dryer share. The result is what the store <em>could</em> have earned. Compare that with what it says it earned.</p>
+
+  <div class="calc">
+    <div class="calc-head">
+      <h3>Water-implied revenue</h3>
+      <p>Defaults are placeholders for a mid-size store. Replace them with the subject's meter readings, machine list and posted vend prices.</p>
+    </div>
+    <div class="calc-body">
+      <div class="calc-in">
+        <fieldset>
+          <legend>From the utility bill</legend>
+          <div class="f">
+            <label for="gal">Water consumed <small>gallons per month, averaged over 12 months</small></label>
+            <input type="number" id="gal" value="188000" min="0" step="1000">
+          </div>
+          <div class="f">
+            <label for="nonwash">Non-wash water <small>restrooms, mop sink, irrigation</small></label>
+            <input type="number" id="nonwash" value="5" min="0" max="40" step="1">
+          </div>
+          <div class="f">
+            <label for="county">Rate basis <small>for the utility-cost cross-check</small></label>
+            <select id="county">
+              <option value="7.49">Manatee Co. — $7.49 / 1k gal</option>
+              <option value="25.12">Miami-Dade — ~$25.12 / 1k gal</option>
+              <option value="0">Enter from the bill…</option>
+            </select>
+          </div>
+          <div class="f" id="raterow" hidden>
+            <label for="rate">Combined water + sewer <small>$ per 1,000 gallons</small></label>
+            <input type="number" id="rate" value="12.00" min="0" step="0.01">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Machine mix</legend>
+          <div class="mixgrid">
+            <span class="mh">Washer size</span><span class="mh">Gal/turn</span><span class="mh">Vend $</span>
+            <span class="ml">20 lb</span><input type="number" class="mx" data-n="12" value="22" step="1" aria-label="Gallons per turn, 20 pound"><input type="number" class="mv" value="3.25" step="0.25" aria-label="Vend price, 20 pound">
+            <span class="ml">30 lb</span><input type="number" class="mx" data-n="10" value="31" step="1" aria-label="Gallons per turn, 30 pound"><input type="number" class="mv" value="4.50" step="0.25" aria-label="Vend price, 30 pound">
+            <span class="ml">40 lb</span><input type="number" class="mx" data-n="10" value="40" step="1" aria-label="Gallons per turn, 40 pound"><input type="number" class="mv" value="5.75" step="0.25" aria-label="Vend price, 40 pound">
+            <span class="ml">60 lb</span><input type="number" class="mx" data-n="8" value="62" step="1" aria-label="Gallons per turn, 60 pound"><input type="number" class="mv" value="8.00" step="0.25" aria-label="Vend price, 60 pound">
+          </div>
+          <div class="f" style="margin-top:12px">
+            <label for="count">Total washers <small>used to express the answer as turns per day</small></label>
+            <input type="number" id="count" value="40" min="1" step="1">
+          </div>
+        </fieldset>
+
+        <fieldset style="margin-bottom:0">
+          <legend>Conversion</legend>
+          <div class="f">
+            <label for="dryer">Dryer revenue <small>as % of wash revenue</small></label>
+            <input type="number" id="dryer" value="35" min="0" max="80" step="1">
+          </div>
+          <div class="f" style="margin-bottom:0">
+            <label for="reported">Reported revenue <small>$ per month, self-service only</small></label>
+            <input type="number" id="reported" value="33500" min="0" step="100">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="calc-out">
+        <div class="res" id="res"></div>
+        <div id="verdict"></div>
+        <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;line-height:1.5">Wash-dry-fold runs through the same machines and is already inside this figure. Pickup-and-delivery volume washed <em>at another site</em> is not — exclude it from "reported" before comparing.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="duo">
+    <div class="panel">
+      <h4>Reported materially <em>above</em> water-implied</h4>
+      <p class="sub">The physical ceiling was exceeded. Revenue is overstated, the machine or vend assumptions are wrong, or water is being bought on a meter you haven't been shown. This is the finding the test exists to produce.</p>
+    </div>
+    <div class="panel">
+      <h4>Reported materially <em>below</em> water-implied</h4>
+      <p class="sub">Not automatically good news. It commonly means cash leaving before it is recorded — so the buyer cannot pay for it, cannot finance against it, and inherits the tax exposure attached to it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCAL INPUTS ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Local cost inputs</span>
+    <h2>The rates that decide which market a store is in</h2>
+    <p>Utilities are 20–30% of revenue and are set locally. These are the published inputs; on a live engagement the actual bills govern, and the schedule is only the screen that tells you whether a bill looks right.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Water + sewer, commercial / non-residential</caption>
+      <thead><tr><th>Jurisdiction</th><th>Combined, high volume</th><th>Basis</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Manatee Co.</b> (unincorporated)<br><small style="color:var(--muted)">Palmetto / Ruskin corridor</small></td>
+          <td class="n">≈ $7.49 / 1,000 gal<br><small style="color:var(--muted)">$1.22 water + $6.27 sewer</small></td>
+          <td>Published county schedule, effective 1 Jun 2026</td>
+          <td><span class="pill firm">Firm</span></td>
+        </tr>
+        <tr>
+          <td><b>City of Bradenton</b></td>
+          <td class="n">Own schedule</td>
+          <td>Separate from the county — FY2026 resolution effective 1 Nov 2025</td>
+          <td><span class="pill dir">Obtain</span></td>
+        </tr>
+        <tr>
+          <td><b>Miami-Dade</b></td>
+          <td class="n">≈ $25.12 / 1,000 gal<br><small style="color:var(--muted)">upper tier + sewer</small></td>
+          <td>Inclining non-residential tiers billed per CCF (748 gal); FY2025-26</td>
+          <td><span class="pill dir">Directional</span></td>
+        </tr>
+        <tr>
+          <td><b>Broward Co.</b></td>
+          <td class="n">Not obtained</td>
+          <td>FY2026 schedule effective 1 Oct 2025 — the county's rate document was unreachable from this session's network</td>
+          <td><span class="pill none">Not obtained</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Energy</caption>
+      <thead><tr><th>Input</th><th>Rate</th><th>Note</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td><b>Electricity — FPL commercial</b></td><td class="n">≈ 12.87¢ / kWh</td><td>2026 estimate. GS-1 carries no demand charge; larger tariffs do, which changes the shape of the bill. FPL serves both markets, so electricity is roughly market-neutral.</td><td><span class="pill dir">Directional</span></td></tr>
+        <tr><td><b>Natural gas — Peoples Gas</b></td><td class="n">Base rates up Jan 2026</td><td>Roughly +2% total bill for GS-1, +3% for GS-4. Gas is the water-heating cost; per-therm distribution falls as the rate class rises, so mis-classed accounts overpay.</td><td><span class="pill dir">Directional</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout" style="margin-top:24px">
+    <span class="kicker" style="display:block;margin-bottom:8px">A pro-forma item that is easy to miss</span>
+    <h3>Florida repealed sales tax on commercial rent — effective 1 October 2025</h3>
+    <p>Florida was the only state that taxed business rent. The tax had already been stepped down to 2.0% before being repealed outright by the elimination of §212.031; local discretionary surtaxes on rent went with it.</p>
+    <p style="margin-bottom:0">The consequence for a deal reviewed in 2026: <strong>any financials covering periods before October 2025 carry a rent-tax line that will not recur.</strong> On a leased location that is a real, defensible, forward-looking adjustment — and one a seller working from historical statements may not have made. On an owned location it is irrelevant, which is one more reason the real estate and the operating business have to be modelled apart.</p>
+  </div>
+</section>
+
+<!-- ===================== VALUATION ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Pricing</span>
+    <h2>What the earnings are worth</h2>
+    <p>Laundromats trade on earnings, not revenue. A revenue multiple is a sanity check on the answer — never the method that produces it.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <thead><tr><th>Basis</th><th>Range</th><th>When it applies</th></tr></thead>
+      <tbody>
+        <tr><td><b>SDE multiple</b> — single store</td><td class="n">3.0–5.0×</td><td>The standard basis for a single Florida laundromat. Marketplace data across 855 sales (2021–2025) shows an average of 3.65× and a median of 3.50×, with 2025 the strongest reading in that window at 4.12×.</td></tr>
+        <tr><td><b>EBITDA multiple</b> — multi-store</td><td class="n">4.0–6.0×</td><td>Multi-location groups are normally priced on EBITDA rather than SDE, because no single owner's labor is being added back across five sites.</td></tr>
+        <tr><td><b>Revenue multiple</b></td><td class="n">0.3–0.5×</td><td>Cross-check only. A revenue multiple cannot distinguish a store with 22% utilities from one with 38%.</td></tr>
+        <tr><td><b>Real estate</b></td><td>Separate</td><td>Valued on its own cap rate and appraised independently. Do not let the business multiple absorb the property, or the buyer pays an earnings multiple for land.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="duo">
+    <div class="panel">
+      <h4>Florida market context</h4>
+      <div class="big num">~$949,500</div>
+      <p class="sub">Median asking price for an established Florida laundromat, against a range running from under $162,500 to well past $1.16M. Asking prices — not transaction prices.</p>
+    </div>
+    <div class="panel">
+      <h4>What moves the multiple</h4>
+      <p class="sub">Equipment age, lease term, card-system maturity and whether real estate is included account for swings above 25%. A store at the top of the range and one at the bottom can post identical revenue.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RED FLAGS ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Screening</span>
+    <h2>Numbers that oblige a second look</h2>
+    <p>None of these is a conclusion. Each is a question with a date attached to it.</p>
+  </div>
+  <div class="tscroll">
+    <table>
+      <thead><tr><th>Observation</th><th>The likely reason</th><th>What settles it</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Utilities &lt; 15% of revenue</td><td>Revenue overstated, or a utility account not in the package</td><td>Run the water method. Ask which meters serve the site and get 24 months of billing on each.</td></tr>
+        <tr><td class="n">Utilities &gt; 35% of revenue</td><td>Equipment at end of service life</td><td>Machine-by-machine age list; price the replacement reserve into the offer.</td></tr>
+        <tr><td class="n">Water-implied revenue below reported by &gt;10%</td><td>The physical ceiling was exceeded</td><td>Re-check gallons per turn against the actual model plates before treating it as a finding.</td></tr>
+        <tr><td class="n">Card share falling while revenue is flat</td><td>The cash half is carrying the story</td><td>Reconcile processor settlements against deposits, month by month.</td></tr>
+        <tr><td class="n">Add-backs &gt; 30% of SDE</td><td>Non-recurring items that recur</td><td>Take each add-back to source. Loan payments and equipment purchases are rarely legitimate.</td></tr>
+        <tr><td class="n">R&amp;M suppressed in the final year</td><td>Deferred maintenance dressed as margin</td><td>Compare the last twelve months against the prior three years.</td></tr>
+        <tr><td class="n">Rent &gt; 25% of revenue</td><td>Structural, not operational</td><td>Read the lease: term remaining, escalators, renewal options, who pays taxes and CAM.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== SOURCES ===================== -->
+<section>
+  <div class="sec-head">
+    <span class="kicker">Provenance</span>
+    <h2>How far each number can be pushed</h2>
+    <p>In a due-diligence report the difference between a figure that will hold up and one that is indicative matters more than the figure. Every benchmark above carries one of three grades.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <thead><tr><th>Grade</th><th>Meaning</th><th>Applies to</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill firm">Firm</span></td><td>Published by the issuing authority; citable in a report.</td><td>The Florida commercial-rent-tax repeal and its effective date; Manatee County's commercial water and sewer schedule; the existence and effective dates of the Broward and Bradenton schedules.</td></tr>
+        <tr><td><span class="pill dir">Directional</span></td><td>Consistent across independent secondary sources, but not read off the primary schedule or survey. Use to frame a range; do not quote as fact.</td><td>Miami-Dade's tiered commercial rates; FPL and Peoples Gas rates; the operating-expense bands; turns-per-day averages; gallons per turn; valuation multiples and the Florida median asking price.</td></tr>
+        <tr><td><span class="pill none">Not obtained</span></td><td>Searched for and not retrieved. Recorded as a gap, not as an absence.</td><td>Broward County's FY2026 commercial water and sewer figures, and the City of Bradenton schedule — both blocked from this session's network. The Coin Laundry Association and American Coin-Op survey pages were likewise unreachable, so their figures here arrive second-hand.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout" style="margin-top:24px">
+    <h3>What a benchmark can and cannot do</h3>
+    <p style="margin-bottom:0">Every range on this page is a <strong>screen</strong>. It tells you whether a reported number is plausible and where to point the next question — it is not evidence about this business. The evidence is the metered bill, the processor settlement, the bank statement and the IRS transcript. Where a benchmark and a document disagree, the document governs and the benchmark becomes the reason you looked.</p>
+  </div>
+</section>
+
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>JK Accounting Group</strong> · Internal due-diligence reference. Contains no client or transaction data. Compiled 29 August 2026 from published industry and utility sources; rate schedules and multiples move, so re-verify anything load-bearing before it goes into a client report.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- benchmark band chart ---------- */
+  var MAX = 40; // axis ceiling, % of revenue
+  var rows = [
+    {label:"Utilities",         sub:"water · sewer · gas · electric", lo:20, hi:30, tlo:15, thi:40},
+    {label:"Rent + occupancy",  sub:"leased premises",                lo:15, hi:25, tlo:8,  thi:30},
+    {label:"Labor",             sub:"unattended → attended / WDF",    lo:0,  hi:10, tlo:0,  thi:25},
+    {label:"Repairs & maint.",  sub:"excludes capital replacement",   lo:3,  hi:6,  tlo:2,  thi:10},
+    {label:"Insurance, supplies, admin", sub:"incl. card processing", lo:5,  hi:10, tlo:4,  thi:13},
+    {label:"Owner earnings",    sub:"SDE / net margin",               lo:20, hi:35, tlo:10, thi:40}
+  ];
+  var pc = function(v){ return (v / MAX * 100) + "%"; };
+
+  var axis = document.getElementById("axis");
+  if (axis) {
+    [0,10,20,30,40].forEach(function(t){
+      var s = document.createElement("span");
+      s.textContent = t + "%";
+      s.style.left = pc(t);
+      axis.appendChild(s);
+    });
+  }
+
+  var host = document.getElementById("bandrows");
+  if (host) {
+    rows.forEach(function(r){
+      var row = document.createElement("div"); row.className = "brow";
+
+      var lbl = document.createElement("div"); lbl.className = "blabel";
+      lbl.innerHTML = r.label + "<small>" + r.sub + "</small>";
+
+      var trk = document.createElement("div"); trk.className = "btrack";
+
+      var tail = document.createElement("div"); tail.className = "bband";
+      tail.style.left = pc(r.tlo); tail.style.width = pc(r.thi - r.tlo);
+
+      var core = document.createElement("div"); core.className = "bband core";
+      core.style.left = pc(r.lo); core.style.width = pc(r.hi - r.lo);
+
+      var val = document.createElement("span"); val.className = "bval";
+      val.textContent = r.lo + "–" + r.hi + "%";
+
+      trk.appendChild(tail); trk.appendChild(core);
+      row.appendChild(lbl); row.appendChild(trk); row.appendChild(val);
+      host.appendChild(row);
+    });
+  }
+
+  /* ---------- water-method calculator ---------- */
+  var $ = function(id){ return document.getElementById(id); };
+  var gal = $("gal"), nonwash = $("nonwash"), county = $("county"), rate = $("rate"),
+      raterow = $("raterow"), count = $("count"), dryer = $("dryer"),
+      reported = $("reported"), res = $("res"), verdict = $("verdict");
+
+  var mx = [].slice.call(document.querySelectorAll(".mx"));
+  var mv = [].slice.call(document.querySelectorAll(".mv"));
+
+  var money = function(n){
+    return "$" + Math.round(n).toLocaleString("en-US");
+  };
+  var num = function(el, dflt){
+    var v = parseFloat(el && el.value);
+    return isFinite(v) ? v : dflt;
+  };
+
+  function compute(){
+    var G       = num(gal, 0);
+    var nw      = Math.min(Math.max(num(nonwash, 0), 0), 90) / 100;
+    var washG   = G * (1 - nw);
+    var washers = Math.max(num(count, 1), 1);
+    var dRatio  = Math.max(num(dryer, 0), 0) / 100;
+    var rep     = num(reported, 0);
+
+    // Weighted average gallons-per-turn and vend price across the machine mix.
+    var totN = 0, sumG = 0, sumV = 0;
+    mx.forEach(function(el, i){
+      var n = parseFloat(el.getAttribute("data-n")) || 0;
+      var g = num(el, 0);
+      var v = num(mv[i], 0);
+      totN += n; sumG += n * g; sumV += n * v;
+    });
+    var avgG = totN ? sumG / totN : 0;
+    var avgV = totN ? sumV / totN : 0;
+
+    var turns    = avgG > 0 ? washG / avgG : 0;
+    var washRev  = turns * avgV;
+    var dryRev   = washRev * dRatio;
+    var implied  = washRev + dryRev;
+    var tpd      = turns / washers / 30.4;
+
+    var r = num(county, 0);
+    if (r === 0) r = num(rate, 0);
+    var waterCost = G / 1000 * r;
+    var waterPct  = implied > 0 ? waterCost / implied * 100 : 0;
+
+    var variance = implied > 0 ? (rep - implied) / implied * 100 : 0;
+
+    // --- results ---
+    res.innerHTML = "";
+    [
+      ["Water available to the washers", Math.round(washG).toLocaleString("en-US") + " gal"],
+      ["Weighted avg per turn", avgG.toFixed(1) + " gal · $" + avgV.toFixed(2)],
+      ["Implied cycles / month", Math.round(turns).toLocaleString("en-US")],
+      ["Implied turns per day", tpd.toFixed(2)],
+      ["Implied wash revenue", money(washRev)],
+      ["Implied dryer revenue", money(dryRev)],
+      ["Implied total / month", money(implied)],
+      ["Water + sewer cost", money(waterCost) + "  (" + waterPct.toFixed(1) + "% of implied)"]
+    ].forEach(function(p){
+      var d = document.createElement("div"); d.className = "res-row";
+      var a = document.createElement("span"); a.textContent = p[0];
+      var b = document.createElement("span"); b.className = "rv"; b.textContent = p[1];
+      d.appendChild(a); d.appendChild(b); res.appendChild(d);
+    });
+
+    // --- turns-per-day gauge, 0–6 scale ---
+    var g = document.createElement("div"); g.className = "gauge";
+    var i = document.createElement("i");
+    i.style.width = Math.min(tpd / 6 * 100, 100) + "%";
+    g.appendChild(i); res.appendChild(g);
+    var cap = document.createElement("div");
+    cap.style.cssText = "font-size:12px;color:var(--muted);display:flex;justify-content:space-between";
+    cap.innerHTML = "<span>TPD 0</span><span>3 weak · 4 avg · 5 strong</span><span>6</span>";
+    res.appendChild(cap);
+
+    // --- verdict ---
+    var cls, head, msg;
+    if (rep <= 0) {
+      cls = "info"; head = "No reported figure entered";
+      msg = "Enter the seller's reported monthly self-service revenue to test it against the " +
+            money(implied) + " the water bill can physically support.";
+    } else if (variance > 10) {
+      cls = "bad"; head = "Reported exceeds the physical ceiling";
+      msg = "Reported revenue is " + variance.toFixed(0) + "% above what this volume of water can produce (" +
+            money(implied) + "). Before treating it as overstatement, confirm gallons per turn against the actual " +
+            "machine plates and check whether a second meter serves the site.";
+    } else if (variance < -15) {
+      cls = "warn"; head = "Reported falls well short of implied";
+      msg = "Reported revenue is " + Math.abs(variance).toFixed(0) + "% below the " + money(implied) +
+            " implied by water use. Commonly unrecorded cash — which a buyer cannot pay for, cannot finance " +
+            "against, and should not assume they will collect.";
+    } else {
+      cls = "ok"; head = "Consistent with water consumption";
+      msg = "Reported revenue sits within " + Math.abs(variance).toFixed(0) + "% of the " + money(implied) +
+            " implied by the meter. The test is passed — it corroborates the figure, it does not verify it. " +
+            "Run the card/coin and deposit tests independently.";
+    }
+    verdict.innerHTML =
+      '<div class="verdict ' + cls + '"><div class="vh">' + head + '</div><p class="vb">' + msg + '</p></div>';
+  }
+
+  function onCounty(){
+    var custom = num(county, -1) === 0;
+    raterow.hidden = !custom;
+    compute();
+  }
+
+  [gal, nonwash, count, dryer, reported, rate].concat(mx, mv).forEach(function(el){
+    if (el) el.addEventListener("input", compute);
+  });
+  if (county) county.addEventListener("change", onCounty);
+
+  onCounty();
+})();
+</script>
