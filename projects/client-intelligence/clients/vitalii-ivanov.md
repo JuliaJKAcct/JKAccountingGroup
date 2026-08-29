@@ -163,6 +163,6 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Double client:** [app.doublehq.com/close?cid=710666](https://app.doublehq.com/close?cid=710666)
 - **Double tax project (2025):** [tax-return?cid=710666&projectId=219350](https://app.doublehq.com/tax-return?cid=710666&projectId=219350)
 - **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > VITALII IVANOV` (and the `*Dupplicated` copy) — read 2026-08-13, written up here 2026-08-14.
-- **Google Drive folder (sensitive vault):** _(pending — link)_ — holds `Form5471_ExtremePride_2025.xlsx`
+- **Google Drive folder (sensitive vault):** `VITALII IVANOV` (Julia's Drive, plus a second "VITALIY IVANOV" folder tree) — confirmed present 2026-08-29; holds `Form5471_ExtremePride_2025.xlsx`, the 2026-08-20/21 FBAR/8938 workpapers, POA forms (2025-10-14), the Residency Status memo and the visa-application folder (both unopened this sweep)
 - **Related clients (owner group):** [`deep-tech-development.md`](./deep-tech-development.md) — **Deep Tech Development Group LLC**, his US e-commerce company (the "Go Robots" store), where his company-side matters are recorded. **1701 N M ST LLC** and **Universal Trading Technology LLC** — he is their admin portal contact, ownership unestablished — have no CI file yet.
 - **Related SOPs:** _(pending)_

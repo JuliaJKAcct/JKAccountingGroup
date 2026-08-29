@@ -1,6 +1,8 @@
 # Igor Melomed & Yelena Lovkina
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+
+> ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide — nothing found; Gmail full history back to 2026-03; Drive; Double activity log — all unbounded). See §6 log. 🔴 **Biggest finding: the "three Double records, one Melomed business" question is now SETTLED — see §5 bullet 1.** Swept together with [R & G Friendly Inc](./rg-friendly.md) at the owner level, per this run's instructions.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
