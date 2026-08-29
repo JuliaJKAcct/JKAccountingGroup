@@ -32,7 +32,7 @@
 - **Business name:** Igor Melomed & Yelena Lovkina — an **individual (joint) client record**
 - **Entity type:** Individual taxpayers — Form 1040 _(Double: `Account Type = Individual`, `Tax Return Type = 1040`, read 2026-08-14)_. ⚠️ See §5 — the firm keeps monthly books for his businesses, which the column does not reflect
 - **Home state:** **Florida** _(Broward — the businesses are local, and the client uses a 954 number)_
-- **Industry / what they do:** 🔴 **Pawnbroking and jewellery** — **Lucky Pawn Jewelry** and **Auto Pawn**, two operations whose monthly ledgers and expense reports the firm processes (§5)
+- **Industry / what they do:** 🔴 **REVISED 2026-08-29 — his own operational footprint is [Sunoma Inc](../client-intelligence/clients/sunoma-inc.md) (706704) and [MAGNUM 152, Inc](./magnum-152.md) (706693), confirmed by extensive 2026 correspondence — NOT R & G Friendly Inc** (see §5 bullet 1). The "Lucky Pawn"/"Auto Pawn" ledger work he sends monthly appears to be a **retail firearms operation** as much as pawn/jewellery: the correspondence is full of **Bravo** (POS) licensing issues, **Silencer Shop**, gun-show reports, and a Florida Blue group-health thread for the stores — this firm's own note calling it "pawnbroking and jewellery" undersells what Sunoma/Magnum 152 actually sell. **Auto Pawn** (a further related operation, email `autopawnjewelry@gmail.com`) also reports monthly through him.
 - **Primary language:** _(pending — likely Russian; correspondence with the firm is in English)_
 - **Our engagement (services we provide):** individual income tax (1040) per Double — **plus, in practice, monthly bookkeeping the column does not show** (§5). `1099 Preparation = false`, `Annual Report = false`
 - **Fiscal year-end:** calendar year
