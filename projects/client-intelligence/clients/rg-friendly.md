@@ -1,6 +1,8 @@
 # R & G Friendly Inc — *DBA Lucky Pawn & Jewelry*
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-14
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+
+> ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide — nothing found; Gmail full history back to 2025-02, with Drive evidence of the engagement to 2021; Drive; Double activity log — all unbounded). See §6 log. 🔴 **Biggest finding: OWNERSHIP IS NOW SETTLED — see §5 bullet 1.** Swept together with [Igor Melomed & Yelena Lovkina](./igor-melomed.md) at the owner level, per this run's instructions.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -24,21 +26,16 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
-> **2026-03 → 2026-08** (a targeted catch-up after the first version drew conclusions from a
-> six-day window). Ping, Drive and everything before 2026 are **still unswept**. The catch-up is
-> recorded in [`sweep-state.md`](../automation/sweep-state.md).
-
 ## 1. Snapshot
 
 - **Business name:** R & G Friendly Inc — trading as **LUCKY PAWN & JEWELRY** _(the DBA appears on the firm's own invoices)_
 - **Entity type:** Corporation (Inc) **taxed as an S-corp** — the firm files an **1120-S** _(Double `Tax Return Type = 1120-S`)_
-- **Home state:** _(pending)_ — banking has run through **PNC** (closed Sept 2025) and **Truist**
-- **Industry / what they do:** 🔴 **Pawnbroking and jewellery.** Part of the **Melomed family group** (§5)
-- **Primary language:** _(pending — likely Russian)_
-- **Our engagement (services we provide):** income tax (1120-S) per Double, **plus bookkeeping in practice** — the firm holds the QuickBooks company and works monthly GL files (§5). `Bookkeeping = N/A`, `1099 Preparation = false`, `Annual Report = false` in Double
+- **Home state:** **Florida** _(confirmed 2026-08-29 — two Broward locations: Oakland Park ("FP", store #3941) and Davie ("RAZZ", store #3888); the firm handled a Florida Department of Revenue sales-tax audit for this business in 2025 — §4/§5)_ — banking has run through **PNC** (closed Sept 2025) and **Truist**
+- **Industry / what they do:** 🔴 **Pawnbroking and jewellery, at two Broward County locations.** Part of the **Melomed family group** — 🔴 **and, settled 2026-08-29, specifically Grigoriy & Margarita Melomed's company, not Igor Melomed's (§5 bullet 1).**
+- **Primary language:** _(pending — likely Russian; all firm correspondence found is in English)_
+- **Our engagement (services we provide):** income tax (1120-S) per Double, **plus bookkeeping in practice** — the firm holds the QuickBooks company and works monthly GL files (§5); **the firm also handled a state sales-tax audit for this client in 2025** (§4). `Bookkeeping = N/A`, `1099 Preparation = false`, `Annual Report = false` in Double
 - **Fiscal year-end:** calendar year
-- **Accounting platform:** ⚠️ **Double says `platform: none`, and that is WRONG** — there is a **QuickBooks Online company** for "R & G Friendly, inc." with **RUN Powered by ADP** connected (§3)
+- **Accounting platform:** ⚠️ **Double says `platform: none`, and that is WRONG** — there is a **QuickBooks Online company** for "R & G Friendly, inc." with **RUN Powered by ADP** connected (§3). ✅ **Engagement confirmed to run back to at least 2021** (Drive: filed 2021 1120-S, signature documents and filing instructions) — this is a long-standing, multi-year client, not a recent one.
 
 ## 2. Contacts
 
@@ -48,10 +45,11 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| **Officer / signer** — signs the return and holds a **2025 W-2** from the company. ⚠️ **Not established as the owner** | [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) |
-| The related individual client, connected to the same operations | [`igor-melomed.md`](./igor-melomed.md) |
+| **Officer / owner** — signs the return, holds the **W-2** from the company, and TaxDome shows him and Margarita co-signing this return and their own personal 1040 on the same day (2026-03-14) ✅ **settled 2026-08-29** | [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) |
+| ⛔ **NOT connected, per a full sweep (2026-08-29)** — a separate Melomed household with its own, unrelated businesses | [`igor-melomed.md`](./igor-melomed.md) |
 | Assigned staff | **Lilian Gonzalez** _(Double)_ |
 | Worked the 2024 QuickBooks review | **Maria Zavarce** _(migrated note, 2024-06-05)_ |
+| Handled the 2025 FL sales-tax audit for this client | **Julia** — see §4 |
 
 - **Double client:** [app.doublehq.com/close?cid=710589](https://app.doublehq.com/close?cid=710589)
 - **Double case note:** none — no agency matter has been worked for this client
@@ -69,10 +67,12 @@ the actual details (and Claude can pull them live when a task needs them).
 ## 4. Obligations & recurring processes
 
 ### Sales tax
-- **Applies?** _(pending)_ — a Florida retail pawn/jewellery operation very likely collects it. **Nothing records who files it.** Establish this.
+- **Applies?** ✅ **YES — confirmed 2026-08-29.** Florida sales tax at **6% state + 1% county** was quoted by Julia to the client directly (2025-08-01) — a combined 7% rate, consistent with a Broward County location.
+- **Current status:** 🔵 **The firm handled a full Florida Department of Revenue sales-tax audit for this client in 2025 and PASSED IT.** Timeline: a "Final Request" for detailed records on **three selected test months** (spanning Aug 2022 – July 2023) went out **2025-05-26**; the firm supplied vendor names (a scrap-gold buyer), historical filings, and store-level detail for both locations through **late May 2025**; the auditor (Florida DOR, "Trevor Holden", cc'd throughout) closed the matter, and Julia confirmed to Grigoriy on **2025-07-26**: **"We passed the audit!"** A further FL DOR "Communication" (encrypted, sender "Erika Gonzalez-Solis") arrived **2025-08-25** — **not opened this sweep**; confirm it is a routine follow-up and not a new matter.
+- **Our role:** the firm files/manages sales tax and represents the client to the FL DOR directly — this was previously "pending"; it is now established and evidenced.
 
 ### Payroll
-- **Applies?** ✅ **Yes — via RUN Powered by ADP**, connected to the QuickBooks company in March 2026, and the owner holds a **2025 W-2 from the company**. _(Double records nothing under Payroll — the column is incomplete.)_
+- **Applies?** ✅ **Yes — via RUN Powered by ADP.** The QuickBooks-company integration was connected **2026-03-10**, but the firm's own direct ADP payroll access goes back further — **confirmed to at least 2025-11-24**, when Julia requested (and received) ADP payroll-module access from Grigoriy, following an ADP-flagged **insufficient-pay** notice on his own paycheck (2025-11-15). The owner holds a **2025 W-2 from the company**. _(Double records nothing under Payroll — the column is incomplete.)_
 
 ### Bookkeeping & monthly close
 - **Applies?** ⚠️ **In practice yes, though Double says `Bookkeeping = N/A`.** The client supplies **monthly GL reports for two operations** ("FP" and "RAZZ") plus annual GL files, bank statements and PayPal exports; the firm holds the QuickBooks company. **Reconcile the column with the work.**
@@ -99,11 +99,11 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **THIS COMPANY IS "LUCKY PAWN & JEWELRY", AND IT BELONGS TO THE MELOMED GROUP.** The firm's own invoices name it *"R & G FRIENDLY, INC. DBA LUCKY PAWN & JEWLERY"*, its return is signed from a **Melomed** address, and it issues that same person a **W-2**. Meanwhile [`igor-melomed.md`](./igor-melomed.md) — a *different* Melomed household — emails the firm from a Lucky Pawn address and sends its monthly ledgers. **Three Double records (710589, 710635, 710633) sit on one family business.** Work out who owns and who operates before writing anything about any of them, and never assume a "Melomed" fact belongs to the household you happen to have open.
-- ⚠️ **DOUBLE'S RECORD IS WRONG IN THREE PLACES** — `platform: none` (a QuickBooks company exists), `Bookkeeping = N/A` (monthly GL work is being done), and nothing under Payroll (ADP is connected and a W-2 was issued). **Do not read this client's engagement off the Double columns.**
+- 🔴 **SETTLED 2026-08-29 — THIS IS Grigoriy & Margarita Melomed's COMPANY, NOT IGOR MELOMED'S.** The firm's own invoices name it *"R & G FRIENDLY, INC. DBA LUCKY PAWN & JEWLERY"*; **Grigoriy** Melomed's return is co-signed with Margarita's personal 1040 on the **same day** (2026-03-14, via TaxDome), and he holds its W-2. A full historical sweep (Gmail back to 2025-02, Drive back to 2021, Double contacts) found **no connection whatsoever** to [`igor-melomed.md`](./igor-melomed.md) (710635) — that is a **different Melomed household** whose own confirmed operations are Sunoma Inc and Magnum 152, Inc, not this company. **Three Double records exist (710589, 710635, 710633) but only TWO of them are one business** — this one and 710633. Treat the "three records, one family business" framing this file used to carry as retired.
+- 🔵 **THE FIRM RAN A FULL FLORIDA SALES-TAX AUDIT FOR THIS CLIENT IN 2025 — AND PASSED IT.** See §4 for the timeline. This directly answers what used to be an open item ("establish the sales-tax position") and is worth knowing before anyone next deals with the FL DOR on this client's behalf — the auditor, the test months and the outcome are all on file.
+- ⚠️ **DOUBLE'S RECORD IS WRONG IN THREE PLACES** — `platform: none` (a QuickBooks company exists), `Bookkeeping = N/A` (monthly GL work is being done), and nothing under Payroll (ADP is connected, has been since at least Nov 2025, and a W-2 was issued). **Do not read this client's engagement off the Double columns.**
 - ⚠️ **THE PNC ACCOUNT CLOSED IN SEPTEMBER 2025 AND TRUIST TOOK OVER MID-YEAR.** The 2025 books therefore span two banks with a gap the client described himself — last PNC statements August, Truist from September. **Any reconciliation that assumes one bank for the year will not balance**, and this is exactly where a year-end cut-over goes wrong.
-- **A company credit card was never connected in QuickBooks** _(Maria Zavarce, 2024-06-05)_ and its register was worked from a **statement pasted in by hand**. ⓘ **This is a 2024 observation and may have been fixed** — the QuickBooks company has since been reworked and ADP connected. **Verify before repeating it**, but until then treat card completeness as unproven.
-- **Two operations run inside the books** — the GL files arrive as "FP" and "RAZZ" sets, and PayPal activity sits under "Razz". Ask which is which before categorising.
+- **Two operations run inside the books** — the GL files arrive as **"FP" (Oakland Park, store #3941)** and **"RAZZ" (Davie, store #3888)** sets _(confirmed 2026-08-29 via Drive folder names and a 2026-02-24 client message)_, and PayPal activity sits under "Razz" (`fp` PayPal: g.melomed@aol.com; `razz` PayPal: gmelomed@aol.com — two similar but distinct addresses, confirm before assuming a typo). A company credit card was reported **not connected** in QuickBooks as of 2024-06-05; unverified whether that has since been fixed.
 - **The deadline is MARCH 15, not April 15.** Written down because the other clients backfilled alongside this one are 1040 filers on the April date.
 
 ## 6. History & open questions
@@ -118,36 +118,41 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2026-03-10 — RUN Powered by ADP connected** to the QuickBooks Online company.
   - **2026-03-14 — the 2025 Form 1120-S signed**, and the firm's invoice for the work paid.
   - **2026-05-25 — Double records the 2025 return as filed.**
-- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
+- 2026-08-29 — **First full historical sweep, run together with [Igor Melomed & Yelena Lovkina](./igor-melomed.md) at the owner level per this run's instructions.** Findings, by source:
+  - **Ping** (`resolve_person`, org-wide `search_meetings` for "R & G Friendly", "Grigoriy Melomed", "Margarita Melomed", "Lucky Pawn Jewelry", `list_action_items`, `get_client_details`): **zero recorded meetings, zero action items** — `recentMeetingCount: 0`.
+  - **Gmail** (full history, no date bound — extended well back of the prior 2026-03 catch-up): found the engagement runs back to at least **2025-05** and surfaced a full **Florida Department of Revenue sales-tax audit, 2025-05 through 2025-07, PASSED** (§4/§5) — a major finding this file did not previously carry at all. Also found the **ADP payroll relationship predates the March 2026 QuickBooks integration**, back to Nov 2025 (§4-Payroll). **No thread anywhere connects this client to Igor Melomed's household.**
+  - **Google Drive** (`excludeContentSnippets: true`): confirms the engagement runs back to **2021** — a filed 2021 1120-S with signature documents and filing instructions, a 2020 personal 1040 for Margarita Melomed, and Grigoriy's 2021 personal 1040 and W-2. Also confirms the FP/RAZZ store-number naming (#3941 Oakland Park, #3888 Davie) used in monthly reconciliation folders back to 2022.
+  - **Double** (`list_activity_log`, full history — 11 entries): confirms the 2025 project moved to `filed` on 2026-05-25; nothing else new.
 
 ### Tax year 2025 — the review
 
 - **Filing position:** Form 1120-S, signed 2026-03-14, recorded filed 2026-05-25.
-- **Payroll:** the owner holds a W-2 from the company.
+- **Payroll:** the owner holds a W-2 from the company; ADP access has been in place since at least Nov 2025.
 - **Open:** the two-bank year (PNC → Truist), and whether card activity is complete.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle who OWNS this company.** All three records now have files, but ownership does not: the return is signed and a W-2 issued in one household's name, while the *other* household sends the monthly ledgers. Until that is drawn, every "Melomed" fact is ambiguous.
-- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here.
+- [x] ~~Settle who OWNS this company~~ — **ANSWERED 2026-08-29:** Grigoriy & Margarita Melomed (§5 bullet 1). Igor Melomed's household is unrelated.
+- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here. _(Open since 2026-08-14 — 15 days as of this sweep.)_
 - **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed.
 - **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence.
-- **Establish the sales-tax and pawnbroker-licensing position.**
-- **Run the one-time full historical sweep** — never done for this client.
+- **Confirm the 2025-08-25 FL DOR "Communication" (encrypted) was a routine audit follow-up**, not a new matter — found but not opened this sweep.
 
 ### Information still needed
 
-- [ ] Who owns the company, and how it relates to each Melomed household
-- [ ] What "FP" and "RAZZ" are
-- [ ] Whether a Form 7004 was filed for 2025
-- [ ] Whether sales tax and a pawnbroker licence apply, and who handles them
-- [ ] Ping, Drive, and everything before 2026 — never swept
+- [x] Who owns the company, and how it relates to each Melomed household — **ANSWERED 2026-08-29** (§5)
+- [x] What "FP" and "RAZZ" are — **ANSWERED 2026-08-29:** Oakland Park (#3941) and Davie (#3888) store locations respectively (§5)
+- [ ] Whether a Form 7004 was filed for 2025 (the 2026-05-25 filed date is after March 15, so one was presumably on file, but nothing confirms it)
+- [x] Whether sales tax applies, and who handles it — **ANSWERED 2026-08-29:** yes, 6%+1% county; the firm handled a 2025 audit directly (§4)
+- [ ] Whether a pawnbroker licence is separately required/held
+- [x] Ping, Drive, and everything before 2026 — **first full historical sweep run 2026-08-29; see log above.** Gmail/Drive extend confirmed history to 2021; Ping returned nothing.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710589](https://app.doublehq.com/close?cid=710589)
 - **Double tax project (2025):** [tax-return?cid=710589&projectId=219280](https://app.doublehq.com/tax-return?cid=710589&projectId=219280)
-- **Owner-group siblings:** [`igor-melomed.md`](./igor-melomed.md) (710635) · [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) · possibly [Magnum 152, Inc](./magnum-152.md) and [Sunoma Inc](./sunoma-inc.md)
+- **Owner-group sibling (settled 2026-08-29):** [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) only.
+- **NOT related (settled 2026-08-29):** [`igor-melomed.md`](./igor-melomed.md) (710635) — a different Melomed household; the "possibly Magnum 152 / Sunoma" cross-link this file used to carry belongs on Igor Melomed's file instead, not here.
 - **Migrated TaxDome notes:** Drive `4. Documents > R & G Friendly Inc` — read 2026-08-13.
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** `R & G Friendly Inc` (Julia's Drive) and `R & G FRIENDLY, INC.` (a separate older tree with 2021–2023 subfolders) — both confirmed present 2026-08-29
 - **Related SOPs:** _(pending)_ — the compensation review routes to the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)

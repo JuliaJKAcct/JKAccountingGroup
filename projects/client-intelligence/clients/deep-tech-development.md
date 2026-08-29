@@ -1,6 +1,6 @@
 # Deep Tech Development Group LLC
 
-> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-25
+> **Status:** ⚠️ **BOOKKEEPING PAUSED** — the client is between chapters, not gone (Lilian, 2026-08-11) · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -72,13 +72,16 @@ the actual details.
 - **Applies?** Not in JK's scope — **N/A** per Double. The company runs its **own Gusto payroll (biweekly)**; JK does not process it. _(Double + Gmail)_
 - **Quirk:** despite Payroll being **N/A** for JK, JK staff (the assigned bookkeeper plus other team members) are routinely copied on Gusto's automated "payroll due / payroll late" reminder emails for this client's biweekly run — worth confirming why JK stays on that notification list _(Gmail, 2026-07-26 to 2026-07-30)_.
 - **Update (2026-08-05, Gmail):** a Gusto payroll-fee debit failed, and the owner asked whether the company's Gusto payroll can be **cancelled** — the company currently has **no employees**, and isn't expected to until the owner is back in the US. Decision pending; if Gusto is cancelled, revisit this section and §5.
-- ⚠️ **Unsettled — Gusto is still active and running a payroll as of 2026-08-13.** Gusto's automated
-  "payroll is late" reminders (2026-08-09, 08-11, 08-13) for the **Aug 3–16, 2026 pay period** kept
-  arriving through this sweep window, which reads as an **active, ongoing payroll run** — this sits
-  uneasily beside the 2026-08-05 note that the company "currently has no employees." **Both are on
-  record; the cancellation decision from §6 outstanding items does not appear to have been acted
-  on**, or the "no employees" framing was about future hiring rather than the current run. Confirm
-  with Julia/the owner before assuming either reading. _(Gmail, 2026-08-09/11/13.)_
+- ⚠️ **Unsettled — Gusto is still active and running a payroll as of 2026-08-27, six weeks after the
+  cancellation question was raised.** Gusto's automated "payroll is late" reminders kept arriving
+  through August — 2026-08-09, 08-11, 08-13 (Aug 3–16 pay period) and now **2026-08-27** for the
+  **Aug 17–30, 2026 pay period**, addressed to Julia, Lilian, Maria and the owner
+  (`willivanoff@gmail.com`) — which reads as an **active, ongoing biweekly payroll run**, not a
+  one-off. This sits uneasily beside the 2026-08-05 note that the company "currently has no
+  employees." **Both are on record; the cancellation decision from §6 outstanding items does not
+  appear to have been acted on**, or the "no employees" framing was about future hiring rather than
+  the current run. Confirm with Julia/the owner before assuming either reading. _(Gmail,
+  2026-08-09/11/13/27.)_
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes — the engagement is monthly** _(Double)_, but ⏸ **PAUSED right now, deliberately, not a lapse.** _(Lilian, 2026-08-11.)_ The owner is
@@ -183,19 +186,33 @@ the actual details.
   the transfer; closure is **permanent**, takes the Balance statements with it, and has **no ETA**. Waiting on Shopify's confirmation email to `julia@jkaccountinggroup.com`, then *Settings → Users →
   transfer ownership*. If it goes quiet, the **chat transcript is on file** in Julia's Shopify Support Inbox —
   that is the reference to reopen the request with. Full trail: Double note **503544**. _(Shopify chat
-  transcript, 2026-08-25, via Lilian.)_
+  transcript, 2026-08-25, via Lilian.)_ ⓘ **Still open, 4 days later:** a further reply from Shopify Support
+  (agent "Alex L") landed in Julia's inbox **2026-08-27**, but its content sits inside Shopify's own Help
+  Center message thread, not in the email body itself — the email is a bare notification. **Not yet read;
+  someone needs to open the Shopify Support inbox directly to see whether it moves the closure forward.**
+  _(Gmail, 2026-08-27, checked 2026-08-29.)_
 - ⚠️ **USPS mail forwarding for this company (and for 1701 N M ST LLC, Universal Trading Technology
   LLC, and the owner individually) ends 2026-09-18** — confirm whether it needs renewing or whether
-  a permanent address change should be filed instead, before mail starts bouncing. _(Gmail,
-  2026-08-14.)_
+  a permanent address change should be filed instead, before mail starts bouncing. STILL OPEN, **20 days
+  out**; no evidence found that a decision has been made. _(Gmail, 2026-08-14; re-chased 2026-08-29 — a
+  search of Gmail bounded `after:2026/08/22` for USPS forwarding on this company or its related entities
+  found nothing new.)_
 - ⚠️ **CONFIRM THE FDOR WITHDREW ITS Q2 2025 REEMPLOYMENT-TAX DEMAND** (its letter to the client is dated
-  **2025-10-22**) — STILL OPEN since 2026-08-13, no deadline, and **an uncancelled FDOR bill escalates on its
-  own**. With the effective date now 1 July 2025 that quarter should not be due, but nothing on record shows the
-  bill cancelled. _(Promoted here 2026-08-25 — it had been living only inside the ✅-titled §5 FDOR bullet, which
-  is below the published first four, so this live exposure appeared on no team-facing page at all.)_
-- **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL UNSETTLED. A broad review of **all** Gusto-sender emails received 2026-08-15 through 2026-08-21 (18 threads, across all firm clients) found **none mentioning "Deep Tech" or "Go Robots"** — no "payroll is late" reminders and no payroll-confirmation emails for this client appeared in that window, unlike the pattern seen 08-09/08-11/08-13 (three late-payroll reminders). This is new negative evidence but does not resolve the contradiction on its own — it could mean payroll was cancelled/paused, caught up, or that the notification pattern simply changed. Reported per the negatives rule: a search of Gmail (`from:gustonoreply@gusto.com`, `after:2026/08/15`) did not find any emails naming this client.
-- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~23 days pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Safe Guard Self Storage" did not find any results.
-- **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
+  **2025-10-22**) — STILL OPEN, **17 days pending** since first flagged 2026-08-13, no deadline, and **an
+  uncancelled FDOR bill escalates on its own**. With the effective date now 1 July 2025 that quarter
+  should not be due, but nothing on record shows the bill cancelled. A targeted Gmail search bounded
+  `after:2026/08/22`, on 2026-08-29, for FDOR/reemployment-tax correspondence on this client found
+  nothing new.
+- **Reconcile the payroll flag / Gusto cancellation decision (owner asked 2026-08-05)** — STILL
+  UNSETTLED, **24 days pending, and the evidence now points the OTHER way.** Gusto sent an "Action
+  required: Payroll is late" reminder for **DEEP TECH DEVELOPMENT GROUP LLC** on **2026-08-27**, for the
+  **Aug 17–30, 2026** pay period, addressed to Julia, Lilian, Maria and the owner
+  (`willivanoff@gmail.com`) — an active, ongoing biweekly payroll run, not a lapsed one. This reverses
+  the 2026-08-22 negative finding (no Gusto emails naming this client 08-15→08-21) and strengthens the
+  reading that the cancellation was never actioned, rather than that payroll quietly stopped. _(Gmail,
+  2026-08-27, found 2026-08-29.)_
+- **Awaiting email confirmation** that the two Safe Guard Self Storage units have been cancelled (requested 2026-07-30) — STILL OPEN, ~30 days pending, no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Safe Guard Self Storage" did not find any results.
+- **New toll balance appeared** at Penn Credit after the last payment brought it to zero — STILL OPEN, no deadline (recurring item). A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Penn Credit" did not find any results (the portal itself was not logged into — out of scope for this sweep).
 - Confirm the **sales-tax state / registration** and what's taxed (Shopify goods).
 - **State Farm UM form** requires a wet signature from the business (mid-July 2026) — hand-off in progress.
 - A **second "Deep Tech" Google Drive folder** (created 2026-08-10, different parent than the one
@@ -237,6 +254,18 @@ the actual details.
   note was then updated on top of *her* edited body — fetched first, so her cuts were not restored. The general
   lesson (what a case note carries vs. what is our own audit of a third party) is written into the
   [`double-mcp` skill](../../../.claude/skills/double-mcp/SKILL.md) §7 rule 12. _(Worked by Lilian.)_
+
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: no new notes
+  (both existing notes' `updatedAt` predate this window's start except note 503544's 2026-08-25 update,
+  already reflected in the prior sweep's write-up); zero activity-log entries since 2026-08-22. Gmail:
+  found a **new Gusto "payroll is late" reminder for this client dated 2026-08-27** (Aug 17–30 pay
+  period) — new evidence the payroll is still active, reversing last week's negative finding (added to
+  §4/§6); found a **further Shopify Support reply (2026-08-27, agent "Alex L")** whose content sits
+  inside Shopify's own Help Center, not the notification email — unread, flagged. Targeted chase
+  searches for FDOR/reemployment-tax, Safe Guard Self Storage and Penn Credit (all bounded
+  `after:2026/08/22`) found nothing new. Ping: org-wide semantic search for this client returned only
+  unrelated pre-2026-08-22 noise. No SOP exists yet for this client (the toll-debt SOP is Draft and
+  unaffected); no SOP-proposal candidates queued.
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm sales-tax state / registration

@@ -1,6 +1,6 @@
 # OPTIC GOLD INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes, contacts, properties), Google Drive (folder + file listing) and
@@ -162,14 +162,15 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** July sales tax filed and paid (Gmail + Drive, 2026-08-18/19). August month-end close moved Not Started → In Progress; "Monthly Sales Taxes" task marked Done. Chase pass on all four outstanding items — results above; context found on the Sunbiz notice pattern but the 2026-08-07 notice itself remains unopened.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: case note 491051 unchanged (`updatedAt` still 2026-08-12); one activity-log entry — a client-portal transaction question resolved by Liudmyla, 2026-08-28 (routine bookkeeping, not the tracked matter). Gmail: two invoice-payment confirmations and a Bank of America statement notice, none touching the tracked items. Chase pass on all three outstanding items — results below; all remain open with no new correspondence found.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- 🔴 **Correct the company's address with the IRS (Form 8822-B).** STILL OPEN, **159 days** pending since 2026-03-16. A targeted search for "Optic Gold" + (8822 OR address OR 7004) found no filing or correspondence.
-- 🔴 **Open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978) — STILL OPEN, **15 days** pending since 2026-08-07, still shows as starred/unread in Gmail. A targeted search found no reply or action thread after the original notice. Context found this sweep: the same document number generated two earlier "Notice of Change or Filing" emails with an identical subject line, dated 2026-04-29 and 2025-02-12 — distinct from an explicitly-labeled 2025 Annual Report filing notice also on file (2025-02-08). This establishes the template recurs periodically; it does **not** establish what changed on 2026-08-07 — the notice still needs opening.
+- 🔴 **Correct the company's address with the IRS (Form 8822-B).** STILL OPEN, **166 days** pending since 2026-03-16. A targeted search (2026-08-29) for "Optic Gold" + (Sunbiz OR 8822 OR address OR 7004), bounded to this window plus a general re-check, found no filing or correspondence.
+- 🔴 **Open and read the 2026-08-07 Sunbiz "Notice of Change or Filing"** (document P23000053978) — STILL OPEN, **22 days** pending since 2026-08-07. A targeted search (2026-08-29) found no reply, forward, or action thread after the original notice, and no newer Sunbiz notice for this client.
 - **Confirm the IRS processed the paper Form 7004 for 2025** — STILL OPEN, same targeted search found no confirmation.
 - **What the business actually does, and its home state** — not chased this pass (deferred to prioritize the three named items above; no natural search target). Payroll also remains **TBD** in Double.
 
@@ -183,7 +184,7 @@ reports for this client.
 - [ ] Fiscal year-end
 - [x] Whether the client belongs to a known owner-group already profiled here — yes, the `best-broker-realty.md` serial-entity group (§5)
 - [ ] Whether Liudmyla keeps working notes for this client that should feed this file
-- [ ] What changed in the 2026-08-07 Sunbiz notice (new this sweep)
+- [ ] What changed in the 2026-08-07 Sunbiz notice — still open 22 days on, not yet opened
 
 ## 7. Links
 

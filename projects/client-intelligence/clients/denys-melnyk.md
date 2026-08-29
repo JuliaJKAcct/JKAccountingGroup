@@ -1,6 +1,6 @@
 # Denys Melnyk
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -1106,6 +1106,20 @@ street address never appear here, and nor do dollar figures — those live in Do
   2026-08-12 to send them by Monday and he did. Full detail in §5, *"The K-1 route opened"*.
 
 - 2026-08-22 — **Weekend sweep — baseline advanced from 2026-08-11 to 2026-08-22, with the FULL-HISTORICAL Gmail pass this file had been carrying as owed now DONE.** Double: both notes (485225, 490984) re-read in full and their current bodies compared against `updatedAt` — content matches what this file already records; no undiscovered edits. Gmail bounded `after:2026/08/11`: only the internal weekly-sweep email. Gmail **full-historical (no date bound)** by his name and each of the three trucking companies: 5 results total, all pre-2026-08-11 and already reflected here — nothing new. Targeted chase searches (K-1/Schedule K-1; 1095/BCBS/marketplace; extension/4868; his own address since 2026-08-12) all came back empty. Ping: `resolve_person` still no match; an org-wide search surfaced only an unrelated meeting about a different client's own three-K-1 problem, discarded as noise. Drive: a full-text "Melnyk" search surfaced two W-9 PDFs (created 2026-01-23/31) whose filenames pair a first name with the surname "Melnyk" — **possibly** the former business partner named in note 490984, but not confirmed, and deliberately not written up further per the no-personal-names rule; worth Lilian checking, since they share a surname. **The three K-1s (chase date 2026-09-15) have not arrived.** No new health-coverage, extension, or S-corp-Illinois-operations answers found.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both notes
+  (485225, 490984) re-read in full — `updatedAt` unchanged since 2026-08-22 (Aug 17 and Aug 20
+  respectively), bodies match what this file already records; zero activity-log entries since baseline.
+  Gmail bounded `after:2026/08/22` (his name + all three company names): nothing beyond the internal
+  weekly-sweep digest — no K-1, no health-coverage answer, no extension confirmation. **The three K-1s
+  (chase date 2026-09-15, still not due) have NOT arrived early.** Ping: `resolve_person` still no match;
+  org-wide semantic search returned only unrelated pre-2026-08-22 noise. Drive: **the two W-9 PDFs
+  followed up further** — both live inside a `2025 W9`-style folder owned by
+  `liudmylak@jkaccountinggroup.com` (a different Client-Intelligence owner's book — Liudmyla Kazannik's
+  client roster), used for that client's own subcontractor/1099 tracking, not in any folder associated
+  with Denys Melnyk or this matter. This makes it **more likely a coincidental surname match with an
+  unrelated subcontractor** than an identification of the former business partner — still not confirmed
+  either way, and per the no-personal-names rule, no name is written here. Chase pass on the priority
+  items below — no movement found on any of them.
 
 ### Outstanding items (CI-only — never in the SOP)
 
@@ -1115,7 +1129,7 @@ for **the client**, some are firm-side work that must **never** involve him (the
 route with Julia), and the top item is now a **wait on a third party**. ⚠️ **Check which before acting
 on one.** ⚠️ **Only the first four reach the team on the published card.**
 
-- ⏰ **The three K-1s — PROMISED, NOT ARRIVED. Chase on 2026-09-15.** ✅ **A route to them opened
+- ⏰ **The three K-1s — PROMISED, NOT ARRIVED. Chase on 2026-09-15 — 17 days out, still not due.** ✅ **A route to them opened
   2026-08-20 and it does not run through the client** — who it runs through, and how, is in §5 and on
   **Double note 490984**, deliberately not on this line, which publishes. So this is no longer a
   decision for Lilian and Julia — it is a **wait to be managed**, needing three things: **(a) a diary
@@ -1126,6 +1140,7 @@ on one.** ⚠️ **Only the first four reach the team on the published card.**
   fallback routes stay on the table until the forms are in hand** — IRS wage & income transcript ·
   the 1120-S itself · file and amend with **Form 8082** (§5). ✅ **His name and number are now on Double note
   490984** — until 2026-08-20 the firm's only route to these documents lived in one person's phone.
+  ⓘ **Re-checked 2026-08-29 — no early arrival**, Double notes and Gmail both confirm nothing has moved.
 - 🔍 **PULL THE BANKRUPTCY DOCKET — still the cheapest open item, though no longer the first action**
   (the K-1 route above overtook it on 2026-08-20). **Do it before asking the CLIENT anything else.**
   PACER by entity name and by the partner's name, plus the Secretary of State. It answers **which entity filed** (the blocker

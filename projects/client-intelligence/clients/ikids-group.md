@@ -1,6 +1,6 @@
 # iKids Group LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-27
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -324,7 +324,8 @@ the actual details.
   third individual's name (§5) — check it against the Operating Agreement; it may close, or narrow,
   this question and the one below.
 - **Both nonresident members' ITIN applications** — W-7 packages went out by certified mail in
-  **May 2026** via the outside CAA. STILL OPEN, ~3+ months pending. Confirm the ITINs were actually issued; a search of Gmail bounded `after:2026/08/15`, on 2026-08-22, found nothing.
+  **May 2026** via the outside CAA. STILL OPEN, **~4 months** pending. Confirm the ITINs were actually issued; a search of Gmail bounded `after:2026/08/22`, on 2026-08-29, again found nothing.
+- ⓘ **NEW 2026-08-29, unconfirmed:** a vendor credit-application document, `KaTomCreditApplicationiKidsGroupLLC (1).pdf`, was uploaded to Drive 2026-08-28. KaTom is a restaurant/food-service equipment supplier — plausibly tied to the venue's kitchen build-out, but not confirmed, and its outcome (approved/pending/declined) is unknown. Content not opened. Worth asking the client at the next touchpoint rather than treating as settled.
 - 🔴 **The Manager's loan sub-accounts do not agree with the two loan agreements, and the wire
   memos cannot settle it — a question is with the client (2026-08-27).** The **first** agreement's
   sub-account is carrying **more than the agreement's face amount**; the overrun is two receipts —
@@ -435,6 +436,8 @@ the actual details.
   to confirm it, rather than asking cold for something we had already worked out. ⏳ **Nothing in
   QuickBooks moves until they answer** — see the outstanding item above and `FOLLOW-UPS.md` row 56.
   _(Worked by Lilian.)_
+
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29; most of the window was already logged through 2026-08-27 above).** Double: `list_projects` re-confirms the "2025 Taxes" project is still `notStarted` with `filedAt: null` — no change, the 1065-extension question remains genuinely unconfirmed either way. `list_notes` unchanged (still the single 2026-08-13 meeting note). Google Drive (`fullText contains 'iKids', modifiedTime > 2026-08-27`, `excludeContentSnippets: true`) surfaced a **new document**: `KaTomCreditApplicationiKidsGroupLLC (1).pdf`, uploaded to the client's Drive folder 2026-08-28 — a vendor credit application with **KaTom**, a restaurant/food-service equipment supplier. Consistent with the pre-opening build-out and the staffing plans discussed 2026-08-13 (kitchen/bar leads); not folded into §5 pending confirmation of what it's for — flagged as an outstanding item below rather than asserted as a settled fact, since the application's outcome is not known and its content was not opened. Gmail (business names + Balasiuk/Matiukha/Yalansky, after:2026/08/22) and Ping (org-wide, "iKids Group Balasiuk Matiukha loan agreement Manager wire") both returned nothing legible/on-topic in the window (per the standing note, Ping was not separately re-checked for pre-Jun-2025 content). **Chase pass:** the 1065-extension question, both members' ITIN applications, and the third member's US tax status remain open with no new evidence either way (ages below). The Manager's loan-allocation question (asked via WhatsApp 2026-08-27) is **too recent to expect an answer** — 2 days pending. Not chased this run (budget): the W-9 sweep; the five decisions waiting on Julia; whether the proposed engagement expansion has been signed.
 
 ### Information still needed
 - [x] Exact number of partners — **three**; Manager 33.4%, the other two 33.3% each; manager-managed with a single Manager _(Operating Agreement, 2026-08-10)_

@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,7 +84,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
-- **2025 return:** tax project in Double moved from "Not Started" to **In Progress** (2026-07-31); a "JK 2025 Business Tax Organizer - Magnum 152" exists in Double but was reverted to **draft** the same day. _(Double activity log, 2026-07-31)_
+- **2025 return:** the Double tax project itself still reads `notStarted` (re-checked live 2026-08-29), and the "JK 2025 Business Tax Organizer - Magnum 152" is still reverted to **draft**. **But a "Magnum152_2025_TaxLiability_Report_v4.xlsx" was created in Drive 2026-08-24/25** — the "v4" naming means at least three prior iterations exist — so estimate work on the 2025 return is actively under way even though Double's own status fields haven't moved. Worth knowing before assuming "not started" means no work has happened. _(Double `list_projects`, 2026-08-29; Drive, 2026-08-25)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -94,6 +94,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 - **Pawn/jewelry owner-group (with Sunoma Inc):** same owner, same administrative assistant. Managed together; **keep the books distinct**. _(Double, Drive)_
 - **2 active stores** — MS1 (Griffin), MS2 (Miami). MS3 sold 2024, MS4 sold 2025 — old MS4 costs (rent, some payroll benefits) still surface in the checklist. _(Maria's doc guide)_
+- 🔴 **Open mapping error with a sales-tax angle — the "Gunshow tender" in Bravo is mapped incorrectly to the sales-tax account.** Julia flagged this to Igor and Luis on 2026-08-20 and asked for a new, dedicated Cash-on-Hand account for visibility; Igor said he'd discuss with Luis "next week" — no reply as of a 2026-08-27 reminder. Still unresolved. A strong SOP-proposal candidate for the monthly reclass checklist. _(Gmail "Bravo - Gunshow Tender Issues," 2026-08-20 → 2026-08-27)_
 - **PayPal 1015 feed sync is broken** — recorded via a **monthly journal entry** instead of a live feed.
 - **Bank-feed handling rules:** do **not** match open JE balances for vendors with payments — always categorize; **TD Bank check images aren't attaching in QBO** — pull images from the bank and use the vendor to pick the account; the store **class** is confirmed at month-end from the admin's bills; Amex payments are booked as CC payments from TD Bank, then matched by most-recent payment/date.
 - **SaasAnt** is used for GL consolidation into QBO; **Bravo** for store POS/inventory; **ADP** for payroll (owner-run).
@@ -119,15 +120,17 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
   weekly cadence) and the firm's own SaasAnt subscription invoice (not a client fact). No new
   Double notes. Ping had no legible new content for the client or the owner post-baseline.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double activity log: 0 entries. New facts and chase-pass results in §5/outstanding items above.
+- 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries since baseline; properties unchanged (Organizer Status still "N/A (we have QBO access)"); `list_projects` re-confirms the 2025 tax project still `notStarted`. Drive: a **"Magnum152_2025_TaxLiability_Report_v4.xlsx"** was created 2026-08-24/25 (added to §4) — active estimate work despite the project's status field not moving; the shared "Magnum Process" doc guide was also edited 2026-08-24/25 (a 2024 comment thread resolved, routine). Gmail: reading the FULL "Open Items for Magnum and Sunoma" thread (2026-08-19 → 2026-08-25) surfaced a **correction to last week's conclusion** on the Comcast/FPL item (see below), a new open **Bravo "Gunshow tender" mapping issue** (added to §5), and confirmation that most of the vendor-login list was resupplied by 2026-08-20 (Silencer Shop MS1 excepted — see below). ⚠️ **That same thread's later messages (chasing "TD Bank Statements," forwarded 2026-08-27 as "TD PAPER WORK") are about a DIFFERENT entity — "7806 Miami LLC"** — not Magnum, not Sunoma. 7806 Miami LLC appears in this owner group's correspondence (also named in a Jan-2026 Alla Trost loan-interest thread and in a 2026-08-27 Zoom recap task, "remind him about 7806 for tax return filing") but has **no client-intelligence file and did not appear in the project README's Clients index** — flagged for Julia/Lilian's awareness; out of scope for this sweep, not actioned here. Chase pass on all outstanding items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Legal matter:** resolved. _(Gmail)_
-- **Inventory-donation tax treatment** — STILL OPEN, ~30 days pending since 2026-07-23, no update found, no deadline known.
-- A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — STILL OPEN. A targeted search found the actual ask was made **2026-06-28** (not just referenced in July); a broader search after that date found no reply supplying it, so it is **~55 days** pending since 2026-06-28, no deadline.
+- 🔴 **Open mapping error — Bravo "Gunshow tender" mis-mapped to the sales-tax account** (new this window; see §5 for detail) — UNRESOLVED, 9 days since Julia's original flag (2026-08-20), 2 days since her 2026-08-27 reminder with no reply yet.
+- **Inventory-donation tax treatment** — STILL OPEN. CHASED this run: a targeted search found no update; now ~37 days pending since 2026-07-23, no deadline known.
+- **2025 Business Tax Organizer** reverted to draft 2026-07-31 — STILL OPEN, now 29 days, no update found; see the countervailing Drive evidence in §4 (a v4 tax-liability estimate already exists).
+- A missing prior-period (**Apr 2024**) expense report for the sibling **Auto Pawn** entity — STILL OPEN, now ~62 days pending since the 2026-06-28 ask; not separately re-chased this run (same search as on [`sunoma-inc.md`](./sunoma-inc.md) covers it; nothing new found there either).
+- ✅ **Comcast / FPL login credentials — CORRECTION: this was actually answered 2026-08-19, not "still open" as the 2026-08-22 sweep concluded.** Reading the full thread (rather than the snippet) shows Igor replied **the same day** (2026-08-19) with the requested Comcast/FPL logins inline, and Maria confirmed "Received, Thanks Igor" on 2026-08-20, at which point only the Silencer Shop (MS1) vendor login remained not working. **Both versions, for the record:** the 2026-08-22 sweep read this as still open based on a partial view of the thread; the full thread read on 2026-08-29 shows it was answered within the window it was asked. Treat as **settled** — Comcast/FPL credentials arrived 2026-08-19.
+- **Silencer Shop (MS1) vendor login** — Igor sent a fresh set of credentials 2026-08-20 after the first set didn't work; not independently confirmed working since. Low priority, not re-chased this run.
 - **Open in Maria's guide:** Uncat items (LINCOLN AFS FORDCREDIT; sale of store 4); pending "Alla Trost" JE — not chased this run (budget; no targeted search run for these specific line items).
-- **Comcast / FPL login credentials** — STILL OPEN. Maria **re-asked for the same credentials directly to the owner on 2026-08-19**, meaning they had not arrived by then; no reply confirming delivery found through 2026-08-22. ~23 days pending since the original 2026-07-30 ask (3 days since the 2026-08-19 re-ask).
-- **2025 Business Tax Organizer** reverted to draft 2026-07-31 — STILL OPEN, no update found.
-- 🔵 **New this window:** Igor Melomed paid a Magnum 152 obligation from the Sunoma account on 2026-08-19 (the Magnum account lacked funds on the due date); he said he would wire the amount back marked "reimbursement," and Maria recorded it as an **intercompany loan between Sunoma and Magnum, booked on both sides** — directly corroborates the already-pending SOP-2026-08-01-01 proposal (not re-proposed). A new "Open Items for Magnum and Sunoma" thread (2026-08-19/20) also asked for a **Silencer Shop (MS1) login fix** and **2026 gun-show reports** — routed here rather than to Sunoma's file, per that agent's flag. Double's **Organizer Status** property now reads "N/A (we have QBO access)" — a different label from the "N/A (BK client)" seen 2026-08-08; exact date of the change not established.
+- **Legal matter:** resolved. _(Gmail)_
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group structure

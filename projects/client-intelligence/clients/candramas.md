@@ -1,6 +1,6 @@
 # CANDRAMAS LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record, notes, contacts,
 > activity log — 154 entries), Gmail (full history, business name + owner email), Ping
@@ -135,6 +135,8 @@ watch-outs, one-off arrangements, history that affects the work.
 - The **previous accounting firm** that filed the 2023 Form 2553/1120-S is Illinois-based; it supplied proof-of-filing documentation when the firm followed up in Feb 2026 — corroborates and sources the existing case note 491844 rather than changing its conclusion. _(Gmail, 2026-08-22)_
 - Engagement began **2025-04-29** (signed Letter of Engagement via the firm's proposal tool). _(Gmail, 2026-08-22)_
 - A tax organizer ("JK 2025 Business Tax Organizer - Candramas") existed in Double, was **unpublished** (reverted to draft) 2026-07-31 and then **deleted** 2026-08-17 (both by staff) — even though the client's Organizer Status property reads "N/A (we have QBO access)". Worth knowing this history exists even though the property itself never changed. _(Double activity log, 2026-08-22)_
+- ✅ **The 2025 Form 1120-S has been prepared and sent for client sign-off.** Double's "2025 Taxes" project moved from **In Progress → Waiting on Client Approval** on **2026-08-25** (by Lilian). This resolves the prior "not yet filed" open item into an active wait on the client, not the firm. _(Double `list_activity_log`, 2026-08-29.)_
+- ⚠️ **A live payroll-processing issue, unresolved as of this sweep.** Gusto flagged the August payroll as **1 day late** on 2026-08-28 (due/heads-up reminders had already gone out 2026-08-24 and 2026-08-26), addressed to the client contact and the whole firm distribution. No confirmation that payroll was actually run was found before this sweep's window closed (2026-08-29) — check it was resolved rather than assuming the AutoPilot pattern caught it. _(Gmail, Gusto notifications, 2026-08-24/26/28.)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -150,6 +152,7 @@ A running, dated record as we build this profile.
   - **The Form 2848 in the package is optional and has a specific purpose** — it is what makes the IRS direct its questions to the firm instead of phoning the owner.
   - **Outcome: the package was MAILED OUT.** Nothing after that was found in the sources searched. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — this file was built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_ Per Lilian's instruction of 2026-08-12, it is left open rather than chased or inferred.
 - 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: 154 activity-log entries reviewed (most recent 50 in detail, plus a targeted Project-entity pull); 2 notes read in full. Gmail: full history by business name and owner email. Ping: `resolve_person` on the owner, org-wide + client-scoped `search_meetings`. Google Drive: `search_files` with `excludeContentSnippets:true`. Findings folded into §4/§5/outstanding items above. No SOP exists for this client. Ping's semantic search returned no legible description of the business itself — only the topic list from one garbled recorded meeting.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both case notes unchanged (`updatedAt` still 2026-08-13 and 2026-06-04); **8 activity-log entries** this window — seven client-portal transaction questions resolved by Liudmyla (2026-08-28, routine bookkeeping) and one project-status change (2025 Taxes → Waiting on Client Approval, 2026-08-25, now §5). Gmail: a new Gusto "payroll late" escalation (2026-08-24/26/28, now §5) and a routine invoice. Ping: a targeted search for a Candramas monthly-meeting/tax-approval update returned no legible, client-scoped result. Chase pass on the Form 2553 outcome question — still no correspondence found.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -165,10 +168,10 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- The 2025 Form 1120-S is not yet filed — Double's "2025 Taxes" project status was set to **In Progress** on 2026-05-25 and remains open.
+- 🔴 **New, unresolved: confirm the 2026-08-28 "payroll late" Gusto notice for the Aug 1–31 cycle was actually cleared** — 1 day pending as of this sweep's cutoff (2026-08-29); no confirmation-of-run email found yet.
+- [x] The 2025 Form 1120-S is prepared — Double's "2025 Taxes" project moved **In Progress → Waiting on Client Approval** on **2026-08-25**. Now waiting on the client, not the firm.
 - The client **declined the next scheduled monthly accounting meeting invite** on 2026-08-20 — worth a follow-up.
-- A September 2025 automated reminder ("Register CANDRAMAS LLC with Florida tax agencies") suggests FL state tax registration was an open item at that time — a weak, unconfirmed signal on home state.
-- The Form 2553 effective-date matter (§5/§6) — outcome still not recorded anywhere the firm can reach.
+- The Form 2553 effective-date matter (§5/§6) — outcome still not recorded anywhere the firm can reach; no new correspondence found 2026-08-22→29.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

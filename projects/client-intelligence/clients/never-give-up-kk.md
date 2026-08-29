@@ -1,6 +1,6 @@
 # NEVER GIVE UP KK LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -65,6 +65,7 @@ the actual details.
 - **Applies?** Yes — **quarterly** _(Double)_
 - **Cadence:** Quarterly.
 - **Process notes (→ future SOP):** _(pending)_
+- **June 2026 month-end close completed 2026-08-25** — the full close-task checklist (A/R and A/P aging, balance sheet, P&L, cash-flow statement, 1099 prep, uncategorized-transactions review, duplicate/newly-added customers and vendors, bank-rule review) was marked Done in one batch. _(Double activity log, 2026-08-25)_
 
 ### Income tax
 - **Applies?** Yes — the owner's **Schedule C (Form 1040)** _(Double)_
@@ -90,12 +91,13 @@ the actual details.
 - 2026-07-20 — **Gmail + Double-note enrichment sweep:** established the thermal-optics trade profile, FL (South Florida), RU language, June-2026 onboarding, and the open structure / BOI / nexus items. Ping had **no indexed meetings**; facts from Gmail + the Double note. Ping + Gmail now swept (see sweep-state).
 - 2026-08-01 — **Incremental weekly sweep** (bounded to 2026-07-20 and later): Ping (org-wide meeting search for the business + owner, `resolve_person`), Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` — activity log empty since baseline), Gmail (`in:inbox`/`in:sent` after:2026/07/20), Drive (folder confirmed), and the repo (FOLLOW-UPS/BACKLOG/sops) all came up with **no new activity in the window** — the owner's Jul-14 and Jun-23 Double-note meetings predate the baseline and were already captured. Owner-level check (contact spans Boost You LLC, Goshakes LLC, The Roadside Project LLC, and the owner's individual Double profile) surfaced no post-baseline facts specific to this company either. No SOP exists yet for this client, so no SOP-proposal candidates were queued.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** A search of Double, Gmail (in:inbox/in:sent, business name + owner surname, after:2026/08/15), Ping (org-wide + client-scoped) and Google Drive found no activity on or after 2026-08-15. Chase pass on all four outstanding items: no updates found on any (see ages above). Document-upload/payroll-provider-shortlist/vehicle-into-company items not chased this run (budget).
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: `list_activity_log` (from 2026-08-22) showed the **June 2026 month-end close completed 2026-08-25** — 20 close tasks marked Done in one batch, folded into §4. `list_notes` unchanged (still the single 2026-07-14 Zoom-meeting note). Gmail (business name + "Kuznetsov" + "thermal imaging"/"thermal optics", after:2026/08/22) surfaced only the firm's own weekly-sweep digest and an ambiguous QuickBooks invoice-notification email — sender `quickbooks@notification.intuit.com`, subject naming **"NEVER GIVE UP, LLC"** (no "KK"), invoicing a customer named "Disruptive Application Group LLC," cc'ing julia@. **Not recorded as fact here**: the business name on the invoice omits "KK," so this may be a differently-named entity rather than this client — flagged for verification, not treated as confirmed activity (see final report). Ping (org-wide, "Never Give Up KK thermal optics Kuznetsov entity structure") returned no legible, on-topic hits — all results predate the window. **Chase pass, all four outstanding items — none resolved, all now older:** entity-structure recommendation (Julia to deliver) — STILL OPEN, **46 days** pending since 2026-07-14, checked via Gmail bounded after:2026/08/22, nothing found; sales-tax nexus/registration analysis — STILL OPEN, same age, nothing found; BOI report — STILL OPEN, same age, nothing found; business-licensing/export-control (ITAR/EAR) — **not chased** (requires legal research, not a records search).
 - 2026-08-15 — **Weekend sweep (incremental, from 2026-08-08):** Double (`get_client`, `list_client_properties`, `list_notes`, `list_contacts`, `list_activity_log` from 2026-08-08 — activity log empty) shows no change since baseline; the one note on file (Kyryll's Zoom Meeting, Jul 14) was already captured. Gmail (`in:inbox`/`in:sent`, business name + owner surname "Kuznetsov", after:2026/08/08) returned nothing but the firm's own automated weekly CI-sweep digest. Ping client-scoped semantic search (`clientId: 742803`) returned no results specific to this client — every hit was unrelated/noise from other clients' meetings. Google Drive full-text search for the business name, modified after 2026-08-08, returned only unrelated files (other clients' documents, an internal hours spreadsheet). No new activity in the window; no SOP exists yet for this client.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. STILL OPEN, 39 days pending since the 2026-07-14 meeting, no deadline recorded. _(Double note 2026-07-14; checked 2026-08-22)_
-- **Sales-tax nexus / registration analysis** pending (despite Double "N/A"). STILL OPEN, no update, no deadline. _(Double note 2026-07-14; checked 2026-08-22)_
-- **BOI report** to be filed. STILL OPEN, no update, no deadline recorded — worth Lilian/Julia confirming the actual FinCEN due date given the entity's formation date. _(Double note 2026-07-14; checked 2026-08-22)_
+- **Entity-structure recommendation** (LLC vs S-corp vs C-corp) — Julia to deliver. STILL OPEN, **46 days** pending since the 2026-07-14 meeting, no deadline recorded. _(Double note 2026-07-14; checked 2026-08-29)_
+- **Sales-tax nexus / registration analysis** pending (despite Double "N/A"). STILL OPEN, no update, no deadline. _(Double note 2026-07-14; checked 2026-08-29)_
+- **BOI report** to be filed. STILL OPEN, no update, no deadline recorded — worth Lilian/Julia confirming the actual FinCEN due date given the entity's formation date. _(Double note 2026-07-14; checked 2026-08-29)_
 - **Business-licensing / export-control** (ITAR/EAR) determination for the optics trade. Not chased this run (budget; requires legal research, not a records search). _(Gmail)_
 - Client **document upload** requested for tax review; **payroll provider** shortlist for the future; **vehicle-into-company** decision pending advice.
 

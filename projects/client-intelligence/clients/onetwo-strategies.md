@@ -1,6 +1,6 @@
 # ONETWO STRATEGIES INC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history),
 > Double (client record, notes — none exist — contacts, properties), Google Drive (folder + file
@@ -114,6 +114,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 
 ## 5. Key facts & quirks
 
+- ⚠️ **CONTRADICTION, unsettled — the return that §5's own K-1 blocker says can't be finished shows as FILED in Double.** `list_projects` (2026-08-29) shows the "2025 Taxes" project with **status `filed`, `filedAt` 2026-07-03**, preparer Liudmyla Kazannik. That predates this and last week's sweep — it was not new activity, just never checked against this file before. It directly conflicts with the very next bullet (the two missing K-1s and the unentered home-office deduction, from a 2026-04-13 client call, still open 138 days on with no arrival recorded). Two live possibilities, neither confirmed: the return was filed without those K-1 items (on the extension, closing out incomplete), or they arrived through a channel this sweep hasn't found and the file's "still open" framing is stale. **Do not assume either — ask before treating the K-1 chase as moot or the "filed" status as reliable.** _(Double `list_projects`, cross-checked against the file's existing §5, 2026-08-29.)_
 - 🔴 **TWO K-1s WERE MISSING FOR THE 2025 RETURN — from 2242 Monroe LLC and Porcupine Partnership.** Recorded on a client call of **2026-04-13**, alongside a **home-office deduction that had not been entered in QuickBooks or on the return.** The 2025 return was **extended** and an extension payment made; a Q1 2026 estimate was paid manually through the IRS. **Nothing records the K-1s arriving.** A partnership K-1 that never comes is the classic cause of a return that cannot be finished — chase both before anything else here. _(TaxDome notes, migrated — filed under OneTwoStrategies INC; note dated 2026-04-13.)_
 - ⚠️ **Payroll (Gusto AutoPilot) has failed to run cleanly on more than one occasion, and its direct-deposit speed just got slower.** A pay period couldn't auto-run and a separate debit failed outright, both in the week of 2026-06-25; then on 2026-06-26 Gusto slowed the deposit speed from 2-day to 4-day, so payroll must now be submitted 4 business days ahead. Treat "no notification" as no longer proof payroll ran. _(Gmail Gusto notifications, Jun 2026.)_
 - **A salary increase and a change to additional withholding were discussed on the same call** — raising the owner's annual salary and doubling additional withholding to cover the tax need. **Whether either was actually implemented is unrecorded.** Figures are in Double / the client's payroll records.
@@ -153,16 +154,17 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 activity-log entries — no bookkeeping/close activity found at all this window, in contrast to Zetech/Optic Gold, which both show routine August close work (sales tax N/A for this client, so a sales-tax-task absence was expected, but nothing else logged either). Chase pass on all four outstanding items — results above, all still open.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: **0 activity-log entries again** — a second consecutive week with no logged bookkeeping/close activity at all. `list_projects` was checked for the first time this sweep (not a routine incremental item, done to support the chase) and surfaced the filed-vs-missing-K-1s contradiction now in §5. Gmail: routine Bank of America wire-transfer-advice and Gusto AutoPilot notices only; nothing on the K-1s, the home-office deduction, the salary/withholding change, or the reemployment-tax PDF. Chase pass on all four outstanding items — results below, all still open; ages updated.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **131 days** pending since 2026-04-13. A targeted search found only a 2025-03-17 prior-cycle thread ("Documents / Taxes 2024") showing the client had previously supplied K-1-type documents for both entities (tax year 2024) — this is a **prior cycle** and does not resolve the 2025 gap.
+- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **138 days** pending since 2026-04-13, no arrival found. ⚠️ **But see the new §5 contradiction** — Double's own project record shows the 2025 return already filed 2026-07-03, which this open item assumes cannot have happened. Resolve which is true before treating either as settled.
 - **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** — its Drive last-viewed timestamp is still 2025-03-17, confirming it remains unopened; not opened this sweep either (content stays out of scope).
 - **Confirm whether the discussed salary increase / withholding change was implemented** — STILL OPEN, targeted search found only unrelated correspondence.
-- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; the Drive "2026 Accountable Plan - ONETWO STRATEGY" spreadsheet has not been modified since its creation on 2026-03-10.
+- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; not re-checked this sweep (budget; the filed-return contradiction took priority).
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

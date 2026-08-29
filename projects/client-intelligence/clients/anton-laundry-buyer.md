@@ -148,6 +148,14 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
+  2026-08-28; no Double/Ping — no Double account exists).** Searched Gmail for "Anton"
+  combined with "laundry"/"Bradenton"/"Palmetto"/"Ruskin"/"Merritt Realty" (to disambiguate
+  the common first name), and separately for "laundromat"/"coin laundry"/"Merritt" —
+  neither search found any message. Searched Drive for "laundromat" and "Merritt Realty" —
+  no relevant match (unrelated files only, `excludeContentSnippets: true`). **Anton's last
+  name and email have not arrived**, and no seller documents or lender information were
+  found. Nothing new beyond what this file already recorded as of today's earlier edits
 - 2026-08-28 — **Intake (Julia) + bilingual due-diligence proposal drafted and delivered.**
   Julia supplied the scope, the hourly/budget structure, and the professional-language
   boundaries; the seller's offering memorandum was reviewed to ground the scope (five
@@ -184,7 +192,9 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
-  email field — her instruction); then create the Double client and complete §1/§2 here
+  email field — her instruction); then create the Double client and complete §1/§2 here.
+  **Still pending as of 2026-08-29** (1 day since the file was created) — a bounded Gmail
+  search that day did not find it
 - **Julia to confirm — the deposit amount:** she offered two figures ("say $3,500 or
   $4,000" — amounts named in her instruction, not client data); the draft uses the lower
   one. Swapping to the higher is a one-pass change

@@ -1,6 +1,6 @@
 # AXDIGITAL LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record — 0 notes,
 > contacts, activity log — 191 entries), Gmail (full history, business name + both owner-contact
@@ -34,7 +34,7 @@
 - **Business name:** AXDIGITAL LLC
 - **Entity type:** **LLC**, taxed as an **S-corp** — Tax Return Type **1120-S** _(Double client properties, 2026-08-11)_
 - **Home state:** **Florida — Fort Lauderdale (strong signal)** — a recurring email signature from the business's day-to-day contact places the company's office in Fort Lauderdale, FL _(Gmail, 2026-08-22; exact street address withheld per confidentiality rule)_
-- **Industry / what they do:** **E-commerce / marketplace selling on Amazon** — uses an A2X integration to post Amazon settlements/invoices into QuickBooks _(Gmail, recurring A2X digests, full-historical, 2026-08-22)_
+- **Industry / what they do:** **E-commerce / marketplace selling on Amazon** — uses an A2X integration to post Amazon settlements/invoices into QuickBooks _(Gmail, recurring A2X digests, full-historical, 2026-08-22)_. ⚠️ **New 2026-08-26:** a 2025 tax-return document request from the firm asks for **Turo vehicle mileage** (multiple Turo vehicles plus one named vehicle) as of 2025-12-31 — the client also runs a **Turo car-rental operation**, not e-commerce alone. An **eBay** selling-account access handover was also underway 2026-08-26/27, so eBay is a third sales channel alongside Amazon and Turo. _(Gmail, 2026-08-26/27.)_
 - **Primary language:** _(pending)_ <!-- EN / RU / UA / ES -->
 - **Our engagement (services we provide):** bookkeeping (**Monthly**), income tax (**1120-S**), sales tax (**Monthly**), payroll (**Automatic**) _(Double client properties, 2026-08-11)_. **Assigned staff: Liudmyla Kazannik.**
 - **Fiscal year-end:** _(pending)_
@@ -66,6 +66,7 @@ link). Never write the credential itself here.
 | Sales-tax portal | Filing sales tax | _(pending — Drive link)_ | _(pending)_ |
 | Bank | Statements / reconciliation | _(pending — Drive link)_ | _(account ending in ####)_ |
 | Payroll | _(pending)_ | _(pending — Drive link)_ | _(pending)_ |
+| eBay | Third sales channel (alongside Amazon, Turo) | _(pending — Drive link)_ | Account-access handover to the firm underway 2026-08-26/27 _(Gmail, 2026-08-26/27)_ |
 | _(add systems as needed)_ | | | |
 
 ## 4. Obligations & recurring processes
@@ -129,6 +130,7 @@ watch-outs, one-off arrangements, history that affects the work.
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
 - Two Double portal contacts (both full access); one signs consistently as the business's "Project manager," the other is linked in Ping to a combined personal-return client record with the first — consistent with the operating pair being spouses/co-owners. _(Double + Ping, 2026-08-22)_
 - A term loan (~$25,000 per a 2026-05 email subject line — figure not otherwise recorded here) exists on the books; several loan-related close tasks ("Uncapped Loan," "AMAZON FIXED RATE LOAN") were marked Done in the same period.
+- ✅ **The 2025 return is actively being prepared, even though Double's project status still reads Not Started.** The firm sent a document request 2026-08-26 (vehicle mileage for the Turo fleet, plus the usual items); the client's project manager replied the same day and again 2026-08-27 with documents ready in a Drive folder. `list_projects` (2026-08-29) still shows the project `notStarted` — the Double record has not caught up with the actual work in Gmail/Drive. Don't read the stale project status as "prep hasn't resumed."
 - 🟡 On **2026-08-04** staff **reverted** the Double "2025 Taxes" project status from In Progress back to **Not Started** — a regression worth flagging (2025 return prep restarted or was found incomplete).
 - A tax organizer ("JK 2025 Business Tax Organizer - AXDigital") was unpublished (reverted to draft) on 2026-07-31 — same day as CANDRAMAS's — while the Organizer Status property still reads "N/A (we have QBO access)." _(Double activity log, 2026-08-22)_ If something about this client seems missing, it probably is.
 
@@ -140,6 +142,7 @@ A running, dated record as we build this profile.
 
 - 2026-08-11 — **File created (seed).** Built from Double's structured client properties during the coverage audit Lilian asked for. **The reason it did not exist before is structural, not accidental:** the weekend sweep's scope list was assembled from Lilian's and Maria's clients, so **every client assigned to Liudmyla was outside it** — seven QuickBooks-connected companies in total. All seven are now in scope. _(Worked by Lilian.)_
 - 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double: 191 activity-log entries reviewed (most recent 50 in detail, plus a targeted Project-entity pull); 0 notes found. Gmail: full history by business name and both owner-contact emails. Ping: `resolve_person` on both contacts, org-wide + client-scoped `search_meetings`, `search_contacts`. Google Drive: `search_files` with `excludeContentSnippets:true` — confirmed folder + filed documents (1099s, P&L, balance sheet for FY2024). Findings folded into §1/§4/§5 above. No SOP exists for this client. Ping's semantic search for "what does this business do" surfaced no relevant, legible content.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: 0 notes; 0 activity-log entries this window (the tax-prep activity below is happening over email/Drive, not logged in Double). Gmail: A2X daily digests (routine); a 2025 tax-return document request sent 2026-08-26 naming Turo vehicles (new business fact, now §1); an eBay account-access exchange 2026-08-26/27 (new system, now §3). `list_projects` re-checked — still `notStarted`, now flagged in §5 as stale relative to the actual work. Chase pass on all three outstanding items — results below.
 
 ### Tax year YYYY — the review
 <!-- Add one per tax year the firm reviews for this client. Records what gated the return,
@@ -155,9 +158,9 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- The reverted "2025 Taxes" project status (Not Started as of 2026-08-04) — confirm with Julia/Lilian whether prep is resuming.
-- The Ukrainian employee's work-authorization/payroll question raised 2026-08-04, call scheduled 2026-08-10 — no outcome found.
-- The unpublished 2025 Business Tax Organizer — confirm intent, same as CANDRAMAS.
+- 🔴 **The Ukrainian employee's work-authorization/payroll question raised 2026-08-04** (call scheduled 2026-08-10) — STILL OPEN, **25 days** pending; a targeted search this window found no outcome or follow-up.
+- [x] The reverted "2025 Taxes" project status (Not Started as of 2026-08-04) — **resolved as "prep resumed"**: an active document exchange for the 2025 return ran 2026-08-26/27 (§1/§5), even though the Double project record itself hasn't been updated.
+- The unpublished 2025 Business Tax Organizer — confirm intent, same as CANDRAMAS; not re-chased this window (budget).
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

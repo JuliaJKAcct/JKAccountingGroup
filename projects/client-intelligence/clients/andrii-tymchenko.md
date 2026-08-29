@@ -1,6 +1,6 @@
 # Andrii Tymchenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, notes, contacts, activity log — both pages, plus the linked second Double client id), Gmail ("Tymchenko"/"TRUSTBURN", full history), Ping (`resolve_person` + `search_meetings`), and Google Drive (multiple title queries) all checked.
 
@@ -108,6 +108,7 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2026-04-07 — the 2025 tax-organizer summary call.** Lilian went through the organizer with him by phone and recorded: they **left the United States on 2025-05-31**; the **company had no activity in 2025**; he uploaded a **driver's licence that expired in 2025**; there is **no P&L** because there was no activity; the **home-office document is last year's, not updated**; **school and health insurance for the children were free or subsidised**; **his wife and children were on Medicaid, not the marketplace**; for medical expenses he has only the **payment history for his insurance premium**, and a **1095-A was requested**; he **does not remember** whether he made estimated tax payments; and he **did not sell the car — he took it to Spain**. The conclusion recorded on the note: **as non-resident aliens for 2025 they had to file 1040-NR, and separately (MFS), as the IRS requires for non-resident aliens.**
 - **Nothing after 2026-04-07 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
 - 2026-08-22 — **First full historical sweep (weekend CI sweep, unbounded).** Double (both client records — his and the spouse's separate one, 710640), Gmail (full history, "Tymchenko"/"TRUSTBURN"), Ping (`resolve_person` + `search_meetings` — zero results, no legible or garbled content found), Google Drive (multiple title queries) all checked. Established: the company's name (TRUSTBURN LLC), the spouse's separate Double record, a Form 4868 extension filed 2026-05-25, a contradiction on the 1095-A/health-coverage question between two internal sources (§5), and the 1095-A→1099-A document swap (see Outstanding items). Did not pursue a stray "ceo@semalt.com" cc on a 2024 return-delivery email further — noted only as a data point, not confirmed related.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: properties unchanged (Organizer Status still `Completed`), note 447824 re-read in full — body unchanged, matches this file's §5 contradiction summary exactly, no new content — no activity-log entries in the window. Gmail bounded `after:2026/08/22` for "Tymchenko"/"TRUSTBURN" found nothing beyond the firm's own weekly-sweep meta-email. **Chase pass** (unbounded, since tax-residency and estimated-payments are long-standing questions) searched for Spain/residency/estimated-tax terms and surfaced only the already-known 2024-04-07 2023-return-delivery thread — re-confirms the existing "ceo@semalt.com" cc data point, nothing new. Ping `resolve_person` + `search_meetings` returned only semantically-loose, off-topic/garbled hits — no legible content specific to this client. Google Drive: the same Andrii/Kateryna Tymchenko folders and TRUSTBURN documents as before (Articles of Incorporation, SS-4, Form 2848), no new modification dates since baseline.
 
 ### Tax year 2025 — the review
 
@@ -118,10 +119,10 @@ the actual details (and Claude can pull them live when a task needs them).
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the health-coverage contradiction** between the migrated TaxDome note and native Double note 447824 (see §5) before asking him for anything else.
-- 🔴 **Establish where he is tax-resident now, and whether the firm still files for him at all.** He has been out of the US since 2025-05-31.
-- **Check the IRS account for 2025 estimated payments** rather than asking him again.
-- **Get a current photo ID** — the licence on file expired in 2025.
+- 🔴 **Settle the health-coverage contradiction** between the migrated TaxDome note and native Double note 447824 (see §5) before asking him for anything else. STILL OPEN — pending since 2026-08-22 (~7 days); no deadline. Note 447824 re-read in full 2026-08-29, no change.
+- 🔴 **Establish where he is tax-resident now, and whether the firm still files for him at all.** He has been out of the US since 2025-05-31 (pending 456+ days on that fact alone; as a tracked item, open since 2026-08-13, ~16 days). No deadline. A 2026-08-29 unbounded Gmail search for Spain/residency terms found nothing new.
+- **Check the IRS account for 2025 estimated payments** rather than asking him again — STILL OPEN, pending since 2026-08-13 (~16 days); no source reachable by this session can check an IRS account directly, so this stays a firm-side action item, not something a search can close.
+- **Get a current photo ID** — the licence on file expired in 2025. STILL OPEN, pending since 2026-08-13 (~16 days); not something a document search can resolve — needs to be asked of the client directly.
 - **Confirm which document is which** — on 2026-06-22 Lilian removed "1095-A.jpg" and created "2025 1099-A.pdf" in its place, in the "2026" custom folder. Form 1099-A (Acquisition/Abandonment of Secured Property) is a different form from 1095-A (health coverage) — worth checking which document this actually is.
 
 ### Information still needed

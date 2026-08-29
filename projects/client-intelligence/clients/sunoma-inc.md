@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -91,6 +91,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **Two store brands under one entity** — Lucky Pawn (LP) + Auto Pawn (AP), reconciled and journalized **separately** every month.
 - **Pawn/jewelry owner-group (with MAGNUM 152, INC):** same owner + same administrative assistant; managed together, **books kept distinct**. _(Double, Drive)_
 - **Intercompany loan(s) exist between Sunoma and Magnum 152** — reconciled monthly as its own recurring closing task (see §4). _(Double, 2026-08-01)_
+- **The June 2026 monthly close ran unusually late — it did not finish until 2026-08-24** (Monthly Journal Entries, A/R and A/P Aging review, Statement of Cash Flows, Balance Sheet and Profit and Loss all marked Done that day, roughly two months after month-end). Worth watching whether July's close runs on the same delay. _(Double activity log, 2026-08-24)_
 - **Reports come from the owner via TaxDome** at month-end (Ledger + Expense + Cash-on-Hand, per store) — the close can't finish until they arrive, so nudge the pipeline early in the month.
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.
@@ -119,14 +120,14 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
   owner. No new material beyond the property confirmation.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: zero activity-log entries, zero notes. New facts found in §5/outstanding items above (intercompany-loan work confirmed, two Drive files touched). Chase pass on all five §6 items — results above; the Auto Pawn April-2024 report and the legal-matter confirmation not chased this run (budget).
+- 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: **June 2026 monthly close finally marked Done 2026-08-24** — Monthly Journal Entries, A/R and A/P Aging, Cash Flow Statement, Balance Sheet and P&L all closed that day (added to §5). Zero new notes. Gmail: a search of `(Sunoma OR "Igor Melomed" OR "Lucky Pawn" OR "Auto Pawn") after:2026/08/22` surfaced only pre-baseline correspondence (a Jan-2026 loan-interest thread) plus the Magnum-side vendor-login/Bravo-tender threads, which belong to [`magnum-152.md`](./magnum-152.md), not here — no Sunoma-specific new item found. A targeted donation-follow-up search (`(Sunoma) (donation OR donated OR charity) after:2026/08/22`) found nothing. Drive: "Sunoma Process" (doc guide) and "Sunoma journal entry 2026.xlsx" were both touched again 2026-08-24 — ongoing routine work, no new distinct fact beyond continued activity. Ping: no legible new content. Chase pass on all five §6 items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Donated-inventory tax deduction** — STILL OPEN, ~30 days pending since 2026-07-23 (the donor said "a couple of weeks", now elapsed), no deadline. A targeted search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "donation receipt charity inventory" found no update.
-- **"JK 2025 Business Tax Organizer - Sunoma" reverted to draft** by Lilian (2026-07-31) — STILL OPEN, 22 days pending, no deadline; a targeted search found no follow-up. _(Double activity log, 2026-08-01)_
-- **Recurring Bravo access/license problems** — STILL OPEN, no new correspondence found this window (30-day search). _(Gmail, 2026-07)_
-- A missing **Auto Pawn April-2024 expense report** was requested from the owner — not chased this run (budget).
-- **Legal matter — bank-statement compilation** sent to the owner 2026-07-20/21 — not re-chased this run (budget).
-- 🔵 **New this window:** the standing Sunoma↔Magnum intercompany-loan reconciliation was actively worked — Maria confirmed by email "received, i'll add it in the loan sunoma/Magnum in both sides" (Gmail, 2026-08-19), corroborating the already-pending SOP proposal. Two 2026-08-20 Sunoma working files were touched in Drive ("Sunoma Process" spreadsheet, "Sunoma journal entry 2026.xlsx"). A shared admin thread "Open Items for Magnum and Sunoma" (2026-08-19/20) mixes both entities' items — its firearms-specific content (gun-show reports, a "Silencer Shop/MS1" login issue) more plausibly belongs to Magnum 152's file; routed there, not claimed here.
+- **Donated-inventory tax deduction** — STILL OPEN, now ~37 days pending since 2026-07-23, no deadline. A targeted search bounded ≥2026-08-22, run 2026-08-29, found no update.
+- **"JK 2025 Business Tax Organizer - Sunoma" reverted to draft** by Lilian (2026-07-31) — STILL OPEN, now 29 days pending, no deadline; a targeted search found no follow-up. _(Double activity log, 2026-08-01)_
+- **Recurring Bravo access/license problems** — STILL OPEN, no new correspondence found this window. _(Gmail, 2026-07)_
+- A missing **Auto Pawn April-2024 expense report** was requested from the owner (2026-06-28) — CHASED this run: a targeted search (`("Auto Pawn" OR "April 2024") expense report after:2026/08/22`) found nothing; still open, now ~62 days pending since the original ask.
+- **Legal matter — bank-statement compilation** sent to the owner 2026-07-20/21 — not re-chased this run (budget; delivered already, no reply expected).
 
 ### Information still needed
 - [ ] Fiscal year-end; confirm the pawn-group relationship (Sunoma / Magnum)

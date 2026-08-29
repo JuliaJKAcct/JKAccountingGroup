@@ -1,6 +1,6 @@
 # Margate Plumbing Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -80,6 +80,7 @@ Drive (§7) — never copied here.
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** for subcontractors.
 - **Organizer Status:** **Completed** _(Double client properties, 2026-08-08)_.
+- **2025 Taxes project status: `filed`**, `filedAt` **2026-05-25** _(Double `list_projects`, read live 2026-08-29 — not previously recorded in this file)_.
 
 ### Licenses & other filings
 - **Licensing / insurance (trade):** a licensed plumbing **qualifier** is on staff; carries **workers' comp + general liability** → periodic **WC & GL premium audits** are a recurring workload (payroll summaries, 941s, RT-6s). _(Gmail)_
@@ -117,15 +118,16 @@ Drive (§7) — never copied here.
   primarily Beemold facts, cross-referenced here since the report is joint). Ping had no legible
   new content for the client or the owner post-baseline.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** The WF-replacement-account item was renamed "WF Checking 0647" and marked Done 2026-08-20, alongside the July close moving to Done — resolves the outstanding item, see above. Mercury IO credit limit decreased 2026-08-19; weekly Gusto payroll confirmed 2026-08-21. Chase pass on the remaining items — results above; "CJM" AR and check-payment classification not chased (budget).
+- 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries since baseline — confirms nothing new broke on the WF Checking 0647 account or the July close since they closed out last week. Properties unchanged, except a current-state read of `list_projects` found the **2025 Taxes project already shows `filed`, `filedAt` 2026-05-25** — new to this file, added to §4. Gmail: a targeted search (`(Margate OR "Vasile Bivol") after:2026/08/22`) found a **second Mercury IO credit-limit decrease, 2026-08-26** (down from the level set by the 2026-08-19 decrease) — two consecutive decreases in a week, worth watching as a cash-flow signal; a further targeted search for the chargeback dispute (`(Margate OR "Vasile Bivol") (chargeback OR dispute OR "Pre-Arbitration" OR Intuit) after:2026/08/22`) found nothing new. Three Zoom meeting-recap emails matched a broad owner-name search but on inspection concern unrelated clients (a business-sale S-corp matter, a salon/Vagaro client) — not Margate; disregarded as noise. Drive and Ping: nothing new found. Chase pass on all outstanding items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- ✅ **QBO bank-feed reconnection (WF account) — RESOLVED 2026-08-20.** The Double task tracking the WF-replacement-account confirmation was renamed **"WF Checking 0647"** and marked Done 2026-08-20, alongside the July 2026 close moving to Done; Maria confirmed by email "we finally have access to the new account" the same day. Last-4 is **0647** (no other account digits recorded). This closes the item and the underlying premise of pending SOP proposal SOP-2026-08-08-05, whose text should be updated with the confirmed last-4 when applied.
-- **Workers' comp audit** and **general liability (GL) audit** — STILL OPEN, no new correspondence found in an 8-day targeted search; pending since at least 2026-07-20 (33+ days); last known state is that a payment was applied to the current policy, not the outstanding prior-term audit balance, which remains outstanding.
-- **Accountant / CPA letter** for the owners' remortgage — STILL OPEN, shared item with Beemold, no deadline known.
-- **QuickBooks Payments chargeback dispute (Pre-Arbitration, escalated 2026-07-30)** — STILL OPEN, 23+ days pending, no new correspondence found in an 8-day targeted search, no deadline stated.
+- **Workers' comp audit** and **general liability (GL) audit** — STILL OPEN, no new correspondence found; now ~40 days pending since at least 2026-07-20; last known state is that a payment was applied to the current policy, not the outstanding prior-term audit balance, which remains outstanding.
+- **QuickBooks Payments chargeback dispute (Pre-Arbitration, escalated 2026-07-30)** — STILL OPEN. CHASED this run: a targeted search found no new correspondence; now ~30 days pending, no deadline stated.
+- **Mercury IO card credit limit — a SECOND decrease, 2026-08-26** (following the 2026-08-19 decrease; no dollar figures recorded) — two decreases inside 10 days on the existing "Mercury IO repeatedly frozen for insufficient balance" quirk; worth flagging to the owner if a third follows.
 - **"CJM" AR item / check-payment classification** — not chased this run (budget).
-- **Mercury IO card credit limit decreased 2026-08-19** (no dollar figure recorded) — a new data point on the existing "Mercury IO repeatedly frozen for insufficient balance" quirk.
-- Weekly Gusto payroll continues on its normal cadence (Aug 19–25 run confirmed 2026-08-21, no dollar figure recorded).
+- ✅ **QBO bank-feed reconnection (WF account) — RESOLVED 2026-08-20, confirmed stable.** The Double task tracking the WF-replacement-account confirmation was renamed **"WF Checking 0647"** and marked Done 2026-08-20, alongside the July 2026 close moving to Done; Maria confirmed by email "we finally have access to the new account" the same day. A follow-up check this run (Double activity log, 0 entries since baseline) found no sign it broke again. This closes the item and the underlying premise of pending SOP proposal SOP-2026-08-08-05, whose text should be updated with the confirmed last-4 when applied.
+- **Accountant / CPA letter** for the owners' remortgage — STILL OPEN, shared item with Beemold, no deadline known.
+- Weekly Gusto payroll continues on its normal cadence (a payroll-due reminder for the Aug 26–Sep 1 period arrived 2026-08-28, no dollar figure recorded).
 
 ### Information still needed
 - [ ] Fiscal year-end

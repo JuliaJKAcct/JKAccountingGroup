@@ -1,6 +1,6 @@
 # AURA REMODELING LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -110,13 +110,27 @@ the actual details.
   client, so no SOP-proposal candidates were queued.
 
 ### Outstanding items (CI-only — never in the SOP)
-- Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw. Not chased this run (budget; needs QuickBooks transaction-level review).
-- Confirm the older **Chase credit card** was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync. STILL OPEN, pending since before 2026-07-20, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Chase (card OR statement) Aura" found nothing.
-- Resolve an **invoice-to-deposit mismatch** with a customer and chase a **customer invoice unpaid since January 2026**. STILL OPEN, ~7 months pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "invoice unpaid Aura" found nothing.
-- **QuickBooks flagged behind** in the July 2026 recurring-expense review — STILL OPEN, ~5–6 weeks pending, no deadline; possibly the same item Julia's 2026-08-20 recurring-expense check flags for this client (an unspecified "quick item to check" — unconfirmed).
+- Confirm whether the **Amex and Bank of America** activity is personal or business; reclassify personal items to owner's draw. STILL OPEN, not chased this run (budget; needs QuickBooks transaction-level review).
+- Confirm the older **Chase credit card** was replaced by the newer one; obtain the missing statements and fix the QBO bank-feed sync. STILL OPEN, pending since before 2026-07-20, no deadline. ⓘ **Partial movement:** a Double bank-statement request to the client now names a specific **"Chase Credit Card 1591"** alongside "Chase Checking 3261" (2026-08-03, still open as of 2026-08-24) — this may be the replacement card, but nothing confirms it is *the* card that stopped syncing in QBO. Not resolved; worth a direct check against the QBO bank-feed card numbers.
+- Resolve an **invoice-to-deposit mismatch** with a customer and chase a **customer invoice unpaid since January 2026**. STILL OPEN, ~8 months pending, no deadline. A targeted search found a **different** unpaid invoice surfaced this window (invoice #1089, client confirmed 2026-08-24 it "wasn't paid by client yet") — not established as the same invoice as the January item; flagged, not merged.
+- **QuickBooks flagged behind** in the July 2026 recurring-expense review — STILL OPEN, ~6–7 weeks pending, no deadline. ⓘ **Movement this run:** the client submitted **July bank statements for Aura Remodeling LLC** on 2026-08-24 (Gmail thread "Re: July Statement", confirmed received by Lilian the same day) and answered two aged Double transaction questions (a Zelle-vs-invoice question and a bank-fee question) on 2026-08-24/25 — the books are being actively caught up, though "flagged behind" is not yet affirmatively cleared.
 
 ### Log (continued)
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double activity, notes, or Ping meetings found on/after 2026-08-15. ⚠️ **A cross-client routing note:** two documents, "Form 6166_2024" and "Form 6166 Tax 2023" (IRS Certification of U.S. Tax Residency), were uploaded 2026-08-19 by the Aura AP mailbox into a Drive folder titled "Forms 8802" that already holds **Ihor Naum's personal Form 8802 application** — these read as the IRS-issued certificates arriving for Ihor Naum's own Form 8802, not an Aura company fact, so they are recorded in [`ihor-naum-olha-levchuk.md`](./ihor-naum-olha-levchuk.md) instead, not here. Julia's 2026-08-20 recurring-expense-check email also names Aura as having a "quick item to check" — unspecified. Chase pass: all four outstanding items checked, ages above; Amex/BofA reclassification not chased (budget).
+
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: `list_client_properties`
+  unchanged; **`list_activity_log` from 2026-08-22 shows three `ClientPortalPost` events on 2026-08-25**
+  (all `question_updated_status`) — the client answered two aged transaction questions and a July
+  bank-statement request that had sat open since 2026-08-03. Read via `get_questions`: (1) a Zelle-vs-invoice
+  reconciliation question on invoice #1089 — client says #1089 is unpaid; (2) a bank-fee transaction
+  clarified as a credit-card fee; (3) the standing quarterly statements request, answered with an uploaded
+  Chase Checking 3261 statement for July. Gmail confirms the same event: "Re: July Statement" thread,
+  2026-08-24, client (Olha, via `auraremodel@gmail.com`) sent July bank statements for Aura Remodeling LLC;
+  Lilian confirmed receipt and a follow-up correction (wrong files initially attached to the portal request,
+  since corrected). No other new Double notes, contacts or activity. Ping org-wide semantic search
+  (business + owner names) returned only unrelated pre-2026-08-22 noise. Chase pass on all four outstanding
+  items — ages and partial movement above; none fully resolved. No SOP exists yet for this client; no
+  SOP-proposal candidates queued.
 
 ### Information still needed
 - [ ] Confirm home state (IL inferred); fiscal year-end

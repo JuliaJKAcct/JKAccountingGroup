@@ -1,6 +1,6 @@
 # Artur Tseretsian
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -195,6 +195,7 @@ the raw material for a future "personal-account tax-prep categorization" SOP:
   `projects/sops/`, `FOLLOW-UPS.md`, `BACKLOG.md` — still no entries for this client.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** No new Double notes (both existing notes' `updatedAt` predate baseline), no new contacts, zero activity-log entries, no new Gmail correspondence, no new/modified Drive files under "Rewhip". Ping `resolve_person` for this name still returns no match, consistent with prior sweeps. Chase pass on all three outstanding items — ages above, no arrivals found.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both notes' `updatedAt` unchanged from 2026-08-22 (no re-read needed beyond metadata check); zero activity-log entries since baseline; no new contacts. Gmail (`after:2026/08/22`, name + Rewhip + CS Float + Stripe) found nothing beyond the internal weekly-sweep digest — no client correspondence in the window, including no confirmation of the QuickBooks recurring-payment setup. Ping org-wide semantic search returned only unrelated pre-2026-08-22 noise; `resolve_person` still no match. Chase pass on all three outstanding items — ages below; none arrived. No SOP exists yet for this client; no SOP-proposal candidates queued.
 
 ### Outstanding items (CI-only — never in the SOP)
 Live list lives in Double; mirrored here for context:
@@ -203,9 +204,9 @@ Live list lives in Double; mirrored here for context:
 - January 2026 statements (both accounts) to complete Dec 2025 — not chased this run (budget).
 - CS Float purchases/expense report — not chased this run (budget).
 - Home-office worksheet, Lendbuzz/Westlake amortization schedules, Form 1095-A, car purchase/sale documents, external-card statements, client-review items (deposits/travel/auto-transport Zelles) — not chased this run (budget).
-- Confirmation the client completed the QuickBooks recurring-payment setup — STILL OPEN, ~24 days pending since the first reminder (2026-07-29), the 2026-08-01/08-04 deadline already passed. A targeted search found the automated reminders continued (one further reminder dated 2026-08-03, pre-baseline) but no confirmation the client ever completed setup.
-- **Rewhip LLC — clarify scope** — STILL OPEN, 38 days pending since raised (2026-07-15), no deadline. A targeted search found nothing beyond what's already on file.
-- **Stripe transaction data** — STILL OPEN, 47 days pending since raised (2026-07-06), no deadline. A targeted search found only unrelated firm-subscription receipts, nothing client-specific.
+- Confirmation the client completed the QuickBooks recurring-payment setup — STILL OPEN, ~31 days pending since the first reminder (2026-07-29), the 2026-08-01/08-04 deadline already passed. A targeted search bounded `after:2026/08/22` for "recurring payment" found no confirmation the client ever completed setup.
+- **Rewhip LLC — clarify scope** — STILL OPEN, 45 days pending since raised (2026-07-15), no deadline. A targeted search bounded `after:2026/08/22` found nothing beyond what's already on file.
+- **Stripe transaction data** — STILL OPEN, 54 days pending since raised (2026-07-06), no deadline. A targeted search bounded `after:2026/08/22` found nothing client-specific.
 
 ### Information still needed
 - [ ] Primary language / preferred communication.

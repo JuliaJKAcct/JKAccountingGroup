@@ -1,6 +1,6 @@
 # Kompozit USA
 
-> **Status:** Prospect — proposal sent, awaiting response · **Owner:** Julia · **Last updated:** 2026-08-22
+> **Status:** Prospect — proposal sent 2026-08-19, now in active negotiation (a 30-day trial period was floated 2026-08-25 as an alternative to the firm's standard annual contract; outcome of the follow-up call pending) · **Owner:** Julia · **Last updated:** 2026-08-29
 >
 > ⚠️ **Coverage gap, weekend sweep 2026-08-22:** this client has no Double account yet and is **not
 > named in `weekend-ci-sweep.md`'s scope or exclusion table** — a genuine gap found by this run's
@@ -171,6 +171,23 @@ link). Never write the credential itself here.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent + Google Drive, since
+  2026-08-19; no Double/Ping — no Double account exists, so nothing was searched there).**
+  Found a **third Zoom call** the file's log did not yet have: "Dmytro Ostapenko Follow Up
+  on Proposal," **2026-08-25, 11:00 AM ET** (Ping Assistant-recorded; Julia was traveling
+  through 2026-08-25, so the only Gmail trace on her side is an out-of-office autoresponder
+  to the Zoom notification emails). Read the meeting summary in full: this is a live
+  negotiation, not yet a signed deal. Dmytro raised concerns about a team member's
+  tax/bookkeeping delivery (documents not produced on schedule, though the person stays
+  available for calls); Julia repositioned the firm's offering as an outsourced "financial
+  department" rather than pure tax prep, and they discussed reallocating duties and a
+  possible outside collaboration on process automation. **Julia offered a 30-day trial
+  period instead of the firm's standard annual contract** — a departure from how the
+  proposal itself was quoted — and Dmytro said he needs more time to decide. They agreed to
+  a follow-up call "Friday morning at 10 or 11" (likely 2026-08-28). A further Gmail search
+  bounded `after:2026/08/26` found no record that this call happened or how it went. No new
+  Drive folder or document found for this prospect; the sensitive-vault folder remains
+  pending as already noted
 - 2026-08-22 — **Weekend sweep (bounded, Gmail + Drive only since 2026-08-19).** A Zoom call titled "Dmytro Ostapenko Proposal Review" took place **2026-08-19** (recap email received 16:10 UTC) — Julia walked Dmytro through a comprehensive proposal for financial/accounting services; this is a **live proposal walkthrough with the owner**, not just an emailed PDF, and is new to this file's log (which previously only documented the proposal being "sent by email"). A separate, earlier Zoom call — **"Dmytro Ostapenko & JK Follow up - Accounting," 2026-08-17, 11:00 AM ET, Ping Assistant recording** — predates the proposal delivery by two days and likely fed into it; also new to this file. No reply from Dmytro Ostapenko or anyone at Kompozit was found in Gmail since 2026-08-19. No new Drive folder or document found for this prospect — the sensitive-vault Drive folder remains pending as already noted. The two Zoom-recap emails were not opened in full (only snippet summaries reviewed), so further detail from the 2026-08-17 follow-up call (which may contain scope/pricing discussion) was not extracted this pass.
 - 2026-08-19 — **Intake brief (dictated) + first draft proposal built and delivered.**
   Bilingual RU/EN monthly proposal on the tool: Strategic-tier base with the systems work
@@ -206,10 +223,21 @@ link). Never write the credential itself here.
 
 - **Still to confirm:** exact legal entity name (Sunbiz — Facebook suggests "Art
   Kompozit USA") and entity/return type. Contact settled (Dmytro Ostapenko); the proposal
-  went out 2026-08-19 with start "1st of the month after signing"
+  went out 2026-08-19 with start "1st of the month after signing". STILL OPEN as of
+  2026-08-29 (10 days since the proposal went out) — a Gmail search (in:inbox + in:sent,
+  `after:2026/08/19`, on 2026-08-29) for "Kompozit"/"Ostapenko"/"Dmytro" found no message
+  supplying either
 - **Pricing settled** (2026-08-19): one all-in fee, controller included — decision recorded
   in §1 and the log
-- **Owner reply to the proposal** — STILL OPEN as of 2026-08-22 (3 days since the walkthrough call). A search of Gmail bounded `after:2026/08/19`, on 2026-08-22, for "Kompozit"/"Ostapenko" (in:inbox and in:sent) did not find a reply. Proposal is valid 30 days from 2026-08-19.
+- **Owner reply to the proposal — now an active NEGOTIATION, not a clean accept/decline.**
+  A third call happened 2026-08-25 ("Dmytro Ostapenko Follow Up on Proposal," 11:00 AM ET,
+  Ping Assistant-recorded) that this file's log had not yet captured. Julia offered a
+  **30-day trial period** instead of the firm's standard annual contract; Dmytro said he
+  needs more time to decide. They agreed to a follow-up call "Friday morning at 10 or 11"
+  (likely 2026-08-28). **A Gmail search (in:inbox + in:sent, `after:2026/08/26`, on
+  2026-08-29) for "Kompozit"/"Ostapenko"/"Dmytro" found no record that call happened or
+  its outcome** — so whether the trial was accepted is unknown as of this sweep. Proposal
+  is valid 30 days from 2026-08-19 (through ~2026-09-18)
 
 ### Information still needed
 

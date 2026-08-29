@@ -1,6 +1,6 @@
 # Beemold USA LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -108,12 +108,13 @@ never copied here.
   identify what it is. Ping had no indexed meetings for Beemold or the owner in this window.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: client record `updatedAt` moved 2026-08-14T21:21:05Z but zero activity-log entries and zero new notes recorded in the window — cause of the timestamp bump not determined. Gmail: a Mercury IO card credit-limit change was recorded 2026-08-15 (no dollar figure). No Ping/Drive activity found. Chase pass on all outstanding items — results above.
+- 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 notes, 0 activity-log entries for client 709445 since baseline; properties unchanged. Gmail: a targeted search of `(Beemold OR "Vasile Bivol") after:2026/08/22` and a further search for `(Beemold OR Margate) (Mercury OR BoA OR "bank feed" OR reconnect) after:2026/08/22` found **no Beemold-specific correspondence this window** — the only hit either query returned was the firm's own weekly CI-sweep email. Ping: an org-wide semantic search for Beemold/Margate/Vasile Bivol returned no legible, on-topic results (all hits were unrelated or garbled). Drive: a title search for `Beemold` or `Margate`, bounded `modifiedTime > 2026-08-22`, returned nothing. Chase pass on all four outstanding items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **QBO bank-feed reconnection** pending — resolve the Mercury + BoA connection so manual upload can stop. STILL OPEN, no new correspondence found this window. _(Maria's doc guide, Gmail)_
+- **QBO bank-feed reconnection** pending — resolve the Mercury + BoA connection so manual upload can stop. STILL OPEN — a targeted search bounded ≥2026-08-22, on 2026-08-29, for Beemold-specific bank-feed/reconnect correspondence found nothing; ~40 days pending as tracked in this file (since the 2026-07-20 profile build; the underlying sync break is older, since Feb 2025). _(Maria's doc guide, Gmail)_
 - Owner requested an **accountant letter for a personal remortgage** — a personal / related-party ask, not a Beemold service; the request itself predates this window. Not chased further this run. _(Gmail)_
-- **WF statement access** — the WF side is likely resolved: Maria confirmed "we finally have access to the new account" 2026-08-20 on the joint Margate/Beemold thread (see [`margate-plumbing.md`](./margate-plumbing.md)), though the original ask was joint and it's unclear whether it specifically closes Beemold's own Mercury/BoA feed question. **A specific Beemold income line (dated 7/10) needs owner identification** — STILL OPEN, 8 days pending since 2026-08-14, no deadline; a targeted search found no reply.
-- Mercury checking ●3849 vs ●8192 confirmation — not chased this run (budget, no deadline).
+- **WF statement access (Beemold-specific)** — STILL UNCONFIRMED. Margate's own Wells Fargo replacement-account issue is now resolved (renamed "WF Checking 0647," done 2026-08-20 — see [`margate-plumbing.md`](./margate-plumbing.md)), but a targeted search on 2026-08-29, bounded ≥2026-08-22, found no Beemold-specific confirmation that the joint access fix also closes Beemold's own Mercury/BoA feed question. Unconfirmed for at least three weeks (first flagged this way in the 2026-08-08 sweep). **A specific Beemold income line (dated 7/10) needs owner identification** — STILL OPEN, now 15 days pending since 2026-08-14 (was 8 days as of 2026-08-22); the same targeted search found no reply.
+- Mercury checking ●3849 vs ●8192 confirmation — not chased this run (budget, no deadline; ~30 days pending since the 2026-07-30 note).
 
 ### Information still needed
 - [ ] Confirm home state; fiscal year-end; what Beemold actually does (low activity)
