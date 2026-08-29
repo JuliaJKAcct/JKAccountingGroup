@@ -1,6 +1,6 @@
 # Anton (last name pending) — laundry portfolio buyer
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope expanded same day · **Owner:** Julia · **Last updated:** 2026-08-28
+> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope and boundaries finalized 2026-08-29 · **Owner:** Julia · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -43,11 +43,12 @@
   card-processing + coin-collection reconciliation, bank-deposit analysis), add-backs /
   EBITDA / quality of earnings, sales-tax and employment-tax compliance, the real-estate
   component (incl. property-tax reassessment and a cost-segregation feasibility read),
-  hidden operating costs and impact/tap fees, UCC-1 lien and environmental-history checks,
-  coordination of a third-party equipment inspection, and a written findings report.
-  **Hourly with an initial not-to-exceed budget and a deposit credited to the final bill**
-  (figures in the delivered proposal, not here); work beyond the budget requires his
-  written approval
+  hidden operating costs and impact/tap fees, a financial review of UCC/equipment
+  financing, and a written findings report. **Hourly with an initial not-to-exceed budget
+  and a deposit credited to the final bill** (figures in the delivered proposal, not
+  here); work beyond the budget requires his written approval. The document carries a
+  dedicated **"Work for Other Specialists" page** (Julia, 2026-08-29) drawing the line
+  between our financial/tax review and the specialist work we do not perform — see §5
 - **Fiscal year-end:** n/a (no engagement entity yet)
 - **Accounting platform:** n/a
 
@@ -103,6 +104,22 @@ the actual details.
   audit, review, or compilation; no opinion, no assurance; the word "verification" stays out
   of the service description (Julia, 2026-08-28, on professional-standards grounds). The
   report explains procedures performed and findings, and is restricted to the buyer's use
+- **The scope boundary is drawn item by item — Julia's eleven explicit exclusions
+  (2026-08-29):** a dedicated proposal page in each language lists what the financial and
+  tax due diligence does NOT include: Phase I environmental (inspection, testing, and the
+  historical investigation), the technical equipment inspection, the building-systems
+  inspection, the defect report (a laundromat technician's work), legal/title due
+  diligence, legal confirmation of UCC releases at closing (we review the financing
+  information; the confirmation is the attorney's), zoning/permitting/code compliance,
+  municipal engineering determinations of impact/tap/sewer fees (we analyze actual bills
+  and identified fees only), immigration/work-authorization checks (payroll, W-2s,
+  940/941 and worker classification reviewed from a tax perspective only), a formal
+  real-estate appraisal, and the engineering-based cost segregation study (we advise on
+  whether it makes sense; a specialist firm performs it). Their results, when delivered,
+  are folded into our analysis, illustrated in the document with a hypothetical
+  equipment-replacement CapEx. Reuse this page as the boundary standard for any future
+  due-diligence engagement. The engagement still depends on seller cooperation: the
+  signed 4506-C and consent for utility and municipal billing inquiries
 - **The deal's center of gravity is the add-backs — and cash revenue is tested three
   independent ways:** the seller's adjusted earnings rest almost entirely on add-backs to
   reported results that are close to break-even, and the add-back schedules include
@@ -113,21 +130,17 @@ the actual details.
   deposits, and **tax data comes straight from the IRS on a seller-signed Form 4506-C,
   never from the seller's own copies** — the offering memorandum must match what was filed
   with the government
-- **Fee protection is the structure Julia chose:** hourly, an estimate range, an initial
-  not-to-exceed budget, a deposit credited in full, balance billed on report delivery, and
-  written approval before exceeding the budget — protection against poor seller records or
-  sprawling bank/merchant streams. Reuse this shape for future due-diligence quotes
+- **Fee protection is the structure Julia chose:** hourly, an estimate stated as a
+  **minimum** of hours with a range above it (her call, 2026-08-29: never present the top
+  of the range as the target), a not-to-exceed budget at the top of the range, a deposit
+  credited in full, balance billed on report delivery, and written approval before
+  exceeding the budget — protection against poor seller records or sprawling
+  bank/merchant streams. Reuse this shape for future due-diligence quotes
 - **The follow-on is now a named structuring consultation** (his own request, sharpened by
   Julia's methodology brief): after the analysis — acquisition-entity choice (LLC / S-corp /
   C-corp), splitting the real estate and the operating business across companies, and the
   Form 8594 purchase-price allocation (weight toward equipment, away from goodwill and
   land). Excluded from this scope, quoted separately — do not let it slip
-- **Third-party specialists are coordinated, not absorbed:** the laundromat equipment
-  technician (defect list + reserve-fund estimate) and any Phase I environmental assessment
-  are separate contractors, paid by Anton directly, answering for their own conclusions —
-  the proposal and T&C say so explicitly. The engagement also depends on seller
-  cooperation: the signed 4506-C, site access for the technician, and consent for utility
-  and municipal inquiries (listed as next-step requirements in the document)
 - The proposal document is bespoke (no tool template exists yet for consulting engagements);
   if due-diligence work recurs, it should become the third template family
 
@@ -155,20 +168,31 @@ the actual details.
   estimate range were restated upward (~1.5×) for the wider scope **as a draft judgment
   pending Julia's confirmation** — her checkpoint-budget and deposit mechanics kept
   verbatim. Redelivered as PDF + the same private artifact
+- 2026-08-29 — **Fees restated per Julia + the eleven-exclusion boundary added; two
+  redeliveries.** Julia's rulings: the hours estimate is presented as a **minimum**, never
+  a target (the top of the range became the budget checkpoint); the deposit was raised
+  (she offered two amounts; the lower one is in the draft); cost segregation and the
+  equipment inspection are **not our services** (specialist firms; we help source them);
+  the scope gained a before/after-purchase **road map**. Then her eleven-item exclusions
+  list became a dedicated "Work for Other Specialists" page per language, with the affected
+  scope bullets recast to the financial side of each boundary (UCC financing review vs
+  legal release confirmation; actual bills vs municipal fee determinations; tax-perspective
+  payroll review vs work-authorization checks; financial RE analysis vs appraisal) and the
+  incorporate-their-results paragraph with a hypothetical replacement-CapEx example.
+  Environmental history moved wholly out of scope. Redelivered as PDF + the same artifact
 
 ### Outstanding items (CI-only — never in the SOP)
 
 - **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
   email field — her instruction); then create the Double client and complete §1/§2 here
-- **Julia to confirm — the restated estimate:** the expanded methodology roughly doubles
-  the analysis work, so the draft restates the hours and the estimate range upward (~1.5×)
-  while keeping her initial not-to-exceed checkpoint and deposit exactly as she set them.
-  Her call to keep the restated range or revert to the original one
+- **Julia to confirm — the deposit amount:** she offered two figures ("say $3,500 or
+  $4,000" — amounts named in her instruction, not client data); the draft uses the lower
+  one. Swapping to the higher is a one-pass change
 - **Julia to confirm — the unit count:** her brief says four cash points + two card points
   (six); the offering memorandum lists five locations plus the delivery business. The
   document uses her 4 + 2 framing — confirm the counting before signing
-- **Julia to confirm:** balance invoiced on report delivery (assumed), and whether the
-  bespoke T&C set reads right for a first consulting engagement
+- **Julia to confirm:** whether the bespoke T&C set reads right for a first consulting
+  engagement (balance-on-report-delivery was her own instruction and is settled)
 
 ### Information still needed
 
