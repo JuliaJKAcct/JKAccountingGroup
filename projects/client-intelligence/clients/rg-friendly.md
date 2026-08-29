@@ -118,36 +118,41 @@ the actual details (and Claude can pull them live when a task needs them).
   - **2026-03-10 — RUN Powered by ADP connected** to the QuickBooks Online company.
   - **2026-03-14 — the 2025 Form 1120-S signed**, and the firm's invoice for the work paid.
   - **2026-05-25 — Double records the 2025 return as filed.**
-- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything earlier have never been swept**, so this is a statement about the search, not about the world.
+- 2026-08-29 — **First full historical sweep, run together with [Igor Melomed & Yelena Lovkina](./igor-melomed.md) at the owner level per this run's instructions.** Findings, by source:
+  - **Ping** (`resolve_person`, org-wide `search_meetings` for "R & G Friendly", "Grigoriy Melomed", "Margarita Melomed", "Lucky Pawn Jewelry", `list_action_items`, `get_client_details`): **zero recorded meetings, zero action items** — `recentMeetingCount: 0`.
+  - **Gmail** (full history, no date bound — extended well back of the prior 2026-03 catch-up): found the engagement runs back to at least **2025-05** and surfaced a full **Florida Department of Revenue sales-tax audit, 2025-05 through 2025-07, PASSED** (§4/§5) — a major finding this file did not previously carry at all. Also found the **ADP payroll relationship predates the March 2026 QuickBooks integration**, back to Nov 2025 (§4-Payroll). **No thread anywhere connects this client to Igor Melomed's household.**
+  - **Google Drive** (`excludeContentSnippets: true`): confirms the engagement runs back to **2021** — a filed 2021 1120-S with signature documents and filing instructions, a 2020 personal 1040 for Margarita Melomed, and Grigoriy's 2021 personal 1040 and W-2. Also confirms the FP/RAZZ store-number naming (#3941 Oakland Park, #3888 Davie) used in monthly reconciliation folders back to 2022.
+  - **Double** (`list_activity_log`, full history — 11 entries): confirms the 2025 project moved to `filed` on 2026-05-25; nothing else new.
 
 ### Tax year 2025 — the review
 
 - **Filing position:** Form 1120-S, signed 2026-03-14, recorded filed 2026-05-25.
-- **Payroll:** the owner holds a W-2 from the company.
+- **Payroll:** the owner holds a W-2 from the company; ADP access has been in place since at least Nov 2025.
 - **Open:** the two-bank year (PNC → Truist), and whether card activity is complete.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle who OWNS this company.** All three records now have files, but ownership does not: the return is signed and a W-2 issued in one household's name, while the *other* household sends the monthly ledgers. Until that is drawn, every "Melomed" fact is ambiguous.
-- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here.
+- [x] ~~Settle who OWNS this company~~ — **ANSWERED 2026-08-29:** Grigoriy & Margarita Melomed (§5 bullet 1). Igor Melomed's household is unrelated.
+- ⚠️ **Correct the Double record** — `platform`, `Bookkeeping` and `Payroll` all understate what is actually happening here. _(Open since 2026-08-14 — 15 days as of this sweep.)_
 - **Check the PNC → Truist cut-over in the 2025 books**, and confirm the card feed question from 2024 is closed.
 - **Review the owner's reasonable compensation** — a W-2 exists, so the question is the amount, not the existence.
-- **Establish the sales-tax and pawnbroker-licensing position.**
-- **Run the one-time full historical sweep** — never done for this client.
+- **Confirm the 2025-08-25 FL DOR "Communication" (encrypted) was a routine audit follow-up**, not a new matter — found but not opened this sweep.
 
 ### Information still needed
 
-- [ ] Who owns the company, and how it relates to each Melomed household
-- [ ] What "FP" and "RAZZ" are
-- [ ] Whether a Form 7004 was filed for 2025
-- [ ] Whether sales tax and a pawnbroker licence apply, and who handles them
-- [ ] Ping, Drive, and everything before 2026 — never swept
+- [x] Who owns the company, and how it relates to each Melomed household — **ANSWERED 2026-08-29** (§5)
+- [x] What "FP" and "RAZZ" are — **ANSWERED 2026-08-29:** Oakland Park (#3941) and Davie (#3888) store locations respectively (§5)
+- [ ] Whether a Form 7004 was filed for 2025 (the 2026-05-25 filed date is after March 15, so one was presumably on file, but nothing confirms it)
+- [x] Whether sales tax applies, and who handles it — **ANSWERED 2026-08-29:** yes, 6%+1% county; the firm handled a 2025 audit directly (§4)
+- [ ] Whether a pawnbroker licence is separately required/held
+- [x] Ping, Drive, and everything before 2026 — **first full historical sweep run 2026-08-29; see log above.** Gmail/Drive extend confirmed history to 2021; Ping returned nothing.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710589](https://app.doublehq.com/close?cid=710589)
 - **Double tax project (2025):** [tax-return?cid=710589&projectId=219280](https://app.doublehq.com/tax-return?cid=710589&projectId=219280)
-- **Owner-group siblings:** [`igor-melomed.md`](./igor-melomed.md) (710635) · [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) · possibly [Magnum 152, Inc](./magnum-152.md) and [Sunoma Inc](./sunoma-inc.md)
+- **Owner-group sibling (settled 2026-08-29):** [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) only.
+- **NOT related (settled 2026-08-29):** [`igor-melomed.md`](./igor-melomed.md) (710635) — a different Melomed household; the "possibly Magnum 152 / Sunoma" cross-link this file used to carry belongs on Igor Melomed's file instead, not here.
 - **Migrated TaxDome notes:** Drive `4. Documents > R & G Friendly Inc` — read 2026-08-13.
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** `R & G Friendly Inc` (Julia's Drive) and `R & G FRIENDLY, INC.` (a separate older tree with 2021–2023 subfolders) — both confirmed present 2026-08-29
 - **Related SOPs:** _(pending)_ — the compensation review routes to the [`reasonable-compensation` skill](../../../.claude/skills/reasonable-compensation/)
