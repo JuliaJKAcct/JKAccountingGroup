@@ -122,8 +122,11 @@ the actual details.
   laundromat-savvy mechanical/plumbing contractor, Florida M&A/RE attorney + title
   company, civil/utility engineer, Florida Certified General Appraiser); equipment leases
   sit with the transaction attorney; the immigration exclusion narrowed to **legal
-  opinions only** (I-9 administration and roster-to-W-2/941 reconciliation are OUR work,
-  as the employer's authorized representative); and **cost segregation left the exclusions**
+  opinions only** — and then re-narrowed by Julia the same day: ⚠️ **no payroll or
+  "authorized representative" language in THIS document** ("Payroll это потом"). What the
+  due diligence itself does: compare the seller's employee roster against W-2s and Forms
+  940/941 with supporting documents requested, and request the Forms I-9 from the seller
+  for employees staying on after the purchase; and **cost segregation left the exclusions**
   (we select and coordinate the firm; the client pays it directly). Their results, when
   delivered, are folded into our analysis, illustrated with a hypothetical
   equipment-replacement CapEx. Reuse this page as the boundary standard for any future
@@ -212,6 +215,18 @@ the actual details.
   extended (not a legal opinion / engineering inspection / environmental assessment /
   appraisal). One garbled dictation left open: who prepares employment contracts
   (attorney vs us) — flagged back to her, not written into the document
+- 2026-08-29 (evening) — **Julia's corrections applied and redelivered (v8).** Payroll
+  language removed from the document entirely ("Payroll это потом" — the Gusto/monthly
+  idea stays internal, §4); the staff work restated her way (roster vs W-2/940-941 with
+  documents requested; I-9s requested for staying employees; no legal conclusions about
+  status). The UCC double-mention she flagged as contradictory was split cleanly: our
+  scope bullet speaks plain finance (find equipment leases and loans in the books,
+  quantify payments and balances, hand the list to the attorney) and the exclusions page
+  carries the attorney's half (registry searches, lease review, releases at closing).
+  The real-estate bullet made concrete: each building's cost of ownership and market
+  rent, as the basis for splitting the price between real estate and business. She
+  declined the artifact republish for this version — the private link intentionally
+  still shows v7 until she asks
 
 ### Outstanding items (CI-only — never in the SOP)
 
