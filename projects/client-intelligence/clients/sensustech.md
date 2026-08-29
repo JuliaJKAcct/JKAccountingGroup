@@ -120,12 +120,12 @@ doc guide** in Drive (§7) — never copied here.
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 1 activity-log entry — a client-portal transaction question ("gas station" categorization) resolved 2026-08-28 — routine, not logged further. 0 new notes; properties unchanged. Gmail: a search of `(Sensustech OR "Stanislav Fedorov") after:2026/08/22` returned only routine Gusto AutoPilot payroll confirmations (2026-08-25, 2026-08-26) and the firm's own internal sweep-health email — no update on the Gusto→QBO mapping-sync issue either way. A targeted follow-up search (`(Sensustech) (Gusto OR mapping OR sync) after:2026/08/22`) confirmed no fix or further correspondence. Drive: a title search for `Sensustech`, bounded ≥2026-08-22, returned nothing — cannot confirm or rule out the duplicate-folder consolidation this window. Ping: an org-wide semantic search for Sensustech/Mobilesource/Lumetro/Stanislav Fedorov returned no legible, on-topic results. Chase pass on all six §6 items — results below.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **External financial audit (mid-2026)** — not chased this run (budget).
-- **June reports pending** final expense categorization — not chased this run (budget).
-- Confirm **home state** and a definitive primary language.
 - **Gusto → QuickBooks Online mapping-sync failure (due 2026-08-12)** — STILL OPEN/UNCONFIRMED, now **17 days past its due date**. A targeted search bounded ≥2026-08-22, run 2026-08-29, found only routine AutoPilot payroll-run confirmations — no mention of the mapping issue at all, so it cannot be confirmed fixed or still broken; watch the next close for a recurrence.
+- **External financial audit (mid-2026)** — not chased this run (budget).
 - Reconcile the **crypto/USDT** note against the managed-brokerage statement flow — not chased this run (budget).
 - **Duplicate Drive folders:** a second "SENSUSTECH LLC" folder (2026-05) still exists alongside the original 2023 vault folder — STILL OPEN; a Drive search for files modified after 2026-08-22 found nothing addressing consolidation.
+- **June reports pending** final expense categorization — not chased this run (budget).
+- Confirm **home state** and a definitive primary language.
 - **Confirm intent** behind the 2026-07-31 reversion of the "JK 2025 Business Tax Organizer - Sensustech" to draft — not chased this run (budget).
 
 ### Information still needed
