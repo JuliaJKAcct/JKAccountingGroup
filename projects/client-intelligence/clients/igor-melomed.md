@@ -26,11 +26,6 @@
 > The SOP is the curated view of the **Operating** zone. See the project README
 > ("Client Intelligence ↔ the client SOP") for how the two stay in sync.
 
-> ⚠️ **NO FULL HISTORICAL SWEEP HAS RUN.** Created 2026-08-14; the Gmail pass covered
-> **2026-03 → 2026-08** (a targeted catch-up after the first version drew conclusions from a
-> six-day window and concluded, wrongly, that the business might have ended). Ping, Drive and
-> everything before 2026 are **still unswept**. The catch-up is recorded in
-> [`sweep-state.md`](../automation/sweep-state.md).
 
 ## 1. Snapshot
 

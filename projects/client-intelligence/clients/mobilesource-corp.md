@@ -126,12 +126,12 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries since baseline. **Contradiction found and recorded** (§4 Income tax) between the organizer status this file previously recorded ("Sent," 2026-07-25) and what the organizer entity + current property both now show — unsettled. Gmail: a "PLEASE ADJUST TRANSACTIONS" thread (2026-08-24) — the GM (Amalia) asked Maria to write off several pending bills-to-pay for customers who never responded and are no longer reachable; Maria adjusted the same day. This addresses the "pending-payment removal" item from Maria's guide open-items list (below). A Zoom recap (Julia & Maria, 2026-08-27) surfaced substantial new operational detail — folded into §5 above (sales-tax shipping-address fix, eBay dispute treatment confirmed, four balance-sheet cleanup items). Chase pass on the FL DOR audit and the USDT deposit — results below; the fiscal year-end and the remaining Maria's-guide items not chased this run (budget).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **June 2026 reports:** closed. _(Gmail, Double activity log)_
-- **2025 business income-tax prep in progress** — not chased this run (budget).
 - 🔴 **FL DOR sales-tax audit — ESCALATED, no further movement.** On 2026-08-20 the auditor sent a detailed written list of questions about P&L transactions, specifically buyback-program processing (shipping vs. in-store carrier pickup); the client's GM (Amalia) replied same-day with explanations, cc'ing the President. CHASED this run: a targeted search (`(Mobilesource) (DOR OR audit OR "Department of Revenue") after:2026/08/22`) found no further correspondence — still open, 9 days since the last exchange, no stated deadline.
-- ✅ **Pending-payment removal (from Maria's guide) — ADDRESSED 2026-08-24.** The GM asked Maria to adjust/write off several pending bills-to-pay for unresponsive, no-longer-reachable customers; Maria completed it the same day. _(Gmail, 2026-08-24)_
-- **Open in Maria's guide, remaining:** dispute case, employee I-9, credit memo, skipped-contractor commissions — not chased this run (budget).
 - USDT-related deposit flagged pending 2026-07-23 — STILL OPEN. CHASED this run: a targeted search (`(Mobilesource) (USDT OR crypto) after:2026/08/22`) found nothing; now ~37 days pending, no follow-up found confirming it cleared.
+- **2025 business income-tax prep in progress** — not chased this run (budget).
+- **Open in Maria's guide, remaining:** dispute case, employee I-9, credit memo, skipped-contractor commissions — not chased this run (budget).
+- ✅ **Pending-payment removal (from Maria's guide) — ADDRESSED 2026-08-24.** The GM asked Maria to adjust/write off several pending bills-to-pay for unresponsive, no-longer-reachable customers; Maria completed it the same day. _(Gmail, 2026-08-24)_
+- **June 2026 reports:** closed. _(Gmail, Double activity log)_
 
 ### Information still needed
 - [ ] Fiscal year-end; sales-tax registration detail
