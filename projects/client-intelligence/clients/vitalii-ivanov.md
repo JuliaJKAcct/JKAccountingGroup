@@ -102,7 +102,7 @@ the actual details (and Claude can pull them live when a task needs them).
 - 🔵 **HE IS THE OWNER BEHIND THE FIRM'S DEEP TECH WORK — and that company has a live, blocked handover.** **Deep Tech Development Group LLC** is his _(Lilian, 2026-08-25)_, and its **"Go Robots" store (`gorobots.us`) is registered under Julia and is being transferred to him** — **blocked** as at 2026-08-25, with the whole trail on the company's file and in Double note **503544**, not here. ⚠️ **On his other two US entities the evidence is weaker:** Double records him as the **admin portal contact** on **1701 N M ST LLC** and **Universal Trading Technology LLC**, and **a portal contact is not proof of ownership** — nobody has established who owns those. **His company matters belong in [`deep-tech-development.md`](./deep-tech-development.md), not in this file**; this bullet exists so nobody reads this record as though he had no US business. _(Double contacts, 2026-08-25.)_
 - **Write to this client in RUSSIAN.** Double records `Preferred language = Only Russian`. It is the only client file so far carrying that property, and it means English correspondence will not land.
 - **The four companies, with their registration dates** _(Irina Jandieri, 2025-08-18)_: **ТОВ Бест Вей Фудс** (2018-07-30) · **ТОВ Екстрим Прайд** (2019-06-05) · **ТОВ 34-й градус** (2020-07-04) · **ТОВ Юкрейн Анлімітед Трейдинг** (2020-11-17). The Drive working file names **Extreme Pride**, so that is the one already under analysis.
-- ✅ **THE FIRM'S ADDRESS IS THIS COUPLE'S MAIL-OF-RECORD — treat it as answered, not open.** USPS Informed Delivery digests addressed to the spouse arrive at Julia's inbox **daily** (observed continuously through July and August 2026), and the firm has forwarded her physical mail on to her. **So an IRS notice for this couple lands here**, and somebody at the firm has to watch for it — that is an obligation, not a curiosity.
+- ✅ **The firm's address is this couple's mail-of-record, formally, via a USPS change-of-address forwarding order** (see bullet 1 for the lapsing date) — not merely an informal habit. Digests continued daily through 2026-08-28; the firm has also forwarded her physical mail on to her directly (§6).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -130,28 +130,33 @@ the actual details (and Claude can pull them live when a task needs them).
     same organisation it links the Ukrainian finance team to a company inside the open foreign-entity
     question above — **but it rests on the domain name alone and nobody has checked it.** Worth one question
     when that work is picked up. _(Double contacts, 2026-08-25.)_
+- 2026-08-29 — **First full historical sweep.** Findings, by source:
+  - **Ping** (`resolve_person`, org-wide `search_meetings` for the individual's name, the four Ukrainian company names, and "Deep Tech"/"Go Robots"/"Extreme Pride", `list_action_items`, `get_client_details`): **zero recorded meetings, zero action items** — `recentMeetingCount: 0`. No Zoom/phone call for this client has ever been captured by Ping.
+  - **Gmail** (full history, no date bound — the earlier catch-up had covered only 2026-07 → 08): confirmed the couple's mail-of-record arrangement is a **formal USPS change-of-address forwarding order** ending **2026-09-18**, covering Tetiana personally plus **Universal Trading Technology LLC**, **Deep Tech Development Group LLC**, and **1701 N M ST LLC** on one notice (§5). Also found the 34thgrade.com.ua domain directly **CC'd** on Deep Tech invoicing (2026-08-19) and on Lilian's June financial-statement email (2026-07-02) — this corroborates, though does not prove, the loose ТОВ 34-й градус thread above. Confirmed a Gusto payroll-cancellation request from the client (Aug 5, "no employees now, and probably won't have any until I return to the US") and a QuickBooks $ invoice addressed directly to Universal Trading Technology LLC (2026-08-21) — both belong to Deep Tech's own file, not duplicated in full here.
+  - **Google Drive** (`excludeContentSnippets: true`): a "Vitalii Ivanov Residency Status" memo (Sept–Dec 2025) and a Visa-application document folder (Oct 2025) — **titles only, not opened** (§1); a Form 8821 and Form 2848 both dated 2025-10-14; a 2025 estimated-tax payment confirmation (Jan 2026); an **`Ivanov_2025_Form8938_FBAR_Workpaper`** and an **`Ivanov_2025_FBAR_8938_Account_Summary`**, both created **2026-08-20/21 — i.e. work on the foreign-entity/foreign-account reporting question is already IN PROGRESS**, contradicting nothing in §5 but meaningfully advancing it: this is no longer only an open question, it is being actively worked. A check payable in connection with "o2b Kids!" and Tetiana Mogylova was also found (Oct 2025) — an unidentified possible income source, not chased further this sweep (see Outstanding items).
+  - **Double** (`list_activity_log`, full history — 27 entries): confirms the organizer was published 2026-06-29, the engagement letter and organizer tasks were marked done 2026-08-10, and the "Prepare tax return" task has been toggled between Done/In Progress several times as recently as 2026-08-12 — consistent with active, ongoing preparation work rather than a stalled file.
 
 ### Tax year 2025 — the review
 
-- **Status:** in progress, unfiled, organizer sent but not completed.
+- **Status:** in progress, unfiled, organizer sent but not completed; Double's activity log shows real preparation movement as recently as 2026-08-12 (the "Prepare tax return" task cycling Done/In Progress).
 - **Preparer:** Irina Jandieri _(Double)_.
-- **The open question that dominates the year:** which foreign-entity form, if any, each of the four Ukrainian companies requires (§5).
+- **The open question that dominates the year:** which foreign-entity form, if any, each of the four Ukrainian companies requires (§5) — and, newly found this sweep, **FBAR/Form 8938 workpapers were started 2026-08-20/21**, so the related foreign-account question is also now active work, not only a flagged risk.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Settle the foreign-entity reporting position for each of the four companies**, for 2025 and prior years — **5471, 8865 or 8858 depending on classification**, and 50% may put some of them outside 5471 entirely. Start from the existing Drive working file, which shows a view was already taken on one.
-- 🔴 **Confirm the 2025 Form 4868**, then chase the organizer — it is still in `Sent`, and he works in Russian only.
-- **Assign someone to watch the physical mail** — the firm is this couple's mail-of-record (§5), so IRS correspondence lands here.
-- **Run the one-time full historical sweep** — Ping, Drive and everything before July 2026 have never been swept.
+- 🔴 **Settle the foreign-entity reporting position for each of the four companies**, for 2025 and prior years — **5471, 8865 or 8858 depending on classification**, and 50% may put some of them outside 5471 entirely. Start from the existing Drive working file, which shows a view was already taken on one. _(Open since at least 2026-08-14 — 15 days as of this sweep; work is in progress, per the FBAR/8938 workpapers found 2026-08-20/21, but the 5471/8865/8858 classification itself is not yet resolved on file.)_
+- 🔴 **Act before 2026-09-18 — the mail-forwarding order for this couple and three companies expires.** _(20 days out as of this sweep, 2026-08-29.)_ Confirm with the client whether they want it renewed, or whether a permanent address change is now appropriate.
+- 🔴 **Confirm the 2025 Form 4868**, then chase the organizer — it is still in `Sent`, and he works in Russian only. _(Open since file creation, 2026-08-14 — 15 days.)_
+- **Open the "Vitalii Ivanov Residency Status" Drive document and the Oct 2025 visa-application folder** before the review proceeds — his physical location/residency status may affect filing status and is referenced but unread this sweep (§1).
 - ~~Find out what the "robot purchases" are (2026-07-28)~~ — **answered 2026-08-25:** they are inventory for the **"Go Robots" store** (`gorobots.us`) run by **Deep Tech Development Group LLC**, which is his. Forwarding those vendor invoices to him is a standing part of that company's bookkeeping relationship.
 
 ### Information still needed
 
-- [ ] What they do in the US, their home state, and whether either has US business activity — **partly answered 2026-08-25:** **he** has US business activity (he owns **Deep Tech Development Group LLC**, and is the admin portal contact on two more US entities whose ownership is unestablished — §5). **Still open: their home state**, and whether **Tetiana Mogylova** has any US activity of her own.
+- [ ] What they do in the US, their home state, and whether either has US business activity — **partly answered 2026-08-25:** **he** has US business activity (he owns **Deep Tech Development Group LLC**, and is the admin portal contact on two more US entities whose ownership is unestablished — §5). **Still open: their home state** — 🔵 a Residency Status memo and a visa-application folder exist in Drive (2025) and were not opened this sweep; open them next — and whether **Tetiana Mogylova** has any US activity of her own (a check found in Drive, "o2b Kids!" payable in connection with her name, Oct 2025, is unexplained).
 - [ ] Which of the four Ukrainian companies are still active, and their current ownership percentages
 - [ ] What foreign-entity forms have been filed to date, and for which years
-- [ ] Whether a 2025 extension exists
-- [ ] Everything from Gmail, Drive, Ping and prior years — never swept
+- [x] Whether a 2025 extension exists — **very likely yes** (the roster-wide May 2026 "File Extension" task was assigned and marked Done for this client, per Double activity log, 2026-05-25); not independently confirmed by an actual 4868 document in Drive this sweep.
+- [x] Everything from Gmail, Drive, Ping and prior years — **first full historical sweep run 2026-08-29; see log above.** Ping returned nothing (zero meetings/action items); Gmail and Drive both extended coverage well before July 2026 (Drive folders back to 2025-06; earlier company history is Deep Tech's, not this individual record's).
 
 ## 7. Links
 
