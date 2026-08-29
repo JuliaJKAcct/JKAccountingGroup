@@ -59,6 +59,10 @@ the actual details (and Claude can pull them live when a task needs them).
 (710633)** — a **separate, live client** whose 2025 return the firm filed in March 2026, and who
 now has its own file — [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md), created 2026-08-14. The migrated TaxDome folder named `IGOR MELOMED`
 routes here. **Never merge the two, and check the client ID before writing anywhere.**
+✅ **SETTLED 2026-08-29:** the Double contact roster confirms the split independently of the email
+evidence — Igor Melomed's own Double contact is linked to Sunoma Inc (706704) and Magnum 152, Inc
+(706693) alongside this record; R & G Friendly Inc's (710589) only Double contact is Margarita
+Melomed, who is also a contact on 710633. No contact bridges Igor's household to R & G Friendly.
 
 ## 3. Systems & access
 
@@ -127,7 +131,11 @@ here and must not be — the firm's convention puts credentials in the Drive vau
   - **2026-07-16 — Magnum 152 Inc statements** (June 15 – July 15) sent to the same mailbox, copying Julia and Maria.
   - **2026-07-20 → 07-21 — TD Bank statements** assembled by Maria at his request, tracing **wire transfers to an attorney's firm**. _(Why he needed the trace is not recorded.)_
 - **2026-05-27 — Lilian assigned Julia a "File Extension" task** for this client _(Double task digest)_.
-- **Nothing further was found in the sources actually searched** — Double live, and Gmail from 2026-03 forward. **Ping, Drive and everything before 2026 have never been swept**, so this is a statement about the search, not about the world.
+- 2026-08-29 — **First full historical sweep, run together with [R & G Friendly Inc](./rg-friendly.md) at the owner level per this run's instructions.** Findings, by source:
+  - **Ping** (`resolve_person`, org-wide `search_meetings` for "Igor Melomed", "Lucky Pawn", "Auto Pawn", `list_action_items`, `get_client_details`): **zero recorded meetings, zero action items** — `recentMeetingCount: 0`.
+  - **Gmail** (full history, no date bound — extended back from the prior 2026-03 catch-up): confirmed correspondence back to **2025-05-07** (an FL DOR sales-tax audit thread that turned out to be R & G Friendly's, not his — see that file) and **his own** Sunoma/Magnum 152 bookkeeping correspondence back to **2026-03-08**. The month-by-month volume (25+ threads) is almost entirely Sunoma/Magnum 152 GL reports, Bravo POS access issues, bank-statement requests, and QuickBooks payment notices — **no thread connects him to R & G Friendly Inc.**
+  - **Google Drive** (`excludeContentSnippets: true`): an `IGOR MELOMED` folder tree, a 2021 **1120-S K-1** issued to him (`IGOR MELOMED_2021_1120S_K1.zip`) — meaning he held an **S-corp shareholder position as far back as 2021**, likely in Sunoma or Magnum 152 (not established which) — and his 2021 joint 1040. Also found **"Lucky Pawn Dania (RAZZ)"** and **" lucky pawn Oakland #3941"/" lucky pawn Davia #3888"** folders dating to 2022–2024, which turned out on inspection to be **R & G Friendly's** store-numbered folders, not his — a naming collision worth remembering (§5 bullet 1's separation is the corrective).
+  - **Double** (`list_activity_log`, full history — 19 entries): confirms the "File Extension" task (2026-05-27, Done) and the 2025 organizer publish (2026-06-22); nothing bears on the ownership question, which was settled from contacts + Gmail instead.
 
 ### Tax year 2025 — the review
 
@@ -137,27 +145,27 @@ here and must not be — the firm's convention puts credentials in the Drive vau
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Reconcile the engagement with the work.** The firm does monthly books for two operations while Double says `Bookkeeping = N/A`. Whatever the truth, the column, the scope and the billing should agree.
-- 🔴 **Settle what the 2025 1040 carries** — Schedule C for one or both operations, or something else — and confirm the 4868 was accepted.
+- 🔴 **Reconcile the engagement with the work.** The firm does monthly books for two operations while Double says `Bookkeeping = N/A`. Whatever the truth, the column, the scope and the billing should agree. _(Open since 2026-08-14 — 15 days as of this sweep.)_
+- 🔴 **Settle what the 2025 1040 carries** — Schedule C for one or both operations, or something else — and confirm the 4868 was accepted. _(Open since 2026-08-14 — 15 days.)_
+- [x] ~~Settle the owner-group links to Magnum 152 and Sunoma~~ — **ANSWERED 2026-08-29:** confirmed by Double contacts + a full year of Gmail (§5 bullet 1). Cross-references updated in §7.
 - **Chase the 2025 organizer BY EMAIL**, not through the portal.
 - **Answer the 2023 classification question** — customer appreciation / company events, open since Julia raised it.
-- **Settle the owner-group links** to Magnum 152 and Sunoma, and cross-reference all three files.
-- **Establish the sales-tax and pawnbroker-licensing position** — a Florida retail pawn operation almost certainly has both.
+- **Establish the sales-tax and pawnbroker-licensing position for Sunoma/Magnum 152** — a Florida retail firearms/pawn operation almost certainly has both (R & G Friendly's own FL DOR sales-tax audit, found this sweep, shows the firm has handled exactly this kind of matter for the family's other company — see [`rg-friendly.md`](./rg-friendly.md) §5).
 
 ### Information still needed
 
-- [ ] The legal entities behind Lucky Pawn and Auto Pawn, and how each is taxed
+- [ ] The legal entities behind Sunoma/Magnum 152/Auto Pawn's day-to-day branding ("Lucky Pawn"), and how each is taxed
 - [ ] Who files their sales tax, and whether the firm should
-- [ ] Whether he owns Magnum 152 and Sunoma, or is only connected to them
+- [x] Whether he owns Magnum 152 and Sunoma, or is only connected to them — **his own Double portal-contact status confirms a direct operational connection to both** (§5); legal ownership (vs. an operating/manager role) is still not separately documented.
 - [ ] Why the attorney wire trace was needed
-- [ ] Ping, Drive, and everything before 2026 — never swept
+- [x] Ping, Drive, and everything before 2026 — **first full historical sweep run 2026-08-29; see log above.** Gmail/Drive extend confirmed correspondence back to 2025-05; Ping returned nothing.
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710635](https://app.doublehq.com/close?cid=710635)
 - **Double tax project (2025):** [tax-return?cid=710635&projectId=219323](https://app.doublehq.com/tax-return?cid=710635&projectId=219323)
-- **The OTHER Melomed household (not this client):** [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) — `Grigoriy & Margarita Melomed`, [Double 710633](https://app.doublehq.com/close?cid=710633)
-- **Probable owner-group siblings:** [Magnum 152, Inc](./magnum-152.md) · [Sunoma Inc](./sunoma-inc.md) — link unsettled, see §5
+- **NOT related (settled 2026-08-29):** [`grigoriy-margarita-melomed.md`](./grigoriy-margarita-melomed.md) (710633) and [`rg-friendly.md`](./rg-friendly.md) (710589) — a different Melomed household with no confirmed connection to this one (§5 bullet 1).
+- **Confirmed owner-group companies (settled 2026-08-29):** [Magnum 152, Inc](./magnum-152.md) (706693) · [Sunoma Inc](./sunoma-inc.md) (706704) — his direct, extensive operational correspondence, not merely "probable"
 - **Migrated TaxDome notes:** Drive `*QBO Clients and Individuals > IGOR MELOMED` — read 2026-08-13. _(This client appears in the `*QBO` subtree only, not in `*Dupplicated`.)_
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** `IGOR MELOMED` (Julia's Drive, two folder locations) — confirmed present 2026-08-29
 - **Related SOPs:** _(pending)_
