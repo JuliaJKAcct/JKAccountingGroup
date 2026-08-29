@@ -1,6 +1,6 @@
 # Andrii Tymchenko
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, notes, contacts, activity log — both pages, plus the linked second Double client id), Gmail ("Tymchenko"/"TRUSTBURN", full history), Ping (`resolve_person` + `search_meetings`), and Google Drive (multiple title queries) all checked.
 

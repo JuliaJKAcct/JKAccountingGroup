@@ -1,6 +1,6 @@
 # Ecom Beavers LLC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -96,12 +96,13 @@ here. Open the Double client to get the actual details.
 - 2026-08-15 — Incremental sweep (baseline 2026-08-08). Double: no new notes (still just the one 2026-07-09 consult note), no activity-log entries since baseline. Gmail turned up only routine Shopify billing notices for the Somma store (figures not retained here) — nothing else Ecom-Beavers-specific since baseline. Ping `search_meetings` scoped to "Ecom Beavers LLC" surfaced nothing new post-baseline (the only genuine hit was the same pre-baseline 2026-07-09 consult already on file). `FOLLOW-UPS.md`/`BACKLOG.md` checked — no mentions. **Google Drive turned up new, structurally significant material**: a folder "EB2 LLC" (created 2026-08-07) and a capital-contribution letter (drafted 2026-08-13) reveal a related new Delaware entity, **EB2 LLC**, owned by an Estonian parent, **Ecom Beavers OÜ** — see §5. This surfaced only because the Drive full-text search matched "Ecom Beavers" inside the letter's body, not the filename. QuickBooks not queried this pass (no open financial question).
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 1 note, unchanged since 2026-07-09. New facts found in §5 (Julia's 2025-03-26 email corroborating the disregarded-entity reading; the 2026-02-03 Delaware Division of Corporations correspondence). Chase pass on all four outstanding items — results above; payment-reliability re-confirmation not chased (budget).
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: properties unchanged, note count still 1 (unchanged since 2026-07-09, re-confirmed against the 2026-08-22 snapshot), no activity-log entries in the window. Gmail bounded `after:2026/08/22` for "Ecom Beavers"/"EB2 LLC"/Kocherzhuk found two routine items (a Mercury IO credit-limit increase and a BoneX Shopify billing charge, both 2026-08-28 — figures not retained per rule) and nothing else. **Chase pass** on the post-consult-deliverables and EB2-LLC-relationship items (both unbounded, since they are long-standing) found nothing further — only the firm's own weekly-sweep meta-emails matched. One incidental data point surfaced by the deliverables search: a 2024-10-03/04 NATP tax-research thread about a Delaware "foreign LLC" registration question was forwarded by Julia to the same email address identified as the 2026-07-09 consult's "second participant" — this predates the current engagement (onboarded ~May 2026) by about 21 months, so it is recorded only as a data point, not confirmed as related to this client's structure. Ping `search_meetings` scoped to "Ecom Beavers LLC" returned no legible new content — same semantically-loose, off-topic pattern as prior runs. Google Drive: the same 4–5 "Ecom Beavers" folders as before, no modification-date changes since baseline.
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Post-consult deliverables** Julia committed to (2026-07-09) — STILL OPEN, ~44 days pending since 2026-07-09, no deadline. A targeted search for entity/treaty/ITIN/minutes/checklist terms found no evidence any of these went out.
+- **Post-consult deliverables** Julia committed to (2026-07-09) — STILL OPEN, ~51 days pending since 2026-07-09, no deadline. An unbounded chase-pass search for entity/treaty/ITIN/minutes/checklist terms again found no evidence any of these went out.
 - **Payment-reliability watch** — not re-chased this run (budget).
-- Confirm **home state** and revisit the **sales-tax nexus** question — STILL OPEN, no deadline. A search bounded `after:2026/08/15`, on 2026-08-22, found nothing beyond the firm's own weekly-sweep meta-emails. (See the new Delaware correspondence lead above, which bears on formation state but not operating state.)
-- 🆕 **Confirm the relationship between this client and EB2 LLC** — STILL OPEN; a search for "EB2 LLC"/"Ecom Beavers OÜ" found no new correspondence since the 2026-08-13/14 Drive discovery already on file.
+- Confirm **home state** and revisit the **sales-tax nexus** question — STILL OPEN, no deadline. A search bounded `after:2026/08/22`, on 2026-08-29, found nothing beyond the firm's own weekly-sweep meta-emails. (See the Delaware correspondence lead already on file, which bears on formation state but not operating state.)
+- 🆕 **Confirm the relationship between this client and EB2 LLC** — STILL OPEN; an unbounded search for "EB2 LLC"/"Ecom Beavers OÜ" found no new correspondence since the 2026-08-13/14 Drive discovery already on file.
 
 ### Information still needed
 - [ ] Home state; fiscal year-end; credentials location

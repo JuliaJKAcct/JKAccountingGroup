@@ -161,10 +161,10 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **131 days** pending since 2026-04-13. A targeted search found only a 2025-03-17 prior-cycle thread ("Documents / Taxes 2024") showing the client had previously supplied K-1-type documents for both entities (tax year 2024) — this is a **prior cycle** and does not resolve the 2025 gap.
+- **Chase the two missing K-1s** (2242 Monroe LLC, Porcupine Partnership) / home-office deduction — STILL OPEN, **138 days** pending since 2026-04-13, no arrival found. ⚠️ **But see the new §5 contradiction** — Double's own project record shows the 2025 return already filed 2026-07-03, which this open item assumes cannot have happened. Resolve which is true before treating either as settled.
 - **Read the 2024 `ONETWO STRATEGIES REEMPLOYEMENT TAX.pdf`** — its Drive last-viewed timestamp is still 2025-03-17, confirming it remains unopened; not opened this sweep either (content stays out of scope).
 - **Confirm whether the discussed salary increase / withholding change was implemented** — STILL OPEN, targeted search found only unrelated correspondence.
-- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; the Drive "2026 Accountable Plan - ONETWO STRATEGY" spreadsheet has not been modified since its creation on 2026-03-10.
+- **Confirm the Accountable Plan is actually posted to QuickBooks** — STILL OPEN; not re-checked this sweep (budget; the filed-return contradiction took priority).
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

@@ -1,6 +1,6 @@
 # Greenair International LLC
 
-> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Liudmyla · **Last updated:** 2026-08-29
 >
 > ✅ **First full historical sweep completed 2026-08-15** — Gmail (inbox + sent, full history,
 > back to 2025-09), Double (client record, notes — none exist — contacts, properties), Google
@@ -148,13 +148,14 @@ A running, dated record as we build this profile.
 - _(pending)_
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 0 activity-log entries this window, consistent with the Gmail correspondence gap found (nothing client-specific since 2026-04-02). Chase pass on the one outstanding item — now flagged as a live risk, not just unconfirmed (see below).
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries again. Gmail: a business-name search bounded to this window returned **no client-specific result at all** — not even automated invoice/payment noise, which had continued monthly through 2026-04-02. The silence now runs from 2026-04-02 through 2026-08-29, essentially five months. Chase pass on the one outstanding item — still open, age updated below.
 
 ### Outstanding items (CI-only — never in the SOP)
 Open follow-ups from meetings / emails / calls — e.g. what Julia discussed last,
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- **Confirm the QuickBooks subscription-renewal failure (2026-03-17) was actually resolved** — STILL OPEN, **158 days** pending since 2026-03-17. A targeted search found only the original "Could not renew…help please…" forward, no reply or resolution email. ⚠️ Combined with a broader finding this sweep — no client-specific Gmail activity at all found for this client since the last "Payment received" invoice notice on 2026-04-02 — this reads as a live risk rather than just an unconfirmed fix.
+- **Confirm the QuickBooks subscription-renewal failure (2026-03-17) was actually resolved** — STILL OPEN, **165 days** pending since 2026-03-17. A targeted search (2026-08-29) found only the original "Could not renew…help please…" forward, no reply or resolution email. ⚠️ The client-specific Gmail silence now extends to **nearly five months** (last activity of any kind was the 2026-04-02 "Payment received" notice) — this is a live risk, not an unconfirmed fix, and it is worth a direct outreach to the client rather than another passive search next week.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

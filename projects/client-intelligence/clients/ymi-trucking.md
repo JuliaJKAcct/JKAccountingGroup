@@ -1,6 +1,8 @@
 # YMI TRUCKING LLC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-13
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
+
+> ✅ **First full historical sweep completed 2026-08-29** (Ping org-wide, Gmail full history, Drive, Double activity log — all unbounded). See §6 log for what each source added.
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -29,11 +31,11 @@
 - **Business name:** YMI TRUCKING LLC
 - **Entity type:** LLC **taxed as an S-corp** — the firm files an **1120-S** _(the 2025 extension was a Form 7004 for an 1120-S)_
 - **Home state:** ⚠️ **INDIANA — but the IRS has TEXAS on record.** See §5; this is the live problem on this client.
-- **Industry / what they do:** trucking _(from the name; not separately confirmed)_
-- **Primary language:** _(pending)_
-- **Our engagement (services we provide):** income tax (1120-S); anything else _(pending)_
+- **Industry / what they do:** ✅ **Confirmed — an active motor-carrier (trucking) operation**, not dormant: lease-to-purchase agreements for a truck and trailer, DOT driver-qualification checks (MVR/PSP), and a dispatch/scheduling system, all found in Drive _(2026-08-29)_
+- **Primary language:** _(pending — inferred English)_ — every piece of correspondence found (Gmail, Double) is in English _(2026-08-29, not independently confirmed with the client)_
+- **Our engagement (services we provide):** income tax (1120-S) — **plus payroll**, see §4 _(2026-08-29)_
 - **Fiscal year-end:** _(pending)_
-- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_
+- **Accounting platform:** Double `platform: none` — **no QuickBooks connected** _(2026-08-12)_. Payroll runs on **Gusto** (§4)
 
 ## 2. Contacts
 
@@ -43,8 +45,9 @@ the actual details (and Claude can pull them live when a task needs them).
 
 | Role | Where to find them |
 |---|---|
-| Owner / primary contact | Double client (link below) |
+| Owner / primary contact — portal admin | Double client (link below) — **also runs a related trucking company, Prime Road Carriers Inc, on the same portal contact** (§5) |
 | Previous accountant | Contacted by Julia in March 2026 (§6) — details _(pending)_ |
+| Company mailbox | `info@ymitrucking.com` _(role only — see Double for the address)_ |
 
 - **Double client:** [app.doublehq.com/close?cid=710608](https://app.doublehq.com/close?cid=710608)
 - **Double case note:** `CASE · IRS — the unexplained 2025 Form 7004, and the Texas address` — note **491842**
@@ -54,7 +57,9 @@ the actual details (and Claude can pull them live when a task needs them).
 | System | What it's for | Where credentials live (Drive link) | Non-sensitive reference |
 |---|---|---|---|
 | ATX (tax software) | Preparing and e-filing the return | n/a — firm software | Rejected the 2025 7004 as already filed (§5) |
-| Bank | Statements / reconciliation | _(pending — Drive link)_ | A bank statement in Julia's Drive is what revealed the Texas address (§5) |
+| Bank | Statements / reconciliation | _(pending — Drive link)_ | Account ending **6023** is what Gusto debits payroll from _(Gmail, 2026-08-29)_. A separate bank statement in Julia's Drive is what revealed the Texas address (§5) |
+| **Gusto** | **Payroll — biweekly, on AutoPilot** _(confirmed 2026-08-29)_ | n/a | Runs automatically every two weeks; the firm (Julia/Lilian/Maria) is copied on every pay-period notice |
+| Dispatch / scheduling ("OCAC") | Trip/load scheduling | _(pending)_ | An "OCAC_Schedule Report" is produced monthly in Drive (Marko's own drive) |
 
 ## 4. Obligations & recurring processes
 

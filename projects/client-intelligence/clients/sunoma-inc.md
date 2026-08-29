@@ -1,6 +1,6 @@
 # Sunoma Inc
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -91,6 +91,7 @@ Credentials for **every** system below (PaymentsHub, ADP, Bravo, banks) live in
 - **Two store brands under one entity** — Lucky Pawn (LP) + Auto Pawn (AP), reconciled and journalized **separately** every month.
 - **Pawn/jewelry owner-group (with MAGNUM 152, INC):** same owner + same administrative assistant; managed together, **books kept distinct**. _(Double, Drive)_
 - **Intercompany loan(s) exist between Sunoma and Magnum 152** — reconciled monthly as its own recurring closing task (see §4). _(Double, 2026-08-01)_
+- **The June 2026 monthly close ran unusually late — it did not finish until 2026-08-24** (Monthly Journal Entries, A/R and A/P Aging review, Statement of Cash Flows, Balance Sheet and Profit and Loss all marked Done that day, roughly two months after month-end). Worth watching whether July's close runs on the same delay. _(Double activity log, 2026-08-24)_
 - **Reports come from the owner via TaxDome** at month-end (Ledger + Expense + Cash-on-Hand, per store) — the close can't finish until they arrive, so nudge the pipeline early in the month.
 - **PaymentsHub (Merch) deposit/fee dates** routinely need correcting during the close.
 - **Bank-feed note:** "Teller Cashed" items — check the attachments.

@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -98,7 +98,8 @@ the actual details.
 - An **off-cycle Gusto payroll run** was processed 2026-08-20, in addition to the regular biweekly AutoPilot run — (Gmail, 2026-08-20; no dollar figure recorded).
 - A **client-portal transaction question was resolved** by Lilian on 2026-08-20 — (Double activity log, 2026-08-22).
 - The **accountable-plan workbook** ("2026 Accountable Plan 2026 - Masciave.xlsx") was updated 2026-08-20 — (Google Drive, 2026-08-22).
-- The **"Studio Passwords" document** inside the vault folder already linked in §7 was modified 2026-08-20 — this may be the answer to the long-pending "credentials Drive link" item below — (Google Drive, 2026-08-22).
+- ✅ **RESOLVED 2026-08-29 — the "Studio Passwords" document IS the credentials link.** Located directly in Julia's Drive, inside the vault folder already linked in §7 (file ID confirmed, content not opened). Added to §7 below; the "credentials Drive link" item is closed.
+- **A second client-portal transaction question was resolved 2026-08-24** — a distinct event from the 2026-08-20 one above (Double activity log entry dated 2026-08-24, separate `entityId`). Also on 2026-08-24: the **"Accountable Plan" task was marked Done** (from Not Started), and three bank-account reconciliation tasks (Chase Credit Card, Business Savings, Business Free Checking) moved to In Progress — ordinary close-cycle progress. _(Double activity log, 2026-08-24, read 2026-08-29)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -131,15 +132,16 @@ the actual details.
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** New facts folded into §5. No update on the EIN/S-election case note (491846) — still last touched 2026-01-14/08-13 IRS-side, no hard deadline recorded but the unresolved S-election carries ongoing filing-validity risk. Deeper Double bank-feed history and FL sales-tax county confirmation not chased this run (budget).
 
 ### Outstanding items (CI-only — never in the SOP)
-- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, ~5–6 weeks pending, no deadline. A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "Comcast Masciave" did not find anything specific; the firm's own 2026-08-20 recurring-expense monitor names Masciave as having an unspecified "quick item to check" — may be this, unconfirmed.
-- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — not chased beyond the activity-log check this run, which showed no bank-feed-related entries.
+- **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, **~6 weeks** pending, no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Comcast Masciave" again found nothing specific.
+- Confirm the **Double bank-feed connection** was fully resolved after a June 2026 support ticket — not chased beyond the activity-log check this run, which showed no bank-feed-related entries (only the three reconciliation tasks moved to In Progress on 2026-08-24, see §5).
 - Confirm the exact **FL sales-tax county / registration** — not chased this run (no registry-lookup tool available).
 - ~~Clarify the linked personal client (Double 710615)~~ — **resolved 2026-08-01:** Double's portal-contact record confirms the same contact carries both clientIds (706696 + 710615), i.e. it is the owner's individual 1040 engagement.
-- A **second Google Drive folder** also titled "Masciave Design Studio" (created 2026-05-09, different parent folder than the one linked in §7, last modified 2025-12-12) — STILL confirmed to exist as of 2026-08-22; metadata alone could not establish whether it's a duplicate or a distinct working folder. Contents not opened.
+- **Duplicate Google Drive folders — now THREE folders named "Masciave Design Studio" exist**, not two: the vault folder linked in §7 (created 2025-12-10); a second (created 2026-05-09, last modified 2025-12-12, contents not opened); and a **third, newly found 2026-08-29**, owned by `mariaf@jkaccountinggroup.com`, created 2026-05-11 (contents not opened). A separate, differently-named `MASCIAVE DESIGN STUDIO LLC_contractors_1099` folder also exists and is not part of this count (its name indicates a deliberate, distinct purpose). Metadata alone cannot establish which of the three general folders is canonical.
+- **EIN / no-Form-2553 case (note 491846) — still no movement found.** Chased 2026-08-29: Gmail (business name + "Pallisso" + "Form 2553" + both EINs, after:2026/08/22) and Ping (org-wide, "Masciave Design Studio Pallisso EIN S-election IRS") both returned nothing on-topic — the case remains at its 2026-01-14/2026-08-13 state, still unresolved, no hard deadline but ongoing filing-validity risk (see §5/§6 log).
 
 ### Information still needed
 - [ ] Fiscal year-end; exact FL sales-tax county / registration
-- [ ] Credentials Drive link
+- [x] Credentials Drive link — **done 2026-08-29: the "Studio Passwords" document, in the vault folder (§7)**
 
 
 ## 7. Links
