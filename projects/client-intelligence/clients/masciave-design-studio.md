@@ -130,6 +130,7 @@ the actual details.
   for this client, so no SOP-proposal candidates were queued.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** New facts folded into §5. No update on the EIN/S-election case note (491846) — still last touched 2026-01-14/08-13 IRS-side, no hard deadline recorded but the unresolved S-election carries ongoing filing-validity risk. Deeper Double bank-feed history and FL sales-tax county confirmation not chased this run (budget).
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double `list_activity_log` (from 2026-08-22): a second client-portal transaction question resolved (2026-08-24), the "Accountable Plan" task marked Done, and three bank-account reconciliation tasks moved to In Progress — all 2026-08-24, folded into §5. `list_notes` unchanged (both existing notes untouched since 2026-08-13). Google Drive: located the "Studio Passwords" document directly (resolving the credentials-link item, content not opened) and, while confirming folder structure, found a **third** Drive folder named "Masciave Design Studio" (owned by Maria, created 2026-05-11) not previously recorded. Gmail (business name + "Pallisso" + EIN numbers + "Form 2553", after:2026/08/22) and Ping (org-wide) both found nothing on the EIN/S-election case — still open, no movement since 2026-01-14/08-13. Not chased this run (budget): the Double bank-feed support-ticket resolution beyond the activity log; the exact FL sales-tax county/registration (no registry-lookup tool).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, **~6 weeks** pending, no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Comcast Masciave" again found nothing specific.
@@ -149,5 +150,6 @@ the actual details.
 - **Double client:** [app.doublehq.com/close?cid=706696](https://app.doublehq.com/close?cid=706696)
 - **Double case note:** `CASE · IRS — two EINs, one to cancel, and no S-election on any` — note **491846**
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1syx1fHdE1tCE0BFFsSgmPxT_QhHRdG-1)
+- **Credentials document (found 2026-08-29, content not opened):** ["Studio Passwords"](https://docs.google.com/document/d/18VDPCHAecghAde_dZYzmIFxkQCZcxSyo53Z0tSu9WFg/edit) — inside the vault folder above
 - **Recurring-expense watchlist (Drive):** [watchlist doc](https://docs.google.com/document/d/1zJ974hLR2p1pl1zIJT1R2WY4SwWLrX6iDguMHm4CGps/edit) — non-sensitive vendor list, no dollar figures repeated here
 - **Related SOPs:** _(pending — links into ../sops/ once written)_

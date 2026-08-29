@@ -168,10 +168,10 @@ Open follow-ups from meetings / emails / calls — e.g. what Julia discussed las
 tasks owed. Keep the **live** list in Double tasks / Ping action items and point to
 it here; these never go into the client SOP.
 
-- The 2025 Form 1120-S is not yet filed — Double's "2025 Taxes" project status was set to **In Progress** on 2026-05-25 and remains open.
+- 🔴 **New, unresolved: confirm the 2026-08-28 "payroll late" Gusto notice for the Aug 1–31 cycle was actually cleared** — 1 day pending as of this sweep's cutoff (2026-08-29); no confirmation-of-run email found yet.
+- [x] The 2025 Form 1120-S is prepared — Double's "2025 Taxes" project moved **In Progress → Waiting on Client Approval** on **2026-08-25**. Now waiting on the client, not the firm.
 - The client **declined the next scheduled monthly accounting meeting invite** on 2026-08-20 — worth a follow-up.
-- A September 2025 automated reminder ("Register CANDRAMAS LLC with Florida tax agencies") suggests FL state tax registration was an open item at that time — a weak, unconfirmed signal on home state.
-- The Form 2553 effective-date matter (§5/§6) — outcome still not recorded anywhere the firm can reach.
+- The Form 2553 effective-date matter (§5/§6) — outcome still not recorded anywhere the firm can reach; no new correspondence found 2026-08-22→29.
 
 ### Information still needed
 The checklist of what's not captured yet — this is what the completeness audit

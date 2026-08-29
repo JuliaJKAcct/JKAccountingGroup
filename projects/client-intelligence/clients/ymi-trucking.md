@@ -67,7 +67,9 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Applies?** _(pending)_
 
 ### Payroll
-- **Applies?** _(pending)_
+- **Applies?** ✅ **Yes — via Gusto, on AutoPilot, biweekly** _(confirmed 2026-08-29 — Double records nothing under Payroll; the column is incomplete, same pattern seen on the Melomed-family companies this run)_
+- **Our role:** the firm (Julia/Lilian/Maria) is copied on every Gusto pay-period, invoice and account-issue notice; no evidence the firm runs payroll itself
+- **Process notes (→ future SOP):** a Gusto→QuickBooks account-mapping sync issue was flagged 2026-08-12 ("Finish mapping accounts with QuickBooks Online integration") — odd, since Double records `platform: none`; worth confirming whether a QuickBooks connection exists that Double doesn't show (the same discrepancy found on R & G Friendly Inc this run)
 
 ### Bookkeeping & monthly close
 - **Applies?** _(pending)_ — Double shows no QuickBooks connection
@@ -76,9 +78,11 @@ the actual details (and Claude can pull them live when a task needs them).
 - **Applies?** **Yes**
 - **Return type(s) & deadlines:** **1120-S**
 - **Our role:** the firm prepares and files
+- **Current status:** ✅ **2025 return FILED** — Double's "2025 Taxes" project shows `filed`, `filedAt` **2026-07-30** _(confirmed 2026-08-29)_ — comfortably inside the extended (Form 7004) Sept 15 deadline. This **answers** the fourth outstanding item below: the return was filed by the extended deadline.
 - **Process notes (→ future SOP):**
   - ✅ **The IRS confirms RECEIVING a Form 7004 for 2025, electronically, on 2026-03-14** — so the extension is on their system. ⚠️ **Acceptance was only assured verbally**; no written confirmation was ever obtained (§6). ⚠️ **But nobody at the firm filed it and the previous accountant says they did not either** (§5). Treat the extension as valid — the IRS has it — while treating **who filed it** as unresolved.
   - **The IRS could not issue a confirmation while the 7004 was still processing.** The agent's assurance was verbal. If written proof is ever needed, it has to be requested later.
+  - ✅ **A Form 2848 (power of attorney) was drafted for this client on 2026-03-15** — the day before the IRS call that surfaced the extension/Texas-address issue (§6) — found in Drive 2026-08-29. Consistent with the firm needing POA on file to speak with the IRS about the account.
 
 ### Licenses & other filings
 - **Applies?** _(pending)_
@@ -93,10 +97,10 @@ the actual details (and Claude can pull them live when a task needs them).
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
-- 🔴 **THE IRS HAS A TEXAS ADDRESS FOR A COMPANY THAT OPERATES IN INDIANA.** Found on **2026-03-16** — not from the client, but from a **bank statement in Julia's Drive**. Julia's account is that the company is **still in Indiana** and has taken a **new mailing address in Texas**. **So the two facts may both be true and the IRS record may even be current** — nobody established which. **Settle it before assuming an IRS letter went astray**, and settle it before filing anything with an address on it.
-- 🔴 **SOMEBODY FILED A FORM 7004 FOR 2025 AND THE FIRM DOES NOT KNOW WHO.** ATX rejected the firm's own 7004 saying one had already been filed; **Julia checked with the previous accountant and it was not them**; the **IRS confirmed receiving one electronically on 2026-03-14**. An unexplained electronic filing against a company's EIN is worth understanding — it is either an unknown third party with the company's details, or something the client did without telling us.
-- **The extension is very probably safe, but only verbally so.** Whoever filed it, the IRS confirms holding it — though the agent could issue nothing in writing while it processed, so **received is documented and accepted is not**. The open question is provenance; the unclosed loop is the written proof.
-- **No written confirmation of the extension exists.** The IRS would not issue one while it was processing, and none was chased afterwards.
+- 🔴 **THE IRS HAS A TEXAS ADDRESS FOR A COMPANY THAT OPERATES IN INDIANA — STILL UNRESOLVED AFTER A FULL HISTORICAL SWEEP.** Found on **2026-03-16** — not from the client, but from a **bank statement in Julia's Drive**. Julia's account is that the company is **still in Indiana** and has taken a **new mailing address in Texas**. **So the two facts may both be true and the IRS record may even be current** — nobody established which. A full sweep of Gmail, Drive, Ping and Double on 2026-08-29 found **nothing further on this question** — it was never raised again after the March call. **Settle it before assuming an IRS letter went astray**, and settle it before filing anything with an address on it.
+- 🔴 **SOMEBODY FILED A FORM 7004 FOR 2025 AND THE FIRM STILL DOES NOT KNOW WHO — UNRESOLVED.** ATX rejected the firm's own 7004 saying one had already been filed; **Julia checked with the previous accountant and it was not them**; the **IRS confirmed receiving one electronically on 2026-03-14**. An unexplained electronic filing against a company's EIN is worth understanding — it is either an unknown third party with the company's details, or something the client did without telling us. No new evidence surfaced this sweep.
+- 🔵 **The owner runs a SECOND, related trucking company on the same portal contact — Prime Road Carriers Inc.** _(Confirmed 2026-08-29, Gmail + Drive.)_ The portal contact is linked to **seven** Double client records; Gmail shows YMI Trucking and **Prime Road Carriers Inc** run near-identical Gusto payroll, share a consolidated internal financial workbook (2024), and are copied to the same small group of people every time. **Prime Road Carriers Inc has no Client Intelligence file yet** — flag for a future owner-level sweep; this file only records what belongs to YMI Trucking itself.
+- ✅ **The 2025 return WAS filed by the extended deadline** — Double shows `filed`, 2026-07-30, well inside the Sept 15 extended date (§4). The provenance of the 7004 is still open (bullet 2); whether the return itself made it in on time is now settled, and no written confirmation of the extension's own acceptance exists (the IRS never issues one while a 7004 is processing, and none was chased afterwards).
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -105,31 +109,38 @@ the actual details (and Claude can pull them live when a task needs them).
 
 - 2026-08-13 — **File created** from Lilian's own call notes, kept on her phone before the firm used Claude. _(Lilian's iCloud notes, migrated — folder "YMI Trucking"; note dated 2026-03-16.)_ The operational detail — the IRS agent's name and ID, the fax line — is in the **Double case note** (§7). _(Worked by Lilian.)_
   - **2026-03-16 — IRS call, prompted by a rejected e-file.** The firm tried to e-file the **Form 7004** for the 2025 1120-S and got a notification saying it **had already been filed**. Julia contacted the **previous accountant**, who said it was not them. The firm called the IRS, which confirmed it **received the 7004 electronically on 2026-03-14**. The agent could not issue any confirmation while it was still processing but **assured Lilian there would be no problem**, since the IRS did have it. On the same call it emerged that **the address in the IRS's records is in TEXAS**, while the company operates in **Indiana** — Lilian traced the Texas address to a **bank statement in Julia's Drive**. Julia's position is that the company is still in Indiana with a new Texas mailing address.
-- **Nothing after 2026-03-16 is recorded anywhere the firm can reach.** Per Lilian's instruction of 2026-08-12, this is left open rather than chased or inferred. ⚠️ **Read that as a statement about the SOURCES SEARCHED, not about the world** — these files were built from the migrated notes plus Double, with **no full historical sweep of Gmail, Drive or Ping**. _(Qualifier added 2026-08-14, after an independent review showed the same phrasing on other files was concealing live work.)_
+- **Nothing between 2026-03-16 and this sweep changed the Texas/Indiana or 7004-filer questions.** Per Lilian's instruction of 2026-08-12, both stay open rather than chased or inferred.
+- 2026-08-29 — **First full historical sweep.** Findings, by source:
+  - **Ping** (`resolve_person`, org-wide `search_meetings` for the business name and both portal-contact names, `list_action_items`, `get_client_details`): **zero recorded meetings, zero action items** — `recentMeetingCount: 0`. This client has never had a Zoom/phone call captured by Ping.
+  - **Gmail** (full history, no date bound; business name, portal-contact names, both known email domains): **~200+ threads**, almost all routine Gusto payroll/invoice notices for **both** YMI Trucking and the related **Prime Road Carriers Inc**, running back to at least 2022 (Drive) / 2024 (Gmail). The one substantive personal-name hit (an Aug 2026 thread from the owner to Julia) turned out to be the **owner's own personal Illinois W-2 withholding letter** — unrelated to this company and correctly left out of this file.
+  - **Google Drive** (`excludeContentSnippets: true`): folders going back to **2022** — signed/unsigned Lease-to-Purchase agreements for a truck and trailer, a 2023 vehicle-loan disclosure, a 2025 insurance master certificate, a driver MVR/PSP authorization (2025), a monthly dispatch "OCAC" schedule report, a 2024 consolidated financial workbook covering **both** YMI Trucking and Prime Road Carriers Inc, and the 2026-03-15 Form 2848 draft. None of it bears on the Texas/Indiana address question specifically.
+  - **Double** (`list_activity_log`, full history — 9 entries total): confirms the 2025 return moved to `filed` on 2026-07-30. No entries relate to the address or the 7004 filer.
 
-### Tax year YYYY — the review
+### Tax year 2025 — the review
 
-- _(pending)_
+- **Status:** filed 2026-07-30, inside the extended (7004) Sept 15 deadline. The 7004's own provenance (who filed it) and the IRS's Texas address are both still open — see §5.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- 🔴 **Establish the company's correct legal and mailing address, and what the IRS should hold.** Ask the client directly rather than inferring from a bank statement. If the IRS record needs changing, a **Form 8822-B** is the usual route.
-- 🔴 **Find out who filed the 2025 Form 7004 on 2026-03-14.** Not the firm, not the previous accountant. Ask the client whether they or anyone else filed it.
-- **Get written confirmation the 2025 extension was accepted** — an IRS transcript would show it. Only a verbal assurance exists.
-- **Confirm the 2025 return was actually filed by the extended deadline.** Nothing after March 2026 is recorded.
+- 🔴 **Establish the company's correct legal and mailing address, and what the IRS should hold.** Ask the client directly rather than inferring from a bank statement. If the IRS record needs changing, a **Form 8822-B** is the usual route. _(Open since 2026-03-16 — 166 days as of this sweep. No deadline attached.)_
+- 🔴 **Find out who filed the 2025 Form 7004 on 2026-03-14.** Not the firm, not the previous accountant. Ask the client whether they or anyone else filed it. _(Open since 2026-03-16 — 166 days.)_
+- [x] **Confirm the 2025 return was actually filed by the extended deadline** — **YES, 2026-07-30** _(Double activity log, confirmed 2026-08-29)_.
+- **Get written confirmation the 2025 extension was formally accepted** — an IRS transcript would show it. Only a verbal assurance exists; low priority now that the return itself is confirmed filed on time.
+- **Consider whether Prime Road Carriers Inc (the owner's other trucking company) needs its own Client Intelligence file** — it has none yet, and this sweep found it referenced throughout YMI Trucking's own Gmail/Drive history.
 
 ### Information still needed
 
 - [ ] The correct current address, and the reason for the Texas mailing address
-- [ ] Who the owner is, and which language they work in
-- [ ] Whether the firm also does bookkeeping / payroll / sales tax here
+- [ ] Who the owner is, and which language they work in _(inferred English from correspondence, not confirmed)_
+- [ ] Whether the firm also does bookkeeping / sales tax here (payroll is now confirmed — Gusto, §4)
 - [ ] Which state filings the company owes (Indiana, and Texas if it has nexus there)
-- [ ] Everything from Gmail, Drive, Ping and the books — never swept
+- [x] Everything from Gmail, Drive, Ping and the books — **first full historical sweep run 2026-08-29; see log above**
 
 ## 7. Links
 
 - **Double client:** [app.doublehq.com/close?cid=710608](https://app.doublehq.com/close?cid=710608)
 - **Double case note:** `CASE · IRS — the unexplained 2025 Form 7004, and the Texas address` — note **491842**
 - **Migrated TaxDome notes (Drive):** `4. Documents > YMI Trucking LLC > 1. Notes`. **Read 2026-08-13.** It covers the same matter written up above from Lilian's phone notes and adds no new facts.
-- **Google Drive folder (sensitive vault):** _(pending — link)_
+- **Google Drive folder (sensitive vault):** `JK Accounting Group` (Julia's Drive) → **YMI Trucking LLC** folder — confirmed present 2026-08-29; also a separate shared drive tree owned by the portal contact (`prc.inc.marko@gmail.com`) covering both YMI Trucking and Prime Road Carriers Inc
+- **Related clients (owner group):** **Prime Road Carriers Inc** — same portal contact, no CI file yet (flagged in §5)
 - **Related SOPs:** _(pending)_

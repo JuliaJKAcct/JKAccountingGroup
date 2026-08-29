@@ -1,6 +1,6 @@
 # MAGNUM 152, INC
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -84,7 +84,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
-- **2025 return:** tax project in Double moved from "Not Started" to **In Progress** (2026-07-31); a "JK 2025 Business Tax Organizer - Magnum 152" exists in Double but was reverted to **draft** the same day. _(Double activity log, 2026-07-31)_
+- **2025 return:** the Double tax project itself still reads `notStarted` (re-checked live 2026-08-29), and the "JK 2025 Business Tax Organizer - Magnum 152" is still reverted to **draft**. **But a "Magnum152_2025_TaxLiability_Report_v4.xlsx" was created in Drive 2026-08-24/25** — the "v4" naming means at least three prior iterations exist — so estimate work on the 2025 return is actively under way even though Double's own status fields haven't moved. Worth knowing before assuming "not started" means no work has happened. _(Double `list_projects`, 2026-08-29; Drive, 2026-08-25)_
 
 ### Licenses & other filings
 - **Annual report:** No _(Double)_
@@ -99,6 +99,7 @@ Credentials for **every** system below (Bravo, SaasAnt, ADP, banks) live in
 - **SaasAnt** is used for GL consolidation into QBO; **Bravo** for store POS/inventory; **ADP** for payroll (owner-run).
 - The owner's Double footprint spans **three** client records: Magnum 152, Sunoma (the sister pawn company), and a separate individual/personal record (not a bookkeeping engagement) — useful context for future owner-group sweeps.
 - **Two distinct Amex checking sub-accounts confirmed by task name** — "Amex Checking 2672" and "Amex Checking 2941," both reconciled as separate close-checklist line items. Corroborates (with concrete last-4s) the already-pending SOP-2026-07-25-07 candidate about expanding the single "Amex CC" bank-feed line. _(Double activity log, 2026-08-10)_
+- **New categorization/mapping issue — the "Gunshow tender" in Bravo is mapped incorrectly to the sales-tax account.** Julia flagged this to Igor and Luis on 2026-08-20 and asked for a new, dedicated Cash-on-Hand account for visibility; Igor said he'd discuss with Luis "next week" — no reply as of a 2026-08-27 reminder. Still unresolved. A strong SOP-proposal candidate for the monthly reclass checklist. _(Gmail "Bravo - Gunshow Tender Issues," 2026-08-20 → 2026-08-27)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->

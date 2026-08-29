@@ -1,8 +1,8 @@
 # VOXAGO LLC
 
-> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Firm · **Last updated:** 2026-08-29
 >
-> ✅ **First full historical sweep completed 2026-08-22** — Double (client record, properties, note 491841 read in full, contacts, activity log), Gmail (full history — first page of ~40 estimated results reviewed in detail), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked.
+> ✅ **First full historical sweep completed 2026-08-22; Gmail catch-up READ TO COMPLETION 2026-08-29** — Double (client record, properties, note 491841 read in full, contacts, activity log), Gmail (full history — a plain "Voxago" search returned all ~42 estimated results in a single page, no further `nextPageToken`: exhausted, not budget-limited), Ping (`resolve_person` + `search_meetings`), and Google Drive all checked. 🔴 **This run's full-history read found a previously-unknown pair of Florida DOR tax liens from November 2025 — see §5.**
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -31,7 +31,8 @@
 - **Business name:** VOXAGO LLC
 - **Entity type:** LLC — ⚠️ **taxed as a disregarded entity**: the FDOR asked for a **Schedule C**, which only exists on an individual return _(inferred from the 2025-12-15 FDOR call; not separately confirmed)_
 - **Home state:** **Florida**
-- **Industry / what they do:** _(pending — the company has a website, which the FDOR asked for)_
+- **Industry / what they do:** _(pending — the company has a website, which the FDOR asked for; a Google Sheet titled "Voxago's client list" also exists in Drive, dated 2025-12-16, suggesting the business itself serves clients of its own — not yet confirmed what kind)_
+- **EIN:** `93-4574498` — stated by Julia in a 2025-11-05 email to the Florida Department of Revenue (Gmail, found 2026-08-29).
 - **Primary language:** _(pending)_
 - **Our engagement (services we provide):** sales tax with the FDOR; annual report; **bookkeeping — Quarterly** _(Double client properties, 2026-08-22)_. Assigned staff: **Julia Kononova**. Income Tax = **No** in Double, consistent with the FDOR Schedule-C inference (business income reported on the owner's individual return, not a separate company return).
 - **Fiscal year-end:** _(pending)_

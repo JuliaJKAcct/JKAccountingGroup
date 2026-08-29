@@ -1,6 +1,6 @@
 # Mobilesource Corp
 
-> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Maria · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -79,7 +79,7 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** _(Double)_; **1099 preparation** included.
-- **2025 tax organizer status:** **Sent** to the client as of 2026-07-25 _(Double client properties)_ — resolves the prior "organizer state to reconcile" open item.
+- **2025 tax organizer status — CONTRADICTION, unsettled.** This file has recorded **"Sent to the client as of 2026-07-25"** (Double client properties, as read on that date). Re-checked live 2026-08-29: (a) the `Organizer Status` property now reads **"N/A (we have QBO access)"**, and (b) the organizer entity itself (`JK 2025 Business Tax Organizer -Mobilesource`, id 142672) shows status **`draft`**, `publishedAt: null` — i.e. it has never actually been published/sent to the client. The three readings (Sent / N/A-QBO-access / never-published draft) do not agree. Not resolved in this sweep — ask whoever next needs this fact, and update from the answer.
 
 ### Licenses & other filings
 - _(pending)_
@@ -94,6 +94,9 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
 - A **USTD deposit-tracing working file** lives in the Drive folder (large multi-month deposit-reconciliation with customer/invoice detail — sensitive; stays in Drive). _(Drive)_
 - **Crypto (USDT/stablecoin) deposits recur** and must be verified with the owner before booking — an incoming ACH/USDT deposit is sometimes not recognized by the owner and has to be traced/held pending confirmation rather than booked on receipt. Ties into the existing USDT deposit-tracing working file above. _(Gmail, 2026-07-29)_
 - **Gusto → QuickBooks Online integration hit a mapping sync failure** on payroll journals (open task, due 2026-08-18) — same integration issue seen at SensusTech (same tech owner-group); watch whether it recurs. _(Gmail, 2026-08-04)_
+- **Sales tax was over-collecting on international shipments** — the system was incorrectly flagging international-shipment orders as taxable; the fix agreed 2026-08-27 is to (a) reclassify the non-Florida tax already collected to income and (b) have the GM (Amalia) include the **full international shipping address** on invoices going forward so the system stops mis-flagging them. Ties into the existing "sales-tax report is never right out of the box" quirk above — this is one specific, now-identified cause. _(Zoom recap, Julia & Maria, 2026-08-27)_
+- **eBay fund disputes confirmed correctly booked:** a negative entry in an income account for a lost eBay dispute (a refund to the customer) is the correct treatment — not an error to chase. _(Zoom recap, 2026-08-27)_
+- **Balance-sheet cleanup items raised by the GM, still open:** an **Amazon Credit account** Maria was not previously aware of and **2024 gift cards** both need reclassifying to the appropriate expense account for 2026; an **old 2024 computer asset** needs the GM's confirmation on whether it's still in use or should be disposed of; **cash-in-drawer accounts** need review, possibly consolidating into fewer accounts. _(Zoom recap, 2026-08-27)_
 
 ## 6. History & open questions
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
@@ -120,13 +123,15 @@ Credentials for **every** system below (Gusto, FL DOR, Simple IRA, banks) live i
   had no indexed meetings for Mobilesource or the owner in this window.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** Double: 30 activity-log entries, all 2026-08-17/18, routine July close + biweekly payroll task completions. Gmail: the FL DOR sales-tax audit escalated materially — see outstanding items. Chase pass: USDT deposit still open; the four "Maria's guide" items and fiscal year-end not chased this run (budget).
+- 2026-08-29 — **Incremental sweep (baseline 2026-08-22→2026-08-29).** Double: 0 activity-log entries since baseline. **Contradiction found and recorded** (§4 Income tax) between the organizer status this file previously recorded ("Sent," 2026-07-25) and what the organizer entity + current property both now show — unsettled. Gmail: a "PLEASE ADJUST TRANSACTIONS" thread (2026-08-24) — the GM (Amalia) asked Maria to write off several pending bills-to-pay for customers who never responded and are no longer reachable; Maria adjusted the same day. This addresses the "pending-payment removal" item from Maria's guide open-items list (below). A Zoom recap (Julia & Maria, 2026-08-27) surfaced substantial new operational detail — folded into §5 above (sales-tax shipping-address fix, eBay dispute treatment confirmed, four balance-sheet cleanup items). Chase pass on the FL DOR audit and the USDT deposit — results below; the fiscal year-end and the remaining Maria's-guide items not chased this run (budget).
 
 ### Outstanding items (CI-only — never in the SOP)
 - **June 2026 reports:** closed. _(Gmail, Double activity log)_
 - **2025 business income-tax prep in progress** — not chased this run (budget).
-- 🔴 **FL DOR sales-tax audit — ESCALATED.** On 2026-08-20 the auditor sent a detailed written list of questions about P&L transactions, specifically buyback-program processing (shipping vs. in-store carrier pickup); the client's GM (Amalia) replied same-day with explanations, cc'ing the President. This is substantive, not dormant — recommend a full read of the attachment thread next sweep. No stated deadline for further response found in the snippet. _(Gmail, 2026-08-20)_
-- **Open in Maria's guide:** dispute case, employee I-9, credit memo, skipped-contractor commissions, pending-payment removal — not chased this run (budget).
-- USDT-related deposit flagged pending 2026-07-23 — STILL OPEN, 30 days pending, no follow-up found confirming it cleared.
+- 🔴 **FL DOR sales-tax audit — ESCALATED, no further movement.** On 2026-08-20 the auditor sent a detailed written list of questions about P&L transactions, specifically buyback-program processing (shipping vs. in-store carrier pickup); the client's GM (Amalia) replied same-day with explanations, cc'ing the President. CHASED this run: a targeted search (`(Mobilesource) (DOR OR audit OR "Department of Revenue") after:2026/08/22`) found no further correspondence — still open, 9 days since the last exchange, no stated deadline.
+- ✅ **Pending-payment removal (from Maria's guide) — ADDRESSED 2026-08-24.** The GM asked Maria to adjust/write off several pending bills-to-pay for unresponsive, no-longer-reachable customers; Maria completed it the same day. _(Gmail, 2026-08-24)_
+- **Open in Maria's guide, remaining:** dispute case, employee I-9, credit memo, skipped-contractor commissions — not chased this run (budget).
+- USDT-related deposit flagged pending 2026-07-23 — STILL OPEN. CHASED this run: a targeted search (`(Mobilesource) (USDT OR crypto) after:2026/08/22`) found nothing; now ~37 days pending, no follow-up found confirming it cleared.
 
 ### Information still needed
 - [ ] Fiscal year-end; sales-tax registration detail
