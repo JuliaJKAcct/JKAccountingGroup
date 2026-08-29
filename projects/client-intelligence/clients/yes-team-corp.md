@@ -1,6 +1,6 @@
 # YES TEAM CORP
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -66,6 +66,7 @@ the actual details.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
+- **Close work in progress as of 2026-08-24:** the "Uncategorized Transactions" task was marked priority and two period-close tasks — one for the company account (ending `1637`) and one for the owner's individual account (ending `9575`, "I. POLUYKO") — moved to In Progress. Bank statements for both accounts (company: through 07/31; individual: 07/20 and 08/20 cycles) were uploaded to the client's Drive folder the same day. _(Double activity log + Google Drive, 2026-08-24, read 2026-08-29)_
 
 ### Income tax
 - **Applies?** Yes — **Form 1120-S** (S-corporation) _(Double)_

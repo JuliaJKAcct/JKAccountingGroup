@@ -1,6 +1,8 @@
 # 4TUKAS, LLC
 
-> **Status:** Prospect — engagement letter drafted 2026-08-27 · **Owner:** Julia · **Last updated:** 2026-08-27
+> **Status:** Prospect — engagement letter drafted and delivered 2026-08-27; a paid
+> consultation for the client's remaining planning questions is proposed for 2026-09-17 ·
+> **Owner:** Julia · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -33,8 +35,11 @@
   letter (dated 2026-08-10) is in the firm's hands. ⛔ **Never file another SS-4 for this
   entity** _(Julia, 2026-08-27, verbatim instruction)_
 - **Home state:** Florida — 7901 4th St N, Ste 300, St. Petersburg, FL 33702 _(Julia, 2026-08-27)_
-- **Industry / what they do:** Property-investment LLC — formed to **purchase a property**
-  (details pending; purchase not yet closed)
+- **Industry / what they do:** Property-investment LLC — formed to **purchase a property**:
+  the plan is a first **long-term-rental property in Broward County** (east of I-95
+  preferred), likely a **duplex** _(member's email, 2026-08-17)_. **Not yet under
+  contract** as of 2026-08-27 (his own words: "we have not bought anything yet") — address
+  and closing date remain pending
 - **Primary language:** Members are **Lithuanian**; the engagement letter is **English only**
   (Julia's instruction — no Russian version)
 - **Our engagement (services we provide):** **PROSPECT.** First-year tax engagement drafted
@@ -54,7 +59,7 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| **Manager** (signs for the company) | **Mindaugas Kezys** — Manager and 25% member _(Julia, 2026-08-27; managers are public on Sunbiz)_. Email _(pending)_ |
+| **Manager** (signs for the company) | **Mindaugas Kezys** — Manager and 25% member _(Julia, 2026-08-27; managers are public on Sunbiz)_. **Email now on file** — he has been corresponding directly since 2026-08-12 (Gmail thread "Following up — Alina's investors group (Miami)"); see that thread or Double once the client record is created |
 | **Members — four, 25% each, all Lithuanian non-residents** | Mindaugas Kezys · Aistė Tumaitė-Sobutienė · Tatyana Sargsyan · Saulius Uznys _(Julia, 2026-08-27)_ |
 
 - **Double client:** _(pending — not in Double yet; create on signing)_
@@ -109,9 +114,18 @@ the actual details.
 - **The engagement is conditional and first-year only:** it begins **after the property
   purchase closes** (not yet closed as of 2026-08-27). Tax year 2026 is assumed; if the
   purchase slips into 2027, the letter's year and dates must be redone before signing
-- **Tax planning is EXCLUDED by the letter's standing terms** ($150/hr under a separate
-  agreement) even though the intake asked for "tax preparation & tax planning" — flagged to
-  Julia 2026-08-27; her call whether the standard text stands or planning gets its own line
+- **Tax planning exclusion — now RESOLVED (2026-08-27).** The standard letter exclusion
+  stands as drafted (no separate planning line was added). The member's specific planning
+  questions (Lithuania–US treaty on rental income, pass-through vs. a foreign-blocker
+  structure, 1031/FIRPTA) go through a **separate paid consultation** ($150, per the
+  letter's standing rate) — Julia proposed **2026-09-17** (after the Sept 15 extension
+  deadline), his acceptance not yet confirmed. Two of his questions were answered directly
+  by email instead of waiting for the consultation: **ITIN/1040-NR timing runs AFTER the
+  first Form 1065 is filed**, and **flights to inspect the property are NOT deductible for
+  NRAs** (confirming what Julia told the group in Miami). ⚠️ Whether the **§1446/8804-8805
+  withholding scope** question (still open below) was addressed inside the delivered
+  engagement-letter PDF itself could not be determined from the email text alone — the
+  attachment was not opened this pass
 - **The fee schedule is itemized per member by name** (Julia's instruction: no blanket
   amounts) — each member's 1040-NR and W-7 is its own line, and the same lines appear in the
   letter's scope, so exactly whose filings are covered is unambiguous
@@ -120,6 +134,19 @@ the actual details.
 <!-- CI-only zone: this whole section stays in Client Intelligence and never goes into the SOP. -->
 
 ### Log
+- 2026-08-29 — **Bounded prospect sweep (Gmail in:inbox+in:sent, since 2026-08-27; Drive
+  checked; no Double/Ping — no Double account exists).** Read the full correspondence
+  thread ("Following up — Alina's investors group (Miami)") end to end. New context: (a)
+  **the referral channel** — Mindaugas first reached out 2026-08-12 through a Miami
+  investor group led by "Alina," which Julia had met in person in March at a JK Accounting
+  Group tax discussion; a second Lithuanian contact is cc'd throughout the thread; (b) his
+  2026-08-17 email (CP575B attached) is the direct source of most of this file's Snapshot,
+  plus the property profile now in §1; (c) Mindaugas **followed up again 2026-08-25**
+  asking for next steps — the first email had gone eight days without a reply; (d) **Julia
+  replied 2026-08-27**, apologizing for the delay (tax-extension season), answered two of
+  his questions directly, deferred the rest to a paid consultation, and delivered the
+  engagement letter as an attachment — see §5 for the substance. A Drive search for
+  "4TUKAS" found nothing. No message after 2026-08-27 was found on either side
 - 2026-08-27 — **Intake (Julia, dictated) + first-year engagement letter drafted and
   delivered.** Julia corrected the template choice mid-work: a tax engagement goes on the
   **engagement-letter template**, not the monthly proposal — the letter tool gained an
@@ -130,15 +157,21 @@ the actual details.
 
 ### Outstanding items (CI-only — never in the SOP)
 
-- **Julia to decide:** the tax-planning exclusion (see §5) — standard letter text vs a
-  planning line; and the §1446/8804-8805 withholding scope question
-- **Before signing:** Mindaugas Kezys' email; confirm TY2026 vs 2027 (purchase timing); the
-  info-needed-by date (2027-02-15 assumed)
+- [x] **Julia to decide: the tax-planning exclusion** — RESOLVED 2026-08-27, see §5.
+- **Still open:** the §1446/8804-8805 withholding scope question (flagged 2026-08-27,
+  2 days old as of this sweep — not settled by anything found in Gmail)
+- [x] **Before signing: Mindaugas Kezys' email** — on file since 2026-08-12, see §2.
+- **Still open — before signing:** confirm TY2026 vs 2027 (purchase timing) — his own
+  2026-08-27 words say the property is not yet under contract, so this is unresolved and
+  not yet even close, 2 days since last checked; the info-needed-by date (2027-02-15
+  assumed)
 
 ### Information still needed
 
-- [ ] Property: address, use (rental vs other), expected closing date
-- [ ] Manager's email (for the letter and Double)
+- [x] Property use — **long-term rental, Broward County, likely a duplex** _(member's
+  email, 2026-08-17)_; address and expected closing date remain pending — not yet under
+  contract as of 2026-08-27
+- [x] Manager's email — **on file since 2026-08-12** (his own correspondence); see §2
 - [ ] Each member's W-7 documentation route (passports; certified copies vs originals)
 - [ ] Who keeps the books once the property operates
 - [ ] FL annual report responsibility from 2027

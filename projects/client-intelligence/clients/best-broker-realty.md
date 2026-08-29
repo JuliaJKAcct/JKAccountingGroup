@@ -1,6 +1,6 @@
 # BEST BROKER REALTY LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-22
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -116,13 +116,16 @@ the actual details.
 - 2026-08-18 — **Status re-check (Lilian), no sweep.** She asked where this and Pro Title Agency's BTRs stand in order to resume them. Two things closed against Gmail and Drive: the **issued LBTR certificate did arrive** by email on 2026-07-23 (the file had been carrying "if it hasn't arrived yet" for three weeks), and it **does not appear to be saved in Drive** — so the residual action is now a specific one rather than a wait. Also noted that the **Sept 30 renewal is six weeks out** and still uncalendared. Nothing was written to Double.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** The issued LBTR certificate was confirmed saved in Drive 2026-08-18 (see §4 — resolves the last open BTR residual). A formal Sept-30 renewal notice arrived from the city 2026-08-19 — the deadline is now sourced to an actual notice rather than only the tax-year rule, and it is still not confirmed calendared, 5.5 weeks out. A targeted search for the 2026-03-14 Form 8822-B address-update task found nothing confirming it was completed. No Double activity, no new notes, no Ping meetings found on/after 2026-08-15.
+- 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double: both notes (474293, 467461) unchanged (`updatedAt` still 2026-07-23 and 2026-07-15) — nothing moved. No property changes, no activity-log entries in the window. Gmail (business name + "Buchanan St" + "8822-B", `after:2026/08/15`–`08/22`): nothing beyond a routine QuickBooks invoice reminder to the client (no dollar figure recorded here) — no reply to the city, no renewal payment confirmation. **Google Calendar was searched for a Sept-30/Hollywood/Best Broker renewal event and found none.** Ping: no results dated on/after 2026-08-22. **Chase pass:**
+  - ⏰ **Sept 30 renewal — STILL NOT CALENDARED, and now confirmed by a direct calendar search, not just an absent-evidence inference.** The city's renewal notice arrived 2026-08-19; **10 days pending**, **deadline 2026-09-30 (~4.5 weeks out).** Nothing found actioning it.
+  - 🔴 **Form 8822-B (IRS address update) — still unconfirmed as filed.** The task was set 2026-03-14; **168 days pending**, no deadline recorded (an address-update filing has no statutory due date, but leaving it open means the IRS still has the old address on file for this entity).
 - 2026-08-18 (later, same session) — **Leasing chain corrected (Lilian).** The signed Synergy Mood LLC lease she produced for Pro Title's application names **both companies jointly as Tenant**, so this client is a **co-tenant, not the sole master tenant** — §5 corrected. Nothing about this client's own issued BTR changes; its footing with the city was never in question.
 
 ### Outstanding items (CI-only — never in the SOP)
 - **City of Hollywood BTR — issued (Approved / Active) 2026-07-23.** One residual remains:
   - ✅ **Certificate saved to Drive 2026-08-18** — see §4 above. Closed.
-  - ⏰ **STILL OPEN — Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30) — a formal **"City of Hollywood Local Business Tax Annual Registration Renewal is now due"** notice arrived by email **2026-08-19**, 3 days pending as of this sweep, **deadline 2026-09-30 (~5.5 weeks out)**. No evidence found that the notice has been actioned or calendared. _(Gmail, 2026-08-19; checked 2026-08-22)_
-- A search of Gmail bounded `after:2026/08/15`, on 2026-08-22, for "8822-B" + the owner's names did not find any correspondence — the 2026-03-14 IRS address-update (Form 8822-B) for Best Broker remains unconfirmed as completed.
+  - ⏰ **STILL OPEN — Calendar the Sept 30 annual renewal** (tax year Oct 1 – Sep 30) — a formal **"City of Hollywood Local Business Tax Annual Registration Renewal is now due"** notice arrived by email **2026-08-19**, **10 days pending** as of this sweep (2026-08-29), **deadline 2026-09-30 (~4.5 weeks out)**. No evidence found that the notice has been actioned; a direct Google Calendar search on 2026-08-29 confirms **no renewal event is calendared**. _(Gmail, 2026-08-19; checked 2026-08-22 and 2026-08-29)_
+- A search of Gmail bounded `after:2026/08/15`, on 2026-08-22 and again `after:2026/08/22` on 2026-08-29, for "8822-B" + the owner's names did not find any correspondence — the 2026-03-14 IRS address-update (Form 8822-B) for Best Broker remains unconfirmed as completed, **168 days pending**.
 
 ### Information still needed
 - [ ] Primary language; fiscal year-end
