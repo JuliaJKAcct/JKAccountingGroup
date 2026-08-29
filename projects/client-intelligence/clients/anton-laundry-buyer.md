@@ -210,6 +210,18 @@ the actual details.
   and the operating business are modelled apart. **Both to be confirmed against the actual bills and leases
   once the seller's package arrives** — the benchmark is a screen, not evidence
 
+- 2026-08-29 (later) — **Julia confirms the benchmark is for this deal and that seller paperwork has now
+  been received — but it is not in any system a session can reach.** Searched **Gmail** (last 30 days for
+  laundry / laundromat / coin laundry / Merritt / Bradenton / Palmetto / Ruskin, and every attachment-
+  bearing thread in the last 14 days) and **Google Drive** (full-text for laundromat / coin laundry, title
+  contains "laundr", plus the recent-files list). **Nothing related to this deal in either** — the
+  attachment traffic in that window is all other clients. ⚠️ **Claim about the search, not about the
+  world** (`method.md` 1b): the documents plainly exist — Julia has them — they simply have not landed in
+  Julia's Gmail or Drive. Consistent with the offering memorandum, which this file already records as
+  "in the firm's hands, held outside the repo." **Asked Julia where they are and for them to be put
+  somewhere reachable before the analysis can start.** Until then the engagement cannot move past the
+  benchmark
+
 ### Outstanding items (CI-only — never in the SOP)
 
 - **From Julia:** Anton's last name (the cover now deliberately shows "Anton" alone, no
