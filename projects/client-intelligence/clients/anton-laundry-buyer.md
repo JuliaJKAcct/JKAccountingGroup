@@ -273,6 +273,15 @@ the actual details.
   introduce the firm to the seller's broker by email; (3) on the call, explore whether a
   direct line to the SELLER'S ACCOUNTANT is possible — the fastest route for document
   requests. The email draft (RU) reflects this order
+- 2026-08-30 (billing correction, v12) — **Part 1 is billed in equal installments, not
+  deposit-plus-final:** the deposit before work begins, then the same amount invoiced
+  after each 10 hours of work until Part 1 is complete, within the budget cap; every
+  payment credited against actual time, final reconciliation on report delivery, any
+  overpayment refunded or credited toward Part 2 (T&C clause 6 restated). ⚠️ Note the
+  arithmetic Julia should be aware of: three installments reach the budget cap by
+  roughly hour 20 of a 50–70-hour phase, i.e. the client prepays the full budget early —
+  flagged in chat; if she meant the next installment only once the PAID hours are used
+  up (~23 hours per installment), the trigger is a one-line change
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
