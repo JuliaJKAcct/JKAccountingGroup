@@ -85,8 +85,9 @@ the actual details.
 - **Applies?** Not engaged. ⚠️ **Tax structuring is now INSIDE the engagement's scope**
   (Julia's scope brief, 2026-08-29, reversing the earlier exclusion): entity choice, the
   RE/business split, Form 8594 and depreciation planning are performed by us **after the
-  deal parameters are set**, at the same hourly rate, explicitly outside the due-diligence
-  hour estimate. Cost segregation: we select and coordinate the specialist firm (client
+  deal parameters are set**, as a **fixed package** (Julia, 2026-08-30; price in the
+  delivered proposal) — invoiced when that phase begins, not charged if the engagement
+  ends before it. Cost segregation: we select and coordinate the specialist firm (client
   pays it directly, post-closing). A monthly engagement (payroll on Gusto + I-9
   administration) is the intended follow-on if he buys
 
@@ -142,12 +143,16 @@ the actual details.
   deposits, and **tax data comes straight from the IRS on a seller-signed Form 4506-C,
   never from the seller's own copies** — the offering memorandum must match what was filed
   with the government
-- **Fee protection is the structure Julia chose:** hourly, an estimate stated as a
-  **minimum** of hours with a range above it (her call, 2026-08-29: never present the top
-  of the range as the target), a not-to-exceed budget at the top of the range, a deposit
-  credited in full, balance billed on report delivery, and written approval before
-  exceeding the budget — protection against poor seller records or sprawling
-  bank/merchant streams. Reuse this shape for future due-diligence quotes
+- **Fee protection is the structure Julia chose — exactly TWO price parts, never a
+  per-phase menu** (her ruling, 2026-08-30: "не разбивать это по стоимости… эта фаза
+  стоит столько-то" is what to avoid): **Part 1**, the due diligence, hourly — an
+  estimate stated as a **minimum** of hours with a range above it (2026-08-29: never
+  present the top of the range as the target), a not-to-exceed budget at the top of the
+  range, a deposit credited in full, balance billed on report delivery, written approval
+  before exceeding; **Part 2**, acquisition structuring + tax planning, one **fixed
+  package** invoiced when that phase begins. Everything the client asked for is inside
+  the one scope, before and after the purchase, so he can never hear "that wasn't
+  included". Reuse this two-part shape for future due-diligence quotes
 - **The structuring phase is inside this engagement, sequenced after the analysis** (Julia,
   2026-08-29, reversing the earlier separate-agreement framing): acquisition-entity choice
   (LLC / S-corp / C-corp), the RE/business split across companies, the Form 8594
@@ -227,6 +232,16 @@ the actual details.
   rent, as the basis for splitting the price between real estate and business. She
   declined the artifact republish for this version — the private link intentionally
   still shows v7 until she asks
+- 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
+  work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
+  republished to the same link), then a ready-to-send client message listing the work
+  other specialists perform — built on her own earlier draft, aligned with the document
+  (delivered in chat, never committed). Then the pricing ruling: everything in ONE scope,
+  before and after the purchase, tax planning included, priced as exactly two parts —
+  the due diligence hourly as already set, and structuring + tax planning as one fixed
+  package (her figure; invoiced when the phase begins, not charged if the engagement
+  ends earlier — now in T&C clause 6). No per-phase price menu. Road map and both fee
+  pages restated; v9 delivered as PDF + the same artifact
 
 ### Outstanding items (CI-only — never in the SOP)
 
