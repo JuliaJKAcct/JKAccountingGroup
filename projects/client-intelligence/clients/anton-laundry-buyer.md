@@ -1,6 +1,6 @@
-# Anton (last name pending) — laundry portfolio buyer
+# Anton & Olga Stenin — laundry portfolio buyers
 
-> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope and boundaries finalized 2026-08-29 · **Owner:** Julia · **Last updated:** 2026-08-29
+> **Status:** Prospect — due-diligence proposal drafted 2026-08-28, scope/pricing finalized 2026-08-30 · **Owner:** Julia · **Last updated:** 2026-08-30
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -60,7 +60,7 @@ the actual details.
 
 | Role | Where to find them |
 |---|---|
-| Buyer / decision-maker | **Anton** — last name and email _(pending from Julia)_ |
+| Buyers / decision-makers | **Anton & Olga Stenin** (Julia, 2026-08-30 — the joint name on the cover, agreement and T&C; Anton's own first-vs-family name still unconfirmed). Email received — lives in the delivered proposal and Double, not here |
 | Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her |
 
 - **Double client:** _(pending — not in Double yet)_
@@ -279,10 +279,8 @@ the actual details.
   email field — her instruction); then create the Double client and complete §1/§2 here.
   **Still pending as of 2026-08-29** (1 day since the file was created) — a bounded Gmail
   search that day did not find it
-- **Julia to confirm — whose name signs:** the cover and agreement say "Anton", but the
-  license received 2026-08-30 is **Olga Stenin's**, and the supplied email appears to be
-  hers — if Olga is the buyer/signer, the cover, the agreement block and the T&C party
-  line all need her name (a one-pass change)
+- ~~Whose name signs~~ **Resolved 2026-08-30:** Julia set the client name to **Anton &
+  Olga Stenin** — now on the cover, the agreement block and the T&C party line (v11)
 - **Julia to confirm — the deposit amount:** she offered two figures ("say $3,500 or
   $4,000" — amounts named in her instruction, not client data); the draft uses the lower
   one. Swapping to the higher is a one-pass change
