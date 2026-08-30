@@ -61,6 +61,7 @@ the actual details.
 | Role | Where to find them |
 |---|---|
 | Buyer / decision-maker | **Anton** — last name and email _(pending from Julia)_ |
+| Client's own real-estate side | **Олеся** (last name, role title and contacts pending) — per Anton's letter 2026-08-30, she handles everything about the real estate and land as objects: re-registration, building/land inspections, property taxes and fines, leases, and drafting the purchase agreements. Coordinate with her, do not duplicate her |
 
 - **Double client:** _(pending — not in Double yet)_
 
@@ -133,6 +134,18 @@ the actual details.
   equipment-replacement CapEx. Reuse this page as the boundary standard for any future
   due-diligence engagement. The engagement still depends on seller cooperation: the
   signed 4506-C and consent for utility and municipal billing inquiries
+- **The seller is THREE companies, and Anton has split the advisors' roles** (his letter,
+  2026-08-30): the real estate sits in one company, the wash/laundromat operation in a
+  second, and the ironing/delivery service in a third — so the due diligence covers up to
+  three sets of books and returns, and a Form 4506-C is needed per company. His division
+  of labor: everything about the real estate and land as objects (re-registration,
+  inspections, property taxes/fines, purchase agreements) belongs to **Олеся** (§2);
+  everything about the business and its results is ours, **with us engaging and
+  coordinating the narrow-specialty contractors as his representative** — he is explicit
+  that he cannot source specialist firms himself and expects the accountant to reconcile
+  their data against the books (his examples are exactly our three revenue tests and the
+  UCC financial review). He also says explicitly a CPA license is not the point ("нужна
+  светлая голова") — the reply and the document claim no title
 - **The deal's center of gravity is the add-backs — and cash revenue is tested three
   independent ways:** the seller's adjusted earnings rest almost entirely on add-backs to
   reported results that are close to break-even, and the add-back schedules include
@@ -232,6 +245,23 @@ the actual details.
   rent, as the basis for splitting the price between real estate and business. She
   declined the artifact republish for this version — the private link intentionally
   still shows v7 until she asks
+- 2026-08-30 (later) — **The buyer's letter answered with scope changes; coordination is
+  now ours (v10 delivered).** Anton's letter (via Julia): he needs the accountant to act
+  as his representative — source and coordinate the narrow-specialty contractors and
+  reconcile their data against the books, because as a buyer he cannot manage specialist
+  firms himself; most of his technical demands (terminal/coin collections vs bank
+  deposits by day and month; manufacturer cycle data × utility bills vs deposits and the
+  OM; equipment liens from the books) were ALREADY the document's three revenue tests and
+  UCC financial review — answered point by point. Julia accepted the coordination ask:
+  sourcing + coordination moved into scope, every specialist's fees payable by the client
+  directly (T&C clause 3 now names them independent contractors, not our subcontractors),
+  and a coordination phase (5–10 hours, incl. reconciling their data) joined the hours
+  table — Part 1 restated to 50–70 hours with the cap at the top of the range; the fixed
+  structuring package and the deposit unchanged. The client email Julia supplied went on
+  the cover (value in the delivered proposal and Double, not here). The buyer's side also
+  sent a Florida driver license by WhatsApp — **Olga Stenin** — an identity document kept
+  entirely out of the repo; it suggests the signer may be Olga rather than Anton, flagged
+  to Julia below
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
@@ -249,6 +279,10 @@ the actual details.
   email field — her instruction); then create the Double client and complete §1/§2 here.
   **Still pending as of 2026-08-29** (1 day since the file was created) — a bounded Gmail
   search that day did not find it
+- **Julia to confirm — whose name signs:** the cover and agreement say "Anton", but the
+  license received 2026-08-30 is **Olga Stenin's**, and the supplied email appears to be
+  hers — if Olga is the buyer/signer, the cover, the agreement block and the T&C party
+  line all need her name (a one-pass change)
 - **Julia to confirm — the deposit amount:** she offered two figures ("say $3,500 or
   $4,000" — amounts named in her instruction, not client data); the draft uses the lower
   one. Swapping to the higher is a one-pass change
