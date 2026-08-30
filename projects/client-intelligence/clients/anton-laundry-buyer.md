@@ -262,6 +262,11 @@ the actual details.
   sent a Florida driver license by WhatsApp — **Olga Stenin** — an identity document kept
   entirely out of the repo; it suggests the signer may be Olga rather than Anton, flagged
   to Julia below
+- 2026-08-30 (final) — **Julia set the joint client name (Anton & Olga Stenin) and issued
+  the FINAL.** Filename changed from DRAFT to FINAL, and the agreement page's Signature,
+  Title and Date lines were activated as fillable PDF form fields (text widgets added
+  post-render with PyMuPDF — the Playwright print produces a flat PDF, so activation is a
+  post-processing step; a reusable trick for every proposal tool). Delivered ready to send
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
