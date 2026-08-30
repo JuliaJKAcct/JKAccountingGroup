@@ -267,6 +267,12 @@ the actual details.
   Title and Date lines were activated as fillable PDF form fields (text widgets added
   post-render with PyMuPDF — the Playwright print produces a flat PDF, so activation is a
   post-processing step; a reusable trick for every proposal tool). Delivered ready to send
+- 2026-08-30 — **The kick-off sequence after signing, set by Julia while drafting the
+  send email:** no document list goes out right away. Instead: (1) a call with the buyers
+  AND Олеся (the attorney) to align the plan and the split of roles; (2) the buyers
+  introduce the firm to the seller's broker by email; (3) on the call, explore whether a
+  direct line to the SELLER'S ACCOUNTANT is possible — the fastest route for document
+  requests. The email draft (RU) reflects this order
 - 2026-08-30 — **Two-part pricing (Julia's decision) + the client message on excluded
   work; v8 then v9 delivered, artifact updated.** She asked for the latest version (v8
   republished to the same link), then a ready-to-send client message listing the work
