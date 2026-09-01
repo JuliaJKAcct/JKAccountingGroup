@@ -79,7 +79,13 @@ shape is what makes the visual view work automatically:
 - **`## Chart of accounts conventions`** — bullets, and **include the number-range grammar
   line** (`… 100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s
   opex · 800s other income · 901 depreciation · 997/998/999 triage`). The Hub lifts that
-  line into a colored **range strip**.
+  line into a colored **range strip**. **The prose around it is free** — the parser anchors on
+  `100s assets` and takes each label up to a sentence end or a link. 🛑 **But the whole bullet is
+  consumed by the strip, so put nothing else on it**: a cross-reference written on the same bullet
+  is dropped, not rendered (give it its own bullet). *(Fixed 2026-09-01: the parser used to strip a
+  fixed `…name — ` prefix that only Ecoorganic's phrasing had, so every other runbook silently lost
+  `100s assets`, and iKids' trailing "See the firm standard, [link]" rode into the last chip as raw
+  markdown and a repo path — in a view where repo links are forbidden.)*
 - **`## Monthly review checklist (what the reviewer verifies)`** — a **numbered list**; the
   Hub renders **check items**.
 - **`## Open decisions log`** — a Markdown **table with a `Status` column**. The Hub renders
@@ -251,6 +257,19 @@ runbook, adapt the specifics):
   confirmation. **What does NOT move is the client's
   own payees — subcontractors, individuals, the small local suppliers — which stay by role.** Say the choice out loud in the runbook, or the next session will
   "helpfully" fill the names back in.
+- **A project/customer tag records a cost that belongs to ONE job — a cost that spans several
+  carries NONE.** For any client whose work runs as jobs or projects (a design studio, a
+  contractor), the rule has two halves and the second is the one that gets improvised: a cost
+  incurred **for one identifiable job** is tagged with that job, and a **recurring fee that buys
+  work across several jobs at once** is tagged with **nothing** — splitting it across projects
+  would be an invention and tagging it to any one of them would be wrong. **Empty is the
+  accurate answer there, not a missing one**, and saying so in the runbook is what stops the
+  next bookkeeper "fixing" it. The test is **the reason for the spend, not the vendor** — the
+  same payee can be tagged on one charge and untagged on another. ⚠️ It matters most where the
+  client has **no timesheet integration**: then the tag is the only project-level data the books
+  hold, and an untagged job cost is not recoverable from anywhere else. _(Lilian, 2026-09-01,
+  on Masciave — where the untagged case is a recurring outside retainer that works permits
+  across the studio's clients.)_
 - **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
   client's P&L should be empty; a client with one revenue stream should show one. Write the
   expected shape as a rule and as a checklist line — one report then tests the whole month's
@@ -314,7 +333,24 @@ is just a `.md` + a catalog item with a `close` object — no new function.** Th
 renderers do the sections: `closeSteps` (step cards + per-step material buttons), `closeResList`
 (reference resource list), and the rules-shape renderers (`ecoRuleCards`, `ecoChecklist`,
 `ecoDecisionsTable`). The **rules shape** (Ecoorganic) still has its own `ecoorganicReaderInner`;
-generalizing that one the same way is the remaining next step. Do all Hub work through the
+generalizing that one the same way is the remaining next step.
+⓵ **But a rules-shape runbook does not have to wait for that** — `closeProcessReader` renders
+*every* section generically (`closeSectionBody` already dispatches rule cards, the checklist, the
+decisions table and the number-range strip), so a **new rules-shape client is also just a `.md` +
+a `close` config**, with the ribbon carrying the client's costing **decision** instead of a close.
+Masciave is the first (2026-09-01). The knobs: **`kind`** (the print cover's subtitle) and
+**`flowTitle` / `flowLede`**, which override the ribbon's hard-coded *"How each month runs · The
+same pass every month"* — **use them for any client that is not monthly**, or the team page tells a
+quarterly client's bookkeeper something false. Both accept **`''`** to mean *omit this*, and the
+print book's contents line is **derived from `flowTitle`** so the PDF cannot keep saying "the
+monthly flow" while the screen says something else (`flowToc` overrides the derived wording).
+🔵 **Inside this reader, the status chip, the print cover and the `.txt` export read the `.md`'s
+own `**Status:**` header** — so a runbook marked *In review* cannot circulate as approved procedure.
+⚠️ **The Hub CARD is not wired to it** — every SOP card still shows a hard-coded *Active* pill, and
+six of the eight runbooks say `Status: Active` in the header while the line below says *In review*.
+Making the cards honest is a firm-wide Hub change and a labelling question for Lilian, not something
+to slip into a client's PR ([`FOLLOW-UPS.md`](../../../FOLLOW-UPS.md) row 66).
+Do all Hub work through the
 [`knowledge-hub`](../knowledge-hub/) skill and its **verify-before-publish gate**.
 
 ## Workflow
@@ -335,6 +371,9 @@ generalizing that one the same way is the remaining next step. Do all Hub work t
 - `projects/sops/magnum-152-bookkeeping-review.md` — the close-process-shape pilot.
 - `projects/sops/ikids-group-bookkeeping-review.md` — the pre-operational-shape pilot (the four
   buckets, the role→account map, the client-reporting delivery log).
+- `projects/sops/masciave-design-studio-bookkeeping-review.md` — a rules-shape runbook rendered
+  through the **reusable** close reader (`close` config + `flowTitle`/`flowLede`); the
+  project-tag rule and its recurring-fee exception.
 - `projects/knowledge-hub/build-hub.mjs` — the rules-shape reader `ecoorganicReaderInner` and
   the **reusable close-process reader `closeProcessReader`** (driven by the catalog `close`
   config); the section renderers (`ecoRuleCards`, `ecoDecisionsTable`, `ecoChecklist`,

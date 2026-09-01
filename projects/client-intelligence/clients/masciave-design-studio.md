@@ -1,6 +1,6 @@
 # MASCIAVE DESIGN STUDIO LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -70,6 +70,7 @@ the actual details.
 
 ### Bookkeeping & monthly close
 - **Applies?** Yes — **quarterly** _(Double)_
+- **Runbook:** [`masciave-design-studio-bookkeeping-review.md`](../../sops/masciave-design-studio-bookkeeping-review.md) — created **2026-09-01** from Lilian's first categorization rule (the recurring permit-expediting retainer). Thin on purpose and marked where it is; the categorization rules live there, not here.
 
 ### Income tax
 - **Applies?** Yes — the firm files **Form 1120-S** _(Double)_. ⚠️ **The IRS does not accept that classification** — no Form 2553 on file, confirmed 2025-12-23 (§5). Until that is settled the return type is **contested, not established**.
@@ -99,6 +100,7 @@ the actual details.
 - A **client-portal transaction question was resolved** by Lilian on 2026-08-20 — (Double activity log, 2026-08-22).
 - The **accountable-plan workbook** ("2026 Accountable Plan 2026 - Masciave.xlsx") was updated 2026-08-20 — (Google Drive, 2026-08-22).
 - ✅ **RESOLVED 2026-08-29 — the "Studio Passwords" document IS the credentials link.** Located directly in Julia's Drive, inside the vault folder already linked in §7 (file ID confirmed, content not opened). Added to §7 below; the "credentials Drive link" item is closed.
+- 🧾 **HOW A COST IS TIED TO A JOB — and the one recurring payment that deliberately is NOT.** _(Lilian, 2026-09-01.)_ The studio's costs are read **by project**: when it pays a contractor for work on one specific project — the drawings for that project, say — the transaction is **tagged with that project / that client**, so the books show what the job cost. **The exception is the recurring permit-expediting service:** the studio pays that company a **regular fee** so it works permits across **several** of the studio's clients at once, so that charge is coded to **`Legal and Professional Fees`** and carries **no** customer/project. Empty is the accurate answer there, not a missing one. ⓘ There is **no QBO timesheet integration** on this client, so the project tag is the only project-level data the books hold — which is what gives the rule its weight. The vendor is written **by role** here and in the runbook (firm rule — the repo publishes to the Hub); the name is in the QBO vendor list. Full rule + the reviewer checks: the bookkeeping runbook (§4).
 - **A second client-portal transaction question was resolved 2026-08-24** — a distinct event from the 2026-08-20 one above (Double activity log entry dated 2026-08-24, separate `entityId`). Also on 2026-08-24: the **"Accountable Plan" task was marked Done** (from Not Started), and three bank-account reconciliation tasks (Chase Credit Card, Business Savings, Business Free Checking) moved to In Progress — ordinary close-cycle progress. _(Double activity log, 2026-08-24, read 2026-08-29)_
 
 ## 6. History & open questions
@@ -131,6 +133,7 @@ the actual details.
 
 - 2026-08-22 — **Weekend sweep (incremental, baseline 2026-08-15→2026-08-22).** New facts folded into §5. No update on the EIN/S-election case note (491846) — still last touched 2026-01-14/08-13 IRS-side, no hard deadline recorded but the unresolved S-election carries ongoing filing-validity risk. Deeper Double bank-feed history and FL sales-tax county confirmation not chased this run (budget).
 - 2026-08-29 — **Weekend sweep (incremental, baseline 2026-08-22→2026-08-29).** Double `list_activity_log` (from 2026-08-22): a second client-portal transaction question resolved (2026-08-24), the "Accountable Plan" task marked Done, and three bank-account reconciliation tasks moved to In Progress — all 2026-08-24, folded into §5. `list_notes` unchanged (both existing notes untouched since 2026-08-13). Google Drive: located the "Studio Passwords" document directly (resolving the credentials-link item, content not opened) and, while confirming folder structure, found a **third** Drive folder named "Masciave Design Studio" (owned by Maria, created 2026-05-11) not previously recorded. Gmail (business name + "Pallisso" + EIN numbers + "Form 2553", after:2026/08/22) and Ping (org-wide) both found nothing on the EIN/S-election case — still open, no movement since 2026-01-14/08-13. Not chased this run (budget): the Double bank-feed support-ticket resolution beyond the activity log; the exact FL sales-tax county/registration (no registry-lookup tool).
+- 2026-09-01 — **First bookkeeping rule captured, and the client's bookkeeping runbook created.** Lilian gave the categorization rule for the recurring permit-expediting retainer (→ `Legal and Professional Fees`, **no** customer/project, because the fee buys work across several of the studio's clients) together with the general convention it is the exception to (a cost incurred for one project **carries that project**). Written into §5 above and into a new SOP, [`masciave-design-studio-bookkeeping-review.md`](../../sops/masciave-design-studio-bookkeeping-review.md), which did not exist before — it is one round old, says so, and is marked **In review** until Lilian signs it off (rules 1 and 2 are hers and are settled; the runbook assembled around them is not). The vendor is recorded **by role**, not by name, per the firm's role-not-vendor rule; **whether to name it is registered as an open decision in that runbook for Lilian to settle.** _(Worked by Lilian.)_
 
 ### Outstanding items (CI-only — never in the SOP)
 - **Abnormal Comcast charge** flagged in the July 2026 mid-month recurring-expense review — STILL OPEN, **~6 weeks** pending, no deadline. A search of Gmail bounded `after:2026/08/22`, on 2026-08-29, for "Comcast Masciave" again found nothing specific.
@@ -152,4 +155,4 @@ the actual details.
 - **Google Drive folder (sensitive vault):** [Drive folder](https://drive.google.com/drive/folders/1syx1fHdE1tCE0BFFsSgmPxT_QhHRdG-1)
 - **Credentials document (found 2026-08-29, content not opened):** ["Studio Passwords"](https://docs.google.com/document/d/18VDPCHAecghAde_dZYzmIFxkQCZcxSyo53Z0tSu9WFg/edit) — inside the vault folder above
 - **Recurring-expense watchlist (Drive):** [watchlist doc](https://docs.google.com/document/d/1zJ974hLR2p1pl1zIJT1R2WY4SwWLrX6iDguMHm4CGps/edit) — non-sensitive vendor list, no dollar figures repeated here
-- **Related SOPs:** _(pending — links into ../sops/ once written)_
+- **Related SOPs:** [`masciave-design-studio-bookkeeping-review.md`](../../sops/masciave-design-studio-bookkeeping-review.md) — the bookkeeping runbook (started 2026-09-01)
