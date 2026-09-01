@@ -178,10 +178,12 @@ solve a reading problem by sending the document somewhere else to be read.
 | **0** | + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** | + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
 
-### ✅ What a restricted environment has to allow, in full
+### ✅ What a restricted environment has had to allow so far (2026-09-01/02)
 
-_(The firm now runs tax-return sessions in a deliberately restricted environment. This is the whole
-list — it was assembled by hitting each wall in turn, 2026-09-01/02.)_
+_(The firm now runs tax-return sessions in a deliberately restricted environment. This list was
+assembled by hitting each wall in turn — ⚠️ **and the download has not yet been run to completion, so
+the list ends where the testing stopped, not where the walls do.** The next wall, if there is one, gets
+added here.)_
 
 | Add to the environment's allowed domains | Why |
 |---|---|
@@ -189,9 +191,10 @@ list — it was assembled by hitting each wall in turn, 2026-09-01/02.)_
 | `keeper-attachable.s3.us-east-2.amazonaws.com` | belt and braces — the regional endpoint the accelerate host can redirect to. Harmless if unused |
 | `www.irs.gov` and `*.irs.gov` | reading a current-year form at source instead of from memory — a standing firm rule |
 
-**Nothing else is needed.** In particular: **the MCP connectors (Double, Gmail, Drive, QuickBooks) do
-not use the container's network at all** and work in any environment, however restricted — which is why
-a session can read every record on a client and still fail to download one PDF.
+**No other host has blocked us yet.** And one thing that did *not* need an entry: **the MCP
+connectors (Double, Gmail, Drive, QuickBooks) worked throughout this restricted session with no
+allowlist entry at all** — consistent with `mcp-proxy.anthropic.com` sitting in the proxy's `noProxy`
+list — which is why a session can read every record on a client and still fail to download one PDF.
 
 ⛔ **And one thing an allowlist CANNOT fix:** the package registries. See below.
 

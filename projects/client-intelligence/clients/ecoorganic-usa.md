@@ -707,10 +707,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
   *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
   not build it by hand)* · and what the unidentified `2025 ECOORGANICUSALLC_1.pdf` actually is.
-- ✅ **DEPRECIATION IS NO LONGER A BLOCKER — 2026-09-02.** Lilian confirmed **ATX holds the 2024
-  return**, so the asset register rolls forward and she writes the book entry, as with Kolo Florida.
-  **What remains is the §179 / bonus election on the 2025 additions** — a decision for her or Julia,
-  not a missing source.
+- 🟡 **DEPRECIATION IS ANSWERED AT SOURCE — 2026-09-02.** Lilian confirmed **ATX holds the 2024
+  return** — read as *prepared there, with its asset register*, which is what her earlier sentence
+  implied; **confirmed the moment the asset list prints, and if it is empty the question reopens.** On
+  that reading the register rolls forward and she writes the book entry, as with Kolo Florida. **What
+  remains is the §179 / bonus election on the 2025 additions** — a decision for her or Julia, not a
+  missing source.
 - ✅ **ANSWERED 2026-09-01 — questions ① and ② above, as far as the sources reach.** The people added
   to Gusto were **three third parties, not the owners**, onboarded with a first day of 2025-09-15 and
   **left awaiting an approval that never came**, so **no payroll ever ran through Gusto**. See the
