@@ -581,6 +581,34 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   holds. Detail and figures in the
   [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D. _(Worked by Lilian.)_
 
+- 2026-09-01 — 🚗 **THE CLIENT NAMED THE TURO CARS, and it tied the books to the vehicles (Julia).**
+  Julia asked Artem by text which cars were on Turo in 2025. **A Hyundai Santa Fe, an Audi A6 — and,
+  a couple of times, a FRIEND's Hyundai Kona.** She also told Lilian she had been highlighting the car
+  expenses in a **spreadsheet during the review** *(almost certainly the 2025 P&L review workbook in
+  Drive, 2026-07-23 — **not opened**; a firm working paper that is not a filed return needs her or
+  Julia's say-so)*, and she has asked Artem to get Turo's answer **by email with a per-car breakdown**,
+  as audit backup. ✅ **That request is the right one** — it is what splits the earnings across cars.
+  ✅ **What it settles:** the **Santa Fe is the Hyundai Motor Finance vehicle**, and its 2025 payments
+  reconcile **exactly** to the amount the year-end `2025-ADJ` entry already moved to owner
+  distributions — so that half of the reclassification is confirmed by the client rather than inferred
+  from a vendor name. It also explains the posting-to-a-parent-account defect this file recorded: the
+  Hyundai finance was charged to the `Auto Expenses` parent all year and the year-end entry removed it.
+  🔴 **Three things it CREATES, none of them visible before:**
+  ① **the Kona is not his** — earnings on a car he does not own ran through his Turo account, so his
+  1040 needs to know what he received for it, what he paid the friend, and whether that payment owed a
+  **Form 1099-NEC**; he cannot depreciate it either;
+  ② **the Hyundai finance runs in TWO names** — Artem's for the March payments *(two on the same day,
+  different amounts, which looks like two finance accounts)* and **Ishkhan's** from April on. 🔑 **This
+  is the first hard evidence toward splitting the pooled owner-distribution account between the two
+  2025 shareholders**, which is the blocker the K-1s and both Forms 7203 wait on. ⚠️ **Evidence, not
+  proof** — the name on an ACH is the loan holder, not necessarily who benefited. **And Ishkhan is the
+  owner who exited 2026-01-01**, so it lands in his final shareholder year;
+  ③ **a BMW is in the books and on neither list** — a Zelle-paid BMW service shop, while the Turo cars
+  are a Hyundai and an Audi. Either an independent European shop serviced the Audi, or there is a third
+  vehicle nobody has mentioned. ⛔ **Do not assume the benign reading.**
+  Figures in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
+  _(Worked by Lilian.)_
+
 ### Tax year 2025 — the review
 
 - **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
