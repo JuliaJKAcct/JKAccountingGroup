@@ -126,12 +126,18 @@ the actual details.
   is missing**, and do not treat a blank organizer slide as an answer. Two of its answered slides also
   contradict documents in that folder (the foreign questions above; a 1095-A attached and simultaneously
   marked *not applicable*).
-- 🔴 **Nine listed-property vehicles across three Schedule Cs, and the mileage never arrives in the form
-  the return needs.** Each Turo Schedule C carries a fleet; Liudmyla's contracting Schedule C carries one
-  car. What the client supplies are **odometer readings**, not the annual **business / commuting / other**
-  split Form 4562 Part V requires. **Ask for the split explicitly, per vehicle**, or depreciation cannot
-  be computed. A vehicle's business-use percentage also moves year to year and the client has claimed a
-  jump to 100% on a car that was well under that in 2024.
+- 🔴 **Listed-property vehicles across three Schedule Cs, and the mileage never arrives in the form the
+  return needs.** Each Turo Schedule C carries a fleet; Liudmyla's contracting Schedule C carries one car.
+  The client **does** put mileage in the Turo workbooks — in unlabelled columns to the right of the expense
+  table, so it is easy to miss — but what is there are **odometer readings at a date**, not the annual
+  **business / commuting / other** split Form 4562 Part V requires, and there is no opening reading to
+  subtract. **Ask for the split explicitly, per vehicle**, or depreciation cannot be computed. A vehicle's
+  business-use percentage also moves year to year and the client has claimed a jump to 100% on a car that
+  was well under that in 2024.
+  ⚠️ **And the fleet is shrinking fast: eight Turo vehicles on the 2024 return, four on the 2025 workbooks.**
+  Every departure is a sale, a withdrawal from service, or a conversion to personal use — each reportable,
+  and none of them explained. Establish what happened to each before rolling the depreciation schedule
+  forward. _(2026-09-01.)_
 - 🟡 **Marketplace coverage, two policies, and a large advance credit.** In 2025 the household ran a
   family policy for most of the year and a **second, child-only policy for the last two months**, so
   **two Forms 1095-A** exist and the same second-lowest-cost-silver-plan figure appears on **both** for
@@ -145,10 +151,16 @@ the actual details.
   **grew as a share of the apartment** between 2024 and 2025 with no stated reason, and most of the
   expense lines the client does fill in are **identical every month**, which reads as estimate rather than
   actual. Check all of it against the 1098 before keying.
-- 🟡 **The Turo spreadsheets report income NET of Turo's fees.** Turo's own tax summary states that its
-  **gross earnings** figure is what appears on the 1099-K. **Key the gross and deduct the fees**, or
-  Schedule C line 1 will be short against the form the IRS receives. One spouse's figure is exactly net
-  of fees; the other's does not reconcile either way and needs asking.
+- 🟡 **The Turo spreadsheets report income NET of Turo's fees, and two Turo screens are needed to see it.**
+  Turo's **tax summary** gives *gross earnings* — which Turo states is what appears in box 1a of the 1099-K
+  — while its **earnings screen** gives *trip earnings*, the amount actually paid out after Turo's fee. The
+  client's workbooks carry the second figure. **Key the gross on Schedule C line 1 and deduct the Turo fees
+  as commissions**, or line 1 is short against the form the IRS receives. For one spouse the two screens
+  reconcile exactly; for the other they disagree by a few hundred dollars with no visible reconciling item,
+  so the 1099-K has to settle it. ⚠️ **A third Turo concept matters and is easy to deduct twice:**
+  *reimbursements* — what guests repay for fuel, tolls and tickets — are, in Turo's own words, "neither
+  gross earnings nor deductible expenses". So they stay out of income **and** the reimbursed portion must
+  come out of the refuelling expense. _(2026-09-01.)_
 - 🟡 **Vehicles get destroyed and sold, and the paperwork lands on the wrong spouse.** A Turo car was a
   **total loss in 2025** — an **involuntary conversion** reportable on Form 4797, with a **§1033 deferral
   election available** if replaced in time. The car was on **one spouse's** Schedule C in 2024 but its
