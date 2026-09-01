@@ -227,7 +227,18 @@ runbook, adapt the specifics):
   Sales/COGS.
 - **Cash out / withdrawals: investigate, never blanket to draws** — cash can pay
   subcontractors (1099 exposure).
-- **Parents never receive postings** — post to sub-accounts only.
+- **Parents never receive postings** — post to sub-accounts only. ⚠️ **But "is it a parent?"
+  is a question about THIS CLIENT'S chart, never about the firm standard.**
+  [`chart-of-accounts-standard.md`](../../../projects/sops/chart-of-accounts-standard.md) is
+  the **template every client is adapted from**, not a description of any one of them: an
+  account that is a parent there (`650 Legal & Professional Fees`, with `650.1 Accountant` and
+  `650.2 Legal`) can be a plain **posting account** in a client's chart that never took those
+  children. **Look at the client's chart before you invoke this rule** — and check whether the
+  chart says so itself: some of them carry the parent's marker in the account description
+  (Masciave's reads *"THIS IS A PARENT CATEGORY, ONLY USE SUBACCOUNTS"*, and those accounts are
+  locked). _(2026-09-01: a review round read the firm standard as if it were the client's
+  chart and turned a settled instruction of Lilian's into a contradiction. She resolved it in
+  one line by opening the client's chart.)_
 - **The close gate:** holding/triage accounts must read **$0 before a month is closed.**
   Necessary but *not sufficient* — a $0 triage doesn't mean the categories are *right*.
 - **1099 discipline:** track every payee crossing the **$2,000** threshold (2026), collect
@@ -249,6 +260,13 @@ runbook, adapt the specifics):
   online retailer, a truck-rental chain, a freelance marketplace). They share the reason: a covering
   bookkeeper cannot identify a *category of merchant* any other way, and none of them is one of the
   client's own people.
+  ✅ **And Lilian grants exceptions ONE VENDOR AT A TIME, when asked.** On **2026-09-01** she
+  told a session to name `Permit Cleaners` in the Masciave runbook — *"ponlo con nombre en el
+  SOP"* — because the whole rule is about that one payee and a role would have made it
+  unusable. **That is a ruling for that vendor in that runbook**; the rule above still governs
+  every other payee, there and everywhere else. The pattern to copy is the asking: **write it
+  by role, register the question, and let her answer** — a permission is widened by asking,
+  never by reasoning (CLAUDE.md).
   ⚠️ **This is a SESSION'S GENERALISATION, not a firm ruling.** On 2026-08-26 Lilian allowed it for
   the **Ecoorganic runbook only** — *"el runbook puede nombrar cadenas retail sin problema"*. The
   firm-wide wording here was widened by a session so the two files stop contradicting each other,
@@ -267,9 +285,15 @@ runbook, adapt the specifics):
   next bookkeeper "fixing" it. The test is **the reason for the spend, not the vendor** — the
   same payee can be tagged on one charge and untagged on another. ⚠️ It matters most where the
   client has **no timesheet integration**: then the tag is the only project-level data the books
-  hold, and an untagged job cost is not recoverable from anywhere else. _(Lilian, 2026-09-01,
-  on Masciave — where the untagged case is a recurring outside retainer that works permits
-  across the studio's clients.)_
+  hold, and an untagged job cost is not recoverable from anywhere else.
+  🛑 **And do NOT build a "count the occurrences" check on top of it.** A fee that spans jobs
+  usually has **no fixed amount and no fixed rhythm** — it follows what the client agrees with
+  that vendor — so a period with more, fewer or none of them is **not** a finding, and a
+  reviewer told to expect a number will raise false alarms or, worse, explain a real gap away.
+  Check the **coding of the charges that exist**. _(Lilian, 2026-09-01, on Masciave: the
+  untagged case is `Permit Cleaners`, who work permits across the studio's clients — and she
+  declined to record either figure, on purpose: "eso depende de las necesidades de nuestra
+  clienta y lo que acuerde con esa compañía." **A deliberate absence is not a gap to fill.**)_
 - **Where a client's statements have a KNOWN SHAPE, make that the self-check.** A pre-operational
   client's P&L should be empty; a client with one revenue stream should show one. Write the
   expected shape as a rule and as a checklist line — one report then tests the whole month's
