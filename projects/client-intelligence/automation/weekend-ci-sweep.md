@@ -258,6 +258,7 @@ was said). Better a sourced, low-confidence note than nothing.
 | Mykola Kozlovskyi | 709838 |
 | Denys Melnyk | 764785 |
 | Andrii Tymchenko | 710619 |
+| Artem Markarian | 710623 |
 | VOICECAPITAL INC | 710725 |
 | VOXAGO LLC | 710606 |
 | YMI TRUCKING LLC | 710608 |

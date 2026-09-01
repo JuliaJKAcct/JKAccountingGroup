@@ -168,14 +168,41 @@ solve a reading problem by sending the document somewhere else to be read.
 
 | Exit | Message | What it means | What to do |
 |---|---|---|---|
-| **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless |
+| **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless. 🔴 **In a locked-down environment `pip install` will not work at all** — see the block below |
+| **3** | `download failed (curl exit 22)` | The environment's network policy refused the **file host**, not the tool | The proxy log names it: `connect_rejected · gateway answered 403 to CONNECT`. **Double serves its files from `keeper-attachable.s3-accelerate.amazonaws.com`** — that host has to be in the environment's allowed domains. ⛔ **Not a reason to fetch the PDF another way.** Confirm with `curl -sS "$HTTPS_PROXY/__agentproxy/status"`, which lists recent relay failures by host |
 | **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
 | **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
 | **5** | `UNREADABLE EXTRACTION` | The document is **mostly** wreckage — past ~100 undecodable glyph tokens, or an alphabet too small to be text | `/uniXXXX` is decoded automatically and smaller amounts are masked as `[GLYPH]`, so reaching this means the whole document is unreadable. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — zero means blind |
 | **0** + `token(s) were MASKED as [GLYPH]` | Some text could not be read and was masked | A font with no Unicode map, usually in the *filled-in* fields while the form template reads fine | The file is safe to use, but **an absence near a `[GLYPH]` is not evidence.** That region was never checked — for identifiers or for anything else. If they sit where a figure should be, get a better PDF rather than reporting the figure missing |
 | **4** | `REFUSING TO WRITE` | An identifier-shaped run survived redaction | Read the reported *shapes*. Either a pattern missed a real identifier or a column of figures collided with the shape. Inspect the PDF by hand, decide which, and **fix the patterns** — never weaken the guard to get the job done |
-| **0** + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
-| **0** + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
+| **0** | + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
+| **0** | + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
+
+### 🔒 A locked-down environment — installing pypdf with no package registry
+
+_(Established 2026-09-01, in the `odoo-api`-style restricted environment the firm now uses for tax
+returns.)_ **`pypi.org` and `files.pythonhosted.org` sit in the agent proxy's `noProxy` list**, so
+requests to them bypass the proxy entirely and are refused further out — **an allowlist entry at the
+proxy cannot reach them**, and it was re-tested both directly and with `--proxy $HTTPS_PROXY`: `403`
+both ways, while an allowed host like `irs.gov` returns `200`. So `pip install pypdf` cannot succeed
+there, and adding pypi to the environment's domain list does not change it.
+
+**What works:** have the person upload the **pypdf source tarball** into the session, then
+
+```bash
+tar xzf <uploaded>.tar.gz -C <scratch>
+PYTHONPATH=<scratch>/pypdf-<version> python3.12 tools/redact-doc/redact.py "<url>" "<out.txt>"
+```
+
+- ⛔ **Do not `pip install` the tarball** — the build backend still has to come from the network.
+  pypdf is pure Python; `PYTHONPATH` is enough.
+- 🔴 **Use `python3.12`, not `python3`.** The default `python3` is **3.11** while
+  `/usr/lib/python3/dist-packages` is built for **3.12**, so `import cryptography` raises a **`pyo3`
+  PanicException** — which is *not* an `ImportError`, so pypdf's own fallback chain does not catch it
+  and the import dies. This is the `_cffi_backend` failure above wearing a different face.
+
+⭐ **The durable fix is to vendor pypdf under `tools/redact-doc/vendor/`** so no future review depends
+on a network policy at all.
 
 **The single most useful habit:** before trusting any figure out of this tool, find an internal
 arithmetic check in the document itself and confirm it. On a return, `1125-A` line 6 − line 7 =
