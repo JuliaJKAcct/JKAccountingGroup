@@ -1,13 +1,19 @@
 # Masciave Design Studio — Bookkeeping Runbook
 
-> **Status:** Active (new — started 2026-09-01) · **Client:** MASCIAVE DESIGN STUDIO LLC (QBO via Double) · **Owner of SOP:** Lilian · **Last updated:** 2026-09-01
+> **Status:** In review (new — started 2026-09-01) · **Client:** MASCIAVE DESIGN STUDIO LLC (QBO via Double) · **Owner of SOP:** Lilian · **Last updated:** 2026-09-01
 >
 > **This file starts from ONE rule and is expected to grow.** Lilian gave the first
 > categorization rule on 2026-09-01 — the recurring outside-service retainer that carries
 > **no** project (rule 2 below) — and this runbook was created to hold it rather than let it
 > die with the session. Everything else here is the operational context carried over from
 > the client's Client Intelligence file so the rule reads in context. **It is not yet a
-> complete monthly runbook**, and the sections say so where they are thin.
+> complete runbook**, and the sections say so where they are thin.
+>
+> ⚖️ **In review — the RULE is hers, the RUNBOOK around it is not yet signed off.** Rules 1
+> and 2 are Lilian's own instruction of 2026-09-01 and are settled. Everything else — the
+> snapshot, the borrowed firm-wide rules, the checklist, the cadence — was assembled by a
+> session from the client file and **awaits her approval**, which is the standing gate on any
+> SOP. Remove this note once she signs it off; until then the Hub shows it as in review.
 >
 > The `.md` is the source of truth (maximum detail). Client figures, **vendor names**,
 > account numbers and logins live in the firm's client systems (Google Drive / Double /
@@ -108,8 +114,9 @@ These override any QuickBooks auto-suggestion.
 
 - This client is one of the firm's **reference charts for the number-prefix grammar** — the
   account names carry their number.
-- The firm's ranges: **100s assets · 200s liabilities · 300s equity · 400s income ·
-  500s COGS · 600s opex · 800s other income · 901 depreciation · 997/998/999 triage.**
+- The firm's grammar — the account carries its number in its *name* — 100s assets ·
+  200s liabilities · 300s equity · 400s income · 500s COGS · 600s opex ·
+  800s other income · 901 depreciation · 997/998/999 triage.
 - **`Legal and Professional Fees` is an operating expense (600s)** — it is not a job cost and
   does not belong in COGS, which is consistent with rule 2 leaving it untagged by project.
 - **Parents never receive postings** — post to sub-accounts only.
@@ -122,7 +129,12 @@ These override any QuickBooks auto-suggestion.
 2. **Every job cost carries its project** (rule 1) — spot-check the period's subcontracted
    design/engineering costs for an empty customer/project field.
 3. **The permit-expediting retainer is in `Legal and Professional Fees` with no project**
-   (rule 2) — and appears once per expected cycle. A missing one is a question, not a pass.
+   (rule 2) — and **every occurrence the period should contain is present.** ⚠️ **Count them,
+   don't find one:** the review runs on a longer cycle than the fee does, so a quarter holds
+   more than one charge and finding the first proves nothing about the rest. *(The fee's exact
+   frequency is not yet recorded — see the decisions log.)* **A gap is a question, not a
+   pass** — this client has a bank-feed history, and a period that stopped importing reads
+   exactly like a quiet one.
 4. **Owner-personal items sit in the equity sub-accounts**, not in expenses.
 5. **Payroll** — the Gusto debits (including any off-cycle run) are all accounted for.
 6. **1099 payees** — every vendor over **$2,000** has a W-9 recorded in Double.
@@ -135,6 +147,8 @@ These override any QuickBooks auto-suggestion.
 |---|---|
 | **Name the permit-expediting vendor in this runbook, or keep it by role?** Written by role per the firm rule (this repo publishes to the Hub). Lilian gave the name in the 2026-09-01 round; naming it is her call, and it is a one-line change | Pending |
 | Confirm the exact **spelling of that vendor's name** against the QBO vendor list before anyone relies on a role→name mapping | Pending |
+| **Lilian's sign-off on this runbook** — rules 1 and 2 are hers; the rest was assembled by a session and is unapproved. Header stays *In review* until she rules | Pending |
+| **How often the retainer is charged** (monthly? per period?) — the reviewer checklist counts occurrences, so it cannot be run properly until this is known | To verify |
 | Does the retainer vendor ever issue a **project-specific** invoice outside the recurring fee? If so it is a rule-1 cost (rule 2, *to verify*) | To verify |
 | The **account an accountable-plan reimbursement posts to** is not recorded here | To verify |
 | Whether project-tagged costs are also marked **Billable** in QBO, or tagged for cost tracking only | To verify |

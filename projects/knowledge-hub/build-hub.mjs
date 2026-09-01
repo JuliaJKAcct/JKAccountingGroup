@@ -740,14 +740,16 @@ function closeSignature(oneRule){
     + `<div><p class="eco-sig-t">The one thing to hold in your head</p>`
     + `<p class="eco-sig-d">${oneRule}</p></div></div>`;
 }
-// `cfg` (the catalog's `close` object) may override the ribbon's heading + lede: not every
-// bookkeeping client runs monthly, and a quarterly client must not be told "every month".
-function closeFlow(steps, cfg){
+// Takes the whole `close` config (like every other close-* renderer) and reads cfg.flow.
+// `flowTitle` / `flowLede` override the ribbon's heading and lede: not every bookkeeping
+// client runs monthly, and a quarterly client must not be told "every month". They are
+// tested with `!= null`, so a deliberate '' means "no lede", not "give me the monthly one".
+function closeFlow(cfg){
   const c = cfg || {};
-  const li = (steps || []).map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
+  const li = (c.flow || []).map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
     + `<span class="estep-b"><span class="estep-t">${s.t}</span><span class="estep-d">${s.d}</span></span></li>`).join('');
   return `<div class="shead"><span class="schip">✦</span><h2>${esc(c.flowTitle || 'How each month runs')}</h2></div>`
-    + `<p class="slede">${c.flowLede || 'The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.'}</p>`
+    + `<p class="slede">${c.flowLede != null ? c.flowLede : 'The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.'}</p>`
     + `<ol class="eflow">${li}</ol>`;
 }
 function closeSectionBody(title, body){
@@ -759,7 +761,10 @@ function closeSectionBody(title, body){
   if(/reference material/i.test(title)) return closeResList(body);
   return mdToAtlas(body);
 }
-function closePrintFrontMatter(name, sub, sections, owner, updated){
+// `flowToc` names the ribbon on the CONTENTS page. It defaults to the monthly wording, so a
+// client that overrode flowTitle must override this too — otherwise the screen says "how each
+// charge is decided" and the PDF the bookkeeper is handed still says "the monthly flow".
+function closePrintFrontMatter(name, sub, sections, owner, updated, flowToc){
   const toc = sections.map((s, i) => `<li><span class="ptoc-n">${i + 1}</span><span class="ptoc-t">${esc(s.title)}</span></li>`).join('');
   return `<div class="pbook pcover">${JK_MARK}`
     + `<p class="pc-kick">Bookkeeping Runbook · Per Client</p>`
@@ -767,7 +772,7 @@ function closePrintFrontMatter(name, sub, sections, owner, updated){
     + `<p class="pc-sub">${esc(sub)}</p>`
     + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}<br>JK Accounting Group — internal reference</p></div>`
     + `<div class="pbook ptoc"><h2>Contents</h2>`
-    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; the monthly flow</span></li>${toc}</ol></div>`;
+    + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; ${esc(flowToc || 'the monthly flow')}</span></li>${toc}</ol></div>`;
 }
 // The ONE reusable close-process reader. cfg = { name, loc, lede, oneRule, flow, dl } from
 // the SOP catalog's `close` field; every section renders generically from the .md.
@@ -779,7 +784,7 @@ function closeProcessReader(cfg, md, owner, updated){
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
     + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every step) as a PDF.</span></div>`;
-  return closePrintFrontMatter(cfg.name, cfg.kind || 'Monthly Bookkeeping & Close', sections, owner, updated)
+  return closePrintFrontMatter(cfg.name, cfg.kind || 'Monthly Bookkeeping & Close', sections, owner, updated, cfg.flowToc)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>${esc(cfg.name)}<span class="loc">${esc(cfg.loc)}</span></h1>`
@@ -788,7 +793,7 @@ function closeProcessReader(cfg, md, owner, updated){
     + `<div class="page">`
     + actions
     + closeSignature(cfg.oneRule)
-    + closeFlow(cfg.flow, cfg)
+    + closeFlow(cfg)
     + `<div class="shead"><span class="schip">§</span><h2>The full runbook</h2></div>`
     + `<p class="slede">${cfg.slede || 'The authoritative detail — the client snapshot, the close process (with the Drive material for each step), the categorization rules, the reviewer checklist, and the open items. Open a section.'}</p>`
     + secs
@@ -1507,24 +1512,30 @@ const SOP_GROUPS = [
           ],
         } },
       { file: 'masciave-design-studio-bookkeeping-review.md', title: 'Masciave Design Studio — Bookkeeping Runbook', perClient: true, client: { slug: 'masciave-design-studio', name: 'Masciave Design Studio' },
-        blurb: 'Masciave’s bookkeeping rules — an interior-design studio whose costs are read by project. What carries a project tag, and the one recurring outside retainer that deliberately carries none because it buys work across several clients at once. Plus the chart-of-accounts conventions, the reviewer checklist and the open decisions. New: started from one rule and growing.',
+        blurb: 'Masciave’s bookkeeping rules — an interior-design studio whose costs are read by project. What carries a project tag, and the one recurring outside retainer that deliberately carries none because it buys work across several clients at once. Plus the chart-of-accounts conventions, the reviewer checklist and the open decisions. New and IN REVIEW: the two rules are Lilian’s own instruction, the runbook assembled around them awaits her sign-off.',
         close: {
           // A RULES-shape runbook (like Ecoorganic), rendered through the reusable close reader:
           // there is no close process to show yet, so the ribbon is the costing DECISION and the
           // sections carry the weight. Cadence is QUARTERLY — hence the flowTitle/flowLede override.
           name: 'Masciave Design Studio', loc: 'Bookkeeping runbook · interior design studio (Fort Lauderdale)', dl: 'Masciave-bookkeeping-runbook',
-          kind: 'Bookkeeping Runbook',
+          kind: 'Categorization rules & reviewer checks',
           slede: 'The authoritative detail — the client snapshot, the categorization rules, the 1099 process, the chart-of-accounts conventions, the reviewer checklist, and the open decisions. Open a section.',
-          lede: "What a bookkeeper needs to code this studio's costs correctly — the one rule, how a charge is decided, then the full runbook. One round old and deliberately marked where it is still thin. Built from the runbook, so it stays in sync.",
+          lede: "What a bookkeeper needs to code this studio's costs correctly — the one rule, how a charge is decided, then the full runbook. One round old, in review, and deliberately marked where it is still thin. Built from the runbook, so it stays in sync.",
+          // ⚠️ oneRule + flow are HAND-AUTHORED and mirror rules 1, 2, 4 and 5 of
+          // masciave-design-studio-bookkeeping-review.md — nothing links them, and the ribbon
+          // is the half the team actually reads. Change a rule there → change it here in the
+          // same pass. Deliberately carries NO threshold figures or account codes: those move,
+          // and a stale number in a chip is worse than a stale paragraph.
           oneRule: "A cost incurred for <b>one</b> job carries that job’s project tag — that is the only project-level data these books hold, because there is no timesheet integration. The <b>recurring permit-expediting retainer is the exception</b>: it is one regular fee that buys work across <b>several</b> clients at once, so it goes to <b>Legal and Professional Fees</b> with the <b>project field empty</b>. Empty is the accurate answer, not a missing one.",
           flowTitle: 'How each charge is decided',
-          flowLede: 'Bookkeeping here runs <b>quarterly, not monthly</b> — but the questions are the same on every charge, in this order. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
+          flowToc: 'how each charge is decided',
+          flowLede: 'The first four questions are asked of <b>every charge</b>, in this order; the last two are run once over the whole period. Bookkeeping here runs on a <b>quarterly</b> cycle rather than monthly (Double’s property — <b>still to confirm</b>, see the open decisions), so a period holds several of every recurring charge: <b>count them, don’t find one</b>. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
           flow: [
-            { t: 'Name the payee', d: 'Every charge gets a vendor · unknown → triage' },
+            { t: 'Name the payee', d: 'Every charge gets a vendor — except owner moves &amp; transfers' },
             { t: 'One job?', d: 'Incurred for one project → tag that project' },
             { t: 'The retainer', d: 'Spans clients → Legal &amp; Professional Fees, no project' },
-            { t: 'Owner-personal?', d: 'In = contribution · out = distribution · equity only' },
-            { t: '1099 watch', d: 'Outside professionals over $2,000 → W-9 in Double' },
+            { t: 'Owner-bound?', d: 'Accountable-plan reimbursement is NOT equity · otherwise in = contribution, out = distribution' },
+            { t: '1099 sweep', d: 'Outside professionals past the threshold → W-9 in Double' },
             { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
           ],
         } },
