@@ -1,6 +1,6 @@
 # ECOORGANIC USA LLC
 
-> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-08-29
+> **Status:** Active · **Owner:** Lilian · **Last updated:** 2026-09-01
 
 > **Sensitive data lives in the firm's systems, not here.** This file holds
 > non-sensitive knowledge and links only. Logins, passwords, full account numbers,
@@ -161,9 +161,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   from the filings, not established.
 
 ### Payroll
-- **Applies?** Yes — the company runs **W-2 payroll through Gusto** (onboarded
-  Sept 2025; multiple employees hired/I-9'd that month), in addition to the
-  1099-tracked subcontractor labor already documented in the SOP. Connecticut
+- ⚠️ **Applies — but "runs payroll" is NOT established, and this section used to assert it.** Gusto
+  was onboarded **Sept 2025** and multiple employees were hired/I-9'd that month, alongside the
+  1099-tracked subcontractor labor already documented in the SOP. **What the sources actually show is
+  that the first payroll was missed and no payroll appears in the 2025 books at all** — see the first
+  bullet of §5, which carries the evidence and the searches behind it. **Treat the employer
+  obligations below as OPEN rather than as running smoothly**, and settle the question in Gusto
+  before relying on either reading. Connecticut
   employer obligations recur: **CT-941** (quarterly withholding reconciliation),
   **W-2s/CT-W3** (annual reconciliation of withholding), and a **CTDOL /
   ReEmployCT** (unemployment) account *(Gmail, Sept 2025–Jul 2026)*.
@@ -184,11 +188,37 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 ### Income tax
 - **Applies?** Yes — the **2025 return is a 1120-S**, prepared by the firm, **in progress** and waiting on information from the client (see §6). It issues **two K-1s**, one per owner.
-- **Open blocker — the Turo documents (2026-08-04):** we need the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
+- 🔴 **PRE-RETURN REVIEW RUN 2026-08-31 — VERDICT: THE RETURN CANNOT BE PREPARED YET.** Five things
+  the return needed had no source: **payroll** (§5) · the **per-shareholder split of the capital
+  accounts** (§5) · the **depreciation schedule** (§5) · **Turo** · and **the 2024 filed return, which
+  the firm HAS in Double but could not open in that session**. ✅ **Turo was answered on 2026-09-01 and
+  Julia ruled on it (§5); the other four stand.** Six questions were
+  drafted for the client (Russian, formal) and four decisions were left to Lilian/Julia — including
+  whether the firm's meals policy applies to 2025, which is a **closed** book year. **The full
+  detail, and every figure, is in the working paper:**
+  [`projects/tax-returns/ecoorganic-usa-llc/2025-form-1120s.md`](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md).
+- ✅ **The EXTENSION IS FILED — federal and state.** `2025 7004 EXT.pdf` and `2025 7004 ETX - state.pdf`
+  are in Double under `JK Accounting Group > Tax Return Filed > 2025`. **So the deadline is
+  15 September 2026** *(verified 2026-08-31 — do not re-ask the client for this)*.
+- 📁 **The 2024 filed return IS in Double**, at `JK Accounting Group > Tax Return Filed > 2024 >
+  ECOORGANICUSALLC.pdf`. **Never ask the client for it.** The 2023 return is at
+  `TaxDome > Taxes > 2023 > 2023 ECOORGANIC USA LLC signed.pdf`; `TaxDome > Taxes > 2024` is empty.
+- ❓ **Unidentified: `2025 ECOORGANICUSALLC_1.pdf`** sits in `Tax Return Filed > 2025` (and in Drive),
+  last modified 2026-04-28 — the same day Julia emailed *"2025 Ecoorganic USA LLC"* to the Ukrainian
+  affiliate's accountant. **Not opened** (it is the year under preparation, outside the document
+  rule's scope). **Ask Julia what it is** before the return is prepared.
+- ✅ **CLOSED 2026-09-01 — the Turo 2025 earnings answer arrived**, by email from Turo Executive
+  Support to the client, supplied by Lilian. **No Form 1099-K was issued for 2025.** Figures are in
+  the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D, not here.
+  🔴 **Two things it created:** ① **none of that income is in the 2025 books** — checked three ways
+  (a ledger search on Turo, the whole `Sales` account, and income by customer), and the only Turo
+  activity in QuickBooks is the company **paying** Turo to rent cars; ② **the ownership question is
+  now the whole blocker**, and the 1099-K route to answering it no longer exists (§5).
+- **The original blocker as it stood — kept as history (2026-08-04):** we needed the **Earnings Report and any 1099-K for 2025** from **Turo**. The Turo account **has been closed**, so nobody can log in and download them, and **Turo will only release them to the account holder** — not to us, and not even by email to the address already on the account. _(That the 1120-S is specifically waiting on these is a reasonable read, not something recorded: the 2026-07-30 entry in §6 says only "waiting on information from the client" without itemising it. Confirm with Lilian.)_
   - **How we first tried it — SUPERSEDED, don't send him off alone:** the owner calls Turo himself at the support number in §3, works through the voice menu, and asks for the **Earnings Report** and **1099-K for 2025**. That route is no longer the plan; read the two bullets below before doing anything.
   - **Status (2026-08-04, second call):** Lilian and the owner called Turo **together**. Turo said **they cannot access the account themselves** and are **escalating** the case. The answer will come **by email to the account's address within 1–2 business days**. **We do not call again — we wait for that email**, and only call back if it doesn't arrive.
   - 🔑 **Any call to Turo has to be made WITH the owner on the line.** Turo gives us nothing without him — it's their security check. Don't plan a Turo call the firm can make alone; schedule it with him. _(Learned 2026-08-04: the first attempt, with Lilian alone, went nowhere; the joint call is what got the case escalated.)_
-  - **Whose account is it? — the company's.** The Turo account belongs to **ECOORGANIC USA LLC**, so any income and any 1099-K go on the **1120-S**, not on an owner's 1040. _(Per Lilian, 2026-08-04 — her statement; the basis is not recorded and no document was seen. The account is closed, so this has not been verified against the registration.)_
+  - ⛔ **SUPERSEDED — this is what was believed on 2026-08-04, not the answer.** It read: *"the Turo account belongs to ECOORGANIC USA LLC, so any income and any 1099-K go on the 1120-S, not on an owner's 1040."* **Julia ruled on 2026-09-01 that all Turo activity is ARTEM'S and goes on his individual return** (§5). _(Per Lilian, 2026-08-04 — her statement; the basis is not recorded and no document was seen. The account is closed, so this has not been verified against the registration.)_
   - Turo's refusal to deal with the firm says **nothing** about who owns the account — it only means we are not the account holder, which is why the owner has to place the call. How a company-owned account squares with Turo dealing only with an individual account holder is **not established**.
   - **On the next contact with Turo — the escalation email or a further call — get the registered account name and the name / TIN on any 1099-K.** That corroborates the ownership answer and, more importantly, determines whether the 1099-K will match to the LLC's EIN — if it comes out under his SSN, the return position has to be handled deliberately whoever "owns" the account.
 - **Prior years:** the 2024 return was filed under a **Form 7004 extension** (mid-March 2025); the 2025 return is also under extension per a July 2026 note _(Double; Gmail)_.
@@ -204,8 +234,54 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 ## 5. Key facts & quirks
 
+- 🔴 **THE COMPANY HIRED EMPLOYEES IN SEPTEMBER 2025 AND — on every source checked — NEVER RAN A
+  PAYROLL.** Gusto was onboarded, three people were added, and Gusto's own email of **2025-09-27**
+  says the first payroll (26 September) was **missed**. The 2025 vendor ledger shows a token
+  cents-level amount to Gusto and nothing more; **the chart of accounts has never contained a wages,
+  payroll-tax or payroll-liability account.** *(Searches that produced this: Gmail on Gusto/Ecoorganic
+  with no date bound, the 2025 expenses-by-vendor report, and the full chart of accounts including
+  inactive — 2026-08-31. It is not proof: the Gusto account itself would settle it.)* **Consequence:
+  a Connecticut withholding account was opened and appears never to have been filed on** — CT DRS has
+  sent **six** CT-941 past-due or due-soon notices between January and August 2026 — roughly every six
+  weeks, not quarterly. **Action:** open Gusto and myconneCT
+  before any 2025 return is prepared, and ask the client whether those people worked and how they
+  were paid.
+- 🔴 **Two shareholders in 2025, but the books carry ONE pooled owner-contribution account and ONE
+  pooled owner-distribution account.** The per-owner split exists nowhere in the ledger, so it cannot
+  be derived — it has to be asked. **This blocks both K-1s and both Forms 7203.** Related: **the
+  firm's netting policy does not apply to 2025** — its first gate requires a shareholder's
+  contributions to exceed their distributions, and for 2025 the movement runs the other way, so the
+  return is presented **gross**. *(Established 2026-08-31 from the 2025/2024 balance sheets.)*
+- 🔴 **The books carry NO depreciation, and the fixed-asset register is not in the books — it lives
+  on the tax return, which the firm does not hold a schedule for.** 2024 deducted depreciation and
+  booked an asset disposal while its balance sheet showed no fixed assets at all; 2025 capitalises
+  three items **at cost with accumulated depreciation at zero**. **Action:** the prior-year Form 4562
+  detail is required before any 1120-S can be finished, and it was not found in Double or in a
+  bounded Drive search *(title `depreciation`/`4562`/`asset` × fullText `Ecoorganic`, 2026-08-31)*.
+- ✅ **TURO — THE 2025 EARNINGS ANSWER ARRIVED 2026-09-01** (Turo Executive Support emailed the
+  client; Lilian supplied it). **What it settles:** the 2025 host-earnings breakdown exists in full,
+  and **no Form 1099-K was issued for 2025**. **Figures live in the return's working paper, never
+  here.** 🔴 **What it COSTS us, and this is the part to carry:** the firm's plan for proving whose
+  account it is — *read the name and TIN on the 1099-K* — **is now permanently dead, because there is
+  no 1099-K.** Ownership can only be settled by asking the client, or from the account registration.
+  ✅ **Checked against irs.gov on 2026-09-01 rather than quoted from memory: Turo applied the threshold
+  correctly**, and no 1099-K was due. 🔑 **The habit is the point, not the answer** — a threshold is
+  read off the source, never recalled.
+- 🔑 **TURO IS A COST AS WELL AS AN INCOME — this file used to record it as income only.** In 2025 the
+  company also **paid** Turo, sitting in `Taxi or shared rides`; Julia's read (Ping, 2026-07-23) is
+  that it belongs in a new *auto rental* account. ⚠️ **And the two halves point opposite ways:** the
+  charges are the company **renting** cars as a guest, while the earnings are someone **letting** cars
+  out as a host.
 - 🔑 **Turo will not deal with the firm unless the owner is on the call.** Every Turo call is scheduled with him — a call the firm makes alone gets nowhere _(2026-08-04)_.
-- **Any Turo income is the company's**, not an owner's personally _(per Lilian, 2026-08-04 — §4)_. Whether the account actually produced income, and in which years, is **still unknown** — the platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything in either direction until someone looks — and note that company income can still have been paid into a personal account (a distribution), so absence from the Chase feed would not disprove company ownership.
+- ⚖️ **SETTLED 2026-09-01 BY JULIA — ALL TURO ACTIVITY, INCOME AND EXPENSES, IS ARTEM'S AND GOES ON HIS
+  INDIVIDUAL RETURN.** The company's Turo-related costs are therefore **owner distributions**, not
+  company expenses. 🔑 **This is the live position and it replaces everything below about whose account
+  it is.** ⚠️ **One edge the ruling does not obviously reach, and it should be asked rather than
+  assumed:** the company's card charges to Turo are the **guest** side — paying to *rent* a car — the
+  opposite of hosting. If any of those rentals were for a job, moving them to distributions throws away
+  a real deduction. ⓘ *(The question had been open since 2026-08-04 and could no longer be settled from
+  a 1099-K, because none was issued for 2025 — see the bullet above. Julia settled it by ruling.)*
+- ⛔ **SUPERSEDED 2026-09-01 — kept only as the record of what was believed.** From 2026-08-04 this file said *"any Turo income is the company's, not an owner's personally"* (Lilian's statement, basis never recorded). **Julia ruled the opposite on 2026-09-01 — see the bullet above.** Whether the account produced income at all is **answered for 2025** — the platform account is **closed** and its 2025 earnings report / 1099-K have not been obtained (§4). **Not yet checked** whether Turo payouts appear in the Chase feed or in QuickBooks, so don't conclude anything in either direction until someone looks — and note that company income can still have been paid into a personal account (a distribution), so absence from the Chase feed would not disprove company ownership.
 - **A QuickBooks primary admin who has lost the phone on the account cannot hand the role over in-product.** The transfer fires a verification code to that phone, so it dead-ends. What support tells you to do instead is an **identity check**: change the phone on the account, then the **current primary admin scans a QR code and uploads a photo of his ID** — a step it appears only he can do. **Treat this as the route support gave us, not a proven fix: as of 2026-08-06 no handover had completed this way**, and "the firm can't do it for him" is read from support's instructions rather than tested. Budget for the client's own delay _(this client, 2026-08-06 — §3)_.
 - **Adding a second QuickBooks user can force a plan upgrade.** This client's plan allowed only one user, so a second user meant paying for a bigger plan. When the upgrade exists only to carry out a handover, **write the downgrade down as a task** — it is the step that gets forgotten once the visible problem is solved _(2026-08-06 — §3)_.
 - Check- and cash-heavy business; many Zelle payments to subcontractors (W-9 / 1099 tracking matters).
@@ -226,12 +302,18 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   surfaced in the 2026-07-22 review meeting (possibly the owner's personal
   account, distinct from the single known Chase business feed) — unresolved,
   needs client confirmation *(Ping, low-confidence/garbled transcript)*.
-- **Reviewer watch — possible personal (Turo) expenses in company books:**
-  ~$16–17K in the "Vehicle repairs & supplies" account for FY2025 may include
-  the owner's **personal Turo** (car-rental app) activity (e.g. a personal
-  Audi) rather than company costs; pending access to Turo's earnings/1099
-  report before any reclassification *(Ping meeting "Ecoorganic tax prep,"
-  2026-07-23 — legible, direct transcript)*.
+- ⚠️ **Reviewer watch — German-marque vehicle spend.** This file used to carry **a dollar figure** for
+  the `Vehicle repairs & supplies` account in FY2025, which the two-data-homes rule does not allow
+  here; it has been removed, and the figures live in the working paper. ⚠️ **A session then called that
+  old figure an ERROR. That was itself wrong and is withdrawn** — the comparison it used ignored a
+  year-end reclassification that had already reduced the account, and the old figure is in fact close
+  to the **whole auto block**. 🔑 **What is true is narrower: the SCOPE of the old figure was never
+  recorded**, so nobody can say which accounts it covered. ✅ **What stands is the shape of the point:**
+  the Audi/BMW/European-parts spend is **spread across several auto accounts rather than concentrated
+  in one**, and the capitalised fleet is two trucks and a forklift — so *whose German cars are these
+  and what were they used for?*
+  Figures live in the return's working paper, never here. *(Original flag: Ping meeting "Ecoorganic
+  tax prep", 2026-07-23 — legible, direct transcript.)*
 - A recurring-expense watchlist for this client exists in Drive but is
   currently **PAUSED** (link in §7).
 - A prior bookkeeper (no longer on this engagement) sent monthly financials
@@ -421,7 +503,184 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 - 2026-08-26 — **Two pieces of work deliberately DEFERRED until the cleanup is finished (Lilian).** ① **The `Software` ↔ `Dues & subscriptions` line is unclear and the two overlap** — her read, and the history confirms it: one platform is split across both accounts, ordinary SaaS sits in both, and the only unambiguous *dues* item (a trade-association membership) shares an account with SaaS charges. A **third** account is entangled — payment-processor fees are in `Software` although a dedicated fees account exists. 🔑 **She asked Julia this same question at the 2026-07-22 review and Julia answered it — the answer was never written down.** Julia's line: **`Software` = the applications you actually use for work; `Dues & subscriptions` = memberships and other monthly payments that are not a subscription to software you work in.** The account came from memberships historically; nowadays almost everything bills monthly, which is why it blurs — and she said plainly that *"they're very close."* So the open question is narrower than it looks: **adopt Julia's line as a written rule, or merge the accounts.** ⚠️ **A misreading is corrected in §5 in the same pass** — the note that charges were "consolidated into a single account" was Lilian describing the FIRM's usual habit, not this client's state. ② **Renumber the chart of accounts** to the firm's number-prefix grammar, which this runbook already documents — *"la secuencia de números que ya conoces"*. **This confirms the sequencing the SOP already stated** (classify first, restructure second) rather than changing it, and puts a trigger on the second half: when the backlog is cleared, renumber. Both are **SOP decisions rows 14 and 15**, status *To study* — parked on purpose, because settling either means reclassifying history and the backlog has to stop moving first. _(Worked by Lilian.)_
 
+- 2026-08-31 — 🔴 **PRE-RETURN REVIEW for the FY2025 Form 1120-S (phase 1 of preparing it). Verdict:
+  BLOCKED — the return was NOT prepared.** Lilian asked for the return; the review ran first, as it
+  now does on every preparation. **Eight of ten sources were READ** — source 8 is `N/A` because an entity return has no organizer, which
+  is a complete answer rather than a gap, and **the tenth, the 2024 filed return, could not be opened** — see the outstanding item below. **What it found, worst first:**
+  ① **no payroll in 2025 despite hiring in September**, with a Connecticut withholding account that
+  appears never to have been filed on; ② **distributions with no salary, one pooled capital account
+  for two shareholders, and no prior-year Form 7203**, so neither K-1 nor either basis form can be
+  built — and the firm's netting policy fails its own first gate for this year; ③ **no depreciation
+  anywhere in the books** and no asset register held; ④ **Turo still unanswered after 27 days** *(✅ answered the next day — see the 2026-09-01 entries)*, and
+  it turns out to be a cost as well as an income; ⑤ **the 2024 return unread**. Also surfaced: a
+  meals balance far above what the firm's own policy would leave *(and 2025 is a closed book year, so
+  the policy was never applied to it — a decision for Lilian/Julia)*; **at least thirteen payees over
+  the 1099 threshold with no form on file**, two of which are not 1099-NEC questions at all (rent, and
+  an international remittance booked as consulting); two of the five 1099s on file matching **no 2025
+  payment**; two negative cash balances; three direct postings to parent accounts; and a duplicate
+  vendor record. **Six questions were drafted for the client in Russian.** ⛔ **Every figure is in the
+  working paper, not here:**
+  [`projects/tax-returns/ecoorganic-usa-llc/2025-form-1120s.md`](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md).
+  ✅ **Two things this run CLOSED:** the extension question *(filed, federal and state — the deadline
+  is 2026-09-15)*, and where the prior returns live *(both in Double; never ask the client)*.
+  _(Worked by Lilian.)_
+
+- 2026-09-01 — ✅ **THE TURO ANSWER ARRIVED — and it moved the 2025 return forward by one blocker
+  while making a different question harder (Lilian).** Lilian supplied the email Turo Executive
+  Support sent the client: the **full 2025 host-earnings breakdown**, and the statement that **no Form
+  1099-K was issued for 2025**. ⚠️ **This was genuinely new to the repo** — every Turo record here
+  stopped on 2026-08-04, and a session on 2026-08-31 had searched Gmail unbounded and found nothing.
+  **What the session then established from the books, three independent ways** (a ledger search on
+  Turo across 2025, the entire `Sales` account, and income by customer): 🔴 **not one dollar of that
+  income is in the 2025 books.** The only Turo activity in QuickBooks is a run of card charges reading
+  `TURO INC.* TRIP …` posted to `Taxi or shared rides` — **the company renting cars as a guest**, the
+  opposite side of the platform from host earnings. `Sales` is 28 transactions, every one an
+  insulation invoice, receipt or job deposit; income by customer is 18 customers, all insulation.
+  🔑 **So the blocker changed shape rather than closing:** it is no longer *"we are waiting on a
+  document"* — it is **one question, answerable today: is the Turo account the LLC's or Artem's
+  personally?** That single fact decides whether the income belongs on the company's return **and**
+  whether the German-marque vehicle costs in the company's auto accounts are a business expense or an
+  owner distribution. 🔴 **And the corroboration the firm had planned for it is gone permanently** —
+  the plan was to read the name and TIN on the 1099-K, and no 1099-K exists. **Also found while
+  looking:** income by customer does not tie to `Sales`, because several deposits were posted straight
+  to `Sales` carrying a **vendor** dimension instead of a customer — none of them Turo, checked rather
+  than assumed. Figures are in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md), never here. _(Worked by Lilian.)_
+
+- 2026-09-01 — ⚖️ **JULIA RULED: ALL Turo activity — income AND expenses — is ARTEM'S, so it goes on
+  his individual return, not the company's** _(relayed by Lilian)_. Lilian is reclassifying the Turo
+  costs in the company's books as **owner distributions**, and asked what else must move. **What the
+  ledger review found, and the first item changes the plan:**
+  🛑 ① **PART OF IT IS ALREADY DONE.** A year-end adjusting journal entry dated 2025-12-31 and
+  labelled **`2025-ADJ`** *(one of only two journal entries in all of 2025)* has **already moved a
+  substantial block of vehicle costs to `Owner's distribution`** — the whole of the Hyundai vehicle
+  finance payments, plus a large slice of `Vehicles repair, supplies and others`, plus an
+  `Opening Balance Equity` amount. **Reclassifying those again double-counts the distribution.**
+  **Read that entry before touching anything.** It also explains why the P&L's vehicle-repair figure
+  looks modest: it is already net of that removal.
+  ② **The real "what else" is not called Turo.** It is the **German-marque spend** still sitting in
+  `Vehicles repair, supplies and others` — FCP Euro, UroTuning, Audi Greenwich, Audi Fairfield,
+  **Audi Jacksonville and Audi North Miami (Florida)**, Audi Parts Store, BMW Service Miami, and a
+  **vehicle wrap**. 🔑 **The Florida dealers are the strongest indicator** for a Connecticut contractor — an indicator, not an established fact.
+  ③ ⛔ **In the same account and NOT Turo:** the **H.O. Penn** charges are a **Caterpillar** dealer —
+  the forklift. Autozone / NAPA / Valvoline / tyres and the Zelle payments to mechanics need
+  per-item judgement, because the vendor name does not say which vehicle.
+  ④ **`Taxi or shared rides` also holds Uber, Metro-North, OMNY and a trailer rental — none of those
+  moves.** ⚠️ The Turo rows carry heavy rebills and credits, so the vendor total and the account
+  detail do **not** agree; tie it out in QuickBooks before booking a reclass.
+  ⑤ ✅ **The fixed assets are clean:** the capitalised fleet is two trucks and a forklift — **no Audi
+  or BMW is on the balance sheet**, so no asset comes off and no depreciation unwinds.
+  ⑥ ✅ **Nothing to remove on the income side** — **no Turo income was FOUND** under the vendor name
+  `Turo`, in the `Sales` account, in income-by-customer, or in any other income account, for 2025.
+  ⚠️ **That is what four searches show, not a claim about the world.**
+  ⚠️ **Still unexamined line by line:** fuel, auto insurance, tolls, parking and car wash — plus two
+  vendors whose account is unknown, a vehicle-registration renewal and **a salvage-auction charge**,
+  which is a vehicle purchase-or-disposal signal.
+  🔑 **And a rule worth keeping, from a PARALLEL session on a different Turo client the same day:**
+  Turo **reimbursements** *(what guests repay for fuel, tolls, tickets)* are, in Turo's own words,
+  **"neither gross earnings nor deductible expenses"** — so they stay out of income **and** the
+  reimbursed part must come out of the fuel expense, or the same fuel is deducted twice.
+  ⛔ **This corrected an earlier statement in this matter that reimbursements were income.**
+  ⚠️ **One consequence for Julia, not for a preparer:** the 2025 P&L already went to the
+  workers'-comp / GL premium auditor in mid-2026, so changing 2025 changes a statement a third party
+  holds. Detail and figures in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D. _(Worked by Lilian.)_
+
+- 2026-09-01 — 🚗 **THE CLIENT NAMED THE TURO CARS, and it tied the books to the vehicles (Julia).**
+  Julia asked Artem by text which cars were on Turo in 2025. **A Hyundai Santa Fe, an Audi A6 — and,
+  a couple of times, a FRIEND's Hyundai Kona.** She also told Lilian she had been highlighting the car
+  expenses in a **spreadsheet during the review** *(almost certainly the 2025 P&L review workbook in
+  Drive, 2026-07-23 — **not opened**; a firm working paper that is not a filed return needs her or
+  Julia's say-so)*, and she has asked Artem to get Turo's answer **by email with a per-car breakdown**,
+  as audit backup. ✅ **That request is the right one** — it is what splits the earnings across cars.
+  ✅ **What it settles:** the **Santa Fe is the Hyundai Motor Finance vehicle**, and its 2025 payments
+  reconcile **exactly** to the amount the year-end `2025-ADJ` entry already moved to owner
+  distributions — so that half of the reclassification is confirmed by the client rather than inferred
+  from a vendor name. It also explains the posting-to-a-parent-account defect this file recorded: the
+  Hyundai finance was charged to the `Auto Expenses` parent all year and the year-end entry removed it.
+  🔴 **Three things it CREATES, none of them visible before:**
+  ① **the Kona is not his** — earnings on a car he does not own ran through his Turo account, so his
+  1040 needs to know what he received for it, what he paid the friend, and whether that payment owed a
+  **Form 1099-NEC**; he cannot depreciate it either;
+  ② **the Hyundai finance runs in TWO names** — Artem's for the March payments *(two on the same day,
+  different amounts, which looks like two finance accounts)* and **Ishkhan's** from April on. 🔑 **This
+  is the first hard evidence toward splitting the pooled owner-distribution account between the two
+  2025 shareholders**, which is the blocker the K-1s and both Forms 7203 wait on. ⚠️ **Evidence, not
+  proof** — the name on an ACH is the loan holder, not necessarily who benefited. **And Ishkhan is the
+  owner who exited 2026-01-01**, so it lands in his final shareholder year;
+  ③ **a BMW is in the books and on neither list** — a Zelle-paid BMW service shop, while the Turo cars
+  are a Hyundai and an Audi. Either an independent European shop serviced the Audi, or there is a third
+  vehicle nobody has mentioned. ⛔ **Do not assume the benign reading.**
+  Figures in the [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
+  _(Worked by Lilian.)_
+
+- 2026-09-01 — 📗 **Julia's 2025 P&L review workbook READ, with Lilian's authorisation.** It is a
+  firm working paper rather than a filed return, so it needed her say-so; she gave it. **What it is:**
+  a transaction-by-transaction review of the whole 2025 P&L with a **traffic-light flag** per row —
+  red = likely personal or miscategorised, yellow = confirm/reclassify, green = fine or a refund —
+  plus the current account, vendor, date and a suggested action, and a summary by account.
+  ✅ **It confirms independently what this file had reached from the ledger**, including the year-end
+  adjusting entry, which it describes in the same terms and reads the same way: *"this confirms
+  significant personal-auto activity."* **So that entry was Julia's and deliberate.**
+  🔴 **And it carries the biggest finding on this return, which had surfaced nowhere else and is not
+  about vehicles at all: `Outside services` is DIRECT INSTALL LABOUR, and moving it into cost of
+  goods sold would drop the reported gross margin by more than twenty percentage points.** It does
+  **not** change net
+  income — it moves cost between COGS and operating expense — but it changes **Form 1125-A**, gross
+  profit, and every margin the client is ever shown. ⚠️ **A decision, not a computation**, and the
+  prior-year return is the authority on which convention this client already used — which is still
+  unread. ⚠️ **The workbook also says two large accounts are NOT yet scrubbed:** meals and hotels.
+  ⚠️ **One figure in it does not tie** to the P&L pulled six weeks later; the likely reading is
+  simply that transactions were posted in between, but it is **not established** — check before
+  either is used. Detail in the
+  [working paper](../../tax-returns/ecoorganic-usa-llc/2025-form-1120s.md) §6 blocker D.
+  _(Worked by Lilian.)_
+
+### Tax year 2025 — the review
+
+- **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
+  the client's — the unread 2024 return, and pulling the depreciation schedule.
+- **Questions put to the client (2026-08-31, drafted in Russian, formal):** ① did the people added to
+  Gusto in September 2025 actually work during 2025? ② if so, how were they paid? ③ how do the
+  owner-account movements split between the two owners, and in what percentage? ④ has anything
+  arrived from Turo? ⑤ what was the 2025 payment **to** Turo for? ⑥ which vehicles belong to the
+  company, and what were they used for? — **answers to be recorded here as they come in.**
+- **What the prior-year return established:** ⛔ **nothing — it was not opened.** ⚠️ Do not read this
+  as "the prior year is clean": it is an unexamined source, and §3's whole comparison rests on it.
+- ✅ **DECIDED 2026-09-01 by Julia:** all Turo activity — income and expenses — is **Artem's**, and
+  belongs on his individual return. The company's Turo-related costs become **owner distributions**.
+  ⚠️ **One edge the ruling does not obviously reach and that should be asked, not assumed:** the
+  company's card charges to Turo are the **guest** side — paying to *rent* a car — which is the
+  opposite of hosting. If any of those rentals were for a job, moving them to distributions throws
+  away a real deduction.
+- **Decisions left open, all four for Lilian or Julia:** whether the meals policy applies to the
+  closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
+  *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
+  not build it by hand)* · and what the unidentified `2025 ECOORGANICUSALLC_1.pdf` actually is.
+- **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
+
 ### Outstanding items (CI-only — never in the SOP)
+- 🔴 **THE 2024 FILED RETURN HAS NOT BEEN READ, AND FOUR FIGURES DEPEND ON IT** — opening AAA, the
+  depreciation schedule, whether 2024 ran contributions through Schedule M-2 line 3, and the mapping
+  conventions. The file **is** in Double (`Tax Return Filed > 2024 > ECOORGANICUSALLC.pdf`).
+  🛠️ **Why it failed, and it will fail again the same way:** `tools/redact-doc/redact.py` needs
+  `pypdf`, and **a cloud session whose network policy blocks PyPI and npm cannot install it** — both
+  returned `403` on 2026-08-31. ✅ **The fix is the environment, not the tool: re-run in a session
+  with package access.** ⛔ **Never open the PDF by another route** — that is the one thing the
+  redactor exists to prevent.
+- 🔴 **Settle the 2025 payroll question in Gusto and myconneCT** — did any payroll run, and has a
+  single CT-941 ever been filed? It gates the 1120-S and it is a live state matter in its own right
+  (six past-due or due-soon notices between 2026-01-27 and 2026-08-18 — roughly every six weeks, not quarterly — still unactioned).
+- 🔴 **Get the per-shareholder split of the 2025 owner-account movements from the client**, and each
+  owner's **Form 7203 from their own 2024 personal return** — that form is filed with the 1040, never
+  with the company's return, so the firm may simply not hold it. If it does not exist, opening basis
+  must be **reconstructed**, which is separate work and must be scoped, not absorbed.
+- 🔴 **TURO — the earnings answer is IN (2026-09-01); what is now blocking is ONE question: is the
+  Turo account the LLC's or Artem's personally?** ⛔ **Do not plan to settle it from a 1099-K — none
+  was issued for 2025, so the name-and-TIN route the firm was relying on does not exist.** Ask the
+  client, or get the account registration. **The same conversation should cover the payments the
+  company MADE to Turo, and which vehicles the company actually owns and used** — that answer decides
+  whether the German-marque vehicle costs are a business expense or an owner distribution.
 - ✅ **CLOSED 2026-08-26 — the largest 2026 labor payee is an individual subcontractor →
   `Contract labor`** (SOP decisions row 9). Kept as a note because of *how* it closed: the question
   had to be put **by name**, not by role. Asking by role is right for the repo and wrong for a
@@ -470,8 +729,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - [ ] **When and why did DRS move this client from QUARTERLY to MONTHLY sales-tax filing?** The
       change is visible in the filings from 10.2025 but is recorded nowhere (§4)
 - [ ] Fiscal year-end _(primary language answered 2026-08-04: Russian)_
-- [ ] Whether the Turo account produced income at all, and for which years _(whose account it is: answered 2026-08-04 — the company's, per Lilian)_
-- [ ] Whether a **1099-K was actually issued** for 2025
+- [x] Whether the Turo account produced income at all — **answered for 2025 on 2026-09-01: yes**, a
+      full host-earnings breakdown exists (figures in the working paper). **Other years remain
+      unknown.** 🔴 **Still open and now the live blocker: WHOSE account it is** — Lilian said the
+      company's on 2026-08-04, the basis was never recorded, and the 1099-K that would have
+      corroborated it does not exist (§5)
+- [x] Whether a **1099-K was actually issued** for 2025 — **answered 2026-09-01: NO**, per Turo
+      Executive Support direct to the client. ⚠️ **Consequence, not just an answer:** the firm's plan
+      to prove account ownership from the name/TIN on that form is dead — see §5
 - [x] Payroll — **answered 2026-08-08: applies, via Gusto** _(sales tax still pending; income tax answered 2026-08-04: 1120-S, prepared by the firm)_
 - [x] Business licenses / annual filings — **partial answer 2026-08-08: a Form 8822-B and a CT SOS filing were processed around Apr 2026 (§4); whether either recurs annually is unconfirmed**
 - [x] Where credentials live (Drive vault link) — **found, 2026-08-08** (§7)
