@@ -68,12 +68,17 @@
   2026-09-01** — *"Se llama Permit Cleaners, ponlo con nombre en el SOP."* Asked, answered,
   written down. **It is a ruling for this vendor in this runbook, not a new general licence**:
   the rule above still governs every other payee, here and in every other client's runbook.
-  _(Same shape as the Ecoorganic retail-chain permission of 2026-08-26 — she grants these one
-  at a time, and a session may rely on one that is written down, never widen it by reasoning.)_
-  **Where the name may travel:** this runbook, its Hub page, and the client's own Client
-  Intelligence file and index rows — the documents *about this client*. ⛔ **Not into a
-  firm-wide skill or a general procedure**, where a client's payee has no business being and
-  where the next reader would take it as the general rule loosening.
+  ⚠️ **Do NOT read the Ecoorganic permission of 2026-08-26 as the precedent — it is the
+  opposite category.** There she allowed a **class** (retail chains and platforms) and said in
+  the same breath that *the client's own payees stay by role*. Permit Cleaners **is** one of
+  the client's own payees, so this is the first time that half has been opened, for one payee,
+  by name, on request. **It carries no weight for any other payee or any other client.**
+  ⓘ **Where the name has been written, and why** — so the next session does not have to guess:
+  this runbook, the Hub page generated **from** it, and the client's own Client Intelligence
+  file (a separate standing rule requires what we are told about a client to be saved there).
+  It was deliberately kept out of the firm-wide skills and out of the general indexes. **That
+  containment is a session's caution, not something Lilian ruled** — she said *"ponlo con
+  nombre en el SOP"*. If it should appear more widely, or less, that is hers to say.
 
 ## Categorization rules
 
@@ -112,6 +117,11 @@ These override any QuickBooks auto-suggestion.
      be filled** — what the bookkeeper needs is *how it is categorized and what the expense
      is*, and that is all of it. So: **no expected count per period, no "one is missing"
      alarm** — the charge appears when the client and Permit Cleaners agree that it should.
+   - 🔁 **Tell the recurring-expense monitor, if this vendor ever reaches its watchlist.**
+     The firm runs a twice-monthly *recurring expense* check on this client that flags a
+     payment as missing or abnormal when its amount moves or it fails to appear — which is
+     exactly what this vendor does by design. It must be carried as **variable: no expected
+     amount, no expected frequency**, or every run raises a false alarm on it.
    - **The account:** in **this client's chart** `650.Legal & Professional Fees` **has no
      sub-accounts**, so it is the posting account itself — the firm-standard `650.1 Accountant`
      / `650.2 Legal` do not exist here, and the *parents never receive postings* rule (see
@@ -155,7 +165,7 @@ These override any QuickBooks auto-suggestion.
   **In this client's chart it has no sub-accounts**, so it is posted to directly.
 - **Parents never receive postings** — post to sub-accounts only. ✅ **This chart tells you
   which accounts those are**: a true parent carries the description
-  ***"THIS IS A PARENT CATEGORY, ONLY USE SUBACCOUNTS"*** (e.g. `660.Payroll Expenses` and
+  **"THIS IS A PARENT CATEGORY, ONLY USE SUBACCOUNTS"** (e.g. `660.Payroll Expenses` and
   `660.1 Officer Compensation`, both also locked). **An account with no children and no such
   note is a posting account** — don't infer a parent from the firm standard, which is the
   template every client is adapted from, not a description of any one client's chart.
@@ -176,10 +186,11 @@ These override any QuickBooks auto-suggestion.
    with no customer/project** (rule 2). ⛔ **There is no expected count and no expected
    amount** — both follow what the client agrees with that company, so a period holding more,
    fewer or none of these charges is **not, by itself, a finding**. What this item checks is
-   the **coding of the ones that are there**. ⓘ Two things it does *not* excuse: the period's
-   feeds still have to be complete (item 2), and the **year's total to this vendor is still
-   read against the 1099 threshold** (item 7) — that is a different question from expecting a
-   rhythm.
+   the **coding of the ones that are there** — so **run the vendor across the whole period and
+   read every charge**, don't stop at the first one you find: *how many* is unknowable, but
+   *each of them* is checkable. ⓘ Two things this does *not* excuse: the period's feeds still
+   have to be complete (item 2), and the **year's total to this vendor is still read against
+   the 1099 threshold** (item 7) — a different question from expecting a rhythm.
 5. **Owner-personal items sit in the equity sub-accounts**, not in expenses.
 6. **Payroll** — the Gusto debits (including any off-cycle run) are all accounted for.
 7. **1099 payees** — every vendor at **$2,000 or more** (**≥**, not over) has a W-9 recorded in Double.
@@ -193,10 +204,10 @@ These override any QuickBooks auto-suggestion.
 | **Name the vendor, or keep it by role?** → **RESOLVED 2026-09-01, Lilian: name it.** `Permit Cleaners`, in this runbook. A ruling for this vendor, not a general licence (see the 🔒 note) | Resolved |
 | **Which sub-account the charge posts to?** → **RESOLVED 2026-09-01, Lilian, from the client's own chart: `650.Legal & Professional Fees` has NO sub-accounts**, so it is posted to directly. The firm standard's `650.1` / `650.2` do not exist here | Resolved |
 | **How often is it charged, and how much?** → **CLOSED 2026-09-01, Lilian: deliberately not recorded.** Both follow what the client agrees with Permit Cleaners. The reviewer checks the coding, never the count | Resolved |
-| **Confirm the exact string `Permit Cleaners` against the QBO vendor list** before anyone relies on it as a search key. It arrived in a message, and Lilian's dictation is not always faithful; the checklist and the 1099 sweep are both keyed on it, so a wrong string makes both silently unrunnable | To verify |
+| **Confirm the exact string `Permit Cleaners` against the QBO vendor list** before anyone relies on it as a search key. It arrived in a message, and Lilian's dictation is not always faithful; the checklist and the 1099 sweep are both keyed on it, so a wrong string makes both silently unrunnable. **If it changes, it changes in three places**: this runbook, its Hub config (`build-hub.mjs`), and the client's Client Intelligence file | To verify |
 | **Lilian's sign-off on this runbook** — rules 1 and 2 are hers, and she settled the name and the account; the rest was assembled by a session and is unapproved. Header stays *In review* until she rules | Pending |
 | **The review cadence** — Double's property says quarterly, the client's own close tasks in Double have run monthly. Both recorded in the snapshot; Lilian settles it | Pending |
 | Does **Permit Cleaners** ever issue a **project-specific** invoice, outside the regular arrangement? If so it is a rule-1 cost and carries the project (rule 2, *to verify*) | To verify |
 | The **account an accountable-plan reimbursement posts to** is not recorded here | To verify |
 | Whether project-tagged costs are also marked **Billable** in QBO, or tagged for cost tracking only | To verify |
-| The rest of the monthly/quarterly close (feeds reconciled, reporting pack, sales-tax hand-off) is **not yet written** — this runbook is one round old | Pending |
+| The rest of the close (feeds reconciled, reporting pack, sales-tax hand-off) is **not yet written**. Two rounds with Lilian on 2026-09-01 settled the categorization rule and the account; the close process itself has not been worked yet | Pending |

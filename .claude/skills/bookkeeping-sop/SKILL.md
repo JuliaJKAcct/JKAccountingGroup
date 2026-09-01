@@ -229,12 +229,12 @@ runbook, adapt the specifics):
   subcontractors (1099 exposure).
 - **Parents never receive postings** — post to sub-accounts only. ⚠️ **But "is it a parent?"
   is a question about THIS CLIENT'S chart, never about the firm standard.**
-  the firm standard is the **template every client is adapted from**, not a description of any
+  The standard is the **template every client is adapted from**, not a description of any
   one of them: an account that is a parent there can be a plain **posting account** in a client's
   chart that never took those children. ⓘ **And check it in the right place** — the prose page
   [`chart-of-accounts-standard.md`](../../../projects/sops/chart-of-accounts-standard.md) carries
-  the ranges and the rules but **no account numbers at all**; the 125-account list, with the
-  `parent` flag on each, is `projects/sops/assets/S-Corp-COA-master.xlsx` and its derived
+  the ranges, the rules and a handful of illustrative codes, but **no per-account `parent` flag
+  and no `650` row**; the 125-account list, with the `parent` flag on each, is `projects/sops/assets/S-Corp-COA-master.xlsx` and its derived
   `projects/knowledge-hub/coa-standard.json`. **Look at the client's chart before you invoke this rule** — and check whether the
   chart says so itself: some of them carry the parent's marker in the account description
   (Masciave's reads *"THIS IS A PARENT CATEGORY, ONLY USE SUBACCOUNTS"*, and those accounts are
