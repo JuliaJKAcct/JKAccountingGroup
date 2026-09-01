@@ -164,10 +164,13 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - 🔴 **SETTLED 2026-09-01: THE COMPANY HAS EMPLOYEES ON PAPER AND HAS NEVER RUN A PAYROLL.** Earlier
   versions of this section asserted that it "runs payroll"; that was wrong, and the corrected reading
   is now evidenced rather than hedged.
-  - **Three individuals** — not the owners — were onboarded into **Gusto in September 2025**, each
-    approved through Gusto's own flow and each with a **first day of Monday 2025-09-15**, with **Form
-    I-9 requests issued the same day**. *(Names are in Gusto and in Julia's Gmail; they are kept out of
-    this file under the two-data-homes rule, and are recorded in the 2025 working paper.)*
+  - **Three individuals** — not the owners — completed **Gusto's onboarding flow in September 2025** and
+    were then left **awaiting the firm's approval**, each with a **first day of Monday 2025-09-15** and
+    **Form I-9 requests issued that day**. 🛑 **The approval was never given** — Gusto's own wording is
+    *"is now ready for your approval"*, and that missing step is the whole reason no payroll ran.
+    ⚠️ **"Onboarded" is not "worked"** — whether they turned up is unknown, and is the question below.
+    *(Names are in Gusto and in Julia's Gmail; they are kept out of this file under the two-data-homes
+    rule, and are recorded in the 2025 working paper.)*
   - ⛔ **No payroll was ever run.** The **only** `Gusto` movement in the entire 2025 ledger is the pair
     of **bank-account verification micro-amounts**, debited 2025-09-06 and reversed 2025-09-11, netting
     to zero. No payroll debit, no payroll-tax debit, no subscription fee. Gusto's own mail confirms it:
@@ -684,7 +687,8 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 
 ### Tax year 2025 — the review
 
-- **What gates the return:** the five blockers in the log entry above. Two of them are **ours**, not
+- **What gates the return:** the five blockers in the log entry above — **Turo is now settled, the
+  other four are not.** Two of them are **ours**, not
   the client's — the unread 2024 return, and pulling the depreciation schedule.
 - **Questions put to the client (2026-08-31, drafted in Russian, formal):** ① did the people added to
   Gusto in September 2025 actually work during 2025? ② if so, how were they paid? ③ how do the
@@ -703,10 +707,12 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   closed 2025 books · §179/bonus on the 2025 asset additions · the reasonable-compensation position
   *(run the [`reasonable-compensation`](../../../.claude/skills/reasonable-compensation/) skill — do
   not build it by hand)* · and what the unidentified `2025 ECOORGANICUSALLC_1.pdf` actually is.
-- ✅ **ANSWERED 2026-09-01 — questions ① and ② above.** The people added to Gusto were **three third
-  parties, not the owners**, each with a first day of 2025-09-15, and **no payroll was ever run**. See
-  the Payroll block in §4, which now carries the whole evidence chain. **What remains open is whether
-  they actually worked and how they were paid**, which only the client can answer.
+- ✅ **ANSWERED 2026-09-01 — questions ① and ② above, as far as the sources reach.** The people added
+  to Gusto were **three third parties, not the owners**, onboarded with a first day of 2025-09-15 and
+  **left awaiting an approval that never came**, so **no payroll ever ran through Gusto**. See the
+  Payroll block in §4, which carries the whole evidence chain. 🛑 **That answers the Gusto half only.**
+  **Whether they actually worked, and whether they were paid by some other route, is still open** —
+  the ledger can be searched by payee for transfers but not for cash, and only the client can settle it.
 - ✅ **THE VEHICLE-EXPENSE ANALYSIS WAS BUILT 2026-09-01**, at Lilian's request, so Julia can decide
   personal vs business — and because whatever leaves this return arrives on **Artem's Schedule C**. It
   rebuilds the vehicle repair/supplies account **charge by charge** and **reconciles exactly** to the

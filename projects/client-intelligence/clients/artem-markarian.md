@@ -127,7 +127,8 @@ the actual details.
 ### Outstanding items (CI-only — never in the SOP)
 
 - 🔴 **His 1040 cannot be completed until the company's FY2025 Form 1120-S is** — the K-1 comes from it,
-  and that return is **blocked** on four counts with a **2026-09-15** deadline.
+  and that return is **still blocked** — of the five things it was waiting on, Turo is settled and the
+  other four are not — with a **2026-09-15** deadline.
 - 🔴 **The per-car earnings breakdown from Turo** — requested 2026-09-01, not yet received.
 - 🔴 **Whose Turo account is it?** Not confirmed from the registration. With no 1099-K there is no
   name-and-TIN to read.
