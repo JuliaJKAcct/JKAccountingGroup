@@ -91,6 +91,7 @@ the raw material for that client's SOP.** Fill the ones that apply; mark the res
 - **Provider / frequency:** **Gusto AutoPilot**, plus a company-sponsored **401(k) plan through Human Interest**, onboarded January 2025 with at least one enrolled employee _(Gmail, 2026-08-22)_.
 - **Our role:** _(pending)_
 - **Process notes (→ future SOP):** An open/unresolved 2026-08 item: the day-to-day contact asked what to do about an employee's payroll/W-2 because a work-authorization renewal for a Ukrainian worker had not come through; a call was scheduled 2026-08-10 to discuss, but no outcome/resolution was found in any source searched.
+  ✏️ **Corrected 2026-09-01 by reading the thread itself:** the "Ukrainian worker" is **the owner himself** — his email of 2026-08-07 asks *"что делать с моей зарплатой и формой W2? Будем останавливать или пусть работает?"* ("what do we do about **my** salary and W-2 — stop it or let it run?"). So this is **the shareholder-employee's own payroll**, which is also the reasonable-compensation position on the 1120-S, not an ordinary staff question. A 2025 W-2 **was** issued to him, so the exposure is 2026 forward. **Still unresolved** as of 2026-09-01.
 
 ### Bookkeeping & monthly close
 - **Applies?** **Yes** _(Double client properties, 2026-08-11)_
@@ -126,6 +127,9 @@ watch-outs, one-off arrangements, history that affects the work.
 > about where it goes**; appending to the end means the team never sees it. The cap lives in
 > `clientCard()` — see the [render README's parsing contract](../../../.claude/skills/client-intelligence/render/README.md).
 
+- 🔑 **This company's 1120-S gates its owners' personal return.** The two portal contacts are the shareholder and his wife, and they have their own file: [`oleksiy-liudmyla-bereznyak.md`](./oleksiy-liudmyla-bereznyak.md). In 2024 the K-1 from this company was **the great majority of their 1040's total income**, so **the 1120-S must be prepared before their 1040 can be finished** — and they are **two separate requests**. _(2026-09-01.)_
+- 🔵 **The 2025 marketplace 1099-Ks are the COMPANY's, and they are large** — Amazon (3,285 transactions) and eBay (291), both issued to AXDIGITAL LLC under the company EIN, both filed by the client into the **personal** 1040 Drive folder. They belong on the 1120-S. ⚠️ Do not let them reach a Schedule C on the owners' return. _(Drive, 2026-09-01.)_
+- 🟡 **A third related party exists and it is foreign.** The shareholder also owns **100% of IT POINT LTD**, a Ukrainian wholesaler of machinery and electronic equipment. **AXDIGITAL sells electronics; IT POINT wholesales them** — and the 2024 personal return filed **Schedule M (transactions between the CFC and related persons)**. If goods or money move between the two companies, that is a **Subpart F** question on the owners' return and a related-party disclosure on this one. **Nothing in this file records any such flow — establish whether one exists.** _(2026-09-01.)_
 - Named in [`best-broker-realty.md`](./best-broker-realty.md) §5 as one of the entities in the **same owner-group** (the serial-entity owner).
 - **Assigned to Liudmyla Kazannik.** Her clients were absent from Client Intelligence entirely until 2026-08-11 — see §6.
 - Two Double portal contacts (both full access); one signs consistently as the business's "Project manager," the other is linked in Ping to a combined personal-return client record with the first — consistent with the operating pair being spouses/co-owners. _(Double + Ping, 2026-08-22)_
