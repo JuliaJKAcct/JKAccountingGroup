@@ -671,6 +671,55 @@ try:
 except UnicodeEncodeError:
     FAILURES.append("GLYPH · decoded output is not UTF-8 encodable — write_text would crash")
 
+# ── Two column collisions from one real return, needing OPPOSITE treatment ────
+#    Added 2026-09-01 after a real 102-page filed 1040 aborted at the guard with
+#    exit 4. Three runs survived redaction, in two shapes, and the reason one fix
+#    could not serve both is the lesson worth keeping:
+#
+#      · "NNN\nNN  NNNN"      — straddles a ROW BREAK, so it is the tail of one
+#                               row welded to the next. MASKED (safe direction).
+#      · "NNN        NN.NNNN" — a decimal fraction beside another column. An SSN
+#                               has no decimal in it, so the GUARD IGNORES it.
+#
+#    ⛔ The first attempt masked every wide-spaced unlabelled run instead. Two
+#    tests already in this file killed it, and both were right: it destroyed
+#    "125  40  1234" (a figure row), and it removed the guard's stop on the
+#    same-line shape — the one case where a human really does have to look.
+from redact import FIGURE_COLLISION  # noqa: E402
+
+must_hide("SSN straddling a row break", "Sch A .... 123\n45  6789 Line 7", "123\n45  6789")
+
+# …and the counter must move, or the rule could be deleted and this stay green.
+if redact("total .... 123\n45  6789 next")[1]["cross_row"] != 1:
+    FAILURES.append("CROSS-ROW · the mask fired without incrementing cross_row")
+
+# 🛑 The same-line shape must STILL reach the guard. This is the control the
+#    first attempt silently removed.
+if not redact("Dependents 123    45    6789 Line 7")[1]["leaks"]:
+    FAILURES.append("CROSS-ROW · a same-line wide-spaced run no longer trips the guard")
+if redact("Dependents 123    45    6789 Line 7")[1]["cross_row"]:
+    FAILURES.append("CROSS-ROW · a same-line run was masked instead of stopping the job")
+
+# A labelled or hyphenated SSN must still be counted as an SSN, not swept up by
+# the catch-all — otherwise the headline count silently empties out.
+if redact("SSN 123-45-6789")[1]["ssn_itin"] != 1:
+    FAILURES.append("CROSS-ROW · a hyphenated SSN was not counted under ssn_itin")
+
+# ── The guard's ONE exemption, pinned from both sides ─────────────────────────
+if not FIGURE_COLLISION.match("123        45.6789"):
+    FAILURES.append("GUARD · the figure-column collision shape is no longer exempt")
+for _identifier in ("123.45.6789", "123-45-6789", "123 45 6789", "123  45  6789"):
+    if FIGURE_COLLISION.match(_identifier):
+        FAILURES.append(f"GUARD · exemption swallowed a real SSN shape: {_identifier!r}")
+
+# The exemption must not become a hole: a document carrying the collision AND a
+# real SSN must still end up with the SSN masked and the collision not flagged.
+_out, _counts = redact("Rate 123        45.6789 pct\nDependent SSN 987    65    4321 child")
+if "987    65    4321" in _out:
+    FAILURES.append("GUARD · a real SSN survived beside an exempt figure collision")
+if _counts["leaks"]:
+    FAILURES.append("GUARD · the figure collision still tripped the guard")
+
 if FAILURES:
     print(f"FAILED — {len(FAILURES)} problem(s):")
     for f in FAILURES:

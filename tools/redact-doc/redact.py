@@ -315,6 +315,34 @@ SSN_LABELLED = re.compile(
     re.IGNORECASE,
 )
 
+# The loose shape with a LINE BREAK inside it — the three digit groups are not
+# on the same row. `extraction_mode="layout"` emits a newline only where the text
+# row changes, so this run is the tail of one row welded to the head of the next:
+# on a dot-leader form, an amount ending "..... 123" followed by the next line's
+# figures. A filled-in SSN sits in three horizontally-adjacent boxes on ONE row.
+#
+# 🔑 It is MASKED, not exempted — which is the opposite of FIGURE_COLLISION below,
+#    and the difference is the whole point. Masking fails in the safe direction
+#    (worst case one amount at the end of a dot-leader row comes back as an
+#    [SSN-n] tag, and the count below says it happened), while an exemption would
+#    hand a real identifier straight through. The same-line shape stays with the
+#    guard, where a human decides — see the note there.
+SSN_CROSS_ROW = re.compile(r"(?<!\d)\d{3}[-\s.]{1,10}\d{2}[-\s.]{1,10}\d{4}(?!\d)")
+
+# A figure column that collides with the loose identifier shape and CANNOT be an
+# identifier: wide whitespace, then a decimal fraction. An SSN written with dots
+# uses a dot for BOTH separators ("123.45.6789"); a run whose first separator is
+# whitespace and whose second is a decimal point is a NUMBER — a rate, a
+# percentage, an allocation factor — sitting beside another column. Layout
+# extraction pads between columns, and a glyph-decoded page pads unpredictably,
+# so this collision is routine on a return with any rate table on it.
+#
+# 🛑 This is the ONLY shape the guard is allowed to ignore, and it is ignored
+#    because it is provably not an identifier — never to get a job done. Adding
+#    a second exemption here needs the same standard of proof: name the shape,
+#    show why no identifier can take it, and pin it with a test below.
+FIGURE_COLLISION = re.compile(r"\A\d{3}\s{2,}\d{2}\.\d{4}\Z")
+
 # A bare run of 9+ digits. On a return this is an account number, a routing
 # number, or an unformatted SSN. Never an EIN — that was claimed above.
 LONG_DIGITS = re.compile(r"(?<!\d)\d{9,}(?!\d)")
@@ -396,7 +424,7 @@ def redact(text: str) -> tuple[str, dict]:
     text = normalise(text)
     counts: dict = {"ssn_itin": 0, "long_digits": 0, "dob": 0, "licence": 0,
                     "account": 0, "street": 0, "ein_kept": 0, "glyph": 0,
-                    "leaks": []}
+                    "cross_row": 0, "leaks": []}
 
     # Undecodable glyph names go FIRST, before any other rule can see them. They
     # are unreadable by construction, so they are masked rather than judged —
@@ -472,9 +500,20 @@ def redact(text: str) -> tuple[str, dict]:
     text = LICENCE_CONTEXT.sub(_licence, text)
     text = ACCOUNT_CONTEXT.sub(_account, text)
     text = STREET.sub(_street, text)
+    def _cross_row(m: re.Match) -> str:
+        # Only a run STRADDLING a row break. A same-line run is left for the
+        # guard to stop on, because there a human genuinely has to decide.
+        if "\n" not in m.group(0):
+            return m.group(0)
+        counts["cross_row"] += 1
+        return f"[{tag_ssn(m.group(0))}]"
+
     text = SSN_LABELLED.sub(_ssn_labelled, text)
     text = SSN.sub(_ssn, text)
     text = LONG_DIGITS.sub(_long, text)
+    # Last, so a labelled, tightly-spaced or 9-digit run has already been masked
+    # as what it actually is before this catch-all sees anything.
+    text = SSN_CROSS_ROW.sub(_cross_row, text)
 
     # ⓘ The SSN_LOOSE half is the live one — it hunts the wide-spaced shape the
     #   redactor masks only when labelled. The LONG_DIGITS half is **unreachable
@@ -485,7 +524,11 @@ def redact(text: str) -> tuple[str, dict]:
     #   because it costs nothing and the ordering above has been got wrong once
     #   already. **Its silence is not evidence of anything** — do not read a
     #   clean guard as confirmation that the digit rules ran.
-    counts["leaks"] = SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
+    counts["leaks"] = [
+        run
+        for run in SSN_LOOSE.findall(text) + LONG_DIGITS.findall(text)
+        if not FIGURE_COLLISION.match(run)
+    ]
 
     text = re.sub(r"\x00EIN(\d+)\x00", lambda m: eins[int(m.group(1))], text)
     return text, counts
@@ -704,6 +747,13 @@ def _run(src: Path, dst: Path) -> int:
         f"{counts['dob']} dates of birth · "
         f"{counts['licence']} licence/state ID"
     )
+    if counts["cross_row"]:
+        print(
+            f"  ⚠️  {counts['cross_row']} identifier-shaped run(s) STRADDLING A ROW BREAK were\n"
+            "      masked. These are usually two rows of a figure column welded together by\n"
+            "      layout extraction, not identifiers — so if an amount you expected is\n"
+            "      missing, look for an [SSN-n] tag where it should have been."
+        )
     print(f"  kept:   {counts['ein_kept']} EIN (public — Lilian, 2026-08-11)")
     print("  names are NOT masked, by the same ruling.")
     return 0
