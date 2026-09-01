@@ -79,7 +79,11 @@ shape is what makes the visual view work automatically:
 - **`## Chart of accounts conventions`** — bullets, and **include the number-range grammar
   line** (`… 100s assets · 200s liabilities · 300s equity · 400s income · 500s COGS · 600s
   opex · 800s other income · 901 depreciation · 997/998/999 triage`). The Hub lifts that
-  line into a colored **range strip**.
+  line into a colored **range strip** — **any phrasing works**, because the parser reads from the
+  first range token and takes only the range words. *(Fixed 2026-09-01: it used to strip a fixed
+  `…name — ` prefix that only Ecoorganic's phrasing had, so every other runbook silently lost
+  `100s assets`, and iKids' trailing "See the firm standard, [link]" rode into the last chip as
+  raw markdown and a repo path — in a view where repo links are forbidden.)*
 - **`## Monthly review checklist (what the reviewer verifies)`** — a **numbered list**; the
   Hub renders **check items**.
 - **`## Open decisions log`** — a Markdown **table with a `Status` column**. The Hub renders
@@ -332,10 +336,15 @@ generalizing that one the same way is the remaining next step.
 *every* section generically (`closeSectionBody` already dispatches rule cards, the checklist, the
 decisions table and the number-range strip), so a **new rules-shape client is also just a `.md` +
 a `close` config**, with the ribbon carrying the client's costing **decision** instead of a close.
-Masciave is the first (2026-09-01). Two knobs exist for it: **`kind`** (the print cover's subtitle)
-and **`flowTitle` / `flowLede`**, which override the ribbon's hard-coded *"How each month runs · The
+Masciave is the first (2026-09-01). The knobs: **`kind`** (the print cover's subtitle) and
+**`flowTitle` / `flowLede`**, which override the ribbon's hard-coded *"How each month runs · The
 same pass every month"* — **use them for any client that is not monthly**, or the team page tells a
-quarterly client's bookkeeper something false.
+quarterly client's bookkeeper something false. Both accept **`''`** to mean *omit this*, and the
+print book's contents line is **derived from `flowTitle`** so the PDF cannot keep saying "the
+monthly flow" while the screen says something else (`flowToc` overrides the derived wording).
+🔵 **The reader's status chip, the card's pill, the print cover and the `.txt` export all read the
+`.md`'s own `**Status:**` header** — so a runbook marked *In review* cannot circulate as approved
+procedure. That is what makes shipping an unapproved runbook honest rather than misleading.
 Do all Hub work through the
 [`knowledge-hub`](../knowledge-hub/) skill and its **verify-before-publish gate**.
 

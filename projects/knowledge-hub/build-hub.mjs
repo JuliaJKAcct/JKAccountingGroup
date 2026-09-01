@@ -258,8 +258,12 @@ function mdToAtlas(md){
   return html.join('\n');
 }
 // masthead meta chips for a reader doc
-function readerMeta(owner, updated){
-  return '<span class="chipm live"><span class="dot"></span>Status:&nbsp;<b>Active</b></span>'
+// `status` comes from the document's own `**Status:**` header, so a runbook that says it is
+// in review cannot be shown as live three lines under a lede that says otherwise. Defaults to
+// Active for the readers that don't pass it.
+function readerMeta(owner, updated, status){
+  const st = (status || 'Active').trim();
+  return '<span class="chipm' + (/^active/i.test(st) ? ' live' : '') + '"><span class="dot"></span>Status:&nbsp;<b>' + esc(st) + '</b></span>'
     + (owner ? '<span class="chipm"><span class="dot"></span>Owner:&nbsp;<b>'+esc(owner)+'</b></span>' : '')
     + (updated ? '<span class="chipm"><span class="dot"></span>Updated:&nbsp;<b>'+esc(updated)+'</b></span>' : '');
 }
@@ -595,10 +599,18 @@ function ecoCoaConventions(body){
   const gi = lines.findIndex((l) => /100s?\s+assets/i.test(l));
   let strip = '';
   if(gi !== -1){
-    const seg = lines[gi].replace(/^[\s\S]*?name\*?\s*[—-]\s*/i, '');
+    // Read the ranges out of the sentence WHATEVER prose wraps them: drop the emphasis marks,
+    // start at the first range token, and take only the range words out of each chunk. The old
+    // version stripped a fixed `…name — ` prefix, which only Ecoorganic's phrasing had: every
+    // other runbook silently lost its first range, and iKids' trailing "See the firm standard,
+    // [chart-of-accounts-standard.md](…)" rode into the last chip as raw markdown and a repo
+    // path — in a team view where repo links are forbidden.
+    let seg = lines[gi].replace(/\*+/g, '');
+    const start = seg.search(/\b\d{3}(?:s|\/\d{3})*\s+[A-Za-z]/);
+    if(start > 0) seg = seg.slice(start);
     const chips = seg.split('·').map((s) => s.trim()).filter(Boolean).map((s) => {
-      const m = s.match(/^([\d/]+s?)\s+(.*)$/);
-      return m ? `<span class="rgchip"><b>${esc(m[1])}</b> ${esc(m[2].replace(/\.$/, ''))}</span>` : '';
+      const m = s.match(/^([\d/]+s?)\s+([A-Za-z][A-Za-z &/-]*)/);
+      return m ? `<span class="rgchip"><b>${esc(m[1])}</b> ${esc(m[2].trim())}</span>` : '';
     }).join('');
     strip = `<p class="rglabel">Number-prefix grammar (the target)</p><div class="rgstrip">${chips}</div>`;
     lines.splice(gi, 1);
@@ -748,8 +760,10 @@ function closeFlow(cfg){
   const c = cfg || {};
   const li = (c.flow || []).map((s, i) => `<li class="estep${s.k ? ' ' + s.k : ''}"><span class="estep-n">${i + 1}</span>`
     + `<span class="estep-b"><span class="estep-t">${s.t}</span><span class="estep-d">${s.d}</span></span></li>`).join('');
-  return `<div class="shead"><span class="schip">✦</span><h2>${esc(c.flowTitle || 'How each month runs')}</h2></div>`
-    + `<p class="slede">${c.flowLede != null ? c.flowLede : 'The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.'}</p>`
+  const title = c.flowTitle != null ? c.flowTitle : 'How each month runs';
+  const lede = c.flowLede != null ? c.flowLede : 'The same pass every month. The last move is a hard gate: the triage / Uncategorized accounts must read <b>$0</b> before you close.';
+  return (title ? `<div class="shead"><span class="schip">✦</span><h2>${esc(title)}</h2></div>` : '')
+    + (lede ? `<p class="slede">${lede}</p>` : '')
     + `<ol class="eflow">${li}</ol>`;
 }
 function closeSectionBody(title, body){
@@ -761,16 +775,17 @@ function closeSectionBody(title, body){
   if(/reference material/i.test(title)) return closeResList(body);
   return mdToAtlas(body);
 }
-// `flowToc` names the ribbon on the CONTENTS page. It defaults to the monthly wording, so a
-// client that overrode flowTitle must override this too — otherwise the screen says "how each
-// charge is decided" and the PDF the bookkeeper is handed still says "the monthly flow".
-function closePrintFrontMatter(name, sub, sections, owner, updated, flowToc){
+// `flowToc` names the ribbon on the CONTENTS page. It is DERIVED from `flowTitle` by the
+// caller, so overriding the heading cannot leave the printed manual saying "the monthly flow"
+// while the screen says something else; pass `close.flowToc` only to word it differently.
+// `status` is the document's own, so a saved PDF cannot circulate as approved when it is not.
+function closePrintFrontMatter(name, sub, sections, owner, updated, flowToc, status){
   const toc = sections.map((s, i) => `<li><span class="ptoc-n">${i + 1}</span><span class="ptoc-t">${esc(s.title)}</span></li>`).join('');
   return `<div class="pbook pcover">${JK_MARK}`
     + `<p class="pc-kick">Bookkeeping Runbook · Per Client</p>`
     + `<h1 class="pc-h">${esc(name)}</h1>`
     + `<p class="pc-sub">${esc(sub)}</p>`
-    + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}<br>JK Accounting Group — internal reference</p></div>`
+    + `<p class="pc-meta">Owner ${esc(owner)}${updated ? ' · Updated ' + esc(updated) : ''}${status ? ' · Status ' + esc(status) : ''}<br>JK Accounting Group — internal reference</p></div>`
     + `<div class="pbook ptoc"><h2>Contents</h2>`
     + `<ol class="ptoc-l"><li><span class="ptoc-n">·</span><span class="ptoc-t">The one thing &amp; ${esc(flowToc || 'the monthly flow')}</span></li>${toc}</ol></div>`;
 }
@@ -779,17 +794,23 @@ function closePrintFrontMatter(name, sub, sections, owner, updated, flowToc){
 function closeProcessReader(cfg, md, owner, updated){
   const { sections } = mdSections(md);   // preamble (H1 + provenance blockquote) dropped
   const secs = sections.map((s, i) => acc(String(i + 1), esc(s.title), '', closeSectionBody(s.title, s.body), /close process/i.test(s.title))).join('');
-  const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(ecoRunbookText(md));
+  // The provenance blockquote is stripped from every team-facing surface, so an unapproved
+  // runbook would otherwise read as settled procedure on screen, in the PDF and in the .txt.
+  const status = headerVal(md, 'Status') || 'Active';
+  const flowToc = cfg.flowToc != null ? cfg.flowToc
+    : (cfg.flowTitle ? cfg.flowTitle.charAt(0).toLowerCase() + cfg.flowTitle.slice(1) : undefined);
+  const runbookHref = 'data:text/plain;charset=utf-8,' + encodeURIComponent(
+    (/^active/i.test(status) ? '' : `STATUS: ${status}\n\n`) + ecoRunbookText(md));
   const actions = `<div class="eco-actions">`
     + `<button class="dlbtn big" type="button" data-print>${IC.dl}Save as PDF manual</button>`
     + `<a class="dlbtn ghost" download="${esc(cfg.dl || 'bookkeeping-runbook')}.txt" href="${runbookHref}">${IC.doc}Download as text</a>`
     + `<span class="eco-actions-note" data-print-note>Opens your browser’s print dialog — save the full runbook (cover, contents, every step) as a PDF.</span></div>`;
-  return closePrintFrontMatter(cfg.name, cfg.kind || 'Monthly Bookkeeping & Close', sections, owner, updated, cfg.flowToc)
+  return closePrintFrontMatter(cfg.name, cfg.kind || 'Monthly Bookkeeping & Close', sections, owner, updated, flowToc, status)
     + `<section class="mast"><div class="in">`
     + `<p class="kick">Bookkeeping runbook · per client</p>`
     + `<h1>${esc(cfg.name)}<span class="loc">${esc(cfg.loc)}</span></h1>`
     + `<p class="lede">${cfg.lede}</p>`
-    + `<div class="meta">${readerMeta(owner, updated)}</div></div></section>`
+    + `<div class="meta">${readerMeta(owner, updated, status)}</div></div></section>`
     + `<div class="page">`
     + actions
     + closeSignature(cfg.oneRule)
@@ -1526,16 +1547,15 @@ const SOP_GROUPS = [
           // is the half the team actually reads. Change a rule there → change it here in the
           // same pass. Deliberately carries NO threshold figures or account codes: those move,
           // and a stale number in a chip is worse than a stale paragraph.
-          oneRule: "A cost incurred for <b>one</b> job carries that job’s project tag — that is the only project-level data these books hold, because there is no timesheet integration. The <b>recurring permit-expediting retainer is the exception</b>: it is one regular fee that buys work across <b>several</b> clients at once, so it goes to <b>Legal and Professional Fees</b> with the <b>project field empty</b>. Empty is the accurate answer, not a missing one.",
+          oneRule: "A cost incurred for <b>one</b> job carries that job’s project tag — that is the only project-level data these books hold, because there is no timesheet integration. The <b>recurring permit-expediting retainer is the exception</b>: it is one regular fee that buys work across <b>several</b> clients at once, so it goes to <b>Legal &amp; Professional Fees</b> — the sub-account this client’s chart uses for it, never the parent — with the <b>project field empty</b>. Empty is the accurate answer, not a missing one.",
           flowTitle: 'How each charge is decided',
-          flowToc: 'how each charge is decided',
-          flowLede: 'The first four questions are asked of <b>every charge</b>, in this order; the last two are run once over the whole period. Bookkeeping here runs on a <b>quarterly</b> cycle rather than monthly (Double’s property — <b>still to confirm</b>, see the open decisions), so a period holds several of every recurring charge: <b>count them, don’t find one</b>. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
+          flowLede: 'The first four questions are asked of <b>every charge</b>, in this order — the owner question comes <b>before</b> the project question, because a reimbursement is not a job cost. The last two are period checks. ⚠️ <b>The review cadence is unsettled</b>: Double’s property says quarterly, the client’s own close tasks have run monthly (see the open decisions), so <b>work the period you are given and count what it should contain</b> rather than assuming a number. The last move is a hard gate: triage must read <b>$0</b> before the period is closed.',
           flow: [
             { t: 'Name the payee', d: 'Every charge gets a vendor — except owner moves &amp; transfers' },
+            { t: 'Owner-bound?', d: 'Accountable-plan reimbursement is NOT equity · otherwise in = contribution, out = distribution' },
             { t: 'One job?', d: 'Incurred for one project → tag that project' },
             { t: 'The retainer', d: 'Spans clients → Legal &amp; Professional Fees, no project' },
-            { t: 'Owner-bound?', d: 'Accountable-plan reimbursement is NOT equity · otherwise in = contribution, out = distribution' },
-            { t: '1099 sweep', d: 'Outside professionals past the threshold → W-9 in Double' },
+            { t: '1099 watch', d: 'Flag outside professionals as you go — the sweep itself is year-end' },
             { t: 'Triage → $0', d: 'The close gate', k: 'gate' },
           ],
         } },
@@ -1770,6 +1790,10 @@ function renderSopItem(it, grpName) {
 
   // build the reader doc: BTR uses its premium hand-laid render; Ecoorganic uses the
   // dynamic bookkeeping pilot layout; the rest auto-render (curated) from Markdown.
+  // The card's status pill used to be the literal word "Active" for every SOP, so a runbook
+  // deliberately marked In review advertised itself as settled procedure in the one place the
+  // team browses. Read it from the document.
+  const docStatus = headerVal(md, 'Status') || 'Active';
   let inner;
   if (it.coa) {
     inner = coaReaderInner(owner, updated);
@@ -1826,7 +1850,7 @@ function renderSopItem(it, grpName) {
         ${IC.arrow}
         <div class="khead">
           <span class="kkick">${esc(it.kicker || 'SOP')}${it.tag ? ' · ' + esc(it.tag) : ''}</span>
-          <span class="stat active"><span class="d"></span>Active</span>
+          <span class="stat ${/^active/i.test(docStatus) ? 'active' : 'soon'}"><span class="d"></span>${esc(docStatus)}</span>
         </div>
         <div class="ttl">${esc(it.title)}</div>
         <p class="blurb">${esc(it.blurb)}</p>
