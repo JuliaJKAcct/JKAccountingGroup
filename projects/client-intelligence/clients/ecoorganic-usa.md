@@ -181,12 +181,14 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   - ⚠️ **"No payroll ran" is not "nobody worked."** Whether those three worked and were paid outside
     Gusto is **not answered by any source read**. A Zelle search of the 2025 ledger finds no payment to
     any of the three *(that is the search, not the world — cash withdrawals carry no payee)*.
-  - 🔴 **A WORKERS' COMPENSATION POLICY WAS IN FORCE FOR THE SAME PERIOD** — the broker confirmed
-    2026-07-01 that it was new business to their agency **2025-04-16 → 2026-04-16** and that
-    **Ecoorganic was not insured in 2024** — and a **remote physical audit** was carried out in **June
-    2026**. A comp audit is priced on **payroll plus uninsured subcontractors**, so whatever was
-    declared there for 2025 is a statement already made to a third party. **See §3 for the broker and
-    carrier.**
+  - 🔴 **A WORKERS' COMPENSATION POLICY WAS IN FORCE FOR THE SAME PERIOD, AND 2025 WAS ITS FIRST
+    YEAR.** 🆕 The broker confirmed on 2026-07-01 that it was **new business to their agency
+    2025-04-16 → 2026-04-16** and that **Ecoorganic was not insured in 2024** — which is new, and
+    sharpens what §5 already records about the April-to-April term. A **remote physical auditor**
+    worked the account in **June 2026** *(⚠️ which policy that audit was for is not established — §5
+    records an annual **GL/payroll** premium audit on the same cycle, and both policies exist)*.
+    **Either way such an audit is priced on payroll plus uninsured subcontractors**, so a statement
+    about 2025 has already been made to a third party. **Broker and carrier are in §3.**
   - **Connecticut is still expecting returns.** **CT DRS has sent six CT-941 notices** between
     2026-01-27 and 2026-08-18 — roughly every six weeks — none actioned. The **CT withholding
     registration is open.** Employer obligations that recur: **CT-941**, **W-2s / CT-W3**, and a
