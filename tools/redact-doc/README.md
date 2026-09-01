@@ -169,7 +169,7 @@ solve a reading problem by sending the document somewhere else to be read.
 | Exit | Message | What it means | What to do |
 |---|---|---|---|
 | **3** | `pypdf is not installed` | A fresh session has no pypdf | `pip install pypdf`. **If `import pypdf` then fails with `No module named '_cffi_backend'`**, that is the system `cryptography` package missing its backend, not this tool: `pip install --upgrade cffi`. A complaint that `cryptography` cannot be uninstalled because Debian installed it is expected and harmless. 🔴 **In a locked-down environment `pip install` will not work at all** — see the block below |
-| **3** | `download failed (curl exit 22)` | The environment's network policy refused the **file host**, not the tool | The proxy log names it: `connect_rejected · gateway answered 403 to CONNECT`. **Double serves its files from `keeper-attachable.s3-accelerate.amazonaws.com`** — that host has to be in the environment's allowed domains. ⛔ **Not a reason to fetch the PDF another way.** Confirm with `curl -sS "$HTTPS_PROXY/__agentproxy/status"`, which lists recent relay failures by host |
+| **3** | `download failed (curl exit 22)` | The environment's network policy refused the **file host**, not the tool | 🔴 **First ask which environment this session is in, not what to add to it** — in a `Default` environment this never happens. Check `"selective"` in `curl -sS "$HTTPS_PROXY/__agentproxy/status"` (it also lists recent relay failures by host): `false` → open network, the failure is something else; `true` → an allowlist is in force, and **Double serves its files from `keeper-attachable.s3-accelerate.amazonaws.com`**, which has to be on it. ⛔ **Neither case is a reason to fetch the PDF another way.** |
 | **3** | `could not read as PDF` | Not a PDF, or a corrupt download | Check the file. A `.docx` or an image is out of scope here |
 | **2** | `NO TEXT LAYER` | A scan | **Ask for a text PDF.** OCR is not set up here and this is not a gap to route around |
 | **5** | `UNREADABLE EXTRACTION` | The document is **mostly** wreckage — past ~100 undecodable glyph tokens, or an alphabet too small to be text | `/uniXXXX` is decoded automatically and smaller amounts are masked as `[GLYPH]`, so reaching this means the whole document is unreadable. **Ask for a properly generated PDF from the tax software.** ⛔ Do **not** re-run and accept a `0 masked` report from such a file — zero means blind |
@@ -178,12 +178,32 @@ solve a reading problem by sending the document somewhere else to be read.
 | **0** | + `glyph-name token(s) were decoded` | Recovered from a broken font | Fine to use, but **layout came through worse than usual.** Read column alignment with suspicion and prefer figures you can corroborate arithmetically (on a return: does line 8 equal line 6 minus line 7?) |
 | **0** | + `barely extracted: [n, m]` | Those pages gave nothing up | **An absence is not evidence.** Name the pages instead of reporting "X is not on the return" |
 
-### ✅ What a restricted environment has had to allow so far (2026-09-01/02)
+### ✅ RUN TO COMPLETION 2026-09-01 — and the first question is WHICH ENVIRONMENT
 
-_(The firm now runs tax-return sessions in a deliberately restricted environment. This list was
-assembled by hitting each wall in turn — ⚠️ **and the download has not yet been run to completion, so
-the list ends where the testing stopped, not where the walls do.** The next wall, if there is one, gets
-added here.)_
+🔴 **Read this before telling anyone to change an environment setting.** Every wall below belongs to
+the **restricted** environment the firm had been running tax-return sessions in. **In an ordinary
+`Default` environment there is no wall at all** — verified end to end on 2026-09-01, against the real
+document the walls had been blocking: Ecoorganic's **2024 filed 1120-S**, `get_file` → download →
+redactor → **15 pages of readable text, 2 SSN/ITIN masked, 2 EINs kept**. Nothing was added to that
+environment, because nothing needed adding.
+
+**So the diagnosis to run first is one line, and it is free:**
+
+```bash
+curl -sS "$HTTPS_PROXY/__agentproxy/status" | grep -o '"selective":[a-z]*'
+```
+
+`"selective":false` is an open network — **stop, there is nothing to fix, just run the tool.**
+`"selective":true` means an allowlist is in force and the table below applies.
+
+⚠️ **Which is to say the honest form of this section is not "what to add" but "which environment to
+start the session in."** A session that meets `curl exit 22` has usually been started in the wrong
+one; re-starting it in `Default` is the whole remedy, and no setting is edited. _(That is the
+mistake this section itself made for two days: three separate documents recorded "add one host to
+the allowlist" as **the** answer, when it is the answer to only one of the two cases.)_
+
+_(The list below was assembled by hitting each wall in turn in the restricted environment. The next
+wall, if there is one, gets added here.)_
 
 | Add to the environment's allowed domains | Why |
 |---|---|
@@ -221,8 +241,29 @@ PYTHONPATH=<scratch>/pypdf-<version> python3.12 tools/redact-doc/redact.py "<url
   PanicException** — which is *not* an `ImportError`, so pypdf's own fallback chain does not catch it
   and the import dies. This is the `_cffi_backend` failure above wearing a different face.
 
-⭐ **The durable fix is to vendor pypdf under `tools/redact-doc/vendor/`** so no future review depends
-on a network policy at all.
+#### 🔴 The python3.12 rule is NOT about lockdown — it bites in an open environment too
+
+**Verified 2026-09-01 in an ordinary `Default` environment**, where `pip install pypdf` succeeds in
+seconds and every network wall above is absent. It installs into **python3.11's** `dist-packages`, and
+then `python3 -c "import pypdf"` **still dies on the same pyo3 panic** — because the panic comes from
+the container's `cryptography` build, which has nothing to do with the network policy. So the version
+trap survives the thing everyone assumes causes it.
+
+**The invocation that works in either environment** — install wherever pip will have it, then point
+3.12 at it:
+
+```bash
+pip install pypdf     # lands in /usr/local/lib/python3.11/dist-packages
+PYTHONPATH=/usr/local/lib/python3.11/dist-packages python3.12 tools/redact-doc/redact.py "<url>" "<out.txt>"
+```
+
+`python3.12 -m pip install pypdf` is **not** the shortcut it looks like — PEP 668 refuses it as an
+externally-managed environment. `python3.12 -m pip install --target <scratch>/pylibs pypdf` does work
+and is the tidier form when you would rather not read from 3.11's tree.
+
+⭐ **The durable fix is still to vendor pypdf under `tools/redact-doc/vendor/`** so no future review
+depends on a network policy *or* on getting the interpreter right. 🛑 **That is Lilian's call, not a
+session's** — it puts ~3 MB of third-party source in the firm's repo ([`FOLLOW-UPS.md`](../../FOLLOW-UPS.md) row 68).
 
 **The single most useful habit:** before trusting any figure out of this tool, find an internal
 arithmetic check in the document itself and confirm it. On a return, `1125-A` line 6 − line 7 =

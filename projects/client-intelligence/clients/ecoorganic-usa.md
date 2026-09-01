@@ -684,6 +684,27 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   individual return will be built from.
   ⛔ **The Knowledge Hub was deliberately NOT rebuilt this session** — Lilian's instruction, until the
   work is finished. _(Worked by Lilian.)_
+- 2026-09-01 — 🔓 **THE 2024 RETURN CAN BE READ FROM DOUBLE — the blocker was the ENVIRONMENT, and it
+  needed no change at all (Lilian).** She asked whether a session could reach Ecoorganic's 2024 return
+  inside Double, and what to add to the environment if not. **It can, and nothing was added.** The
+  route ran end to end: `get_file` on `JK Accounting Group > Tax Return Filed > 2024 >
+  ECOORGANICUSALLC.pdf` → `tools/redact-doc/redact.py` → **15 pages** of usable text, **2 SSN/ITIN
+  masked, 2 EINs kept, 2 street lines masked**, the final guard silent and no refusal.
+  🔑 **Why three documents had recorded the opposite.** The earlier sessions ran in the firm's
+  **restricted** tax-return environment, where the Double file host and PyPI are both refused; each
+  correctly diagnosed its own wall and then wrote the remedy down as *"add this host to the
+  allowlist"*. **In an ordinary `Default` environment there is no wall** — so the durable instruction
+  is **which environment to start in**, and the free one-line check that distinguishes them is now in
+  [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md). ⚠️ **The `python3.12` rule is
+  the one thing that survives in both** — it comes from the container image, not the network policy,
+  and was re-confirmed failing here on an open network.
+  📄 **The read was a capability test, not an analysis** — a form inventory only (see the outstanding
+  item), and 🛑 **the four figures the return needs are still not extracted.** Nothing was taken from
+  the document into this file beyond which forms it contains; **no figure, no identifier.** The
+  redacted text went to the session scratchpad, never the repo, and **was deleted when the test was
+  delivered.**
+  ⛔ **The Knowledge Hub was again NOT rebuilt** — Lilian's instruction stands until the return is
+  finished. _(Worked by Lilian.)_
 
 ### Tax year 2025 — the review
 
@@ -695,8 +716,11 @@ note** on this client (§7) — same matter, written to be read; it is **updated
   owner-account movements split between the two owners, and in what percentage? ④ has anything
   arrived from Turo? ⑤ what was the 2025 payment **to** Turo for? ⑥ which vehicles belong to the
   company, and what were they used for? — **answers to be recorded here as they come in.**
-- **What the prior-year return established:** ⛔ **nothing — it was not opened.** ⚠️ Do not read this
-  as "the prior year is clean": it is an unexamined source, and §3's whole comparison rests on it.
+- **What the prior-year return established:** 🟡 **the document is now READABLE — 2026-09-01 — but it
+  has still not been ANALYSED.** The read was run to prove the route works, not to answer anything: the
+  2024 federal package came through the redactor as **15 pages** of usable text. ⚠️ So do not read this
+  as "the prior year is clean" either — §3's comparison still rests on an unexamined source; what
+  changed is that a session can now examine it instead of asking for figures to be transcribed.
 - ✅ **DECIDED 2026-09-01 by Julia:** all Turo activity — income and expenses — is **Artem's**, and
   belongs on his individual return. The company's Turo-related costs become **owner distributions**.
   ⚠️ **One edge the ruling does not obviously reach and that should be asked, not assumed:** the
@@ -738,19 +762,37 @@ note** on this client (§7) — same matter, written to be read; it is **updated
 - **Deadline:** **2026-09-15**, extension filed. The review ran on 2026-08-31 — fifteen days.
 
 ### Outstanding items (CI-only — never in the SOP)
-- 🟡 **THE 2024 FILED RETURN HAS NOT BEEN READ BY A SESSION — but 2026-09-02 that stopped being a
-  gate.** ✅ **Lilian confirmed ATX HAS the 2024 return.** So the four figures that were waiting on it
-  — **opening AAA** (2024 Schedule M-2 line 8), the **depreciation schedule** (Form 4562), **whether
-  2024 ran contributions through Schedule M-2 line 3**, and the **mapping conventions** (page 1 and
-  Form 1125-A read against the 2024 books) — **are all inside ATX and can be read off directly.**
-  🔑 **The blocker is now that a SESSION cannot see them, not that the firm cannot.** The PDF route
-  still matters, because it lets a session do the reproduce-last-year comparison itself instead of
-  asking for four figures to be transcribed — but nothing waits on it.
-  🛠️ **What that route needs, and it is now exactly one line:** add
-  **`keeper-attachable.s3-accelerate.amazonaws.com`** to the tax-return environment's allowed domains.
-  **That is the host Double serves its files from** — not `doublehq.com`. *(An earlier version of this
-  bullet said the blocker was PyPI. That was only the first wall: `pypdf` is solved, and the download
-  host is what is left. Full detail in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).)*
+- ✅ **THE 2024 FILED RETURN IS READABLE BY A SESSION — proven end to end 2026-09-01, and NOTHING had
+  to be added to the environment.** Lilian asked whether it could be read from Double at all. It can:
+  `JK Accounting Group > Tax Return Filed > 2024 > ECOORGANICUSALLC.pdf` (id `5473582`, path confirmed
+  by `get_file`) → the redactor → **15 pages of usable text**, 2 SSN/ITIN masked, 2 EINs kept, 2 street
+  lines masked, the guard silent.
+  🔑 **THE ANSWER WAS THE ENVIRONMENT, NOT A SETTING.** Every earlier version of this bullet named one
+  allowlist host as the fix. That is the fix **only in the restricted environment** those sessions ran
+  in; this run was in an ordinary **`Default`** environment, where the Double file host answers
+  normally and `pypdf` installs from PyPI in seconds. **So the instruction to carry forward is "start
+  the session in `Default`", not "edit an allowlist"** — full diagnosis, and the one-line check that
+  tells the two cases apart, in [`tools/redact-doc/README.md`](../../../tools/redact-doc/README.md).
+  ⚠️ **One trap survives in BOTH environments:** run the redactor with **`python3.12`**, never
+  `python3` (3.11 makes the system `cryptography` raise a pyo3 panic that pypdf cannot catch).
+  📄 **What the read established about the document itself — a form inventory, NOT an analysis.**
+  Present: **Form 1120-S · Form 1125-A · Form 1125-E · Schedule K-1 · Form 4562 · Schedule M-1 ·
+  Schedule M-2 · Form 8879-S**. Not found by the scan: **Form 7203** *(corroborating what §4 already
+  recorded from another source)*, **Schedule L**, and **any Connecticut return** — ⚠️ **and "not found"
+  is not "not filed":** Double holds only this one 2024 file, so the state return being absent is a
+  statement about **what Double stores**, not about what was filed; ATX is the authority and Lilian
+  should be asked rather than the absence relied on. **Page 15 of 15 barely extracted**, so an absence
+  is weakest exactly where the package ends.
+  ⚠️ **And a caveat that governs every FIGURE later read off this PDF:** its font carries no Unicode
+  map, so ~55,884 glyph tokens had to be decoded back to text. The recovery is faithful but **column
+  alignment comes through poorly** — corroborate any figure arithmetically (does Form 1125-A line 6 −
+  line 7 = line 8?) before relying on it.
+  🛠️ **STILL OPEN, and it is the actual work:** the four figures — **opening AAA** (2024 Schedule M-2
+  line 8), the **depreciation schedule**, **whether 2024 ran contributions through M-2 line 3**, and
+  the **mapping conventions** (page 1 + Form 1125-A read against the 2024 books) — **have not been
+  extracted.** They can now be read either from ATX by Lilian *(confirmed 2026-09-02)* **or** by a
+  session from this PDF; the second route is what lets a session run the reproduce-last-year
+  comparison itself.
   ⛔ **Never open the PDF by another route** — that is the one thing the redactor exists to prevent.
 - 🛠️ **TWO BOOK CORRECTIONS ARE WRITTEN AND WAITING TO BE MADE** *(step by step in the working paper,
   D-4 §5b)*: a **dealership refund coded against the wrong expense account** — an error, fixed on the
